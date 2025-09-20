@@ -22,112 +22,112 @@ tit; l; e: "Communit; y Foru; m",
 descripti; o; n: "Engag; e wit; h lik; e-minde; d professional; s an; d shar; e knowledg; e.",
 ic; o; n: "💬",
 return (
-    <section className="py-20 bg-zion-blue-dark">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <GradientHeading>Your Complete Guide to Zion</GradientHeading>
-          <p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto">
-            Discover all the powerful tools and features available to help you navigate,
-the world of AI and tech services
-          </p>
-        </div>
-        <Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">
-            {features.slice(0 4).map(feature => (
-              <TabsTrigger
+<section className="py-20 bg-zion-blue-dark">;
+<div className="container mx-auto px-4">;
+<div className="text-center mb-12">;
+<GradientHeading>Your Complete Guide to Zion</GradientHeading>;
+<p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto">;
+Discover all the powerful tools and features available to help you navigate;
+the world of AI and tech services;
+</p>;
+</div>;
+<Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">;
+<TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">;
+{features.slice(0 4).map(feature => (
+<TabsTrigger;
 key={feature.id}
-                value={feature.id}
-                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
-              >
-                {feature.title}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-          <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
-            {features.slice(4).map(feature => (
-              <TabsTrigger
+value={feature.id}
+className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+>;
+{feature.title}
+</TabsTrigger>;
+))}
+</TabsList>;
+<TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">;
+{features.slice(4).map(feature => (
+<TabsTrigger;
 key={feature.id}
-                value={feature.id}
-                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
-            {features.slice(4).map(feature => (
-              <TabsTrigger
+value={feature.id}
+className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+{features.slice(4).map(feature => (
+<TabsTrigger;
 key={feature.id}
-                value={feature.id}
-                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
-              >
-                {feature.title}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-          {features.map(feature => (
-            <TabsContent key={feature.id} value={feature.id} className='mt-8'>
-              <div className='bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8'>
-                <div className='md:w-1/3 flex flex-col items-center md:items-start'>
-                  <div className='bg-zion-blue-dark p-4 rounded-xl mb-4'>
-                    {feature.icon}
-                  </div>
-                  <h3 className='text-2xl font-bold text-white mb-3'>
-                    {feature.title}
-                  </h3>
-                  <p className='text-zion-slate-light mb-6'>
-                    {feature.description}
-                  </p>
-                  <Button
-className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'                    asChild
-                  >
-                    <Link href={feature.link}>
-                      {feature.buttonText}
-                      <ArrowRight className='ml-2 h-4 w-4' />                  <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-zion-slate-light mb-6">{feature.description}</p>
-                  <Button
+value={feature.id}
+className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+>;
+{feature.title}
+</TabsTrigger>;
+))}
+</TabsList>;
+{features.map(feature => (
+<TabsContent key={feature.id} value={feature.id} className="mt-8">;
+<div className="bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8">;
+<div className="md:w-1/3 flex flex-col items-center md:items-start">;
+<div className="bg-zion-blue-dark p-4 rounded-xl mb-4">;
+{feature.icon}
+</div>;
+<h3 className="text-2xl font-bold text-white mb-3">;
+{feature.title}
+</h3>;
+<p className="text-zion-slate-light mb-6">;
+{feature.description}
+</p>;
+<Button;
+className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"                    asChild;
+>;
+<Link href={feature.link}>;
+{feature.buttonText}
+<ArrowRight className="ml-2 h-4 w-4" />                  <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>;
+<p className="text-zion-slate-light mb-6">{feature.description}</p>;
+<Button;
 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                  >
-                    <Link href={feature.link}>
-                      {feature.buttonText}
-                      <ArrowRight className='ml-2 h-4 w-4' />
-                    </Link>
-                  </Button>
-                </div>
-                <div className='md:w-2/3 bg-zion-blue-dark p-6 rounded-lg'>
-                  <h4 className='text-xl font-semibold text-white mb-4'>
-                    How to Use
-                  </h4>
-                  <ol className='list-decimal list-inside space-y-3 pl-4'>
-                    {feature.instructions.map((instruction idx) => (<li key={idx} className='text-zion-slate-light'>
-                        <span className='text-zion-cyan mr-2'>{idx + 1}.</span>                        {instruction}
-                <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
-                  <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
-                  <ol className="list-decimal list-inside space-y-3 pl-4">
-                    {feature.instructions.map((instruction idx) => (
-                      <li key={idx} className="text-zion-slate-light">
-                        <span className="text-zion-cyan mr-2">{idx + 1}.</span>
-                      </li>
-                    ))}
-                  </ol>
-                </div>
-              </div>
-            </TabsContent>
-          ))}
-        </Tabs>
-        <div className='mt-12 text-center'>
-          <Button
-variant='outline'
-            className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'
-            asChild
-          >
-            <Link
-href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
-              href="/marketplace"
-              onClick = {() => fireEvent('explore_marketplace_click')}
-            >
-              Explore Full Marketplace
-              <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
-        </div>
-      </div>
-    </section>
-  )
+>;
+<Link href={feature.link}>;
+{feature.buttonText}
+<ArrowRight className="ml-2 h-4 w-4" />;
+</Link>;
+</Button>;
+</div>;
+<div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">;
+<h4 className="text-xl font-semibold text-white mb-4">;
+How to Use;
+</h4>;
+<ol className="list-decimal list-inside space-y-3 pl-4">;
+{feature.instructions.map((instruction idx) => (<li key={idx} className="text-zion-slate-light">;
+<span className="text-zion-cyan mr-2">{idx + 1}.</span>                        {instruction}
+<div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">;
+<h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>;
+<ol className="list-decimal list-inside space-y-3 pl-4">;
+{feature.instructions.map((instruction idx) => (
+<li key={idx} className="text-zion-slate-light">;
+<span className="text-zion-cyan mr-2">{idx + 1}.</span>;
+</li>;
+))}
+</ol>;
+</div>;
+</div>;
+</TabsContent>;
+))}
+</Tabs>;
+<div className="mt-12 text-center">;
+<Button;
+variant="outline"
+className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+asChild;
+>;
+<Link;
+href="/marketplace"              onClick={() => fireEvent("explore_marketplace_click")}
+href="/marketplace";
+onClick = {() => fireEvent("explore_marketplace_click")}
+>;
+Explore Full Marketplace;
+<ArrowRight className="ml-2 h-4 w-4" />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />;
+</Link>;
+</Button>;
+</div>;
+</div>;
+</section>;
+)
 }
 ];
 
@@ -139,17 +139,17 @@ Platform Features;
 </h2>;
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-8">;
 {features.map((featur; e; index) => (<div key={index} className="text-center">;
-<div className="text-4xl mb-4">{feature.icon}</div>
+<div className="text-4xl mb-4">{feature.icon}</div>;
 <h3 className="text-xl font-semibold text-white mb-3">;
 {feature.title}
 </h3>;
 <p className="text-zion-slate-light">;
 {feature.description}
 </p>;
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 </section>;
 );
 }
@@ -236,14 +236,14 @@ Powerful Features for Modern Businesses;
 <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
 Discover the comprehensive suite of features designed to accelerate your business growth and digital transformation;
 </p>;
-</div>
+</div>;
 
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-8">;
 {FEATURES.map((feature) => (<Card key={feature.id} className="hove;  r:shadow-lg transition-all duration-300 hove; r:-translate-y-1">;
 <CardHeader className="text-center">;
 <div className="mx-auto mb-4 p-3 bg-gray-50 rounded-full w-16 h-16 flex items-center justify-center">;
 {feature.icon}
-</div>
+</div>;
 <Badge variant="outline" className="mb-2">;
 {feature.category}
 </Badge>;
@@ -257,15 +257,15 @@ Discover the comprehensive suite of features designed to accelerate your busines
 <div className="space-y-2">;
 <h4 className="font-semibold text-gray-900 mb-3">Key Benefit; s:</h4>;
 {feature.benefits.map((benefi; t; index) => (<div key={index} className="flex items-center space-x-2">;
-<div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+<div className="w-2 h-2 bg-blue-600 rounded-full"></div>;
 <span className="text-sm text-gray-700">{benefit}</span>;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 </CardContent>;
 </Card>;
 ))}
-</div>
+</div>;
 
 <div className="text-center mt-12">;
 <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">;
@@ -282,11 +282,11 @@ Start Free Trial;
 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hove; r:bg-blue-50 transition-colors font-medium">;
 Schedule Demo;
 </button>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 </section>;
 );
 };
-<//section><///section>;
+<//section><///section>;))))

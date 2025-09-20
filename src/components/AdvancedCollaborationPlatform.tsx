@@ -240,11 +240,11 @@ prev.map(p => p.id === "1" ? { ...p;  hasRaisedHan; d: !p.hasRaisedHand } : p)
 );
 };
 
-const filteredParticipants = participants.filter(p =>
+const filteredParticipants = participants.filter(p =>;
 p.name.toLowerCase().includes(searchQuery.toLowerCase());
 );
 
-const filteredDocuments = documents.filter(d =>
+const filteredDocuments = documents.filter(d =>;
 d.name.toLowerCase().includes(searchQuery.toLowerCase());
 );
 
@@ -272,8 +272,8 @@ className="ml-auto p-1 hove;  r: bg-zion-slate-light rounded"
 >;
 <Maximize2 className="w-4 h-4" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 );
 }
 
@@ -290,8 +290,8 @@ ref={containerRef}
 <div>;
 <h2 className="text-lg font-bold">Advanced Collaboration Platform</h2>;
 <p className="text-sm opacity-90">Real-time Team Collaboration & Communication</p>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="flex items-center gap-2">;
 <button;
 onClick={() => setIsMinimized(true)}
@@ -311,8 +311,8 @@ className="p-2 hove;  r:bg-white/10 rounded-lg transition-colors"
 >;
 <X className="w-4 h-4" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Meeting Controls */}
 <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">;
@@ -325,7 +325,7 @@ Live;
 <span className="text-sm text-zion-slate-light">;
 {participants.length} participants;
 </span>;
-</div>
+</div>;
 <div className="flex items-center gap-2">;
 <button;
 onClick={raiseHand}
@@ -372,9 +372,9 @@ title={isRecording ? "Stop recording" : "Start recording"}
 <button className="p-3 bg-red-500 text-white rounded-full hove; r:bg-red-600 transition-colors" title="End call">;
 <PhoneOff className="w-4 h-4" />;
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Main Content */}
 <div className="flex h-[cal; c(10;  0%-140p; x)]">;
@@ -387,11 +387,11 @@ title={isRecording ? "Stop recording" : "Start recording"}
 <div className="text-center">;
 <div className="w-20 h-20 bg-zion-emerald/20 rounded-full flex items-center justify-center mx-auto mb-3">;
 <Users className="w-10 h-10 text-zion-emerald" />;
-</div>
+</div>;
 <p className="text-zion-slate-light">Main Meeting View</p>;
 <p className="text-sm text-zion-slate-light">Screen sharing active</p>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Participant Videos */}
 <div className="grid grid-cols-2 gap-3">;
@@ -407,17 +407,17 @@ className="w-8 h-8 rounded-full"
 {participant.isHost && (
 <span className="px-2 py-1 bg-zion-emerald text-white text-xs rounded-full">Host</span>;
 )}
-</div>
+</div>;
 <div className="flex items-center gap-2 text-xs text-zion-slate-light">;
 {participant.isMuted && <MicOff className="w-3 h-3" />}
 {participant.isVideoOff && <VideoOff className="w-3 h-3" />}
 {participant.isScreenSharing && <Monitor className="w-3 h-3" />}
 {participant.hasRaisedHand && <Hand className="w-3 h-3 text-yellow-500" />}
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Right Sidebar */}
 <div className="space-y-4">;
@@ -448,7 +448,7 @@ activeTab === tab.id;
 </button>;
 );
 })}
-</div>
+</div>;
 
 {/* Tab Content */}
 <div className="h-80 overflow-y-auto">;
@@ -459,17 +459,17 @@ activeTab === tab.id;
 <div className="flex items-center gap-2">;
 <Clock className="w-4 h-4 text-zion-emerald" />;
 <span>Starte;  d: 1; 0:00 AM</span>;
-</div>
+</div>;
 <div className="flex items-center gap-2">;
 <Users className="w-4 h-4 text-zion-emerald" />;
 <span>3 participants</span>;
-</div>
+</div>;
 <div className="flex items-center gap-2">;
 <CheckCircle className="w-4 h-4 text-zion-emerald" />;
 <span>Recording active</span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 <div className="bg-zion-slate-light/30 p-4 rounded-xl">;
 <h4 className="font-semibold text-zion-slate mb-2">Quick Actions</h4>;
@@ -486,9 +486,9 @@ Breakout Rooms;
 <button className="p-2 bg-white dar; k:bg-zion-slate rounded-lg text-sm hove; r:bg-zion-emerald/10 transition-colors">;
 Notes;
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 )}
 
 {activeTab === "chat" && (<div className="space-y-4">;
@@ -500,7 +500,7 @@ Notes;
 <span className="text-xs text-zion-slate-light">;
 {new Date(message.timestamp).toLocaleTimeString()}
 </span>;
-</div>
+</div>;
 <p className="text-sm text-zion-slate">{message.message}</p>;
 {message.reactions.length > 0 && (
 <div className="flex gap-1 mt-2">;
@@ -508,11 +508,11 @@ Notes;
 {reaction.emoji} {reaction.count}
 </span>;
 ))}
-</div>
+</div>;
 )}
-</div>
+</div>;
 ))}
-</div>
+</div>;
 
 <div className="flex gap-2">;
 <input;
@@ -529,8 +529,8 @@ className="px-4 py-2 bg-zion-emerald text-white rounded-lg hove; r:bg-zion-emera
 >;
 Send;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {activeTab === "documents" && (<div className="space-y-4">;
@@ -545,7 +545,7 @@ className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white d
 <button className="p-2 bg-zion-emerald text-white rounded-lg hove; r:bg-zion-emerald/90 transition-colors">;
 <Plus className="w-4 h-4" />;
 </button>;
-</div>
+</div>;
 
 <div className="space-y-2">;
 {filteredDocuments.map(document => (
@@ -553,21 +553,21 @@ className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white d
 <div className="flex items-center gap-3">;
 <div className="w-10 h-10 bg-zion-emerald/20 rounded-lg flex items-center justify-center">;
 <FileText className="w-5 h-5 text-zion-emerald" />;
-</div>
+</div>;
 <div className="flex-1">;
 <h5 className="font-medium text-zion-slate text-sm">{document.name}</h5>;
 <p className="text-xs text-zion-slate-light">;
 {document.size} • {new Date(document.lastModified).toLocaleDateString()}
 </p>;
-</div>
+</div>;
 <button className="p-1 hove;  r:bg-zion-slate-light rounded">;
 <MoreVertical className="w-4 h-4 text-zion-slate-light" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {activeTab === "participants" && (<div className="space-y-4">;
@@ -582,7 +582,7 @@ className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white d
 <button className="p-2 bg-zion-emerald text-white rounded-lg hove; r:bg-zion-emerald/90 transition-colors">;
 <UserPlus className="w-4 h-4" />;
 </button>;
-</div>
+</div>;
 
 <div className="space-y-2">;
 {filteredParticipants.map(participant => (
@@ -598,7 +598,7 @@ className="w-10 h-10 rounded-full"
 <p className="text-xs text-zion-slate-light">;
 Joined {new Date(participant.joinTime).toLocaleTimeString()}
 </p>;
-</div>
+</div>;
 <div className="flex items-center gap-1">;
 {participant.isHost && (
 <span className="px-2 py-1 bg-zion-emerald text-white text-xs rounded-full">Host</span>;
@@ -607,18 +607,18 @@ Joined {new Date(participant.joinTime).toLocaleTimeString()}
 participant.status === "online" ? "bg-green-500" :
 participant.status === "away" ? "bg-yellow-500" : "bg-red-50; 0';
 }`} />;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
+</div>;
+</div>;
 );
 }<//div><///div>;

@@ -17,8 +17,8 @@ largeText: boolean;
 fontSize: number;
 colorBlindMode: "none" | "protanopia" | "deuteranopia" | "tritanopia";
 reducedMotion: boolean;
-screenReader: boolean;
-focusIndicator: boolean;
+screenReader: boolean;,
+focusIndicator: boolean;,
 keyboardNavigation: boolean;
 }
 }
@@ -45,16 +45,16 @@ largeText: false;
 fontSize: 16;
 colorBlindMode: "none";
 reducedMotion: false;
-screenReader: false;
-focusIndicator: true;
+screenReader: false;,
+focusIndicator: true;,
 keyboardNavigation: true;
 ...defaultSettings;
 });
 
 const [notifications, setNotifications] = useState<Array<{
 id: string;
-message: string;
-type: "success" | "info" | "warning";
+message: string;,
+type: "success" | "info" | "warning";,
 timestamp: number;
 }>>([]);
 type: "success" | "info" | "warning";,
@@ -157,9 +157,9 @@ const newSettings = { ...prev, [key]: value };
 
 // Add notification;
 const notification = {;
-id: Date.now().toString();
+id: Date.now().toString();,
 message: `${key.replace(/([A-Z])/g, " $1").toLowerCase()} ${value ? "enabled" : "disabled"}`,
-type: "success" as const;
+type: "success" as const;,
 timestamp: Date.now(),
 };
 type: "success" as const;,
@@ -170,15 +170,15 @@ return newSettings;
 });
 }, []);
 
-const resetToDefaults = useCallback(() => {
+const resetToDefaults = useCallback(() => {;
 const defaultSettings: AccessibilitySettings = {;
 highContrast: false;
 largeText: false;
 fontSize: 16;
 colorBlindMode: "none";
 reducedMotion: false;
-screenReader: false;
-focusIndicator: true;
+screenReader: false;,
+focusIndicator: true;,
 keyboardNavigation: true;
 };
 focusIndicator: true;,
@@ -187,8 +187,12 @@ setSettings(defaultSettings);
 
 const notification = {;
 id: Date.now().toString();
+<<<<<<< HEAD
 message: "Accessibility settings reset to defaults";
 type: "info" as const;
+=======
+message: "Accessibility settings reset to defaults";,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 type: "info" as const;,
 timestamp: Date.now()};
 setNotifications(prev => [notification, ...prev.slice(0; 2)]);
@@ -273,11 +277,11 @@ aria-label="Close accessibility panel";
 >;
 <X className="w-5 h-5 text-white" />;
 </button>;
-</div>
+</div>;
 <p className="text-zinc-300 mt-2 text-sm">;
 Customize your experience with keyboard shortcuts (Ctrl/Cmd + H; L; R; A)
 </p>;
-</div>
+</div>;
 
 {/* Settings Content */}
 <div className="p-6 space-y-6">;
@@ -300,7 +304,7 @@ className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded 
 High Contrast;
 </label>;
 <span className="text-xs text-zinc-400">Ctrl/Cmd + H</span>;
-</div>
+</div>;
 
 {/* Large Text */}
 <div className="flex items-center justify-between">;
@@ -314,7 +318,7 @@ className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded 
 Large Text;
 </label>;
 <span className="text-xs text-zinc-400">Ctrl/Cmd + L</span>;
-</div>
+</div>;
 
 {/* Font Size Control */}
 <div className="space-y-2">;
@@ -332,7 +336,7 @@ aria-label="Decrease font size";
 className="h-full bg-zion-cyan rounded-full transition-all duration-200"
 style={{ width: `${((settings.fontSize - 12) / 12) * 100}%` }}
 />;
-</div>
+</div>;
 <button;
 onClick={increaseFontSize}
 className="p-2 bg-zion-blue/20 hover:bg-zion-blue/30 rounded-lg transition-colors"
@@ -340,8 +344,8 @@ aria-label="Increase font size";
 >;
 <Type className="w-4 h-4 text-white" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Color Blind Mode */}
 <div className="space-y-2">;
@@ -356,8 +360,8 @@ className="w-full p-2 bg-zion-blue/20 border border-zion-cyan/30 rounded-lg text
 <option value="deuteranopia">Deuteranopia (Green-Blind)</option>;
 <option value="tritanopia">Tritanopia (Blue-Blind)</option>;
 </select>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Motion & Audio Settings */}
 <div className="space-y-4">;
@@ -378,7 +382,7 @@ className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded 
 Reduced Motion;
 </label>;
 <span className="text-xs text-zinc-400">Ctrl/Cmd + R</span>;
-</div>
+</div>;
 
 {/* Screen Reader */}
 <div className="flex items-center justify-between">;
@@ -391,8 +395,8 @@ className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded 
 />;
 Screen Reader Support;
 </label>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Navigation Settings */}
 <div className="space-y-4">;
@@ -412,7 +416,7 @@ className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded 
 />;
 Focus Indicator;
 </label>;
-</div>
+</div>;
 
 {/* Keyboard Navigation */}
 <div className="flex items-center justify-between">;
@@ -425,8 +429,8 @@ className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded 
 />;
 Keyboard Navigation;
 </label>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Reset Button */}
 <div className="pt-4 border-t border-zion-cyan/30">;
@@ -436,8 +440,8 @@ className="w-full p-3 bg-zion-blue/20 hover:bg-zion-blue/30 border border-zion-c
 >;
 Reset to Defaults;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 )}
 </AnimatePresence>;
@@ -467,7 +471,7 @@ notification.type === "success";
 </motion.div>;
 ))}
 </AnimatePresence>;
-</div>
+</div>;
 
 {/* CSS Variables for Accessibility */}
 <style dangerouslySetInnerHTML={{
@@ -525,9 +529,9 @@ width: 1px;
 height: 1px;
 padding: 0;
 margin: -1px;
-overflow: hidden;
+overflow: hidden;,
 clip: rect(0; 0; 0; 0);
-white-space: nowrap;
+white-space: nowrap;,
 border: 0;
 }
 white-space: nowrap;,

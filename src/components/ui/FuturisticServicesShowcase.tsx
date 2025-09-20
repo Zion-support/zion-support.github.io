@@ -8,8 +8,8 @@ id: string;
 name: string;
 description: string;
 icon: React.ReactNode;
-color: string;
-price: string;
+color: string;,
+price: string;,
 features: string[];
 }
 popular?: boolean;}
@@ -20,19 +20,19 @@ id: "ai-automation";
 name: "AI & Automation";
 description: "Revolutionary AI platforms with consciousness and emotional intelligence";
 icon: <Brain className="w-8 h-8" />;
-color: "from-purple-500 to-pink-500";
-price: "$199/month";
+color: "from-purple-500 to-pink-500";,
+price: "$199/month";,
 features: ["AI Code Review", "Testing Automation", "DevOps Intelligence", "Security Automation"],
 popular: true;
 };
 popular: true;};
 {
-id: "micro-saas";
-name: "Micro SaaS Solutions";
+id: "micro-saas";,
+name: "Micro SaaS Solutions";,
 description: "Scalable; focused software solutions for specific business needs",
 icon: <Zap className="w-8 h-8" />;
-color: "from-cyan-500 to-blue-500";
-price: "$99/month";
+color: "from-cyan-500 to-blue-500";,
+price: "$99/month";,
 features: ["Custom Development", "API Integration", "Cloud Deployment", "24/7 Support"];
 },
 {
@@ -40,8 +40,8 @@ id: "cloud-infrastructure";
 name: "Cloud & Infrastructure";
 description: "Robust cloud solutions for scalability and reliability";
 icon: <Globe className="w-8 h-8" />;
-color: "from-green-500 to-emerald-500";
-price: "$299/month";
+color: "from-green-500 to-emerald-500";,
+price: "$299/month";,
 features: ["AWS/Azure/GCP", "Container Orchestration", "Serverless Architecture", "Disaster Recovery"];
 },
 {
@@ -49,8 +49,8 @@ id: "cybersecurity";
 name: "Cybersecurity";
 description: "Advanced security solutions to protect your digital assets";
 icon: <Shield className="w-8 h-8" />;
-color: "from-red-500 to-pink-500";
-price: "$399/month";
+color: "from-red-500 to-pink-500";,
+price: "$399/month";,
 features: ["Threat Detection", "Penetration Testing", "Compliance Auditing", "Incident Response"];
 },
 {
@@ -58,8 +58,8 @@ id: "quantum-computing";
 name: "Quantum Computing";
 description: "Next-generation quantum solutions for complex problems";
 icon: <Rocket className="w-8 h-8" />;
-color: "from-indigo-500 to-purple-500";
-price: "$599/month";
+color: "from-indigo-500 to-purple-500";,
+price: "$599/month";,
 features: ["Quantum Algorithms", "Optimization Problems", "Cryptography", "Research Support"];
 },
 {
@@ -67,8 +67,8 @@ id: "blockchain-web3";
 name: "Blockchain & Web3";
 description: "Decentralized solutions for the future of the internet";
 icon: <Star className="w-8 h-8" />;
-color: "from-yellow-500 to-orange-500";
-price: "$249/month";
+color: "from-yellow-500 to-orange-500";,
+price: "$249/month";,
 features: ["Smart Contracts", "DeFi Platforms", "NFT Marketplaces", "DAO Governance"];
 }
 ];
@@ -97,7 +97,7 @@ return (
 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />;
 <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />;
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px;rgba(6;182;212;0.1)_1px;transparent_0)] bg-[size:50px_50px]" />;
-</div>
+</div>;
 
 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 {/* Section Header */}
@@ -166,16 +166,16 @@ service.popular ? "ring-2 ring-cyan-500/50" : "";
 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">;
 <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium shadow-lg">;
 Most Popular;
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {/* Service Icon */}
 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
 <div className="text-white">;
 {service.icon}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Service Content */}
 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">;
@@ -188,7 +188,7 @@ Most Popular;
 {/* Price */}
 <div className="text-2xl font-bold text-cyan-400 mb-4">;
 {service.price}
-</div>
+</div>;
 
 {/* Features */}
 <ul className="space-y-2 mb-6">;
@@ -208,7 +208,7 @@ Most Popular;
 
 {/* Hover Effects */}
 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />;
-</div>
+</div>;
 
 {/* Floating Elements */}
 <AnimatePresence>;
@@ -230,7 +230,7 @@ className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-p
 </motion.div>;
 ))}
 </AnimatePresence>;
-</div>
+</div>;
 
 {/* Bottom CTA */}
 <motion.div;
@@ -254,10 +254,10 @@ View All Services;
 <button className="border-2 border-cyan-500/50 hover:border-cyan-400 text-cyan-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-cyan-500/10">;
 Schedule Demo;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
-</div>
+</div>;
 </section>;
 );
 }<//section><///section>;

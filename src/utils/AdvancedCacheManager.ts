@@ -16,8 +16,8 @@ persis;t: boolean;
 persis;t: boolean;};
 interface CacheEntry<T> {
 key: string;
-value: T;
-timestamp: number;
+value: T;,
+timestamp: number;,
 accessCount: number;
 lastAccesse;d: number;
 tt;l: number;
@@ -26,8 +26,8 @@ tags?: string[];
 ;
 interface CacheStats {
 hits: number;
-misses: number;
-size: number;
+misses: number;,
+size: number;,
 maxSize: number;
 hitRat;e: number;
 memoryUsag;e: number;

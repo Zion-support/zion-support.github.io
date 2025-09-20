@@ -9,7 +9,7 @@ title: "Enterprise AI Chatbot Development",
 description: "Custom AI-powered chatbots for customer service; sales; and support. Integrates with CRM; knowledge bases; and existing systems. Includes training; deployment; and ongoing optimization.",
 category: "AI Services",
 subcategory: "Chatbots & Virtual Assistants",
-price: 8999;
+price: 8999;,
 currency: "$",
 tags: ["AI Chatbot", "Customer Service", "CRM Integration", "Natural Language Processing"],
 author: {,
@@ -24,11 +24,11 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.9;
-reviewCount: 156;
-featured: true;
+reviewCount: 156;,
+featured: true;,
 location: "Global",
 availability: "2-3 Weeks",
-aiScore: 95;
+aiScore: 95;,
 pricingTier: "Professional",
 },
 {id: "ai-content-generation",
@@ -40,7 +40,7 @@ title: "AI Content Generation Suite Pro",
 description: "AI-powered content creation for blogs; social media; and marketing campaigns. Generate engaging; SEO-optimized content at scale.",
 category: "AI Services",
 subcategory: "Content Generation",
-price: 800;
+price: 800;,
 currency: "$",
 tags: ["AI", "Content Creation", "Marketing", "SEO", "Automation"],
 author: {,
@@ -50,11 +50,11 @@ avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=forma
 images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.8;
-reviewCount: 89;
-featured: true;
+reviewCount: 89;,
+featured: true;,
 location: "Global",
 availability: "1-2 Weeks",
-aiScore: 96;
+aiScore: 96;,
 pricingTier: "Starter",
 },
 {id: "ai-business-intelligence",
@@ -66,7 +66,7 @@ title: "AI-Powered Business Intelligence Platform",
 description: "Advanced analytics and business intelligence platform with AI-driven insights; predictive analytics; and real-time dashboards.",
 category: "AI Services",
 subcategory: "Business Intelligence",
-price: 4500;
+price: 4500;,
 currency: "$",
 tags: ["AI", "Business Intelligence", "Analytics", "Predictive", "Dashboard"],
 author: {,
@@ -76,11 +76,11 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.9;
-reviewCount: 234;
-featured: true;
+reviewCount: 234;,
+featured: true;,
 location: "Global",
 availability: "4-6 Weeks",
-aiScore: 98;
+aiScore: 98;,
 pricingTier: "Enterprise",
 },
 aiScore: 98;,
@@ -91,7 +91,7 @@ title: "Cloud Migration & Optimization Expert",
 description: "Complete cloud migration services with cost optimization; security implementation; and performance tuning for AWS; Azure; and Google Cloud.",
 category: "IT Services",
 subcategory: "Cloud Services",
-price: 3500;
+price: 3500;,
 currency: "$",
 tags: ["Cloud Migration", "AWS", "Azure", "Optimization", "Security"],
 author: {,
@@ -101,11 +101,11 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.7;
-reviewCount: 156;
-featured: true;
+reviewCount: 156;,
+featured: true;,
 location: "Global",
 availability: "3-5 Weeks",
-aiScore: 92;
+aiScore: 92;,
 pricingTier: "Professional",
 },
 {id: "cybersecurity-audit",
@@ -117,7 +117,7 @@ title: "Complete Cybersecurity Audit & Implementation",
 description: "Comprehensive security assessment; penetration testing; and security infrastructure implementation with compliance reporting.",
 category: "IT Services",
 subcategory: "Cybersecurity",
-price: 6000;
+price: 6000;,
 currency: "$",
 tags: ["Cybersecurity", "Audit", "Penetration Testing", "Compliance", "Security"],
 author: {,
@@ -127,11 +127,11 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 images: ["https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.9;
-reviewCount: 189;
-featured: true;
+reviewCount: 189;,
+featured: true;,
 location: "Global",
 availability: "4-8 Weeks",
-aiScore: 97;
+aiScore: 97;,
 pricingTier: "Enterprise",
 },
 {id: "devops-automation",
@@ -143,7 +143,7 @@ title: "DevOps Automation & CI/CD Suite",
 description: "Complete DevOps automation with CI/CD pipelines; infrastructure as code; monitoring; and deployment automation.",
 category: "IT Services",
 subcategory: "DevOps",
-price: 2800;
+price: 2800;,
 currency: "$",
 tags: ["DevOps", "CI/CD", "Automation", "Infrastructure", "Monitoring"],
 author: {,
@@ -152,7 +152,7 @@ id: "zion-tech-group",
 avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"},
 images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
-rating: 4.8;
+rating: 4.8;,
 availability: "4-6 Weeks",
 aiScore: 96;
 },
@@ -164,7 +164,7 @@ title: "AI Content Generation Suite",
 description: "Complete content creation platform for blogs; social media; marketing copy; and technical documentation. Supports 15+ languages; SEO optimization; and brand voice consistency.",
 category: "AI Services",
 subcategory: "Content Creation",
-price: 299;
+price: 299;,
 currency: "$",
 tags: ["Content Generation", "SEO", "Multi-language", "Brand Voice"],
 author: {,
@@ -173,8 +173,8 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-20T14:30:00.000Z",
-rating: 4.7;
-reviewCount: 89;
+rating: 4.7;,
+reviewCount: 89;,
 location: "Global",
 availability: "Immediate",
 aiScore: 92;
@@ -187,7 +187,7 @@ title: "AI-Powered Business Analytics Platform",
 description: "Advanced analytics platform with predictive modeling; automated insights; and customizable dashboards. Integrates with major data sources and provides actionable business intelligence.",
 category: "AI Services",
 subcategory: "Data Analytics",
-price: 1499;
+price: 1499;,
 currency: "$",
 tags: ["Business Intelligence", "Predictive Analytics", "Data Visualization", "Automated Insights"],
 author: {,
@@ -197,8 +197,8 @@ email: "kleber@ziontechgroup.com",
 avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100"},
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-01T09:15:00.000Z",
-rating: 4.8;
-reviewCount: 67;
+rating: 4.8;,
+reviewCount: 67;,
 location: "Global",
 availability: "2-3 Weeks",
 aiScore: 94;
@@ -211,7 +211,7 @@ title: "Cloud Migration & Optimization Consulting",
 description: "End-to-end cloud migration services for AWS; Azure; and Google Cloud. Includes assessment; planning; migration execution; and cost optimization strategies.",
 category: "IT Services",
 subcategory: "Cloud Solutions",
-price: 5999;
+price: 5999;,
 currency: "$",
 tags: ["Cloud Migration", "AWS", "Azure", "Cost Optimization", "DevOps"],
 author: {,
@@ -221,11 +221,11 @@ email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-10T11:45:00.000Z",
 rating: 4.9;
-reviewCount: 134;
-featured: true;
+reviewCount: 134;,
+featured: true;,
 location: "Global",
 availability: "3-4 Weeks",
-aiScore: 94;
+aiScore: 94;,
 pricingTier: "Professional",
 },
 aiScore: 94;,
@@ -236,7 +236,7 @@ title: "Business Workflow Automation Platform",
 description: "Custom workflow automation solution to streamline business processes; reduce manual work; and improve efficiency.",
 category: "Business Solutions",
 subcategory: "Automation",
-price: 2200;
+price: 2200;,
 currency: "$",
 tags: ["Workflow", "Automation", "Business Process", "Efficiency", "Productivity"],
 author: {,
@@ -246,11 +246,11 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 images: ["https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.7;
-reviewCount: 98;
-featured: true;
+reviewCount: 98;,
+featured: true;,
 location: "Global",
 availability: "2-4 Weeks",
-aiScore: 93;
+aiScore: 93;,
 pricingTier: "Professional",
 },
 {id: "customer-support-ai",
@@ -262,7 +262,7 @@ title: "AI-Powered Customer Support Automation",
 description: "Intelligent customer support system with ticket routing; automated responses; and customer satisfaction tracking.",
 category: "Business Solutions",
 subcategory: "Customer Support",
-price: 1800;
+price: 1800;,
 currency: "$",
 tags: ["Customer Support", "AI", "Automation", "Ticket Management", "Analytics"],
 author: {,
@@ -272,11 +272,11 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 images: ["https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.6;
-reviewCount: 76;
-featured: true;
+reviewCount: 76;,
+featured: true;,
 location: "Global",
 availability: "2-3 Weeks",
-aiScore: 91;
+aiScore: 91;,
 pricingTier: "Starter",
 },
 aiScore: 91;,
@@ -287,7 +287,7 @@ title: "E-commerce AI Optimization Suite",
 description: "AI-powered e-commerce optimization including product recommendations; pricing optimization; and customer behavior analysis.",
 category: "E-commerce",
 subcategory: "AI Optimization",
-price: 3200;
+price: 3200;,
 currency: "$",
 tags: ["E-commerce", "AI", "Optimization", "Recommendations", "Analytics"],
 author: {,
@@ -297,11 +297,11 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.8;
-reviewCount: 145;
-featured: true;
+reviewCount: 145;,
+featured: true;,
 location: "Global",
 availability: "3-5 Weeks",
-aiScore: 95;
+aiScore: 95;,
 pricingTier: "Professional",
 },
 {id: "digital-marketing-automation",
@@ -313,7 +313,7 @@ title: "Digital Marketing Automation Platform",
 description: "Comprehensive marketing automation platform with email campaigns; social media management; and lead nurturing.",
 category: "Digital Marketing",
 subcategory: "Automation",
-price: 1500;
+price: 1500;,
 currency: "$",
 tags: ["Marketing", "Automation", "Email", "Social Media", "Lead Generation"],
 author: {,
@@ -323,11 +323,11 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 images: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.7;
-reviewCount: 112;
-featured: true;
+reviewCount: 112;,
+featured: true;,
 location: "Global",
 availability: "2-3 Weeks",
-aiScore: 92;
+aiScore: 92;,
 pricingTier: "Starter",
 },
 aiScore: 92;,
@@ -338,7 +338,7 @@ title: "Healthcare AI Diagnostic Platform",
 description: "AI-powered medical diagnostic platform with image analysis; patient data management; and clinical decision support.",
 category: "Healthcare",
 subcategory: "AI Diagnostics",
-price: 8500;
+price: 8500;,
 currency: "$",
 tags: ["Healthcare", "AI", "Diagnostics", "Medical", "Image Analysis"],
 author: {,
@@ -348,11 +348,11 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 images: ["https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.9;
-reviewCount: 67;
-featured: true;
+reviewCount: 67;,
+featured: true;,
 location: "Global",
 availability: "8-12 Weeks",
-aiScore: 99;
+aiScore: 99;,
 pricingTier: "Enterprise",
 },
 {id: "fintech-compliance-security",
@@ -364,7 +364,7 @@ title: "FinTech Compliance & Security Suite",
 description: "Complete financial technology compliance solution with security protocols; regulatory reporting; and audit trails.",
 category: "FinTech",
 subcategory: "Compliance & Security",
-price: 7200;
+price: 7200;,
 currency: "$",
 tags: ["FinTech", "Compliance", "Security", "Regulatory", "Audit"],
 author: {,
@@ -374,11 +374,11 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.8;
-reviewCount: 89;
-featured: true;
+reviewCount: 89;,
+featured: true;,
 location: "Global",
 availability: "6-10 Weeks",
-aiScore: 96;
+aiScore: 96;,
 pricingTier: "Enterprise",
 },
 aiScore: 96;,
@@ -389,7 +389,7 @@ title: "Enterprise IoT Management Platform",
 description: "Comprehensive IoT platform for device management; data collection; and real-time monitoring across multiple locations.",
 category: "IoT Solutions",
 subcategory: "Management Platform",
-price: 5500;
+price: 5500;,
 currency: "$",
 tags: ["IoT", "Device Management", "Monitoring", "Real-time", "Enterprise"],
 author: {,
@@ -399,11 +399,11 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.7;
-reviewCount: 123;
-featured: true;
+reviewCount: 123;,
+featured: true;,
 location: "Global",
 availability: "5-8 Weeks",
-aiScore: 94;
+aiScore: 94;,
 pricingTier: "Professional",
 },
 {id: "smart-building-automation",
@@ -415,7 +415,7 @@ title: "Smart Building Automation System",
 description: "Intelligent building management system with energy optimization; security monitoring; and automated controls.",
 category: "IoT Solutions",
 subcategory: "Building Automation",
-price: 4200;
+price: 4200;,
 currency: "$",
 tags: ["Smart Building", "Automation", "Energy", "Security", "IoT"],
 author: {,
@@ -425,11 +425,11 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 images: ["https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.6;
-reviewCount: 87;
-featured: true;
+reviewCount: 87;,
+featured: true;,
 location: "Global",
 availability: "4-6 Weeks",
-aiScore: 93;
+aiScore: 93;,
 pricingTier: "Professional",
 },
 aiScore: 93;,
@@ -441,7 +441,7 @@ title: "AI-Powered Learning Management System",
 description: "Intelligent LMS with personalized learning paths; adaptive assessments; and progress tracking for educational institutions.",
 category: "Education",
 subcategory: "Learning Management",
-price: 3800;
+price: 3800;,
 currency: "$",
 tags: ["Education", "AI", "LMS", "Personalized Learning", "Assessment"],
 aiScore: 91;
@@ -454,7 +454,7 @@ title: "Cybersecurity Audit & Compliance",
 description: "Comprehensive security assessments; penetration testing; and compliance audits for SOC 2; ISO 27001; GDPR; and industry-specific regulations. Includes remediation planning and ongoing monitoring.",
 category: "IT Services",
 subcategory: "Cybersecurity",
-price: 7999;
+price: 7999;,
 currency: "$",
 tags: ["Cybersecurity", "Compliance", "Penetration Testing", "SOC 2", "GDPR"],
 author: {,
@@ -464,8 +464,8 @@ email: "kleber@ziontechgroup.com",
 avatarUrl: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=100&h=100"},
 images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-25T16:20:00.000Z",
-rating: 4.9;
-reviewCount: 98;
+rating: 4.9;,
+reviewCount: 98;,
 location: "Global",
 availability: "2-3 Weeks",
 aiScore: 95;
@@ -478,7 +478,7 @@ title: "DevOps Automation & CI/CD Pipeline",
 description: "Complete DevOps automation setup with CI/CD pipelines; infrastructure as code; monitoring; and alerting. Supports multiple cloud providers and on-premise environments.",
 category: "IT Services",
 subcategory: "DevOps",
-price: 4499;
+price: 4499;,
 currency: "$",
 tags: ["DevOps", "CI/CD", "Automation", "Infrastructure as Code", "Monitoring"],
 author: {,
@@ -487,8 +487,8 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-05T13:10:00.000Z",
-rating: 4.7;
-reviewCount: 76;
+rating: 4.7;,
+reviewCount: 76;,
 location: "Global",
 availability: "3-4 Weeks",
 aiScore: 89;
@@ -501,7 +501,7 @@ title: "Smart Inventory Management System",
 description: "Cloud-based inventory management solution with barcode scanning; real-time tracking; automated reordering; and analytics. Perfect for retail; manufacturing; and e-commerce businesses.",
 category: "Micro SAAS",
 subcategory: "Business Operations",
-price: 199;
+price: 199;,
 currency: "$",
 tags: ["Inventory Management", "Barcode Scanning", "Automated Reordering", "Analytics"],
 author: {,
@@ -512,11 +512,11 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 images: ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.8;
-reviewCount: 156;
-featured: true;
+reviewCount: 156;,
+featured: true;,
 location: "Global",
 availability: "4-7 Weeks",
-aiScore: 95;
+aiScore: 95;,
 pricingTier: "Professional",
 },
 aiScore: 95;,
@@ -527,13 +527,13 @@ title: "VR/AR Training & Simulation Platform",
 description: "Immersive virtual and augmented reality training platform for corporate training; skill development; and simulation.",
 category: "Education",
 subcategory: "VR/AR Training",
-price: 6500;
+price: 6500;,
 currency: "$",
 tags: ["VR", "AR", "Training", "Simulation", "Immersive"],
 images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-30T10:30:00.000Z",
-rating: 4.6;
-reviewCount: 45;
+rating: 4.6;,
+reviewCount: 45;,
 location: "Global",
 availability: "Immediate",
 aiScore: 87;
@@ -546,7 +546,7 @@ title: "AI-Powered Project Management Platform",
 description: "Intelligent project management tool with task automation; resource optimization; risk assessment; and predictive analytics. Integrates with popular tools like Slack; Jira; and Microsoft Teams.",
 category: "Micro SAAS",
 subcategory: "Project Management",
-price: 299;
+price: 299;,
 currency: "$",
 tags: ["Project Management", "Task Automation", "Resource Optimization", "Risk Assessment"],
 author: {,
@@ -555,8 +555,8 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-10T15:45:00.000Z",
-rating: 4.8;
-reviewCount: 67;
+rating: 4.8;,
+reviewCount: 67;,
 location: "Global",
 availability: "1-2 Weeks",
 aiScore: 93;
@@ -569,7 +569,7 @@ title: "Customer Support Automation Suite",
 description: "Automated customer support system with ticket routing; knowledge base management; chatbot integration; and performance analytics. Reduces response time and improves customer satisfaction.",
 category: "Micro SAAS",
 subcategory: "Customer Support",
-price: 399;
+price: 399;,
 currency: "$",
 tags: ["Customer Support", "Ticket Routing", "Knowledge Base", "Chatbot Integration"],
 author: {,
@@ -579,8 +579,8 @@ email: "kleber@ziontechgroup.com",
 avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"},
 images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-18T12:00:00.000Z",
-rating: 4.7;
-reviewCount: 89;
+rating: 4.7;,
+reviewCount: 89;,
 location: "Global",
 availability: "2-3 Weeks",
 aiScore: 90;
@@ -593,7 +593,7 @@ title: "Computer Vision API Platform",
 description: "Ready-to-use computer vision APIs for object detection; facial recognition; image classification; and document processing. Includes SDKs for multiple programming languages and comprehensive documentation.",
 category: "AI Services",
 subcategory: "Computer Vision",
-price: 1299;
+price: 1299;,
 currency: "$",
 tags: ["Computer Vision", "Object Detection", "Facial Recognition", "Image Classification"],
 author: {,
@@ -607,11 +607,11 @@ createdAt: "2024-01-15T10:00:00.000Z",
 images: ["https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.9;
-reviewCount: 78;
-featured: true;
+reviewCount: 78;,
+featured: true;,
 location: "Global",
 availability: "6-10 Weeks",
-aiScore: 97;
+aiScore: 97;,
 pricingTier: "Enterprise",
 }
 aiScore: 97;,
@@ -625,8 +625,8 @@ export const SERVICE_CATEGORIES = [
 "E-commerce",
 "Digital Marketing",
 "Healthcare",
-"FinTech",
-"IoT Solutions",
+"FinTech",;
+"IoT Solutions",;
 "Education";
 ];
 
@@ -637,8 +637,8 @@ export const SERVICE_SUBCATEGORIES = {
 "E-commerce": ["AI Optimization", "Platform Development", "Payment Systems", "Inventory Management", "Customer Experience"],
 "Digital Marketing": ["Automation", "SEO", "Social Media", "Content Strategy", "Analytics"],
 "Healthcare": ["AI Diagnostics", "Patient Management", "Telemedicine", "Medical Imaging", "Clinical Support"],
-"FinTech": ["Compliance & Security", "Payment Processing", "Risk Management", "Trading Platforms", "Digital Banking"],
-"IoT Solutions": ["Management Platform", "Building Automation", "Industrial IoT", "Smart Cities", "Connected Devices"],
+"FinTech": ["Compliance & Security", "Payment Processing", "Risk Management", "Trading Platforms", "Digital Banking"],;
+"IoT Solutions": ["Management Platform", "Building Automation", "Industrial IoT", "Smart Cities", "Connected Devices"],;
 "Education": ["Learning Management", "VR/AR Training", "Assessment Tools", "Student Analytics", "Content Creation"];
 };
 
@@ -658,7 +658,7 @@ title: "Natural Language Processing Engine",
 description: "Advanced NLP engine for text analysis; sentiment analysis; language translation; and document summarization. Supports 50+ languages and includes pre-trained models for various industries.",
 category: "AI Services",
 subcategory: "Natural Language Processing",
-price: 2499;
+price: 2499;,
 currency: "$",
 tags: ["NLP", "Text Analysis", "Sentiment Analysis", "Language Translation"],
 author: {,
@@ -668,8 +668,8 @@ email: "kleber@ziontechgroup.com",
 avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"},
 images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-28T14:15:00.000Z",
-rating: 4.8;
-reviewCount: 56;
+rating: 4.8;,
+reviewCount: 56;,
 location: "Global",
 availability: "2-3 Weeks",
 aiScore: 93;
@@ -682,7 +682,7 @@ title: "Predictive Analytics & Forecasting Engine",
 description: "Machine learning-powered predictive analytics platform for sales forecasting; demand planning; risk assessment; and trend analysis. Includes model training; validation; and deployment tools.",
 category: "AI Services",
 subcategory: "Predictive Analytics",
-price: 3999;
+price: 3999;,
 currency: "$",
 tags: ["Predictive Analytics", "Sales Forecasting", "Demand Planning", "Risk Assessment"],
 author: {,
@@ -691,8 +691,8 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-08T11:20:00.000Z",
-rating: 4.9;
-reviewCount: 43;
+rating: 4.9;,
+reviewCount: 43;,
 location: "Global",
 availability: "3-4 Weeks",
 aiScore: 96;
@@ -705,7 +705,7 @@ title: "Digital Transformation Strategy Consulting",
 description: "Comprehensive digital transformation consulting including technology assessment; roadmap development; change management; and implementation support. Focuses on ROI and business value.",
 category: "IT Services",
 subcategory: "Strategic Consulting",
-price: 12999;
+price: 12999;,
 currency: "$",
 tags: ["Digital Transformation", "Strategy Consulting", "Change Management", "Technology Assessment"],
 author: {,
@@ -716,8 +716,8 @@ avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=forma
 images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-12T08:45:00.000Z",
 rating: 4.9;
-reviewCount: 67;
-featured: true;
+reviewCount: 67;,
+featured: true;,
 location: "Global",
 availability: "4-6 Weeks",
 aiScore: 94;
@@ -730,7 +730,7 @@ title: "Data Governance & Compliance Framework",
 description: "Complete data governance framework including policies; procedures; data quality management; and compliance monitoring. Ensures data security; privacy; and regulatory compliance.",
 category: "IT Services",
 subcategory: "Data Management",
-price: 6999;
+price: 6999;,
 currency: "$",
 tags: ["Data Governance", "Compliance", "Data Quality", "Privacy Management"],
 author: {,
@@ -739,8 +739,8 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-12T10:30:00.000Z",
-rating: 4.7;
-reviewCount: 34;
+rating: 4.7;,
+reviewCount: 34;,
 location: "Global",
 availability: "3-4 Weeks",
 aiScore: 88;
@@ -753,7 +753,7 @@ title: "HR Automation & Employee Management Platform",
 description: "Comprehensive HR platform with recruitment automation; performance tracking; employee onboarding; and payroll integration. Streamlines HR processes and improves employee experience.",
 category: "Micro SAAS",
 subcategory: "Human Resources",
-price: 499;
+price: 499;,
 currency: "$",
 tags: ["HR Automation", "Recruitment", "Performance Tracking", "Employee Onboarding"],
 author: {,
@@ -763,8 +763,8 @@ email: "kleber@ziontechgroup.com",
 avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"},
 images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-22T13:45:00.000Z",
-rating: 4.6;
-reviewCount: 78;
+rating: 4.6;,
+reviewCount: 78;,
 location: "Global",
 availability: "2-3 Weeks",
 aiScore: 89;
@@ -777,7 +777,7 @@ title: "Financial Analytics & Reporting Dashboard",
 description: "Real-time financial analytics platform with automated reporting; cash flow forecasting; expense tracking; and KPI monitoring. Integrates with major accounting software and banking systems.",
 category: "Micro SAAS",
 subcategory: "Financial Management",
-price: 399;
+price: 399;,
 currency: "$",
 tags: ["Financial Analytics", "Cash Flow Forecasting", "Expense Tracking", "KPI Monitoring"],
 author: {,
@@ -786,8 +786,8 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-18T16:20:00.000Z",
-rating: 4.8;
-reviewCount: 56;
+rating: 4.8;,
+reviewCount: 56;,
 location: "Global",
 availability: "1-2 Weeks",
 aiScore: 91;
@@ -800,7 +800,7 @@ title: "Supply Chain Optimization & Analytics",
 description: "AI-powered supply chain optimization platform with demand forecasting; inventory optimization; supplier management; and logistics optimization. Reduces costs and improves efficiency.",
 category: "Micro SAAS",
 subcategory: "Supply Chain",
-price: 799;
+price: 799;,
 currency: "$",
 tags: ["Supply Chain", "Demand Forecasting", "Inventory Optimization", "Logistics"],
 author: {,
@@ -810,8 +810,8 @@ email: "kleber@ziontechgroup.com",
 avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"},
 images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-30T12:00:00.000Z",
-rating: 4.7;
-reviewCount: 45;
+rating: 4.7;,
+reviewCount: 45;,
 location: "Global",
 availability: "2-3 Weeks",
 aiScore: 90;
@@ -840,8 +840,8 @@ services: COMPREHENSIVE_SERVICES.filter(s => s.category === "IT Services")},
 id: "micro-saas",
 name: "Micro SAAS",
 description: "Specialized software-as-a-service solutions for business needs",
-icon: "🚀",
-color: "from-emerald-500 to-green-600",
+icon: "🚀",;
+color: "from-emerald-500 to-green-600",;
 services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Micro SAAS")};
 ];
 
@@ -854,8 +854,8 @@ period: "month",
 description: "Perfect for small businesses and startups",
 features: [
 "Basic features and functionality",
-"Email support",
-"Standard integrations",
+"Email support",;
+"Standard integrations",;
 "Up to 5 users";
 ];
 },
@@ -893,7 +893,7 @@ export const CONTACT_INFO = {
 mobile: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 address: "364 E Main St STE 1008 Middletown DE 19709",
-website: "https://ziontechgroup.com",
-businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
+website: "https://ziontechgroup.com",;
+businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;
 responseTime: "24-48 hours for initial response",;
 };

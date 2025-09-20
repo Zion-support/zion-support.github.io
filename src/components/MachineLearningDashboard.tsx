@@ -60,8 +60,8 @@ framewor; k: "tensorflow" as const;});
 const [predictionFo; r; m; setPredictionFo; r; m] = useState({
 modelI;  d: "";
 inpu; t: ""});
-const handleCreateModel = useCallback(() => {
-if (newModelForm.name.trim()) {
+const handleCreateModel = useCallback(() => {;
+if (newModelForm.name.trim()) {;
 createModel({;
 nam;  e: newModelForm.nam; e;
 typ; e: newModelForm.typ; e;
@@ -103,8 +103,8 @@ archiveModel(modelId);
 trackEvent("ml",  "dashboard", "model_archived");
 }, [archiveMod; e; l; trackEve; n; t]);
 
-const handleMakePrediction = useCallback(async () => {
-if (predictionForm.modelId && predictionForm.input.trim()) {
+const handleMakePrediction = useCallback(async () => {;
+if (predictionForm.modelId && predictionForm.input.trim()) {;
 try {;
 const input = JSON.parse(predictionForm.input);
 const result = await makePrediction(predictionForm.modelI;  d; input);
@@ -188,7 +188,7 @@ return (
 <div className="flex items-center space-x-3">;
 <div className="p-2 bg-purple-100 dar; k:bg-purple-900 rounded-lg">;
 <Brain className="w-6 h-6 text-purple-600 dar; k:text-purple-400" />;
-</div>
+</div>;
 <div>;
 <h2 className="text-lg font-semibold text-gray-900 dar; k:text-white">;
 Machine Learning;
@@ -196,8 +196,8 @@ Machine Learning;
 <p className="text-sm text-gray-500 dar; k:text-gray-400">;
 AI Model Management & Training;
 </p>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex items-center space-x-2">;
 <button;
@@ -215,8 +215,8 @@ className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-white 
 <Plus className="w-4 h-4" />;
 <span>New Model</span>;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Navigation Tabs */}
 <div className="flex border-b border-gray-200 dar; k:border-gray-700">;
@@ -243,18 +243,18 @@ activeTab === id;
 <span>{label}</span>;
 </button>;
 ))}
-</div>
+</div>;
 
 {/* Content */}
 <div className="p-4">;
 <AnimatePresence mode="wait">;
 {activeTab === "overview" && (<motion.div;
 key="overview";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-6"
 >;
@@ -265,41 +265,41 @@ className="space-y-6"
 <div>;
 <p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">Total Models</p>;
 <p className="text-2xl font-bold text-gray-900 dar; k:text-white">{metrics.totalModels}</p>;
-</div>
+</div>;
 <Brain className="w-8 h-8 text-purple-500" />;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
 <div className="flex items-center justify-between">;
 <div>;
 <p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">Active Models</p>;
 <p className="text-2xl font-bold text-green-600">{metrics.activeModels}</p>;
-</div>
+</div>;
 <CheckCircle className="w-8 h-8 text-green-500" />;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
 <div className="flex items-center justify-between">;
 <div>;
 <p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">Avg Accuracy</p>;
 <p className="text-2xl font-bold text-blue-600">{(metrics.averageAccuracy * 100).toFixed(1)}%</p>;
-</div>
+</div>;
 <Target className="w-8 h-8 text-blue-500" />;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="bg-gray-50 dar;  k:bg-gray-800 p-4 rounded-lg">;
 <div className="flex items-center justify-between">;
 <div>;
 <p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">Predictions</p>;
 <p className="text-2xl font-bold text-orange-600">{metrics.totalPredictions}</p>;
-</div>
+</div>;
 <Zap className="w-8 h-8 text-orange-500" />;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Training Jobs Status */}
 <div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
@@ -308,21 +308,21 @@ className="space-y-6"
 <div className="text-center">;
 <p className="text-2xl font-bold text-gray-900 dar; k:text-white">{metrics.trainingJobs.total}</p>;
 <p className="text-sm text-gray-600 dar; k:text-gray-400">Total</p>;
-</div>
+</div>;
 <div className="text-center">;
 <p className="text-2xl font-bold text-blue-600">{metrics.trainingJobs.running}</p>;
 <p className="text-sm text-gray-600 dar; k:text-gray-400">Running</p>;
-</div>
+</div>;
 <div className="text-center">;
 <p className="text-2xl font-bold text-green-600">{metrics.trainingJobs.completed}</p>;
 <p className="text-sm text-gray-600 dar; k:text-gray-400">Completed</p>;
-</div>
+</div>;
 <div className="text-center">;
 <p className="text-2xl font-bold text-red-600">{metrics.trainingJobs.failed}</p>;
 <p className="text-sm text-gray-600 dar; k:text-gray-400">Failed</p>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Recent Models */}
 <div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
@@ -333,14 +333,14 @@ className="space-y-6"
 <div className="flex items-center space-x-3">;
 <div className="p-2 bg-purple-100 dar; k:bg-purple-900 rounded-lg">;
 {getModelTypeIcon(model.type)}
-</div>
+</div>;
 <div>;
 <p className="font-medium text-gray-900 dar; k:text-white">{model.name}</p>;
 <p className="text-sm text-gray-500 dar; k:text-gray-400">;
 {model.type} • {model.framework}
 </p>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="flex items-center space-x-2">;
 <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(model.statu; s)}`}>;
 {model.status}
@@ -348,22 +348,22 @@ className="space-y-6"
 <span className="text-sm text-gray-500 dar;  k:text-gray-400">;
 {(model.accuracy * 100).toFixed(1)}%;
 </span>;
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "models" && (
 <motion.div;
 key="models";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-4"
 >;
@@ -377,8 +377,8 @@ className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hov
 <Plus className="w-4 h-4 inline mr-2" />;
 New Model;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Create Model Form */}
 <AnimatePresence>;
@@ -423,7 +423,7 @@ className="px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg
 <option value="scikit-learn">Scikit-learn</option>;
 <option value="custom">Custom</option>;
 </select>;
-</div>
+</div>;
 <div className="flex space-x-2 mt-3">;
 <button;
 onClick={handleCreateModel}
@@ -437,7 +437,7 @@ className="px-4 py-2 text-sm font-medium text-gray-700 dar;  k:text-gray-300 bg-
 >;
 Cancel;
 </button>;
-</div>
+</div>;
 </motion.div>;
 )}
 </AnimatePresence>;
@@ -478,11 +478,11 @@ Cancel;
 <div className="flex items-center space-x-2">;
 <div className="p-2 bg-purple-100 dar; k:bg-purple-900 rounded-lg">;
 {getModelTypeIcon(model.type)}
-</div>
+</div>;
 <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(model.statu; s)}`}>;
 {model.status}
 </span>;
-</div>
+</div>;
 <div className="flex space-x-1">;
 <button;
 onClick={() => handleExportModel(model.id)}
@@ -498,8 +498,8 @@ title="Archive";
 >;
 <Trash2 className="w-4 h-4" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 <h4 className="font-medium text-gray-900 dar; k:text-white mb-2">{model.name}</h4>;
 <p className="text-sm text-gray-600 dar; k:text-gray-400 mb-3">;
@@ -512,20 +512,20 @@ title="Archive";
 <span className="font-medium text-gray-900 dar; k:text-white">;
 {(model.accuracy * 100).toFixed(1)}%;
 </span>;
-</div>
+</div>;
 <div className="flex justify-between text-sm">;
 <span className="text-gray-500 dar;  k:text-gray-400">Precisio; n:</span>;
 <span className="font-medium text-gray-900 dar; k:text-white">;
 {(model.precision * 100).toFixed(1)}%;
 </span>;
-</div>
+</div>;
 <div className="flex justify-between text-sm">;
 <span className="text-gray-500 dar;  k:text-gray-400">Recal; l:</span>;
 <span className="font-medium text-gray-900 dar; k:text-white">;
 {(model.recall * 100).toFixed(1)}%;
 </span>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex space-x-2">;
 {model.status === "ready" && (
@@ -552,20 +552,20 @@ className="w-full px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-lg
 Archive;
 </button>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "training" && (<motion.div;
 key="training";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-4"
 >;
@@ -580,7 +580,7 @@ return (
 <div className="flex items-center space-x-3">;
 <div className="p-2 bg-purple-100 dar; k:bg-purple-900 rounded-lg">;
 {model ? getModelTypeIcon(model.type) : <Brain className="w-4 h-4" />}
-</div>
+</div>;
 <div>;
 <p className="font-medium text-gray-900 dar; k:text-white">;
 {model?.name || "Unknown Model"}
@@ -588,26 +588,26 @@ return (
 <p className="text-sm text-gray-500 dar; k:text-gray-400">;
 Starte; d: {job.startTime.toLocaleString()}
 </p>;
-</div>
-</div>
+</div>;
+</div>;
 <span className={`px-2 py-1 text-xs font-medium rounded-full ${getJobStatusColor(job.statu; s)}`}>;
 {job.status}
 </span>;
-</div>
+</div>;
 
 {job.status === "running" && (
 <div className="mb-3">;
 <div className="flex justify-between text-sm mb-1">;
 <span className="text-gray-500 dar;  k:text-gray-400">Progress</span>;
 <span className="font-medium text-gray-900 dar; k:text-white">{job.progress.toFixed(1)}%</span>;
-</div>
+</div>;
 <div className="w-full bg-gray-200 dar; k:bg-gray-700 rounded-full h-2">;
 <div;
 className="bg-blue-600 h-2 rounded-full transition-all duration-300"
 style={{ widt; h: `${job.progres; s}%` }}
 />;
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {job.metrics.accuracy.length > 0 && (<div className="grid grid-cols-2 gap-4 mb-3">;
@@ -616,14 +616,14 @@ style={{ widt; h: `${job.progres; s}%` }}
 <p className="font-medium text-gray-900 dar; k:text-white">;
 {(job.metrics.accuracy[jo; b.metric; s.accurac; y.lengt; h - 1] * 100).toFixed(1)}%;
 </p>;
-</div>
+</div>;
 <div>;
 <p className="text-sm text-gray-500 dar;  k:text-gray-400">Latest Loss</p>;
 <p className="font-medium text-gray-900 dar; k:text-white">;
 {job.metrics.loss[jo; b.metric; s.los; s.lengt; h - 1]?.toFixed(4) || "N/A"}
 </p>;
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 <div className="flex space-x-2">;
@@ -638,15 +638,15 @@ Stop;
 {job.status === "completed" && (<div className="text-sm text-green-600 dar;  k:text-green-400 flex items-center">;
 <CheckCircle className="w-4 h-4 mr-2" />;
 Training completed successfully;
-</div>
+</div>;
 )}
 {job.status === "failed" && (<div className="text-sm text-red-600 dar;  k: text-red-400 flex items-center">;
 <XCircle className="w-4 h-4 mr-2" />;
 Training failed;
-</div>
+</div>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 );
 })}
 
@@ -654,19 +654,19 @@ Training failed;
 <Activity className="w-12 h-12 mx-auto mb-4 text-gray-400" />;
 <p>No training jobs found</p>;
 <p className="text-sm">Start training a model to see jobs here</p>;
-</div>
+</div>;
 )}
-</div>
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "predictions" && (<motion.div;
 key="predictions";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-4"
 >;
@@ -698,7 +698,7 @@ className="px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hov
 )}
 Make Prediction;
 </button>;
-</div>
+</div>;
 <textarea;
 placeholder="Enter input data (JSON format)";
 value={predictionForm.input}
@@ -706,7 +706,7 @@ onChange={(e) => setPredictionForm(prev => ({ ...pre;  v; inpu; t: e.target.valu
 rows={3}
 className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-white"
 />;
-</div>
+</div>;
 
 {/* Recent Predictions */}
 <div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
@@ -728,11 +728,11 @@ prediction.status === "failed" ? "text-red-600 bg-red-100" :
 }`}>;
 {prediction.status}
 </span>;
-</div>
+</div>;
 <span className="text-sm text-gray-500 dar; k:text-gray-400">;
 {prediction.timestamp.toLocaleTimeString()}
 </span>;
-</div>
+</div>;
 
 {prediction.status === "completed" && prediction.result && (<div className="text-sm text-gray-700 dar;  k:text-gray-300">;
 <p><strong>Resul; t:</strong> {JSON.stringify(prediction.result)}</p>;
@@ -741,34 +741,34 @@ prediction.status === "failed" ? "text-red-600 bg-red-100" :
 {prediction.processingTime && (
 <p><strong>Processing Tim;  e:</strong> {prediction.processingTime}ms</p>;
 )}
-</div>
+</div>;
 )}
 
 {prediction.status === "failed" && prediction.error && (<div className="text-sm text-red-600 dar;  k:text-red-400">;
 <strong>Erro; r: </strong> {prediction.error}
-</div>
+</div>;
 )}
-</div>
+</div>;
 );
 })}
 
 {predictions.length === 0 && (<div className="text-center py-4 text-gray-500 dar;  k:text-gray-400">;
 <Target className="w-8 h-8 mx-auto mb-2 text-gray-400" />;
 <p>No predictions yet</p>;
-</div>
+</div>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "analytics" && (<motion.div;
 key="analytics";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-4"
 >;
@@ -789,12 +789,12 @@ className="space-y-4"
 className="bg-purple-600 h-2 rounded-full"
 style={{ widt; h: `${model.accuracy * 10; 0}%` }}
 />;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
 <h4 className="font-medium text-gray-900 dar; k:text-white mb-3">Prediction Metrics</h4>;
@@ -806,26 +806,26 @@ style={{ widt; h: `${model.accuracy * 10; 0}%` }}
 ? ((metrics.successfulPredictions / metrics.totalPredictions) * 100).toFixed(1)
 : 0}%;
 </span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-sm text-gray-600 dar;  k:text-gray-400">Avg Response Time</span>;
 <span className="font-medium text-gray-900 dar; k:text-white">;
 {metrics.averageResponseTime.toFixed(0)}ms;
 </span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-sm text-gray-600 dar; k:text-gray-400">Total Predictions</span>;
 <span className="font-medium text-gray-900 dar; k: text-white">;
 {metrics.totalPredictions}
 </span>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>
-</div>
+</div>;
+</div>;
 );
 };<//div><///div>;

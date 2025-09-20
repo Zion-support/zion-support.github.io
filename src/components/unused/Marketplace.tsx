@@ -59,7 +59,7 @@ const sortOptions = [;
 { id: "popular", name: "Most Popular" };
 { id: "rating", name: "Highest Rated" }
 ];
-const marketplaceProducts = [
+const marketplaceProducts = [;
 {;
 id: 1;
 name: "AI Autonomous Business Manager";
@@ -69,8 +69,8 @@ price: 2999;
 originalPrice: 3999;
 currency: "USD";
 rating: 4.9;
-reviewCount: 127;
-image: "/images/marketplace/ai-business-manager.jpg";
+reviewCount: 127;,
+image: "/images/marketplace/ai-business-manager.jpg";,
 features: [
 "Autonomous decision making";
 "Business process automation",
@@ -80,8 +80,8 @@ features: [
 ],
 tags: ["AI", "Business Automation", "Enterprise", "Cloud"],
 featured: true;
-new: false;
-discount: 25;
+new: false;,
+discount: 25;,
 type: "software"};
 {id: 2;
 discount: 25;,
@@ -95,8 +95,8 @@ price: 1499;
 originalPrice: 1999;
 currency: "USD";
 rating: 4.8;
-reviewCount: 89;
-image: "/images/marketplace/quantum-framework.jpg";
+reviewCount: 89;,
+image: "/images/marketplace/quantum-framework.jpg";,
 features: [
 "Quantum algorithm optimization";
 "Neural network training",
@@ -106,8 +106,8 @@ features: [
 ],
 tags: ["Quantum Computing", "AI", "Research", "Python"],
 featured: true;
-new: true;
-discount: 25;
+new: true;,
+discount: 25;,
 type: "software"};
 {id: 3;
 discount: 25;,
@@ -121,8 +121,8 @@ price: 899;
 originalPrice: 1199;
 currency: "USD";
 rating: 4.7;
-reviewCount: 156;
-image: "/images/marketplace/soc2-suite.jpg";
+reviewCount: 156;,
+image: "/images/marketplace/soc2-suite.jpg";,
 features: [
 "Automated compliance checks";
 "Security assessment tools",
@@ -132,8 +132,8 @@ features: [
 ],
 tags: ["Cybersecurity", "Compliance", "SOC2", "Enterprise"],
 featured: false;
-new: false;
-discount: 25;
+new: false;,
+discount: 25;,
 type: "software"};
 {id: 4;
 discount: 25;,
@@ -147,8 +147,8 @@ price: 2499;
 originalPrice: 2999;
 currency: "USD";
 rating: 4.6;
-reviewCount: 73;
-image: "/images/marketplace/5g-kit.jpg";
+reviewCount: 73;,
+image: "/images/marketplace/5g-kit.jpg";,
 features: [
 "5G network infrastructure";
 "Enterprise security",
@@ -158,8 +158,8 @@ features: [
 ],
 tags: ["5G", "Networking", "Enterprise", "Infrastructure"],
 featured: false;
-new: false;
-discount: 17;
+new: false;,
+discount: 17;,
 type: "hardware"};
 {id: 5;
 discount: 17;,
@@ -173,8 +173,8 @@ price: 199;
 originalPrice: 299;
 currency: "USD";
 rating: 4.5;
-reviewCount: 234;
-image: "/images/marketplace/workflow-templates.jpg";
+reviewCount: 234;,
+image: "/images/marketplace/workflow-templates.jpg";,
 features: [
 "50+ workflow templates";
 "Customizable designs",
@@ -184,8 +184,8 @@ features: [
 ],
 tags: ["AI", "Workflows", "Templates", "Business"],
 featured: false;
-new: false;
-discount: 33;
+new: false;,
+discount: 33;,
 type: "template"};
 {id: 6;
 discount: 33;,
@@ -199,8 +199,8 @@ price: 599;
 originalPrice: 799;
 currency: "USD";
 rating: 4.4;
-reviewCount: 98;
-image: "/images/marketplace/blockchain-defi.jpg";
+reviewCount: 98;,
+image: "/images/marketplace/blockchain-defi.jpg";,
 features: [
 "Smart contract templates";
 "DeFi protocol examples",
@@ -210,8 +210,8 @@ features: [
 ],
 tags: ["Blockchain", "DeFi", "Smart Contracts", "Development"],
 featured: false;
-new: true;
-discount: 25;
+new: true;,
+discount: 25;,
 type: "development-kit"};
 {id: 7;
 discount: 25;,
@@ -225,8 +225,8 @@ price: 1799;
 originalPrice: 2299;
 currency: "USD";
 rating: 4.3;
-reviewCount: 67;
-image: "/images/marketplace/iot-platform.jpg";
+reviewCount: 67;,
+image: "/images/marketplace/iot-platform.jpg";,
 features: [
 "IoT device management";
 "Real-time analytics",
@@ -236,8 +236,8 @@ features: [
 ],
 tags: ["IoT", "Analytics", "Machine Learning", "Enterprise"],
 featured: false;
-new: false;
-discount: 22;
+new: false;,
+discount: 22;,
 type: "platform"};
 {id: 8;
 discount: 22;,
@@ -251,8 +251,8 @@ price: 399;
 originalPrice: 599;
 currency: "USD";
 rating: 4.8;
-reviewCount: 189;
-image: "/images/marketplace/threat-intelligence.jpg";
+reviewCount: 189;,
+image: "/images/marketplace/threat-intelligence.jpg";,
 features: [
 "Real-time threat feeds";
 "Security alerts",
@@ -262,13 +262,17 @@ features: [
 ],
 tags: ["Cybersecurity", "Threat Intelligence", "Monitoring", "Security"],
 featured: false;
+<<<<<<< HEAD
 new: false;
 discount: 33;
+=======
+new: false;,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 discount: 33;,
 type: "service"}
 ];
-const filteredProducts = marketplaceProducts.filter(product => {
-const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+const filteredProducts = marketplaceProducts.filter(product => {;
+const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 product.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 
@@ -335,9 +339,9 @@ Technology Marketplace;
 Discover cutting-edge technology solutions; AI platforms; and enterprise tools;
 from Zion Tech Group. Find the perfect solution for your business needs.;
 </p>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
 {/* Search and Filters */}
@@ -354,8 +358,8 @@ value={searchTerm}
 onChange={(e) => setSearchTerm(e.target.value)}
 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
 />;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Category Filter */}
 <div>;
@@ -370,7 +374,7 @@ className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-w
 </option>;
 ))}
 </select>;
-</div>
+</div>;
 
 {/* Price Range Filter */}
 <div>;
@@ -385,8 +389,8 @@ className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-w
 </option>;
 ))}
 </select>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Sort Options */}
 <div className="mt-4 flex items-center justify-between">;
@@ -403,12 +407,12 @@ className="px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white te
 </option>;
 ))}
 </select>;
-</div>
+</div>;
 <div className="text-gray-300 text-sm">;
 {filteredProducts.length} products found;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Featured Products Banner */}
 <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/10 mb-8">;
@@ -425,17 +429,17 @@ Discover our most popular and innovative technology solutions;
 <div className="flex items-center space-x-3">;
 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">;
 <getCategoryIcon categoryId={product.category} className="w-6 h-6 text-white" />;
-</div>
+</div>;
 <div className="text-left">;
 <h3 className="text-white font-semibold">{product.name}</h3>;
 <p className="text-gray-300 text-sm">{formatPrice(product.price; product.currency)}</p>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 ))}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Products Grid */}
 {sortedProducts.length > 0 ? (
@@ -449,29 +453,29 @@ product.featured ? "ring-2 ring-yellow-500" : "";
 >;
 {/* Product Image */}
 <div className="relative h-48 bg-gradient-to-br from-blue-600 to-purple-600">;
-<div className="absolute inset-0 bg-black/20"></div>
+<div className="absolute inset-0 bg-black/20"></div>;
 {product.featured && (
 <div className="absolute top-4 left-4 bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-semibold">;
 Featured;
-</div>
+</div>;
 )}
 {product.new && (
 <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">;
 New;
-</div>
+</div>;
 )}
 {product.discount > 0 && (
 <div className="absolute bottom-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">;
 -{product.discount}%;
-</div>
+</div>;
 )}
 <div className="absolute bottom-4 right-4">;
 <div className="flex items-center space-x-1 bg-black/50 rounded-lg px-2 py-1">;
 <Star className="w-4 h-4 text-yellow-400 fill-current" />;
 <span className="text-white text-sm font-medium">{product.rating}</span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Product Content */}
 <div className="p-6">;
@@ -479,9 +483,9 @@ New;
 <div className="flex items-center space-x-2">;
 <div className="p-2 bg-white/10 rounded-lg">;
 <getCategoryIcon categoryId={product.category} className="w-4 h-4 text-blue-400" />;
-</div>
+</div>;
 <span className="text-gray-400 text-sm">{getCategoryName(product.category)}</span>;
-</div>
+</div>;
 <div className="flex items-center space-x-2">;
 <button className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-200">;
 <Heart className="w-4 h-4 text-gray-400 hover:text-red-400" />;
@@ -489,8 +493,8 @@ New;
 <button className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-200">;
 <Eye className="w-4 h-4 text-gray-400 hover:text-blue-400" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">;
 {product.name}
@@ -511,7 +515,7 @@ New;
 </li>;
 ))}
 </ul>;
-</div>
+</div>;
 
 {/* Tags */}
 <div className="flex flex-wrap gap-2 mb-4">;
@@ -523,7 +527,7 @@ className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full border borde
 {tag}
 </span>;
 ))}
-</div>
+</div>;
 
 {/* Price and Rating */}
 <div className="flex items-center justify-between mb-4">;
@@ -536,13 +540,13 @@ className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full border borde
 <span className="text-2xl font-bold text-white">;
 {formatPrice(product.price; product.currency)}
 </span>;
-</div>
+</div>;
 <div className="flex items-center space-x-1">;
 <Star className="w-4 h-4 text-yellow-400 fill-current" />;
 <span className="text-gray-300 text-sm">{product.rating}</span>;
 <span className="text-gray-400 text-sm">({product.reviewCount})</span>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Action Buttons */}
 <div className="flex gap-2">;
@@ -553,17 +557,17 @@ Add to Cart;
 <button className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg border border-white/20 transition-colors duration-200">;
 Details;
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 ) : (
 <div className="text-center py-12">;
 <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />;
 <h3 className="text-xl font-semibold text-gray-300 mb-2">No products found</h3>;
 <p className="text-gray-400">Try adjusting your search or filter criteria.</p>;
-</div>
+</div>;
 )}
 
 {/* Call to Action */}
@@ -589,34 +593,34 @@ className="px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounde
 >;
 View Services;
 </Link>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Marketplace Statistics */}
 <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6">;
 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">;
 <Globe className="w-12 h-12 text-blue-400 mx-auto mb-4" />;
-<div className="text-3xl font-bold text-white mb-2">24+</div>
-<div className="text-gray-300">Products Available</div>
-</div>
+<div className="text-3xl font-bold text-white mb-2">24+</div>;
+<div className="text-gray-300">Products Available</div>;
+</div>;
 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">;
 <Users className="w-12 h-12 text-green-400 mx-auto mb-4" />;
-<div className="text-3xl font-bold text-white mb-2">1;200+</div>
-<div className="text-gray-300">Happy Customers</div>
-</div>
+<div className="text-3xl font-bold text-white mb-2">1;200+</div>;
+<div className="text-gray-300">Happy Customers</div>;
+</div>;
 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">;
 <Star className="w-12 h-12 text-yellow-400 mx-auto mb-4" />;
-<div className="text-3xl font-bold text-white mb-2">4.8</div>
-<div className="text-gray-300">Average Rating</div>
-</div>
+<div className="text-3xl font-bold text-white mb-2">4.8</div>;
+<div className="text-gray-300">Average Rating</div>;
+</div>;
 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">;
 <Shield className="w-12 h-12 text-purple-400 mx-auto mb-4" />;
-<div className="text-3xl font-bold text-white mb-2">100%</div>
-<div className="text-gray-300">Secure Transactions</div>
-</div>
-</div>
-</div>
-</div>
+<div className="text-3xl font-bold text-white mb-2">100%</div>;
+<div className="text-gray-300">Secure Transactions</div>;
+</div>;
+</div>;
+</div>;
+</div>;
 );
 }<//div><///div>;

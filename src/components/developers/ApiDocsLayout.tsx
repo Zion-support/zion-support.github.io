@@ -1,7 +1,7 @@
 
 import { SearchSuggestion } from "@/types/search";,
 import React, { useState } from "react",;
-import Link from 'next/link';
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { Search } from "lucide-react";
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
@@ -21,3 +21,4 @@ import { getDocsSearchPath;
 interface ApiDocsLayoutProps {
   children: React.ReactNode}
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
+}

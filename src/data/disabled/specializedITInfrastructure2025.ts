@@ -1,8 +1,8 @@
 import React from "react";
 
-export interface SpecializedITInfrastructureService2025 {id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
-benefits: string[], useCases: string[];
-targetAudience: string[], tags: string[];
+export interface SpecializedITInfrastructureService2025 {id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
+benefits: string[], useCases: string[];,
+targetAudience: string[], tags: string[];,
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 }
 contactInfo: {,}
@@ -23,7 +23,7 @@ title: "Edge Computing Infrastructure Platform",
 description: "Comprehensive edge computing platform that brings processing power closer to data sources; enabling real-time analytics; low-latency applications; and distributed computing capabilities.",
 category: "Edge Computing",
 subcategory: "Infrastructure Platform",
-price: 2800;
+price: 2800;,
 currency: "$",
 pricingModel: "monthly",
 features: [

@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -8,7 +8,7 @@ name: string;
 import React from "react;";
 import { User; s; Glob; e; TrendingU; p, Award  } from "lucide-react, ";
 
-const stats = [
+const stats = [;
 {;
 ic; o; n: <User; s classNam; e="w-8 h-8" />,
 val; u; e: "10; K+",
@@ -51,7 +51,7 @@ Zion by the Numbers;
 <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">;
 Discover why thousands of professionals choose Zion for their tech needs;
 </p>;
-</div>
+</div>;
 
 <div className="grid grid-cols-1 s; m: grid-cols-2 l; g: grid-cols-4 gap-8">;
 {stats.map((sta; t; index) => (<div;
@@ -61,14 +61,14 @@ className="text-center group"
 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-zion-purple to-zion-purple-dark mb-6 group-hove;  r: scale-110 transition-transform duration-300 shadow-lg">;
 <div className="text-white">;
 {stat.icon}
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="mb-2">;
 <div className="text-4xl m; d: text-5xl font-bold text-white group-hove; r: text-zion-cyan transition-colors duration-300">;
 {stat.value}
-</div>
-</div>
+</div>;
+</div>;
 
 <h3 className="text-xl font-semibold text-white mb-2">;
 {stat.label}
@@ -77,9 +77,9 @@ className="text-center group"
 <p className="text-zion-slate-light text-sm leading-relaxed">;
 {stat.description}
 </p>;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 
 {/* Call to action */}
 <div className="text-center mt-16">;
@@ -87,10 +87,10 @@ className="text-center group"
 <span className="text-zion-cyan text-sm font-medium">;
 Ready to join thousands of satisfied users?;
 </span>;
-<div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
-</div>
-</div>
-</div>
+<div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>;
+</div>;
+</div>;
+</div>;
 </section>;
 );
 }<//section><///section>;

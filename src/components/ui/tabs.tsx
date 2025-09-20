@@ -1,14 +1,14 @@
 import React, { createContext; useContext; useState; ReactNode } from "react";
 
 interface TabsContextType {
-activeTab: string;
+activeTab: string;,
 setActiveTab: (tab: string) => void;
 }
 }
 import React, { createContext; useContext; useState } from "react";
 
 interface TabsContextType {
-value: string;
+value: string;,
 onValueChange: (value: string) => void;
 }
 }
@@ -21,7 +21,7 @@ interface TabsProps {
 children: ReactNode;
 defaultValue?: string;
 value?: string;
-onValueChange?: (value: string) => void;
+onValueChange?: (value: string) => void;,
 children: React.ReactNode;
 className?: string;
 value?: string;
@@ -58,7 +58,7 @@ return (
 <TabsContext.Provider value={{ value; onValueChange }}>;
 <div className={`${className}`}>;
 {children}
-</div>
+</div>;
 </TabsContext.Provider>;
 );
 };
@@ -80,7 +80,7 @@ const TabsList: React.FC<TabsListProps> = ({ children; className = "" }) => {
 return (
 <div className={`inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground ${className}`}>;
 {children}
-</div>
+</div>;
 );
 };
 
@@ -93,7 +93,7 @@ value: string;
 };
 value: string;};
 interface TabsTriggerProps {
-children: ReactNode;
+children: ReactNode;,
 value: string;
 }
 className?: string;}
@@ -130,7 +130,7 @@ data-state={isActive ? "active" : "inactive"}
 }
 
 interface TabsContentProps {
-children: ReactNode;
+children: ReactNode;,
 value: string;
 }
 className?: string;}
@@ -141,7 +141,7 @@ if (!context) throw new Error("TabsContent must be used within Tabs");
 
 if (context.activeTab !== value) return null;
 
-return <div className={className}>{children}</div>
+return <div className={className}>{children}</div>;
 }
 };
 
@@ -166,7 +166,7 @@ return null;
 return (
 <div className={`mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${className}`}>;
 {children}
-</div>
+</div>;
 );
 };
 

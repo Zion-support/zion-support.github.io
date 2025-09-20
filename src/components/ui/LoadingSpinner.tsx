@@ -23,15 +23,15 @@ text = "Loading...",
 showText = false}: LoadingSpinnerProps) {
 const sizeClasses = {
 sm: "w-4 h-4",
-md: "w-6 h-6",
-lg: "w-8 h-8",
+md: "w-6 h-6",;
+lg: "w-8 h-8",;
 xl: "w-12 h-12",;
 };
 
 const colorClasses = {
 primary: "border-zion-purple",
-secondary: "border-zion-cyan",
-white: "border-white",
+secondary: "border-zion-cyan",;
+white: "border-white",;
 custom: "",;
 };
 
@@ -45,7 +45,10 @@ sizeClasses[size],
 borderColor)}
 animate={{ rotate: 360 }}
 transition={{
+<<<<<<< HEAD
 duration: 1; repeat: Infinity;
+=======
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 duration: 1; repeat: Infinity;,
 ease: "linear"}}
 role="status";
@@ -58,22 +61,22 @@ text = "Loading...",
 showText = false}: LoadingSpinnerProps) {
 const sizeClasses = {
 sm: "w-4 h-4",
-md: "w-8 h-8",
-lg: "w-12 h-12",
+md: "w-8 h-8",;
+lg: "w-12 h-12",;
 xl: "w-16 h-16",;
 };
 
 const colorClasses = {
 primary: "border-zion-cyan border-t-transparent",
-secondary: "border-zion-blue border-t-transparent",
-white: "border-white border-t-transparent",
+secondary: "border-zion-blue border-t-transparent",;
+white: "border-white border-t-transparent",;
 custom: customColor ? `border-${customColor} border-t-transparent` : "border-zion-cyan border-t-transparent";
 };
 
 const textSizes = {
 sm: "text-xs",
-md: "text-sm",
-lg: "text-base",
+md: "text-sm",;
+lg: "text-base",;
 xl: "text-lg",;
 };
 
@@ -101,7 +104,7 @@ className={`mt-3 text-zion-slate-light ${textSizes[size]} font-medium`}
 {text}
 </motion.p>;
 )}
-</div>
+</div>;
 );
 }
 
@@ -142,7 +145,7 @@ transition={{ delay: index * 0.1; duration: 0.3 }}
 className={`${height} bg-white/10 rounded-lg animate-pulse`}
 />;
 ))}
-</div>
+</div>;
 );
 }
 
@@ -157,8 +160,8 @@ return (
 <div className={cn("min-h-screen flex items-center justify-center", className)}>;
 <div className="text-center">;
 <LoadingSpinner size="xl" color="primary" showText text={text} />;
-</div>
-</div>
+</div>;
+</div>;
 );
 }
 
@@ -198,7 +201,7 @@ className="mt-4 text-lg text-zion-slate-light font-medium"
 >;
 {text}
 </motion.p>;
-</div>
+</div>;
 </motion.div>;
 );
 }
@@ -212,8 +215,8 @@ className?: string;
 variant?: "default" | "card" | "list" | "grid"}) {
 const variants = {
 default: "space-y-4",
-card: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
-list: "space-y-3",
+card: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",;
+list: "space-y-3",;
 grid: "grid grid-cols-2 md:grid-cols-4 gap-4",;
 };
 
@@ -249,7 +252,7 @@ className="flex items-center space-x-4"
 <div className="flex-1 space-y-2">;
 <div className="h-4 bg-white/10 rounded-lg animate-pulse" />;
 <div className="h-3 bg-white/10 rounded-lg w-2/3 animate-pulse" />;
-</div>
+</div>;
 </motion.div>;
 ))
 ) : variant === "grid" ? (
@@ -279,6 +282,6 @@ className="h-4 bg-white/10 rounded-lg animate-pulse"
 />;
 ))
 )}
-</div>
+</div>;
 );
 }<//div><///div>}}}})))))

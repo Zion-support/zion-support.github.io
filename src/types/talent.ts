@@ -7,9 +7,9 @@ skills: string[], experience: number; hourlyRate: number; currency: string;
 }
 location: {,}
 city: string; country: string; timezone: string};
-availability: "full-time" | "part-time" | "contract" | "freelance", rating: number; reviewCount: number; portfolio: PortfolioItem[];
-education: Education[], certifications: Certification[];
-languages: Language[], socialLinks: SocialLinks; createdAt: Date; updatedAt: Date;
+availability: "full-time" | "part-time" | "contract" | "freelance", rating: number; reviewCount: number; portfolio: PortfolioItem[];,
+education: Education[], certifications: Certification[];,
+languages: Language[], socialLinks: SocialLinks; createdAt: Date; updatedAt: Date;,
 status: "active" | "inactive" | "suspended", verified: boolean; featured: boolean;
 }
 
@@ -89,8 +89,8 @@ export interface TalentFormData {name: string; email: string; bio: string; skill
 }
 location: {,}
 city: string; country: string; timezone: string};
-availability: string; portfolio: PortfolioItem[], education: Education[];
-certifications: Certification[], languages: Language[];
+availability: string; portfolio: PortfolioItem[], education: Education[];,
+certifications: Certification[], languages: Language[];,
 socialLinks: SocialLinks;
 }
 export interface TalentSearchResult {

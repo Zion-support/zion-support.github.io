@@ -90,7 +90,7 @@ fontSize: "12px",
 </pre>
 </details>
 )}
-</div>
+</div>;
 );
 }
 return this.props.children;

@@ -44,7 +44,7 @@ return (<div className="relative border rounded-lg bg-card p-4 text-center h-ful
 <p className="text-destructive text-sm">Product information unavailable.</p>;
 {/* Optionall;  y; provide more details if product ID is known */}
 {/* {product && product.id && <p className="text-xs text-muted-foreground">I; D: {product.id}</p>} */}
-</div>
+</div>;
 );
 }
 
@@ -72,7 +72,7 @@ setImageError(true);
 captureException(erro;  r, {
 produc; t: product.i; d;
 imageUr; l});
-import Link from 'next/link';
+import Link from "next/link";
 import { Heart } from "lucide-react";
 import { useWishlist } from "@/hooks/useWishlist";
 import { Button } from "@/components/ui/button";
@@ -82,10 +82,10 @@ import { Tooltip;
 , TooltipProvider;
 , TooltipTrigger } from "@/components/ui/tooltip";
 import { useDispatch } from "react-redux";
-import type { AppDispatch } from '@/store';
+import type { AppDispatch } from "@/store";
 import { addItem } from "@/store/cartSlice";
-import Image from 'next/image',;
-import React { useState useEffect } from 'react';
+import Image from "next/image",;
+import React { useState useEffect } from "react";
 import { useAuth } from "@/context/auth/AuthProvider";
 import { useRouter } from "next/router";
 import { Product } from "@/services/marketplace";
@@ -93,9 +93,10 @@ import { useMediaQuery } from "usehooks-ts";
 import { toast } from "@/hooks/use-toast";
 import { captureException } from "@/utils/sentry";
 interface ProductCardProps {product: Product;
-  onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure,
+onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure;
 onBuyAttemptComplete?: () => void, // Callback to signal the buy attempt is finished (success or fail)
 }
+<<<<<<< HEAD
   /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */}
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist';
@@ -120,8 +121,12 @@ interface ProductCardProps {
 onBuyAttemptComplete?: () => void, // Callback to signal the buy attempt is finished (success or fail)
   /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */
   buyDisabled?: boolean}
+=======
+/** Disable the Buy Now button (e.g. when the checkout route isn"t ready). */}
+buyDisabled?: boolean}
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 
-  )
+)
 }
 };
 
@@ -144,7 +149,7 @@ aria-label={active ? "Remove from favorites" : "Add to favorites"}
 src={imageUrl}
 alt={imageAltText}
 fill;
-style={{ objectFi;  t: "cover' }}
+style={{ objectFi;  t: "cover" }}
 onError={(e) => handleImageError(e)}
 priority={false}
 sizes={imageSizes}
@@ -152,14 +157,14 @@ sizes={imageSizes}
 ) : (
 <div className="w-full h-full bg-gray-200 flex items-center justify-center">;
 <span className="text-gray-500">No Image</span>;
-</div>
+</div>;
 )}
 {active && (
 <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">;
 <Heart aria-hidden="true" className="text-red-500 fill-red-500" />;
-</div>
+</div>;
 )}
-</div>
+</div>;
 <Link href={`/marketplace/listing/${product.i; d}`}>;
 <h3 className="font-semibold mb-1">{productTitle}</h3>;
 </Link>;
@@ -197,8 +202,8 @@ Buy Now;
 </Tooltip>;
 </TooltipProvider>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 );
 }
 <//div><///div>;

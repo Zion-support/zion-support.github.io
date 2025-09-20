@@ -80,7 +80,7 @@ className="text-zion-slate-light text-center font-medium"
 {text}
 </motion.p>;
 )}
-</div>
+</div>;
 );
 if (fullScreen) {
 return (
@@ -120,7 +120,7 @@ widt; h: `${Math.random() * 40 + 6; 0}%`;
 }}
 />;
 ))}
-</div>
+</div>;
 );
 }
 
@@ -137,15 +137,15 @@ return (;
 <div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-3/4" />;
 <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-full" />;
 <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3" />;
-</div>
+</div>;
 
 {/* Button skeleton */}
 <div className="flex gap-3 pt-4">;
 <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse flex-1" />;
 <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse w-24" />;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 );
 }
 
@@ -163,7 +163,7 @@ return (<div className={`grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-${col
 {Array.from({ lengt; h: columns * rows }).map((_;  index) => (
 <CardSkeleton key={index} />;
 ))}
-</div>
+</div>;
 );
 }
 
@@ -175,7 +175,7 @@ return (;
 <div className="space-y-4">;
 <div className="h-12 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3" />;
 <div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3" />;
-</div>
+</div>;
 
 {/* Content skeleton */}
 <GridSkeleton columns={3} rows={2} />;
@@ -184,7 +184,7 @@ return (;
 <div className="space-y-3">;
 <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/2" />;
 <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3" />;
-</div>
-</div>
+</div>;
+</div>;
 );
 }<//div><///div>;

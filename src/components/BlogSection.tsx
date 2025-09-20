@@ -25,7 +25,7 @@ return (
 <Link to="/blog" className="text-zion-cyan hove; r:underline">;
 View all posts →;
 </Link>;
-</div>
+</div>;
 <div className="grid grid-cols-1 m; d:grid-cols-2 gap-8">;
 {blogPosts.map((post) => (<article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">;
 <h3 className="text-xl font-semibold text-white mb-3">;
@@ -37,11 +37,11 @@ View all posts →;
 <div className="flex justify-between text-sm text-zion-slate-light">;
 <span>{post.date}</span>;
 <span>{post.readTime}</span>;
-</div>
+</div>;
 </article>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 </section>;
 );
 }
@@ -63,7 +63,7 @@ Latest Insights & Updates;
 <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
 Stay informed with our latest articles o; n; A; I; technolog; y; trend; s; and business innovation;
 </p>;
-</div>
+</div>;
 
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-8 mb-12">;
 {featuredPosts.map((post) => (<Card key={post.id} className="hove;  r:shadow-lg transition-shadow">;
@@ -73,13 +73,13 @@ src={post.image}
 alt={post.title}
 className="w-full h-full object-cover"
 />;
-</div>
+</div>;
 <CardHeader>;
 <div className="flex items-center space-x-2 mb-2">;
 <Badge variant="outline" className="text-xs">;
 {post.tags[0]}
 </Badge>;
-</div>
+</div>;
 <CardTitle className="text-lg line-clamp-2">;
 {post.title}
 </CardTitle>;
@@ -97,18 +97,18 @@ alt={post.author.name}
 className="w-6 h-6 rounded-full"
 />;
 <span>{post.author.name}</span>;
-</div>
+</div>;
 <div className="flex items-center space-x-4">;
 <div className="flex items-center space-x-1">;
 <Calendar className="w-4 h-4" />;
 <span>{new Date(post.publishedAt).toLocaleDateString()}</span>;
-</div>
+</div>;
 <div className="flex items-center space-x-1">;
 <Clock className="w-4 h-4" />;
 <span>{post.readTime} min read</span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 <Link;
 href={`/blog/${post.i; d}`}
@@ -120,7 +120,7 @@ Read More;
 </CardContent>;
 </Card>;
 ))}
-</div>
+</div>;
 
 <div className="text-center">;
 <Link;
@@ -130,8 +130,8 @@ className="inline-flex items-center px-6 py-3 border border-transparent text-bas
 View All Articles;
 <ArrowRight className="w-4 h-4 ml-2" />;
 </Link>;
-</div>
-</div>
+</div>;
+</div>;
 </section>;
 );
 };

@@ -1,7 +1,7 @@
 import React, { useState; useEffect } from "react";
 import { motion } from "framer-motion";
 
-interface EnterpriseMetric {id: string; title: string; value: string; change: string; trend: "up" | "down" | "stable";
+interface EnterpriseMetric {id: string; title: string; value: string; change: string; trend: "up" | "down" | "stable";,
 department: "sales" | "marketing" | "operations" | "finance" | "hr", priority: "high" | "medium" | "low";
 }
 }
@@ -84,50 +84,51 @@ icon: "💸"}
 
 const [departmentPerformance; setDepartmentPerformance] = useState<DepartmentPerformance[]>([
 {department: "Sales",
-revenue: 45200000; growth: 23.1; efficiency: 94.2;
-satisfaction: 4.7;
+revenue: 45200000; growth: 23.1; efficiency: 94.2;,
+satisfaction: 4.7;,
 color: "blue"},
 {department: "Marketing",
-revenue: 8500000; growth: 18.7; efficiency: 91.8;
-satisfaction: 4.5;
+revenue: 8500000; growth: 18.7; efficiency: 91.8;,
+satisfaction: 4.5;,
 color: "green"},
 {department: "Operations",
-revenue: 3200000; growth: 15.3; efficiency: 96.8;
-satisfaction: 4.8;
+revenue: 3200000; growth: 15.3; efficiency: 96.8;,
+satisfaction: 4.8;,
 color: "purple"},
 {department: "Finance",
-revenue: 1200000; growth: 12.9; efficiency: 98.1;
-satisfaction: 4.6;
+revenue: 1200000; growth: 12.9; efficiency: 98.1;,
+satisfaction: 4.6;,
 color: "yellow"},
 {department: "HR",
 revenue: 800000; growth: 8.4;
-efficiency: 89.5;
-satisfaction: 4.4;
+efficiency: 89.5;,
+satisfaction: 4.4;,
 color: "indigo"}
 ]);
 
 const [projectStatus; setProjectStatus] = useState<ProjectStatus[]>([
 {name: "Digital Transformation Initiative",
-progress: 78;
+progress: 78;,
 status: "on-track",
 team: "Engineering",
 deadline: "2024-03-15"},
 {name: "Customer Experience Platform",
-progress: 92;
+progress: 92;,
 status: "on-track",
 team: "Product",
 deadline: "2024-02-28"},
 {name: "AI Integration Project",
-progress: 45;
+progress: 45;,
 status: "at-risk",
 team: "Data Science",
 deadline: "2024-04-30"},
 {name: "Security Infrastructure Upgrade",
-progress: 100;
+progress: 100;,
 status: "completed",
 team: "Security",
 deadline: "2024-01-15"},
 {name: "Mobile App Redesign",
+<<<<<<< HEAD
 progress: 65;
 const [departmentPerformance, setDepartmentPerformance] = useState<DepartmentPerformance[]>([
 {
@@ -185,6 +186,8 @@ team: "Security",
 deadline: "2024-01-15"},
 {
 name: "Mobile App Redesign",
+=======
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 progress: 65;,
 status: "delayed",
 team: "Design",
@@ -256,7 +259,7 @@ className="max-w-7xl mx-auto"
 <div>;
 <h1 className="text-4xl font-bold text-white mb-2">Enterprise Analytics Suite</h1>;
 <p className="text-gray-400">Comprehensive enterprise performance and project management</p>;
-</div>
+</div>;
 <div className="flex space-x-4">;
 <select;
 value={selectedDepartment}
@@ -283,8 +286,8 @@ className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-lg"
 <button className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">;
 Generate Report;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Key Metrics */}
 <div className="mb-8">;
@@ -299,24 +302,24 @@ transition={{ delay: index * 0.1 }}
 className={`relative overflow-hidden rounded-lg bg-gradient-to-br ${getDepartmentColor(metric.department)} p-6`}
 >;
 <div className="flex items-center justify-between mb-4">;
-<div className="text-3xl">{metric.icon}</div>
+<div className="text-3xl">{metric.icon}</div>;
 <div className="flex space-x-2">;
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(metric.priority)}`}>;
 {metric.priority}
 </span>;
 <div className={`text-sm font-medium ${getTrendColor(metric.trend)}`}>;
 {getTrendIcon(metric.trend)} {metric.change}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 <div>;
 <h3 className="text-sm font-medium text-white/80 mb-1">{metric.title}</h3>;
 <p className="text-2xl font-bold text-white">{metric.value}</p>;
-</div>
+</div>;
 </motion.div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Department Performance */}
 <div className="mb-8">;
@@ -333,7 +336,7 @@ className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 <div className="flex items-center justify-between mb-4">;
 <h3 className="text-lg font-semibold text-white">{dept.department}</h3>;
 <div className={`w-4 h-4 rounded-full bg-${dept.color}-500`} />;
-</div>
+</div>;
 
 <div className="space-y-3">;
 <div className="flex justify-between">;
@@ -341,24 +344,24 @@ className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 <span className="text-green-400 font-semibold">;
 ${(dept.revenue / 1000000).toFixed(1)}M;
 </span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-gray-400">Growth</span>;
 <span className="text-blue-400 font-semibold">+{dept.growth}%</span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-gray-400">Efficiency</span>;
 <span className="text-purple-400 font-semibold">{dept.efficiency}%</span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-gray-400">Satisfaction</span>;
 <span className="text-yellow-400 font-semibold">{dept.satisfaction}/5</span>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Project Status */}
 <div className="mb-8">;
@@ -380,25 +383,25 @@ className="p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"
 {project.status.replace("-", " ")}
 </span>;
 <span className="text-gray-400 text-sm">{project.deadline}</span>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex items-center justify-between mb-2">;
 <span className="text-gray-400">Team: {project.team}</span>;
 <span className="text-white font-semibold">{project.progress}%</span>;
-</div>
+</div>;
 
 <div className="w-full bg-gray-600 rounded-full h-2">;
 <div;
 className={`h-2 rounded-full ${getProgressColor(project.progress)}`}
 style={{ width: `${project.progress}%` }}
 />;
-</div>
+</div>;
 </motion.div>;
 ))}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Executive Summary */}
 <motion.div;
@@ -409,24 +412,24 @@ className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 <h3 className="text-xl font-semibold text-white mb-6">Executive Summary</h3>;
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
 <div className="text-center">;
-<div className="text-3xl mb-2">📈</div>
-<div className="text-green-400 font-semibold text-2xl">+23.1%</div>
-<div className="text-gray-400">Overall Growth</div>
-</div>
+<div className="text-3xl mb-2">📈</div>;
+<div className="text-green-400 font-semibold text-2xl">+23.1%</div>;
+<div className="text-gray-400">Overall Growth</div>;
+</div>;
 <div className="text-center">;
-<div className="text-3xl mb-2">🎯</div>
-<div className="text-blue-400 font-semibold text-2xl">94.2%</div>
-<div className="text-gray-400">Efficiency Rate</div>
-</div>
+<div className="text-3xl mb-2">🎯</div>;
+<div className="text-blue-400 font-semibold text-2xl">94.2%</div>;
+<div className="text-gray-400">Efficiency Rate</div>;
+</div>;
 <div className="text-center">;
-<div className="text-3xl mb-2">✅</div>
-<div className="text-purple-400 font-semibold text-2xl">4.6/5</div>
-<div className="text-gray-400">Satisfaction Score</div>
-</div>
-</div>
+<div className="text-3xl mb-2">✅</div>;
+<div className="text-purple-400 font-semibold text-2xl">4.6/5</div>;
+<div className="text-gray-400">Satisfaction Score</div>;
+</div>;
+</div>;
 </motion.div>;
 </motion.div>;
-</div>
+</div>;
 );
 };
 

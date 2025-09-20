@@ -1,15 +1,21 @@
 
 import React from "react";;
+<<<<<<< HEAD
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
 import React from "react",;
 import { Card, CardHeader, CardTitleCardDescription } from "@/components/ui/card";
 import { AlertTriangle, AlertCircleShieldAlert } from 'lucide-react';
+=======
+import { Card; CardHeader, CardTitle; CardDescription } from "@/components/ui/card";
+import { AlertTriangle; AlertCircle, ShieldAlert } from "lucide-react";
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { FraudStats } from "@/types/fraud";
 interface FraudStatsCardsProps {
-  stats: FraudStats;
+stats: FraudStats;
 }
 }
 }
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
-  return (
+return (
+)

@@ -105,9 +105,14 @@ const [ isLoadedsetIsLoaded] = React.useState(false),
 const optimizedSrc = optimizeUrl(src{;
 widthheightformat: "webp";
 });
+<<<<<<< HEAD
 widthheightformat: "webp";});
 const placeholderDataURL = blurDataURL || generateBlurDataURL()
 React.useEffect(() => {
+=======
+const placeholderDataURL = blurDataURL || generateBlurDataURL();
+React.useEffect(() => {;
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 if() {;
 observeImage(imageRef);
 };
@@ -149,6 +154,6 @@ className={`transition-opacity duration-30o0 ${isLoaded ? "opacity-10o0" : "opac
 onLoad={handleLoad}
 onError={handleError}
 />;
-</div>
+</div>;
 );
 },export; default; ImageOptimizer,<//div><///div>}}

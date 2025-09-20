@@ -16,8 +16,8 @@ showDetails?: boolean;}
 interface State {
 hasError: boolean;
 error: Error | null;
-errorInfo: ErrorInfo | null;
-errorId: string | null;
+errorInfo: ErrorInfo | null;,
+errorId: string | null;,
 showStackTrace: boolean;
 }
 }
@@ -30,15 +30,15 @@ super(props);
 this.state = {
 hasError: false;
 error: null;
-errorInfo: null;
-errorId: null;
+errorInfo: null;,
+errorId: null;,
 showStackTrace: false;
 };
 errorId: null;,
 showStackTrace: false;};
 }
 
-static getDerivedStateFromError(error: Error): Partial<State> {return {
+static getDerivedStateFromError(error: Error): Partial<State> {return {,
 hasError: true;
 error;,
 errorId: this.generateErrorId()};
@@ -70,8 +70,8 @@ const errorReport = {;
 id: this.state.errorId;
 timestamp: new Date().toISOString();
 error: {
-name: error.name;
-message: error.message;
+name: error.name;,
+message: error.message;,
 stack: error.stack;
 };
 errorInfo: {,
@@ -79,8 +79,8 @@ componentStack: errorInfo.componentStack;
 };
 userAgent: navigator.userAgent;
 url: window.location.href;
-viewport: {
-width: window.innerWidth;
+viewport: {,
+width: window.innerWidth;,
 height: window.innerHeight;
 }
 message: error.message;,
@@ -109,8 +109,8 @@ private handleRetry = () => {
 this.setState({
 hasError: false;
 error: null;
-errorInfo: null;
-errorId: null;
+errorInfo: null;,
+errorId: null;,
 showStackTrace: false;
 });
 errorId: null;,
@@ -192,9 +192,9 @@ className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl bo
 <div>;
 <h1 className="text-2xl font-bold">Something went wrong</h1>;
 <p className="text-red-100">We"ve encountered an unexpected error</p>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Content */}
 <div className="p-6 space-y-6">;
@@ -214,9 +214,9 @@ className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl bo
 Error ID: {this.state.errorId}
 </p>;
 )}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Stack Trace (Collapsible) */}
 {this.state.error?.stack && (
@@ -238,9 +238,9 @@ this.state.showStackTrace ? "rotate-180" : "';
 <pre className="whitespace-pre-wrap break-words">;
 {this.state.error.stack}
 </pre>;
-</div>
+</div>;
 )}
-</div>
+</div>;
 )}
 
 {/* Component Stack (if available) */}
@@ -250,13 +250,13 @@ this.state.showStackTrace ? "rotate-180" : "';
 <span className="font-medium text-slate-700 dark:text-slate-300">;
 Component Stack;
 </span>;
-</div>
+</div>;
 <div className="p-4 bg-slate-900 text-slate-100 font-mono text-sm overflow-x-auto">;
 <pre className="whitespace-pre-wrap break-words">;
 {this.state.errorInfo.componentStack}
 </pre>;
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {/* Action Buttons */}
@@ -276,7 +276,7 @@ className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-slate-
 <HomeIcon className="w-5 h-5" />;
 <span>Go Home</span>;
 </button>;
-</div>
+</div>;
 
 {/* Report Issue */}
 <div className="text-center">;
@@ -287,7 +287,7 @@ className="inline-flex items-center space-x-2 text-sm text-slate-600 dark:text-s
 <BugAntIcon className="w-4 h-4" />;
 <span>Report this issue</span>;
 </button>;
-</div>
+</div>;
 
 {/* Help Text */}
 <div className="text-center text-sm text-slate-500 dark:text-slate-400">;
@@ -295,10 +295,10 @@ className="inline-flex items-center space-x-2 text-sm text-slate-600 dark:text-s
 <p className="mt-1">,
 Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">kleber@ziontechgroup.com</a>;
 </p>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
-</div>
+</div>;
 );
 }
 

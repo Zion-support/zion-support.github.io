@@ -1,22 +1,23 @@
-'use client',
+"use client",
 
-import Image from 'next/image';
+import Image from "next/image";
 import { useState } from "react";
 import { ImageIcon } from "lucide-react";
 import { useState } from 'react';
 import { ImageIcon } from 'lucide-react';
 interface SafeImageProps {
-  src: string,
+src: string;,
 alt: string;  width?: number;interface SafeImageProps {,
-src: string,
-alt: string,
+src: string;,
+alt: string;
 interface SafeImageProps {
-  // If we have an error and no fallback show a placeholder,
+// If we have an error and no fallback show a placeholder;
 if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
-        return (
+return (
 }
-      <div}
+<div}
 className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
+<<<<<<< HEAD
         style={{ width height }}
         role="img"
         aria-label = {alt}
@@ -35,15 +36,34 @@ className={`flex items-center justify-center bg-gray-100 text-gray-400 ${classNa
   ); return (
     <Image
     <Image,
+=======
+style={{ width height }}
+role="img";
+aria-label = {alt}
+>;
+<ImageIcon className="w-6 h-6" />      </div>;
+)
+}
+/>;
+);        aria-label={alt}
+>;
+<ImageIcon className="w-6 h-6" />;
+</div>;
+)
+}
+/>;
+); return (
+<Image;
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 src = {currentSrc}
-      alt = {alt}
-      width = {width}
-      height = {height}
-      className = {className}
-      onError = {handleError}
-      priority = {priority}
-      // Add unoptimized as fallback for problematic images,
+alt = {alt}
+width = {width}
+height = {height}
+className = {className}
+onError = {handleError}
+priority = {priority}
+// Add unoptimized as fallback for problematic images;
 unoptimized = {hasError}
-    />
-  )
+/>;
+)
 }

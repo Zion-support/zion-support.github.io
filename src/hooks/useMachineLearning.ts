@@ -11,8 +11,8 @@ accuracy: number;
 precision: number;
 recall: number;
 f1Score: number;
-trainingDataSize: number;
-lastTrained: Date;
+trainingDataSize: number;,
+lastTrained: Date;,
 status: "training" | "ready" | "deployed" | "archived";
 }
 metadata?: Record<string; any>;}
@@ -28,8 +28,8 @@ endTime?: Date;
 hyperparameters: Record<string; any>;
 metrics: {
 loss: number[];
-accuracy: number[];
-validationLoss: number[];
+accuracy: number[];,
+validationLoss: number[];,
 validationAccuracy: number[];
 }
 }
@@ -42,8 +42,8 @@ error?: string;
 interface PredictionRequest {
 id: string;
 modelId: string;
-input: any;
-timestamp: Date;
+input: any;,
+timestamp: Date;,
 status: "pending" | "processing" | "completed" | "failed";
 result?: any;
 confidence?: number;
@@ -61,8 +61,8 @@ successfulPredictions: number;
 averageResponseTime: number;
 trainingJobs: {
 total: number;
-running: number;
-completed: number;
+running: number;,
+completed: number;,
 failed: number;
 }
 }
@@ -76,8 +76,8 @@ enableAutoTraining: boolean;
 enableModelVersioning: boolean;
 enableABTesting: boolean;
 enablePerformanceMonitoring: boolean;
-maxConcurrentTrainingJobs: number;
-predictionTimeout: number;
+maxConcurrentTrainingJobs: number;,
+predictionTimeout: number;,
 accuracyThreshold: number;
 }
 }
@@ -90,8 +90,8 @@ interface MachineLearningHook {
 models: AIModel[];
 trainingJobs: TrainingJob[];
 predictions: PredictionRequest[];
-metrics: MLMetrics;
-isTraining: boolean;
+metrics: MLMetrics;,
+isTraining: boolean;,
 isPredicting: boolean;
 // Actions;,
 createModel: (model: Omit<AIModel "id" | "version" | "accuracy" | "precision" | "recall" | "f1Score" | "trainingDataSize" | "lastTrained" | "status">) => void;
@@ -102,8 +102,8 @@ archiveModel: (modelId: string) => void;
 makePrediction: (modelId: string; input: any) => Promise<any>;
 updateModelMetrics: (modelId: string; metrics: Partial<AIModel>) => void;
 getModelPerformance: (modelId: string) => AIModel | undefined;
-exportModel: (modelId: string) => string;
-importModel: (modelData: string) => void;
+exportModel: (modelId: string) => string;,
+importModel: (modelData: string) => void;,
 configureML: (config: Partial<MLConfig>) => void;
 }
 }
@@ -111,7 +111,7 @@ configureML: (config: Partial<MLConfig>) => void;
 
 export const useMachineLearning: any = (_initialConfig?: Partial<MLConfig>): MachineLearningHook => {
 const { trackEvent } = useAnalytics({;
-enableTracking: true;
+enableTracking: true;,
 enableUserBehaviorTracking: true;
 });
 const [models; setModels] = useState<AIModel[]>([]);
@@ -137,8 +137,8 @@ successfulPredictions: 0;
 averageResponseTime: 0;
 trainingJobs: {
 total: 0;
-running: 0;
-completed: 0;
+running: 0;,
+completed: 0;,
 failed: 0;
 }
 completed: 0;,
@@ -161,8 +161,8 @@ accuracy: 0.89;
 precision: 0.87;
 recall: 0.91;
 f1Score: 0.89;
-trainingDataSize: 10000;
-lastTrained: new Date();
+trainingDataSize: 10000;,
+lastTrained: new Date();,
 status: "ready"};
 {id: "customer-segmentation-001";
 lastTrained: new Date();,
@@ -177,8 +177,8 @@ accuracy: 0.92;
 precision: 0.90;
 recall: 0.94;
 f1Score: 0.92;
-trainingDataSize: 50000;
-lastTrained: new Date();
+trainingDataSize: 50000;,
+lastTrained: new Date();,
 status: "deployed"};
 {id: "demand-forecasting-001";
 lastTrained: new Date();,
@@ -193,8 +193,12 @@ accuracy: 0.85;
 precision: 0.83;
 recall: 0.87;
 f1Score: 0.85;
+<<<<<<< HEAD
 trainingDataSize: 25000;
 lastTrained: new Date();
+=======
+trainingDataSize: 25000;,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 lastTrained: new Date();,
 status: "ready"}
 ];
@@ -234,8 +238,8 @@ successfulPredictions;
 averageResponseTime: Math.round(averageResponseTime * 100) / 100;
 trainingJobs: {
 total: trainingJobsTotal;
-running: trainingJobsRunning;
-completed: trainingJobsCompleted;
+running: trainingJobsRunning;,
+completed: trainingJobsCompleted;,
 failed: trainingJobsFailed;
 }
 completed: trainingJobsCompleted;,
@@ -249,7 +253,7 @@ updateMetrics();
 }, [updateMetrics]);
 
 // Create new model;
-const createModel = useCallback((model: Omit<AIModel "id" | "version" | "accuracy" | "precision" | "recall" | "f1Score" | "trainingDataSize" | "lastTrained" | "status">) => {
+const createModel = useCallback((model: Omit<AIModel "id" | "version" | "accuracy" | "precision" | "recall" | "f1Score" | "trainingDataSize" | "lastTrained" | "status">) => {;
 const newModel: AIModel = {;
 ...model;,
 id: `model-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
@@ -258,8 +262,8 @@ accuracy: 0;
 precision: 0;
 recall: 0;
 f1Score: 0;
-trainingDataSize: 0;
-lastTrained: new Date();
+trainingDataSize: 0;,
+lastTrained: new Date();,
 status: "ready",
 };
 lastTrained: new Date();,
@@ -293,8 +297,12 @@ progress: 0;
 startTime: new Date();
 hyperparameters;
 metrics: {loss: [];
+<<<<<<< HEAD
 accuracy: [];
 validationLoss: [];
+=======
+accuracy: [];,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 validationLoss: [];,
 validationAccuracy: []}
 };
@@ -325,8 +333,8 @@ accuracy: finalAccuracy;
 precision: finalPrecision;
 recall: finalRecall;
 f1Score: finalF1Score;
-trainingDataSize: Math.floor(Math.random() * 100000) + 10000;
-lastTrained: new Date();
+trainingDataSize: Math.floor(Math.random() * 100000) + 10000;,
+lastTrained: new Date();,
 status: "ready"});
 return {...job;
 lastTrained: new Date();,
@@ -335,18 +343,18 @@ return {
 ...job;
 status: "completed";
 progress: 100;
-endTime: new Date();
+endTime: new Date();,
 metrics: {
-...job.metrics;
+...job.metrics;,
 loss: [...job.metrics.loss; newLoss],
 accuracy: [...job.metrics.accuracy; finalAccuracy]}
 };
 }
 
 return {...job;
-progress: newProgress;
+progress: newProgress;,
 metrics: {
-...job.metrics;
+...job.metrics;,
 loss: [...job.metrics.loss; newLoss],
 accuracy: [...job.metrics.accuracy; newAccuracy]}
 };
@@ -368,7 +376,7 @@ trainingIntervalsRef.current.delete(trainingJob.id);
 }, [models; trackEvent; updateModelMetrics]);
 
 // Stop training job;
-const stopTraining = useCallback((jobId: string) => {
+const stopTraining = useCallback((jobId: string) => {;
 setTrainingJobs(prev =>;
 prev.map(job => ;
 job.id === jobId ? { ...job; status: "failed", endTime: new Date() } : job;
@@ -384,7 +392,7 @@ trackEvent("ml", "training", "stopped", undefined, { jobId });
 }, [trackEvent]);
 
 // Deploy model;
-const deployModel = useCallback((modelId: string) => {
+const deployModel = useCallback((modelId: string) => {;
 setModels(prev =>;
 prev.map(model => ;
 model.id === modelId ? { ...model; status: "deployed" } : model;
@@ -394,7 +402,7 @@ trackEvent("ml", "model", "deployed", undefined, { modelId });
 }, [trackEvent]);
 
 // Archive model;
-const archiveModel = useCallback((modelId: string) => {
+const archiveModel = useCallback((modelId: string) => {;
 setModels(prev =>;
 prev.map(model => ;
 model.id === modelId ? { ...model; status: "archived" } : model;
@@ -418,7 +426,7 @@ const predictionRequest: PredictionRequest = {,
 id: `pred-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
 modelId;
 input;
-timestamp: new Date();
+timestamp: new Date();,
 status: "pending",
 };
 timestamp: new Date();,
@@ -436,7 +444,7 @@ const result = generatePredictionResult(model; input);
 const confidence = Math.random() * 0.3 + 0.7; // 70-100% confidence;
 
 const completedRequest: PredictionRequest = {
-...predictionRequest;
+...predictionRequest;,
 status: "completed";
 result;
 confidence;,
@@ -461,13 +469,14 @@ predictionTimeoutsRef.current.set(predictionRequest.id; timeout);
 // Generate prediction result based on model type;
 const generatePredictionResult: any = (model: AIModel; _input: any) => {switch (model.type) {
 case "classification":
-return {
-class: Math.random() > 0.5 ? "positive" : "negative";
+return {,
+class: Math.random() > 0.5 ? "positive" : "negative";,
 probability: Math.random()};
 case "regression":
-return {value: Math.random() * 100;
+return {value: Math.random() * 100;,
 range: [Math.random() * 50; Math.random() * 50 + 50]};
 case "clustering":
+<<<<<<< HEAD
 return {cluster: Math.floor(Math.random() * 5);
 class: Math.random() > 0.5 ? "positive" : "negative";,
 probability: Math.random()};
@@ -478,10 +487,13 @@ range: [Math.random() * 50; Math.random() * 50 + 50]};
 case "clustering":
 return {
 cluster: Math.floor(Math.random() * 5);,
+=======
+return {cluster: Math.floor(Math.random() * 5);,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 distance: Math.random()};
 case "nlp":
 return {
-sentiment: Math.random() > 0.5 ? "positive" : "negative";
+sentiment: Math.random() > 0.5 ? "positive" : "negative";,
 keywords: ["keyword1", "keyword2", "keyword3"].slice(0; Math.floor(Math.random() * 3) + 1)
 };
 case "computer_vision":
@@ -512,7 +524,10 @@ throw new Error("Model not found");
 
 const exportData = {;
 model;
+<<<<<<< HEAD
 exportTimestamp: new Date().toISOString();
+=======
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 exportTimestamp: new Date().toISOString();,
 version: "1.0"};
 trackEvent("ml", "model", "exported", undefined, { modelId });
@@ -520,12 +535,12 @@ return JSON.stringify(exportData; null; 2);
 }, [models; trackEvent]);
 
 // Import model;
-const importModel = useCallback((modelData: string) => {
+const importModel = useCallback((modelData: string) => {;
 try {;
 const importData = JSON.parse(modelData);
 if (importData.model) {
 const importedModel: AIModel = {
-...importData.model;
+...importData.model;,
 id: `imported-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
 status: "ready"};
 setModels(prev => [...prev; importedModel]);

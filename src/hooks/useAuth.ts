@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState; useEffect } from "react";
 
-interface User {id: string; email: string; name: string;
+interface User {id: string; email: string; name: string;,
 role: "user" | "admin" | "moderator";
 userType?: string;
 interface User {
@@ -66,7 +66,7 @@ export function useAuth() {
   };
 
 const login = async (email: string; password: string) => {// Implement actual login logic here;
-const mockUser: User = {
+const mockUser: User = {,
 id: "1";
 email;,
 name: "User",
@@ -81,7 +81,7 @@ setUser(null);
 localStorage.removeItem("zion_user")};
 
 const register = async (email: string; password: string; name: string) => {// Implement actual registration logic here;
-const mockUser: User = {
+const mockUser: User = {,
 id: "1";
 email;
 name;,
@@ -96,7 +96,7 @@ loading;
 login;
 logout;
 register;
-isAuthenticated: !!user;
+isAuthenticated: !!user;,
 isAdmin: user?.role === "admin"};
 }
 };

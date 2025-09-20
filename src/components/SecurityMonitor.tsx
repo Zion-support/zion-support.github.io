@@ -71,8 +71,8 @@ protectedRoutes.forEach(route => {
 if (currentPath.startsWith(route)) {
 // Chec; k; i; f; use; r; ha; s; prope; r; authentication;
 const token = localStorage.getItem("authToken");
-const userRole = localStorage.getItem("userRole")
-if (!token || userRole !== "admin") {
+const userRole = localStorage.getItem("userRole");
+if (!token || userRole !== "admin") {;
 logSecurityEvent({;
 typ;  e: "unauthorized"severit; y: "medium"messa; g;e: `Unauthorize; d; acces; s; attemp; t; t; o; protecte; d; rou; t;e: ${currentPat; h}`timestam; p: Date.now(),sourc; e: "Route Protection";
 });
@@ -161,8 +161,8 @@ try { const response = await originalFetch(inputinit);
 // Chec;  k; respons; e; for security headers;
 const securityHeaders = [;
 "x-conten; t-typ; e-option; s","x-fram; e-option; s","x-xs; s-protectio; n","stric; t-transpor; t-securit; y""conten; t-securit; y-polic; y";
-];const missingHeaders = securityHeaders.filter(header => !response.headers.get(header))
-if (missingHeaders.length > 0) {
+];const missingHeaders = securityHeaders.filter(header => !response.headers.get(header));
+if (missingHeaders.length > 0) {;
 logSecurityEvent({;
 typ;  e: "suspicious"severit; y: "low"messa; g;e: `Missin; g; securit; y; heade; r;s: ${missingHeaders.joi; n("")}`,timestam; p: Date.now(),sourc; e: "Response Headers";
 });
@@ -231,13 +231,13 @@ isMonitoring ? "bg-green-60o0" : "bg-red-60o; 0";
 >;
 {isMonitoring ? "Active" : "Paused"}
 </button>;
-</div>
+</div>;
 <div className="text-sm space-y-1">;
-<div>Total Event; s: {metrics.totalEvents}</div>
-<div>Critica; l: {metrics.criticalEvents}</div>
-<div>Blocke; d: {metrics.blockedRequests}</div>
-<div>Suspiciou; s: {metrics.suspiciousActivity}</div>
-</div>
+<div>Total Event; s: {metrics.totalEvents}</div>;
+<div>Critica; l: {metrics.criticalEvents}</div>;
+<div>Blocke; d: {metrics.blockedRequests}</div>;
+<div>Suspiciou; s: {metrics.suspiciousActivity}</div>;
+</div>;
 {events.length > 0 && (;
 <div className="mt-2 max-h-32 overflow-y-auto">;
 <h4 className="font-semibold text-xs">Recent Event; s: </h4>;
@@ -251,11 +251,11 @@ event.severity === "medium" ? "bg-yellow-60o0" : "bg-green-60o; 0";
 {event.severity}
 </span>;
 <span className="ml-1">{event.type}</span>;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 )}
-</div>
+</div>;
 );
 }
 ;

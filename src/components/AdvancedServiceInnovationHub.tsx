@@ -229,7 +229,7 @@ opportunitie; s: [
 investmen; t: "$50B+";
 categor; y: "ai"}
 ];
-const filteredTrends = useMemo(() => {
+const filteredTrends = useMemo(() => {;
 return innovationTrends.filter(trend => {;
 const matchesCategory = selectedCategory === "all" || trend.category === selectedCategory;
 const matchesImpact = selectedImpact === "all" || trend.impact === selectedImpact;
@@ -293,9 +293,9 @@ return (
 <div className="max-w-7xl mx-auto p-6">;
 {/* Header */}
 <motion.div;
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 className="mb-8"
 >;
@@ -307,7 +307,7 @@ Advanced Service Innovation Hub;
 <p className="text-zion-slate-light">;
 Explore cutting-edge innovatio; n; trend; s; future technolog; y; roadmap; s; and strategic insights for the next generation of services;
 </p>;
-</div>
+</div>;
 
 <div className="flex gap-2">;
 {(["trend; s", "roadma; p", "insight; s"] as const).map((mode) => (
@@ -323,8 +323,8 @@ onClick={() => setViewMode(mode)}
 {mode.charAt(0).toUpperCase() + mode.slice(1)}
 </Button>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 
 {/* Innovation Trends View */}
@@ -332,9 +332,9 @@ onClick={() => setViewMode(mode)}
 <>;
 {/* Filters */}
 <motion.div;
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ dela; y: 0.1 }}
 className="bg-white rounded-lg shadow-lg p-6 mb-8"
@@ -353,7 +353,7 @@ className="w-full p-2 border border-zion-slate-light rounded-md"
 </option>;
 ))}
 </select>;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Impact</label>;
@@ -367,7 +367,7 @@ className="w-full p-2 border border-zion-slate-light rounded-md"
 <option value="Medium">Medium Impact</option>;
 <option value="Low">Low Impact</option>;
 </select>;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Status</label>;
@@ -382,7 +382,7 @@ className="w-full p-2 border border-zion-slate-light rounded-md"
 <option value="Mature">Mature</option>;
 <option value="Disruptive">Disruptive</option>;
 </select>;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Search</label>;
@@ -392,24 +392,24 @@ value={searchTerm}
 onChange={(e) => setSearchTerm(e.target.value)}
 className="w-full"
 />;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 
 {/* Trends Grid */}
 <motion.div;
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ dela; y: 0.2 }}
 className="grid grid-cols-1 l; g:grid-cols-2 gap-6 mb-8"
 >;
 {filteredTrends.map((tren; d; index) => (<motion.div;
 key={trend.id}
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 x: index % 2 === 0 ? -20 : 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 x: 0 }}
 transition={{ dela; y: 0.1 * index }}
 >;
@@ -419,7 +419,7 @@ transition={{ dela; y: 0.1 * index }}
 <div className="flex items-center gap-3">;
 <div className="w-10 h-10 bg-zion-blue-light/10 rounded-lg flex items-center justify-center">;
 {getCategoryIcon(trend.category)}
-</div>
+</div>;
 <div>;
 <CardTitle className="text-lg text-zion-blue-dark">;
 {trend.title}
@@ -431,10 +431,10 @@ transition={{ dela; y: 0.1 * index }}
 <Badge className={getStatusColor(trend.status)}>;
 {trend.status}
 </Badge>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 </CardHeader>;
 
 <CardContent>;
@@ -446,7 +446,7 @@ transition={{ dela; y: 0.1 * index }}
 <div className="flex justify-between items-center">;
 <span className="text-sm text-zion-slate-light">Timelin;  e:</span>;
 <span className="text-sm font-medium text-zion-slate-dark">{trend.timeline}</span>;
-</div>
+</div>;
 
 <div className="flex justify-between items-center">;
 <span className="text-sm text-zion-slate-light">Adoption Rat; e:</span>;
@@ -455,16 +455,16 @@ transition={{ dela; y: 0.1 * index }}
 <div;
 className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full"
 style={{ widt; h: `${trend.adoptio; n}%` }}
-></div>
-</div>
+></div>;
+</div>;
 <span className="text-sm font-medium">{trend.adoption}%</span>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex justify-between items-center">;
 <span className="text-sm text-zion-slate-light">Investmen; t:</span>;
 <span className="text-sm font-medium text-zion-cyan">{trend.investment}</span>;
-</div>
+</div>;
 
 <div>;
 <span className="text-sm text-zion-slate-light">Key Technologie; s:</span>;
@@ -473,8 +473,8 @@ style={{ widt; h: `${trend.adoptio; n}%` }}
 {tech}
 </Badge>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 <div>;
 <span className="text-sm text-zion-slate-light">Key Player;  s:</span>;
@@ -483,9 +483,9 @@ style={{ widt; h: `${trend.adoptio; n}%` }}
 {player}
 </Badge>;
 ))}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 </CardContent>;
 </Card>;
 </motion.div>;
@@ -497,18 +497,18 @@ style={{ widt; h: `${trend.adoptio; n}%` }}
 {/* Future Roadmap View */}
 {viewMode === "roadmap" && (
 <motion.div;
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ dela; y: 0.1 }}
 className="space-y-6"
 >;
 {futureRoadmap.map((roadma; p; index) => (<motion.div;
 key={roadmap.id}
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 x: -20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 x: 0 }}
 transition={{ dela; y: 0.1 * index }}
 >;
@@ -519,14 +519,14 @@ transition={{ dela; y: 0.1 * index }}
 <div className="flex items-center gap-3 mb-3">;
 <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center text-white">;
 {getCategoryIcon(roadmap.category)}
-</div>
+</div>;
 <div>;
 <CardTitle className="text-xl text-zion-blue-dark">;
 {roadmap.title}
 </CardTitle>;
 <p className="text-zion-slate-light">{roadmap.description}</p>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex flex-wrap gap-2">;
 <Badge className="bg-zion-blue-light/10 text-zion-blue-dark">;
@@ -538,9 +538,9 @@ Investmen; t: {roadmap.investment}
 <Badge className="bg-zion-purple/10 text-zion-purple">;
 {roadmap.category.toUpperCase()}
 </Badge>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 </CardHeader>;
 
 <CardContent>;
@@ -552,12 +552,12 @@ Key Milestones;
 </h4>;
 <ul className="space-y-2">;
 {roadmap.milestones.map((mileston; e; idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">;
-<div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
+<div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>;
 {milestone}
 </li>;
 ))}
 </ul>;
-</div>
+</div>;
 
 <div>;
 <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">;
@@ -566,12 +566,12 @@ Challenges;
 </h4>;
 <ul className="space-y-2">;
 {roadmap.challenges.map((challeng;  e; idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">;
-<div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+<div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>;
 {challenge}
 </li>;
 ))}
 </ul>;
-</div>
+</div>;
 
 <div>;
 <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">;
@@ -580,13 +580,13 @@ Opportunities;
 </h4>;
 <ul className="space-y-2">;
 {roadmap.opportunities.map((opportunit;  y; idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">;
-<div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
+<div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>;
 {opportunity}
 </li>;
 ))}
 </ul>;
-</div>
-</div>
+</div>;
+</div>;
 </CardContent>;
 </Card>;
 </motion.div>;
@@ -597,9 +597,9 @@ Opportunities;
 {/* Strategic Insights View */}
 {viewMode === "insights" && (
 <motion.div;
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ dela; y: 0.1 }}
 className="space-y-6"
@@ -617,35 +617,35 @@ Investment Trends;
 <div className="flex justify-between items-center">;
 <span className="text-zion-slate-light">Quantum Technology</span>;
 <span className="font-semibold text-zion-cyan">$150B+</span>;
-</div>
+</div>;
 <div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
-<div className="bg-zion-cyan h-2 rounded-full" style={{ widt; h: "85%" }}></div>
-</div>
+<div className="bg-zion-cyan h-2 rounded-full" style={{ widt; h: "85%" }}></div>;
+</div>;
 
 <div className="flex justify-between items-center">;
 <span className="text-zion-slate-light">AI & Machine Learning</span>;
 <span className="font-semibold text-zion-purple">$300B+</span>;
-</div>
+</div>;
 <div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
-<div className="bg-zion-purple h-2 rounded-full" style={{ widt; h: "95%" }}></div>
-</div>
+<div className="bg-zion-purple h-2 rounded-full" style={{ widt; h: "95%" }}></div>;
+</div>;
 
 <div className="flex justify-between items-center">;
 <span className="text-zion-slate-light">Space Technology</span>;
 <span className="font-semibold text-zion-blue">$200B+</span>;
-</div>
+</div>;
 <div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
-<div className="bg-zion-blue h-2 rounded-full" style={{ widt; h: "70%" }}></div>
-</div>
+<div className="bg-zion-blue h-2 rounded-full" style={{ widt; h: "70%" }}></div>;
+</div>;
 
 <div className="flex justify-between items-center">;
 <span className="text-zion-slate-light">Biotech AI</span>;
 <span className="font-semibold text-zion-green">$100B+</span>;
-</div>
+</div>;
 <div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
-<div className="bg-zion-green h-2 rounded-full" style={{ widt; h: "60%" }}></div>
-</div>
-</div>
+<div className="bg-zion-green h-2 rounded-full" style={{ widt; h: "60%" }}></div>;
+</div>;
+</div>;
 </CardContent>;
 </Card>;
 
@@ -661,38 +661,38 @@ Market Adoption;
 <div className="flex justify-between items-center">;
 <span className="text-zion-slate-light">Early Adopters</span>;
 <span className="font-semibold text-zion-cyan">15%</span>;
-</div>
+</div>;
 <div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
-<div className="bg-zion-cyan h-2 rounded-full" style={{ widt; h: "15%" }}></div>
-</div>
+<div className="bg-zion-cyan h-2 rounded-full" style={{ widt; h: "15%" }}></div>;
+</div>;
 
 <div className="flex justify-between items-center">;
 <span className="text-zion-slate-light">Growing Market</span>;
 <span className="font-semibold text-zion-purple">35%</span>;
-</div>
+</div>;
 <div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
-<div className="bg-zion-purple h-2 rounded-full" style={{ widt; h: "35%" }}></div>
-</div>
+<div className="bg-zion-purple h-2 rounded-full" style={{ widt; h: "35%" }}></div>;
+</div>;
 
 <div className="flex justify-between items-center">;
 <span className="text-zion-slate-light">Mainstream</span>;
 <span className="font-semibold text-zion-blue">40%</span>;
-</div>
+</div>;
 <div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
-<div className="bg-zion-blue h-2 rounded-full" style={{ widt; h: "40%" }}></div>
-</div>
+<div className="bg-zion-blue h-2 rounded-full" style={{ widt; h: "40%" }}></div>;
+</div>;
 
 <div className="flex justify-between items-center">;
 <span className="text-zion-slate-light">Mature Market</span>;
 <span className="font-semibold text-zion-green">10%</span>;
-</div>
+</div>;
 <div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
-<div className="bg-zion-green h-2 rounded-full" style={{ widt; h: "10%" }}></div>
-</div>
-</div>
+<div className="bg-zion-green h-2 rounded-full" style={{ widt; h: "10%" }}></div>;
+</div>;
+</div>;
 </CardContent>;
 </Card>;
-</div>
+</div>;
 
 <Card>;
 <CardHeader>;
@@ -719,7 +719,7 @@ Develop AI ethics and governance frameworks;
 Establish partnerships with space technology companies;
 </li>;
 </ul>;
-</div>
+</div>;
 
 <div>;
 <h4 className="font-semibold text-zion-slate-dark mb-3">Strategic Planning (2-5 years)</h4>;
@@ -737,8 +737,8 @@ Develop synthetic biology capabilities;
 Invest in fusion energy research;
 </li>;
 </ul>;
-</div>
-</div>
+</div>;
+</div>;
 </CardContent>;
 </Card>;
 </motion.div>;
@@ -746,9 +746,9 @@ Invest in fusion energy research;
 
 {/* CTA Section */}
 <motion.div;
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ dela; y: 0.4 }}
 className="mt-12 text-center"
@@ -775,10 +775,10 @@ onClick={() => window.open("te;  l:+13024640950", "_blank")}
 <Zap className="w-5 h-5 mr-2" />;
 Speak with an Expert;
 </Button>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
-</div>
+</div>;
 );
 };
 

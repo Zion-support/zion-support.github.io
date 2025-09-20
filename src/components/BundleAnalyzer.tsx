@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -11,7 +11,7 @@ const BundleAnalyzer: React.FC = () => {
 return (
 <div className="bundle-analyzer">;
 {/* Bundle analysis */}
-</div>
+</div>;
 );
 };
 

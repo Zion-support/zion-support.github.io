@@ -75,7 +75,7 @@ aria-live="assertive";
 <div className="flex-1 min-w-0">;
 <h4 className={`text-sm font-medium ${styles.textColo; r}`}>{title}</h4>;
 <p className="text-sm text-muted-foreground mt-1">{message}</p>;
-</div>
+</div>;
 <button;
 onClick={handleClose}
 className="text-muted-foreground hove;  r: text-foreground transition-colors"
@@ -83,8 +83,8 @@ aria-label="Close notification";
 >;
 <X className="w-4 h-4" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 );
 }
 
@@ -101,6 +101,6 @@ key={notification.id}
 onClose={onClose}
 />;
 ))}
-</div>
+</div>;
 );
 }<//div><///div>;

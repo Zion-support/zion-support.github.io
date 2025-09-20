@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -65,6 +65,7 @@ return (;
 <Route path="/blog" element={<Blog />} />;
 </Routes>;
 </Suspense>;
+<<<<<<< HEAD
 return (
 <ErrorBoundary>
 <HelmetProvider>
@@ -86,6 +87,9 @@ return (
 </Routes>
 </Suspense>
 </div>
+=======
+</div>;
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 {process.env.NODE_ENV === "development" && <PerformanceMonitor />}
 </Router>
 </MobileOptimizer>

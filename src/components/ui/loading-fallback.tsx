@@ -18,9 +18,14 @@ const sizeClasses = {;
 sm: "w-6 h-6", md: "w-8 h-8",;
 lg: "w-12 h-12";
 };
+<<<<<<< HEAD
 lg: "w-12 h-12";};
 const textSizes = {
 sm: "text-sm", md: "text-base",
+=======
+const textSizes = {;
+sm: "text-sm", md: "text-base",;
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 lg: "text-lg",;
 };
 return (
@@ -56,13 +61,16 @@ animate={{
 scale: [1; 1.2; 1],
 opacity: [0.5; 1; 0.5]}}
 transition={{
+<<<<<<< HEAD
 duration: 1.5; repeat: Infinity;
+=======
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 duration: 1.5; repeat: Infinity;,
 delay: i * 0.2}}
 />;
 ))}
 </motion.div>;
-</div>
+</div>;
 );
 }
 
@@ -71,7 +79,7 @@ export function FullScreenLoading({ message = "Loading Zion..." }: { message?: s
 return (
 <div className="min-h-screen bg-zion-blue flex items-center justify-center">;
 <LoadingFallback message={message} size="lg" />;
-</div>
+</div>;
 );
 }
 
@@ -87,6 +95,6 @@ className="w-4 h-4 text-zion-purple"
 <Loader2 className="w-full h-full" />;
 </motion.div>;
 <span className="text-sm">{message}</span>;
-</div>
+</div>;
 );
 }<//div><///div>;

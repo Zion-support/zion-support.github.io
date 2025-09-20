@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -18,22 +18,23 @@ RocketLaunchIcon, ChartBarIcon  } from "@heroicons/react/24/outline, ";
 
 export function ServicesShowcase() {const services = [;
 {;
-icon: CpuChipIcon; title: "AI & Machine Learning";
+icon: CpuChipIcon; title: "AI & Machine Learning";,
 description: "Advanced AI solutions for automation; decision-making; and predictive analytics",
 color: "from-zion-cyan to-zion-blue",
 href: "/ai-solutions"};
-{icon: CloudIcon; title: "Cloud & DevOps";
+{icon: CloudIcon; title: "Cloud & DevOps";,
 description: "Scalable cloud infrastructure and automated deployment pipelines", color: "from-zion-purple to-zion-cyan",
 href: "/cloud-devops"};
-{icon: ShieldCheckIcon; title: "Cybersecurity";
+{icon: ShieldCheckIcon; title: "Cybersecurity";,
 description: "Comprehensive security solutions for threat detection and prevention", color: "from-zion-purple to-zion-blue",
 href: "/cybersecurity"};
-{icon: LightBulbIcon; title: "Digital Transformation";
+{icon: LightBulbIcon; title: "Digital Transformation";,
 description: "End-to-end digital strategy and implementation services", color: "from-zion-cyan to-zion-purple",
 href: "/digital-transformation"};
-{icon: RocketLaunchIcon; title: "Micro SaaS Solutions";
+{icon: RocketLaunchIcon; title: "Micro SaaS Solutions";,
 description: "Custom SaaS platforms for specific business needs", color: "from-zion-blue to-zion-cyan",
 href: "/micro-saas"};
+<<<<<<< HEAD
 {icon: ChartBarIcon; title: "Business Intelligence";
 {
 icon: CloudIcon; title: "Cloud & DevOps";,
@@ -53,13 +54,16 @@ description: "Custom SaaS platforms for specific business needs", color: "from-z
 href: "/micro-saas"};
 {
 icon: ChartBarIcon; title: "Business Intelligence";,
+=======
+{icon: ChartBarIcon; title: "Business Intelligence";,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Data analytics and insights for informed decision-making",
 color: "from-zion-purple to-zion-blue",
 href: "/business-intelligence"}
 ];
-const containerVariants = {
-hidden: { opacity: 0 }, visible: {;
-opacity: 1;
+const containerVariants = {;
+hidden: { opacity: 0 }, visible: {;,
+opacity: 1;,
 transition: {,
 staggerChildren: 0.1}
 }
@@ -74,9 +78,9 @@ duration: 0.5}
 return (
 <section className="py-20 bg-zion-slate-dark relative overflow-hidden">;
 {/* Background Elements */}
-<div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark opacity-50"></div>
-<div className="absolute top-1/4 right-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
-<div className="absolute bottom-1/4 left-0 w-80 h-80 bg-zion-purple/5 rounded-full blur-3xl"></div>
+<div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark opacity-50"></div>;
+<div className="absolute top-1/4 right-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>;
+<div className="absolute bottom-1/4 left-0 w-80 h-80 bg-zion-purple/5 rounded-full blur-3xl"></div>;
 
 <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">;
 {/* Section Header */}
@@ -115,7 +119,7 @@ className="group"
 {/* Icon */}
 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
 <service.icon className="w-8 h-8 text-white" />;
-</div>
+</div>;
 
 {/* Content */}
 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">;
@@ -131,8 +135,8 @@ className="group"
 <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />;
 </svg>;
-</div>
-</div>
+</div>;
+</div>;
 </Link>;
 </motion.div>;
 ))}
@@ -156,7 +160,7 @@ View All Services;
 </svg>;
 </Link>;
 </motion.div>;
-</div>
+</div>;
 </section>;
 );
 }<//section><///section>;

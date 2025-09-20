@@ -29,8 +29,8 @@ x: number;
 y: number;
 radius: number;
 vx: number;
-vy: number;
-opacity: number;
+vy: number;,
+opacity: number;,
 color: string;
 constructor() {
 this.x = Math.random() * canvas.width;

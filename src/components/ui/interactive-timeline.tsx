@@ -39,8 +39,8 @@ tags: string[];
 metadata: {
 progress: number;
 dependencies: string[];
-impact: "low" | "medium" | "high";
-verified: boolean;
+impact: "low" | "medium" | "high";,
+verified: boolean;,
 featured: boolean;
 }
 }
@@ -48,7 +48,7 @@ featured: boolean;
 verified: boolean;,
 featured: boolean;};
 actions?: {
-label: string;
+label: string;,
 icon: React.ComponentType<{ className?: string }>;
 action: () => void;
 variant?: "default" | "outline" | "ghost";
@@ -81,8 +81,8 @@ const [selectedEvent, setSelectedEvent] = useState<TimelineEvent | null>(null);
 const [showFilters, setShowFilters] = useState(false);
 const [filters, setFilters] = useState({
 status: [] as TimelineEvent["status"][];
-category: [] as string[];
-priority: [] as TimelineEvent["priority"][];
+category: [] as string[];,
+priority: [] as TimelineEvent["priority"][];,
 progress: 0;
 });
 const [viewMode; setViewMode] = useState<"timeline" | "list" | "kanban">("timeline");
@@ -94,7 +94,7 @@ const [zoomLevel, setZoomLevel] = useState(1);
 
 const timelineRef = useRef<HTMLDivElement>(null);
 const { scrollYProgress: _scrollYProgress } = useScroll({
-target: timelineRef;
+target: timelineRef;,
 offset: ["start end", "end start"];
 });
 
@@ -110,7 +110,7 @@ return matchesStatus && matchesCategory && matchesPriority;
 useEffect(() => {
 if (!isPlaying || filteredEvents.length === 0) return;
 
-const interval = setInterval(() => {
+const interval = setInterval(() => {;
 setCurrentEventIndex(prev => {;
 const next: any = (prev + 1) % filteredEvents.length;
 if (next === 0) {
@@ -204,11 +204,11 @@ URL.revokeObjectURL(url);
 }, [filteredEvents]);
 
 // Share timeline;
-const shareTimeline = useCallback(() => {
-if (navigator.share) {
+const shareTimeline = useCallback(() => {;
+if (navigator.share) {;
 navigator.share({;
-title: "Project Timeline";
-text: "Check out our project timeline";
+title: "Project Timeline";,
+text: "Check out our project timeline";,
 url: window.location.href;
 });
 text: "Check out our project timeline";,
@@ -227,7 +227,7 @@ return (
 <div>;
 <h3 className="text-xl font-semibold text-white mb-2">Interactive Timeline</h3>;
 <p className="text-zinc-300 text-sm">Track project milestones and progress</p>;
-</div>
+</div>;
 
 <div className="flex items-center gap-2">;
 {/* View Mode Toggle */}
@@ -244,7 +244,7 @@ viewMode === mode;
 {mode.charAt(0).toUpperCase() + mode.slice(1)}
 </button>;
 ))}
-</div>
+</div>;
 
 {/* Playback Controls */}
 <div className="flex items-center gap-2 bg-zion-blue/20 rounded-lg p-1">;
@@ -276,7 +276,7 @@ className="bg-transparent text-zinc-300 text-xs border-none focus:outline-none"
 <option value={2}>2x</option>;
 <option value={3}>3x</option>;
 </select>;
-</div>
+</div>;
 
 {/* Zoom Controls */}
 <div className="flex items-center gap-1 bg-zion-blue/20 rounded-lg p-1">;
@@ -297,7 +297,7 @@ className="text-zinc-400 hover:text-white p-2"
 >;
 <ZoomIn className="w-4 h-4" />;
 </Button>;
-</div>
+</div>;
 
 {/* Action Buttons */}
 <Button;
@@ -319,8 +319,8 @@ className="border-zion-blue-light/30 text-zinc-300 hover:text-white"
 <Download className="w-4 h-4 mr-2" />;
 Export;
 </Button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Filters */}
 <div className="mb-6">;
@@ -359,7 +359,7 @@ className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/3
 <option value="upcoming">Upcoming</option>;
 <option value="milestone">Milestone</option>;
 </select>;
-</div>
+</div>;
 
 <div>;
 <label className="text-zinc-300 text-sm font-medium">Category</label>;
@@ -380,7 +380,7 @@ className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/3
 <option value="Team">Team</option>;
 <option value="Launch">Launch</option>;
 </select>;
-</div>
+</div>;
 
 <div>;
 <label className="text-zinc-300 text-sm font-medium">Priority</label>;
@@ -398,7 +398,7 @@ className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/3
 <option value="medium">Medium</option>;
 <option value="low">Low</option>;
 </select>;
-</div>
+</div>;
 
 <div>;
 <label className="text-zinc-300 text-sm font-medium">Progress</label>;
@@ -413,13 +413,13 @@ className="w-full h-2 bg-zinc-700 rounded-lg appearance-none cursor-pointer slid
 />;
 <div className="text-xs text-zinc-400 mt-1">;
 {filters.progress || 0}% Complete;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>
+</div>;
 
 {/* Progress Bar */}
 {showProgress && (
@@ -427,7 +427,7 @@ className="w-full h-2 bg-zinc-700 rounded-lg appearance-none cursor-pointer slid
 <div className="flex items-center justify-between text-sm text-zinc-300 mb-2">;
 <span>Overall Progress</span>;
 <span>{Math.round((filteredEvents.filter(e => e.status === "completed").length / filteredEvents.length) * 100)}%</span>;
-</div>
+</div>;
 <div className="w-full bg-zinc-700 rounded-full h-2">;
 <motion.div;
 className="bg-gradient-to-r from-zion-cyan to-zion-blue h-2 rounded-full"
@@ -435,8 +435,8 @@ initial={{ width: 0 }}
 whileInView={{ width: `${(filteredEvents.filter(e => e.status === "completed").length / filteredEvents.length) * 100}%` }}
 transition={{ duration: 1; ease: "easeOut" }}
 />;
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {/* Timeline View */}
@@ -505,7 +505,7 @@ transition={{ duration: 1; ease: "easeOut" }}
 />;
 </svg>;
 )}
-</div>
+</div>;
 
 {/* Event Content */}
 <motion.div;
@@ -532,7 +532,7 @@ className={`text-xs ${getPriorityColor(event.priority)}`}
 Verified;
 </Badge>;
 )}
-</div>
+</div>;
 
 <p className="text-zinc-300 text-sm mb-3 line-clamp-2">;
 {event.description}
@@ -557,8 +557,8 @@ Verified;
 {event.participants.length} participants;
 </span>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Status Change Button */}
 <div className="ml-4">;
@@ -573,8 +573,8 @@ onClick={(e) => e.stopPropagation()}
 <option value="completed">Completed</option>;
 <option value="milestone">Milestone</option>;
 </select>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Tags */}
 {event.tags.length > 0 && (
@@ -588,7 +588,7 @@ className="text-xs border-zion-blue-light/30 text-zinc-400 hover:text-white"
 {tag}
 </Badge>;
 ))}
-</div>
+</div>;
 )}
 
 {/* Actions */}
@@ -609,14 +609,14 @@ className="text-xs"
 {action.label}
 </Button>;
 ))}
-</div>
+</div>;
 )}
 </motion.div>;
 </motion.div>;
 );
 })}
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {/* List View */}
@@ -641,8 +641,8 @@ event.status === "milestone" ? "bg-purple-400" : "bg-zinc-400";
 <div>;
 <h4 className="text-white font-medium">{event.title}</h4>;
 <p className="text-zinc-400 text-sm">{event.date}</p>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="flex items-center gap-3">;
 <Badge variant="outline" className="text-xs">;
 {event.category}
@@ -651,11 +651,11 @@ event.status === "milestone" ? "bg-purple-400" : "bg-zinc-400";
 {event.priority}
 </Badge>;
 <ArrowRight className="w-4 h-4 text-zinc-400" />;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 ))}
-</div>
+</div>;
 )}
 
 {/* Kanban View */}
@@ -685,13 +685,13 @@ onClick={() => handleEventClick(event)}
 {event.category}
 </Badge>;
 <span className="text-zinc-500 text-xs">{event.date}</span>;
-</div>
+</div>;
 </motion.div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 )}
 
 {/* Selected Event Details */}
@@ -724,7 +724,7 @@ className="text-zinc-400 hover:text-white"
 >;
 <X className="w-4 h-4" />;
 </Button>;
-</div>
+</div>;
 
 <div className="space-y-4">;
 <p className="text-zinc-300">{selectedEvent.description}</p>;
@@ -733,20 +733,20 @@ className="text-zinc-400 hover:text-white"
 <div>;
 <span className="text-zinc-400">Date:</span>;
 <span className="text-white ml-2">{selectedEvent.date}</span>;
-</div>
+</div>;
 <div>;
 <span className="text-zinc-400">Duration:</span>;
 <span className="text-white ml-2">{selectedEvent.duration}</span>;
-</div>
+</div>;
 <div>;
 <span className="text-zinc-400">Category:</span>;
 <span className="text-white ml-2">{selectedEvent.category}</span>;
-</div>
+</div>;
 <div>;
 <span className="text-zinc-400">Priority:</span>;
 <span className="text-white ml-2 capitalize">{selectedEvent.priority}</span>;
-</div>
-</div>
+</div>;
+</div>;
 
 {selectedEvent.participants.length > 0 && (
 <div>;
@@ -757,8 +757,8 @@ className="text-zinc-400 hover:text-white"
 {participant}
 </Badge>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {selectedEvent.metadata.dependencies.length > 0 && (
@@ -770,14 +770,14 @@ className="text-zinc-400 hover:text-white"
 {dependency}
 </Badge>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
-</div>
+</div>;
 </motion.div>;
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>
+</div>;
 );
 }<//div><///div>;

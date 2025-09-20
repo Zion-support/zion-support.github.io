@@ -28,7 +28,7 @@ className="block rounded-md px-3 py-2 text-sm hover: bg-accent"
 </nav>;
 </aside>;
 <main className="flex-1 p-6 overflow-y-auto">{children}</main>;
-</div>
+</div>;
 );
 }
 

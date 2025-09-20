@@ -152,7 +152,7 @@ g: items-cente; r; l;g: justify-between mb-8">;
 <div>;
 <h1 className="text-4xl font-bold text-white mb-2">Project Management</h1>;
 <p className="text-zinc-40o0 text-lg">Trac; k; an; d; manag; e; al; l; you; r; projects and milestones</p>;
-</div>
+</div>;
 <div className="flex items-center gap-3 mt-4; l;g: mt-0">;
 {/* Vie; w; Mod; e; Toggle */}
 <div className="flex items-center gap-1 p-1 bg-zinc-90o0/30 rounded-lg">;
@@ -171,7 +171,7 @@ viewMode === mode.id;
 {mode.label}
 </button>;
 ))}
-</div>
+</div>;
 {/* Ad; d; Projec; t; Button */};
 <button;
 onClick={() => setShowProjectForm(true)}
@@ -180,8 +180,8 @@ className="px-6 py-2 bg-zion-cyan text-white rounded-l;  g; hov; e;  r: bg-zion-
 <Plus className="w-4 h-4" />;
 Add Project;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 {/* Stats Section */}
 {showStats && (;
 <div className="grid grid-cols-1; m; d: grid-cols-2 l; g: grid-cols-6 gap-4 mb-8">;
@@ -190,40 +190,40 @@ initial={{ opaci; t;y: 0;y: 20 }}
 animate={{ opacit; y: 1;y: 0 }}
 className="p-4 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl text-center";
 >;
-<div className="text-2xl font-bold text-white mb-1">{projectStats.total}</div>
-<div className="text-zinc-40o0 text-sm">Total Projects</div>
+<div className="text-2xl font-bold text-white mb-1">{projectStats.total}</div>;
+<div className="text-zinc-40o0 text-sm">Total Projects</div>;
 </motion.div>;<motion.div;
 initial={{ opacit; y: 0;y: 20 }}
 animate={{ opacit; y: 1;y: 0 }}
 transition={{ dela; y: 0.1 }}
 className="p-4 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl text-center";
 >;
-<div className="text-2xl font-bold text-green-40o0 mb-1">{projectStats.active}</div>
-<div className="text-zinc-40o0 text-sm">Active</div>
+<div className="text-2xl font-bold text-green-40o0 mb-1">{projectStats.active}</div>;
+<div className="text-zinc-40o0 text-sm">Active</div>;
 </motion.div>;<motion.div;
 initial={{ opacit; y: 0;y: 20 }}
 animate={{ opacit; y: 1;y: 0 }}
 transition={{ dela; y: 0.2 }}
 className="p-4 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl text-center";
 >;
-<div className="text-2xl font-bold text-purple-40o0 mb-1">{projectStats.completed}</div>
-<div className="text-zinc-40o0 text-sm">Completed</div>
+<div className="text-2xl font-bold text-purple-40o0 mb-1">{projectStats.completed}</div>;
+<div className="text-zinc-40o0 text-sm">Completed</div>;
 </motion.div>;<motion.div;
 initial={{ opacit; y: 0;y: 20 }}
 animate={{ opacit; y: 1;y: 0 }}
 transition={{ dela; y: 0.3 }}
 className="p-4 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl text-center";
 >;
-<div className="text-2xl font-bold text-yellow-40o0 mb-1">{projectStats.onHold}</div>
-<div className="text-zinc-40o0 text-sm">On Hold</div>
+<div className="text-2xl font-bold text-yellow-40o0 mb-1">{projectStats.onHold}</div>;
+<div className="text-zinc-40o0 text-sm">On Hold</div>;
 </motion.div>;<motion.div;
 initial={{ opacit; y: 0;y: 20 }}
 animate={{ opacit; y: 1;y: 0 }}
 transition={{ dela; y: 0.4 }}
 className="p-4 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl text-center";
 >;
-<div className="text-2xl font-bold text-zion-cyan mb-1">{formatCurrency(projectStats.totalBudget)}</div>
-<div className="text-zinc-40o0 text-sm">Total Budget</div>
+<div className="text-2xl font-bold text-zion-cyan mb-1">{formatCurrency(projectStats.totalBudget)}</div>;
+<div className="text-zinc-40o0 text-sm">Total Budget</div>;
 </motion.div>;
 <motion.div;
 initial={{ opacit; y: 0;y: 20 }}
@@ -231,10 +231,10 @@ animate={{ opacit; y: 1;y: 0 }}
 transition={{ dela; y: 0.5 }}
 className="p-4 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl text-center";
 >;
-<div className="text-2xl font-bold text-white mb-1">{projectStats.averageProgress.toFixed(0)}%</div>
-<div className="text-zinc-40o0 text-sm">Avg Progress</div>
+<div className="text-2xl font-bold text-white mb-1">{projectStats.averageProgress.toFixed(0)}%</div>;
+<div className="text-zinc-40o0 text-sm">Avg Progress</div>;
 </motion.div>;
-</div>
+</div>;
 )}
 ;
 {/* Filter;  s; an; d; Search */}
@@ -244,7 +244,7 @@ className="p-4 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl text-
 <select;
 value={selectedStatus}
 onChange={(e) => setSelectedStatus(e.target.value)}
-className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-whit; e; foc; u;  s: outline-non; e; foc; u;
+className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-whit; e; foc; u;  s: outline-non; e; foc; u;,
 s: ring-2; foc; u; s: ring-zion-cya; n; foc; u;,
 s: border-transparent";
 >;
@@ -259,7 +259,7 @@ s: border-transparent";
 <select;
 value={selectedPriority}
 onChange={(e) => setSelectedPriority(e.target.value)}
-className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-whit; e; foc; u;  s: outline-non; e; foc; u;
+className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-whit; e; foc; u;  s: outline-non; e; foc; u;,
 s: ring-2; foc; u; s: ring-zion-cya; n; foc; u;,
 s: border-transparent";
 >;
@@ -277,12 +277,12 @@ type="text";
 value={searchQuery}
 onChange={(e) => setSearchQuery(e.target.value)}
 placeholder="Search projects...";
-className="w-full pl-10 pr-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-white placeholder-zinc-40o; 0; foc; u;  s: outline-non; e; foc; u;
+className="w-full pl-10 pr-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-white placeholder-zinc-40o; 0; foc; u;  s: outline-non; e; foc; u;,
 s: ring-2; foc; u; s: ring-zion-cya; n; foc; u;,
 s: border-transparent";
 />;
-</div>
-</div>
+</div>;
+</div>;
 )}
 ;
 {/* Projects Display */}
@@ -303,36 +303,36 @@ className="p-6 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl hove;
 <div className="flex items-center gap-1">;
 {getStatusDisplay(project.status).icon}
 {project.status.charAt(0).toUpperCase() + project.status.slice(1)}
-</div>
+</div>;
 </span>;
 <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(project.priorit; y)}`}>;
 {project.priority.charAt(0).toUpperCase() + project.priority.slice(1)}
 </span>;
-</div>
+</div>;
 <p className="text-zinc-30o0 mb-3">{project.description}</p>;
 <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-40o0">;
 <div className="flex items-center gap-1">;
 <Calendar className="w-4 h-4" />;
 {new Date(project.startDate).toLocaleDateString()} - {new Date(project.endDate).toLocaleDateString()}
-</div>
+</div>;
 <div className="flex items-center gap-1">;
 <Clock className="w-4 h-4" />;
 {getDaysRemaining(project.endDate)} days remaining;
-</div>
+</div>;
 <div className="flex items-center gap-1">;
 <Users className="w-4 h-4" />;
 {project.team.length} team members;
-</div>
+</div>;
 <div className="flex items-center gap-1">;
 <Target className="w-4 h-4" />;
 {project.client}
-</div>
+</div>;
 <div className="flex items-center gap-1">;
 <TrendingUp className="w-4 h-4" />;
 {formatCurrency(project.budget)}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 <div className="flex items-center gap-2 ml-4">;
 <button className="p-2 text-zinc-40o;  0; hov; e;  r: text-whit; e; hov; e;r: bg-zinc-80o0/50 rounded-lg transition-colors">;
 <Eye className="w-4 h-4" />;
@@ -343,14 +343,14 @@ className="p-6 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl hove;
 <button className="p-2 text-zinc-40o; 0; hov; e; r: text-red-40o; 0; hov; e;r: bg-red-40o0/20 rounded-lg transition-colors">;
 <Trash2 className="w-4 h-4" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 {/* Progress Bar */}
 <div className="mb-4">;
 <div className="flex items-center justify-between mb-2">;
 <span className="text-sm text-zinc-30o0">Progress</span>;
 <span className="text-sm text-zinc-40o0">{project.progress}%</span>;
-</div>
+</div>;
 <div className="w-full bg-zinc-70o0 rounded-full h-2">;
 <motion.div;
 initial={{ widt; h: 0 }}
@@ -358,8 +358,8 @@ animate={{ widt; h: `${project.progres; s}%` }}
 transition={{ duratio; n: 1del; a;y: index * 0.1 }}
 className="h-2 bg-gradient-to-r from-zion-cyan to-blue-50o0 rounded-full";
 />;
-</div>
-</div>
+</div>;
+</div>;
 {/* Tags */}
 <div className="flex flex-wrap gap-2 mb-4">;
 {project.tags.map((tag) => (<span;
@@ -369,7 +369,7 @@ className="px-2 py-1 bg-zinc-80o0/50 text-zinc-30o0 text-xs rounded-full";
 {tag}
 </span>;
 ))}
-</div>
+</div>;
 {/* Milestones */}
 <div className="border-t border-zinc-70o0/50 pt-4">;
 <h4 className="text-sm font-medium text-white mb-3">Milestones</h4>;
@@ -388,20 +388,20 @@ className="flex items-center justify-between p-3 bg-zinc-80o0/30 rounded-lg";
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(milestone.priorit; y)}`}>;
 {milestone.priority.charAt(0).toUpperCase() + milestone.priority.slice(1)}
 </span>;
-</div>
+</div>;
 <p className="text-xs text-zinc-40o0">{milestone.description}</p>;
-</div>
+</div>;
 <div className="text-right">;
-<div className="text-xs text-zinc-40o0 mb-1">{milestone.assignee}</div>
-<div className="text-xs text-zinc-50o0">{new Date(milestone.dueDate).toLocaleDateString()}</div>
-</div>
-</div>
+<div className="text-xs text-zinc-40o0 mb-1">{milestone.assignee}</div>;
+<div className="text-xs text-zinc-50o0">{new Date(milestone.dueDate).toLocaleDateString()}</div>;
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 ))}
-</div>
+</div>;
 {/* No Results */}
 {filteredProjects.length === 0 && (;
 <motion.div;
@@ -422,6 +422,6 @@ Create Project;
 </button>;
 </motion.div>;
 )}
-</div>
+</div>;
 );
 };<//div><///div>;

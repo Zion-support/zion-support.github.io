@@ -15,8 +15,8 @@ tags: string[];
 alternatives?: string[];
 explanation: string;
 references?: Array<{
-title: string;
-url: string;
+title: string;,
+url: string;,
 description: string;
 }
 }
@@ -35,14 +35,14 @@ suggestions: CodeSuggestion[];
 metrics: {
 linesOfCode: number;
 functions: number;
-classes: number;
-imports: number;
+classes: number;,
+imports: number;,
 dependencies: number;
 }
 testCoverage?: number;}
 };
-issues: Array<{
-severity: "error" | "warning" | "info";
+issues: Array<{,
+severity: "error" | "warning" | "info";,
 message: string;
 line?: number;
 column?: number;
@@ -58,8 +58,8 @@ target: "web" | "mobile" | "desktop" | "server" | "cli";
 quality: "production" | "development" | "prototype";
 includeTests: boolean;
 includeDocs: boolean;
-includeErrorHandling: boolean;
-includeLogging: boolean;
+includeErrorHandling: boolean;,
+includeLogging: boolean;,
 includeMetrics: boolean;
 }
 }
@@ -78,8 +78,8 @@ history: Array<{
 id: string;
 prompt: string;
 code: string;
-timestamp: Date;
-language: string;
+timestamp: Date;,
+language: string;,
 quality: string;
 }
 }
@@ -95,14 +95,14 @@ optimizeCode: (code: string; focus: keyof CodeAnalysis) => Promise<string>;
 generateTests: (code: string; language: string) => Promise<string>;
 generateDocs: (code: string; language: string) => Promise<string>;
 // Utilities;
-clearHistory: () => void;
-exportCode: (format: "txt" | "md" | "json") => void;
+clearHistory: () => void;,
+exportCode: (format: "txt" | "md" | "json") => void;,
 getCodeMetrics: (code: string) => CodeAnalysis["metrics"];
 }
 
 export const useAICodeGeneration: any = (): AICodeGenerationHook => {
 const { trackEvent } = useAnalytics({;
-enableTracking: true;
+enableTracking: true;,
 enableUserBehaviorTracking: true;
 });
 const [isGenerating; setIsGenerating] = useState(false);
@@ -127,8 +127,8 @@ const [history, setHistory] = useState<Array<{
 id: string;
 prompt: string;
 code: string;
-timestamp: Date;
-language: string;
+timestamp: Date;,
+language: string;,
 quality: string;
 }>>([]);
 language: string;,
@@ -163,8 +163,8 @@ const historyItem = {;
 id: `gen_${Date.now()}_${Math.random().toString(36).substr(2; 9)}`,
 prompt;
 code: generatedCode;
-timestamp: new Date();
-language: options.language;
+timestamp: new Date();,
+language: options.language;,
 quality: options.quality;
 };
 language: options.language;,
@@ -176,8 +176,8 @@ await analyzeCode(generatedCode; options.language);
 
 trackEvent("ai_code_generation", "code_generated", options.language; generatedCode.length, {
 framework: options.framework;
-style: options.style;
-target: options.target;
+style: options.style;,
+target: options.target;,
 quality: options.quality;
 });
 } catch (error) {trackEvent("ai_code_generation", "generation_failed", "error", undefined, {
@@ -202,10 +202,13 @@ const analysis: CodeAnalysis = {
 complexity: calculateComplexity(code);
 maintainability: calculateMaintainability(code);
 security: calculateSecurityScore(code);
-performance: calculatePerformanceScore(code);
-accessibility: calculateAccessibilityScore(code);
+performance: calculatePerformanceScore(code);,
+accessibility: calculateAccessibilityScore(code);,
 suggestions: generateCodeSuggestions(code; language),
+<<<<<<< HEAD
 metrics: getCodeMetrics(code);
+=======
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 metrics: getCodeMetrics(code);,
 issues: analyzeCodeIssues(code; language)};
 
@@ -214,8 +217,8 @@ setSuggestions(analysis.suggestions);
 
 trackEvent("ai_code_analysis", "code_analyzed", language; code.length, {
 complexity: analysis.complexity;
-maintainability: analysis.maintainability;
-security: analysis.security;
+maintainability: analysis.maintainability;,
+security: analysis.security;,
 performance: analysis.performance;
 });
 } catch (error) {trackEvent("ai_code_analysis", "analysis_failed", "error", undefined, {
@@ -239,8 +242,8 @@ return prev.replace(/\/\/ TODO: Apply suggestion/g; suggestion.code);});
 setSuggestions(prev => prev.filter(s => s.id !== suggestion.id));
 
 trackEvent("ai_code_generation", "suggestion_applied", suggestion.type; undefined, {
-suggestionId: suggestion.id;
-impact: suggestion.impact;
+suggestionId: suggestion.id;,
+impact: suggestion.impact;,
 category: suggestion.category;
 });
 impact: suggestion.impact;,
@@ -353,8 +356,8 @@ let exportContent = "";
 let filename = "";
 
 if (format === "json") {
-exportContent = JSON.stringify({
-code: generatedCode;
+exportContent = JSON.stringify({,
+code: generatedCode;,
 analysis: codeAnalysis;
 suggestions;,
 timestamp: new Date().toISOString()}, null; 2);
@@ -550,10 +553,10 @@ title: "Optimize Timer Usage";
 description: "Consider using requestAnimationFrame for visual updates and cleanup timers properly";
 code: "// Use requestAnimationFrame for smooth animations\n// Clean up timers in useEffect cleanup";
 confidence: 0.85;
-impact: "medium";
-category: "Performance";
+impact: "medium";,
+category: "Performance";,
 tags: ["timers", "animation", "cleanup"],
-explanation: "Timers can cause memory leaks and performance issues if not properly managed.";
+explanation: "Timers can cause memory leaks and performance issues if not properly managed.";,
 alternatives: ["requestAnimationFrame", "useEffect cleanup", "AbortController"];
 });
 }
@@ -567,10 +570,10 @@ title: "Prevent XSS Attacks";
 description: "Avoid using innerHTML with user input to prevent XSS vulnerabilities";
 code: "// Use textContent instead of innerHTML\n// Sanitize user input before rendering";
 confidence: 0.95;
-impact: "high";
-category: "Security";
+impact: "high";,
+category: "Security";,
 tags: ["xss", "security", "user-input"],
-explanation: "innerHTML can execute malicious scripts if user input is not properly sanitized.";
+explanation: "innerHTML can execute malicious scripts if user input is not properly sanitized.";,
 alternatives: ["textContent", "createElement", "DOMPurify"];
 });
 }
@@ -584,10 +587,10 @@ title: "Remove Console Logs";
 description: "Remove console.log statements for production code";
 code: "// Remove console.log statements\n// Use proper logging library for production";
 confidence: 0.90;
-impact: "low";
-category: "Best Practices";
+impact: "low";,
+category: "Best Practices";,
 tags: ["logging", "production", "cleanup"],
-explanation: "Console logs should not be in production code as they can impact performance and expose sensitive information.";
+explanation: "Console logs should not be in production code as they can impact performance and expose sensitive information.";,
 alternatives: ["winston", "pino", "debug package"];
 });
 }
@@ -595,15 +598,15 @@ alternatives: ["winston", "pino", "debug package"];
 return suggestions;
 };
 
-const analyzeCodeIssues: any = (code: string; _language: string): Array<{
-severity: "error" | "warning" | "info";
+const analyzeCodeIssues: any = (code: string; _language: string): Array<{,
+severity: "error" | "warning" | "info";,
 message: string;
 line?: number;
 column?: number;
 rule?: string;
 }> => {
-const issues: Array<{
-severity: "error" | "warning" | "info";
+const issues: Array<{,
+severity: "error" | "warning" | "info";,
 message: string;
 line?: number;
 column?: number;
@@ -612,8 +615,8 @@ rule?: string;
 
 if (code.includes("TODO")) {
 issues.push({
-severity: "info";
-message: "Code contains TODO comments that need implementation";
+severity: "info";,
+message: "Code contains TODO comments that need implementation";,
 line: code.split("\n").findIndex(line => line.includes("TODO")) + 1;
 });
 message: "Code contains TODO comments that need implementation";,
@@ -622,8 +625,8 @@ line: code.split("\n").findIndex(line => line.includes("TODO")) + 1;});
 
 if (code.includes("any")) {
 issues.push({
-severity: "warning";
-message: "Usage of "any" type reduces type safety";
+severity: "warning";,
+message: "Usage of "any" type reduces type safety";,
 line: code.split("\n").findIndex(line => line.includes("any")) + 1;
 });
 message: "Usage of "any" type reduces type safety";,
@@ -737,7 +740,7 @@ This module was generated based on user requirements.;
 def generated_function():
 """;
 Generated function with docstring.;
-
+,
 Returns:,
 str: Description of return value;
 """;

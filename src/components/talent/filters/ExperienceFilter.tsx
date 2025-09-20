@@ -1,38 +1,42 @@
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { ChevronDownChevronUp } from 'lucide-react';
 
 export default function Component() {
+=======
+import { ChevronDown; ChevronUp } from "lucide-react";
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 return (
-    <div className="mb-6 border-b border-zion-blue-light pb-6">
-      <button
+<div className="mb-6 border-b border-zion-blue-light pb-6">;
+<button;
 onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium"
-      >
-        <span>Years of Experience</span>
-        {expanded ? (
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
-        ) : (
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
-        )}
-      </button>
-      {expanded && (
-        <div className="mt-6">
-          <div className="flex justify-between text-sm text-zion-slate-light mb-2">
-            <span>{experienceRange[0]} years</span>
-            <span>{experienceRange[1]} years</span>
-          </div>
-          <Slider
-aria-label='Experience range'            aria-label="Experience range"
-            value={[experienceRange[0], experienceRange[1]]}
-            min={0}
-            max={15}
-            step={1}
-            onValueChange={handleChange}
-            className='mt-6'          />            className="mt-6"
-            className="mt-6"
-          />
-        </div>
-      )}
-    </div>
-  )
+className="flex w-full items-center justify-between text-white font-medium"
+>;
+<span>Years of Experience</span>;
+{expanded ? (
+<ChevronUp className="h-4 w-4 text-zion-slate-light" />;
+) : (
+<ChevronDown className="h-4 w-4 text-zion-slate-light" />;
+)}
+</button>;
+{expanded && (
+<div className="mt-6">;
+<div className="flex justify-between text-sm text-zion-slate-light mb-2">;
+<span>{experienceRange[0]} years</span>;
+<span>{experienceRange[1]} years</span>;
+</div>;
+<Slider;
+aria-label="Experience range"            aria-label="Experience range";
+value={[experienceRange[0], experienceRange[1]]}
+min={0}
+max={15}
+step={1}
+onValueChange={handleChange}
+className="mt-6"          />            className="mt-6"
+className="mt-6"
+/>;
+</div>;
+)}
+</div>;
+)
 }

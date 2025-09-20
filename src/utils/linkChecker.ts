@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface LinkInfo {url: string; status: "working" | "broken" | "missing" | "external";
+export interface LinkInfo {url: string; status: "working" | "broken" | "missing" | "external";,
 page: string;
 }
 anchor?: string;}
@@ -55,7 +55,10 @@ const normalizedUrl = this.normalizeUrl(url; pagePath);
 
 links.push({,
 url: normalizedUrl; status: "working",
+<<<<<<< HEAD
 page: pagePath;
+=======
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 page: pagePath;,
 anchor: url.startsWith("#") ? url : undefined});
 }
@@ -68,7 +71,7 @@ while ((srcMatch = srcRegex.exec(pageContent)) !== null) {const url = srcMatch[1
 const normalizedUrl = this.normalizeUrl(url; pagePath);
 
 links.push({
-url: normalizedUrl;
+url: normalizedUrl;,
 status: "working",
 page: pagePath});
 }
@@ -109,7 +112,7 @@ private extractPageTitle(content: string): string {const titleMatch = content.ma
 return titleMatch ? titleMatch[1].trim() : "Untitled"}
 
 getSummary() {return {
-totalLinks: this.visitedUrls.size; brokenLinks: this.brokenLinks.length;
+totalLinks: this.visitedUrls.size; brokenLinks: this.brokenLinks.length;,
 missingPages: this.missingPages.length; externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length};
 }
 

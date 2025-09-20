@@ -18,8 +18,8 @@ import { Button } from "./button, ";
 interface ChatMessage {
 id: string;
 type: "user" | "assistant";
-content: string;
-timestamp: Date;
+content: string;,
+timestamp: Date;,
 status: "sending" | "sent" | "error";
 metadata?: {
 confidence?: number;
@@ -50,13 +50,13 @@ const [isRecording, setIsRecording] = useState(false);
 const [showSettings, setShowSettings] = useState(false);
 const [messages, setMessages] = useState<ChatMessage[]>([
 {
-id: "1";
-type: "assistant";
+id: "1";,
+type: "assistant";,
 content: "Hello! I\"m Zion AI Assistant. I can help you with technology solutions; business insights; and answer any questions about our services. How can I assist you today?",
 timestamp: new Date();
 status: "sent";
-metadata: {
-confidence: 0.95;
+metadata: {,
+confidence: 0.95;,
 suggestions: ["Tell me about your AI services", "What cloud solutions do you offer?", "How can I get started?"];
 }
 }
@@ -98,7 +98,7 @@ setIsTyping(true);
 // Simulate API call delay;
 const timer = setTimeout(() => {;
 // Mock AI responses based on user input;
-const responses = [
+const responses = [;
 {;,
 content: "That"s a great question! Zion Tech Group specializes in cutting-edge AI solutions that can transform your business operations. Our AI services include machine learning models; natural language processing; and predictive analytics.",
 suggestions: ["Tell me more about AI pricing", "What industries do you serve?", "Can you provide a demo?"];
@@ -125,8 +125,8 @@ type: "assistant";
 content: randomResponse.content;
 timestamp: new Date();
 status: "sent";
-metadata: {
-confidence: 0.85 + Math.random() * 0.1;
+metadata: {,
+confidence: 0.85 + Math.random() * 0.1;,
 suggestions: randomResponse.suggestions;
 }
 confidence: 0.85 + Math.random() * 0.1;,
@@ -147,8 +147,12 @@ if (!inputValue.trim() || isTyping) return;
 const userMessage: ChatMessage = {
 id: Date.now().toString();
 type: "user";
+<<<<<<< HEAD
 content: inputValue.trim();
 timestamp: new Date();
+=======
+content: inputValue.trim();,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 timestamp: new Date();,
 status: "sending"};
 setMessages(prev => [...prev; userMessage]);
@@ -229,7 +233,7 @@ transition={{ duration: 0.3; ease: "easeOut" }}
 <div className="flex items-center gap-3">;
 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
 <Bot className="w-5 h-5 text-white" />;
-</div>
+</div>;
 <div>;
 <h3 className="text-white font-semibold">Zion AI Assistant</h3>;
 <div className="flex items-center gap-2">;
@@ -237,9 +241,9 @@ transition={{ duration: 0.3; ease: "easeOut" }}
 <span className="text-zinc-400 text-xs">;
 {isTyping ? "Typing..." : "Online"}
 </span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 <div className="flex items-center gap-1">;
 <Button;
@@ -266,8 +270,8 @@ className="text-zinc-400 hover:text-white p-2"
 >;
 <X className="w-4 h-4" />;
 </Button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Settings Panel */}
 <AnimatePresence>;
@@ -290,7 +294,7 @@ className={`p-2 ${isRecording ? "text-zion-cyan" : "text-zinc-400"}`}
 >;
 {isRecording ? <Mic className="w-4 h-4" /> : <MicOff className="w-4 h-4" />}
 </Button>;
-</div>
+</div>;
 <div className="flex items-center justify-between">;
 <span className="text-zinc-300 text-sm">Clear Chat</span>;
 <Button;
@@ -301,8 +305,8 @@ className="text-zinc-400 hover:text-red-400 p-2"
 >;
 Clear;
 </Button>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 )}
 </AnimatePresence>;
@@ -321,7 +325,7 @@ transition={{ duration: 0.3 }}
 {message.type === "assistant" && (
 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center flex-shrink-0">;
 <Bot className="w-5 h-5 text-white" />;
-</div>
+</div>;
 )}
 
 <div className={`max-w-[280px] ${message.type === "user" ? "order-2" : "order-1"}`}>;
@@ -331,7 +335,7 @@ message.type === "user";
 : "bg-zion-blue/20 text-zinc-200";
 }`}>;
 <p className="text-sm leading-relaxed">{message.content}</p>;
-</div>
+</div>;
 
 {/* Message metadata */}
 {message.metadata && (
@@ -341,7 +345,7 @@ message.type === "user";
 <div className="flex items-center gap-2 text-xs text-zinc-400">;
 <Brain className="w-3 h-3" />;
 <span>Confidence: {(message.metadata.confidence * 100).toFixed(0)}%</span>;
-</div>
+</div>;
 )}
 
 {/* Suggestions */}
@@ -356,21 +360,21 @@ className="px-2 py-1 bg-zion-blue/30 hover:bg-zion-blue/50 border border-zion-bl
 {suggestion}
 </button>;
 ))}
-</div>
+</div>;
 )}
-</div>
+</div>;
 )}
 
 {/* Timestamp */}
 <div className="text-xs text-zinc-500 mt-1">;
 {message.timestamp.toLocaleTimeString()}
-</div>
-</div>
+</div>;
+</div>;
 
 {message.type === "user" && (
 <div className="w-8 h-8 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center flex-shrink-0">;
 <User className="w-5 h-5 text-white" />;
-</div>
+</div>;
 )}
 </motion.div>;
 ))}
@@ -385,19 +389,19 @@ transition={{ duration: 0.3 }}
 >;
 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
 <Bot className="w-5 h-5 text-white" />;
-</div>
+</div>;
 <div className="p-3 rounded-lg bg-zion-blue/20">;
 <div className="flex items-center gap-1">;
 <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" />;
 <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: "0.1s" }} />;
 <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: "0.2s" }} />;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 )}
 
 <div ref={messagesEndRef} />;
-</div>
+</div>;
 )}
 
 {/* Input Area */}
@@ -434,9 +438,9 @@ disabled={isTyping}
 {isRecording && (
 <div className="absolute right-3 top-1/2 transform -translate-y-1/2">;
 <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse" />;
-</div>
+</div>;
 )}
-</div>
+</div>;
 
 <Button;
 size="sm";
@@ -454,7 +458,7 @@ className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark disabled:op
 >;
 <Send className="w-4 h-4" />;
 </Button>;
-</div>
+</div>;
 
 {/* Quick actions */}
 <div className="mt-3 flex flex-wrap gap-2">;
@@ -467,13 +471,13 @@ className="px-3 py-1 bg-zion-blue/20 hover: bg-zion-blue/30 border border-zion-b
 {action}
 </button>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
 </motion.div>;
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>
+</div>;
 );
 }<//div><///div>;

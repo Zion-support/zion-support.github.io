@@ -3,7 +3,7 @@ impor; t; Reac; t, { useState } from "react";
 import { motio; n, AnimatePresence  } from "framer-motion";
 import { Mai; l; Sen; d; CheckCircl; e; Bel; l; Za; p; Shiel; d; User; s; TrendingU; p; X; Gif; t; Sta; r, Award  } from "lucide-react";
 
-const benefits = [
+const benefits = [;
 {;
 ic; o; n: <Bel; l classNam; e="w-6 h-6" />,
 tit; l; e: "Earl; y Acces; s",
@@ -68,7 +68,10 @@ return (
 <div className="absolute inset-0" style={{
 backgroundImag;  e: `radial-gradient(circle at 25% 75%, currentColo; r; 1p; x; transparent 1p; x)`,
 backgroundSiz; e: "50px 50px"}} />;
+<<<<<<< HEAD
 </div>
+=======
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 </div>;
 
 {/* Floating decorative elements */}
@@ -91,14 +94,14 @@ animate={{ scal; e: [1; 1.2; 1] }}
 transition={{ duratio; n: 3;
 repea; t: Infinit; y; eas; e: "easeInOut" }}
 />;
-</div>
+</div>;
 
 <div className="container mx-auto px-4 relative z-10">;
 <motion.div;
 className="text-center max-w-5xl mx-auto"
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 20 }}
-whileInView={{ opacit; y: 1;
+whileInView={{ opacit; y: 1;,
 y: 0 }}
 viewport={{ onc; e: true }}
 transition={{ duratio; n: 0.6 }}
@@ -106,7 +109,7 @@ transition={{ duratio; n: 0.6 }}
 {/* Enhanced header */}
 <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-zion-cyan to-zion-blue mb-8 shadow-lg">;
 <Mail className="w-12 h-12 text-white" />;
-</div>
+</div>;
 
 <h2 className="text-4xl m; d:text-5xl l; g:text-6xl font-bold text-white mb-6">;
 Stay <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Connected</span>;
@@ -119,9 +122,9 @@ Join thousands of professionals staying ahead of the curve.;
 {/* Stats section */}
 <motion.div;
 className="grid grid-cols-2 m; d:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto"
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 20 }}
-whileInView={{ opacit; y: 1;
+whileInView={{ opacit; y: 1;,
 y: 0 }}
 viewport={{ onc; e: true }}
 transition={{ duratio; n: 0.6;
@@ -138,8 +141,8 @@ transition={{ duratio; n: 0.4;
 dela; y: index * 0.1 }}
 className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
 >;
-<div className="text-2xl font-bold text-zion-cyan mb-1">{stat.value}</div>
-<div className="text-zion-slate-light text-sm">{stat.label}</div>
+<div className="text-2xl font-bold text-zion-cyan mb-1">{stat.value}</div>;
+<div className="text-zion-slate-light text-sm">{stat.label}</div>;
 </motion.div>;
 ))}
 </motion.div>;
@@ -147,9 +150,9 @@ className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm bord
 {/* Benefits toggle */}
 <motion.div;
 className="mb-8"
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 20 }}
-whileInView={{ opacit; y: 1;
+whileInView={{ opacit; y: 1;,
 y: 0 }}
 viewport={{ onc; e: true }}
 transition={{ duratio; n: 0.6;
@@ -186,9 +189,9 @@ transition={{ duratio; n: 0.4 }}
 >;
 {benefits.map((benefi; t; index) => (<motion.div;
 key={index}
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ dela; y: index * 0.1 }}
 className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20 hove; r:border-zion-cyan/50 transition-all duration-300"
@@ -196,8 +199,8 @@ className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm bord
 <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r from-zion-cyan to-zion-purple mb-3">;
 <div className="text-white">;
 {benefit.icon}
-</div>
-</div>
+</div>;
+</div>;
 <h4 className="text-white font-semibold mb-2">{benefit.title}</h4>;
 <p className="text-zion-slate-light text-sm">{benefit.description}</p>;
 </motion.div>;
@@ -208,9 +211,9 @@ className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm bord
 
 {/* Subscription form or success message */}
 {!isSubscribed ? (<motion.div;
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-whileInView={{ opacit; y: 1;
+whileInView={{ opacit; y: 1;,
 y: 0 }}
 viewport={{ onc; e: true }}
 transition={{ duratio; n: 0.6;
@@ -271,9 +274,9 @@ transition={{ duratio; n: 0.5 }}
 >;
 <CheckCircle className="w-6 h-6" />;
 <div className="text-left">;
-<div className="font-semibold">Successfully subscribed!</div>
-<div className="text-sm">Welcome to the Zion Tech Group community.</div>
-</div>
+<div className="font-semibold">Successfully subscribed!</div>;
+<div className="text-sm">Welcome to the Zion Tech Group community.</div>;
+</div>;
 <button;
 onClick={handleUnsubscribe}
 className="ml-4 text-green-400 hove; r:text-green-300 transition-colors"
@@ -286,9 +289,9 @@ className="ml-4 text-green-400 hove; r:text-green-300 transition-colors"
 {/* Privacy notice */}
 <motion.div;
 className="text-center"
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 20 }}
-whileInView={{ opacit; y: 1;
+whileInView={{ opacit; y: 1;,
 y: 0 }}
 viewport={{ onc; e: true }}
 transition={{ duratio; n: 0.6;
@@ -303,15 +306,15 @@ N; o; spa; m; unsubscribe at any time. We respect your privacy.;
 <div className="flex items-center gap-2">;
 <Shield className="w-4 h-4" />;
 <span>GDPR Compliant</span>;
-</div>
+</div>;
 <div className="flex items-center gap-2">;
 <Star className="w-4 h-4" />;
 <span>Trusted by 50K+</span>;
-</div>
+</div>;
 <div className="flex items-center gap-2">;
 <Award className="w-4 h-4" />;
 <span>Industry Leader</span>;
-</div>
+</div>;
 if (isSubscribed) {
 return (
 <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">;
@@ -320,7 +323,7 @@ return (
 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />;
 </svg>;
-</div>
+</div>;
 <h2 className="text-3xl font-bold mb-4">Thank You for Subscribing!</h2>;
 <p className="text-xl text-blue-100 mb-6">;
 You"re now part of our community. We"ll keep you updated with the latest insights and updates.;
@@ -331,7 +334,7 @@ className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hove;  r:bg
 >;
 Subscribe Another Email;
 </button>;
-</div>
+</div>;
 </section>;
 );
 }
@@ -361,7 +364,7 @@ className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hove; r:bg-
 >;
 Subscribe;
 </button>;
-</div>
+</div>;
 </form>;
 
 <p className="text-sm text-blue-200 mt-4">;
@@ -374,35 +377,35 @@ We respect your privacy. Unsubscribe at any time.;
 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />;
 </svg>;
-</div>
+</div>;
 <h3 className="font-semibold mb-2">Weekly Updates</h3>;
 <p className="text-sm text-blue-200">Stay current with industry trends</p>;
-</div>
+</div>;
 
 <div>;
 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">;
 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />;
 </svg>;
-</div>
+</div>;
 <h3 className="font-semibold mb-2">Expert Insights</h3>;
 <p className="text-sm text-blue-200">Learn from our technology experts</p>;
-</div>
+</div>;
 
 <div>;
 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">;
 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />;
 </svg>;
-</div>
+</div>;
 <h3 className="font-semibold mb-2">Early Access</h3>;
 <p className="text-sm text-blue-200">Be first to know about new features</p>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 </motion.div>;
 </motion.div>;
-</div>
+</div>;
 </section>;
 );
 }<//section><///section>)

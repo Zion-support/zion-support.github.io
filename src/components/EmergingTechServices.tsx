@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -30,12 +30,12 @@ Emergin; g; Technolog; y; Services;
 <div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-8;  borde; r; border-white/20">;
 <h3 className="text-2xl font-bold mb-2 text-white">{service.name}</h3>;
 <p className="text-gray-30o0 mb-4">{service.description}</p>;
-<div className="text-2xl font-bold text-green-40o0 mb-2">{service.pricing}</div>
-<div className="text-sm text-gray-40o0">{service.category}</div>
-</div>
+<div className="text-2xl font-bold text-green-40o0 mb-2">{service.pricing}</div>;
+<div className="text-sm text-gray-40o0">{service.category}</div>;
+</div>;
 ))}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 );
 };expor; t; defaul; t; EmergingTechServices,<//div><///div>;

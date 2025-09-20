@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -25,8 +25,8 @@ Brain,
 {/* Scroll Indicator */}
 <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">;
 <div className="w-6 h-10 border-2 border-zion-cyan rounded-full flex justify-center">;
-<div className="w-1 h-3 bg-zion-cyan rounded-full mt-2 animate-pulse"></div>
-</div>
+<div className="w-1 h-3 bg-zion-cyan rounded-full mt-2 animate-pulse"></div>;
+</div>;
 Shield;
 Globe;
 ChevronDown;
@@ -41,20 +41,20 @@ return (
 {/* Animated Background Elements */}
 <div className="absolute inset-0 overflow-hidden pointer-events-none">;
 {/* Floating geometric shapes */}
-<div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/10 rounded-full animate-float"></div>
-<div className="absolute top-40 right-20 w-24 h-24 bg-zion-purple/10 rounded-full animate-float delay-1000"></div>
-<div className="absolute bottom-20 left-1/4 w-20 h-20 bg-zion-blue/10 rounded-full animate-float delay-2000"></div>
+<div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/10 rounded-full animate-float"></div>;
+<div className="absolute top-40 right-20 w-24 h-24 bg-zion-purple/10 rounded-full animate-float delay-1000"></div>;
+<div className="absolute bottom-20 left-1/4 w-20 h-20 bg-zion-blue/10 rounded-full animate-float delay-2000"></div>;
 
 {/* Cyber grid overlay */}
-<div className="absolute inset-0 cyber-grid opacity-20"></div>
+<div className="absolute inset-0 cyber-grid opacity-20"></div>;
 
 {/* Animated lines */}
 <div className="absolute top-0 left-0 w-full h-full">;
-<div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent animate-pulse"></div>
-<div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-purple to-transparent animate-pulse delay-1000"></div>
-<div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-blue to-transparent animate-pulse delay-2000"></div>
-</div>
-</div>
+<div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent animate-pulse"></div>;
+<div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-purple to-transparent animate-pulse delay-1000"></div>;
+<div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-blue to-transparent animate-pulse delay-2000"></div>;
+</div>;
+</div>;
 
 {/* Main Content */}
 <div className="relative z-10 container mx-auto px-4 text-center">;
@@ -62,7 +62,7 @@ return (
 <div className="inline-flex items-center gap-2 bg-zion-cyan/10 text-zion-cyan px-6 py-3 rounded-full text-sm font-medium mb-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:bg-zion-cyan/20">;
 <Sparkles className="h-4 w-4 animate-pulse" />;
 <span className="neon-text">New Micro SAAS Services Available</span>;
-</div>
+</div>;
 
 {/* Main Heading */}
 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8">;
@@ -105,35 +105,35 @@ className="border-2 border-zion-purple text-zion-purple hover:bg-zion-purple hov
 Get Started;
 </Link>;
 </Button>;
-</div>
+</div>;
 
 {/* Stats Section */}
 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">;
 <div className="text-center group">;
 <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2 group-hover:scale-110 transition-transform duration-300">;
 500+;
-</div>
-<div className="text-zion-slate-light text-sm md:text-base">Micro SAAS Services</div>
-</div>
+</div>;
+<div className="text-zion-slate-light text-sm md:text-base">Micro SAAS Services</div>;
+</div>;
 <div className="text-center group">;
 <div className="text-3xl md:text-4xl font-bold text-zion-purple mb-2 group-hover:scale-110 transition-transform duration-300">;
 10K+;
-</div>
-<div className="text-zion-slate-light text-sm md:text-base">AI Professionals</div>
-</div>
+</div>;
+<div className="text-zion-slate-light text-sm md:text-base">AI Professionals</div>;
+</div>;
 <div className="text-center group">;
 <div className="text-3xl md:text-4xl font-bold text-zion-blue mb-2 group-hover:scale-110 transition-transform duration-300">;
 99.9%;
-</div>
-<div className="text-zion-slate-light text-sm md:text-base">Uptime Guarantee</div>
-</div>
+</div>;
+<div className="text-zion-slate-light text-sm md:text-base">Uptime Guarantee</div>;
+</div>;
 <div className="text-center group">;
 <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2 group-hover:scale-110 transition-transform duration-300">;
 24/7;
-</div>
-<div className="text-zion-slate-light text-sm md:text-base">Support Available</div>
-</div>
-</div>
+</div>;
+<div className="text-zion-slate-light text-sm md:text-base">Support Available</div>;
+</div>;
+</div>;
 
 {/* Service Categories Preview */}
 <div className="mb-16">;
@@ -142,59 +142,59 @@ Get Started;
 <div className="group p-4 rounded-lg bg-zion-blue-dark/30 hover:bg-zion-cyan/20 transition-all duration-300 hover:scale-105 border border-zion-blue-light/20 hover:border-zion-cyan/50">;
 <Brain className="h-8 w-8 text-zion-cyan mx-auto mb-2 group-hover:scale-110 transition-transform" />;
 <span className="text-zion-slate-light text-sm text-center block group-hover:text-zion-cyan transition-colors">AI Services</span>;
-</div>
+</div>;
 <div className="group p-4 rounded-lg bg-zion-blue-dark/30 hover:bg-zion-cyan/20 transition-all duration-300 hover:scale-105 border border-zion-blue-light/20 hover:border-zion-cyan/50">;
 <Shield className="h-8 w-8 text-zion-cyan mx-auto mb-2 group-hover:scale-110 transition-transform" />;
 <span className="text-zion-slate-light text-sm text-center block group-hover:text-zion-cyan transition-colors">IT Solutions</span>;
-</div>
+</div>;
 <div className="group p-4 rounded-lg bg-zion-blue-dark/30 hover:bg-zion-cyan/20 transition-all duration-300 hover:scale-105 border border-zion-blue-light/20 hover:border-zion-cyan/50">;
 <Zap className="h-8 w-8 text-zion-cyan mx-auto mb-2 group-hover:scale-110 transition-transform" />;
 <span className="text-zion-slate-light text-sm text-center block group-hover:text-zion-cyan transition-colors">Automation</span>;
-</div>
+</div>;
 <div className="group p-4 rounded-lg bg-zion-blue-dark/30 hover:bg-zion-cyan/20 transition-all duration-300 hover:scale-105 border border-zion-blue-light/20 hover:border-zion-cyan/50">;
 <Globe className="h-8 w-8 text-zion-cyan mx-auto mb-2 group-hover:scale-110 transition-transform" />;
 <span className="text-zion-slate-light text-sm text-center block group-hover:text-zion-cyan transition-colors">Integration</span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Trust Indicators */}
 <div className="mb-16">;
 <p className="text-zion-slate-light mb-6">Trusted by leading companies worldwide</p>;
 <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">;
-<div className="text-zion-cyan font-bold text-xl">TechCorp</div>
-<div className="text-zion-purple font-bold text-xl">InnovateAI</div>
-<div className="text-zion-blue font-bold text-xl">DataFlow</div>
-<div className="text-zion-cyan font-bold text-xl">CloudTech</div>
-</div>
-</div>
+<div className="text-zion-cyan font-bold text-xl">TechCorp</div>;
+<div className="text-zion-purple font-bold text-xl">InnovateAI</div>;
+<div className="text-zion-blue font-bold text-xl">DataFlow</div>;
+<div className="text-zion-cyan font-bold text-xl">CloudTech</div>;
+</div>;
+</div>;
 
 {/* Scroll Indicator */}
 <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">;
 <ChevronDown className="h-6 w-6 text-zion-cyan" />;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Floating Action Cards */}
 <div className="absolute top-1/4 right-8 hidden lg:block">;
 <div className="glass-effect p-4 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105">;
 <div className="flex items-center gap-3">;
-<div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
+<div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>;
 <span className="text-zion-cyan text-sm font-medium">Live AI Matching</span>;
-</div>
-<div className="text-white text-xs mt-2">Currently processing 1;247 matches</div>
-</div>
-</div>
+</div>;
+<div className="text-white text-xs mt-2">Currently processing 1;247 matches</div>;
+</div>;
+</div>;
 
 <div className="absolute bottom-1/4 left-8 hidden lg:block">;
 <div className="glass-effect p-4 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">;
 <div className="flex items-center gap-3">;
 <Star className="h-4 w-4 text-zion-purple" />;
 <span className="text-zion-purple text-sm font-medium">New Services</span>;
-</div>
-<div className="text-white text-xs mt-2">12 new micro SAAS services added this week</div>
-</div>
-</div>
+</div>;
+<div className="text-white text-xs mt-2">12 new micro SAAS services added this week</div>;
+</div>;
+</div>;
 </section>;
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -217,8 +217,8 @@ ExternalLink} from "lucide-react";
 import { SimpleFuturisticBackground } from "@/components/ui/FuturisticBackground";
 
 export function EnhancedHeroSection() {
-const stats = [
-{ label: "Active Users", value: "50K+", icon: <Users className="h-5 w-5" /> },
+const stats = [;
+{ label: "Active Users", value: "50K+", icon: <Users className="h-5 w-5" /> },;
 { label: "Services Delivered", value: "10K+", icon: <Zap className = "h-5 w-5" /> };
 { label: "Success Rate", value: "99.9%", icon: <Shield className = "h-5 w-5" /> };
 { label: "Global Reach", value: "150+", icon: <TrendingUp className="h-5 w-5" /> };
@@ -228,8 +228,8 @@ const features = [
 "AI-Powered Matching",
 "24/7 Global Support",
 "Enterprise Security",
-"Real-time Analytics",
-"Multi-platform Integration",
+"Real-time Analytics",;
+"Multi-platform Integration",;
 "Custom Solutions";
 ];
 
@@ -246,7 +246,7 @@ return (
 <div className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-full px-4 py-2 backdrop-blur-sm">;
 <Brain className="h-4 w-4 text-zion-cyan" />;
 <span className="text-sm font-medium text-zion-cyan">AI-Powered Technology Solutions</span>;
-</div>
+</div>;
 
 {/* Main Heading */}
 <div className="space-y-4">;
@@ -268,7 +268,7 @@ Marketplace;
 Discover cutting-edge AI services; enterprise IT solutions; and innovative SaaS platforms.;
 Connect with top talent and transform your business with next-generation technology.;
 </p>;
-</div>
+</div>;
 
 {/* Features List */}
 <div className="grid grid-cols-2 gap-3">;
@@ -276,9 +276,9 @@ Connect with top talent and transform your business with next-generation technol
 <div key={index} className="flex items-center gap-2 text-zion-slate-light">;
 <CheckCircle className="h-4 w-4 text-zion-cyan flex-shrink-0" />;
 <span className="text-sm">{feature}</span>;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 
 {/* CTA Buttons */}
 <div className="flex flex-col sm:flex-row gap-4">;
@@ -300,27 +300,27 @@ onClick={() => window.open("https://ziontechgroup.com/demo", "_blank")}
 <Play className="h-5 w-5" />;
 <span>Watch Demo</span>;
 </Button>;
-</div>
+</div>;
 
 {/* Trust Indicators */}
 <div className="flex items-center gap-6 pt-4">;
 <div className="flex items-center gap-2">;
 <div className="flex -space-x-2">;
 {[1; 2; 3; 4].map((i) => (
-<div key={i} className="w-8 h-8 rounded-full bg-gradient-to-r from-zion-purple to-zion-cyan border-2 border-background"></div>
+<div key={i} className="w-8 h-8 rounded-full bg-gradient-to-r from-zion-purple to-zion-cyan border-2 border-background"></div>;
 ))}
-</div>
+</div>;
 <span className="text-sm text-zion-slate-light">Trusted by 50K+ users</span>;
-</div>
+</div>;
 
 <div className="flex items-center gap-1">;
 {[1; 2; 3; 4; 5].map((i) => (
 <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />;
 ))}
 <span className="text-sm text-zion-slate-light ml-2">4.9/5 rating</span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Right Column - Visual Elements */}
 <div className="relative">;
@@ -332,55 +332,55 @@ onClick={() => window.open("https://ziontechgroup.com/demo", "_blank")}
 <div className="flex items-center gap-2 mb-2">;
 <Brain className="h-5 w-5 text-zion-cyan" />;
 <span className="text-sm font-medium text-white">AI Services</span>;
-</div>
+</div>;
 <p className="text-xs text-zion-slate-light">Content Generation; Analytics; Automation</p>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="absolute -top-4 -right-4 w-56 h-32 bg-gradient-to-br from-zion-blue/20 to-zion-purple/20 border border-zion-blue/30 rounded-2xl backdrop-blur-sm animate-float delay-1000">;
 <div className="p-4">;
 <div className="flex items-center gap-2 mb-2">;
 <Cloud className="h-5 w-5 text-zion-blue" />;
 <span className="text-sm font-medium text-white">Cloud Solutions</span>;
-</div>
+</div>;
 <p className="text-xs text-zion-slate-light">Infrastructure; Security; Management</p>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-72 h-44 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl backdrop-blur-sm animate-float delay-500">;
 <div className="p-6 text-center">;
 <div className="flex items-center justify-center gap-2 mb-3">;
 <Code className="h-6 w-6 text-zion-cyan" />;
 <span className="text-lg font-semibold text-white">Development</span>;
-</div>
+</div>;
 <p className="text-sm text-zion-slate-light">Custom Software; APIs; Integration</p>;
 <div className="mt-3 flex justify-center">;
 <Badge className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">;
 Most Popular;
 </Badge>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Central Orb */}
 <div className="relative w-80 h-80 mx-auto">;
-<div className="absolute inset-0 bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue rounded-full animate-pulse-slow"></div>
-<div className="absolute inset-4 bg-gradient-to-r from-zion-purple-dark via-zion-slate to-zion-blue-dark rounded-full"></div>
-<div className="absolute inset-8 bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue rounded-full animate-pulse-slow delay-1000"></div>
-<div className="absolute inset-12 bg-gradient-to-r from-zion-purple-dark via-zion-slate to-zion-blue-dark rounded-full"></div>
-<div className="absolute inset-16 bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue rounded-full animate-pulse-slow delay-500"></div>
+<div className="absolute inset-0 bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue rounded-full animate-pulse-slow"></div>;
+<div className="absolute inset-4 bg-gradient-to-r from-zion-purple-dark via-zion-slate to-zion-blue-dark rounded-full"></div>;
+<div className="absolute inset-8 bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue rounded-full animate-pulse-slow delay-1000"></div>;
+<div className="absolute inset-12 bg-gradient-to-r from-zion-purple-dark via-zion-slate to-zion-blue-dark rounded-full"></div>;
+<div className="absolute inset-16 bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue rounded-full animate-pulse-slow delay-500"></div>;
 
 {/* Center Content */}
 <div className="absolute inset-0 flex items-center justify-center">;
 <div className="text-center">;
-<div className="text-4xl font-bold text-white mb-2">ZION</div>
-<div className="text-sm text-zion-cyan">Tech Group</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<div className="text-4xl font-bold text-white mb-2">ZION</div>;
+<div className="text-sm text-zion-cyan">Tech Group</div>;
+</div>;
+</div>;
+</div>;
+</div>;
+</div>;
+</div>;
 
 {/* Stats Section */}
 <div className="mt-20">;
@@ -390,14 +390,14 @@ Most Popular;
 <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">;
 <div className="text-zion-cyan group-hover:text-white transition-colors">;
 {stat.icon}
-</div>
-</div>
-<div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-<div className="text-sm text-zion-slate-light">{stat.label}</div>
-</div>
+</div>;
+</div>;
+<div className="text-3xl font-bold text-white mb-2">{stat.value}</div>;
+<div className="text-sm text-zion-slate-light">{stat.label}</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Bottom CTA */}
 <div className="text-center mt-16">;
@@ -427,10 +427,10 @@ onClick={() => window.open("https://ziontechgroup.com/services", "_blank')}
 <Zap className="h-4 w-4" />;
 Explore Services;
 </Button>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 </section>;
 </SimpleFuturisticBackground>;
 );

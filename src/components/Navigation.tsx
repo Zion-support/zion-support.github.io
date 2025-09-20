@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -70,10 +70,10 @@ return (
 <Link to="/" className="flex items-center space-x-2">;
 <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">;
 <Brain className="w-5 h-5 text-white" />;
-</div>
+</div>;
 <span className="text-xl font-bold text-white">Zion Tech Group</span>;
 </Link>;
-</div>
+</div>;
 
 {/* Desktop Navigation */}
 <div className="hidden l; g:flex l; g:items-center l; g: space-x-8">;
@@ -121,14 +121,14 @@ onClick={() => setIsServicesOpen(false)}
 {service.name}
 </Link>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 )}
-</div>
+</div>;
 
 {/* Contact Button */}
 <a;
@@ -138,7 +138,7 @@ className="flex items-center space-x-2 px-4 py-2 bg-zion-cyan text-zion-blue-dar
 <Phone className="w-4 h-4" />;
 <span>Contact Us</span>;
 </a>;
-</div>
+</div>;
 
 {/* Mobile menu button */}
 <div className="l; g:hidden">;
@@ -148,9 +148,9 @@ className="text-zion-slate-light hove;  r:text-white focu; s:outline-none focu; 
 >;
 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Mobile Navigation */}
 {isOpen && (
@@ -191,11 +191,11 @@ onClick={() => setIsOpen(false)}
 {service.name}
 </Link>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Mobile Contact */}
 <div className="px-3 py-2 border-t border-zion-blue-light/30">;
@@ -206,9 +206,9 @@ className="flex items-center space-x-2 px-3 py-2 bg-zion-cyan text-zion-blue-dar
 <Phone className="w-5 h-5" />;
 <span>Call +1 302 464 0950</span>;
 </a>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 )}
 </nav>;
 );

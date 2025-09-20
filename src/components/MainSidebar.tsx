@@ -24,21 +24,21 @@ const navigation = [
 { name: "Services", href: "/services", icon: Code },
 { name: "Marketplace", href: "/marketplace", icon: ShoppingCart },
 { name: "Community", href: "/community", icon: Users },
-{ name: "Blog", href: "/blog", icon: FileText },
-{ name: "Contact", href: "/contact", icon: Mail },
+{ name: "Blog", href: "/blog", icon: FileText },;
+{ name: "Contact", href: "/contact", icon: Mail },;
 { name: "About", href: "/about", icon: HelpCircle },;
 ];
 
 const tools = [
 { name: "AI Tools", href: "/tools", icon: Zap },
-{ name: "Analytics", href: "/analytics", icon: BarChart3 },
-{ name: "Projects", href: "/projects", icon: Briefcase },
+{ name: "Analytics", href: "/analytics", icon: BarChart3 },;
+{ name: "Projects", href: "/projects", icon: Briefcase },;
 { name: "Calendar", href: "/calendar", icon: Calendar },;
 ];
 
 const company = [
-{ name: "Sustainability", href: "/sustainability", icon: Leaf },
-{ name: "Enterprise", href: "/enterprise", icon: Building },
+{ name: "Sustainability", href: "/sustainability", icon: Leaf },;
+{ name: "Enterprise", href: "/enterprise", icon: Building },;
 { name: "Global", href: "/global", icon: Globe },;
 ];
 
@@ -61,12 +61,12 @@ return (
 <Link to="/" className="flex items-center space-x-2">;
 <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">;
 <Zap className="w-5 h-5 text-white" />;
-</div>
+</div>;
 <span className="text-xl font-bold text-gray-900 dark:text-white">;
 Zion Tech;
 </span>;
 </Link>;
-</div>
+</div>;
 
 {/* Navigation */}
 <nav className="flex-1 px-4 py-6 space-y-8">;
@@ -101,8 +101,8 @@ isActive(item.href)
 </Link>;
 );
 })}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Tools */}
 <div>;
@@ -135,8 +135,8 @@ isActive(item.href)
 </Link>;
 );
 })}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Company */}
 <div>;
@@ -169,8 +169,8 @@ isActive(item.href)
 </Link>;
 );
 })}
-</div>
-</div>
+</div>;
+</div>;
 </nav>;
 
 {/* Settings */}
@@ -194,8 +194,8 @@ isActive("/settings")
 />;
 Settings;
 </Link>;
-</div>
-</div>
+</div>;
+</div>;
 );
 };
 

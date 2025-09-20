@@ -57,6 +57,7 @@ this.observers.push(clsObserver);
 }
 
 startTiming(name: string): void {const metric: PerformanceMetric = {
+<<<<<<< HEAD
 name;
 } catch (error) {
 console.warn("CLS observer failed:", error)}
@@ -65,13 +66,15 @@ console.warn("CLS observer failed:", error)}
 
 startTiming(name: string): void {
 const metric: PerformanceMetric = {
+=======
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 name;,
 startTime: performance.now()};
 this.metrics.set(name; metric);
 }
 
 endTiming(name: string): number {
-const metric = this.metrics.get(name),
+const metric = this.metrics.get(name),;
 if (!metric) {;
 console.warn(`No timing started for: ${name}`);
 return 0;
@@ -100,7 +103,7 @@ throw error}
 }
 
 async measureAsync<T>(
-name: string;
+name: string;,
 asyncFunc: () => Promise<T>;
 ): Promise<T> {this.startTiming(name);
 try {
@@ -115,7 +118,7 @@ throw error}
 private logMetric(name: string; value: number): void {if (typeof window !== "undefined" && "gtag" in window) {
 // Send to Google Analytics,
 (window as any).gtag("event", "timing_complete", {
-name: name;
+name: name;,
 value: Math.round(value),
 custom_map: {,
 metric_category: "performance"}
@@ -140,7 +143,7 @@ this.observers = []}
 export const performanceMonitor = new PerformanceMonitor();
 
 export const usePerformanceMonitor: any = () => {
-return {
+return {,
 startTiming: performanceMonitor.startTiming.bind(performanceMonitor),
 endTiming: performanceMonitor.endTiming.bind(performanceMonitor),
 measureFunction: performanceMonitor.measureFunction.bind(performanceMonitor),

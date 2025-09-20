@@ -5,8 +5,8 @@ import { Button } from "./button, ";
 
 interface AccessibilitySettings {
 fontSize: "small" | "medium" | "large";
-highContrast: boolean;
-reducedMotion: boolean;
+highContrast: boolean;,
+reducedMotion: boolean;,
 soundEnabled: boolean;
 }
 }
@@ -17,8 +17,8 @@ export function AccessibilityMenu() {;
 const [isOpen, setIsOpen] = useState(false);
 const [settings, setSettings] = useState<AccessibilitySettings>({
 fontSize: "medium";
-highContrast: false;
-reducedMotion: false;
+highContrast: false;,
+reducedMotion: false;,
 soundEnabled: true;
 });
 reducedMotion: false;,
@@ -75,8 +75,8 @@ setSettings(prev => ({ ...prev; fontSize: size }));
 const resetSettings: any = () => {
 const defaultSettings: AccessibilitySettings = {;
 fontSize: "medium";
-highContrast: false;
-reducedMotion: false;
+highContrast: false;,
+reducedMotion: false;,
 soundEnabled: true;
 };
 reducedMotion: false;,
@@ -119,7 +119,7 @@ className="text-zion-cyan hover:text-zion-cyan-light text-sm"
 >;
 Reset;
 </Button>;
-</div>
+</div>;
 
 {/* Font Size */}
 <div className="mb-6">;
@@ -142,8 +142,8 @@ settings.fontSize === size;
 {size}
 </Button>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* High Contrast */}
 <div className="mb-6">;
@@ -162,7 +162,7 @@ settings.highContrast;
 >;
 {settings.highContrast ? "Enabled" : "Disabled"}
 </Button>;
-</div>
+</div>;
 
 {/* Reduced Motion */}
 <div className="mb-6">;
@@ -181,7 +181,7 @@ settings.reducedMotion;
 >;
 {settings.reducedMotion ? "Enabled" : "Disabled"}
 </Button>;
-</div>
+</div>;
 
 {/* Sound Toggle */}
 <div className="mb-6">;
@@ -204,13 +204,13 @@ settings.soundEnabled;
 >;
 {settings.soundEnabled ? "Enabled" : "Disabled"}
 </Button>;
-</div>
+</div>;
 
 {/* Info */}
 <div className="text-xs text-zion-slate-light text-center">;
 Settings are automatically saved and applied across your session;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 )}
 </AnimatePresence>;

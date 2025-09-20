@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -28,9 +28,9 @@ return () => clearTimeout(timer);
 if (loading) {
 return (
 <div className="text-center p-8">;
-<div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
+<div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>;
 <p className="text-zion-slate-light">Computing expensive data...</p>;
-</div>
+</div>;
 );
 }
 
@@ -47,15 +47,15 @@ This component was lazy loaded and contains {data.length.toLocaleString()} compu
 {data.slice(0;  100).map((valu;  e; index) => (
 <div key={index} className="text-zion-cyan">;
 {value.toFixed(3)}
-</div>
+</div>;
 ))}
-</div>
+</div>;
 {data.length > 100 && (
 <p className="text-zion-slate text-xs mt-2 text-center">;
 ... and {data.length - 100} more values;
 </p>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 );
 }<//div><///div>;

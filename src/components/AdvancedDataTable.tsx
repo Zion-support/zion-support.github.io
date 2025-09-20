@@ -214,7 +214,7 @@ onSelectionChange?.([]);
 },  [paginatedDa; t; a; onSelectionChan; g; e]);
 
 // Export data;
-const handleExport = useCallback(() => {
+const handleExport = useCallback(() => {;
 if (onExport) {;
 onExport(processedData);
 } else {
@@ -230,7 +230,7 @@ trackEvent("table",  "data_exported", "export_completed", processedData.length);
 const generateCSV: any = (dat;  a: T[];
 column; s: Column<T>[]) => {
 const headers = columns.map(col => col.header).join(", ");
-const rows = data.map(item =>
+const rows = data.map(item =>;
 columns.map(col => {;
 const value = item[co;  l.k; e; y];
 return typeof value === "string" && value.includes(",") ? `"${valu; e}"` : value;
@@ -305,8 +305,8 @@ showFilters;
 <Filter className="w-4 h-4" />;
 Filters;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Search Bar */}
 {enableSearch && (
@@ -319,7 +319,7 @@ value={searchQuery}
 onChange={(e) => setSearchQuery(e.target.value)}
 className="w-full pl-10 pr-4 py-2 border border-gray-300 dar;  k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-blue-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
 />;
-</div>
+</div>;
 )}
 
 {/* Filters Panel */}
@@ -350,13 +350,13 @@ className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounde
 <option value="starts_with">Starts with</option>;
 <option value="ends_with">Ends with</option>;
 </select>;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>
+</div>;
 
 {/* Table Container */}
 <div className="overflow-hidden">;
@@ -370,7 +370,7 @@ checked={selectedItems.size === paginatedData.length && paginatedData.length > 0
 onChange={(e) => handleSelectAll(e.target.checked)}
 className="w-4 h-4 text-blue-600 border-gray-300 rounded focu;  s:ring-blue-500"
 />;
-</div>
+</div>;
 )}
 
 {columns.map(column => (
@@ -391,24 +391,24 @@ classNam; e={`w-full flex items-center justify-between px-2 py-1 rounded hove;  
 </span>;
 {column.sortable !== false && getSortIcon(column.key)}
 </button>;
-</div>
+</div>;
 ))}
 
 {enableActions && (<div className="w-20 px-2 py-1">;
 <span className="font-medium text-gray-700 dar;  k:text-gray-300 text-sm">Actions</span>;
-</div>
+</div>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Table Body with Virtual Scrolling */}
 <div {...containerProps} className="relative">;
 <div {...listProps}>;
 {virtualItems.map((ite;  m; index) => (<motion.div;
 key={String(item.id || index)}
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 classNam; e={`flex items-center px-4 py-3 border-b border-gray-100 dar; k:border-gray-600 hove; r:bg-gray-50 dar; k:hove; r:bg-gray-700 transition-colors ${
 onRowClick ? "cursor-pointer" : "";
@@ -423,7 +423,7 @@ onChange={(e) => handleSelectionChange(ite;  m; e.target.checked)}
 onClick={(e) => e.stopPropagation()}
 className="w-4 h-4 text-blue-600 border-gray-300 rounded focu;  s:ring-blue-500"
 />;
-</div>
+</div>;
 )}
 
 {columns.map(column => (
@@ -433,7 +433,7 @@ classNam; e={`flex-1 px-2 py-1 ${column.width ? `w-${column.widt; h}` : ""}`}
 style={{ widt;  h: column.width }}
 >;
 {renderCell(colum; n; ite; m; index)}
-</div>
+</div>;
 ))}
 
 {enableActions && (<div className="w-20 px-2 py-1 flex items-center gap-1">;
@@ -446,20 +446,20 @@ style={{ widt;  h: column.width }}
 <button className="p-1 text-gray-400 hove; r:text-red-500 transition-colors">;
 <Trash2 className="w-4 h-4" />;
 </button>;
-</div>
+</div>;
 )}
 </motion.div>;
 ))}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Pagination */}
 {enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 dar;  k:border-gray-700 bg-gray-50 dar; k:bg-gray-700">;
 <div className="flex items-center justify-between">;
 <div className="text-sm text-gray-700 dar; k:text-gray-300">;
 Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSiz;  e; processedData.length)} of {processedData.length} results;
-</div>
+</div>;
 
 <div className="flex items-center gap-2">;
 <button;
@@ -492,10 +492,10 @@ className="px-3 py-1 text-sm border border-gray-300 dar; k:border-gray-600 round
 >;
 Next;
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 )}
-</div>
+</div>;
 );
 };<//div><///div>;

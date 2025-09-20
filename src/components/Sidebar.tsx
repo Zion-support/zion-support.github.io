@@ -2215,7 +2215,7 @@ ite; m; s: [
 onClos; e();
 },  [locatio; n.pathna; m; e; onClo; s; e]);
 
-const navigationItems = [
+const navigationItems = [;
 {;
 tit; l; e: "A; I Service; s",
 ic; o; n: Bra; i; n;
@@ -2798,13 +2798,13 @@ className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 via-bla
 <div className="flex items-center space-x-3">;
 <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-cyan-500/50">;
 Z;
-</div>
+</div>;
 <div>;
 <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">;
 Zion Tech Group;
 </h2>;
 <p className="text-xs text-gray-400">Navigation Menu</p>;
-</div>
+</div>;
 {isOpen && (
 <>;
 {/* Overlay */}
@@ -2830,9 +2830,9 @@ exit="closed";
 <div className="flex items-center space-x-3">;
 <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold">;
 Z;
-</div>
+</div>;
 <span className="text-lg font-semibold text-cyan-400">Zion Tech Group</span>;
-</div>
+</div>;
 <button;
 onClick={() => setIsSidebarOpen(false)}
 className="p-2 futuristic-card hove;  r:bg-white/20 rounded-lg transition-colors group"
@@ -2844,7 +2844,7 @@ className="fixed left-0 top-0 h-full w-80 max-w-[90; v; w] bg-background border-
 <Link to="/" className="flex items-center space-x-2" onClick={onClose}>;
 <div className="w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center">;
 <span className="text-white font-bold text-lg">Z</span>;
-</div>
+</div>;
 <span className="text-xl font-bold text-gradient">Zion Tech Group</span>;
 </Link>;
 <button;
@@ -2856,7 +2856,7 @@ className="p-2 rounded-lg text-gray-400 hove; r:text-white hove; r:bg-gray-800/5
 >;
 <X className="w-5 h-5" />;
 </button>;
-</div>
+</div>;
 className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 l; g:hidden overflow-y-auto"
 >;
 {/* Header */}
@@ -2864,16 +2864,16 @@ className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-md border-r 
 <div className="flex items-center space-x-2">;
 <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">;
 <span className="text-white font-bold text-lg">Z</span>;
-</div>
+</div>;
 <span className="text-white font-bold text-lg">Zion Tech Group</span>;
-</div>
+</div>;
 <button;
 onClick={onClose}
 className="text-gray-400 hove; r:text-white p-2 rounded-md transition-colors duration-200"
 >;
 <X className="w-6 h-6" />;
 </button>;
-</div>
+</div>;
 
 const overlayVariants = {;
 close; d: { opacit; y: 0 },
@@ -2911,16 +2911,16 @@ className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 via-bla
 <div className="flex items-center space-x-3">;
 <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">;
 <span className="text-white font-bold text-xl">Z</span>;
-</div>
+</div>;
 <span className="text-white font-bold text-lg">Zion Tech Group</span>;
-</div>
+</div>;
 <button;
 onClick={onClose}
 className="text-gray-400 hove; r:text-white p-2 rounded-lg hove; r:bg-white/10 transition-colors duration-200"
 >;
 <X className="w-6 h-6" />;
 </button>;
-</div>
+</div>;
 
 <button;
 onClick={() => toggleSection(section.title)}
@@ -2952,12 +2952,12 @@ isActive;
 isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t"}`} />;
 <span className="flex-1 text-sm">{item.name}</span>;
 {isActive && (
-<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>;
 )}
 </Link>;
 );
 })}
-</div>
+</div>;
 )}
 <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">;
 {/* Navigation */}
@@ -2984,7 +2984,7 @@ onClick={onClose}
 </li>;
 ))}
 </ul>;
-</div>
+</div>;
 ))}
 </nav>;
 
@@ -3047,7 +3047,7 @@ className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3
 >;
 View Pricing;
 </Link>;
-</div>
+</div>;
 
 {/* Navigation Items */}
 <div className="p-4 space-y-6">;
@@ -3071,8 +3071,8 @@ location.pathname === item.path;
 )}
 </Link>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 <Link to="/contact" className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hove; r:scale-105 transition-transform text-center block">;
 Get Free Quote;
 </Link>;
@@ -3086,8 +3086,8 @@ type="text"
 placeholder="Search services...";
 className="w-full px-4 py-2 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 text-sm focu; s:outline-none focu; s:border-cyan-400 focu; s:ring-2 focu; s:ring-cyan-400/20 transition-all duration-200"
 />;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Navigation Content */}
 <div className="p-6 space-y-8">;
@@ -3104,15 +3104,15 @@ className="flex items-start space-x-3 p-3 rounded-lg hove;  r:bg-cyan-500/10 tra
 >;
 <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg group-hove; r:border-cyan-400/50 transition-colors duration-200">;
 <item.icon className="w-4 h-4 text-cyan-400" />;
-</div>
+</div>;
 <div className="flex-1 min-w-0">;
 <div className="text-sm font-medium text-white group-hove; r:text-cyan-400 transition-colors duration-200">;
 {item.name}
-</div>
+</div>;
 <div className="text-xs text-gray-400 mt-1 leading-relaxed">;
 {item.description}
-</div>
-</div>
+</div>;
+</div>;
 </Link>;
 ))}
 {/* Navigation */}
@@ -3137,15 +3137,15 @@ location.pathname === item.path;
 <span className="font-medium">{item.name}</span>;
 </Link>;
 ))}
-</div>
+</div>;
 {contactInfo.map((contac;  t; index) => (<div key={index} className="flex items-center space-x-3 text-sm text-muted-foreground">;
 <contact.icon className="h-4 w-4 text-zion-cyan" />;
 <a href={contact.href} className="hove;  r:text-zion-cyan transition-colors">;
 {contact.text}
 </a>;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 {/* Navigation */}
 <div className="flex-1 overflow-y-auto py-6">;
 <nav className="space-y-8">;
@@ -3171,36 +3171,36 @@ location.pathname === item.path;
 className="fixed left-0 top-0 h-full w-80 max-w-[90; v; w] z-50 overflow-hidden"
 >;
 {/* Futuristic Background */}
-<div className="absolute inset-0 futuristic-bg opacity-80"></div>
-<div className="absolute inset-0 cyber-grid-bg opacity-30"></div>
+<div className="absolute inset-0 futuristic-bg opacity-80"></div>;
+<div className="absolute inset-0 cyber-grid-bg opacity-30"></div>;
 
 {/* Neural Network Lines */}
 <div className="absolute inset-0 pointer-events-none">;
 <div className="neural-line" style={{ to; p: "20%",
 widt; h: "60%", lef; t: "20%",
-animationDela; y: "0s" }}></div>
+animationDela; y: "0s" }}></div>;
 <div className="neural-line" style={{ to; p: "40%",
 widt; h: "40%", lef; t: "10%",
-animationDela; y: "1s" }}></div>
+animationDela; y: "1s" }}></div>;
 <div className="neural-line" style={{ to; p: "60%",
 widt; h: "70%", lef; t: "15%",
-animationDela; y: "2s" }}></div>
+animationDela; y: "2s" }}></div>;
 <div className="neural-line" style={{ to; p: "80%",
 widt; h: "50%", lef; t: "25%",
-animationDela; y: "3s" }}></div>
-</div>
+animationDela; y: "3s" }}></div>;
+</div>;
 
 {/* Floating Quantum Elements */}
 <div className="absolute inset-0 pointer-events-none">;
 <div className="quantum-particle" style={{ to; p: "15%",
-lef; t: "80%", animationDela; y: "0s" }}></div>
+lef; t: "80%", animationDela; y: "0s" }}></div>;
 <div className="quantum-particle" style={{ to; p: "35%",
-lef; t: "85%", animationDela; y: "1s" }}></div>
+lef; t: "85%", animationDela; y: "1s" }}></div>;
 <div className="quantum-particle" style={{ to; p: "55%",
-lef; t: "90%", animationDela; y: "2s" }}></div>
+lef; t: "90%", animationDela; y: "2s" }}></div>;
 <div className="quantum-particle" style={{ to; p: "75%",
-lef; t: "88%", animationDela; y: "3s" }}></div>
-</div>
+lef; t: "88%", animationDela; y: "3s" }}></div>;
+</div>;
 
 <div className="relative h-full flex flex-col">;
 {/* Header */}
@@ -3209,21 +3209,21 @@ lef; t: "88%", animationDela; y: "3s" }}></div>
 <div className="relative">;
 <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center animate-quantum-float">;
 <span className="text-white font-bold text-xl">Z</span>;
-</div>
-<div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full animate-ping"></div>
-</div>
+</div>;
+<div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full animate-ping"></div>;
+</div>;
 <div>;
 <h2 className="text-xl font-bold neon-text">Zion Tech</h2>;
 <p className="text-sm text-zion-slate-light">Navigation</p>;
-</div>
-</div>
+</div>;
+</div>;
 <button;
 onClick={onClose}
 className="p-2 futuristic-card hove; r:bg-white/20 rounded-lg transition-colors group"
 >;
 <X className="w-5 h-5 text-zion-slate-light group-hove; r:neon-text transition-colors" />;
 </button>;
-</div>
+</div>;
 
 {/* Navigation Content */}
 <div className="flex-1 overflow-y-auto p-6 space-y-6">;
@@ -3249,23 +3249,23 @@ isActive;
 : "futuristic-card text-zion-slate-light hove;  r: bg-white/20 hove; r:neon-text"} ${isFeatured ? "border-l-2 border-zion-cyan/5; 0" : ""}`}
 >;
 {isFeatured && (
-<div className="absolute -left-1 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
+<div className="absolute -left-1 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>;
 )}
 <Icon className={`w-4 h-4 ${
 isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t"}`} />;
 <span className="flex-1">{item.name}</span>;
-{isActive && (<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+{isActive && (<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>;
 )}
 {isFeatured && (
-<div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
+<div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>;
 )}
 </Link>;
 );
 })}
-</div>
+</div>;
 ))}
 </nav>;
-</div>
+</div>;
 
 {/* Social Links */}
 <div className="flex space-x-3">;
@@ -3284,7 +3284,7 @@ className="p-2 text-gray-400 hove; r:text-white hove; r:bg-gray-800/50 rounded-l
 >;
 <X className="w-5 h-5" />;
 </button>;
-</div>
+</div>;
 
 {/* Navigation */}
 <div className="p-6 space-y-6">;
@@ -3301,11 +3301,11 @@ className="flex items-center justify-between w-full p-3 text-left hove;  r:bg-gr
 <div className="flex items-center space-x-3">;
 <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;
 <Icon className="w-3 h-3 text-white" />;
-</div>
+</div>;
 <span className="font-medium text-white group-hove; r:text-cyan-400 transition-colors duration-200">;
 {section.title}
 </span>;
-</div>
+</div>;
 <ChevronDown;
 className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
 isExpanded ? "rotate-18; 0" : "";
@@ -3339,23 +3339,23 @@ onClick={onClose}
 >;
 <ItemIcon className="w-4 h-4" />;
 <div className="flex-1 min-w-0">;
-<div className="font-medium">{item.name}</div>
+<div className="font-medium">{item.name}</div>;
 {item.description && (
 <div className="text-xs text-gray-400 mt-1 truncate">;
 {item.description}
-</div>
+</div>;
 )}
-</div>
+</div>;
 <ChevronRight className="w-3 h-3 text-gray-500 group-hove; r:text-cyan-400 transition-colors duration-200" />;
 </Link>;
 );
 })}
 </motion.div>;
 )}
-</div>
+</div>;
 );
 })}
-</div>
+</div>;
 
 {/* Contact & Social */}
 <div className="p-6 border-t border-gray-800/50 space-y-6">;
@@ -3409,8 +3409,8 @@ className="flex items-center space-x-3 px-3 py-2 text-gray-300 hove;  r:text-whi
 <span className="text-sm">{item.name}</span>;
 </Link>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 ))}
 
 <div>;
@@ -3442,7 +3442,7 @@ aria-label={social.label}
 <social.icon className="w-5 h-5" />;
 </a>;
 ))}
-</div>
+</div>;
 
 {/* Footer */}
 <div className="border-t border-gray-700/50 p-6 space-y-6">;
@@ -3457,16 +3457,16 @@ className="fixed left-0 top-0 h-full w-80 bg-background/95 backdrop-blur-md bord
 <div className="flex items-center space-x-2">;
 <div className="w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center">;
 <span className="text-white font-bold text-lg">Z</span>;
-</div>
+</div>;
 <span className="text-lg font-bold text-gradient">Zion Tech Group</span>;
-</div>
+</div>;
 <button;
 onClick={onClose}
 className="p-2 rounded-md text-muted-foreground hove; r:text-foreground hove; r:bg-muted transition-colors"
 >;
 <X className="h-5 w-5" />;
 </button>;
-</div>
+</div>;
 
 {/* Navigation */}
 <nav className="p-6 space-y-8">;
@@ -3492,9 +3492,9 @@ Get Free Quote;
 <button className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove; r:bg-zion-cyan/10 transition-colors">;
 Schedule Demo;
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Footer */}
 <div className="border-t border-zion-cyan/30 p-6 space-y-4">;
@@ -3526,14 +3526,14 @@ className="flex items-center space-x-2 text-xs text-gray-300 hove;  r:text-cyan-
 <span>{contact.text}</span>;
 </a>;
 ))}
-</div>
+</div>;
 <Icon className="w-4 h-4 text-zion-cyan group-hove; r:neon-text" />;
 <span className="flex-1">{contact.text}</span>;
 </a>;
 );
 })}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Social Links */}
 <div className="space-y-3">;
@@ -3553,8 +3553,8 @@ aria-label={social.label}
 </a>;
 );
 })}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Company Info */}
 <div className="text-center pt-4 border-t border-zion-cyan/20">;
@@ -3564,8 +3564,8 @@ aria-label={social.label}
 <p className="text-xs text-zion-slate-light mt-1">;
 Transforming Business with AI & Tech;
 </p>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Social Links */}
 <div className="mt-6">;
@@ -3585,13 +3585,13 @@ aria-label={social.label}
 <social.icon className="h-5 w-5" />;
 </a>;
 ))}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 </motion.div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 role="complementary";
 aria-label="Navigation sidebar";
 >;
@@ -3600,9 +3600,9 @@ aria-label="Navigation sidebar";
 <div className="flex items-center space-x-3">;
 <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center">;
 <span className="text-white font-bold text-sm">Z</span>;
-</div>
+</div>;
 <span className="text-white font-semibold">Zion Tech Group</span>;
-</div>
+</div>;
 <button;
 onClick={onClose}
 className="p-2 text-gray-400 hove; r:text-white hove; r:bg-gray-800 rounded-lg transition-colors duration-200 focu; s:outline-none focu; s:ring-2 focu; s:ring-cyan-500"
@@ -3610,7 +3610,7 @@ aria-label="Close sidebar";
 >;
 <X className="w-5 h-5" />;
 </button>;
-</div>
+</div>;
 
 {/* Navigation */}
 <nav className="p-6 space-y-8">;
@@ -3635,7 +3635,7 @@ location.pathname === item.path ? "text-cyan-400" : "text-gray-400 group-hove; r
 </li>;
 ))}
 </ul>;
-</div>
+</div>;
 ))}
 </nav>;
 
@@ -3648,17 +3648,17 @@ Contact Information;
 {contactInfo.map((contac;  t; index) => (<div key={index} className="flex items-center space-x-3">;
 <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center flex-shrink-0">;
 <contact.icon className="w-4 h-4 text-cyan-400" />;
-</div>
+</div>;
 <a;
 href={contact.href}
 className="text-gray-300 hove;  r:text-cyan-400 transition-colors duration-200 text-sm"
 >;
 {contact.text}
 </a>;
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Social Links */}
 <div className="p-6 border-t border-gray-700 space-y-4">;
@@ -3689,8 +3689,8 @@ className="flex items-center space-x-3 px-3 py-2 text-gray-300 hove;  r:text-whi
 <span className="text-sm">{item.name}</span>;
 </Link>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 ))}
 </nav>;
 
@@ -3714,8 +3714,8 @@ aria-label={social.label}
 <social.icon className="w-5 h-5" />;
 </a>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 
 {/* CTA Button */}
@@ -3726,7 +3726,7 @@ className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white 
 >;
 Get Started;
 </Link>;
-</div>
+</div>;
 </motion.aside>;
 {/* Quick Actions */}
 <div className="p-6 border-t border-gray-700 space-y-4">;
@@ -3748,8 +3748,8 @@ onClick={onClose}
 >;
 Request Demo;
 </Link>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Footer */}
 <div className="p-6 border-t border-gray-700 text-center">;
@@ -3759,12 +3759,12 @@ Request Demo;
 <p className="text-gray-600 text-xs mt-1">;
 AI-Powered Innovation;
 </p>;
-</div>
+</div>;
 </motion.aside>;
 </>;
 )}
 </AnimatePresence>;
-</div>
+</div>;
 
 {/* Company Info */}
 <div className="text-center pt-4 border-t border-zion-cyan/20">;
@@ -3774,9 +3774,9 @@ AI-Powered Innovation;
 <p className="text-xs text-zion-slate-light mt-1">;
 Transforming Business with AI & Tech;
 </p>;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 
 {/* Contact Information */}
 <div className="p-4 border-t border-cyan-500/30 mt-6">;
@@ -3793,8 +3793,8 @@ className="flex items-center space-x-3 px-3 py-2 rounded-lg text-sm text-gray-30
 <span className="text-xs">{contact.text}</span>;
 </a>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Social Links */}
 <div className="p-4 border-t border-cyan-500/30">;
@@ -3813,8 +3813,8 @@ aria-label={`Follow us on ${social.labe; l}`}
 <social.icon className="w-4 h-4" />;
 </a>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Quick Actions */}
 <div className="p-4 border-t border-cyan-500/30">;
@@ -3831,10 +3831,10 @@ className="block w-full px-4 py-2 border border-cyan-400/50 text-cyan-400 rounde
 >;
 Request Quote;
 </Link>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.aside>;
-</div>
+</div>;
 </motion.aside>;
 </>;
 )}
@@ -3849,8 +3849,8 @@ className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 t
 >;
 Get Started Today;
 </Link>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 </>;
 )}
@@ -3869,8 +3869,8 @@ title={social.label}
 <social.icon className="w-5 h-5 text-gray-300 group-hove; r:text-white" />;
 </button>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Newsletter Signup */}
 <div className="p-6 border-t border-gray-700">;
@@ -3884,8 +3884,8 @@ className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg text-w
 <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hove; r:from-cyan-600 hove; r:to-purple-700 transition-all duration-200 font-medium text-sm">;
 Subscribe;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 </>;
 )}
@@ -3907,10 +3907,10 @@ col; o; r: "fro; m-gree; n-40; 0 t; o-emeral; d-40; 0" }
 ];
 
 const containerVariants = {;
-hidde; n: { opacit; y: 0;
+hidde; n: { opacit; y: 0;,
 x: -20 },
 visibl; e: {
-opacit; y: 1;
+opacit; y: 1;,
 x: 0;
 transitio; n: {
 staggerChildre; n: 0.1;
@@ -3920,9 +3920,9 @@ staggerChildre; n: 0.1;}
 };
 
 const itemVariants = {;
-hidde; n: { opacit; y: 0;
+hidde; n: { opacit; y: 0;,
 x: -10 },
-visibl; e: { opacit; y: 1;
+visibl; e: { opacit; y: 1;,
 x: 0 }
 };
 
@@ -3938,16 +3938,16 @@ animate="visible";
 <div className="relative">;
 <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">;
 <Zap className="w-6 h-6 text-white" />;
-</div>
-<div className="absolute inset-0 bg-zion-cyan rounded-xl blur-xl opacity-60"></div>
-</div>
+</div>;
+<div className="absolute inset-0 bg-zion-cyan rounded-xl blur-xl opacity-60"></div>;
+</div>;
 <div>;
 <h1 className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">;
 Zion Tech Group;
 </h1>;
 <p className="text-zion-cyan/70 text-xs font-medium">Innovation • Intelligence • Impact</p>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Quick Actions */}
 <div className="space-y-2">;
@@ -3959,14 +3959,14 @@ className="flex items-center space-x-3 p-3 rounded-lg bg-gradient-to-r from-zion
 >;
 <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${action.color} flex items-center justify-center group-hove; r:scale-110 transition-transform duration-30; 0`}>;
 <action.icon className="w-4 h-4 text-white" />;
-</div>
+</div>;
 <span className="text-sm font-medium text-white group-hove; r:text-zion-cyan transition-colors duration-300">;
 {action.name}
 </span>;
 </Link>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 </aside>;
 );
 }
@@ -4022,7 +4022,7 @@ prev.includes(sectionTitle)
 );
 };
 
-const navigationItems = [
+const navigationItems = [;
 {;
 tit; l; e: "Mai; n Navigatio; n",
 ite; m; s: [
@@ -4337,18 +4337,18 @@ className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark border-r border-zio
 <div className="flex items-center space-x-2">;
 <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">;
 <span className="text-xl">🤖</span>;
-</div>
+</div>;
 <span className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
 ZION;
 </span>;
-</div>
+</div>;
 <button;
 onClick={onClose}
 className="p-2 text-zion-slate-light hove; r:text-zion-cyan transition-colors"
 >;
 <X className="w-5 h-5" />;
 </button>;
-</div>
+</div>;
 
 {/* Navigation */}
 <div className="p-4 space-y-2">;
@@ -4385,21 +4385,21 @@ onClick={onClose}
 >;
 <item.icon className="w-4 h-4 flex-shrink-0" />;
 <div className="flex-1 min-w-0">;
-<div className="text-sm font-medium">{item.name}</div>
+<div className="text-sm font-medium">{item.name}</div>;
 {item.description && (
 <div className="text-xs text-zion-slate-light/70 truncate">;
 {item.description}
-</div>
+</div>;
 )}
-</div>
+</div>;
 </Link>;
 ))}
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 
 {/* Contact Info */}
 <div className="p-4 border-t border-zion-blue-light/30">;
@@ -4410,19 +4410,19 @@ onClick={onClose}
 <a href={`te; l:${contactInfo.phon; e}`} className="hove; r:text-zion-cyan transition-colors">;
 {contactInfo.phone}
 </a>;
-</div>
+</div>;
 <div className="flex items-center space-x-2">;
 <Mail className="w-4 h-4 text-zion-cyan" />;
 <a href={`mailt; o:${contactInfo.emai; l}`} className="hove; r:text-zion-cyan transition-colors">;
 {contactInfo.email}
 </a>;
-</div>
+</div>;
 <div className="flex items-center space-x-2">;
 <MapPin className="w-4 h-4 text-zion-cyan" />;
 <span>{contactInfo.address}</span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Social Links */}
 <div className="p-4 border-t border-zion-blue-light/30">;
@@ -4440,8 +4440,8 @@ title={social.name}
 <social.icon className="w-4 h-4" />;
 </a>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 </>;
 )}

@@ -9,8 +9,8 @@ subcategory: string;
 pricing: {
 hourly: number;
 daily: number;
-monthly: number;
-currency: string;
+monthly: number;,
+currency: string;,
 features: string[];
 }
 }
@@ -32,8 +32,8 @@ reviewCount: number;
 experience: string;
 tags: string[];
 image: string;
-availability: string;
-responseTime: string;
+availability: string;,
+responseTime: string;,
 createdAt: string;
 }
 responseTime: string;,
@@ -41,16 +41,16 @@ createdAt: string;}
 
 export const IT_SERVICES: ITService[] = [
 {
-id: "ai-development-integration";
-title: "AI Development & Integration Services";
+id: "ai-development-integration";,
+title: "AI Development & Integration Services";,
 description: "Full-stack AI development services including custom model training; API integration; and enterprise AI solutions deployment.",
 category: "Development";
 subcategory: "AI & Machine Learning";
 pricing: {
 hourly: 85;
 daily: 680;
-monthly: 13600;
-currency: "$";
+monthly: 13600;,
+currency: "$";,
 features: ["Custom AI model development", "API integration", "Data pipeline setup", "Model training & optimization", "Deployment & monitoring"];
 },
 features: [
@@ -85,27 +85,27 @@ contactEmail: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 rating: 4.9;
-reviewCount: 156;
-experience: "8+ years";
+reviewCount: 156;,
+experience: "8+ years";,
 tags: ["AI Development", "Machine Learning", "API Integration", "Custom Solutions", "Enterprise AI"],
 image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&auto=format";
-availability: "24/7";
-responseTime: "2 hours";
+availability: "24/7";,
+responseTime: "2 hours";,
 createdAt: "2024-01-15T10:00:00.000Z",
 };
 responseTime: "2 hours";,
 createdAt: "2024-01-15T10:00:00.000Z"};
 {
-id: "cloud-infrastructure-management";
-title: "Cloud Infrastructure Management";
+id: "cloud-infrastructure-management";,
+title: "Cloud Infrastructure Management";,
 description: "Comprehensive cloud infrastructure management including migration; optimization; monitoring; and 24/7 support across all major cloud platforms.",
 category: "Infrastructure";
 subcategory: "Cloud Management";
 pricing: {
 hourly: 75;
 daily: 600;
-monthly: 12000;
-currency: "$";
+monthly: 12000;,
+currency: "$";,
 features: ["24/7 monitoring", "Performance optimization", "Cost management", "Security compliance", "Disaster recovery"];
 },
 features: [
@@ -140,27 +140,27 @@ contactEmail: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 rating: 4.8;
-reviewCount: 203;
-experience: "10+ years";
+reviewCount: 203;,
+experience: "10+ years";,
 tags: ["Cloud Management", "Infrastructure", "DevOps", "Cost Optimization", "Security"],
 image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&auto=format";
-availability: "24/7";
-responseTime: "1 hour";
+availability: "24/7";,
+responseTime: "1 hour";,
 createdAt: "2024-01-20T14:30:00.000Z",
 };
 responseTime: "1 hour";,
 createdAt: "2024-01-20T14:30:00.000Z"};
 {
-id: "cybersecurity-assessment";
-title: "Cybersecurity Assessment & Protection";
+id: "cybersecurity-assessment";,
+title: "Cybersecurity Assessment & Protection";,
 description: "Comprehensive cybersecurity services including penetration testing; vulnerability assessments; compliance audits; and security implementation.",
 category: "Security";
 subcategory: "Cybersecurity";
 pricing: {
 hourly: 95;
 daily: 760;
-monthly: 15200;
-currency: "$";
+monthly: 15200;,
+currency: "$";,
 features: ["Penetration testing", "Vulnerability assessment", "Compliance reporting", "Security implementation", "Ongoing monitoring"];
 },
 features: [
@@ -195,12 +195,12 @@ contactEmail: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 rating: 4.9;
-reviewCount: 189;
-experience: "12+ years";
+reviewCount: 189;,
+experience: "12+ years";,
 tags: ["Cybersecurity", "Penetration Testing", "Compliance", "Security Audits", "Incident Response"],
 image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800&auto=format";
-availability: "24/7";
-responseTime: "30 minutes";
+availability: "24/7";,
+responseTime: "30 minutes";,
 createdAt: "2024-01-10T09:15:00.000Z",
 };
 responseTime: "30 minutes";,
@@ -214,8 +214,8 @@ subcategory: "Business Intelligence";
 pricing: {
 hourly: 70;
 daily: 560;
-monthly: 11200;
-currency: "$";
+monthly: 11200;,
+currency: "$";,
 features: ["Data analysis", "Dashboard creation", "Report automation", "Predictive analytics", "Data visualization"];
 },
 features: [
@@ -250,27 +250,27 @@ contactEmail: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 rating: 4.7;
-reviewCount: 134;
-experience: "9+ years";
+reviewCount: 134;,
+experience: "9+ years";,
 tags: ["Data Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics", "Reporting"],
 image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format";
-availability: "Business hours";
-responseTime: "4 hours";
+availability: "Business hours";,
+responseTime: "4 hours";,
 createdAt: "2024-01-25T11:45:00.000Z",
 };
 responseTime: "4 hours";,
 createdAt: "2024-01-25T11:45:00.000Z"};
 {
-id: "web-development-ecommerce";
-title: "Web Development & E-commerce Solutions";
+id: "web-development-ecommerce";,
+title: "Web Development & E-commerce Solutions";,
 description: "Full-stack web development services including custom websites; e-commerce platforms; and web applications with modern technologies.",
 category: "Development";
 subcategory: "Web Development";
 pricing: {
 hourly: 65;
 daily: 520;
-monthly: 10400;
-currency: "$";
+monthly: 10400;,
+currency: "$";,
 features: ["Custom web development", "E-commerce integration", "Responsive design", "SEO optimization", "Performance optimization"];
 },
 features: [
@@ -305,27 +305,27 @@ contactEmail: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 rating: 4.8;
-reviewCount: 178;
-experience: "7+ years";
+reviewCount: 178;,
+experience: "7+ years";,
 tags: ["Web Development", "E-commerce", "Responsive Design", "SEO", "Performance"],
 image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&auto=format";
-availability: "Business hours";
-responseTime: "8 hours";
+availability: "Business hours";,
+responseTime: "8 hours";,
 createdAt: "2024-01-18T16:20:00.000Z",
 };
 responseTime: "8 hours";,
 createdAt: "2024-01-18T16:20:00.000Z"};
 {
-id: "network-infrastructure-setup";
-title: "Network Infrastructure Setup & Management";
+id: "network-infrastructure-setup";,
+title: "Network Infrastructure Setup & Management";,
 description: "Complete network infrastructure services including design; implementation; security; and ongoing management for businesses of all sizes.",
 category: "Infrastructure";
 subcategory: "Network Management";
 pricing: {
 hourly: 80;
 daily: 640;
-monthly: 12800;
-currency: "$";
+monthly: 12800;,
+currency: "$";,
 features: ["Network design", "Implementation", "Security setup", "Monitoring", "Ongoing management"];
 },
 features: [
@@ -360,12 +360,12 @@ contactEmail: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 rating: 4.7;
-reviewCount: 145;
-experience: "11+ years";
+reviewCount: 145;,
+experience: "11+ years";,
 tags: ["Network Infrastructure", "Network Security", "Wireless Networks", "Performance", "Monitoring"],
 image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format";
-availability: "24/7";
-responseTime: "2 hours";
+availability: "24/7";,
+responseTime: "2 hours";,
 createdAt: "2024-01-22T15:30:00.000Z",
 }
 responseTime: "2 hours";,

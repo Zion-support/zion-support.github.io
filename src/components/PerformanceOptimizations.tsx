@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -14,11 +14,15 @@ const LazyExpensiveComponent = lazy(() => import("./ExpensiveComponent"));
 
 // Memoized component for expensive calculations;
 const MemoizedDataGrid = memo(({ dat;  a; onItemClick }: {dat; a: any[];
+<<<<<<< HEAD
 onItemClic; k: (ite; m: any) => void; }) => {const processedData = useMemo(() => {
 const MemoizedDataGrid = memo(({ dat;  a; onItemClick }: {
 dat; a: any[];
 onItemClic; k: (ite; m: any) => void; }) => {
 const processedData = useMemo(() => {
+=======
+onItemClic; k: (ite; m: any) => void; }) => {const processedData = useMemo(() => {;
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 return data.map(item => ({;
 ...ite;  m;
 processe; d: item.value * 2;
@@ -43,10 +47,10 @@ className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-x
 </p>;
 <div className="text-zion-cyan text-sm">;
 Processe; d: {item.processed}
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 );
 });
 
@@ -97,11 +101,11 @@ className="p-3 border-b border-zion-slate/10 hove;  r: bg-zion-slate/5 transitio
 <div className="flex items-center justify-between">;
 <span className="text-zion-slate-light">{item.title}</span>;
 <span className="text-zion-cyan text-sm">{item.value}</span>;
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 );
 };
 
@@ -142,7 +146,7 @@ Performance Optimizations;
 <p className="text-zion-slate-light text-lg">;
 Advanced performance features for better user experience;
 </p>;
-</div>
+</div>;
 
 {/* Memoized Data Grid */}
 <div>;
@@ -156,9 +160,9 @@ className="bg-zion-cyan hove;  r:bg-zion-cyan-dark text-white px-4 py-2 rounded-
 >;
 Add Item;
 </button>;
-</div>
+</div>;
 <MemoizedDataGrid data={data} onItemClick={handleItemClick} />;
-</div>
+</div>;
 
 {/* Virtual Scrolling */}
 <div>;
@@ -173,7 +177,7 @@ valu; e: Math.floor(Math.random() * 1000)}))}
 itemHeight={60}
 containerHeight={400}
 />;
-</div>
+</div>;
 
 {/* Lazy Loading */}
 <div>;
@@ -191,10 +195,10 @@ className="bg-zion-purple hove;  r:bg-zion-purple-dark text-white px-4 py-2 roun
 <Suspense fallback={<LoadingSpinner />}>;
 <div className="mt-4 p-4 bg-zion-slate/10 rounded-lg">;
 <LazyExpensiveComponent />;
-</div>
+</div>;
 </Suspense>;
 )}
-</div>
+</div>;
 
 {/* Performance Metrics */}
 <div>;
@@ -203,19 +207,19 @@ Performance Metrics;
 </h3>;
 <div className="grid grid-cols-1 m; d: grid-cols-3 gap-4">;
 <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">;
-<div className="text-2xl font-bold text-zion-cyan">{data.length}</div>
-<div className="text-zion-slate text-sm">Total Items</div>
-</div>
+<div className="text-2xl font-bold text-zion-cyan">{data.length}</div>;
+<div className="text-zion-slate text-sm">Total Items</div>;
+</div>;
 <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">;
-<div className="text-2xl font-bold text-zion-purple">1000</div>
-<div className="text-zion-slate text-sm">Virtual Items</div>
-</div>
+<div className="text-2xl font-bold text-zion-purple">1000</div>;
+<div className="text-zion-slate text-sm">Virtual Items</div>;
+</div>;
 <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">;
-<div className="text-2xl font-bold text-zion-blue">3.27s</div>
-<div className="text-zion-slate text-sm">Build Time</div>
-</div>
-</div>
-</div>
-</div>
+<div className="text-2xl font-bold text-zion-blue">3.27s</div>;
+<div className="text-zion-slate text-sm">Build Time</div>;
+</div>;
+</div>;
+</div>;
+</div>;
 );
 }<//div><///div>;

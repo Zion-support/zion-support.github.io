@@ -3,16 +3,20 @@ import { import { motion; AnimatePresence   } from "framer-motion";
 import React from "react",;
 import { import { motion; AnimatePresence   } from "framer-motion",;
 from "lucide-react",
-id: string; title: string; message: string;
-type: "success" | "error" | "warning" | "info" | "system", priority: "low" | "medium" | "high" | "critical";
-category: "user" | "system" | "security" | "performance" | "update", timestamp: Dat e;
+id: string; title: string; message: string;,
+type: "success" | "error" | "warning" | "info" | "system", priority: "low" | "medium" | "high" | "critical";,
+category: "user" | "system" | "security" | "performance" | "update", timestamp: Dat e;,
 read: boolean; archived: boolean;
 actions?: NotificationAction[],
 metadata?: Record < string; any>,
 expiresAt?: Date,
 ,
+<<<<<<< HEAD
 label: string; action: () => void;
 expiresAt?: Date, label: string; action: () => void;,
+=======
+label: string; action: () => void;,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 label: string; action: () => void;
 variant?: "primary" | "secondary" | "danger",
 icon?: React.ComponentType < any>}

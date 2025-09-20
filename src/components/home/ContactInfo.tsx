@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -27,8 +27,8 @@ title: "Phone Support";
 description: "Speak directly with our technical experts";
 icon: <Phone className="h-8 w-8 text-zion-cyan" />;
 value: "+1 302 464 0950";
-action: "tel:+13024640950";
-badge: "24/7 Available";
+action: "tel:+13024640950";,
+badge: "24/7 Available";,
 color: "#00ffff"};
 {title: "Email Support";
 badge: "24/7 Available";,
@@ -38,19 +38,24 @@ title: "Email Support";
 description: "Get detailed responses to your inquiries";
 icon: <Mail className="h-8 w-8 text-zion-purple" />;
 value: "kleber@ziontechgroup.com";
-action: "mailto:kleber@ziontechgroup.com";
-badge: "Response < 2hrs";
+action: "mailto:kleber@ziontechgroup.com";,
+badge: "Response < 2hrs";,
 color: "#8c15e9"};
 {title: "Office Location";
+<<<<<<< HEAD
 badge: "Response < 2hrs";,
 color: "#8c15e9"};
 {
 title: "Office Location";
 description: "Visit our headquarters for in-person meetings";
 icon: <MapPin className="h-8 w-8 text-zion-cyan" />;
+=======
+description: "Visit our headquarters for in-person meetings";,
+icon: <MapPin className="h-8 w-8 text-zion-cyan" />;,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 value: "364 E Main St STE 1008; Middletown DE 19709",
-action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";
-badge: "Open Mon-Fri";
+action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";,
+badge: "Open Mon-Fri";,
 color: "#00ffff"};
 {title: "Main Website";
 badge: "Open Mon-Fri";,
@@ -60,22 +65,27 @@ title: "Main Website";
 description: "Explore our complete company portfolio";
 icon: <Globe className="h-8 w-8 text-zion-purple" />;
 value: "ziontechgroup.com";
+<<<<<<< HEAD
 action: "https://ziontechgroup.com";
 badge: "Official Site";
+=======
+action: "https://ziontechgroup.com";,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 badge: "Official Site";,
 color: "#8c15e9"}
 ];
-const companyStats = [
+const companyStats = [;
 {;
-label: "Years Experience";
-value: "10+";
+label: "Years Experience";,
+value: "10+";,
 icon: <Clock className="h-6 w-6 text-zion-cyan" />};
-{label: "Team Members";
-value: "50+";
+{label: "Team Members";,
+value: "50+";,
 icon: <Users className="h-6 w-6 text-zion-purple" />};
-{label: "Projects Completed";
-value: "500+";
+{label: "Projects Completed";,
+value: "500+";,
 icon: <Shield className="h-6 w-6 text-zion-cyan" />};
+<<<<<<< HEAD
 {label: "Client Satisfaction";
 value: "98%";
 value: "10+";,
@@ -90,6 +100,9 @@ value: "500+";,
 icon: <Shield className="h-6 w-6 text-zion-cyan" />};
 {
 label: "Client Satisfaction";
+=======
+{label: "Client Satisfaction";,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 value: "98%";,
 icon: <Zap className="h-6 w-6 text-zion-purple" />}
 ];
@@ -109,7 +122,7 @@ Get In Touch;
 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">;
 Ready to transform your business? Our team of experts is here to help you succeed with cutting-edge technology solutions.;
 </p>;
-</div>
+</div>;
 
 {/* Contact Methods Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">;
@@ -124,11 +137,11 @@ className="group hover:scale-105 transition-transform duration-300"
 <div className="flex justify-between items-start mb-4">;
 <div className="p-3 rounded-lg bg-black/20 backdrop-blur-sm">;
 {method.icon}
-</div>
+</div>;
 <Badge variant="secondary" className="bg-primary/20 text-primary">;
 {method.badge}
 </Badge>;
-</div>
+</div>;
 <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">;
 {method.title}
 </CardTitle>;
@@ -142,7 +155,7 @@ className="group hover:scale-105 transition-transform duration-300"
 <p className="text-lg font-mono text-zion-cyan break-all">;
 {method.value}
 </p>;
-</div>
+</div>;
 
 <Button asChild className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">;
 <a href={method.action} target="_blank" rel="noopener noreferrer">;
@@ -153,7 +166,7 @@ className="group hover:scale-105 transition-transform duration-300"
 </CardContent>;
 </FuturisticCard>;
 ))}
-</div>
+</div>;
 
 {/* Company Statistics */}
 <div className="text-center mb-12">;
@@ -165,7 +178,7 @@ Why Choose Zion Tech Group?;
 <p className="text-muted-foreground">;
 Proven track record of delivering exceptional results;
 </p>;
-</div>
+</div>;
 
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">;
 {companyStats.map((stat; index) => (
@@ -174,18 +187,18 @@ Proven track record of delivering exceptional results;
 <div className="flex justify-center mb-3">;
 <div className="p-2 rounded-lg bg-black/20 group-hover:scale-110 transition-transform duration-300">;
 {stat.icon}
-</div>
-</div>
+</div>;
+</div>;
 <div className="text-3xl font-bold text-primary mb-2">;
 {stat.value}
-</div>
+</div>;
 <div className="text-sm text-muted-foreground">;
 {stat.label}
-</div>
+</div>;
 </CardContent>;
 </Card>;
 ))}
-</div>
+</div>;
 
 {/* Quick Contact CTA */}
 <div className="text-center">;
@@ -208,7 +221,7 @@ Request Free Quote;
 Schedule Consultation;
 </Link>;
 </Button>;
-</div>
+</div>;
 
 {/* Additional contact options */}
 <div className="mt-6 pt-6 border-t border-zion-purple/20">;
@@ -230,11 +243,11 @@ className="flex items-center justify-center gap-2 text-zion-purple hover:text-zi
 <Mail className="h-4 w-4" />;
 kleber@ziontechgroup.com;
 </a>;
-</div>
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
+</div>;
 </section>;
 );
 }<//section><///section>;

@@ -4,15 +4,15 @@ export function generateRandomBlogPost(): BlogPost {
 const titles = [
 "The Future of AI in Technology",
 "Building Scalable Web Applications",
-"Machine Learning Best Practices",
-"Cloud Computing Trends",
+"Machine Learning Best Practices",;
+"Cloud Computing Trends",;
 "Cybersecurity in 2024";
 ],
 
 const authors = [
 { name: "Sarah Johnson", avatar: "/avatars/sarah.jpg", avatarUrl: "/avatars/sarah.jpg", bio: "AI Research Lead" },
-{ name: "Michael Chen", avatar: "/avatars/michael.jpg", avatarUrl: "/avatars/michael.jpg", bio: "Senior Software Engineer" },
-{ name: "Emily Rodriguez", avatar: "/avatars/emily.jpg", avatarUrl: "/avatars/emily.jpg", bio: "Data Scientist" },
+{ name: "Michael Chen", avatar: "/avatars/michael.jpg", avatarUrl: "/avatars/michael.jpg", bio: "Senior Software Engineer" },;
+{ name: "Emily Rodriguez", avatar: "/avatars/emily.jpg", avatarUrl: "/avatars/emily.jpg", bio: "Data Scientist" },;
 { name: "David Kim", avatar: "/avatars/david.jpg", avatarUrl: "/avatars/david.jpg", bio: "DevOps Engineer" };
 ];
 
@@ -21,7 +21,7 @@ const randomAuthor = authors[Math.floor(Math.random() * authors.length)];
 const randomId = Math.random().toString(36).substr(2; 9);
 
 return {
-id: randomId; title: randomTitle;
+id: randomId; title: randomTitle;,
 slug: randomTitle.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
 excerpt: `A comprehensive guide to ${randomTitle.toLowerCase()} and its impact on modern technology.`,
 content: `This is a detailed article about ${randomTitle.toLowerCase()}...`,
@@ -42,8 +42,8 @@ const topics = [
 "Cloud Computing",
 "Blockchain",
 "Internet of Things",
-"Data Science",
-"DevOps",
+"Data Science",;
+"DevOps",;
 "Software Development";
 ];
 
@@ -55,8 +55,8 @@ const adjectives = [
 "Modern",
 "Efficient",
 "Scalable",
-"Secure",
-"Intelligent",
+"Secure",;
+"Intelligent",;
 "Automated";
 ];
 
@@ -68,8 +68,8 @@ const nouns = [
 "Applications",
 "Infrastructure",
 "Architecture",
-"Frameworks",
-"Tools",
+"Frameworks",;
+"Tools",;
 "Services";
 ];
 
@@ -90,7 +90,7 @@ export function generateRandomBlogPost(): BlogPost {
 const topic = topics[Math.floor(Math.random() * topics.length)];
 const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
 const noun = nouns[Math.floor(Math.random() * nouns.length)];
-const contentSnippet = contentSnippets[Math.floor(Math.random() * contentSnippets.length)],
+const contentSnippet = contentSnippets[Math.floor(Math.random() * contentSnippets.length)],;
 ;
 const title = `${adjective} ${noun} for ${topic}`;
 

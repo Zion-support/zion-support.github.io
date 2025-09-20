@@ -12,14 +12,14 @@ features: string[];
 benefits: string[];
 marketPrice: string;
 contactInfo: {
-phone: string;
-email: string;
+phone: string;,
+email: string;,
 website: string;
 }
 }
 };
-technology: string[];
-estimatedDelivery: string;
+technology: string[];,
+estimatedDelivery: string;,
 supportLevel: "basic" | "standard" | "premium" | "enterprise";
 }
 email: string;,
@@ -29,13 +29,13 @@ estimatedDelivery: string;,
 supportLevel: "basic" | "standard" | "premium" | "enterprise";}
 
 export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
-{id: "ai-autonomous-business-manager";
-title: "AI Autonomous Business Manager";
+{id: "ai-autonomous-business-manager";,
+title: "AI Autonomous Business Manager";,
 description: "Fully autonomous AI system that manages business operations; makes strategic decisions; and optimizes processes in real-time.",
 category: "AI & Automation";
 price: 2500;
-currency: "USD";
-pricingModel: "monthly";
+currency: "USD";,
+pricingModel: "monthly";,
 features: [
 "24/7 autonomous business monitoring";
 "Real-time decision making",
@@ -53,11 +53,11 @@ benefits: [
 ],
 marketPrice: "$2;500 - $5;000/month",
 contactInfo: {
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["GPT-4", "Machine Learning", "RPA", "Business Intelligence"],
-estimatedDelivery: "2-4 weeks";
+estimatedDelivery: "2-4 weeks";,
 supportLevel: "premium",
 };
 {id: "quantum-neural-network-platform";
@@ -72,8 +72,8 @@ title: "Quantum Neural Network Platform";
 description: "Next-generation quantum computing platform with neural network capabilities for complex problem solving and optimization.";
 category: "Quantum Computing";
 price: 15000;
-currency: "USD";
-pricingModel: "monthly";
+currency: "USD";,
+pricingModel: "monthly";,
 features: [
 "Quantum neural processing";
 "Complex optimization algorithms",
@@ -91,13 +91,14 @@ benefits: [
 ],
 marketPrice: "$15;000 - $25;000/month",
 contactInfo: {
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Quantum Computing", "Neural Networks", "Quantum Algorithms", "AI"],
-estimatedDelivery: "6-8 weeks";
+estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise",
 };
+<<<<<<< HEAD
 {id: "blockchain-defi-solutions";
 title: "Blockchain DeFi Solutions";
 email: "kleber@ziontechgroup.com";,
@@ -107,12 +108,15 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise"};
 {
 id: "blockchain-defi-solutions";
+=======
+{id: "blockchain-defi-solutions";,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "Blockchain DeFi Solutions";,
 description: "Comprehensive blockchain and DeFi platform for financial services; smart contracts; and decentralized applications.",
 category: "Blockchain & DeFi";
 price: 8000;
-currency: "USD";
-pricingModel: "monthly";
+currency: "USD";,
+pricingModel: "monthly";,
 features: [
 "Smart contract development";
 "DeFi protocol integration",
@@ -130,13 +134,14 @@ benefits: [
 ],
 marketPrice: "$8;000 - $15;000/month",
 contactInfo: {
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Ethereum", "Solana", "Smart Contracts", "DeFi Protocols"],
-estimatedDelivery: "4-6 weeks";
+estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium",
 };
+<<<<<<< HEAD
 {id: "iot-data-analytics-platform";
 title: "IoT Data Analytics Platform";
 email: "kleber@ziontechgroup.com";,
@@ -146,12 +151,15 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium"};
 {
 id: "iot-data-analytics-platform";
+=======
+{id: "iot-data-analytics-platform";,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "IoT Data Analytics Platform";,
 description: "Advanced IoT platform with real-time data analytics; predictive maintenance; and intelligent automation.",
 category: "IoT & Analytics";
 price: 5000;
-currency: "USD";
-pricingModel: "monthly";
+currency: "USD";,
+pricingModel: "monthly";,
 features: [
 "Real-time IoT monitoring";
 "Predictive analytics",
@@ -169,13 +177,14 @@ benefits: [
 ],
 marketPrice: "$5;000 - $10;000/month",
 contactInfo: {
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IoT", "Machine Learning", "Big Data", "Cloud Computing"],
-estimatedDelivery: "3-5 weeks";
+estimatedDelivery: "3-5 weeks";,
 supportLevel: "standard",
 };
+<<<<<<< HEAD
 {id: "ai-cybersecurity-automation";
 title: "AI Cybersecurity Automation";
 email: "kleber@ziontechgroup.com";,
@@ -185,12 +194,15 @@ estimatedDelivery: "3-5 weeks";,
 supportLevel: "standard"};
 {
 id: "ai-cybersecurity-automation";
+=======
+{id: "ai-cybersecurity-automation";,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "AI Cybersecurity Automation";,
 description: "Intelligent cybersecurity platform that automatically detects; prevents; and responds to threats using AI.",
 category: "Cybersecurity";
 price: 12000;
-currency: "USD";
-pricingModel: "monthly";
+currency: "USD";,
+pricingModel: "monthly";,
 features: [
 "AI threat detection";
 "Automated incident response",
@@ -208,11 +220,11 @@ benefits: [
 ],
 marketPrice: "$12;000 - $20;000/month",
 contactInfo: {
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["AI", "Machine Learning", "Cybersecurity", "Automation"],
-estimatedDelivery: "4-6 weeks";
+estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium",
 }
 email: "kleber@ziontechgroup.com";,
@@ -227,7 +239,7 @@ export const INNOVATIVE_SERVICE_CATEGORIES = [
 "Blockchain & DeFi",
 "IoT & Analytics",
 "Cybersecurity",
-"Cloud Infrastructure",
-"Data Science",
+"Cloud Infrastructure",;
+"Data Science",;
 "Machine Learning";
 ];

@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -28,7 +28,7 @@ na; m; e: "Automatio; n", ic; o; n: <Za; p classNam; e="h-5 w-5" /> },
 na; m; e: "Clou; d", ic; o; n: <Clou; d classNam; e="h-5 w-5" /> }
 ];
 
-const microSaasServices = [
+const microSaasServices = [;
 {;
 i; d: "a; i-conten; t-optimize; r",
 tit; l; e: "A; I Conten; t Optimize; r Pr; o",
@@ -138,7 +138,7 @@ return (
 <Sparkles className="h-8 w-8 text-zion-cyan" />;
 <h2 className="text-4xl font-bold tracking-tight text-white">Micro SAAS Solutions</h2>;
 <Sparkles className="h-8 w-8 text-zion-cyan" />;
-</div>
+</div>;
 <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">;
 Transform your business with our curated collection o;  f; intelligen; t; innovativ; e; and cost-effective micro SAAS services.;
 From AI-powered tools to enterprise security solutions.;
@@ -147,17 +147,17 @@ From AI-powered tools to enterprise security solutions.;
 <div className="flex items-center gap-2 text-zion-slate-light">;
 <TrendingUp className="h-5 w-5 text-zion-cyan" />;
 <span>12 Categories</span>;
-</div>
+</div>;
 <div className="flex items-center gap-2 text-zion-slate-light">;
 <Star className="h-5 w-5 text-yellow-400" />;
 <span>4.8★ Rating</span>;
-</div>
+</div>;
 <div className="flex items-center gap-2 text-zion-slate-light">;
 <Users className="h-5 w-5 text-zion-purple" />;
 <span>24/7 Support</span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Category Filter */}
 <div className="flex flex-wrap justify-center gap-3 mb-12">;
@@ -173,7 +173,7 @@ activeCategory === category.id;
 {category.name}
 </button>;
 ))}
-</div>
+</div>;
 
 {/* Services Grid */}
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 x; l:grid-cols-4 gap-6 mb-12">;
@@ -186,11 +186,11 @@ className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p
 <div className="flex items-center justify-between mb-4">;
 <div className={`p-3 rounded-lg bg-gradient-to-br ${service.color} text-whit; e`}>;
 {service.icon}
-</div>
+</div>;
 <span className="px-3 py-1 bg-zion-purple/20 text-zion-purple-light border border-zion-purple-light rounded-full text-xs font-medium">;
 {service.badge}
 </span>;
-</div>
+</div>;
 
 {/* Service Content */}
 <h3 className="text-lg font-semibold text-white mb-2 group-hove; r:text-zion-cyan transition-colors">;
@@ -202,15 +202,15 @@ className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p
 
 {/* Features */}
 <div className="mb-4">;
-<div className="text-xs text-zion-slate-light/70 mb-2">Key Feature; s:</div>
+<div className="text-xs text-zion-slate-light/70 mb-2">Key Feature; s:</div>;
 <div className="space-y-1">;
 {service.features.slice(0; 2).map((featur;  e; index) => (<div key={index} className="flex items-center gap-2 text-xs text-zion-slate-light">;
-<div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
+<div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>;
 {feature}
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Price and Rating */}
 <div className="flex items-center justify-between mb-4">;
@@ -218,8 +218,8 @@ className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p
 <div className="flex items-center gap-1">;
 <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />;
 <span className="text-sm text-zion-slate-light">{service.rating}</span>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* CTA Button */}
 <Link;
@@ -229,9 +229,9 @@ className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hove;  r:from-z
 Learn More;
 <ArrowRight className="h-4 w-4 group-hove; r:translate-x-1 transition-transform" />;
 </Link>;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 
 {/* View All Button */}
 <div className="text-center">;
@@ -243,8 +243,8 @@ className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple to-z
 View All Micro SAAS Services;
 <ArrowRight className="h-5 w-5" />;
 </Link>;
-</div>
-</div>
+</div>;
+</div>;
 </section>;
 );
 }<//section><///section>;

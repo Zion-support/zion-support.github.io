@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -9,16 +9,17 @@ import React from "react;";
 
 export function TestimonialsSection() {const testimonials = [;
 {;
-name: "Sarah Johnson", role: "CTO";
-company: "TechCorp Inc.", content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.";
-rating: 5;
+name: "Sarah Johnson", role: "CTO";,
+company: "TechCorp Inc.", content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.";,
+rating: 5;,
 avatar: "👩‍💼"};
-{name: "Michael Chen", role: "VP of Engineering";
-company: "InnovateLabs", content: "The cybersecurity implementation was seamless and comprehensive. We feel much more secure knowing our systems are protected by Zion Tech Group.";
-rating: 5;
+{name: "Michael Chen", role: "VP of Engineering";,
+company: "InnovateLabs", content: "The cybersecurity implementation was seamless and comprehensive. We feel much more secure knowing our systems are protected by Zion Tech Group.";,
+rating: 5;,
 avatar: "👨‍💻"};
-{name: "Emily Rodriguez", role: "Operations Director";
+{name: "Emily Rodriguez", role: "Operations Director";,
 company: "Global Solutions", content: "Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.",
+<<<<<<< HEAD
 rating: 5;
 rating: 5;,
 avatar: "👩‍💼"};
@@ -30,6 +31,8 @@ avatar: "👨‍💻"};
 {
 name: "Emily Rodriguez", role: "Operations Director";,
 company: "Global Solutions", content: "Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.",
+=======
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 rating: 5;,
 avatar: "👩‍🔬"}
 ];
@@ -51,7 +54,7 @@ What Our Clients Say;
 <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
 Don"t just take our word for it - hear from the businesses we"ve helped transform;
 </p>;
-</div>
+</div>;
 
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
 {testimonials.map((testimonial; index) => (
@@ -59,24 +62,24 @@ Don"t just take our word for it - hear from the businesses we"ve helped transfor
 <div className="flex items-center mb-4">;
 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-2xl mr-4">;
 {testimonial.avatar}
-</div>
+</div>;
 <div>;
 <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>;
 <p className="text-sm text-gray-600">{testimonial.role} at {testimonial.company}</p>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="mb-4">;
 {renderStars(testimonial.rating)}
-</div>
+</div>;
 
 <p className="text-gray-700 leading-relaxed italic">;
 "{testimonial.content}";
 </p>;
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 </section>;
 );
 }<//section><///section>;

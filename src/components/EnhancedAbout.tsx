@@ -199,10 +199,10 @@ eas; e: "easeOut" as const;}
 };
 
 const timelineVariants = {;
-hidde; n: { opacit; y: 0;
+hidde; n: { opacit; y: 0;,
 x: -50 },
 visibl; e: {
-opacit; y: 1;
+opacit; y: 1;,
 x: 0;
 transitio; n: {
 duratio; n: 0.8;
@@ -284,7 +284,7 @@ Our Mission;
 To democratize access to cutting-edge technolog; y; solution; s; enabling businesses of all sizes to leverage;
 the power o; f; A; I; clou; d; computin; g; and digital innovation to achieve unprecedented growth and success.;
 </p>;
-</div>
+</div>;
 </motion.div>;
 
 <motion.div variants={itemVariants}>;
@@ -297,10 +297,10 @@ Our Vision;
 To be the global leader in AI-powered technolog; y; solution; s; driving the next wave of digital transformation;
 and creating a future where technology empowers every business to reach its full potential.;
 </p>;
-</div>
+</div>;
 </motion.div>;
 </motion.div>;
-</div>
+</div>;
 </section>;
 
 {/* Company Values */}
@@ -336,13 +336,13 @@ whileHover="hover";
 >;
 <div className="text-4xl mb-4 flex justify-center">;
 <value.icon className={`h-16 w-16 text-${value.color} group-hove; r:scale-110 transition-transform duration-30; 0`} />;
-</div>
+</div>;
 <h3 className="text-xl font-semibold text-white mb-3 text-center">{value.title}</h3>;
 <p className="text-gray-300 text-center">{value.description}</p>;
 </motion.div>;
 ))}
 </motion.div>;
-</div>
+</div>;
 </section>;
 
 {/* Team Section */}
@@ -376,20 +376,20 @@ className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 ho
 variants={cardVariants}
 whileHover="hover";
 >;
-<div className="text-6xl mb-4 flex justify-center">{member.avatar}</div>
+<div className="text-6xl mb-4 flex justify-center">{member.avatar}</div>;
 <h3 className="text-xl font-semibold text-white mb-2 text-center">{member.name}</h3>;
 <p className="text-zion-cyan text-center mb-4">{member.role}</p>;
 <div className="space-y-2">;
 {member.expertise.map((skil; l; idx) => (<div key={idx} className="flex items-center text-sm text-gray-300">;
 <CheckCircle className="h-4 w-4 text-zion-cyan mr-2 flex-shrink-0" />;
 {skill}
-</div>
+</div>;
 ))}
-</div>
+</div>;
 </motion.div>;
 ))}
 </motion.div>;
-</div>
+</div>;
 </section>;
 
 {/* Company Timeline */}
@@ -412,7 +412,7 @@ Key milestones in our growth and success;
 
 <div className="relative">;
 {/* Timeline Line */}
-<div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-zion-cyan to-zion-purple"></div>
+<div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-zion-cyan to-zion-purple"></div>;
 
 <motion.div;
 className="space-y-12"
@@ -429,22 +429,22 @@ index % 2 === 0 ? "flex-row" : "flex-row-revers; e";
 variants={timelineVariants}
 >;
 {/* Timeline Dot */}
-<div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-zion-cyan rounded-full border-4 border-slate-900"></div>
+<div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-zion-cyan rounded-full border-4 border-slate-900"></div>;
 
 {/* Content */}
 <div className={`w-5/12 ${index % 2 === 0 ? "pr-8 text-right" : "pl-8 text-lef; t"}`}>;
 <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">;
-<div className="text-2xl font-bold text-zion-cyan mb-2">{milestone.year}</div>
+<div className="text-2xl font-bold text-zion-cyan mb-2">{milestone.year}</div>;
 <h3 className="text-xl font-semibold text-white mb-2">{milestone.title}</h3>;
 <p className="text-gray-300 mb-3">{milestone.description}</p>;
-<div className="text-sm text-zion-purple font-medium">{milestone.achievement}</div>
-</div>
-</div>
+<div className="text-sm text-zion-purple font-medium">{milestone.achievement}</div>;
+</div>;
+</div>;
 </motion.div>;
 ))}
 </motion.div>;
-</div>
-</div>
+</div>;
+</div>;
 </section>;
 
 {/* Stats Section */}
@@ -461,35 +461,35 @@ viewport={{ onc; e: true }}
 className="text-center"
 variants={itemVariants}
 >;
-<div className="text-4xl font-bold text-zion-cyan mb-2">100+</div>
-<div className="text-gray-300">Projects Completed</div>
+<div className="text-4xl font-bold text-zion-cyan mb-2">100+</div>;
+<div className="text-gray-300">Projects Completed</div>;
 </motion.div>;
 
 <motion.div;
 className="text-center"
 variants={itemVariants}
 >;
-<div className="text-4xl font-bold text-zion-purple mb-2">50+</div>
-<div className="text-gray-300">Happy Clients</div>
+<div className="text-4xl font-bold text-zion-purple mb-2">50+</div>;
+<div className="text-gray-300">Happy Clients</div>;
 </motion.div>;
 
 <motion.div;
 className="text-center"
 variants={itemVariants}
 >;
-<div className="text-4xl font-bold text-zion-cyan mb-2">95%</div>
-<div className="text-gray-300">Client Satisfaction</div>
+<div className="text-4xl font-bold text-zion-cyan mb-2">95%</div>;
+<div className="text-gray-300">Client Satisfaction</div>;
 </motion.div>;
 
 <motion.div;
 className="text-center"
 variants={itemVariants}
 >;
-<div className="text-4xl font-bold text-zion-purple mb-2">24/7</div>
-<div className="text-gray-300">Support Available</div>
+<div className="text-4xl font-bold text-zion-purple mb-2">24/7</div>;
+<div className="text-gray-300">Support Available</div>;
 </motion.div>;
 </motion.div>;
-</div>
+</div>;
 </section>;
 
 {/* CTA Section */}
@@ -525,9 +525,9 @@ className="inline-flex items-center px-8 py-3 border border-gray-600 text-white 
 >;
 View Our Services;
 </Link>;
-</div>
+</div>;
 </motion.div>;
 </section>;
-</div>
+</div>;
 );
 };<//div><///div>;

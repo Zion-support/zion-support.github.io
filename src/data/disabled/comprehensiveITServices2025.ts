@@ -1,15 +1,20 @@
 import React from "react";
 
-export interface ComprehensiveITService {id: string; title: string; description: string; id: string; title: string; description: string; id: string; title: string; description: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[], benefits: string[];
+export interface ComprehensiveITService {id: string; title: string; description: string; id: string; title: string; description: string; id: string; title: string; description: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[], benefits: string[];,
 targetAudience: string[], tags: string[];
 }
 contactInfo: {,}
 phone: string; email: string; website: string; address: string};
+<<<<<<< HEAD
 technology: string[], technology: string[];
 contactInfo: {,
 phone: string; email: string; website: string; address: string};
 technology: string[], technology: string[];,
 integrations: string[], compliance: string[];
+=======
+technology: string[], technology: string[];,
+integrations: string[], compliance: string[];,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 roi: string; competitors: string[];
 demoUrl?: string;
 caseStudies?: string[];
@@ -29,7 +34,7 @@ title: "Cloud Infrastructure & Migration Services - Seamless Cloud Transformatio
 description: "Comprehensive cloud infrastructure and migration services that help businesses transition to the cloud; optimize cloud performance; and manage multi-cloud environments for improved scalability and cost efficiency.",
 category: "Cloud Services",
 subcategory: "Infrastructure & Migration",
-price: 2499;
+price: 2499;,
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -353,7 +358,7 @@ title: "IT Consulting & Strategic Planning Services - Technology Strategy Excell
 description: "Strategic IT consulting and planning services that help businesses align technology with business objectives; optimize IT investments; and create roadmaps for digital transformation and technology innovation.",
 category: "IT Consulting",
 subcategory: "Strategic Planning",
-price: 299;
+price: 299;,
 currency: "$",
 pricingModel: "hourly",
 features: [
@@ -744,7 +749,7 @@ category: "Digital Transformation",
 subcategory: "Workplace Modernization",
 description: "Comprehensive digital workplace platform for remote work; collaboration; and productivity enhancement",
 pricing: "Professional",
-price: 18000;
+price: 18000;,
 pricingModel: "monthly",
 features: [
 "Unified communication",
@@ -803,7 +808,7 @@ category: "Integration",
 subcategory: "API Management",
 description: "Enterprise-grade API management platform for design; development; security; and analytics",
 pricing: "Professional",
-price: 10000;
+price: 10000;,
 pricingModel: "monthly",
 features: [
 "API design and development",
@@ -862,7 +867,7 @@ category: "Data Protection",
 subcategory: "Backup & Recovery",
 description: "AI-powered backup and disaster recovery platform with intelligent automation and predictive analytics",
 pricing: "Professional",
-price: 8000;
+price: 8000;,
 pricingModel: "monthly",
 features: [
 "Intelligent backup scheduling",
@@ -949,7 +954,7 @@ targetAudience: [
 "Technology companies";
 ],
 tags: ["Performance Monitoring", "APM", "Infrastructure", "User Experience", "Analytics", "Optimization"],
-technology: string[], integrations: string[];
+technology: string[], integrations: string[];,
 compliance: string[], roi: string; competitors: string[];
 demoUrl?: string;
 caseStudies?: string[];
@@ -964,7 +969,7 @@ title: "Cloud Infrastructure & Migration Services - Seamless Cloud Transformatio
 description: "Comprehensive cloud infrastructure and migration services that help businesses transition to the cloud; optimize cloud performance; and manage multi-cloud environments for improved scalability and cost efficiency.",
 category: "Cloud Services",
 subcategory: "Infrastructure & Migration",
-price: 2499;
+price: 2499;,
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -1276,7 +1281,7 @@ title: "IT Consulting & Strategic Planning Services - Technology Strategy Excell
 description: "Strategic IT consulting and planning services that help businesses align technology with business objectives; optimize IT investments; and create roadmaps for digital transformation and technology innovation.",
 category: "IT Consulting",
 subcategory: "Strategic Planning",
-price: 299;
+price: 299;,
 currency: "$",
 pricingModel: "hourly",
 features: [

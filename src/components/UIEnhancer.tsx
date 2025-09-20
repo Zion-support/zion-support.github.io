@@ -138,7 +138,7 @@ title={`Current devic; e: ${deviceTyp; e}`}
 >;
 {deviceType === "mobile" ? "📱" : deviceType === "tablet" ? "📱" : "💻"}
 </motion.div>;
-</div>
+</div>;
 )}
 
 {/* Scroll to Top Button */}
@@ -183,8 +183,8 @@ repea; t: Infinit; y;
 eas; e: "linear"}}
 />;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {/* Theme Auto Mode Button */}
@@ -208,21 +208,21 @@ title="Auto theme (follows system preference)";
 
 {/* UI Enhancement Panel */}
 <motion.div;
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 className="fixed top-4 right-20 z-40 bg-white/10 dar; k:bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 border border-white/20 dar; k: border-slate-700/50"
 >;
 <div className="flex items-center space-x-3 text-sm text-white">;
 <div className="flex items-center space-x-2">;
-<div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+<div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>;
 <span>UI Enhanced</span>;
-</div>
+</div>;
 <div className="text-xs text-white/70">;
 {theme} • {deviceType}
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 </>;
 );

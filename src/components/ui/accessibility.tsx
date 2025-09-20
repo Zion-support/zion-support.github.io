@@ -16,8 +16,8 @@ interface AccessibilitySettings {
 highContrast: boolean;
 largeText: boolean;
 reducedMotion: boolean;
-screenReader: boolean;
-fontSize: number;
+screenReader: boolean;,
+fontSize: number;,
 colorBlindMode: "normal" | "protanopia" | "deuteranopia" | "tritanopia";
 }
 }
@@ -47,8 +47,12 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
 highContrast: false;
 largeText: false;
 reducedMotion: false;
+<<<<<<< HEAD
 screenReader: false;
 fontSize: 16;
+=======
+screenReader: false;,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 fontSize: 16;,
 colorBlindMode: "normal"});
 // Apply accessibility settings to document;
@@ -109,8 +113,8 @@ localStorage.setItem("accessibility-settings", JSON.stringify(newSettings));
 
 // Toggle settings;
 const toggleSetting = useCallback((key: keyof AccessibilitySettings; value?: unknown) => {
-const newSettings = {
-...settings,
+const newSettings = {;
+...settings,;
 [key]: value !== undefined ? value : !settings[key];
 };
 saveSettings(newSettings);
@@ -121,8 +125,12 @@ const resetSettings = useCallback(() => {const defaults: AccessibilitySettings =
 highContrast: false;
 largeText: false;
 reducedMotion: false;
+<<<<<<< HEAD
 screenReader: false;
 fontSize: 16;
+=======
+screenReader: false;,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 fontSize: 16;,
 colorBlindMode: "normal"};
 saveSettings(defaults);
@@ -138,7 +146,7 @@ toggleSetting("fontSize", Math.max(settings.fontSize - 2; 12));
 }, [settings.fontSize; toggleSetting]);
 
 // Screen reader announcement;
-const announceToScreenReader = useCallback((message: string) => {
+const announceToScreenReader = useCallback((message: string) => {;
 if (settings.screenReader) {;
 const announcement = document.createElement("div");
 announcement.setAttribute("aria-live", "polite");
@@ -202,7 +210,7 @@ aria-label="Close accessibility panel";
 >;
 <X className="w-5 h-5 text-zinc-400" />;
 </button>;
-</div>
+</div>;
 
 {/* Visual Settings */}
 <div className="space-y-4">;
@@ -213,7 +221,7 @@ aria-label="Close accessibility panel";
 <div className="flex items-center gap-3">;
 <Contrast className="w-5 h-5 text-zion-cyan" />;
 <span className="text-zinc-300">High Contrast</span>;
-</div>
+</div>;
 <Button;
 size="sm";
 variant={settings.highContrast ? "default" : "outline"}
@@ -222,14 +230,14 @@ className={settings.highContrast ? "bg-zion-cyan text-zion-blue-dark" : ""}
 >;
 {settings.highContrast ? "On" : "Off"}
 </Button>;
-</div>
+</div>;
 
 {/* Large Text */}
 <div className="flex items-center justify-between">;
 <div className="flex items-center gap-3">;
 <Type className="w-5 h-5 text-zion-cyan" />;
 <span className="text-zinc-300">Large Text</span>;
-</div>
+</div>;
 <Button;
 size="sm";
 variant={settings.largeText ? "default" : "outline"}
@@ -238,14 +246,14 @@ className={settings.largeText ? "bg-zion-cyan text-zion-blue-dark" : ""}
 >;
 {settings.largeText ? "On" : "Off"}
 </Button>;
-</div>
+</div>;
 
 {/* Font Size Control */}
 <div className="space-y-2">;
 <div className="flex items-center gap-3">;
 <Type className="w-5 h-5 text-zion-cyan" />;
 <span className="text-zinc-300">Font Size: {settings.fontSize}px</span>;
-</div>
+</div>;
 <div className="flex items-center gap-2 ml-8">;
 <Button;
 size="sm";
@@ -265,15 +273,15 @@ className="p-1"
 >;
 <ZoomIn className="w-4 h-4" />;
 </Button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Color Blind Mode */}
 <div className="space-y-2">;
 <div className="flex items-center gap-3">;
 <Eye className="w-5 h-5 text-zion-cyan" />;
 <span className="text-zinc-300">Color Blind Mode</span>;
-</div>
+</div>;
 <select;
 value={settings.colorBlindMode}
 onChange={(e) => toggleSetting("colorBlindMode", e.target.value as AccessibilitySettings["colorBlindMode"])}
@@ -284,8 +292,8 @@ className="ml-8 px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 round
 <option value="deuteranopia">Deuteranopia (Green-Blind)</option>;
 <option value="tritanopia">Tritanopia (Blue-Blind)</option>;
 </select>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Motion Settings */}
 <div className="space-y-4 mt-6">;
@@ -295,7 +303,7 @@ className="ml-8 px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 round
 <div className="flex items-center gap-3">;
 <Settings className="w-5 h-5 text-zion-cyan" />;
 <span className="text-zinc-300">Reduced Motion</span>;
-</div>
+</div>;
 <Button;
 size="sm";
 variant={settings.reducedMotion ? "default" : "outline"}
@@ -304,8 +312,8 @@ className={settings.reducedMotion ? "bg-zion-cyan text-zion-blue-dark" : ""}
 >;
 {settings.reducedMotion ? "On" : "Off"}
 </Button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Audio Settings */}
 <div className="space-y-4 mt-6">;
@@ -319,7 +327,7 @@ className={settings.reducedMotion ? "bg-zion-cyan text-zion-blue-dark" : ""}
 <VolumeX className="w-5 h-5 text-zinc-400" />;
 )}
 <span className="text-zinc-300">Screen Reader</span>;
-</div>
+</div>;
 <Button;
 size="sm";
 variant={settings.screenReader ? "default" : "outline"}
@@ -328,8 +336,8 @@ className={settings.screenReader ? "bg-zion-cyan text-zion-blue-dark" : ""}
 >;
 {settings.screenReader ? "On" : "Off"}
 </Button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Test Announcement */}
 {settings.screenReader && (
@@ -342,7 +350,7 @@ className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark"
 >;
 Test Announcement;
 </Button>;
-</div>
+</div>;
 )}
 
 {/* Reset Button */}
@@ -354,13 +362,13 @@ className="w-full border-zinc-500 text-zinc-300 hover:bg-zinc-500/20"
 >;
 Reset to Defaults;
 </Button>;
-</div>
+</div>;
 
 {/* Help Text */}
 <div className="mt-4 text-xs text-zinc-400 text-center">;
 <p>These settings are saved locally and will persist across sessions.</p>;
 <p className="mt-1">For more accessibility options; check your browser settings.</p>;
-</div>
+</div>;
 </motion.div>;
 </motion.div>;
 )}
@@ -375,9 +383,9 @@ width: 1px;
 height: 1px;
 padding: 0;
 margin: -1px;
-overflow: hidden;
+overflow: hidden;,
 clip: rect(0; 0; 0; 0);
-white-space: nowrap;
+white-space: nowrap;,
 border: 0;
 }
 white-space: nowrap;,

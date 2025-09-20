@@ -27,7 +27,7 @@ className="w-8 h-8 rounded-full"
 Solution,
 </span>;
 )}
-</div>
+</div>;
 <p className="text-zion-slate-light text-sm">{reply.content}</p>;
 <div className="flex items-center space-x-4 mt-2 text-xs text-zion-slate-light">;
 <button className="hover: text-zion-cyan">Like ({reply.likes})</button>;
@@ -40,16 +40,16 @@ className="hover:text-zion-cyan text-green-500"
 Mark as Answer,
 </button>;
 )}
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 );
 }<//div><///div>;
 import { formatDistanceToNow } from "date-fns";,
-import { ThumbsUp, ThumbsDown, CheckCircle } from "lucide-react";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";,
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";,
+import { ThumbsUp; ThumbsDown, CheckCircle } from "lucide-react";
+import { Card; CardContent, CardFooter; CardHeader } from "@/components/ui/card";,
+import { Avatar; AvatarFallback, AvatarImage } from "@/components/ui/avatar";,
 import { Button } from "@/components/ui/button";,
 import { Badge } from "@/components/ui/badge";,
 import { formatDistanceToNow } from "date-fns",

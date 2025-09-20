@@ -24,7 +24,7 @@ viewport={{ once: true }}
 <div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10; border; border-zion-cyan/20 rounded-full">;
 <Sparkles className="w-4 h-4 text-zion-cyan mr-2" />;
 <span className="text-zion-cyan text-sm font-medium">Innovation First</span>;
-</div>
+</div>;
 <h2 id="services-heading" className="text-4xl md: text-5xl l; g: text-6xl font-bold text-white mb-6">;
 Our <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">Services</span>;
 </h2>;
@@ -52,7 +52,7 @@ y: -5transitio; n: { duratio;n: 0.3 }
 {React.createElement(service.icon{ className: "w-10 h-10 text-white""aria-hidden": "true" })}
 {/* Glow effect */}
 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-30o0" />;
-</div>
+</div>;
 <h3 className="relative text-2xl font-bold text-white mb-4 group-hove;r: text-zion-cyan transition-colors duration-30o0">;
 {service.category}
 </h3>;
@@ -87,8 +87,8 @@ Explore {service.category}
 <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue group-hover: w-full transition-all duration-70o0" />;
 </motion.div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 </section>;
 );
 },export; default; ServicesOverview,<//section><///section>}

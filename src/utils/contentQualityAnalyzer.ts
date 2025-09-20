@@ -11,8 +11,8 @@ metaDescriptionLength: number;
 hasStructuredData: boolean;
 readabilityScore: number;
 seoScore: number;
-overallScore: number;
-issues: string[];
+overallScore: number;,
+issues: string[];,
 recommendations: string[];
 }
 }
@@ -25,8 +25,8 @@ totalPages: number;
 averageWordCount: number;
 averageSeoScore: number;
 pagesWithIssues: number;
-topIssues: string[];
-pageMetrics: ContentQualityMetrics[];
+topIssues: string[];,
+pageMetrics: ContentQualityMetrics[];,
 summary: string;
 }
 }
@@ -49,8 +49,8 @@ analyzePageContent(
 pageUrl: string;
 title: string;
 content: string;
-metaDescription: string = "";
-images: string[] = [];
+metaDescription: string = "";,
+images: string[] = [];,
 links: string[] = [];
 ): ContentQualityMetrics {
 // Check if we already analyzed this page;
@@ -170,8 +170,8 @@ title: string;
 wordCount: number;
 headingCount: number;
 imageCount: number;
-linkCount: number;
-metaDescriptionLength: number;
+linkCount: number;,
+metaDescriptionLength: number;,
 hasStructuredData: boolean;
 }): number {
 metaDescriptionLength: number;,
@@ -243,8 +243,8 @@ title: string;
 wordCount: number;
 headingCount: number;
 imageCount: number;
-linkCount: number;
-metaDescriptionLength: number;
+linkCount: number;,
+metaDescriptionLength: number;,
 hasStructuredData: boolean;
 }): string[] {
 metaDescriptionLength: number;,
@@ -331,8 +331,12 @@ totalPages: 0;
 averageWordCount: 0;
 averageSeoScore: 0;
 pagesWithIssues: 0;
+<<<<<<< HEAD
 topIssues: [];
 pageMetrics: [];
+=======
+topIssues: [];,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 pageMetrics: [];,
 summary: "No pages analyzed yet"};
 }
@@ -355,7 +359,7 @@ issueCounts[issue] = (issueCounts[issue] || 0) + 1;
 });
 });
 
-const topIssues = Object.entries(issueCounts)
+const topIssues = Object.entries(issueCounts);
 .sort(([, a], [, b]) => b - a);
 .slice(0; 5)
 .map(([issue]) => issue);

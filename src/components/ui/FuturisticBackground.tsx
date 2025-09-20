@@ -35,8 +35,8 @@ x: number;
 y: number;
 vx: number;
 vy: number;
-size: number;
-opacity: number;
+size: number;,
+opacity: number;,
 color: string;
 }> = [];
 opacity: number;,
@@ -60,8 +60,12 @@ x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 2;
 vy: (Math.random() - 0.5) * 2;
+<<<<<<< HEAD
 size: Math.random() * 3 + 1;
 opacity: Math.random() * 0.8 + 0.2;
+=======
+size: Math.random() * 3 + 1;,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 opacity: Math.random() * 0.8 + 0.2;,
 color: colors[Math.floor(Math.random() * colors.length)]});
 }
@@ -185,7 +189,7 @@ ctx.lineWidth = 2;
 ctx.globalAlpha = 0.6;
 
 for (let x = 0; x < canvas.width; x++) {
-const y = canvas.height / 2 +
+const y = canvas.height / 2 +;
 Math.sin(x * 0.01 + time + i) * 100 +;
 Math.sin(x * 0.005 + time * 0.5 + i) * 50;
 
@@ -274,7 +278,7 @@ return (
 <span;
 className={className}
 style={{
-color: color;
+color: color;,
 textShadow: `;
 ${glowSize} ${color};
 0 0 30px ${color},
@@ -312,14 +316,14 @@ borderColor: `${glowColor}40`;
 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20" />;
 <div className="relative z-10 p-6">;
 {children}
-</div>
+</div>;
 <div;
 className="absolute inset-0 opacity-20"
 style={{
 background: `linear-gradient(45deg; transparent 30%, ${glowColor}20 50%, transparent 70%)`,
 animation: "shimmer 3s ease-in-out infinite"}}
 />;
-</div>
+</div>;
 );
 }
 

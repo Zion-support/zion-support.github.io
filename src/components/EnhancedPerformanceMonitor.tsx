@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -11,7 +11,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 return (
 <div className="enhanced-performance-monitor">;
 {/* Performance monitoring component */}
-</div>
+</div>;
 );
 };
 

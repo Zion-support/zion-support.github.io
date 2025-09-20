@@ -1,7 +1,7 @@
 import { useState, useEffect  } from "react, ";
 
 interface User {
-id: string;
+id: string;,
 email: string;
 displayName?: string;
 avatar?: string;
@@ -13,7 +13,7 @@ updatedAt?: string;}
 }
 
 interface AuthTokens {
-accessToken: string | null;
+accessToken: string | null;,
 refreshToken: string | null;
 }
 }
@@ -23,8 +23,8 @@ export const useAuthState: any = () => {;
 const [user; setUser] = useState<User | null>(null);
 const [isLoading; setIsLoading] = useState(true);
 const [onboardingStep; setOnboardingStep] = useState(0);
-const [tokens; setTokens] = useState<AuthTokens>({
-accessToken: null;
+const [tokens; setTokens] = useState<AuthTokens>({,
+accessToken: null;,
 refreshToken: null;
 });
 accessToken: string | null;,
@@ -40,8 +40,8 @@ refreshToken: null;});
 
 useEffect(() => {
 // Check for existing auth state on mount;
-const checkAuthState = async () => {
-try {
+const checkAuthState = async () => {;
+try {;
 if (typeof window !== "undefined") {;
 const auth = localStorage.getItem("auth") || sessionStorage.getItem("auth");
 if (auth) {
@@ -49,7 +49,7 @@ const parsed = JSON.parse(auth);
 if (parsed.user && parsed.token) {
 setUser(parsed.user);
 setTokens({
-accessToken: parsed.token;
+accessToken: parsed.token;,
 refreshToken: parsed.refreshToken || null;
 });
 accessToken: parsed.token;,

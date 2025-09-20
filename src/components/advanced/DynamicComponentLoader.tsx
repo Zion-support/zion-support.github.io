@@ -1,14 +1,15 @@
-'use client'
-import React {Suspense,
-lazy
-  useState,
+"use client";
+import React {Suspense;
+lazy;
+useState;
 useEffect;
-  ComponentType} from 'react';
-import { motion, AnimatePresence } from "framer-motion";
-import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from "lucide-react";
+ComponentType} from "react";
+import { motion; AnimatePresence } from "framer-motion";
+import { Loader2; AlertTriangle, Wifi; WifiOff, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card; CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+<<<<<<< HEAD
 useEffect
   ComponentType } from 'react'
 import { motionAnimatePresence } from 'framer-motion'
@@ -17,34 +18,37 @@ import { Button } from '@/components/ui/button'
 import { CardCardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils';
 import { logErrorToProduction } from '@/utils/productionLogger';
+=======
+import { logErrorToProduction } from "@/utils/productionLogger";
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 interface LoadingState {
-  isLoading: boolean,
-error: Error | null,
-retryCount: number,
+isLoading: boolean;
+error: Error | null;,
+retryCount: number;,
 isOnline: boolean,
 }
 interface DynamicLoaderProps {}
-  importFn: () => Promise<{ default: ComponentType<any> }>
-  fallback?: React.ReactNode,
-errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>
-  loadingComponent?: React.ComponentType,
-enableRetry?: boolean,
-maxRetries?: number,
-prefetch?: boolean,
-className?: string,
-children?: React.ReactNode
-  [key: string]: any
-// Enhanced Loading Component,
+importFn: () => Promise<{ default: ComponentType<any> }>
+fallback?: React.ReactNode;
+errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>;
+loadingComponent?: React.ComponentType;
+enableRetry?: boolean;
+maxRetries?: number;
+prefetch?: boolean;
+className?: string;
+children?: React.ReactNode;
+[key: string]: any;
+// Enhanced Loading Component;
 const EnhancedLoading: React.FC<{
-  progress?: number,
-message?: string,
-showProgress?: boolean
+progress?: number;
+message?: string;
+showProgress?: boolean;
 //   {
 //     loadingComponent: () => (
-//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
-//         <span className="text-muted-foreground">Loading 3D renderer...</span>
-//       </div>
+//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">;
+//         <span className="text-muted-foreground">Loading 3D renderer...</span>;
+//       </div>;
 //     )
 //   }
 // )
-export default DynamicComponentLoader; export default DynamicComponentLoader
+export default DynamicComponentLoader; export default DynamicComponentLoader}

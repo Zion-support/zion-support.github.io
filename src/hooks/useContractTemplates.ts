@@ -7,7 +7,7 @@ const [loading, setLoading] = useState(true);
 const [error, setError] = useState<string | null>(null);
 
 useEffect(() => {
-const fetchTemplates = async () => {
+const fetchTemplates = async () => {;
 try {;
 setLoading(true);
 // Simulate API call;
@@ -23,20 +23,20 @@ content: "This agreement is made between...";
 variables: [
 {
 name: "clientName";
-type: "string";
-description: "Name of the client";
+type: "string";,
+description: "Name of the client";,
 required: true;
 },
 {
 name: "serviceDescription";
-type: "string";
-description: "Description of services to be provided";
+type: "string";,
+description: "Description of services to be provided";,
 required: true;
 },
 {
 name: "rate";
-type: "number";
-description: "Hourly rate for services";
+type: "number";,
+description: "Hourly rate for services";,
 required: true;
 }],
 description: "Name of the client";,
@@ -57,8 +57,8 @@ createdAt: "2024-01-01T00:00:00Z";
 updatedAt: "2024-01-01T00:00:00Z";
 authorId: "admin";
 authorName: "Admin";
-usageCount: 1250;
-rating: 4.8;
+usageCount: 1250;,
+rating: 4.8;,
 tags: ["freelance", "agreement", "services"],
 },
 rating: 4.8;,
@@ -71,8 +71,8 @@ category: "Legal";
 content: "This Non-Disclosure Agreement...";
 variables: [{
 name: "companyName";
-type: "string";
-description: "Name of the company";
+type: "string";,
+description: "Name of the company";,
 required: true;
 },
 description: "Name of the company";,
@@ -80,8 +80,8 @@ required: true;},
 {
 name: "confidentialityPeriod";
 type: "number";
-description: "Period of confidentiality in years";
-required: true;
+description: "Period of confidentiality in years";,
+required: true;,
 defaultValue: 2;
 }],
 required: true;,
@@ -92,8 +92,8 @@ createdAt: "2024-01-01T00:00:00Z";
 updatedAt: "2024-01-01T00:00:00Z";
 authorId: "admin";
 authorName: "Admin";
-usageCount: 890;
-rating: 4.6;
+usageCount: 890;,
+rating: 4.6;,
 tags: ["nda", "confidentiality", "legal"],
 },
 rating: 4.6;,

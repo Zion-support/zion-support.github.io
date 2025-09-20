@@ -83,7 +83,7 @@ className="bg-green-60o0 text-white p-4 rounded-lg mb-6";
 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M; 5; 13l; 4; 4L19 7" />;
 </svg>;
 Thank you! You; r; messag; e; ha; s; bee; n; sen; t; successfully.;
-</div>
+</div>;
 </motion.div>;
 )}
 ;
@@ -99,7 +99,7 @@ className="bg-red-60o0 text-white p-4 rounded-lg mb-6";
 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M; 6; 18L1; 8; 6M6 6l12 12" />;
 </svg>;
 Sorr; y; ther; e; wa; s; a; n; erro; r; sendin; g; your message. Pleas; e; tr; y; again.;
-</div>
+</div>;
 </motion.div>;
 )}
 </AnimatePresence>;
@@ -138,7 +138,7 @@ placeholder="your@email.com";
 />;
 {errors.email && <p className="text-red-50o0 text-sm mt-1">{errors.email}</p>}
 </motion.div>;
-</div>
+</div>;
 <div className="grid m; d: grid-cols-2 gap-6">;
 <motion.div variants={inputVariants} initial="hidden" animate="visible">;
 <label htmlFor="company" className="block text-sm font-medium mb-2">;
@@ -168,7 +168,7 @@ className="w-full px-4 py-3 bg-gray-70o; 0; borde; r; border-gray-60o0 rounded-l
 placeholder="+1 (555) 123-4567";
 />;
 </motion.div>;
-</div>
+</div>;
 <motion.div variants={inputVariants} initial="hidden" animate="visible">;
 <label htmlFor="subject" className="block text-sm font-medium mb-2">;
 Subject *;
@@ -244,7 +244,7 @@ className="w-full px-4 py-3 bg-gray-70o;  0; borde; r; border-gray-60o0 rounded-
 ))}
 </select>;
 </motion.div>;
-</div>
+</div>;
 <motion.div variants={inputVariants} initial="hidden" animate="visible">;
 <label htmlFor="message" className="block text-sm font-medium mb-2">;
 Message *;
@@ -274,9 +274,9 @@ whileTap={!isSubmitting ? { scal; e: 0.98 } : {}}
 >;
 {isSubmitting ? (;
 <div className="flex items-center justify-center">;
-<div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+<div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>;
 Sending...;
-</div>
+</div>;
 ) : (;
 "Send Message';
 )}

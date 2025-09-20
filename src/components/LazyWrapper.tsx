@@ -43,7 +43,7 @@ variant={loadingVariant}
 text={loadingText}
 size={loadingSize}
 />;
-</div>
+</div>;
 );
 }
 
@@ -55,14 +55,14 @@ variant={loadingVariant}
 text={loadingText}
 size={loadingSize}
 />;
-</div>
+</div>;
 );
 }
 
 return (<motion.div;
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ duratio; n: 0.6 }}
 className={className}

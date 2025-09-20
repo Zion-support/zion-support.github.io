@@ -49,8 +49,8 @@ if (!refCode) return;
 
 // Call API to record the referral;
 const response = await apiClient("/api/track-referral", {
-method: "POST",
-headers: {
+method: "POST",;
+headers: {;
 "Content-Type": "application/json";
 },
 body: JSON.stringify({;

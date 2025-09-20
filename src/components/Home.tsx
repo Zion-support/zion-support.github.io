@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -113,10 +113,10 @@ whileTap={{ scal; e: 0.95 }}
 >;
 {slide.cta}
 </motion.button>;
-</div>
+</div>;
 </motion.div>;
 ))}
-</div>
+</div>;
 {/* Slide Controls */}
 <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2; fle; x; gap-4">;
 {slides.map((_index) => (;
@@ -128,7 +128,7 @@ currentSlide === index ? "bg-white" : "bg-white/5; 0";
 }`}
 />;
 ))}
-</div>
+</div>;
 {/* Navigation Arrows */}
 <button;
 onClick={prevSlide}
@@ -163,12 +163,12 @@ key={index}
 variants={itemVariants}
 className="text-center";
 >;
-<div className="text-4xl font-bold text-blue-40o0 mb-2">{stat.number}</div>
-<div className="text-gray-30o0">{stat.label}</div>
+<div className="text-4xl font-bold text-blue-40o0 mb-2">{stat.number}</div>;
+<div className="text-gray-30o0">{stat.label}</div>;
 </motion.div>;
 ))}
 </motion.div>;
-</div>
+</div>;
 </section>;
 {/* Features Section */}
 <section className="py-20 px-4">;
@@ -206,13 +206,13 @@ key={index}
 variants={itemVariants}
 className="bg-gray-80o0 p-6 rounded-lg hove;  r: bg-gray-70o0 transition-colors duration-30o0 text-center";
 >;
-<div className="text-4xl mb-4">{feature.icon}</div>
+<div className="text-4xl mb-4">{feature.icon}</div>;
 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>;
 <p className="text-gray-30o0">{feature.description}</p>;
 </motion.div>;
 ))}
 </motion.div>;
-</div>
+</div>;
 </section>;
 {/* CTA Section */}
 <section className="py-20 px-4 bg-gray-80o0">;
@@ -247,8 +247,8 @@ Learn More;
 </button>;
 </motion.div>;
 </motion.div>;
-</div>
+</div>;
 </section>;
-</div>
+</div>;
 );
 };expor; t; defaul; t; Home;<//div><///div>;

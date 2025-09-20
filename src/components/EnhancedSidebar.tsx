@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -22,8 +22,8 @@ items[,",
 { "name": "Case Studies", "href": "/case-studies", "icon": "FileTex t "},",
 { "name": "Blog", "href": "/blog", "icon": "FileTex t "},",
 { "name": "Partners", "href": "/partners", "icon": "Handshak e "},",
-{ "name": "About", "href": "/about", "icon": "User s "},",
-{ "name": "Contact", "href": "/contact", "icon": "MessageCircl e "},",
+{ "name": "About", "href": "/about", "icon": "User s "},",;
+{ "name": "Contact", "href": "/contact", "icon": "MessageCircl e "},",;
 { "name": "Careers", "href": "/careers", "icon": "Briefcas e "},",;
 { "name": "Partners", "href": "/partners", "icon": "Handshak e "}              </button>,;
 <AnimatePresence>,;

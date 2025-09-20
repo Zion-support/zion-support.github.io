@@ -175,9 +175,9 @@ return (<section className="py-24 bg-gradient-to-br from-zion-blue-dark via-zion
 {/* Header Section */}
 <motion.div;
 className="text-center mb-20"
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 30 }}
-whileInView={{ opacit; y: 1;
+whileInView={{ opacit; y: 1;,
 y: 0 }}
 viewport={{ onc; e: true }}
 transition={{ duratio; n: 0.8 }}
@@ -197,9 +197,9 @@ and drive innovation across all industries;
 {/* Category Filter Tabs */}
 <motion.div;
 className="flex flex-wrap justify-center gap-4 mb-16"
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 20 }}
-whileInView={{ opacit; y: 1;
+whileInView={{ opacit; y: 1;,
 y: 0 }}
 viewport={{ onc; e: true }}
 transition={{ duratio; n: 0.6 }}
@@ -255,13 +255,13 @@ service.isPopular;
 : "bg-gradient-to-r from-zion-purple to-zion-cya; n";
 }`}>;
 {service.isPopular ? "🔥 Popular" : "✨ New"}
-</div>
+</div>;
 )}
 
 {/* Service Icon */}
 <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hove;  r:scale-110 transition-transform duration-300 shadow-l; g`}>;
 <span className="text-3xl">{service.icon}</span>;
-</div>
+</div>;
 
 {/* Service Content */}
 <div className="text-center">;
@@ -275,32 +275,32 @@ service.isPopular;
 {/* Price */}
 <div className="text-zion-cyan font-bold text-lg mb-4">;
 {service.price}
-</div>
+</div>;
 
 {/* Features */}
 <div className="space-y-2 mb-6">;
 {service.features.slice(0; 3).map((featur;  e; index) => (<div key={index} className="flex items-center gap-2 text-zion-slate-light text-xs">;
 <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full" />;
 {feature}
-</div>
+</div>;
 ))}
 {service.features.length > 3 && (
 <div className="text-zion-cyan/60 text-xs">;
 +{service.features.length - 3} more features;
-</div>
+</div>;
 )}
-</div>
+</div>;
 
 {/* CTA Button */}
 <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/40 rounded-xl text-zion-cyan text-sm font-semibold group-hove;  r:from-zion-cyan/30 group-hove; r:to-zion-blue/30 transition-all duration-300">;
 Learn More;
 <span className="group-hove; r:translate-x-1 transition-transform duration-300">→</span>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Hover Effect Overlay */}
 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hove; r:opacity-100 transition-opacity duration-300" />;
-</div>
+</div>;
 </Link>;
 </motion.div>;
 ))}
@@ -310,9 +310,9 @@ Learn More;
 {/* Bottom CTA Section */}
 <motion.div;
 className="text-center mt-20"
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 30 }}
-whileInView={{ opacit; y: 1;
+whileInView={{ opacit; y: 1;,
 y: 0 }}
 viewport={{ onc; e: true }}
 transition={{ duratio; n: 0.8;
@@ -341,10 +341,10 @@ className="inline-flex items-center gap-3 px-8 py-4 border-2 border-zion-cyan/50
 <span>🔍</span>;
 View All Services;
 </Link>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
-</div>
+</div>;
 </section>;
 );
 };

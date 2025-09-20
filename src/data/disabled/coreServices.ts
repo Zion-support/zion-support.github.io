@@ -18,8 +18,8 @@ estimatedDelivery: string;
 supportLevel: "basic" | "standard" | "premium" | "enterprise";
 marketPrice: string;
 contactInfo: {
-phone: string;
-email: string;
+phone: string;,
+email: string;,
 website: string;
 }
 }
@@ -27,8 +27,8 @@ website: string;
 email: string;,
 website: string;};
 technology: string[];
-integrations: string[];
-compliance: string[];
+integrations: string[];,
+compliance: string[];,
 roi: string;
 image?: string;
 rating?: number;
@@ -38,14 +38,14 @@ featured?: boolean;
 }
 
 export const CORE_SERVICES: CoreService[] = [
-{id: "ai-content-hub-pro";
-title: "AI Content Hub Pro - Intelligent Content Management";
+{id: "ai-content-hub-pro";,
+title: "AI Content Hub Pro - Intelligent Content Management";,
 description: "Advanced AI-powered content creation; management; and optimization platform that generates high-quality content across multiple formats and channels.",
 category: "AI & Content Management";
 subcategory: "Content Creation";
 price: 399;
-currency: "USD";
-pricingModel: "monthly";
+currency: "USD";,
+pricingModel: "monthly";,
 features: [
 "AI-powered content generation";
 "Multi-format content creation",
@@ -80,8 +80,12 @@ estimatedDelivery: "2-3 weeks";
 supportLevel: "premium";
 marketPrice: "$399 - $1200/month";
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+=======
+phone: "+1 302 464 0950";,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "React", "Node.js", "OpenAI API", "PostgreSQL"],
@@ -90,23 +94,27 @@ compliance: ["GDPR", "Data Privacy", "Content Guidelines"],
 roi: "400% within 6 months";
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800";
 rating: 4.9;
-reviewCount: 156;
-aiScore: 95;
+reviewCount: 156;,
+aiScore: 95;,
 featured: true;
 };
+<<<<<<< HEAD
 {id: "cloud-infrastructure-pro";
 title: "Cloud Infrastructure Pro - Scalable Cloud Solutions";
 aiScore: 95;,
 featured: true;};
 {
 id: "cloud-infrastructure-pro";
+=======
+{id: "cloud-infrastructure-pro";,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "Cloud Infrastructure Pro - Scalable Cloud Solutions";,
 description: "Enterprise-grade cloud infrastructure services including hosting; scaling; security; and monitoring for high-performance applications.",
 category: "Cloud & Infrastructure";
 subcategory: "Cloud Hosting";
 price: 599;
-currency: "USD";
-pricingModel: "monthly";
+currency: "USD";,
+pricingModel: "monthly";,
 features: [
 "Auto-scaling infrastructure";
 "Load balancing",
@@ -141,8 +149,12 @@ estimatedDelivery: "1-2 weeks";
 supportLevel: "enterprise";
 marketPrice: "$599 - $2000/month";
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+=======
+phone: "+1 302 464 0950";,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["AWS", "Docker", "Kubernetes", "Terraform", "Ansible"],
@@ -151,23 +163,27 @@ compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
 roi: "250% within 8 months";
 image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800";
 rating: 4.8;
-reviewCount: 89;
-aiScore: 88;
+reviewCount: 89;,
+aiScore: 88;,
 featured: true;
 };
+<<<<<<< HEAD
 {id: "cybersecurity-shield";
 title: "Cybersecurity Shield - Advanced Security Solutions";
 aiScore: 88;,
 featured: true;};
 {
 id: "cybersecurity-shield";
+=======
+{id: "cybersecurity-shield";,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "Cybersecurity Shield - Advanced Security Solutions";,
 description: "Comprehensive cybersecurity services including threat detection; vulnerability assessment; and security monitoring for businesses of all sizes.",
 category: "Cybersecurity";
 subcategory: "Security Services";
 price: 299;
-currency: "USD";
-pricingModel: "monthly";
+currency: "USD";,
+pricingModel: "monthly";,
 features: [
 "Threat detection & response";
 "Vulnerability assessment",
@@ -202,8 +218,12 @@ estimatedDelivery: "1-2 weeks";
 supportLevel: "premium";
 marketPrice: "$299 - $800/month";
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+=======
+phone: "+1 302 464 0950";,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["SIEM", "EDR", "Firewall", "IDS/IPS", "Penetration Testing"],
@@ -212,8 +232,8 @@ compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"],
 roi: "300% within 12 months";
 image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800";
 rating: 4.7;
-reviewCount: 234;
-aiScore: 92;
+reviewCount: 234;,
+aiScore: 92;,
 featured: true;
 }
 aiScore: 92;,
@@ -231,8 +251,8 @@ export const SERVICE_SUBCATEGORIES = {
 "ai-content": ["Content Creation", "Content Management", "SEO Optimization", "Marketing Automation"],
 "cloud-infrastructure": ["Cloud Hosting", "DevOps", "Infrastructure as Code", "Monitoring"],
 "cybersecurity": ["Security Services", "Compliance", "Threat Detection", "Incident Response"],
-"digital-transformation": ["Process Automation", "Digital Strategy", "Change Management", "Technology Integration"],
-"it-consulting": ["Strategy", "Architecture", "Implementation", "Optimization"],
+"digital-transformation": ["Process Automation", "Digital Strategy", "Change Management", "Technology Integration"],;
+"it-consulting": ["Strategy", "Architecture", "Implementation", "Optimization"],;
 "software-development": ["Custom Development", "API Integration", "Maintenance", "Support"];
 };
 
@@ -242,7 +262,11 @@ professional: { name: "Professional", multiplier: 1.5 };
 enterprise: { name: "Enterprise", multiplier: 2.5 }
 };
 export const CONTACT_INFO = {;
+<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+=======
+phone: "+1 302 464 0950";,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function ZionHireAI() {
@@ -31,4 +32,39 @@ size="lg"
       </div>
     </div>
   );
+=======
+import React from "react";
+
+interface Service {
+id: string;,
+name: string;
+}
+
+export default function ZionHireAI() {
+const { isWhitelabel brandName primaryColor } = useWhitelabel();
+const { isAuthenticated } = useAuth();
+return (
+<>;
+</p>;
+<Button;
+size="lg";
+className="bg-zion-purple hover:bg-zion-purple-light text-white"
+asChild;
+>;
+<Link href="/enterprise/demo">Schedule a Demo</Link>            </Button>            </p>;
+<Button;
+size="lg";
+className="bg-zion-purple hover: bg-zion-purple-light text-white"
+asChild;
+>;
+<Link href="/enterprise/demo">;
+Schedule a Demo;
+</Link>;
+</Button>;
+</div>;
+</section>;
+</main>;
+</>;
+)
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

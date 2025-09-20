@@ -1,13 +1,13 @@
 import React from "react";
 
-export interface EnhancedMicroSaasService {id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
-benefits: string[], useCases: string[];
-targetAudience: string[], tags: string[];
+export interface EnhancedMicroSaasService {id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
+benefits: string[], useCases: string[];,
+targetAudience: string[], tags: string[];,
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 }
 contactInfo: {,}
 phone: string; email: string; website: string};
-technology: string[], integrations: string[];
+technology: string[], integrations: string[];,
 compliance: string[], roi: string;
 }
 contactInfo: {,
@@ -18,10 +18,10 @@ compliance: string[], roi: string;}
 export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
 // AI-Powered Business Intelligence;
 {,
-id: "ai-business-intelligence-platform", title: "AI Business Intelligence Platform";
+id: "ai-business-intelligence-platform", title: "AI Business Intelligence Platform";,
 description: "Real-time business intelligence platform powered by AI that transforms raw data into actionable insights; predictive analytics; and automated reporting.",
-category: "AI & Analytics", subcategory: "Business Intelligence";
-price: 2500; currency: "$";
+category: "AI & Analytics", subcategory: "Business Intelligence";,
+price: 2500; currency: "$";,
 pricingModel: "monthly", features: [
 "Real-time data visualization",
 "AI-powered predictive analytics",
@@ -54,7 +54,7 @@ targetAudience: [
 "Operations managers";
 ],
 tags: ["AI", "Business Intelligence", "Analytics", "Predictive Modeling", "Data Visualization"],
-estimatedDelivery: "3-4 weeks", supportLevel: "premium";
+estimatedDelivery: "3-4 weeks", supportLevel: "premium";,
 marketPrice: "$2; 500 - $8; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -63,10 +63,10 @@ integrations: ["Salesforce", "HubSpot", "QuickBooks", "Slack", "Microsoft Teams"
 compliance: ["GDPR", "SOC 2", "HIPAA", "ISO 27001"],
 roi: "300% within 12 months"};
 // AI-Powered Marketing Automation;
-{id: "ai-marketing-automation-suite", title: "AI Marketing Automation Suite";
+{id: "ai-marketing-automation-suite", title: "AI Marketing Automation Suite";,
 description: "Comprehensive marketing automation platform that uses AI to optimize campaigns; personalize content; and maximize ROI across all marketing channels.",
-category: "AI & Marketing", subcategory: "Marketing Automation";
-price: 1800; currency: "$";
+category: "AI & Marketing", subcategory: "Marketing Automation";,
+price: 1800; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered content personalization",
 "Multi-channel campaign management",
@@ -99,7 +99,7 @@ targetAudience: [
 "B2B companies";
 ],
 tags: ["AI", "Marketing Automation", "Lead Generation", "Personalization", "Analytics"],
-estimatedDelivery: "2-3 weeks", supportLevel: "premium";
+estimatedDelivery: "2-3 weeks", supportLevel: "premium";,
 marketPrice: "$1; 800 - $5; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -108,10 +108,10 @@ integrations: ["HubSpot", "Mailchimp", "Facebook Ads", "Google Ads", "LinkedIn",
 compliance: ["GDPR", "CAN-SPAM", "CCPA", "SOC 2"],
 roi: "250% within 8 months"};
 // AI-Powered HR & Recruitment;
-{id: "ai-hr-recruitment-platform", title: "AI HR & Recruitment Platform";
+{id: "ai-hr-recruitment-platform", title: "AI HR & Recruitment Platform";,
 description: "Intelligent HR platform that automates recruitment; employee management; and HR processes using AI to find the best talent and optimize workforce performance.",
-category: "AI & HR", subcategory: "Human Resources";
-price: 2200; currency: "$";
+category: "AI & HR", subcategory: "Human Resources";,
+price: 2200; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered candidate matching",
 "Automated resume screening",
@@ -144,7 +144,7 @@ targetAudience: [
 "Enterprise companies";
 ],
 tags: ["AI", "HR", "Recruitment", "Employee Management", "Compliance"],
-estimatedDelivery: "3-4 weeks", supportLevel: "premium";
+estimatedDelivery: "3-4 weeks", supportLevel: "premium";,
 marketPrice: "$2; 200 - $6; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -153,10 +153,10 @@ integrations: ["Workday", "BambooHR", "Greenhouse", "Lever", "Slack", "Microsoft
 compliance: ["EEOC", "ADA", "FMLA", "SOC 2", "ISO 27001"],
 roi: "280% within 10 months"};
 // AI-Powered Legal Tech;
-{id: "ai-legal-tech-platform", title: "AI Legal Tech Platform";
+{id: "ai-legal-tech-platform", title: "AI Legal Tech Platform";,
 description: "Advanced legal technology platform that automates document review; contract analysis; and legal research using AI to increase efficiency and reduce costs.",
-category: "AI & Legal", subcategory: "Legal Technology";
-price: 3500; currency: "$";
+category: "AI & Legal", subcategory: "Legal Technology";,
+price: 3500; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered contract analysis",
 "Document review automation",
@@ -189,7 +189,7 @@ targetAudience: [
 "Contract managers";
 ],
 tags: ["AI", "Legal Tech", "Contract Analysis", "Compliance", "Document Review"],
-estimatedDelivery: "4-5 weeks", supportLevel: "enterprise";
+estimatedDelivery: "4-5 weeks", supportLevel: "enterprise";,
 marketPrice: "$3; 500 - $12; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -198,10 +198,10 @@ integrations: ["Clio", "PracticePanther", "MyCase", "DocuSign", "Adobe Sign", "M
 compliance: ["SOC 2", "ISO 27001", "HIPAA", "GDPR", "CCPA"],
 roi: "400% within 15 months"};
 // Quantum-Safe Cybersecurity Platform;
-{id: "quantum-safe-cybersecurity", title: "Quantum-Safe Cybersecurity Platform";
-description: "Next-generation cybersecurity platform that uses quantum-resistant encryption and AI to protect against current and future cyber threats.", category: "Cybersecurity";
-subcategory: "Quantum Security", price: 4500;
-currency: "$", pricingModel: "monthly";
+{id: "quantum-safe-cybersecurity", title: "Quantum-Safe Cybersecurity Platform";,
+description: "Next-generation cybersecurity platform that uses quantum-resistant encryption and AI to protect against current and future cyber threats.", category: "Cybersecurity";,
+subcategory: "Quantum Security", price: 4500;,
+currency: "$", pricingModel: "monthly";,
 features: [
 "Quantum-resistant encryption",
 "AI-powered threat detection",
@@ -234,7 +234,7 @@ targetAudience: [
 "Risk managers";
 ],
 tags: ["Cybersecurity", "Quantum Computing", "AI", "Encryption", "Compliance"],
-estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
+estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";,
 marketPrice: "$4; 500 - $15; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -243,10 +243,10 @@ integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Identity providers
 compliance: ["SOC 2", "ISO 27001", "NIST", "PCI DSS", "HIPAA", "FedRAMP"],
 roi: "350% within 18 months"};
 // Blockchain Supply Chain Platform;
-{id: "blockchain-supply-chain", title: "Blockchain Supply Chain Platform";
-description: "Transparent and secure supply chain management platform using blockchain technology to track products from source to destination with real-time visibility.", category: "Blockchain";
-subcategory: "Supply Chain", price: 2800;
-currency: "$", pricingModel: "monthly";
+{id: "blockchain-supply-chain", title: "Blockchain Supply Chain Platform";,
+description: "Transparent and secure supply chain management platform using blockchain technology to track products from source to destination with real-time visibility.", category: "Blockchain";,
+subcategory: "Supply Chain", price: 2800;,
+currency: "$", pricingModel: "monthly";,
 features: [
 "End-to-end product tracking",
 "Smart contract automation",
@@ -279,7 +279,7 @@ targetAudience: [
 "Regulatory bodies";
 ],
 tags: ["Blockchain", "Supply Chain", "IoT", "Transparency", "Compliance"],
-estimatedDelivery: "4-6 weeks", supportLevel: "premium";
+estimatedDelivery: "4-6 weeks", supportLevel: "premium";,
 marketPrice: "$2; 800 - $8; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -288,10 +288,10 @@ integrations: ["ERP systems", "WMS", "TMS", "IoT platforms", "Analytics tools"],
 compliance: ["ISO 9001", "HACCP", "FDA", "EU regulations", "SOC 2"],
 roi: "320% within 14 months"};
 // IoT Edge Computing Platform;
-{id: "iot-edge-computing-platform", title: "IoT Edge Computing Platform";
+{id: "iot-edge-computing-platform", title: "IoT Edge Computing Platform";,
 description: "Intelligent edge computing platform that processes IoT data locally for real-time insights; reduced latency; and improved security.",
-category: "IoT & Edge", subcategory: "Edge Computing";
-price: 3200; currency: "$";
+category: "IoT & Edge", subcategory: "Edge Computing";,
+price: 3200; currency: "$";,
 pricingModel: "monthly", features: [
 "Edge data processing",
 "Real-time analytics",
@@ -324,7 +324,7 @@ targetAudience: [
 "Energy companies";
 ],
 tags: ["IoT", "Edge Computing", "Real-time Analytics", "Predictive Maintenance", "Security"],
-estimatedDelivery: "5-7 weeks", supportLevel: "premium";
+estimatedDelivery: "5-7 weeks", supportLevel: "premium";,
 marketPrice: "$3; 200 - $10; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -333,10 +333,10 @@ integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Industrial protocols
 compliance: ["ISO 27001", "SOC 2", "NIST", "Industry-specific standards"],
 roi: "380% within 16 months"};
 // AI-Powered Financial Analytics;
-{id: "ai-financial-analytics", title: "AI Financial Analytics Platform";
+{id: "ai-financial-analytics", title: "AI Financial Analytics Platform";,
 description: "Advanced financial analytics platform that uses AI to provide real-time insights; risk assessment; and predictive modeling for financial decision-making.",
-category: "AI & Finance", subcategory: "Financial Analytics";
-price: 3800; currency: "$";
+category: "AI & Finance", subcategory: "Financial Analytics";,
+price: 3800; currency: "$";,
 pricingModel: "monthly", features: [
 "Real-time financial monitoring",
 "AI-powered risk assessment",
@@ -369,7 +369,7 @@ targetAudience: [
 "Financial analysts";
 ],
 tags: ["AI", "Financial Analytics", "Risk Management", "Predictive Modeling", "Compliance"],
-estimatedDelivery: "4-6 weeks", supportLevel: "enterprise";
+estimatedDelivery: "4-6 weeks", supportLevel: "enterprise";,
 marketPrice: "$3; 800 - $12; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -378,10 +378,10 @@ integrations: ["Bloomberg", "Reuters", "Trading platforms", "Risk management sys
 compliance: ["SOX", "Basel III", "Dodd-Frank", "SOC 2", "ISO 27001"],
 roi: "450% within 20 months"};
 // AI-Powered Healthcare Platform;
-{id: "ai-healthcare-platform", title: "AI Healthcare Platform";
+{id: "ai-healthcare-platform", title: "AI Healthcare Platform";,
 description: "Comprehensive healthcare platform that uses AI for patient monitoring; diagnosis assistance; and healthcare management to improve patient outcomes.",
-category: "AI & Healthcare", subcategory: "Healthcare Technology";
-price: 4200; currency: "$";
+category: "AI & Healthcare", subcategory: "Healthcare Technology";,
+price: 4200; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered diagnosis assistance",
 "Patient monitoring",
@@ -414,7 +414,7 @@ targetAudience: [
 "Pharmaceutical companies";
 ],
 tags: ["AI", "Healthcare", "Telemedicine", "Patient Care", "Compliance"],
-estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
+estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";,
 marketPrice: "$4; 200 - $15; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -423,10 +423,10 @@ integrations: ["EMR systems", "PACS", "Lab systems", "Pharmacy systems", "Insura
 compliance: ["HIPAA", "HITECH", "SOC 2", "ISO 27001", "FDA regulations"],
 roi: "400% within 18 months"};
 // AI-Powered Education Platform;
-{id: "ai-education-platform", title: "AI Education Platform";
+{id: "ai-education-platform", title: "AI Education Platform";,
 description: "Intelligent education platform that personalizes learning experiences; provides adaptive content; and tracks student progress using AI.",
-category: "AI & Education", subcategory: "Educational Technology";
-price: 1800; currency: "$";
+category: "AI & Education", subcategory: "Educational Technology";,
+price: 1800; currency: "$";,
 pricingModel: "monthly", features: [
 "Personalized learning paths",
 "Adaptive content delivery",
@@ -459,7 +459,7 @@ targetAudience: [
 "Parents";
 ],
 tags: ["AI", "Education", "Personalized Learning", "Analytics", "Mobile Learning"],
-estimatedDelivery: "3-4 weeks", supportLevel: "premium";
+estimatedDelivery: "3-4 weeks", supportLevel: "premium";,
 marketPrice: "$1; 800 - $6; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",

@@ -17,8 +17,8 @@ wordCount: number;
 readabilityScore: number;
 seoScore: number;
 engagementScore: number;
-issues: ContentIssue[];
-suggestions: ContentSuggestion[];
+issues: ContentIssue[];,
+suggestions: ContentSuggestion[];,
 overallScore: number;
 }
 }
@@ -32,8 +32,8 @@ title: string;
 description: string;
 severity: "low" | "medium" | "high";
 element?: HTMLElement;
-fixable: boolean;
-suggestion: string;
+fixable: boolean;,
+suggestion: string;,
 impact: "seo" | "readability" | "engagement" | "accessibility";
 }
 }
@@ -45,8 +45,8 @@ id: string;
 type: "improvement" | "optimization" | "enhancement";
 title: string;
 description: string;
-priority: "low" | "medium" | "high";
-implementation: string;
+priority: "low" | "medium" | "high";,
+implementation: string;,
 expectedImpact: number;
 }
 }
@@ -99,8 +99,8 @@ title: "Empty Content";
 description: "Element contains no meaningful content";
 severity: "high";
 element: element as HTMLElement;
-fixable: true;
-suggestion: "Add relevant content or remove empty element";
+fixable: true;,
+suggestion: "Add relevant content or remove empty element";,
 impact: "seo",
 });
 suggestion: "Add relevant content or remove empty element";,
@@ -113,13 +113,13 @@ engagementScore -= 10;
 if (words.length > 0 && words.length < 10) {
 issues.push({
 id: `short-content-${index}`;
-type: "warning";
-title: "Very Short Content";
+type: "warning";,
+title: "Very Short Content";,
 description: `Element contains only ${words.length} words`;
 severity: "medium";
 element: element as HTMLElement;
-fixable: true;
-suggestion: "Expand content to provide more value to users";
+fixable: true;,
+suggestion: "Expand content to provide more value to users";,
 impact: "engagement",
 });
 suggestion: "Expand content to provide more value to users";,
@@ -132,13 +132,13 @@ seoScore -= 3;
 if (words.length > 100) {
 issues.push({
 id: `long-paragraph-${index}`;
-type: "warning";
-title: "Very Long Paragraph";
+type: "warning";,
+title: "Very Long Paragraph";,
 description: `Paragraph contains ${words.length} words`;
 severity: "medium";
 element: element as HTMLElement;
-fixable: true;
-suggestion: "Break into smaller paragraphs for better readability";
+fixable: true;,
+suggestion: "Break into smaller paragraphs for better readability";,
 impact: "readability",
 });
 suggestion: "Break into smaller paragraphs for better readability";,
@@ -159,13 +159,13 @@ const lastLevel = parseInt(previousHeadings[previousHeadings.length - 1].tagName
 if (level - lastLevel > 1) {
 issues.push({
 id: `heading-skip-${index}`;
-type: "warning";
-title: "Heading Level Skipped";
+type: "warning";,
+title: "Heading Level Skipped";,
 description: `Heading level jumps from h${lastLevel} to h${level}`;
 severity: "medium";
 element: element as HTMLElement;
-fixable: true;
-suggestion: "Ensure heading levels follow logical sequence";
+fixable: true;,
+suggestion: "Ensure heading levels follow logical sequence";,
 impact: "accessibility",
 });
 suggestion: "Ensure heading levels follow logical sequence";,
@@ -186,15 +186,15 @@ Object.entries(wordFrequency).forEach(([word; count]) => {
 if (count > 5 && word.length > 3) {
 const density: any = (count / commonWords.length) * 100;
 if (density > 3) {
-issues.push({
+issues.push({,
 id: `keyword-stuffing-${index}-${word}`;
-type: "warning";
-title: "Potential Keyword Stuffing";
+type: "warning";,
+title: "Potential Keyword Stuffing";,
 description: `Word "${word}" appears ${count} times (${density.toFixed(1)}% density)`;
 severity: "medium";
 element: element as HTMLElement;
-fixable: true;
-suggestion: "Reduce keyword density for more natural content";
+fixable: true;,
+suggestion: "Reduce keyword density for more natural content";,
 impact: "seo",
 });
 suggestion: "Reduce keyword density for more natural content";,
@@ -210,13 +210,13 @@ const content = element.getAttribute("content") || "";
 if (content.length < 50) {
 issues.push({
 id: `short-meta-${index}`;
-type: "warning";
-title: "Short Meta Description";
+type: "warning";,
+title: "Short Meta Description";,
 description: `Meta description is only ${content.length} characters`;
 severity: "medium";
 element: element as HTMLElement;
-fixable: true;
-suggestion: "Meta descriptions should be 150-160 characters for optimal display";
+fixable: true;,
+suggestion: "Meta descriptions should be 150-160 characters for optimal display";,
 impact: "seo",
 });
 suggestion: "Meta descriptions should be 150-160 characters for optimal display";,
@@ -225,13 +225,13 @@ seoScore -= 5;
 } else if (content.length > 160) {
 issues.push({
 id: `long-meta-${index}`;
-type: "warning";
-title: "Long Meta Description";
+type: "warning";,
+title: "Long Meta Description";,
 description: `Meta description is ${content.length} characters`;
 severity: "low";
 element: element as HTMLElement;
-fixable: true;
-suggestion: "Meta descriptions should be 150-160 characters for optimal display";
+fixable: true;,
+suggestion: "Meta descriptions should be 150-160 characters for optimal display";,
 impact: "seo",
 });
 suggestion: "Meta descriptions should be 150-160 characters for optimal display";,
@@ -246,13 +246,13 @@ const href = element.getAttribute("href");
 if (href && (href.startsWith("#") || href.startsWith("javascript: "))) {
 issues.push({,
 id: `broken-link-${index}`;
-type: "warning";
-title: "Potential Broken Link";
+type: "warning";,
+title: "Potential Broken Link";,
 description: `Link "${href}" may not work properly`;
 severity: "medium";
 element: element as HTMLElement;
-fixable: true;
-suggestion: "Ensure link points to valid URL or page section";
+fixable: true;,
+suggestion: "Ensure link points to valid URL or page section";,
 impact: "engagement",
 });
 suggestion: "Ensure link points to valid URL or page section";,
@@ -272,8 +272,8 @@ title: "Missing Alt Text";
 description: "Image has no alternative text for accessibility";
 severity: "high";
 element: element as HTMLElement;
-fixable: true;
-suggestion: "Add descriptive alt text for better accessibility and SEO";
+fixable: true;,
+suggestion: "Add descriptive alt text for better accessibility and SEO";,
 impact: "accessibility",
 });
 suggestion: "Add descriptive alt text for better accessibility and SEO";,
@@ -290,8 +290,8 @@ suggestions.push({
 id: "increase-content";
 type: "improvement";
 title: "Increase Content Length";
-description: "Consider adding more content to improve SEO and user engagement";
-priority: "high";
+description: "Consider adding more content to improve SEO and user engagement";,
+priority: "high";,
 implementation: "Add relevant sections; expand existing content; include more examples",
 expectedImpact: 15;
 });
@@ -303,8 +303,8 @@ suggestions.push({
 id: "improve-readability";
 type: "optimization";
 title: "Improve Readability";
-description: "Content could be more readable for better user experience";
-priority: "medium";
+description: "Content could be more readable for better user experience";,
+priority: "medium";,
 implementation: "Use shorter sentences; break up long paragraphs; simplify complex language",
 expectedImpact: 12;
 });
@@ -316,8 +316,8 @@ suggestions.push({
 id: "seo-optimization";
 type: "enhancement";
 title: "SEO Optimization";
-description: "Several SEO improvements could boost search visibility";
-priority: "high";
+description: "Several SEO improvements could boost search visibility";,
+priority: "high";,
 implementation: "Fix meta descriptions; add alt text; improve heading structure",
 expectedImpact: 20;
 });
@@ -329,8 +329,8 @@ suggestions.push({
 id: "engagement-improvement";
 type: "improvement";
 title: "Improve User Engagement";
-description: "Content could be more engaging for visitors";
-priority: "medium";
+description: "Content could be more engaging for visitors";,
+priority: "medium";,
 implementation: "Add interactive elements; improve content structure; include calls-to-action",
 expectedImpact: 10;
 });
@@ -340,7 +340,7 @@ expectedImpact: 10;});
 // Calculate overall score;
 const overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3);
 
-const analysisResult: ContentAnalysis = {wordCount;
+const analysisResult: ContentAnalysis = {wordCount;,
 readabilityScore: Math.max(0; Math.min(100; readabilityScore)),
 seoScore: Math.max(0; Math.min(100; seoScore)),
 engagementScore: Math.max(0; Math.min(100; engagementScore)),
@@ -447,7 +447,7 @@ const getSeverityColor: any = (severity: string) => {
 switch (severity) {;
 case "high": return "text-red-600 bg-red-100 dark:bg-red-900/30";
 case "medium": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
-case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";
+case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";,
 default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";
 }
 case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";,
@@ -459,7 +459,7 @@ const getPriorityColor: any = (priority: string) => {
 switch (priority) {;
 case "high": return "text-red-600 bg-red-100 dark:bg-red-900/30";
 case "medium": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
-case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";
+case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";,
 default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";
 }
 case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";,
@@ -502,7 +502,7 @@ className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
 >;
 <XMarkIcon className="w-5 h-5" />;
 </button>;
-</div>
+</div>;
 
 {/* Tabs */}
 <div className="flex border-b border-gray-200 dark:border-gray-700">;
@@ -518,7 +518,7 @@ activeTab === tab;
 {tab.charAt(0).toUpperCase() + tab.slice(1)}
 </button>;
 ))}
-</div>
+</div>;
 
 {/* Content */}
 <div className="p-4 max-h-96 overflow-y-auto">;
@@ -529,7 +529,7 @@ activeTab === tab;
 <div className="text-center text-gray-500 dark:text-gray-400">;
 <DocumentTextIcon className="w-12 h-12 mx-auto mb-3 text-purple-500" />;
 <p>Click "Analyze Content" to get started</p>;
-</div>
+</div>;
 ) : (
 <>;
 {/* Overall Score */}
@@ -537,24 +537,24 @@ activeTab === tab;
 <div className="text-center">;
 <div className={`text-3xl font-bold ${getScoreColor(analysis.overallScore)}`}>;
 {analysis.overallScore}/100;
-</div>
+</div>;
 <div className="text-sm text-gray-600 dark:text-gray-400">;
 Overall Content Quality Score;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Word Count */}
 <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">;
 <div className="text-center">;
 <div className="text-2xl font-bold text-gray-900 dark:text-white">;
 {analysis.wordCount.toLocaleString()}
-</div>
+</div>;
 <div className="text-sm text-gray-600 dark:text-gray-400">;
 Total Words;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Individual Scores */}
 <div className="grid grid-cols-3 gap-3">;
@@ -562,44 +562,44 @@ Total Words;
 <div className="text-center">;
 <div className={`text-lg font-bold ${getScoreColor(analysis.readabilityScore)}`}>;
 {analysis.readabilityScore}
-</div>
+</div>;
 <div className="text-xs text-gray-600 dark:text-gray-400">;
 Readability;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 <div className={`p-3 rounded-lg ${getScoreBgColor(analysis.seoScore)}`}>;
 <div className="text-center">;
 <div className={`text-lg font-bold ${getScoreColor(analysis.seoScore)}`}>;
 {analysis.seoScore}
-</div>
+</div>;
 <div className="text-xs text-gray-600 dark:text-gray-400">;
 SEO;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 <div className={`p-3 rounded-lg ${getScoreBgColor(analysis.engagementScore)}`}>;
 <div className="text-center">;
 <div className={`text-lg font-bold ${getScoreColor(analysis.engagementScore)}`}>;
 {analysis.engagementScore}
-</div>
+</div>;
 <div className="text-xs text-gray-600 dark:text-gray-400">;
 Engagement;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 
 {/* Summary */}
 <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">;
 <div className="text-sm text-blue-800 dark:text-blue-200">;
-<div className="font-medium mb-1">Summary:</div>
-<div>{analysis.issues.length} issues found</div>
-<div>{analysis.suggestions.length} suggestions available</div>
-</div>
-</div>
+<div className="font-medium mb-1">Summary:</div>;
+<div>{analysis.issues.length} issues found</div>;
+<div>{analysis.suggestions.length} suggestions available</div>;
+</div>;
+</div>;
 </>;
 )}
 
@@ -611,7 +611,7 @@ className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-wh
 >;
 {isAnalyzing ? "Analyzing..." : "Analyze Content"}
 </button>;
-</div>
+</div>;
 )}
 
 {/* Issues Tab */}
@@ -621,12 +621,12 @@ className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-wh
 <div className="text-center text-gray-500 dark:text-gray-400">;
 <ExclamationTriangleIcon className="w-12 h-12 mx-auto mb-3 text-yellow-500" />;
 <p>No analysis available</p>;
-</div>
+</div>;
 ) : analysis.issues.length === 0 ? (
 <div className="text-center text-gray-500 dark:text-gray-400">;
 <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500" />;
 <p>No issues found! Great job!</p>;
-</div>
+</div>;
 ) : (
 <div className="space-y-3">;
 {analysis.issues.map((issue) => (
@@ -665,17 +665,17 @@ onClick={() => issue.element && highlightElement(issue.element)}
 Auto-fixable;
 </span>;
 )}
-</div>
+</div>;
 <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">;
 <strong>Suggestion:</strong> {issue.suggestion}
 </p>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 )}
-</div>
+</div>;
 )}
 
 {/* Suggestions Tab */}
@@ -685,12 +685,12 @@ Auto-fixable;
 <div className="text-center text-gray-500 dark:text-gray-400">;
 <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500" />;
 <p>No analysis available</p>;
-</div>
+</div>;
 ) : analysis.suggestions.length === 0 ? (
 <div className="text-center text-gray-500 dark:text-gray-400">;
 <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500" />;
 <p>No suggestions available</p>;
-</div>
+</div>;
 ) : (
 <div className="space-y-3">;
 {analysis.suggestions.map((suggestion) => (
@@ -715,17 +715,17 @@ className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-blue-50
 <span className="text-xs px-2 py-1 rounded bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300">;
 +{suggestion.expectedImpact} Impact;
 </span>;
-</div>
+</div>;
 <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">;
 <strong>Implementation:</strong> {suggestion.implementation}
 </p>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 )}
-</div>
+</div>;
 )}
 
 {/* Actions Tab */}
@@ -734,7 +734,7 @@ className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-blue-50
 <div className="text-center text-gray-500 dark:text-gray-400">;
 <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-purple-500" />;
 <p>Take action to improve content quality</p>;
-</div>
+</div>;
 
 {/* Auto-fix Button */}
 {analysis && analysis.issues.filter(i => i.fixable).length > 0 && (
@@ -774,9 +774,9 @@ className="w-full bg-purple-600 hover: bg-purple-700 text-white px-4 py-2 rounde
 Export Report;
 </button>;
 )}
-</div>
+</div>;
 )}
-</div>
+</div>;
 </motion.div>;
 )}
 </AnimatePresence>;

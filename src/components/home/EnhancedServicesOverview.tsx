@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -24,7 +24,7 @@ Clock;
 Globe} from "lucide-react, ";
 
 // Mock data for enhanced services;
-const ENHANCED_SERVICES = [
+const ENHANCED_SERVICES = [;
 {;
 id: "ai-1";
 title: "AI-Powered Business Intelligence";
@@ -32,8 +32,8 @@ description: "Advanced AI algorithms that transform your data into actionable bu
 category: "AI & Machine Learning";
 pricingModel: "subscription";
 availability: "immediate";
-rating: 4.9;
-price: 2999;
+rating: 4.9;,
+price: 2999;,
 features: ["Predictive analytics", "Natural language processing", "Real-time insights", "Custom dashboards"],
 benefits: ["Increased efficiency", "Better decision making", "Cost reduction"],
 tags: ["AI", "Analytics", "Business Intelligence"],
@@ -46,8 +46,8 @@ description: "Comprehensive security solution protecting your business from mode
 category: "Cybersecurity";
 pricingModel: "subscription";
 availability: "immediate";
-rating: 4.8;
-price: 1999;
+rating: 4.8;,
+price: 1999;,
 features: ["Threat detection", "24/7 monitoring", "Incident response", "Compliance reporting"],
 benefits: ["Enhanced security", "Compliance assurance", "Risk mitigation"],
 tags: ["Security", "Compliance", "Enterprise"],
@@ -60,8 +60,8 @@ description: "Optimize your cloud costs and performance with intelligent automat
 category: "Cloud & DevOps";
 pricingModel: "usage-based";
 availability: "within-week";
-rating: 4.7;
-price: 1499;
+rating: 4.7;,
+price: 1499;,
 features: ["Cost optimization", "Performance monitoring", "Auto-scaling", "Security compliance"],
 benefits: ["Cost savings", "Improved performance", "Scalability"],
 tags: ["Cloud", "DevOps", "Optimization"],
@@ -124,8 +124,8 @@ Explore All Services;
 <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">;
 Schedule Consultation;
 </Button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Featured Services Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
@@ -136,11 +136,11 @@ Schedule Consultation;
 <div className="flex items-center gap-2 text-zion-cyan">;
 {getCategoryIcon(service.category)}
 <span className="text-sm font-medium">{service.category}</span>;
-</div>
+</div>;
 <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">;
 {service.pricingModel}
 </Badge>;
-</div>
+</div>;
 
 <CardTitle className="text-lg text-white mb-2 line-clamp-2">;
 {service.title}
@@ -159,22 +159,22 @@ ${service.price.toLocaleString()}
 <span className="text-sm text-zion-slate-light font-normal">;
 /{service.pricingModel === "subscription" ? "month" : "project"}
 </span>;
-</div>
+</div>;
 <div className="flex items-center gap-1">;
 <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />;
 <span className="text-white font-medium">{service.rating}</span>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Key Benefits */}
 <div className="space-y-2">;
 {service.benefits.slice(0; 2).map((benefit; index) => (
 <div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">;
-<div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+<div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>;
 {benefit}
-</div>
+</div>;
 ))}
-</div>
+</div>;
 
 {/* Tags */}
 <div className="flex flex-wrap gap-2">;
@@ -183,7 +183,7 @@ ${service.price.toLocaleString()}
 {tag}
 </Badge>;
 ))}
-</div>
+</div>;
 
 {/* Availability and Location */}
 <div className="flex items-center justify-between text-sm">;
@@ -194,12 +194,12 @@ ${service.price.toLocaleString()}
 service.availability === "within-week" ? "Within 1 Week" :
 service.availability === "within-month" ? "Within 1 Month" : "Contact Us"}
 </span>;
-</div>
+</div>;
 <div className="flex items-center gap-1 text-zion-slate-light">;
 <Globe className="w-4 h-4" />;
 {service.location}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Action Button */}
 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
@@ -208,7 +208,7 @@ Get Started;
 </CardContent>;
 </Card>;
 ))}
-</div>
+</div>;
 
 {/* Service Categories Overview */}
 <div className="bg-zion-blue/20 rounded-2xl p-8 border border-zion-blue-light">;
@@ -217,14 +217,18 @@ Get Started;
 <p className="text-zion-slate-light">;
 Comprehensive coverage across all major technology domains;
 </p>;
-</div>
+</div>;
 
 <div className="grid grid-cols-2 md:grid-cols-5 gap-4">;
 {ENHANCED_SERVICES.reduce((acc; service) => {
 if (!acc.find(cat => cat.category === service.category)) {
 acc.push({
+<<<<<<< HEAD
 category: service.category;
 count: ENHANCED_SERVICES.filter(s => s.category === service.category).length;
+=======
+category: service.category;,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 count: ENHANCED_SERVICES.filter(s => s.category === service.category).length;,
 icon: getCategoryIcon(service.category)});
 }
@@ -233,13 +237,13 @@ return acc;
 <div key={index} className="text-center p-4 rounded-lg bg-zion-blue-dark/50 border border-zion-blue-light hover: border-zion-purple/50 transition-colors">;
 <div className="text-zion-cyan mb-2 flex justify-center">;
 {cat.icon}
-</div>
-<div className="text-white font-medium text-sm mb-1">{cat.category}</div>
-<div className="text-zion-slate-light text-xs">{cat.count} services</div>
-</div>
+</div>;
+<div className="text-white font-medium text-sm mb-1">{cat.category}</div>;
+<div className="text-zion-slate-light text-xs">{cat.count} services</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* CTA Section */}
 <div className="text-center mt-16">;
@@ -258,26 +262,26 @@ Schedule Free Consultation;
 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">;
 Download Service Catalog;
 </Button>;
-</div>
+</div>;
 <div className="mt-6 text-zion-slate-light text-sm">;
 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
 <div className="flex items-center gap-2">;
 <Globe className="w-4 h-4 text-zion-cyan" />;
 <span>+1 302 464 0950</span>;
-</div>
+</div>;
 <div className="flex items-center gap-2">;
 <Globe className="w-4 h-4 text-zion-cyan" />;
 <span>kleber@ziontechgroup.com</span>;
-</div>
+</div>;
 <div className="flex items-center gap-2">;
 <Globe className="w-4 h-4 text-zion-cyan" />;
 <span>https://ziontechgroup.com</span>;
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
+</div>;
+</div>;
 </section>;
 );
 };

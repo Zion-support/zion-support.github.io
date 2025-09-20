@@ -3,8 +3,8 @@ import { Link } from "react-router-dom, ";
 
 const Docs: React.FC = () => {
 const docCategories = [
-{,
-title: "Getting Started", description: "Quick start guides and basic setup instructions",
+{,;
+title: "Getting Started", description: "Quick start guides and basic setup instructions",;
 articles: [;
 { title: "Installation Guide", description: "Step-by-step installation instructions", readTime: "5 min", difficulty: "Beginner" };
 { title: "First Steps", description: "Create your first project and basic configuration", readTime: "10 min", difficulty: "Beginner" },
@@ -39,17 +39,18 @@ articles: [
 ];
 }
 ];
-const popularDocs = [
+const popularDocs = [;
 {;
-title: "Building Your First AI Model", category: "AI & Machine Learning";
+title: "Building Your First AI Model", category: "AI & Machine Learning";,
 readTime: "15 min", views: "2.1k",
 lastUpdated: "2 days ago"};
-{title: "API Integration Best Practices", category: "API Reference";
+{title: "API Integration Best Practices", category: "API Reference";,
 readTime: "12 min", views: "1.8k",
 lastUpdated: "1 week ago"};
-{title: "Security Configuration Guide", category: "Security & Compliance";
+{title: "Security Configuration Guide", category: "Security & Compliance";,
 readTime: "18 min", views: "1.5k",
 lastUpdated: "3 days ago"};
+<<<<<<< HEAD
 {title: "Performance Optimization Tips", category: "AI & Machine Learning";
 {
 title: "API Integration Best Practices", category: "API Reference";,
@@ -61,6 +62,9 @@ readTime: "18 min", views: "1.5k",
 lastUpdated: "3 days ago"};
 {
 title: "Performance Optimization Tips", category: "AI & Machine Learning";,
+=======
+{title: "Performance Optimization Tips", category: "AI & Machine Learning";,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 readTime: "22 min",
 views: "1.3k",
 lastUpdated: "5 days ago"}
@@ -80,7 +84,7 @@ Documentation;
 Comprehensive documentation; guides; and references to help you;
 build; deploy; and manage AI solutions with Zion Tech Group;
 </p>;
-</div>
+</div>;
 
 {/* Search Bar */}
 <div className="max-w-2xl mx-auto mb-16">;
@@ -93,8 +97,8 @@ className="w-full pl-6 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-whit
 <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300">;
 Search;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Documentation Categories */}
 <div className="mb-16">;
@@ -117,18 +121,18 @@ article.difficulty === "Intermediate" ? "bg-yellow-500/20 text-yellow-300 border
 }`}>;
 {article.difficulty}
 </span>;
-</div>
+</div>;
 <p className="text-gray-400 text-sm mb-2">{article.description}</p>;
 <div className="flex items-center justify-between text-xs text-gray-500">;
 <span>{article.readTime} read</span>;
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Popular Documentation */}
 <div className="mb-16">;
@@ -141,7 +145,7 @@ article.difficulty === "Intermediate" ? "bg-yellow-500/20 text-yellow-300 border
 {doc.category}
 </span>;
 <span className="text-xs text-gray-500">{doc.lastUpdated}</span>;
-</div>
+</div>;
 
 <h3 className="text-lg font-semibold text-white mb-3">{doc.title}</h3>;
 
@@ -149,13 +153,13 @@ article.difficulty === "Intermediate" ? "bg-yellow-500/20 text-yellow-300 border
 <div className="flex items-center gap-4 text-sm text-gray-400">;
 <span>{doc.readTime}</span>;
 <span>{doc.views} views</span>;
-</div>
+</div>;
 <span className="text-blue-400 text-sm">Read Guide →</span>;
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Quick Links */}
 <div className="mb-16">;
@@ -167,7 +171,7 @@ className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 ho
 >;
 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">;
 <span className="text-2xl">📚</span>;
-</div>
+</div>;
 <h3 className="text-xl font-semibold text-white mb-2">Video Tutorials</h3>;
 <p className="text-gray-300 text-sm">Step-by-step video guides for visual learners</p>;
 </Link>;
@@ -178,7 +182,7 @@ className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 ho
 >;
 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">;
 <span className="text-2xl">❓</span>;
-</div>
+</div>;
 <h3 className="text-xl font-semibold text-white mb-2">Help Center</h3>;
 <p className="text-gray-300 text-sm">Find answers to common questions and issues</p>;
 </Link>;
@@ -189,12 +193,12 @@ className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 ho
 >;
 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">;
 <span className="text-2xl">🆘</span>;
-</div>
+</div>;
 <h3 className="text-xl font-semibold text-white mb-2">Technical Support</h3>;
 <p className="text-gray-300 text-sm">Get help from our expert support team</p>;
 </Link>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* CTA Section */}
 <div className="text-center">;
@@ -217,12 +221,12 @@ className="inline-flex items-center px-6 py-3 border border-gray-600 text-white 
 >;
 Contact Support;
 </Link>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 </section>;
-</div>
+</div>;
 );
 };
 

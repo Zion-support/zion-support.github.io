@@ -1,3 +1,8 @@
+interface Service {
+id: string;,
+name: string;
+}
+
 import React from "react;";
 export function useScrollToTop() {// Simple hook to scroll to top;
 React.useEffect(() => {
@@ -18,6 +23,7 @@ export * from "./usePageViewTracking";
 export * from "./useReactId";
 export * from "./useScrollToTop";
 export * from "./usePostsByCategory";
+<<<<<<< HEAD
 import { useState } from 'react';
 export const useLocalStorage = (key: string; initialValue: unknown) => {const [ storedValue, setStoredValue ] = useState(() => {    try {
     const item = window.localStorage.getItem(key)
@@ -38,3 +44,22 @@ window.localStorage.setItem(key, JSON.stringify(valueToStore))
     }
   }
   return [storedValue, setValue] as const}
+=======
+import { useState } from "react";
+export const useLocalStorage: any = (key: string; initialValue: unknown) => {const [ storedValue; setStoredValue ] = useState(() => {    try {
+const item = window.localStorage.getItem(key);
+return item ? JSON.parse(item) : initialValue} catch {export const useLocalStorage: any = (key: string; initialValue: unknown) => {
+return initialValue}
+})
+const setValue: any = (value: unknown;) => {
+try {
+const valueToStore = value instanceof Function ? value(storedValue) : value;
+window.localStorage.setItem(key; JSON.stringify(valueToStore))
+} catch (_error) {
+console.error("Error setting localStorage:", _error)
+}
+}
+return [storedValue; setValue] as const,
+}
+}
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

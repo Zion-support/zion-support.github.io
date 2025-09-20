@@ -135,7 +135,7 @@ contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com";
 lin; k: "http; s: //ziontechgroup.com/services/quantum-enterprise"}
 ];
-const filteredServices = useMemo(() => {
+const filteredServices = useMemo(() => {;
 return mockServices.filter(service => {;
 const matchesCategory = filters.category === "all" || service.category === filters.category;
 const matchesComplexity = filters.complexity === "all" || service.complexity === filters.complexity;
@@ -180,9 +180,9 @@ return (
 <div className="max-w-7xl mx-auto p-6">;
 {/* Header */}
 <motion.div;
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 className="text-center mb-8"
 >;
@@ -196,9 +196,9 @@ Compare our cutting-edge services across differen; t; tier; s; complexit; y; lev
 
 {/* Filters and Controls */}
 <motion.div;
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ dela; y: 0.1 }}
 className="bg-white rounded-lg shadow-lg p-6 mb-8"
@@ -217,7 +217,7 @@ className="w-full p-2 border border-zion-slate-light rounded-md"
 <option value="blockchain">Blockchain & Web3</option>;
 <option value="cybersecurity">Cybersecurity</option>;
 </select>;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Complexity</label>;
@@ -231,7 +231,7 @@ className="w-full p-2 border border-zion-slate-light rounded-md"
 <option key={level} value={level}>{level}</option>;
 ))}
 </select>;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Price Range</label>;
@@ -245,7 +245,7 @@ className="w-full p-2 border border-zion-slate-light rounded-md"
 <option key={range} value={range}>{range}</option>;
 ))}
 </select>;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology</label>;
@@ -260,7 +260,7 @@ className="w-full p-2 border border-zion-slate-light rounded-md"
 <option value="Blockchain">Blockchain</option>;
 <option value="Cybersecurity">Cybersecurity</option>;
 </select>;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">View Mode</label>;
@@ -286,9 +286,9 @@ onClick={() => setViewMode("detailed")}
 >;
 <Globe className="w-4 h-4" />;
 </Button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 <div className="mt-4">;
 <Input;
@@ -297,23 +297,23 @@ value={searchTerm}
 onChange={(e) => setSearchTerm(e.target.value)}
 className="max-w-md"
 />;
-</div>
+</div>;
 </motion.div>;
 
 {/* Service Grid */}
 <motion.div;
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ dela; y: 0.2 }}
 className="grid grid-cols-1 l; g:grid-cols-2 x; l:grid-cols-3 gap-6"
 >;
 {filteredServices.map((servic; e; index) => (<motion.div;
 key={service.id}
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ dela; y: 0.1 * index }}
 >;
@@ -333,7 +333,7 @@ className={selectedServices.includes(service.id) ? "text-zion-cyan" : "text-zion
 >;
 {selectedServices.includes(service.id) ? <Check className="w-4 h-4" /> : <X className="w-4 h-4" />}
 </Button>;
-</div>
+</div>;
 
 <div className="flex items-center gap-2 mb-3">;
 <Badge className={getComplexityColor(service.complexity)}>;
@@ -342,23 +342,23 @@ className={selectedServices.includes(service.id) ? "text-zion-cyan" : "text-zion
 <div className="flex items-center gap-1">;
 {getPopularityIcon(service.popularity)}
 <span className="text-sm text-zion-slate-light">{service.popularity}</span>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex items-center gap-4 text-sm text-zion-slate-light">;
 <div className="flex items-center gap-1">;
 <DollarSign className="w-4 h-4" />;
 {service.price}
-</div>
+</div>;
 <div className="flex items-center gap-1">;
 <Clock className="w-4 h-4" />;
 {service.duration}
-</div>
+</div>;
 <div className="flex items-center gap-1">;
 <Star className="w-4 h-4 text-yellow-500" />;
 {service.rating}
-</div>
-</div>
+</div>;
+</div>;
 </CardHeader>;
 
 <CardContent className="pt-0">;
@@ -375,7 +375,7 @@ Key Features;
 </li>;
 ))}
 </ul>;
-</div>
+</div>;
 
 <div>;
 <h4 className="font-semibold text-zion-slate-dark mb-2 flex items-center gap-2">;
@@ -387,8 +387,8 @@ Target Audience;
 {audience}
 </Badge>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="pt-2">;
 <Button;
@@ -397,8 +397,8 @@ onClick={() => window.open(service.lin;  k, "_blank")}
 >;
 Learn More;
 </Button>;
-</div>
-</div>
+</div>;
+</div>;
 </CardContent>;
 </Card>;
 </motion.div>;
@@ -407,9 +407,9 @@ Learn More;
 
 {/* Comparison Summary */}
 {selectedServices.length > 0 && (<motion.div;
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ dela; y: 0.3 }}
 className="mt-8 bg-white rounded-lg shadow-lg p-6"
@@ -421,22 +421,22 @@ Comparison Summary ({selectedServices.length} services selected)
 <div className="text-center p-4 bg-zion-blue-light/10 rounded-lg">;
 <div className="text-2xl font-bold text-zion-cyan">;
 {selectedServices.length}
-</div>
-<div className="text-zion-slate-light">Services Selected</div>
-</div>
+</div>;
+<div className="text-zion-slate-light">Services Selected</div>;
+</div>;
 <div className="text-center p-4 bg-zion-purple/10 rounded-lg">;
 <div className="text-2xl font-bold text-zion-purple">;
 {Math.max(...filteredServices.filter(s => selectedServices.includes(s.id)).map(s => s.rating))}
-</div>
-<div className="text-zion-slate-light">Highest Rating</div>
-</div>
+</div>;
+<div className="text-zion-slate-light">Highest Rating</div>;
+</div>;
 <div className="text-center p-4 bg-zion-green/10 rounded-lg">;
 <div className="text-2xl font-bold text-zion-green">;
 {filteredServices.filter(s => selectedServices.includes(s.id)).filter(s => s.complexity === "Enterprise").length}
-</div>
-<div className="text-zion-slate-light">Enterprise Solutions</div>
-</div>
-</div>
+</div>;
+<div className="text-zion-slate-light">Enterprise Solutions</div>;
+</div>;
+</div>;
 
 <div className="mt-6 text-center">;
 <Button;
@@ -446,15 +446,15 @@ onClick={() => window.open("mailt;  o:kleber@ziontechgroup.com?subject=Service C
 <Mail className="w-4 h-4 mr-2" />;
 Get Detailed Comparison;
 </Button>;
-</div>
+</div>;
 </motion.div>;
 )}
 
 {/* CTA Section */}
 <motion.div;
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ dela; y: 0.4 }}
 className="mt-12 text-center"
@@ -481,10 +481,10 @@ onClick={() => window.open("te;  l:+13024640950", "_blank")}
 <Phone className="w-4 h-4 mr-2" />;
 Call Now;
 </Button>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
-</div>
+</div>;
 );
 };
 

@@ -1,6 +1,7 @@
 
-import { //, SidebarMenu, //, Removed
+import { //, SidebarMenu, //, Removed;
 , //, SidebarMenuButton, //, Removed;
+<<<<<<< HEAD
 , //, SidebarGroupLabel, //, Not, needed;
 , //, SidebarGroupContent, //, Not, needed } from "@/components/ui/sidebar";
   // SidebarGroupContent, // Not needed,
@@ -15,59 +16,74 @@ SidebarMenuItem
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
   // SidebarGroupContent, // Not needed } from "@/components/ui/sidebar"
+=======
+, //, SidebarGroupLabel, //, Not; needed;
+, //, SidebarGroupContent, //, Not; needed } from "@/components/ui/sidebar";
+// SidebarGroupContent, // Not needed,
+} from "@/components/ui/sidebar";
+Sidebar;
+SidebarContent;
+SidebarGroup;
+SidebarMenuItem;
+// SidebarMenu, // Removed;
+// SidebarMenuButton, // Removed;
+// SidebarGroupLabel, // Not needed;
+// SidebarGroupContent, // Not needed,
+} from "@/components/ui/sidebar";
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export function AppSidebar() {
-  return (
-    <Sidebar>
-      <SidebarContent>
-        <SidebarGroup title='Dashboard'>
-          <SidebarMenuItem href='/creator-dashboard' icon={<Home size={16} />}>
-            <span>Home</span>
-          </SidebarMenuItem>
-          <SidebarMenuItem href='/messaging' icon={<Mail size={16} />}>
-            <span>Messages</span>
-          </SidebarMenuItem>
-          <SidebarMenuItem href='/notifications' icon={<Bell size={16} />}>
-            <span>Notifications</span>
-          </SidebarMenuItem>
-        </SidebarGroup>
-        <SidebarGroup title='Content'>
-          <SidebarMenuItem href='/publish' icon={<FileText size={16} />}>
-            <span>My Content</span>
-          </SidebarMenuItem>
-          <SidebarMenuItem href='/analytics' icon={<Search size={16} />}>
-            <span>Analytics</span>
-          </SidebarMenuItem>
-        </SidebarGroup>
-        <SidebarGroup title='Settings'>
-          <SidebarMenuItem href='/profile' icon={<Users size={16} />}>
-            <span>Profile</span>
-          </SidebarMenuItem>
-          <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>            <span>Settings</span>            <span>Home</span>
-          </SidebarMenuItem>
-          <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
-            <span>Messages</span>
-          </SidebarMenuItem>
-          <SidebarMenuItem href="/notifications" icon={<Bell size={16} />}>
-            <span>Notifications</span>
-          </SidebarMenuItem>
-        </SidebarGroup>
-        <SidebarGroup title="Content">
-          <SidebarMenuItem href="/publish" icon={<FileText size={16} />}>
-            <span>My Content</span>
-          </SidebarMenuItem>
-          <SidebarMenuItem href="/analytics" icon={<Search size={16} />}>
-            <span>Analytics</span>
-          </SidebarMenuItem>
-        </SidebarGroup>
-        <SidebarGroup title="Settings">
-          <SidebarMenuItem href="/profile" icon={<Users size={16} />}>
-            <span>Profile</span>
-          </SidebarMenuItem>
-          <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>
-            <span>Settings</span>
-          </SidebarMenuItem>
-        </SidebarGroup>
-      </SidebarContent>
-    </Sidebar>
-  )
+return (
+<Sidebar>;
+<SidebarContent>;
+<SidebarGroup title="Dashboard">;
+<SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>;
+<span>Home</span>;
+</SidebarMenuItem>;
+<SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>;
+<span>Messages</span>;
+</SidebarMenuItem>;
+<SidebarMenuItem href="/notifications" icon={<Bell size={16} />}>;
+<span>Notifications</span>;
+</SidebarMenuItem>;
+</SidebarGroup>;
+<SidebarGroup title="Content">;
+<SidebarMenuItem href="/publish" icon={<FileText size={16} />}>;
+<span>My Content</span>;
+</SidebarMenuItem>;
+<SidebarMenuItem href="/analytics" icon={<Search size={16} />}>;
+<span>Analytics</span>;
+</SidebarMenuItem>;
+</SidebarGroup>;
+<SidebarGroup title="Settings">;
+<SidebarMenuItem href="/profile" icon={<Users size={16} />}>;
+<span>Profile</span>;
+</SidebarMenuItem>;
+<SidebarMenuItem href="/settings" icon={<Settings size={16} />}>            <span>Settings</span>            <span>Home</span>;
+</SidebarMenuItem>;
+<SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>;
+<span>Messages</span>;
+</SidebarMenuItem>;
+<SidebarMenuItem href="/notifications" icon={<Bell size={16} />}>;
+<span>Notifications</span>;
+</SidebarMenuItem>;
+</SidebarGroup>;
+<SidebarGroup title="Content">;
+<SidebarMenuItem href="/publish" icon={<FileText size={16} />}>;
+<span>My Content</span>;
+</SidebarMenuItem>;
+<SidebarMenuItem href="/analytics" icon={<Search size={16} />}>;
+<span>Analytics</span>;
+</SidebarMenuItem>;
+</SidebarGroup>;
+<SidebarGroup title="Settings">;
+<SidebarMenuItem href="/profile" icon={<Users size={16} />}>;
+<span>Profile</span>;
+</SidebarMenuItem>;
+<SidebarMenuItem href="/settings" icon={<Settings size={16} />}>;
+<span>Settings</span>;
+</SidebarMenuItem>;
+</SidebarGroup>;
+</SidebarContent>;
+</Sidebar>;
+)
 }

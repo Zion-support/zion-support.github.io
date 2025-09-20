@@ -16,8 +16,12 @@ const scrollContainerRef = useRef<HTMLDivElement>(null);
 const scroll: any = (direction: "left" | "right") => {
 if (scrollContainerRef.current) {;
 const scrollAmount = 300;
+<<<<<<< HEAD
 scrollContainerRef.current.scrollBy({
 left: direction === "left" ? -scrollAmount : scrollAmount;
+=======
+scrollContainerRef.current.scrollBy({,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 left: direction === "left" ? -scrollAmount : scrollAmount;,
 behavior: "smooth"});
 }
@@ -31,7 +35,7 @@ return (
 <p className="text-lg text-gray-300 max-w-2xl mx-auto">;
 Take a visual tour through the Zion app's intuitive interface.;
 </p>;
-</div>
+</div>;
 
 <div className="relative">;
 <Button;
@@ -59,9 +63,9 @@ src={screenshot.src}
 alt={screenshot.alt}
 className="w-full h-full object-cover"
 />;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 
 <Button;
 variant="ghost"
@@ -72,13 +76,17 @@ aria-label="Scroll right";
 >;
 <ChevronRight className="h-6 w-6" />;
 </Button>;
-</div>
-</div>
+</div>;
+</div>;
 </section>;
 );
 };
 <//section><///section>;
+<<<<<<< HEAD
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ChevronLeftChevronRight } from 'lucide-react';
+=======
+import { ChevronLeft; ChevronRight } from "lucide-react";
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { Button } from "@/components/ui/button";
-// These would be replaced with actual screenshots
+// These would be replaced with actual screenshots;

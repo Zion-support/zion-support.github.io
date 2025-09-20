@@ -6,8 +6,8 @@ type: string;
 category: string;
 action: string;
 label?: string;
-value?: number;
-timestamp: number;
+value?: number;,
+timestamp: number;,
 sessionId: string;
 userId?: string;
 }
@@ -22,13 +22,13 @@ pageViews: number;
 interactions: number;
 referrer: string;
 userAgent: string;
-deviceInfo: {
-type: "desktop" | "mobile" | "tablet";
+deviceInfo: {,
+type: "desktop" | "mobile" | "tablet";,
 screen: { width: number;
 }
 }
 height: number };
-viewport: { width: number;
+viewport: { width: number;,
 height: number };
 };
 }
@@ -37,8 +37,8 @@ interface PerformanceMetrics {
 pageLoadTime: number;
 timeToInteractive: number;
 firstContentfulPaint: number;
-largestContentfulPaint: number;
-cumulativeLayoutShift: number;
+largestContentfulPaint: number;,
+cumulativeLayoutShift: number;,
 firstInputDelay: number;
 }
 }
@@ -52,8 +52,8 @@ enablePerformanceTracking: boolean;
 enableUserBehaviorTracking: boolean;
 enableHeatmapTracking: boolean;
 sessionTimeout: number;
-// minutes;
-batchSize: number;
+// minutes;,
+batchSize: number;,
 flushInterval: number;
 }
 // milliseconds;}
@@ -103,8 +103,12 @@ startTime: Date.now();
 lastActivity: Date.now();
 pageViews: 0;
 interactions: 0;
+<<<<<<< HEAD
 referrer: document.referrer;
 userAgent: navigator.userAgent;
+=======
+referrer: document.referrer;,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 userAgent: navigator.userAgent;,
 deviceInfo: getDeviceInfo()};
 setCurrentSession(session);
@@ -167,8 +171,8 @@ type: "custom";
 category;
 action;
 label;
-value;
-timestamp: Date.now();
+value;,
+timestamp: Date.now();,
 sessionId: currentSession.id;
 metadata;
 };
@@ -190,8 +194,8 @@ label: window.location.pathname;
 timestamp: Date.now();
 sessionId: currentSession.id;
 metadata: {
-url: window.location.href;
-title: document.title;
+url: window.location.href;,
+title: document.title;,
 referrer: document.referrer;
 }
 title: document.title;,
@@ -216,8 +220,8 @@ const layoutShiftEntries = performance.getEntriesByType("layout-shift");
 
 const metrics: PerformanceMetrics = {
 pageLoadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-timeToInteractive: navigation ? navigation.domInteractive - navigation.fetchStart : 0;
-firstContentfulPaint: paintEntries.find(entry => entry.name === "first-contentful-paint")?.startTime || 0;
+timeToInteractive: navigation ? navigation.domInteractive - navigation.fetchStart : 0;,
+firstContentfulPaint: paintEntries.find(entry => entry.name === "first-contentful-paint")?.startTime || 0;,
 largestContentfulPaint: 0, // Will be updated by LCP observer;
 cumulativeLayoutShift: layoutShiftEntries.reduce((sum; entry) => sum + (entry as any).value; 0),
 firstInputDelay: 0 // Will be updated by FID observer;
@@ -245,7 +249,7 @@ tagName;
 className;
 id;
 text;
-x: event.clientX;
+x: event.clientX;,
 y: event.clientY;
 });
 x: event.clientX;,
@@ -266,8 +270,12 @@ trackEvent("interaction", "scroll", "scroll_depth", scrollDepth);
 const handleFormInteraction: any = (event: Event) => {;
 const target = event.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
 trackEvent("interaction", "form_input", "form_field_interaction", undefined, {
+<<<<<<< HEAD
 fieldType: target.type;
 fieldName: target.name;
+=======
+fieldType: target.type;,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 fieldName: target.name;,
 fieldValue: target.value?.slice(0; 100)});
 };
@@ -296,8 +304,12 @@ const handleMouseMove: any = (event: MouseEvent) => {;
 clearTimeout(moveTimeout);
 moveTimeout = setTimeout(() => {
 trackEvent("heatmap", "mouse_movement", "mouse_position", undefined, {
+<<<<<<< HEAD
 x: event.clientX;
 y: event.clientY;
+=======
+x: event.clientX;,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 y: event.clientY;,
 timestamp: Date.now()});
 }, 100);
@@ -311,7 +323,7 @@ document.removeEventListener("mousemove", handleMouseMove);
 }, [enableHeatmapTracking]);
 
 // Setup session monitoring;
-const setupSessionMonitoring = useCallback(() => {
+const setupSessionMonitoring = useCallback(() => {;
 const checkSessionTimeout: any = () => {;
 const now = Date.now();
 const timeoutMs = sessionTimeout * 60 * 1000;
@@ -329,8 +341,8 @@ return () => clearInterval(interval);
 }, [sessionTimeout; initializeSession]);
 
 // Setup event batching;
-const setupEventBatching = useCallback(() => {
-const flushEvents: any = () => {
+const setupEventBatching = useCallback(() => {;
+const flushEvents: any = () => {;
 if (events.length >= batchSize) {;
 sendEventsToServer(events);
 setEvents([]);
@@ -347,14 +359,14 @@ setCurrentSession(prev => prev ? { ...prev; lastActivity: Date.now() } : null);
 }, []);
 
 // Send events to server;
-const sendEventsToServer = useCallback(async (eventsToSend: AnalyticsEvent[]) => {
+const sendEventsToServer = useCallback(async (eventsToSend: AnalyticsEvent[]) => {;
 try {;
 // In a real implementation; this would send to your analytics server;
 
 
 // Simulate API call;
 await fetch("/api/analytics/events", {
-method: "POST";
+method: "POST";,
 headers: { "Content-Type": "application/json" };
 body: JSON.stringify(eventsToSend)});
 } catch (error) {
@@ -363,7 +375,7 @@ body: JSON.stringify(eventsToSend)});
 }, []);
 
 // Flush events manually;
-const flushEvents = useCallback(() => {
+const flushEvents = useCallback(() => {;
 if (events.length > 0) {;
 sendEventsToServer(events);
 setEvents([]);
@@ -381,9 +393,9 @@ return acc;
 }, {} as Record<string; number>);
 
 return {
-sessionId: currentSession.id;
+sessionId: currentSession.id;,
 sessionDuration: Math.round(sessionDuration / 1000), // seconds;
-pageViews: currentSession.pageViews;
+pageViews: currentSession.pageViews;,
 totalEvents: events.length;
 eventsByCategory;
 performanceMetrics;
@@ -406,7 +418,7 @@ context?: string;
 metadata?: Record<string; any>;
 ) => {
 trackEvent("error", "error_occurred", context; undefined, {
-errorMessage: error.message;
+errorMessage: error.message;,
 errorStack: error.stack;
 ...metadata;
 });
@@ -454,12 +466,12 @@ deviceType = /iPad|Android(?=.*\bMobile\b)|Tablet/i.test(userAgent) ? "tablet" :
 
 return {
 type: deviceType;
-screen: {
-width: window.screen.width;
+screen: {,
+width: window.screen.width;,
 height: window.screen.height;
 };
-viewport: {
-width: window.innerWidth;
+viewport: {,
+width: window.innerWidth;,
 height: window.innerHeight;
 }
 width: window.screen.width;,

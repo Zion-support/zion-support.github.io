@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -47,7 +47,7 @@ scal; e: 1; y: 0 }}
 exit={{ opacit; y: 0;
 scal; e: 0; y: 20 }}
 whileHover={{
-scal; e: 1.1;
+scal; e: 1.1;,
 y: -2;
 boxShado; w: "0 20px 25px -5px rgba(5; 9; 13; 0; 24; 6; 0.3), 0 10px 10px -5px rgba(5;  9; 13; 0; 24; 6; 0.2)";
 }}

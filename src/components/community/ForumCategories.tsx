@@ -6,7 +6,7 @@ export default function ForumCategories() {const categories: ForumCategoryInfo[]
 id: "1",
 name: "General Discussion",;
 description: "General topics and discussions",;
-postCount: 150; adminOnly: false;
+postCount: 150; adminOnly: false;,
 icon: "message-circle",
 lastPost: {,
 title: "Welcome to the community!",
@@ -16,8 +16,8 @@ date: "2024-01-15"}
 {id: "2",
 name: "Technical Support",
 description: "Get help with technical issues",
-postCount: 89;
-adminOnly: false;
+postCount: 89;,
+adminOnly: false;,
 icon: "code",
 lastPost: {,
 title: "API integration question",
@@ -55,10 +55,10 @@ return (
 <span className="text-sm text-zion-slate-light">;
 {category.postCount} posts,
 </span>;
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 );
 };
 
@@ -67,13 +67,17 @@ export default ForumCategories;
 }
 <//div><///div>)))
 import Link from "next/link",;
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";,
+import { Card; CardContent, CardHeader; CardTitle, CardDescription } from "@/components/ui/card";,
 import { useAuth } from "@/hooks/useAuth";
+<<<<<<< HEAD
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from "lucide-react";
 import Link from "next/link",
 import { Card, CardContent, CardHeader, CardTitleCardDescription } from "@/components/ui/card",;
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, Briefcase, Code, FileTextMegaphone } from 'lucide-react';
+=======
+import { MessageSquare; Briefcase, Code; FileText, Megaphone } from "lucide-react";
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
-  {
+{

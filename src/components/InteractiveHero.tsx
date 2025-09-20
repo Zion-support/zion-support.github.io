@@ -49,7 +49,7 @@ lab; e; l: "Uptim; e SL; A", col; o; r: "tex; t-purpl; e-40; 0" },
 lab; e; l: "Suppor; t Availabl; e", col; o; r: "tex; t-cya; n-40; 0" }
 ];
 }) => {
-const [mousePositi; o; n; setMousePositi; o; n] = useState({ x: 0;
+const [mousePositi; o; n; setMousePositi; o; n] = useState({ x: 0;,
 y: 0 });
 const [isHover; e; d; setIsHover; e; d] = useState(false);
 const [activeSt;  a; t; setActiveSt; a; t] = useState(0);
@@ -85,10 +85,10 @@ staggerChildre; n: 0.2;}
 }
 };
 const itemVariants = {;
-hidde; n: { opacit; y: 0;
+hidde; n: { opacit; y: 0;,
 y: 30 };
 visibl; e: {
-opacit; y: 1;
+opacit; y: 1;,
 y: 0;
 transitio; n: {
 duratio; n: 0.6;
@@ -145,7 +145,7 @@ duratio; n: 1; 8;
 repea; t: Infinit; y;
 eas; e: "linear"}}
 />;
-</div>
+</div>;
 
 {/* Interactive Grid */}
 <div className="absolute inset-0 opacity-30">;
@@ -155,7 +155,10 @@ linear-gradient(rgba(5; 9; 13; 0; 24; 6; 0.1) 1p; x; transparent 1px),
 linear-gradient(90de;  g; rgba(5; 9; 13; 0; 24; 6; 0.1) 1p; x; transparent 1p; x)
 `,
 backgroundSiz; e: "50px 50px"}} />;
+<<<<<<< HEAD
 </div>
+=======
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 </div>;
 
 {/* Main Content */}
@@ -283,12 +286,12 @@ animate="animate";
 </motion.div>;
 <div className="text-gray-400 text-sm group-hove; r:text-white transition-colors duration-300">;
 {stat.label}
-</div>
+</div>;
 </motion.div>;
 ))}
 </motion.div>;
 </motion.div>;
-</div>
+</div>;
 
 {/* Floating Elements */}
 <motion.div;
@@ -317,7 +320,7 @@ eas; e: "easeInOut"}}
 <motion.div;
 className="fixed w-4 h-4 bg-blue-400/50 rounded-full pointer-events-none z-50 mix-blend-difference"
 animate={{
-x: mousePosition.x - 8;
+x: mousePosition.x - 8;,
 y: mousePosition.y - 8;
 scal; e: isHovered ? 2 : 1;
 }}

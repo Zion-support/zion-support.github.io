@@ -1,7 +1,7 @@
 import React from "react";
 
-export interface EmergingTechService {id: string; title: string; description: string;
-category: "Blockchain" | "IoT" | "Edge Computing" | "5G" | "AR/VR" | "Robotics" | "Quantum Computing" | "Biotechnology" | "Green Tech" | "Space Tech", subcategory: string;
+export interface EmergingTechService {id: string; title: string; description: string;,
+category: "Blockchain" | "IoT" | "Edge Computing" | "5G" | "AR/VR" | "Robotics" | "Quantum Computing" | "Biotechnology" | "Green Tech" | "Space Tech", subcategory: string;,
 price: {
 monthly?: number;
 yearly?: number;
@@ -11,14 +11,14 @@ oneTime?: number;,
 currency: string; pricingModel: string};
 currency?: string;
 pricingModel?: string;
-features: string[], benefits: string[];
+features: string[], benefits: string[];,
 useCases: string[], targetAudience: string[];
 tags?: string[];
 estimatedDelivery?: string;
-supportLevel?: string;
+supportLevel?: string;,
 marketPrice: string; competitiveAdvantage: string; contactInfo: {,
 phone: string; email: string; website: string; address: string};
-rating: number; reviewCount: number; launchDate: string;
+rating: number; reviewCount: number; launchDate: string;,
 status: "Active" | "Beta" | "Coming Soon", innovationScore: number;
 }
 rating: number; reviewCount: number; launchDate: string;,
@@ -33,8 +33,8 @@ description: "Scalable enterprise blockchain solutions for supply chain manageme
 category: "Blockchain",
 subcategory: "Enterprise Solutions",
 price: {
-monthly: 299;
-yearly: 2990;
+monthly: 299;,
+yearly: 2990;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -82,7 +82,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com/enterprise-blockchain",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.8; reviewCount: 156;
+rating: 4.8; reviewCount: 156;,
 launchDate: "2024-01-01",
 status: "Active",
 innovationScore: 92;
@@ -98,8 +98,8 @@ title: "Zion IoT Ecosystem Platform",
 description: "Comprehensive IoT platform for device management; data collection; analytics; and automation across industries.",
 category: "IoT",
 subcategory: "Platform Solutions",
-price: {
-monthly: 199; yearly: 1990;
+price: {,
+monthly: 199; yearly: 1990;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -142,7 +142,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com/iot-ecosystem",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.7; reviewCount: 234;
+rating: 4.7; reviewCount: 234;,
 launchDate: "2023-12-01",
 status: "Active",
 innovationScore: 89;
@@ -158,8 +158,8 @@ title: "Zion Edge Computing Orchestrator",
 description: "Intelligent edge computing platform that optimizes data processing; reduces latency; and improves application performance.",
 category: "Edge Computing",
 subcategory: "Orchestration Platform",
-price: {
-monthly: 249; yearly: 2490;
+price: {,
+monthly: 249; yearly: 2490;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -202,7 +202,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com/edge-computing",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.9; reviewCount: 178;
+rating: 4.9; reviewCount: 178;,
 launchDate: "2024-02-01",
 status: "Active",
 innovationScore: 94;
@@ -218,8 +218,8 @@ title: "Zion 5G Network Optimization",
 description: "Advanced 5G network optimization and management solutions for telecommunications providers and enterprises.",
 category: "5G",
 subcategory: "Network Management",
-price: {
-monthly: 399; yearly: 3990;
+price: {,
+monthly: 399; yearly: 3990;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -262,7 +262,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com/5g-optimization",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.8; reviewCount: 145;
+rating: 4.8; reviewCount: 145;,
 launchDate: "2024-01-15",
 status: "Active",
 innovationScore: 91;
@@ -278,8 +278,8 @@ title: "Zion AR/VR Enterprise Platform",
 description: "Comprehensive augmented and virtual reality platform for training; collaboration; and customer engagement.",
 category: "AR/VR",
 subcategory: "Enterprise Platform",
-price: {
-monthly: 179; yearly: 1790;
+price: {,
+monthly: 179; yearly: 1790;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -322,7 +322,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com/ar-vr-platform",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.6; reviewCount: 189;
+rating: 4.6; reviewCount: 189;,
 launchDate: "2023-11-01",
 status: "Active",
 innovationScore: 88;
@@ -338,8 +338,8 @@ title: "Zion Intelligent Robotics Automation",
 description: "AI-powered robotics solutions for manufacturing; logistics; and service industries.",
 category: "Robotics",
 subcategory: "Automation Solutions",
-price: {
-monthly: 0; yearly: 0; oneTime: 25000;
+price: {,
+monthly: 0; yearly: 0; oneTime: 25000;,
 currency: "$",
 pricingModel: "one-time"},
 features: [
@@ -382,7 +382,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com/intelligent-robotics",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.9; reviewCount: 67;
+rating: 4.9; reviewCount: 67;,
 launchDate: "2024-01-01",
 status: "Active",
 innovationScore: 95;
@@ -398,8 +398,8 @@ title: "Zion Quantum Computing Simulation",
 description: "Advanced quantum computing simulation and optimization platform for research and enterprise applications.",
 category: "Quantum Computing",
 subcategory: "Simulation Platform",
-price: {
-monthly: 599; yearly: 5990;
+price: {,
+monthly: 599; yearly: 5990;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -442,7 +442,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com/quantum-simulation",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.9; reviewCount: 89;
+rating: 4.9; reviewCount: 89;,
 launchDate: "2024-01-01",
 status: "Active",
 innovationScore: 96;
@@ -458,8 +458,8 @@ title: "Zion AI Biotech Research Platform",
 description: "AI-powered biotechnology research platform for drug discovery; genetic analysis; and bioinformatics.",
 category: "Biotechnology",
 subcategory: "Research Platform",
-price: {
-monthly: 449; yearly: 4490;
+price: {,
+monthly: 449; yearly: 4490;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -502,7 +502,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com/ai-biotech",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.8; reviewCount: 123;
+rating: 4.8; reviewCount: 123;,
 launchDate: "2023-12-01",
 status: "Active",
 innovationScore: 93;
@@ -518,8 +518,8 @@ title: "Zion Sustainable Tech Solutions",
 description: "Comprehensive sustainable technology solutions for renewable energy; waste management; and environmental monitoring.",
 category: "Green Tech",
 subcategory: "Sustainability Solutions",
-price: {
-monthly: 199; yearly: 1990;
+price: {,
+monthly: 199; yearly: 1990;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -562,7 +562,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com/sustainable-tech",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.7; reviewCount: 167;
+rating: 4.7; reviewCount: 167;,
 launchDate: "2024-01-01",
 status: "Active",
 innovationScore: 90;
@@ -578,8 +578,8 @@ title: "Zion Space Tech Innovation Platform",
 description: "Advanced space technology solutions for satellite operations; space data analytics; and aerospace applications.",
 category: "Space Tech",
 subcategory: "Innovation Platform",
-price: {
-monthly: 799; yearly: 7990;
+price: {,
+monthly: 799; yearly: 7990;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -622,7 +622,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com/space-tech",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.9; reviewCount: 78;
+rating: 4.9; reviewCount: 78;,
 launchDate: "2024-02-01",
 status: "Active",
 innovationScore: 97;
@@ -638,8 +638,8 @@ title: "Quantum Machine Learning Platform",
 description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems that are impossible for classical computers; enabling breakthroughs in drug discovery; materials science; and optimization.",
 category: "Quantum Computing",
 subcategory: "Machine Learning",
-price: {
-monthly: 3000; yearly: 30000;
+price: {,
+monthly: 3000; yearly: 30000;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -685,7 +685,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.9; reviewCount: 89;
+rating: 4.9; reviewCount: 89;,
 launchDate: "2024-03-01",
 status: "Active",
 innovationScore: 95;
@@ -700,8 +700,8 @@ title: "Space Technology & Satellite Management Platform",
 description: "Comprehensive platform for managing satellite operations; space missions; and space-based data collection; enabling businesses to leverage space technology for Earth observation; communications; and research.",
 category: "Space Tech",
 subcategory: "Satellite Management",
-price: {
-monthly: 2000; yearly: 20000;
+price: {,
+monthly: 2000; yearly: 20000;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -747,7 +747,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.8; reviewCount: 67;
+rating: 4.8; reviewCount: 67;,
 launchDate: "2024-02-15",
 status: "Active",
 innovationScore: 93;
@@ -762,8 +762,8 @@ title: "Brain-Computer Interface Development Platform",
 description: "Advanced platform for developing brain-computer interfaces that enable direct communication between the human brain and computers; opening new possibilities in healthcare; gaming; and human augmentation.",
 category: "Biotechnology",
 subcategory: "Brain-Computer Interface",
-price: {
-monthly: 2500; yearly: 25000;
+price: {,
+monthly: 2500; yearly: 25000;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -809,7 +809,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.7; reviewCount: 45;
+rating: 4.7; reviewCount: 45;,
 launchDate: "2024-01-20",
 status: "Beta",
 innovationScore: 96;
@@ -824,8 +824,8 @@ title: "Autonomous Vehicle Development Platform",
 description: "Comprehensive platform for developing autonomous vehicles; including self-driving cars; drones; and robotics systems; with advanced AI; sensor fusion; and safety protocols.",
 category: "Robotics",
 subcategory: "Vehicle Development",
-price: {
-monthly: 1800; yearly: 18000;
+price: {,
+monthly: 1800; yearly: 18000;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -871,7 +871,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.6; reviewCount: 78;
+rating: 4.6; reviewCount: 78;,
 launchDate: "2024-02-01",
 status: "Active",
 innovationScore: 94;
@@ -886,8 +886,8 @@ title: "Quantum Internet & Communication Platform",
 description: "Next-generation quantum internet platform that enables ultra-secure communication; quantum networking; and distributed quantum computing across global networks.",
 category: "Quantum Computing",
 subcategory: "Quantum Internet",
-price: {
-monthly: 2200; yearly: 22000;
+price: {,
+monthly: 2200; yearly: 22000;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -933,7 +933,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.9; reviewCount: 34;
+rating: 4.9; reviewCount: 34;,
 launchDate: "2024-01-10",
 status: "Beta",
 innovationScore: 97;
@@ -948,8 +948,8 @@ title: "AI Consciousness Simulation Platform",
 description: "Revolutionary platform that simulates and studies artificial consciousness; enabling research into machine consciousness; cognitive architectures; and the nature of intelligence.",
 category: "Biotechnology",
 subcategory: "Consciousness Simulation",
-price: {
-monthly: 1600; yearly: 16000;
+price: {,
+monthly: 1600; yearly: 16000;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -995,7 +995,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.8; reviewCount: 23;
+rating: 4.8; reviewCount: 23;,
 launchDate: "2024-01-05",
 status: "Beta",
 innovationScore: 98;
@@ -1010,8 +1010,8 @@ title: "Quantum Financial Modeling & Risk Assessment",
 description: "Advanced financial modeling platform that leverages quantum computing to solve complex financial problems; optimize portfolios; and assess risks with unprecedented accuracy.",
 category: "Quantum Computing",
 subcategory: "Financial Modeling",
-price: {
-monthly: 2800; yearly: 28000;
+price: {,
+monthly: 2800; yearly: 28000;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -1057,7 +1057,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.9; reviewCount: 56;
+rating: 4.9; reviewCount: 56;,
 launchDate: "2024-02-20",
 status: "Active",
 innovationScore: 95;
@@ -1072,8 +1072,8 @@ title: "Autonomous Manufacturing & Industry 4.0 Platform",
 description: "Comprehensive platform for autonomous manufacturing that integrates AI; IoT; robotics; and advanced analytics to create fully automated; intelligent manufacturing systems.",
 category: "Robotics",
 subcategory: "Manufacturing",
-price: {
-monthly: 1500; yearly: 15000;
+price: {,
+monthly: 1500; yearly: 15000;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -1119,7 +1119,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.7; reviewCount: 89;
+rating: 4.7; reviewCount: 89;,
 launchDate: "2024-01-15",
 status: "Active",
 innovationScore: 93;
@@ -1134,8 +1134,8 @@ title: "Quantum Drug Discovery & Molecular Modeling",
 description: "Revolutionary platform that uses quantum computing to accelerate drug discovery; molecular modeling; and pharmaceutical research; enabling breakthroughs in medicine.",
 category: "Quantum Computing",
 subcategory: "Drug Discovery",
-price: {
-monthly: 3200; yearly: 32000;
+price: {,
+monthly: 3200; yearly: 32000;,
 currency: "$",
 pricingModel: "subscription"},
 features: [
@@ -1181,7 +1181,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
 address: "364 E Main St STE 1008; Middletown DE 19709"},
-rating: 4.9; reviewCount: 67;
+rating: 4.9; reviewCount: 67;,
 launchDate: "2024-02-25",
 status: "Active",
 innovationScore: 96;

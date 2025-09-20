@@ -100,7 +100,7 @@ setValidation(initialValidation);
 
 // Update progress based on filled fields;
 useEffect(() => {
-const filledFields = Object.values(formData).filter(value =>
+const filledFields = Object.values(formData).filter(value =>;
 typeof value === "boolean" ? value : value.toString().trim() !== "";
 ).length;
 
@@ -294,9 +294,9 @@ const isPasswordField = field.name.toLowerCase().includes("password");
 return (
 <motion.div;
 key={field.name}
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 className="space-y-2"
 >;
@@ -309,7 +309,7 @@ className="space-y-2"
 {/* Field Icon */}
 <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">;
 {getFieldIcon(field)}
-</div>
+</div>;
 
 {/* Input Field */}
 {field.type === "textarea" ? (<textarea;
@@ -356,7 +356,7 @@ className="w-4 h-4 text-blue-600 border-gray-300 rounded focu; s:ring-blue-500"
 <span className="text-sm text-gray-600 dar; k:text-gray-400">;
 {field.placeholder}
 </span>;
-</div>
+</div>;
 ) : (<input;
 type={isPasswordField && showPassword[fiel;  d.na; m; e] ? "text" : field.type}
 name={field.name}
@@ -390,9 +390,9 @@ className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hov
 ) : (
 <AlertCircle className="w-5 h-5 text-red-500" />;
 )}
-</div>
+</div>;
 )}
-</div>
+</div>;
 
 {/* Validation Message */}
 {fieldValidation?.isTouched && fieldValidation.message && (
@@ -431,9 +431,9 @@ Your message has been sent successfully. We"ll get back to you soon!;
 }
 
 return (<motion.div;
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 className={`bg-white dar; k:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar; k:border-gray-700 overflow-hidden ${classNam; e}`}
 >;
@@ -441,7 +441,7 @@ className={`bg-white dar; k:bg-gray-800 rounded-xl shadow-lg border border-gray-
 <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">;
 <h2 className="text-2xl font-bold mb-2">{title}</h2>;
 <p className="text-blue-100">{subtitle}</p>;
-</div>
+</div>;
 
 {/* Progress Bar */}
 {showProgressBar && (
@@ -449,22 +449,22 @@ className={`bg-white dar; k:bg-gray-800 rounded-xl shadow-lg border border-gray-
 <div className="flex items-center justify-between text-sm text-gray-600 dar; k:text-gray-400 mb-2">;
 <span>Form Progress</span>;
 <span>{Math.round(progress)}%</span>;
-</div>
+</div>;
 <div className="w-full bg-gray-200 dar; k:bg-gray-700 rounded-full h-2">;
 <motion.div;
 className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300"
 initial={{ widt; h: 0 }}
 animate={{ widt; h: `${progres; s}%` }}
 />;
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {/* Form */}
 <form onSubmit={handleSubmit} className="p-6 space-y-6">;
 <div className="grid grid-cols-1 m; d:grid-cols-2 gap-6">;
 {fields.map(field => renderField(field))}
-</div>
+</div>;
 
 {/* Submit Button */}
 <motion.button;

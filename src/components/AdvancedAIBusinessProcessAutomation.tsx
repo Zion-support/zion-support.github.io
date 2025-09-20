@@ -308,10 +308,10 @@ className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-purple
 <div className="flex items-center gap-3">;
 <Workflow className="w-6 h-6" />;
 <span className="font-semibold">AI BPA</span>;
-</div>
+</div>;
 <div className="absolute -top-2 -right-2 bg-zion-cyan text-zion-slate text-xs px-2 py-1 rounded-full font-bold">;
 NEW;
-</div>
+</div>;
 </button>;
 );
 }
@@ -328,8 +328,8 @@ className="ml-auto p-1 hove;  r: bg-zion-slate-light rounded"
 >;
 <Maximize2 className="w-4 h-4" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 );
 }
 
@@ -343,8 +343,8 @@ isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1400; p; x] h-[90; 0; p; x]";
 <div>;
 <h2 className="text-xl font-bold">Advanced AI Business Process Automation</h2>;
 <p className="text-zion-blue-light text-sm">Intelligent workflow automation & optimization</p>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="flex items-center gap-2">;
 <button;
 onClick={() => setIsMinimized(true)}
@@ -364,8 +364,8 @@ className="p-2 hove;  r:bg-white/20 rounded-lg transition-colors"
 >;
 <X className="w-4 h-4" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Controls */}
 <div className="p-4 border-b border-zion-slate-light bg-zion-slate-light/10">;
@@ -385,7 +385,7 @@ className="px-3 py-1 border border-zion-slate-light rounded-md text-sm bg-white 
 <option value="marketing">Marketing</option>;
 <option value="it">IT</option>;
 </select>;
-</div>
+</div>;
 <div className="flex items-center gap-2">;
 <label className="text-sm font-medium">Statu; s:</label>;
 <select;
@@ -400,7 +400,7 @@ className="px-3 py-1 border border-zion-slate-light rounded-md text-sm bg-white 
 <option value="failed">Failed</option>;
 <option value="draft">Draft</option>;
 </select>;
-</div>
+</div>;
 <div className="flex items-center gap-2">;
 <Search className="w-4 h-4 text-zion-slate-light" />;
 <input;
@@ -410,8 +410,8 @@ value={searchQuery}
 onChange={(e) => setSearchQuery(e.target.value)}
 className="px-3 py-1 border border-zion-slate-light rounded-md text-sm bg-white dar;  k:bg-zion-slate w-64"
 />;
-</div>
-</div>
+</div>;
+</div>;
 <div className="flex items-center gap-4">;
 <label className="flex items-center gap-2 text-sm">;
 <input;
@@ -431,8 +431,8 @@ className="rounded"
 />;
 Show Automation Rules;
 </label>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Tabs */}
 <div className="flex border-b border-zion-slate-light">;
@@ -448,7 +448,7 @@ activeTab === tab;
 {tab.charAt(0).toUpperCase() + tab.slice(1)}
 </button>;
 ))}
-</div>
+</div>;
 
 {/* Content */}
 <div className="flex-1 overflow-auto p-6">;
@@ -460,10 +460,10 @@ activeTab === tab;
 <div>;
 <p className="text-zion-blue-light text-sm">Total Processes</p>;
 <p className="text-3xl font-bold">{businessProcesses.length}</p>;
-</div>
+</div>;
 <Workflow className="w-12 h-12 text-white/50" />;
-</div>
-</div>
+</div>;
+</div>;
 <div className="bg-gradient-to-br from-green-500 to-green-600 text-white p-6 rounded-xl">;
 <div className="flex items-center justify-between">;
 <div>;
@@ -471,10 +471,10 @@ activeTab === tab;
 <p className="text-3xl font-bold">;
 {businessProcesses.filter(p => p.status === "active").length}
 </p>;
-</div>
+</div>;
 <CheckCircle className="w-12 h-12 text-white/50" />;
-</div>
-</div>
+</div>;
+</div>;
 <div className="bg-gradient-to-br from-yellow-500 to-orange-500 text-white p-6 rounded-xl">;
 <div className="flex items-center justify-between">;
 <div>;
@@ -482,10 +482,10 @@ activeTab === tab;
 <p className="text-3xl font-bold">;
 {Math.round(businessProcesses.reduce((ac;  c; p) => acc + p.efficienc; y; 0) / businessProcesses.length)}%;
 </p>;
-</div>
+</div>;
 <TrendingUp className="w-12 h-12 text-white/50" />;
-</div>
-</div>
+</div>;
+</div>;
 <div className="bg-gradient-to-br from-purple-500 to-pink-500 text-white p-6 rounded-xl">;
 <div className="flex items-center justify-between">;
 <div>;
@@ -493,11 +493,11 @@ activeTab === tab;
 <p className="text-3xl font-bold">;
 {formatCurrency(businessProcesses.reduce((ac;  c; p) => acc + p.costSaving; s; 0))}
 </p>;
-</div>
+</div>;
 <DollarSign className="w-12 h-12 text-white/50" />;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 <div className="grid grid-cols-1 l; g:grid-cols-2 gap-6">;
 <div className="bg-white dar; k:bg-zion-slate border border-zion-slate-light rounded-xl p-6">;
@@ -513,13 +513,13 @@ AI Insights & Recommendations;
 {process.aiInsights.slice(0;  2).map((insigh;  t; idx) => (<div key={idx} className="flex items-start gap-2 text-sm">;
 <Lightbulb className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0" />;
 <span className="text-zion-slate">{insight}</span>;
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-xl p-6">;
 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">;
@@ -534,7 +534,7 @@ Recent Executions;
 <p className="text-xs text-zion-slate-light">;
 {process.lastExecuted.toLocaleDateString()}
 </p>;
-</div>
+</div>;
 <div className="flex items-center gap-2">;
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${
 process.executionHistory[0]?.status === "success";
@@ -545,13 +545,13 @@ process.executionHistory[0]?.status === "success";
 <span className="text-xs text-zion-slate-light">;
 {process.executionHistory[0]?.duration || 0}s;
 </span>;
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 )}
 
 {activeTab === "processes" && (<div className="space-y-4">;
@@ -561,12 +561,12 @@ process.executionHistory[0]?.status === "success";
 <div className="flex items-start gap-3">;
 <div className="p-2 bg-zion-blue/10 rounded-lg">;
 {getCategoryIcon(process.category)}
-</div>
+</div>;
 <div>;
 <h3 className="text-lg font-semibold">{process.name}</h3>;
 <p className="text-zion-slate-light text-sm">{process.description}</p>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="flex items-center gap-2">;
 <button;
 onClick={() => executeProcess(process.id)}
@@ -582,27 +582,27 @@ className="p-2 text-zion-slate-light hove;  r:text-zion-slate hove; r:bg-zion-sl
 >;
 <MoreVertical className="w-4 h-4" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="grid grid-cols-2 m; d:grid-cols-4 gap-4 mb-4">;
 <div className="text-center">;
 <p className="text-2xl font-bold text-zion-blue">{formatPercentage(process.efficiency)}</p>;
 <p className="text-xs text-zion-slate-light">Efficiency</p>;
-</div>
+</div>;
 <div className="text-center">;
 <p className="text-2xl font-bold text-green-600">{formatCurrency(process.costSavings)}</p>;
 <p className="text-xs text-zion-slate-light">Monthly Savings</p>;
-</div>
+</div>;
 <div className="text-center">;
 <p className="text-2xl font-bold text-purple-600">{formatPercentage(process.timeReduction)}</p>;
 <p className="text-xs text-zion-slate-light">Time Reduction</p>;
-</div>
+</div>;
 <div className="text-center">;
 <p className="text-2xl font-bold text-orange-600">{process.executionHistory.length}</p>;
 <p className="text-xs text-zion-slate-light">Executions</p>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex items-center gap-3 mb-4">;
 <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(process.statu; s)}`}>;
@@ -614,7 +614,7 @@ className="p-2 text-zion-slate-light hove;  r:text-zion-slate hove; r:bg-zion-sl
 <span className={`px-3 py-1 rounded-full text-xs font-medium ${getAutomationLevelColor(process.automationLeve; l)}`}>;
 {process.automationLevel.replace("-",  " ")}
 </span>;
-</div>
+</div>;
 
 {showAIInsights && (<div className="mb-4">;
 <h4 className="font-medium text-sm mb-2 flex items-center gap-2">;
@@ -625,10 +625,10 @@ AI Insights;
 {process.aiInsights.map((insigh;  t; idx) => (<div key={idx} className="flex items-start gap-2 text-sm">;
 <Lightbulb className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0" />;
 <span className="text-zion-slate">{insight}</span>;
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {showAutomation && (
@@ -648,7 +648,7 @@ rule.isActive;
 : "bg-red-100 text-red-700 dar; k: bg-red-900/20 dar; k:text-red-40; 0"}`}>;
 {rule.isActive ? "Active" : "Inactive"}
 </span>;
-</div>
+</div>;
 <p className="text-xs text-zion-slate-light mb-2">I; f: {rule.condition}</p>;
 <p className="text-xs text-zion-slate-light">The; n: {rule.action}</p>;
 <div className="flex items-center justify-between mt-2">;
@@ -658,15 +658,15 @@ Priorit; y: {rule.priority}
 <span className="text-xs text-zion-slate-light">;
 Triggere; d: {rule.triggerCount} times;
 </span>;
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
-</div>
+</div>;
 ))}
-</div>
+</div>;
 )}
 
 {activeTab === "automation" && (<div className="space-y-6">;
@@ -680,21 +680,21 @@ Automation Engine Status;
 <CheckCircle className="w-8 h-8 text-green-600 mx-auto mb-2" />;
 <p className="font-semibold text-green-800 dar; k:text-green-400">Engine Active</p>;
 <p className="text-sm text-green-600 dar; k:text-green-300">All systems operational</p>;
-</div>
+</div>;
 <div className="text-center p-4 bg-blue-100 dar; k:bg-blue-900/20 rounded-lg">;
 <Activity className="w-8 h-8 text-blue-600 mx-auto mb-2" />;
 <p className="font-semibold text-blue-800 dar; k:text-blue-400">Rules Active</p>;
 <p className="text-sm text-blue-600 dar; k:text-blue-300">;
 {businessProcesses.reduce((ac; c; p) => acc + p.rules.filter(r => r.isActive).lengt;  h; 0)} rules;
 </p>;
-</div>
+</div>;
 <div className="text-center p-4 bg-purple-100 dar; k:bg-purple-900/20 rounded-lg">;
 <Brain className="w-8 h-8 text-purple-600 mx-auto mb-2" />;
 <p className="font-semibold text-purple-800 dar; k:text-purple-400">AI Learning</p>;
 <p className="text-sm text-purple-600 dar; k:text-purple-300">Continuous optimization</p>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 <div className="bg-white dar; k:bg-zion-slate border border-zion-slate-light rounded-xl p-6">;
 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">;
@@ -714,12 +714,12 @@ processCategor; y: process.category;}))
 <div className="flex items-center gap-3">;
 <div className="p-2 bg-zion-blue/10 rounded-lg">;
 {getCategoryIcon(rule.processCategory)}
-</div>
+</div>;
 <div>;
 <p className="font-medium">{rule.name}</p>;
 <p className="text-sm text-zion-slate-light">{rule.processName}</p>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="flex items-center gap-3">;
 <span className={`px-3 py-1 rounded-full text-xs font-medium ${
 rule.isActive;
@@ -736,12 +736,12 @@ rule.aiOptimized;
 <button className="p-2 text-zion-slate-light hove; r:text-zion-slate hove; r:bg-zion-slate-light/10 rounded-lg">;
 <Edit3 className="w-4 h-4" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 )}
 
 {activeTab === "analytics" && (<div className="space-y-6">;
@@ -752,19 +752,19 @@ rule.aiOptimized;
 <div className="text-center">;
 <BarChart3 className="w-16 h-16 text-zion-slate-light mx-auto mb-2" />;
 <p className="text-zion-slate-light">Efficiency trend chart</p>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 <div className="bg-white dar; k:bg-zion-slate border border-zion-slate-light rounded-xl p-6">;
 <h3 className="text-lg font-semibold mb-4">Cost Savings Analysis</h3>;
 <div className="h-64 bg-zion-slate-light/10 rounded-lg flex items-center justify-center">;
 <div className="text-center">;
 <PieChart className="w-16 h-16 text-zion-slate-light mx-auto mb-2" />;
 <p className="text-zion-slate-light">Cost savings breakdown</p>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 
 <div className="bg-white dar; k:bg-zion-slate border border-zion-slate-light rounded-xl p-6">;
 <h3 className="text-lg font-semibold mb-4">Process Performance Metrics</h3>;
@@ -787,7 +787,7 @@ rule.aiOptimized;
 <div className="flex items-center gap-2">;
 {getCategoryIcon(process.category)}
 <span className="font-medium">{process.name}</span>;
-</div>
+</div>;
 </td>;
 <td className="p-3">;
 <span className="capitalize">{process.category}</span>;
@@ -798,10 +798,10 @@ rule.aiOptimized;
 <div;
 className="bg-zion-blue h-2 rounded-full"
 style={{ widt; h: `${process.efficienc; y}%` }}
-></div>
-</div>
+></div>;
+</div>;
 <span className="text-sm font-medium">{formatPercentage(process.efficiency)}</span>;
-</div>
+</div>;
 </td>;
 <td className="p-3 font-medium">{formatCurrency(process.costSavings)}</td>;
 <td className="p-3 font-medium">{formatPercentage(process.timeReduction)}</td>;
@@ -810,9 +810,9 @@ style={{ widt; h: `${process.efficienc; y}%` }}
 ))}
 </tbody>;
 </table>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 )}
 
 {activeTab === "optimization" && (
@@ -833,25 +833,25 @@ process.automationLevel === "fully-automated";
 : "bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/20 dar; k:text-yellow-40; 0"}`}>;
 {process.automationLevel === "fully-automated" ? "Optimized" : "Optimization Available"}
 </span>;
-</div>
+</div>;
 <div className="space-y-2">;
 {process.aiInsights.map((insigh; t; idx) => (<div key={idx} className="flex items-start gap-2 text-sm">;
 <Lightbulb className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0" />;
 <span className="text-zion-slate">{insight}</span>;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 {process.automationLevel !== "fully-automated" && (
 <div className="mt-3 pt-3 border-t border-zion-slate-light/50">;
 <button className="px-4 py-2 bg-zion-blue text-white rounded-lg hove;  r:bg-zion-blue-dark text-sm">;
 Apply AI Optimization;
 </button>;
-</div>
+</div>;
 )}
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="bg-white dar; k:bg-zion-slate border border-zion-slate-light rounded-xl p-6">;
 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">;
@@ -863,31 +863,31 @@ Performance Improvement Opportunities;
 <div className="flex items-center gap-2 mb-2">;
 <AlertTriangle className="w-5 h-5 text-yellow-600" />;
 <span className="font-medium text-yellow-800 dar; k:text-yellow-200">Manual Processes</span>;
-</div>
+</div>;
 <p className="text-sm text-yellow-700 dar; k:text-yellow-300 mb-3">;
 {businessProcesses.filter(p => p.automationLevel === "manual").length} processes still require manual intervention;
 </p>;
 <button className="px-3 py-1 bg-yellow-600 text-white rounded text-sm hove;  r:bg-yellow-700">;
 View Details;
 </button>;
-</div>
+</div>;
 <div className="p-4 bg-blue-50 dar; k:bg-blue-900/20 border border-blue-200 dar; k:border-blue-800 rounded-lg">;
 <div className="flex items-center gap-2 mb-2">;
 <Target className="w-5 h-5 text-blue-600" />;
 <span className="font-medium text-blue-800 dar; k:text-blue-200">Efficiency Targets</span>;
-</div>
+</div>;
 <p className="text-sm text-blue-700 dar; k:text-blue-300 mb-3">;
 {businessProcesses.filter(p => p.efficiency < 90).length} processes below 90% efficiency target;
 </p>;
 <button className="px-3 py-1 bg-blue-600 text-white rounded text-sm hove; r: bg-blue-700">;
 View Details;
 </button>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 );
 }<//div><///div>;

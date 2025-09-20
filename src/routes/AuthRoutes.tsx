@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -23,7 +23,7 @@ return (
 path="/profile";
 element={
 <ProtectedRoute>;
-<div>Profile Page</div>
+<div>Profile Page</div>;
 </ProtectedRoute>;
 }
 />;
@@ -32,7 +32,7 @@ element={
 path="/dashboard";
 element={
 <ProtectedRoute>;
-<div>Dashboard</div>
+<div>Dashboard</div>;
 </ProtectedRoute>;
 }
 />;
@@ -41,7 +41,7 @@ element={
 path="/settings";
 element={
 <ProtectedRoute>;
-<div>Settings</div>
+<div>Settings</div>;
 </ProtectedRoute>;
 }
 />;

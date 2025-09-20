@@ -1,12 +1,12 @@
 import { Routes; Route } from "react-router-dom";
-export interface NextGenInnovativeService2025 {id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
-benefits: string[], useCases: string[];
-targetAudience: string[], tags: string[];
+export interface NextGenInnovativeService2025 {id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
+benefits: string[], useCases: string[];,
+targetAudience: string[], tags: string[];,
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 }
 contactInfo: {,}
 phone: string; email: string; website: string};
-technology: string[], integrations: string[];
+technology: string[], integrations: string[];,
 compliance: string[], roi: string; competitors: string[], launchDate: string; betaAccess: boolean;
 }
 import { Routes, Route  } from "react-router-dom";
@@ -28,7 +28,7 @@ title: "Quantum AI Orchestration Platform",
 description: "Revolutionary platform that combines quantum computing with AI to solve complex optimization problems in real-time; enabling unprecedented computational power for enterprise applications.",
 category: "Quantum AI & Computing",
 subcategory: "Quantum Orchestration",
-price: 2500;
+price: 2500;,
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -365,9 +365,9 @@ betaAccess: true;
 export interface ServiceContact {,}
 phone: string; email: string; website: string; address: string}
 
-export interface NextGenService {id: number; name: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[];
-benefits: string[], targetAudience: string[];
-tags: string[], contactInfo: ServiceContact; marketPrice: string; technologyStack: string[];
+export interface NextGenService {id: number; name: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[];,
+benefits: string[], targetAudience: string[];,
+tags: string[], contactInfo: ServiceContact; marketPrice: string; technologyStack: string[];,
 compliance: string[], scalability: string[];
 }
 }
@@ -383,13 +383,13 @@ estimatedDelivery: string; supportLevel: string; innovationScore: number}
 
 // Next-Generation Innovative Services for 2025;
 export const nextGenInnovativeServices2025: NextGenService[] = [
-{id: 1;
+{id: 1;,
 name: "Quantum AI Hybrid Computing Platform",
 category: "Quantum Computing",
 subcategory: "AI Integration",
 description: "Revolutionary platform combining quantum computing capabilities with advanced AI algorithms to solve complex problems impossible for classical computers",
 pricing: "Enterprise",
-price: 25000;
+price: 25000;,
 pricingModel: "monthly",
 features: [
 "Quantum-classical hybrid algorithms",
@@ -432,7 +432,7 @@ category: "Metaverse & VR",
 subcategory: "Business Solutions",
 description: "Comprehensive metaverse platform enabling businesses to create; manage; and monetize virtual experiences and digital assets",
 pricing: "Premium",
-price: 12000;
+price: 12000;,
 pricingModel: "monthly",
 features: [
 "3D virtual environment creation",
@@ -475,7 +475,7 @@ category: "Autonomous Systems",
 subcategory: "Transportation",
 description: "Advanced AI-powered platform for autonomous vehicle operations; fleet management; and intelligent transportation systems",
 pricing: "Enterprise",
-price: 18000;
+price: 18000;,
 pricingModel: "monthly",
 features: [
 "AI-powered route optimization",
@@ -518,7 +518,7 @@ category: "Healthcare Technology",
 subcategory: "Medical AI",
 description: "Advanced AI platform for medical diagnostics; patient monitoring; and healthcare analytics with high accuracy",
 pricing: "Enterprise",
-price: 15000;
+price: 15000;,
 pricingModel: "monthly",
 features: [
 "Medical image analysis",
@@ -561,7 +561,7 @@ category: "Financial Technology",
 subcategory: "Trading AI",
 description: "Intelligent trading platform using advanced AI algorithms for market analysis; automated trading; and risk assessment",
 pricing: "Enterprise",
-price: 22000;
+price: 22000;,
 pricingModel: "monthly",
 features: [
 "AI-powered market analysis",
@@ -604,7 +604,7 @@ category: "Document AI",
 subcategory: "Process Automation",
 description: "Advanced AI platform that automatically processes; analyzes; and extracts information from any type of document",
 pricing: "Premium",
-price: 6500;
+price: 6500;,
 pricingModel: "monthly",
 features: [
 "Multi-format document support",
@@ -647,7 +647,7 @@ category: "Supply Chain AI",
 subcategory: "Logistics Optimization",
 description: "Intelligent supply chain platform that uses AI to predict demand; optimize inventory; and improve efficiency",
 pricing: "Premium",
-price: 9500;
+price: 9500;,
 pricingModel: "monthly",
 features: [
 "Demand forecasting AI",
@@ -690,7 +690,7 @@ category: "Cybersecurity AI",
 subcategory: "Threat Intelligence",
 description: "Advanced cybersecurity platform that uses AI to detect; analyze; and respond to security threats in real-time",
 pricing: "Enterprise",
-price: 12000;
+price: 12000;,
 pricingModel: "monthly",
 features: [
 "AI-powered threat detection",
@@ -733,7 +733,7 @@ category: "Neurotechnology",
 subcategory: "BCI Solutions",
 description: "Revolutionary brain-computer interface platform for medical applications; research; and human-computer interaction",
 pricing: "Enterprise",
-price: 35000;
+price: 35000;,
 pricingModel: "monthly",
 features: [
 "Neural signal processing",
@@ -776,7 +776,7 @@ category: "Space Technology",
 subcategory: "Satellite AI",
 description: "Advanced AI platform for satellite operations; space data analysis; and orbital management systems",
 pricing: "Enterprise",
-price: 28000;
+price: 28000;,
 pricingModel: "monthly",
 features: [
 "Satellite orbit optimization",
@@ -819,7 +819,7 @@ category: "Quantum Technology",
 subcategory: "Quantum Communications",
 description: "Next-generation quantum internet infrastructure for ultra-secure; unhackable communications and data transfer",
 pricing: "Enterprise",
-price: 45000;
+price: 45000;,
 pricingModel: "monthly",
 features: [
 "Quantum key distribution",
@@ -862,7 +862,7 @@ category: "Biotechnology",
 subcategory: "Synthetic Biology",
 description: "Revolutionary platform for synthetic biology; genetic engineering; and bio-manufacturing applications",
 pricing: "Enterprise",
-price: 32000;
+price: 32000;,
 pricingModel: "monthly",
 features: [
 "DNA synthesis and editing",

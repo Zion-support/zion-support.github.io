@@ -39,8 +39,8 @@ vx: number;
 vy: number;
 size: number;
 color: string;
-alpha: number;
-life: number;
+alpha: number;,
+life: number;,
 maxLife: number;
 constructor() {
 this.x = Math.random() * canvas.width;
@@ -96,8 +96,8 @@ ctx.restore();
 function getParticleColor(): string {
 const colors = {
 cyberpunk: ["#00ffff", "#ff00ff", "#ffff00", "#ff0080", "#00ff80"],
-quantum: ["#4facfe", "#00f2fe", "#43e97b", "#38f9d7", "#fa709a"],
-neon: ["#ff006e", "#8338ec", "#3a86ff", "#06ffa5", "#ffbe0b"],
+quantum: ["#4facfe", "#00f2fe", "#43e97b", "#38f9d7", "#fa709a"],;
+neon: ["#ff006e", "#8338ec", "#3a86ff", "#06ffa5", "#ffbe0b"],;
 matrix: ["#00ff41", "#00ff00", "#39ff14", "#7fff00", "#bfff00"];
 };
 return colors[variant][Math.floor(Math.random() * colors[variant].length)];
@@ -259,19 +259,23 @@ background: variant === "matrix";
 {variant === "matrix" && (
 <div className="absolute inset-0 bg-gradient-to-b from-green-500/10 via-transparent to-transparent" />;
 )}
-</div>
+</div>;
 
 {/* Floating geometric shapes */}
 <div className="absolute inset-0 pointer-events-none">;
 <motion.div;
 className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
 animate={{
-rotate: 360;
+rotate: 360;,
 scale: [1; 1.2; 1],
 opacity: [0.3; 0.6; 0.3]}}
 transition={{
+<<<<<<< HEAD
 duration: 8;
 repeat: Infinity;
+=======
+duration: 8;,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "linear"}}
 />;
@@ -281,8 +285,12 @@ animate={{
 y: [0, -20; 0],
 opacity: [0.2; 0.5; 0.2]}}
 transition={{
+<<<<<<< HEAD
 duration: 6;
 repeat: Infinity;
+=======
+duration: 6;,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;
@@ -292,13 +300,17 @@ animate={{
 rotate: [0; 180; 360],
 scale: [1; 1.1; 1]}}
 transition={{
+<<<<<<< HEAD
 duration: 10;
 repeat: Infinity;
+=======
+duration: 10;,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "linear"}}
 />;
-</div>
-</div>
+</div>;
+</div>;
 );
 };
 

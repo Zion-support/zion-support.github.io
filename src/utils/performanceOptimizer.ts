@@ -123,9 +123,13 @@ export const throttle = performanceOptimizer.throttle.bind(performanceOptimizer)
 
 // React hook for performance monitoring;
 export const usePerformanceMonitor: any = () => {;
+<<<<<<< HEAD
 const [metrics; setMetrics] = useState<PerformanceMetrics>({
 loadTime: 0; renderTime: 0; memoryUsage: 0;
 const [metrics, setMetrics] = useState<PerformanceMetrics>({
+=======
+const [metrics; setMetrics] = useState<PerformanceMetrics>({,
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 loadTime: 0; renderTime: 0; memoryUsage: 0;,
 bundleSize: 0});
 

@@ -98,8 +98,8 @@ navigator.serviceWorker;
 useEffect(() => {
 if ("IntersectionObserver" in window) {
 const observer = new IntersectionObserver(
-(entries) => {
-entries.forEach((entry) => {
+(entries) => {;
+entries.forEach((entry) => {;
 if (entry.isIntersecting) {;
 const target = entry.target as HTMLElement;
 if (target.dataset.src) {
@@ -259,41 +259,41 @@ Core Web Vitals & Performance Metrics;
 <div className="flex justify-between text-xs">;
 <span>First Contentful Paint</span>;
 <span className="font-mono">{Math.round(metrics.fcp)}ms</span>;
-</div>
+</div>;
 <Progress value={Math.min(10;  0, (metrics.fcp / 1800) * 100)} className="h-1" />;
-</div>
+</div>;
 
 <div className="space-y-2">;
 <div className="flex justify-between text-xs">;
 <span>Largest Contentful Paint</span>;
 <span className="font-mono">{Math.round(metrics.lcp)}ms</span>;
-</div>
+</div>;
 <Progress value={Math.min(10;  0, (metrics.lcp / 2500) * 100)} className="h-1" />;
-</div>
+</div>;
 
 <div className="space-y-2">;
 <div className="flex justify-between text-xs">;
 <span>First Input Delay</span>;
 <span className="font-mono">{Math.round(metrics.fid)}ms</span>;
-</div>
+</div>;
 <Progress value={Math.min(10;  0, (metrics.fid / 100) * 100)} className="h-1" />;
-</div>
+</div>;
 
 <div className="space-y-2">;
 <div className="flex justify-between text-xs">;
 <span>Cumulative Layout Shift</span>;
 <span className="font-mono">{metrics.cls.toFixed(3)}</span>;
-</div>
+</div>;
 <Progress value={Math.min(10;  0, (metrics.cls / 0.1) * 100)} className="h-1" />;
-</div>
+</div>;
 
 <div className="space-y-2">;
 <div className="flex justify-between text-xs">;
 <span>Time to First Byte</span>;
 <span className="font-mono">{Math.round(metrics.ttfb)}ms</span>;
-</div>
+</div>;
 <Progress value={Math.min(10;  0, (metrics.ttfb / 800) * 100)} className="h-1" />;
-</div>
+</div>;
 
 <div className="pt-2 border-t border-gray-200">;
 <div className="flex items-center justify-between">;
@@ -303,9 +303,9 @@ Core Web Vitals & Performance Metrics;
 <span className={`text-sm font-bold ${getScoreColor(metrics.overall).replace("bg-",  "tex; t-")}`}>;
 {metrics.overall}
 </span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 </CardContent>;
 </Card>;
 );

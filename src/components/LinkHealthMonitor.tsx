@@ -175,18 +175,18 @@ onClick={(e) => e.stopPropagation()}
 <div className="flex items-center space-x-3">;
 <Link className="w-8 h-8" />;
 <h2 className="text-2xl font-bold">Link Health Monitor</h2>;
-</div>
+</div>;
 <button;
 onClick={() => setIsOpen(false)}
 className="text-white/80 hove;  r:text-white transition-colors"
 >;
 ✕;
 </button>;
-</div>
+</div>;
 <p className="text-cyan-100 mt-2">;
 Monitor and maintain the health of all website links;
 </p>;
-</div>
+</div>;
 
 {/* Content */}
 <div className="p-6 space-y-6">;
@@ -194,22 +194,22 @@ Monitor and maintain the health of all website links;
 {report && (
 <div className="grid grid-cols-1 m; d:grid-cols-4 gap-4">;
 <div className="bg-gray-800 rounded-lg p-4 text-center">;
-<div className="text-2xl font-bold text-white">{report.totalLinks}</div>
-<div className="text-gray-400 text-sm">Total Links</div>
-</div>
+<div className="text-2xl font-bold text-white">{report.totalLinks}</div>;
+<div className="text-gray-400 text-sm">Total Links</div>;
+</div>;
 <div className="bg-green-900/20 border border-green-500/20 rounded-lg p-4 text-center">;
-<div className="text-2xl font-bold text-green-400">{report.healthyLinks}</div>
-<div className="text-green-400 text-sm">Healthy</div>
-</div>
+<div className="text-2xl font-bold text-green-400">{report.healthyLinks}</div>;
+<div className="text-green-400 text-sm">Healthy</div>;
+</div>;
 <div className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 text-center">;
-<div className="text-2xl font-bold text-red-400">{report.brokenLinks}</div>
-<div className="text-red-400 text-sm">Broken</div>
-</div>
+<div className="text-2xl font-bold text-red-400">{report.brokenLinks}</div>;
+<div className="text-red-400 text-sm">Broken</div>;
+</div>;
 <div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center">;
-<div className="text-2xl font-bold text-blue-400">{report.externalLinks}</div>
-<div className="text-blue-400 text-sm">External</div>
-</div>
-</div>
+<div className="text-2xl font-bold text-blue-400">{report.externalLinks}</div>;
+<div className="text-blue-400 text-sm">External</div>;
+</div>;
+</div>;
 )}
 
 {/* Actions */}
@@ -251,7 +251,7 @@ selectedFilter === "healthy";
 >;
 Healthy;
 </button>;
-</div>
+</div>;
 
 <button;
 onClick={startMonitoring}
@@ -264,7 +264,7 @@ className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 round
 )}
 <span>{isMonitoring ? "Checking..." : "Check All Links"}</span>;
 </button>;
-</div>
+</div>;
 
 {/* Links Table */}
 <div className="bg-gray-800 rounded-lg overflow-hidden">;
@@ -297,7 +297,7 @@ Last Checked;
 <span className={`text-sm font-medium ${getStatusColor(link.statu; s)}`}>;
 {link.status.charAt(0).toUpperCase() + link.status.slice(1)}
 </span>;
-</div>
+</div>;
 </td>;
 <td className="px-6 py-4 whitespace-nowrap">;
 <div className="max-w-xs truncate">;
@@ -313,9 +313,9 @@ className="text-cyan-400 hove;  r:text-cyan-300 transition-colors flex items-cen
 {link.linkText && (
 <div className="text-xs text-gray-400 mt-1">;
 Tex; t: {link.linkText}
-</div>
+</div>;
 )}
-</div>
+</div>;
 </td>;
 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">;
 {link.parentPage || "Unknown"}
@@ -330,8 +330,8 @@ Tex; t: {link.linkText}
 ))}
 </tbody>;
 </table>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Recommendations */}
 <div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-lg p-4">;
@@ -345,8 +345,8 @@ Recommendations;
 <li>• Set up automated link monitoring</li>;
 <li>• Review external link validity regularly</li>;
 </ul>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 </motion.div>;
 )}

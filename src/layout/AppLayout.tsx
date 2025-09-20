@@ -16,7 +16,7 @@ return (
 {children}
 </main>;
 {!hideFooter && <Footer />}
-</div>
+</div>;
 );
 }
 <//div><///div>;

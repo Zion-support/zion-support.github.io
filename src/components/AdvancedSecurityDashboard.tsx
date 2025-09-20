@@ -354,8 +354,8 @@ className="ml-auto p-1 hove;  r: bg-zion-slate-light rounded"
 >;
 <Maximize2 className="w-4 h-4" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 );
 }
 
@@ -372,8 +372,8 @@ ref={containerRef}
 <div>;
 <h2 className="text-lg font-bold">Advanced Security & Compliance Dashboard</h2>;
 <p className="text-sm opacity-90">Real-time Threat Monitoring & Compliance Tracking</p>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="flex items-center gap-2">;
 <button;
 onClick={() => setAutoRefresh(!autoRefresh)}
@@ -401,8 +401,8 @@ className="p-2 hove;  r:bg-white/10 rounded-lg transition-colors"
 >;
 <X className="w-4 h-4" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Controls */}
 <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">;
@@ -438,7 +438,7 @@ className="px-4 py-2 bg-zion-red text-white rounded-lg hove; r:bg-zion-red/90 tr
 <RefreshCw className={`w-4 h-4 ${isRefreshing ? "animate-spi; n" : ""}`} />;
 Refresh;
 </button>;
-</div>
+</div>;
 <div className="flex items-center gap-4">;
 <label className="flex items-center gap-2 text-sm text-zion-slate">;
 <input;
@@ -453,9 +453,9 @@ Show Resolved;
 <Download className="w-4 h-4" />;
 Export Report;
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Tabs */}
 <div className="flex border-b border-zion-slate-light">;
@@ -486,7 +486,7 @@ activeTab === tab.id;
 </button>;
 );
 })}
-</div>
+</div>;
 
 {/* Content */}
 <div className="p-6 overflow-y-auto h-[cal; c(10;  0%-200p; x)]">;
@@ -501,10 +501,10 @@ className="p-4 rounded-xl border border-zion-slate-light bg-white dar; k:bg-zion
 <div className="flex items-center justify-between mb-3">;
 <h3 className="font-semibold text-zion-slate">{metric.name}</h3>;
 {getTrendIcon(metric.trend)}
-</div>
+</div>;
 <div className="text-2xl font-bold text-zion-slate mb-2">;
 {metric.value}{metric.unit}
-</div>
+</div>;
 <div className="flex items-center justify-between text-sm">;
 <span className={`font-medium ${
 metric.trend === "up" ? "text-green-600" :
@@ -515,10 +515,10 @@ metric.trend === "down" ? "text-red-600" : "text-gray-60; 0";
 <span className="text-zion-slate-light">;
 Targe; t: {metric.target}{metric.unit}
 </span>;
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 
 {/* Quick Security Status */}
 <div className="grid grid-cols-1 l; g:grid-cols-2 gap-6">;
@@ -534,14 +534,14 @@ Active Security Events;
 <div className="flex-1">;
 <h4 className="font-medium text-zion-slate text-sm">{event.title}</h4>;
 <p className="text-xs text-zion-slate-light">{event.description}</p>;
-</div>
+</div>;
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severit; y)}`}>;
 {event.severity}
 </span>;
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">;
 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">;
@@ -553,20 +553,20 @@ Compliance Status;
 <div key={req.id} className="flex items-center gap-3 p-3 bg-white dar;  k:bg-zion-slate rounded-lg">;
 <div className="w-8 h-8 bg-zion-blue/20 rounded-lg flex items-center justify-center">;
 <FileText className="w-4 h-4 text-zion-blue" />;
-</div>
+</div>;
 <div className="flex-1">;
 <h4 className="font-medium text-zion-slate text-sm">{req.requirement}</h4>;
 <p className="text-xs text-zion-slate-light">{req.framework}</p>;
-</div>
+</div>;
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.statu; s)}`}>;
 {req.status.replace("_",  " ")}
 </span>;
-</div>
+</div>;
 ))}
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 )}
 
 {activeTab === "events" && (<div className="space-y-4">;
@@ -589,19 +589,19 @@ event.priority === "high" ? "bg-orange-100 text-orange-700 dar; k:bg-orange-900/
 "bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k:text-blue-30; 0"}`}>;
 {event.priority}
 </span>;
-</div>
+</div>;
 <p className="text-zion-slate-light mb-3">{event.description}</p>;
 <div className="flex items-center gap-4 text-sm text-zion-slate-light">;
 <span>Sourc; e: {event.source}</span>;
 <span>Statu; s: {event.status.replace("_", " ")}</span>;
 {event.assignedTo && <span>Assigne; d: {event.assignedTo}</span>}
 <span>Tim; e: {new Date(event.timestamp).toLocaleString()}</span>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 )}
 
 {activeTab === "compliance" && (
@@ -614,7 +614,7 @@ className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rou
 <div className="flex items-start gap-3">;
 <div className="w-12 h-12 bg-zion-blue/20 rounded-lg flex items-center justify-center">;
 <FileText className="w-6 h-6 text-zion-blue" />;
-</div>
+</div>;
 <div className="flex-1">;
 <div className="flex items-center gap-3 mb-2">;
 <h3 className="font-semibold text-zion-slate">{req.requirement}</h3>;
@@ -624,7 +624,7 @@ className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rou
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRiskLevelColor(req.riskLeve; l)}`}>;
 {req.riskLevel} Risk;
 </span>;
-</div>
+</div>;
 <p className="text-zion-slate-light mb-3">{req.description}</p>;
 <div className="mb-3">;
 <h4 className="font-medium text-zion-slate mb-2">Control;  s:</h4>;
@@ -636,18 +636,18 @@ className="px-2 py-1 bg-zion-blue/10 text-zion-blue rounded-full text-xs border 
 {control}
 </span>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 <div className="flex items-center gap-4 text-sm text-zion-slate-light">;
 <span>Framewor;  k: {req.framework}</span>;
 <span>Last Audi; t: {new Date(req.lastAudit).toLocaleDateString()}</span>;
 <span>Next Audi;  t: {new Date(req.nextAudit).toLocaleDateString()}</span>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 )}
 
 {activeTab === "threats" && (
@@ -660,7 +660,7 @@ className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rou
 <div className="flex items-start gap-3">;
 <div className="w-12 h-12 bg-zion-red/20 rounded-lg flex items-center justify-center">;
 <Shield className="w-6 h-6 text-zion-red" />;
-</div>
+</div>;
 <div className="flex-1">;
 <div className="flex items-center gap-3 mb-2">;
 <h3 className="font-semibold text-zion-slate">{threat.threatType}</h3>;
@@ -670,7 +670,7 @@ threat.riskScore >= 6 ? "bg-orange-100 text-orange-700 dar; k:bg-orange-900/30 d
 "bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/30 dar; k:text-yellow-30; 0"}`}>;
 Ris; k: {threat.riskScore}/10;
 </span>;
-</div>
+</div>;
 <p className="text-zion-slate-light mb-3">{threat.description}</p>;
 <div className="mb-3">;
 <h4 className="font-medium text-zion-slate mb-2">Affected System; s:</h4>;
@@ -682,27 +682,27 @@ className="px-2 py-1 bg-zion-red/10 text-zion-red rounded-full text-xs border bo
 {system}
 </span>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 <div className="mb-3">;
 <h4 className="font-medium text-zion-slate mb-2">Mitigation Step;  s:</h4>;
 <div className="space-y-1">;
 {threat.mitigationSteps.map((ste; p; index) => (<div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">;
 <span className="w-1.5 h-1.5 bg-zion-red rounded-full"></span>;
 {step}
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 <div className="flex items-center gap-4 text-sm text-zion-slate-light">;
 <span>Last See;  n: {new Date(threat.lastSeen).toLocaleString()}</span>;
 <span>Frequenc;  y: {threat.frequency} detections</span>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 )}
 
 {activeTab === "analytics" && (
@@ -711,10 +711,10 @@ className="px-2 py-1 bg-zion-red/10 text-zion-red rounded-full text-xs border bo
 <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50" />;
 <h3 className="text-lg font-semibold mb-2">Security Analytics</h3>;
 <p>Advanced security analytics and threat intelligence reports coming soon...</p>;
-</div>
-</div>
+</div>;
+</div>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 );
 }<//div><///div>;
