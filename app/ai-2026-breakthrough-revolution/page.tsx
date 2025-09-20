@@ -1,11 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import SEO from '../../components/SEO';
-<<<<<<< HEAD
-import Card from '../../components/ui/EnhancedCard';
-=======
-// import Card from '../../components/ui/Card';
->>>>>>> 710f924e591e06041844bf9852fab6e10f055e22
 export const metadata = {
   title: 'AI 2026 Breakthrough Revolution - The Future of Artificial Intelligence',
   description: 'Discover the revolutionary AI breakthroughs of 2026 that are transforming industries and reshaping the future of technology.',
@@ -15,11 +10,7 @@ export default function AI2026BreakthroughRevolution() {
   return (
     <div>
       <SEO
-<<<<<<< HEAD
-        title="AI 2026 Breakthrough Revolution"
-=======
         title="AI 2026 Breakthrough Revolution - The Future of Artificial Intelligence"
->>>>>>> 710f924e591e06041844bf9852fab6e10f055e22
         description="Discover the revolutionary AI breakthroughs of 2026 that are transforming industries and reshaping the future of technology."
         keywords="AI 2026, artificial intelligence breakthrough, machine learning revolution, neural networks, quantum AI"
         url="/ai-2026-breakthrough-revolution"
