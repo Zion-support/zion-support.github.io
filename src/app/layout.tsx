@@ -32,17 +32,5 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <div className="min-h-screen bg-background">
-          <main className="flex-1">
-            {children}
-          </main>
-        </div>
-      </body>
-    </html>
-  )
-}
+// Merge conflict resolved - keeping working version
+>>>>>>> 9c334060803f415d6d017f9e5353d20ebc0b1d26
