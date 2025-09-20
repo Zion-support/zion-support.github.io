@@ -1,6 +1,5 @@
 import React from 'react';
-import SEO from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
 
 interface CookieType {
   id: string;
@@ -24,7 +23,7 @@ export default function Cookies() {
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <GradientHeading>Cookie Policy</GradientHeading>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Cookie Policy</h1>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
               How we use cookies and similar technologies on our website
             </p>

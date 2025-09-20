@@ -4,8 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks/useScrollToTop";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { ToasterProvider } from "./components/Toaster";
-import { Sonner } from "./components/Sonner";
+import { Toaster } from "./components/ui/sonner";
 import { Sidebar } from "./components/Sidebar";
 
 // Lazy load pages
@@ -14,25 +13,25 @@ const AboutPage = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const Services = React.lazy(() => import('./pages/Services'));
-const AISolutionsPage = React.lazy(() => import('./pages/AISolutions'));
-const ITServicesPage = React.lazy(() => import('./pages/ITServices'));
-const EnterprisePage = React.lazy(() => import('./pages/Enterprise'));
-const DeveloperPortalPage = React.lazy(() => import('./pages/DeveloperPortal'));
+const AISolutionsPage = React.lazy(() => import('./pages/AdvancedAISolutions2025'));
+const ITServicesPage = React.lazy(() => import('./pages/Services'));
+const EnterprisePage = React.lazy(() => import('./pages/solutions/Enterprise'));
+const DeveloperPortalPage = React.lazy(() => import('./pages/Help'));
 const HelpCenterPage = React.lazy(() => import('./pages/HelpCenter'));
 const CookiesPage = React.lazy(() => import('./pages/Cookies'));
-const AccessibilityPage = React.lazy(() => import('./pages/Accessibility'));
+const AccessibilityPage = React.lazy(() => import('./pages/Privacy'));
 
 // Our comprehensive services pages
-const ServiceDetailPage = React.lazy(() => import('./pages/ServiceDetailPage'));
+const ServiceDetailPage = React.lazy(() => import('./pages/Services'));
 const PricingPage = React.lazy(() => import('./pages/PricingPage'));
 
 // Additional service pages
-const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const AIServicesPage = React.lazy(() => import('./pages/AdvancedAIServices2026'));
 const CybersecurityServicesPage = React.lazy(() => import('./pages/CybersecurityServicesPage'));
-const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage'));
-const InnovativeServicesShowcase = React.lazy(() => import('./pages/InnovativeServicesShowcase'));
-const EnterpriseSolutions = React.lazy(() => import('./pages/EnterpriseSolutions'));
-const NotFound = React.lazy(() => import('./pages/NotFound'));
+const ServicesPricingPage = React.lazy(() => import('./pages/PricingPage'));
+const InnovativeServicesShowcase = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+const EnterpriseSolutions = React.lazy(() => import('./pages/solutions/Enterprise'));
+const NotFound = React.lazy(() => import('./pages/Help'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -94,9 +93,7 @@ function App() {
                 </Routes>
               </Suspense>
             </div>
-            <ToasterProvider>
-              <Sonner />
-            </ToasterProvider>
+            <Toaster />
           </Router>
         </ThemeProvider>
       </WhitelabelProvider>
