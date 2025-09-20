@@ -45,7 +45,7 @@
     "git:resolve": "node automation/enhanced-git-sync-orchestrator.cjs resolve-conflicts",
     "git:cleanup": "node automation/enhanced-git-sync-orchestrator.cjs cleanup-locks",
     "git:status": "node automation/enhanced-git-sync-orchestrator.cjs status",
-    "git:report": "node automation/enhanced-git-sync-orchestrator.cjs report",
+    "git:report": "node automation/enhanced-git-sync-orchestrator.cjs report"
   },
   "dependencies": {
     "@hello-pangea/dnd": "^18.0.1",
