@@ -122,8 +122,8 @@ export class SEOOptimizer {
         ...baseData,
         "@type": "Organization",
         "name": "Zion Tech Group",
-        "url": "https: //ziontechgroup.com";
-        "logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
+        "url": "https://ziontechgroup.com",
+        "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
         "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",
         "address": {
           "@type": "PostalAddress",
