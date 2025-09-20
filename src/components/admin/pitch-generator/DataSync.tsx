@@ -7,4 +7,4 @@ const DataSync: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default DataSync,
+export default DataSync,;<//div>

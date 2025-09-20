@@ -19,7 +19,7 @@ export interface SpecializedAIService {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   technology: string[];
     integrations: string[];
@@ -29,7 +29,7 @@ export interface SpecializedAIService {
     marketTrend: string;
     implementationComplexity: string;
     aiModel: string[];
-    trainingData: string;
+    trainingData: string;,
 }
 
 export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
@@ -81,7 +81,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["PyTorch", "TensorFlow", "Hugging Face", "Transformers", "CUDA", "Distributed Training"],
     integrations: ["Data Lakes", "MLOps Platforms", "API Gateways", "Monitoring Tools", "Security Systems"],
@@ -91,7 +91,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     marketTrend: "Explosive growth market with $100B+ by 2030";
     implementationComplexity: "Very High - Requires AI/ML expertise and significant computational resources";
     aiModel: ["GPT-4", "Claude", "LLaMA", "Custom Models", "Fine-tuned Models"],
-    trainingData: "Enterprise data; industry-specific datasets; custom training data"
+    trainingData: "Enterprise data; industry-specific datasets; custom training data",
   },
 
   // Computer Vision AI Platform;
@@ -142,7 +142,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["OpenCV", "TensorFlow", "PyTorch", "CUDA", "Edge TPU", "Computer Vision Models"],
     integrations: ["Cameras", "IoT Devices", "Cloud Platforms", "Analytics Tools", "Security Systems"],
@@ -152,7 +152,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     marketTrend: "High-growth market with $50B+ by 2027";
     implementationComplexity: "High - Requires computer vision and AI expertise";
     aiModel: ["YOLO", "ResNet", "EfficientNet", "Custom Models", "Pre-trained Models"],
-    trainingData: "Image datasets; industry-specific images; custom training data"
+    trainingData: "Image datasets; industry-specific images; custom training data",
   },
 
   // AI-Powered Cybersecurity;
@@ -203,7 +203,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["TensorFlow", "PyTorch", "Scikit-learn", "Deep Learning", "NLP", "Graph Analytics"],
     integrations: ["SIEM Systems", "EDR Solutions", "Firewalls", "Identity Providers", "Monitoring Tools"],
@@ -213,7 +213,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     marketTrend: "High-growth market with $60B+ by 2027";
     implementationComplexity: "High - Requires cybersecurity and AI expertise";
     aiModel: ["Neural Networks", "Random Forests", "Gradient Boosting", "Custom Models", "Ensemble Methods"],
-    trainingData: "Threat data; network logs; security incidents; malware samples"
+    trainingData: "Threat data; network logs; security incidents; malware samples",
   },
 
   // AI-Powered Predictive Analytics;
@@ -264,7 +264,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "R", "TensorFlow", "Scikit-learn", "Prophet", "Time Series Models"],
     integrations: ["Data Warehouses", "BI Tools", "ERP Systems", "CRM Systems", "Analytics Platforms"],
@@ -274,7 +274,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     marketTrend: "Growing market with $30B+ by 2027";
     implementationComplexity: "Medium - Requires data science and AI expertise";
     aiModel: ["LSTM", "Random Forests", "Gradient Boosting", "ARIMA", "Prophet Models"],
-    trainingData: "Historical data; time series data; business metrics; external datasets"
+    trainingData: "Historical data; time series data; business metrics; external datasets",
   },
 
   // AI-Powered Process Automation;
@@ -325,7 +325,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "UiPath", "Automation Anywhere", "Blue Prism", "Machine Learning", "NLP"],
     integrations: ["ERP Systems", "CRM Systems", "Document Management", "Email Systems", "Databases"],
@@ -335,7 +335,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     marketTrend: "High-growth market with $25B+ by 2027";
     implementationComplexity: "Medium - Requires automation and AI expertise";
     aiModel: ["Decision Trees", "Neural Networks", "NLP Models", "Computer Vision", "Custom Models"],
-    trainingData: "Process data; workflow logs; business rules; historical processes"
+    trainingData: "Process data; workflow logs; business rules; historical processes",
   },
 
   // AI-Powered Customer Intelligence;
@@ -386,7 +386,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "TensorFlow", "Scikit-learn", "NLP", "Recommendation Systems", "Deep Learning"],
     integrations: ["CRM Systems", "Marketing Platforms", "E-commerce Platforms", "Analytics Tools", "Data Sources"],
@@ -396,7 +396,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     marketTrend: "High-growth market with $40B+ by 2027";
     implementationComplexity: "Medium - Requires AI and customer analytics expertise";
     aiModel: ["Collaborative Filtering", "Content-based Filtering", "Neural Networks", "Gradient Boosting", "Custom Models"],
-    trainingData: "Customer data; transaction history; behavioral data; demographic information"
+    trainingData: "Customer data; transaction history; behavioral data; demographic information",
   },
 
   // AI-Powered Supply Chain Optimization;
@@ -447,7 +447,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "TensorFlow", "Scikit-learn", "Optimization Algorithms", "Time Series Models", "Graph Analytics"],
     integrations: ["ERP Systems", "WMS", "TMS", "Supplier Systems", "Analytics Platforms"],
@@ -457,7 +457,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     marketTrend: "Growing market with $35B+ by 2027";
     implementationComplexity: "High - Requires supply chain and AI expertise";
     aiModel: ["LSTM", "Random Forests", "Linear Programming", "Genetic Algorithms", "Custom Models"],
-    trainingData: "Historical demand; inventory levels; supplier data; logistics information"
+    trainingData: "Historical demand; inventory levels; supplier data; logistics information",
   },
 
   // AI-Powered Quality Assurance;
@@ -508,7 +508,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Selenium", "Appium", "JUnit", "TestNG", "Machine Learning", "NLP", "Computer Vision"],
     integrations: ["CI/CD Pipelines", "Test Management Tools", "Bug Tracking Systems", "Monitoring Tools", "Reporting Tools"],
@@ -518,6 +518,6 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     marketTrend: "Growing market with $20B+ by 2027";
     implementationComplexity: "Medium - Requires QA and AI expertise";
     aiModel: ["Neural Networks", "Decision Trees", "Computer Vision", "NLP Models", "Custom Models"],
-    trainingData: "Test cases; defect reports; application logs; performance metrics"
+    trainingData: "Test cases; defect reports; application logs; performance metrics",
   }
 ];

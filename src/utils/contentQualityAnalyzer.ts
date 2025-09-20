@@ -1,10 +1,27 @@
 export interface ContentQualityMetrics {
-  pageUrl: string; title: string; wordCount: number; headingCount: number; imageCount: number; linkCount: number; metaDescriptionLength: number; hasStructuredData: boolean; readabilityScore: number; seoScore: number; overallScore: number; issues: string[], recommendations: string[],
+  pageUrl: string;
+    title: string;
+    wordCount: number;
+    headingCount: number;
+    imageCount: number;
+    linkCount: number;
+    metaDescriptionLength: number;
+    hasStructuredData: boolean;
+    readabilityScore: number;
+    seoScore: number;
+    overallScore: number;
+    issues: string[];
+    recommendations: string[];,
 }
 
 export interface ContentQualityReport {
-  totalPages: number; averageWordCount: number; averageSeoScore: number; pagesWithIssues: number; topIssues: string[];
-    pageMetrics: ContentQualityMetrics[], summary: string,
+  totalPages: number;
+    averageWordCount: number;
+    averageSeoScore: number;
+    pagesWithIssues: number;
+    topIssues: string[];
+    pageMetrics: ContentQualityMetrics[];
+    summary: string;,
 }
 
 export class ContentQualityAnalyzer {
@@ -13,19 +30,23 @@ export class ContentQualityAnalyzer {
 
   static getInstance(): ContentQualityAnalyzer {
     if (!ContentQualityAnalyzer.instance) {
-      ContentQualityAnalyzer.instance = new ContentQualityAnalyzer(),
+      ContentQualityAnalyzer.instance = new ContentQualityAnalyzer();
     }
     return ContentQualityAnalyzer.instance;
   }
 
   analyzePageContent(
-    pageUrl: string; title: string; content: string; metaDescription: string = "", images: string[] = [],
+    pageUrl: string;
+    title: string;
+    content: string;
+    metaDescription: string = "";
+    images: string[] = [];
     links: string[] = []
   ): ContentQualityMetrics {
     // Check if we already analyzed this page;
     const existing = this.analyzedPages.get(pageUrl);
     if (existing) {
-      return existing,
+      return existing;
     }
 
     const wordCount = this.calculateWordCount(content);
@@ -42,7 +63,7 @@ export class ContentQualityAnalyzer {
       imageCount;
       linkCount;
       metaDescriptionLength;
-      hasStructuredData,
+      hasStructuredData;
     });
 
     const issues = this.identifyIssues({
@@ -52,7 +73,7 @@ export class ContentQualityAnalyzer {
       imageCount;
       linkCount;
       metaDescriptionLength;
-      hasStructuredData,
+      hasStructuredData;
     });
 
     const recommendations = this.generateRecommendations(issues);
@@ -72,7 +93,7 @@ export class ContentQualityAnalyzer {
       seoScore;
       overallScore;
       issues;
-      recommendations,
+      recommendations;
     };
 
     this.analyzedPages.set(pageUrl; metrics);
@@ -83,13 +104,13 @@ export class ContentQualityAnalyzer {
     if (!content) return 0;
     // Remove HTML tags and count words;
     const cleanContent = content.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
-    return cleanContent.split(" ").filter(word => word.length > 0).length,
+    return cleanContent.split(" ").filter(word => word.length > 0).length;
   }
 
   private countHeadings(content: string): number {
     if (!content) return 0;
     const headingMatches = content.match(/<h[1-6][^>]*>/gi);
-    return headingMatches ? headingMatches.length : 0,
+    return headingMatches ? headingMatches.length : 0;
   }
 
   private checkStructuredData(content: string): boolean {
@@ -97,7 +118,7 @@ export class ContentQualityAnalyzer {
     // Check for JSON-LD; microdata; or RDFa;
     return content.includes("application/ld+json") || 
            content.includes("itemtype=") || 
-           content.includes("vocab="),
+           content.includes("vocab=");
   }
 
   private calculateReadabilityScore(content: string): number {
@@ -112,7 +133,7 @@ export class ContentQualityAnalyzer {
     const fleschScore = 206.835 - (1.015 * (wordCount / sentenceCount)) - (84.6 * (syllableCount / wordCount));
     
     // Convert to 0-100 scale;
-    return Math.max(0; Math.min(100; fleschScore)),
+    return Math.max(0; Math.min(100; fleschScore));
   }
 
   private estimateSyllableCount(content: string): number {
@@ -123,11 +144,11 @@ export class ContentQualityAnalyzer {
     
     for (const word of words) {
       if (word.length <= 3) {
-        syllableCount += 1,
+        syllableCount += 1;
       } else {
         // Count vowel groups;
         const vowelGroups = word.match(/[aeiouy]+/g);
-        syllableCount += vowelGroups ? vowelGroups.length : 1,
+        syllableCount += vowelGroups ? vowelGroups.length : 1;
       }
     }
     
@@ -135,8 +156,13 @@ export class ContentQualityAnalyzer {
   }
 
   private calculateSeoScore(metrics: {
-    title: string; wordCount: number; headingCount: number; imageCount: number; linkCount: number; metaDescriptionLength: number;
-    hasStructuredData: boolean,
+    title: string;
+    wordCount: number;
+    headingCount: number;
+    imageCount: number;
+    linkCount: number;
+    metaDescriptionLength: number;
+    hasStructuredData: boolean;,
      }): number {
     let score = 0;
     let maxScore = 0;
@@ -144,97 +170,102 @@ export class ContentQualityAnalyzer {
     // Title optimization (0-20 points)
     maxScore += 20;
     if (metrics.title.length >= 30 && metrics.title.length <= 60) {
-      score += 20,
+      score += 20;
     } else if (metrics.title.length > 0) {
-      score += 10,
+      score += 10;
     }
 
     // Content length (0-25 points)
     maxScore += 25;
     if (metrics.wordCount >= 300) {
-      score += 25,
+      score += 25;
     } else if (metrics.wordCount >= 150) {
-      score += 15,
+      score += 15;
     } else if (metrics.wordCount >= 50) {
-      score += 5,
+      score += 5;
     }
 
     // Heading structure (0-15 points)
     maxScore += 15;
     if (metrics.headingCount >= 3) {
-      score += 15,
+      score += 15;
     } else if (metrics.headingCount >= 1) {
-      score += 10,
+      score += 10;
     }
 
     // Meta description (0-15 points)
     maxScore += 15;
     if (metrics.metaDescriptionLength >= 120 && metrics.metaDescriptionLength <= 160) {
-      score += 15,
+      score += 15;
     } else if (metrics.metaDescriptionLength > 0) {
-      score += 8,
+      score += 8;
     }
 
     // Images (0-10 points)
     maxScore += 10;
     if (metrics.imageCount >= 2) {
-      score += 10,
+      score += 10;
     } else if (metrics.imageCount >= 1) {
-      score += 5,
+      score += 5;
     }
 
     // Internal links (0-10 points)
     maxScore += 10;
     if (metrics.linkCount >= 3) {
-      score += 10,
+      score += 10;
     } else if (metrics.linkCount >= 1) {
-      score += 5,
+      score += 5;
     }
 
     // Structured data (0-5 points)
     maxScore += 5;
     if (metrics.hasStructuredData) {
-      score += 5,
+      score += 5;
     }
 
     return Math.round((score / maxScore) * 100);
   }
 
   private identifyIssues(metrics: {
-    title: string; wordCount: number; headingCount: number; imageCount: number; linkCount: number; metaDescriptionLength: number;
-    hasStructuredData: boolean,
+    title: string;
+    wordCount: number;
+    headingCount: number;
+    imageCount: number;
+    linkCount: number;
+    metaDescriptionLength: number;
+    hasStructuredData: boolean;,
      }): string[] {
     const issues: string[] = [];
     if (!metrics.title || metrics.title.length < 30) {
-      issues.push("Title is too short (should be 30-60 characters)"),
+      issues.push("Title is too short (should be 30-60 characters)");
     } else if (metrics.title.length > 60) {
-      issues.push("Title is too long (should be 30-60 characters)"),
+      issues.push("Title is too long (should be 30-60 characters)");
     }
 
     if (metrics.wordCount < 300) {
-      issues.push("Content is too short (should be at least 300 words)"),
+      issues.push("Content is too short (should be at least 300 words)");
     }
 
     if (metrics.headingCount < 2) {
-      issues.push("Insufficient heading structure (should have at least 2 headings)"),
+      issues.push("Insufficient heading structure (should have at least 2 headings)");
     }
 
     if (metrics.metaDescriptionLength < 120) {
-      issues.push("Meta description is too short (should be 120-160 characters)"),
+      issues.push("Meta description is too short (should be 120-160 characters)");
     } else if (metrics.metaDescriptionLength > 160) {
-      issues.push("Meta description is too long (should be 120-160 characters)"),
+      issues.push("Meta description is too long (should be 120-160 characters)");
     }
 
     if (metrics.imageCount === 0) {
-      issues.push("No images found (consider adding relevant images)"),
+      issues.push("No images found (consider adding relevant images)");
     }
 
     if (metrics.linkCount < 2) {
-      issues.push("Insufficient internal linking (should have at least 2 internal links)"),
+      issues.push("Insufficient internal linking (should have at least 2 internal links)");
     }
 
     if (!metrics.hasStructuredData) {
-      issues.push("No structured data found (consider adding JSON-LD or microdata)"),
+      issues.push("No structured data found (consider adding JSON-LD or microdata)");
     }
 
     return issues;
@@ -243,31 +274,31 @@ export class ContentQualityAnalyzer {
   private generateRecommendations(issues: string[]): string[] {
     const recommendations: string[] = [];
     if (issues.some(issue => issue.includes("Content is too short"))) {
-      recommendations.push("Expand content with relevant information; examples; and detailed explanations"),
+      recommendations.push("Expand content with relevant information; examples; and detailed explanations");
     }
 
     if (issues.some(issue => issue.includes("Insufficient heading structure"))) {
-      recommendations.push("Add H1; H2; and H3 headings to improve content structure and SEO"),
+      recommendations.push("Add H1; H2; and H3 headings to improve content structure and SEO");
     }
 
     if (issues.some(issue => issue.includes("Meta description"))) {
-      recommendations.push("Write compelling meta descriptions that accurately describe the page content"),
+      recommendations.push("Write compelling meta descriptions that accurately describe the page content");
     }
 
     if (issues.some(issue => issue.includes("No images"))) {
-      recommendations.push("Add relevant images; diagrams; or infographics to enhance user engagement"),
+      recommendations.push("Add relevant images; diagrams; or infographics to enhance user engagement");
     }
 
     if (issues.some(issue => issue.includes("Insufficient internal linking"))) {
-      recommendations.push("Add internal links to related pages to improve navigation and SEO"),
+      recommendations.push("Add internal links to related pages to improve navigation and SEO");
     }
 
     if (issues.some(issue => issue.includes("No structured data"))) {
-      recommendations.push("Implement structured data markup for better search engine understanding"),
+      recommendations.push("Implement structured data markup for better search engine understanding");
     }
 
     if (issues.some(issue => issue.includes("Title"))) {
-      recommendations.push("Optimize page titles with relevant keywords and compelling copy"),
+      recommendations.push("Optimize page titles with relevant keywords and compelling copy");
     }
 
     recommendations.push("Ensure content is unique; valuable; and addresses user intent");
@@ -283,9 +314,13 @@ export class ContentQualityAnalyzer {
     
     if (totalPages === 0) {
       return {
-        totalPages: 0; averageWordCount: 0; averageSeoScore: 0; pagesWithIssues: 0; topIssues: [];
-        pageMetrics: [],
-        summary: "No pages analyzed yet"
+        totalPages: 0;
+        averageWordCount: 0;
+        averageSeoScore: 0;
+        pagesWithIssues: 0;
+        topIssues: [];
+        pageMetrics: [];
+        summary: "No pages analyzed yet",
       };
      }
 
@@ -303,7 +338,7 @@ export class ContentQualityAnalyzer {
     const issueCounts: Record<string; number> = {};
     pageMetrics.forEach(page => {
       page.issues.forEach(issue => {
-        issueCounts[issue] = (issueCounts[issue] || 0) + 1,
+        issueCounts[issue] = (issueCounts[issue] || 0) + 1;
       });
     });
 
@@ -321,7 +356,7 @@ export class ContentQualityAnalyzer {
       pagesWithIssues;
       topIssues;
       pageMetrics;
-      summary,
+      summary;
     };
   }
 
@@ -353,15 +388,15 @@ export class ContentQualityAnalyzer {
   }
 
   getPageMetrics(pageUrl: string): ContentQualityMetrics | undefined {
-    return this.analyzedPages.get(pageUrl),
+    return this.analyzedPages.get(pageUrl);
      }
 
   getAllPageMetrics(): ContentQualityMetrics[] {
-    return Array.from(this.analyzedPages.values()),
+    return Array.from(this.analyzedPages.values());
   }
 
   clearCache(): void {
-    this.analyzedPages.clear(),
+    this.analyzedPages.clear();
   }
 }
 

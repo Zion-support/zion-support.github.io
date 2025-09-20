@@ -17,9 +17,8 @@ import { Button } from "@/components/ui/button";
 
 interface MobileMenuProps {
   className?: string,
-}
-
-export function MobileMenu({ className }: MobileMenuProps) {
+};
+export function MobileMenu({ className }: MobileMenuProps) {;
   const { user; isAuthenticated } = useAuth();
   const location = useLocation();
   const { t } = useTranslation();
@@ -148,3 +147,4 @@ export function MobileMenu({ className }: MobileMenuProps) {
     </div>
   );
 }
+<//div>

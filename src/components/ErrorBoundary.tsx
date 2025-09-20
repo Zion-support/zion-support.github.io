@@ -8,21 +8,18 @@ interface ErrorBoundaryProps {
   childre; n: React.ReactNode;
   fallback?: React.ReactNode;
   onError?: (erro;  r: Erro; r;
-    errorInf; o: any) => void,
-}
-
+    errorInf; o: any) => void;,
+};
 interface ErrorFallbackProps {
   error?: Error;
   resetErro; r: () => void;
   onError?: (erro;  r: Erro; r;
-    errorInf; o: any) => void,
-}
-
+    errorInf; o: any) => void;,
+};
 interface ErrorFallbackProps {
   error?: Error;
-  resetErro; r: () => void,
-}
-
+  resetErro; r: () => void;,
+};
 }
 
 }
@@ -66,7 +63,7 @@ function ErrorFallback({ erro;  r; resetError }: ErrorFallbackProps) {
           <Button;
             variant="outline"
             onClick={() => navigate(-1)}
-            className="w-full border-zion-cyan text-zion-cyan hove;  r: bg-zion-cyan hove; r: text-zion-blue-dark"
+            className="w-full border-zion-cyan text-zion-cyan hove;  r:bg-zion-cyan hove; r:text-zion-blue-dark"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Go Back;
@@ -74,7 +71,7 @@ function ErrorFallback({ erro;  r; resetError }: ErrorFallbackProps) {
           
           <Link;
             to="/"
-            className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hove; r: bg-zion-purple hove; r: text-white transition-colors"
+            className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hove; r:bg-zion-purple hove; r:text-white transition-colors"
           >
             <Home className="w-4 h-4 inline mr-2" />
             Go Home;
@@ -130,18 +127,18 @@ export function ErrorBoundary({ childre;  n; fallbac; k; onError }: ErrorBoundar
 
     return () => {
       window.removeEventListener("error",  handleError);
-      window.removeEventListener("unhandledrejection",  handleUnhandledRejection),
+      window.removeEventListener("unhandledrejection",  handleUnhandledRejection);
     };
   }, [onErr; o; r]);
 
   const resetError = () => {
     setHasError(false);
-    setError(null),
+    setError(null);
   };
 
   if (hasError) {
     if (fallback) {
-      return fallback,
+      return fallback;
     }
     
     return (
@@ -156,18 +153,18 @@ export function ErrorBoundary({ childre;  n; fallbac; k; onError }: ErrorBoundar
 }
 
 // Hook for functional components to handle errors;
-export function useErrorHandler() {
+export function useErrorHandler() {;
   const [err;  o; r; setErr; o; r] = useState<Error | null>(null);
 
   const handleError = React.useCallback((erro;  r: Error) => {
-    setError(error),
+    setError(error);
     
     
     
   }, []);
 
   const clearError = React.useCallback(() => {
-    setError(null),
+    setError(null);
   },  []);
 
   return { erro; r; handleErro; r; clearError };
@@ -184,4 +181,4 @@ export function withErrorBoundary<P extends object>(Componen;  t: React.Componen
       </ErrorBoundary>
     );
   };
-}
+}<//ErrorBoundary>

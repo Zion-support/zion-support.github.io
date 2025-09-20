@@ -8,17 +8,17 @@ export const useSearch = (data, options) => {
         sortOrder: 'asc';
         results: data;
         isLoading: false;
-        totalResults: data.length
+        totalResults: data.length,
     });
     const [debouncedQuery, setDebouncedQuery] = useState('');
-    // Debounce search query
+    // Debounce search query;
     useEffect(() => {
         const timer = setTimeout(() => {
             setDebouncedQuery(searchState.query);
         }, debounceMs);
         return () => clearTimeout(timer);
     }, [searchState.query, debounceMs]);
-    // Fuzzy search algorithm
+    // Fuzzy search algorithm;
     const fuzzyMatch = useCallback((text, query) => {
         if (!query)
             return true;
@@ -35,11 +35,11 @@ export const useSearch = (data, options) => {
         }
         return queryIndex === searchQuery.length;
     }, [fuzzySearch, caseSensitive]);
-    // Search and filter data
+    // Search and filter data;
     const processedData = useMemo(() => {
         setSearchState(prev => ({ ...prev, isLoading: true }));
     let results = data;
-        // Apply search
+        // Apply search;
         if (debouncedQuery) {
             results = results.filter(item => {
                 return searchFields.some(field => {
@@ -54,7 +54,7 @@ export const useSearch = (data, options) => {
                 });
             });
         }
-        // Apply filters
+        // Apply filters;
         Object.entries(searchState.filters).forEach(([key, value]) => {
             if (value !== null && value !== undefined && value !== '') {
                 results = results.filter(item => {
@@ -69,7 +69,7 @@ export const useSearch = (data, options) => {
                 });
             }
         });
-        // Apply sorting
+        // Apply sorting;
         if (searchState.sortBy) {
             results = [...results].sort((a, b) => {
                 const aValue = a[searchState.sortBy];
@@ -93,44 +93,44 @@ export const useSearch = (data, options) => {
             ...prev,
             results,
             totalResults: results.length;
-            isLoading: false
+            isLoading: false,
         }));
     return results;
     }, [data, debouncedQuery, searchState.filters, searchState.sortBy, searchState.sortOrder, searchFields, fuzzyMatch]);
-    // Update search query
+    // Update search query;
     const setQuery = useCallback((query) => {
         setSearchState(prev => ({ ...prev, query }));
     }, []);
-    // Update filters
+    // Update filters;
     const setFilter = useCallback((key, value) => {
         setSearchState(prev => ({
             ...prev,
             filters: { ...prev.filters, [key]: value }
         }));
     }, []);
-    // Clear all filters
+    // Clear all filters;
     const clearFilters = useCallback(() => {
         setSearchState(prev => ({ ...prev, filters: {} }));
      }, []);
-    // Update sorting
+    // Update sorting;
     const setSort = useCallback((field, order = 'asc') => {
         setSearchState(prev => ({
             ...prev,
             sortBy: field;
-            sortOrder: order
+            sortOrder: order,
         }));
      }, []);
-    // Clear search
+    // Clear search;
     const clearSearch = useCallback(() => {
         setSearchState(prev => ({
             ...prev,
             query: '';
             filters: {};
             sortBy: null;
-            sortOrder: 'asc'
+            sortOrder: 'asc',
         }));
      }, []);
-    // Get search suggestions
+    // Get search suggestions;
     const getSuggestions = useCallback((query, maxSuggestions = 5) => {
         if (!query || query.length < 2)
             return [];
@@ -150,7 +150,7 @@ export const useSearch = (data, options) => {
         });
         return Array.from(suggestions).slice(0, maxSuggestions);
     }, [data, searchFields]);
-    // Pagination helper
+    // Pagination helper;
     const getPaginatedResults = useCallback((page, pageSize) => {
         const startIndex = (page - 1) * pageSize;
         const endIndex = startIndex + pageSize;
@@ -159,7 +159,7 @@ export const useSearch = (data, options) => {
             totalPages: Math.ceil(searchState.totalResults / pageSize);
             currentPage: page;
             hasNextPage: endIndex < searchState.totalResults;
-            hasPrevPage: page > 1
+            hasPrevPage: page > 1,
         };
      }, [searchState.results, searchState.totalResults]);
     return {
@@ -171,6 +171,6 @@ export const useSearch = (data, options) => {
         clearSearch,
         getSuggestions,
         getPaginatedResults,
-        processedData
+        processedData;
     };
 };

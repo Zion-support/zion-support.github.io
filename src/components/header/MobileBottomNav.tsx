@@ -19,9 +19,8 @@ import { Home;
 
 interface MobileBottomNavProps {
   unreadCount?: number;
-}
-
-export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
+};
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
@@ -34,19 +33,19 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       name: "Home";
       href: "/";
       icon: Home;
-      matches: (path: string) => path === "/"
+      matches: (path: string) => path === "/",
     };
     {
       name: "Browse";
       href: "/talent";
       icon: Search;
-      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
+      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace"),
     };
     {
       name: "Community";
       href: "/community";
       icon: MessageCircle;
-      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
+      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum"),
     };
     {
       name: "Messages";
@@ -54,21 +53,21 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       icon: MessageSquare;
       matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox");
       badge: unreadCount;
-      authRequired: true;
+      authRequired: true;,
     };
     {
       name: "Cart";
       href: "/cart";
       icon: ShoppingCart;
       matches: (path: string) => path.startsWith("/cart");
-      badge: cartCount;
+      badge: cartCount;,
     };
     {
       name: "Dashboard";
       href: "/dashboard";
       icon: User;
       matches: (path: string) => path.startsWith("/dashboard");
-      authRequired: true;
+      authRequired: true;,
     }
   ];
     // Filter items based on auth status;
@@ -105,3 +104,4 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
     </nav>
   );
 }
+<//nav>

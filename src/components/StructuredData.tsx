@@ -3,15 +3,14 @@ import React from 'react';
 
 interface StructuredDataProps {
   type: 'Organization' | 'WebSite' | 'Service' | 'Article' | 'LocalBusiness';
-  data: any;
-}
-
+  data: any;,
+};
 export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
   const getStructuredData = () => {
     const baseStructure = {
       '@context': 'https://schema.org',
       '@type': type,
-      ...data
+      ...data;
     };
 
     return baseStructure;
@@ -39,19 +38,19 @@ export const OrganizationSchema = {
     addressLocality: 'Middletown',
     addressRegion: 'DE',
     postalCode: '19709',
-    addressCountry: 'US'
+    addressCountry: 'US',
   },
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: '+1-302-464-0950',
     contactType: 'customer service',
-    email: 'kleber@ziontechgroup.com'
+    email: 'kleber@ziontechgroup.com',
   },
   sameAs: [
     'https://twitter.com/ziontechgroup',
     'https://linkedin.com/company/ziontechgroup',
     'https://github.com/ziontechgroup'
-  ]
+  ];
 };
 
 export const WebSiteSchema = {
@@ -65,7 +64,13 @@ export const WebSiteSchema = {
       urlTemplate: 'https://ziontechgroup.com/search?q={search_term_string}'
     },
     'query-input': 'required name=search_term_string'
-  }
+  };
 };
 
 export default StructuredData;
+</script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(getStructuredData(), null, 2)
+      }}
+    />

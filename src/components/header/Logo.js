@@ -23,7 +23,7 @@ export const Logo = () => {
             {isWhitelabel ? brandName : 'ZION'}
           </div>
           <div className="text-xs text-zion-cyan font-medium leading-tight">
-            TECH GROUP
+            TECH GROUP;
           </div>
         </div>
       </div>

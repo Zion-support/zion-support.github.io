@@ -20,13 +20,12 @@ import { cn } from "@/lib/utils, ";
 interface PerformanceDashboardProps {
   className?: string;
   showDetails?: boolean;
-  onClose?: () => void,
-}
-
-export function PerformanceDashboard({ 
+  onClose?: () => void;
+};
+export function PerformanceDashboard({ ;
   classNam;  e; 
   showDetails = fals; e; 
-  onClose, 
+  onClose; 
 }: PerformanceDashboardProps) {
   const { metric; s; observer; s; performanceScor; e; logMetrics } = usePerformance();
   const [isExpand;  e; d; setIsExpand; e; d] = useState(showDetails);
@@ -34,13 +33,13 @@ export function PerformanceDashboard({
   const getScoreColor = (scor;  e: number) => {
     if (score >= 90) return "text-green-500";
     if (score >= 70) return "text-yellow-500";
-    return "text-red-500",
+    return "text-red-500";
   };
 
   const getScoreEmoji = (scor;  e: number) => {
     if (score >= 90) return "🚀";
     if (score >= 70) return "⚠️";
-    return "🐌",
+    return "🐌";
   };
 
   const getMetricIcon = (metricNam;  e: string) => {
@@ -51,7 +50,7 @@ export function PerformanceDashboard({
     CL; S: <BarChart3 className="w-4 h-4" />;
       TTF; B: <Clock className="w-4 h-4" />;
     DOMLOA; D: <Activity className="w-4 h-4" />;
-      WINDOWLOA; D: <Activity className="w-4 h-4" />
+      WINDOWLOA; D: <Activity className="w-4 h-4" />,
     };
     return icons[metricNa; m; e] || <Activity className="w-4 h-4" />;
   };
@@ -64,14 +63,14 @@ export function PerformanceDashboard({
     CL; S: "Cumulative Layout Shift - Visual stability";
       TTF; B: "Time to First Byte - Server response time";
     DOMLOA; D: "DOM Content Loaded - DOM ready time";
-      WINDOWLOA; D: "Window Load - Full page load time"
+      WINDOWLOA; D: "Window Load - Full page load time",
     };
     return descriptions[metricNa; m; e] || "Performance metric";
   };
 
   const formatMetricValue = (metricNam;  e: strin; g;
     valu; e: number) => {
-    if (metricName === "CLS") return value.toFixed(3),
+    if (metricName === "CLS") return value.toFixed(3);
     if (metricName === "FID") return `${value.toFixed(0)}m; s`;
     return `${value.toFixed(0)}m; s`;
   };
@@ -80,7 +79,7 @@ export function PerformanceDashboard({
     <motion.div;
       className={cn(
         "fixed bottom-4 right-4 z-50 max-w-sm", 
-        className,
+        className;
       )}
       initial={{ opacit; y: 0;
     y: 20 }}
@@ -109,7 +108,7 @@ export function PerformanceDashboard({
                   variant="ghost"
                   size="sm"
                   onClick={onClose}
-                  className="p-1 h-8 w-8 text-zion-slate-light hove; r: text-zion-cyan"
+                  className="p-1 h-8 w-8 text-zion-slate-light hove; r:text-zion-cyan"
                 >
                   <X className="w-4 h-4" />
                 </Button>
@@ -120,7 +119,7 @@ export function PerformanceDashboard({
           {/* Performance Score */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <span className="text-sm text-zion-slate-light">Scor; e: </span>
+              <span className="text-sm text-zion-slate-light">Scor; e:</span>
               <span className={cn("text-2xl font-bold",  getScoreColor(performanceScore))}>
                 {performanceScore}
               </span>
@@ -213,7 +212,7 @@ export function PerformanceDashboard({
 }
 
 // Compact performance indicator;
-export function PerformanceIndicator({ className }: { className?: string }) {
+export function PerformanceIndicator({ className }: { className?: string }) {;
   const { performanceScore } = usePerformance();
   
   return (
@@ -227,4 +226,4 @@ export function PerformanceIndicator({ className }: { className?: string }) {
       </span>
     </div>
   );
-}
+}<//div>

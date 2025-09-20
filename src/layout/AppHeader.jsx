@@ -15,6 +15,6 @@ export function AppHeader() {
           <MainNavigation />
         </div>
       </div>
-    </header>
+    </header>;
   );
-}
+}<//header>

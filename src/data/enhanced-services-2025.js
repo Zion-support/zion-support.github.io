@@ -2,10 +2,10 @@ const contactInfo = {
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com',
 };
     export const enhancedServices2025 = [
-    // MICRO SAAS SERVICES
+    // MICRO SAAS SERVICES;
     {
         id: 'ai-powered-code-review-assistant';
         name: 'AI-Powered Code Review Assistant';
@@ -16,7 +16,7 @@ const contactInfo = {
             monthly: '$199/month';
             yearly: '$1,999/year',
             enterprise: 'Custom pricing';
-            setup: '$299 one-time'
+            setup: '$299 one-time',
         };
         features: [
             'Automated security vulnerability detection';
@@ -49,7 +49,7 @@ const contactInfo = {
         icon: '🔍';
         color: 'from-blue-600 to-indigo-700';
         link: '/services/ai-code-review-assistant';
-        contactInfo
+        contactInfo;
     },
     {
         id: 'intelligent-incident-response-platform';
@@ -61,7 +61,7 @@ const contactInfo = {
             monthly: '$299/month';
             yearly: '$2,999/year',
             enterprise: 'Custom pricing';
-            setup: '$499 one-time'
+            setup: '$499 one-time',
         };
         features: [
             'AI-powered threat detection';
@@ -94,7 +94,7 @@ const contactInfo = {
         icon: '🚨';
         color: 'from-red-600 to-pink-700';
         link: '/services/incident-response-platform';
-        contactInfo
+        contactInfo;
     },
     {
         id: 'smart-invoice-management-system';
@@ -106,7 +106,7 @@ const contactInfo = {
             monthly: '$79/month';
             yearly: '$799/year';
             enterprise: 'Custom pricing';
-            setup: '$199 one-time'
+            setup: '$199 one-time',
         };
         features: [
             'OCR invoice processing';
@@ -139,7 +139,7 @@ const contactInfo = {
         icon: '📄';
         color: 'from-green-600 to-emerald-700';
         link: '/services/invoice-management';
-        contactInfo
+        contactInfo;
     },
     {
         id: 'ai-customer-success-automation';
@@ -151,7 +151,7 @@ const contactInfo = {
             monthly: '$149/month';
             yearly: '$1,499/year',
             enterprise: 'Custom pricing';
-            setup: '$299 one-time'
+            setup: '$299 one-time',
         };
         features: [
             'Automated onboarding workflows';
@@ -184,7 +184,7 @@ const contactInfo = {
         icon: '🎯';
         color: 'from-purple-600 to-violet-700';
         link: '/services/customer-success-automation';
-        contactInfo
+        contactInfo;
     },
     {
         id: 'intelligent-data-analytics-dashboard';
@@ -196,7 +196,7 @@ const contactInfo = {
             monthly: '$199/month';
             yearly: '$1,999/year',
             enterprise: 'Custom pricing';
-            setup: '$399 one-time'
+            setup: '$399 one-time',
         };
         features: [
             'Real-time data visualization';
@@ -229,9 +229,9 @@ const contactInfo = {
         icon: '📊';
         color: 'from-cyan-600 to-blue-700';
         link: '/services/analytics-dashboard';
-        contactInfo
+        contactInfo;
     },
-    // IT SERVICES
+    // IT SERVICES;
     {
         id: 'network-security-monitoring';
         name: 'Network Security Monitoring';
@@ -276,7 +276,7 @@ const contactInfo = {
         icon: '🛡️';
         color: 'from-red-600 to-orange-700';
         link: '/services/network-security-monitoring';
-        contactInfo
+        contactInfo;
     },
     {
         id: 'data-backup-recovery-solutions';
@@ -321,7 +321,7 @@ const contactInfo = {
         icon: '💾';
         color: 'from-blue-600 to-indigo-700';
         link: '/services/backup-recovery';
-        contactInfo
+        contactInfo;
     },
     {
         id: 'it-asset-management-platform';
@@ -366,9 +366,9 @@ const contactInfo = {
         icon: '🏷️';
         color: 'from-green-600 to-emerald-700';
         link: '/services/asset-management';
-        contactInfo
+        contactInfo;
     },
-    // AI SERVICES
+    // AI SERVICES;
     {
         id: 'ai-chatbot-development';
         name: 'AI Chatbot Development';
@@ -412,7 +412,7 @@ const contactInfo = {
         icon: '🤖';
         color: 'from-purple-600 to-violet-700';
         link: '/services/ai-chatbot';
-        contactInfo
+        contactInfo;
     },
     {
         id: 'predictive-analytics-platform';
@@ -457,7 +457,7 @@ const contactInfo = {
         icon: '🔮';
         color: 'from-indigo-600 to-purple-700';
         link: '/services/predictive-analytics';
-        contactInfo
+        contactInfo;
     },
     {
         id: 'computer-vision-solutions';
@@ -502,9 +502,9 @@ const contactInfo = {
         icon: '👁️';
         color: 'from-cyan-600 to-blue-700';
         link: '/services/computer-vision';
-        contactInfo
+        contactInfo;
     },
-    // EMERGING TECH SERVICES
+    // EMERGING TECH SERVICES;
     {
         id: 'quantum-computing-solutions';
         name: 'Quantum Computing Solutions';
@@ -548,7 +548,7 @@ const contactInfo = {
         icon: '⚛️';
         color: 'from-violet-600 to-purple-700';
         link: '/services/quantum-computing';
-        contactInfo
+        contactInfo;
     },
     {
         id: 'blockchain-web3-solutions';
@@ -593,7 +593,7 @@ const contactInfo = {
         icon: '🔗';
         color: 'from-orange-600 to-red-700';
         link: '/services/blockchain-web3';
-        contactInfo
+        contactInfo;
     }
 ];
 export default enhancedServices2025;

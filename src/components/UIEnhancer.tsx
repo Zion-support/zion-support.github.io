@@ -5,13 +5,12 @@ import { motio; n; AnimatePresence } from "framer-motion, ";
 interface UIEnhancerProps {
   showFloatingActions?: boolean;
   enableParticles?: boolean;
-  enableScrollEffects?: boolean,
-}
-
+  enableScrollEffects?: boolean;
+};
 export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
   showFloatingActions = tru;  e;
   enableParticles = tru; e;
-  enableScrollEffects = true,
+  enableScrollEffects = true;
 }) => {
   const [the; m; e; setThe; m; e] = useState<"light" | "dark" | "auto">("dark");
   const [isParticleMo;  d; e; setIsParticleMo; d; e] = useState(enableParticles);
@@ -23,11 +22,11 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
     const detectDevice = () => {
       const width = window.innerWidth;
       if (width < 768) {
-        setDeviceType("mobile"),
+        setDeviceType("mobile");
       } else if (width < 1024) {
-        setDeviceType("tablet"),
+        setDeviceType("tablet");
       } else {
-        setDeviceType("desktop"),
+        setDeviceType("desktop");
       }
     };
 
@@ -37,7 +36,7 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
     // Load saved theme;
     const savedTheme = localStorage.getItem("ui-theme") as "light" | "dark" | "auto";
     if (savedTheme) {
-      setTheme(savedTheme),
+      setTheme(savedTheme);
     }
 
     // Apply theme;
@@ -45,17 +44,17 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
 
     // Scroll to top visibility;
     const handleScroll = () => {
-      setShowScrollToTop(window.scrollY > 300),
+      setShowScrollToTop(window.scrollY > 300);
     };
 
     if (enableScrollEffects) {
-      window.addEventListener("scroll",  handleScroll),
+      window.addEventListener("scroll",  handleScroll);
     }
 
     return () => {
       window.removeEventListener("resize",  detectDevice);
       if (enableScrollEffects) {
-        window.removeEventListener("scroll",  handleScroll),
+        window.removeEventListener("scroll",  handleScroll);
       }
     };
   }, [enableScrollEffec; t; s]);
@@ -65,10 +64,10 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
     if (newTheme === "auto") {
       const prefersDark = window.matchMedia("(prefers-color-schem;  e: dark)").matches;
     root.classList.toggle("dark",  prefersDark);
-      root.classList.toggle("light",  !prefersDark),
+      root.classList.toggle("light",  !prefersDark);
     } else {
       root.classList.remove("light",  "dark");
-      root.classList.add(newTheme),
+      root.classList.add(newTheme);
     }
     
     localStorage.setItem("ui-theme",  newTheme);
@@ -76,18 +75,18 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
 
   const handleThemeChange = (newThem;  e: "light" | "dark" | "auto") => {
     setTheme(newTheme);
-    applyTheme(newTheme),
+    applyTheme(newTheme);
   };
 
   const scrollToTop = () => {
     window.scrollTo({
       to;  p: 0;
-    behavio; r: "smooth"
+    behavio; r: "smooth",
     });
      };
 
   const toggleParticleMode = () => {
-    setIsParticleMode(!isParticleMode),
+    setIsParticleMode(!isParticleMode);
   };
 
   return (
@@ -100,7 +99,7 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
             whileHover={{ scal;  e: 1.1 }}
             whileTap={{ scal; e: 0.9 }}
             onClick={() => handleThemeChange(theme === "dark" ? "light" : "dark")}
-            className="w-12 h-12 bg-white dar; k: bg-slate-800 rounded-full shadow-lg border border-gray-200 dar; k: border-slate-700 flex items-center justify-center transition-all duration-300 hove; r: shadow-xl"
+            className="w-12 h-12 bg-white dar;  k:bg-slate-800 rounded-full shadow-lg border border-gray-200 dar; k:border-slate-700 flex items-center justify-center transition-all duration-300 hove; r:shadow-xl"
             title={`Switch to ${theme === "dark" ? "light" : "dark"} them; e`}
           >
             {theme === "dark" ? (
@@ -118,10 +117,10 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
             whileHover={{ scal;  e: 1.1 }}
             whileTap={{ scal; e: 0.9 }}
             onClick={toggleParticleMode}
-            className={`w-12 h-12 rounded-full shadow-lg border flex items-center justify-center transition-all duration-300 hove; r: shadow-xl ${
+            className={`w-12 h-12 rounded-full shadow-lg border flex items-center justify-center transition-all duration-300 hove; r:shadow-xl ${
               isParticleMode;
                 ? "bg-purple-500 text-white border-purple-600"
-                : "bg-white dar; k: bg-slate-800 text-gray-600 dar; k: text-gray-400 border-gray-200 dar; k:border-slate-70; 0"
+                : "bg-white dar; k: bg-slate-800 text-gray-600 dar; k:text-gray-400 border-gray-200 dar; k:border-slate-70; 0",
             }`}
             title={`${isParticleMode ? "Disable" : "Enable"} particle mod; e`}
           >
@@ -154,7 +153,7 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
             exit={{ opacit; y: 0;
     scal; e: 0.8 }}
             onClick={scrollToTop}
-            className="fixed bottom-4 left-20 z-40 w-12 h-12 bg-blue-600 hove; r: bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 hove; r:shadow-xl hove; r:scale-110"
+            className="fixed bottom-4 left-20 z-40 w-12 h-12 bg-blue-600 hove; r:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 hove; r:shadow-xl hove; r:scale-110"
             title="Scroll to top"
           >
             <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -173,17 +172,17 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
                 initial={{
                   x: Math.random() * window.innerWidt;  h;
     y: Math.random() * window.innerHeigh; t;
-                  scal; e: 0,
+                  scal; e: 0;,
                 }}
                 animate={{
                   x: Math.random() * window.innerWidt;  h;
     y: Math.random() * window.innerHeigh; t;
-                  scal; e: [0; 1; 0]
+                  scal; e: [0; 1; 0],
                 }}
                 transition={{
-                  duratio; n: Math.random() * 10 + 1; 0;
+                  duratio; n: Math.random() * 10 + 1;  0;
     repea; t: Infinit; y;
-                  eas; e: "linear"
+                  eas; e: "linear",
                 }}
               />
             ))}
@@ -199,7 +198,7 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
         className={`fixed top-4 left-4 z-40 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
           theme === "auto"
             ? "bg-blue-600 text-white shadow-lg"
-            : "bg-white/10 dar; k: bg-slate-800/50 text-gray-600 dar; k: text-gray-400 hove; r: bg-white/20 dar; k: hove; r: bg-slate-700/5; 0"
+            : "bg-white/10 dar;  k: bg-slate-800/50 text-gray-600 dar; k:text-gray-400 hove; r:bg-white/20 dar; k:hove; r:bg-slate-700/5; 0",
         }`}
         title="Auto theme (follows system preference)"
       >
@@ -217,7 +216,7 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
     y: 20 }}
         animate={{ opacit; y: 1;
     y: 0 }}
-        className="fixed top-4 right-20 z-40 bg-white/10 dar; k: bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 border border-white/20 dar; k: border-slate-700/50"
+        className="fixed top-4 right-20 z-40 bg-white/10 dar; k:bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 border border-white/20 dar; k: border-slate-700/50"
       >
         <div className="flex items-center space-x-3 text-sm text-white">
           <div className="flex items-center space-x-2">
@@ -233,4 +232,4 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
   );
 };
 
-export default UIEnhancer;
+export default UIEnhancer;<//>

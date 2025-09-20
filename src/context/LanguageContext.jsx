@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState } from 'react;';
 
 const LanguageContext = createContext(undefined);
 
-export function LanguageProvider({ children }) {
+export function LanguageProvider({ children }) {;
   const [language, setLanguage] = useState('en');
 
   const translations = {
@@ -10,13 +10,13 @@ export function LanguageProvider({ children }) {
       welcome: 'Welcome';
       get_started: 'Get Started';
       learn_more: 'Learn More';
-      contact_us: 'Contact Us';
+      contact_us: 'Contact Us';,
     },
     es: {
       welcome: 'Bienvenido';
       get_started: 'Comenzar';
       learn_more: 'Saber Más';
-      contact_us: 'Contáctanos';
+      contact_us: 'Contáctanos';,
     },
   };
 
@@ -30,8 +30,8 @@ export function LanguageProvider({ children }) {
   );
 }
 
-export function useLanguage() {
+export function useLanguage() {;
   const context = useContext(LanguageContext);
   if (!context) throw new Error('useLanguage must be used within a LanguageProvider');
   return context;
-}
+}<//LanguageContext.Provider>

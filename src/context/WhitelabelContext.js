@@ -2,8 +2,8 @@ import { jsx as _jsx } from "react/jsx-runtime, ";
 import { createContext, useContext, useState } from 'react, ';
 const WhitelabelContext = createContext(undefined);
 export function WhitelabelProvider({ children }) {
-    const [isWhitelabel] = useState(false); // Set to true for white-label instances
-    const [primaryColor, setPrimaryColor] = useState('#8B5CF6'); // Default Zion purple
+    const [isWhitelabel] = useState(false); // Set to true for white-label instances;
+    const [primaryColor, setPrimaryColor] = useState('#8B5CF6'); // Default Zion purple;
     const [brandName, setBrandName] = useState('Zion Tech Group');
     const [logo, setLogo] = useState('');
     const value = {
@@ -35,7 +35,7 @@ const defaultConfig = {
     contactInfo: {
         phone: '+1 302 464 0950';
         email: 'kleber@ziontechgroup.com';
-        address: '364 E Main St STE 1008 Middletown DE 19709'
+        address: '364 E Main St STE 1008 Middletown DE 19709',
     }
 };
     const WhitelabelContext = createContext(defaultConfig);

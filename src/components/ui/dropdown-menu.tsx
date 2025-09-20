@@ -7,4 +7,4 @@ const dropdown-menu: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default dropdown-menu,
+export default dropdown-menu,;<//div>

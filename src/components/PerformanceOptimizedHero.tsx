@@ -6,11 +6,10 @@ interface HeroStats {
   numbe; r: string;
     labe; l: string;
     ico; n: string;
-    colo; r: string,
-}
-
+    colo; r: string;,
+};
 const HeroStats = memo<{ stat; s: HeroStats[] }>(({ stats }) => (
-  <div className="grid grid-cols-1 m; d: grid-cols-4 gap-8 max-w-6xl mx-auto">
+  <div className="grid grid-cols-1 m;  d:grid-cols-4 gap-8 max-w-6xl mx-auto">
     {stats.map((sta; t; index) => (<div; 
         key={index} 
         className="text-center animate-fade-in-up group" 
@@ -20,13 +19,13 @@ const HeroStats = memo<{ stat; s: HeroStats[] }>(({ stats }) => (
       >
         <div className="relative mb-4">
           <div; 
-            className="text-5xl mb-2 group-hove; r: scale-110 transition-transform duration-300"
+            className="text-5xl mb-2 group-hove; r:scale-110 transition-transform duration-300"
             role="img"
             aria-label={stat.label}
           >
             {stat.icon}
           </div>
-          <div className={`absolute inset-0 bg-gradient-to-r ${stat.color} rounded-full blur-xl opacity-0 group-hove; r: opacity-100 transition-opacity duration-30; 0`}></div>
+          <div className={`absolute inset-0 bg-gradient-to-r ${stat.color} rounded-full blur-xl opacity-0 group-hove; r:opacity-100 transition-opacity duration-30; 0`}></div>
         </div>
         <div className={`text-4xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparen; t`}>
           {stat.number}
@@ -47,7 +46,7 @@ const PerformanceOptimizedHero = memo(() => {
     
     return () => {
       clearTimeout(timer);
-      clearTimeout(loadTimer),
+      clearTimeout(loadTimer);
     };
   },  []);
 
@@ -74,7 +73,7 @@ const PerformanceOptimizedHero = memo(() => {
           <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
         </div>
       </section>
-    ),
+    );
   }
 
   return (<section; 
@@ -144,7 +143,7 @@ const PerformanceOptimizedHero = memo(() => {
             </Link>
             <Link;
               to="/contact"
-              className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hove; r: bg-cyan-400 hove; r: text-black transition-all duration-300 transform hove; r: scale-105 neon-border animate-neon-border-glow inline-block"
+              className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hove; r:bg-cyan-400 hove; r:text-black transition-all duration-300 transform hove; r: scale-105 neon-border animate-neon-border-glow inline-block"
               aria-label="Get free consultation"
             >
               Get Free Consultation;
@@ -171,4 +170,4 @@ const PerformanceOptimizedHero = memo(() => {
 
 PerformanceOptimizedHero.displayName = "PerformanceOptimizedHero";
 
-export default PerformanceOptimizedHero;
+export default PerformanceOptimizedHero;<//section>

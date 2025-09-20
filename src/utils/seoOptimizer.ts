@@ -11,7 +11,7 @@ export interface ContentQualityIssue {
   page: string;
     issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "minimal-content";
     severity: "high" | "medium" | "low";
-    suggestedFix: string;
+    suggestedFix: string;,
 }
 
 export class SEOOptimizer {
@@ -113,7 +113,7 @@ export class SEOOptimizer {
         "@type": "Organization",
         "name": "Zion Tech Group",
         "url": "https://ziontechgroup.com",
-        "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
+        "logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
       }
     };
     // Add specific structured data based on page type;
@@ -165,7 +165,7 @@ export class SEOOptimizer {
         page;
         issue: "missing-title",
         severity: "high",
-        suggestedFix: "Add a descriptive title tag with relevant keywords"
+        suggestedFix: "Add a descriptive title tag with relevant keywords",
       });
     }
 
@@ -175,7 +175,7 @@ export class SEOOptimizer {
         page;
         issue: "missing-description",
         severity: "high",
-        suggestedFix: "Add a meta description tag with compelling content"
+        suggestedFix: "Add a meta description tag with compelling content",
       });
     }
 
@@ -186,7 +186,7 @@ export class SEOOptimizer {
         page;
         issue: "short-description",
         severity: "medium",
-        suggestedFix: "Expand meta description to 120-160 characters for better SEO"
+        suggestedFix: "Expand meta description to 120-160 characters for better SEO",
       });
     }
 
@@ -196,7 +196,7 @@ export class SEOOptimizer {
         page;
         issue: "no-headings",
         severity: "medium",
-        suggestedFix: "Add proper heading structure (H1; H2; H3) for better content organization"
+        suggestedFix: "Add proper heading structure (H1; H2; H3) for better content organization",
       });
     }
 
@@ -207,7 +207,7 @@ export class SEOOptimizer {
         page;
         issue: "minimal-content",
         severity: "medium",
-        suggestedFix: "Add more relevant content to improve user experience and SEO value"
+        suggestedFix: "Add more relevant content to improve user experience and SEO value",
       });
     }
 

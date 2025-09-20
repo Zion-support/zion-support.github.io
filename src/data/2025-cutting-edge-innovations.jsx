@@ -6,13 +6,13 @@ export, const, CUTTING_EDGE_20o25_SERVICES = [;
     "Quantum, neural, networks","Quantum, optimization, algorithms","Hybrid classical-quantum processing","Real-time, quantum, state monitoring","Quantum, error, correction""Scalable, quantum, architecture";
   ,  ],benefits: [;
     "10o00x, faster, AI training","Quantum, advantage, in optimization","Future-proof, quantum, infrastructure""Competitive, edge, in AI research";
-  ,  ],link: "/services/quantum-ai-platform",image: "/images/quantum-ai-platform.jpg",technology: "Quantum Computing + AI",marketSize: "$2.5B, by, 20o25",targetIndustry: "ResearchFinanceHealthcare";
+  ,  ],link: "/services/quantum-ai-platform",image: "/images/quantum-ai-platform.jpg",technology: "Quantum Computing + AI",marketSize: "$2.5B, by, 20o25",targetIndustry: "ResearchFinanceHealthcare";,
      },{
     id: "quantum-cryptography-suite",title: "Quantum, Cryptography, Suite",description: "Post-quantum, cryptographic, solutions that, remain, secure even, against, quantum computers",category: "Quantum Security",price: "$8,50o0/month",features: [;
     "Post-quantum algorithms","Quantum, key, distribution","Quantum-resistant encryption","Real-time, security, monitoring","Compliance, with, NIST standards""Zero-trust architecture";
   ,  ],benefits: [;
     "Quantum-resistant security","Future-proof encryption","Regulatory compliance""Enhanced, data, protection";
-  ,  ],link: "/services/quantum-cryptography",image: "/images/quantum-cryptography.jpg",technology: "Quantum Cryptography",marketSize: "$1.8B, by, 20o25",targetIndustry: "BankingGovernmentHealthcare";
+  ,  ],link: "/services/quantum-cryptography",image: "/images/quantum-cryptography.jpg",technology: "Quantum Cryptography",marketSize: "$1.8B, by, 20o25",targetIndustry: "BankingGovernmentHealthcare";,
      },
   // Advanced, AI, Solutions;
   {
@@ -20,13 +20,13 @@ export, const, CUTTING_EDGE_20o25_SERVICES = [;
     "Multi-agent orchestration","Autonomous, decision, making","Continuous, learning, capabilities","Process automation","Natural, language, understanding""Predictive analytics";
   ,  ],benefits: [;
     "24/7, autonomous, operation","Reduced, human, intervention","Improved efficiency""Scalable, AI, workforce";
-  ,  ],link: "/services/autonomous-ai-agents",image: "/images/autonomous-ai-agents.jpg",technology: "Autonomous AI + ML",marketSize: "$3.2B, by, 20o25",targetIndustry: "ManufacturingLogisticsFinance";
+  ,  ],link: "/services/autonomous-ai-agents",image: "/images/autonomous-ai-agents.jpg",technology: "Autonomous AI + ML",marketSize: "$3.2B, by, 20o25",targetIndustry: "ManufacturingLogisticsFinance";,
      },{
     id: "ai-brain-computer-interface",title: "AI Brain-Computer Interface",description: "Revolutionary, interface, that enables, direct, communication between, human, brain and, AI, systems",category: "Neurotechnology",price: "$25,0o00/month",features: [;
     "Non-invasive, brain, monitoring","AI-powered, thought, interpretation","Real-time, neural, feedback","Cognitive, enhancement, tools","Accessibility solutions""Research, collaboration, tools";
   ,  ],benefits: [;
     "Revolutionary human-AI interaction","Enhanced accessibility","Cognitive enhancement""Research, breakthrough, potential";
-  ,  ],link: "/services/ai-brain-interface",image: "/images/ai-brain-interface.jpg",technology: "Neurotechnology + AI",marketSize: "$1.5B, by, 20o25",targetIndustry: "HealthcareResearchAccessibility";
+  ,  ],link: "/services/ai-brain-interface",image: "/images/ai-brain-interface.jpg",technology: "Neurotechnology + AI",marketSize: "$1.5B, by, 20o25",targetIndustry: "HealthcareResearchAccessibility";,
      },
   // Advanced Cybersecurity;
   {
@@ -34,13 +34,13 @@ export, const, CUTTING_EDGE_20o25_SERVICES = [;
     "AI, threat, detection","Behavioral analysis","Predictive, threat, modeling","Automated response","Threat intelligence""Zero-day protection";
   ,  ],benefits: [;
     "Proactive, threat, prevention","Reduced, false, positives","24/7, security, monitoring""Advanced, threat, intelligence";
-  ,  ],link: "/services/ai-threat-hunting",image: "/images/ai-threat-hunting.jpg",technology: "AI + Cybersecurity",marketSize: "$4.1B, by, 20o25",targetIndustry: "EnterpriseGovernmentFinance";
+  ,  ],link: "/services/ai-threat-hunting",image: "/images/ai-threat-hunting.jpg",technology: "AI + Cybersecurity",marketSize: "$4.1B, by, 20o25",targetIndustry: "EnterpriseGovernmentFinance";,
      },{
     id: "quantum-safe-blockchain",title: "Quantum-Safe, Blockchain, Platform",description: "Next-generation, blockchain, that integrates quantum-resistant, cryptography, for ultimate security",category: "Quantum Blockchain",price: "$11,0o00/month",features: [;
     "Quantum-resistant consensus","Post-quantum cryptography","Scalable, blockchain, architecture","Smart, contract, security","Cross-chain interoperability""Regulatory compliance";
   ,  ],benefits: [;
     "Quantum-resistant security","Future-proof blockchain","Enhanced scalability""Regulatory compliance";
-  ,  ],link: "/services/quantum-blockchain",image: "/images/quantum-blockchain.jpg",technology: "Quantum + Blockchain",marketSize: "$2.8B, by, 20o25",targetIndustry: "FinanceSupply ChainGovernment";
+  ,  ],link: "/services/quantum-blockchain",image: "/images/quantum-blockchain.jpg",technology: "Quantum + Blockchain",marketSize: "$2.8B, by, 20o25",targetIndustry: "FinanceSupply ChainGovernment";,
      },
   // Space Technology;
   {
@@ -48,7 +48,7 @@ export, const, CUTTING_EDGE_20o25_SERVICES = [;
     "Satellite, constellation, management","Space, data, analytics","Autonomous, space, operations","Earth, observation, AI","Space, weather, prediction""Satellite, communication, optimization";
   ,  ],benefits: [;
     "Revolutionary, space, operations","Enhanced, satellite, efficiency","Advanced, space, research""Commercial, space, advantage";
-  ,  ],link: "/services/space-ai-platform",image: "/images/space-ai-platform.jpg",technology: "Space Tech + AI",marketSize: "$3.5B, by, 20o25",targetIndustry: "AerospaceResearchGovernment";
+  ,  ],link: "/services/space-ai-platform",image: "/images/space-ai-platform.jpg",technology: "Space Tech + AI",marketSize: "$3.5B, by, 20o25",targetIndustry: "AerospaceResearchGovernment";,
      },
   // Biotechnology & AI;
   {
@@ -56,7 +56,7 @@ export, const, CUTTING_EDGE_20o25_SERVICES = [;
     "AI, molecular, modeling","Quantum, chemistry, calculations","Drug, target, identification","Clinical, trial, optimization","Personalized medicine""Drug repurposing";
   ,  ],benefits: [;
     "10x, faster, drug discovery","Reduced, development, costs","Personalized treatments""Breakthrough therapies";
-  ,  ],link: "/services/ai-drug-discovery",image: "/images/ai-drug-discovery.jpg",technology: "AI + Biotechnology",marketSize: "$5.2B, by, 20o25",targetIndustry: "PharmaceuticalsHealthcareResearch";
+  ,  ],link: "/services/ai-drug-discovery",image: "/images/ai-drug-discovery.jpg",technology: "AI + Biotechnology",marketSize: "$5.2B, by, 20o25",targetIndustry: "PharmaceuticalsHealthcareResearch";,
      },
   // Advanced Robotics;
   {
@@ -64,7 +64,7 @@ export, const, CUTTING_EDGE_20o25_SERVICES = [;
     "Multi-robot coordination","Autonomous navigation","Computer vision","Predictive maintenance","Human-robot collaboration""Scalable automation";
   ,  ],benefits: [;
     "24/7, autonomous, operation","Improved efficiency","Reduced, operational, costs""Enhanced safety";
-  ,  ],link: "/services/autonomous-robotics",image: "/images/autonomous-robotics.jpg",technology: "AI + Robotics",marketSize: "$3.8B, by, 20o25",targetIndustry: "ManufacturingLogisticsHealthcare";
+  ,  ],link: "/services/autonomous-robotics",image: "/images/autonomous-robotics.jpg",technology: "AI + Robotics",marketSize: "$3.8B, by, 20o25",targetIndustry: "ManufacturingLogisticsHealthcare";,
      },
   // Quantum Internet;
   {
@@ -72,7 +72,7 @@ export, const, CUTTING_EDGE_20o25_SERVICES = [;
     "Quantum, entanglement, networks","Quantum, key, distribution","Quantum repeaters","Quantum routers","Quantum memory""Quantum, error, correction";
   ,  ],benefits: [;
     "Unhackable communication","Quantum advantage","Future-proof infrastructure""Revolutionary security";
-  ,  ],link: "/services/quantum-internet",image: "/images/quantum-internet.jpg",technology: "Quantum Internet",marketSize: "$1.2B, by, 20o25",targetIndustry: "TelecommunicationsGovernmentFinance";
+  ,  ],link: "/services/quantum-internet",image: "/images/quantum-internet.jpg",technology: "Quantum Internet",marketSize: "$1.2B, by, 20o25",targetIndustry: "TelecommunicationsGovernmentFinance";,
      },
   // AI Ethics & Governance;
   {
@@ -80,7 +80,7 @@ export, const, CUTTING_EDGE_20o25_SERVICES = [;
     "AI, ethics, monitoring","Bias detection","Transparency tools","Regulatory compliance","Audit trails""Stakeholder engagement";
   ,  ],benefits: [;
     "Ethical, AI, deployment","Regulatory compliance","Risk mitigation""Stakeholder trust";
-  ,  ],link: "/services/ai-governance",image: "/images/ai-governance.jpg",technology: "AI + Governance",marketSize: "$2.1B, by, 20o25",targetIndustry: "EnterpriseGovernmentHealthcare";
+  ,  ],link: "/services/ai-governance",image: "/images/ai-governance.jpg",technology: "AI + Governance",marketSize: "$2.1B, by, 20o25",targetIndustry: "EnterpriseGovernmentHealthcare";,
      }],export, const, CUTTING_EDGE_CATEGORIES = ["Quantum Computing";
     "Cybersecurity","Autonomous Systems","Digital Twin","Edge Computing","Data Services","Neuromorphic Computing";
     "AI, Services""Security";
@@ -91,5 +91,5 @@ export, const, CUTTING_EDGE_PRICING = {
     },enterprise: {,price: 1499,currency: "$",period: "month",features: ["Full, platform, access""24/7 support""White-label options""Custom, development"];
     }
 },export, const, CUTTING_EDGE_CONTACT = {
-    phone: "+1, 30o2, 464 0o950",email: "kleber@ziontechgroup.com",address: "364, E, Main St, STE, 10o08, Middletown, DE, 1970o9",website: "https://ziontechgroup.com"supportHour,s: "24/7"responseTim,e: "< 2 hours";
+    phone: "+1, 30o2, 464 0o950",email: "kleber@ziontechgroup.com",address: "364, E, Main St, STE, 10o08, Middletown, DE, 1970o9",website: "https://ziontechgroup.com"supportHour,s: "24/7"responseTim,e: "< 2 hours";,
 };

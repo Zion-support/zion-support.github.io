@@ -18,7 +18,7 @@ export interface ExpandedMicroSaasService2025 {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   websiteUrl: string;
     demoUrl?: string;
@@ -27,7 +27,7 @@ export interface ExpandedMicroSaasService2025 {
     complianceStandards: string[];
     integrationCapabilities: string[];
     roiMetrics: string[];
-    competitiveAdvantages: string[];
+    competitiveAdvantages: string[];,
 }
 
 export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] = [
@@ -84,7 +84,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-financial-compliance-automation-2025";
     technologyStack: ["GPT-5", "Claude 3.5 Sonnet", "Regulatory APIs", "Machine Learning", "Blockchain"],
@@ -147,7 +147,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/quantum-resistant-blockchain-identity-2025";
     technologyStack: ["Quantum-Resistant Algorithms", "Blockchain", "Zero-Knowledge Proofs", "Cryptography", "Smart Contracts"],
@@ -210,7 +210,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-supply-chain-optimization-2025";
     technologyStack: ["Machine Learning", "Predictive Analytics", "IoT Sensors", "Cloud Computing", "Big Data Analytics"],
@@ -273,7 +273,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/edge-computing-ai-platform-2025";
     technologyStack: ["TensorFlow Lite", "ONNX Runtime", "Edge ML Frameworks", "Container Technology", "Kubernetes"],
@@ -336,7 +336,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-legal-document-analysis-2025";
     technologyStack: ["Natural Language Processing", "Machine Learning", "Document AI", "Legal Databases", "Cloud Computing"],
@@ -399,7 +399,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/quantum-machine-learning-platform-2025";
     technologyStack: ["Quantum Computing", "Qiskit", "Cirq", "PennyLane", "Classical ML Frameworks"],
@@ -462,7 +462,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-healthcare-diagnostics-2025";
     technologyStack: ["Deep Learning", "Computer Vision", "Natural Language Processing", "Medical AI Models", "Cloud Computing"],
@@ -525,7 +525,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/autonomous-cybersecurity-operations-2025";
     technologyStack: ["AI/ML", "Threat Intelligence", "Security Orchestration", "Behavioral Analytics", "Cloud Security"],
@@ -588,7 +588,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-marketing-automation-2025";
     technologyStack: ["Machine Learning", "Predictive Analytics", "Marketing APIs", "CRM Integration", "Data Analytics"],
@@ -651,7 +651,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/quantum-secure-communication-2025";
     technologyStack: ["Quantum Key Distribution", "Post-Quantum Algorithms", "Encryption", "Secure Protocols", "Quantum Hardware"],

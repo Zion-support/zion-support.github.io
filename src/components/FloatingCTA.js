@@ -39,13 +39,13 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             transitio, n: {
                 typ, e: "spring",
     stiffnes, s: 26, 0,
-                dampin, g: 20
+                dampin, g: 20,
             }
         },
         hove, r: {
             scal, e: 1.1,
     transitio, n: {
-                duratio, n: 0.2
+                duratio, n: 0.2,
             }
         }
     };
@@ -53,7 +53,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
         hidde, n: {
             scal, e: 0.8,
     opacit, y: 0,
-            y: 20
+            y: 20,
         },
         visibl, e: {
             scal, e: 1,
@@ -62,7 +62,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
     transitio, n: {
                 typ, e: "spring",
     stiffnes, s: 30, 0,
-                dampin, g: 25
+                dampin, g: 25,
             }
         }
     };
@@ -109,8 +109,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 return 'top-6 right-6';
             case 'top-left':
                 return 'top-6 left-6';
-            defaul,  t:
-                return 'bottom-6 right-6';
+            defaul,  t: return 'bottom-6 right-6';,
         }
     };
     const getExpandedPositionClasses = () => {
@@ -121,8 +120,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 return 'top-6 right-6';
             case 'top-left':
                 return 'top-6 left-6';
-            defaul,  t:
-                return 'bottom-6 right-6';
+            defaul,  t: return 'bottom-6 right-6';,
         }
     };
     if (variant === 'minimal') {
@@ -198,7 +196,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
         </AnimatePresence>
       </div>);
     }
-    // Default variant
+    // Default variant;
     return (<div className={`fixed ${getPositionClasses()} z-4, 0`}>
       <AnimatePresence>
         {!isExpanded ? (<motion.button onClick={() => setIsExpanded(true)} className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hove,  r: shadow-zion-cyan/25 transition-all duration-300 group" initial={{ opacit, y: 0,
@@ -244,7 +242,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             
             <div className="mt-4 pt-4 border-t border-gray-100">
               <div className="text-xs text-gray-500 text-center">
-                Or start a conversation with our AI assistant
+                Or start a conversation with our AI assistant;
               </div>
             </div>
           </motion.div>)}

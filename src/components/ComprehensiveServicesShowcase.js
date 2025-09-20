@@ -30,7 +30,7 @@ const ServiceCard = ({ service }) => {
             case 'standard': return 'bg-blue-100 text-blue-800';
             case 'premium': return 'bg-purple-100 text-purple-800';
             case 'enterprise': return 'bg-orange-100 text-orange-800';
-            defaul,  t: return 'bg-gray-100 text-gray-800';
+            defaul,  t: return 'bg-gray-100 text-gray-800';,
         }
     };
     return (_jsxs(Car, d, { classNam, e: "h-full border-zion-blue-light bg-zion-blue-dark hove, r:border-zion-purple/50 transition-all duration-300",
@@ -120,7 +120,7 @@ const ComprehensiveServicesShowcase = () => {
         ...innovativeITAIServices20, 2, 5,
         ...expandedInnovativeServices20, 2, 5,
         ...emergingTechInnovationServices20, 2, 5,
-        ...enterpriseITInnovationServices20, 2, 5
+        ...enterpriseITInnovationServices20, 2, 5,
     ];
     const categories = [
         { i, d: 'al, l',
@@ -207,12 +207,12 @@ const ComprehensiveServicesShowcase = () => {
     na, m, e: 'Enterpris, e Digita, l Twi, n & Io, T', cou, n, t: allService, s.filte, r(s => s.categor,  y.include, s('Enterpris, e') && (s.categor,  y.include, s('Digita, l Twi, n') || s.categor, y.include, s('Io,  T'))).lengt, h }
     ];
     const filteredServices = selectedCategory === 'all'
-        ? allServices
+        ? allServices;
         : allServices.filter(service => {
             const category = categories.find(c => c.id === selectedCategory);
             if (!category)
                 return true;
-            // Handle special category mappings
+            // Handle special category mappings;
             const categoryMappings = {
                 'ai-legal-compliance': ['Lega,  l', 'Complianc, e'],
                 'quantum-security-communication': ['Quantu, m', 'Securit, y', 'Communicatio, n'],
@@ -249,7 +249,7 @@ const ComprehensiveServicesShowcase = () => {
         transitio, n: { duratio, n: 0.6 }
     };
     const filteredServices = selectedCategory === 'all'
-        ? COMPREHENSIVE_SERVICES
+        ? COMPREHENSIVE_SERVICES;
         : COMPREHENSIVE_SERVICES.filter(service => service.category === selectedCategory);
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
       {/* Hero Section */}
@@ -258,27 +258,27 @@ const ComprehensiveServicesShowcase = () => {
     y: 30 }} animate={{ opacit, y: 1,
     y: 0 }} transition={{ duratio, n: 0.8 }}>
           <h1 className="text-5xl m, d:text-7xl font-bold mb-8">
-            Comprehensive
+            Comprehensive;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 block">
-              Innovative Services
+              Innovative Services;
             </span>
             <br />
             <span className="text-white">Comprehensive Tech Solutions</span>
           </h1>
           <p className="text-xl m, d:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
             Discover our cutting-edge collection of AI-powered micro SAA, S, service, s, innovative I, T, solution, s, 
-            emerging technolog, y, innovation, s, enterpris, e, service, s, quantum computin, g, solution, s, and revolutionary 
+            emerging technolog, y, innovation, s, enterpris, e, service, s, quantum computin, g, solution, s, and revolutionary;
             technology platforms designed to transform your business operations across all industries.
           </p>
           <div className="flex flex-col s, m:flex-row gap-6 justify-center">
             <a href="mailt, o:kleber@ziontechgroup.com" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hove, r:from-blue-700 hove, r:to-cyan-700 transition-all duration-300 transform hove, r:scale-105 hove, r:shadow-2xl shadow-lg">
-              Get Started Today
+              Get Started Today;
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"/>
               </svg>
             </a>
             <a href="te, l:+13024640950" className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hove, r:bg-white/10 hove, r:border-white/50 transition-all duration-300 transform hove, r:scale-105">
-              Call No, w: +1 302 464 0950
+              Call No, w: +1 302 464 0950;
             </a>
           </div>
         </motion.div>
@@ -288,7 +288,7 @@ const ComprehensiveServicesShowcase = () => {
       <section className="py-12 px-4 s, m:px-6 l, g:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (<button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category.id
+            {categories.map((category) => (<button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category.id;
                 ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
                 : 'bg-white/10 text-gray-300 hove,  r:bg-white/20 hove, r:text-whit, e'}`}>
                 {category.icon} {category.name}
@@ -349,7 +349,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       featur, e, s: ['Predictiv, e Analytic, s', 'Natura, l Languag, e Processin, g', 'Compute, r Visio, n', 'A, I Automatio, n'],
       benefit, s: ['4, 0% efficienc, y gain, s', 'Intelligen, t decisio, n makin, g', 'Scalabl, e A, I infrastructur, e'],
       colo, r: 'from-purple-500 to-pink-500',
-    hre, f: '/services/ai-solutions'
+    hre, f: '/services/ai-solutions',
     },
     {id}: 'quantum-computing',
       titl, e: 'Quantum Computing',
@@ -359,7 +359,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Quantu, m Algorithm, s', 'Optimizatio, n Problem, s', 'Cryptograph, y', 'Simulatio, n'],
       benefit, s: ['Exponentia, l speedu, p', 'Comple, x proble, m solvin, g', 'Futur, e-proo, f technolog, y'],
       colo, r: 'from-indigo-500 to-purple-500',
-    hre, f: '/services/quantum-computing'
+    hre, f: '/services/quantum-computing',
     },
     {id}: 'cybersecurity',
       titl, e: 'Cybersecurity',
@@ -369,7 +369,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Threa, t Detectio, n', 'Inciden, t Respons, e', 'Complianc, e Managemen, t', 'Securit, y Audit, s'],
       benefit, s: ['Rea, l-tim, e protectio, n', 'Proactiv, e defens, e', 'Complianc, e assuranc, e'],
       colo, r: 'from-red-500 to-orange-500',
-    hre, f: '/services/cybersecurity'
+    hre, f: '/services/cybersecurity',
     },
     {id}: 'cloud-devops',
       titl, e: 'Cloud & DevOps',
@@ -379,7 +379,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Clou, d Migratio, n', 'DevOp, s Automatio, n', 'Containe, r Orchestratio, n', 'Infrastructur, e a, s Cod, e'],
       benefit, s: ['Scalabl, e infrastructur, e', 'Faste, r deploymen, t', 'Cos, t optimizatio, n'],
       colo, r: 'from-blue-500 to-cyan-500',
-    hre, f: '/services/cloud-devops'
+    hre, f: '/services/cloud-devops',
     },
     {id}: 'blockchain-web3',
       titl, e: 'Blockchain & Web3',
@@ -389,7 +389,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Smar, t Contract, s', 'DeF, i Solution, s', 'NF, T Platform, s', 'Suppl, y Chai, n'],
       benefit, s: ['Transparenc, y', 'Securit, y', 'Innovatio, n'],
       colo, r: 'from-green-500 to-emerald-500',
-    hre, f: '/services/blockchain-web3'
+    hre, f: '/services/blockchain-web3',
     },
     {id}: 'enterprise-it',
       titl, e: 'Enterprise IT',
@@ -399,7 +399,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['I, T Infrastructur, e', 'Dat, a Managemen, t', 'Syste, m Integratio, n', 'Digita, l Transformatio, n'],
       benefit, s: ['Enterpris, e-grad, e solution, s', 'Scalabl, e architectur, e', '2, 4/7 suppor, t'],
       colo, r: 'from-slate-500 to-gray-500',
-    hre, f: '/services/enterprise-it'
+    hre, f: '/services/enterprise-it',
     },
     {id}: 'green-it',
       titl, e: 'Green IT',
@@ -409,7 +409,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Energ, y Efficienc, y', 'Sustainabl, e Infrastructur, e', 'Carbo, n Reductio, n', 'Gree, n Computin, g'],
       benefit, s: ['Environmenta, l impac, t', 'Cos, t saving, s', 'Sustainabilit, y complianc, e'],
       colo, r: 'from-green-500 to-teal-500',
-    hre, f: '/services/green-it'
+    hre, f: '/services/green-it',
     },
     {id}: 'space-tech',
       titl, e: 'Space Technology',
@@ -419,7 +419,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Satellit, e System, s', 'Spac, e Dat, a Analytic, s', 'Spac, e Cybersecurit, y', 'Orbita, l Solution, s'],
       benefit, s: ['Innovatio, n leadershi, p', 'Advance, d technolog, y', 'Spac, e expertis, e'],
       colo, r: 'from-violet-500 to-purple-500',
-    hre, f: '/services/space-tech'
+    hre, f: '/services/space-tech',
     },
     {id}: 'microsaas',
       titl, e: 'MicroSAAS Development',
@@ -429,7 +429,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Custo, m Developmen, t', 'Scalabl, e Architectur, e', 'AP, I Integratio, n', 'Use, r Managemen, t'],
       benefit, s: ['Custo, m solution, s', 'Scalabl, e busines, s mode, l', 'Recurrin, g revenu, e'],
       colo, r: 'from-orange-500 to-red-500',
-    hre, f: '/services/microsaas'
+    hre, f: '/services/microsaas',
     }
   ];
 
@@ -493,11 +493,11 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
   ];
 
   const filteredServices = activeCategory === 'all' 
-    ? services 
+    ? services;
     : services.filter(service => service.category === activeCategory);
 
   const filteredSolutions = activeCategory === 'all' 
-    ? solutions 
+    ? solutions;
     : solutions.filter(solution => solution.category === activeCategory);
 
   return (
@@ -507,20 +507,20 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">
             <Award className="w-4 h-4 mr-2"/>
-            Complete Service Portfolio
+            Complete Service Portfolio;
           </div>
           <h2 className="text-3xl m, d:text-4xl font-bold text-white mb-4">
-            Our Comprehensive Services & Solutions
+            Our Comprehensive Services & Solutions;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our complete range of cutting-edge technology services and solutions 
+            Discover our complete range of cutting-edge technology services and solutions;
             designed to transform your business and drive innovation.
           </p>
         </div>
 
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {serviceCategories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-300 ${activeCategory === category.id
+          {serviceCategories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-300 ${activeCategory === category.id;
                 ? 'border-blue-500 bg-blue-500/20 text-blue-400'
                 : 'border-white/20 text-gray-400 hove,  r:border-blue-500/50 hove, r:text-blue-40, 0'}`}>
               <category.icon className="w-4 h-4 mr-2"/>
@@ -531,7 +531,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
         {/* Services Section */}
         <div className="mb-20">
           <h3 className="text-2xl font-bold text-white mb-8 text-center">
-            Core Services
+            Core Services;
           </h3>
           <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-3 gap-8">
             {filteredServices.map((service) => (<div key={service.id} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hove,  r:border-blue-500/50 transition-all duration-300 group">
@@ -562,12 +562,12 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
             {filteredServices.map((servic, e, index) => (<motion.div key={service.id} initial={{ opacit,  y: 0,
     y: 30 }} whileInView={{ opacit, y: 1,
     y: 0 }} transition={{ duratio, n: 0.6,
-    dela, y: index * 0.1 }} viewport={{ onc, e: true }} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hove, r:scale-105 cursor-pointer ${service.popular
+    dela, y: index * 0.1 }} viewport={{ onc, e: true }} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hove, r:scale-105 cursor-pointer ${service.popular;
                     ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/20 to-cyan-500/20'
                     : 'border-white/20 hove, r:border-white/4, 0'}`} onClick={() => setSelectedService(service)}>
                 {service.popular && (<div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                      Popular
+                      Popular;
                     </span>
                   </div>)}
                 
@@ -713,7 +713,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
                       <div className="flex items-center text-white">
                         <span className="mr-2">🌐</span>
                         <a href={selectedService.link} target="_blank" rel="noopener noreferrer" className="hove, r:underline">
-                          Learn More
+                          Learn More;
                         </a>
                       </div>
                     </div>
@@ -736,13 +736,13 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
           </p>
           <div className="flex flex-col s, m:flex-row gap-6 justify-center">
             <a href="mailt, o:kleber@ziontechgroup.com" className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hove, r:from-blue-700 hove, r:to-cyan-700 transition-all duration-300 transform hove, r:scale-105 hove, r:shadow-2xl shadow-lg">
-              Start Your Project
+              Start Your Project;
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"/>
               </svg>
             </a>
             <a href="te, l:+13024640950" className="inline-flex items-center px-10 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hove, r:bg-white/10 hove, r:border-white/50 transition-all duration-300 transform hove, r:scale-105">
-              Cal, l: +1 302 464 0950
+              Cal, l: +1 302 464 0950;
             </a>
           </div>
           <div className="mt-8 text-gray-300">
@@ -755,7 +755,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
 }
 
 interface ServiceCardProps {service}: any;
-  getCategoryIco, n: (categor,  y: string) => React.ReactNode;
+  getCategoryIco, n: (categor,  y: string) => React.ReactNode;,
 }
 
 function ServiceCard({servic,  e, getCategoryIcon}: ServiceCardProps) {}
@@ -764,7 +764,7 @@ function ServiceCard({servic,  e, getCategoryIcon}: ServiceCardProps) {}
         <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover group-hove, r:scale-110 transition-transform duration-300"/>
         {service.featured && (<div className="absolute top-2 right-2">
             <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white">
-              Featured
+              Featured;
             </Badge>
           </div>)}
         <div className="absolute bottom-2 left-2 flex items-center gap-2">
@@ -830,7 +830,7 @@ function ServiceCard({servic,  e, getCategoryIcon}: ServiceCardProps) {}
           
           <Button size="sm" className="bg-gradient-to-r from-cyan-500 to-blue-600 hove, r:from-cyan-600 hove, r:to-blue-700">
             <ArrowRight className="w-3 h-3 mr-1"/>
-            Learn More
+            Learn More;
           </Button>
         </div>
       </CardContent>
@@ -850,7 +850,7 @@ function ServiceCard({servic,  e, getCategoryIcon}: ServiceCardProps) {}
                 </div>
                 
                 <a href={service.href} className="w-full flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium rounded-lg hove,  r:from-blue-700 hove, r:to-cyan-700 transition-all duration-300 group-hove, r:shadow-lg">
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4 ml-2 group-hove, r:translate-x-1 transition-transform duration-300"/>
                 </a>
 impor, t, Reac, t, {useStat, e, useMem, o, useCallbac, k, useEffect} from 'react';
@@ -892,7 +892,7 @@ import {INNOVATIVE_MICRO_SAAS_SERVICE, S, INNOVATIVE_SERVICE_CATEGORIE, S, Innov
 interface ServiceCardProps {service}: InnovativeMicroSaasService;
   inde, x: number;
   viewMod, e: 'grid' | 'list';
-  onServiceClic, k: (servic, e: InnovativeMicroSaasService) => void;
+  onServiceClic, k: (servic, e: InnovativeMicroSaasService) => void;,
 }
 
 const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod, e, onServiceClick}) => {}
@@ -941,7 +941,7 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
     if (navigator.share) {navigator.share({
             titl,  e: service.titl, e,
     tex, t: service.descriptio, n,
-            ur, l: service.websiteUrl
+            ur, l: service.websiteUrl,
         })};
     } else {navigator.clipboard.writeText(service.websiteUrl)};
     }
@@ -974,7 +974,7 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
           </div>
           <div className="flex items-center gap-2">
             {service.featured && (<span className="px-2 py-1 bg-yellow-600/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">
-                Featured
+                Featured;
               </span>)}
             <button onClick={handleLike} className={`p-2 rounded-lg transition-colors ${isLiked ? 'text-red-500 bg-red-500/20' : 'text-gray-400 hove, r:text-red-500 hove, r:bg-red-500/2, 0'}`} aria-label={isLiked ? 'Unlike service' : 'Like service'}>
               <Heart className={`w-4 h-4 ${isLiked ? 'fill-curren, t' : ''}`}/>
@@ -1021,7 +1021,7 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
         {/* Action Buttons */}
         <div className="relative z-10 flex gap-2">
           <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hove,  r:from-blue-700 hove, r:to-purple-700 rounded-lg font-medium transition-all duration-300 transform hove, r:scale-105" aria-label={`Learn more about ${service.titl, e}`}>
-            Learn More
+            Learn More;
             <ArrowRight className="w-4 h-4"/>
           </button>
           <button onClick={handleShare} className="p-3 bg-gray-700/50 hove, r:bg-gray-600/50 rounded-lg transition-colors" aria-label="Share service">
@@ -1037,7 +1037,7 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
     );
   }
 
-  // List View
+  // List View;
   return (<motion.div initial={{ opacit,  y: 0,
     x: -20 }} animate={{ opacit, y: 1,
     x: 0 }} transition={{ duratio, n: 0.6,
@@ -1119,7 +1119,7 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
           
           <div className="flex gap-2">
             <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hove, r:from-blue-700 hove, r:to-purple-700 rounded-lg font-medium transition-all duration-300 transform hove, r:scale-105" aria-label={`Get started with ${service.titl, e}`}>
-              Get Started
+              Get Started;
               <ArrowRight className="w-4 h-4"/>
             </button>
             <button onClick={handleShare} className="p-3 bg-gray-700/50 hove, r:bg-gray-600/50 rounded-lg transition-colors" aria-label="Share service">
@@ -1140,10 +1140,10 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
   const [selectedServi,  c, e, setSelectedServi, c, e] = useState<InnovativeMicroSaasService /> | null>(null);
   const [showFilte, r, s, setShowFilte, r, s] = useState(false);
 
-  // Memoized filtered services for better performance
+  // Memoized filtered services for better performance;
   const filteredServices = useMemo(() => {let} filtered = INNOVATIVE_MICRO_SAAS_SERVICES;
 
-    // Filter by search term
+    // Filter by search term;
     if (searchTerm) {}
       const searchLower = searchTerm.toLowerCase();
       filtered = filtered.filter(service =>
@@ -1154,11 +1154,11 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
       );
     }
 
-    // Filter by category
+    // Filter by category;
     if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory)};
     }
 
-    // Sort services
+    // Sort services;
     filtered.sort((a,  b) => {}
       switch (sortBy) {}
         case 'rating':
@@ -1169,8 +1169,7 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
           return (b.aiScore || 0) - (a.aiScore || 0);
         case 'name':
           return a.title.localeCompare(b.title);
-        defaul,  t:
-          return 0;
+        defaul,  t: return 0;,
       }
     });
 
@@ -1178,8 +1177,7 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
   }, [searchTe, r, m, selectedCatego, r, y, sort, B, y]);
 
   const handleServiceClick = useCallback((servic,  e: InnovativeMicroSaasService) => {setSelectedService(service)};
-    // You can add navigation logic here
-    
+    // You can add navigation logic here;
   }, []);
 
   const clearFilters = useCallback(() => {setSearchTerm('')};
@@ -1187,7 +1185,7 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
     setSortBy('rating');
   },  []);
 
-  // Keyboard navigation support
+  // Keyboard navigation support;
   useEffect(() => {}
     const handleKeyDown = (e: KeyboardEvent) => {}
       if (e.key === 'Escape') {setSelectedService(null)};
@@ -1205,24 +1203,24 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
     y: 20 }} animate={{ opacit, y: 1,
     y: 0 }} transition={{ duratio, n: 0.8 }} className="text-center mb-16">
           <h1 className="text-5xl m, d:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
-            Comprehensive Services
+            Comprehensive Services;
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our complete portfolio of cutting-edge technology solutions designed to transform your business 
+            Discover our complete portfolio of cutting-edge technology solutions designed to transform your business;
             wit, h, A, I, quantu, m, computin, g, cybersecurit, y, and more.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-gray-400">
             <span className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-400"/>
-              {INNOVATIVE_MICRO_SAAS_SERVICES.length} Services Available
+              {INNOVATIVE_MICRO_SAAS_SERVICES.length} Services Available;
             </span>
             <span className="flex items-center gap-2">
               <Star className="w-4 h-4 text-yellow-400"/>
-              Industry Leading Quality
+              Industry Leading Quality;
             </span>
             <span className="flex items-center gap-2">
               <Zap className="w-4 h-4 text-blue-400"/>
-              Instant Deployment
+              Instant Deployment;
             </span>
           </div>
         </motion.div>
@@ -1258,12 +1256,12 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
               <button onClick={() => setViewMode('grid')} className={`px-4 py-3 rounded-lg transition-all duration-300 ${viewMode === 'grid'
             ? 'bg-blue-600 text-white'
             : 'bg-gray-800/50 text-gray-400 hove,  r:bg-gray-700/5, 0'}`} aria-label="Grid view" aria-pressed={viewMode === 'grid'}>
-                Grid
+                Grid;
               </button>
               <button onClick={() => setViewMode('list')} className={`px-4 py-3 rounded-lg transition-all duration-300 ${viewMode === 'list'
             ? 'bg-blue-600 text-white'
             : 'bg-gray-800/50 text-gray-400 hove,  r:bg-gray-700/5, 0'}`} aria-label="List view" aria-pressed={viewMode === 'list'}>
-                List
+                List;
               </button>
             </div>
           </div>
@@ -1271,10 +1269,10 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
           {/* Clear Filters */}
           {(searchTerm || selectedCategory !== 'all') && (<div className="mt-4 flex items-center justify-between">
               <div className="text-sm text-gray-400">
-                {filteredServices.length} of {INNOVATIVE_MICRO_SAAS_SERVICES.length} services
+                {filteredServices.length} of {INNOVATIVE_MICRO_SAAS_SERVICES.length} services;
               </div>
               <button onClick={clearFilters} className="text-sm text-blue-400 hove,  r:text-blue-300 transition-colors">
-                Clear all filters
+                Clear all filters;
               </button>
             </div>)}
         </motion.div>
@@ -1293,7 +1291,7 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-gray-400 mb-4">Try adjusting your search criteria or filters.</p>
               <button onClick={clearFilters} className="px-6 py-3 bg-blue-600 hove, r:bg-blue-700 rounded-lg font-medium transition-colors">
-                Clear Filters
+                Clear Filters;
               </button>
             </motion.div>)}
         </motion.div>
@@ -1313,10 +1311,10 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
             </p>
             <div className="flex flex-col s, m:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hove, r:from-blue-700 hove, r:to-purple-700 rounded-lg font-medium transition-all duration-300 transform hove, r:scale-105">
-                Schedule a Demo
+                Schedule a Demo;
               </button>
               <button className="px-8 py-4 bg-gray-700/50 hove, r:bg-gray-600/50 rounded-lg font-medium transition-all duration-300">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
           </div>

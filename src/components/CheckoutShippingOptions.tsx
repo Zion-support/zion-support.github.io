@@ -7,4 +7,4 @@ const CheckoutShippingOptions: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default CheckoutShippingOptions,
+export default CheckoutShippingOptions,;<//div>

@@ -1,4 +1,4 @@
-// Advanced Cybersecurity Services for 2025
+// Advanced Cybersecurity Services for 2025;
 export const advancedCybersecurityServices2025 = [
     {
         id: 1;
@@ -32,7 +32,7 @@ export const advancedCybersecurityServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/zero-trust-security-mesh";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$2,500-12,000/month",
         competitors: ["Palo Alto Networks", "Cisco", "VMware", "Microsoft"],
@@ -55,7 +55,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: true;
         aiPowered: true;
         quantumResistant: true;
-        threatIntelligence: true
+        threatIntelligence: true,
     };
     {
         id: 2;
@@ -89,7 +89,7 @@ export const advancedCybersecurityServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-threat-intelligence";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$1,800-8,000/month",
         competitors: ["CrowdStrike", "SentinelOne", "Recorded Future", "ThreatConnect"],
@@ -112,7 +112,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: false;
         aiPowered: true;
         quantumResistant: false;
-        threatIntelligence: true
+        threatIntelligence: true,
     };
     {
         id: 3;
@@ -146,7 +146,7 @@ export const advancedCybersecurityServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/quantum-resistant-cryptography";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$3,000-15,000/month",
         competitors: ["ISARA", "PQShield", "Cryptosense", "Quantum Xchange"],
@@ -169,7 +169,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: false;
         aiPowered: false;
         quantumResistant: true;
-        threatIntelligence: false
+        threatIntelligence: false,
     };
     {
         id: 4;
@@ -203,7 +203,7 @@ export const advancedCybersecurityServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/privacy-preserving-analytics";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$1,200-6,000/month",
         competitors: ["Privacera", "BigID", "OneTrust", "Collibra"],
@@ -226,7 +226,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: false;
         aiPowered: true;
         quantumResistant: false;
-        threatIntelligence: false
+        threatIntelligence: false,
     };
     {
         id: 5;
@@ -260,7 +260,7 @@ export const advancedCybersecurityServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/cloud-security-posture";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$1,500-7,000/month",
         competitors: ["Prisma Cloud", "AWS Security Hub", "Azure Security Center", "Google Cloud Security"],
@@ -283,7 +283,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: true;
         aiPowered: true;
         quantumResistant: false;
-        threatIntelligence: true
+        threatIntelligence: true,
     };
     {
         id: 6;
@@ -317,7 +317,7 @@ export const advancedCybersecurityServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/iot-security-guardian";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$800-4,000/month",
         competitors: ["Armis", "Forescout", "Nozomi Networks", "Claroty"],
@@ -340,7 +340,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: true;
         aiPowered: true;
         quantumResistant: false;
-        threatIntelligence: true
+        threatIntelligence: true,
     }
 ];
     export default advancedCybersecurityServices2025;

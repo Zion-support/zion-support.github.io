@@ -11,5 +11,5 @@ export default function ChatAssistant(props: any) {return (,
         </p>,
       </div>",
     </div>,
-  ),,',
-"}, ";
+  ),,',;
+"}, ";<//div>

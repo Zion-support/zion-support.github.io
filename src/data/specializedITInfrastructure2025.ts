@@ -62,9 +62,9 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
-    websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure"
+    websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure",
   },
 
   // Quantum-Ready Cloud Infrastructure;
@@ -115,9 +115,9 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
-    websiteUrl: "https://ziontechgroup.com/quantum-network-infrastructure"
+    websiteUrl: "https://ziontechgroup.com/quantum-network-infrastructure",
   },
 
   // 5G Enterprise Infrastructure Solutions;
@@ -167,9 +167,9 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
-    websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure"
+    websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure",
   },
 
   // Autonomous DevOps Infrastructure;
@@ -219,7 +219,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Kubernetes", "Docker", "Terraform", "Python", "Machine Learning"],
     integrations: ["AWS", "Azure", "Google Cloud", "GitHub", "Slack"],
@@ -228,7 +228,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     competitors: ["HashiCorp", "Puppet", "Chef", "Ansible"],
     infrastructure: "Auto-scaling cloud-native",
     scalability: "Infinite auto-scaling",
-    uptime: "99.99% availability"
+    uptime: "99.99% availability",
   },
 
   // Zero-Trust Security Infrastructure;
@@ -278,7 +278,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Identity providers", "Network security", "SIEM", "SOAR", "AI/ML"],
     integrations: ["Active Directory", "Okta", "CrowdStrike", "Palo Alto Networks"],
@@ -287,7 +287,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     competitors: ["Palo Alto Networks", "Cisco", "Fortinet"],
     infrastructure: "Secure-by-design",
     scalability: "Enterprise-wide deployment",
-    uptime: "99.9% security availability"
+    uptime: "99.9% security availability",
   },
 
   // Green Computing Infrastructure;
@@ -337,7 +337,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Energy management", "Renewable energy", "IoT sensors", "AI optimization"],
     integrations: ["Energy providers", "Sustainability platforms", "IoT networks"],
@@ -346,7 +346,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     competitors: ["Google Cloud", "Microsoft Azure", "AWS"],
     infrastructure: "Renewable energy-powered",
     scalability: "Sustainable scaling",
-    uptime: "99.5% green availability"
+    uptime: "99.5% green availability",
   },
 
   // Hybrid Multi-Cloud Orchestration;
@@ -404,9 +404,9 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
-    websiteUrl: "https://ziontechgroup.com/hybrid-cloud-infrastructure"
+    websiteUrl: "https://ziontechgroup.com/hybrid-cloud-infrastructure",
   },
 
   // AI-Powered Infrastructure Management;
@@ -456,8 +456,8 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
-    websiteUrl: "https://ziontechgroup.com/ai-infrastructure-management"
+    websiteUrl: "https://ziontechgroup.com/ai-infrastructure-management",
   }
 ];

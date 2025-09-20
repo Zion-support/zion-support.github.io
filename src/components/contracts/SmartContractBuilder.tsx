@@ -11,5 +11,5 @@ export default function SmartContractBuilder(props: any) {return (,
         </p>,
       </div>",
     </div>,
-  ),,',
-"}, ";
+  ),,',;
+"}, ";<//div>

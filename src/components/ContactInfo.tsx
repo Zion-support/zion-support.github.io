@@ -22,7 +22,7 @@ export function ContactInfo() {
   return (
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16">;
           <h2 className="text-3xl m;  d:text-4xl font-bold text-white mb-4">
             Get In Touch;
           </h2>
@@ -241,4 +241,4 @@ export function ContactInfo() {
       </div>
     </section>
   );
-}
+}<//section>

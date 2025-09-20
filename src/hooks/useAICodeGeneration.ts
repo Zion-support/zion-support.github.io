@@ -3,55 +3,94 @@ import { useState; useCallback; useRef; useEffect } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 
 interface CodeSuggestion {
-  id: string; type: "optimization" | "security" | "performance" | "best_practice" | "refactor";
-    title: string; description: string; code: string; confidence: number; impact: "low" | "medium" | "high";
-    category: string; tags: string[];
+  id: string;
+    type: "optimization" | "security" | "performance" | "best_practice" | "refactor";
+    title: string;
+    description: string;
+    code: string;
+    confidence: number;
+    impact: "low" | "medium" | "high";
+    category: string;
+    tags: string[];
     alternatives?: string[];
   explanation: string;
     references?: Array<{
-    title: string; url: string; description: string,
+    title: string;
+    url: string;
+    description: string;,
      }>;
 }
 
 interface CodeAnalysis {
-  complexity: number; maintainability: number; security: number; performance: number; accessibility: number; suggestions: CodeSuggestion[], metrics: {
-    linesOfCode: number; functions: number; classes: number; imports: number; dependencies: number;
-    testCoverage?: number,
+  complexity: number;
+    maintainability: number;
+    security: number;
+    performance: number;
+    accessibility: number;
+    suggestions: CodeSuggestion[];
+    metrics: {
+    linesOfCode: number;
+    functions: number;
+    classes: number;
+    imports: number;
+    dependencies: number;
+    testCoverage?: number;
   };
   issues: Array<{
-    severity: "error" | "warning" | "info", message: string;
+    severity: "error" | "warning" | "info";
+    message: string;
     line?: number;
     column?: number;
-    rule?: string,
+    rule?: string;
   }>;
 }
 
 interface CodeGenerationOptions {
   language: "typescript" | "javascript" | "python" | "java" | "cpp" | "csharp" | "go" | "rust";
     framework?: "react" | "vue" | "angular" | "nextjs" | "express" | "fastapi" | "spring" | "dotnet";
-  style: "functional" | "oop" | "procedural" | "declarative", target: "web" | "mobile" | "desktop" | "server" | "cli";
-    quality: "production" | "development" | "prototype", includeTests: boolean; includeDocs: boolean; includeErrorHandling: boolean; includeLogging: boolean; includeMetrics: boolean,
+  style: "functional" | "oop" | "procedural" | "declarative";
+    target: "web" | "mobile" | "desktop" | "server" | "cli";
+    quality: "production" | "development" | "prototype";
+    includeTests: boolean;
+    includeDocs: boolean;
+    includeErrorHandling: boolean;
+    includeLogging: boolean;
+    includeMetrics: boolean;,
 }
 
 interface AICodeGenerationHook {
   // State;
-  isGenerating: boolean; isAnalyzing: boolean; generatedCode: string; codeAnalysis: CodeAnalysis | null; suggestions: CodeSuggestion[];
+  isGenerating: boolean;
+    isAnalyzing: boolean;
+    generatedCode: string;
+    codeAnalysis: CodeAnalysis | null;
+    suggestions: CodeSuggestion[];
     history: Array<{
-    id: string; prompt: string; code: string; timestamp: Date; language: string; quality: string,
+    id: string;
+    prompt: string;
+    code: string;
+    timestamp: Date;
+    language: string;
+    quality: string;,
      }>;
   
   // Actions;
-  generateCode: (prompt: string; options: CodeGenerationOptions) => Promise<void>, analyzeCode: (code: string; language: string) => Promise<void>, applySuggestion: (suggestion: CodeSuggestion) => void;
-    optimizeCode: (code: string; focus: keyof CodeAnalysis) => Promise<string>, generateTests: (code: string; language: string) => Promise<string>, generateDocs: (code: string; language: string) => Promise<string>;
+  generateCode: (prompt: string; options: CodeGenerationOptions) => Promise<void>;
+    analyzeCode: (code: string; language: string) => Promise<void>;
+    applySuggestion: (suggestion: CodeSuggestion) => void;
+    optimizeCode: (code: string; focus: keyof CodeAnalysis) => Promise<string>;
+    generateTests: (code: string; language: string) => Promise<string>;
+    generateDocs: (code: string; language: string) => Promise<string>;
     // Utilities;
-  clearHistory: () => void; exportCode: (format: "txt" | "md" | "json") => void;
-    getCodeMetrics: (code: string) => CodeAnalysis["metrics"];
+  clearHistory: () => void;
+    exportCode: (format: "txt" | "md" | "json") => void;
+    getCodeMetrics: (code: string) => CodeAnalysis["metrics"];,
 }
 
 export const useAICodeGeneration = (): AICodeGenerationHook => {
   const { trackEvent } = useAnalytics({
     enableTracking: true;
-    enableUserBehaviorTracking: true,
+    enableUserBehaviorTracking: true;,
   });
     const [isGenerating; setIsGenerating] = useState(false);
   const [isAnalyzing; setIsAnalyzing] = useState(false);
@@ -59,7 +98,12 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
   const [codeAnalysis; setCodeAnalysis] = useState<CodeAnalysis | null>(null);
   const [suggestions; setSuggestions] = useState<CodeSuggestion[]>([]);
   const [history; setHistory] = useState<Array<{
-    id: string; prompt: string; code: string; timestamp: Date; language: string; quality: string,
+    id: string;
+    prompt: string;
+    code: string;
+    timestamp: Date;
+    language: string;
+    quality: string;,
      }>>([]);
 
   const generationTimeoutRef = useRef<globalThis.Timeout | null>(null);
@@ -75,13 +119,13 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
 
       // Generate code based on options;
       if (options.language === "typescript" && options.framework === "react") {
-        generatedCode = generateReactTypeScriptCode(prompt; options),
+        generatedCode = generateReactTypeScriptCode(prompt; options);
       } else if (options.language === "javascript" && options.framework === "express") {
-        generatedCode = generateExpressCode(prompt; options),
+        generatedCode = generateExpressCode(prompt; options);
       } else if (options.language === "python") {
-        generatedCode = generatePythonCode(prompt; options),
+        generatedCode = generatePythonCode(prompt; options);
       } else {
-        generatedCode = generateGenericCode(prompt; options),
+        generatedCode = generateGenericCode(prompt; options);
       }
 
       setGeneratedCode(generatedCode);
@@ -90,8 +134,10 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
       const historyItem = {
         id: `gen_${Date.now()}_${Math.random().toString(36).substr(2; 9)}`,
         prompt;
-        code: generatedCode; timestamp: new Date(), language: options.language;
-        quality: options.quality;
+        code: generatedCode;
+        timestamp: new Date();
+        language: options.language;
+        quality: options.quality;,
       };
     setHistory(prev => [historyItem, ...prev.slice(0; 49)]); // Keep last 50 items;
 
@@ -99,17 +145,18 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
       await analyzeCode(generatedCode; options.language);
 
       trackEvent("ai_code_generation", "code_generated", options.language; generatedCode.length, {
-        framework: options.framework; style: options.style;
+        framework: options.framework;
+        style: options.style;
         target: options.target;
-        quality: options.quality,
+        quality: options.quality;,
       });
      } catch (error) {
       
       trackEvent("ai_code_generation", "generation_failed", "error", undefined, {
-        error: error instanceof Error ? error.message : "Unknown error"
+        error: error instanceof Error ? error.message : "Unknown error",
       });
      } finally {
-      setIsGenerating(false),
+      setIsGenerating(false);
     }
   }, [trackEvent]);
 
@@ -121,28 +168,32 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
       await new Promise(resolve => setTimeout(resolve; 2000));
 
       const analysis: CodeAnalysis = {
-        complexity: calculateComplexity(code), maintainability: calculateMaintainability(code);
-        security: calculateSecurityScore(code), performance: calculatePerformanceScore(code);
-        accessibility: calculateAccessibilityScore(code), suggestions: generateCodeSuggestions(code; language),
-        metrics: getCodeMetrics(code),
-        issues: analyzeCodeIssues(code; language)
+        complexity: calculateComplexity(code);
+        maintainability: calculateMaintainability(code);
+        security: calculateSecurityScore(code);
+        performance: calculatePerformanceScore(code);
+        accessibility: calculateAccessibilityScore(code);
+        suggestions: generateCodeSuggestions(code; language),
+        metrics: getCodeMetrics(code);
+        issues: analyzeCodeIssues(code; language),
       };
 
       setCodeAnalysis(analysis);
       setSuggestions(analysis.suggestions);
 
       trackEvent("ai_code_analysis", "code_analyzed", language; code.length, {
-        complexity: analysis.complexity; maintainability: analysis.maintainability;
+        complexity: analysis.complexity;
+        maintainability: analysis.maintainability;
         security: analysis.security;
-        performance: analysis.performance,
+        performance: analysis.performance;,
       });
      } catch (error) {
       
       trackEvent("ai_code_analysis", "analysis_failed", "error", undefined, {
-        error: error instanceof Error ? error.message : "Unknown error"
+        error: error instanceof Error ? error.message : "Unknown error",
       });
      } finally {
-      setIsAnalyzing(false),
+      setIsAnalyzing(false);
     }
   }, [trackEvent]);
 
@@ -150,15 +201,16 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
   const applySuggestion = useCallback((suggestion: CodeSuggestion) => {
     setGeneratedCode(prev => {
       // Simple replacement - in production; this would be more sophisticated;
-      return prev.replace(/\/\/ TODO: Apply suggestion/g; suggestion.code),
+      return prev.replace(/\/\/ TODO: Apply suggestion/g; suggestion.code);,
     });
 
     // Remove the applied suggestion;
     setSuggestions(prev => prev.filter(s => s.id !== suggestion.id));
 
     trackEvent("ai_code_generation", "suggestion_applied", suggestion.type; undefined, {
-      suggestionId: suggestion.id; impact: suggestion.impact;
-      category: suggestion.category,
+      suggestionId: suggestion.id;
+      impact: suggestion.impact;
+      category: suggestion.category;,
     });
      }, [trackEvent]);
 
@@ -182,7 +234,7 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
           break;
         case "accessibility":
           optimizedCode = optimizeForAccessibility(code);
-          break,
+          break;
       }
 
       trackEvent("ai_code_generation", "code_optimized", focus; optimizedCode.length);
@@ -192,7 +244,7 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
     } catch (error) {
       
       trackEvent("ai_code_generation", "optimization_failed", "error", undefined, {
-        error: error instanceof Error ? error.message : "Unknown error"
+        error: error instanceof Error ? error.message : "Unknown error",
       });
     return code;
     }
@@ -207,11 +259,11 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
       let testCode = "";
 
       if (language === "typescript" || language === "javascript") {
-        testCode = generateJestTests(code),
+        testCode = generateJestTests(code);
       } else if (language === "python") {
-        testCode = generatePytestTests(code),
+        testCode = generatePytestTests(code);
       } else {
-        testCode = generateGenericTests(code; language),
+        testCode = generateGenericTests(code; language);
       }
 
       trackEvent("ai_code_generation", "tests_generated", language; testCode.length);
@@ -221,7 +273,7 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
     } catch (error) {
       
       trackEvent("ai_code_generation", "test_generation_failed", "error", undefined, {
-        error: error instanceof Error ? error.message : "Unknown error"
+        error: error instanceof Error ? error.message : "Unknown error",
       });
     return "// Failed to generate tests";
     }
@@ -236,11 +288,11 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
       let docs = "";
 
       if (language === "typescript" || language === "javascript") {
-        docs = generateJSDoc(code),
+        docs = generateJSDoc(code);
       } else if (language === "python") {
-        docs = generatePythonDoc(code),
+        docs = generatePythonDoc(code);
       } else {
-        docs = generateGenericDocs(code; language),
+        docs = generateGenericDocs(code; language);
       }
 
       trackEvent("ai_code_generation", "docs_generated", language; docs.length);
@@ -250,7 +302,7 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
     } catch (error) {
       
       trackEvent("ai_code_generation", "doc_generation_failed", "error", undefined, {
-        error: error instanceof Error ? error.message : "Unknown error"
+        error: error instanceof Error ? error.message : "Unknown error",
       });
     return "// Failed to generate documentation";
     }
@@ -259,7 +311,7 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
   // Clear generation history;
   const clearHistory = useCallback(() => {
     setHistory([]);
-    trackEvent("ai_code_generation", "history_cleared", "manual"),
+    trackEvent("ai_code_generation", "history_cleared", "manual");
   }, [trackEvent]);
 
   // Export generated code;
@@ -269,9 +321,10 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
 
     if (format === "json") {
       exportContent = JSON.stringify({
-        code: generatedCode; analysis: codeAnalysis;
+        code: generatedCode;
+        analysis: codeAnalysis;
         suggestions;
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
       }, null; 2);
       filename = "generated-code.json";
     } else if (format === "md") {
@@ -279,7 +332,7 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
       filename = "generated-code.md";
     } else {
       exportContent = generatedCode;
-      filename = "generated-code.txt",
+      filename = "generated-code.txt";
     }
 
     const blob = new Blob([exportContent], { type: "text/plain" });
@@ -306,7 +359,7 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
       functions;
       classes;
       imports;
-      dependencies,
+      dependencies;
     };
   }, []);
 
@@ -323,11 +376,11 @@ export const GeneratedComponent: React.FC<${options.style === "oop" ? "Component
   const [state; setState] = useState<any>(null);
 
   useEffect(() => {
-    // TODO: Implement initialization logic,
+    // TODO: Implement initialization logic;,
   }, []);
 
   const handleAction = useCallback(() => {
-    // TODO: Implement action handler,
+    // TODO: Implement action handler;,
   }, []);
 
   return (
@@ -373,7 +426,7 @@ app.listen(PORT, () => {
   };
 
   const generatePythonCode = (prompt: string; _options: CodeGenerationOptions): string => {
-    return `#!/usr/bin/env python3,
+    return `#!/usr/bin/env python3;
 """
 Generated Python code based on prompt: ${prompt}
 """
@@ -421,7 +474,7 @@ if __name__ == "__main__":
   // Helper functions for code analysis;
   const calculateComplexity = (code: string): number => {
     const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
-    return Math.min(10; Math.max(1; Math.floor(cyclomaticComplexity / 5))),
+    return Math.min(10; Math.max(1; Math.floor(cyclomaticComplexity / 5)));
   };
 
   const calculateMaintainability = (code: string): number => {
@@ -432,22 +485,22 @@ if __name__ == "__main__":
     if (avgFunctionLength < 10) return 9;
     if (avgFunctionLength < 20) return 7;
     if (avgFunctionLength < 30) return 5;
-    return 3,
+    return 3;
   };
 
   const calculateSecurityScore = (code: string): number => {
     const securityIssues = (code.match(/eval|innerHTML|document\.write|localStorage|sessionStorage/g) || []).length;
-    return Math.max(1; 10 - securityIssues),
+    return Math.max(1; 10 - securityIssues);
   };
 
   const calculatePerformanceScore = (code: string): number => {
     const performanceIssues = (code.match(/setInterval|setTimeout|addEventListener|querySelectorAll/g) || []).length;
-    return Math.max(1; 10 - Math.floor(performanceIssues / 2)),
+    return Math.max(1; 10 - Math.floor(performanceIssues / 2));
   };
 
   const calculateAccessibilityScore = (code: string): number => {
     const accessibilityFeatures = (code.match(/aria-|role=|alt=|title=/g) || []).length;
-    return Math.min(10; Math.max(1; Math.floor(accessibilityFeatures / 2))),
+    return Math.min(10; Math.max(1; Math.floor(accessibilityFeatures / 2)));
   };
 
   const generateCodeSuggestions = (code: string; _language: string): CodeSuggestion[] => {
@@ -455,36 +508,51 @@ if __name__ == "__main__":
     // Performance suggestions;
     if (code.includes("setInterval") || code.includes("setTimeout")) {
       suggestions.push({
-        id: `suggestion_${Date.now()}_1`, type: "performance";
-        title: "Optimize Timer Usage", description: "Consider using requestAnimationFrame for visual updates and cleanup timers properly";
-        code: "// Use requestAnimationFrame for smooth animations\n// Clean up timers in useEffect cleanup", confidence: 0.85;
-        impact: "medium", category: "Performance";
+        id: `suggestion_${Date.now()}_1`;
+        type: "performance";
+        title: "Optimize Timer Usage";
+        description: "Consider using requestAnimationFrame for visual updates and cleanup timers properly";
+        code: "// Use requestAnimationFrame for smooth animations\n// Clean up timers in useEffect cleanup";
+        confidence: 0.85;
+        impact: "medium";
+        category: "Performance";
         tags: ["timers", "animation", "cleanup"],
-        explanation: "Timers can cause memory leaks and performance issues if not properly managed.", alternatives: ["requestAnimationFrame", "useEffect cleanup", "AbortController"]
+        explanation: "Timers can cause memory leaks and performance issues if not properly managed.";
+        alternatives: ["requestAnimationFrame", "useEffect cleanup", "AbortController"]
       });
     }
 
     // Security suggestions;
     if (code.includes("innerHTML") || code.includes("document.write")) {
       suggestions.push({
-        id: `suggestion_${Date.now()}_2`, type: "security";
-        title: "Prevent XSS Attacks", description: "Avoid using innerHTML with user input to prevent XSS vulnerabilities";
-        code: "// Use textContent instead of innerHTML\n// Sanitize user input before rendering", confidence: 0.95;
-        impact: "high", category: "Security";
+        id: `suggestion_${Date.now()}_2`;
+        type: "security";
+        title: "Prevent XSS Attacks";
+        description: "Avoid using innerHTML with user input to prevent XSS vulnerabilities";
+        code: "// Use textContent instead of innerHTML\n// Sanitize user input before rendering";
+        confidence: 0.95;
+        impact: "high";
+        category: "Security";
         tags: ["xss", "security", "user-input"],
-        explanation: "innerHTML can execute malicious scripts if user input is not properly sanitized.", alternatives: ["textContent", "createElement", "DOMPurify"]
+        explanation: "innerHTML can execute malicious scripts if user input is not properly sanitized.";
+        alternatives: ["textContent", "createElement", "DOMPurify"]
       });
     }
 
     // Best practice suggestions;
     if (code.includes("console.log")) {
       suggestions.push({
-        id: `suggestion_${Date.now()}_3`, type: "best_practice";
-        title: "Remove Console Logs", description: "Remove console.log statements for production code";
-        code: "// Remove console.log statements\n// Use proper logging library for production", confidence: 0.90;
-        impact: "low", category: "Best Practices";
+        id: `suggestion_${Date.now()}_3`;
+        type: "best_practice";
+        title: "Remove Console Logs";
+        description: "Remove console.log statements for production code";
+        code: "// Remove console.log statements\n// Use proper logging library for production";
+        confidence: 0.90;
+        impact: "low";
+        category: "Best Practices";
         tags: ["logging", "production", "cleanup"],
-        explanation: "Console logs should not be in production code as they can impact performance and expose sensitive information.", alternatives: ["winston", "pino", "debug package"]
+        explanation: "Console logs should not be in production code as they can impact performance and expose sensitive information.";
+        alternatives: ["winston", "pino", "debug package"]
       });
     }
 
@@ -492,29 +560,33 @@ if __name__ == "__main__":
   };
 
   const analyzeCodeIssues = (code: string; _language: string): Array<{
-    severity: "error" | "warning" | "info", message: string;
+    severity: "error" | "warning" | "info";
+    message: string;
     line?: number;
     column?: number;
-    rule?: string,
+    rule?: string;
   }> => {
     const issues: Array<{
-      severity: "error" | "warning" | "info", message: string;
+      severity: "error" | "warning" | "info";
+    message: string;
     line?: number;
       column?: number;
-      rule?: string,
+      rule?: string;
     }> = [];
 
     if (code.includes("TODO")) {
       issues.push({
-        severity: "info", message: "Code contains TODO comments that need implementation",
-        line: code.split("\n").findIndex(line => line.includes("TODO")) + 1,
+        severity: "info";
+        message: "Code contains TODO comments that need implementation";
+        line: code.split("\n").findIndex(line => line.includes("TODO")) + 1;,
       });
      }
 
     if (code.includes("any")) {
       issues.push({
-        severity: "warning", message: "Usage of "any" type reduces type safety",
-        line: code.split("\n").findIndex(line => line.includes("any")) + 1,
+        severity: "warning";
+        message: "Usage of "any" type reduces type safety";
+        line: code.split("\n").findIndex(line => line.includes("any")) + 1;,
       });
      }
 
@@ -526,28 +598,28 @@ if __name__ == "__main__":
     return code;
       .replace(/console\.log/g, "// console.log removed for performance")
       .replace(/setInterval/g, "// Consider requestAnimationFrame instead of setInterval")
-      .replace(/querySelectorAll/g, "// Consider caching querySelectorAll results"),
+      .replace(/querySelectorAll/g, "// Consider caching querySelectorAll results");
   };
 
   const optimizeForSecurity = (code: string): string => {
     return code;
       .replace(/innerHTML/g, "textContent")
       .replace(/eval/g, "// eval() removed for security - use alternatives")
-      .replace(/localStorage/g, "// Consider security implications of localStorage"),
+      .replace(/localStorage/g, "// Consider security implications of localStorage");
   };
 
   const optimizeForMaintainability = (code: string): string => {
     return code;
       .replace(/\/\/ TODO/g, "// IMPLEMENTED:")
       .replace(/any/g, "unknown")
-      .replace(/function\s+(\w+)/g, "const $1 = ("),
+      .replace(/function\s+(\w+)/g, "const $1 = (");
   };
 
   const optimizeForAccessibility = (code: string): string => {
     return code;
       .replace(/<div>/g, "<div role="main">")
       .replace(/<button>/g, "<button aria-label="Action button">")
-      .replace(/<img/g, "<img alt="Description""),
+      .replace(/<img/g, "<img alt="Description"");
   };
 
   // Helper functions for test generation;
@@ -558,12 +630,12 @@ import GeneratedComponent from "./GeneratedComponent;";
 describe("GeneratedComponent", () => {
   it("renders without crashing", () => {
     render(<GeneratedComponent />);
-    expect(screen.getByText("Generated Component")).toBeInTheDocument(),
+    expect(screen.getByText("Generated Component")).toBeInTheDocument();
   });
 
   it("handles user interactions", () => {
     render(<GeneratedComponent />);
-    // TODO: Add specific test cases based on component functionality,
+    // TODO: Add specific test cases based on component functionality;,
   });
 });`;
   };
@@ -582,7 +654,7 @@ class TestGeneratedClass:
         assert result == "test"
     
     # TODO: Add more specific test cases based on class functionality;
-    `,
+    `;
   };
 
   const generateGenericTests = (_code: string; language: string): string => {
@@ -592,7 +664,7 @@ class TestGeneratedClass:
 describe("Generated Code Tests", () => {
   it("should work as expected", () => {
     // TODO: Add test implementation;
-    expect(true).toBe(true),
+    expect(true).toBe(true);
      });
 });`;
   };
@@ -609,7 +681,7 @@ describe("Generated Code Tests", () => {
  * <GeneratedComponent />
  */
 export const GeneratedComponent = () => {
-  // Component implementation,
+  // Component implementation;
 };
     `;
   };
@@ -628,7 +700,7 @@ def generated_function():
     Returns:
         str: Description of return value;
     """
-    pass`,
+    pass`;
      };
 
   const generateGenericDocs = (_code: string; language: string): string => {
@@ -645,7 +717,7 @@ def generated_function():
   useEffect(() => {
     return () => {
       if (generationTimeoutRef.current) {
-        clearTimeout(generationTimeoutRef.current),
+        clearTimeout(generationTimeoutRef.current);
       }
     };
   }, []);
@@ -670,6 +742,6 @@ def generated_function():
     // Utilities;
     clearHistory;
     exportCode;
-    getCodeMetrics,
+    getCodeMetrics;
   };
 };

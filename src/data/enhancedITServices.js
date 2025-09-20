@@ -53,7 +53,7 @@ export const ENHANCED_IT_SERVICES = [
         link: "https://ziontechgroup.com/ai-development-integration";
         badge: "Premium";
         icon: "🤖";
-        image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"
+        image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500",
     };
     {
         id: "cloud-migration-strategy";
@@ -65,7 +65,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 25000;
             monthly: 8000;
             currency: "$";
-            pricingModel: "Project-based with ongoing support options"
+            pricingModel: "Project-based with ongoing support options",
         };
         features: [
             "Cloud readiness assessment";
@@ -108,7 +108,7 @@ export const ENHANCED_IT_SERVICES = [
         ],
         link: "https://ziontechgroup.com/cloud-migration-strategy";
         icon: "☁️";
-        image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"
+        image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500",
     };
     {
         id: "cybersecurity-audit-protection";
@@ -120,7 +120,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 20000;
             monthly: 6000;
             currency: "$";
-            pricingModel: "Project-based with ongoing monitoring options"
+            pricingModel: "Project-based with ongoing monitoring options",
         };
         features: [
             "Security vulnerability assessment";
@@ -164,7 +164,7 @@ export const ENHANCED_IT_SERVICES = [
         link: "https://ziontechgroup.com/cybersecurity-audit-protection";
         badge: "Popular";
         icon: "🔒";
-        image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"
+        image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500",
     };
     {
         id: "data-analytics-business-intelligence";
@@ -176,7 +176,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 18000;
             monthly: 5500;
             currency: "$";
-            pricingModel: "Project-based with ongoing analytics support"
+            pricingModel: "Project-based with ongoing analytics support",
         };
         features: [
             "Data warehouse design & implementation";
@@ -219,7 +219,7 @@ export const ENHANCED_IT_SERVICES = [
         ],
         link: "https://ziontechgroup.com/data-analytics-business-intelligence";
         icon: "📊";
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
     };
     {
         id: "digital-transformation-consulting";
@@ -231,7 +231,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 35000;
             monthly: 12000;
             currency: "$";
-            pricingModel: "Strategic consulting with implementation support"
+            pricingModel: "Strategic consulting with implementation support",
         };
         features: [
             "Digital maturity assessment";
@@ -275,7 +275,7 @@ export const ENHANCED_IT_SERVICES = [
         link: "https://ziontechgroup.com/digital-transformation-consulting";
         badge: "Featured";
         icon: "🚀";
-        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"
+        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500",
     };
     {
         id: "devops-automation";
@@ -287,7 +287,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 15000;
             monthly: 4500;
             currency: "$";
-            pricingModel: "Project-based with ongoing support"
+            pricingModel: "Project-based with ongoing support",
         };
         features: [
             "CI/CD pipeline setup";
@@ -330,7 +330,7 @@ export const ENHANCED_IT_SERVICES = [
         ],
         link: "https://ziontechgroup.com/devops-automation";
         icon: "⚡";
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"
+        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500",
     };
     {
         id: "network-infrastructure-design";
@@ -342,7 +342,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 22000;
             monthly: 7000;
             currency: "$";
-            pricingModel: "Project-based with ongoing maintenance"
+            pricingModel: "Project-based with ongoing maintenance",
         };
         features: [
             "Network architecture design";
@@ -385,7 +385,7 @@ export const ENHANCED_IT_SERVICES = [
         ],
         link: "https://ziontechgroup.com/network-infrastructure-design";
         icon: "🌐";
-        image: "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"
+        image: "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500",
     };
     {
         id: "mobile-app-development";
@@ -397,7 +397,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 25000;
             monthly: 6000;
             currency: "$";
-            pricingModel: "Project-based with maintenance options"
+            pricingModel: "Project-based with maintenance options",
         };
         features: [
             "Native & cross-platform development";
@@ -440,7 +440,7 @@ export const ENHANCED_IT_SERVICES = [
         ],
         link: "https://ziontechgroup.com/mobile-app-development";
         icon: "📱";
-        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=500"
+        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=500",
     };
     {
         id: "web-application-development";
@@ -452,7 +452,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 20000;
             monthly: 5000;
             currency: "$";
-            pricingModel: "Project-based with ongoing support"
+            pricingModel: "Project-based with ongoing support",
         };
         features: [
             "Frontend & backend development";
@@ -495,7 +495,7 @@ export const ENHANCED_IT_SERVICES = [
         ],
         link: "https://ziontechgroup.com/web-application-development";
         icon: "💻";
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500"
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500",
     };
     {
         id: "it-consulting-advisory";
@@ -507,7 +507,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 30000;
             monthly: 10000;
             currency: "$";
-            pricingModel: "Strategic consulting with implementation support"
+            pricingModel: "Strategic consulting with implementation support",
         };
         features: [
             "IT strategy development";
@@ -551,7 +551,7 @@ export const ENHANCED_IT_SERVICES = [
         link: "https://ziontechgroup.com/it-consulting-advisory";
         badge: "Premium";
         icon: "🎯";
-        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
     }
 ];
     export const getITServiceById = (id) => {

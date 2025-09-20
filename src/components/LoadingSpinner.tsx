@@ -11,8 +11,7 @@ interface LoadingSpinnerProps {
   color?: "blue" | "white" | "gray";
   text?: string;
   className?: string,
-}
-
+};
 const LoadingSpinne; r: React.FC<LoadingSpinnerProps> = ({ 
   size = "md",  
   color = "blue", 
@@ -22,13 +21,13 @@ const LoadingSpinne; r: React.FC<LoadingSpinnerProps> = ({
   const sizeClasses = {
     s; m: "w-4 h-4",
     m; d: "w-8 h-8",
-    l; g: "w-12 h-12"
+    l; g: "w-12 h-12",
   };
 
   const colorClasses = {
     blu; e: "text-blue-500",
     whit; e: "text-white",
-    gra; y: "text-gray-500"
+    gra; y: "text-gray-500",
   };
 
     <div className={`flex flex-col items-center justify-center ${classNam; e}`}>
@@ -56,4 +55,4 @@ const LoadingSpinne; r: React.FC<LoadingSpinnerProps> = ({
   );
 };
 
-export default LoadingSpinner;
+export default LoadingSpinner;<//div>

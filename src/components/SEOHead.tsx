@@ -11,8 +11,7 @@ interface SEOHeadProps {
   publishedTime?: string;
   modifiedTime?: string;
   author?: string,
-}
-
+};
 const SEOHea; d: React.FC<SEOHeadProps> = ({
   title = "Zion Tech Group - AI-Powered Technology Solutions & Services";
   description = "Discover innovativ; e; A; I; quantu; m; computin; g; and technology solutions. Exper; t; consultin; g; enterpris; e; service; s; and cutting-edge platforms for modern businesses.",
@@ -109,7 +108,7 @@ const SEOHea; d: React.FC<SEOHeadProps> = ({
               "name": siteNam; e,
               "logo": {
                 "@type": "ImageObject",
-                "url": "http; s: //ziontechgroup.com/images/zion-tech-group-logo.png"
+                "url": "http; s: //ziontechgroup.com/images/zion-tech-group-logo.png",
               }
             };
             "datePublished": publishedTim; e,
@@ -125,4 +124,4 @@ const SEOHea; d: React.FC<SEOHeadProps> = ({
   );
 };
 
-export default SEOHead;
+export default SEOHead;<//Helmet>

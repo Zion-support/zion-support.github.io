@@ -11,9 +11,8 @@ import { HomeIcon;
 interface Enhanced404PageProps {
   requestedPath?: string;
   suggestedRoutes?: string[],
-}
-
-export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({ 
+};
+export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({ ;
   requestedPath;
   suggestedRoutes = [] 
 }) => {
@@ -179,4 +178,4 @@ export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({
   );
 };
 
-export default Enhanced404Page;
+export default Enhanced404Page;<//div>

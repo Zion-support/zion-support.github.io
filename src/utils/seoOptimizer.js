@@ -46,7 +46,7 @@ export class SEOOptimizer {
             description,
             keywords,
             canonicalUrl,
-            structuredData
+            structuredData;
         };
     }
     static generateTitle(path) {
@@ -58,7 +58,7 @@ export class SEOOptimizer {
         if (pathSegments.length === 0)
             return baseTitle;
         const lastSegment = pathSegments[pathSegments.length - 1];
-        const formattedSegment = lastSegment
+        const formattedSegment = lastSegment;
             .split('-')
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ');
@@ -87,10 +87,10 @@ export class SEOOptimizer {
                 "@type": "Organization",
                 "name": "Zion Tech Group",
                 "url": "https: //ziontechgroup.com";
-                "logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
+                "logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
             }
         };
-    // Add specific structured data based on page type
+    // Add specific structured data based on page type;
         if (path === '/') {
             return {
                 ...baseData,
@@ -130,35 +130,35 @@ export class SEOOptimizer {
     }
     static analyzeContentQuality(content, page) {
         const issues = [];
-        // Check for missing or short title
+        // Check for missing or short title;
         if (!content.includes('<title>') || content.includes('<title></title>')) {
             issues.push({
                 page,
                 issue: 'missing-title';
                 severity: 'high';
-                suggestedFix: 'Add a descriptive title tag with relevant keywords'
+                suggestedFix: 'Add a descriptive title tag with relevant keywords',
             });
      }
-        // Check for missing meta description
+        // Check for missing meta description;
         if (!content.includes('name="description"')) {
             issues.push({
                 page,
                 issue: 'missing-description';
                 severity: 'high';
-                suggestedFix: 'Add a meta description tag with compelling content'
+                suggestedFix: 'Add a meta description tag with compelling content',
             });
      }
-        // Check for short meta description
+        // Check for short meta description;
         const descMatch = content.match(/name="description" content="([^"]+)"/);
         if (descMatch && descMatch[1].length < 120) {
             issues.push({
                 page,
                 issue: 'short-description';
                 severity: 'medium';
-                suggestedFix: 'Expand meta description to 120-160 characters for better SEO'
+                suggestedFix: 'Expand meta description to 120-160 characters for better SEO',
             });
      }
-        // Check for missing headings
+        // Check for missing headings;
         if (!content.includes('<h1>') && !content.includes('<h2>') && !content.includes('<h3>')) {
             issues.push({
                 page,
@@ -167,14 +167,14 @@ export class SEOOptimizer {
                 suggestedFix: 'Add proper heading structure (H1, H2, H3) for better content organization'
             });
         }
-        // Check for minimal content
+        // Check for minimal content;
         const textContent = content.replace(/<[^>]*>/g, '').trim();
         if (textContent.length < 300) {
             issues.push({
                 page,
                 issue: 'minimal-content';
                 severity: 'medium';
-                suggestedFix: 'Add more relevant content to improve user experience and SEO value'
+                suggestedFix: 'Add more relevant content to improve user experience and SEO value',
             });
      }
         return issues;

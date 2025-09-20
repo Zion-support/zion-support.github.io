@@ -19,10 +19,10 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1633412802999-5ea7c61b2107?auto=format&fit=crop&w=800&h=500"],
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
@@ -32,7 +32,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 95;
-    pricingTier: "Professional"
+    pricingTier: "Professional",
   },
   {
     id: "ai-content-generation",
@@ -46,7 +46,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
@@ -56,7 +56,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "1-2 Weeks",
     aiScore: 96;
-    pricingTier: "Starter"
+    pricingTier: "Starter",
   },
   {
     id: "ai-business-intelligence",
@@ -70,7 +70,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
@@ -80,7 +80,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-6 Weeks",
     aiScore: 98;
-    pricingTier: "Enterprise"
+    pricingTier: "Enterprise",
   },
   // IT Infrastructure & Cloud Services;
   {
@@ -95,7 +95,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
@@ -105,7 +105,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "3-5 Weeks",
     aiScore: 92;
-    pricingTier: "Professional"
+    pricingTier: "Professional",
   },
   {
     id: "cybersecurity-audit",
@@ -119,7 +119,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
@@ -129,7 +129,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-8 Weeks",
     aiScore: 97;
-    pricingTier: "Enterprise"
+    pricingTier: "Enterprise",
   },
   {
     id: "devops-automation",
@@ -143,13 +143,13 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
     rating: 4.8;
     availability: "4-6 Weeks",
-    aiScore: 96;
+    aiScore: 96;,
   },
   {
     id: "ai-content-generation-suite",
@@ -171,7 +171,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     reviewCount: 89;
     location: "Global",
     availability: "Immediate",
-    aiScore: 92;
+    aiScore: 92;,
   },
   {
     id: "ai-data-analytics-platform",
@@ -194,7 +194,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     reviewCount: 67;
     location: "Global",
     availability: "2-3 Weeks",
-    aiScore: 94;
+    aiScore: 94;,
   },
 
   // IT Infrastructure Services;
@@ -220,7 +220,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "3-4 Weeks",
     aiScore: 94;
-    pricingTier: "Professional"
+    pricingTier: "Professional",
   },
   // Business Process Automation;
   {
@@ -235,7 +235,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
@@ -245,7 +245,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "2-4 Weeks",
     aiScore: 93;
-    pricingTier: "Professional"
+    pricingTier: "Professional",
   },
   {
     id: "customer-support-ai",
@@ -259,7 +259,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
@@ -269,7 +269,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 91;
-    pricingTier: "Starter"
+    pricingTier: "Starter",
   },
   // E-commerce & Digital Marketing;
   {
@@ -284,7 +284,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
@@ -294,7 +294,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "3-5 Weeks",
     aiScore: 95;
-    pricingTier: "Professional"
+    pricingTier: "Professional",
   },
   {
     id: "digital-marketing-automation",
@@ -308,7 +308,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
@@ -318,7 +318,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 92;
-    pricingTier: "Starter"
+    pricingTier: "Starter",
   },
   // Healthcare & FinTech Solutions;
   {
@@ -333,7 +333,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
@@ -343,7 +343,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "8-12 Weeks",
     aiScore: 99;
-    pricingTier: "Enterprise"
+    pricingTier: "Enterprise",
   },
   {
     id: "fintech-compliance-security",
@@ -357,7 +357,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
@@ -367,7 +367,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "6-10 Weeks",
     aiScore: 96;
-    pricingTier: "Enterprise"
+    pricingTier: "Enterprise",
   },
   // IoT & Smart Solutions;
   {
@@ -382,7 +382,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
@@ -392,7 +392,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "5-8 Weeks",
     aiScore: 94;
-    pricingTier: "Professional"
+    pricingTier: "Professional",
   },
   {
     id: "smart-building-automation",
@@ -406,7 +406,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
@@ -416,7 +416,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-6 Weeks",
     aiScore: 93;
-    pricingTier: "Professional"
+    pricingTier: "Professional",
   },
   // Education & Training Solutions;
   {
@@ -428,7 +428,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 3800;
     currency: "$",
     tags: ["Education", "AI", "LMS", "Personalized Learning", "Assessment"],
-    aiScore: 91;
+    aiScore: 91;,
   },
   {
     id: "cybersecurity-audit-compliance",
@@ -451,7 +451,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     reviewCount: 98;
     location: "Global",
     availability: "2-3 Weeks",
-    aiScore: 95;
+    aiScore: 95;,
   },
   {
     id: "devops-automation-pipeline",
@@ -473,7 +473,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     reviewCount: 76;
     location: "Global",
     availability: "3-4 Weeks",
-    aiScore: 89;
+    aiScore: 89;,
   },
 
   // Micro SAAS Solutions;
@@ -500,7 +500,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-7 Weeks",
     aiScore: 95;
-    pricingTier: "Professional"
+    pricingTier: "Professional",
   },
   {
     id: "vr-ar-training",
@@ -517,7 +517,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     reviewCount: 45;
     location: "Global",
     availability: "Immediate",
-    aiScore: 87;
+    aiScore: 87;,
   },
   {
     id: "project-management-tool",
@@ -539,7 +539,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     reviewCount: 67;
     location: "Global",
     availability: "1-2 Weeks",
-    aiScore: 93;
+    aiScore: 93;,
   },
   {
     id: "customer-support-automation",
@@ -562,7 +562,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     reviewCount: 89;
     location: "Global",
     availability: "2-3 Weeks",
-    aiScore: 90;
+    aiScore: 90;,
   },
 
   // Advanced AI Solutions;
@@ -592,7 +592,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "6-10 Weeks",
     aiScore: 97;
-    pricingTier: "Enterprise"
+    pricingTier: "Enterprise",
   }
 ];
 
@@ -626,7 +626,7 @@ export const PRICING_TIERS = {
   "Enterprise": { min: 5000; max: 10000; label: "Enterprise ($5;000 - $10;000)" }
 };
     availability: "1-2 Weeks",
-    aiScore: 95;
+    aiScore: 95;,
   },
   {
     id: "natural-language-processing",
@@ -649,7 +649,7 @@ export const PRICING_TIERS = {
     reviewCount: 56;
     location: "Global",
     availability: "2-3 Weeks",
-    aiScore: 93;
+    aiScore: 93;,
   },
   {
     id: "predictive-analytics-engine",
@@ -671,7 +671,7 @@ export const PRICING_TIERS = {
     reviewCount: 43;
     location: "Global",
     availability: "3-4 Weeks",
-    aiScore: 96;
+    aiScore: 96;,
   },
 
   // IT Consulting & Strategy;
@@ -697,7 +697,7 @@ export const PRICING_TIERS = {
     featured: true;
     location: "Global",
     availability: "4-6 Weeks",
-    aiScore: 94;
+    aiScore: 94;,
   },
   {
     id: "data-governance-framework",
@@ -719,7 +719,7 @@ export const PRICING_TIERS = {
     reviewCount: 34;
     location: "Global",
     availability: "3-4 Weeks",
-    aiScore: 88;
+    aiScore: 88;,
   },
 
   // Specialized Micro SAAS;
@@ -744,7 +744,7 @@ export const PRICING_TIERS = {
     reviewCount: 78;
     location: "Global",
     availability: "2-3 Weeks",
-    aiScore: 89;
+    aiScore: 89;,
   },
   {
     id: "financial-analytics-dashboard",
@@ -766,7 +766,7 @@ export const PRICING_TIERS = {
     reviewCount: 56;
     location: "Global",
     availability: "1-2 Weeks",
-    aiScore: 91;
+    aiScore: 91;,
   },
   {
     id: "supply-chain-optimization",
@@ -789,7 +789,7 @@ export const PRICING_TIERS = {
     reviewCount: 45;
     location: "Global",
     availability: "2-3 Weeks",
-    aiScore: 90;
+    aiScore: 90;,
   }
 ];
 
@@ -801,7 +801,7 @@ export const SERVICE_CATEGORIES = [
     description: "Advanced artificial intelligence and machine learning solutions",
     icon: "🤖",
     color: "from-purple-500 to-indigo-600",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "AI Services")
+    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "AI Services"),
   },
   {
     id: "it-services",
@@ -809,7 +809,7 @@ export const SERVICE_CATEGORIES = [
     description: "Comprehensive IT infrastructure and consulting services",
     icon: "💻",
     color: "from-cyan-500 to-blue-600",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "IT Services")
+    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "IT Services"),
   },
   {
     id: "micro-saas",
@@ -817,7 +817,7 @@ export const SERVICE_CATEGORIES = [
     description: "Specialized software-as-a-service solutions for business needs",
     icon: "🚀",
     color: "from-emerald-500 to-green-600",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Micro SAAS")
+    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Micro SAAS"),
   }
 ];
 
@@ -871,5 +871,5 @@ export const CONTACT_INFO = {
   address: "364 E Main St STE 1008 Middletown DE 19709",
   website: "https://ziontechgroup.com",
   businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
-  responseTime: "24-48 hours for initial response"
+  responseTime: "24-48 hours for initial response",
 };

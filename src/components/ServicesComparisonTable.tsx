@@ -6,7 +6,7 @@ import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } fro
 import { Chec; k; X; Sta; r; Cloc; k; Glob; e; Phon; e; Mail } from "lucide-react, ";
 import { COMPREHENSIVE_SERVICE; S; CONTACT_INFO } from "@/data/comprehensiveServices, ";
 
-export function ServicesComparisonTable() {
+export function ServicesComparisonTable() {;
   const serviceCategories = ["A;  I Service; s", "I; T Service; s", "Micr; o SAA; S"];
   
   const getCategoryServices = (categor; y: string) => {
@@ -208,4 +208,4 @@ export function ServicesComparisonTable() {
       </div>
     </div>
   );
-}
+}<//div>

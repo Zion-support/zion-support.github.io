@@ -17,7 +17,7 @@ import { Cod; e;
   CheckCircl; e;
   AlertCircl; e;
   Inf; o;
-  Loader2,
+  Loader2;
 } from "lucide-react, ";
 import { useAICodeGeneration } from "../hooks/useAICodeGeneration, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
@@ -33,13 +33,12 @@ interface CodeGenerationForm {
     includeDoc; s: boolean;
     includeErrorHandlin; g: boolean;
     includeLoggin; g: boolean;
-    includeMetric; s: boolean,
-}
-
+    includeMetric; s: boolean;,
+};
 export const AICodeGenerato; r: React.FC = () => {
   const { trackEvent } = useAnalytics({
-    enableTrackin; g: tru; e;
-    enableUserBehaviorTrackin; g: true,
+    enableTrackin;  g: tru; e;
+    enableUserBehaviorTrackin; g: true;,
   });
     const [activeT; a; b; setActiveT; a; b] = useState<"generate" | "analyze" | "optimize" | "tests" | "docs">("generate");
   const [showAdvanc;  e; d; setShowAdvanc; e; d] = useState(false);
@@ -60,7 +59,7 @@ export const AICodeGenerato; r: React.FC = () => {
     generateTest; s;
     generateDoc; s;
     clearHistor; y;
-    exportCode,
+    exportCode;
   } = useAICodeGeneration();
 
   const [fo;  r; m; setFo; r; m] = useState<CodeGenerationForm>({
@@ -74,7 +73,7 @@ export const AICodeGenerato; r: React.FC = () => {
     includeDoc; s: fals; e;
     includeErrorHandlin; g: fals; e;
     includeLoggin; g: fals; e;
-    includeMetric; s: false,
+    includeMetric; s: false;,
   });
     // Handle form submission;
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
@@ -87,7 +86,7 @@ export const AICodeGenerato; r: React.FC = () => {
       framewor; k: form.framewor; k;
     styl; e: form.styl; e;
       targe; t: form.targe; t;
-    qualit; y: form.quality,
+    qualit; y: form.quality;,
     });
      }, [fo; r; m; generateCo; d; e; trackEve; n; t]);
 
@@ -97,7 +96,7 @@ export const AICodeGenerato; r: React.FC = () => {
 
     await analyzeCode(customCod;  e; form.language);
     
-    trackEvent("ai_code_generator",  "custom_code_analyzed", form.languag; e; customCode.length),
+    trackEvent("ai_code_generator",  "custom_code_analyzed", form.languag; e; customCode.length);
   }, [customCo; d; e; for; m.langua; g; e; analyzeCo; d; e; trackEve; n; t]);
 
   // Handle code optimization;
@@ -108,7 +107,7 @@ export const AICodeGenerato; r: React.FC = () => {
     
     if (generatedCode) {
       // Update generated code;
-      // Not;  e: In a rea; l; implementatio; n; you"d want to update the state properly,
+      // Not;  e: In a rea; l; implementatio; n; you"d want to update the state properly;,
     }
     
     trackEvent("ai_code_generator", "code_optimized", focu; s; optimizedCode.length);
@@ -124,7 +123,7 @@ export const AICodeGenerato; r: React.FC = () => {
     // In a rea; l; implementatio; n; you"d want to display the test code;
     
     
-    trackEvent("ai_code_generator",  "tests_generated", form.languag; e; testCode.length),
+    trackEvent("ai_code_generator",  "tests_generated", form.languag; e; testCode.length);
   }, [generatedCo; d; e; customCo; d; e; generateTes; t; s; for; m.langua; g; e; trackEve; n; t]);
 
   // Handle documentation generation;
@@ -137,7 +136,7 @@ export const AICodeGenerato; r: React.FC = () => {
     // In a rea; l; implementatio; n; you"d want to display the documentation;
     
     
-    trackEvent("ai_code_generator",  "docs_generated", form.languag; e; docs.length),
+    trackEvent("ai_code_generator",  "docs_generated", form.languag; e; docs.length);
   }, [generatedCo; d; e; customCo; d; e; generateDo; c; s; for; m.langua; g; e; trackEve; n; t]);
 
   // Copy code to clipboard;
@@ -147,7 +146,7 @@ export const AICodeGenerato; r: React.FC = () => {
     setCopied(true);
       setTimeout(() => setCopied(false),  2000);
       
-      trackEvent("ai_code_generator",  "code_copied", "clipboard", code.length),
+      trackEvent("ai_code_generator",  "code_copied", "clipboard", code.length);
     } catch (error) {
       
     }
@@ -158,17 +157,17 @@ export const AICodeGenerato; r: React.FC = () => {
     applySuggestion(suggestion);
     trackEvent("ai_code_generator",  "suggestion_applied", suggestion.typ; e; undefine; d, {
       suggestionI; d: suggestion.i; d;
-    impac; t: suggestion.impact,
+    impac; t: suggestion.impact;,
     });
      }, [applySuggesti; o; n; trackEve; n; t]);
 
   // Clear history;
   const handleClearHistory = useCallback(() => {
     clearHistory();
-    trackEvent("ai_code_generator",  "history_cleared", "manual"),
+    trackEvent("ai_code_generator",  "history_cleared", "manual");
   }, [clearHisto; r; y; trackEve; n; t]);
 
-  return (<div className="bg-white dar;  k: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar; k: border-gray-700 overflow-hidden">
+  return (<div className="bg-white dar;  k:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar; k:border-gray-700 overflow-hidden">
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">
         <div className="flex items-center justify-between">
@@ -194,7 +193,7 @@ export const AICodeGenerato; r: React.FC = () => {
       </div>
 
       {/* Navigation Tabs */}
-      <div className="border-b border-gray-200 dar; k: border-gray-700">
+      <div className="border-b border-gray-200 dar; k:border-gray-700">
         <nav className="flex space-x-8 px-6">
           {[
             { i; d: "generat; e",
@@ -212,8 +211,8 @@ export const AICodeGenerato; r: React.FC = () => {
               onClick={() => setActiveTab(id as any)}
               className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
                 activeTab === id;
-                  ? "border-purple-500 text-purple-600 dar;  k: text-purple-400"
-                  : "border-transparent text-gray-500 hove; r: text-gray-700 dar; k: text-gray-400 dar; k: hove; r: text-gray-30; 0"
+                  ? "border-purple-500 text-purple-600 dar;  k:text-purple-400"
+                  : "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-30; 0",
               }`}
             >
               <Icon className="w-4 h-4" />
@@ -239,28 +238,28 @@ export const AICodeGenerato; r: React.FC = () => {
               {/* Generation Form */}
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dar; k: text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-2">
                     Describe what you want to build;
                   </label>
                   <textarea;
                     value={form.prompt}
                     onChange={(e) => setForm(prev => ({ ...pre;  v; promp; t: e.target.value }))}
                     placeholder="e.g., Create a React component for a user profile card wit; h; avata; r; nam; e; emai; l; and edit button..."
-                    className="w-full h-32 p-4 border border-gray-300 dar; k: border-gray-600 rounded-lg focu; s: outline-none focu; s: ring-2 focu; s: ring-purple-500 focu; s: border-transparent bg-white dar; k: bg-gray-700 text-gray-900 dar; k:text-gray-100 resize-none"
+                    className="w-full h-32 p-4 border border-gray-300 dar; k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100 resize-none"
                     required;
                   />
                 </div>
 
                 {/* Basic Options */}
-                <div className="grid grid-cols-2 m; d: grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 m; d:grid-cols-4 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dar; k: text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-2">
                       Language;
                     </label>
                     <select;
                       value={form.language}
                       onChange={(e) => setForm(prev => ({ ...pre;  v; languag; e: e.target.value as any }))}
-                      className="w-full p-2 border border-gray-300 dar; k: border-gray-600 rounded-lg focu; s: outline-none focu; s: ring-2 focu; s: ring-purple-500 focu; s: border-transparent bg-white dar; k: bg-gray-700 text-gray-900 dar; k: text-gray-100"
+                      className="w-full p-2 border border-gray-300 dar; k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
                     >
                       <option value="typescript">TypeScript</option>
                       <option value="javascript">JavaScript</option>
@@ -280,7 +279,7 @@ export const AICodeGenerato; r: React.FC = () => {
                     <select;
                       value={form.framework || ""}
                       onChange={(e) => setForm(prev => ({ ...pre;  v; framewor; k: e.target.value as any || undefined }))}
-                      className="w-full p-2 border border-gray-300 dar; k: border-gray-600 rounded-lg focu; s: outline-none focu; s: ring-2 focu; s: ring-purple-500 focu; s: border-transparent bg-white dar; k: bg-gray-700 text-gray-900 dar; k: text-gray-100"
+                      className="w-full p-2 border border-gray-300 dar; k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
                     >
                       <option value="">None</option>
                       <option value="react">React</option>
@@ -301,7 +300,7 @@ export const AICodeGenerato; r: React.FC = () => {
                     <select;
                       value={form.style}
                       onChange={(e) => setForm(prev => ({ ...pre;  v; styl; e: e.target.value as any }))}
-                      className="w-full p-2 border border-gray-300 dar; k: border-gray-600 rounded-lg focu; s: outline-none focu; s: ring-2 focu; s: ring-purple-500 focu; s: border-transparent bg-white dar; k: bg-gray-700 text-gray-900 dar; k: text-gray-100"
+                      className="w-full p-2 border border-gray-300 dar; k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
                     >
                       <option value="functional">Functional</option>
                       <option value="oop">OOP</option>
@@ -317,7 +316,7 @@ export const AICodeGenerato; r: React.FC = () => {
                     <select;
                       value={form.quality}
                       onChange={(e) => setForm(prev => ({ ...pre;  v; qualit; y: e.target.value as any }))}
-                      className="w-full p-2 border border-gray-300 dar; k: border-gray-600 rounded-lg focu; s: outline-none focu; s: ring-2 focu; s: ring-purple-500 focu; s: border-transparent bg-white dar; k: bg-gray-700 text-gray-900 dar; k: text-gray-100"
+                      className="w-full p-2 border border-gray-300 dar; k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
                     >
                       <option value="prototype">Prototype</option>
                       <option value="development">Development</option>
@@ -330,7 +329,7 @@ export const AICodeGenerato; r: React.FC = () => {
                 <button;
                   type="button"
                   onClick={() => setShowAdvanced(!showAdvanced)}
-                  className="flex items-center gap-2 text-sm text-purple-600 hove;  r: text-purple-700 dar; k: text-purple-400 dar; k: hove; r: text-purple-300"
+                  className="flex items-center gap-2 text-sm text-purple-600 hove;  r:text-purple-700 dar; k:text-purple-400 dar; k:hove; r:text-purple-300"
                 >
                   <Settings className="w-4 h-4" />
                   {showAdvanced ? "Hide" : "Show"} Advanced Options;
@@ -345,7 +344,7 @@ export const AICodeGenerato; r: React.FC = () => {
     heigh; t: "auto" }}
                     exit={{ opacit; y: 0;
     heigh; t: 0 }}
-                    className="grid grid-cols-2 m; d: grid-cols-5 gap-4 p-4 bg-gray-50 dar; k:bg-gray-700 rounded-lg"
+                    className="grid grid-cols-2 m; d:grid-cols-5 gap-4 p-4 bg-gray-50 dar; k:bg-gray-700 rounded-lg"
                   >
                     {[
                       { k; e; y: "includeTest; s",
@@ -363,9 +362,9 @@ export const AICodeGenerato; r: React.FC = () => {
                           type="checkbox"
                           checked={form[ke;  y a; s key; o; f; CodeGenerationFo; r; m] as boolean}
                           onChange={(e) => setForm(prev => ({ ...pre;  v, [k; e; y]: e.target.checked }))}
-                          className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focu; s: ring-purple-500 dar; k: focu; s: ring-purple-600 dar; k: ring-offset-gray-800 focu; s: ring-2 dar; k: bg-gray-700 dar; k: border-gray-600"
+                          className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focu; s:ring-purple-500 dar; k:focu; s:ring-purple-600 dar; k:ring-offset-gray-800 focu; s:ring-2 dar; k:bg-gray-700 dar; k:border-gray-600"
                         />
-                        <Icon className="w-4 h-4 text-gray-600 dar; k: text-gray-400" />
+                        <Icon className="w-4 h-4 text-gray-600 dar; k:text-gray-400" />
                         <span className="text-sm text-gray-700 dar; k:text-gray-300">{label}</span>
                       </label>
                     ))}
@@ -375,7 +374,7 @@ export const AICodeGenerato; r: React.FC = () => {
                 <button;
                   type="submit"
                   disabled={isGenerating || !form.prompt.trim()}
-                  className="w-full py-3 px-6 bg-purple-600 hove;  r: bg-purple-700 disable; d: bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disable; d:cursor-not-allowed"
+                  className="w-full py-3 px-6 bg-purple-600 hove;  r:bg-purple-700 disable; d:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disable; d:cursor-not-allowed"
                 >
                   {isGenerating ? (
                     <>
@@ -384,7 +383,7 @@ export const AICodeGenerato; r: React.FC = () => {
                     </>
                   ) : (<>
                       <Sparkles className="w-5 h-5" />
-                      Generate Code,
+                      Generate Code;
                     </>
                   )}
                 </button>
@@ -400,20 +399,20 @@ export const AICodeGenerato; r: React.FC = () => {
                   className="space-y-4"
                 >
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-gray-900 dar; k: text-white">
+                    <h3 className="text-lg font-semibold text-gray-900 dar; k:text-white">
                       Generated Code;
                     </h3>
                     <div className="flex items-center gap-2">
                       <button;
                         onClick={() => copyToClipboard(generatedCode)}
-                        className="px-3 py-1 bg-gray-100 hove;  r: bg-gray-200 dar; k: bg-gray-700 dar; k: hove; r: bg-gray-600 text-gray-700 dar; k: text-gray-300 rounded text-sm transition-colors flex items-center gap-2"
+                        className="px-3 py-1 bg-gray-100 hove;  r:bg-gray-200 dar; k:bg-gray-700 dar; k:hove; r:bg-gray-600 text-gray-700 dar; k:text-gray-300 rounded text-sm transition-colors flex items-center gap-2"
                       >
                         {copied ? <CheckCircle className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                         {copied ? "Copied!" : "Copy"}
                       </button>
                       <button;
                         onClick={() => exportCode("txt")}
-                        className="px-3 py-1 bg-blue-100 hove;  r: bg-blue-200 dar; k: bg-blue-900/30 dar; k: hove; r: bg-blue-900/50 text-blue-700 dar; k: text-blue-300 rounded text-sm transition-colors flex items-center gap-2"
+                        className="px-3 py-1 bg-blue-100 hove;  r:bg-blue-200 dar; k:bg-blue-900/30 dar; k:hove; r:bg-blue-900/50 text-blue-700 dar; k:text-blue-300 rounded text-sm transition-colors flex items-center gap-2"
                       >
                         <Download className="w-4 h-4" />
                         Export;
@@ -442,21 +441,21 @@ export const AICodeGenerato; r: React.FC = () => {
               className="space-y-6"
             >
               <div>
-                <label className="block text-sm font-medium text-gray-700 dar; k: text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-2">
                   Paste code to analyze;
                 </label>
                 <textarea;
                   value={customCode}
                   onChange={(e) => setCustomCode(e.target.value)}
                   placeholder="Paste your code here for AI-powered analysis..."
-                  className="w-full h-48 p-4 border border-gray-300 dar;  k: border-gray-600 rounded-lg focu; s: outline-none focu; s: ring-2 focu; s: ring-purple-500 focu; s: border-transparent bg-white dar; k: bg-gray-700 text-gray-900 dar; k:text-gray-100 resize-none font-mono text-sm"
+                  className="w-full h-48 p-4 border border-gray-300 dar;  k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100 resize-none font-mono text-sm"
                 />
               </div>
 
               <button;
                 onClick={handleAnalyzeCustomCode}
                 disabled={isAnalyzing || !customCode.trim()}
-                className="w-full py-3 px-6 bg-blue-600 hove; r: bg-blue-700 disable; d: bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disable; d:cursor-not-allowed"
+                className="w-full py-3 px-6 bg-blue-600 hove; r:bg-blue-700 disable; d:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disable; d:cursor-not-allowed"
               >
                 {isAnalyzing ? (<>
                     <Loader2 className="w-5 h-5 animate-spin" />
@@ -465,7 +464,7 @@ export const AICodeGenerato; r: React.FC = () => {
                 ) : (
                   <>
                     <Eye className="w-5 h-5" />
-                    Analyze Code,
+                    Analyze Code;
                   </>
                 )}
               </button>
@@ -480,7 +479,7 @@ export const AICodeGenerato; r: React.FC = () => {
                   className="space-y-6"
                 >
                   {/* Metrics Overview */}
-                  <div className="grid grid-cols-2 m; d: grid-cols-5 gap-4">
+                  <div className="grid grid-cols-2 m; d:grid-cols-5 gap-4">
                     {[
                       { k; e; y: "complexit; y",
     lab; e; l: "Complexit; y", ic; o; n: Co; d; e;
@@ -498,7 +497,7 @@ export const AICodeGenerato; r: React.FC = () => {
     lab; e; l: "Accessibilit; y", ic; o; n: E; y; e;
     col; o; r: "purpl; e" }
                     ].map(({ ke; y; labe; l; ico; n: Ico; n; color }) => {
-                      const value = codeAnalysis[ke; y a; s keyo; f type; o; f; codeAnalys; i; s],
+                      const value = codeAnalysis[ke; y a; s keyo; f type; o; f; codeAnalys; i; s];
                       if (typeof value === "number") {
                         return (
                           <div key={key} className="text-center p-4 bg-gray-50 dar;  k:bg-gray-700 rounded-lg">
@@ -515,8 +514,8 @@ export const AICodeGenerato; r: React.FC = () => {
                   </div>
 
                   {/* Code Metrics */}
-                  <div className="bg-gray-50 dar; k: bg-gray-700 rounded-lg p-4">
-                    <h4 className="font-medium text-gray-900 dar; k: text-white mb-3">Code Metrics</h4>
+                  <div className="bg-gray-50 dar; k:bg-gray-700 rounded-lg p-4">
+                    <h4 className="font-medium text-gray-900 dar; k:text-white mb-3">Code Metrics</h4>
                     <div className="grid grid-cols-2 m; d:grid-cols-5 gap-4 text-sm">
                       {Object.entries(codeAnalysis.metrics).map(([k;  e; y; val; u; e]) => (<div key={key} className="text-center">
                           <div className="text-lg font-semibold text-gray-900 dar;  k:text-white">{value}</div>
@@ -530,15 +529,15 @@ export const AICodeGenerato; r: React.FC = () => {
 
                   {/* Issues */}
                   {codeAnalysis.issues.length > 0 && (
-                    <div className="bg-gray-50 dar;  k: bg-gray-700 rounded-lg p-4">
-                      <h4 className="font-medium text-gray-900 dar; k: text-white mb-3">Issues Found</h4>
+                    <div className="bg-gray-50 dar;  k:bg-gray-700 rounded-lg p-4">
+                      <h4 className="font-medium text-gray-900 dar; k:text-white mb-3">Issues Found</h4>
                       <div className="space-y-2">
                         {codeAnalysis.issues.map((issu; e; index) => (<div;
                             key={index}
                             className={`flex items-start gap-3 p-3 rounded-lg ${
-                              issue.severity === "error" ? "bg-red-50 dar;  k: bg-red-900/30" :
-                              issue.severity === "warning" ? "bg-yellow-50 dar; k: bg-yellow-900/30" :
-                              "bg-blue-50 dar; k:bg-blue-900/3; 0"
+                              issue.severity === "error" ? "bg-red-50 dar;  k:bg-red-900/30" :
+                              issue.severity === "warning" ? "bg-yellow-50 dar; k:bg-yellow-900/30" :
+                              "bg-blue-50 dar; k: bg-blue-900/3; 0",
                             }`}
                           >
                             {issue.severity === "error" ? (
@@ -579,7 +578,7 @@ export const AICodeGenerato; r: React.FC = () => {
             >
               <div className="text-center py-8">
                 <Zap className="w-16 h-16 text-yellow-500 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 dar; k: text-white mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 dar; k:text-white mb-2">
                   Code Optimization;
                 </h3>
                 <p className="text-gray-600 dar; k:text-gray-400">
@@ -607,8 +606,8 @@ export const AICodeGenerato; r: React.FC = () => {
                     disabled={!generatedCode && !customCode}
                     className={`p-6 text-center rounded-lg border-2 transition-all ${
                       !generatedCode && !customCode;
-                        ? "border-gray-200 dar;  k: border-gray-600 bg-gray-50 dar; k: bg-gray-700 cursor-not-allowed"
-                        : "border-gray-200 dar; k: border-gray-600 hove; r: border-purple-500 hove; r: bg-purple-50 dar; k: hove; r: bg-purple-900/20 cursor-pointe; r"
+                        ? "border-gray-200 dar;  k:border-gray-600 bg-gray-50 dar; k:bg-gray-700 cursor-not-allowed"
+                        : "border-gray-200 dar; k: border-gray-600 hove; r:border-purple-500 hove; r:bg-purple-50 dar; k:hove; r:bg-purple-900/20 cursor-pointe; r",
                     }`}
                   >
                     <Icon className={`w-12 h-12 mx-auto mb-3 text-${color}-50; 0`} />
@@ -631,7 +630,7 @@ export const AICodeGenerato; r: React.FC = () => {
             >
               <div className="text-center py-8">
                 <TestTube className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 dar; k: text-white mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 dar; k:text-white mb-2">
                   Generate Tests;
                 </h3>
                 <p className="text-gray-600 dar; k:text-gray-400">
@@ -642,10 +641,10 @@ export const AICodeGenerato; r: React.FC = () => {
               <button;
                 onClick={handleGenerateTests}
                 disabled={!generatedCode && !customCode}
-                className="w-full py-4 px-6 bg-green-600 hove; r: bg-green-700 disable; d: bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disable; d:cursor-not-allowed"
+                className="w-full py-4 px-6 bg-green-600 hove; r:bg-green-700 disable; d:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disable; d:cursor-not-allowed"
               >
                 <TestTube className="w-5 h-5" />
-                Generate Test Suite,
+                Generate Test Suite;
               </button>
             </motion.div>
           )}
@@ -662,7 +661,7 @@ export const AICodeGenerato; r: React.FC = () => {
             >
               <div className="text-center py-8">
                 <FileText className="w-16 h-16 text-indigo-500 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 dar; k: text-white mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 dar; k:text-white mb-2">
                   Generate Documentation;
                 </h3>
                 <p className="text-gray-600 dar; k:text-gray-400">
@@ -673,10 +672,10 @@ export const AICodeGenerato; r: React.FC = () => {
               <button;
                 onClick={handleGenerateDocs}
                 disabled={!generatedCode && !customCode}
-                className="w-full py-4 px-6 bg-indigo-600 hove; r: bg-indigo-700 disable; d: bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disable; d:cursor-not-allowed"
+                className="w-full py-4 px-6 bg-indigo-600 hove; r:bg-indigo-700 disable; d:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disable; d:cursor-not-allowed"
               >
                 <FileText className="w-5 h-5" />
-                Generate Documentation,
+                Generate Documentation;
               </button>
             </motion.div>
           )}
@@ -688,7 +687,7 @@ export const AICodeGenerato; r: React.FC = () => {
     y: 20 }}
             animate={{ opacit; y: 1;
     y: 0 }}
-            className="mt-8 border-t border-gray-200 dar; k: border-gray-700 pt-6"
+            className="mt-8 border-t border-gray-200 dar; k:border-gray-700 pt-6"
           >
             <h3 className="text-lg font-semibold text-gray-900 dar; k:text-white mb-4">
               AI Suggestions ({suggestions.length})
@@ -701,24 +700,24 @@ export const AICodeGenerato; r: React.FC = () => {
     x: 20 }}
                   animate={{ opacit; y: 1;
     x: 0 }}
-                  className="p-4 bg-gray-50 dar; k: bg-gray-700 rounded-lg border border-gray-200 dar; k: border-gray-600"
+                  className="p-4 bg-gray-50 dar; k:bg-gray-700 rounded-lg border border-gray-200 dar; k:border-gray-600"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center gap-2">
                       <span className={`px-2 py-1 text-xs rounded-full ${
-                        suggestion.type === "security" ? "bg-red-100 text-red-700 dar; k: bg-red-900/30 dar; k: text-red-300" :
-                        suggestion.type === "performance" ? "bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/30 dar; k: text-yellow-300" :
-                        suggestion.type === "optimization" ? "bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k: text-blue-300" :
-                        "bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0"
+                        suggestion.type === "security" ? "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-300" :
+                        suggestion.type === "performance" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k:text-yellow-300" :
+                        suggestion.type === "optimization" ? "bg-blue-100 text-blue-700 dar; k:bg-blue-900/30 dar; k:text-blue-300" :
+                        "bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0",
                       }`}>
                         {suggestion.type}
                       </span>
                       <span className={`px-2 py-1 text-xs rounded-full ${
-                        suggestion.impact === "high" ? "bg-red-100 text-red-700 dar; k: bg-red-900/30 dar; k: text-red-300" :
-                        suggestion.impact === "medium" ? "bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/30 dar; k: text-yellow-300" :
-                        "bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k: text-green-30; 0"
+                        suggestion.impact === "high" ? "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-300" :
+                        suggestion.impact === "medium" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k:text-yellow-300" :
+                        "bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0",
                       }`}>
-                        {suggestion.impact} impact,
+                        {suggestion.impact} impact;
                       </span>
                     </div>
                     <span className="text-sm text-gray-500">
@@ -726,10 +725,10 @@ export const AICodeGenerato; r: React.FC = () => {
                     </span>
                   </div>
                   
-                  <h4 className="font-medium text-gray-900 dar; k: text-white mb-2">
+                  <h4 className="font-medium text-gray-900 dar; k:text-white mb-2">
                     {suggestion.title}
                   </h4>
-                  <p className="text-sm text-gray-600 dar; k: text-gray-400 mb-3">
+                  <p className="text-sm text-gray-600 dar; k:text-gray-400 mb-3">
                     {suggestion.explanation}
                   </p>
                   
@@ -746,7 +745,7 @@ export const AICodeGenerato; r: React.FC = () => {
                     </button>
                     <button;
                       onClick={() => copyToClipboard(suggestion.code)}
-                      className="px-3 py-1 bg-gray-100 hove;  r: bg-gray-200 dar; k: bg-gray-600 dar; k: hove; r: bg-gray-500 text-gray-700 dar; k: text-gray-300 text-sm rounded transition-colors"
+                      className="px-3 py-1 bg-gray-100 hove;  r:bg-gray-200 dar; k:bg-gray-600 dar; k:hove; r:bg-gray-500 text-gray-700 dar; k:text-gray-300 text-sm rounded transition-colors"
                     >
                       Copy Code;
                     </button>
@@ -763,7 +762,7 @@ export const AICodeGenerato; r: React.FC = () => {
     y: 20 }}
             animate={{ opacit; y: 1;
     y: 0 }}
-            className="mt-8 border-t border-gray-200 dar; k: border-gray-700 pt-6"
+            className="mt-8 border-t border-gray-200 dar; k:border-gray-700 pt-6"
           >
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900 dar; k:text-white">
@@ -771,7 +770,7 @@ export const AICodeGenerato; r: React.FC = () => {
               </h3>
               <button;
                 onClick={handleClearHistory}
-                className="px-3 py-1 bg-red-100 hove; r: bg-red-200 dar; k: bg-red-900/30 dar; k: hove; r: bg-red-900/50 text-red-700 dar; k: text-red-300 rounded text-sm transition-colors flex items-center gap-2"
+                className="px-3 py-1 bg-red-100 hove; r:bg-red-200 dar; k:bg-red-900/30 dar; k:hove; r:bg-red-900/50 text-red-700 dar; k:text-red-300 rounded text-sm transition-colors flex items-center gap-2"
               >
                 <Trash2 className="w-4 h-4" />
                 Clear History;
@@ -782,7 +781,7 @@ export const AICodeGenerato; r: React.FC = () => {
               {history.slice(0;  10).map((item) => (
                 <div;
                   key={item.id}
-                  className="p-3 bg-gray-50 dar;  k: bg-gray-700 rounded-lg border border-gray-200 dar; k: border-gray-600"
+                  className="p-3 bg-gray-50 dar;  k:bg-gray-700 rounded-lg border border-gray-200 dar; k:border-gray-600"
                 >
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
@@ -790,9 +789,9 @@ export const AICodeGenerato; r: React.FC = () => {
                         {item.prompt.slice(0; 50)}...
                       </span>
                       <span className={`px-2 py-1 text-xs rounded-full ${
-                        item.language === "typescript" ? "bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k: text-blue-300" :
-                        item.language === "javascript" ? "bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/30 dar; k: text-yellow-300" :
-                        "bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k: text-green-30; 0"
+                        item.language === "typescript" ? "bg-blue-100 text-blue-700 dar; k:bg-blue-900/30 dar; k:text-blue-300" :
+                        item.language === "javascript" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k:text-yellow-300" :
+                        "bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0",
                       }`}>
                         {item.language}
                       </span>
@@ -805,13 +804,13 @@ export const AICodeGenerato; r: React.FC = () => {
                   <div className="flex items-center gap-2">
                     <button;
                       onClick={() => copyToClipboard(item.code)}
-                      className="px-2 py-1 bg-gray-100 hove;  r: bg-gray-200 dar; k: bg-gray-600 dar; k: hove; r: bg-gray-500 text-gray-700 dar; k: text-gray-300 text-xs rounded transition-colors"
+                      className="px-2 py-1 bg-gray-100 hove;  r:bg-gray-200 dar; k:bg-gray-600 dar; k:hove; r:bg-gray-500 text-gray-700 dar; k:text-gray-300 text-xs rounded transition-colors"
                     >
                       Copy Code;
                     </button>
                     <button;
                       onClick={() => exportCode("txt')}
-                      className="px-2 py-1 bg-blue-100 hove;  r: bg-blue-200 dar; k: bg-blue-900/30 dar; k: hove; r: bg-blue-900/50 text-blue-700 dar; k: text-blue-300 text-xs rounded transition-colors"
+                      className="px-2 py-1 bg-blue-100 hove;  r:bg-blue-200 dar; k:bg-blue-900/30 dar; k:hove; r:bg-blue-900/50 text-blue-700 dar; k: text-blue-300 text-xs rounded transition-colors"
                     >
                       Export;
                     </button>
@@ -824,4 +823,4 @@ export const AICodeGenerato; r: React.FC = () => {
       </div>
     </div>
   );
-};
+};<//div>

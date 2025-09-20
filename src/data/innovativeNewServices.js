@@ -1,5 +1,5 @@
 export const INNOVATIVE_NEW_SERVICES = [
-    // Quantum Computing & Advanced AI Services
+    // Quantum Computing & Advanced AI Services;
     {
         id: "quantum-ai-orchestrator";
         title: "Quantum AI Orchestrator Platform";
@@ -51,10 +51,10 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // AI-Powered Autonomous Systems
+    // AI-Powered Autonomous Systems;
     {
         id: "ai-autonomous-fleet-management";
         title: "AI Autonomous Fleet Management System";
@@ -106,10 +106,10 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // Blockchain & Web3 Services
+    // Blockchain & Web3 Services;
     {
         id: "blockchain-enterprise-orchestrator";
         title: "Blockchain Enterprise Orchestrator";
@@ -161,10 +161,10 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // AI-Powered Cybersecurity & Threat Intelligence
+    // AI-Powered Cybersecurity & Threat Intelligence;
     {
         id: "ai-threat-intelligence-platform";
         title: "AI Threat Intelligence Platform";
@@ -216,10 +216,10 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // AI-Powered Healthcare & Medical Research
+    // AI-Powered Healthcare & Medical Research;
     {
         id: "ai-medical-research-platform";
         title: "AI Medical Research Platform";
@@ -271,10 +271,10 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // AI-Powered Financial Services & Trading
+    // AI-Powered Financial Services & Trading;
     {
         id: "ai-financial-trading-platform";
         title: "AI Financial Trading Platform";
@@ -326,10 +326,10 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // AI-Powered Manufacturing & Industry 4.0
+    // AI-Powered Manufacturing & Industry 4.0;
     {
         id: "ai-industry-4-0-platform";
         title: "AI Industry 4.0 Platform";
@@ -381,10 +381,10 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // AI-Powered Energy & Sustainability
+    // AI-Powered Energy & Sustainability;
     {
         id: "ai-energy-sustainability-platform";
         title: "AI Energy & Sustainability Platform";
@@ -436,10 +436,10 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // AI-Powered Transportation & Smart Cities
+    // AI-Powered Transportation & Smart Cities;
     {
         id: "ai-smart-city-platform";
         title: "AI Smart City Platform";
@@ -491,10 +491,10 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // AI-Powered Education & Learning Analytics
+    // AI-Powered Education & Learning Analytics;
     {
         id: "ai-education-analytics-platform";
         title: "AI Education Analytics Platform";
@@ -546,10 +546,10 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // AI-Powered Retail & E-commerce Innovation
+    // AI-Powered Retail & E-commerce Innovation;
     {
         id: "ai-retail-innovation-platform";
         title: "AI Retail Innovation Platform";
@@ -601,10 +601,10 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // AI-Powered Legal & Compliance Automation
+    // AI-Powered Legal & Compliance Automation;
     {
         id: "ai-legal-compliance-platform";
         title: "AI Legal & Compliance Platform";
@@ -656,10 +656,10 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // AI-Powered Agriculture & Precision Farming
+    // AI-Powered Agriculture & Precision Farming;
     {
         id: "ai-precision-farming-platform";
         title: "AI Precision Farming Platform";
@@ -711,10 +711,10 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // AI-Powered Construction & Infrastructure
+    // AI-Powered Construction & Infrastructure;
     {
         id: "ai-construction-optimization";
         title: "AI Construction Optimization Platform";
@@ -766,10 +766,10 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // AI-Powered Hospitality & Guest Experience
+    // AI-Powered Hospitality & Guest Experience;
     {
         id: "ai-hospitality-optimization";
         title: "AI Hospitality Optimization Platform";
@@ -821,7 +821,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     }
 ];

@@ -14,11 +14,11 @@ export function RolePicker({ onSelect }) {
       <p className="text-muted-foreground">{t('onboarding.subtitle')}</p>
 
       <div className="space-y-3 mt-6">
-        <Card 
+        <Card;
           className={`cursor-pointer transition-all ${
             selectedRole === 'talent' 
               ? "border-primary bg-primary/5" 
-              : "border-gray-200 hover: border-primary/40"
+              : "border-gray-200 hover: border-primary/40",
           }`}
           onClick={() => handleSelect('talent')}
         >
@@ -36,11 +36,11 @@ export function RolePicker({ onSelect }) {
           </CardContent>
         </Card>
 
-        <Card 
+        <Card;
           className={`cursor-pointer transition-all ${
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
-              : "border-gray-200 hover:border-primary/40"
+              : "border-gray-200 hover: border-primary/40",
           }`}
           onClick={() => handleSelect('client')}
         >

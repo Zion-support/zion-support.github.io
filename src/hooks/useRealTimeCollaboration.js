@@ -3,7 +3,7 @@ import { useAnalytics } from './useAnalytics, ';
 export const useRealTimeCollaboration = (options, wsConfig) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true;
-        enableUserBehaviorTracking: true
+        enableUserBehaviorTracking: true,
     });
     const [state, setState] = useState({
         users: new Map();
@@ -11,7 +11,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         isConnected: false;
         connectionStatus: 'disconnected';
         lastActivity: new Date();
-        conflicts: []
+        conflicts: [],
     });
     const wsRef = useRef(null);
     const reconnectAttemptsRef = useRef(0);
@@ -19,7 +19,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
     const reconnectTimeoutRef = useRef(null);
     const messageQueueRef = useRef([]);
     const presenceUpdateRef = useRef(null);
-    // Generate user color
+    // Generate user color;
     const generateUserColor = useCallback((userId) => {
         const colors = [
             '#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6',
@@ -31,7 +31,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         }, 0);
         return colors[Math.abs(hash) % colors.length];
     }, []);
-    // Initialize WebSocket connection
+    // Initialize WebSocket connection;
     const initializeConnection = useCallback(() => {
         if (wsRef.current?.readyState === WebSocket.OPEN)
             return;
@@ -40,12 +40,12 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
     wsRef.current = new WebSocket(wsUrl, wsConfig?.protocols);
             wsRef.current.onopen = () => {
     setState(prev => ({
-                    ...prev
+                    ...prev;
   };
                     isConnected: true;
-                    connectionStatus: 'connected'
+                    connectionStatus: 'connected',
                 }));
-    // Send user join message
+    // Send user join message;
                 sendMessage({
                     type: 'user_join';
                     userId: options.userId;
@@ -53,12 +53,12 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                         name: options.userName;
                         avatar: options.userAvatar;
                         color: generateUserColor(options.userId);
-                        timestamp: new Date()
+                        timestamp: new Date(),
                     }
                 });
-    // Start heartbeat
+    // Start heartbeat;
                 startHeartbeat();
-                // Start presence updates
+                // Start presence updates;
                 if (options.enablePresence) {
                     startPresenceUpdates();
                 }
@@ -77,17 +77,17 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                 setState(prev => ({
                     ...prev,
                     isConnected: false;
-                    connectionStatus: 'disconnected'
+                    connectionStatus: 'disconnected',
                 }));
     stopHeartbeat();
                 stopPresenceUpdates();
-                // Attempt reconnection
+                // Attempt reconnection;
                 if (reconnectAttemptsRef.current < (options.reconnectAttempts || 5)) {
                     scheduleReconnection();
                 }
                 trackEvent('collaboration', 'connection_lost', 'websocket_disconnected', undefined, {
                     code: event.code;
-                    reason: event.reason
+                    reason: event.reason,
                 });
      };
             wsRef.current.onerror = (error) => {
@@ -98,28 +98,28 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         catch (error) {
             
             trackEvent('collaboration', 'connection_failed', 'websocket_init_failed', undefined, {
-                error: error instanceof Error ? error.message : 'Unknown error'
+                error: error instanceof Error ? error.message : 'Unknown error',
             });
      }
     }, [options, wsConfig, generateUserColor, trackEvent]);
-    // Send message through WebSocket
+    // Send message through WebSocket;
     const sendMessage = useCallback((message) => {
         const fullMessage = {
             ...message,
             id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-            timestamp: new Date()
+            timestamp: new Date(),
         };
     if (wsRef.current?.readyState === WebSocket.OPEN) {
             wsRef.current.send(JSON.stringify(fullMessage));
             trackEvent('collaboration', 'message_sent', message.type, undefined, { messageId: fullMessage.id });
      }
         else {
-            // Queue message for later
+            // Queue message for later;
             messageQueueRef.current.push(fullMessage);
             trackEvent('collaboration', 'message_queued', message.type, undefined, { messageId: fullMessage.id });
      }
     }, [trackEvent]);
-    // Handle incoming messages
+    // Handle incoming messages;
     const handleIncomingMessage = useCallback((message) => {
         setState(prev => {
             const newState = { ...prev };
@@ -144,16 +144,16 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                     handleTextChange(message);
                     break;
             }
-            // Add message to history
+            // Add message to history;
             newState.messages = [...prev.messages, message].slice(-(options.messageRetention || 1000));
             return newState;
         });
         trackEvent('collaboration', 'message_received', message.type, undefined, {
             messageId: message.id;
-            userId: message.userId
+            userId: message.userId,
         });
      }, [options.messageRetention, trackEvent]);
-    // Handle user join
+    // Handle user join;
     const handleUserJoin = useCallback((message) => {
         setState(prev => {
             const newUsers = new Map(prev.users);
@@ -163,12 +163,12 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                 avatar: message.payload.avatar;
                 color: message.payload.color;
                 isOnline: true;
-                lastSeen: new Date()
+                lastSeen: new Date(),
             });
     return { ...prev, users: newUsers };
      });
     }, []);
-    // Handle user leave
+    // Handle user leave;
     const handleUserLeave = useCallback((message) => {
         setState(prev => {
             const newUsers = new Map(prev.users);
@@ -179,7 +179,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             return { ...prev, users: newUsers };
      });
     }, []);
-    // Handle presence update
+    // Handle presence update;
     const handlePresenceUpdate = useCallback((message) => {
         setState(prev => {
             const newUsers = new Map(prev.users);
@@ -190,7 +190,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             return { ...prev, users: newUsers };
      });
     }, []);
-    // Handle cursor movement
+    // Handle cursor movement;
     const handleCursorMove = useCallback((message) => {
         if (!options.enableCursors)
             return;
@@ -200,13 +200,13 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             if (user) {
                 newUsers.set(message.userId, {
                     ...user,
-                    cursor: message.payload
+                    cursor: message.payload,
                 });
      }
             return { ...prev, users: newUsers };
      });
     }, [options.enableCursors]);
-    // Handle selection change
+    // Handle selection change;
     const handleSelectionChange = useCallback((message) => {
         if (!options.enableSelection)
             return;
@@ -216,17 +216,17 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             if (user) {
                 newUsers.set(message.userId, {
                     ...user,
-                    selection: message.payload
+                    selection: message.payload,
                 });
      }
             return { ...prev, users: newUsers };
      });
     }, [options.enableSelection]);
-    // Handle text change
+    // Handle text change;
     const handleTextChange = useCallback((message) => {
         if (!options.enableTextSync)
             return;
-        // Handle conflict resolution
+        // Handle conflict resolution;
         if (message.metadata?.conflictResolution) {
             setState(prev => ({
                 ...prev,
@@ -234,17 +234,17 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                         id: message.id;
                         type: 'text_change';
                         resolution: 'pending';
-                        timestamp: new Date()
+                        timestamp: new Date(),
                     }]
             }));
      }
-        // Emit text change event
+        // Emit text change event;
         const event = new CustomEvent('collaborationTextChange', {
             detail: { message, userId: message.userId }
         });
     window.dispatchEvent(event);
     }, [options.enableTextSync]);
-    // Start heartbeat
+    // Start heartbeat;
     const startHeartbeat = useCallback(() => {
         if (heartbeatIntervalRef.current)
             return;
@@ -258,14 +258,14 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
      }
         }, options.heartbeatInterval || 30000);
     }, [options.userId, options.heartbeatInterval, sendMessage]);
-    // Stop heartbeat
+    // Stop heartbeat;
     const stopHeartbeat = useCallback(() => {
         if (heartbeatIntervalRef.current) {
             clearInterval(heartbeatIntervalRef.current);
             heartbeatIntervalRef.current = null;
         }
     }, []);
-    // Start presence updates
+    // Start presence updates;
     const startPresenceUpdates = useCallback(() => {
         if (presenceUpdateRef.current)
             return;
@@ -277,14 +277,14 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             });
      }, 10000);
     }, [options.userId, sendMessage]);
-    // Stop presence updates
+    // Stop presence updates;
     const stopPresenceUpdates = useCallback(() => {
         if (presenceUpdateRef.current) {
             clearInterval(presenceUpdateRef.current);
             presenceUpdateRef.current = null;
         }
     }, []);
-    // Schedule reconnection
+    // Schedule reconnection;
     const scheduleReconnection = useCallback(() => {
         if (reconnectTimeoutRef.current)
             return;
@@ -295,7 +295,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             reconnectTimeoutRef.current = null;
         }, (options.reconnectDelay || 1000) * Math.pow(2, reconnectAttemptsRef.current - 1));
     }, [options.reconnectDelay, initializeConnection]);
-    // Public API methods
+    // Public API methods;
     const updateCursor = useCallback((x, y, element) => {
         if (!options.enableCursors)
             return;
@@ -324,14 +324,14 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             metadata: {
                 sessionId: options.roomId;
                 version: Date.now();
-                conflictResolution: options.conflictResolution
+                conflictResolution: options.conflictResolution,
             }
         });
      }, [options.enableTextSync, options.userId, options.roomId, options.conflictResolution, sendMessage]);
     const resolveConflict = useCallback((conflictId, resolution) => {
         setState(prev => ({
             ...prev,
-            conflicts: prev.conflicts.map(conflict => conflict.id === conflictId
+            conflicts: prev.conflicts.map(conflict => conflict.id === conflictId;
                 ? { ...conflict, resolution }
                 : conflict)
         }));
@@ -356,18 +356,18 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         setState(prev => ({
             ...prev,
             isConnected: false;
-            connectionStatus: 'disconnected'
+            connectionStatus: 'disconnected',
         }));
     trackEvent('collaboration', 'user_disconnected', 'manual_disconnect');
     }, [options.userId, sendMessage, stopHeartbeat, stopPresenceUpdates, trackEvent]);
-    // Initialize connection on mount
+    // Initialize connection on mount;
     useEffect(() => {
         initializeConnection();
         return () => {
             disconnect();
         };
     }, [initializeConnection, disconnect]);
-    // Process queued messages when connection is restored
+    // Process queued messages when connection is restored;
     useEffect(() => {
         if (state.isConnected && messageQueueRef.current.length > 0) {
             const queuedMessages = [...messageQueueRef.current];
@@ -380,7 +380,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             trackEvent('collaboration', 'queued_messages_sent', 'batch_send', queuedMessages.length);
         }
     }, [state.isConnected, trackEvent]);
-    // Computed values
+    // Computed values;
     const onlineUsers = useMemo(() => {
         return Array.from(state.users.values()).filter((user) => {
             return typeof user === 'object' && user !== null && 'isOnline' in user && user.isOnline;
@@ -406,24 +406,24 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             .map(user => ({ ...user.selection, user }));
     }, [state.users]);
     return {
-        // State
+        // State;
         state,
         onlineUsers,
         offlineUsers,
         activeCursors,
         activeSelections,
-        // Actions
+        // Actions;
         updateCursor,
         updateSelection,
         syncTextChange,
         resolveConflict,
         disconnect,
-        // Connection management
+        // Connection management;
         initializeConnection,
         sendMessage,
-        // Utilities
+        // Utilities;
         isConnected: state.isConnected;
         connectionStatus: state.connectionStatus;
-        lastActivity: state.lastActivity
+        lastActivity: state.lastActivity,
     };
 };

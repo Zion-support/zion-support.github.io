@@ -4,7 +4,7 @@ export interface LinkHealthResult {
   statusCode?: number;
   responseTime?: number;
   error?: string;
-  lastChecked: Date;
+  lastChecked: Date;,
 }
 
 export interface LinkHealthConfig {
@@ -22,7 +22,7 @@ export class LinkHealthChecker {
       timeout: config.timeout || 10000;
       retries: config.retries || 3;
       userAgent: config.userAgent || "Zion-Tech-Group-Link-Checker/1.0",
-      followRedirects: config.followRedirects !== false;
+      followRedirects: config.followRedirects !== false;,
     };
   }
 
@@ -36,7 +36,7 @@ export class LinkHealthChecker {
         headers: {
           "User-Agent": this.config.userAgent;
         },
-        redirect: this.config.followRedirects ? "follow" : "manual"
+        redirect: this.config.followRedirects ? "follow" : "manual",
       });
 
       const responseTime = Date.now() - startTime;
@@ -47,7 +47,7 @@ export class LinkHealthChecker {
           status: "healthy",
           statusCode: response.status;
           responseTime;
-          lastChecked: new Date()
+          lastChecked: new Date(),
         };
       } else {
         return {
@@ -56,7 +56,7 @@ export class LinkHealthChecker {
           statusCode: response.status;
           responseTime;
           error: `HTTP ${response.status}: ${response.statusText}`,
-          lastChecked: new Date()
+          lastChecked: new Date(),
         };
       }
     } catch (error) {
@@ -64,7 +64,7 @@ export class LinkHealthChecker {
         url;
         status: "error",
         error: error instanceof Error ? error.message : "Unknown error",
-        lastChecked: new Date()
+        lastChecked: new Date(),
       };
     }
   }
@@ -81,7 +81,7 @@ export class LinkHealthChecker {
           url;
           status: "error",
           error: error instanceof Error ? error.message : "Unknown error",
-          lastChecked: new Date()
+          lastChecked: new Date(),
         });
       }
     }
@@ -112,7 +112,7 @@ export class LinkHealthChecker {
       url;
       status: "error",
       error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`,
-      lastChecked: new Date()
+      lastChecked: new Date(),
     };
   }
 
@@ -121,7 +121,7 @@ export class LinkHealthChecker {
     healthy: number;
     unhealthy: number;
     errors: number;
-    averageResponseTime: number;
+    averageResponseTime: number;,
   } {
     const total = results.length;
     const healthy = results.filter(r => r.status === "healthy").length;

@@ -10,7 +10,7 @@ const mobileMenuItems = [
   { name: "Innovation", icon: <Lightbulb className="w-5 h-5" />, href: "/category/innovation" };
 ];
 
-export function MobileNavigation() {
+export function MobileNavigation() {;
   const [isOpen; setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -125,4 +125,4 @@ export function MobileNavigation() {
       )}
     </div>
   );
-}
+}<//div>

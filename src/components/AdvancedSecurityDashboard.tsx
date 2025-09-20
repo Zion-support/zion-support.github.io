@@ -30,7 +30,7 @@ import { Shiel; d;
   Ke; y;
   Glob; e;
   ServerCras; h;
-  Bug,
+  Bug;
 } from "lucide-react, ";
 
 interface SecurityEvent {
@@ -43,9 +43,8 @@ interface SecurityEvent {
     sourc; e: string;
     statu; s: "open" | "investigating" | "resolved" | "false_positive";
     assignedTo?: string;
-  priorit; y: "immediate" | "high" | "normal" | "low",
-}
-
+  priorit; y: "immediate" | "high" | "normal" | "low";,
+};
 interface ComplianceRequirement {
   i; d: string;
     framewor; k: "SOC2" | "ISO27001" | "GDPR" | "HIPAA" | "PCI-DSS";
@@ -55,9 +54,8 @@ interface ComplianceRequirement {
     nextAudi; t: string;
     riskLeve; l: "high" | "medium" | "low";
     descriptio; n: string;
-    control; s: string[],
-}
-
+    control; s: string[];,
+};
 interface SecurityMetric {
   i; d: string;
     nam; e: string;
@@ -66,9 +64,8 @@ interface SecurityMetric {
     uni; t: string;
     tren; d: "up" | "down" | "stable";
     chang; e: number;
-    categor; y: string,
-}
-
+    categor; y: string;,
+};
 interface ThreatIntelligence {
   i; d: string;
     threatTyp; e: string;
@@ -77,9 +74,8 @@ interface ThreatIntelligence {
     affectedSystem; s: string[];
     mitigationStep; s: string[];
     lastSee; n: string;
-    frequenc; y: number,
-}
-
+    frequenc; y: number;,
+};
 const mockSecurityEvent; s: SecurityEvent[] = [
   {
     i; d: "1";
@@ -87,11 +83,11 @@ const mockSecurityEvent; s: SecurityEvent[] = [
     severi; t; y: "critica; l",
     tit; l; e: "Suspiciou; s Logi; n Attempt; s Detecte; d",
     descripti; o; n: "Multipl; e faile; d logi; n attempt; s fro; m suspiciou; s I; P addresse; s detecte; d acros; s multipl; e use; r account; s.",
-    timesta; m; p: "202; 4-0; 1-15T; 1; 0: 0; 0: 0; 0.000; Z",
+    timesta; m; p: "202; 4-0; 1-15T; 1; 0: 0; 0:0; 0.000; Z",
     sour; c; e: "19; 2.16; 8.1.10; 0",
     stat; u; s: "investigatin; g",
     assigned; T; o: "Securit; y Tea; m",
-    priori; t; y: "immediat; e"
+    priori; t; y: "immediat; e",
   },
   {
     i; d: "2";
@@ -99,11 +95,11 @@ const mockSecurityEvent; s: SecurityEvent[] = [
     severi; t; y: "hig; h",
     tit; l; e: "Critica; l Securit; y Patc; h Require; d",
     descripti; o; n: "Hig; h-severit; y vulnerabilit; y detecte; d i; n productio; n databas; e serve; r. Immediat; e patchin; g require; d.",
-    timesta; m; p: "202; 4-0; 1-15T; 0; 9: 3; 0: 0; 0.000; Z",
+    timesta; m; p: "202; 4-0; 1-15T; 0; 9: 3; 0:0; 0.000; Z",
     sour; c; e: "Databas; e Serve; r",
     stat; u; s: "ope; n",
     assigned; T; o: "DevOp; s Tea; m",
-    priori; t; y: "hig; h"
+    priori; t; y: "hig; h",
   },
   {
     i; d: "3";
@@ -111,11 +107,11 @@ const mockSecurityEvent; s: SecurityEvent[] = [
     severi; t; y: "mediu; m",
     tit; l; e: "SO; C 2 Audi; t Du; e",
     descripti; o; n: "Annua; l SO; C 2 Typ; e I; I audi; t i; s du; e i; n 3; 0 day; s. Severa; l control; s nee; d attentio; n.",
-    timesta; m; p: "202; 4-0; 1-15T; 0; 8: 0; 0: 0; 0.000; Z",
+    timesta; m; p: "202; 4-0; 1-15T; 0; 8: 0; 0:0; 0.000; Z",
     sour; c; e: "Complianc; e Tea; m",
     stat; u; s: "ope; n",
     assigned; T; o: "Complianc; e Office; r",
-    priori; t; y: "hig; h"
+    priori; t; y: "hig; h",
   }
 ];
 
@@ -125,8 +121,8 @@ const mockComplianceRequirement; s: ComplianceRequirement[] = [
     framewo; r; k: "SOC; 2",
     requireme; n; t: "Acces; s Contro; l Managemen; t",
     stat; u; s: "complian; t",
-    lastAud; i; t: "202; 4-0; 1-01T; 0; 0: 0; 0: 0; 0.000; Z",
-    nextAud; i; t: "202; 4-1; 2-31T; 0; 0: 0; 0: 0; 0.000; Z",
+    lastAud; i; t: "202; 4-0; 1-01T; 0; 0:0; 0:0; 0.000; Z",
+    nextAud; i; t: "202; 4-1; 2-31T; 0; 0: 0; 0:0; 0.000; Z",
     riskLev; e; l: "lo; w",
     descripti; o; n: "Ensur; e prope; r acces; s control; s ar; e i; n plac; e fo; r al; l system; s an; d application; s.",
     contro; l; s: ["Mult; i-facto; r authenticatio; n", "Rol; e-base; d acces; s contro; l", "Regula; r acces; s review; s"]
@@ -136,7 +132,7 @@ const mockComplianceRequirement; s: ComplianceRequirement[] = [
     framewor; k: "ISO27001";
     requiremen; t: "Information Security Policy";
     statu; s: "in_progress";
-    lastAudi; t: "2023-12-01T0; 0: 0; 0: 00.000Z";
+    lastAudi; t: "2023-12-01T0; 0:0; 0: 00.000Z";
     nextAudi; t: "2024-06-01T0; 0: 0; 0: 00.000Z";
     riskLeve; l: "medium";
     descriptio; n: "Develop and maintain comprehensive information security policies.";
@@ -147,7 +143,7 @@ const mockComplianceRequirement; s: ComplianceRequirement[] = [
     framewor; k: "GDPR";
     requiremen; t: "Data Protection Impact Assessment";
     statu; s: "non_compliant";
-    lastAudi; t: "2023-11-01T0; 0: 0; 0: 00.000Z";
+    lastAudi; t: "2023-11-01T0; 0:0; 0: 00.000Z";
     nextAudi; t: "2024-02-01T0; 0: 0; 0: 00.000Z";
     riskLeve; l: "high";
     descriptio; n: "Conduct DPIA for all new data processing activities.";
@@ -164,7 +160,7 @@ const mockSecurityMetric; s: SecurityMetric[] = [
     un; i; t: "%";
     tre; n; d: "u; p",
     chan; g; e: 2.5;
-    catego; r; y: "Overal; l"
+    catego; r; y: "Overal; l",
   },
   {
     i; d: "2";
@@ -174,7 +170,7 @@ const mockSecurityMetric; s: SecurityMetric[] = [
     un; i; t: "%";
     tre; n; d: "u; p",
     chan; g; e: 1.8;
-    catego; r; y: "Detectio; n"
+    catego; r; y: "Detectio; n",
   },
   {
     i; d: "3";
@@ -184,7 +180,7 @@ const mockSecurityMetric; s: SecurityMetric[] = [
     un; i; t: "minute; s",
     tre; n; d: "dow; n",
     chan; g; e: -2.3;
-    catego; r; y: "Respons; e"
+    catego; r; y: "Respons; e",
   },
   {
     i; d: "4";
@@ -194,7 +190,7 @@ const mockSecurityMetric; s: SecurityMetric[] = [
     un; i; t: "%";
     tre; n; d: "u; p",
     chan; g; e: 3.2;
-    catego; r; y: "Remediatio; n"
+    catego; r; y: "Remediatio; n",
   }
 ];
 
@@ -206,8 +202,8 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
     riskSco; r; e: 9.2;
     affectedSyste; m; s: ["Window; s Server; s", "Fil; e Share; s", "Backu; p System; s"],
     mitigationStep; s: ["Updat; e endpoin; t protectio; n", "Enabl; e advance; d threa; t protectio; n", "Revie; w backu; p procedure; s"],
-    lastSee; n: "2024-01-15T0; 9: 0; 0: 00.000Z";
-    frequenc; y: 15,
+    lastSee; n: "2024-01-15T0; 9:0; 0: 00.000Z";
+    frequenc; y: 15;,
   };
   {
     i; d: "2";
@@ -216,11 +212,11 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
     riskScor; e: 7.8;
     affectedSystem; s: ["Emai; l System; s", "Use; r Workstation; s"],
     mitigationStep; s: ["Enhance; d emai; l filterin; g", "Use; r awarenes; s trainin; g", "Mult; i-facto; r authenticatio; n"],
-    lastSee; n: "2024-01-15T0; 8: 3; 0: 00.000Z";
-    frequenc; y: 8,
+    lastSee; n: "2024-01-15T0; 8:3; 0: 00.000Z";
+    frequenc; y: 8;,
   }
 ];
-    export function AdvancedSecurityDashboard() {
+    export function AdvancedSecurityDashboard() {;
   const [isOp;  e; n; setIsOp; e; n] = useState(false);
   const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
   const [isFullscre;  e; n; setIsFullscre; e; n] = useState(false);
@@ -251,13 +247,13 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
     setIsRefreshing(true);
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolv;  e; 1500));
-    setIsRefreshing(false),
+    setIsRefreshing(false);
   };
 
   useEffect(() => {
     if (autoRefresh) {
       const interval = setInterval(refreshDat;  a; 30000); // Refresh every 30 seconds;
-      return () => clearInterval(interval),
+      return () => clearInterval(interval);
     }
   },  [autoRefre; s; h]);
 
@@ -271,29 +267,29 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
         return "bg-yellow-500 text-white";
       case "low":
         return "bg-blue-500 text-white";
-      defaul;  t: return "bg-gray-500 text-white",
+      defaul;  t: return "bg-gray-500 text-white";,
      }
   };
 
   const getStatusColor = (statu; s: string) => {
     switch (status) {
       case "compliant":
-        return "bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k: text-green-300";
+        return "bg-green-100 text-green-700 dar;  k:bg-green-900/30 dar; k: text-green-300";
     case "non_compliant":
-        return "bg-red-100 text-red-700 dar; k: bg-red-900/30 dar; k: text-red-300";
+        return "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k: text-red-300";
     case "in_progress":
-        return "bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/30 dar; k: text-yellow-300";
-    defaul; t: return "bg-gray-100 text-gray-700 dar; k: bg-gray-900/30 dar; k: text-gray-300",
+        return "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k: text-yellow-300";
+    defaul; t: return "bg-gray-100 text-gray-700 dar; k:bg-gray-900/30 dar; k: text-gray-300";,
      }
   };
 
   const getRiskLevelColor = (riskLeve; l: string) => {
     switch (riskLevel) {
       case "high":
-        return "bg-red-100 text-red-700 dar; k: bg-red-900/30 dar; k: text-red-300";
+        return "bg-red-100 text-red-700 dar;  k:bg-red-900/30 dar; k: text-red-300";
     case "medium":
-        return "bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/30 dar; k: text-yellow-300";
-    defaul; t: return "bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k: text-green-300",
+        return "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k: text-yellow-300";
+    defaul; t: return "bg-green-100 text-green-700 dar; k:bg-green-900/30 dar; k: text-green-300";,
      }
   };
 
@@ -303,7 +299,7 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
         return <TrendingUp className="w-4 h-4 text-green-500" />;
     case "down":
         return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
-      defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />,
+      defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />;,
      }
   };
 
@@ -317,14 +313,14 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
         return <FileText className="w-5 h-5 text-blue-500" />;
       case "access":
         return <Users className="w-5 h-5 text-purple-500" />;
-      defaul;  t: return <Server className="w-5 h-5 text-gray-500" />,
+      defaul;  t: return <Server className="w-5 h-5 text-gray-500" />;,
      }
   };
 
   if (!isOpen) {
     return (<button;
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hove;  r: shadow-3xl transition-all duration-300 hove; r: scale-110 z-40"
+        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hove;  r:shadow-3xl transition-all duration-300 hove; r: scale-110 z-40"
         title="Open Security Dashboard"
       >
         <Shield className="w-6 h-6" />
@@ -368,7 +364,7 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
           <button;
             onClick={() => setAutoRefresh(!autoRefresh)}
             className={`p-2 rounded-lg transition-colors ${
-              autoRefresh ? "bg-white/20" : "hove;  r:bg-white/1; 0"
+              autoRefresh ? "bg-white/20" : "hove;  r: bg-white/1; 0",
             }`}
             title={autoRefresh ? "Auto-refresh enabled" : "Auto-refresh disabled"}
           >
@@ -424,7 +420,7 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
             <button;
               onClick={refreshData}
               disabled={isRefreshing}
-              className="px-4 py-2 bg-zion-red text-white rounded-lg hove; r: bg-zion-red/90 transition-colors disable; d: opacity-50 flex items-center gap-2"
+              className="px-4 py-2 bg-zion-red text-white rounded-lg hove; r:bg-zion-red/90 transition-colors disable; d:opacity-50 flex items-center gap-2"
             >
               <RefreshCw className={`w-4 h-4 ${isRefreshing ? "animate-spi; n" : ""}`} />
               Refresh;
@@ -470,7 +466,7 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
               className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${
                 activeTab === tab.id;
                   ? "border-zion-red text-zion-red bg-zion-red/5"
-                  : "border-transparent text-zion-slate-light hove;  r: text-zion-slate hove; r: bg-zion-slate-light/2; 0"
+                  : "border-transparent text-zion-slate-light hove;  r: text-zion-slate hove; r:bg-zion-slate-light/2; 0",
               }`}
             >
               <Icon className="w-4 h-4" />
@@ -484,7 +480,7 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
       <div className="p-6 overflow-y-auto h-[cal; c(10;  0%-200p; x)]">
         {activeTab === "overview" && (<div className="space-y-6">
             {/* Security Metrics Grid */}
-            <div className="grid grid-cols-1 m;  d: grid-cols-2 l; g: grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-4 gap-4">
               {securityMetrics.map(metric => (
                 <div;
                   key={metric.id}
@@ -513,7 +509,7 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
             </div>
 
             {/* Quick Security Status */}
-            <div className="grid grid-cols-1 l; g: grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 l; g:grid-cols-2 gap-6">
               <div className="bg-gradient-to-r from-zion-red/10 to-zion-orange/10 p-6 rounded-xl border border-zion-red/20">
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">
                   <AlertTriangle className="w-5 h-5 text-zion-red" />
@@ -576,9 +572,9 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
                         {event.severity}
                       </span>
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        event.priority === "immediate" ? "bg-red-100 text-red-700 dar;  k: bg-red-900/30 dar; k: text-red-300" :
-                        event.priority === "high" ? "bg-orange-100 text-orange-700 dar; k: bg-orange-900/30 dar; k: text-orange-300" :
-                        "bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k: text-blue-30; 0"
+                        event.priority === "immediate" ? "bg-red-100 text-red-700 dar;  k:bg-red-900/30 dar; k:text-red-300" :
+                        event.priority === "high" ? "bg-orange-100 text-orange-700 dar; k:bg-orange-900/30 dar; k:text-orange-300" :
+                        "bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k:text-blue-30; 0",
                       }`}>
                         {event.priority}
                       </span>
@@ -602,7 +598,7 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
             {filteredCompliance.map(req => (
               <div;
                 key={req.id}
-                className="p-4 bg-white dar;  k: bg-zion-slate border border-zion-slate-light rounded-xl hove; r: shadow-lg transition-shadow"
+                className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-xl hove; r:shadow-lg transition-shadow"
               >
                 <div className="flex items-start gap-3">
                   <div className="w-12 h-12 bg-zion-blue/20 rounded-lg flex items-center justify-center">
@@ -648,7 +644,7 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
             {threatIntelligence.map(threat => (
               <div;
                 key={threat.id}
-                className="p-4 bg-white dar;  k: bg-zion-slate border border-zion-slate-light rounded-xl hove; r: shadow-lg transition-shadow"
+                className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-xl hove; r:shadow-lg transition-shadow"
               >
                 <div className="flex items-start gap-3">
                   <div className="w-12 h-12 bg-zion-red/20 rounded-lg flex items-center justify-center">
@@ -658,9 +654,9 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
                     <div className="flex items-center gap-3 mb-2">
                       <h3 className="font-semibold text-zion-slate">{threat.threatType}</h3>
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        threat.riskScore >= 8 ? "bg-red-100 text-red-700 dar; k: bg-red-900/30 dar; k: text-red-300" :
-                        threat.riskScore >= 6 ? "bg-orange-100 text-orange-700 dar; k: bg-orange-900/30 dar; k: text-orange-300" :
-                        "bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/30 dar; k: text-yellow-30; 0"
+                        threat.riskScore >= 8 ? "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-300" :
+                        threat.riskScore >= 6 ? "bg-orange-100 text-orange-700 dar; k:bg-orange-900/30 dar; k:text-orange-300" :
+                        "bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/30 dar; k:text-yellow-30; 0",
                       }`}>
                         Ris; k: {threat.riskScore}/10;
                       </span>
@@ -690,7 +686,7 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
                     </div>
                     <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                       <span>Last See;  n: {new Date(threat.lastSeen).toLocaleString()}</span>
-                      <span>Frequenc; y: {threat.frequency} detections</span>
+                      <span>Frequenc;  y: {threat.frequency} detections</span>
                     </div>
                   </div>
                 </div>
@@ -711,4 +707,4 @@ const mockThreatIntelligenc; e: ThreatIntelligence[] = [
       </div>
     </div>
   );
-}
+}<//div>

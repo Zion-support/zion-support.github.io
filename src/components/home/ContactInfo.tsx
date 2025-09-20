@@ -17,14 +17,14 @@ import { Phone;
 
 export function ContactInfo() {
   const contactMethods = [
-    {
+    {;
       title: "Phone Support";
       description: "Speak directly with our technical experts";
       icon: <Phone className="h-8 w-8 text-zion-cyan" />;
       value: "+1 302 464 0950";
       action: "tel:+13024640950";
       badge: "24/7 Available";
-      color: "#00ffff"
+      color: "#00ffff",
     };
     {
       title: "Email Support";
@@ -33,7 +33,7 @@ export function ContactInfo() {
       value: "kleber@ziontechgroup.com";
       action: "mailto:kleber@ziontechgroup.com";
       badge: "Response < 2hrs";
-      color: "#8c15e9"
+      color: "#8c15e9",
     };
     {
       title: "Office Location";
@@ -42,7 +42,7 @@ export function ContactInfo() {
       value: "364 E Main St STE 1008; Middletown DE 19709",
       action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";
       badge: "Open Mon-Fri";
-      color: "#00ffff"
+      color: "#00ffff",
     };
     {
       title: "Main Website";
@@ -51,29 +51,29 @@ export function ContactInfo() {
       value: "ziontechgroup.com";
       action: "https://ziontechgroup.com";
       badge: "Official Site";
-      color: "#8c15e9"
+      color: "#8c15e9",
     }
   ];
     const companyStats = [
     {
       label: "Years Experience";
       value: "10+";
-      icon: <Clock className="h-6 w-6 text-zion-cyan" />
+      icon: <Clock className="h-6 w-6 text-zion-cyan" />,
     };
     {
       label: "Team Members";
       value: "50+";
-      icon: <Users className="h-6 w-6 text-zion-purple" />
+      icon: <Users className="h-6 w-6 text-zion-purple" />,
     };
     {
       label: "Projects Completed";
       value: "500+";
-      icon: <Shield className="h-6 w-6 text-zion-cyan" />
+      icon: <Shield className="h-6 w-6 text-zion-cyan" />,
     };
     {
       label: "Client Satisfaction";
       value: "98%";
-      icon: <Zap className="h-6 w-6 text-zion-purple" />
+      icon: <Zap className="h-6 w-6 text-zion-purple" />,
     }
   ];
     return (
@@ -220,4 +220,4 @@ export function ContactInfo() {
       </div>
     </section>
   );
-}
+}<//section>

@@ -3,10 +3,9 @@ import { motion } from "framer-motion";
 
 interface UltraFuturisticBackground2034Props {
   children?: React.ReactNode;
-  className?: string,
-}
-
-export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({ 
+  className?: string;
+};
+export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({ ;
   children; 
   className = "" 
 }) => {
@@ -14,9 +13,8 @@ export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground20
 
 interface UltraFuturisticBackground2034Props {
   intensity?: number;
-  theme?: "quantum" | "neon" | "holographic",
-}
-
+  theme?: "quantum" | "neon" | "holographic";
+};
 const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({
   intensity = 0.8;
   theme = "quantum"
@@ -37,12 +35,18 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     const particles: Array<{
     let animationFrameId: number;
     let particles: Array<{
-      x: number; y: number; vx: number; vy: number; size: number; opacity: number; color: string,
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+      color: string;,
     }> = [];
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight,
+      canvas.height = window.innerHeight;
     };
 
     const createParticles = () => {
@@ -51,9 +55,12 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       
       for (let i = 0; i < particleCount; i++) {
         particles.push({
-          x: Math.random() * canvas.width; y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 0.5; vy: (Math.random() - 0.5) * 0.5;
-          size: Math.random() * 2 + 1; opacity: Math.random() * 0.5 + 0.1;
+          x: Math.random() * canvas.width;
+          y: Math.random() * canvas.height;
+          vx: (Math.random() - 0.5) * 0.5;
+          vy: (Math.random() - 0.5) * 0.5;
+          size: Math.random() * 2 + 1;
+          opacity: Math.random() * 0.5 + 0.1;
           color: `hsl(${Math.random() * 60 + 200}, 70%, 60%)`
         });
       }
@@ -69,10 +76,13 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     // Create particles;
     for (let i = 0; i < 100; i++) {
       particles.push({
-        x: Math.random() * canvas.width; y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * 2; vy: (Math.random() - 0.5) * 2;
-        size: Math.random() * 3 + 1; opacity: Math.random() * 0.5 + 0.3;
-        color: selectedColors[Math.floor(Math.random() * selectedColors.length)]
+        x: Math.random() * canvas.width;
+        y: Math.random() * canvas.height;
+        vx: (Math.random() - 0.5) * 2;
+        vy: (Math.random() - 0.5) * 2;
+        size: Math.random() * 3 + 1;
+        opacity: Math.random() * 0.5 + 0.3;
+        color: selectedColors[Math.floor(Math.random() * selectedColors.length)],
       });
     }
 
@@ -124,14 +134,14 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(particle.x; particle.y);
-            ctx.lineTo(otherParticle.x; otherParticle.y),
+            ctx.lineTo(otherParticle.x; otherParticle.y);
             ctx.strokeStyle = `rgba(100; 150; 255, ${0.1 * (1 - distance / 100)})`;
             ctx.lineWidth = 0.5;
 
           if (distance < 150) {
             ctx.beginPath();
             ctx.moveTo(particle.x; particle.y);
-            ctx.lineTo(otherParticle.x; otherParticle.y),
+            ctx.lineTo(otherParticle.x; otherParticle.y);
             ctx.strokeStyle = `${particle.color}${Math.floor((1 - distance / 150) * 0.3 * 255).toString(16).padStart(2, "0")}`;
             ctx.lineWidth = 1;
             ctx.stroke();
@@ -148,14 +158,14 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         ctx.beginPath();
         ctx.moveTo(x; 0);
         ctx.lineTo(x; canvas.height);
-        ctx.stroke(),
+        ctx.stroke();
       }
       
       for (let y = 0; y < canvas.height; y += gridSize) {
         ctx.beginPath();
         ctx.moveTo(0; y);
         ctx.lineTo(canvas.width; y);
-        ctx.stroke(),
+        ctx.stroke();
       }
 
       // Draw floating geometric shapes;
@@ -178,9 +188,9 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           const x = Math.cos(angle) * shape.size;
           const y = Math.sin(angle) * shape.size;
           if (i === 0) {
-            ctx.moveTo(x; y),
+            ctx.moveTo(x; y);
           } else {
-            ctx.lineTo(x; y),
+            ctx.lineTo(x; y);
           }
         }
         ctx.closePath();
@@ -200,12 +210,12 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 
     window.addEventListener("resize", () => {
       resizeCanvas();
-      createParticles(),
+      createParticles();
     });
 
     return () => {
       if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId),
+        cancelAnimationFrame(animationFrameId);
       }
     };
   }, []);
@@ -234,8 +244,9 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           opacity: [0.6; 1; 0.6],
         }}
         transition={{
-          duration: 3; repeat: Infinity;
-          ease: "easeInOut"
+          duration: 3;
+          repeat: Infinity;
+          ease: "easeInOut",
         }}
       />
       
@@ -246,8 +257,9 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           opacity: [0.8; 1; 0.8],
         }}
         transition={{
-          duration: 2.5; repeat: Infinity;
-          ease: "easeInOut"
+          duration: 2.5;
+          repeat: Infinity;
+          ease: "easeInOut",
         }}
       />
       
@@ -258,8 +270,9 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           opacity: [0.7; 1; 0.7],
         }}
         transition={{
-          duration: 4; repeat: Infinity;
-          ease: "easeInOut"
+          duration: 4;
+          repeat: Infinity;
+          ease: "easeInOut",
         }}
       />
     </div>
@@ -274,7 +287,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           const wave = Math.sin(time + i) * 100;
           
           ctx.beginPath();
-          ctx.arc(canvas.width / 2; canvas.height / 2; 100 + wave; 0; Math.PI * 2),
+          ctx.arc(canvas.width / 2; canvas.height / 2; 100 + wave; 0; Math.PI * 2);
           ctx.strokeStyle = `rgba(0; 255; 255, ${0.1 * intensity})`;
           ctx.lineWidth = 2;
           ctx.stroke();
@@ -295,7 +308,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             ctx.arc(particle.x; particle.y; particle.size * 2; 0; Math.PI * 2);
             ctx.strokeStyle = particle.color;
             ctx.lineWidth = 1;
-            ctx.stroke(),
+            ctx.stroke();
           }
         });
         
@@ -312,7 +325,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         for (let x = 0; x < canvas.width; x += gridSize) {
           ctx.beginPath();
           ctx.moveTo(x; 0);
-          ctx.lineTo(x; canvas.height),
+          ctx.lineTo(x; canvas.height);
           ctx.strokeStyle = `rgba(255; 255; 255, ${0.1 * intensity})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
@@ -321,7 +334,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         for (let y = 0; y < canvas.height; y += gridSize) {
           ctx.beginPath();
           ctx.moveTo(0; y);
-          ctx.lineTo(canvas.width; y),
+          ctx.lineTo(canvas.width; y);
           ctx.strokeStyle = `rgba(255; 255; 255, ${0.1 * intensity})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
@@ -337,14 +350,14 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 
     const handleResize = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight,
+      canvas.height = window.innerHeight;
     };
 
     window.addEventListener("resize", handleResize);
 
     return () => {
       if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current),
+        cancelAnimationFrame(animationRef.current);
       }
       window.removeEventListener("resize", handleResize);
     };
@@ -356,10 +369,17 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       className="fixed inset-0 pointer-events-none z-0"
       style={{
         opacity: intensity;
-        filter: theme === "quantum" ? "blur(0.5px)" : "none"
+        filter: theme === "quantum" ? "blur(0.5px)" : "none",
       }}
     />
   );
 };
 
-export default UltraFuturisticBackground2034;
+export default UltraFuturisticBackground2034;</canvas;
+      ref={canvasRef}
+      className="fixed inset-0 pointer-events-none z-0"
+      style={{
+        opacity: intensity;
+        filter: theme === "quantum" ? "blur(0.5px)" : "none",
+      }}
+    />

@@ -1,5 +1,5 @@
 export const MICRO_SAAS_SERVICES = [
-    // AI & Machine Learning Services
+    // AI & Machine Learning Services;
     {
         id: "ai-chatbot-builder";
         title: "AI Chatbot Builder Pro";
@@ -41,10 +41,10 @@ export const MICRO_SAAS_SERVICES = [
             name: "Zion Tech Group";
             id: "zion-tech-group";
             avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100";
-            verified: true
+            verified: true,
         };
         images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"];
-        createdAt: "2024-01-15T10:00:00.000Z"
+        createdAt: "2024-01-15T10:00:00.000Z",
     };
     {
         id: "ai-content-generator";
@@ -86,10 +86,10 @@ export const MICRO_SAAS_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            verified: true
+            verified: true,
         };
         images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"];
-        createdAt: "2024-01-20T14:30:00.000Z"
+        createdAt: "2024-01-20T14:30:00.000Z",
     };
     {
         id: "ai-data-analytics";
@@ -131,10 +131,10 @@ export const MICRO_SAAS_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            verified: true
+            verified: true,
         };
         images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
-        createdAt: "2024-02-01T09:15:00.000Z"
+        createdAt: "2024-02-01T09:15:00.000Z",
     };
     {
         id: "ai-code-assistant";
@@ -176,10 +176,10 @@ export const MICRO_SAAS_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            verified: true
+            verified: true,
         };
         images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"];
-        createdAt: "2024-01-10T11:45:00.000Z"
+        createdAt: "2024-01-10T11:45:00.000Z",
     };
     {
         id: "ai-image-generator";
@@ -221,12 +221,12 @@ export const MICRO_SAAS_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            verified: true
+            verified: true,
         };
         images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"];
-        createdAt: "2024-02-05T16:20:00.000Z"
+        createdAt: "2024-02-05T16:20:00.000Z",
     };
-    // IT Services & Solutions
+    // IT Services & Solutions;
     {
         id: "cloud-migration-suite";
         title: "Cloud Migration Suite";
@@ -267,10 +267,10 @@ export const MICRO_SAAS_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            verified: true
+            verified: true,
         };
         images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"];
-        createdAt: "2024-01-25T13:10:00.000Z"
+        createdAt: "2024-01-25T13:10:00.000Z",
     };
     {
         id: "cybersecurity-monitoring";
@@ -312,10 +312,10 @@ export const MICRO_SAAS_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            verified: true
+            verified: true,
         };
         images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"];
-        createdAt: "2024-02-10T08:30:00.000Z"
+        createdAt: "2024-02-10T08:30:00.000Z",
     };
     {
         id: "devops-automation";
@@ -357,10 +357,10 @@ export const MICRO_SAAS_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            verified: true
+            verified: true,
         };
         images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"];
-        createdAt: "2024-01-30T15:45:00.000Z"
+        createdAt: "2024-01-30T15:45:00.000Z",
     };
     {
         id: "data-backup-recovery";
@@ -402,12 +402,12 @@ export const MICRO_SAAS_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            verified: true
+            verified: true,
         };
         images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
-        createdAt: "2024-02-15T12:00:00.000Z"
+        createdAt: "2024-02-15T12:00:00.000Z",
     };
-    // Innovative Business Solutions
+    // Innovative Business Solutions;
     {
         id: "ai-customer-support";
         title: "AI Customer Support Suite";
@@ -428,7 +428,7 @@ export const MICRO_SAAS_SERVICES = [
                 monthly: number;
                 yearly: number;
                 currency: string;
-                features: string[]
+                features: string[],
             }
         ];
         features: string[];
@@ -439,7 +439,7 @@ export const MICRO_SAAS_SERVICES = [
         support: string[];
         link: string;
         badge: string;
-        icon: string
+        icon: string,
     }
 ];
     export const MICRO_SAAS_SERVICES = [
@@ -480,7 +480,7 @@ export const MICRO_SAAS_SERVICES = [
         support: ["24/7 chat support", "Video tutorials", "Live training sessions", "API documentation"],
         link: "https://ziontechgroup.com/ai-content-generator";
         badge: "Popular";
-        icon: "🤖"
+        icon: "🤖",
     };
     {
         id: "smart-invoice-manager";
@@ -518,7 +518,7 @@ export const MICRO_SAAS_SERVICES = [
         integration: ["QuickBooks", "Xero", "Stripe", "PayPal", "Bank APIs"],
         support: ["Email support", "Knowledge base", "Video guides", "Community forum"],
         link: "https://ziontechgroup.com/smart-invoice-manager";
-        icon: "📊"
+        icon: "📊",
     };
     {
         id: "project-collaboration-hub";
@@ -557,7 +557,7 @@ export const MICRO_SAAS_SERVICES = [
         support: ["Live chat support", "Training webinars", "API documentation", "Community support"],
         link: "https://ziontechgroup.com/project-collaboration-hub";
         badge: "Featured";
-        icon: "🚀"
+        icon: "🚀",
     };
     {
         id: "ai-customer-support";
@@ -595,7 +595,7 @@ export const MICRO_SAAS_SERVICES = [
         integration: ["Shopify", "WooCommerce", "Zendesk", "Intercom", "Slack"],
         support: ["Priority support", "Custom training", "White-label options", "Dedicated account manager"],
         link: "https://ziontechgroup.com/ai-customer-support";
-        icon: "💬"
+        icon: "💬",
     };
     {
         id: "data-analytics-platform";
@@ -633,7 +633,7 @@ export const MICRO_SAAS_SERVICES = [
         integration: ["Google Analytics", "Salesforce", "HubSpot", "MySQL", "PostgreSQL"],
         support: ["Data migration assistance", "Custom dashboard design", "Training sessions", "24/7 support"],
         link: "https://ziontechgroup.com/data-analytics-platform";
-        icon: "📈"
+        icon: "📈",
     };
     {
         id: "ai-recruitment-assistant";
@@ -672,7 +672,7 @@ export const MICRO_SAAS_SERVICES = [
         support: ["Implementation support", "Training programs", "Custom workflows", "Dedicated success manager"],
         link: "https://ziontechgroup.com/ai-recruitment-assistant";
         badge: "New";
-        icon: "👥"
+        icon: "👥",
     };
     {
         id: "cybersecurity-monitor";
@@ -710,7 +710,7 @@ export const MICRO_SAAS_SERVICES = [
         integration: ["Firewall systems", "SIEM tools", "Cloud platforms", "Identity providers"],
         support: ["Security consultation", "Incident response support", "Compliance guidance", "24/7 monitoring"],
         link: "https://ziontechgroup.com/cybersecurity-monitor";
-        icon: "🔒"
+        icon: "🔒",
     };
     {
         id: "cloud-cost-optimizer";
@@ -748,7 +748,7 @@ export const MICRO_SAAS_SERVICES = [
         integration: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker"],
         support: ["Cloud optimization consulting", "Implementation support", "Training programs", "Best practices guide"],
         link: "https://ziontechgroup.com/cloud-cost-optimizer";
-        icon: "☁️"
+        icon: "☁️",
     };
     {
         id: "ai-marketing-automation";
@@ -787,7 +787,7 @@ export const MICRO_SAAS_SERVICES = [
         support: ["Campaign strategy consultation", "Implementation support", "Performance optimization", "Dedicated success manager"],
         link: "https://ziontechgroup.com/ai-marketing-automation";
         badge: "Premium";
-        icon: "🎯"
+        icon: "🎯",
     };
     {
         id: "api-management-platform";
@@ -825,7 +825,7 @@ export const MICRO_SAAS_SERVICES = [
         integration: ["GitHub", "Postman", "Swagger", "Kubernetes", "Docker"],
         support: ["API design consultation", "Implementation support", "Performance optimization", "Developer training"],
         link: "https://ziontechgroup.com/api-management-platform";
-        icon: "⚡"
+        icon: "⚡",
     }
 ];
     export const getMicroSaasServiceById = (id) => {

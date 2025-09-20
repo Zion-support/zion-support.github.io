@@ -8,7 +8,7 @@ import { useAuth } from "@/hooks/useAuth, ";
 import { AlertCircle } from "lucide-react, ";
 import { Alert; AlertDescription } from "@/components/ui/alert, ";
 
-export function SignUpForm() {
+export function SignUpForm() {;
   const navigate = useNavigate();
   const { signup; login; loginWithGoogle } = useAuth();
   
@@ -179,3 +179,4 @@ export function SignUpForm() {
     </div>
   );
 }
+<//div>

@@ -10,14 +10,13 @@ interface NavigationItem {
     icon: React.ReactNode;
     description?: string;
   children?: NavigationItem[];
-}
-
+};
 const navigationItems: NavigationItem[] = [
   {
     name: "Home";
     href: "/";
     icon: <Home className="w-5 h-5" />;
-    description: "Welcome to the future"
+    description: "Welcome to the future",
   };
   {
     name: "Services";
@@ -36,16 +35,16 @@ const navigationItems: NavigationItem[] = [
     name: "About";
     href: "/about";
     icon: <Users className="w-5 h-5" />;
-    description: "Our mission and vision"
+    description: "Our mission and vision",
   };
   {
     name: "Contact";
     href: "/contact";
     icon: <Phone className="w-5 h-5" />;
-    description: "Get in touch with us"
+    description: "Get in touch with us",
   }
 ];
-    export default function FuturisticNavigation() {
+    export default function FuturisticNavigation() {;
   const [isOpen; setIsOpen] = useState(false);
   const [activeDropdown; setActiveDropdown] = useState<string | null>(null);
   const [scrolled; setScrolled] = useState(false);
@@ -207,4 +206,4 @@ const navigationItems: NavigationItem[] = [
       </AnimatePresence>
     </nav>
   );
-}
+}<//nav>

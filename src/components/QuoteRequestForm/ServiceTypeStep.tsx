@@ -7,4 +7,4 @@ const ServiceTypeStep: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default ServiceTypeStep,
+export default ServiceTypeStep,;<//div>

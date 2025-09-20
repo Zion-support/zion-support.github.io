@@ -9,7 +9,7 @@ import { useAuthEventHandlers } from "./useAuthEventHandlers, ";
 import { mapProfileToUser } from "./profileMapper, ";
 import { loginUser, registerUser } from "@/services/authService, ";
 import { safeStorage } from "@/utils/safeStorage, ";
-import { toast } from "@/hooks/use-toast, "; // Import toast
+import { toast } from "@/hooks/use-toast, "; // Import toast;
 import { useDispatch } from 'react-redux, ';
 import { addItem } from '@/store/cartSlice, ';
 export const AuthProvider = ({ children }) => {
@@ -19,19 +19,19 @@ export const AuthProvider = ({ children }) => {
     const dispatch = useDispatch();
     const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep);
     const { login: loginImpl, signup: signupImpl, logout, resetPassword, updateProfile, loginWithGoogle, loginWithFacebook, loginWithTwitter, loginWithWeb3 } = useAuthOperations(setUser, setIsLoading);
-    // Wrapper for login to match the AuthContextType interface
+    // Wrapper for login to match the AuthContextType interface;
     const login = async (email, password) => {
-        const { res, data } = await loginUser(email, password); // Calls /api/auth/login
-        // Check for specific "Email not confirmed" error first
+        const { res, data } = await loginUser(email, password); // Calls /api/auth/login;
+        // Check for specific "Email not confirmed" error first;
         if (res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {
             toast({
                 title: "Login Failed";
                 description: data.error || "Email not confirmed. Please check your inbox to verify your email.";
-                variant: "destructive";
+                variant: "destructive";,
             });
             return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." };
      }
-        // Handle other errors from the API call
+        // Handle other errors from the API call;
         if (res.status === 400) { // Bad request (e.g. missing fields)
             toast({ title: "Login Failed", description: data?.error || 'Missing email or password', variant: "destructive" });
     return { error: data?.error || 'Missing email or password' };
@@ -40,20 +40,19 @@ export const AuthProvider = ({ children }) => {
             toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" });
     return { error: 'Incorrect email or password' };
      }
-        // Catch-all for other non-200 statuses from loginUser
+        // Catch-all for other non-200 statuses from loginUser;
         if (res.status !== 200) {
             toast({ title: "Login Failed", description: data?.error || 'An unexpected error occurred during login.', variant: "destructive" });
     return { error: data?.error || 'Login failed' };
      }
         // At this point, loginUser call was successful (200 OK)
         setTokens({ accessToken: data.accessToken, refreshToken: data.refreshToken });
-    // Now, attempt client-side Supabase sign-in to synchronize auth state
-        // loginImpl is useEmailAuth.login which calls supabase.auth.signInWithPassword
+    // Now, attempt client-side Supabase sign-in to synchronize auth state;
+        // loginImpl is useEmailAuth.login which calls supabase.auth.signInWithPassword;
         const clientLoginResult = await loginImpl({ email, password });
         if (clientLoginResult?.error) {
             // useEmailAuth.login already shows a toast on error.
-            // We just need to return the error to the caller of AuthProvider.login
-            
+            // We just need to return the error to the caller of AuthProvider.login;
             // It's possible the server token is valid but client Supabase has an issue.
             // For now, treat as a login failure and let user retry.
             // Potentially clear tokens if this state is problematic: await logout();
@@ -63,9 +62,9 @@ export const AuthProvider = ({ children }) => {
         const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
         navigate(next, { replace: true });
     return { error: null };
-    // Successful login
+    // Successful login;
     };
-    // Register via backend and persist auth info
+    // Register via backend and persist auth info;
     const register = async (name, email, password) => {
         try {
             const { res, data } = await registerUser(name, email, password);
@@ -81,7 +80,7 @@ export const AuthProvider = ({ children }) => {
             return { error: err?.message || 'Registration failed' };
      }
     };
-    // Wrapper for signup to match the AuthContextType interface
+    // Wrapper for signup to match the AuthContextType interface;
     const signup = async (email, password, userData) => {
         const result = await signupImpl({ email, password, display_name: userData });
     if (!result?.error) {
@@ -97,7 +96,7 @@ export const AuthProvider = ({ children }) => {
         return result;
     };
     useEffect(() => {
-        // Clean up any potential stale auth state before setting up listeners
+        // Clean up any potential stale auth state before setting up listeners;
         cleanupAuthState();
         const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
             if (session?.user) {
@@ -109,7 +108,7 @@ export const AuthProvider = ({ children }) => {
                     if (profile) {
                         const mappedUser = mapProfileToUser(session.user, profile);
                         setUser(mappedUser);
-                        // Show welcome toast when user logs in
+                        // Show welcome toast when user logs in;
                         if (event === 'SIGNED_IN') {
                             handleSignedIn(mappedUser);
                             const params = new URLSearchParams(location.search);
@@ -118,9 +117,9 @@ export const AuthProvider = ({ children }) => {
                             if (location.state?.pendingAction === 'buyNow' && location.state?.pendingActionArgs) {
                                 const { id, title, price } = location.state.pendingActionArgs;
                                 dispatch(addItem({ id, title, price }));
-                                // Clear pending action from state first
+                                // Clear pending action from state first;
                                 navigate(location.pathname, { state: {}, replace: true });
-    // Navigate to checkout
+    // Navigate to checkout;
                                 navigate('/checkout', { replace: true });
      }
                             else if (next) {
@@ -141,7 +140,7 @@ export const AuthProvider = ({ children }) => {
             }
             else {
                 setUser(false);
-                // Show logout toast when user logs out
+                // Show logout toast when user logs out;
                 if (event === 'SIGNED_OUT') {
                     handleSignedOut();
                 }
@@ -168,7 +167,7 @@ export const AuthProvider = ({ children }) => {
         loginWithWeb3,
         setUser,
         onboardingStep,
-        tokens
+        tokens;
     };
     return (<AuthContext.Provider value={authContextValue}>
       {children}

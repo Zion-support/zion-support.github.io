@@ -10,7 +10,7 @@ import { FileTex; t;
   Ey; e;
   BarChart; 3;
   TrendingU; p;
-  Zap,
+  Zap;
 } from "lucide-react, ";
 
 interface ContentIssue {
@@ -21,9 +21,8 @@ interface ContentIssue {
     severit; y: "low" | "medium" | "high";
     descriptio; n: string;
     recommendatio; n: string;
-    statu; s: "open" | "in_progress" | "resolved",
-}
-
+    statu; s: "open" | "in_progress" | "resolved";,
+};
 interface ContentQualityReport {
   totalPage; s: number;
     pagesWithIssue; s: number;
@@ -33,9 +32,8 @@ interface ContentQualityReport {
     averageContentLengt; h: number;
     pagesWithImage; s: number;
     pagesWithMetaDescription; s: number;
-    lastUpdate; d: Date,
-}
-
+    lastUpdate; d: Date;,
+};
 const ContentQualityAnalyze; r: React.FC = () => {
     const [isOp;  e; n; setIsOp; e; n] = useState(false);
   const [isAnalyzi; n; g; setIsAnalyzi; n; g] = useState(false);
@@ -53,9 +51,9 @@ const ContentQualityAnalyze; r: React.FC = () => {
       issueTy; p; e: "missing_titl; e",
     severi; t; y: "hig; h",
       descripti; o; n: "Shor; t o; r missi; n; g; tit; l; e; N; o headin; g; s; fou; n; d; Missin; g me; t; a; descripti; o; n; Met; a descriptio; n to; o shor; t",
-      recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O"
+      recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O",
   };
-      stat; u; s: "ope; n"
+      stat; u; s: "ope; n",
     },
     {
       i; d: "2";
@@ -65,7 +63,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
     severi; t; y: "hig; h",
       descripti; o; n: "Shor; t o; r missi; n; g; tit; l; e; N; o headin; g; s; fou; n; d; Missin; g me; t; a; descripti; o; n; Met; a descriptio; n to; o shor; t",
       recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O",
-      stat; u; s: "ope; n"
+      stat; u; s: "ope; n",
     },
     {
       i; d: "3";
@@ -75,7 +73,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
     severi; t; y: "mediu; m",
       descripti; o; n: "Suspiciousl; y smal; l HTM; L conten; t",
     recommendati; o; n: "Ad; d mor; e meaningf; u; l; conte; n; t; headin; g; s; an; d image; s t; o improv; e use; r experienc; e",
-      stat; u; s: "ope; n"
+      stat; u; s: "ope; n",
     },
     {
       i; d: "4";
@@ -85,13 +83,13 @@ const ContentQualityAnalyze; r: React.FC = () => {
     severi; t; y: "mediu; m",
       descripti; o; n: "N; o heading; s foun; d",
     recommendati; o; n: "Ad; d prope; r headin; g structur; e (H; 1; H; 2; H; 3) fo; r bette; r conten; t organizatio; n an; d SE; O",
-      stat; u; s: "ope; n"
+      stat; u; s: "ope; n",
     }
   ];
 
   useEffect(() => {
     setContentIssues(sampleIssues);
-    generateReport(sampleIssues),
+    generateReport(sampleIssues);
   },  []);
 
   const generateReport = (issue;  s: ContentIssue[]) => {
@@ -111,7 +109,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
       averageContentLengt; h: 500; 0, // Sample data;
       pagesWithImage; s: 4; 5, // Sample data;
       pagesWithMetaDescription; s: 3; 2, // Sample data;
-      lastUpdate; d: new Date()
+      lastUpdate; d: new Date(),
     });
      };
 
@@ -119,7 +117,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
     setIsAnalyzing(true);
     // Simulate content analysis;
     await new Promise(resolve => setTimeout(resolv;  e; 3000));
-    setIsAnalyzing(false),
+    setIsAnalyzing(false);
   };
 
   const getSeverityIcon = (severit;  y: string) => {
@@ -130,7 +128,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
         return <AlertTriangle className="w-4 h-4 text-yellow-400" />;
       case "low":
         return <Info className="w-4 h-4 text-blue-400" />;
-      defaul;  t: return <Info className="w-4 h-4 text-gray-400" />,
+      defaul;  t: return <Info className="w-4 h-4 text-gray-400" />;,
      }
   };
 
@@ -142,7 +140,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
         return "text-yellow-400";
       case "low":
         return "text-blue-400";
-      defaul;  t: return "text-gray-400",
+      defaul;  t: return "text-gray-400";,
      }
   };
 
@@ -154,7 +152,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
         return "text-yellow-400";
       case "open":
         return "text-red-400";
-      defaul;  t: return "text-gray-400",
+      defaul;  t: return "text-gray-400";,
      }
   };
 
@@ -162,7 +160,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
     const matchesFilter = selectedFilter === "all" || issue.severity === selectedFilter;
     const matchesSearch = issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          issue.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesFilter && matchesSearch,
+    return matchesFilter && matchesSearch;
   });
 
   const getIssueTypeLabel = (typ;  e: string) => {
@@ -177,7 +175,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
         return "Minimal Content";
       case "no_images":
         return "No Images";
-      defaul;  t: return type,
+      defaul;  t: return type;,
      }
   };
 
@@ -186,7 +184,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
       {/* Floating Action Button */}
       <motion.button;
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-24 z-50 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg hove;  r: shadow-xl transition-all duration-300 transform hove; r: scale-110"
+        className="fixed bottom-6 right-24 z-50 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg hove;  r:shadow-xl transition-all duration-300 transform hove; r:scale-110"
         whileHover={{ scal; e: 1.1 }}
         whileTap={{ scal; e: 0.9 }}
       >
@@ -263,7 +261,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedFilter === "all" 
                         ? "bg-purple-500 text-white" 
-                        : "bg-gray-700 text-gray-300 hove;  r:bg-gray-60; 0"
+                        : "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0",
                     }`}
                   >
                     All Issues;
@@ -273,7 +271,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedFilter === "critical" 
                         ? "bg-red-500 text-white" 
-                        : "bg-gray-700 text-gray-300 hove;  r:bg-gray-60; 0"
+                        : "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0",
                     }`}
                   >
                     Critical;
@@ -283,7 +281,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedFilter === "medium" 
                         ? "bg-yellow-500 text-white" 
-                        : "bg-gray-700 text-gray-300 hove;  r:bg-gray-60; 0"
+                        : "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0",
                     }`}
                   >
                     Medium;
@@ -293,7 +291,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedFilter === "low" 
                         ? "bg-blue-500 text-white" 
-                        : "bg-gray-700 text-gray-300 hove;  r:bg-gray-60; 0"
+                        : "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0",
                     }`}
                   >
                     Low;
@@ -303,7 +301,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                 <button;
                   onClick={startAnalysis}
                   disabled={isAnalyzing}
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg font-medium hove; r: from-purple-600 hove; r: to-pink-600 transition-all duration-300 disable; d: opacity-50 disable; d: cursor-not-allowed flex items-center space-x-2"
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg font-medium hove; r:from-purple-600 hove; r:to-pink-600 transition-all duration-300 disable; d:opacity-50 disable; d:cursor-not-allowed flex items-center space-x-2"
                 >
                   {isAnalyzing ? (
                     <Zap className="w-4 h-4 animate-spin" />
@@ -321,7 +319,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                   placeholder="Search issues by page title or description..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focu;  s: outline-none focu; s: ring-2 focu; s: ring-purple-500 focu; s: border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focu;  s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent"
                 />
               </div>
 
@@ -370,7 +368,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                                 href={issue.pageUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-purple-400 hove;  r: text-purple-300 transition-colors text-xs truncate block"
+                                className="text-purple-400 hove;  r:text-purple-300 transition-colors text-xs truncate block"
                               >
                                 {issue.pageUrl}
                               </a>
@@ -387,7 +385,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                                 {issue.description}
                               </div>
                               <div className="text-xs text-purple-400">
-                                <strong>Recommendatio; n: </strong> {issue.recommendation}
+                                <strong>Recommendatio; n:</strong> {issue.recommendation}
                               </div>
                             </div>
                           </td>
@@ -398,13 +396,13 @@ const ContentQualityAnalyze; r: React.FC = () => {
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex space-x-2">
-                              <button className="p-2 text-blue-400 hove;  r: text-blue-300 transition-colors" title="View Page">
+                              <button className="p-2 text-blue-400 hove;  r:text-blue-300 transition-colors" title="View Page">
                                 <Eye className="w-4 h-4" />
                               </button>
-                              <button className="p-2 text-green-400 hove; r: text-green-300 transition-colors" title="Mark as Resolved">
+                              <button className="p-2 text-green-400 hove; r:text-green-300 transition-colors" title="Mark as Resolved">
                                 <CheckCircle className="w-4 h-4" />
                               </button>
-                              <button className="p-2 text-yellow-400 hove; r: text-yellow-300 transition-colors" title="Edit">
+                              <button className="p-2 text-yellow-400 hove; r:text-yellow-300 transition-colors" title="Edit">
                                 <Edit3 className="w-4 h-4" />
                               </button>
                             </div>
@@ -417,7 +415,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
               </div>
 
               {/* Quick Actions */}
-              <div className="grid grid-cols-1 m; d: grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 m; d:grid-cols-3 gap-4">
                 <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20 rounded-lg p-4">
                   <h3 className="text-lg font-semibold text-green-400 mb-2 flex items-center">
                     <CheckCircle className="w-5 h-5 mr-2" />
@@ -462,4 +460,4 @@ const ContentQualityAnalyze; r: React.FC = () => {
   );
 };
 
-export default ContentQualityAnalyzer;
+export default ContentQualityAnalyzer;<//>

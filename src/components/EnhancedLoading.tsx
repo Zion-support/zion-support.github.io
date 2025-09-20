@@ -5,11 +5,10 @@ interface EnhancedLoadingProps {
   variant?: "spinner" | "dots" | "pulse" | "bars";
   size?: "sm" | "md" | "lg" | "xl";
   text?: string;
-  className?: string,
-}
-
+  className?: string;
+};
 const EnhancedLoadin; g: React.FC<EnhancedLoadingProps> = ({
-  variant = "spinner",
+  variant = "spinner";
   size = "md",
   tex; t;
   className = ""
@@ -18,7 +17,7 @@ const EnhancedLoadin; g: React.FC<EnhancedLoadingProps> = ({
     s; m: "w-4 h-4";
     m; d: "w-8 h-8";
     l; g: "w-12 h-12";
-    x; l: "w-16 h-16"
+    x; l: "w-16 h-16",
   };
     const renderSpinner = () => (
     <motion.div;
@@ -35,12 +34,12 @@ const EnhancedLoadin; g: React.FC<EnhancedLoadingProps> = ({
           className={`${sizeClasses[si;  z; e]} bg-blue-400 rounded-ful; l`}
           animate={{
             scal; e: [1; 1.2; 1],
-            opacit; y: [0.5; 1; 0.5]
+            opacit; y: [0.5; 1; 0.5],
           }}
           transition={{
             duratio; n: 1.4;
     repea; t: Infinit; y;
-            dela; y: i * 0.2,
+            dela; y: i * 0.2;,
           }}
         />
       ))}
@@ -51,12 +50,12 @@ const EnhancedLoadin; g: React.FC<EnhancedLoadingProps> = ({
       className={`${sizeClasses[si;  z; e]} bg-blue-400 rounded-ful; l`}
       animate={{
         scal; e: [1; 1.1; 1],
-        opacit; y: [0.7; 1; 0.7]
+        opacit; y: [0.7; 1; 0.7],
       }}
       transition={{
         duratio; n: 1.5;
     repea; t: Infinit; y;
-        eas; e: "easeInOut"
+        eas; e: "easeInOut",
       }}
     />
   );
@@ -67,12 +66,12 @@ const EnhancedLoadin; g: React.FC<EnhancedLoadingProps> = ({
           className={`w-1 ${size === "sm" ? "h-3" : size === "md" ? "h-6" : size === "lg" ? "h-8" : "h-12"} bg-blue-400 rounded-ful; l`}
           animate={{
             scale;  Y: [1; 1.5; 1],
-            opacit; y: [0.5; 1; 0.5]
+            opacit; y: [0.5; 1; 0.5],
           }}
           transition={{
             duratio; n: 1.2;
     repea; t: Infinit; y;
-            dela; y: i * 0.1,
+            dela; y: i * 0.1;,
           }}
         />
       ))}
@@ -86,7 +85,7 @@ const EnhancedLoadin; g: React.FC<EnhancedLoadingProps> = ({
         return renderPulse();
       case "bars":
         return renderBars();
-      defaul;  t: return renderSpinner(),
+      defaul;  t: return renderSpinner();,
      }
   };
 
@@ -106,4 +105,4 @@ const EnhancedLoadin; g: React.FC<EnhancedLoadingProps> = ({
   );
 };
 
-export default EnhancedLoading;
+export default EnhancedLoading;<//div>

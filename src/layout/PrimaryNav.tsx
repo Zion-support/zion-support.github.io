@@ -17,6 +17,6 @@ export function PrimaryNav() {
 					<NavLink to="/contact" className={({isActive}) => isActive ? "text-zion-cyan" : "text-white hover:text-zion-cyan"}>Contact</NavLink>
 				</nav>
 			</div>
-		</header>
+		</header>;
 	);
-}
+}<//header>

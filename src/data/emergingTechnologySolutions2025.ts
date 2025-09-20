@@ -18,7 +18,7 @@ export interface EmergingTechnologySolution {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   technology: string[];
     integrations: string[];
@@ -32,7 +32,7 @@ export interface EmergingTechnologySolution {
     industryFocus: string[];
     scalability: string;
     customizationLevel: string;
-    innovationLevel: string;
+    innovationLevel: string;,
 }
 
 export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = [
@@ -86,7 +86,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Ethereum", "Polygon", "Solana", "React", "Node.js", "Web3.js"],
     integrations: ["Enterprise systems", "Payment gateways", "Cloud platforms", "Financial systems", "IoT platforms"],
@@ -99,7 +99,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     industryFocus: ["Financial Services", "Manufacturing", "Healthcare", "Supply Chain", "Real Estate"],
     scalability: "Enterprise-grade with multi-chain support";
     customizationLevel: "Custom blockchain solutions and smart contracts";
-    innovationLevel: "Cutting-edge Web3 and blockchain technology"
+    innovationLevel: "Cutting-edge Web3 and blockchain technology",
   };
   // Quantum Computing Solutions;
   {
@@ -151,7 +151,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum simulators", "Cloud quantum platforms"],
     integrations: ["Research platforms", "Scientific computing tools", "Financial modeling systems", "Cloud platforms", "HPC systems"],
@@ -164,7 +164,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     industryFocus: ["Research", "Pharmaceuticals", "Finance", "Technology", "Government"],
     scalability: "Quantum cloud infrastructure with unlimited computational power";
     customizationLevel: "Custom quantum algorithms and applications";
-    innovationLevel: "Revolutionary quantum computing technology"
+    innovationLevel: "Revolutionary quantum computing technology",
   };
   // Edge Computing & IoT Solutions;
   {
@@ -216,7 +216,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Kubernetes", "Docker", "MQTT", "React", "Python", "Edge frameworks"],
     integrations: ["Cloud platforms", "IoT devices", "Data centers", "Network infrastructure", "Security systems"],
@@ -229,7 +229,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     industryFocus: ["Smart Cities", "Manufacturing", "Healthcare", "Transportation", "Retail"],
     scalability: "Distributed edge infrastructure with unlimited device support";
     customizationLevel: "Custom edge computing solutions and IoT integrations";
-    innovationLevel: "Advanced edge computing and IoT technology"
+    innovationLevel: "Advanced edge computing and IoT technology",
   };
   // 5G & Advanced Connectivity Solutions;
   {
@@ -281,7 +281,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["5G NR", "Network slicing", "Edge computing", "React", "Python", "Network protocols"],
     integrations: ["Network infrastructure", "Cloud platforms", "IoT platforms", "Security systems", "Analytics platforms"],
@@ -294,7 +294,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     industryFocus: ["Telecommunications", "Healthcare", "Transportation", "Manufacturing", "Smart Cities"],
     scalability: "Enterprise 5G infrastructure with unlimited device support";
     customizationLevel: "Custom 5G solutions and network configurations";
-    innovationLevel: "Cutting-edge 5G and connectivity technology"
+    innovationLevel: "Cutting-edge 5G and connectivity technology",
   };
   // Augmented Reality & Virtual Reality Solutions;
   {
@@ -346,7 +346,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Unity", "Unreal Engine", "WebXR", "React", "Three.js", "AR/VR frameworks"],
     integrations: ["Learning management systems", "Video conferencing platforms", "3D modeling tools", "Analytics platforms", "Content management systems"],
@@ -359,7 +359,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     industryFocus: ["Manufacturing", "Healthcare", "Education", "Retail", "Real Estate"],
     scalability: "Multi-user AR/VR platform with unlimited content support";
     customizationLevel: "Custom AR/VR experiences and training programs";
-    innovationLevel: "Advanced immersive technology solutions"
+    innovationLevel: "Advanced immersive technology solutions",
   };
   // Robotics & Automation Solutions;
   {
@@ -411,7 +411,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["ROS", "Computer Vision", "Machine Learning", "Python", "C++", "Robotics frameworks"],
     integrations: ["Manufacturing systems", "ERP platforms", "Quality management systems", "Safety systems", "Analytics platforms"],
@@ -424,7 +424,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     industryFocus: ["Manufacturing", "Logistics", "Healthcare", "Automotive", "Electronics"],
     scalability: "Enterprise robotics platform with multi-system support";
     customizationLevel: "Custom robotics solutions and automation workflows";
-    innovationLevel: "Advanced robotics and automation technology"
+    innovationLevel: "Advanced robotics and automation technology",
   };
   // Digital Twin & Simulation Solutions;
   {
@@ -476,7 +476,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Unity", "Unreal Engine", "Python", "React", "3D modeling", "Simulation engines"],
     integrations: ["IoT platforms", "CAD systems", "PLM platforms", "Analytics platforms", "Cloud platforms"],
@@ -489,7 +489,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     industryFocus: ["Manufacturing", "Infrastructure", "Energy", "Healthcare", "Smart Cities"],
     scalability: "Enterprise digital twin platform with unlimited system support";
     customizationLevel: "Custom digital twin solutions and simulation models";
-    innovationLevel: "Advanced digital twin and simulation technology"
+    innovationLevel: "Advanced digital twin and simulation technology",
   };
   // Green Technology & Sustainability Solutions;
   {
@@ -541,7 +541,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["IoT sensors", "Machine Learning", "React", "Python", "Analytics platforms", "Green tech APIs"],
     integrations: ["Energy management systems", "Environmental monitoring", "Sustainability platforms", "Reporting systems", "Compliance platforms"],
@@ -554,7 +554,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     industryFocus: ["Manufacturing", "Real Estate", "Energy", "Transportation", "Retail"],
     scalability: "Multi-organization sustainability platform";
     customizationLevel: "Custom sustainability solutions and reporting";
-    innovationLevel: "Advanced green technology and sustainability solutions"
+    innovationLevel: "Advanced green technology and sustainability solutions",
   }
 ];
     export default EMERGING_TECHNOLOGY_SOLUTIONS_2025;

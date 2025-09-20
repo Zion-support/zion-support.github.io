@@ -27,7 +27,7 @@ export async function apiClient(input, init, retries = 3) {
         }
         catch (err) {
             lastError = err;
-            // Network errors are usually TypeError
+            // Network errors are usually TypeError;
             if (err instanceof TypeError && attempt < retries - 1) {
                 continue;
             }

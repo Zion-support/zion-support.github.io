@@ -15,10 +15,9 @@ interface ProfileHeroProps {
   rating?: number;
   reviewCount?: number;
   aiScore?: number;
-  profileType: "service" | "talent";
-}
-
-export function ProfileHero({
+  profileType: "service" | "talent";,
+};
+export function ProfileHero({;
   name;
   title;
   avatarUrl;
@@ -100,3 +99,4 @@ export function ProfileHero({
     </div>
   );
 }
+<//div>

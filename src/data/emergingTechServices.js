@@ -1,5 +1,5 @@
 export const EMERGING_TECH_SERVICES = [
-    // Blockchain Services
+    // Blockchain Services;
     {
         id: 'enterprise-blockchain-platform',
         title: 'Zion Enterprise Blockchain Platform',
@@ -10,7 +10,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 299,
             yearly: 2990,
             currency: '$',
-            pricingModel: 'subscription'
+            pricingModel: 'subscription',
         },
         features: [
             'Multi-consensus mechanisms',
@@ -62,9 +62,9 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 156,
         launchDate: '2024-01-01',
         status: 'Active',
-        innovationScore: 92
+        innovationScore: 92,
     },
-    // IoT Services
+    // IoT Services;
     {
         id: 'iot-ecosystem-platform',
         title: 'Zion IoT Ecosystem Platform',
@@ -75,7 +75,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 199,
             yearly: 1990,
             currency: '$',
-            pricingModel: 'subscription'
+            pricingModel: 'subscription',
         },
         features: [
             'Device management and provisioning',
@@ -122,9 +122,9 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 234,
         launchDate: '2023-12-01',
         status: 'Active',
-        innovationScore: 89
+        innovationScore: 89,
     },
-    // Edge Computing Services
+    // Edge Computing Services;
     {
         id: 'edge-computing-orchestrator',
         title: 'Zion Edge Computing Orchestrator',
@@ -135,7 +135,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 249,
             yearly: 2490,
             currency: '$',
-            pricingModel: 'subscription'
+            pricingModel: 'subscription',
         },
         features: [
             'Distributed edge nodes',
@@ -182,9 +182,9 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 178,
         launchDate: '2024-02-01',
         status: 'Active',
-        innovationScore: 94
+        innovationScore: 94,
     },
-    // 5G Services
+    // 5G Services;
     {
         id: '5g-network-optimization',
         title: 'Zion 5G Network Optimization',
@@ -195,7 +195,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 399,
             yearly: 3990,
             currency: '$',
-            pricingModel: 'subscription'
+            pricingModel: 'subscription',
         },
         features: [
             'Network performance monitoring',
@@ -242,9 +242,9 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 145,
         launchDate: '2024-01-15',
         status: 'Active',
-        innovationScore: 91
+        innovationScore: 91,
     },
-    // AR/VR Services
+    // AR/VR Services;
     {
         id: 'ar-vr-enterprise-platform',
         title: 'Zion AR/VR Enterprise Platform',
@@ -255,7 +255,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 179,
             yearly: 1790,
             currency: '$',
-            pricingModel: 'subscription'
+            pricingModel: 'subscription',
         },
         features: [
             '3D content creation tools',
@@ -302,9 +302,9 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 189,
         launchDate: '2023-11-01',
         status: 'Active',
-        innovationScore: 88
+        innovationScore: 88,
     },
-    // Robotics Services
+    // Robotics Services;
     {
         id: 'intelligent-robotics-automation',
         title: 'Zion Intelligent Robotics Automation',
@@ -316,7 +316,7 @@ export const EMERGING_TECH_SERVICES = [
             yearly: 0,
             oneTime: 25000,
             currency: '$',
-            pricingModel: 'one-time'
+            pricingModel: 'one-time',
         },
         features: [
             'AI-powered decision making',
@@ -363,9 +363,9 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 67,
         launchDate: '2024-01-01',
         status: 'Active',
-        innovationScore: 95
+        innovationScore: 95,
     },
-    // Quantum Computing Services
+    // Quantum Computing Services;
     {
         id: 'quantum-computing-simulation',
         title: 'Zion Quantum Computing Simulation',
@@ -376,7 +376,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 599,
             yearly: 5990,
             currency: '$',
-            pricingModel: 'subscription'
+            pricingModel: 'subscription',
         },
         features: [
             'Quantum circuit simulator',
@@ -423,9 +423,9 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 89,
         launchDate: '2024-01-01',
         status: 'Active',
-        innovationScore: 96
+        innovationScore: 96,
     },
-    // Biotechnology Services
+    // Biotechnology Services;
     {
         id: 'ai-biotech-research-platform',
         title: 'Zion AI Biotech Research Platform',
@@ -436,7 +436,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 449,
             yearly: 4490,
             currency: '$',
-            pricingModel: 'subscription'
+            pricingModel: 'subscription',
         },
         features: [
             'AI-powered drug discovery',
@@ -483,9 +483,9 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 123,
         launchDate: '2023-12-01',
         status: 'Active',
-        innovationScore: 93
+        innovationScore: 93,
     },
-    // Green Technology Services
+    // Green Technology Services;
     {
         id: 'sustainable-tech-solutions',
         title: 'Zion Sustainable Tech Solutions',
@@ -496,7 +496,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 199,
             yearly: 1990,
             currency: '$',
-            pricingModel: 'subscription'
+            pricingModel: 'subscription',
         },
         features: [
             'Renewable energy optimization',
@@ -543,9 +543,9 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 167,
         launchDate: '2024-01-01',
         status: 'Active',
-        innovationScore: 90
+        innovationScore: 90,
     },
-    // Space Technology Services
+    // Space Technology Services;
     {
         id: 'space-tech-innovation-platform',
         title: 'Zion Space Tech Innovation Platform',
@@ -556,7 +556,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 799,
             yearly: 7990,
             currency: '$',
-            pricingModel: 'subscription'
+            pricingModel: 'subscription',
         },
         features: [
             'Satellite mission planning',
@@ -603,9 +603,9 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 78,
         launchDate: '2024-02-01',
         status: 'Active',
-        innovationScore: 97
+        innovationScore: 97,
     },
-    // NEW EMERGING TECHNOLOGY SERVICES
+    // NEW EMERGING TECHNOLOGY SERVICES;
     {
         id: "quantum-machine-learning-platform",
         title: "Quantum Machine Learning Platform",
@@ -616,7 +616,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 3000,
             yearly: 30000,
             currency: "$",
-            pricingModel: "subscription"
+            pricingModel: "subscription",
         },
         features: [
             "Quantum neural networks",
@@ -666,7 +666,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 89,
         launchDate: "2024-03-01",
         status: "Active",
-        innovationScore: 95
+        innovationScore: 95,
     },
     {
         id: "space-technology-platform",
@@ -678,7 +678,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 2000,
             yearly: 20000,
             currency: "$",
-            pricingModel: "subscription"
+            pricingModel: "subscription",
         },
         features: [
             "Satellite mission planning",
@@ -728,7 +728,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 67,
         launchDate: "2024-02-15",
         status: "Active",
-        innovationScore: 93
+        innovationScore: 93,
     },
     {
         id: "brain-computer-interface-platform",
@@ -740,7 +740,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 2500,
             yearly: 25000,
             currency: "$",
-            pricingModel: "subscription"
+            pricingModel: "subscription",
         },
         features: [
             "EEG signal processing",
@@ -790,7 +790,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 45,
         launchDate: "2024-01-20",
         status: "Beta",
-        innovationScore: 96
+        innovationScore: 96,
     },
     {
         id: "autonomous-vehicle-platform",
@@ -802,7 +802,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 1800,
             yearly: 18000,
             currency: "$",
-            pricingModel: "subscription"
+            pricingModel: "subscription",
         },
         features: [
             "Sensor fusion algorithms",
@@ -852,7 +852,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 78,
         launchDate: "2024-02-01",
         status: "Active",
-        innovationScore: 94
+        innovationScore: 94,
     },
     {
         id: "quantum-internet-platform",
@@ -864,7 +864,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 2200,
             yearly: 22000,
             currency: "$",
-            pricingModel: "subscription"
+            pricingModel: "subscription",
         },
         features: [
             "Quantum key distribution",
@@ -914,7 +914,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 34,
         launchDate: "2024-01-10",
         status: "Beta",
-        innovationScore: 97
+        innovationScore: 97,
     },
     {
         id: "ai-consciousness-simulation",
@@ -926,7 +926,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 1600,
             yearly: 16000,
             currency: "$",
-            pricingModel: "subscription"
+            pricingModel: "subscription",
         },
         features: [
             "Consciousness simulation engines",
@@ -976,7 +976,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 23,
         launchDate: "2024-01-05",
         status: "Beta",
-        innovationScore: 98
+        innovationScore: 98,
     },
     {
         id: "quantum-financial-modeling",
@@ -988,7 +988,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 2800,
             yearly: 28000,
             currency: "$",
-            pricingModel: "subscription"
+            pricingModel: "subscription",
         },
         features: [
             "Quantum portfolio optimization",
@@ -1038,7 +1038,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 56,
         launchDate: "2024-02-20",
         status: "Active",
-        innovationScore: 95
+        innovationScore: 95,
     },
     {
         id: "autonomous-manufacturing-platform",
@@ -1050,7 +1050,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 1500,
             yearly: 15000,
             currency: "$",
-            pricingModel: "subscription"
+            pricingModel: "subscription",
         },
         features: [
             "Autonomous production lines",
@@ -1100,7 +1100,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 89,
         launchDate: "2024-01-15",
         status: "Active",
-        innovationScore: 93
+        innovationScore: 93,
     },
     {
         id: "quantum-drug-discovery",
@@ -1112,7 +1112,7 @@ export const EMERGING_TECH_SERVICES = [
             monthly: 3200,
             yearly: 32000,
             currency: "$",
-            pricingModel: "subscription"
+            pricingModel: "subscription",
         },
         features: [
             "Quantum molecular modeling",
@@ -1162,7 +1162,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 67,
         launchDate: "2024-02-25",
         status: "Active",
-        innovationScore: 96
+        innovationScore: 96,
     }
 ];
 export const getEmergingTechServiceByCategory = (category) => {
@@ -1172,7 +1172,7 @@ export const getEmergingTechServiceBySubcategory = (subcategory) => {
     return EMERGING_TECH_SERVICES.filter(service => service.subcategory === subcategory);
 };
 export const getFeaturedEmergingTechServices = () => {
-    // Return first 8 services since rating property doesn't exist
+    // Return first 8 services since rating property doesn't exist;
     return EMERGING_TECH_SERVICES.slice(0, 8);
 };
 export const getServicesByInnovationScore = (minScore) => {

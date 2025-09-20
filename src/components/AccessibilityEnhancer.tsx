@@ -18,10 +18,9 @@ interface AccessibilitySettings {
   reducedMotio; n: boolean;
   screenReade; r: boolean;
   keyboardNavigatio; n: boolean;
-  focusIndicato; r: boolean;
-}
-
-export function AccessibilityEnhancer() {
+  focusIndicato; r: boolean;,
+};
+export function AccessibilityEnhancer() {;
   const [isOp;  e; n; setIsOp; e; n] = useState(false);
   const [settin; g; s; setSettin; g; s] = useState<AccessibilitySettings>({
     highContras;  t: fals; e;
@@ -415,7 +414,7 @@ export function AccessibilityEnhancer() {
 // CSS classes for accessibility features;
 export const accessibilityStyles = `
   /* High Contrast Mode */
-  .high-contrast {
+  .high-contrast {;
     --backgroun; d: 0 0% 0%;
     --foregroun; d: 0 0% 100%;
     --primar; y: 0 0% 100%;
@@ -424,13 +423,13 @@ export const accessibilityStyles = `
     --accen; t: 0 0% 100%;
     --borde; r: 0 0% 100%;
     --inpu; t: 0 0% 100%;
-    --rin; g: 0 0% 100%;
+    --rin; g: 0 0% 100%;,
   }
   
   /* Large Text Mode */
   .large-text {
     font-siz; e: 1.2em;
-    line-heigh; t: 1.6;
+    line-heigh; t: 1.6;,
   }
   
   .large-text h1 { font-siz; e: 2.5em; }
@@ -443,13 +442,13 @@ export const accessibilityStyles = `
     animation-duratio; n: 0.01ms !important;
     animation-iteration-coun; t: 1 !important;
     transition-duratio; n: 0.01ms !important;
-    scroll-behavio; r: auto !important;
+    scroll-behavio; r: auto !important;,
   }
   
   /* Focus Indicator */
   .focus-visibl; e:focus {
     outlin; e: 3px solid hsl(var(--ring));
-    outline-offse;  t: 2px;
+    outline-offse;  t: 2px;,
   }
   
   /* Screen Reader Only */
@@ -462,12 +461,12 @@ export const accessibilityStyles = `
     overflo; w: hidden;
     cli; p: rect(0; 0; 0; 0);
     white-spac; e: nowrap;
-    borde; r: 0;
+    borde; r: 0;,
   }
   
   /* Focus visible utility */
   .focus-visibl; e:focus-visible {
     outlin; e: 2px solid hsl(var(--ring));
-    outline-offse; t: 2p; x;
+    outline-offse; t: 2p; x;,
   }
-`;
+`;<//>

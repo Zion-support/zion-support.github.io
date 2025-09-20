@@ -9,7 +9,7 @@ export interface Talent {
   availability: "full-time" | "part-time" | "contract" | "freelance", rating: number; reviewCount: number; portfolio: PortfolioItem[];
     education: Education[], certifications: Certification[];
     languages: Language[], socialLinks: SocialLinks; createdAt: Date; updatedAt: Date;
-    status: "active" | "inactive" | "suspended", verified: boolean; featured: boolean;
+    status: "active" | "inactive" | "suspended", verified: boolean; featured: boolean;,
 }
 
 export interface PortfolioItem {
@@ -69,5 +69,5 @@ export interface TalentFormData {
      };
   availability: string; portfolio: PortfolioItem[], education: Education[];
     certifications: Certification[], languages: Language[];
-    socialLinks: SocialLinks;
+    socialLinks: SocialLinks;,
 }

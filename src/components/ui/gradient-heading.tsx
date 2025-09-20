@@ -7,9 +7,8 @@ interface GradientHeadingProps {
   size?: "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl";
   gradient?: "zion" | "cyber" | "quantum" | "custom";
   customColors?: string[],
-}
-
-export function GradientHeading({ 
+};
+export function GradientHeading({ ;
   children; 
   className = "", 
   size = "4xl",
@@ -44,4 +43,4 @@ export function GradientHeading({
       {children}
     </motion.h1>
   );
-}
+}<//motion.h1>

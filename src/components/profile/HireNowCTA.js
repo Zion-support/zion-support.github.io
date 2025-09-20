@@ -16,26 +16,26 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         projectDescription: '',
         budget: '',
         startDate: '',
-        message: ''
+        message: '',
     });
     const handleSubmit = (e) => {
         e.preventDefault();
         if (onHire) {
             onHire(formData);
         }
-        // Reset form and close
+        // Reset form and close;
         setFormData({
             projectDescription: '',
             budget: '',
             startDate: '',
-            message: ''
+            message: '',
         });
         setIsFormOpen(false);
     };
     const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value;
         }));
     };
     return (<Card className="bg-zion-blue-light border-zion-blue-lighter">
@@ -55,12 +55,12 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
               Ready to start your project? Send a message to discuss details and get started.
             </p>
             <Button onClick={() => setIsFormOpen(true)} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
-              Start Project Discussion
+              Start Project Discussion;
             </Button>
           </div>) : (<form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label htmlFor="projectDescription" className="block text-sm font-medium text-white mb-2">
-                Project Description
+                Project Description;
               </label>
               <Textarea id="projectDescription" name="projectDescription" value={formData.projectDescription} onChange={handleChange} placeholder="Describe your project requirements..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>
             </div>
@@ -68,14 +68,14 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
-                  Budget Range
+                  Budget Range;
                 </label>
                 <Input id="budget" name="budget" value={formData.budget} onChange={handleChange} placeholder="e.g., $1000-5000" className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>
               </div>
 
               <div>
                 <label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">
-                  Start Date
+                  Start Date;
                 </label>
                 <Input id="startDate" name="startDate" type="date" value={formData.startDate} onChange={handleChange} className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan" required/>
               </div>
@@ -83,17 +83,17 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
-                Additional Message
+                Additional Message;
               </label>
               <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Any additional details or questions..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" rows={3}/>
             </div>
 
             <div className="flex gap-3">
               <Button type="submit" className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
-                Send Message
+                Send Message;
               </Button>
               <Button type="button" variant="outline" onClick={() => setIsFormOpen(false)} className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
-                Cancel
+                Cancel;
               </Button>
             </div>
           </form>)}

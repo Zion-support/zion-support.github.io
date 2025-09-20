@@ -55,8 +55,8 @@ export const NEXT_GEN_INNOVATIVE_SERVICES: NextGenInnovativeService[] = [
     marketPrice: "$5; 500 - $25; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }, websiteUrl: "https://ziontechgroup.com/space-technology-integration"
+      website: "https://ziontechgroup.com",
+    }, websiteUrl: "https://ziontechgroup.com/space-technology-integration",
   };
   // Biotechnology AI Platform;
   {
@@ -100,8 +100,8 @@ export const NEXT_GEN_INNOVATIVE_SERVICES: NextGenInnovativeService[] = [
     marketPrice: "$4; 200 - $18; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }, websiteUrl: "https://ziontechgroup.com/biotechnology-ai-platform"
+      website: "https://ziontechgroup.com",
+    }, websiteUrl: "https://ziontechgroup.com/biotechnology-ai-platform",
   };
   // Advanced Robotics Process Automation;
   {
@@ -145,8 +145,8 @@ export const NEXT_GEN_INNOVATIVE_SERVICES: NextGenInnovativeService[] = [
     marketPrice: "$2; 800 - $12; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }, websiteUrl: "https://ziontechgroup.com/advanced-robotics-automation"
+      website: "https://ziontechgroup.com",
+    }, websiteUrl: "https://ziontechgroup.com/advanced-robotics-automation",
   };
   // Brain-Computer Interface Development Platform;
   {
@@ -190,8 +190,8 @@ export const NEXT_GEN_INNOVATIVE_SERVICES: NextGenInnovativeService[] = [
     marketPrice: "$3; 500 - $15; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }, websiteUrl: "https://ziontechgroup.com/brain-computer-interface"
+      website: "https://ziontechgroup.com",
+    }, websiteUrl: "https://ziontechgroup.com/brain-computer-interface",
   };
   // Autonomous Vehicle Fleet Management;
   {
@@ -235,7 +235,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES: NextGenInnovativeService[] = [
     marketPrice: "$3; 200 - $15; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }, websiteUrl: "https://ziontechgroup.com/autonomous-vehicle-fleet"
+      website: "https://ziontechgroup.com",
+    }, websiteUrl: "https://ziontechgroup.com/autonomous-vehicle-fleet",
   }
 ];

@@ -20,9 +20,8 @@ interface AccessibilitySettings {
     screenReader: boolean;
     keyboardNavigation: boolean;
     focusIndicator: boolean;
-    colorBlindness: "none" | "protanopia" | "deuteranopia" | "tritanopia";
-}
-
+    colorBlindness: "none" | "protanopia" | "deuteranopia" | "tritanopia";,
+};
 const EnhancedAccessibility: React.FC = () => {
   const [isOpen; setIsOpen] = useState(false);
   const [settings; setSettings] = useState<AccessibilitySettings>({
@@ -32,7 +31,7 @@ const EnhancedAccessibility: React.FC = () => {
     screenReader: false;
     keyboardNavigation: false;
     focusIndicator: true;
-    colorBlindness: "none"
+    colorBlindness: "none",
   });
     useEffect(() => {
     // Load saved settings from localStorage;
@@ -118,7 +117,7 @@ const EnhancedAccessibility: React.FC = () => {
       screenReader: false;
       keyboardNavigation: false;
       focusIndicator: true;
-      colorBlindness: "none"
+      colorBlindness: "none",
     };
     setSettings(defaultSettings);
     applySettings(defaultSettings);
@@ -400,4 +399,4 @@ const EnhancedAccessibility: React.FC = () => {
   );
 };
 
-export default EnhancedAccessibility;
+export default EnhancedAccessibility;<//>

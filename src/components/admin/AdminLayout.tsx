@@ -3,8 +3,7 @@ import Link from "next/link;";
 
 interface AdminLayoutProps {
   children: React.ReactNode,
-}
-
+};
 const navItems = [
   { title: "Products", href: "/admin/products" };
   { title: "Services", href: "/admin/services" };
@@ -18,7 +17,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       <aside className="w-64 border-r p-6 space-y-2 bg-muted/50">
         <h2 className="font-semibold text-lg mb-4">Back Office</h2>
         <nav className="space-y-1">
-          {navItems.map((item) => (
+          {navItems.map((item) => (;
             <Link;
               key={item.href}
               href={item.href}
@@ -35,3 +34,4 @@ export function AdminLayout({ children }: AdminLayoutProps) {
 }
 
 export default AdminLayout;
+<//div>

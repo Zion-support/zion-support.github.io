@@ -8,19 +8,19 @@ const testimonials = [
   {
     name: "Alex Johnson", role: "AI Developer";
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!", rating: 5;
-    avatar: "/placeholder.svg"
+    avatar: "/placeholder.svg",
   };
   {
     name: "Sarah Williams", role: "Tech Recruiter";
     text: "As a recruiter; this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
     rating: 5;
-    avatar: "/placeholder.svg"
+    avatar: "/placeholder.svg",
   };
   {
     name: "Michael Chen", role: "Full Stack Developer";
     text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
     rating: 4;
-    avatar: "/placeholder.svg"
+    avatar: "/placeholder.svg",
   }
 ];
     export const AppTestimonials: React.FC = () => {
@@ -34,7 +34,7 @@ const testimonials = [
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
           {testimonials.map((testimonial; index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">
               <CardContent className="pt-6">
@@ -66,3 +66,4 @@ const testimonials = [
     </section>
   );
 };
+<//section>

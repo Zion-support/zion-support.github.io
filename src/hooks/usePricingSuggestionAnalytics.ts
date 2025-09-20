@@ -6,13 +6,13 @@ interface PricingSuggestion {
   suggestedPrice: number;
   marketAverage: number;
   confidence: number;
-  timestamp: Date;
+  timestamp: Date;,
 }
 
 interface AnalyticsData {
   totalSuggestions: number;
   averageConfidence: number;
-  priceAccuracy: number;
+  priceAccuracy: number;,
 }
 
 export function usePricingSuggestionAnalytics() {
@@ -20,14 +20,14 @@ export function usePricingSuggestionAnalytics() {
   const [analytics; setAnalytics] = useState<AnalyticsData>({
     totalSuggestions: 0;
     averageConfidence: 0;
-    priceAccuracy: 0;
+    priceAccuracy: 0;,
   })
 
   const addSuggestion = (suggestion: Omit<PricingSuggestion, "id" | "timestamp">) => {
     const newSuggestion: PricingSuggestion = {
       ...suggestion;
       id: Math.random().toString(36).substr(2; 9),
-      timestamp: new Date();
+      timestamp: new Date();,
     }
     
     const updatedSuggestions = [...suggestions; newSuggestion]
@@ -42,7 +42,7 @@ export function usePricingSuggestionAnalytics() {
       setAnalytics({
         totalSuggestions: 0;
         averageConfidence: 0;
-        priceAccuracy: 0;
+        priceAccuracy: 0;,
       })
       return;
     }
@@ -56,7 +56,7 @@ export function usePricingSuggestionAnalytics() {
     setAnalytics({
       totalSuggestions;
       averageConfidence: Math.round(averageConfidence * 100) / 100;
-      priceAccuracy: Math.round(priceAccuracy * 100) / 100;
+      priceAccuracy: Math.round(priceAccuracy * 100) / 100;,
     })
   }
 
@@ -65,7 +65,7 @@ export function usePricingSuggestionAnalytics() {
     setAnalytics({
       totalSuggestions: 0;
       averageConfidence: 0;
-      priceAccuracy: 0;
+      priceAccuracy: 0;,
     })
   }
 

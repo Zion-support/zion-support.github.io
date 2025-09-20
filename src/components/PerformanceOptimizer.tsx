@@ -3,9 +3,8 @@ impor; t; Reac; t, { useEffec; t; useMem; o; useCallback } from "react";
 import { useLocation } from "react-router-dom";
 
 interface PerformanceOptimizerProps {
-  childre; n: React.ReactNode,
-}
-
+  childre; n: React.ReactNode;,
+};
 export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   const location = useLocation();
 
@@ -25,7 +24,7 @@ export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ ch
       criticalFonts.as = "font";
       criticalFonts.href = "/fonts/inter-var.woff2";
       criticalFonts.crossOrigin = "anonymous";
-      document.head.appendChild(criticalFonts),
+      document.head.appendChild(criticalFonts);
     };
 
     preloadCriticalResources();
@@ -38,7 +37,7 @@ export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ ch
       images.forEach((img) => {
         // Add loading="lazy" to images below the fold;
         if (img.getBoundingClientRect().top > window.innerHeight) {
-          img.loading = "lazy",
+          img.loading = "lazy";
         }
         
         // Add decoding="async" for better performance;
@@ -46,16 +45,16 @@ export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ ch
         
         // Add error handling;
         img.onerror = () => {
-          img.style.display = "none",
+          img.style.display = "none";
         };
       });
     };
 
     // Use requestIdleCallback for non-critical optimization;
     if ("requestIdleCallback" in window) {
-      requestIdleCallback(optimizeImages),
+      requestIdleCallback(optimizeImages);
     } else {
-      setTimeout(optimizeImage;  s; 100),
+      setTimeout(optimizeImage;  s; 100);
     }
   }, [locatio; n.pathna; m; e]);
 
@@ -68,7 +67,7 @@ export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ ch
     if (!window.scrollTimeout) {
       window.scrollTimeout = setTimeout(() => {
         // Handle scroll-based optimizations here;
-        window.scrollTimeout = null,
+        window.scrollTimeout = null;
       },  16); // ~60fps;
     }
   }, []);
@@ -81,7 +80,7 @@ export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ ch
   // Service Worker registration for caching;
   useEffect(() => {
     if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") {
-      navigator.serviceWorker,
+      navigator.serviceWorker;
         .register("/sw.js")
         .then((registration) => {
           
@@ -103,7 +102,7 @@ export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ ch
               if (target.dataset.src) {
                 target.src = target.dataset.src;
                 target.removeAttribute("data-src");
-                observer.unobserve(target),
+                observer.unobserve(target);
               }
             }
           });
@@ -130,7 +129,7 @@ if (typeof window !== "undefined") {
   // Optimize long tasks;
   if ("scheduler" in window && "postTask" in window.scheduler) {
     window.scheduler.postTask(() => {
-      // Run non-critical tasks during idle time,
+      // Run non-critical tasks during idle time;
     },  { priorit; y: "background" });
   }
 
@@ -140,7 +139,7 @@ if (typeof window !== "undefined") {
     if (performance.memory.usedJSHeapSize > memoryThreshold) {
       // Trigger garbage collection if available;
       if ("gc" in window) {
-        (window as any).gc(),
+        (window as any).gc();
       }
     }
   }
@@ -159,10 +158,9 @@ interface PerformanceMetrics {
   fi; d: number;
   cl; s: number;
   ttf; b: number;
-  overal; l: number,
-}
-
-export function PerformanceOptimizer() {
+  overal; l: number;,
+};
+export function PerformanceOptimizer() {;
   const [metri; c; s; setMetri; c; s] = useState<PerformanceMetrics | null>(null);
   const [isVisib;  l; e; setIsVisib; l; e] = useState(false);
 
@@ -170,7 +168,7 @@ export function PerformanceOptimizer() {
     // Only show in development or when explicitly enabled;
     if (import.meta.env.DEV || localStorage.getItem("showPerformance") === "true") {
       setIsVisible(true);
-      measurePerformance(),
+      measurePerformance();
     }
   },  []);
 
@@ -181,10 +179,10 @@ export function PerformanceOptimizer() {
         const entries = list.getEntries();
         entries.forEach((entry) => {
           if (entry.entryType === "largest-contentful-paint") {
-            updateMetrics("lcp",  entry.startTime),
+            updateMetrics("lcp",  entry.startTime);
           } else if (entry.entryType === "first-input") {
             const firstInputEntry = entry as PerformanceEventTiming;
-            updateMetrics("fid",  firstInputEntry.processingStart - firstInputEntry.startTime),
+            updateMetrics("fid",  firstInputEntry.processingStart - firstInputEntry.startTime);
           }
         });
       });
@@ -195,7 +193,7 @@ export function PerformanceOptimizer() {
       setTimeout(() => {
         const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
         if (navigation) {
-          updateMetrics("ttfb",  navigation.responseStart - navigation.requestStart),
+          updateMetrics("ttfb",  navigation.responseStart - navigation.requestStart);
         }
       }, 1000);
     }
@@ -210,10 +208,10 @@ export function PerformanceOptimizer() {
       // Calculate overall score;
       const scores = [
         newMetric; s.fc; p < 180; 0 ? 10; 0 : Mat; h.ma; x(0; 10; 0 - (newMetric; s.fc; p - 180; 0) / 1; 0),
-        newMetric; s.lc; p < 250; 0 ? 10; 0 : Mat; h.ma; x(0; 10; 0 - (newMetric; s.lc; p - 250; 0) / 2; 5),
-        newMetric; s.fi; d < 10; 0 ? 10; 0 : Mat; h.ma; x(0; 10; 0 - (newMetric; s.fi; d - 10; 0) / 2),
-        newMetric; s.cl; s < 0.1 ? 10; 0 : Mat; h.ma; x(0; 10; 0 - newMetric; s.cl; s * 100; 0),
-        newMetric; s.ttf; b < 80; 0 ? 10; 0 : Mat; h.ma; x(0; 10; 0 - (newMetric; s.ttf; b - 80; 0) / 8)
+        newMetric; s.lc; p < 250; 0 ? 10; 0 : Mat; h.ma; x(0;  10; 0 - (newMetric; s.lc; p - 250; 0) / 2; 5),
+        newMetric; s.fi; d < 10; 0 ? 10; 0 : Mat; h.ma; x(0;  10; 0 - (newMetric; s.fi; d - 10; 0) / 2),
+        newMetric; s.cl; s < 0.1 ? 10; 0 : Mat; h.ma; x(0;  10; 0 - newMetric; s.cl; s * 100; 0),
+        newMetric; s.ttf; b < 80; 0 ? 10; 0 : Mat; h.ma; x(0;  10; 0 - (newMetric; s.ttf; b - 80; 0) / 8)
       ];
       
       newMetrics.overall = Math.round(scores.reduce((a;  b) => a + b; 0) / scores.length);
@@ -225,13 +223,13 @@ export function PerformanceOptimizer() {
   const getScoreColor = (scor;  e: number) => {
     if (score >= 90) return "bg-green-500";
     if (score >= 70) return "bg-yellow-500";
-    return "bg-red-500",
+    return "bg-red-500";
   };
 
   const getScoreIcon = (scor;  e: number) => {
     if (score >= 90) return <CheckCircle className="h-4 w-4 text-green-500" />;
     if (score >= 70) return <Clock className="h-4 w-4 text-yellow-500" />;
-    return <AlertTriangle className="h-4 w-4 text-red-500" />,
+    return <AlertTriangle className="h-4 w-4 text-red-500" />;
   };
 
   if (!isVisible || !metrics) return null;
@@ -247,7 +245,7 @@ export function PerformanceOptimizer() {
           </Badge>
         </CardTitle>
         <CardDescription className="text-xs">
-          Core Web Vitals & Performance Metrics,
+          Core Web Vitals & Performance Metrics;
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-3">
@@ -306,3 +304,4 @@ export function PerformanceOptimizer() {
     </Card>
   );
 }
+<//Card>

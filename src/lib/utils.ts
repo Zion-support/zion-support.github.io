@@ -8,7 +8,7 @@ export function formatDate(date: Date | string): string {
     return d.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
-    day: "numeric"
+    day: "numeric",
   });
 }
 

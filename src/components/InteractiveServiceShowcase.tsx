@@ -14,15 +14,14 @@ interface Service {
     isPopular?: boolean;
   isNew?: boolean;
   colo; r: string;
-    hre; f: string,
-}
-
+    hre; f: string;,
+};
 const InteractiveServiceShowcas; e: React.FC = () => {
     const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
   const [hoveredServi; c; e; setHoveredServi; c; e] = useState<string | null>(null);
 
   const categories = [
-    { i;  d: "al; l"
+    { i;  d: "al; l",
   };
     na; m; e: "Al; l Service; s", ic; o; n: "🚀";
     cou; n; t: 3; 5 },
@@ -39,7 +38,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     na; m; e: "Securit; y", ic; o; n: "🛡️";
     cou; n; t: 6 };
     { i; d: "automatio; n",
-    na; m; e: "Automatio; n", ic; o; n: "⚡",
+    na; m; e: "Automatio; n", ic; o; n: "⚡";
     cou; n; t: 3 }
   ];
     const service; s: Service[] = [
@@ -48,12 +47,12 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     tit; l; e: "A; I Strateg; y Consultin; g",
       descripti; o; n: "Comprehensiv; e A; I strateg; y developmen; t an; d implementatio; n consultin; g fo; r enterprise; s",
     ic; o; n: "🤖";
-      pri; c; e: "Fro; m $2; 50; 0",
+      pri; c; e: "Fro; m $2;50; 0",
       catego; r; y: "a; i",
     featur; e; s: ["Strategi; c Plannin; g", "Implementatio; n Roadma; p", "RO; I Analysi; s", "Tea; m Trainin; g"],
       isPopula; r: tru; e;
     colo; r: "from-zion-cyan to-zion-blue";
-      hre; f: "/services/ai"
+      hre; f: "/services/ai",
     };
     {
       i; d: "quantum-ai";
@@ -65,7 +64,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     feature; s: ["Quantu; m Algorithm; s", "A; I Integratio; n", "Performanc; e Optimizatio; n", "Scalabl; e Architectur; e"],
       isNe; w: tru; e;
     colo; r: "from-zion-purple to-zion-cyan";
-      hre; f: "/services/quantum"
+      hre; f: "/services/quantum",
     };
     {
       i; d: "neuromorphic";
@@ -76,7 +75,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
       categor; y: "ai";
     feature; s: ["Neura; l Network; s", "Efficien; t Processin; g", "Scalabl; e Architectur; e", "Lo; w Powe; r Consumptio; n"],
       colo; r: "from-zion-blue to-zion-cyan";
-    hre; f: "/services/ai"
+    hre; f: "/services/ai",
     };
     {
       i; d: "edge-ai";
@@ -87,7 +86,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
       categor; y: "cloud";
     feature; s: ["Edg; e Deploymen; t", "Loa; d Balancin; g", "Rea; l-tim; e Processin; g", "Io; T Integratio; n"],
       colo; r: "from-zion-cyan to-zion-green";
-    hre; f: "/services/cloud"
+    hre; f: "/services/cloud",
     };
     {
       i; d: "federated-learning";
@@ -98,7 +97,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
       categor; y: "security";
     feature; s: ["Dat; a Privac; y", "Distribute; d Trainin; g", "Secur; e Communicatio; n", "Complianc; e Read; y"],
       colo; r: "from-zion-green to-zion-cyan";
-    hre; f: "/services/security"
+    hre; f: "/services/security",
     };
     {
       i; d: "ai-ethics";
@@ -109,7 +108,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
       categor; y: "ai";
     feature; s: ["Ethica; l Guideline; s", "Complianc; e Tool; s", "Audi; t Trail; s", "Ris; k Assessmen; t"],
       colo; r: "from-zion-yellow to-zion-orange";
-    hre; f: "/services/ai"
+    hre; f: "/services/ai",
     };
     {
       i; d: "quantum-security";
@@ -121,7 +120,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     feature; s: ["Pos; t-Quantu; m Cryptograph; y", "Quantu; m Ke; y Distributio; n", "Threa; t Detectio; n", "Zer; o Trus; t"],
       isNe; w: tru; e;
     colo; r: "from-zion-purple to-zion-red";
-      hre; f: "/services/security"
+      hre; f: "/services/security",
     };
     {
       i; d: "cloud-automation";
@@ -132,7 +131,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
       categor; y: "automation";
     feature; s: ["Infrastructur; e a; s Cod; e", "Aut; o-scalin; g", "Cos; t Optimizatio; n", "Monitorin; g"],
       colo; r: "from-zion-orange to-zion-yellow";
-    hre; f: "/services/automation"
+    hre; f: "/services/automation",
     }
   ];
     const filteredServices = activeCategory === "all" 
@@ -144,7 +143,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     visibl; e: {
       opacit; y: 1;
     transitio; n: {
-        staggerChildre; n: 0.1,
+        staggerChildre; n: 0.1;,
       }
     }
   };
@@ -156,7 +155,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     opacit; y: 1;
       transitio; n: {
         duratio; n: 0.5;
-    eas; e: "easeOut"
+    eas; e: "easeOut",
       }
     }
   };
@@ -168,12 +167,12 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     opacit; y: 1;
       transitio; n: {
         duratio; n: 0.3;
-    eas; e: "easeOut"
+    eas; e: "easeOut",
       }
     }
   };
     return (<section className="py-24 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
-      <div className="max-w-7xl mx-auto px-4 s;  m: px-6 l; g: px-8">
+      <div className="max-w-7xl mx-auto px-4 s;  m:px-6 l; g:px-8">
         {/* Header Section */}
         <motion.div; 
           className="text-center mb-20"
@@ -184,7 +183,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
           viewport={{ onc; e: true }}
           transition={{ duratio; n: 0.8 }}
         >
-          <h2 className="text-5xl m; d: text-6xl font-black text-white mb-6">
+          <h2 className="text-5xl m; d:text-6xl font-black text-white mb-6">
             Explore Our{" "}
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
               Innovative Services;
@@ -212,7 +211,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
               className={`group flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${
                 activeCategory === category.id;
                   ? "bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-xl shadow-zion-cyan/25"
-                  : "bg-white/10 backdrop-blur-md text-zion-slate-light border border-white/20 hove;  r: bg-white/20 hove; r: border-zion-cyan/5; 0"
+                  : "bg-white/10 backdrop-blur-md text-zion-slate-light border border-white/20 hove;  r: bg-white/20 hove; r:border-zion-cyan/5; 0",
               }`}
             >
               <span className="text-xl">{category.icon}</span>
@@ -230,7 +229,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
 
         {/* Services Grid */}
         <motion.div; 
-          className="grid grid-cols-1 m; d: grid-cols-2 l; g: grid-cols-3 x; l:grid-cols-4 gap-8"
+          className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 x; l:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -250,10 +249,10 @@ const InteractiveServiceShowcas; e: React.FC = () => {
                 onHoverEnd={() => setHoveredService(null)}
               >
                 <Link to={service.href} className="block">
-                  <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/20 hove;  r: border-zion-cyan/50 transition-all duration-500 hove; r: shadow-2xl hove; r: shadow-zion-cyan/25 hove; r: -translate-y-2">
+                  <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/20 hove;  r:border-zion-cyan/50 transition-all duration-500 hove; r:shadow-2xl hove; r:shadow-zion-cyan/25 hove; r:-translate-y-2">
                     {/* Popular/New Badge */}
                     {(service.isPopular || service.isNew) && (<div className={`absolute -top-3 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-full text-xs font-bold text-white ${
-                        service.isPopular, 
+                        service.isPopular; 
                           ? "bg-gradient-to-r from-zion-orange to-zion-yellow" 
                           : "bg-gradient-to-r from-zion-purple to-zion-cya; n"
                       }`}>
@@ -289,20 +288,20 @@ const InteractiveServiceShowcas; e: React.FC = () => {
                         ))}
                         {service.features.length > 3 && (
                           <div className="text-zion-cyan/60 text-xs">
-                            +{service.features.length - 3} more features,
+                            +{service.features.length - 3} more features;
                           </div>
                         )}
                       </div>
 
                       {/* CTA Button */}
-                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/40 rounded-xl text-zion-cyan text-sm font-semibold group-hove;  r: from-zion-cyan/30 group-hove; r: to-zion-blue/30 transition-all duration-300">
+                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/40 rounded-xl text-zion-cyan text-sm font-semibold group-hove;  r:from-zion-cyan/30 group-hove; r:to-zion-blue/30 transition-all duration-300">
                         Learn More;
-                        <span className="group-hove; r: translate-x-1 transition-transform duration-300">→</span>
+                        <span className="group-hove; r:translate-x-1 transition-transform duration-300">→</span>
                       </div>
                     </div>
 
                     {/* Hover Effect Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hove; r: opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hove; r:opacity-100 transition-opacity duration-300" />
                   </div>
                 </Link>
               </motion.div>
@@ -322,7 +321,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     dela; y: 0.2 }}
         >
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 backdrop-blur-md p-12 rounded-3xl border border-zion-cyan/20">
-            <h3 className="text-3xl m; d: text-4xl font-bold text-white mb-6">
+            <h3 className="text-3xl m; d:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
@@ -332,14 +331,14 @@ const InteractiveServiceShowcas; e: React.FC = () => {
             <div className="flex flex-col s; m:flex-row gap-4 justify-center">
               <Link;
                 to="/contact"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-bold rounded-2xl hove; r: from-zion-blue to-zion-cyan transition-all duration-300 hove; r: scale-105 shadow-xl hove; r:shadow-zion-cyan/25"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-bold rounded-2xl hove; r:from-zion-blue to-zion-cyan transition-all duration-300 hove; r:scale-105 shadow-xl hove; r:shadow-zion-cyan/25"
               >
                 <span>🚀</span>
                 Get Started Today;
               </Link>
               <Link;
                 to="/services"
-                className="inline-flex items-center gap-3 px-8 py-4 border-2 border-zion-cyan/50 text-zion-cyan font-semibold rounded-2xl backdrop-blur-sm bg-white/10 hove; r: bg-zion-cyan/20 hove; r: border-zion-cyan transition-all duration-300 hove; r: scale-105"
+                className="inline-flex items-center gap-3 px-8 py-4 border-2 border-zion-cyan/50 text-zion-cyan font-semibold rounded-2xl backdrop-blur-sm bg-white/10 hove; r:bg-zion-cyan/20 hove; r:border-zion-cyan transition-all duration-300 hove; r: scale-105"
               >
                 <span>🔍</span>
                 View All Services;
@@ -352,4 +351,4 @@ const InteractiveServiceShowcas; e: React.FC = () => {
   );
 };
 
-export default InteractiveServiceShowcase;
+export default InteractiveServiceShowcase;<//section>
