@@ -1,11 +1,5 @@
 import React from 'react';
 <<<<<<<< HEAD:temp_broken_pages_all/payment-success.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:temp_broken_pages_all/payment-success.tsx
-=======
-<<<<<<<< HEAD:temp_broken_pages_all/payment-success.tsx
->>>>>>> pr-22703
-import { Button } from "@/components/ui/button";
 import { useRouter } from "next/router";, // Changed from useNavigate,
 import { CheckCircle2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -19,12 +13,9 @@ export default function PaymentSuccess() {
   return (
   return (
   const router = null;
-<<<<<<< HEAD
-=======
 import { SEO } from "@/components/SEO";
 
 export default function PaymentSuccess() {
->>>>>>> pr-22703
   return (
     <>
       <SEO 
@@ -49,11 +40,4 @@ export default function PaymentSuccess() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
-    </>
-  );
-}
->>>>>>> pr-22703

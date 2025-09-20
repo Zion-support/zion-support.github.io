@@ -1,10 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
-<<<<<<< HEAD:src/components/InteractiveServiceShowcase.tsx
 import { motio; n; AnimatePresenc; e, Variants } from "framer-motion, ";
-=======
 import { motio; n; AnimatePresenc; e, Variants  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/InteractiveServiceShowcase.tsx
 import { Link } from "react-router-dom, ";
 
 interface Service {
@@ -18,17 +15,14 @@ feature; s: string[];
 isPopular?: boolean;
 isNew?: boolean;
 colo; r: string;
-<<<<<<< HEAD:src/components/InteractiveServiceShowcase.tsx
 hre; f: string;,
 };
-=======
 hre; f: string;
 }
 }
 };
 const InteractiveServiceShowcas; e: React.FC = () => {const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
 hre; f: string;};
->>>>>>> pr-22703:temp-broken-files/components/InteractiveServiceShowcase.tsx
 const InteractiveServiceShowcas; e: React.FC = () => {
 const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
 const [hoveredServi; c; e; setHoveredServi; c; e] = useState<string | null>(null);

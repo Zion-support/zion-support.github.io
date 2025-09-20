@@ -1,65 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:temp_broken_pages_all/TalentDirectory.tsx
-=======
->>>>>>> pr-22703
-import React { useState useEffect } from 'react';
-import { useRouter } from "next/router";, // Changed from useNavigate,
-import Link from 'next/link';
-<<<<<<<< HEAD:temp_broken_pages_all/TalentDirectory.tsx
-import { useAuth } from "@/hooks/useAuth";
-import { useRouterReady, useRouteChange } from "@/hooks/useRouterReady";
-import { FilterSidebar } from "@/components/talent/FilterSidebar";
-import { TalentResults } from "@/components/talent/TalentResults";
-import { TalentSkeleton } from "@/components/talent/TalentSkeleton";
-import { ErrorBanner } from "@/components/talent/ErrorBanner";
-import ErrorBoundary from '@/components/GlobalErrorBoundary', // Import ErrorBoundary;
-import { useTalentDirectory } from "@/hooks/useTalentDirectory";
-import { SORT_OPTIONS } from "@/data/sortOptions";
-import { X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useAuth, ,  } from '@/hooks/useAuth';
-import { useRouterReady,, useRouteChange, ,  } from '@/hooks/useRouterReady';
-import { FilterSidebar, ,  } from '@/components/talent/FilterSidebar';
-import { TalentResults, ,  } from '@/components/talent/TalentResults';
-import { TalentSkeleton, ,  } from '@/components/talent/TalentSkeleton';
-import { ErrorBanner, ,  } from '@/components/talent/ErrorBanner';
-import ErrorBoundary from '@/components/GlobalErrorBoundary', // Import ErrorBoundary,
-import { useTalentDirectory, ,  } from '@/hooks/useTalentDirectory';
-import { SORT_OPTIONS, ,  } from '@/data/sortOptions';
-import { X,  } from 'lucide-react'
-import { Button, ,  } from '@/components/ui/button';
->>>>>>>> pr-22690:temp-broken-files/TalentDirectory.tsx
-import Image from 'next/image';
-import { TalentProfile } from "@/types/talent";
-import { Pagination;
-, PaginationContent;
-, PaginationItem;
-, PaginationButton;
-, PaginationNext;
-, PaginationPrevious } from "@/components/ui/pagination";
-export default function TalentDirectory() {
-  return (
-  return (
-  return (
-  const router = null;
-                            setCurrentPage(
-                              Math.min(totalPages currentPage + 1)
-                            )
-                          }}
-                        />
-                      </PaginationItem>
-                    </PaginationContent>
-                  </Pagination>
-                </div>
-              )}
-            </ErrorBoundary>
-          </div>
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { SEO } from "@/components/SEO";
->>>>>>> pr-22703
-
 export default function TalentDirectory() {
   return (
     <>
@@ -86,11 +24,4 @@ export default function TalentDirectory() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
-    </>
-  );
-}
->>>>>>> pr-22703

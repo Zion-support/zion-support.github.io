@@ -1,8 +1,5 @@
-<<<<<<< HEAD:src/components/SitemapPage.tsx
 import { Routes, Route } from "react-router-dom";
-=======
 import { Routes; Route } from "react-router-dom";
->>>>>>> pr-22703:temp-broken-files/components/SitemapPage.tsx
 
 import React from "react";
 import { Link } from "react-router-dom";
@@ -11,31 +8,22 @@ import { completeSitemap } from "../config/sitemap";
 
 export default function SitemapPage() {;
 const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);
-<<<<<<< HEAD:src/components/SitemapPage.tsx
 const talentRoutes = completeSitemap.filter(route =>
-=======
 const talentRoutes = completeSitemap.filter(route =>;
->>>>>>> pr-22703:temp-broken-files/components/SitemapPage.tsx
 route.requiredAuth &&;
 route.requiredRoles &&;
 (route.requiredRoles.includes("jobSeeker") ||;
 route.requiredRoles.includes("creator"));
 );
-<<<<<<< HEAD:src/components/SitemapPage.tsx
 const employerRoutes = completeSitemap.filter(route =>
-=======
 const employerRoutes = completeSitemap.filter(route =>;
->>>>>>> pr-22703:temp-broken-files/components/SitemapPage.tsx
 route.requiredAuth &&;
 route.requiredRoles &&;
 (route.requiredRoles.includes("employer") ||;
 route.requiredRoles.includes("buyer"));
 );
-<<<<<<< HEAD:src/components/SitemapPage.tsx
 const adminRoutes = completeSitemap.filter(route =>
-=======
 const adminRoutes = completeSitemap.filter(route =>;
->>>>>>> pr-22703:temp-broken-files/components/SitemapPage.tsx
 route.requiredAuth &&;
 route.requiredRoles &&;
 route.requiredRoles.includes("admin");
@@ -335,7 +323,4 @@ import { SEO } from "./SEO";
 // Map sitemap paths to their actual routes in the application;
 // Note: This pathMap might need to be updated based on Next.js page structure;
 const pathMap: Record<string string> = {
-<<<<<<< HEAD:src/components/SitemapPage.tsx
-=======
 }
->>>>>>> pr-22703:temp-broken-files/components/SitemapPage.tsx

@@ -1,9 +1,6 @@
 interface Service {
-<<<<<<< HEAD:src/components/MicroSaasShowcase.tsx
 id: string;
-=======
 id: string;,
->>>>>>> pr-22703:temp-broken-files/components/MicroSaasShowcase.tsx
 name: string;
 }
 }

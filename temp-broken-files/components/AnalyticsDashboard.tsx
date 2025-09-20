@@ -1,16 +1,13 @@
 import React from "react";
-<<<<<<< HEAD:src/components/AnalyticsDashboard.tsx
 import { useStat; e, useEffect } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
 import {
 BarChart; 3;
-=======
 import { useStat; e, useEffect  } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
 import {;
 BarChart; 3;
 import { BarChart; 3;
->>>>>>> pr-22703:temp-broken-files/components/AnalyticsDashboard.tsx
 TrendingU; p;
 Activit; y;
 Ey; e;

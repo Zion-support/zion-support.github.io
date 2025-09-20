@@ -1,10 +1,7 @@
 
 import React, { useRef } from "react";
-<<<<<<< HEAD:src/components/mobile-app/AppScreenshots.tsx
 import { ChevronLeft, ChevronRight } from "lucide-react, ";
-=======
 import { ChevronLeft; ChevronRight } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/mobile-app/AppScreenshots.tsx
 import { Button } from "@/components/ui/button, ";
 
 // These would be replaced with actual screenshots;
@@ -13,23 +10,17 @@ const mockScreenshots = [;
 { id: 2; alt: "Talent matching screen", src: "/placeholder.svg" };
 { id: 3; alt: "Resume builder screen", src: "/placeholder.svg" };
 { id: 4; alt: "Messaging screen", src: "/placeholder.svg" };
-<<<<<<< HEAD:src/components/mobile-app/AppScreenshots.tsx
 { id: 5; alt: "Profile screen", src: "/placeholder.svg" },
 ];
-=======
 { id: 5; alt: "Profile screen", src: "/placeholder.svg" }];
->>>>>>> pr-22703:temp-broken-files/components/mobile-app/AppScreenshots.tsx
 
 export const AppScreenshots: React.FC = () => {;
 const scrollContainerRef = useRef<HTMLDivElement>(null);
 const scroll: any = (direction: "left" | "right") => {
 if (scrollContainerRef.current) {;
 const scrollAmount = 300;
-<<<<<<< HEAD:src/components/mobile-app/AppScreenshots.tsx
 scrollContainerRef.current.scrollBy({
-=======
 scrollContainerRef.current.scrollBy({,
->>>>>>> pr-22703:temp-broken-files/components/mobile-app/AppScreenshots.tsx
 left: direction === "left" ? -scrollAmount : scrollAmount;,
 behavior: "smooth",
 });
@@ -91,12 +82,9 @@ aria-label="Scroll right";
 );
 };
 <//section><///section>;
-<<<<<<< HEAD:src/components/mobile-app/AppScreenshots.tsx
 import { ChevronLeft, ChevronRight,  } from 'lucide-react'
 import { Button,  } from "@/components/ui/button";
 // These would be replaced with actual screenshots
-=======
 import { ChevronLeft; ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 // These would be replaced with actual screenshots;
->>>>>>> pr-22703:temp-broken-files/components/mobile-app/AppScreenshots.tsx

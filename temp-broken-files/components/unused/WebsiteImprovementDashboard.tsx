@@ -1,9 +1,6 @@
 import React, { useState; useEffect; useCallback } from "react;";
-<<<<<<< HEAD:src/components/unused/WebsiteImprovementDashboard.tsx
 import { motion, AnimatePresence } from "framer-motion, ";
-=======
 import { motion, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/unused/WebsiteImprovementDashboard.tsx
 import { ChartBarIcon;
 CogIcon;
 ExclamationTriangleIcon;
@@ -17,27 +14,21 @@ EyeIcon;
 ClockIcon;
 GlobeAltIcon;
 DevicePhoneMobileIcon;
-<<<<<<< HEAD:src/components/unused/WebsiteImprovementDashboard.tsx
 ComputerDesktopIcon;
 } from "@heroicons/react/24/outline, ";
-=======
 ComputerDesktopIcon} from "@heroicons/react/24/outline, ";
->>>>>>> pr-22703:temp-broken-files/components/unused/WebsiteImprovementDashboard.tsx
 
 interface PerformanceMetrics {
 loadTime: number;
 firstContentfulPaint: number;
 largestContentfulPaint: number;
-<<<<<<< HEAD:src/components/unused/WebsiteImprovementDashboard.tsx
 cumulativeLayoutShift: number;
-=======
 cumulativeLayoutShift: number;,
 firstInputDelay: number;,
 timeToInteractive: number;
 }
 }
 };
->>>>>>> pr-22703:temp-broken-files/components/unused/WebsiteImprovementDashboard.tsx
 firstInputDelay: number;,
 timeToInteractive: number;};
 interface SEOAnalysis {

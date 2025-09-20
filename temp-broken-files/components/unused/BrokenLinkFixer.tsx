@@ -1,9 +1,6 @@
 import React, { useState; useEffect; useCallback } from "react;";
-<<<<<<< HEAD:src/components/unused/BrokenLinkFixer.tsx
 import { motion, AnimatePresence } from "framer-motion, ";
-=======
 import { motion, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/unused/BrokenLinkFixer.tsx
 import { LinkIcon;
 ExclamationTriangleIcon;
 CheckCircleIcon;
@@ -13,18 +10,15 @@ WrenchScrewdriverIcon;
 InformationCircleIcon;
 MagnifyingGlassIcon;
 GlobeAltIcon;
-<<<<<<< HEAD:src/components/unused/BrokenLinkFixer.tsx
 DocumentTextIcon;
 } from "@heroicons/react/24/outline, ";
 
 interface LinkStatus {
 url: string;
-=======
 DocumentTextIcon} from "@heroicons/react/24/outline, ";
 
 interface LinkStatus {
 url: string;,
->>>>>>> pr-22703:temp-broken-files/components/unused/BrokenLinkFixer.tsx
 status: "healthy" | "broken" | "checking" | "unknown";
 statusCode?: number;
 error?: string;,

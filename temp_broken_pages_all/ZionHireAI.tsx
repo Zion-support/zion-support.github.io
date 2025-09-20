@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function ZionHireAI() {
-<<<<<<< HEAD:temp_broken_pages_all/ZionHireAI.tsx
   return (
   return (
   return (
@@ -32,5 +31,4 @@ export default function ZionHireAI() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ZionHireAI.tsx
 }

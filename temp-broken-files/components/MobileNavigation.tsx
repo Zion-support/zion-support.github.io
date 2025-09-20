@@ -1,6 +1,5 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
-<<<<<<< HEAD:src/components/MobileNavigation.tsx
 import { Lin; k, useLocation } from "react-router-dom, ";
 import { motio; n; AnimatePresenc; e, Variants } from "framer-motion, ";
 import { Men; u; X; ChevronDow; n; Searc; h; Use; r, Bell } from "lucide-react, ";
@@ -9,7 +8,6 @@ interface MobileNavigationProps {
 isOpe; n: boolean;
 onToggl; e: () => void;,
 };
-=======
 import { Lin; k, useLocation  } from "react-router-dom, ";
 import { motio; n; AnimatePresenc; e, Variants  } from "framer-motion, ";
 import { Men; u; X; ChevronDow; n; Searc; h; Use; r, Bell  } from "lucide-react, ";
@@ -21,7 +19,6 @@ onToggl; e: () => void;
 }
 };
 onToggl; e: () => void;};
->>>>>>> pr-22703:temp-broken-files/components/MobileNavigation.tsx
 const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n; onToggle }) => {
 const [activeDropdo; w; n; setActiveDropdo; w; n] = useState<string | null>(null);
 const [searchQue;  r; y; setSearchQue; r; y] = useState("");

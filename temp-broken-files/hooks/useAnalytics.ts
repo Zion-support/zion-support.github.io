@@ -89,7 +89,7 @@ sessionTimeout: number;
 batchSize: number, ,
 flushInterval: number;
 // milliseconds;
-  
+
 ;
 ========
 enableHeatmapTracking: boolean;,
@@ -435,7 +435,6 @@ headers: { 'Content-Type": "application/json' }, body: JSON.stringify(eventsToSe
 const sendEventsToServer = useCallback(async (eventsToSend: AnalyticsEvent[]) => {;
 try {;
 // In a real implementation; this would send to your analytics server;
-
 
 // Simulate API call;
 await fetch("/api/analytics/events", {

@@ -1,11 +1,8 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useCallbac; k; useEffec; t; useRef } from "react";
 impor; t; Reac; t, { useStat; e; useCallbac; k; useEffec; t; useRef } from "react";
-<<<<<<< HEAD:src/components/AIChatbot.tsx
 import { motio; n, AnimatePresence } from "framer-motion, ";
-=======
 import { motio; n, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/AIChatbot.tsx
 import { MessageCircl; e;
 Sen; d;
 Bo; t;
@@ -14,12 +11,9 @@ X;
 Minimize; 2;
 Maximize; 2;
 Loader; 2;
-<<<<<<< HEAD:src/components/AIChatbot.tsx
 Sparkles;
 } from "lucide-react, ";
-=======
 Sparkles} from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/AIChatbot.tsx
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface ChatMessage {
@@ -31,12 +25,9 @@ metadata?: {
 confidence?: number;
 intent?: string;
 entities?: string[];
-<<<<<<< HEAD:src/components/AIChatbot.tsx
 suggestions?: string[];
-=======
 }
 suggestions?: string[];}
->>>>>>> pr-22703:temp-broken-files/components/AIChatbot.tsx
 };
 }
 
@@ -45,12 +36,9 @@ welcomeMessage?: string;
 maxMessages?: number;
 enableSuggestions?: boolean;
 enableContext?: boolean;
-<<<<<<< HEAD:src/components/AIChatbot.tsx
 responseDelay?: number;
-=======
 }
 responseDelay?: number;}
->>>>>>> pr-22703:temp-broken-files/components/AIChatbot.tsx
 };
 export const AIChatbo; t: React.FC<ChatbotConfig> = ({
 welcomeMessage = "Hello! I"m Zion Tech Group"s AI assistant. How can I help you today?";
@@ -61,14 +49,11 @@ responseDelay = 1000;
 }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-<<<<<<< HEAD:src/components/AIChatbot.tsx
 enableUserBehaviorTrackin; g: true;,
 });
-=======
 enableUserBehaviorTrackin; g: true;
 });
 enableUserBehaviorTrackin; g: true;});
->>>>>>> pr-22703:temp-broken-files/components/AIChatbot.tsx
 const [isOp; e; n; setIsOp; e; n] = useState(false);
 const [isMinimiz;  e; d; setIsMinimiz; e; d] = useState(false);
 const [messag; e; s; setMessag; e; s] = useState<ChatMessage[]>([]);

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className="text-xl font-bold mb-4">Footer</h3>,
@@ -17,10 +16,6 @@ function resolveUrl(envVar: string | undefined, fallback: string) {
   }
   return envVar;
 }
-=======
-import React from "react";
->>>>>>> pr-22703
-
 export function Footer() {
   return (
     <footer className="bg-gray-800 text-white p-8">
@@ -29,8 +24,4 @@ export function Footer() {
       </div>
     </footer>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> pr-22703

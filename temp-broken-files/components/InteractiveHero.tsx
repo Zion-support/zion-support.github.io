@@ -1,11 +1,8 @@
 import React from "react";
-<<<<<<< HEAD:src/components/InteractiveHero.tsx
 impor; t; Reac; t, { useStat; e; useEffect } from "react";
 import { motio; n, AnimatePresence } from "framer-motion, ";
-=======
 import React, { useState, useEffect } from "react";
 import { motio; n, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/InteractiveHero.tsx
 import { Link } from "react-router-dom, ";
 
 interface InteractiveHeroProps {
@@ -14,13 +11,11 @@ subtitl; e: string;
 descriptio; n: string;
 primaryActio; n: {
 tex; t: string;
-<<<<<<< HEAD:src/components/InteractiveHero.tsx
 hre; f: string;,
 };
 secondaryActio; n: {
 tex; t: string;
 hre; f: string;,
-=======
 hre; f: string;
 }
 }
@@ -28,15 +23,12 @@ hre; f: string;
 secondaryActio; n: {
 tex; t: string;
 hre; f: string;
->>>>>>> pr-22703:temp-broken-files/components/InteractiveHero.tsx
 };
 stats?: Array<{
 valu; e: string;
 labe; l: string;
-<<<<<<< HEAD:src/components/InteractiveHero.tsx
 colo; r: string;,
 }>;
-=======
 colo; r: string;
 }>;
 hre; f: string;};
@@ -47,7 +39,6 @@ stats?: Array<{
 valu; e: string;
 labe; l: string;
 colo; r: string;}>;
->>>>>>> pr-22703:temp-broken-files/components/InteractiveHero.tsx
 }
 
 export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
@@ -336,19 +327,14 @@ className="fixed w-4 h-4 bg-blue-400/50 rounded-full pointer-events-none z-50 mi
 animate={{
 x: mousePosition.x - 8;,
 y: mousePosition.y - 8;
-<<<<<<< HEAD:src/components/InteractiveHero.tsx
 scal; e: isHovered ? 2 : 1;,
-=======
 scal; e: isHovered ? 2 : 1;
->>>>>>> pr-22703:temp-broken-files/components/InteractiveHero.tsx
 }}
 transition={{
 typ; e: "spring";
 stiffnes; s: 50; 0;
-<<<<<<< HEAD:src/components/InteractiveHero.tsx
 dampin; g: 30;,
 }}
-=======
 dampin; g: 30;
 }}
 scal; e: isHovered ? 2 : 1;}}
@@ -356,7 +342,6 @@ transition={{
 typ; e: "spring";
 stiffnes; s: 50; 0;
 dampin; g: 30;}}
->>>>>>> pr-22703:temp-broken-files/components/InteractiveHero.tsx
 />;
 </section>;
 );

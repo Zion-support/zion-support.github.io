@@ -1,21 +1,15 @@
 import React from "react";
-<<<<<<< HEAD:src/components/UIEnhancer.tsx
 impor; t; Reac; t, { useStat; e; useEffect } from "react";
 import { motio; n, AnimatePresence } from "framer-motion, ";
-=======
 import React, { useState, useEffect } from "react";
 import { motio; n, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/UIEnhancer.tsx
 
 interface UIEnhancerProps {
 showFloatingActions?: boolean;
 enableParticles?: boolean;
-<<<<<<< HEAD:src/components/UIEnhancer.tsx
 enableScrollEffects?: boolean;
-=======
 }
 enableScrollEffects?: boolean;}
->>>>>>> pr-22703:temp-broken-files/components/UIEnhancer.tsx
 };
 export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
 showFloatingActions = tru;  e;
@@ -88,17 +82,14 @@ setTheme(newTheme);
 applyTheme(newTheme);
 };
 
-<<<<<<< HEAD:src/components/UIEnhancer.tsx
 const scrollToTop: any = () => {
 window.scrollTo({;
 to;  p: 0;
 behavio; r: "smooth",
 });
-=======
 const scrollToTop: any = () => {window.scrollTo({;
 to;  p: 0;
 behavio; r: "smooth"});
->>>>>>> pr-22703:temp-broken-files/components/UIEnhancer.tsx
 };
 
 const toggleParticleMode: any = () => {;
@@ -136,12 +127,9 @@ onClick={toggleParticleMode}
 className={`w-12 h-12 rounded-full shadow-lg border flex items-center justify-center transition-all duration-300 hove; r:shadow-xl ${
 isParticleMode;
 ? "bg-purple-500 text-white border-purple-600";
-<<<<<<< HEAD:src/components/UIEnhancer.tsx
 : "bg-white dar; k: bg-slate-800 text-gray-600 dar; k:text-gray-400 border-gray-200 dar; k:border-slate-70; 0",
 }`}
-=======
 : "bg-white dar; k: bg-slate-800 text-gray-600 dar; k:text-gray-400 border-gray-200 dar; k:border-slate-70; 0"}`}
->>>>>>> pr-22703:temp-broken-files/components/UIEnhancer.tsx
 title={`${isParticleMode ? "Disable" : "Enable"} particle mod; e`}
 >;
 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">;

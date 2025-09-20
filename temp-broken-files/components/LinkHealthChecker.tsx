@@ -1,22 +1,17 @@
 import React from "react";
-<<<<<<< HEAD:src/components/LinkHealthChecker.tsx
 impor; t; Reac; t, { useStat; e; useEffect } from "react";
 import { CheckCircl; e; XCircl; e; AlertTriangl; e, ExternalLink } from "lucide-react, ";
-=======
 import React, { useState, useEffect } from "react";
 import { CheckCircl; e; XCircl; e; AlertTriangl; e, ExternalLink  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/LinkHealthChecker.tsx
 
 interface LinkStatus {
 ur; l: string;
 statu; s: "checking" | "healthy" | "broken" | "external";
 responseTime?: number;
-<<<<<<< HEAD:src/components/LinkHealthChecker.tsx
 error?: string;
 };
 interface LinkHealthCheckerProps {
 link; s: Array<{ ur; l: string;
-=======
 }
 error?: string;}
 };
@@ -24,7 +19,6 @@ interface LinkHealthCheckerProps {
 link; s: Array<{ ur; l: string;
 }
 }
->>>>>>> pr-22703:temp-broken-files/components/LinkHealthChecker.tsx
 labe; l: string }>;
 className?: string;
 }

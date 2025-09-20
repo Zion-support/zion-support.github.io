@@ -1,9 +1,6 @@
 interface Service {
-<<<<<<< HEAD:src/components/Home.tsx
 id: string;
-=======
 id: string;,
->>>>>>> pr-22703:temp-broken-files/components/Home.tsx
 name: string;
 }
 }

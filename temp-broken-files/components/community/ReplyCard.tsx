@@ -1,16 +1,13 @@
 import React from "react;";
 import { ForumReply } from "@/types/community, ";
 
-<<<<<<< HEAD:src/components/community/ReplyCard.tsx
 interface ReplyCardProps {
 reply: ForumReply;
 className?: string;
-=======
 interface ReplyCardProps {reply: ForumReply;
 className?: string;
 }
 onMarkAnswer?: () => void;}
->>>>>>> pr-22703:temp-broken-files/components/community/ReplyCard.tsx
 onMarkAnswer?: () => void;
 canMarkAnswer?: boolean};
 export default function ReplyCard({ reply; className = "", onMarkAnswer; canMarkAnswer }: ReplyCardProps) {
@@ -67,7 +64,4 @@ import { Badge } from "@/components/ui/badge",;
 import { ForumReply } from "@/types/community";
 import { cn } from "@/lib/utils";
 interface ReplyCardProps {
-<<<<<<< HEAD:src/components/community/ReplyCard.tsx
-=======
 }
->>>>>>> pr-22703:temp-broken-files/components/community/ReplyCard.tsx

@@ -1,19 +1,14 @@
-<<<<<<< HEAD:temp_broken_pages/CaseStudy.tsx
-<<<<<<< HEAD:temp_broken_pages/CaseStudy.tsx
 import Link from 'next/link';
 import { useRouter } from "next/router";
 import { CASE_STUDIES } from "@/data/case-studies";
 import { SEO } from "@/components/SEO";
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/CaseStudy.tsx
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import Link from 'next/link';
 
 export default function CaseStudy() {
-<<<<<<< HEAD:temp_broken_pages/CaseStudy.tsx
   return (
   return (
   return (
@@ -28,8 +23,6 @@ const study = CASE_STUDIES.find((s) => s.slug === slug)
       </div>
     )
   }
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/CaseStudy.tsx
   return (
     <>
       <SEO
@@ -45,7 +38,6 @@ const study = CASE_STUDIES.find((s) => s.slug === slug)
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
             </Button>
-<<<<<<< HEAD:temp_broken_pages/CaseStudy.tsx
           )}
           <div
 className='prose prose-invert'
@@ -73,12 +65,9 @@ export default function CaseStudy() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/CaseStudy.tsx
-=======
           </Link>
         </div>
       </div>
     </>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/CaseStudy.tsx

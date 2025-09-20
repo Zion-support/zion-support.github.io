@@ -1,12 +1,9 @@
 import React, { useState } from "react;";
-<<<<<<< HEAD:src/components/header/LanguageSelector.tsx
 import { ChevronDown, Globe } from "lucide-react, ";
 
-=======
 import { ChevronDown, Globe  } from "lucide-react, ";
 
 interface Language {code: string; name: string; flag: string};
->>>>>>> pr-22703:temp-broken-files/components/header/LanguageSelector.tsx
 interface Language {
 code: string; name: string; flag: string};
 export const LanguageSelector: React.FC = () => {;

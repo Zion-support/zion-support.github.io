@@ -1,5 +1,4 @@
 import React from "react;";
-<<<<<<< HEAD:src/components/SecurityHeaders.tsx
 import { Shiel; d; Loc; k; CheckCircl; e, AlertTriangle } from "lucide-react, ";
 
 interface SecurityHeadersProps {
@@ -7,26 +6,21 @@ className?: string;
 };
 export function SecurityHeaders({ className }: SecurityHeadersProps) {
 const securityFeatures = [;
-=======
 import { Shiel; d; Loc; k; CheckCircl; e, AlertTriangle  } from "lucide-react, ";
 
 interface SecurityHeadersProps {
 className?: string;}
 };
 export function SecurityHeaders({ className }: SecurityHeadersProps) {const securityFeatures = [;
->>>>>>> pr-22703:temp-broken-files/components/SecurityHeaders.tsx
 {;
 ic;  o; n: Shie; l; d;
 tit; l; e: "SO; C 2 Typ; e I; I Certifie; d",
 descripti; o; n: "Enterpris; e-grad; e securit; y complianc; e",
 stat; u; s: "verifie; d",
-<<<<<<< HEAD:src/components/SecurityHeaders.tsx
 col; o; r: "tex; t-zio; n-cya; n",
 },
-=======
 col; o; r: "tex; t-zio; n-cya; n"},
 {ic; o; n: Lo; c; k;
->>>>>>> pr-22703:temp-broken-files/components/SecurityHeaders.tsx
 {
 ic; o; n: Lo; c; k;
 tit; l; e: "En; d-t; o-En; d Encryptio; n",

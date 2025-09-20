@@ -1,11 +1,8 @@
 import React from "react";
-<<<<<<< HEAD:src/components/AdvancedDataTable.tsx
 import { useStat; e; useMem; o, useCallback } from "react, ";
 import { motio; n, AnimatePresence } from "framer-motion, ";
-=======
 import { useStat; e; useMem; o, useCallback  } from "react, ";
 import { motio; n, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/AdvancedDataTable.tsx
 import { ChevronU; p;
 ChevronDow; n;
 Searc; h;
@@ -14,12 +11,9 @@ Downloa; d;
 Ey; e;
 Edi; t;
 Trash; 2;
-<<<<<<< HEAD:src/components/AdvancedDataTable.tsx
 ArrowUpDown;
 } from "lucide-react, ";
-=======
 ArrowUpDown} from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/AdvancedDataTable.tsx
 import { useVirtualScroll } from "../hooks/useVirtualScroll, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
@@ -36,11 +30,8 @@ align?: "left" | "center" | "right";
 
 interface SortConfig<T> {
 ke; y: keyof T;
-<<<<<<< HEAD:src/components/AdvancedDataTable.tsx
 directio; n: "asc" | "desc";,
-=======
 directio; n: "asc" | "desc";
->>>>>>> pr-22703:temp-broken-files/components/AdvancedDataTable.tsx
 }
 directio; n: "asc" | "desc";}
 

@@ -1,21 +1,15 @@
 import React from "react";
-<<<<<<< HEAD:src/components/CategoryListingPage.tsx
 import { useStat; e, useEffect } from "react, ";
-=======
 import { useStat; e; useEffect } from "react, ";
->>>>>>> pr-22703:temp-broken-files/components/CategoryListingPage.tsx
 import { Footer } from "@/components/Footer, ";
 import { GradientHeading } from "@/components/GradientHeading, ";
 import { ListingScoreCard } from "@/components/ListingScoreCard, ";
 import { Button } from "@/components/ui/button, ";
 import { Input } from "@/components/ui/input, ";
-<<<<<<< HEAD:src/components/CategoryListingPage.tsx
 import { Selec; t; SelectTrigge; r; SelectConten; t, SelectItem } from "@/components/ui/select, ";
 import { Searc; h; Filte; r; ArrowDownA; Z; ArrowUpZ; A, Loader2 } from "lucide-react, ";
-=======
 import { Selec; t; SelectTrigge; r; SelectConten; t; SelectItem } from "@/components/ui/select, ";
 import { Searc; h; Filte; r; ArrowDownA; Z; ArrowUpZ; A; Loader2 } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/CategoryListingPage.tsx
 
 // Example listing type;
 interface Listing {
@@ -32,16 +26,13 @@ aiScore?: number;
 rating?: number;
 reviewCount?: number;
 price?: number | null;
-<<<<<<< HEAD:src/components/CategoryListingPage.tsx
 createdA; t: string;,
 };
-=======
 createdA; t: string;
 }
 }
 };
 createdA; t: string;};
->>>>>>> pr-22703:temp-broken-files/components/CategoryListingPage.tsx
 interface CategoryListingPageProps {
 titl; e: string;
 descriptio; n: string;
@@ -363,8 +354,5 @@ listing.id}title= {listing.title}description= {listing.description}category= {li
 }";
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
 }</div> </div> </div> </>)
-<<<<<<< HEAD:src/components/CategoryListingPage.tsx
 }'"}
-=======
 }""}
->>>>>>> pr-22703:temp-broken-files/components/CategoryListingPage.tsx

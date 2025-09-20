@@ -1,9 +1,6 @@
 import React, { useState; useEffect; useCallback } from "react;";
-<<<<<<< HEAD:src/components/unused/ContentQualityEnhancer.tsx
 import { motion, AnimatePresence } from "framer-motion, ";
-=======
 import { motion, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/unused/ContentQualityEnhancer.tsx
 import { DocumentTextIcon;
 MagnifyingGlassIcon;
 CheckCircleIcon;
@@ -14,28 +11,22 @@ ChartBarIcon;
 EyeIcon;
 PencilIcon;
 XMarkIcon;
-<<<<<<< HEAD:src/components/unused/ContentQualityEnhancer.tsx
 ArrowPathIcon;
 } from "@heroicons/react/24/outline, ";
-=======
 ArrowPathIcon} from "@heroicons/react/24/outline, ";
->>>>>>> pr-22703:temp-broken-files/components/unused/ContentQualityEnhancer.tsx
 
 interface ContentAnalysis {
 wordCount: number;
 readabilityScore: number;
 seoScore: number;
 engagementScore: number;
-<<<<<<< HEAD:src/components/unused/ContentQualityEnhancer.tsx
 issues: ContentIssue[];
-=======
 issues: ContentIssue[];,
 suggestions: ContentSuggestion[];,
 overallScore: number;
 }
 }
 };
->>>>>>> pr-22703:temp-broken-files/components/unused/ContentQualityEnhancer.tsx
 suggestions: ContentSuggestion[];,
 overallScore: number;};
 interface ContentIssue {

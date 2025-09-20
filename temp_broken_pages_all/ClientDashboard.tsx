@@ -1,5 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/ClientDashboard.tsx
-<<<<<<< HEAD:temp_broken_pages_all/ClientDashboard.tsx
 import { useState, useEffect } from "react";,
 import { JobsList } from "@/components/jobs/JobsList";,
 import { Button } from "@/components/ui/button";,
@@ -17,12 +15,10 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";,
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";,
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";,
 import { useIsMobile } from "@/hooks/use-mobile";
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/ClientDashboard.tsx
 function ClientDashboardContent() {
   return (
     <>
@@ -49,7 +45,6 @@ export default function ClientDashboard() {
     <ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>
-<<<<<<< HEAD:temp_broken_pages_all/ClientDashboard.tsx
   )
 }, [jobs selectedJobId])
 return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace." /> <main className="container mx-auto px-4 py-8"> <div className={
@@ -99,8 +94,5 @@ export default function ClientDashboard() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ClientDashboard.tsx
-=======
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/ClientDashboard.tsx

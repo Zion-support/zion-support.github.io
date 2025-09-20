@@ -1,9 +1,6 @@
 import React, { useState; useEffect } from "react;";
-<<<<<<< HEAD:src/components/unused/EnhancedAccessibility.tsx
 import { motion, AnimatePresence } from "framer-motion, ";
-=======
 import { motion, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/unused/EnhancedAccessibility.tsx
 import { EyeIcon;
 EyeSlashIcon;
 SpeakerWaveIcon;
@@ -14,21 +11,16 @@ AdjustmentsHorizontalIcon;
 ArrowUpIcon;
 ArrowDownIcon;
 MagnifyingGlassIcon;
-<<<<<<< HEAD:src/components/unused/EnhancedAccessibility.tsx
 CursorArrowRaysIcon;
 } from "@heroicons/react/24/outline, ";
-=======
 CursorArrowRaysIcon} from "@heroicons/react/24/outline, ";
->>>>>>> pr-22703:temp-broken-files/components/unused/EnhancedAccessibility.tsx
 
 interface AccessibilitySettings {
 highContrast: boolean;
 fontSize: number;
 reducedMotion: boolean;
 screenReader: boolean;
-<<<<<<< HEAD:src/components/unused/EnhancedAccessibility.tsx
 keyboardNavigation: boolean;
-=======
 keyboardNavigation: boolean;,
 focusIndicator: boolean;,
 colorBlindness: "none" | "protanopia" | "deuteranopia" | "tritanopia";
@@ -37,7 +29,6 @@ colorBlindness: "none" | "protanopia" | "deuteranopia" | "tritanopia";
 };
 const EnhancedAccessibility: React.FC = () => {const [isOpen; setIsOpen] = useState(false);
 const [settings; setSettings] = useState<AccessibilitySettings>({
->>>>>>> pr-22703:temp-broken-files/components/unused/EnhancedAccessibility.tsx
 focusIndicator: boolean;,
 colorBlindness: "none" | "protanopia" | "deuteranopia" | "tritanopia";};
 const EnhancedAccessibility: React.FC = () => {

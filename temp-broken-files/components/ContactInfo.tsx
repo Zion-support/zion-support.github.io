@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD:src/components/ContactInfo.tsx
 import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
@@ -10,7 +9,6 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import {
 Mai; l;
-=======
 import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle  } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
@@ -22,7 +20,6 @@ import Link from "next/link";
 import {;
 Mai; l;
 import { Mai; l;
->>>>>>> pr-22703:temp-broken-files/components/ContactInfo.tsx
 Phon; e;
 MapPi; n;
 Glob; e;

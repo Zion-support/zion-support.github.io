@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface CategoryCardProps {
@@ -12,22 +11,7 @@ interface CategoryCardProps {
   onClick?: () => void;
 }
 
-export function CategoryCard({ category, onClick }: CategoryCardProps) {
-=======
-
-import React from "react";
-import Link from "next/link";
-
-interface CategoryCardProps {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  href: string;
-}
-
-export function CategoryCard({ title, description, icon, href }: CategoryCardProps) {
->>>>>>> pr-22703
-  return (
+export function CategoryCard({ category, onClick }: CategoryCardProps) {  return (
     <Link
       href={href}
       className="group block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-200 hover:border-blue-300"
@@ -37,17 +21,6 @@ export function CategoryCard({ title, description, icon, href }: CategoryCardPro
           {icon}
         </div>
       </div>
-<<<<<<< HEAD
       <p className="text-gray-600">{category.description}</p>
-    </div>
-=======
-      <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-200">
-        {title}
-      </h3>
-      <p className="text-gray-600 text-sm leading-relaxed">
-        {description}
-      </p>
-    </Link>
->>>>>>> pr-22703
-  );
+    </div>  );
 }

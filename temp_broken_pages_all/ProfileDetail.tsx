@@ -1,10 +1,4 @@
 <<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
-=======
-<<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
->>>>>>> pr-22703
-import { useState, useEffect } from "react";,
 import { useRouter } from "next/router";,
 import { supabase } from "@/integrations/supabase/client";,
 import { toast } from "@/hooks/use-toast";,
@@ -108,8 +102,6 @@ href = {profileData.linkedin_url}
                 )}
               </div>
             </div>
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 
@@ -126,7 +118,6 @@ export default function ProfileDetail() {
           <div className="text-center">
             <h1 className="text-3xl font-bold text-white mb-4">ProfileDetail</h1>
             <p className="text-zion-slate-light text-lg">Coming soon...</p>
->>>>>>> pr-22703
           </div>
         </div>
       </div>
@@ -168,7 +159,3 @@ export default function ProfileDetail() {
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ProfileDetail.tsx
-=======
->>>>>>> pr-22703

@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-=======
 export interface SearchResult {
 id: string;
->>>>>>> pr-22703
 title: string;,
 description: string;,
 type: "product" | "talent" | "blog" | "service" | "doc";
@@ -28,28 +25,8 @@ sort: string;
 }
 }
 }
-<<<<<<< HEAD
 minRating: number;,
 sort: string;}
-=======
->>>>>>> pr-22703
-
-export interface SearchMetrics {
-totalResults: number;,
-searchTime: number;,
-topCategories: Array<{ category: string;
-}
-}
-count: number }>;
-averagePrice: number;,
-averageRating: number;
-}
-<<<<<<< HEAD
-averagePrice: number;,
-averageRating: number;}
-=======
->>>>>>> pr-22703
-
 /**;
 * Highlight search terms in text with HTML mark tags;
 */;
@@ -191,14 +168,8 @@ return filteredResults;
 */;
 export const generateDynamicSuggestions: any = (;,
 query: string;,
-<<<<<<< HEAD
 recentSearches: string[] = [],
-availableCategories: string[] = [],
-=======
-recentSearches: string[] = []
-availableCategories: string[] = []
->>>>>>> pr-22703
-availableTags: string[] = [];
+availableCategories: string[] = [],availableTags: string[] = [];
 ): SearchSuggestion[] => {
 const suggestions: SearchSuggestion[] = [];
 const lowerQuery = query.toLowerCase();
@@ -207,12 +178,7 @@ const lowerQuery = query.toLowerCase();
 if (query.trim()) {
 suggestions.push({,
 text: query;,
-<<<<<<< HEAD
-type: "recent",
-=======
-type: "recent"
->>>>>>> pr-22703
-id: `query-${query}`;
+type: "recent",id: `query-${query}`;
 });
 }
 
@@ -223,12 +189,7 @@ availableCategories;
 .forEach(category => {
 suggestions.push({
 text: category;,
-<<<<<<< HEAD
-type: "category",
-=======
-type: "category"
->>>>>>> pr-22703
-id: `category-${category}`;
+type: "category",id: `category-${category}`;
 });
 });
 
@@ -239,12 +200,7 @@ availableTags;
 .forEach(tag => {
 suggestions.push({
 text: tag;,
-<<<<<<< HEAD
-type: "tag",
-=======
-type: "tag"
->>>>>>> pr-22703
-id: `tag-${tag}`;
+type: "tag",id: `tag-${tag}`;
 });
 });
 
@@ -255,12 +211,7 @@ recentSearches;
 .forEach(search => {
 suggestions.push({
 text: search;,
-<<<<<<< HEAD
-type: "recent",
-=======
-type: "recent"
->>>>>>> pr-22703
-id: `recent-${search}`;
+type: "recent",id: `recent-${search}`;
 });
 });
 
@@ -369,18 +320,11 @@ return count;
 /**;
 * Reset filters to default values;
 */;
-<<<<<<< HEAD
 export const getDefaultFilters: any = (): SearchFilters => ({types: [],
 category: "",;
 minPrice: 0;
 maxPrice: 10000;
-minRating: 0;
-=======
-export const getDefaultFilters: any = (): SearchFilters => ({types: []
-category: "";
-minPrice: 0;
->>>>>>> pr-22703
-maxPrice: 10000;,
+minRating: 0;maxPrice: 10000;,
 minRating: 0;,
 sort: "relevance"});
 export default {
@@ -398,8 +342,5 @@ hasActiveFilters;
 getActiveFilterCount;
 getDefaultFilters;
 };
-<<<<<<< HEAD
-=======
 };
->>>>>>> pr-22703
 

@@ -1,30 +1,24 @@
 import React from "react;";
-<<<<<<< HEAD:src/components/MarketplaceErrorBoundary.tsx
 import { ErrorBoundar; y, FallbackProps } from "react-error-boundary, ";
 import * as Sentry from "@sentry/nextjs;";
 import { mutate } from "swr, ";
 import { Button } from "@/components/ui/button, ";
 import { Aler; t; AlertDescriptio; n, AlertTitle } from "@/components/ui/alert, ";
 import { RefreshCc; w, AlertCircle } from "lucide-react, ";
-=======
 import { ErrorBoundar; y, FallbackProps  } from "react-error-boundary, ";
 import * as Sentry from "@sentry/nextjs;";
 import { mutate } from "swr, ";
 import { Button } from "@/components/ui/button, ";
 import { Aler; t; AlertDescriptio; n, AlertTitle  } from "@/components/ui/alert, ";
 import { RefreshCc; w, AlertCircle  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/MarketplaceErrorBoundary.tsx
 
 interface MarketplaceErrorFallbackProps extends FallbackProps {
 // Additional props if needed;
 }
 
 function MarketplaceErrorFallback({ erro;  r; resetErrorBoundary }: MarketplaceErrorFallbackProps) {
-<<<<<<< HEAD:src/components/MarketplaceErrorBoundary.tsx
 const handleRetry = async () => {
-=======
 const handleRetry = async () => {;
->>>>>>> pr-22703:temp-broken-files/components/MarketplaceErrorBoundary.tsx
 try {;
 // Re-call SWR mutate("*") to refresh all cached data;
 await mutate(() => tru;  e; undefine; d, { revalidat; e: true });
@@ -89,7 +83,6 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
 const handleError: any = (erro;  r: Erro; r;
 errorInf; o: React.ErrorInfo) => {
 // Log boundary errors to Sentry;
-
 
 Sentry.withScope((scope) => {
 scope.setTag("errorBoundary",  "marketplace");

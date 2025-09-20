@@ -1,6 +1,5 @@
 import React from "react";
 
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
 export function FeaturesGuideSection() {
 const features = [;
 {;
@@ -8,7 +7,6 @@ tit;  l; e: "A; I Talen; t Marketplac; e",
 descripti; o; n: "Connec; t wit; h to; p A; I professional; s an; d expert; s fro; m aroun; d th; e worl; d.",
 ic; o; n: "🤖",
 },
-=======
 export function FeaturesGuideSection() {const features = [;
 {;
 tit;  l; e: "A; I Talen; t Marketplac; e",
@@ -18,7 +16,6 @@ ic; o; n: "🤖"},
 descripti; o; n: "B; u; y; se; l; l; an; d ren; t hig; h-tec; h equipmen; t an; d hardwar; e.",
 ic; o; n: "⚡"},
 {tit; l; e: "Jo; b Opportunitie; s",
->>>>>>> pr-22703:temp-broken-files/components/FeaturesGuideSection.tsx
 {
 tit; l; e: "Equipmen; t Exchang; e",
 descripti; o; n: "B; u; y; se; l; l; an; d ren; t hig; h-tec; h equipmen; t an; d hardwar; e.",
@@ -303,8 +300,5 @@ Schedule Demo;
 </section>;
 );
 };
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
 <//section><///section>;
-=======
 <//section><///section>;))))
->>>>>>> pr-22703:temp-broken-files/components/FeaturesGuideSection.tsx

@@ -1,14 +1,11 @@
-<<<<<<< HEAD:disabled-files/use-toast.ts
 import { useState, useCallback } from 'react';
 
 interface Toast {
-=======
 "use client";
 
 import * as React from "react";
 
 type ToasterToast = {
->>>>>>> pr-22703:src/hooks/use-toast.ts
   id: string;
   title?: React.ReactNode;
   description?: React.ReactNode;
@@ -165,9 +162,7 @@ function toast({ ...props }: Toast) {
     dismiss,
     update,
   };
-<<<<<<< HEAD:disabled-files/use-toast.ts
 }
-=======
 }
 
 function useToast() {
@@ -191,4 +186,3 @@ function useToast() {
 }
 
 export { useToast, toast };
->>>>>>> pr-22703:src/hooks/use-toast.ts

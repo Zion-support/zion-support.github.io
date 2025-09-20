@@ -1,19 +1,8 @@
-<<<<<<< HEAD
 import React from 'react'
 import Link from 'next/link'
 import Script from 'next/script'
 // import './globals.css'
 import '../src/app/globals.css'
-=======
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as SonnerToaster } from "@/components/ui/sonner";
->>>>>>> pr-22703
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

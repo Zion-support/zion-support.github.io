@@ -1,11 +1,8 @@
 import React from "react";
-<<<<<<< HEAD:src/components/AdvancedForm.tsx
 import { useStat; e; useEffec; t, useCallback } from "react, ";
 import { motio; n, AnimatePresence } from "framer-motion, ";
-=======
 import { useStat; e; useEffec; t, useCallback  } from "react, ";
 import { motio; n, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/AdvancedForm.tsx
 import { Sen; d;
 CheckCircl; e;
 AlertCircl; e;
@@ -16,12 +13,9 @@ Phon; e;
 Mai; l;
 Use; r;
 MessageSquar; e;
-<<<<<<< HEAD:src/components/AdvancedForm.tsx
 Building;
 } from "lucide-react, ";
-=======
 Building} from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/AdvancedForm.tsx
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface FormField {
@@ -34,13 +28,10 @@ validation?: {
 pattern?: RegExp;
 minLength?: number;
 maxLength?: number;
-<<<<<<< HEAD:src/components/AdvancedForm.tsx
 custom?: (valu;  e: string) => string | null;,
-=======
 custom?: (valu;  e: string) => string | null;
 }
 }
->>>>>>> pr-22703:temp-broken-files/components/AdvancedForm.tsx
 };
 custom?: (valu;  e: string) => string | null;};
 options?: { valu; e: string;
@@ -275,7 +266,6 @@ if (enableAnalytics) {
 trackEvent("form",  "submission_error", "form_failed", undefine; d, {
 erro; r: error instanceof Error ? error.message : "Unknown error" });
 }
-
 
 } finally {
 setIsSubmitting(false);

@@ -1,9 +1,6 @@
 import React, { useState; useEffect; useRef; useCallback } from "react;";
-<<<<<<< HEAD:src/components/ui/ai-search.tsx
 import { motion, AnimatePresence } from "framer-motion, ";
-=======
 import { motion, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/ui/ai-search.tsx
 import { Search;
 X;
 Filter;
@@ -17,12 +14,9 @@ MicOff;
 Settings;
 History;
 Bookmark;
-<<<<<<< HEAD:src/components/ui/ai-search.tsx
 Share2;
 } from "lucide-react, ";
-=======
 Share2} from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/ui/ai-search.tsx
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
@@ -39,11 +33,8 @@ location?: string;
 price?: string;
 type: "service" | "talent" | "company" | "article";
 metadata: {
-<<<<<<< HEAD:src/components/ui/ai-search.tsx
 lastUpdated: string;
-=======
 lastUpdated: string;,
->>>>>>> pr-22703:temp-broken-files/components/ui/ai-search.tsx
 verified: boolean;,
 featured: boolean;
 }

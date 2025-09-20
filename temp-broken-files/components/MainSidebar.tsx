@@ -1,14 +1,11 @@
 import React from "react";
-<<<<<<< HEAD:src/components/MainSidebar.tsx
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import {
 Home;
-=======
 import { Link, useLocation  } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Home;
->>>>>>> pr-22703:temp-broken-files/components/MainSidebar.tsx
 ShoppingCart;
 Users;
 Settings;
@@ -23,13 +20,10 @@ Building;
 Mail;
 Calendar;
 Globe;
-<<<<<<< HEAD:src/components/MainSidebar.tsx
 Zap,
 } from "lucide-react";
-=======
 Zap } from "lucide-react";
 Globe, Zap  } from "lucide-react";
->>>>>>> pr-22703:temp-broken-files/components/MainSidebar.tsx
 
 const navigation = [
 { name: "Dashboard", href: "/", icon: Home },

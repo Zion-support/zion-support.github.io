@@ -1,19 +1,13 @@
 interface Service {
-<<<<<<< HEAD:src/components/EnhancedSidebar.tsx
 id: string;
-=======
 id: string;,
->>>>>>> pr-22703:temp-broken-files/components/EnhancedSidebar.tsx
 name: string;
 }
 }
 }
 
-<<<<<<< HEAD:src/components/EnhancedSidebar.tsx
 import { import { motion, AnimatePresence,  } from "framer-motion",
-=======
 import { import { motion; AnimatePresence   } from "framer-motion";
->>>>>>> pr-22703:temp-broken-files/components/EnhancedSidebar.tsx
 ,
 export default function Page("props": "any) {,
 setExpandedSections(newExpanded)"},
@@ -110,9 +104,6 @@ transition = {,
 </div>,
 </aside>,) },
 '"`,
-<<<<<<< HEAD:src/components/EnhancedSidebar.tsx
 </motion, >,
-=======
 </motion>,
->>>>>>> pr-22703:temp-broken-files/components/EnhancedSidebar.tsx
 </motion>]]<//motion><///motion>;

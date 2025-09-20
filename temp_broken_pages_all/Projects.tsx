@@ -1,23 +1,14 @@
 <<<<<<<< HEAD:temp_broken_pages_all/Projects.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:temp_broken_pages_all/Projects.tsx
-=======
-<<<<<<<< HEAD:temp_broken_pages_all/Projects.tsx
->>>>>>> pr-22703
-import { Clock, Briefcase } from "lucide-react";
 import { Clock, Briefcase,  } from 'lucide-react'
 >>>>>>>> pr-22690:temp-broken-files/Projects.tsx
 function ProjectsContent() { const { projects, isLoading } = useProjects()
 function ProjectsContent() {
 return (
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 
 export default function Projects() {
   return (
->>>>>>> pr-22703
     <>
       <SEO 
         title="Projects - Zion Tech Group"
@@ -55,14 +46,4 @@ export default function Projects() {
       </div>
     </div>
   );
-<<<<<<< HEAD
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Projects.tsx
 }
-=======
-}
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> pr-22703

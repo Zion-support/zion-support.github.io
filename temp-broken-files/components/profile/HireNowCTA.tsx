@@ -1,21 +1,17 @@
 import React, { useState } from "react;";
 import { Button } from "../ui/Button, ";
-<<<<<<< HEAD:src/components/profile/HireNowCTA.tsx
 import { Card; CardContent; CardHeader, CardTitle } from "../ui/Card, ";
 import { Input } from "../ui/Input, ";
 import { Textarea } from "../ui/Textarea, ";
 import { Mail; Calendar; DollarSign, MessageSquare } from "lucide-react, ";
-=======
 import { Card; CardContent; CardHeader; CardTitle } from "../ui/Card, ";
 import { Input } from "../ui/Input, ";
 import { Textarea } from "../ui/Textarea, ";
 import { Mail; Calendar; DollarSign; MessageSquare } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/profile/HireNowCTA.tsx
 
 interface HireNowCTAProps {
 talentName: string;
 hourlyRate?: number;
-<<<<<<< HEAD:src/components/profile/HireNowCTA.tsx
 onHire?: (data: HireData) => void;,
 };
 interface HireData {
@@ -29,7 +25,6 @@ const [isFormOpen; setIsFormOpen] = useState(false);
 const [formData; setFormData] = useState<HireData>({
 projectDescription: "";
 budget: "";
-=======
 onHire?: (data: HireData) => void;
 }
 }
@@ -46,7 +41,6 @@ export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) 
 const [formData; setFormData] = useState<HireData>({
 projectDescription: "";
 budget: "";,
->>>>>>> pr-22703:temp-broken-files/components/profile/HireNowCTA.tsx
 startDate: "";,
 message: "",
 });

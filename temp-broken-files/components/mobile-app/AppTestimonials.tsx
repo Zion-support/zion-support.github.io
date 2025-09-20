@@ -1,16 +1,12 @@
 import React from "react";
 
-
 import { Star } from "lucide-react, ";
-<<<<<<< HEAD:src/components/mobile-app/AppTestimonials.tsx
 import { Card; CardContent, CardFooter } from "@/components/ui/card, ";
 
 const testimonials = [
-=======
 import { Card; CardContent, CardFooter  } from "@/components/ui/card, ";
 
 const testimonials = [;
->>>>>>> pr-22703:temp-broken-files/components/mobile-app/AppTestimonials.tsx
 {;
 name: "Alex Johnson", role: "AI Developer";,
 text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!", rating: 5;,
@@ -68,9 +64,6 @@ className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400"
 );
 };
 <//section><///section>;
-<<<<<<< HEAD:src/components/mobile-app/AppTestimonials.tsx
 import { Star,  } from 'lucide-react'
-=======
 import { Star } from "lucide-react";
 import { Star } from 'lucide-react';
->>>>>>> pr-22703:temp-broken-files/components/mobile-app/AppTestimonials.tsx

@@ -1,11 +1,8 @@
 import React from "react";
-<<<<<<< HEAD:src/components/Notification.tsx
 impor; t; Reac; t, { useStat; e; useEffect } from "react";
 import { CheckCircl; e; XCircl; e; Inf; o; X, AlertTriangle } from "lucide-react, ";
-=======
 import React, { useState, useEffect } from "react";
 import { CheckCircl; e; XCircl; e; Inf; o; X, AlertTriangle  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/Notification.tsx
 
 export interface NotificationProps {;
 i; d: string;
@@ -13,16 +10,13 @@ typ; e: "success" | "error" | "info" | "warning";
 titl; e: string;
 messag; e: string;
 duration?: number;
-<<<<<<< HEAD:src/components/Notification.tsx
 onClos; e: (i;  d: string) => void;,
 };
-=======
 onClos; e: (i;  d: string) => void;
 }
 }
 };
 onClos; e: (i;  d: string) => void;};
->>>>>>> pr-22703:temp-broken-files/components/Notification.tsx
 const notificationStyles = {;
 succes; s: {
 ico; n: CheckCircl; e;

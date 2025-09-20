@@ -1,12 +1,9 @@
-<<<<<<< HEAD:src/components/DataVisualization.tsx
 import React from "react",
 import { import { motion, AnimatePresence,  } from "framer-motion",
-=======
 import React from "react";;
 import { import { motion; AnimatePresence   } from "framer-motion";
 import React from "react",;
 import { import { motion; AnimatePresence   } from "framer-motion",;
->>>>>>> pr-22703:temp-broken-files/components/DataVisualization.tsx
 export default function Page(props: any) {,
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {,
 title?: string;

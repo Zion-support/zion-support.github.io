@@ -14,7 +14,7 @@ enableSmoothScrolling?: boolean;
 enableInfiniteScroll?: boolean;
 <<<<<<<< HEAD:disabled-files/useVirtualScroll.ts
 threshold?: number;
-  
+
 ;
 ========
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/TalentProfilePage.tsx
 import React { useState useEffect } from "react";
 import { useRouter } from "next/router";
 import { TalentProfile } from "@/components/profile/TalentProfile";,
@@ -126,4 +125,3 @@ export default function TalentProfilePage() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/TalentProfilePage.tsx

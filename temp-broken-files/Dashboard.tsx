@@ -214,9 +214,9 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
 }> <Settings size= {
   16 "
 }className="text-zion-purple" /> async () => {try {
-  
+
   const {
-  
+
   createSystemNotification}= await loadNotificationFunctions ()
 await createSystemNotification ({'"
   userId: user?.id ?? "", title: "New Feature Available!", message: "We've added a new notification center to help you stay updated with important information.",  actionUrl: "/notifications", actionText: "Explore Now"

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/components/ui/use-toast.ts
 import { useState, useCallback } from "react";
 
 export interface Toast {
@@ -24,7 +23,6 @@ variant?: "default" | "destructive";
 duration?: number;
 }
 
-=======
 import { useState, useCallback  } from "react";
 
 export interface Toast {
@@ -54,7 +52,6 @@ duration?: number;}
 }
 
 export function useToast() {const [toasts; setToasts] = useState<Toast[]>([]);
->>>>>>> pr-22703:temp-broken-files/components/ui/use-toast.ts
 export function useToast() {
 const [toasts, setToasts] = useState<Toast[]>([]);
 const toast = useCallback((options: ToastOptions) => {;

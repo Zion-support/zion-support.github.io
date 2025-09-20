@@ -1,40 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:temp_broken_pages_all/ProjectDetails.tsx
-=======
->>>>>>> pr-22703
-import React { useState useEffect } from "react";
-import Link from 'next/link';
-<<<<<<<< HEAD:temp_broken_pages_all/ProjectDetails.tsx
-import { useRouter } from "next/router";
-import { format } from "date-fns";,
-import { useAuth } from "@/hooks/useAuth";,
-import { useProjects } from "@/hooks/useProjects";,
-import { SEO } from "@/components/SEO";,
-import { ProtectedRoute } from "@/components/ProtectedRoute";,
-import { Project, ProjectStatus } from "@/types/projects";,
-import { Button } from "@/components/ui/button";
-import { useRouter, ,  } from 'next/router';
-import { format,  } from "date-fns",
-import { useAuth,  } from "@/hooks/useAuth",
-import { useProjects,  } from "@/hooks/useProjects",
-import { SEO,  } from "@/components/SEO",
-import { ProtectedRoute,  } from "@/components/ProtectedRoute",
-import { Project, ProjectStatus,  } from "@/types/projects",
-import { Button,  } from "@/components/ui/button";
->>>>>>>> pr-22690:temp-broken-files/ProjectDetails.tsx
-import { logErrorToProduction } from '@/utils/productionLogger';
-import {
-  
-return (
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { SEO } from "@/components/SEO";
-
-export default function ProjectDetails() {
-  return (
->>>>>>> pr-22703
-    <>
       <SEO 
         title="ProjectDetails - Zion Tech Group"
         description="Page description"
@@ -505,7 +468,7 @@ try {if (error) throw error;
 })
 toast ({
 }finally {
-  
+
   setIsSubmittingNote (false)
 }
 const handleStatusChange = async (newStatus: ProjectStatus) => {
@@ -637,18 +600,4 @@ export default function ProjectDetails() {
     </div>
   );
 }
-<<<<<<< HEAD
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ProjectDetails.tsx
-=======
-      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-3xl font-bold text-white mb-4">ProjectDetails</h1>
-            <p className="text-zion-slate-light text-lg">Coming soon...</p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> pr-22703

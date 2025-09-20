@@ -1,18 +1,15 @@
-<<<<<<< HEAD:src/components/ui/hover-card.tsx
 import React from "react",
 import * as React from "react",
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card",
 import { cn,  } from "../../utils/cn",
 const HoverCardContent = React.forwardRef<,
 React.ElementRef<typeof HoverCardPrimitive.Content>,
-=======
 import React from "react";
 import * as React from "react";
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
 import { cn   } from "../../utils/cn";
 const HoverCardContent = React.forwardRef<,;
 React.ElementRef<typeof HoverCardPrimitive.Content>,;
->>>>>>> pr-22703:temp-broken-files/components/ui/hover-card.tsx
 React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>,;
 >(({ className; align = "center", sideOffset = 4, ...props }, ref) => (,
 <HoverCardPrimitive.Content;

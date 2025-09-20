@@ -1,9 +1,6 @@
 interface Service {
-<<<<<<< HEAD:src/components/TestimonialsSection.tsx
 id: string;
-=======
 id: string;,
->>>>>>> pr-22703:temp-broken-files/components/TestimonialsSection.tsx
 name: string;
 }
 }

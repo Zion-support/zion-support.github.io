@@ -1,18 +1,15 @@
-<<<<<<< HEAD:src/components/resume-builder/forms/WorkExperienceItemForm.tsx
 import { CalendarIcon, Loader2,  } from 'lucide-react'
 import { AIEnhancementButton,  } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog,  } from "@/components/ai-enhancement/AIEnhancementDialog";
 // Define form schema
     </>
   )
-=======
 import { CalendarIcon; Loader2 } from "lucide-react";
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
 // Define form schema;
 </>;
 )
->>>>>>> pr-22703:temp-broken-files/components/resume-builder/forms/WorkExperienceItemForm.tsx
 is current: z.boolean () .default (false),
 description: z.string () .optional (),
 location: z.string () .optional ()

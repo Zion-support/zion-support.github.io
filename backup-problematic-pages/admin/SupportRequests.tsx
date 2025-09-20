@@ -1,7 +1,5 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
-<<<<<<< HEAD
-=======
 import { Search, Filter,  } from 'lucide-react'
 import { SEO,  } from "@/components/SEO";
 >>>>>>>> pr-22690:temp-broken-files/admin/SupportRequests.tsx
@@ -9,7 +7,6 @@ import { SEO,  } from "@/components/SEO";
 return (
 import React from 'react';
 import { SEO } from "@/components/SEO";
->>>>>>> pr-22703
 
 export default function SupportRequests() {
   return (

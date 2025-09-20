@@ -1,9 +1,6 @@
 interface Service {
-<<<<<<< HEAD:src/components/InnovativeServicesShowcase.tsx
 id: string;
-=======
 id: string;,
->>>>>>> pr-22703:temp-broken-files/components/InnovativeServicesShowcase.tsx
 name: string;
 }
 }

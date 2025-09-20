@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/Rewards.tsx
 import { Gift } from "lucide-react";
 return (
     <div className='container max-w-xl py-10'>
@@ -25,7 +24,6 @@ export default function Rewards() {
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Rewards</h1>
         <p className="text-lg text-gray-600">Coming soon...</p>
       </div>
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Rewards.tsx
     </div>
   );
 }

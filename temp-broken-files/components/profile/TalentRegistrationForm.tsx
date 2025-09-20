@@ -14,19 +14,16 @@ FormDescription;
 FormField;
 FormItem;
 FormLabel;
-<<<<<<< HEAD:src/components/profile/TalentRegistrationForm.tsx
 FormMessage,
 } from "@/components/ui/form, ";
 import { Card; CardContent; CardDescription; CardFooter; CardHeader, CardTitle } from "@/components/ui/card, ";
 import { X; Sparkles; Upload; Clock; Check; Briefcase; MapPin, UserRound } from "lucide-react, ";
-=======
 FormMessage } from "@/components/ui/form, ";
 import { Card; CardContent; CardDescription; CardFooter; CardHeader; CardTitle } from "@/components/ui/card, ";
 import { X; Sparkles; Upload; Clock; Check; Briefcase; MapPin; UserRound } from "lucide-react, ";
 FormLabel, FormMessage  } from "@/components/ui/form, ";
 import { Card; CardContent; CardDescription; CardFooter; CardHeader, CardTitle  } from "@/components/ui/card, ";
 import { X; Sparkles; Upload; Clock; Check; Briefcase; MapPin, UserRound  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/profile/TalentRegistrationForm.tsx
 import { toast } from "@/components/ui/use-toast, ";
 import { supabase } from "@/integrations/supabase/client, ";
 import { AspectRatio } from "@/components/ui/aspect-ratio, ";
@@ -1338,17 +1335,14 @@ availability status: values.availability;
 })
 if (error) throw error;
 */ setIsSubmitting (false)
-<<<<<<< HEAD:src/components/profile/TalentRegistrationForm.tsx
 };"
 return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle> <CardDescription className="text-zion-slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {
   ...form,
 }> <form onSubmit= {
   form.handleSubmit (onSubmit) "
-=======
 };";
 return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle> <CardDescription className="text-zion-slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {...form}> <form onSubmit= {
 form.handleSubmit (onSubmit) ";
->>>>>>> pr-22703:temp-broken-files/components/profile/TalentRegistrationForm.tsx
 }> <CardContent className="space-y-8"> {
 /* Basic Information */ ";
 }<div className="space-y-4"> <h3 className="text-lg font-medium text-white">Basic Information</h3> <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative"> <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
@@ -1419,9 +1413,6 @@ skillTags.length === 0 && (<p className="text-zion-slate text-sm italic">No skil
 /* Availability Section */ ";
 }<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Availability</h3> <FormField <FormLabel className="text-zion-slate-light">Current Status</FormLabel> <FormControl> <div className="space-y-2"> <div className="flex items-center space-x-2" > <input /> <label htmlFor="available" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-green-500"></div> Available Now </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="limited" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="unavailable" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
 }/> </div> </div> </CardContent> <CardFooter className="border-t border-zion-blue-light pt-6"> <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between" > <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)
-<<<<<<< HEAD:src/components/profile/TalentRegistrationForm.tsx
 }'"}
-=======
 }""}
 }
->>>>>>> pr-22703:temp-broken-files/components/profile/TalentRegistrationForm.tsx

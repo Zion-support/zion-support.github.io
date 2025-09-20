@@ -1,14 +1,11 @@
 import React from "react;";
-<<<<<<< HEAD:src/components/checkout/CheckoutProgress.tsx
 import { Steps, Step } from "@/components/ui/steps, ";
 
-=======
 import { Steps, Step  } from "@/components/ui/steps, ";
 
 interface CheckoutProgressProps {currentStep: number;
 }
 }
->>>>>>> pr-22703:temp-broken-files/components/checkout/CheckoutProgress.tsx
 interface CheckoutProgressProps {
 currentStep: number;
 className?: string};

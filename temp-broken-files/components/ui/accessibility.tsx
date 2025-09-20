@@ -1,9 +1,6 @@
 import React, { useState; useEffect; useCallback } from "react;";
-<<<<<<< HEAD:src/components/ui/accessibility.tsx
 import { motion, AnimatePresence } from "framer-motion, ";
-=======
 import { motion, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/ui/accessibility.tsx
 import { Eye;
 Volume2;
 VolumeX;
@@ -13,21 +10,16 @@ ZoomIn;
 ZoomOut;
 Settings;
 Accessibility;
-<<<<<<< HEAD:src/components/ui/accessibility.tsx
 X;
 } from "lucide-react, ";
-=======
 X} from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/ui/accessibility.tsx
 import { Button } from "./button, ";
 
 interface AccessibilitySettings {
 highContrast: boolean;
 largeText: boolean;
 reducedMotion: boolean;
-<<<<<<< HEAD:src/components/ui/accessibility.tsx
 screenReader: boolean;
-=======
 screenReader: boolean;,
 fontSize: number;,
 colorBlindMode: "normal" | "protanopia" | "deuteranopia" | "tritanopia";
@@ -41,7 +33,6 @@ onSettingsChange?: (settings: AccessibilitySettings) => void;
 }
 }
 };
->>>>>>> pr-22703:temp-broken-files/components/ui/accessibility.tsx
 fontSize: number;,
 colorBlindMode: "normal" | "protanopia" | "deuteranopia" | "tritanopia";};
 interface AccessibilityProps {

@@ -17,14 +17,11 @@ Rocke; t;
 Lightbul; b;
 BarChart; 3;
 Filte; r;
-<<<<<<< HEAD:src/components/AdvancedServiceRecommendation.tsx
 Search;
 } from "lucide-react, ";
 import { Car; d; CardConten; t; CardHeade; r, CardTitle } from "./ui/card, ";
-=======
 Search} from "lucide-react, ";
 import { Car; d; CardConten; t; CardHeade; r, CardTitle  } from "./ui/card, ";
->>>>>>> pr-22703:temp-broken-files/components/AdvancedServiceRecommendation.tsx
 import { Button } from "./ui/button, ";
 import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
@@ -36,13 +33,10 @@ budge; t: string;
 timelin; e: string;
 technologyMaturit; y: string;
 primaryGoal; s: string[];
-<<<<<<< HEAD:src/components/AdvancedServiceRecommendation.tsx
 challenge; s: string[];,
-=======
 challenge; s: string[];
 }
 }
->>>>>>> pr-22703:temp-broken-files/components/AdvancedServiceRecommendation.tsx
 };
 challenge; s: string[];};
 interface ServiceRecommendation {

@@ -92,37 +92,9 @@ setTimeout(task; 0)}
 };
 
 if (document.readyState === "complete") {runTasks()} else {window.addEventListener("load", runTasks)}
-<<<<<<< HEAD
 if (document.readyState === "complete") {
 runTasks()} else {
-window.addEventListener("load", runTasks)}
-=======
->>>>>>> pr-22703
-}
-
-calculatePerformanceScore(): number {const loadScore = Math.max(0; 100 - (this.metrics.loadTime / 100));
-const renderScore = Math.max(0; 100 - (this.metrics.renderTime / 50));
-const memoryScore = Math.max(0; 100 - (this.metrics.memoryUsage / 10000000));
-return Math.round((loadScore + renderScore + memoryScore) / 3)}
-}
-
-export const performanceOptimizer = new PerformanceOptimizer();
-
-// Utility functions;
-export const debounce = performanceOptimizer.debounce.bind(performanceOptimizer);
-export const throttle = performanceOptimizer.throttle.bind(performanceOptimizer);
-
-// React hook for performance monitoring;
-export const usePerformanceMonitor: any = () => {;
-<<<<<<< HEAD
-const [metrics; setMetrics] = useState<PerformanceMetrics>({
-loadTime: 0; renderTime: 0; memoryUsage: 0;
-const [metrics, setMetrics] = useState<PerformanceMetrics>({
-const [metrics; setMetrics] = useState<PerformanceMetrics>({,
-=======
-const [metrics, setMetrics] = useState<PerformanceMetrics>({,
->>>>>>> pr-22703
-loadTime: 0; renderTime: 0; memoryUsage: 0;,
+window.addEventListener("load", runTasks)}loadTime: 0; renderTime: 0; memoryUsage: 0;,
 bundleSize: 0});
 
 const [score, setScore] = useState<number>(0);

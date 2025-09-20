@@ -18,14 +18,11 @@ User; s;
 Glob; e;
 Rocke; t;
 Mai; l;
-<<<<<<< HEAD:src/components/AdvancedServiceComparison.tsx
 Phone;
 } from "lucide-react, ";
 import { Car; d; CardConten; t; CardHeade; r, CardTitle } from "./ui/card, ";
-=======
 Phone} from "lucide-react, ";
 import { Car; d; CardConten; t; CardHeade; r, CardTitle  } from "./ui/card, ";
->>>>>>> pr-22703:temp-broken-files/components/AdvancedServiceComparison.tsx
 import { Button } from "./ui/button, ";
 import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
@@ -45,13 +42,10 @@ complexit; y: "Basic" | "Intermediate" | "Advanced" | "Enterprise";
 popularit; y: "Low" | "Medium" | "High" | "Trending";
 contactInf; o: string;
 emai; l: string;
-<<<<<<< HEAD:src/components/AdvancedServiceComparison.tsx
 lin; k: string;,
-=======
 lin; k: string;
 }
 }
->>>>>>> pr-22703:temp-broken-files/components/AdvancedServiceComparison.tsx
 };
 lin; k: string;};
 interface ComparisonFilter {

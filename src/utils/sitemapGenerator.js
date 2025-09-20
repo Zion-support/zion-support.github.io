@@ -1,27 +1,7 @@
 
 Crawl-delay: 1`;
      }
-<<<<<<< HEAD
-Crawl-delay: 1`;}
-=======
->>>>>>> pr-22703
-    /**
-     * Generate JSON sitemap for JavaScript applications;
-     */
-    generateJSON() {
-        const { baseUrl, urls } = this.config;
-        const jsonSitemap = {
-            baseUrl,
-            urls: urls.map(url => ({
-                ...url;
-                fullUrl: `${baseUrl}${url.url}`;
-<<<<<<< HEAD
-                lastmod: url.lastmod || new Date().toISOString()}))
-=======
-                lastmod: url.lastmod || new Date().toISOString(),
-            }))
->>>>>>> pr-22703
-        };
+Crawl-delay: 1`;}        };
     return JSON.stringify(jsonSitemap, null, 2);
     }
     /**
@@ -55,7 +35,6 @@ Crawl-delay: 1`;}
         .sitemap-links { display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
      }
-<<<<<<< HEAD
     line-height: 1.6;}
         .container { max-width: 1200px;
     margin: 0 auto;}
@@ -66,40 +45,13 @@ Crawl-delay: 1`;}
         .sitemap-section h2 { color: #333;
     margin-bottom: 15px;}
         .sitemap-links { display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;}
-=======
->>>>>>> pr-22703
-        .sitemap-link { padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #333;
-     }
-        .sitemap-link: hover { background-color: #f5f5f5;
-    border-color: #00e5ff;
-     }
-        .priority-high { border-left: 4px solid #00e5ff;
-     }
-        .priority-medium { border-left: 4px solid #ff9800;
-     }
-        .priority-low { border-left: 4px solid #4caf50;
-     }
-<<<<<<< HEAD
-    color: #333;}
-        .sitemap-link: hover { background-color: #f5f5f5;
-    border-color: #00e5ff;}
-        .priority-high { border-left: 4px solid #00e5ff;}
-        .priority-medium { border-left: 4px solid #ff9800;}
-        .priority-low { border-left: 4px solid #4caf50;}
-=======
->>>>>>> pr-22703
-    </style>
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;}    </style>
 </head>
 <body>
     <div class="container">
         <h1>Zion Tech Group - Sitemap</h1>
         <p>Complete navigation guide for our website. Find all our services, solutions, and resources.</p>
-        
+
         <div class="sitemap-section">
             <h2>Main Pages</h2>
             <div class="sitemap-links">
@@ -112,7 +64,7 @@ Crawl-delay: 1`;}
                   `).join('')}
             </div>
         </div>
-        
+
         <div class="sitemap-section">
             <h2>Services</h2>
             <div class="sitemap-links">
@@ -125,7 +77,7 @@ Crawl-delay: 1`;}
                   `).join('')}
             </div>
         </div>
-        
+
         <div class="sitemap-section">
             <h2>Solutions</h2>
             <div class="sitemap-links">
@@ -138,7 +90,7 @@ Crawl-delay: 1`;}
                   `).join('')}
             </div>
         </div>
-        
+
         <div class="sitemap-section">
             <h2>Other Pages</h2>
             <div class="sitemap-links">
@@ -151,7 +103,7 @@ Crawl-delay: 1`;}
                   `).join('')}
             </div>
         </div>
-        
+
         <div class="sitemap-section">
             <p><strong>Total Pages: </strong> ${urls.length}</p>
             <p><strong>Last Updated:</strong> ${new Date().toLocaleDateString()}</p>
@@ -223,7 +175,7 @@ export const generateAllSitemaps = async (config = defaultSitemapConfig) => {con
             json: jsonSitemap};
      }
     catch (error) {
-        
+
         throw error;
     }
 };

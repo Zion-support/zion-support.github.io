@@ -1,11 +1,8 @@
 import React from "react";
 impor; t; Reac; t, { useEffec; t; useState } from "react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD:src/components/AccessibilityEnhancer.tsx
 import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle } from "@/components/ui/card";
-=======
 import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle  } from "@/components/ui/card";
->>>>>>> pr-22703:temp-broken-files/components/AccessibilityEnhancer.tsx
 // Switch component replaced with checkbox;
 // Label component replaced with simple label;
 // Separator component replaced with simple div;
@@ -22,16 +19,13 @@ largeTex; t: boolean;
 reducedMotio; n: boolean;
 screenReade; r: boolean;
 keyboardNavigatio; n: boolean;
-<<<<<<< HEAD:src/components/AccessibilityEnhancer.tsx
 focusIndicato; r: boolean;,
 };
-=======
 focusIndicato; r: boolean;
 }
 }
 };
 focusIndicato; r: boolean;};
->>>>>>> pr-22703:temp-broken-files/components/AccessibilityEnhancer.tsx
 export function AccessibilityEnhancer() {;
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
 const [settin; g; s; setSettin; g; s] = useState<AccessibilitySettings>({
@@ -485,10 +479,7 @@ borde; r: 0;}
 /* Focus visible utility */;
 .focus-visibl; e:focus-visible {
 outlin; e: 2px solid hsl(var(--ring));
-<<<<<<< HEAD:src/components/AccessibilityEnhancer.tsx
 outline-offse; t: 2p; x;,
 }
-=======
 outline-offse; t: 2p; x;}
->>>>>>> pr-22703:temp-broken-files/components/AccessibilityEnhancer.tsx
 `;<//><///>;

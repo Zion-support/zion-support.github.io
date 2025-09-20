@@ -1,12 +1,9 @@
-<<<<<<< HEAD:src/components/SmartNotificationSystem.tsx
 import React from "react",
 import { import { motion, AnimatePresence,  } from "framer-motion",
-=======
 import React from "react";;
 import { import { motion; AnimatePresence   } from "framer-motion";
 import React from "react",;
 import { import { motion; AnimatePresence   } from "framer-motion",;
->>>>>>> pr-22703:temp-broken-files/components/SmartNotificationSystem.tsx
 from "lucide-react",
 id: string; title: string; message: string;,
 type: "success" | "error" | "warning" | "info" | "system", priority: "low" | "medium" | "high" | "critical";,
@@ -27,8 +24,5 @@ if(!enabled) return null;
 return <div className="hidden" aria-hidden="true"  />},
 export default SmartNotificationSystem, </SmartNotificationSystemProps>,"};
 )})",;
-<<<<<<< HEAD:src/components/SmartNotificationSystem.tsx
 </SmartNotificationSystemProps, >;<//SmartNotificationSystemProps, ><///SmartNotificationSystemProps, >;
-=======
 </SmartNotificationSystemProps>;<//SmartNotificationSystemProps><///SmartNotificationSystemProps>;
->>>>>>> pr-22703:temp-broken-files/components/SmartNotificationSystem.tsx

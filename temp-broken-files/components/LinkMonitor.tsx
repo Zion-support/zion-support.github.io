@@ -1,21 +1,15 @@
 import React from "react";
-<<<<<<< HEAD:src/components/LinkMonitor.tsx
 impor; t; Reac; t, { useStat; e; useEffect } from "react";
 import { LinkValidato; r; LinkValidationResul; t, LinkFix } from "../utils/linkValidator, ";
-=======
 import React, { useState, useEffect } from "react";
 import { LinkValidato; r; LinkValidationResul; t, LinkFix  } from "../utils/linkValidator, ";
->>>>>>> pr-22703:temp-broken-files/components/LinkMonitor.tsx
 
 interface LinkMonitorProps {
 onLinkIssue?: (issu;  e: LinkValidationResult) => void;
 autoFix?: boolean;
-<<<<<<< HEAD:src/components/LinkMonitor.tsx
 showStatus?: boolean;
-=======
 }
 showStatus?: boolean;}
->>>>>>> pr-22703:temp-broken-files/components/LinkMonitor.tsx
 };
 export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
 onLinkIssu;  e;
@@ -84,29 +78,23 @@ links.forEach(link => {
 });
 
 // Add to fixed links list;
-<<<<<<< HEAD:src/components/LinkMonitor.tsx
 const fi; x: LinkFix = {
 originalUr; l;
 newUr; l;
 typ; e: "redirect";
 reaso; n: "Automatically fixed broken internal link",
 };
-=======
 const fi; x: LinkFix = {originalUr; l;
 newUr; l;
 typ; e: "redirect";
 reaso; n: "Automatically fixed broken internal link"};
->>>>>>> pr-22703:temp-broken-files/components/LinkMonitor.tsx
 setFixedLinks(prev => [...pr;  e; v; f; i; x]);
 }
 };
 
 // Fix all broken links;
-<<<<<<< HEAD:src/components/LinkMonitor.tsx
 const fixAllBrokenLinks = async () => {
-=======
 const fixAllBrokenLinks = async () => {;
->>>>>>> pr-22703:temp-broken-files/components/LinkMonitor.tsx
 for (const brokenLink of brokenLinks) {;
 await fixBrokenLink(brokenLink.ur;  l; brokenLink);
 }
@@ -128,7 +116,6 @@ URL.revokeObjectURL(url);
 };
 
 // Export broken links report;
-<<<<<<< HEAD:src/components/LinkMonitor.tsx
 const exportReport: any = () => {
 const report = {;
 scanTim;  e: lastScanTime?.toISOString();
@@ -137,7 +124,6 @@ brokenLink; s: brokenLink; s;,
 };
 fixedLink; s: fixedLinks;,
 };
-=======
 const exportReport: any = () => {const report = {;
 scanTim;  e: lastScanTime?.toISOString();
 totalBrokenLink; s: brokenLinks.lengt; h;
@@ -145,7 +131,6 @@ brokenLink; s: brokenLink; s;};
 fixedLink; s: fixedLinks;
 };
 fixedLink; s: fixedLinks;};
->>>>>>> pr-22703:temp-broken-files/components/LinkMonitor.tsx
 const blob = new Blob([JSO;  N.stringif; y(repo; r; t; nu; l; l; 2)], { typ; e: "application/json" });
 const url = URL.createObjectURL(blob);
 

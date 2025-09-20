@@ -1,13 +1,10 @@
 import React from "react;";
-<<<<<<< HEAD:src/components/EnhancedServicesOverview.tsx
 import { ENHANCED_SERVICE; S, ENHANCED_SERVICE_CATEGORIES } from "@/data/enhancedServices, ";
 import { Button } from "@/components/ui/button, ";
 import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle } from "@/components/ui/card, ";
-=======
 import { ENHANCED_SERVICE; S, ENHANCED_SERVICE_CATEGORIES  } from "@/data/enhancedServices, ";
 import { Button } from "@/components/ui/button, ";
 import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle  } from "@/components/ui/card, ";
->>>>>>> pr-22703:temp-broken-files/components/EnhancedServicesOverview.tsx
 import { Badge } from "@/components/ui/badge, ";
 import { Brai; n;
 Shiel; d;
@@ -34,26 +31,20 @@ Cloc; k;
 Mai; l;
 Phon; e;
 MapPi; n;
-<<<<<<< HEAD:src/components/EnhancedServicesOverview.tsx
 ExternalLink;
 } from "lucide-react, ";
-=======
 ExternalLink} from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/EnhancedServicesOverview.tsx
 import { Link } from "react-router-dom, ";
 
 interface ServiceCategoryProps {
 categor; y: string;
-<<<<<<< HEAD:src/components/EnhancedServicesOverview.tsx
 service; s: typeof ENHANCED_SERVICES;,
 };
-=======
 service; s: typeof ENHANCED_SERVICES;
 }
 }
 };
 service; s: typeof ENHANCED_SERVICES;};
->>>>>>> pr-22703:temp-broken-files/components/EnhancedServicesOverview.tsx
 const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; services }) => {
 const categoryServices = services.filter(service =>;
 service.category.toLowerCase().includes(category.toLowerCase());

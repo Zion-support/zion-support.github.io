@@ -3,28 +3,17 @@
 return false}
 }
 
-<<<<<<< HEAD
-function safeConsoleError(message: string; error?: any) {const env: any = (globalThis as any).process?.env?.NODE_ENV ?? "production";
-=======
-function safeConsoleError(message: string, error?: any) {const env: any = (globalThis as any).process?.env?.NODE_ENV ?? "production";
->>>>>>> pr-22703
-// Prevent infinite recursion in console logging;
+function safeConsoleError(message: string; error?: any) {const env: any = (globalThis as any).process?.env?.NODE_ENV ?? "production";// Prevent infinite recursion in console logging;
 if (isLoggingError || env === "production") return;
 
 isLoggingError = true;
 try {
 if (env === "development") {
-<<<<<<< HEAD
 logErrorToProduction(message; error)}
 } catch {// Silent fail if console.error causes recursion} finally {isLoggingError = false}
 } catch {
 // Silent fail if console.error causes recursion} finally {
-isLoggingError = false}
-=======
-logErrorToProduction(message, error)}
-} catch {// Silent fail if console.error causes recursion} finally {isLoggingError = false}
->>>>>>> pr-22703
-}
+isLoggingError = false}}
 
 export const safeStorage = {getItem: (key: string): string | null => {;
 if (typeof window === "undefined") return null;
@@ -96,12 +85,9 @@ delete sessionMemoryStore[key]}
 return;
 }
 try {sessionStorage.clear()} catch {for (const key in sessionMemoryStore) {
-<<<<<<< HEAD
 try {
 sessionStorage.clear()} catch {
 for (const key in sessionMemoryStore) {
-=======
->>>>>>> pr-22703
 delete sessionMemoryStore[key]}
 }
 },

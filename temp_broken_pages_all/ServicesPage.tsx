@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function ServicesPage() {
   return (
-<<<<<<< HEAD:temp_broken_pages_all/ServicesPage.tsx
     <div className="container py-8">
       <motion.div className="text-center mb-8" initial={{ opacity: 0 y: -20 }} animate={{ opacity: 1 y: 0 }}>
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
@@ -77,5 +76,4 @@ export default ServicesPage
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ServicesPage.tsx
 }

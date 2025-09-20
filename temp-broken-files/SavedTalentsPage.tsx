@@ -78,22 +78,22 @@ location,
 availability
 is verified) `)
 }finally {
-  
+
   setIsLoading (false)
 }
 }, [user])
 }
   try {
-  
+
   if (!user) {
 }//Remove from saved talents const {
-  
+
   error '
 }= await supabase .from ('saved talents') .delete () .eq ('user id', user.id) .eq ('talent id', talentId)
 }else {
-  
+
   //Add to saved talents const {
-  
+
   error '
 }= await supabase .from ('saved talents') .insert ([ {
   user id: user.id talent id: talentId;

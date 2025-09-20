@@ -158,88 +158,8 @@ linkCount: number;,
 metaDescriptionLength: number;,
 hasStructuredData: boolean;
 }): number {
-<<<<<<< HEAD
 metaDescriptionLength: number;,
-hasStructuredData: boolean;}): number {
-=======
->>>>>>> pr-22703
-let score = 0;
-let maxScore = 0;
-
-// Title optimization (0-20 points)
-maxScore += 20;
-if (metrics.title.length >= 30 && metrics.title.length <= 60) {
-score += 20;
-} else if (metrics.title.length > 0) {
-score += 10;
-}
-
-// Content length (0-25 points)
-maxScore += 25;
-if (metrics.wordCount >= 300) {
-score += 25;
-} else if (metrics.wordCount >= 150) {
-score += 15;
-} else if (metrics.wordCount >= 50) {
-score += 5;
-}
-
-// Heading structure (0-15 points)
-maxScore += 15;
-if (metrics.headingCount >= 3) {
-score += 15;
-} else if (metrics.headingCount >= 1) {
-score += 10;
-}
-
-// Meta description (0-15 points)
-maxScore += 15;
-if (metrics.metaDescriptionLength >= 120 && metrics.metaDescriptionLength <= 160) {
-score += 15;
-} else if (metrics.metaDescriptionLength > 0) {
-score += 8;
-}
-
-// Images (0-10 points)
-maxScore += 10;
-if (metrics.imageCount >= 2) {
-score += 10;
-} else if (metrics.imageCount >= 1) {
-score += 5;
-}
-
-// Internal links (0-10 points)
-maxScore += 10;
-if (metrics.linkCount >= 3) {
-score += 10;
-} else if (metrics.linkCount >= 1) {
-score += 5;
-}
-
-// Structured data (0-5 points)
-maxScore += 5;
-if (metrics.hasStructuredData) {
-score += 5;
-}
-
-return Math.round((score / maxScore) * 100);
-}
-
-private identifyIssues(metrics: {
-title: string;
-wordCount: number;
-headingCount: number;
-imageCount: number;
-linkCount: number;,
-metaDescriptionLength: number;,
-hasStructuredData: boolean;
-}): string[] {
-<<<<<<< HEAD
-metaDescriptionLength: number;,
-hasStructuredData: boolean;}): string[] {
-=======
->>>>>>> pr-22703
-const issues: string[] = [];
+hasStructuredData: boolean;}): number {const issues: string[] = [];
 if (!metrics.title || metrics.title.length < 30) {
 issues.push("Title is too short (should be 30-60 characters)");
 } else if (metrics.title.length > 60) {
@@ -321,11 +241,8 @@ totalPages: 0;
 averageWordCount: 0;
 averageSeoScore: 0;
 pagesWithIssues: 0;
-<<<<<<< HEAD
 topIssues: [];
 pageMetrics: [];
-=======
->>>>>>> pr-22703
 topIssues: [];,
 pageMetrics: [];,
 summary: "No pages analyzed yet"};

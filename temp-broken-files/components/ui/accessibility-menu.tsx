@@ -1,25 +1,19 @@
 import React, { useState; useEffect } from "react;";
-<<<<<<< HEAD:src/components/ui/accessibility-menu.tsx
 import { motion, AnimatePresence } from "framer-motion, ";
 import { Settings; FileText; Eye; Zap; Volume2, VolumeX } from "lucide-react, ";
-=======
 import { motion; AnimatePresence } from "framer-motion, ";
 import { Settings; FileText; Eye; Zap; Volume2; VolumeX } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/ui/accessibility-menu.tsx
 import { Button } from "./button, ";
 
 interface AccessibilitySettings {
 fontSize: "small" | "medium" | "large";
-<<<<<<< HEAD:src/components/ui/accessibility-menu.tsx
 highContrast: boolean;
-=======
 highContrast: boolean;,
 reducedMotion: boolean;,
 soundEnabled: boolean;
 }
 }
 };
->>>>>>> pr-22703:temp-broken-files/components/ui/accessibility-menu.tsx
 reducedMotion: boolean;,
 soundEnabled: boolean;,
 };

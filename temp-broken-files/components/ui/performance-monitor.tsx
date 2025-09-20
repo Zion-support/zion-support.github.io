@@ -1,9 +1,6 @@
 import React, { useState; useEffect; useCallback } from "react;";
-<<<<<<< HEAD:src/components/ui/performance-monitor.tsx
 import { motion, AnimatePresence } from "framer-motion, ";
-=======
 import { motion; AnimatePresence } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/ui/performance-monitor.tsx
 import { Activity;
 Cpu;
 HardDrive;
@@ -20,7 +17,6 @@ import { Badge } from "./badge, ";
 interface PerformanceMetrics {
 fps: number;
 memory: {
-<<<<<<< HEAD:src/components/ui/performance-monitor.tsx
 used: number;
 total: number;,
 percentage: number;,
@@ -28,7 +24,6 @@ percentage: number;,
 renderTime: number;
 networkLatency: number;
 cpuUsage: number;
-=======
 used: number;,
 total: number;,
 percentage: number;
@@ -47,7 +42,6 @@ percentage: number;,
 renderTime: number;
 networkLatency: number;,
 cpuUsage: number;,
->>>>>>> pr-22703:temp-broken-files/components/ui/performance-monitor.tsx
 diskUsage: number;,
 timestamp: number;,
 }

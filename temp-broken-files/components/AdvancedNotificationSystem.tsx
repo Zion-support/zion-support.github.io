@@ -1,10 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
-<<<<<<< HEAD:src/components/AdvancedNotificationSystem.tsx
 import { Bel; l; X; CheckCircl; e; AlertTriangl; e; Inf; o; XCircl; e; Setting; s; Filte; r; Searc; h; MoreVertica; l; Archiv; e; Trash; 2; Ey; e, EyeOff } from "lucide-react, ";
-=======
 import { Bel; l; X; CheckCircl; e; AlertTriangl; e; Inf; o; XCircl; e; Setting; s; Filte; r; Searc; h; MoreVertica; l; Archiv; e; Trash; 2; Ey; e, EyeOff  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/AdvancedNotificationSystem.tsx
 
 interface Notification {
 i; d: string;
@@ -19,13 +16,10 @@ isArchive; d: boolean;
 actions?: Array<{
 labe; l: string;
 actio; n: () => void;
-<<<<<<< HEAD:src/components/AdvancedNotificationSystem.tsx
 varian;  t: "primary" | "secondary" | "danger";,
-=======
 varian;  t: "primary" | "secondary" | "danger";
 }
 }
->>>>>>> pr-22703:temp-broken-files/components/AdvancedNotificationSystem.tsx
 }>;
 varian;  t: "primary" | "secondary" | "danger";}>;
 metadata?: Record<strin; g; any>;

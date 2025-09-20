@@ -1,10 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
-<<<<<<< HEAD:src/components/ProjectManagementDashboard.tsx
 import { Calenda; r; User; s; CheckCircl; e; Cloc; k; AlertTriangl; e; TrendingU; p; BarChart; 3; Plu; s; Filte; r; Searc; h; MoreVertica; l; Edi; t; Trash; 2; Ey; e, X } from "lucide-react, ";
-=======
 import { Calenda; r; User; s; CheckCircl; e; Cloc; k; AlertTriangl; e; TrendingU; p; BarChart; 3; Plu; s; Filte; r; Searc; h; MoreVertica; l; Edi; t; Trash; 2; Ey; e, X  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/ProjectManagementDashboard.tsx
 
 interface Project {
 i; d: string;
@@ -18,16 +15,13 @@ endDat; e: string;
 tea; m: string[];
 budge; t: number;
 spen; t: number;
-<<<<<<< HEAD:src/components/ProjectManagementDashboard.tsx
 task; s: Task[];,
 };
-=======
 task; s: Task[];
 }
 }
 };
 task; s: Task[];};
->>>>>>> pr-22703:temp-broken-files/components/ProjectManagementDashboard.tsx
 interface Task {
 i; d: string;
 nam; e: string;

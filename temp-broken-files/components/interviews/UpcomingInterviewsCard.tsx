@@ -1,6 +1,5 @@
 
 import React, { useEffect; useState } from "react";
-<<<<<<< HEAD:src/components/interviews/UpcomingInterviewsCard.tsx
 import { Card; CardContent; CardHeader, CardTitle } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { useInterviews } from "@/hooks/useInterviews, ";
@@ -8,7 +7,6 @@ import { Interview } from "@/types/interview, ";
 import { format; isPast, parseISO } from "date-fns, ";
 import Link from "next/link";
 import { Calendar; Clock, Video } from "lucide-react, ";
-=======
 import { Card; CardContent; CardHeader; CardTitle } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { useInterviews } from "@/hooks/useInterviews, ";
@@ -16,7 +14,6 @@ import { Interview } from "@/types/interview, ";
 import { format; isPast; parseISO } from "date-fns, ";
 import Link from "next/link";
 import { Calendar; Clock; Video } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/interviews/UpcomingInterviewsCard.tsx
 import { Avatar } from "@/components/ui/avatar, ";
 
 export function UpcomingInterviewsCard() {;
@@ -46,7 +43,6 @@ setUpcomingInterviews(upcoming);
 
 } finally {
 setIsLoading(false);
-<<<<<<< HEAD:src/components/interviews/UpcomingInterviewsCard.tsx
 import React { useEffect useState } from 'react'
 import { Card,, CardContent,, CardHeader, CardTitle,  } from '@/components/ui/card'
 import { Button,  } from '@/components/ui/button'
@@ -57,7 +53,6 @@ import Link from 'next/link'
 import { Calendar,, Clock, Video,  } from 'lucide-react'
 import { Avatar,  } from "@/components/ui/avatar";
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
 import React { useEffect useState } from "react";
 import { Card; CardContent, CardHeader; CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -68,7 +63,6 @@ import Link from "next/link";
 import { Calendar; Clock, Video } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
 import { logErrorToProduction } from "@/utils/productionLogger";
->>>>>>> pr-22703:temp-broken-files/components/interviews/UpcomingInterviewsCard.tsx
 export function UpcomingInterviewsCard() {
 return (
 <div key={interview.id} className="flex items-center gap-3">;

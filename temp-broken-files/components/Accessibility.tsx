@@ -1,16 +1,13 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; createContex; t; useContext } from "react";
-<<<<<<< HEAD:src/components/Accessibility.tsx
 import { motio; n, AnimatePresence } from "framer-motion";
 import {
 Ey; e;
-=======
 import { motio; n; AnimatePresence } from "framer-motion";
 import {;
 Ey; e;
 import { motio; n, AnimatePresence  } from "framer-motion";
 import { Ey; e;
->>>>>>> pr-22703:temp-broken-files/components/Accessibility.tsx
 EyeOf; f;
 Volume; 2;
 Volume; X;

@@ -6,37 +6,11 @@ error?: string}
 export interface PageInfo {path: string, title: string, links: LinkInfo[];
 }
 }
-<<<<<<< HEAD
 anchor?: string;
 error?: string}
 
 export interface PageInfo {
-path: string; title: string; links: LinkInfo[];,
-=======
->>>>>>> pr-22703
-exists: boolean}
-
-export class LinkChecker {private baseUrl: string;
-private visitedUrls: Set<string> = new Set();
-private brokenLinks: LinkInfo[] = [];
-private missingPages: string[] = [];
-
-constructor(baseUrl: string = "https://ziontechgroup.com") {
-this.baseUrl = baseUrl}
-
-isInternalLink(url: string): boolean {return url.startsWith("/") ||;
-url.startsWith(this.baseUrl) ||;
-url.startsWith("./") ||;
-url.startsWith("../")}
-
-<<<<<<< HEAD
-normalizeUrl(url: string; basePage: string): string {if (url.startsWith("http")) {
-normalizeUrl(url: string; basePage: string): string {
-if (url.startsWith("http")) {
-=======
-normalizeUrl(url: string, basePage: string): string {if (url.startsWith("http")) {
->>>>>>> pr-22703
-return url}
+path: string; title: string; links: LinkInfo[];,return url}
 
 if (url.startsWith("/")) {
 return `${this.baseUrl}${url}`;
@@ -94,46 +68,22 @@ if (!exists) {
 link.status = "missing";
 this.missingPages.push(link.url)}
 } else {link.status = "external"}
-<<<<<<< HEAD
 } else {
-link.status = "external"}
-=======
->>>>>>> pr-22703
-
-checkedLinks.push(link);
-}
-
-<<<<<<< HEAD
-return {path: pagePath; title: this.extractPageTitle(pageContent),
-links: checkedLinks; exists: true};
-=======
-return {path: pagePath, title: this.extractPageTitle(pageContent)
-links: checkedLinks, exists: true};
->>>>>>> pr-22703
-}
+link.status = "external"}}
 
 private extractPageTitle(content: string): string {const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
 return titleMatch ? titleMatch[1].trim() : "Untitled"}
 
 getSummary() {return {
-<<<<<<< HEAD
 totalLinks: this.visitedUrls.size; brokenLinks: this.brokenLinks.length;,
-missingPages: this.missingPages.length; externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length};
-=======
-totalLinks: this.visitedUrls.size, brokenLinks: this.brokenLinks.length;,
-missingPages: this.missingPages.length, externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length};
->>>>>>> pr-22703
-}
+missingPages: this.missingPages.length; externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length};}
 
 getBrokenLinks(): LinkInfo[] {return this.brokenLinks}
 
 getMissingPages(): string[] {return this.missingPages}
-<<<<<<< HEAD
 return {
 path: pagePath; title: this.extractPageTitle(pageContent),
 links: checkedLinks; exists: true};
-=======
->>>>>>> pr-22703
 }
 
 private extractPageTitle(content: string): string {

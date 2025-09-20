@@ -41,8 +41,6 @@ wordCount;
 headingCount;
 imageCount;
 linkCount;
-<<<<<<< HEAD
-=======
 });
 
 const suggestions = this.generateSuggestions(issues, page);
@@ -190,7 +188,6 @@ type: "missing-keywords";,
 severity: "medium";,
 description: `Missing important keywords: ${missingKeywords.join(", ")}`
 location: "Content optimization"
->>>>>>> pr-22703
 });
 }
 
@@ -224,11 +221,8 @@ break;
 
 case "poor-structure":
 suggestions.push({type: "improve-structure";
-<<<<<<< HEAD
 priority: "high";
 description: "Reorganize content with proper headings and logical flow";
-=======
->>>>>>> pr-22703
 priority: "high";,
 description: "Reorganize content with proper headings and logical flow";,
 example: "Use H1 for main title, H2 for major sections, H3 for subsections"});

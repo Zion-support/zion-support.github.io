@@ -1,21 +1,15 @@
 import React from "react";
 
-<<<<<<< HEAD:src/components/profile/ProfileHero.tsx
 import { Avatar; AvatarImage, AvatarFallback } from "@/components/ui/avatar, ";
-=======
 import { Avatar; AvatarImage, AvatarFallback  } from "@/components/ui/avatar, ";
->>>>>>> pr-22703:temp-broken-files/components/profile/ProfileHero.tsx
 import { AspectRatio } from "@/components/ui/aspect-ratio, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Star } from "lucide-react, ";
 import { cn } from "@/lib/utils, ";
 
 interface ProfileHeroProps {
-<<<<<<< HEAD:src/components/profile/ProfileHero.tsx
 name: string;
-=======
 name: string;,
->>>>>>> pr-22703:temp-broken-files/components/profile/ProfileHero.tsx
 title: string;
 avatarUrl?: string;
 coverImageUrl?: string;

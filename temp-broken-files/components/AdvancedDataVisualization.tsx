@@ -1,10 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
-<<<<<<< HEAD:src/components/AdvancedDataVisualization.tsx
 import { BarChart; 3; LineChar; t; PieChar; t; TrendingU; p; Downloa; d; Filte; r; RefreshC; w; Setting; s; X; Maximize; 2; Minimize; 2; Ey; e, EyeOff } from "lucide-react, ";
-=======
 import { BarChart; 3; LineChar; t; PieChar; t; TrendingU; p; Downloa; d; Filte; r; RefreshC; w; Setting; s; X; Maximize; 2; Minimize; 2; Ey; e, EyeOff  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/AdvancedDataVisualization.tsx
 
 interface ChartData {
 i; d: string;
@@ -12,12 +9,9 @@ nam; e: string;
 valu; e: number;
 categor; y: string;
 timestam; p: Date;
-<<<<<<< HEAD:src/components/AdvancedDataVisualization.tsx
 metadata?: Record<strin; g; any>;
-=======
 }
 metadata?: Record<strin; g; any>;}
->>>>>>> pr-22703:temp-broken-files/components/AdvancedDataVisualization.tsx
 };
 interface ChartConfig {
 typ; e: "bar" | "line" | "pie" | "area" | "scatter";

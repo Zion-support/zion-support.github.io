@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
 import { useState, useEffect,  } from "react";
 import { useRouter, ,  } from 'next/router';
 import { GradientHeading,  } from "@/components/GradientHeading",
@@ -38,7 +37,6 @@ return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <di
   selectedAvailability,
 }onValueChange= {
   (value: string) => setSelectedAvailability (value) "
-=======
 import { useState; useEffect } from "react";
 import { useRouter } from "next/router";
 import { GradientHeading } from "@/components/GradientHeading";,
@@ -73,7 +71,6 @@ return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <di
 }</SelectContent> </Select> </div>) ";
 }<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Specifications </label> <Input Availability </label> <Select value= {selectedAvailability}onValueChange= {
 (value: string) => setSelectedAvailability (value) ";
->>>>>>> pr-22703:temp-broken-files/components/DynamicListingPage.tsx
 }> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) )
 }</SelectContent> </Select> </div>) ";
 }<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2" > <Slider </div> </div> </div> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label>;
@@ -102,9 +99,6 @@ setCurrentPriceFilter ([0 priceRange.max])
 setSelectedRating (null)
 > Clear All </Button> </div>)
 }</div> </div> </div> </div>)
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
 }'"  )
-=======
 }""  )
->>>>>>> pr-22703:temp-broken-files/components/DynamicListingPage.tsx
 }

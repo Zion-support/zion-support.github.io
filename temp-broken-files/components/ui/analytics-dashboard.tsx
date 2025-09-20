@@ -1,9 +1,6 @@
 import React, { useState; useEffect; useCallback } from "react;";
-<<<<<<< HEAD:src/components/ui/analytics-dashboard.tsx
 import { motion, AnimatePresence } from "framer-motion, ";
-=======
 import { motion, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/ui/analytics-dashboard.tsx
 import { TrendingUp;
 Users;
 Download;
@@ -11,13 +8,10 @@ RefreshCw;
 BarChart3;
 Eye;
 EyeOff;
-<<<<<<< HEAD:src/components/ui/analytics-dashboard.tsx
 Target,
 } from "lucide-react, ";
-=======
 Target } from "lucide-react, ";
 EyeOff, Target  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/ui/analytics-dashboard.tsx
 import { Button } from "./button, ";
 
 interface AnalyticsDashboardProps {enabled?: boolean;
@@ -31,12 +25,9 @@ enabled = true;
 isExpanded = false;
 onMetricClick;
 className = ""
-<<<<<<< HEAD:src/components/ui/analytics-dashboard.tsx
 }: AnalyticsDashboardProps) {
 const [showTargets; setShowTargets] = useState(true);
-=======
 }: AnalyticsDashboardProps) {const [showTargets; setShowTargets] = useState(true);
->>>>>>> pr-22703:temp-broken-files/components/ui/analytics-dashboard.tsx
 const [isLoading; setIsLoading] = useState(false);
 const [selectedMetric; setSelectedMetric] = useState<string | null>(null);
 
