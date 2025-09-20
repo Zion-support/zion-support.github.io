@@ -1,11 +1,21 @@
 import React, { useState } from "react";
 interface FormData {
-  name: string,email: string,company: string,service: string,message: string,budget: string
+  name: string;
+  email: string;
+  company: string;
+  service: string;
+  message: string;
+  budget: string;
 }
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',email: '',company: '',service: '',message: '',budget: ''
+    name: '',
+    email: '',
+    company: '',
+    service: '',
+    message: '',
+    budget: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
