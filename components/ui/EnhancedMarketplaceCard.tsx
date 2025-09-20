@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const EnhancedMarketplaceCard: React.FC = () => {
@@ -7,5 +6,3 @@ const EnhancedMarketplaceCard: React.FC = () => {
 };
 
 export default EnhancedMarketplaceCard;
-=======
->>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

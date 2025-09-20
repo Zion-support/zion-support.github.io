@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
 /// <reference types="next/navigation-types/navigation" />
@@ -77,6 +76,3 @@ declare global {
 }
 
 export {};
-=======
-
->>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

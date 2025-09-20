@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useState } from "react";
 import { Header } from "@/components/Header";
@@ -62,14 +61,3 @@ export default function ServiceDescriptionGenerator() {
         </div>
       </main>
       <Footer />
-=======
-import React from 'react';
-export function ServiceDescriptionGenerator() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-    </div>
-  );
-}

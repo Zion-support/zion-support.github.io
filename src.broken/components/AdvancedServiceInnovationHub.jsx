@@ -1,5 +1,3 @@
-import React, { useState, useMemo } from 'react';
-<<<<<<< HEAD
 export default AdvancedServiceInnovationHub;
 import { Badge } from './ui / badge';
 export default function Page() {

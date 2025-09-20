@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
@@ -57,14 +56,3 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
     </form>
   );
 }
-=======
-import React from 'react';
-export function LoginForm() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
-  );
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3

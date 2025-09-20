@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useEffect, useState } from 'react';
 export default function Page() {
@@ -6,7 +5,6 @@ export default function Page() {
 import { captureException } from '@/utils/sentry';"
 import { Skeleton } from '@/components/ui/skeleton';"
 import { useDebounce } from '@/hooks/useDebounce';"
->>>>>>> main
 import { z } from 'zod';
 
 export default function Page() {

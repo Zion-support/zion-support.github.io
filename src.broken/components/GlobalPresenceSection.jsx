@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-<<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {

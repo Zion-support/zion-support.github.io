@@ -1,5 +1,3 @@
-import React from 'react';
-<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 
 export default function Page() {

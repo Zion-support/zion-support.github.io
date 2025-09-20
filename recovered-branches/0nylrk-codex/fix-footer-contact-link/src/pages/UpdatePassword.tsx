@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -250,14 +249,3 @@ export default function UpdatePassword() {
       </div>
       <Footer />
     </>
-=======
-import React from 'react';
-export function UpdatePassword() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-  );
-}

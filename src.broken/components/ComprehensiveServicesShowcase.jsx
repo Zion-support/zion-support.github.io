@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { comprehensiveMicroSaasServices2025 } from '../../data / 2025 - comprehensive - micro - saas -services';
 export default function Page() {

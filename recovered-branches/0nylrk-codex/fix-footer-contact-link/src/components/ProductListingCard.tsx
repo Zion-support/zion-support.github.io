@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useNavigate, Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -159,14 +158,3 @@ export function ProductListingCard({
     </div>
   );
 }
-=======
-import React from 'react';
-export function ProductListingCard() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
-  );
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3

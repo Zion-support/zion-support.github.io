@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -167,14 +166,3 @@ export default function Onboarding() {
       </div>
       <Footer />
     </>
-=======
-import React from 'react';
-export function ChatWidget() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-  );
-}
