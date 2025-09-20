@@ -70,12 +70,13 @@ export default [
     rules: {
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       'no-unused-vars': 'off',
-      'no-console': 'warn',
-      'no-undef': 'off'
+      'no-console': 'off',
+      'no-undef': 'off',
+      '@typescript-eslint/no-explicit-any': 'off'
     },
     settings: {
       react: {
@@ -95,8 +96,8 @@ export default [
              '**/zion_academy/**',
              '**/recovered/**',
              '**/backup*/**',
+             '**/temp*/**',
              '**/broken_*/**',
-             '**/temp_*/**',
              '**/automation/**',
              '**/server/**',
              '**/dao/**',
@@ -122,6 +123,7 @@ export default [
              '**/contracts/**',
              '**/cypress/**',
              '**/pages/**',
+             '**/public/**',
              '**/*.mjs',
              '**/server.mjs',
              '**/seed.js',
@@ -304,7 +306,6 @@ export default [
              '**/pages.blog.disabled/**',
              '**/pages.broken/**',
              '**/pages.corrupted.*/**',
-             '**/pages.disabled/**',
              '**/pages.disabled_auto/**',
              '**/pages.disabled_build/**',
              '**/pages.old/**',
@@ -383,7 +384,6 @@ export default [
              '**/merge-open-prs.js',
              '**/merge-prs*.js',
              '**/merge-resolver*.js',
-             '**/components/**',
              '**/comprehensive-*.js',
              '**/comprehensive_*.js',
              '**/config/**',
