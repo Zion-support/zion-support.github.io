@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { Link  } from 'react-router-dom';
  from 'react';
 export default UltimateServicesShowcase;
@@ -35,5 +37,6 @@ import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - i
   ;  ;
   ;
   'Emerging': 'from-green-600 to-emerald-700';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default UltimateServicesShowcase;

@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -9,5 +11,6 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default InteractiveContentShowcase2025;

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Brain, TrendingUp, Zap, Shield, Users } from 'lucide-react';
@@ -183,3 +185,4 @@ export default function AI2026UltimateImplementationFrameworkBanner() {
     </section>
   );
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

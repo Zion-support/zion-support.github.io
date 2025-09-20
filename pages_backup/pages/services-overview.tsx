@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -158,6 +160,7 @@ export default function ServicesOverviewPage() {
         </section>
       </div>
     </Layout>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const services-overview: React.FC = () => {,

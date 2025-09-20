@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 const EnhancedContentCarousel2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+<<<<<<< HEAD
+=======
 const EnhancedContentCarousel2025: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
   const contentItems = [
     {
@@ -15,6 +18,12 @@ const EnhancedContentCarousel2025: React.FC = () => {
       gradient: 'from-purple-600 to-pink-600',
       link: '/pages/NextGenAIConsciousness2025',
       features: ['Self-aware AI systems', 'Emotional intelligence', 'Quantum consciousness', 'Transcendent learning']
+<<<<<<< HEAD
+    }
+  ];
+
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   const contentSlides = [
     {
       id: 1,
@@ -158,6 +167,22 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
+<<<<<<< HEAD
+    if (!isAutoPlaying) return;
+    
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % contentItems.length);
+    }, 6000);
+    
+    return () => clearInterval(timer);
+  }, [isAutoPlaying, contentItems.length]);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % contentItems.length);
+  };
+  };
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + contentItems.length) % contentItems.length);
@@ -206,6 +231,11 @@ const EnhancedContentCarousel2025: React.FC = () => {
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-6 h-6 bg-gradient-to-r ${contentItems[currentSlide].gradient} rounded-full flex items-center justify-center text-sm font-bold`}>
                         ✓
+<<<<<<< HEAD
+          </p>
+        </motion.div>
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
           {/* Main Carousel */}
           <div className="relative overflow-hidden rounded-2xl">
             <div 
@@ -231,7 +261,10 @@ const EnhancedContentCarousel2025: React.FC = () => {
                         <button className={`w-full mt-4 bg-gradient-to-r ${slide.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}></button>
                           Start Interactive Demo →</button>
                         </button>
+<<<<<<< HEAD
+=======
                       </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
                       <span className="text-lg">{feature}</span>
                   ))}
                 {/* Action Buttons */}
@@ -433,8 +466,13 @@ const EnhancedContentCarousel2025: React.FC = () => {
             <div className="text-4xl font-bold text-cyan-400 mb-2">24/7
             <div className="text-gray-300">Available Demos
           <div className="text-center">
+<<<<<<< HEAD
+            <div className="text-4xl font-bold text-emerald-400 mb-2">∞
+            <div className="text-gray-300">Possibilities
+=======
             <div className="text-4xl font-bold text-emerald-400 mb-2">∞</div>
             <div className="text-gray-300">Possibilities</div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
         {/* Technology Tags */}
         <div className="text-center mt-12">
           <div className="inline-flex items-center space-x-4">
@@ -473,8 +511,11 @@ const EnhancedContentCarousel2025: React.FC = () => {
               Download Whitepaper
             </motion.button>
         </motion.div>
+<<<<<<< HEAD
+=======
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 

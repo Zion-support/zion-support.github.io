@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState, useCallback} from 'react';'''';';
 import {motion, AnimatePresence} from 'framer-motion';'''';';
 import React, {useState, useCallback} from 'react';'''
@@ -782,6 +784,7 @@ const handleClearHistory = useCallback(() => {}""
                               </div>"""";
                               {issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
                                     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default AICodeGenerator.js;

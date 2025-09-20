@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+export default function Page() {,
+  return (,
+    <div className="bg-black min-h-screen">,
+      <h1>Real-Time Model Routing Playbook 2026</h1>,
+    </div>,
+  );
+}
+,
+=======
 // @ts-nocheck
 export default function RealTimeModelRoutingPlaybook2026Page() {
   return (
@@ -84,3 +94,4 @@ const page: React.FC = () => {
 };
 
 export default page;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

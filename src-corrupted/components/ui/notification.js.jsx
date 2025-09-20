@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React, {useState, createContext, useContext, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {X, CheckCircle, AlertTriangle, Info, AlertCircle, Bell} from 'lucide-react';
@@ -22,6 +25,7 @@ export function NotificationProvider(props: any) {
             dismissible: notification.dismissible ?? true,
   duration: notification.duration ?? 5000
         
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const notification.js: React.FC = () => {,
   return (,

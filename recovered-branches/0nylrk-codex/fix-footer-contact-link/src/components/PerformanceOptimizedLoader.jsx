@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { motion } from 'framer-motion';
 export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', text, fullScreen = false }) {
     const sizeClasses = {
@@ -104,3 +106,4 @@ export function PageSkeleton({ className = "" }) {
       </div>
     </div>);
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

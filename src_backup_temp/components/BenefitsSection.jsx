@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Zap, Shield, TrendingUp, CheckCircle, Users, Clock, Star, Award} from 'lucide-react';
@@ -313,3 +315,4 @@ export default BenefitsSection;
 </motion>;
 </div>;
 </number>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

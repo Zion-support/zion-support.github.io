@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const ConsciousnessComputingRevolution2026: React.FC = () => {
   return (

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import React from 'react';'
 export default InnovativeServicesOverview2025;''
 import { motion  } from 'framer-motion';
@@ -94,6 +99,7 @@ export default function Page(...args: an y[]): any {): unknown {): unknown {}
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default InnovativeServicesOverview2025;

@@ -29,6 +29,12 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       title: "Revolutionary Tech Showcase 2036",
       description: "Experience the most revolutionary technology showcase featuring conscious AI, quantum consciousness, and interdimensional computing",
       image: "🌌",
+<<<<<<< HEAD
+      gradient: "from-emerald-600/30 to-teal-600/30",
+      border: "border-emerald-400/30",
+      textColor: "text-emerald-100",
+      link: "/pages/RevolutionaryTechShowcase2036"
+=======
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/InterdimensionalTechnology2038"
     },
@@ -47,6 +53,7 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       image: "🌐",
       gradient: "from-indigo-600 to-blue-600",
       link: "/pages/UniversalConsciousnessNetwork2040"
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     }
   ];
 
@@ -115,6 +122,9 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
                             <li>• Climate control</li>
                             <li>• Human enhancement</li>
                           </ul>
+<<<<<<< HEAD
+              ))}
+=======
                         </div>
                       </div>
                     </div>
@@ -124,6 +134,7 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
             </div>
           </div>
 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
@@ -131,6 +142,12 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
+<<<<<<< HEAD
+                  index === currentSlide ? 'bg-white' : 'bg-white/30'
+                }`}</button>
+              /></button>
+            ))}</button>
+=======
                   index === currentSlide 
                     ? 'bg-purple-500 scale-125' 
                     : 'bg-white/30 hover:bg-white/50'
@@ -139,6 +156,7 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
             ))};
           </div>
 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
           {/* Navigation Arrows */}
           <button
             onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}

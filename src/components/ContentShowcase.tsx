@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import React, { useMemo, useState } from 'react';
+=======
 import React, { useState } from 'react';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import { 
   BookOpen, 
   FileText, 
@@ -34,6 +38,19 @@ const ContentShowcase: React.FC = () => {
     { id: 'whitepapers', name: 'White Papers', icon: FileText }
   ];
 
+<<<<<<< HEAD
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const { blogPosts } = require('../data/blog-posts.js');
+  const latestFour = useMemo(() => {
+    try {
+      return [...blogPosts]
+        .sort((a, b) => (b.publishDate || '').localeCompare(a.publishDate || ''))
+        .slice(0, 4);
+    } catch {
+      return blogPosts.slice(0, 4);
+    }
+  }, [blogPosts]);
+=======
   const blogPosts = [
     {
       id: 1,
@@ -92,6 +109,7 @@ const ContentShowcase: React.FC = () => {
       new: true
     }
   ];
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
   const caseStudies = [
     {

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useRef} from 'react';
 import {motion, useScroll, useTransform} from 'framer-motion';
 import {ArrowRight, Sparkles, Star, Zap, Shield, Users, Clock, Target, TrendingUp, Award} from 'lucide-react';
@@ -392,3 +394,4 @@ const stats = ["
 </motion>
 </motion>
 </motion>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

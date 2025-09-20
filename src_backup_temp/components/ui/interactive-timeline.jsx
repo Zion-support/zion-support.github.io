@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState, useRef, useEffect, useCallback} from 'react';'''; import {motion, AnimatePresence, useScroll} from 'framer-motion';'''; import {Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X} from 'lucide-react'; import {Button} from "./button";""";" import {Badge} from "./badge";""";" export function InteractiveTimeline(props: any) {}; const [currentEventIndex, setCurrentEventIndex] = useState(0); const [isPlaying, setIsPlaying] = useState(autoPlay); const [playbackSpeed, setPlaybackSpeed] = useState(1); const [selectedEvent, setSelectedEvent] = useState(null); const [showFilters, setShowFilters] = useState(false); const [filters, setFilters] = useState({}; status[],; category[],; priority[],; progress: 0; });'; const [viewMode, setViewMode] = useState('timeline'); const [zoomLevel, setZoomLevel] = useState(1); const timelineRef = useRef(null);" const {scrollYProgress: _scrollYProgress} = useScroll({}";" """;" target: timelineRef,""";" offset["start end", "end start"]; });';
 ;';;';
 import React, {useState, useRef, useEffect, useCallback} from 'react';; import {motion, AnimatePresence, useScroll} from 'framer-motion';; import {Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X} from 'lucide-react'; import {Button} from "./button";""";" import {Badge} from "./badge";""";" export function InteractiveTimeline(props: any) {}; const [currentEventIndex, setCurrentEventIndex] = useState(0); const [isPlaying, setIsPlaying] = useState(autoPlay); const [playbackSpeed, setPlaybackSpeed] = useState(1); const [selectedEvent, setSelectedEvent] = useState(null); const [showFilters, setShowFilters] = useState(false); const [filters, setFilters] = useState({}; status[],; category[],; priority[],; progress: 0; });'; const [viewMode, setViewMode] = useState('timeline'); const [zoomLevel, setZoomLevel] = useState(1); const timelineRef = useRef(null);" const {scrollYProgress: _scrollYProgress} = useScroll({}";" """;" target: timelineRef,""";" offset["start end", "end start"]; });
@@ -90,5 +92,6 @@ export function InteractiveTimeline($1) {}
             'Research': TrendingUp,''
             'Team': Users,''
   'Launch': Award;'
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default interactive-timeline;

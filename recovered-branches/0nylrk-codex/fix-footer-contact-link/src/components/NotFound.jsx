@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Home, Search, ArrowRight, AlertTriangle } from 'lucide-react';
@@ -111,5 +113,6 @@ const NotFound = () => {
         </motion.p>
       </motion.div>
     </div>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default NotFound;

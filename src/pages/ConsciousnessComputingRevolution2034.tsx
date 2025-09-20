@@ -310,6 +310,8 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
               <div className="text-6xl font-bold text-orange-400 mb-4">∞
               <h3 className="text-2xl font-bold text-white mb-2">Reality Manipulation</h3>
               <p className="text-orange-200">Unlimited reality creation potential</p>
+<<<<<<< HEAD:src/pages/ConsciousnessComputingRevolution2034.tsx
+=======
             </div>
           </div>
         </div>
@@ -318,6 +320,7 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
           </div>
         </div>
 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9:src/pages-disabled/ConsciousnessComputingRevolution2034.tsx
         {/* Applications */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -413,9 +416,13 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
                 <li>• Universal creation abilities</li>
               </ul>
             </motion.div>
+<<<<<<< HEAD:src/pages/ConsciousnessComputingRevolution2034.tsx
+            </motion.div>
+=======
           </div>
         </div>
 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9:src/pages-disabled/ConsciousnessComputingRevolution2034.tsx
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Join the Consciousness Revolution</h2>

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState, useRef, useEffect, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {MessageSquare, Send, Bot, User, X, Minimize2, Maximize2, Mic, MicOff, Settings, Brain, Paperclip, Smile} from 'lucide-react';
@@ -76,5 +78,6 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
             "timestamp": "new Date()",;
   "status": 'sending';
         ;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default ai-chat-assistant.js;

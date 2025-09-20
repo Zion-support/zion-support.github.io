@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default EnhancedComprehensiveServicesShowcase;
+=======
 import React, {useState} from 'react';'''
 import {innovativeServices2025} from '../data/innovativeServices2025';'''
 import {ULTIMATE_INNOVATIVE_SERVICES_2027} from '../data/ultimateInnovativeServices2027';'''
@@ -367,3 +371,4 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       </section>
 
 export default EnhancedComprehensiveServicesShowcase;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default AdvancedServicePortfolioDashboard.js;
+=======
 import React, {useState, useMemo} from 'react';'''
 import {motion} from 'framer-motion';
 import {}
@@ -315,3 +319,4 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       </motion.div>
 
 export default AdvancedServicePortfolioDashboard.js;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

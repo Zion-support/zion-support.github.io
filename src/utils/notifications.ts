@@ -1,6 +1,12 @@
 // Notification utilities for user feedback
 
 export interface NotificationOptions {
+<<<<<<< HEAD
+  type?: 'success' | 'error' | 'warning' | 'info';
+  duration?: number;
+  position?: 'top' | 'bottom' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+  closable?: boolean;
+=======
 // Notification utilities
 interface NotificationOptions {
   title: string;
@@ -13,6 +19,7 @@ interface NotificationOptions {
   silent?: boolean;
   timestamp?: number;
   actions?: NotificationAction[];
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 }
 
 export interface Notification {
@@ -88,6 +95,21 @@ class NotificationManager {
 // Create singleton instance
 export const notificationManager = new NotificationManager();
 
+<<<<<<< HEAD
+// Convenience functions
+export const notify = {
+  success: (message: string, options?: Omit<NotificationOptions, 'type'>) =>
+    notificationManager.add(message, { ...options, type: 'success' }),
+  
+  error: (message: string, options?: Omit<NotificationOptions, 'type'>) =>
+    notificationManager.add(message, { ...options, type: 'error' }),
+  
+  warning: (message: string, options?: Omit<NotificationOptions, 'type'>) =>
+    notificationManager.add(message, { ...options, type: 'warning' }),
+  
+  info: (message: string, options?: Omit<NotificationOptions, 'type'>) =>
+    notificationManager.add(message, { ...options, type: 'info' }),
+=======
   /**
    * Check if notifications are permitted
    */
@@ -256,6 +278,7 @@ export default notificationManager;
       tag: 'warning'
     });
   }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 
 export default notificationManager;

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState, useEffect} from 'react';'''';';
 import React, {useState, useEffect} from 'react';'''
 import {motion} from 'framer-motion';
@@ -344,6 +346,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                     <div className="text-blue-400 text-sm">External</div>
                   </div>
                     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default LinkHealthMonitor;

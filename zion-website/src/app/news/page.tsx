@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+
+export default function NewsPage() {,
+  return (,
+    <div className="bg-black min-h-screen">,
+      <h1>News</h1>,
+    </div>,
+  ),
+=======
 import Link from 'next/link'
 
 export const metadata = {
@@ -67,4 +76,5 @@ export default function NewsPage() {
       </div>
     </div>
   )
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 }

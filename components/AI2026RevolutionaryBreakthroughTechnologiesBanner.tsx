@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -127,3 +129,4 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
 };
 
 export default AI2026RevolutionaryBreakthroughTechnologiesBanner;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import React from 'react',
+
+const enhanced-services-showcase-2025: React.FC = () => {,
+  return (,
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+      <h3 className="text-xl font-bold mb-4">enhanced-services-showcase-2025</h3>,
+      <p className="text-gray-300">Revolutionary technology component</p>,
+    </div>,
+  ),};
+export default enhanced-services-showcase-2025;
+=======
 import React{ useState } from 'react';
 import Head from 'next/head';
 import { motionAnimatePresence } from 'framer-motion';
@@ -139,3 +151,4 @@ const enhanced-services-showcase-2025: React.FC = () => {
 };
 
 export default enhanced-services-showcase-2025;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

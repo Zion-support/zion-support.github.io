@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default FuturisticHero;
+=======
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe } from 'lucide-react';
@@ -33,3 +37,4 @@ export default function FuturisticHero() {
       </div>
 
 export default FuturisticHero;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

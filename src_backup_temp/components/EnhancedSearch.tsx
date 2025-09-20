@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default EnhancedSearch;
+=======
 import { useNavigate  } from 'react-router-dom';
 import { useNavigate  } from 'react-router-dom';
  from 'react';
@@ -18,3 +22,4 @@ export function EnhancedSearch("props": "any) {;
   const [filters, setFilters] = useState<SearchFilter>({;
 
 export default EnhancedSearch;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

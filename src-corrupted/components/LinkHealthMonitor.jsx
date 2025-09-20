@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default LinkHealthMonitor;
+=======
 import React, {useState, useEffect} from 'react';'''
 import {motion} from 'framer-motion';
 import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = (props: any) => {}
@@ -57,3 +61,4 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             linkText: 'Email'
 
 export default LinkHealthMonitor;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

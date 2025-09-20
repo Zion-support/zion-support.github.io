@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 "use client";
 'use client';
 
@@ -160,3 +162,4 @@ const NewContentShowcase2026PromotionBanner = () => {
 };
 
 export default NewContentShowcase2026PromotionBanner;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

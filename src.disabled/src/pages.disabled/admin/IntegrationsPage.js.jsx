@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import _React from 'react',''', import { IntegrationsHub } from '@/components/integrations/IntegrationsHub',''', import { SEO } from '@/components/SEO',''', import { ProtectedRoute } from '@/components/ProtectedRoute', export {}, return null} return(), <ProtectedRoute adminOnly={true}> <div>Broken JSX</div> />", <main className="min-h-screen bg-background"> <IntegrationsHub /> ></div> </ProtectedRoute>)} , export { IntegrationsPage }, export { IntegrationsPage }, export { IntegrationsPage }, export { IntegrationsPage }, export { IntegrationsPage };
+import React from \'react\',\''\', import { IntegrationsHub } from \'@/components/integrations/IntegrationsHub\',\''\', import { SEO } from \'@/components/SEO\',\''\', import { ProtectedRoute } from \'@/components/ProtectedRoute\', export {}, return null} return(), <ProtectedRoute adminOnly={true}> <div>Broken JSX</div> />\", <main className=\"min-h-screen bg-background\"> <IntegrationsHub /> ></div> </ProtectedRoute>)} , export { IntegrationsPage }, export { IntegrationsPage }, export { IntegrationsPage }, export { IntegrationsPage }, export { IntegrationsPage };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee,
+const React from "react",""", import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",""", import { SEO } from "@/components/SEO",""", import { ProtectedRoute } from "@/components/ProtectedRoute", export {}, return null} return(), <ProtectedRoute adminOnly={true}> <div>Broken JSX</div> />", <main className="min-h-screen bg-background"> <IntegrationsHub /> ></div> </ProtectedRoute>)} , export { IntegrationsPage }, export { IntegrationsPage }, export { IntegrationsPage }, export { IntegrationsPage }, export { IntegrationsPage },""",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee,
+=======
 =======
 =======
 import _React from 'react';'''; import { IntegrationsHub } from '@/components/integrations/IntegrationsHub';'''; import { SEO } from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; export {}; return null} return(); <ProtectedRoute adminOnly={true}> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <IntegrationsHub /> ></div> </ProtectedRoute>)} ; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage };
@@ -14,3 +21,4 @@ import _React from 'react';'''; import { IntegrationsHub } from '@/components/in
 =======
 =======
 =======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

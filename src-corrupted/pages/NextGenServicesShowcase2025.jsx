@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';'''
 import {motion} from 'framer-motion';'''
 import Link from 'next/link';'''
@@ -76,6 +79,7 @@ export default function NextGenServicesShowcase2025(props: any) {}
             demoUrl: 'https://ziontechgroup.com/demo/multimodal-ai','''
             ctaText: 'Unite Your AI','''
             path: '/multimodal-ai-platform'
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const NextGenServicesShowcase2025: React.FC = () => {,
   return (,

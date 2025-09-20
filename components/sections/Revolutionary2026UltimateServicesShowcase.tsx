@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Search, Filter, Grid, List, Phone } from 'lucide-react';
@@ -342,3 +344,4 @@ const Revolutionary2026UltimateServicesShowcase = () => {
 };
 
 export default Revolutionary2026UltimateServicesShowcase;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

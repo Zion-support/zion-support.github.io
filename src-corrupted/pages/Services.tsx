@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+import React from 'react',
+
+const Services: React.FC = () => {,
+  return (,
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
+      <Helmet>,
+        <title>Services | Zion Tech Group</title>,
+        <meta name="description" content="Services - Revolutionary technology solutions" />,
+      </Helmet>,
+      <div className="container mx-auto px-4 py-20">,
+        <div className="text-center">,
+          <h1 className="text-4xl font-bold mb-6">Services</h1>,
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
+        </div>,
+      </div>,
+    </div>,
+  ),};
+export default Services;
+=======
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -235,3 +255,4 @@ const Services: React.FC = () => {
 };
 
 export default Services;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

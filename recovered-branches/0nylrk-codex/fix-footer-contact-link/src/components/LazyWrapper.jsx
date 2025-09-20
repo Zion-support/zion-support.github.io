@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { EnhancedLoading } from './EnhancedLoading';
@@ -29,5 +31,6 @@ const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant
     return (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className={className}>
       {children}
     </motion.div>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default LazyWrapper;

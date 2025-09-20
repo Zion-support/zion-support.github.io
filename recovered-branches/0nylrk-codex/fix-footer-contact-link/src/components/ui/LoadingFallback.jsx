@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { motion } from "framer-motion";
 import { Loader2 } from "lucide-react";
 export function LoadingFallback({ message = "Loading...", size = "md", className = "" }) {
@@ -43,3 +45,4 @@ export function PageLoadingFallback() {
       </div>
     </div>);
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

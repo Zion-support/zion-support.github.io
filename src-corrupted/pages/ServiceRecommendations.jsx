@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';'''
 import {motion} from 'framer-motion';'''
 import {Brain, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Rocket, Shield} from 'lucide-react';
@@ -57,6 +60,7 @@ const ServiceRecommendations = (props: any) => {}
             icon: <Award className="w-6 h-6 text-zion-orange" />,'
             title: 'Expert Validation','
             description: 'All recommendations are validated by our technology experts and industry specialists'
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const ServiceRecommendations: React.FC = () => {,
   return (,

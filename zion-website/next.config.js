@@ -2,6 +2,10 @@ const path = require('path')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
+  eslint: {
+    ignoreDuringBuilds: true
+=======
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
@@ -198,9 +202,14 @@ const nextConfig = {
     }
     
     return config
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   },
   // Silence workspace root inference warning in monorepo
   outputFileTracingRoot: path.join(__dirname, '..')
 }
 
+<<<<<<< HEAD
 module.exports = nextConfig
+=======
+module.exports = nextConfig
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

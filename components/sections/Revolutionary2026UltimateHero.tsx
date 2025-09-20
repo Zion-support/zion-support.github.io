@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Play, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
@@ -282,3 +284,4 @@ const Revolutionary2026UltimateHero = () => {
 };
 
 export default Revolutionary2026UltimateHero;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

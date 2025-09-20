@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target } from 'lucide-react';
@@ -332,5 +334,6 @@ export const EnhancedAbout = () => {
         </motion.div>
       </section>
     </div>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default EnhancedAbout;

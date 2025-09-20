@@ -123,6 +123,19 @@ const RevolutionaryAdBanner2035: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
+<<<<<<< HEAD
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
+            <h3 className="text-3xl font-bold mb-4">🌟 Don't Miss the Future!</h3>
+            <p className="text-xl opacity-90 mb-6"></p>
+              Join millions of users experiencing the most revolutionary technologies in human history</p>
+=======
 
   useEffect(() => {
     setIsVisible(true);
@@ -185,6 +198,7 @@ const RevolutionaryAdBanner2035: React.FC = () => {
             <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
             <p className="text-xl opacity-90 mb-6 max-w-2xl mx-auto">
               Get exclusive access to our revolutionary technology suite and transform your business today
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
               <a

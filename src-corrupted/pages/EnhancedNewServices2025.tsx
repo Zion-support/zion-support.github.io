@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import { Link  } from 'react-router-dom';
 import { motion  } from 'framer-motion';
 import { Brain,
@@ -717,6 +722,7 @@ export function EnhancedNewServices2025(...args: unknow n[]): unknown {}
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default EnhancedNewServices2025;

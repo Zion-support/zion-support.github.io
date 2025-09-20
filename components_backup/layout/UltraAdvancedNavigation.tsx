@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
@@ -13,5 +15,6 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default UltraAdvancedNavigation;

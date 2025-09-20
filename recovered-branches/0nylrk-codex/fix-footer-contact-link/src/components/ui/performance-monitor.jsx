@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default performance-monitor;
+=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimize2, X } from 'lucide-react';
@@ -250,3 +254,4 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         </div>
 
 export default performance-monitor;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

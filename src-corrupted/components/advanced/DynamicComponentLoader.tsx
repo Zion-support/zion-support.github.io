@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 'use client';
 
 import React, {;
@@ -781,6 +783,7 @@ export default DynamicComponentLoader; export default DynamicComponentLoader
 
 
     />;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default DynamicComponentLoader;

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 import Head from 'next/head';
 import Link from 'next/link';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const [slug]: NextPage = () => {,
   return (,
@@ -16,6 +19,9 @@ const [slug]: NextPage = () => {,
     </div>,
   );
 };
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee,
+=======
 
 export default [slug];
 =======
@@ -172,3 +178,4 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
   }
   return { props: { initialPost: post }, revalidate: 60 },
 },
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

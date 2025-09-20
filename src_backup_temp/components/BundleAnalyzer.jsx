@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState, useEffect, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw export const BundleAnalyzer = ("props": "any) => {;
@@ -325,3 +327,4 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
 export default BundleAnalyzer;
 </motion>;
 </motion>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

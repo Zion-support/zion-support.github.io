@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 "use client";
 'use client';
 
@@ -166,3 +168,4 @@ const InteractiveTechShowcase2026Banner = () => {
 };
 
 export default InteractiveTechShowcase2026Banner;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

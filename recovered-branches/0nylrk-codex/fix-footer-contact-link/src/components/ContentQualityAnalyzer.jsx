@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap } from 'lucide-react';
@@ -348,5 +350,6 @@ const ContentQualityAnalyzer = () => {
           </motion.div>
         </motion.div>)}
     </>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default ContentQualityAnalyzer;

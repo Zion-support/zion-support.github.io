@@ -1,4 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
+  return (,
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+      <h3 className="text-xl font-bold mb-4">AIPoweredITAssetManagement</h3>,
+      <p className="text-gray-300">Revolutionary technology component</p>,
+    </div>,
+=======
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive } from 'lucide-react';
@@ -418,6 +425,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
       <h3 className="text-xl font-bold mb-4">AIPoweredITAssetManagement</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default AIPoweredITAssetManagement;

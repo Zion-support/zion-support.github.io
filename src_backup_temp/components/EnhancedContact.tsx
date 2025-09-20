@@ -1,4 +1,7 @@
 import React from 'react';
+<<<<<<< HEAD
+export default EnhancedContact;
+=======
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 ;
@@ -18,3 +21,4 @@ export function EnhancedContact(...args[]): "{;
   const [formData", setFormData] = useState<any>({;
 
 export default EnhancedContact;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

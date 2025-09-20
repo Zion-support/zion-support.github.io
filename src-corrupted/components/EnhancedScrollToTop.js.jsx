@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React, {useState, useEffect} from 'react';'''
 import {motion, AnimatePresence} from 'framer-motion';'''
 import {ChevronUpIcon} from '@heroicons/react/24/outline';
@@ -19,6 +22,7 @@ else {setIsVisible(false)}
       {isVisible && (<motion.button initial = {
   { opacity: 0, scale: 0.8,
   y: 20 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const EnhancedScrollToTop.js: React.FC = () => {,
   return (,

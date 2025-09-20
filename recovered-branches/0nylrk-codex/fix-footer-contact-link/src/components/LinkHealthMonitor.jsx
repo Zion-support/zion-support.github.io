@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap } from 'lucide-react';
@@ -254,5 +256,6 @@ const LinkHealthMonitor = () => {
           </motion.div>
         </motion.div>)}
     </>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default LinkHealthMonitor;

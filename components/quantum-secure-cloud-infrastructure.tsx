@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
 import SEO from '../components/SEO';
 
+<<<<<<< HEAD
+=======
 export default function QuantumSecureCloudInfrastructure() {
 	return (
 		<ServiceLanding
@@ -23,3 +25,4 @@ export default function QuantumSecureCloudInfrastructure() {
 		/>
 	);
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

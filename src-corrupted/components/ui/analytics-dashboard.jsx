@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default analytics-dashboard;
+=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target } from 'lucide-react';
@@ -74,3 +78,4 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
       </div>
 
 export default analytics-dashboard;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

@@ -2,10 +2,17 @@ import React from 'react';
 
 const RevolutionaryContentBanner2037: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-12 mb-8 rounded-2xl relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm">
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="text-center">
+=======
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-8">
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2037
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -40,6 +47,8 @@ const RevolutionaryContentBanner2037: React.FC = () => {
             >
               View Interactive Demo
             </a>
+<<<<<<< HEAD
+=======
           </div>
           
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
@@ -77,6 +86,7 @@ const RevolutionaryContentBanner2037: React.FC = () => {
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 

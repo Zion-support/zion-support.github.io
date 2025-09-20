@@ -1,8 +1,12 @@
+<<<<<<< HEAD
+export default function RagAgentsCaseStudy() {
+=======
 'use client'
 
 import React from 'react'
 
 export default function RagAgentsCaseStudyPage() {
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-3xl px-6 pt-24 pb-16 lg:px-8">
@@ -36,4 +40,7 @@ export default function RagAgentsCaseStudyPage() {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

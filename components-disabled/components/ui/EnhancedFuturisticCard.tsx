@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import React from 'react',
+
+const EnhancedFuturisticCard: React.FC = () => {,
+  return (,
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+      <h3 className="text-xl font-bold mb-4">EnhancedFuturisticCard</h3>,
+      <p className="text-gray-300">Revolutionary technology component</p>,
+    </div>,
+  ),};
+export default EnhancedFuturisticCard;
+=======
 "use client";
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
@@ -176,3 +188,4 @@ const EnhancedFuturisticCard: React.FC = () => {
 };
 
 export default EnhancedFuturisticCard;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

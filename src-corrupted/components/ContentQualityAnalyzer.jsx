@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default ContentQualityAnalyzer;
+=======
 import React, {useState, useEffect} from 'react';'''
 import {motion} from 'framer-motion';
 import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = (props: any) => {}
@@ -62,3 +66,4 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             status: 'open'
 
 export default ContentQualityAnalyzer;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

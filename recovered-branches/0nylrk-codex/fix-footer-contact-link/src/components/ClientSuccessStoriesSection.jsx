@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default ClientSuccessStoriesSection;
+=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Building } from 'lucide-react';
@@ -226,3 +230,4 @@ export function ClientSuccessStoriesSection() {
       </div>
 
 export default ClientSuccessStoriesSection;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

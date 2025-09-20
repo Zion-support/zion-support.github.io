@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';'''
 import {motion} from 'framer-motion';'''
 import {BarChart3, PieChart, TrendingUp, Globe, ArrowRight, CheckCircle, Rocket, Shield, Target, DollarSign, Brain} from 'lucide-react';
@@ -57,6 +60,7 @@ const ServicePortfolioDashboard = (props: any) => {}
             icon: <Target className="w-6 h-6 text-zion-orange" />,'
             title: 'Strategic Insights','
             description: 'Data-driven recommendations for portfolio optimization and growth'
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const ServicePortfolioDashboard: React.FC = () => {,
   return (,

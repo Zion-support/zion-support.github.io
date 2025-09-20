@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 export const TestimonialsSection: React.FC = () => {
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -417,3 +419,4 @@ export const TestimonialsSection: React.FC = props {
 </any>
 </typeof>
 </typeof>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

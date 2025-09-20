@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState, useCallback, useEffect, useRef} from 'react';'
 import {motion} from 'framer-motion';'
 import {Users, MessageSquare, Sparkles, Save, Download, Loader2} from 'lucide-react';
@@ -1082,3 +1084,4 @@ top: y,"
 </div>
 </div>
 </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

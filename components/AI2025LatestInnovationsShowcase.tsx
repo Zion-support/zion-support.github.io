@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 "use client";
 'use client';
 
@@ -205,3 +207,4 @@ const AI2025LatestInnovationsShowcase = () => {
 };
 
 export default AI2025LatestInnovationsShowcase;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

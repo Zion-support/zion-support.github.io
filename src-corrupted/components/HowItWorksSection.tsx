@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+const HowItWorksSection: React.FC = () => {,
+  return (),};
+export default HowItWorksSection;
+=======
 import { GradientHeading } from "./GradientHeading";
 
 import { Check, Handshake, Search, Send } from 'lucide-react'
@@ -577,3 +582,4 @@ function HowItWorksSection() {
 };
 
 export default HowItWorksSection;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

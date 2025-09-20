@@ -1,4 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
+  return (,
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+      <h3 className="text-xl font-bold mb-4">cloud</h3>,
+      <p className="text-gray-300">Revolutionary technology component</p>,
+    </div>,
+=======
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
@@ -81,6 +88,7 @@ export default function CloudServicesPage() {
       <h3 className="text-xl font-bold mb-4">cloud</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default cloud;

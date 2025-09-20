@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2035: React.FC = () => {
+<<<<<<< HEAD
+  const [activeDemo, setActiveDemo] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [activeDemo, setActiveDemo] = useState(0);
+=======
   const [activeTech, setActiveTech] = useState(0);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
   const demos = [
     {
       id: 0,
+<<<<<<< HEAD
+=======
       name: "Interdimensional Computing",
       icon: "🌌",
       description: "Harness the power of multiple dimensions to achieve computational capabilities beyond our current understanding",
@@ -204,6 +212,7 @@ const InteractiveTechShowcase2035: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       title: "Quantum Consciousness Engine",
       description: "Experience AI systems that have achieved true consciousness and self-awareness",
       icon: "🧠",
@@ -277,6 +286,27 @@ const InteractiveTechShowcase2035: React.FC = () => {
                   <span className="text-3xl">{tech.icon}</span>
                   <div>
                     <h4 className="text-lg font-semibold">{tech.name}</h4>
+<<<<<<< HEAD
+              </button>
+            ))}
+              </button>
+            ))}
+              </button>
+        {/* Performance Metrics */}
+        <div className="grid md:grid-cols-4 gap-6 mb-16">
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-purple-400/30">
+            <div className="text-4xl font-bold text-purple-300 mb-2">∞
+            <div className="text-sm text-purple-200">Computational Power
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-cyan-400/30">
+            <div className="text-4xl font-bold text-cyan-300 mb-2">0ms
+            <div className="text-sm text-cyan-200">Response Time
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-emerald-400/30">
+            <div className="text-4xl font-bold text-emerald-300 mb-2">100%
+            <div className="text-sm text-emerald-200">Accuracy
+          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-orange-400/30">
+            <div className="text-4xl font-bold text-orange-300 mb-2">∞
+            <div className="text-sm text-orange-200">Possibilities
+=======
                     <p className="text-sm opacity-90">{tech.description}</p>
                   </div>
                   <h4 className="text-2xl font-bold mb-2">Live Demo</h4>
@@ -350,10 +380,16 @@ const InteractiveTechShowcase2035: React.FC = () => {
           </div>
         </div>
 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
         {/* Call to Action */}
             </button>
+<<<<<<< HEAD
+            <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg"></button>
+              📚 Learn More</button>
+=======
             <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
               🚀 Start Interactive Demo
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
             </button>
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>

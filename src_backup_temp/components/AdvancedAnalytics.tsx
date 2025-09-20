@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default AdvancedAnalytics;
+=======
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 export /**;
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -30,3 +34,4 @@ function AdvancedAnalytics({;
   // "TODO": "Add dependencies if needed;
 
 export default AdvancedAnalytics;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

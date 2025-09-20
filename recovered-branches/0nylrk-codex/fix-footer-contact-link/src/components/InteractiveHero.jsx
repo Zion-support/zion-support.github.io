@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -188,5 +190,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             damping: 30
         }}/>
     </section>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default InteractiveHero;

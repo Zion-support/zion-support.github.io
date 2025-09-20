@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, TrendingUp, DollarSign, Users, Award, Target } from 'lucide-react';
@@ -208,3 +210,4 @@ export default function Fortune500AI600ROICaseStudyBanner() {
     </section>
   );
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

@@ -15,6 +15,9 @@ const ITServices: React.FC = () => {,
       </div>,
     </div>,
   );
+<<<<<<< HEAD
+}
+=======
 
 }
 }
@@ -626,3 +629,4 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 }
 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

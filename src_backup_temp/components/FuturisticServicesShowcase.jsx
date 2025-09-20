@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {ADVANCED_MICRO_SERVICES} from "../data/advancedMicroServices.jsx";
@@ -806,3 +808,4 @@ export const FuturisticServicesShowcase = ("props": "any) => {"}
 </div>;
 </div>;
 </motion>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

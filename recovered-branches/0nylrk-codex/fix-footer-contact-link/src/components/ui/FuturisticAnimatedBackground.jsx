@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity = 'medium', className = '' }) => {
@@ -245,5 +247,6 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         }}/>
       </div>
     </div>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default FuturisticAnimatedBackground;

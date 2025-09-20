@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default InnovationResearchSection;
+=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Lightbulb, TestTube, Brain, Atom, Target, Award, ArrowRight, TrendingUp, Users, Star, Globe, Shield, Cpu, Network } from 'lucide-react';
@@ -204,3 +208,4 @@ export function InnovationResearchSection() {
       </div>
 
 export default InnovationResearchSection;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

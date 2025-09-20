@@ -1641,8 +1641,13 @@
   },
   {
     "route": "/case-studies",
+<<<<<<< HEAD
+    "title": "Case Studies | Zion Tech Group",
+    "h1": "Success Stories"
+=======
     "title": "",
     "h1": "Case Studies"
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   },
   {
     "route": "/categories",
@@ -3891,8 +3896,13 @@
   },
   {
     "route": "/test",
+<<<<<<< HEAD
+    "title": "test - Zion App",
+    "h1": "test"
+=======
     "title": "Test Page | Zion Tech Group",
     "h1": "Test Page Working"
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   },
   {
     "route": "/thank-you",
@@ -7981,8 +7991,1353 @@
   },
   {
     "route": "/products",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "Products"
+  },
+  {
+    "route": "/products/rapid-1755539363327-qs52kw",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755539447775-ydqq27",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755539452666-nozd2l",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755539469404-afpzyo",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755539473122-7fazn3",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755539478105-mvn3cn",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755539482280-rumtv9",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755539485481-chv4ay",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755539490239-d0arxu",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755539493210-9ygc31",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755539498108-6agkss",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755539502083-f7dgd8",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755539505879-e6bxzx",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755539521229-yonj48",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755539525157-u44iu7",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755539528604-3zydos",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755539532939-qxvs8z",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755539537685-f0qsgs",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755539542214-yl5h4e",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755539546185-pgxpaq",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755539550478-p335e1",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755539554568-sdfzdy",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755539558812-ydll9i",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755539640943-uizqvp",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755539640967-8apa7g",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755539645018-mrgldy",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755539645444-ew2c35",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755539648773-0ymq5e",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755539649338-f4wdfi",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755539652781-fv3jxh",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755539652956-typn6f",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755539656372-qfrw3o",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755539656518-6vzs5k",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755539660431-x5mkns",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755539693605-db2lz3",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755539697557-bcqlvk",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755539701758-iomvt1",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755539706282-zed0x3",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755539710937-fhukul",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755539714830-qmdjvt",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755539719183-3zafyx",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755539723568-p4prdr",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755539726745-bxdvyb",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755539730672-oiuowi",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755539760774-99ow40",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755539765778-gxtek1",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755539770984-x6eadu",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755539775982-8fb5a1",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755539780342-5ou7bm",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755539785621-e47pjh",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755539790003-kdps48",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755540144711-2uwsih",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755540151433-1r0rie",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755540158936-13o2rw",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755540165914-kruspw",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755541124185-fjov33",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755541126222-g6frsz",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755541130020-kdmbyt",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755541138331-q1x3hv",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755541143521-xsb0ml",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755541145690-s09uv9",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755541150652-y7qx4p",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755541153688-4oqtms",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755541161879-tlbkxx",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755541167247-jbr0gn",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755541201223-h2q61x",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755541204679-rolyte",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755541207059-nsqk0f",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755541209164-n3s98y",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755541222512-wpxdx7",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755541225059-36kqby",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755541227424-8l08xy",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755541281668-u83hhl",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755541287721-9rg1vw",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755541289797-rt84zg",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755541292465-zl2drj",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755541294626-2luzrl",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755541299663-1e0685",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755541301763-wvb8v0",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755541307591-3zf4b2",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755541311276-u2ndpo",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755541314570-wxp96o",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755541322177-tivw9r",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755541329742-1ystdo",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755541332362-vpoch3",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755541335025-9ivo6m",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755541337750-se0qlw",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755541342435-cmyhtd",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755541347413-timp0p",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755541353690-jcjzu4",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755541357430-ifdp8d",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755541441295-3wgnak",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755541443482-ow9261",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755541448759-j0n8be",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755541453019-i51060",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755541456361-zk70r4",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755541458276-i0521u",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755541463413-ckr8ac",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755541465521-b5liro",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755541467500-x8hmwt",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755541526441-vie2x7",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755541528426-ivf9bz",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755541530962-fmsxoe",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755541532822-bu82rw",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755541535101-2rbw46",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755541537073-iai0bm",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755541539202-o780it",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755541541156-86i7e9",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755541543191-r6quow",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755541545073-fwuwsf",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755541560525-9036ga",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755541562544-3ld987",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755541564424-9u9gw1",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755541566513-ahwrcm",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755541568524-ayvc31",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755541570543-6m093t",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755541572447-vpsvgg",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755541574439-g415do",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755541576393-1hcq8m",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755541578279-r9u85e",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755541636395-0botdm",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755541638531-sah7i8",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755541641027-gmetbj",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755541643215-5mci93",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755541646119-ce2izo",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755541650011-2no9ge",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755541660492-mhcbwx",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755541665712-p0qws5",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755541680930-ipa7hj",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755541697393-8h34ow",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755541699586-ojnzhi",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755541701840-4ei0oz",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755541703918-imeytk",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755541726635-q66jzc",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755541729817-92c4rq",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755541745274-a6xjj5",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755541747405-ps9a2y",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755541749364-gpy6bg",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755541751658-szuemf",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755541754313-7xty1n",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755541801070-jdlmch",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755541807643-o1ke75",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755541810035-pycm7h",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755541816937-d6zlmj",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755541824245-62e43k",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755541829310-39m9q4",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755541859120-v0zdeu",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755541861252-47vp2f",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755541920886-9vktb5",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755541926378-y1q26k",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755541929757-cd3x48",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755541931996-nkh9lj",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755541936015-hzdwnr",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755541940130-mc6ww9",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755542011289-o12y35",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755542013561-rje2rx",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755542015577-b4kv1z",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755542020561-vdz3wo",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755542023216-2k0yzd",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755542025349-ibkoci",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755542029672-rtdcp9",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755542033120-tyl7fd",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755542037777-41wl9t",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755542042773-ckje8g",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755542044842-yr134t",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755542048444-oc03ep",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755542050279-ld8e7c",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755542051769-ygegxy",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755542053673-5d9xga",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755542055709-ru2w2g",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755542058054-9ltpu7",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755542060822-okjhzv",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755542065991-su3lgn",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755542067872-fs32ha",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755542069825-n4ga64",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755542071945-d3qs4w",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755542073869-pq1otc",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755542076190-hgnqsh",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755542078204-9oslqi",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755542080789-r2g4p7",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755542082945-zp72mu",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755542084953-2a4uvb",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755542280948-ojov90",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755542283686-fe4dpw",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755542286523-9746xy",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755542288565-y3ocbt",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755542290523-s27cx1",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755542293813-efxglq",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755542400931-8xwf11",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755542403559-206ezp",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755542405783-9wye0t",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755542409780-ins6lh",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755542412390-95jtt7",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755542434553-htpjg8",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755542436763-vt668a",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755542520550-50c6gy",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755542522674-py4s8o",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755542524947-4xpuqg",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755542526957-qtgqrf",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755542528876-h8r1wq",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755542531481-x09xip",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755542533409-nsn4sv",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755542648328-46kyb9",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755542650585-1mr1g7",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755542653169-onnfx9",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755542669105-nelmhd",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755542760730-yof01i",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755542760815-fxbsqp",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755542763526-agb9en",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755542765776-s0qo0v",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755542768020-2ye70w",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755542779998-j0pasc",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755542782143-28176j",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755542784099-6wxtse",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755542786175-14pc98",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755542787794-j8ej3r",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755542789793-gs2nah",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755542797163-8y3ira",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755542801742-rqdqw7",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755542804850-i50snh",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755542809113-x1ect7",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755542814685-ltxdpx",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755542818388-pt9pn3",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755542820468-ach2si",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755542880614-7kbw63",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755542882664-zrwcxk",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755542884860-1fiqgn",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755542886935-4uauhq",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755542888917-v6zijc",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755542890951-hl2ja7",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755542893113-gwllh1",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755542895071-uif021",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755542899644-ys6z9w",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755542902116-mscl8g",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755574809927-42pnyc",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755574817270-dx7dde",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755574826211-bs2pta",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755574829643-aq5izm",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755574861837-4jxifl",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755574865448-cx3yvo",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755574893567-wd92ar",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755574897544-vlp030",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755574922426-hvxexp",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755574928624-65jy39",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755574954467-t7xva4",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755574958082-s6efi1",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755574977553-tz1vsm",
+    "title": "Performance Optimizer - Zion Tech Group",
+    "h1": "Performance Optimizer"
+  },
+  {
+    "route": "/products/rapid-1755574981028-97wvfw",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755574983994-zt33lh",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755575002202-8qazr7",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755575005191-bk7ldw",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755575028579-wrj78j",
+    "title": "Automation Suite - Zion Tech Group",
+    "h1": "Automation Suite"
+  },
+  {
+    "route": "/products/rapid-1755575032169-dc2y0r",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755575040758-1trb8x",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755575044295-lnlwkj",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/products/rapid-1755575044941-8wh13k",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755575045603-1koh11",
+    "title": "Security Framework - Zion Tech Group",
+    "h1": "Security Framework"
+  },
+  {
+    "route": "/products/rapid-1755575046166-8pnjac",
+    "title": "Smart Dashboard - Zion Tech Group",
+    "h1": "Smart Dashboard"
+  },
+  {
+    "route": "/products/rapid-1755575046672-xm5iaz",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755575047216-1xzrx4",
+    "title": "Monitoring System - Zion Tech Group",
+    "h1": "Monitoring System"
+  },
+  {
+    "route": "/products/rapid-1755575047706-qdanfg",
+    "title": "Data Platform - Zion Tech Group",
+    "h1": "Data Platform"
+  },
+  {
+    "route": "/products/rapid-1755575048172-jglmkf",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755575055897-zt1vmm",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755575056536-j57s5z",
+    "title": "Development Tools - Zion Tech Group",
+    "h1": "Development Tools"
+  },
+  {
+    "route": "/products/rapid-1755575057376-lf2k5g",
+    "title": "Collaboration Platform - Zion Tech Group",
+    "h1": "Collaboration Platform"
+  },
+  {
+    "route": "/products/rapid-1755575058700-ehbeez",
+    "title": "Analytics Engine - Zion Tech Group",
+    "h1": "Analytics Engine"
+  },
+  {
+    "route": "/products/rapid-1755575072272-ltqcao",
+    "title": "Integration Hub - Zion Tech Group",
+    "h1": "Integration Hub"
+  },
+  {
+    "route": "/product/[id]",
+    "title": "product/[id] - Zion App",
+    "h1": "product/[id]"
+=======
     "title": "Index - Zion Tech Solutions",
     "h1": "Index"
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   },
   {
     "route": "/plans/enterprise",
@@ -8785,6 +10140,8 @@
     "h1": "{post.title}"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-edge-agents-production-guide",
     "title": "",
     "h1": "AI 2026: Edge Agents in Production"
@@ -8795,11 +10152,90 @@
     "h1": "AI 2026: Real-Time Retrieval Architectures"
   },
   {
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     "route": "/blog/ai-automation-trends-2025",
     "title": "AI Automation Trends 2025 | Zion Tech Group",
     "h1": "AI Automation Trends 2025: The Future of Autonomous Systems"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-customer-experience-automation",
+    "title": "AI-Powered Customer Experience: The Future of Customer Service Automation | Zion Tech Group",
+    "h1": "AI-Powered Customer Experience: The Future of Customer Service Automation"
+  },
+  {
+    "route": "/blog/ai-edge-computing-2025",
+    "title": "AI Edge Computing Trends 2025 | Zion Tech Group",
+    "h1": "AI Edge Computing Trends 2025: The Future of Real-Time Intelligence"
+  },
+  {
+    "route": "/blog/ai-ethics-automation",
+    "title": "Ethical Considerations in Autonomous AI Systems | Zion Tech Group",
+    "h1": "Ethical Considerations in Autonomous AI Systems"
+  },
+  {
+    "route": "/blog/ai-ethics-responsible-development",
+    "title": "AI Ethics & Responsible Development: A Comprehensive Guide | Zion Tech Group",
+    "h1": "AI Ethics & Responsible Development: A Comprehensive Guide"
+  },
+  {
+    "route": "/blog/ai-financial-services-fintech-automation",
+    "title": "AI in Financial Services: Revolutionizing Fintech with Intelligent Automation | Zion Tech Group",
+    "h1": "AI in Financial Services: Revolutionizing Fintech with Intelligent Automation"
+  },
+  {
+    "route": "/blog/ai-healthcare-medical-automation",
+    "title": "AI in Healthcare: Transforming Medical Care Through Intelligent Automation | Zion Tech Group",
+    "h1": "AI in Healthcare: Transforming Medical Care Through Intelligent Automation"
+  },
+  {
+    "route": "/blog/ai-powered-business-intelligence",
+    "title": "AI-Powered Business Intelligence: Transforming Data into Strategic Insights | Zion Tech Group",
+    "h1": "AI-Powered Business Intelligence: Transforming Data into Strategic Insights"
+  },
+  {
+    "route": "/blog/ai-powered-devops-automation",
+    "title": "AI-Powered DevOps: Revolutionizing CI/CD with Intelligent Automation | Zion Tech Group",
+    "h1": "AI-Powered DevOps: Revolutionizing CI/CD with Intelligent Automation"
+  },
+  {
+    "route": "/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat",
+    "title": "AiPoweredMarketplacesTheFutureOfDigitalCommerceChat - Zion Tech Solutions",
+    "h1": "AiPoweredMarketplacesTheFutureOfDigitalCommerceChat"
+  },
+  {
+    "route": "/blog/api-first-development-building-scalable-systems-chat",
+    "title": "ApiFirstDevelopmentBuildingScalableSystemsChat - Zion Tech Solutions",
+    "h1": "ApiFirstDevelopmentBuildingScalableSystemsChat"
+  },
+  {
+    "route": "/blog/augmented-reality-in-enterprise-applications-chat",
+    "title": "AugmentedRealityInEnterpriseApplicationsChat - Zion Tech Solutions",
+    "h1": "AugmentedRealityInEnterpriseApplicationsChat"
+  },
+  {
+    "route": "/blog/autonomous-content-generation",
+    "title": "Revolutionizing Content Creation with Autonomous AI Systems | Zion Tech Group",
+    "h1": "Revolutionizing Content Creation with Autonomous AI Systems"
+  },
+  {
+    "route": "/blog/autonomous-systems-deep-dive",
+    "title": "Autonomous Systems Deep Dive: Architecture, Implementation & Best Practices | Zion Tech Group",
+    "h1": "Autonomous Systems Deep Dive: Architecture, Implementation & Best Practices"
+  },
+  {
+    "route": "/blog/blockchain-technology-in-modern-business-solutions-chat",
+    "title": "BlockchainTechnologyInModernBusinessSolutionsChat - Zion Tech Solutions",
+    "h1": "BlockchainTechnologyInModernBusinessSolutionsChat"
+  },
+  {
+    "route": "/blog/cloud-native-architecture-best-practices-chat",
+    "title": "CloudNativeArchitectureBestPracticesChat - Zion Tech Solutions",
+    "h1": "CloudNativeArchitectureBestPracticesChat"
+  },
+  {
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     "route": "/blog/cloud-native-automation",
     "title": "Building Cloud-Native Automation Infrastructure | Zion Tech Group",
     "h1": "Building Cloud-Native Automation Infrastructure"
@@ -8815,11 +10251,152 @@
     "h1": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/cybersecurity-trends-for-2024-and-beyond-chat",
+    "title": "CybersecurityTrendsFor2024AndBeyondChat - Zion Tech Solutions",
+    "h1": "CybersecurityTrendsFor2024AndBeyondChat"
+  },
+  {
+    "route": "/blog/data-analytics-in-digital-transformation-chat",
+    "title": "DataAnalyticsInDigitalTransformationChat - Zion Tech Solutions",
+    "h1": "DataAnalyticsInDigitalTransformationChat"
+  },
+  {
+    "route": "/blog/devops-automation-strategies-for-modern-teams-chat",
+    "title": "DevopsAutomationStrategiesForModernTeamsChat - Zion Tech Solutions",
+    "h1": "DevopsAutomationStrategiesForModernTeamsChat"
+  },
+  {
+    "route": "/blog/digital-twins-revolutionizing-industry-4-0-chat",
+    "title": "DigitalTwinsRevolutionizingIndustry40Chat - Zion Tech Solutions",
+    "h1": "DigitalTwinsRevolutionizingIndustry40Chat"
+  },
+  {
+    "route": "/blog/edge-ai-iot-integration",
+    "title": "Edge AI and IoT Integration: Bringing Intelligence to the Edge | Zion Tech Group",
+    "h1": "Edge AI and IoT Integration: Bringing Intelligence to the Edge"
+  },
+  {
+    "route": "/blog/edge-computing-automation",
+    "title": "Edge Computing Automation: Powering the IoT Revolution | Zion Tech Group",
+    "h1": "Edge Computing Automation: Powering the IoT Revolution"
+  },
+  {
+    "route": "/blog/future-of-work",
+    "title": "The Future of Work: Human-AI Collaboration | Zion Tech Group",
+    "h1": "The Future of Work: Human-AI Collaboration"
+  },
+  {
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     "route": "/blog",
     "title": "Blog - Zion AI Marketplace",
     "h1": "Zion Blog"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/machine-learning-applications-in-enterprise-software-chat",
+    "title": "MachineLearningApplicationsInEnterpriseSoftwareChat - Zion Tech Solutions",
+    "h1": "MachineLearningApplicationsInEnterpriseSoftwareChat"
+  },
+  {
+    "route": "/blog/microservices-architecture-benefits-and-challenges-chat",
+    "title": "MicroservicesArchitectureBenefitsAndChallengesChat - Zion Tech Solutions",
+    "h1": "MicroservicesArchitectureBenefitsAndChallengesChat"
+  },
+  {
+    "route": "/blog/mlops-best-practices-2025",
+    "title": "MLOps Best Practices 2025: Scaling Machine Learning in Production | Zion Tech Group",
+    "h1": "MLOps Best Practices 2025: Scaling Machine Learning in Production"
+  },
+  {
+    "route": "/blog/performance-optimization",
+    "title": "Performance Optimization in Autonomous Systems | Zion Tech Group",
+    "h1": "Performance Optimization in Autonomous Systems"
+  },
+  {
+    "route": "/blog/quantum-ai-revolution-2025",
+    "title": "Quantum AI Revolution 2025: The Next Frontier of Computing | Zion Tech Group",
+    "h1": "Quantum AI Revolution 2025: The Next Frontier of Computing"
+  },
+  {
+    "route": "/blog/quantum-ai-revolution",
+    "title": "Quantum AI Revolution: The Next Frontier of Autonomous Systems | Zion Tech Group",
+    "h1": "Quantum AI Revolution: The Next Frontier of Autonomous Systems"
+  },
+  {
+    "route": "/blog/quantum-computing-automation",
+    "title": "Quantum Computing Automation: The Next Frontier | Zion Tech Group",
+    "h1": "Quantum Computing Automation: The Next Frontier"
+  },
+  {
+    "route": "/blog/quantum-computing-implications-for-business-chat",
+    "title": "QuantumComputingImplicationsForBusinessChat - Zion Tech Solutions",
+    "h1": "QuantumComputingImplicationsForBusinessChat"
+  },
+  {
+    "route": "/blog/sustainable-ai-future",
+    "title": "Sustainable AI: Building a Greener Future with Autonomous Systems | Zion Tech Group",
+    "h1": "Sustainable AI: Building a Greener Future with Autonomous Systems"
+  },
+  {
+    "route": "/blog/sustainable-ai-green-automation",
+    "title": "Sustainable AI: Green Automation for a Better Future | Zion Tech Group",
+    "h1": "Sustainable AI: Green Automation for a Better Future"
+  },
+  {
+    "route": "/blog/sustainable-ai-green-computing-2025",
+    "title": "Sustainable AI: Green Computing Practices for 2025 | Zion Tech Group",
+    "h1": "Sustainable AI: Green Computing Practices for 2025"
+  },
+  {
+    "route": "/blog/sustainable-ai-green-computing",
+    "title": "Sustainable AI and Green Computing: Building Eco-Friendly Autonomous Systems | Zion Tech Group",
+    "h1": "Sustainable AI and Green Computing: Building Eco-Friendly Autonomous Systems"
+  },
+  {
+    "route": "/blog/sustainable-automation-future",
+    "title": "Sustainable Automation: Building a Greener Future with AI | Zion Tech Group",
+    "h1": "Sustainable Automation: Building a Greener Future with AI"
+  },
+  {
+    "route": "/blog/sustainable-technology-green-computing-solutions-chat",
+    "title": "SustainableTechnologyGreenComputingSolutionsChat - Zion Tech Solutions",
+    "h1": "SustainableTechnologyGreenComputingSolutionsChat"
+  },
+  {
+    "route": "/blog/the-rise-of-edge-computing-in-iot-applications-chat",
+    "title": "TheRiseOfEdgeComputingInIotApplicationsChat - Zion Tech Solutions",
+    "h1": "TheRiseOfEdgeComputingInIotApplicationsChat"
+  },
+  {
+    "route": "/automations/content",
+    "title": "Tech Content Curator",
+    "h1": "Tech Content Curator"
+  },
+  {
+    "route": "/automations/curation",
+    "title": "",
+    "h1": "AI Curated Growth Experiments"
+  },
+  {
+    "route": "/automations/deps",
+    "title": "Dependency Health Auditor",
+    "h1": "Dependency Health Auditor"
+  },
+  {
+    "route": "/automations/github",
+    "title": "GitHub Ecosystem Metrics",
+    "h1": "GitHub Ecosystem Metrics"
+  },
+  {
+    "route": "/automations/ideas",
+    "title": "Autonomous Ideas Miner",
+    "h1": "Autonomous Ideas Miner"
+  },
+  {
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     "route": "/automations",
     "title": "",
     "h1": "Autonomous Cloud Automations"

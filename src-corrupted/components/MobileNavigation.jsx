@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default MobileNavigation;
+=======
 import React, {useState, useEffect, useRef} from 'react';'''
 import {Link, useLocation} from 'react-router-dom';'''
 import {motion, AnimatePresence} from 'framer-motion';
@@ -85,3 +89,4 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             ]
 
 export default MobileNavigation;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

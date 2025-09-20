@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default EnhancedErrorBoundary;
+=======
 import React, { Component } from 'react';
 import { motion } from 'framer-motion';
 import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from '@heroicons/react/24/outline';
@@ -84,3 +88,4 @@ class EnhancedErrorBoundary extends Component {
 ## Error Report
 
 export default EnhancedErrorBoundary;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

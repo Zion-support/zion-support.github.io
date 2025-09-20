@@ -1,4 +1,7 @@
 import React from 'react';
+<<<<<<< HEAD
+    </div>,
+=======
 ;
 export function ErrorBoundaryFallback("props": "any) {;
 	return (;
@@ -119,6 +122,7 @@ export class ErrorBoundary extends React.Component {;
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default ErrorBoundary;

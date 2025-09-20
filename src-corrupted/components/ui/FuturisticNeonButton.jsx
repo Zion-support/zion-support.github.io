@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import { motion } from 'framer-motion';
 export const FuturisticNeonButton = ({ children, onClick, type = 'button', variant = 'primary', size = 'md', disabled = false, className = '', fullWidth = false, icon, loading = false, glowIntensity = 'medium' }) => {
     const getVariantStyles = () => {
@@ -84,5 +86,6 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
         <div className={`absolute inset-0 rounded-lg ${styles.glow}`}/>
       </div>
     </motion.button>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default FuturisticNeonButton;

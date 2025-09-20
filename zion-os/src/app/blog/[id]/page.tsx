@@ -4,6 +4,10 @@ import { getPostById } from '../../../data/blog';
 
 type Params = { params: { id: string } };
 
+<<<<<<< HEAD
+export default function BlogPostPage({ params }: Params) {
+  const post = getPostById(params.id);
+=======
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
   'ai-governance-framework-2025': {
     id: 'ai-governance-framework-2025',
@@ -276,6 +280,7 @@ export function generateStaticParams() {
 
 export default function BlogDetailPage({ params }: { params: { id: string } }) {
   const post = POSTS[params.id];
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
   if (!post) {
     return (
@@ -313,7 +318,10 @@ export default function BlogDetailPage({ params }: { params: { id: string } }) {
     </article>
   );
 }
+<<<<<<< HEAD
+=======
 
 }
 
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

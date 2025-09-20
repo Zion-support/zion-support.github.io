@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
@@ -435,3 +437,4 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 };
 
 export default ComprehensiveServicesShowcase2026;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

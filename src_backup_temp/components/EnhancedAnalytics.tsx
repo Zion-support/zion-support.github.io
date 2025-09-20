@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
   enabled = true,: any;
@@ -31,6 +33,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 }) => {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(
     null
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default EnhancedAnalytics;

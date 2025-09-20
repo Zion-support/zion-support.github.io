@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 'use client';
 
 import React from 'react';
@@ -146,3 +148,4 @@ const AdvancedTechTrends2026 = () => {
 };
 
 export default AdvancedTechTrends2026;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

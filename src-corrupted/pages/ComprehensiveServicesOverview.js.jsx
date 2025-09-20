@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+ ,
+      <div className="container mx-auto px-4 py-20">,
+        <div className="text-center">,
+          <h1 className="text-4xl font-bold mb-6">ComprehensiveServicesOverview.js</h1>,
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
+        </div>,
+      </div>,
+    </div>,
+=======
 import React, {useState, useMemo} from 'react';
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -89,6 +99,7 @@ export {ComprehensiveServicesOverview}() {
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default ComprehensiveServicesOverview.js;
