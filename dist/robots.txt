@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -21,3 +22,13 @@ Allow: /blog
 
 # Crawl delay (optional)
 Crawl-delay: 1
+=======
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Revolutionary Technology Content 2026
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_headers
+Disallow: /*.backup
+Disallow: /*.log
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
