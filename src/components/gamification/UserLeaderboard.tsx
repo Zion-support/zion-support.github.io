@@ -29,9 +29,9 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
       <CardContent>
         <div className='space-y-2'>
           {entries.map((e idx) => (
-            <div,
+            <div
 key={e.name}
-              className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50'            <div,
+              className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50'            <div
 key = {e.name,}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
             >

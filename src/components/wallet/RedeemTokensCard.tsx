@@ -138,7 +138,7 @@ return (
             </DialogHeader>
             <div className='space-y-4 py-4'>
               {REWARD_OPTIONS.map(option => (
-                <div,
+                <div
 key={option.id}
                   className='flex justify-between items-center border-b pb-4'
                 >                  <div>
@@ -151,7 +151,7 @@ key={option.id}
                     <span className='text-sm font-bold'>
                       {option.cost} ZION$
                     </span>
-                    <Button,
+                    <Button
 size='sm'
                       variant={
                         wallet && wallet.balance >= option.cost
@@ -167,7 +167,7 @@ size='sm'
               ))}
             </div>
             <div className='flex justify-between'>
-              <Button,
+              <Button
 variant='outline'
                 size='sm'
                 onClick={() => setOpen(false)}

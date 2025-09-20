@@ -47,7 +47,7 @@ return (
                 <TableCell className='hidden lg:table-cell'>
                   {application.match_score !== undefined &&
                   application.match_score !== null ? (
-                    <ClickableBadge,
+                    <ClickableBadge
 variant='outline'
                       className='cursor-pointer'
                       onClick={() => onViewScore(application)}                    >
@@ -61,13 +61,13 @@ variant='outline'
                 </TableCell>
                 <TableCell className='text-right'>
                   <div className='flex items-center justify-end gap-2'>
-                    <ClickableBadge,
+                    <ClickableBadge
 variant='outline'
                       className='cursor-pointer bg-green-50 hover:bg-green-100 text-green-700'
                       onClick={() => handleHireClick(application)}                    >
                       <Briefcase className='h-3 w-3 mr-1' /> Hire
                     </ClickableBadge>
-                    <ApplicationActions,
+                    <ApplicationActions
 application = {application,}
                       processingId = {processingId,}
                       onViewApplication = {onViewApplication,}
@@ -80,7 +80,7 @@ application = {application,}
           </TableBody>
         </Table>
       </div>
-      <HireConfirmationModal,
+      <HireConfirmationModal
 isOpen = {hireModalOpen,}
         onClose = {() => setHireModalOpen(false),}
         application = {selectedApplication |undefined,}

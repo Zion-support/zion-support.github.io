@@ -30,14 +30,14 @@ icon,
       {description && (
         <p className='text-gray-400 mb-6 max-w-md'>{description}</p>      )}
       {showRetry && onRetry && (
-        <Button,
+        <Button
 onClick={onRetry}
           variant='outline'
           className='flex items-center gap-2'
         >
           <RefreshCw className='h-4 w-4' />          Try Again      )}
       {showRetry && onRetry && (
-        <Button,
+        <Button
 onClick={onRetry}
           variant='outline'
           className='flex items-center gap-2'
@@ -47,7 +47,7 @@ onClick={onRetry}
         </p>
       )}
       {showRetry && onRetry && (
-        <Button,
+        <Button
 onClick={onRetry}
           variant="outline"
           className="flex items-center gap-2"

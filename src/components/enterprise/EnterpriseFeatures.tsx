@@ -16,7 +16,7 @@ teams and complex hiring needs
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {features.map(feature => (
-            <div,
+            <div
 key={feature.title}
               className='bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md'            >
               <div className='h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5'>
@@ -28,7 +28,7 @@ key={feature.title}
               <p className="text-muted-foreground">{feature.description}</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature) => (
-            <div,
+            <div
 key={feature.title}
               className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md"
             >

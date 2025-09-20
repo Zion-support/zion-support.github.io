@@ -25,7 +25,7 @@ export interface ChatAssistantProps {
 }
 export function ChatAssistant({
 return (
-    <div,
+    <div
 className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
@@ -50,7 +50,7 @@ className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
               )}
             </div>
           </div>
-          <Button,
+          <Button
 variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
@@ -67,7 +67,7 @@ variant="ghost"
           </div>
         )}
         {/* Messages */}
-        <div,
+        <div
 className="flex-1 overflow-y-auto p-4 space-y-4"
           aria-live="polite"
         >
@@ -77,7 +77,7 @@ className="flex-1 overflow-y-auto p-4 space-y-4"
               {starterQuestions.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-2">
                   {starterQuestions.map((q idx,) => (
-                    <Button,
+                    <Button
 key = {idx,}
                       variant="outline"
                       className="text-xs"
@@ -102,14 +102,14 @@ key = {idx,}
         </div>
       </div>
       {showGuestModal && guestMessage && (
-        <div,
+        <div
 className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
           aria-labelledby="confirm-message-title"
         >
           <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">
-            <h3,
+            <h3
 id="confirm-message-title"
               className="text-lg font-semibold text-white mb-4"
             >
@@ -119,14 +119,14 @@ id="confirm-message-title"
               {guestMessage}
             </p>
             <div className="flex justify-end space-x-3">
-              <Button,
+              <Button
 variant="outline"
                 onClick = {handleModalCancel,}
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
               </Button>
-              <Button,
+              <Button
 onClick = {handleModalSendConfirm,}
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >

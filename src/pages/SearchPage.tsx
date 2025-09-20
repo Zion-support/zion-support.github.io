@@ -60,7 +60,7 @@ function highlight(text: string term: string) {
               {results
                 .filter((r,) => r.type === "product" |r.type === "service")
                 .map((r,) => (
-                  <div,
+                  <div
 key={`${r.type}-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
                   >
@@ -77,7 +77,7 @@ key={`${r.type}-${r.id}`}
               {results
                 .filter((r,) => r.type === "talent")
                 .map((r,) => (
-                  <div,
+                  <div
 key={`talent-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
                   >
@@ -94,7 +94,7 @@ key={`talent-${r.id}`}
               {results
                 .filter((r,) => r.type === "doc")
                 .map((r,) => (
-                  <div,
+                  <div
 key={`doc-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
                   >
@@ -111,7 +111,7 @@ key={`doc-${r.id}`}
               {results
                 .filter((r,) => r.type === "blog")
                 .map((r,) => (
-                  <div,
+                  <div
 key={`blog-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
                   >
@@ -194,7 +194,7 @@ router.push (`/search?q=$ {
               {/* Sort Options */}
               <div  className="mb-6">
                 <label className="block text-sm font - medium text-gray - 700 mb-2">Sort By</label>
-                <select,
+                <select
 value={sortBy}
                   onChange={ (e) => setSortBy(e.target.value as any) }
                   className="w-full px-3 py-2 border border-gray - 300 rounded-lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-blue -500">

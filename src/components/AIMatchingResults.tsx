@@ -12,7 +12,7 @@ serviceType?: string,
 }
 export function AIMatchingResults({
                             {match.image ? (
-                              <AvatarImage,
+                              <AvatarImage
 src={match.image}
                                 alt={match.title}
                               />

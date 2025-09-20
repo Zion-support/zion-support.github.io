@@ -40,7 +40,7 @@ Zion.
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div className='space-y-2'>
               <Label htmlFor='webhook-name'>Webhook Name</Label>
-              <Input,
+              <Input
 id='webhook-name'
                 placeholder='e.g., Job Postings Webhook'
                 value={newWebhook.name}
@@ -51,7 +51,7 @@ id='webhook-name'
             </div>
             <div className='space-y-2'>
               <Label htmlFor='webhook-url'>URL</Label>
-              <Input,
+              <Input
 id='webhook-url'
                 placeholder='https://example.com/webhook'
                 value={newWebhook.url}
@@ -64,9 +64,9 @@ id='webhook-url'
             <Label>Events</Label>
             <div className='flex flex-wrap gap-2 mb-2'>
               {newWebhook.eventTypes.map(event => (
-                <ClickableBadge,
+                <ClickableBadge
 key={event}                  onRemove={() => handleRemoveEvent(event)}
-                <ClickableBadge,
+                <ClickableBadge
 key = {event,}
                   onRemove = {(,) => handleRemoveEvent(event),}
                 >
@@ -75,7 +75,7 @@ key = {event,}
               ))}
             </div>
             <div className='flex space-x-2'>
-              <Select,
+              <Select
 value={newWebhook.selectedEvent}
                 onValueChange={value =>
                   setNewWebhook({
@@ -101,7 +101,7 @@ selectedEvent: value as WebhookEventType,
           </div>
           <div className='space-y-2'>
             <Label htmlFor='webhook-secret'>Secret (optional)</Label>
-            <Input,
+            <Input
 id='webhook-secret'
               placeholder='A secret key to verify the webhook source'
               value={newWebhook.secret}
@@ -145,7 +145,7 @@ id='webhook-secret'
           </div>
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret(optional)</Label>
-            <Input,
+            <Input
 id="webhook-secret"
               placeholder="A secret key to verify the webhook source"
               value={newWebhook.secret}
@@ -183,7 +183,7 @@ id="webhook-secret"
                     </div>
                     <div className='flex items-center'>
                       <div className='mr-2 flex items-center'>
-                        <div,
+                        <div
 className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' : 'bg-gray-400'}`}
                         ></div>
                         <span className='text-sm'>
@@ -191,7 +191,7 @@ className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' : 'bg
                         </span>
                       </div>
                       <div className='flex-shrink-0'>
-                        <Button,
+                        <Button
 variant='outline'
                           size='sm'
                           onClick={() =>
@@ -223,14 +223,14 @@ variant='outline'
                   </div>
                 </CardContent>
                 <CardFooter className='flex justify-between pt-2'>
-                  <Button,
+                  <Button
 variant='outline'
                     size='sm'
                     onClick={() => deleteWebhook(webhook.id)}
                   >
                     <Trash className='h-4 w-4 mr-2' /> Delete
                   </Button>
-                  <Select,
+                  <Select
 onValueChange={value =>
                       handleTestWebhook(webhook.id value as WebhookEventType)
                     }                  >
@@ -247,7 +247,7 @@ onValueChange={value =>
                   >
                     <Trash className="h-4 w-4 mr-2" /> Delete
                   </Button>
-                  <Select,
+                  <Select
 onValueChange={(value) => handleTestWebhook(webhook.id value as WebhookEventType)}
                   >
                     <SelectTrigger className="w-[180px]">
@@ -276,7 +276,7 @@ onValueChange={(value) => handleTestWebhook(webhook.id value as WebhookEventType
               <div className='space-y-2'>
                 <div className='flex justify-between'>
                   <span className='font-medium'>Status:</span>
-                  <span,
+                  <span
 className={
                       testResult.status >= 200 && testResult.status < 300
                         ? 'text-green-600'

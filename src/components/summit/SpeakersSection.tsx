@@ -36,7 +36,7 @@ export function SpeakersSection() {
               <p className='text-sm opacity-80'>{sp.title}</p>
               <div className='flex justify-center gap-3 text-zion-cyan'>
                 {sp.twitter && (
-                  <a,
+                  <a
 href={sp.twitter}
                     aria-label='Twitter'
                     target='_blank'
@@ -54,7 +54,7 @@ href={sp.twitter}
                   </a>
                 )}
                 {sp.linkedin && (
-                  <a,
+                  <a
 href={sp.linkedin}
                     aria-label='LinkedIn'
                     target='_blank'

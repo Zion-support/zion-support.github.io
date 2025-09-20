@@ -46,7 +46,7 @@ export default function ProfileDetail() {
               <h3 className="text-xl font-bold mb-4">Social</h3>
               <div className="flex flex-col space-y-3">
                 {profileData.github_url && (
-                  <a,
+                  <a
 href = {profileData.github_url,}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -59,7 +59,7 @@ href = {profileData.github_url,}
                   </a>
                 )}
                 {profileData.twitter_url && (
-                  <a,
+                  <a
 href = {profileData.twitter_url,}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -72,7 +72,7 @@ href = {profileData.twitter_url,}
                   </a>
                 )}
                 {profileData.linkedin_url && (
-                  <a,
+                  <a
 href = {profileData.linkedin_url,}
                     target="_blank"
                     rel="noopener noreferrer"

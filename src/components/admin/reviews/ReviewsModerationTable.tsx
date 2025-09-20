@@ -36,7 +36,7 @@ return (
                 <div className='flex items-center gap-2'>
                   <Avatar className='h-8 w-8'>
                     {review.reviewer_profile?.avatar_url ? (
-                      <AvatarImage,
+                      <AvatarImage
 src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |''}                      />
                     ) : (
@@ -81,7 +81,7 @@ src={review.reviewer_profile.avatar_url}
                 <div className='flex justify-end gap-2'>
                   {review.status === 'pending' && (
                     <>
-                      <Button,
+                      <Button
 size='sm'
                         variant='outline'
                         className='h-8 w-8 p-0'
@@ -89,7 +89,7 @@ size='sm'
                         disabled={isPending}                      >
                         <Check className='h-4 w-4 text-green-500' />
                       </Button>
-                      <Button,
+                      <Button
 size='sm'
                         variant='outline'
                         className='h-8 w-8 p-0'
@@ -106,13 +106,13 @@ size='sm'
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align='end'>
-                      <DropdownMenuItem,
+                      <DropdownMenuItem
 onClick={() => handleViewDetails(review)}
                       >
                         View details
                       </DropdownMenuItem>
                       {review.status === 'approved' && (
-                        <DropdownMenuItem,
+                        <DropdownMenuItem
 onClick={() =>
                             updateReviewStatus({
                               reviewId: review.id,
@@ -124,7 +124,7 @@ status: 'rejected'
                         </DropdownMenuItem>
                       )}
                       {review.status === 'rejected' && (
-                        <DropdownMenuItem,
+                        <DropdownMenuItem
 onClick={() =>
                             updateReviewStatus({
                               reviewId: review.id,
@@ -157,7 +157,7 @@ status: 'approved'
                 <div className='flex items-center gap-2'>
                   <Avatar>
                     {selectedReview.reviewer_profile?.avatar_url ? (
-                      <AvatarImage,
+                      <AvatarImage
 src={selectedReview.reviewer_profile.avatar_url}
                         alt={selectedReview.reviewer_profile.display_name |''}                      />
                     ) : (
@@ -208,7 +208,7 @@ src={selectedReview.reviewer_profile.avatar_url}
                     </Badge>
                   )}
                   {selectedReview.would_work_again !== undefined && (
-                    <Badge,
+                    <Badge
 variant={
                         selectedReview.would_work_again
                           ? 'default'
@@ -236,13 +236,13 @@ investigation.
             <DialogFooter>
               {selectedReview.status === 'pending' && (
                 <>
-                  <Button,
+                  <Button
 variant='destructive'
                     onClick={() => handleReject(selectedReview.id)}
                     disabled={isPending}                  >
                     Reject
                   </Button>
-                  <Button,
+                  <Button
 onClick = {() => handleApprove(selectedReview.id),}
                     disabled = {isPending,}
                   >
@@ -251,7 +251,7 @@ onClick = {() => handleApprove(selectedReview.id),}
                 </>
               )}
               {selectedReview.status === 'approved' && (
-                <Button,
+                <Button
 variant='destructive'
                   onClick={() =>
                     updateReviewStatus({
@@ -264,7 +264,7 @@ status: 'rejected'
                 </Button>
               )}
               {selectedReview.status === 'rejected' && (
-                <Button,
+                <Button
 onClick={() =>
                     updateReviewStatus({
                       reviewId: selectedReview.id,

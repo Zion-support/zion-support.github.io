@@ -18,7 +18,7 @@ return (
           <div            key={method.id}
       <CardContent className="space-y-4">
         {paymentMethods.map((method,) => (
-          <div,
+          <div
 key = {method.id,}
             className={`flex items-center justify-between p-4 rounded-lg border ${
               method.isDefault ? 'bg-muted border-primary' : 'border-border'

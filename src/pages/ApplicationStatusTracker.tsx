@@ -8,7 +8,7 @@ function ApplicationStatusTrackerContent() {
   const isMobile = null;
   return (
     <>
-      <SEO,
+      <SEO
 title='Application Status Tracker | Zion AI Marketplace'
         description='Track the status of your job applications in the Zion AI marketplace.'
       />

@@ -38,25 +38,25 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     <div className='space-y-2'>
                       <Label>Job Type</Label>
                       <div className='flex gap-2 flex-wrap'>
-                        <Badge,
+                        <Badge
 variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Full Time
                         </Badge>
-                        <Badge,
+                        <Badge
 variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Part Time
                         </Badge>
-                        <Badge,
+                        <Badge
 variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Contract
                         </Badge>
-                        <Badge,
+                        <Badge
 variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
@@ -67,19 +67,19 @@ variant='outline'
                     <div className='space-y-2'>
                       <Label>Experience Level</Label>
                       <div className='flex gap-2 flex-wrap'>
-                        <Badge,
+                        <Badge
 variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Entry Level
                         </Badge>
-                        <Badge,
+                        <Badge
 variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Mid Level
                         </Badge>
-                        <Badge,
+                        <Badge
 variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
@@ -93,25 +93,25 @@ variant='outline'
                     <div className='space-y-2'>
                       <Label>Specialization</Label>
                       <div className='flex gap-2 flex-wrap'>
-                        <Badge,
+                        <Badge
 variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Developer
                         </Badge>
-                        <Badge,
+                        <Badge
 variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Designer
                         </Badge>
-                        <Badge,
+                        <Badge
 variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Marketing
                         </Badge>
-                        <Badge,
+                        <Badge
 variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
@@ -121,7 +121,7 @@ variant='outline'
                     </div>
                     <div className='space-y-2'>
                       <Label>Experience (years)</Label>
-                      <Slider,
+                      <Slider
 aria-label='Years of experience'
                         defaultValue={[0 10]}
                         max={20}
@@ -159,37 +159,37 @@ aria-label='Years of experience'
                 <div className='space-y-2'>
                   <Label>Skills</Label>
                   <div className='grid grid-cols-2 gap-2'>
-                    <Badge,
+                    <Badge
 variant='outline'
                       className='cursor-pointer hover:bg-primary/5 justify-start'
                     >
                       JavaScript
                     </Badge>
-                    <Badge,
+                    <Badge
 variant='outline'
                       className='cursor-pointer hover:bg-primary/5 justify-start'
                     >
                       React
                     </Badge>
-                    <Badge,
+                    <Badge
 variant='outline'
                       className='cursor-pointer hover:bg-primary/5 justify-start'
                     >
                       Python
                     </Badge>
-                    <Badge,
+                    <Badge
 variant='outline'
                       className='cursor-pointer hover:bg-primary/5 justify-start'
                     >
                       Figma
                     </Badge>
-                    <Badge,
+                    <Badge
 variant='outline'
                       className='cursor-pointer hover:bg-primary/5 justify-start'
                     >
                       UI/UX
                     </Badge>
-                    <Badge,
+                    <Badge
 variant='outline'
                       className='cursor-pointer hover:bg-primary/5 justify-start'
                     >
@@ -206,7 +206,7 @@ variant='outline'
                 <Button variant='outline' className='w-full'>
                   Reset
                 </Button>
-                <Button,
+                <Button
 className='w-full'
                   onClick={() => addFilter('Experience: 3+ years')}
                 >
@@ -226,13 +226,13 @@ className='w-full'
             </SelectContent>
           </Select>
           {activeFilters.map(filter => (
-            <Badge,
+            <Badge
 key={filter}
               variant='secondary'
               className='flex items-center gap-1'
             >
               {filter}
-              <X,
+              <X
 className='h-3 w-3 cursor-pointer'
                 onClick={() => removeFilter(filter)}              />
             </Badge>

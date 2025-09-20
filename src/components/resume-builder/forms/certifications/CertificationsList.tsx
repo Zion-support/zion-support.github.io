@@ -59,7 +59,7 @@ export function CertificationsList({ certifications onEdit onDelete }: Certifica
                 </p>
               </div>
               <div className='flex gap-2'>
-                <Button,
+                <Button
 variant='ghost'
                   size='icon'
                   onClick={() => onEdit(cert)}
@@ -70,7 +70,7 @@ variant='ghost'
                 >
                   <Edit className='h-4 w-4' />
                 </Button>
-                <Button,
+                <Button
 variant='ghost'
                   size='icon'
                   onClick={() => onDelete(cert.id!)}
@@ -84,12 +84,12 @@ variant='ghost'
             </div>
             {cert.credential_url && (
               <p className='text-xs mt-2'>
-                <a,
+                <a
 href={cert.credential_url}
                   target='_blank'
                   rel='noopener noreferrer'
                   className='text-primary hover:underline'                >              <p className="text-xs mt-2">
-                <a,
+                <a
 href = {cert.credential_url,}
                   target="_blank"
                   rel="noopener noreferrer"

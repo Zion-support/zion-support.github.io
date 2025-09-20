@@ -115,7 +115,7 @@ return (
             <p className="text-muted-foreground mb-4">
               Analyze how well this resume matches your job requirements.
             </p>
-            <Button,
+            <Button
 onClick = {handleScore,}
               disabled = {isScoring,}
               className="w-full"

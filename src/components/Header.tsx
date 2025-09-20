@@ -719,8 +719,8 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
-              <Link,
-key={item.name}
+              <Link
+                key={item.name}
                 to={item.href}
                 className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
               >
@@ -730,8 +730,8 @@ key={item.name}
           </div>
 
           {/* Mobile Menu Button */}
-          <button,
-onClick={() => setIsMenuOpen(!isMenuOpen)}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -743,8 +743,8 @@ onClick={() => setIsMenuOpen(!isMenuOpen)}
           <div className="lg:hidden mt-4 pb-4">
             <div className="flex flex-col space-y-4">
               {navigation.map((item) => (
-                <Link,
-key={item.name}
+                <Link
+                  key={item.name}
                   to={item.href}
                   className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
                   onClick={() => setIsMenuOpen(false)}

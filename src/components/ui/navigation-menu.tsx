@@ -48,7 +48,7 @@ ref={ref}
     {...props}
   >
     {children}{' '}
-    <ChevronDown,
+    <ChevronDown
 className='relative top-[1px] ml-1 h-4 w-4 transition duration-200 group-data-[state=open]:rotate-180 pointer-events-none'
       aria-hidden='true'
     />

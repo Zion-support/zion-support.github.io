@@ -33,7 +33,7 @@ return (
           </p>
         </CardHeader>
         <CardContent>
-          <AIListingForm,
+          <AIListingForm
 onSubmit = {handleGenerate,}
             isLoading = {isLoading,}
             initialValues = {initialValues,}

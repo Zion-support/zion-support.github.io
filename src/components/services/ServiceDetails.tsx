@@ -18,7 +18,7 @@ return (
       </CardHeader>
       <CardContent className='space-y-4'>
         <div className='overflow-hidden rounded-lg mb-4 relative h-48'>
-          <Image,
+          <Image
 src = {getRegionalImage(country),}
             alt={`Datacenter in ${country}`}
             className='object-cover transform transition-transform duration-500 hover:scale-110'
@@ -33,7 +33,7 @@ src = {getRegionalImage(country),}
             </h4>
             <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>
               {datacenters.map((dc idx) => (
-                <div,
+                <div
 key={idx}
                   className='bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light'                >
                   {dc}

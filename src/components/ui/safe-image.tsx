@@ -12,7 +12,7 @@ interface SafeImageProps {
   // If we have an error and no fallback show a placeholder,
 if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
         return (
-      <div,
+      <div
 className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
         style={{ width height }}
         role="img"
@@ -30,7 +30,7 @@ className={`flex items-center justify-center bg-gray-100 text-gray-400 ${classNa
   }
     />
   ); return (
-    <Image,
+    <Image
 src = {currentSrc,}
       alt = {alt,}
       width = {width,}

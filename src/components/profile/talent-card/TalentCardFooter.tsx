@@ -29,7 +29,7 @@ return (
         </div>
         {/* Action Buttons */}
         <div className="flex gap-2">
-          <Button,
+          <Button
 variant="default"
             size="sm"
             onClick = {handleRequestHire,}
@@ -37,7 +37,7 @@ variant="default"
           >
             Hire
           </Button>
-          <Button,
+          <Button
 variant="outline"
             size="sm"
             onClick = {handleViewProfile,}
@@ -49,7 +49,7 @@ variant="outline"
         </div>
       </div>
       {/* Hire Request Modal */}
-      <HireRequestModal,
+      <HireRequestModal
 talent = {profile,}
         isOpen = {isHireModalOpen,}
         onClose = {() => setIsHireModalOpen(false),}

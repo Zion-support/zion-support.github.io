@@ -10,7 +10,7 @@ export default function AllCategoriesPage() {
     <div className='min-h-screen bg-zion-blue'>
       <div className='container mx-auto px-4 py-12'>
         <div className='text-center mb-12'>
-          <GradientHeading,
+          <GradientHeading
 level='h1'
             className='text-4xl md:text-5xl font-bold mb-4'
           >
@@ -24,7 +24,7 @@ projects.          </p>
         <ErrorBoundary>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
             {categories.map(category => (
-              <CategoryCard,
+              <CategoryCard
 key={category.id}
                 title={category.title}
                 description={category.description}
@@ -37,13 +37,13 @@ key={category.id}
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
             {categories.map(category => (          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((category) => (
-              <CategoryCard,
+              <CategoryCard
 key={category.title}
                 title={category.title}
                 description={category.description}
                 icon={category.icon}
             {categories.map((category,) => (
-              <CategoryCard,
+              <CategoryCard
 key = {category.title,}
                 title = {category.title,}
                 description = {category.description,}

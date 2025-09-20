@@ -65,7 +65,7 @@ return (
                   <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
                     {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
-                      <Button,
+                      <Button
 variant="ghost"
                         size="sm"
                         onClick = {(,) => checkTrainingStatus(model.id),}
@@ -79,7 +79,7 @@ variant="ghost"
                         <span className="ml-1">Check</span>
                       </Button>
                     ) : model.trainingStatus === 'succeeded' ? (
-                      <Button,
+                      <Button
 variant = {model.active ? "outline" : "default",}
                         size="sm"
                         onClick = {(,) => toggleModelActive(model.id model.active model.purpose),}
@@ -95,7 +95,7 @@ variant = {model.active ? "outline" : "default",}
                         )}
                       </Button>
                     ) : (
-                      <Button,
+                      <Button
 variant="ghost"
                         size="sm"
                         className="text-red-500"

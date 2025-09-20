@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function GreenIT() {
 return (
     <>
-      <SEO,
+      <SEO
 title="Green IT Solutions - Sustainable Technology"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
         keywords="green IT sustainable technology eco-friendly computing energy efficient hardware"
@@ -42,14 +42,14 @@ for reducing your carbon footprint.
                   </div>
                 </div>
                 <div className='rounded-lg overflow-hidden relative w-full h-full'>
-                  <img,
+                  <img
 src='https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80'
                     alt='Green IT sustainability'
                     className='object-cover'                  />
                 </div>
               </div>
             </div>                <div className="rounded-lg overflow-hidden relative w-full h-full">
-                  <img,
+                  <img
 src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80"
                     alt="Green IT sustainability"
                     className="object-cover"
@@ -62,7 +62,7 @@ src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fi
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                 {greenITSolutions.map((solution index) => (
-                  <div,
+                  <div
 key={index}
                     className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors'
                   >
@@ -636,7 +636,7 @@ organization
           {/* Category Filter */}""
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map(category => (
-              <button,
+              <button
 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${}
@@ -765,7 +765,7 @@ management
               Connect with our experts to discuss how we can help you build a,
 more sustainable IT infrastructure.
             </p>
-            <Button,
+            <Button
 className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
               asChild
             >

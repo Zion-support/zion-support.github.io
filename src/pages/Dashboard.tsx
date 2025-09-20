@@ -14,7 +14,7 @@
                   Recent Notifications
                 </h3>
                 <div className='space-y-4'>
-                  <Link,
+                  <Link
 href='/notifications'
                     className='block'
                     id='notifications-link'
@@ -31,7 +31,7 @@ href='/notifications'
             <div className='lg:col-span-2'>
               <div className='bg-zion-blue-dark rounded-xl p-6 mb-6'>
                 <div className='flex items-center justify-between mb-6'>
-                  <h2,
+                  <h2
 className='text-2xl font-bold text-white'
                     data-testid='dashboard-header'
                   >
@@ -39,7 +39,7 @@ className='text-2xl font-bold text-white'
                   </h2>
                   <div className='flex items-center gap-2'>
                     <NotificationBell />
-                    <Button,
+                    <Button
 variant='outline'
                       className='text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white'
                       onClick={logout}                    >
@@ -124,7 +124,7 @@ variant='outline'
                     {ordersLoading ? (
                       <p className='text-zion-slate-light'>Loading...</p>
                     ) : orders.length === 0 ? (
-                      <EmptyState,
+                      <EmptyState
 icon={<ShoppingBag className='h-8 w-8' />}
                         title='No Orders'                        description="You haven't purchased anything yet."
                         action={{
@@ -138,7 +138,7 @@ href: '/marketplace'
                         {orders.slice(0 3).map(o => (
                           <li key={o.orderId} className='flex justify-between'>
                             <span>#{o.orderId}</span>
-                            <Link,
+                            <Link
 href={`/orders/${o.orderId}`}
                               className='text-zion-purple underline'
                             >
@@ -149,7 +149,7 @@ href={`/orders/${o.orderId}`}
                       </ul>
                     )}
                     <div className='mt-2 text-right'>
-                      <Link,
+                      <Link
 href='/orders'
                         className='text-zion-purple underline'
                       >
@@ -171,7 +171,7 @@ href='/orders'
                       </ul>
                     )}
                     <div className='mt-2 text-right'>
-                      <Link,
+                      <Link
 href='/wishlist'
                         className='text-zion-purple underline'
                       >

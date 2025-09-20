@@ -16,7 +16,7 @@ onClose: () => void;
                     </FormControl>
                   </PopoverTrigger>
                   <PopoverContent className='w-auto p-0' align='start'>
-                    <Calendar,
+                    <Calendar
 mode='single'
                       selected={field.value}
                       onSelect={field.onChange}
@@ -31,7 +31,7 @@ className='p-3 pointer-events-auto'
               </FormItem>
             )}
           />
-          <FormField,
+          <FormField
 control={form.control}
             name='time'
             render={({
@@ -40,7 +40,7 @@ control={form.control}
               field: ControllerRenderProps<z.infer<typeof formSchema>, 'time'>
             }) => (              <FormItem>
                 <FormLabel>Time</FormLabel>
-                <Select,
+                <Select
 onValueChange={field.onChange}
                   defaultValue={field.value}
                 >
@@ -62,7 +62,7 @@ onValueChange={field.onChange}
           />
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <FormField,
+          <FormField
 control={form.control}
             name='duration'
             render={({
@@ -74,7 +74,7 @@ control={form.control}
               >
             }) => (              <FormItem>
                 <FormLabel>Duration</FormLabel>
-                <Select,
+                <Select
 onValueChange={field.onChange}
                   defaultValue={field.value}
                 >
@@ -94,7 +94,7 @@ onValueChange={field.onChange}
               </FormItem>
             )}
           />
-          <FormField,
+          <FormField
 control={form.control}
             name='platform'
             render={({
@@ -106,7 +106,7 @@ control={form.control}
               >
             }) => (              <FormItem>
                 <FormLabel>Platform</FormLabel>
-                <Select,
+                <Select
 onValueChange={field.onChange}
                   defaultValue={field.value}
                 >
@@ -128,7 +128,7 @@ onValueChange={field.onChange}
           />
         </div>
         {form.watch('platform') !== 'in-app' && (
-          <FormField,
+          <FormField
 control={form.control}
             name='meetingLink'
             render={({
@@ -141,7 +141,7 @@ control={form.control}
             }) => (              <FormItem>
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
-                  <Input,
+                  <Input
 placeholder={`Add your ${form.watch('platform')} link here`}
                     {...field}
                   />
@@ -151,7 +151,7 @@ placeholder={`Add your ${form.watch('platform')} link here`}
             )}
           />
         )}
-        <FormField,
+        <FormField
 control={form.control}
           name='notes'
           render={({
@@ -161,7 +161,7 @@ control={form.control}
           }) => (            <FormItem>
               <FormLabel>Notes (Optional)</FormLabel>
               <FormControl>
-                <Textarea,
+                <Textarea
 placeholder="Share what you'd like to discuss in this interview"
                   className='h-20'
                   {...field}

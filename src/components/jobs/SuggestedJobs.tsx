@@ -25,7 +25,7 @@ if (isLoading) {
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
-              <JobMatchesCard,
+              <JobMatchesCard
 key = {match.id,}
                 match = {match,}
                 onApply = {handleApply,}
@@ -43,7 +43,7 @@ key = {match.id,}
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
-              <JobMatchesCard,
+              <JobMatchesCard
 key = {match.id,}
                 match = {match,}
                 onApply = {handleApply,}
@@ -61,7 +61,7 @@ key = {match.id,}
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
-              <JobMatchesCard,
+              <JobMatchesCard
 key = {match.id,}
                 match = {match,}
                 onApply = {handleApply,}

@@ -46,7 +46,7 @@ export function ContractBuilder({
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
             <div className="flex gap-2">
-              <Button,
+              <Button
 variant="outline"
                 size="sm"
                 onClick = {(,) => setTemplateManagerOpen(true),}
@@ -55,7 +55,7 @@ variant="outline"
                 <Save className="h-4 w-4" />
                 Templates
               </Button>
-              <Button,
+              <Button
 variant="secondary"
                 size="sm"
                 onClick = {() => setShowSmartContractBuilder(true),}
@@ -65,7 +65,7 @@ variant="secondary"
             </div>
           </div>
           <TabsContent value="form" className="pt-4">
-            <ContractForm,
+            <ContractForm
 talent = {talent,}
               clientName = {clientName,}
               initialValues = {formValues,}
@@ -75,7 +75,7 @@ talent = {talent,}
           </TabsContent>
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
-              <ContractPreview,
+              <ContractPreview
 contractContent = {generatedContract,}
                 talent = {talent,}
                 onClose = {onClose,}
@@ -84,7 +84,7 @@ contractContent = {generatedContract,}
             )}
           </TabsContent>
         </Tabs>
-        <TemplateManager,
+        <TemplateManager
 isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
           onSelectTemplate = {handleLoadTemplate,}

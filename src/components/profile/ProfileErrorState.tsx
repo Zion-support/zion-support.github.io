@@ -12,7 +12,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         {error |'Something went wrong'}
       </div>
       <Button asChild>
-        <Link,
+        <Link
 href='/talents'
           className='bg-zion-purple hover:bg-zion-purple-dark'
         >

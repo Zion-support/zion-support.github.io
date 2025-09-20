@@ -20,7 +20,7 @@ return (
         <CardContent>
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
             {resources.map(resource => (
-              <Card,
+              <Card
 key={resource.id}
                 className='bg-zion-blue border-zion-blue-light overflow-hidden'
               >
@@ -32,7 +32,7 @@ key={resource.id}
                   <p className='text-xs text-zion-slate-light mb-4'>
                     {resource.description}
                   </p>
-                  <Button,
+                  <Button
 onClick={() => handleDownload(resource)}
                     size='sm'
                     variant='outline'

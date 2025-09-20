@@ -54,7 +54,7 @@ return (
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
             <div className="flex gap-2">
-              <Button,
+              <Button
 variant="outline"
                 size="sm"
                 onClick = {(,) => setTemplateManagerOpen(true),}
@@ -66,7 +66,7 @@ variant="outline"
             </div>
           </div>
           <TabsContent value="form" className="pt-4">
-            <ContractForm,
+            <ContractForm
 talent = {talent,}
               clientName = {clientName,}
               initialValues = {formValues,}
@@ -77,7 +77,7 @@ talent = {talent,}
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
-                <ContractPreview,
+                <ContractPreview
 generatedContract = {generatedContract,}
                   talent = {talent,}
                   onClose = {onClose,}
@@ -85,7 +85,7 @@ generatedContract = {generatedContract,}
                 />
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
-                    <Button,
+                    <Button
 onClick = {handleDeployContract,}
                       disabled = {deployStatus === 'deploying',}
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
@@ -97,7 +97,7 @@ onClick = {handleDeployContract,}
             )}
           </TabsContent>
         </Tabs>
-        <TemplateManager,
+        <TemplateManager
 isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
           onSelectTemplate = {handleLoadTemplate,}
@@ -147,7 +147,7 @@ setActiveTab ("preview")
             {/* {generatedSolidityContract && !deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}
           </TabsContent>
         </Tabs>
-        <TemplateManager,
+        <TemplateManager
 isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}

@@ -15,7 +15,7 @@ return (
         <CardHeader>
           <CardTitle className='flex items-center justify-between'>
             <span>Your Referral Link</span>
-            <Button,
+            <Button
 variant='outline'
               size='sm'
               onClick={handleDownloadLinks}
@@ -43,7 +43,7 @@ variant='outline'
         </h3>
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
-            <Button,
+            <Button
 variant='outline'
               size='sm'
               className='flex items-center gap-2'
@@ -62,7 +62,7 @@ variant='outline'
             <div className='grid gap-4 py-4'>
               <div className='grid gap-2'>
                 <Label htmlFor='campaign'>Campaign Type</Label>
-                <Select,
+                <Select
 value={selectedCampaign}
                   onValueChange={setSelectedCampaign}                >
                   <SelectTrigger id='campaign'>
@@ -80,7 +80,7 @@ value={selectedCampaign}
               </div>
               <div className='grid gap-2'>
                 <Label htmlFor='custom'>Custom Parameter (Optional)</Label>
-                <Input,
+                <Input
 id='custom'
                   placeholder='spring_campaign video_123 etc.'
                   value={customParam}
@@ -88,14 +88,14 @@ id='custom'
               </div>
             </div>
             <DialogFooter>
-              <Button,
+              <Button
 type='button'
                 variant='secondary'
                 onClick={() => setIsDialogOpen(false)}
               >
                 Cancel
               </Button>
-              <Button,
+              <Button
 type='button'
                 onClick={handleGenerateLink}
                 className='bg-zion-purple hover:bg-zion-purple-dark'              >
@@ -108,7 +108,7 @@ type='button'
       <div className='grid gap-4'>
         {generatedLinks.length > 0 ? (
           generatedLinks.map((item index) => (
-            <Card,
+            <Card
 key={index}
               className='bg-zion-blue-dark border-zion-blue-light'
             >
@@ -121,12 +121,12 @@ key={index}
               </CardHeader>
               <CardContent className='pb-4'>
                 <div className='flex space-x-2'>
-                  <Input,
+                  <Input
 value = {item.link,}
                     readOnly,
 className='font-mono text-xs'
                   />
-                  <Button,
+                  <Button
 variant='outline'
                     size='sm'
                     onClick={() => handleCopyLink(item.link)}                  >
@@ -144,7 +144,7 @@ variant='outline'
                 Create custom campaign links to track different marketing,
 efforts
               </p>
-              <Button,
+              <Button
 variant='outline'
                 onClick={() => setIsDialogOpen(true)}
                 className='flex items-center gap-2'              >

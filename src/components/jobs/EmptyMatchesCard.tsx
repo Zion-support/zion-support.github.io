@@ -18,7 +18,7 @@ isProcessing,
       <p className='text-muted-foreground mb-6'>
         Run AI matching to find talents that match this job&apos;s requirements.
       </p>
-      <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button,
+      <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button
 onClick = {onRefresh,}
         disabled = {isProcessing,}
         className="mx-auto"

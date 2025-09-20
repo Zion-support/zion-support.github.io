@@ -4,7 +4,7 @@ export default function LandingPage() {
   // Tools and features showcase,
 return (
     <div className='min-h-screen bg-zion-blue text-white'>
-      <SEO,
+      <SEO
 title={t('home.seo_title')}
         description={t('home.seo_description')}
         keywords={t('home.seo_keywords')}
@@ -22,11 +22,11 @@ title={t('home.seo_title')}
               {t('home.tools_description')}
             </p>
           </div>
-          <div,
+          <div
 className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}
           >
             {toolsFeatures.map((feature index) => (
-              <Link,
+              <Link
 key={index}
                 href={feature.link}
                 className='bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300'              >
@@ -39,11 +39,11 @@ key={index}
                 <p className='text-zion-slate-light mb-4'>
                   {feature.description}
                 </p>
-                <div,
+                <div
 className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}
                 >
                   <span>{t('general.explore')}</span>
-                  <ArrowRight,
+                  <ArrowRight
 className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`}
                   />                </div>                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
                 <p className="text-zion-slate-light mb-4">{feature.description}</p>

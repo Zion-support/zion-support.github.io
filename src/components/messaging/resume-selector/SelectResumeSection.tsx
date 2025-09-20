@@ -19,7 +19,7 @@ isLoading,
         <p className='text-sm text-zion-slate'>No saved resumes found.</p>
       ) : (
         <>
-          {resumeOptions.map(option => (            <button,
+          {resumeOptions.map(option => (            <button
 key = {option.id,}
               className={`w-full text-left p-3 rounded-md transition ${
                 selectedResume?.id === option.id
@@ -35,7 +35,7 @@ key = {option.id,}
             </button>
           ))}
           {resumeOptions.map((option) => (
-            <button,
+            <button
 key={option.id}
               className={`w-full text-left p-3 rounded-md transition ${
                 selectedResume?.id === option.id
@@ -51,7 +51,7 @@ key={option.id}
             </button>
           ))}
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
-            <ResumePreviewCard,
+            <ResumePreviewCard
 resume = {selectedResume.resume as Resume,}
               onDownload = {handleDownloadResume,}
               isLoading = {isLoading,}

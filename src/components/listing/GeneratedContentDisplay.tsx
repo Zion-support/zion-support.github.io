@@ -26,7 +26,7 @@ onApply,
           </h3>
           <div className='flex flex-wrap gap-2'>
             {content.tags.map((tag index) => (
-              <Badge,
+              <Badge
 key={index}
                 className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30'
               >                {tag}              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
@@ -69,7 +69,7 @@ key={index}
         </div>
       </CardContent>
       <CardFooter>
-        <Button,
+        <Button
 onClick={onApply}
           className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'
         >

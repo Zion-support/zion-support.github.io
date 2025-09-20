@@ -44,7 +44,7 @@ isPopular,
         </div>
       </CardContent>
       <CardFooter className='flex flex-col space-y-2'>
-        <Button,
+        <Button
 onClick = {() => onSelect(country),}
           className={`w-full ${
             isPopular
@@ -54,13 +54,13 @@ onClick = {() => onSelect(country),}
         >
           Select Service
         </Button>
-        <Button,
+        <Button
 variant='outline'
           className='w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10'
           onClick={() => onQuote?.(country)}        >
           Get Quote
         </Button>
-        <Button,
+        <Button
 asChild
           variant='ghost'
           className='w-full text-zion-cyan hover:text-zion-purple'

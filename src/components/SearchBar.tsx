@@ -35,7 +35,7 @@ interface SearchBarProps {
           }}
         />
         {value && (
-          <button,
+          <button
 className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white'
             onClick={() => onChange('')}
             aria-label='Clear search'          >
@@ -48,7 +48,7 @@ className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-
           </button>
         )}
       </div>
-      <AutocompleteSuggestions,
+      <AutocompleteSuggestions
 suggestions = {suggestions,}
         searchTerm = {value,}
         onSelectSuggestion = {handleSelect,}

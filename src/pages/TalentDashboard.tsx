@@ -4,7 +4,7 @@ function TalentDashboardContent() {
   const onboardingStatus = null;
   return (
     <>
-      <SEO,
+      <SEO
 title='Talent Dashboard | Zion AI Marketplace'
         description='Your personalized talent dashboard with job matches and professional opportunities.'
       />
@@ -40,7 +40,7 @@ title='Talent Dashboard | Zion AI Marketplace'
                   <div className='flex items-center gap-3'>
                     <Avatar className='h-12 w-12 border'>
                       {user?.avatarUrl ? (
-                        <img,
+                        <img
 src={user.avatarUrl}
                           alt={user.displayName |'User'}
                           loading='lazy'

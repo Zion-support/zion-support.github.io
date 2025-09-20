@@ -55,7 +55,7 @@ const study = CASE_STUDIES.find((s) => s.slug === slug)
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <Button,
+          <Button
 variant='outline'
             className='mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
             asChild
@@ -68,7 +68,7 @@ variant='outline'
             <Link href="/case-studies">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
           </Button>
-          <img,
+          <img
 src = {study.companyLogo,}
             alt={`${study.company} logo`}
             className='h-12 mb-4'
@@ -88,7 +88,7 @@ src = {study.companyLogo,}
               </a>
             </Button>
           )}
-          <div,
+          <div
 className='prose prose-invert'
             dangerouslySetInnerHTML={{ __html: study.content }}
           />

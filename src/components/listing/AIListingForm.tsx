@@ -14,13 +14,13 @@ keyFeatures: string;
 return (
     <div className='space-y-4'>
       <div className='space-y-2'>
-        <label,
+        <label
 htmlFor='title'
           className='text-sm font-medium text-zion-slate-light'
         >
           Title
         </label>
-        <Input,
+        <Input
 id='title'
           value={title}
           onChange={e => setTitle(e.target.value)}
@@ -29,13 +29,13 @@ id='title'
           disabled={isLoading}        />
       </div>
       <div className='space-y-2'>
-        <label,
+        <label
 htmlFor='category'
           className='text-sm font-medium text-zion-slate-light'
         >
           Category
         </label>
-        <Input,
+        <Input
 id='category'
           value={category}
           onChange={e => setCategory(e.target.value)}
@@ -44,13 +44,13 @@ id='category'
           disabled={isLoading}        />
       </div>
       <div className='space-y-2'>
-        <label,
+        <label
 htmlFor='keyFeatures'
           className='text-sm font-medium text-zion-slate-light'
         >
           Key Features (Optional)
         </label>
-        <Textarea,
+        <Textarea
 id='keyFeatures'
           value={keyFeatures}
           onChange={e => setKeyFeatures(e.target.value)}
@@ -59,13 +59,13 @@ id='keyFeatures'
           disabled={isLoading}        />
       </div>
       <div className='space-y-2'>
-        <label,
+        <label
 htmlFor='targetAudience'
           className='text-sm font-medium text-zion-slate-light'
         >
           Target Audience (Optional)
         </label>
-        <Input,
+        <Input
 id='targetAudience'
           value={targetAudience}
           onChange={e => setTargetAudience(e.target.value)}
@@ -74,7 +74,7 @@ id='targetAudience'
           disabled={isLoading}
         />
       </div>
-      <Button,
+      <Button
 onClick={handleSubmit}
         disabled={isLoading |!title |!category}
         className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'      >        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
@@ -88,7 +88,7 @@ onClick={handleSubmit}
       </div>
       <div className="space-y-2">
         <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Category">Category</label>
-        <Input,
+        <Input
 id="category"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
@@ -99,7 +99,7 @@ id="category"
       </div>
       <div className="space-y-2">
         <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Key Features (Optional)">Key Features (Optional)</label>
-        <Textarea,
+        <Textarea
 id="keyFeatures"
           value={keyFeatures}
           onChange={(e) => setKeyFeatures(e.target.value)}
@@ -110,7 +110,7 @@ id="keyFeatures"
       </div>
       <div className="space-y-2">
         <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Target Audience (Optional)">Target Audience (Optional)</label>
-        <Input,
+        <Input
 id="targetAudience"
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
@@ -119,7 +119,7 @@ id="targetAudience"
           disabled={isLoading}
         />
       </div>
-      <Button,
+      <Button
 onClick={handleSubmit}
         disabled={isLoading |!title |!category}
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"

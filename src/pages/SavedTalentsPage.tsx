@@ -13,7 +13,7 @@ import { logInfo,, logWarn,  } from '@/utils/productionLogger';
 export default function SavedTalentsPage() {
 return (
     <>
-      <SEO,
+      <SEO
 title='Saved Talents | Zion AI Marketplace'
         description='View and manage your saved talents in the Zion AI Marketplace'
       />
@@ -26,7 +26,7 @@ title='Saved Talents | Zion AI Marketplace'
           <div className='text-center py-8'>Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
           <div className='py-8'>
-            <EmptyState,
+            <EmptyState
 icon={<Heart className='h-8 w-8' />}
               title='No Saved Talents'              description="You haven't saved any talents yet."
               action={{ text: 'Browse Talent', href: '/talent' }}
@@ -35,7 +35,7 @@ icon={<Heart className='h-8 w-8' />}
           </div>
         ) : (
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
-            {savedTalents.map(talent => (              <TalentCard,
+            {savedTalents.map(talent => (              <TalentCard
 key = {talent.id,}
                 talent = {talent,}
                 onViewProfile = {handleViewProfile,}

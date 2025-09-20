@@ -53,7 +53,7 @@ return (
           </TableBody>
         </Table>
       ) : orders.length === 0 ? (
-        <EmptyState,
+        <EmptyState
 icon={<FileText className='h-10 w-10' />}
           title='No Orders'          description="You haven't purchased anything yet."
         />
@@ -75,7 +75,7 @@ icon={<FileText className='h-10 w-10' />}
                 <TableCell>{order.total}</TableCell>
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
                 <TableCell>
-                  <Link,
+                  <Link
 href={`/orders/${order.orderId}`} // Changed to href,
 className='text-zion-purple underline'
                   >

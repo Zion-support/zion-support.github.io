@@ -34,7 +34,7 @@ the world of AI and tech services
         <Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">
             {features.slice(0 4).map(feature => (
-              <TabsTrigger,
+              <TabsTrigger
 key={feature.id}
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
@@ -45,12 +45,12 @@ key={feature.id}
           </TabsList>
           <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
             {features.slice(4).map(feature => (
-              <TabsTrigger,
+              <TabsTrigger
 key={feature.id}
                 value={feature.id}
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
             {features.slice(4).map(feature => (
-              <TabsTrigger,
+              <TabsTrigger
 key={feature.id}
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
@@ -72,14 +72,14 @@ key={feature.id}
                   <p className='text-zion-slate-light mb-6'>
                     {feature.description}
                   </p>
-                  <Button,
+                  <Button
 className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'                    asChild
                   >
                     <Link href={feature.link}>
                       {feature.buttonText}
                       <ArrowRight className='ml-2 h-4 w-4' />                  <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-zion-slate-light mb-6">{feature.description}</p>
-                  <Button,
+                  <Button
 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   >
                     <Link href={feature.link}>
@@ -111,12 +111,12 @@ className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion
           ))}
         </Tabs>
         <div className='mt-12 text-center'>
-          <Button,
+          <Button
 variant='outline'
             className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'
             asChild
           >
-            <Link,
+            <Link
 href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
               href="/marketplace"
               onClick = {() => fireEvent('explore_marketplace_click'),}

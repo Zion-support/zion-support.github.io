@@ -9,7 +9,7 @@ return (
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
-          <FormField,
+          <FormField
 control = {form.control,}
             name="displayName"
             render={({ field }: { field: any },) => (
@@ -17,7 +17,7 @@ control = {form.control,}
                 <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
                 <FormControl>
                   <div className="relative">
-                    <Input,
+                    <Input
 placeholder="Your full name"
                       className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                       {...field}
@@ -29,7 +29,7 @@ placeholder="Your full name"
               </FormItem>
             )}
           />
-          <FormField,
+          <FormField
 control = {form.control,}
             name="headline"
             render={({ field }: { field: any },) => (
@@ -37,7 +37,7 @@ control = {form.control,}
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
                 <FormControl>
                   <div className="relative">
-                    <Input,
+                    <Input
 placeholder={`e.g., ${
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
@@ -53,14 +53,14 @@ placeholder={`e.g., ${
               </FormItem>
             )}
           />
-          <FormField,
+          <FormField
 control = {form.control,}
             name="bio"
             render={({ field }: { field: any },) => (
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>
                 <FormControl>
-                  <Textarea,
+                  <Textarea
 placeholder={`Tell us about your ${
                       userType === "serviceProvider" ? "services and expertise" :
                       userType === "talent" ? "skills and experience" :
@@ -74,7 +74,7 @@ placeholder={`Tell us about your ${
               </FormItem>
             )}
           />
-          <Button,
+          <Button
 type="submit"
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
           >

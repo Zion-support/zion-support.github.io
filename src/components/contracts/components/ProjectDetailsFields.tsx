@@ -22,7 +22,7 @@ interface ProjectDetailsFieldsProps {
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
   return (
     <>
-      <FormField,
+      <FormField
 control={form.control}
         name='projectName'
         render={({
@@ -45,7 +45,7 @@ control={form.control}
           </FormItem>
         )}
       />
-      <FormField,
+      <FormField
 control={form.control}
         name='scopeSummary'
         render={({
@@ -55,17 +55,17 @@ control={form.control}
         }) => (          <FormItem>
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
-              <Textarea,
+              <Textarea
 placeholder='Describe the project scope deliverables and expectations...'
                 className='min-h-[120px]'                {...field}        render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary"> },) => (
-      <FormField,
+      <FormField
 control={form.control}
         name="scopeSummary"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary"> }) => (
           <FormItem>
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
-              <Textarea,
+              <Textarea
 placeholder='Describe the project scope deliverables and expectations...'
                 className='min-h-[120px]'                placeholder="Describe the project scope deliverables and expectations..."
                 className="min-h-[120px]"
@@ -80,7 +80,7 @@ placeholder='Describe the project scope deliverables and expectations...'
         )}
       />
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-        <FormField,
+        <FormField
 control={form.control}
           name='startDate'
           render={({
@@ -90,7 +90,7 @@ control={form.control}
           }) => (
             <FormItem className='flex flex-col'>              <FormLabel>Start Date</FormLabel>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <FormField,
+        <FormField
 control = {form.control,}
           name="startDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "startDate"> },) => (
@@ -98,7 +98,7 @@ control = {form.control,}
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
-                    <Button,
+                    <Button
 variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
                       {field.value ? (
@@ -111,7 +111,7 @@ variant={'outline'}
                   </FormControl>
                 </PopoverTrigger>
                 <PopoverContent className='w-auto p-0' align='start'>
-                  <Calendar,
+                  <Calendar
 mode='single'
                     selected={field.value}
                     onSelect={field.onChange}
@@ -130,7 +130,7 @@ mode='single'
                   </FormControl>
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0" align="start">
-                  <Calendar,
+                  <Calendar
 mode="single"
                     selected={field.value}
                     onSelect={field.onChange}
@@ -143,7 +143,7 @@ mode="single"
             </FormItem>
           )}
         />
-        <FormField,
+        <FormField
 control={form.control}
           name='endDate'
           render={({
@@ -152,7 +152,7 @@ control={form.control}
             field: ControllerRenderProps<ContractFormValues 'endDate'>
           }) => (
             <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>
-        <FormField,
+        <FormField
 control = {form.control,}
           name="endDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> },) => (
@@ -160,7 +160,7 @@ control = {form.control,}
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
-                    <Button,
+                    <Button
 variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
                       {field.value ? (
@@ -173,7 +173,7 @@ variant={'outline'}
                   </FormControl>
                 </PopoverTrigger>
                 <PopoverContent className='w-auto p-0' align='start'>
-                  <Calendar,
+                  <Calendar
 mode='single'
                     selected={field.value |undefined}
                     onSelect={field.onChange}
@@ -192,7 +192,7 @@ mode='single'
                   </FormControl>
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0" align="start">
-                  <Calendar,
+                  <Calendar
 mode="single"
                     selected={field.value |undefined}
                     onSelect={field.onChange}

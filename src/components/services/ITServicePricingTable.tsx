@@ -3,7 +3,7 @@ return (
       <div className='flex items-center mb-6'>
         <div className='relative flex-1'>
           <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light' />
-          <Input,
+          <Input
 placeholder='Search by country...'
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
@@ -15,7 +15,7 @@ placeholder='Search by country...'
           <TableHeader className='bg-zion-blue'>
             <TableRow>
               <TableHead className='text-zion-cyan font-medium'>
-                <Button,
+                <Button
 variant='ghost'
                   onClick={() => handleSort('country')}
                   className='hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light'                >
@@ -24,7 +24,7 @@ variant='ghost'
                 </Button>
               </TableHead>
               <TableHead className='text-right text-zion-cyan font-medium'>
-                <Button,
+                <Button
 variant='ghost'
                   onClick={() => handleSort('pricePerIncident')}
                   className='hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light'                >
@@ -37,7 +37,7 @@ variant='ghost'
           <TableBody className='bg-zion-blue-dark'>
             {sortedData.length > 0 ? (
               sortedData.map(item => (
-                <TableRow,
+                <TableRow
 key={item.country}
                   className='border-b border-zion-blue-light hover:bg-zion-blue/50'
                 >
@@ -51,7 +51,7 @@ key={item.country}
               ))
             ) : (
               <TableRow>
-                <TableCell,
+                <TableCell
 colSpan={2}
                   className='text-center py-10 text-zion-slate-light'
                 >

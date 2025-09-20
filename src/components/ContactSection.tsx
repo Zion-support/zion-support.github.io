@@ -272,7 +272,7 @@ return (
                     ">
                       Name
                     </label>
-                    <Input,
+                    <Input
 id="name"
                       name="name"
                       value = {formData.name,}
@@ -290,7 +290,7 @@ id="name"
                     ">
                       Email
                     </label>
-                    <Input,
+                    <Input
 id="email"
                       name="email"
                       type="email"
@@ -310,7 +310,7 @@ id="email"
                   ">
                     Subject
                   </label>
-                  <Input,
+                  <Input
 id="subject"
                     name="subject"
                     value = {formData.subject,}
@@ -328,7 +328,7 @@ id="subject"
                   ">
                     Message
                   </label>
-                  <Textarea,
+                  <Textarea
 id="message"
                     name="message"
                     rows = {4,}
@@ -342,7 +342,7 @@ id="message"
                   )}
                 </div>
                 <div>
-                  <Button,
+                  <Button
 type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                     disabled = {isSubmitting,}

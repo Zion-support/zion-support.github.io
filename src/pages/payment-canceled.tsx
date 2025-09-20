@@ -16,13 +16,13 @@ return (
           Your payment process was canceled. No charges have been made to your account.
         </p>
         <div className="flex flex-col space-y-3">
-          <Button,
+          <Button
 onClick={(,) => router.push('/payments')} // Changed to router.push,
 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Try Again
           </Button>
-          <Button,
+          <Button
 variant="outline"
             onClick={() => router.push('/dashboard')} // Changed to router.push,
 className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
@@ -40,13 +40,13 @@ return (
 account.
         </p>
         <div className='flex flex-col space-y-3'>
-          <Button,
+          <Button
 onClick={() => router.push('/payments')} // Changed to router.push,
 className='bg-zion-purple hover:bg-zion-purple-dark text-white'
           >
             Try Again
           </Button>
-          <Button,
+          <Button
 variant='outline'
             onClick={() => router.push('/dashboard')} // Changed to router.push,
 className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'          >

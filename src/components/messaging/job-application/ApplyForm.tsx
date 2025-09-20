@@ -30,7 +30,7 @@ return (
           </TabsTrigger>
         </TabsList>
         <TabsContent value="message">
-          <MessageTab,
+          <MessageTab
 message = {message,}
             setMessage = {setMessage,}
             proposalLink = {proposalLink,}
@@ -38,14 +38,14 @@ message = {message,}
           />
         </TabsContent>
         <TabsContent value="resume">
-          <ResumeTab,
+          <ResumeTab
 onResumeSelected = {handleResumeSelected,}
             selectedResumeId = {selectedResumeId,}
           />
         </TabsContent>
       </Tabs>
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
-        <Button,
+        <Button
 type="button"
           variant="outline"
           onClick = {onClose,}
@@ -53,7 +53,7 @@ type="button"
         >
           Cancel
         </Button>
-        <Button,
+        <Button
 type="button"
           onClick = {handleApply,}
           disabled = {isSubmitting,}

@@ -55,7 +55,7 @@ if (logoToUse) {
   if (logoToUse) {
     return (
       <Link href='/' className='flex items-center'>
-        <img,
+        <img
 src={logoToUse}
           alt={`${brandName} Logo`}
           className='h-8'
@@ -67,7 +67,7 @@ src={logoToUse}
   }
   return (
     <Link href='/' className='flex items-center'>
-      <img,
+      <img
 src='/logos/zion-logo.png'
         alt='Zion Logo'
         className='h-8'

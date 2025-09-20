@@ -4,7 +4,7 @@ return (
       <h1 className='text-3xl font-bold mb-6'>Rewards</h1>
       <ul className='space-y-4'>
         {REWARDS.map(r => (
-          <li,
+          <li
 key={r.id}
             className='flex justify-between items-center border rounded-md p-4'
           >            <div>

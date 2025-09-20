@@ -29,7 +29,7 @@ if (firstError) {
           }        })}
         className='space-y-6'
       >
-        <FormField,
+        <FormField
 control={form.control}
           name='email'
           render={({
@@ -42,7 +42,7 @@ control={form.control}
               </FormLabel>
               <FormControl>
                 <div className='relative'>
-                  <Input,
+                  <Input
 placeholder='you@example.com'
                     aria-label='Email address'
                     aria-invalid={!!form.formState.errors.email}
@@ -55,7 +55,7 @@ placeholder='you@example.com'
             </FormItem>
           )}
         />
-        <FormField,
+        <FormField
 control={form.control}
           name='password'
           render={({
@@ -66,7 +66,7 @@ control={form.control}
               <FormLabel className='text-zion-slate-light'>Password</FormLabel>
               <FormControl>
                 <div className='relative'>
-                  <Input,
+                  <Input
 type={showPassword ? 'text' : 'password'}
                     placeholder='Enter password'
                     aria-label='Password'
@@ -74,7 +74,7 @@ type={showPassword ? 'text' : 'password'}
                     className='bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple'                    {...field}
                   />
                   <LogIn className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
-                  <Button,
+                  <Button
 type='button'
                     variant='ghost'
                     size='sm'
@@ -95,7 +95,7 @@ type='button'
             </FormItem>
           )}
         />
-        <FormField,
+        <FormField
 control={form.control}
           name='rememberMe'
           render={({
@@ -105,7 +105,7 @@ control={form.control}
           }) => (
             <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
               <FormControl>
-                <Checkbox,
+                <Checkbox
 checked={field.value}
                   onCheckedChange={field.onChange}
                   className='border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white'
@@ -125,7 +125,7 @@ checked={field.value}
             {/* If "Remember me" was previously here it's moved. */}
           </div>
           <div className='text-sm'>
-            <Link,
+            <Link
 href='/forgot-password'
               className='font-medium text-zion-cyan hover:text-zion-cyan-light'
             >
@@ -133,7 +133,7 @@ href='/forgot-password'
             </Link>
           </div>
         </div>
-        <Button,
+        <Button
 type='submit'
           className='w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible'
           disabled={isLoading |isSubmitting}        >
@@ -145,7 +145,7 @@ type='submit'
           </p>
         )}
         <div className='flex justify-between mt-4'>
-          <Button,
+          <Button
 type='button'
             variant='secondary'
             className='w-1/2 mr-2'
@@ -153,7 +153,7 @@ type='button'
             disabled={isResending}          >
             {isResending ? 'Sending...' : 'Resend / Verify e-mail'}
           </Button>
-          <Button,
+          <Button
 type='button'
             variant='outline'
             className='w-1/2 ml-2'
@@ -162,7 +162,7 @@ type='button'
           </Button>
         </div>
         <p className='text-sm text-center mt-4'>
-          <Link,
+          <Link
 href='/signup'
             className='font-medium text-zion-cyan hover:text-zion-cyan-light'
           >

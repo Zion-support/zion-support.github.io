@@ -28,7 +28,7 @@ onDownload
               </p>
             )}
           </div>
-          <Button,
+          <Button
 variant='ghost'
             size='sm'
             onClick={onDownload}
@@ -46,12 +46,12 @@ variant='ghost'
         {resume.skills && resume.skills.length > 0 && (
           <div className='flex flex-wrap gap-1 mt-2'>
             {resume.skills.slice(0 5).map((skill index) => (
-              <Badge,
+              <Badge
 key={index}
                 variant='outline'
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
             {resume.skills.slice(0 5).map((skill index) => (
-              <Badge,
+              <Badge
 key = {index,}
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
@@ -59,9 +59,9 @@ key = {index,}
               </Badge>
             ))}
             {resume.skills.length > 5 && (
-              <Badge,
+              <Badge
 variant='outline'
-                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge,
+                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge
 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
               >

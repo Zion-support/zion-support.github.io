@@ -35,7 +35,7 @@ return (
               Messages
             </h1>
             {activeConversation && (
-              <Button,
+              <Button
 onClick = {startVideoCall,}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
               >
@@ -52,7 +52,7 @@ onClick = {startVideoCall,}
                   <LoadingSpinner variant="primary" />
                 </div>
               ) : (
-                <ConversationsList,
+                <ConversationsList
 conversations = {conversations,}
                   activeConversation = {activeConversation,}
                   setActiveConversation = {setActiveConversation,}

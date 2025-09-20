@@ -3,7 +3,7 @@ return (
     <div className="space-y-6">
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (
-        <AIMilestoneGenerator,
+        <AIMilestoneGenerator
 scope = {projectScope,}
           startDate = {projectStartDate,}
           endDate = {projectEndDate,}
@@ -14,7 +14,7 @@ scope = {projectScope,}
       )}
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
-          <FormField,
+          <FormField
 control = {form.control,}
             name="title"
             render={({ field }: { field: any },) => (
@@ -27,14 +27,14 @@ control = {form.control,}
               </FormItem>
             )}
           />
-          <FormField,
+          <FormField
 control = {form.control,}
             name="description"
             render={({ field }: { field: any },) => (
               <FormItem>
                 <FormLabel>Description (optional)</FormLabel>
                 <FormControl>
-                  <Textarea,
+                  <Textarea
 placeholder="Describe what needs to be delivered"
                     className="min-h-[100px]"
                     {...field}
@@ -45,7 +45,7 @@ placeholder="Describe what needs to be delivered"
             )}
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FormField,
+            <FormField
 control = {form.control,}
               name="due_date"
               render={({ field }: { field: any },) => (
@@ -54,7 +54,7 @@ control = {form.control,}
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
-                        <Button,
+                        <Button
 variant="outline"
                           className="w-full pl-3 text-left font-normal"
                         >
@@ -70,7 +70,7 @@ variant="outline"
                       </FormControl>
                     </PopoverTrigger>
                     <PopoverContent className="w-auto p-0" align="start">
-                      <Calendar,
+                      <Calendar
 mode="single"
                         selected = {field.value,}
                         onSelect = {field.onChange,}
@@ -83,14 +83,14 @@ mode="single"
                 </FormItem>
               )}
             />
-            <FormField,
+            <FormField
 control = {form.control,}
               name="amount"
               render={({ field }: { field: any },) => (
                 <FormItem>
                   <FormLabel>Amount ($)</FormLabel>
                   <FormControl>
-                    <Input,
+                    <Input
 type="number"
                       min="0"
                       step="0.01"
@@ -105,7 +105,7 @@ type="number"
           </div>
           <div className="flex justify-end space-x-2 pt-4">
             {onCancel && (
-              <Button,
+              <Button
 type="button"
                 variant="outline"
                 onClick = {onCancel,}

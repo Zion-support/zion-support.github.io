@@ -1132,7 +1132,7 @@ link.key === 'services' ? isServicesOpen : isCompOpen,
 link.key === 'services' ? setIsServicesOpen : setIsCompOpen
               )
             ) : (
-              <Link,
+              <Link
 to={link.href}`
                 className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link)
                     ? 'bg-zion-cyan text-white''
@@ -1145,7 +1145,7 @@ to={link.href}`
         ))}
       </div>
       {/* Mobile Menu Button */}
-      <button,
+      <button
 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}"
         className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
 "
@@ -1172,7 +1172,7 @@ x: '100%'
             <div className="p-6">"
               <div className="flex justify-between items-center mb-8">"
                 <h2 className="text-xl font-bold text-white">Menu</h2>
-                <button,
+                <button
 onClick={() => setIsMobileMenuOpen(false)}"
                   className="p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
 "
@@ -1183,7 +1183,7 @@ onClick={() => setIsMobileMenuOpen(false)}"
                 {baseLinks.map(link: unknown <div key={link.key}>
                     {link.children ? (
                       <div>
-                        <button,
+                        <button
 onClick={() => setActiveDropdown(activeDropdown === link.key ? null : link.key)}`
                           className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm font-medium rounded-md transition-colors ${isActive(link)
                               ? 'bg-zion-cyan text-white''
@@ -1194,7 +1194,7 @@ onClick={() => setActiveDropdown(activeDropdown === link.key ? null : link.key)}
                         {activeDropdown === link.key && (;"
                           <div className="ml-4 mt-2 space-y-1">
                             {link.children.map((child: unknown (
-                              <Link,
+                              <Link
 key={child.key}
                                 to={child.href}`
                                 className={`block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors ${isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''`
@@ -1207,7 +1207,7 @@ key={child.key}
                         )}
                       </div>
                     ) : (
-                      <Link,
+                      <Link
 to={link.href}`
                         className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive(link)
                             ? 'bg-zion-cyan text-white''

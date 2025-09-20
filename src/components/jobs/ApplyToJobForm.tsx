@@ -33,7 +33,7 @@ return (
       <div className="space-y-4">
         <div>
           <Label htmlFor="coverLetter">Cover Letter</Label>
-          <Textarea,
+          <Textarea
 id="coverLetter"
             value = {coverLetter,}
             onChange = {(e,) => setCoverLetter(e.target.value),}
@@ -53,7 +53,7 @@ id="coverLetter"
               <span>Loading your resumes...</span>
             </div>
           ) : resumes && resumes.length > 0 ? (
-            <Select,
+            <Select
 value = {selectedResumeId,}
               onValueChange = {setSelectedResumeId,}
             >
@@ -80,7 +80,7 @@ value = {selectedResumeId,}
                 <FileText className="h-5 w-5 text-muted-foreground" />
                 <span>No resumes found</span>
               </div>
-              <Button,
+              <Button
 variant="outline"
                 size="sm"
                 type="button"
@@ -93,7 +93,7 @@ variant="outline"
         </div>
         <div>
           <Label htmlFor="cvUpload">Or Upload CV (PDF)</Label>
-          <input,
+          <input
 id="cvUpload"
             type="file"
             accept=".pdf"
@@ -103,7 +103,7 @@ id="cvUpload"
         </div>
       </div>
       <div className="flex justify-end gap-2">
-        <Button,
+        <Button
 type="button"
           variant="outline"
           disabled = {isSubmitting,}
