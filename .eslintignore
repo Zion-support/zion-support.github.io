@@ -101,6 +101,25 @@ zion-ai-assistant/
 zion-os/
 zion-website/
 
+# Additional problematic files
+*.js
+*.jsx
+*.ts
+*.tsx
+!src/**/*.js
+!src/**/*.jsx
+!src/**/*.ts
+!src/**/*.tsx
+!App.tsx
+!main.jsx
+!index.html
+quantum-ai-*/
+src-corrupted/
+out/
+extension/
+sdk/
+public/
+
 # Root level files that don't need linting
 *.md
 *.txt

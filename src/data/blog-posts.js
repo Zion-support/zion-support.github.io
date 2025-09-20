@@ -41,8 +41,25 @@ const blogPosts = [
     readTime: "8 min read",
     category: "AI Operations",
     tags: ["Routing", "Evals", "SLOs", "Governance"],
-  }
-  ,
+    featured: true,
+    imageUrl: "/images/blog/ai-agent-benchmark-suite-2026.jpg",
+    slug: "ai-2026-agent-benchmark-suite-scenario-packs-quality-gates"
+  },
+  {
+    id: 1006,
+    title: "AI 2026: Agent Benchmark Suite — Scenario Packs and Quality Gates",
+    excerpt: "A practical, extensible suite to benchmark agents and enforce quality.",
+    content: "Scenario packs, harnesses, and scorecards for continuous evaluation. Learn how to seed datasets, define pass thresholds, wire gates into CI/CD, and publish weekly scorecards to prevent regressions and drive measurable improvements.",
+    author: "Diego Alvarez",
+    authorRole: "Director of AI Quality",
+    publishDate: "2025-09-15",
+    readTime: "8 min read",
+    category: "Evaluation",
+    tags: ["Benchmarking", "Evals", "Quality Gates", "CI/CD"],
+    featured: true,
+    imageUrl: "/images/blog/ai-agent-benchmark-suite-2026.jpg",
+    slug: "ai-2026-agent-benchmark-suite-scenario-packs-quality-gates"
+  },
   {
     id: 10,
     title: "Enterprise AI Governance Blueprint (2026)",
