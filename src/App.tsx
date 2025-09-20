@@ -1,16 +1,11 @@
-import React, { Suspense, lazy, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { Suspense, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-// Sidebar is optional in this build; component may be disabled
-// import Sidebar from './components/Sidebar';
-import { AccessibilityControls } from './components/AccessibilityControls';
 import { ThemeProvider } from "./components/ThemeProvider";
-import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import ErrorBoundary from './components/ErrorBoundary';
-import { SidebarProvider } from './context/SidebarContext';
 
 // Core pages - minimal set for working build
 const Home = lazy(() => import('./pages/Home'));
@@ -25,15 +20,11 @@ const LoadingSpinner = () => (
   </div>
 );
 
-// Theme toggle is now handled by the context
-
 const App = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <ErrorBoundary>
       <ThemeProvider>
         <WhitelabelProvider>
-          <Router>
             <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
               <Header />
               
@@ -57,9 +48,6 @@ const App = () => {
               <SonnerToaster />
             </div>
             
-            {/* Sidebar (disabled) */}
-            {/* <Sidebar /> */}
-          </Router>
         </WhitelabelProvider>
       </ThemeProvider>
     </ErrorBoundary>
