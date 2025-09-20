@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-const EnhancedNavigation: React.FC = () => {
+const EnhancedNavigation: React.FC = () => {,
   const [isOpen, setIsOpen] = useState(false);
   const navigationItems = [
     { name: 'Home', href: '/' },
@@ -41,8 +41,8 @@ onClick={() => setIsOpen(!isOpen)}
                 <Link,
 key={item.name}
                   href={item.href}
-                  className="block text-gray-700 hover:text-blue-600 py-2"
-                  onClick={() => setIsOpen(false)}
+                  className="block text-gray-700 hover: text-blue-600 py-2",
+  onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </Link>

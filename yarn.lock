@@ -7060,11 +7060,6 @@ ieee754@^1.1.13:
   resolved "https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz"
   integrity sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==
 
-ignore-loader@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.npmjs.org/ignore-loader/-/ignore-loader-0.1.2.tgz"
-  integrity sha512-yOJQEKrNwoYqrWLS4DcnzM7SEQhRKis5mB+LdKKh4cPmGYlLPR0ozRzHV5jmEk2IxptqJNQA5Cc0gw8Fj12bXA==
-
 ignore@^5.2.0, ignore@^5.2.4:
   version "5.3.2"
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.3.2.tgz"
@@ -11273,14 +11268,6 @@ svgo@^4.0.0:
     csso "^5.0.5"
     picocolors "^1.1.1"
     sax "^1.4.1"
-
-swr@^2.3.6:
-  version "2.3.6"
-  resolved "https://registry.npmjs.org/swr/-/swr-2.3.6.tgz"
-  integrity sha512-wfHRmHWk/isGNMwlLGlZX5Gzz/uTgo0o2IRuTMcf4CPuPFJZlq0rDaKUx+ozB5nBOReNV1kiOyzMfj+MBMikLw==
-  dependencies:
-    dequal "^2.0.3"
-    use-sync-external-store "^1.4.0"
 
 symbol-tree@^3.2.4:
   version "3.2.4"

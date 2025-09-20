@@ -1,147 +1,147 @@
-#!/usr/bin/env node
-
-/**
- * Performance Monitor for Zion App
- * Tracks build performance, bundle size, and optimization metrics
- */
-
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-class PerformanceMonitor {
-  constructor() {
-    this.metrics = {
+#!/usr/bin/env node,
+/**,
+ * Performance Monitoring Script for Zion App,
+ * Monitors build performance, bundle sizes, and deployment metrics,
+ */,
+import { readFileSync, writeFileSync, existsSync } from 'fs',
+import { execSync } from 'child_process',
+import path from 'path',
+const colors = {,
+  green: '\x1b[32m',
+  red: '\x1b[31m',
+  yellow: '\x1b[33m',
+  blue: '\x1b[34m',
+  cyan: '\x1b[36m',
+  reset: '\x1b[0m',
+  bold: '\x1b[1m'},
+class PerformanceMonitor {,
+  constructor() {,
+    this.startTime = Date.now(),
+    this.metrics = {,
       buildTime: 0,
       bundleSize: 0,
-      pageCount: 0,
+      chunkCount: 0,
+      warnings: 0,
+      errors: 0},
+  }
+,
+  log(message, color = 'reset') {,
+    console.log(`${colors[color]}${message}${colors.reset}`),
+  }
+,
+  async monitorBuild() {,
+    this.log('🚀 Starting performance monitoring...cyan'),
+    try {,
+      // Check if dist directory exists,
+      if (existsSync('dist')) {,
+        this.log('📊 Analyzing bundle sizes...blue'),
+        this.analyzeBundleSizes(),
+        this.log('📈 Generating performance report...blue'),
+        this.generatePerformanceReport(),
+      } else {,
+        this.log('❌ No dist directory found. Run build first.red'),
+      }
+    } catch (error) {,
+      this.log(`❌ Error during monitoring: ${error.message}`, 'red'),
+    }
+  }
+,
+  analyzeBundleSizes() {,
+    const bundleInfo = this.getBundleInfo(),
+    this.metrics.bundleSize = bundleInfo.totalSize,
+    this.metrics.chunkCount = bundleInfo.chunkCount,
+    this.log(`\n📦 Bundle Analysis:`, 'bold'),
+    this.log(`   Total Size: ${this.formatBytes(bundleInfo.totalSize)}`, 'green'),
+    this.log(`   Chunk Count: ${bundleInfo.chunkCount}`, 'blue'),
+    this.log(`   Largest Chunk: ${bundleInfo.largestChunk.name} (${this.formatBytes(bundleInfo.largestChunk.size)})`, 'yellow'),
+    // Performance recommendations,
+    this.log(`\n💡 Performance Recommendations:`, 'bold'),
+    if (bundleInfo.largestChunk.size > 500000) { // 500KB,
+      this.log(`   ⚠️  Largest chunk is ${this.formatBytes(bundleInfo.largestChunk.size)}. Consider code splitting.`, 'yellow'),
+    }
+    if (bundleInfo.totalSize > 2000000) { // 2MB,
+      this.log(`   ⚠️  Total bundle size is ${this.formatBytes(bundleInfo.totalSize)}. Consider optimization.`, 'yellow'),
+    }
+    if (bundleInfo.chunkCount < 5) {,
+      this.log(`   💡 Consider more granular code splitting for better caching.`, 'blue'),
+    }
+  }
+,
+  getBundleInfo() {,
+    const distPath = 'dist/assets',
+    if (!existsSync(distPath)) {,
+      return { totalSize: 0, chunkCount: 0, largestChunk: { name: 'none', size: 0 } },
+    }
+,
+    const files = execSync(`find ${distPath} -name "*.js" -o -name "*.css"`, { encoding: 'utf8' }),
+      .trim(),
+      .split('\n'),
+      .filter(file => file.length > 0),
+    let totalSize = 0,
+    let largestChunk = { name: 'none', size: 0 },
+    const fileSizes = files.map(file => {,
+      const stats = execSync(`stat -c%s "${file}"`, { encoding: 'utf8' }),
+      const size = parseInt(stats.trim()),
+      totalSize += size,
+      if (size > largestChunk.size) {,
+        largestChunk = { name: path.basename(file), size },
+      }
+,
+      return { name: path.basename(file), size },
+    }),
+    return {,
+      totalSize,
+      chunkCount: files.length,
+      largestChunk,
+      files: fileSizes.sort((a, b) => b.size - a.size)
+    },
+  }
+,
+  generatePerformanceReport() {,
+    const report = {,
       timestamp: new Date().toISOString(),
-    };
+      buildTime: this.metrics.buildTime,
+      bundleSize: this.metrics.bundleSize,
+      chunkCount: this.metrics.chunkCount,
+      recommendations: this.getRecommendations()},
+    // Save to file,
+    writeFileSync('performance-report.json', JSON.stringify(report, null, 2)),
+    this.log('📄 Performance report saved to performance-report.jsongreen'),
   }
-
-  async startBuild() {
-    console.log('🚀 Starting performance monitoring...');
-    const startTime = Date.now();
-    
-    try {
-      // Run build with performance tracking
-      execSync('npm run build', { stdio: 'pipe' });
-      
-      this.metrics.buildTime = Date.now() - startTime;
-      await this.analyzeBuildOutput();
-      await this.generateReport();
-      
-      console.log('✅ Performance monitoring completed');
-    } catch (error) {
-      console.error('❌ Build failed:', error.message);
-      process.exit(1);
+,
+  getRecommendations() {,
+    const recommendations = [],
+    if (this.metrics.bundleSize > 2000000) {,
+      recommendations.push('Consider implementing lazy loading for routes'),
+      recommendations.push('Review and remove unused dependencies'),
+      recommendations.push('Implement tree shaking for better bundle optimization'),
     }
+,
+    if (this.metrics.chunkCount < 5) {,
+      recommendations.push('Implement more granular code splitting'),
+      recommendations.push('Consider dynamic imports for large components'),
+    }
+,
+    recommendations.push('Enable gzip/brotli compression on server'),
+    recommendations.push('Implement service worker for caching'),
+    recommendations.push('Use CDN for static assets'),
+    return recommendations,
   }
-
-  async analyzeBuildOutput() {
-    const outDir = path.join(__dirname, '..', 'out');
-    
-    if (fs.existsSync(outDir)) {
-      // Count pages
-      this.metrics.pageCount = this.countPages(outDir);
-      
-      // Calculate bundle size
-      this.metrics.bundleSize = this.calculateBundleSize(outDir);
-    }
+,
+  formatBytes(bytes) {,
+    if (bytes === 0) return '0 Bytes',
+    const k = 1024,
+    const sizes = ['BytesKBMBGB'],
+    const i = Math.floor(Math.log(bytes) / Math.log(k)),
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i],
   }
-
-  countPages(dir) {
-    let count = 0;
-    const files = fs.readdirSync(dir, { withFileTypes: true });
-    
-    for (const file of files) {
-      if (file.isDirectory()) {
-        count += this.countPages(path.join(dir, file.name));
-      } else if (file.name.endsWith('.html')) {
-        count++;
-      }
-    }
-    
-    return count;
-  }
-
-  calculateBundleSize(dir) {
-    let totalSize = 0;
-    
-    const calculateDirSize = (dirPath) => {
-      const files = fs.readdirSync(dirPath, { withFileTypes: true });
-      
-      for (const file of files) {
-        const filePath = path.join(dirPath, file.name);
-        
-        if (file.isDirectory()) {
-          calculateDirSize(filePath);
-        } else {
-          const stats = fs.statSync(filePath);
-          totalSize += stats.size;
-        }
-      }
-    };
-    
-    calculateDirSize(dir);
-    return totalSize;
-  }
-
-  async generateReport() {
-    const report = {
-      ...this.metrics,
-      performance: {
-        buildTimeSeconds: Math.round(this.metrics.buildTime / 1000),
-        bundleSizeMB: Math.round(this.metrics.bundleSize / 1024 / 1024 * 100) / 100,
-        pagesPerSecond: Math.round(this.metrics.pageCount / (this.metrics.buildTime / 1000) * 100) / 100,
-      },
-      recommendations: this.generateRecommendations(),
-    };
-
-    // Save report
-    const reportPath = path.join(__dirname, '..', 'performance-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    // Log summary
-    console.log('\n📊 Performance Report:');
-    console.log(`⏱️  Build Time: ${report.performance.buildTimeSeconds}s`);
-    console.log(`📦 Bundle Size: ${report.performance.bundleSizeMB}MB`);
-    console.log(`📄 Pages: ${this.metrics.pageCount}`);
-    console.log(`🚀 Pages/sec: ${report.performance.pagesPerSecond}`);
-    
-    if (report.recommendations.length > 0) {
-      console.log('\n💡 Recommendations:');
-      report.recommendations.forEach(rec => console.log(`  • ${rec}`));
-    }
-  }
-
-  generateRecommendations() {
-    const recommendations = [];
-    
-    if (this.metrics.buildTime > 60000) {
-      recommendations.push('Consider optimizing build process - build time is over 1 minute');
-    }
-    
-    if (this.metrics.bundleSize > 50 * 1024 * 1024) {
-      recommendations.push('Bundle size is large - consider code splitting and tree shaking');
-    }
-    
-    if (this.metrics.pageCount > 100) {
-      recommendations.push('Consider implementing incremental static regeneration for large page counts');
-    }
-    
-    return recommendations;
+,
+  async run() {,
+    await this.monitorBuild(),
+    this.log('\n✅ Performance monitoring completed!green'),
   }
 }
-
-// Run if called directly
-if (import.meta.url === `file://${__filename}`) {
-  const monitor = new PerformanceMonitor();
-  monitor.startBuild().catch(console.error);
-}
-
-export default PerformanceMonitor;
+,
+// Run the monitor,
+const monitor = new PerformanceMonitor(),
+monitor.run().catch(console.error),]]]]]]]
