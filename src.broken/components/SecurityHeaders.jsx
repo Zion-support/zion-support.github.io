@@ -1,10 +1,9 @@
-import React from 'react';
 <<<<<<< HEAD
 export function SecurityHeadersCompact({ className }) {
 import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders({ className }) {
 =======
+import React from 'react';
 import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders({ className }) {
->>>>>>> main
 
     const securityFeatures = [{
 
@@ -154,3 +153,4 @@ export function SecurityHeadersCompact({ className }) {
       </div>
     </div>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

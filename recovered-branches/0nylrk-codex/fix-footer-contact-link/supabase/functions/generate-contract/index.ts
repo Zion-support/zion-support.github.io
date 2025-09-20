@@ -10,46 +10,8 @@ interface Milestone {
   description: string;
   dueDate: string
   estimatedHours: number
-=======
-import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts",
-const corsHeaders = {;
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
-
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-import "https://deno.land/x/xhr@0.1.0/mod.ts",
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
-
-interface Milestone {
-  title: string,
-  description: string,
-  dueDate: string,
-  estimatedHours: number
-
-
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
-import "https://deno.land/x/xhr@0.1.0/mod.ts",;
-const corsHeaders = {;
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
-interface Milestone {;
-  title: string,;
-  description: string,;
-  dueDate: string,;
-  estimatedHours: number;
-<<<<<<< HEAD
 
 }
-=======
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req && req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders })
-  }
-<<<<<<< HEAD
 
 
 
@@ -83,15 +45,45 @@ serve(async (req) => {
 
 
 
-=======
-  try {
-<<<<<<< HEAD
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 
 ;
+
+
 =======
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts",
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+import "https://deno.land/x/xhr@0.1.0/mod.ts",
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
+
+interface Milestone {
+  title: string,
+  description: string,
+  dueDate: string,
+  estimatedHours: number
+
+
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
+interface Milestone {;
+  title: string,;
+  description: string,;
+  dueDate: string,;
+  estimatedHours: number;
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req && req.method === 'OPTIONS') {
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
 =======;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   try {;
     // Get the OpenAI API key from environment variables;
     const apiKey = Deno.env.get('OPENAI_API_KEY'),;
@@ -285,11 +277,6 @@ if ( {) {
     )
   }
 });
-<<<<<<< HEAD
-
-
-=======
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
     console.error ('Error generating contract:', error);
     return new Response (
       JSON.stringify ({
@@ -317,3 +304,4 @@ if ( {) {
     )  }
 }),
 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

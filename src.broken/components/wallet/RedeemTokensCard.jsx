@@ -8,4 +8,5 @@ import { Button } from '@/components/ui/button';"
 import { Gift, ArrowRight, ExternalLink  } from 'lucide-react';"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';    </Card>)}
 "
->>>>>>> main
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

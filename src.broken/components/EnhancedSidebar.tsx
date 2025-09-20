@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
     setExpandedSections(newExpanded)};
@@ -19,8 +18,15 @@ export default function Page() {
         { name: "Contact", href: "/contact", icon: MessageCircle },"
         { name: "Careers", href: "/careers", icon: Briefcase },"
         { name: "Partners", href: "/partners", icon: Handshake }
+                <ChevronDown
+                  className={`w-4 h-4 text-slate - 400 transition - transform duration - 200 ${expandedSections.has(section.title) ? 'rotate - 180' : ''
+                  }`}
+                />
+
+                    expandedSections.has(section.title) ? 'rotate-180' : ''`
+                  }`} 
+                 />
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
@@ -194,24 +200,10 @@ export default function Page() {
                     {section.title}
                   </span>
                 </div>
-<<<<<<< HEAD
-                <ChevronDown
-                  className={`w-4 h-4 text-slate - 400 transition - transform duration - 200 ${expandedSections.has(section.title) ? 'rotate - 180' : ''
-                  }`}
-                />
-=======
                 <ChevronDown `
-                  className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${<<<<<<< HEAD
-
-                    expandedSections.has(section.title) ? 'rotate-180' : ''`
-                  }`} 
-                 />
-=======
 '
                     expandedSections.has(section.title) ? 'rotate-180' : ''`                  }`} 
                  />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
->>>>>>> main
               </button>
 
               <AnimatePresence>
@@ -311,3 +303,4 @@ export default function Page() {
       </div>;
     </aside>;) };
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

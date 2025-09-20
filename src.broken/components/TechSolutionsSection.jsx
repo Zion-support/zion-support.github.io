@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 <<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
 
@@ -111,30 +110,14 @@ const industries = ['"
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}"
         <motion.div className="text-center mb-20" initial = {
-
-  { opacity: 0,
-  y: 20
-
-}} whileInView = {
-
-  { opacity: 1,
-  y: 0
-
-<<<<<<< HEAD
-}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font - bold text-white mb-6">
-            Technology < span className="bg-gradient - to - r from - zion - cyan to - zion - purple bg-clip - text text-transparent">Solutions</span>
-          </h2>
-          <p className="text-zion - slate - light text-lg md:text-xl max - w-4xl mx - auto leading - relaxed mb-8">
-            Discover our comprehensive suite of cutting - edge technology solutions designed to transform your business
 =======
+import React, { useState } from 'react';
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>"
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">"
             Technology <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Solutions</span>
           </h2>"
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
             Discover our comprehensive suite of cutting-edge technology solutions designed to transform your business 
->>>>>>> main
             and drive innovation across all industries.</p>
 
           {/* Industry stats */}"
@@ -152,17 +135,10 @@ const industries = ['"
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
-<<<<<<< HEAD
-  delay: index * 0.1
-
-}} className="text-center p - 3 rounded-xl bg-zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue -light / 20">
-                <div className="text-zion - cyan mb-2 flex justify -center">
-=======
   delay: index * 0.1 
 "
 }} className="text-center p-3 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">"
                 <div className="text-zion-cyan mb-2 flex justify-center">
->>>>>>> main
                   {industry.icon}
                 </div>"
                 <div className="text-white font-semibold text-sm mb-1">{industry.name}</div>"
@@ -176,21 +152,6 @@ const industries = ['"
           {solutions.map((solution, index) => (<motion.div key={solution.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
 "
   { type: "spring",
-<<<<<<< HEAD
-  stiffness: 300
-
-}} className="relative" onHoverStart={ () => setHoveredSolution(solution.id) } onHoverEnd={ () => setHoveredSolution(null) }>
-              <div className="h-full p - 8 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-zion - cyan / 20 group cursor -pointer" onClick={ () => setSelectedSolution(selectedSolution === solution.id ? null : solution.id) }>
-                {/* Header */}
-                <div className="text-center mb-6">
-                  <div className={`inline - flex items - center justify - center w-20 h-20 rounded-2xl bg-gradient - to - br ${solution.color} mb-6 shadow-lg group - hover:shadow-xl transition - all duration - 300 group - hover:scale - 110`}>
-                    <div className="text-white">
-                      {solution.icon}
-                    </div>
-                  </div>
-
-                  <h3 className="text-2xl font - bold text-white mb-3 group - hover:text-zion - cyan transition -colors">
-=======
   stiffness: 300 
 "
 }} className="relative" onHoverStart={() => setHoveredSolution(solution.id)} onHoverEnd={() => setHoveredSolution(null)}>"
@@ -204,7 +165,6 @@ const industries = ['"
                   </div>
                   "
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
->>>>>>> main
                     {solution.title}
                   </h3>"
                   <p className="text-zion-slate-light leading-relaxed mb-4">
@@ -307,6 +267,7 @@ const industries = ['"
 
         {/* Call to action */}"
         <motion.div className="text-center" initial = {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
 
   { opacity: 0,
   y: 20
@@ -316,6 +277,31 @@ const industries = ['"
   { opacity: 1,
   y: 0
 
+<<<<<<< HEAD
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font - bold text-white mb-6">
+            Technology < span className="bg-gradient - to - r from - zion - cyan to - zion - purple bg-clip - text text-transparent">Solutions</span>
+          </h2>
+          <p className="text-zion - slate - light text-lg md:text-xl max - w-4xl mx - auto leading - relaxed mb-8">
+            Discover our comprehensive suite of cutting - edge technology solutions designed to transform your business
+  delay: index * 0.1
+
+}} className="text-center p - 3 rounded-xl bg-zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue -light / 20">
+                <div className="text-zion - cyan mb-2 flex justify -center">
+  stiffness: 300
+
+}} className="relative" onHoverStart={ () => setHoveredSolution(solution.id) } onHoverEnd={ () => setHoveredSolution(null) }>
+              <div className="h-full p - 8 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-zion - cyan / 20 group cursor -pointer" onClick={ () => setSelectedSolution(selectedSolution === solution.id ? null : solution.id) }>
+                {/* Header */}
+                <div className="text-center mb-6">
+                  <div className={`inline - flex items - center justify - center w-20 h-20 rounded-2xl bg-gradient - to - br ${solution.color} mb-6 shadow-lg group - hover:shadow-xl transition - all duration - 300 group - hover:scale - 110`}>
+                    <div className="text-white">
+                      {solution.icon}
+                    </div>
+                  </div>
+
+                  <h3 className="text-2xl font - bold text-white mb-3 group - hover:text-zion - cyan transition -colors">
+=======
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.6,
@@ -343,3 +329,4 @@ const industries = ['"
       </div>
     </section>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -9,9 +9,6 @@ import { motion  } from 'framer-motion';
  * @returns {*} Function return value
  */
 function EnhancedServicesShowcase () {
-=======
-<<<<<<< HEAD
-import { >>>>>>> main Brain, Shield, Globe, Brain, Rocket, Target, Award, Sparkles, Clock, CheckCircle, Search'  } from 'lucide-react';
 
 ,
     {
@@ -85,8 +82,19 @@ import { >>>>>>> main Brain, Shield, Globe, Brain, Rocket, Target, Award, Sparkl
       transition: {
         staggerChildren: 0.1}}};
 
+        <motion.div
+          className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport = {
+  { once: true,
+  margin: "-100px"
+              View All Services;
+              <ArrowRight className="ml-2 w-5 h-5" />;
+            </Link>
+            <a
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function EnhancedServicesShowcase() {
 
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -127,16 +135,6 @@ export default function EnhancedServicesShowcase() {
           </p>
         </motion.div>
 
-<<<<<<< HEAD
-        <motion.div
-          className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport = {
-  { once: true,
-  margin: "-100px"
-=======
         <motion.div "
           className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
           variants={containerVariants}"
@@ -146,7 +144,6 @@ export default function EnhancedServicesShowcase() {
 
   { once: true,"
   margin: "-100px" 
->>>>>>> main
 
 }}
         >
@@ -394,16 +391,9 @@ export default function EnhancedServicesShowcase() {
       </div>;
     </section>;) };
             >
-<<<<<<< HEAD
-              View All Services;
-              <ArrowRight className="ml-2 w-5 h-5" />;
-            </Link>
-            <a
-=======
               View All Services;"
               <ArrowRight className="ml-2 w-5 h-5"  />;            </Link>
             <a "
->>>>>>> main
               href="tel:+13024640950"
               className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
@@ -424,3 +414,4 @@ export default function EnhancedServicesShowcase() {
       </div>
     </section>) };
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

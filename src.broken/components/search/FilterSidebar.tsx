@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -113,16 +113,13 @@ export function FilterSidebar({
   (e) => onFilterChange(group.key, option.value,
   e.target.checked)
 
-<<<<<<< HEAD
 }
                         className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus: ring-zion-cyan focus: ring-2"
                       />
 =======
-
 }"
                         className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"
                       />"
->>>>>>> main
                       <span className="text-sm text-zion-slate-light">
                         {option.label}
                         {option.count && ("
@@ -141,3 +138,4 @@ export function FilterSidebar({
     </>
   )}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

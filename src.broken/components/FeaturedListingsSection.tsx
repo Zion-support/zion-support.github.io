@@ -72,11 +72,20 @@ const featuredListings = [{
     reviews: 178};
 ];
 
-<<<<<<< HEAD
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <div className="max - w-7xl mx - auto px-6">
         <motion.div
           className="text-center mb-16"
+                <img
+                  src={listing.image}
+                  alt={listing.title}
+                  className="w-full h-48 object -cover"
+                />
+                <div className="absolute top - 3 left -3">
+                  <span className="px-3 py-1 bg-blue - 600 text-white text-xs font - semibold rounded-full">
+        <motion.div
+          className="mt-16 text-center"
+          <Link
 =======
 export function FeaturedListingsSection() {
   return ("
@@ -84,7 +93,6 @@ export function FeaturedListingsSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -119,15 +127,6 @@ export function FeaturedListingsSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >"
               <div className="relative">
-<<<<<<< HEAD
-                <img
-                  src={listing.image}
-                  alt={listing.title}
-                  className="w-full h-48 object -cover"
-                />
-                <div className="absolute top - 3 left -3">
-                  <span className="px-3 py-1 bg-blue - 600 text-white text-xs font - semibold rounded-full">
-=======
                 <img 
                   src={listing.image} 
                   alt={listing.title}"
@@ -135,7 +134,6 @@ export function FeaturedListingsSection() {
                 />"
                 <div className="absolute top-3 left-3">"
                   <span className="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
->>>>>>> main
                     {listing.category}
                   </span>
                 </div>
@@ -185,13 +183,8 @@ export function FeaturedListingsSection() {
             </motion.div>) ) }
         </div>
 
-<<<<<<< HEAD
-        <motion.div
-          className="mt-16 text-center"
-=======
         <motion.div "
           className="mt-16 text-center"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -212,11 +205,7 @@ export function FeaturedListingsSection() {
 
 }}
         >
-<<<<<<< HEAD
-          <Link
-=======
           <Link "
->>>>>>> main
             to="/services"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105"
           >
@@ -227,3 +216,4 @@ export function FeaturedListingsSection() {
     </section>
   );
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

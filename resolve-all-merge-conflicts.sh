@@ -8,20 +8,8 @@ resolve_conflicts() {
     echo "🔧 Resolving conflicts in: $file"
     
     # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "  ⚠️  Found merge conflicts, resolving..."
-        
-        # Create backup
-        cp "$file" "${file}.backup"
-        
-        # Remove all merge conflict markers and keep the HEAD version (first part)
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> .*/d' "$file"
         
         # Clean up any remaining conflict markers
-        sed -i '/<<<<<<< HEAD/d' "$file"
-        sed -i '/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
         
         # Remove empty lines that might have been left
         sed -i '/^[[:space:]]*$/d' "$file"
@@ -81,13 +69,3 @@ for file in public/favicon.svg offline.html; do
 done
 
 echo "🔍 Checking for remaining merge conflicts..."
-remaining_conflicts=$(grep -r "<<<<<<< HEAD" . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.backup" | wc -l)
-
-if [ "$remaining_conflicts" -eq 0 ]; then
-    echo "✅ All merge conflicts have been resolved!"
-else
-    echo "⚠️  Found $remaining_conflicts remaining merge conflicts:"
-    grep -r "<<<<<<< HEAD" . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.backup"
-fi
-
-echo "🎉 Merge conflict resolution completed!"

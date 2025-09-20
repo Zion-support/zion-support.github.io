@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+export 
+  'Metaverse Solutions',;
+  'Web3 Solutions',;
+  'Sustainable Tech',;
+  'NeuroTech Solutions',;
+  'Fusion Energy Solutions';
+=======
 ;export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [// AI-Powered Micro SAAS Services
   {
 "
@@ -645,20 +653,12 @@
 export 
 export 
 export 
-<<<<<<< HEAD
-export 
-  'Metaverse Solutions',;
-  'Web3 Solutions',;
-  'Sustainable Tech',;
-  'NeuroTech Solutions',;
-  'Fusion Energy Solutions';
-=======
 export const pricingCategories2027 = [;'
   'Metaverse Solutions',;'
   'Web3 Solutions',;'
   'Sustainable Tech',;'
   'NeuroTech Solutions',;'  'Fusion Energy Solutions';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 export const pricingSubcategories2027 = {
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

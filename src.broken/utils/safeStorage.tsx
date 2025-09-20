@@ -3,9 +3,14 @@ export const safeStorage = {
 export default safeStorage;
 
 // In - memory storage for fallback with optimizations
+
+      // console.warn('Failed to get key from localStorage:', error);
+      return null;
+
+      // console.warn('Failed to get localStorage length:', error);
+      return 0;
 =======
 // In-memory storage for fallback with optimizations
->>>>>>> main
 const inMemoryStore = {};
 let localStorageAvailable = null; // Cache the availability check
 let lastAvailabilityCheck = 0;
@@ -108,14 +113,8 @@ export const safeStorage = {
     try {
       return localStorage.key(index);
     } catch(error) {
-<<<<<<< HEAD
-
-      // console.warn('Failed to get key from localStorage:', error);
-      return null;
-=======
 '
       // console.warn('Failed to get key from localStorage:', error);      return null;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     }
   },
 
@@ -123,15 +122,10 @@ export const safeStorage = {
     try {
       return localStorage.length;
     } catch(error) {
-<<<<<<< HEAD
-
-      // console.warn('Failed to get localStorage length:', error);
-      return 0;
-=======
 '
       // console.warn('Failed to get localStorage length:', error);      return 0;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     }
   }};
 
 export default safeStorage;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

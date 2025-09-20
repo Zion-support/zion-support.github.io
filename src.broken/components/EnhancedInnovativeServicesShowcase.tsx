@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 to - slate -800">
       <div className="max - w-7xl mx - auto px-6">
@@ -38,10 +37,11 @@
               Learn More →
             </Link>;
 =======
+
 export 
->>>>>>> main
           </div>;
         </div>;
       </div>;
     </section>;) };
 export default EnhancedInnovativeServicesShowcase;'"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

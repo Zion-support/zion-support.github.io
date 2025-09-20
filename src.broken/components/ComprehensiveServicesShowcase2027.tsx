@@ -34,14 +34,6 @@ const features = ["
 ;
 
   ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  ;
-  ;
-  ;
-  website: 'https://ziontechgroup.com';
-;
-<<<<<<< HEAD
 
 };
 
@@ -61,7 +53,11 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
   return ("
     <div className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">"
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  ;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+;
       <div className="container mx-auto px-4">
         {/* Header */}"
         <div className="text-center mb-16">"
@@ -324,3 +320,4 @@ export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

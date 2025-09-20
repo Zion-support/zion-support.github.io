@@ -45,22 +45,6 @@ export default function Page() {
   },;
   "Logistics AI": {;
     icon: "🚚",;
-=======
-;
-export 
-  },;"
-  "Logistics AI": {"
-    icon: "🚚",;"
->>>>>>> main
-    description: "AI-powered logistics and supply chain automation",;
-    count: 1}};
-;
-export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
-"
-  "Chatbots": { icon: "💬",
-  count: 1
-
-<<<<<<< HEAD
 },
   "Threat Intelligence": { icon: "🛡️", count: 1 },
   "Migration": { icon: "🚀", count: 1 },
@@ -100,7 +84,29 @@ export const ULTIMATE_PRICING_TIERS_2025 = {
   };
 };
 
+
+};
+
+  ;
+  ;
+  integration: "Seamless integration with existing systems and workflows";
+;
+
+};
 =======
+;
+export 
+  },;"
+  "Logistics AI": {"
+    icon: "🚚",;"
+    description: "AI-powered logistics and supply chain automation",;
+    count: 1}};
+;
+export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
+"
+  "Chatbots": { icon: "💬",
+  count: 1
+
 },"
   "Threat Intelligence": { icon: "🛡️", count: 1 },"
   "Migration": { icon: "🚀", count: 1 },"
@@ -126,7 +132,6 @@ export
     description: "Comprehensive solutions for large organizations",;"
     features: ["Full functionality", "24/7 support", "All integrations", "Custom development", "Dedicated account manager", "SLA guarantees"]}};
 ;
->>>>>>> main
 export const ULTIMATE_CONTACT_INFO_2025 = {
 "
   phone: "+1 302 464 0950","
@@ -139,12 +144,6 @@ export const ULTIMATE_CONTACT_INFO_2025 = {
   ;"
   emergencySupport: "24/7 available for critical issues"};
 ;
-<<<<<<< HEAD
-
-};
-
-=======
->>>>>>> main
 export const ULTIMATE_SERVICE_GUARANTEES_2025 = {
 "
   quality: "100% satisfaction guarantee with 30-day money-back policy","
@@ -154,15 +153,7 @@ export const ULTIMATE_SERVICE_GUARANTEES_2025 = {
   scalability: "Built to scale with your business growth",;  ;
   ;
   ;
-<<<<<<< HEAD
-  ;
-  ;
-  integration: "Seamless integration with existing systems and workflows";
-;
-
-};
-=======
   ;"
   integration: "Seamless integration with existing systems and workflows"};
 "
->>>>>>> main
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

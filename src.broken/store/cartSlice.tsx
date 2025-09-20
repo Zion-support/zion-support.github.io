@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+  ;
+  ;
+
+};
+const cartSlice:  createSlice({;
 =======
 :src/store/cartSlice.tsx
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 interface CartState {
   items: CartItem[];
@@ -22,21 +26,10 @@ const initialState: CartState = {
   ;
   ;
   ;
-<<<<<<< HEAD
-  ;
-  ;
-
-};
-=======
   };
->>>>>>> main
 
-<<<<<<< HEAD
-const cartSlice:  createSlice({;
-=======
 :src/store/cartSlice.tsx
 const cartSlice:  createSlice({;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   name: anycart',;
 const cartSlice:  createSlice({;
   name: anycart',;
@@ -90,3 +83,4 @@ const cartSlice:  createSlice({;
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
 export { cartSlice };
 export default cartSlice.reducer;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

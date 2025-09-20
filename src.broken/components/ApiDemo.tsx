@@ -3,9 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { api, ApiResponse } from '@/services / api';
 export default function Page() {
 }}}
-=======
-<<<<<<< HEAD
->>>>>>> main
 
 interface User {
   id: number;
@@ -30,6 +27,12 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {
 
       setHealthStatus('❌ API Unhealthy')};
+=======
+    if(!newUser.name.trim() || !newUser.email.trim()) {
+
+      setError('Name and email are required');
+      return;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
 
     setLoading(true) ;
     setError(null) ;
@@ -38,6 +41,7 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
       
       if(response.success && response.data) {
 
+<<<<<<< HEAD
         setUsers(response.data)} catch(err) {
 
       setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {
@@ -46,20 +50,11 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
 
     e.preventDefault () ;
 
+                onChange = { (e) => setNewUser(prev => ({ ...prev,
+  name: e.target.value
+                onChange = { (e) => setNewUser(prev => ({ ...prev,
+  email: e.target.value
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    if(!newUser.name.trim() || !newUser.email.trim()) {
-
-      setError('Name and email are required');
-      return;
-
-    setLoading(true) ;
-    setError(null) ;
-
-    try {
-      
-      if(response.success && response.data) {
-
         setUsers(prev => [...prev, response.data!]);
         setNewUser({ name: '', email: '' })} catch(err) {
 
@@ -88,15 +83,10 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
                 type="text"
                 placeholder="Name"
                 value={newUser.name}
-<<<<<<< HEAD
-                onChange = { (e) => setNewUser(prev => ({ ...prev,
-  name: e.target.value
-=======
                 onChange = {
 
   (e) => setNewUser(prev => ({ ...prev,
   name: e.target.value 
->>>>>>> main
 
 }))}"
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -106,15 +96,10 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
                 type="email"
                 placeholder="Email"
                 value={newUser.email}
-<<<<<<< HEAD
-                onChange = { (e) => setNewUser(prev => ({ ...prev,
-  email: e.target.value
-=======
                 onChange = {
 
   (e) => setNewUser(prev => ({ ...prev,
   email: e.target.value 
->>>>>>> main
 
 }))}"
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -192,3 +177,4 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
     </div>;) };
 
 export default ApiDemo}}}}}}}'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

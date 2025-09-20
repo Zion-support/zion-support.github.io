@@ -1,7 +1,7 @@
-import React from 'react';
 <<<<<<< HEAD
 import { cn } from '@/lib / utils';
-import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarChart3, Briefcase, Leaf, Building, Mail, Calendar, Globe, Zap export function MainSidebar () { const location = useLocation () ; ======= import { Link, useLocation  } from 'react-router-dom';
+=======
+import React from 'react';
 import { cn } from '@/lib/utils';
 ,"
                 { key: 'marketplace', href: '/marketplace', icon: <ShoppingCart className="w-4 h-4"/>, label: 'Marketplace' },"
@@ -92,3 +92,4 @@ import { cn } from '@/lib/utils';
       </div>
     </aside>)}
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

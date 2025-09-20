@@ -19,9 +19,11 @@ export
         <CheckCircle className="h-5 w-5 text-green-500"  />"
         <AlertTitle className="font-semibold">Team Recommendation Generated!</AlertTitle>
         <AlertDescription>
+              title="Est.Total Project Cost"
+              icon={<TrendingUp className="h-5 w-5"  />}
+              value={`$${recommendation.totalProjectEstimate.min.toLocaleString()} - $${recommendation.totalProjectEstimate.max.toLocaleString()}`}
 =======
         <AlertDescription>'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           Here's the AI-powered team structure based on your project brief.Review the roles and suggested talent.</AlertDescription>
       </Alert>
 "
@@ -39,14 +41,8 @@ export
             <InfoCard title="Estimated Timeline" icon={<Calendar className="h-5 w-5"  />} value={projectBrief.timeline} />"
             <InfoCard title="Your Budget" icon={<CreditCard className="h-5 w-5"  />} value={projectBrief.budget} />
             <InfoCard"
-<<<<<<< HEAD
-              title="Est.Total Project Cost"
-              icon={<TrendingUp className="h-5 w-5"  />}
-              value={`$${recommendation.totalProjectEstimate.min.toLocaleString()} - $${recommendation.totalProjectEstimate.max.toLocaleString()}`}
-=======
               title="Est.Total Project Cost""
               icon={<TrendingUp className="h-5 w-5"  />}              value={`$${recommendation.totalProjectEstimate.min.toLocaleString()} - $${recommendation.totalProjectEstimate.max.toLocaleString()}`}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             />
           </div>
           {/* Budget status display will be added here */}
@@ -86,3 +82,4 @@ const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: 
   </Card>;
 );
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

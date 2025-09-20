@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+  ;
+
+};
+  ;
+  ;
+
+};
+      setMessages(prev => [...prev, aiMessage]);
+    }, 1000);
+=======
 import React from 'react';
 export function ErrorBoundary() {
   return (
@@ -24,17 +35,10 @@ export function ChatAssistant({
   ;
   ;
   ;
-<<<<<<< HEAD
-  ;
-
-};
-=======
   };
->>>>>>> main
     setMessages(prev => [...prev, userMessage]);
     setInputMessage('');
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     // Simulate AI response
     setTimeout(: unknown {
       const aiMessage: Message = {
@@ -45,15 +49,6 @@ export function ChatAssistant({
         timestamp: new Date(),;
   ;
   ;
-<<<<<<< HEAD
-  ;
-  ;
-
-};
-      setMessages(prev => [...prev, aiMessage]);
-    }, 1000);
-=======
->>>>>>> main
   };
   
   const handleSendMessage = async (message: string) => {
@@ -143,3 +138,4 @@ export function ChatAssistant({
     </div>;
   )}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,5 +1,3 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { BarChart3, RefreshCw, X, Maximize2, Minimize2 const mockChartData = [;
 <<<<<<< HEAD
 
     { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date('2024 - 01 - 01') },
@@ -14,7 +12,29 @@ import { BarChart3, RefreshCw, X, Maximize2, Minimize2 const mockChartData = [;
     { id: '10', name: 'Q2 Conversion', value: 3.8, category: 'Conversion', timestamp: new Date('2024 - 04 - 01') },
     { id: '11', name: 'Q3 Conversion', value: 3.5, category: 'Conversion', timestamp: new Date('2024 - 07 - 01') },
     { id: '12', name: 'Q4 Conversion', value: 4.1, category: 'Conversion', timestamp: new Date('2024 - 10 - 01') }
+            <div>
+              <h3 className="text-sm font - medium text-zion - slate mb-3">Chart Settings</h3>
+              <div className="space - y-3">
+                <label className="flex items - center gap-2">
+                  <input type="checkbox" checked={chartConfig.showLegend} onChange = { (e) => setChartConfig(prev => ({ ...prev,
+  showLegend: e.target.checked
+
+}) ) } className="rounded border-zion - slate - light text-zion - cyan focus:ring - zion -cyan"/>
+                  <span className="text-sm text-zion -slate">Show Legend</span>
+                </label>
+                <label className="flex items - center gap-2">
+                  <input type="checkbox" checked={chartConfig.showGrid} onChange = { (e) => setChartConfig(prev => ({ ...prev,
+  showGrid: e.target.checked
+
+}) ) } className="rounded border-zion - slate - light text-zion - cyan focus:ring - zion -cyan"/>
+                  <span className="text-sm text-zion -slate">Show Grid</span>
+                </label>
+                <label className="flex items - center gap-2">
+                  <input type="checkbox" checked={chartConfig.animate} onChange = { (e) => setChartConfig(prev => ({ ...prev,
+  animate: e.target.checked
 =======
+import React, { useState, useRef, useEffect } from 'react';
+import { BarChart3, RefreshCw, X, Maximize2, Minimize2 const mockChartData = [;
     { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date('2024-01-01') },
     { id: '2', name: 'Q2 Revenue', value: 1580000, category: 'Revenue', timestamp: new Date('2024-04-01') },
     { id: '3', name: 'Q3 Revenue', value: 1420000, category: 'Revenue', timestamp: new Date('2024-07-01') },
@@ -27,7 +47,6 @@ import { BarChart3, RefreshCw, X, Maximize2, Minimize2 const mockChartData = [;
     { id: '10', name: 'Q2 Conversion', value: 3.8, category: 'Conversion', timestamp: new Date('2024-04-01') },
     { id: '11', name: 'Q3 Conversion', value: 3.5, category: 'Conversion', timestamp: new Date('2024-07-01') },
     { id: '12', name: 'Q4 Conversion', value: 4.1, category: 'Conversion', timestamp: new Date('2024-10-01') }
->>>>>>> main
 ];
 const colorPalettes = ['
     ['#06b6d4',#7c3aed',#10b981',#f59e0b',#ef4444'],
@@ -273,28 +292,6 @@ export function AdvancedDataVisualization() {
             </div>
 
             {/* Chart Configuration */}
-<<<<<<< HEAD
-            <div>
-              <h3 className="text-sm font - medium text-zion - slate mb-3">Chart Settings</h3>
-              <div className="space - y-3">
-                <label className="flex items - center gap-2">
-                  <input type="checkbox" checked={chartConfig.showLegend} onChange = { (e) => setChartConfig(prev => ({ ...prev,
-  showLegend: e.target.checked
-
-}) ) } className="rounded border-zion - slate - light text-zion - cyan focus:ring - zion -cyan"/>
-                  <span className="text-sm text-zion -slate">Show Legend</span>
-                </label>
-                <label className="flex items - center gap-2">
-                  <input type="checkbox" checked={chartConfig.showGrid} onChange = { (e) => setChartConfig(prev => ({ ...prev,
-  showGrid: e.target.checked
-
-}) ) } className="rounded border-zion - slate - light text-zion - cyan focus:ring - zion -cyan"/>
-                  <span className="text-sm text-zion -slate">Show Grid</span>
-                </label>
-                <label className="flex items - center gap-2">
-                  <input type="checkbox" checked={chartConfig.animate} onChange = { (e) => setChartConfig(prev => ({ ...prev,
-  animate: e.target.checked
-=======
             <div>"
               <h3 className="text-sm font-medium text-zion-slate mb-3">Chart Settings</h3>"
               <div className="space-y-3">"
@@ -323,7 +320,6 @@ export function AdvancedDataVisualization() {
 
   (e) => setChartConfig(prev => ({ ...prev,
   animate: e.target.checked 
->>>>>>> main
 
 "
 }))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>"
@@ -403,3 +399,4 @@ export function AdvancedDataVisualization() {
       </div>
     </div>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

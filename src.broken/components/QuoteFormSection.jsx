@@ -1,11 +1,10 @@
+<<<<<<< HEAD
+  const [formData, setFormData] = useState ({
+=======
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = () => {
   const [formData, setFormData] = useState({
 
-<<<<<<< HEAD
-  const [formData, setFormData] = useState ({
-=======
->>>>>>> main
     name: '',
     email: '',
     phone: '',
@@ -273,3 +272,4 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
     </section>
   )};
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

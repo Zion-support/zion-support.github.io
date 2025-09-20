@@ -1,5 +1,3 @@
-const PWAUpdater: React.FC<PWAUpdaterProps> = ({
-
 <<<<<<< HEAD
 interface PWAUpdaterProps {
   autoCheck?: boolean;
@@ -9,7 +7,8 @@ interface PWAUpdaterProps {
 
 const PWAUpdater: React.FC < PWAUpdaterProps> = ({
 =======
->>>>>>> main
+const PWAUpdater: React.FC<PWAUpdaterProps> = ({
+
   autoCheck = true,
   checkInterval = 300000, // 5 minutes
   showUpdatePrompt = true}) => {
@@ -237,3 +236,4 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
     </>) };
 export default PWAUpdater;
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

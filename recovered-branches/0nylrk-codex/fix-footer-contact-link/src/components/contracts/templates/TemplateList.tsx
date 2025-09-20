@@ -142,7 +142,7 @@ export function OfflineToast() {
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     </div>
   );
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

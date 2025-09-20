@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+      // // // // // // // console.error('Newsletter subscription failed:', error) ;
+    } finally {
+      setIsSubmitting(false) ;
+=======
 import React, { useState, useRef } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -5,16 +10,10 @@ import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-<<<<<<< HEAD
-      // // // // // // // console.error('Newsletter subscription failed:', error) ;
-    } finally {
-      setIsSubmitting(false) ;
-=======
       // // // // // // // // console.error('Newsletter subscription failed:', error)} finally {
       setIsSubmitting(false);
 
       setTimeout(() => setIsSubmitted(false), 3000)} catch(error) {
->>>>>>> main
 
       // console.error('Newsletter subscription failed:', error)} finally {
 
@@ -73,3 +72,4 @@ import {logErrorToProduction} from '@/utils/productionLogger';
       </div>;
     </div>;) };
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

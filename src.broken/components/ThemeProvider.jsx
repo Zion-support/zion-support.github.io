@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 =======
 'use client';
->>>>>>> main
 import * as React from 'react';
 
 const ThemeContext = React.createContext({
@@ -45,3 +44,4 @@ export const ThemeProvider = ({ children }) => {
   }
   return context;
 };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

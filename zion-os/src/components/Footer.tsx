@@ -1,8 +1,3 @@
-import Link from 'next/link';
-
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
 <<<<<<< HEAD
   const footerSections = [
     {
@@ -198,6 +193,11 @@ export default function Footer() {
                 Accessibility
               </Link>
 =======
+import Link from 'next/link';
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   const footerLinks = {
     company: [
       { name: 'About Us', href: '/about' },
@@ -390,7 +390,6 @@ export default function Footer() {
             </div>
             <div className="text-sm text-gray-400">
               <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
->>>>>>> origin/zion-website-clean
             </div>
           </div>
         </div>
@@ -398,3 +397,4 @@ export default function Footer() {
     </footer>
   );
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+};
+
+// Ultimate Micro SAAS Services 2025
+=======
 // Ultimate Zion Services 2025 - Zion Tech Group
 // Revolutionary Micro SAAS, IT Infrastructure, and AI Services
 ;
@@ -99,13 +104,7 @@ const zionContact: ServiceContact = {
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 
-<<<<<<< HEAD
-};
-
-// Ultimate Micro SAAS Services 2025
-=======
 // Ultimate Micro SAAS Services 2025;
->>>>>>> main
 export const ultimateMicroSaasServices2025: MicroSaasService[] = [{
 
     id: 1,"
@@ -764,3 +763,4 @@ export default {
   ultimateITInfrastructureServices2025,
   ultimateAIServices2025
 }}}}}}}}"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

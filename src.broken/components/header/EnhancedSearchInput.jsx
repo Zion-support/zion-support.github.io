@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+}
+=======
 import React, { useState, useRef, useEffect } from 'react';
 import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export const EnhancedSearchInput = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -199,12 +202,8 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
   (e) => removeRecentSearch(search,
   e)
 
-<<<<<<< HEAD
-}
-=======
 
 }"
->>>>>>> main
                       className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 rounded"
 "
                       <X className="w-3 h-3 text-gray-400" />
@@ -249,3 +248,4 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
     </div>
   )};
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

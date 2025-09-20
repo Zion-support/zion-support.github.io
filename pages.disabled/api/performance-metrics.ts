@@ -1,42 +1,4 @@
-// API endpoint for performance metrics collection;
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { PerformanceReport } from '@/utils/performance-monitor';
-
-interface PerformanceData {
-
-  timestamp: string;
-  url: string;
-  userAgent: string;
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  sessionId: string;
-
-}
-
-interface ErrorData {
-
-  timestamp: string;
-  url: string;
-  userAgent: string;
-  error: string;
-  stack?: string;
-  sessionId: string;
-
-}
-
-// In-memory storage for demo purposes
-// In production, use a proper database;
-let performanceMetrics: PerformanceData[] = [];
-let errorLogs: ErrorData[] = [];
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-): Promise<void> {
-<<<<<<< HEAD:temp_conflicts/pages/api/performance-metrics.ts
+<<<<<<< HEAD
   if (req['method'] !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
     return;
@@ -87,6 +49,44 @@ export default async function handler(
         console.error('Error sending to analytics:', error);
       }
 =======
+// API endpoint for performance metrics collection;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { PerformanceReport } from '@/utils/performance-monitor';
+
+interface PerformanceData {
+
+  timestamp: string;
+  url: string;
+  userAgent: string;
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  sessionId: string;
+
+}
+
+interface ErrorData {
+
+  timestamp: string;
+  url: string;
+  userAgent: string;
+  error: string;
+  stack?: string;
+  sessionId: string;
+
+}
+
+// In-memory storage for demo purposes
+// In production, use a proper database;
+let performanceMetrics: PerformanceData[] = [];
+let errorLogs: ErrorData[] = [];
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+): Promise<void> {
   if (req.method === 'POST') {
     try {
       const performanceReport = req['body'];
@@ -141,7 +141,6 @@ export default async function handler(
         success: false, 
         message: 'Internal server error' 
       });
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6:pages/api/performance-metrics.ts
     }
   } catch (error) {
     console.error('Error processing request:', error);
@@ -242,3 +241,4 @@ function calculateAverages(...args: unknown[]): unknown {
 
   );
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
 > {
@@ -42,8 +41,10 @@ enableSound:  true,;
   const [unreadCount, setUnreadCount] = useState(0);
   
   // Initialize audio for notification sounds
+        return 'bottom-4 left-4';
+      case 'bottom-right':'
+        return 'bottom-4 right-4';
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   useEffect(() => {
     if(settings.sound) {
 
@@ -138,14 +139,8 @@ enableSound:  true,;
       case 'top-right':'
         return 'top-4 right-4';
       case 'bottom-left':'
-<<<<<<< HEAD
-        return 'bottom-4 left-4';
-      case 'bottom-right':'
-        return 'bottom-4 right-4';
-=======
         return 'bottom-4 left-4';'
       case 'bottom-right':'        return 'bottom-4 right-4';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       default:'
         return 'top-4 right-4'}
   };
@@ -409,7 +404,6 @@ export
         priority: 'medium',;
 =======
 })};'        priority: 'medium',;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ...options;
@@ -469,3 +463,4 @@ export
   }
 };
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

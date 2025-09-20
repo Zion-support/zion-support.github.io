@@ -1,13 +1,24 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion  } from 'framer-motion';
 
+<<<<<<< HEAD
  params - Function parameters
  * @returns {*} Function return value
  */
 function SecurityComplianceSection () {
-=======
->>>>>>> main
+  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
+      <div className="max - w-7xl mx - auto px-6">
+        <motion.div
+          className="text-center mb-16"
+        <motion.div
+          className="mb-16"
 
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap-8">
+            {complianceFeatures.map((category, index) => (<div key={category.category} className="bg-slate - 800 border border-slate - 700 rounded-xl p -6">
+                <h4 className="text-xl font - bold text-white mb-4 text-center">
+        <motion.div
+          className="mb-16"
+        <motion.div
+          className="text-center"
+=======
   Shield,
   Lock,
   CheckCircle,
@@ -101,22 +112,14 @@ const complianceFeatures = [{
     ]};
 =======
     ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
-<<<<<<< HEAD
-  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
-      <div className="max - w-7xl mx - auto px-6">
-        <motion.div
-          className="text-center mb-16"
-=======
 export function SecurityComplianceSection() {
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -210,13 +213,8 @@ export function SecurityComplianceSection() {
         </div>
 
         {/* Compliance Features */}
-<<<<<<< HEAD
-        <motion.div
-          className="mb-16"
-=======
         <motion.div "
           className="mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -240,18 +238,11 @@ export function SecurityComplianceSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Comprehensive Security Features
           </h3>
-<<<<<<< HEAD
-
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap-8">
-            {complianceFeatures.map((category, index) => (<div key={category.category} className="bg-slate - 800 border border-slate - 700 rounded-xl p -6">
-                <h4 className="text-xl font - bold text-white mb-4 text-center">
-=======
           "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {complianceFeatures.map((category, index) => ("
               <div key={category.category} className="bg-slate-800 border border-slate-700 rounded-xl p-6">"
                 <h4 className="text-xl font-bold text-white mb-4 text-center">
->>>>>>> main
                   {category.category}
                 </h4>"
                 <ul className="space-y-3">
@@ -267,13 +258,8 @@ export function SecurityComplianceSection() {
         </motion.div>
 
         {/* Security Metrics */}
-<<<<<<< HEAD
-        <motion.div
-          className="mb-16"
-=======
         <motion.div "
           className="mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -321,13 +307,8 @@ export function SecurityComplianceSection() {
         </motion.div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-        <motion.div
-          className="text-center"
-=======
         <motion.div "
           className="text-center"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -377,3 +358,4 @@ export default SecurityComplianceSection;"
 export default SecurityComplianceSection;
 export default SecurityComplianceSection;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

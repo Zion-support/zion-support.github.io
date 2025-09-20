@@ -1,4 +1,3 @@
-import React from "react";
 <<<<<<< HEAD
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -10,11 +9,21 @@ import {
 export function MobileResumeBuilder() {
 
 
+
+
+
+      <main className="py-4">
+        <ResumeBuilderComponent />
+      </main>
+
+      <BottomNavigation />
+    </div>
+  );
 =======
+import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/resume/MobileResumeBuilder";
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 export function MobileResumeBuilder() {
   return (
     <div className="min-h-screen">;
@@ -28,25 +37,10 @@ import { BottomNavigation } from "../components/common/BottomNavigation";
 import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder";
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder",
-<<<<<<< HEAD
-
-
-=======
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 export function MobileResumeBuilder() {
   return (
     <div className="min-h-screen">
       <MobileHeader title="Resume Builder" showBack />
-<<<<<<< HEAD
-
-      <main className="py-4">
-        <ResumeBuilderComponent />
-      </main>
-
-      <BottomNavigation />
-    </div>
-  );
-=======
 import React from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -59,7 +53,6 @@ export function MobileResumeBuilder() {;
         showBack;
       <BottomNavigation />;
     </div>;  );
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 }
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
@@ -112,3 +105,4 @@ export function MobileResumeBuilder() {;
 ;
 }
 ;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,15 +1,24 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { innovativeServices2027 } from '../data/innovativeServices2027';
 
 export default function Page() {
     );
-<<<<<<< HEAD
 
     if(element) {
+    switch(sortBy) {;
+      case 'name':;
+        return a.title.localeCompare(b.title);
+      case 'price':;
+        return parseFloat(a.price.replace(/[^0-9.]/g,)) - parseFloat(b.price.replace(/[^0-9.]/g,));
+
+    if(numPrice < 100) return 'Low';
+    if(numPrice < 1000) return 'Medium';
+    return 'High'};
+
+                  type="text"
+                  placeholder="Search services..."
 =======
 '
     const element = document.getElementById('comprehensive-pricing-guide');    if(element) {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       observer.observe(element)}
 
@@ -32,18 +41,10 @@ export default function Page() {
 
   // Sort services
   
-<<<<<<< HEAD
-    switch(sortBy) {;
-      case 'name':;
-        return a.title.localeCompare(b.title);
-      case 'price':;
-        return parseFloat(a.price.replace(/[^0-9.]/g,)) - parseFloat(b.price.replace(/[^0-9.]/g,));
-=======
     switch(sortBy) {;'      case 'name':;
         return a.title.localeCompare(b.title);'
       case 'price':;'
         return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'category':;
         return a.category.localeCompare(b.category) ;
       default:;
@@ -55,7 +56,6 @@ export default function Page() {
 '
   phone: '+1 302 464 0950','
     email: 'kleber@ziontechgroup.com',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
@@ -64,19 +64,11 @@ export default function Page() {
 
 };
 
-<<<<<<< HEAD
-
-    if(numPrice < 100) return 'Low';
-    if(numPrice < 1000) return 'Medium';
-    return 'High'};
-
-=======
   const getPriceRange = (price: string) => {;'
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));'
     if(numPrice < 100) return 'Low';'
     if(numPrice < 1000) return 'Medium';'    return 'High'};
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       default: return 'text-white'}
   };
 
@@ -158,12 +150,7 @@ export default function Page() {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"  />
                 <input"
-<<<<<<< HEAD
-                  type="text"
-                  placeholder="Search services..."
-=======
                   type="text""                  placeholder="Search services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
@@ -389,3 +376,4 @@ export default function Page() {
       </div>;
     </section>;) };
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

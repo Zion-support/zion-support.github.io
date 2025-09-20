@@ -4,18 +4,6 @@
 echo "Fixing merge conflicts..."
 
 # Find all files with merge conflicts
-files_with_conflicts=$(find src -name "*.tsx" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
-
-for file in $files_with_conflicts; do
-    echo "Fixing conflicts in: $file"
-    
-    # Use git checkout --ours to keep our version
-    git checkout --ours "$file"
-    
-    # Clean up any remaining conflict markers
-    sed -i '/^<<<<<<< HEAD$/d' "$file"
-    sed -i '/^=======$/d' "$file"
-    sed -i '/^>>>>>>> .*$/d' "$file"
     
     # Fix common import path issues
     sed -i 's|from '\''../components/|from '\''@/components/|g' "$file"

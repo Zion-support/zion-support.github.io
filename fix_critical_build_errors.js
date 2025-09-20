@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 const fs = require('fs');
 const path = require('path');
 
@@ -19,9 +21,6 @@ const criticalFiles = [
 function fixMergeConflicts(content) {
     // Remove merge conflict markers
     return content
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> .*/g, '')
-        .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> .*/g, '')
-        .replace(/=======[\s\S]*?>>>>>>> .*/g, '');
 }
 
 function fixCommonSyntaxErrors(content) {
@@ -74,3 +73,4 @@ function processFile(filePath) {
 criticalFiles.forEach(processFile);
 
 console.log('Critical build error fixes completed.');
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

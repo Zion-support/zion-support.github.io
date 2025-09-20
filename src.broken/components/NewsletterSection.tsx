@@ -1,18 +1,17 @@
 <<<<<<< HEAD
 
-<<<<<<< HEAD
       description: "Get exclusive access to tech trends and analysis";
     },;
+            <p className="text-gray-300 text-lg mb-6">
+              You're now subscribed to our newsletter.We'll keep you updated with the latest technology insights,
 =======
       description: "Get exclusive access to tech trends and analysis"},;
->>>>>>> main
     {;
       icon: Zap,;"
       title: "Early Access",;"
       description: "Be the first to know about beta programs and launches"};
   ];
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   if(isSubscribed) {
 
@@ -39,12 +38,7 @@
               <CheckCircle className="w-10 h-10 text-white"  />
             </div>"
             <h2 className="text-3xl font-bold text-white mb-4">Welcome to the Zion Tech Group Community!</h2>"
-<<<<<<< HEAD
-            <p className="text-gray-300 text-lg mb-6">
-              You're now subscribed to our newsletter.We'll keep you updated with the latest technology insights,
-=======
             <p className="text-gray-300 text-lg mb-6">'              You're now subscribed to our newsletter.We'll keep you updated with the latest technology insights,
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               service announcements, and exclusive content.</p>
             <button
               onClick={() => setIsSubscribed(false)}"
@@ -202,3 +196,4 @@
     </section>;) };
 
 export default NewsletterSection}}}'"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

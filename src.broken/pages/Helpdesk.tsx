@@ -22,11 +22,6 @@ export default function Helpdesk() {
           >
             Get Started
           </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
 =======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -485,9 +480,9 @@ export default function Helpdesk() {
               Call Us
             </a>
           </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
         </div>
       </div>
     </div>
   );
 }
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9

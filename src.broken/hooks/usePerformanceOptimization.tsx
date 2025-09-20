@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+    
+        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}
+=======
 :src/hooks/usePerformanceOptimization.tsx
 
 interface PerformanceMetrics {
@@ -100,13 +104,9 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   useEffect(: unknown {
     if (!enableMemoryManagement) return;
 
-<<<<<<< HEAD
-    
-=======
 :src/hooks/usePerformanceOptimization.tsx
     const checkMemoryUsage = () => {;'
     
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       if('memory' in performance) {;
         
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
@@ -153,14 +153,10 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 :src/hooks/usePerformanceOptimization.tsx
   // Performance monitoring'`
         // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}'`
-<<<<<<< HEAD
-        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}
-=======
         // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
   // Performance monitoring
         // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
         console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       // Report to analytics if available
       if(window.gtag) {
@@ -230,3 +226,4 @@ declare global {
     gtag?: (...args[])  => void}
 }
 '`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

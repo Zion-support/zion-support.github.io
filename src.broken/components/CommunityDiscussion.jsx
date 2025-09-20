@@ -66,3 +66,5 @@ export default function Page() {
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.</div>
     </div>)};
 '"
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

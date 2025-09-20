@@ -1,4 +1,4 @@
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
 
 export default function Page() {
 > {
@@ -178,3 +178,5 @@ showFilters:  true,;
 
   // Calculate project stats
   const projectStats = {
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

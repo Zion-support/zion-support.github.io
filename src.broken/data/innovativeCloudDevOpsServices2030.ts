@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+
+};
+
+=======
 // Innovative Cloud & DevOps Services 2030 - Zion Tech Group
 // Next-generation infrastructure and development solutions
 ;
@@ -61,12 +66,6 @@ const zionContact = {
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 ;
-<<<<<<< HEAD
-
-};
-
-=======
->>>>>>> main
 export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{
 "
     id: "multi-cloud-orchestration-platform","
@@ -543,3 +542,4 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{
 ];
 
 export default innovativeCloudDevOpsServices2030}}"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

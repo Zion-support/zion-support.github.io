@@ -22,11 +22,6 @@ export default function BlogPage() {
           >
             Get Started
           </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
 =======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -428,9 +423,9 @@ export function BlogPage() {
               Get in Touch
             </Link>
           </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
         </div>
       </div>
     </div>
   );
 }
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9

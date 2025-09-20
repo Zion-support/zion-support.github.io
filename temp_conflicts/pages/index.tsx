@@ -1,11 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import Navigation from '../components/Navigation';
-import HeroSection from '../components/HeroSection';
-import FeaturesSection from '../components/FeaturesSection';
-import Footer from '../components/Footer';
-
 <<<<<<< HEAD
 const Home: NextPage = () => {
   const featuredServices = [
@@ -78,6 +70,14 @@ const Home: NextPage = () => {
   ];
 
 =======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import Navigation from '../components/Navigation';
+import HeroSection from '../components/HeroSection';
+import FeaturesSection from '../components/FeaturesSection';
+import Footer from '../components/Footer';
+
 export default function HomePage() {
   const [currentFeature, setCurrentFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -403,7 +403,6 @@ export default function HomePage() {
               <div className="absolute top-1/2 left-0 w-96 h-96 bg-gradient-to-br from-purple-400/5 to-pink-600/5 rounded-full blur-3xl"></div>
               <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-cyan-400/5 to-blue-600/5 rounded-full blur-3xl"></div>
             </div>
->>>>>>> 3c1dda747d3aa200ea8a4e49d78b84af83a4d328
 
             <div className="relative z-10 max-w-7xl mx-auto">
               <div className="text-center mb-16">
@@ -531,3 +530,4 @@ export default function HomePage() {
     </>
   );
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -12,7 +12,6 @@ import { ArrowUp import { useEffect, useState } from 'react';"
 import { useTranslation } from 'react-i18next';
  = useTranslation();
     useEffect(() => {
->>>>>>> main
         const onScroll = () => {
             setVisible(window.scrollY > 400)};"
         window.addEventListener("scroll", onScroll);"
@@ -22,3 +21,4 @@ import { useTranslation } from 'react-i18next';
       <ArrowUp aria-hidden="true" className="h-5 w-5"/>
     </button>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

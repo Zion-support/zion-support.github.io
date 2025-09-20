@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+// Pricing Analysis and Insights
+export const PRICING_ANALYSIS_2030 = {
+  averagePrice: Math.round(COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) /
+    COMPREHENSIVE_PRICING_GUIDE_2030.length
+  ),
+  priceRange: {
+    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
+  max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
+  ;
+;
+
+;
+
+=======
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
 // Complete pricing information for all innovative services
 
@@ -341,20 +356,8 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
     enterpriseFeatures["Custom risk models", "White-label solutions", "Enterprise support", "Custom integrations"]}
 ];
 
-<<<<<<< HEAD
-// Pricing Analysis and Insights
-export const PRICING_ANALYSIS_2030 = {
-  averagePrice: Math.round(COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) /
-    COMPREHENSIVE_PRICING_GUIDE_2030.length
-  ),
-  priceRange: {
-    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
-  max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
-  ;
-=======
 // Pricing Analysis and Insights;
 export 
->>>>>>> main
 ;
 ;
 },;
@@ -391,11 +394,6 @@ export const PAYMENT_OPTIONS_2030 = {
   ;"
   "SLA guarantees";
   ];
-<<<<<<< HEAD
-;
-
-=======
->>>>>>> main
 };
 
 // Contact Information for Pricing Inquiries;
@@ -405,10 +403,6 @@ export
   ;
   ;"
   responseTime: "Within 24 hours for pricing inquiries";
-<<<<<<< HEAD
-;
-
-=======
->>>>>>> main
 };
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,5 +1,3 @@
-export const ErrorFallback: React.FC < ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
-
 <<<<<<< HEAD
 interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
 
@@ -14,6 +12,8 @@ interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
         <h1 className="text-2xl font - bold text-gray - 900 mb-4">Something went wrong</h1>
         <p className="text-gray - 600 mb-6">
 =======
+export const ErrorFallback: React.FC < ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
+
 export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
 
   return ()
@@ -22,7 +22,6 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorB
         <div className="text-red-500 text-6xl mb-4">⚠️</div>"
         <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>"
         <p className="text-gray-600 mb-6">
->>>>>>> main
           We're sorry, but something unexpected happened.Please try refreshing the page.</p>"
         <div className="space-y-3">
           <button
@@ -51,3 +50,4 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorB
       </div>;
     </div>;) };
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

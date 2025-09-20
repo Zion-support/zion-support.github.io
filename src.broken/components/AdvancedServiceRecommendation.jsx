@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 <<<<<<< HEAD
 export default AdvancedServiceRecommendation;
 import { Badge } from './ui / badge';
@@ -130,37 +129,10 @@ export default function Page() {
 
       {/* Client Profile Form */}
       <motion.div initial = {
-
-  { opacity: 0,
-  y: 20
-
-}} animate = {
-
-  { opacity: 1,
-  y: 0
-
-"
-}} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"
-        <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">"
-          <Brain className="w-6 h-6 text-zion-cyan"/>
-          Tell Us About Your Business
-        </h2>
-"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>"
-            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>
-            <select value={clientProfile.industry} onChange = {
-
-<<<<<<< HEAD
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">
-          <div>
-            <label className="block text-sm font - medium text-zion - slate - dark mb-2">Industry</label>
-            <select value={clientProfile.industry} onChange = { (e) => setClientProfile(prev => ({ ...prev,
-  industry: e.target.value
 =======
+import React, { useState } from 'react';
   (e) => setClientProfile(prev => ({ ...prev,
   industry: e.target.value 
->>>>>>> main
 
 "
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"
@@ -169,19 +141,12 @@ export default function Page() {
             </select>
           </div>
 
-<<<<<<< HEAD
-          <div>
-            <label className="block text-sm font - medium text-zion - slate - dark mb-2">Company Size</label>
-            <select value={clientProfile.companySize} onChange = { (e) => setClientProfile(prev => ({ ...prev,
-  companySize: e.target.value
-=======
           <div>"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Company Size</label>
             <select value={clientProfile.companySize} onChange = {
 
   (e) => setClientProfile(prev => ({ ...prev,
   companySize: e.target.value 
->>>>>>> main
 
 "
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"
@@ -190,19 +155,12 @@ export default function Page() {
             </select>
           </div>
 
-<<<<<<< HEAD
-          <div>
-            <label className="block text-sm font - medium text-zion - slate - dark mb-2">Budget Range</label>
-            <select value={clientProfile.budget} onChange = { (e) => setClientProfile(prev => ({ ...prev,
-  budget: e.target.value
-=======
           <div>"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>
             <select value={clientProfile.budget} onChange = {
 
   (e) => setClientProfile(prev => ({ ...prev,
   budget: e.target.value 
->>>>>>> main
 
 "
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"
@@ -211,19 +169,12 @@ export default function Page() {
             </select>
           </div>
 
-<<<<<<< HEAD
-          <div>
-            <label className="block text-sm font - medium text-zion - slate - dark mb-2">Implementation Timeline</label>
-            <select value={clientProfile.timeline} onChange = { (e) => setClientProfile(prev => ({ ...prev,
-  timeline: e.target.value
-=======
           <div>"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>
             <select value={clientProfile.timeline} onChange = {
 
   (e) => setClientProfile(prev => ({ ...prev,
   timeline: e.target.value 
->>>>>>> main
 
 "
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"
@@ -232,19 +183,12 @@ export default function Page() {
             </select>
           </div>
 
-<<<<<<< HEAD
-          <div>
-            <label className="block text-sm font - medium text-zion - slate - dark mb-2">Technology Maturity Level</label>
-            <select value={clientProfile.technologyMaturity} onChange = { (e) => setClientProfile(prev => ({ ...prev,
-  technologyMaturity: e.target.value
-=======
           <div>"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>
             <select value={clientProfile.technologyMaturity} onChange = {
 
   (e) => setClientProfile(prev => ({ ...prev,
   technologyMaturity: e.target.value 
->>>>>>> main
 
 "
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"
@@ -263,14 +207,9 @@ export default function Page() {
   (e) => {
 
                 if(e.target.checked) {
-<<<<<<< HEAD
-                    setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals,
-  goal]
-=======
 
                     setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals,
   goal] 
->>>>>>> main
 
 }) ) ;
                 }
@@ -292,14 +231,9 @@ export default function Page() {
   (e) => {
 
                 if(e.target.checked) {
-<<<<<<< HEAD
-                    setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges,
-  challenge]
-=======
 
                     setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges,
   challenge] 
->>>>>>> main
 
 }) ) ;
                 }
@@ -444,6 +378,7 @@ export default function Page() {
 
           {/* CTA Section */}
           <motion.div initial = {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
 
   { opacity: 0,
   y: 20
@@ -454,6 +389,44 @@ export default function Page() {
   y: 0
 
 "
+<<<<<<< HEAD
+}} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"
+        <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">"
+          <Brain className="w-6 h-6 text-zion-cyan"/>
+          Tell Us About Your Business
+        </h2>
+"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>"
+            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>
+            <select value={clientProfile.industry} onChange = {
+
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">
+          <div>
+            <label className="block text-sm font - medium text-zion - slate - dark mb-2">Industry</label>
+            <select value={clientProfile.industry} onChange = { (e) => setClientProfile(prev => ({ ...prev,
+  industry: e.target.value
+          <div>
+            <label className="block text-sm font - medium text-zion - slate - dark mb-2">Company Size</label>
+            <select value={clientProfile.companySize} onChange = { (e) => setClientProfile(prev => ({ ...prev,
+  companySize: e.target.value
+          <div>
+            <label className="block text-sm font - medium text-zion - slate - dark mb-2">Budget Range</label>
+            <select value={clientProfile.budget} onChange = { (e) => setClientProfile(prev => ({ ...prev,
+  budget: e.target.value
+          <div>
+            <label className="block text-sm font - medium text-zion - slate - dark mb-2">Implementation Timeline</label>
+            <select value={clientProfile.timeline} onChange = { (e) => setClientProfile(prev => ({ ...prev,
+  timeline: e.target.value
+          <div>
+            <label className="block text-sm font - medium text-zion - slate - dark mb-2">Technology Maturity Level</label>
+            <select value={clientProfile.technologyMaturity} onChange = { (e) => setClientProfile(prev => ({ ...prev,
+  technologyMaturity: e.target.value
+                    setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals,
+  goal]
+                    setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges,
+  challenge]
+=======
 }} transition={{ delay: 0.4 }} className="mt-12 text-center">"
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"
               <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>"
@@ -484,3 +457,4 @@ export default function Page() {
     </div>)};
 export default AdvancedServiceRecommendation;
 }}}}}}}}}'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

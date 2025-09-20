@@ -1,13 +1,19 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
+<<<<<<< HEAD
  params - Function parameters
  * @returns {*} Function return value
  */
 function InteractiveTestimonials () {
-=======
->>>>>>> main
+      prev === 0 ? filteredTestimonials.length-1 : prev - 1;) ;
+  };
 
+  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
+      <div  className="max - w-7xl mx - auto px-6">
+        <motion.div
+          className="text-center mb-16"
+        <motion.div
+          className="flex flex - wrap justify - center gap-3 mb-12"
+=======
   Star,
   Quote,
   ChevronLeft,
@@ -82,7 +88,6 @@ const testimonials = [{
 "
 
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function InteractiveTestimonials() {
 "
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -95,22 +100,12 @@ export function InteractiveTestimonials() {
       prev === filteredTestimonials.length-1 ? 0 : prev + 1;) };
 
     setSelectedTestimonial((prev) => ;
-<<<<<<< HEAD
-      prev === 0 ? filteredTestimonials.length-1 : prev - 1;) ;
-  };
-
-  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
-      <div  className="max - w-7xl mx - auto px-6">
-        <motion.div
-          className="text-center mb-16"
-=======
       prev === 0 ? filteredTestimonials.length-1 : prev - 1;) };
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -253,13 +248,8 @@ export function InteractiveTestimonials() {
   { opacity: 1,
   y: 0 }}
         {/* Category Filter */}
-<<<<<<< HEAD
-        <motion.div
-          className="flex flex - wrap justify - center gap-3 mb-12"
-=======
         <motion.div "
           className="flex flex-wrap justify-center gap-3 mb-12"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -305,3 +295,4 @@ export default InteractiveTestimonials;"
 export default InteractiveTestimonials;
 export default InteractiveTestimonials;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

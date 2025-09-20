@@ -6,7 +6,6 @@ export default function Page() {
 import { captureException } from '@/utils/sentry';"
 import { Skeleton } from '@/components/ui/skeleton';"
 import { useDebounce } from '@/hooks/useDebounce';"
->>>>>>> main
 import { z } from 'zod';
 
 export default function Page() {
@@ -130,3 +129,5 @@ export default function Page() {
         </div>)}
     </div>)}
 '"`
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

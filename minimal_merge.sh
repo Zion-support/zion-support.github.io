@@ -37,16 +37,3 @@ for branch in $BRANCHES; do
             if [ -f "$file" ]; then
                 echo "Resolving: $file"
                 # Remove conflict markers
-                sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-                sed -i '/>>>>>>> /d' "$file"
-            fi
-        done
-        git add .
-        git commit -m "Resolve conflicts for $branch"
-    fi
-done
-
-# Push
-git push origin main
-
-echo "Done"

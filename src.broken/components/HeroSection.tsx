@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -105,7 +104,6 @@ import { useTranslation } from "react-i18next";
 '
       if(e.key === 'ArrowLeft') prevSlide();'
       if(e.key === 'ArrowRight') nextSlide();'      if(e.key === ' ') {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
         e.preventDefault();
         setIsAutoPlaying(!isAutoPlaying)}
@@ -231,3 +229,4 @@ import { useTranslation } from "react-i18next";
     </section>) }
 export { HeroSection };
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+};
+
+=======
 // Innovative AI Services 2030 - Zion Tech Group
 // Cutting-edge AI solutions for modern businesses
 ;
@@ -47,12 +51,7 @@ const zionContact = {
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 
-<<<<<<< HEAD
-};
-
-export const innovativeAIServices2030: AIService[] = [=======
 // Innovative AI Services 2030
-export const innovativeAIServices2030: InnovativeAIService[] = [>>>>>>> main
   {
 "
     id: "ai-voice-cloning-platform","
@@ -530,3 +529,4 @@ export const innovativeAIServices2030: InnovativeAIService[] = [>>>>>>> main
 ];
 
 export default innovativeAIServices2030}}"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

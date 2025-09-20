@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
 
+<<<<<<< HEAD
 export default function Page() {
       },
       { threshold: 0.1 }
@@ -8,8 +7,6 @@ export default function Page() {
 
     if(element) {
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       observer.observe(element)}
 
     return () => observer.disconnect()}, []);
@@ -21,7 +18,6 @@ export default function Page() {
 '
   phone: '+1 302 464 0950','
     email: 'kleber@ziontechgroup.com',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
@@ -340,3 +336,4 @@ export default function Page() {
       </div>;
     </section>;) };
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

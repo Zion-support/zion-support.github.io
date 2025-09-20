@@ -1,13 +1,16 @@
-import React from 'react';
-
-export function StatsSection() {
 <<<<<<< HEAD
   const stats = [{
 
+  return ()
+    <section className="py-16 bg-white">"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+        <div className="text-center mb-12">"
 =======
+import React from 'react';
+
+export function StatsSection() {
   const stats = [
     {
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
       number: '500+',
       label: 'Projects Completed',
       description: 'Successfully delivered solutions',
@@ -43,18 +46,11 @@ export function StatsSection() {
       color: 'from-red-500 to-pink-500'
     }
   ];
-<<<<<<< HEAD
-  return ()
-    <section className="py-16 bg-white">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center mb-12">"
-=======
 
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Zion Tech Group by the Numbers
           </h2>
@@ -121,3 +117,4 @@ export function StatsSection() {
 }
 
 export default StatsSection;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+    [elemName: string]: ;
+
+}
+=======
 // Minimal type declarations for offline development
 
 // React stubs
@@ -24,13 +29,7 @@ declare namespace JSX {
 }
   interface IntrinsicElements {
 
-<<<<<<< HEAD
-    [elemName: string]: ;
-
-}
-=======
     [elemName: string]: }
->>>>>>> main
 }
 
 declare module 'react-dom' {
@@ -80,3 +79,4 @@ declare module 'zod' {
 
 export default useEffect;
 export default useRef;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

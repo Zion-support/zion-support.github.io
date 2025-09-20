@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
 // import SEO from '@/components/SEO';
->>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import { 
   Users, 
   Target, 
@@ -70,32 +66,6 @@ const About: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            About <span className="bg-gradient-to-r from-zion-cyan to-zion-purple-light bg-clip-text text-transparent">Zion Tech Group</span>
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            We are a forward-thinking technology company dedicated to transforming businesses through 
-            innovative AI solutions, comprehensive IT services, and cutting-edge micro SAAS platforms.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link 
-              to="/contact" 
-              className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Get in Touch
-            </Link>
-            <Link 
-              to="/services" 
-              className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Our Services
-            </Link>
-=======
     <>
       {/* <SEO 
         title="About Zion Tech Group - Leading AI & Technology Innovation Company"
@@ -122,9 +92,7 @@ const About: React.FC = () => {
               Our mission is to democratize AI and cutting-edge technology, making it accessible 
               to businesses of all sizes.
             </p>
->>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
           </div>
-        </div>
       </section>
 
       {/* Stats Section */}
@@ -171,7 +139,8 @@ const About: React.FC = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
+      </section>
 
       {/* Values Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
@@ -236,6 +205,7 @@ const About: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

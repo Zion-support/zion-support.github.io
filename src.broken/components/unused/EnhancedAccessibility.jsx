@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+  x: -20
+
+}} transition={{ duration: 0.3 }} id="accessibility-panel" className="fixed bottom-24 left-6 z-50 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dark:border-slate-700 max-h-96 overflow-y-auto" role="dialog" aria-labelledby="accessibility-title">
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-4">
+} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.reducedMotion ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.reducedMotion}>
+} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.focusIndicator ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.focusIndicator}>
+} className="w-full p-2 border border-gray-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-gray-900 dark:text-white text-sm">
+                  <option value="none">None</option>
+                  <option value="protanopia">Protanopia(Red-Blind)</option>
+                  <option value="deuteranopia">Deuteranopia(Green-Blind)</option>
+} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.screenReader ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.screenReader}>
+} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.keyboardNavigation ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.keyboardNavigation}>
+=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 
@@ -112,20 +127,12 @@ export default function Page() {
 }} exit = {
 
   { opacity: 0,
-<<<<<<< HEAD
-  x: -20
-
-}} transition={{ duration: 0.3 }} id="accessibility-panel" className="fixed bottom-24 left-6 z-50 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dark:border-slate-700 max-h-96 overflow-y-auto" role="dialog" aria-labelledby="accessibility-title">
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-4">
-=======
   x: -20 
 
 "
 }} transition={{ duration: 0.3 }} id="accessibility-panel" className="fixed bottom-24 left-6 z-50 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dark:border-slate-700 max-h-96 overflow-y-auto" role="dialog" aria-labelledby="accessibility-title">"
             <div className="p-6">"
               <div className="flex items-center justify-between mb-4">"
->>>>>>> main
                 <h2 id="accessibility-title" className="text-lg font-semibold text-gray-900 dark:text-white">
                   Accessibility Settings
                 </h2>"
@@ -178,13 +185,9 @@ export default function Page() {
   () => updateSetting('reducedMotion',
   !settings.reducedMotion)
 
-<<<<<<< HEAD
-} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.reducedMotion ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.reducedMotion}>
-=======
 
 '"`
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.reducedMotion ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.reducedMotion}>'`
->>>>>>> main
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'}`}/>
                   </button>
                 </label>"
@@ -204,13 +207,9 @@ export default function Page() {
   () => updateSetting('focusIndicator',
   !settings.focusIndicator)
 
-<<<<<<< HEAD
-} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.focusIndicator ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.focusIndicator}>
-=======
 
 '"`
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.focusIndicator ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.focusIndicator}>'`
->>>>>>> main
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'}`}/>
                   </button>
                 </label>"
@@ -229,19 +228,12 @@ export default function Page() {
   (e) => updateSetting('colorBlindness',
   e.target.value)
 
-<<<<<<< HEAD
-} className="w-full p-2 border border-gray-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-gray-900 dark:text-white text-sm">
-                  <option value="none">None</option>
-                  <option value="protanopia">Protanopia(Red-Blind)</option>
-                  <option value="deuteranopia">Deuteranopia(Green-Blind)</option>
-=======
 
 "
 } className="w-full p-2 border border-gray-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-gray-900 dark:text-white text-sm">"
                   <option value="none">None</option>"
                   <option value="protanopia">Protanopia(Red-Blind)</option>"
                   <option value="deuteranopia">Deuteranopia(Green-Blind)</option>"
->>>>>>> main
                   <option value="tritanopia">Tritanopia(Blue-Blind)</option>
                 </select>
               </div>
@@ -257,13 +249,9 @@ export default function Page() {
   () => updateSetting('screenReader',
   !settings.screenReader)
 
-<<<<<<< HEAD
-} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.screenReader ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.screenReader}>
-=======
 
 '"`
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.screenReader ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.screenReader}>'`
->>>>>>> main
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.screenReader ? 'translate-x-6' : 'translate-x-1'}`}/>
                   </button>
                 </label>"
@@ -283,13 +271,9 @@ export default function Page() {
   () => updateSetting('keyboardNavigation',
   !settings.keyboardNavigation)
 
-<<<<<<< HEAD
-} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.keyboardNavigation ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.keyboardNavigation}>
-=======
 
 '"`
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.keyboardNavigation ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.keyboardNavigation}>'`
->>>>>>> main
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'}`}/>
                   </button>
                 </label>"
@@ -332,3 +316,4 @@ export default function Page() {
 export { EnhancedAccessibility };
 export default EnhancedAccessibility;
 }}}}}}}}}}}}'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

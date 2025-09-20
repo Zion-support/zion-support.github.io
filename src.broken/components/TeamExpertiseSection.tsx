@@ -1,13 +1,26 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion  } from 'framer-motion';
 
+<<<<<<< HEAD
  params - Function parameters
  * @returns {*} Function return value
  */
 function TeamExpertiseSection () {
-=======
->>>>>>> main
+  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
+      <div className="max - w-7xl mx - auto px-6">
+        <motion.div
+          className="text-center mb-16"
 
+              <div className="text-4xl font - bold text-blue - 400 mb-3 group - hover:text-blue - 300 transition - colors duration -200">
+                {expertise.count}
+              </div>
+
+              <h3 className="text-xl font - bold text-white mb-3 group - hover:text-blue - 400 transition - colors duration -200">
+                {expertise.title}
+              </h3>
+
+              <p className="text-gray - 400 text-sm leading -relaxed">
+        <motion.div
+          className="text-center mb-12"
+=======
   Award,
   Users,
   Brain,
@@ -40,22 +53,14 @@ const coreExpertise = ["
   "IoT & Edge Computing",;"
   "Mobile & Web Development";
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
-<<<<<<< HEAD
-  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
-      <div className="max - w-7xl mx - auto px-6">
-        <motion.div
-          className="text-center mb-16"
-=======
 export function TeamExpertiseSection() {
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -124,18 +129,6 @@ export function TeamExpertiseSection() {
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">"
                 <span className="text-3xl">{expertise.icon}</span>
               </div>
-<<<<<<< HEAD
-
-              <div className="text-4xl font - bold text-blue - 400 mb-3 group - hover:text-blue - 300 transition - colors duration -200">
-                {expertise.count}
-              </div>
-
-              <h3 className="text-xl font - bold text-white mb-3 group - hover:text-blue - 400 transition - colors duration -200">
-                {expertise.title}
-              </h3>
-
-              <p className="text-gray - 400 text-sm leading -relaxed">
-=======
               "
               <div className="text-4xl font-bold text-blue-400 mb-3 group-hover:text-blue-300 transition-colors duration-200">
                 {expertise.count}
@@ -146,19 +139,13 @@ export function TeamExpertiseSection() {
               </h3>
               "
               <p className="text-gray-400 text-sm leading-relaxed">
->>>>>>> main
                 {expertise.description}
               </p>
             </motion.div>) ) }
         </div>
 
-<<<<<<< HEAD
-        <motion.div
-          className="text-center mb-12"
-=======
         <motion.div "
           className="text-center mb-12"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -209,3 +196,4 @@ export default TeamExpertiseSection;"
 export default TeamExpertiseSection;
 export default TeamExpertiseSection;
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

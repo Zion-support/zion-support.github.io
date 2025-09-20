@@ -38,7 +38,6 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
             <Sparkles className="w-4 h-4 text-zion-cyan mr-2"  />"
             <span className="text-zion-cyan text-sm font-medium">Innovation First</span>
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           </div>
 "
           <h2 id="services-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">"
@@ -150,3 +149,4 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
   )};
 
 export default ServicesOverview}}}'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

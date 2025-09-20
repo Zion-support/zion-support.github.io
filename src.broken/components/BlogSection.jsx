@@ -1,8 +1,8 @@
-import React from 'react';
 <<<<<<< HEAD
 export function BlogSection () {
 
 =======
+import React from 'react';
 import { Link  } from 'react-router-dom';
 ,
         {
@@ -39,3 +39,4 @@ import { Link  } from 'react-router-dom';
       </div>
     </section>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

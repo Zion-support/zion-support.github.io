@@ -1,28 +1,4 @@
 <<<<<<< HEAD
-=======
-import React from 'react';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import AppMinimal from './AppMinimal';
-
-describe('AppMinimal', () => {
-  it('renders without crashing', () => {
-    render(<AppMinimal />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
-  });
-
-  it('displays correct content', () => {
-    render(<AppMinimal />);
-    // Add content tests here
-  });
-
-  it('handles user interactions', () => {
-    render(<AppMinimal />);
-    // Add interaction tests here
-  });
-<<<<<<< HEAD
-<<<<<<< HEAD
 });
 import { render, screen, describe, it, expect } from 'lucide-react'; import AppMinimal from './AppMinimal'; describe('AppMinimal',() => { it('renders without crashing',() => { render(<AppMinimal />); expect(screen.getByRole('main')).toBeInTheDocument()}
 }); it('displays correct content',() => { render(<AppMinimal />)}
@@ -44,8 +20,27 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 });
 </AppMinimal>'
 =======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import AppMinimal from './AppMinimal';
+
+describe('AppMinimal', () => {
+  it('renders without crashing', () => {
+    render(<AppMinimal />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
+
+  it('displays correct content', () => {
+    render(<AppMinimal />);
+    // Add content tests here
+  });
+
+  it('handles user interactions', () => {
+    render(<AppMinimal />);
+    // Add interaction tests here
+  });
 });
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 =======
 });
->>>>>>> 8feed85039723bc78561eb73f1f5a67cea8b8be9
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

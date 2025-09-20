@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.broken/utils/offworld/ipfs.ts
+<<<<<<< HEAD
 // Stub offworld IPFS utility - placeholder for missing functionality
 export const uploadToIPFS = async (data: any) => {
   // Placeholder implementation
@@ -178,5 +178,5 @@ export const OFFWORLD_TOPICS = {
   manifesto: 'zion.manifesto.broadcast',
   chat: 'zion.chat.messages',
   votes: 'zion.dao.votes',
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6:src/utils/offworld/ipfs.ts
 };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

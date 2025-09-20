@@ -14,7 +14,6 @@ export default function LoginErrorFallback(...args[]):  {
         </div>"
         <h2 className="text-2xl font-bold text-white mb-4">
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           Something went wrong
         </h2>"
         <p className="text-zion-slate-light mb-6">
@@ -39,3 +38,4 @@ export default function LoginErrorFallback(...args[]):  {
     </div>;
   )}
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

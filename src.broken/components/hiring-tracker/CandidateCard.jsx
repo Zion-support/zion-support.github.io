@@ -10,7 +10,6 @@ import { Textarea } from '@/components/ui/textarea';"
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';"
 import { ScoreBadge } from '@/components/jobs/applications/ScoreBadge';"
 import { toast } from '@/hooks/use-toast';"
->>>>>>> main
 import { HireConfirmationModal } from './HireConfirmationModal';
 export default function Page() {
 )};
@@ -115,3 +114,5 @@ export default function Page() {
       <HireConfirmationModal isOpen={showHireModal} onClose={() => setShowHireModal(false)} application={application} onConfirm={handleHireConfirmed}/>
     </>)}
 '"`
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
