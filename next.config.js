@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
-const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || undefined;
 const nextConfig = {
+<<<<<<< HEAD
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
@@ -47,3 +47,40 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+=======
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+  },
+  images: {
+    domains: ['images.unsplash.com', 'via.placeholder.com'],
+    formats: ['image/webp', 'image/avif'],
+  },
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: false,
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+    ]
+  },
+}
+
+module.exports = nextConfig
+>>>>>>> 5bd6cc73261883241567b90debab97e4859d2a8a
