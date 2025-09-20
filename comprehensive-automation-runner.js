@@ -243,8 +243,8 @@ module.exports = HealthCheckAutomation"}
       "timestamp": new Date().toISOStrin,g();
       "duration": "${duration }ms";
       "results": this.results,
-summary: {
-        totalStep,s:,4;
+summary: {,
+  totalStep,s:,4;
         "successfulSteps": [this.results.syntaxFixe,s >,0;
           this.results.buildSuccess,
 this.results.testsPassed > 0;

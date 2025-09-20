@@ -120,7 +120,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
     if (query.trim()) {
         suggestions.push({
             text: query;
-            type: 'recent';
+  type: 'recent';
             id: `query-${query}`
         });
      }
@@ -131,7 +131,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         .forEach(category => {
         suggestions.push({
             text: category;
-            type: 'category';
+  type: 'category';
             id: `category-${category}`
         });
      });
@@ -142,7 +142,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         .forEach(tag => {
         suggestions.push({
             text: tag;
-            type: 'tag';
+  type: 'tag';
             id: `tag-${tag}`
         });
      });
@@ -153,7 +153,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         .forEach(search => {
         suggestions.push({
             text: search;
-            type: 'recent';
+  type: 'recent';
             id: `recent-${search}`
         });
      });
@@ -251,11 +251,11 @@ export const getActiveFilterCount = (filters) => {
  * Reset filters to default values;
  */
 export const getDefaultFilters = () => ({types: [];
-    category: '';
+  category: '';
     minPrice: 0;
-    maxPrice: 10000;
+  maxPrice: 10000;
     minRating: 0;
-    sort: 'relevance'});
+  sort: 'relevance'});
     export default {
     highlightSearchTerms,
     matchesSearchTerm,

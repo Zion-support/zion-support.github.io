@@ -88,14 +88,14 @@ export class LinkValidator {
             return {
                 url,
                 status: 'protocol';
-                parentPage,
+  parentPage,
                 suggestedFix: 'Keep as-is - these are valid protocol links'};
      }
         // Check for external links;
         if (this.isExternalLink(url)) {return {
                 url,
                 status: 'external';
-                parentPage,
+  parentPage,
                 suggestedFix: 'Add rel="nofollow" and validate periodically'};
      }
         // Check for broken internal links that have mappings;
@@ -103,7 +103,7 @@ export class LinkValidator {
             return {
                 url,
                 status: 'broken';
-                parentPage,
+  parentPage,
                 suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`;
                 error: 'Broken internal link with available redirect',
             };
