@@ -18,6 +18,9 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, im
       {title && <meta property="og:title" content={title} />}
       {description && <meta property="og:description" content={description} />}
       {image && <meta property="og:image" content={image} />}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
     </>
   );
 };
