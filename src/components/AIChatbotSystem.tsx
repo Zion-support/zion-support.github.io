@@ -19,34 +19,43 @@ import {
   AlertCircle
 } from "lucide-react";
 interface ChatMessage {
-  id: string,content: string,sender: 'user' | 'bot',timestamp: Date,type: 'text' | 'image' | 'file' | 'system',status: 'sending' | 'sent' | 'error';
+  id: string;
+  content: string;
+  sender: 'user' | 'bot';
+  timestamp: Date;
+  type: 'text' | 'image' | 'file' | 'system';
+  status: 'sending' | 'sent' | 'error';
   metadata?: {
-    confidence?: number,
-    suggestions?: string[],
-    relatedServices?: string[],
-    estimatedResponseTime?: number
-  },
+    confidence?: number;
+    suggestions?: string[];
+    relatedServices?: string[];
+    estimatedResponseTime?: number;
+  };
 }
 
 interface AIChatbotSystemProps {
-  showHeader?: boolean,
-  showSettings?: boolean,
-  maxMessages?: number,
-  autoScroll?: boolean,
+  showHeader?: boolean;
+  showSettings?: boolean;
+  maxMessages?: number;
+  autoScroll?: boolean;
 }
 
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
-  showHeader = true;
+  showHeader = true,
   showSettings = true,
   autoScroll = true
 }) => {
-  const [messages, setMessages] = useState<ChatMessage[]>([]),
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState('');
-const [isTyping, setIsTyping] = useState(false);
-const [isOpen, setIsOpen] = useState(false);
-const [showSettingsPanel, setShowSettingsPanel] = useState(false);
-const [settings, setSettings] = useState({
-    voiceEnabled: false,autoResponse: true,language: 'en',theme: 'dark',responseSpeed: 'normal'
+  const [isTyping, setIsTyping] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [showSettingsPanel, setShowSettingsPanel] = useState(false);
+  const [settings, setSettings] = useState({
+    voiceEnabled: false,
+    autoResponse: true,
+    language: 'en',
+    theme: 'dark',
+    responseSpeed: 'normal'
   });
 const [isListening, setIsListening] = useState(false);
 const messagesEndRef = useRef<HTMLDivElement>(null);
