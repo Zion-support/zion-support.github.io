@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Batch Merge PRs Script - Process PRs in smaller batches
+# Aggressive Merge All Branches Script
 set -e
 
-echo "🚀 Starting Batch Merge PRs Process..."
+echo "🚀 Starting Aggressive Merge All Branches Process..."
 echo "⏰ Started at: $(date)"
 
 # Colors for output
@@ -34,53 +34,42 @@ print_status "Ensuring main branch is up to date..."
 git checkout main
 git pull origin main
 
-# Get the first 20 PR numbers
-PR_NUMBERS=$(grep -o '"number": [0-9]*' /workspace/current_prs.json | grep -o '[0-9]*' | head -20)
+# Get all available branches (excluding main and HEAD)
+ALL_BRANCHES=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | tr -d ' ' | head -100)
 
-print_status "Processing first 20 PRs: $PR_NUMBERS"
+print_status "Found $(echo "$ALL_BRANCHES" | wc -l) branches to process"
 
 # Initialize counters
 SUCCESSFUL_MERGES=0
 FAILED_MERGES=0
 TOTAL_PROCESSED=0
 
-# Function to merge a PR by number
-merge_pr() {
-    local pr_number="$1"
+# Function to merge a branch with aggressive conflict resolution
+merge_branch_aggressive() {
+    local branch="$1"
     
-    print_status "Processing PR #$pr_number..."
-    
-    # Try to find the branch associated with this PR
-    # Look for branches that might be related to this PR
-    local branch_candidates=$(git branch -r | grep -E "(pr-$pr_number|$pr_number|cursor/.*$pr_number)" | head -1)
-    
-    if [ -z "$branch_candidates" ]; then
-        # Try to find any branch that might be related
-        branch_candidates=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | head -1)
-    fi
-    
-    if [ -z "$branch_candidates" ]; then
-        print_warning "No branch found for PR #$pr_number, skipping..."
-        return 1
-    fi
-    
-    local branch_name=${branch_candidates#origin/}
-    print_status "Attempting to merge branch: $branch_name"
+    print_status "Processing branch: $branch"
     
     # Fetch the branch
-    git fetch origin "$branch_name" 2>/dev/null || {
-        print_error "Failed to fetch branch $branch_name"
+    git fetch origin "$branch" 2>/dev/null || {
+        print_warning "Failed to fetch branch $branch, skipping..."
         return 1
     }
     
-    # Try to merge
-    if git merge --no-commit --no-ff "origin/$branch_name" 2>/dev/null; then
-        print_success "Successfully merged $branch_name"
-        git commit -m "Merge PR #$pr_number - $branch_name - $(date)" 2>/dev/null || true
+    # Check if branch is already merged
+    if git branch --merged main | grep -q "$branch"; then
+        print_warning "Branch $branch is already merged, skipping..."
+        return 0
+    fi
+    
+    # Try to merge with aggressive strategy
+    if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
+        print_success "Successfully merged $branch"
+        git commit -m "Merge branch $branch - $(date)" 2>/dev/null || true
         SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
         return 0
     else
-        print_warning "Merge conflicts detected in $branch_name, attempting resolution..."
+        print_warning "Merge conflicts detected in $branch, attempting aggressive resolution..."
         
         # Get conflicted files
         local conflicted_files=$(git diff --name-only --diff-filter=U 2>/dev/null || true)
@@ -88,28 +77,30 @@ merge_pr() {
         if [ -n "$conflicted_files" ]; then
             print_status "Resolving conflicts in: $conflicted_files"
             
-            # Resolve conflicts by preferring main branch for config files
+            # Aggressive conflict resolution - prefer incoming changes for most files
             for file in $conflicted_files; do
                 if [[ "$file" == "package.json" ]] || [[ "$file" == "package-lock.json" ]] || [[ "$file" == "yarn.lock" ]]; then
+                    # Keep main version for package files
                     git checkout --ours "$file" 2>/dev/null || true
                 elif [[ "$file" == "netlify.toml" ]] || [[ "$file" == "next.config.js" ]] || [[ "$file" == "tsconfig.json" ]]; then
+                    # Keep main version for config files
                     git checkout --ours "$file" 2>/dev/null || true
                 else
-                    # For other files, try to merge both versions
+                    # For all other files, prefer incoming changes
                     git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
                 fi
             done
             
-            # Add resolved files
+            # Add all resolved files
             git add . 2>/dev/null || true
             
             # Commit the merge
-            if git commit -m "Resolve conflicts for PR #$pr_number - $branch_name - $(date)" 2>/dev/null; then
-                print_success "Successfully resolved conflicts and merged $branch_name"
+            if git commit -m "Aggressive merge of $branch - $(date)" 2>/dev/null; then
+                print_success "Successfully resolved conflicts and merged $branch"
                 SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
                 return 0
             else
-                print_error "Failed to commit resolved conflicts for $branch_name"
+                print_error "Failed to commit resolved conflicts for $branch"
                 git merge --abort 2>/dev/null || true
                 FAILED_MERGES=$((FAILED_MERGES + 1))
                 return 1
@@ -123,24 +114,27 @@ merge_pr() {
     fi
 }
 
-# Process each PR
-for pr_number in $PR_NUMBERS; do
+# Process each branch
+for branch in $ALL_BRANCHES; do
     TOTAL_PROCESSED=$((TOTAL_PROCESSED + 1))
-    print_status "[$TOTAL_PROCESSED/20] Processing PR #$pr_number"
+    print_status "[$TOTAL_PROCESSED] Processing branch: $branch"
     
-    if merge_pr "$pr_number"; then
-        print_success "PR #$pr_number processed successfully"
+    if merge_branch_aggressive "$branch"; then
+        print_success "Branch $branch processed successfully"
     else
-        print_error "Failed to process PR #$pr_number"
+        print_error "Failed to process branch $branch"
     fi
     
-    # Push changes every 5 merges
-    if [ $((SUCCESSFUL_MERGES % 5)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
+    # Push changes every 20 merges
+    if [ $((SUCCESSFUL_MERGES % 20)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
         print_status "Pushing progress to remote..."
         git push origin main 2>/dev/null || print_warning "Could not push main"
     fi
     
-    echo "---"
+    # Show progress every 10 branches
+    if [ $((TOTAL_PROCESSED % 10)) -eq 0 ]; then
+        print_status "Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed"
+    fi
 done
 
 # Final push
@@ -149,11 +143,11 @@ git push origin main 2>/dev/null || print_warning "Could not push main"
 
 # Summary
 echo ""
-print_success "Batch merge process completed!"
+print_success "Aggressive merge process completed!"
 echo "📊 Summary:"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
 echo "   📈 Total processed: $TOTAL_PROCESSED"
 echo "⏰ Completed at: $(date)"
 
-print_success "🎉 First batch of PRs processed!"
+print_success "🎉 Aggressive merge process completed!"
