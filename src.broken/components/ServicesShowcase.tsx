@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default function Page() {
         <motion.div"
@@ -139,3 +140,5 @@ export default function Page() {
       </div>
     </section>) }
 '"`
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

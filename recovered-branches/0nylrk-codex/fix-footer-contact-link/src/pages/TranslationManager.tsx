@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
 import { Header } from "@/components/Header";
@@ -382,3 +383,14 @@ export default function TranslationManager() {
       </main>
       <Footer />
     </>
+=======
+import React from 'react';
+export function TranslationManager() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { format } from "date-fns";
@@ -685,3 +686,14 @@ export default function ProjectDetails() {
     <ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>
+=======
+import React from 'react';
+export function ProjectDetails() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

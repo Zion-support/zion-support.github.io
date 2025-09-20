@@ -98,26 +98,6 @@ for branch in $BRANCHES; do
                     cp "$file" "${file}.backup.$(date +%s)"
                     
                     # Remove conflict markers
-                    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-                    sed -i '/>>>>>>> /d' "$file"
-                    
-                    echo "✅ Resolved conflicts in $file"
-                fi
-            done
-            
-            # Add resolved files and commit
-            git add .
-            git commit -m "Resolve merge conflicts for $branch - $(date)"
-            echo "✅ Successfully resolved conflicts and merged $branch"
-            SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-        else
-            echo "❌ No conflicted files found, but merge failed. Aborting..."
-            git merge --abort
-            FAILED_MERGES=$((FAILED_MERGES + 1))
-        fi
-    fi
-    
-    echo "=========================================="
     echo ""
     
     # Ask user if they want to continue

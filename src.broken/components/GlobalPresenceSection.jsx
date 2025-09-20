@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
@@ -489,3 +490,6 @@ const industries = ["
       </div>
     </section>)}
 '"
+=======
+import React, { useState } from 'react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

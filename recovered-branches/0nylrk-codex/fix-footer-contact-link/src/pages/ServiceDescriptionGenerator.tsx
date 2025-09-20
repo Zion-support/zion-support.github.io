@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import { Header } from "@/components/Header";
@@ -61,3 +62,14 @@ export default function ServiceDescriptionGenerator() {
         </div>
       </main>
       <Footer />
+=======
+import React from 'react';
+export function ServiceDescriptionGenerator() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

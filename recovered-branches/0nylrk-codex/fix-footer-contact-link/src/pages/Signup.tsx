@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
@@ -334,3 +335,14 @@ export default function Signup() {
       </div>
       <Footer />
     </>
+=======
+import React from 'react';
+export function Signup() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

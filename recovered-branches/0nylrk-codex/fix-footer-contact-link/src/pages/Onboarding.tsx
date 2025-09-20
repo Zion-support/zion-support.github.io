@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -166,3 +167,14 @@ export default function Onboarding() {
       </div>
       <Footer />
     </>
+=======
+import React from 'react';
+export function ChatWidget() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

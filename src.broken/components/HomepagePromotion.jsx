@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 
 export default function Page() {
@@ -162,3 +163,6 @@ export default function Page() {
       </div>
     </section>)}
 '"
+=======
+import React from 'react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

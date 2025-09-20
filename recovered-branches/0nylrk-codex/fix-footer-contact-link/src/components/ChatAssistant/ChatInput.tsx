@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
@@ -54,5 +55,14 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         <Send className="h-5 w-5" />
       </Button>
     </form>
+=======
+import React from 'react';
+export function LoginForm() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
   );
 }

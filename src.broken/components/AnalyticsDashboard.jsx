@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function Page() {
 , refreshInterval);
     return () => clearInterval(interval);
@@ -387,3 +388,6 @@ export default function Page() {
   );
 };
 '"`
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

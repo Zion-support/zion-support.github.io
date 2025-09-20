@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 
@@ -93,3 +94,10 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
   return analytics;
 }
+=======
+// Hook for usePricingSuggestionAnalytics;
+export const useUsePricingSuggestionAnalytics: unknown = () => {
+  // TODO: Implement hook logic;
+  return {};
+};
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

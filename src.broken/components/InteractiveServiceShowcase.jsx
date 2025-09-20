@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default InteractiveServiceShowcase;
 import { motion, AnimatePresence  } from 'framer-motion';
 
@@ -302,3 +303,6 @@ export default function Page() {
     </section>)};
 export default InteractiveServiceShowcase;
 }}}}}}}'"`
+=======
+import React, { useState } from 'react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

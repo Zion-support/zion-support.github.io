@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  from 'lucide-react';
 
 const steps = [{
@@ -348,3 +349,7 @@ export function HowItWorksSection() {
   );
 }
 '"`
+=======
+import React, { useState } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
