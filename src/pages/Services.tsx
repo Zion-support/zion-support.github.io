@@ -91,90 +91,90 @@ export default function Services() {
     { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' }
   ];
   const filteredServices = COMPREHENSIVE_SERVICES_2030.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-    return matchesCategory && matchesSearch,
-  }),
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'rating':
-        return b.rating - a.rating,
+        return b.rating - a.rating;
       case 'price':
-        return a.price - b.price,
+        return a.price - b.price;
       case 'reviews':
-        return b.reviewCount - a.reviewCount,
+        return b.reviewCount - a.reviewCount;
       case 'name':
-        return a.title.localeCompare(b.title),
+        return a.title.localeCompare(b.title);
       default: return 0
     }
   });
   // Pagination logic
-  const totalPages = Math.ceil(sortedServices.length / itemsPerPage),
-  const startIndex = (currentPage - 1) * itemsPerPage,
-  const endIndex = startIndex + itemsPerPage,
-  const currentServices = sortedServices.slice(startIndex, endIndex),
+  const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentServices = sortedServices.slice(startIndex, endIndex);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  },
+  };
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Business Intelligence':
         return <Brain className="w-6 h-6" />;
       case 'Cybersecurity':
-        return <Shield className="w-6 h-6" />,
+        return <Shield className="w-6 h-6" />;
       case 'Cloud & DevOps':
-        return <Cloud className="w-6 h-6" />,
+        return <Cloud className="w-6 h-6" />;
       case 'AI & Marketing':
-        return <TrendingUp className="w-6 h-6" />,
+        return <TrendingUp className="w-6 h-6" />;
       case 'Quantum Computing':
-        return <Atom className="w-6 h-6" />,
+        return <Atom className="w-6 h-6" />;
       case 'IoT & Edge Computing':
-        return <Cpu className="w-6 h-6" />,
+        return <Cpu className="w-6 h-6" />;
       case 'Blockchain & Web3':
-        return <GitFork className="w-6 h-6" />,
+        return <GitFork className="w-6 h-6" />;
       case 'AI & Healthcare':
-        return <Heart className="w-6 h-6" />,
+        return <Heart className="w-6 h-6" />;
       case 'FinTech':
-        return <DollarSign className="w-6 h-6" />,
+        return <DollarSign className="w-6 h-6" />;
       case 'Digital Twin':
-        return <Globe className="w-6 h-6" />,
+        return <Globe className="w-6 h-6" />;
       case 'Space Technology':
-        return <Rocket className="w-6 h-6" />,
+        return <Rocket className="w-6 h-6" />;
       case 'Sustainable Technology':
-        return <Leaf className="w-6 h-6" />,
+        return <Leaf className="w-6 h-6" />;
       case 'AI & Content':
-        return <PenTool className="w-6 h-6" />,
+        return <PenTool className="w-6 h-6" />;
       case 'AI & Customer Support':
-        return <MessageCircle className="w-6 h-6" />,
+        return <MessageCircle className="w-6 h-6" />;
       case 'AI & HR':
-        return <Users className="w-6 h-6" />,
+        return <Users className="w-6 h-6" />;
       case 'AI & Legal Tech':
-        return <Scale className="w-6 h-6" />,
+        return <Scale className="w-6 h-6" />;
       case 'AI & Research':
-        return <BookOpen className="w-6 h-6" />,
+        return <BookOpen className="w-6 h-6" />;
       case 'AI & Green Tech':
-        return <Leaf className="w-6 h-6" />,
+        return <Leaf className="w-6 h-6" />;
       case 'AI & Metaverse':
-        return <Globe2 className="w-6 h-6" />,
+        return <Globe2 className="w-6 h-6" />;
       case 'AI & Space Tech':
-        return <Rocket className="w-6 h-6" />,
+        return <Rocket className="w-6 h-6" />;
       case 'AI & Operations':
-        return <Settings className="w-6 h-6" />,
+        return <Settings className="w-6 h-6" />;
       case 'AI & Development':
-        return <Code className="w-6 h-6" />,
+        return <Code className="w-6 h-6" />;
       case 'AI & Education':
-        return <Users className="w-6 h-6" />,
+        return <Users className="w-6 h-6" />;
       case 'AI & Entertainment':
-        return <Play className="w-6 h-6" />,
+        return <Play className="w-6 h-6" />;
       default:
-        return <Zap className="w-6 h-6" />
+        return <Zap className="w-6 h-6" />;
     }
   };
   return (
