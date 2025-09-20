@@ -833,16 +833,16 @@ main.loading {
   }
 
   ::-webkit-scrollbar-track {
-    background: theme('colors.slate.200');
+    background: #e2e8f0;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: theme('colors.slate.400');
+    background: #94a3b8;
     border-radius: 5px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: theme('colors.slate.500');
+    background: #64748b;
   }
 
   /* Responsive design */
