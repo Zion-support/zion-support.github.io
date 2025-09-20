@@ -10,7 +10,7 @@ const Home = () => (
         Welcome to Zion Tech Group;
       </h1>
       <p className="text-center text-gray-600 dark:text-gray-300 text-lg">
-        Your trusted partner in technology solutions;
+        Your trusted partner in technology solutions,
       </p>
     </div>
   </div>

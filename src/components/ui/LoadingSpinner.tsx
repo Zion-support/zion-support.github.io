@@ -9,7 +9,7 @@ interface LoadingSpinnerProps {
   customColor?: string;
   className?: string;
   text?: string;
-  showText?: boolean;
+  showText?: boolean,
 }
 
 export function LoadingSpinner({
@@ -18,7 +18,7 @@ export function LoadingSpinner({
   customColor;
   className;
   text = "Loading...",
-  showText = false;
+  showText = false,
 }: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: "w-4 h-4",
@@ -42,12 +42,11 @@ export function LoadingSpinner({
         className={cn(
           "border-2 border-t-transparent rounded-full animate-spin",
           sizeClasses[size],
-          borderColor;
+          borderColor,
         )}
         animate={{ rotate: 360 }}
         transition={{
-          duration: 1;
-          repeat: Infinity;
+          duration: 1; repeat: Infinity;
           ease: "linear"
         }}
         role="status"
@@ -58,7 +57,7 @@ export function LoadingSpinner({
   customColor;
   className = "",
   text = "Loading...",
-  showText = false; 
+  showText = false, 
 }: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: "w-4 h-4",
@@ -88,7 +87,7 @@ export function LoadingSpinner({
         animate={{ rotate: 360 }}
         transition={{ duration: 1; repeat: Infinity; ease: "linear" }}
         style={{
-          borderTopColor: customColor && color === "custom" ? customColor : undefined;
+          borderTopColor: customColor && color === "custom" ? customColor : undefined,
         }}
       />
       
@@ -118,7 +117,7 @@ export function SkeletonLoader({
 }: {
   className?: string;
   lines?: number;
-  height?: string;
+  height?: string,
 }) {
   return (
     <div className={cn("space-y-3", className)}>
@@ -127,7 +126,7 @@ export function SkeletonLoader({
           key={index}
           className={cn(
             "bg-zion-slate-light/20 rounded animate-pulse",
-            height;
+            height,
           )}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -140,7 +139,7 @@ export function SkeletonLoader({
 }: { 
   className?: string; 
   lines?: number; 
-  height?: string; 
+  height?: string, 
 }) {
   return (
     <div className={`space-y-3 ${className}`}>
@@ -160,10 +159,10 @@ export function SkeletonLoader({
 // Page loading component;
 export function PageLoader({
   text = "Loading page...",
-  className;
+  className,
 }: {
   text?: string;
-  className?: string;
+  className?: string,
 }) {
   return (
     <div className={cn("min-h-screen flex items-center justify-center", className)}>
@@ -177,10 +176,10 @@ export function PageLoader({
 // Button loading state;
 export function ButtonLoader({
   size = "sm",
-  className;
+  className,
 }: {
-  size?: "sm" | "md" | "lg";
-  className?: string;
+  size?: "sm" | "md" | "lg",
+  className?: string,
 }) {
   return (
     <div className={cn("inline-flex items-center", className)}>
@@ -189,10 +188,10 @@ export function ButtonLoader({
 // Page loading overlay;
 export function PageLoader({ 
   text = "Loading page...",
-  showSpinner = true; 
+  showSpinner = true, 
 }: { 
   text?: string; 
-  showSpinner?: boolean; 
+  showSpinner?: boolean, 
 }) {
   return (
     <motion.div;
@@ -222,7 +221,7 @@ export function ContentPlaceholder({
   variant = "default"
 }: { 
   className?: string; 
-  variant?: "default" | "card" | "list" | "grid"; 
+  variant?: "default" | "card" | "list" | "grid", 
 }) {
   const variants = {
     default: "space-y-4",

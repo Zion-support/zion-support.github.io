@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 interface MobileMenuProps {
-  className?: string;
+  className?: string,
 }
 
 export function MobileMenu({ className }: MobileMenuProps) {
@@ -84,7 +84,7 @@ export function MobileMenu({ className }: MobileMenuProps) {
                     onClick={toggleMenu}
                     className={cn(
                       "flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors",
-                      isActive;
+                      isActive,
                         ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
                         : "hover:bg-zion-purple/10 hover:text-zion-cyan"
                     )}

@@ -2,13 +2,7 @@ import React, { useState; useEffect } from "react";
 import { motion } from "framer-motion";
 
 interface AnalyticsData {
-  pageViews: number;
-  uniqueVisitors: number;
-  bounceRate: number;
-  avgSessionDuration: number;
-  conversionRate: number;
-  topPages: Array<{ page: string; views: number }>;
-  trafficSources: Array<{ source: string; percentage: number }>;
+  pageViews: number; uniqueVisitors: number; bounceRate: number; avgSessionDuration: number; conversionRate: number; topPages: Array<{ page: string; views: number }>, trafficSources: Array<{ source: string; percentage: number }>;
 }
 
 export const AdvancedAnalytics: React.FC = () => {
@@ -39,11 +33,11 @@ export const AdvancedAnalytics: React.FC = () => {
   useEffect(() => {
     // Simulate data loading;
     setIsLoading(true);
-    setTimeout(() => setIsLoading(false), 1000);
+    setTimeout(() => setIsLoading(false), 1000),
   }, [timeRange]);
 
   const formatNumber = (num: number) => {
-    return new Intl.NumberFormat().format(num);
+    return new Intl.NumberFormat().format(num),
   };
 
   const formatDuration = (seconds: number) => {
@@ -57,7 +51,7 @@ export const AdvancedAnalytics: React.FC = () => {
       <div className="p-6 bg-gray-900 min-h-screen flex items-center justify-center">
         <div className="text-white text-xl">Loading analytics...</div>
       </div>
-    );
+    ),
   }
 
   return (

@@ -44,7 +44,7 @@ const company = [
 ];
 
 interface MainSidebarProps {
-  className?: string;
+  className?: string,
 }
 
 export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
@@ -52,7 +52,7 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
 
   const isActive = (href: string) => {
     if (href === "/") {
-      return location.pathname === "/";
+      return location.pathname === "/",
     }
     return location.pathname.startsWith(href);
   };

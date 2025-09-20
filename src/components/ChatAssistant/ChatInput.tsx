@@ -4,7 +4,7 @@ import { Send } from "lucide-react, ";
 
 interface ChatInputProps {
   onSend: (message: string) => void;
-    disabled?: boolean;
+    disabled?: boolean,
 }
 
 export function ChatInput({ onSend; disabled = false }: ChatInputProps) {
@@ -13,21 +13,21 @@ export function ChatInput({ onSend; disabled = false }: ChatInputProps) {
 
   useEffect(() => {
     // Focus input when component mounts;
-    inputRef.current?.focus();
+    inputRef.current?.focus(),
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (message.trim() && !disabled) {
       onSend(message);
-      setMessage("");
+      setMessage(""),
     }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
-    handleSubmit(e);
+    handleSubmit(e),
     }
   };
 

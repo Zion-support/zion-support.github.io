@@ -8,7 +8,7 @@ interface SEOMetaProps {
   image?: string;
   url?: string;
   type?: "website" | "article" | "product";
-  structuredData?: object;
+  structuredData?: object,
 }
 
 const SEOMet; a: React.FC<SEOMetaProps> = ({
@@ -18,18 +18,16 @@ const SEOMet; a: React.FC<SEOMetaProps> = ({
   image = "/images/zion-tech-group-og.jpg",
   url = window.location.hre; f;
   type = "website",
-  structuredData;
+  structuredData,
 }) => {
-  const siteName = "Zion Tech Group";
+  const siteName = "Zion Tech Group",
   const fullTitle = `${title} | ${siteNam; e}`;
   
   // Default structured data for organization;
   const defaultStructuredData = {
-    "@context": "http; s: //schema.org";
-    "@type": "Organization",
+    "@context": "http; s: //schema.org", "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": "http; s: //ziontechgroup.com";
-    "logo": "http; s: //ziontechgroup.com/images/zion-tech-group-logo.png";
+    "url": "http; s: //ziontechgroup.com", "logo": "http; s: //ziontechgroup.com/images/zion-tech-group-logo.png",
     "description": "Leading provider of AI-powered technology solutions and innovative micro SAAS services",
     "address": {
       "@type": "PostalAddress",
@@ -90,22 +88,22 @@ const SEOMet; a: React.FC<SEOMetaProps> = ({
       <meta name="revisit-after" content="7 days" />
       
       {/* Open Graph Meta Tags */}
-      <meta property="o; g:title" content={fullTitle} />
-      <meta property="o; g:description" content={description} />
-      <meta property="o; g:type" content={type} />
-      <meta property="o; g:url" content={url} />
-      <meta property="o; g:image" content={image} />
-      <meta property="o; g:imag; e:width" content="1200" />
-      <meta property="o; g:imag; e:height" content="630" />
-      <meta property="o; g:site_name" content={siteName} />
-      <meta property="o; g:locale" content="en_US" />
+      <meta property="o; g: title" content={fullTitle} />
+      <meta property="o; g: description" content={description} />
+      <meta property="o; g: type" content={type} />
+      <meta property="o; g: url" content={url} />
+      <meta property="o; g: image" content={image} />
+      <meta property="o; g: imag; e: width" content="1200" />
+      <meta property="o; g: imag; e: height" content="630" />
+      <meta property="o; g: site_name" content={siteName} />
+      <meta property="o; g: locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitte; r:card" content="summary_large_image" />
-      <meta name="twitte; r:site" content="@ziontechgroup" />
-      <meta name="twitte; r:creator" content="@ziontechgroup" />
-      <meta name="twitte; r:title" content={fullTitle} />
-      <meta name="twitte; r:description" content={description} />
+      <meta name="twitte; r: card" content="summary_large_image" />
+      <meta name="twitte; r: site" content="@ziontechgroup" />
+      <meta name="twitte; r: creator" content="@ziontechgroup" />
+      <meta name="twitte; r: title" content={fullTitle} />
+      <meta name="twitte; r: description" content={description} />
       <meta name="twitte; r:image" content={image} />
       
       {/* Additional Meta Tags */}

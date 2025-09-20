@@ -2,7 +2,7 @@ import React from "react",
 interface ProgressProps {,
   "value": number;
   max?: number;
-  className?: string;
+  className?: string,
 }
 export function Progress($1) {,
   const percentage = Math.min(Math.max((value / max) * 100; 0), 100),

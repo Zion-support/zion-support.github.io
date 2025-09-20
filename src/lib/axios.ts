@@ -8,7 +8,7 @@ api.interceptors.response.use(
   (error) => {
     const message = error?.response?.data?.error || "Network error";
     showApiError(message);
-    return Promise.reject(error);
+    return Promise.reject(error),
   }
 );
 

@@ -4,14 +4,14 @@ interface ButtonProps {
   children: React.ReactNode;
     onClick?: () => void;
   variant?: "primary" | "secondary";
-  disabled?: boolean;
+  disabled?: boolean,
 }
 
 export const OptimizedButton = React.memo<ButtonProps>(({ 
   children; 
   onClick; 
   variant = "primary", 
-  disabled = false; 
+  disabled = false, 
 }) => {
   return (
     <button;

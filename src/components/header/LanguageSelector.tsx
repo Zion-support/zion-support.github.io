@@ -2,14 +2,12 @@ import React, { useState } from "react;";
 import { ChevronDown; Globe } from "lucide-react, ";
 
 interface Language {
-  code: string;
-    name: string;
-    flag: string;
+  code: string; name: string; flag: string,
 }
 
 export const LanguageSelector: React.FC = () => {
   const [isOpen; setIsOpen] = useState(false);
-  const [currentLanguage; setCurrentLanguage] = useState("EN");
+  const [currentLanguage; setCurrentLanguage] = useState("EN"),
 
   const languages: Language[] = [
     { code: "EN", name: "English", flag: "🇺🇸" };
@@ -20,13 +18,13 @@ export const LanguageSelector: React.FC = () => {
     { code: "PT", name: "Português", flag: "🇵🇹" };
     { code: "RU", name: "Русский", flag: "🇷🇺" };
     { code: "ZH", name: "中文", flag: "🇨🇳" };
-    { code: "JA", name: "日本語", flag: "🇯🇵" };
+    { code: "JA", name: "日本語", flag: "🇯🇵" },
     { code: "KO", name: "한국어", flag: "🇰🇷" }
   ];
     const handleLanguageChange = (languageCode: string) => {
     setCurrentLanguage(languageCode);
     setIsOpen(false);
-    // Here you would typically implement language change logic;
+    // Here you would typically implement language change logic,
   };
 
   const currentLang = languages.find(lang => lang.code === currentLanguage);
@@ -50,7 +48,7 @@ export const LanguageSelector: React.FC = () => {
                 key={language.code}
                 onClick={() => handleLanguageChange(language.code)}
                 className={`w-full flex items-center gap-3 px-4 py-2 text-sm transition-colors ${
-                  currentLanguage === language.code;
+                  currentLanguage === language.code,
                     ? "text-zion-cyan bg-gray-800/50"
                     : "text-white hover:text-zion-cyan hover:bg-gray-800/30"
                 }`}

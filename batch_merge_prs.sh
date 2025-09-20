@@ -1,159 +1,166 @@
 #!/bin/bash
 
-# Batch Merge PRs Script - Process PRs in smaller batches
+# Batch Merge PRs Script - Process branches in smaller batches
 set -e
 
-echo "🚀 Starting Batch Merge PRs Process..."
+echo "🚀 Starting batch merge process for open PRs..."
 echo "⏰ Started at: $(date)"
+echo "---"
 
-# Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m' # No Color
-
-print_status() {
-    echo -e "${BLUE}[INFO]${NC} $1"
-}
-
-print_success() {
-    echo -e "${GREEN}[SUCCESS]${NC} $1"
-}
-
-print_warning() {
-    echo -e "${YELLOW}[WARNING]${NC} $1"
-}
-
-print_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
-}
-
-# Ensure we're on main and it's up to date
-print_status "Ensuring main branch is up to date..."
-git checkout main
-git pull origin main
-
-# Get the first 20 PR numbers
-PR_NUMBERS=$(grep -o '"number": [0-9]*' /workspace/current_prs.json | grep -o '[0-9]*' | head -20)
-
-print_status "Processing first 20 PRs: $PR_NUMBERS"
-
-# Initialize counters
+# Configuration
+BATCH_SIZE=100
+MAX_BATCHES=10
 SUCCESSFUL_MERGES=0
 FAILED_MERGES=0
-TOTAL_PROCESSED=0
+SKIPPED_BRANCHES=0
 
-# Function to merge a PR by number
-merge_pr() {
-    local pr_number="$1"
+# Create backup
+BACKUP_BRANCH="batch-backup-$(date +%Y%m%d-%H%M%S)"
+echo "🔒 Creating backup branch: $BACKUP_BRANCH"
+git checkout -b "$BACKUP_BRANCH"
+git push origin "$BACKUP_BRANCH"
+git checkout main
+
+# Function to resolve conflicts
+resolve_conflicts() {
+    local file="$1"
+    echo "🔧 Resolving conflicts in $file"
     
-    print_status "Processing PR #$pr_number..."
+    case "$file" in
+        "package.json"|"package-lock.json"|"yarn.lock"|"pnpm-lock.yaml")
+            git checkout --ours "$file" 2>/dev/null || true
+            ;;
+        "netlify.toml"|"next.config.js"|"tsconfig.json"|"tailwind.config.js"|"vite.config.ts")
+            git checkout --ours "$file" 2>/dev/null || true
+            ;;
+        "src/App.tsx"|"src/App.css"|"src/main.tsx"|"src/index.css")
+            git checkout --ours "$file" 2>/dev/null || true
+            ;;
+        "README.md"|"*.md")
+            git checkout --ours "$file" 2>/dev/null || true
+            ;;
+        *)
+            git checkout --ours "$file" 2>/dev/null || true
+            ;;
+    esac
     
-    # Try to find the branch associated with this PR
-    # Look for branches that might be related to this PR
-    local branch_candidates=$(git branch -r | grep -E "(pr-$pr_number|$pr_number|cursor/.*$pr_number)" | head -1)
+    git add "$file" 2>/dev/null || true
+}
+
+# Function to merge a single branch
+merge_branch() {
+    local branch="$1"
     
-    if [ -z "$branch_candidates" ]; then
-        # Try to find any branch that might be related
-        branch_candidates=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | head -1)
-    fi
+    echo "🔄 Processing: $branch"
     
-    if [ -z "$branch_candidates" ]; then
-        print_warning "No branch found for PR #$pr_number, skipping..."
+    # Skip if branch doesn't exist or is already merged
+    if ! git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
+        echo "⏭️ Branch $branch doesn't exist"
+        ((SKIPPED_BRANCHES++))
         return 1
     fi
     
-    local branch_name=${branch_candidates#origin/}
-    print_status "Attempting to merge branch: $branch_name"
-    
-    # Fetch the branch
-    git fetch origin "$branch_name" 2>/dev/null || {
-        print_error "Failed to fetch branch $branch_name"
+    if git branch --merged main | grep -q "$branch" 2>/dev/null; then
+        echo "⏭️ Branch $branch already merged"
+        ((SKIPPED_BRANCHES++))
         return 1
-    }
+    fi
     
-    # Try to merge
-    if git merge --no-commit --no-ff "origin/$branch_name" 2>/dev/null; then
-        print_success "Successfully merged $branch_name"
-        git commit -m "Merge PR #$pr_number - $branch_name - $(date)" 2>/dev/null || true
-        SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
+    # Fetch and merge
+    if ! git fetch origin "$branch" 2>/dev/null; then
+        echo "⚠️ Could not fetch $branch"
+        ((SKIPPED_BRANCHES++))
+        return 1
+    fi
+    
+    if git merge --no-edit "origin/$branch" 2>/dev/null; then
+        echo "✅ Merged $branch"
+        ((SUCCESSFUL_MERGES++))
         return 0
     else
-        print_warning "Merge conflicts detected in $branch_name, attempting resolution..."
+        echo "⚠️ Conflicts in $branch - resolving..."
         
-        # Get conflicted files
-        local conflicted_files=$(git diff --name-only --diff-filter=U 2>/dev/null || true)
-        
-        if [ -n "$conflicted_files" ]; then
-            print_status "Resolving conflicts in: $conflicted_files"
-            
-            # Resolve conflicts by preferring main branch for config files
-            for file in $conflicted_files; do
-                if [[ "$file" == "package.json" ]] || [[ "$file" == "package-lock.json" ]] || [[ "$file" == "yarn.lock" ]]; then
-                    git checkout --ours "$file" 2>/dev/null || true
-                elif [[ "$file" == "netlify.toml" ]] || [[ "$file" == "next.config.js" ]] || [[ "$file" == "tsconfig.json" ]]; then
-                    git checkout --ours "$file" 2>/dev/null || true
-                else
-                    # For other files, try to merge both versions
-                    git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
+        # Resolve conflicts
+        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U 2>/dev/null || true)
+        if [ -n "$CONFLICTED_FILES" ]; then
+            for file in $CONFLICTED_FILES; do
+                if [ -f "$file" ]; then
+                    resolve_conflicts "$file"
                 fi
             done
             
-            # Add resolved files
-            git add . 2>/dev/null || true
-            
-            # Commit the merge
-            if git commit -m "Resolve conflicts for PR #$pr_number - $branch_name - $(date)" 2>/dev/null; then
-                print_success "Successfully resolved conflicts and merged $branch_name"
-                SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
+            if git commit --no-edit 2>/dev/null; then
+                echo "✅ Resolved conflicts and merged $branch"
+                ((SUCCESSFUL_MERGES++))
                 return 0
-            else
-                print_error "Failed to commit resolved conflicts for $branch_name"
-                git merge --abort 2>/dev/null || true
-                FAILED_MERGES=$((FAILED_MERGES + 1))
-                return 1
             fi
-        else
-            print_error "No conflicted files found, but merge failed. Aborting..."
-            git merge --abort 2>/dev/null || true
-            FAILED_MERGES=$((FAILED_MERGES + 1))
-            return 1
         fi
+        
+        echo "❌ Failed to merge $branch"
+        git merge --abort 2>/dev/null || true
+        ((FAILED_MERGES++))
+        return 1
     fi
 }
 
-# Process each PR
-for pr_number in $PR_NUMBERS; do
-    TOTAL_PROCESSED=$((TOTAL_PROCESSED + 1))
-    print_status "[$TOTAL_PROCESSED/20] Processing PR #$pr_number"
-    
-    if merge_pr "$pr_number"; then
-        print_success "PR #$pr_number processed successfully"
-    else
-        print_error "Failed to process PR #$pr_number"
+# Get branches to process
+echo "📋 Fetching branches..."
+git fetch --all
+
+# Get cursor branches (limit to first 1000 for this batch)
+CURSOR_BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///' | sed 's/^[[:space:]]*//' | head -1000)
+CODEX_BRANCHES=$(git branch -r | grep "origin/codex/" | sed 's/origin\///' | sed 's/^[[:space:]]*//' | head -500)
+
+ALL_BRANCHES=$(echo -e "$CURSOR_BRANCHES\n$CODEX_BRANCHES" | sort -u | head -1000)
+TOTAL_BRANCHES=$(echo "$ALL_BRANCHES" | wc -l)
+
+echo "📊 Processing $TOTAL_BRANCHES branches in batches of $BATCH_SIZE"
+echo "---"
+
+# Process branches
+PROCESSED=0
+for branch in $ALL_BRANCHES; do
+    if [ -n "$branch" ]; then
+        if merge_branch "$branch"; then
+            echo "✅ Success"
+        else
+            echo "❌ Failed"
+        fi
+        
+        ((PROCESSED++))
+        
+        # Progress update every batch
+        if [ $((PROCESSED % BATCH_SIZE)) -eq 0 ]; then
+            echo "📊 Progress: $PROCESSED/$TOTAL_BRANCHES"
+            echo "✅ Successful: $SUCCESSFUL_MERGES"
+            echo "❌ Failed: $FAILED_MERGES"
+            echo "⚠️ Skipped: $SKIPPED_BRANCHES"
+            echo "---"
+            
+            # Push progress
+            git push origin main
+        fi
     fi
-    
-    # Push changes every 5 merges
-    if [ $((SUCCESSFUL_MERGES % 5)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
-        print_status "Pushing progress to remote..."
-        git push origin main 2>/dev/null || print_warning "Could not push main"
-    fi
-    
-    echo "---"
 done
 
 # Final push
-print_status "Pushing final changes to remote..."
-git push origin main 2>/dev/null || print_warning "Could not push main"
+echo "💾 Final push..."
+git push origin main
 
 # Summary
 echo ""
-print_success "Batch merge process completed!"
-echo "📊 Summary:"
-echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
-echo "   ❌ Failed merges: $FAILED_MERGES"
-echo "   📈 Total processed: $TOTAL_PROCESSED"
-echo "⏰ Completed at: $(date)"
+echo "🎉 Batch merge completed!"
+echo "✅ Successful: $SUCCESSFUL_MERGES"
+echo "❌ Failed: $FAILED_MERGES"
+echo "⚠️ Skipped: $SKIPPED_BRANCHES"
+echo "📋 Total: $PROCESSED"
+echo "🔒 Backup: $BACKUP_BRANCH"
+echo "⏰ Finished: $(date)"
 
-print_success "🎉 First batch of PRs processed!"
+# Test build
+echo "🧪 Testing build..."
+if npm run build; then
+    echo "✅ Build successful!"
+else
+    echo "❌ Build failed - manual intervention needed"
+fi

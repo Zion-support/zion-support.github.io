@@ -2,7 +2,7 @@ import React from "react";
 import { ForumPost } from "@/types/community";
 
 interface PostCardProps {
-  post: ForumPost;
+  post: ForumPost,
 }
 
 export default function PostCard({ post }: PostCardProps) {
@@ -29,13 +29,7 @@ export default function PostCard({ post }: PostCardProps) {
 
 interface PostCardProps {
   post: {
-    id: string;
-    title: string;
-    content: string;
-    authorName: string;
-    createdAt: string;
-    likes: number;
-    replies: number;
+    id: string; title: string; content: string; authorName: string; createdAt: string; likes: number; replies: number,
   };
 }
 

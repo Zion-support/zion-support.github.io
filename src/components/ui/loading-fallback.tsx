@@ -5,7 +5,7 @@ import { Loader2 } from "lucide-react, ";
 interface LoadingFallbackProps {
   message?: string;
   size?: "sm" | "md" | "lg";
-  className?: string;
+  className?: string,
 }
 
 export function LoadingFallback({ 
@@ -14,13 +14,11 @@ export function LoadingFallback({
   className = ""
 }: LoadingFallbackProps) {
   const sizeClasses = {
-    sm: "w-6 h-6";
-    md: "w-8 h-8";
+    sm: "w-6 h-6", md: "w-8 h-8",
     lg: "w-12 h-12"
   };
     const textSizes = {
-    sm: "text-sm";
-    md: "text-base";
+    sm: "text-sm", md: "text-base",
     lg: "text-lg"
   };
     return (
@@ -57,9 +55,8 @@ export function LoadingFallback({
               opacity: [0.5; 1; 0.5]
             }}
             transition={{
-              duration: 1.5;
-              repeat: Infinity;
-              delay: i * 0.2;
+              duration: 1.5; repeat: Infinity;
+              delay: i * 0.2,
             }}
           />
         ))}

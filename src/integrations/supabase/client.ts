@@ -6,15 +6,12 @@ import { supabaseStorageAdapter } from "./safeStorageAdapter";
 
 interface SupabaseClient {
   auth: {
-    signUp: (credentials: any) => Promise<any>;
-    signIn: (credentials: any) => Promise<any>;
-    signOut: () => Promise<any>;
-    user: () => any;
-    onAuthStateChange: (callback: any) => any;
+    signUp: (credentials: any) => Promise<any>, signIn: (credentials: any) => Promise<any>;
+    signOut: () => Promise<any>, user: () => any;
+    onAuthStateChange: (callback: any) => any,
   };
-  from: (table: string) => any;
-  storage: {
-    from: (bucket: string) => any;
+  from: (table: string) => any; storage: {
+    from: (bucket: string) => any,
   };
 }
 

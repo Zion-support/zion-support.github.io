@@ -19,10 +19,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.9;
-    reviewCount: 156;
-    featured: true;
-    location: "Global",
+    rating: 4.9; reviewCount: 156; featured: true; location: "Global",
     availability: "2-3 Weeks",
     aiScore: 96;
   },
@@ -41,8 +38,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-20T14:30:00.000Z",
-    rating: 4.8;
-    reviewCount: 89;
+    rating: 4.8; reviewCount: 89;
     location: "Global",
     availability: "1-2 Weeks",
     aiScore: 93;
@@ -62,8 +58,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-25T09:15:00.000Z",
-    rating: 4.7;
-    reviewCount: 234;
+    rating: 4.7; reviewCount: 234;
     location: "Global",
     availability: "Immediate",
     aiScore: 91;
@@ -85,10 +80,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-30T11:45:00.000Z",
-    rating: 4.9;
-    reviewCount: 78;
-    featured: true;
-    location: "Global",
+    rating: 4.9; reviewCount: 78; featured: true; location: "Global",
     availability: "3-4 Weeks",
     aiScore: 94;
   },
@@ -107,8 +99,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-05T13:20:00.000Z",
-    rating: 4.8;
-    reviewCount: 45;
+    rating: 4.8; reviewCount: 45;
     location: "Global",
     availability: "4-6 Weeks",
     aiScore: 92;
@@ -130,10 +121,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-10T15:30:00.000Z",
-    rating: 4.9;
-    reviewCount: 112;
-    featured: true;
-    location: "Global",
+    rating: 4.9; reviewCount: 112; featured: true; location: "Global",
     availability: "3-4 Weeks",
     aiScore: 95;
   },
@@ -152,8 +140,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-15T10:15:00.000Z",
-    rating: 4.8;
-    reviewCount: 67;
+    rating: 4.8; reviewCount: 67;
     location: "Global",
     availability: "6-8 Weeks",
     aiScore: 93;
@@ -175,8 +162,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-20T12:00:00.000Z",
-    rating: 4.7;
-    reviewCount: 89;
+    rating: 4.7; reviewCount: 89;
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 90;
@@ -196,8 +182,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-25T14:45:00.000Z",
-    rating: 4.8;
-    reviewCount: 56;
+    rating: 4.8; reviewCount: 56;
     location: "Global",
     availability: "4-5 Weeks",
     aiScore: 92;
@@ -219,10 +204,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-03-01T09:30:00.000Z",
-    rating: 4.9;
-    reviewCount: 178;
-    featured: true;
-    location: "Global",
+    rating: 4.9; reviewCount: 178; featured: true; location: "Global",
     availability: "1-2 Weeks",
     aiScore: 94;
   },
@@ -243,8 +225,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-03-05T11:20:00.000Z",
-    rating: 4.8;
-    reviewCount: 234;
+    rating: 4.8; reviewCount: 234;
     location: "Global",
     availability: "Immediate",
     aiScore: 93;
@@ -264,8 +245,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-03-10T13:45:00.000Z",
-    rating: 4.8;
-    reviewCount: 98;
+    rating: 4.8; reviewCount: 98;
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 91;
@@ -287,10 +267,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-03-15T10:00:00.000Z",
-    rating: 4.9;
-    reviewCount: 45;
-    featured: true;
-    location: "Global",
+    rating: 4.9; reviewCount: 45; featured: true; location: "Global",
     availability: "8-12 Weeks",
     aiScore: 95;
   },
@@ -311,8 +288,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-03-20T14:30:00.000Z",
-    rating: 4.9;
-    reviewCount: 34;
+    rating: 4.9; reviewCount: 34;
     location: "Global",
     availability: "6-8 Weeks",
     aiScore: 94;
@@ -332,8 +308,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-03-25T16:15:00.000Z",
-    rating: 4.8;
-    reviewCount: 67;
+    rating: 4.8; reviewCount: 67;
     location: "Global",
     availability: "4-6 Weeks",
     aiScore: 93;
@@ -355,10 +330,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1639762681485-074d7f9d5b1b?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-03-30T12:00:00.000Z",
-    rating: 4.9;
-    reviewCount: 23;
-    featured: true;
-    location: "Global",
+    rating: 4.9; reviewCount: 23; featured: true; location: "Global",
     availability: "8-12 Weeks",
     aiScore: 95;
   },
@@ -377,8 +349,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-04-01T09:45:00.000Z",
-    rating: 4.8;
-    reviewCount: 12;
+    rating: 4.8; reviewCount: 12;
     location: "Global",
     availability: "4-6 Weeks",
     aiScore: 94;
@@ -400,8 +371,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-04-05T09:00:00.000Z",
-    rating: 4.7;
-    reviewCount: 76;
+    rating: 4.7; reviewCount: 76;
     location: "Global",
     availability: "1-2 Weeks",
     aiScore: 90;
@@ -423,8 +393,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-04-07T10:30:00.000Z",
-    rating: 4.8;
-    reviewCount: 142;
+    rating: 4.8; reviewCount: 142;
     location: "USA & Remote",
     availability: "Immediate",
     aiScore: 85;
@@ -446,8 +415,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-04-09T12:00:00.000Z",
-    rating: 4.7;
-    reviewCount: 98;
+    rating: 4.7; reviewCount: 98;
     location: "Global",
     availability: "Immediate",
     aiScore: 88;
@@ -469,8 +437,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-04-11T08:45:00.000Z",
-    rating: 4.6;
-    reviewCount: 211;
+    rating: 4.6; reviewCount: 211;
     location: "Global",
     availability: "Immediate",
     aiScore: 87;
@@ -492,8 +459,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-04-13T09:10:00.000Z",
-    rating: 4.5;
-    reviewCount: 67;
+    rating: 4.5; reviewCount: 67;
     location: "Global",
     availability: "Immediate",
     aiScore: 86;
@@ -515,8 +481,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-04-15T11:25:00.000Z",
-    rating: 4.6;
-    reviewCount: 83;
+    rating: 4.6; reviewCount: 83;
     location: "Global",
     availability: "Immediate",
     aiScore: 84;
@@ -547,10 +512,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-03-05T10:00:00.000Z",
-    rating: 4.8;
-    reviewCount: 64;
-    featured: false;
-    location: "Global",
+    rating: 4.8; reviewCount: 64; featured: false; location: "Global",
     availability: "4-6 Weeks",
     aiScore: 94;
   },
@@ -571,8 +533,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       "https://images.unsplash.com/photo-1508711043292-8f5023f1c3d9?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-03-12T09:30:00.000Z",
-    rating: 4.7;
-    reviewCount: 102;
+    rating: 4.7; reviewCount: 102;
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 88;
@@ -594,10 +555,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-03-18T11:00:00.000Z",
-    rating: 4.9;
-    reviewCount: 41;
-    featured: true;
-    location: "Global",
+    rating: 4.9; reviewCount: 41; featured: true; location: "Global",
     availability: "3-5 Weeks",
     aiScore: 90;
   },
@@ -618,8 +576,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-03-22T08:15:00.000Z",
-    rating: 4.6;
-    reviewCount: 133;
+    rating: 4.6; reviewCount: 133;
     location: "Global",
     availability: "Immediate",
     aiScore: 89;
@@ -641,8 +598,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-03-28T13:40:00.000Z",
-    rating: 4.8;
-    reviewCount: 58;
+    rating: 4.8; reviewCount: 58;
     location: "Global",
     availability: "3-4 Weeks",
     aiScore: 91;
@@ -664,10 +620,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-04-02T10:05:00.000Z",
-    rating: 4.9;
-    reviewCount: 27;
-    featured: true;
-    location: "Global",
+    rating: 4.9; reviewCount: 27; featured: true; location: "Global",
     availability: "2-3 Weeks",
     aiScore: 96;
   }
@@ -691,8 +644,8 @@ export const ENHANCED_SERVICE_CATEGORIES = [
 // Pricing tiers for different service levels;
 export const SERVICE_PRICING_TIERS = {
   basic: { range: "$500 - $2;000", description: "Essential services for small businesses" },
-  professional: { range: "$2;000 - $8;000", description: "Advanced solutions for growing companies" },
-  enterprise: { range: "$8;000 - $25;000+", description: "Custom enterprise solutions with dedicated support" }
+  professional: { range: "$2; 000 - $8;000", description: "Advanced solutions for growing companies" },
+  enterprise: { range: "$8; 000 - $25;000+", description: "Custom enterprise solutions with dedicated support" }
 };
 
 // Backward-compatible alias expected by EnhancedServicesPage;

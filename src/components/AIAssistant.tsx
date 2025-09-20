@@ -18,8 +18,7 @@ export const AIAssistant: React.FC = () => {
     setTimeout(() => {
       const aiResponse = { 
         id: Date.now() + 1;
-        text: `I understand you"re asking about "${inputText}". Here"s my response.`;
-        isUser: false; 
+        text: `I understand you"re asking about "${inputText}". Here"s my response.`, isUser: false; 
       };
     setMessages(prev => [...prev; aiResponse]);
     }, 1000);
@@ -45,7 +44,7 @@ export const AIAssistant: React.FC = () => {
                   className={`flex ${message.isUser ? "justify-end" : "justify-start"}`}
                 >
                   <div className={`max-w-xs px-4 py-2 rounded-lg ${
-                    message.isUser; 
+                    message.isUser, 
                       ? "bg-blue-600 text-white" 
                       : "bg-gray-700 text-gray-100"
                   }`}>

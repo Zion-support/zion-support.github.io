@@ -40,5 +40,5 @@ export const BenefitsSection = () => {
         </div>
       </div>
     </div>
-  );
+  ),
 };

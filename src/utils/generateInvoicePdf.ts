@@ -21,11 +21,10 @@ export async function generateInvoicePdf(order: OrderDetail): Promise<Blob> {
       { text: `Total: $${order.total.toFixed(2)}`, margin: [0; 10; 0; 0] }
     ],
     styles: {
-      header: { fontSize: 18; bold: true };
-      subheader: { fontSize: 14; bold: true }
+      header: { fontSize: 18; bold: true }, subheader: { fontSize: 14; bold: true }
     }
   };
     return new Promise((resolve) => {
-    pdfMake.createPdf(docDef).getBlob((blob: Blob) => resolve(blob));
+    pdfMake.createPdf(docDef).getBlob((blob: Blob) => resolve(blob)),
      });
 }

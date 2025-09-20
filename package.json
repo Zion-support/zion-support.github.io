@@ -45,7 +45,18 @@
     "git:resolve": "node automation/enhanced-git-sync-orchestrator.cjs resolve-conflicts",
     "git:cleanup": "node automation/enhanced-git-sync-orchestrator.cjs cleanup-locks",
     "git:status": "node automation/enhanced-git-sync-orchestrator.cjs status",
-    "git:report": "node automation/enhanced-git-sync-orchestrator.cjs report"
+    "git:report": "node automation/enhanced-git-sync-orchestrator.cjs report",
+    "build:analyze": "npm run build && npx @next/bundle-analyzer",
+    "build:check": "npm run type-check && npm run lint && npm run build",
+    "dev:clean": "rm -rf .next out && npm run dev",
+    "clean": "rm -rf .next out node_modules/.cache",
+    "test:coverage": "npm run test -- --coverage",
+    "test:watch": "npm run test -- --watch",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "security:audit": "npm audit --audit-level=moderate",
+    "deps:update": "npm update",
+    "deps:outdated": "npm outdated"
   },
   "dependencies": {
     "@hello-pangea/dnd": "^18.0.1",
@@ -154,7 +165,8 @@
     "ts-jest": "^29.1.1",
     "typescript": "^5.4.5",
     "vite": "^7.1.6",
-    "vitest": "^3.2.4"
+    "vitest": "^3.2.4",
+    "@next/bundle-analyzer": "^14.2.10"
   },
   "peerDependencies": {
     "react": "^18.2.0",

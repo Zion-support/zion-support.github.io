@@ -1,363 +1,197 @@
-'use client';
+'use client'
 
-import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
+import React, { useState, useEffect } from 'react'
+import { Search, Sparkles, ArrowRight } from 'lucide-react'
 
 interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  url: string;
-  category: string;
-  relevance: number;
-  type: 'page' | 'service' | 'tool' | 'blog';
+  id: string
+  title: string
+  description: string
+  category: string
+  url: string
+  relevance: number
 }
 
-interface AIPoweredSearchProps {
-  placeholder?: string;
-  showSuggestions?: boolean;
-  maxResults?: number;
-}
+const AIPoweredSearch: React.FC = () => {
+  const [query, setQuery] = useState('')
+  const [results, setResults] = useState<SearchResult[]>([])
+  const [isSearching, setIsSearching] = useState(false)
+  const [showResults, setShowResults] = useState(false)
 
-const AIPoweredSearch: React.FC<AIPoweredSearchProps> = ({
-  placeholder = "Search AI solutions, services, and tools...",
-  showSuggestions = true,
-  maxResults = 8
-}) => {
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [showResults, setShowResults] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
-  const searchRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  // Sample search data - in a real app, this would come from an API
-  const searchData: SearchResult[] = [
+  // Mock search results - in production, this would connect to a real AI search API
+  const mockResults: SearchResult[] = [
     {
       id: '1',
       title: 'AI Automation Solutions',
-      description: 'Transform your business with intelligent automation that reduces manual work by 80%',
-      url: '/ai-2025',
-      category: 'Services',
-      relevance: 95,
-      type: 'service'
+      description: 'Comprehensive AI automation services to streamline your business operations',
+      category: 'AI Services',
+      url: '/services/ai-automation',
+      relevance: 0.95
     },
     {
       id: '2',
       title: 'Micro SaaS Development',
-      description: 'Build and deploy scalable SaaS applications tailored to your business needs',
-      url: '/automation',
-      category: 'Services',
-      relevance: 90,
-      type: 'service'
+      description: 'Custom micro SaaS applications built for rapid deployment and scaling',
+      category: 'Development',
+      url: '/services/micro-saas',
+      relevance: 0.88
     },
     {
       id: '3',
-      title: 'AI ROI Calculator',
-      description: 'Calculate the return on investment for AI implementation in your business',
-      url: '/tools/ai-roi-calculator',
-      category: 'Tools',
-      relevance: 85,
-      type: 'tool'
+      title: 'Enterprise AI Consulting',
+      description: 'Strategic AI consulting to transform your enterprise operations',
+      category: 'Consulting',
+      url: '/services/ai-consulting',
+      relevance: 0.82
     },
     {
       id: '4',
-      title: 'Autonomous Systems 2026',
-      description: 'Self-managing business operations powered by advanced AI',
-      url: '/autonomous-systems-2026',
-      category: 'Services',
-      relevance: 88,
-      type: 'service'
+      title: 'Quantum Computing Solutions',
+      description: 'Next-generation quantum computing services for complex problem solving',
+      category: 'Advanced Tech',
+      url: '/services/quantum-computing',
+      relevance: 0.79
     },
     {
       id: '5',
-      title: 'AI Readiness Assessment',
-      description: 'Evaluate your organization\'s readiness for AI transformation',
-      url: '/tools/ai-readiness-assessment',
-      category: 'Tools',
-      relevance: 82,
-      type: 'tool'
-    },
-    {
-      id: '6',
-      title: 'Enterprise AI Platform',
-      description: 'Comprehensive AI solutions for enterprise-scale operations',
-      url: '/services',
-      category: 'Services',
-      relevance: 92,
-      type: 'service'
-    },
-    {
-      id: '7',
-      title: 'AI Trends 2025-2030',
-      description: 'Comprehensive future predictions for AI technology trends',
-      url: '/blog/ai-trends-2025-2030-comprehensive-future-predictions',
-      category: 'Blog',
-      relevance: 75,
-      type: 'blog'
-    },
-    {
-      id: '8',
-      title: 'Quantum AI Solutions',
-      description: 'Next-generation quantum AI technologies for breakthrough results',
-      url: '/tools/quantum-ai-readiness-assessment-2026',
-      category: 'Tools',
-      relevance: 78,
-      type: 'tool'
+      title: 'AI-Powered Analytics',
+      description: 'Advanced analytics and insights powered by artificial intelligence',
+      category: 'Analytics',
+      url: '/services/ai-analytics',
+      relevance: 0.76
     }
-  ];
+  ]
 
-  // Simulate AI-powered search with intelligent filtering and ranking
-  const performSearch = async (searchQuery: string) => {
+  const handleSearch = async (searchQuery: string) => {
     if (!searchQuery.trim()) {
-      setResults([]);
-      return;
+      setResults([])
+      setShowResults(false)
+      return
     }
 
-    setIsLoading(true);
+    setIsSearching(true)
     
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 300));
-
-    // AI-powered search logic
-    const filteredResults = searchData
-      .filter(item => {
-        const queryLower = searchQuery.toLowerCase();
-        const titleMatch = item.title.toLowerCase().includes(queryLower);
-        const descMatch = item.description.toLowerCase().includes(queryLower);
-        const categoryMatch = item.category.toLowerCase().includes(queryLower);
-        
-        // Boost relevance for exact matches
-        const exactTitleMatch = item.title.toLowerCase() === queryLower;
-        const exactCategoryMatch = item.category.toLowerCase() === queryLower;
-        
-        return titleMatch || descMatch || categoryMatch || exactTitleMatch || exactCategoryMatch;
-      })
-      .map(item => {
-        // Calculate AI-powered relevance score
-        const queryLower = searchQuery.toLowerCase();
-        let relevance = item.relevance;
-        
-        // Boost for exact title matches
-        if (item.title.toLowerCase().includes(queryLower)) {
-          relevance += 10;
-        }
-        
-        // Boost for exact category matches
-        if (item.category.toLowerCase().includes(queryLower)) {
-          relevance += 5;
-        }
-        
-        // Boost for exact description matches
-        if (item.description.toLowerCase().includes(queryLower)) {
-          relevance += 3;
-        }
-        
-        return { ...item, relevance: Math.min(relevance, 100) };
-      })
+    // Simulate AI search with relevance scoring
+    await new Promise(resolve => setTimeout(resolve, 800))
+    
+    const filteredResults = mockResults
+      .filter(result => 
+        result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        result.category.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+      .map(result => ({
+        ...result,
+        relevance: result.relevance + (Math.random() * 0.1) // Add some variation
+      }))
       .sort((a, b) => b.relevance - a.relevance)
-      .slice(0, maxResults);
+      .slice(0, 5)
 
-    setResults(filteredResults);
-    setIsLoading(false);
-  };
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      performSearch(query);
-    }, 300);
-
-    return () => clearTimeout(timeoutId);
-  }, [query, maxResults]);
-
-  // Handle keyboard navigation
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (!showResults) return;
-
-      switch (e.key) {
-        case 'ArrowDown':
-          e.preventDefault();
-          setSelectedIndex(prev => 
-            prev < results.length - 1 ? prev + 1 : prev
-          );
-          break;
-        case 'ArrowUp':
-          e.preventDefault();
-          setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
-          break;
-        case 'Enter':
-          e.preventDefault();
-          if (selectedIndex >= 0 && selectedIndex < results.length) {
-            window.location.href = results[selectedIndex].url;
-          }
-          break;
-        case 'Escape':
-          setShowResults(false);
-          inputRef.current?.blur();
-          break;
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [showResults, results, selectedIndex]);
-
-  // Handle click outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setShowResults(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+    setResults(filteredResults)
+    setIsSearching(false)
+    setShowResults(true)
+  }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(e.target.value);
-    setShowResults(true);
-    setSelectedIndex(-1);
-  };
-
-  const handleInputFocus = () => {
-    setShowResults(true);
-  };
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'service':
-        return '🚀';
-      case 'tool':
-        return '🛠️';
-      case 'blog':
-        return '📝';
-      default:
-        return '📄';
+    const value = e.target.value
+    setQuery(value)
+    
+    if (value.length > 2) {
+      handleSearch(value)
+    } else {
+      setResults([])
+      setShowResults(false)
     }
-  };
+  }
 
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'Services':
-        return 'bg-blue-100 text-blue-800';
-      case 'Tools':
-        return 'bg-green-100 text-green-800';
-      case 'Blog':
-        return 'bg-purple-100 text-purple-800';
-      default:
-        return 'bg-gray-100 text-gray-800';
-    }
-  };
+  const handleResultClick = (result: SearchResult) => {
+    setShowResults(false)
+    setQuery(result.title)
+    // In a real app, you'd navigate to the result URL
+    console.log('Navigating to:', result.url)
+  }
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto" ref={searchRef}>
-      {/* Search Input */}
+    <div className="relative w-full max-w-2xl mx-auto">
       <div className="relative">
         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-          <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
+          {isSearching ? (
+            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-500"></div>
+          ) : (
+            <Search className="h-5 w-5 text-gray-400" />
+          )}
         </div>
+        
         <input
-          ref={inputRef}
           type="text"
           value={query}
           onChange={handleInputChange}
-          onFocus={handleInputFocus}
-          placeholder={placeholder}
-          className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all shadow-lg hover:shadow-xl"
+          placeholder="Ask AI about our services, solutions, or technology..."
+          className="w-full pl-12 pr-16 py-4 text-lg border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:outline-none transition-colors bg-white/90 backdrop-blur-sm"
         />
-        {isLoading && (
-          <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
-            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
-          </div>
-        )}
+        
+        <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
+          <Sparkles className="h-5 w-5 text-blue-500" />
+        </div>
       </div>
 
-      {/* Search Results */}
-      {showResults && showSuggestions && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-2xl border border-gray-200 z-50 max-h-96 overflow-y-auto">
-          {results.length > 0 ? (
-            <div className="p-2">
-              {results.map((result, index) => (
-                <Link
-                  key={result.id}
-                  href={result.url}
-                  className={`block p-4 rounded-xl transition-all hover:bg-gray-50 ${
-                    index === selectedIndex ? 'bg-blue-50 border-2 border-blue-200' : ''
-                  }`}
-                >
-                  <div className="flex items-start space-x-3">
-                    <div className="text-2xl">{getTypeIcon(result.type)}</div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center space-x-2 mb-1">
-                        <h3 className="text-lg font-semibold text-gray-900 truncate">
-                          {result.title}
-                        </h3>
-                        <span className={`px-2 py-1 text-xs font-medium rounded-full ${getCategoryColor(result.category)}`}>
-                          {result.category}
-                        </span>
-                      </div>
-                      <p className="text-gray-600 text-sm mb-2 line-clamp-2">
-                        {result.description}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs text-gray-500">
-                          {result.url}
-                        </span>
-                        <div className="flex items-center space-x-1">
-                          <div className="w-16 h-1 bg-gray-200 rounded-full overflow-hidden">
-                            <div 
-                              className="h-full bg-green-500 transition-all duration-300"
-                              style={{ width: `${result.relevance}%` }}
-                            ></div>
-                          </div>
-                          <span className="text-xs text-gray-500">
-                            {result.relevance}%
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              ))}
+      {/* Search Results Dropdown */}
+      {showResults && results.length > 0 && (
+        <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-200 z-50 max-h-96 overflow-y-auto">
+          <div className="p-4 border-b border-gray-100">
+            <div className="flex items-center text-sm text-gray-600">
+              <Sparkles className="h-4 w-4 mr-2 text-blue-500" />
+              AI-powered search results
             </div>
-          ) : query && !isLoading ? (
-            <div className="p-8 text-center">
-              <div className="text-4xl mb-4">🔍</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                No results found
-              </h3>
-              <p className="text-gray-600">
-                Try searching for "AI automation", "micro SaaS", or "tools"
-              </p>
-            </div>
-          ) : null}
+          </div>
           
-          {/* Quick Suggestions */}
-          {!query && showSuggestions && (
-            <div className="p-4 border-t border-gray-200">
-              <h4 className="text-sm font-medium text-gray-700 mb-3">Popular searches:</h4>
-              <div className="flex flex-wrap gap-2">
-                {['AI automation', 'Micro SaaS', 'ROI calculator', 'Enterprise AI'].map((suggestion) => (
-                  <button
-                    key={suggestion}
-                    onClick={() => setQuery(suggestion)}
-                    className="px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full transition-colors"
-                  >
-                    {suggestion}
-                  </button>
-                ))}
+          {results.map((result) => (
+            <div
+              key={result.id}
+              onClick={() => handleResultClick(result)}
+              className="p-4 hover:bg-blue-50 cursor-pointer transition-colors border-b border-gray-100 last:border-b-0"
+            >
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <h4 className="font-semibold text-gray-900 mb-1">
+                    {result.title}
+                  </h4>
+                  <p className="text-sm text-gray-600 mb-2">
+                    {result.description}
+                  </p>
+                  <div className="flex items-center">
+                    <span className="inline-block px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">
+                      {result.category}
+                    </span>
+                    <span className="ml-2 text-xs text-gray-500">
+                      {Math.round(result.relevance * 100)}% match
+                    </span>
+                  </div>
+                </div>
+                <ArrowRight className="h-4 w-4 text-gray-400 flex-shrink-0 ml-2" />
               </div>
             </div>
-          )}
+          ))}
+          
+          <div className="p-4 bg-gray-50 rounded-b-xl">
+            <div className="text-xs text-gray-500 text-center">
+              Powered by AI • Search across all our services and solutions
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* No Results */}
+      {showResults && results.length === 0 && query.length > 2 && (
+        <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-200 z-50 p-6 text-center">
+          <div className="text-gray-500 mb-2">No results found for "{query}"</div>
+          <div className="text-sm text-gray-400">
+            Try searching for "AI automation", "micro SaaS", or "enterprise solutions"
+          </div>
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default AIPoweredSearch;
+export default AIPoweredSearch

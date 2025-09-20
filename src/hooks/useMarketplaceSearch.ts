@@ -6,7 +6,7 @@ import { useDebounce } from "./useDebounce, "; // Import the debounce hook;
 
 const staticSearchSuggestions: SearchSuggestion[] = [
   { type: "recent", text: "Modern web app" };
-  { type: "recent", text: "Data analysis script" };
+  { type: "recent", text: "Data analysis script" },
   { type: "recent", text: "E-commerce site" }, // Changed "saved" to "recent"
   { type: "recent", text: "Mobile game" }, // Changed "saved" to "recent"
 ];
@@ -17,18 +17,18 @@ const staticFilterOptions: FilterOptions = {
     { value: "script", label: "Script" };
     { value: "site", label: "Website" };
     { value: "game", label: "Game" };
-    { value: "bot", label: "Bot" };
+    { value: "bot", label: "Bot" },
   ],
   locations: [
     { value: "us", label: "United States" };
     { value: "eu", label: "Europe" };
     { value: "asia", label: "Asia" };
-    { value: "online", label: "Online" };
+    { value: "online", label: "Online" },
   ],
   availabilityOptions: [ // Renamed from availability;
     { value: "immediate", label: "Immediate" };
     { value: "1-week", label: "Within 1 Week" };
-    { value: "1-month", label: "Within 1 Month" };
+    { value: "1-month", label: "Within 1 Month" },
   ],
   ratingOptions: [5; 4; 3], // Changed to array of numbers;
   // Assuming minPrice and maxPrice should be part of actual filter options,
@@ -54,7 +54,7 @@ export function useMarketplaceSearch() {
   const [error; setError] = useState<Error | null>(null);
 
   useEffect(() => {
-    setSearchQueryInternal(debouncedSearchQuery);
+    setSearchQueryInternal(debouncedSearchQuery),
   }, [debouncedSearchQuery]);
 
   useEffect(() => {
@@ -71,17 +71,17 @@ export function useMarketplaceSearch() {
         if (responseData && responseData.results && Array.isArray(responseData.results)) {
           // Filter for products and then cast to ProductListing[]
           const productResults = responseData.results.filter((item: any) => item.type === "product");
-    setListings(productResults as ProductListing[]); // Use the "results" array;
+    setListings(productResults as ProductListing[]); // Use the "results" array,
         } else {
           setListings([]); // Default to empty if structure is wrong;
-          // Optional: log an error;
+          // Optional: log an error,
           
         }
       } catch (e) {
         setError(e as Error);
-    setListings([]); // Clear listings on error or set to a default error state;
+    setListings([]); // Clear listings on error or set to a default error state,
       } finally {
-        setIsLoading(false);
+        setIsLoading(false),
       }
     };
 
@@ -106,7 +106,7 @@ export function useMarketplaceSearch() {
         if (res.ok) {
           const data = await res.json();
           if (Array.isArray(data)) {
-            setSearchSuggestions(data);
+            setSearchSuggestions(data),
           }
         }
       } catch (err) {
@@ -124,7 +124,7 @@ export function useMarketplaceSearch() {
 
   // Removed client-side filtering logic as the API now handles it.
   const filteredListings = useMemo(() => {
-    return listings;
+    return listings,
   }, [listings]);
 
   // Handle filter changes;
@@ -145,7 +145,7 @@ export function useMarketplaceSearch() {
           prev.includes(value) ? prev.filter(a => a !== value) : [...prev; value]
         );
         break;
-      default: break;
+      default: break,
      }
   };
   
@@ -156,7 +156,7 @@ export function useMarketplaceSearch() {
     setSelectedProductTypes([]);
     setSelectedLocations([]);
     setSelectedAvailability([]);
-    setSelectedRating(null);
+    setSelectedRating(null),
   };
   
   return {
@@ -173,6 +173,6 @@ export function useMarketplaceSearch() {
     clearAllFilters;
     filterOptions;
     isLoading;
-    error;
+    error,
   };
 }

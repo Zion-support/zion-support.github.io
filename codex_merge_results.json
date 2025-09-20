@@ -1,0 +1,4080 @@
+{
+  "summary": {
+    "merged": 0,
+    "conflicts_resolved": 0,
+    "skipped": 678,
+    "failed": 0,
+    "total_processed": 678,
+    "duration": "0:03:56.201350"
+  },
+  "results": [
+    {
+      "branch": "0nylrk-codex/fix-footer-contact-link",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "0parff-codex/centralize-api-error-handling-and-add-errorboundary",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "0smfo8-codex/fix-404-error-for-non-existent-route",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "0t8m4m-codex/update-project-color-palette",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "0une71-codex/fix-unsupported-shell-syntax-in-setup.sh",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "14gqd5-codex/implement-checkout-flow-with-auth-redirect",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "1dcwqi-codex/implement-global-pricing-with-currency-selection",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "1fjs4s-codex/implement-instant-messaging-for-negotiations",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "1m9jcs-codex/fix-client-side-rendering-and-javascript-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "1nc0kn-codex/fix-blank-screen-on-app-load",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "1nq1ky-codex/render-talent-profiles-with-error-states",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "1ry69n-codex/fix-npm-eio-error-during-install",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "1sqc9r-codex/implement-light/dark-theme-with-persistence",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "1tg4fy-codex/support-metric--imperial-units",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "1wzbwr-codex/fix-typescript-errors-in-files",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "22xuo1-codex/implement-wishlist-functionality",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "24727i-codex/implement-stripe-checkout-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "2503nr-codex/fix-ts2614-error-with-suspense-import",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "26ywwb-codex/fix-client-side-rendering-and-javascript-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "2enrzx-codex/implement-feature-flags-and-a/b-testing",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "2k1ucv-codex/integrate-stripe-test-mode-checkout",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "2qzh01-codex/fix-npm-eio-error-during-install",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "2xbrce-codex/introduce-automated-testing-with-jest-and-cypress",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "2zlocq-codex/fix-login-form-submission",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "306ipd-codex/add-new-products-page-with-10-items",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "306l03-codex/fix-blank-screen-issue",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "3bk25l-codex/fix-test-expectation-for-fetch-rejection",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "3bssgk-codex/disable-theme-toggle-and-set-default-dark-theme",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "3c7ooo-codex/enable-offline-support-with-pwa",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "3fnye9-codex/create-signup-component-and-route",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "3ycx6d-codex/implement-global-error-boundary-with-toasts",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "42l7l1-codex/check-logs-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "42zrxf-codex/improve-discoverability-with-seo-features",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "4b9zsu-codex/surface-api-errors-across-the-app",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "4cssl2-codex/fix-typescript-errors-in-components",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "4d93zy-codex/fix-npm-eio-error-during-install",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "4fu9r9-codex/check-logs-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "4o9pcp-codex/add-test-for-failed-login-toast",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "4pkscj-codex/disable-theme-toggle-and-set-default-dark-theme",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "4xe4ab-codex/fix--settheme--not-found-in-usetheme",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "51ryr1-codex/implement-eprivacy-directive-consent-banner",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "54lu0e-codex/fix-component-not-using-api-data",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "591ea5-codex/fix-talent-profile-rendering-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "5dtq58-codex/implement-analytics-and-error-tracking",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "5i6q3p-codex/add-i18n-support-with-next-i18next",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "5s5bm5-codex/introduce-automated-testing-with-jest-and-cypress",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "5smo5s-codex/check-logs-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "5usi8s-codex/debug-persistent-login-failure",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "5xrg7t-codex/fix-app-loading-blank-screen",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "5yaxyc-codex/implement-wishlist-functionality",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "63i3ty-codex/fix-talent-profile-rendering-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "6tibj2-codex/enable-offline-support-with-pwa",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "6v4ctq-codex/fix-link-under-register-form",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "6xgubs-codex/fix-blank-screen-issue",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "74tfm8-codex/implement-instant-messaging-for-negotiations",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "75rlpk-codex/fix-modulenamemapper-configuration-for-tests",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "7dxqey-codex/fix-missing-product-export-from-@prisma/client",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "7fnoko-codex/fix-client-side-rendering-and-javascript-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "7ieis8-codex/add-error-handling-and-fallback-data",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "7wzx4b-codex/fix-ts2554-error-in-disputeform",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "7xqa4z-codex/implement-checkout-flow-with-auth-redirect",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "7yfp2f-codex/implement-global-error-boundary-with-toasts",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "7yshjv-codex/implement-eprivacy-directive-consent-banner",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "85f672-codex/implement-wishlist-functionality",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "87zh7m-codex/fix-netlify-build-failures-due-to-typescript-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "8aozst-codex/implement-cart-functionality-with-react-context",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "8arrdw-codex/centralize-fetch-error-handling",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "8axt14-codex/add-error-handling-and-fallback-data",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "8h6b38-codex/fix-typescript-module-and-type-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "8k1pqw-codex/render-full-profile-on-click",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "8z9e37-codex/implement-light/dark-theme-with-persistence",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "8ztzgg-codex/add-i18n-support-with-next-i18next",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "908rx5-codex/centralize-error-logging",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "92kxb3-codex/populate-forum-category-with-posts",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "96xhsm-codex/fix-accessibility-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "9kvoyx-codex/fix-client-side-rendering-and-javascript-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "9lfw2u-codex/render-filled-stars-for-ratings",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "9llxiv-codex/implement-analytics-and-error-tracking",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "9njm0n-codex/implement-feature-flags-and-a/b-testing",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "9pfskl-codex/check-logs-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "9qozr5-codex/implement-light/dark-theme-with-persistence",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "9ta744-codex/implement-analytics-and-error-tracking",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "9zcb49-codex/fix-npm-eio-error-during-install",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "a12zhz-codex/support-metric--imperial-units",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "a1b34d-codex/add-test-for-failed-login-toast",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "a5b989-codex/add-promotions-support-with-coupons-and-gift-cards",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "a7jyue-codex/disable-theme-toggle-and-set-default-dark-theme",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "adis18-codex/fix-ts2614-error-with-suspense-import",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "aiqw7a-codex/improve-discoverability-with-seo-features",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "aivbk0-codex/fix-login-form-submission-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "al8dax-codex/fix-npm-eio-error-during-install",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "amourx-codex/populate-forum-category-with-posts",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "b029y5-codex/fix-errors-and-improve-project",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "b71j7n-codex/fix-unsupported-shell-syntax-in-setup.sh",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "b8kb4j-codex/fix-404-on-equipment-detail-pages",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "b9lv6g-codex/fix-toggle-icon-layout-issue",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "bcac4k-codex/add-error-handling-and-fallback-data",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "bfgtpy-codex/implement-cart-functionality-with-react-context",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "bh7yy0-codex/debug-login-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "bjrwv5-codex/fix-client-side-rendering-and-javascript-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "bplr8i-codex/fix-npm-ci-errors-and-missing-dependencies",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "bqwgnt-codex/fix-ts1005-error-in-checkout.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "btbjdh-codex/fix-vitest-import-in-commonjs-module",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "buf5lp-codex/fix--settheme--not-found-in-usetheme",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "bw06m0-codex/fix-typescript-errors-in-components",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "bwren1-codex/fix-typescript-errors-in-files",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "by9dba-codex/implement-light/dark-theme-with-persistence",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "bzpg25-codex/check-logs-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "c30wfb-codex/implement-instant-messaging-for-negotiations",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "c54iqp-codex/fix-app-loading-blank-screen",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "c7npva-codex/fix-star-icon-and-create-post-without-login",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "c9d4c2-codex/implement-wishlist-functionality",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "cecb7u-codex/implement-swr-for-service-fetch",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ci5604-codex/fix-toggle-icon-layout-issue",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/activate-avatar-menu-with-keyboard-navigation",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-advanced-search-filters",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-aria-label-and-title-to-footer-icons",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-aria-labels-and-improve-accessibility",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-auto-install-feature",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-bulk-upload-feature-to-dashboard",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-clipboard-copy-functionality",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-community-auth-guard",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-copy-to-clipboard-button",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-custom-404-page-with-suggestions",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-cypress-test-for-theme-persistence",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-dynamic-meta-tags-for-seo",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-dynamic-titles-and-meta-tags",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-error-handling-and-fallback-data",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-form-validation-and-feedback",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-full-site-i18n-support",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-i18n-support-with-next-i18next",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-light-mode-switcher",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-missing-dependency--@vitest/coverage-v8",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-new-products-page-with-10-items",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-observability-with-structured-logging-and-metrics",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-password-reset-endpoint-and-link",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-pre-commit-hook-for-package-lock-sync",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-privacypolicy-page-and-route",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-progress-indicator-in-checkout",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-promotions-support-with-coupons-and-gift-cards",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-pwa-service-worker-and-offline-fallback",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-resend-verification-and-clearer-ux",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-rich-media-support-to-product-gallery",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-safeguards-for-null-data-in-talentpage",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-save-for-later-feature",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-send-message-button-to-modal",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-send-message-button-with-post-functionality",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-sentry-capture-and-error-handling-to-api-route",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-slack/discord-notification-integration",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-test-for-failed-login-toast",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-toast-notifications-for-protected-routes",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/add-user-profile-dropdown",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/address-deprecated-npm-dependencies",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/address-log-warnings-or-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/allow-api-key-generation-in-dashboard",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/allow-guest-users-to-view-cart",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/analyze-logs-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/automate-ai-&-tech-marketplace-feed-update",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/build-cron-triggered-node.js-script-for-eslint",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/centralize-api-error-handling-and-add-errorboundary",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/centralize-error-logging",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/centralize-fetch-error-handling",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/check-logs-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/complete-buy-now-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/complete-todo-items",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/convert-react-router-to-next.js-routing",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/copy-code-to-clipboard-on-button-click",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/create-back-office-dashboard-skeleton",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/create-node.js-health-check-endpoint",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/create-orders-page-and-order-details",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/create-service-list-with-pagination",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/create-signup-component-and-route",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/debug-login-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/debug-persistent-login-failure",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/disable-theme-toggle-and-set-default-dark-theme",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/enable-code-splitting-and-image-lazy-load",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/enable-offline-support-with-pwa",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/enable-view-toggle-in-react",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/enhance-empty-state-and-disable-cta",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/enhance-sign-up/login-forms-for-accessibility",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/ensure-single-navbar-on-matchpage",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/ensure-top-of-page-is-visible-on-load",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/expand-api-documentation",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/finish-i18n-strings-and-language-persistence",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix--on--property-error-in-walletcontext",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix--settheme--not-found-in-usetheme",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix--theme--property-type-error",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-/blog/-slug]-route-404-error",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-404-error-for-non-existent-route",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-404-error-on-/signup-route",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-404-errors-for-resources-pages",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-404-on-equipment-detail-pages",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-accessibility-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-account-creation-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-and-enhance-zion-tech-marketplace",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-app-blank-screen-issue",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-app-loading-blank-screen",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-async-listener-error",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-backend-for-failing-cypress-test",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-blank-category-page-rendering",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-blank-content-on-/community/category/-slug]",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-blank-page-after-deploy",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-blank-page-on-/community/category/-slug]",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-blank-screen-issue",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-blank-screen-issue-and-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-blank-screen-loading-issue",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-blank-screen-on-app-load",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-blog-article-404-error",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-broken-project-links",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-broken-routes-and-ui-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-browser-errors-related-to-storage-access",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-browser-errors-related-to-storage-and-axios",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-button-label-reset-after-addtocart",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-buy-now-auth-guard",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-classname-property-error-in-textareaprops",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-client-side-rendering-and-javascript-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-community-category-links-issue",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-component-not-using-api-data",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-content-security-policy-and-cookie-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-csp-unsafe-eval-violation-in-vite/react",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-duplicate-<navbar>-on-multiple-pages",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-duplicate-headers-and-footers",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-duplicate-import-of-signup",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-duplicate-navbar-components-rendering",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-duplicate-navbar-instance",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-endless-skeleton-loader-on-empty-cart",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-equipment-card-404-and-add-jest-test",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-error-in-header-component",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-error-in-main.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-errors-and-improve-logs-collection",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-errors-and-improve-project",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-fallback-to-sample-data-in-servicestep",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-footer-contact-link",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-import-for-languagedetectionpopup",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-import-of-videooff-from-lucide-react",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-import-resolution-error-in-main.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-invalid-element-type-in-app-render",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-invalid-link",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-issues-on-marketplace-product-cards",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-language-switch-for-full-page-content",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-link-under-register-form",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-login-401-error-with-bcrypt",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-login-bug",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-login-feedback-on-failure",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-login-flow-and-add-tests",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-login-form-submission",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-login-form-submission-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-missing-argument-for-initialstate",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-missing-fieldpath-export",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-missing-module-for-use-toast",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-missing-product-export-from-@prisma/client",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-missing-product-images-on-/innovation",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-missing-test_user_email-variable",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-mobile-layout-overflow-on-iphone-se",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-module-resolution-error-in-tests",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-navigation-lock-in-checkout-page",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-npm-ci-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-npm-ci-errors-and-missing-dependencies",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-npm-eio-error-during-install",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-project-bugs",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-project-bugs-and-improve-it",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-project-functionalities",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-react-import-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-registration-flow-and-error-handling",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-request-quote-wizard-service-fetch-failure",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-safefetch-error-handling",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-safefetch-test-failure",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-service-detail-route-to-prevent-404",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-service-fetch-and-add-validation",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-services-fetch-and-fallback-logic",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-sign-up-form-flow-and-authentication",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-skeleton-component-classname-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-social-icons-aria-labels",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-star-icon-and-create-post-without-login",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-step-1-service-selection-issue",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-supabase-edge-function-fetch-error",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-syntax-error-in-checkout.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-talent-profile-rendering-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-talentprofile-component-errors-and-add-tests",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-test-expectation-for-fetch-rejection",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-test-failure-in-listingnotfound.test.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-test-suite-failure-in-quotewizard",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-theme-property-error-in-mobilethemeprovider",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-toggle-icon-layout-issue",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts1003-error-in-progress.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts1005-error-in-checkout.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts1109-error-in-progress.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts1382-error-in-progress.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2304-error-for-beforeinstallpromptevent",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2305-error-for-fieldvalues-export",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2305-error-for-product-import",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2322-error-in-autocompletesuggestions.test.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2322-error-in-benefitssection",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2322-error-in-home.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2322-error-in-productgallery",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2322-error-with-daterange-type",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2322-error-with-featurectas-props",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2322-errors-with-skeleton-component",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2322-type-error-in-autocompletesuggestions.test.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-for--loading--property",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-for--points",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-for-filterednotifications",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-for-markasread",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-for-react.useid",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-for-settheme",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-for-shoplocket-on-window",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-for-size-property",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-for-theme",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-for-theme-property",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-for-togglesidebar",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-for-user_metadata",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-in-commanddialogprops",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-in-form.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-in-projectform.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-in-signup.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-in-supportwidget",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-in-usewebhooks",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-in-walletcontext",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-on-brandname-in-zionhireai.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-with-theme",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2339-error-with-zod-string-property",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2345-argument-type-error",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2345-error-in-avatarmenu.test.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2347-error-in-profilepage",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2347-error-in-projectmilestonescontent",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2352-type-error-in-usepostsbycategory",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2554-error-in-disputeform",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2614-error-in-tenantslist.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2614-error-in-videocallroom.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2614-error-with-suspense-import",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2614-import-error-in-header",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2694-error-for-legendprops",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2694-error-with-prisma.product",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2709-error-with-daterange-type",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2717-type-error-in-model-viewer",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ts2724-error-for-volume2-import",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-type-error-in-avatarmenu.test.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-type-error-in-loginform.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-type-errors-in-typescript-files",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-type-mismatch-in-authcontexttype",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typeerror-in-categorycard-tests",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typeerror-in-test",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typeerror-in-test-import",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typeerror-in-test-suite",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typeerror-with--original--argument",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typeerror-with-http-constructor",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typescript-build-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typescript-error-for-iswhitelabel",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typescript-error-for-screenshareoff-import",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typescript-error-for-settheme",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typescript-error-in-avatarmenu-test",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typescript-error-in-disputedetail.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typescript-errors-in-components",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typescript-errors-in-files",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typescript-errors-in-project",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typescript-import-error-for-product",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-typescript-module-and-type-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-ui-and-functional-bugs",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-unauthenticated-user-redirect-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-undefined-as-notificationcontexttype",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-untyped-function-call-error",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-untyped-function-call-error-in-categorydetail",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-untyped-function-calls-error",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-updateprojectstatus-undefined-error",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-user-registration-and-jwt-issue",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-usewhitelabel-context-error",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-variant-type-in-use-toast.ts",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-vitest-import-issue-in-test",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/fix-vitest-import-issue-in-test-file",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/generate-dynamic-routes-for-equipment-items",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/guard-create-new-post-route",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/harmonize-guest-and-auth-cart",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-/careers-listing",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-accessible-cookie-banner",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-ai-powered-help-system",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-ai-recommendations-feature",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-analytics-and-error-tracking",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-axios-interceptor-for-api-failures",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-cart-functionality-with-react-context",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-cart-recovery-logic",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-cart-ui-&-badge",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-checkout-flow-with-auth-redirect",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-content-moderation-and-dashboard-widget",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-eprivacy-directive-consent-banner",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-feature-flags-and-a/b-testing",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-forgot-password-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-form-validation-feedback",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-global-error-boundary-with-toasts",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-global-pricing-with-currency-selection",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-grid/list-layout-toggle",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-i18n-with-flag-dropdown",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-instant-messaging-for-negotiations",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-lazy-loading-for-hero-images",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-light/dark-theme-with-persistence",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-newsletter-subscription-feature",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-order-history-page-with-pdf-downloads",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-post-login-redirect-for-purchase-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-privacy-page-and-data-management",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-rewards-dashboard",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-stripe-checkout-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-stripe-checkout-with-sandbox-support",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-swr-for-service-fetch",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-user-feedback-for-subscription",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/implement-wishlist-functionality",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/improve-a11y-and-seo",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/improve-accessibility-for-sliders-and-toggles",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/improve-ai-recommendations-auth-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/improve-ai-recommendations-ux",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/improve-app-user-feedback-and-support",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/improve-build-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/improve-discoverability-with-seo-features",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/improve-login-error-messages",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/improve-project-code",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/increase-test-coverage-to-80%",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/inspect-createdat-declaration",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/integrate-api-status-page-in-footer",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/integrate-stripe-checkout",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/integrate-stripe-connect-with-escrow-and-dispute-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/integrate-stripe-test-mode-checkout",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/integrate-stripe-test-mode-checkout-with-guest-option",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/introduce-automated-testing-with-jest-and-cypress",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/investigate-forum-sub-route-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/investigate-volume-declaration-in-external-modules.d.ts",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/load-forum-posts-correctly",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/load-talent-profile-data",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/locate-project-bugs",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/make-back-to-top-button-responsive",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/make-cart-icon-a-dropdown-mini-cart",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/make-textarea-text-visible-in-both-themes",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/modernize-app-design",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/optimize-lcp-image-rendering",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/persist-star-icon-state-when-unauthenticated",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/persist-user-preferences-in-storage",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/populate-forum-category-with-posts",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/populate-talent-detail-page",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/prevent-duplicate-cart-entries",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/render-filled--half-stars-for-ratings",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/render-filled-stars-for-ratings",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/render-full-profile-on-click",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/render-talent-profiles-with-error-states",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/replace-deprecated-@humanwhocodes/config-array",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/replace-deprecated-inflight-module",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/restore-add-to-cart-and-cart-state",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/secure-cart-route-and-persist-items",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/set-contrast-color-for-input-text",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/ship-forgot-password-feature",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/show-toast-on-newsletter-subscription",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/support-metric--imperial-units",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/surface-api-errors-across-the-app",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/switch-to-@eslint/object-schema",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/toggle-view-between-grid-and-list",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/troubleshoot-black-screen-and-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/update-app-links-to-point-to-app.ziontechgroup.com",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/update-deprecated-@humanwhocodes/config-array",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/update-deprecated-@humanwhocodes/object-schema",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/update-deprecated-@humanwhocodes/object-schema-package",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/update-eslint-to-latest-version",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/update-glob-to-latest-version",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/update-project-color-palette",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/update-quote-wizard-with-pagination-and-search",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/upgrade-rimraf-to-v4",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/wire-theme-toggle-to-color-variables",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/wire-up-it-service-actions",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "codex/write-node.js-watchdog-script",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "d2zo1o-codex/fix-request-quote-wizard-service-fetch-failure",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "d4y08x-codex/support-metric--imperial-units",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "d5rnjq-codex/fix-footer-contact-link",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "d8hhsw-codex/implement-checkout-flow-with-auth-redirect",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "d8mbm0-codex/populate-forum-category-with-posts",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ddmsqz-codex/centralize-api-error-handling-and-add-errorboundary",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "dg3q2d-codex/fix-npm-eio-error-during-install",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "diesck-codex/fix-blank-screen-on-app-load",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "durk6j-codex/fix-blank-screen-on-app-load",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "dvc4s3-codex/centralize-error-logging",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "dxqgt9-codex/render-filled-stars-for-ratings",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "e2no5y-codex/debug-login-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "e5y1bz-codex/fix-buy-now-auth-guard",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "e9958i-codex/fix-talentprofile-component-errors-and-add-tests",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "e9xigk-codex/centralize-fetch-error-handling",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "eqkaex-codex/fix-app-loading-blank-screen",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "eqpt82-codex/render-filled-stars-for-ratings",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "erpabg-codex/add-new-products-page-with-10-items",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "evyev1-codex/fix-unsupported-shell-syntax-in-setup.sh",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "f1t40z-codex/implement-light/dark-theme-with-persistence",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "f3y4di-codex/fix-services-fetch-and-fallback-logic",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "f66fun-codex/fix-typescript-errors-in-components",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "f6evem-codex/create-signup-component-and-route",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "f7kmr3-codex/fix-safefetch-error-handling",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "fa402i-codex/check-logs-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "fizvbl-codex/fix-errors-and-improve-project",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "fp32tt-codex/implement-analytics-and-error-tracking",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "fuw0wh-codex/fix-react-import-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "fxvoi9-codex/fix-unsupported-shell-syntax-in-setup.sh",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "g7ubrv-codex/implement-wishlist-functionality",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "g9pkwj-codex/fix-login-form-submission",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "gfchmx-codex/add-pre-commit-hook-for-package-lock-sync",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "gfsfek-codex/implement-wishlist-functionality",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "gk50rr-codex/add-observability-with-structured-logging-and-metrics",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "gkq4p4-codex/fix-toggle-icon-layout-issue",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "goj3x7-codex/centralize-error-logging",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "gpsvih-codex/fix-ts2554-error-in-disputeform",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "gw3anb-codex/fix-login-form-submission-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "gwuwch-codex/implement-wishlist-functionality",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "gzadtz-codex/introduce-automated-testing-with-jest-and-cypress",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "h2zy3l-codex/add-promotions-support-with-coupons-and-gift-cards",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "h399q4-codex/fix-project-bugs",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "h8ljiq-codex/implement-instant-messaging-for-negotiations",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "h8smia-codex/implement-wishlist-functionality",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "hbflp9-codex/fix-talent-profile-rendering-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "htel6f-codex/fix-npm-eio-error-during-install",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "htigp4-codex/integrate-stripe-test-mode-checkout",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "i32xk5-codex/fix-typescript-module-and-type-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "i765p8-codex/render-full-profile-on-click",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ib9rab-codex/fix-login-form-submission-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ibyncy-codex/ship-forgot-password-feature",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ifoxpa-codex/set-contrast-color-for-input-text",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "igf24g-codex/fix-errors-and-improve-project",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "iib45k-codex/integrate-stripe-test-mode-checkout-with-guest-option",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ikn6ig-codex/implement-light/dark-theme-with-persistence",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ilpiav-codex/toggle-view-between-grid-and-list",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "irqriy-codex/implement-content-moderation-and-dashboard-widget",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "j83pnu-codex/implement-light/dark-theme-with-persistence",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "jdbe9c-codex/fix-talent-profile-rendering-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "jf3z2b-codex/implement-analytics-and-error-tracking",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "jhvy8h-codex/increase-test-coverage-to-80%",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "jux2zd-codex/fix-login-form-submission",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "jvm2yt-codex/centralize-api-error-handling-and-add-errorboundary",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "jvz1v6-codex/fix-request-quote-wizard-service-fetch-failure",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "jxaj5r-codex/fix-404-errors-for-resources-pages",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "k2pg4h-codex/fix-ts2554-error-in-disputeform",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "k89gxb-codex/add-test-for-failed-login-toast",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "kak4np-codex/surface-api-errors-across-the-app",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "kexc30-codex/add-observability-with-structured-logging-and-metrics",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ko9jce-codex/improve-discoverability-with-seo-features",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "kxume7-codex/centralize-fetch-error-handling",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "l0l3fi-codex/implement-stripe-checkout-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "l1w0yj-codex/fix-client-side-rendering-and-javascript-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "l3xoyh-codex/load-talent-profile-data",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "l4dwci-codex/fix-project-bugs",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "l5rjfn-codex/optimize-lcp-image-rendering",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "lb8ltc-codex/implement-instant-messaging-for-negotiations",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "lg9msf-codex/add-error-handling-and-fallback-data",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "lgd24t-codex/implement-stripe-checkout-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "lkd4v0-codex/toggle-view-between-grid-and-list",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "llxfxy-codex/check-logs-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "lmj20b-codex/fix-unauthenticated-user-redirect-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "luexaa-codex/centralize-fetch-error-handling",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "lukib7-codex/implement-privacy-page-and-data-management",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "lxowqt-codex/implement-instant-messaging-for-negotiations",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "m27pmv-codex/fix-request-quote-wizard-service-fetch-failure",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "m4o27d-codex/fix-react-import-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "m97e62-codex/introduce-automated-testing-with-jest-and-cypress",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ma83ue-codex/fix-errors-and-improve-project",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "mo18nt-codex/fix-typescript-errors-in-files",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ms27v8-codex/fix-safefetch-error-handling",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "muqvxl-codex/centralize-api-error-handling-and-add-errorboundary",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "mvhxet-codex/fix-npm-eio-error-during-install",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "mwt7z4-codex/check-logs-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "mywx6e-codex/fix-ts2322-error-in-home.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "n2ujyx-codex/fix-typescript-errors-in-files",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "n9kf8y-codex/fix-ts2614-error-with-suspense-import",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "nj90kd-codex/fix-invalid-element-type-in-app-render",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "nzwb32-codex/fix-ts2339-error-in-projectform.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "o17321-codex/fix-talent-profile-rendering-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "oe0rki-codex/fix-typescript-errors-in-components",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "offs5z-codex/implement-eprivacy-directive-consent-banner",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ofvr1e-codex/support-metric--imperial-units",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "okbcym-codex/implement-cart-ui-&-badge",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "okcohq-codex/fix-request-quote-wizard-service-fetch-failure",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "or9bys-codex/fix-invalid-element-type-in-app-render",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "orvwl3-codex/add-error-handling-and-fallback-data",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ossyz7-codex/fix-login-flow-and-add-tests",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ovu2ba-codex/fix-errors-and-improve-project",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "pgbf0v-codex/fix-react-import-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "plyp4e-codex/implement-light/dark-theme-with-persistence",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "poejql-codex/update-project-color-palette",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "pso5sd-codex/check-logs-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "pt8x95-codex/implement-analytics-and-error-tracking",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "pvclw9-codex/add-rich-media-support-to-product-gallery",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "pvtpto-codex/activate-avatar-menu-with-keyboard-navigation",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "q0kwa6-codex/check-logs-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "qczgri-codex/fix-unsupported-shell-syntax-in-setup.sh",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "qeuhcb-codex/improve-discoverability-with-seo-features",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "qkmpo0-codex/implement-analytics-and-error-tracking",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "qo7rde-codex/check-logs-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "qoribe-codex/fix-type-errors-in-typescript-files",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "qqmc34-codex/fix-app-blank-screen-issue",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "qw98u5-codex/fix-ts2345-argument-type-error",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "qwd19c-codex/fix-client-side-rendering-and-javascript-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "qxogpj-codex/fix-npm-eio-error-during-install",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "qyaib1-codex/update-project-color-palette",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "revert-869-vsaqzy-codex/implement-cart-functionality-with-react-context",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "revert-870-lmj20b-codex/fix-unauthenticated-user-redirect-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "rihnm5-codex/improve-discoverability-with-seo-features",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "rpn1xo-codex/increase-test-coverage-to-80%",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "rr63uv-codex/render-full-profile-on-click",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "rsgefa-codex/fix-unauthenticated-user-redirect-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "rtmax0-codex/add-test-for-failed-login-toast",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "rupv8x-codex/switch-to-@eslint/object-schema",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "rye3bw-codex/implement-light/dark-theme-with-persistence",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ryjm91-codex/fix-unauthenticated-user-redirect-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "s1yros-codex/fix-unauthenticated-user-redirect-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "s7feio-codex/populate-talent-detail-page",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "s8bsj3-codex/centralize-api-error-handling-and-add-errorboundary",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "sf27kr-codex/fix-unsupported-shell-syntax-in-setup.sh",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "sh2wxd-codex/fix-client-side-rendering-and-javascript-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "sk5ptz-codex/fix-ts2304-error-for-beforeinstallpromptevent",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "skaptq-codex/add-observability-with-structured-logging-and-metrics",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "slva7u-codex/fix-duplicate-navbar-components-rendering",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "snpngq-codex/fix-button-label-reset-after-addtocart",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "szagwn-codex/implement-stripe-checkout-flow",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "t1lmik-codex/fix-login-form-submission-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "t4c1o5-codex/check-logs-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "t6yitw-codex/fix-talent-profile-rendering-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "t7d0fm-codex/fix-blank-screen-on-app-load",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "tdh0vb-codex/replace-deprecated-@humanwhocodes/config-array",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "tka6uc-codex/implement-light/dark-theme-with-persistence",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "tkjnf1-codex/increase-test-coverage-to-80%",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "tmh8u8-codex/implement-checkout-flow-with-auth-redirect",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "tsziyn-codex/fix-duplicate-headers-and-footers",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "tt66h4-codex/fix-ts2554-error-in-disputeform",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "txy5bf-codex/add-error-handling-and-fallback-data",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "u2ew75-codex/implement-instant-messaging-for-negotiations",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "u7owka-codex/fix-typescript-errors-in-files",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "u9dfd5-codex/add-promotions-support-with-coupons-and-gift-cards",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "uadbw4-codex/fix-talentprofile-component-errors-and-add-tests",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "urdvjx-codex/fix-ts2322-error-in-home.tsx",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "urporo-codex/add-rich-media-support-to-product-gallery",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "uu5vmo-codex/fix-typescript-errors-in-files",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "uu7dni-codex/fix-errors-and-improve-project",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "uy18p5-codex/improve-discoverability-with-seo-features",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "vd6amb-codex/add-i18n-support-with-next-i18next",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "virs4i-codex/fix-typeerror-in-test-run",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "vixr5h-codex/add-rich-media-support-to-product-gallery",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "vndedb-codex/fix-duplicate-<navbar>-on-multiple-pages",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "vr0oyv-codex/fix-npm-ci-errors-and-missing-dependencies",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "vsaqzy-codex/implement-cart-functionality-with-react-context",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "vu1sbl-codex/implement-cart-recovery-logic",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "wbjj15-codex/add-new-products-page-with-10-items",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "wcdl7o-codex/support-metric--imperial-units",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "wclfj4-codex/implement-wishlist-functionality",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "wgz9re-codex/centralize-fetch-error-handling",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "wmd0zx-codex/fix-talent-profile-rendering-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "wmnhtg-codex/investigate-forum-sub-route-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "wngl8y-codex/implement-cart-ui-&-badge",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "wv4snj-codex/fix-typescript-module-and-type-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "xkzihm-codex/fix-npm-eio-error-during-install",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "xlk1tx-codex/add-test-for-failed-login-toast",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "xmgt6y-codex/integrate-stripe-test-mode-checkout-with-guest-option",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "xo4uvy-codex/implement-wishlist-functionality",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "xp54p6-codex/fix-talent-profile-rendering-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "xqc3is-codex/fix-ts2614-error-with-suspense-import",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "xrqsza-codex/implement-newsletter-subscription-feature",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "xrxg0m-codex/harmonize-guest-and-auth-cart",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "xufqs2-codex/implement-wishlist-functionality",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "xyv3fs-codex/fix-fallback-to-sample-data-in-servicestep",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "y7i3g2-codex/fix-npm-eio-error-during-install",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "y7v6qh-codex/implement-eprivacy-directive-consent-banner",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "y8b6t3-codex/fix-type-errors-in-typescript-files",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "y8pqmi-codex/fix-services-fetch-and-fallback-logic",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ybn8hb-codex/fix-npm-eio-error-during-install",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ye4cs2-codex/add-i18n-support-with-next-i18next",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ye7hs1-codex/fix-npm-eio-error-during-install",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "yggxu4-codex/implement-checkout-flow-with-auth-redirect",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "yjjjqb-codex/check-logs-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "ypnv26-codex/fix-talent-profile-rendering-issues",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "yuysa9-codex/fix-errors-and-improve-project",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "yvyz2j-codex/add-i18n-support-with-next-i18next",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "yw5tz2-codex/implement-instant-messaging-for-negotiations",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "yxewy6-codex/fix-toggle-icon-layout-issue",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "z4gpnj-codex/implement-axios-interceptor-for-api-failures",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "z5t0go-codex/fix-login-form-submission",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "zdh03e-codex/fix-link-under-register-form",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "zhnryo-codex/implement-eprivacy-directive-consent-banner",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "zjqw50-codex/fix-ui-and-functional-bugs",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "zreeup-codex/check-logs-and-fix-errors",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    },
+    {
+      "branch": "zzdg1a-codex/add-i18n-support-with-next-i18next",
+      "status": "skipped",
+      "message": "No new changes",
+      "changes": 0
+    }
+  ]
+}

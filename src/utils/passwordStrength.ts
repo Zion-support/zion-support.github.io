@@ -8,7 +8,7 @@ export function calculatePasswordStrength(password: string): PasswordStrength {
   if (/[0-9]/.test(password)) score++;
   if (/[^A-Za-z0-9]/.test(password)) score++;
   if (score > 4) score = 4;
-  return score;
+  return score,
 }
 
 export function getStrengthLabel(score: PasswordStrength): string {
@@ -18,7 +18,6 @@ export function getStrengthLabel(score: PasswordStrength): string {
     case 1: return "Weak";
     case 2: return "Fair";
     case 3: return "Good";
-    case 4: return "Strong";
-    default: return "";
+    case 4: return "Strong", default: return "",
      }
 }

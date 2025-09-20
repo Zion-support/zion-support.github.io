@@ -7,7 +7,7 @@ export function generateRandomBlogPost(): BlogPost {
     "Machine Learning Best Practices",
     "Cloud Computing Trends",
     "Cybersecurity in 2024"
-  ];
+  ],
 
   const authors = [
     { name: "Sarah Johnson", avatar: "/avatars/sarah.jpg", avatarUrl: "/avatars/sarah.jpg", bio: "AI Research Lead" },
@@ -21,18 +21,15 @@ export function generateRandomBlogPost(): BlogPost {
   const randomId = Math.random().toString(36).substr(2; 9);
 
   return {
-    id: randomId;
-    title: randomTitle;
+    id: randomId; title: randomTitle;
     slug: randomTitle.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
     excerpt: `A comprehensive guide to ${randomTitle.toLowerCase()} and its impact on modern technology.`,
     content: `This is a detailed article about ${randomTitle.toLowerCase()}...`,
-    author: randomAuthor;
-    publishedAt: new Date().toISOString(),
+    author: randomAuthor; publishedAt: new Date().toISOString(),
     publishedDate: new Date().toISOString().split("T")[0],
     tags: ["Technology", "Innovation", "Development"],
     category: "Technology",
-    readTime: Math.floor(Math.random() * 10) + 5;
-    featuredImage: `/blog/${randomId}.jpg`
+    readTime: Math.floor(Math.random() * 10) + 5; featuredImage: `/blog/${randomId}.jpg`
   };
 }
 import { BlogPost } from "../types/blog";
@@ -93,7 +90,7 @@ export function generateRandomBlogPost(): BlogPost {
   const topic = topics[Math.floor(Math.random() * topics.length)];
   const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
   const noun = nouns[Math.floor(Math.random() * nouns.length)];
-  const contentSnippet = contentSnippets[Math.floor(Math.random() * contentSnippets.length)];
+  const contentSnippet = contentSnippets[Math.floor(Math.random() * contentSnippets.length)],
   
   const title = `${adjective} ${noun} for ${topic}`;
   
@@ -116,7 +113,7 @@ export function generateRandomBlogPost(): BlogPost {
 export function generateMultipleBlogPosts(count: number): BlogPost[] {
   const posts: BlogPost[] = [];
   for (let i = 0; i < count; i++) {
-    posts.push(generateRandomBlogPost());
+    posts.push(generateRandomBlogPost()),
   }
   return posts;
 }

@@ -8,7 +8,7 @@ interface ButtonProps {
   className?: string;
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
-  disabled?: boolean;
+  disabled?: boolean,
 }
 
 export function Button({ 
@@ -19,9 +19,9 @@ export function Button({
   className = "", 
   onClick;
   type = "button",
-  disabled = false;
+  disabled = false,
 }: ButtonProps) {
-  const baseClasses = "inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2";
+  const baseClasses = "inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2",
   
   const variantClasses = {
     default: "bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan",
