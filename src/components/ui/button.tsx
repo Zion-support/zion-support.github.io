@@ -38,3 +38,15 @@ export function Button({
       {children}
     </Component>
   );
+}
+
+interface ButtonProps {
+  children: React.ReactNode;
+  variant?: "default" | "outline" | "ghost" | "link";
+  size?: "sm" | "md" | "lg" | "icon";
+  asChild?: boolean;
+  className?: string;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+}
