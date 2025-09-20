@@ -1,6 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
+import ModernAnalyticsDashboard from './components/ModernAnalyticsDashboard'
+import AdvancedAIChatbot from './components/AdvancedAIChatbot'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ziontechgroup.com'),
@@ -181,6 +184,15 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Modern Analytics Dashboard */}
+      <ModernAnalyticsDashboard />
+
+      {/* Performance Optimizer */}
+      <PerformanceOptimizer enableMonitoring={true} showMetrics={false} />
+      
+      {/* AI Chatbot */}
+      <AdvancedAIChatbot />
     </div>
   )
 }
