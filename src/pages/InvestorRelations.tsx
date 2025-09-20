@@ -1,7 +1,11 @@
-import React from "react";
-import { motion } from "framer-moti, on";import { SEO } from "../components/S, EO";import { TrendingUp, BarChart3;
-  FileText;
-  Download;
+import React from "react"
+import { motion   } from "framer-motion";
+import { SEO   } from "../components/SEO";
+import {
+  TrendingUp;
+  BarChart3,
+  FileText,
+  Download,
   ExternalLink;
   Calendar;
   DollarSign;
@@ -27,143 +31,293 @@ import { motion } from "framer-moti, on";import { SEO } from "../components/S, E
   Handshake;
   Clock;
   Mail;
-  Phone
-} from "lucide-react";export default function InvestorRelations() {
-
-  const financialHighlights  = [
-    {
-      metric: 'Revenue Growth, ',value: '156%, ',change: '+23%,';period: 'YoY 2024',
-    icon: TrendingUp,
-    color: 'text-green-400'
-   ,  }{
-      metric: 'Market Cap, ',value: '$2.4B, ',change: '+18%, ',period: 'Current, ',icon: DollarSign,
-    color: 'text-blue-400'
-   ,  }{
-      metric: 'Global Customers, ',value: '1,
-    200+, ',
-      change: '+45%, ',period: 'YoY 2024, ',icon: Users,
-    color: 'text-purple-400'
-   ,  },
-    {
-      metric: 'Market Presence, ',value: '25+, ',change: '+5, ',period: 'Countries, ',icon: Globe,
-    color: 'text-cyan-400'
-   ,  }
-  ]const quarterlyResults  = [
-    {
-      quarter: 'Q4 2024, ',revenue: '$89.2M, ',growth: '+23%, ',margin: '34.2%',
-    customers: '1,
-    247, ',
-      status: 'Projected'
-   ,  }{
-      quarter: 'Q3 2024, ',revenue: '$72.5M, ',growth: '+18%, ',margin: '32.8%, ',customers: '1,
-    189, ',
-      status: 'Reported'
-   ,  }{
-      quarter: 'Q2 2024, ',revenue: '$61.4M, ',growth: '+15%, ',margin: '31.5%, ',customers: '1,
-    134, ',
-      status: 'Reported'
-   ,  },
-    {
-      quarter: 'Q1 2024, ',revenue: '$53.4M, ',growth: '+12%, ',margin: '30.2%, ',customers: '1,
-    089, ',
-      status: 'Reported'
-   ,  }
-  ]const strategicInitiatives  = [
-    {
-      title: 'AI Platform Expansion, ',description: 'Major investment in AI infrastructure and model development, ',investment: '$45M, ',timeline: '2024-2026, ',status: 'In Progress,';impact: 'High'
-   ,
-     }{
-      title: 'Global Market Entry, ',description: 'Expansion into APAC and European markets, ',investment: '$28M, ',timeline: '2024-2025, ',status: 'Planning, ',impact: 'Medium'
-   ,  }{
-      title: 'Quantum Computing R&D, ',description: 'Research and development in quantum technologies, ',investment: '$32M, ',timeline: '2024-2027, ',status: 'Research, ',impact: 'Long-term'
-   ,  },
-    {
-      title: 'Cybersecurity Platform, ',description: 'Next-generation security solutions development, ',investment: '$38M, ',timeline: '2024-2026, ',status: 'Development, ',impact: 'High'
-   ,  }
-  ]const investorResources  = [
-    {
-      title: 'Annual Report 2024, ',description: 'Comprehensive overview of our financial performance and strategic initiatives, ',type: 'PDF, ',size: '8.2 MB, ',date: 'March 2024,';featured: true
-   ,
-     };
-    {
-      title: 'Q3 2024 Earnings Call, ',description: 'Audio recording and transcript of our Q3 2024 earnings call, ',type: 'Audio/Transcript, ',size: '15.4 MB, ',date: 'November 2024, ',featured: false,  }{
-      title: 'Investor Presentation, ',description: 'Latest investor presentation with company overview and financial highlights, ',type: 'PDF, ',size: '12.8 MB, ',date: 'December 2024, ',featured: true,  }{
-      title: 'Corporate Governance, ',description: 'Board composition,
-    committee charter, s, and governance policies',
-      type: 'PDF, ',size: '3.1 MB, ',date: 'Updated Monthly, ',featured: false,  }{
-      title: 'ESG Report 2024, ',description: 'Environmental,
-    Socia, l, and Governance performance report',
-      type: 'PDF, ',size: '6.7 MB, ',date: 'April 2024, ',featured: false,  },
-    {
-      title: 'Financial Statements, ',description: 'Quarterly and annual financial statements and disclosures, ',type: 'PDF, ',size: 'Various, ',date: 'Quarterly, ',featured: false,  }
-  ]const upcomingEvents  = [
-    {
-      title: 'Q4 2024 Earnings Call',
-    date: 'February 15,
-    2025, ',
-      time: '5:00 PM ET, ',type: 'Earnings Call, ',registration: 'Required'
-   ,  }{
-      title: 'Annual Shareholder Meeting, ',date: 'May 20,
-    2025, ',
-      time: '10:00 AM ET, ',type: 'Shareholder Meeting, ',registration: 'Required'
-   ,  }{
-      title: 'Technology Investor Day, ',date: 'March 28,
-    2025, ',
-      time: '9:00 AM ET, ',type: 'Investor Event, ',registration: 'Open'
-   ,  },
-    {
-      title: 'Q1 2025 Earnings Call, ',date: 'May 8,
-    2025, ',
-      time: '5:00 PM ET, ',type: 'Earnings Call, ',registration: 'Required'
-   ,  }
-  ]const contactInfo  = {
-    investorRelations: 'investors@ziontechgroup.com, ',phone: '+1 (302) 464-0950,';address: '364 E Main St STE 1008 Middletown DE 19709'
- ,
-     }return (
+  Phone;
+}
+}
+ } from "lucide-react";
+export default function InvestorRelations() {
+  const financialHighlights = [
+  {
+  metr,
+  i: c: 'Revenue Growth',val,
+  u: e: '156%',chan,
+  g: e: '+23%',peri,
+  o: d: 'YoY 2024',ic,
+  o: n: TrendingUp,col,
+  o: r: 'text-green-400'
+},
+  {
+  metr,
+  i: c: 'Market Cap',val,
+  u: e: '$2.4B',chan,
+  g: e: '+18%',peri,
+  o: d: 'Current',ic,
+  o: n: DollarSign,col,
+  o: r: 'text-blue-400'
+},
+  {
+  metr,
+  i: c: 'Global Customers',val,
+  u: e: '1,200+'
+      chan,
+  g: e: '+45%',peri,
+  o: d: 'YoY 2024',ic,
+  o: n: Users,col,
+  o: r: 'text-purple-400'
+},
+  {
+  metr,
+  i: c: 'Market Presence',val,
+  u: e: '25+',chan,
+  g: e: '+5',peri,
+  o: d: 'Countries',ic,
+  o: n: Globe,col,
+  o: r: 'text-cyan-400'
+},
+  ]
+  const quarterlyResults = [
+  {
+  quart,
+  e: r: 'Q4 2024',reven,
+  u: e: '$89.2M',grow,
+  t: h: '+23%',marg,
+  i: n: '34.2%',custome,
+  r: s: '1,247'
+      stat,
+  u: s: 'Projected'
+},
+  {
+  quart,
+  e: r: 'Q3 2024',reven,
+  u: e: '$72.5M',grow,
+  t: h: '+18%',marg,
+  i: n: '32.8%',custome,
+  r: s: '1,189'
+      stat,
+  u: s: 'Reported'
+},
+  {
+  quart,
+  e: r: 'Q2 2024',reven,
+  u: e: '$61.4M',grow,
+  t: h: '+15%',marg,
+  i: n: '31.5%',custome,
+  r: s: '1,134'
+      stat,
+  u: s: 'Reported'
+},
+  {
+  quart,
+  e: r: 'Q1 2024',reven,
+  u: e: '$53.4M',grow,
+  t: h: '+12%',marg,
+  i: n: '30.2%',custome,
+  r: s: '1,089'
+      stat,
+  u: s: 'Reported'
+},
+  ]
+  const strategicInitiatives = [
+  {
+  tit,
+  l: e: 'AI Platform Expansion',descripti,
+  o: n: 'Major investment in AI infrastructure and model development',investme,
+  n: t: '$45M',timeli,
+  n: e: '2024-2026',stat,
+  u: s: 'In Progress',impa,
+  c: t: 'High'
+},
+  {
+  tit,
+  l: e: 'Global Market Entry',descripti,
+  o: n: 'Expansion into APAC and European markets',investme,
+  n: t: '$28M',timeli,
+  n: e: '2024-2025',stat,
+  u: s: 'Planning',impa,
+  c: t: 'Medium'
+},
+  {
+  tit,
+  l: e: 'Quantum Computing R&D',descripti,
+  o: n: 'Research and development in quantum technologies',investme,
+  n: t: '$32M',timeli,
+  n: e: '2024-2027',stat,
+  u: s: 'Research',impa,
+  c: t: 'Long-term'
+},
+  {
+  tit,
+  l: e: 'Cybersecurity Platform',descripti,
+  o: n: 'Next-generation security solutions development',investme,
+  n: t: '$38M',timeli,
+  n: e: '2024-2026',stat,
+  u: s: 'Development',impa,
+  c: t: 'High'
+},
+  ]
+  const investorResources = [
+  {
+  tit,
+  l: e: 'Annual Report 2024',descripti,
+  o: n: 'Comprehensive overview of our financial performance and strategic initiatives',ty,
+  p: e: 'PDF',si,
+  z: e: '8.2 MB',da,
+  t: e: 'March 2024',featur,
+  e: d: true;
+},
+  {
+  tit,
+  l: e: 'Q3 2024 Earnings Call',descripti,
+  o: n: 'Audio recording and transcript of our Q3 2024 earnings call',ty,
+  p: e: 'Audio/Transcript',si,
+  z: e: '15.4 MB',da,
+  t: e: 'November 2024',featur,
+  e: d: false;
+},
+  {
+  tit,
+  l: e: 'Investor Presentation',descripti,
+  o: n: 'Latest investor presentation with company overview and financial highlights',ty,
+  p: e: 'PDF',si,
+  z: e: '12.8 MB',da,
+  t: e: 'December 2024',featur,
+  e: d: true;
+},
+  {
+  tit,
+  l: e: 'Corporate Governance',descripti,
+  o: n: 'Board composition, committee charters, and governance policies'
+      ty,
+  p: e: 'PDF',si,
+  z: e: '3.1 MB',da,
+  t: e: 'Updated Monthly',featur,
+  e: d: false;
+},
+  {
+  tit,
+  l: e: 'ESG Report 2024',descripti,
+  o: n: 'Environmental, Social, and Governance performance report'
+      ty,
+  p: e: 'PDF',si,
+  z: e: '6.7 MB',da,
+  t: e: 'April 2024',featur,
+  e: d: false;
+},
+  {
+  tit,
+  l: e: 'Financial Statements',descripti,
+  o: n: 'Quarterly and annual financial statements and disclosures',ty,
+  p: e: 'PDF',si,
+  z: e: 'Various',da,
+  t: e: 'Quarterly',featur,
+  e: d: false;
+},
+  ]
+  const upcomingEvents = [
+  {
+  tit,
+  l: e: 'Q4 2024 Earnings Call',da,
+  t: e: 'February 15, 2025'
+      ti,
+  m: e: ',
+  5:00 PM ET',ty,
+  p: e: 'Earnings Call',registrati,
+  o: n: 'Required'
+},
+  {
+  tit,
+  l: e: 'Annual Shareholder Meeting',da,
+  t: e: 'May 20, 2025'
+      ti,
+  m: e: '1,
+  0:00 AM ET',ty,
+  p: e: 'Shareholder Meeting',registrati,
+  o: n: 'Required'
+},
+  {
+  tit,
+  l: e: 'Technology Investor Day',da,
+  t: e: 'March 28, 2025'
+      ti,
+  m: e: ',
+  9:00 AM ET',ty,
+  p: e: 'Investor Event',registrati,
+  o: n: 'Open'
+},
+  {
+  tit,
+  l: e: 'Q1 2025 Earnings Call',da,
+  t: e: 'May 8, 2025'
+      ti,
+  m: e: ',
+  5:00 PM ET',ty,
+  p: e: 'Earnings Call',registrati,
+  o: n: 'Required'
+},
+  ]
+  const const contactInfo = {
+  = {
+    investorRelatio,
+  n: s: 'investors@ziontechgroup.com',pho,
+  n: e: '+1 (302) 464-0950',addre,
+  s: s: '364 E Main St STE 1008 Middletown DE 19709'
+}
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Investor Relations - Zion Tech Group"
-        description="Access financial informationquarterly reports, investor presentations, and company performance data for Zion Tech Group. Stay informed about our growth and strategic initiatives."
+        description="Access financial information, quarterly reports, investor presentations, and company performance data for Zion Tech Group. Stay informed about our growth and strategic initiatives."
       />
       
-      {/* Hero Section */}
+      {/* Hero Section */},
+  }
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,
-     }}
-            className="text-center max-w-4xl mx-auto"
+          <motion.div;
+            initial={ opaci,
+  t: y: 0, y: 20 },
+  }
+            animate={ opaci,
+  t: y: 1, y: 0 },
+  }
+            transition={ durati,
+  o: n: 0.6 },
+  }
+            className="className="text-center max-w-4xl mx-auto";"
           >
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
-              Investor Relations
+            <h1 className="text-5xl,
+  m: d:text-6xl font-bold text-white mb-6">
+              Investor Relations;
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Access comprehensive financial information,
-    quarterly report, s, and strategic updates. 
+              Access comprehensive financial information, quarterly reports, and strategic updates. 
               Learn about our growth trajectory and investment opportunities.
             </p>
             
-            {/* Financial Highlights */}
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">
-              {financialHighlights.map((highlight,
-    index) => (
-                <motion.div
-                  key={highlight.metric}
-                  initial={{ opacity: 0,
-    y: 20,  }}
-                  animate={{ opacity: 1,
-    y: 0,  }}
-                  transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                  className="text-center"
+            {/* Financial Highlights */},
+  }
+            <div className="grid grid-cols-2,
+  m: d:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              {financialHighlights.map((highlight, index) => (
+  <motion.div;
+                  key={highlight.metric},
+  }
+                  initial={ opaci,
+  t: y: 0, y: 20 },
+  }
+                  animate={ opaci,
+  t: y: 1, y: 0 },
+  }
+                  transition={ durati,
+  o: n: 0.6, del,
+  a: y: index * 0.1 },
+  }
+                  className="className="text-center";"
                 >
                   <div className={`text-3xl font-bold ${highlight.color} mb-2`}>{highlight.value}</div>
                   <div className="text-sm text-gray-400 mb-1">{highlight.metric}</div>
-                  <div className="text-xs text-green-400">{highlight.change} {highlight.period}</div>
+                  <div className="text-xs text-green-400">{highlight.change},
+  {highlight.period}</div>
                 </motion.div>
               ))}
             </div>
@@ -171,21 +325,28 @@ import { motion } from "framer-moti, on";import { SEO } from "../components/S, E
         </div>
       </section>
 
-      {/* Quarterly Results */}
+      {/* Quarterly Results */},
+  }
       <section className="py-16">
         <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,  }}
-            viewport={{ once: true,
-     }}
-            className="mb-12"
+          <motion.div;
+            initial={ opaci,
+  t: y: 0, y: 20 },
+  }
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
+  }
+            transition={ durati,
+  o: n: 0.6 },
+  }
+            viewport={ on,
+  c: e: true },
+  }
+            className="className="mb-12";"
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Quarterly Performance</h2>
             <p className="text-gray-300 text-center max-w-2xl mx-auto">
-              Track our financial performance and growth trajectory across quarters
+              Track our financial performance and growth trajectory across quarters;
             </p>
           </motion.div>
 
@@ -202,8 +363,8 @@ import { motion } from "framer-moti, on";import { SEO } from "../components/S, E
                 </tr>
               </thead>
               <tbody>
-                {quarterlyResults.map((quarterindex) => (
-                  <tr key={quarter.quarter} className="border-t border-slate-700/50">
+                {quarterlyResults.map((quarter, index) => (
+  <tr key={quarter.quarter} className="border-t border-slate-700/50">
                     <td className="p-4 text-white font-medium">{quarter.quarter}</td>
                     <td className="p-4 text-white">{quarter.revenue}</td>
                     <td className="p-4 text-green-400">{quarter.growth}</td>
@@ -211,11 +372,12 @@ import { motion } from "framer-moti, on";import { SEO } from "../components/S, E
                     <td className="p-4 text-white">{quarter.customers}</td>
                     <td className="p-4">
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        quarter.status === 'Reported' ? 'bg-green-500/20 text-green-300' :
+  quarter.status === 'Reported' ? 'bg-green-500/20 text-green-300' :
                         quarter.status === 'Projected' ? 'bg-yellow-500/20 text-yellow-300' :
                         'bg-blue-500/20 text-blue-300'
-                      }`}>
-                        {quarter.status}
+}`}>
+                        {quarter.status},
+  }
                       </span>
                     </td>
                   </tr>
@@ -226,46 +388,61 @@ import { motion } from "framer-moti, on";import { SEO } from "../components/S, E
         </div>
       </section>
 
-      {/* Strategic Initiatives */}
+      {/* Strategic Initiatives */},
+  }
       <section className="py-16 bg-slate-800/20">
         <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,  }}
-            viewport={{ once: true,
-     }}
-            className="mb-12"
+          <motion.div;
+            initial={ opaci,
+  t: y: 0, y: 20 },
+  }
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
+  }
+            transition={ durati,
+  o: n: 0.6 },
+  }
+            viewport={ on,
+  c: e: true },
+  }
+            className="className="mb-12";"
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Strategic Initiatives</h2>
             <p className="text-gray-300 text-center max-w-2xl mx-auto">
-              Major investments and strategic projects driving our future growth
+              Major investments and strategic projects driving our future growth;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-            {strategicInitiatives.map((initiative,
-    index) => (
-              <motion.div
-                key={initiative.title}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,
-     }}
-                className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 p-6"
+          <div className="grid grid-cols-1,
+  m: d:grid-cols-2 gap-6">
+            {strategicInitiatives.map((initiative, index) => (
+  <motion.div;
+                key={initiative.title},
+  }
+                initial={ opaci,
+  t: y: 0, y: 20 },
+  }
+                whileInView={ opaci,
+  t: y: 1, y: 0 },
+  }
+                transition={ durati,
+  o: n: 0.6, del,
+  a: y: index * 0.1 },
+  }
+                viewport={ on,
+  c: e: true },
+  }
+                className="className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 p-6";"
               >
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-xl font-semibold text-white">{initiative.title}</h3>
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                    initiative.impact === 'High' ? 'bg-red-500/20 text-red-300' :
+  initiative.impact === 'High' ? 'bg-red-500/20 text-red-300' :
                     initiative.impact === 'Medium' ? 'bg-yellow-500/20 text-yellow-300' :
                     'bg-blue-500/20 text-blue-300'
-                  }`}>
-                    {initiative.impact}
+}`}>
+                    {initiative.impact},
+  }
                   </span>
                 </div>
                 
@@ -291,36 +468,53 @@ import { motion } from "framer-moti, on";import { SEO } from "../components/S, E
         </div>
       </section>
 
-      {/* Investor Resources */}
+      {/* Investor Resources */},
+  }
       <section className="py-16">
         <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,  }}
-            viewport={{ once: true,
-     }}
-            className="mb-12"
+          <motion.div;
+            initial={ opaci,
+  t: y: 0, y: 20 },
+  }
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
+  }
+            transition={ durati,
+  o: n: 0.6 },
+  }
+            viewport={ on,
+  c: e: true },
+  }
+            className="className="mb-12";"
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Investor Resources</h2>
             <p className="text-gray-300 text-center max-w-2xl mx-auto">
-              Access our latest financial reportspresentations, and governance documents
+              Access our latest financial reports, presentations, and governance documents;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {investorResources.map((resource,
-    index) => (
-              <motion.div
-                key={resource.title}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,  }}
-                className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden hover: border-cyan-400/30 transition-all duration-300"
+          <div className="grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-3 gap-6">
+            {investorResources.map((resource, index) => (
+  <motion.div;
+                key={resource.title},
+  }
+                initial={ opaci,
+  t: y: 0, y: 20 },
+  }
+                whileInView={ opaci,
+  t: y: 1, y: 0 },
+  }
+                transition={ durati,
+  o: n: 0.6, del,
+  a: y: index * 0.1 },
+  }
+                viewport={ on,
+  c: e: true },
+  }
+                className="className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden,
+  hove: r:border-cyan-400/30 transition-all duration-300";"
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
@@ -328,10 +522,10 @@ import { motion } from "framer-moti, on";import { SEO } from "../components/S, E
                       <FileText className="w-6 h-6 text-cyan-400" />
                     </div>
                     {resource.featured && (
-                      <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-medium text-white">
-                        Featured
+  <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-medium text-white">
+                        Featured;
                       </span>
-                    , )}
+                    )}
                   </div>
 
                   <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
@@ -343,111 +537,147 @@ import { motion } from "framer-moti, on";import { SEO } from "../components/S, E
                   </div>
 
                   <div className="text-xs text-gray-500 mb-4">
-                    Updated: {resource.dat, e}
+                    Updat,
+  e: d: {resource.date},
+  }
                   </div>
 
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center gap-2">
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600,
+  hove: r: from-cyan-600,
+  hove: r:to-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300,
+  transform: hover:scale-105 shadow-lg hove,
+  r:shadow-cyan-500/25 flex items-center justify-center gap-2">
                     <Download className="w-4 h-4" />
-                    Download
+                    Download;
                   </button>
                 </div>
               </motion.div>
-            ),
-    )}
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Upcoming Events */}
+      {/* Upcoming Events */},
+  }
       <section className="py-16 bg-slate-800/20">
         <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,  }}
-            viewport={{ once: true,
-     }}
-            className="mb-12"
+          <motion.div;
+            initial={ opaci,
+  t: y: 0, y: 20 },
+  }
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
+  }
+            transition={ durati,
+  o: n: 0.6 },
+  }
+            viewport={ on,
+  c: e: true },
+  }
+            className="className="mb-12";"
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Upcoming Events</h2>
             <p className="text-gray-300 text-center max-w-2xl mx-auto">
-              Mark your calendar for important investor events and earnings calls
+              Mark your calendar for important investor events and earnings calls;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-            {upcomingEvents.map((event,
-    index) => (
-              <motion.div
-                key={event.title}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,  }}
-                className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 p-6"
+          <div className="grid grid-cols-1,
+  m: d:grid-cols-2 gap-6">
+            {upcomingEvents.map((event, index) => (
+  <motion.div;
+                key={event.title},
+  }
+                initial={ opaci,
+  t: y: 0, y: 20 },
+  }
+                whileInView={ opaci,
+  t: y: 1, y: 0 },
+  }
+                transition={ durati,
+  o: n: 0.6, del,
+  a: y: index * 0.1 },
+  }
+                viewport={ on,
+  c: e: true },
+  }
+                className="className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 p-6";"
               >
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-xl font-semibold text-white">{event.title}</h3>
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                    event.registration === 'Required' ? 'bg-red-500/20 text-red-300' :
+  event.registration === 'Required' ? 'bg-red-500/20 text-red-300' :
                     'bg-green-500/20 text-green-300'
-                  }`}>
-                    {event.registration}
+}`}>
+                    {event.registration},
+  }
                   </span>
                 </div>
                 
                 <div className="space-y-2 text-sm text-gray-300 mb-4">
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
-                    {event.date}
+                    {event.date},
+  }
                   </div>
                   <div className="flex items-center gap-2">
                     <Clock className="w-4 h-4" />
-                    {event.time}
+                    {event.time},
+  }
                   </div>
                   <div className="flex items-center gap-2">
                     <Briefcase className="w-4 h-4" />
-                    {event.type}
+                    {event.type},
+  }
                   </div>
                 </div>
 
-                <button className="w-full bg-slate-700/50 hover: bg-slate-600/50 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300">
-                  Register Now
+                <button className="w-full bg-slate-700/50,
+  hove: r:bg-slate-600/50 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300">
+                  Register Now;
                 </button>
               </motion.div>
-            ),
-    )}
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Information */}
+      {/* Contact Information */},
+  }
       <section className="py-16">
         <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,  }}
-            viewport={{ once: true,  }}
-            className="text-center"
+          <motion.div;
+            initial={ opaci,
+  t: y: 0, y: 20 },
+  }
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
+  }
+            transition={ durati,
+  o: n: 0.6 },
+  }
+            viewport={ on,
+  c: e: true },
+  }
+            className="className="text-center";"
           >
             <h2 className="text-3xl font-bold text-white mb-8">Contact Investor Relations</h2>
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1,
+  m: d: grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="p-4 bg-slate-700/30 rounded-xl mx-auto mb-4 w-16 h-16 flex items-center justify-center">
                   <Mail className="w-8 h-8 text-cyan-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
                 <p className="text-gray-300 mb-3">Direct investor inquiries</p>
-                <a
-                  href={`mailto:${contactInfo.investorRelation, s}`}
-                  className="text-cyan-400 hover: text-cyan-300 transition-colors font-medium"
+                <a;
+                  href={`mailt,
+  o:${contactInfo.investorRelations}`}
+                  className="className="text-cyan-400,
+  hove: r:text-cyan-300 transition-colors font-medium";"
                 >
-                  {contactInfo.investorRelation, s}
+                  {contactInfo.investorRelations},
+  }
                 </a>
               </div>
 
@@ -457,12 +687,14 @@ import { motion } from "framer-moti, on";import { SEO } from "../components/S, E
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
                 <p className="text-gray-300 mb-3">Speak with our team</p>
-                <a
-                  href={`tel: ${contactInfo.phon, e}`}
-                  className="text-blue-400 hover: text-blue-300 transition-colors font-medium"
+                <a;
+                  href={`t,
+  e: l:${contactInfo.phone}`}
+                  className="className="text-blue-400,
+  hove: r:text-blue-300 transition-colors font-medium";"
                 >
-                  {contactInfo.phon,
-    e}
+                  {contactInfo.phone},
+  }
                 </a>
               </div>
 
@@ -473,7 +705,8 @@ import { motion } from "framer-moti, on";import { SEO } from "../components/S, E
                 <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
                 <p className="text-gray-300 mb-3">Corporate headquarters</p>
                 <span className="text-green-400 font-medium text-sm">
-                  {contactInfo.address}
+                  {contactInfo.address},
+  }
                 </span>
               </div>
             </div>
@@ -481,5 +714,5 @@ import { motion } from "framer-moti, on";import { SEO } from "../components/S, E
         </div>
       </section>
     </div>
-  );
-};
+  )
+}

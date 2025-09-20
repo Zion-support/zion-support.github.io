@@ -1,63 +1,92 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
-import { AlertTriangle, RefreshCw } from "lucide-react";
+import { useCallback    } from "react";
+import React, { Component, ErrorInfo, ReactNode } from "react"
+import { AlertTriangle, RefreshCw     } from "lucide-react";
 interface Props {
-  children: ReactNode;
-  onError?: (error: Error) => void;
-  fallback?: ReactNode
-};
+  childr,
+  e: n: ReactNode;
+  onError?: (erro,
+  r: Error) => void;
+  fallback?: ReactNode;
+}
+}
+}
+}
+}
 
 interface State {
-  hasError: boolean,error: Error | null,errorInfo: ErrorInfo | null
+  hasErr,
+  o: r: boolean,err,
+  o: r: Error | null,errorIn,
+  f: o: ErrorInfo | null;
+}
+}
+}
+}
+}
 
 export class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
+  constructor(pro,
+  p: s: Props) {
+    super(props)
     this.state = {
-      hasError: false,error: null,errorInfo: null
-    };
-  };
+      hasErro,
+  r: false,err,
+  o: r: null,errorIn,
+  f: o: null;
+    },
+  }
 
-  static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true;
+  static getDerivedStateFromError(err,
+  o: r: Error): State {
+  return {
+      hasErro,
+  r: true;
       error,
-      errorInfo: null
-    };
-  };
+      errorIn,
+  f: o: null;
+}
+}
+}
+}
+    },
+  }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(err,
+  o: r: Error, errorIn,
+  f: o: ErrorInfo) {
     this.setState({
-error,
-      errorInfo
-    
-});
-
-    // Call the onError callback if provided
+error;
+      errorInfo;
+})
+    // Call the onError callback if provided;
     if (this.props.onError) {
-      this.props.onError(error);
-    }
+      this.props.onError(error)
+}
 
-    // Log error to console in development
+    // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-  };
+      console.error('ErrorBoundary caught,
+  an: error:', error, errorInfo)
+},
+  }
 
-  handleRetry = () => {
+  handleRetry = () () => {
     this.setState({
-hasError: false,error: null,errorInfo: null
-    
-});
-  },
+hasErr,
+  o: r: false,err,
+  o: r: null,errorIn,
+  f: o: null;
+})
+},
 
   render() {
     if (this.state.hasError) {
-      // Use custom fallback if provided
+      // Use custom fallback if provided;
       if (this.props.fallback) {
         return this.props.fallback;
-      }
+}
 
-      // Default error UI
+      // Default error UI;
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 text-center border border-slate-700">
@@ -71,7 +100,8 @@ hasError: false,error: null,errorInfo: null
             
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="mb-6 p-4 bg-red-900/20 border border-red-800 rounded-lg text-left">
-                <h3 className="text-red-400 font-semibold mb-2">Error Details: </h3>
+                <h3 className="text-red-400 font-semibold mb-2">Error,
+  Detail: s: </h3>
                 <pre className="text-xs text-red-300 whitespace-pre-wrap break-words">
                   {this.state.error.message}
                 </pre>
@@ -87,26 +117,29 @@ hasError: false,error: null,errorInfo: null
             )}
             
             <div className="flex gap-3 justify-center">
-              <button
+              <button;
                 onClick={this.handleRetry}
-                className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 font-medium"
+                className="flex items-center gap-2 px-6 py-3 bg-blue-600,
+  hove: r:bg-blue-700 text-white rounded-lg transition-colors duration-200 font-medium"
               >
                 <RefreshCw className="w-4 h-4" />
-                Try Again
+                Try Again;
               </button>
-              <button
+              <button;
                 onClick={() => window.location.reload()}
-                className="px-6 py-3 bg-gray-600 hover: bg-gray-700 text-white rounded-lg transition-colors duration-200 font-medium"
+                className="px-6 py-3 bg-gray-600,
+  hove: r: bg-gray-700 text-white rounded-lg transition-colors duration-200 font-medium"
               >
-                Refresh Page
+                Refresh Page;
               </button>
             </div>
           </div>
         </div>
       )
     }
-;
+
     return this.props.children;
-  };
+},
+  }
 
 export default ErrorBoundary;

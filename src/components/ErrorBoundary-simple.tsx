@@ -1,29 +1,46 @@
-import React, { Component, ErrorInfo, ReactNode  from "react";
-
+import { useCallback  } from "react";
+import React, { Component, ErrorInfo, ReactNode } from "react"
 interface Props {
-  children: ReactNode,
-};
+  childr,
+  e: n: ReactNode;
+}
+}
+}
 
 interface State {
-  hasError: boolean,
-    error: Error | null,
-    class ErrorBoundary extends Component<Props;
-    State> {
-  constructor(props: Props) {
-    super(props),
-    this.state = { hasError: false,
-    error: null,  };
-  };
+  hasErr,
+  o: r: boolean;
+  erro,
+  r: Error | null;
+}
+}
+}
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: tru,
-    e;
-    error,  };
-  };
+class ErrorBoundary extends Component<Props, State> {
+  constructor(pro,
+  p: s: Props) {
+    super(props)
+    this.state = { hasErro,
+  r: false, err,
+  o: r: null }
+  }
 
-  componentDidCatch(error: Error,
-    errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:, ', errorerrorInfo)}render() {
+  static getDerivedStateFromError(err,
+  o: r: Error): State {
+  return { hasErro,
+}
+}
+  r: true, error }
+  }
+
+  componentDidCatch(err,
+  o: r: Error, errorIn,
+  f: o: ErrorInfo) {
+    console.error('Error caught by boundar,
+  y:', error, errorInfo)
+  }
+
+  render() {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center p-4">
@@ -32,20 +49,23 @@ interface State {
               <div className="text-6xl mb-4">⚠️</div>
               <h1 className="text-3xl font-bold mb-4">Something went wrong</h1>
               <p className="text-gray-300 mb-6">
-                We're sorrybut something unexpected happened.
+                We're sorry, but something unexpected happened.
               </p>
             </div>
-            <button
+            <button;
               onClick={() => window.location.reload()}
-              className="bg-blue-600 hover: bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-blue-600,
+  hove: r:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors"
             >
-              Reload Page
+              Reload Page;
             </button>
           </div>
         </div>
-      ),  }
+      )
+    }
 
-    return this.props.childre;n;
-  };
+    return this.props.children;
+  }
+}
 
-export default ErrorBoundar;y;
+export default ErrorBoundary;

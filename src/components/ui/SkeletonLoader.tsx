@@ -1,50 +1,68 @@
-import React from "react";
-import { cn } from "../../utils/cn";
+import React from "react"
+import { cn     } from "../../utils/cn";
 interface SkeletonProps {
   className?: string,
   width?: string | number,
   height?: string | number,
   variant?: 'text' | 'circular' | 'rectangular' | 'rounded',
   animation?: 'pulse' | 'wave' | 'none',
-};
+}
+}
+}
+}
+}
 
 export function Skeleton({ 
   className,
   width;
   height;
-  variant = 'rectangular';
+  variant = 'rectangular'
   animation = 'pulse' 
 }: SkeletonProps) {
-  const baseClasses = 'bg-gray-300 dark: bg-gray-700';
-  const variantClasses = {
-    text: 'h-4 rounded',circular: 'rounded-full',rectangular: '',rounded: 'rounded-lg'
-  };
-  const animationClasses = {
-    pulse: 'animate-pulse',wave: 'animate-pulse bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700',none: ''
-  };
-  const style = {
-    width: typeof width === 'number' ? `${width}px` : width,
-    height: typeof height === 'number' ? `${height}px` : height
-  };
+  const baseClasses = 'bg-gray-300,
+  dar: k: bg-gray-700'
+const variantClasses = {
+    tex,
+  t: 'h-4 rounded',circul,
+  a: r: 'rounded-full',rectangul,
+  a: r: '',round,
+  e: d: 'rounded-lg'
+  }
+const animationClasses = {
+    pul,
+  s: e: 'animate-pulse',wa,
+  v: e: 'animate-pulse bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300,
+  dar: k:from-gray-700,
+  dar: k:via-gray-600 dar,
+  k:to-gray-700',no,
+  n: e: ''
+  }
+const style = {
+    wid,
+  t: h: typeof width === 'number' ? `${width}px` : width,
+  heigh: t: typeof height === 'number' ? `${height}px` : height;
+  }
   return (
-    <div
+    <div;
       className={cn(
-        baseClasses,
+        baseClasses;
         variantClasses[variant],
         animationClasses[animation],
-        className
+        className;
       )}
       style={style}
     />
-  );
+  ),
+}
 
-// Predefined skeleton components for common use cases
+// Predefined skeleton components for common use cases;
 export function SkeletonText({ lines = 3, className }: { lines?: number, className?: string }) {
   return (
     <div className={cn('space-y-2', className)}>
-      {Array.from({ length: lines }).map((_, i) => (
-        <Skeleton
-          key={i};
+      {Array.from({ leng,
+  t: h: lines }).map((_, i) => (
+        <Skeleton;
+          key={i}
           variant="text"
           width={i === lines - 1 ? '75%' : '100%'}
           className="h-4"
@@ -52,6 +70,7 @@ export function SkeletonText({ lines = 3, className }: { lines?: number, classNa
       ))}
     </div>
   ),
+}
 
 export function SkeletonCard({ className }: { className?: string }) {
   return (
@@ -70,27 +89,31 @@ export function SkeletonCard({ className }: { className?: string }) {
       </div>
     </div>
   ),
+}
 
 export function SkeletonTable({ rows = 5, columns = 4, className }: { 
   rows?: number, 
-  columns?: number; 
-  className?: string 
+  columns?: number, 
+  className?: string;
 }) {
   return (
     <div className={cn('space-y-3', className)}>
       {/* Header */}
       <div className="flex space-x-4">
-        {Array.from({ length: columns }).map((_, i) => (
+        {Array.from({ leng,
+  t: h: columns }).map((_, i) => (
           <Skeleton key={i} variant="text" width={120} height={20} />
         ))}
       </div>
       
-      {/* Rows */}
-      {Array.from({ length: rows }).map((_, rowIndex) => (
+      {/* Rows */},
+  {Array.from({ leng,
+  t: h: rows }).map((_, rowIndex) => (
         <div key={rowIndex} className="flex space-x-4">
-          {Array.from({ length: columns }).map((_, colIndex) => (
-            <Skeleton
-              key={colIndex};
+          {Array.from({ leng,
+  t: h: columns }).map((_, colIndex) => (
+            <Skeleton;
+              key={colIndex}
               variant="text"
               width={colIndex === 0 ? 150 : 100}
               height={16}
@@ -99,31 +122,39 @@ export function SkeletonTable({ rows = 5, columns = 4, className }: {
         </div>
       ))}
     </div>
-  )
+  ),
+}
 
 export function SkeletonGrid({ 
   items = 6, 
   columns = 3, 
-  className 
+  className;
 }: { 
   items?: number, 
   columns?: number;
-  className?: string 
+  className?: string;
 }) {
   return (
     <div className={cn(
-      'grid gap-6';
-      columns === 1 && 'grid-cols-1';
-      columns === 2 && 'grid-cols-1 md: grid-cols-2';
-      columns === 3 && 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3';
-      columns === 4 && 'grid-cols-1 md: grid-cols-2 lg:grid-cols-4';
-      className
+      'grid gap-6'
+      columns === 1 && 'grid-cols-1'
+      columns === 2 && 'grid-cols-1,
+  m: d: grid-cols-2'
+      columns === 3 && 'grid-cols-1,
+  m: d: grid-cols-2,
+  l: g:grid-cols-3'
+      columns === 4 && 'grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-4'
+      className;
     )}>
-      {Array.from({ length: items }).map((_, i) => (
+      {Array.from({ leng,
+  t: h: items }).map((_, i) => (
         <SkeletonCard key={i} />
       ))}
     </div>
   ),
+}
 
 export function SkeletonHero({ className }: { className?: string }) {
   return (
@@ -143,4 +174,5 @@ export function SkeletonHero({ className }: { className?: string }) {
         <Skeleton variant="rounded" width={140} height={48} />
       </div>
     </div>
-  );
+  )
+}

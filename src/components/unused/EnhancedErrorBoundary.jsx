@@ -1,71 +1,109 @@
-import React, { Component } from "react";
-import { motion } from "framer-motion";
-import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from "@heroicons/react/24/outline";
+import { useCallback    } from "react";
+import React, { Component } from "react"
+import { motion     } from "framer-motion";
+import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon     } from "@heroicons/react/24/outline";
 class EnhancedErrorBoundary extends Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+        super(props)
         this.state = {
-            hasError: false,error: null,errorInfo: null,errorId: null,showStackTrace: false
-        };
-    }
+            hasErr,
+  o: r: false,err,
+  o: r: null,errorIn,
+  f: o: null,error,
+  I: d: null,showStackTra,
+  c: e: false;
+}
+}
+}
+}
+        },
+  }
 
     static getDerivedStateFromError(error) {
         return {
-            hasError: true;
+  hasErr,
+  o: r: true;
             error,
-            errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+            error,
+}
+}
+}
+}
+  I: d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
         },
     }
 
     componentDidCatch(error, errorInfo) {
         this.setState({
-errorInfo 
-});
-        // Log error to console
-        console.error('Error caught by boundary:', error, errorInfo);
-        // Call custom error handler if provided
+errorInfo;
+})
+        // Log error to console;
+        console.error('Error caught,
+  by: boundary:', error, errorInfo)
+        // Call custom error handler if provided;
         if (this.props.onError) {
-            this.props.onError(error, errorInfo);
-        }
+            this.props.onError(error, errorInfo)
+}
         // Send error to error reporting service (if available)
-        this.reportError(error, errorInfo);
-    }
+        this.reportError(error, errorInfo)
+}
 
     static generateErrorId() {
         return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     }
 
     reportError(error, errorInfo) {
-        // In a real application, you would send this to your error reporting service
-        // For example: Sentry, LogRocket, Bugsnag, etc.
+        // In a real application, you would send this to your error reporting service;
+        // For,
+  exampl: e: Sentry, LogRocket, Bugsnag, etc.
         const errorReport = {
-            id: this.state.errorId,timestamp: new Date().toISOString(),error: {,
-                name: error.name,message: error.message,stack: error.stack
-            },
-            errorInfo: {,
-                componentStack: errorInfo.componentStack
-            },
-            userAgent: navigator.userAgent,url: window.location.href,viewport: {,
-                width: window.innerWidth,height: window.innerHeight
+            id: this.state.errorId,timesta,
+  m: p: new Date().toISOString(),err,
+  o: r: {
+                nam,
+  e: error.name,messa,
+  g: e: error.message,sta,
+  c: k: error.stack;
             }
-        };
-        // Log to console for development
+            errorIn,
+  f: o: {
+                componentStac,
+  k: errorInfo.componentStack;
+            }
+            userAge,
+  n: t: navigator.userAgent,u,
+  r: l: window.location.href,viewpo,
+  r: t: {
+                widt,
+  h: window.innerWidth,heig,
+  h: t: window.innerHeight;
+            },
+  }
+        // Log to console for development;
         if (process.env.NODE_ENV === 'development') {
-            console.group('Error Report');
-            console.log('Error ID:', errorReport.id);
-            console.log('Error Details:', errorReport);
-            console.groupEnd();
-        }
-        // In production, you would send this to your error reporting service
-        // Example: Sentry.captureException(error, { extra: errorReport });
-    }
+            console.group('Error Report')
+            console.log('Error,
+  I: D:', errorReport.id)
+            console.log('Error,
+  Detail: s:', errorReport)
+            console.groupEnd()
+}
+        // In production, you would send this to your error reporting service;
+        // Examp,
+  l: e: Sentry.captureException(error, { ext,
+  r: a: errorReport })
+}
 
     handleRetry() {
         this.setState({
-hasError: false,error: null,errorInfo: null,errorId: null,showStackTrace: false
-        
-});
-    }
+hasErr,
+  o: r: false,err,
+  o: r: null,errorIn,
+  f: o: null,error,
+  I: d: null,showStackTra,
+  c: e: false;
+})
+}
 
     handleGoHome() {
         window.location.href = '/',
@@ -73,54 +111,72 @@ hasError: false,error: null,errorInfo: null,errorId: null,showStackTrace: false
 
     handleReportIssue() {
         const error = this.state.error;
-        const errorInfo = this.state.errorInfo;
+const errorInfo = this.state.errorInfo;
         if (error && errorInfo) {
             const issueBody = `
-## Error Report
+## Error Report;
+**Error,
+  I: D: ** ${this.state.errorId}
 
-**Error ID: ** ${this.state.errorId}
+**Error,
+  Messag: e:** ${error.message}
 
-**Error Message:** ${error.message}
-
-**Error Stack:**
+**Error,
+  Stac: k:**
 \`\`\`
 ${error.stack}
 \`\`\`
 
-**Component Stack:**
+**Component,
+  Stac: k:**
 \`\`\`
 ${errorInfo.componentStack}
 \`\`\`
 
-**URL:** ${window.location.href}
-**User Agent:** ${navigator.userAgent}
-**Timestamp:** ${new Date().toISOString()}
+**U,
+  R: L:** ${window.location.href}
+**User,
+  Agen: t:** ${navigator.userAgent}
+**Timesta,
+  m: p:** ${new Date().toISOString()}
 
 Please provide any additional context about what you were doing when this error occurred.
-            `;
-            // Open email client with pre-filled error report
-            const mailtoLink = `mailto: support@ziontechgroup.com?subject=Error Report - ${this.state.errorId}&body=${encodeURIComponent(issueBody)}`;
-            window.open(mailtoLink);
-        }
-    }
+            `
+            // Open email client with pre-filled error report;
+            const mailtoLink = `mail,
+  t: o: support@ziontechgroup.com?subject=Error Report - ${this.state.errorId}&body=${encodeURIComponent(issueBody)}`
+            window.open(mailtoLink)
+},
+  }
 
     toggleStackTrace() {
-        this.setState(prev => ({ showStackTrace: !prev.showStackTrace }));
-    }
+        this.setState(prev => ({ showStackTra,
+  c: e: !prev.showStackTrace }))
+}
 
     render() {
         if (this.state.hasError) {
-            // Custom fallback UI
+            // Custom fallback UI;
             if (this.props.fallback) {
                 return this.props.fallback;
-            }
-            // Default error UI
+}
+            // Default error UI;
             return (
-                <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
-                    <motion.div 
-                        initial={{ opacity: 0, scale: 0.9 }} 
-                        animate={{ opacity: 1, scale: 1 }} 
-                        className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden"
+                <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100,
+  dar: k: from-slate-900,
+  dar: k:to-slate-800 flex items-center justify-center p-4">
+                    <motion.div;
+                        initial={ opacit,
+  y: 0, sca,
+  l: e: 0.9 },
+  } 
+                        animate={ opaci,
+  t: y: 1, sca,
+  l: e: 1 },
+  } 
+                        className="max-w-2xl w-full bg-white,
+  dar: k: bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dar,
+  k:border-slate-700 overflow-hidden"
                     >
                         {/* Header */}
                         <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-white">
@@ -136,34 +192,46 @@ Please provide any additional context about what you were doing when this error 
                         {/* Content */}
                         <div className="p-6 space-y-6">
                             {/* Error Message */}
-                            <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
+                            <div className="bg-red-50,
+  dar: k: bg-red-900/20 border border-red-200,
+  dar: k:border-red-800 rounded-lg p-4">
                                 <div className="flex items-start space-x-3">
                                     <BugAntIcon className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0"/>
                                     <div className="flex-1">
-                                        <h3 className="font-medium text-red-800 dark:text-red-200">
+                                        <h3 className="font-medium text-red-800 dar,
+  k:text-red-200">
                                             {this.state.error?.name || 'Application Error'}
                                         </h3>
-                                        <p className="text-sm text-red-700 dark:text-red-300 mt-1">
+                                        <p className="text-sm text-red-700,
+  dar: k:text-red-300 mt-1">
                                             {this.state.error?.message || 'An unexpected error occurred'}
                                         </p>
                                         {this.state.errorId && (
-                                            <p className="text-xs text-red-600 dark:text-red-400 mt-2 font-mono">
-                                                Error ID: {this.state.errorId}
+                                            <p className="text-xs text-red-600,
+  dar: k: text-red-400 mt-2 font-mono">
+                                                Error I,
+  D: {this.state.errorId}
                                             </p>
                                         )}
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Stack Trace (Collapsible) */}
-                            {this.state.error?.stack && (
-                                <div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
-                                    <button 
+                            {/* Stack Trace (Collapsible) */},
+  {this.state.error?.stack && (
+                                <div className="border border-slate-200,
+  dar: k:border-slate-700 rounded-lg overflow-hidden">
+                                    <button;
                                         onClick={this.toggleStackTrace} 
-                                        className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors flex items-center justify-between text-left"
+                                        className="w-full px-4 py-3 bg-slate-50,
+  dar: k: bg-slate-700,
+  hove: r:bg-slate-100,
+  dar: k:hov,
+  e: r:bg-slate-600 transition-colors flex items-center justify-between text-left"
                                     >
-                                        <span className="font-medium text-slate-700 dark:text-slate-300">
-                                            Technical Details
+                                        <span className="font-medium text-slate-700 dar,
+  k:text-slate-300">
+                                            Technical Details;
                                         </span>
                                         <DocumentTextIcon className={`w-5 h-5 text-slate-500 transition-transform ${this.state.showStackTrace ? 'rotate-180' : ''}`}/>
                                     </button>
@@ -176,14 +244,17 @@ Please provide any additional context about what you were doing when this error 
                                         </div>
                                     )}
                                 </div>
-                            )}
-
-                            {/* Component Stack (if available) */}
-                            {this.state.errorInfo?.componentStack && (
-                                <div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
-                                    <div className="px-4 py-3 bg-slate-50 dark:bg-slate-700 border-b border-slate-200 dark:border-slate-700">
-                                        <span className="font-medium text-slate-700 dark:text-slate-300">
-                                            Component Stack
+                            )},
+  {/* Component Stack (if available) */},
+  {this.state.errorInfo?.componentStack && (
+                                <div className="border border-slate-200,
+  dar: k: border-slate-700 rounded-lg overflow-hidden">
+                                    <div className="px-4 py-3 bg-slate-50,
+  dar: k:bg-slate-700 border-b border-slate-200,
+  dar: k:border-slate-700">
+                                        <span className="font-medium text-slate-700 dar,
+  k:text-slate-300">
+                                            Component Stack;
                                         </span>
                                     </div>
                                     <div className="p-4 bg-slate-900 text-slate-100 font-mono text-sm overflow-x-auto">
@@ -192,21 +263,23 @@ Please provide any additional context about what you were doing when this error 
                                         </pre>
                                     </div>
                                 </div>
-                            )}
-
-                            {/* Action Buttons */}
-                            <div className="flex flex-col sm:flex-row gap-3">
-                                <button 
+                            )},
+  {/* Action Buttons */}
+                            <div className="flex flex-col,
+  s: m:flex-row gap-3">
+                                <button;
                                     onClick={this.handleRetry} 
-                                    className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+                                    className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-blue-600,
+  hove: r:bg-blue-700 text-white font-medium rounded-lg transition-colors"
                                 >
                                     <ArrowPathIcon className="w-5 h-5"/>
                                     <span>Try Again</span>
                                 </button>
                                 
-                                <button 
+                                <button;
                                     onClick={this.handleGoHome} 
-                                    className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white font-medium rounded-lg transition-colors"
+                                    className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-slate-600,
+  hove: r:bg-slate-700 text-white font-medium rounded-lg transition-colors"
                                 >
                                     <HomeIcon className="w-5 h-5"/>
                                     <span>Go Home</span>
@@ -215,9 +288,13 @@ Please provide any additional context about what you were doing when this error 
 
                             {/* Report Issue */}
                             <div className="text-center">
-                                <button 
+                                <button;
                                     onClick={this.handleReportIssue} 
-                                    className="inline-flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors"
+                                    className="inline-flex items-center space-x-2 text-sm text-slate-600,
+  dar: k: text-slate-400,
+  hove: r:text-slate-800,
+  dar: k:hove,
+  r:text-slate-200 transition-colors"
                                 >
                                     <BugAntIcon className="w-4 h-4"/>
                                     <span>Report this issue</span>
@@ -225,14 +302,20 @@ Please provide any additional context about what you were doing when this error 
                             </div>
 
                             {/* Help Text */}
-                            <div className="text-center text-sm text-slate-500 dark:text-slate-400">
+                            <div className="text-center text-sm text-slate-500,
+  dar: k:text-slate-400">
                                 <p>If this problem persists, please contact our support team.</p>
                                 <p className="mt-1">
-                                    <a 
-                                        href="mailto: support@ziontechgroup.com" 
-                                        className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+                                    <a;
+                                        href="mail,
+  t: o: support@ziontechgroup.com" 
+                                        className="text-blue-600,
+  hove: r:text-blue-700,
+  dar: k:text-blue-400,
+  dar: k:hove,
+  r:text-blue-300 underline"
                                     >
-                                        support@ziontechgroup.com
+                                        support@ziontechgroup.com;
                                     </a>
                                 </p>
                             </div>
@@ -241,9 +324,9 @@ Please provide any additional context about what you were doing when this error 
                 </div>
             )
         }
-;
+
         return this.props.children;
-    }
-};
+},
+  }
 
 export default EnhancedErrorBoundary;

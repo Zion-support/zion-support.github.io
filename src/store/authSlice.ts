@@ -1,38 +1,65 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction   } from "@reduxjs/toolkit";
 interface User {
-  id: string,email: string,name: string;
-  avatar?: string
-};
+  id: string,ema,
+  i: l: string,na,
+  m: e: string;
+  avatar?: string;
+}
+}
+}
 
 interface AuthState {
-  user: User | null,isAuthenticated: boolean,isLoading: boolean,error: string | null
-;
-const initialState: AuthState = {,
-  user: null,isAuthenticated: false,isLoading: false,error: null
+  us,
+  e: r: User | null,isAuthenticat,
+  e: d: boolean,isLoadi,
+  n: g: boolean,err,
+  o: r: string | null;
+}
+}
+}
+
+const,
+  const: initialState: AuthState = {
+  = {
+  use,
+  r: null,isAuthenticat,
+  e: d: false,isLoadi,
+  n: g: false,err,
+  o: r: null;
+}
 const authSlice = createSlice({
-  name: 'auth';
+  na,
+  m: e: 'auth'
   initialState,
-  reducers: {,
-    setUser: (state, action: PayloadAction<User>) => {
-      state.user = action.payload;
-      state.isAuthenticated = true,
-      state.error = null
-    },
-    clearUser: (state) => {
-      state.user = null;
-      state.isAuthenticated = false,
-      state.error = null
-    },
-    setLoading: (state, action: PayloadAction<boolean>) => {
-      state.isLoading = action.payload
-    },
-    setError: (state, action: PayloadAction<string>) => {
-      state.error = action.payload
-    },
-    clearError: (state) => {
-      state.error = null
-    }
-  };
-});
+  reducer: s: {
+  setUse,
+  r: (state, acti,
+  o: n: PayloadAction<User>) () => {
+  state.user = action.payload;
+      state.isAuthenticated = true;
+      state.error = null;
+}
+    clearUs,
+  e: r: (state) () => {
+  state.user = null;
+      state.isAuthenticated = false;
+      state.error = null;
+}
+    setLoadi,
+  n: g: (state, acti,
+  o: n: PayloadAction<boolean>) () => {
+  state.isLoading = action.payload;
+}
+    setErr,
+  o: r: (state, acti,
+  o: n: PayloadAction<string>) () => {
+  state.error = action.payload;
+}
+    clearErr,
+  o: r: (state) () => {
+  state.error = null;
+},
+  },
+  })
 export const { setUser, clearUser, setLoading, setError, clearError } = authSlice.actions;
 export default authSlice.reducer;

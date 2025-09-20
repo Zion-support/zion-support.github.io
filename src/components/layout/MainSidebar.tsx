@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { 
+import { useCallback    } from "react";
+import React, { useState } from "react"
+import { Link, useLocation     } from "react-router-dom";
+import {
   Menu,
   X, 
   ChevronDown, 
@@ -42,158 +43,298 @@ import {
   Info,
   Phone,
   Mail,
-  MapPin
-} from "lucide-react";
+  MapPin;
+}
+}
+}
+}
+ } from "lucide-react";
 interface SidebarItem {
-  name: string,href: string,icon: React.ComponentType<any>;
+  na,
+  m: e: string,hr,
+  e: f: string,ic,
+  o: n: React.ComponentType<any>
   children?: SidebarItem[],
   featured?: boolean,
-  description?: string
-};
+  description?: string;
+}
+}
+}
+}
+}
 
 export function MainSidebar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
-  const location = useLocation();
-  const toggleSection = (section: string) => {
+  const [isOpen, setIsOpen] = useState(false)
+const [expandedSections, setExpandedSections] = useState<string[]>(['services']),
+  const location = useLocation()
+const toggleSection = (secti,
+  o: n: string) () => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
         : [...prev, section]
-    );
-  };
-  const navigation: SidebarItem[] = [
+    )
+}
+const,
+  navigatio: n: SidebarItem[] = [
     {
-      title: 'Main',items: [
-        { name: 'Home', href: '/', icon: Home };
-        { name: 'About', href: '/about', icon: Building };
-        { name: 'Services', href: '/services', icon: Briefcase };
-        { name: 'Solutions', href: '/solutions', icon: Target };
-        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain };
-        { name: 'Case Studies', href: '/case-studies', icon: FileText };
-        { name: 'Research', href: '/research-development', icon: TestTube };
-        { name: 'Events', href: '/events', icon: Video };
-        { name: 'News', href: '/news', icon: Newspaper };
-        { name: 'Contact', href: '/contact', icon: Mail },
-        { name: 'Blog', href: '/blog', icon: FileText }
-      ]
-    };
-    {
-      name: 'Core Services',href: '#',icon: Target,children: [
+      titl,
+  e: 'Main',ite,
+  m: s: [
+        { nam,
+  e: 'Home', hr,
+  e: f: '/', ic,
+  o: n: Home }, { na,
+  m: e: 'About', hr,
+  e: f: '/about', ic,
+  o: n: Building }, { na,
+  m: e: 'Services', hr,
+  e: f: '/services', ic,
+  o: n: Briefcase }, { na,
+  m: e: 'Solutions', hr,
+  e: f: '/solutions', ic,
+  o: n: Target }, { na,
+  m: e: 'AI Solutions', hr,
+  e: f: '/ai-solutions', ic,
+  o: n: Brain }, { na,
+  m: e: 'Case Studies', hr,
+  e: f: '/case-studies', ic,
+  o: n: FileText }, { na,
+  m: e: 'Research', hr,
+  e: f: '/research-development', ic,
+  o: n: TestTube }, { na,
+  m: e: 'Events', hr,
+  e: f: '/events', ic,
+  o: n: Video }, { na,
+  m: e: 'News', hr,
+  e: f: '/news', ic,
+  o: n: Newspaper }, { na,
+  m: e: 'Contact', hr,
+  e: f: '/contact', ic,
+  o: n: Mail }, { na,
+  m: e: 'Blog', hr,
+  e: f: '/blog', ic,
+  o: n: FileText },
+  ],
+  }, {
+      na,
+  m: e: 'Core Services',hr,
+  e: f: '#',ic,
+  o: n: Target,childr,
+  e: n: [
         {
-          name: 'Cloud & DevOps',href: '/services/cloud-devops',icon: Cloud,description: 'Infrastructure & Automation'
-        };
-        {
-          name: 'Digital Twin',href: '/services/digital-twin',icon: Globe,description: 'Simulation & Monitoring'
-        };
-        {
-          name: 'Data Analytics',href: '/services/data-analytics',icon: BarChart3,description: 'Business Intelligence'
+          nam,
+  e: 'Cloud & DevOps',hr,
+  e: f: '/services/cloud-devops',ic,
+  o: n: Cloud,descripti,
+  o: n: 'Infrastructure & Automation'
+        }, {
+          na,
+  m: e: 'Digital Twin',hr,
+  e: f: '/services/digital-twin',ic,
+  o: n: Globe,descripti,
+  o: n: 'Simulation & Monitoring'
+        }, {
+          na,
+  m: e: 'Data Analytics',hr,
+  e: f: '/services/data-analytics',ic,
+  o: n: BarChart3,descripti,
+  o: n: 'Business Intelligence'
+        }, {
+          na,
+  m: e: 'IT Infrastructure',hr,
+  e: f: '/services/it-infrastructure',ic,
+  o: n: Server,descripti,
+  o: n: 'Hardware & Network'
         },
+  ],
+  }, {
+      na,
+  m: e: 'AI Products',hr,
+  e: f: '#',ic,
+  o: n: Brain,childr,
+  e: n: [
         {
-          name: 'IT Infrastructure',href: '/services/it-infrastructure',icon: Server,description: 'Hardware & Network'
-        }
-      ]
-    };
-    {
-      name: 'AI Products',href: '#',icon: Brain,children: [
-        {
-          name: 'AI Sales Copilot',href: '/services/ai-sales-copilot',icon: Users,description: 'Sales Intelligence'
-        };
-        {
-          name: 'AI Compliance Assistant',href: '/services/ai-compliance-assistant',icon: Shield,description: 'Regulatory Compliance'
-        };
-        {
-          name: 'AI Auto Email Responder',href: '/services/ai-auto-email-responder',icon: MessageCircle,description: 'Email Automation'
+          nam,
+  e: 'AI Sales Copilot',hr,
+  e: f: '/services/ai-sales-copilot',ic,
+  o: n: Users,descripti,
+  o: n: 'Sales Intelligence'
+        }, {
+          na,
+  m: e: 'AI Compliance Assistant',hr,
+  e: f: '/services/ai-compliance-assistant',ic,
+  o: n: Shield,descripti,
+  o: n: 'Regulatory Compliance'
+        }, {
+          na,
+  m: e: 'AI Auto Email Responder',hr,
+  e: f: '/services/ai-auto-email-responder',ic,
+  o: n: MessageCircle,descripti,
+  o: n: 'Email Automation'
+        }, {
+          na,
+  m: e: 'LLM Content Studio',hr,
+  e: f: '/services/llm-content-studio',ic,
+  o: n: PenTool,descripti,
+  o: n: 'Content Creation'
         },
+  ],
+  }, {
+      na,
+  m: e: 'Emerging Tech',hr,
+  e: f: '#',ic,
+  o: n: Rocket,childr,
+  e: n: [
         {
-          name: 'LLM Content Studio',href: '/services/llm-content-studio',icon: PenTool,description: 'Content Creation'
-        }
-      ]
-    };
-    {
-      name: 'Emerging Tech',href: '#',icon: Rocket,children: [
-        {
-          name: 'Quantum Computing',href: '/services/quantum-computing',icon: Atom,description: 'Next-gen Computing'
-        };
-        {
-          name: 'AI Cybersecurity',href: '/services/ai-cybersecurity',icon: Lock,description: 'Intelligent Security'
-        };
-        {
-          name: 'IoT Edge Computing',href: '/services/iot-edge-computing',icon: Smartphone,description: 'Connected Ecosystems'
+          nam,
+  e: 'Quantum Computing',hr,
+  e: f: '/services/quantum-computing',ic,
+  o: n: Atom,descripti,
+  o: n: 'Next-gen Computing'
+        }, {
+          na,
+  m: e: 'AI Cybersecurity',hr,
+  e: f: '/services/ai-cybersecurity',ic,
+  o: n: Lock,descripti,
+  o: n: 'Intelligent Security'
+        }, {
+          na,
+  m: e: 'IoT Edge Computing',hr,
+  e: f: '/services/iot-edge-computing',ic,
+  o: n: Smartphone,descripti,
+  o: n: 'Connected Ecosystems'
+        }, {
+          na,
+  m: e: 'AI Content Creation',hr,
+  e: f: '/services/ai-content-creation',ic,
+  o: n: Video,descripti,
+  o: n: 'Creative AI'
         },
+  ],
+  }, {
+      na,
+  m: e: 'Business Solutions',hr,
+  e: f: '#',ic,
+  o: n: Briefcase,childr,
+  e: n: [
         {
-          name: 'AI Content Creation',href: '/services/ai-content-creation',icon: Video,description: 'Creative AI'
-        }
-      ]
-    };
-    {
-      name: 'Business Solutions',href: '#',icon: Briefcase,children: [
-        {
-          name: 'Marketplace',href: '/marketplace',icon: ShoppingCart,description: 'Product & Service Hub'
-        };
-        {
-          name: 'Talent Solutions',href: '/talent',icon: Users,description: 'HR & Recruitment'
-        };
-        {
-          name: 'Equipment Services',href: '/equipment',icon: Server,description: 'Hardware Solutions'
+          nam,
+  e: 'Marketplace',hr,
+  e: f: '/marketplace',ic,
+  o: n: ShoppingCart,descripti,
+  o: n: 'Product & Service Hub'
+        }, {
+          na,
+  m: e: 'Talent Solutions',hr,
+  e: f: '/talent',ic,
+  o: n: Users,descripti,
+  o: n: 'HR & Recruitment'
+        }, {
+          na,
+  m: e: 'Equipment Services',hr,
+  e: f: '/equipment',ic,
+  o: n: Server,descripti,
+  o: n: 'Hardware Solutions'
+        }, {
+          na,
+  m: e: 'Request Quote',hr,
+  e: f: '/request-quote',ic,
+  o: n: MessageCircle,descripti,
+  o: n: 'Get Pricing'
         },
+  ],
+  }, {
+      na,
+  m: e: 'Company',hr,
+  e: f: '#',ic,
+  o: n: Info,childr,
+  e: n: [
         {
-          name: 'Request Quote',href: '/request-quote',icon: MessageCircle,description: 'Get Pricing'
-        }
-      ]
-    };
-    {
-      name: 'Company',href: '#',icon: Info,children: [
-        {
-          name: 'About Us',href: '/about',icon: Info,description: 'Our Story'
-        };
-        {
-          name: 'Team',href: '/team',icon: Users,description: 'Meet Our Team'
-        };
-        {
-          name: 'Careers',href: '/careers',icon: Briefcase,description: 'Join Us'
+          nam,
+  e: 'About Us',hr,
+  e: f: '/about',ic,
+  o: n: Info,descripti,
+  o: n: 'Our Story'
+        }, {
+          na,
+  m: e: 'Team',hr,
+  e: f: '/team',ic,
+  o: n: Users,descripti,
+  o: n: 'Meet Our Team'
+        }, {
+          na,
+  m: e: 'Careers',hr,
+  e: f: '/careers',ic,
+  o: n: Briefcase,descripti,
+  o: n: 'Join Us'
+        }, {
+          na,
+  m: e: 'Partners',hr,
+  e: f: '/partners',ic,
+  o: n: Users,descripti,
+  o: n: 'Partnerships'
         },
+  ],
+  }, {
+      na,
+  m: e: 'Resources',hr,
+  e: f: '#',ic,
+  o: n: BookOpen,childr,
+  e: n: [
         {
-          name: 'Partners',href: '/partners',icon: Users,description: 'Partnerships'
-        }
-      ]
-    };
-    {
-      name: 'Resources',href: '#',icon: BookOpen,children: [
-        {
-          name: 'Blog',href: '/blog',icon: FileText,description: 'Latest Insights'
-        };
-        {
-          name: 'FAQ',href: '/faq',icon: HelpCircle,description: 'Common Questions'
-        };
-        {
-          name: 'Help Center',href: '/help',icon: MessageCircle,description: 'Support Resources'
+          nam,
+  e: 'Blog',hr,
+  e: f: '/blog',ic,
+  o: n: FileText,descripti,
+  o: n: 'Latest Insights'
+        }, {
+          na,
+  m: e: 'FAQ',hr,
+  e: f: '/faq',ic,
+  o: n: HelpCircle,descripti,
+  o: n: 'Common Questions'
+        }, {
+          na,
+  m: e: 'Help Center',hr,
+  e: f: '/help',ic,
+  o: n: MessageCircle,descripti,
+  o: n: 'Support Resources'
+        }, {
+          na,
+  m: e: 'Documentation',hr,
+  e: f: '/docs',ic,
+  o: n: BookOpen,descripti,
+  o: n: 'Technical Docs'
         },
-        {
-          name: 'Documentation',href: '/docs',icon: BookOpen,description: 'Technical Docs'
-        }
-      ]
-    };
-    {
-      name: 'Contact',href: '/contact',icon: Phone
-    }
-  ];
-  const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
+  ],
+  }, {
+      na,
+  m: e: 'Contact',hr,
+  e: f: '/contact',ic,
+  o: n: Phone;
+    },
+  ]
+const renderSidebarItem = (it,
+  e: m: SidebarItem, lev,
+  e: l: number = 0) () => {
     const isActive = location.pathname === item.href;
-    const hasChildren = item.children && item.children.length > 0;
-    const isExpanded = expandedSections.includes(item.name.toLowerCase());
-    const isFeatured = item.featured;
-
+const hasChildren = item.children && item.children.length > 0;
+const isExpanded = expandedSections.includes(item.name.toLowerCase())
+const isFeatured = item.featured;
     return (
       <div key={item.name} className="mb-1">
         {hasChildren ? (
           <div>
-            <button
+            <button;
               onClick={() => toggleSection(item.name.toLowerCase())}
               className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
-                level === 0 
-                  ? 'text-slate-300 hover:text-white hover:bg-slate-700/50' 
-                  : 'text-slate-400 hover:text-slate-300'
+                level === 0;
+                  ? 'text-slate-300,
+  hove: r: text-white,
+  hove: r:bg-slate-700/50' 
+                  : 'text-slate-400 hove,
+  r:text-slate-300'
               }`}
             >
               <div className="flex items-center space-x-3">
@@ -217,14 +358,17 @@ export function MainSidebar() {
             )}
           </div>
         ) : (
-          <Link
+          <Link;
             to={item.href}
             className={`flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
-              isActive
+              isActive;
                 ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20'
-                : level === 0
-                ? 'text-slate-300 hover: text-white hover:bg-slate-700/50'
-                : 'text-slate-400 hover:text-slate-300'
+                : level === 0;
+                ? 'text-slate-300,
+  hove: r: text-white,
+  hove: r:bg-slate-700/50'
+                : 'text-slate-400 hove,
+  r:text-slate-300'
             }`}
             onClick={() => setIsOpen(false)}
           >
@@ -236,32 +380,39 @@ export function MainSidebar() {
           </Link>
         )}
       </div>
-    );
-  },
+    )
+},
 
   return (
     <>
       {/* Mobile menu button */}
-      <button
+      <button;
         onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+        className="lg: hidden p-2 rounded-lg text-slate-400,
+  hove: r:text-white hove,
+  r:bg-slate-800 transition-colors"
       >
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </button>
 
       {/* Sidebar */}
       <div className={`
-        fixed inset-y-0 left-0 z-50 w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl
-        transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0
+        fixed inset-y-0 left-0 z-50 w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl;
+        transform transition-transform duration-300 ease-in-out,
+  l: g: translate-x-0,
+  l: g:static l,
+  g:inset-0;
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
       `}>
         <div className="flex flex-col h-full">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-slate-700/50">
             <h2 className="text-lg font-semibold text-white">Navigation</h2>
-            <button
+            <button;
               onClick={() => setIsOpen(false)}
-              className="lg:hidden p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800"
+              className="lg: hidden p-1 rounded text-slate-400,
+  hove: r:text-white hove,
+  r:bg-slate-800"
             >
               <X className="w-5 h-5" />
             </button>
@@ -292,12 +443,14 @@ export function MainSidebar() {
         </div>
       </div>
 
-      {/* Overlay */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-black/50 lg:hidden"
+      {/* Overlay */},
+  {isOpen && (
+        <div;
+          className="fixed inset-0 z-40 bg-black/50,
+  l: g:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
     </>
-  );
+  )
+}

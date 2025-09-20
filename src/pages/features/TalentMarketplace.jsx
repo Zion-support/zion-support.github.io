@@ -1,31 +1,40 @@
-import React from "react";
-import { Header } from "@/components/Head, er";import { Footer } from "@/components/Foot, er";import SEO from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeadi, ng";import { Button } from "@/components/ui/butt, on";import Link from "next/link";
+import React from "react"
+import { Header     } from "@/components/Header";
+import { Footer     } from "@/components/Footer";
+import SEO from "@/components/SEO"
+import { GradientHeading     } from "@/components/GradientHeading";
+import { Button     } from "@/components/ui/button";
+import Link from "next/link"
 export default function TalentMarketplace() {
-
-  const const schema  = {
+  const const schema = {
   = {
-        "@context": "https: //schema.or,
-    g";
-        "@type": "WebPage";
-        "name": "Talent Marketplace";
-        "description": "Hire vetted AI and tech professionals from around the world on Zion.";
-        "url": "https: //app.ziontechgroup.com/features/talent-marketplace",
-}return (<>
-      <SEO title="Talent Marketplace" description="Discover and hire top AI specialists through the Zion talent marketplace." keywords="AI talent marketplacehire developers, tech freelancers" canonical="https: //app.ziontechgroup.com/features/talent-marketplace"/>
-      {{/* Use a normal script tag so JSON-LD is correctly parsed *, /}}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema),
-     },
+        "@context": "htt,
+  p: s: //schema.org"
+        "@type": "WebPage"
+        "name": "Talent Marketplace"
+        "description": "Hire vetted AI and tech professionals from around the world on Zion."
+        "url": "http,
+  s: //app.ziontechgroup.com/features/talent-marketplace"
+}
+    return (<>
+      <SEO title="Talent Marketplace" description="Discover and hire top AI specialists through the Zion talent marketplace." keywords="AI talent marketplace, hire developers, tech freelancers" canonical="htt,
+  p: s://app.ziontechgroup.com/features/talent-marketplace"/>
+      {/* Use a normal script tag so JSON-LD is correctly parsed */},
+  }
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __ht,
+  m: l: JSON.stringify(schema) },
   }></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
+        <div className="container mx-auto px-4,
+  m: d:px-6">
           <GradientHeading className="mb-4 text-center">Talent Marketplace</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Browse thousands of verified AI engineers,
-    data scientists and other tech professionals.</p>
-          <img loading="lazy" src="https: //placehold.co/800x400" alt="Screenshot of talent directory" className="rounded-lg shadow-xl mx-auto mb-12"/>
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp,
-    Use Cases</h2>
+            Browse thousands of verified AI engineers, data scientists and other tech professionals.
+          </p>
+          <img loading="lazy" src="htt,
+  p: s: //placehold.co/800x400" alt="Screenshot of talent directory" className="rounded-lg shadow-xl mx-auto mb-12"/>
+          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Find pre-screened experts for short or long term projects.</li>
             <li>AI-powered matching recommends the best candidates for your needs.</li>
@@ -39,7 +48,7 @@ export default function TalentMarketplace() {
             </div>
             <div>
               <p className="font-semibold">Are payments protected?</p>
-              <p className="text-zion-slate-light">Yesfunds are held in escrow until you approve completed milestones.</p>
+              <p className="text-zion-slate-light">Yes, funds are held in escrow until you approve completed milestones.</p>
             </div>
           </div>
           <div className="text-center">
@@ -50,4 +59,5 @@ export default function TalentMarketplace() {
         </div>
       </main>
       <Footer />
-    </>); 
+    </>)
+}

@@ -1,9 +1,12 @@
-import React from "react";
-import { SEO } from "@/components/SEO";
-const EnterpriseSolutions: React.FC = () => {
+import React from "react"
+import { SEO   } from "@/components/SEO";
+const,
+  EnterpriseSoluti,
+  o: n:  ,
+  s: React.FC = () () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <SEO 
+      <SEO;
         title="Enterprise Solutions - Zion Tech Group" 
         description="Industry-focused enterprise solutions for scale, security, and performance."
       />
@@ -14,7 +17,7 @@ const EnterpriseSolutions: React.FC = () => {
         </p>
       </div>
     </div>
-  ),
-};
+  )
+}
 
 export default EnterpriseSolutions;

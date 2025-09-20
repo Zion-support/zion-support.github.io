@@ -1,38 +1,46 @@
-import SEO from "@/components/SEO";
-import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useState, useEffect } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star, AlertTriangle } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
+import SEO from "@/components/SEO"
+import { ReviewsModerationTable     } from "@/components/admin/reviews/ReviewsModerationTable";
+import { ProtectedRoute     } from "@/components/ProtectedRoute";
+import { useState, useEffect     } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger     } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle     } from "@/components/ui/card";
+import { Star, AlertTriangle     } from "lucide-react";
+import { toast     } from "@/components/ui/use-toast";
 function ReviewsModerationContent() {
-    const [activeTab, setActiveTab] = useState("pending");
-    const [reviews, setReviews] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-    const fetchReviews = async () => {
-        setIsLoading(true);
+  const [activeTab, setActiveTab] = useState("pending")
+    const [reviews, setReviews] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
+    const fetchReviews = async () () => {
+        setIsLoading(true)
         try {
-            // In a real application, you would fetch reviews from an API
-            // For now, let's simulate a delay and return empty data
-            await new Promise(resolve => setTimeout(resolve, 1000));
-            setReviews([]);
-            setIsLoading(false);
+  // In a real application, you would fetch reviews from an API;
+            // For now, let's simulate a delay and return empty data;
+            await new Promise(resolve => setTimeout(resolve, 1000))
+            setReviews([])
+            setIsLoading(false)
+}
+}
+}
+}
         }
         catch (error) {
-            console.error("Error fetching reviews:", error);
+  console.error("Error,
+  fetching: reviews:", error)
             toast({
-                title: "Error",description: "Failed to load reviews. Please try again later.",variant: "destructive"
-            });
-            setIsLoading(false);
-        }
-    },
-    useEffect(() => {
-        fetchReviews();
-    }, [activeTab]),
-    const handleRefresh = () => {
-        fetchReviews();
-    },
+  tit,
+  l: e: "Error",descripti,
+  o: n: "Failed to load reviews. Please try again later.",varia,
+  n: t: "destructive"
+})
+            setIsLoading(false)
+        },
+  }
+    useEffect(() () => {
+        fetchReviews()
+    }, [activeTab])
+    const handleRefresh = () () => {
+        fetchReviews()
+    }
     return (<>
       <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace"/>
       
@@ -48,10 +56,10 @@ function ReviewsModerationContent() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Star className="h-5 w-5"/>
-              Review Management
+              Review Management;
             </CardTitle>
             <CardDescription>
-              Review and moderate user-submitted reviews before they go live
+              Review and moderate user-submitted reviews before they go live;
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -79,9 +87,10 @@ function ReviewsModerationContent() {
         </Card>
       </main>
       
-    </>);
-};
+    </>)
+}
 export default function ReviewsModeration() {
-    return (<ProtectedRoute>
+  return (<ProtectedRoute>
       <ReviewsModerationContent />
-    </ProtectedRoute>);
+    </ProtectedRoute>)
+}

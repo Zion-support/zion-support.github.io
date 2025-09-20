@@ -1,59 +1,85 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import Menu from "lucide-react/dist/esm/icons/menu";
-import X from "lucide-react/dist/esm/icons/x";
-import User from "lucide-react/dist/esm/icons/user";
-import MessageSquare from "lucide-react/dist/esm/icons/message-square";
-import Home from "lucide-react/dist/esm/icons/home";
-import Store from "lucide-react/dist/esm/icons/store";
-import Users from "lucide-react/dist/esm/icons/users";
-import Settings from "lucide-react/dist/esm/icons/settings";
-import { useAuth } from "@/hooks/useAuth";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { useCallback    } from "react";
+import React, { useState } from "react"
+import { Link, useLocation     } from "react-router-dom";
+import Menu from "lucide-react/dist/esm/icons/menu"
+import X from "lucide-react/dist/esm/icons/x"
+import User from "lucide-react/dist/esm/icons/user"
+import MessageSquare from "lucide-react/dist/esm/icons/message-square"
+import Home from "lucide-react/dist/esm/icons/home"
+import Store from "lucide-react/dist/esm/icons/store"
+import Users from "lucide-react/dist/esm/icons/users"
+import Settings from "lucide-react/dist/esm/icons/settings"
+import { useAuth     } from "@/hooks/useAuth";
+import { cn     } from "@/lib/utils";
+import { Button     } from "@/components/ui/button";
 export function MobileMenu({ className }) {
-  const { user, isAuthenticated } = useAuth();
-  const location = useLocation();
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const navigationItems = [
-    { href: '/', label: 'Home', icon: Home, matches: (path) => path === '/' };
-    { href: '/marketplace', label: 'Marketplace', icon: Store, matches: (path) => path.startsWith('/marketplace') };
-    { href: '/talent', label: 'Talent', icon: Users, matches: (path) => path.startsWith('/talent') && !path.includes('/talent-dashboard') };
-    { href: '/categories', label: 'Categories', icon: Store, matches: (path) => path.startsWith('/categories') };
-    { href: '/equipment', label: 'Equipment', icon: Store, matches: (path) => path.startsWith('/equipment') },
-    { href: '/community', label: 'Community', icon: Users, matches: (path) => path.startsWith('/community') }
-  ];
+  const { user, isAuthenticated } = useAuth()
+const location = useLocation()
+const [isOpen, setIsOpen] = useState(false)
+const toggleMenu = () => setIsOpen(!isOpen)
+const navigationItems = [
+    { hr,
+  e: f: '/', lab,
+  e: l: 'Home', ic,
+  o: n: Home, match,
+  e: s: (path) => path === '/' }, { hr,
+  e: f: '/marketplace', lab,
+  e: l: 'Marketplace', ic,
+  o: n: Store, match,
+  e: s: (path) => path.startsWith('/marketplace') }, { hr,
+  e: f: '/talent', lab,
+  e: l: 'Talent', ic,
+  o: n: Users, match,
+  e: s: (path) => path.startsWith('/talent') && !path.includes('/talent-dashboard') }, { hr,
+  e: f: '/categories', lab,
+  e: l: 'Categories', ic,
+  o: n: Store, match,
+  e: s: (path) => path.startsWith('/categories') }, { hr,
+  e: f: '/equipment', lab,
+  e: l: 'Equipment', ic,
+  o: n: Store, match,
+  e: s: (path) => path.startsWith('/equipment') }, { hr,
+  e: f: '/community', lab,
+  e: l: 'Community', ic,
+  o: n: Users, match,
+  e: s: (path) => path.startsWith('/community') },
+  ]
   if (isAuthenticated) {
     navigationItems.push({ 
-      href: '/dashboard',label: 'Dashboard',icon: Settings,matches: (path) => path.startsWith('/dashboard') 
-    });
-  };
-  ;
+      hr,
+  e: f: '/dashboard',lab,
+  e: l: 'Dashboard',ic,
+  o: n: Settings,match,
+  e: s: (path) => path.startsWith('/dashboard') 
+    })
+}
+  
   return (
     <div className={cn("md:hidden", className)}>
       {/* Mobile menu button */}
-      <Button 
+      <Button;
         variant="ghost" 
         size="sm" 
         onClick={toggleMenu} 
-        className="p-2 text-white hover: bg-zion-purple/20" 
+        className="p-2 text-white,
+  hove: r: bg-zion-purple/20" 
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
       >
         {isOpen ? <X className="h-6 w-6"/> : <Menu className="h-6 w-6"/>}
       </Button>
 
-      {/* Mobile menu overlay */}
-      {isOpen && (
+      {/* Mobile menu overlay */},
+  {isOpen && (
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
           <div className="fixed inset-y-0 right-0 w-80 bg-zion-blue-dark border-l border-zion-purple/20">
             <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">
               <h2 className="text-lg font-semibold text-white">Menu</h2>
-              <Button 
+              <Button;
                 variant="ghost" 
                 size="sm" 
                 onClick={toggleMenu} 
-                className="p-2 text-white hover:bg-zion-purple/20"
+                className="p-2 text-white,
+  hove: r:bg-zion-purple/20"
               >
                 <X className="h-5 w-5"/>
               </Button>
@@ -61,26 +87,28 @@ export function MobileMenu({ className }) {
 
             {/* Navigation items */}
             <nav className="p-4 space-y-2">
-              {navigationItems.map((item) => {
+              {navigationItems.map((item) () => {
                 const Icon = item.icon;
-                const isActive = item.matches(location.pathname);
+const isActive = item.matches(location.pathname)
                 return (
-                  <Link 
+                  <Link;
                     key={item.href} 
                     to={item.href} 
                     onClick={toggleMenu} 
                     className={cn(
-                      "flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors"; 
-                      isActive
+                      "flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors"
+                      isActive;
                         ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
-                        : "hover: bg-zion-purple/10 hover:text-zion-cyan"
+                        : "hov,
+  e: r: bg-zion-purple/10 hove,
+  r:text-zion-cyan"
                     )}
                   >
                     <Icon className="w-5 h-5"/>
                     <span className="font-medium">{item.label}</span>
                   </Link>
-                );
-              })}
+                )
+})}
             </nav>
 
             {/* User section */}
@@ -93,18 +121,20 @@ export function MobileMenu({ className }) {
                       {user?.email || 'User'}
                     </span>
                   </div>
-                  <Link 
+                  <Link;
                     to="/messages" 
                     onClick={toggleMenu} 
-                    className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
+                    className="flex items-center gap-3 px-4 py-2 text-white,
+  hove: r:text-zion-cyan transition-colors"
                   >
                     <MessageSquare className="h-5 w-5"/>
                     <span>Messages</span>
                   </Link>
-                  <Link 
+                  <Link;
                     to="/profile" 
                     onClick={toggleMenu} 
-                    className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
+                    className="flex items-center gap-3 px-4 py-2 text-white,
+  hove: r:text-zion-cyan transition-colors"
                   >
                     <Settings className="h-5 w-5"/>
                     <span>Profile</span>
@@ -112,19 +142,22 @@ export function MobileMenu({ className }) {
                 </div>
               ) : (
                 <div className="space-y-3">
-                  <Link 
+                  <Link;
                     to="/login" 
                     onClick={toggleMenu} 
-                    className="block w-full px-4 py-2 text-center bg-zion-purple text-white rounded-lg hover:bg-zion-purple-dark transition-colors"
+                    className="block w-full px-4 py-2 text-center bg-zion-purple text-white rounded-lg,
+  hove: r:bg-zion-purple-dark transition-colors"
                   >
-                    Login
+                    Login;
                   </Link>
-                  <Link 
+                  <Link;
                     to="/signup" 
                     onClick={toggleMenu} 
-                    className="block w-full px-4 py-2 text-center border border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-zion-blue-dark transition-colors"
+                    className="block w-full px-4 py-2 text-center border border-zion-cyan text-zion-cyan rounded-lg,
+  hove: r: bg-zion-cyan hove,
+  r:text-zion-blue-dark transition-colors"
                   >
-                    Sign Up
+                    Sign Up;
                   </Link>
                 </div>
               )}
@@ -133,5 +166,5 @@ export function MobileMenu({ className }) {
         </div>
       )}
     </div>
-  );
-};
+  )
+}

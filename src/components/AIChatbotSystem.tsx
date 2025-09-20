@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useCallback  } from "react";
+import React, { useState, useEffect, useRef } from "react"
+import { motion, AnimatePresence   } from "framer-motion";
 import {
   MessageCircle,
   Send,
@@ -16,170 +17,252 @@ import {
   ThumbsDown,
   Clock,
   CheckCircle,
-  AlertCircle
-} from "lucide-react";
+  AlertCircle;
+}
+}
+ } from "lucide-react";
 interface ChatMessage {
-  id: string,content: string,sender: 'user' | 'bot',timestamp: Date,type: 'text' | 'image' | 'file' | 'system',status: 'sending' | 'sent' | 'error';
+  id: string,
+  conten: t: string,
+  sende: r: 'user' | 'bot'
+  timesta,
+  m: p: Date,
+  typ: e: 'text' | 'image' | 'file' | 'system'
+  statu,
+  s: 'sending' | 'sent' | 'error'
   metadata?: {
-    confidence?: number,
-    suggestions?: string[],
-    relatedServices?: string[],
-    estimatedResponseTime?: number
-  },
-};
-
-interface AIChatbotSystemProps {
-  showHeader?: boolean,
-  showSettings?: boolean,
-  maxMessages?: number,
-  autoScroll?: boolean
+    confidence?: number;
+    suggestions?: string[]
+    relatedServices?: string[]
+    estimatedResponseTime?: number;
+}
+}
+  }
 }
 
-export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
+interface AIChatbotSystemProps {
+  showHeader?: boolean;
+  showSettings?: boolean;
+  maxMessages?: number;
+  autoScroll?: boolean;
+}
+}
+}
+
+export,
+  const: AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   showHeader = true,
   showSettings = true,
-  autoScroll = true
-}) => {
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [inputValue, setInputValue] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [showSettingsPanel, setShowSettingsPanel] = useState(false);
+  autoScroll = true;
+}) () => {
+  const [messages, setMessages] = useState<ChatMessage[]>([])
+  const [inputValue, setInputValue] = useState('')
+  const [isTyping, setIsTyping] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+  const [showSettingsPanel, setShowSettingsPanel] = useState(false)
   const [settings, setSettings] = useState({
-    voiceEnabled: false,autoResponse: true,language: 'en',theme: 'dark',responseSpeed: 'normal'
-  });
-  const [isListening, setIsListening] = useState(false);
-
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-
-  // Sample welcome message
-  useEffect(() => {
+    voiceEnabl,
+  e: d: false,
+    autoRespon,
+  s: e: true,
+    langua,
+  g: e: 'en',
+    the,
+  m: e: 'dark',
+    responseSpe,
+  e: d: 'normal'
+  })
+const [isListening, setIsListening] = useState(false)
+const messagesEndRef = useRef<HTMLDivElement>(null)
+  // Sample welcome message;
+  useEffect(() () => {
     if (isOpen && messages.length === 0) {
-      const welcomeMessage: ChatMessage = {
-        id: 'welcome',
-        content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with: \n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",
-        sender: 'bot',
-        timestamp: new Date(),
-        type: 'text',
-        status: 'sent',
-        metadata: {
-          confidence: 0.95,
-          suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
-          relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
-          estimatedResponseTime: 2
-        }
-      };
-      setMessages([welcomeMessage]);
-    }
+      const,
+  welcomeMessag: e: ChatMessage = {
+        i,
+  d: 'welcome',conte,
+  n: t: "Hello! I'm Zion AI, your intelligent assistant. I can help,
+  you: with: \n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",send,
+  e: r: 'bot',timesta,
+  m: p: new Date(),ty,
+  p: e: 'text',stat,
+  u: s: 'sent',metada,
+  t: a: {
+          confidenc,
+  e: 0.95,suggestio,
+  n: s: ['Tell me about your servicesGet a quote', 'Technical supportContact information'],
+          relatedServic,
+  e: s: ['AI ConsultingCloud Solutions', 'Digital Transformation'],
+          estimatedResponseTi,
+  m: e: 2;
+        },
+  }
+      setMessages([welcomeMessage])
+},
   }, [isOpen, messages.length]),
 
-  // Auto-scroll to bottom
-  useEffect(() => {
+  // Auto-scroll to bottom;
+  useEffect(() () => {
     if (autoScroll && messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [messages, autoScroll]);
+      messagesEndRef.current.scrollIntoView({ behavi,
+  o: r: 'smooth' })
+},
+  }, [messages, autoScroll]),
 
-  // Simulate AI response
-  const simulateAIResponse = async (userMessage: string) => {
-    setIsTyping(true);
-    // Simulate processing time
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+  // Simulate AI response;
+  const simulateAIResponse = async (userMessa,
+  g: e: string) () => {
+    setIsTyping(true)
+    // Simulate processing time;
+    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000)),
 
     const responses = [
       {
-        content: "I'd be happy to help you with that! Zion Tech Group offers comprehensive AI consulting services including machine learning implementation, data analytics, and process automation. Would you like me to provide more specific details about any particular service?",
-        suggestions: ['AI Consulting detailsMachine Learning services', 'Data AnalyticsProcess Automation'],
-        relatedServices: ['AI ConsultingMachine Learning', 'Data Analytics']
-      },
-      {
-        content: "Great question! Our cloud migration services help businesses transition smoothly to cloud infrastructure. We provide assessment, planning, implementation, and ongoing support. The typical timeline is 3-6 months depending on complexity.",
-        suggestions: ['Cloud Migration timelineInfrastructure assessment', 'Implementation processOngoing support'],
-        relatedServices: ['Cloud MigrationInfrastructure Modernization', 'DevOps Services']
-      },
-      {
-        content: "For cybersecurity services, we offer threat detection, incident response, security audits, and employee training. Our team uses advanced tools and follows industry best practices to protect your digital assets.",
-        suggestions: ['Threat detectionIncident response', 'Security auditsEmployee training'],
-        relatedServices: ['CybersecurityThreat Detection', 'Security Training']
-      },
-      {
-        content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",
-        suggestions: ['Strategy developmentImplementation process', 'Change managementROI examples'],
-        relatedServices: ['Digital TransformationProcess Optimization', 'Change Management']
-      }
-    ],
-
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-
-    const botMessage: ChatMessage = {,
-      id: Date.now().toString(),content: randomResponse.content,sender: 'bot',timestamp: new Date(),type: 'text',status: 'sent',metadata: {,
-        confidence: 0.85 + Math.random() * 0.1,suggestions: randomResponse.suggestions,relatedServices: randomResponse.relatedServices,estimatedResponseTime: 1 + Math.random() * 2
-      }
-    };
-    setMessages(prev => [...prev, botMessage]);
-    setIsTyping(false);
+        conte,
+  n: t: "I'd be happy to help you with that! Zion Tech Group offers comprehensive AI consulting services including machine learning implementation, data analytics, and process automation. Would you like me to provide more specific details about any particular service?",
+        suggestio,
+  n: s: ['AI Consulting detailsMachine Learning services', 'Data AnalyticsProcess Automation'],
+        relatedServic,
+  e: s: ['AI ConsultingMachine Learning', 'Data Analytics'],
   },
+      {
+        conte,
+  n: t: "Great question! Our cloud migration services help businesses transition smoothly to cloud infrastructure. We provide assessment, planning, implementation, and ongoing support. The typical timeline is 3-6 months depending on complexity.",
+        suggestio,
+  n: s: ['Cloud Migration timelineInfrastructure assessment', 'Implementation processOngoing support'],
+        relatedServic,
+  e: s: ['Cloud MigrationInfrastructure Modernization', 'DevOps Services'],
+  },
+      {
+        conte,
+  n: t: "For cybersecurity services, we offer threat detection, incident response, security audits, and employee training. Our team uses advanced tools and follows industry best practices to protect your digital assets.",
+        suggestio,
+  n: s: ['Threat detectionIncident response', 'Security auditsEmployee training'],
+        relatedServic,
+  e: s: ['CybersecurityThreat Detection', 'Security Training'],
+  },
+      {
+        conte,
+  n: t: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",
+        suggestio,
+  n: s: ['Strategy developmentImplementation process', 'Change managementROI examples'],
+        relatedServic,
+  e: s: ['Digital TransformationProcess Optimization', 'Change Management'],
+  },
+  ],
 
-  // Handle message submission
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    const randomResponse = responses[Math.floor(Math.random() * responses.length)]
+const,
+  botMessag: e: ChatMessage = {
+      i,
+  d: Date.now().toString(),conte,
+  n: t: randomResponse.content,send,
+  e: r: 'bot',timesta,
+  m: p: new Date(),ty,
+  p: e: 'text',stat,
+  u: s: 'sent',metada,
+  t: a: {
+        confidenc,
+  e: 0.85 + Math.random() * 0.1,suggestio,
+  n: s: randomResponse.suggestions,relatedServic,
+  e: s: randomResponse.relatedServices,estimatedResponseTi,
+  m: e: 1 + Math.random() * 2;
+      },
+  }
+    setMessages(prev => [...prev, botMessage])
+    setIsTyping(false)
+},
+
+  // Handle message submission;
+  const handleSubmit = async (e: React.FormEvent) () => {
+    e.preventDefault()
     if (!inputValue.trim() || isTyping) return,
 
-    const userMessage: ChatMessage = {,
-      id: Date.now().toString(),content: inputValue,sender: 'user',timestamp: new Date(),type: 'text',status: 'sent'
-    };
-    setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
-
-    // Generate AI response
-    await simulateAIResponse(inputValue);
-  },
-
-  // Handle voice input
-  const toggleVoiceInput = () => {
-    setIsListening(!isListening);
-    // In a real implementation, this would integrate with Web Speech API
-  },
-
-  // Handle file upload
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const fileMessage: ChatMessage = {,
-        id: Date.now().toString(),content: `Uploaded: ${file.name}`,
-        sender: 'user',timestamp: new Date(),type: 'file',status: 'sent'
-      };
-      setMessages(prev => [...prev, fileMessage]);
+    const,
+  userMessag: e: ChatMessage = {
+      i,
+  d: Date.now().toString(),conte,
+  n: t: inputValue,send,
+  e: r: 'user',timesta,
+  m: p: new Date(),ty,
+  p: e: 'text',stat,
+  u: s: 'sent'
     }
+    setMessages(prev => [...prev, userMessage])
+    setInputValue('')
+    // Generate AI response;
+    await simulateAIResponse(inputValue)
+},
+
+  // Handle voice input;
+  const toggleVoiceInput = () () => {
+    setIsListening(!isListening)
+    // In a real implementation, this would integrate with Web Speech API;
   },
 
-  // Handle suggestion click
-  const handleSuggestionClick = (suggestion: string) => {
+  // Handle file upload;
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) () => {
+    const file = e.target.files?.[0]
+    if (file) {
+      const,
+  fileMessag: e: ChatMessage = {
+        i,
+  d: Date.now().toString(),conte,
+  n: t: `Uploade,
+  d: ${file.name}`
+        send,
+  e: r: 'user',timesta,
+  m: p: new Date(),ty,
+  p: e: 'file',stat,
+  u: s: 'sent'
+      }
+      setMessages(prev => [...prev, fileMessage])
+},
+  },
+
+  // Handle suggestion click;
+  const handleSuggestionClick = (suggesti,
+  o: n: string) () => {
     setInputValue(suggestion)
-  };
-  // Rate response
-  const rateResponse = (messageId: string, rating: 'positive' | 'negative') => {
+  }
+  // Rate response;
+  const rateResponse = (message,
+  I: d: string, rati,
+  n: g: 'positive' | 'negative') () => {
     setMessages(prev => prev.map(msg =>
-      msg.id === messageId
-        ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }
-        : msg
-    ));
-  },
+      msg.id === messageId;
+        ? { ...msg, metada,
+  t: a: { ...msg.metadata, userRati,
+  n: g: rating },
+  }
+        : msg;
+    ))
+},
 
-  // Clear chat
-  const clearChat = () => {
-    setMessages([]);
-    setChatHistory([]);
-  },
+  // Clear chat;
+  const clearChat = () () => {
+    setMessages([])
+    setChatHistory([])
+},
 
   return (
     <>
       {/* Chat Toggle Button */}
-      <motion.button
+      <motion.button;
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 right-4 z-50 p-4 bg-zion-cyan text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zinc-900"
-        whileHover={{ scale: 1.1 }};
-        whileTap={{ scale: 0.95 }}
+        className="fixed bottom-4 right-4 z-50 p-4 bg-zion-cyan text-white rounded-full shadow-lg,
+  hove: r: shadow-xl transition-all duration-300,
+  focu: s:outline-none,
+  focu: s:ring-2,
+  focu: s:ring-zion-cyan,
+  focu: s:ring-offset-2,
+  focu: s:ring-offset-zinc-900"
+        whileHover={ scal,
+  e: 1.1 },
+  }
+        whileTap={ sca,
+  l: e: 0.95 },
+  }
         aria-label="Toggle AI chatbot"
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
@@ -188,15 +271,27 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       {/* Chat Window */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+          <motion.div;
+            initial={ opaci,
+  t: y: 0, sca,
+  l: e: 0.9, y: 20 },
+  }
+            animate={ opaci,
+  t: y: 1, sca,
+  l: e: 1, y: 0 },
+  }
+            exit={ opaci,
+  t: y: 0, sca,
+  l: e: 0.9, y: 20 },
+  }
+            transition={ durati,
+  o: n: 0.3, ea,
+  s: e: 'easeOut' },
+  }
             className="fixed bottom-20 right-4 z-40 w-96 h-[600px] bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl overflow-hidden"
           >
-            {/* Header */}
-            {showHeader && (
+            {/* Header */},
+  {showHeader && (
               <div className="p-4 bg-zinc-800/50 border-b border-zinc-700/50">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -207,24 +302,28 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                       <h3 className="font-semibold text-white">Zion AI Assistant</h3>
                       <div className="flex items-center gap-2 text-xs text-zinc-400">
                         <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                        Online
+                        Online;
                       </div>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-2">
                     {showSettingsPanel && (
-                      <button
+                      <button;
                         onClick={() => setShowSettingsPanel(!showSettingsPanel)}
-                        className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
+                        className="p-2 text-zinc-400,
+  hove: r: text-white hove,
+  r:bg-zinc-800/50 rounded-lg transition-colors"
                         aria-label="Chat settings"
                       >
                         <Settings className="w-4 h-4" />
                       </button>
                     )}
-                    <button
+                    <button;
                       onClick={clearChat}
-                      className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
+                      className="p-2 text-zinc-400,
+  hove: r: text-white hove,
+  r:bg-zinc-800/50 rounded-lg transition-colors"
                       aria-label="Clear chat"
                     >
                       <RefreshCw className="w-4 h-4" />
@@ -232,27 +331,39 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   </div>
                 </div>
               </div>
-            )}
-
-            {/* Settings Panel */}
+            )},
+  {/* Settings Panel */}
             <AnimatePresence>
               {showSettingsPanel && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                <motion.div;
+                  initial={ heig,
+  h: t: 0, opaci,
+  t: y: 0 },
+  }
+                  animate={ heig,
+  h: t: 'auto', opaci,
+  t: y: 1 },
+  }
+                  exit={ heig,
+  h: t: 0, opaci,
+  t: y: 0 },
+  }
+                  transition={ durati,
+  o: n: 0.3 },
+  }
                   className="border-b border-zinc-700/50 overflow-hidden"
                 >
                   <div className="p-4 space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-zinc-300">Voice Input</span>
-                      <button
-                        onClick={() => setSettings(prev => ({ ...prev, voiceEnabled: !prev.voiceEnabled }))}
+                      <button;
+                        onClick={() => setSettings(prev => ({ ...prev, voiceEnabl,
+  e: d: !prev.voiceEnabled }))}
                         className={`p-2 rounded-lg transition-colors ${
-                          settings.voiceEnabled
+                          settings.voiceEnabled;
                             ? 'bg-zion-cyan text-white'
-                            : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
+                            : 'bg-zinc-700 text-zinc-400,
+  hove: r:bg-zinc-600'
                         }`}
                       >
                         {settings.voiceEnabled ? <Mic className="w-4 h-4" /> : <MicOff className="w-4 h-4" />}
@@ -261,12 +372,14 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-zinc-300">Auto Response</span>
-                      <button
-                        onClick={() => setSettings(prev => ({ ...prev, autoResponse: !prev.autoResponse }))}
+                      <button;
+                        onClick={() => setSettings(prev => ({ ...prev, autoRespon,
+  s: e: !prev.autoResponse }))}
                         className={`p-2 rounded-lg transition-colors ${
-                          settings.autoResponse
+                          settings.autoResponse;
                             ? 'bg-zion-cyan text-white'
-                            : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
+                            : 'bg-zinc-700 text-zinc-400,
+  hove: r:bg-zinc-600'
                         }`}
                       >
                         <CheckCircle className="w-4 h-4" />
@@ -280,10 +393,14 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
             {/* Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-96">
               {messages.map((message) => (
-                <motion.div
+                <motion.div;
                   key={message.id}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={ opaci,
+  t: y: 0, y: 10 },
+  }
+                  animate={ opaci,
+  t: y: 1, y: 0 },
+  }
                   className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div className={`max-w-[80%] ${message.sender === 'user' ? 'order-2' : 'order-1'}`}>
@@ -294,33 +411,33 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     }`}>
                       <div className="whitespace-pre-wrap">{message.content}</div>
 
-                      {/* Message Metadata */}
-                      {message.metadata && (
+                      {/* Message Metadata */},
+  {message.metadata && (
                         <div className="mt-2 pt-2 border-t border-zinc-600/30">
                           {message.metadata.confidence && (
                             <div className="text-xs text-zinc-400 mb-1">
-                              Confidence: {Math.round(message.metadata.confidence * 100)}%
+                              Confiden,
+  c: e: {Math.round(message.metadata.confidence * 100)}%
                             </div>
-                          )}
-
-                          {message.metadata.suggestions && (
+                          )},
+  {message.metadata.suggestions && (
                             <div className="flex flex-wrap gap-1 mb-2">
                               {message.metadata.suggestions.map((suggestion, index) => (
-                                <button
+                                <button;
                                   key={index}
                                   onClick={() => handleSuggestionClick(suggestion)}
-                                  className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-600/50 transition-colors"
+                                  className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full,
+  hove: r:bg-zinc-600/50 transition-colors"
                                 >
                                   {suggestion}
                                 </button>
                               ))}
                             </div>
-                          )}
-
-                          {message.metadata.relatedServices && (
+                          )},
+  {message.metadata.relatedServices && (
                             <div className="flex flex-wrap gap-1">
                               {message.metadata.relatedServices.map((service, index) => (
-                                <span
+                                <span;
                                   key={index}
                                   className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full"
                                 >
@@ -341,16 +458,18 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
                       {message.sender === 'bot' && (
                         <div className="flex items-center gap-1">
-                          <button
+                          <button;
                             onClick={() => rateResponse(message.id, 'positive')}
-                            className="p-1 text-zinc-400 hover:text-green-400 transition-colors"
+                            className="p-1 text-zinc-400,
+  hove: r:text-green-400 transition-colors"
                             aria-label="Rate response positively"
                           >
                             <ThumbsUp className="w-3 h-3" />
                           </button>
-                          <button
+                          <button;
                             onClick={() => rateResponse(message.id, 'negative')}
-                            className="p-1 text-zinc-400 hover:text-red-400 transition-colors"
+                            className="p-1 text-zinc-400,
+  hove: r:text-red-400 transition-colors"
                             aria-label="Rate response negatively"
                           >
                             <ThumbsDown className="w-3 h-3" />
@@ -375,20 +494,27 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     )}
                   </div>
                 </motion.div>
-              ))}
-
-              {/* Typing Indicator */}
-              {isTyping && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+              ))},
+  {/* Typing Indicator */},
+  {isTyping && (
+                <motion.div;
+                  initial={ opaci,
+  t: y: 0 },
+  }
+                  animate={ opaci,
+  t: y: 1 },
+  }
                   className="flex justify-start"
                 >
                   <div className="flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg">
                     <div className="flex space-x-1">
                       <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={ animationDel,
+  a: y: '0.1s' },
+  }></div>
+                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={ animationDel,
+  a: y: '0.2s' },
+  }></div>
                     </div>
                     <span className="text-sm text-zinc-400">Zion AI is typing...</span>
                   </div>
@@ -402,48 +528,56 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
             <div className="p-4 border-t border-zinc-700/50">
               <form onSubmit={handleSubmit} className="flex items-center gap-2">
                 <div className="flex-1 relative">
-                  <input
+                  <input;
                     type="text"
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     placeholder="Ask me anything about Zion Tech Group..."
-                    className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400,
+  focu: s: outline-none,
+  focu: s:ring-2,
+  focu: s:ring-zion-cyan focu,
+  s:border-transparent resize-none"
                     disabled={isTyping}
                   />
 
                   {/* File Upload */}
                   <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
-                    <input
+                    <input;
                       type="file"
                       onChange={handleFileUpload}
                       className="hidden"
                       accept="image/*,.pdf,.doc,.docx,.txt"
                     />
-                    <Paperclip className="w-4 h-4 text-zinc-400 hover: text-zinc-300 transition-colors" />
+                    <Paperclip className="w-4 h-4 text-zinc-400,
+  hove: r: text-zinc-300 transition-colors" />
                   </label>
                 </div>
 
-                {/* Voice Input */}
-                {settings.voiceEnabled && (
-                  <button
+                {/* Voice Input */},
+  {settings.voiceEnabled && (
+                  <button;
                     type="button"
                     onClick={toggleVoiceInput}
                     className={`p-3 rounded-lg transition-colors ${
-                      isListening
+                      isListening;
                         ? 'bg-red-500 text-white'
-                        : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
+                        : 'bg-zinc-700 text-zinc-400,
+  hove: r:bg-zinc-600'
                     }`}
                     aria-label="Voice input"
                   >
                     {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
                   </button>
-                )}
-
-                {/* Send Button */}
-                <button
+                )},
+  {/* Send Button */}
+                <button;
                   type="submit"
                   disabled={!inputValue.trim() || isTyping}
-                  className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="p-3 bg-zion-cyan text-white rounded-lg,
+  hove: r: bg-zion-cyan/80 transition-colors,
+  disable: d:opacity-50 disable,
+  d:cursor-not-allowed"
                   aria-label="Send message"
                 >
                   <Send className="w-4 h-4" />
@@ -466,4 +600,5 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         )}
       </AnimatePresence>
     </>
-  );
+  )
+}

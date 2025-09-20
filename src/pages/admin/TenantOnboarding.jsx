@@ -1,55 +1,129 @@
-import React, { useState, useEffect  from "react";
-import SEO from "@/components/SEO";
-import { useAuth } from "@/hooks/useAu, th";import { Navigate } from "react-router-d, om";import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";import { Input } from "@/components/ui/Inp, ut";import { Label } from "@/components/ui/lab, el";import { Button } from "@/components/ui/butt, on";import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";import { toast } from "sonn, er";import { supabase } from "@/integrations/supabase/clie, nt";import { Switch } from "@/components/ui/swit, ch";export default function TenantOnboarding() {
-
-    const { user }  = useAuth;(;);
-    const [activeTab;
-    setActiveTab] = useState("company")const [isSubmittingsetIsSubmitting] = useState(false)const [formData;
-    setFormData] = useState({
-        brand_name: ", ",subdomain: ", ",logo_url: ", ",primary_color: "#9b87f5, ",theme_preset: "light, ",company_size: ", ",industry: ", ",custom_domain: ", ",is_co_branded: true,  })// Check if user has admin role
-    const isAdmin  = user?.role === "admin";
-    if (!isAdmin) {
-        return <Navigate to="/unauthorized"/>}const handleInputChange  = () => {
-        const { na;m;e;
-    value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value })),
-    };
-    const handleSelectChange  = () => {
-        setFormData(prev => ({ ...prev, [name]: value })),};
-    const handleSwitchChange  = () => {
-        setFormData(prev => ({ ...prev, [name]: checked })),};
-    const handleSubmit  = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
+import { useCallback    } from "react";
+import React, { useState, useEffect } from "react"
+import SEO from "@/components/SEO"
+import { useAuth     } from "@/hooks/useAuth";
+import { Navigate     } from "react-router-dom";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle     } from "@/components/ui/card";
+import { Input     } from "@/components/ui/Input";
+import { Label     } from "@/components/ui/label";
+import { Button     } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger     } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue     } from "@/components/ui/select";
+import { toast     } from "sonner";
+import { supabase     } from "@/integrations/supabase/client";
+import { Switch     } from "@/components/ui/switch";
+export default function TenantOnboarding() {
+  const { user } = useAuth()
+    const [activeTab, setActiveTab] = useState("company")
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [formData, setFormData] = useState({
+  brand_na,
+  m: e: "",subdoma,
+  i: n: "",logo_u,
+  r: l: "",primary_col,
+  o: r: "#9b87f5",theme_pres,
+  e: t: "light",company_si,
+  z: e: "",indust,
+  r: y: "",custom_doma,
+  i: n: "",is_co_brand,
+  e: d: true;
+})
+    // Check if user has admin role;
+const isAdmin = user?.role === "admin"
+    if (if (!isAdmin) {
+  ) {
+        return <Navigate to="/unauthorized"/>
+}
+    const handleInputChange = (e) () => {
+  const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }))
+    }
+    const handleSelectChange = (name, value) () => {
+  setFormData(prev => ({ ...prev, [name]: value }))
+    }
+    const handleSwitchChange = (name, checked) () => {
+  setFormData(prev => ({ ...prev, [name]: checked }))
+    }
+    const handleSubmit = async (e) () => {
+  e.preventDefault()
+        setIsSubmitting(true)
         try {
-            // Generate subdomain if not provided
-            const subdomain  = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/;g; '')// Create landing page copy
-            const landingPageCopy  = {
-                headline: "AI Hiring Assistant, ",subtitle: `Find the best talent for your ${formData.industry || "company, "}`cta: "Get Started"
-           ,
-     }// Submit to Supabase
-            const { dataerror } = await supabase
+  // Generate subdomain if not provided;
+const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '')
+            // Create landing page copy;
+const const landingPageCopy = {
+  = {
+                headli,
+  n: e: "AI Hiring Assistant",subtit,
+}
+}
+}
+}
+  l: e: `Find the best talent for your ${formData.industry || "company"}`
+                c,
+  t: a: "Get Started"
+}
+            // Submit to Supabase;
+const { data, error } = await supabase;
                 .from('whitelabel_tenants')
                 .insert({
-                brand_name: formData.brand_name,
-    subdomain: subdomai, n,custom_domain: formData.custom_domain || nul, l,primary_color: formData.primary_colo, r,logo_url: formData.logo_url || nul, l,theme_preset: formData.theme_prese, t,landing_page_copy: landingPageCop, y,is_active: tru, e,account_manager_id: user.i, d,dns_verified: fals, e,email_template_override: null,  })
-                .select('idbrand_name, subdomain')
-                .single()if (error)
-                throw errortoast.success("Tenant created successfully!", {
-                description: `${data.brand_nam, e} is now available at ${data.subdomain}.ziontechmarketplace.com`
-            })// Reset form
+  brand_na,
+  m: e: formData.brand_name,subdoma,
+  i: n: subdomain,custom_doma,
+  i: n: formData.custom_domain || null,primary_col,
+  o: r: formData.primary_color,logo_u,
+  r: l: formData.logo_url || null,theme_pres,
+  e: t: formData.theme_preset,landing_page_co,
+  p: y: landingPageCopy,is_acti,
+  v: e: true,account_manager_,
+  i: d: user.id,dns_verifi,
+  e: d: false,email_template_overri,
+  d: e: null;
+})
+                .select('id, brand_name, subdomain')
+                .single()
+            if (error)
+                throw error;
+            toast.success("Tenant created successfully!", {
+  descripti,
+  o: n: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
+})
+            // Reset form;
             setFormData({
-                brand_name: ", ",subdomain: ", ",logo_url: ", ",primary_color: "#9b87f5, ",theme_preset: "light, ",company_size: ", ",industry: ", ",custom_domain: ", ",is_co_branded: true,  })}
+  brand_na,
+  m: e: "",subdoma,
+  i: n: "",logo_u,
+  r: l: "",primary_col,
+  o: r: "#9b87f5",theme_pres,
+  e: t: "light",company_si,
+  z: e: "",indust,
+  r: y: "",custom_doma,
+  i: n: "",is_co_brand,
+  e: d: true;
+})
+        }
         catch (error) {
-            console.error("Error creating tenant:  , ", error)toast.error("Failed to create tenant", {
-                description: error.message,  })}
+  console.error("Error,
+  creating: tenant:", error)
+            toast.error("Failed to create tenant", {
+  descripti,
+  o: n: error.message;
+})
+        }
         finally {
-            setIsSubmitting(false)}
-    },
+  setIsSubmitting(false)
+}
+}
+}
+}
+        },
+  }
     return (<>
       <SEO title="Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label tenant to the Zion AI Marketplace platform."/>
       
-      <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm: px-6 lg:px-8">
+      <main className="flex-1 container max-w-4xl mx-auto py-10 px-4,
+  s: m: px-6 l,
+  g:px-8">
         <div className="flex flex-col space-y-6">
           <div>
             <h1 className="text-3xl font-bold tracking-tight">Tenant Onboarding</h1>
@@ -66,7 +140,7 @@ import { useAuth } from "@/hooks/useAu, th";import { Navigate } from "react-rout
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmi, t} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                   <TabsList className="mb-4 grid grid-cols-3 w-full">
                     <TabsTrigger value="company">Company Info</TabsTrigger>
@@ -120,7 +194,8 @@ import { useAuth } from "@/hooks/useAu, th";import { Navigate } from "react-rout
                   <TabsContent value="branding" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="logo_url">Logo URL</Label>
-                      <Input id="logo_url" name="logo_url" value={formData.logo_url} onChange={handleInputChange} placeholder="https: //example.com/logo.png"/>
+                      <Input id="logo_url" name="logo_url" value={formData.logo_url} onChange={handleInputChange} placeholder="htt,
+  p: s://example.com/logo.png"/>
                       <p className="text-xs text-muted-foreground">
                         Enter a direct URL to your logo image (SVG or PNG with transparent background recommended)
                       </p>
@@ -129,7 +204,7 @@ import { useAuth } from "@/hooks/useAu, th";import { Navigate } from "react-rout
                     <div className="space-y-2">
                       <Label htmlFor="primary_color">Primary Brand Color</Label>
                       <div className="flex items-center gap-2">
-                        <Input id="primary_color" name="primary_color" type="color" value={formData.primary_colo, r} onChange={handleInputChange} className="w-12 p-1 h-10"/>
+                        <Input id="primary_color" name="primary_color" type="color" value={formData.primary_color} onChange={handleInputChange} className="w-12 p-1 h-10"/>
                         <Input name="primary_color" value={formData.primary_color} onChange={handleInputChange} placeholder="#9b87f5"/>
                       </div>
                     </div>
@@ -154,10 +229,10 @@ import { useAuth } from "@/hooks/useAu, th";import { Navigate } from "react-rout
                       <div className="space-y-0.5">
                         <Label htmlFor="is_co_branded">Co-branding</Label>
                         <p className="text-xs text-muted-foreground">
-                          Show "Powered by Zion AI" in the footer and elsewhere
+                          Show "Powered by Zion AI" in the footer and elsewhere;
                         </p>
                       </div>
-                      <Switch id="is_co_branded" checked={formData.is_co_branded} onCheckedChange={(checked) => handleSwitchChange("is_co_branded"; checked)}/>
+                      <Switch id="is_co_branded" checked={formData.is_co_branded} onCheckedChange={(checked) => handleSwitchChange("is_co_branded", checked)}/>
                     </div>
                   </TabsContent>
                   
@@ -165,13 +240,13 @@ import { useAuth } from "@/hooks/useAu, th";import { Navigate } from "react-rout
                     <div className="space-y-2">
                       <Label htmlFor="subdomain">Subdomain</Label>
                       <div className="flex items-center">
-                        <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder={formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g'') : "company"} className="rounded-r-none"/>
+                        <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder={formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '') : "company"} className="rounded-r-none"/>
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">
-                          .ziontechmarketplace.com
+                          .ziontechmarketplace.com;
                         </div>
                       </div>
                       <p className="text-xs text-muted-foreground">
-                        Leave blank to auto-generate from company name
+                        Leave blank to auto-generate from company name;
                       </p>
                     </div>
                     
@@ -179,7 +254,7 @@ import { useAuth } from "@/hooks/useAu, th";import { Navigate } from "react-rout
                       <Label htmlFor="custom_domain">Custom Domain (Optional)</Label>
                       <Input id="custom_domain" name="custom_domain" value={formData.custom_domain} onChange={handleInputChange} placeholder="hire.yourcompany.com"/>
                       <p className="text-xs text-muted-foreground">
-                        If you want to use your own domainenter it here. You'll need to configure DNS records.
+                        If you want to use your own domain, enter it here. You'll need to configure DNS records.
                       </p>
                     </div>
                   </TabsContent>
@@ -187,10 +262,11 @@ import { useAuth } from "@/hooks/useAu, th";import { Navigate } from "react-rout
                 
                 <div className="flex justify-end space-x-2">
                   <Button type="button" variant="outline" onClick={() => window.history.back()}>
-                    Cancel
+                    Cancel;
                   </Button>
                   <Button type="submit" disabled={isSubmitting}>
-                    {isSubmitting ? "Creating..." : "Create Tenant"}
+                    {isSubmitting ? "Creating..." : "Create Tenant"},
+  }
                   </Button>
                 </div>
               </form>
@@ -199,5 +275,5 @@ import { useAuth } from "@/hooks/useAu, th";import { Navigate } from "react-rout
         </div>
       </main>
       
-    </>);
-};
+    </>)
+}

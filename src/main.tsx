@@ -1,17 +1,9 @@
-import * as React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 
-const rootElement  = document.getElementById('root')
-if (rootElement) {
-  ReactDOM.createRoot(rootElement).render(
-    <React.StrictMode>
-      <EnhancedErrorBoundary>
-        <App />
-      </EnhancedErrorBoundary>
-    </React.StrictMode>
-  )
-}
-;
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

@@ -1,120 +1,153 @@
-import { useEffect, useState } from "react";
+import { useCallback  } from "react";
+import { useEffect, useState   } from "react";
 interface AccessibilitySettings {
-  highContrast: boolean,largeText: boolean,reducedMotion: boolean,focusVisible: boolean,screenReader: boolean,keyboardNavigation: boolean
-};
+  highContra,
+  s: t: boolean,largeTe,
+  x: t: boolean,reducedMoti,
+  o: n: boolean,focusVisib,
+  l: e: boolean,screenRead,
+  e: r: boolean,keyboardNavigati,
+  o: n: boolean;
+}
+}
+}
 
-export default function AccessibilityEnhancer({ children }: { children: React.ReactNode }) {
+export default function AccessibilityEnhancer({ children }: { childr,
+  e: n: React.ReactNode }) {
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false,keyboardNavigation: false
-  });
-  const [isVisible, setIsVisible] = useState(false);
-  const [announcements, setAnnouncements] = useState<string[]>([]);
-
-  useEffect(() => {
-    // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    highContra,
+  s: t: false,largeTe,
+  x: t: false,reducedMoti,
+  o: n: false,focusVisib,
+  l: e: false,screenRead,
+  e: r: false,keyboardNavigati,
+  o: n: false;
+  })
+const [isVisible, setIsVisible] = useState(false)
+const [announcements, setAnnouncements] = useState<string[]>([])
+  useEffect(() () => {
+    // Check for reduced motion preference;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-moti,
+  o: n: reduce)').matches;
+const prefersHighContrast = window.matchMedia('(prefers-contras,
+  t: high)').matches;
     setSettings(prev => ({
       ...prev,
-      reducedMotion: prefersReducedMotion,highContrast: prefersHighContrast
-    }));
-    // Apply accessibility settings to document
+      reducedMoti,
+  o: n: prefersReducedMotion,highContra,
+  s: t: prefersHighContrast;
+    }))
+    // Apply accessibility settings to document;
     const root = document.documentElement;
-    
     if (settings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-;
+      root.classList.add('high-contrast')
+} else {
+  root.classList.remove('high-contrast')
+}
+}
+}
+
     if (settings.largeText) {
-      root.classList.add('large-text');
-      root.style.fontSize = '1.2em';
-    } else {
-      root.classList.remove('large-text');
-      root.style.fontSize = '';
-    }
-;
+      root.classList.add('large-text')
+      root.style.fontSize = '1.2em'
+} else {
+  root.classList.remove('large-text')
+      root.style.fontSize = ''
+}
+}
+}
+
     if (settings.reducedMotion) {
-      root.classList.add('reduced-motion');
-      root.style.setProperty('--animation-duration', '0.01ms');
-      root.style.setProperty('--animation-iteration-count', '1');
-    } else {
-      root.classList.remove('reduced-motion');
-      root.style.removeProperty('--animation-duration');
-      root.style.removeProperty('--animation-iteration-count');
-    }
+      root.classList.add('reduced-motion')
+      root.style.setProperty('--animation-duration', '0.01ms')
+      root.style.setProperty('--animation-iteration-count', '1')
+} else {
+  root.classList.remove('reduced-motion')
+      root.style.removeProperty('--animation-duration')
+      root.style.removeProperty('--animation-iteration-count')
+}
+}
+}
 
-    // Show accessibility panel on Ctrl+Shift+A
-    const handleKeyPress = (e: KeyboardEvent) => {
+    // Show accessibility panel on Ctrl+Shift+A;
+    const handleKeyPress = (e: KeyboardEvent) () => {
       if (e.ctrlKey && e.shiftKey && e.key === 'A') {
-        setIsVisible(!isVisible);
-        announce('Accessibility panel toggled');
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [settings, isVisible]);
-
-  const announce = (message: string) => {
-    setAnnouncements(prev => [...prev.slice(-2), message]);
-    
-    // Create live region for screen readers
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
+        setIsVisible(!isVisible)
+        announce('Accessibility panel toggled')
+},
+  }
+    window.addEventListener('keydown', handleKeyPress)
+    return () => window.removeEventListener('keydown', handleKeyPress)
+}, [settings, isVisible])
+const announce = (messa,
+  g: e: string) () => {
+    setAnnouncements(prev => [...prev.slice(-2), message])
+    // Create live region for screen readers;
+    const announcement = document.createElement('div')
+    announcement.setAttribute('aria-live', 'polite')
+    announcement.setAttribute('aria-atomic', 'true')
+    announcement.className = 'sr-only'
     announcement.textContent = message;
-    document.body.appendChild(announcement);
-    
-    setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-  };
-
-  const toggleSetting = (setting: keyof AccessibilitySettings) => {
-    const newValue = !settings[setting];
-    setSettings(prev => ({ ...prev, [setting]: newValue }));
-    
-    const settingNames = {
-      highContrast: 'High contrast mode',
-      largeText: 'Large text',
-      reducedMotion: 'Reduced motion',
-      focusVisible: 'Focus indicators',
-      screenReader: 'Screen reader mode',
-      keyboardNavigation: 'Keyboard navigation'
-    };
-    announce(`${settingNames[setting]} ${newValue ? 'enabled' : 'disabled'}`);
-  };
-
-  const resetSettings = () => {
+    document.body.appendChild(announcement)
+    setTimeout(() () => {
+      document.body.removeChild(announcement)
+}, 1000)
+}
+const toggleSetting = (setti,
+  n: g: keyof AccessibilitySettings) () => {
+    const newValue = !settings[setting]
+    setSettings(prev => ({ ...prev, [setting]: newValue }))
+const settingNames = {
+      highContra,
+  s: t: 'High contrast mode',
+      largeTe,
+  x: t: 'Large text',
+      reducedMoti,
+  o: n: 'Reduced motion',
+      focusVisib,
+  l: e: 'Focus indicators',
+      screenRead,
+  e: r: 'Screen reader mode',
+      keyboardNavigati,
+  o: n: 'Keyboard navigation'
+    }
+    announce(`${settingNames[setting],
+  } ${newValue ? 'enabled' : 'disabled'}`)
+}
+const resetSettings = () () => {
     setSettings({
-      highContrast: false,
-      largeText: false,
-      reducedMotion: false,
-      focusVisible: false,
-      screenReader: false,
-      keyboardNavigation: false
-    });
-    announce('Accessibility settings reset');
-  };
-
+      highContra,
+  s: t: false,
+      largeTe,
+  x: t: false,
+      reducedMoti,
+  o: n: false,
+      focusVisib,
+  l: e: false,
+      screenRead,
+  e: r: false,
+      keyboardNavigati,
+  o: n: false;
+    })
+    announce('Accessibility settings reset')
+}
   return (
     <>
       {/* Screen reader announcements */}
       <div aria-live="polite" aria-atomic="true" className="sr-only">
-        {announcements[announcements.length - 1]}
+        {announcements[announcements.length - 1],
+  }
       </div>
 
-      {/* Accessibility Panel */}
-      {isVisible && (
+      {/* Accessibility Panel */},
+  {isVisible && (
         <div className="fixed top-4 left-4 bg-black/90 backdrop-blur-sm border border-blue-400/30 rounded-lg p-4 text-sm font-mono z-50 min-w-[320px]">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-blue-400 font-bold text-lg">♿ Accessibility</h3>
-            <button
+            <button;
               onClick={() => setIsVisible(false)}
-              className="text-blue-400 hover:text-white transition-colors p-1"
+              className="text-blue-400,
+  hove: r:text-white transition-colors p-1"
               aria-label="Close accessibility panel"
             >
               ×
@@ -124,9 +157,9 @@ export default function AccessibilityEnhancer({ children }: { children: React.Re
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <label htmlFor="high-contrast" className="text-gray-300">
-                High Contrast
+                High Contrast;
               </label>
-              <button
+              <button;
                 id="high-contrast"
                 onClick={() => toggleSetting('highContrast')}
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -143,9 +176,9 @@ export default function AccessibilityEnhancer({ children }: { children: React.Re
             
             <div className="flex items-center justify-between">
               <label htmlFor="large-text" className="text-gray-300">
-                Large Text
+                Large Text;
               </label>
-              <button
+              <button;
                 id="large-text"
                 onClick={() => toggleSetting('largeText')}
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -162,9 +195,9 @@ export default function AccessibilityEnhancer({ children }: { children: React.Re
             
             <div className="flex items-center justify-between">
               <label htmlFor="reduced-motion" className="text-gray-300">
-                Reduced Motion
+                Reduced Motion;
               </label>
-              <button
+              <button;
                 id="reduced-motion"
                 onClick={() => toggleSetting('reducedMotion')}
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -181,9 +214,9 @@ export default function AccessibilityEnhancer({ children }: { children: React.Re
             
             <div className="flex items-center justify-between">
               <label htmlFor="focus-visible" className="text-gray-300">
-                Focus Indicators
+                Focus Indicators;
               </label>
-              <button
+              <button;
                 id="focus-visible"
                 onClick={() => toggleSetting('focusVisible')}
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -200,12 +233,13 @@ export default function AccessibilityEnhancer({ children }: { children: React.Re
           </div>
           
           <div className="mt-4 pt-3 border-t border-gray-700">
-            <button
+            <button;
               onClick={resetSettings}
-              className="w-full bg-blue-400/20 hover:bg-blue-400/30 text-blue-400 py-2 px-4 rounded transition-colors"
+              className="w-full bg-blue-400/20,
+  hove: r:bg-blue-400/30 text-blue-400 py-2 px-4 rounded transition-colors"
               aria-label="Reset all accessibility settings"
             >
-              Reset Settings
+              Reset Settings;
             </button>
           </div>
           
@@ -213,9 +247,8 @@ export default function AccessibilityEnhancer({ children }: { children: React.Re
             <span className="text-gray-500 text-xs">Press Ctrl+Shift+A to toggle</span>
           </div>
         </div>
-      )}
-
-      {children}
+      )},
+  {children}
     </>
-  );
-};
+  )
+}

@@ -1,26 +1,43 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
+import { useCallback  } from "react";
+import React, { Component, ErrorInfo, ReactNode } from "react"
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode
-};
+  childr,
+  e: n: ReactNode;
+  fallback?: ReactNode;
+}
+}
+}
 
 interface State {
-  hasError: boolean;
-  error?: Error
+  hasErr,
+  o: r: boolean;
+  error?: Error;
+}
+}
+}
 
 class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  };
+  constructor(pro,
+  p: s: Props) {
+    super(props)
+    this.state = { hasErro,
+  r: false },
+  }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  };
+  static getDerivedStateFromError(err,
+  o: r: Error): State {
+  return { hasErro,
+}
+}
+  r: true, error },
+  }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-  };
+  componentDidCatch(err,
+  o: r: Error, errorIn,
+  f: o: ErrorInfo) {
+    console.error('ErrorBoundary caught an erro,
+  r:', error, errorInfo)
+}
 
   render() {
     if (this.state.hasError) {
@@ -29,18 +46,20 @@ class ErrorBoundary extends Component<Props, State> {
           <div className="text-center">
             <h1 className="text-4xl font-bold text-red-400 mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
-            <button
+            <button;
               onClick={() => window.location.reload()}
-              className="bg-purple-600 hover: bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
+              className="bg-purple-600,
+  hove: r: bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
             >
-              Reload Page
+              Reload Page;
             </button>
           </div>
         </div>
       )
     }
-;
+
     return this.props.children;
-  };
+},
+  }
 
 export default ErrorBoundary;

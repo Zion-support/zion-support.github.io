@@ -1,236 +1,375 @@
 export const comprehensiveServices = [
   {
-    id: 1,name: 'IT Infrastructure Management',category: 'Infrastructure',description: 'Complete IT infrastructure setup, maintenance, and optimization',
-    basePrice: 2500,pricingModel: 'monthly',features: [
-      'Network infrastructure design and implementationServer setup and configuration',
-      'Cloud infrastructure managementBackup and disaster recovery',
-      '24/7 monitoring and alertingPerformance optimization',
+  id: 1,na,
+  m: e: 'IT Infrastructure Management',catego,
+  r: y: 'Infrastructure',descripti,
+  o: n: 'Complete IT infrastructure setup, maintenance, and optimization'
+    basePri,
+  c: e: 2500,pricingMod,
+  e: l: 'monthly',featur,
+  e: s: [
+  'Network infrastructure design and implementationServer setup and configuration'
+      'Cloud infrastructure managementBackup and disaster recovery'
+      '24/7 monitoring and alertingPerformance optimization'
       'Security hardeningCompliance management'
-    ],
-    included: [
-      'Unlimited support ticketsMonthly health reports',
-      'Quarterly security auditsAnnual infrastructure review',
+]
+    includ,
+  e: d: [
+  'Unlimited support ticketsMonthly health reports'
+      'Quarterly security auditsAnnual infrastructure review'
       'Emergency response (4hr)Remote and on-site support'
-    ],
-    notIncluded: [
-      'Hardware procurementSoftware licensing',
+]
+    notInclud,
+  e: d: [
+  'Hardware procurementSoftware licensing'
       'Custom developmentStaff training'
-    ],
-    popular: true,icon: '🏗️',responseTime: '4 hours',sla: '99.9% uptime'
-  };
+]
+    popula,
+  r: true,ic,
+  o: n: '🏗️',responseTi,
+  m: e: '4 hours',s,
+  l: a: '99.9% uptime'
+},
   {
-    id: 2,name: 'Cybersecurity Services',category: 'Security',description: 'Comprehensive cybersecurity protection and compliance',basePrice: 1800,pricingModel: 'monthly',features: [
-      'Threat detection and preventionVulnerability assessments',
-      'Penetration testingSecurity awareness training',
-      'Incident response planningCompliance monitoring',
+  id: 2,na,
+  m: e: 'Cybersecurity Services',catego,
+  r: y: 'Security',descripti,
+  o: n: 'Comprehensive cybersecurity protection and compliance',basePri,
+  c: e: 1800,pricingMod,
+  e: l: 'monthly',featur,
+  e: s: [
+  'Threat detection and preventionVulnerability assessments'
+      'Penetration testingSecurity awareness training'
+      'Incident response planningCompliance monitoring'
       'Security policy developmentRegular security updates'
-    ],
-    included: [
-      '24/7 security monitoringMonthly security reports',
-      'Quarterly penetration testsAnnual security audits',
+]
+    includ,
+  e: d: [
+  '24/7 security monitoringMonthly security reports'
+      'Quarterly penetration testsAnnual security audits'
       'Emergency incident responseCompliance documentation'
-    ],
-    notIncluded: [
-      'Hardware security appliancesThird-party security tools',
+]
+    notInclud,
+  e: d: [
+  'Hardware security appliancesThird-party security tools'
       'Legal compliance feesInsurance requirements'
-    ],
-    popular: false,icon: '🛡️',responseTime: '2 hours',sla: '99.95% threat detection'
-  };
+]
+    popula,
+  r: false,ic,
+  o: n: '🛡️',responseTi,
+  m: e: '2 hours',s,
+  l: a: '99.95% threat detection'
+},
   {
-    id: 3,name: 'Cloud Solutions',category: 'Cloud',description: 'Cloud migration, management, and optimization services',
-    basePrice: 3200,pricingModel: 'monthly',features: [
-      'Cloud strategy and planningMigration services',
-      'Multi-cloud managementCost optimization',
-      'Performance monitoringSecurity configuration',
+  id: 3,na,
+  m: e: 'Cloud Solutions',catego,
+  r: y: 'Cloud',descripti,
+  o: n: 'Cloud migration, management, and optimization services'
+    basePri,
+  c: e: 3200,pricingMod,
+  e: l: 'monthly',featur,
+  e: s: [
+  'Cloud strategy and planningMigration services'
+      'Multi-cloud managementCost optimization'
+      'Performance monitoringSecurity configuration'
       'Backup and recoveryAuto-scaling setup'
-    ],
-    included: [
-      'Cloud architecture designMigration project management',
-      'Ongoing optimizationMonthly cost analysis',
+]
+    includ,
+  e: d: [
+  'Cloud architecture designMigration project management'
+      'Ongoing optimizationMonthly cost analysis'
       'Performance reportsSecurity reviews'
-    ],
-    notIncluded: [
-      'Cloud platform costsThird-party tools',
+]
+    notInclud,
+  e: d: [
+  'Cloud platform costsThird-party tools'
       'Data transfer feesCustom development'
-    ],
-    popular: false,icon: '☁️',responseTime: '8 hours',sla: '99.9% availability'
-  };
+]
+    popula,
+  r: false,ic,
+  o: n: '☁️',responseTi,
+  m: e: '8 hours',s,
+  l: a: '99.9% availability'
+},
   {
-    id: 4,name: 'Data Management',category: 'Data',description: 'Data backup, recovery, and management solutions',
-    basePrice: 1200,pricingModel: 'monthly',features: [
-      'Automated backup systemsData recovery services',
-      'Archive managementData governance',
-      'Compliance reportingPerformance optimization',
+  id: 4,na,
+  m: e: 'Data Management',catego,
+  r: y: 'Data',descripti,
+  o: n: 'Data backup, recovery, and management solutions'
+    basePri,
+  c: e: 1200,pricingMod,
+  e: l: 'monthly',featur,
+  e: s: [
+  'Automated backup systemsData recovery services'
+      'Archive managementData governance'
+      'Compliance reportingPerformance optimization'
       'Disaster recovery planningRegular testing and validation'
-    ],
-    included: [
-      'Unlimited data backupDaily backup verification',
-      'Monthly recovery testingQuarterly disaster recovery drills',
+]
+    includ,
+  e: d: [
+  'Unlimited data backupDaily backup verification'
+      'Monthly recovery testingQuarterly disaster recovery drills'
       'Annual compliance audits24/7 emergency recovery'
-    ],
-    notIncluded: [
-      'Storage hardwareCloud storage costs',
+]
+    notInclud,
+  e: d: [
+  'Storage hardwareCloud storage costs'
       'Data transfer feesLegal compliance review'
-    ],
-    popular: false,icon: '💾',responseTime: '6 hours',sla: '99.99% data integrity'
-  };
+]
+    popula,
+  r: false,ic,
+  o: n: '💾',responseTi,
+  m: e: '6 hours',s,
+  l: a: '99.99% data integrity'
+},
   {
-    id: 5,name: 'Network Services',category: 'Networking',description: 'Professional network design, implementation, and management',
-    basePrice: 1600,pricingModel: 'monthly',features: [
-      'Network design and planningHardware installation',
-      'Configuration and optimizationSecurity implementation',
-      'Performance monitoringTroubleshooting support',
+  id: 5,na,
+  m: e: 'Network Services',catego,
+  r: y: 'Networking',descripti,
+  o: n: 'Professional network design, implementation, and management'
+    basePri,
+  c: e: 1600,pricingMod,
+  e: l: 'monthly',featur,
+  e: s: [
+  'Network design and planningHardware installation'
+      'Configuration and optimizationSecurity implementation'
+      'Performance monitoringTroubleshooting support'
       'Capacity planningDocumentation and training'
-    ],
-    included: [
-      'Network health monitoringMonthly performance reports',
-      'Quarterly capacity reviewsAnnual network audits',
+]
+    includ,
+  e: d: [
+  'Network health monitoringMonthly performance reports'
+      'Quarterly capacity reviewsAnnual network audits'
       'Emergency troubleshootingHardware warranty support'
-    ],
-    notIncluded: [
-      'Network hardwareISP services',
+]
+    notInclud,
+  e: d: [
+  'Network hardwareISP services'
       'Third-party licensesCustom network tools'
-    ],
-    popular: true,icon: '🌐',responseTime: '4 hours',sla: '99.9% network uptime'
-  };
+]
+    popula,
+  r: true,ic,
+  o: n: '🌐',responseTi,
+  m: e: '4 hours',s,
+  l: a: '99.9% network uptime'
+},
   {
-    id: 6,name: 'Help Desk Support',category: 'Support',description: 'Comprehensive IT help desk and user support services',basePrice: 800,pricingModel: 'monthly',features: [
-      '24/7 help desk supportRemote troubleshooting',
-      'User training and guidanceSoftware support',
-      'Hardware supportAccount management',
+  id: 6,na,
+  m: e: 'Help Desk Support',catego,
+  r: y: 'Support',descripti,
+  o: n: 'Comprehensive IT help desk and user support services',basePri,
+  c: e: 800,pricingMod,
+  e: l: 'monthly',featur,
+  e: s: [
+  '24/7 help desk supportRemote troubleshooting'
+      'User training and guidanceSoftware support'
+      'Hardware supportAccount management'
       'Password resetsBasic troubleshooting'
-    ],
-    included: [
-      'Unlimited support ticketsPhone and email support',
-      'Remote desktop assistanceKnowledge base access',
+]
+    includ,
+  e: d: [
+  'Unlimited support ticketsPhone and email support'
+      'Remote desktop assistanceKnowledge base access'
       'Monthly support reportsUser satisfaction surveys'
-    ],
-    notIncluded: [
-      'On-site visitsHardware repairs',
+]
+    notInclud,
+  e: d: [
+  'On-site visitsHardware repairs'
       'Software licensingAdvanced training'
-    ],
-    popular: false,icon: '🎧',responseTime: '2 hours',sla: '95% first-call resolution'
-  };
-];
+]
+    popula,
+  r: false,ic,
+  o: n: '🎧',responseTi,
+  m: e: '2 hours',s,
+  l: a: '95% first-call resolution'
+},
+  ]
 export const serviceCategories = [
   {
-    name: 'Infrastructure',description: 'Core IT infrastructure services',icon: '🏗️',services: comprehensiveServices.filter(s => s.category === 'Infrastructure')
-  };
-  {
-    name: 'Security',description: 'Cybersecurity and compliance services',icon: '🛡️',services: comprehensiveServices.filter(s => s.category === 'Security')
-  };
-  {
-    name: 'Cloud',description: 'Cloud computing and migration services',icon: '☁️',services: comprehensiveServices.filter(s => s.category === 'Cloud')
-  };
-  {
-    name: 'Data',description: 'Data management and recovery services',icon: '💾',services: comprehensiveServices.filter(s => s.category === 'Data')
-  };
-  {
-    name: 'Networking',description: 'Network infrastructure services',icon: '🌐',services: comprehensiveServices.filter(s => s.category === 'Networking')
+  na,
+  m: e: 'Infrastructure',descripti,
+  o: n: 'Core IT infrastructure services',ic,
+  o: n: '🏗️',servic,
+  e: s: comprehensiveServices.filter(s => s.category === 'Infrastructure')
   },
   {
-    name: 'Support',description: 'Help desk and user support services',icon: '🎧',services: comprehensiveServices.filter(s => s.category === 'Support')
-  };
-];
+  na,
+  m: e: 'Security',descripti,
+  o: n: 'Cybersecurity and compliance services',ic,
+  o: n: '🛡️',servic,
+  e: s: comprehensiveServices.filter(s => s.category === 'Security')
+  },
+  {
+  na,
+  m: e: 'Cloud',descripti,
+  o: n: 'Cloud computing and migration services',ic,
+  o: n: '☁️',servic,
+  e: s: comprehensiveServices.filter(s => s.category === 'Cloud')
+  },
+  {
+  na,
+  m: e: 'Data',descripti,
+  o: n: 'Data management and recovery services',ic,
+  o: n: '💾',servic,
+  e: s: comprehensiveServices.filter(s => s.category === 'Data')
+  },
+  {
+  na,
+  m: e: 'Networking',descripti,
+  o: n: 'Network infrastructure services',ic,
+  o: n: '🌐',servic,
+  e: s: comprehensiveServices.filter(s => s.category === 'Networking')
+  },
+  {
+  na,
+  m: e: 'Support',descripti,
+  o: n: 'Help desk and user support services',ic,
+  o: n: '🎧',servic,
+  e: s: comprehensiveServices.filter(s => s.category === 'Support')
+  },
+  ]
 export const pricingTiers = [
   {
-    name: 'Starter',description: 'Perfect for small businesses',price: 800,features: [
-      'Basic IT supportEmail and file sharing',
-      'Basic securityMonthly reports',
+  na,
+  m: e: 'Starter',descripti,
+  o: n: 'Perfect for small businesses',pri,
+  c: e: 800,featur,
+  e: s: [
+  'Basic IT supportEmail and file sharing'
+      'Basic securityMonthly reports'
       'Phone support'
-    ],
-    limitations: [
-      'Up to 10 usersBasic monitoring',
+]
+    limitation,
+  s: [
+  'Up to 10 usersBasic monitoring'
       'Standard response time'
-    ]
-  },
-  {
-    name: 'Professional',description: 'Ideal for growing businesses',price: 2000,features: [
-      'Everything in StarterAdvanced security',
-      'Cloud backupNetwork monitoring',
-      'Priority supportQuarterly reviews'
-    ],
-    limitations: [
-      'Up to 50 usersBusiness hours support',
-      '4-hour response time'
-    ]
-  },
-  {
-    name: 'Enterprise',description: 'For large organizations',price: 5000,features: [
-      'Everything in Professional24/7 support',
-      'Custom solutionsDedicated team',
-      'Advanced analyticsStrategic consulting'
-    ],
-    limitations: [
-      'Unlimited usersCustom SLAs',
-      '1-hour response time'
-    ]
-  };
 ],
+  },
+  {
+  na,
+  m: e: 'Professional',descripti,
+  o: n: 'Ideal for growing businesses',pri,
+  c: e: 2000,featur,
+  e: s: [
+  'Everything in StarterAdvanced security'
+      'Cloud backupNetwork monitoring'
+      'Priority supportQuarterly reviews'
+]
+    limitation,
+  s: [
+  'Up to 50 usersBusiness hours support'
+      '4-hour response time'
+],
+  },
+  {
+  na,
+  m: e: 'Enterprise',descripti,
+  o: n: 'For large organizations',pri,
+  c: e: 5000,featur,
+  e: s: [
+  'Everything in Professional24/7 support'
+      'Custom solutionsDedicated team'
+      'Advanced analyticsStrategic consulting'
+]
+    limitation,
+  s: [
+  'Unlimited usersCustom SLAs'
+      '1-hour response time'
+],
+  },
+  ]
 
-export const getServiceById = (id) => {
-  return comprehensiveServices.find(service => service.id === id);
-},
+export const getServiceById = React.memo((id) () => {
+  return comprehensiveServices.find(service => service.id === id)
+}
 
-export const getServicesByCategory = (category) => {
-  return comprehensiveServices.filter(service => service.category === category);
-},
+export const getServicesByCategory = React.memo((category) () => {
+  return comprehensiveServices.filter(service => service.category === category)
+}
 
-export const getPopularServices = () => {
-  return comprehensiveServices.filter(service => service.popular);
-},
+export const getPopularServices = React.memo(() () => {
+  return comprehensiveServices.filter(service => service.popular)
+}
 
-export const calculateServiceCost = (serviceId, months = 1, customizations = []) => {
-  const service = getServiceById(serviceId);
+export const calculateServiceCost = React.memo((serviceId, months = 1, customizations = []) () => {
+  const service = getServiceById(serviceId)
   if (!service) return 0;
+let baseCost = service.basePrice * months;
+  // Add customization costs;
+  customizations.forEach(customization () => {
+  if (if (customization.type === 'addon') {
+  ) {
+      baseCost += customization.price * months;
+} else if (if (customization.type === 'oneTime') {
+  ) {
+      baseCost += customization.price;
+},
+  })
 
-  let baseCost = service.basePrice * months;
+  return baseCost;
+}
 
-  // Add customization costs
-  customizations.forEach(customization => {
-    if (customization.type === 'addon') {
-      baseCost += customization.price * months,
-    } else if (customization.type === 'oneTime') {
-      baseCost += customization.price,
-    }
-  }),
-
-  return baseCost,
-};
-
-export const getServiceRecommendations = (businessSize, industry, budget) => {
+export const getServiceRecommendations = React.memo((businessSize, industry, budget) () => {
   let recommendations = comprehensiveServices;
-
-  // Filter by business size
-  if (businessSize === 'small') {
+  // Filter by business size;
+  if (if (businessSize === 'small') {
+  ) {
     recommendations = recommendations.filter(service =>
       ['SupportData'].includes(service.category)
-    ),
-  } else if (businessSize === 'medium') {
+    )
+  } else if (if (businessSize === 'medium') {
+  ) {
     recommendations = recommendations.filter(service =>
       ['SupportData', 'NetworkingSecurity'].includes(service.category)
-    ),
-  };
+    )
+  }
 
-  // Filter by budget
-  if (budget === 'low') {
-    recommendations = recommendations.filter(service => service.basePrice <= 1500);
-  } else if (budget === 'medium') {
-    recommendations = recommendations.filter(service => service.basePrice <= 3000);
-  };
-;
+  // Filter by budget;
+  if (if (budget === 'low') {
+  ) {
+    recommendations = recommendations.filter(service => service.basePrice <= 1500)
+  } else if (if (budget === 'medium') {
+  ) {
+    recommendations = recommendations.filter(service => service.basePrice <= 3000)
+  }
+
   return recommendations;
-// Service categories for filtering
+}
+// Service categories for filtering;
 export const SERVICE_CATEGORIES = [
-  { label: 'Infrastructure', value: 'infrastructure' };
-  { label: 'Security', value: 'security' };
-  { label: 'Cloud', value: 'cloud' };
-  { label: 'Support', value: 'support' };
-  { label: 'Data', value: 'data' };
-  { label: 'Networking', value: 'networking' };
-  { label: 'Development', value: 'development' },
-  { label: 'Consulting', value: 'consulting' }
-];
-// Alias exports for backward compatibility
+  { lab,
+  e: l: 'Infrastructure', val,
+  u: e: 'infrastructure' },
+  },
+  { lab,
+  e: l: 'Security', val,
+  u: e: 'security' },
+  },
+  { lab,
+  e: l: 'Cloud', val,
+  u: e: 'cloud' },
+  },
+  { lab,
+  e: l: 'Support', val,
+  u: e: 'support' },
+  },
+  { lab,
+  e: l: 'Data', val,
+  u: e: 'data' },
+  },
+  { lab,
+  e: l: 'Networking', val,
+  u: e: 'networking' },
+  },
+  { lab,
+  e: l: 'Development', val,
+  u: e: 'development' },
+  },
+  { lab,
+  e: l: 'Consulting', val,
+  u: e: 'consulting' },
+  },
+  ]
+// Alias exports for backward compatibility;
 export const COMPREHENSIVE_SERVICES = comprehensiveServices;
 export const PRICING_TIERS = pricingTiers;

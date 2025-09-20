@@ -1,417 +1,872 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing   } from "@/types/listings";
 export interface PricingTier {
-  id: string,name: string,price: number,currency: string,period: string,description: string,features: string[];
+  id: string,na,
+  m: e: string,pri,
+  c: e: number,curren,
+  c: y: string,peri,
+  o: d: string,descripti,
+  o: n: string,featur,
+  e: s: string[[],
+  ]
   popular?: boolean,
-  aiScore: number,setupTime: string,support: string,integrations: string[];
-  limitations?: string[]
-};
+  aiScor: e: number,setupTi,
+  m: e: string,suppo,
+  r: t: string,integratio,
+  n: s: string[[],
+  ]
+  limitations?: string[[],
+  ],
+}
+}
+  }
 
 export interface ServiceCategory {
-  id: string,name: string,description: string,icon: string,services: ProductListing[],pricingTiers: PricingTier[]
+  id: string,na,
+  m: e: string,descripti,
+  o: n: string,ic,
+  o: n: string,servic,
+  e: s: ProductListing[],pricingTie,
+  r: s: PricingTier[[],
+  ],
+}
+}
+  }
 
-export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
+export,
+  const: COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
   {
-    id: "ai-analytics-services",name: "AI & Analytics Services",description: "Advanced AI-powered analytics and business intelligence solutions",icon: "🧠",services: [],pricingTiers: [
-      {
-        id: "ai-analytics-starter",name: "AI Analytics Starter",price: 999,currency: "$",period: "month",description: "Perfect for small businesses starting their AI journey",features: [
-          "Basic AI-powered analytics dashboard",
-          "Up to 10,000 data points per month",
-          "Standard reporting templates",
-          "Email support",
+  i,
+  d: "ai-analytics-services",na,
+  m: e: "AI & Analytics Services",descripti,
+  o: n: "Advanced AI-powered analytics and business intelligence solutions",ic,
+  o: n: "🧠",servic,
+  e: s: [],pricingTie,
+  r: s: [
+  {
+  i,
+  d: "ai-analytics-starter",na,
+  m: e: "AI Analytics Starter",pri,
+  c: e: 999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Perfect for small businesses starting their AI journey",featur,
+  e: s: [
+  "Basic AI-powered analytics dashboard"
+          "Up to 10,000 data points per month"
+          "Standard reporting templates"
+          "Email support"
           "Basic integrations (3 platforms)"
-        ],
-        aiScore: 85,setupTime: "1-2 weeks",support: "Email support",integrations: ["Google Analytics", "Facebook", "Shopify"],
-        limitations: ["Limited to 10,000 data points", "Basic AI models only"]
-      },
-      {
-        id: "ai-analytics-professional",name: "AI Analytics Professional",price: 2499,currency: "$",period: "month",description: "Advanced AI analytics for growing businesses",features: [
-          "Advanced AI-powered analytics dashboard",
-          "Up to 100,000 data points per month",
-          "Custom reporting templates",
-          "Priority email & chat support",
-          "Advanced integrations (10 platforms)",
-          "Custom AI model training",
+]
+        aiSco,
+  r: e: 85,setupTi,
+  m: e: "1-2 weeks",suppo,
+  r: t: "Email support",integratio,
+  n: s: ["Google Analytics", "Facebook", "Shopify"]
+        limitatio,
+  n: s: [["Limited to 10,000 data points", "Basic AI models only"],
+  ],
+  },
+  {
+  id: "ai-analytics-professional",na,
+  m: e: "AI Analytics Professional",pri,
+  c: e: 2499,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Advanced AI analytics for growing businesses",featur,
+  e: s: [
+  "Advanced AI-powered analytics dashboard"
+          "Up to 100,000 data points per month"
+          "Custom reporting templates"
+          "Priority email & chat support"
+          "Advanced integrations (10 platforms)"
+          "Custom AI model training"
           "Real-time alerts & notifications"
-        ],
-        popular: true,aiScore: 92,setupTime: "2-3 weeks",support: "Priority email & chat support",integrations: ["Google Analytics", "Facebook", "Shopify", "Salesforce", "HubSpot", "Stripe", "Zendesk", "Intercom", "Slack", "Microsoft Teams"],
-        limitations: ["Limited to 100,000 data points"]
-      },
-      {
-        id: "ai-analytics-enterprise",name: "AI Analytics Enterprise",price: 4999,currency: "$",period: "month",description: "Enterprise-grade AI analytics with unlimited capabilities",features: [
-          "Enterprise AI analytics platform",
-          "Unlimited data points",
-          "Custom AI model development",
-          "Dedicated account manager",
-          "24/7 phone & chat support",
-          "Unlimited integrations",
-          "Advanced security & compliance",
+]
+        popul,
+  a: r: true,aiSco,
+  r: e: 92,setupTi,
+  m: e: "2-3 weeks",suppo,
+  r: t: "Priority email & chat support",integratio,
+  n: s: ["Google Analytics", "Facebook", "Shopify", "Salesforce", "HubSpot", "Stripe", "Zendesk", "Intercom", "Slack", "Microsoft Teams"]
+        limitatio,
+  n: s: [["Limited to 100,000 data points"],
+  ],
+  },
+  {
+  id: "ai-analytics-enterprise",na,
+  m: e: "AI Analytics Enterprise",pri,
+  c: e: 4999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Enterprise-grade AI analytics with unlimited capabilities",featur,
+  e: s: [
+  "Enterprise AI analytics platform"
+          "Unlimited data points"
+          "Custom AI model development"
+          "Dedicated account manager"
+          "24/7 phone & chat support"
+          "Unlimited integrations"
+          "Advanced security & compliance"
           "Custom training & onboarding"
-        ],
-        aiScore: 98,setupTime: "4-6 weeks",support: "24/7 dedicated support",integrations: ["All major platforms", "Custom APIs", "On-premise solutions"],
-        limitations: []
-      }
-    ]
-  };
+]
+        aiScor,
+  e: 98,setupTi,
+  m: e: "4-6 weeks",suppo,
+  r: t: "24/7 dedicated support",integratio,
+  n: s: ["All major platforms", "Custom APIs", "On-premise solutions"]
+        limitatio,
+  n: s: [[],
+  ],
+  },
+  ],
+  },
   {
-    id: "quantum-computing-services",name: "Quantum Computing Services",description: "Next-generation quantum computing solutions for complex problems",icon: "⚛️",services: [],pricingTiers: [
-      {
-        id: "quantum-starter",name: "Quantum Starter",price: 4999,currency: "$",period: "month",description: "Entry-level quantum computing access",features: [
-          "Access to quantum simulators",
-          "Basic quantum algorithms",
-          "Up to 100 quantum operations per month",
-          "Documentation & tutorials",
+  id: "quantum-computing-services",na,
+  m: e: "Quantum Computing Services",descripti,
+  o: n: "Next-generation quantum computing solutions for complex problems",ic,
+  o: n: "⚛️",servic,
+  e: s: [],pricingTie,
+  r: s: [
+  {
+  i,
+  d: "quantum-starter",na,
+  m: e: "Quantum Starter",pri,
+  c: e: 4999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Entry-level quantum computing access",featur,
+  e: s: [
+  "Access to quantum simulators"
+          "Basic quantum algorithms"
+          "Up to 100 quantum operations per month"
+          "Documentation & tutorials"
           "Community support"
-        ],
-        aiScore: 90,setupTime: "2-3 weeks",support: "Community support",integrations: ["Qiskit", "Cirq", "PennyLane"],
-        limitations: ["Limited quantum operations", "Simulator only", "Basic algorithms"]
-      },
-      {
-        id: "quantum-professional",name: "Quantum Professional",price: 14999,currency: "$",period: "month",description: "Professional quantum computing with real hardware access",features: [
-          "Access to real quantum hardware",
-          "Advanced quantum algorithms",
-          "Up to 1,000 quantum operations per month",
-          "Priority support",
-          "Custom algorithm development",
+]
+        aiScor,
+  e: 90,setupTi,
+  m: e: "2-3 weeks",suppo,
+  r: t: "Community support",integratio,
+  n: s: ["Qiskit", "Cirq", "PennyLane"]
+        limitatio,
+  n: s: [["Limited quantum operations", "Simulator only", "Basic algorithms"],
+  ],
+  },
+  {
+  id: "quantum-professional",na,
+  m: e: "Quantum Professional",pri,
+  c: e: 14999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Professional quantum computing with real hardware access",featur,
+  e: s: [
+  "Access to real quantum hardware"
+          "Advanced quantum algorithms"
+          "Up to 1,000 quantum operations per month"
+          "Priority support"
+          "Custom algorithm development"
           "Performance optimization"
-        ],
-        popular: true,aiScore: 95,setupTime: "4-6 weeks",support: "Priority support",integrations: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Custom frameworks"],
-        limitations: ["Limited to 1,000 operations per month"]
-      },
-      {
-        id: "quantum-enterprise",name: "Quantum Enterprise",price: 49999,currency: "$",period: "month",description: "Enterprise quantum computing with dedicated resources",features: [
-          "Dedicated quantum hardware access",
-          "Unlimited quantum operations",
-          "Custom quantum algorithm development",
-          "Dedicated quantum engineer",
-          "24/7 support",
-          "Custom integrations",
+]
+        popul,
+  a: r: true,aiSco,
+  r: e: 95,setupTi,
+  m: e: "4-6 weeks",suppo,
+  r: t: "Priority support",integratio,
+  n: s: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Custom frameworks"]
+        limitatio,
+  n: s: [["Limited to 1,000 operations per month"],
+  ],
+  },
+  {
+  id: "quantum-enterprise",na,
+  m: e: "Quantum Enterprise",pri,
+  c: e: 49999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Enterprise quantum computing with dedicated resources",featur,
+  e: s: [
+  "Dedicated quantum hardware access"
+          "Unlimited quantum operations"
+          "Custom quantum algorithm development"
+          "Dedicated quantum engineer"
+          "24/7 support"
+          "Custom integrations"
           "Advanced security protocols"
-        ],
-        aiScore: 99,setupTime: "8-12 weeks",support: "24/7 dedicated support",integrations: ["All quantum platforms", "Custom quantum frameworks", "On-premise quantum computers"],
-        limitations: []
-      }
-    ]
-  };
+]
+        aiScor,
+  e: 99,setupTi,
+  m: e: "8-12 weeks",suppo,
+  r: t: "24/7 dedicated support",integratio,
+  n: s: ["All quantum platforms", "Custom quantum frameworks", "On-premise quantum computers"]
+        limitatio,
+  n: s: [[],
+  ],
+  },
+  ],
+  },
   {
-    id: "edge-ai-services",name: "Edge AI Services",description: "AI processing at the edge for real-time decision making",icon: "🌐",services: [],pricingTiers: [
-      {
-        id: "edge-ai-starter",name: "Edge AI Starter",price: 799,currency: "$",period: "month",description: "Basic edge AI capabilities for IoT devices",features: [
-          "Basic edge AI inference",
-          "Up to 1,000 inferences per day",
-          "Standard AI models",
-          "Basic device management",
+  id: "edge-ai-services",na,
+  m: e: "Edge AI Services",descripti,
+  o: n: "AI processing at the edge for real-time decision making",ic,
+  o: n: "🌐",servic,
+  e: s: [],pricingTie,
+  r: s: [
+  {
+  i,
+  d: "edge-ai-starter",na,
+  m: e: "Edge AI Starter",pri,
+  c: e: 799,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Basic edge AI capabilities for IoT devices",featur,
+  e: s: [
+  "Basic edge AI inference"
+          "Up to 1,000 inferences per day"
+          "Standard AI models"
+          "Basic device management"
           "Email support"
-        ],
-        aiScore: 88,setupTime: "1-2 weeks",support: "Email support",integrations: ["TensorFlow Lite", "PyTorch Mobile", "Basic IoT platforms"],
-        limitations: ["Limited inferences per day", "Basic models only", "Limited device types"]
-      },
-      {
-        id: "edge-ai-professional",name: "Edge AI Professional",price: 1999,currency: "$",period: "month",description: "Professional edge AI with advanced capabilities",features: [
-          "Advanced edge AI inference & training",
-          "Up to 10,000 inferences per day",
-          "Custom AI model optimization",
-          "Advanced device management",
-          "Priority support",
-          "Real-time monitoring",
+]
+        aiSco,
+  r: e: 88,setupTi,
+  m: e: "1-2 weeks",suppo,
+  r: t: "Email support",integratio,
+  n: s: ["TensorFlow Lite", "PyTorch Mobile", "Basic IoT platforms"]
+        limitatio,
+  n: s: [["Limited inferences per day", "Basic models only", "Limited device types"],
+  ],
+  },
+  {
+  id: "edge-ai-professional",na,
+  m: e: "Edge AI Professional",pri,
+  c: e: 1999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Professional edge AI with advanced capabilities",featur,
+  e: s: [
+  "Advanced edge AI inference & training"
+          "Up to 10,000 inferences per day"
+          "Custom AI model optimization"
+          "Advanced device management"
+          "Priority support"
+          "Real-time monitoring"
           "Custom integrations"
-        ],
-        popular: true,aiScore: 94,setupTime: "2-3 weeks",support: "Priority support",integrations: ["TensorFlow Lite", "PyTorch Mobile", "ONNX Runtime", "AWS IoT", "Azure IoT", "Google Cloud IoT", "Custom platforms"],
-        limitations: ["Limited to 10,000 inferences per day"]
-      },
-      {
-        id: "edge-ai-enterprise",name: "Edge AI Enterprise",price: 4999,currency: "$",period: "month",description: "Enterprise edge AI with unlimited capabilities",features: [
-          "Unlimited edge AI operations",
-          "Custom AI model development",
-          "Advanced security protocols",
-          "Dedicated support team",
-          "Custom hardware integration",
-          "Advanced analytics",
+]
+        popul,
+  a: r: true,aiSco,
+  r: e: 94,setupTi,
+  m: e: "2-3 weeks",suppo,
+  r: t: "Priority support",integratio,
+  n: s: ["TensorFlow Lite", "PyTorch Mobile", "ONNX Runtime", "AWS IoT", "Azure IoT", "Google Cloud IoT", "Custom platforms"]
+        limitatio,
+  n: s: [["Limited to 10,000 inferences per day"],
+  ],
+  },
+  {
+  id: "edge-ai-enterprise",na,
+  m: e: "Edge AI Enterprise",pri,
+  c: e: 4999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Enterprise edge AI with unlimited capabilities",featur,
+  e: s: [
+  "Unlimited edge AI operations"
+          "Custom AI model development"
+          "Advanced security protocols"
+          "Dedicated support team"
+          "Custom hardware integration"
+          "Advanced analytics"
           "Compliance & governance"
-        ],
-        aiScore: 97,setupTime: "4-6 weeks",support: "24/7 dedicated support",integrations: ["All major platforms", "Custom hardware", "On-premise solutions"],
-        limitations: []
-      }
-    ]
-  };
+]
+        aiScor,
+  e: 97,setupTi,
+  m: e: "4-6 weeks",suppo,
+  r: t: "24/7 dedicated support",integratio,
+  n: s: ["All major platforms", "Custom hardware", "On-premise solutions"]
+        limitatio,
+  n: s: [[],
+  ],
+  },
+  ],
+  },
   {
-    id: "neuromorphic-computing",name: "Neuromorphic Computing",description: "Brain-inspired computing for energy-efficient AI processing",icon: "🧬",services: [],pricingTiers: [
-      {
-        id: "neuromorphic-starter",name: "Neuromorphic Starter",price: 2999,currency: "$",period: "month",description: "Basic neuromorphic computing access",features: [
-          "Access to neuromorphic simulators",
-          "Basic neural network models",
-          "Up to 100,000 neural operations per month",
-          "Documentation & tutorials",
+  id: "neuromorphic-computing",na,
+  m: e: "Neuromorphic Computing",descripti,
+  o: n: "Brain-inspired computing for energy-efficient AI processing",ic,
+  o: n: "🧬",servic,
+  e: s: [],pricingTie,
+  r: s: [
+  {
+  i,
+  d: "neuromorphic-starter",na,
+  m: e: "Neuromorphic Starter",pri,
+  c: e: 2999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Basic neuromorphic computing access",featur,
+  e: s: [
+  "Access to neuromorphic simulators"
+          "Basic neural network models"
+          "Up to 100,000 neural operations per month"
+          "Documentation & tutorials"
           "Community support"
-        ],
-        aiScore: 89,setupTime: "3-4 weeks",support: "Community support",integrations: ["Nengo", "BRIAN", "NEST", "Basic frameworks"],
-        limitations: ["Limited operations per month", "Simulator only", "Basic models"]
-      },
-      {
-        id: "neuromorphic-professional",name: "Neuromorphic Professional",price: 8999,currency: "$",period: "month",description: "Professional neuromorphic computing with hardware access",features: [
-          "Access to neuromorphic hardware",
-          "Advanced neural network models",
-          "Up to 1,000,000 neural operations per month",
-          "Custom model development",
-          "Priority support",
-          "Performance optimization"
-        ],
-        popular: true,aiScore: 94,setupTime: "6-8 weeks",support: "Priority support",integrations: ["Intel Loihi", "IBM TrueNorth", "BrainChip Akida", "Custom frameworks"],
-        limitations: ["Limited to 1M operations per month"]
-      };
-      {
-        id: "neuromorphic-enterprise",name: "Neuromorphic Enterprise",price: 29999,currency: "$",period: "month",description: "Enterprise neuromorphic computing with dedicated resources",features: [
-          "Dedicated neuromorphic hardware",
-          "Unlimited neural operations",
-          "Custom neuromorphic architecture",
-          "Dedicated engineer",
-          "24/7 support",
-          "Advanced security",
-          "Custom integrations"
-        ],
-        aiScore: 98,setupTime: "10-12 weeks",support: "24/7 dedicated support",integrations: ["All neuromorphic platforms", "Custom hardware", "On-premise solutions"],
-        limitations: []
-      }
-    ]
-  };
+]
+        aiSco,
+  r: e: 89,setupTi,
+  m: e: "3-4 weeks",suppo,
+  r: t: "Community support",integratio,
+  n: s: ["Nengo", "BRIAN", "NEST", "Basic frameworks"]
+        limitatio,
+  n: s: [["Limited operations per month", "Simulator only", "Basic models"],
+  ],
+  },
   {
-    id: "biocomputing-dna-storage",name: "Biocomputing & DNA Storage",description: "Revolutionary DNA-based computing and ultra-dense storage",icon: "🧪",services: [],pricingTiers: [
-      {
-        id: "biocomputing-starter",name: "Biocomputing Starter",price: 3999,currency: "$",period: "month",description: "Basic biocomputing and DNA storage access",features: [
-          "Basic DNA storage (1TB equivalent)",
-          "Simple biocomputing operations",
-          "Standard error correction",
-          "Documentation & tutorials",
-          "Email support"
-        ],
-        aiScore: 87,setupTime: "4-6 weeks",support: "Email support",integrations: ["Basic DNA synthesis", "Standard sequencing", "Cloud storage APIs"],
-        limitations: ["Limited storage capacity", "Basic operations only", "Standard error correction"]
-      },
-      {
-        id: "biocomputing-professional",name: "Biocomputing Professional",price: 11999,currency: "$",period: "month",description: "Professional biocomputing with advanced capabilities",features: [
-          "Advanced DNA storage (10TB equivalent)",
-          "Advanced biocomputing operations",
-          "Enhanced error correction",
-          "Custom DNA synthesis",
-          "Priority support",
+  id: "neuromorphic-professional",na,
+  m: e: "Neuromorphic Professional",pri,
+  c: e: 8999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Professional neuromorphic computing with hardware access",featur,
+  e: s: [
+  "Access to neuromorphic hardware"
+          "Advanced neural network models"
+          "Up to 1,000,000 neural operations per month"
+          "Custom model development"
+          "Priority support"
           "Performance optimization"
-        ],
-        popular: true,aiScore: 93,setupTime: "8-10 weeks",support: "Priority support",integrations: ["Custom DNA synthesis", "Advanced sequencing", "Multiple cloud platforms", "Custom APIs"],
-        limitations: ["Limited to 10TB equivalent storage"]
-      };
-      {
-        id: "biocomputing-enterprise",name: "Biocomputing Enterprise",price: 39999,currency: "$",period: "month",description: "Enterprise biocomputing with unlimited capabilities",features: [
-          "Unlimited DNA storage",
-          "Custom biocomputing architecture",
-          "Advanced error correction",
-          "Dedicated biologist",
-          "24/7 support",
-          "Advanced security",
-          "Custom integrations"
-        ],
-        aiScore: 97,setupTime: "14-18 weeks",support: "24/7 dedicated support",integrations: ["All DNA platforms", "Custom hardware", "On-premise solutions"],
-        limitations: []
-      }
-    ]
-  };
+]
+        popul,
+  a: r: true,aiSco,
+  r: e: 94,setupTi,
+  m: e: "6-8 weeks",suppo,
+  r: t: "Priority support",integratio,
+  n: s: ["Intel Loihi", "IBM TrueNorth", "BrainChip Akida", "Custom frameworks"]
+        limitatio,
+  n: s: [["Limited to 1M operations per month"],
+  ],
+  },
   {
-    id: "photonics-computing",name: "Photonics Computing",description: "Light-based computing for ultra-fast AI processing",icon: "💡",services: [],pricingTiers: [
-      {
-        id: "photonics-starter",name: "Photonics Starter",price: 2499,currency: "$",period: "month",description: "Basic photonics computing access",features: [
-          "Access to photonics simulators",
-          "Basic optical neural networks",
-          "Up to 1,000 optical operations per month",
-          "Documentation & tutorials",
+  id: "neuromorphic-enterprise",na,
+  m: e: "Neuromorphic Enterprise",pri,
+  c: e: 29999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Enterprise neuromorphic computing with dedicated resources",featur,
+  e: s: [
+  "Dedicated neuromorphic hardware"
+          "Unlimited neural operations"
+          "Custom neuromorphic architecture"
+          "Dedicated engineer"
+          "24/7 support"
+          "Advanced security"
+          "Custom integrations"
+]
+        aiScor,
+  e: 98,setupTi,
+  m: e: "10-12 weeks",suppo,
+  r: t: "24/7 dedicated support",integratio,
+  n: s: ["All neuromorphic platforms", "Custom hardware", "On-premise solutions"]
+        limitatio,
+  n: s: [[],
+  ],
+  },
+  ],
+  },
+  {
+  id: "biocomputing-dna-storage",na,
+  m: e: "Biocomputing & DNA Storage",descripti,
+  o: n: "Revolutionary DNA-based computing and ultra-dense storage",ic,
+  o: n: "🧪",servic,
+  e: s: [],pricingTie,
+  r: s: [
+  {
+  i,
+  d: "biocomputing-starter",na,
+  m: e: "Biocomputing Starter",pri,
+  c: e: 3999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Basic biocomputing and DNA storage access",featur,
+  e: s: [
+  "Basic DNA storage (1TB equivalent)"
+          "Simple biocomputing operations"
+          "Standard error correction"
+          "Documentation & tutorials"
           "Email support"
-        ],
-        aiScore: 86,setupTime: "2-3 weeks",support: "Email support",integrations: ["Basic optical frameworks", "Simulation tools", "Standard APIs"],
-        limitations: ["Limited operations per month", "Simulator only", "Basic models"]
-      },
-      {
-        id: "photonics-professional",name: "Photonics Professional",price: 7999,currency: "$",period: "month",description: "Professional photonics computing with hardware access",features: [
-          "Access to photonics hardware",
-          "Advanced optical neural networks",
-          "Up to 10,000 optical operations per month",
-          "Custom model optimization",
-          "Priority support",
+]
+        aiScor,
+  e: 87,setupTi,
+  m: e: "4-6 weeks",suppo,
+  r: t: "Email support",integratio,
+  n: s: ["Basic DNA synthesis", "Standard sequencing", "Cloud storage APIs"]
+        limitatio,
+  n: s: [["Limited storage capacity", "Basic operations only", "Standard error correction"],
+  ],
+  },
+  {
+  id: "biocomputing-professional",na,
+  m: e: "Biocomputing Professional",pri,
+  c: e: 11999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Professional biocomputing with advanced capabilities",featur,
+  e: s: [
+  "Advanced DNA storage (10TB equivalent)"
+          "Advanced biocomputing operations"
+          "Enhanced error correction"
+          "Custom DNA synthesis"
+          "Priority support"
           "Performance optimization"
-        ],
-        popular: true,aiScore: 93,setupTime: "4-6 weeks",support: "Priority support",integrations: ["Lightmatter", "Luminous Computing", "Lightelligence", "Custom frameworks"],
-        limitations: ["Limited to 10K operations per month"]
-      };
-      {
-        id: "photonics-enterprise",name: "Photonics Enterprise",price: 24999,currency: "$",period: "month",description: "Enterprise photonics computing with dedicated resources",features: [
-          "Dedicated photonics hardware",
-          "Unlimited optical operations",
-          "Custom photonic architecture",
-          "Dedicated engineer",
-          "24/7 support",
-          "Advanced security",
-          "Custom integrations"
-        ],
-        aiScore: 97,setupTime: "8-10 weeks",support: "24/7 dedicated support",integrations: ["All photonics platforms", "Custom hardware", "On-premise solutions"],
-        limitations: []
-      }
-    ]
-  };
+]
+        popula,
+  r: true,aiSco,
+  r: e: 93,setupTi,
+  m: e: "8-10 weeks",suppo,
+  r: t: "Priority support",integratio,
+  n: s: ["Custom DNA synthesis", "Advanced sequencing", "Multiple cloud platforms", "Custom APIs"]
+        limitatio,
+  n: s: [["Limited to 10TB equivalent storage"],
+  ],
+  },
   {
-    id: "swarm-robotics",name: "Swarm Robotics",description: "Coordinated multi-robot systems for complex tasks",icon: "🤖",services: [],pricingTiers: [
-      {
-        id: "swarm-robotics-starter",name: "Swarm Robotics Starter",price: 1599,currency: "$",period: "month",description: "Basic swarm robotics platform",features: [
-          "Up to 10 robots",
-          "Basic coordination algorithms",
-          "Standard task templates",
-          "Basic monitoring",
+  id: "biocomputing-enterprise",na,
+  m: e: "Biocomputing Enterprise",pri,
+  c: e: 39999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Enterprise biocomputing with unlimited capabilities",featur,
+  e: s: [
+  "Unlimited DNA storage"
+          "Custom biocomputing architecture"
+          "Advanced error correction"
+          "Dedicated biologist"
+          "24/7 support"
+          "Advanced security"
+          "Custom integrations"
+]
+        aiScor,
+  e: 97,setupTi,
+  m: e: "14-18 weeks",suppo,
+  r: t: "24/7 dedicated support",integratio,
+  n: s: ["All DNA platforms", "Custom hardware", "On-premise solutions"]
+        limitatio,
+  n: s: [[],
+  ],
+  },
+  ],
+  },
+  {
+  id: "photonics-computing",na,
+  m: e: "Photonics Computing",descripti,
+  o: n: "Light-based computing for ultra-fast AI processing",ic,
+  o: n: "💡",servic,
+  e: s: [],pricingTie,
+  r: s: [
+  {
+  i,
+  d: "photonics-starter",na,
+  m: e: "Photonics Starter",pri,
+  c: e: 2499,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Basic photonics computing access",featur,
+  e: s: [
+  "Access to photonics simulators"
+          "Basic optical neural networks"
+          "Up to 1,000 optical operations per month"
+          "Documentation & tutorials"
           "Email support"
-        ],
-        aiScore: 89,setupTime: "2-3 weeks",support: "Email support",integrations: ["ROS", "Basic robot APIs", "Standard platforms"],
-        limitations: ["Limited to 10 robots", "Basic algorithms", "Standard tasks only"]
-      },
-      {
-        id: "swarm-robotics-professional",name: "Swarm Robotics Professional",price: 4999,currency: "$",period: "month",description: "Professional swarm robotics with advanced capabilities",features: [
-          "Up to 100 robots",
-          "Advanced coordination algorithms",
-          "Custom task development",
-          "Advanced monitoring & analytics",
-          "Priority support",
+]
+        aiSco,
+  r: e: 86,setupTi,
+  m: e: "2-3 weeks",suppo,
+  r: t: "Email support",integratio,
+  n: s: ["Basic optical frameworks", "Simulation tools", "Standard APIs"]
+        limitatio,
+  n: s: [["Limited operations per month", "Simulator only", "Basic models"],
+  ],
+  },
+  {
+  id: "photonics-professional",na,
+  m: e: "Photonics Professional",pri,
+  c: e: 7999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Professional photonics computing with hardware access",featur,
+  e: s: [
+  "Access to photonics hardware"
+          "Advanced optical neural networks"
+          "Up to 10,000 optical operations per month"
+          "Custom model optimization"
+          "Priority support"
           "Performance optimization"
-        ],
-        popular: true,aiScore: 94,setupTime: "4-6 weeks",support: "Priority support",integrations: ["ROS", "Gazebo", "Custom robot APIs", "Cloud computing", "Edge computing"],
-        limitations: ["Limited to 100 robots"]
-      };
-      {
-        id: "swarm-robotics-enterprise",name: "Swarm Robotics Enterprise",price: 15999,currency: "$",period: "month",description: "Enterprise swarm robotics with unlimited capabilities",features: [
-          "Unlimited robots",
-          "Custom swarm architecture",
-          "Advanced AI coordination",
-          "Dedicated engineer",
-          "24/7 support",
-          "Advanced security",
-          "Custom integrations"
-        ],
-        aiScore: 97,setupTime: "6-8 weeks",support: "24/7 dedicated support",integrations: ["All robot platforms", "Custom hardware", "On-premise solutions"],
-        limitations: []
-      }
-    ]
-  };
+]
+        popul,
+  a: r: true,aiSco,
+  r: e: 93,setupTi,
+  m: e: "4-6 weeks",suppo,
+  r: t: "Priority support",integratio,
+  n: s: ["Lightmatter", "Luminous Computing", "Lightelligence", "Custom frameworks"]
+        limitatio,
+  n: s: [["Limited to 10K operations per month"],
+  ],
+  },
   {
-    id: "quantum-internet",name: "Quantum Internet",description: "Next-generation quantum communication infrastructure",icon: "🌍",services: [],pricingTiers: [
-      {
-        id: "quantum-internet-starter",name: "Quantum Internet Starter",price: 3499,currency: "$",period: "month",description: "Basic quantum internet access",features: [
-          "Basic quantum key distribution",
-          "Up to 1GB quantum data per month",
-          "Standard security protocols",
-          "Documentation & tutorials",
+  id: "photonics-enterprise",na,
+  m: e: "Photonics Enterprise",pri,
+  c: e: 24999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Enterprise photonics computing with dedicated resources",featur,
+  e: s: [
+  "Dedicated photonics hardware"
+          "Unlimited optical operations"
+          "Custom photonic architecture"
+          "Dedicated engineer"
+          "24/7 support"
+          "Advanced security"
+          "Custom integrations"
+]
+        aiScor,
+  e: 97,setupTi,
+  m: e: "8-10 weeks",suppo,
+  r: t: "24/7 dedicated support",integratio,
+  n: s: ["All photonics platforms", "Custom hardware", "On-premise solutions"]
+        limitatio,
+  n: s: [[],
+  ],
+  },
+  ],
+  },
+  {
+  id: "swarm-robotics",na,
+  m: e: "Swarm Robotics",descripti,
+  o: n: "Coordinated multi-robot systems for complex tasks",ic,
+  o: n: "🤖",servic,
+  e: s: [],pricingTie,
+  r: s: [
+  {
+  i,
+  d: "swarm-robotics-starter",na,
+  m: e: "Swarm Robotics Starter",pri,
+  c: e: 1599,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Basic swarm robotics platform",featur,
+  e: s: [
+  "Up to 10 robots"
+          "Basic coordination algorithms"
+          "Standard task templates"
+          "Basic monitoring"
           "Email support"
-        ],
-        aiScore: 88,setupTime: "6-8 weeks",support: "Email support",integrations: ["Basic quantum networks", "Standard protocols", "Cloud APIs"],
-        limitations: ["Limited data transfer", "Basic security", "Standard protocols only"]
-      },
-      {
-        id: "quantum-internet-professional",name: "Quantum Internet Professional",price: 9999,currency: "$",period: "month",description: "Professional quantum internet with advanced capabilities",features: [
-          "Advanced quantum key distribution",
-          "Up to 100GB quantum data per month",
-          "Enhanced security protocols",
-          "Custom quantum routing",
-          "Priority support",
+]
+        aiScor,
+  e: 89,setupTi,
+  m: e: "2-3 weeks",suppo,
+  r: t: "Email support",integratio,
+  n: s: ["ROS", "Basic robot APIs", "Standard platforms"]
+        limitatio,
+  n: s: [["Limited to 10 robots", "Basic algorithms", "Standard tasks only"],
+  ],
+  },
+  {
+  id: "swarm-robotics-professional",na,
+  m: e: "Swarm Robotics Professional",pri,
+  c: e: 4999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Professional swarm robotics with advanced capabilities",featur,
+  e: s: [
+  "Up to 100 robots"
+          "Advanced coordination algorithms"
+          "Custom task development"
+          "Advanced monitoring & analytics"
+          "Priority support"
           "Performance optimization"
-        ],
-        popular: true,aiScore: 94,setupTime: "10-12 weeks",support: "Priority support",integrations: ["Advanced quantum networks", "Custom protocols", "Multiple platforms", "Custom APIs"],
-        limitations: ["Limited to 100GB per month"]
-      };
-      {
-        id: "quantum-internet-enterprise",name: "Quantum Internet Enterprise",price: 34999,currency: "$",period: "month",description: "Enterprise quantum internet with unlimited capabilities",features: [
-          "Unlimited quantum data transfer",
-          "Custom quantum architecture",
-          "Advanced security protocols",
-          "Dedicated engineer",
-          "24/7 support",
-          "Advanced security",
-          "Custom integrations"
-        ],
-        aiScore: 98,setupTime: "12-16 weeks",support: "24/7 dedicated support",integrations: ["All quantum platforms", "Custom hardware", "On-premise solutions"],
-        limitations: []
-      }
-    ]
-  };
+]
+        popula,
+  r: true,aiSco,
+  r: e: 94,setupTi,
+  m: e: "4-6 weeks",suppo,
+  r: t: "Priority support",integratio,
+  n: s: ["ROS", "Gazebo", "Custom robot APIs", "Cloud computing", "Edge computing"]
+        limitatio,
+  n: s: [["Limited to 100 robots"],
+  ],
+  },
   {
-    id: "brain-computer-interface",name: "Brain-Computer Interface",description: "Direct neural communication with computers",icon: "🧠",services: [],pricingTiers: [
-      {
-        id: "bci-starter",name: "BCI Starter",price: 1999,currency: "$",period: "month",description: "Basic brain-computer interface platform",features: [
-          "Basic EEG signal processing",
-          "Simple thought-to-text",
-          "Up to 100 neural commands per day",
-          "Standard accuracy (70-80%)",
+  id: "swarm-robotics-enterprise",na,
+  m: e: "Swarm Robotics Enterprise",pri,
+  c: e: 15999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Enterprise swarm robotics with unlimited capabilities",featur,
+  e: s: [
+  "Unlimited robots"
+          "Custom swarm architecture"
+          "Advanced AI coordination"
+          "Dedicated engineer"
+          "24/7 support"
+          "Advanced security"
+          "Custom integrations"
+]
+        aiScor,
+  e: 97,setupTi,
+  m: e: "6-8 weeks",suppo,
+  r: t: "24/7 dedicated support",integratio,
+  n: s: ["All robot platforms", "Custom hardware", "On-premise solutions"]
+        limitatio,
+  n: s: [[],
+  ],
+  },
+  ],
+  },
+  {
+  id: "quantum-internet",na,
+  m: e: "Quantum Internet",descripti,
+  o: n: "Next-generation quantum communication infrastructure",ic,
+  o: n: "🌍",servic,
+  e: s: [],pricingTie,
+  r: s: [
+  {
+  i,
+  d: "quantum-internet-starter",na,
+  m: e: "Quantum Internet Starter",pri,
+  c: e: 3499,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Basic quantum internet access",featur,
+  e: s: [
+  "Basic quantum key distribution"
+          "Up to 1GB quantum data per month"
+          "Standard security protocols"
+          "Documentation & tutorials"
           "Email support"
-        ],
-        aiScore: 85,setupTime: "3-4 weeks",support: "Email support",integrations: ["Basic EEG sensors", "Standard APIs", "Basic platforms"],
-        limitations: ["Limited commands per day", "Basic accuracy", "Standard sensors only"]
-      },
-      {
-        id: "bci-professional",name: "BCI Professional",price: 5999,currency: "$",period: "month",description: "Professional BCI with advanced capabilities",features: [
-          "Advanced neural signal processing",
-          "High-accuracy thought-to-text",
-          "Up to 1,000 neural commands per day",
-          "High accuracy (85-95%)",
-          "Priority support",
+]
+        aiScor,
+  e: 88,setupTi,
+  m: e: "6-8 weeks",suppo,
+  r: t: "Email support",integratio,
+  n: s: ["Basic quantum networks", "Standard protocols", "Cloud APIs"]
+        limitatio,
+  n: s: [["Limited data transfer", "Basic security", "Standard protocols only"],
+  ],
+  },
+  {
+  id: "quantum-internet-professional",na,
+  m: e: "Quantum Internet Professional",pri,
+  c: e: 9999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Professional quantum internet with advanced capabilities",featur,
+  e: s: [
+  "Advanced quantum key distribution"
+          "Up to 100GB quantum data per month"
+          "Enhanced security protocols"
+          "Custom quantum routing"
+          "Priority support"
+          "Performance optimization"
+]
+        popula,
+  r: true,aiSco,
+  r: e: 94,setupTi,
+  m: e: "10-12 weeks",suppo,
+  r: t: "Priority support",integratio,
+  n: s: ["Advanced quantum networks", "Custom protocols", "Multiple platforms", "Custom APIs"]
+        limitatio,
+  n: s: [["Limited to 100GB per month"],
+  ],
+  },
+  {
+  id: "quantum-internet-enterprise",na,
+  m: e: "Quantum Internet Enterprise",pri,
+  c: e: 34999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Enterprise quantum internet with unlimited capabilities",featur,
+  e: s: [
+  "Unlimited quantum data transfer"
+          "Custom quantum architecture"
+          "Advanced security protocols"
+          "Dedicated engineer"
+          "24/7 support"
+          "Advanced security"
+          "Custom integrations"
+]
+        aiScor,
+  e: 98,setupTi,
+  m: e: "12-16 weeks",suppo,
+  r: t: "24/7 dedicated support",integratio,
+  n: s: ["All quantum platforms", "Custom hardware", "On-premise solutions"]
+        limitatio,
+  n: s: [[],
+  ],
+  },
+  ],
+  },
+  {
+  id: "brain-computer-interface",na,
+  m: e: "Brain-Computer Interface",descripti,
+  o: n: "Direct neural communication with computers",ic,
+  o: n: "🧠",servic,
+  e: s: [],pricingTie,
+  r: s: [
+  {
+  i,
+  d: "bci-starter",na,
+  m: e: "BCI Starter",pri,
+  c: e: 1999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Basic brain-computer interface platform",featur,
+  e: s: [
+  "Basic EEG signal processing"
+          "Simple thought-to-text"
+          "Up to 100 neural commands per day"
+          "Standard accuracy (70-80%)"
+          "Email support"
+]
+        aiScor,
+  e: 85,setupTi,
+  m: e: "3-4 weeks",suppo,
+  r: t: "Email support",integratio,
+  n: s: ["Basic EEG sensors", "Standard APIs", "Basic platforms"]
+        limitatio,
+  n: s: [["Limited commands per day", "Basic accuracy", "Standard sensors only"],
+  ],
+  },
+  {
+  id: "bci-professional",na,
+  m: e: "BCI Professional",pri,
+  c: e: 5999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Professional BCI with advanced capabilities",featur,
+  e: s: [
+  "Advanced neural signal processing"
+          "High-accuracy thought-to-text"
+          "Up to 1,000 neural commands per day"
+          "High accuracy (85-95%)"
+          "Priority support"
           "Custom model training"
-        ],
-        popular: true,aiScore: 92,setupTime: "6-8 weeks",support: "Priority support",integrations: ["Advanced EEG sensors", "fNIRS", "TMS", "Custom APIs", "Advanced platforms"],
-        limitations: ["Limited to 1K commands per day"]
-      };
-      {
-        id: "bci-enterprise",name: "BCI Enterprise",price: 19999,currency: "$",period: "month",description: "Enterprise BCI with unlimited capabilities",features: [
-          "Unlimited neural commands",
-          "Custom BCI architecture",
-          "Ultra-high accuracy (95%+)",
-          "Dedicated neuroscientist",
-          "24/7 support",
-          "Advanced security",
-          "Custom integrations"
-        ],
-        aiScore: 96,setupTime: "8-10 weeks",support: "24/7 dedicated support",integrations: ["All BCI platforms", "Custom hardware", "On-premise solutions"],
-        limitations: []
-      }
-    ]
-  };
+]
+        popul,
+  a: r: true,aiSco,
+  r: e: 92,setupTi,
+  m: e: "6-8 weeks",suppo,
+  r: t: "Priority support",integratio,
+  n: s: ["Advanced EEG sensors", "fNIRS", "TMS", "Custom APIs", "Advanced platforms"]
+        limitatio,
+  n: s: [["Limited to 1K commands per day"],
+  ],
+  },
   {
-    id: "space-computing",name: "Space Computing",description: "AI and computing infrastructure in space",icon: "🚀",services: [],pricingTiers: [
-      {
-        id: "space-computing-starter",name: "Space Computing Starter",price: 5999,currency: "$",period: "month",description: "Basic space computing access",features: [
-          "Access to satellite computing resources",
-          "Basic space-to-ground processing",
-          "Up to 1TB data processing per month",
-          "Standard latency (500-1000ms)",
-          "Email support"
-        ],
-        aiScore: 87,setupTime: "8-10 weeks",support: "Email support",integrations: ["Basic satellite networks", "Standard APIs", "Cloud platforms"],
-        limitations: ["Limited data processing", "High latency", "Basic resources only"]
-      },
-      {
-        id: "space-computing-professional",name: "Space Computing Professional",price: 17999,currency: "$",period: "month",description: "Professional space computing with advanced capabilities",features: [
-          "Advanced satellite computing",
-          "Low-latency space-to-ground processing",
-          "Up to 100TB data processing per month",
-          "Low latency (100-500ms)",
-          "Priority support",
-          "Custom optimization"
-        ],
-        popular: true,aiScore: 93,setupTime: "12-16 weeks",support: "Priority support",integrations: ["Advanced satellite networks", "Custom protocols", "Multiple platforms", "Custom APIs"],
-        limitations: ["Limited to 100TB per month"]
-      };
-      {
-        id: "space-computing-enterprise",name: "Space Computing Enterprise",price: 59999,currency: "$",period: "month",description: "Enterprise space computing with unlimited capabilities",features: [
-          "Unlimited space computing resources",
-          "Custom space architecture",
-          "Ultra-low latency (<100ms)",
-          "Dedicated space engineer",
-          "24/7 support",
-          "Advanced security",
+  id: "bci-enterprise",na,
+  m: e: "BCI Enterprise",pri,
+  c: e: 19999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Enterprise BCI with unlimited capabilities",featur,
+  e: s: [
+  "Unlimited neural commands"
+          "Custom BCI architecture"
+          "Ultra-high accuracy (95%+)"
+          "Dedicated neuroscientist"
+          "24/7 support"
+          "Advanced security"
           "Custom integrations"
-        ],
-        aiScore: 98,setupTime: "16-20 weeks",support: "24/7 dedicated support",integrations: ["All space platforms", "Custom hardware", "On-premise solutions"],
-        limitations: []
-      }
-    ]
-  };
-];
+]
+        aiScor,
+  e: 96,setupTi,
+  m: e: "8-10 weeks",suppo,
+  r: t: "24/7 dedicated support",integratio,
+  n: s: ["All BCI platforms", "Custom hardware", "On-premise solutions"]
+        limitatio,
+  n: s: [[],
+  ],
+  },
+  ],
+  },
+  {
+  id: "space-computing",na,
+  m: e: "Space Computing",descripti,
+  o: n: "AI and computing infrastructure in space",ic,
+  o: n: "🚀",servic,
+  e: s: [],pricingTie,
+  r: s: [
+  {
+  i,
+  d: "space-computing-starter",na,
+  m: e: "Space Computing Starter",pri,
+  c: e: 5999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Basic space computing access",featur,
+  e: s: [
+  "Access to satellite computing resources"
+          "Basic space-to-ground processing"
+          "Up to 1TB data processing per month"
+          "Standard latency (500-1000ms)"
+          "Email support"
+]
+        aiScor,
+  e: 87,setupTi,
+  m: e: "8-10 weeks",suppo,
+  r: t: "Email support",integratio,
+  n: s: ["Basic satellite networks", "Standard APIs", "Cloud platforms"]
+        limitatio,
+  n: s: [["Limited data processing", "High latency", "Basic resources only"],
+  ],
+  },
+  {
+  id: "space-computing-professional",na,
+  m: e: "Space Computing Professional",pri,
+  c: e: 17999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Professional space computing with advanced capabilities",featur,
+  e: s: [
+  "Advanced satellite computing"
+          "Low-latency space-to-ground processing"
+          "Up to 100TB data processing per month"
+          "Low latency (100-500ms)"
+          "Priority support"
+          "Custom optimization"
+]
+        popula,
+  r: true,aiSco,
+  r: e: 93,setupTi,
+  m: e: "12-16 weeks",suppo,
+  r: t: "Priority support",integratio,
+  n: s: ["Advanced satellite networks", "Custom protocols", "Multiple platforms", "Custom APIs"]
+        limitatio,
+  n: s: [["Limited to 100TB per month"],
+  ],
+  },
+  {
+  id: "space-computing-enterprise",na,
+  m: e: "Space Computing Enterprise",pri,
+  c: e: 59999,curren,
+  c: y: "$",peri,
+  o: d: "month",descripti,
+  o: n: "Enterprise space computing with unlimited capabilities",featur,
+  e: s: [
+  "Unlimited space computing resources"
+          "Custom space architecture"
+          "Ultra-low latency (<100ms)"
+          "Dedicated space engineer"
+          "24/7 support"
+          "Advanced security"
+          "Custom integrations"
+]
+        aiScor,
+  e: 98,setupTi,
+  m: e: "16-20 weeks",suppo,
+  r: t: "24/7 dedicated support",integratio,
+  n: s: ["All space platforms", "Custom hardware", "On-premise solutions"]
+        limitatio,
+  n: s: [[],
+  ],
+  },
+  ],
+  },
+  ]
 export default COMPREHENSIVE_PRICING_GUIDE_2029;

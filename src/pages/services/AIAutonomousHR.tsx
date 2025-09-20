@@ -1,73 +1,106 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { 
-  Users,
-  Brain, 
-  Target, 
-  BarChart3, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Globe,
-  Cpu,
-  Database,
-  ChartBar,
-  PieChart,
-  Activity,
-  Eye,
-  Clock,
-  Award,
-  MessageSquare,
-  Share2,
-  TrendingUp,
-  Zap,
-  Shield,
-  Briefcase
-} from "lucide-react";
-const AIAutonomousHR: React.FC = () => {
+import React from "react"
+import { motion     } from "framer-motion";
+import {
+  Users;
+  Brain,
+  Target,
+  BarChart3,
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Globe;
+  Cpu;
+  Database;
+  ChartBar;
+  PieChart;
+  Activity;
+  Eye;
+  Clock;
+  Award;
+  MessageSquare;
+  Share2;
+  TrendingUp;
+  Zap;
+  Shield;
+  Briefcase;
+}
+}
+}
+}
+ } from "lucide-react";
+const,
+  AIAutonomousH: R: React.FC = () () => {
   const features = [
-    {
-      icon: Brain,title: 'AI-Powered HR Management',description: 'Advanced machine learning for autonomous HR operations and optimization'
-    };
-    {
-      icon: Users,title: 'Recruitment Automation',description: 'Intelligent candidate sourcing, screening, and hiring with AI-driven insights'
-    },
-    {
-      icon: Target,title: 'Performance Management',description: 'AI-powered performance tracking and employee development strategies'
-    };
-    {
-      icon: BarChart3,title: 'HR Analytics',description: 'Real-time analytics and insights into HR performance and trends'
-    };
-    {
-      icon: Briefcase,title: 'Employee Engagement',description: 'AI-driven employee engagement and retention strategies'
-    },
-    {
-      icon: TrendingUp,title: 'Workforce Optimization',description: 'Continuous optimization of HR processes and workforce management'
-    }
-  ];
+  {
+  ico,
+  n: Brain,tit,
+  l: e: 'AI-Powered HR Management',descripti,
+  o: n: 'Advanced machine learning for autonomous HR operations and optimization'
+},
+  {
+  ic,
+  o: n: Users,tit,
+  l: e: 'Recruitment Automation',descripti,
+  o: n: 'Intelligent candidate sourcing, screening, and hiring with AI-driven insights'
+},
+  {
+  ic,
+  o: n: Target,tit,
+  l: e: 'Performance Management',descripti,
+  o: n: 'AI-powered performance tracking and employee development strategies'
+},
+  {
+  ic,
+  o: n: BarChart3,tit,
+  l: e: 'HR Analytics',descripti,
+  o: n: 'Real-time analytics and insights into HR performance and trends'
+},
+  {
+  ic,
+  o: n: Briefcase,tit,
+  l: e: 'Employee Engagement',descripti,
+  o: n: 'AI-driven employee engagement and retention strategies'
+},
+  {
+  ic,
+  o: n: TrendingUp,tit,
+  l: e: 'Workforce Optimization',descripti,
+  o: n: 'Continuous optimization of HR processes and workforce management'
+},
+  ]
   const benefits = [
-    'Improve recruitment efficiency by 80%Reduce hiring time by 70%',
-    'Enhance employee retention by 60%Automate HR processes',
+  'Improve recruitment efficiency by 80%Reduce hiring time by 70%'
+    'Enhance employee retention by 60%Automate HR processes'
     '24/7 autonomous operationReal-time HR insights'
-  ],
+]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */},
+  }
+      <section className="relative pt-32 pb-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <motion.div;
+            initial={ opacit,
+  y: 0, y: 20 },
+  }
+            animate={ opaci,
+  t: y: 1, y: 0 },
+  }
+            transition={ durati,
+  o: n: 0.8 },
+  }
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 text-violet-400 text-sm font-medium mb-6">
               <Users className="w-4 h-4 mr-2" />
-              AI-Powered Autonomous HR
+              AI-Powered Autonomous HR;
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transform Your HR with
+            <h1 className="text-4xl,
+  m: d:text-6xl font-bold text-white mb-6">
+              Transform Your HR with;
               <span className="bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent"> AI Intelligence</span>
             </h1>
             
@@ -76,45 +109,75 @@ const AIAutonomousHR: React.FC = () => {
               Optimize recruitment, enhance employee engagement, and maximize workforce performance.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 text-white rounded-lg font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
+            <div className="flex flex-col,
+  s: m: flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 text-white rounded-lg font-semibold,
+  hove: r:from-violet-600,
+  hove: r:to-purple-600 transition-all duration-300,
+  transform: hover:scale-105">
+                Start Free Trial;
               </button>
-              <button className="px-8 py-4 border border-violet-500/30 text-violet-400 rounded-lg font-semibold hover:bg-violet-500/10 transition-all duration-300">
-                Schedule Demo
+              <button className="px-8 py-4 border border-violet-500/30 text-violet-400 rounded-lg font-semibold hove,
+  r:bg-violet-500/10 transition-all duration-300">
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Features Section */},
+  }
+      <section className="py-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+          <motion.div;
+            initial={ opacit,
+  y: 0, y: 20 },
+  }
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
+  }
+            transition={ durati,
+  o: n: 0.8 },
+  }
+            viewport={ on,
+  c: e: true },
+  }
+            className="className="text-center mb-16";"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced HR Features
+            <h2 className="text-3xl,
+  m: d: text-4xl font-bold text-white mb-4">
+              Advanced HR Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform provides comprehensive HR capabilities for modern businesses
+              Our AI platform provides comprehensive HR capabilities for modern businesses;
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1,
+  m: d:grid-cols-2 l,
+  g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-violet-500/30 transition-all duration-300"
+  <motion.div;
+                key={index},
+  }
+                initial={ opaci,
+  t: y: 0, y: 20 },
+  }
+                whileInView={ opaci,
+  t: y: 1, y: 0 },
+  }
+                transition={ durati,
+  o: n: 0.6, del,
+  a: y: index * 0.1 },
+  }
+                viewport={ on,
+  c: e: true },
+  }
+                className="className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6,
+  hove: r:border-violet-500/30 transition-all duration-300";"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -127,35 +190,56 @@ const AIAutonomousHR: React.FC = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      {/* Benefits Section */},
+  }
+      <section className="py-20 px-4,
+  s: m: px-6,
+  l: g:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+          <motion.div;
+            initial={ opacit,
+  y: 0, y: 20 },
+  }
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
+  }
+            transition={ durati,
+  o: n: 0.8 },
+  }
+            viewport={ on,
+  c: e: true },
+  }
+            className="className="text-center mb-16";"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl,
+  m: d: text-4xl font-bold text-white mb-4">
               Why Choose AI Autonomous HR?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in HR performance and employee satisfaction
+              Experience measurable improvements in HR performance and employee satisfaction;
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }};
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+          <div className="grid grid-cols-1,
+  m: d:grid-cols-2 gap-8">
+            <motion.div;
+              initial={ opacit,
+  y: 0, x: -20 },
+  }
+              whileInView={ opaci,
+  t: y: 1, x: 0 },
+  }
+              transition={ durati,
+  o: n: 0.8 },
+  }
+              viewport={ on,
+  c: e: true },
+  }
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
+  <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-violet-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </div>
@@ -163,46 +247,72 @@ const AIAutonomousHR: React.FC = () => {
               </div>
             </motion.div>
             
-            <motion.div
-              initial={{ opacity: 0, x: 20 }};
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-xl p-8"
+            <motion.div;
+              initial={ opaci,
+  t: y: 0, x: 20 },
+  }
+              whileInView={ opaci,
+  t: y: 1, x: 0 },
+  }
+              transition={ durati,
+  o: n: 0.8 },
+  }
+              viewport={ on,
+  c: e: true },
+  }
+              className="className="bg-gradient-to-br from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-xl p-8";"
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Ready to Transform HR?</h3>
               <p className="text-gray-300 mb-6">
                 Join thousands of businesses already using AI to enhance their HR operations.
               </p>
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-violet-500 to-purple-500 text-white rounded-lg font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300">
-                Get Started Today
+              <button className="w-full px-6 py-3 bg-gradient-to-r from-violet-500 to-purple-500 text-white rounded-lg font-semibold,
+  hove: r: from-violet-600 hove,
+  r:to-purple-600 transition-all duration-300">
+                Get Started Today;
               </button>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* CTA Section */},
+  }
+      <section className="py-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+          <motion.div;
+            initial={ opacit,
+  y: 0, y: 20 },
+  }
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
+  }
+            transition={ durati,
+  o: n: 0.8 },
+  }
+            viewport={ on,
+  c: e: true },
+  }
           >
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl,
+  m: d: text-4xl font-bold text-white mb-6">
               Ready to Revolutionize HR?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Start your journey to AI-powered HR with our comprehensive platform.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 text-white rounded-lg font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300">
-                Start Free Trial
+            <div className="flex flex-col,
+  s: m:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 text-white rounded-lg font-semibold,
+  hove: r:from-violet-600,
+  hove: r:to-purple-600 transition-all duration-300">
+                Start Free Trial;
               </button>
-              <button className="px-8 py-4 border border-violet-500/30 text-violet-400 rounded-lg font-semibold hover:bg-violet-500/10 transition-all duration-300">
-                Contact Sales
+              <button className="px-8 py-4 border border-violet-500/30 text-violet-400 rounded-lg font-semibold hove,
+  r:bg-violet-500/10 transition-all duration-300">
+                Contact Sales;
               </button>
             </div>
           </motion.div>
@@ -210,5 +320,5 @@ const AIAutonomousHR: React.FC = () => {
       </section>
     </div>
   )
-};
+}
 export default AIAutonomousHR;

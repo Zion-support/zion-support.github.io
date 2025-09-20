@@ -1,29 +1,33 @@
-import React, { useState } from "react";
-import { Mail, Send, CheckCircle } from "lucide-react";
-export const FooterNewsletter: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+import React, { useState } from "react"
+import { Mail, Send, CheckCircle   } from "lucide-react";
+export,
+  const: FooterNewsletter: React.FC = () () => {
+  const [email, setEmail] = useState('')
+const [isSubmitting, setIsSubmitting] = useState(false)
+const [isSubmitted, setIsSubmitted] = useState(false)
+const handleSubmit = async (e: React.FormEvent) () => {
+    e.preventDefault()
     if (!email.trim()) return,
 
-    setIsSubmitting(true);
-
+    setIsSubmitting(true)
     try {
-      // Simulate API call
+  // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 1000)),
 
-      setIsSubmitted(true);
-      setEmail('');
-
-      // Reset after 3 seconds
+      setIsSubmitted(true)
+      setEmail('')
+      // Reset after 3 seconds;
       setTimeout(() => setIsSubmitted(false), 3000),
+}
+}
     } catch (error) {
-      console.error('Newsletter subscription failed:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
+      console.error('Newsletter,
+  subscription: failed:', error)
+} finally {
+  setIsSubmitting(false)
+}
+}
+},
   },
 
   return (
@@ -36,7 +40,7 @@ export const FooterNewsletter: React.FC = () => {
         </div>
 
         <h3 className="text-xl font-bold text-white mb-2">
-          Stay Updated
+          Stay Updated;
         </h3>
         <p className="text-gray-300 mb-6 max-w-md mx-auto">
           Get the latest insights on AI technology, cybersecurity trends, and IT solutions delivered to your inbox.
@@ -48,19 +52,28 @@ export const FooterNewsletter: React.FC = () => {
             <span>Successfully subscribed!</span>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col sm: flex-row gap-3 max-w-md mx-auto">
-            <input
+          <form onSubmit={handleSubmit} className="flex flex-col,
+  s: m: flex-row gap-3 max-w-md mx-auto">
+            <input;
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
-              required
+              className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400,
+  focu: s: outline-none,
+  focu: s:border-zion-cyan,
+  focu: s:ring-2 focu,
+  s:ring-zion-cyan/20 transition-all duration-300"
+              required;
             />
-            <button
+            <button;
               type="submit"
               disabled={isSubmitting || !email.trim()}
-              className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-medium rounded-lg hover:from-zion-cyan/90 hover:to-blue-500/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-medium rounded-lg,
+  hove: r: from-zion-cyan/90,
+  hove: r:to-blue-500/90 transition-all duration-300,
+  disable: d:opacity-50 disable,
+  d:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isSubmitting ? (
                 <>
@@ -70,7 +83,7 @@ export const FooterNewsletter: React.FC = () => {
               ) : (
                 <>
                   <Send className="w-4 h-4" />
-                  Subscribe
+                  Subscribe;
                 </>
                 )}
             </button>
@@ -82,5 +95,5 @@ export const FooterNewsletter: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
