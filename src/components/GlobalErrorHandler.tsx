@@ -1,9 +1,9 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+"use client";
+
+import React, { createContext, useContext, useState, useCallback } from 'react';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
-import * as Sentry from '@sentry/browser';
-import { logErrorToProduction } from '@/utils/productionLogger';
 import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void;
@@ -11,153 +11,142 @@ interface ErrorContextType {
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
   clearAllErrors: () => void;
-  handleAsyncOperation: <T>(operation: () => Promise<T>) => Promise<T | null>;
 }
 
 const ErrorContext = createContext<ErrorContextType | undefined>(undefined);
 
+export function useErrorHandler() {
+  const context = useContext(ErrorContext);
+  if (!context) {
+    throw new Error('useErrorHandler must be used within an ErrorProvider');
+  }
+  return context;
+}
+
 interface ErrorState {
-  hasError: boolean;
-  error: Error | null;
-  errorType: 'general' | 'network' | 'auth' | null;
+  type: 'retryable' | 'network' | 'auth' | null;
+  message: string;
   retryAction?: () => void;
   loginAction?: () => void;
 }
 
-interface ErrorProviderProps {
-  children: ReactNode;
-}
+export function ErrorProvider({ children }: { children: React.ReactNode }) {
+  const [error, setError] = useState<ErrorState>({ type: null, message: '' });
 
-export function ErrorProvider({ children }: ErrorProviderProps) {
-  const [errorState, setErrorState] = useState<ErrorState>({
-    hasError: false,
-    error: null,
-    errorType: null,
-  });
-
-  const reportError = (error: Error, context?: any) => {
-    logErrorToProduction('Global error reported', { error: error.message, context });
-    Sentry.captureException(error, { extra: context });
-    
-    setErrorState({
-      hasError: true,
-      error,
-      errorType: 'general',
+  const reportError = useCallback((error: Error, context?: any) => {
+    console.error('Global error:', error, context);
+    setError({
+      type: 'retryable',
+      message: error.message || 'An unexpected error occurred',
     });
-  };
+  }, []);
 
-  const showRetryableError = (error: Error, retryAction?: () => void) => {
-    setErrorState({
-      hasError: true,
-      error,
-      errorType: 'general',
+  const showRetryableError = useCallback((error: Error, retryAction?: () => void) => {
+    setError({
+      type: 'retryable',
+      message: error.message || 'Something went wrong. Please try again.',
       retryAction,
     });
-  };
+  }, []);
 
-  const showNetworkError = (retryAction?: () => void) => {
-    setErrorState({
-      hasError: true,
-      error: new Error('Network connection failed'),
-      errorType: 'network',
+  const showNetworkError = useCallback((retryAction?: () => void) => {
+    setError({
+      type: 'network',
+      message: 'Network connection lost. Please check your internet connection.',
       retryAction,
     });
-  };
+  }, []);
 
-  const showAuthError = (loginAction?: () => void) => {
-    setErrorState({
-      hasError: true,
-      error: new Error('Authentication required'),
-      errorType: 'auth',
+  const showAuthError = useCallback((loginAction?: () => void) => {
+    setError({
+      type: 'auth',
+      message: 'Authentication required. Please log in to continue.',
       loginAction,
     });
-  };
+  }, []);
 
-  const clearAllErrors = () => {
-    setErrorState({
-      hasError: false,
-      error: null,
-      errorType: null,
-    });
-  };
-
-  const handleAsyncOperation = async <T,>(operation: () => Promise<T>): Promise<T | null> => {
-    try {
-      return await operation();
-    } catch (error) {
-      if (error instanceof Error) {
-        reportError(error);
-      }
-      return null;
-    }
-  };
+  const clearAllErrors = useCallback(() => {
+    setError({ type: null, message: '' });
+  }, []);
 
   const handleRetry = () => {
-    if (errorState.retryAction) {
-      errorState.retryAction();
+    if (error.retryAction) {
+      error.retryAction();
     }
     clearAllErrors();
   };
 
   const handleLogin = () => {
-    if (errorState.loginAction) {
-      errorState.loginAction();
+    if (error.loginAction) {
+      error.loginAction();
     }
     clearAllErrors();
   };
 
-  const contextValue: ErrorContextType = {
-    reportError,
-    showRetryableError,
-    showNetworkError,
-    showAuthError,
-    clearAllErrors,
-    handleAsyncOperation,
+  const getErrorIcon = () => {
+    switch (error.type) {
+      case 'network':
+        return <WifiOff className="h-8 w-8 text-red-500" />;
+      case 'auth':
+        return <Shield className="h-8 w-8 text-yellow-500" />;
+      default:
+        return <AlertTriangle className="h-8 w-8 text-red-500" />;
+    }
+  };
+
+  const getErrorTitle = () => {
+    switch (error.type) {
+      case 'network':
+        return 'Connection Error';
+      case 'auth':
+        return 'Authentication Required';
+      default:
+        return 'Something Went Wrong';
+    }
   };
 
   return (
-    <ErrorContext.Provider value={contextValue}>
+    <ErrorContext.Provider
+      value={{
+        reportError,
+        showRetryableError,
+        showNetworkError,
+        showAuthError,
+        clearAllErrors,
+      }}
+    >
       {children}
-      {errorState.hasError && (
+      {error.type && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <Alert variant="destructive" className="max-w-md">
-            <AlertTriangle className="h-4 w-4" />
-            <AlertTitle>
-              {errorState.errorType === 'network' && 'Network Error'}
-              {errorState.errorType === 'auth' && 'Authentication Required'}
-              {errorState.errorType === 'general' && 'Something went wrong'}
-            </AlertTitle>
-            <AlertDescription className="mt-2">
-              {errorState.error?.message || 'An unexpected error occurred'}
-            </AlertDescription>
-            <div className="mt-4 flex gap-2">
-              {errorState.retryAction && (
-                <Button onClick={handleRetry} size="sm">
-                  <RefreshCw className="h-4 w-4 mr-2" />
-                  Retry
+          <Card className="max-w-md w-full">
+            <CardHeader className="text-center">
+              <div className="flex justify-center mb-4">
+                {getErrorIcon()}
+              </div>
+              <CardTitle className="text-xl">{getErrorTitle()}</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center space-y-4">
+              <p className="text-gray-600">{error.message}</p>
+              <div className="flex gap-2 justify-center">
+                {error.type === 'auth' ? (
+                  <Button onClick={handleLogin} className="w-full">
+                    <Shield className="h-4 w-4 mr-2" />
+                    Log In
+                  </Button>
+                ) : (
+                  <Button onClick={handleRetry} className="w-full">
+                    <RefreshCw className="h-4 w-4 mr-2" />
+                    Try Again
+                  </Button>
+                )}
+                <Button variant="outline" onClick={clearAllErrors}>
+                  Dismiss
                 </Button>
-              )}
-              {errorState.loginAction && (
-                <Button onClick={handleLogin} size="sm">
-                  <Shield className="h-4 w-4 mr-2" />
-                  Login
-                </Button>
-              )}
-              <Button onClick={clearAllErrors} variant="outline" size="sm">
-                Dismiss
-              </Button>
-            </div>
-          </Alert>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       )}
     </ErrorContext.Provider>
   );
-}
-
-export function useErrorHandler() {
-  const context = useContext(ErrorContext);
-  if (context === undefined) {
-    throw new Error('useErrorHandler must be used within an ErrorProvider');
-  }
-  return context;
 }

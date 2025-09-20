@@ -1,5 +1,5 @@
-import { type ClassValue, clsx } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 // Utility functions for the application
 export function cn(...inputs: ClassValue[]) {
@@ -35,7 +35,7 @@ export function debounce<T extends (...args: any[]) => any>(
   func: T, 
   wait: number
 ): (...args: Parameters<T>) => void {
-  let timeout: globalThis.Timeout;
+  let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
@@ -53,4 +53,5 @@ export function throttle<T extends (...args: any[]) => any>(
       inThrottle = true;
       setTimeout(() => inThrottle = false, limit);
     }
-  };}
+  };
+}
