@@ -1,4 +1,5 @@
-console.log("main.tsx: Start");
+import { Routes, Route } from "react-router-dom";
+
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App.tsx';
@@ -15,6 +16,7 @@ import ToastProvider from './components/ToastProvider';
 
 import { LanguageProvider } from '@/context/LanguageContext.jsx';
 import { WhitelabelProvider } from '@/context/WhitelabelContext.jsx';
+import { ViewModeProvider } from '@/context/ViewModeContext';
 import { AppLayout } from '@/layout/AppLayout';
 import { store } from '@/store';
 import { Provider as ReduxProvider } from 'react-redux';
@@ -114,6 +116,6 @@ function displayFatalError(message: string) {
 try {
   renderApp();
 } catch (error) {
-  console.error('Global error caught in main.tsx:', error);
+  
   displayFatalError((error as Error).message);
 }

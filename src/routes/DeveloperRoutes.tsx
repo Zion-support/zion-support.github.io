@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import React from 'react';
 // Next.js routing - no need for react-router-dom
 

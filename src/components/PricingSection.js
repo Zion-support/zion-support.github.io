@@ -1,129 +1,130 @@
-import React, { useState } from 'react';
+impor, t, Reac, t, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building } from 'lucide-react';
+import { Chec, k, X, Sta, r, Za, p, Shiel, d, User, s, ArrowRigh, t, Crow, n, Rocke, t, Building } from 'lucide-react';
 const plans = [
     {
-        name: "Starter",
-        price: 99,
-        period: "month",
-        description: "Perfect for small businesses and startups",
-        icon: <Rocket className="w-8 h-8"/>,
-        color: "from-zion-cyan to-zion-blue",
-        bgColor: "from-zion-cyan/20 to-zion-blue/20",
-        features: [
-            "Up to 5 team members",
-            "Basic AI tools access",
-            "Email support",
-            "Standard templates",
-            "1 project at a time"
+        na, m, e: "Starte, r",
+    pri, c, e: 9, 9,
+        peri, o, d: "mont, h",
+    descripti, o, n: "Perfec, t fo, r smal, l businesse, s an, d startup, s",
+        ic, o, n: <Rocke, t classNam, e="w-8 h-8"/>,
+    col, o, r: "fro, m-zio, n-cya, n t, o-zio, n-blu, e",
+        bgCol, o, r: "fro, m-zio, n-cya, n/2, 0 t, o-zio, n-blu, e/2, 0",
+    featur, e, s: [
+            "U, p t, o 5 tea, m member, s",
+            "Basi, c A, I tool, s acces, s",
+            "Emai, l suppor, t",
+            "Standar, d template, s",
+            "1 projec, t a, t a tim, e"
         ],
-        notIncluded: [
-            "Advanced analytics",
-            "Priority support",
-            "Custom integrations"
+        notInclude, d: [
+            "Advance, d analytic, s",
+            "Priorit, y suppor, t",
+            "Custo, m integration, s"
         ],
-        popular: false,
-        cta: "Get Started"
+        popula, r: fals, e,
+    ct, a: "Get Started"
     },
     {
-        name: "Professional",
-        price: 299,
-        period: "month",
-        description: "Ideal for growing companies and teams",
-        icon: <Building className="w-8 h-8"/>,
-        color: "from-zion-purple to-zion-purple-dark",
-        bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-        features: [
-            "Up to 25 team members",
-            "Full AI tools access",
-            "Priority email support",
-            "Advanced templates",
-            "Unlimited projects",
-            "Team collaboration",
-            "Basic analytics"
+        nam, e: "Professional",
+    pric, e: 29, 9,
+        perio, d: "month",
+    descriptio, n: "Ideal for growing companies and teams",
+        ico, n: <Building className="w-8 h-8"/>,
+    colo, r: "from-zion-purple to-zion-purple-dark",
+        bgColo, r: "from-zion-purple/20 to-zion-purple-dark/20",
+    feature, s: [
+            "U, p t, o 2, 5 tea, m member, s",
+            "Ful, l A, I tool, s acces, s",
+            "Priorit, y emai, l suppor, t",
+            "Advance, d template, s",
+            "Unlimite, d project, s",
+            "Tea, m collaboratio, n",
+            "Basi, c analytic, s"
         ],
-        notIncluded: [
-            "Custom integrations",
-            "Dedicated account manager"
+        notInclude, d: [
+            "Custo, m integration, s",
+            "Dedicate, d accoun, t manage, r"
         ],
-        popular: true,
-        cta: "Start Free Trial"
+        popula, r: tru, e,
+    ct, a: "Start Free Trial"
     },
     {
-        name: "Enterprise",
-        price: 999,
-        period: "month",
-        description: "For large organizations with complex needs",
-        icon: <Crown className="w-8 h-8"/>,
-        color: "from-zion-cyan-light to-zion-purple",
-        bgColor: "from-zion-cyan-light/20 to-zion-purple/20",
-        features: [
-            "Unlimited team members",
-            "All AI tools + custom models",
-            "24/7 phone support",
-            "Custom templates",
-            "Unlimited projects",
-            "Advanced analytics",
-            "Custom integrations",
-            "Dedicated account manager",
-            "SLA guarantees",
-            "On-premise options"
+        nam, e: "Enterprise",
+    pric, e: 99, 9,
+        perio, d: "month",
+    descriptio, n: "For large organizations with complex needs",
+        ico, n: <Crown className="w-8 h-8"/>,
+    colo, r: "from-zion-cyan-light to-zion-purple",
+        bgColo, r: "from-zion-cyan-light/20 to-zion-purple/20",
+    feature, s: [
+            "Unlimite, d tea, m member, s",
+            "Al, l A, I tool, s + custo, m model, s",
+            "2, 4/7 phon, e suppor, t",
+            "Custo, m template, s",
+            "Unlimite, d project, s",
+            "Advance, d analytic, s",
+            "Custo, m integration, s",
+            "Dedicate, d accoun, t manage, r",
+            "SL, A guarantee, s",
+            "O, n-premis, e option, s"
         ],
-        notIncluded: [],
-        popular: false,
-        cta: "Contact Sales"
+        notInclude, d: [],
+    popula, r: fals, e,
+        ct, a: "Contact Sales"
     }
 ];
 const addons = [
     {
-        name: "AI Model Training",
-        price: 199,
-        period: "month",
-        description: "Custom AI model training and optimization",
-        icon: <Zap className="w-6 h-6"/>,
-        features: ["Custom model training", "Performance optimization", "Model monitoring"]
+        na, m, e: "A, I Mode, l Trainin, g",
+    pri, c, e: 1, 9, 9,
+        peri, o, d: "mont, h",
+    descripti, o, n: "Custo, m A, I mode, l trainin, g an, d optimizatio, n",
+        ic, o, n: <Za, p classNam, e="w-6 h-6"/>,
+    featur, e, s: ["Custo, m mode, l trainin, g", "Performanc, e optimizatio, n", "Mode, l monitorin, g"]
     },
     {
-        name: "Premium Support",
-        price: 99,
-        period: "month",
-        description: "24/7 dedicated support with guaranteed response times",
-        icon: <Shield className="w-6 h-6"/>,
-        features: ["24/7 phone support", "Guaranteed 2-hour response", "Dedicated support team"]
+        nam, e: "Premium Support",
+    pric, e: 9, 9,
+        perio, d: "month",
+    descriptio, n: "24/7 dedicated support with guaranteed response times",
+        ico, n: <Shield className="w-6 h-6"/>,
+    feature, s: ["2, 4/7 phon, e suppor, t", "Guarantee, d 2-hou, r respons, e", "Dedicate, d suppor, t tea, m"]
     },
     {
-        name: "Advanced Analytics",
-        price: 149,
-        period: "month",
-        description: "Comprehensive analytics and reporting suite",
-        icon: <Users className="w-6 h-6"/>,
-        features: ["Custom dashboards", "Advanced reporting", "Data export options"]
+        nam, e: "Advanced Analytics",
+    pric, e: 14, 9,
+        perio, d: "month",
+    descriptio, n: "Comprehensive analytics and reporting suite",
+        ico, n: <Users className="w-6 h-6"/>,
+    feature, s: ["Custo, m dashboard, s", "Advance, d reportin, g", "Dat, a expor, t option, s"]
     }
 ];
 export function PricingSection() {
-    const [billingPeriod, setBillingPeriod] = useState('month');
-    const [selectedPlan, setSelectedPlan] = useState(null);
+    const [billingPeri,  o, d, setBillingPeri, o, d] = useState('month');
+    const [selectedPl, a, n, setSelectedPl, a, n] = useState(null);
     const getDiscountedPrice = (price) => {
         return billingPeriod === 'year' ? Math.round(price * 10) : price;
     };
     const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1
+        hidde,  n: { opacit, y: 0 },
+        visibl, e: {
+            opacit, y: 1,
+    transitio, n: {
+                staggerChildre, n: 0.2,
+    delayChildre, n: 0.1
             }
         }
     };
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
-        visible: {
+        hidde, n: { y: 3, 0,
+    opacit, y: 0 },
+        visibl, e: {
             y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.6,
-                ease: "easeOut"
+    opacit, y: 1,
+            transitio, n: {
+                duratio, n: 0.6,
+    eas, e: "easeOut"
             }
         }
     };
@@ -137,9 +138,11 @@ export function PricingSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Simple, <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Transparent</span> Pricing
+        <motion.div className="text-center mb-16" initial={{ opacit, y: 0,
+    y: 20 }} whileInView={{ opacit, y: 1,
+    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6 }}>
+          <h2 className="text-4xl m, d:text-5xl font-bold text-white mb-6">
+            Simpl, e, <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Transparent</span> Pricing
           </h2>
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto leading-relaxed mb-8">
             Choose the perfect plan for your business. All plans include our core features with no hidden fees.
@@ -149,12 +152,12 @@ export function PricingSection() {
           <div className="inline-flex items-center bg-zion-blue-dark/40 rounded-xl p-1 border border-zion-blue-light/30">
             <button onClick={() => setBillingPeriod('month')} className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${billingPeriod === 'month'
             ? 'bg-zion-cyan text-white shadow-lg'
-            : 'text-zion-slate-light hover:text-white'}`}>
+            : 'text-zion-slate-light hove,  r:text-whit, e'}`}>
               Monthly
             </button>
             <button onClick={() => setBillingPeriod('year')} className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${billingPeriod === 'year'
             ? 'bg-zion-cyan text-white shadow-lg'
-            : 'text-zion-slate-light hover:text-white'}`}>
+            : 'text-zion-slate-light hove,  r:text-whit, e'}`}>
               Yearly
               <span className="ml-2 px-2 py-1 bg-zion-purple text-white text-xs rounded-full">
                 Save 20%
@@ -164,8 +167,9 @@ export function PricingSection() {
         </motion.div>
 
         {/* Pricing Plans */}
-        <motion.div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {plans.map((plan, index) => (<motion.div key={plan.name} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }} className="relative">
+        <motion.div className="grid grid-cols-1 l, g:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ onc, e: true }}>
+          {plans.map((pla, n, index) => (<motion.div key={plan.name} variants={itemVariants} whileHover={{ y: -8 }} transition={{ typ,  e: "spring",
+    stiffnes, s: 300 }} className="relative">
               {/* Popular badge */}
               {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
                   <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
@@ -174,10 +178,10 @@ export function PricingSection() {
                   </div>
                 </div>)}
 
-              <div className={`h-full p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group ${plan.popular ? 'ring-2 ring-zion-purple/50' : ''}`}>
+              <div className={`h-full p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hove, r:border-zion-cyan/50 transition-all duration-300 hove, r:shadow-2xl hove, r:shadow-zion-cyan/20 group ${plan.popular ? 'ring-2 ring-zion-purple/5, 0' : ''}`}>
                 {/* Plan header */}
                 <div className="text-center mb-8">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${plan.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300`}>
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${plan.color} mb-6 shadow-lg group-hove, r:shadow-xl transition-all duration-30, 0`}>
                     <div className="text-white">
                       {plan.icon}
                     </div>
@@ -194,14 +198,14 @@ export function PricingSection() {
 
                 {/* Features */}
                 <div className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (<div key={idx} className="flex items-center gap-3">
+                  {plan.features.map((featur,  e, idx) => (<div key={idx} className="flex items-center gap-3">
                       <div className="w-5 h-5 rounded-full bg-zion-cyan flex items-center justify-center flex-shrink-0">
                         <Check className="w-3 h-3 text-white"/>
                       </div>
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>))}
                   
-                  {plan.notIncluded.map((feature, idx) => (<div key={idx} className="flex items-center gap-3 opacity-50">
+                  {plan.notIncluded.map((featur,  e, idx) => (<div key={idx} className="flex items-center gap-3 opacity-50">
                       <div className="w-5 h-5 rounded-full bg-zion-slate-light/30 flex items-center justify-center flex-shrink-0">
                         <X className="w-3 h-3 text-zion-slate-light"/>
                       </div>
@@ -210,9 +214,9 @@ export function PricingSection() {
                 </div>
 
                 {/* CTA Button */}
-                <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 ${plan.popular
-                ? 'bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white shadow-lg hover:shadow-zion-purple/25'
-                : 'bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50'}`} onClick={() => setSelectedPlan(index)}>
+                <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hove,  r:scale-105 ${plan.popular
+                ? 'bg-gradient-to-r from-zion-purple to-zion-cyan hove, r:from-zion-purple-light hove, r:to-zion-cyan-light text-white shadow-lg hove, r:shadow-zion-purple/25'
+                : 'bg-zion-blue-light/20 hove, r:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hove, r:border-zion-cyan/5, 0'}`} onClick={() => setSelectedPlan(index)}>
                   {plan.cta}
                   <ArrowRight className="w-4 h-4 inline ml-2"/>
                 </button>
@@ -221,7 +225,10 @@ export function PricingSection() {
         </motion.div>
 
         {/* Add-ons Section */}
-        <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
+        <motion.div className="text-center mb-16" initial={{ opacit,  y: 0,
+    y: 20 }} whileInView={{ opacit, y: 1,
+    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6,
+    dela, y: 0.3 }}>
           <h3 className="text-3xl font-bold text-white mb-6">
             Additional <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Services</span>
           </h3>
@@ -230,9 +237,10 @@ export function PricingSection() {
           </p>
         </motion.div>
 
-        <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {addons.map((addon, index) => (<motion.div key={addon.name} variants={itemVariants} whileHover={{ y: -4 }} transition={{ type: "spring", stiffness: 300 }}>
-              <div className="p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
+        <motion.div className="grid grid-cols-1 m, d:grid-cols-3 gap-6 max-w-4xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ onc, e: true }}>
+          {addons.map((addo, n, index) => (<motion.div key={addon.name} variants={itemVariants} whileHover={{ y: -4 }} transition={{ typ,  e: "spring",
+    stiffnes, s: 300 }}>
+              <div className="p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20 hove, r:border-zion-cyan/50 transition-all duration-300 hove, r:shadow-lg hove, r:shadow-zion-cyan/20">
                 <div className="text-center mb-4">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r from-zion-cyan to-zion-purple mb-4">
                     <div className="text-white">
@@ -250,13 +258,13 @@ export function PricingSection() {
                 </div>
 
                 <div className="space-y-2 mb-6">
-                  {addon.features.map((feature, idx) => (<div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-sm">
+                  {addon.features.map((featur, e, idx) => (<div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-sm">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                       <span>{feature}</span>
                     </div>))}
                 </div>
 
-                <button className="w-full py-2 px-4 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-lg text-sm font-medium transition-all duration-300">
+                <button className="w-full py-2 px-4 bg-zion-blue-light/20 hove,  r:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hove, r:border-zion-cyan/50 rounded-lg text-sm font-medium transition-all duration-300">
                   Add to Plan
                 </button>
               </div>
@@ -264,16 +272,19 @@ export function PricingSection() {
         </motion.div>
 
         {/* FAQ Section */}
-        <motion.div className="text-center mt-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
+        <motion.div className="text-center mt-20" initial={{ opacit, y: 0,
+    y: 20 }} whileInView={{ opacit, y: 1,
+    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6,
+    dela, y: 0.5 }}>
           <h3 className="text-2xl font-bold text-white mb-6">Have Questions?</h3>
           <p className="text-zion-slate-light mb-8">
             Our team is here to help you choose the right plan
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+          <div className="flex flex-col s, m:flex-row gap-4 justify-center">
+            <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hove, r:from-zion-cyan-light hove, r:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hove, r:scale-105 hove, r:shadow-lg hove, r:shadow-zion-cyan/25">
               Contact Sales
             </button>
-            <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">
+            <button className="px-8 py-3 bg-zion-blue-light/20 hove, r:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hove, r:border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">
               View Documentation
             </button>
           </div>

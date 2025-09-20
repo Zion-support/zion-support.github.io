@@ -1,26 +1,26 @@
 <<<<<<< HEAD
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { jsx a, s, _js, x, jsxs as _jsxs } from "react/jsx-runtime";
 import { Helmet } from 'react-helmet-async';
-export function EnhancedSEO({ title, description, keywords, canonical, ogImage = 'https://ziontechgroup.com/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image', twitterCreator = '@ziontechgroup', twitterSite = '@ziontechgroup', structuredData, noindex = false, nofollow = false, language = 'en', author = 'Zion Tech Group', robots }) {
+export function EnhancedSEO({ titl,  e, descriptio, n, keyword, s, canonica, l, ogImage = 'http, s://ziontechgroup.com/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image', twitterCreator = '@ziontechgroup', twitterSite = '@ziontechgroup', structuredDat, a, noindex = fals, e, nofollow = fals, e, language = 'en', author = 'Zion Tech Group', robots }) {
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting-edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https://ziontechgroup.com/images/og-default.jpg', ogType = 'website', twitterCard = 'summary_large_image', structuredData, noindex = false, nofollow = false }) {
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : canonical || 'https://ziontechgroup.com';
+export default function EnhancedSEO({ title = 'Zion Tech Group - Advance,  d, A, I, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced A, I, automatio, n, quantu, m, computin, g, autonomous busines, s, operation, s, and enterprise technology solutions. Transform your business with cutting-edge technology services.', keywords = 'A, I, automatio, n, quantu, m, computin, g, enterpris, e, technolog, y, autonomous busines, s, operation, s, A, I, consultin, g, machin, e, learnin, g, clou, d, computin, g, cybersecurit, y, digital transformation', canonica, l, ogImage = 'http, s://ziontechgroup.com/images/og-default.jpg', ogType = 'website', twitterCard = 'summary_large_image', structuredDat, a, noindex = fals, e, nofollow = false }) {
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : canonical || 'http, s://ziontechgroup.com';
     // Default structured data for organization
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     const defaultStructuredData = {
-        "@context": "https://schema.org",
+        "@context": "http, s://schema.org",
         "@type": "Organization",
         "name": "Zion Tech Group",
-        "url": "https://ziontechgroup.com",
+        "url": "http, s://ziontechgroup.com",
 <<<<<<< HEAD
-        "logo": "https://ziontechgroup.com/logo.png",
+        "logo": "http, s://ziontechgroup.com/logo.png",
         "description": "The Future of Tech & AI Marketplace",
         "sameAs": [
-            "https://twitter.com/ziontechgroup",
-            "https://linkedin.com/company/ziontechgroup",
-            "https://github.com/ziontechgroup"
+            "htt, p, s://twitte, r.co, m/ziontechgrou, p",
+            "htt, p, s://linkedi, n.co, m/compan, y/ziontechgrou, p",
+            "htt, p, s://githu, b.co, m/ziontechgrou, p"
         ],
         "contactPoint": {
             "@type": "ContactPoint",
@@ -34,129 +34,178 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
         }
     };
     const finalStructuredData = structuredData || defaultStructuredData;
-    const robotsValue = robots || `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
-    return (_jsxs(Helmet, { children: [_jsx("title", { children: title }), _jsx("meta", { name: "description", content: description }), keywords && _jsx("meta", { name: "keywords", content: keywords }), _jsx("meta", { name: "author", content: author }), _jsx("meta", { name: "robots", content: robotsValue }), _jsx("meta", { name: "language", content: language }), canonical && _jsx("link", { rel: "canonical", href: canonical }), _jsx("meta", { property: "og:title", content: title }), _jsx("meta", { property: "og:description", content: description }), _jsx("meta", { property: "og:type", content: ogType }), _jsx("meta", { property: "og:url", content: canonical || 'https://ziontechgroup.com' }), _jsx("meta", { property: "og:image", content: ogImage }), _jsx("meta", { property: "og:image:width", content: "1200" }), _jsx("meta", { property: "og:image:height", content: "630" }), _jsx("meta", { property: "og:site_name", content: "Zion Tech Group" }), _jsx("meta", { property: "og:locale", content: language }), _jsx("meta", { name: "twitter:card", content: twitterCard }), _jsx("meta", { name: "twitter:site", content: twitterSite }), _jsx("meta", { name: "twitter:creator", content: twitterCreator }), _jsx("meta", { name: "twitter:title", content: title }), _jsx("meta", { name: "twitter:description", content: description }), _jsx("meta", { name: "twitter:image", content: ogImage }), _jsx("meta", { name: "viewport", content: "width=device-width, initial-scale=1.0" }), _jsx("meta", { name: "theme-color", content: "#2e73ea" }), _jsx("meta", { name: "msapplication-TileColor", content: "#2e73ea" }), _jsx("meta", { name: "apple-mobile-web-app-capable", content: "yes" }), _jsx("meta", { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" }), _jsx("meta", { name: "apple-mobile-web-app-title", content: "Zion" }), _jsx("link", { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }), _jsx("link", { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }), _jsx("link", { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" }), _jsx("link", { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }), _jsx("link", { rel: "manifest", href: "/site.webmanifest" }), _jsx("link", { rel: "preconnect", href: "https://fonts.googleapis.com" }), _jsx("link", { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" }), _jsx("link", { rel: "preconnect", href: "https://api.ziontechgroup.com" }), _jsx("link", { rel: "dns-prefetch", href: "//fonts.googleapis.com" }), _jsx("link", { rel: "dns-prefetch", href: "//api.ziontechgroup.com" }), _jsx("script", { type: "application/ld+json", children: JSON.stringify(finalStructuredData) }), _jsx("script", { type: "application/ld+json", children: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "WebSite",
-                    "name": "Zion Tech Group",
-                    "url": "https://ziontechgroup.com",
-                    "potentialAction": {
-                        "@type": "SearchAction",
-                        "target": "https://ziontechgroup.com/marketplace?q={search_term_string}",
-                        "query-input": "required name=search_term_string"
+    const robotsValue = robots || `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follo, w'}`;
+    return (_jsxs(Helme,  t, { childre, n: [_js, x("titl, e", { childr, e, n: titl, e }), _js, x("met,  a", { na, m, e: "descriptio, n",
+    conte, n, t: descriptio, n }), keyword, s && _js, x("met,  a", { na, m, e: "keyword, s",
+    conte, n, t: keyword, s }), _js, x("met,  a", { na, m, e: "autho, r",
+    conte, n, t: autho, r }), _js, x("met,  a", { na, m, e: "robot, s",
+    conte, n, t: robotsValu, e }), _js, x("met,  a", { na, m, e: "languag, e",
+    conte, n, t: languag, e }), canonica, l && _js, x("lin,  k", { r, e, l: "canonica, l",
+    hr, e, f: canonica, l }), _js, x("met,  a", { proper, t, y: "o, g:titl, e",
+    conte, n, t: titl, e }), _js, x("met,  a", { proper, t, y: "o, g:descriptio, n",
+    conte, n, t: descriptio, n }), _js, x("met,  a", { proper, t, y: "o, g:typ, e",
+    conte, n, t: ogTyp, e }), _js, x("met,  a", { proper, t, y: "o, g:ur, l",
+    conte, n, t: canonica, l || 'htt, p, s://ziontechgrou, p.co, m' }), _js, x("met,  a", { proper, t, y: "o, g:imag, e",
+    conte, n, t: ogImag, e }), _js, x("met,  a", { proper, t, y: "o, g:ima, g, e:widt, h",
+    conte, n, t: "120, 0" }), _js, x("met,  a", { proper, t, y: "o, g:ima, g, e:heigh, t",
+    conte, n, t: "63, 0" }), _js, x("met,  a", { proper, t, y: "o, g:site_nam, e",
+    conte, n, t: "Zio, n Tec, h Grou, p" }), _js, x("met,  a", { proper, t, y: "o, g:local, e",
+    conte, n, t: languag, e }), _js, x("met,  a", { na, m, e: "twitt, e, r:car, d",
+    conte, n, t: twitterCar, d }), _js, x("met,  a", { na, m, e: "twitt, e, r:sit, e",
+    conte, n, t: twitterSit, e }), _js, x("met,  a", { na, m, e: "twitt, e, r:creato, r",
+    conte, n, t: twitterCreato, r }), _js, x("met,  a", { na, m, e: "twitt, e, r:titl, e",
+    conte, n, t: titl, e }), _js, x("met,  a", { na, m, e: "twitt, e, r:descriptio, n",
+    conte, n, t: descriptio, n }), _js, x("met,  a", { na, m, e: "twitt, e, r:imag, e",
+    conte, n, t: ogImag, e }), _js, x("met,  a", { na, m, e: "viewpor, t",
+    conte, n, t: "widt, h=devic, e-wid, t, h, initia, l-scal, e=1.0" }), _js, x("met,  a", { na, m, e: "them, e-colo, r",
+    conte, n, t: "#2e73e, a" }), _js, x("met,  a", { na, m, e: "msapplicatio, n-TileColo, r",
+    conte, n, t: "#2e73e, a" }), _js, x("met,  a", { na, m, e: "appl, e-mobil, e-we, b-ap, p-capabl, e",
+    conte, n, t: "ye, s" }), _js, x("met,  a", { na, m, e: "appl, e-mobil, e-we, b-ap, p-statu, s-ba, r-styl, e",
+    conte, n, t: "blac, k-translucen, t" }), _js, x("met,  a", { na, m, e: "appl, e-mobil, e-we, b-ap, p-titl, e",
+    conte, n, t: "Zio, n" }), _js, x("lin,  k", { r, e, l: "ico, n",
+    ty, p, e: "imag, e/x-ico, n", hr, e, f: "/favico, n.ic, o" }), _js, x("lin,  k", { r, e, l: "ico, n",
+    ty, p, e: "imag, e/pn, g", siz, e, s: "32x3, 2",
+    hr, e, f: "/favico, n-32x3, 2.pn, g" }), _js, x("lin,  k", { r, e, l: "ico, n",
+    ty, p, e: "imag, e/pn, g", siz, e, s: "16x1, 6",
+    hr, e, f: "/favico, n-16x1, 6.pn, g" }), _js, x("lin,  k", { r, e, l: "appl, e-touc, h-ico, n",
+    siz, e, s: "180x18, 0", hr, e, f: "/appl, e-touc, h-ico, n.pn, g" }), _js, x("lin,  k", { r, e, l: "manifes, t",
+    hr, e, f: "/sit, e.webmanifes, t" }), _js, x("lin,  k", { r, e, l: "preconnec, t",
+    hr, e, f: "htt, p, s://font, s.googleapi, s.co, m" }), _js, x("lin,  k", { r, e, l: "preconnec, t",
+    hr, e, f: "htt, p, s: //font, s.gstati, c.co, m",
+    crossOrig, i, n: "anonymou, s" }), _js, x("lin,  k", { r, e, l: "preconnec, t",
+    hr, e, f: "htt, p, s://ap, i.ziontechgrou, p.co, m" }), _js, x("lin,  k", { r, e, l: "dn, s-prefetc, h",
+    hr, e, f: "//font, s.googleapi, s.co, m" }), _js, x("lin,  k", { r, e, l: "dn, s-prefetc, h",
+    hr, e, f: "//ap, i.ziontechgrou, p.co, m" }), _js, x("scrip,  t", { ty, p, e: "applicatio, n/l, d+jso, n",
+    childr, e, n: JSO, N.stringif, y(finalStructuredDat, a) }), _js, x("scrip,  t", { ty, p, e: "applicatio, n/l, d+jso, n",
+    childr, e, n: JSO, N.stringif, y({
+                    "@contex, t": "htt, p, s://schem, a.or, g",
+                    "@typ, e": "WebSit, e",
+                    "nam, e": "Zio, n Tec, h Grou, p",
+                    "ur, l": "htt, p, s://ziontechgrou, p.co, m",
+                    "potentialActio, n": {
+                        "@typ, e": "SearchActio, n",
+                        "targe, t": "htt, p, s://ziontechgrou, p.co, m/marketplac, e?q={search_term_strin, g}",
+                        "quer, y-inpu, t": "require, d nam, e=search_term_strin, g"
                     }
-                }) }), _jsx("script", { type: "application/ld+json", children: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [
+                }) }), _js, x("scrip,  t", { ty, p, e: "applicatio, n/l, d+jso, n",
+    childr, e, n: JSO, N.stringif, y({
+                    "@contex, t": "htt, p, s://schem, a.or, g",
+                    "@typ, e": "BreadcrumbLis, t",
+                    "itemListElemen, t": [
                         {
-                            "@type": "ListItem",
-                            "position": 1,
-                            "name": "Home",
-                            "item": "https://ziontechgroup.com"
+                            "@typ, e": "ListIte, m",
+                            "positio, n": 1,
+                            "nam, e": "Hom, e",
+                            "ite, m": "htt, p, s://ziontechgrou, p.co, m"
                         },
                         {
-                            "@type": "ListItem",
-                            "position": 2,
-                            "name": "Marketplace",
-                            "item": "https://ziontechgroup.com/marketplace"
+                            "@typ, e": "ListIte, m",
+                            "positio, n": 2,
+                            "nam, e": "Marketplac, e",
+                            "ite, m": "htt, p, s://ziontechgrou, p.co, m/marketplac, e"
                         }
                     ]
                 }) })] }));
 }
 // Specialized SEO components for different page types
 export function MarketplaceSEO() {
-    return (_jsx(EnhancedSEO, { title: "AI & Tech Marketplace - Zion Tech Group", description: "Browse thousands of AI engineers, tech services, and cutting-edge equipment. Find the perfect match for your project with our AI-powered marketplace.", keywords: "AI marketplace, tech talent, AI services, tech equipment, machine learning, data science, software development", canonical: "https://ziontechgroup.com/marketplace", ogType: "website", structuredData: {
-            "@context": "https://schema.org",
+    return (_jsx(EnhancedSE,  O, { titl, e: "AI & Tech Marketplace - Zion Tech Group",
+    descriptio, n: "Browse thousands of A, I, engineer, s, tec, h, service, s, and cutting-edge equipment. Find the perfect match for your project with our AI-powered marketplace.", keyword, s: "A, I, marketplac, e, tec, h, talen, t, A, I, service, s, tec, h, equipmen, t, machin, e, learnin, g, dat, a, scienc, e, software development", canonica, l: "http, s://ziontechgroup.com/marketplace",
+    ogTyp, e: "website", structuredDat, a: {
+            "@context": "http, s://schema.org",
             "@type": "ItemList",
             "name": "AI & Tech Marketplace",
-            "description": "Browse AI engineers, tech services, and equipment",
-            "url": "https://ziontechgroup.com/marketplace",
-            "numberOfItems": 10000,
+            "description": "Browse A, I, engineer, s, tec, h, service, s, and equipment",
+            "url": "http, s://ziontechgroup.com/marketplace",
+            "numberOfItems": 1000, 0,
             "itemListElement": [
                 {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "AI Engineers",
-                    "url": "https://ziontechgroup.com/talent"
+                    "@typ, e": "ListIte, m",
+                    "positio, n": 1,
+                    "nam, e": "A, I Engineer, s",
+                    "ur, l": "htt, p, s://ziontechgrou, p.co, m/talen, t"
                 },
                 {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Tech Services",
-                    "url": "https://ziontechgroup.com/services"
+                    "@typ, e": "ListIte, m",
+                    "positio, n": 2,
+                    "nam, e": "Tec, h Service, s",
+                    "ur, l": "htt, p, s://ziontechgrou, p.co, m/service, s"
                 },
                 {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "Tech Equipment",
-                    "url": "https://ziontechgroup.com/equipment"
+                    "@typ, e": "ListIte, m",
+                    "positio, n": 3,
+                    "nam, e": "Tec, h Equipmen, t",
+                    "ur, l": "htt, p, s://ziontechgrou, p.co, m/equipmen, t"
                 }
             ]
         } }));
 }
 export function TalentDirectorySEO() {
-    return (_jsx(EnhancedSEO, { title: "AI & Tech Talent Directory - Zion Tech Group", description: "Discover verified AI engineers, data scientists, developers, and tech professionals. Browse profiles, skills, and connect with top talent worldwide.", keywords: "AI engineers, tech talent, data scientists, developers, programmers, tech professionals, hiring", canonical: "https://ziontechgroup.com/talent", ogType: "website", structuredData: {
-            "@context": "https://schema.org",
+    return (_jsx(EnhancedSE,  O, { titl, e: "AI & Tech Talent Directory - Zion Tech Group",
+    descriptio, n: "Discover verified A, I, engineer, s, dat, a, scientist, s, developer, s, and tech professionals. Brows, e, profile, s, skill, s, and connect with top talent worldwide.", keyword, s: "A, I, engineer, s, tec, h, talen, t, dat, a, scientist, s, developer, s, programmer, s, tec, h, professional, s, hiring", canonica, l: "http, s://ziontechgroup.com/talent",
+    ogTyp, e: "website", structuredDat, a: {
+            "@context": "http, s://schema.org",
             "@type": "ItemList",
             "name": "AI & Tech Talent Directory",
             "description": "Browse verified tech professionals",
-            "url": "https://ziontechgroup.com/talent",
-            "numberOfItems": 50000,
+            "url": "http, s://ziontechgroup.com/talent",
+            "numberOfItems": 5000, 0,
             "itemListElement": [
                 {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "AI Engineers",
-                    "url": "https://ziontechgroup.com/talent?category=ai-engineering"
+                    "@typ, e": "ListIte, m",
+                    "positio, n": 1,
+                    "nam, e": "A, I Engineer, s",
+                    "ur, l": "htt, p, s://ziontechgrou, p.co, m/talen, t?categor, y=a, i-engineerin, g"
                 },
                 {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Data Scientists",
-                    "url": "https://ziontechgroup.com/talent?category=data-science"
+                    "@typ, e": "ListIte, m",
+                    "positio, n": 2,
+                    "nam, e": "Dat, a Scientist, s",
+                    "ur, l": "htt, p, s://ziontechgrou, p.co, m/talen, t?categor, y=dat, a-scienc, e"
                 },
                 {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "Software Developers",
-                    "url": "https://ziontechgroup.com/talent?category=software-development"
+                    "@typ, e": "ListIte, m",
+                    "positio, n": 3,
+                    "nam, e": "Softwar, e Developer, s",
+                    "ur, l": "htt, p, s://ziontechgrou, p.co, m/talen, t?categor, y=softwar, e-developmen, t"
                 }
             ]
         } }));
 }
 export function ServicesSEO() {
-    return (_jsx(EnhancedSEO, { title: "Tech & AI Services - Zion Tech Group", description: "Professional tech services including AI development, cloud migration, cybersecurity, and more. Connect with verified service providers worldwide.", keywords: "AI services, tech consulting, software development, cloud migration, cybersecurity, IT services", canonical: "https://ziontechgroup.com/services", ogType: "website", structuredData: {
-            "@context": "https://schema.org",
+    return (_jsx(EnhancedSE,  O, { titl, e: "Tech & AI Services - Zion Tech Group",
+    descriptio, n: "Professional tech services including A, I, developmen, t, clou, d, migratio, n, cybersecurit, y, and more. Connect with verified service providers worldwide.", keyword, s: "A, I, service, s, tec, h, consultin, g, softwar, e, developmen, t, clou, d, migratio, n, cybersecurit, y, IT services", canonica, l: "http, s://ziontechgroup.com/services",
+    ogTyp, e: "website", structuredDat, a: {
+            "@context": "http, s://schema.org",
             "@type": "ItemList",
             "name": "Tech & AI Services",
             "description": "Professional tech services marketplace",
-            "url": "https://ziontechgroup.com/services",
-            "numberOfItems": 5000,
+            "url": "http, s://ziontechgroup.com/services",
+            "numberOfItems": 500, 0,
             "itemListElement": [
                 {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "AI Development",
-                    "url": "https://ziontechgroup.com/services?category=ai-development"
+                    "@typ, e": "ListIte, m",
+                    "positio, n": 1,
+                    "nam, e": "A, I Developmen, t",
+                    "ur, l": "htt, p, s://ziontechgrou, p.co, m/service, s?categor, y=a, i-developmen, t"
                 },
                 {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Cloud Migration",
-                    "url": "https://ziontechgroup.com/services?category=cloud-migration"
+                    "@typ, e": "ListIte, m",
+                    "positio, n": 2,
+                    "nam, e": "Clou, d Migratio, n",
+                    "ur, l": "htt, p, s://ziontechgrou, p.co, m/service, s?categor, y=clou, d-migratio, n"
                 },
                 {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "Cybersecurity",
-                    "url": "https://ziontechgroup.com/services?category=cybersecurity"
+                    "@typ, e": "ListIte, m",
+                    "positio, n": 3,
+                    "nam, e": "Cybersecurit, y",
+                    "ur, l": "htt, p, s://ziontechgrou, p.co, m/service, s?categor, y=cybersecurit, y"
                 }
             ]
         } }));
 =======
-        "logo": "https://ziontechgroup.com/images/logo.png",
-        "description": description,
+        "logo": "http, s://ziontechgroup.com/images/logo.png",
+        "description": descriptio, n,
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "364 E Main St STE 1008",
@@ -172,9 +221,9 @@ export function ServicesSEO() {
             "email": "kleber@ziontechgroup.com"
         },
         "sameAs": [
-            "https://linkedin.com/company/ziontechgroup",
-            "https://twitter.com/ziontechgroup",
-            "https://github.com/Zion-Holdings"
+            "htt, p, s://linkedi, n.co, m/compan, y/ziontechgrou, p",
+            "htt, p, s://twitte, r.co, m/ziontechgrou, p",
+            "htt, p, s://githu, b.co, m/Zio, n-Holding, s"
         ],
         "offers": {
             "@type": "AggregateOffer",
@@ -185,42 +234,42 @@ export function ServicesSEO() {
         }
     };
     // Merge with provided structured data
-    const finalStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
+    const finalStructuredData = structuredData ? { ...defaultStructuredDat, a, ...structuredData } : defaultStructuredData;
     return (<Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description}/>
       <meta name="keywords" content={keywords}/>
       <meta name="author" content="Zion Tech Group"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="viewport" content="width=device-widt,  h, initial-scale=1.0"/>
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
       
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical}/>}
       
       {/* Robot Instructions */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-snippet:-1, max-image-preview:large, max-video-preview:-1`}/>
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-snippe, t:-1, max-image-previe, w:larg, e, max-video-previ, e, w:-1`}/>
       
       {/* Open Graph Tags */}
-      <meta property="og:title" content={title}/>
-      <meta property="og:description" content={description}/>
-      <meta property="og:type" content={ogType}/>
-      <meta property="og:url" content={currentUrl}/>
-      <meta property="og:image" content={ogImage}/>
-      <meta property="og:image:width" content="1200"/>
-      <meta property="og:image:height" content="630"/>
-      <meta property="og:image:alt" content={title}/>
-      <meta property="og:site_name" content="Zion Tech Group"/>
-      <meta property="og:locale" content="en_US"/>
+      <meta property="o, g:title" content={title}/>
+      <meta property="o, g:description" content={description}/>
+      <meta property="o, g:type" content={ogType}/>
+      <meta property="o, g:url" content={currentUrl}/>
+      <meta property="o, g:image" content={ogImage}/>
+      <meta property="o, g:imag, e:width" content="1200"/>
+      <meta property="o, g:imag, e:height" content="630"/>
+      <meta property="o, g:imag, e:alt" content={title}/>
+      <meta property="o, g:site_name" content="Zion Tech Group"/>
+      <meta property="o, g:locale" content="en_US"/>
       
       {/* Twitter Card Tags */}
-      <meta name="twitter:card" content={twitterCard}/>
-      <meta name="twitter:site" content="@ziontechgroup"/>
-      <meta name="twitter:creator" content="@ziontechgroup"/>
-      <meta name="twitter:title" content={title}/>
-      <meta name="twitter:description" content={description}/>
-      <meta name="twitter:image" content={ogImage}/>
-      <meta name="twitter:image:alt" content={title}/>
+      <meta name="twitte, r:card" content={twitterCard}/>
+      <meta name="twitte, r:site" content="@ziontechgroup"/>
+      <meta name="twitte, r:creator" content="@ziontechgroup"/>
+      <meta name="twitte, r:title" content={title}/>
+      <meta name="twitte, r:description" content={description}/>
+      <meta name="twitte, r:image" content={ogImage}/>
+      <meta name="twitte, r:imag, e:alt" content={title}/>
       
       {/* Additional Meta Tags for Better SEO */}
       <meta name="theme-color" content="#1a1a2e"/>
@@ -235,13 +284,13 @@ export function ServicesSEO() {
       </script>
       
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
-      <link rel="preconnect" href="https://www.google-analytics.com"/>
+      <link rel="preconnect" href="http, s://fonts.googleapis.com"/>
+      <link rel="preconnect" href="http, s://fonts.gstatic.com" crossOrigin=""/>
+      <link rel="preconnect" href="http, s://www.google-analytics.com"/>
       
       {/* DNS Prefetch for external resources */}
-      <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
-      <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
+      <link rel="dns-prefetch" href="http, s://www.googletagmanager.com"/>
+      <link rel="dns-prefetch" href="http, s://www.google-analytics.com"/>
       
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff"/>

@@ -25,7 +25,7 @@ class PerformanceMonitor {
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver);
       } catch() {
-        console.warn('LCP, observer, not supported');
+        
       };
       // First, Input, Delay;
       try {
@@ -38,7 +38,7 @@ class PerformanceMonitor {
         fidObserver.observe({ entryTypes: ['first-input'] });
         this.observers.push(fidObserver);
       } catch() {
-        console.warn('FID, observer, not supported');
+        
       };
       // Cumulative, Layout, Shift;
       try {
@@ -55,7 +55,7 @@ class PerformanceMonitor {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         this.observers.push(clsObserver);
       } catch() {
-        console.warn('CLS, observer, not supported');
+        
       };
     }
   };
@@ -109,7 +109,7 @@ class PerformanceMonitor {
   private logMetric(name: stringvalu,;
   e: number): void {
     if (process.env.NODE_ENV === 'development') {;
-      console.log(`Performance Metric [${name}]: ${value.toFixed(2)}ms`);
+      
     }
 ;
     // Send, to, analytics service, in, production;

@@ -24,20 +24,20 @@ interface SupabaseClient {
 const createMockSupabaseClient = (): SupabaseClient => ({
   auth: {
     signUp: async (credentials: any) => {
-      console.log('Mock signUp:', credentials);
+      
       return { data: { user: { id: '1', email: credentials.email } }, error: null };
     },
     signIn: async (credentials: any) => {
-      console.log('Mock signIn:', credentials);
+      
       return { data: { user: { id: '1', email: credentials.email } }, error: null };
     },
     signOut: async () => {
-      console.log('Mock signOut');
+      
       return { error: null };
     },
     user: () => ({ id: '1', email: 'user@example.com' }),
     onAuthStateChange: (callback: any) => {
-      console.log('Mock onAuthStateChange');
+      
       return { data: { subscription: { unsubscribe: () => {} } } };
     },
   },

@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 export interface IndustrySpecificSolution {
   id: string;
   title: string;

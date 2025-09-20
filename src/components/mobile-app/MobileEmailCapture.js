@@ -23,7 +23,7 @@ export const MobileEmailCapture = () => {
             }, 5000);
         }
         catch (error) {
-            console.error("Error subscribing:", error);
+            
             enqueueSnackbar(error?.response?.data?.message || error.message, { variant: 'error' });
         }
         finally {

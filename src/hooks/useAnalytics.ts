@@ -65,7 +65,7 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
   
   const sessionRef = useRef<string>('');
   const lastActivityRef = useRef<number>(Date.now());
-  const flushTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const flushTimerRef = useRef<globalThis.Timeout | null>(null);
 
   // Initialize analytics
   useEffect(() => {
@@ -214,7 +214,7 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
       setPerformanceMetrics(metrics);
       trackEvent('performance', 'metrics_captured', 'performance_tracking', undefined, { metrics });
     } catch (error) {
-      console.error('Failed to track performance metrics:', error);
+      
     }
   }, [enablePerformanceTracking]);
 
@@ -239,7 +239,7 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
     };
 
     // Scroll tracking
-    let scrollTimeout: NodeJS.Timeout;
+    let scrollTimeout: globalThis.Timeout;
     const handleScroll = () => {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
@@ -277,7 +277,7 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
     if (!enableHeatmapTracking) return;
 
     // Track mouse movements for heatmap
-    let moveTimeout: NodeJS.Timeout;
+    let moveTimeout: globalThis.Timeout;
     const handleMouseMove = (event: MouseEvent) => {
       clearTimeout(moveTimeout);
       moveTimeout = setTimeout(() => {
@@ -336,7 +336,7 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
   const sendEventsToServer = useCallback(async (eventsToSend: AnalyticsEvent[]) => {
     try {
       // In a real implementation, this would send to your analytics server
-      console.log('Sending analytics events:', eventsToSend);
+      
       
       // Simulate API call
       await fetch('/api/analytics/events', {
@@ -345,7 +345,7 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
         body: JSON.stringify(eventsToSend)
       });
     } catch (error) {
-      console.error('Failed to send analytics events:', error);
+      
     }
   }, []);
 

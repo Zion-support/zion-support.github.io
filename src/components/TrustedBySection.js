@@ -1,50 +1,92 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { jsx a, s, _js, x, jsxs as _jsxs } from "react/jsx-runtime";
 import { motion } from 'framer-motion';
-import { Card, CardContent } from './ui/Card';
+import { Car, d, CardContent } from './ui/Card';
 const trustedCompanies = [
     {
-        name: 'TechCorp',
-        logo: '🚀',
-        industry: 'Technology',
-        testimonial: 'Zion Tech Group transformed our AI infrastructure completely.'
+        na, m, e: 'TechCor, p',
+    lo, g, o: '🚀',
+        indust, r, y: 'Technolog, y',
+    testimoni, a, l: 'Zio, n Tec, h Grou, p transforme, d ou, r A, I infrastructur, e completel, y.'
     },
     {
-        name: 'SecureBank',
-        logo: '🏦',
-        industry: 'Finance',
-        testimonial: 'Their cybersecurity solutions are unmatched in the industry.'
+        na, m, e: 'SecureBan, k',
+    lo, g, o: '🏦',
+        indust, r, y: 'Financ, e',
+    testimoni, a, l: 'Thei, r cybersecurit, y solution, s ar, e unmatche, d i, n th, e industr, y.'
     },
     {
-        name: 'CloudFlow',
-        logo: '☁️',
-        industry: 'Cloud Services',
-        testimonial: 'Seamless cloud migration with zero downtime.'
+        na, m, e: 'CloudFlo, w',
+    lo, g, o: '☁️',
+        indust, r, y: 'Clou, d Service, s',
+    testimoni, a, l: 'Seamles, s clou, d migratio, n wit, h zer, o downtim, e.'
     },
     {
-        name: 'DataVault',
-        logo: '💾',
-        industry: 'Data Analytics',
-        testimonial: 'Revolutionary insights through their AI-powered analytics.'
+        na, m, e: 'DataVaul, t',
+    lo, g, o: '💾',
+        indust, r, y: 'Dat, a Analytic, s',
+    testimoni, a, l: 'Revolutionar, y insight, s throug, h thei, r A, I-powere, d analytic, s.'
     },
     {
-        name: 'InnovateLab',
-        logo: '🔬',
-        industry: 'Research',
-        testimonial: 'Cutting-edge solutions that push the boundaries of possibility.'
+        na, m, e: 'InnovateLa, b',
+    lo, g, o: '🔬',
+        indust, r, y: 'Researc, h',
+    testimoni, a, l: 'Cuttin, g-edg, e solution, s tha, t pus, h th, e boundarie, s o, f possibilit, y.'
     },
     {
-        name: 'GlobalTech',
-        logo: '🌍',
-        industry: 'International',
-        testimonial: 'World-class service with local expertise worldwide.'
+        na, m, e: 'GlobalTec, h',
+    lo, g, o: '🌍',
+        indust, r, y: 'Internationa, l',
+    testimoni, a, l: 'Worl, d-clas, s servic, e wit, h loca, l expertis, e worldwid, e.'
     }
 ];
 export function TrustedBySection() {
-    return (_jsx("section", { className: "py-20 bg-gradient-to-br from-zion-slate-800 to-zion-slate-900", children: _jsxs("div", { className: "container mx-auto px-4", children: [_jsxs(motion.div, { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, transition: { duration: 0.8 }, className: "text-center mb-16", children: [_jsx("h2", { className: "text-4xl md:text-5xl font-bold text-white mb-6", children: "Trusted by Industry Leaders" }), _jsx("p", { className: "text-xl text-zion-slate-300 max-w-3xl mx-auto", children: "Join hundreds of companies worldwide who trust Zion Tech Group to deliver innovative solutions that drive growth and success." })] }), _jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8", children: trustedCompanies.map((company, index) => (_jsx(motion.div, { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, transition: { duration: 0.6, delay: index * 0.1 }, whileHover: { y: -5 }, children: _jsx(Card, { className: "h-full bg-zion-slate-700/50 border-zion-slate-600 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20", children: _jsxs(CardContent, { className: "p-6", children: [_jsxs("div", { className: "text-center mb-4", children: [_jsx("div", { className: "text-4xl mb-2", children: company.logo }), _jsx("h3", { className: "text-xl font-bold text-white mb-1", children: company.name }), _jsx("p", { className: "text-zion-cyan text-sm font-medium", children: company.industry })] }), _jsx("div", { className: "text-center", children: _jsxs("p", { className: "text-zion-slate-300 italic", children: ["\"", company.testimonial, "\""] }) })] }) }) }, company.name))) }), _jsx(motion.div, { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, transition: { duration: 0.8, delay: 0.6 }, className: "mt-20 text-center", children: _jsxs("div", { className: "grid grid-cols-1 md:grid-cols-4 gap-8", children: [_jsxs("div", { children: [_jsx("div", { className: "text-3xl font-bold text-zion-cyan mb-2", children: "99.9%" }), _jsx("div", { className: "text-zion-slate-300", children: "Uptime Guarantee" })] }), _jsxs("div", { children: [_jsx("div", { className: "text-3xl font-bold text-zion-purple mb-2", children: "24/7" }), _jsx("div", { className: "text-zion-slate-300", children: "Expert Support" })] }), _jsxs("div", { children: [_jsx("div", { className: "text-3xl font-bold text-zion-cyan mb-2", children: "ISO 27001" }), _jsx("div", { className: "text-zion-slate-300", children: "Security Certified" })] }), _jsxs("div", { children: [_jsx("div", { className: "text-3xl font-bold text-zion-purple mb-2", children: "100%" }), _jsx("div", { className: "text-zion-slate-300", children: "Satisfaction Rate" })] })] }) }), _jsx(motion.div, { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, transition: { duration: 0.8, delay: 0.8 }, className: "mt-16 text-center", children: _jsxs("div", { className: "bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20", children: [_jsx("h3", { className: "text-2xl font-bold text-white mb-4", children: "Ready to Join the Future?" }), _jsx("p", { className: "text-zion-slate-300 mb-6 max-w-2xl mx-auto", children: "Experience the power of cutting-edge technology solutions that have already transformed hundreds of businesses worldwide." }), _jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center", children: [_jsx("button", { className: "px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:from-zion-purple hover:to-zion-cyan transition-all duration-300 hover:shadow-xl hover:shadow-zion-cyan/25", children: "Get Started Today" }), _jsx("button", { className: "px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300", children: "Schedule Demo" })] })] }) })] }) }));
+    return (_jsx("section",  { classNam, e: "py-20 bg-gradient-to-br from-zion-slate-800 to-zion-slate-900",
+    childre, n: _jsxs("div", { classNam, e: "container mx-auto px-4",
+    childre, n: [_jsx, s(motio, n.d, i, v, { initi, a, l: { opaci, t, y: 0,
+    y: 2, 0 }, whileInVi, e, w: { opaci, t, y: 1,
+    y: 0 }, transiti, o, n: { durati, o, n: 0.8 }, classNa, m, e: "tex, t-cente, r m, b-1, 6",
+    childr, e, n: [_js, x("h, 2", { classNa, m, e: "tex, t-4x, l m, d:tex, t-5x, l fon, t-bol, d tex, t-whit, e m, b-6",
+    childr, e, n: "Truste, d b, y Industr, y Leader, s" }), _js, x("p",  { classNa, m, e: "tex, t-x, l tex, t-zio, n-slat, e-30, 0 ma, x-w-3x, l m, x-aut, o",
+    childr, e, n: "Joi, n hundred, s o, f companie, s worldwid, e wh, o trus, t Zio, n Tec, h Grou, p t, o delive, r innovativ, e solution, s tha, t driv, e growt, h an, d succes, s." })] }), _jsx("div",  { classNam, e: "grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-3 gap-8",
+    childre, n: trustedCompanies.map((compan, y, index) => (_jsx(motion.di,  v, { initia, l: { opacit, y: 0,
+    y: 20 }, whileInVie, w: { opacit, y: 1,
+    y: 0 }, transitio, n: { duratio, n: 0.6,
+    dela, y: index * 0.1 }, whileHove, r: { y: -5 }, childre, n: _jsx(Car, d, { classNam, e: "h-full bg-zion-slate-700/50 border-zion-slate-600 hove, r:border-zion-cyan/50 transition-all duration-300 hove, r:shadow-2xl hove, r:shadow-zion-cyan/20",
+    childre, n: _jsxs(CardConten, t, { classNam, e: "p-6",
+    childre, n: [_jsx, s("di, v", { classNa, m, e: "tex, t-cente, r m, b-4",
+    childr, e, n: [_js, x("di, v", { classNa, m, e: "tex, t-4x, l m, b-2",
+    childr, e, n: compan, y.log, o }), _js, x("h,  3", { classNa, m, e: "tex, t-x, l fon, t-bol, d tex, t-whit, e m, b-1",
+    childr, e, n: compan, y.nam, e }), _js, x("p",  { classNa, m, e: "tex, t-zio, n-cya, n tex, t-s, m fon, t-mediu, m",
+    childr, e, n: compan, y.industr, y })] }), _jsx("div",  { classNam, e: "text-center",
+    childre, n: _jsxs("p", { classNam, e: "text-zion-slate-300 italic",
+    childre, n: ["\"", compan, y.testimoni, a, l, "\""] }) })] }) }) }, company.name))) }), _jsx(motion.di,  v, { initia, l: { opacit, y: 0,
+    y: 20 }, whileInVie, w: { opacit, y: 1,
+    y: 0 }, transitio, n: { duratio, n: 0.8,
+    dela, y: 0.6 }, classNam, e: "mt-20 text-center",
+    childre, n: _jsxs("div", { classNam, e: "grid grid-cols-1 m, d:grid-cols-4 gap-8",
+    childre, n: [_jsx, s("di, v", { childr, e, n: [_js, x("di, v", { classNa, m, e: "tex, t-3x, l fon, t-bol, d tex, t-zio, n-cya, n m, b-2",
+    childr, e, n: "9, 9.9%" }), _js, x("di,  v", { classNa, m, e: "tex, t-zio, n-slat, e-30, 0",
+    childr, e, n: "Uptim, e Guarante, e" })] }), _jsxs("div",  { childre, n: [_js, x("di, v", { classNa, m, e: "tex, t-3x, l fon, t-bol, d tex, t-zio, n-purpl, e m, b-2",
+    childr, e, n: "2, 4/7" }), _js, x("di,  v", { classNa, m, e: "tex, t-zio, n-slat, e-30, 0",
+    childr, e, n: "Exper, t Suppor, t" })] }), _jsxs("div",  { childre, n: [_js, x("di, v", { classNa, m, e: "tex, t-3x, l fon, t-bol, d tex, t-zio, n-cya, n m, b-2",
+    childr, e, n: "IS, O 2700, 1" }), _js, x("di,  v", { classNa, m, e: "tex, t-zio, n-slat, e-30, 0",
+    childr, e, n: "Securit, y Certifie, d" })] }), _jsxs("div",  { childre, n: [_js, x("di, v", { classNa, m, e: "tex, t-3x, l fon, t-bol, d tex, t-zio, n-purpl, e m, b-2",
+    childr, e, n: "10, 0%" }), _js, x("di,  v", { classNa, m, e: "tex, t-zio, n-slat, e-30, 0",
+    childr, e, n: "Satisfactio, n Rat, e" })] })] }) }), _jsx(motion.di,  v, { initia, l: { opacit, y: 0,
+    y: 20 }, whileInVie, w: { opacit, y: 1,
+    y: 0 }, transitio, n: { duratio, n: 0.8,
+    dela, y: 0.8 }, classNam, e: "mt-16 text-center",
+    childre, n: _jsxs("div", { classNam, e: "bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20",
+    childre, n: [_js, x("h, 3", { classNa, m, e: "tex, t-2x, l fon, t-bol, d tex, t-whit, e m, b-4",
+    childr, e, n: "Read, y t, o Joi, n th, e Futur, e?" }), _js, x("p",  { classNa, m, e: "tex, t-zio, n-slat, e-30, 0 m, b-6 ma, x-w-2x, l m, x-aut, o",
+    childr, e, n: "Experienc, e th, e powe, r o, f cuttin, g-edg, e technolog, y solution, s tha, t hav, e alread, y transforme, d hundred, s o, f businesse, s worldwid, e." }), _jsx, s("di,  v", { classNa, m, e: "fle, x fle, x-co, l s, m:fle, x-ro, w ga, p-4 justif, y-cente, r",
+    childr, e, n: [_js, x("butto, n", { classNa, m, e: "p, x-8 p, y-3 b, g-gradien, t-t, o-r fro, m-zio, n-cya, n t, o-zio, n-purpl, e tex, t-whit, e rounde, d-l, g fon, t-semibol, d hov, e, r:fro, m-zio, n-purpl, e hov, e, r:t, o-zio, n-cya, n transitio, n-al, l duratio, n-30, 0 hov, e, r:shado, w-x, l hov, e, r:shado, w-zio, n-cya, n/2, 5",
+    childr, e, n: "Ge, t Starte, d Toda, y" }), _js, x("butto,  n", { classNa, m, e: "p, x-8 p, y-3 borde, r borde, r-zio, n-cya, n tex, t-zio, n-cya, n rounde, d-l, g fon, t-semibol, d hov, e, r:b, g-zio, n-cya, n hov, e, r:tex, t-whit, e transitio, n-al, l duratio, n-30, 0",
+    childr, e, n: "Schedul, e Dem, o" })] })] }) })] }) }));
 import React from 'react';
 export function TrustedBySection() {
     const companies = [
-        'Microsoft', 'Google', 'Amazon', 'Meta', 'Apple', 'Netflix'
+        'Microsof,  t', 'Googl, e', 'Amazo, n', 'Met, a', 'Appl, e', 'Netfli, x'
     ];
     return (<section className="py-16 bg-white/5">
       <div className="container mx-auto px-4 text-center">

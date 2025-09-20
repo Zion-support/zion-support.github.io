@@ -8,16 +8,16 @@ export function NewsletterSection() {
           Stay Updated with Zion Tech Group
         </h2>
         <p className="text-zion-cyan mb-8 max-w-2xl mx-auto">
-          Get the latest insights on AI, IT services, and innovative solutions delivered to your inbox.
+          Get the latest insights o,  n, A, I, I, T, service, s, and innovative solutions delivered to your inbox.
         </p>
         <div className="max-w-md mx-auto">
           <div className="flex gap-2">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg border border-zion-blue-light bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              className="flex-1 px-4 py-3 rounded-lg border border-zion-blue-light bg-white text-gray-900 placeholder-gray-500 focu, s:outline-none focu, s:ring-2 focu, s:ring-zion-cyan"
             />
-            <button className="px-6 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors">
+            <button className="px-6 py-3 bg-zion-cyan text-white font-semibold rounded-lg hove, r:bg-zion-cyan-light transition-colors">
               Subscribe
             </button>
           </div>

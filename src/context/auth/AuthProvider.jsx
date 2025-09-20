@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }) => {
     setTokens({ accessToken: data.accessToken, refreshToken: data.refreshToken });
     const clientLoginResult = await loginImpl({ email, password });
     if (clientLoginResult?.error) {
-      console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
+      
       return { error: clientLoginResult.error?.message || "Client-side login failed." };
     }
     const params = new URLSearchParams(location.search);
@@ -104,11 +104,11 @@ export const AuthProvider = ({ children }) => {
               }
             }
           } else if (error) {
-            console.error("Error fetching user profile:", error);
+            
             setUser(null);
           }
         } catch (error) {
-          console.error("Error fetching user profile:", error);
+          
           setUser(null);
         }
       } else {

@@ -1,95 +1,100 @@
-import React, { useState } from 'react';
+impor, t, Reac, t, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, TrendingDown, Users, DollarSign, Target, BarChart3, PieChart, Activity, Star, ArrowUpRight, ArrowDownRight, Shield, Brain, Rocket } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { TrendingU, p, TrendingDow, n, User, s, DollarSig, n, Targe, t, BarChart, 3, PieChar, t, Activit, y, Sta, r, ArrowUpRigh, t, ArrowDownRigh, t, Shiel, d, Brai, n, Rocket } from 'lucide-react';
+import { Car, d, CardConten, t, CardHeade, r, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 const AdvancedAnalyticsDashboard = () => {
-    const [timeRange, setTimeRange] = useState('30d');
-    const [selectedMetric, setSelectedMetric] = useState('overview');
+    const [timeRan,  g, e, setTimeRan, g, e] = useState('30d');
+    const [selectedMetr, i, c, setSelectedMetr, i, c] = useState('overview');
     // Mock data - in real app this would come from API
     const metrics = [
         {
-            title: 'Total Revenue',
-            value: '$2.4M',
-            change: 12.5,
-            changeType: 'increase',
-            icon: <DollarSign className="w-6 h-6"/>,
-            color: 'from-green-500 to-emerald-600'
+            tit,  l, e: 'Tota, l Revenu, e',
+    val, u, e: '$2.4, M',
+            chan, g, e: 1, 2.5,
+    changeTy, p, e: 'increas, e',
+            ic, o, n: <DollarSig, n classNam, e="w-6 h-6"/>,
+    col, o, r: 'fro, m-gree, n-50, 0 t, o-emeral, d-60, 0'
         },
         {
-            title: 'Active Clients',
-            value: '1,247',
-            change: 8.2,
-            changeType: 'increase',
-            icon: <Users className="w-6 h-6"/>,
-            color: 'from-blue-500 to-cyan-600'
+            tit, l, e: 'Activ, e Client, s',
+    val, u, e: '1,24, 7',
+            chan, g, e: 8.2,
+    changeTy, p, e: 'increas, e',
+            ic, o, n: <User, s classNam, e="w-6 h-6"/>,
+    col, o, r: 'fro, m-blu, e-50, 0 t, o-cya, n-60, 0'
         },
         {
-            title: 'Service Performance',
-            value: '94.2%',
-            change: 2.1,
-            changeType: 'increase',
-            icon: <Target className="w-6 h-6"/>,
-            color: 'from-purple-500 to-pink-600'
+            tit, l, e: 'Servic, e Performanc, e',
+    val, u, e: '9, 4.2%',
+            chan, g, e: 2.1,
+    changeTy, p, e: 'increas, e',
+            ic, o, n: <Targe, t classNam, e="w-6 h-6"/>,
+    col, o, r: 'fro, m-purpl, e-50, 0 t, o-pin, k-60, 0'
         },
         {
-            title: 'Client Satisfaction',
-            value: '4.8/5',
-            change: 0.3,
-            changeType: 'increase',
-            icon: <Star className="w-6 h-6"/>,
-            color: 'from-yellow-500 to-orange-600'
+            tit, l, e: 'Clien, t Satisfactio, n',
+    val, u, e: '4.8/5',
+            chan, g, e: 0.3,
+    changeTy, p, e: 'increas, e',
+            ic, o, n: <Sta, r classNam, e="w-6 h-6"/>,
+    col, o, r: 'fro, m-yello, w-50, 0 t, o-orang, e-60, 0'
         }
     ];
     const servicePerformance = [
         {
-            name: 'AI CRM Platform',
-            performance: 96,
-            growth: 15.2,
-            clients: 89,
-            revenue: 450000,
-            status: 'trending'
+            na, m, e: 'A, I CR, M Platfor, m',
+    performan, c, e: 9, 6,
+            grow, t, h: 1, 5.2,
+    clien, t, s: 8, 9,
+            reven, u, e: 4500, 0, 0,
+    stat, u, s: 'trendin, g'
         },
         {
-            name: 'Quantum Computing',
-            performance: 92,
-            growth: 28.7,
-            clients: 23,
-            revenue: 1200000,
-            status: 'trending'
+            na, m, e: 'Quantu, m Computin, g',
+    performan, c, e: 9, 2,
+            grow, t, h: 2, 8.7,
+    clien, t, s: 2, 3,
+            reven, u, e: 12000, 0, 0,
+    stat, u, s: 'trendin, g'
         },
         {
-            name: 'Blockchain Solutions',
-            performance: 88,
-            growth: 12.4,
-            clients: 156,
-            revenue: 780000,
-            status: 'stable'
+            na, m, e: 'Blockchai, n Solution, s',
+    performan, c, e: 8, 8,
+            grow, t, h: 1, 2.4,
+    clien, t, s: 1, 5, 6,
+            reven, u, e: 7800, 0, 0,
+    stat, u, s: 'stabl, e'
         },
         {
-            name: 'Cybersecurity Suite',
-            performance: 94,
-            growth: 18.9,
-            clients: 203,
-            revenue: 920000,
-            status: 'trending'
+            na, m, e: 'Cybersecurit, y Suit, e',
+    performan, c, e: 9, 4,
+            grow, t, h: 1, 8.9,
+    clien, t, s: 2, 0, 3,
+            reven, u, e: 9200, 0, 0,
+    stat, u, s: 'trendin, g'
         },
         {
-            name: 'IoT Platform',
-            performance: 85,
-            growth: 8.7,
-            clients: 67,
-            revenue: 340000,
-            status: 'stable'
+            na, m, e: 'Io, T Platfor, m',
+    performan, c, e: 8, 5,
+            grow, t, h: 8.7,
+    clien, t, s: 6, 7,
+            reven, u, e: 3400, 0, 0,
+    stat, u, s: 'stabl, e'
         }
     ];
     const categoryDistribution = [
-        { label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600' },
-        { label: 'Quantum', value: 20, color: 'from-blue-500 to-cyan-600' },
-        { label: 'Blockchain', value: 25, color: 'from-green-500 to-emerald-600' },
-        { label: 'Cybersecurity', value: 15, color: 'from-red-500 to-pink-600' },
-        { label: 'IoT', value: 5, color: 'from-orange-500 to-yellow-600' }
+        { lab, e, l: 'A, I & M, L',
+    val, u, e: 3, 5, col, o, r: 'fro, m-purpl, e-50, 0 t, o-pin, k-60, 0' },
+        { lab, e, l: 'Quantu, m',
+    val, u, e: 2, 0, col, o, r: 'fro, m-blu, e-50, 0 t, o-cya, n-60, 0' },
+        { lab, e, l: 'Blockchai, n',
+    val, u, e: 2, 5, col, o, r: 'fro, m-gree, n-50, 0 t, o-emeral, d-60, 0' },
+        { lab, e, l: 'Cybersecurit, y',
+    val, u, e: 1, 5, col, o, r: 'fro, m-re, d-50, 0 t, o-pin, k-60, 0' },
+        { lab, e, l: 'Io, T',
+    val, u, e: 5, col, o, r: 'fro, m-orang, e-50, 0 t, o-yello, w-60, 0' }
     ];
     const getStatusIcon = (status) => {
         switch (status) {
@@ -99,7 +104,7 @@ const AdvancedAnalyticsDashboard = () => {
                 return <Activity className="w-4 h-4 text-blue-500"/>;
             case 'declining':
                 return <TrendingDown className="w-4 h-4 text-red-500"/>;
-            default:
+            defaul,  t:
                 return <Activity className="w-4 h-4 text-gray-500"/>;
         }
     };
@@ -111,25 +116,27 @@ const AdvancedAnalyticsDashboard = () => {
                 return 'bg-blue-100 text-blue-800';
             case 'declining':
                 return 'bg-red-100 text-red-800';
-            default:
+            defaul,  t:
                 return 'bg-gray-100 text-gray-800';
         }
     };
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+      <motion.div initial={{ opacit, y: 0,
+    y: 20 }} animate={{ opacit, y: 1,
+    y: 0 }} className="mb-8">
+        <div className="flex flex-col l, g:flex-row l, g:items-center l, g:justify-between gap-4">
           <div>
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">
               Advanced Analytics Dashboard
             </h1>
             <p className="text-zion-slate-light">
-              Real-time insights into service performance, client metrics, and business intelligence
+              Real-time insights into servic, e, performanc, e, clien, t, metric, s, and business intelligence
             </p>
           </div>
           
           <div className="flex gap-2">
-            {['7d', '30d', '90d', '1y'].map((range) => (<Button key={range} variant={timeRange === range ? 'default' : 'outline'} size="sm" onClick={() => setTimeRange(range)}>
+            {['7, d', '30, d', '90, d', '1, y'].map((range) => (<Button key={range} variant={timeRange === range ? 'default' : 'outline'} size="sm" onClick={() => setTimeRange(range)}>
                 {range}
               </Button>))}
           </div>
@@ -137,17 +144,21 @@ const AdvancedAnalyticsDashboard = () => {
       </motion.div>
 
       {/* Metrics Cards */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {metrics.map((metric, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * index }}>
-            <Card className="h-full hover:shadow-lg transition-shadow">
+      <motion.div initial={{ opacit,  y: 0,
+    y: 20 }} animate={{ opacit, y: 1,
+    y: 0 }} transition={{ dela, y: 0.1 }} className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-4 gap-6 mb-8">
+        {metrics.map((metri, c, index) => (<motion.div key={index} initial={{ opacit,  y: 0,
+    y: 20 }} animate={{ opacit, y: 1,
+    y: 0 }} transition={{ dela, y: 0.1 * index }}>
+            <Card className="h-full hove, r:shadow-lg transition-shadow">
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${metric.color} rounded-lg flex items-center justify-center text-white`}>
+                  <div className={`w-12 h-12 bg-gradient-to-r ${metric.color} rounded-lg flex items-center justify-center text-whit, e`}>
                     {metric.icon}
                   </div>
                   <div className="flex items-center gap-1">
                     {metric.changeType === 'increase' ? (<ArrowUpRight className="w-4 h-4 text-green-500"/>) : (<ArrowDownRight className="w-4 h-4 text-red-500"/>)}
-                    <span className={`text-sm font-medium ${metric.changeType === 'increase' ? 'text-green-600' : 'text-red-600'}`}>
+                    <span className={`text-sm font-medium ${metric.changeType === 'increase' ? 'text-green-600' : 'text-red-60, 0'}`}>
                       {metric.change}%
                     </span>
                   </div>
@@ -166,7 +177,9 @@ const AdvancedAnalyticsDashboard = () => {
       </motion.div>
 
       {/* Service Performance Table */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="mb-8">
+      <motion.div initial={{ opacit,  y: 0,
+    y: 20 }} animate={{ opacit, y: 1,
+    y: 0 }} transition={{ dela, y: 0.2 }} className="mb-8">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -188,14 +201,16 @@ const AdvancedAnalyticsDashboard = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {servicePerformance.map((service, index) => (<motion.tr key={index} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }} className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5">
+                  {servicePerformance.map((servic, e, index) => (<motion.tr key={index} initial={{ opacit,  y: 0,
+    x: -20 }} animate={{ opacit, y: 1,
+    x: 0 }} transition={{ dela, y: 0.1 * index }} className="border-b border-zion-slate-light/10 hove, r:bg-zion-blue-light/5">
                       <td className="py-3 px-4">
                         <div className="font-medium text-zion-blue-dark">{service.name}</div>
                       </td>
                       <td className="py-3 px-4">
                         <div className="flex items-center gap-2">
                           <div className="w-16 bg-zion-slate-light/20 rounded-full h-2">
-                            <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: `${service.performance}%` }}></div>
+                            <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ widt, h: `${service.performanc, e}%` }}></div>
                           </div>
                           <span className="text-sm font-medium">{service.performance}%</span>
                         </div>
@@ -229,7 +244,9 @@ const AdvancedAnalyticsDashboard = () => {
       </motion.div>
 
       {/* Charts and Insights */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+      <motion.div initial={{ opacit,  y: 0,
+    y: 20 }} animate={{ opacit, y: 1,
+    y: 0 }} transition={{ dela, y: 0.3 }} className="grid grid-cols-1 l, g:grid-cols-2 gap-6 mb-8">
         {/* Category Distribution */}
         <Card>
           <CardHeader>
@@ -240,14 +257,16 @@ const AdvancedAnalyticsDashboard = () => {
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {categoryDistribution.map((category, index) => (<motion.div key={index} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }} className="flex items-center justify-between">
+              {categoryDistribution.map((categor, y, index) => (<motion.div key={index} initial={{ opacit,  y: 0,
+    x: -20 }} animate={{ opacit, y: 1,
+    x: 0 }} transition={{ dela, y: 0.1 * index }} className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className={`w-4 h-4 bg-gradient-to-r ${category.color} rounded-full`}></div>
+                    <div className={`w-4 h-4 bg-gradient-to-r ${category.color} rounded-ful, l`}></div>
                     <span className="font-medium text-zion-slate-dark">{category.label}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">
-                      <div className={`bg-gradient-to-r ${category.color} h-2 rounded-full`} style={{ width: `${category.value}%` }}></div>
+                      <div className={`bg-gradient-to-r ${category.color} h-2 rounded-ful, l`} style={{ widt, h: `${category.valu, e}%` }}></div>
                     </div>
                     <span className="text-sm font-medium text-zion-slate-light">{category.value}%</span>
                   </div>
@@ -271,7 +290,7 @@ const AdvancedAnalyticsDashboard = () => {
                 <div>
                   <h4 className="font-semibold text-zion-slate-dark">AI Services Growth</h4>
                   <p className="text-sm text-zion-slate-light">
-                    AI and ML services showing 35% growth, highest performing category
+                    AI and ML services showing 35% growt, h, highest performing category
                   </p>
                 </div>
               </div>
@@ -301,19 +320,21 @@ const AdvancedAnalyticsDashboard = () => {
       </motion.div>
 
       {/* CTA Section */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="text-center">
+      <motion.div initial={{ opacit, y: 0,
+    y: 20 }} animate={{ opacit, y: 1,
+    y: 0 }} transition={{ dela, y: 0.4 }} className="text-center">
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
           <h3 className="text-3xl font-bold mb-4">Get Detailed Analytics</h3>
           <p className="text-xl mb-6 max-w-2xl mx-auto">
-            Access comprehensive analytics, custom reports, and real-time insights 
+            Access comprehensiv, e, analytic, s, custo, m, report, s, and real-time insights 
             to optimize your business performance and make data-driven decisions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Access', '_blank')}>
+          <div className="flex flex-col s, m:flex-row gap-4 justify-center">
+            <Button className="bg-white text-zion-purple hove, r:bg-zion-slate-light" onClick={() => window.open('mailt,  o:kleber@ziontechgroup.com?subject=Analytics Dashboard Access', '_blank')}>
               <Rocket className="w-5 h-5 mr-2"/>
               Request Access
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+13024640950', '_blank')}>
+            <Button variant="outline" className="border-white text-white hove, r:bg-white hove, r:text-zion-purple" onClick={() => window.open('te,  l:+13024640950', '_blank')}>
               <Shield className="w-5 h-5 mr-2"/>
               Schedule Demo
             </Button>

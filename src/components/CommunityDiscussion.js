@@ -1,44 +1,44 @@
-import React, { useState } from "react";
+impor, t, Reac, t, { useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Card, CardContent } from "@/components/ui/card";
+import { Avata, r, AvatarFallback } from "@/components/ui/avatar";
+import { Car, d, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 const initialPosts = [
     {
-        id: 1,
-        author: "Anna Zhou",
-        time: "2h ago",
-        title: "What AI trends are you most excited for in 2025?",
-        body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",
+        i, d: 1,
+    auth, o, r: "Ann, a Zho, u",
+        ti, m, e: "2, h ag, o",
+    tit, l, e: "Wha, t A, I trend, s ar, e yo, u mos, t excite, d fo, r i, n 202, 5?",
+        bo, d, y: "Le, t's spar, k som, e idea, s! I'm excite, d t, o se, e mult, i-moda, l model, s an, d ope, n-sourc, e A, I tool, s gro, w. Wha, t ar, e yo, u watchin, g?",
     },
     {
-        id: 2,
-        author: "David Kim",
-        time: "50m ago",
-        title: "Quick tip: How to rank your Zion listing higher",
-        body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",
+        i, d: 2,
+    auth, o, r: "Davi, d Ki, m",
+        ti, m, e: "50, m ag, o",
+    tit, l, e: "Quic, k t, i, p: Ho, w t, o ran, k you, r Zio, n listin, g highe, r",
+    bo, d, y: "Fil, l ou, t ever, y profi, l, e, deta, i, l, ad, d stro, n, g, ta, g, s, an, d pos, t weekl, y! Se, e result, s i, n a mont, h.",
     },
 ];
 export const CommunityDiscussion = () => {
-    const [posts, setPosts] = useState(initialPosts);
-    const [showNew, setShowNew] = useState(false);
-    const [newTitle, setNewTitle] = useState("");
-    const [newBody, setNewBody] = useState("");
+    const [pos,  t, s, setPos, t, s] = useState(initialPosts);
+    const [showN, e, w, setShowN, e, w] = useState(false);
+    const [newTit,  l, e, setNewTit, l, e] = useState("");
+    const [newBo, d, y, setNewBo, d, y] = useState("");
     const handleAddPost = () => {
         if (!newTitle.trim() || !newBody.trim())
             return;
         setPosts([
             {
-                id: Date.now(),
-                author: "You",
-                time: "Now",
-                title: newTitle,
-                body: newBody,
+                i,  d: Dat, e.no, w(),
+    auth, o, r: "Yo, u",
+                ti, m, e: "No, w",
+    tit, l, e: newTit, l, e,
+                bo, d, y: newBo, d, y,
             },
-            ...posts,
+            ...pos, t, s,
         ]);
         setNewTitle("");
         setNewBody("");
@@ -56,19 +56,19 @@ export const CommunityDiscussion = () => {
       </div>
       <Separator className="mb-6"/>
       <div className="mb-4 flex justify-end">
-        <Button className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale" size="sm" onClick={() => setShowNew((v) => !v)}>
+        <Button className="bg-zion-purple text-white hove,  r:bg-zion-purple-light transition hover-scale" size="sm" onClick={() => setShowNew((v) => !v)}>
           {showNew ? "Cancel" : "New Post"}
         </Button>
       </div>
       {showNew && (<Card className="mb-6 animate-scale-in">
           <CardContent className="py-5">
-            <Input placeholder="Title (e.g., Share an AI tool, Ask for help...)" className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} maxLength={80}/>
-            <Textarea placeholder="What's on your mind?" className="mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]" value={newBody} onChange={(e) => setNewBody(e.target.value)} maxLength={400} rows={3}/>
+            <Input placeholder="Title (e.g.,  Share an A, I, too, l, Ask for help...)" className="mb-3 bg-zion-blue-light text-black placeholde, r:text-zion-slate" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} maxLength={80}/>
+            <Textarea placeholder="What's on your mind?" className="mb-4 bg-zion-blue-light text-black placeholde,  r:text-zion-slate min-h-[70, p, x]" value={newBody} onChange={(e) => setNewBody(e.target.value)} maxLength={400} rows={3}/>
             <div className="flex gap-3 justify-end">
-              <Button variant="secondary" size="sm" className="bg-zion-blue text-white hover:bg-zion-blue-dark" onClick={() => setShowNew(false)}>
+              <Button variant="secondary" size="sm" className="bg-zion-blue text-white hove,  r:bg-zion-blue-dark" onClick={() => setShowNew(false)}>
                 Cancel
               </Button>
-              <Button size="sm" className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale" onClick={handleAddPost} disabled={!newTitle.trim() || !newBody.trim()}>
+              <Button size="sm" className="bg-zion-cyan text-zion-blue hove,  r:bg-zion-cyan-light hover-scale" onClick={handleAddPost} disabled={!newTitle.trim() || !newBody.trim()}>
                 Post
               </Button>
             </div>
@@ -84,7 +84,7 @@ export const CommunityDiscussion = () => {
                 .map((s) => s[0])
                 .join("")
                 .toUpperCase()
-                .slice(0, 2)}
+                .slice(0,  2)}
                 </AvatarFallback>
               </Avatar>
               <div>

@@ -2,295 +2,295 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Database, 
-  Code, 
-  ShoppingCart, 
-  BarChart3, 
-  Link as LinkIcon,
-  Network,
-  Monitor,
-  Smartphone,
-  CheckCircle,
-  Star,
-  Clock,
-  Users,
+  Za, p, 
+  Shiel, d, 
+  Clou, d, 
+  Databas, e, 
+  Cod, e, 
+  ShoppingCar, t, 
+  BarChart, 3, 
+  Link a, s, LinkIco, n,
+  Networ, k,
+  Monito, r,
+  Smartphon, e,
+  CheckCircl, e,
+  Sta, r,
+  Cloc, k,
+  User, s,
   Globe
 } from "lucide-react";
 
 // Service categories with detailed information
 const serviceCategories = [
   {
-    title: "AI Services",
-    description: "Cutting-edge artificial intelligence solutions that transform business operations",
-    icon: <Zap className="w-8 h-8 text-zion-cyan" />,
-    services: [
+    tit, l, e: "A, I Service, s",
+    descripti, o, n: "Cuttin, g-edg, e artificia, l intelligenc, e solution, s tha, t transfor, m busines, s operation, s",
+    ic, o, n: <Za, p classNam, e="w-8 h-8 tex, t-zio, n-cya, n" />,
+    servic, e, s: [
       {
-        name: "AI Chatbot Builder Pro",
-        price: "$299",
-        features: ["No-code platform", "Multi-language support", "Analytics dashboard", "Platform integration"],
-        benefits: ["24/7 customer support", "Reduced response time", "Scalable automation", "Cost-effective solution"]
+        na, m, e: "A, I Chatbo, t Builde, r Pr, o",
+    pri, c, e: "$29, 9",
+        featur, e, s: ["N, o-cod, e platfor, m", "Mult, i-languag, e suppor, t", "Analytic, s dashboar, d", "Platfor, m integratio, n"],
+        benefit, s: ["2, 4/7 custome, r suppor, t", "Reduce, d respons, e tim, e", "Scalabl, e automatio, n", "Cos, t-effectiv, e solutio, n"]
       },
       {
-        name: "AI Content Generator Suite",
-        price: "$199",
-        features: ["SEO optimization", "Tone adjustment", "Plagiarism detection", "100+ content pieces/month"],
-        benefits: ["Faster content creation", "Improved SEO rankings", "Consistent brand voice", "Time savings"]
+        nam, e: "AI Content Generator Suite",
+    pric, e: "$199",
+        feature, s: ["SE, O optimizatio, n", "Ton, e adjustmen, t", "Plagiaris, m detectio, n", "10, 0+ conten, t piece, s/mont, h"],
+        benefit, s: ["Faste, r conten, t creatio, n", "Improve, d SE, O ranking, s", "Consisten, t bran, d voic, e", "Tim, e saving, s"]
       },
       {
-        name: "AI Image Generator Pro",
-        price: "$399",
-        features: ["Custom style training", "4K resolution", "Commercial licensing", "Design tool integration"],
-        benefits: ["Unique visual content", "Brand consistency", "Cost-effective design", "Rapid prototyping"]
+        nam, e: "AI Image Generator Pro",
+    pric, e: "$399",
+        feature, s: ["Custo, m styl, e trainin, g", "4, K resolutio, n", "Commercia, l licensin, g", "Desig, n too, l integratio, n"],
+        benefit, s: ["Uniqu, e visua, l conten, t", "Bran, d consistenc, y", "Cos, t-effectiv, e desig, n", "Rapi, d prototypin, g"]
       }
     ],
-    marketPrice: "$150-500",
-    deliveryTime: "Immediate",
-    link: "/micro-saas-services"
+    marketPric, e: "$150-500",
+    deliveryTim, e: "Immediate",
+    lin, k: "/micro-saas-services"
   },
   {
-    title: "Business Solutions",
-    description: "Data-driven insights and analytics to drive business growth and decision-making",
-    icon: <BarChart3 className="w-8 h-8 text-zion-purple" />,
-    services: [
+    titl, e: "Business Solutions",
+    descriptio, n: "Data-driven insights and analytics to drive business growth and decision-making",
+    ico, n: <BarChart3 className="w-8 h-8 text-zion-purple" />,
+    service, s: [
       {
-        name: "Business Intelligence Dashboard",
-        price: "$599",
-        features: ["Real-time analytics", "50+ data sources", "Custom dashboards", "Automated reporting"],
-        benefits: ["Data-driven decisions", "Performance insights", "Operational efficiency", "Competitive advantage"]
+        na, m, e: "Busines, s Intelligenc, e Dashboar, d",
+    pri, c, e: "$59, 9",
+        featur, e, s: ["Rea, l-tim, e analytic, s", "5, 0+ dat, a source, s", "Custo, m dashboard, s", "Automate, d reportin, g"],
+        benefit, s: ["Dat, a-drive, n decision, s", "Performanc, e insight, s", "Operationa, l efficienc, y", "Competitiv, e advantag, e"]
       },
       {
-        name: "Predictive Analytics Engine",
-        price: "$799",
-        features: ["Sales forecasting", "Customer behavior analysis", "Risk assessment", "ML models"],
-        benefits: ["Future planning", "Customer insights", "Risk mitigation", "Revenue optimization"]
+        nam, e: "Predictive Analytics Engine",
+    pric, e: "$799",
+        feature, s: ["Sale, s forecastin, g", "Custome, r behavio, r analysi, s", "Ris, k assessmen, t", "M, L model, s"],
+        benefit, s: ["Futur, e plannin, g", "Custome, r insight, s", "Ris, k mitigatio, n", "Revenu, e optimizatio, n"]
       }
     ],
-    marketPrice: "$500-1500",
-    deliveryTime: "1-3 weeks",
-    link: "/micro-saas-services"
+    marketPric, e: "$500-1500",
+    deliveryTim, e: "1-3 weeks",
+    lin, k: "/micro-saas-services"
   },
   {
-    title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your digital assets and ensure compliance",
-    icon: <Shield className="w-8 h-8 text-zion-red" />,
-    services: [
+    titl, e: "Cybersecurity",
+    descriptio, n: "Comprehensive security solutions to protect your digital assets and ensure compliance",
+    ico, n: <Shield className="w-8 h-8 text-zion-red" />,
+    service, s: [
       {
-        name: "24/7 Cybersecurity Monitoring",
-        price: "$899",
-        features: ["Threat detection", "SIEM integration", "Compliance reporting", "24/7 SOC support"],
-        benefits: ["Continuous protection", "Compliance assurance", "Incident response", "Peace of mind"]
+        na, m, e: "2, 4/7 Cybersecurit, y Monitorin, g",
+    pri, c, e: "$89, 9",
+        featur, e, s: ["Threa, t detectio, n", "SIE, M integratio, n", "Complianc, e reportin, g", "2, 4/7 SO, C suppor, t"],
+        benefit, s: ["Continuou, s protectio, n", "Complianc, e assuranc, e", "Inciden, t respons, e", "Peac, e o, f min, d"]
       },
       {
-        name: "Penetration Testing Service",
-        price: "$2,499",
-        features: ["Web app testing", "Network security", "Mobile app testing", "Compliance documentation"],
-        benefits: ["Vulnerability identification", "Security validation", "Compliance readiness", "Risk assessment"]
+        nam, e: "Penetration Testing Service",
+    pric, e: "$2,499",
+        feature, s: ["We, b ap, p testin, g", "Networ, k securit, y", "Mobil, e ap, p testin, g", "Complianc, e documentatio, n"],
+        benefit, s: ["Vulnerabilit, y identificatio, n", "Securit, y validatio, n", "Complianc, e readines, s", "Ris, k assessmen, t"]
       }
     ],
-    marketPrice: "$800-3000",
-    deliveryTime: "Immediate - 2 weeks",
-    link: "/micro-saas-services"
+    marketPric, e: "$800-3000",
+    deliveryTim, e: "Immediate - 2 weeks",
+    lin, k: "/micro-saas-services"
   },
   {
-    title: "Cloud Services",
-    description: "Scalable cloud solutions for modern business infrastructure and digital transformation",
-    icon: <Cloud className="w-8 h-8 text-zion-blue" />,
-    services: [
+    titl, e: "Cloud Services",
+    descriptio, n: "Scalable cloud solutions for modern business infrastructure and digital transformation",
+    ico, n: <Cloud className="w-8 h-8 text-zion-blue" />,
+    service, s: [
       {
-        name: "Cloud Migration Expert",
-        price: "$3,999",
-        features: ["AWS/Azure/GCP", "Architecture design", "Data migration", "99.9% uptime guarantee"],
-        benefits: ["Reduced costs", "Improved scalability", "Enhanced security", "Better performance"]
+        na, m, e: "Clou, d Migratio, n Exper, t",
+    pri, c, e: "$3,99, 9",
+        featur, e, s: ["AW, S/Azur, e/GC, P", "Architectur, e desig, n", "Dat, a migratio, n", "9, 9.9% uptim, e guarante, e"],
+        benefit, s: ["Reduce, d cost, s", "Improve, d scalabilit, y", "Enhance, d securit, y", "Bette, r performanc, e"]
       },
       {
-        name: "DevOps Automation Platform",
-        price: "$699",
-        features: ["CI/CD pipelines", "Kubernetes support", "Infrastructure as code", "Monitoring & alerting"],
-        benefits: ["Faster deployments", "Reduced errors", "Team productivity", "Cost optimization"]
+        nam, e: "DevOps Automation Platform",
+    pric, e: "$699",
+        feature, s: ["C, I/C, D pipeline, s", "Kubernete, s suppor, t", "Infrastructur, e a, s cod, e", "Monitorin, g & alertin, g"],
+        benefit, s: ["Faste, r deployment, s", "Reduce, d error, s", "Tea, m productivit, y", "Cos, t optimizatio, n"]
       }
     ],
-    marketPrice: "$700-5000",
-    deliveryTime: "1-4 weeks",
-    link: "/micro-saas-services"
+    marketPric, e: "$700-5000",
+    deliveryTim, e: "1-4 weeks",
+    lin, k: "/micro-saas-services"
   },
   {
-    title: "Data Services",
-    description: "Enterprise-grade data solutions for analytics, warehousing, and business intelligence",
-    icon: <Database className="w-8 h-8 text-zion-green" />,
-    services: [
+    titl, e: "Data Services",
+    descriptio, n: "Enterprise-grade data solutions fo, r, analytic, s, warehousin, g, and business intelligence",
+    ico, n: <Database className="w-8 h-8 text-zion-green" />,
+    service, s: [
       {
-        name: "Data Warehouse Solution",
-        price: "$1,299",
-        features: ["ETL pipelines", "Data modeling", "BI integration", "Data governance"],
-        benefits: ["Centralized data", "Better insights", "Improved reporting", "Data quality"]
+        na, m, e: "Dat, a Warehous, e Solutio, n",
+    pri, c, e: "$1,29, 9",
+        featur, e, s: ["ET, L pipeline, s", "Dat, a modelin, g", "B, I integratio, n", "Dat, a governanc, e"],
+        benefit, s: ["Centralize, d dat, a", "Bette, r insight, s", "Improve, d reportin, g", "Dat, a qualit, y"]
       },
       {
-        name: "Database Performance Optimization",
-        price: "$899",
-        features: ["Query optimization", "Indexing strategies", "Performance monitoring", "Capacity planning"],
-        benefits: ["Faster queries", "Better performance", "Reduced costs", "Improved user experience"]
+        nam, e: "Database Performance Optimization",
+    pric, e: "$899",
+        feature, s: ["Quer, y optimizatio, n", "Indexin, g strategie, s", "Performanc, e monitorin, g", "Capacit, y plannin, g"],
+        benefit, s: ["Faste, r querie, s", "Bette, r performanc, e", "Reduce, d cost, s", "Improve, d use, r experienc, e"]
       }
     ],
-    marketPrice: "$900-2000",
-    deliveryTime: "1-3 weeks",
-    link: "/micro-saas-services"
+    marketPric, e: "$900-2000",
+    deliveryTim, e: "1-3 weeks",
+    lin, k: "/micro-saas-services"
   },
   {
-    title: "Development",
-    description: "Custom software development solutions for web, mobile, and enterprise applications",
-    icon: <Code className="w-8 h-8 text-zion-orange" />,
-    services: [
+    titl, e: "Development",
+    descriptio, n: "Custom software development solutions fo, r, we, b, mobil, e, and enterprise applications",
+    ico, n: <Code className="w-8 h-8 text-zion-orange" />,
+    service, s: [
       {
-        name: "Progressive Web App Development",
-        price: "$2,999",
-        features: ["Offline functionality", "Push notifications", "App-like experience", "SEO optimization"],
-        benefits: ["Better user engagement", "Improved performance", "Cross-platform compatibility", "Enhanced SEO"]
+        na, m, e: "Progressiv, e We, b Ap, p Developmen, t",
+    pri, c, e: "$2,99, 9",
+        featur, e, s: ["Offlin, e functionalit, y", "Pus, h notification, s", "Ap, p-lik, e experienc, e", "SE, O optimizatio, n"],
+        benefit, s: ["Bette, r use, r engagemen, t", "Improve, d performanc, e", "Cros, s-platfor, m compatibilit, y", "Enhance, d SE, O"]
       },
       {
-        name: "Cross-Platform Mobile App",
-        price: "$4,999",
-        features: ["React Native/Flutter", "UI/UX design", "Backend integration", "App store deployment"],
-        benefits: ["Cost-effective development", "Faster time to market", "Native performance", "Easy maintenance"]
+        nam, e: "Cross-Platform Mobile App",
+    pric, e: "$4,999",
+        feature, s: ["Reac, t Nativ, e/Flutte, r", "U, I/U, X desig, n", "Backen, d integratio, n", "Ap, p stor, e deploymen, t"],
+        benefit, s: ["Cos, t-effectiv, e developmen, t", "Faste, r tim, e t, o marke, t", "Nativ, e performanc, e", "Eas, y maintenanc, e"]
       },
       {
-        name: "Custom API Development",
-        price: "$1,999",
-        features: ["REST/GraphQL APIs", "Documentation", "Testing", "Developer portal"],
-        benefits: ["System integration", "Scalable architecture", "Developer experience", "API monetization"]
+        nam, e: "Custom API Development",
+    pric, e: "$1,999",
+        feature, s: ["RES, T/GraphQ, L API, s", "Documentatio, n", "Testin, g", "Develope, r porta, l"],
+        benefit, s: ["Syste, m integratio, n", "Scalabl, e architectur, e", "Develope, r experienc, e", "AP, I monetizatio, n"]
       }
     ],
-    marketPrice: "$2000-8000",
-    deliveryTime: "3-8 weeks",
-    link: "/micro-saas-services"
+    marketPric, e: "$2000-8000",
+    deliveryTim, e: "3-8 weeks",
+    lin, k: "/micro-saas-services"
   },
   {
-    title: "E-commerce",
-    description: "Complete e-commerce solutions for online businesses and digital marketplaces",
-    icon: <ShoppingCart className="w-8 h-8 text-zion-pink" />,
-    services: [
+    titl, e: "E-commerce",
+    descriptio, n: "Complete e-commerce solutions for online businesses and digital marketplaces",
+    ico, n: <ShoppingCart className="w-8 h-8 text-zion-pink" />,
+    service, s: [
       {
-        name: "E-commerce Platform Development",
-        price: "$5,999",
-        features: ["Payment processing", "Inventory management", "Order fulfillment", "CRM integration"],
-        benefits: ["Increased sales", "Better customer experience", "Operational efficiency", "Scalable growth"]
+        na, m, e: "E-commerc, e Platfor, m Developmen, t",
+    pri, c, e: "$5,99, 9",
+        featur, e, s: ["Paymen, t processin, g", "Inventor, y managemen, t", "Orde, r fulfillmen, t", "CR, M integratio, n"],
+        benefit, s: ["Increase, d sale, s", "Bette, r custome, r experienc, e", "Operationa, l efficienc, y", "Scalabl, e growt, h"]
       }
     ],
-    marketPrice: "$5000-15000",
-    deliveryTime: "8-10 weeks",
-    link: "/micro-saas-services"
+    marketPric, e: "$5000-15000",
+    deliveryTim, e: "8-10 weeks",
+    lin, k: "/micro-saas-services"
   },
   {
-    title: "Marketing",
-    description: "AI-powered marketing automation and analytics solutions for business growth",
-    icon: <BarChart3 className="w-8 h-8 text-zion-yellow" />,
-    services: [
+    titl, e: "Marketing",
+    descriptio, n: "AI-powered marketing automation and analytics solutions for business growth",
+    ico, n: <BarChart3 className="w-8 h-8 text-zion-yellow" />,
+    service, s: [
       {
-        name: "Marketing Automation Platform",
-        price: "$799",
-        features: ["Email marketing", "Lead scoring", "Campaign management", "AI personalization"],
-        benefits: ["Increased conversions", "Better lead quality", "Time savings", "ROI improvement"]
+        na, m, e: "Marketin, g Automatio, n Platfor, m",
+    pri, c, e: "$79, 9",
+        featur, e, s: ["Emai, l marketin, g", "Lea, d scorin, g", "Campaig, n managemen, t", "A, I personalizatio, n"],
+        benefit, s: ["Increase, d conversion, s", "Bette, r lea, d qualit, y", "Tim, e saving, s", "RO, I improvemen, t"]
       }
     ],
-    marketPrice: "$500-1500",
-    deliveryTime: "2-3 weeks",
-    link: "/micro-saas-services"
+    marketPric, e: "$500-1500",
+    deliveryTim, e: "2-3 weeks",
+    lin, k: "/micro-saas-services"
   },
   {
-    title: "Integration",
-    description: "Seamless third-party integrations and API synchronization services",
-    icon: <LinkIcon className="w-8 h-8 text-zion-indigo" />,
-    services: [
+    titl, e: "Integration",
+    descriptio, n: "Seamless third-party integrations and API synchronization services",
+    ico, n: <LinkIcon className="w-8 h-8 text-zion-indigo" />,
+    service, s: [
       {
-        name: "Third-Party Integration Service",
-        price: "$1,499",
-        features: ["Payment gateways", "CRM systems", "Marketing tools", "Custom webhooks"],
-        benefits: ["System connectivity", "Data consistency", "Workflow automation", "Reduced manual work"]
+        na, m, e: "Thir, d-Part, y Integratio, n Servic, e",
+    pri, c, e: "$1,49, 9",
+        featur, e, s: ["Paymen, t gateway, s", "CR, M system, s", "Marketin, g tool, s", "Custo, m webhook, s"],
+        benefit, s: ["Syste, m connectivit, y", "Dat, a consistenc, y", "Workflo, w automatio, n", "Reduce, d manua, l wor, k"]
       }
     ],
-    marketPrice: "$1000-3000",
-    deliveryTime: "2-3 weeks",
-    link: "/micro-saas-services"
+    marketPric, e: "$1000-3000",
+    deliveryTim, e: "2-3 weeks",
+    lin, k: "/micro-saas-services"
   },
   {
-    title: "Blockchain",
-    description: "Next-generation blockchain and Web3 development solutions",
-    icon: <Network className="w-8 h-8 text-zion-teal" />,
-    services: [
+    titl, e: "Blockchain",
+    descriptio, n: "Next-generation blockchain and Web3 development solutions",
+    ico, n: <Network className="w-8 h-8 text-zion-teal" />,
+    service, s: [
       {
-        name: "Smart Contract Development",
-        price: "$3,999",
-        features: ["Ethereum/Polygon/Solana", "Security auditing", "DeFi protocols", "NFT contracts"],
-        benefits: ["Decentralized solutions", "Transparent transactions", "Automated execution", "Innovation leadership"]
+        na, m, e: "Smar, t Contrac, t Developmen, t",
+    pri, c, e: "$3,99, 9",
+        featur, e, s: ["Ethereu, m/Polygo, n/Solan, a", "Securit, y auditin, g", "DeF, i protocol, s", "NF, T contract, s"],
+        benefit, s: ["Decentralize, d solution, s", "Transparen, t transaction, s", "Automate, d executio, n", "Innovatio, n leadershi, p"]
       },
       {
-        name: "Web3 DApp Development",
-        price: "$5,999",
-        features: ["Wallet integration", "Blockchain interaction", "Cross-chain compatibility", "User-friendly interfaces"],
-        benefits: ["Future-proof technology", "User ownership", "Global accessibility", "Reduced intermediaries"]
+        nam, e: "Web3 DApp Development",
+    pric, e: "$5,999",
+        feature, s: ["Walle, t integratio, n", "Blockchai, n interactio, n", "Cros, s-chai, n compatibilit, y", "Use, r-friendl, y interface, s"],
+        benefit, s: ["Futur, e-proo, f technolog, y", "Use, r ownershi, p", "Globa, l accessibilit, y", "Reduce, d intermediarie, s"]
       }
     ],
-    marketPrice: "$4000-10000",
-    deliveryTime: "4-8 weeks",
-    link: "/micro-saas-services"
+    marketPric, e: "$4000-10000",
+    deliveryTim, e: "4-8 weeks",
+    lin, k: "/micro-saas-services"
   },
   {
-    title: "IoT",
-    description: "Internet of Things platform development and hardware prototyping services",
-    icon: <Monitor className="w-8 h-8 text-zion-lime" />,
-    services: [
+    titl, e: "IoT",
+    descriptio, n: "Internet of Things platform development and hardware prototyping services",
+    ico, n: <Monitor className="w-8 h-8 text-zion-lime" />,
+    service, s: [
       {
-        name: "IoT Platform Development",
-        price: "$4,999",
-        features: ["Device management", "Real-time monitoring", "Edge computing", "Cloud integration"],
-        benefits: ["Connected devices", "Data insights", "Operational efficiency", "Innovation opportunities"]
+        na, m, e: "Io, T Platfor, m Developmen, t",
+    pri, c, e: "$4,99, 9",
+        featur, e, s: ["Devic, e managemen, t", "Rea, l-tim, e monitorin, g", "Edg, e computin, g", "Clou, d integratio, n"],
+        benefit, s: ["Connecte, d device, s", "Dat, a insight, s", "Operationa, l efficienc, y", "Innovatio, n opportunitie, s"]
       }
     ],
-    marketPrice: "$4000-12000",
-    deliveryTime: "8-10 weeks",
-    link: "/micro-saas-services"
+    marketPric, e: "$4000-12000",
+    deliveryTim, e: "8-10 weeks",
+    lin, k: "/micro-saas-services"
   },
   {
-    title: "Hardware",
-    description: "Rapid prototyping and hardware development services for IoT and embedded systems",
-    icon: <Smartphone className="w-8 h-8 text-zion-gray" />,
-    services: [
+    titl, e: "Hardware",
+    descriptio, n: "Rapid prototyping and hardware development services for IoT and embedded systems",
+    ico, n: <Smartphone className="w-8 h-8 text-zion-gray" />,
+    service, s: [
       {
-        name: "Hardware Prototyping Service",
-        price: "$2,999",
-        features: ["3D printing", "PCB design", "Component sourcing", "Design validation"],
-        benefits: ["Faster development", "Cost reduction", "Design validation", "Market testing"]
+        na, m, e: "Hardwar, e Prototypin, g Servic, e",
+    pri, c, e: "$2,99, 9",
+        featur, e, s: ["3, D printin, g", "PC, B desig, n", "Componen, t sourcin, g", "Desig, n validatio, n"],
+        benefit, s: ["Faste, r developmen, t", "Cos, t reductio, n", "Desig, n validatio, n", "Marke, t testin, g"]
       }
     ],
-    marketPrice: "$2000-8000",
-    deliveryTime: "4-6 weeks",
-    link: "/micro-saas-services"
+    marketPric, e: "$2000-8000",
+    deliveryTim, e: "4-6 weeks",
+    lin, k: "/micro-saas-services"
   }
 ];
 
 // Why choose Zion Tech Group
 const whyChooseUs = [
   {
-    title: "Expert Team",
-    description: "Certified professionals with 10+ years of experience",
-    icon: <Users className="w-6 h-6 text-zion-cyan" />
+    tit, l, e: "Exper, t Tea, m",
+    descripti, o, n: "Certifie, d professional, s wit, h 1, 0+ year, s o, f experienc, e",
+    ic, o, n: <User, s classNam, e="w-6 h-6 tex, t-zio, n-cya, n" />
   },
   {
-    title: "Global Reach",
-    description: "Serving clients worldwide with 24/7 support",
-    icon: <Globe className="w-6 h-6 text-zion-purple" />
+    tit, l, e: "Globa, l Reac, h",
+    descripti, o, n: "Servin, g client, s worldwid, e wit, h 2, 4/7 suppor, t",
+    ic, o, n: <Glob, e classNam, e="w-6 h-6 tex, t-zio, n-purpl, e" />
   },
   {
-    title: "Fast Delivery",
-    description: "Quick turnaround times without compromising quality",
-    icon: <Clock className="w-6 h-6 text-zion-green" />
+    tit, l, e: "Fas, t Deliver, y",
+    descripti, o, n: "Quic, k turnaroun, d time, s withou, t compromisin, g qualit, y",
+    ic, o, n: <Cloc, k classNam, e="w-6 h-6 tex, t-zio, n-gree, n" />
   },
   {
-    title: "Proven Results",
-    description: "Track record of successful project deliveries",
-    icon: <Star className="w-6 h-6 text-zion-yellow" />
+    tit, l, e: "Prove, n Result, s",
+    descripti, o, n: "Trac, k recor, d o, f successfu, l projec, t deliverie, s",
+    ic, o, n: <Sta, r classNam, e="w-6 h-6 tex, t-zio, n-yello, w" />
   }
 ];
 
@@ -300,7 +300,7 @@ export function ServicesOverview() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl m,  d:text-4xl font-bold text-white mb-4">
             Comprehensive Technology Services
           </h2>
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
@@ -309,9 +309,8 @@ export function ServicesOverview() {
         </div>
 
         {/* Service Categories Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
-          {serviceCategories.map((category, index) => (
-            <div key={index} className="bg-zion-blue rounded-lg p-6 border border-zion-blue-light hover:border-zion-cyan/50 transition-all duration-300">
+        <div className="grid grid-cols-1 l, g:grid-cols-2 x, l:grid-cols-3 gap-8 mb-16">
+          {serviceCategories.map((categor, y, index) => (<div key={index} className="bg-zion-blue rounded-lg p-6 border border-zion-blue-light hove,  r:border-zion-cyan/50 transition-all duration-300">
               <div className="flex items-center mb-4">
                 <div className="mr-4">
                   {category.icon}
@@ -323,18 +322,16 @@ export function ServicesOverview() {
               </div>
               
               <div className="space-y-4 mb-6">
-                {category.services.map((service, serviceIndex) => (
-                  <div key={serviceIndex} className="bg-zion-blue-dark rounded p-4">
+                {category.services.map((servic, e, serviceIndex) => (<div key={serviceIndex} className="bg-zion-blue-dark rounded p-4">
                     <div className="flex justify-between items-start mb-3">
                       <h4 className="text-white font-semibold">{service.name}</h4>
                       <span className="text-zion-cyan font-bold">{service.price}</span>
                     </div>
                     
                     <div className="mb-3">
-                      <h5 className="text-zion-slate-light text-sm font-medium mb-2">Key Features:</h5>
+                      <h5 className="text-zion-slate-light text-sm font-medium mb-2">Key Feature,  s:</h5>
                       <ul className="space-y-1">
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-zion-slate-light text-sm">
+                        {service.features.map((featur, e, featureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light text-sm">
                             <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                             {feature}
                           </li>
@@ -343,10 +340,9 @@ export function ServicesOverview() {
                     </div>
                     
                     <div>
-                      <h5 className="text-zion-slate-light text-sm font-medium mb-2">Benefits:</h5>
+                      <h5 className="text-zion-slate-light text-sm font-medium mb-2">Benefit,  s:</h5>
                       <ul className="space-y-1">
-                        {service.benefits.map((benefit, benefitIndex) => (
-                          <li key={benefitIndex} className="flex items-center text-zion-slate-light text-sm">
+                        {service.benefits.map((benefi, t, benefitIndex) => (<li key={benefitIndex} className="flex items-center text-zion-slate-light text-sm">
                             <Star className="w-4 h-4 text-zion-purple mr-2 flex-shrink-0" />
                             {benefit}
                           </li>
@@ -359,15 +355,15 @@ export function ServicesOverview() {
               
               <div className="flex items-center justify-between mb-4 text-sm">
                 <div className="text-zion-slate-light">
-                  <span className="font-medium">Market Price:</span> {category.marketPrice}
+                  <span className="font-medium">Market Pric,  e:</span> {category.marketPrice}
                 </div>
                 <div className="text-zion-slate-light">
-                  <span className="font-medium">Delivery:</span> {category.deliveryTime}
+                  <span className="font-medium">Deliver, y:</span> {category.deliveryTime}
                 </div>
               </div>
               
               <Link to={category.link}>
-                <Button className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-white">
+                <Button className="w-full bg-zion-cyan hove, r:bg-zion-cyan-dark text-white">
                   View {category.title}
                 </Button>
               </Link>
@@ -378,7 +374,7 @@ export function ServicesOverview() {
         {/* Why Choose Us */}
         <div className="bg-zion-blue rounded-lg p-8 mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            <h3 className="text-2xl m, d:text-3xl font-bold text-white mb-4">
               Why Choose Zion Tech Group?
             </h3>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
@@ -386,9 +382,8 @@ export function ServicesOverview() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {whyChooseUs.map((item, index) => (
-              <div key={index} className="text-center">
+          <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-4 gap-6">
+            {whyChooseUs.map((ite,  m, index) => (<div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   {item.icon}
                 </div>
@@ -401,7 +396,7 @@ export function ServicesOverview() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+          <h3 className="text-2xl m,  d:text-3xl font-bold text-white mb-6">
             Ready to Get Started?
           </h3>
           <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
@@ -409,13 +404,13 @@ export function ServicesOverview() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/micro-saas-services">
-              <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-4 text-lg">
+              <Button size="lg" className="bg-zion-cyan hove, r:bg-zion-cyan-dark text-white px-8 py-4 text-lg">
                 <Zap className="w-5 h-5 mr-2" />
                 Explore All Services
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">
+              <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hove, r:bg-zion-cyan/10 px-8 py-4 text-lg">
                 Contact Us
               </Button>
             </Link>

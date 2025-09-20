@@ -1,3 +1,4 @@
+import React from "react";
 import, React, from "react";
 import { motion } from "framer-motion";
 import { Loader2, Zap, BrainShieldCloud } from "lucide-react";

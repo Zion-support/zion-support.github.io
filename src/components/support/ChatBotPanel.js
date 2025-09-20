@@ -78,7 +78,7 @@ export function ChatBotPanel() {
             }
         }
         catch (error) {
-            console.error("Error in AI chat:", error);
+            
             toast({
                 variant: "destructive",
                 title: "Communication Error",
@@ -117,7 +117,7 @@ export function ChatBotPanel() {
             };
         }
         catch (error) {
-            console.error("Error in AI chat:", error);
+            
             return {
                 success: false,
                 message: "I'm experiencing technical difficulties. Please try again later."
@@ -148,7 +148,7 @@ export function ChatBotPanel() {
             });
         }
         catch (error) {
-            console.error("Failed to log support escalation:", error);
+            
         }
     };
     const handleQuickReply = (text) => {

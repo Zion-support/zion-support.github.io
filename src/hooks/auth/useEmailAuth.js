@@ -11,7 +11,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
                 email,
                 password,
             });
-            console.log('login signInWithPassword', { status: !error ? 200 : error?.status, data });
+            
             if (error) {
                 toast({
                     title: "Login failed",
@@ -23,7 +23,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             return { data };
         }
         catch (error) {
-            console.error("Login error:", error);
+            
             toast({
                 title: "Login failed",
                 description: error.message || "An unexpected error occurred",
@@ -46,7 +46,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             }
             catch (err) {
                 // Continue even if signout fails
-                console.log("Sign out before signup failed:", err);
+                
             }
             // Create a proper options object
             const { data, error } = await supabase.auth.signUp({
@@ -59,7 +59,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
                     },
                 },
             });
-            console.log('signup signUp', { status: !error ? 201 : error?.status, data });
+            
             if (error) {
                 toast({
                     title: "Signup failed",
@@ -75,7 +75,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             return { data };
         }
         catch (error) {
-            console.error("Signup error:", error);
+            
             toast({
                 title: "Signup failed",
                 description: error.message || "An unexpected error occurred",
@@ -108,7 +108,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             return {};
         }
         catch (error) {
-            console.error("Password reset error:", error);
+            
             toast({
                 title: "Password reset failed",
                 description: error.message || "An unexpected error occurred",
