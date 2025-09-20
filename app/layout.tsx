@@ -1,66 +1,12 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-// import './globals.css'
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Leading AI & Technology Solutions',
-  description: 'Leading technology solutions provider specializing in AI, automation, and digital transformation.',
-  keywords: ['AI solutions', 'technology consulting', 'digital transformation', 'automation', 'analytics'],
-  authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://zion.app'),
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Leading technology solutions provider specializing in AI, automation, and digital transformation.',
-    url: 'https://zion.app',
-    siteName: 'Zion Tech Group',
-    images: [
-      {
-        url: 'https://zion.app/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group - AI & Technology Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Leading technology solutions provider specializing in AI, automation, and digital transformation.',
-    images: ['https://zion.app/og-image.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-  },
-}
+import React from 'react'
+import Link from 'next/link'
+import Script from 'next/script'
+import './globals.css'
 
 function Header() {
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
-      <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto" role="navigation" aria-label="Main navigation">
+      <nav id="navigation" className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto" role="navigation" aria-label="Main navigation">
         <Link
           href="/"
           className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors focus-visible:focus"
@@ -116,7 +62,7 @@ function Header() {
 }
 function Footer() {
   return (
-    <footer className="border-t border-gray-200 mt-10 py-12 bg-gray-50">
+    <footer id="footer" className="border-t border-gray-200 mt-10 py-12 bg-gray-50" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
@@ -237,29 +183,53 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Basic security headers */}
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="DENY" />
-        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#1e40af" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:site_name" content="Zion Tech Group" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        
-        {/* Preload critical resources */}
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
       <body className="min-h-screen bg-white">
+        {/* Skip Links for Accessibility */}
+        <div className="skip-links">
+          <a href="#main-content" className="skip-link">Skip to main content</a>
+          <a href="#navigation" className="skip-link">Skip to navigation</a>
+          <a href="#footer" className="skip-link">Skip to footer</a>
+        </div>
+        
         <Header />
-        <main id="main-content" role="main" className="flex-1">
-          {children}
-        </main>
+        <main id="main-content" className="flex-1" role="main">{children}</main>
         <Footer />
+        
+        {/* Advanced Improvements Script */}
+        <Script
+          src="/comprehensive-improvements-advanced.js"
+          strategy="afterInteractive"
+        />
+        
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'GA_MEASUREMENT_ID');
+          `}
+        </Script>
       </body>
     </html>
   )
