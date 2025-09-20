@@ -1,19 +1,29 @@
 import React, { useEffect, useState } from "react";
 interface AccessibilitySettings {
-  highContrast: boolean,largeText: boolean,reducedMotion: boolean,focusVisible: boolean,screenReader: boolean,keyboardNavigation: boolean
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  focusVisible: boolean;
+  screenReader: boolean;
+  keyboardNavigation: boolean;
 }
 
 const EnhancedAccessibility: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,largeText: false,reducedMotion: false,focusVisible: true,screenReader: false,keyboardNavigation: true
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    focusVisible: true,
+    screenReader: false,
+    keyboardNavigation: true
   });
-  const [announcements, setAnnouncements] = useState<string[]>([]),
+  const [announcements, setAnnouncements] = useState<string[]>([]);
 
   useEffect(() => {
     // Load saved settings
-    const savedSettings = localStorage.getItem('accessibility-settings'),
+    const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
-      setSettings(JSON.parse(savedSettings)),
+      setSettings(JSON.parse(savedSettings));
     }
 
     // Detect screen reader
@@ -23,67 +33,72 @@ const EnhancedAccessibility: React.FC = () => {
         window.navigator.userAgent.includes('JAWS') ||
         window.navigator.userAgent.includes('VoiceOver') ||
         window.navigator.userAgent.includes('TalkBack') ||
-        window.speechSynthesis?.getVoices().length > 0,
+        window.speechSynthesis?.getVoices().length > 0;
       
       setSettings(prev => ({ ...prev, screenReader: hasScreenReader }));
-    },
+    };
 
-    detectScreenReader(),
+    detectScreenReader();
 
     // Apply settings
-    applySettings(settings),
-  }, []),
+    applySettings(settings);
+  }, []);
 
   const applySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     // High contrast
     if (newSettings.highContrast) {
-      root.classList.add('high-contrast')
+      root.classList.add('high-contrast');
     } else {
-      root.classList.remove('high-contrast'),
+      root.classList.remove('high-contrast');
     }
 
     // Large text
     if (newSettings.largeText) {
-      root.classList.add('large-text'),
+      root.classList.add('large-text');
     } else {
-      root.classList.remove('large-text'),
+      root.classList.remove('large-text');
     }
 
     // Reduced motion
     if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion'),
+      root.classList.add('reduced-motion');
     } else {
-      root.classList.remove('reduced-motion'),
+      root.classList.remove('reduced-motion');
     }
 
     // Focus visible
     if (newSettings.focusVisible) {
-      root.classList.add('focus-visible'),
+      root.classList.add('focus-visible');
     } else {
-      root.classList.remove('focus-visible'),
+      root.classList.remove('focus-visible');
     }
 
     // Keyboard navigation
     if (newSettings.keyboardNavigation) {
-      root.classList.add('keyboard-navigation'),
+      root.classList.add('keyboard-navigation');
     } else {
-      root.classList.remove('keyboard-navigation'),
+      root.classList.remove('keyboard-navigation');
     }
-  },
+  };
 
   const updateSetting = (setting: keyof AccessibilitySettings, value: boolean) => {
-    const newSettings = { ...settings, [setting]: value },
-    setSettings(newSettings),
-    applySettings(newSettings),
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings)),
+    const newSettings = { ...settings, [setting]: value };
+    setSettings(newSettings);
+    applySettings(newSettings);
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
     
     // Announce changes
     const settingNames = {
-      highContrast: 'High contrast',largeText: 'Large text',reducedMotion: 'Reduced motion',focusVisible: 'Focus visible',screenReader: 'Screen reader',keyboardNavigation: 'Keyboard navigation'
+      highContrast: 'High contrast',
+      largeText: 'Large text',
+      reducedMotion: 'Reduced motion',
+      focusVisible: 'Focus visible',
+      screenReader: 'Screen reader',
+      keyboardNavigation: 'Keyboard navigation'
     };
-    announce(`${settingNames[setting]} ${value ? 'enabled' : 'disabled'}`),
-  },
+    announce(`${settingNames[setting]} ${value ? 'enabled' : 'disabled'}`);
+  };
 
   const announce = (message: string) => {
     setAnnouncements(prev => [...prev.slice(-2), message]),
