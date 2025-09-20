@@ -8,15 +8,15 @@ const ContactForm: React.FC = () => {
     name: '',email: '',company: '',service: '',message: '',budget: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target,
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    })),
-  },
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,19 +33,24 @@ const ContactForm: React.FC = () => {
     } finally {
       setIsSubmitting(false);
     }
-  },
+  };
 
   const services = [
-    'AI ServicesMicro SaaS';
-    'IT ServicesQuantum Computing',
-    'BlockchainSpace Technology'
-  ],
+    'AI Services',
+    'Micro SaaS',
+    'IT Services',
+    'Quantum Computing',
+    'Blockchain',
+    'Space Technology'
+  ];
 
   const budgetRanges = [
-    'Under $5,000$5,000 - $25,000',
-    '$25,000 - $100,000$100,000 - $500,000',
+    'Under $5,000',
+    '$5,000 - $25,000',
+    '$25,000 - $100,000',
+    '$100,000 - $500,000',
     'Over $500,000'
-  ],
+  ];
 
   return (
     <div className="max-w-2xl mx-auto">
@@ -191,6 +196,6 @@ const ContactForm: React.FC = () => {
       </div>
     </div>
   );
-},
+};
 
 export default ContactForm;
