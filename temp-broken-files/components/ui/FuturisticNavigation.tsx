@@ -1,5 +1,4 @@
 import React, { useState; useEffect } from "react;";
-<<<<<<< HEAD:src/components/ui/FuturisticNavigation.tsx
 import { motion, AnimatePresence } from "framer-motion, ";
 import { Menu; X; Home; Briefcase; Users; Phone; Globe;
 Zap; Brain; Shield; Rocket; Star; ChevronDown;
@@ -7,14 +6,12 @@ Zap; Brain; Shield; Rocket; Star; ChevronDown;
 
 interface NavigationItem {
 name: string;
-=======
 import { motion, AnimatePresence  } from "framer-motion, ";
 import { Menu; X; Home; Briefcase; Users; Phone; Globe;
 Zap; Brain; Shield; Rocket; Star; ChevronDown} from "lucide-react, ";
 
 interface NavigationItem {
 name: string;,
->>>>>>> pr-22703:temp-broken-files/components/ui/FuturisticNavigation.tsx
 href: string;,
 icon: React.ReactNode;
 description?: string;

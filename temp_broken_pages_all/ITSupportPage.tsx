@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/ITSupportPage.tsx
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Phone, ShieldCheck, Clock } from "lucide-react";
@@ -37,5 +36,4 @@ export default function ITSupportPage() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ITSupportPage.tsx
 }

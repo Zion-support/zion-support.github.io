@@ -1,14 +1,10 @@
 interface Service {
-<<<<<<< HEAD:src/components/wallet/OnChainExport.tsx
 id: string;
-=======
 id: string;,
->>>>>>> pr-22703:temp-broken-files/components/wallet/OnChainExport.tsx
 name: string;
 }
 }
 }
-
 
 import React, { useState } from "react";
 import { Card; CardContent; CardDescription; CardHeader, CardTitle  } from "@/components/ui/card, ";

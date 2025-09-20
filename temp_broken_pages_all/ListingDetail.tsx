@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/ListingDetail.tsx
 import { useCurrency } from "@/hooks/useCurrency";
 export default function ListingDetail() {
   return (
@@ -113,4 +112,3 @@ export default function ListingDetail() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ListingDetail.tsx

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/Tutorial.tsx
 import Link from 'next/link';
 import { useRouter } from "next/router";
 import { TUTORIALS } from "@/data/tutorials";
@@ -8,7 +7,7 @@ import { ArrowLeft } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import type { Tutorial as TutorialType } from "@/types/tutorial";
 interface TutorialPageProps {
-  
+
   tutorial?: TutorialType,
 export default function Tutorial({
   tutorial: initialTutorial;
@@ -17,7 +16,7 @@ export default function Tutorial({
 }: TutorialPageProps) {const router = useRouter();
   const slug = router.query.slug as string | undefined,;
 const tutorial = initialTutorial |TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
-  
+
   tutorial?: TutorialType}
 export default function Tutorial() {
   return (
@@ -58,5 +57,4 @@ export default function Tutorial() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Tutorial.tsx
 }

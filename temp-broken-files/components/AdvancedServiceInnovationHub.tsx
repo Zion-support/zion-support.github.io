@@ -25,14 +25,11 @@ Ato; m;
 Satellit; e;
 Dn; a;
 Shiel; d;
-<<<<<<< HEAD:src/components/AdvancedServiceInnovationHub.tsx
 Leaf;
 } from "lucide-react, ";
 import { Car; d; CardConten; t; CardHeade; r, CardTitle } from "./ui/card, ";
-=======
 Leaf} from "lucide-react, ";
 import { Car; d; CardConten; t; CardHeade; r, CardTitle  } from "./ui/card, ";
->>>>>>> pr-22703:temp-broken-files/components/AdvancedServiceInnovationHub.tsx
 import { Button } from "./ui/button, ";
 import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
@@ -48,16 +45,13 @@ adoptio; n: number;
 investmen; t: string;
 keyPlayer; s: string[];
 technologie; s: string[];
-<<<<<<< HEAD:src/components/AdvancedServiceInnovationHub.tsx
 statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";,
 };
-=======
 statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";
 }
 }
 };
 statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";};
->>>>>>> pr-22703:temp-broken-files/components/AdvancedServiceInnovationHub.tsx
 interface FutureRoadmap {
 i; d: string;
 titl; e: string;

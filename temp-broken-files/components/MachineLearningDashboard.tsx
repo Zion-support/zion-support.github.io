@@ -1,11 +1,8 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMem; o; useRef } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMem; o; useRef } from "react";
-<<<<<<< HEAD:src/components/MachineLearningDashboard.tsx
 import { motio; n, AnimatePresence } from "framer-motion, ";
-=======
 import { motio; n; AnimatePresence } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/MachineLearningDashboard.tsx
 import { Brai; n;
 Pla; y;
 Squar; e;
@@ -27,23 +24,17 @@ import { useMachineLearning } from "../hooks/useMachineLearning, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface MLDashboardProps {
-<<<<<<< HEAD:src/components/MachineLearningDashboard.tsx
 className?: string;
-=======
 className?: string;}
->>>>>>> pr-22703:temp-broken-files/components/MachineLearningDashboard.tsx
 };
 export const MachineLearningDashboar; d: React.FC<MLDashboardProps> = ({ className = "" }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-<<<<<<< HEAD:src/components/MachineLearningDashboard.tsx
 enableUserBehaviorTrackin; g: true;,
 });
-=======
 enableUserBehaviorTrackin; g: true;
 });
 enableUserBehaviorTrackin; g: true;});
->>>>>>> pr-22703:temp-broken-files/components/MachineLearningDashboard.tsx
 const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "models" | "training" | "predictions" | "analytics">("overview");
 const [showCreateMod;  e; l; setShowCreateMod; e; l] = useState(false);
 const [showImportMod; e; l; setShowImportMod; e; l] = useState(false);

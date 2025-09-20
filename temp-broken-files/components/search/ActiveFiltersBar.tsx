@@ -1,6 +1,4 @@
-<<<<<<< HEAD:src/components/search/ActiveFiltersBar.tsx
 import React from "react",
-=======
 import React from "react";;
 import { X  } from "lucide-react"; interface Filter { key: "string; value: string," } label: "string"} interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> { filters: Filte r[], onRemoveFilter: (key: string) => void; onClearAll: () => void} className="text-sm text-zion-slate-light hover: tex t-zion-cyan transition-colors underline", > Clear all></div> ></div> )}
 import React from "react";
@@ -16,7 +14,6 @@ sort: string;
 }
 interface ActiveFiltersBarProps {className?: string}
 import React from "react",;
->>>>>>> pr-22703:temp-broken-files/components/search/ActiveFiltersBar.tsx
 import { X  } from "lucide-react", interface Filter { key: "string; value: string," } label: "string"} interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> { filters: Filte r[], onRemoveFilter: (key: string) => void; onClearAll: () => void} className="text-sm text-zion-slate-light hover: tex t-zion-cyan transition-colors underline", > Clear all, ></div> ></div> )}
 import React from "react",;
 import { X } from "lucide-react", interface Filter { "key": "string, "value": "string," "} "label": "string"} interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> { "filters": "Filte r[], "onRemoveFilter": ("key": string) => void, "onClearAll": () => void"} className="text-sm text-zion-slate-light "hover": "tex t-zion-cyan transition-colors underline", > Clear all, ></div> ></div> )"};

@@ -9,14 +9,8 @@ refCode;
 userId;
 email;,
 ipAddress: "" // This will be captured by the server;
-<<<<<<< HEAD
 })});
 ipAddress: "" // This will be captured by the server;})});
-=======
-}),
-});
->>>>>>> pr-22703
-
 if (response.ok) {
 // Clear the stored referral code;
 localStorage.removeItem("referral_code");
@@ -25,4 +19,3 @@ localStorage.removeItem("referral_code");
 
 }
 }
-

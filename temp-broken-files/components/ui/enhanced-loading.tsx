@@ -1,31 +1,25 @@
 import React from "react;";
-<<<<<<< HEAD:src/components/ui/enhanced-loading.tsx
 import { motion, Variants } from "framer-motion, ";
 import { Sparkles; Zap; Shield, Rocket } from "lucide-react, ";
-=======
 import { motion, Variants  } from "framer-motion, ";
 import { Sparkles; Zap; Shield, Rocket  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/ui/enhanced-loading.tsx
 
 interface EnhancedLoadingProps {
 size?: "sm" | "md" | "lg" | "xl";
 variant?: "default" | "pulse" | "bounce" | "wave";
 text?: string;
 showIcons?: boolean;
-<<<<<<< HEAD:src/components/ui/enhanced-loading.tsx
 className?: string;
 };
 const sizeClasses = {;
 sm: "w-8 h-8";
 md: "w-12 h-12";
-=======
 }
 className?: string;}
 };
 const sizeClasses = {;
 sm: "w-8 h-8";
 md: "w-12 h-12";,
->>>>>>> pr-22703:temp-broken-files/components/ui/enhanced-loading.tsx
 lg: "w-16 h-16";,
 xl: "w-24 h-24"};
 const iconSizes = {;

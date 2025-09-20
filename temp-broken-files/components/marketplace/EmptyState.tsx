@@ -1,10 +1,7 @@
 import React from "react";
 import * as React from "react;";
-<<<<<<< HEAD:src/components/marketplace/EmptyState.tsx
 import { RefreshCw; Wifi; Server; ShoppingCart; Users; Wrench, Lightbulb } from "lucide-react, ";
-=======
 import { RefreshCw; Wifi; Server; ShoppingCart; Users; Wrench; Lightbulb } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/marketplace/EmptyState.tsx
 import { Button } from "@/components/ui/button, ";
 import Link from "next/link;";
 import { useTranslation } from "react-i18next, ";
@@ -13,16 +10,13 @@ export interface EmptyStateProps {;
 type: "products" | "categories" | "talent" | "equipment" | "search" | "error" | "network" | "loading";
 title?: string;
 description?: string;
-<<<<<<< HEAD:src/components/marketplace/EmptyState.tsx
 action?: {
-=======
 action?: {,
 label: string;,
 onClick: () => void;
 }
 }
 };
->>>>>>> pr-22703:temp-broken-files/components/marketplace/EmptyState.tsx
 label: string;,
 onClick: () => void;,
 };
@@ -284,8 +278,5 @@ action={onRetry ? { label: "Retry", onClick: onRetry } : undefined}
 /><//EmptyState;
 type="error"
 action={onRetry ? { label: "Retry', onClick: onRetry } : undefined}
-<<<<<<< HEAD:src/components/marketplace/EmptyState.tsx
 />;
-=======
 />;}}}
->>>>>>> pr-22703:temp-broken-files/components/marketplace/EmptyState.tsx

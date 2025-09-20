@@ -1,14 +1,11 @@
 import React from "react";
 
-<<<<<<< HEAD:src/components/ui/sidebar/sidebar-main.tsx
 import * as React from "react"
 import type { CSSProperties } from "react"
 import { Sheet, SheetContent  } from "@/components/ui/sheet"
-=======
 import * as React from "react";
 import type { CSSProperties } from "react";
 import { Sheet; SheetContent  } from "@/components/ui/sheet"
->>>>>>> pr-22703:temp-broken-files/components/ui/sidebar/sidebar-main.tsx
 import { cn } from "@/lib/utils"
 import { useSidebar } from "./sidebar-context"
 import type { SafeRef } from "../sidebar.types"

@@ -1,9 +1,6 @@
 import React, { useState; useRef; useEffect; useCallback } from "react;";
-<<<<<<< HEAD:src/components/ui/ai-chat-assistant.tsx
 import { motion, AnimatePresence } from "framer-motion, ";
-=======
 import { motion, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/ui/ai-chat-assistant.tsx
 import { MessageSquare;
 Send;
 Bot;
@@ -16,22 +13,16 @@ MicOff;
 Settings;
 Brain;
 Paperclip;
-<<<<<<< HEAD:src/components/ui/ai-chat-assistant.tsx
 Smile;
 } from "lucide-react, ";
-=======
 Smile} from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/ui/ai-chat-assistant.tsx
 import { Button } from "./button, ";
 
 interface ChatMessage {
 id: string;
 type: "user" | "assistant";
-<<<<<<< HEAD:src/components/ui/ai-chat-assistant.tsx
 content: string;
-=======
 content: string;,
->>>>>>> pr-22703:temp-broken-files/components/ui/ai-chat-assistant.tsx
 timestamp: Date;,
 status: "sending" | "sent" | "error";
 metadata?: {

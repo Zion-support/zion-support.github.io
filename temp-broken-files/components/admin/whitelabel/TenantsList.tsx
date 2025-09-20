@@ -1,7 +1,5 @@
-<<<<<<< HEAD:src/components/admin/whitelabel/TenantsList.tsx
 import React { useState useEffect } from 'react';
 import { supabase, ,  } from '@/integrations/supabase/client';
-=======
 interface Service {
 id: string;,
 name: string;
@@ -27,7 +25,6 @@ import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
 import { Edit; MoreHorizontal, ExternalLink; Power, PowerOff; Users, RefreshCcw } from "lucide-react";
 import { format } from "date-fns";
 import { supabase } from '@/integrations/supabase/client';
->>>>>>> pr-22703:temp-broken-files/components/admin/whitelabel/TenantsList.tsx
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { Table;
 , , TableBody;

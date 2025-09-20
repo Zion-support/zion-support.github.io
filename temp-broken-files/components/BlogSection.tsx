@@ -1,24 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-<<<<<<< HEAD:src/components/BlogSection.tsx
 export function BlogSection() {
 const blogPosts = [;
-=======
 export function BlogSection() {const blogPosts = [;
->>>>>>> pr-22703:temp-broken-files/components/BlogSection.tsx
 {;
 i;  d: "1",
 tit; l; e: "Th; e Futur; e o; f A; I i; n Technolog; y",
 excer; p; t: "Explorin; g ho; w artificia; l intelligenc; e i; s reshapin; g th; e technolog; y landscap; e...",
 da; t; e: "202; 4-0; 1-1; 5",
-<<<<<<< HEAD:src/components/BlogSection.tsx
 readTi; m; e: "8 mi; n rea; d",
 },
-=======
 readTi; m; e: "8 mi; n rea; d"},
 {i; d: "2",
->>>>>>> pr-22703:temp-broken-files/components/BlogSection.tsx
 {
 i; d: "2",
 tit; l; e: "Buildin; g Scalabl; e We; b Application; s",

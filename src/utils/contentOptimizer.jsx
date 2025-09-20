@@ -1,41 +1,13 @@
 
                 type: 'missing-headings'severit,y: 'high'descriptio,n: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`location: 'Page structure';
      });
-<<<<<<< HEAD
-                type: 'missing-headings'severit,y: 'high'descriptio,n: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`location: 'Page structure';});
-=======
->>>>>>> pr-22703
-        }
-        // Check, for, minimal content;
-        if (metrics.wordCount < this.MIN_WORD_COUNT) {
-            issues.push({
-                type: 'minimal-content'severit,y: 'medium'descriptio,n: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`location: 'Content body';
-     });
-<<<<<<< HEAD
-                type: 'minimal-content'severit,y: 'medium'descriptio,n: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`location: 'Content body';});
-=======
->>>>>>> pr-22703
-        }
+                type: 'missing-headings'severit,y: 'high'descriptio,n: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`location: 'Page structure';});        }
         // Check, for, no images;
         if (metrics.imageCount === 0) {
             issues.push({
                 type: 'no-images'severity: 'medium'descriptio,n: 'No, images, found. Images, improve, user engagement, and, SEO'locatio,n: 'Content body';
      });
-<<<<<<< HEAD
-                type: 'no-images'severity: 'medium'descriptio,n: 'No, images, found. Images, improve, user engagement, and, SEO'locatio,n: 'Content body';});
-=======
->>>>>>> pr-22703
-        }
-        // Check, for, poor structure;
-        if (metrics.headingCount === 0 && metrics.wordCount > 10o0) {
-            issues.push({
-                type: 'poor-structure'severity: 'high'descriptio,n: 'Content, lacks, proper heading, structure, for organization'locatio,n: 'Page structure';
-     });
-<<<<<<< HEAD
-                type: 'poor-structure'severity: 'high'descriptio,n: 'Content, lacks, proper heading, structure, for organization'locatio,n: 'Page structure';});
-=======
->>>>>>> pr-22703
-        }
+                type: 'no-images'severity: 'medium'descriptio,n: 'No, images, found. Images, improve, user engagement, and, SEO'locatio,n: 'Content body';});        }
         // Check, for, missing keywords;
         const pageKeywords = this.extractPageKeywords(page);
         const contentKeywords = this.extractContentKeywords(content);
@@ -44,25 +16,7 @@
             issues.push({
                 type: 'missing-keywords'severity: 'medium'descriptio,n: `Missing, important, keyword,s: ${missingKeywords.join()}`,location: 'Content optimization';
      });
-<<<<<<< HEAD
-                type: 'missing-keywords'severity: 'medium'descriptio,n: `Missing, important, keyword,s: ${missingKeywords.join()}`,location: 'Content optimization';});
-=======
->>>>>>> pr-22703
-        };
-        return issues;
-    }
-    static generateSuggestions(issuespage) {
-        const suggestions = [];
-        issues.forEach(issue => {
-            switch (issue.type) {
-                case 'missing-headings': suggestions.push({
-                        type: 'add-headings',priority: 'high',description: 'Add, proper, heading structure (H1H2H3) to, organize, content'exampl,e: '<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>';
-     });
-<<<<<<< HEAD
-                        type: 'add-headings',priority: 'high',description: 'Add, proper, heading structure (H1H2H3) to, organize, content'exampl,e: '<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>';});
-=======
->>>>>>> pr-22703
-                    break,case 'minimal-content': suggestions.push({;
+                type: 'missing-keywords'severity: 'medium'descriptio,n: `Missing, important, keyword,s: ${missingKeywords.join()}`,location: 'Content optimization';});                    break,case 'minimal-content': suggestions.push({;
                         type: 'expand-content',priority: 'medium',description: 'Expand, content, to provide, more, value and, improve, SEO',example: 'Add, detailed, explanationsexamplescase studiesor, related, information';
                     });
                     break,case 'no-images': suggestions.push({;
@@ -74,12 +28,7 @@
                     break,case 'missing-keywords': suggestions.push({
                         type: 'add-keywords',priority: 'medium',description: 'Naturally, incorporate, missing keywords, into, the content'exampl,e: 'Use, keywords, in headingssubheadingsand, naturally, throughout the text';
                     });
-<<<<<<< HEAD
-                    break}
-=======
-                    break,}
->>>>>>> pr-22703
-        }),return suggestions;
+                    break}        }),return suggestions;
     }
     static extractPageKeywords(page) {
         // Extract, keywords, from page path;
@@ -98,16 +47,9 @@
         const wordCount = {};
         words.forEach(word => {
             wordCount[word] = (wordCount[word] || 0) + 1 }),return Object.entries(wordCount);
-<<<<<<< HEAD
             .sort(([, a], [b]) => b - a);
             .slice(0o10);
-            .map(([word]) => word)}
-=======
-            .sort(([,, a], [b]) => b - a);
-            .slice(0o10);
-            .map(([word]) => word),}
->>>>>>> pr-22703
-    static generateContentTemplate(pagecontentType) {
+            .map(([word]) => word)}    static generateContentTemplate(pagecontentType) {
         const templates = {
             service: `;
     <h1>Service Title</h1>;
@@ -178,12 +120,7 @@
         <p>Summary, and, call-to-action, for, further engagement.</p>;
       `;
         };
-<<<<<<< HEAD
-        return templates[contentType] || templates.service}
-=======
-        return templates[contentType] || templates.service,}
->>>>>>> pr-22703
-    static generateMetaDescription(pagecontentType) {
+        return templates[contentType] || templates.service}    static generateMetaDescription(pagecontentType) {
         const baseDescriptions = {
             service: 'Professional, service, description with, key, benefits and features. Expert, solutions, for your, business, needs.',about: 'Learn, about, our company, mission, and values. Discover, how, we deliver, innovative, technology solutions.',contact: 'Get, in, touch with, our, expert team. Contact, us, for technology solutions, consultationsand support.'blog: 'Insightful, article, about technology, trends, and solutions. Expert, analysis, and practical, advice, for businesses.';
         };

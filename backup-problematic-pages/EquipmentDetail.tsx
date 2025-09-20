@@ -22,12 +22,12 @@ import { useCurrency, ,  } from '@/hooks/useCurrency';
 >>>>>>>> pr-22690:temp-broken-files/EquipmentDetail.tsx
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface EquipmentSpecification {
-  
+
 // Convert ProductListing to EquipmentDetails format,
 function convertProductListingToEquipmentDetails(
   item: ProductListing
 ): EquipmentDetails {
-  
+
 }
   return {}
         }}
@@ -53,7 +53,7 @@ export default function EquipmentDetail() {
 </>
   )
 }finally {
-  
+
   setIsAdding (false)
 }
 const inCart = items.some (item => item.id === equipment?.id)

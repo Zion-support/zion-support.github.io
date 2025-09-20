@@ -14,19 +14,16 @@ FormDescription;
 FormField;
 FormItem;
 FormLabel;
-<<<<<<< HEAD:src/components/profile/ServiceProviderRegistrationForm.tsx
 FormMessage,
 } from "@/components/ui/form, ";
 import { Card; CardContent; CardDescription; CardFooter; CardHeader, CardTitle } from "@/components/ui/card, ";
 import { X; Sparkles; Upload; Clock; Check; Briefcase; MapPin; UserRound, Globe } from "lucide-react, ";
-=======
 FormMessage } from "@/components/ui/form, ";
 import { Card; CardContent; CardDescription; CardFooter; CardHeader; CardTitle } from "@/components/ui/card, ";
 import { X; Sparkles; Upload; Clock; Check; Briefcase; MapPin; UserRound; Globe } from "lucide-react, ";
 FormLabel, FormMessage  } from "@/components/ui/form, ";
 import { Card; CardContent; CardDescription; CardFooter; CardHeader, CardTitle  } from "@/components/ui/card, ";
 import { X; Sparkles; Upload; Clock; Check; Briefcase; MapPin; UserRound, Globe  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/profile/ServiceProviderRegistrationForm.tsx
 import { toast } from "@/components/ui/use-toast, ";
 import { useAuth } from "@/hooks/useAuth, ";
 import { supabase } from "@/integrations/supabase/client, ";
@@ -1326,8 +1323,5 @@ service ";
 }</div> </div> <FormItem> <FormLabel className=" text-zion-slate-light">Starting Rate (USD) </FormLabel> <FormControl> <div className=" relative"> <span className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span> <Input /> </div> </FormControl> <FormDescription className=" text-zion-slate"> Your base hourly or project rate </FormDescription> <FormMessage className=" text-red-400"/> </FormItem>) ";
 }/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) ";
 }/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)
-<<<<<<< HEAD:src/components/profile/ServiceProviderRegistrationForm.tsx
 }'"}
-=======
 }""}
->>>>>>> pr-22703:temp-broken-files/components/profile/ServiceProviderRegistrationForm.tsx

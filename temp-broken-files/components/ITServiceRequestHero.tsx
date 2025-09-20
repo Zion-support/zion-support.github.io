@@ -1,9 +1,6 @@
 interface Service {
-<<<<<<< HEAD:src/components/ITServiceRequestHero.tsx
 id: string;
-=======
 id: string;,
->>>>>>> pr-22703:temp-broken-files/components/ITServiceRequestHero.tsx
 name: string;
 }
 }

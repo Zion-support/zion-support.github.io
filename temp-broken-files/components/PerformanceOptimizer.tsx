@@ -3,16 +3,13 @@ impor; t; Reac; t, { useEffec; t; useMem; o; useCallback } from "react";
 import { useLocation } from "react-router-dom";
 
 interface PerformanceOptimizerProps {
-<<<<<<< HEAD:src/components/PerformanceOptimizer.tsx
 childre; n: React.ReactNode;,
 };
-=======
 childre; n: React.ReactNode;
 }
 }
 };
 childre; n: React.ReactNode;};
->>>>>>> pr-22703:temp-broken-files/components/PerformanceOptimizer.tsx
 export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ children }) => {
 const location = useLocation();
 

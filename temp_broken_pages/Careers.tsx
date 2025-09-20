@@ -1,24 +1,18 @@
-<<<<<<< HEAD:temp_broken_pages/Careers.tsx
-<<<<<<< HEAD:temp_broken_pages/Careers.tsx
-<<<<<<< HEAD:src/pages/Careers.tsx
 import { SEO } from "@/components/SEO";,
 import { GradientHeading } from "@/components/GradientHeading";,
 import { Button } from "@/components/ui/button";,
 import { Card, CardContent } from "@/components/ui/card";,
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";,
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/Careers.tsx
 import Link from "next/link";
 import { CAREER_JOBS } from "@/data/careersJobs";
 
 export default function Careers() {
-<<<<<<< HEAD:temp_broken_pages/Careers.tsx
   return (
   return (
   return (
@@ -39,8 +33,6 @@ export default function Careers() {
     <>
       <SEO
         title='Careers at Zion - Join Our Team'
->>>>>>> 9ed9c11c4cc6835af67936874b7aa0ffe8bbcb03:temp_broken_pages/Careers.tsx
-=======
   const featuredJobs = CAREER_JOBS.filter(job => job.featured);
   const allJobs = CAREER_JOBS;
 
@@ -48,7 +40,6 @@ export default function Careers() {
     <>
       <SEO
         title='Careers at Zion - Join Our Team'
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/Careers.tsx
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
         keywords='Zion careers AI jobs tech careers remote work startup jobs'
         canonical='https://app.ziontechgroup.com/careers'
@@ -67,7 +58,7 @@ export default function Careers() {
               <TabsTrigger value="featured">Featured Positions</TabsTrigger>
               <TabsTrigger value="all">All Positions</TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value="featured" className="space-y-6">
               <div className="grid gap-6">
                 {featuredJobs.map((job) => (
@@ -101,7 +92,7 @@ export default function Careers() {
                 ))}
               </div>
             </TabsContent>
-            
+
             <TabsContent value="all" className="space-y-6">
               <div className="grid gap-6">
                 {allJobs.map((job) => (
@@ -131,7 +122,6 @@ export default function Careers() {
           </Tabs>
         </div>
       </main>
-<<<<<<< HEAD:temp_broken_pages/Careers.tsx
 </>
   )
 import React from 'react';
@@ -160,9 +150,6 @@ export default function Careers() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Careers.tsx
-=======
     </>
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/Careers.tsx
 }

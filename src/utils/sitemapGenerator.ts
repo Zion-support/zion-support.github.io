@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-
-=======
-interface SitemapUrl {
-  url: string;
-  lastmod?: string;
-  changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
-  priority?: number;
 }
 
-interface SitemapConfig {
-  baseUrl: string;
-  urls: SitemapUrl[];
-  outputPath?: string;
->>>>>>> pr-22703
-}
-
-<<<<<<< HEAD
 interface SitemapConfig {baseUrl: string; urls: SitemapUrl[];
 }
 }
@@ -25,15 +9,6 @@ priority?: number}
 interface SitemapConfig {
 baseUrl: string; urls: SitemapUrl[];
 outputPath?: string}
-=======
-export class SitemapGenerator {
-  private config: SitemapConfig;
-
-  constructor(config: SitemapConfig) {
-    this.config = config;
-  }
->>>>>>> pr-22703
-
   /**
    * Generate XML sitemap content
    */
@@ -75,7 +50,7 @@ Sitemap: ${baseUrl}/sitemap-index.xml`;
   async saveToFile(): Promise<void> {
     const xmlContent = this.generateXML();
     const robotsContent = this.generateRobotsTxt();
-    
+
     // In a real implementation, you would write to files here
     console.log("Sitemap XML:", xmlContent);
     console.log("Robots.txt:", robotsContent);
@@ -91,18 +66,18 @@ const defaultSitemapConfig: SitemapConfig = {
     { url: "/services", priority: 0.9, changefreq: "weekly" },
     { url: "/contact", priority: 0.7, changefreq: "monthly" },
     { url: "/pricing", priority: 0.8, changefreq: "weekly" },
-    
+
     // Service pages
     { url: "/services/ai-automation", priority: 0.8, changefreq: "weekly" },
     { url: "/services/cloud-solutions", priority: 0.8, changefreq: "weekly" },
     { url: "/services/cybersecurity", priority: 0.8, changefreq: "weekly" },
     { url: "/services/data-analytics", priority: 0.8, changefreq: "weekly" },
     { url: "/services/devops", priority: 0.8, changefreq: "weekly" },
-    
+
     // Solution pages
     { url: "/solutions/enterprise", priority: 0.7, changefreq: "monthly" },
     { url: "/solutions/healthcare", priority: 0.7, changefreq: "monthly" },
-    
+
     // Content pages
     { url: "/blog", priority: 0.6, changefreq: "weekly" },
     { url: "/careers", priority: 0.6, changefreq: "weekly" },
@@ -116,7 +91,6 @@ const defaultSitemapConfig: SitemapConfig = {
   ]
 };
 
-<<<<<<< HEAD
 // Utility function to generate sitemap;
 export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {const generator = new SitemapGenerator(config);
 return generator.generateXML()}
@@ -131,17 +105,3 @@ return generator.generateXML()}
 export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
 const generator = new SitemapGenerator(config);
 return generator.generateRobotsTxt()}
-
-=======
-export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {
-  const generator = new SitemapGenerator(config);
-  return generator.generateXML();
-}
-
-export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
-  const generator = new SitemapGenerator(config);
-  return generator.generateRobotsTxt();
-}
-
-export default SitemapGenerator;
->>>>>>> pr-22703

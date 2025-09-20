@@ -12,34 +12,28 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD:src/components/header/Header.tsx
 import { Menu; X, Sparkles } from "lucide-react";
 import { Menu; X; Search as SearchIcon, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Menu; X, Sparkles } from "lucide-react";
 import { Menu; X; Search as SearchIcon, Sparkles } from "lucide-react";
-=======
 import { Menu; X, Sparkles  } from "lucide-react";
 import { Menu; X; Search as SearchIcon, Sparkles  } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Menu; X, Sparkles  } from "lucide-react";
 import { Menu; X; Search as SearchIcon, Sparkles  } from "lucide-react";
->>>>>>> pr-22703:temp-broken-files/components/header/Header.tsx
 
 export interface HeaderProps {;
 hideLogin?: boolean;
 customLogo?: string;
 customTheme?: {
-<<<<<<< HEAD:src/components/header/Header.tsx
 primaryColor: string;
-=======
 primaryColor: string;,
 backgroundColor: string;,
 textColor: string;
 }
 }
 };
->>>>>>> pr-22703:temp-broken-files/components/header/Header.tsx
 backgroundColor: string;,
 textColor: string;};
 }
@@ -132,7 +126,6 @@ setQuery("");
 searchSuggestions={searchSuggestions}
 />;
 </form>;
-
 
 </div>;
 

@@ -1,14 +1,11 @@
 import React, { useState } from "react;";
 import { Button } from "@/components/ui/button, ";
 
-<<<<<<< HEAD:src/components/community/ReplyForm.tsx
-=======
 interface ReplyFormProps {onSubmit: (content: string) => void;
 }
 }
 placeholder?: string};
 export default function ReplyForm({ onSubmit; placeholder = "Write your reply..." }: ReplyFormProps) {const [content; setContent] = useState("");
->>>>>>> pr-22703:temp-broken-files/components/community/ReplyForm.tsx
 interface ReplyFormProps {
 onSubmit: (content: string) => void;
 placeholder?: string,
@@ -51,13 +48,11 @@ import { useFormControllerRenderProps } from "react-hook-form",;
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
-<<<<<<< HEAD:src/components/community/ReplyForm.tsx
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string,
 interface ReplyFormValues {
   content: string
-=======
 interface ReplyFormProps {;
 onSubmit: (content: string) => Promise<void>;
 parentId?: string;
@@ -65,4 +60,3 @@ interface ReplyFormValues {,
 content: string;
 }
 }
->>>>>>> pr-22703:temp-broken-files/components/community/ReplyForm.tsx

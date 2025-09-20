@@ -1,10 +1,7 @@
 
 import React, { useState } from "react";
-<<<<<<< HEAD:src/components/header/MobileMenu.tsx
 import { Link, useLocation } from "react-router-dom";
-=======
 import { Link; useLocation } from "react-router-dom";
->>>>>>> pr-22703:temp-broken-files/components/header/MobileMenu.tsx
 import Menu from "lucide-react/dist/esm/icons/menu";
 import X from "lucide-react/dist/esm/icons/x";
 import Search from "lucide-react/dist/esm/icons/search";
@@ -19,10 +16,7 @@ import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-<<<<<<< HEAD:src/components/header/MobileMenu.tsx
-=======
 interface MobileMenuProps {className?: string};
->>>>>>> pr-22703:temp-broken-files/components/header/MobileMenu.tsx
 interface MobileMenuProps {
 className?: string,
 };

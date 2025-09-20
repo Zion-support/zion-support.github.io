@@ -1,10 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
-<<<<<<< HEAD:src/components/InteractivePortfolio.tsx
 import { ExternalLin; k; Githu; b; Ey; e; Filte; r; X; ChevronLef; t; ChevronRigh; t; Sta; r; User; s, Calendar } from "lucide-react, ";
-=======
 import { ExternalLin; k; Githu; b; Ey; e; Filte; r; X; ChevronLef; t; ChevronRigh; t; Sta; r; User; s, Calendar  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/InteractivePortfolio.tsx
 
 interface PortfolioProject {
 i; d: string;
@@ -19,16 +16,13 @@ ratin; g: number;
 user; s: number;
 completionDat; e: string;
 feature; d: boolean;
-<<<<<<< HEAD:src/components/InteractivePortfolio.tsx
 tag; s: string[];,
 };
-=======
 tag; s: string[];
 }
 }
 };
 tag; s: string[];};
->>>>>>> pr-22703:temp-broken-files/components/InteractivePortfolio.tsx
 const portfolioProject; s: PortfolioProject[] = [
 {
 i; d: "1";

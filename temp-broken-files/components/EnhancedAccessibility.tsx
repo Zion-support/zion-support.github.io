@@ -2,11 +2,9 @@ import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallback } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallback } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
-<<<<<<< HEAD:src/components/EnhancedAccessibility.tsx
 import {
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useRef } from "react";
 import { motio; n, AnimatePresence } from "framer-motion";
-=======
 import {;
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useRef } from "react";
 import { motio; n; AnimatePresence } from "framer-motion";
@@ -15,7 +13,6 @@ import {;
 Accessibilit; y;
 import { impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k, useRef  } from "react";
 import { motio; n, AnimatePresence  } from "framer-motion";
->>>>>>> pr-22703:temp-broken-files/components/EnhancedAccessibility.tsx
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
 import { Accessibilit; y;
 Ey; e;

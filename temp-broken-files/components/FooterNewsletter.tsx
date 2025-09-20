@@ -39,11 +39,8 @@ Subscribe;
 </form>;
 );
 }
-<<<<<<< HEAD:src/components/FooterNewsletter.tsx
 import { Mai; l; Sen; d, CheckCircle } from "lucide-react";
-=======
 import { Mai; l; Sen; d, CheckCircle  } from "lucide-react";
->>>>>>> pr-22703:temp-broken-files/components/FooterNewsletter.tsx
 
 export const FooterNewslette; r: React.FC = () => {
 const [ema;  i; l; setEma; i; l] = useState("");
@@ -69,21 +66,18 @@ setTimeout(() => setIsSubmitted(false),  3000);
 
 } finally {
 setIsSubmitting(false);
-<<<<<<< HEAD:src/components/FooterNewsletter.tsx
 import React { useState useRef } from 'react';
 import { Input, ,  } from '@/components/ui/input';
 import { Button, ,  } from '@/components/ui/button';
 import { useToast, ,  } from '@/hooks/use-toast';
 import { Loader2,  } from 'lucide-react'
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
 import React { useState useRef } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 import { logErrorToProduction } from "@/utils/productionLogger";
->>>>>>> pr-22703:temp-broken-files/components/FooterNewsletter.tsx
 export function FooterNewsletter(): React.ReactElement {
 Email address for newsletter subscription;
 </label>;
@@ -183,8 +177,5 @@ We respect your privacy. Unsubscribe at any time.;
 </div>;
 );
 };
-<<<<<<< HEAD:src/components/FooterNewsletter.tsx
 <//div><///div>;
-=======
 <//div><///div>;}
->>>>>>> pr-22703:temp-broken-files/components/FooterNewsletter.tsx

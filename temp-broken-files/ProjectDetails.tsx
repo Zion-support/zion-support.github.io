@@ -20,7 +20,7 @@ import { Button,  } from "@/components/ui/button";
 >>>>>>>> pr-22690:temp-broken-files/ProjectDetails.tsx
 import { logErrorToProduction } from '@/utils/productionLogger';
 import {
-  
+
 return (
     <>
       <SEO
@@ -492,7 +492,7 @@ try {if (error) throw error;
 })
 toast ({
 }finally {
-  
+
   setIsSubmittingNote (false)
 }
 const handleStatusChange = async (newStatus: ProjectStatus) => {

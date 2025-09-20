@@ -1,23 +1,17 @@
-<<<<<<< HEAD:src/components/unused/Enhanced404Page.tsx
 import { Routes, Route } from "react-router-dom, ";
-=======
 import { Routes, Route  } from "react-router-dom, ";
->>>>>>> pr-22703:temp-broken-files/components/unused/Enhanced404Page.tsx
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { motion } from "framer-motion, ";
 import { HomeIcon;
 MagnifyingGlassIcon;
 ArrowLeftIcon;
-<<<<<<< HEAD:src/components/unused/Enhanced404Page.tsx
 ExclamationTriangleIcon,
 } from "@heroicons/react/24/outline, ";
-=======
 ExclamationTriangleIcon } from "@heroicons/react/24/outline, ";
 
 interface Enhanced404PageProps {requestedPath?: string;}
 ArrowLeftIcon, ExclamationTriangleIcon  } from "@heroicons/react/24/outline, ";
->>>>>>> pr-22703:temp-broken-files/components/unused/Enhanced404Page.tsx
 
 interface Enhanced404PageProps {
 requestedPath?: string;

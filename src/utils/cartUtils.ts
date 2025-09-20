@@ -1,14 +1,34 @@
-export const getCartKey: any = (userId?: string | null) => `cart_${userId || "guest"}`;
+export const getCartKey = (userId?: string | null) => `cart_${userId || "guest"}`;
 
-import type { CartItem } from "@/types/cart;";
+interface CartItem {
+  id: string;
+  name: string;
+  price: number;
+  quantity: number;
+  image?: string;
+}
 
-export function mergeCartItems(base: CartItem[] extra: CartItem[]): CartItem[] {
-const map = new Map<string, CartItem>(),
-base.forEach(i => map.set(i.id, { ...i }));
-extra.forEach(i => {
-const existing = map.get(i.id);
-if (existing) existing.quantity += i.quantity;
-else map.set(i.id, { ...i });
-});
-return Array.from(map.values());
+export function mergeCartItems(base: CartItem[], extra: CartItem[]): CartItem[] {
+  const map = new Map<string, CartItem>();
+  
+  base.forEach(item => map.set(item.id, { ...item }));
+  
+  extra.forEach(item => {
+    const existing = map.get(item.id);
+    if (existing) {
+      existing.quantity += item.quantity;
+    } else {
+      map.set(item.id, { ...item });
+    }
+  });
+  
+  return Array.from(map.values());
+}
+
+export function calculateCartTotal(items: CartItem[]): number {
+  return items.reduce((total, item) => total + (item.price * item.quantity), 0);
+}
+
+export function getCartItemCount(items: CartItem[]): number {
+  return items.reduce((count, item) => count + item.quantity, 0);
 }

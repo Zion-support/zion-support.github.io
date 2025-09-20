@@ -21,8 +21,5 @@ className={`${labelVariants()} ${className}`}
 
 Label.displayName = LabelPrimitive.Root.displayName;
 
-<<<<<<< HEAD:src/components/ui/label.tsx
 export { Label };
-=======
 export { Label };
->>>>>>> pr-22703:temp-broken-files/components/ui/label.tsx

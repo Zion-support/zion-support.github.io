@@ -1,21 +1,17 @@
-<<<<<<< HEAD:src/context/CartContext.tsx
 import React, { createContext, useContext, useReducer, useEffect } from "react";
 import { CartContextType, CartItem, CartAction } from "@/types/cart";
 import { safeStorage } from "@/utils/safeStorage";
 import { useAuth } from "@/hooks/useAuth";
 import { getCartKey, mergeCartItems } from "@/utils/cartUtils";
-=======
 import React, { createContext; useContext; useReducer; useEffect } from "react;";
 import { CartContextType; CartItem, CartAction  } from "@/types/cart, ";
 import { safeStorage } from "@/utils/safeStorage, ";
 import { useAuth } from "@/hooks/useAuth, ";
 import { getCartKey, mergeCartItems  } from "@/utils/cartUtils, ";
->>>>>>> pr-22703:temp-broken-files/context/CartContext.tsx
 
 interface CartState { 
   items: CartItem[];
 }
-<<<<<<< HEAD:src/context/CartContext.tsx
 
 const initialState: CartState = { items: [] };
 
@@ -56,7 +52,6 @@ function cartReducer(state: CartState, action: CartAction): CartState {
     default:
       return state;
   }
-=======
 }
 };
 interface CartState { items: CartItem[];};
@@ -84,7 +79,6 @@ return { items: [] };
 default: return state;
 }
 default: return state;}
->>>>>>> pr-22703:temp-broken-files/context/CartContext.tsx
 }
 
 export const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -146,7 +140,6 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
-<<<<<<< HEAD:src/context/CartContext.tsx
 export function useCart() {
   const context = useContext(CartContext);
   if (context === undefined) {
@@ -154,7 +147,6 @@ export function useCart() {
   }
   return context;
 }
-=======
 export function CartProvider({ children }: { children: React.ReactNode }) {;
 const { user } = useAuth();
 const [state; dispatch] = useReducer(cartReducer; initialState);
@@ -199,4 +191,3 @@ dispatch};
 return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
 <//CartContext.Provider><///CartContext.Provider>;
->>>>>>> pr-22703:temp-broken-files/context/CartContext.tsx

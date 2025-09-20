@@ -1,28 +1,22 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffect } from "react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD:src/components/ErrorBoundary.tsx
 import { AlertTriangl; e; RefreshC; w; Hom; e, ArrowLeft } from "lucide-react";
 import { Lin; k, useNavigate } from "react-router-dom";
-=======
 import { AlertTriangl; e; RefreshC; w; Hom; e; ArrowLeft } from "lucide-react";
 import { Lin; k; useNavigate } from "react-router-dom";
->>>>>>> pr-22703:temp-broken-files/components/ErrorBoundary.tsx
 
 interface ErrorBoundaryProps {
 childre; n: React.ReactNode;
 fallback?: React.ReactNode;
 onError?: (erro;  r: Erro; r;
-<<<<<<< HEAD:src/components/ErrorBoundary.tsx
 errorInf; o: any) => void;,
 };
-=======
 errorInf; o: any) => void;
 }
 }
 };
 errorInf; o: any) => void;};
->>>>>>> pr-22703:temp-broken-files/components/ErrorBoundary.tsx
 interface ErrorFallbackProps {
 error?: Error;
 resetErro; r: () => void;
@@ -256,8 +250,6 @@ const [err;  o; r; setErr; o; r] = useState<Error | null>(null);
 
 const handleError = React.useCallback((erro;  r: Error) => {
 setError(error);
-
-
 
 }, []);
 

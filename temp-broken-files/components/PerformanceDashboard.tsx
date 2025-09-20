@@ -1,16 +1,13 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
-<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
 import { motio; n, AnimatePresence } from "framer-motion, ";
 import { usePerformance } from "@/hooks/usePerformance, ";
 import { Button } from "@/components/ui/button, ";
 import { Car; d; CardConten; t; CardHeade; r, CardTitle } from "@/components/ui/card, ";
-=======
 import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { usePerformance } from "@/hooks/usePerformance, ";
 import { Button } from "@/components/ui/button, ";
 import { Car; d; CardConten; t; CardHeade; r, CardTitle  } from "@/components/ui/card, ";
->>>>>>> pr-22703:temp-broken-files/components/PerformanceDashboard.tsx
 import { Badge } from "@/components/ui/badge, ";
 import Activity from "lucide-react/dist/esm/icons/activity;";
 import Zap from "lucide-react/dist/esm/icons/zap;";
@@ -27,12 +24,9 @@ import { cn } from "@/lib/utils, ";
 interface PerformanceDashboardProps {
 className?: string;
 showDetails?: boolean;
-<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
 onClose?: () => void;
-=======
 }
 onClose?: () => void;}
->>>>>>> pr-22703:temp-broken-files/components/PerformanceDashboard.tsx
 };
 export function PerformanceDashboard({ ;
 classNam;  e;
@@ -54,24 +48,18 @@ if (score >= 70) return "⚠️";
 return "🐌";
 };
 
-<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
 const getMetricIcon: any = (metricNam;  e: string) => {
 const icon; s: Record<strin; g; React.ReactNode> = {
-=======
 const getMetricIcon: any = (metricNam;  e: string) => {const icon; s: Record<strin; g; React.ReactNode> = {
->>>>>>> pr-22703:temp-broken-files/components/PerformanceDashboard.tsx
 FC; P: <Eye className="w-4 h-4" />;
 LC; P: <Eye className="w-4 h-4" />;
 FI; D: <MousePointer className="w-4 h-4" />;
 CL; S: <BarChart3 className="w-4 h-4" />;
 TTF; B: <Clock className="w-4 h-4" />;
 DOMLOA; D: <Activity className="w-4 h-4" />;
-<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
 WINDOWLOA; D: <Activity className="w-4 h-4" />,
 };
-=======
 WINDOWLOA; D: <Activity className="w-4 h-4" />};
->>>>>>> pr-22703:temp-broken-files/components/PerformanceDashboard.tsx
 return icons[metricNa; m; e] || <Activity className="w-4 h-4" />;
 };
 
@@ -253,16 +241,13 @@ healthStatus: "healthy" | "warning" | "error";
 interface Improvement {
 id: string;
 title: string;
-<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
   description: string;,
 status: 'completed' | 'in-progress' | 'planned';
   impact: 'high' | 'medium' | 'low';,
 category: 'performance' | 'security' | 'ux' | 'build'
-=======
 description: string;
 status: "completed" | "in-progress" | "planned";,
 impact: "high" | "medium" | "low";,
 category: "performance" | "security" | "ux" | "build";
 }
 }
->>>>>>> pr-22703:temp-broken-files/components/PerformanceDashboard.tsx

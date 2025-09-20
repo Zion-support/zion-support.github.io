@@ -1,64 +1,98 @@
+// Performance monitoring utilities
 
-id: string;,
-name: string;
+export class PerformanceMonitor {
+  private static instance: PerformanceMonitor
+  private metrics: Map<string, number> = new Map()
+  private observers: PerformanceObserver[] = []
+
+  static getInstance(): PerformanceMonitor {
+    if (!PerformanceMonitor.instance) {
+      PerformanceMonitor.instance = new PerformanceMonitor()
+    }
+    return PerformanceMonitor.instance
+  }
+
+  startTiming(name: string): void {
+    this.metrics.set(name, performance.now())
+  }
+
+  endTiming(name: string): number {
+    const startTime = this.metrics.get(name)
+    if (!startTime) {
+      console.warn(`No start time found for metric: ${name}`)
+      return 0
+    }
+
+    const duration = performance.now() - startTime
+    this.metrics.delete(name)
+
+    // Log performance metric
+    console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`)
+
+    return duration
+  }
+
+  measurePageLoad(): void {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('load', () => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        if (navigation) {
+          console.log('Page Load Performance:', {
+            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+            totalTime: navigation.loadEventEnd - navigation.fetchStart
+          })
+        }
+      })
+    }
+  }
+
+  measureResourceTiming(): void {
+    if (typeof window !== 'undefined') {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          console.log('Resource Performance:', {
+            name: entry.name,
+            duration: entry.duration,
+            transferSize: (entry as any).transferSize || 0
+          })
+        }
+      })
+
+      observer.observe({ entryTypes: ['resource'] })
+      this.observers.push(observer)
+    }
+  }
+
+  cleanup(): void {
+    this.observers.forEach(observer => observer.disconnect())
+    this.observers = []
+  }
 }
+
+export const performanceMonitor = PerformanceMonitor.getInstance()
+
+// Web Vitals monitoring
+export const measureWebVitals = (onPerfEntry?: (metric: any) => void) => {
+  if (onPerfEntry && typeof window !== 'undefined') {
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      getCLS(onPerfEntry)
+      getFID(onPerfEntry)
+      getFCP(onPerfEntry)
+      getLCP(onPerfEntry)
+      getTTFB(onPerfEntry)
+    })
+  }
 }
+// Memory usage monitoring
+export const getMemoryUsage = () => {
+  if (typeof window !== 'undefined' && 'memory' in performance) {
+    const memory = (performance as any).memory
+    return {
+      used: memory.usedJSHeapSize,
+      total: memory.totalJSHeapSize,
+      limit: memory.jsHeapSizeLimit
+    }
+  }
+  return null
 }
-
-/**;
-* Performance utilities for measuring and optimizing app performance;
-*/;
-
-export const measurePerformance: any = (name: string, fn: () => void) => {
-const start = performance.now();
-fn();
-const end = performance.now();
-console.log(`${name} took ${end - start} milliseconds`);
-};
-
-export const debounce = <T extends (...args: any[]) => any>(;,
-<<<<<<< HEAD
-func: T; wait: number): ((...args: Parameters<T>) => void) => {let timeout: globalThis.Timeout;
-=======
-func: T, wait: number): ((...args: Parameters<T>) => void) => {let timeout: globalThis.Timeout;
->>>>>>> pr-22703
-return (...args: Parameters<T>) => {
-clearTimeout(timeout);
-timeout = setTimeout(() => func(...args), wait)};
-};
-
-export const throttle = <T extends (...args: any[]) => any>(;,
-<<<<<<< HEAD
-func: T; limit: number): ((...args: Parameters<T>) => void) => {let inThrottle: boolean;
-=======
-func: T, limit: number): ((...args: Parameters<T>) => void) => {let inThrottle: boolean;
->>>>>>> pr-22703
-return (...args: Parameters<T>) => {
-if (!inThrottle) {
-func(...args);
-inThrottle = true;
-setTimeout(() => (inThrottle = false), limit)}
-};
-};
-
-export const getPerformanceMetrics: any = () => {;
-const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
-const paint = performance.getEntriesByType("paint");
-<<<<<<< HEAD
-return {
-loadTime: navigation.loadEventEnd - navigation.loadEventStart; domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
-return {,
-loadTime: navigation.loadEventEnd - navigation.loadEventStart; domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;,
-=======
-return {,
-loadTime: navigation.loadEventEnd - navigation.loadEventStart, domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;,
->>>>>>> pr-22703
-firstPaint: paint.find(entry => entry.name === "first-paint")?.startTime || 0; firstContentfulPaint: paint.find(entry => entry.name === "first-contentful-paint")?.startTime || 0};
-};
-
-export const logPerformanceMetrics: any = () => {;
-const metrics = getPerformanceMetrics();
-console.log("Performance Metrics:", metrics)};
-// TypeScript file;
-export const placeholder = "placeholder";
-

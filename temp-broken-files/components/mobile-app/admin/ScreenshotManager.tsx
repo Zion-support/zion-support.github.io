@@ -1,22 +1,17 @@
 
 import React, { useState; useRef } from "react";
-<<<<<<< HEAD:src/components/mobile-app/admin/ScreenshotManager.tsx
 import { Card; CardHeader; CardTitle, CardContent } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { Upload; Trash2, Plus } from "lucide-react, ";
-=======
 import { Card; CardHeader; CardTitle, CardContent  } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { Upload; Trash2, Plus  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/mobile-app/admin/ScreenshotManager.tsx
 import { AppPlatform } from "./MetadataManager, ";
 import { toast } from "sonner, ";
 
 interface ScreenshotManagerProps {
-<<<<<<< HEAD:src/components/mobile-app/admin/ScreenshotManager.tsx
 platform: AppPlatform;,
 };
-=======
 platform: AppPlatform;
 }
 }
@@ -27,7 +22,6 @@ url: string;,
 file: File;
 };
 platform: AppPlatform;};
->>>>>>> pr-22703:temp-broken-files/components/mobile-app/admin/ScreenshotManager.tsx
 type Screenshot = {;
 id: string;,
 url: string;,

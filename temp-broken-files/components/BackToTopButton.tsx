@@ -1,9 +1,6 @@
 interface Service {
-<<<<<<< HEAD:src/components/BackToTopButton.tsx
 id: string;
-=======
 id: string;,
->>>>>>> pr-22703:temp-broken-files/components/BackToTopButton.tsx
 name: string;
 }
 }
@@ -58,7 +55,4 @@ visible ? "opacity-100" : "opacity-0 pointer-events-none";
 </button>;
 )
 }"}
-<<<<<<< HEAD:src/components/BackToTopButton.tsx
-=======
 )
->>>>>>> pr-22703:temp-broken-files/components/BackToTopButton.tsx

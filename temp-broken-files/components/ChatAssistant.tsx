@@ -1,12 +1,9 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
-<<<<<<< HEAD:src/components/ChatAssistant.tsx
 import { motio; n, AnimatePresence } from "framer-motion";
 import { MessageCircl; e; Sen; d; X; Bo; t, User } from "lucide-react";
-=======
 import { motio; n, AnimatePresence  } from "framer-motion";
 import { MessageCircl; e; Sen; d; X; Bo; t, User  } from "lucide-react";
->>>>>>> pr-22703:temp-broken-files/components/ChatAssistant.tsx
 
 interface ChatAssistantProps {
 isOpen?: boolean;
@@ -15,12 +12,10 @@ recipient?: {
 i;  d: string;
 nam; e: string;
 avatarUr; l: string;
-<<<<<<< HEAD:src/components/ChatAssistant.tsx
 rol; e: string;,
 };
 onSendMessage?: (messag; e: string) => Promise<void>;,
 }
-=======
 rol; e: string;
 }
 }
@@ -29,7 +24,6 @@ onSendMessage?: (messag; e: string) => Promise<void>;
 }
 rol; e: string;};
 onSendMessage?: (messag; e: string) => Promise<void>;}
->>>>>>> pr-22703:temp-broken-files/components/ChatAssistant.tsx
 
 export function ChatAssistant({ ;
 isOpe;  n: externalIsOpe; n;

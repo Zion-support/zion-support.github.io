@@ -1,25 +1,19 @@
 import React, { useState } from "react;";
-<<<<<<< HEAD:src/components/ui/FuturisticServicesShowcase.tsx
 import { motion, AnimatePresence } from "framer-motion, ";
 import { Brain; Zap; Shield; Globe; Rocket; Star;
 ArrowRight; CheckCircle; TrendingUp; Users; Award;
 } from "lucide-react, ";
-=======
 import { motion, AnimatePresence  } from "framer-motion, ";
 import { Brain; Zap; Shield; Globe; Rocket; Star;
 ArrowRight; CheckCircle; TrendingUp; Users; Award} from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/ui/FuturisticServicesShowcase.tsx
 
 interface Service {
 id: string;
 name: string;
 description: string;
 icon: React.ReactNode;
-<<<<<<< HEAD:src/components/ui/FuturisticServicesShowcase.tsx
 color: string;
-=======
 color: string;,
->>>>>>> pr-22703:temp-broken-files/components/ui/FuturisticServicesShowcase.tsx
 price: string;,
 features: string[];
 }

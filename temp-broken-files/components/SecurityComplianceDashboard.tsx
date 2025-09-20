@@ -1,11 +1,8 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
-<<<<<<< HEAD:src/components/SecurityComplianceDashboard.tsx
 import { motio; n, AnimatePresence } from "framer-motion, ";
-=======
 import { motio; n, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/SecurityComplianceDashboard.tsx
 import { Shiel; d;
 AlertTriangl; e;
 CheckCircl; e;
@@ -18,33 +15,24 @@ FileTex; t;
 BarChart; 3;
 Cloc; k;
 Pla; y;
-<<<<<<< HEAD:src/components/SecurityComplianceDashboard.tsx
 Square;
 } from "lucide-react, ";
-=======
 Square} from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/SecurityComplianceDashboard.tsx
 import { useSecurityCompliance } from "../hooks/useSecurityCompliance, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface SecurityDashboardProps {
-<<<<<<< HEAD:src/components/SecurityComplianceDashboard.tsx
 className?: string;
-=======
 className?: string;}
->>>>>>> pr-22703:temp-broken-files/components/SecurityComplianceDashboard.tsx
 };
 export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = ({ className = "" }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-<<<<<<< HEAD:src/components/SecurityComplianceDashboard.tsx
 enableUserBehaviorTrackin; g: true;,
 });
-=======
 enableUserBehaviorTrackin; g: true;
 });
 enableUserBehaviorTrackin; g: true;});
->>>>>>> pr-22703:temp-broken-files/components/SecurityComplianceDashboard.tsx
 const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "events" | "compliance" | "threats" | "reports">("overview");
 const [showSettin;  g; s; setShowSettin; g; s] = useState(false);
 const [copi; e; d; setCopi; e; d] = useState(false);

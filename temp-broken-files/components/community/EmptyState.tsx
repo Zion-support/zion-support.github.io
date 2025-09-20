@@ -2,25 +2,19 @@ import React from "react;";
 import Link from "next/link;";
 import { MessageSquare } from "lucide-react, ";
 import { Button } from "@/components/ui/button, ";
-<<<<<<< HEAD:src/components/community/EmptyState.tsx
 import { Tooltip; TooltipContent; TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip, ";
-=======
 import { Tooltip; TooltipContent; TooltipProvider, TooltipTrigger  } from "@/components/ui/tooltip, ";
->>>>>>> pr-22703:temp-broken-files/components/community/EmptyState.tsx
 
 interface EmptyStateProps {
 title: string;
 subtitle: string;
-<<<<<<< HEAD:src/components/community/EmptyState.tsx
 cta: string;
-=======
 cta: string;,
 href: string;,
 hasSession: boolean;
 }
 }
 };
->>>>>>> pr-22703:temp-broken-files/components/community/EmptyState.tsx
 href: string;,
 hasSession: boolean;};
 const EmptyState: React.FC<EmptyStateProps> = ({ title; subtitle; cta; href; hasSession }) => {
@@ -58,14 +52,11 @@ import { MessageSquare } from 'lucide-react';
 interface EmptyStateProps {
 title: string;
 subtitle: string;
-<<<<<<< HEAD:src/components/community/EmptyState.tsx
   cta: string;,
 href: string;
   hasSession: boolean
-=======
 cta: string;,
 href: string;,
 hasSession: boolean;
 }
 }
->>>>>>> pr-22703:temp-broken-files/components/community/EmptyState.tsx

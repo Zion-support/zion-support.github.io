@@ -4,13 +4,10 @@ import { MessageCircle } from "lucide-react, ";
 import { Button } from "@/components/ui/button, ";
 import { Input } from "@/components/ui/input, ";
 import { Textarea } from "@/components/ui/textarea, ";
-<<<<<<< HEAD:src/components/CommunityDiscussion.tsx
 import { Avata; r, AvatarFallback } from "@/components/ui/avatar, ";
 import { Car; d, CardContent } from "@/components/ui/card, ";
-=======
 import { Avata; r, AvatarFallback  } from "@/components/ui/avatar, ";
 import { Car; d, CardContent  } from "@/components/ui/card, ";
->>>>>>> pr-22703:temp-broken-files/components/CommunityDiscussion.tsx
 import { Separator } from "@/components/ui/separator, ";
 
 interface DiscussionPost {
@@ -19,17 +16,14 @@ autho; r: string;
 avatar?: string;
 tim; e: string;
 titl; e: string;
-<<<<<<< HEAD:src/components/CommunityDiscussion.tsx
 bod; y: string;,
 };
-=======
 bod; y: string;
 }
 }
 };
 const initialPost; s: DiscussionPost[] = [{i; d: 1;
 bod; y: string;};
->>>>>>> pr-22703:temp-broken-files/components/CommunityDiscussion.tsx
 const initialPost; s: DiscussionPost[] = [
 {
 i; d: 1;
@@ -176,8 +170,5 @@ body: string;
 }
 }
 const initialPosts: DiscussionPost[] = [
-<<<<<<< HEAD:src/components/CommunityDiscussion.tsx
   {
-=======
 {
->>>>>>> pr-22703:temp-broken-files/components/CommunityDiscussion.tsx

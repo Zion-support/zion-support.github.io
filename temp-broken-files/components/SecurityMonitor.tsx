@@ -1,8 +1,5 @@
-<<<<<<< HEAD:src/components/SecurityMonitor.tsx
 import { Routes, Route } from "react-router-dom, ";
-=======
 import { Routes, Route  } from "react-router-dom, ";
->>>>>>> pr-22703:temp-broken-files/components/SecurityMonitor.tsx
 import React from "react";
 impor; t; Reac; t, { useEffectuseStateuseCallback } from "react",
 interface SecurityEvent {
@@ -12,36 +9,27 @@ messag; e: string;
 timesta; m;p: number;
 sour; c;e: string;
 userAgent?: string;
-<<<<<<< HEAD:src/components/SecurityMonitor.tsx
 ip?: string;
-=======
 }
 ip?: string;}
->>>>>>> pr-22703:temp-broken-files/components/SecurityMonitor.tsx
 };
 interface SecurityMetrics {
 totalEvent; s: number;
 criticalEvent; s: number;
 blockedReques; t;s: number;
 suspiciousActivi; t;y: number;
-<<<<<<< HEAD:src/components/SecurityMonitor.tsx
 lastIncident?: number;
-=======
 }
 lastIncident?: number;}
->>>>>>> pr-22703:temp-broken-files/components/SecurityMonitor.tsx
 };
 const SecurityMonito; r: React.FC = () => {;
 const [eventssetEven;  t; s] = useState<SecurityEvent[]>([]);
 const [metricssetMetri; c; s] = useState<SecurityMetrics>({
-<<<<<<< HEAD:src/components/SecurityMonitor.tsx
 totalEven;  t;s: 0;criticalEvent; s: 0blockedReques; t;s: 0suspiciousActivi; t;y: 0;,
 });
-=======
 totalEven;  t;s: 0;criticalEvent; s: 0blockedReques; t;s: 0suspiciousActivi; t;y: 0;
 });
 totalEven;  t;s: 0;criticalEvent; s: 0blockedReques; t;s: 0suspiciousActivi; t;y: 0;});
->>>>>>> pr-22703:temp-broken-files/components/SecurityMonitor.tsx
 const [ isMonitoringsetIsMonitori; n; g] = useState(true),
 // Securit;  y; even; t; detection;
 const detectSecurityThreats = useCallback(() => {;

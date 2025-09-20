@@ -1,16 +1,13 @@
 import React from "react";
-<<<<<<< HEAD:src/components/layout/MainSidebar.tsx
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import {
 Home;
-=======
 import { Link, useLocation  } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import {;
 Home;
 import { Home;
->>>>>>> pr-22703:temp-broken-files/components/layout/MainSidebar.tsx
 Briefcase;
 Users;
 Settings;

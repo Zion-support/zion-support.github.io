@@ -1,8 +1,6 @@
 import React, { useState; useEffect; useRef } from "react;";
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
 import { Search; X, ArrowDown } from "lucide-react, ";
 
-=======
 import { Search; X; ArrowDown } from "lucide-react, ";
 
 interface SearchSuggestion {id: string; title: string; type: "service" | "talent" | "equipment";
@@ -13,7 +11,6 @@ interface EnhancedSearchInputProps {placeholder?: string;
 onSearch?: (query: string) => void;
 }
 suggestions?: SearchSuggestion[];}
->>>>>>> pr-22703:temp-broken-files/components/search/EnhancedSearchInput.tsx
 interface SearchSuggestion {
 id: string; title: string; type: "service" | "talent" | "equipment";
 description?: string,
@@ -295,8 +292,6 @@ listId="autocomplete-suggestions-list";
 </div>;
 )
 }
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
-=======
 }
 return (<div,
 className="relative w-full"
@@ -343,4 +338,3 @@ listId="autocomplete-suggestions-list";
 </div>;
 )
 };
->>>>>>> pr-22703:temp-broken-files/components/search/EnhancedSearchInput.tsx

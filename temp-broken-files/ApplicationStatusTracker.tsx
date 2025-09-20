@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> pr-22703
 import { SEO } from '@/components/SEO';
 import { ApplicationsTracker } from '@/components/jobs/applications';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -11,7 +8,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile();
-  
+
   return (
     <>
       <SEO
@@ -19,7 +16,6 @@ function ApplicationStatusTrackerContent() {
         description='Track the status of your job applications in the Zion AI marketplace.'
       />
       <div className='container mx-auto px-4 py-8'>
-<<<<<<< HEAD
         <div className='mb-8'>
           <h1 className='text-3xl font-bold text-white mb-2'>Application Status Tracker</h1>
           <p className='text-gray-300'>
@@ -62,32 +58,7 @@ function ApplicationStatusTrackerContent() {
           </Card>
         </div>
 
-        <ApplicationsTracker />
-=======
-        <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>
-          <div>
-            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>
-              Application Status Tracker
-            </h1>
-            <p className='text-muted-foreground mt-1'>
-              Track where you stand in the hiring process
-            </p>
-          </div>
-        </div>
-        <div className='grid grid-cols-1 gap-6'>
-          <Card>
-            <CardHeader className='border-b bg-muted/50'>
-              <CardTitle className='flex items-center text-lg'>
-                <Inbox className='mr-2 h-5 w-5' /> Your Applications
-              </CardTitle>
-            </CardHeader>
-            <CardContent className={`p-${isMobile ? '3' : '6'}`}>
-              <ApplicationsTracker />
-            </CardContent>
-          </Card>
-        </div>
->>>>>>> pr-22703
-      </div>
+        <ApplicationsTracker />      </div>
     </>
   );
 }

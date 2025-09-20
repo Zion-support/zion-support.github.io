@@ -1,14 +1,6 @@
 import React from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD:src/pages/PublicTalentProfilePage.tsx
-import { useState; useEffect } from "react";,
-=======
-<<<<<<< HEAD:temp_broken_pages_all/PublicTalentProfilePage.tsx
-=======
-<<<<<<<< HEAD:temp_broken_pages_all/PublicTalentProfilePage.tsx
->>>>>>> pr-22703
-import { useState, useEffect } from "react";,
+import { useState; useEffect } from "react";,import { useState, useEffect } from "react";,
 import { useRouter } from "next/router";,
 import { supabase } from "@/integrations/supabase/client";,
 import { toast } from "@/components/ui/use-toast";,

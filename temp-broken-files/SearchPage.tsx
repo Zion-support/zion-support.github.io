@@ -19,7 +19,7 @@ import { Tabs;
 , , TabsTrigger } from "@/components/ui/tabs";
 import { Loader2 } from "lucide-react";
 interface SearchResult {
-  
+
 description: string;
 }
 }
@@ -146,13 +146,13 @@ key={`blog-${r.id}`}
 if (query.trim () ) {
   fetchResults (query.trim () )
 }else {
-  
+
   setResults ([])
 }, [router.isReady query]), //Fixed dependency array const fetchResults = async (term: string) => {if (!term.trim () ) {
   setResults ([])
 return}setLoading (true)
 try {
-  
+
   const res = await fetch (`/api/search?query=$ {
   encodeURIComponent (term)
 }`)
@@ -160,7 +160,7 @@ const data = await res.json ()
 if (data && data.results && Array.isArray (data.results) ) {
   setResults (data.results)
 }else {
-  
+
   ;
   ;
   ;
@@ -174,7 +174,7 @@ logErrorToProduction ('Search API response structure is not as expected:', {
 })
 setResults ([])
 }finally {
-  
+
   setLoading (false)
 }
 const handleSubmit = (e: React.FormEvent) => {

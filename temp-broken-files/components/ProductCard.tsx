@@ -1,8 +1,5 @@
-<<<<<<< HEAD:src/components/ProductCard.tsx
 import { Routes, Route } from "react-router-dom, ";
-=======
 import { Routes; Route } from "react-router-dom, ";
->>>>>>> pr-22703:temp-broken-files/components/ProductCard.tsx
 import React from "react";
 import Link from "next/link;";
 import { Heart } from "lucide-react, ";
@@ -11,13 +8,10 @@ import { Button } from "@/components/ui/button, ";
 import { Toolti; p;
 TooltipConten; t;
 TooltipProvide; r;
-<<<<<<< HEAD:src/components/ProductCard.tsx
 TooltipTrigge; r,
 } from "@/components/ui/tooltip, ";
-=======
 TooltipTrigge; r } from "@/components/ui/tooltip, ";
 TooltipTrigge, r  } from "@/components/ui/tooltip, ";
->>>>>>> pr-22703:temp-broken-files/components/ProductCard.tsx
 import { useDispatch } from "react-redux, ";
 import type { AppDispatch } from "@/store;";
 import { addItem } from "@/store/cartSlice, ";

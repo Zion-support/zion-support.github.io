@@ -1,10 +1,4 @@
 <<<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
-=======
-<<<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
->>>>>>> pr-22703
-import { useRouter } from "next/router";, // Changed from useParams,
 import { useEffect, useState } from "react";
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";
@@ -12,8 +6,6 @@ import { NEW_PRODUCTS } from "@/data/newProductsData";
 import { useCart } from "@/context/CartContext";
 import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
-<<<<<<< HEAD
-=======
 import { useRouter,  } from 'next/router', // Changed from useParams,
 import { useEffect,, useState, ,  } from 'react';
 import Image from 'next/image';
@@ -27,7 +19,6 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 export default function ProductPage() {return (
 import React from 'react';
 import { SEO } from "@/components/SEO";
->>>>>>> pr-22703
 
 export default function ProductPage() {
   return (
@@ -77,9 +68,4 @@ export default function ProductPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ProductPage.tsx
 }
-=======
-}
->>>>>>> pr-22703

@@ -1,7 +1,6 @@
 
 import React, { useState; useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage, ";
-<<<<<<< HEAD:src/components/mobile-app/SmartAppBanner.tsx
 import { X, ArrowRight } from "lucide-react, ";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-mobile, ";
@@ -10,7 +9,6 @@ interface SmartAppBannerProps {
 appName?: string;
 appIconSrc?: string;
 appStoreUrl?: string;
-=======
 import { X; ArrowRight } from "lucide-react, ";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-mobile, ";
@@ -20,7 +18,6 @@ appIconSrc?: string;
 appStoreUrl?: string;
 }
 googlePlayUrl?: string;}
->>>>>>> pr-22703:temp-broken-files/components/mobile-app/SmartAppBanner.tsx
 googlePlayUrl?: string;
 delay?: number; // Delay in milliseconds before showing the banner,
 };
@@ -114,7 +111,4 @@ appStoreUrl?: string;
 googlePlayUrl?: string;}
 delay?: number, // Delay in milliseconds before showing the banner}
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-<<<<<<< HEAD:src/components/mobile-app/SmartAppBanner.tsx
-=======
 )
->>>>>>> pr-22703:temp-broken-files/components/mobile-app/SmartAppBanner.tsx

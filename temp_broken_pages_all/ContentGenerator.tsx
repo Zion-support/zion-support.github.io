@@ -1,5 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/ContentGenerator.tsx
-<<<<<<< HEAD:temp_broken_pages_all/ContentGenerator.tsx
 import React { useState useEffect } from 'react';
 import { Header } from "@/components/Header";,
 import { Button } from "@/components/ui/button";,
@@ -35,12 +33,10 @@ if (isLoading) {
     )
   }
 
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
 export default function ContentGenerator() {
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/ContentGenerator.tsx
   return (
     <>
       <SEO
@@ -53,7 +49,6 @@ export default function ContentGenerator() {
           <p className="text-gray-300">AI-powered content generation tools coming soon...</p>
         </div>
       </div>
-<<<<<<< HEAD:temp_broken_pages_all/ContentGenerator.tsx
 </>
   )
 }
@@ -68,9 +63,6 @@ export default function ContentGenerator() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ContentGenerator.tsx
-=======
     </>
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/ContentGenerator.tsx
 }

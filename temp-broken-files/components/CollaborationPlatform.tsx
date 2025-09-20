@@ -1,10 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
-<<<<<<< HEAD:src/components/CollaborationPlatform.tsx
 import { Vide; o; VideoOf; f; Mi; c; MicOf; f; Monito; r; Share; 2; User; s; MessageSquar; e; Setting; s; X; Maximize; 2; Minimize; 2; Phon; e, PhoneOff } from "lucide-react, ";
-=======
 import { Vide; o; VideoOf; f; Mi; c; MicOf; f; Monito; r; Share; 2; User; s; MessageSquar; e; Setting; s; X; Maximize; 2; Minimize; 2; Phon; e, PhoneOff  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/CollaborationPlatform.tsx
 
 interface Participant {
 i; d: string;
@@ -13,16 +10,13 @@ isVideoO; n: boolean;
 isAudioO; n: boolean;
 isScreenSharin; g: boolean;
 isSpeakin; g: boolean;
-<<<<<<< HEAD:src/components/CollaborationPlatform.tsx
 avata; r: string;,
 };
-=======
 avata; r: string;
 }
 }
 };
 avata; r: string;};
->>>>>>> pr-22703:temp-broken-files/components/CollaborationPlatform.tsx
 const mockParticipant; s: Participant[] = [
 { i; d: "1";
 na; m; e: "Joh; n Smit; h", isVideo; O; n: tr; u; e;

@@ -1,22 +1,16 @@
 import React from "react";
-<<<<<<< HEAD:src/components/profile/AvatarUpload.tsx
 import { useState, useEffect } from "react, ";
-=======
 import { useState, useEffect  } from "react, ";
->>>>>>> pr-22703:temp-broken-files/components/profile/AvatarUpload.tsx
 import { CldUploadButton } from "next-cloudinary, ";
 
 type Props = {;
 value?: string;
-<<<<<<< HEAD:src/components/profile/AvatarUpload.tsx
 onChange?: (url: string) => void,
 };
 
-=======
 onChange?: (url: string) => void};
 
 export function AvatarUpload({ value; onChange }: Props) {const [url; setUrl] = useState(value);
->>>>>>> pr-22703:temp-broken-files/components/profile/AvatarUpload.tsx
 export function AvatarUpload({ value; onChange }: Props) {
 const [url, setUrl] = useState(value);
 const handleUpload: any = (result: any) => {;

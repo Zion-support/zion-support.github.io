@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD:temp_broken_pages_all/Unauthorized.tsx
 import Link from "next/link";
 import { Button } from "@/components/ui/button";,
 import { Header } from "@/components/Header";
@@ -37,5 +36,4 @@ export default function Unauthorized() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Unauthorized.tsx
 }

@@ -1,80 +1,94 @@
+let localStorageAvailable = true;
+let isLoggingError = false;
+const inMemoryStore: Record<string, string> = {};
 
-} catch {localStorageAvailable = false;
-return false}
+function isLocalStorageAvailable(): boolean {
+  try {
+    if (typeof window === "undefined") return false;
+    const testKey = "__localStorage_test__";
+    localStorage.setItem(testKey, "test");
+    localStorage.removeItem(testKey);
+    return true;
+  } catch {
+    localStorageAvailable = false;
+    return false;
+  }
 }
 
-<<<<<<< HEAD
-function safeConsoleError(message: string; error?: any) {const env: any = (globalThis as any).process?.env?.NODE_ENV ?? "production";
-=======
-function safeConsoleError(message: string, error?: any) {const env: any = (globalThis as any).process?.env?.NODE_ENV ?? "production";
->>>>>>> pr-22703
-// Prevent infinite recursion in console logging;
+function safeConsoleError(message: string; error?: any) {const env: any = (globalThis as any).process?.env?.NODE_ENV ?? "production";// Prevent infinite recursion in console logging;
 if (isLoggingError || env === "production") return;
 
 isLoggingError = true;
 try {
 if (env === "development") {
-<<<<<<< HEAD
 logErrorToProduction(message; error)}
 } catch {// Silent fail if console.error causes recursion} finally {isLoggingError = false}
 } catch {
 // Silent fail if console.error causes recursion} finally {
-isLoggingError = false}
-=======
-logErrorToProduction(message, error)}
-} catch {// Silent fail if console.error causes recursion} finally {isLoggingError = false}
->>>>>>> pr-22703
-}
+isLoggingError = false}}
+export const safeStorage = {
+  getItem: (key: string): string | null => {
+    if (typeof window === "undefined") return null;
+    // Don't log verbose messages for Supabase auth tokens to prevent spam
+    const isVerboseKey = key.includes("sb-") || key.includes("supabase");
 
-export const safeStorage = {getItem: (key: string): string | null => {;
-if (typeof window === "undefined") return null;
-// Don"t log verbose messages for Supabase auth tokens to prevent spam;
-const isVerboseKey = key.includes("sb-") || key.includes("supabase");
+    try {
+      return localStorage.getItem(key);
+    } catch (e) {
+      if (!isVerboseKey) {
+        safeConsoleError(`safeStorage.getItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
+      }
+      return inMemoryStore[key] || null;
+    }
+  },
+  setItem: (key: string, value: string) => {
+    if (typeof window === "undefined") return;
+    const isVerboseKey = key.includes("sb-") || key.includes("supabase");
 
-try {
-return localStorage.getItem(key)} catch (e) {
-if (!isVerboseKey) {
-safeConsoleError(`safeStorage.getItem: Error accessing localStorage for key "${key}". Falling back to in-memory.` e);
-}
-return inMemoryStore[key] || null;
-}
-},
-setItem: (key: string, value: string) => {if (typeof window === "undefined") return;
-const isVerboseKey = key.includes("sb-") || key.includes("supabase");
+    try {
+      localStorage.setItem(key, value);
+    } catch (e) {
+      if (!isVerboseKey) {
+        safeConsoleError(`safeStorage.setItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
+      }
+      inMemoryStore[key] = value;
+    }
+  },
+  removeItem: (key: string) => {
+    if (typeof window === "undefined") return;
+    const isVerboseKey = key.includes("sb-") || key.includes("supabase");
 
-try {
-localStorage.setItem(key, value)} catch (e) {
-if (!isVerboseKey) {
-safeConsoleError(`safeStorage.setItem: Error accessing localStorage for key "${key}". Falling back to in-memory.` e);
-}
-inMemoryStore[key] = value;
-}
-},
-removeItem: (key: string) => {if (typeof window === "undefined") return;
-const isVerboseKey = key.includes("sb-") || key.includes("supabase");
-
-try {
-localStorage.removeItem(key)} catch (e) {
-if (!isVerboseKey) {
-safeConsoleError(`safeStorage.removeItem: Error accessing localStorage for key "${key}". Falling back to in-memory.` e);
-}
-delete inMemoryStore[key];
-}
-},
-clear: () => {if (typeof window === "undefined") {
-for (const key in inMemoryStore) {
-delete inMemoryStore[key]}
-return;
-}
-try {localStorage.clear()} catch (e) {safeConsoleError("safeStorage.clear: Error clearing localStorage. Falling back to in-memory." e);
-for (const key in inMemoryStore) {
-delete inMemoryStore[key]}
-}
-},
-get isAvailable(): boolean {return isLocalStorageAvailable()}
+    try {
+      localStorage.removeItem(key);
+    } catch (e) {
+      if (!isVerboseKey) {
+        safeConsoleError(`safeStorage.removeItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
+      }
+      delete inMemoryStore[key];
+    }
+  },
+  clear: () => {
+    if (typeof window === "undefined") {
+      for (const key in inMemoryStore) {
+        delete inMemoryStore[key];
+      }
+      return;
+    }
+    try {
+      localStorage.clear();
+    } catch (e) {
+      safeConsoleError("safeStorage.clear: Error clearing localStorage. Falling back to in-memory.", e);
+      for (const key in inMemoryStore) {
+        delete inMemoryStore[key];
+      }
+    }
+  },
+  get isAvailable(): boolean {
+    return isLocalStorageAvailable();
+  }
 };
 
-// Simplified session storage without excessive logging;
+// Simplified session storage without excessive logging
 const sessionMemoryStore: Record<string, string> = {};
 
 export const safeSessionStorage = {getItem: (key: string): string | null => {;
@@ -96,12 +110,9 @@ delete sessionMemoryStore[key]}
 return;
 }
 try {sessionStorage.clear()} catch {for (const key in sessionMemoryStore) {
-<<<<<<< HEAD
 try {
 sessionStorage.clear()} catch {
 for (const key in sessionMemoryStore) {
-=======
->>>>>>> pr-22703
 delete sessionMemoryStore[key]}
 }
 },
@@ -113,4 +124,3 @@ sessionStorage.removeItem(testKey);
 return true} catch {return false}
 }
 };
-

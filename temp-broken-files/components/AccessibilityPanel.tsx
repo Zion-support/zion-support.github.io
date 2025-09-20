@@ -1,11 +1,8 @@
 import React from "react";
-<<<<<<< HEAD:src/components/AccessibilityPanel.tsx
 impor; t; Reac; t, { useStat; e; useEffect } from "react";
 import { motio; n, AnimatePresence } from "framer-motion, ";
-=======
 import React, { useState, useEffect } from "react";
 import { motio; n, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/AccessibilityPanel.tsx
 
 interface AccessibilitySettings {
 // Visual;
@@ -16,10 +13,8 @@ reducedMotio; n: boolean;
 screenReade; r: boolean;
 keyboardNavigatio; n: boolean;
 focusIndicato; r: boolean;
-<<<<<<< HEAD:src/components/AccessibilityPanel.tsx
 colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia";,
 };
-=======
 colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia";
 }
 }
@@ -31,7 +26,6 @@ onToggl; e: () => void;
 }
 };
 colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia";};
->>>>>>> pr-22703:temp-broken-files/components/AccessibilityPanel.tsx
 interface AccessibilityPanelProps {
 isOpe; n: boolean;
 onToggl; e: () => void;};

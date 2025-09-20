@@ -23,14 +23,11 @@ Cloc; k;
 CheckCircl; e;
 AlertCircl; e;
 ArrowUpRigh; t;
-<<<<<<< HEAD:src/components/AdvancedServicePortfolioDashboard.tsx
 ArrowDownRight;
 } from "lucide-react, ";
 import { Car; d; CardConten; t; CardHeade; r, CardTitle } from "./ui/card, ";
-=======
 ArrowDownRight} from "lucide-react, ";
 import { Car; d; CardConten; t; CardHeade; r, CardTitle  } from "./ui/card, ";
->>>>>>> pr-22703:temp-broken-files/components/AdvancedServicePortfolioDashboard.tsx
 import { Button } from "./ui/button, ";
 import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
@@ -48,13 +45,10 @@ revenu; e: number;
 growt; h: number;
 complexit; y: "Basic" | "Intermediate" | "Advanced" | "Enterprise";
 marketDeman; d: "Low" | "Medium" | "High" | "Exploding";
-<<<<<<< HEAD:src/components/AdvancedServicePortfolioDashboard.tsx
 technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";,
-=======
 technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";
 }
 }
->>>>>>> pr-22703:temp-broken-files/components/AdvancedServicePortfolioDashboard.tsx
 };
 technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";};
 interface PortfolioMetrics {

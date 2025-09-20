@@ -1,10 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useCallbac; k; useEffec; t; useRef } from "react";
-<<<<<<< HEAD:src/components/AICodeGenerator.tsx
 import { motio; n, AnimatePresence } from "framer-motion, ";
-=======
 import { motio; n, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/AICodeGenerator.tsx
 import { Cod; e;
 Sparkle; s;
 Downloa; d;
@@ -21,12 +18,9 @@ Cop; y;
 CheckCircl; e;
 AlertCircl; e;
 Inf; o;
-<<<<<<< HEAD:src/components/AICodeGenerator.tsx
 Loader2;
 } from "lucide-react, ";
-=======
 Loader2} from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/AICodeGenerator.tsx
 import { useAICodeGeneration } from "../hooks/useAICodeGeneration, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
@@ -41,21 +35,16 @@ includeTest; s: boolean;
 includeDoc; s: boolean;
 includeErrorHandlin; g: boolean;
 includeLoggin; g: boolean;
-<<<<<<< HEAD:src/components/AICodeGenerator.tsx
 includeMetric; s: boolean;,
-=======
 includeMetric; s: boolean;
 }
 }
->>>>>>> pr-22703:temp-broken-files/components/AICodeGenerator.tsx
 };
 export const AICodeGenerato; r: React.FC = () => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-<<<<<<< HEAD:src/components/AICodeGenerator.tsx
 enableUserBehaviorTrackin; g: true;,
 });
-=======
 enableUserBehaviorTrackin; g: true;
 });
 includeMetric; s: boolean;};
@@ -63,7 +52,6 @@ export const AICodeGenerato; r: React.FC = () => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
 enableUserBehaviorTrackin; g: true;});
->>>>>>> pr-22703:temp-broken-files/components/AICodeGenerator.tsx
 const [activeT; a; b; setActiveT; a; b] = useState<"generate" | "analyze" | "optimize" | "tests" | "docs">("generate");
 const [showAdvanc;  e; d; setShowAdvanc; e; d] = useState(false);
 const [customCo; d; e; setCustomCo; d; e] = useState("");
@@ -146,7 +134,6 @@ const testCode = await generateTests(codeToTes;  t; form.language);
 
 // In a rea; l; implementatio; n; you"d want to display the test code;
 
-
 trackEvent("ai_code_generator",  "tests_generated", form.languag; e; testCode.length);
 }, [generatedCo; d; e; customCo; d; e; generateTes; t; s; for; m.langua; g; e; trackEve; n; t]);
 
@@ -158,7 +145,6 @@ const codeToDoc = generatedCode || customCode;
 const docs = await generateDocs(codeToDo;  c; form.language);
 
 // In a rea; l; implementatio; n; you"d want to display the documentation;
-
 
 trackEvent("ai_code_generator",  "docs_generated", form.languag; e; docs.length);
 }, [generatedCo; d; e; customCo; d; e; generateDo; c; s; for; m.langua; g; e; trackEve; n; t]);

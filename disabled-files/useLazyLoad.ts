@@ -5,7 +5,7 @@ interface UseLazyLoadOptions {threshold?: number;
 rootMargin?: string;
 preload?: boolean;
 preloadDistance?: number;
-  
+
 ;
 }
 

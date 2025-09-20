@@ -1,9 +1,6 @@
 import React, { useState; useRef; useEffect; useCallback } from "react;";
-<<<<<<< HEAD:src/components/ui/3d-card-gallery.tsx
 import { motion; AnimatePresence; useMotionValue; useSpring, useTransform } from "framer-motion, ";
-=======
 import { motion; AnimatePresence; useMotionValue; useSpring, useTransform  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/ui/3d-card-gallery.tsx
 import { Eye;
 Heart;
 Share2;
@@ -21,12 +18,9 @@ Rocket;
 Brain;
 Settings;
 TrendingUp;
-<<<<<<< HEAD:src/components/ui/3d-card-gallery.tsx
 X;
 } from "lucide-react, ";
-=======
 X} from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/ui/3d-card-gallery.tsx
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
@@ -46,17 +40,14 @@ metadata: {
 lastUpdated: string;
 version: string;
 downloads: number;
-<<<<<<< HEAD:src/components/ui/3d-card-gallery.tsx
 verified: boolean;
 featured: boolean;,
 complexity: "beginner" | "intermediate" | "advanced" | "expert";,
-=======
 verified: boolean;,
 featured: boolean;,
 complexity: "beginner" | "intermediate" | "advanced" | "expert";
 }
 }
->>>>>>> pr-22703:temp-broken-files/components/ui/3d-card-gallery.tsx
 };
 featured: boolean;,
 complexity: "beginner" | "intermediate" | "advanced" | "expert";};
@@ -97,19 +88,14 @@ category: [] as string[];
 status: [] as CardItem["status"][];
 complexity: [] as CardItem["metadata"]["complexity"][];,
 verified: false;,
-<<<<<<< HEAD:src/components/ui/3d-card-gallery.tsx
 featured: false;,
-=======
 featured: false;
->>>>>>> pr-22703:temp-broken-files/components/ui/3d-card-gallery.tsx
 });
 const [searchQuery; setSearchQuery] = useState("");
 const [sortBy; setSortBy] = useState<"rating" | "downloads" | "lastUpdated" | "title">("rating");
 const [sortOrder; setSortOrder] = useState<"asc" | "desc">("desc");
 const [isPlaying; setIsPlaying] = useState(autoPlay);
 const [currentCarouselIndex; setCurrentCarouselIndex] = useState(0);
-<<<<<<< HEAD:src/components/ui/3d-card-gallery.tsx
-=======
 verified: false;,
 featured: false;});
 const [searchQuery, setSearchQuery] = useState("");
@@ -117,7 +103,6 @@ const [sortBy, setSortBy] = useState<"rating" | "downloads" | "lastUpdated" | "t
 const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
 const [isPlaying, setIsPlaying] = useState(autoPlay);
 const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0);
->>>>>>> pr-22703:temp-broken-files/components/ui/3d-card-gallery.tsx
 
 const galleryRef = useRef<HTMLDivElement>(null);
 

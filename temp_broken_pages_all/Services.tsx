@@ -26,7 +26,7 @@ export default function Services() {
         title="Services | Zion AI - AI Solutions and Technology Services"
         description="Explore our comprehensive range of AI solutions, machine learning services, and technology consulting."
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4 py-12">
           <div className="text-center mb-16">
@@ -40,7 +40,7 @@ export default function Services() {
               Comprehensive AI and technology solutions designed to accelerate your business growth.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300">

@@ -1,10 +1,7 @@
 import React from "react";
 import { ForumPost } from "@/types/community";
 
-<<<<<<< HEAD:src/components/community/PostCard.tsx
-=======
 interface PostCardProps {post: ForumPost};
->>>>>>> pr-22703:temp-broken-files/components/community/PostCard.tsx
 interface PostCardProps {
 post: ForumPost};
 export default function PostCard({ post }: PostCardProps) {
@@ -56,14 +53,11 @@ export default PostCard;
 }
 }
 <//div><///div>)
-<<<<<<< HEAD:src/components/community/PostCard.tsx
 import React from 'react'
 import { formatDistanceToNow } from "date-fns"
 import Link from "next/link"
 import { ThumbsUp,, ThumbsDown,, MessageSquare,, Pin,, Lock, CheckCircle,  } from 'lucide-react'
-=======
 import React from "react"
 import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";
 import { ThumbsUp; ThumbsDown, MessageSquare; Pin, Lock; CheckCircle } from "lucide-react";
->>>>>>> pr-22703:temp-broken-files/components/community/PostCard.tsx

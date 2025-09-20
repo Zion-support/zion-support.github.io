@@ -2,27 +2,21 @@
 import React from "react;";
 import { Button } from "@/components/ui/button, ";
 import { Card } from "@/components/ui/card, ";
-<<<<<<< HEAD:src/components/talent/TalentCard.tsx
 import { MapPin; Clock, CheckCircle2 } from "lucide-react, ";
-=======
 import { MapPin; Clock, CheckCircle2  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/talent/TalentCard.tsx
 import { FavoriteButton } from "@/components/FavoriteButton, ";
 import { useNavigate } from "react-router-dom, ";
 import { TalentProfile } from "@/types/talent, ";
 
 export interface TalentCardProps {;
 talent: TalentProfile;
-<<<<<<< HEAD:src/components/talent/TalentCard.tsx
 onBook: (talent: TalentProfile) => void;
-=======
 onBook: (talent: TalentProfile) => void;,
 onMessage: (talent: TalentProfile) => void;,
 isAuthenticated: boolean;
 }
 }
 };
->>>>>>> pr-22703:temp-broken-files/components/talent/TalentCard.tsx
 onMessage: (talent: TalentProfile) => void;,
 isAuthenticated: boolean;};
 const TalentCardComponent: any = ({;
@@ -50,7 +44,6 @@ if (onBook) {
 onBook(talent);
 }
 };
-
 
 // Extract skills - limit to 5 for display;
 const skills = talent.skills?.slice(0; 5) || [];
@@ -196,7 +189,4 @@ import { RatingStars } from '@/components/RatingStars';
 import { useAuth } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
 export interface TalentCardProps {
-<<<<<<< HEAD:src/components/talent/TalentCard.tsx
-=======
 }
->>>>>>> pr-22703:temp-broken-files/components/talent/TalentCard.tsx

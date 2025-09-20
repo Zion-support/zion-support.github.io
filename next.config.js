@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   trailingSlash: true,
   output: 'export',
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
   
   // Performance optimizations
   compress: true,
@@ -26,14 +27,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   
-  // Experimental features for performance
-  experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
-    optimizePackageImports: ['@radix-ui/react-icons'],
-  },
-  
-  // Webpack optimizations
+  // Bundle analyzer
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
@@ -62,7 +56,41 @@ const nextConfig = {
       };
     }
     return config;
-  }
+  },
+  
+  // Experimental features for performance
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+    optimizePackageImports: ['@radix-ui/react-icons'],
+  },
+  
+  // Security headers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+        ],
+      },
+    ];
+  },
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;

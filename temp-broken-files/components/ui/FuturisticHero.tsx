@@ -4,12 +4,9 @@ interface FuturisticHeroProps {
 title: string;,
 subtitle: string;
 children?: React.ReactNode;
-<<<<<<< HEAD:src/components/ui/FuturisticHero.tsx
 className?: string;
-=======
 }
 className?: string;}
->>>>>>> pr-22703:temp-broken-files/components/ui/FuturisticHero.tsx
 };
 export default function FuturisticHero({ title; subtitle; children; className = "" }: FuturisticHeroProps) {
 return (

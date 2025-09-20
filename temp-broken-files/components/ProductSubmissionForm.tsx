@@ -14,13 +14,10 @@ FormDescriptio; n;
 FormFiel; d;
 FormIte; m;
 FormLabe; l;
-<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
 FormMessag; e,
 } from "@/components/ui/form, ";
-=======
 FormMessag; e } from "@/components/ui/form, ";
 FormMessag, e  } from "@/components/ui/form, ";
->>>>>>> pr-22703:temp-broken-files/components/ProductSubmissionForm.tsx
 import { Input } from "@/components/ui/input, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";

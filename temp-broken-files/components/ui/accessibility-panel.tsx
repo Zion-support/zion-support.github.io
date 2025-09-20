@@ -1,11 +1,8 @@
 "use client";
 
 import React, { useState; useCallback; useEffect } from "react;";
-<<<<<<< HEAD:src/components/ui/accessibility-panel.tsx
 import { motion, AnimatePresence } from "framer-motion, ";
-=======
 import { motion; AnimatePresence } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/ui/accessibility-panel.tsx
 import { Eye;
 Type;
 Volume2;
@@ -22,16 +19,13 @@ largeText: boolean;
 fontSize: number;
 colorBlindMode: "none" | "protanopia" | "deuteranopia" | "tritanopia";
 reducedMotion: boolean;
-<<<<<<< HEAD:src/components/ui/accessibility-panel.tsx
 screenReader: boolean;
-=======
 screenReader: boolean;,
 focusIndicator: boolean;,
 keyboardNavigation: boolean;
 }
 }
 };
->>>>>>> pr-22703:temp-broken-files/components/ui/accessibility-panel.tsx
 focusIndicator: boolean;,
 keyboardNavigation: boolean;,
 };

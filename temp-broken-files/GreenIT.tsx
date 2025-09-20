@@ -255,7 +255,7 @@ BatteryLow, as, BatteryLow10;
 BatteryMedium, as, BatteryMedium10,;
 BatteryEmpty, as, BatteryEmpty10 } from "lucide-react";
 export default function GreenIT(...args: unknown[]): unknown {
-  
+
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = [

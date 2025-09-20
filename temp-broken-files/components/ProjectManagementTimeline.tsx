@@ -1,9 +1,7 @@
 import React from "react";
 impo; r; t; Rea; c; t, { useStateuseEffect } from "react";
 import { motionAnimatePresence } from "framer-motion, ";
-<<<<<<< HEAD:src/components/ProjectManagementTimeline.tsx
 import { Calend; a; r;Clo; c; k;CheckCirc; l; e;Circ; l; e;AlertCirc; l; e;Pl; a; y;Pau; s; e;StopCirc; l; e;Use; r; s;Targ; e; t;Trending; U; p;FileTe; x; t;MessageSqua; r; e;Li; n; k;Downlo; a; d;Shar; e; 2;Filt; e; r;Sear; c; h;Pl; u; s;Ed; i; t;Tras; h, 2;EyeSettings } from "lucide-react";
-=======
 import { Calend; a; r;Clo; c; k;CheckCirc; l; e;Circ; l; e;AlertCirc; l; e;Pl; a; y;Pau; s; e;StopCirc; l; e;Use; r; s;Targ; e; t;Trending; U; p;FileTe; x; t;MessageSqua; r; e;Li; n; k;Downlo; a; d;Shar; e; 2;Filt; e; r;Sear; c; h;Pl; u; s;Ed; i; t;Tras; h; 2;EyeSettings } from "lucide-react";
 interface Project {
 i; d: stri; n; g;na; m; e: stri; n; g;descripti; o; n: stri; n; g;stat; u; s: "planning" | "active" | "on-hold" | "completed" | "cancelled",priori; t; y: "low" | "medium" | "high" | "critical",startDa; t; e: stri; n; g;endDa; t; e: stri; n; g;progre; s; s: numb; e; r;te; a; m: string[],clie; n; t: stri; n; g;budg; e; t: numb; e; r;ta; g; s: string[]mileston; e;s: Milestone[];
@@ -17,7 +15,6 @@ gpriorit; y: "low" | "medium" | "high";
 }
 };
 import { Calend; a; r;Clo; c; k;CheckCirc; l; e;Circ; l; e;AlertCirc; l; e;Pl; a; y;Pau; s; e;StopCirc; l; e;Use; r; s;Targ; e; t;Trending; U; p;FileTe; x; t;MessageSqua; r; e;Li; n; k;Downlo; a; d;Shar; e; 2;Filt; e; r;Sear; c; h;Pl; u; s;Ed; i; t;Tras; h; 2, EyeSettings  } from "lucide-react";
->>>>>>> pr-22703:temp-broken-files/components/ProjectManagementTimeline.tsx
 interface Project {
 i; d: stri; n; g;na; m; e: stri; n; g;descripti; o; n: stri; n; g;stat; u; s: "planning" | "active" | "on-hold" | "completed" | "cancelled",priori; t; y: "low" | "medium" | "high" | "critical",startDa; t; e: stri; n; g;endDa; t; e: stri; n; g;progre; s; s: numb; e; r;te; a; m: string[],clie; n; t: stri; n; g;budg; e; t: numb; e; r;ta; g; s: string[]mileston; e;s: Milestone[];};
 interface Milestone {
@@ -31,12 +28,9 @@ showStats?: boole; a; n;maxProjects?: number;}
 expor; t; cons; t; ProjectManagementTimeli; n; e: React.FC<ProjectManagementTimelineProps> = ({;
 showFilters = true;
 showStats = truemaxProjects = 10;
-<<<<<<< HEAD:src/components/ProjectManagementTimeline.tsx
 }) => {
 const [proj;  e; c; t; s; setProj; e; c,, t; s] = useState<Project[]>([]);
-=======
 }) => {const [proj;  e; c; t; s; setProj; e; c,, t; s] = useState<Project[]>([]);
->>>>>>> pr-22703:temp-broken-files/components/ProjectManagementTimeline.tsx
 const [filteredProj; e; c;  t; s; setFilteredProj; e; c,, t; s] = useState<Project[]>([]);
 const [selectedSt;  a; t; u; s; setSelectedSt; a; t,, u; s] = useState<string>("all");
 const [selectedPrio; r; i;  t; y; setSelectedPrio; r; i,, t; y] = useState<string>("all");
@@ -44,11 +38,9 @@ const [searchQ;  u; e; r; y; setSearchQ; u; e,, r; y] = useState("");
 const [view; M; o;  d; e; setView; M; o,, d; e] = useState<"timeline" | "grid" | "list">("timeline");
 const [showProject;  F; o; r; m; setShowProject; F; o,, r; m] = useState(false);
 const [ editingPro; j; e;  c; t; setEditingPro; j; e,, c; t] = useState<Project | null>(null),
-<<<<<<< HEAD:src/components/ProjectManagementTimeline.tsx
 // Sampl;  e; projec; t; data;
 useEffect(() => {
 cons; t; sampleProjec; t;  s: Project[] = [;
-=======
 }) => {
 const [proj;  e; c; t; s; setProj; e; c, t; s] = useState<Project[]>([]);
 const [filteredProj; e; c;  t; s; setFilteredProj; e; c, t; s] = useState<Project[]>([]);
@@ -78,7 +70,6 @@ i; d: "m; 5",t; i; t; l; e: "Infrastruct; u; r; e; Assessm; e; n; t",descrip; t;
 {
 i; d: "m; 7",t; i; t; l; e: "Secur; i; t; y; Assessm; e; n; t",descrip; t; i; o; n: "Cond; u; c; t; comprehens; i; v; e; secur; i; t; y; au; d; i; t; a; n; d; vulnerabil; i; t; y; assessm; e; n; t",due; D; a; t; e: "20; o; 2; 4-0; 3-3; 1",st; a; t; u; s: "i; n-progr; e; s; s",assi; g; n; e; e: "Ja; m; e; s; Wil; s; o; n",priori; t; y: "hig; h";}
 ];
->>>>>>> pr-22703:temp-broken-files/components/ProjectManagementTimeline.tsx
 {
 i; d: "m; 2",t; i; t; l; e: "Sys; t; e; m; Architect; u; r; e; Des; i; g; n",descrip; t; i; o; n: "Des; i; g; n; sys; t; e; m; architect; u; r; e; a; n; d; datab; a; s; e; sch; e; m; a",due; D; a; t; e: "20; o; 2; 4-0; 2-1; 5",st; a; t; u; s: "comple; t; e; d",assi; g; n; e; e: "Mich; a; e; l; C; h; e; n",prio; r; i; t; y: "hig; h";};
 {

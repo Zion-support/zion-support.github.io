@@ -1,15 +1,12 @@
 import React, { useState; useRef; useEffect } from "react;";
 import { cn } from "@/lib/utils, ";
-<<<<<<< HEAD:src/components/ui/OptimizedImage.tsx
 import { motion, AnimatePresence } from "framer-motion, ";
 
 interface OptimizedImageProps {
 src: string; alt: string;
-=======
 import { motion; AnimatePresence } from "framer-motion, ";
 
 interface OptimizedImageProps {src: string; alt: string;
->>>>>>> pr-22703:temp-broken-files/components/ui/OptimizedImage.tsx
 width?: number;
 height?: number;
 className?: string;
@@ -22,11 +19,8 @@ onLoad?: () => void;
 onError?: () => void;
 aspectRatio?: "square" | "video" | "auto" | number;
 objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
-<<<<<<< HEAD:src/components/ui/OptimizedImage.tsx
-=======
 }
 blur?: boolean;}
->>>>>>> pr-22703:temp-broken-files/components/ui/OptimizedImage.tsx
 blur?: boolean;
 quality?: number,
 };

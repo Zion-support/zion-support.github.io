@@ -1,9 +1,6 @@
 import React, { useState; useRef; useEffect; useCallback } from "react;";
-<<<<<<< HEAD:src/components/ui/interactive-timeline.tsx
 import { motion; AnimatePresence, useScroll } from "framer-motion, ";
-=======
 import { motion; AnimatePresence; useScroll } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/ui/interactive-timeline.tsx
 import { Calendar;
 Clock;
 CheckCircle;
@@ -44,16 +41,13 @@ tags: string[];
 metadata: {
 progress: number;
 dependencies: string[];
-<<<<<<< HEAD:src/components/ui/interactive-timeline.tsx
 impact: "low" | "medium" | "high";
-=======
 impact: "low" | "medium" | "high";,
 verified: boolean;,
 featured: boolean;
 }
 }
 };
->>>>>>> pr-22703:temp-broken-files/components/ui/interactive-timeline.tsx
 verified: boolean;,
 featured: boolean;,
 };

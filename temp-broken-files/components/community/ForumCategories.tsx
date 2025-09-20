@@ -1,12 +1,9 @@
 import React from "react";
 import { ForumCategoryInfo } from "@/types/community";
 
-<<<<<<< HEAD:src/components/community/ForumCategories.tsx
 export default function ForumCategories() {
 const categories: ForumCategoryInfo[] = [
-=======
 export default function ForumCategories() {const categories: ForumCategoryInfo[] = [
->>>>>>> pr-22703:temp-broken-files/components/community/ForumCategories.tsx
 {,
 id: "1",
 name: "General Discussion",;
@@ -77,8 +74,5 @@ import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare; Briefcase, Code; FileText, Megaphone } from "lucide-react";
 import { ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
-<<<<<<< HEAD:src/components/community/ForumCategories.tsx
   {
-=======
 {
->>>>>>> pr-22703:temp-broken-files/components/community/ForumCategories.tsx

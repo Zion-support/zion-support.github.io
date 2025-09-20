@@ -1,13 +1,10 @@
 import React from "react";
-<<<<<<< HEAD:src/components/EnhancedHero.tsx
 impor; t; Reac; t, { useStat; e; useEffect } from "react";
 import { motio; n, AnimatePresence } from "framer-motion, ";
 import { ChevronLef; t; ChevronRigh; t; Pla; y; Paus; e; Volume; 2, VolumeX } from "lucide-react, ";
-=======
 import React, { useState, useEffect } from "react";
 import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { ChevronLef; t; ChevronRigh; t; Pla; y; Paus; e; Volume; 2, VolumeX  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/EnhancedHero.tsx
 
 interface HeroSlide {
 i; d: number;
@@ -17,13 +14,10 @@ descriptio; n: string;
 ctaTex; t: string;
 ctaLin; k: string;
 backgroun; d: string;
-<<<<<<< HEAD:src/components/EnhancedHero.tsx
 ico; n: React.ReactNode;,
-=======
 ico; n: React.ReactNode;
 }
 }
->>>>>>> pr-22703:temp-broken-files/components/EnhancedHero.tsx
 };
 ico; n: React.ReactNode;};
 const EnhancedHer; o: React.FC = () => {

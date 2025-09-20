@@ -1,11 +1,8 @@
 import React from "react";
-<<<<<<< HEAD:src/components/BlockchainWeb3Dashboard.tsx
 import { useStat; e, useCallback } from "react, ";
 import { motio; n, AnimatePresence } from "framer-motion, ";
-=======
 import { useStat; e; useCallback } from "react, ";
 import { motio; n; AnimatePresence } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/BlockchainWeb3Dashboard.tsx
 import { Walle; t;
 Smartphon; e;
 Coin; s;
@@ -26,23 +23,17 @@ import { useBlockchainWeb3 } from "../hooks/useBlockchainWeb3, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface BlockchainDashboardProps {
-<<<<<<< HEAD:src/components/BlockchainWeb3Dashboard.tsx
 className?: string;
-=======
 className?: string;}
->>>>>>> pr-22703:temp-broken-files/components/BlockchainWeb3Dashboard.tsx
 };
 export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ className = "" }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-<<<<<<< HEAD:src/components/BlockchainWeb3Dashboard.tsx
 enableUserBehaviorTrackin; g: true;,
 });
-=======
 enableUserBehaviorTrackin; g: true;
 });
 enableUserBehaviorTrackin; g: true;});
->>>>>>> pr-22703:temp-broken-files/components/BlockchainWeb3Dashboard.tsx
 const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "wallet" | "contracts" | "nfts" | "defi" | "transactions">("overview");
 const [showMintN;  F; T; setShowMintN; F; T] = useState(false);
 const [showSendTransacti; o; n; setShowSendTransacti; o; n] = useState(false);

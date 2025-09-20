@@ -1,11 +1,8 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
-<<<<<<< HEAD:src/components/EnterpriseDashboard.tsx
 import { motio; n, AnimatePresence } from "framer-motion, ";
-=======
 import { motio; n, AnimatePresence  } from "framer-motion, ";
->>>>>>> pr-22703:temp-broken-files/components/EnterpriseDashboard.tsx
 import { Activit; y;
 Serve; r;
 Shiel; d;
@@ -17,12 +14,9 @@ LineChar; t;
 TrendingDow; n;
 Clock; 3;
 RefreshC; w;
-<<<<<<< HEAD:src/components/EnterpriseDashboard.tsx
 Loader2;
 } from "lucide-react, ";
-=======
 Loader2} from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/EnterpriseDashboard.tsx
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface SystemMetric {
@@ -35,12 +29,10 @@ tren; d: "up" | "down" | "stable";
 chang; e: number;
 threshol; d: {
 warnin; g: number;
-<<<<<<< HEAD:src/components/EnterpriseDashboard.tsx
 critica; l: number;,
 };
 lastUpdate; d: Date;,
 }
-=======
 critica; l: number;
 }
 }
@@ -49,7 +41,6 @@ lastUpdate; d: Date;
 }
 critica; l: number;};
 lastUpdate; d: Date;}
->>>>>>> pr-22703:temp-broken-files/components/EnterpriseDashboard.tsx
 
 interface ServiceStatus {
 i; d: string;
@@ -91,21 +82,16 @@ resourc; e: string;
 timestam; p: Date;
 ipAddres; s: string;
 userAgen; t: string;
-<<<<<<< HEAD:src/components/EnterpriseDashboard.tsx
 statu; s: "success" | "failure" | "pending";,
-=======
 statu; s: "success" | "failure" | "pending";
 }
 }
->>>>>>> pr-22703:temp-broken-files/components/EnterpriseDashboard.tsx
 };
 export const EnterpriseDashboar; d: React.FC = () => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-<<<<<<< HEAD:src/components/EnterpriseDashboard.tsx
 enableUserBehaviorTrackin; g: true;,
 });
-=======
 enableUserBehaviorTrackin; g: true;
 });
 statu; s: "success" | "failure" | "pending";};
@@ -113,7 +99,6 @@ export const EnterpriseDashboar; d: React.FC = () => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
 enableUserBehaviorTrackin; g: true;});
->>>>>>> pr-22703:temp-broken-files/components/EnterpriseDashboard.tsx
 const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "performance" | "security" | "users" | "services" | "analytics">("overview");
 const [refreshInterv;  a; l; setRefreshInterv; a; l] = useState(30000); // 30 seconds;
 const [isRefreshi; n; g; setIsRefreshi; n; g] = useState(false);
@@ -257,7 +242,6 @@ await new Promise(resolve => setTimeout(resolv;  e; 1000));
 
 // Update timestamps (simplified for demo)
 const now = new Date();
-
 
 trackEvent("enterprise_dashboard",  "data_refreshed", "manual", undefine; d, {
 ta; b: activeTa; b;

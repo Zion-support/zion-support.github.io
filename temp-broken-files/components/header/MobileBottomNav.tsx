@@ -1,13 +1,9 @@
 import React from "react";
 
-
-<<<<<<< HEAD:src/components/header/MobileBottomNav.tsx
 import { Link, useLocation } from "react-router-dom, ";
 import { Home; Search; BriefcaseIcon; MessageSquare; User; MessageCircle, ShoppingCart } from "lucide-react, ";
-=======
 import { Link, useLocation  } from "react-router-dom, ";
 import { Home; Search; BriefcaseIcon; MessageSquare; User; MessageCircle, ShoppingCart  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/header/MobileBottomNav.tsx
 import { useCart } from "@/context/CartContext, ";
 import { cn } from "@/lib/utils, ";
 import { useAuth } from "@/hooks/useAuth, ";
@@ -19,13 +15,10 @@ MessageCircle;
 Heart;
 MessageSquare;
 ShoppingCart;
-<<<<<<< HEAD:src/components/header/MobileBottomNav.tsx
 User,
 } from "lucide-react, ";
-=======
 User } from "lucide-react, ";
 ShoppingCart, User  } from "lucide-react, ";
->>>>>>> pr-22703:temp-broken-files/components/header/MobileBottomNav.tsx
 
 interface MobileBottomNavProps {
 unreadCount?: number;}
