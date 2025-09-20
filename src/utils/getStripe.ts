@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Stripe utility functions
 export function isProdDomain(): boolean {
   if (typeof window === 'undefined') {
@@ -21,3 +22,9 @@ export function getStripeSecretKey(): string {
   }
   return process.env.STRIPE_SECRET_KEY_TEST || '';
 }
+=======
+export const isProdDomain = (): boolean => {
+  if (typeof window === 'undefined') return false;
+  return window.location.hostname === 'ziontechgroup.com';
+};
+>>>>>>> d77626155c92c5bbcaae01bf3c76fc08ebcf7238
