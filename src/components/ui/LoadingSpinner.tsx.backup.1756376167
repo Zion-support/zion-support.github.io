@@ -1,0 +1,664 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import { Loader2, Zap, Brain, Shield, Cloud, Rocket } from 'lucide-react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'default' | 'pulse' | 'dots' | 'bars' | 'themed';
+  text?: string;
+  className?: string;
+  fullScreen?: boolean;
+}
+
+const sizeClasses = {
+  sm: 'w-4 h-4',
+  md: 'w-6 h-6',
+  lg: 'w-8 h-8',
+  xl: 'w-12 h-12'
+};
+
+const textSizes = {
+  sm: 'text-sm',
+  md: 'text-base',
+  lg: 'text-lg',
+  xl: 'text-xl'
+};
+
+const themedIcons = {
+  ai: Brain,
+  security: Shield,
+  cloud: Cloud,
+  rocket: Rocket,
+  default: Zap
+};
+
+export function LoadingSpinner({
+  size = 'md',
+  variant = 'default',
+  text,
+  className = '',
+  fullScreen = false
+}: LoadingSpinnerProps) {
+  const renderSpinner = () => {
+    switch (variant) {
+      case 'pulse':
+        return (
+          <div className={`${sizeClasses[size]} relative`}>
+            <motion.div
+              className="absolute inset-0 rounded-full bg-cyan-400"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.5, 1, 0.5]
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            <motion.div
+              className="absolute inset-0 rounded-full bg-blue-500"
+              animate={{
+                scale: [1.2, 1, 1.2],
+                opacity: [1, 0.5, 1]
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5
+              }}
+            />
+          </div>
+        );
+
+      case 'dots':
+        return (
+          <div className="flex space-x-1">
+            {[0, 1, 2].map((i) => (
+              <motion.div
+                key={i}
+                className={`${sizeClasses[size]} rounded-full bg-gradient-to-r from-cyan-400 to-blue-500`}
+                animate={{
+                  y: [0, -10, 0],
+                  scale: [1, 1.2, 1]
+                }}
+                transition={{
+                  duration: 0.6,
+                  repeat: Infinity,
+                  delay: i * 0.2,
+                  ease: "easeInOut"
+                }}
+              />
+            ))}
+          </div>
+        );
+
+      case 'bars':
+        return (
+          <div className="flex space-x-1">
+            {[0, 1, 2, 3].map((i) => (
+              <motion.div
+                key={i}
+                className={`w-1 ${sizeClasses[size].split(' ')[1]} bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full`}
+                animate={{
+                  scaleY: [1, 2, 1]
+                }}
+                transition={{
+                  duration: 0.8,
+                  repeat: Infinity,
+                  delay: i * 0.1,
+                  ease: "easeInOut"
+                }}
+              />
+            ))}
+          </div>
+        );
+
+      case 'themed':
+        const ThemedIcon = themedIcons.ai; // You can make this dynamic based on context
+        return (
+          <motion.div
+            className={`${sizeClasses[size]} text-cyan-400`}
+            animate={{
+              rotate: 360
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          >
+            <ThemedIcon className="w-full h-full" />
+          </motion.div>
+        );
+
+      default:
+        return (
+          <motion.div
+            className={`${sizeClasses[size]} border-2 border-slate-300 border-t-cyan-400 rounded-full`}
+            animate={{
+              rotate: 360
+            }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+        );
+    }
+  };
+
+  const content = (
+    <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
+      {renderSpinner()}
+      {text && (
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className={`text-slate-400 font-medium ${textSizes[size]}`}
+        >
+          {getContextIcon()}
+          <span className="text-sm font-medium">{text}</span>
+=======
+import { Loader2, Zap, Brain, Cpu, Rocket, Shield, Cloud, Database } from 'lucide-react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'default' | 'zion' | 'ai' | 'quantum' | 'cyber' | 'futuristic';
+  text?: string;
+  showText?: boolean;
+  className?: string;
+}
+
+const sizeClasses = {
+  sm: 'w-8 h-8',
+  md: 'w-12 h-12',
+  lg: 'w-16 h-16',
+  xl: 'w-24 h-24'
+};
+
+const textSizes = {
+  sm: 'text-xs',
+  md: 'text-sm',
+  lg: 'text-base',
+  xl: 'text-lg'
+};
+
+export function LoadingSpinner({
+  size = 'md',
+  variant = 'default',
+  text = 'Loading...',
+  showText = true,
+  className = ''
+}: LoadingSpinnerProps) {
+  const renderSpinner = () => {
+    switch (variant) {
+      case 'zion':
+        return <ZionSpinner size={size} />;
+      case 'ai':
+        return <AISpinner size={size} />;
+      case 'quantum':
+        return <QuantumSpinner size={size} />;
+      case 'cyber':
+        return <CyberSpinner size={size} />;
+      case 'futuristic':
+        return <FuturisticSpinner size={size} />;
+      default:
+        return <DefaultSpinner size={size} />;
+    }
+  };
+
+  return (
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      {renderSpinner()}
+      {showText && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+          className={`mt-3 text-center ${textSizes[size]}`}
+        >
+          <span className="text-slate-300 font-medium">{text}</span>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
+        </motion.div>
+      )}
+
+      {/* Progress Bar */}
+      {renderProgress()}
+
+      {/* Skeleton Loader */}
+      {renderSkeleton()}
+
+      {/* Timeout Warning */}
+      {renderTimeoutWarning()}
+
+      {/* Loading Tips */}
+      <AnimatePresence>
+        {showProgress && currentProgress > 0 && currentProgress < 100 && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="mt-4 text-xs text-gray-500 dark:text-gray-400 text-center max-w-xs"
+          >
+            <p>Please wait while we prepare your content...</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+
+  if (fullScreen) {
+    return (
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center z-50">
+        {content}
+      </div>
+    );
+  }
+
+  return content;
+}
+
+// Specialized loading components for common use cases
+export function PageLoader({ text = "Loading page..." }: { text?: string }) {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+      <LoadingSpinner size="xl" variant="themed" text={text} />
+    </div>
+  );
+}
+
+<<<<<<< HEAD
+export function SectionLoader({ text = "Loading..." }: { text?: string }) {
+  return (
+    <div className="py-16 flex items-center justify-center">
+      <LoadingSpinner size="lg" variant="pulse" text={text} />
+=======
+// Default Spinner
+function DefaultSpinner({ size }: { size: LoadingSpinnerProps['size'] }) {
+  return (
+    <motion.div
+      animate={{ rotate: 360 }}
+      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+      className={`${sizeClasses[size]} border-4 border-slate-200 border-t-cyan-500 rounded-full`}
+    />
+  );
+}
+
+// Zion Branded Spinner
+function ZionSpinner({ size }: { size: LoadingSpinnerProps['size'] }) {
+  return (
+    <div className="relative">
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+        className={`${sizeClasses[size]} border-4 border-cyan-400/20 rounded-full`}
+      />
+      <motion.div
+        animate={{ rotate: -360 }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+        className={`absolute inset-0 ${sizeClasses[size]} border-4 border-transparent border-t-cyan-400 rounded-full`}
+      />
+      <motion.div
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute inset-0 flex items-center justify-center"
+      >
+        <span className="text-cyan-400 font-bold text-xs">ZION</span>
+      </motion.div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
+    </div>
+  );
+}
+
+<<<<<<< HEAD
+export function InlineLoader({ text, size = "sm" }: { text?: string; size?: 'sm' | 'md' | 'lg' }) {
+  return (
+    <div className="inline-flex items-center space-x-2">
+      <LoadingSpinner size={size} variant="dots" />
+      {text && <span className="text-slate-500 text-sm">{text}</span>}
+=======
+// AI Themed Spinner
+function AISpinner({ size }: { size: LoadingSpinnerProps['size'] }) {
+  return (
+    <div className="relative">
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+        className={`${sizeClasses[size]} border-4 border-blue-400/20 rounded-full`}
+      />
+      <motion.div
+        animate={{ rotate: -360 }}
+        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+        className={`absolute inset-0 ${sizeClasses[size]} border-4 border-transparent border-t-blue-400 rounded-full`}
+      />
+      <motion.div
+        animate={{ 
+          scale: [1, 1.2, 1],
+          opacity: [0.5, 1, 0.5]
+        }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute inset-0 flex items-center justify-center"
+      >
+        <Brain className="w-1/2 h-1/2 text-blue-400" />
+      </motion.div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
+    </div>
+  );
+}
+
+<<<<<<< HEAD
+export function ButtonLoader({ size = "sm" }: { size?: 'sm' | 'md' | 'lg' }) {
+  return (
+    <div className="inline-flex items-center space-x-2">
+      <LoadingSpinner size={size} variant="default" />
+      <span>Loading...</span>
+=======
+// Quantum Computing Spinner
+function QuantumSpinner({ size }: { size: LoadingSpinnerProps['size'] }) {
+  return (
+    <div className="relative">
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+        className={`${sizeClasses[size]} border-4 border-purple-400/20 rounded-full`}
+      />
+      <motion.div
+        animate={{ rotate: -360 }}
+        transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+        className={`absolute inset-0 ${sizeClasses[size]} border-4 border-transparent border-t-purple-400 rounded-full`}
+      />
+      <motion.div
+        animate={{ 
+          rotate: 360,
+          scale: [1, 1.1, 1]
+        }}
+        transition={{ 
+          rotate: { duration: 5, repeat: Infinity, ease: "linear" },
+          scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+        }}
+        className="absolute inset-0 flex items-center justify-center"
+      >
+        <Cpu className="w-1/2 h-1/2 text-purple-400" />
+      </motion.div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
+    </div>
+  );
+}
+
+<<<<<<< HEAD
+// Skeleton loading components
+export function SkeletonLoader({
+  className = "",
+  lines = 3,
+  height = "h-4"
+}: {
+  className?: string;
+  lines?: number;
+  height?: string;
+=======
+// Cyberpunk Spinner
+function CyberSpinner({ size }: { size: LoadingSpinnerProps['size'] }) {
+  return (
+    <div className="relative">
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+        className={`${sizeClasses[size]} border-4 border-green-400/20 rounded-full`}
+      />
+      <motion.div
+        animate={{ rotate: -360 }}
+        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+        className={`absolute inset-0 ${sizeClasses[size]} border-4 border-transparent border-t-green-400 rounded-full`}
+      />
+      <motion.div
+        animate={{ 
+          scale: [1, 1.3, 1],
+          opacity: [0.3, 1, 0.3]
+        }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute inset-0 flex items-center justify-center"
+      >
+        <Shield className="w-1/2 h-1/2 text-green-400" />
+      </motion.div>
+    </div>
+  );
+}
+
+// Futuristic Spinner
+function FuturisticSpinner({ size }: { size: LoadingSpinnerProps['size'] }) {
+  return (
+    <div className="relative">
+      {/* Outer ring */}
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+        className={`${sizeClasses[size]} border-4 border-cyan-400/20 rounded-full`}
+      />
+      
+      {/* Middle ring */}
+      <motion.div
+        animate={{ rotate: -360 }}
+        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+        className={`absolute inset-2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} border-4 border-transparent border-t-blue-400 rounded-full`}
+      />
+      
+      {/* Inner ring */}
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+        className={`absolute inset-4 ${sizeClasses[size === 'xl' ? 'md' : size === 'lg' ? 'sm' : 'sm']} border-4 border-transparent border-t-purple-400 rounded-full`}
+      />
+      
+      {/* Center icon */}
+      <motion.div
+        animate={{ 
+          scale: [1, 1.2, 1],
+          rotate: [0, 180, 360]
+        }}
+        transition={{ 
+          scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+          rotate: { duration: 4, repeat: Infinity, ease: "linear" }
+        }}
+        className="absolute inset-0 flex items-center justify-center"
+      >
+        <Rocket className="w-1/3 h-1/3 text-cyan-400" />
+      </motion.div>
+    </div>
+  );
+}
+
+// Full Screen Loading Component
+export function FullScreenLoader({
+  variant = 'zion',
+  text = 'Loading amazing experiences...',
+  className = ''
+}: Omit<LoadingSpinnerProps, 'size'>) {
+  return (
+    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center ${className}`}>
+      <div className="text-center">
+        <LoadingSpinner variant={variant} size="xl" text={text} />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="mt-8 text-center"
+        >
+          <div className="text-cyan-400 text-sm animate-pulse">
+            Powered by Zion Tech Group
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
+
+// Inline Loading Component
+export function InlineLoader({
+  size = 'sm',
+  variant = 'default',
+  className = ''
+}: Omit<LoadingSpinnerProps, 'text' | 'showText'>) {
+  return (
+    <LoadingSpinner
+      size={size}
+      variant={variant}
+      showText={false}
+      className={className}
+    />
+  );
+}
+
+// Button Loading State
+export function ButtonLoader({
+  size = 'sm',
+  className = ''
+}: {
+  size?: LoadingSpinnerProps['size'];
+  className?: string;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      className={className}
+    >
+      <Loader2 className={`${sizeClasses[size]} animate-spin text-current`} />
+    </motion.div>
+  );
+}
+
+// Page Loading Component
+export function PageLoader({
+  variant = 'zion',
+  text = 'Loading page...',
+  className = ''
+}: Omit<LoadingSpinnerProps, 'size'>) {
+  return (
+    <div className={`min-h-[50vh] flex items-center justify-center ${className}`}>
+      <LoadingSpinner variant={variant} size="lg" text={text} />
+    </div>
+  );
+}
+
+// Content Loading Skeleton
+export function LoadingSkeleton({
+  lines = 3,
+  className = ''
+}: {
+  lines?: number;
+  className?: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
+}) {
+  return (
+    <div className={`space-y-3 ${className}`}>
+      {Array.from({ length: lines }).map((_, i) => (
+        <motion.div
+<<<<<<< HEAD
+          key={i}
+          className={`${height} bg-slate-700 rounded animate-pulse`}
+          style={{
+            width: `${Math.random() * 40 + 60}%`
+          }}
+=======
+          key={index}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: index * 0.1, duration: 0.3 }}
+          className="h-4 bg-slate-700 rounded animate-pulse"
+          style={{ width: `${Math.random() * 40 + 60}%` }}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
+        />
+      ))}
+    </div>
+  );
+<<<<<<< HEAD
+}
+
+export function CardSkeleton() {
+  return (
+    <div className="bg-slate-800 rounded-lg p-6 space-y-4">
+      <div className="flex items-center space-x-4">
+        <div className="w-12 h-12 bg-slate-700 rounded-full animate-pulse" />
+        <div className="flex-1 space-y-2">
+          <div className="h-4 bg-slate-700 rounded w-3/4 animate-pulse" />
+          <div className="h-3 bg-slate-700 rounded w-1/2 animate-pulse" />
+        </div>
+      </div>
+      <div className="space-y-2">
+        <div className="h-4 bg-slate-700 rounded animate-pulse" />
+        <div className="h-4 bg-slate-700 rounded w-5/6 animate-pulse" />
+        <div className="h-4 bg-slate-700 rounded w-4/6 animate-pulse" />
+      </div>
+    </div>
+  );
+}
+
+export function TableSkeleton({ rows = 5 }: { rows?: number }) {
+  return (
+    <div className="space-y-3">
+      {/* Header */}
+      <div className="grid grid-cols-4 gap-4">
+        {Array.from({ length: 4 }).map((_, i) => (
+          <div key={i} className="h-4 bg-slate-700 rounded animate-pulse" />
+        ))}
+      </div>
+      {/* Rows */}
+      {Array.from({ length: rows }).map((_, i) => (
+        <div key={i} className="grid grid-cols-4 gap-4">
+          {Array.from({ length: 4 }).map((_, j) => (
+            <div key={j} className="h-4 bg-slate-700 rounded animate-pulse" />
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+// Optimized variants for different use cases
+export const LoadingSpinnerVariants = {
+  // Simple spinner for buttons
+  Button: ({ className = '' }: { className?: string }) => (
+    <div className={`inline-flex items-center ${className}`}>
+      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+      <span>Loading...</span>
+    </div>
+  ),
+
+  // Full page loader
+  Page: ({ text = 'Loading page...' }: { text?: string }) => (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <div className="text-center">
+        <LoadingSpinner size="xl" color="white" text={text} showText />
+      </div>
+    </div>
+  ),
+
+  // Inline loader for content
+  Inline: ({ size = 'sm', className = '' }: { size?: 'sm' | 'md' | 'lg' | 'xl', className?: string }) => (
+    <LoadingSpinner size={size} color="primary" className={className} />
+  ),
+
+  // Skeleton loader for content
+  Skeleton: ({ lines = 3, className = '' }: { lines?: number, className?: string }) => (
+    <div className={`animate-pulse ${className}`}>
+      {Array.from({ length: lines }).map((_, index) => (
+        <div
+          key={index}
+          className={`h-4 bg-gray-200 dark:bg-gray-700 rounded mb-3 ${
+            index === lines - 1 ? 'w-3/4' : 'w-full'
+          }`}
+        />
+      ))}
+    </div>
+  )
+};
+
+export default LoadingSpinner;
+=======
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
