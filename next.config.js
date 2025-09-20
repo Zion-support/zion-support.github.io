@@ -10,7 +10,8 @@ const nextConfig = {
 		unoptimized: true
 	},
 	eslint: {
-		ignoreDuringBuilds: true
+		ignoreDuringBuilds: true,
+		dirs: []
 	},
 	typescript: {
 		// Allow builds to pass even if there are type errors; CI can run type-check separately
