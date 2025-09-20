@@ -1,0 +1,122 @@
+{
+  "compilerOptions": {
+    "target": "ES2024",
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/api/*": ["./src/api/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/context/*": ["./src/context/*"],
+      "@/services/*": ["./src/services/*"],
+      "axios": ["./src/lib/axios.ts"],
+      "notistack": ["./src/stubs/notistack.ts"],
+      "@sentry/browser": ["./src/stubs/sentry.ts"]
+    },
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "types": ["node"],
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+<<<<<<< HEAD
+=======
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-167a
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+=======
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es6"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+<<<<<<< HEAD
+    "incremental": true
+  },
+  "include": [
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/index.css",
+    "vite-env.d.ts"
+=======
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "allowJs": true,
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "src",
+    ".next/types/**/*.ts"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-167a
+  ],
+  "exclude": [
+    "src/**",
+    "node_modules"
+  ],
+<<<<<<< HEAD
+  "references": [{ "path": "./tsconfig.node.json" }]
+=======
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-167a
+}

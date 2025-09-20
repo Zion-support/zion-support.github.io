@@ -1,44 +1,46 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants';
+
 export interface Innovative2026AIService {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  period: string,
-  description: string,
-  features: string[],
-  popular: boolean,
-  icon: string,
-  color: string,
-  textColor: string,
-  link: string,
-  marketPosition: string,
-  targetAudience: string,
-  trialDays: number,
-  setupTime: string,
-  category: string,
-  realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
-  roi: string,
-  competitors: string[],
-  marketSize: string,
-  growthRate: string,
-  variant: ServiceVariant,
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: ServiceVariant;
   contactInfo: {
-    mobile: string,
-    email: string,
-    address: string,
-    website: string
-  },
-  realImplementation: boolean,
-  implementationDetails: string,
-  launchDate: string,
-  customers: number,
-  rating: number,
-  reviews: number
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
 }
+
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
   {
@@ -49,11 +51,16 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     period: '/month',
     description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.',
     features: [
-      'AI-powered data analysis and visualizationPredictive analytics and forecasting',
-      'Natural language query interfaceAutomated report generation',
-      'Real-time dashboard updatesCustom KPI tracking and alerts',
-      'Data integration from 100+ sourcesAdvanced machine learning models',
-      'Collaborative workspace for teamsMobile app for on-the-go insights'
+      'AI-powered data analysis and visualization',
+      'Predictive analytics and forecasting',
+      'Natural language query interface',
+      'Automated report generation',
+      'Real-time dashboard updates',
+      'Custom KPI tracking and alerts',
+      'Data integration from 100+ sources',
+      'Advanced machine learning models',
+      'Collaborative workspace for teams',
+      'Mobile app for on-the-go insights'
     ],
     popular: true,
     icon: '🧠',
@@ -66,11 +73,11 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     setupTime: '2 hours',
     category: 'AI & Business Intelligence',
     realService: true,
-    technology: ['PythonTensorFlow', 'ReactNode.js', 'PostgreSQLRedis', 'AWSDocker'],
-    integrations: ['SalesforceHubSpot', 'Google AnalyticsShopify', 'QuickBooksSlack', 'Microsoft Teams'],
-    useCases: ['Sales performance analysisCustomer behavior insights', 'Market trend predictionOperational efficiency optimization', 'Financial forecastingRisk assessment'],
+    technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations: ['Salesforce', 'HubSpot', 'Google Analytics', 'Shopify', 'QuickBooks', 'Slack', 'Microsoft Teams'],
+    useCases: ['Sales performance analysis', 'Customer behavior insights', 'Market trend prediction', 'Operational efficiency optimization', 'Financial forecasting', 'Risk assessment'],
     roi: 'Average customer sees 450% ROI within 6 months through improved decision-making and operational efficiency.',
-    competitors: ['TableauPower BI', 'LookerQlik', 'Sisense'],
+    competitors: ['Tableau', 'Power BI', 'Looker', 'Qlik', 'Sisense'],
     marketSize: '$29.9B market',
     growthRate: '220% annual growth',
     variant: 'ai-futuristic',
@@ -87,6 +94,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.9,
     reviews: 950
   },
+
   // AI-Powered Customer Experience Platform
   {
     id: 'ai-customer-experience-platform',
@@ -96,11 +104,16 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     period: '/month',
     description: 'Comprehensive AI platform that personalizes customer experiences across all touchpoints, from website interactions to customer support, driving engagement and loyalty.',
     features: [
-      'AI-powered personalization engineReal-time customer behavior analysis',
-      'Dynamic content optimizationPredictive customer journey mapping',
-      'Automated A/B testingMulti-channel experience orchestration',
-      'Customer sentiment analysisPersonalized recommendations',
-      'Automated customer supportCustomer lifetime value optimization'
+      'AI-powered personalization engine',
+      'Real-time customer behavior analysis',
+      'Dynamic content optimization',
+      'Predictive customer journey mapping',
+      'Automated A/B testing',
+      'Multi-channel experience orchestration',
+      'Customer sentiment analysis',
+      'Personalized recommendations',
+      'Automated customer support',
+      'Customer lifetime value optimization'
     ],
     popular: true,
     icon: '🎯',
@@ -113,11 +126,11 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     setupTime: '1 day',
     category: 'AI & Customer Experience',
     realService: true,
-    technology: ['ReactNode.js', 'PythonTensorFlow', 'PostgreSQLRedis', 'AWSKubernetes'],
-    integrations: ['ShopifyWooCommerce', 'MagentoSalesforce', 'HubSpotZendesk', 'Intercom'],
-    useCases: ['Website personalizationEmail marketing optimization', 'Product recommendationsCustomer support automation', 'Loyalty program optimizationCross-selling and upselling'],
+    technology: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'AWS', 'Kubernetes'],
+    integrations: ['Shopify', 'WooCommerce', 'Magento', 'Salesforce', 'HubSpot', 'Zendesk', 'Intercom'],
+    useCases: ['Website personalization', 'Email marketing optimization', 'Product recommendations', 'Customer support automation', 'Loyalty program optimization', 'Cross-selling and upselling'],
     roi: 'Average customer sees 320% ROI within 4 months through increased conversion rates and customer lifetime value.',
-    competitors: ['OptimizelyAdobe Target', 'Dynamic YieldEvergage', 'Maxymiser'],
+    competitors: ['Optimizely', 'Adobe Target', 'Dynamic Yield', 'Evergage', 'Maxymiser'],
     marketSize: '$15.8B market',
     growthRate: '180% annual growth',
     variant: 'ai-futuristic',
@@ -134,6 +147,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.8,
     reviews: 1100
   },
+
   // AI-Powered Cybersecurity Suite
   {
     id: 'ai-cybersecurity-suite',
@@ -143,11 +157,16 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     period: '/month',
     description: 'Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated incident response, and comprehensive security monitoring for businesses of all sizes.',
     features: [
-      'AI-powered threat detectionReal-time security monitoring',
-      'Automated incident responseBehavioral analysis',
-      'Vulnerability assessmentCompliance reporting',
-      'Security awareness trainingThreat intelligence feeds',
-      'Incident management dashboard24/7 security operations center'
+      'AI-powered threat detection',
+      'Real-time security monitoring',
+      'Automated incident response',
+      'Behavioral analysis',
+      'Vulnerability assessment',
+      'Compliance reporting',
+      'Security awareness training',
+      'Threat intelligence feeds',
+      'Incident management dashboard',
+      '24/7 security operations center'
     ],
     popular: true,
     icon: '🛡️',
@@ -160,11 +179,11 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     setupTime: '1 week',
     category: 'AI & Cybersecurity',
     realService: true,
-    technology: ['PythonTensorFlow', 'ReactNode.js', 'ElasticsearchKafka', 'AWSDocker'],
-    integrations: ['Active DirectoryOffice 365', 'SlackJira', 'ServiceNowSplunk', 'QRadar'],
-    useCases: ['Endpoint protectionNetwork security monitoring', 'Cloud securityData loss prevention', 'Compliance managementSecurity awareness training'],
+    technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'Elasticsearch', 'Kafka', 'AWS', 'Docker'],
+    integrations: ['Active Directory', 'Office 365', 'Slack', 'Jira', 'ServiceNow', 'Splunk', 'QRadar'],
+    useCases: ['Endpoint protection', 'Network security monitoring', 'Cloud security', 'Data loss prevention', 'Compliance management', 'Security awareness training'],
     roi: 'Average customer saves $2.4M annually through prevented security incidents and reduced response times.',
-    competitors: ['CrowdStrikeSentinelOne', 'DarktraceCylance', 'Carbon Black'],
+    competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance', 'Carbon Black'],
     marketSize: '$173.5B market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
@@ -181,6 +200,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.9,
     reviews: 800
   },
+
   // AI-Powered Marketing Automation
   {
     id: 'ai-marketing-automation-suite',
@@ -190,11 +210,16 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     period: '/month',
     description: 'Intelligent marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI across all marketing channels.',
     features: [
-      'AI-powered campaign optimizationMulti-channel automation',
-      'Personalized content generationPredictive analytics',
-      'A/B testing automationLead scoring and nurturing',
-      'Email marketing automationSocial media management',
-      'Marketing attributionROI tracking and optimization'
+      'AI-powered campaign optimization',
+      'Multi-channel automation',
+      'Personalized content generation',
+      'Predictive analytics',
+      'A/B testing automation',
+      'Lead scoring and nurturing',
+      'Email marketing automation',
+      'Social media management',
+      'Marketing attribution',
+      'ROI tracking and optimization'
     ],
     popular: true,
     icon: '📈',
@@ -207,11 +232,11 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     setupTime: '3 days',
     category: 'AI & Marketing',
     realService: true,
-    technology: ['ReactNode.js', 'PythonTensorFlow', 'PostgreSQLRedis', 'AWSKubernetes'],
-    integrations: ['SalesforceHubSpot', 'MailchimpFacebook Ads', 'Google AdsLinkedIn Ads', 'Shopify'],
-    useCases: ['Lead generation and nurturingEmail marketing campaigns', 'Social media marketingContent marketing', 'Account-based marketingMarketing analytics'],
+    technology: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'AWS', 'Kubernetes'],
+    integrations: ['Salesforce', 'HubSpot', 'Mailchimp', 'Facebook Ads', 'Google Ads', 'LinkedIn Ads', 'Shopify'],
+    useCases: ['Lead generation and nurturing', 'Email marketing campaigns', 'Social media marketing', 'Content marketing', 'Account-based marketing', 'Marketing analytics'],
     roi: 'Average customer sees 280% ROI within 5 months through increased lead quality and conversion rates.',
-    competitors: ['HubSpotMarketo', 'PardotActiveCampaign', 'ConvertKit'],
+    competitors: ['HubSpot', 'Marketo', 'Pardot', 'ActiveCampaign', 'ConvertKit'],
     marketSize: '$25.1B market',
     growthRate: '200% annual growth',
     variant: 'ai-futuristic',
@@ -228,6 +253,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.7,
     reviews: 1400
   },
+
   // AI-Powered Sales Intelligence
   {
     id: 'ai-sales-intelligence-platform',
@@ -237,11 +263,16 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     period: '/month',
     description: 'Advanced sales intelligence platform that uses AI to identify prospects, predict sales outcomes, and provide actionable insights to improve sales performance.',
     features: [
-      'AI-powered prospect identificationSales forecasting and prediction',
-      'Lead scoring and prioritizationCompetitive intelligence',
-      'Sales performance analyticsPipeline optimization',
-      'Customer behavior analysisSales coaching recommendations',
-      'Revenue optimizationIntegration with CRM systems'
+      'AI-powered prospect identification',
+      'Sales forecasting and prediction',
+      'Lead scoring and prioritization',
+      'Competitive intelligence',
+      'Sales performance analytics',
+      'Pipeline optimization',
+      'Customer behavior analysis',
+      'Sales coaching recommendations',
+      'Revenue optimization',
+      'Integration with CRM systems'
     ],
     popular: true,
     icon: '💰',
@@ -254,11 +285,11 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     setupTime: '2 days',
     category: 'AI & Sales',
     realService: true,
-    technology: ['ReactNode.js', 'PythonTensorFlow', 'PostgreSQLRedis', 'AWSElasticsearch'],
-    integrations: ['SalesforceHubSpot', 'PipedriveZoho CRM', 'Microsoft DynamicsSlack', 'Microsoft Teams'],
-    useCases: ['Lead generationProspect research', 'Sales forecastingPipeline management', 'Competitive analysisSales coaching'],
+    technology: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'AWS', 'Elasticsearch'],
+    integrations: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zoho CRM', 'Microsoft Dynamics', 'Slack', 'Microsoft Teams'],
+    useCases: ['Lead generation', 'Prospect research', 'Sales forecasting', 'Pipeline management', 'Competitive analysis', 'Sales coaching'],
     roi: 'Average customer sees 350% ROI within 4 months through increased sales productivity and conversion rates.',
-    competitors: ['ZoomInfoLinkedIn Sales Navigator', 'DiscoverOrgClearbit', 'RocketReach'],
+    competitors: ['ZoomInfo', 'LinkedIn Sales Navigator', 'DiscoverOrg', 'Clearbit', 'RocketReach'],
     marketSize: '$18.2B market',
     growthRate: '190% annual growth',
     variant: 'ai-futuristic',
@@ -275,18 +306,21 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.8,
     reviews: 950
   }
-],
+];
+
 export const getPopularAIServices = () => {
-  return innovative2026AIServices.filter(service => service.popular),
-},
+  return innovative2026AIServices.filter(service => service.popular);
+};
+
 export const getAIServicesByCategory = (category: string) => {
   return innovative2026AIServices.filter(service => 
     service.category.toLowerCase().includes(category.toLowerCase())
-  )
-},
+  );
+};
+
 export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovative2026AIServices.filter(service => {
-    const price = parseInt(service.price.replace('$', '').replace(, '')),
-    return price >= minPrice && price <= maxPrice,
-  }),
-},
+    const price = parseInt(service.price.replace('$', '').replace(',', ''));
+    return price >= minPrice && price <= maxPrice;
+  });
+};

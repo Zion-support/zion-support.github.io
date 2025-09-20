@@ -1,0 +1,10 @@
+import type { AppProps } from 'next/app';
+<<<<<<< HEAD
+import '../src/index.css';
+=======
+import '../src/App.css';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-167a
+
+export default function App({ Component, pageProps }: AppProps) {
+	return <Component {...pageProps} />;
+}

@@ -1,149 +1,309 @@
-impor, t, Reac, t, { useEffec, t, useState } from "react";
-interface PerformanceMetrics {
-  fc, p: numbe, r,
-    lc, p: numbe, r,fi, d: numbe, r,
-    cl, s: numbe, r,ttf, b: numbe, r,
-    fm, p: number
+=======
+import React, { useEffect, useMemo, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
+
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
 }
-;
-const PerformanceOptimize, r: React.FC = () => {
-  const [metri,  c, s, setMetri, c, s] = useState<PerformanceMetrics | null>(null);
-  const [isVisib, l, e, setIsVisib, l, e] = useState(false);
+
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  const location = useLocation();
+
+  // Preload critical resources
+  useEffect(() => {
+    const preloadCriticalResources = () => {
+      // Preload critical CSS
+      const criticalCSS = document.createElement('link');
+      criticalCSS.rel = 'preload';
+      criticalCSS.as = 'style';
+      criticalCSS.href = '/src/index.css';
+      document.head.appendChild(criticalCSS);
+
+      // Preload critical fonts
+      const criticalFonts = document.createElement('link');
+      criticalFonts.rel = 'preload';
+      criticalFonts.as = 'font';
+      criticalFonts.href = '/fonts/inter-var.woff2';
+      criticalFonts.crossOrigin = 'anonymous';
+      document.head.appendChild(criticalFonts);
+    };
+
+    preloadCriticalResources();
+  }, []);
+
+  // Optimize images on route change
+  useEffect(() => {
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        // Add loading="lazy" to images below the fold
+        if (img.getBoundingClientRect().top > window.innerHeight) {
+          img.loading = 'lazy';
+        }
+        
+        // Add decoding="async" for better performance
+        img.decoding = 'async';
+        
+        // Add error handling
+        img.onerror = () => {
+          img.style.display = 'none';
+        };
+      });
+    };
+
+    // Use requestIdleCallback for non-critical optimization
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(optimizeImages);
+    } else {
+      setTimeout(optimizeImages, 100);
+    }
+  }, [location.pathname]);
+
+  // Memoize expensive computations
+  const optimizedChildren = useMemo(() => children, [children]);
+
+  // Optimize scroll performance
+  const handleScroll = useCallback(() => {
+    // Throttle scroll events for better performance
+    if (!window.scrollTimeout) {
+      window.scrollTimeout = setTimeout(() => {
+        // Handle scroll-based optimizations here
+        window.scrollTimeout = null;
+      }, 16); // ~60fps
+    }
+  }, []);
 
   useEffect(() => {
-    // Only show in development or when performance is poor
-    const shouldShow = process.env.NODE_ENV === 'development' || 
-      (typeof window !== 'undefined' && window.location.search.includes('debug=performance'));
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
-    if (!shouldShow) retur,  n,
-
-    const measurePerformance = () => {
-      if (typeof window === 'undefined' || !('performance' in window)) return;
-
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-      const lcp = paint.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
-      const ttfb = navigation.responseStart - navigation.requestStart;
-      
-      // Simulate other metrics for demo
-      const fid = Math.random() * 100;
-      const cls = Math.random() * 0.1;
-      const fmp = fcp + Math.random() * 200;
-
-      setMetrics({
-        fc,  p,
-        lc, p,
-        fi, d,
-        cl, s,
-        ttf, b,
-        fmp
-      });
-    },
-
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load',  measurePerformance);
+  // Service Worker registration for caching
+  useEffect(() => {
+    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
     }
+  }, []);
 
-    // Keyboard shortcut to toggle visibility
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        setIsVisible(prev => !prev)
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const target = entry.target as HTMLElement;
+              if (target.dataset.src) {
+                target.src = target.dataset.src;
+                target.removeAttribute('data-src');
+                observer.unobserve(target);
+              }
+            }
+          });
+        },
+        {
+          rootMargin: '50px',
+          threshold: 0.1,
+        }
+      );
+
+      // Observe all images with data-src
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      lazyImages.forEach((img) => observer.observe(img));
+
+      return () => observer.disconnect();
+    }
+  }, [location.pathname]);
+
+  return <>{optimizedChildren}</>;
+};
+
+// Add global performance optimizations
+if (typeof window !== 'undefined') {
+  // Optimize long tasks
+  if ('scheduler' in window && 'postTask' in window.scheduler) {
+    window.scheduler.postTask(() => {
+      // Run non-critical tasks during idle time
+    }, { priority: 'background' });
+  }
+
+  // Optimize memory usage
+  if ('memory' in performance) {
+    const memoryThreshold = 50 * 1024 * 1024; // 50MB
+    if (performance.memory.usedJSHeapSize > memoryThreshold) {
+      // Trigger garbage collection if available
+      if ('gc' in window) {
+        (window as any).gc();
       }
-    };
-    window.addEventListener('keydown',  handleKeyPress);
-    return () => {
-      window.removeEventListener('keydown',  handleKeyPress);
-      window.removeEventListener('load',  measurePerformance);
-    },
-  }, []),
+    }
+  }
+}
+
+export default PerformanceOptimizer;
+import React, { useEffect, useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Progress } from '@/components/ui/progress';
+import { AlertTriangle, CheckCircle, Clock, Zap } from 'lucide-react';
+
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  overall: number;
+}
+
+export function PerformanceOptimizer() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Only show in development or when explicitly enabled
+    if (import.meta.env.DEV || localStorage.getItem('showPerformance') === 'true') {
+      setIsVisible(true);
+      measurePerformance();
+    }
+  }, []);
+
+  const measurePerformance = () => {
+    if ('PerformanceObserver' in window) {
+      // Measure Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'largest-contentful-paint') {
+            updateMetrics('lcp', entry.startTime);
+          } else if (entry.entryType === 'first-input') {
+            const firstInputEntry = entry as PerformanceEventTiming;
+            updateMetrics('fid', firstInputEntry.processingStart - firstInputEntry.startTime);
+          }
+        });
+      });
+
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+
+      // Measure other metrics
+      setTimeout(() => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          updateMetrics('ttfb', navigation.responseStart - navigation.requestStart);
+        }
+      }, 1000);
+    }
+  };
+
+  const updateMetrics = (key: keyof PerformanceMetrics, value: number) => {
+    setMetrics(prev => {
+      if (!prev) return null;
+      const newMetrics = { ...prev, [key]: value };
+      
+      // Calculate overall score
+      const scores = [
+        newMetrics.fcp < 1800 ? 100 : Math.max(0, 100 - (newMetrics.fcp - 1800) / 10),
+        newMetrics.lcp < 2500 ? 100 : Math.max(0, 100 - (newMetrics.lcp - 2500) / 25),
+        newMetrics.fid < 100 ? 100 : Math.max(0, 100 - (newMetrics.fid - 100) / 2),
+        newMetrics.cls < 0.1 ? 100 : Math.max(0, 100 - newMetrics.cls * 1000),
+        newMetrics.ttfb < 800 ? 100 : Math.max(0, 100 - (newMetrics.ttfb - 800) / 8)
+      ];
+      
+      newMetrics.overall = Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
+      
+      return newMetrics;
+    });
+  };
+
+  const getScoreColor = (score: number) => {
+    if (score >= 90) return 'bg-green-500';
+    if (score >= 70) return 'bg-yellow-500';
+    return 'bg-red-500';
+  };
+
+  const getScoreIcon = (score: number) => {
+    if (score >= 90) return <CheckCircle className="h-4 w-4 text-green-500" />;
+    if (score >= 70) return <Clock className="h-4 w-4 text-yellow-500" />;
+    return <AlertTriangle className="h-4 w-4 text-red-500" />;
+  };
 
   if (!isVisible || !metrics) return null;
 
-  const getScoreColor = (valu,  e: numbe, r,
-    threshold, s: { goo, d: numbe, r,
-    needsImprovemen, t: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.needsImprovement) return 'text-yellow-400', 
-    return 'text-red-400',
-  };
-
-  const getScoreText = (valu, e: numbe, r,
-    threshold, s: { goo, d: numbe, r,
-    needsImprovemen, t: number }) => {
-    if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.needsImprovement) return 'Needs Improvement', 
-    return 'Poor',
-  };
-
   return (
-    <div className="fixed bottom-4 right-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg max-w-sm z-50">
-      <div className="flex justify-between items-center mb-3">
-        <h3 className="text-lg font-semibold">Performance Metrics</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hove,  r:text-white"
-        >
-          ×
-        </button>
-      </div>
-      
-      <div className="space-y-2 text-sm">
-        <div className="flex justify-between">
-          <span className="text-gray-400">FC, P:</span>
-          <span className={getScoreColor(metrics.fc, p, { goo, d: 180, 0,
-    needsImprovemen, t: 3000 })}>
-            {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fc,  p, { goo, d: 180, 0,
-    needsImprovemen, t: 3000 })})
-          </span>
+    <Card className="fixed bottom-4 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20">
+      <CardHeader className="pb-2">
+        <CardTitle className="flex items-center gap-2 text-sm">
+          <Zap className="h-4 w-4 text-zion-cyan" />
+          Performance Monitor
+          <Badge variant="outline" className="ml-auto">
+            {metrics.overall}/100
+          </Badge>
+        </CardTitle>
+        <CardDescription className="text-xs">
+          Core Web Vitals & Performance Metrics
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-3">
+        <div className="space-y-2">
+          <div className="flex justify-between text-xs">
+            <span>First Contentful Paint</span>
+            <span className="font-mono">{Math.round(metrics.fcp)}ms</span>
+          </div>
+          <Progress value={Math.min(100, (metrics.fcp / 1800) * 100)} className="h-1" />
         </div>
         
-        <div className="flex justify-between">
-          <span className="text-gray-400">LC, P:</span>
-          <span className={getScoreColor(metrics.lc,  p, { goo, d: 250, 0,
-    needsImprovemen, t: 4000 })}>
-            {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lc,  p, { goo, d: 250, 0,
-    needsImprovemen, t: 4000 })})
-          </span>
+        <div className="space-y-2">
+          <div className="flex justify-between text-xs">
+            <span>Largest Contentful Paint</span>
+            <span className="font-mono">{Math.round(metrics.lcp)}ms</span>
+          </div>
+          <Progress value={Math.min(100, (metrics.lcp / 2500) * 100)} className="h-1" />
         </div>
         
-        <div className="flex justify-between">
-          <span className="text-gray-400">FI, D:</span>
-          <span className={getScoreColor(metrics.fi,  d, { goo, d: 10, 0,
-    needsImprovemen, t: 300 })}>
-            {Math.round(metrics.fid)}ms ({getScoreText(metrics.fi,  d, { goo, d: 10, 0,
-    needsImprovemen, t: 300 })})
-          </span>
+        <div className="space-y-2">
+          <div className="flex justify-between text-xs">
+            <span>First Input Delay</span>
+            <span className="font-mono">{Math.round(metrics.fid)}ms</span>
+          </div>
+          <Progress value={Math.min(100, (metrics.fid / 100) * 100)} className="h-1" />
         </div>
         
-        <div className="flex justify-between">
-          <span className="text-gray-400">CL, S:</span>
-          <span className={getScoreColor(metrics.cl,  s, { goo, d: 0.1,
-    needsImprovemen, t: 0.25 })}>
-            {metrics.cls.toFixed(3)} ({getScoreText(metrics.cl,  s, { goo, d: 0.1,
-    needsImprovemen, t: 0.25 })})
-          </span>
+        <div className="space-y-2">
+          <div className="flex justify-between text-xs">
+            <span>Cumulative Layout Shift</span>
+            <span className="font-mono">{metrics.cls.toFixed(3)}</span>
+          </div>
+          <Progress value={Math.min(100, (metrics.cls / 0.1) * 100)} className="h-1" />
         </div>
         
-        <div className="flex justify-between">
-          <span className="text-gray-400">TTF, B:</span>
-          <span className={getScoreColor(metrics.ttf,  b, { goo, d: 80, 0,
-    needsImprovemen, t: 1800 })}>
-            {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttf,  b, { goo, d: 80, 0,
-    needsImprovemen, t: 1800 })})
-          </span>
+        <div className="space-y-2">
+          <div className="flex justify-between text-xs">
+            <span>Time to First Byte</span>
+            <span className="font-mono">{Math.round(metrics.ttfb)}ms</span>
+          </div>
+          <Progress value={Math.min(100, (metrics.ttfb / 800) * 100)} className="h-1" />
         </div>
-      </div>
-      
-      <div className="mt-3 pt-2 border-t border-gray-700 text-center">
-        <span className="text-gray-500 text-xs">Press Ctrl+Shift+P to toggle</span>
-      </div>
-    </div>
+        
+        <div className="pt-2 border-t border-gray-200">
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-medium">Overall Score</span>
+            <div className="flex items-center gap-2">
+              {getScoreIcon(metrics.overall)}
+              <span className={`text-sm font-bold ${getScoreColor(metrics.overall).replace('bg-', 'text-')}`}>
+                {metrics.overall}
+              </span>
+            </div>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
   );
-},
-
-export default PerformanceOptimizer;
+}
+=======
+=======

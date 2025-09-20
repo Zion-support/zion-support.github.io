@@ -1,200 +1,254 @@
-impor, t, Reac, t, { useEffec, t, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
   keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: any;
-  enableAnalytics?: boolean;
-  enableSitemap?: boolean;
-  className?: string;
-};
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product' | 'service';
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+}
 
-const SEOEnhance, r: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion - Tech & AI Marketplace', 
-  description = 'Discover top AI and tec, h, talen, t, service, s, and equipment in one place. Connect wit, h, expert, s, find innovativ, e, solution, s, and grow your business.',
-  keywords = ['A, I', 'technolog, y', 'marketplac, e', 'talen, t', 'service, s', 'equipmen, t', 'innovatio, n'],
-  canonicalUrl = window.location.hre, f,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredDat, a,
-  enableAnalytics = tru, e,
-  enableSitemap = tru, e,
-  className = ''
+export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+  title = 'Zion Tech Group - Leading AI & Technology Solutions',
+  description = 'Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise. We help businesses thrive in the digital age.',
+  keywords = ['AI solutions', 'technology consulting', 'digital transformation', 'cloud computing', 'cybersecurity', 'machine learning'],
+  image = '/images/zion-tech-group-og.jpg',
+  url = 'https://ziontechgroup.com',
+  type = 'website',
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section = 'Technology Services',
+  tags = ['AI', 'Technology', 'Digital Transformation']
 }) => {
-  const [pageDa, t, a, setPageDa, t, a] = useState({
-    titl,  e,
-    descriptio, n,
-    keyword, s,
-    canonicalUr, l,
-    ogImag, e,
-    ogTyp, e,
-    twitterCard
-  });
-
-  // Generate structured data
-  const generateStructuredData = () => {
-    const baseStructuredData = {
-      '@context': 'http,  s://schema.org',
-      '@type': 'WebSite',
-      nam, e: 'Zion - Tech & AI Marketplace',
-    descriptio, n: descriptio, n,
-      ur, l: canonicalUr, l,
-    potentialActio, n: {
-        '@type': 'SearchAction',
-        targe, t: {
-          '@type': 'EntryPoint',
-          urlTemplat, e: `${window.location.origin}/search?q={search_term_strin, g}`
-        },
-        'query-input': 'required name=search_term_string'
-      },
-      publishe, r: {
-        '@type': 'Organization',
-        nam, e: 'Zion Holdings',
-    ur, l: 'http, s: //zion.app',
-    log, o: {
-          '@type': 'ImageObject',
-          ur, l: 'http, s://zion.app/logo.png'
-        }
-      }
-    };
-
-    return structuredData || baseStructuredData;
-  };
-
-  // Generate sitemap entry
-  const generateSitemapEntry = () => {
-    if (!enableSitemap) return;
-
-    const sitemapEntry = {
-      ur,  l: canonicalUr, l,
-    lastmo, d: new Date().toISOString(), 
-      changefre, q: 'daily',
-    priorit, y: 0.8
-    };
-
-    // In a rea, l, implementatio, n, this would be sent to a sitemap service
-    console.log('Sitemap entr, y:', sitemapEntry);
-  };
-
-  // Initialize analytics
   useEffect(() => {
-    if (!enableAnalytics) return;
+    // Add structured data to the page
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': type === 'article' ? 'Article' : 'Organization',
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
+      logo: 'https://ziontechgroup.com/images/zion-tech-group-logo.png',
+      description: description,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '123 Technology Drive',
+        addressLocality: 'Wilmington',
+        addressRegion: 'DE',
+        postalCode: '19801',
+        addressCountry: 'US'
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-302-464-0950',
+        email: 'info@ziontechgroup.com',
+        contactType: 'customer service',
+        availableLanguage: 'English'
+      },
+      sameAs: [
+        'https://linkedin.com/company/ziontechgroup',
+        'https://twitter.com/ziontechgroup',
+        'https://github.com/ziontechgroup'
+      ],
+      ...(type === 'article' && {
+        headline: title,
+        author: {
+          '@type': 'Person',
+          name: author
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Zion Tech Group',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ziontechgroup.com/images/zion-tech-group-logo.png'
+          }
+        },
+        datePublished: publishedTime,
+        dateModified: modifiedTime,
+        articleSection: section,
+        keywords: tags.join(', ')
+      }),
+      ...(type === 'service' && {
+        serviceType: title,
+        areaServed: 'Worldwide',
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Technology Services',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'AI Solutions',
+                description: 'Machine learning, natural language processing, and computer vision solutions'
+              }
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Cloud & DevOps',
+                description: 'Cloud migration, infrastructure automation, and DevOps practices'
+              }
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Cybersecurity',
+                description: 'Comprehensive security solutions including threat detection and compliance'
+              }
+            }
+          ]
+        }
+      })
+    };
 
-    // Google Analytics 4
-    const gtag = (window as any).gtag;
-    if (gtag) {
-      gtag('config',  'GA_MEASUREMENT_ID', {
-        page_titl, e: pageData.titl, e,
-    page_locatio, n: pageData.canonicalUrl
-      });
+    // Remove existing structured data
+    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    if (existingScript) {
+      existingScript.remove();
     }
 
-    // Custom analytics
-    const analyticsData = {
-      pag, e: window.location.pathnam, e,
-    titl, e: pageData.titl, e,
-      timestam, p: new Date().toISOString(), 
-    userAgen, t: navigator.userAgen, t,
-      referre, r: document.referrer
-    };
+    // Add new structured data
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(structuredData);
+    document.head.appendChild(script);
 
-    // Send analytics data (in rea, l, implementatio, n, this would be sent to analytics service)
-    console.log('Analytics dat,  a:', analyticsData);
-  }, [pageDa, t, a, enableAnalyti, c, s]);
+    // Add performance meta tags
+    const performanceMeta = [
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
+      { name: 'theme-color', content: '#1e40af' },
+      { name: 'msapplication-TileColor', content: '#1e40af' },
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+      { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group' },
+      { name: 'format-detection', content: 'telephone=no' }
+    ];
 
-  // Generate sitemap entry on mount
-  useEffect(() => {
-    generateSitemapEntry();
-  },  [canonicalU, r, l, enableSitem, a, p]);
-
-  // Update page data when props change
-  useEffect(() => {
-    setPageData({
-      titl,  e,
-      descriptio, n,
-      keyword, s,
-      canonicalUr, l,
-      ogImag, e,
-      ogTyp, e,
-      twitterCard
+    performanceMeta.forEach(meta => {
+      const metaTag = document.createElement('meta');
+      metaTag.name = meta.name;
+      metaTag.content = meta.content;
+      document.head.appendChild(metaTag);
     });
-  }, [tit, l, e, descripti, o, n, keywor, d, s, canonicalU, r, l, ogIma, g, e, ogTy, p, e, twitterCa, r, d]);
 
-  return (<div className={`seo-enhancer ${classNam, e}`}>
-      <Helmet>
-        {/* Basic Meta Tags */}
-        <title>{pageData.title}</title>
-        <meta name="description" content={pageData.description} />
-        <meta name="keywords" content={pageData.keywords.join(',  ')} />
-        <link rel="canonical" href={pageData.canonicalUrl} />
-        
-        {/* Open Graph Tags */}
-        <meta property="o, g:title" content={pageData.title} />
-        <meta property="o, g:description" content={pageData.description} />
-        <meta property="o, g:url" content={pageData.canonicalUrl} />
-        <meta property="o, g:type" content={pageData.ogType} />
-        <meta property="o, g:image" content={pageData.ogImage} />
-        <meta property="o, g:site_name" content="Zion - Tech & AI Marketplace" />
-        
-        {/* Twitter Card Tags */}
-        <meta name="twitte, r:card" content={pageData.twitterCard} />
-        <meta name="twitte, r:title" content={pageData.title} />
-        <meta name="twitte, r:description" content={pageData.description} />
-        <meta name="twitte, r:image" content={pageData.ogImage} />
-        
-        {/* Additional SEO Tags */}
-        <meta name="robots" content="inde, x, follo, w, max-image-previe, w:larg, e, max-snippe, t:-1, max-video-previe, w:-1" />
-        <meta name="googlebot" content="inde, x, follow" />
-        <meta name="bingbot" content="inde, x, follow" />
-        
-        {/* Mobile Optimization */}
-        <meta name="viewport" content="width=device-widt, h, initial-scale=1.0, maximum-scale=5.0" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        
-        {/* Performance Hints */}
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-        <link rel="preconnect" href="http, s://fonts.googleapis.com" />
-        <link rel="preconnect" href="http, s://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(generateStructuredData())}
-        </script>
-        
-        {/* Additional Meta Tags for Better SEO */}
-        <meta name="author" content="Zion Holdings" />
-        <meta name="copyright" content="Zion Holdings" />
-        <meta name="language" content="en" />
-        <meta name="revisit-after" content="1 days" />
-        <meta name="rating" content="general" />
-        
-        {/* Security Headers */}
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="DENY" />
-        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-        
-        {/* Theme Color */}
-        <meta name="theme-color" content="#8B5CF6" />
-        <meta name="msapplication-TileColor" content="#8B5CF6" />
-        
-        {/* Favicon */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/manifest.json" />
-      </Helmet>
-    </div>
+    // Add resource hints
+    const resourceHints = [
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' }
+    ];
+
+    resourceHints.forEach(hint => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossorigin) link.crossOrigin = hint.crossorigin;
+      document.head.appendChild(link);
+    });
+
+    return () => {
+      // Cleanup on unmount
+      const addedScript = document.querySelector('script[type="application/ld+json"]');
+      if (addedScript) addedScript.remove();
+      
+      performanceMeta.forEach(meta => {
+        const metaTag = document.querySelector(`meta[name="${meta.name}"]`);
+        if (metaTag) metaTag.remove();
+      });
+      
+      resourceHints.forEach(hint => {
+        const link = document.querySelector(`link[rel="${hint.rel}"][href="${hint.href}"]`);
+        if (link) link.remove();
+      });
+    };
+  }, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, section, tags]);
+
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="author" content={author} />
+      <meta name="robots" content="index, follow" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      
+      {/* Additional Meta Tags */}
+      <meta name="application-name" content="Zion Tech Group" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />
+      
+      {/* Favicon and App Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Security Headers */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+      
+      {/* Performance Meta Tags */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="theme-color" content="#1e40af" />
+      <meta name="msapplication-TileColor" content="#1e40af" />
+      
+      {/* Business Information */}
+      <meta name="geo.region" content="US-DE" />
+      <meta name="geo.placename" content="Wilmington, Delaware" />
+      <meta name="geo.position" content="39.7447;-75.5484" />
+      <meta name="ICBM" content="39.7447, -75.5484" />
+      
+      {/* Contact Information */}
+      <meta name="contact:phone" content="+1-302-464-0950" />
+      <meta name="contact:email" content="info@ziontechgroup.com" />
+      <meta name="contact:address" content="123 Technology Drive, Wilmington, DE 19801" />
+      
+      {/* Business Hours */}
+      <meta name="business:hours" content="Monday-Friday 9:00 AM-6:00 PM EST" />
+      <meta name="business:payment_methods" content="Credit Card, Bank Transfer, PayPal" />
+      
+      {/* Service Areas */}
+      <meta name="service:area" content="Worldwide" />
+      <meta name="service:type" content="Technology Consulting, AI Solutions, Cloud Services, Cybersecurity" />
+    </Helmet>
   );
+};
 
 export default SEOEnhancer;

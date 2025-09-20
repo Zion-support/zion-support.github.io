@@ -1,179 +1,338 @@
-import { motion } from "framer-moti, on";import { ArrowRight, Calendar;
-  CheckCircle;
-  Clock;
-  Mail;
-  MessageCircle;
-  Phone;
-  Star;
-  Users
-} from "lucide-react";import React, { useState  from "react", export const ITServiceRequestHero: React.FC  = () => {
-  const [active,
-    TabsetActiveTab] = useState('contact')const contactMethods  = [
-    {
-      icon: Phon,
-    etitle: 'Call Us, ',description: 'Speak directly with our experts, ',action: '+1 302 464 0950, ',href: 'tel:+13024640950, ',color: 'from-blue-500 to-cyan-500'
-   ,  }{
-      icon: Mail,
-    title: 'Email Us, ',description: 'Send us your requirements, ',action: 'kleber@ziontechgroup.com, ',href: 'mailto:kleber@ziontechgroup.com, ',color: 'from-purple-500 to-pink-500'
-   ,  },
-    {
-      icon: MessageCircle,
-    title: 'Live Chat, ',description: 'Get instant support, ',action: 'Start Chat, ',href: '#chat, ',color: 'from-green-500 to-emerald-500'
-   ,  }
-  ]const quickActions  = [
-    {
-      title: 'Request Quote, ',description: 'Get a customized quote for your project',
-    icon: CheckCircle,
-    href: '/request-quote'
-   ,  }{
-      title: 'Schedule Consultation, ',description: 'Book a free 30-minute consultation, ',icon: Calendar,
-    href: '/consultation'
-   ,  },
-    {
-      title: 'View Services, ',description: 'Explore our comprehensive service offerings, ',icon: Star,
-    href: '/services'
-   ,  }
-  ]const stats  = [
-    { value: '500+, ', label: 'Projects Completed,'; icon: CheckCircle,
-     };
-    { value: '99%, ', label: 'Client Satisfaction, ', icon: Star,  }{ value: '24/7, ', label: 'Support Available, ', icon: Clock,  },
-    { value: '50+, ', label: 'Expert Team Members, ', icon: Users,  }
+=======
+import React, { useState } from "react";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+=======
+import { Clock, Globe, Shield, Zap, MapPin, CheckCircle } from "lucide-react";
+
+export function ITServiceRequestHero() {
+  const [location, setLocation] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (location.trim()) {
+      setIsSubmitting(true);
+      // Simulate API call
+      setTimeout(() => {
+        setIsSubmitting(false);
+        navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
+      }, 1000);
+import { MapPin, Clock, Globe, ArrowRight, Shield, Zap } from "lucide-react";
+
+export function ITServiceRequestHero() {
+  const [location, setLocation] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (location.trim()) {
+      navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
+=======
+=======
+    }
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
+
+=======
+  const features = [
+    { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
+    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
+    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },
+    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }
   ];
+
   return (
-    <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="max-w-7xl mx-auto">
-        {/* Hero Content ,
-    */}
-        <motion.div
-          initial={{ opacity: 0,
-    y: 20,  }}
-          animate={{ opacity: 1,
-    y: 0,  }}
-          transition={{ duration: 0.6,  }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
-            IT Service Request
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Get expert IT support and solutions tailored to your business needs. 
-            Our team is ready to help you succeed.
+    <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 md:py-28 border-b border-zion-purple/20 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>
+  return (
+    <section className="bg-zion-blue-dark py-16 md:py-24 border-b border-zion-purple/20 cyber-grid relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10"></div>
+      <div className="relative container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="float">
+          <GradientHeading className="mb-6 text-4xl md:text-5xl glow">
+            24x7 Global IT Onsite Services
+          </GradientHeading>
+          <p className="text-lg text-zion-slate-light mb-8 max-w-md">
+            Request professional technicians anywhere in the world, anytime you need them.
           </p>
-        </motion.div>
+        </div>
+        <div className="bg-zion-blue-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg neon-border float">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <Input
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+              placeholder="Enter service location"
+              className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
+            />
+            <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6">
+              Request Service
+            </Button>
+          </form>
+          <p className="text-xs text-center text-zion-slate-light mt-3">
+            Available worldwide, 24 hours a day
+          </p>
+        </div>
+=======
+=======
+      </div>
 
-        {/* Contact Methods *,
-    /}
-        <motion.div
-          initial={{ opacity: 0,
-    y: 20,  }}
-          animate={{ opacity: 1,
-    y: 0,  }}
-          transition={{ duration: 0.6,
-    delay: 0.1,  }}
-          className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-16"
-        >
-          {contactMethods.map((method,
-    index) => (
-            <motion.div
-              key={method.title}
-              initial={{ opacity: 0,
-    y: 20,  }}
-              animate={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.2 + index * 0.1,  }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center hover: border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
-            >
-              <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${method.colo, r} rounded-lg mb-6`}>
-                {React.createElement(method.icon, { className: "w-8 h-8 text-white",  })}
+      <motion.div 
+        className="container mx-auto px-4 relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left content */}
+          <motion.div variants={itemVariants} className="text-white">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 bg-zion-cyan/20 rounded-lg">
+                <Zap className="w-6 h-6 text-zion-cyan" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{method.title}</h3>
-              <p className="text-gray-300 mb-4">{method.description}</p>
-              <a
-                href={method.href}
-                className="inline-flex items-center px-6 py-3 bg-zion-cyan hover: bg-zion-blue text-white font-semibold rounded-lg transition-colors"
-              >
-                {method.actio,
-    n}
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
-            </motion.div>
-          ))}
-        </motion.div>
+              <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">
+                Global IT Services
+              </span>
+            </div>
+            
+            <GradientHeading className="mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight">
+              24x7 Global IT Onsite Services
+            </GradientHeading>
+            
+            <p className="text-lg md:text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
+              Request professional technicians anywhere in the world, anytime you need them. 
+              Fast, reliable, and secure IT solutions for your business.
+            </p>
 
-        {/* Quick Actions */}
-        <motion.div
-          initial={{ opacity: 0,
-    y: 20,  }}
-          animate={{ opacity: 1,
-    y: 0,  }}
-          transition={{ duration: 0.6,
-    delay: 0.3,  }}
-          className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-16"
-        >
-          {quickActions.map((action,
-    index) => (
-            <motion.div
-              key={action.title}
-              initial={{ opacity: 0,
-    y: 20,  }}
-              animate={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.4 + index * 0.1,  }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover: border-zion-cyan/50 transition-all duration-300"
-            >
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">
-                  {React.createElement(action.ico, n, { className: "w-6 h-6 text-zion-cyan",  })}
+            {/* Feature highlights */}
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                <span className="text-zion-cyan-light">Available 24/7 worldwide</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-zion-purple rounded-full"></div>
+                <span className="text-zion-purple-light">Certified technicians</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-zion-blue rounded-full"></div>
+                <span className="text-zion-blue-light">Same-day response guarantee</span>
+              </div>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/10">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-zion-cyan">150+</div>
+                <div className="text-sm text-zion-slate-light">Countries</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-zion-purple">24/7</div>
+                <div className="text-sm text-zion-slate-light">Support</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-zion-blue">15min</div>
+                <div className="text-sm text-zion-slate-light">Response</div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right form */}
+          <motion.div variants={itemVariants} className="relative">
+            <div className="relative">
+              {/* Glassmorphism form container */}
+              <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-8 shadow-2xl">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <MapPin className="w-8 h-8 text-zion-cyan" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Request Service</h3>
+                  <p className="text-zion-slate-light">Enter your location to get started</p>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-white mb-1">{action.title}</h3>
-                  <p className="text-gray-300 text-sm">{action.description}</p>
-                </div>
-                <a
-                  href={action.href}
-                  className="text-zion-cyan hover: text-zion-blue transition-colors"
-                >
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0,
-    y: 20,  }}
-          animate={{ opacity: 1,
-    y: 0,  }}
-          transition={{ duration: 0.6,
-    delay: 0.5,  }}
-          className="grid grid-cols-2 md: grid-cols-4 gap-6"
-        >
-          {stats.map((stat,
-    index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0,
-    y: 20,  }}
-              animate={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.6 + index * 0.1,  }}
-              className="text-center"
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-cyan/20 rounded-lg mb-4">
-                {React.createElement(stat.icon, { className: "w-8 h-8 text-zion-cyan",
-     })}
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="relative">
+                    <Input
+                      value={location}
+                      onChange={(e) => setLocation(e.target.value)}
+                      placeholder="Enter service location (e.g., New York, NY)"
+                      className="w-full bg-white/10 border-white/30 focus:border-zion-cyan focus:ring-zion-cyan text-white placeholder-zion-slate-light rounded-xl py-4 px-4 text-lg backdrop-blur-sm"
+                      required
+                    />
+                    <MapPin className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan/50" />
+                  </div>
+
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-lg py-4 rounded-xl shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 group"
+                  >
+                    <span className="flex items-center gap-2">
+                      Request Service Now
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                    </span>
+                  </Button>
+                </form>
+
+                {/* Trust indicators */}
+                <div className="mt-6 pt-6 border-t border-white/10">
+                  <div className="flex items-center justify-center gap-4 text-xs text-zion-slate-light">
+                    <div className="flex items-center gap-1">
+                      <Shield className="w-3 h-3 text-zion-cyan" />
+                      <span>Secure</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-3 h-3 text-zion-purple" />
+                      <span>Fast</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Globe className="w-3 h-3 text-zion-blue" />
+                      <span>Global</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-300 text-sm">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
+
+              {/* Floating elements */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-zion-cyan/30 rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-zion-purple/30 rounded-full animate-pulse" style={{ animationDelay: "1s" }}></div>
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
+  );
+}
+=======
+import React from 'react';
+import { ArrowRight, Zap, Shield, Brain, Cloud } from 'lucide-react';
+
+export const ITServiceRequestHero: React.FC = () => {
+  return (
+    <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20"></div>
+        <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/2 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 text-orange-400 rounded-full text-sm font-medium mb-6">
+            <Zap className="w-4 h-4 mr-2" />
+            IT Services & Solutions
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Transform Your Business with
+            <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent"> Advanced Technology</span>
+          </h1>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
+            Zion Tech Group delivers cutting-edge AI, cybersecurity, cloud, and quantum computing 
+            solutions that drive innovation and accelerate your digital transformation journey.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <a
+              href="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              Request IT Services
+              <ArrowRight className="w-5 h-5 ml-2 inline" />
+            </a>
+            <a
+              href="/services"
+              className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+            >
+              Explore Solutions
+            </a>
+          </div>
+
+          {/* Feature Icons */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <p className="text-sm text-gray-300">AI Solutions</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <p className="text-sm text-gray-300">Cybersecurity</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Cloud className="w-8 h-8 text-white" />
+              </div>
+              <p className="text-sm text-gray-300">Cloud & DevOps</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <p className="text-sm text-gray-300">Innovation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Wave */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg
+          className="w-full h-16 text-slate-800"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+            opacity=".25"
+            fill="currentColor"
+          />
+          <path
+            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+            opacity=".5"
+            fill="currentColor"
+          />
+          <path
+            d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+            fill="currentColor"
+          />
+        </svg>
       </div>
     </section>
   );
 };
+=======
+=======
