@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { BookOpen, Key, Webhook, List } from 'lucide-react';
 
 interface TabDefinition {
-id: string;,
-label: string;,
-icon: React.ComponentType;
+  id: string;
+  label: string;
+  icon: React.ComponentType;
 }
 
 export default function DeveloperPortal() {
@@ -18,9 +18,9 @@ const tabs: TabDefinition[] = [
 ];
 
 return (
-<div className="min-h-screen bg-zion-blue">
-<div className="container mx-auto px-4 py-8">
-<h1 className="text-3xl font-bold text-white mb-8">Developer Portal</h1>
+  <div className="min-h-screen bg-zion-blue">
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold text-white mb-8">Developer Portal</h1>
 
 <div className="bg-zion-blue-dark rounded-lg p-6">
 <div className="flex space-x-4 mb-6">

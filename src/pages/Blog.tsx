@@ -2,16 +2,16 @@ import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
 metadataBase: new URL('https://ziontechgroup.com'),
 title: 'Blog - AI, Quantum Computing & Technology Insights',
 description: 'Stay updated with the latest insights, trends, and innovations in AI, quantum computing, and technology from Zion Tech Group experts.',
 keywords: ['blog', 'AI insights', 'quantum computing', 'technology trends', 'innovation', 'tech news'],
-openGraph: {,
+openGraph: {
 title: 'Blog - AI, Quantum Computing & Technology Insights',
 description: 'Latest insights and innovations in AI and technology.',
 type: 'website',
-url: 'https://ziontechgroup.com/blog';
+  url: 'https://ziontechgroup.com/blog'
 }
 }
 
@@ -23,8 +23,8 @@ excerpt: 'Exploring the revolutionary AI technologies that will reshape industri
 date: '2025-01-15',
 readTime: '5 min read',
 category: 'AI',
-href: '/blog/ai-2025-predictions';
-image: '🤖';
+  href: '/blog/ai-2025-predictions',
+  image: '🤖'
 },
 {
 title: 'Quantum Computing Breakthrough: What It Means for Business',
@@ -33,7 +33,7 @@ date: '2025-01-12',
 readTime: '7 min read',
 category: 'Quantum Computing',
 href: '/blog/quantum-computing-breakthrough',
-image: '⚛️';
+  image: '⚛️'
 },
 {
 title: 'Automation Revolution: Transforming Enterprise Operations',
@@ -42,7 +42,7 @@ date: '2025-01-10',
 readTime: '6 min read',
 category: 'Automation',
 href: '/blog/automation-revolution',
-image: '⚙️';
+  image: '⚙️'
 },
 {
 title: 'AI Ethics: Building Responsible Technology',
@@ -51,7 +51,7 @@ date: '2025-01-08',
 readTime: '8 min read',
 category: 'Ethics',
 href: '/blog/ai-ethics',
-image: '⚖️';
+  image: '⚖️'
 },
 {
 title: 'Digital Transformation: A Complete Guide',
@@ -60,7 +60,7 @@ date: '2025-01-05',
 readTime: '10 min read',
 category: 'Digital Transformation',
 href: '/blog/digital-transformation-guide',
-image: '🚀';
+  image: '🚀'
 },
 {
 title: 'Machine Learning in Production: Best Practices',
@@ -69,7 +69,7 @@ date: '2025-01-03',
 readTime: '9 min read',
 category: 'Machine Learning',
 href: '/blog/ml-production-best-practices',
-image: '🧠';
+  image: '🧠'
 }
 ];
 
