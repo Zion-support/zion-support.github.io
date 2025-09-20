@@ -1,10 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
 import Link from 'next/link'
-import SEO from '../../components/SEO'
-=======
 import { Metadata } from 'next'
->>>>>>> b7869ab51a45f4f8fb089360cbce2775c9005796
 
 export const metadata: Metadata = {
   title: 'AI 2025 - Zion Holdings',
@@ -14,13 +10,6 @@ export const metadata: Metadata = {
 export default function AI2025Page() {
   return (
     <div>
-<<<<<<< HEAD
-      <SEO
-        title="AI 2025 - Revolutionary AI Technologies"
-        description="Explore the cutting-edge AI technologies and solutions for 2025"
-        keywords="AI 2025, artificial intelligence, neural networks, automation, machine learning"
-        url="/ai-2025"
-      />
       <div className="min-h-screen bg-gray-900 text-white">
         <div className="container mx-auto px-4 py-20">
           <h1 className="text-4xl font-bold mb-8">AI 2025 Revolution</h1>
@@ -49,14 +38,6 @@ export default function AI2025Page() {
               Get Started Today
             </Link>
           </div>
-=======
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold mb-8">AI 2025</h1>
-          <p className="text-xl text-gray-300">
-            Next-generation AI technologies and solutions for the future.
-          </p>
->>>>>>> b7869ab51a45f4f8fb089360cbce2775c9005796
         </div>
       </div>
     </div>
