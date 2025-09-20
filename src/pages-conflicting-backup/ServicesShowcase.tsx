@@ -1,4 +1,3 @@
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -133,13 +132,10 @@ const ServicesShowcase: React.FC = () => {
           marketPosition: "AI-powered email marketing for modern businesses",
           competitors: ["Mailchimp", "Constant Contact", "ConvertKit"],
           competitiveAdvantage: "AI personalization, predictive analytics, and automated optimization"
-=======
-=======
         }
       ]
     },
     {
-=======
       category: "Cloud & Infrastructure",
       icon: Cloud,
       services: [
@@ -229,13 +225,10 @@ const ServicesShowcase: React.FC = () => {
           marketPosition: "Next-generation CX platform for customer-centric businesses",
           competitors: ["Adobe Experience Cloud", "Salesforce Service Cloud", "Oracle CX"],
           competitiveAdvantage: "AI-driven personalization, real-time optimization, and comprehensive analytics"
-=======
-=======
         }
       ]
     },
     {
-=======
       category: "Cybersecurity & Compliance",
       icon: Shield,
       services: [
@@ -325,13 +318,10 @@ const ServicesShowcase: React.FC = () => {
           marketPosition: "Enterprise blockchain solutions for innovative organizations",
           competitors: ["Ethereum Enterprise", "Hyperledger", "Corda"],
           competitiveAdvantage: "Custom development, enterprise integration, and regulatory compliance"
-=======
-=======
         }
       ]
     },
     {
-=======
       category: "Emerging Technologies",
       icon: Rocket,
       services: [
@@ -587,7 +577,6 @@ const ServicesShowcase: React.FC = () => {
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { EnhancedServicesShowcase } from '@/components/EnhancedServicesShowcase';
@@ -634,14 +623,11 @@ export default function ServicesShowcase() {
                         {service.features.map((feature, idx) => (
                           <li key={idx} className="text-gray-300 flex items-center">
                             <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-=======
-=======
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
-=======
                     
                     <Link
                       to={service.href}
@@ -845,7 +831,6 @@ export default function ServicesShowcase() {
               );
             })}
           </div>
-=======
 import { CogIcon } from '@heroicons/react/24/outline';
 
 const $page: React.FC = () => {
@@ -873,7 +858,6 @@ const $page: React.FC = () => {
         </div>
       </section>
     </div>
-=======
     <>
       <Helmet>
         <title>Services Showcase - Zion Tech Group</title>
@@ -888,7 +872,5 @@ const $page: React.FC = () => {
 };
 
 export default $page;
-=======
 export default ServicesShowcase;
-=======
 export default ServicesShowcase;

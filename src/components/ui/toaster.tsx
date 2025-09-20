@@ -1,4 +1,3 @@
-=======
 
 import * as React from "react";
 import { Toaster as HotToaster } from "react-hot-toast";
@@ -11,6 +10,4 @@ import React from 'react';
 
 export function Toaster() {
   return <div id="toaster" />;
-=======
-=======
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-=======
 
 export function FeaturesGuideSection() {
   const features = [
@@ -183,5 +182,3 @@ export const FeaturesGuideSectio, n: React.FC = () => {
     </section>
   );
 };
-=======
-=======

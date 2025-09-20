@@ -27,7 +27,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number>();
-=======
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -44,7 +43,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
     canvas.height = window.innerHeight;
 
     const particles: Array<{
-=======
       x: number;
       y: number;
       vx: number;
@@ -115,7 +113,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         type: Math.random() > 0.7 ? 'wave' : Math.random() > 0.5 ? 'grid' : 'particle'
       });
     }
-=======
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -141,7 +138,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-=======
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
@@ -213,7 +209,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         particles.forEach((otherParticle, otherIndex) => {
           if (index === otherIndex) return;
           
-=======
           const distance = Math.sqrt(
             Math.pow(particle.x - otherParticle.x, 2) + 
             Math.pow(particle.y - otherParticle.y, 2)
@@ -242,7 +237,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.strokeStyle = `${particle.color}${Math.floor((1 - distance / 200) * 0.2 * 255).toString(16).padStart(2, '0')}`;
             ctx.lineWidth = 0.5;
-=======
             ctx.stroke();
           }
         });
@@ -446,7 +440,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         cancelAnimationFrame(animationRef.current);
       }
       window.removeEventListener('resize', handleResize);
-=======
     };
   }, [intensity, theme]);
 
@@ -531,7 +524,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         filter: theme === 'cyberpunk' ? 'blur(0.3px)' : 'none'
       }}
     />
-=======
   );
 };
 

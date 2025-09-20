@@ -353,5 +353,4 @@ export default function EquipmentPage() {
             return (<DynamicListingPage title="Datacenter Equipment" description="Browse professional hardware for modern datacenter and network deployments." categorySlug="equipment" listings={listings} categoryFilters={EQUIPMENT_FILTERS} initialPrice={{ min: 400, max: 50000 }} detailBasePath="/equipment"/>);
         }
     }
-=======
 }

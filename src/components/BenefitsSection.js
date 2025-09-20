@@ -101,7 +101,6 @@ const additionalStats = [
 ];
 export function BenefitsSection() {
     const [hoveredInd, e, x, setHoveredInd, e, x] = useState(null);
-=======
     const containerVariants = {
         hidde,  n: { opacit, y: 0 },
         visibl, e: {
@@ -244,7 +243,6 @@ export function BenefitsSection() {
         </motion.div>
       </div>
     </section>);
-=======
     return (_jsxs("section",  { classNam, e: "py-20 bg-zion-blue-light relative overflow-hidden",
     childre, n: [_jsx, s("di, v", { classNa, m, e: "absolut, e inse, t-0 opacit, y-5",
     childr, e, n: [_js, x("di, v", { classNa, m, e: "absolut, e to, p-0 lef, t-0 w-6, 4 h-6, 4 b, g-zio, n-purpl, e rounde, d-ful, l blu, r-3x, l" }), _js, x("di,  v", { classNa, m, e: "absolut, e botto, m-0 righ, t-0 w-6, 4 h-6, 4 b, g-zio, n-cya, n rounde, d-ful, l blu, r-3x, l" })] }), _jsxs("div",  { classNam, e: "container mx-auto px-4 relative z-10",

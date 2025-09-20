@@ -9,8 +9,6 @@ export default function TermsOfService() {
           Last updated: {new Date().toLocaleDateString()}
         </p>
       </div>
-=======
-=======
     <div className="max-w-4xl mx-auto">
       <h1 className="text-3xl font-bold text-white mb-8">Terms of Service</h1>
       
@@ -88,8 +86,6 @@ export default function TermsOfService() {
             <a href="mailto:legal@ziontechgroup.com" className="text-zion-cyan hover:underline">
               legal@ziontechgroup.com
             </a>
-=======
-=======
             The materials appearing on Zion Tech Group's website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete or current.
           </p>
         </section>

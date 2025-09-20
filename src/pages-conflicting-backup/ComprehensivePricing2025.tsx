@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-=======
-=======
 import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
 import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
 
@@ -115,8 +113,6 @@ const ComprehensivePricing2025: React.FC = () => {
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
                     : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'
                 }`}
-=======
-=======
               >
                 <Download className="w-5 h-5" />
                 Download Pricing Guide
@@ -205,8 +201,6 @@ const ComprehensivePricing2025: React.FC = () => {
           </div>
         </div>
 
-=======
-=======
       {/* Pricing Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -242,8 +236,6 @@ const ComprehensivePricing2025: React.FC = () => {
                       ? getDiscountedPrice(service.price, service.annualDiscount)
                       : service.price
                     }
-=======
-=======
                   </div>
                   <div className="text-gray-400 mb-2">{service.period}</div>
                   {billingCycle === 'annual' && service.annualDiscount && (
@@ -253,8 +245,6 @@ const ComprehensivePricing2025: React.FC = () => {
                   )}
                 </div>
 
-=======
-=======
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
                   <ul className="space-y-1">
@@ -269,8 +259,6 @@ const ComprehensivePricing2025: React.FC = () => {
                         <span className="w-2 h-2 bg-gray-400 rounded-full mr-2"></span>
                         +{service.features.length - 4} more features
                       </li>
-=======
-=======
                     )}
                   </ul>
                 </div>
@@ -290,8 +278,6 @@ const ComprehensivePricing2025: React.FC = () => {
                   </div>
                 </div>
 
-=======
-=======
                 <div className="space-y-3">
                   <a
                     href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
@@ -368,8 +354,6 @@ const ComprehensivePricing2025: React.FC = () => {
           </div>
         </div>
       </section>
-=======
-=======
 
         {/* Call to Action */}
         {sortedServices.length === 0 && (
@@ -402,10 +386,8 @@ const ComprehensivePricing2025: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our services can help transform your business and drive competitive advantage
-=======
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our services can help transform your business and drive competitive advantage
-=======
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our services can help transform your business and drive competitive advantage
           </p>
@@ -441,11 +423,9 @@ const ComprehensivePricing2025: React.FC = () => {
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry 2025"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-=======
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry 2025"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-=======
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry 2025"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
@@ -460,10 +440,8 @@ const ComprehensivePricing2025: React.FC = () => {
             >
               Schedule Consultation
             </a>
-=======
               Schedule Consultation
             </a>
-=======
               Schedule Consultation
             </a>
           </div>

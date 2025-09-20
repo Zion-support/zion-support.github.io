@@ -1,12 +1,8 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useState } from 'react';
-import { Globe } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
-export function LanguageSelector() {
 import React, { useState } from 'react';
 import { ChevronDown, Globe } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
+
 export const LanguageSelector = () => {
-=======
     const [isOpen, setIsOpen] = useState(false);
     const [currentLanguage, setCurrentLanguage] = useState('EN');
     const languages = [
@@ -19,8 +15,6 @@ export const LanguageSelector = () => {
         { code: 'RU', name: 'Русский', flag: '🇷🇺' },
         { code: 'ZH', name: '中文', flag: '🇨🇳' },
         { code: 'JA', name: '日本語', flag: '🇯🇵' },
-        { code: 'KO', name: '한국어', flag: '🇰🇷' }
-=======
         { code: 'KO', name: '한국어', flag: '🇰🇷' },
     ];
     const handleLanguageChange = (languageCode) => {
@@ -56,4 +50,3 @@ export const LanguageSelector = () => {
         </div>)}
     </div>);
 };
-=======

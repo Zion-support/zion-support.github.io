@@ -13,9 +13,7 @@ import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles } from "lucide-react";
-=======
 import { Menu, X, Search as SearchIcon, Sparkles } from "lucide-react";
-=======
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles } from "lucide-react";
 import { Menu, X, Search as SearchIcon, Sparkles } from "lucide-react";
@@ -37,7 +35,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   const [query, setQuery] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-=======
   const [isScrolled, setIsScrolled] = useState(false);
   const searchSuggestions = generateSearchSuggestions();
   
@@ -83,11 +80,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md neon-pulse"
     <header 
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-purple-dark/95 to-zion-slate-dark/95 backdrop-blur-md shadow-lg shadow-zion-purple/10"
-=======
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-slate-dark/95 to-zion-blue-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10"
-=======
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md neon-pulse"
-=======
       style={headerStyle}
     >
       {/* Animated background pattern */}
@@ -103,8 +97,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 
         {/* Search Bar */}
         <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
-=======
-=======
 
         {/* Search Bar */}
         <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
@@ -114,7 +106,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 
         {/* Desktop Search */}
         <form onSubmit={handleSubmit} className="hidden lg:block w-64 mx-4">
-=======
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
@@ -126,14 +117,11 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
           />
         </form>
 
-=======
 
       </div>
       
       {/* Animated Header Border */}
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>
-=======
-=======
         {/* Desktop Actions */}
         <div className="hidden lg:flex items-center gap-3">
           <Button 
@@ -146,10 +134,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
               Pricing
             </Link>
           </Button>
-=======
         {/* Desktop Actions */}
         <div className="flex items-center gap-2 hidden md:flex">
-=======
         {/* Desktop Actions */}
         <div className="flex items-center gap-2 hidden md:flex">
           <LanguageSelector />
@@ -159,7 +145,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         {/* Mobile Menu */}
         <MobileMenu className="md:hidden" />
       </div>
-=======
         {/* Mobile Menu */}
         <MobileMenu className="md:hidden" />
       </div>
@@ -224,14 +209,12 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         <div className="lg:hidden px-4 pb-4">
           <form onSubmit={handleSubmit}>
             <div className="relative">
-=======
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(text) => {
                   navigate(`/search?q=${encodeURIComponent(text)}`);
                   setQuery("");
-=======
                 }}
                 searchSuggestions={searchSuggestions}
                 placeholder="Search services, talent, equipment..."
@@ -259,14 +242,12 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
             </div>
             
             <nav className="flex-1 p-4">
-=======
               <ul className="space-y-2">
                 <li>
                   <Link
                     to="/"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-=======
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
                   >
@@ -278,7 +259,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                     to="/services"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-=======
                     to="/services"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
@@ -291,7 +271,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                     to="/talent"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-=======
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
                   >
@@ -303,7 +282,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                     to="/equipment"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-=======
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
                   >
@@ -315,7 +293,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                     to="/community"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-=======
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
                   >
@@ -324,7 +301,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                 </li>
                 <li>
                   <Link
-=======
                     to="/ai-content-generator"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
@@ -348,7 +324,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
                   >
                     Cloud Cost Optimizer
-=======
                   </Link>
                 </li>
                 {user && (
@@ -357,7 +332,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                       to="/dashboard"
                       onClick={toggleMobileMenu}
                       className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-=======
                       onClick={toggleMobileMenu}
                       className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
                     >
@@ -368,7 +342,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
               </ul>
             </nav>
 
-=======
             <div className="p-4 border-t border-zion-purple/30">
               <div className="flex flex-col gap-3">
                 <button className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-medium hover:from-zion-purple-light hover:to-zion-cyan-light transition-all duration-300">
@@ -393,7 +366,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                     </Link>
                   </div>
                 )}
-=======
               </div>
             </div>
           </div>
@@ -408,8 +380,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
       {/* Neon glow effect */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60" />
     </header>
-=======
     </>
-=======
   );
 }

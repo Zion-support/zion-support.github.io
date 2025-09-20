@@ -2,11 +2,9 @@ export interface ComprehensiveITService {
   id: string;
   title: string;
   description: string;
-=======
   id: string;
   title: string;
   description: string;
-=======
   id: string;
   title: string;
   description: string;
@@ -27,7 +25,6 @@ export interface ComprehensiveITService {
     address: string;
   };
   technology: string[];
-=======
   technology: string[];
   integrations: string[];
   compliance: string[];
@@ -44,10 +41,8 @@ export interface ComprehensiveITService {
 }
 
 export const comprehensiveITServices2025: ComprehensiveITService[] = [
-=======
 export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
   // Cloud Infrastructure & Migration Services
-=======
 export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
   // Cloud Infrastructure & Migration Services
   {
@@ -295,7 +290,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     estimatedDelivery: "6-10 weeks",
     supportLevel: "premium",
     marketPrice: "$1,299 - $5,000/month",
-=======
     ],
     targetAudience: [
       "Data analysts",
@@ -775,7 +769,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-=======
     technology: ["Project management tools", "Collaboration platforms", "Monitoring systems", "Reporting tools"],
     integrations: ["Business systems", "Project tools", "Communication platforms", "Analytics tools"],
     compliance: ["Project standards", "Quality standards", "Industry best practices"],
@@ -1034,7 +1027,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
       "Technology companies"
     ],
     tags: ["Performance Monitoring", "APM", "Infrastructure", "User Experience", "Analytics", "Optimization"],
-=======
   technology: string[];
   integrations: string[];
   compliance: string[];
@@ -1648,12 +1640,10 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
 ];
 
 export default COMPREHENSIVE_IT_SERVICES_2025;
-=======
   }
 ];
 
 export default COMPREHENSIVE_IT_SERVICES_2025;
-=======
   }
 ];
 

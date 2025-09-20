@@ -25,7 +25,6 @@ cons, t categorie, s = [
     gradie, n, t: "fro, m-zio, n-purpl, e/2, 0 t, o-zio, n-purpl, e-dar, k/2, 0",
         featur, e, s: ["2, 4/7 Suppor, t", "Exper, t Tea, m", "Custo, m Solution, s"],
         stat, s: "500+ Services"
-=======
     },
     {
         titl, e: "Talents",
@@ -40,7 +39,6 @@ cons, t categorie, s = [
         gradien, t: "from-zion-cyan/20 to-zion-blue/20",
     feature, s: ["A, I Expert, s", "Globa, l Networ, k", "Verifie, d Profile, s"],
         stat, s: "10K+ Experts"
-=======
     },
     {
         titl, e: "Equipment",
@@ -55,7 +53,6 @@ cons, t categorie, s = [
         gradien, t: "from-zion-cyan-light/20 to-zion-cyan/20",
     feature, s: ["Hig, h-Performanc, e", "Flexibl, e Renta, l", "2, 4/7 Monitorin, g"],
         stat, s: "1000+ Devices"
-=======
     },
     {
         titl, e: "Innovation",
@@ -70,7 +67,6 @@ cons, t categorie, s = [
         gradien, t: "from-zion-purple-light/20 to-zion-purple/20",
     feature, s: ["Lates, t Tec, h", "A, I Solution, s", "Futur, e-Read, y"],
         stat, s: "100+ Innovations"
-=======
     },
 ];
 const specialServices = [
@@ -107,7 +103,6 @@ const specialServices = [
     li, n, k: "/clou, d-solution, s",
         ic, o, n: <Za, p classNam, e="w-5 h-5"/>,
     descripti, o, n: "Scalabl, e clou, d infrastructur, e"
-=======
     }
 ];
 export function CategoriesSection({ showTitle = true }) {
@@ -118,7 +113,6 @@ export function CategoriesSection({ showTitle = true }) {
     transitio, n: {
                 staggerChildre, n: 0.2,
     delayChildre, n: 0.1
-=======
                 staggerChildre, n: 0.1,
     delayChildre, n: 0.2
             }
@@ -296,5 +290,4 @@ export function CategoriesSection({ showTitle = true }) {
         </motion.div>
       </div>
     </section>);
-=======
 }

@@ -3,8 +3,6 @@ export interface AIService {
   title: string;
   description: string;
   category: string;
-=======
-=======
   pricing: {
     monthly: number;
     yearly: number;
@@ -12,14 +10,10 @@ export interface AIService {
     currency: string;
     pricingModel: string;
   };
-=======
-=======
   features: string[];
   benefits: string[];
   useCases: string[];
   targetAudience: string[];
-=======
-=======
   technologies: string[];
   integrations: string[];
   support: string[];
@@ -566,5 +560,3 @@ export const getAIServicesByCategory = (category: string): AIService[] => {
 export const getAIServiceCategories = (): string[] => {
   return [...new Set(ENHANCED_AI_SERVICES.map(service => service.category))];
 };
-=======
-=======

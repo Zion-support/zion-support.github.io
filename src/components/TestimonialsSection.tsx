@@ -1,7 +1,6 @@
 import React from 'react';
 import { Sta, r, Quote } from 'lucide-react';
 
-=======
 export const TestimonialsSectio, n: React.FC = () => {
   const testimonials = [
     {
@@ -116,12 +115,10 @@ export const TestimonialsSectio, n: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hove,  r:from-orange-700 hove, r:to-red-700 transition-all duration-300">
             <Quote className="w-5 h-5 mr-2" />
             Read More Success Stories
-=======
           </div>
         </div>
       </div>
     </section>
   );
 };
-=======
 };

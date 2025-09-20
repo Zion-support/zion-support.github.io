@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-=======
 import React, { useEffect } from 'react';
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -108,7 +107,6 @@ const Profile: React.FC = () => {
           </div>
         </div>
       </div>
-=======
     </>
   );
 };

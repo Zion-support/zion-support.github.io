@@ -1,5 +1,4 @@
 import React from 'react';
-=======
 import { ForumPost } from '@/types/community';
 
 interface PostCardProps {
@@ -51,7 +50,6 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
         <div className="flex items-center space-x-4">
           <span>{post.likes} likes</span>
           <span>{post.replies} replies</span>
-=======
         </div>
       </div>
     </div>
@@ -59,7 +57,5 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
 };
 
 export default PostCard;
-=======
 }
-=======
 }

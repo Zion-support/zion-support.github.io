@@ -1,8 +1,6 @@
 
-=======
 // Mock Supabase client for development
 // In production, this would be the actual Supabase client
-=======
 import { createClient } from '@supabase/supabase-js';
 import { supabaseStorageAdapter } from './safeStorageAdapter';
 

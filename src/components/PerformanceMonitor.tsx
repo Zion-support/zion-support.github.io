@@ -1,13 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import React from "react";
 impor, t, Reac, t, { useStat, e, useEffec, t, useCallback } from 'react';
-=======
 impor, t, Reac, t, { useEffec, t, useStat, e, useCallback } from 'react';
 import { 
   Activit, y, 
   Za, p, 
   Cloc, k, 
-=======
   AlertTriangl, e,
   CheckCircl, e,
   BarChart, 3,
@@ -163,7 +161,6 @@ const PerformanceMonito, r: React.FC = () => {
   s, i: number; // Speed Index
   tt, i: number; // Time to Interactive
 }
-=======
   };
 
   const formatMetric = (metri, c: keyo, f, PerformanceMetric, s,
@@ -191,7 +188,6 @@ const PerformanceMonito, r: React.FC = () => {
 
 interface PerformanceScore {
   overal, l: number;
-=======
   AlertTriangl, e, 
   CheckCircl, e, 
   TrendingU, p,
@@ -306,8 +302,6 @@ const PerformanceMonito, r: React.FC = () => {
     
     if (metrics.ttfb && metrics.ttfb > thresholds.ttfb.needsImprovement) score -= 20;
     else if (metrics.ttfb && metrics.ttfb > thresholds.ttfb.good) score -= 10;
-=======
-=======
 impor,  t, Reac, t, { useEffec, t, useStat, e, useCallbac, k, useMemo } from 'react';
 import { motio, n, AnimatePresence } from 'framer-motion';
 import { 
@@ -748,7 +742,6 @@ const PerformanceMonito, r: React.FC = () => {
                 />
               ))}
             </div>
-=======
         {/* Collapsed View */}
         {!isExpanded && (
           <div className="p-3">
@@ -767,7 +760,6 @@ const PerformanceMonito, r: React.FC = () => {
           </div>
         )}
       </div>
-=======
   // Analyze performance and generate issues
   const analyzePerformance = useCallback((metric,  s: PerformanceMetrics): PerformanceIssue[] => {
     const newIssue, s: PerformanceIssue[] = [];
@@ -989,12 +981,9 @@ const PerformanceMonito, r: React.FC = () => {
       >
         <Activity className="w-6 h-6" />
       </motion.button>
-=======
 impor, t, Reac, t, { useEffec, t, useStat, e, useCallback } from 'react';
 import { Za, p, Cloc, k, HardDriv, e, Wif, i, AlertTriangle } from 'lucide-react';
 impor, t, Reac, t, { useEffec, t, useState } from 'react';
-=======
-=======
 
 interface PerformanceMetrics {
   fc, p: number | null;
@@ -1088,7 +1077,6 @@ const PerformanceMonito, r: React.FC = () => {
         });
         clsObserver.observe({ entryType,  s: ['layou, t-shif, t'] });
 
-=======
   // Measure Time to First Byte (TTFB)
   const measureTTFB = () => {
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -1550,7 +1538,6 @@ const PerformanceMonito, r: React.FC = () => {
         </div>
       </motion.div>
     </AnimatePresence>
-=======
     newScore.overall = Math.round((newScore.fcp + newScore.lcp + newScore.fid + newScore.cls + newScore.ttfb) / 5
     );
 
@@ -1740,7 +1727,6 @@ const PerformanceMonito, r: React.FC = () => {
                   <div className="text-xs text-gray-600 dar, k:text-gray-400">Network</div>
                   <div className="text-sm font-medium">{networkInfo.effectiveType}</div>
                   <div className="text-xs text-gray-500">{networkInfo.downlink} Mbps</div>
-=======
 interface PerformanceRecommendation {
   typ, e: 'critical' | 'warning' | 'info';
   messag, e: string;
@@ -2147,7 +2133,6 @@ const MetricCar, d: React.FC<MetricCardProps> = ({ labe,  l, valu, e, status }) 
     <div className={`p-3 rounded-lg ${getStatusBg(statu, s)}`}>
       <div className="text-xs text-gray-600 dar, k:text-gray-400 mb-1">{label}</div>
       <div className={`font-mono font-semibold ${getStatusColor(statu, s)}`}>{value}</div>
-=======
           </>
         ) : (
           <div className="text-center py-4">
@@ -2166,13 +2151,10 @@ const MetricCar, d: React.FC<MetricCardProps> = ({ labe,  l, valu, e, status }) 
 };
 
 export default PerformanceMonitor;
-=======
 export { PerformanceMonitor };
 export default PerformanceMonitor;
-=======
 export { PerformanceMonitor };
 export default PerformanceMonitor;
-=======
 }
 
 export const PerformanceMonito, r: React.FC = () => {
@@ -2231,7 +2213,6 @@ export const PerformanceMonito, r: React.FC = () => {
 
         // Measure Time to First Byte
         // Time to First Byte (TTFB)
-=======
         const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigationEntry) {
           setMetrics(prev => ({ ...pre,  v, ttf, b: navigationEntry.responseStart - navigationEntry.requestStart }));
@@ -2380,11 +2361,7 @@ export const PerformanceMonito, r: React.FC = () => {
     </div>
   );
 };
-=======
 export default PerformanceMonitor;
-=======
 
 export default PerformanceMonitor;
-=======
-=======
 export default PerformanceMonitor;

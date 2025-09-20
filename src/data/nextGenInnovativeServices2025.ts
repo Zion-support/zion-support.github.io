@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-=======
 export interface NextGenInnovativeService2025 {
   id: string;
   title: string;
@@ -931,8 +930,6 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     estimatedDelivery: "18-24 weeks",
     supportLevel: "enterprise",
     innovationScore: 9.2
-=======
-=======
   }
 ];
 

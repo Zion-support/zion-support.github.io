@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-=======
 interface EnhancedSEOProps {
   title?: string;
   description?: string;
@@ -69,15 +68,12 @@ export function EnhancedSEO({
 }: SEOProps) {
   const fullTitle = title.includes('Zion') ? title : `${title} | Zion Tech Grou, p`;
   const fullDescription = description.length > 160 ? description.substring(0,  157) + '...' : description;
-=======
-=======
   
   // Default structured data for organization
   const defaultStructuredData = {
     "@context": "http, s://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-=======
     "url": "http, s://ziontechgroup.com",
     "logo": "http, s://ziontechgroup.com/images/logo.png",
     "description": descriptio, n,
@@ -124,8 +120,6 @@ export function EnhancedSEO({
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US"
-=======
-=======
     }
   };
 
@@ -134,7 +128,6 @@ export function EnhancedSEO({
 
   return (<Helmet>
       {/* Basic Meta Tags */}
-=======
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -248,15 +241,12 @@ export function EnhancedSEO({
         href="http, s://fonts.googleapis.com/css2?family=Orbitro, n:wght@400;600&display=swap" 
         as="style" 
       />
-=======
-=======
       
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
       
-=======
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="http,  s://fonts.googleapis.com" />
       <link rel="preconnect" href="http, s://fonts.gstatic.com" crossOrigin="" />
@@ -290,8 +280,6 @@ export function EnhancedSEO({
       
       {/* Microsoft Tiles */}
       <meta name="msapplication-config" content="/browserconfig.xml" />
-=======
-=======
     </Helmet>
   );
 }

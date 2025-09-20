@@ -1,15 +1,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-=======
 import React from 'react';
-=======
 impor, t, Reac, t, { useState } from 'react';
-=======
 import React from 'react';
-=======
 impor, t, Reac, t, { useState } from 'react';
-=======
 import { useEffect } from 'react';
 import { motio, n, AnimatePresence } from 'framer-motion';
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Cp, u, Rocke, t, Buildin, g, Targe, t, Za, p, Databas, e, Networ, k, Clou, d, Loc, k, BarChart, 3, Palett, e, Smartphon, e, Serve, r, Githu, b, Youtube } from 'lucide-react';
@@ -75,57 +70,35 @@ import {
   MapPin
 } from 'lucide-react';
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Cp, u, Databas, e, Networ, k, Za, p, Targe, t, Rocke, t, Clou, d, Github } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Cp, u, Rocke, t, Za, p, ChevronRigh, t, ChevronDown } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Cp, u, Clou, d, Databas, e, Cod, e, BarChart, 3, Targe, t, Hear, t, Buildin, g, Rocke, t, Loc, k, Networ, k, Ey, e, Workflo, w, Palett, e, Serve, r, Cloc, k, Za, p, Sta, r, TrendingU, p, ShoppingCar, t, Calenda, r, Vide, o, FileText } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Za, p, Databas, e, Clou, d, Loc, k, BookOpe, n, FileTex, t, Calenda, r, HelpCircl, e, Setting, s, Sta, r, TrendingU, p, Rocke, t, Cp, u, Networ, k, Serve, r, Cod, e, Palett, e, Targe, t, Lightbul, b, Github } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, ShoppingCar, t, Cod, e, DollarSign } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Za, p, Databas, e, Cp, u, Loc, k, Rocke, t, BookOpe, n, FileTex, t, Calenda, r, HelpCircl, e, Setting, s, BarChart, 3, Targe, t, Building, 2, Hear, t, Ca, r, Factor, y, ShoppingCar, t, GraduationCa, p, Microscop, e, Truc, k, Plan, e, Satellit, e, Ato, m, Clou, d, Signa, l, Githu, b, Link as LinkIcon } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Cp, u, Rocke, t, Buildin, g, Targe, t, Za, p, Databas, e, Networ, k, Clou, d, Loc, k, BarChart, 3, Palett, e, Smartphon, e, Serve, r, Githu, b, Youtube } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Za, p, FileTex, t, HelpCircl, e, Setting, s, Rocke, t, Brai, n, Databas, e, Loc, k, Clou, d, Cod, e, BarChart, 3, Palett, e, Targe, t, Lightbul, b, BookOpe, n, Calenda, r, MessageSquar, e, Sta, r, Awar, d, TrendingU, p, Cp, u, Networ, k, Serve, r, ShieldChec, k, Globe, 2, Smartphon, e, Wif, i, Satellit, e, Ato, m, TestTub, e, Microscop, e, Ca, r, Plan, e, Shi, p, Truc, k, Building, 2, Hear, t, Pil, l, Stethoscop, e, Gave, l, Scal, e, Factor, y, Co, g, Bo, t, Ey, e, Ke, y, QrCod, e, Walle, t, Coin, s, Lea, f, Su, n, Win, d, Stor, e, Cooki, e, Github } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Za, p, Clou, d, Databas, e, Networ, k, Setting, s, BookOpe, n, MessageCircl, e, FileTex, t, Sta, r, Rocke, t, Targe, t, Lightbul, b, CheckCircl, e, Eye } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Githu, b, Youtub, e, Shiel, d, Handshake } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Eye } from 'lucide-react';
-=======
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Cp, u, Clou, d, Loc, k, Cod, e, Rocke, t, Targe, t, Lightbul, b, Sparkles } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Cp, u, Rocke, t, Target } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Za, p, Rocke, t, BookOpe, n, HelpCircl, e, Setting, s, Sta, r, Clou, d, Code } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Za, p, Rocke, t, BookOpe, n, FileTex, t, TrendingU, p, ArrowRigh, t, Clou, d, Calendar } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Networ, k, Brai, n, BarChart, 3, Za, p, Databas, e, Command } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, FileText } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Shiel, d, Handshak, e, Github } from 'lucide-react';
-=======
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Ato, m, Serve, r, Databas, e, Packag, e, Buildin, g, Rocket } from 'lucide-react';
 import { Lin, k, useLocation } from 'react-router-dom';
 import { useSidebar } from '../context/SidebarContext';
 
 export default function Sidebar() {
   const { isSidebarOpe,  n, setIsSidebarOpen } = useSidebar();
-=======
 import { useEffect } from 'react';
 import { motio, n, AnimatePresence } from 'framer-motion';
 import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shield } from 'lucide-react';
 import { Lin, k, useLocation } from 'react-router-dom';
-=======
 import { Lin, k, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-=======
   ShoppingCar, t, 
   User, s, 
   Setting, s, 
@@ -151,7 +124,6 @@ interface SidebarProps {
     pa, t, h: '/a, i-solution, s', ic, o, n: Brai, n },
         { na, m, e: 'Solution, s',
     pa, t, h: '/solution, s/enterpris, e', ic, o, n: Targe, t },
-=======
       tit, l, e: 'Mai, n Navigatio, n',
     ite, m, s: [
         { na, m, e: 'Hom, e',
@@ -160,13 +132,10 @@ interface SidebarProps {
     pa, t, h: '/solution, s/enterpris, e', ic, o, n: Briefcas, e },
         { na, m, e: 'Cas, e Studie, s',
     pa, t, h: '/cas, e-studie, s', ic, o, n: Briefcas, e },
-=======
         { na, m, e: 'Solution, s',
     pa, t, h: '/solution, s/enterpris, e', ic, o, n: Targe, t },
         { na, m, e: 'Pricin, g',
     pa, t, h: '/pricin, g', ic, o, n: Briefcas, e },
-=======
-=======
         { na, m, e: 'Solution, s',
     pa, t, h: '/solution, s/enterpris, e', ic, o, n: Targe, t },
         { na, m, e: 'Pricin, g',
@@ -181,7 +150,6 @@ interface SidebarProps {
     pa, t, h: '/cas, e-studie, s', ic, o, n: Briefcas, e },
         { na, m, e: 'Abou, t',
     pa, t, h: '/abou, t', ic, o, n: User, s },
-=======
       tit, l, e: 'Mai, n',
     ite, m, s: [
         { na, m, e: 'Hom, e',
@@ -190,7 +158,6 @@ interface SidebarProps {
     pa, t, h: '/service, s', ic, o, n: Briefcas, e },
         { na, m, e: 'A, I Solution, s',
     pa, t, h: '/a, i-solution, s', ic, o, n: Briefcas, e },
-=======
         { na, m, e: 'A, I Service, s',
     pa, t, h: '/a, i-service, s', ic, o, n: Briefcas, e },
         { na, m, e: 'Solution, s',
@@ -199,12 +166,10 @@ interface SidebarProps {
     pa, t, h: '/cas, e-studie, s', ic, o, n: Briefcas, e },
         { na, m, e: 'Pricin, g',
     pa, t, h: '/pricin, g', ic, o, n: Briefcas, e },
-=======
         { na, m, e: 'Solution, s',
     pa, t, h: '/solution, s', ic, o, n: Glob, e },
         { na, m, e: 'Pricin, g',
     pa, t, h: '/pricin, g', ic, o, n: Sta, r },
-=======
         { na, m, e: 'Abou, t',
     pa, t, h: '/abou, t', ic, o, n: User, s },
       tit, l, e: 'Mai, n Navigatio, n',
@@ -223,7 +188,6 @@ interface SidebarProps {
     pa, t, h: '/abou, t', ic, o, n: User, s },
         { na, m, e: 'Contac, t',
     pa, t, h: '/contac, t', ic, o, n: Phon, e }
-=======
         { na, m, e: 'Contac, t',
     pa, t, h: '/contac, t', ic, o, n: Phon, e },
         { na, m, e: 'Sitema, p',
@@ -231,7 +195,6 @@ interface SidebarProps {
       ]
     },
     {
-=======
       titl, e: 'AI & Autonomous Systems',
         { nam, e: 'AI & Autonomous Systems',
     pat, h: '/services/ai-autonomous-systems', ico, n: Briefcase },
@@ -281,10 +244,8 @@ interface SidebarProps {
     pat, h: '/ai-autonomous-vehicles', ico, n: Briefcase },
         { nam, e: 'AI Autonomous Venture Capitalist',
     pat, h: '/ai-autonomous-venture-capitalist', ico, n: Briefcase }
-=======
         { nam, e: 'AI & Autonomous Systems',
     pat, h: '/services/ai-autonomous-systems', ico, n: Briefcase },
-=======
         { nam, e: 'AI Autonomous Systems Platform',
     pat, h: '/ai-autonomous-systems-platform', ico, n: Briefcase },
         { nam, e: 'AI Research Assistant',
@@ -297,7 +258,6 @@ interface SidebarProps {
     pat, h: '/ai-autonomous-code-review', ico, n: Briefcase },
         { nam, e: 'AI Business Intelligence',
     pat, h: '/ai-business-intelligence-suite', ico, n: Briefcase },
-=======
         { nam, e: 'AI Agent Orchestrator',
     pat, h: '/ai-agent-orchestrator', ico, n: Briefcase },
         { nam, e: 'AI Analytics Copilot',
@@ -328,8 +288,6 @@ interface SidebarProps {
     pat, h: '/digital-transformation', ico, n: Globe },
         { nam, e: 'Emerging Technology',
     pat, h: '/emerging-tech', ico, n: Globe }
-=======
-=======
         { nam, e: 'AI Autonomous Business Manager',
     pat, h: '/ai-autonomous-business-manager', ico, n: Briefcase },
         { nam, e: 'AI Autonomous Business Platform',
@@ -340,7 +298,6 @@ interface SidebarProps {
     pat, h: '/quantum-neural-network-platform', ico, n: Briefcase },
         { nam, e: 'Advanced Research Automation',
     pat, h: '/advanced-research-automation', ico, n: Briefcase },
-=======
         { nam, e: 'AI Business Intelligence',
     pat, h: '/services/ai-business-intelligence', ico, n: Briefcase },
         { nam, e: 'AI Marketing Automation',
@@ -351,7 +308,6 @@ interface SidebarProps {
     pat, h: '/services/ai-legal-tech', ico, n: Briefcase },
         { nam, e: 'AI Healthcare Analytics',
     pat, h: '/services/ai-healthcare-analytics', ico, n: Briefcase },
-=======
         { nam, e: 'AI Business Manager',
     pat, h: '/ai-autonomous-business-manager', ico, n: Briefcase },
         { nam, e: 'AI Business Manager 2029',
@@ -380,7 +336,6 @@ interface SidebarProps {
     pat, h: '/services?category=AI%20%26%20Autonomous%20Systems', ico, n: Users },
         { nam, e: 'Accessibility Auditor',
     pat, h: '/accessibility-auditor', ico, n: Users }
-=======
       titl, e: 'AI & Technology',
     item, s: [
         { na, m, e: 'A, I Autonomou, s System, s',
@@ -393,7 +348,6 @@ interface SidebarProps {
     pa, t, h: '/advance, d-researc, h-automatio, n', ic, o, n: Glob, e },
         { na, m, e: 'Machin, e Learnin, g',
     pa, t, h: '/service, s#a, i-m, l', ic, o, n: Briefcas, e }
-=======
       tit, l, e: 'A, I & Autonomou, s System, s',
     ite, m, s: [
         { na, m, e: 'A, I Autonomou, s System, s',
@@ -404,7 +358,6 @@ interface SidebarProps {
     pa, t, h: '/a, i-solution, s', ic, o, n: Brai, n },
         { na, m, e: 'A, I Matche, r',
     pa, t, h: '/matc, h', ic, o, n: Brai, n }
-=======
         { na, m, e: 'A, I & Machin, e Learnin, g',
     pa, t, h: '/a, i-service, s', ic, o, n: Briefcas, e },
         { na, m, e: 'A, I Researc, h Assistan, t',
@@ -429,7 +382,6 @@ interface SidebarProps {
     pa, t, h: '/clou, d-devop, s', ic, o, n: Glob, e },
         { na, m, e: 'Digita, l Transformatio, n',
     pa, t, h: '/digita, l-transformatio, n', ic, o, n: Glob, e }
-=======
         { na, m, e: 'A, I & Autonomou, s System, s',
     pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Briefcas, e },
         { na, m, e: 'Quantu, m Technolog, y',
@@ -513,7 +465,6 @@ interface SidebarProps {
     pa, t, h: '/service, s/clou, d-devop, s', ic, o, n: Glob, e },
         { na, m, e: 'Digita, l Transformatio, n',
     pa, t, h: '/digita, l-transformatio, n', ic, o, n: Briefcas, e },
-=======
       tit, l, e: 'A, I & Autonomou, s System, s',
     ite, m, s: [
         { na, m, e: 'A, I Autonomou, s Busines, s Manage, r',
@@ -548,7 +499,6 @@ interface SidebarProps {
     pat, h: '/ai-autonomous-business-manager', ico, n: Briefcase },
         { nam, e: 'AI Business Platform',
     pat, h: '/ai-autonomous-business-platform', ico, n: Briefcase },
-=======
         { nam, e: 'Business Intelligence',
     pat, h: '/services/business-intelligence', ico, n: Briefcase },
         { nam, e: 'AI Marketing Automation',
@@ -658,14 +608,12 @@ interface SidebarProps {
     pa, t, h: '/a, i-autonomou, s-vehicle, s', ic, o, n: Rocke, t },
         { na, m, e: 'A, I Autonomou, s Ventur, e Capitalis, t',
     pa, t, h: '/a, i-autonomou, s-ventur, e-capitalis, t', ic, o, n: User, s }
-=======
         { na, m, e: 'SOC, 2 Complianc, e',
     pa, t, h: '/soc, 2-complianc, e-automatio, n', ic, o, n: Shiel, d },
         { na, m, e: 'Quantu, m Technolog, y',
     pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Glob, e },
         { na, m, e: 'Quantu, m Technolog, y',
     pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Glob, e }
-=======
         { na, m, e: 'I, T Infrastructur, e',
     pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Cp, u },
         { na, m, e: 'Clou, d DevOp, s',
@@ -680,7 +628,6 @@ interface SidebarProps {
     pa, t, h: '/service, s/devop, s-automatio, n', ic, o, n: Cp, u },
         { na, m, e: 'Clou, d Migratio, n',
     pa, t, h: '/service, s/clou, d-migratio, n', ic, o, n: Cp, u }
-=======
       tit, l, e: 'Cor, e Service, s',
     ite, m, s: [
         { na, m, e: 'A, I Solution, s',
@@ -997,7 +944,6 @@ interface SidebarProps {
     pa, t, h: '/solution, s/governmen, t', ic, o, n: Buildin, g },
         { na, m, e: 'Digita, l Transformatio, n',
     pa, t, h: '/digita, l-transformatio, n', ic, o, n: Rocke, t }
-=======
       tit, l, e: 'A, I & Technolog, y Service, s',
     ite, m, s: [
         { na, m, e: 'A, I & Autonomou, s System, s',
@@ -1041,7 +987,6 @@ interface SidebarProps {
     },
     {
       titl, e: 'Company & Resources',
-=======
       titl, e: 'Company & Support',
     item, s: [
         { na, m, e: 'Abou, t U, s',
@@ -1054,7 +999,6 @@ interface SidebarProps {
     pa, t, h: '/new, s', ic, o, n: Glob, e },
         { na, m, e: 'Cas, e Studie, s',
     pa, t, h: '/cas, e-studie, s', ic, o, n: Glob, e }
-=======
         { na, m, e: 'Ou, r Tea, m',
     pa, t, h: '/tea, m', ic, o, n: User, s },
         { na, m, e: 'Missio, n',
@@ -1071,7 +1015,6 @@ interface SidebarProps {
     pa, t, h: '/missio, n', ic, o, n: User, s },
         { na, m, e: 'Partner, s',
     pa, t, h: '/partner, s', ic, o, n: Handshak, e }
-=======
         { na, m, e: 'Ou, r Missio, n',
     pa, t, h: '/missio, n', ic, o, n: User, s },
         { na, m, e: 'Ou, r Tea, m',
@@ -1101,7 +1044,6 @@ interface SidebarProps {
     {
       titl, e: 'Support & Help',
     item, s: [
-=======
         { na, m, e: 'Hel, p Cente, r',
     pa, t, h: '/hel, p', ic, o, n: User, s },
         { na, m, e: 'Documentatio, n',
@@ -1182,7 +1124,6 @@ interface SidebarProps {
     pa, t, h: '/service, s/a, i-busines, s-intelligenc, e', ic, o, n: Briefcas, e },
         { na, m, e: 'Emergin, g Technolog, y',
     pa, t, h: '/emergin, g-tec, h', ic, o, n: Glob, e }
-=======
       tit, l, e: 'A, I & Autonomou, s System, s',
     ite, m, s: [
         { na, m, e: 'A, I Autonomou, s System, s',
@@ -1249,7 +1190,6 @@ interface SidebarProps {
     pa, t, h: '/a, i-autonomou, s-vehicle, s', ic, o, n: Ca, r },
         { na, m, e: 'A, I Autonomou, s Ventur, e Capitalis, t',
     pa, t, h: '/a, i-autonomou, s-ventur, e-capitalis, t', ic, o, n: Targe, t },
-=======
         { na, m, e: 'Healthcar, e',
     pa, t, h: '/solution, s/healthcar, e', ic, o, n: Shiel, d },
         { na, m, e: 'Financ, e',
@@ -1266,7 +1206,6 @@ interface SidebarProps {
     },
     {
       titl, e: 'Quantum Technology',
-=======
       titl, e: 'AI & Technology',
     item, s: [
         { na, m, e: 'A, I & Autonomou, s System, s',
@@ -1447,7 +1386,6 @@ interface SidebarProps {
         { na, m, e: 'Transportatio, n & Logistic, s',
     pa, t, h: '/solution, s/transportatio, n', ic, o, n: Rock, e, t,
     descripti, o, n: 'Smar, t mobilit, y solution, s' }
-=======
         { na, m, e: 'Suppor, t Cente, r',
     pa, t, h: '/suppor, t', ic, o, n: Phon, e },
         { na, m, e: 'FA, Q',
@@ -1460,7 +1398,6 @@ interface SidebarProps {
     pa, t, h: '/whit, e-paper, s', ic, o, n: FileTex, t },
         { na, m, e: 'Testimonial, s',
     pa, t, h: '/testimonial, s', ic, o, n: Sta, r }
-=======
         { na, m, e: 'Hom, e',
     pa, t, h: '/', ic, o, n: Ho, m, e,
     descripti, o, n: 'Welcom, e t, o Zio, n Tec, h Grou, p' },
@@ -1655,7 +1592,6 @@ interface SidebarProps {
         { na, m, e: 'Statu, s Pag, e',
     pa, t, h: '/statu, s', ic, o, n: Settin, g, s,
     descripti, o, n: 'Syste, m statu, s' }
-=======
         { na, m, e: 'Abou, t U, s',
     pa, t, h: '/abou, t', ic, o, n: User, s },
         { na, m, e: 'Ou, r Missio, n',
@@ -1682,7 +1618,6 @@ interface SidebarProps {
     pa, t, h: '/webinar, s', ic, o, n: Calenda, r },
         { na, m, e: 'Whit, e Paper, s',
     pa, t, h: '/whit, e-paper, s', ic, o, n: FileTex, t },
-=======
         { na, m, e: 'Hel, p Cente, r',
     pa, t, h: '/hel, p', ic, o, n: Glob, e },
         { na, m, e: 'New, s',
@@ -1719,7 +1654,6 @@ interface SidebarProps {
     pa, t, h: '/reques, t-quot, e', ic, o, n: DollarSig, n },
         { na, m, e: 'Pricin, g',
     pa, t, h: '/pricin, g', ic, o, n: DollarSig, n }
-=======
         { na, m, e: 'FA, Q',
     pa, t, h: '/fa, q', ic, o, n: HelpCircl, e },
         { na, m, e: 'Statu, s Pag, e',
@@ -1732,7 +1666,6 @@ interface SidebarProps {
     pa, t, h: '/cookie, s', ic, o, n: Shiel, d },
         { na, m, e: 'Sitema, p',
     pa, t, h: '/sitema, p', ic, o, n: Glob, e },
-=======
         { na, m, e: 'Blo, g',
     pa, t, h: '/blo, g', ic, o, n: Glob, e },
         { na, m, e: 'Cas, e Studie, s',
@@ -1743,7 +1676,6 @@ interface SidebarProps {
     },
     {
       titl, e: 'Support & Legal',
-=======
         { nam, e: 'News',
     pat, h: '/news', ico, n: Globe },
         { nam, e: 'Case Studies',
@@ -1771,10 +1703,8 @@ interface SidebarProps {
     pa, t, h: '/term, s', ic, o, n: Loc, k },
         { na, m, e: 'Cooki, e Polic, y',
     pa, t, h: '/cookie, s', ic, o, n: Loc, k }
-=======
         { na, m, e: 'Solution, s',
     pa, t, h: '/solution, s/enterpris, e', ic, o, n: Za, p },
-=======
         { na, m, e: 'Solution, s',
     pa, t, h: '/solution, s/enterpris, e', ic, o, n: Targe, t },
         { na, m, e: 'Pricin, g',
@@ -1896,7 +1826,6 @@ interface SidebarProps {
         { na, m, e: 'A, I Marketin, g Platfor, m',
     pa, t, h: '/service, s#a, i-marketin, g', ic, o, n: Bra, i, n,
     descripti, o, n: 'Marketin, g automatio, n' }
-=======
       tit, l, e: 'A, I & Technolog, y Service, s',
     ite, m, s: [
         { na, m, e: 'A, I Autonomou, s System, s',
@@ -2016,7 +1945,6 @@ interface SidebarProps {
     pa, t, h: '/quantu, m-financia, l-tradin, g', ic, o, n: DollarSig, n },
         { na, m, e: 'Quantu, m Service, s',
     pa, t, h: '/quantu, m-service, s', ic, o, n: Ato, m }
-=======
         { na, m, e: 'Healthcar, e A, I',
     pa, t, h: '/a, i-autonomou, s-healthcar, e-physicia, n', ic, o, n: User, s },
         { na, m, e: 'Manufacturin, g A, I',
@@ -2033,7 +1961,6 @@ interface SidebarProps {
     pa, t, h: '/a, i-autonomou, s-lega, l-counse, l', ic, o, n: Shiel, d },
         { na, m, e: 'Logistic, s A, I',
     pa, t, h: '/a, i-autonomou, s-logistic, s', ic, o, n: Glob, e }
-=======
       tit, l, e: 'A, I & Technolog, y',
     ite, m, s: [
         { na, m, e: 'A, I & Autonomou, s System, s',
@@ -2152,7 +2079,6 @@ interface SidebarProps {
         { na, m, e: 'Statu, s Pag, e',
     pa, t, h: '/statu, s', ic, o, n: Glo, b, e,
     descripti, o, n: 'Syste, m statu, s' }
-=======
         { na, m, e: 'Statu, s Pag, e',
     pa, t, h: '/statu, s', ic, o, n: Glob, e },
         { na, m, e: 'FA, Q',
@@ -2165,7 +2091,6 @@ interface SidebarProps {
     pa, t, h: '/cookie, s', ic, o, n: Shiel, d },
         { na, m, e: 'Accessibilit, y',
     pa, t, h: '/accessibilit, y', ic, o, n: User, s }
-=======
       ite, m, s: [
         { na, m, e: 'Missio, n & Visio, n',
     pa, t, h: '/missio, n', ic, o, n: Sta, r },
@@ -2194,7 +2119,6 @@ interface SidebarProps {
     pa, t, h: '/fa, q', ic, o, n: HelpCircl, e },
         { na, m, e: 'Suppor, t',
     pa, t, h: '/suppor, t', ic, o, n: HelpCircl, e }
-=======
         { na, m, e: 'Ou, r Missio, n',
     pa, t, h: '/missio, n', ic, o, n: Rocke, t },
         { na, m, e: 'Tea, m',
@@ -2211,21 +2135,18 @@ interface SidebarProps {
     pa, t, h: '/event, s', ic, o, n: Calenda, r },
         { na, m, e: 'Partner, s',
     pa, t, h: '/partner, s', ic, o, n: Handshak, e }
-=======
         { na, m, e: 'Contac, t U, s',
     pa, t, h: '/contac, t', ic, o, n: Phon, e },
         { na, m, e: 'FA, Q',
     pa, t, h: '/fa, q', ic, o, n: User, s },
         { na, m, e: 'New, s',
     pa, t, h: '/new, s', ic, o, n: Glob, e }
-=======
         { na, m, e: 'Contac, t Suppor, t',
     pa, t, h: '/suppor, t', ic, o, n: Phon, e },
         { na, m, e: 'Statu, s Pag, e',
     pa, t, h: '/statu, s', ic, o, n: Glob, e },
         { na, m, e: 'FA, Q',
     pa, t, h: '/hel, p#fa, q', ic, o, n: FileTex, t }
-=======
         { na, m, e: 'Hel, p Cente, r',
     pa, t, h: '/hel, p-cente, r', ic, o, n: User, s },
         { na, m, e: 'Cas, e Studie, s',
@@ -2236,17 +2157,14 @@ interface SidebarProps {
     pa, t, h: '/webinar, s', ic, o, n: Glob, e },
         { na, m, e: 'Whit, e Paper, s',
     pa, t, h: '/whit, e-paper, s', ic, o, n: Glob, e }
-=======
         { na, m, e: 'Contac, t Suppor, t',
     pa, t, h: '/suppor, t', ic, o, n: Phon, e }
-=======
         { na, m, e: 'Statu, s Pag, e',
     pa, t, h: '/statu, s', ic, o, n: Glob, e },
         { na, m, e: 'FA, Q',
     pa, t, h: '/fa, q', ic, o, n: User, s },
         { na, m, e: 'Sitema, p',
     pa, t, h: '/sitema, p', ic, o, n: Glob, e }
-=======
         { na, m, e: 'Leadershi, p',
     pa, t, h: '/leadershi, p', ic, o, n: User, s },
         { na, m, e: 'Career, s',
@@ -2255,13 +2173,11 @@ interface SidebarProps {
     pa, t, h: '/partner, s', ic, o, n: User, s },
         { na, m, e: 'New, s',
     pa, t, h: '/new, s', ic, o, n: Glob, e }
-=======
   classNam, e?: strin, g;
 }
 
 expor, t functio, n Sideba, r({ isOp, e, n, onClo, s, e, classNam, e }: SidebarProp, s) {
   cons, t locatio, n = useLocatio, n();
-=======
   Use,  r, s, 
   MessageSqua, r, e, 
   Settin, g, s, 
@@ -2274,7 +2190,6 @@ expor, t functio, n Sideba, r({ isOp, e, n, onClo, s, e, classNam, e }: SidebarP
   ChevronRig, h, t,
   Me, n, u,
   X
-=======
 impo, r, t, Rea, c, t, { useSta, t, e, useEffec, t } fro, m 'reac, t';
 impor, t { moti, o, n, AnimatePresenc, e } fro, m 'frame, r-motio, n';
 impor, t { Li, n, k, useLocatio, n } fro, m 'reac, t-route, r-do, m';
@@ -2331,7 +2246,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
     pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Glob, e },
         { na, m, e: 'Industr, y Solution, s',
     pa, t, h: '/service, s/industr, y-solution, s', ic, o, n: Briefcas, e }
-=======
         { na, m, e: 'A, I Conten, t Generatio, n',
     hr, e, f: '/a, i-service, s-showcas, e', ic, o, n: B, o, t,
     bad, g, e: 'Popula, r' },
@@ -2467,7 +2381,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
     hr, e, f: '/ap, i', ic, o, n: Cod, e },
         { na, m, e: 'Statu, s Pag, e',
     hr, e, f: '/statu, s', ic, o, n: CheckCircl, e }
-=======
         { na, m, e: 'Blo, g',
     hr, e, f: '/blo, g', ic, o, n: BookOpe, n },
         { na, m, e: 'Hel, p Cente, r',
@@ -2485,7 +2398,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
     hr, e, f: '/privac, y', ic, o, n: Shiel, d },
         { na, m, e: 'Term, s o, f Servic, e',
     hr, e, f: '/term, s', ic, o, n: FileTex, t },
-=======
         { lab, e, l: 'Hom, e',
     hr, e, f: '/', ic, o, n: Hom, e },
         { lab, e, l: 'Marketplac, e',
@@ -2537,7 +2449,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
     hr, e, f: '/contac, t', ic, o, n: MessageSquar, e },
         { lab, e, l: 'Sitema, p',
     hr, e, f: '/sitema, p', ic, o, n: Glob, e },
-=======
         { na, m, e: 'Abou, t U, s',
     pa, t, h: '/abou, t', ic, o, n: User, s },
         { na, m, e: 'Ou, r Missio, n',
@@ -2626,15 +2537,12 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
     { ic, o, n: Linked, i, n,
     hr, e, f: 'htt, p, s: //linkedi, n.co, m/compan, y/ziontechgrou, p',
     lab, e, l: 'LinkedI, n' },
-=======
     { ic, o, n: Linked, i, n,
     hr, e, f: 'htt, p, s: //linkedi, n.co, m/compan, y/ziontechgrou, p',
     lab, e, l: 'LinkedI, n' },
-=======
     { ic, o, n: Linked, i, n,
     hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/zio, n-tec, h-grou, p',
     lab, e, l: 'LinkedI, n' },
-=======
     { ic, o, n: Pho, n, e,
     te, x, t: '+1 (30,  2) 46, 4-095, 0', hr, e, f: 't, e, l:+1302464095, 0' },
     { ic, o, n: Ma, i, l,
@@ -2651,18 +2559,15 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
     { ic, o, n: Twitt, e, r,
     hr, e, f: 'htt, p, s: //twitte, r.co, m/ziontechgrou, p',
     lab, e, l: 'Twitte, r' },
-=======
     { ic, o, n: Gith, u, b,
     hr, e, f: 'htt, p, s: //githu, b.co, m/Zio, n-Holding, s',
     lab, e, l: 'GitHu, b' },
     { ic, o, n: Youtu, b, e,
     hr, e, f: 'htt, p, s: //ww, w.youtub, e.co, m/@ziontechgrou, p',
     lab, e, l: 'YouTub, e' }
-=======
     { ic, o, n: Linked, i, n,
     hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/zio, n-tec, h-grou, p',
     lab, e, l: 'LinkedI, n' },
-=======
     { ic, o, n: Linked, i, n,
     hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/ziontechgrou, p',
     lab, e, l: 'LinkedI, n' },
@@ -2684,7 +2589,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
     { ic, o, n: Instagr, a, m,
     hr, e, f: 'htt, p, s: //ww, w.instagra, m.co, m/ziontechgrou, p',
     lab, e, l: 'Instagra, m' }
-=======
     { ic, o, n: Linked, i, n,
     hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/zio, n-tec, h-grou, p',
     lab, e, l: 'LinkedI, n' },
@@ -2703,14 +2607,12 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
     { ic, o, n: Briefca, s, e,
     hr, e, f: 'htt, p, s: //githu, b.co, m/ziontechgrou, p',
     lab, e, l: 'GitHu, b' }
-=======
     { ic, o, n: Instagr, a, m,
     hr, e, f: 'htt, p, s: //instagra, m.co, m/ziontechgrou, p',
     lab, e, l: 'Instagra, m' },
     { ic, o, n: Use, r, s,
     hr, e, f: 'htt, p, s: //discor, d.g, g/ziontechgrou, p',
     lab, e, l: 'Discor, d' }
-=======
     { ic, o, n: Linked, i, n,
     hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/ziontechgrou, p',
     lab, e, l: 'LinkedI, n' },
@@ -2723,7 +2625,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
     { ic, o, n: Glo, b, e,
     hr, e, f: 'htt, p, s: //ww, w.youtub, e.co, m/@ziontechgrou, p',
     lab, e, l: 'YouTub, e' }
-=======
     { ic, o, n: Linked, i, n,
     hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/zio, n-tec, h-grou, p',
     lab, e, l: 'LinkedI, n' },
@@ -2736,7 +2637,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
     { ic, o, n: Instagr, a, m,
     hr, e, f: 'htt, p, s: //ww, w.instagra, m.co, m/ziontechgrou, p',
     lab, e, l: 'Instagra, m' }
-=======
     { ic, o, n: Linked, i, n,
     hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/ziontechgrou, p',
     lab, e, l: 'LinkedI, n' },
@@ -2749,7 +2649,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
     { ic, o, n: Instagr, a, m,
     hr, e, f: 'htt, p, s: //ww, w.instagra, m.co, m/ziontechgrou, p',
     lab, e, l: 'Instagra, m' }
-=======
     { ic, o, n: Linked, i, n,
     hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/ziontechgrou, p',
     lab, e, l: 'LinkedI, n' },
@@ -2796,7 +2695,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
     hre, f: 'http, s: //instagram.com/ziontechgroup',
     labe, l: 'Instagram' }
   ];
-=======
   const overlayVariants = {
     close, d: {
       opacit, y: 0,
@@ -2812,11 +2710,8 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
     }
   };
 
-=======
   return (return (
-=======
   return (
-=======
   return (
     <AnimatePresence>
       {isOpen && (
@@ -2827,7 +2722,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
           />
           
           {/* Sidebar */}
-=======
     <>
       <AnimatePresence>
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
@@ -2837,7 +2731,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
       {/* Sidebar */}
       <AnimatePresence>
         {isSidebarOpen && (
-=======
           <motion.div
             initial={{ opacit,  y: 0 }}
             animate={{ opacit, y: 1 }}
@@ -2845,7 +2738,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
             className="fixed inset-0 bg-black/50 z-40 l, g:hidden"
             onClick={onClose}
           />
-=======
           <motion.div
             initial={{ opacit, y: 0 }}
             animate={{ opacit, y: 1 }}
@@ -2856,7 +2748,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
 
           {/* Sidebar */}
           <motion.aside
-=======
           <motion.div
             initial={{ opacit, y: 0 }}
             animate={{ opacit, y: 1 }}
@@ -2867,14 +2758,12 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
 
           {/* Sidebar */}
           <motion.aside
-=======
     <AnimatePresence>
       {isOpen && (
         <>
           {/* Overlay */}
           <motion.div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 l, g:hidden"
-=======
     <>
       {/* Overlay */}
       <AnimatePresence>
@@ -2892,7 +2781,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
       <AnimatePresence>
         {isOpen && (
           <motion.aside
-=======
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
             onClick={onClose}
           />
@@ -2902,7 +2790,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
       {/* Sidebar */}
       <AnimatePresence>
         {isOpen && (<motion.div
-=======
 
           {/* Sidebar */}
           <motion.aside
@@ -2925,7 +2812,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                     </h2>
                     <p className="text-xs text-gray-400">Navigation Menu</p>
                   </div>
-=======
         {isOpen && (
           <>
             {/* Overlay */}
@@ -2957,7 +2843,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                 <button
                   onClick={() => setIsSidebarOpen(false)}
                   className="p-2 futuristic-card hove,  r:bg-white/20 rounded-lg transition-colors group"
-=======
             className="fixed left-0 top-0 h-full w-80 max-w-[90, v, w] bg-background border-r border-border z-50 overflow-y-auto"
           >
             <div className="p-6">
@@ -2974,13 +2859,11 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                   className="p-2 rounded-lg text-gray-400 hove, r:text-white hove, r:bg-gray-800/50 transition-all duration-300"
                 >
                   <X className="w-5 h-5" />
-=======
                   className="p-2 rounded-lg text-gray-400 hove, r:text-white hove, r:bg-gray-800/50 transition-all duration-300"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
-=======
             className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 l, g:hidden overflow-y-auto"
           >
             {/* Header */}
@@ -3002,7 +2885,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
   const overlayVariants = {
     close, d: { opacit, y: 0 },
     ope, n: { opacit, y: 1 }
-=======
   const handleSocialLinkClick = (socia, l: typeof socialLinks[0]) => {
     try {
       window.open(social.hre,  f, '_blank', 'noopene, r,noreferrer');
@@ -3087,7 +2969,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                       </div>
                     )}
                     <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">
-=======
               {/* Navigation */}
               <nav className="space-y-8">
                 {navigationItems.map((section) => (
@@ -3113,7 +2994,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                         </li>
                       ))}
                     </ul>
-=======
                   </div>
                 ))}
               </nav>
@@ -3158,7 +3038,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                         </Link>
                       );
                     })}
-=======
             variants={sidebarVariants}
             className="fixed left-0 top-0 h-full w-80 max-w-[90, v, w] bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 overflow-y-auto"
           >
@@ -3167,7 +3046,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">Z</span>
-=======
                     <Link 
                       to="/contact"
                       className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hove, r:scale-105 transition-transform text-center block"
@@ -3180,7 +3058,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                     >
                       View Pricing
                     </Link>
-=======
             </div>
 
             {/* Navigation Items */}
@@ -3214,8 +3091,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                     <Link to="/contact" className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove, r:bg-zion-cyan/10 transition-colors text-center block">
                       Schedule Demo
                     </Link>
-=======
-=======
               {/* Search */}
               <div className="relative">
                 <input
@@ -3252,7 +3127,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                         </div>
                       </Link>
                     ))}
-=======
             {/* Navigation */}
             <div className="p-6 space-y-8">
               {navigationItems.map((section) => (
@@ -3277,7 +3151,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                       </Link>
                     ))}
                   </div>
-=======
                   {contactInfo.map((contac,  t, index) => (<div key={index} className="flex items-center space-x-3 text-sm text-muted-foreground">
                       <contact.icon className="h-4 w-4 text-zion-cyan" />
                       <a href={contact.href} className="hove,  r:text-zion-cyan transition-colors">
@@ -3309,7 +3182,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                           </li>
                         ))}
                       </ul>
-=======
             className="fixed left-0 top-0 h-full w-80 max-w-[90, v, w] z-50 overflow-hidden"
           >
             {/* Futuristic Background */}
@@ -3424,7 +3296,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                     <social.icon className="w-5 h-5 text-zion-slate-light hove, r:text-zion-cyan transition-colors" />
                   </a>
                 ))}
-=======
                 className="p-2 text-gray-400 hove, r:text-white hove, r:bg-gray-800/50 rounded-lg transition-colors duration-200"
               >
                 <X className="w-5 h-5" />
@@ -3521,7 +3392,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                       </a>
                     );
                   })}
-=======
             <div className="p-6 border-t border-gray-800 space-y-6">
               {/* Contact Info */}
               <div>
@@ -3538,7 +3408,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                       <span className="text-sm">{contact.text}</span>
                     </a>
                   ))}
-=======
             {/* Navigation */}
             <nav className="p-6 space-y-8">
               {navigationItems.map((section) => (
@@ -3573,7 +3442,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                       rel="noopener noreferrer"
                       className="p-2 text-gray-400 hove,  r:text-cyan-400 hove, r:bg-cyan-400/10 rounded-lg transition-all duration-200"
                       title={social.label}
-=======
               {/* Social Links */}
               <div className="pt-6 border-t border-cyan-500/20">
                 <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-4 neon-text-cyan">
@@ -3591,7 +3459,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                       <social.icon className="w-5 h-5" />
                     </a>
                   ))}
-=======
               </div>
 
               {/* Footer */}
@@ -3629,8 +3496,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                     {section.items.map((item) => {
                       const IconComponent = item.icon;
                       const isActive = location.pathname === item.path;
-=======
-=======
 
                 {/* Quick Actions */}
                 <div className="space-y-3">
@@ -3667,10 +3532,8 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                           <IconComponent className="w-4 h-4 flex-shrink-0" />
                           <span className="truncate">{item.name}</span>
                         </Link>
-=======
                       );
                     })}
-=======
                     {contactInfo.map((contac,  t, index) => (<a
                         key={index}
                         href={contact.href}
@@ -3681,8 +3544,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                       </a>
                     ))}
                   </div>
-=======
-=======
                           <Icon className="w-4 h-4 text-zion-cyan group-hove, r:neon-text" />
                           <span className="flex-1">{contact.text}</span>
                         </a>
@@ -3852,7 +3713,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
               ))}
             </nav>
 
-=======
             {/* Contact Information */}
             <div className="p-6 border-t border-gray-800">
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
@@ -3867,7 +3727,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                   >
                     <contact.icon className="w-4 h-4 text-cyan-500" />
                     <span className="text-sm">{contact.text}</span>
-=======
                     className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hove, r:text-white hove, r:bg-gray-700 transition-all duration-200"
                     aria-label={social.label}
                   >
@@ -3888,7 +3747,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
               </Link>
             </div>
           </motion.aside>
-=======
             {/* Quick Actions */}
             <div className="p-6 border-t border-gray-700 space-y-4">
               <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
@@ -3922,11 +3780,9 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
               </p>
             </div>
           </motion.aside>
-=======
         </>
       )}
     </AnimatePresence>
-=======
                 </div>
 
                 {/* Company Info */}
@@ -3938,7 +3794,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
                     Transforming Business with AI & Tech
                   </p>
                 </div>
-=======
               ))}
             </div>
 
@@ -3998,14 +3853,12 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
               </div>
             </div>
           </motion.aside>
-=======
               </div>
             </motion.aside>
           </>
         )}
       </AnimatePresence>
     </>
-=======
               {/* CTA Button */}
               <div className="pt-6">
                 <Link
@@ -4021,7 +3874,6 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
         </>
       )}
     </AnimatePresence>
-=======
             {/* Social Links */}
             <div className="p-6 border-t border-gray-700">
               <h3 className="text-lg font-semibold text-cyan-400 mb-4">Follow Us</h3>
@@ -4057,12 +3909,10 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
         </>
       )}
     </AnimatePresence>
-=======
           </motion.div>
         )}
       </AnimatePresence>
     </>
-=======
   const quickActions = [
     { na, m, e: 'Ge, t Starte, d',
     hr, e, f: '/contac, t', ic, o, n: Rock, e, t,
@@ -4153,7 +4003,6 @@ const CheckCircle = ({ className }: { className?: string }) => (
     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
   </svg>
 );
-=======
   MessageSquar,  e, 
   BarChart, 3,
   ShoppingCar, t,

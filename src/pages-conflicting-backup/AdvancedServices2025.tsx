@@ -13,7 +13,6 @@ const AdvancedServices2025: React.FC = () => {
           icon: "📊",
           features: ["Real-time data processing", "Predictive modeling", "Custom dashboards", "API integrations", "Advanced reporting"],
           pricing: "$5,000 - $35,000/month",
-=======
           benefits: ["50% faster decision making", "Predictive insights", "Real-time monitoring", "Cost optimization"],
           marketPosition: "Enterprise-grade analytics for Fortune 500 companies",
           competitors: ["Tableau", "Power BI", "QlikView"],
@@ -40,13 +39,11 @@ const AdvancedServices2025: React.FC = () => {
           marketPosition: "Next-generation CX platform for customer-centric businesses",
           competitors: ["Adobe Experience Cloud", "Salesforce Service Cloud", "Oracle CX"],
           competitiveAdvantage: "AI-driven personalization, real-time optimization, and comprehensive analytics"
-=======
         }
       ]
     },
     {
       category: "Emerging Technology Solutions",
-=======
       description: "Cutting-edge technology services for future-ready organizations",
       services: [
         {
@@ -81,12 +78,10 @@ const AdvancedServices2025: React.FC = () => {
           marketPosition: "Enterprise blockchain solutions for innovative organizations",
           competitors: ["Ethereum Enterprise", "Hyperledger", "Corda"],
           competitiveAdvantage: "Custom development, enterprise integration, and regulatory compliance"
-=======
         }
       ]
     },
     {
-=======
       category: "Advanced Micro SaaS Solutions",
       description: "Innovative software-as-a-service solutions for modern businesses",
       services: [
@@ -155,12 +150,10 @@ const AdvancedServices2025: React.FC = () => {
           marketPosition: "Intelligent event management for modern organizations",
           competitors: ["Eventbrite", "Cvent", "Hopin"],
           competitiveAdvantage: "AI-powered automation, intelligent optimization, and comprehensive analytics"
-=======
         }
       ]
     },
     {
-=======
       category: "Specialized IT Services",
       description: "Advanced IT infrastructure and specialized technology services",
       services: [
@@ -301,14 +294,12 @@ const AdvancedServices2025: React.FC = () => {
           marketPosition: "Energy AI for utility and energy companies",
           competitors: ["Schneider Electric", "Siemens", "GE"],
           competitiveAdvantage: "Specialized energy AI, predictive analytics, and sustainability focus"
-=======
         }
       ]
     }
   ];
 
   return (
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -351,14 +342,12 @@ const AdvancedServices2025: React.FC = () => {
                         {service.features.map((feature, idx) => (
                           <li key={idx} className="text-sm text-gray-300 flex items-center">
                             <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-=======
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
 
-=======
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-green-400 mb-2">Pricing:</h4>
                       <p className="text-sm text-gray-300">{service.pricing}</p>
@@ -370,14 +359,12 @@ const AdvancedServices2025: React.FC = () => {
                         {service.benefits.map((benefit, idx) => (
                           <li key={idx} className="text-sm text-gray-300 flex items-center">
                             <span className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>
-=======
                             {benefit}
                           </li>
                         ))}
                       </ul>
                     </div>
 
-=======
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-purple-400 mb-2">Market Position:</h4>
                       <p className="text-sm text-gray-300">{service.marketPosition}</p>
@@ -397,7 +384,6 @@ const AdvancedServices2025: React.FC = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </Link>
-=======
                   </div>
                 ))}
               </div>
@@ -406,7 +392,6 @@ const AdvancedServices2025: React.FC = () => {
         </div>
       </section>
 
-=======
       {/* Enhanced CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -442,7 +427,6 @@ const AdvancedServices2025: React.FC = () => {
             <p>Email: kleber@ziontechgroup.com</p>
             <p>Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">ziontechgroup.com</a></p>
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-=======
           </div>
         </div>
       </section>

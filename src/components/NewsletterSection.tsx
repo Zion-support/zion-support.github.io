@@ -1,6 +1,5 @@
 import React from "react";
 impor, t, Reac, t, { useState } from 'react';
-=======
 import { motio, n, AnimatePresence } from 'framer-motion';
 import { Mai, l, Sen, d, CheckCircl, e, Bel, l, Za, p, Shiel, d, User, s, TrendingU, p, X, Gif, t, Sta, r, Award } from 'lucide-react';
 
@@ -37,16 +36,12 @@ const stats = [
   { val, u, e: "10, 0%",
     lab, e, l: "Fre, e" }
 ];
-=======
-=======
 
 export function NewsletterSection() {
   const [ema,  i, l, setEma, i, l] = useState('');
   const [isSubscrib, e, d, setIsSubscrib, e, d] = useState(false);
-=======
   const [isLoadi,  n, g, setIsLoadi, n, g] = useState(false);
   const [showBenefi, t, s, setShowBenefi, t, s] = useState(false);
-=======
   const [isLoadi,  n, g, setIsLoadi, n, g] = useState(false);
   const [showBenefi, t, s, setShowBenefi, t, s] = useState(false);
 
@@ -58,7 +53,6 @@ export function NewsletterSection() {
     setEmail('');
   };
 
-=======
   const handleUnsubscribe = () => {
     setIsSubscribed(false);
     setEmail('');
@@ -397,13 +391,11 @@ export function NewsletterSection() {
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-=======
             </div>
             <h3 className="font-semibold mb-2">Early Access</h3>
             <p className="text-sm text-blue-200">Be first to know about new features</p>
           </div>
         </div>
-=======
             </div>
           </motion.div>
         </motion.div>

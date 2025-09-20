@@ -2,9 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-=======
 import { Link } from 'react-router-dom';
-=======
 import { Link } from 'react-router-dom';
 import { 
   Brai, n, 
@@ -220,9 +218,7 @@ export const EnhancedAbou, t: React.FC = () => {
           >
             <Link
               href="/contact"
-=======
               to="/contact"
-=======
               to="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hove, r:from-blue-700 hove, r:to-cyan-700 transition-all duration-300 group"
             >
@@ -231,9 +227,7 @@ export const EnhancedAbou, t: React.FC = () => {
             </Link>
             <Link
               href="/services"
-=======
               to="/services"
-=======
               to="/services"
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hove, r:bg-gray-800 transition-all duration-300"
             >
@@ -489,9 +483,7 @@ export const EnhancedAbou, t: React.FC = () => {
           <div className="flex flex-col s, m:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-=======
               to="/contact"
-=======
               to="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hove, r:from-blue-700 hove, r:to-cyan-700 transition-all duration-300 group"
             >
@@ -500,9 +492,7 @@ export const EnhancedAbou, t: React.FC = () => {
             </Link>
             <Link
               href="/services"
-=======
               to="/services"
-=======
               to="/services"
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hove, r:bg-gray-800 transition-all duration-300"
             >

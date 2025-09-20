@@ -1,4 +1,3 @@
-=======
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface DialogContextType {
@@ -97,13 +96,10 @@ export const Dialog: React.FC<DialogProps> = ({
       }
     }}}>
       <div className={cn('relative', className)} {...props}>
-=======
-=======
         {children}
       </div>
     </DialogContext.Provider>
   );
-=======
 }
 
 export function DialogTrigger({ children, asChild = false }: { children: ReactNode; asChild?: boolean }) {
@@ -187,13 +183,10 @@ export const DialogContent: React.FC<DialogContentProps> = ({
         )}
         {...props}
       >
-=======
-=======
         {children}
       </div>
     </div>
   );
-=======
 }
 
 export function DialogHeader({ children, className = '' }: { children: ReactNode; className?: string }) {
@@ -260,5 +253,3 @@ export const DialogFooter: React.FC<DialogFooterProps> = ({
     </div>
   );
 };
-=======
-=======

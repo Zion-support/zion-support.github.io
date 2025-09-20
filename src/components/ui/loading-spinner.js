@@ -84,5 +84,4 @@ export function InlineLoader({ size = 'sm', variant = 'default' }) {
       <LoadingSpinner size={size} variant={variant} className="mr-2"/>
       <span className="text-sm text-gray-600">Loading...</span>
     </div>);
-=======
 }

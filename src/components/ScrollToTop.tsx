@@ -1,5 +1,4 @@
 import React from "react";
-=======
 
 export function ScrollToTop() {
 impor,  t, Reac, t, { useStat, e, useEffect } from 'react';
@@ -7,12 +6,9 @@ impor,  t, Reac, t, { useStat, e, useEffect } from 'react';
 const ScrollToTo, p: React.FC = () => {
 
 export function ScrollToTop() {
-=======
 impor,  t, Reac, t, { useStat, e, useEffect } from 'react';
 
 const ScrollToTo, p: React.FC = () => {
-=======
-=======
   const [isVisib, l, e, setIsVisib, l, e] = useState(false);
 
   useEffect(() => {
@@ -32,15 +28,11 @@ const ScrollToTo, p: React.FC = () => {
     window.scrollTo({
       to,  p: 0,
     behavio, r: 'smooth',
-=======
       behavio, r: 'smooth',
-=======
       behavio, r: 'smooth',
     });
   };
 
-  return (=======
-=======
           className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hove,  r:shadow-xl transition-all duration-300 flex items-center justify-center z-50"
           aria-label="Back to top"
           initial={{ opacit, y: 0,
@@ -63,9 +55,6 @@ const ScrollToTo, p: React.FC = () => {
         >
           <svg 
             className="w-6 h-6" 
-=======
-=======
-=======
     <>
       {isVisible && (<button
           onClick={scrollToTop}
@@ -74,8 +63,6 @@ const ScrollToTo, p: React.FC = () => {
         >
           <svg 
             className="w-6 h-6 mx-auto" 
-=======
-=======
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
@@ -87,8 +74,6 @@ const ScrollToTo, p: React.FC = () => {
               d="M5 10l7-7m0 0l7 7m-7-7v18" 
             />
           </svg>
-=======
-=======
         </button>
       )}
     </>
@@ -96,5 +81,3 @@ const ScrollToTo, p: React.FC = () => {
 };
 
 export default ScrollToTop;
-=======
-=======

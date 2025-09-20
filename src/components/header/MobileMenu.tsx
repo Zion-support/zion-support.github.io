@@ -1,6 +1,4 @@
 
-=======
-=======
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Menu from 'lucide-react/dist/esm/icons/menu';
@@ -16,8 +14,6 @@ import { useAuth } from '@/hooks/useAuth';
 import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-=======
-=======
 
 interface MobileMenuProps {
   className?: string;
@@ -29,8 +25,6 @@ export function MobileMenu({ className }: MobileMenuProps) {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
-=======
-=======
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navigationItems = [
@@ -40,8 +34,6 @@ export function MobileMenu({ className }: MobileMenuProps) {
     { href: '/categories', label: t('nav.categories'), icon: Store, matches: (path: string) => path.startsWith('/categories') },
     { href: '/equipment', label: t('nav.equipment'), icon: Store, matches: (path: string) => path.startsWith('/equipment') },
     { href: '/community', label: t('nav.community'), icon: Users, matches: (path: string) => path.startsWith('/community') },
-=======
-=======
   ];
 
   if (isAuthenticated) {

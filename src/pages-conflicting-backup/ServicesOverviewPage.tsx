@@ -1,14 +1,10 @@
 import React from 'react';
-=======
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
-=======
-=======
     Server,
   TrendingUp,
   CheckCircle,
@@ -606,7 +602,6 @@ export default function ServicesOverviewPage() {
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue text-lg px-8 py-6">
               <Phone className="mr-3 h-6 w-6" />
               Schedule Consultation
-=======
             </Button>
           </div>
         </div>

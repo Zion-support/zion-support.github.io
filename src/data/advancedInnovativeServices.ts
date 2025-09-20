@@ -20,8 +20,6 @@ export interface AdvancedInnovativeService {
     email: string;
     website: string;
   };
-=======
-=======
   technology: string[];
   integrations: string[];
   compliance: string[];
@@ -96,14 +94,10 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     uniqueValue: "Combines edge computing with cloud-based ML for real-time predictions"
   },
 
-=======
-=======
   // Quantum Machine Learning Platform
   {
     id: "quantum-machine-learning-platform",
     title: "Quantum Machine Learning Platform",
-=======
-=======
     description: "Revolutionary platform that combines quantum computing principles with machine learning to solve complex optimization problems and accelerate AI model training.",
     category: "Quantum Computing",
     subcategory: "Machine Learning",
@@ -136,31 +130,23 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Logistics optimization",
       "Cryptography and security",
       "Material science research"
-=======
-=======
     ],
     targetAudience: [
       "Research institutions",
       "Pharmaceutical companies",
       "Financial institutions",
       "Government agencies",
-=======
-=======
       "Technology companies"
     ],
     tags: ["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research", "Innovation"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,500 - $8,000/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-=======
-=======
     technology: ["Qiskit", "PennyLane", "Cirq", "Python", "React", "TensorFlow", "PyTorch"],
     integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "D-Wave"],
     compliance: ["ISO 27001", "FedRAMP", "SOC 2", "NIST"],
@@ -169,16 +155,12 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     marketTrend: "Explosive growth with 500% annual increase in quantum computing adoption",
     innovationLevel: "Pioneering quantum-classical hybrid approaches",
     uniqueValue: "First commercial platform combining quantum computing with practical ML applications"
-=======
-=======
   },
 
   // Autonomous Drone Fleet Management
   {
     id: "autonomous-drone-fleet-management",
     title: "Autonomous Drone Fleet Management Platform",
-=======
-=======
     description: "AI-powered platform for managing autonomous drone fleets for delivery, inspection, surveillance, and data collection with real-time monitoring and optimization.",
     category: "Autonomous Systems",
     subcategory: "Drone Management",
@@ -211,8 +193,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Search and rescue operations",
       "Security and surveillance",
       "Environmental monitoring"
-=======
-=======
     ],
     targetAudience: [
       "Biotech researchers",
@@ -221,12 +201,10 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Bioinformaticians",
       "Medical professionals"
     ],
-=======
     tags: ["Autonomous Systems", "Drones", "AI", "Fleet Management", "IoT", "Logistics"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$799 - $3,000/month",
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -537,7 +515,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$22,000 - $70,000/month",
-=======
     tags: ["Autonomous Systems", "Drones", "AI", "Fleet Management", "IoT", "Logistics"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
@@ -547,8 +524,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-=======
-=======
     technology: ["Python", "ROS", "React", "Node.js", "MongoDB", "AWS", "Computer Vision"],
     integrations: ["DJI SDK", "Parrot SDK", "Weather APIs", "GIS systems", "ERP systems"],
     compliance: ["FAA Part 107", "ISO 27001", "SOC 2", "GDPR"],
@@ -882,14 +857,10 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     category: "AI & Healthcare",
     subcategory: "Medical Diagnostics",
     price: 599,
-=======
-=======
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Medical image analysis",
-=======
-=======
       "Diagnostic assistance",
       "Patient risk assessment",
       "Treatment recommendations",
@@ -926,15 +897,11 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$599 - $2,200/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-=======
-=======
     technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "MongoDB", "AWS"],
     integrations: ["PACS systems", "EHR platforms", "Telemedicine systems", "Medical devices"],
     compliance: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],
@@ -1010,5 +977,3 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
 ];
 
 export default ADVANCED_INNOVATIVE_SERVICES;
-=======
-=======

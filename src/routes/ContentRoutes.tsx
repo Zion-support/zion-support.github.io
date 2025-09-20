@@ -22,7 +22,6 @@ import AccountSettings from "@/pages/AccountSettings";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
 import Services from "@/pages/Services";
-=======
 
 const ContentRoutes = () => {
   return (
@@ -33,7 +32,6 @@ const ContentRoutes = () => {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/services" element={<Services />} />
-=======
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/cookies" element={<Cookies />} />
       

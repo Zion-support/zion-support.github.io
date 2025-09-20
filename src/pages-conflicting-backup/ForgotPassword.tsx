@@ -24,8 +24,6 @@ const forgotPasswordSchema = z.object({
 });
 
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
-=======
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../SEO';
@@ -33,7 +31,6 @@ import { GradientHeading } from '../GradientHeading';
 import { Button } from '../ui/Button';
 import { Input } from '../ui/Input';
 import { Mail, ArrowLeft, CheckCircle } from 'lucide-react';
-=======
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState('');
@@ -190,7 +187,6 @@ export default function ForgotPassword() {
             <p className="text-zion-slate-light mt-4">
               Enter your email address and we'll send you a link to reset your password.
             </p>
-=======
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -231,7 +227,6 @@ export default function ForgotPassword() {
           </div>
         </div>
       </div>
-=======
       
     </>
   );

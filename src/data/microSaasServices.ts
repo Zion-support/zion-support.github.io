@@ -1,7 +1,3 @@
-=======
-=======
-=======
-=======
 export interface MicroSaasService {
   id: string;
   title: string;
@@ -10,11 +6,9 @@ export interface MicroSaasService {
   marketPrice: string;
   website: string;
   contactEmail: string;
-=======
   marketPrice: string;
   website: string;
   contactEmail: string;
-=======
   marketPrice: string;
   website: string;
   contactEmail: string;
@@ -25,11 +19,9 @@ export interface MicroSaasService {
   featured: boolean;
   location: string;
   availability: string;
-=======
   featured: boolean;
   location: string;
   availability: string;
-=======
   featured: boolean;
   location: string;
   availability: string;
@@ -38,9 +30,7 @@ export interface MicroSaasService {
     id: string;
     avatarUrl?: string;
     verified: boolean;
-=======
     verified: boolean;
-=======
     verified: boolean;
   };
   images: string[];
@@ -48,8 +38,6 @@ export interface MicroSaasService {
 }
 
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
-=======
-=======
   // AI & Machine Learning Services
   {
     id: "ai-chatbot-builder",
@@ -103,14 +91,10 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Advanced AI-powered content creation platform for blogs, social media, marketing copy, and product descriptions. Includes SEO optimization and brand voice customization.",
     category: "AI Services",
     subcategory: "Content Creation",
-=======
-=======
     price: 79,
     currency: "$",
     pricingModel: "monthly",
     features: [
-=======
-=======
       "AI-powered content generation",
       "SEO optimization tools",
       "Brand voice customization",
@@ -144,28 +128,20 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       verified: true
     },
     images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
-=======
-=======
     createdAt: "2024-01-20T14:30:00.000Z"
   },
   {
     id: "ai-data-analytics",
-=======
-=======
     title: "AI-Powered Business Intelligence",
     description: "Intelligent data analytics platform that transforms raw data into actionable insights. Features predictive analytics, automated reporting, and real-time dashboards.",
     category: "AI Services",
     subcategory: "Data Analytics",
     price: 149,
-=======
-=======
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Real-time data processing",
       "Predictive analytics",
-=======
-=======
       "Automated reporting",
       "Custom dashboards",
       "Data visualization",
@@ -205,14 +181,10 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     description: "Intelligent coding companion that helps developers write, debug, and optimize code. Supports 50+ programming languages with advanced AI-powered suggestions.",
     category: "AI Services",
     subcategory: "Developer Tools",
-=======
-=======
     price: 29,
     currency: "$",
     pricingModel: "monthly",
     features: [
-=======
-=======
       "AI code completion",
       "Bug detection & fixing",
       "Code optimization",
@@ -491,9 +463,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Customer satisfaction tracking",
       "Multi-channel support",
       "Knowledge base",
-=======
-=======
-=======
   pricing: {
     monthly: number;
     yearly: number;
@@ -644,14 +613,10 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Multi-language support",
       "Ticket routing & escalation",
       "Customer satisfaction surveys",
-=======
-=======
       "Performance analytics",
       "Integration APIs"
     ],
     benefits: [
-=======
-=======
       "Reduce response time by 90%",
       "Handle 70% of queries automatically",
       "Improve customer satisfaction by 45%",
@@ -912,6 +877,4 @@ export const getMicroSaasServicesByCategory = (category: string): MicroSaasServi
 
 export const getMicroSaasCategories = (): string[] => {
   return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
-=======
-=======
 };

@@ -100,5 +100,4 @@ export function TrustedBySection() {
         </div>
       </div>
     </section>);
-=======
 }

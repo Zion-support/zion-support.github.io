@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-=======
   price: number;
   currency: string;
   pricingModel: 'one-time' | 'monthly' | 'yearly' | 'per-user' | 'per-project' | 'usage-based' | 'freemium';
@@ -9,12 +8,9 @@ import { Routes, Route } from "react-router-dom";
   price: number;
   currency: string;
   pricingModel: 'one-time' | 'monthly' | 'yearly' | 'per-user' | 'per-project' | 'usage-based' | 'freemium';
-=======
   price: number;
   currency: string;
   pricingModel: string;
-=======
-=======
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -22,12 +18,9 @@ import { Routes, Route } from "react-router-dom";
   tags: string[];
   estimatedDelivery: string;
   supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
-=======
   supportLevel: string;
-=======
   supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
   supportLevel: string;
-=======
   supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
   supportLevel: string;
   marketPrice: string;
@@ -36,10 +29,7 @@ import { Routes, Route } from "react-router-dom";
     email: string;
     website: string;
   };
-=======
-=======
   };
-=======
   };
 import { ProductListing } from "@/types/listings";
 
@@ -47,14 +37,10 @@ export interface InnovativeMicroSaasService extends ProductListing {
   marketPrice: string;
   estimatedDelivery: string;
   supportLevel: string;
-=======
-=======
   technology: string[];
   integrations: string[];
   compliance: string[];
   roi: string;
-=======
-=======
   };
   aiScore?: number;
   rating?: number;
@@ -71,23 +57,17 @@ export interface InnovativeMicroSaasService extends ProductListing {
   deployment?: string;
   marketTrend?: string;
   competitiveAdvantage?: string;
-=======
-=======
 }
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
   // AI-Powered Content Creation & Management
   {
   competitors: string[];
-=======
-=======
   category: 'AI & Automation' | 'Business Intelligence' | 'Digital Marketing' | 'Productivity' | 'Security & Compliance' | 'Development Tools' | 'Analytics' | 'Collaboration' | 'Finance & HR' | 'Industry Specific';
   subcategory: string;
-=======
   competitors: string[];
   category: 'AI & Automation' | 'Business Intelligence' | 'Digital Marketing' | 'Productivity' | 'Security & Compliance' | 'Development Tools' | 'Analytics' | 'Collaboration' | 'Finance & HR' | 'Industry Specific';
   subcategory: string;
-=======
   competitors: string[];
   category: 'AI & Automation' | 'Business Intelligence' | 'Digital Marketing' | 'Productivity' | 'Security & Compliance' | 'Development Tools' | 'Analytics' | 'Collaboration' | 'Finance & HR' | 'Industry Specific';
   subcategory: string;
@@ -97,9 +77,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     enterprise: number;
     currency: string;
     billingCycle: 'monthly' | 'yearly';
-=======
     billingCycle: 'monthly' | 'yearly';
-=======
     billingCycle: 'monthly' | 'yearly';
   };
   features: string[];
@@ -107,8 +85,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
   targetAudience: string[];
   useCases: string[];
   integration: string[];
-=======
-=======
   website: string;
   contactInfo: {
     email: string;
@@ -120,8 +96,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
   launchDate: string;
   status: 'Active' | 'Beta' | 'Coming Soon';
   marketPrice: string;
-=======
-=======
       "Quantum annealing algorithms",
       "Hybrid quantum-classical computing",
       "Real-time optimization dashboard",
@@ -158,15 +132,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,499 - $8,999/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-=======
-=======
   competitors: string[];
 }
 
@@ -204,16 +174,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       "Gaming companies",
       "Financial services",
       "Supply chain management"
-=======
-=======
     ],
     targetAudience: [
       "E-commerce businesses",
       "Content creators",
       "Gaming companies",
       "Financial institutions",
-=======
-=======
   competitors: string[];
 }
 
@@ -263,24 +229,17 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
     marketPrice: "$149 - $599/month",
-=======
-=======
-=======
       "Technology startups"
     ],
     tags: ["Web3", "Blockchain", "DeFi", "NFTs", "Smart Contracts", "Cryptocurrency"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
     marketPrice: "$400 - $2,000/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-=======
-=======
     technology: ["Qiskit", "Cirq", "Python", "C++", "CUDA"],
     integrations: ["AWS Braket", "IBM Quantum", "Google Quantum", "Azure Quantum"],
     compliance: ["ISO 27001", "SOC 2", "NIST"],
@@ -352,9 +311,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: "Advanced threat intelligence platform that provides real-time cybersecurity insights, threat detection, and automated response capabilities.",
     category: "Cybersecurity",
     subcategory: "Threat Intelligence",
-=======
-=======
-=======
   competitors: string[];
   freeTrial: boolean;
   freeTrialDays: number;
@@ -369,14 +325,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: "Comprehensive Web3 automation platform for smart contracts, DeFi operations, and blockchain business processes with no-code interface.",
     category: "Web3 & Blockchain",
     subcategory: "Business Automation",
-=======
-=======
     price: 499,
     currency: "$",
     pricingModel: "monthly",
     features: [
-=======
-=======
     technology: ["Ethereum", "Polygon", "Solana", "React", "Node.js", "Web3.js"],
     integrations: ["MetaMask", "WalletConnect", "OpenSea", "Uniswap", "Coinbase"],
     compliance: ["GDPR", "AML", "KYC", "Local regulations"],
@@ -474,16 +426,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       "Supply chain optimization",
       "Green marketing",
       "Investor relations"
-=======
-=======
     ],
     targetAudience: [
       "Large enterprises",
       "Sustainability consultants",
       "ESG investors",
       "Government agencies",
-=======
-=======
     technology: ["Ethereum", "Polygon", "Solana", "React", "Node.js", "IPFS"],
     integrations: ["MetaMask", "WalletConnect", "OpenSea API", "Coinbase", "Binance"],
     compliance: ["KYC/AML", "GDPR", "SOC 2"],
@@ -536,18 +484,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "3-4 weeks",
     supportLevel: "standard",
     marketPrice: "$79 - $299/month",
-=======
-=======
-=======
       "Non-profit organizations"
     ],
     tags: ["Sustainability", "ESG", "Carbon Tracking", "Environmental Impact", "Green Business"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
     marketPrice: "$350 - $1,500/month",
-=======
-=======
-=======
     aiScore: 99,
     rating: 4.9,
     reviewCount: 89,
@@ -641,9 +583,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: "Self-healing DevOps platform that automatically manages infrastructure, deploys applications, and optimizes performance using AI and machine learning for continuous delivery excellence.",
     category: "DevOps & Automation",
     subcategory: "Autonomous Operations",
-=======
-=======
-=======
       "Smart contract automation",
       "DeFi yield farming automation",
       "NFT marketplace integration",
@@ -700,14 +639,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: "Quantum computing optimization platform for complex business problems including logistics, financial modeling, and drug discovery.",
     category: "Quantum Computing",
     subcategory: "Business Optimization",
-=======
-=======
     price: 899,
     currency: "$",
     pricingModel: "monthly",
     features: [
-=======
-=======
     aiScore: 96,
     rating: 4.9,
     reviewCount: 167,
@@ -733,8 +668,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     category: "Blockchain",
     subcategory: "Supply Chain",
     price: 699,
-=======
-=======
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -774,9 +707,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,499 - $10,000/month",
-=======
-=======
-=======
     websiteUrl: "https://ziontechgroup.com/quantum-optimization"
   },
 
@@ -787,9 +717,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: "Enterprise-grade AI content creation platform that generates high-quality, SEO-optimized content across multiple formats and languages.",
     category: "AI Content Generation",
     subcategory: "Enterprise Content",
-=======
-=======
-=======
   competitors: string[];
   demoUrl?: string;
   documentationUrl?: string;
@@ -884,8 +811,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       "Real-time supply chain tracking",
       "Blockchain-based verification",
       "Smart contract automation",
-=======
-=======
       "Real-time tracking",
       "Compliance verification",
       "Quality assurance",
@@ -904,29 +829,21 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     ],
     useCases: [
       "Food safety and traceability",
-=======
-=======
       "Pharmaceutical supply chains",
       "Luxury goods authentication",
       "Manufacturing supply chains",
       "Logistics and shipping"
     ],
     targetAudience: [
-=======
-=======
     id: "ai-content-factory",
     title: "AI Content Factory Pro",
     description: "Revolutionary AI-powered content creation platform that generates high-quality, SEO-optimized content across multiple formats including blogs, social media, emails, and video scripts.",
     category: "AI & Marketing",
     subcategory: "Content Creation",
-=======
-=======
     price: 299,
     currency: "$",
     pricingModel: "monthly",
     features: [
-=======
-=======
       "Multi-format content generation (blogs, social, emails, scripts)",
       "SEO optimization with real-time keyword analysis",
       "Brand voice consistency across all content",
@@ -951,15 +868,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       "Content creators and influencers",
       "B2B marketing teams",
       "Educational institutions"
-=======
-=======
     ],
     targetAudience: [
       "Marketing managers",
       "Content creators",
       "SEO specialists",
-=======
-=======
       "Business owners",
       "Digital agencies"
     ],
@@ -967,17 +880,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "1-2 weeks",
     supportLevel: "premium",
     marketPrice: "$299 - $1,999/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
-=======
-=======
     }
-=======
     }
     id: 'zion-ai-business-intelligence',
     title: 'Zion AI Business Intelligence Platform',
@@ -1121,9 +1029,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: 'Intelligent cloud cost optimization platform that analyzes usage patterns, identifies waste, and automatically optimizes cloud spending across AWS, Azure, and GCP.',
     category: 'Cloud & Infrastructure',
     subcategory: 'Cost Optimization',
-=======
-=======
-=======
   competitiveAdvantage: string;
   technicalSpecs: {
     platform: string;
@@ -1131,9 +1036,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     mobile: boolean;
     desktop: boolean;
     cloud: boolean;
-=======
-=======
-=======
   competitors: string[];
   useCases: string[];
   targetAudience: string[];
@@ -1142,14 +1044,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     phone: string;
     email: string;
     website: string;
-=======
-=======
   };
 }
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
-=======
-=======
       currency: '$',
       billingCycle: 'monthly'
     },
@@ -1195,15 +1093,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       'Analytics platforms'
     ],
     website: 'https://ziontechgroup.com/services/ai-content-orchestrator',
-=======
-=======
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008, Middletown DE 19709'
     },
-=======
-=======
       "AI-powered failure prediction",
       "IoT sensor integration",
       "Real-time monitoring",
@@ -1336,9 +1230,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: "Intelligent financial planning platform that uses AI to analyze market trends, optimize investment strategies, and provide personalized financial advice.",
     category: "AI & Finance",
     subcategory: "Financial Planning",
-=======
-=======
-=======
       "Quantum algorithm optimization",
       "Hybrid quantum-classical computing",
       "Financial portfolio optimization",
@@ -1395,14 +1286,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: "Intelligent edge computing platform for IoT devices with real-time processing, AI inference, and predictive maintenance capabilities.",
     category: "Edge Computing & IoT",
     subcategory: "Intelligent Automation",
-=======
-=======
     price: 349,
     currency: "$",
     pricingModel: "monthly",
     features: [
-=======
-=======
       "Edge AI processing",
       "Real-time IoT monitoring",
       "Predictive maintenance",
@@ -1435,15 +1322,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     ],
     tags: ["Edge Computing", "IoT", "AI", "Predictive Maintenance", "Real-time Processing"],
     estimatedDelivery: "3-5 weeks",
-=======
-=======
     supportLevel: "premium",
     marketPrice: "$349 - $1,500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-=======
-=======
       "Real-time energy monitoring",
       "Smart grid integration",
       "Renewable energy optimization",
@@ -1508,9 +1391,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: "Advanced legal document analysis platform that uses AI to review contracts, identify risks, and provide legal insights for businesses and law firms.",
     category: "AI & Legal Tech",
     subcategory: "Document Analysis",
-=======
-=======
-=======
     technology: ["React Native", "Node.js", "MQTT", "TensorFlow", "PostgreSQL"],
     integrations: ["Amazon Alexa", "Google Home", "Apple HomeKit", "Philips Hue", "Nest"],
     compliance: ["GDPR", "SOC 2", "UL 2900"],
@@ -1573,9 +1453,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     compliance: ["GDPR", "SOC 2", "HIPAA", "ISO 27001"],
     roi: "300% within 5 months",
     competitors: ["Kira Systems", "Luminance", "eBrevia", "LawGeex"]
-=======
-=======
-=======
     },
     aiScore: 97,
     rating: 4.8,
@@ -1592,22 +1469,15 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     deployment: "Cloud-native with edge computing",
     marketTrend: "AI content market growing 25% annually",
     competitiveAdvantage: "Only platform with real-time SEO optimization"
-=======
-=======
   },
 
   // Quantum-Safe Cybersecurity Platform
   {
-=======
-=======
     id: "quantum-safe-cyber-shield",
     title: "Quantum-Safe Cyber Shield",
     description: "Next-generation cybersecurity platform that combines quantum-resistant encryption, AI threat detection, and blockchain-based security verification for enterprise-grade protection.",
     category: "Cybersecurity",
     subcategory: "Quantum Security",
-=======
-=======
-=======
       "Supply chain managers",
       "Quality assurance teams",
       "Compliance officers",
@@ -1647,9 +1517,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: "Advanced IoT platform with edge computing capabilities for real-time data processing, local AI inference, and seamless cloud integration for industrial and commercial applications.",
     category: "IoT & Edge Computing",
     subcategory: "Edge Intelligence",
-=======
-=======
-=======
       website: "https://ziontechgroup.com"
     },
     technology: ["TensorFlow Lite", "Edge TPU", "Kubernetes", "MQTT", "WebRTC"],
@@ -1669,22 +1536,15 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: "Comprehensive metaverse platform for businesses to create virtual offices, host events, and engage customers in immersive 3D environments.",
     category: "Metaverse & VR/AR",
     subcategory: "Business Solutions",
-=======
-=======
     price: 599,
     currency: "$",
     pricingModel: "monthly",
     features: [
-=======
-=======
     technology: ["Python", "Elasticsearch", "Kafka", "React", "Machine Learning"],
     integrations: ["SIEM systems", "EDR platforms", "Firewalls", "IDS/IPS", "Cloud platforms"],
     compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
     roi: "400% within 6 months",
     competitors: ["CrowdStrike", "Palo Alto Networks", "FireEye", "Recorded Future", "ThreatConnect"]
-=======
-=======
-=======
       "3D virtual office creation",
       "Virtual event hosting",
       "Avatar customization",
@@ -1852,8 +1712,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     freeTrial: true,
     freeTrialDays: 14,
     demoUrl: "https://demo.ziontechgroup.com/cybersecurity-mesh"
-=======
-=======
   },
 
   // Digital Twin Platform
@@ -1862,10 +1720,8 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     title: "Digital Twin Platform",
     description: "Comprehensive digital twin platform for creating virtual replicas of physical assets, processes, and systems with real-time monitoring and predictive analytics.",
     category: "Digital Twin & Simulation",
-=======
     description: "Comprehensive digital twin platform for creating virtual replicas of physical assets, processes, and systems with real-time monitoring and predictive analytics.",
     category: "Digital Twin & Simulation",
-=======
     description: "Comprehensive digital twin platform for creating virtual replicas of physical assets, processes, and systems with real-time monitoring and predictive analytics.",
     category: "Digital Twin & Simulation",
     subcategory: "Asset Management",
@@ -1873,8 +1729,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     currency: "$",
     pricingModel: "monthly",
     features: [
-=======
-=======
       "Edge AI processing",
       "Real-time data analytics",
       "Local decision making",
@@ -1911,9 +1765,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "3-4 weeks",
     supportLevel: "standard",
     marketPrice: "$599 - $2,499/month",
-=======
-=======
-=======
       "3D asset modeling",
       "Real-time data integration",
       "Predictive maintenance",
@@ -1948,15 +1799,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "5-7 weeks",
     supportLevel: "enterprise",
     marketPrice: "$799 - $4,000/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-=======
-=======
   competitors: string[];
   deployment: string;
   customization: string;
@@ -2009,14 +1856,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "1-2 weeks",
     supportLevel: "standard",
     marketPrice: "$149 - $500/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-=======
-=======
   // AI-Powered Legal Document Analysis
   {
     id: "ai-legal-doc-analyzer",
@@ -2041,8 +1884,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     useCases: ["Contract review", "Legal research", "Compliance checking", "Risk assessment", "Document analysis"],
     targetAudience: ["Law firms", "Legal departments", "Compliance officers", "Contract managers", "Legal professionals"],
     benefits: ["Reduce legal review time by 80%", "Improve accuracy by 95%", "Cost savings of 60%", "24/7 availability", "Scalable solution"],
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -2050,8 +1891,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     }
   },
 
-=======
-=======
     },
     technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
     integrations: ["Slack", "Microsoft Teams", "Jira", "Trello", "Asana"],
@@ -2108,14 +1947,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
     marketPrice: "$199 - $800/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-=======
-=======
     },
     technology: ["React", "Node.js", "PostgreSQL", "Python", "Redis"],
     integrations: ["Shopify", "WooCommerce", "QuickBooks", "Xero", "ShipStation"],
@@ -2172,9 +2007,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "1-2 weeks",
     supportLevel: "standard",
     marketPrice: "$99 - $400/month",
-=======
-=======
-=======
   // AI-Powered Real Estate Analytics
   {
     id: "ai-real-estate-analytics",
@@ -2199,14 +2031,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     useCases: ["Property investment", "Market analysis", "Valuation", "Portfolio management", "Risk assessment"],
     targetAudience: ["Real estate investors", "Agents", "Property managers", "Investment firms", "Developers"],
     benefits: ["Improve investment decisions by 40%", "Reduce research time by 70%", "Increase ROI by 25%", "Data-driven insights", "Market intelligence"],
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-=======
-=======
     },
     technology: ["Python", "React", "Node.js", "PostgreSQL", "BERT"],
     integrations: ["SurveyMonkey", "Typeform", "Google Forms", "Social media APIs"],
@@ -2263,14 +2091,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "1 week",
     supportLevel: "standard",
     marketPrice: "$79 - $300/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-=======
-=======
     },
     technology: ["React", "Node.js", "PostgreSQL", "OpenAI API", "Redis"],
     integrations: ["Facebook", "Instagram", "Twitter", "LinkedIn", "TikTok"],
@@ -2289,9 +2113,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: "Intelligent contract management system that uses AI to analyze contracts, identify risks, and automate compliance monitoring for legal and business teams.",
     category: "Micro SAAS",
     subcategory: "Legal Tech",
-=======
-=======
-=======
     },
     technology: ["Unity", "Unreal Engine", "WebXR", "React", "Node.js"],
     integrations: ["LMS systems", "HR platforms", "Analytics tools", "VR headsets"],
@@ -2307,9 +2128,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: "Sustainability analytics platform that helps organizations track, measure, and optimize their environmental impact and ESG performance.",
     category: "Sustainability & ESG",
     subcategory: "Environmental Analytics",
-=======
-=======
-=======
     technology: ["Unity3D", "Unreal Engine", "IoT Platforms", "Machine Learning", "Cloud Computing"],
     integrations: ["Siemens Mindsphere", "GE Predix", "PTC ThingWorx", "Azure Digital Twins"],
     compliance: ["ISO 27001", "Industry-specific standards", "Data privacy regulations"],
@@ -2327,14 +2145,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: "Advanced AI platform for automated content creation, including text, images, videos, and audio with brand consistency and SEO optimization.",
     category: "AI & Content Creation",
     subcategory: "Multimedia Generation",
-=======
-=======
     price: 299,
     currency: "$",
     pricingModel: "monthly",
     features: [
-=======
-=======
       "Carbon footprint tracking",
       "ESG reporting",
       "Sustainability metrics",
@@ -2367,9 +2181,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     ],
     tags: ["Sustainability", "ESG", "Carbon Tracking", "Environmental Analytics", "Compliance"],
     estimatedDelivery: "3-5 weeks",
-=======
-=======
-=======
       "AI text generation",
       "Image and video creation",
       "Audio synthesis",
@@ -2402,8 +2213,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     ],
     tags: ["AI", "Content Creation", "Multimedia", "SEO", "Brand Management"],
     estimatedDelivery: "2-3 weeks",
-=======
-=======
     supportLevel: "premium",
     marketPrice: "$299 - $1,200/month",
     contactInfo: {
@@ -2411,8 +2220,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-=======
-=======
       "AI contract review",
       "Risk identification",
       "Legal compliance checking",
@@ -2477,9 +2284,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: "Revolutionary drone fleet management platform that enables autonomous operations, real-time monitoring, and automated mission planning for commercial applications.",
     category: "Autonomous Systems",
     subcategory: "Drone Management",
-=======
-=======
-=======
     technology: ["Python", "React", "PostgreSQL", "Machine Learning", "Data Analytics"],
     integrations: ["ERP systems", "Energy management systems", "Financial platforms", "Reporting tools"],
     compliance: ["GRI", "SASB", "TCFD", "CDP", "ISO 14001"],
@@ -2494,14 +2298,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: "Comprehensive compliance platform for financial technology companies, automating regulatory reporting and risk management processes.",
     category: "Fintech & Compliance",
     subcategory: "Regulatory Technology",
-=======
-=======
     price: 699,
     currency: "$",
     pricingModel: "monthly",
     features: [
-=======
-=======
       "Regulatory reporting automation",
       "Risk assessment tools",
       "Compliance monitoring",
@@ -2536,9 +2336,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
     marketPrice: "$699 - $2,800/month",
-=======
-=======
-=======
       "Post-quantum cryptography",
       "Quantum-resistant algorithms",
       "Encryption key management",
@@ -2554,9 +2351,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       "Meet regulatory requirements",
       "Reduce security risks",
       "Competitive advantage"
-=======
-=======
-=======
       "Post-quantum cryptography algorithms",
       "AI-powered threat detection and response",
       "Blockchain-based security audit trails",
@@ -2574,16 +2368,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       "Achieve compliance certifications faster",
       "Lower cybersecurity insurance premiums",
       "Future-proof security infrastructure"
-=======
-=======
     ],
     useCases: [
       "Financial institutions",
       "Healthcare organizations",
       "Government agencies",
       "Critical infrastructure",
-=======
-=======
       "Enterprise corporations"
     ],
     targetAudience: [
@@ -2597,15 +2387,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "3-4 weeks",
     supportLevel: "enterprise",
     marketPrice: "$599 - $3,999/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-=======
-=======
     aiScore: 99,
     rating: 4.9,
     reviewCount: 234,
@@ -2759,15 +2545,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     deployment: "Multi-cloud with edge computing",
     marketTrend: "Blockchain supply chain market growing 45% annually",
     competitiveAdvantage: "Most comprehensive transparency platform with real-time compliance"
-=======
-=======
   },
 
   // AI-Powered Healthcare Diagnostics
   {
     id: "ai-healthcare-diagnostics",
-=======
-=======
     title: "AI Healthcare Diagnostics Assistant",
     description: "Advanced AI-powered medical diagnostics platform that assists healthcare professionals with image analysis, symptom assessment, and treatment recommendations.",
     category: "AI & Healthcare",
@@ -2793,8 +2575,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       "Lower healthcare costs by 30%",
       "Increase patient satisfaction",
       "Support remote healthcare delivery"
-=======
-=======
     ],
     useCases: [
       "Hospitals and clinics",
@@ -2802,18 +2582,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       "Primary care practices",
       "Emergency rooms",
       "Telemedicine platforms"
-=======
       "Emergency rooms",
       "Telemedicine platforms"
-=======
       "Emergency rooms",
       "Telemedicine platforms"
     ],
     targetAudience: [
       "Radiologists",
       "Primary care physicians",
-=======
-=======
     aiScore: 93,
     rating: 4.6,
     reviewCount: 89,
@@ -2997,8 +2773,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       "Reduce manual operations by 90%",
       "Optimize resource utilization by 30%",
       "Predict and prevent failures"
-=======
-=======
     ],
     useCases: [
       "Commercial buildings",
@@ -3008,8 +2782,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       "Government facilities"
     ],
     targetAudience: [
-=======
-=======
       "Data center operators",
       "IT infrastructure teams",
       "Cloud architects",
@@ -3020,15 +2792,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,999 - $7,999/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-=======
-=======
     technology: ["React", "Node.js", "Python", "PostgreSQL", "InfluxDB"],
     integrations: ["Solar panels", "Smart meters", "Building management systems", "Weather APIs", "Utility APIs"],
     compliance: ["ISO 50001", "LEED", "BREEAM", "SOC 2"],
@@ -3091,9 +2859,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     compliance: ["SEC", "FINRA", "SOC 2", "GDPR"],
     roi: "400% within 4 months",
     competitors: ["Betterment", "Wealthfront", "Personal Capital", "Mint"]
-=======
-=======
-=======
     technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
     integrations: ["Salesforce", "SAP", "Oracle", "QuickBooks", "Google Analytics"],
     compliance: ["GRI", "SASB", "TCFD", "CDP", "Local ESG standards"],
@@ -3213,8 +2978,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     compliance: ["GDPR", "Data privacy", "Industry standards"],
     roi: "350% within 5 months",
     competitors: ["Tableau", "Power BI", "Looker", "Qlik", "Domo"]
-=======
-=======
   }
 ];
 
@@ -3222,8 +2985,6 @@ export const INNOVATIVE_SERVICE_CATEGORIES = [
   "AI & Business Intelligence",
   "Cybersecurity",
   "Quantum Computing",
-=======
-=======
   "Blockchain & Web3",
   "Internet of Things",
   "AI & Marketing",
@@ -3250,9 +3011,6 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     description: "Intelligent video creation platform that automates video production, editing, and optimization using AI algorithms for content creators and businesses.",
     category: "AI & Creative Technology",
     subcategory: "Video Production",
-=======
-=======
-=======
 ];
 
 // New Innovative Micro SAAS Services
@@ -3263,14 +3021,10 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     description: "Intelligent project management platform that uses AI to predict project risks, optimize resource allocation, and automate task prioritization.",
     category: "Business Operations",
     subcategory: "Project Management",
-=======
-=======
     price: 299,
     currency: "$",
     pricingModel: "monthly",
     features: [
-=======
-=======
       "AI-driven risk assessment",
       "Smart resource optimization",
       "Automated task prioritization",
@@ -3305,14 +3059,10 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
     marketPrice: "$299 - $899/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-=======
-=======
     }
   },
   {
@@ -3359,9 +3109,6 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,999 - $4,999/month",
-=======
-=======
-=======
     }
   },
 
@@ -3389,16 +3136,12 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     useCases: ["Candidate screening", "Skill assessment", "Interview management", "Talent acquisition", "HR analytics"],
     targetAudience: ["HR professionals", "Recruiters", "Hiring managers", "Startups", "Enterprise companies"],
     benefits: ["Reduce hiring time by 50%", "Improve candidate quality by 35%", "Cost savings of 40%", "Bias-free screening", "Scalable recruitment"],
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
-=======
-=======
       "Blockchain-based tracking",
       "Real-time visibility",
       "Automated compliance",
@@ -3433,14 +3176,10 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$799 - $2,499/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-=======
-=======
     }
   },
   {
@@ -3487,14 +3226,10 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     estimatedDelivery: "5-6 weeks",
     supportLevel: "premium",
     marketPrice: "$399 - $1,199/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-=======
-=======
     }
   },
   {
@@ -3541,9 +3276,6 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     estimatedDelivery: "10-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,299 - $3,999/month",
-=======
-=======
-=======
 
   // AI-Powered Supply Chain Optimization
   {
@@ -3569,16 +3301,12 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     useCases: ["Demand planning", "Inventory management", "Supplier optimization", "Cost reduction", "Risk management"],
     targetAudience: ["Supply chain managers", "Logistics companies", "Manufacturers", "Retailers", "E-commerce"],
     benefits: ["Reduce inventory costs by 30%", "Improve forecast accuracy by 40%", "Reduce lead times by 25%", "Cost savings of 35%", "Risk mitigation"],
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
-=======
-=======
       "AI investment recommendations",
       "Portfolio optimization",
       "Risk assessment",
@@ -3613,22 +3341,16 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     estimatedDelivery: "12-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$899 - $2,999/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-=======
-=======
       "Emergency medicine doctors",
       "Healthcare administrators",
       "Medical imaging technicians"
     ],
     tags: ["AI", "Healthcare", "Medical Imaging", "Diagnostics", "Machine Learning"],
     estimatedDelivery: "4-5 weeks",
-=======
-=======
     supportLevel: "enterprise",
     marketPrice: "$699 - $3,999/month",
     contactInfo: {
@@ -3636,8 +3358,6 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-=======
-=======
     aiScore: 99,
     rating: 4.9,
     reviewCount: 312,
@@ -3653,28 +3373,20 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     deployment: "On-premise and cloud options",
     marketTrend: "AI healthcare market expected to reach $45B by 2026",
     competitiveAdvantage: "Highest accuracy rates in medical image analysis"
-=======
-=======
   },
 
   // Quantum Machine Learning Platform
   {
-=======
-=======
     id: "quantum-ml-platform",
     title: "Quantum Machine Learning Platform",
     description: "Cutting-edge platform that combines quantum computing with machine learning to solve complex optimization problems, accelerate drug discovery, and revolutionize financial modeling.",
     category: "Quantum Computing",
     subcategory: "Machine Learning",
     price: 1299,
-=======
-=======
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Quantum algorithm optimization",
-=======
-=======
     }
   },
   {
@@ -3721,9 +3433,6 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,499 - $6,999/month",
-=======
-=======
-=======
       "Hybrid quantum-classical ML models",
       "Financial portfolio optimization",
       "Drug discovery simulations",
@@ -3828,14 +3537,10 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
     marketPrice: "$399 - $2,499/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-=======
-=======
     },
     aiScore: 97,
     rating: 4.8,
@@ -3901,8 +3606,6 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     estimatedDelivery: "4-5 weeks",
     supportLevel: "premium",
     marketPrice: "$899 - $4,999/month",
-=======
-=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -3911,12 +3614,9 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     }
   }
 ];
-=======
-=======
     }
   }
 ];
-=======
     }
   }
 ];
@@ -3925,9 +3625,6 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     description: 'Intelligent customer support automation platform that uses AI to handle customer inquiries, route tickets, and provide instant solutions while maintaining human touch.',
     category: 'AI & Customer Service',
     subcategory: 'Support Automation',
-=======
-=======
-=======
     rating: 4.9,
     reviewCount: 247,
     launchDate: '2024-01-15',
@@ -3948,14 +3645,10 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     description: 'Next-generation CRM platform powered by quantum-inspired algorithms for predictive customer behavior analysis, automated lead scoring, and intelligent sales forecasting.',
     category: 'AI & Automation',
     subcategory: 'Customer Relationship Management',
-=======
-=======
     price: {
       starter: 149,
       professional: 399,
       enterprise: 999,
-=======
-=======
       currency: '$',
       billingCycle: 'monthly'
     },
@@ -4000,16 +3693,12 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
       'Social media platforms'
     ],
     website: 'https://ziontechgroup.com/services/quantum-crm-intelligence',
-=======
-=======
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008, Middletown DE 19709'
     },
     rating: 4.8,
-=======
-=======
     reviewCount: 189,
     launchDate: '2024-02-01',
     status: 'Active',
@@ -4077,15 +3766,11 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
       'Compliance management tools'
     ],
     website: 'https://ziontechgroup.com/services/cyber-shield-enterprise',
-=======
-=======
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008, Middletown DE 19709'
     },
-=======
-=======
     rating: 4.9,
     reviewCount: 156,
     launchDate: '2024-01-20',
@@ -4610,14 +4295,10 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
       desktop: true,
       cloud: true
     }
-=======
-=======
   }
 ];
 
 export const INNOVATIVE_SAAS_CATEGORIES = [
-=======
-=======
   {
     label: 'AI & Automation',
     value: 'ai-automation',
@@ -4673,8 +4354,6 @@ export const INNOVATIVE_SAAS_CATEGORIES = [
     description: 'Specialized solutions for specific industries',
     icon: '🏭',
     serviceCount: 1
-=======
-=======
   }
 ];
 
@@ -4683,8 +4362,6 @@ export const CONTACT_INFO = {
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008, Middletown DE 19709",
   website: "https://ziontechgroup.com"
-=======
-=======
     aiScore: 98,
     rating: 4.9,
     reviewCount: 189,
@@ -4704,9 +4381,6 @@ export const CONTACT_INFO = {
 ];
 
 export default INNOVATIVE_MICRO_SAAS_SERVICES;
-=======
-=======
-=======
     aiScore: 98,
     rating: 4.9,
     reviewCount: 134,
@@ -4724,9 +4398,6 @@ export default INNOVATIVE_MICRO_SAAS_SERVICES;
     timeToValue: "6-8 weeks"
   }
 ];
-=======
-=======
-=======
     technology: ["GPT-4", "DALL-E", "Stable Diffusion", "Natural Language Processing", "Computer Vision"],
     integrations: ["WordPress", "Shopify", "Social Media APIs", "CMS Platforms"],
     compliance: ["Copyright compliance", "Content moderation", "Brand safety"],
@@ -4737,12 +4408,8 @@ export default INNOVATIVE_MICRO_SAAS_SERVICES;
     demoUrl: "https://demo.ziontechgroup.com/ai-content"
   }
 ];
-=======
 };
-=======
-=======
 };
-=======
 };
 
   // AI-Powered Energy Management
@@ -5069,5 +4736,3 @@ export const INNOVATIVE_CONTACT_INFO = {
   address: "364 E Main St STE 1008 Middletown DE 19709",
   website: "https://ziontechgroup.com"
 };
-=======
-=======

@@ -3,7 +3,6 @@ import React from "react";
 
 import * as React from "react";
 
-=======
 export type Theme = "dark" | "light" | "system"
 
 type ThemeProviderProps = {
@@ -77,8 +76,6 @@ export function ThemeProvider({
     }),
     [the, m, e, storageK, e, y]
   );
-=======
-=======
 
   return (<ThemeContext.Provider value={value}>
       {children}
@@ -86,7 +83,6 @@ export function ThemeProvider({
   );
 }
 
-=======
 export const useTheme = (): ThemeProviderState => {
   const context = useContext(ThemeProviderContext)
 
@@ -109,5 +105,3 @@ export const useTheme = () => {
   }
   return context;
 };
-=======
-=======

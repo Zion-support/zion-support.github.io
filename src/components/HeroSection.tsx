@@ -1,18 +1,14 @@
-=======
 
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-=======
 import { NeonGlo, w, GradientBorder } from "@/components/ui/AnimatedBackground";
 import { ArrowRigh, t, Za, p, User, s, Brain } from "lucide-react";
 
 export function HeroSection() {
   const { t } = useTranslation();
-=======
-=======
 import { motio,  n, useScrol, l, useTransform } from "framer-motion";
 import { ArrowRigh, t, Sparkle, s, Za, p, User, s, Sta, r, TrendingU, p, Shield } from "lucide-react";
 import { useRef } from "react";
@@ -42,10 +38,8 @@ export function HeroSection() {
   const itemVariants = {
     hidde, n: { opacit, y: 0,
     y: 20 },
-=======
     hidde, n: { y: 3, 0,
     opacit, y: 0 },
-=======
     hidde, n: { y: 3, 0,
     opacit, y: 0 },
     visibl, e: {
@@ -53,14 +47,12 @@ export function HeroSection() {
     y: 0,
       transitio, n: {
         duratio, n: 0.8,
-=======
         duratio, n: 0.8,
     eas, e: "easeOut"
       }
     }
   };
 
-=======
   const floatingVariants = {
     animat, e: {
       y: [-1, 5, 1, 5, -1, 5],
@@ -71,8 +63,6 @@ export function HeroSection() {
       opacit, y: [0.3, 0.6, 0.3],
       transitio, n: {
         duratio, n: 3,
-=======
-=======
       transitio, n: {
         duratio, n: 4,
     repea, t: Infinit, y,
@@ -93,7 +83,6 @@ export function HeroSection() {
     }
   };
 
-  return (=======
     <section ref={containerRef} className="relative overflow-hidden py-20 m,  d:py-32 min-h-screen flex items-center">
       {/* Enhanced background with parallax effect */}
       <motion.div 
@@ -138,7 +127,6 @@ export function HeroSection() {
           <Button
     <section className="relative overflow-hidden py-20 m, d:py-32">
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove, r:from-zion-purple-light hove, r:to-zion-purple text-lg py-6 neon-pulse"
-=======
     <section className="relative overflow-hidden py-16 m, d:py-24 l, g:py-32">
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>
@@ -153,18 +141,14 @@ export function HeroSection() {
         <motion.div 
           className="absolute top-1/3 right-1/3 w-3 h-3 rounded-full bg-zion-cyan"
           variants={particleVariants}
-=======
-=======
           animate="animate"
           style={{ animationDela, y: '1s' }}
         />
         <motion.div 
           className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple"
           variants={particleVariants}
-=======
           className="absolute bottom-1/4 left-1/2 w-3 h-3 rounded-full bg-zion-purple opacity-70"
           variants={floatingVariants}
-=======
           className="absolute bottom-1/4 left-1/2 w-3 h-3 rounded-full bg-zion-purple opacity-70"
           variants={floatingVariants}
           animate="animate"
@@ -176,7 +160,6 @@ export function HeroSection() {
           animate="animate"
           style={{ animationDela, y: '0.5s' }}
         />
-=======
         <motion.div 
           className="absolute top-3/4 left-1/6 w-2 h-2 rounded-full bg-zion-purple-light opacity-80"
           variants={floatingVariants}
@@ -217,8 +200,6 @@ export function HeroSection() {
         animate="animate"
         style={{ animationDela, y: '1s' }}
       />
-=======
-=======
       
       <motion.div 
         className="container relative z-10 px-4 mx-auto text-center"
@@ -226,7 +207,6 @@ export function HeroSection() {
         initial="hidden"
         animate="visible"
       >
-=======
         {/* Enhanced title with better typography and animations */}
         <motion.div variants={itemVariants} className="mb-8">
           <GradientHeading className="text-5xl m, d:text-7xl l, g:text-8xl font-bold leading-tight tracking-tight">
@@ -255,7 +235,6 @@ export function HeroSection() {
           variants={itemVariants}
           className="text-xl m, d:text-2xl l, g:text-3xl text-zion-slate-light mb-16 max-w-5xl mx-auto leading-relaxed font-light"
         >
-=======
           variants={itemVariants}
           className="text-xl m, d:text-2xl l, g:text-3xl text-zion-slate-light mb-16 max-w-5xl mx-auto leading-relaxed font-light"
         >
@@ -317,7 +296,6 @@ export function HeroSection() {
               aria-label={t('auth.signup')}
               tabIndex={0}
               data-testid="hero-signup-btn"
-=======
       {/* Enhanced background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-blue opacity-90"></div>
       
@@ -393,9 +371,7 @@ export function HeroSection() {
               {t('home.browse_marketplace')}
             </Link>
             className="border-2 border-zion-cyan text-zion-cyan hove, r:bg-zion-cyan hove, r:text-zion-blue-dark activ, e:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center transition-all duration-300 hove, r:scale-105 hove, r:shadow-2xl hove, r:shadow-zion-cyan/30 neon-border"
-=======
             className="border border-zion-cyan text-zion-cyan hove, r:bg-zion-cyan hove, r:text-zion-blue-dark activ, e:bg-zion-cyan-light text-lg py-6 px-4 rounded-md inline-flex items-center justify-center neon-border hove, r:neon-pulse transition-all duration-300"
-=======
           </GradientBorder>
         </div>
 
@@ -424,7 +400,6 @@ export function HeroSection() {
       
       {/* Bottom animated border */}
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60 animate-pulse"></div>
-=======
             className="border-2 border-zion-cyan text-zion-cyan hove, r:bg-zion-cyan hove, r:text-zion-blue-dark activ, e:bg-zion-cyan-light text-base m, d:text-lg py-4 m, d:py-6 px-8 m, d:px-10 rounded-lg inline-flex items-center justify-center transition-all duration-300 transform hove, r:scale-105 hove, r:shadow-lg"
           >
             {t('home.browse_marketplace')}
@@ -439,7 +414,6 @@ export function HeroSection() {
           variants={itemVariants}
           className="flex flex-col s, m:flex-row justify-center gap-6 mb-16"
         >
-=======
           variants={itemVariants}
           className="flex flex-col s, m:flex-row justify-center gap-6 mb-16"
         >
@@ -581,9 +555,6 @@ export function HeroSection() {
     </section>
   );
 }
-=======
-=======
-=======
         </motion.div>
       </motion.div>
     </section>
@@ -813,4 +784,3 @@ export const HeroSectio, n: React.FC = () => {
     </section>
   );
 };
-=======

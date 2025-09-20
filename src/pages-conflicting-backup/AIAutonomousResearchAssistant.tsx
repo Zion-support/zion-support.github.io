@@ -1,33 +1,23 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-=======
 import { Helmet } from 'react-helmet-async';
-=======
 import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
   Search, 
   BookOpen, 
-=======
-=======
 import { 
   Brain, 
   Cpu, 
   Zap, 
-=======
-=======
   Target, 
   ArrowRight,
   CheckCircle,
   Star,
 import { Brain, Search, BookOpen, Zap, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-=======
-=======
 import { Brain, Search, BookOpen, Zap, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-=======
 import { Brain, Search, BookOpen, Zap, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
   FileText, 
@@ -68,9 +58,6 @@ import SEOHead from '../components/SEOHead';
   Cpu,
   Network
 } from 'lucide-react';
-=======
-=======
-=======
 import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
@@ -102,9 +89,6 @@ import {
   TestTube,
   Beaker
 } from 'lucide-react';
-=======
-=======
-=======
   Users,
   TrendingUp,
   Award,
@@ -140,11 +124,8 @@ import {
   TestTube
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-=======
 import { Brain, Search, Zap, Target, ArrowRight, BookOpen, Globe, TrendingUp } from 'lucide-react';
-=======
 import { Brain, Search, Zap, Target, ArrowRight, BookOpen, Globe, TrendingUp } from 'lucide-react';
-=======
 import { Brain, Search, Zap, Target, ArrowRight, BookOpen, Globe, TrendingUp } from 'lucide-react';
 
   Database,
@@ -153,9 +134,6 @@ import { Brain, Search, Zap, Target, ArrowRight, BookOpen, Globe, TrendingUp } f
   BookOpen as BookOpenIcon,
   Search as SearchIcon,
   Brain as BrainIcon
-=======
-=======
-=======
   Globe, 
   BarChart3, 
   Cpu, 
@@ -170,14 +148,11 @@ import { Brain, Search, Zap, Target, ArrowRight, BookOpen, Globe, TrendingUp } f
   Target,
   Shield
 } from 'lucide-react';
-=======
 import { motion } from 'framer-motion';
 import { Brain, Search, Database, TrendingUp, Users, Globe, Shield, Zap } from 'lucide-react';
-=======
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Brain, Search, Database, TrendingUp, Users, Globe, Shield, Zap } from 'lucide-react';
-=======
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Brain, Search, Database, TrendingUp, Users, Globe, Shield, Zap } from 'lucide-react';
@@ -213,7 +188,6 @@ const AIAutonomousResearchAssistant = () => {
       icon: Search,
       title: "Intelligent Discovery",
       description: "Advanced algorithms that find relevant information across multiple data sources"
-=======
       title: "Autonomous Research",
       description: "AI-powered research that operates independently to discover new insights and connections."
     },
@@ -233,13 +207,11 @@ const AIAutonomousResearchAssistant = () => {
       title: "Real-time Analysis",
 import { motion } from 'framer-motion';
 import { Brain, Search, Database, TrendingUp, Users, Globe, Shield, Zap } from 'lucide-react';
-=======
 import { Link } from 'react-router-dom';
 
 const AIAutonomousResearchAssistant: React.FC = () => {
   const features = [
     {
-=======
       title: "AI-Powered Research",
       description: "Advanced machine learning algorithms that understand context and generate insights from vast datasets"
     },
@@ -261,7 +233,6 @@ const AIAutonomousResearchAssistant: React.FC = () => {
     {
       icon: Users,
       title: "Collaborative Research",
-=======
       title: "Autonomous Research",
       description: "AI-powered research that works independently to discover insights and patterns"
     },
@@ -296,7 +267,6 @@ const AIAutonomousResearchAssistant: React.FC = () => {
       title: "Intelligent Research",
       description: "AI-powered research across multiple data sources and formats",
       icon: "🔍"
-=======
       description: "Facilitates team collaboration with shared research spaces and real-time updates"
     },
     {
@@ -305,12 +275,9 @@ const AIAutonomousResearchAssistant: React.FC = () => {
       description: "Access to international research databases and cross-cultural insights"
       title: "AI-Powered Research",
       description: "Advanced artificial intelligence that autonomously conducts comprehensive research"
-=======
       title: "Intelligent Research",
       description: "AI-powered research across multiple data sources and formats",
       icon: "🔍"
-=======
-=======
     },
     {
       title: "Document Analysis",
@@ -363,7 +330,6 @@ export default function AIAutonomousResearchAssistant() {
       icon: Globe,
       title: 'Global Knowledge',
       description: 'Access to worldwide research databases and academic resources'
-=======
       description: "Instant processing and analysis of research data with continuous learning and adaptation capabilities."
     },
     {
@@ -385,13 +351,10 @@ export default function AIAutonomousResearchAssistant() {
       icon: Globe,
       title: "Multi-Domain Expertise",
       description: "Comprehensive research capabilities across scientific, academic, business, and technical domains."
-=======
     }
   ];
 
   const capabilities = [
-=======
-=======
       title: "Report Creation",
       description: "Professional report generation with customizable templates",
       icon: "📊"
@@ -402,16 +365,12 @@ export default function AIAutonomousResearchAssistant() {
     {
       category: "Data Sources",
       capabilities: ["Academic databases", "Industry reports", "News articles", "Social media", "Web content", "Internal documents"]
-=======
-=======
     },
     {
       category: "Analysis Types",
       capabilities: ["Sentiment analysis", "Trend identification", "Pattern recognition", "Comparative analysis", "Risk assessment", "Opportunity detection"]
     },
     {
-=======
-=======
       title: 'Literature Review',
       description: 'Automated comprehensive literature reviews across multiple domains',
       features: ['Citation analysis', 'Trend identification', 'Gap analysis', 'Meta-analysis']
@@ -420,9 +379,6 @@ export default function AIAutonomousResearchAssistant() {
       title: 'Data Mining',
       description: 'Intelligent extraction and processing of research data',
       features: ['Pattern recognition', 'Statistical analysis', 'Data validation', 'Insight generation']
-=======
-=======
-=======
       title: "Intelligent Literature Review",
       description: "AI-powered analysis of research papers, journals, and scientific literature",
       icon: BookOpen,
@@ -454,8 +410,6 @@ export default function AIAutonomousResearchAssistant() {
       description: "Accelerate breakthrough discoveries in physics, chemistry, and biology",
       icon: Microscope,
       impact: "10x faster discovery"
-=======
-=======
     },
     {
       title: 'Hypothesis Generation',
@@ -485,9 +439,6 @@ export default function AIAutonomousResearchAssistant() {
     {
       industry: 'Scientific Discovery',
       useCases: ['Experimental design', 'Data analysis', 'Hypothesis testing', 'Publication analysis']
-=======
-=======
-=======
       icon: Microscope,
       title: "Scientific Research",
       description: "Laboratory research, experimental design, data analysis, and scientific literature review."
@@ -500,8 +451,6 @@ export default function AIAutonomousResearchAssistant() {
     {
       icon: TestTube,
       title: "Medical Research",
-=======
-=======
       icon: Brain,
       title: "Intelligent Research",
       description: "AI-powered research capabilities that understand context and generate comprehensive insights."
@@ -520,14 +469,10 @@ export default function AIAutonomousResearchAssistant() {
       icon: Target,
       title: "Predictive Insights",
       description: "Forward-looking analysis and trend prediction based on comprehensive data analysis."
-=======
-=======
     }
   ];
 
   const benefits = [
-=======
-=======
       category: "Output Formats",
       capabilities: ["Executive summaries", "Detailed reports", "Data visualizations", "Infographics", "Presentations", "Actionable insights"]
     }
@@ -538,8 +483,6 @@ export default function AIAutonomousResearchAssistant() {
       title: "Market Research",
       description: "Comprehensive market analysis and competitive intelligence",
       icon: "📈"
-=======
-=======
     },
     {
       title: "Academic Research",
@@ -548,8 +491,6 @@ export default function AIAutonomousResearchAssistant() {
     },
     {
       title: "Legal Research",
-=======
-=======
     "Accelerated research timelines by 10x",
     "Comprehensive coverage of research domains",
     "Automated data validation and verification",
@@ -588,9 +529,6 @@ export default function AIAutonomousResearchAssistant() {
       icon: TrendingUp,
       title: "Insight Generation",
       description: "AI-generated insights and recommendations based on comprehensive research analysis."
-=======
-=======
-=======
       description: "Case law analysis and legal document review",
       icon: "⚖️"
     },
@@ -599,10 +537,7 @@ export default function AIAutonomousResearchAssistant() {
       description: "Industry trends and business opportunity analysis",
       icon: "💼"
     }
-=======
-=======
     }
-=======
     }
       description: "AI-powered drug discovery and medical breakthrough research",
       icon: TestTube,
@@ -619,9 +554,6 @@ export default function AIAutonomousResearchAssistant() {
       description: "Automated market analysis and competitive intelligence gathering",
       icon: Search,
       impact: "90% time savings"
-=======
-=======
-=======
     "Reduce research time by 70%",
     "Access to 100M+ research sources",
     "Real-time trend analysis",
@@ -720,7 +652,6 @@ export default function AIAutonomousResearchAssistant() {
     {
       title: "Legal Teams",
       description: "Comprehensive case research and precedent analysis"
-=======
     "Automated literature review and synthesis",
     "Intelligent hypothesis generation",
     "Research methodology optimization",
@@ -735,7 +666,6 @@ export default function AIAutonomousResearchAssistant() {
 
   const useCases = [
     {
-=======
       industry: "Academic Research",
       description: "Accelerate PhD research, streamline literature reviews, and enhance publication quality",
       benefits: ["50% faster research completion", "Improved citation accuracy", "Enhanced collaboration"]
@@ -757,15 +687,12 @@ export default function AIAutonomousResearchAssistant() {
       title: "Technology",
       icon: Cpu,
       description: "AI, blockchain, IoT, and emerging technologies"
-=======
       title: "Time Savings",
       description: "Reduce research time by 70%",
       metric: "70%"
-=======
       title: "Time Savings",
       description: "Reduce research time by 70%",
       metric: "70%"
-=======
       title: "Time Savings",
       description: "Reduce research time by 70%",
       metric: "70%"
@@ -781,7 +708,6 @@ export default function AIAutonomousResearchAssistant() {
       metric: "99%"
     },
     {
-=======
       title: "Cost Efficiency",
       description: "Lower research costs and faster insights",
       metric: "60%"
@@ -805,16 +731,11 @@ export default function AIAutonomousResearchAssistant() {
       metric: '100+',
       label: 'Data Sources',
       description: 'Access to extensive research databases'
-=======
-=======
       title: "Cost Efficiency",
       description: "Lower research costs and faster insights",
       metric: "60%"
     }
   ];
-=======
-=======
-=======
 import { SEOHead } from '../components/SEOHead';
 import { HeroSection } from '../components/HeroSection';
 import { Link } from 'react-router-dom';
@@ -822,11 +743,9 @@ import { Brain, Search, BookOpen, Globe, Database, Users, Zap, Shield, Cpu, Targ
 
 const AIAutonomousResearchAssistant = () => {
   return (
-=======
 
 const AIAutonomousResearchAssistant = () => {
   return (
-=======
 
 const AIAutonomousResearchAssistant = () => {
   return (
@@ -840,14 +759,10 @@ const AIAutonomousResearchAssistant = () => {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
-=======
-=======
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <div className="flex justify-center mb-6">
-=======
-=======
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -861,9 +776,6 @@ const AIAutonomousResearchAssistant = () => {
               Revolutionize your research process with our AI-powered autonomous research assistant. 
               Discover insights faster, analyze deeper, and stay ahead of the competition with 
               intelligent research automation.
-=======
-=======
-=======
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -878,9 +790,6 @@ const AIAutonomousResearchAssistant = () => {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Revolutionize your research with AI-powered autonomous research capabilities. 
               Discover insights faster, analyze data intelligently, and accelerate breakthroughs.
-=======
-=======
-=======
     <>
       <SEOHead 
         title="AI Autonomous Research Assistant - Zion Tech Group"
@@ -922,9 +831,6 @@ const AIAutonomousResearchAssistant = () => {
                   Request Demo
                 </Link>
               </div>
-=======
-=======
-=======
     <>
       <SEOHead 
         customData={{
@@ -976,9 +882,6 @@ const AIAutonomousResearchAssistant = () => {
                   <div className="text-xs text-gray-400">{stat.description}</div>
                 </div>
               ))}
-=======
-=======
-=======
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -1000,15 +903,11 @@ const AIAutonomousResearchAssistant = () => {
               <button className="px-8 py-4 border border-blue-500/30 text-blue-400 hover:bg-blue-500/20 rounded-lg font-semibold transition-all duration-300">
                 Schedule Demo
               </button>
-=======
-=======
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-=======
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -1038,15 +937,11 @@ const AIAutonomousResearchAssistant = () => {
                   </ul>
                 </div>
               ))}
-=======
-=======
             </div>
           </div>
         </section>
 
         {/* Use Cases Section */}
-=======
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -1075,15 +970,11 @@ const AIAutonomousResearchAssistant = () => {
                   </div>
                 </div>
               ))}
-=======
-=======
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-=======
-=======
     <>
       <Helmet>
         <title>AI Autonomous Research Assistant - Zion Tech Group</title>
@@ -1116,9 +1007,6 @@ const AIAutonomousResearchAssistant = () => {
               Experience the future of research with our revolutionary AI autonomous research assistant. 
               Conduct comprehensive research across multiple domains with unprecedented speed, accuracy, 
               and intelligence.
-=======
-=======
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -1126,7 +1014,6 @@ const AIAutonomousResearchAssistant = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of researchers who have transformed their research process with our AI-powered assistant.
-=======
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1139,9 +1026,6 @@ const AIAutonomousResearchAssistant = () => {
               <div className="p-3 bg-purple-500/20 rounded-full">
                 <Brain className="h-12 w-12 text-purple-300" />
               </div>
-=======
-=======
-=======
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg text-white font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
               >
                 Get Started
@@ -1153,9 +1037,6 @@ const AIAutonomousResearchAssistant = () => {
               >
                 Try Demo
               </Link>
-=======
-=======
-=======
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Free Trial
@@ -1166,18 +1047,12 @@ const AIAutonomousResearchAssistant = () => {
               >
                 Schedule Demo
               </Link>
-=======
-=======
-=======
               <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-indigo-500/25">
                 Start Free Trial
               </button>
               <button className="px-8 py-4 border-2 border-indigo-500/50 text-indigo-400 hover:bg-indigo-500/10 font-semibold rounded-xl transition-all duration-300">
                 Schedule Demo
               </button>
-=======
-=======
-=======
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Schedule a Demo
@@ -1192,12 +1067,9 @@ const AIAutonomousResearchAssistant = () => {
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent">
               AI Autonomous Research Assistant
-=======
-=======
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent">
               AI Autonomous Research Assistant
-=======
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent">
               AI Autonomous Research Assistant
@@ -1210,8 +1082,6 @@ const AIAutonomousResearchAssistant = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 {" "}Research Assistant
               </span>
-=======
-=======
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Transform your research process with our AI-powered autonomous research assistant. 
@@ -1229,7 +1099,6 @@ const AIAutonomousResearchAssistant = () => {
               >
                 View All Services
               </Link>
-=======
     "Scientific Research",
     "Market Analysis",
     "Academic Studies",
@@ -1239,7 +1108,6 @@ const AIAutonomousResearchAssistant = () => {
   ];
 
   return (
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate-darker">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -1319,7 +1187,6 @@ const AIAutonomousResearchAssistant = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
             </p>
           </motion.div>
           
@@ -1332,7 +1199,6 @@ const AIAutonomousResearchAssistant = () => {
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-=======
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -1380,7 +1246,6 @@ const AIAutonomousResearchAssistant = () => {
                 <p className="text-gray-400 text-sm">
                   {benefit.description}
                 </p>
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1390,8 +1255,6 @@ const AIAutonomousResearchAssistant = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI research assistant combines cutting-edge artificial intelligence with 
               comprehensive data access to deliver unprecedented research capabilities.
-=======
-=======
             ))}
           </div>
         </div>
@@ -1431,7 +1294,6 @@ const AIAutonomousResearchAssistant = () => {
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
                 <h3 className="text-2xl font-semibold text-white mb-4">{capability.title}</h3>
                 <p className="text-gray-300 text-lg">{capability.description}</p>
-=======
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -1451,7 +1313,6 @@ const AIAutonomousResearchAssistant = () => {
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                 <p className="text-gray-400">{feature.description}</p>
               </div>
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {capabilities.map((capability, index) => (
               <motion.div
@@ -1498,7 +1359,6 @@ const AIAutonomousResearchAssistant = () => {
                     </li>
                   ))}
                 </ul>
-=======
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -1509,9 +1369,6 @@ const AIAutonomousResearchAssistant = () => {
               Our AI Autonomous Research Assistant combines cutting-edge artificial intelligence with comprehensive research methodologies
             </p>
           </div>
-=======
-=======
-=======
           </div>
           
           {/* Key Features */}
@@ -1527,8 +1384,6 @@ const AIAutonomousResearchAssistant = () => {
               ))}
             </div>
           </div>
-=======
-=======
           
           {/* Research Capabilities */}
           <div className="mb-16">
@@ -1570,7 +1425,6 @@ const AIAutonomousResearchAssistant = () => {
                     </li>
                   ))}
                 </ul>
-=======
         {/* Features Section */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1720,13 +1574,10 @@ const AIAutonomousResearchAssistant = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive research capabilities across multiple domains and industries
             </p>
-=======
               ))}
             </div>
-=======
               ))}
             </div>
-=======
               ))}
             </div>
           </div>
@@ -1825,9 +1676,6 @@ const AIAutonomousResearchAssistant = () => {
                   <h3 className="text-lg font-semibold text-white mb-2">Report Library</h3>
                   <p className="text-gray-300 text-sm">Access all generated research reports</p>
                 </div>
-=======
-=======
-=======
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -1886,8 +1734,6 @@ const AIAutonomousResearchAssistant = () => {
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
                 <h3 className="text-xl font-semibold mb-3 text-blue-400">{area.title}</h3>
                 <p className="text-gray-400">{area.description}</p>
-=======
-=======
               </div>
             </div>
           </div>
@@ -1944,7 +1790,6 @@ const AIAutonomousResearchAssistant = () => {
               >
                 <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1988,7 +1833,6 @@ const AIAutonomousResearchAssistant = () => {
                   <tech.icon className="h-8 w-8 text-cyan-500 mx-auto" />
                 </div>
                 <p className="text-white font-medium">{tech.name}</p>
-=======
       {/* Research Areas Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2010,8 +1854,6 @@ const AIAutonomousResearchAssistant = () => {
                 <h3 className="font-semibold text-gray-900 text-sm mb-2">{area.title}</h3>
                 <p className="text-gray-600 text-xs">{area.description}</p>
               </div>
-=======
-=======
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
@@ -2045,7 +1887,6 @@ const AIAutonomousResearchAssistant = () => {
           <p className="text-xl text-gray-300 mb-8">
             Join the research revolution with AI-powered autonomous research capabilities. 
             Our expert team is ready to help you implement cutting-edge research automation.
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -2053,7 +1894,6 @@ const AIAutonomousResearchAssistant = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join the AI-powered research revolution and transform your research capabilities.
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -2076,7 +1916,6 @@ const AIAutonomousResearchAssistant = () => {
             >
               Schedule Demo
               <ArrowRight className="ml-2 w-5 h-5" />
-=======
               className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-200"
             >
               View Pricing
@@ -2086,7 +1925,6 @@ const AIAutonomousResearchAssistant = () => {
               className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
               Explore All Services
-=======
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
             >
               Schedule a Demo
@@ -2098,7 +1936,6 @@ const AIAutonomousResearchAssistant = () => {
             >
               Explore AI Services
             </Link>
-=======
       {/* Technology Stack Section */}
       <section className="py-20 bg-gradient-to-r from-gray-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2137,8 +1974,6 @@ const AIAutonomousResearchAssistant = () => {
               <h3 className="font-semibold text-gray-900">Deep Learning</h3>
             </div>
           </div>
-=======
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -2182,7 +2017,6 @@ const AIAutonomousResearchAssistant = () => {
             </button>
             <button className="border-2 border-purple-300 text-purple-300 hover:bg-purple-300 hover:text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
               Schedule Demo
-=======
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Revolutionize Your Research?</h2>
@@ -2200,7 +2034,6 @@ const AIAutonomousResearchAssistant = () => {
           </div>
         </div>
       </section>
-=======
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -2224,10 +2057,7 @@ const AIAutonomousResearchAssistant = () => {
               </div>
             </div>
           </div>
-=======
-=======
     </div>
-=======
     </div>
         </section>
       </div>
@@ -2287,15 +2117,11 @@ const AIAutonomousResearchAssistant = () => {
           animation: float-delayed 8s ease-in-out infinite;
         }
       `}</style>
-=======
     </div>
-=======
         </section>
       </div>
     </>
   );
 };
-=======
-=======
 
 export default AIAutonomousResearchAssistant;

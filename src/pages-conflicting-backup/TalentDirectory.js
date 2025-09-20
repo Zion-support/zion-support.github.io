@@ -211,4 +211,3 @@ const TalentDirectory = () => {
     </div>);
 };
 export default TalentDirectory;
-=======

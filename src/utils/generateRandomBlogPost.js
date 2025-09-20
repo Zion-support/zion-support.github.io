@@ -73,6 +73,5 @@ export function generateRandomBlogPost() {
         category: 'Technology',
         readTime: Math.floor(Math.random() * 10) + 5,
         featuredImage: `/blog/${randomId}.jpg`
-=======
     };
 }

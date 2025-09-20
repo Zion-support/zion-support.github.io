@@ -17,8 +17,6 @@ export function Select({
 }: SelectProps) {
   const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50';
   
-=======
-=======
 export function Select({ children, className = '', value, onValueChange }: SelectProps) {
   return (
     <select
@@ -39,7 +37,6 @@ interface SelectItemProps {
 
 export function SelectItem({ children, value }: SelectItemProps) {
   return (
-=======
     <div
       className={`
         flex h-10 w-full items-center justify-between rounded-md border 
@@ -60,8 +57,6 @@ export function SelectItem({ children, value }: SelectItemProps) {
 export function SelectTrigger({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
     <div className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}>
-=======
-=======
       {children}
     </div>
   );
@@ -105,6 +100,4 @@ export function SelectItem({ children, className = '', value, ...props }: Select
   );
 export function SelectContent({ children }: { children: React.ReactNode }) {
   return <div className="relative">{children}</div>;
-=======
-=======
 }

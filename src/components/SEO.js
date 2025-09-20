@@ -137,5 +137,4 @@ export function SEO({ titl,  e, descriptio, n, keyword, s, imag, e, canonica, l,
       <meta name="author" content={siteName}/>
       <meta name="viewport" content="width=device-widt, h, initial-scale=1.0"/>
     </Helmet>);
-=======
 }

@@ -1,5 +1,4 @@
 import React from "react";
-=======
 impor, t, Reac, t, { useStat, e, useEffec, t, useRef } from 'react';
 import { motio, n, AnimatePresence } from 'framer-motion';
 import { MessageCircl, e, Sen, d, X, Bo, t, User } from 'lucide-react';
@@ -201,13 +200,11 @@ export const ChatAssistan, t: React.FC = () => {
           <div className="bg-zion-blue p-3 rounded-t-lg">
             <div className="flex items-center justify-between">
               <h3 className="text-white font-semibold">Zion Tech Assistant</h3>
-=======
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-zion-slate-light hove,  r:text-white"
               >
                 <X className="w-4 h-4" />
-=======
               </button>
             </div>
           </div>
@@ -311,4 +308,3 @@ export const ChatAssistan, t: React.FC = () => {
     </>
   );
 };
-=======

@@ -255,5 +255,4 @@ export default function EquipmentDetail() {
       </div>
       <Footer />
     </>);
-=======
 }

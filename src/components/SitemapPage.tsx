@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
 import React from 'react';
-=======
 import { Link } from 'react-router-dom';
 import { SEO } from './SEO';
 import { completeSitemap } from '../config/sitemap';
@@ -141,7 +140,6 @@ export const SitemapPag, e: React.FC = () => {
         description="Complete sitemap of the Zion AI Marketplace"
         keywords="sitema,  p, zio, n, a, i, marketplac, e, navigation"
         canonical="http, s://ziontechgroup.com/sitemap-page"
-=======
         canonical="http, s://ziontechgroup.com/sitemap-page"
       />
       <div className="container mx-auto px-4 py-12">
@@ -278,14 +276,11 @@ export const SitemapPag, e: React.FC = () => {
                     <ChevronRight className="h-4 w-4 mr-2" />
                     {path} <span className="ml-2 text-xs italic">({key})</span>
                   </div>
-=======
-=======
                 </li>
               ))}
             </ul>
           </div>
         </div>
-=======
 
         {/* All Routes List */}
         <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -316,5 +311,3 @@ export const SitemapPag, e: React.FC = () => {
     </>
   );
 };
-=======
-=======

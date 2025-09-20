@@ -44,7 +44,6 @@ export default function FuturisticHero({ title, subtitle, children, className = 
       
       {/* Bottom accent line */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe } from 'lucide-react';
@@ -249,7 +248,6 @@ export default function FuturisticHero() {
           />
         ))}
       </div>
-=======
     </section>
   );
 }

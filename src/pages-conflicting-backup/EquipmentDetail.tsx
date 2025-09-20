@@ -65,9 +65,7 @@ export default function EquipmentDetail() {
     setIsAdding(true);
     try {
       const response = await fetch('/api/checkout_sessions', {
-=======
       const response = await fetch('/checkout/create-session', {
-=======
       const response = await fetch('/checkout/create-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -77,11 +75,9 @@ export default function EquipmentDetail() {
       const stripe = await getStripe();
       if (stripe && sessionId) {
         await stripe.redirectToCheckout({ sessionId });
-=======
       const { url } = await response.json();
       if (url) {
         window.location.href = url as string;
-=======
       const { url } = await response.json();
       if (url) {
         window.location.href = url as string;

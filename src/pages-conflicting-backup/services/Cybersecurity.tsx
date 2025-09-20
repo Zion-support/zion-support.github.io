@@ -99,8 +99,6 @@ const Cybersecurity: React.FC = () => {
               >
                 View Solutions
               </a>
-=======
-=======
       title: "Threat Detection & Response",
       description: "Advanced threat detection and rapid incident response capabilities",
       features: ["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],
@@ -119,7 +117,6 @@ const Cybersecurity: React.FC = () => {
     {
       icon: AlertTriangle,
       title: "Vulnerability Assessment",
-=======
       description: "Comprehensive security audits and vulnerability management",
       features: ["Penetration Testing", "Security Audits", "Risk Assessment", "Compliance Checks"],
       icon: "🔍"
@@ -144,7 +141,6 @@ const Cybersecurity: React.FC = () => {
     { name: "Encryption at Rest & Transit", icon: "🔒", description: "End-to-end data protection" },
     { name: "24/7 Security Operations", icon: "👁️", description: "Continuous monitoring and response" }
   ];
-=======
 import Link from 'next/link';
 
   return (
@@ -334,7 +330,6 @@ const Cybersecurity: React.FC = () => {
               >
                 View All Services
               </Link>
-=======
             </div>
           </div>
         </section>
@@ -436,7 +431,6 @@ const Cybersecurity: React.FC = () => {
                   <div className="flex items-start">
                     <CheckCircle className="w-6 h-6 text-red-400 mr-3 mt-1 flex-shrink-0" />
                     <p className="text-gray-300">{benefit}</p>
-=======
         {/* Security Features */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -496,7 +490,6 @@ const Cybersecurity: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-=======
                   </div>
                 </div>
               ))}
@@ -504,7 +497,6 @@ const Cybersecurity: React.FC = () => {
           </div>
         </section>
 
-=======
         {/* Security Benefits */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -553,7 +545,6 @@ const Cybersecurity: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
-=======
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -578,7 +569,6 @@ const Cybersecurity: React.FC = () => {
                 View Solutions
               </a>
             </div>
-=======
               Let's discuss how our cybersecurity solutions can protect your digital assets
             </p>
             <Link
@@ -587,13 +577,10 @@ const Cybersecurity: React.FC = () => {
             >
               Get Security Consultation
             </Link>
-=======
           </div>
         </section>
       </div>
     </>
-=======
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -620,7 +607,6 @@ const Cybersecurity: React.FC = () => {
         </div>
       </section>
     </div>
-=======
   );
 };
 

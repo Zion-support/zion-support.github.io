@@ -86,5 +86,4 @@ export function ButtonLoader({ size = 'sm', className }) {
       <LoadingSpinner size={size} color="white"/>
       <span className="ml-2">Loading...</span>
     </div>);
-=======
 }

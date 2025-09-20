@@ -529,7 +529,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     price: 2799,
     currency: "$",
     tags: ["Data Quality", "Lineage", "SLAs", "Observability"],
-=======
   },
   {
     id: "mlops-platform",

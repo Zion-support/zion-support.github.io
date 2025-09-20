@@ -1,4 +1,3 @@
-=======
 
 import { useState } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
@@ -246,8 +245,6 @@ export default function CommunityPage() {
   ];
 
   return (
-=======
-=======
     <>
       <SEO
         title="Community Forum | Zion AI Marketplace"
@@ -263,7 +260,6 @@ export default function CommunityPage() {
             <p className="text-muted-foreground mt-2">
               Join the conversation, ask questions, and share your knowledge
             </p>
-=======
           </div>
           
           <CreatePostButton />
@@ -456,7 +452,5 @@ export default function CommunityPage() {
         </div>
       </div>
     </div>
-=======
-=======
   );
 }

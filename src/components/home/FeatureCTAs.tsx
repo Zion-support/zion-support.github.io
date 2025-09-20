@@ -1,4 +1,3 @@
-=======
 
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,8 +10,6 @@ import {
   Zap, 
   Settings, 
   Search, 
-=======
-=======
   MessageSquare, 
   Smartphone, 
   Calendar,
@@ -20,7 +17,6 @@ import {
   Code,
   Building,
   Clock,
-=======
   Brain,
   Server,
   TrendingUp,
@@ -75,7 +71,6 @@ export function FeatureCTAs() {
   AlertTriangle,
   Eye,
   PieChart
-=======
   BarChart3,
   PenTool,
   Shield,
@@ -90,8 +85,6 @@ export function FeatureCTAs() {
       title: "AI Talent Matching",
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
-=======
-=======
       link: "/marketplace",
       badge: "Popular",
       details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities."
@@ -100,9 +93,7 @@ export function FeatureCTAs() {
       title: "Talent Directory",
       description: "Browse our extensive database of verified AI and tech specialists, filtered by expertise and availability.",
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />,
-=======
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,
-=======
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,
       link: "/talent",
       details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability."
@@ -116,8 +107,6 @@ export function FeatureCTAs() {
       details: "From AI chatbots to advanced analytics, our AI services help businesses leverage artificial intelligence for competitive advantage."
     },
     {
-=======
-=======
       title: "Equipment Catalog",
       description: "Find specialized hardware and tech equipment for AI development and research.",
       icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />,
@@ -132,7 +121,6 @@ export function FeatureCTAs() {
       details: "Join thousands of tech professionals in discussions, AMAs with industry leaders, and exclusive community events."
     },
     {
-=======
       title: "Enterprise Solutions",
       description: "Custom-branded hiring portal, dedicated talent pool, and powerful admin controls for your organization.",
       icon: <Building className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
@@ -180,8 +168,6 @@ export function FeatureCTAs() {
       link: "/micro-saas",
       badge: "New",
       details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank."
-=======
-=======
     },
     {
       title: "Zion Hire AI",
@@ -190,7 +176,6 @@ export function FeatureCTAs() {
       link: "/zion-hire-ai",
       badge: "Premium",
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
-=======
     }
   ];
 
@@ -381,7 +366,6 @@ export function FeatureCTAs() {
       link: "/design-ai",
       badge: "Creative",
       details: "Create professional designs with AI-powered tools and templates. Plans from $19/month."
-=======
     {
       title: "AI Analytics Dashboard",
       description: "Transform your business data into actionable intelligence with AI-powered analytics and insights.",
@@ -413,7 +397,6 @@ export function FeatureCTAs() {
       link: "/cloud-migration-services",
       badge: "Cloud",
       details: "Seamless migration to the cloud with cost optimization, security, and performance improvements."
-=======
     {
       title: "Comprehensive Services",
       description: "Access our complete range of micro SAAS, IT services, and AI solutions in one platform.",
@@ -440,7 +423,6 @@ export function FeatureCTAs() {
   return (
     <section className="py-16 bg-gradient-to-b from-background to-background/90">
       <div className="container mx-auto px-4">
-=======
     <section className="relative py-16 bg-gradient-to-b from-background to-background/90">
       <AnimatedBackground variant="section" />
       <div className="container mx-auto px-4 relative z-10">
@@ -450,7 +432,6 @@ export function FeatureCTAs() {
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
             Explore our extensive suite of micro SAAS services, AI solutions, and IT services designed to transform how you work, innovate, and grow in the digital age.
-=======
     <section className="py-16 bg-gradient-to-b from-background to-background/90 cyber-grid relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5"></div>
       <div className="relative container mx-auto px-4">
@@ -465,7 +446,6 @@ export function FeatureCTAs() {
           {features.map((feature, index) => (
             <Card key={index} className="relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50 group">
               <AnimatedBackground variant="card" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-=======
             <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50 hover:neon-pulse group">
               <CardHeader className="pb-2">
                 <div className="flex justify-between items-start">
@@ -474,18 +454,14 @@ export function FeatureCTAs() {
                   </div>
                   {feature.badge && (
                     <Badge variant="secondary" className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 text-zion-purple border-zion-purple/30">
-=======
-=======
                       {feature.badge}
                     </Badge>
                   )}
                 </div>
                 <CardTitle className="mt-4 text-lg group-hover:text-zion-cyan transition-colors duration-300">{feature.title}</CardTitle>
                 <CardDescription className="line-clamp-2 text-sm">{feature.description}</CardDescription>
-=======
                 <CardTitle className="mt-4">{feature.title}</CardTitle>
                 <CardDescription className="line-clamp-2">{feature.description}</CardDescription>
-=======
                 <CardTitle className="mt-4">{feature.title}</CardTitle>
                 <CardDescription className="line-clamp-2">{feature.description}</CardDescription>
               </CardHeader>
@@ -493,34 +469,25 @@ export function FeatureCTAs() {
                 <p className="text-sm text-muted-foreground">{feature.details}</p>
               </CardContent>
               <CardFooter>
-=======
                 <Button className="w-full gap-1">
                   <Link to={feature.link}>
                     <span>Explore {feature.title}</span>
                     <ArrowRight className="h-4 w-4" />
                 <Button asChild className="w-full gap-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white transition-all duration-300 group-hover:shadow-lg group-hover:shadow-zion-purple/25">
-=======
                 <Button asChild className="w-full gap-1 hover:neon-pulse transition-all duration-300">
                   <Link to={feature.link}>
                     <span>Explore {feature.title}</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-=======
-=======
                   </Link>
                 </Button>
               </CardFooter>
             </Card>
           ))}
         </div>
-=======
-=======
       </div>
     </section>
   );
 }
-=======
-=======
-=======
 import React from 'react';
 import { ArrowRight, Play, Download, Users, Zap } from 'lucide-react';
 
@@ -615,5 +582,3 @@ export const FeatureCTAs: React.FC = () => {
     </section>
   );
 };
-=======
-=======

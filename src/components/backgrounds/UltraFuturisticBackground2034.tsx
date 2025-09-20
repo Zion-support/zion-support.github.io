@@ -23,7 +23,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number>();
-=======
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -36,7 +35,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     canvas.height = window.innerHeight;
 
     const particles: Array<{
-=======
     let animationFrameId: number;
     let particles: Array<{
       x: number;
@@ -89,7 +87,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         color: selectedColors[Math.floor(Math.random() * selectedColors.length)]
       });
     }
-=======
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -104,7 +101,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-=======
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
@@ -132,7 +128,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         particles.forEach((otherParticle, otherIndex) => {
           if (index === otherIndex) return;
           
-=======
           const distance = Math.sqrt(
             Math.pow(particle.x - otherParticle.x, 2) + 
             Math.pow(particle.y - otherParticle.y, 2)
@@ -151,7 +146,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.strokeStyle = `${particle.color}${Math.floor((1 - distance / 150) * 0.3 * 255).toString(16).padStart(2, '0')}`;
             ctx.lineWidth = 1;
-=======
             ctx.stroke();
           }
         });
@@ -380,7 +374,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'
       }}
     />
-=======
   );
 };
 

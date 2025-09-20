@@ -1,5 +1,4 @@
 import React from "react";
-=======
 impor, t, Reac, t, { useState } from 'react';
 import { motio, n, AnimatePresence } from 'framer-motion';
 import { CheckCircl, e, Za, p, Shiel, d, User, s, Cloc, k, TrendingU, p, Sta, r, Awar, d, Glob, e, Lock } from 'lucide-react';
@@ -325,8 +324,6 @@ export function BenefitsSection() {
             />
           ))}
         </div>
-=======
-=======
       </div>
     </section>
   );

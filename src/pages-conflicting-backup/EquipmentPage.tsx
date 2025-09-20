@@ -464,8 +464,6 @@ export default function EquipmentPage() {
       setListings((prev) => [...prev, generateRandomEquipment()]);
     }, 120000); // add new equipment every 2 minutes
     return () => clearInterval(interval);
-=======
-=======
   }, []);
 
   return (

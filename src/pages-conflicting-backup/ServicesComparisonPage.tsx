@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-=======
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { 
-=======
   CheckCircle, 
   XCircle, 
   Star, 
@@ -109,12 +107,10 @@ export default function ServicesComparisonPage() {
         title="Services Comparison & Pricing - Zion Tech Group" 
         description="Compare our AI and IT services, features, and pricing plans. Choose the perfect solution for your business needs and budget."
         keywords="service comparison, pricing plans, AI services, IT consulting, cybersecurity, cloud services"
-=======
         canonical="https://ziontechgroup.com/services-comparison"
       />
 
       {/* Hero Section */}
-=======
       <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -360,7 +356,6 @@ export default function ServicesComparisonPage() {
           </div>
         </div>
       </section>
-=======
     </div>
   );
 }

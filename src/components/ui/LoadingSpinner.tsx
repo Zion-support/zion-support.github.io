@@ -1,7 +1,5 @@
 import React from 'react';
-=======
 import { cn } from '@/lib/utils';
-=======
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 
@@ -14,7 +12,6 @@ interface LoadingSpinnerProps {
   showText?: boolean;
 }
 
-=======
 export function LoadingSpinner({
   size = 'md',
   color = 'primary',
@@ -93,13 +90,10 @@ export function LoadingSpinner({
         style={{
           borderTopColor: customColor && color === 'custom' ? customColor : undefined
         }}
-=======
-=======
       />
       
       {showText && (
         <motion.p
-=======
           className="mt-3 text-sm text-zion-slate-light text-center"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -108,8 +102,6 @@ export function LoadingSpinner({
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.3 }}
           className={`mt-3 text-zion-slate-light ${textSizes[size]} font-medium`}
-=======
-=======
         >
           {text}
         </motion.p>
@@ -118,7 +110,6 @@ export function LoadingSpinner({
   );
 }
 
-=======
 // Skeleton loading component for content
 export function SkeletonLoader({
   className,
@@ -160,15 +151,12 @@ export function SkeletonLoader({
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1, duration: 0.3 }}
           className={`${height} bg-white/10 rounded-lg animate-pulse`}
-=======
-=======
         />
       ))}
     </div>
   );
 }
 
-=======
 // Page loading component
 export function PageLoader({
   text = 'Loading page...',
@@ -305,8 +293,6 @@ export function ContentPlaceholder({
           />
         ))
       )}
-=======
-=======
     </div>
   );
 }

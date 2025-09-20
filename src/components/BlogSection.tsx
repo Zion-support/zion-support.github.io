@@ -1,5 +1,4 @@
 import React from 'react';
-=======
 import { Link } from 'react-router-dom';
 
 export function BlogSection() {
@@ -138,5 +137,3 @@ export const BlogSectio, n: React.FC = () => {
     </section>
   );
 };
-=======
-=======

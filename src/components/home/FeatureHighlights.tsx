@@ -1,9 +1,7 @@
-=======
 
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-=======
   Brain, 
   Globe, 
   Shield, 
@@ -119,8 +117,6 @@ const features = [
   }
 ];
 
-=======
-=======
 export function FeatureHighlights() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -128,9 +124,7 @@ export function FeatureHighlights() {
       opacity: 1,
       transition: {
         staggerChildren: 0.15,
-=======
         staggerChildren: 0.2,
-=======
         staggerChildren: 0.2,
         delayChildren: 0.1
       }
@@ -139,9 +133,7 @@ export function FeatureHighlights() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30, scale: 0.9 },
-=======
     hidden: { opacity: 0, y: 30, scale: 0.95 },
-=======
     hidden: { opacity: 0, y: 30, scale: 0.95 },
     visible: {
       opacity: 1,
@@ -154,7 +146,6 @@ export function FeatureHighlights() {
     }
   };
 
-=======
   const achievementVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
@@ -195,13 +186,10 @@ export function FeatureHighlights() {
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
-=======
-=======
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-=======
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Why Industry Leaders
@@ -235,13 +223,10 @@ export function FeatureHighlights() {
         </motion.div>
 
         <motion.div
-=======
-=======
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-=======
         >
           {highlights.map((highlight, index) => (
             <motion.div
@@ -448,14 +433,11 @@ export function FeatureHighlights() {
               </button>
             </div>
           </div>
-=======
-=======
         </motion.div>
       </div>
     </section>
   );
 }
-=======
 import React from 'react';
 import { Brain, Shield, Zap, Globe, Users, Target, CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -572,5 +554,3 @@ export const FeatureHighlights: React.FC = () => {
     </section>
   );
 };
-=======
-=======

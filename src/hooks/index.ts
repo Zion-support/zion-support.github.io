@@ -13,8 +13,6 @@ export function useAuth() {
     isAuthenticated: false
   };
 }
-=======
-=======
 
 // Export all hooks from messaging directory
 export * from './messaging';

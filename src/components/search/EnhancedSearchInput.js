@@ -167,4 +167,3 @@ export const EnhancedSearchInput = ({ placeholder = "Search for services, talent
         </div>)}
     </div>);
 };
-=======

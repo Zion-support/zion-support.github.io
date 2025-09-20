@@ -22,7 +22,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
     useEffect(() => {
         const handleScroll = () => {
             setShowScrollTop(window.scrollY > 400);
-=======
         };
         window.addEventListener('scroll',  handleScroll);
         return () => window.removeEventListener('scroll',  handleScroll);
@@ -251,5 +250,4 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
           </motion.div>)}
       </AnimatePresence>
     </div>);
-=======
 }

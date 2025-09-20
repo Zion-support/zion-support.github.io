@@ -25,10 +25,8 @@ export interface SpecializedITInfrastructureService2025 {
   documentationUrl?: string;
 }
 
-=======
 export const SPECIALIZED_IT_INFRASTRUCTURE_2025: SpecializedITInfrastructureService2025[] = [
   // Edge Computing Orchestration Platform
-=======
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastructureService2025[] = [
   // Edge Computing Infrastructure Platform
   {
@@ -83,9 +81,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure"
   },
 
-=======
   // Quantum-Ready Cloud Infrastructure
-=======
   // Quantum Network Infrastructure
   {
     id: "quantum-network-infrastructure",
@@ -192,7 +188,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure"
   },
 
-=======
   // Autonomous DevOps Infrastructure
   {
     id: "autonomous-devops-infrastructure",
@@ -381,7 +376,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     category: "IT Infrastructure",
     subcategory: "Cloud Orchestration",
     price: 1900,
-=======
   // Hybrid Cloud Infrastructure Platform
   {
     id: "hybrid-cloud-infrastructure-platform",

@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-=======
 import { ArrowLeft, Calendar, Clock, ChevronLeft, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 // Importing the sample blog posts - in a real app, you would fetch this from an API
@@ -40,7 +39,6 @@ export default function BlogPost() {
         return (<div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
         <div className="animate-pulse">Loading article...</div>
       </div>);
-=======
         return (_jsx("div", { className: "min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center", children: _jsx("div", { className: "animate-pulse", children: "Loading article..." }) }));
     }
     // Helper function to get share URL
@@ -196,5 +194,4 @@ export default function BlogPost() {
         </div>
       </div>
     </>);
-=======
 }

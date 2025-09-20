@@ -1,11 +1,9 @@
-=======
 import React, { useState } from "react";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-=======
 import { Clock, Globe, Shield, Zap, MapPin, CheckCircle } from "lucide-react";
 
 export function ITServiceRequestHero() {
@@ -32,8 +30,6 @@ export function ITServiceRequestHero() {
     e.preventDefault();
     if (location.trim()) {
       navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
-=======
-=======
     }
   };
 
@@ -58,7 +54,6 @@ export function ITServiceRequestHero() {
     }
   };
 
-=======
   const features = [
     { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
@@ -100,8 +95,6 @@ export function ITServiceRequestHero() {
             Available worldwide, 24 hours a day
           </p>
         </div>
-=======
-=======
       </div>
 
       <motion.div 
@@ -230,7 +223,6 @@ export function ITServiceRequestHero() {
     </section>
   );
 }
-=======
 import React from 'react';
 import { ArrowRight, Zap, Shield, Brain, Cloud } from 'lucide-react';
 
@@ -334,5 +326,3 @@ export const ITServiceRequestHero: React.FC = () => {
     </section>
   );
 };
-=======
-=======

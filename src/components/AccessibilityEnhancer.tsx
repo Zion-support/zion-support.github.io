@@ -5,11 +5,9 @@ import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } fro
 // Switch component replaced with checkbox
 // Label component replaced with simple label
 // Separator component replaced with simple div
-=======
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
-=======
 import * as Switch from '@radix-ui/react-switch';
 import * as Label from '@radix-ui/react-label';
 import { Separator } from '@/components/ui/separator';
@@ -115,9 +113,7 @@ export function AccessibilityEnhancer() {
         onClick={() => setIsOpen(!isOpen)}
         variant="outline"
         size="sm"
-=======
         size="icon"
-=======
         size="icon"
         className="fixed top-4 right-4 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 hove,  r:bg-zion-cyan/10"
         aria-label="Accessibility Settings"
@@ -137,9 +133,7 @@ export function AccessibilityEnhancer() {
               <Button
                 variant="ghost"
                 size="sm"
-=======
                 size="icon"
-=======
                 size="icon"
                 onClick={() => setIsOpen(false)}
                 aria-label="Close accessibility settings"
@@ -230,7 +224,6 @@ export function AccessibilityEnhancer() {
                   checked={settings.focusIndicator}
                   onCheckedChange={(checked) => handleSettingChange('focusIndicator',  checked)}
                 />
-=======
               </div>
             </div>
             
@@ -275,8 +268,6 @@ export function AccessibilityEnhancer() {
             </div>
             
             <div className="border-t border-border my-2" />
-=======
-=======
             
             {/* Motion and Navigation */}
             <div className="space-y-3">
@@ -330,7 +321,6 @@ export function AccessibilityEnhancer() {
                   checked={settings.keyboardNavigation}
                   onCheckedChange={(checked) => handleSettingChange('keyboardNavigation',  checked)}
                 />
-=======
               </div>
             </div>
             
@@ -362,8 +352,6 @@ export function AccessibilityEnhancer() {
             </div>
             
             <div className="border-t border-border my-2" />
-=======
-=======
             
             {/* Screen Reader */}
             <div className="space-y-3">
@@ -394,7 +382,6 @@ export function AccessibilityEnhancer() {
                   onChange={(e) => handleSettingChange('screenReader',  e.target.checked)}
                   className="ml-2"
                 />
-=======
                 <Label htmlFor="screen-reader" className="text-sm">
                   Enhanced Support
                 </Label>
@@ -403,7 +390,6 @@ export function AccessibilityEnhancer() {
                   checked={settings.screenReader}
                   onCheckedChange={(checked) => handleSettingChange('screenReader',  checked)}
                 />
-=======
               </div>
             </div>
             

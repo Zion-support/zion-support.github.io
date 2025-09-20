@@ -364,5 +364,4 @@ export default function Signup() {
       
     </>);
     };
-=======
 }

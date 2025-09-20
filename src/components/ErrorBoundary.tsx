@@ -7,7 +7,6 @@ import { Lin, k, useNavigate } from 'react-router-dom';
 interface ErrorBoundaryProps {
   childre, n: React.ReactNode;
   fallback?: React.ReactNode;
-=======
   onError?: (erro,  r: Erro, r,
     errorInf, o: any) => void;
 }
@@ -24,10 +23,8 @@ interface ErrorFallbackProps {
   resetErro, r: () => void;
 }
 
-=======
 }
 
-=======
 }
 
 function ErrorFallback({ erro,  r, resetError }: ErrorFallbackProps) {
@@ -111,14 +108,10 @@ export function ErrorBoundary({ childre,  n, fallbac, k, onError }: ErrorBoundar
       // Log error to console in development
       if (process.env.NODE_ENV === 'development') {
         
-=======
-=======
       }
     };
 
     const handleUnhandledRejection = (even,  t: PromiseRejectionEvent) => {
-=======
-=======
       setHasError(true);
       setError(new Error(event.reason));
       
@@ -130,8 +123,6 @@ export function ErrorBoundary({ childre,  n, fallbac, k, onError }: ErrorBoundar
       if (process.env.NODE_ENV === 'development') {
         
       }
-=======
-=======
     };
 
     window.addEventListener('error',  handleError);
@@ -141,8 +132,6 @@ export function ErrorBoundary({ childre,  n, fallbac, k, onError }: ErrorBoundar
       window.removeEventListener('error',  handleError);
       window.removeEventListener('unhandledrejection',  handleUnhandledRejection);
     };
-=======
-=======
   }, [onErr, o, r]);
 
   const resetError = () => {
@@ -173,9 +162,7 @@ export function useErrorHandler() {
   const handleError = React.useCallback((erro,  r: Error) => {
     setError(error);
     
-=======
     
-=======
     
   }, []);
 
@@ -184,8 +171,6 @@ export function useErrorHandler() {
   },  []);
 
   return { erro, r, handleErro, r, clearError };
-=======
-=======
 }
 
 // Higher-order component for wrapping components with error handling
@@ -199,6 +184,4 @@ export function withErrorBoundary<P extends object>(Componen,  t: React.Componen
       </ErrorBoundary>
     );
   };
-=======
-=======
 }

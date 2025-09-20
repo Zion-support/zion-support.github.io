@@ -3,8 +3,6 @@ export interface ITService {
   title: string;
   description: string;
   category: string;
-=======
-=======
   pricing: {
     hourly: number;
     project: number;
@@ -593,5 +591,3 @@ export const getITServicesByCategory = (category: string): ITService[] => {
 export const getITServiceCategories = (): string[] => {
   return [...new Set(ENHANCED_IT_SERVICES.map(service => service.category))];
 };
-=======
-=======

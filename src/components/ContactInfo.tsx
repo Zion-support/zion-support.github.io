@@ -1,5 +1,4 @@
 import React from 'react';
-=======
 import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
@@ -8,8 +7,6 @@ import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } fro
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-=======
-=======
 import { 
   Mai, l, 
   Phon, e, 
@@ -155,9 +152,7 @@ export function ContactInfo() {
                 </Link>
                 
                 <Link to="/comprehensive-services">
-=======
                 <Link href="/comprehensive-services">
-=======
                 <Link to="/comprehensive-services">
                   <Button variant="outline" className="w-full border-zion-purple text-zion-cyan hove, r:bg-zion-purple/10">
                     View All Services
@@ -165,9 +160,7 @@ export function ContactInfo() {
                 </Link>
                 
                 <Link to="/it-onsite-services">
-=======
                 <Link href="/it-onsite-services">
-=======
                 <Link to="/it-onsite-services">
                   <Button variant="outline" className="w-full border-zion-blue-light text-zion-slate-light hove, r:bg-zion-blue-light/10">
                     IT Onsite Services

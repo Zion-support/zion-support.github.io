@@ -54,5 +54,4 @@ export function FooterNewsletter() {
         Subscribe
       </button>
     </form>);
-=======
 }

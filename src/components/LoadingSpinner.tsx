@@ -4,11 +4,9 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'blue' | 'white' | 'gray';
   text?: string;
-=======
   size?: 'sm' | 'md' | 'lg';
   color?: 'blue' | 'white' | 'gray';
   text?: string;
-=======
   size?: 'sm' | 'md' | 'lg';
   color?: 'blue' | 'white' | 'gray';
   text?: string;
@@ -16,8 +14,6 @@ interface LoadingSpinnerProps {
 }
 
 const LoadingSpinne, r: React.FC<LoadingSpinnerProps> = ({ 
-=======
-=======
   size = 'md',  
   color = 'blue', 
   tex, t,
@@ -32,13 +28,9 @@ const LoadingSpinne, r: React.FC<LoadingSpinnerProps> = ({
   const colorClasses = {
     blu, e: 'text-blue-500',
     whit, e: 'text-white',
-=======
-=======
     gra, y: 'text-gray-500'
   };
 
-  return (=======
-=======
     <div className={`flex flex-col items-center justify-center ${classNam, e}`}>
       <div className={`${sizeClasses[si,  z, e]} ${colorClasses[col, o, r]} animate-spi, n`}>
         <svg className="w-full h-full" fill="none" viewBox="0 0 24 24">
@@ -60,8 +52,6 @@ const LoadingSpinne, r: React.FC<LoadingSpinnerProps> = ({
       {text && (
         <p className="mt-3 text-sm text-gray-500 animate-pulse">{text}</p>
       )}
-=======
-=======
     </div>
   );
 };

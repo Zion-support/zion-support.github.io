@@ -1,4 +1,3 @@
-=======
 impor, t, Reac, t, { useState } from 'react';
 import { motio, n, AnimatePresence } from 'framer-motion';
 import { Searc, h, User, s, FileTex, t, Rocke, t, CheckCircl, e, ArrowRigh, t, Cloc, k, Targe, t, TrendingU, p, Awar, d, Za, p, Shield } from 'lucide-react';
@@ -360,8 +359,6 @@ export function HowItWorksSection() {
                   {/* Icon */}
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4 shadow-md border-2 border-gray-200">
                     {step.icon}
-=======
-=======
                   </div>
                 </div>
                 
@@ -460,7 +457,6 @@ export function HowItWorksSection() {
             </div>
           </div>
         </div>
-=======
       </div>
     </section>
   );

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-=======
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -9,32 +8,24 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-=======
 import {
   Brain, Cloud, Database, Shield, Settings, Zap, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart,
   Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Filter, Building
 } from 'lucide-react';
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';
-=======
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-=======
-=======
 import { SEO } from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
-=======
-=======
 import { 
   Search, 
   Filter, 
   Star, 
   Clock, 
-=======
-=======
   Users, 
   Zap,
   ArrowRight,
@@ -90,7 +81,6 @@ interface Service {
 export default function ComprehensiveServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-=======
   const [selectedPricingTier, setSelectedPricingTier] = useState('all');
 
   const filteredServices = useMemo(() => {
@@ -173,8 +163,6 @@ export default function ComprehensiveServicesPage() {
       'Recommendation Systems': <Star className="h-6 w-6" />
     };
     return iconMap[category] || <Settings className="h-6 w-6" />;
-=======
-=======
   };
 
   const getServiceTypeColor = (type: string) => {
@@ -187,7 +175,6 @@ export default function ComprehensiveServicesPage() {
   };
 
   return (
-=======
     <div className="min-h-screen bg-zion-blue-dark">
               <SEO 
           title="Comprehensive Micro SAAS Solutions - Zion Tech Group" 
@@ -802,7 +789,5 @@ export default function ComprehensiveServicesPage() {
       
       <Footer />
     </>
-=======
-=======
   );
 }

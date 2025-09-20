@@ -1,4 +1,3 @@
-=======
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -7,7 +6,6 @@ import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-=======
 import { Card, CardContent, CardFooter } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
@@ -187,5 +185,4 @@ export default function Blog() {
         </div>
       </div>
     </>);
-=======
 }

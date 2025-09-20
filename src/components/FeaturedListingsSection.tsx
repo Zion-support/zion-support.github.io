@@ -1,4 +1,3 @@
-=======
 impor, t, Reac, t, { useState } from 'react';
 import { motio, n, AnimatePresence } from 'framer-motion';
 import { Sta, r, Ey, e, Hear, t, ArrowRigh, t, Cloc, k, User, s, TrendingU, p, Awar, d, Filte, r, Searc, h, MapPi, n, Calendar } from 'lucide-react';
@@ -178,7 +177,6 @@ export function FeaturedListingsSection() {
       imag, e: '🔒',
     lin, k: '/services/cybersecurity',
       feature, s: ['Securit, y Audit, s', 'Threa, t Detectio, n', 'Inciden, t Respons, e']
-=======
 export function FeaturedListingsSection() {
   const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState("All");
   const [hoveredListi, n, g, setHoveredListi, n, g] = useState<number | null>(null);
@@ -196,7 +194,6 @@ export function FeaturedListingsSection() {
         staggerChildre, n: 0.1, 5,
     delayChildre, n: 0.1
       }
-=======
     }
   ];
 
@@ -498,8 +495,6 @@ export function FeaturedListingsSection() {
                   >
                     Learn More →
                   </Link>
-=======
-=======
                 </div>
               </div>
               
@@ -549,8 +544,6 @@ export function FeaturedListingsSection() {
             </svg>
           </Link>
         </div>
-=======
-=======
       </div>
     </section>
   );

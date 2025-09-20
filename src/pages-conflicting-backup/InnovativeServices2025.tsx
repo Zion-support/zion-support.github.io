@@ -1,5 +1,4 @@
 import React from 'react';
-=======
 import { Link } from 'react-router-dom';
 
 const InnovativeServices2025: React.FC = () => {
@@ -76,12 +75,10 @@ const InnovativeServices2025: React.FC = () => {
           useCases: ["Law firms", "Corporate legal", "Compliance teams", "Contract management"],
           competitors: ["Kira Systems", "Luminance", "eBrevia"],
           competitiveAdvantage: "Advanced NLP, comprehensive risk assessment, and seamless legal workflow integration"
-=======
         }
       ]
     },
     {
-=======
       category: "Advanced AI & Machine Learning",
       description: "Enterprise-grade artificial intelligence solutions that drive innovation and competitive advantage",
       services: [
@@ -153,12 +150,10 @@ const InnovativeServices2025: React.FC = () => {
           useCases: ["Hospitals", "Medical clinics", "Research institutions", "Pharmaceutical companies"],
           competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
           competitiveAdvantage: "Advanced medical AI, comprehensive healthcare integration, and regulatory compliance"
-=======
         }
       ]
     },
     {
-=======
       category: "Emerging Technology Solutions",
       description: "Cutting-edge technology services that position businesses for the future",
       services: [
@@ -230,12 +225,10 @@ const InnovativeServices2025: React.FC = () => {
           useCases: ["Financial services", "Gaming", "Art and collectibles", "Supply chain"],
           competitors: ["Consensys", "Chainlink Labs", "Alchemy"],
           competitiveAdvantage: "Full-stack Web3 development, rapid deployment, and comprehensive blockchain expertise"
-=======
         }
       ]
     },
     {
-=======
       category: "Advanced Cybersecurity Solutions",
       description: "Next-generation security solutions that protect against evolving cyber threats",
       services: [
@@ -284,13 +277,11 @@ const InnovativeServices2025: React.FC = () => {
           useCases: ["Critical infrastructure", "Financial institutions", "Healthcare", "Government"],
           competitors: ["Darktrace", "CrowdStrike", "SentinelOne"],
           competitiveAdvantage: "Advanced AI algorithms, real-time protection, and comprehensive threat intelligence"
-=======
         }
       ]
     }
   ];
 
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -453,4 +444,3 @@ const InnovativeServices2025: React.FC = () => {
 };
 
 export default InnovativeServices2025;
-=======

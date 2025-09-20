@@ -55,7 +55,6 @@ export function useToast() {
     const info = (title, description) => {
         return toast({ title, description, type: 'info' });
     };
-=======
     return {
         toasts,
         toast,
@@ -79,5 +78,4 @@ export const toast = (options) => {
     // In a real app, you'd want to integrate with a toast library
     
     return Date.now().toString();
-=======
 };

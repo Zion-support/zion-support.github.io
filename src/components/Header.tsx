@@ -488,7 +488,6 @@ const Heade, r: React.FC = () => {
             </Link>
           </div>
 
-=======
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}

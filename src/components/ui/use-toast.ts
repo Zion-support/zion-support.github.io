@@ -12,8 +12,6 @@ export interface ToastOptions {
   title: string;
   description?: string;
   variant?: 'default' | 'destructive' | 'success';
-=======
-=======
 import { useState } from 'react';
 
 interface Toast {
@@ -27,10 +25,8 @@ interface Toast {
 
 export function useToast() {
   const [toasts, setToasts] = useState<Toast[]>([]);
-=======
   const toast = useCallback((options: ToastOptions) => {
     const id = Math.random().toString(36).substr(2, 9);
-=======
 
   const toast = (options: Omit<Toast, 'id'>) => {
     const id = Date.now().toString();
@@ -42,10 +38,8 @@ export function useToast() {
       duration: options.duration || 5000,
     };
 
-=======
     setToasts(prev => [...prev, newToast]);
     // Auto-remove toast after duration
-=======
     setToasts(prev => [...prev, newToast]);
 
     // Auto remove toast after duration
@@ -64,8 +58,6 @@ export function useToast() {
     setToasts([]);
   }, []);
 
-=======
-=======
   };
 
   const dismiss = (id: string) => {
@@ -95,11 +87,9 @@ export function useToast() {
     dismissAll,
   };
 }
-=======
 // Export a default toast function for backward compatibility
 export const toast = (options: ToastOptions) => {
   // This is a simplified version - in a real app, you'd want to use a toast context
-=======
 
 // Export a standalone toast function for convenience
 export const toast = (options: Omit<Toast, 'id'>) => {

@@ -213,7 +213,6 @@ const BlockchainWeb3: React.FC = () => {
 };
 
 export default BlockchainWeb3;
-=======
 import { Link } from 'react-router-dom';
 import { Link as LinkIcon, Shield, Zap, Users, Globe, Cpu, Database, Network, TrendingUp, Lock, Eye, Target } from 'lucide-react';
 
@@ -292,7 +291,6 @@ const BlockchainWeb3: React.FC = () => {
 
   const useCases = [
     {
-=======
       title: "Financial Services",
       description: "DeFi protocols, payment systems, and asset tokenization",
       icon: TrendingUp
@@ -401,14 +399,12 @@ const BlockchainWeb3: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-=======
               </div>
             ))}
           </div>
         </div>
       </section>
 
-=======
       {/* Web3 Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -470,7 +466,6 @@ const BlockchainWeb3: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -510,7 +505,6 @@ const BlockchainWeb3: React.FC = () => {
         </div>
       </section>
 
-=======
       {/* Development Process */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -556,7 +550,6 @@ const BlockchainWeb3: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -587,8 +580,6 @@ const BlockchainWeb3: React.FC = () => {
 };
 
 export default BlockchainWeb3;
-=======
 };
 
 export default BlockchainWeb3;
-=======

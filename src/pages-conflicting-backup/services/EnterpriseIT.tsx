@@ -141,7 +141,6 @@ export default function EnterpriseIT() {
                 Get Started
               </a>
             </div>
-=======
           </div>
         </div>
       </section>
@@ -187,7 +186,6 @@ export default function EnterpriseIT() {
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
-=======
                       {feature}
                     </li>
                   ))}
@@ -233,7 +231,6 @@ export default function EnterpriseIT() {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
                 <p className="text-sm text-gray-300">{tech.description}</p>
-=======
               </div>
             ))}
           </div>
@@ -401,8 +398,6 @@ export default function EnterpriseIT() {
               View Solutions
             </a>
           </div>
-=======
-=======
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
 
@@ -428,7 +423,6 @@ const $service: React.FC = () => {
           >
             Contact Us for More Information
           </Link>
-=======
         </div>
       </section>
     </div>
@@ -436,9 +430,7 @@ const $service: React.FC = () => {
 };
 
 export default $service;
-=======
 };
 
 export default $service;
-=======
 }

@@ -1,4 +1,3 @@
-=======
 import { BlogPost } from '@/types/blog';
 
 export function generateRandomBlogPost(): BlogPost {
@@ -121,5 +120,3 @@ export function generateMultipleBlogPosts(count: number): BlogPost[] {
   }
   return posts;
 }
-=======
-=======

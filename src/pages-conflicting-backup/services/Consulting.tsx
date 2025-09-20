@@ -16,22 +16,18 @@ const Consulting: React.FC = () => {
       description: "Comprehensive evaluation of your current technology landscape and capabilities",
       icon: "🔍",
       features: ["Infrastructure Review", "Technology Stack Analysis", "Gap Identification", "Recommendations"]
-=======
       title: "Technology Assessment",
       description: "Comprehensive evaluation of your current technology landscape and capabilities",
       features: ["Infrastructure Review", "Technology Stack Analysis", "Gap Identification", "Recommendations"],
       icon: "🔍"
-=======
     },
     {
       title: "Strategic Planning",
       description: "Develop long-term technology strategy aligned with business objectives",
       features: ["Technology Roadmap", "Investment Planning", "Risk Assessment", "Success Metrics"],
       icon: "📋"
-=======
       features: ["Technology Roadmap", "Investment Planning", "Risk Assessment", "Success Metrics"],
       icon: "📋"
-=======
       icon: "📋",
       features: ["Technology Roadmap", "Investment Planning", "Risk Assessment", "Success Metrics"]
     },
@@ -111,14 +107,12 @@ const Consulting: React.FC = () => {
               >
                 View Solutions
               </a>
-=======
       features: ["Requirements Analysis", "Vendor Evaluation", "Contract Negotiation", "Implementation Support"],
       icon: "🤝"
     },
     {
       icon: Target,
       title: "Project Management",
-=======
       description: "Professional project management for successful technology implementations",
       features: ["Project Planning", "Team Coordination", "Timeline Management", "Quality Assurance"],
       icon: "📊"
@@ -138,7 +132,6 @@ const Consulting: React.FC = () => {
     { area: "Security & Compliance", solutions: ["Security assessment", "Compliance audit", "Risk management", "Security strategy"] },
     { area: "Cloud Strategy", solutions: ["Cloud assessment", "Migration planning", "Cost optimization", "Multi-cloud strategy"] }
   ];
-=======
 import Link from 'next/link';
 
   return (
@@ -177,7 +170,6 @@ import Link from 'next/link';
               >
                 View All Services
               </Link>
-=======
             </div>
           </div>
         </section>
@@ -205,7 +197,6 @@ import Link from 'next/link';
                       <li key={idx} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                         {feature}
-=======
         {/* Consulting Approach */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -296,7 +287,6 @@ import Link from 'next/link';
                       <li key={idx} className="text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
                         {solution}
-=======
                       </li>
                     ))}
                   </ul>
@@ -315,7 +305,6 @@ import Link from 'next/link';
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Deep expertise across diverse industry sectors
-=======
         {/* Success Stories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -361,7 +350,6 @@ import Link from 'next/link';
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Deep knowledge across leading technology platforms and solutions
-=======
               </p>
             </div>
             
@@ -423,7 +411,6 @@ import Link from 'next/link';
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{phase.title}</h3>
                   <p className="text-gray-300">{phase.description}</p>
-=======
               {[
                 "Cloud Platforms", "Security Solutions", "Data Analytics", "AI/ML",
                 "DevOps Tools", "Enterprise Software", "Integration Platforms", "Mobile Technologies",
@@ -434,7 +421,6 @@ import Link from 'next/link';
                   className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 text-center hover:border-white/40 transition-all duration-300"
                 >
                   <span className="text-gray-300 font-medium">{tech}</span>
-=======
                 </div>
               ))}
             </div>
@@ -465,7 +451,6 @@ import Link from 'next/link';
                 View Solutions
               </a>
             </div>
-=======
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -480,7 +465,6 @@ import Link from 'next/link';
             >
               Get Expert Consultation
             </Link>
-=======
           </div>
         </section>
       </div>

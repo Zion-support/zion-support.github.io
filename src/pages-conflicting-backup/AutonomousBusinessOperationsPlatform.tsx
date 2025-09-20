@@ -1,4 +1,3 @@
-=======
 import { motion } from 'framer-motion';
 import { Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -8,15 +7,11 @@ import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, 
 import SEOHead from '../components/SEOHead';
 import { motion } from 'framer-motion';
 import { Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings } from 'lucide-react';
-=======
 import { Helmet } from 'react-helmet-async';
 import { Building, Zap, Brain, Users, Shield, TrendingUp, ArrowRight, Star, Rocket, Globe, Cpu, Database } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-=======
-=======
-=======
 import { Helmet } from 'react-helmet-async';
 import { 
   Building, 
@@ -43,9 +38,6 @@ import {
   Cpu,
   Brain
 } from 'lucide-react';
-=======
-=======
-=======
 import { 
   Brain, 
   Cpu, 
@@ -80,13 +72,10 @@ import {
   PieChart
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-=======
 import { Bot, Zap, TrendingUp, Shield, Users, ArrowRight, Cpu, Target } from 'lucide-react';
 
-=======
 import { Bot, Zap, TrendingUp, Shield, Users, ArrowRight, Cpu, Target } from 'lucide-react';
 
-=======
 import { Bot, Zap, TrendingUp, Shield, Users, ArrowRight, Cpu, Target } from 'lucide-react';
 
 import { Link } from 'react-router-dom';
@@ -122,9 +111,6 @@ const AutonomousBusinessOperationsPlatform = () => {
       icon: Zap,
       title: "Real-time Processing",
       description: "Instant processing and decision-making for critical business operations"
-=======
-=======
-=======
   const features = [
     {
       icon: Bot,
@@ -140,8 +126,6 @@ const AutonomousBusinessOperationsPlatform = () => {
       icon: Shield,
       title: "Intelligent Security",
       description: "Advanced threat detection and automated security responses powered by AI."
-=======
-=======
     },
     {
       icon: Cpu,
@@ -156,8 +140,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     {
       icon: BarChart3,
       title: "Predictive Analytics",
-=======
-=======
   const features = [
     {
       title: "Intelligent Process Automation",
@@ -176,15 +158,11 @@ const AutonomousBusinessOperationsPlatform = () => {
       description: "AI-driven decision making for operational efficiency",
       icon: Brain,
       benefits: ["Data-driven decisions", "Risk assessment", "Performance optimization"]
-=======
-=======
     },
     {
       title: "Enterprise Security & Compliance",
       description: "Bank-grade security with automated compliance monitoring",
       icon: Shield,
-=======
-=======
   const features = [
     {
       icon: Building,
@@ -243,19 +221,14 @@ const AutonomousBusinessOperationsPlatform = () => {
       icon: Network,
       title: "Supply Chain",
       description: "Automated inventory management, demand forecasting, supplier optimization, and logistics coordination."
-=======
-=======
     },
     {
       icon: Cloud,
       title: "Customer Service",
 import { motion } from 'framer-motion';
 import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Network } from 'lucide-react';
-=======
-=======
 import { motion } from 'framer-motion';
 import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Network } from 'lucide-react';
-=======
 import { motion } from 'framer-motion';
 import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Network } from 'lucide-react';
 import React from 'react';
@@ -385,10 +358,8 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
           </div>
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-=======
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-=======
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <motion.div
@@ -397,16 +368,12 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-=======
-=======
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Platform Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our autonomous platform combines cutting-edge AI with business intelligence to create 
               a truly intelligent and self-optimizing business environment.
-=======
-=======
             </p>
           </motion.div>
 
@@ -416,8 +383,6 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-=======
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -443,10 +408,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
-=======
-=======
             ))}
-=======
             ))}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105"
@@ -458,9 +420,6 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
-=======
-=======
-=======
 export default function AutonomousBusinessOperationsPlatform() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue to-zion-purple">
@@ -487,9 +446,6 @@ export default function AutonomousBusinessOperationsPlatform() {
             >
               Request Demo
             </Link>
-=======
-=======
-=======
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -508,9 +464,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                 <p className="text-gray-300 text-lg">{capability.description}</p>
               </div>
             ))}
-=======
-=======
-=======
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -550,9 +503,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                 </div>
               </div>
             </div>
-=======
-=======
-=======
         </div>
       </section>
 
@@ -586,8 +536,6 @@ export default function AutonomousBusinessOperationsPlatform() {
         </div>
       </section>
 
-=======
-=======
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -671,9 +619,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                   </div>
                 </div>
               </div>
-=======
-=======
-=======
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 flex items-center justify-center gap-2"
               >
                 Get Started
@@ -685,8 +630,6 @@ export default function AutonomousBusinessOperationsPlatform() {
               >
                 View All Services
               </Link>
-=======
-=======
             </div>
           </div>
         </div>
@@ -779,9 +722,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                 <li>• Role-based Access Control</li>
               </ul>
             </div>
-=======
-=======
-=======
       {/* Features Section */}
       <section className="py-20 px-4 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto max-w-7xl">
@@ -1014,9 +954,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                 SOC2 compliant with advanced encryption and access controls
               </p>
             </div>
-=======
-=======
-=======
       {/* Integration Section */}
       <section className="py-16 bg-gray-800/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1036,9 +973,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                 <div className="text-gray-300 font-medium">{tool}</div>
               </div>
             ))}
-=======
-=======
-=======
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-green-900/50">
         <div className="max-w-7xl mx-auto">
@@ -1109,8 +1043,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                 <h3 className="text-lg font-semibold text-white">{industry}</h3>
               </div>
             ))}
-=======
-=======
           </div>
         </div>
       </section>
@@ -1188,9 +1120,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                 Contact Support →
               </Link>
             </div>
-=======
-=======
-=======
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Automate Your Business?</h2>
@@ -1206,10 +1135,7 @@ export default function AutonomousBusinessOperationsPlatform() {
               Contact Sales
             </button>
           </div>
-=======
-=======
           </div>
-=======
           </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Automate Your Business?
@@ -1226,9 +1152,6 @@ export default function AutonomousBusinessOperationsPlatform() {
               </button>
             </div>
           </motion.div>
-=======
-=======
-=======
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Automate Your Business?
             </h2>
@@ -1245,9 +1168,7 @@ export default function AutonomousBusinessOperationsPlatform() {
             </div>
           </motion.div>
         </div>
-=======
         </div>
-=======
         </div>
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg text-white font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-200 transform hover:scale-105"
               >
@@ -1265,14 +1186,10 @@ export default function AutonomousBusinessOperationsPlatform() {
         </section>
       </div>
     </>
-=======
       </section>
     </div>
-=======
-=======
       </section>
     </div>
-=======
       </section>
     </div>
         {/* CTA Section */}
@@ -1301,9 +1218,6 @@ export default function AutonomousBusinessOperationsPlatform() {
         </section>
       </div>
     </>
-=======
-=======
-=======
     <>
       <SEOHead 
         customData={{
@@ -1456,11 +1370,8 @@ export default function AutonomousBusinessOperationsPlatform() {
     </>
   );
 }
-=======
-=======
   );
 }
-=======
   );
 }
               className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
@@ -1470,9 +1381,6 @@ export default function AutonomousBusinessOperationsPlatform() {
             <Link
               to="/pricing"
               className="px-8 py-4 border border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-200"
-=======
-=======
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -1497,12 +1405,9 @@ export default function AutonomousBusinessOperationsPlatform() {
             >
               View Pricing Plans
             </Link>
-=======
-=======
             >
               View Pricing Plans
             </Link>
-=======
             >
               View Pricing Plans
             </Link>
@@ -1829,8 +1734,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                 <li><Link to="/white-papers" className="text-gray-300 hover:text-green-400 transition-colors">White Papers</Link></li>
               </ul>
             </div>
-=======
-=======
           </div>
         </div>
       </section>

@@ -1,7 +1,5 @@
 
 
-=======
-=======
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TrustedBySection } from "@/components/TrustedBySection";
@@ -86,8 +84,6 @@ export default function Index() {
         canonical="https://ziontechgroup.com/"
       />
               <HeroSection />
-=======
-=======
       <Header />
       <HeroSection />
       

@@ -1,5 +1,4 @@
 import React from 'react';
-=======
 import { SEO } from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -78,12 +77,10 @@ export default function Enterprise() {
         "Custom security",
         "On-premise options"
       ]
-=======
     }
   ];
 
   return (
-=======
     <div className="min-h-screen bg-background">
       <SEO 
         title="Enterprise Solutions - Zion Tech Group" 
@@ -175,12 +172,10 @@ export default function Enterprise() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-zion-slate-light">
                         <Check className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
-=======
                         {feature}
                       </li>
                     ))}
                   </ul>
-=======
                   <Button 
                     className={`w-full ${
                       plan.name === "Professional" 
@@ -215,7 +210,6 @@ export default function Enterprise() {
               <Button size="lg" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">
                 Download Brochure
               </Button>
-=======
             </div>
           </div>
         </div>
@@ -223,5 +217,4 @@ export default function Enterprise() {
     </div>
   );
 }
-=======
 }

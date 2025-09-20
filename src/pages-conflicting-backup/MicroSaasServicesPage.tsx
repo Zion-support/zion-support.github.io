@@ -1,5 +1,3 @@
-=======
-=======
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Filter, Star, Zap, Shield, Globe, Code, Users, TrendingUp, CheckCircle, ExternalLink, Mail, Phone, MapPin } from 'lucide-react';
@@ -100,15 +98,11 @@ export default function MicroSaasServicesPage() {
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               <span className="text-sm font-medium">{service.rating}</span>
               <span className="text-xs text-zion-slate-light">({service.reviewCount})</span>
-=======
-=======
             </div>
           </div>
         </div>
       </div>
 
-=======
-=======
 import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -213,9 +207,6 @@ export default function MicroSaasServicesPage() {
                 <span className="truncate">{feature}</span>
               </div>
             ))}
-=======
-=======
-=======
       {/* Service Info */}
       <div className="space-y-4">
         <div>
@@ -265,14 +256,10 @@ export default function MicroSaasServicesPage() {
                 +{service.features.length - 3} more
               </Badge>
             )}
-=======
-=======
           </div>
         </div>
 
         {/* Benefits */}
-=======
-=======
         <div className="space-y-2">
           <p className="text-sm font-medium text-white">Benefits:</p>
           <div className="space-y-1">
@@ -280,15 +267,11 @@ export default function MicroSaasServicesPage() {
               <div key={index} className="flex items-start space-x-2">
                 <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                 <span className="text-xs text-zion-slate-light">{benefit}</span>
-=======
-=======
               </div>
             ))}
           </div>
         </div>
 
-=======
-=======
         {/* Target Audience */}
         <div>
           <p className="text-sm font-medium text-white mb-2">Perfect for:</p>
@@ -298,14 +281,10 @@ export default function MicroSaasServicesPage() {
                 {audience}
               </Badge>
             ))}
-=======
-=======
           </div>
         </div>
 
         {/* Action Buttons */}
-=======
-=======
         <div className="flex space-x-3 pt-4">
           <Button 
             asChild 
@@ -483,14 +462,10 @@ export default function MicroSaasServicesPage() {
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-=======
-=======
               {filteredServices.map((service) => (
                 <ServiceCard key={service.id} service={service} />
               ))}
             </div>
-=======
-=======
           </>
         )}
       </div>
@@ -518,7 +493,5 @@ export default function MicroSaasServicesPage() {
         </div>
       </div>
     </div>
-=======
-=======
   );
 }

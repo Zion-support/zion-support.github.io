@@ -11,7 +11,6 @@ import React from 'react';
       number: '100%',
       label: 'Carbon Neutral',
       description: 'Committed to sustainable technology development'
-=======
 import { Link } from 'react-router-dom';
 import { 
   Target, 
@@ -448,7 +447,6 @@ const Mission: React.FC = () => {
                     </div>
                     <p className="text-gray-300">{goal.description}</p>
                   </div>
-=======
                 </div>
               </div>
             ))}
@@ -456,7 +454,6 @@ const Mission: React.FC = () => {
         </div>
       </section>
 
-=======
       {/* Strategic Goals Timeline */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
@@ -497,7 +494,6 @@ const Mission: React.FC = () => {
                   </div>
                 </div>
               ))}
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -533,7 +529,6 @@ const Mission: React.FC = () => {
 
       {/* Core Values */}
                 <p className="text-gray-400 leading-relaxed">{value.description}</p>
-=======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Core Values</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -565,7 +560,6 @@ const Mission: React.FC = () => {
               <div key={index} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                   {metric.number}
-=======
       </div>
 
       {/* Mission Pillars */}
@@ -694,7 +688,6 @@ const Mission: React.FC = () => {
             {impactMetrics.map((metric, index) => (
               <div key={index} className="text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
                 <div className="text-4xl font-bold text-blue-400 mb-2">{metric.number}</div>
-=======
                 <div className="text-lg font-semibold text-white mb-2">{metric.label}</div>
                 <p className="text-sm text-gray-300">{metric.description}</p>
               </div>
@@ -704,7 +697,6 @@ const Mission: React.FC = () => {
       </div>
 
       </div>
-=======
       {/* Call to Action */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
@@ -759,7 +751,6 @@ const Mission: React.FC = () => {
           </div>
         </div>
       </section>
-=======
     </div>
   );
 };

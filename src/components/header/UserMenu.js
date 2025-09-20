@@ -24,7 +24,6 @@ export const UserMenu = () => {
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
-=======
     const handleLogout = async () => {
         try {
             await logout();
@@ -92,4 +91,3 @@ export const UserMenu = () => {
         </div>)}
     </div>);
 };
-=======

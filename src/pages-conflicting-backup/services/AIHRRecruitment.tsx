@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-=======
 import { Link } from 'react-router-dom';
-=======
 import { Link } from 'react-router-dom';
 import { 
   Users, 
@@ -38,7 +36,6 @@ import {
   Code,
   GraduationCap
 } from 'lucide-react';
-=======
 import { Link } from 'react-router-dom';
 import { Brain, Users, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, TrendingUp, UserCheck } from 'lucide-react';
 
@@ -91,7 +88,6 @@ const AIHRRecruitment: React.FC = () => {
       title: "Predictive Analytics",
       description: "Data-driven insights that forecast hiring success, employee retention, and workforce planning needs.",
       benefits: ["Hiring success prediction", "Retention forecasting", "Workforce planning"]
-=======
     },
     {
       icon: Zap,
@@ -130,7 +126,6 @@ const AIHRRecruitment: React.FC = () => {
       icon: Clock,
       title: "Streamlined Onboarding",
       description: "Automated onboarding workflows that ensure smooth transitions for new hires."
-=======
       description: "Intelligent resume parsing and initial screening that saves time and ensures consistent evaluation criteria.",
       benefits: ["Resume parsing", "Automated screening", "Bias reduction"]
     }
@@ -160,7 +155,6 @@ const AIHRRecruitment: React.FC = () => {
       description: "Strategic workforce planning using predictive analytics and market intelligence.",
       icon: Graph,
       features: ["Demand forecasting", "Skill gap analysis", "Succession planning", "Market intelligence"]
-=======
   BarChart3, 
   MessageSquare, 
   Calendar, 
@@ -259,7 +253,6 @@ export default function AIHRRecruitment() {
       description: 'Data-driven insights for hiring decisions and candidate success prediction',
       icon: BarChart3,
       benefits: ['Success probability scoring', 'Retention prediction', 'Performance forecasting', 'Hiring ROI analysis']
-=======
       icon: Brain,
       title: 'AI-Powered Candidate Matching',
       description: 'Advanced algorithms that match candidates to job requirements with 95% accuracy.'
@@ -288,7 +281,6 @@ export default function AIHRRecruitment() {
       icon: Shield,
       title: 'Bias-Free Hiring',
       description: 'Ensure fair and unbiased hiring decisions with AI-powered diversity analytics.'
-=======
   Brain, 
   Zap, 
   Shield, 
@@ -298,7 +290,6 @@ export default function AIHRRecruitment() {
   DollarSign,
   TrendingUp,
   UserCheck
-=======
 import { SEO } from '../../components/SEO';
 import { 
   Users, 
@@ -349,7 +340,6 @@ export default function AIHRRecruitment() {
     {
       title: "Employee Retention",
       description: "Predictive analytics for employee satisfaction and retention"
-=======
       title: "AI-Powered Candidate Screening",
       description: "Intelligent resume parsing and candidate matching using advanced NLP and ML algorithms",
       icon: Search,
@@ -497,7 +487,6 @@ export default function AIHRRecruitment() {
   ];
 
   const pricingPlans = [
-=======
     {
       title: "Reduce Time-to-Hire",
       value: "60%",
@@ -577,7 +566,6 @@ import {
   LineChart,
   Building,
   GraduationCap
-=======
 import { Link } from 'react-router-dom';
 import { 
   Users, 
@@ -612,14 +600,12 @@ const AIHRRecruitment = () => {
     'Increase diversity in hiring by 35-45%',
     'Improve employee retention by 25-40%',
     'Automate 70% of repetitive HR tasks'
-=======
     "Reduce time-to-hire by 40-60% with automated screening",
     "Improve candidate quality by 30-50% with AI matching",
     "Cut recruitment costs by 25-40% through automation",
     "Increase diversity by 35-45% with bias-free screening",
     "Enhance candidate experience with 24/7 engagement",
     "Achieve 90%+ candidate satisfaction scores"
-=======
       description: "Automated candidate discovery across multiple platforms with AI-driven outreach and engagement strategies."
     },
     {
@@ -656,7 +642,6 @@ const AIHRRecruitment = () => {
         "24/7 phone support"
       ],
       popular: false
-=======
     {
       name: "Technology",
       description: "AI-powered technical assessment and skills matching",
@@ -698,7 +683,6 @@ const AIHRRecruitment = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your human resources and recruitment processes with AI-powered automation. 
               Find the best talent faster, reduce costs, and build stronger teams with intelligent insights.
-=======
     {
       title: 'Faster Hiring',
       description: 'Reduce time-to-hire by up to 60% with AI-powered automation',
@@ -718,7 +702,6 @@ const AIHRRecruitment = () => {
       title: 'Improved Diversity',
       description: 'Enhance diversity and inclusion with unbiased AI algorithms',
       icon: Users
-=======
       industry: "Technology",
       title: "Technical Talent Acquisition",
       description: "AI-powered screening for technical roles with skill assessment and cultural fit analysis",
@@ -805,7 +788,6 @@ const AIHRRecruitment = () => {
         "Priority support",
         "Custom integrations",
         "Automated communication"
-=======
       industry: "Technology",
       description: "Technical skill assessment, coding challenges, and culture fit evaluation",
       metrics: ["Time-to-Hire", "Quality of Hire", "Retention Rate"]
@@ -878,7 +860,6 @@ const AIHRRecruitment = () => {
       title: 'Talent Development',
       description: 'AI-driven career path planning and skill development programs.',
       icon: '📈'
-=======
       description: "Tailored solutions for large organizations with complex hiring requirements",
       features: [
         "Unlimited job postings",
@@ -944,7 +925,6 @@ const AIHRRecruitment = () => {
               <div className="text-gray-400">Higher Retention</div>
             </div>
           </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-green-900 to-blue-900">
       <SEO 
         title="AI HR & Recruitment Platform - Zion Tech Group" 
@@ -1012,7 +992,6 @@ const AIHRRecruitment = () => {
               <div className="text-gray-400 text-sm">Retention Rate</div>
             </div>
           </div>
-=======
       title: "High-Volume Recruitment",
       description: "Handle thousands of applications efficiently with AI-powered screening and ranking.",
       icon: Users
@@ -1076,7 +1055,6 @@ const AIHRRecruitment = () => {
           <div className="absolute top-20 left-10 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
           <div className="absolute top-40 right-20 w-3 h-3 bg-teal-400 rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-green-400 rounded-full animate-bounce"></div>
-=======
         </div>
       </section>
 
@@ -1120,7 +1098,6 @@ const AIHRRecruitment = () => {
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our AI recruitment platform combines cutting-edge technology with proven HR practices 
               to deliver exceptional hiring results.
-=======
       <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1130,7 +1107,6 @@ const AIHRRecruitment = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our comprehensive AI platform covers every aspect of the recruitment process, 
               from sourcing to onboarding.
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1150,7 +1126,6 @@ const AIHRRecruitment = () => {
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our AI HR platform combines cutting-edge technology with human expertise to deliver 
               exceptional results in talent acquisition and management.
-=======
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
                 Schedule a Demo
@@ -1161,7 +1136,6 @@ const AIHRRecruitment = () => {
               >
                 View Success Stories
               </Link>
-=======
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
@@ -1200,7 +1174,6 @@ const AIHRRecruitment = () => {
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-=======
               <div key={index} className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -1249,7 +1222,6 @@ const AIHRRecruitment = () => {
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="text-gray-400">
                       • {feature}
-=======
       {/* Recruitment Stages Section */}
       <section className="py-20 bg-green-900/30">
         <div className="container mx-auto px-4">
@@ -1281,7 +1253,6 @@ const AIHRRecruitment = () => {
                   ))}
                 </ul>
               </div>
-=======
             ))}
           </div>
         </div>
@@ -1346,7 +1317,6 @@ const AIHRRecruitment = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience unprecedented efficiency and success in your hiring process.
-=======
       {/* Industry Solutions Section */}
       <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
@@ -1379,7 +1349,6 @@ const AIHRRecruitment = () => {
                 </ul>
               </div>
             ))}
-=======
           </div>
         </div>
       </section>
@@ -1438,7 +1407,6 @@ const AIHRRecruitment = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1456,7 +1424,6 @@ const AIHRRecruitment = () => {
                 <div className="text-4xl font-bold text-blue-400 mb-2">{benefit.value}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
-=======
       {/* Success Metrics Section */}
       <section className="py-20 bg-green-900/30">
         <div className="container mx-auto px-4">
@@ -1503,7 +1470,6 @@ const AIHRRecruitment = () => {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-=======
       <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1534,7 +1500,6 @@ const AIHRRecruitment = () => {
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
-=======
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-green-400 mb-2">{plan.price}</div>
@@ -1560,7 +1525,6 @@ const AIHRRecruitment = () => {
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </div>
-=======
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:scale-105'
@@ -1569,7 +1533,6 @@ const AIHRRecruitment = () => {
                   {plan.cta}
                 </button>
               </div>
-=======
             ))}
           </div>
         </div>
@@ -1607,7 +1570,6 @@ const AIHRRecruitment = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of companies that have already revolutionized their recruitment with AI automation.
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -1616,7 +1578,6 @@ const AIHRRecruitment = () => {
           <p className="text-xl text-gray-300 mb-8">
             Join forward-thinking organizations that have already revolutionized their HR processes with AI. 
             Start building better teams today with intelligent recruitment and management.
-=======
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -1688,7 +1649,6 @@ const AIHRRecruitment = () => {
                       </li>
                     ))}
                   </ul>
-=======
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
@@ -1838,7 +1798,6 @@ const AIHRRecruitment = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join leading organizations that are already leveraging AI-powered recruitment 
             to find and hire the best talent faster.
-=======
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex justify-center mb-6">
@@ -1852,7 +1811,6 @@ const AIHRRecruitment = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your HR processes with AI-powered recruitment, talent management, and employee development. 
             Find the best talent faster and build stronger teams with intelligent automation.
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
@@ -1884,7 +1842,6 @@ const AIHRRecruitment = () => {
               Schedule Demo
             </Link>
           </div>
-=======
       <section className="py-20 bg-gradient-to-r from-green-900/50 via-blue-900/50 to-cyan-900/50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1909,7 +1866,6 @@ const AIHRRecruitment = () => {
               Need enterprise pricing? <a href="/contact" className="text-green-400 hover:text-green-300 underline">Contact our sales team</a>
             </p>
           </div>
-=======
         </div>
       </section>
     </div>
@@ -1917,7 +1873,6 @@ const AIHRRecruitment = () => {
 };
 
 export default AIHRRecruitment;
-=======
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
               Get Started Today
@@ -1927,7 +1882,6 @@ export default AIHRRecruitment;
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
             >
               View Pricing Plans
-=======
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Free Trial
@@ -1938,7 +1892,6 @@ export default AIHRRecruitment;
             >
               View Case Studies
             </Link>
-=======
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 font-semibold text-lg"
             >
               Get Started
@@ -1946,7 +1899,6 @@ export default AIHRRecruitment;
             <Link
               to="/demo"
               className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold text-lg"
-=======
               className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
               Start Free Trial
@@ -2158,13 +2110,9 @@ export default AIHRRecruitment;
 };
 
 export default AIHRRecruitment;
-=======
 }
-=======
 }
-=======
 }
-=======
       </section>
 
       {/* CTA Section */}
@@ -2239,5 +2187,4 @@ export default AIHRRecruitment;
 };
 
 export default AIHRRecruitment;
-=======
 }

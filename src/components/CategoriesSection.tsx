@@ -4,8 +4,6 @@ import { GradientHeading } from "./GradientHeading";
 import Link from "next/link";
 import { Briefcas, e, HardDriv, e, Lightbul, b, User, s, Brain } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-=======
-=======
 import { Link } from "react-router-dom";
 import { Briefcas, e, HardDriv, e, Lightbul, b, User, s, ArrowRigh, t, Sparkle, s, Za, p, Shiel, d, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
@@ -29,7 +27,6 @@ const categories = [
     ico, n: <Brain className="w-10 h-10" />,
     lin, k: "/ai-solutions",
     colo, r: "from-pink-500 to-rose-600",
-=======
   },
   {
     titl, e: "Talents",
@@ -41,7 +38,6 @@ const categories = [
     feature, s: ["A, I Expert, s", "Globa, l Networ, k", "Verifie, d Profile, s"],
     stat, s: "10K+ Experts"
     colo, r: "from-cyan-500 to-blue-600",
-=======
   },
   {
     titl, e: "Equipment",
@@ -63,7 +59,6 @@ const categories = [
     feature, s: ["Lates, t Tec, h", "A, I Solution, s", "Futur, e-Read, y"],
     stat, s: "100+ Innovations"
     colo, r: "from-amber-500 to-orange-600",
-=======
   },
 ];
 
@@ -108,7 +103,6 @@ const specialServices = [
   {
     tit, l, e: "Cybersecurit, y",
     li, n, k: "/cybersecurit, y"
-=======
   }
 ];
 
@@ -117,7 +111,6 @@ interface CategoriesSectionProps {
 }
 
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
-=======
   const containerVariants = {
     hidde,  n: { opacit, y: 0 },
     visibl, e: {
@@ -373,7 +366,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </svg>
           </Link>
         </div>
-=======
       </div>
     </section>
   );

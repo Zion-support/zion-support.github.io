@@ -1,4 +1,3 @@
-=======
 import React from 'react';
 
 interface CheckboxProps {
@@ -52,6 +51,5 @@ export function Checkbox({ checked, onCheckedChange, onChange, className = '', d
         className
       )}
     />
-=======
   );
 }

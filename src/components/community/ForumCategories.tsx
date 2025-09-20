@@ -1,5 +1,4 @@
 import React from 'react';
-=======
 import { ForumCategoryInfo } from '@/types/community';
 
 export default function ForumCategories() {
@@ -64,7 +63,6 @@ const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
             <span className="text-sm text-zion-slate-light">
               {category.postCount} posts
             </span>
-=======
           </div>
         </div>
       ))}
@@ -73,7 +71,5 @@ const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
 };
 
 export default ForumCategories;
-=======
 }
-=======
 }

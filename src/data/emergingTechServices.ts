@@ -1247,11 +1247,9 @@ export const getServicesByInnovationScore = (minScore: number) => {
 ];
 
 export default EMERGING_TECH_SERVICES;
-=======
   // Return all services since innovationScore property doesn't exist
   // In the future, this could be enhanced with actual innovation scoring
   return EMERGING_TECH_SERVICES;
 };
   return EMERGING_TECH_SERVICES.filter(service => service.innovationScore >= minScore);
 };
-=======
