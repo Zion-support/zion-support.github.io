@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
   }, []);
 
     </header>
-  );origin/main
+  );
 };
 
 export default Header;

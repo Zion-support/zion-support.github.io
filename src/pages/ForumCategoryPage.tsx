@@ -9,4 +9,4 @@ export default function ForumCategoryPage() {
       </div>
     </div>
   );
-}origin/main
+}

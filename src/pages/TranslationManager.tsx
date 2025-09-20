@@ -1,4 +1,4 @@
-import React from 'react';origin/main
+import React from 'react';
 
 export default function TranslationManager() {
   return (

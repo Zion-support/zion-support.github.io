@@ -8,4 +8,5 @@ export default function Status() {
         <p className="text-lg text-gray-600">Coming soon...</p>
       </div>
     </div>
+  );
 }
