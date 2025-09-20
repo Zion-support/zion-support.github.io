@@ -119,6 +119,7 @@ export default function AI2025Page() {
   }
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -128,6 +129,14 @@ export default function AI2025Page() {
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto">
             Transform your business with cutting-edge artificial intelligence solutions. From machine learning to automation, we deliver AI that drives real results.
+=======
+    <div>
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold mb-8">AI 2025 Revolution</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Experience the future of artificial intelligence with our comprehensive suite of AI solutions.
+>>>>>>> 0b8e930208f4fd485a28e26b2cb3221e2adac7f1
           </p>
         </div>
 
