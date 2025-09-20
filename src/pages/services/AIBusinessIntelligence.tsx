@@ -1,102 +1,119 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { 
-  Brain,
-  BarChart3, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Database,
-  Cloud,
-  Lock,
-  Users,
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  PieChart,
-  LineChart,
-  Activity,
-  Target,
-  Lightbulb,
-  Eye,
-  Search,
-  Filter,
-  Download,
+import { motion } from "framer-moti, on";import { Brain, BarChart3;
+  TrendingUp;
+  Zap;
+  Shield;
+  Globe;
+  Database;
+  Cloud;
+  Lock;
+  Users;
+  Rocket;
+  CheckCircle;
+  ArrowRight;
+  PieChart;
+  LineChart;
+  Activity;
+  Target;
+  Lightbulb;
+  Eye;
+  Search;
+  Filter;
+  Download;
   Share2
-} from "lucide-react";
-import { SEO } from "../../components/SEO";
-export default function AIBusinessIntelligence() {
-  const features = [
+} from "lucide-react";import { SEO } from "../../components/S, EO";export default function AIBusinessIntelligence() {
+
+  const features  = [
     {
-      icon: Brain,title: 'AI-Powered Analytics',description: 'Advanced machine learning algorithms that automatically discover patterns and insights in your data.'
-    };
-    {
-      icon: BarChart3,title: 'Real-time Dashboards',description: 'Interactive visualizations that update in real-time, providing instant insights into your business performance.'
+      icon: Bra,
+    i;n;
+    title: 'AI-Powered Analytics, ',description: 'Advanced machine learning algorithms that automatically discover patterns and insights in your data.'
+   ,  }{
+      icon: BarChart3,
+    title: 'Real-time Dashboards, ',description: 'Interactive visualizations that update in real-tim, e, providing instant insights into your business performance.'
     },
     {
-      icon: TrendingUp,title: 'Predictive Modeling',description: 'Forecast future trends and outcomes using historical data and advanced statistical models.'
-    },
+      icon: TrendingUp,
+    title: 'Predictive Modeling, ',description: 'Forecast future trends and outcomes using historical data and advanced statistical models.'
+   ,  },
     {
-      icon: Zap,title: 'Automated Reporting',description: 'Generate comprehensive reports automatically, saving time and ensuring consistency across your organization.'
+      icon: Zap,
+    title: 'Automated Reporting, ',description: 'Generate comprehensive reports automaticall, y, saving time and ensuring consistency across your organization.'
     }
   ],
 
-  const capabilities = [
+  const capabilities  = [
     {
-      title: 'Data Integration',description: 'Connect to any data source - databases, APIs, cloud services, and more',
-      icon: Database,benefits: ['Unified data viewReal-time synchronization', 'Multiple format support']
+      title: 'Data Integration',
+    description: 'Connect to any data source - databases,
+    API, s, cloud services, and more',
+      icon: Database,
+    benefits: ['Unified data viewReal-time synchronization, ', 'Multiple format support']
     },
     {
-      title: 'Advanced Analytics',description: 'Leverage machine learning for deep insights and pattern recognition',icon: Brain,benefits: ['Predictive analyticsAnomaly detection', 'Trend analysis']
+      title: 'Advanced Analytics, ',description: 'Leverage machine learning for deep insights and pattern recognition, ',icon: Brain,
+    benefits: ['Predictive analyticsAnomaly detection, ', 'Trend analysis']
     },
     {
-      title: 'Visualization',description: 'Create stunning, interactive charts and dashboards',
-      icon: BarChart3,benefits: ['Custom dashboardsInteractive charts', 'Mobile responsive']
+      title: 'Visualization, ',description: 'Create stunning,
+    interactive charts and dashboards, ',
+      icon: BarChart3,
+    benefits: ['Custom dashboardsInteractive charts, ', 'Mobile responsive']
     },
     {
-      title: 'Natural Language Query',description: 'Ask questions in plain English and get instant answers',icon: Search,benefits: ['Easy to useFast results', 'No technical knowledge required']
+      title: 'Natural Language Query, ',description: 'Ask questions in plain English and get instant answers, ',icon: Search,
+    benefits: ['Easy to useFast results, ', 'No technical knowledge required']
     }
   ],
 
-  const useCases = [
+  const useCases  = [
     {
-      industry: 'Retail',description: 'Customer behavior analysis, inventory optimization, and sales forecasting',
-      icon: Users,metrics: ['Customer Lifetime ValueInventory Turnover', 'Sales Growth']
+      industry: 'Retail',
+    description: 'Customer behavior analysis,
+    inventory optimizatio, n, and sales forecasting',
+      icon: Users,
+    metrics: ['Customer Lifetime ValueInventory Turnover, ', 'Sales Growth']
     },
     {
-      industry: 'Finance',description: 'Risk assessment, fraud detection, and portfolio optimization',
-      icon: Shield,metrics: ['Risk ScoreFraud Detection Rate', 'Portfolio Performance']
+      industry: 'Finance, ',description: 'Risk assessment,
+    fraud detectio, n, and portfolio optimization',
+      icon: Shield,
+    metrics: ['Risk ScoreFraud Detection Rate, ', 'Portfolio Performance']
     },
     {
-      industry: 'Healthcare',description: 'Patient outcome prediction, resource optimization, and treatment effectiveness',
-      icon: Activity,metrics: ['Patient OutcomesResource Utilization', 'Treatment Success Rate']
+      industry: 'Healthcare, ',description: 'Patient outcome prediction,
+    resource optimizatio, n, and treatment effectiveness',
+      icon: Activity,
+    metrics: ['Patient OutcomesResource Utilization, ', 'Treatment Success Rate']
     },
     {
-      industry: 'Manufacturing',description: 'Predictive maintenance, quality control, and production optimization',
-      icon: Target,metrics: ['Equipment UptimeQuality Score', 'Production Efficiency']
+      industry: 'Manufacturing, ',description: 'Predictive maintenance,
+    quality contro, l, and production optimization',
+      icon: Target,
+    metrics: ['Equipment UptimeQuality Score, ', 'Production Efficiency']
     }
   ],
 
-  const benefits = [
+  const benefits  = [
     {
-      icon: TrendingUp,title: 'Increased Revenue',description: 'Identify new opportunities and optimize existing processes to drive growth'
-    };
+      icon: TrendingU,
+    ptitle: 'Increased Revenue, ',description: 'Identify new opportunities and optimize existing processes to drive growth'
+   ,  }{
+      icon: Zap,
+    title: 'Improved Efficiency, ',description: 'Automate routine tasks and streamline operations across your organization'
+   ,  }{
+      icon: Eye,
+    title: 'Better Insights, ',description: 'Gain deeper understanding of your business with AI-powered analytics'
+   ,  },
     {
-      icon: Zap,title: 'Improved Efficiency',description: 'Automate routine tasks and streamline operations across your organization'
-    };
-    {
-      icon: Eye,title: 'Better Insights',description: 'Gain deeper understanding of your business with AI-powered analytics'
-    },
-    {
-      icon: Shield,title: 'Risk Mitigation',description: 'Identify and address potential issues before they impact your business'
-    }
-  ];
-  return (
+      icon: Shield,
+    title: 'Risk Mitigation, ',description: 'Identify and address potential issues before they impact your business'
+   ,  }
+  ]return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Business Intelligence Services - Zion Tech Group"
-        description="Transform your business data into actionable insights with our AI-powered Business Intelligence solutions. Real-time analytics, predictive modeling, and automated reporting."
+        description="Transform your business data into actionable insights with our AI-powered Business Intelligence solutions. Real-time analyticspredictive modeling, and automated reporting."
       />
       
       {/* Hero Section */}
@@ -104,16 +121,18 @@ export default function AIBusinessIntelligence() {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0,
+    y: 20,  }}
+            animate={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,  }}
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 bg-cyan-400/20 text-cyan-400 rounded-full text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Intelligence
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
               AI Business
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Intelligence</span>
             </h1>
@@ -133,21 +152,24 @@ export default function AIBusinessIntelligence() {
         </div>
       </section>
 
-      {/* What is AI BI */}
+      {/* What is AI BI *,
+    /}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }};
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0,
+    x: -20,  }}whileInView={{ opacity: 1,
+    x: 0,  }}
+              transition={{ duration: 0.6,
+     }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 What is AI Business Intelligence?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
                 AI Business Intelligence combines traditional BI tools with artificial intelligence 
-                and machine learning to provide deeper insights, predictive capabilities, and 
+                and machine learning to provide deeper insightspredictive capabilities, and 
                 automated decision-making support.
               </p>
               <div className="space-y-4">
@@ -176,9 +198,11 @@ export default function AIBusinessIntelligence() {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 20 }};
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0,
+    x: 20,  }}whileInView={{ opacity: 1,
+    x: 0,  }}
+              transition={{ duration: 0.6,
+     }}
               className="relative"
             >
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
@@ -220,9 +244,11 @@ export default function AIBusinessIntelligence() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -230,23 +256,27 @@ export default function AIBusinessIntelligence() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI Business Intelligence platform provides comprehensive capabilities for 
-              data analysis, visualization, and decision-making support.
+              data analysisvisualization, and decision-making support.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.6,
+    delay: index * 0.1,  }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover: border-cyan-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-cyan-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.titl,
+    e}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -258,9 +288,11 @@ export default function AIBusinessIntelligence() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -271,24 +303,28 @@ export default function AIBusinessIntelligence() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {capabilities.map((capability,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.6,
+    delay: index * 0.1,  }}
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-cyan-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center">
                     <capability.icon className="w-8 h-8 text-cyan-400" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-white">{capability.title}</h3>
+                  <h3 className="text-2xl font-semibold text-white">{capability.titl,
+    e}</h3>
                 </div>
                 <p className="text-gray-300 mb-6">{capability.description}</p>
                 <div className="space-y-2">
-                  {capability.benefits.map((benefit, benefitIndex) => (
+                  {capability.benefits.map((benefitbenefitIndex) => (
                     <div key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -305,38 +341,43 @@ export default function AIBusinessIntelligence() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              AI Business Intelligence is transforming industries across the globe;
-              enabling data-driven decision making and operational excellence.
+              AI Business Intelligence is transforming industries across the globeenabling data-driven decision making and operational excellence.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {useCases.map((useCase,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.6,
+    delay: index * 0.1,  }}
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-cyan-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center">
                     <useCase.icon className="w-8 h-8 text-cyan-400" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-white">{useCase.industry}</h3>
+                  <h3 className="text-2xl font-semibold text-white">{useCase.industr,
+    y}</h3>
                 </div>
                 <p className="text-gray-300 mb-6">{useCase.description}</p>
                 <div className="space-y-2">
-                  {useCase.metrics.map((metric, metricIndex) => (
+                  {useCase.metrics.map((metricmetricIndex) => (
                     <div key={metricIndex} className="flex items-center text-sm text-gray-400">
                       <Target className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                       {metric}
@@ -353,9 +394,11 @@ export default function AIBusinessIntelligence() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -367,19 +410,23 @@ export default function AIBusinessIntelligence() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 text-center"
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.6,
+    delay: index * 0.1,  }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover: border-cyan-400/50 transition-all duration-300 hover:scale-105 text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-cyan-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{benefit.titl,
+    e}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
@@ -391,9 +438,10 @@ export default function AIBusinessIntelligence() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,  }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -404,26 +452,27 @@ export default function AIBusinessIntelligence() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
             {[
               {
-                step: '01',title: 'Assessment',description: 'Evaluate your current data infrastructure and BI needs'
-              };
+                step: '01, ',title: 'Assessment, ',description: 'Evaluate your current data infrastructure and BI needs'
+             ,
+     }{
+                step: '02, ',title: 'Design, ',description: 'Create a comprehensive AI BI architecture and implementation plan'
+             ,  }{
+                step: '03, ',title: 'Development, ',description: 'Build and configure your AI BI solution with custom dashboards'
+             ,  },
               {
-                step: '02',title: 'Design',description: 'Create a comprehensive AI BI architecture and implementation plan'
-              };
-              {
-                step: '03',title: 'Development',description: 'Build and configure your AI BI solution with custom dashboards'
-              },
-              {
-                step: '04',title: 'Deployment',description: 'Launch your solution and provide training and ongoing support'
-              }
-            ].map((phase, index) => (
+                step: '04, ',title: 'Deployment, ',description: 'Launch your solution and provide training and ongoing support'
+             ,  }
+            ].map((phaseindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.6,
+    delay: index * 0.1,  }}
                 className="text-center"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
@@ -441,9 +490,10 @@ export default function AIBusinessIntelligence() {
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,  }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business Intelligence?
@@ -464,5 +514,5 @@ export default function AIBusinessIntelligence() {
         </div>
       </section>
     </div>
-  )
+  ),
 }

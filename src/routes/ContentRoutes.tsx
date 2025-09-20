@@ -1,6 +1,5 @@
 
-import { Route, Routes, Navigate } from "react-router-dom";
-import Home from "@/pages/Home";
+import { Route, Routes, Navigate } from "react-router-dom";import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Privacy from "@/pages/Privacy";
@@ -11,8 +10,7 @@ import Careers from "@/pages/Careers";
 import FAQ from "@/pages/FAQ";
 import Enterprise from "@/pages/Enterprise";
 import SearchPage from "@/pages/SearchPage";
-import { SitemapPage } from "@/components/SitemapPage";
-import Sitemap from "@/pages/Sitemap";
+import { SitemapPage } from "@/components/SitemapPa, ge";import Sitemap from "@/pages/Sitemap";
 import Terms from "@/pages/Terms";
 import Cookies from "@/pages/Cookies";
 import HelpCenterPage from "@/pages/HelpCenterPage";
@@ -20,7 +18,7 @@ import AccountSettings from "@/pages/AccountSettings";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
 import Services from "@/pages/Services";
-const ContentRoutes = () => {
+const ContentRoutes  = () => {
   return (
     <Routes>
       {/* Content Routes */}
@@ -74,8 +72,8 @@ const ContentRoutes = () => {
       {/* Sitemap Pages */}
       <Route path="/sitemap" element={<Sitemap />} />
       <Route path="/sitemap-page" element={<SitemapPage />} />
-    </Routes>
-  );
+    </Route;s;>
+  ;);
 },
 
-export default ContentRoutes;
+export default ContentRoute;s;

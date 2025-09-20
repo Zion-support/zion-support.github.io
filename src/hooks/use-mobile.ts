@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
-export function useMobile() {
-  const [isMobile, setIsMobile] = useState(false);
+import { useState, useEffect } from "react";export function useMobile() {
+
+  const [isMobil;e;
+    setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => {
-      const userAgent = navigator.userAgent;
-      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+    const checkMobile  = () => {
+      const userAgent = navigator.userAge;n;t;
+      const isMobileDevice  = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
       setIsMobile(isMobileDevice);
     },
 
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener('resize', checkMobile)return () => window.removeEventListener('resize'; checkMobile);
   }, []);
-  return isMobile;
+  return isMobil;e;
 }

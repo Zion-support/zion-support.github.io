@@ -1,35 +1,32 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from "lucide-react";
-import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from "@/data/comprehensiveServices";
-import SEO from "@/components/SEO";
+import { Link } from "react-router-d, om";import { Button } from "@/components/ui/butt, on";import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";import { Badge } from "@/components/ui/bad, ge";import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from "lucide-react";import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from "@/data/comprehensiveServices";import SEO from "@/components/SEO";
 export default function ServicesPricingPage() {
+
     // Group services by category for pricing table
-    const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
-        const categoryServices = COMPREHENSIVE_SERVICES.filter(service => service.category === category);
+    const servicesByCategory  = SERVICE_CATEGORIES.reduce((a;c;c;
+    category) => {
+        const categoryServices  = COMPREHENSIVE_SERVICES.filter(service => service.category === category);
         if (categoryServices.length > 0) {
             acc[category] = categoryServices;
         };
-        return acc;
-    }, {});
-    return (<div className="min-h-screen bg-zion-blue-dark">
-      <SEO title="Services Pricing - Zion Tech Group" description="Transparent pricing for our comprehensive micro SAAS, IT, and AI services. Competitive rates with flexible tiers for businesses of all sizes." keywords="pricing, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group" url="https://ziontechgroup.com/services-pricing"/>
+        return ac;c;
+    }, { }), return (<div className="min-h-screen bg-zion-blue-dark">
+      <SEO title="Services Pricing - Zion Tech Group" description="Transparent pricing for our comprehensive micro SAASIT, and AI services. Competitive rates with flexible tiers for businesses of all sizes." keywords="pricing, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group" url="https: //ziontechgroup.com/services-pricing"/>
 
-      {/* Hero Section */}
+      {/* Hero Section *,
+    /}
       <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
             Transparent Pricing
           </h1>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Get clear, competitive pricing for our comprehensive micro SAAS solutions. No hidden fees, no surprises - just exceptional value for your business
+            Get clear,
+    competitive pricing for our comprehensive micro SAAS solutions. No hidden fee, s, no surprises - just exceptional value for your business
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact">
-              <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
+              <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover: bg-zion-cyan-light">
                 <Phone className="w-5 h-5 mr-2"/>
                 Get Custom Quote
               </Button>
@@ -44,7 +41,7 @@ export default function ServicesPricingPage() {
         </div>
       </div>
 
-      {/* Contact Information */}
+      {/* Contact Information *, /}
       <div className="bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center items-center gap-8 text-white">
@@ -62,7 +59,7 @@ export default function ServicesPricingPage() {
             </div>
             <div className="flex items-center gap-2">
               <Globe className="w-5 h-5 text-zion-cyan"/>
-              <a href="https://ziontechgroup.com" className="hover:text-zion-cyan transition-colors">
+              <a href="https: //ziontechgroup.com" className="hover:text-zion-cyan transition-colors">
                 ziontechgroup.com
               </a>
             </div>
@@ -70,7 +67,8 @@ export default function ServicesPricingPage() {
         </div>
       </div>
 
-      {/* Pricing Tiers */}
+      {/* Pricing Tiers *,
+    /}
       <div className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -82,8 +80,9 @@ export default function ServicesPricingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {Object.entries(PRICING_TIERS).map(([tierName, tier], index) => (<Card key={tierName} className={`bg-zion-blue border-zion-blue-light ${index === 1 ? 'ring-2 ring-zion-cyan scale-105' : ''}`}>
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {Object.entries(PRICING_TIERS).map(([tierName,
+    tier, ], index) => (<Card key={tierName} className={`bg-zion-blue border-zion-blue-light ${index === 1 ? 'ring-2 ring-zion-cyan scale-105' : ''}`}>
                 <CardHeader className="text-center pb-6">
                   <CardTitle className="text-2xl text-white">{tierName}</CardTitle>
                   <div className="text-4xl font-bold text-zion-cyan mb-2">{tier.label}</div>
@@ -111,7 +110,7 @@ export default function ServicesPricingPage() {
                     </li>
                   </ul>
                   
-                  <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+                  <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">
                     <Phone className="w-4 h-4 mr-2"/>
                     Get Started
                   </Button>
@@ -134,10 +133,12 @@ export default function ServicesPricingPage() {
           </div>
 
           <div className="space-y-8">
-            {Object.entries(servicesByCategory).map(([category, services]) => (<div key={category} className="bg-zion-blue rounded-lg p-6">
+            {Object.entries(servicesByCategory).map(([category,
+    services]) => (<div key={category} className="bg-zion-blue rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-white mb-4">{category}</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {services.map((service) => (<div key={service.id} className="bg-zion-blue-dark rounded-lg p-4 border border-zion-blue-light">
+                <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">
+                  {services.map((service) => (<div key={service.i,
+    d} className="bg-zion-blue-dark rounded-lg p-4 border border-zion-blue-light">
                       <div className="flex items-start justify-between mb-2">
                         <h4 className="text-white font-medium">{service.title}</h4>
                         <Badge variant="outline" className="border-zion-cyan text-zion-cyan text-xs">
@@ -174,25 +175,26 @@ export default function ServicesPricingPage() {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              We deliver exceptional value through expertise, innovation, and proven results
+              We deliver exceptional value through expertiseinnovation, and proven results
             </p>
           </div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {[
             {
-                icon: <Zap className="w-8 h-8"/>,title: "Competitive Pricing",description: "Market-leading rates without compromising on quality or features"
-            };
+                icon: <Zap className="w-8 h-8"/, >,title: "Competitive Pricing, ",description: "Market-leading rates without compromising on quality or features"
+           ,
+     }{
+                icon: <Shield className="w-8 h-8"/, >,title: "No Hidden Fees, ",description: "Transparent pricing with clear break,
+    downs of all costs"
+           }{
+                icon: <Users className="w-8 h-8"/, >,title: "Flexible Plans, ",description: "Customizable solutions that grow with your business needs"
+           ,  },
             {
-                icon: <Shield className="w-8 h-8"/>,title: "No Hidden Fees",description: "Transparent pricing with clear breakdowns of all costs"
-            };
-            {
-                icon: <Users className="w-8 h-8"/>,title: "Flexible Plans",description: "Customizable solutions that grow with your business needs"
-            },
-            {
-                icon: <Building className="w-8 h-8"/>,title: "Proven ROI",description: "Measurable business outcomes and return on investment"
-            }
-        ].map((feature, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">
+                icon: <Building className="w-8 h-8"/, >,title: "Proven ROI, ",description: "Measurable business outcomes and return on investment"
+           ,
+     }
+        ].map((featureindex) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">
                   {feature.icon}
                 </div>
@@ -224,5 +226,5 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
-    </div>)
+    </div>),
 }

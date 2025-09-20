@@ -1,121 +1,128 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import { 
-  Menu,
-  X, 
-  Home, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  Rocket, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  DollarSign, 
-  Gauge, 
-  Workflow, 
-  Atom, 
-  Star, 
-  Target, 
-  TrendingUp, 
-  Globe,
-  ChevronDown,
+import React, { useState  from "react", import { Link, useLocation } from "react-router-dom";import { motion, AnimatePresence } from "framer-motion";import { Menu, X;
+  Home;
+  Zap;
+  Brain;
+  Shield;
+  Cloud;
+  Cpu;
+  Rocket;
+  Users;
+  ShoppingCart;
+  BookOpen;
+  MessageCircle;
+  HelpCircle;
+  DollarSign;
+  Gauge;
+  Workflow;
+  Atom;
+  Star;
+  Target;
+  TrendingUp;
+  Globe;
+  ChevronDown;
   ChevronRight
-} from "lucide-react";
-interface SidebarItem {
-  name: string,href: string,icon: React.ComponentType<any>;
-  children?: SidebarItem[]
+} from "lucide-react";interface SidebarItem {
+  name: string,
+    href: strin, g,icon: React.ComponentType<any>,
+    children?: SidebarItem[], 
 }
 
-export const Sidebar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
-  const location = useLocation();
-  const navigation: SidebarItem[] = [
+export const Sidebar: React.FC  = () => {
+  const [isO,
+    p;e;n;
+    setIsOpen] = useState(false);
+  const [expandedSections;
+    setExpandedSections] = useState<string[]>(['services'])const location  = useLocation()const navigation: SidebarItem[]  = [
     {
-      title: 'Main Navigation',icon: Home,items: [
-        { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' };
-        { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' };
-        { name: 'Solutions', path: '/solutions', icon: Rocket, description: 'Industry solutions' };
-        // Pricing page currently not implemented
-        { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our company' },
-        { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
+      title: 'Main Navigation,';icon: Home,
+    items: [
+        { name: 'Home, ', path: '/, ', icon: Home,
+    description: 'Welcome to Zion Tech Group',  }{ name: 'Services Overview, ', path: '/services, ', icon: Briefcase,
+    description: 'All our services',  }{ name: 'Solutions, ', path: '/solutions, ', icon: Rocket,
+    description: 'Industry solutions',  }// Pricing page currently not implemented
+        { name: 'About Us, ', path: '/about, ', icon: Users,
+    description: 'Learn about our company',  },
+        { name: 'Contact, ', path: '/contact, ', icon: Phone,
+    description: 'Get in touch with us',  }
       ]
-    };
-    {
-      title: 'AI & Analytics',icon: Brain,items: [
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' }
+    }{
+      title: 'AI & Analytics, ',icon: Brain,
+    items: [
+        { name: 'AI Business Intelligence, ', path: '/services/ai-business-intelligence, ', icon: Brain,
+    description: 'Machine Learning & Data Science',  }
       ]
-    };
-    {
-      title: 'Cloud & Infrastructure',icon: Cloud,items: [
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud, description: 'Cloud migration and DevOps' },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building, description: 'Enterprise infrastructure' }
+    }{
+      title: 'Cloud & Infrastructure, ',icon: Cloud,
+    items: [
+        { name: 'Cloud & DevOps, ', path: '/services/cloud-devops, ', icon: Cloud,
+    description: 'Cloud migration and DevOps',  },
+        { name: 'IT Infrastructure, ', path: '/services/it-infrastructure, ', icon: Building,
+    description: 'Enterprise infrastructure',  }
       ]
-    };
-    {
-      title: 'Cybersecurity & Compliance',icon: Shield,items: [
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'AI-Powered Security' }
+    }{
+      title: 'Cybersecurity & Compliance, ',icon: Shield,
+    items: [
+        { name: 'Cybersecurity, ', path: '/services/cybersecurity, ', icon: Shield,
+    description: 'AI-Powered Security',  }
       ]
-    };
-    {
-      title: 'Data & Analytics',icon: Database,items: [
-        { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3, description: 'Transform data into insights' }
+    }{
+      title: 'Data & Analytics, ',icon: Database,
+    items: [
+        { name: 'Data Analytics, ', path: '/services/data-analytics, ', icon: BarChart3,
+    description: 'Transform data into insights',  }
       ]
-    };
-    {
-      title: 'Monitoring & Observability',icon: Monitor,items: []
-    };
-    {
-      title: 'Business Solutions',icon: Building,items: []
-    };
-    {
-      title: 'Quantum Technology',icon: Atom,items: []
-    };
-    {
-      title: 'Space Technology',icon: Rocket,items: []
-    };
-    {
-      title: 'Resources & Insights',icon: FileText,items: [
-        { name: 'Blog', path: '/blog', icon: FileText, description: 'Latest insights and news' },
-        { name: 'Research & Development', path: '/research-development', icon: TestTube, description: 'R&D projects' }
+    }{
+      title: 'Monitoring & Observability, ',icon: Monitor,
+    items: []
+   ,  }{
+      title: 'Business Solutions, ',icon: Building,
+    items: []
+   ,  }{
+      title: 'Quantum Technology, ',icon: Atom,
+    items: []
+   ,  }{
+      title: 'Space Technology, ',icon: Rocket,
+    items: []
+   ,  }{
+      title: 'Resources & Insights, ',icon: FileText,
+    items: [
+        { name: 'Blog, ', path: '/blog, ', icon: FileText,
+    description: 'Latest insights and news',  },
+        { name: 'Research & Development, ', path: '/research-development, ', icon: TestTube,
+    description: 'R&D projects',  }
       ]
-    };
-    {
-      title: 'Company & Team',icon: Users,items: [
-        { name: 'About Us', path: '/about', icon: Users, description: 'Our story and mission' };
-        { name: 'Careers', path: '/careers', icon: Briefcase, description: 'Join our team' },
-        { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
+    }{
+      title: 'Company & Team, ',icon: Users,
+    items: [
+        { name: 'About Us, ', path: '/about, ', icon: Users,
+    description: 'Our story and mission',  }{ name: 'Careers, ', path: '/careers, ', icon: Briefcase,
+    description: 'Join our team',  },
+        { name: 'Contact, ', path: '/contact, ', icon: Phone,
+    description: 'Get in touch with us',  }
       ]
     }
-  ];
-  const toggleSection = (sectionName: string) => {
+  ]const toggleSection = () => {
     setExpandedSections(prev => 
       prev.includes(sectionName) 
         ? prev.filter(name => name !== sectionName)
-        : [...prev, sectionName]
-    ),
+        : [...prev;
+    sectionName]
+    , )
+  };
   },
 
-  const isActive = (href: string) => {
+  const isActive  = () => {
     if (href === '/') {
-      return location.pathname === '/'
-    };
-    return location.pathname.startsWith(href);
-  },
+      return location.pathname === ';/;'
+   }return location.pathname.startsWith(href)},
 
-  const renderNavItem = (item: SidebarItem, level: number = 0) => {
-    const hasChildren = item.children && item.children.length > 0;
-    const isExpanded = expandedSections.includes(item.name.toLowerCase());
-    const active = isActive(item.href);
+  const renderNavItem  = () => {
+    const hasChildren  = item.children && item.children.length ;> ;0;
+    const isExpanded  = expandedSections.includes(item.name.toLowerCase());
+    const active  = isActive(item.href);
 
     return (
-      <div key={item.name}>
+      <div key={item.nam, e}>
         <div className="flex items-center">
           {hasChildren ? (
             <button
@@ -123,8 +130,9 @@ export const Sidebar: React.FC = () => {
               className={`flex items-center w-full px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                 active 
                   ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/30' 
-                  : 'text-slate-300 hover:text-white hover:bg-slate-700/50'
-              }`}
+                  : 'text-slate-300 hover: text-white hover:bg-slate-700/50'
+             ,
+     }`}
             >
               <item.icon className="w-4 h-4 mr-3 flex-shrink-0" />
               <span className="flex-1 text-left">{item.name}</span>
@@ -140,8 +148,9 @@ export const Sidebar: React.FC = () => {
               className={`flex items-center w-full px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                 active 
                   ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/30' 
-                  : 'text-slate-300 hover:text-white hover:bg-slate-700/50'
-              }`}
+                  : 'text-slate-300 hover: text-white hover:bg-slate-700/50'
+             ,
+     }`}
             >
               <item.icon className="w-4 h-4 mr-3 flex-shrink-0" />
               <span>{item.name}</span>
@@ -151,10 +160,13 @@ export const Sidebar: React.FC = () => {
         
         {hasChildren && isExpanded && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
+            initial={{ opacity: 0,
+    height: 0,  }}
+            animate={{ opacity: 1,
+    height: 'auto',  }}
+            exit={{ opacity: 0,
+    height: 0,  }}
+            transition={{ duration: 0.2,  }}
             className="ml-4 mt-1 space-y-1"
           >
             {item.children!.map(child => (
@@ -164,8 +176,9 @@ export const Sidebar: React.FC = () => {
                 className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                   isActive(child.href)
                     ? 'bg-cyan-500/10 text-cyan-300 border border-cyan-400/20'
-                    : 'text-slate-400 hover:text-white hover:bg-slate-700/30'
-                }`}
+                    : 'text-slate-400 hover: text-white hover:bg-slate-700/30'
+               ,
+     }`}
               >
                 <child.icon className="w-4 h-4 mr-3 flex-shrink-0" />
                 <span>{child.name}</span>
@@ -174,29 +187,28 @@ export const Sidebar: React.FC = () => {
           </motion.div>
         )}
       </div>
-    );
-  },
+    )},
 
   return (
     <>
       {/* Mobile menu button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700/80 transition-colors"
+        className="lg: hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700/80 transition-colors"
       >
         <Menu className="w-6 h-6" />
       </button>
 
-      {/* Sidebar */}
+      {/* Sidebar *, /}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 lg:hidden"
+            initial={{ opacity: 0,  }}
+            animate={{ opacity: 1,  }}
+            exit={{ opacity: 0,  }}
+            className="fixed inset-0 z-50 lg: hidden"
           >
-            {/* Backdrop */}
+            {/* Backdrop *, /}
             <div 
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
@@ -204,10 +216,12 @@ export const Sidebar: React.FC = () => {
             
             {/* Sidebar */}
             <motion.div
-              initial={{ x: '-100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '-100%' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              initial={{ x: '-100%',  }}
+              animate={{ x: 0,  }}
+              exit={{ x: '-100%',  }}
+              transition={{ type: 'spring',
+    damping: 25,
+    stiffness: 200,  }}
               className="absolute left-0 top-0 h-full w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl"
             >
               {/* Header */}
@@ -215,13 +229,13 @@ export const Sidebar: React.FC = () => {
                 <h2 className="text-lg font-semibold text-white">Navigation</h2>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+                  className="p-2 rounded-md text-slate-400 hover: text-white hover:bg-slate-800 transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
-              {/* Navigation */}
+              {/* Navigation *, /}
               <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
                 {navigation.map(item => renderNavItem(item))}
               </nav>
@@ -231,12 +245,12 @@ export const Sidebar: React.FC = () => {
       </AnimatePresence>
 
       {/* Desktop sidebar */}
-      <div className="hidden lg:block fixed left-0 top-0 h-full w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl z-40">
-        {/* Header */}
+      <div className="hidden lg: block fixed left-0 top-0 h-full w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl z-40">
+        {/* Header *, /}
         <div className="p-6 border-b border-slate-700/50">
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover: scale-110 transition-transform duration-300">
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
@@ -247,7 +261,7 @@ export const Sidebar: React.FC = () => {
           </Link>
         </div>
 
-        {/* Navigation */}
+        {/* Navigation *, /}
         <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
           {navigation.map(item => renderNavItem(item))}
         </nav>
@@ -265,5 +279,5 @@ export const Sidebar: React.FC = () => {
         </div>
       </div>
     </>
-  )
+  ),
 };

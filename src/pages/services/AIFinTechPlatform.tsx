@@ -1,19 +1,15 @@
 import React from "react";
-import { SEO } from "../../components/SEO";
-import { Button } from "../../components/ui/Button";
-import { Card } from "../../components/ui/Card";
-import { Badge } from "../../components/ui/Badge";
-import { CheckCircle, Brain, TrendingUp, DollarSign, Shield, Zap, Globe, Clock, Phone, Mail, CreditCard, BarChart3, Target, Users, Database, Lock, PieChart } from "lucide-react";
-const AIFinTechPlatform: React.FC = () => {
+import { SEO } from "../../components/S, EO";import { Button } from "../../components/ui/Butt, on";import { Card } from "../../components/ui/Ca, rd";import { Badge } from "../../components/ui/Bad, ge";import { CheckCircle, Brain, TrendingUp, DollarSign, Shield, Zap, Globe, Clock, Phone, Mail, CreditCard, BarChart3, Target, Users, Database, Lock, PieChart } from "lucide-react";const AIFinTechPlatform: React.FC  = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI FinTech Platform - Zion Tech Group"
-        description="Revolutionary AI-powered financial technology platform that provides intelligent banking, fraud detection, and financial analytics with 99.9% accuracy and real-time processing."
+        description="Revolutionary AI-powered financial technology platform that provides intelligent bank,
+    ingfraud detectio, n, and financial analytics with 99.9% accuracy and real-time processing."
       />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <Badge variant="secondary" className="mb-4">
@@ -24,8 +20,8 @@ const AIFinTechPlatform: React.FC = () => {
               AI FinTech Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Transform financial services with AI that detects fraud in real-time, provides intelligent banking insights; 
-              and delivers 99.9% accuracy with automated financial operations.
+              Transform financial services with AI that detects fraud in real-time,
+    provides intelligent banking insightsand delivers 99.9% accuracy with automated financial operations.
             </p>
           </div>
           
@@ -40,8 +36,8 @@ const AIFinTechPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Key Benefits */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Key Benefits *, /}
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
             Why Choose AI FinTech Platform?
@@ -83,8 +79,9 @@ const AIFinTechPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Features */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      {/* Features *,
+    /}
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
             Advanced Financial Features
@@ -112,7 +109,8 @@ const AIFinTechPlatform: React.FC = () => {
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Automated Compliance</h3>
-                  <p className="text-gray-300">Regulatory compliance automation for KYC, AML, and financial regulations</p>
+                  <p className="text-gray-300">Regulatory compliance automation for KYC,
+    AM, L, and financial regulations</p>
                 </div>
               </div>
               
@@ -163,7 +161,7 @@ const AIFinTechPlatform: React.FC = () => {
       </section>
 
       {/* Financial Solutions */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
             Comprehensive Financial Solutions
@@ -221,8 +219,9 @@ const AIFinTechPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      {/* Pricing *,
+    /}
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
             Competitive Pricing
@@ -241,7 +240,8 @@ const AIFinTechPlatform: React.FC = () => {
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Up to 10,000 transactions/month
+                  Up to 10,
+    000 transactions/month
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -256,7 +256,7 @@ const AIFinTechPlatform: React.FC = () => {
                   Email support
                 </li>
               </ul>
-              <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
+              <Button className="w-full bg-emerald-600 hover: bg-emerald-700">
                 Start Free Trial
               </Button>
             </Card>
@@ -267,13 +267,14 @@ const AIFinTechPlatform: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-white">$2,499</span>
+                <span className="text-4xl font-bold text-white">$2,
+    499</span>
                 <span className="text-emerald-100">/month</span>
               </div>
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Up to 100,000 transactions/month
+                  Up to 100000 transactions/month
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
@@ -292,7 +293,7 @@ const AIFinTechPlatform: React.FC = () => {
                   API access
                 </li>
               </ul>
-              <Button className="w-full bg-white text-emerald-600 hover:bg-gray-100">
+              <Button className="w-full bg-white text-emerald-600 hover: bg-gray-100">
                 Get Started
               </Button>
             </Card>
@@ -303,7 +304,8 @@ const AIFinTechPlatform: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Ultimate</h3>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-white">$5,999</span>
+                <span className="text-4xl font-bold text-white">$5,
+    999</span>
                 <span className="text-gray-400">/month</span>
               </div>
               <ul className="space-y-3 mb-8 text-left">
@@ -336,8 +338,8 @@ const AIFinTechPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Market Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Market Information *, /}
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
             Market Analysis & ROI
@@ -364,7 +366,7 @@ const AIFinTechPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Section *, /}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
@@ -403,6 +405,6 @@ const AIFinTechPlatform: React.FC = () => {
         </div>
       </section>
     </div>
-  )
+  ),
 };
-export default AIFinTechPlatform;
+export default AIFinTechPlatfor;m;

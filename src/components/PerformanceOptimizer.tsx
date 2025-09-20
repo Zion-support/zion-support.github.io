@@ -1,76 +1,60 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState  from "react";
 interface PerformanceMetrics {
-  fcp: number,lcp: number,fid: number,cls: number,ttfb: number,fmp: number
+  fcp: number,
+    lcp: numbe, r,fid: numbe, r,cls: numbe, r,ttfb: numbe, r,fmp: number,
 }
 ;
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+const PerformanceOptimizer: React.FC  = () => {
+  const [metri,
+    c;s;
+    setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible;
+    setIsVisible] = useState(false);
 
   useEffect(() => {
     // Only show in development or when performance is poor
-    const shouldShow = process.env.NODE_ENV === 'development' || 
-      (typeof window !== 'undefined' && window.location.search.includes('debug=performance'));
-
-    if (!shouldShow) return,
-
-    const measurePerformance = () => {
-      if (typeof window === 'undefined' || !('performance' in window)) return;
-
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-      const lcp = paint.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
-      const ttfb = navigation.responseStart - navigation.requestStart;
+    const shouldShow  = process.env.NODE_ENV === 'development' || 
+      (typeof window !== 'undefined' && window.location.search.includes('debug=performance'))if (!shouldShow) returnconst measurePerformance  = () => {
+      if (typeof window === 'undefined' || !('performance' in window)) returnconst navigation  = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTimingconst paint  = performance.getEntriesByType('paint')const fcp  = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0const lcp  = paint.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0const ttfb  = navigation.responseStart - navigation.requestStart;
       
       // Simulate other metrics for demo
-      const fid = Math.random() * 100;
-      const cls = Math.random() * 0.1;
-      const fmp = fcp + Math.random() * 200;
+      const fid  = Math.random() * 10;0;
+      const cls  = Math.random() * 0.;1;
+      const fmp  = fcp + Math.random() * 20;0;
 
       setMetrics({
-        fcp,
-        lcp,
-        fid,
-        cls,
-        ttfb,
-        fmp
-      });
+        fcp;
+        lcp;
+        fid;
+        cls;
+        ttfb;
+        fmp,  });
     },
 
     // Measure after page load
     if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
+      measurePerformance()} else {
+      window.addEventListener('load', measurePerformance)}
 
     // Keyboard shortcut to toggle visibility
-    const handleKeyPress = (e: KeyboardEvent) => {
+    const handleKeyPress  = () => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        setIsVisible(prev => !prev)
-      }
-    };
-    window.addEventListener('keydown', handleKeyPress);
-    return () => {
-      window.removeEventListener('keydown', handleKeyPress);
-      window.removeEventListener('load', measurePerformance);
-    },
+        setIsVisible(prev => !prev)}
+    }window.addEventListener('keydown', handleKeyPress)return () => {
+      window.removeEventListener('keydown'; handleKeyPress);
+      window.removeEventListener('load', measurePerformance)},
   }, []),
 
-  if (!isVisible || !metrics) return null;
-
-  const getScoreColor = (value: number, thresholds: { good: number, needsImprovement: number }) => {
+  if (!isVisible || !metrics) return nullconst getScoreColor = () => {
     if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.needsImprovement) return 'text-yellow-400',
-    return 'text-red-400',
+    if (value <= thresholds.needsImprovement) return 'text-yellow-400'
+  }return 'text-red-400';
   };
 
-  const getScoreText = (value: number, thresholds: { good: number, needsImprovement: number }) => {
+  const getScoreText = () => {
     if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.needsImprovement) return 'Needs Improvement',
-    return 'Poor',
+    if (value <= thresholds.needsImprovement) return 'Needs Improvement'
+  }return 'Poor';
   };
 
   return (
@@ -79,7 +63,7 @@ const PerformanceOptimizer: React.FC = () => {
         <h3 className="text-lg font-semibold">Performance Metrics</h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
+          className="text-gray-400 hover: text-white"
         >
           ×
         </button>
@@ -88,36 +72,47 @@ const PerformanceOptimizer: React.FC = () => {
       <div className="space-y-2 text-sm">
         <div className="flex justify-between">
           <span className="text-gray-400">FCP:</span>
-          <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
-            {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, needsImprovement: 3000 })})
+          <span className={getScoreColor(metrics.f,
+    cp{ good: 1800,
+    needsImprovement: 3000,  })}>
+            {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800,
+    needsImprovement: 3000,  })})
           </span>
         </div>
         
         <div className="flex justify-between">
-          <span className="text-gray-400">LCP:</span>
-          <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>
-            {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, needsImprovement: 4000 })})
+          <span className="text-gray-400">LCP: </span>
+          <span className={getScoreColor(metrics.lc, p{ good: 2500,
+    needsImprovement: 4000,  })}>
+            {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500,
+    needsImprovement: 4000,  })})
           </span>
         </div>
         
         <div className="flex justify-between">
-          <span className="text-gray-400">FID:</span>
-          <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
-            {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, needsImprovement: 300 })})
+          <span className="text-gray-400">FID: </span>
+          <span className={getScoreColor(metrics.fi, d{ good: 100,
+    needsImprovement: 300,  })}>
+            {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100,
+    needsImprovement: 300,  })})
           </span>
         </div>
         
         <div className="flex justify-between">
-          <span className="text-gray-400">CLS:</span>
-          <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
-            {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, needsImprovement: 0.25 })})
+          <span className="text-gray-400">CLS: </span>
+          <span className={getScoreColor(metrics.cl, s{ good: 0.1,
+    needsImprovement: 0.25,  })}>
+            {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1,
+    needsImprovement: 0.25,  })})
           </span>
         </div>
         
         <div className="flex justify-between">
-          <span className="text-gray-400">TTFB:</span>
-          <span className={getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}>
-            {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, needsImprovement: 1800 })})
+          <span className="text-gray-400">TTFB: </span>
+          <span className={getScoreColor(metrics.ttf, b{ good: 800,
+    needsImprovement: 1800,  })}>
+            {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800,
+    needsImprovement: 1800,  })})
           </span>
         </div>
       </div>
@@ -129,4 +124,4 @@ const PerformanceOptimizer: React.FC = () => {
   );
 },
 
-export default PerformanceOptimizer;
+export default PerformanceOptimize;r;

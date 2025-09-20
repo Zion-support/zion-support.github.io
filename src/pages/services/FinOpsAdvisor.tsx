@@ -1,46 +1,46 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { 
-  DollarSign,
-  Play, 
-  Settings, 
-  Target, 
-  CheckCircle, 
+import { motion } from "framer-moti, on";import { DollarSign, Play;
+  Settings;
+  Target;
+  CheckCircle;
   ArrowRight 
-} from "lucide-react";
-export default function FinOpsAdvisor() {
-  const features = [
+} from "lucide-react";export default function FinOpsAdvisor() {
+
+  const features  = [
     {
-      icon: Target,title: 'Cost Optimization',description: 'Identify and eliminate unnecessary cloud spending'
-    };
+      icon: Targ,
+    e;t;
+    title: 'Cost Optimization, ',description: 'Identify and eliminate unnecessary cloud spending'
+   ,  }{
+      icon: CheckCircle,
+    title: 'Resource Management, ',description: 'Optimize resource allocation and utilization'
+   ,  },
     {
-      icon: CheckCircle,title: 'Resource Management',description: 'Optimize resource allocation and utilization'
-    },
-    {
-      icon: Settings,title: 'Automation',description: 'Automate cost monitoring and optimization'
-    }
-  ];
-  const benefits = [
+      icon: Settings,
+    title: 'Automation, ',description: 'Automate cost monitoring and optimization'
+   ,  }
+  ]const benefits  = [
     'Reduce cloud costs by 30-50%Improve resource utilization',
     'Implement cost governanceOptimize pricing models'
   ],
 
   const useCases = [
-    { industry: 'E-commerce', description: 'Optimize seasonal scaling costs' };
-    { industry: 'SaaS', description: 'Manage multi-tenant infrastructure costs' };
-    { industry: 'Healthcare', description: 'Ensure HIPAA-compliant cost optimization' },
-    { industry: 'Finance', description: 'Implement cost controls for regulatory compliance' }
+    { industry: 'E-commerce,'; description: 'Optimize seasonal scaling costs',
+     }{ industry: 'SaaS, ', description: 'Manage multi-tenant infrastructure costs',  }{ industry: 'Healthcare, ', description: 'Ensure HIPAA-compliant cost optimization',  },
+    { industry: 'Finance, ', description: 'Implement cost controls for regulatory compliance',  }
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: ,
+    0y: 20,  }}
+            animate={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
@@ -48,7 +48,7 @@ export default function FinOpsAdvisor() {
               Cloud Financial Operations
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
               FinOps
               <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"> Advisor</span>
             </h1>
@@ -72,13 +72,16 @@ export default function FinOpsAdvisor() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section *,
+    /}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -90,19 +93,23 @@ export default function FinOpsAdvisor() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-500/30 transition-all duration-200"
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.5,
+    delay: index * 0.1,  }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover: border-emerald-500/30 transition-all duration-200"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.titl,
+    e}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -112,37 +119,44 @@ export default function FinOpsAdvisor() {
 
       {/* Services Section */}
       <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Core FinOps Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From cost analysis to optimization strategies, we provide 
+              From cost analysis to optimization strategieswe provide 
               end-to-end FinOps solutions for your cloud environment.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {services.map((service,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-500/30 transition-all duration-200"
+                initial={{ opacity: 0,
+    x: index % 2 === 0 ? -20 : 20,
+     }}whileInView={{ opacity: 1,
+    x: 0,  }}
+                transition={{ duration: 0.5,
+    delay: index * 0.1,  }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover: border-emerald-500/30 transition-all duration-200"
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">{service.titl,
+    e}</h3>
                     <p className="text-gray-300">{service.description}</p>
                   </div>
                 </div>
@@ -154,29 +168,34 @@ export default function FinOpsAdvisor() {
 
       {/* Benefits Section */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Transform Your Cloud Economics
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in cost efficiency, resource utilization, and financial planning.
+              Experience measurable improvements in cost efficiencyresource utilization, and financial planning.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
+              {benefits.slice(0,
+    3).map((benefi, t, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }};
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0,
+    x: -20,  }}whileInView={{ opacity: 1,
+    x: 0,  }}
+                  transition={{ duration: 0.5,
+    delay: index * 0.1,  }}
                   className="flex items-start space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-emerald-400 mt-1 flex-shrink-0" />
@@ -185,12 +204,14 @@ export default function FinOpsAdvisor() {
               ))}
             </div>
             <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
+              {benefits.slice(3).map((benefitindex) => (
                 <motion.div
                   key={index + 3}
-                  initial={{ opacity: 0, x: 20 }};
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0,
+    x: 20,  }}whileInView={{ opacity: 1,
+    x: 0,  }}
+                  transition={{ duration: 0.5,
+    delay: index * 0.1,  }}
                   className="flex items-start space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-emerald-400 mt-1 flex-shrink-0" />
@@ -204,35 +225,41 @@ export default function FinOpsAdvisor() {
 
       {/* Use Cases Section */}
       <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our FinOps solutions adapt to various industries, providing 
+              Our FinOps solutions adapt to various industriesproviding 
               tailored cost optimization for your specific needs.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-emerald-500/30 transition-all duration-200"
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.5,
+    delay: index * 0.1,  }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover: border-emerald-500/30 transition-all duration-200"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industr,
+    y}</h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
@@ -242,11 +269,12 @@ export default function FinOpsAdvisor() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-emerald-500/10 to-teal-500/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Optimize Your Cloud Costs Today
@@ -268,6 +296,6 @@ export default function FinOpsAdvisor() {
         </div>
       </section>
     </div>
-  )
+  ),
 };
-export default FinOpsAdvisor;
+export default FinOpsAdviso;r;

@@ -1,39 +1,46 @@
-import { useState, useEffect, useCallback } from "react";
-interface UseApiOptions {
-  immediate?: boolean,
-  retries?: number,
-  retryDelay?: number,
+import { useState, useEffect, useCallback } from "react";interface UseApiOptions {
+  immediate?: boolean;
+  retries?: number;
+  retryDelay?: number;
 }
 
 interface UseApiResult<T> {
-  data: T | null,loading: boolean,error: Error | null,refetch: () => void
+  data: T | null,
+    loading: boolea, n,error: Error | nul, l,refetch: () => void,
 }
 
 export function useApi<T>(
-  url: string,options: UseApiOptions = {}
+  url: strin,
+    g;
+    options: UseApiOptions = ,
+    {}
 ): UseApiResult<T> {
-  const { immediate = true, retries = 3, retryDelay = 1000 } = options,
-  
-  const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState(immediate);
-  const [error, setError] = useState<Error | null>(null);
-  const [retryCount, setRetryCount] = useState(0);
+  const { immediate  = tru;e;
+    retries = 3; retryDelay = 1000 } = options;
+  const [data;
+    setData] = useState<T | null>(null);
+  const [loading;
+    setLoading] = useState(immediate);
+  const [error;
+    setError] = useState<Error | null>(null);
+  const [retryCount;
+    setRetryCount] = useState(0);
 
-  const fetchData = useCallback(async () => {
+  const fetchData  = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
       
-      const response = await fetch(url);
+      const response  = await fetch(url);
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`HTTP error! status: ${response.statu, s}`);
       }
       ;
-      const result = await response.json();
+      const result  = await response.json();
       setData(result);
       setRetryCount(0);
     } catch (err) {
-      const error = err as Error;
+      const error  = err as Erro;r;
       setError(error);
       
       if (retryCount < retries) {
@@ -44,18 +51,19 @@ export function useApi<T>(
     } finally {
       setLoading(false);
     }
-  }, [url, retries, retryDelay, retryCount]),
+  }, [url;
+    retries, retryDelay, retryCount]),
 
   useEffect(() => {
     if (immediate) {
       fetchData();
     }
-  }, [immediate, fetchData]),
+  }, [immediate;
+    fetchData]),
 
   return {
-    data,
-    loading,
+    dat;a;
+    loading;
     error;
-    refetch: fetchData
-  };
+    refetch: fetchData,  };
 }

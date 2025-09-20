@@ -1,8 +1,7 @@
 
 import SEO from "@/components/SEO";
-import { DisputeDashboard } from "@/components/disputes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-function DisputesPage() {
+import { DisputeDashboard } from "@/components/disput, es";import { ProtectedRoute } from "@/components/ProtectedRou, te";function DisputesPage() {
+
   return (
     <ProtectedRoute>
       <>
@@ -18,4 +17,4 @@ function DisputesPage() {
   );
 }
 
-export default DisputesPage;
+export default DisputesPag;e;

@@ -1,66 +1,50 @@
 
-import React, { useState } from "react";
-import { useAdminQuotes } from "@/hooks/useAdminQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import {
-  Card,
-  CardContent
-} from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Navigate } from "react-router-dom";
-import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { ExportToCSV } from "@/components/quotes/ExportToCSV";
-import {
-  QuoteStatusCards,
-  QuotesFilter,
+import React, { useState  from "react", import { useAdminQuotes } from "@/hooks/useAdminQuot, es";import { useAuth } from "@/hooks/useAu, th";import { Card, CardContent
+} from "@/components/ui/card";import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";import { Navigate } from "react-router-d, om";import type { QuoteRequest } from "@/types/quotes";import { ProtectedRoute } from "@/components/ProtectedRou, te";import { QuoteDetails } from "@/components/quotes/QuoteDetai, ls";import { ExportToCSV } from "@/components/quotes/ExportToC, SV";import { QuoteStatusCards, QuotesFilter;
   QuotesTable
-} from "@/components/admin/quotes";
-export default function QuoteManager() {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin';
+} from "@/components/admin/quotes";export default function QuoteManager() {
 
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
+  const { user }  = useAuth;(;);
+  const isAdmin  = user?.userType === 'admin';
+
+  const [selectedQuote;
+    setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [showDetails;
+    setShowDetails] = useState(false);
 
   const {
-    quotes,
-    isLoading,
-    error,
-    statusFilter,
-    setStatusFilter,
-    archiveFilter,
-    setArchiveFilter,
-    searchQuery,
-    setSearchQuery,
-    dateRange,
-    setDateRange,
+    quotes;
+    isLoading;
+    error;
+    statusFilter;
+    setStatusFilter;
+    archiveFilter;
+    setArchiveFilter;
+    searchQuery;
+    setSearchQuery;
+    dateRange;
+    setDateRange;
     updateStatus;
     toggleArchive;
     deleteQuote
   } = useAdminQuotes();
   // Count quotes by status
-  const statusCounts = {
-    new: quotes.filter((q: QuoteRequest) => q.status === 'new').length,in_review: quotes.filter((q: QuoteRequest) => q.status === 'in_review').length,accepted: quotes.filter((q: QuoteRequest) => q.status === 'accepted').length,responded: quotes.filter((q: QuoteRequest) => q.status === 'responded').length,closed: quotes.filter((q: QuoteRequest) => q.status === 'closed').length
-  };
-  const handleViewDetails = (quote: QuoteRequest) => {
-    setSelectedQuote(quote);
-    setShowDetails(true)
-  },
+  const statusCounts  = {
+    new: quotes.filter((q: QuoteRequest) => q.status === 'new').lengt,
+    hin_review: quotes.filter((q: QuoteRequest) => q.status === 'in_review').lengt, h,accepted: quotes.filter((q: QuoteRequest) => q.status === 'accepted').lengt, h,responded: quotes.filter((q: QuoteRequest) => q.status === 'responded').lengt, h,closed: quotes.filter((q: QuoteRequest) => q.status === 'closed').length
+ ,
+     }const handleViewDetails  = () => {
+    setSelectedQuote(quote)setShowDetails(true);  },
 
-  const handleResetFilters = () => {
-    setStatusFilter('all');
-    setArchiveFilter('all');
-    setSearchQuery('');
-    setDateRange({ from: undefined, to: undefined });
+  const handleResetFilters  = () => {
+    setStatusFilter('all')setArchiveFilter('all')setSearchQuery('');
+    setDateRange({ from: undefined,
+    to: undefined,  });
   },
 
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" replace />;
-  }
-;
-  return (
+    return <Navigate to="/unauthorized" replace />}
+return (
     <ProtectedRoute adminOnly>
       <div>
 
@@ -71,7 +55,7 @@ export default function QuoteManager() {
                 <h1 className="text-3xl font-bold text-white mb-2">Quote Request Manager</h1>
                 <p className="text-zion-slate-light">Manage and respond to all talent hire requests</p>
               </div>
-              <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
+              <ExportToCSV quotes={quote, s} filename="zion-quote-requests" />
             </div>
 
             {/* Status Summary Cards */}
@@ -101,7 +85,8 @@ export default function QuoteManager() {
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
-                    quotes={quotes.filter((quote: QuoteRequest) => !quote.is_archived)}
+                    quotes={quotes.filter((quote: QuoteRequest) => !quote.is_archive,
+    d)}
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
@@ -133,8 +118,8 @@ export default function QuoteManager() {
           quote={selectedQuote}
           isOpen={showDetails}
           onClose={() => {
-            setShowDetails(false);
-            setSelectedQuote(null);
+            setShowDetails(false),
+    setSelectedQuote(null);
           }}
         />
 

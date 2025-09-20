@@ -1,69 +1,59 @@
-import React, { useState, useEffect } from "react";
-import { api, ApiResponse } from "@/services/api";
-interface User {
-  id: number,name: string,email: string;
-  createdAt?: string
+import React, { useState, useEffect  from "react";
+import { api, ApiResponse } from "@/services/api";interface User {
+  id: number,
+    name: strin, g,email: string,
+    createdAt?: string, 
 }
 ;
-const ApiDemo: React.FC = () => {
-  const [users, setUsers] = useState<User[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [newUser, setNewUser] = useState({ name: '', email: '' });
-  const [healthStatus, setHealthStatus] = useState<string>('Checking...');
-
-  // Check API health on component mount
+const ApiDemo: React.FC  = () => {
+  const [use,
+    r;s;
+    setUsers] = useState<User[]>([]);
+  const [loading;
+    setLoading] = useState(false);
+  const [error;
+    setError] = useState<string | null>(null);
+  const [newUser;
+    setNewUser] = useState({ name: ', ', email: '',  })const [healthStatussetHealthStatus] = useState<string>('Checking...')// Check API health on component mount
   useEffect(() => {
-    checkHealth();
-    fetchUsers();
-  }, []),
+    checkHealth()fetchUsers()}, []),
 
-  const checkHealth = async () => {
+  const checkHealth  = async () => {
     try {
       const response = await api.health();
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`);
     } catch (err) {
-      setHealthStatus('❌ API Unhealthy');
-    }
+      setHealthStatus('❌ API Unhealthy')}
   },
 
-  const fetchUsers = async () => {
-    setLoading(true);
-    setError(null);
-    
-    try {
-      const response = await api.getUsers();
+  const fetchUsers  = async () => {
+    setLoading(true)setError(null)try {
+      const response  = await api.getUsers();
       if (response.success && response.data) {
         setUsers(response.data);
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to fetch users');
-    } finally {
-      setLoading(false);
-    }
+      setError(err instanceof Error ? err.message: 'Failed to fetch users'),  } finally {
+      setLoading(false)}
   },
 
-  const handleCreateUser = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleCreateUser  = async (e: React.FormEvent) => {
+    e.preventDefault(),
     if (!newUser.name.trim() || !newUser.email.trim()) {
-      setError('Name and email are required');
-      return
-    }
+      setError('Name and email are required')return
+   }
 
-    setLoading(true);
-    setError(null);
+    setLoading(true)setError(null);
 
     try {
-      const response = await api.createUser(newUser);
+      const response  = await api.createUser(newUser);
       if (response.success && response.data) {
-        setUsers(prev => [...prev, response.data!]);
-        setNewUser({ name: '', email: '' });
-      }
+        setUsers(prev => [...prev;
+    response.data!]);
+        setNewUser({ name: ', ', email: '',  })}
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to create user');
-    } finally {
-      setLoading(false);
-    }
+      setError(err instanceof Error ? err.message: 'Failed to create user'),  } finally {
+      setLoading(false)}
   },
 
   return (
@@ -83,30 +73,32 @@ const ApiDemo: React.FC = () => {
         <div className="mb-6 p-4 bg-blue-50 rounded-lg">
           <h3 className="text-lg font-semibold text-blue-700 mb-4">Create New User</h3>
           <form onSubmit={handleCreateUser} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
               <input
                 type="text"
                 placeholder="Name"
-                value={newUser.name}
-                onChange={(e) => setNewUser(prev => ({ ...prev, name: e.target.value }))}
-                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                value={newUser.na,
+    me}
+                onChange={(e) => setNewUser(prev => ({ ...prevname: e.target.value,  }))}
+                className="px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
               <input
                 type="email"
                 placeholder="Email"
-                value={newUser.email}
-                onChange={(e) => setNewUser(prev => ({ ...prev, email: e.target.value }))}
-                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                value={newUser.emai,
+    l}
+                onChange={(e) => setNewUser(prev => ({ ...prevemail: e.target.value,  }))}
+                className="px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
             <button
               type="submit"
-              disabled={loading}
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={loadin, g}
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover: bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? 'Creating...' : 'Create User'}
+              {loading ? 'Creating...' : 'Create User, '}
             </button>
           </form>
         </div>
@@ -125,9 +117,9 @@ const ApiDemo: React.FC = () => {
             <button
               onClick={fetchUsers}
               disabled={loading}
-              className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover:bg-gray-700 disabled:opacity-50"
+              className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: bg-gray-700 disabled:opacity-50"
             >
-              {loading ? 'Loading...' : 'Refresh'}
+              {loading ? 'Loading...' : 'Refresh, '}
             </button>
           </div>
           
@@ -147,12 +139,12 @@ const ApiDemo: React.FC = () => {
                     <p className="text-sm text-gray-600">{user.email}</p>
                     {user.createdAt && (
                       <p className="text-xs text-gray-400">
-                        Created: {new Date(user.createdAt).toLocaleDateString()}
+                        Created: {new Date(user.createdAt).toLocaleDateString(, )}
                       </p>
                     )}
                   </div>
                   <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
-                    ID: {user.id}
+                    ID: {user.i, d}
                   </span>
                 </div>
               ))}
@@ -172,6 +164,6 @@ const ApiDemo: React.FC = () => {
         </div>
       </div>
     </div>
-  )
+  ),
 };
-export default ApiDemo;
+export default ApiDem;o;

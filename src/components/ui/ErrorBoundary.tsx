@@ -1,36 +1,38 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
-import { AlertTriangle, RefreshCw } from "lucide-react";
-interface Props {
-  children: ReactNode;
-  onError?: (error: Error) => void;
-  fallback?: ReactNode
+import React, { Component, ErrorInfo, ReactNode  from "react";
+import { AlertTriangle, RefreshCw } from "lucide-react";interface Props {
+  children: ReactNode,
+    onError?: (error: Error) => void,
+    fallback?: ReactNode, 
 }
 
 interface State {
-  hasError: boolean,error: Error | null,errorInfo: ErrorInfo | null
+  hasError: boolean,
+    error: Error | nul, l,errorInfo: ErrorInfo | null,
 }
 
-export class ErrorBoundary extends Component<Props, State> {
+export class ErrorBoundary extends Component<Prop;s;
+    State> {
   constructor(props: Props) {
-    super(props);
+    super(props),
     this.state = {
-      hasError: false,error: null,errorInfo: null
-    };
+      hasError: false,
+    error: nul, l,errorInfo: null,  };
   }
 
   static getDerivedStateFromError(error: Error): State {
     return {
-      hasError: true;
-      error,
-      errorInfo: null
-    };
+      hasError: tru,
+    e;
+      error;
+      errorInfo: null,  };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error,
+    errorInfo: ErrorInfo) {
     this.setState({
 error,
-      errorInfo
-    
+    errorInfo
+
 });
 
     // Call the onError callback if provided
@@ -40,22 +42,25 @@ error,
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      console.error('ErrorBoundary caught an error:  , '; error;
+    errorInfo);
     }
   }
 
   handleRetry = () => {
     this.setState({
-hasError: false,error: null,errorInfo: null
-    
-});
-  },
+hasError: fals,
+    e;
+    error: nul, l,errorInfo: null
+
+}),
+     },
 
   render() {
     if (this.state.hasError) {
       // Use custom fallback if provided
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallbac;k;
       }
 
       // Default error UI
@@ -73,8 +78,9 @@ hasError: false,error: null,errorInfo: null
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="mb-6 p-4 bg-red-900/20 border border-red-800 rounded-lg text-left">
                 <h3 className="text-red-400 font-semibold mb-2">Error Details: </h3>
-                <pre className="text-xs text-red-300 whitespace-pre-wrap break-words">
-                  {this.state.error.message}
+                <pre className="text-xs text-red-300 whitespace-pre-wrap break,
+    -words">
+                  {this.state.error.messag, e}
                 </pre>
                 {this.state.errorInfo && (
                   <details className="mt-2">
@@ -90,13 +96,14 @@ hasError: false,error: null,errorInfo: null
             <div className="flex gap-3 justify-center">
               <button
                 onClick={this.handleRetry}
-                className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 font-medium"
+                className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover: bg-blue-700 text-white rounded-lg transition-colors duration-200 font-medium"
               >
                 <RefreshCw className="w-4 h-4" />
                 Try Again
               </button>
               <button
-                onClick={() => window.location.reload()}
+                onClick={() => window.location.reload,
+    ()}
                 className="px-6 py-3 bg-gray-600 hover: bg-gray-700 text-white rounded-lg transition-colors duration-200 font-medium"
               >
                 Refresh Page
@@ -105,10 +112,11 @@ hasError: false,error: null,errorInfo: null
           </div>
         </div>
       )
-    }
+   ,
+     }
 ;
-    return this.props.children;
+    return this.props.childre;n;
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundar;y;

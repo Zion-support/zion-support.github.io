@@ -1,91 +1,91 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Star,
-  Quote,
-  ChevronLeft,
-  ChevronRight,
-  Play,
-  Pause,
-  Users,
-  Award,
+import React, { useState  from "react", import { motion, AnimatePresence } from "framer-motion";import { Star, Quote;
+  ChevronLeft;
+  ChevronRight;
+  Play;
+  Pause;
+  Users;
+  Award;
   TrendingUp
-} from "lucide-react";
-const testimonials = [
+} from "lucide-react";const testimonials  = [
   {
-    id: 1,name: "Sarah Johnson",position: "CTO, TechCorp Solutions",
-    company: "TechCorp Solutions",avatar: "👩‍💼",rating: 5,content: "Zion Tech Group transformed our entire IT infrastructure. Their AI-powered solutions reduced our operational costs by 40% and improved system reliability to 99.9%. The team's expertise in quantum computing and blockchain integration is unmatched.",category: "AI & Infrastructure",results: ["40% cost reduction", "99.9% uptime", "3x faster deployment"]
+    id:  ,
+    1;
+    name: "Sarah Johnson, ",position: "CT, O, TechCorp Solutions",
+    company: "TechCorp Solutions, ",avatar: "👩‍💼, ",rating: 5,
+    content: "Zion Tech Group transformed our entire IT infrastructure. Their AI-powered solutions reduced our operational costs by 40% and improved system reliability to 99.9%. The team's expertise in quantum computing and blockchain integration is unmatched., ",category: "AI & Infrastructure, ",results: ["40% cost reduction, ", "99.9% uptime", "3x faster deployment"]
   },
   {
-    id: 2,name: "Michael Chen",position: "VP Engineering, FinTech Pro",
-    company: "FinTech Pro",avatar: "👨‍💻",rating: 5,content: "The quantum neural network platform they built for us revolutionized our trading algorithms. We're seeing 25% better prediction accuracy and processing speeds that are 10x faster than traditional systems. Game-changing technology.",category: "Quantum Computing",results: ["25% better accuracy", "10x faster processing", "Real-time analytics"]
+    id: 2,
+    name: "Michael Chen, ",position: "VP Engineerin, g, FinTech Pro",
+    company: "FinTech Pro, ",avatar: "👨‍💻, ",rating: 5,
+    content: "The quantum neural network platform they built for us revolutionized our trading algorithms. We're seeing 25% better prediction accuracy and processing speeds that are 10x faster than traditional systems. Game-changing technology., ",category: "Quantum Computing, ",results: ["25% better accuracy, ", "10x faster processing", "Real-time analytics"]
   },
   {
-    id: 3,name: "Dr. Emily Rodriguez",position: "Research Director, BioTech Innovations",
-    company: "BioTech Innovations",avatar: "👩‍🔬",rating: 5,content: "Their AI-powered research assistant has accelerated our drug discovery process by 60%. The platform's ability to analyze complex biological data and generate insights has been invaluable to our breakthrough research.",category: "AI Research",results: ["60% faster discovery", "Advanced analytics", "Breakthrough insights"]
+    id: 3,
+    name: "Dr. Emily Rodriguez, ",position: "Research Directo, r, BioTech Innovations",
+    company: "BioTech Innovations, ",avatar: "👩‍🔬, ",rating: 5,
+    content: "Their AI-powered research assistant has accelerated our drug discovery process by 60%. The platform's ability to analyze complex biological data and generate insights has been invaluable to our break,
+    through research., ",category: "AI Research, ",results: ["60% faster discovery, ", "Advanced analytics", "Breakthrough insights"]
   },
   {
-    id: 4,name: "David Thompson",position: "Operations Manager, Manufacturing Plus",
-    company: "Manufacturing Plus",avatar: "👨‍🏭",rating: 5,content: "The autonomous business operations platform streamlined our entire manufacturing process. We've seen a 35% increase in efficiency and 50% reduction in downtime. The IoT integration and real-time monitoring are exceptional.",category: "Manufacturing IoT",results: ["35% efficiency gain", "50% less downtime", "Real-time monitoring"]
+    id: 4,
+    name: "David Thompson, ",position: "Operations Manage, r, Manufacturing Plus",
+    company: "Manufacturing Plus, ",avatar: "👨‍🏭, ",rating: 5,
+    content: "The autonomous business operations platform streamlined our entire manufacturing process. We've seen a 35% increase in efficiency and 50% reduction in downtime. The IoT integration and real-time monitoring are exceptional., ",category: "Manufacturing IoT, ",results: ["35% efficiency gain, ", "50% less downtime", "Real-time monitoring"]
   },
   {
-    id: 5,name: "Lisa Wang",position: "Security Director, SecureNet",
-    company: "SecureNet",avatar: "👩‍💻",rating: 5,content: "Their zero-trust security architecture and SOC 2 compliance automation have made our security posture bulletproof. We've achieved 100% compliance with all industry standards and zero security incidents.",category: "Cybersecurity",results: ["100% compliance", "Zero incidents", "Automated security"]
+    id: 5,
+    name: "Lisa Wang, ",position: "Security Directo, r, SecureNet",
+    company: "SecureNet, ",avatar: "👩‍💻, ",rating: 5,
+    content: "Their zero-trust security architecture and SOC 2 compliance automation have made our security posture bulletproof. We've achieved 100% compliance with all industry standards and zero security incidents., ",category: "Cybersecurity, ",results: ["100% compliance, ", "Zero incidents", "Automated security"]
   }
 ],
 
-const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Research", "Manufacturing IoT", "Cybersecurity"],
+const categories  = ["All", "AI & Infrastructure", "Quantum Computing", "AI Research", "Manufacturing IoT""Cybersecurity"]export function InteractiveTestimonials() {
 
-export function InteractiveTestimonials() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedTestimonial, setSelectedTestimonial] = useState(0);
-
-  const filteredTestimonials = selectedCategory === "All" 
-    ? testimonials 
-    : testimonials.filter(t => t.category === selectedCategory);
-
-  const currentTestimonial = filteredTestimonials[selectedTestimonial];
-
-  const nextTestimonial = () => {
+  const [selectedCategorysetSelectedCategory] = useState("All")const [selectedTestimonialsetSelectedTestimonial] = useState(0)const filteredTestimonials  = selectedCategory === "All" 
+    ? testimonials: testimonials.filter(t => t.category === selectedCategory),
+    const currentTestimonial  = filteredTestimonials[selectedTestimonial]const nextTestimonial  = () => {
     setSelectedTestimonial((prev) => 
       prev === filteredTestimonials.length - 1 ? 0 : prev + 1
     );
-  };
-  const prevTestimonial = () => {
+ ,  };
+  const prevTestimonial  = () => {
     setSelectedTestimonial((prev) => 
-      prev === 0 ? filteredTestimonials.length - 1 : prev - 1
-    );
-  };
-  const goToTestimonial = (index: number) => {
-    setCurrentIndex(index)
-  };
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
+      prev === 0 ? filteredTestimonials.length - 1: prev - ,
+    1
+    ;);
+ ,  };
+  const goToTestimonial  = () => {
+    setCurrentIndex(inde;x);  };
+  const togglePlayPause  = () => {
+    setIsPlaying(!isPlayin;g);
   },
 
   // Auto-advance testimonials
   React.useEffect(() => {
-    if (!isPlaying) return,
-
-    const interval = setInterval(() => {
+    if (!isPlaying) return;
+    const interval  = setInterval(() => {
       nextTestimonial();
     }, 5000),
 
     return () => clearInterval(interval);
-  }, [isPlaying, currentIndex]),
+  }, [isPlaying;
+    currentIndex]),
 
-  const currentTestimonial = testimonials[currentIndex];
+  const currentTestimonial  = testimonials[currentIndex;];
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }};
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity:  ,
+    0y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+          viewport={{ once: true,  }}
+          transition={{ duration: 0.6,  }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">
             Client Success Stories
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -94,13 +94,17 @@ export function InteractiveTestimonials() {
           </p>
         </motion.div>
 
-        {/* Category Filter */}
+        {/* Category Filter *,
+    /}
         <motion.div 
           className="flex flex-wrap justify-center gap-3 mb-12"
-          initial={{ opacity: 0, y: 20 }};
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+          viewport={{ once: true,
+     }}
+          transition={{ duration: 0.6,
+    delay: 0.2,  }}
         >
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
@@ -124,5 +128,5 @@ export function InteractiveTestimonials() {
         </motion.div>
       </div>
     </section>
-  )
+  ),
 }

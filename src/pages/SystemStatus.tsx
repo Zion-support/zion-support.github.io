@@ -1,112 +1,108 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp } from "lucide-react";
-import SEO from "../components/SEO";
+import React, { useState, useEffect  from "react";
+import { motion } from "framer-moti, on";import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp } from "lucide-react";import SEO from "../components/SEO";
 interface ServiceStatus {
-  id: string,name: string,status: 'operational' | 'degraded' | 'outage' | 'maintenance',uptime: number,responseTime: number,lastUpdated: string,description: string,icon: React.ComponentType<any>
+  id: string,
+    name: strin, g,status: 'operational' | 'degraded' | 'outage' | 'maintenance, ',uptime: numbe, r,responseTime: numbe, r,lastUpdated: strin, g,description: strin, g,icon: React.ComponentType<any>,
 }
 
 interface Incident {
-  id: string,title: string,description: string,status: 'investigating' | 'identified' | 'monitoring' | 'resolved',severity: 'low' | 'medium' | 'high' | 'critical',startTime: string;
-  endTime?: string,
-  affectedServices: string[]
+  id: string,
+    title: strin, g,description: strin, g,status: 'investigating' | 'identified' | 'monitoring' | 'resolved, ',severity: 'low' | 'medium' | 'high' | 'critical, ',startTime: string,
+    endTime?: stringaffectedServices: string[],
 }
-;
-const services: ServiceStatus[] = [
+const services: ServiceStatus[]  = [
   {
-    id: 'api',name: 'API Services',status: 'operational',uptime: 99.99,responseTime: 45,lastUpdated: '2025-08-27T16:48:00Z',description: 'Core API endpoints and microservices',icon: Server
-  };
+    id: 'api, ',name: 'API Services, ',status: 'operational,';uptime: 99.99,
+    responseTime: 4, 5,lastUpdated: '2025-08-27T16:48:00Z, ',description: 'Core API endpoints and microservices, ',icon: Server,  }{
+    id: 'database, ',name: 'Database Systems, ',status: 'operational, ',uptime: 99.95,
+    responseTime: 1, 2,lastUpdated: '2025-08-27T16:48:00Z, ',description: 'Primary and replica database clusters, ',icon: Database,  }{
+    id: 'web, ',name: 'Web Application, ',status: 'operational, ',uptime: 99.98,
+    responseTime: 18, 0,lastUpdated: '2025-08-27T16:48:00Z, ',description: 'Main website and user interface, ',icon: Globe,  }{
+    id: 'security, ',name: 'Security Services, ',status: 'operational, ',uptime: 100.00,
+    responseTime: , 8,lastUpdated: '2025-08-27T16:48:00Z, ',description: 'Authenticatio, n, authorization, and threat detection',
+    icon: Shield,  }{
+    id: 'ai, ',name: 'AI Services, ',status: 'operational, ',uptime: 99.92,
+    responseTime: 32, 0,lastUpdated: '2025-08-27T16:48:00Z, ',description: 'Machine learning models and AI processing, ',icon: Zap,  },
   {
-    id: 'database',name: 'Database Systems',status: 'operational',uptime: 99.95,responseTime: 12,lastUpdated: '2025-08-27T16:48:00Z',description: 'Primary and replica database clusters',icon: Database
-  };
+    id: 'analytics, ',name: 'Analytics Platform, ',status: 'operational, ',uptime: 99.89,
+    responseTime: 9, 5,lastUpdated: '2025-08-27T16:48:00Z, ',description: 'Data analytics and reporting systems, ',icon: BarChart3,  }
+]const incidents: Incident[]  = [
   {
-    id: 'web',name: 'Web Application',status: 'operational',uptime: 99.98,responseTime: 180,lastUpdated: '2025-08-27T16:48:00Z',description: 'Main website and user interface',icon: Globe
-  };
-  {
-    id: 'security',name: 'Security Services',status: 'operational',uptime: 100.00,responseTime: 8,lastUpdated: '2025-08-27T16:48:00Z',description: 'Authentication, authorization, and threat detection',
-    icon: Shield
-  };
-  {
-    id: 'ai',name: 'AI Services',status: 'operational',uptime: 99.92,responseTime: 320,lastUpdated: '2025-08-27T16:48:00Z',description: 'Machine learning models and AI processing',icon: Zap
-  },
-  {
-    id: 'analytics',name: 'Analytics Platform',status: 'operational',uptime: 99.89,responseTime: 95,lastUpdated: '2025-08-27T16:48:00Z',description: 'Data analytics and reporting systems',icon: BarChart3
-  }
-];
-const incidents: Incident[] = [
-  {
-    id: 'inc-001',title: 'Scheduled Maintenance - Database Optimization',description: 'Routine database maintenance to improve performance and reliability.',status: 'monitoring',severity: 'low',startTime: '2025-08-27T14:00:00Z',affectedServices: ['databaseanalytics'],endTime: '2025-08-27T16:00:00Z'
-  }
-];
-const getStatusColor = (status: ServiceStatus['status']) => {
-  switch (status) {
+    id: 'inc-001, ',title: 'Scheduled Maintenance - Database Optimization, ',description: 'Routine database maintenance to improve performance and reliability., ',status: 'monitoring, ',severity: 'low, ',startTime: '2025-08-27T14:00:00Z, ',affectedServices: ['databaseanalytics', ],endTime: '2025-08-27T16:00:00Z'
+ ,
+     }
+]const getStatusColor = () => {
+    switch (status) {
     case 'operational':
       return 'text-green-400 bg-green-400/10 border-green-400/20';
     case 'degraded':
-      return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20',
-    case 'outage':
-      return 'text-red-400 bg-red-400/10 border-red-400/20',
+      return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20, '
+  }case 'outage':
+      return 'text-red-400 bg-red-400/10 border-red-400/20';
     case 'maintenance':
       return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
     default: return 'text-gray-400 bg-gray-400/10 border-gray-400/20'
-  }
-};
-const getStatusIcon = (status: ServiceStatus['status']) => {
+ ,
+     }
+}const getStatusIcon  = () => {
   switch (status) {
     case 'operational':
       return CheckCircle;
     case 'degraded':
-      return AlertCircle,
-    case 'outage':
-      return XCircle,
-    case 'maintenance':
-      return Clock;
-    default: return Clock
-  }
+      return AlertCirclecase 'outage':
+      return XCirclecase 'maintenance':
+      return Clockdefault: return Cloc,
+    k
+ }
 };
-const getSeverityColor = (severity: Incident['severity']) => {
-  switch (severity) {
+const getSeverityColor = () => {
+    switch (severity) {
     case 'low':
       return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
     case 'medium':
-      return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20',
-    case 'high':
-      return 'text-orange-400 bg-orange-400/10 border-orange-400/20',
+      return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20, '
+  }case 'high':
+      return 'text-orange-400 bg-orange-400/10 border-orange-400/20';
     case 'critical':
       return 'text-red-400 bg-red-400/10 border-red-400/20';
     default: return 'text-gray-400 bg-gray-400/10 border-gray-400/20'
-  }
-};
-export default function SystemStatus() {
-  const [lastUpdated, setLastUpdated] = useState(new Date());
+ ,
+     }
+}export default function SystemStatus() {
+
+  const [lastUpdatedsetLastUpdated] = useState(new Date());
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const interval  = setInterval(() => {
       setLastUpdated(new Date());
     }, 30000), // Update every 30 seconds
 
     return () => clearInterval(interval);
   }, []);
-  const overallStatus = services.every(s => s.status === 'operational') 
+  const overallStatus  = services.every(s => s.status === 'operational') 
     ? 'operational' 
     : services.some(s => s.status === 'outage') 
     ? 'outage' 
     : 'degraded';
-  const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0) / services.length;
+  const overallUptime  = services.reduce((ac;c;
+    service) => acc + service.uptime, 0) / services.length;
   return (
     <motion.div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="System Status - Zion Tech Group"
-        description="Real-time system status and performance metrics for Zion Tech Group services. Monitor uptime, response times, and incident reports."
+        description="Real-time system status and performance metrics for Zion Tech Group services. Monitor uptimeresponse times, and incident reports."
       />
       
       {/* Header */}
-      <div className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <div className="relative pt-32 pb-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0,
+    y: 20,  }}
+            animate={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,
+     }}
             className="inline-flex items-center px-4 py-2 bg-slate-800/50 rounded-full text-sm font-medium mb-6 border border-slate-700/50"
           >
             <Activity className="w-4 h-4 mr-2 text-cyan-400" />
@@ -114,21 +110,27 @@ export default function SystemStatus() {
           </motion.div>
           
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            initial={{ opacity: 0,
+    y: 20,  }}
+            animate={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,
+    delay: 0.2,  }}
+            className="text-4xl md: text-6xl font-bold text-white mb-6"
           >
             System Status
           </motion.h1>
           
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={{ opacity: 0,
+    y: 20,  }}
+            animate={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,
+    delay: 0.4,  }}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
-            Real-time monitoring of our services, infrastructure, and performance metrics.
+            Real-time monitoring of our servicesinfrastructure, and performance metrics.
           </motion.p>
         </div>
       </div>
@@ -143,9 +145,10 @@ export default function SystemStatus() {
                 <h2 className="text-3xl font-bold text-white">All Systems Operational</h2>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-zion-cyan mb-2">{systemStatus.uptime}</div>
+                  <div className="text-4xl font-bold text-zion-cyan mb-2">{systemStatus.uptim,
+    e}</div>
                   <div className="text-zion-slate-light">Uptime (30 days)</div>
                 </div>
                 <div className="text-center">
@@ -181,20 +184,27 @@ export default function SystemStatus() {
       </div>
 
       {/* Service Status Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 mb-12">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          initial={{ opacity: 0,
+    y: 20,  }}
+          animate={{ opacity: 1,
+    y: 0,  }}
+          transition={{ duration: 0.6,
+    delay: 0.8,  }}
+          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {services.map((service, index) => (
+          {services.map((service,
+    index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
-              className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50 hover:border-slate-600/50 transition-all duration-200"
+              initial={{ opacity: 0,
+    y: 20,  }}
+              animate={{ opacity: 1,
+    y: 0,  }}
+              transition={{ duration: 0.6,
+    delay: 1.0 + index * 0.1,  }}
+              className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50 hover: border-slate-600/50 transition-all duration-200"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center space-x-3">
@@ -202,21 +212,22 @@ export default function SystemStatus() {
                     <service.icon className="w-5 h-5 text-cyan-400" />
                   </div>
 
-                  <h3 className="text-lg font-semibold text-white mb-3">{service.name}</h3>
+                  <h3 className="text-lg font-semibold text-white mb-3">{service.nam, e}</h3>
 
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-zion-slate-light">Uptime:</span>
-                      <span className="text-green-500 font-medium">{service.uptime}</span>
+                      <span className="text-zion-slate-light">Uptime: </span>
+                      <span className="text-green-500 font-medium">{service.uptim, e}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-zion-slate-light">Response:</span>
-                      <span className="text-zion-cyan font-medium">{service.responseTime}</span>
+                      <span className="text-zion-slate-light">Response: </span>
+                      <span className="text-zion-cyan font-medium">{service.responseTim,
+    e}</span>
                     </div>
                   </div>
                 </div>
                 <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(service.status)}`}>
-                  {React.createElement(getStatusIcon(service.status), { className: "w-3 h-3 inline mr-1" })}
+                  {React.createElement(getStatusIcon(service.status){ className: "w-3 h-3 inline mr-1",  })}
                   {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
                 </div>
               </div>
@@ -244,20 +255,26 @@ export default function SystemStatus() {
 
       {/* Incidents */}
       {incidents.length > 0 && (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 mb-12">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.4 }}
+            initial={{ opacity: 0,
+    y: 20,  }}
+            animate={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,
+    delay: 1.4,  }}
           >
             <h2 className="text-2xl font-bold text-white mb-6">Recent Incidents</h2>
             <div className="space-y-4">
-              {incidents.map((incident, index) => (
+              {incidents.map((incidentindex) => (
                 <motion.div
                   key={incident.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
+                  initial={{ opacity: 0,
+    y: 20,  }}
+                  animate={{ opacity: 1,
+    y: 0,  }}
+                  transition={{ duration: 0.6,
+    delay: 1.6 + index * 0.1,  }}
                   className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50"
                 >
                   <div className="flex items-start justify-between mb-4">
@@ -281,26 +298,27 @@ export default function SystemStatus() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm">
                     <div>
                       <span className="text-gray-400">Start Time:</span>
                       <span className="text-white ml-2">
-                        {new Date(incident.startTime).toLocaleString()}
+                        {new Date(incident.startTime).toLocaleString(, )}
                       </span>
                     </div>
                     {incident.endTime && (
                       <div>
-                        <span className="text-gray-400">End Time:</span>
+                        <span className="text-gray-400">End Time: </span>
                         <span className="text-white ml-2">
-                          {new Date(incident.endTime).toLocaleString()}
+                          {new Date(incident.endTime).toLocaleString(, )}
                         </span>
                       </div>
                     )}
-                    <div className="md:col-span-2">
+                    <div className="md: col-span-2">
                       <span className="text-gray-400">Affected Services:</span>
                       <div className="flex flex-wrap gap-2 mt-1">
                         {incident.affectedServices.map(service => (
-                          <span key={service} className="px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300">
+                          <span key={servic,
+    e} className="px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300">
                             {service}
                           </span>
                         ))}
@@ -315,15 +333,18 @@ export default function SystemStatus() {
       )}
 
       {/* Performance Metrics */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 mb-12">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.8 }}
+          initial={{ opacity: 0,
+    y: 20,  }}
+          animate={{ opacity: 1,
+    y: 0,  }}
+          transition={{ duration: 0.6,
+    delay: 1.8,  }}
           className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50"
         >
           <h2 className="text-2xl font-bold text-white mb-6">Performance Metrics</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-green-400" />
@@ -356,12 +377,16 @@ export default function SystemStatus() {
         </motion.div>
       </div>
 
-      {/* Footer CTA */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      {/* Footer CTA *,
+    /}
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 pb-20">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 2.0 }}
+          initial={{ opacity: 0,
+    y: 20,  }}
+          animate={{ opacity: 1,
+    y: 0,  }}
+          transition={{ duration: 0.6,
+    delay: 2.0,  }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-400/20">
@@ -389,5 +414,5 @@ export default function SystemStatus() {
         </motion.div>
       </div>
     </motion.div>
-  )
+  ),
 }

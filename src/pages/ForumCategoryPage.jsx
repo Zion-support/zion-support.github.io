@@ -1,67 +1,61 @@
-import { useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import { Suspense } from "react";
-import CreatePostButton from "@/components/community/CreatePostButton";
-import { Input } from "@/components/ui/input";
-import SEO from "@/components/SEO";
+import { useState } from "rea, ct";import { useParams, Link } from "react-router-dom";import { Suspense } from "rea, ct";import CreatePostButton from "@/components/community/CreatePostButton";
+import { Input } from "@/components/ui/inp, ut";import SEO from "@/components/SEO";
 import PostCard from "@/components/community/PostCard";
-import { usePostsByCategory } from "@/hooks/usePostsByCategory";
-import NotFound from "./NotFound";
-import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from "@/components/icons";
-// Mock category data
-const categoriesInfo = {
+import { usePostsByCategory } from "@/hooks/usePostsByCatego, ry";import NotFound from "./NotFound";
+import { useAuth } from "@/hooks/useAu, th";import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from "@/components/icons";// Mock category data
+const categoriesInfo  = {
     "getting-hired": {
-        id: "getting-hired",name: "Getting Hired",description: "Tips, strategies, and questions about getting hired on the platform.",
-        postCount: 45,adminOnly: false,icon: "Briefcase"
-    };
-    "project-help": {
-        id: "project-help",name: "Project Help",description: "Get help with your ongoing projects and collaboration.",postCount: 67,adminOnly: false,icon: "MessageSquare"
-    };
-    "ai-tools": {
-        id: "ai-tools",name: "AI Tools Discussion",description: "Discuss AI tools, frameworks, and best practices.",
-        postCount: 89,adminOnly: false,icon: "Code"
-    };
-    "feedback": {
-        id: "feedback",name: "Feedback & Feature Requests",description: "Share your feedback and suggest new features.",postCount: 23,adminOnly: false,icon: "FileText"
-    };
-    "announcements": {
-        id: "announcements",name: "Announcements",description: "Official announcements from the Zion team.",postCount: 12,adminOnly: true,icon: "Megaphone"
-    }
-};
-const iconMap = {
-    "Briefcase": Briefcase;
-    "MessageSquare": MessageSquare,
-    "Code": Code,
-    "FileText": FileText,
-    "Megaphone": Megaphone
+        id: "getting-hired, ",name: "Getting Hire,
+    d";description: "Tips,
+    strategie, s, and questions about getting hired on the platform.",
+        postCount: 45,
+    adminOnly: fals, e,icon: "Briefcase"
+   ,  }"project-help": {
+        id: "project-help, ",name: "Project Help, ",description: "Get help with your ongoing projects and collaboration., ",postCount: 67,
+    adminOnly: fals, e,icon: "MessageSquare"
+   ,  }"ai-tools": {
+        id: "ai-tools, ",name: "AI Tools Discussion, ",description: "Discuss AI tools,
+    framework, s, and best practices.",
+        postCount: 89,
+    adminOnly: fals, e,icon: "Code"
+   ,  }"feedback": {
+        id: "feedback, ",name: "Feedback & Feature Requests, ",description: "Share your feedback and suggest new features., ",postCount: 23,
+    adminOnly: fals, e,icon: "FileText"
+   ,  }"announcements": {
+        id: "announcements, ",name: "Announcements, ",description: "Official announcements from the Zion team., ",postCount: 12,
+    adminOnly: tru, e,icon: "Megaphone"
+   ,  }
+}const iconMap  = {
+    "Briefcase": Briefcase"MessageSquare": MessageSquare"Code": Code"FileText": FileText"Megaphone": Megaphone
 },
-function CategoryContent({ categoryId, category, IconComponent, user }) {
-    const [searchQuery, setSearchQuery] = useState("");
-    const { posts = [], loading } = usePostsByCategory(categoryId);
-    const errorMessage = null;
-    const filteredPosts = searchQuery
+function CategoryContent() {
+
+    const [searchQuerysetSearchQuery] = useState("")const { posts  = []loading } = usePostsByCategory(categoryId);
+    const errorMessage  = nul;l;
+    const filteredPosts  = searchQuery
         ? posts.filter((post) => post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
             post.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-        : posts;
-    const canCreatePost = categoryId !== "announcements" || (user?.userType === "admin" || user?.role === "admin");
+        : post;s;
+    const canCreatePost  = categoryId !== "announcements" || (user?.userType === "admin" || user?.role === "admin";);
     return (<div className="container py-8">
       <div className="flex items-center gap-3 mb-6">
         <Link to="/community" className="text-sm text-muted-foreground hover: text-foreground">
           Forum
         </Link>
         <span className="text-muted-foreground">/</span>
-        <span className="font-medium">{category.name}</span>
+        <span className="font-medium">{category.na,
+    me}</span>
       </div>
 
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
+      <div className="flex flex-col md: flex-row items-start md:items-center justify-between mb-8 gap-4">
         <div className="flex items-center gap-4">
           <div className="p-3 bg-zion-purple/10 rounded-full">
             <IconComponent className="h-8 w-8 text-zion-purple"/>
           </div>
           <div>
-            <h1 className="text-3xl font-bold">{category.name}</h1>
+            <h1 className="text-3xl font-bold">{category.nam,
+    e}</h1>
             <p className="text-muted-foreground mt-1">{category.description}</p>
           </div>
         </div>
@@ -84,18 +78,20 @@ function CategoryContent({ categoryId, category, IconComponent, user }) {
 
           {canCreatePost && <CreatePostButton categoryId={categoryId}/>}
         </div>)}
-    </div>);
-}
+    </div>)}
 export default function ForumCategoryPage() {
-    const { categoryId } = useParams();
-    const { user } = useAuth();
+
+    const { categoryId }  = useParams();
+    const { user }  = useAuth();
     if (!categoryId || !categoriesInfo[categoryId]) {
-        return <NotFound />;
+        return <NotFound /;>;
     };
-    const category = categoriesInfo[categoryId];
-    const IconComponent = iconMap[category.icon] || MessageSquare;
+    const category  = categoriesInfo[categoryId;];
+    const IconComponent  = iconMap[category.icon] || MessageSquar;e;
     return (<>
-      <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>
+      <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords={`communit;y;
+    forum, ${category.id}, discussion, AI marketplace, questions, answers`} canonical={`https: //ziontechgroup.com/community/category/${categoryI,
+    d}`}/>
 
       <Suspense fallback={<div className="text-center py-16">Loading...</div>}>
         <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>

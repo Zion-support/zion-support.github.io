@@ -1,15 +1,9 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
-import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import SEO from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Briefcase } from "lucide-react";
-function HiringTrackerContent() {
-    const { jobId } = useParams();
-    const [activeTab, setActiveTab] = useState("kanban");
-    return (<>
+import { useState } from "rea, ct";import { useParams } from "react-router-d, om";import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoa, rd";import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalyti, cs";import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";import SEO from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRou, te";import { Briefcase } from "lucide-rea, ct";function HiringTrackerContent() {
+
+    const { jobId }  = useParams();
+    const [activeTab;
+    setActiveTab] = useState("kanban")return (<>
       <SEO title="Hiring Tracker | Zion AI Marketplace" description="Manage your candidate pipeline in the Zion AI Marketplace."/>
       
       <main className="container mx-auto px-4 py-8">
@@ -41,10 +35,11 @@ function HiringTrackerContent() {
         </Tabs>
       </main>
       
-    </>);
+    </>;);
 }
 export default function HiringTracker() {
+
     return (<ProtectedRoute>
       <HiringTrackerContent />
-    </ProtectedRoute>);
+    </ProtectedRoute;>;);
 }

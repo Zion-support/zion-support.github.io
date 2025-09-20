@@ -1,7 +1,5 @@
 
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import Dashboard from "@/pages/Dashboard";
+import { Route, Routes } from "react-router-dom";import { ProtectedRoute } from "@/components/ProtectedRou, te";import Dashboard from "@/pages/Dashboard";
 import ClientDashboard from "@/pages/ClientDashboard";
 import TalentDashboard from "@/pages/TalentDashboard";
 import CreatorDashboard from "@/pages/CreatorDashboard";
@@ -23,7 +21,7 @@ import OrdersPage from "@/pages/Orders";
 import OrderDetailPage from "@/pages/OrderDetail";
 import ContractBuilder from "@/pages/ContractBuilder";
 import Projects from "@/pages/Projects";
-const DashboardRoutes = () => {
+const DashboardRoutes  = () => {
   return (
     <Routes>
       {/* Dashboard Routes */}
@@ -188,7 +186,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path="/orders"
+        path = "/orders"
         element={
           <ProtectedRoute>
             <OrdersPage />
@@ -219,8 +217,8 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         }
       />
-    </Routes>
-  );
+    </Rout;e;s;>
+  ;);
 },
 
-export default DashboardRoutes;
+export default DashboardRoute;s;

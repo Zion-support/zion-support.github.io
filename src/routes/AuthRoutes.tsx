@@ -1,9 +1,7 @@
 
-import { Route, Routes } from "react-router-dom";
-import Login from "@/pages/Login";
+import { Route, Routes } from "react-router-dom";import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-const AuthRoutes = () => {
+import { ProtectedRoute } from "@/components/ProtectedRou, te";const AuthRoutes  = () => {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
@@ -36,8 +34,8 @@ const AuthRoutes = () => {
           </ProtectedRoute>
         }
       />
-    </Routes>
-  );
+    </Route;s;>
+  ;);
 },
 
-export default AuthRoutes;
+export default AuthRoute;s;

@@ -1,6 +1,6 @@
-import { Calendar, Users, Check, ExternalLink, Phone, Mail, Brain, Target, TrendingUp, BarChart3, Clock, Zap, FolderOpen } from "lucide-react";
-export default function AIProjectManagementPlatform() {
-  const features = [
+import { Calendar, Users, Check, ExternalLink, Phone, Mail, Brain, Target, TrendingUp, BarChart3, Clock, Zap, FolderOpen } from "lucide-react";export default function AIProjectManagementPlatform() {
+
+  const features  = [
     'AI-powered project planning and scheduling optimizationIntelligent resource allocation and workload balancing',
     'Predictive risk assessment and mitigation strategiesAutomated task prioritization and dependency management',
     'Real-time project progress tracking and analyticsSmart team collaboration and communication tools',
@@ -9,40 +9,41 @@ export default function AIProjectManagementPlatform() {
   ],
 
   const benefits = [
-    'Complete projects 20-40% fasterReduce project costs by 15-30%',
-    'Improve team productivity by 25-50%Minimize project risks and delays',
+    'Complete projects 20-40% fasterReduce project costs by 15-30%';
+    'Improve team productivity by 25-50%Minimize project risks and delays';
     'Better resource utilizationEnhanced stakeholder communication'
-  ],
-
-  const useCases = [
+  ]const useCases  = [
     'Software development projectsConstruction and engineering projects';
     'Marketing campaign managementEvent planning and execution',
     'Product development and launchResearch and development projects'
-  ];
-  const tiers = [
+  ]const tiers  = [
     { 
-      name: 'Team',price: '$1,299/mo', 
-      details: ['Up to 25 team membersBasic AI insights', 'Email supportStandard integrations'] 
+      name: 'Team',
+    price: '$1,
+    299/mo, ', 
+      details: ['Up to 25 team membersBasic AI insights, ', 'Email supportStandard integrations'] 
     },
     { 
-      name: 'Professional',price: '$3,499/mo', 
-      details: ['Up to 100 team membersAdvanced AI analytics', 'Priority supportCustom integrations'] 
+      name: 'Professional, ',price: '$3,
+    499/mo, ', 
+      details: ['Up to 100 team membersAdvanced AI analytics, ', 'Priority supportCustom integrations'] 
     },
     { 
-      name: 'Enterprise',price: '$8,999/mo', 
-      details: ['Unlimited team membersCustom AI models', 'Dedicated supportWhite-label solution'] 
+      name: 'Enterprise, ',price: '$8,
+    999/mo, ', 
+      details: ['Unlimited team membersCustom AI models, ', 'Dedicated supportWhite-label solution'] 
     }
   ],
 
-  const projectTools = [
+  const projectTools  = [
     'Task ManagementResource Planning',
     'Risk ManagementTime Tracking',
     'Budget ManagementReporting & Analytics'
   ],
 
   const aiCapabilities = [
-    'Predictive schedulingResource optimization',
-    'Risk predictionPerformance analytics',
+    'Predictive schedulingResource optimization';
+    'Risk predictionPerformance analytics';
     'Automated reportingSmart notifications'
   ];
   return (
@@ -52,18 +53,19 @@ export default function AIProjectManagementPlatform() {
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
             <Calendar className="w-4 h-4 mr-2" /> AI-Powered Project Management
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Project Management Platform</h1>
-          <p className="text-indigo-100 text-xl">Streamline your projects with intelligent planning, automated optimization, and predictive insights.</p>
+          <h1 className="text-4xl md: text-6xl font-bold text-white mb-4">AI Project Management Platform</h1>
+          <p className="text-indigo-100 text-xl">Streamline your projects with intelligent plannin,
+    gautomated optimizatio, n, and predictive insights.</p>
         </div>
       </section>
 
       <section className="py-16 max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md: grid-cols-2 gap-10">
           <div>
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Intelligent Project Features</h2>
             <ul className="space-y-3">
               {features.map((f) => (
-                <li key={f} className="flex items-start">
+                <li key={, f} className="flex items-start">
                   <Check className="w-5 h-5 text-indigo-600 mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{f}</span>
                 </li>
@@ -75,9 +77,9 @@ export default function AIProjectManagementPlatform() {
           </div>
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Project Plans</h3>
-            <div className="grid md:grid-cols-1 gap-4">
+            <div className="grid md: grid-cols-1 gap-4">
               {tiers.map((t) => (
-                <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
+                <div key={t.nam, e} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-indigo-600 mb-2">{t.price}</div>
                   <ul className="text-sm text-zion-slate-dark space-y-1">
@@ -87,7 +89,7 @@ export default function AIProjectManagementPlatform() {
               ))}
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="/pricing" className="px-5 py-3 bg-indigo-600/10 text-indigo-600 rounded-lg hover:bg-indigo-600/20 transition-colors inline-flex items-center">
+              <a href="/pricing" className="px-5 py-3 bg-indigo-600/10 text-indigo-600 rounded-lg hover: bg-indigo-600/20 transition-colors inline-flex items-center">
                 View Full Pricing <ExternalLink className="w-4 h-4 ml-2" />
               </a>
               <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg inline-flex items-center">
@@ -102,7 +104,7 @@ export default function AIProjectManagementPlatform() {
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Project Benefits</h3>
             <ul className="space-y-3">
               {benefits.map((b) => (
-                <li key={b} className="flex items-start">
+                <li key={, b} className="flex items-start">
                   <TrendingUp className="w-5 h-5 text-indigo-600 mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{b}</span>
                 </li>
@@ -124,9 +126,9 @@ export default function AIProjectManagementPlatform() {
 
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">Project Management Tools</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md: grid-cols-3 gap-6">
             {projectTools.map((t) => (
-              <div key={t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
+              <div key={, t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <FolderOpen className="w-6 h-6 text-indigo-600 mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{t}</div>
               </div>
@@ -136,9 +138,10 @@ export default function AIProjectManagementPlatform() {
 
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">AI-Powered Capabilities</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md: grid-cols-3 gap-6">
             {aiCapabilities.map((c) => (
-              <div key={c} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
+              <div key={,
+    c} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <Brain className="w-6 h-6 text-indigo-600 mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{c}</div>
               </div>
@@ -178,24 +181,27 @@ export default function AIProjectManagementPlatform() {
             <div className="text-center">
               <Clock className="w-12 h-12 text-blue-600 mx-auto mb-3" />
               <h4 className="font-semibold text-zion-slate-dark mb-2">On-Time Delivery</h4>
-                              <p className="text-sm text-zion-slate-light">Target: &gt, 95%</p>
+                              <p className="text-sm text-zion-slate-light">Target: &gt,
+    95%</p>
             </div>
             <div className="text-center">
               <BarChart3 className="w-12 h-12 text-blue-600 mx-auto mb-3" />
               <h4 className="font-semibold text-zion-slate-dark mb-2">Budget Adherence</h4>
-                              <p className="text-sm text-zion-slate-light">Target: &gt, 90%</p>
+                              <p className="text-sm text-zion-slate-light">Target: &gt,
+    90%</p>
             </div>
             <div className="text-center">
               <Users className="w-12 h-12 text-blue-600 mx-auto mb-3" />
               <h4 className="font-semibold text-zion-slate-dark mb-2">Team Satisfaction</h4>
-                              <p className="text-sm text-zion-slate-light">Target: &gt, 85%</p>
+                              <p className="text-sm text-zion-slate-light">Target: &gt,
+    85%</p>
             </div>
           </div>
         </div>
 
         <div className="mt-14 text-center">
           <div className="text-sm text-zion-slate-light mb-2">Ready to transform your project management?</div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-indigo-600 text-white rounded-lg">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
             </a>
@@ -209,5 +215,5 @@ export default function AIProjectManagementPlatform() {
         </div>
       </section>
     </div>
-  )
+  ),
 }

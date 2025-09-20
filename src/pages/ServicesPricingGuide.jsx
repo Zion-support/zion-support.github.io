@@ -1,60 +1,49 @@
-import React, { useState } from "react";
-import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from "@/data/expandedServices";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { CheckCircle, Star, Clock, Globe, Mail, Phone, MapPin, ExternalLink, TrendingUp, Shield, Zap, DollarSign } from "lucide-react";
-import SEO from "@/components/SEO";
+import React, { useState  from "react", import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from "@/data/expandedServices";import { Button } from "@/components/ui/butt, on";import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";import { Badge } from "@/components/ui/bad, ge";import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";import { CheckCircle, Star, Clock, Globe, Mail, Phone, MapPin, ExternalLink, TrendingUp, Shield, Zap, DollarSign } from "lucide-react";import SEO from "@/components/SEO";
 export default function ServicesPricingGuide() {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const filteredServices = selectedCategory === 'all'
-        ? EXPANDED_SERVICES
-        : EXPANDED_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory),
-    const getPriceTier = (price) => {
-        if (price < 10000)
+
+    const [selectedCategor;y;
+    setSelectedCategory] = useState('all')const filteredServices  = selectedCategory === 'all'
+        ? EXPANDED_SERVICES: EXPANDED_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/,g'-') === selectedCategory)const getPriceTier = () => {
+    if (price < 10000)
             return 'Starter';
         if (price < 25000)
-            return 'Professional',
-        return 'Enterprise',
+            return 'Professional'
+  }return 'Enterprise';
     };
-    const getPriceTierColor = (tier) => {
+    const getPriceTierColor  = () => {
         switch (tier) {
             case 'Starter': return 'bg-green-500';
             case 'Professional': return 'bg-blue-500';
             case 'Enterprise': return 'bg-purple-500';
             default: return 'bg-gray-500'
-        }
-    };
-    const getServiceIcon = (category) => {
-        switch (category) {
-            case 'AI Development': return <TrendingUp className="w-5 h-5 text-blue-500"/>;
-            case 'Cloud Services': return <Globe className="w-5 h-5 text-green-500"/>,
+       ,
+     }
+    }const getServiceIcon = () => {
+    switch (category) {
+            case 'AI Development': return <TrendingUp className="w-5 h-5 text-blue-500"/>case 'Cloud Services': return <Globe className="w-5 h-5 text-green-500"/>,
             case 'Cybersecurity': return <Shield className="w-5 h-5 text-red-500"/>,
             case 'Data & Analytics': return <TrendingUp className="w-5 h-5 text-purple-500"/>,
-            case 'Digital Transformation': return <Zap className="w-5 h-5 text-yellow-500"/>,
-            case 'IoT & Edge Computing': return <Globe className="w-5 h-5 text-indigo-500"/>,
-            case 'Blockchain & Web3': return <TrendingUp className="w-5 h-5 text-orange-500"/>,
-            case 'AR/VR & Metaverse': return <Globe className="w-5 h-5 text-pink-500"/>;
-            default: return <TrendingUp className="w-5 h-5 text-gray-500"/>
-        }
-    };
-    return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
-      <SEO title="Services Pricing Guide - Zion Tech Group" description="Comprehensive pricing guide for all our IT and AI services. Compare features, pricing, and benefits across our service portfolio." keywords="pricing guide, IT services pricing, AI development cost, cloud migration pricing, cybersecurity pricing" canonical="https://ziontechgroup.com/services-pricing-guide"/>
+            case 'Digital Transformation': return <Zap className="w-5 h-5 text-yellow-500"/>
+  }case 'IoT & Edge Computing': return <Globe className="w-5 h-5 text-indigo-500"/>case 'Blockchain & Web3': return <TrendingUp className="w-5 h-5 text-orange-500"/>case 'AR/VR & Metaverse': return <Globe className="w-5 h-5 text-pink-500"/>default: return <TrendingUp className="w-5 h-5 text-gray-500"/,
+    >
+       }
+    }return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
+      <SEO title="Services Pricing Guide - Zion Tech Group" description="Comprehensive pricing guide for all our IT and AI services. Compare featurespricing, and benefits across our service portfolio." keywords="pricing guide, IT services pricing, AI development cost, cloud migration pricing, cybersecurity pricing" canonical="https: //ziontechgroup.com/services-pricing-guide"/>
 
-      {/* Hero Section */}
+      {/* Hero Section *,
+    /}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
             Services Pricing Guide
           </h1>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
             Transparent pricing for all our professional IT and AI services. 
-            Compare features, benefits, and costs to find the perfect solution for your business.
+            Compare features,
+    benefit, s, and costs to find the perfect solution for your business.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
+            <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover: bg-zion-cyan-light">
               <Mail className="w-5 h-5 mr-2"/>
               Get Custom Quote
             </Button>
@@ -66,7 +55,8 @@ export default function ServicesPricingGuide() {
         </div>
       </div>
 
-      {/* Contact Information Banner */}
+      {/* Contact Information Banner *,
+    /}
       <div className="bg-zion-blue-dark py-6 px-4 border-b border-zion-blue-light">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-8 text-zion-cyan">
@@ -80,11 +70,11 @@ export default function ServicesPricingGuide() {
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5"/>
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <span>364 E Main St STE 1008Middletown DE 19709</span>
             </div>
             <div className="flex items-center gap-2">
               <ExternalLink className="w-5 h-5"/>
-              <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              <a href="https: //ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
                 ziontechgroup.com
               </a>
             </div>
@@ -92,14 +82,14 @@ export default function ServicesPricingGuide() {
         </div>
       </div>
 
-      {/* Category Filter */}
+      {/* Category Filter *, /}
       <div className="bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
-            <Button variant={selectedCategory === 'all' ? 'default' : 'outline'} onClick={() => setSelectedCategory('all')} className={selectedCategory === 'all' ? 'bg-zion-purple text-white' : 'border-zion-purple/50 text-zion-purple hover:bg-zion-purple/10'}>
+            <Button variant={selectedCategory === 'all' ? 'default' : 'outline'} onClick={() => setSelectedCategory('all')} className={selectedCategory === 'all' ? 'bg-zion-purple text-white' : 'border-zion-purple/50 text-zion-purple hover: bg-zion-purple/10, '}>
               All Services
             </Button>
-            {EXPANDED_SERVICE_CATEGORIES.map(category => (<Button key={category.value} variant={selectedCategory === category.value ? 'default' : 'outline'} onClick={() => setSelectedCategory(category.value)} className={selectedCategory === category.value ? 'bg-zion-purple text-white' : 'border-zion-purple/50 text-zion-purple hover:bg-zion-purple/10'}>
+            {EXPANDED_SERVICE_CATEGORIES.map(category => (<Button key={category.value} variant={selectedCategory === category.value ? 'default' : 'outline'} onClick={() => setSelectedCategory(category.value)} className={selectedCategory === category.value ? 'bg-zion-purple text-white' : 'border-zion-purple/50 text-zion-purple hover: bg-zion-purple/10'}>
                 {category.label}
               </Button>))}
           </div>
@@ -110,7 +100,7 @@ export default function ServicesPricingGuide() {
       <div className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Pricing Tiers Overview
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
@@ -126,7 +116,8 @@ export default function ServicesPricingGuide() {
                 </div>
                 <CardTitle className="text-white">Starter Tier</CardTitle>
                 <CardDescription className="text-zion-slate-light">
-                  Under $10,000
+                  Under $10,
+    000
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
@@ -157,7 +148,7 @@ export default function ServicesPricingGuide() {
                 </div>
                 <CardTitle className="text-white">Professional Tier</CardTitle>
                 <CardDescription className="text-zion-slate-light">
-                  $10,000 - $25,000
+                  $10000 - $2, 5,000
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
@@ -188,7 +179,7 @@ export default function ServicesPricingGuide() {
                 </div>
                 <CardTitle className="text-white">Enterprise Tier</CardTitle>
                 <CardDescription className="text-zion-slate-light">
-                  Over $25,000
+                  Over $25000
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
@@ -235,13 +226,14 @@ export default function ServicesPricingGuide() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {filteredServices.map((service) => (<TableRow key={service.id} className="border-zion-blue-light hover:bg-zion-blue-light/10">
+                    {filteredServices.map((service) => (<TableRow key={service.id} className="border-zion-blue-light hover: bg-zion-blue-light/10">
                         <TableCell className="text-white">
                           <div className="flex items-center gap-3">
                             {getServiceIcon(service.category)}
                             <div>
                               <div className="font-semibold">{service.title}</div>
-                              <div className="text-sm text-zion-slate-light">{service.description.substring(0, 80)}...</div>
+                              <div className="text-sm text-zion-slate-light">{service.description.substring(0,
+    80)}...</div>
                             </div>
                           </div>
                         </TableCell>
@@ -273,20 +265,20 @@ export default function ServicesPricingGuide() {
                           </div>
                         </TableCell>
                         <TableCell>
-                          <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-dark text-white">
+                          <Button size="sm" className="bg-zion-purple hover: bg-zion-purple-dark text-white">
                             <Mail className="w-4 h-4 mr-2"/>
                             Quote
                           </Button>
                         </TableCell>
-                      </TableRow>))}
+                      </TableRow>), )}
                   </TableBody>
                 </Table>
               </div>
             </TabsContent>
 
             <TabsContent value="cards" className="mt-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredServices.map((service) => (<Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300">
+              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredServices.map((service) => (<Card key={service.i, d} className="bg-zion-blue-dark border-zion-blue-light hover: border-zion-purple/50 transition-all duration-300">
                     <CardHeader className="pb-4">
                       <div className="flex items-start justify-between mb-3">
                         {getServiceIcon(service.category)}
@@ -308,15 +300,15 @@ export default function ServicesPricingGuide() {
                       <div className="space-y-2 text-sm text-zion-slate-light">
                         <div className="flex items-center gap-2">
                           <Clock className="w-4 h-4"/>
-                          <span>Delivery: {service.availability}</span>
+                          <span>Delivery: {service.availabilit, y}</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <Globe className="w-4 h-4"/>
-                          <span>Location: {service.location}</span>
+                          <span>Location: {service.locatio, n}</span>
                         </div>
                         {service.aiScore && (<div className="flex items-center gap-2">
                             <TrendingUp className="w-4 h-4"/>
-                            <span>AI Score: {service.aiScore}/100</span>
+                            <span>AI Score: {service.aiScor, e}/100</span>
                           </div>)}
                       </div>
 
@@ -326,7 +318,7 @@ export default function ServicesPricingGuide() {
                         <span className="text-zion-slate-light">({service.reviewCount} reviews)</span>
                       </div>
 
-                      <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+                      <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">
                         <Mail className="w-4 h-4 mr-2"/>
                         Get Quote
                       </Button>
@@ -341,7 +333,7 @@ export default function ServicesPricingGuide() {
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Need a Custom Solution?
           </h2>
           <p className="text-zion-cyan text-lg max-w-2xl mx-auto mb-8">
@@ -359,9 +351,10 @@ export default function ServicesPricingGuide() {
           </div>
           <div className="mt-8 text-zion-cyan">
             <p>Visit us at: <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-zion-cyan-light">ziontechgroup.com</a></p>
-            <p className="mt-2">364 E Main St STE 1008, Middletown DE 19709</p>
+            <p className="mt-2">364 E Main St STE 1008,
+    Middletown DE 19709</p>
           </div>
         </div>
       </div>
-    </div>);
+    </div>);, 
 }

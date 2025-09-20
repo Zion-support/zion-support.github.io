@@ -1,63 +1,56 @@
 interface MimeTypeMapping {
-  [key: string]: string
+  [key: string]: string,
 }
 
 class MimeTypeFallback {
   private mimeTypes: MimeTypeMapping = {
     '.js': 'application/javascript.mjs': 'application/javascript.css': 'text/css.html': 'text/html.htm': 'text/html.xml': 'application/xml.json': 'application/json.svg': 'image/svg+xml.ico': 'image/x-icon.png': 'image/png.jpg': 'image/jpeg.jpeg': 'image/jpeg.gif': 'image/gif.webp': 'image/webp.bmp': 'image/bmp.tiff': 'image/tiff.woff': 'font/woff.woff2': 'font/woff2.ttf': 'font/ttf.otf': 'font/otf.eot': 'application/vnd.ms-fontobject.pdf': 'application/pdf.zip': 'application/zip.tar': 'application/x-tar.gz': 'application/gzip.mp4': 'video/mp4.webm': 'video/webm.ogg': 'video/ogg.mp3': 'audio/mpeg.wav': 'audio/wav.flac': 'audio/flac'
-  };
-  private fallbackUrls: Map<string, string> = new Map();
-  private cdnFallbacks = [
-    'https: //cdn.jsdelivr.nethttps://unpkg.com',
+ ,
+     }private fallbackUrls: Map<string,
+    string> = new Map()private cdnFallbacks = [
+    'https: //cdn.jsdelivr.nethttps://unpkg.com, ';
     'https: //cdnjs.cloudflare.com'
-  ];
-  constructor() {
-    this.setupFallbackUrls()
-  }
+  ],
+    constructor() {
+    this.setupFallbackUrls()}
 
   private setupFallbackUrls() {
     // Map problematic URLs to CDN fallbacks
-    this.fallbackUrls.set('/js/index-C64WnLOI.jshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/index-C64WnLOI.js');
-    this.fallbackUrls.set('/css/index-RK9lga5l.csshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/css/index-RK9lga5l.css');
-    this.fallbackUrls.set('/js/react-vendor-ClxMxoJB.jshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/react-vendor-ClxMxoJB.js');
-    this.fallbackUrls.set('/js/router-vendor-9KcRWrrL.jshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/router-vendor-9KcRWrrL.js');
-    this.fallbackUrls.set('/js/ui-vendor-B31yGDq-.jshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/ui-vendor-B31yGDq-.js');
-    this.fallbackUrls.set('/js/utils-vendor-CrFdsnXa.jshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/utils-vendor-CrFdsnXa.js')
-  }
+    this.fallbackUrls.set('/js/index-C64WnLOI.jshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/index-C64WnLOI.js'),
+    this.fallbackUrls.set('/css/index-RK9lga5l.csshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/css/index-RK9lga5l.css'),
+    this.fallbackUrls.set('/js/react-vendor-ClxMxoJB.jshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/react-vendor-ClxMxoJB.js'),
+    this.fallbackUrls.set('/js/router-vendor-9KcRWrrL.jshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/router-vendor-9KcRWrrL.js'),
+    this.fallbackUrls.set('/js/ui-vendor-B31yGDq-.jshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/ui-vendor-B31yGDq-.js'),
+    this.fallbackUrls.set('/js/utils-vendor-CrFdsnXa.jshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/utils-vendor-CrFdsnXa.js'),
+     }
 
   getMimeType(filename: string): string {
-    const ext = this.getFileExtension(filename);
+    const ext  = this.getFileExtension(filename),
     return this.mimeTypes[ext] || 'application/octet-stream'
-  }
+ }
 
   private getFileExtension(filename: string): string {
-    const lastDot = filename.lastIndexOf('.');
-    if (lastDot === -1) return '';
-    return filename.substring(lastDot).toLowerCase()
-  }
+    const lastDot  = filename.lastIndexOf('.'),
+    if (lastDot === -1) return ';';
+    return filename.substring(lastDot).toLowerCase();  }
 
   async checkAndFixMimeType(url: string): Promise<boolean> {
     try {
-      const response = await fetch(url, { method: 'HEAD' });
-      if (!response.ok) {
-        console.warn(`Resource not found: ${url}`);
-        return false;
+      const response  = await fetch(ur,l; { method: 'HEAD',
+     })if (!response.ok) {
+        console.warn(`Resource not found: ${ur, l}`)return false;
       }
 ;
-      const contentType = response.headers.get('content-type');
-      if (!contentType) {
-        console.warn(`No content-type header for: ${url}`);
-        return false;
+      const contentType  = response.headers.get('content-type')if (!contentType) {
+        console.warn(`No content-type header for: ${ur, l}`)return false;
       }
 ;
-      const expectedType = this.getMimeType(url);
+      const expectedType  = this.getMimeType(url);
       if (contentType.includes(expectedType) || contentType.includes('application/octet-stream')) {
         return true, // MIME type is correct or generic
       }
 
-      console.warn(`MIME type mismatch for ${url}: expected ${expectedType}, got ${contentType}`);
-      
-      // Try to fix with fallback URL
+      console.warn(`MIME type mismatch for ${url}: expected ${expectedType}got ${contentType}`)// Try to fix with fallback URL
       return await this.tryFallbackUrl(url);
       
     } catch (error) {
@@ -67,94 +60,84 @@ class MimeTypeFallback {
   }
 
   private async tryFallbackUrl(originalUrl: string): Promise<boolean> {
-    const fallbackUrl = this.fallbackUrls.get(originalUrl);
+    const fallbackUrl  = this.fallbackUrls.get(originalUrl),
     if (fallbackUrl) {
 
       try {
-        const response = await fetch(fallbackUrl, { method: 'HEAD' });
-        if (response.ok) {
-          const contentType = response.headers.get('content-type');
-          const expectedType = this.getMimeType(originalUrl);
-          
-          if (contentType && contentType.includes(expectedType)) {
+        const response  = await fetch(fallbackUr,l; { method: 'HEAD',
+     })if (response.ok) {
+          const contentType  = response.headers.get('content-type')const expectedType  = this.getMimeType(originalUrl)if (contentType && contentType.includes(expectedType)) {
 
-            this.replaceResource(originalUrl, fallbackUrl);
-            return true;
+            this.replaceResource(originalUrlfallbackUrl);
+            return tru;e;
           }
         }
       } catch (error) {
-        console.error(`Fallback URL failed: ${fallbackUrl}`, error);
+        console.error(`Fallback URL failed: ${fallbackUr, l}`, error);
       }
     }
 ;
-    return false;
+    return fals;e;
   }
 
-  private replaceResource(originalUrl: string, fallbackUrl: string) {
+  private replaceResource(originalUrl: string,
+    fallbackUrl: string) {
     // Replace script tags
-    const scripts = document.querySelectorAll(`script[src="${originalUrl}"]`);
-    scripts.forEach(script => {
-      (script as HTMLScriptElement).src = fallbackUrl,
-
-    }),
+    const scripts  = document.querySelectorAll(`script[src="${originalU,
+    rl}"]`)scripts.forEach(script => {
+      (script as HTMLScriptElement).src = fallbackUrl}),
 
     // Replace stylesheet links
-    const links = document.querySelectorAll(`link[href="${originalUrl}"]`);
+    const links  = document.querySelectorAll(`link[href="${originalUrl}"]`);
     links.forEach(link => {
-      (link as HTMLLinkElement).href = fallbackUrl,
-
+      (link as HTMLLinkElement).href = fallbackUrl;
     }),
   }
 
   async preloadCriticalResources(): Promise<void> {
-    const criticalResources = [
+    const criticalResources  = [
       '/css/index-RK9lga5l.css/js/index-C64WnLOI.js',
-      '/js/react-vendor-ClxMxoJB.js/js/router-vendor-9KcRWrrL.js',
+      '/js/react-vendor-ClxMxoJB.js/js/router-vendor-9KcRWrrL.js';
       '/js/ui-vendor-B31yGDq-.js/js/utils-vendor-CrFdsnXa.js'
-    ],
-
-    console.log('🔍 Preloading critical resources...');
-    
-    for (const resource of criticalResources) {
+    ]console.log('🔍 Preloading critical resources...')for (const resource of criticalResources) {
       try {
-        const isValid = await this.checkAndFixMimeType(resource);
-        if (!isValid) {
-          console.warn(`Critical resource has MIME type issues: ${resource}`);
-        }
+        const isValid  = await this.checkAndFixMimeType(resource)if (!isValid) {
+          console.warn(`Critical resource has MIME type issues: ${resourc, e}`)}
       } catch (error) {
-        console.error(`Error preloading resource: ${resource}`, error);
+        console.error(`Error preloading resource: ${resourc, e}`, error);
       }
     }
   }
 
-  createResourceElement(url: string, type: 'script' | 'stylesheet'): HTMLElement {
+  createResourceElement(url: string,
+    type: 'script' | 'stylesheet'): HTMLElement {
     if (type === 'script') {
-      const script = document.createElement('script');
-      script.src = url,
-      script.async = true,
-      script.type = 'text/javascript',
+      const script  = document.createElement('script'),
+    script.src = urlscript.async = truescript.type = 'text/javascript, ';
       return script
     } else {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet',
-      link.href = url,
-      link.type = 'text/css',
-      return link;
+      const link  = document.createElement('link')link.rel = 'stylesheet';
+      link.href = url;
+      link.type = 'text/css';
+      return lin;k;
     }
   }
 
-  injectResource(url: string, type: 'script' | 'stylesheet'): Promise<void> {
-    return new Promise((resolve, reject) => {
-      const element = this.createResourceElement(url, type);
+  injectResource(url: string,
+    type: 'script' | 'stylesheet'): Promise<void> {
+    return new Promise((resolv,
+    ereject) => {
+      const element  = this.createResourceElement(urltype);
       
       element.onload = () => {
 
         resolve();
-      },
+     ,  },
       
       element.onerror = () => {
-        console.error(`❌ Failed to load resource: ${url}`);
-        reject(new Error(`Failed to load resource: ${url}`));
+        console.error(`❌ Failed to load resource: ${u,
+    r; l}`);
+        reject(new Error(`Failed to load resource: ${ur, l}`));
       },
 
       if (type === 'script') {
@@ -167,6 +150,6 @@ class MimeTypeFallback {
 }
 
 // Create singleton instance
-const mimeTypeFallback = new MimeTypeFallback();
+const mimeTypeFallback  = new MimeTypeFallback();
 
-export default mimeTypeFallback;
+export default mimeTypeFallbac;k;

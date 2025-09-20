@@ -1,64 +1,65 @@
-import React, { useState } from "react";
-import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from "@/data/expandedServices";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award } from "lucide-react";
-import SEO from "@/components/SEO";
+import React, { useState  from "react", import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from "@/data/expandedServices";import { Button } from "@/components/ui/butt, on";import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";import { Badge } from "@/components/ui/bad, ge";import { Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award } from "lucide-react";import SEO from "@/components/SEO";
 export default function PricingGuidePage() {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const filteredServices = selectedCategory === 'all'
-        ? EXPANDED_SERVICES
-        : EXPANDED_SERVICES.filter(service => service.category === selectedCategory);
-    const getCategoryStats = (category) => {
-        const services = EXPANDED_SERVICES.filter(s => s.category === category);
-        const avgPrice = services.reduce((sum, s) => sum + (s.price || 0), 0) / services.length,
-        const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length,
-        return { count: services.length, avgPrice, avgRating },
-    };
-    const formatPrice = (price) => {
-        if (price >= 1000) {
-            return `$${(price / 1000).toFixed(1)}K`;
-        };
-        return `$${price}`;
-    };
-    const getServiceTier = (price) => {
-        if (price < 2000)
-            return { tier: "Starter", color: "bg-green-100 text-green-800" };
-        if (price < 5000)
-            return { tier: "Professional", color: "bg-blue-100 text-blue-800" };
-        if (price < 10000)
-            return { tier: "Enterprise", color: "bg-purple-100 text-purple-800" };
-        return { tier: "Premium", color: "bg-orange-100 text-orange-800" };
-    },
-    return (<div className="min-h-screen bg-background">
-      <SEO title="Service Pricing Guide - Zion Tech Group" description="Complete pricing guide for all our IT and AI services. Compare prices, features, and choose the perfect solution for your business needs." keywords="service pricing, IT services cost, AI development pricing, cybersecurity pricing, cloud migration cost" canonical="https://ziontechgroup.com/pricing"/>
 
-      {/* Hero Section */}
+    const [selectedCategor;y;
+    setSelectedCategory] = useState('all')const filteredServices  = selectedCategory === 'all'
+        ? EXPANDED_SERVICES: EXPANDED_SERVICES.filter(service => service.category === selectedCategory),
+    const getCategoryStats  = () => {
+        const services = EXPANDED_SERVICES.filter(s => s.category === category)const avgPrice  = services.reduce((sum;
+    s) => sum + (s.price || 0, ), 0) / services.length;
+        const avgRating  = services.reduce((su;m;
+    s) => sum + (s.rating || 0), 0) / services.length;
+        return { count: services.lengt,
+    h;
+    avgPric, e, avgRating },
+    };
+    const formatPrice  = () => {
+        if (price >= 1000) {
+            return `$${(price / 1000).toFixed(1);};K;`;
+        };
+        return `$${price};`;
+    };
+    const getServiceTier  = () => {
+        if (price < 2000)
+            return { tier: "Star,
+    ter"; color: "bg-green-100 text-green-800",
+     }if (price < 5000)
+            return { tier: "Professional, ", color: "bg-blue-100 text-blue-800",
+     }if (price < 10000)
+            return { tier: "Enterprise, ", color: "bg-purple-100 text-purple-800",
+     }return { tier: "Premium, ", color: "bg-orange-100 text-orange-800",
+     }},
+    return (<div className="min-h-screen bg-background">
+      <SEO title="Service Pricing Guide - Zion Tech Group" description="Complete pricing guide for all our IT and AI services. Compare pricesfeatures, and choose the perfect solution for your business needs." keywords="service pricing, IT services cost, AI development pricing, cybersecurity pricing, cloud migration cost" canonical="https: //ziontechgroup.com/pricing"/>
+
+      {/* Hero Section *,
+    /}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md: text-6xl font-bold mb-6">
             Service Pricing Guide
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Transparent pricing for all our micro SAAS services and IT solutions. No hidden fees, no surprises.
+            Transparent pricing for all our micro SAAS services and IT solutions. No hidden fees,
+    no surprises.
           </p>
           
-          {/* Pricing Summary */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
+          {/* Pricing Summary *, /}
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-cyan">{EXPANDED_SERVICES.length}+</div>
+              <div className="text-3xl font-bold text-zion-cyan">{EXPANDED_SERVICES.lengt,
+    h}+</div>
               <div className="text-zion-slate-light">Services Available</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-cyan">
-                ${Math.round(EXPANDED_SERVICES.reduce((sum, s) => sum + (s.price || 0), 0) / EXPANDED_SERVICES.length).toLocaleString()}
+                ${Math.round(EXPANDED_SERVICES.reduce((sums) => sum + (s.price || 0), 0) / EXPANDED_SERVICES.length).toLocaleString()}
               </div>
               <div className="text-zion-slate-light">Average Price</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-cyan">
-                {Math.round(EXPANDED_SERVICES.reduce((sum, s) => sum + (s.rating || 0), 0) / EXPANDED_SERVICES.length * 10) / 10}
+                {Math.round(EXPANDED_SERVICES.reduce((sums) => sum + (s.rating || 0), 0) / EXPANDED_SERVICES.length * 10) / 10}
               </div>
               <div className="text-zion-slate-light">Average Rating</div>
             </div>
@@ -71,7 +72,7 @@ export default function PricingGuidePage() {
           {/* Contact Information */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
             <h3 className="text-xl font-semibold mb-4">Need Custom Pricing?</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-zion-cyan"/>
                 <span>+1 302 464 0950</span>
@@ -82,14 +83,15 @@ export default function PricingGuidePage() {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-zion-cyan"/>
-                <span>Middletown, DE</span>
+                <span>Middletown,
+    DE</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Category Filter */}
+      {/* Category Filter *, /}
       <div className="bg-zion-blue-dark py-8 border-b border-zion-blue-light">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
@@ -97,10 +99,10 @@ export default function PricingGuidePage() {
               All Services ({EXPANDED_SERVICES.length})
             </Button>
             {SERVICE_CATEGORIES.map(category => {
-            const stats = getCategoryStats(category.name);
+            const stats  = getCategoryStats(category.name),
             return (<Button key={category.id} variant={selectedCategory === category.name ? 'default' : 'outline'} onClick={() => setSelectedCategory(category.name)} className={selectedCategory === category.name ? 'bg-zion-cyan text-white' : 'border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10'}>
                   {category.name} ({stats.count})
-                </Button>);
+                </Button>),
         })}
           </div>
         </div>
@@ -121,10 +123,10 @@ export default function PricingGuidePage() {
 
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredServices.map((service) => {
-            const tier = getServiceTier(service.price || 0);
-            return (<Card key={service.id} className="h-full hover:shadow-lg transition-shadow duration-300">
+            const tier  = getServiceTier(service.price || 0),
+    return (<Card key={service.i, d} className="h-full hover: shadow-lg transition-shadow duration-300">
                 <div className="relative">
-                  <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
+                  <img src={service.images[0, ]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
                   <div className="absolute top-2 left-2">
                     <Badge className={tier.color}>
                       {tier.tier}
@@ -147,7 +149,7 @@ export default function PricingGuidePage() {
                           <span className="text-sm text-gray-500">({service.reviewCount})</span>
                         </div>
                         {service.aiScore && (<Badge variant="outline" className="text-xs">
-                            AI: {service.aiScore}
+                            AI: {service.aiScor, e}
                           </Badge>)}
                       </div>
                     </div>
@@ -161,7 +163,9 @@ export default function PricingGuidePage() {
                 </CardHeader>
 
                 <CardContent className="pt-0">
-                  <CardDescription className="text-gray-600 mb-4 overflow-hidden text-ellipsis" style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>
+                  <CardDescription className="text-gray-600 mb-4 overflow-hidden text-ellipsis" style={{ display: '-webkit-box',
+    WebkitLineClamp: 3,
+    WebkitBoxOrient: 'vertical',  }}>
                     {service.description}
                   </CardDescription>
 
@@ -169,21 +173,22 @@ export default function PricingGuidePage() {
                   <div className="space-y-2 text-sm text-gray-600 mb-4">
                     <div className="flex items-center space-x-2">
                       <Clock className="w-4 h-4"/>
-                      <span>Delivery: {service.availability}</span>
+                      <span>Delivery: {service.availabilit, y}</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Globe className="w-4 h-4"/>
-                      <span>Location: {service.location}</span>
+                      <span>Location: {service.locatio, n}</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <DollarSign className="w-4 h-4"/>
-                      <span>Category: {service.category}</span>
+                      <span>Category: {service.categor,
+    y}</span>
                     </div>
                   </div>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-1 mb-4">
-                    {service.tags.slice(0, 3).map((tag) => (<Badge key={tag} variant="secondary" className="text-xs">
+                    {service.tags.slice(03).map((tag) => (<Badge key={tag} variant="secondary" className="text-xs">
                         {tag}
                       </Badge>))}
                   </div>
@@ -199,7 +204,8 @@ export default function PricingGuidePage() {
                   </div>
                 </CardContent>
               </Card>)
-        })}
+       ,
+     })}
         </div>
 
         {filteredServices.length === 0 && (<div className="text-center py-12">
@@ -217,11 +223,11 @@ export default function PricingGuidePage() {
               Understanding Our Pricing Tiers
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our pricing reflects the complexity, scope, and value of each service
+              Our pricing reflects the complexityscope, and value of each service
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-green-600"/>
@@ -261,14 +267,14 @@ export default function PricingGuidePage() {
         </div>
       </div>
 
-      {/* Value Proposition */}
+      {/* Value Proposition *, /}
       <div className="bg-zion-blue py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-8">
             Why Our Pricing is Competitive
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-white"/>
@@ -296,7 +302,8 @@ export default function PricingGuidePage() {
         </div>
       </div>
 
-      {/* Contact CTA */}
+      {/* Contact CTA *,
+    /}
       <div className="bg-gradient-to-r from-zion-purple to-zion-blue py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -306,7 +313,7 @@ export default function PricingGuidePage() {
             Contact us for a custom quote tailored to your specific requirements
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white">
               <Mail className="w-5 h-5 mr-2"/>
               Request Custom Quote
@@ -319,9 +326,10 @@ export default function PricingGuidePage() {
 
           <div className="mt-8 text-zion-slate-light">
             <p>Email: kleber@ziontechgroup.com</p>
-            <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p>Address: 364 E Main St STE 1008,
+    Middletown DE 19709</p>
           </div>
         </div>
       </div>
-    </div>);
+    </div>);, 
 }

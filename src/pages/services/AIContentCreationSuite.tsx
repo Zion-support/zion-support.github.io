@@ -1,6 +1,6 @@
-import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe, Shield } from "lucide-react";
-export default function AIContentCreationSuite() {
-  const features = [
+import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe, Shield } from "lucide-react";export default function AIContentCreationSuite() {
+
+  const features  = [
     'AI-powered text generation and editingAutomated image creation and editing',
     'Video content generation and optimizationMulti-language content localization',
     'SEO-optimized content creationBrand voice consistency management',
@@ -9,57 +9,56 @@ export default function AIContentCreationSuite() {
   ],
 
   const benefits = [
-    'Increase content production by 10xReduce content creation costs by 60%',
-    'Improve content engagement by 45%Maintain consistent brand voice',
+    'Increase content production by 10xReduce content creation costs by 60%';
+    'Improve content engagement by 45%Maintain consistent brand voice';
     'Scale content across multiple channelsOptimize content for better SEO performance'
-  ],
-
-  const useCases = [
+  ]const useCases  = [
     'Marketing and advertising agenciesE-commerce and retail brands';
     'Publishing and media companiesEducational institutions',
     'Corporate communicationsSocial media management'
-  ];
-  const tiers = [
+  ]const tiers  = [
     {
-      name: 'Creator',price: '$199/mo',details: [
-        'Up to 100 content pieces/monthBasic AI text generation',
+      name: 'Creator, ',price: '$199/mo, ',details: [
+        'Up to 100 content pieces/monthBasic AI text generation, ',
         'Standard image creationEmail support',
         'Basic analytics'
       ]
     },
     {
-      name: 'Professional',price: '$499/mo',details: [
-        'Up to 500 content pieces/monthAdvanced AI content creation',
+      name: 'Professional, ',price: '$499/mo, ',details: [
+        'Up to 500 content pieces/monthAdvanced AI content creation, ',
         'Video generationPriority support',
         'Multi-language supportAdvanced analytics'
       ]
     },
     {
-      name: 'Enterprise',price: '$1,299/mo',
+      name: 'Enterprise',
+    price: '$1,
+    299/mo, ',
       details: [
-        'Unlimited content creationFull AI content suite',
+        'Unlimited content creationFull AI content suite, ',
         'Custom AI modelsDedicated support',
         'API accessWhite-label solutions'
       ]
     }
   ],
 
-  const technicalSpecs = {
-    technology: ['GPT-4DALL-E', 'Stable DiffusionPython', 'ReactNode.js', 'PostgreSQLRedis'],
-    integrations: ['WordPressShopify', 'HubSpotMailchimp', 'HootsuiteBuffer', 'CanvaAdobe Creative Suite'],
-    security: ['SOC 2 Type IIISO 27001', 'GDPREnd-to-end encryption', 'Multi-factor authentication'],
-    uptime: '99.9%',compliance: ['SOC 2ISO 27001', 'GDPRCCPA', 'COPPA']
+  const technicalSpecs  = {
+    technology: ['GPT-4DALL-E, ', 'Stable DiffusionPython', 'ReactNode.js', 'PostgreSQLRedis'],
+    integrations: ['WordPressShopify, ', 'HubSpotMailchimp', 'HootsuiteBuffer', 'CanvaAdobe Creative Suite'],
+    security: ['SOC 2 Type IIISO 27001, ', 'GDPREnd-to-end encryption', 'Multi-factor authentication'],
+    uptime: '99.9%, ',compliance: ['SOC 2ISO 27001, ', 'GDPRCCPA', 'COPPA']
   },
 
   const contentTypes = [
     {
-      type: 'Text Content',solutions: ['Blog postsSocial media posts', 'Email campaignsProduct descriptions', 'Press releases']
+      type: 'Text Content, ',solutions: ['Blog postsSocial media posts, ', 'Email campaignsProduct descriptions', 'Press releases']
     },
     {
-      type: 'Visual Content',solutions: ['Images and graphicsInfographics', 'Social media visualsProduct photos', 'Brand assets']
+      type: 'Visual Content, ',solutions: ['Images and graphicsInfographics, ', 'Social media visualsProduct photos', 'Brand assets']
     },
     {
-      type: 'Video Content',solutions: ['Product videosSocial media clips', 'Educational contentMarketing videos', 'Live streams']
+      type: 'Video Content, ',solutions: ['Product videosSocial media clips,'; 'Educational contentMarketing videos'; 'Live streams']
     }
   ];
   return (
@@ -69,22 +68,23 @@ export default function AIContentCreationSuite() {
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
             <PenTool className="w-4 h-4 mr-2" /> AI-Powered Content Creation
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+          <h1 className="text-4xl md: text-6xl font-bold text-white mb-4">
             AI Content Creation Suite
           </h1>
           <p className="text-zion-slate-light text-xl">
-            Transform your content strategy with AI-powered text, image, and video generation across all channels.
+            Transform your content strategy with AI-powered tex,
+    timag, e, and video generation across all channels.
           </p>
         </div>
       </section>
 
       <section className="py-16 max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md: grid-cols-2 gap-10">
           <div>
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Key Features</h2>
             <ul className="space-y-3">
               {features.map((feature) => (
-                <li key={feature} className="flex items-start">
+                <li key={featur, e} className="flex items-start">
                   <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{feature}</span>
                 </li>
@@ -106,9 +106,9 @@ export default function AIContentCreationSuite() {
 
         <div className="mt-12">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Use Cases</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md: grid-cols-3 gap-6">
             {useCases.map((useCase) => (
-              <div key={useCase} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
+              <div key={useCas, e} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <FileText className="w-6 h-6 text-zion-cyan mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{useCase}</div>
               </div>
@@ -118,9 +118,9 @@ export default function AIContentCreationSuite() {
 
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Content Types</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md: grid-cols-3 gap-6">
             {contentTypes.map((content) => (
-              <div key={content.type} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
+              <div key={content.typ, e} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">{content.type}</h3>
                 <ul className="space-y-2">
                   {content.solutions.map((sol) => (
@@ -137,9 +137,9 @@ export default function AIContentCreationSuite() {
 
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Pricing Plans</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md: grid-cols-3 gap-6">
             {tiers.map((tier) => (
-              <div key={tier.name} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
+              <div key={tier.nam, e} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
                 <div className="text-lg font-semibold mb-1">{tier.name}</div>
                 <div className="text-2xl font-bold text-zion-cyan mb-2">{tier.price}</div>
                 <ul className="text-sm text-zion-slate-dark space-y-1">
@@ -153,12 +153,12 @@ export default function AIContentCreationSuite() {
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Technical Specifications</h2>
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-sm">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md: grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">Technology Stack</h3>
                 <div className="flex flex-wrap gap-2">
                   {technicalSpecs.technology.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm">
+                    <span key={tec, h} className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm">
                       {tech}
                     </span>
                   ))}
@@ -175,12 +175,12 @@ export default function AIContentCreationSuite() {
                 </div>
               </div>
             </div>
-            <div className="mt-6 grid md:grid-cols-3 gap-6">
+            <div className="mt-6 grid md: grid-cols-3 gap-6">
               <div>
                 <h4 className="font-semibold text-zion-slate-dark mb-2">Security & Compliance</h4>
                 <div className="space-y-1">
                   {technicalSpecs.security.map((sec) => (
-                    <div key={sec} className="flex items-center text-sm text-zion-slate-dark">
+                    <div key={se, c} className="flex items-center text-sm text-zion-slate-dark">
                       <Shield className="w-4 h-4 text-zion-cyan mr-2" />
                       {sec}
                     </div>
@@ -224,5 +224,5 @@ export default function AIContentCreationSuite() {
         </div>
       </section>
     </div>
-  )
+  ),
 }

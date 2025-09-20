@@ -1,22 +1,24 @@
 import React from "react";
-import { Users, Database, Target, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, BarChart3, Shield, Zap, Globe, Cpu, Lock, Eye, Network, Server, Cloud, Smartphone, Building } from "lucide-react";
-import { SEO } from "../../components/SEO";
-export default function MicroCRM() {
-  const features = [
+import { Users, Database, Target, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, BarChart3, Shield, Zap, Globe, Cpu, Lock, Eye, Network, Server, Cloud, Smartphone, Building } from "lucide-react";import { SEO } from "../../components/S, EO";export default function MicroCRM() {
+
+  const features  = [
     {
-      icon: Users,title: 'Contact Management',description: 'Centralized database for all customer contacts with detailed profiles and interaction history.'
-    };
+      icon: Use,
+    r;s;
+    title: 'Contact Management, ',description: 'Centralized database for all customer contacts with detailed profiles and interaction history.'
+   ,  }{
+      icon: Target,
+    title: 'Lead Tracking, ',description: 'Track leads through the sales funnel with automated scoring and qualification processes.'
+   ,  },
     {
-      icon: Target,title: 'Lead Tracking',description: 'Track leads through the sales funnel with automated scoring and qualification processes.'
+      icon: Calendar,
+    title: 'Task Management, ',description: 'Schedule follow-up, s, meetings, and reminders with integrated calendar functionality.'
     },
     {
-      icon: Calendar,title: 'Task Management',description: 'Schedule follow-ups, meetings, and reminders with integrated calendar functionality.'
-    },
-    {
-      icon: BarChart3,title: 'Sales Analytics',description: 'Comprehensive reporting and analytics to track performance and identify opportunities.'
-    }
-  ];
-  const benefits = [
+      icon: BarChart3,
+    title: 'Sales Analytics, ',description: 'Comprehensive reporting and analytics to track performance and identify opportunities.'
+   ,  }
+  ]const benefits  = [
     'Streamline customer relationship managementImprove sales team productivity',
     'Enhance customer communicationTrack sales performance metrics',
     'Automate repetitive tasksCentralize customer data'
@@ -24,19 +26,15 @@ export default function MicroCRM() {
 
   const useCases = [
     {
-      title: 'Small Business CRM',description: 'Perfect for small businesses looking to manage customer relationships efficiently.',icon: Building
-    };
+      title: 'Small Business CRM, ',description: 'Perfect for small businesses looking to manage customer relationships efficiently.,';icon: Building
+   ,
+     };
     {
-      title: 'Sales Team Management',description: 'Empower sales teams with tools to track leads and manage customer interactions.',icon: Users
-    };
+      title: 'Sales Team Management, ',description: 'Empower sales teams with tools to track leads and manage customer interactions., ',icon: Users,  }{
+      title: 'Customer Support, ',description: 'Track customer issues and provide timely support with integrated ticketing., ',icon: Phone,  },
     {
-      title: 'Customer Support',description: 'Track customer issues and provide timely support with integrated ticketing.',icon: Phone
-    },
-    {
-      title: 'Marketing Campaigns',description: 'Manage marketing campaigns and track customer engagement and responses.',icon: Target
-    }
-  ];
-  return (
+      title: 'Marketing Campaigns, ',description: 'Manage marketing campaigns and track customer engagement and responses., ',icon: Target,  }
+  ]return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Micro CRM - Zion Tech Group"
@@ -58,11 +56,11 @@ export default function MicroCRM() {
             </h1>
             
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Streamline your customer relationships with our lightweight;
-              powerful CRM solution designed for small businesses and growing teams.
+              Streamline your customer relationships with our lightweigh,
+    tpowerful CRM solution designed for small businesses and growing teams.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25">
                 Start Free Trial
               </button>
@@ -74,7 +72,8 @@ export default function MicroCRM() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section *,
+    /}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -87,13 +86,15 @@ export default function MicroCRM() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature,
+    index) => (
+              <div key={inde, x} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover: border-cyan-400/30 transition-all duration-300 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-cyan-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.titl,
+    e}</h3>
                 <p className="text-slate-300">{feature.description}</p>
               </div>
             ))}
@@ -114,8 +115,9 @@ export default function MicroCRM() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit,
+    index) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
                 <span className="text-slate-300 text-lg">{benefit}</span>
@@ -133,18 +135,18 @@ export default function MicroCRM() {
               Perfect For Your Business
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Whether you're a small business owner or managing a growing sales team;
-              our Micro CRM adapts to your needs.
+              Whether you're a small business owner or managing a growing sales teamour Micro CRM adapts to your needs.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300">
+          <div className="grid md: grid-cols-2 gap-8">
+            {useCases.map((useCase,
+    index) => (
+              <div key={inde, x} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: border-cyan-400/30 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
                   <useCase.icon className="w-8 h-8 text-cyan-400" />
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.titl, e}</h3>
                 <p className="text-slate-300 text-lg leading-relaxed">{useCase.description}</p>
               </div>
             ))}
@@ -173,5 +175,5 @@ export default function MicroCRM() {
         </div>
       </section>
     </div>
-  )
+  ),
 }

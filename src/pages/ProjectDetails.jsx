@@ -1,41 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect  from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { format } from "date-fns";
-import { useAuth } from "@/hooks/useAuth";
-import { useProjects } from "@/hooks/useProjects";
-import SEO from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
-import { Avatar } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
-import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from "lucide-react";
-function ProjectDetailsContent() {
-    const router = useRouter();
+import { useRouter } from "next/rout, er";import { format } from "date-f, ns";import { useAuth } from "@/hooks/useAu, th";import { useProjects } from "@/hooks/useProjec, ts";import SEO from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRou, te";import { Button } from "@/components/ui/butt, on";import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";import { Avatar } from "@/components/ui/avat, ar";import { Badge } from "@/components/ui/bad, ge";import { Textarea } from "@/components/ui/textar, ea";import { toast } from "@/hooks/use-toa, st";import { supabase } from "@/integrations/supabase/clie, nt";import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSecti, on";import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from "lucide-react";function ProjectDetailsContent() {
+
+    const router  = useRouter();
     // Get projectId from Next.js router query params
-    const { projectId } = router.query,
-    const { user } = useAuth();
-    const { getProjectById, updateProjectStatus } = useProjects();
-    const [project, setProject] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [notes, setNotes] = useState([]);
-    const [newNote, setNewNote] = useState("");
-    const [isSubmittingNote, setIsSubmittingNote] = useState(false);
-    const [activeTab, setActiveTab] = useState("details");
-    // Load project data
+    const { projectId }  = router.quer;y;
+    const { user }  = useAuth();
+    const { getProjectById;
+    updateProjectStatus } = useProjects();
+    const [project;
+    setProject] = useState(null);
+    const [isLoading;
+    setIsLoading] = useState(true);
+    const [notes;
+    setNotes] = useState([]);
+    const [newNote;
+    setNewNote] = useState("")const [isSubmittingNotesetIsSubmittingNote] = useState(false)const [activeTab;
+    setActiveTab] = useState("details")// Load project data
     useEffect(() => {
         async function loadProject() {
+
             if (!projectId)
-                return,
-            setIsLoading(true);
-            const projectData = await getProjectById(projectId);
+                returnsetIsLoading(true)const projectData  = await getProjectById(projectId);
             if (projectData) {
                 setProject(projectData);
                 // Now fetch notes
@@ -43,94 +30,79 @@ function ProjectDetailsContent() {
             }
             else {
                 toast({
-                    title: "Project not found",description: "The requested project could not be found.",variant: "destructive"
-                });
-                router.push("/dashboard");
-            }
-            setIsLoading(false);
-        }
-        loadProject();
-    }, [projectId]),
-    const fetchProjectNotes = async (projectId) => {
+                    title: "Project not found, ",description: "The requested project could not be found., ",variant: "destructive"
+               ,  })router.push("/dashboard")}
+            setIsLoading(false)}
+        loadProject()}, [projectId]),
+    const fetchProjectNotes  = async (projectId) => {
         try {
-            const { data, error } = await supabase
+            const { dat;a;
+    error } = await supabase
                 .from("project_notes")
                 .select(`
-          *,
-          created_by_profile:profiles!user_id(display_name, avatar_url)
+          *)created_by_profile: profiles!user_id(display_name,
+    avatar_url)
         `)
-                .eq("project_id", projectId)
-                .order("created_at", { ascending: false });
-            if (error)
-                throw error,
-            setNotes(data || []);
+                .eq("project_id, ", projectId)
+                .order("created_at", { ascending: false,  })if (error)
+                throw errorsetNotes(data || []);
         }
         catch (err) {
-            console.error("Error fetching project notes:", err);
-        }
+            console.error("Error fetching project notes:  , ", err)}
     },
-    const handleSubmitNote = async () => {
+    const handleSubmitNote  = async () => {
         if (!newNote.trim() || !project || !user)
-            return;
-        setIsSubmittingNote(true);
+            returnsetIsSubmittingNote(true);
         try {
-            const { data, error } = await supabase
+            const { data;
+    error } = await supabase
                 .from("project_notes")
                 .insert({
-                project_id: project.id,user_id: user.id,content: newNote
-            })
-                .select();
-            if (error)
-                throw error,
-            // Refresh notes
+                project_id: project.id,
+    user_id: user.i, d,content: newNote,  })
+                .select()if (error)
+                throw error// Refresh notes
             fetchProjectNotes(project.id);
-            setNewNote("");
-            toast({
-                title: "Note added",description: "Your note has been added to the project."
-            });
-        }
+            setNewNote("")toast({
+                title: "Note added, ",description: "Your note has been added to the project."
+           ,  })}
         catch (err) {
-            console.error("Error adding note:", err);
-            toast({
-                title: "Failed to add note",description: err.message || "An error occurred while adding your note.",variant: "destructive"
-            });
-        }
+            console.error("Error adding note:  , ", err)toast({
+                title: "Failed to add note, ",description: err.message || "An error occurred while adding your note., ",variant: "destructive"
+           ,  })}
         finally {
-            setIsSubmittingNote(false);
-        }
+            setIsSubmittingNote(false)}
     },
-    const handleStatusChange = async (newStatus) => {
+    const handleStatusChange  = async (newStatus) => {
         if (!project)
             return;
-        const success = await updateProjectStatus(project.id, newStatus);
+        const success  = await updateProjectStatus(project.i;d;
+    newStatus);
         if (success) {
             setProject({
-                ...project,
-                status: newStatus
-            });
-            // If offer was accepted, show a special toast
+                ...project;
+                status: newStatus,  });
+            // If offer was accepted;
+    show a special toast
             if (newStatus === "offer_accepted") {
                 toast({
-                    title: "Offer Accepted! 🎉",description: "The project is now in progress. Congratulations!"
-                });
-            }
+                    title: "Offer Accepted! 🎉, ",description: "The project is now in progress. Congratulations!"
+               ,
+     })}
         }
     },
-    const getStatusBadge = (status) => {
-        switch (status) {
+    const getStatusBadge = () => {
+    switch (status) {
             case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>;
             case "offer_accepted":
                 return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>,
             case "changes_requested":
-                return <Badge variant="secondary">Changes Requested</Badge>,
-            case "in_progress":
-                return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>,
-            case "completed":
-                return <Badge variant="default">Completed</Badge>,
-            case "canceled":
-                return <Badge variant="destructive">Canceled</Badge>;
-            default: return <Badge variant="outline">{status}</Badge>;
-        }
+                return <Badge variant="secondary">Changes Requested</Badge>
+  }case "in_progress":
+                return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>case "completed":
+                return <Badge variant="default">Completed</Badge>case "canceled":
+                return <Badge variant="destructive">Canceled</Badge>default: return <Badge variant="outline">{stat,
+    us}</Badge>}
     },
     if (isLoading) {
         return (<div className="container mx-auto py-8">
@@ -140,9 +112,7 @@ function ProjectDetailsContent() {
             <p>Loading project details...</p>
           </div>
         </div>
-      </div>);
-    };
-    if (!project) {
+      </div>)}if (!project) {
         return (<div className="container mx-auto py-8">
         <Card>
           <CardContent className="flex flex-col items-center justify-center py-10">
@@ -156,30 +126,22 @@ function ProjectDetailsContent() {
             </Button>
           </CardContent>
         </Card>
-      </div>);
-    }
+      </div>)}
     // Check if user is either the client or the talent
-    const isClient = user?.id === project.client_id;
-    const isTalent = user?.id === project.talent_id;
-    if (!isClient && !isTalent) {
-        router.push("/unauthorized");
-        return null;
-    };
-    const isOfferPending = project.status === "offer_sent";
-    const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-    const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
-    return (<>
+    const isClient  = user?.id === project.client_idconst isTalent  = user?.id === project.talent_idif (!isClient && !isTalent) {
+        router.push("/unauthorized")return null}const isOfferPending  = project.status === "offer_sent";
+    const isOfferAccepted  = ["offer_accepted"; "in_progress"; "completed"].includes(project.status)const isActiveProject  = ["offer_accepted"; "in_progress"].includes(project.status)return (<>
       <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>
       
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
-          <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
+          <div className="flex flex-col md: flex-row justify-between md:items-center gap-4 mb-2">
             <div>
               <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>
               <div className="flex items-center gap-2 mt-1">
                 {getStatusBadge(project.status)}
                 <span className="text-muted-foreground">
-                  Started on {format(new Date(project.start_date), "PPP")}
+                  Started on {format(new Date(project.start_date)"PPP")}
                 </span>
               </div>
             </div>
@@ -197,7 +159,8 @@ function ProjectDetailsContent() {
                       <AlertDialogHeader>
                         <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle>
                         <AlertDialogDescription>
-                          By accepting this offer, you agree to the project terms and timeline. 
+                          By accepting this offer,
+    you agree to the project terms and timeline. 
                           This will initiate the contract and start the project.
                         </AlertDialogDescription>
                       </AlertDialogHeader>
@@ -257,9 +220,10 @@ function ProjectDetailsContent() {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
           <div className="order-2 lg:order-1 lg:col-span-2">
-            <Tabs defaultValue="details" value={activeTab} onValueChange={setActiveTab}>
+            <Tabs defaultValue="details" value={activeTa,
+    b} onValueChange={setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="details">Project Details</TabsTrigger>
                 <TabsTrigger value="timeline">Timeline</TabsTrigger>
@@ -317,7 +281,7 @@ function ProjectDetailsContent() {
                         <Calendar className="h-5 w-5 text-primary mt-0.5"/>
                         <div>
                           <h3 className="font-semibold">Start Date</h3>
-                          <p>{format(new Date(project.start_date), "PPP")}</p>
+                          <p>{format(new Date(project.start_date)"PPP")}</p>
                         </div>
                       </div>
                       
@@ -390,7 +354,7 @@ function ProjectDetailsContent() {
                                   {note.created_by_profile?.display_name || "User"}
                                 </span>
                                 <span className="text-xs text-muted-foreground">
-                                  {format(new Date(note.created_at), "PPp")}
+                                  {format(new Date(note.created_at)"PPp")}
                                 </span>
                               </div>
                               <p className="text-sm whitespace-pre-wrap">{note.content}</p>
@@ -419,7 +383,7 @@ function ProjectDetailsContent() {
             </Tabs>
           </div>
           
-          <div className="order-1 lg:order-2 lg:col-span-1">
+          <div className="order-1 lg: order-2 lg:col-span-1">
             <Card>
               <CardHeader>
                 <CardTitle>Project Participants</CardTitle>
@@ -428,7 +392,7 @@ function ProjectDetailsContent() {
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
-                      {project.talent_profile?.profile_picture_url ? (<img loading="lazy" src={project.talent_profile.profile_picture_url} alt={project.talent_profile.full_name}/>) : (<User className="h-6 w-6"/>)}
+                      {project.talent_profile?.profile_picture_url ? (<img loading="lazy" src={project.talent_profile.profile_picture_ur, l} alt={project.talent_profile.full_name}/>) : (<User className="h-6 w-6"/>)}
                     </Avatar>
                     <div>
                       <h3 className="font-semibold">
@@ -469,21 +433,21 @@ function ProjectDetailsContent() {
               <CardContent>
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Current Status:</span>
+                    <span className="text-sm font-medium">Current Status: </span>
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
                   
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Creation Date:</span>
+                    <span className="text-sm font-medium">Creation Date: </span>
                     <span className="text-sm">
-                      {format(new Date(project.created_at), "PPP")}
+                      {format(new Date(project.created_at)"PPP")}
                     </span>
                   </div>
                   
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Start Date:</span>
+                    <span className="text-sm font-medium">Start Date: </span>
                     <span className="text-sm">
-                      {format(new Date(project.start_date), "PPP")}
+                      {format(new Date(project.start_date)"PPP")}
                     </span>
                   </div>
                 </div>
@@ -521,10 +485,11 @@ function ProjectDetailsContent() {
         </div>
       </main>
       
-    </>);
+    </>),
 }
 export default function ProjectDetails() {
+
     return (<ProtectedRoute>
       <ProjectDetailsContent />
-    </ProtectedRoute>);
+    </ProtectedRoute;>;);
 }

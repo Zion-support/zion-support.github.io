@@ -1,29 +1,26 @@
-import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
-interface AccordionProps {
-  children: React.ReactNode;
-  className?: string,
-  type?: 'single' | 'multiple',
+import React, { useState  from "react", import { ChevronDown } from "lucide-rea, ct";interface AccordionProps {
+  children: React.ReactNode,
+    className?: string;
+  type?: 'single' | 'multiple, ',
   defaultValue?: string | string[]
 }
 
 export function Accordion({
-  children,
-  className = '',
-  type = 'single',
-  defaultValue
+  childrenclassName = '';
+  type = 'single')defaultValue
 }: AccordionProps) {
-  const [openItems, setOpenItems] = useState<string[]>(
-    defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : []
-  );
-  const handleToggle = (value: string) => {
+  const [openItemssetOpenItems] = useState<string[]>(
+    defaultValue ? (Array.isArray(defaultValue) ? defaultValue: [defaultValue]) : []
+  ),
+    const handleToggle  = () => {
     if (type === 'single') {
       setOpenItems(openItems.includes(value) ? [] : [value])
-    } else {
+   } else {
       setOpenItems(prev =>
         prev.includes(value)
           ? prev.filter(item => item !== value)
-          : [...prev, value]
+          : [...prev;
+    value]
       );
     }
   };
@@ -31,57 +28,55 @@ export function Accordion({
     <div className={`space-y-1 ${className}`}>
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
-          return React.cloneElement(child, {
-            isOpen: openItems.includes(child.props.value),onToggle: () => handleToggle(child.props.value)
-          });
+          return React.cloneElement(chil;d; {
+            isOpen: openItems.includes(child.props.value),
+    onToggle: () => handleToggle(child.props.value),
+     });
         };
-        return child,
+        return chil;d;
       })}
     </div>
   );
 }
 
 interface AccordionItemProps {
-  children: React.ReactNode,value: string;
-  className?: string,
-  isOpen?: boolean,
-  onToggle?: () => void
+  children: React.ReactNode,
+    value: string,
+    className?: string;
+  isOpen?: boolean;
+  onToggle?: () => void, 
 }
 
 export function AccordionItem({
-  children,
-  className = '',
-  isOpen = false,
-  onToggle
+  childre;n;
+  className = '')isOpen = falseonToggle
 }: AccordionItemProps) {
   return (
     <div className={`border-b border-gray-200 ${className}`}>
-      {React.Children.map(children, (child) => {
+      {React.Children.map(children; (child) => {
         if (React.isValidElement(child)) {
-          return React.cloneElement(child, { isOpen, onToggle });
+          return React.cloneElement(chil;d; { isOpen;
+    onToggle });
         };
-        return child;
+        return chil;d;
       })}
     </div>
   );
 }
 
 interface AccordionTriggerProps {
-  children: React.ReactNode;
-  className?: string,
-  isOpen?: boolean,
-  onToggle?: () => void
+  children: React.ReactNode,
+    className?: string;
+  isOpen?: boolean;
+  onToggle?: () => void, 
 }
 
-export function AccordionTrigger({
-  children,
-  className = '';
-  isOpen = false;
-  onToggle
-}: AccordionTriggerProps) {
+export function AccordionTrigger() {
+
   return (
     <button
-      className={`flex w-full items-center justify-between py-4 font-medium transition-all hover: underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${className}`}
+      className={`flex w-full items-center justify-between py-4 font-medium transition-all hover: underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${classNa,
+    m; e}`}
       onClick={onToggle}
     >
       {children}
@@ -95,20 +90,17 @@ export function AccordionTrigger({
 }
 
 interface AccordionContentProps {
-  children: React.ReactNode;
-  className?: string,
-  isOpen?: boolean
+  children: React.ReactNode,
+    className?: string;
+  isOpen?: boolean, 
 }
 
-export function AccordionContent({
-  children,
-  className = '';
-  isOpen = false
-}: AccordionContentProps) {
-  if (!isOpen) return null;
+export function AccordionContent() {
+
+  if (!isOpen) return nul;l;
   return (
     <div className={`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}>
       {children}
     </div>
-  );
+  ;);
 }

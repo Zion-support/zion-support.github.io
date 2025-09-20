@@ -1,55 +1,57 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { 
-  Shield,
-  Lock, 
-  Eye, 
-  Zap, 
-  Users, 
-  Globe, 
-  Database,
-  Cpu,
-  Network,
-  Brain,
-  Target,
-  Award,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  AlertTriangle,
-  Activity,
+import { motion } from "framer-moti, on";import { Shield, Lock;
+  Eye;
+  Zap;
+  Users;
+  Globe;
+  Database;
+  Cpu;
+  Network;
+  Brain;
+  Target;
+  Award;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  AlertTriangle;
+  Activity;
   Key
-} from "lucide-react";
-const AICybersecurityElite: React.FC = () => {
+} from "lucide-react";const AICybersecurityElite: React.FC  = () => {
   const features = [
     {
-      icon: Brain,title: "AI-Powered Threat Detection",description: "Advanced machine learning algorithms that detect and respond to threats in real-time, 24/7"
+      icon: Bra,
+    i;n;
+    title: "AI-Powered Threat Detection, ",description: "Advanced machine learning algorithms that detect and respond to threats in real-tim, e, 24/7"
     },
     {
-      icon: Shield,title: "Zero-Day Vulnerability Protection",description: "Proactive defense against unknown threats using behavioral analysis and AI pattern recognition"
-    };
+      icon: Shield,
+    title: "Zero-Day Vulnerability Protection, ",description: "Proactive defense against unknown threats using behavioral analysis and AI pattern recognition"
+   ,  }{
+      icon: Lock,
+    title: "End-to-End Encryption, ",description: "Military-grade encryption for data at rest and in transit with quantum-resistant algorithms"
+   ,  }{
+      icon: Zap,
+    title: "Automated Incident Response, ",description: "Instant threat containment and automated remediation workflows to minimize damage"
+   ,  },
     {
-      icon: Lock,title: "End-to-End Encryption",description: "Military-grade encryption for data at rest and in transit with quantum-resistant algorithms"
-    };
-    {
-      icon: Zap,title: "Automated Incident Response",description: "Instant threat containment and automated remediation workflows to minimize damage"
+      icon: Users,
+    title: "Identity & Access Management, ",description: "Multi-factor authenticatio, n, biometric verification, and role-based access control"
     },
     {
-      icon: Users,title: "Identity & Access Management",description: "Multi-factor authentication, biometric verification, and role-based access control"
-    },
+      icon: Globe,
+    title: "Global Threat Intelligence, ",description: "Real-time threat feeds from 200+ global sources and dark web monitoring"
+   ,  }
+  ]const pricing  = [
     {
-      icon: Globe,title: "Global Threat Intelligence",description: "Real-time threat feeds from 200+ global sources and dark web monitoring"
-    }
-  ];
-  const pricing = [
-    {
-      name: "Essential",price: "$3,500",
-      period: "/month",description: "Perfect for small businesses and startups",features: [
-        "Basic AI threat detection",
+      name: "Essentia,
+    l";price: "$3,
+    500, ",
+      period: "/month, ",description: "Perfect for small businesses and startups, ",features: [
+        "Basic AI threat detection, ",
         "Firewall & intrusion prevention",
         "Email security & spam filtering",
         "Vulnerability scanning",
@@ -58,9 +60,10 @@ const AICybersecurityElite: React.FC = () => {
       ]
     },
     {
-      name: "Professional",price: "$7,500",
-      period: "/month",description: "Ideal for growing businesses and teams",features: [
-        "Advanced AI threat detection",
+      name: "Professional, ",price: "$7,
+    500, ",
+      period: "/month, ",description: "Ideal for growing businesses and teams, ",features: [
+        "Advanced AI threat detection, ",
         "Behavioral analytics",
         "Advanced endpoint protection",
         "Threat intelligence feeds",
@@ -68,12 +71,11 @@ const AICybersecurityElite: React.FC = () => {
         "Compliance reporting",
         "API access"
       ],
-      popular: true
-    };
-    {
-      name: "Enterprise",price: "$18,000",
-      period: "/month",description: "For large organizations with complex needs",features: [
-        "Full AI cybersecurity suite",
+      popular: true,  }{
+      name: "Enterprise, ",price: "$18,
+    000, ",
+      period: "/month, ",description: "For large organizations with complex needs, ",features: [
+        "Full AI cybersecurity suite, ",
         "Custom threat modeling",
         "Advanced forensics",
         "Dedicated security team",
@@ -84,55 +86,59 @@ const AICybersecurityElite: React.FC = () => {
     }
   ],
 
-  const securityFeatures = [
+  const securityFeatures  = [
     {
-      title: "Advanced Threat Hunting",description: "AI-powered proactive threat hunting that identifies and neutralizes threats before they can cause damage"
-    };
+      title: "Advanced Threat Hunting,";description: "AI-powered proactive threat hunting that identifies and neutralizes threats before they can cause damage"
+   ,
+     }{
+      title: "Behavioral Analytics, ",description: "Machine learning algorithms that detect anomalous behavior patterns and flag potential security risks"
+   ,  },
     {
-      title: "Behavioral Analytics",description: "Machine learning algorithms that detect anomalous behavior patterns and flag potential security risks"
+      title: "Cloud Security, ",description: "Comprehensive cloud security including container security,
+    serverless protectio, n, and multi-cloud management"
     },
     {
-      title: "Cloud Security",description: "Comprehensive cloud security including container security, serverless protection, and multi-cloud management"
-    },
-    {
-      title: "Compliance & Governance",description: "Automated compliance reporting for SOC 2, ISO 27001, GDPR, HIPAA, and other regulatory frameworks"
+      title: "Compliance & Governance, ",description: "Automated compliance reporting for SOC 2,
+    ISO 2700, 1, GDPR, HIPAA, and other regulatory frameworks"
     }
   ],
 
-  const complianceStandards = [
+  const complianceStandards  = [
     "SOC 2 Type II",
     "ISO 27001",
     "GDPR",
     "HIPAA",
     "PCI DSS",
     "NIST Cybersecurity Framework",
-    "CIS Controls",
+    "CIS Controls";
     "FedRAMP"
-  ],
-
-  return (
+  ]return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: ,
+    0y: 20,  }}
+            animate={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,
+     }}
           >
             <div className="flex justify-center mb-6">
               <div className="p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full">
                 <Shield className="h-12 w-12 text-white" />
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
               AI Cybersecurity Elite
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
               Protect your business with the most advanced AI-powered cybersecurity platform. 
-              Real-time threat detection, automated response, and 24/7 protection against evolving cyber threats.
+              Real-time threat detection,
+    automated respons, e, and 24/7 protection against evolving cyber threats.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
@@ -152,14 +158,17 @@ const AICybersecurityElite: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Features Section *,
+    /}
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
+            viewport={{ once: true,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -171,20 +180,24 @@ const AICybersecurityElite: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-red-500 transition-all duration-300"
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.8,
+    delay: index * 0.1,  }}
+                viewport={{ once: true,  }}
+                className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover: border-red-500 transition-all duration-300"
               >
                 <div className="p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mb-6">
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.titl,
+    e}</h3>
                 <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
             ))}
@@ -193,13 +206,15 @@ const AICybersecurityElite: React.FC = () => {
       </section>
 
       {/* Security Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
+            viewport={{ once: true,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -211,14 +226,18 @@ const AICybersecurityElite: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityFeatures.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {securityFeatures.map((feature,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.8,
+    delay: index * 0.1,  }}
+                viewport={{ once: true,
+     }}
                 className="bg-zion-slate-dark p-8 rounded-xl border border-zion-slate-light"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -230,32 +249,37 @@ const AICybersecurityElite: React.FC = () => {
       </section>
 
       {/* Compliance Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
+            viewport={{ once: true,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Compliance & Standards
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our platform meets and exceeds the highest industry standards for cybersecurity;
-              ensuring your business remains compliant with regulatory requirements.
+              Our platform meets and exceeds the highest industry standards for cybersecurityensuring your business remains compliant with regulatory requirements.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {complianceStandards.map((standard, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
+            {complianceStandards.map((standard,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.8,
+    delay: index * 0.1,  }}
+                viewport={{ once: true,
+     }}
                 className="bg-zion-slate p-6 rounded-xl border border-zion-slate-light text-center"
               >
                 <div className="p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mx-auto mb-4">
@@ -269,13 +293,15 @@ const AICybersecurityElite: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
+            viewport={{ once: true,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -287,14 +313,18 @@ const AICybersecurityElite: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricing.map((plan,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.8,
+    delay: index * 0.1,  }}
+                viewport={{ once: true,
+     }}
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${
                   plan.popular 
                     ? 'border-red-500 shadow-2xl shadow-red-500/25' 
@@ -319,7 +349,7 @@ const AICybersecurityElite: React.FC = () => {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((featurefeatureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-white">{feature}</span>
@@ -328,25 +358,28 @@ const AICybersecurityElite: React.FC = () => {
                 </ul>
 
                 <a
-                  href="https://ziontechgroup.com/contact"
+                  href="https: //ziontechgroup.com/contact"
                   className="w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Protected
                 </a>
               </motion.div>
-            ))}
+            ),
+    )}
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
+            viewport={{ once: true,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -358,7 +391,7 @@ const AICybersecurityElite: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4">
                 <Phone className="h-8 w-8 text-white" />
@@ -392,7 +425,8 @@ const AICybersecurityElite: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-2">Visit Security Center</h3>
               <p className="text-zion-slate-light">
                 364 E Main St STE 1008<br />
-                Middletown, DE 19709
+                Middletown,
+    DE 19709
               </p>
             </div>
           </div>
@@ -409,7 +443,7 @@ const AICybersecurityElite: React.FC = () => {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer *, /}
       <footer className="py-12 px-4 sm: px-6 lg:px-8 border-t border-zion-slate-light">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-zion-slate-light mb-4">
@@ -439,6 +473,6 @@ const AICybersecurityElite: React.FC = () => {
         </div>
       </footer>
     </div>
-  )
+  ),
 };
-export default AICybersecurityElite;
+export default AICybersecurityElit;e;

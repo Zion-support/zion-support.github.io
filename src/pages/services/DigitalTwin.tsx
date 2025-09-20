@@ -1,114 +1,117 @@
 
 import React from "react";
-import { SEO } from "../../components/SEO";
-import { Eye, Cpu, BarChart3, ArrowRight, CheckCircle, Star, Users, Globe, Server, Database, Lock, RefreshCw, GitBranch, Zap, Building, Factory, Car, Heart, Cloud } from "lucide-react";
-import { Link } from "react-router-dom";
-export default function DigitalTwin() {
-  const services = [
+import { SEO } from "../../components/S, EO";import { Eye, Cpu, BarChart3, ArrowRight, CheckCircle, Star, Users, Globe, Server, Database, Lock, RefreshCw, GitBranch, Zap, Building, Factory, Car, Heart, Cloud } from "lucide-react";import { Link } from "react-router-d, om";export default function DigitalTwin() {
+
+  const services  = [
     {
-      name: 'Industrial Digital Twins',icon: Factory,description: 'Real-time digital replicas of industrial processes and equipment',features: [
-        'Real-time monitoring and controlPredictive maintenance',
+      name: 'Industrial Digital Twins',
+    icon: Factory,
+    description: 'Real-time digital replicas of industrial processes and equipment, ',features: [
+        'Real-time monitoring and controlPredictive maintenance, ',
         'Performance optimizationAnomaly detection',
         'Process simulationEnergy efficiency optimization'
       ],
       benefits: [
-        '30% reduction in downtime25% energy savings',
+        '30% reduction in downtime25% energy savings, ',
         'Improved safetyEnhanced productivity'
       ],
       color: 'from-blue-500 to-cyan-500'
-    };
-    {
-      name: 'Smart City Twins',icon: Building,description: 'Digital replicas of urban infrastructure and systems',features: [
-        'Traffic flow optimizationEnergy grid management',
+   ,  }{
+      name: 'Smart City Twins, ',icon: Building,
+    description: 'Digital replicas of urban infrastructure and systems, ',features: [
+        'Traffic flow optimizationEnergy grid management, ',
         'Waste management systemsPublic safety monitoring',
         'Environmental monitoringUrban planning insights'
       ],
       benefits: [
-        '20% traffic reduction15% energy savings',
+        '20% traffic reduction15% energy savings, ',
         'Improved public servicesBetter resource allocation'
       ],
       color: 'from-green-500 to-emerald-500'
-    };
-    {
-      name: 'Healthcare Digital Twins',icon: Heart,description: 'Patient and medical device digital replicas',features: [
-        'Patient health monitoringMedical device simulation',
+   ,  }{
+      name: 'Healthcare Digital Twins, ',icon: Heart,
+    description: 'Patient and medical device digital replicas, ',features: [
+        'Patient health monitoringMedical device simulation, ',
         'Treatment optimizationDrug response modeling',
         'Surgical planningPreventive care insights'
       ],
       benefits: [
-        'Improved patient outcomesReduced medical errors',
+        'Improved patient outcomesReduced medical errors, ',
         'Personalized treatmentsBetter resource utilization'
       ],
       color: 'from-red-500 to-pink-500'
-    };
-    {
-      name: 'Automotive Digital Twins',icon: Car,description: 'Vehicle and manufacturing process digital replicas',features: [
-        'Vehicle performance simulationManufacturing optimization',
+   ,  }{
+      name: 'Automotive Digital Twins, ',icon: Car,
+    description: 'Vehicle and manufacturing process digital replicas, ',features: [
+        'Vehicle performance simulationManufacturing optimization, ',
         'Quality control automationSupply chain simulation',
         'Customer experience modelingPredictive maintenance'
       ],
       benefits: [
-        'Faster time to marketImproved quality',
+        'Faster time to marketImproved quality, ',
         'Reduced costsEnhanced safety'
       ],
       color: 'from-purple-500 to-indigo-500'
-    };
-    {
-      name: 'Infrastructure Twins',icon: Building,description: 'Digital replicas of critical infrastructure systems',features: [
-        'Structural health monitoringRisk assessment',
+   ,  }{
+      name: 'Infrastructure Twins, ',icon: Building,
+    description: 'Digital replicas of critical infrastructure systems, ',features: [
+        'Structural health monitoringRisk assessment, ',
         'Maintenance planningDisaster response simulation',
         'Capacity optimizationLifecycle management'
       ],
       benefits: [
-        'Extended asset lifespanReduced maintenance costs',
+        'Extended asset lifespanReduced maintenance costs, ',
         'Improved safetyBetter planning'
       ],
       color: 'from-orange-500 to-red-500'
-    };
-    {
-      name: 'Energy System Twins',icon: Zap,description: 'Digital replicas of energy generation and distribution',features: [
-        'Grid optimizationRenewable integration',
+   ,  }{
+      name: 'Energy System Twins, ',icon: Zap,
+    description: 'Digital replicas of energy generation and distribution, ',features: [
+        'Grid optimizationRenewable integration, ',
         'Demand forecastingEfficiency monitoring',
         'Predictive maintenanceCarbon footprint tracking'
       ],
       benefits: [
-        'Reduced energy wasteLower operational costs',
+        'Reduced energy wasteLower operational costs, ',
         'Improved reliabilitySustainability gains'
       ],
       color: 'from-emerald-500 to-green-500'
-    }
-  ];
-  const technologies = [
-    { name: 'IoT Sensors', icon: Eye, category: 'Data Collection' };
-    { name: 'AI/ML', icon: Cpu, category: 'Intelligence' };
-    { name: 'Cloud Computing', icon: Cloud, category: 'Infrastructure' };
-    { name: 'Edge Computing', icon: Server, category: 'Processing' };
-    { name: '3D Modeling', icon: Eye, category: 'Visualization' };
-    { name: 'Real-time Analytics', icon: BarChart3, category: 'Analytics' };
-    { name: 'Blockchain', icon: Lock, category: 'Security' };
-    { name: '5G Networks', icon: Globe, category: 'Connectivity' };
-    { name: 'AR/VR', icon: Eye, category: 'Interaction' };
-    { name: 'Predictive Analytics', icon: BarChart3, category: 'Forecasting' };
-    { name: 'Machine Learning', icon: Cpu, category: 'AI' },
-    { name: 'Big Data', icon: Database, category: 'Data Processing' }
-  ];
-  const caseStudies = [
+   ,  }
+  ]const technologies  = [
+    { name: 'IoT Sensors',
+    icon: Eye,
+    category: 'Data Collection',  }{ name: 'AI/ML, ', icon: Cpu,
+    category: 'Intelligence',  }{ name: 'Cloud Computing, ', icon: Cloud,
+    category: 'Infrastructure',  }{ name: 'Edge Computing, ', icon: Server,
+    category: 'Processing',  }{ name: '3D Modeling, ', icon: Eye,
+    category: 'Visualization',  }{ name: 'Real-time Analytics, ', icon: BarChart3,
+    category: 'Analytics',  }{ name: 'Blockchain, ', icon: Lock,
+    category: 'Security',  }{ name: '5G Networks, ', icon: Globe,
+    category: 'Connectivity',  }{ name: 'AR/VR, ', icon: Eye,
+    category: 'Interaction',  }{ name: 'Predictive Analytics, ', icon: BarChart3,
+    category: 'Forecasting',  }{ name: 'Machine Learning, ', icon: Cpu,
+    category: 'AI',  },
+    { name: 'Big Data, ', icon: Database,
+    category: 'Data Processing',  }
+  ]const caseStudies  = [
     {
-      company: 'ManufacturingCorp',industry: 'Manufacturing',challenge: 'Unplanned downtime costing $2M annually with limited visibility into equipment health',solution: 'Implemented comprehensive digital twin for all production lines with real-time monitoring',results: [
-        '40% reduction in unplanned downtime25% improvement in equipment efficiency',
+      company: 'ManufacturingCorp, ',industry: 'Manufacturing, ',challenge: 'Unplanned downtime costing $2M annually with limited visibility into equipment health, ',solution: 'Implemented comprehensive digital twin for all production lines with real-time monitoring, ',results: [
+        '40% reduction in unplanned downtime25% improvement in equipment efficiency, ',
         'Predictive maintenance accuracy of 95%'
       ]
     },
     {
-      company: 'SmartCity Metro',industry: 'Municipal',challenge: 'Traffic congestion and inefficient public transportation causing citizen complaints',solution: 'Created city-wide digital twin integrating traffic, transit, and infrastructure systems',
+      company: 'SmartCity Metro, ',industry: 'Municipal, ',challenge: 'Traffic congestion and inefficient public transportation causing citizen complaints',
+    solution: 'Created city-wide digital twin integrating traffic,
+    transi, t, and infrastructure systems',
       results: [
-        '30% reduction in traffic congestion20% improvement in transit efficiency',
+        '30% reduction in traffic congestion20% improvement in transit efficiency, ',
         '15% reduction in energy consumption'
       ]
     },
     {
-      company: 'HealthTech Hospital',industry: 'Healthcare',challenge: 'Medical device failures and inefficient patient care processes',solution: 'Developed digital twins for critical medical devices and patient care workflows',results: [
-        'Zero critical device failures25% improvement in patient outcomes',
+      company: 'HealthTech Hospital, ',industry: 'Healthcare, ',challenge: 'Medical device failures and inefficient patient care processes, ',solution: 'Developed digital twins for critical medical devices and patient care workflows, ',results: [
+        'Zero critical device failures25% improvement in patient outcomes, ',
         '30% reduction in operational costs'
       ]
     }
@@ -118,7 +121,7 @@ export default function DigitalTwin() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Digital Twin Services - Zion Tech Group"
-        description="Transform your operations with our advanced Digital Twin technology solutions. Create real-time digital replicas for predictive maintenance, optimization, and innovation across industries."
+        description="Transform your operations with our advanced Digital Twin technology solutions. Create real-time digital replicas for predictive maintenanceoptimization, and innovation across industries."
       />
       
       {/* Hero Section */}
@@ -126,18 +129,19 @@ export default function DigitalTwin() {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container-responsive relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
               Digital
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> Twin</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Create real-time digital replicas of your physical assets and processes. 
-              Monitor, predict, and optimize operations with unprecedented precision and insight.
+              Monitor,
+    predic, t, and optimize operations with unprecedented precision and insight.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/request-quote"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Get Digital Twin Assessment
               </Link>
@@ -152,7 +156,8 @@ export default function DigitalTwin() {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Services Grid *,
+    /}
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -160,18 +165,20 @@ export default function DigitalTwin() {
               Industry-Specific Digital Twin Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From manufacturing to healthcare, we create specialized digital twins that address 
+              From manufacturing to healthcarewe create specialized digital twins that address 
               your industry's unique challenges and opportunities.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service,
+    index) => (
               <div
-                key={service.name}
-                className="group p-8 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50"
+                key={service.nam, e}
+                className="group p-8 rounded-2xl bg-slate-800/50 hover: bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50"
               >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.colo, r} flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300,
+    `}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
                 
@@ -179,9 +186,10 @@ export default function DigitalTwin() {
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 
                 <div className="space-y-3 mb-6">
-                  <h4 className="font-semibold text-cyan-400">Key Features:</h4>
+                  <h4 className="font-semibold text-cyan-400">Key Features: </h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
+                    {service.features.map((feature,
+    idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                         {feature}
@@ -191,10 +199,11 @@ export default function DigitalTwin() {
                 </div>
 
                 <div className="space-y-3 mb-6">
-                  <h4 className="font-semibold text-green-400">Key Benefits:</h4>
+                  <h4 className="font-semibold text-green-400">Key Benefits: </h4>
                   <ul className="space-y-2">
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                    {service.benefits.map((benefit,
+    idx) => (
+                      <li key={id, x} className="flex items-center gap-2 text-sm text-gray-300">
                         <Zap className="w-4 h-4 text-green-400 flex-shrink-0" />
                         {benefit}
                       </li>
@@ -204,13 +213,14 @@ export default function DigitalTwin() {
 
                 <Link
                   to="/request-quote"
-                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                  className="inline-flex items-center gap-2 text-cyan-400 hover: text-cyan-300 font-medium transition-colors"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
-            ))}
+            ),
+    )}
           </div>
         </div>
       </section>
@@ -223,17 +233,19 @@ export default function DigitalTwin() {
               Advanced Technology Stack
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We leverage cutting-edge technologies to create powerful, scalable, and secure digital twin solutions.
+              We leverage cutting-edge technologies to create powerfulscalable, and secure digital twin solutions.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {technologies.map((tech, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 mx-auto mb-4 bg-slate-700/50 rounded-xl flex items-center justify-center group-hover:bg-slate-700 transition-colors duration-300">
+          <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
+            {technologies.map((tech,
+    index) => (
+              <div key={inde, x} className="text-center group">
+                <div className="w-20 h-20 mx-auto mb-4 bg-slate-700/50 rounded-xl flex items-center justify-center group-hover: bg-slate-700 transition-colors duration-300">
                   <tech.icon className="w-10 h-10 text-cyan-400" />
                 </div>
-                <h3 className="font-semibold text-white text-sm mb-1">{tech.name}</h3>
+                <h3 className="font-semibold text-white text-sm mb-1">{tech.nam,
+    e}</h3>
                 <p className="text-xs text-gray-400">{tech.category}</p>
               </div>
             ))}
@@ -253,9 +265,10 @@ export default function DigitalTwin() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <div key={index} className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {caseStudies.map((study,
+    index) => (
+              <div key={inde, x} className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-white mb-2">{study.company}</h3>
                   <p className="text-sm text-cyan-400 mb-1">{study.industry}</p>
@@ -263,20 +276,22 @@ export default function DigitalTwin() {
                 
                 <div className="space-y-4 mb-6">
                   <div>
-                    <h4 className="font-semibold text-cyan-400 mb-2">Challenge:</h4>
-                    <p className="text-sm text-gray-300">{study.challenge}</p>
+                    <h4 className="font-semibold text-cyan-400 mb-2">Challenge: </h4>
+                    <p className="text-sm text-gray-300">{study.challeng, e}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-green-400 mb-2">Solution:</h4>
-                    <p className="text-sm text-gray-300">{study.solution}</p>
+                    <h4 className="font-semibold text-green-400 mb-2">Solution: </h4>
+                    <p className="text-sm text-gray-300">{study.solutio,
+    n}</p>
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-white mb-3">Results:</h4>
+                  <h4 className="font-semibold text-white mb-3">Results: </h4>
                   <ul className="space-y-2">
-                    {study.results.map((result, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                    {study.results.map((result,
+    idx) => (
+                      <li key={id, x} className="flex items-center gap-2 text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                         {result}
                       </li>
@@ -304,18 +319,14 @@ export default function DigitalTwin() {
           <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
             {[
               {
-                step: '01',title: 'Assessment & Planning',description: 'Analyze assets and define digital twin scope and objectives',icon: BarChart3
-              };
+                step: '01, ',title: 'Assessment & Planning, ',description: 'Analyze assets and define digital twin scope and objectives, ',icon: BarChart3
+             ,
+     }{
+                step: '02, ',title: 'Data Integration, ',description: 'Connect IoT sensors and integrate existing data sources, ',icon: Database,  }{
+                step: '03, ',title: 'Model Development, ',description: 'Create accurate digital replicas with AI and ML capabilities, ',icon: Cpu,  },
               {
-                step: '02',title: 'Data Integration',description: 'Connect IoT sensors and integrate existing data sources',icon: Database
-              };
-              {
-                step: '03',title: 'Model Development',description: 'Create accurate digital replicas with AI and ML capabilities',icon: Cpu
-              },
-              {
-                step: '04',title: 'Deployment & Optimization',description: 'Deploy and continuously optimize the digital twin system',icon: RefreshCw
-              }
-            ].map((phase, index) => (
+                step: '04, ',title: 'Deployment & Optimization, ',description: 'Deploy and continuously optimize the digital twin system, ',icon: RefreshCw,  }
+            ].map((phaseindex) => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-2xl font-bold text-white">
                   {phase.step}
@@ -336,8 +347,7 @@ export default function DigitalTwin() {
               Ready to Create Your Digital Twin?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how Digital Twin technology can revolutionize your operations;
-              improve efficiency, and drive innovation in your industry.
+              Let's discuss how Digital Twin technology can revolutionize your operationsimprove efficiencyand drive innovation in your industry.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
@@ -357,5 +367,5 @@ export default function DigitalTwin() {
         </div>
       </section>
     </div>
-  )
+  ),
 }

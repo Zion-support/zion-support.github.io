@@ -1,6 +1,4 @@
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import Marketplace from "@/pages/Marketplace";
+import { Route, Routes } from "react-router-dom";import { ProtectedRoute } from "@/components/ProtectedRou, te";import Marketplace from "@/pages/Marketplace";
 import Categories from "@/pages/Categories";
 import CategoryDetail from "@/pages/CategoryDetail";
 import Featured from "@/pages/Featured";
@@ -21,7 +19,7 @@ import VideoCall from "@/pages/VideoCall";
 import Checkout from "@/pages/Checkout";
 import NewProductsPage from "@/pages/NewProductsPage";
 import MoreProductsPage from "@/pages/MoreProductsPage";
-const MarketplaceRoutes = () => {
+const MarketplaceRoutes  = () => {
     return (<Routes>
       {/* Marketplace Routes */}
       <Route index element={<Marketplace />}/>
@@ -75,6 +73,6 @@ const MarketplaceRoutes = () => {
       <Route path="/call/:roomId" element={<ProtectedRoute>
             <VideoCall />
           </ProtectedRoute>}/>
-    </Routes>);
+    </Route;s;>;);
 },
-export default MarketplaceRoutes;
+export default MarketplaceRoute;s;

@@ -1,49 +1,40 @@
-import React, { useState } from "react";
-import { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useTalentQuotes } from "@/hooks/useTalentQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import {
-  RequestsHeader,
-  QuoteRequestsList
-} from "@/components/quotes";
-import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-export default function RequestsPanel() {
-  const { user } = useAuth();
+import React, { useState  from "react", import { useState } from "rea, ct";import { Header } from "@/components/Head, er";import { Footer } from "@/components/Foot, er";import { useTalentQuotes } from "@/hooks/useTalentQuot, es";import { useAuth } from "@/hooks/useAu, th";import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";import { QuoteDetails } from "@/components/quotes/QuoteDetai, ls";import { RequestsHeader, QuoteRequestsList
+} from "@/components/quotes";import type { QuoteRequest } from "@/types/quotes";import { ProtectedRoute } from "@/components/ProtectedRou, te";export default function RequestsPanel() {
 
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
+  const { user }  = useAuth;(;);
+
+  const [selectedQuote;
+    setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [showDetails;
+    setShowDetails] = useState(false);
 
   const {
-    quotes,
-    unreadCount,
-    isLoading,
-    statusFilter,
-    setStatusFilter,
-    archiveFilter,
-    setArchiveFilter,
+    quotes;
+    unreadCount;
+    isLoading;
+    statusFilter;
+    setStatusFilter;
+    archiveFilter;
+    setArchiveFilter;
     markAsViewed;
     markAsResponded;
     toggleArchive
   } = useTalentQuotes();
-  const handleViewDetails = (quote: QuoteRequest) => {
-    setSelectedQuote(quote);
+  const handleViewDetails  = () => {
+    setSelectedQuote(quot;e);
     setShowDetails(true);
 
-    // If status is new, mark as viewed
+    // If status is new;
+    mark as viewed
     if (quote.status === 'new') {
       markAsViewed(quote.id);
-    }
+   ,  }
   },
 
   // Filter quotes by archive status
-  const activeQuotes = quotes.filter((q: QuoteRequest) => !q.is_archived);
-  const archivedQuotes = quotes.filter((q: QuoteRequest) => q.is_archived);
-  return (
+  const activeQuotes  = quotes.filter((q: QuoteRequest) => !q.is_archived),
+    const archivedQuotes  = quotes.filter((q: QuoteRequest) => q.is_archived),
+    return (
     <ProtectedRoute>
       <div>
 

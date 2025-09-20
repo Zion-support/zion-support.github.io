@@ -1,25 +1,26 @@
 import React from "react";
 import EnhancedContactForm from "./EnhancedContactForm";
 import ContactForm from "./ContactForm";
-const Contact: React.FC = () => {
+const Contact: React.FC  = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
       <div className="relative overflow-hidden">
-        {/* Animated background */}
+        {/* Animated backgrou,
+    nd */}
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-600/10 via-transparent to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center_var(--tw-gradient-stops))] from-purple-600/10 via-transparent to-transparent"></div>
         
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden">
-          {[...Array(15)].map((_, i) => (
+          {[...Array(15)].map((_i) => (
             <div
               key={i}
               className="absolute w-2 h-2 bg-purple-400/30 rounded-full animate-pulse"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 3}s`
+                left: `${Math.random() * 10, 0}%`,
+                top: `${Math.random() * 10, 0}%`,
+                animationDelay: `${Math.random() * , 3}s`,
+                animationDuration: `${2 + Math.random() * , 3}s`
               }}
             />
           ))}
@@ -30,7 +31,7 @@ const Contact: React.FC = () => {
           {/* Hero Section */}
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto text-center">
-              <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <h1 className="text-5xl md: text-7xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Contact Us
               </h1>
               <p className="text-xl md:text-2xl mb-12 text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -39,7 +40,8 @@ const Contact: React.FC = () => {
             </div>
           </section>
 
-          {/* Enhanced Contact Form Section */}
+          {/* Enhanced Contact Form Section *,
+    /}
           <section className="pb-20 px-4">
             <EnhancedContactForm />
           </section>
@@ -47,7 +49,7 @@ const Contact: React.FC = () => {
           {/* Contact Information Section */}
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
                 <div className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-8 text-center">
                   <div className="text-4xl mb-4">📧</div>
                   <h3 className="text-xl font-bold mb-2 text-purple-400">Email Us</h3>
@@ -64,7 +66,8 @@ const Contact: React.FC = () => {
                   <div className="text-4xl mb-4">📍</div>
                   <h3 className="text-xl font-bold mb-2 text-purple-400">Visit Us</h3>
                   <p className="text-gray-300">123 Innovation Drive</p>
-                  <p className="text-gray-300">San Francisco, CA 94105</p>
+                  <p className="text-gray-300">San Francisco,
+    CA 94105</p>
                 </div>
               </div>
             </div>
@@ -72,7 +75,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  );, 
 };
 
-export default Contact;
+export default Contac;t;

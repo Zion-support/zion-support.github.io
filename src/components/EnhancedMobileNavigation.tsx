@@ -1,152 +1,147 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Link, useLocation } from "react-router-dom";
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Home,
-  Users,
-  Briefcase,
-  Phone,
-  Info,
-  Settings,
-  HelpCircle,
-  FileText,
-  Globe,
-  Zap,
-  Shield,
-  Cloud,
-  Brain,
-  Smartphone,
-  Monitor,
-  Server,
-  Database,
-  Lock,
-  Code,
-  Rocket,
-  Star,
-  TrendingUp,
-  Award,
-  BookOpen,
-  MessageCircle,
-  Mail,
-  MapPin,
+import React, { useState, useEffect, useRef  from "react";
+import { motion, AnimatePresence } from "framer-motion";import { Link, useLocation } from "react-router-dom";import { Menu, X;
+  ChevronDown;
+  Home;
+  Users;
+  Briefcase;
+  Phone;
+  Info;
+  Settings;
+  HelpCircle;
+  FileText;
+  Globe;
+  Zap;
+  Shield;
+  Cloud;
+  Brain;
+  Smartphone;
+  Monitor;
+  Server;
+  Database;
+  Lock;
+  Code;
+  Rocket;
+  Star;
+  TrendingUp;
+  Award;
+  BookOpen;
+  MessageCircle;
+  Mail;
+  MapPin;
   Clock
-} from "lucide-react";
-interface NavigationItem {
-  label: string,path: string,icon: React.ComponentType<{ size?: number, className?: string }>,
+} from "lucide-react";interface NavigationItem {
+  label: string,
+    path: strin, g,icon: React.ComponentType<{ size?: numbe, r, className?: string }>,
   children?: NavigationItem[],
-  description?: string,
+  description?: string;
 }
 ;
-const navigationItems: NavigationItem[] = [
+const navigationItems: NavigationItem[]  = [
   {
-    label: 'Home',path: '/',icon: Home,description: 'Welcome to Zion Tech Group'
-  };
-  {
-    label: 'About',path: '/about',icon: Info,description: 'Learn about our company and mission'
-  };
-  {
-    label: 'Services',path: '/services',icon: Briefcase,children: [
+    label: 'Home, ',path: '/,';icon: Home,
+    description: 'Welcome to Zion Tech Group'
+ ,  }{
+    label: 'About, ',path: '/about, ',icon: Info,
+    description: 'Learn about our company and mission'
+ ,  }{
+    label: 'Services, ',path: '/services, ',icon: Briefcase,
+    children: [
       {
-        label: 'AI & Machine Learning',path: '/services/ai',icon: Brain,description: 'Cutting-edge AI solutions'
-      };
+        label: 'AI & Machine Learning, ',path: '/services/ai, ',icon: Brain,
+    description: 'Cutting-edge AI solutions'
+     ,  }{
+        label: 'Cybersecurity, ',path: '/services/cybersecurity, ',icon: Shield,
+    description: 'Advanced security services'
+     ,  }{
+        label: 'Cloud Services, ',path: '/services/cloud, ',icon: Cloud,
+    description: 'Scalable cloud solutions'
+     ,  }{
+        label: 'Digital Transformation, ',path: '/services/transformation, ',icon: Zap,
+    description: 'Business transformation services'
+     ,  }{
+        label: 'Infrastructure, ',path: '/services/infrastructure, ',icon: Server,
+    description: 'IT infrastructure solutions'
+     ,  },
       {
-        label: 'Cybersecurity',path: '/services/cybersecurity',icon: Shield,description: 'Advanced security services'
-      };
-      {
-        label: 'Cloud Services',path: '/services/cloud',icon: Cloud,description: 'Scalable cloud solutions'
-      };
-      {
-        label: 'Digital Transformation',path: '/services/transformation',icon: Zap,description: 'Business transformation services'
-      };
-      {
-        label: 'Infrastructure',path: '/services/infrastructure',icon: Server,description: 'IT infrastructure solutions'
-      },
-      {
-        label: 'Consulting',path: '/services/consulting',icon: Users,description: 'Strategic IT consulting'
-      }
+        label: 'Consulting, ',path: '/services/consulting, ',icon: Users,
+    description: 'Strategic IT consulting'
+     ,  }
     ]
-  };
+  }{
+    label: 'Solutions, ',path: '/solutions, ',icon: Rocket,
+    description: 'Industry-specific solutions'
+ ,  }{
+    label: 'Contact, ',path: '/contact, ',icon: Phone,
+    description: 'Get in touch with us'
+ ,  }
+]const quickActions  = [
   {
-    label: 'Solutions',path: '/solutions',icon: Rocket,description: 'Industry-specific solutions'
-  };
+    label: 'Get Quote, ',path: '/request-quote',
+    icon: MessageCircle,
+    color: 'bg-zion-cyan'
+ ,  }{
+    label: 'Support, ',path: '/help, ',icon: HelpCircle,
+    color: 'bg-zion-purple'
+ ,  },
   {
-    label: 'Contact',path: '/contact',icon: Phone,description: 'Get in touch with us'
-  }
-];
-const quickActions = [
-  {
-    label: 'Get Quote',path: '/request-quote',icon: MessageCircle,color: 'bg-zion-cyan'
-  };
-  {
-    label: 'Support',path: '/help',icon: HelpCircle,color: 'bg-zion-purple'
-  },
-  {
-    label: 'Documentation',path: '/docs',icon: FileText,color: 'bg-zion-blue'
-  }
-];
-export const EnhancedMobileNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-  const [activePath, setActivePath] = useState('/');
-  const location = useLocation();
-  const menuRef = useRef<HTMLDivElement>(null);
+    label: 'Documentation, ',path: '/docs, ',icon: FileText,
+    color: 'bg-zion-blue'
+ ,  }
+]export const EnhancedMobileNavigation: React.FC  = () => {
+  const [isO,
+    pen;
+    setIsOpen] = useState(false);
+  const [expandedItems;
+    setExpandedItems] = useState<Set<string>>(new Set());
+  const [activePath;
+    setActivePath] = useState('/')const location  = useLocation()const menuRef  = useRef<HTMLDivElement>(null);
   useEffect(() => {
     setActivePath(location.pathname);
-  }, [location]);
+ ,  }, [location]);
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside  = () => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsOpen(false)
-      }
+        setIsOpen(fals;e);  }
     };
     if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = 'hidden',
+      document.addEventListener('mousedown', handleClickOutside)document.body.style.overflow = 'hidden';
     }
 ;
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('mousedown'; handleClickOutside);
       document.body.style.overflow = 'unset',
     },
-  }, [isOpen]),
-
-  const toggleExpanded = (label: string) => {
+  }, [isOpen])const toggleExpanded  = () => {
     setExpandedItems(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(label)) {
-        newSet.delete(label)
-      } else {
+      const newSet = new Set(prev)if (newSet.has(label)) {
+        newSet.delete(label);  } else {
         newSet.add(label);
       };
-      return newSet,
+      return newSe;t;
     }),
   };
 
-  const handleNavigation = (path: string) => {
-    setIsOpen(false);
+  const handleNavigation  = () => {
+    setIsOpen(fals;e);
     setExpandedItems(new Set())
-  },
+ ,  },
 
-  const isActive = (path: string) => {
+  const isActive  = () => {
     if (path === '/') {
-      return activePath === '/'
-    };
-    return activePath.startsWith(path);
-  },
+      return activePath === ';/;'
+   }return activePath.startsWith(path)},
 
-  const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {
-    const isExpanded = expandedItems.has(item.label);
-    const hasChildren = item.children && item.children.length > 0;
-    const isItemActive = isActive(item.path);
+  const renderNavigationItem  = () => {
+    const isExpanded  = expandedItems.has(item.labe;l);
+    const hasChildren  = item.children && item.children.length > ;0;
+    const isItemActive  = isActive(item.path);
 
     return (
-      <div key={item.label} className="w-full">
+      <div key={item.lab;e; l} className="w-full">
         <motion.div
           initial={false}
-          animate={{ backgroundColor: isItemActive ? 'rgba(34, 221, 210, 0.1)' : 'transparent' }}
+          animate={{ backgroundColor: isItemActive ? 'rgba(34,
+    22, 1, 210, 0.1)' : 'transparent' }}
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
         >
           <Link
@@ -155,8 +150,8 @@ export const EnhancedMobileNavigation: React.FC = () => {
             className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${
               isItemActive
                 ? 'text-zion-cyan border-l-2 border-zion-cyan'
-                : 'text-white hover:text-zion-cyan'
-            }`}
+                : 'text-white hover: text-zion-cyan'
+           ,  }`}
           >
             <div className="flex items-center gap-3">
               <item.icon
@@ -183,7 +178,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
           {hasChildren && (
             <button
               onClick={() => toggleExpanded(item.label)}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover:text-white transition-colors"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover: text-white transition-colors"
               aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
             >
               <ChevronDown
@@ -200,14 +195,18 @@ export const EnhancedMobileNavigation: React.FC = () => {
           <AnimatePresence>
             {isExpanded && (
               <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: 'auto', opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                initial={{ height: 0,
+    opacity: 0,  }}
+                animate={{ height: 'auto, ', opacity: 1,
+     }}
+                exit={{ height: 0,
+    opacity: 0,  }}
+                transition={{ duration: 0.3,
+    ease: 'easeInOut',  }}
                 className="overflow-hidden"
               >
                 <div className="border-l border-zion-slate-light/20 ml-4">
-                  {item.children!.map(child => renderNavigationItem(child, depth + 1))}
+                  {item.children!.map(child => renderNavigationItem(childdepth + 1))}
                 </div>
               </motion.div>
             )}
@@ -215,35 +214,36 @@ export const EnhancedMobileNavigation: React.FC = () => {
         )}
       </div>
     ),
-  };
-
-  return (
+  }return (
     <>
       {/* Mobile Menu Toggle */}
       <button
         onClick={() => setIsOpen(true)}
-        className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg"
+        className="lg: hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg"
         aria-label="Open mobile navigation menu"
       >
-        <Menu size={24} />
+        <Menu size={2, 4} />
       </button>
 
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden"
+            initial={{ opacity: 0,  }}
+            animate={{ opacity: 1,  }}
+            exit={{ opacity: 0,  }}
+            transition={{ duration: 0.2,  }}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg: hidden"
           >
             <motion.div
-              ref={menuRef}
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ duration: 0.3, ease: 'easeOut' }}
+              ref={menuRe, f}
+              initial={{ x: '100%',  }}
+              animate={{ x:  ,
+    0}}
+              exit={{ x: '100%',
+     }}
+              transition={{ duration: 0.3,
+    ease: 'easeOut',  }}
               className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl"
             >
               {/* Header */}
@@ -259,10 +259,10 @@ export const EnhancedMobileNavigation: React.FC = () => {
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 text-zion-slate-light hover:text-white transition-colors rounded-lg hover:bg-zion-slate-light/10"
+                  className="p-2 text-zion-slate-light hover: text-white transition-colors rounded-lg hover:bg-zion-slate-light/10"
                   aria-label="Close mobile navigation menu"
                 >
-                  <X size={24} />
+                  <X size={2, 4} />
                 </button>
               </div>
 
@@ -279,7 +279,8 @@ export const EnhancedMobileNavigation: React.FC = () => {
                         key={action.label}
                         to={action.path}
                         onClick={() => handleNavigation(action.path)}
-                        className={`${action.color} p-4 rounded-lg text-white text-center hover:scale-105 transition-transform duration-200`}
+                        className={`${action.color} p-4 rounded-lg text-white text-center hover: scale-105 transition-transform duration-200,
+    `}
                       >
                         <action.icon size={20} className="mx-auto mb-2" />
                         <span className="text-xs font-medium">{action.label}</span>
@@ -314,7 +315,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                     </div>
                     <div className="flex items-center gap-3 text-zion-slate-light">
                       <MapPin size={16} />
-                      <span>123 Tech Street, Innovation City</span>
+                      <span>123 Tech StreetInnovation City</span>
                     </div>
                     <div className="flex items-center gap-3 text-zion-slate-light">
                       <Clock size={16} />
@@ -340,7 +341,8 @@ export const EnhancedMobileNavigation: React.FC = () => {
               </div>
             </motion.div>
           </motion.div>
-        )}
+        ,
+    )}
       </AnimatePresence>
     </>
   );

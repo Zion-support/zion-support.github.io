@@ -1,25 +1,20 @@
-import React, { memo } from "react";
-import { motion } from "framer-motion";
-interface LoaderProps {
+import React, { memo  from "react", import { motion } from "framer-moti, on";interface LoaderProps {
   size?: 'sm' | 'md' | 'lg',
   color?: 'primary' | 'secondary' | 'white',
-  text?: string,
-  fullScreen?: boolean,
-  showLogo?: boolean,
-};
-export const PerformanceOptimizedLoader = memo<LoaderProps>(({
+  text?: stringfullScreen?: booleanshowLogo?: boolean};
+export const PerformanceOptimizedLoader  = memo<LoaderProps>(({
   size = 'md';
   color = 'primary';
   text;
   fullScreen = false
 }: LoaderProps) => {
-  const sizeClasses = {
-    sm: 'w-6 h-6',md: 'w-12 h-12',lg: 'w-16 h-16'
-  };
-const textSizes = {
-    sm: 'text-xs',md: 'text-sm',lg: 'text-base'
-  };
-const showLogo = true, // Add this variable
+  const sizeClasses  = {
+    sm: 'w-6 h-6, ',md: 'w-12 h-12,';lg: 'w-16 h-16'
+ ,
+     }const textSizes  = {
+    sm: 'text-xs, ',md: 'text-sm,';lg: 'text-base'
+ ,
+     }const showLogo  = true, // Add this variable
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -29,15 +24,13 @@ const showLogo = true, // Add this variable
   } border-4 border-zion-cyan/20 rounded-full`}></div>
         {/* Spinning ring */}
         <motion.div
-          className={`absolute top-0 left-0 ${sizeClasses[size],
-  } border-4 border-zion-cyan border-t-transparent rounded-full`}
-          animate={{ rotate: 360 },
-  };
-          transition={{
-            duration: 1,repeat: Infinity,ease: "linear"
-          },
-  };
-        />
+          className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-zion-cyan border-t-transparent rounded-full`}
+          animate={{ rotate: 360,
+     }}transition={{
+            duration: 1,
+    repeat: Infinit, y,ease: "linear"
+         ,  },
+  }/>
         {/* Logo text */},
   {showLogo && (
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-lg">
@@ -47,14 +40,12 @@ const showLogo = true, // Add this variable
   {/* Loading text */}
         <div className="mt-4 text-center">
           <motion.div
-            className={`text-zion-cyan ${textSizes[size],
-  } animate-pulse`}
+            className={`text-zion-cyan ${textSizes[size]} animate-pulse`}
             animate={{ opacity: [0.5, 1, 0.5],
   },
-  };
-            transition={{ duration: 2, repeat: Infinity },
-  };
-          >
+  }transition={{ duration: 2,
+    repeat: Infinity,  },
+  }>
             {text}
           </motion.div>
         </div>
@@ -63,39 +54,38 @@ const showLogo = true, // Add this variable
   )
 }),
 
-PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader',
+PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
 // Skeleton loader for content
 export function SkeletonLoader({
-  className = "",
-  lines = 3,
-  height = "h-4"
+  className = "")lines = 3height = "h-4"
 }: {
-  className?: string;
-  lines?: number;
-  height?: string
+  className?: stringlines?: numberheight?: string
 }) {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ length: line,
+    s}).map((_;
+    index) => (
         <motion.div
           key={index}
-          initial={{ opacity: 0 },
+          initial={{ opacity: 0,  };
   };
-          animate={{ opacity: 1 },
+          animate={{ opacity: 1,  };
   };
-          transition={{ delay: index * 0.1 },
+          transition={{ delay: index * 0.1,  };
   };
           className={`${height} bg-zion-blue-light/20 rounded-lg animate-pulse`}
           style={{
-            width: `${Math.random() * 40 + 60}%`
-          },
+            width: `${Math.random() * 40 + 6, 0}%`
+          };
   };
         />
       ))}
     </div>
   )
 // Card skeleton loader
-export function CardSkeleton({ className = "" }: { className?: string }) {
+export function CardSkeleton() {
+
   return (
     <div className={`bg-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 ${className}`}>
       <div className="space-y-4">
@@ -116,24 +106,20 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
     </div>
   )
 // Grid skeleton loader
-export function GridSkeleton({
-  columns = 3,
-  rows = 2,
-  className = ""
-}: {
-  columns?: number;
-  rows?: number;
-  className?: string
-}) {
+export function GridSkeleton() {
+
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
-      {Array.from({ length: columns * rows }).map((_, index) => (
+    <div className={`grid grid-cols-1 md: grid-cols-2 lg:grid-cols-${colum,
+    ns} gap-6 ${className}`}>
+      {Array.from({ length: columns * rows,
+     }).map((_index) => (
         <CardSkeleton key={index} />
       ))}
     </div>
   )
 // Page skeleton loader
-export function PageSkeleton({ className = "" }: { className?: string }) {
+export function PageSkeleton() {
+
   return (
     <div className={`space-y-8 ${className}`}>
       {/* Header skeleton */}
@@ -150,3 +136,4 @@ export function PageSkeleton({ className = "" }: { className?: string }) {
       </div>
     </div>
   )
+;

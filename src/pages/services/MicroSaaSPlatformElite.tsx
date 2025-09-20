@@ -1,56 +1,61 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { 
-  Rocket,
-  ShoppingCart, 
-  Zap, 
-  Users, 
-  Globe, 
-  Database,
-  Network,
-  Lock,
-  Eye,
-  Target,
-  Award,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Code,
-  BarChart3,
-  CreditCard,
+import { motion } from "framer-moti, on";import { Rocket, ShoppingCart;
+  Zap;
+  Users;
+  Globe;
+  Database;
+  Network;
+  Lock;
+  Eye;
+  Target;
+  Award;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  Code;
+  BarChart3;
+  CreditCard;
   Settings
-} from "lucide-react";
-const MicroSaaSPlatformElite: React.FC = () => {
+} from "lucide-react";const MicroSaaSPlatformElite: React.FC  = () => {
   const features = [
     {
-      icon: Rocket,title: "Rapid SaaS Launch",description: "Launch your micro-SaaS in 30 days with our proven templates and automation tools"
-    };
-    {
-      icon: ShoppingCart,title: "Built-in Payment Processing",description: "Integrated Stripe, PayPal, and crypto payments with automated billing and subscriptions"
+      icon: Rock,
+    e;t;
+    title: "Rapid SaaS Launch, ",description: "Launch your micro-SaaS in 30 days with our proven templates and automation tools"
+   ,  }{
+      icon: ShoppingCart,
+    title: "Built-in Payment Processing, ",description: "Integrated Strip, e, PayPal, and crypto payments with automated billing and subscriptions"
     },
     {
-      icon: Zap,title: "AI-Powered Automation",description: "Smart workflows, customer support automation, and intelligent business process optimization"
+      icon: Zap,
+    title: "AI-Powered Automation, ",description: "Smart workflow, s, customer support automation, and intelligent business process optimization"
     },
     {
-      icon: Users,title: "Multi-Tenant Architecture",description: "Scalable platform supporting unlimited customers with role-based access control"
+      icon: Users,
+    title: "Multi-Tenant Architecture, ",description: "Scalable platform supporting unlimited customers with role-based access control"
+   ,  },
+    {
+      icon: Globe,
+    title: "Global Deployment, ",description: "Deploy to multiple regions with CD, N, load balancing, and localized compliance"
     },
     {
-      icon: Globe,title: "Global Deployment",description: "Deploy to multiple regions with CDN, load balancing, and localized compliance"
-    },
-    {
-      icon: Database,title: "Enterprise Database",description: "PostgreSQL, MongoDB, and Redis with automated backups and disaster recovery"
+      icon: Database,
+    title: "Enterprise Database, ",description: "PostgreSQ, L, MongoDB, and Redis with automated backups and disaster recovery"
     }
   ],
 
-  const pricing = [
+  const pricing  = [
     {
-      name: "Micro SaaS Starter",price: "$2,500",
-      period: "/month",description: "Perfect for solo entrepreneurs and small teams",features: [
-        "Up to 1,000 customers",
+      name: "Micro SaaS Starte,
+    r";price: "$2,
+    500, ",
+      period: "/month, ",description: "Perfect for solo entrepreneurs and small teams, ",features: [
+        "Up to 1,
+    000 customers, ",
         "Basic SaaS templates",
         "Standard payment processing",
         "Email support",
@@ -59,9 +64,11 @@ const MicroSaaSPlatformElite: React.FC = () => {
       ]
     },
     {
-      name: "Micro SaaS Pro",price: "$5,500",
-      period: "/month",description: "Ideal for growing businesses and teams",features: [
-        "Up to 10,000 customers",
+      name: "Micro SaaS Pro, ",price: "$5,
+    500, ",
+      period: "/month, ",description: "Ideal for growing businesses and teams, ",features: [
+        "Up to 10,
+    000 customers, ",
         "Advanced SaaS templates",
         "Multi-payment gateways",
         "Priority support",
@@ -69,12 +76,11 @@ const MicroSaaSPlatformElite: React.FC = () => {
         "API access",
         "Custom branding"
       ],
-      popular: true
-    };
-    {
-      name: "Micro SaaS Enterprise",price: "$12,000",
-      period: "/month",description: "For large organizations with complex needs",features: [
-        "Unlimited customers",
+      popular: true,  }{
+      name: "Micro SaaS Enterprise, ",price: "$12,
+    000, ",
+      period: "/month, ",description: "For large organizations with complex needs, ",features: [
+        "Unlimited customers, ",
         "Custom SaaS development",
         "White-label platform",
         "24/7 dedicated support",
@@ -85,22 +91,26 @@ const MicroSaaSPlatformElite: React.FC = () => {
     }
   ],
 
-  const platformFeatures = [
+  const platformFeatures  = [
     {
-      title: "SaaS Templates & Components",description: "Pre-built templates for common SaaS applications including CRM, project management, e-commerce, and more"
+      title: "SaaS Templates & Component,
+    s";description: "Pre-built templates for common SaaS applications including CRM,
+    project managemen, t, e-commerce, and more"
     },
     {
-      title: "Customer Management System",description: "Complete customer lifecycle management with onboarding, support, and retention tools"
+      title: "Customer Management System, ",description: "Complete customer lifecycle management with onboarding,
+    suppor, t, and retention tools"
     },
     {
-      title: "Analytics & Reporting",description: "Comprehensive business intelligence with real-time dashboards and automated reporting"
-    },
+      title: "Analytics & Reporting, ",description: "Comprehensive business intelligence with real-time dashboards and automated reporting"
+   ,  },
     {
-      title: "Integration Hub",description: "Connect with 500+ third-party services including CRMs, marketing tools, and business applications"
+      title: "Integration Hub, ",description: "Connect with 500+ third-party services including CRMs,
+    marketing tool, s, and business applications"
     }
   ],
 
-  const saasTemplates = [
+  const saasTemplates  = [
     "CRM & Sales Management",
     "Project Management",
     "E-commerce Platform",
@@ -109,33 +119,35 @@ const MicroSaaSPlatformElite: React.FC = () => {
     "Accounting & Finance",
     "Marketing Automation",
     "Customer Support",
-    "Inventory Management",
+    "Inventory Management";
     "Real Estate Management"
-  ],
-
-  return (
+  ]return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: ,
+    0y: 20,  }}
+            animate={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,
+     }}
           >
             <div className="flex justify-center mb-6">
               <div className="p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full">
                 <Rocket className="h-12 w-12 text-white" />
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
               Micro-SaaS Platform Elite
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
               Launch and scale your micro-SaaS business with our comprehensive platform. 
-              Everything you need to build, launch, and grow your SaaS business in one place.
+              Everything you need to build,
+    launc, h, and grow your SaaS business in one place.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105"
@@ -155,39 +167,46 @@ const MicroSaaSPlatformElite: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Features Section *,
+    /}
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
+            viewport={{ once: true,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Complete SaaS Platform Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our platform provides everything you need to build, launch, and scale your micro-SaaS business 
+              Our platform provides everything you need to buildlaunch, and scale your micro-SaaS business 
               without the complexity of building from scratch.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-green-500 transition-all duration-300"
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.8,
+    delay: index * 0.1,  }}
+                viewport={{ once: true,  }}
+                className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover: border-green-500 transition-all duration-300"
               >
                 <div className="p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg w-fit mb-6">
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.titl,
+    e}</h3>
                 <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
             ))}
@@ -196,13 +215,15 @@ const MicroSaaSPlatformElite: React.FC = () => {
       </section>
 
       {/* Platform Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
+            viewport={{ once: true,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -214,14 +235,18 @@ const MicroSaaSPlatformElite: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {platformFeatures.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {platformFeatures.map((feature,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.8,
+    delay: index * 0.1,  }}
+                viewport={{ once: true,
+     }}
                 className="bg-zion-slate-dark p-8 rounded-xl border border-zion-slate-light"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -233,13 +258,15 @@ const MicroSaaSPlatformElite: React.FC = () => {
       </section>
 
       {/* SaaS Templates Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
+            viewport={{ once: true,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -251,14 +278,18 @@ const MicroSaaSPlatformElite: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {saasTemplates.map((template, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-5 gap-6">
+            {saasTemplates.map((template,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.8,
+    delay: index * 0.1,  }}
+                viewport={{ once: true,
+     }}
                 className="bg-zion-slate p-6 rounded-xl border border-zion-slate-light text-center"
               >
                 <div className="p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg w-fit mx-auto mb-4">
@@ -272,13 +303,15 @@ const MicroSaaSPlatformElite: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
+            viewport={{ once: true,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -290,14 +323,18 @@ const MicroSaaSPlatformElite: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricing.map((plan,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.8,
+    delay: index * 0.1,  }}
+                viewport={{ once: true,
+     }}
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${
                   plan.popular 
                     ? 'border-green-500 shadow-2xl shadow-green-500/25' 
@@ -322,7 +359,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((featurefeatureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-white">{feature}</span>
@@ -331,37 +368,39 @@ const MicroSaaSPlatformElite: React.FC = () => {
                 </ul>
 
                 <a
-                  href="https://ziontechgroup.com/contact"
+                  href="https: //ziontechgroup.com/contact"
                   className="w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
                 </a>
               </motion.div>
-            ))}
+            ),
+    )}
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
+            viewport={{ once: true,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Launch Your SaaS?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Get in touch with our SaaS platform experts to discuss how we can help you build;
-              launch, and scale your micro-SaaS business.
+              Get in touch with our SaaS platform experts to discuss how we can help you buildlaunchand scale your micro-SaaS business.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4">
                 <Phone className="h-8 w-8 text-white" />
@@ -395,7 +434,8 @@ const MicroSaaSPlatformElite: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-2">Visit SaaS Center</h3>
               <p className="text-zion-slate-light">
                 364 E Main St STE 1008<br />
-                Middletown, DE 19709
+                Middletown,
+    DE 19709
               </p>
             </div>
           </div>
@@ -412,7 +452,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer *, /}
       <footer className="py-12 px-4 sm: px-6 lg:px-8 border-t border-zion-slate-light">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-zion-slate-light mb-4">
@@ -442,6 +482,6 @@ const MicroSaaSPlatformElite: React.FC = () => {
         </div>
       </footer>
     </div>
-  )
+  ),
 };
-export default MicroSaaSPlatformElite;
+export default MicroSaaSPlatformElit;e;

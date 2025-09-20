@@ -1,58 +1,65 @@
 // Common type definitions for the application
 
 export interface BaseEntity {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
+  id: strin,
+    g;
+  createdAt: string,
+    updatedAt: string,
 }
 
 export interface ApiResponse<T> {
-  data: T;
-  message: string;
-  success: boolean;
-  timestamp: string;
+  data:  ,
+    T;
+  message: string,
+    success: boolean,
+    timestamp: string,
 }
 
 export interface PaginatedResponse<T> extends ApiResponse<T[]> {
   pagination: {
-    page: number;
-    limit: number;
-    total: number;
-    totalPages: number;
-    hasNext: boolean;
-    hasPrev: boolean;
-  };
+    page: numbe,
+    r;
+    limit: number,
+    total: number,
+    totalPages: number,
+    hasNext: boolean,
+    hasPrev: boolean,  };
 }
 
 export interface ErrorResponse {
-  error: string;
-  message: string;
-  statusCode: number;
-  timestamp: string;
-  path?: string;
+  error: strin,
+    g;
+  message: string,
+    statusCode: number,
+    timestamp: string,
+    path?: string;, 
 }
 
 export interface LoadingState {
-  isLoading: boolean;
-  error: string | null;
+  isLoading: boolea,
+    n;
+  error: string | null,
 }
 
 export interface FormState<T> extends LoadingState {
-  data: T;
-  errors: Partial<Record<keyof T, string>>;
-  isValid: boolean;
-  isDirty: boolean;
+  data:  ,
+    T;
+  errors: Partial<Record<keyof T,
+    string>>;
+  isValid: boolean,
+    isDirty: boolean,
 }
 
 export interface AnimationVariants {
   hidden: {
-    opacity: number;
+    opacity: numbe,
+    r;
     y?: number;
     x?: number;
     scale?: number;
-  };
+ ,  };
   visible: {
-    opacity: number;
+    opacity: number,
     y?: number;
     x?: number;
     scale?: number;
@@ -62,139 +69,134 @@ export interface AnimationVariants {
       duration?: number;
       delay?: number;
       staggerChildren?: number;
-    };
+   ,  };
   };
 }
 
 export interface PerformanceMetrics {
-  fps: number;
-  memoryUsage: number;
-  renderTime: number;
-  networkLatency: number;
-  bundleSize: number;
-  cacheHitRate: number;
-  lighthouseScore: number;
-  loadTime: number;
+  fps: numbe,
+    r;
+  memoryUsage: number,
+    renderTime: number,
+    networkLatency: number,
+    bundleSize: number,
+    cacheHitRate: number,
+    lighthouseScore: number,
+    loadTime: number,
 }
 
 export interface PerformanceAlert {
-  id: string;
-  type: 'warning' | 'error' | 'info';
-  message: string;
-  timestamp: Date;
+  id: strin,
+    g;
+  type: 'warning' | 'error' | 'info',
+    message: string,
+    timestamp: Date,
 }
 
 export interface BundleInfo {
-  name: string;
-  size: number;
-  gzipSize: number;
-  chunks: string[];
-  modules: ModuleInfo[];
+  name: strin,
+    gsize: number,
+    gzipSize: number,
+    chunks: string[],
+    modules: ModuleInfo[],
 }
 
 export interface ModuleInfo {
-  name: string;
-  size: number;
-  percentage: number;
-  chunks: string[];
+  name: strin,
+    gsize: number,
+    percentage: number,
+    chunks: string[],
 }
 
 export interface BundleAnalysis {
-  totalSize: number;
-  totalGzipSize: number;
-  bundles: BundleInfo[];
-  largestModules: ModuleInfo[];
-  duplicateModules: ModuleInfo[];
-  unusedModules: ModuleInfo[];
+  totalSize: numbe,
+    rtotalGzipSize: number,
+    bundles: BundleInfo[],
+    largestModules: ModuleInfo[],
+    duplicateModules: ModuleInfo[],
+    unusedModules: ModuleInfo[],
 }
 
 export interface ThemeConfig {
-  mode: 'light' | 'dark' | 'system';
-  primaryColor: string;
-  secondaryColor: string;
-  accentColor: string;
+  mode: 'light' | 'dark' | 'system',
+  primaryColor: string,
+    secondaryColor: string,
+    accentColor: string,
 }
 
 export interface UserPreferences {
-  theme: ThemeConfig;
-  language: string;
-  notifications: {
-    email: boolean;
-    push: boolean;
-    sms: boolean;
-  };
-  accessibility: {
-    highContrast: boolean;
-    reducedMotion: boolean;
-    fontSize: 'small' | 'medium' | 'large';
-  };
-}
+  theme: ThemeConfi,
+    glanguage: string,
+    notifications: {
+    email: boolean,
+    push: boolean,
+    sms: boolean,  }accessibility: {
+    highContrast: boolean,
+    reducedMotion: boolean,
+    fontSize: 'small' | 'medium' | 'large',  }}
 
 export interface NavigationItem {
-  label: string;
-  path: string;
-  icon?: string;
-  children?: NavigationItem[];
+  label: strin,
+    gpath: string,
+    icon?: stringchildren?: NavigationItem[];
   external?: boolean;
-  disabled?: boolean;
+  disabled?: boolean;, 
 }
 
 export interface BreadcrumbItem {
-  label: string;
+  label: strin,
+    g;
   path?: string;
-  current?: boolean;
+  current?: boolean;, 
 }
 
 export interface TableColumn<T> {
-  key: keyof T;
-  label: string;
-  sortable?: boolean;
+  key: keyof ,
+    T;
+  label: string,
+    sortable?: boolean;
   filterable?: boolean;
-  render?: (value: any, item: T) => React.ReactNode;
-  width?: string | number;
-  align?: 'left' | 'center' | 'right';
+  render?: (value: any,
+    item: T) => React.ReactNode,
+    width?: string | number;
+  align?: 'left' | 'center' | 'right';, 
 }
 
 export interface TableProps<T> {
-  data: T[];
-  columns: TableColumn<T>[];
-  loading?: boolean;
+  data: T[,
+    ];
+  columns: TableColumn<T>[],
+    loading?: boolean;
   pagination?: {
-    page: number;
-    limit: number;
-    total: number;
-    onPageChange: (page: number) => void;
-    onLimitChange: (limit: number) => void;
-  };
+    page: number,
+    limit: number,
+    total: number,
+    onPageChange: (page: number) => void,
+    onLimitChange: (limit: number) => void,  };
   sorting?: {
-    field: keyof T;
-    direction: 'asc' | 'desc';
-    onSort: (field: keyof T, direction: 'asc' | 'desc') => void;
-  };
-  selection?: {
-    selected: string[];
-    onSelectionChange: (selected: string[]) => void;
-  };
-}
+    field: keyof T,
+    direction: 'asc' | 'desc',
+    onSort: (field: keyof T,
+    direction: 'asc' | 'desc') => void,  }selection?: {
+    selected: string[],
+    onSelectionChange: (selected: string[]) => void,  }}
 
 export interface ChartDataPoint {
-  label: string;
-  value: number;
-  color?: string;
-  metadata?: Record<string, any>;
+  label: strin,
+    gvalue: number,
+    color?: string;
+  metadata?: Record<string;
+    any>;, 
 }
 
 export interface ChartConfig {
-  type: 'line' | 'bar' | 'pie' | 'doughnut' | 'area';
-  data: ChartDataPoint[];
-  options?: {
-    responsive?: boolean;
-    maintainAspectRatio?: boolean;
-    plugins?: {
+  type: 'line' | 'bar' | 'pie' | 'doughnut' | 'area',
+  data: ChartDataPoint[],
+    options?: {
+    responsive?: booleanmaintainAspectRatio?: booleanplugins?: {
       legend?: {
-        display?: boolean;
-        position?: 'top' | 'bottom' | 'left' | 'right';
-      };
+        display?: booleanposition?: 'top' | 'bottom' | 'left' | 'right';
+     ,  };
       tooltip?: {
         enabled?: boolean;
       };
@@ -219,164 +221,164 @@ export interface ChartConfig {
 }
 
 export interface ValidationRule {
-  required?: boolean;
+  required?: boolea;n;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
-  custom?: (value: any) => string | null;
+  custom?: (value: any) => string | null,
 }
 
 export interface ValidationSchema {
-  [key: string]: ValidationRule;
+  [key: string]: ValidationRul,
+    e;, 
 }
 
 export interface NotificationConfig {
-  id: string;
-  type: 'success' | 'error' | 'warning' | 'info';
-  title: string;
-  message: string;
-  duration?: number;
-  action?: {
-    label: string;
-    onClick: () => void;
-  };
-  dismissible?: boolean;
-}
+  id: strin,
+    g;
+  type: 'success' | 'error' | 'warning' | 'info',
+    title: string,
+    message: string,
+    duration?: numberaction?: {
+    label: string,
+    onClick: () => void,  }dismissible?: boolean}
 
 export interface SearchFilters {
-  query?: string;
+  query?: strin;g;
   category?: string;
   tags?: string[];
   dateRange?: {
-    start: Date;
-    end: Date;
-  };
+    start: Date,
+    end: Date,  };
   priceRange?: {
-    min: number;
-    max: number;
-  };
+    min: number,
+    max: number,  };
   sortBy?: string;
   sortOrder?: 'asc' | 'desc';
 }
 
 export interface FileUploadConfig {
-  accept?: string;
+  accept?: strin;g;
   maxSize?: number;
   maxFiles?: number;
   multiple?: boolean;
-  onUpload: (files: File[]) => Promise<void>;
-  onError?: (error: string) => void;
+  onUpload: (files: File[]) => Promise<void>,
+    onError?: (error: string) => void,
 }
 
 export interface ModalConfig {
-  id: string;
-  title: string;
-  content: React.ReactNode;
-  size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
+  id: strin,
+    g;
+  title: string,
+    content: React.ReactNode,
+    size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
   closable?: boolean;
   backdrop?: boolean;
   actions?: {
     primary?: {
-      label: string;
-      onClick: () => void;
-      loading?: boolean;
-    };
+      label: string,
+    onClick: () => void,
+    loading?: boolean;
+   ,  };
     secondary?: {
-      label: string;
-      onClick: () => void;
-    };
+      label: string,
+    onClick: () => void,  };
   };
 }
 
 export interface ToastConfig {
-  id: string;
-  type: 'success' | 'error' | 'warning' | 'info';
-  title?: string;
-  message: string;
-  duration?: number;
-  action?: {
-    label: string;
-    onClick: () => void;
-  };
-}
+  id: strin,
+    g;
+  type: 'success' | 'error' | 'warning' | 'info',
+    title?: stringmessage: string,
+    duration?: numberaction?: {
+    label: string,
+    onClick: () => void,  }}
 
 export interface KeyboardShortcut {
-  key: string;
+  key: strin,
+    g;
   ctrlKey?: boolean;
   shiftKey?: boolean;
   altKey?: boolean;
   metaKey?: boolean;
-  action: () => void;
-  description?: string;
-  preventDefault?: boolean;
+  action: () => void,
+    description?: string;
+  preventDefault?: boolean;, 
 }
 
 export interface LocalStorageConfig {
-  key: string;
-  defaultValue: any;
-  serializer?: {
-    serialize: (value: any) => string;
-    deserialize: (value: string) => any;
-  };
+  key: strin,
+    g;
+  defaultValue: any,
+    serializer?: {
+    serialize: (value: any) => string,
+    deserialize: (value: string) => any,  };
 }
 
 export interface DebounceConfig {
-  delay: number;
+  delay: numbe,
+    r;
   leading?: boolean;
-  trailing?: boolean;
+  trailing?: boolean;, 
 }
 
 export interface ThrottleConfig {
-  limit: number;
+  limit: numbe,
+    r;
   leading?: boolean;
-  trailing?: boolean;
+  trailing?: boolean;, 
 }
 
 export interface RetryConfig {
-  maxAttempts: number;
-  delay: number;
-  backoff?: 'linear' | 'exponential';
-  onRetry?: (attempt: number, error: Error) => void;
+  maxAttempts: numbe,
+    r;
+  delay: number,
+    backoff?: 'linear' | 'exponential';
+  onRetry?: (attempt: number,
+    error: Error) => void,
 }
 
 export interface CacheConfig {
-  ttl: number;
+  ttl: numbe,
+    r;
   maxSize?: number;
-  strategy?: 'lru' | 'lfu' | 'fifo';
+  strategy?: 'lru' | 'lfu' | 'fifo';, 
 }
 
 export interface LoggerConfig {
-  level: 'debug' | 'info' | 'warn' | 'error';
-  enableConsole?: boolean;
-  enableRemote?: boolean;
-  remoteEndpoint?: string;
-  context?: Record<string, any>;
+  level: 'debug' | 'info' | 'warn' | 'error',
+  enableConsole?: booleanenableRemote?: booleanremoteEndpoint?: stringcontext?: Record<string;
+    any>;, 
 }
 
 export interface AnalyticsConfig {
-  enabled: boolean;
-  trackingId: string;
-  anonymizeIp?: boolean;
-  customDimensions?: Record<string, string>;
+  enabled: boolea,
+    n;
+  trackingId: string,
+    anonymizeIp?: boolean;
+  customDimensions?: Record<string;
+    string>;
   events?: {
     pageView?: boolean;
     userInteraction?: boolean;
     performance?: boolean;
     errors?: boolean;
-  };
+ ,  };
 }
 
 export interface FeatureFlag {
-  key: string;
-  enabled: boolean;
-  description?: string;
+  key: strin,
+    g;
+  enabled: boolean,
+    description?: string;
   rolloutPercentage?: number;
   targetAudience?: string[];
-  expirationDate?: Date;
+  expirationDate?: Date;, 
 }
 
 export interface A11yConfig {
-  skipLinks?: boolean;
+  skipLinks?: boolea;n;
   focusManagement?: boolean;
   screenReader?: boolean;
   keyboardNavigation?: boolean;
@@ -385,58 +387,57 @@ export interface A11yConfig {
 }
 
 export interface I18nConfig {
-  defaultLanguage: string;
-  supportedLanguages: string[];
-  fallbackLanguage?: string;
+  defaultLanguage: strin,
+    g;
+  supportedLanguages: string[],
+    fallbackLanguage?: string;
   namespace?: string;
   interpolation?: {
     escapeValue?: boolean;
-  };
+ ,  };
 }
 
 export interface SecurityConfig {
-  csrfProtection?: boolean;
+  csrfProtection?: boolea;n;
   xssProtection?: boolean;
   contentSecurityPolicy?: string;
   rateLimiting?: {
-    windowMs: number;
-    maxRequests: number;
-  };
+    windowMs: number,
+    maxRequests: number,  };
 }
 
 export interface MonitoringConfig {
-  performance?: boolean;
+  performance?: boolea;n;
   errors?: boolean;
   userBehavior?: boolean;
   customMetrics?: boolean;
   alerting?: {
-    enabled: boolean;
-    thresholds: Record<string, number>;
-    channels: string[];
-  };
+    enabled: boolean,
+    thresholds: Record<string,
+    number>;
+    channels: string[],  };
 }
 
 export interface DeploymentConfig {
-  environment: 'development' | 'staging' | 'production';
-  version: string;
-  buildNumber: string;
-  timestamp: string;
-  features: FeatureFlag[];
+  environment: 'development' | 'staging' | 'production',
+  version: string,
+    buildNumber: string,
+    timestamp: string,
+    features: FeatureFlag[],
 }
 
 export interface HealthCheck {
-  status: 'healthy' | 'degraded' | 'unhealthy';
-  timestamp: string;
-  services: {
+  status: 'healthy' | 'degraded' | 'unhealthy',
+  timestamp: string,
+    services: {
     [serviceName: string]: {
-      status: 'up' | 'down' | 'degraded';
-      responseTime?: number;
+      status: 'up' | 'down' | 'degraded',
+    responseTime?: number;
       error?: string;
-    };
+   ,  };
   };
   metrics: {
-    cpu: number;
-    memory: number;
-    disk: number;
-  };
+    cpu: number,
+    memory: number,
+    disk: number,  };
 }

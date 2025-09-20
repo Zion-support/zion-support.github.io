@@ -1,156 +1,145 @@
-import React, { useState, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Brain,
-  Cloud,
-  Shield,
-  Server,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Globe as GlobeIcon,
-  Atom,
-  Blockchain,
-  Heart,
-  Scale,
-  Factory,
-  Satellite,
-  ShoppingCart,
-  Building,
-  Truck,
-  Eye,
-  Download,
-  ExternalLink,
-  Award,
-  Target,
-  Lightbulb,
-  BarChart3,
-  PieChart,
-  Activity,
-  Gauge,
-  ShieldCheck,
-  X,
-  Sparkles,
-  Crown,
-  Target as TargetIcon,
-  Zap as ZapIcon,
-  Grid,
+import React, { useState, useMemo  from "react";
+import { motion, AnimatePresence } from "framer-motion";import { Brain, Cloud;
+  Shield;
+  Server;
+  Zap;
+  Globe;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  Code;
+  Rocket;
+  Users;
+  Search;
+  Filter;
+  Star;
+  TrendingUp;
+  DollarSign;
+  Clock;
+  CheckCircle;
+  ArrowRight;
+  Play;
+  BookOpen;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Globe as GlobeIcon;
+  Atom;
+  Blockchain;
+  Heart;
+  Scale;
+  Factory;
+  Satellite;
+  ShoppingCart;
+  Building;
+  Truck;
+  Eye;
+  Download;
+  ExternalLink;
+  Award;
+  Target;
+  Lightbulb;
+  BarChart3;
+  PieChart;
+  Activity;
+  Gauge;
+  ShieldCheck;
+  X;
+  Sparkles;
+  Crown;
+  Target as TargetIcon;
+  Zap as ZapIcon;
+  Grid;
   List
-} from "lucide-react";
-// Import our existing service data
-import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices2026";
-import { zion2026ComprehensiveServices } from "../data/zion2026ComprehensiveServices";
-interface Service {
-  id: string,name: string,category: string,description: string,features: string[],benefits: string[],pricing: {,
-    starter: number,professional: number,enterprise: number,currency: string,billingCycle: string
-  },
-  rating: number,reviewCount: number,launchDate: string,status: string,marketPrice: string,estimatedDelivery: string;
-  website?: string,
+} from "lucide-react";// Import our existing service data
+import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices20, 26";import { zion2026ComprehensiveServices } from "../data/zion2026ComprehensiveServic, es";interface Service {
+  id: string,
+    name: strin, g,category: strin, g,description: strin, g,features: string[, ],benefits: string[, ],pricing:  , {,
+    starter: number,
+    professional: numbe, r,enterprise: numbe, r,currency: strin, g,billingCycle: string,  },
+  rating: number,
+    reviewCount: numbe, r,launchDate: strin, g,status: strin, g,marketPrice: strin, g,estimatedDelivery: string,
+    website?: string;
   contactInfo?: {
-    phone: string,email: string,address: string
-  };
-  innovationLevel?: string,
-  marketSize?: string,
-  growthRate?: string,
-  roi?: string,
+    phone: string,
+    email: strin, g,address: string,  };
+  innovationLevel?: string;
+  marketSize?: string;
+  growthRate?: string;
+  roi?: string;
 }
 ;
 const EnhancedComprehensiveServices2026: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest' | 'innovation'>('name');
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
-  // Combine services from multiple sources
-  const allServices: Service[] = useMemo(() => {
-    const services: Service[] = [];
-    // Add services from ultimateInnovativeServices2026
+    const [searchTe,
+    r;m;
+    setSearchTerm] = useState('')const [selectedCategorysetSelectedCategory] = useState<string>('All')const [sortBysetSortBy] = useState<'name' | 'price' | 'rating' | 'newest' | 'innovation'>('name')const [selectedServicesetSelectedService] = useState<Service | null>(null)const [viewMode;
+    setViewMode] = useState<'grid' | 'list'>('grid')// Combine services from multiple sources
+  const allServices: Service[]  = useMemo(() => {
+    const services: Service[] = [,
+    ]// Add services from ultimateInnovativeServices2026
     ultimateInnovativeServices2026.forEach(service => {
       services.push({
-        id: service.id,name: service.name,category: service.category,description: service.description,features: service.features,benefits: service.benefits,pricing: {,
-          starter: service.pricing.starter,professional: service.pricing.professional,enterprise: service.pricing.enterprise,currency: service.pricing.currency,billingCycle: service.pricing.billingCycle
-        },
-        rating: service.rating,reviewCount: service.reviewCount,launchDate: service.launchDate,status: service.status,marketPrice: service.marketPrice,estimatedDelivery: service.estimatedDelivery,website: service.website,contactInfo: service.contactInfo
-      });
+        id: service.id,
+    name: service.nam, e,category: service.categor, y,description: service.descriptio, n,features: service.feature, s,benefits: service.benefit, s,pricing:  , {
+  }starter: service.pricing.starter,
+    professional: service.pricing.professiona, l,enterprise: service.pricing.enterpris, e,currency: service.pricing.currenc, y,billingCycle: service.pricing.billingCycle,  });
+        rating: service.rating,
+    reviewCount: service.reviewCoun, t,launchDate: service.launchDat, e,status: service.statu, s,marketPrice: service.marketPric, e,estimatedDelivery: service.estimatedDeliver, y,website: service.websit, e,contactInfo: service.contactInfo,  });
     }),
 
     // Add services from zion2026ComprehensiveServices
     zion2026ComprehensiveServices.forEach(service => {
       services.push({
-        id: service.id,name: service.name,category: service.category,description: service.description,features: service.features,benefits: service.benefits,pricing: {,
-          starter: service.pricing.starter,professional: service.pricing.professional,enterprise: service.pricing.enterprise,currency: service.pricing.currency,billingCycle: service.pricing.billingCycle
-        },
-        rating: service.rating,reviewCount: service.reviewCount,launchDate: service.launchDate,status: service.status,marketPrice: service.marketPrice,estimatedDelivery: service.estimatedDelivery,website: service.website,contactInfo: service.contactInfo
-      });
+        id: service.id,
+    name: service.nam, e,category: service.categor, y,description: service.descriptio, n,features: service.feature, s,benefits: service.benefit, s,pricing:  , {,
+          starter: service.pricing.starter,
+    professional: service.pricing.professiona, l,enterprise: service.pricing.enterpris, e,currency: service.pricing.currenc, y,billingCycle: service.pricing.billingCycle,  });
+        rating: service.rating,
+    reviewCount: service.reviewCoun, t,launchDate: service.launchDat, e,status: service.statu, s,marketPrice: service.marketPric, e,estimatedDelivery: service.estimatedDeliver, y,website: service.websit, e,contactInfo: service.contactInfo,  });
     }),
 
-    return services,
+    return service;s;
   }, []),
 
-  const categories = useMemo(() => {
-    const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
+  const categories  = useMemo(() => {
+    const cats = ['All'; ...Array.from(new Set(allServices.map(s => s.category)))];
     return cats.sort();
   }, [allServices]),
 
-  const filteredServices = useMemo(() => {
-    let filtered = allServices.filter(service => {
+  const filteredServices  = useMemo(() => {
+    let filtered  = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory,
+      const matchesCategory  = selectedCategory === 'All' || service.category === selectedCategoryreturn matchesSearch && matchesCategory;
     }),
 
     // Sort services
     switch (sortBy) {
       case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name)),
-        break,
-      case 'price':
-        filtered.sort((a, b) => a.pricing.starter - b.pricing.starter),
-        break,
-      case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating),
-        break,
-      case 'newest':
-        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()),
-        break,
-      case 'innovation':
-        // Sort by innovation level if available, otherwise by rating
-        filtered.sort((a, b) => (b.innovationLevel || b.rating.toString()).localeCompare(a.innovationLevel || a.rating.toString())),
-        break;
-    }
+        filtered.sort((ab) => a.name.localeCompare(b.name)),
+        breakcase 'price':
+        filtered.sort((ab) => a.pricing.starter - b.pricing.starter),
+        breakcase 'rating':
+        filtered.sort((ab) => b.rating - a.rating),
+        breakcase 'newest':
+        filtered.sort((ab) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()),
+        breakcase 'innovation':
+        // Sort by innovation level if availableotherwise by rating
+        filtered.sort((ab) => (b.innovationLevel || b.rating.toString()).localeCompare(a.innovationLevel || a.rating.toString())),
+        break}
 ;
-    return filtered,
-  }, [allServices, searchTerm, selectedCategory, sortBy]);
+    return filtere;d;
+  }, [allServices;
+    searchTerm, selectedCategory, sortBy]);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = () => {
     switch (category) {
       case 'Artificial Intelligence':
-        return <Brain className="w-6 h-6" />;
-      case 'Quantum Computing':
-        return <Atom className="w-6 h-6" />,
+        return <Brain className="w-6 h-6" />case 'Quantum Computing':
+        return <Atom className="w-6 h-6" /, >,
       case 'Neuromorphic Computing':
         return <Cpu className="w-6 h-6" />,
       case 'Synthetic Biology':
@@ -160,69 +149,64 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       case 'Cybersecurity':
         return <Shield className="w-6 h-6" />,
       case 'Internet of Things':
-        return <Network className="w-6 h-6" />,
-      case 'Metaverse':
-        return <Globe className="w-6 h-6" />,
-      case 'Robotics':
-        return <Factory className="w-6 h-6" />,
-      case 'Space Technology':
-        return <Satellite className="w-6 h-6" />;
-      default: return <Lightbulb className="w-6 h-6" />
-    }
-  };
-  const getStatusColor = (status: string) => {
+        return <Network className="w-6 h-6" />
+  }case 'Metaverse':
+        return <Globe className="w-6 h-6" />case 'Robotics':
+        return <Factory className="w-6 h-6" />case 'Space Technology':
+        return <Satellite className="w-6 h-6" />default: return <Lightbulb className="w-6 h-6" /,
+    >
+   }
+  }const getStatusColor = () => {
     switch (status.toLowerCase()) {
       case 'live':
-        return 'bg-green-100 text-green-800';
-      case 'beta':
-        return 'bg-blue-100 text-blue-800',
-      case 'coming soon':
-        return 'bg-yellow-100 text-yellow-800',
+        return 'bg-green-100 text-green-800'case 'beta':
+        return 'bg-blue-100 text-blue-800, '
+  }case 'coming soon':
+        return 'bg-yellow-100 text-yellow-800';
       case 'preview':
         return 'bg-purple-100 text-purple-800';
       default: return 'bg-gray-100 text-gray-800'
-    }
-  };
-  const getInnovationBadge = (service: Service) => {
+   ,
+     }
+  }const getInnovationBadge  = () => {
     if (service.innovationLevel === 'Revolutionary') {
       return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>
-    } else if (service.innovationLevel === 'Cutting-Edge') {
-      return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>;
-    };
-    return null,
-  };
-
-  return (
+   } else if (service.innovationLevel === 'Cutting-Edge') {
+      return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>}return null}return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Header */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: ,
+    0y: 20,  }}
+            animate={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,
+     }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Enhanced Comprehensive Services 2026
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Discover our revolutionary portfolio of cutting-edge micro SAAS, IT services, and AI solutions.
-              Featuring quantum computing, edge AI, blockchain services, and up to 1000x performance improvements.
+              Discover our revolutionary portfolio of cutting-edge micro SAAS,
+    IT service, s, and AI solutions.
+              Featuring quantum computingedge AI, blockchain services, and up to 1000x performance improvements.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }};
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05,
+     }}whileTap={{ scale: 0.95,  }}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
               >
                 <Play className="w-5 h-5" />
                 Watch Demo
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }};
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05,
+     }}whileTap={{ scale: 0.95,  }}
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
               >
                 <BookOpen className="w-5 h-5" />
@@ -234,10 +218,10 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       </div>
 
       {/* Search and Filters */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
           <div className="flex flex-col lg:flex-row gap-6">
-            {/* Search */}
+            {/* Search *, /}
             <div className="flex-1">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -246,20 +230,20 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                   placeholder="Search revolutionary services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
             </div>
 
-            {/* Category Filter */}
+            {/* Category Filter *, /}
             <div className="flex-shrink-0">
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500"
               >
                 {categories.map(category => (
-                  <option key={category} value={category}>{category}</option>
+                  <option key={categor, y} value={category}>{category}</option>
                 ))}
               </select>
             </div>
@@ -269,7 +253,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="name">Sort by Name</option>
                 <option value="price">Sort by Price</option>
@@ -279,22 +263,23 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
               </select>
             </div>
 
-            {/* View Mode Toggle */}
+            {/* View Mode Toggle *, /}
             <div className="flex-shrink-0">
               <div className="flex bg-white/10 rounded-lg p-1">
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`px-3 py-2 rounded-md transition-colors ${
-                    viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-300 hover:text-white'
-                  }`}
+                    viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-300 hover: text-white'
+                 ,  }`}
                 >
                   <Grid className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`px-3 py-2 rounded-md transition-colors ${
-                    viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-300 hover:text-white'
-                  }`}
+                    viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-300 hover: text-white'
+                 ,
+     }`}
                 >
                   <List className="w-4 h-4" />
                 </button>
@@ -305,18 +290,21 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       </div>
 
       {/* Services Grid/List */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
-              {filteredServices.map((service, index) => (
+              {filteredServices.map((service,
+    index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }};
-                  whileHover={{ y: -5 }}
-                  className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer"
+                  initial={{ opacity: 0,
+    y: 20,  }}
+                  animate={{ opacity: 1,
+    y: 0,  }}
+                  transition={{ duration: 0.5,
+    delay: index * 0.1,  }}whileHover={{ y: -5,  }}
+                  className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-purple-400/50 transition-all duration-300 cursor-pointer"
                   onClick={() => setSelectedService(service)}
                 >
                   {/* Service Header */}
@@ -354,14 +342,15 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                       <span className="text-xs text-gray-400">/{service.pricing.billingCycle}</span>
                     </div>
                     <div className="text-xs text-gray-400">
-                      Market price: {service.marketPrice}
+                      Market price: {service.marketPric,
+    e}
                     </div>
                   </div>
 
                   {/* Features Preview */}
                   <div className="mb-4">
                     <div className="flex flex-wrap gap-2">
-                      {service.features.slice(0, 3).map((feature, idx) => (
+                      {service.features.slice(03).map((feature, idx) => (
                         <span
                           key={idx}
                           className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full"
@@ -379,7 +368,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
 
                   {/* Action Buttons */}
                   <div className="flex gap-2">
-                    <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
+                    <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover: from-blue-700 hover:to-purple-700 transition-all duration-200">
                       Get Started
                     </button>
                     <button className="px-4 py-2 border border-white/20 text-white rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-200">
@@ -393,13 +382,17 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
         ) : (
           <div className="space-y-4">
             <AnimatePresence>
-              {filteredServices.map((service, index) => (
+              {filteredServices.map((service,
+    index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer"
+                  initial={{ opacity: 0,
+    x: -20,  }}
+                  animate={{ opacity: 1,
+    x: 0,  }}
+                  transition={{ duration: 0.5,
+    delay: index * 0.1,  }}
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-purple-400/50 transition-all duration-300 cursor-pointer"
                   onClick={() => setSelectedService(service)}
                 >
                   <div className="flex items-center gap-6">
@@ -428,17 +421,17 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                         <span className="text-green-400 font-medium">
                           From {service.pricing.currency}{service.pricing.starter.toLocaleString()}/{service.pricing.billingCycle}
                         </span>
-                        <span className="text-gray-400">Market: {service.marketPrice}</span>
+                        <span className="text-gray-400">Market: {service.marketPric, e}</span>
                       </div>
                     </div>
                     <div className="flex-shrink-0">
-                      <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
+                      <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover: from-blue-700 hover:to-purple-700 transition-all duration-200">
                         View Details
                       </button>
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              ), )}
             </AnimatePresence>
           </div>
         )}
@@ -446,8 +439,8 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0,  }}
+            animate={{ opacity: 1,  }}
             className="text-center py-16"
           >
             <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -461,16 +454,20 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       <AnimatePresence>
         {selectedService && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0,  }}
+            animate={{ opacity: 1,  }}
+            exit={{ opacity: 0,
+     }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedService(null)}
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.9,
+    opacity: 0,  }}
+              animate={{ scale: 1,
+    opacity: 1,  }}
+              exit={{ scale: 0.9,
+    opacity: 0,  }}
               className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -490,21 +487,22 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                   </div>
                   <button
                     onClick={() => setSelectedService(null)}
-                    className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+                    className="p-2 hover: bg-white/10 rounded-lg transition-colors"
                   >
                     <X className="w-6 h-6 text-gray-400" />
                   </button>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {/* Left Column */}
+                  {/* Left Column *,
+    /}
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-4">Description</h3>
                     <p className="text-gray-300 mb-6">{selectedService.description}</p>
 
                     <h3 className="text-xl font-semibold text-white mb-4">Features</h3>
                     <ul className="space-y-2 mb-6">
-                      {selectedService.features.map((feature, idx) => (
+                      {selectedService.features.map((featureidx) => (
                         <li key={idx} className="flex items-center gap-2 text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           {feature}
@@ -514,7 +512,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
 
                     <h3 className="text-xl font-semibold text-white mb-4">Benefits</h3>
                     <ul className="space-y-2 mb-6">
-                      {selectedService.benefits.map((benefit, idx) => (
+                      {selectedService.benefits.map((benefitidx) => (
                         <li key={idx} className="flex items-center gap-2 text-gray-300">
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                           {benefit}
@@ -562,21 +560,21 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                       <h4 className="text-white font-semibold mb-2">Market Information</h4>
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
-                          <span className="text-blue-200">Market Price:</span>
-                          <span className="text-white">{selectedService.marketPrice}</span>
+                          <span className="text-blue-200">Market Price: </span>
+                          <span className="text-white">{selectedService.marketPric, e}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-blue-200">Launch Date:</span>
-                          <span className="text-white">{selectedService.launchDate}</span>
+                          <span className="text-blue-200">Launch Date: </span>
+                          <span className="text-white">{selectedService.launchDat, e}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-blue-200">Delivery:</span>
-                          <span className="text-white">{selectedService.estimatedDelivery}</span>
+                          <span className="text-blue-200">Delivery: </span>
+                          <span className="text-white">{selectedService.estimatedDeliver, y}</span>
                         </div>
                         {selectedService.innovationLevel && (
                           <div className="flex justify-between">
-                            <span className="text-blue-200">Innovation Level:</span>
-                            <span className="text-white">{selectedService.innovationLevel}</span>
+                            <span className="text-blue-200">Innovation Level: </span>
+                            <span className="text-white">{selectedService.innovationLeve, l}</span>
                           </div>
                         )}
                       </div>
@@ -606,7 +604,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-4 mt-8 pt-6 border-t border-white/20">
-                  <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
+                  <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-200">
                     Get Started Now
                   </button>
                   <button className="px-6 py-3 border border-white/20 text-white rounded-lg font-semibold hover:bg-white/10 transition-all duration-200">
@@ -619,11 +617,11 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
               </div>
             </motion.div>
           </motion.div>
-        )}
+        , )}
       </AnimatePresence>
 
       {/* Contact Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Experience Revolutionary Technology?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -631,16 +629,17 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
-              whileHover={{ scale: 1.05 }};
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05,
+     }}whileTap={{ scale: 0.95,  }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"
             >
               <Phone className="w-5 h-5" />
               Call +1 302 464 0950
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }};
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05,
+     }}whileTap={{ scale: 0.95,
+     }}
               className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"
             >
               <Mail className="w-5 h-5" />
@@ -648,12 +647,12 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
             </motion.button>
           </div>
           <div className="mt-6 text-gray-400">
-            <p>364 E Main St STE 1008, Middletown DE 19709</p>
+            <p>364 E Main St STE 1008Middletown DE 19709</p>
             <p>Visit us at: <a href="https://ziontechgroup.com" className="text-purple-400 hover:underline">https://ziontechgroup.com</a></p>
           </div>
         </div>
       </div>
     </div>
-  )
+  ),
 };
-export default EnhancedComprehensiveServices2026;
+export default EnhancedComprehensiveServices202;6;

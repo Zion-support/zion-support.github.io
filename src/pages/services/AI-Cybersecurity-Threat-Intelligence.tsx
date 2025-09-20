@@ -1,192 +1,196 @@
 import React from "react";
-import { SEO } from "@/components/SEO";
-import { Link } from "react-router-dom";
-import { 
-  Shield,
-  Brain, 
-  Eye, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  DollarSign, 
-  Clock, 
-  AlertTriangle, 
-  Lock,
-  Target,
-  TrendingUp,
-  Award,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  Search,
-  FileText,
-  Network,
-  Server,
-  Database,
-  Cloud,
-  Globe,
-  Users,
-  Settings,
-  Activity,
-  BarChart3,
-  PieChart,
-  LineChart,
-  TrendingDown,
-  AlertCircle,
-  CheckSquare,
-  Calendar,
-  RefreshCw,
-  Target as TargetIcon,
-  Zap as ZapIcon,
-  Shield as ShieldIcon,
-  Globe as GlobeIcon,
-  Monitor,
-  Smartphone,
-  Laptop,
-  Tablet,
-  Router,
-  Firewall,
-  Bug,
-  Key,
-  Fingerprint,
-  Scan,
-  Radar,
-  Satellite,
-  Telescope,
-  Microscope,
-  MagnifyingGlass,
-  Binoculars,
-  Camera,
-  Video,
-  Audio,
-  FileSearch,
-  Code,
-  Terminal,
-  Command,
-  Cpu,
-  Memory,
-  HardDrive,
-  Wifi,
-  Bluetooth,
-  Usb,
-  Hdmi,
-  Ethernet,
-  Fiber,
-  Antenna,
-  Tower,
-  Building,
-  Home,
-  Office,
-  Factory,
-  Hospital,
-  Bank,
-  School,
-  University,
-  Government,
-  Military,
-  Space,
-  Ocean,
-  Mountain,
-  Forest,
-  Desert,
-  Arctic,
-  Tropical,
-  Urban,
-  Rural,
-  Suburban,
-  Industrial,
-  Commercial,
-  Residential,
-  Agricultural,
-  Mining,
-  Oil,
-  Gas,
-  Renewable,
-  Nuclear,
-  Solar,
-  Wind,
-  Hydro,
-  Geothermal,
-  Biomass,
-  Tidal,
-  Wave,
-  Fusion,
-  Fission,
-  Plasma,
-  Quantum,
-  Nanotechnology,
-  Biotechnology,
-  Robotics,
-  Automation,
-  IoT,
-  Edge,
-  Fog,
-  Cloud,
-  Hybrid,
-  Multi,
-  Single,
-  Dual,
-  Triple,
-  Quad,
-  Octa,
-  Hexa,
-  Deca,
-  Centi,
-  Milli,
-  Micro,
-  Nano,
-  Pico,
-  Femto,
-  Atto,
-  Zepto,
-  Yocto,
-  Kilo,
-  Mega,
-  Giga,
-  Tera,
-  Peta,
-  Exa,
-  Zetta,
+import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, om";import { Shield, Brain;
+  Eye;
+  Zap;
+  CheckCircle;
+  ArrowRight;
+  DollarSign;
+  Clock;
+  AlertTriangle;
+  Lock;
+  Target;
+  TrendingUp;
+  Award;
+  Phone;
+  Mail;
+  MapPin;
+  Star;
+  Search;
+  FileText;
+  Network;
+  Server;
+  Database;
+  Cloud;
+  Globe;
+  Users;
+  Settings;
+  Activity;
+  BarChart3;
+  PieChart;
+  LineChart;
+  TrendingDown;
+  AlertCircle;
+  CheckSquare;
+  Calendar;
+  RefreshCw;
+  Target as TargetIcon;
+  Zap as ZapIcon;
+  Shield as ShieldIcon;
+  Globe as GlobeIcon;
+  Monitor;
+  Smartphone;
+  Laptop;
+  Tablet;
+  Router;
+  Firewall;
+  Bug;
+  Key;
+  Fingerprint;
+  Scan;
+  Radar;
+  Satellite;
+  Telescope;
+  Microscope;
+  MagnifyingGlass;
+  Binoculars;
+  Camera;
+  Video;
+  Audio;
+  FileSearch;
+  Code;
+  Terminal;
+  Command;
+  Cpu;
+  Memory;
+  HardDrive;
+  Wifi;
+  Bluetooth;
+  Usb;
+  Hdmi;
+  Ethernet;
+  Fiber;
+  Antenna;
+  Tower;
+  Building;
+  Home;
+  Office;
+  Factory;
+  Hospital;
+  Bank;
+  School;
+  University;
+  Government;
+  Military;
+  Space;
+  Ocean;
+  Mountain;
+  Forest;
+  Desert;
+  Arctic;
+  Tropical;
+  Urban;
+  Rural;
+  Suburban;
+  Industrial;
+  Commercial;
+  Residential;
+  Agricultural;
+  Mining;
+  Oil;
+  Gas;
+  Renewable;
+  Nuclear;
+  Solar;
+  Wind;
+  Hydro;
+  Geothermal;
+  Biomass;
+  Tidal;
+  Wave;
+  Fusion;
+  Fission;
+  Plasma;
+  Quantum;
+  Nanotechnology;
+  Biotechnology;
+  Robotics;
+  Automation;
+  IoT;
+  Edge;
+  Fog;
+  Cloud;
+  Hybrid;
+  Multi;
+  Single;
+  Dual;
+  Triple;
+  Quad;
+  Octa;
+  Hexa;
+  Deca;
+  Centi;
+  Milli;
+  Micro;
+  Nano;
+  Pico;
+  Femto;
+  Atto;
+  Zepto;
+  Yocto;
+  Kilo;
+  Mega;
+  Giga;
+  Tera;
+  Peta;
+  Exa;
+  Zetta;
   Yotta
-} from "lucide-react";
-export default function AICybersecurityThreatIntelligence() {
-  const features = [
+} from "lucide-react";export default function AICybersecurityThreatIntelligence() {
+
+  const features  = [
     {
-      icon: <Brain className="w-6 h-6" />,title: "AI-Powered Threat Detection",description: "Advanced machine learning models detect and analyze threats in real-time with 99.7% accuracy, reducing false positives by 85%."
+      icon: <Brain className="w-6 h-6" /,>title: "AI-Powered Threat Detectio,
+    n";description: "Advanced machine learning models detect and analyze threats in real-time with 99.7% accuracy,
+    reducing false positives by 85%."
+   ,  },
+    {
+      icon: <Eye className="w-6 h-6" /, >,title: "Real-time Monitoring, ";description: "24/7 monitoring across all endpoints,
+    network, s, and cloud environments with instant threat response and automated mitigation."
     },
     {
-      icon: <Eye className="w-6 h-6" />,title: "Real-time Monitoring",description: "24/7 monitoring across all endpoints, networks, and cloud environments with instant threat response and automated mitigation."
+      icon: <Radar className="w-6 h-6" /, >,title: "Threat Intelligence, ";description: "Global threat intelligence network providing early warning of emerging threats,
+    zero-day vulnerabilitie, s, and attack patterns."
     },
     {
-      icon: <Radar className="w-6 h-6" />,title: "Threat Intelligence",description: "Global threat intelligence network providing early warning of emerging threats, zero-day vulnerabilities, and attack patterns."
+      icon: <Shield className="w-6 h-6" /, >,title: "Automated Response, ";description: "AI-driven incident response automatically blocks threats,
+    isolates compromised system, s, and initiates recovery procedures."
     },
     {
-      icon: <Shield className="w-6 h-6" />,title: "Automated Response",description: "AI-driven incident response automatically blocks threats, isolates compromised systems, and initiates recovery procedures."
+      icon: <BarChart3 className="w-6 h-6" /, >,title: "Advanced Analytics, ";description: "Comprehensive security analytics dashboard with threat trends,
+    risk scorin, g, and compliance reporting."
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,title: "Advanced Analytics",description: "Comprehensive security analytics dashboard with threat trends, risk scoring, and compliance reporting."
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,title: "Global Coverage",description: "Monitor and protect assets across on-premise, cloud, hybrid, and edge computing environments worldwide."
+      icon: <Globe className="w-6 h-6" /, >,title: "Global Coverage, ";description: "Monitor and protect assets across on-premise,
+    clou, d, hybrid, and edge computing environments worldwide."
     }
   ],
 
-  const pricingPlans = [
+  const pricingPlans  = [
     {
-      name: "Essential",price: "$799",period: "/month",description: "Perfect for small to medium businesses",features: [
-        "Up to 100 endpoints",
+      name: "Essential, ",price: "$799, ",period: "/month, ",description: "Perfect for small to medium businesses, ",features: [
+        "Up to 100 endpoints, ",
         "Basic threat detection",
         "Email support",
         "Standard dashboard",
         "Basic reporting"
-      ],
-      popular: false
-    };
-    {
-      name: "Professional",price: "$1,999",
-      period: "/month",description: "Ideal for growing enterprises",features: [
-        "Up to 1,000 endpoints",
+      ]popular: false
+   ,
+     }{
+      name: "Professional, ",price: "$1,
+    999, ",
+      period: "/month, ",description: "Ideal for growing enterprises, ",features: [
+        "Up to 1,
+    000 endpoints, ",
         "Advanced AI detection",
         "Priority support",
         "Advanced analytics",
@@ -194,11 +198,9 @@ export default function AICybersecurityThreatIntelligence() {
         "API access",
         "Threat intelligence feeds"
       ],
-      popular: true
-    };
-    {
-      name: "Enterprise",price: "Custom",period: "",description: "For large organizations with complex security needs",features: [
-        "Unlimited endpoints",
+      popular: true,  }{
+      name: "Enterprise, ",price: "Custom, ",period: ", ",description: "For large organizations with complex security needs, ",features: [
+        "Unlimited endpoints, ",
         "Custom AI model training",
         "Dedicated security team",
         "24/7 phone support",
@@ -207,85 +209,89 @@ export default function AICybersecurityThreatIntelligence() {
         "Custom development",
         "Compliance consulting"
       ],
-      popular: false
-    }
-  ];
-  const benefits = [
+      popular: false,  }
+  ]const benefits  = [
     {
-      icon: <Shield className="w-8 h-8" />,title: "Enhanced Protection",description: "Protect against 99.7% of known and unknown threats with AI-powered detection and response"
-    };
+      icon: <Shield className="w-8 h-8" /, >,title: "Enhanced Protection,";description: "Protect against 99.7% of known and unknown threats with AI-powered detection and response"
+   ,
+     }{
+      icon: <Clock className="w-8 h-8" /, >,title: "Faster Response, ",description: "Reduce incident response time from hours to minutes with automated threat mitigation"
+   ,
+     }{
+      icon: <DollarSign className="w-8 h-8" /, >,title: "Cost Reduction, ",description: "Save up to 60% on security operations costs while improving protection levels"
+   ,  },
     {
-      icon: <Clock className="w-8 h-8" />,title: "Faster Response",description: "Reduce incident response time from hours to minutes with automated threat mitigation"
-    };
+      icon: <TrendingUp className="w-8 h-8" /, >,title: "Proactive Defense, ",description: "Identify and prevent 90% of attacks before they can cause damage or data loss"
+   ,
+     }
+  ]const threatTypes  = [
     {
-      icon: <DollarSign className="w-8 h-8" />,title: "Cost Reduction",description: "Save up to 60% on security operations costs while improving protection levels"
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,title: "Proactive Defense",description: "Identify and prevent 90% of attacks before they can cause damage or data loss"
-    }
-  ];
-  const threatTypes = [
-    {
-      title: "Malware & Ransomware",description: "Advanced detection and prevention of sophisticated malware, ransomware, and fileless attacks",
+      title: "Malware & Ransomwar,
+    e";description: "Advanced detection and prevention of sophisticated malware,
+    ransomwar, e, and fileless attacks",
       icon: <Bug className="w-6 h-6" />
-    };
-    {
-      title: "Network Attacks",description: "Real-time detection of DDoS, man-in-the-middle, and network intrusion attempts",
+   ,
+     }{
+      title: "Network Attacks, ",description: "Real-time detection of DDoS,
+    man-in-the-middl, e, and network intrusion attempts",
       icon: <Network className="w-6 h-6" />
-    };
-    {
-      title: "Social Engineering",description: "AI-powered detection of phishing, spear-phishing, and social engineering campaigns",
+   ,
+     }{
+      title: "Social Engineering, ",description: "AI-powered detection of phishing,
+    spear-phishin, g, and social engineering campaigns",
       icon: <Users className="w-6 h-6" />
-    },
+   ,  },
     {
-      title: "Insider Threats",description: "Behavioral analysis to detect malicious insider activities and data exfiltration",icon: <Eye className="w-6 h-6" />
-    }
-  ];
-  const securityMetrics = [
+      title: "Insider Threats, ",description: "Behavioral analysis to detect malicious insider activities and data exfiltration, ",icon: <Eye className="w-6 h-6" />
+   ,
+     }
+  ]const securityMetrics  = [
     {
-      icon: <Shield className="w-6 h-6" />,title: "Threat Detection Rate",current: "99.7%",improvement: "+15%",description: "Percentage of threats successfully detected and blocked"
-    };
+      icon: <Shield className="w-6 h-6" /, >,title: "Threat Detection Rate, ",current: "99.7%, ",improvement: "+15%,";description: "Percentage of threats successfully detected and blocked"
+   ,
+     }{
+      icon: <Clock className="w-6 h-6" /, >,title: "Response Time, ",current: "2.3 minutes, ",improvement: "-78%, ",description: "Average time from threat detection to response"
+   ,
+     }{
+      icon: <DollarSign className="w-6 h-6" /, >,title: "Security ROI, ",current: "450%, ",improvement: "+180%, ",description: "Return on investment in security technology"
+   ,  },
     {
-      icon: <Clock className="w-6 h-6" />,title: "Response Time",current: "2.3 minutes",improvement: "-78%",description: "Average time from threat detection to response"
-    };
+      icon: <BarChart3 className="w-6 h-6" /, >,title: "False Positive Rate, ",current: "0.3%, ",improvement: "-85%, ",description: "Percentage of false security alerts"
+   ,
+     }
+  ]const complianceStandards  = [
     {
-      icon: <DollarSign className="w-6 h-6" />,title: "Security ROI",current: "450%",improvement: "+180%",description: "Return on investment in security technology"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,title: "False Positive Rate",current: "0.3%",improvement: "-85%",description: "Percentage of false security alerts"
-    }
-  ];
-  const complianceStandards = [
-    {
-      name: "SOC 2 Type II",description: "Service Organization Control 2 compliance for security, availability, and confidentiality",
+      name: "SOC 2 Type I,
+    I";description: "Service Organization Control 2 compliance for security,
+    availabilit, y, and confidentiality",
       icon: <CheckCircle className="w-6 h-6" />
-    };
+   ,
+     }{
+      name: "ISO 27001, ",description: "International standard for information security management systems, ",icon: <CheckCircle className="w-6 h-6" />
+   ,
+     }{
+      name: "GDPR, ",description: "General Data Protection Regulation compliance for EU data protection, ",icon: <CheckCircle className="w-6 h-6" />
+   ,
+     }{
+      name: "HIPAA, ",description: "Health Insurance Portability and Accountability Act compliance, ",icon: <CheckCircle className="w-6 h-6" />
+   ,
+     }{
+      name: "PCI DSS, ",description: "Payment Card Industry Data Security Standard compliance, ",icon: <CheckCircle className="w-6 h-6" />
+   ,  },
     {
-      name: "ISO 27001",description: "International standard for information security management systems",icon: <CheckCircle className="w-6 h-6" />
-    };
-    {
-      name: "GDPR",description: "General Data Protection Regulation compliance for EU data protection",icon: <CheckCircle className="w-6 h-6" />
-    };
-    {
-      name: "HIPAA",description: "Health Insurance Portability and Accountability Act compliance",icon: <CheckCircle className="w-6 h-6" />
-    };
-    {
-      name: "PCI DSS",description: "Payment Card Industry Data Security Standard compliance",icon: <CheckCircle className="w-6 h-6" />
-    },
-    {
-      name: "NIST",description: "National Institute of Standards and Technology cybersecurity framework",icon: <CheckCircle className="w-6 h-6" />
-    }
-  ];
-  return (
+      name: "NIST, ",description: "National Institute of Standards and Technology cybersecurity framework, ",icon: <CheckCircle className="w-6 h-6" />
+   ,
+     }
+  ]return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="AI-Powered Cybersecurity Threat Intelligence Platform | Zion Tech Group"
-        description="Transform your cybersecurity with AI-powered threat detection, real-time monitoring, and automated response. 99.7% threat detection rate, 24/7 protection, and global threat intelligence."
-        keywords="AI cybersecurity, threat intelligence, threat detection, security monitoring, incident response, cybersecurity platform"
+        description="Transform your cybersecurity with AI-powered threat detectionreal-time monitoring, and automated response. 99.7% threat detection rate, 24/7 protection, and global threat intelligence."
+        keywords="AI cybersecuritythreat intelligence, threat detection, security monitoring, incident response, cybersecurity platform"
       />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -299,12 +305,13 @@ export default function AICybersecurityThreatIntelligence() {
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
               Revolutionize your cybersecurity posture with our advanced AI platform. 
-              Detect threats in real-time, respond automatically, and gain global threat 
+              Detect threats in real-time,
+    respond automaticall, y, and gain global threat 
               intelligence to stay ahead of evolving cyber risks.
             </p>
             
             {/* Contact Information */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 text-slate-300">
+            <div className="flex flex-col sm: flex-row items-center justify-center gap-6 mb-8 text-slate-300">
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
@@ -319,14 +326,16 @@ export default function AICybersecurityThreatIntelligence() {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-cyan-400" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <span>364 E Main St STE 1008,
+    Middletown DE 19709</span>
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
-                href="mailto:kleber@ziontechgroup.com?subject=AI Cybersecurity Threat Intelligence Demo Request&body=Hi, I'm interested in a demo of your AI Cybersecurity Threat Intelligence platform. Please provide more details about features, pricing, and implementation timeline."
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
+                href="mailto:kleber@ziontechgroup.com?subject=AI Cybersecurity Threat Intelligence Demo Request&body=Hi,
+    I'm interested in a demo of your AI Cybersecurity Threat Intelligence platform. Please provide more details about feature, s, pricing, and implementation timeline."
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover: from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
                 Request Demo
@@ -343,8 +352,9 @@ export default function AICybersecurityThreatIntelligence() {
         </div>
       </section>
 
-      {/* Security Metrics Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      {/* Security Metrics Section *,
+    /}
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -356,10 +366,12 @@ export default function AICybersecurityThreatIntelligence() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {securityMetrics.map((metric, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 text-center hover:border-red-500/50 transition-all duration-300">
+            {securityMetrics.map((metric,
+    index) => (
+              <div key={inde, x} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 text-center hover: border-red-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
-                  {metric.icon}
+                  {metric.ico,
+    n}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{metric.title}</h3>
                 <div className="mb-2">
@@ -376,7 +388,7 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -389,10 +401,12 @@ export default function AICybersecurityThreatIntelligence() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
+            {features.map((feature,
+    index) => (
+              <div key={inde, x} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 hover: border-red-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center text-white mb-4">
-                  {feature.icon}
+                  {feature.ico,
+    n}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-slate-300">{feature.description}</p>
@@ -403,7 +417,7 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
 
       {/* Threat Types Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -415,10 +429,12 @@ export default function AICybersecurityThreatIntelligence() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {threatTypes.map((threat, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 text-center hover:border-red-500/50 transition-all duration-300">
+            {threatTypes.map((threat,
+    index) => (
+              <div key={inde, x} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 text-center hover: border-red-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
-                  {threat.icon}
+                  {threat.ico,
+    n}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">{threat.title}</h3>
                 <p className="text-slate-300 text-sm">{threat.description}</p>
@@ -429,7 +445,7 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
 
       {/* Compliance Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -441,10 +457,12 @@ export default function AICybersecurityThreatIntelligence() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceStandards.map((standard, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
+            {complianceStandards.map((standard,
+    index) => (
+              <div key={inde, x} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 hover: border-red-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center text-white mb-4">
-                  {standard.icon}
+                  {standard.ico,
+    n}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{standard.name}</h3>
                 <p className="text-slate-300">{standard.description}</p>
@@ -455,7 +473,7 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -467,7 +485,8 @@ export default function AICybersecurityThreatIntelligence() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan,
+    index) => (
               <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                 plan.popular 
                   ? 'border-red-500/50 bg-slate-800/70' 
@@ -491,7 +510,7 @@ export default function AICybersecurityThreatIntelligence() {
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((featurefeatureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
                       <span className="text-slate-300">{feature}</span>
@@ -501,21 +520,23 @@ export default function AICybersecurityThreatIntelligence() {
 
                 <div className="text-center">
                   <a
-                    href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry - AI Cybersecurity Threat Intelligence&body=Hi, I'm interested in the {plan.name} plan for your AI Cybersecurity Threat Intelligence platform. Please provide more details about implementation and next steps."
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-300 w-full justify-center"
+                    href="mailto: kleber@ziontechgroup.com?subject=Pricing Inquiry - AI Cybersecurity Threat Intelligence&body=Hi,
+    I'm interested in the {plan.nam, e} plan for your AI Cybersecurity Threat Intelligence platform. Please provide more details about implementation and next steps."
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover: from-red-600 hover:to-orange-700 transition-all duration-300 w-full justify-center"
                   >
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
               </div>
-            ))}
+            ),
+    )}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -527,8 +548,9 @@ export default function AICybersecurityThreatIntelligence() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
+            {benefits.map((benefit,
+    index) => (
+              <div key={inde, x} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl flex items-center justify-center text-white mx-auto mb-4">
                   {benefit.icon}
                 </div>
@@ -541,7 +563,7 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
 
       {/* Market Comparison Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -612,20 +634,23 @@ export default function AICybersecurityThreatIntelligence() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* CTA Section *,
+    /}
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">Cybersecurity</span>?
           </h2>
           <p className="text-xl text-slate-300 mb-8">
-            Join hundreds of organizations already using AI to protect against cyber threats, reduce risks, and ensure compliance.
+            Join hundreds of organizations already using AI to protect against cyber threats,
+    reduce risk, s, and ensure compliance.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-8">
             <a
-              href="mailto:kleber@ziontechgroup.com?subject=AI Cybersecurity Threat Intelligence Demo Request&body=Hi, I'm interested in a demo of your AI Cybersecurity Threat Intelligence platform. Please provide more details about features, pricing, and implementation timeline."
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
+              href="mailto:kleber@ziontechgroup.com?subject=AI Cybersecurity Threat Intelligence Demo Request&body=Hi,
+    I'm interested in a demo of your AI Cybersecurity Threat Intelligence platform. Please provide more details about feature, s, pricing, and implementation timeline."
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover: from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
             >
               <ArrowRight className="w-5 h-5 mr-2" />
               Request Demo
@@ -639,10 +664,10 @@ export default function AICybersecurityThreatIntelligence() {
             </a>
           </div>
           
-          {/* Quick Contact Info */}
+          {/* Quick Contact Info *, /}
           <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-600">
             <h3 className="text-lg font-semibold text-white mb-4">Get Started Today</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">
               <div className="flex items-center justify-center gap-2 text-slate-300">
                 <Phone className="w-4 h-4 text-cyan-400" />
                 <span>+1 302 464 0950</span>
@@ -660,7 +685,7 @@ export default function AICybersecurityThreatIntelligence() {
         </div>
       </section>
 
-      {/* Contact Information Footer */}
+      {/* Contact Information Footer *, /}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -696,5 +721,5 @@ export default function AICybersecurityThreatIntelligence() {
         </div>
       </section>
     </div>
-  )
+  ),
 }

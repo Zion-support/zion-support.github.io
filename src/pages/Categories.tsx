@@ -1,112 +1,100 @@
-import React, { useState } from "react";
-import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight } from "lucide-react";
-export default function Categories() {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const mainCategories = [
+import React, { useState  from "react", import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight } from "lucide-react";export default function Categories() {
+
+  const [activeCategor;y;
+    setActiveCategory] = useState('all')const mainCategories  = [
     {
-      id: 'all',name: 'All Categories',icon: <Globe className="w-8 h-8" />,color: 'from-zion-cyan to-zion-blue',count: 0
-    };
+      id: 'all, ',name: 'All Categories, ',icon: <Globe className="w-8 h-8" /, >,color: 'from-zion-cyan to-zion-blue,'count: 0
+   ,
+     }{
+      id: 'ai-ml, ',name: 'AI & Machine Learning, ',icon: <Brain className="w-8 h-8" /, >,color: 'from-zion-purple to-zion-pink, ',count: 45
+   ,
+     }{
+      id: 'cloud, ',name: 'Cloud & Infrastructure, ',icon: <Cloud className="w-8 h-8" /, >,color: 'from-zion-blue to-zion-cyan, ',count: 32
+   ,
+     }{
+      id: 'cybersecurity, ',name: 'Cybersecurity, ',icon: <Shield className="w-8 h-8" /, >,color: 'from-zion-red to-zion-orange, ',count: 28
+   ,
+     }{
+      id: 'data, ',name: 'Data & Analytics, ',icon: <BarChart3 className="w-8 h-8" /, >,color: 'from-zion-green to-zion-emerald, ',count: 36,  },
     {
-      id: 'ai-ml',name: 'AI & Machine Learning',icon: <Brain className="w-8 h-8" />,color: 'from-zion-purple to-zion-pink',count: 45
-    };
-    {
-      id: 'cloud',name: 'Cloud & Infrastructure',icon: <Cloud className="w-8 h-8" />,color: 'from-zion-blue to-zion-cyan',count: 32
-    };
-    {
-      id: 'cybersecurity',name: 'Cybersecurity',icon: <Shield className="w-8 h-8" />,color: 'from-zion-red to-zion-orange',count: 28
-    };
-    {
-      id: 'data',name: 'Data & Analytics',icon: <BarChart3 className="w-8 h-8" />,color: 'from-zion-green to-zion-emerald',count: 36
-    },
-    {
-      id: 'development',name: 'Development',icon: <Code className="w-8 h-8" />,color: 'from-zion-indigo to-zion-purple',count: 41
-    }
-  ];
-  const subCategories = {
+      id: 'development, ',name: 'Development, ',icon: <Code className="w-8 h-8" /, >,color: 'from-zion-indigo to-zion-purple, ',count: 41
+   ,
+     }
+  ]const subCategories  = {
     'ai-ml': [
       {
-        name: 'Natural Language Processing',description: 'Text analysis, language models, and conversational AI',
-        icon: <Brain className="w-6 h-6" />,services: 12,talent: 8,equipment: 3
-      };
+        name: 'Natural Language Processing',
+    description: 'Text analysis,
+    language model, s, and conversational AI',
+        icon: <Brain className="w-6 h-6" /, >services: 12,
+    talent: , 8,equipment: 3,  }{
+        name: 'Computer Vision, ',description: 'Image recognition,
+    object detectio, n, and visual AI',
+        icon: <Eye className="w-6 h-6" /, >services: 9,
+    talent: , 6,equipment: 4,  }{
+        name: 'Machine Learning Platforms, ',description: 'ML model training,
+    deploymen, t, and management',
+        icon: <Cpu className="w-6 h-6" /, >services: 15,
+    talent: 1, 2,equipment: 7,  },
       {
-        name: 'Computer Vision',description: 'Image recognition, object detection, and visual AI',
-        icon: <Eye className="w-6 h-6" />,services: 9,talent: 6,equipment: 4
-      };
+        name: 'AI Consulting, ',description: 'Strategic AI implementation and optimization, ',icon: <Target className="w-6 h-6" /, >services: 8talent: , 5,equipment: 1,  }
+    ]'cloud': [
       {
-        name: 'Machine Learning Platforms',description: 'ML model training, deployment, and management',
-        icon: <Cpu className="w-6 h-6" />,services: 15,talent: 12,equipment: 7
-      },
+        name: 'Cloud Migration, ',description: 'Legacy system migration and cloud transformation, ',icon: <Rocket className="w-6 h-6" /, >services: 11,
+    talent: , 7,equipment: 2,  }{
+        name: 'DevOps & CI/CD, ',description: 'Automated deployment and infrastructure management, ',icon: <Zap className="w-6 h-6" /, >services: 14,
+    talent: , 9,equipment: 3,  },
       {
-        name: 'AI Consulting',description: 'Strategic AI implementation and optimization',icon: <Target className="w-6 h-6" />,services: 8,talent: 5,equipment: 1
-      }
-    ];
-    'cloud': [
+        name: 'Serverless Computing, ',description: 'Event-driven and serverless architecture, ',icon: <Cloud className="w-6 h-6" /, >services: 7talent: , 4,equipment: 1,  }
+    ]'cybersecurity': [
       {
-        name: 'Cloud Migration',description: 'Legacy system migration and cloud transformation',icon: <Rocket className="w-6 h-6" />,services: 11,talent: 7,equipment: 2
-      };
+        name: 'Threat Detection, ',description: 'Advanced threat detection and response systems, ',icon: <Shield className="w-6 h-6" /, >services: 13,
+    talent: , 8,equipment: 5,  }{
+        name: 'Compliance & Governance, ',description: 'Security compliance and policy management, ',icon: <Lock className="w-6 h-6" /, >services: 9,
+    talent: , 6,equipment: 2,  },
       {
-        name: 'DevOps & CI/CD',description: 'Automated deployment and infrastructure management',icon: <Zap className="w-6 h-6" />,services: 14,talent: 9,equipment: 3
-      },
+        name: 'Penetration Testing, ',description: 'Security assessment and vulnerability testing, ',icon: <Target className="w-6 h-6" /, >services: 6talent: , 4,equipment: 3,  }
+    ]'data': [
       {
-        name: 'Serverless Computing',description: 'Event-driven and serverless architecture',icon: <Cloud className="w-6 h-6" />,services: 7,talent: 4,equipment: 1
-      }
-    ];
-    'cybersecurity': [
+        name: 'Business Intelligence, ',description: 'Data visualization and business analytics, ',icon: <BarChart3 className="w-6 h-6" /, >services: 18,
+    talent: 1, 1,equipment: 4,  }{
+        name: 'Big Data Processing, ',description: 'Large-scale data processing and analytics, ',icon: <Database className="w-6 h-6" /, >services: 12,
+    talent: , 8,equipment: 6,  },
       {
-        name: 'Threat Detection',description: 'Advanced threat detection and response systems',icon: <Shield className="w-6 h-6" />,services: 13,talent: 8,equipment: 5
-      };
+        name: 'Data Engineering, ',description: 'Data pipeline development and ETL processes, ',icon: <Network className="w-6 h-6" /, >services: 6talent: , 5,equipment: 2,  }
+    ]'development': [
       {
-        name: 'Compliance & Governance',description: 'Security compliance and policy management',icon: <Lock className="w-6 h-6" />,services: 9,talent: 6,equipment: 2
-      },
+        name: 'Web Development, ',description: 'Frontend and backend web applications, ',icon: <Code className="w-6 h-6" /, >services: 22,
+    talent: 1, 5,equipment: 3,  }{
+        name: 'Mobile Development, ',description: 'iOS and Android mobile applications, ',icon: <Smartphone className="w-6 h-6" /, >services: 16,
+    talent: 1, 2,equipment: 2,  },
       {
-        name: 'Penetration Testing',description: 'Security assessment and vulnerability testing',icon: <Target className="w-6 h-6" />,services: 6,talent: 4,equipment: 3
-      }
-    ];
-    'data': [
-      {
-        name: 'Business Intelligence',description: 'Data visualization and business analytics',icon: <BarChart3 className="w-6 h-6" />,services: 18,talent: 11,equipment: 4
-      };
-      {
-        name: 'Big Data Processing',description: 'Large-scale data processing and analytics',icon: <Database className="w-6 h-6" />,services: 12,talent: 8,equipment: 6
-      },
-      {
-        name: 'Data Engineering',description: 'Data pipeline development and ETL processes',icon: <Network className="w-6 h-6" />,services: 6,talent: 5,equipment: 2
-      }
-    ];
-    'development': [
-      {
-        name: 'Web Development',description: 'Frontend and backend web applications',icon: <Code className="w-6 h-6" />,services: 22,talent: 15,equipment: 3
-      };
-      {
-        name: 'Mobile Development',description: 'iOS and Android mobile applications',icon: <Smartphone className="w-6 h-6" />,services: 16,talent: 12,equipment: 2
-      },
-      {
-        name: 'API Development',description: 'RESTful APIs and microservices',icon: <Network className="w-6 h-6" />,services: 13,talent: 8,equipment: 1
-      }
+        name: 'API Development, ',description: 'RESTful APIs and microservices, ',icon: <Network className="w-6 h-6" /, >services: 13,
+    talent: , 8,equipment: 1,  }
     ]
-  };
-  const featuredItems = [
+  }const featuredItems  = [
     {
-      type: 'service',title: 'AI-Powered Business Intelligence Platform',category: 'AI & Machine Learning',rating: 4.9,price: '$2,500/month',
-      featured: true
-    };
+      type: 'service, ',title: 'AI-Powered Business Intelligence Platform, ',category: 'AI & Machine Learning',
+    rating: 4.9,
+    price: '$, 2,500/month',
+      featured: true,  }{
+      type: 'talent, ',title: 'Senior AI Engineer, ',category: 'AI & Machine Learning, ',rating: 4.8,
+    price: '$150/hour, ',featured: true,  },
     {
-      type: 'talent',title: 'Senior AI Engineer',category: 'AI & Machine Learning',rating: 4.8,price: '$150/hour',featured: true
-    },
-    {
-      type: 'equipment',title: 'High-Performance GPU Cluster',category: 'AI & Machine Learning',rating: 4.7,price: '$15,000/month',
-      featured: true
-    }
-  ];
-  const getCategoryCount = (categoryId: string) => {
+      type: 'equipment, ',title: 'High-Performance GPU Cluster, ',category: 'AI & Machine Learning, ',rating: 4.7,
+    price: '$1, 5,000/month',
+      featured: true,  }
+  ]const getCategoryCount  = () => {
     if (categoryId === 'all') {
-      return Object.values(subCategories).flat().reduce((total, sub) =>
-        total + sub.services + sub.talent + sub.equipment, 0
+      return Object.values(subCategories).flat().reduce((totalsub) =>
+        total + sub.services + sub.talent + sub.equipment0
       );
-    };
-    return subCategories[categoryId]?.reduce((total, sub) =>
-      total + sub.services + sub.talent + sub.equipment, 0
-    ) || 0,
+   ,  };
+    return subCategories[categoryId]?.reduce((tota;l;
+    sub) =>
+      total + sub.services + sub.talent + sub.equipment;
+    0
+    ) || 0;
   };
 
   // Update counts
@@ -122,7 +110,7 @@ export default function Categories() {
             Browse Categories
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Explore our comprehensive collection of services, talent, and equipment organized into logical categories for easy discovery.
+            Explore our comprehensive collection of servicestalent, and equipment organized into logical categories for easy discovery.
           </p>
         </div>
       </div>
@@ -133,16 +121,17 @@ export default function Categories() {
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             Main Categories
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {mainCategories.map((category) => (
               <button
-                key={category.id}
+                key={category.i, d}
                 onClick={() => setActiveCategory(category.id)}
-                className={`text-left p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
+                className={`text-left p-6 rounded-xl border transition-all duration-300 hover: scale-105 ${
                   activeCategory === category.id
                     ? 'border-zion-cyan bg-zion-cyan/10'
                     : 'border-zion-slate-light bg-zion-slate hover:border-zion-cyan/50'
-                }`}
+               ,
+     }`}
               >
                 <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center text-white mb-4`}>
                   {category.icon}
@@ -168,13 +157,15 @@ export default function Categories() {
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               {mainCategories.find(c => c.id === activeCategory)?.name} - Sub Categories
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {subCategories[activeCategory].map((subCategory, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+              {subCategories[activeCategory].map((subCategory,
+    index) => (
                 <div
-                  key={index}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
+                  key={inde, x}
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover: shadow-lg transition-shadow"
                 >
-                  <div className="text-zion-cyan mb-4">{subCategory.icon}</div>
+                  <div className="text-zion-cyan mb-4">{subCategory.ico,
+    n}</div>
                   <h3 className="text-lg font-semibold text-white mb-2">{subCategory.name}</h3>
                   <p className="text-zion-slate-light text-sm mb-4">{subCategory.description}</p>
 
@@ -205,17 +196,18 @@ export default function Categories() {
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             Featured Items
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {featuredItems.map((item, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
+            {featuredItems.map((item,
+    index) => (
               <div
-                key={index}
-                className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
+                key={inde, x}
+                className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover: shadow-lg transition-shadow"
               >
                 {item.featured && (
                   <div className="inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-4">
                     Featured
                   </div>
-                )}
+                , )}
                 <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{item.category}</p>
 
@@ -227,11 +219,12 @@ export default function Categories() {
                   <span className="text-zion-cyan font-semibold">{item.price}</span>
                 </div>
 
-                <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-medium hover:bg-zion-cyan-light transition-colors">
+                <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-medium hover: bg-zion-cyan-light transition-colors">
                   View Details
                 </button>
               </div>
-            ))}
+            ),
+    )}
           </div>
         </div>
       </div>
@@ -243,7 +236,7 @@ export default function Categories() {
             Can't Find What You're Looking For?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Use our advanced search to find specific services, talent, or equipment, or contact us for custom solutions.
+            Use our advanced search to find specific servicestalent, or equipment, or contact us for custom solutions.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a
@@ -262,5 +255,5 @@ export default function Categories() {
         </div>
       </div>
     </div>
-  )
+  ),
 }

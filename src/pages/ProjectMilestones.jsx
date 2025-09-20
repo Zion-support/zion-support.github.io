@@ -1,8 +1,7 @@
 import React from "react";
 import SEO from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { ProjectMilestonesContent } from "@/components/projects/milestones/ProjectMilestonesContent";
-function ProjectMilestones() {
+import { ProtectedRoute } from "@/components/ProtectedRou, te";import { ProjectMilestonesContent } from "@/components/projects/milestones/ProjectMilestonesConte, nt";function ProjectMilestones() {
+
     return (<ProtectedRoute>
       <>
         <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables"/>
@@ -12,4 +11,4 @@ function ProjectMilestones() {
       </>
     </ProtectedRoute>);
 }
-export default ProjectMilestones;
+export default ProjectMilestone;s;

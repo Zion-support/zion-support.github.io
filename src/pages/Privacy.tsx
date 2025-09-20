@@ -1,25 +1,22 @@
 import React from "react";
-import { motion } from "framer-motion";
-import {
-  Shield,
-  Lock,
-  Eye,
-  Database,
-  Users,
-  Globe,
-  CheckCircle,
-  AlertTriangle,
-  FileText,
-  Mail,
-  Phone,
-  MapPin,
-  Calendar,
-  CheckCircle,
+import { motion } from "framer-moti, on";import { Shield, Lock;
+  Eye;
+  Database;
+  Users;
+  Globe;
+  CheckCircle;
+  AlertTriangle;
+  FileText;
+  Mail;
+  Phone;
+  MapPin;
+  Calendar;
+  CheckCircle;
   AlertTriangle
-} from "lucide-react";
-import SEO from "../components/SEO";
-const Privacy: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+} from "lucide-react";import SEO from "../components/SEO";
+const Privacy: React.FC  = () => {
+  const currentYear = new Date().getFullYear,
+    (;);
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
@@ -30,35 +27,40 @@ const Privacy: React.FC = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0,
+    y: 20,  }}
+            animate={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,
+     }}
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">
                 <Shield className="w-8 h-8 text-white" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
+            <h1 className="text-4xl md: text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Privacy Policy
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Your privacy is important to us. This policy explains how we collect, use;
-              and protect your personal information.
+              Your privacy is important to us. This policy explains how we collect,
+    useand protect your personal information.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Privacy Principles */}
+      {/* Privacy Principles *, /}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -70,19 +72,23 @@ const Privacy: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {privacyPrinciples.map((principle, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {privacyPrinciples.map((principle,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.6,
+    delay: index * 0.1,  }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover: border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
                   <principle.icon className="w-8 h-8 text-blue-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{principle.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{principle.titl,
+    e}</h3>
                 <p className="text-gray-300">{principle.description}</p>
               </motion.div>
             ))}
@@ -94,9 +100,11 @@ const Privacy: React.FC = () => {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -108,19 +116,23 @@ const Privacy: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {dataCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {dataCategories.map((category,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.6,
+    delay: index * 0.1,  }}
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
-                <h3 className="text-2xl font-semibold text-white mb-4">{category.title}</h3>
+                <h3 className="text-2xl font-semibold text-white mb-4">{category.titl,
+    e}</h3>
                 <p className="text-gray-300 mb-6">{category.description}</p>
                 <div className="space-y-2">
-                  {category.examples.map((example, exampleIndex) => (
+                  {category.examples.map((exampleexampleIndex) => (
                     <div key={exampleIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {example}
@@ -137,9 +149,11 @@ const Privacy: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -151,16 +165,20 @@ const Privacy: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {dataUses.map((use, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {dataUses.map((use,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.6,
+    delay: index * 0.1,  }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover: border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
-                <h3 className="text-xl font-semibold text-white mb-4">{use.purpose}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{use.purpos,
+    e}</h3>
                 <p className="text-gray-300">{use.description}</p>
               </motion.div>
             ))}
@@ -172,9 +190,11 @@ const Privacy: React.FC = () => {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -186,16 +206,20 @@ const Privacy: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {userRights.map((right, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {userRights.map((right,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.6,
+    delay: index * 0.1,  }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover: border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
-                <h3 className="text-xl font-semibold text-white mb-4">{right.right}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{right.righ,
+    t}</h3>
                 <p className="text-gray-300">{right.description}</p>
               </motion.div>
             ))}
@@ -206,12 +230,14 @@ const Privacy: React.FC = () => {
       {/* Data Security */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }};
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+              transition={{ duration: 0.6,  }}
+              viewport={{ once: true,
+     }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -220,7 +246,7 @@ const Privacy: React.FC = () => {
               </h2>
               <p className="text-lg text-gray-300 mb-6">
                 We implement comprehensive security measures to protect your personal information
-                from unauthorized access, alteration, disclosure, or destruction.
+                from unauthorized accessalteration, disclosure, or destruction.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
@@ -248,10 +274,13 @@ const Privacy: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }};
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+              transition={{ duration: 0.6,
+    delay: 0.1,  }}
+              viewport={{ once: true,
+     }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -263,31 +292,34 @@ const Privacy: React.FC = () => {
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">Personal Information</h3>
-                    <p>Name, email address, phone number, company information, and other contact details you provide.</p>
+                    <p>Nameemail address, phone number, company information, and other contact details you provide.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">Usage Data</h3>
-                    <p>Information about how you use our services, including access times, pages viewed, and features used.</p>
+                    <p>Information about how you use our servicesincluding access times, pages viewed, and features used.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">Technical Data</h3>
-                    <p>IP address, browser type, device information, and other technical details.</p>
+                    <p>IP addressbrowser type, device information, and other technical details.</p>
                   </div>
                 </div>
               </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }};
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+              transition={{ duration: 0.6,
+    delay: 0.2,  }}
+              viewport={{ once: true,
+     }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -299,14 +331,14 @@ const Privacy: React.FC = () => {
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">Service Delivery</h3>
-                    <p>To provide, maintain, and improve our services and customer support.</p>
+                    <p>To providemaintain, and improve our services and customer support.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">Communication</h3>
-                    <p>To send you important updates, respond to inquiries, and provide customer service.</p>
+                    <p>To send you important updatesrespond to inquiries, and provide customer service.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -320,17 +352,20 @@ const Privacy: React.FC = () => {
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">Legal Compliance</h3>
-                    <p>To comply with applicable laws, regulations, and legal processes.</p>
+                    <p>To comply with applicable lawsregulations, and legal processes.</p>
                   </div>
                 </div>
               </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }};
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+              transition={{ duration: 0.6,
+    delay: 0.3,  }}
+              viewport={{ once: true,
+     }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -342,7 +377,7 @@ const Privacy: React.FC = () => {
                   <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">We Do Not Sell Your Data</h3>
-                    <p>Zion Tech Group does not sell, trade, or rent your personal information to third parties.</p>
+                    <p>Zion Tech Group does not selltrade, or rent your personal information to third parties.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -363,10 +398,13 @@ const Privacy: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }};
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+              transition={{ duration: 0.6,
+    delay: 0.4,  }}
+              viewport={{ once: true,
+     }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -399,10 +437,13 @@ const Privacy: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }};
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+              transition={{ duration: 0.6,
+    delay: 0.5,  }}
+              viewport={{ once: true,
+     }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -414,7 +455,7 @@ const Privacy: React.FC = () => {
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">Access & Update</h3>
-                    <p>You can access, update, or correct your personal information at any time.</p>
+                    <p>You can accessupdate, or correct your personal information at any time.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -428,7 +469,7 @@ const Privacy: React.FC = () => {
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">Deletion</h3>
-                    <p>You can request deletion of your personal information, subject to legal requirements.</p>
+                    <p>You can request deletion of your personal informationsubject to legal requirements.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -442,10 +483,13 @@ const Privacy: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }};
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+              transition={{ duration: 0.6,
+    delay: 0.6,  }}
+              viewport={{ once: true,
+     }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -453,7 +497,7 @@ const Privacy: React.FC = () => {
                 <span>Contact Us</span>
               </h2>
               <div className="space-y-4 text-gray-300">
-                <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+                <p>If you have any questions about this Privacy Policy or our data practicesplease contact us: </p>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-3">
                     <Mail className="w-5 h-5 text-cyan-400" />
@@ -465,7 +509,8 @@ const Privacy: React.FC = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <MapPin className="w-5 h-5 text-cyan-400" />
-                    <span>Address: 364 E Main St STE 1008, Middletown DE 19709</span>
+                    <span>Address: 364 E Main St STE 1008,
+    Middletown DE 19709</span>
                   </div>
                 </div>
               </div>
@@ -474,26 +519,27 @@ const Privacy: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Information */}
+      {/* Contact Information *, /}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,
+     }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Contact Us
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              If you have questions about this privacy policy or want to exercise your rights;
-              please contact our privacy team.
+              If you have questions about this privacy policy or want to exercise your rightsplease contact our privacy team.
             </p>
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               <div className="text-center">
                 <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
@@ -514,13 +560,15 @@ const Privacy: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section *,
+    /}
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,  }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Questions About Privacy?
@@ -547,6 +595,6 @@ const Privacy: React.FC = () => {
         </div>
       </section>
     </div>
-  )
+  ),
 };
-export default Privacy;
+export default Privac;y;

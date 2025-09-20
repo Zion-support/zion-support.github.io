@@ -1,70 +1,54 @@
-import { useEffect, useState } from "react";
-interface AccessibilitySettings {
-  highContrast: boolean,largeText: boolean,reducedMotion: boolean,focusVisible: boolean,screenReader: boolean,keyboardNavigation: boolean
+import { useEffect, useState } from "react";interface AccessibilitySettings {
+  highContrast: boolean,
+    largeText: boolea, n,reducedMotion: boolea, n,focusVisible: boolea, n,screenReader: boolea, n,keyboardNavigation: boolean,
 }
 
-export default function AccessibilityEnhancer({ children }: { children: React.ReactNode }) {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false,keyboardNavigation: false
-  });
-  const [isVisible, setIsVisible] = useState(false);
-  const [announcements, setAnnouncements] = useState<string[]>([]);
+export default function AccessibilityEnhancer() {
+
+  const [settings;
+    setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    largeText: fals, e,reducedMotion: fals, e,focusVisible: fals, e,screenReader: fals, e,keyboardNavigation: false,  });
+  const [isVisible;
+    setIsVisible] = useState(false);
+  const [announcements;
+    setAnnouncements] = useState<string[]>([]);
 
   useEffect(() => {
     // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    setSettings(prev => ({
-      ...prev,
-      reducedMotion: prefersReducedMotion,highContrast: prefersHighContrast
-    }));
-    // Apply accessibility settings to document
-    const root = document.documentElement;
+    const prefersReducedMotion  = window.matchMedia('(prefers-reduced-motion: reduce)').matche,
+    sconst prefersHighContrast  = window.matchMedia('(prefers-contrast: high)').matche,
+    ssetSettings(prev => ({
+      ...prevreducedMotion: prefersReducedMotion,
+    highContrast: prefersHighContrast,  }))// Apply accessibility settings to document
+    const root  = document.documentElemen;t;
     
     if (settings.highContrast) {
-      root.classList.add('high-contrast');
+      root.classList.add('high-contrast')} else {
+      root.classList.remove('high-contrast')}
+if (settings.largeText) {
+      root.classList.add('large-text')root.style.fontSize = '1.2em';
     } else {
-      root.classList.remove('high-contrast');
-    }
-;
-    if (settings.largeText) {
-      root.classList.add('large-text');
-      root.style.fontSize = '1.2em';
-    } else {
-      root.classList.remove('large-text');
-      root.style.fontSize = '';
+      root.classList.remove('large-text')root.style.fontSize = '';
     }
 ;
     if (settings.reducedMotion) {
-      root.classList.add('reduced-motion');
-      root.style.setProperty('--animation-duration', '0.01ms');
-      root.style.setProperty('--animation-iteration-count', '1');
-    } else {
-      root.classList.remove('reduced-motion');
-      root.style.removeProperty('--animation-duration');
-      root.style.removeProperty('--animation-iteration-count');
-    }
+      root.classList.add('reduced-motion')root.style.setProperty('--animation-duration', '0.01ms')root.style.setProperty('--animation-iteration-count', '1')} else {
+      root.classList.remove('reduced-motion')root.style.removeProperty('--animation-duration')root.style.removeProperty('--animation-iteration-count')}
 
     // Show accessibility panel on Ctrl+Shift+A
-    const handleKeyPress = (e: KeyboardEvent) => {
+    const handleKeyPress  = () => {
       if (e.ctrlKey && e.shiftKey && e.key === 'A') {
-        setIsVisible(!isVisible);
-        announce('Accessibility panel toggled');
-      }
-    };
+        setIsVisible(!isVisible)announce('Accessibility panel toggled'),  }
+    }window.addEventListener('keydown', handleKeyPress)return () => window.removeEventListener('keydown'; handleKeyPress);
+  }, [settings;
+    isVisible]);
 
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [settings, isVisible]);
-
-  const announce = (message: string) => {
-    setAnnouncements(prev => [...prev.slice(-2), message]);
+  const announce  = () => {
+    setAnnouncements(prev => [...prev.slice(;-;2); message]);
     
     // Create live region for screen readers
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
+    const announcement  = document.createElement('div')announcement.setAttribute('aria-live', 'polite')announcement.setAttribute('aria-atomic', 'true')announcement.className = 'sr-only';
     announcement.textContent = message;
     document.body.appendChild(announcement);
     
@@ -73,34 +57,28 @@ export default function AccessibilityEnhancer({ children }: { children: React.Re
     }, 1000);
   };
 
-  const toggleSetting = (setting: keyof AccessibilitySettings) => {
-    const newValue = !settings[setting];
-    setSettings(prev => ({ ...prev, [setting]: newValue }));
+  const toggleSetting  = () => {
+    const newValue = !settings[settin;g;];
+    setSettings(prev => ({ ...pre, v; [setting]: newValue }));
     
-    const settingNames = {
-      highContrast: 'High contrast mode',
-      largeText: 'Large text',
-      reducedMotion: 'Reduced motion',
-      focusVisible: 'Focus indicators',
-      screenReader: 'Screen reader mode',
+    const settingNames  = {
+      highContrast: 'High contrast mode, ',
+      largeText: 'Large text, ',
+      reducedMotion: 'Reduced motion, ',
+      focusVisible: 'Focus indicators, ',
+      screenReader: 'Screen reader mode,';
       keyboardNavigation: 'Keyboard navigation'
-    };
-    announce(`${settingNames[setting]} ${newValue ? 'enabled' : 'disabled'}`);
-  };
-
-  const resetSettings = () => {
+   ,
+     }announce(`${settingNames[setting]} ${newValue ? 'enabled' : 'disabled'}`)}const resetSettings  = () => {
     setSettings({
-      highContrast: false,
+      highContrast: fal,
+    se;
       largeText: false,
-      reducedMotion: false,
-      focusVisible: false,
-      screenReader: false,
-      keyboardNavigation: false
-    });
-    announce('Accessibility settings reset');
-  };
-
-  return (
+    reducedMotion: false,
+    focusVisible: false,
+    screenReader: false,
+    keyboardNavigation: false,  });
+    announce('Accessibility settings reset')}return (
     <>
       {/* Screen reader announcements */}
       <div aria-live="polite" aria-atomic="true" className="sr-only">
@@ -114,7 +92,7 @@ export default function AccessibilityEnhancer({ children }: { children: React.Re
             <h3 className="text-blue-400 font-bold text-lg">♿ Accessibility</h3>
             <button
               onClick={() => setIsVisible(false)}
-              className="text-blue-400 hover:text-white transition-colors p-1"
+              className="text-blue-400 hover: text-white transition-colors p-1"
               aria-label="Close accessibility panel"
             >
               ×
@@ -128,7 +106,8 @@ export default function AccessibilityEnhancer({ children }: { children: React.Re
               </label>
               <button
                 id="high-contrast"
-                onClick={() => toggleSetting('highContrast')}
+                onClick={() => toggleSetting('highContrast',
+    )}
                 className={`w-12 h-6 rounded-full transition-colors ${
                   settings.highContrast ? 'bg-blue-400' : 'bg-gray-600'
                 }`}
@@ -202,7 +181,7 @@ export default function AccessibilityEnhancer({ children }: { children: React.Re
           <div className="mt-4 pt-3 border-t border-gray-700">
             <button
               onClick={resetSettings}
-              className="w-full bg-blue-400/20 hover:bg-blue-400/30 text-blue-400 py-2 px-4 rounded transition-colors"
+              className="w-full bg-blue-400/20 hover: bg-blue-400/30 text-blue-400 py-2 px-4 rounded transition-colors"
               aria-label="Reset all accessibility settings"
             >
               Reset Settings
@@ -217,5 +196,5 @@ export default function AccessibilityEnhancer({ children }: { children: React.Re
 
       {children}
     </>
-  );
+  ),
 }

@@ -1,69 +1,69 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { 
-  BarChart3,
-  TrendingUp, 
-  Brain, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Users, 
-  Database,
-  PieChart,
-  LineChart,
-  Activity,
-  Target,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Eye,
-  Lock,
-  Cloud,
-  Smartphone,
-  Monitor,
-  Play,
-  Phone,
-  Mail,
+import { motion } from "framer-moti, on";import { BarChart3, TrendingUp;
+  Brain;
+  Zap;
+  Shield;
+  Globe;
+  Users;
+  Database;
+  PieChart;
+  LineChart;
+  Activity;
+  Target;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Eye;
+  Lock;
+  Cloud;
+  Smartphone;
+  Monitor;
+  Play;
+  Phone;
+  Mail;
   MapPin
-} from "lucide-react";
-import { SEO } from "../../components/SEO";
-const AIBusinessIntelligenceDashboard = () => {
+} from "lucide-react";import { SEO } from "../../components/S, EO";const AIBusinessIntelligenceDashboard  = () => {
   const features = [
     {
-      icon: Brain,title: "AI-Powered Insights",description: "Advanced machine learning algorithms that automatically identify trends, anomalies, and opportunities in your data"
+      icon: Bra,
+    i;n;
+    title: "AI-Powered Insights, ",description: "Advanced machine learning algorithms that automatically identify trend, s, anomalies, and opportunities in your data"
     },
     {
-      icon: BarChart3,title: "Real-time Analytics",description: "Live dashboards with real-time data updates from multiple sources including CRM, ERP, and external APIs"
+      icon: BarChart3,
+    title: "Real-time Analytics, ",description: "Live dashboards with real-time data updates from multiple sources including CR, M, ERP, and external APIs"
     },
     {
-      icon: TrendingUp,title: "Predictive Analytics",description: "Forecast future trends and outcomes using historical data and AI models with 95%+ accuracy"
-    };
+      icon: TrendingUp,
+    title: "Predictive Analytics, ",description: "Forecast future trends and outcomes using historical data and AI models with 95%+ accuracy"
+   ,  }{
+      icon: Zap,
+    title: "Automated Reporting, ",description: "Intelligent report generation that adapts to your business needs and automatically highlights key insights"
+   ,  },
     {
-      icon: Zap,title: "Automated Reporting",description: "Intelligent report generation that adapts to your business needs and automatically highlights key insights"
+      icon: Shield,
+    title: "Enterprise Security, ",description: "Bank-grade security with role-based access contro, l, data encryption, and compliance with GDPR, HIPAA, and SOC 2"
     },
     {
-      icon: Shield,title: "Enterprise Security",description: "Bank-grade security with role-based access control, data encryption, and compliance with GDPR, HIPAA, and SOC 2"
-    },
-    {
-      icon: Globe,title: "Multi-platform Access",description: "Access your dashboards from anywhere - web, mobile apps, and integrate with existing business tools"
+      icon: Globe,
+    title: "Multi-platform Access, ",description: "Access your dashboards from anywhere - we, b, mobile apps, and integrate with existing business tools"
     }
   ],
 
-  const pricingPlans = [
+  const pricingPlans  = [
     {
-      name: "Starter",price: "$299",period: "/month",description: "Perfect for small businesses and startups",features: [
-        "Up to 5 data sources",
+      name: "Starter, ",price: "$299, ",period: "/month, ",description: "Perfect for small businesses and startups, ",features: [
+        "Up to 5 data sources, ",
         "Basic AI insights",
         "5 user licenses",
         "Standard reports",
         "Email support",
         "Basic integrations"
-      ],
-      popular: false
-    };
-    {
-      name: "Professional",price: "$799",period: "/month",description: "Ideal for growing businesses and teams",features: [
-        "Up to 20 data sources",
+      ]popular: false
+   ,
+     }{
+      name: "Professional, ",price: "$799, ",period: "/month, ",description: "Ideal for growing businesses and teams, ",features: [
+        "Up to 20 data sources, ",
         "Advanced AI analytics",
         "25 user licenses",
         "Custom dashboards",
@@ -72,12 +72,11 @@ const AIBusinessIntelligenceDashboard = () => {
         "Advanced integrations",
         "White-label options"
       ],
-      popular: true
-    };
-    {
-      name: "Enterprise",price: "$2,499",
-      period: "/month",description: "For large organizations with complex needs",features: [
-        "Unlimited data sources",
+      popular: true,  }{
+      name: "Enterprise, ",price: "$2,
+    499, ",
+      period: "/month, ",description: "For large organizations with complex needs, ",features: [
+        "Unlimited data sources, ",
         "Custom AI models",
         "Unlimited users",
         "Advanced security",
@@ -86,52 +85,48 @@ const AIBusinessIntelligenceDashboard = () => {
         "On-premise options",
         "SLA guarantees"
       ],
-      popular: false
-    }
-  ];
-  const useCases = [
+      popular: false,  }
+  ]const useCases  = [
     {
-      title: "Sales Performance Analytics",description: "Track sales metrics, pipeline analysis, and revenue forecasting with AI-powered insights",
-      icon: TrendingUp
-    };
+      title: "Sales Performance Analytic,
+    s";description: "Track sales metrics,
+    pipeline analysi, s, and revenue forecasting with AI-powered insights",
+      icon: TrendingUp,  }{
+      title: "Customer Behavior Analysis, ",description: "Understand customer patterns,
+    churn predictio, n, and lifetime value optimization",
+      icon: Users,  }{
+      title: "Financial Performance Tracking, ",description: "Monitor KPIs,
+    budget vs actua, l, and financial forecasting with automated alerts",
+      icon: BarChart3,  },
     {
-      title: "Customer Behavior Analysis",description: "Understand customer patterns, churn prediction, and lifetime value optimization",
-      icon: Users
-    };
+      title: "Operational Efficiency, ",description: "Identify bottlenecks,
+    optimize processe, s, and improve productivity across teams",
+      icon: Activity,  }
+  ]const testimonials  = [
     {
-      title: "Financial Performance Tracking",description: "Monitor KPIs, budget vs actual, and financial forecasting with automated alerts",
-      icon: BarChart3
-    },
+      name: "Sarah Johnson, ",role: "VP of Operations, ",company: "TechFlow Solutions, ",content: "The AI insights have transformed how we make decisions. We've increased efficiency by 40% and reduced costs significantly.,"rating: 5
+   ,
+     }{
+      name: "Michael Chen, ",role: "Data Scientist, ",company: "InnovateCorp, ",content: "The predictive analytics capabilities are incredible. We can now forecast trends with remarkable accuracy., ",rating: 5,  },
     {
-      title: "Operational Efficiency",description: "Identify bottlenecks, optimize processes, and improve productivity across teams",
-      icon: Activity
-    }
-  ];
-  const testimonials = [
-    {
-      name: "Sarah Johnson",role: "VP of Operations",company: "TechFlow Solutions",content: "The AI insights have transformed how we make decisions. We've increased efficiency by 40% and reduced costs significantly.",rating: 5
-    };
-    {
-      name: "Michael Chen",role: "Data Scientist",company: "InnovateCorp",content: "The predictive analytics capabilities are incredible. We can now forecast trends with remarkable accuracy.",rating: 5
-    },
-    {
-      name: "Emily Rodriguez",role: "CEO",company: "StartupXYZ",content: "This dashboard has given us enterprise-level insights at a fraction of the cost. Game-changer for our business.",rating: 5
-    }
-  ];
-  return (
+      name: "Emily Rodriguez, ",role: "CEO, ",company: "StartupXYZ, ",content: "This dashboard has given us enterprise-level insights at a fraction of the cost. Game-changer for our business., ",rating: 5,  }
+  ]return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="AI-Powered Business Intelligence Dashboard - Zion Tech Group"
-        description="Transform your business with AI-powered BI dashboards. Real-time analytics, predictive insights, and automated reporting. Start from $299/month."
+        description="Transform your business with AI-powered BI dashboards. Real-time analyticspredictive insights, and automated reporting. Start from $299/month."
       />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className="pt-32 pb-20 px-4 sm: px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0,
+    y: 30,  }}
+            animate={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,
+     }}
             className="text-center relative z-10"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">
@@ -139,7 +134,7 @@ const AIBusinessIntelligenceDashboard = () => {
               AI-Powered Business Intelligence
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <h1 className="text-5xl md: text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 AI Business Intelligence
               </span>
@@ -149,10 +144,11 @@ const AIBusinessIntelligenceDashboard = () => {
             
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Transform your business data into actionable insights with our AI-powered business intelligence platform. 
-              Get real-time analytics, predictive insights, and automated reporting that drives growth.
+              Get real-time analytics,
+    predictive insight, s, and automated reporting that drives growth.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="https://ziontechgroup.com/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group"
@@ -171,7 +167,8 @@ const AIBusinessIntelligenceDashboard = () => {
           </motion.div>
         </div>
         
-        {/* Background Elements */}
+        {/* Background Elements *,
+    /}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
@@ -179,16 +176,18 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 30,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
+            viewport={{ once: true,
+     }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Powerful Features
               </span>
@@ -199,21 +198,25 @@ const AIBusinessIntelligenceDashboard = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.6,
+    delay: index * 0.1,  }}
+                viewport={{ once: true,  }}
                 className="group"
               >
-                <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
+                <div className="glass rounded-2xl p-8 border border-white/20 hover: border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
-                    {feature.title}
+                    {feature.titl,
+    e}
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
                     {feature.description}
@@ -226,16 +229,18 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 30,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
+            viewport={{ once: true,
+     }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Use Cases
               </span>
@@ -246,21 +251,26 @@ const AIBusinessIntelligenceDashboard = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCase,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }};
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0,
+    x: index % 2 === 0 ? -30 : 30,
+     }}whileInView={{ opacity: 1,
+    x: 0,  }}
+                transition={{ duration: 0.6,
+    delay: index * 0.1,  }}
+                viewport={{ once: true,  }}
                 className="group"
               >
-                <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm">
+                <div className="glass rounded-2xl p-8 border border-white/20 hover: border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
-                    {useCase.title}
+                    {useCase.titl,
+    e}
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
                     {useCase.description}
@@ -273,16 +283,18 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 30,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
+            viewport={{ once: true,
+     }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Pricing Plans
               </span>
@@ -293,14 +305,17 @@ const AIBusinessIntelligenceDashboard = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative ${plan.popular ? 'lg:-mt-8' : ''}`}
+                initial={{ opacity: 0,
+    y: 30,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.6,
+    delay: index * 0.1,  }}
+                viewport={{ once: true,  }}
+                className={`relative ${plan.popular ? 'lg: -mt-8' : ', '}`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -313,8 +328,9 @@ const AIBusinessIntelligenceDashboard = () => {
                 <div className={`glass rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${
                   plan.popular 
                     ? 'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10' 
-                    : 'border-white/20 hover:border-cyan-400/40'
-                }`}>
+                    : 'border-white/20 hover: border-cyan-400/40'
+               ,
+     }`}>
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center">
@@ -325,7 +341,7 @@ const AIBusinessIntelligenceDashboard = () => {
                   </div>
                   
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
+                    {plan.features.map((featureidx) => (
                       <li key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -334,12 +350,13 @@ const AIBusinessIntelligenceDashboard = () => {
                   </ul>
                   
                   <a
-                    href="https://ziontechgroup.com/contact"
+                    href="https: //ziontechgroup.com/contact"
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-400 hover:to-blue-400'
                         : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
-                    }`}
+                   ,
+     }`}
                   >
                     Start Free Trial
                   </a>
@@ -351,16 +368,18 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 30,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
+            viewport={{ once: true,
+     }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 What Our Clients Say
               </span>
@@ -368,18 +387,23 @@ const AIBusinessIntelligenceDashboard = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial,
+    index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0,
+    y: 30,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.6,
+    delay: index * 0.1,  }}
+                viewport={{ once: true,
+     }}
                 className="group"
               >
-                <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
+                <div className="glass rounded-2xl p-8 border border-white/20 hover: border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map((_,
+    i) => (
                       <Star key={i} className="w-5 h-5 fill-current text-yellow-400" />
                     ))}
                   </div>
@@ -397,15 +421,16 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 30,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,  }}
+            viewport={{ once: true,  }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -431,7 +456,7 @@ const AIBusinessIntelligenceDashboard = () => {
         </div>
       </section>
 
-      {/* Contact Information */}
+      {/* Contact Information *, /}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
@@ -462,6 +487,6 @@ const AIBusinessIntelligenceDashboard = () => {
         </div>
       </section>
     </div>
-  )
+  ),
 };
-export default AIBusinessIntelligenceDashboard;
+export default AIBusinessIntelligenceDashboar;d;

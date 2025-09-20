@@ -1,61 +1,61 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { SEO } from "../components/SEO";
-import { 
-  FileText,
-  Shield, 
-  Lock, 
-  Eye, 
-  Scale, 
-  CheckCircle,
-  ArrowRight,
-  BookOpen,
-  UserCheck,
-  Globe,
-  Database,
-  Server,
-  Mail,
+import { Link } from "react-router-d, om";import { motion } from "framer-moti, on";import { SEO } from "../components/S, EO";import { FileText, Shield;
+  Lock;
+  Eye;
+  Scale;
+  CheckCircle;
+  ArrowRight;
+  BookOpen;
+  UserCheck;
+  Globe;
+  Database;
+  Server;
+  Mail;
   Phone
-} from "lucide-react";
-const Legal: React.FC = () => {
+} from "lucide-react";const Legal: React.FC  = () => {
   const legalDocuments = [
     {
-      title: 'Terms of Service',description: 'Our terms and conditions for using Zion Tech Group services',href: '/terms',icon: FileText,category: 'Service Terms'
-    };
+      title: 'Terms of Service, ',description: 'Our terms and conditions for using Zion Tech Group services, ',href: '/terms',
+    icon: FileText,
+    category: 'Service Terms'
+   ,  }{
+      title: 'Privacy Policy, ',description: 'How we collect,
+    us, e, and protect your personal information',
+      href: '/privacy, ',icon: Shield,
+    category: 'Data Protection'
+   ,  }{
+      title: 'Cookie Policy, ',description: 'Information about cookies and how we use them, ',href: '/cookies, ',icon: Lock,
+    category: 'Data Protection'
+   ,  }{
+      title: 'Data Processing Agreement, ',description: 'Terms for processing personal data on behalf of customers, ',href: '/data-processing-agreement, ',icon: Database,
+    category: 'Data Protection'
+   ,  }{
+      title: 'Service Level Agreement, ',description: 'Our commitment to service quality and availability, ',href: '/sla, ',icon: CheckCircle,
+    category: 'Service Terms'
+   ,  },
     {
-      title: 'Privacy Policy',description: 'How we collect, use, and protect your personal information',
-      href: '/privacy',icon: Shield,category: 'Data Protection'
-    };
+      title: 'Acceptable Use Policy, ',description: 'Guidelines for acceptable use of our services, ',href: '/acceptable-use, ',icon: UserCheck,
+    category: 'Service Terms'
+   ,  }
+  ]const legalCategories  = [
     {
-      title: 'Cookie Policy',description: 'Information about cookies and how we use them',href: '/cookies',icon: Lock,category: 'Data Protection'
-    };
+      name: 'Service Terms, ',description: 'Terms and conditions for using our services',
+    icon: FileText,
+    color: 'from-blue-500 to-cyan-500'
+   ,  }{
+      name: 'Data Protection, ',description: 'Privacy and data handling policies, ',icon: Shield,
+    color: 'from-green-500 to-emerald-500'
+   ,  },
     {
-      title: 'Data Processing Agreement',description: 'Terms for processing personal data on behalf of customers',href: '/data-processing-agreement',icon: Database,category: 'Data Protection'
-    };
-    {
-      title: 'Service Level Agreement',description: 'Our commitment to service quality and availability',href: '/sla',icon: CheckCircle,category: 'Service Terms'
-    },
-    {
-      title: 'Acceptable Use Policy',description: 'Guidelines for acceptable use of our services',href: '/acceptable-use',icon: UserCheck,category: 'Service Terms'
-    }
-  ];
-  const legalCategories = [
-    {
-      name: 'Service Terms',description: 'Terms and conditions for using our services',icon: FileText,color: 'from-blue-500 to-cyan-500'
-    };
-    {
-      name: 'Data Protection',description: 'Privacy and data handling policies',icon: Shield,color: 'from-green-500 to-emerald-500'
-    },
-    {
-      name: 'Compliance',description: 'Regulatory and industry compliance documents',icon: Scale,color: 'from-purple-500 to-pink-500'
-    }
+      name: 'Compliance, ',description: 'Regulatory and industry compliance documents, ',icon: Scale,
+    color: 'from-purple-500 to-pink-500'
+   ,  }
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Legal & Privacy - Zion Tech Group"
-        description="Access all legal documents, privacy policies, and terms of service for Zion Tech Group. Stay informed about your rights and our commitments."
+        description="Access all legal documentsprivacy policies, and terms of service for Zion Tech Group. Stay informed about your rights and our commitments."
       />
       
       {/* Hero Section */}
@@ -63,16 +63,20 @@ const Legal: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container-responsive py-20 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0,
+    y: 20,  }}
+            animate={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,
+     }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
               Legal & Privacy
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Access all legal documents, privacy policies, and terms of service. 
+              Access all legal documents,
+    privacy policie, s, and terms of service. 
               We believe in transparency and protecting your rights.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -97,10 +101,12 @@ const Legal: React.FC = () => {
       <section className="py-16">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,  }}
+            viewport={{ once: true,
+     }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -111,17 +117,21 @@ const Legal: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {legalCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-16">
+            {legalCategories.map((category,
+    index) => (
               <motion.div
                 key={category.name}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl p-8 border border-slate-600/50 hover:border-slate-500/50 transition-all duration-300 hover:scale-105"
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.6,
+    delay: index * 0.1,  }}
+                viewport={{ once: true,  }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl p-8 border border-slate-600/50 hover: border-slate-500/50 transition-all duration-300 hover:scale-105"
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-6 mx-auto`}>
+                <div className={`w-16 h-16 bg-gradient-to-br ${category.colo,
+    r} rounded-2xl flex items-center justify-center mb-6 mx-auto`}>
                   <category.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
@@ -136,41 +146,46 @@ const Legal: React.FC = () => {
       <section className="py-16">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,  }}
+            viewport={{ once: true,
+     }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               All Legal Documents
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Browse and download all our legal documents, policies, and agreements.
+              Browse and download all our legal documentspolicies, and agreements.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {legalDocuments.map((document, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+            {legalDocuments.map((document,
+    index) => (
               <motion.div
                 key={document.title}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 group"
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                transition={{ duration: 0.6,
+    delay: index * 0.1,  }}
+                viewport={{ once: true,  }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl p-6 border border-slate-600/50 hover: border-cyan-500/50 transition-all duration-300 hover:scale-105 group"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
                     <document.icon className="w-6 h-6 text-white" />
                   </div>
                   <span className="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded-full">
-                    {document.category}
+                    {document.categor, y}
                   </span>
                 </div>
                 
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                  {document.title}
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover: text-cyan-400 transition-colors">
+                  {document.titl, e}
                 </h3>
                 <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                   {document.description}
@@ -178,13 +193,14 @@ const Legal: React.FC = () => {
                 
                 <Link
                   to={document.href}
-                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors group/link"
+                  className="inline-flex items-center gap-2 text-cyan-400 hover: text-cyan-300 transition-colors group/link"
                 >
                   <span className="text-sm font-medium">View Document</span>
                   <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
-            ))}
+            ),
+    )}
           </div>
         </div>
       </section>
@@ -192,12 +208,14 @@ const Legal: React.FC = () => {
       {/* Additional Information */}
       <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }};
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0,
+    x: -20,  }}whileInView={{ opacity: 1,
+    x: 0,  }}
+              transition={{ duration: 0.6,  }}
+              viewport={{ once: true,
+     }}
             >
               <h2 className="text-3xl font-bold text-white mb-6">
                 Your Rights & Our Commitments
@@ -235,16 +253,17 @@ const Legal: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }};
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0,
+    x: 20,  }}whileInView={{ opacity: 1,
+    x: 0,  }}
+              transition={{ duration: 0.6,  }}
+              viewport={{ once: true,
+     }}
               className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl p-8 border border-slate-500/50"
             >
               <h3 className="text-xl font-semibold text-white mb-4">Need Legal Assistance?</h3>
               <p className="text-gray-300 mb-6">
-                If you have questions about our legal documents or need clarification on any terms;
-                our legal team is here to help.
+                If you have questions about our legal documents or need clarification on any termsour legal team is here to help.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-gray-300">
@@ -258,7 +277,7 @@ const Legal: React.FC = () => {
               </div>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 mt-6 text-cyan-400 hover:text-cyan-300 transition-colors"
+                className="inline-flex items-center gap-2 mt-6 text-cyan-400 hover: text-cyan-300 transition-colors"
               >
                 <span>Contact Legal Team</span>
                 <ArrowRight className="w-4 h-4" />
@@ -268,14 +287,16 @@ const Legal: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section *,
+    /}
       <section className="py-16">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,  }}
+            viewport={{ once: true,  }}
             className="max-w-3xl mx-auto"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -305,6 +326,6 @@ const Legal: React.FC = () => {
         </div>
       </section>
     </div>
-  )
+  ),
 };
-export default Legal;
+export default Lega;l;

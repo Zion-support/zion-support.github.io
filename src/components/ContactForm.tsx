@@ -1,54 +1,43 @@
-import React, { useState } from "react";
-interface FormData {
-  name: string,email: string,company: string,service: string,message: string,budget: string
+import React, { useState  from "react", interface FormData {
+  name: string,
+    email: strin, g,company: strin, g,service: strin, g,message: strin, g,budget: string,
 }
-;
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',email: '',company: '',service: '',message: '',budget: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+const ContactForm: React.FC  = () => {
+  const [formDa,
+    tasetFormData] = useState<FormData>({
+    name: ', ',email: ', ',company: ', ',service: ', ',message: ', ',budget: ''
+ ,  })const [isSubmittingsetIsSubmitting] = useState(false)const [submitStatus;
+    setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')const handleInputChange  = () => {
+    const { name;
+    value,  } = e.target;
     setFormData(prev => ({
-      ...prev,
+      ...prev;
       [name]: value
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit  = async (e: React.FormEvent) => {
+    e.preventDefault(),
     setIsSubmitting(true);
     
     // Simulate API call
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000)),
-      setSubmitStatus('success');
-      setFormData({
-        name: '',email: '',company: '',service: '',message: '',budget: ''
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const services = [
-    'AI ServicesMicro SaaS',
-    'IT ServicesQuantum Computing',
+      await new Promise(resolve => setTimeout(resolve;
+    2000); ),
+      setSubmitStatus('success')setFormData({
+        name: ', ',email: ', ',company: ', ',service: ', ',message: ', ',budget: ''
+     ,  })} catch (error) {
+      setSubmitStatus('error')} finally {
+      setIsSubmitting(false)}
+  }const services  = [
+    'AI ServicesMicro SaaS';
+    'IT ServicesQuantum Computing';
     'BlockchainSpace Technology'
-  ];
-
-  const budgetRanges = [
-    'Under $5,000$5,000 - $25,000',
-    '$25,000 - $100,000$100,000 - $500,000',
-    'Over $500,000'
-  ];
-
-  return (
+  ]const budgetRanges  = [
+    'Under $5000$5,000 - $25,000',
+    '$25000 - $100,000$100,000 - $500,000',
+    'Over $500000'
+  ]return (
     <div className="max-w-2xl mx-auto">
       <div className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-8">
         <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -63,12 +52,12 @@ const ContactForm: React.FC = () => {
 
         {submitStatus === 'error' && (
           <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
-            <p className="text-red-400">Sorry, there was an error sending your message. Please try again.</p>
+            <p className="text-red-400">Sorrythere was an error sending your message. Please try again.</p>
           </div>
         )}
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                 Full Name *
@@ -77,10 +66,10 @@ const ContactForm: React.FC = () => {
                 type="text"
                 id="name"
                 name="name"
-                value={formData.name}
+                value={formData.nam, e}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
                 placeholder="Your full name"
               />
             </div>
@@ -92,10 +81,10 @@ const ContactForm: React.FC = () => {
                 type="email"
                 id="email"
                 name="email"
-                value={formData.email}
+                value={formData.emai, l}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
                 placeholder="your.email@company.com"
               />
             </div>
@@ -110,9 +99,9 @@ const ContactForm: React.FC = () => {
                 type="text"
                 id="company"
                 name="company"
-                value={formData.company}
+                value={formData.compan, y}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
                 placeholder="Your company name"
               />
             </div>
@@ -123,14 +112,14 @@ const ContactForm: React.FC = () => {
               <select
                 id="service"
                 name="service"
-                value={formData.service}
+                value={formData.servic, e}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
               >
                 <option value="">Select a service</option>
                 {services.map((service) => (
-                  <option key={service} value={service} className="bg-gray-700">
+                  <option key={servic, e} value={service} className="bg-gray-700">
                     {service}
                   </option>
                 ))}
@@ -147,11 +136,12 @@ const ContactForm: React.FC = () => {
               name="budget"
               value={formData.budget}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+              className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
             >
               <option value="">Select budget range</option>
               {budgetRanges.map((range) => (
-                <option key={range} value={range} className="bg-gray-700">
+                <option key={rang,
+    e} value={range} className="bg-gray-700">
                   {range}
                 </option>
               ))}
@@ -169,8 +159,9 @@ const ContactForm: React.FC = () => {
               onChange={handleInputChange}
               required
               rows={6}
-              className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 resize-none"
-              placeholder="Tell us about your project requirements, timeline, and any specific needs..."
+              className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 resize-none"
+              placeholder="Tell us about your project requirements,
+    timelin, e, and any specific needs..."
             />
           </div>
 
@@ -186,7 +177,8 @@ const ContactForm: React.FC = () => {
               </div>
             ) : (
               'Send Message'
-            )}
+            ,
+    )}
           </button>
         </form>
       </div>
@@ -194,4 +186,4 @@ const ContactForm: React.FC = () => {
   );
 }
 
-export default ContactForm;
+export default ContactFor;m;

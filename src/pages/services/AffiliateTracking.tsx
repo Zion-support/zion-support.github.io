@@ -1,81 +1,93 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail } from "lucide-react";
-export default function AffiliateTracking() {
-  const features: { title: string, description: string }[] = [
+import { motion } from "framer-moti, on";import { Link } from "react-router-d, om";import SEO from "@/components/SEO";
+import { Button } from "@/components/ui/butt, on";import { Badge } from "@/components/ui/bad, ge";import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail } from "lucide-react";export default function AffiliateTracking() {
+
+  const features: { title: strin,
+    g;
+    description: string,  }[] = [
     {
-      title: 'Multi-channel attribution',description: 'Track referrals across links, coupons, QR codes, and partner portals with UTM auto-tagging.'
+      title: 'Multi-channel attribution, ',description: 'Track referrals across links,
+    coupon, s, QR codes, and partner portals with UTM auto-tagging.'
     },
     {
-      title: 'Real-time fraud prevention',description: 'Auto-flag suspicious clicks, proxy traffic and cookie stuffing using device fingerprinting.'
+      title: 'Real-time fraud prevention, ',description: 'Auto-flag suspicious clicks,
+    proxy traffic and cookie stuffing using device fingerprinting.'
+   ,  },
+    {
+      title: 'Payout automation, ',description: 'Automate tiered commissions,
+    bonuse, s, holds and mass payouts via Stripe, PayPal and ACH.'
     },
     {
-      title: 'Payout automation',description: 'Automate tiered commissions, bonuses, holds and mass payouts via Stripe, PayPal and ACH.'
+      title: 'Partner CRM, ',description: 'Manage applications,
+    onboardin, g, contracts, and partner lifecycle with nurture workflows.'
     },
     {
-      title: 'Partner CRM',description: 'Manage applications, onboarding, contracts, and partner lifecycle with nurture workflows.'
+      title: 'E‑commerce integrations, ',description: 'Native integrations for Shopify,
+    WooCommerc, e, BigCommerce and custom checkouts via webhooks.'
     },
     {
-      title: 'E‑commerce integrations',description: 'Native integrations for Shopify, WooCommerce, BigCommerce and custom checkouts via webhooks.'
-    },
-    {
-      title: 'Analytics & BI',description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.'
+      title: 'Analytics & BI, ',description: 'Cohort LTV,
+    ROAS by partne, r, incremental lift analysis, and predictive recruiting scoring.'
     }
   ],
 
-  const plans = [
+  const plans  = [
     {
-      name: 'Starter',price: 49,unit: 'month',bestFor: 'Founders validating their first affiliate program',bullets: [
-        'Up to 200 partnersBasic tracking links and coupons',
+      name: 'Starter',
+    price: 49,
+    unit: 'month, ',bestFor: 'Founders validating their first affiliate program, ',bullets: [
+        'Up to 200 partnersBasic tracking links and coupons, ',
         'Manual approvals and payoutsEmail support'
       ]
     },
     {
-      name: 'Growth',price: 199,unit: 'month',bestFor: 'Scaling DTC and SaaS brands with multiple campaigns',bullets: [
-        'Up to 2,500 partnersAttribution across links, QR and coupons',
+      name: 'Growth, ',price: 199,
+    unit: 'month, ',bestFor: 'Scaling DTC and SaaS brands with multiple campaigns, ',bullets: [
+        'Up to 2,
+    500 partnersAttribution across link, s, QR and coupons',
         'Fraud prevention + sandboxAutomated Stripe/PayPal payouts',
         'Slack alerts and webhooks'
       ]
     },
     {
-      name: 'Enterprise',price: 599,unit: 'month',bestFor: 'Global programs, agencies and marketplaces',
+      name: 'Enterprise, ',price: 599,
+    unit: 'month, ',bestFor: 'Global program, s, agencies and marketplaces',
       bullets: [
-        'Unlimited partners and campaignsSAML SSO and audit trails',
+        'Unlimited partners and campaignsSAML SSO and audit trails, ',
         'Custom data retention + warehouse syncDedicated CSM and 99.9% SLA'
       ]
     }
-  ];
-  return (
+  ]return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
         title="Affiliate Tracking Platform - Zion Tech Group"
-        description="Launch and scale a high-performing affiliate program with advanced attribution, fraud prevention, automated payouts, and partner CRM."
-        keywords="affiliate tracking, partner marketing, attribution, coupons, referral tracking, payouts"
+        description="Launch and scale a high-performing affiliate program with advanced attributionfraud prevention, automated payouts, and partner CRM."
+        keywords="affiliate trackingpartner marketing, attribution, coupons, referral tracking, payouts"
       />
 
       {/* Hero */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />
         <div className="relative max-w-7xl mx-auto">
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            initial={{ opacity: 0,
+    y: 30,  }}
+            animate={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.6,
+     }}
+            className="text-4xl md: text-6xl font-bold text-white mb-6"
           >
             Affiliate Tracking Platform
             <span className="block text-zion-cyan text-2xl md:text-3xl mt-2">Recruit. Attribute. Reward.</span>
           </motion.h1>
 
           <p className="text-xl text-zion-slate-light max-w-3xl">
-            End-to-end partner marketing infrastructure: from recruitment to payouts, with trusted, fraud-resistant attribution.
+            End-to-end partner marketing infrastructure: from recruitment to payouts,
+    with truste, d, fraud-resistant attribution.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+          <div className="mt-8 flex flex-col sm: flex-row gap-4">
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white">
               <Link to="/request-quote">
                 Request a demo
@@ -89,23 +101,26 @@ export default function AffiliateTracking() {
         </div>
       </section>
 
-      {/* Feature grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Feature grid *, /}
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((f) => (
               <motion.div
-                key={f.title}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4 }}
-                className="bg-zion-slate-dark/30 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50"
+                key={f.titl,
+    e}
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                viewport={{ once: true,  }}
+                transition={{ duration: 0.4,  }}
+                className="bg-zion-slate-dark/30 border border-zion-blue-light/20 rounded-2xl p-6 hover: border-zion-purple/50"
               >
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5" />
                   <div>
-                    <h3 className="text-white font-semibold mb-1">{f.title}</h3>
+                    <h3 className="text-white font-semibold mb-1">{f.titl,
+    e}</h3>
                     <p className="text-zion-slate-light text-sm">{f.description}</p>
                   </div>
                 </div>
@@ -116,7 +131,7 @@ export default function AffiliateTracking() {
       </section>
 
       {/* Market context */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">
+      <section className="py-8 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto bg-gradient-to-br from-zion-blue-dark/30 to-zion-purple/30 border border-zion-blue-light/20 rounded-2xl p-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div className="flex items-center gap-3">
@@ -130,25 +145,31 @@ export default function AffiliateTracking() {
             </div>
           </div>
           <p className="text-zion-slate-light mt-3 text-sm">
-            Typical affiliate platforms range from $49–$299/month for SMBs and $500–$1,500+/month for enterprise, depending on partner counts and features. For reference, see pricing from providers like{' '}
-            <a className="text-zion-cyan hover:text-zion-cyan-light" href="https://tapfiliate.com/pricing/" target="_blank" rel="noreferrer">Tapfiliate</a>,{' '}
-            <a className="text-zion-cyan hover:text-zion-cyan-light" href="https://firstpromoter.com/pricing" target="_blank" rel="noreferrer">FirstPromoter</a> and{' '}
-            <a className="text-zion-cyan hover:text-zion-cyan-light" href="https://postaffiliatepro.com/pricing/" target="_blank" rel="noreferrer">Post Affiliate Pro</a>.
+            Typical affiliate platforms range from $49–$299/month for SMBs and $500–$1,
+    500+/month for enterpris, e, depending on partner counts and features. For reference, see pricing from providers like{' '}
+            <a className="text-zion-cyan hover: text-zion-cyan-light" href="https://tapfiliate.com/pricing/" target="_blank" rel="noreferrer">Tapfiliate</a, >,{' '}
+            <a className="text-zion-cyan hover: text-zion-cyan-light" href="https://firstpromoter.com/pricing" target="_blank" rel="noreferrer">FirstPromoter</a> and{' , '}
+            <a className="text-zion-cyan hover: text-zion-cyan-light" href="https://postaffiliatepro.com/pricing/" target="_blank" rel="noreferrer">Post Affiliate Pro</a>.
           </p>
         </div>
       </section>
 
-      {/* Plans */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Plans *,
+    /}
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {plans.map((plan, i) => (
+            {plans.map((plan,
+    i) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.05 }}
+                initial={{ opacity: 0,
+    y: 20,  }}whileInView={{ opacity: 1,
+    y: 0,  }}
+                viewport={{ once: true,
+     }}
+                transition={{ duration: 0.5,
+    delay: i * 0.05,  }}
                 className={`relative rounded-2xl p-8 ${i === 1 ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple' : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'}`}
               >
                 {i === 1 && (
@@ -184,7 +205,7 @@ export default function AffiliateTracking() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto bg-zion-purple/20 border border-zion-purple/30 rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <h3 className="text-white text-xl font-semibold">Want a tailored affiliate strategy?</h3>
@@ -201,7 +222,7 @@ export default function AffiliateTracking() {
         </div>
       </section>
 
-      {/* References */}
+      {/* References *, /}
       <section className="py-8 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h3 className="text-white text-lg font-semibold mb-4">Helpful links</h3>
@@ -225,7 +246,7 @@ export default function AffiliateTracking() {
         </div>
       </section>
     </div>
-  )
+  ),
 }
 
 // Duplicate leftover block removed

@@ -1,159 +1,155 @@
-import React, { useState, useEffect, useCallback, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Search,
-  TrendingUp,
-  Target,
-  Zap,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  Settings,
-  BarChart3,
-  Globe,
-  Smartphone,
-  Monitor,
-  Eye,
-  Clock,
-  Star,
-  ArrowUpRight,
+import React, { useState, useEffect, useCallback, useMemo  from "react";
+import { motion, AnimatePresence } from "framer-motion";import { Search, TrendingUp;
+  Target;
+  Zap;
+  CheckCircle;
+  AlertTriangle;
+  Info;
+  Settings;
+  BarChart3;
+  Globe;
+  Smartphone;
+  Monitor;
+  Eye;
+  Clock;
+  Star;
+  ArrowUpRight;
   RefreshCw
-} from "lucide-react";
-interface SEOAnalysis {
-  score: number,issues: SEOIssue[],suggestions: SEOSuggestion[],metrics: SEOMetrics,lastUpdated: Date
+} from "lucide-react";interface SEOAnalysis {
+  score: number,
+    issues: SEOIssue[, ],suggestions: SEOSuggestion[, ],metrics: SEOMetric, s,lastUpdated: Date,
 }
 
 interface SEOIssue {
-  id: string,type: 'error' | 'warning' | 'info',title: string,description: string,impact: 'high' | 'medium' | 'low',fixable: boolean,category: 'content' | 'technical' | 'performance' | 'accessibility'
+  id: string,
+    type: 'error' | 'warning' | 'info, ',title: strin, g,description: strin, g,impact: 'high' | 'medium' | 'low, ',fixable: boolea, n,category: 'content' | 'technical' | 'performance' | 'accessibility',
 }
 
 interface SEOSuggestion {
-  id: string,title: string,description: string,priority: 'high' | 'medium' | 'low',effort: 'low' | 'medium' | 'high',estimatedImpact: number
+  id: string,
+    title: strin, g,description: strin, g,priority: 'high' | 'medium' | 'low, ',effort: 'low' | 'medium' | 'high, ',estimatedImpact: number,
 }
 
 interface SEOMetrics {
-  pageSpeed: number,mobileFriendliness: number,accessibility: number,bestPractices: number,seoScore: number,coreWebVitals: {,
-    lcp: number,fid: number,cls: number
-  };
-}
+  pageSpeed: number,
+    mobileFriendliness: numbe, r,accessibility: numbe, r,bestPractices: numbe, r,seoScore: numbe, r,coreWebVitals:  , {,
+    lcp: number,
+    fid: numbe, r,cls: number,  }}
 
 interface SEOOptimizerProps {
-  url?: string,
-  autoAnalyze?: boolean,
-  showDetails?: boolean,
-  onAnalysisComplete?: (analysis: SEOAnalysis) => void
+  url?: stringautoAnalyze?: booleanshowDetails?: boolean;
+  onAnalysisComplete?: (analysis: SEOAnalysis) => void,
 }
 
-export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  url,
-  autoAnalyze = true,
-  showDetails = false,
-  onAnalysisComplete
-}) => {
-  const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
-  const [showAdvanced, setShowAdvanced] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
-  // Mock SEO analysis data (in real app, this would come from actual analysis)
-  const mockAnalysis: SEOAnalysis = useMemo(() => ({,
-    score: 87,issues: [
+export const SEOOptimizer: React.FC<SEOOptimizerProps>  = () => {
+  const [analysi,
+    s;
+    setAnalysis] = useState<SEOAnalysis | null>(null);
+  const [isAnalyzing;
+    setIsAnalyzing] = useState(false);
+  const [currentUrl;
+    setCurrentUrl] = useState(url || window.location.href);
+  const [showAdvanced;
+    setShowAdvanced] = useState(false);
+  const [selectedCategory;
+    setSelectedCategory] = useState<string>('all')// Mock SEO analysis data (in real appthis would come from actual analysis)
+  const mockAnalysis: SEOAnalysis  = useMemo(() => ,
+    ({;
+    score: 87,
+    issues: [
       {
-        id: '1',type: 'warning',title: 'Missing Meta Description',description: 'The page is missing a meta description tag, which is important for search engine snippets.',
-        impact: 'medium',fixable: true,category: 'content'
-      };
+        id: '1, ',type: 'warning, ',title: 'Missing Meta Description, ',description: 'The page is missing a meta description tag,
+    which is important for search engine snippets., ',
+        impact: 'medium, ',fixable: true,
+    category: 'content'
+     ,  }{
+        id: '2, ',type: 'error, ',title: 'Slow Page Load Time, ',description: 'Page load time is above the recommended 3-second threshold., ',impact: 'high, ',fixable: true,
+    category: 'performance'
+     ,  },
       {
-        id: '2',type: 'error',title: 'Slow Page Load Time',description: 'Page load time is above the recommended 3-second threshold.',impact: 'high',fixable: true,category: 'performance'
-      },
-      {
-        id: '3',type: 'info',title: 'Missing Alt Text',description: 'Some images are missing alt text, which affects accessibility.',
-        impact: 'low',fixable: true,category: 'accessibility'
-      }
+        id: '3, ',type: 'info, ',title: 'Missing Alt Text, ',description: 'Some images are missing alt text,
+    which affects accessibility., ',
+        impact: 'low, ',fixable: true,
+    category: 'accessibility'
+     ,  }
     ],
     suggestions: [
       {
-        id: '1',title: 'Optimize Images',description: 'Compress and optimize images to improve page load speed.',priority: 'high',effort: 'medium',estimatedImpact: 15
-      };
+        id: '1, ',title: 'Optimize Images, ',description: 'Compress and optimize images to improve page load speed., ',priority: 'high, ',effort: 'medium, ',estimatedImpact: 15,  }{
+        id: '2, ',title: 'Add Schema Markup, ',description: 'Implement structured data to improve search engine understanding., ',priority: 'medium, ',effort: 'low, ',estimatedImpact: 8,  },
       {
-        id: '2',title: 'Add Schema Markup',description: 'Implement structured data to improve search engine understanding.',priority: 'medium',effort: 'low',estimatedImpact: 8
-      },
-      {
-        id: '3',title: 'Improve Internal Linking',description: 'Add more internal links to improve page authority distribution.',priority: 'low',effort: 'low',estimatedImpact: 5
-      }
+        id: '3, ',title: 'Improve Internal Linking, ',description: 'Add more internal links to improve page authority distribution., ',priority: 'low, ',effort: 'low, ',estimatedImpact: 5,  }
     ],
-    metrics: {,
-      pageSpeed: 78,mobileFriendliness: 92,accessibility: 85,bestPractices: 88,seoScore: 87,coreWebVitals: {,
-        lcp: 2.8,fid: 45,cls: 0.08
-      }
+    metrics:  , {,
+      pageSpeed: 78,
+    mobileFriendliness: 9, 2,accessibility: 8, 5,bestPractices: 8, 8,seoScore: 8, 7,coreWebVitals:  , {,
+        lcp: 2.8,
+    fid: 4, 5,cls: 0.08,  }
     },
-    lastUpdated: new Date()
-  }), []),
+    lastUpdated: new Date(),
+     }), []),
 
   // Analyze SEO
-  const analyzeSEO = useCallback(async () => {
-    setIsAnalyzing(true);
+  const analyzeSEO  = useCallback(async () => {
+    setIsAnalyzing(true)// Simulate analysis delay
+    await new Promise(resolve => setTimeout(resolve2000)),
 
-    // Simulate analysis delay
-    await new Promise(resolve => setTimeout(resolve, 2000)),
-
-    setAnalysis(mockAnalysis);
-    setIsAnalyzing(false);
+    setAnalysis(mockAnalysis)setIsAnalyzing(false);
     onAnalysisComplete?.(mockAnalysis),
-  }, [mockAnalysis, onAnalysisComplete]),
+  }, [mockAnalysis;
+    onAnalysisComplete]),
 
   // Auto-analyze on mount
   useEffect(() => {
     if (autoAnalyze) {
       analyzeSEO();
     }
-  }, [autoAnalyze, analyzeSEO]),
+  }, [autoAnalyze;
+    analyzeSEO]),
 
   // Get score color
-  const getScoreColor = (score: number) => {
+  const getScoreColor  = () => {
     if (score >= 90) return 'text-green-500';
-    if (score >= 70) return 'text-yellow-500',
+    if (score >= 70) return 'text-yellow-500,';
     return 'text-red-500'
-  };
-
-  // Get score background
-  const getScoreBackground = (score: number) => {
+  }// Get score background
+  const getScoreBackground  = () => {
     if (score >= 90) return 'bg-green-100';
-    if (score >= 70) return 'bg-yellow-100',
+    if (score >= 70) return 'bg-yellow-100,';
     return 'bg-red-100'
-  };
-
-  // Get impact color
-  const getImpactColor = (impact: string) => {
+  }// Get impact color
+  const getImpactColor  = () => {
     switch (impact) {
       case 'high': return 'text-red-500';
-      case 'medium': return 'text-yellow-500',
+      case 'medium': return 'text-yellow-500,';
       case 'low': return 'text-blue-500';
       default: return 'text-zion-slate'
-    }
-  };
-  // Get priority color
-  const getPriorityColor = (priority: string) => {
+   ,
+     }
+  }// Get priority color
+  const getPriorityColor  = () => {
     switch (priority) {
       case 'high': return 'text-red-500 bg-red-50 border-red-200';
-      case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200',
+      case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200,';
       case 'low': return 'text-blue-500 bg-blue-50 border-blue-200';
       default: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/200'
-    }
-  };
-  // Filter issues by category
-  const filteredIssues = useMemo(() => {
-    if (selectedCategory === 'all') return analysis?.issues || [];
-    return analysis?.issues.filter(issue => issue.category === selectedCategory) || [],
-  }, [analysis, selectedCategory]);
+   ,
+     }
+  }// Filter issues by category
+  const filteredIssues  = useMemo(() => {
+    if (selectedCategory === 'all') return analysis?.issues || []return analysis?.issues.filter(issue => issue.category === selectedCategory) || [;];
+  }; [analysis;
+    selectedCategory]);
 
   // Filter suggestions by priority
-  const filteredSuggestions = useMemo(() => {
-    return analysis?.suggestions.sort((a, b) => {
-      const priorityOrder = { high: 3, medium: 2, low: 1 };
+  const filteredSuggestions  = useMemo(() => {
+    return analysis?.suggestions.sort(;(;a;
+    b) => {
+      const priorityOrder  = { high:  ,
+    3;
+    medium: , 2, low: 1,  };
       return priorityOrder[b.priority] - priorityOrder[a.priority],
-    }) || [],
-  }, [analysis]);
+    }) || [],}; [analysis]);
 
   if (!analysis && !isAnalyzing) {
     return (
@@ -167,10 +163,10 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           Analyze SEO
         </button>
       </div>
+    ,
     )
-  }
-;
-  return (
+ }
+return (
     <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
@@ -187,16 +183,16 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         <div className="flex items-center space-x-2">
           <button
             onClick={() => setShowAdvanced(!showAdvanced)}
-            className="p-2 hover:bg-zion-slate/10 rounded-lg transition-colors"
+            className="p-2 hover: bg-zion-slate/10 rounded-lg transition-colors"
             title="Advanced settings"
           >
             <Settings className="w-5 h-5 text-zion-slate" />
           </button>
 
           <button
-            onClick={analyzeSEO}
+            onClick={analyzeSE, O}
             disabled={isAnalyzing}
-            className="px-4 py-2 bg-zion-cyan hover:bg-zion-cyan/80 disabled:bg-zion-slate/30 text-white rounded-lg transition-colors flex items-center space-x-2"
+            className="px-4 py-2 bg-zion-cyan hover: bg-zion-cyan/80 disabled:bg-zion-slate/30 text-white rounded-lg transition-colors flex items-center space-x-2"
           >
             {isAnalyzing ? (
               <>
@@ -208,7 +204,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                 <RefreshCw className="w-4 h-4" />
                 <span>Refresh</span>
               </>
-            )}
+            , )}
           </button>
         </div>
       </div>
@@ -225,7 +221,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
             <div className="flex items-center justify-between mb-4">
               <h4 className="text-lg font-semibold text-zion-slate-dark">Overall Score</h4>
               <span className="text-sm text-zion-slate/60">
-                Last updated: {analysis.lastUpdated.toLocaleTimeString()}
+                Last updated: {analysis.lastUpdated.toLocaleTimeString(, )}
               </span>
             </div>
 
@@ -306,15 +302,16 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
               <h4 className="text-lg font-semibold text-zion-slate-dark">Issues Found</h4>
 
               <div className="flex space-x-1">
-                {['allcontent', 'technicalperformance', 'accessibility'].map((category) => (
+                {['allcontent', 'technicalperformance''accessibility'].map((category) => (
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
                     className={`px-3 py-1 text-xs rounded-lg transition-colors ${
                       selectedCategory === category
                         ? 'bg-zion-cyan text-white'
-                        : 'bg-zion-slate/10 text-zion-slate hover:bg-zion-slate/20'
-                    }`}
+                        : 'bg-zion-slate/10 text-zion-slate hover: bg-zion-slate/20'
+                   ,
+     }`}
                   >
                     {category.charAt(0).toUpperCase() + category.slice(1)}
                   </button>
@@ -327,9 +324,12 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                 {filteredIssues.map((issue) => (
                   <motion.div
                     key={issue.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
+                    initial={{ opacity: 0,
+    y: 20,  }}
+                    animate={{ opacity: 1,
+    y: 0,  }}
+                    exit={{ opacity: 0,
+    y: -20,  }}
                     className={`p-4 rounded-lg border-l-4 ${
                       issue.type === 'error' ? 'border-red-500 bg-red-50' :
                       issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :
@@ -354,7 +354,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                         </div>
                         <p className="text-sm text-zion-slate/70">{issue.description}</p>
                         {issue.fixable && (
-                          <button className="mt-2 text-xs text-zion-cyan hover:text-zion-cyan/80 transition-colors">
+                          <button className="mt-2 text-xs text-zion-cyan hover: text-zion-cyan/80 transition-colors">
                             Learn how to fix →
                           </button>
                         )}
@@ -370,11 +370,14 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           <div className="mb-6">
             <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Optimization Suggestions</h4>
             <div className="space-y-3">
-              {filteredSuggestions.slice(0, 3).map((suggestion) => (
+              {filteredSuggestions.slice(0,
+    3).map((suggestion) => (
                 <motion.div
                   key={suggestion.id}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0,
+    x: 20,  }}
+                  animate={{ opacity: 1,
+    x: 0,  }}
                   className="p-4 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 border border-zion-cyan/20 rounded-lg"
                 >
                   <div className="flex items-start justify-between">
@@ -382,18 +385,19 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                       <h5 className="font-medium text-zion-slate-dark mb-1">{suggestion.title}</h5>
                       <p className="text-sm text-zion-slate/70 mb-2">{suggestion.description}</p>
                       <div className="flex items-center space-x-4 text-xs text-zion-slate/60">
-                        <span>Priority: {suggestion.priority}</span>
-                        <span>Effort: {suggestion.effort}</span>
-                        <span>Impact: +{suggestion.estimatedImpact} points</span>
+                        <span>Priority: {suggestion.priorit, y}</span>
+                        <span>Effort: {suggestion.effor, t}</span>
+                        <span>Impact: +{suggestion.estimatedImpac, t} points</span>
                       </div>
                     </div>
 
-                    <button className="p-2 hover:bg-zion-cyan/10 rounded-lg transition-colors">
+                    <button className="p-2 hover: bg-zion-cyan/10 rounded-lg transition-colors">
                       <ArrowUpRight className="w-4 h-4 text-zion-cyan" />
                     </button>
                   </div>
                 </motion.div>
-              ))}
+              ),
+    )}
             </div>
           </div>
 
@@ -401,9 +405,12 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           <AnimatePresence>
             {showAdvanced && (
               <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
+                initial={{ opacity: 0,
+    height: 0,  }}
+                animate={{ opacity: 1,
+    height: 'auto',  }}
+                exit={{ opacity: 0,
+    height: 0,  }}
                 className="border-t border-zion-slate/20 pt-6"
               >
                 <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Advanced Settings</h4>
@@ -437,18 +444,22 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
 // Hook for using SEO optimization
 export const useSEOOptimization = () => {
-  const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
-  const [isOptimizing, setIsOptimizing] = useState(false);
+    const [analy;s;i;s;
+    setAnalysis] = useState<SEOAnalysis | null>(null);
+  const [isOptimizing;
+    setIsOptimizing] = useState(false);
 
-  const optimizePage = useCallback(async () => {
+  const optimizePage  = useCallback(async () => {
     setIsOptimizing(true);
     // Implement actual optimization logic here
-    await new Promise(resolve => setTimeout(resolve, 3000)),
+    await new Promise(resolve => setTimeout(resolve;
+    3000))
+  };
     setIsOptimizing(false);
   }, []),
 
   return {
-    analysis,
+    analysi;s;
     isOptimizing;
     optimizePage
   };
