@@ -11,12 +11,8 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     price: 299,
     currency: "$",
     tags: ["Content Creation", "AI Writing", "SEO Optimization", "Multi-language", "Brand Voice"],
-    author: { 
-      name: "Zion Tech Group", 
-      id: "zion-tech-group", 
-      email: "kleber@ziontechgroup.com", 
-      avatarUrl: "https://ziontechgroup.com/logo.png" 
-    },
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-content-studio.jpg"],
     createdAt: "2024-01-01T10:00:00.000Z",
     rating: 4.9,
@@ -35,7 +31,8 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     competitors: ["Jasper", "Copy.ai", "Writesonic"],
     roi: "300% within 3 months",
     setupTime: "5 minutes",
-    integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social Media Platforms"]
+    integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social Media Platforms"],
+    integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social Media Platforms"],,
   },
 
   {
@@ -47,12 +44,8 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     price: 199,
     currency: "$",
     tags: ["Customer Support", "Chatbot", "24/7 Support", "Multilingual", "AI Automation"],
-    author: { 
-      name: "Zion Tech Group", 
-      id: "zion-tech-group", 
-      email: "kleber@ziontechgroup.com", 
-      avatarUrl: "https://ziontechgroup.com/logo.png" 
-    },
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-support-suite.jpg"],
     createdAt: "2024-01-02T10:00:00.000Z",
     rating: 4.8,
@@ -83,12 +76,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     price: 399,
     currency: "$",
     tags: ["Marketing Automation", "AI Segmentation", "Personalization", "Predictive Analytics", "Campaign Management"],
-    author: { 
-      name: "Zion Tech Group", 
-      id: "zion-tech-group", 
-      email: "kleber@ziontechgroup.com", 
-      avatarUrl: "https://ziontechgroup.com/logo.png" 
-    },
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-marketing-platform.jpg"],
     createdAt: "2024-01-03T10:00:00.000Z",
     rating: 4.9,
