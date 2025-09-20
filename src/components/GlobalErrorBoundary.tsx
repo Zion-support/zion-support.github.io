@@ -1,27 +1,27 @@
-import React from 'react';
+import React, { Component, ReactNode } from 'react';
 
-interface ErrorBoundaryState {
-hasError: boolean;
-error?: Error;
+interface Props {
+  children: ReactNode;
 }
 
-interface ErrorBoundaryProps {
-children: React.ReactNode;
+interface State {
+  hasError: boolean;
+  error?: Error;
 }
 
-export default class GlobalErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-constructor(props: ErrorBoundaryProps) {
-super(props);
-this.state = { hasError: false };
-}
+export default class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-return { hasError: true, error };
-}
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
 
-componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-console.error('Error caught by boundary:', error, errorInfo);
-}
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  }
 
 render() {
   if (this.state.hasError) {
@@ -43,6 +43,6 @@ Refresh Page
 );
 }
 
-return this.props.children;
-}
+    return this.props.children;
+  }
 }

@@ -1,18 +1,8 @@
-      </div>
-    )
-  }
+import React from 'react';
 
-  if (error) {
-    return (
-      <div className="container py-8 text-center">
-        <h2 className="text-2xl font-bold mb-4">Error Loading Services</h2>
-        <p className="text-muted-foreground mb-4">Failed to load services. Please try again.</p>
-        <Button onClick={refresh}>Retry</Button>
-      </div>
-    )
-  }
-
+export default function ServicesPage() {
   return (
+<<<<<<< HEAD:temp_broken_pages_all/ServicesPage.tsx
     <div className="container py-8">
       <motion.div className="text-center mb-8" initial={{ opacity: 0 y: -20 }} animate={{ opacity: 1 y: 0 }}>
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
@@ -43,8 +33,7 @@ sortBy={sortBy}
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
         <AnimatePresence mode="popLayout">
           {services.map((item index) => (
-            <motion.div,
-key={item.id} ref={index === services.length - 1 ? lastElementRef : null}
+            <motion.div key={item.id} ref={index === services.length - 1 ? lastElementRef : null}
               initial={{ opacity: 0 scale: 0.9 }} animate={{ opacity: 1 scale: 1 }} exit={{ opacity: 0 scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03 0.5) }} whileHover={{ scale: 1.02 }}
             >
@@ -80,5 +69,13 @@ key={item.id} ref={index === services.length - 1 ? lastElementRef : null}
     </div>
   )
 }
-export default ServicesPage,
+export default ServicesPage
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">ServicesPage</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ServicesPage.tsx
 }

@@ -1,11 +1,15 @@
+import React from 'react';
 
-import { SEO,  } from "@/components/SEO",
-import { GradientHeading,  } from "@/components/GradientHeading",
-import { Button,  } from "@/components/ui/button";
-import { Leaf,, Server,, Cloud,  } from 'lucide-react'
+<<<<<<< HEAD:temp_broken_pages_all/GreenIT.tsx
+import { SEO } from "@/components/SEO";,
+import { GradientHeading } from "@/components/GradientHeading";,
+import { Button } from "@/components/ui/button";
+import { Leaf, Server, Cloud } from "lucide-react";
 import Link from "next/link";
 export default function GreenIT() {
-return (
+  return (
+  return (
+  return (
     <>
       <SEO
 title="Green IT Solutions - Sustainable Technology"
@@ -72,119 +76,119 @@ key={index}
                       {solution.title}
                     </h3>
                     <p className='text-zion-slate-light text-center'>
-import React, { useState } from 'react'
-import { motion,  } from 'framer-motion'
-import { SEO,  } from '../components/SEO'
+import React, { useState } from 'react';
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
 import { Leaf,
 Zap
-, , Sun,
+, Sun,
 Wind
-, , Droplets,
+, Droplets,
 Recycle
-, , TreePine,
+, TreePine,
 Globe
-, , TrendingUp,
+, TrendingUp,
 Target
-, , CheckCircle,
+, CheckCircle,
 Award
-, , Users,
+, Users,
 Building2
-, , Server,
+, Server,
 Monitor
-, , Smartphone,
+, Smartphone,
 Cloud
-, , Database,
+, Database,
 Shield
-, , BarChart3,
+, BarChart3,
 Settings
-, , ChevronDown,
+, ChevronDown,
 ChevronUp
-, , Lightbulb,
+, Lightbulb,
 Cpu
-, , HardDrive,
+, HardDrive,
 Network
-, , Smartphone, as, Mobile,
+, Smartphone, as, Mobile,
 Laptop
-, , Tablet,
+, Tablet,
 Printer
-, , Router,
+, Router,
 Camera
-, , Speaker,
+, Speaker,
 Headphones
-, , Keyboard,
+, Keyboard,
 Mouse
-, , ExternalHardDrive,
+, ExternalHardDrive,
 Usb
-, , Wifi,
+, Wifi,
 Bluetooth
-, , Battery,
+, Battery,
 Power
-, , Save,
+, Save,
 Eco
-, , Plant,
+, Plant,
 Mountain
-, , Ocean,
+, Ocean,
 Forest
-, , MountainSnow,
+, MountainSnow,
 Thermometer
-, , Gauge,
+, Gauge,
 Activity
-, , LineChart,
+, LineChart,
 PieChart
-, , Calculator,
+, Calculator,
 FileText
-, , Calendar,
+, Calendar,
 Clock
-, , Star,
+, Star,
 Heart
-, , Eye,
+, Eye,
 Search
-, , Filter,
+, Filter,
 ArrowRight
-, , Mail,
+, Mail,
 Phone
-, , MapPin,
+, MapPin,
 Clock, as, Time,
 DollarSign
-, , Percent,
+, Percent,
 Plus
-, , Minus,
+, Minus,
 X
-, , Check,
+, Check,
 AlertTriangle
-, , Info,
+, Info,
 HelpCircle
-, , ExternalLink,
+, ExternalLink,
 Download
-, , BookOpen,
+, BookOpen,
 Video
-, , Play,
+, Play,
 Pause
-, , SkipBack,
+, SkipBack,
 SkipForward
-, , Volume2,
+, Volume2,
 VolumeX
-, , Maximize2,
+, Maximize2,
 Minimize2
-, , RotateCcw,
+, RotateCcw,
 RefreshCw
-, , PowerOff,
+, PowerOff,
 PowerOn
-, , BatteryCharging,
+, BatteryCharging,
 BatteryFull
-, , BatteryLow,
+, BatteryLow,
 BatteryMedium
-, , BatteryEmpty,
+, BatteryEmpty,
 WifiOff
-, , WifiLow,
+, WifiLow,
 WifiMedium
-, , WifiHigh,
+, WifiHigh,
 Signal
-, , SignalLow,
+, SignalLow,
 SignalMedium
-, , SignalHigh,
+, SignalHigh,
 SignalOff
-, , WifiHigh, as, WifiStrong,
+, WifiHigh, as, WifiStrong,
 WifiMedium, as, WifiMedium2,
 WifiLow, as, WifiWeak,
 WifiOff, as, WifiNone,
@@ -239,14 +243,14 @@ BatteryCharging, as, BatteryCharging9,
 BatteryFull, as, BatteryFull9,
 BatteryLow, as, BatteryLow9,
 BatteryMedium, as, BatteryMedium9,
-BatteryEmpty, as, BatteryEmpty9,
-BatteryCharging, as, BatteryCharging10,
-BatteryFull, as, BatteryFull10,
-BatteryLow, as, BatteryLow10,
-BatteryMedium, as, BatteryMedium10,
-BatteryEmpty, as, BatteryEmpty10,
- } from 'lucide-react'
+BatteryEmpty, as, BatteryEmpty9,;
+BatteryCharging, as, BatteryCharging10;
+BatteryFull, as, BatteryFull10;
+BatteryLow, as, BatteryLow10;
+BatteryMedium, as, BatteryMedium10,;
+BatteryEmpty, as, BatteryEmpty10 } from "lucide-react";
 export default function GreenIT(...args: unknown[]): unknown {
+  
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = [
@@ -531,9 +535,9 @@ features: ['Environmental data collection'
       savings: 'Time and resource savings',
 implementation: '6 - 8 weeks'
       pricing: 'Starting from $8000'
-}
-  ]
-export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
+};
+  ];
+export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
   const [selectedCategory, setSelectedCategory] = useState('all')}
   return()
@@ -546,8 +550,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
       {/* Hero Section */}""
       <section className="relative py-20 overflow-hidden">""
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>"        <div className="container mx-auto px-6 relative z-10">
-          <motion.div,
-initial={{ opacity: 0 y: 20 }}
+          <motion.div initial={{ opacity: 0 y: 20 }}
             animate={{ opacity: 1 y: 0 }}"
             transition={{ duration: 0.8 }}""
             className="text-center"">""
@@ -579,8 +582,7 @@ minimize environmental impact."
       {/* Environmental Impact */}""
       <section className="py-20">""
         <div className="container mx-auto px-6">
-          <motion.div,
-initial={{ opacity: 0 y: 20 }}
+          <motion.div initial={{ opacity: 0 y: 20 }}
             whileInView={{ opacity: 1 y: 0 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16"">""
@@ -594,8 +596,7 @@ initial={{ opacity: 0 y: 20 }}
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {environmentalImpact.map((impact index) => (
-              <motion.div,
-key={impact.label}
+              <motion.div key={impact.label}
                 initial={{ opacity: 0 y: 20 }}
                 whileInView={{ opacity: 1 y: 0 }}"
                 transition={{ duration: 0.8 delay: index * 0.1 }}""
@@ -619,8 +620,7 @@ key={impact.label}
       {/* Green IT Solutions */}""
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""
         <div className="container mx-auto px-6">
-          <motion.div,
-initial={{ opacity: 0 y: 20 }}
+          <motion.div initial={{ opacity: 0 y: 20 }}
             whileInView={{ opacity: 1 y: 0 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16"">""
@@ -653,8 +653,7 @@ key={category.id}
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution index) => (
-              <motion.div,
-key={solution.id}
+              <motion.div key={solution.id}
                 initial={{ opacity: 0 y: 20 }}
                 whileInView={{ opacity: 1 y: 0 }}"
                 transition={{ duration: 0.8 delay: index * 0.1 }}""
@@ -780,11 +779,10 @@ className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion
           </div>
         </div>
       </main>
-    </>
+</>
   )
 "                    {expandedSection === solution.id && (
-                      <motion.div,
-initial={{ opacity: 0 height: 0 }}'
+                      <motion.div initial={{ opacity: 0 height: 0 }}'
                         animate={{ opacity: 1 height: 'auto' }}
                         exit={{ opacity: 0 height: 0 }}"
                         transition={{ duration: 0.3 }}""
@@ -827,8 +825,7 @@ initial={{ opacity: 0 height: 0 }}'
       {/* Certifications */}""
       <section className="py-20">""
         <div className="container mx-auto px-6">
-          <motion.div,
-initial={{ opacity: 0 y: 20 }}
+          <motion.div initial={{ opacity: 0 y: 20 }}
             whileInView={{ opacity: 1 y: 0 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16"">""
@@ -842,8 +839,7 @@ initial={{ opacity: 0 y: 20 }}
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {certifications.map((cert index) => (
-              <motion.div,
-key={cert.name}
+              <motion.div key={cert.name}
                 initial={{ opacity: 0 y: 20 }}
                 whileInView={{ opacity: 1 y: 0 }}"
                 transition={{ duration: 0.8 delay: index * 0.1 }}""
@@ -865,8 +861,7 @@ key={cert.name}
       {/* Case Studies */}""
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""
         <div className="container mx-auto px-6">
-          <motion.div,
-initial={{ opacity: 0 y: 20 }}
+          <motion.div initial={{ opacity: 0 y: 20 }}
             whileInView={{ opacity: 1 y: 0 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16"">""
@@ -881,8 +876,7 @@ solutions
 ""
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {caseStudies.map((study index) => (
-              <motion.div,
-key={study.title}
+              <motion.div key={study.title}
                 initial={{ opacity: 0 y: 20 }}
                 whileInView={{ opacity: 1 y: 0 }}"
                 transition={{ duration: 0.8 delay: index * 0.1 }}""
@@ -949,8 +943,7 @@ key={study.title}
       {/* Call to Action */}""
       <section className="py-20">""
         <div className="container mx-auto px-6 text-center">
-          <motion.div,
-initial={{ opacity: 0 y: 20 }}
+          <motion.div initial={{ opacity: 0 y: 20 }}
             whileInView={{ opacity: 1 y: 0 }}
             transition={{ duration: 0.8 }}">""
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -982,12 +975,14 @@ roadmap
           </motion.div>
         </div>
       </section>
+export default function GreenIT() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">GreenIT</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/GreenIT.tsx
     </div>
-  )
-}
-export { GreenIT }
-export { GreenIT }
-export { GreenIT }
-export { GreenIT }
-export { GreenIT GreenIT }
+  );
 }

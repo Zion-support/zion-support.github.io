@@ -1,8 +1,10 @@
 import React from 'react';
+import { cn } from '@/lib/utils';
 
 interface BadgeProps {
-children: React.ReactNode;
-className?: string;
+  children: React.ReactNode;
+  className?: string;
+  variant?: 'default' | 'secondary' | 'destructive' | 'outline';
 }
 
 export function Badge({ children, className = '' }: BadgeProps) {

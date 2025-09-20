@@ -1,6 +1,8 @@
-import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import React from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Clock, MapPin, Building, CheckCircle, XCircle, AlertCircle } from "lucide-react";
 
 interface Application {
 id: string;
@@ -36,7 +38,6 @@ status: 'pending',
 appliedDate: '2025-01-14',
 lastUpdated: '2025-01-14'
 }
-];
 
 const statusColors = {
 pending: 'bg-yellow-100 text-yellow-800',

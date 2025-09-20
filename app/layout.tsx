@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import Script from 'next/script'
-// import './globals.css'
 
 function Header() {
   return (
@@ -211,25 +210,6 @@ export default function RootLayout({
         <main id="main-content" className="flex-1" role="main">{children}</main>
         <Footer />
         
-        {/* Advanced Improvements Script */}
-        <Script
-          src="/comprehensive-improvements-advanced.js"
-          strategy="afterInteractive"
-        />
-        
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'GA_MEASUREMENT_ID');
-          `}
-        </Script>
       </body>
     </html>
   )

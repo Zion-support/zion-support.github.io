@@ -1,22 +1,25 @@
+<<<<<<< HEAD:temp_broken_pages_all/Notifications.tsx
 import React { useState useEffect } from 'react';
-import { Bell,, Check,, X,, AlertCircle,, Info,, CheckCircle,  } from 'lucide-react';
-import { Badge,  } from '@/components/ui/badge';
-import { Button,  } from '@/components/ui/button';
-import { Card,, CardContent,, CardHeader,, CardTitle,  } from '@/components/ui/card';
-import { useAuth,  } from '@/hooks/useAuth';
-import { toast,  } from '@/hooks/use-toast';
+import { Bell, Check, X, AlertCircle, Info, CheckCircle } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useAuth } from "@/hooks/useAuth";
+import { toast } from "@/hooks/use-toast";
 interface Notification {
-  id: string;,
+  
+  id: string;
 type: 'message' | 'order' | 'system' | 'promotion';
-  title: string;,
+  title: string;
 message: string;
-  timestamp: Date;,
+  timestamp: Date;
 read: boolean;
-  actionUrl?: string;
 }
-const getNotificationIcon = (type: string) => {
-  switch (type) {
-    case 'message':
+  actionUrl?: string;}
+}
+const getNotificationIcon = (type: string) => {;
+  switch (type) {;
+    case 'message':;
       return <Bell className="h-4 w-4 text-blue-500" />;
     case 'order':
       return <CheckCircle className="h-4 w-4 text-green-500" />;
@@ -28,9 +31,9 @@ const getNotificationIcon = (type: string) => {
       return <Bell className="h-4 w-4 text-gray-500" />;
   }
 }
-const getNotificationBadge = (type: string) => {
-  switch (type) {
-    case 'message':
+const getNotificationBadge = (type: string) => {;
+  switch (type) {;
+    case 'message':;
       return <Badge className="bg-blue-500">Message</Badge>;
     case 'order':
       return <Badge className="bg-orange-500">Order</Badge>;
@@ -39,6 +42,9 @@ const getNotificationBadge = (type: string) => {
   }
 }
 export default function Notifications() {
+  return (
+  return (
+  return (
   const { user } = useAuth();
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [loading, setLoading] = useState(true);
@@ -79,21 +85,21 @@ read: false;
     setNotifications(prev =>
       prev.map(notification =>
         notification.id === id
-          ? { ...notification read: true }
-          : notification
-      )
+          ? { ...notification read: true };
+          : notification;
+      );
     );
   }
-  const markAllAsRead = () => {
-    setNotifications(prev =>
-      prev.map(notification => ({ ...notification read: true }))
+  const markAllAsRead = () => {;
+    setNotifications(prev =>;
+      prev.map(notification => ({ ...notification read: true }));
     );
     toast({
       title: "Success",
 description: "All notifications marked as read"
     });
   }
-  const deleteNotification = (id: string) => {
+  const deleteNotification = (id: string) => {;
     setNotifications(prev => prev.filter(notification => notification.id !== id));
   }
   const unreadCount = notifications.filter(n => !n.read).length;
@@ -185,6 +191,16 @@ size="sm"
           ))}
         </div>
       )}
+import React from 'react';
+
+export default function Notifications() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Notifications</h1>
+        <p className="text-lg text-gray-600">Your notifications...</p>
+      </div>
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Notifications.tsx
     </div>
   );
 }

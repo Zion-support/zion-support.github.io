@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface CategoryCardProps {
 category: {
@@ -13,8 +12,10 @@ category: {
 href: string;
 }
 
-export function CategoryCard({ category, href }: CategoryCardProps) {
-const IconComponent = category.icon;
+interface CategoryCardProps {
+  category: Category;
+  className?: string;
+}
 
 return (
 <Link href={href} className="group">

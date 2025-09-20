@@ -1,4 +1,5 @@
 export class LinkValidator {
+  
     static EXTERNAL_DOMAINS = [
         'linkedin.com',
         'twitter.com',
@@ -83,18 +84,18 @@ export class LinkValidator {
         '/accessibility-auditor/': '/services/accessibility',
         '/accessibility-scanner/': '/services/accessibility'
     };
-    static validateLink(url, parentPage) {
-        // Check for protocol links;
+    static validateLink(url, parentPage) {// Check for protocol links;
         if (this.PROTOCOL_LINKS.some(protocol => url.startsWith(protocol))) {
             return {
+  
                 url,
                 status: 'protocol';
                 parentPage,
                 suggestedFix: 'Keep as-is - these are valid protocol links'};
      }
         // Check for external links;
-        if (this.isExternalLink(url)) {
-            return {
+        if (this.isExternalLink(url)) {return {
+  
                 url,
                 status: 'external';
                 parentPage,
@@ -103,46 +104,10 @@ export class LinkValidator {
         // Check for broken internal links that have mappings;
         if (this.BROKEN_LINK_MAPPINGS[url]) {
             return {
+  
                 url,
                 status: 'broken';
                 parentPage,
                 suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`;
-                error: 'Broken internal link with available redirect'};
-     }
-        // For now, assume internal links are valid;
-        // In a real implementation, you'd check against actual routes;
-        return {
-            url,
-            status: 'valid';
-            parentPage;
-        };
-    }
-    static getSuggestedFixes() {
-        return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original, newUrl]) => ({
-            originalUrl: original;
-            newUrl: newUrl;
-            type: 'redirect';
-            reason: 'Broken internal link with available redirect mapping'}));
-     }
-    static isExternalLink(url) {
-        try {
-            const urlObj = new URL(url, 'https: //ziontechgroup.com');
-    return !urlObj.hostname.includes('ziontechgroup.com');
-        }
-        catch {
-            // If it's a relative URL, it's internal;
-            return false;
-        }
-    }
-    static generateRedirectRules() {
-        const redirects = Object.entries(this.BROKEN_LINK_MAPPINGS)
-            .map(([from, to]) => `${from} ${to} 301`)
-            .join('\n');
-        return `# Redirect rules for broken links;
-${redirects}`;
-    }
-    static generateSitemapExclusions() {
-        return Object.keys(this.BROKEN_LINK_MAPPINGS);
-    }
-}
-export const linkValidator = new LinkValidator();
+                error: 'Broken internal link with available redirect'
+            };

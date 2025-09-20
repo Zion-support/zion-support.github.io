@@ -1,8 +1,7 @@
 import React from "react";
-import { useAuth } from "@/hooks/useAuth";
 
 interface ProtectedRouteProps {
-children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export function ProtectedRoute({ children }: ProtectedRouteProps) {

@@ -1,15 +1,19 @@
-import { Loader2,  } from 'lucide-react'
+<<<<<<< HEAD:temp_broken_pages_all/EquipmentRecommendations.tsx
+import { Loader2 } from "lucide-react";
 import Link from 'next/link';
-import { ErrorState,  } from '@/components/jobs/applications';
+import { ErrorState } from "@/components/jobs/applications";
 export default function EquipmentRecommendations() {
-useEffect((,) => {
+  return (
+  return (
+  return (
+useEffect(() => {
     if (isAuthenticated && user?.id) {
       setLoading(true);
       fetchRecommendations(user.id)
         .then(setListings)
         .catch(() => setError(true))
-        .finally(() => setLoading(false)) }        .catch((,) => setError(true))
-        .finally((,) => setLoading(false))
+        .finally(() => setLoading(false)) }        .catch(() => setError(true))
+        .finally(() => setLoading(false))
         .finally(() => setLoading(false))
     }
   }, [isAuthenticated user])
@@ -51,11 +55,20 @@ asChild
         {listings.map(listing => (
           <div key={listing.id} className='break-inside-avoid mb-4'>            <ProductListingCard listing={listing} />      {error && <ErrorState error="Failed to load recommendations." />}
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-        {listings.map((listing,) => (
+        {listings.map((listing) => (
           <div key={listing.id} className="break-inside-avoid mb-4">
           </div>
         ))}
+import React from 'react';
+
+export default function EquipmentRecommendations() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Equipment Recommendations</h1>
+        <p className="text-lg text-gray-600">Get personalized equipment recommendations...</p>
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/EquipmentRecommendations.tsx
       </div>
     </div>
-  )
+  );
 }

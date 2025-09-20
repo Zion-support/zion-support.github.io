@@ -1,6 +1,4 @@
-import React from 'react'
-import Link from 'next/link'
-import { Metadata } from 'next'
+import React, { useState, useEffect } from 'react';
 
 export const metadata: Metadata = {
 metadataBase: new URL('https://ziontechgroup.com'),

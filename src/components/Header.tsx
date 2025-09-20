@@ -4,22 +4,18 @@ interface Service {
 }
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { Menu, X, Search, Brain, Users, BarChart3, Code, Palette, Target, Shield, Heart, Database, Building, Cpu, Network, Cloud, Clock, Rocket, Globe, Lock, ArrowRight, ChevronDown } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
 
-export function Header() {
-const [isMenuOpen, setIsMenuOpen] = useState(false);
-const [isScrolled, setIsScrolled] = useState(false);
+export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
 
 useEffect(() => {
 const handleScroll: any = () => {
 setIsScrolled(window.scrollY > 0);
 };
 
-window.addEventListener('scroll', handleScroll);
-return () => window.removeEventListener('scroll', handleScroll);
-}, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
 const navigation = [
   { name: 'Services', href: '/services' },

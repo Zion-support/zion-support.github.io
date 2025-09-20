@@ -1,21 +1,25 @@
-import { useEffect,, useState,  } from "react";
-import { useRouter,, ,  } from 'next/router';
-import { useRouterReady,, useRouteChange,, ,  } from '@/hooks/useRouterReady';
-import { EnhancedSearchInput,  } from "@/components/search/EnhancedSearchInput",
-import { generateSearchSuggestions,  } from "@/data/marketplaceData",
-import { SearchSuggestion,  } from "@/types/search";
+<<<<<<< HEAD:temp_broken_pages_all/SearchPage.tsx
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { useRouterReady, useRouteChange } from "@/hooks/useRouterReady";
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";,
+import { generateSearchSuggestions } from "@/data/marketplaceData";,
+import { SearchSuggestion } from "@/types/search";
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { Tabs;
 , , TabsContent;
 , , TabsList;
-, , TabsTrigger } from "@/components/ui/tabs",
-import { Loader2,  } from 'lucide-react'
+, , TabsTrigger } from "@/components/ui/tabs";
+import { Loader2 } from "lucide-react";
 interface SearchResult {
+  
 description: string;
+}
+}
 }
 function highlight(text: string term: string) {
             }}
-            searchSuggestions = {suggestions,}
+            searchSuggestions = {suggestions}
             placeholder="Search talent jobs and projects..."
           />
         </form>
@@ -58,8 +62,8 @@ function highlight(text: string term: string) {
             </TabsList>
             <TabsContent value="products" className="space-y-4">
               {results
-                .filter((r,) => r.type === "product" |r.type === "service")
-                .map((r,) => (
+                .filter((r) => r.type === "product" |r.type === "service")
+                .map((r) => (
                   <div
 key={`${r.type}-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -75,8 +79,8 @@ key={`${r.type}-${r.id}`}
             </TabsContent>
             <TabsContent value="talent" className="space-y-4">
               {results
-                .filter((r,) => r.type === "talent")
-                .map((r,) => (
+                .filter((r) => r.type === "talent")
+                .map((r) => (
                   <div
 key={`talent-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -92,8 +96,8 @@ key={`talent-${r.id}`}
             </TabsContent>
             <TabsContent value="docs" className="space-y-4">
               {results
-                .filter((r,) => r.type === "doc")
-                .map((r,) => (
+                .filter((r) => r.type === "doc")
+                .map((r) => (
                   <div
 key={`doc-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -109,8 +113,8 @@ key={`doc-${r.id}`}
             </TabsContent>
             <TabsContent value="blog" className="space-y-4">
               {results
-                .filter((r,) => r.type === "blog")
-                .map((r,) => (
+                .filter((r) => r.type === "blog")
+                .map((r) => (
                   <div
 key={`blog-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -135,13 +139,13 @@ key={`blog-${r.id}`}
 if (query.trim () ) {
   fetchResults (query.trim () )
 }else {
+  
   setResults ([])
-}, [router.isReady query]), //Fixed dependency array const fetchResults = async (term: string) => {
-  if (!term.trim () ) {
+}, [router.isReady query]), //Fixed dependency array const fetchResults = async (term: string) => {if (!term.trim () ) {
   setResults ([])
-return,
-}setLoading (true)
+return}setLoading (true)
 try {
+  
   const res = await fetch (`/api/search?query=$ {
   encodeURIComponent (term)
 }`)
@@ -149,6 +153,10 @@ const data = await res.json ()
 if (data && data.results && Array.isArray (data.results) ) {
   setResults (data.results)
 }else {
+  
+  ;
+  ;
+  ;
   setResults ([]);'
 logErrorToProduction ('Search API response structure is not as expected:', {
   data: data;
@@ -159,6 +167,7 @@ logErrorToProduction ('Search API response structure is not as expected:', {
 })
 setResults ([])
 }finally {
+  
   setLoading (false)
 }
 const handleSubmit = (e: React.FormEvent) => {
@@ -173,20 +182,14 @@ router.push (`/search?q=$ {
   blogResults.map (r => (</div>) )
 }</div> </div>)
 }</p> </div>) )
-}</TabsContent> <div key= {
-  `talent-$ {
-  r.id,
-}` "
+}</TabsContent> <div key= {`talent-$ {
+  r.id}` "
 }className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>) )
-}</TabsContent> <div key= {
-  `doc-$ {
-  r.id,
-}` "
+}</TabsContent> <div key= {`doc-$ {
+  r.id}` "
 }className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>) )
-}</TabsContent> <div key= {
-  `blog-$ {
-  r.id,
-}` "
+}</TabsContent> <div key= {`blog-$ {
+  r.id}` "
 }className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>) )
 }</TabsContent> </Tabs>)
 }</main> </div>)
@@ -222,8 +225,7 @@ value={sortBy}
           </div>
         </motion.div>
         {/* Search Results */}
-        <motion.div,
-initial={{ opacity: 0 y: 20 }}
+        <motion.div initial={{ opacity: 0 y: 20 }}
           animate={{ opacity: 1 y: 0 }}
           transition={{ duration: 0.6 delay: 0.4 }}
           className="max - w-6xl mx -auto">
@@ -259,6 +261,19 @@ initial={{ opacity: 0 y: 20 }}
                 Contact Us
               </Link>
             </div>
-    </>
-  )
+</>;
+  );
+};
+import React from 'react';
+
+export default function SearchPage() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">SearchPage</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
 }
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/SearchPage.tsx
