@@ -14,24 +14,24 @@ Welcome to Zion
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 The future of AI and technology is here. Discover innovative solutions and connect with the best talent.
 </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">;
-<Link;
-href="/services";
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
+<Link
+href="/services"
 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
->;
-Explore Services;
-</Link>;
-<Link;
-href="/about";
+>
+Explore Services
+</Link>
+<Link
+href="/about"
 className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors"
->;
-Learn More;
-</Link>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
+>
+Learn More
+</Link>
+</div>
+</div>
+</div>
+</div>
+</div>
 );
 };
 

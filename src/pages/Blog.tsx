@@ -51,7 +51,7 @@ date: '2025-01-08',
 readTime: '8 min read',
 category: 'Ethics',
 href: '/blog/ai-ethics',
-image: '⚖️';
+image: '⚖️'
 },
 {
 title: 'Digital Transformation: A Complete Guide',
@@ -60,7 +60,7 @@ date: '2025-01-05',
 readTime: '10 min read',
 category: 'Digital Transformation',
 href: '/blog/digital-transformation-guide',
-image: '🚀';
+image: '🚀'
 },
 {
 title: 'Machine Learning in Production: Best Practices',
@@ -69,31 +69,31 @@ date: '2025-01-03',
 readTime: '9 min read',
 category: 'Machine Learning',
 href: '/blog/ml-production-best-practices',
-image: '🧠';
+image: '🧠'
 }
 ];
 
-const categories = ['All', 'AI', 'Quantum Computing', 'Automation', 'Ethics', 'Digital Transformation', 'Machine Learning']
+const categories = ['All', 'AI', 'Quantum Computing', 'Automation', 'Ethics', 'Digital Transformation', 'Machine Learning'];
 
-return (;
-<div className="min-h-screen bg-gray-900 text-white">;
+return (
+<div className="min-h-screen bg-gray-900 text-white">
 {/* Hero Section */}
-<section className="bg-gradient-to-br from-blue-900 to-purple-900 py-20">;
-<div className="container mx-auto px-4">;
-<div className="max-w-4xl mx-auto text-center">;
-<h1 className="text-5xl lg:text-6xl font-bold mb-6">;
-Technology <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Insights</span>;
-</h1>;
-<p className="text-xl text-gray-300 mb-8">;
-Stay ahead of the curve with expert insights, trends, and innovations in AI, quantum computing, and technology.;
-</p>;
-</div>;
-</div>;
-</section>;
+<section className="bg-gradient-to-br from-blue-900 to-purple-900 py-20">
+<div className="container mx-auto px-4">
+<div className="max-w-4xl mx-auto text-center">
+<h1 className="text-5xl lg:text-6xl font-bold mb-6">
+Technology <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Insights</span>
+</h1>
+<p className="text-xl text-gray-300 mb-8">
+Stay ahead of the curve with expert insights, trends, and innovations in AI, quantum computing, and technology.
+</p>
+</div>
+</div>
+</section>
 
 {/* Categories */}
-<section className="py-8 bg-gray-800/30">;
-<div className="container mx-auto px-4">;
+<section className="py-8 bg-gray-800/30">
+<div className="container mx-auto px-4">
 <div className="flex flex-wrap justify-center gap-4">;
 {categories.map((category, index) => (
 <button;
