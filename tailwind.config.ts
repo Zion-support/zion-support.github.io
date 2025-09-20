@@ -1,5 +1,17 @@
 import type { Config } from 'tailwindcss'
+import { fontFamily } from 'tailwindcss/defaultTheme'
+import plugin from 'tailwindcss/plugin'
+import animatePlugin from 'tailwindcss-animate'
 
+const config: Config = {
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './public/**/*.html',
+  ],
+  theme: {
+    extend: {
+      colors: {
         "zion-neon": {
           DEFAULT: "#22ddd2",
           light: "#7aeae4",
@@ -122,25 +134,6 @@ import type { Config } from 'tailwindcss'
       addUtilities(newUtilities);
     }),
   ],
-};
+}
 
-export default config;
-=======
-export default {
-	content: [
-		'./index.html',
-		'./src/**/*.{js,ts,jsx,tsx}',
-	],
-	theme: {
-		extend: {
-			colors: {
-				'zion-blue': { DEFAULT: '#0ea5e9', dark: '#0b76a8', light: '#38bdf8' },
-				'zion-purple': { DEFAULT: '#7c3aed', dark: '#5b21b6', light: '#a78bfa' },
-				'zion-cyan': { DEFAULT: '#22d3ee', dark: '#0891b2', light: '#67e8f9' },
-				'zion-slate': { DEFAULT: '#64748b', dark: '#334155', light: '#94a3b8' },
-				'background': '#0b1220',
-			},
-		},
-	},
-	plugins: [],
-} satisfies Config
+export default config
