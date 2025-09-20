@@ -40,8 +40,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
       </section>
 
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-=======
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Autonomous AI Agents */}
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -163,9 +161,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
             </button>
             <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg hover:bg-pink-400 hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
               View Pricing
-=======
-            <button className="w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
-              See the World →
             </button>
           </div>
         </div>

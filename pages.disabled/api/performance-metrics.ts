@@ -1,60 +1,7 @@
-<<<<<<< HEAD
-  if (req['method'] !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
-  }
-
-  try {
-    const performanceReport = req['body'];
-    
-    // Validate the report structure
-    if (!performanceReport.metrics || !Array.isArray(performanceReport.metrics)) {
-      res.status(400).json({ error: 'Invalid performance report format' });
-      return;
-    }
-
-    // Log performance metrics (in production, you would store these in a database)
-    // Removed console.log('🔧 Performance Report:', { ... });
-
-    // Log critical performance issues
-    const poorMetrics = performanceReport.metrics.filter(m => m.rating === 'poor');
-    if (poorMetrics.length > 0) {
-      console.warn('⚠️ Poor Performance Metrics Detected:', poorMetrics.map(m => 
-        `${m.name}: ${m.value}ms`
-      ));
-    }
-
-    // In production, you would:
-    // 1. Store metrics in a database (e.g., MongoDB, PostgreSQL)
-    // 2. Send to analytics service (e.g., Google Analytics, DataDog)
-    // 3. Trigger alerts for critical performance issues
-    // 4. Aggregate metrics for performance dashboards
-
-    // Example: Send to external analytics service
-    if (process.env['NODE_ENV'] === 'production' && process.env['ANALYTICS_ENDPOINT']) {
-      try {
-        await fetch(process.env['ANALYTICS_ENDPOINT'], {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${process.env['ANALYTICS_API_KEY']}`
-          },
-          body: JSON.stringify({
-            type: 'performance',
-            data: performanceReport,
-            timestamp: Date.now()
-          })
-        });
-      } catch (error) {
-        console.error('Error sending to analytics:', error);
-      }
-=======
-// API endpoint for performance metrics collection;
+// API endpoint for performance metrics collection
 import type { NextApiRequest, NextApiResponse } from 'next';
-import type { PerformanceReport } from '@/utils/performance-monitor';
 
 interface PerformanceData {
-
   timestamp: string;
   url: string;
   userAgent: string;
@@ -64,22 +11,19 @@ interface PerformanceData {
   cls: number;
   ttfb: number;
   sessionId: string;
-
 }
 
 interface ErrorData {
-
   timestamp: string;
   url: string;
   userAgent: string;
   error: string;
   stack?: string;
   sessionId: string;
-
 }
 
 // In-memory storage for demo purposes
-// In production, use a proper database;
+// In production, use a proper database
 let performanceMetrics: PerformanceData[] = [];
 let errorLogs: ErrorData[] = [];
 
@@ -89,16 +33,13 @@ export default async function handler(
 ): Promise<void> {
   if (req.method === 'POST') {
     try {
-      const performanceReport = req['body'];
+      const performanceReport = req.body;
       
       // Validate the report structure
       if (!performanceReport.metrics || !Array.isArray(performanceReport.metrics)) {
         res.status(400).json({ error: 'Invalid performance report format' });
         return;
       }
-
-      // Log performance metrics (in production, you would store these in a database)
-      // Removed console.log('🔧 Performance Report:', { ... });
 
       // Log critical performance issues
       const poorMetrics = performanceReport.metrics.filter(m => m.rating === 'poor');
@@ -108,20 +49,14 @@ export default async function handler(
         ));
       }
 
-      // In production, you would:
-      // 1. Store metrics in a database (e.g., MongoDB, PostgreSQL)
-      // 2. Send to analytics service (e.g., Google Analytics, DataDog)
-      // 3. Trigger alerts for critical performance issues
-      // 4. Aggregate metrics for performance dashboards
-
       // Example: Send to external analytics service
-      if (process.env['NODE_ENV'] === 'production' && process.env['ANALYTICS_ENDPOINT']) {
+      if (process.env.NODE_ENV === 'production' && process.env.ANALYTICS_ENDPOINT) {
         try {
-          await fetch(process.env['ANALYTICS_ENDPOINT'], {
+          await fetch(process.env.ANALYTICS_ENDPOINT, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': `Bearer ${process.env['ANALYTICS_API_KEY']}`
+              'Authorization': `Bearer ${process.env.ANALYTICS_API_KEY}`
             },
             body: JSON.stringify({
               type: 'performance',
@@ -142,16 +77,7 @@ export default async function handler(
         message: 'Internal server error' 
       });
     }
-  } catch (error) {
-    console.error('Error processing request:', error);
-    res.status(500).json({ 
-      success: false, 
-      message: 'Internal server error' 
-    });
-    return;
-  }
-  
-  if (req.method === 'GET') {
+  } else if (req.method === 'GET') {
     try {
       const { type, limit = 100 } = req.query;
       
@@ -211,18 +137,18 @@ export default async function handler(
       });
     }
   } else {
-    res.setHeader('Allow', ['POST',GET']);
+    res.setHeader('Allow', ['POST', 'GET']);
     res.status(405).json({ 
       success: false, 
       message: `Method ${req.method} Not Allowed` 
     });
   }
 }
-;
-function calculateAverages(...args: unknown[]): unknown {
+
+function calculateAverages(metrics: PerformanceData[]): any {
   if (metrics.length === 0) return null;
 
-  const sums = metrics.reduce(acc: unknown, metric: unknown ({
+  const sums = metrics.reduce((acc, metric) => ({
     fcp: acc.fcp + metric.fcp,
     lcp: acc.lcp + metric.lcp,
     fid: acc.fid + metric.fid,
@@ -238,7 +164,3 @@ function calculateAverages(...args: unknown[]): unknown {
     ttfb: Math.round(sums.ttfb / metrics.length)
   };
 }
-
-  );
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
