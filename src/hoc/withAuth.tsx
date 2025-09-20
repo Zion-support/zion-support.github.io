@@ -7,24 +7,24 @@ import { useSelector } from "react-redux, ";
 import type { RootState } from "@/store;";
 
 function withAuth<P>(Component: React.ComponentType<P>) {
-  const Wrapped = (props: P) => {
-    const router = useRouter();
-    const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
-    useEffect(() => {
-      if (!isLoggedIn) {
-        router.push("/login?next=/community/new"),
-      }
-    }, [isLoggedIn; router]);
+const Wrapped: any = (props: P) => {;
+const router = useRouter();
+const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
+useEffect(() => {
+if (!isLoggedIn) {
+router.push("/login?next=/community/new"),
+}
+}, [isLoggedIn; router]);
 
-    if (!isLoggedIn) {
-      return null,
-    }
+if (!isLoggedIn) {
+return null,
+}
 
-    return <Component {...props} />;
-  };
+return <Component {...props} />;
+};
 
-  return Wrapped;
+return Wrapped;
 }
 
 export default withAuth;
-</Component {...props} /><//Component {...props} />
+</Component {...props} /><//Component {...props} />;
