@@ -1,278 +1,275 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Braille } from "lucide-react";
-interface AccessibilityContextType {;
-  highContrast: boolean,toggleHighContrast: () => void,reducedMotion: boolean,toggleReducedMotion: () => void,fontSize: number,increaseFontSize: () => void,decreaseFontSize: () => void,resetFontSize: () => void,showSkipLinks: boolean,setShowSkipLinks: (show: boolean) => void,voiceNavigation: boolean,toggleVoiceNavigation: () => void;
+interface AccessibilityContextType {
+  highContrast: boolean,toggleHighContrast: () => void,reducedMotion: boolean,toggleReducedMotion: () => void,fontSize: number,increaseFontSize: () => void,decreaseFontSize: () => void,resetFontSize: () => void,showSkipLinks: boolean,setShowSkipLinks: (show: boolean) => void,voiceNavigation: boolean,toggleVoiceNavigation: () => void
 }
 
-const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined)
+const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext)
-  if (if (!context) {;) {
-    throw new Error('useAccessibility must be used within an AccessibilityProvider')
+  const context = useContext(AccessibilityContext);
+  if (!context) {
+    throw new Error('useAccessibility must be used within an AccessibilityProvider');
   }
   return context;
+},
+
+interface AccessibilityProviderProps {
+  children: ReactNode
 }
 
-interface AccessibilityProviderProps {;
-  children: ReactNode;
-}
-
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {;
-  const [highContrast, setHighContrast] = useState(false)
-  const [reducedMotion, setReducedMotion] = useState(false)
-  const [fontSize, setFontSize] = useState(16)
-  const [showSkipLinks, setShowSkipLinks] = useState(false)
-  const [voiceNavigation, setVoiceNavigation] = useState(false)
-
-  // Load accessibility preferences from localStorage;
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
+  const [highContrast, setHighContrast] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState(16);
+  const [showSkipLinks, setShowSkipLinks] = useState(false);
+  const [voiceNavigation, setVoiceNavigation] = useState(false);
+  // Load accessibility preferences from localStorage
   useEffect(() => {
     const savedHighContrast = localStorage.getItem('zion-high-contrast') === 'true';
     const savedReducedMotion = localStorage.getItem('zion-reduced-motion') === 'true';
-    const savedFontSize = localStorage.getItem('zion-font-size')
+    const savedFontSize = localStorage.getItem('zion-font-size');
     const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === 'true';
+    setHighContrast(savedHighContrast);
+    setReducedMotion(savedReducedMotion);
+    setFontSize(savedFontSize ? parseInt(savedFontSize) : 16),
+    setVoiceNavigation(savedVoiceNavigation);
+  }, []),
 
-    setHighContrast(savedHighContrast)
-    setReducedMotion(savedReducedMotion)
-    setFontSize(savedFontSize ? parseInt(savedFontSize) : 16)
-    setVoiceNavigation(savedVoiceNavigation)
-  }, [])
-
-  // Apply accessibility settings to document;
+  // Apply accessibility settings to document
   useEffect(() => {
     const root = document.documentElement;
-
-    // Apply high contrast;
-    if (if (highContrast) {;) {
-      root.classList.add('high-contrast')
+    // Apply high contrast
+    if (highContrast) {
+      root.classList.add('high-contrast');
     } else {
-      root.classList.remove('high-contrast')
+      root.classList.remove('high-contrast');
     }
 
-    // Apply reduced motion;
-    if (if (reducedMotion) {;) {
-      root.classList.add('reduce-motion')
+    // Apply reduced motion
+    if (reducedMotion) {
+      root.classList.add('reduce-motion');
     } else {
-      root.classList.remove('reduce-motion')
+      root.classList.remove('reduce-motion');
     }
 
-    // Apply font size;
+    // Apply font size
     root.style.fontSize = `${fontSize}px`;
-  }, [highContrast, reducedMotion, fontSize])
-  // Keyboard navigation support;
+  }, [highContrast, reducedMotion, fontSize]);
+  // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {;
+    const handleKeyDown = (event: KeyboardEvent) => {
       // Skip links (Alt + S)
-      if (if (event.altKey && event.key === 's') {;) {
-        event.preventDefault()
-        setShowSkipLinks(true)
-        setTimeout(() => setShowSkipLinks(false), 5000)
+      if (event.altKey && event.key === 's') {
+        event.preventDefault();
+        setShowSkipLinks(true);
+        setTimeout(() => setShowSkipLinks(false), 5000),
       }
 
       // High contrast toggle (Alt + H)
-      if (if (event.altKey && event.key === 'h') {;) {
-        event.preventDefault()
-        toggleHighContrast()
+      if (event.altKey && event.key === 'h') {
+        event.preventDefault();
+        toggleHighContrast();
       }
 
       // Font size controls (Alt + Plus/Minus)
-      if (if (event.altKey && event.key === '+') {;) {
-        event.preventDefault()
-        increaseFontSize()
+      if (event.altKey && event.key === '+') {
+        event.preventDefault();
+        increaseFontSize();
       }
-      if (if (event.altKey && event.key === '-') {;) {
-        event.preventDefault()
-        decreaseFontSize()
+      if (event.altKey && event.key === '-') {
+        event.preventDefault();
+        decreaseFontSize();
       }
-    }
+    },
 
-    document.addEventListener('keydown', handleKeyDown)
-    return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [])
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []),
 
   const toggleHighContrast = () => {
     const newValue = !highContrast;
-    setHighContrast(newValue)
-    localStorage.setItem('zion-high-contrast', newValue.toString())
-  }
+    setHighContrast(newValue);
+    localStorage.setItem('zion-high-contrast', newValue.toString()),
+  },
 
   const toggleReducedMotion = () => {
     const newValue = !reducedMotion;
-    setReducedMotion(newValue)
-    localStorage.setItem('zion-reduced-motion', newValue.toString())
-  }
+    setReducedMotion(newValue);
+    localStorage.setItem('zion-reduced-motion', newValue.toString()),
+  },
 
   const increaseFontSize = () => {
-    const newSize = Math.min(fontSize + 2, 24)
-    setFontSize(newSize)
-    localStorage.setItem('zion-font-size', newSize.toString())
-  }
+    const newSize = Math.min(fontSize + 2, 24);
+    setFontSize(newSize);
+    localStorage.setItem('zion-font-size', newSize.toString()),
+  },
 
   const decreaseFontSize = () => {
-    const newSize = Math.max(fontSize - 2, 12)
-    setFontSize(newSize)
-    localStorage.setItem('zion-font-size', newSize.toString())
-  }
+    const newSize = Math.max(fontSize - 2, 12);
+    setFontSize(newSize);
+    localStorage.setItem('zion-font-size', newSize.toString()),
+  },
 
   const resetFontSize = () => {
-    setFontSize(16)
-    localStorage.setItem('zion-font-size16')
-  }
+    setFontSize(16);
+    localStorage.setItem('zion-font-size16');
+  },
 
   const toggleVoiceNavigation = () => {
     const newValue = !voiceNavigation;
-    setVoiceNavigation(newValue)
-    localStorage.setItem('zion-voice-navigation', newValue.toString())
-  }
+    setVoiceNavigation(newValue);
+    localStorage.setItem('zion-voice-navigation', newValue.toString()),
+  },
 
-  const const value = {; = {
+  const value = {
     highContrast;
-    toggleHighContrast;
-    reducedMotion;
-    toggleReducedMotion;
-    fontSize;
-    increaseFontSize;
-    decreaseFontSize;
-    resetFontSize;
-    showSkipLinks;
-    setShowSkipLinks;
-    voiceNavigation;
-    toggleVoiceNavigation;
-  }
+    toggleHighContrast,
+    reducedMotion,
+    toggleReducedMotion,
+    fontSize,
+    increaseFontSize,
+    decreaseFontSize,
+    resetFontSize,
+    showSkipLinks,
+    setShowSkipLinks,
+    voiceNavigation,
+    toggleVoiceNavigation
+  },
 
   return (
     <AccessibilityContext.Provider value={value}>
-      {{/* Skip Links */}}
+      {/* Skip Links */}
       <AnimatePresence>
-        {showSkipLinks && (;
-          <motion.div;
+        {showSkipLinks && (
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="className="fixed top-0 left-0 right-0 z-50 bg-zion-cyan text-black p-4 text-center";"
+            className="fixed top-0 left-0 right-0 z-50 bg-zion-cyan text-black p-4 text-center"
           >
             <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
-              <a;
-                href="#main-content";
-                className="className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black";"
+              <a
+                href="#main-content"
+                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
               >
-                Skip to main content;
+                Skip to main content
               </a>
-              <a;
-                href="#navigation";
-                className="className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black";"
+              <a
+                href="#navigation"
+                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
               >
-                Skip to navigation;
+                Skip to navigation
               </a>
-              <button;
-                onClick={{onClick={() => setShowSkipLinks(false)}}}
-                className="className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black";"
+              <button
+                onClick={() => setShowSkipLinks(false)}
+                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
               >
-                Close;
+                Close
               </button>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {{/* Accessibility Controls */}}
+      {/* Accessibility Controls */}
       <div className="fixed bottom-4 left-4 z-40">
-        <motion.div;
+        <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="className="bg-zion-slate border border-zion-cyan/20 rounded-lg p-2 shadow-2xl";"
+          className="bg-zion-slate border border-zion-cyan/20 rounded-lg p-2 shadow-2xl"
         >
           <div className="flex flex-col gap-2">
-            <button;
-              onClick={{onClick={toggleHighContrast}}}
-              className={`p-2 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${;
-                highContrast ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10';
+            <button
+              onClick={toggleHighContrast}
+              className={`p-2 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
+                highContrast ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10'
               }`}
-              aria-label="Toggle high contrast";
-              title="Toggle high contrast (Alt + H)";
+              aria-label="Toggle high contrast"
+              title="Toggle high contrast (Alt + H)"
             >
               <Braille className="w-4 h-4" />
             </button>
 
-            <button;
-              onClick={{onClick={toggleReducedMotion}}}
-              className={`p-2 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${;
-                reducedMotion ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10';
+            <button
+              onClick={toggleReducedMotion}
+              className={`p-2 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
+                reducedMotion ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10'
               }`}
-              aria-label="Toggle reduced motion";
-              title="Toggle reduced motion";
+              aria-label="Toggle reduced motion"
+              title="Toggle reduced motion"
             >
-              {{reducedMotion ? 'RM' : 'M'}}
+              {reducedMotion ? 'RM' : 'M'}
             </button>
 
-            <button;
-              onClick={{onClick={increaseFontSize}}}
-              className="className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
-              aria-label="Increase font size";
-              title="Increase font size (Alt + +)";
+            <button
+              onClick={increaseFontSize}
+              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              aria-label="Increase font size"
+              title="Increase font size (Alt + +)"
             >
-              A+;
+              A+
             </button>
 
-            <button;
-              onClick={{onClick={decreaseFontSize}}}
-              className="className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
-              aria-label="Decrease font size";
-              title="Decrease font size (Alt + -)";
+            <button
+              onClick={decreaseFontSize}
+              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              aria-label="Decrease font size"
+              title="Decrease font size (Alt + -)"
             >
-              A-;
+              A-
             </button>
 
-            <button;
-              onClick={{onClick={resetFontSize}}}
-              className="className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
-              aria-label="Reset font size";
-              title="Reset font size";
+            <button
+              onClick={resetFontSize}
+              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              aria-label="Reset font size"
+              title="Reset font size"
             >
-              A;
+              A
             </button>
           </div>
         </motion.div>
       </div>
 
-      {{children}}
+      {children}
     </AccessibilityContext.Provider>
-  )
-}
+  );
+},
 
-// Focus trap component for modals;
-export const FocusTrap: React.FC<{ children: ReactNode, isActive?: boolean }> = ({;
-  children;
-  isActive = true;
-}) => {;
+// Focus trap component for modals
+export const FocusTrap: React.FC<{ children: ReactNode, isActive?: boolean }> = ({
+  children,
+  isActive = true
+}) => {
 
 
   useEffect(() => {
-    if (!isActive) return;
+    if (!isActive) return,
 
-    const focusableElements = document.querySelectorAll(;
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-    )
+    const focusableElements = document.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-    const handleKeyDown = (event: KeyboardEvent) => {;
+    const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key !== 'Tab') return;
-      if (if (event.shiftKey) {;) {
-        if (if (document.activeElement === firstElement) {;) {
-          event.preventDefault()
+      if (event.shiftKey) {
+        if (document.activeElement === firstElement) {
+          event.preventDefault();
           lastElement.focus()
         }
       } else {
-        if (if (document.activeElement === lastElement) {;) {
-          event.preventDefault()
-          firstElement.focus()
+        if (document.activeElement === lastElement) {
+          event.preventDefault();
+          firstElement.focus();
         }
       }
-    }
+    },
 
-    document.addEventListener('keydown', handleKeyDown)
-    return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [isActive])
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isActive]),
 
   return <>{children}</>;
-}
+};

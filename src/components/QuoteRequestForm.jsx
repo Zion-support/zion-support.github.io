@@ -5,50 +5,48 @@ import { Input } from "@/components/ui/Input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CheckCircle, Send } from "lucide-react";
 export const QuoteRequestForm = () => {
-  const [formData, setFormData] = useState({;
-    name: '',email: '',company: '',phone: '',service: '',budget: '',timeline: '',description: '';
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [formData, setFormData] = useState({
+    name: '',email: '',company: '',phone: '',service: '',budget: '',timeline: '',description: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const handleChange = (e) => {
+    const { name, value } = e.target,
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    })),
+  },
 
-  const handleChange = (e) => {;
-    const { name, value } = e.target;
-    setFormData(prev => ({;
-      ...prev;
-      [name]: value;
-    }))
-  }
+  const handleSelectChange = (name, value) => {
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    })),
+  },
 
-  const handleSelectChange = (name, value) => {;
-    setFormData(prev => ({;
-      ...prev;
-      [name]: value;
-    }))
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1000)),
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+  },
 
-  const handleSubmit = async (e) => {;
-    e.preventDefault()
-    setIsSubmitting(true)
-    ;
-    // Simulate form submission;
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    ;
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-  }
-
-  if (if (isSubmitted) {;) {
+  if (isSubmitted) {
     return (
       <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
         <CardContent className="text-center py-12">
           <CheckCircle className="h-16 w-16 text-zion-cyan mx-auto mb-6" />
           <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>
           <p className="text-zion-slate-light text-lg">
-            Your quote request has been submitted successfully. We'll get back to you within 24 hours with a detailed quote.;
+            Your quote request has been submitted successfully. We'll get back to you within 24 hours with a detailed quote.
           </p>
         </CardContent>
       </Card>
-    )
+    );
   }
 
   return (
@@ -56,7 +54,7 @@ export const QuoteRequestForm = () => {
       <CardHeader>
         <CardTitle className="text-2xl text-zion-cyan">Quote Request Form</CardTitle>
         <CardDescription className="text-zion-slate-light">
-          Please provide your details and requirements for a customized quote;
+          Please provide your details and requirements for a customized quote
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -64,58 +62,30 @@ export const QuoteRequestForm = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
-                Full Name *;
+                Full Name *
               </label>
-              <Input;
-                name="name";
-                value={{formData.name}}
-                onChange={{handleChange}}
-                required;
-                className="className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan";"
-                placeholder="Enter your full name";
+              <Input
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
+                placeholder="Enter your full name"
               />
             </div>
-            ;
+            
             <div>
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
-                Email Address *;
+                Email Address *
               </label>
-              <Input;
-                name="email";
-                type="email";
-                value={{formData.email}}
-                onChange={{handleChange}}
-                required;
-                className="className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan";"
-                placeholder="Enter your email";
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm font-medium text-zion-slate-light mb-2">
-                Company Name;
-              </label>
-              <Input;
-                name="company";
-                value={{formData.company}}
-                onChange={{handleChange}}
-                className="className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan";"
-                placeholder="Enter company name";
-              />
-            </div>
-            ;
-            <div>
-              <label className="block text-sm font-medium text-zion-slate-light mb-2">
-                Phone Number;
-              </label>
-              <Input;
-                name="phone";
-                value={{formData.phone}}
-                onChange={{handleChange}}
-                className="className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan";"
-                placeholder="Enter phone number";
+              <Input
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
+                placeholder="Enter your email"
               />
             </div>
           </div>
@@ -123,7 +93,35 @@ export const QuoteRequestForm = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
-                Service Type *;
+                Company Name
+              </label>
+              <Input
+                name="company"
+                value={formData.company}
+                onChange={handleChange}
+                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
+                placeholder="Enter company name"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-zion-slate-light mb-2">
+                Phone Number
+              </label>
+              <Input
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
+                placeholder="Enter phone number"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label className="block text-sm font-medium text-zion-slate-light mb-2">
+                Service Type *
               </label>
               <Select value={formData.service} onValueChange={(value) => handleSelectChange('service', value)}>
                 <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus:border-zion-cyan">
@@ -140,10 +138,10 @@ export const QuoteRequestForm = () => {
                 </SelectContent>
               </Select>
             </div>
-            ;
+            
             <div>
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
-                Budget Range;
+                Budget Range
               </label>
               <Select value={formData.budget} onValueChange={(value) => handleSelectChange('budget', value)}>
                 <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus:border-zion-cyan">
@@ -163,7 +161,7 @@ export const QuoteRequestForm = () => {
 
           <div>
             <label className="block text-sm font-medium text-zion-slate-light mb-2">
-              Timeline;
+              Timeline
             </label>
             <Select value={formData.timeline} onValueChange={(value) => handleSelectChange('timeline', value)}>
               <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus:border-zion-cyan">
@@ -182,34 +180,34 @@ export const QuoteRequestForm = () => {
 
           <div>
             <label className="block text-sm font-medium text-zion-slate-light mb-2">
-              Project Description *;
+              Project Description *
             </label>
-            <textarea;
-              name="description";
-              value={{formData.description}}
-              onChange={{handleChange}}
-              required;
-              rows={{6}}
-              className="className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan w-full p-3 rounded-md resize-none";"
-              placeholder="Please describe your project requirements, goals, and any specific details that would help us provide an accurate quote...";
+            <textarea
+              name="description"
+              value={formData.description}
+              onChange={handleChange}
+              required
+              rows={6}
+              className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan w-full p-3 rounded-md resize-none"
+              placeholder="Please describe your project requirements, goals, and any specific details that would help us provide an accurate quote..."
             />
           </div>
 
           <div className="text-center">
-            <Button;
-              type="submit";
-              disabled={{isSubmitting}}
-              className="className="bg-zion-cyan text-zion-blue-dark hover: bg-zion-cyan/90 px-8 py-3 text-lg font-semibold";"
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className="bg-zion-cyan text-zion-blue-dark hover: bg-zion-cyan/90 px-8 py-3 text-lg font-semibold"
             >
-              {isSubmitting ? (;
+              {isSubmitting ? (
                 <>
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-zion-blue-dark mr-2"></div>
-                  Submitting...;
+                  Submitting...
                 </>
-              ) : (;
+              ) : (
                 <>
                   <Send className="h-5 w-5 mr-2" />
-                  Submit Quote Request;
+                  Submit Quote Request
                 </>
               )}
             </Button>
@@ -217,5 +215,5 @@ export const QuoteRequestForm = () => {
         </form>
       </CardContent>
     </Card>
-  )
-}
+  );
+};
