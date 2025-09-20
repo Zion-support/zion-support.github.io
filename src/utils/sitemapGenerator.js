@@ -2,7 +2,7 @@ export class SitemapGenerator {
     config;
     constructor(config) {
         this.config = {
-            outputPath: './public/sitemap.xml',
+            outputPath: './public/sitemap.xml';
             ...config
         };
     }
@@ -12,8 +12,8 @@ export class SitemapGenerator {
     generateXML() {
         const { baseUrl, urls } = this.config;
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
-        const urlsetOpen = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-        const urlsetClose = '</urlset>';
+        const urlsetOpen = '<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">';
+    const urlsetClose = '</urlset>';
         const urlElements = urls.map(url => {
             const urlElement = `<url>
         <loc>${baseUrl}${url.url}</loc>
@@ -30,8 +30,8 @@ export class SitemapGenerator {
      */
     generateIndex(sitemaps) {
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
-        const sitemapindexOpen = '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-        const sitemapindexClose = '</sitemapindex>';
+        const sitemapindexOpen = '<sitemapindex xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">';
+    const sitemapindexClose = '</sitemapindex>';
         const sitemapElements = sitemaps.map(sitemap => {
             return `<sitemap>
         <loc>${sitemap}</loc>
@@ -68,7 +68,7 @@ Allow: /careers/
 
 # Crawl delay (optional)
 Crawl-delay: 1`;
-    }
+     }
     /**
      * Generate JSON sitemap for JavaScript applications
      */
@@ -77,12 +77,12 @@ Crawl-delay: 1`;
         const jsonSitemap = {
             baseUrl,
             urls: urls.map(url => ({
-                ...url,
-                fullUrl: `${baseUrl}${url.url}`,
+                ...url;
+                fullUrl: `${baseUrl}${url.url}`;
                 lastmod: url.lastmod || new Date().toISOString()
             }))
         };
-        return JSON.stringify(jsonSitemap, null, 2);
+    return JSON.stringify(jsonSitemap, null, 2);
     }
     /**
      * Generate HTML sitemap for users
@@ -97,17 +97,39 @@ Crawl-delay: 1`;
     <title>Sitemap - Zion Tech Group</title>
     <meta name="description" content="Complete sitemap of Zion Tech Group website">
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        h1 { color: #00e5ff; border-bottom: 2px solid #00e5ff; padding-bottom: 10px; }
-        .sitemap-section { margin: 30px 0; }
-        .sitemap-section h2 { color: #333; margin-bottom: 15px; }
-        .sitemap-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .sitemap-link { padding: 10px; border: 1px solid #ddd; border-radius: 5px; text-decoration: none; color: #333; }
-        .sitemap-link:hover { background-color: #f5f5f5; border-color: #00e5ff; }
-        .priority-high { border-left: 4px solid #00e5ff; }
-        .priority-medium { border-left: 4px solid #ff9800; }
-        .priority-low { border-left: 4px solid #4caf50; }
+        body { font-family: Arial, sans-serif; margin: 40px;
+    line-height: 1.6;
+     }
+        .container { max-width: 1200px;
+    margin: 0 auto;
+     }
+        h1 { color: #00e5ff;
+    border-bottom: 2px solid #00e5ff;
+    padding-bottom: 10px;
+     }
+        .sitemap-section { margin: 30px 0;
+     }
+        .sitemap-section h2 { color: #333;
+    margin-bottom: 15px;
+     }
+        .sitemap-links { display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
+     }
+        .sitemap-link { padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+     }
+        .sitemap-link: hover { background-color: #f5f5f5;
+    border-color: #00e5ff;
+     }
+        .priority-high { border-left: 4px solid #00e5ff;
+     }
+        .priority-medium { border-left: 4px solid #ff9800;
+     }
+        .priority-low { border-left: 4px solid #4caf50;
+     }
     </style>
 </head>
 <body>
@@ -168,59 +190,59 @@ Crawl-delay: 1`;
         </div>
         
         <div class="sitemap-section">
-            <p><strong>Total Pages:</strong> ${urls.length}</p>
+            <p><strong>Total Pages: </strong> ${urls.length}</p>
             <p><strong>Last Updated:</strong> ${new Date().toLocaleDateString()}</p>
         </div>
     </div>
 </body>
 </html>`;
-        return html;
+    return html;
     }
 }
 // Default sitemap configuration for Zion Tech Group
 export const defaultSitemapConfig = {
-    baseUrl: 'https://ziontechgroup.com',
+    baseUrl: 'https://ziontechgroup.com';
     urls: [
         // Main pages
-        { url: '/', changefreq: 'daily', priority: 1.0 },
-        { url: '/about', changefreq: 'monthly', priority: 0.8 },
-        { url: '/contact', changefreq: 'monthly', priority: 0.8 },
-        { url: '/team', changefreq: 'monthly', priority: 0.7 },
-        { url: '/mission', changefreq: 'monthly', priority: 0.7 },
+        { url: '/', changefreq: 'daily', priority: 1.0 };
+        { url: '/about', changefreq: 'monthly', priority: 0.8 };
+        { url: '/contact', changefreq: 'monthly', priority: 0.8 };
+        { url: '/team', changefreq: 'monthly', priority: 0.7 };
+        { url: '/mission', changefreq: 'monthly', priority: 0.7 };
         // Services
-        { url: '/services', changefreq: 'weekly', priority: 0.9 },
-        { url: '/services/ai-autonomous-systems', changefreq: 'weekly', priority: 0.8 },
-        { url: '/services/quantum-technology', changefreq: 'weekly', priority: 0.8 },
-        { url: '/services/cybersecurity', changefreq: 'weekly', priority: 0.8 },
-        { url: '/services/it-infrastructure', changefreq: 'weekly', priority: 0.8 },
-        { url: '/services/micro-saas-solutions', changefreq: 'weekly', priority: 0.8 },
-        { url: '/services/industry-solutions', changefreq: 'weekly', priority: 0.8 },
-        { url: '/services/innovative-new-services', changefreq: 'weekly', priority: 0.8 },
-        { url: '/services/specialized-it-infrastructure', changefreq: 'weekly', priority: 0.8 },
+        { url: '/services', changefreq: 'weekly', priority: 0.9 };
+        { url: '/services/ai-autonomous-systems', changefreq: 'weekly', priority: 0.8 };
+        { url: '/services/quantum-technology', changefreq: 'weekly', priority: 0.8 };
+        { url: '/services/cybersecurity', changefreq: 'weekly', priority: 0.8 };
+        { url: '/services/it-infrastructure', changefreq: 'weekly', priority: 0.8 };
+        { url: '/services/micro-saas-solutions', changefreq: 'weekly', priority: 0.8 };
+        { url: '/services/industry-solutions', changefreq: 'weekly', priority: 0.8 };
+        { url: '/services/innovative-new-services', changefreq: 'weekly', priority: 0.8 };
+        { url: '/services/specialized-it-infrastructure', changefreq: 'weekly', priority: 0.8 };
         // Solutions
-        { url: '/solutions/enterprise', changefreq: 'weekly', priority: 0.8 },
-        { url: '/solutions/healthcare', changefreq: 'weekly', priority: 0.8 },
+        { url: '/solutions/enterprise', changefreq: 'weekly', priority: 0.8 };
+        { url: '/solutions/healthcare', changefreq: 'weekly', priority: 0.8 };
         // AI Solutions
-        { url: '/ai-solutions', changefreq: 'weekly', priority: 0.9 },
-        { url: '/services-showcase', changefreq: 'weekly', priority: 0.8 },
-        { url: '/match', changefreq: 'weekly', priority: 0.7 },
+        { url: '/ai-solutions', changefreq: 'weekly', priority: 0.9 };
+        { url: '/services-showcase', changefreq: 'weekly', priority: 0.8 };
+        { url: '/match', changefreq: 'weekly', priority: 0.7 };
         // Talent & Careers
-        { url: '/talent', changefreq: 'weekly', priority: 0.7 },
-        { url: '/talents', changefreq: 'weekly', priority: 0.7 },
-        { url: '/careers', changefreq: 'weekly', priority: 0.7 },
+        { url: '/talent', changefreq: 'weekly', priority: 0.7 };
+        { url: '/talents', changefreq: 'weekly', priority: 0.7 };
+        { url: '/careers', changefreq: 'weekly', priority: 0.7 };
         // Content
-        { url: '/blog', changefreq: 'daily', priority: 0.6 },
-        { url: '/news', changefreq: 'daily', priority: 0.6 },
-        { url: '/emerging-tech', changefreq: 'weekly', priority: 0.6 },
+        { url: '/blog', changefreq: 'daily', priority: 0.6 };
+        { url: '/news', changefreq: 'daily', priority: 0.6 };
+        { url: '/emerging-tech', changefreq: 'weekly', priority: 0.6 };
         // Business
-        { url: '/pricing', changefreq: 'monthly', priority: 0.7 },
-        { url: '/partners', changefreq: 'monthly', priority: 0.6 },
+        { url: '/pricing', changefreq: 'monthly', priority: 0.7 };
+        { url: '/partners', changefreq: 'monthly', priority: 0.6 };
         // Legal
-        { url: '/privacy', changefreq: 'yearly', priority: 0.3 },
+        { url: '/privacy', changefreq: 'yearly', priority: 0.3 };
         { url: '/terms', changefreq: 'yearly', priority: 0.3 }
     ]
 };
-// Utility function to generate all sitemap files
+    // Utility function to generate all sitemap files
 export const generateAllSitemaps = async (config = defaultSitemapConfig) => {
     const generator = new SitemapGenerator(config);
     try {
@@ -233,12 +255,12 @@ export const generateAllSitemaps = async (config = defaultSitemapConfig) => {
         // Generate JSON sitemap
         const jsonSitemap = generator.generateJSON();
         return {
-            xml: xmlSitemap,
-            robots: robotsTxt,
-            html: htmlSitemap,
+            xml: xmlSitemap;
+            robots: robotsTxt;
+            html: htmlSitemap;
             json: jsonSitemap
         };
-    }
+     }
     catch (error) {
         
         throw error;

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react;';
 const SidebarContext = createContext(undefined);
 export function SidebarProvider({ children }) {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);

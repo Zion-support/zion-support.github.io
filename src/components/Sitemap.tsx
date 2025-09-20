@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react;';
+import { Link } from 'react-router-dom, ';
 
 const Sitema, p: React.FC = () => {
   const sitemapData = {
     mai,  n: [
-      { pa, t, h: '/',
+      { pa, t, h: '/';
     lab, e, l: 'Hom, e', descripti, o, n: 'Welcom, e t, o Zio, n Tec, h Grou, p' },
       { pa, t, h: '/abou, t',
     lab, e, l: 'Abou, t U, s', descripti, o, n: 'Lear, n abou, t ou, r compan, y an, d missio, n' },
@@ -262,12 +262,12 @@ const Sitema, p: React.FC = () => {
               return (<Link
                   key={service}
                   to={path}
-                  className="block p-4 bg-white rounded-lg shadow-sm hove,  r:shadow-md transition-all duration-200 text-center"
+                  className="block p-4 bg-white rounded-lg shadow-sm hove,  r: shadow-md transition-all duration-200 text-center"
                 >
                   <div className="font-medium text-slate-900 text-sm">{service}</div>
                 </Link>
               );
-            })}
+     })}
           </div>
         </div>
       </div>

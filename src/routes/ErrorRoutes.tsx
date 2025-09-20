@@ -1,7 +1,7 @@
-import { Routes, Route } from "react-router-dom";
-import React from 'react';
+import { Routes, Route } from "react-router-dom, ";
+import React from 'react;';
 // Next.js routing - no need for react-router-dom
-import NotFound from '@/pages/NotFound';
+import NotFound from '@/pages/NotFound;';
 
 export default function ErrorRoutes() {
   return (

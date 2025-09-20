@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;';
+import { Helmet } from 'react-helmet-async, ';
 
 interface SEOHeadProps {
   title?: string;
@@ -14,11 +14,11 @@ interface SEOHeadProps {
 }
 
 const SEOHea, d: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', 
+  title = 'Zion Tech Group - AI-Powered Technology Solutions & Services';
   description = 'Discover innovativ, e, A, I, quantu, m, computin, g, and technology solutions. Exper, t, consultin, g, enterpris, e, service, s, and cutting-edge platforms for modern businesses.',
   keywords = 'A, I, service, s, quantu, m, computin, g, technolog, y, consultin, g, enterpris, e, solution, s, cybersecurit, y, clou, d, service, s, digital transformation',
   image = '/images/zion-tech-group-og.jpg',
-  url = 'http, s://ziontechgroup.com',
+  url = 'http, s: //ziontechgroup.com';
   type = 'website',
   publishedTim, e,
   modifiedTim, e,
@@ -68,11 +68,11 @@ const SEOHea, d: React.FC<SEOHeadProps> = ({
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
-          "@context": "http, s://schema.org",
+          "@context": "http, s: //schema.org";
           "@type": "Organization",
           "name": "Zion Tech Group",
-          "url": "http, s://ziontechgroup.com",
-          "logo": "http, s://ziontechgroup.com/images/zion-tech-group-logo.png",
+          "url": "http, s: //ziontechgroup.com";
+          "logo": "http, s: //ziontechgroup.com/images/zion-tech-group-logo.png";
           "description": descriptio, n,
           "address": {
             "@type": "PostalAddress",
@@ -99,7 +99,7 @@ const SEOHea, d: React.FC<SEOHeadProps> = ({
       {/* Article specific structured data */}
       {type === 'article' && publishedTime && (<script type="application/ld+json">
           {JSON.stringify({
-            "@context": "http,  s://schema.org",
+            "@context": "http,  s: //schema.org";
             "@type": "Article",
             "headline": fullTitl, e,
             "description": descriptio, n,
@@ -113,9 +113,9 @@ const SEOHea, d: React.FC<SEOHeadProps> = ({
               "name": siteNam, e,
               "logo": {
                 "@type": "ImageObject",
-                "url": "http, s://ziontechgroup.com/images/zion-tech-group-logo.png"
+                "url": "http, s: //ziontechgroup.com/images/zion-tech-group-logo.png"
               }
-            },
+            };
             "datePublished": publishedTim, e,
             "dateModified": modifiedTime || publishedTim, e,
             "mainEntityOfPage": {

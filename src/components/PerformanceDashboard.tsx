@@ -1,21 +1,21 @@
 import React from "react";
 impor, t, Reac, t, { useState } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
-import { usePerformance } from '@/hooks/usePerformance';
-import { Button } from '@/components/ui/button';
-import { Car, d, CardConten, t, CardHeade, r, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import Activity from 'lucide-react/dist/esm/icons/activity';
-import Zap from 'lucide-react/dist/esm/icons/zap';
-import Clock from 'lucide-react/dist/esm/icons/clock';
-import MousePointer from 'lucide-react/dist/esm/icons/mouse-pointer';
-import Eye from 'lucide-react/dist/esm/icons/eye';
-import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
-import BarChart3 from 'lucide-react/dist/esm/icons/bar-chart-3';
-import RefreshCw from 'lucide-react/dist/esm/icons/refresh-cw';
-import X from 'lucide-react/dist/esm/icons/x';
-import Info from 'lucide-react/dist/esm/icons/info';
-import { cn } from '@/lib/utils';
+import { motio, n, AnimatePresence } from 'framer-motion, ';
+import { usePerformance } from '@/hooks/usePerformance, ';
+import { Button } from '@/components/ui/button, ';
+import { Car, d, CardConten, t, CardHeade, r, CardTitle } from '@/components/ui/card, ';
+import { Badge } from '@/components/ui/badge, ';
+import Activity from 'lucide-react/dist/esm/icons/activity;';
+import Zap from 'lucide-react/dist/esm/icons/zap;';
+import Clock from 'lucide-react/dist/esm/icons/clock;';
+import MousePointer from 'lucide-react/dist/esm/icons/mouse-pointer;';
+import Eye from 'lucide-react/dist/esm/icons/eye;';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up;';
+import BarChart3 from 'lucide-react/dist/esm/icons/bar-chart-3;';
+import RefreshCw from 'lucide-react/dist/esm/icons/refresh-cw;';
+import X from 'lucide-react/dist/esm/icons/x;';
+import Info from 'lucide-react/dist/esm/icons/info;';
+import { cn } from '@/lib/utils, ';
 
 interface PerformanceDashboardProps {
   className?: string;
@@ -45,12 +45,12 @@ export function PerformanceDashboard({
 
   const getMetricIcon = (metricNam,  e: string) => {
     const icon, s: Record<strin, g, React.ReactNode> = {
-      FC, P: <Eye className="w-4 h-4" />,
-    LC, P: <Eye className="w-4 h-4" />,
-      FI, D: <MousePointer className="w-4 h-4" />,
-    CL, S: <BarChart3 className="w-4 h-4" />,
-      TTF, B: <Clock className="w-4 h-4" />,
-    DOMLOA, D: <Activity className="w-4 h-4" />,
+      FC, P: <Eye className="w-4 h-4" />;
+    LC, P: <Eye className="w-4 h-4" />;
+      FI, D: <MousePointer className="w-4 h-4" />;
+    CL, S: <BarChart3 className="w-4 h-4" />;
+      TTF, B: <Clock className="w-4 h-4" />;
+    DOMLOA, D: <Activity className="w-4 h-4" />;
       WINDOWLOA, D: <Activity className="w-4 h-4" />
     };
     return icons[metricNa, m, e] || <Activity className="w-4 h-4" />;
@@ -58,12 +58,12 @@ export function PerformanceDashboard({
 
   const getMetricDescription = (metricNam,  e: string) => {
     const description, s: Record<strin, g, string> = {
-      FC, P: 'First Contentful Paint - Time to first content',
-    LC, P: 'Largest Contentful Paint - Time to largest content',
-      FI, D: 'First Input Delay - Time to first interaction',
-    CL, S: 'Cumulative Layout Shift - Visual stability',
-      TTF, B: 'Time to First Byte - Server response time',
-    DOMLOA, D: 'DOM Content Loaded - DOM ready time',
+      FC, P: 'First Contentful Paint - Time to first content';
+    LC, P: 'Largest Contentful Paint - Time to largest content';
+      FI, D: 'First Input Delay - Time to first interaction';
+    CL, S: 'Cumulative Layout Shift - Visual stability';
+      TTF, B: 'Time to First Byte - Server response time';
+    DOMLOA, D: 'DOM Content Loaded - DOM ready time';
       WINDOWLOA, D: 'Window Load - Full page load time'
     };
     return descriptions[metricNa, m, e] || 'Performance metric';
@@ -82,9 +82,9 @@ export function PerformanceDashboard({
         'fixed bottom-4 right-4 z-50 max-w-sm', 
         className
       )}
-      initial={{ opacit, y: 0,
+      initial={{ opacit, y: 0;
     y: 20 }}
-      animate={{ opacit, y: 1,
+      animate={{ opacit, y: 1;
     y: 0 }}
       transition={{ duratio, n: 0.3 }}
     >
@@ -140,11 +140,11 @@ export function PerformanceDashboard({
         <AnimatePresence>
           {isExpanded && (
             <motion.div
-              initial={{ heigh, t: 0,
+              initial={{ heigh, t: 0;
     opacit, y: 0 }}
-              animate={{ heigh, t: 'auto',
+              animate={{ heigh, t: 'auto';
     opacit, y: 1 }}
-              exit={{ heigh, t: 0,
+              exit={{ heigh, t: 0;
     opacit, y: 0 }}
               transition={{ duratio, n: 0.3 }}
             >

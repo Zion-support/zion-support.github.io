@@ -1,7 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
 import SEO from '../../components/SEO';
+<<<<<<< HEAD
 import Card from '../../components/ui/EnhancedCard';
+=======
+// import Card from '../../components/ui/Card';
+>>>>>>> 710f924e591e06041844bf9852fab6e10f055e22
 export const metadata = {
   title: 'AI 2026 Breakthrough Revolution - The Future of Artificial Intelligence',
   description: 'Discover the revolutionary AI breakthroughs of 2026 that are transforming industries and reshaping the future of technology.',
@@ -11,7 +15,11 @@ export default function AI2026BreakthroughRevolution() {
   return (
     <div>
       <SEO
+<<<<<<< HEAD
         title="AI 2026 Breakthrough Revolution"
+=======
+        title="AI 2026 Breakthrough Revolution - The Future of Artificial Intelligence"
+>>>>>>> 710f924e591e06041844bf9852fab6e10f055e22
         description="Discover the revolutionary AI breakthroughs of 2026 that are transforming industries and reshaping the future of technology."
         keywords="AI 2026, artificial intelligence breakthrough, machine learning revolution, neural networks, quantum AI"
         url="/ai-2026-breakthrough-revolution"
@@ -52,7 +60,7 @@ export default function AI2026BreakthroughRevolution() {
         <div>
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary AI Breakthroughs</h2>
           <div>
-            <Card className="bg-gradient-to-br from-purple-800 to-blue-800 p-8 border-0">
+            <div className="bg-gradient-to-br from-purple-800 to-blue-800 p-8 border-0 rounded-lg">
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-2xl font-bold mb-4">Quantum Neural Networks</h3>
               <p>
@@ -64,8 +72,8 @@ export default function AI2026BreakthroughRevolution() {
                 <li>• Quantum entanglement optimization</li>
                 <li>• Real-time pattern recognition</li>
               </ul>
-            </Card>
-            <Card className="bg-gradient-to-br from-blue-800 to-indigo-800 p-8 border-0">
+            </div>
+            <div className="bg-gradient-to-br from-blue-800 to-indigo-800 p-8 border-0 rounded-lg">
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-2xl font-bold mb-4">Autonomous Business Systems</h3>
               <p>
@@ -77,8 +85,8 @@ export default function AI2026BreakthroughRevolution() {
                 <li>• Self-optimizing algorithms</li>
                 <li>• Predictive resource management</li>
               </ul>
-            </Card>
-            <Card className="bg-gradient-to-br from-indigo-800 to-purple-800 p-8 border-0">
+            </div>
+            <div className="bg-gradient-to-br from-indigo-800 to-purple-800 p-8 border-0 rounded-lg">
               <div className="text-4xl mb-4">🔮</div>
               <h3 className="text-2xl font-bold mb-4">Predictive Intelligence</h3>
               <p>
@@ -90,7 +98,7 @@ export default function AI2026BreakthroughRevolution() {
                 <li>• Multi-dimensional analysis</li>
                 <li>• Real-time adaptation</li>
               </ul>
-            </Card>
+            </div>
           </div>
         </div>
       </section>

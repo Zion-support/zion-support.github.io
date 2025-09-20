@@ -10,7 +10,11 @@ export default function AI2025UltimateBusinessTransformationPage() {
   return (
     <div>
       <SEO
+<<<<<<< HEAD
         title="AI 2025 Ultimate Business Transformation"
+=======
+        title="AI 2025 Ultimate Business Transformation Guide"
+>>>>>>> 710f924e591e06041844bf9852fab6e10f055e22
         description="Discover the revolutionary AI technologies and strategies that will transform your business in 2025. Comprehensive guide to AI implementation, ROI optimization, and competitive advantage."
         keywords="AI transformation, business AI, AI implementation, digital transformation, AI ROI, 2025 AI trends"
         url="/ai-2025-ultimate-business-transformation"

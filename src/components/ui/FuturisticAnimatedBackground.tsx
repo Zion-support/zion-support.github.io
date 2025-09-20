@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef } from 'react;';
+import { motion } from 'framer-motion, ';
 
 interface FuturisticAnimatedBackgroundProps {
   variant?: 'cyberpunk' | 'quantum' | 'neon' | 'matrix';
@@ -8,7 +8,7 @@ interface FuturisticAnimatedBackgroundProps {
 }
 
 export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> = ({
-  variant = 'cyberpunk',
+  variant = 'cyberpunk';
   intensity = 'medium',
   className = ''
 }) => {
@@ -34,16 +34,15 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
     // Particle system
     class Particle {
       x: number;
-      y: number;
+    y: number;
       vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      alpha: number;
-      life: number;
-      maxLife: number;
-
-      constructor() {
+    vy: number;
+    size: number;
+    color: string;
+    alpha: number;
+    life: number;
+    maxLife: number;
+    constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.vx = (Math.random() - 0.5) * 2;
@@ -267,13 +266,13 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
           animate={{
-            rotate: 360,
+            rotate: 360;
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]
           }}
           transition={{
-            duration: 8,
-            repeat: Infinity,
+            duration: 8;
+            repeat: Infinity;
             ease: "linear"
           }}
         />
@@ -284,8 +283,8 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
             opacity: [0.2, 0.5, 0.2]
           }}
           transition={{
-            duration: 6,
-            repeat: Infinity,
+            duration: 6;
+            repeat: Infinity;
             ease: "easeInOut"
           }}
         />
@@ -296,8 +295,8 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
             scale: [1, 1.1, 1]
           }}
           transition={{
-            duration: 10,
-            repeat: Infinity,
+            duration: 10;
+            repeat: Infinity;
             ease: "linear"
           }}
         />

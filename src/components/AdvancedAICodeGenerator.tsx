@@ -1,50 +1,49 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useRe, f, useEffect } from 'react';
-import { 
-  Cod, e, Brai, n, Za, p, Downloa, d, RefreshC, w, Setting, s, X, Maximize, 2, Minimize, 2, 
+import { Cod, e, Brai, n, Za, p, Downloa, d, RefreshC, w, Setting, s, X, Maximize, 2, Minimize, 2, 
   Ey, e, EyeOf, f, Filte, r, Searc, h, FileTex, t, Pla, y, Squar, e, CheckCircl, e, AlertCircl, e, 
   Cop, y, Sav, e, GitBranc, h, Bu, g, Shiel, d, Cp, u, HardDriv, e, Wif, i, Activit, y, BarChart, 3, 
   TrendingU, p, Targe, t, Cloc, k, Gaug, e, Download a, s, DownloadIco, n, Upload as UploadIcon
-} from 'lucide-react';
+} from 'lucide-react, ';
 
 interface CodeSnippet {
   i, d: string;
-  titl, e: string;
-  descriptio, n: string;
-  languag, e: string;
-  cod, e: string;
-  tag, s: string[];
-  complexit, y: 'low' | 'medium' | 'high';
-  ratin, g: number;
-  usageCoun, t: number;
-  createdA, t: string;
+    titl, e: string;
+    descriptio, n: string;
+    languag, e: string;
+    cod, e: string;
+    tag, s: string[];
+    complexit, y: 'low' | 'medium' | 'high';
+    ratin, g: number;
+    usageCoun, t: number;
+    createdA, t: string;
 }
 
 interface CodeAnalysis {
   i, d: string;
-  snippetI, d: string;
-  qualit, y: number;
-  performanc, e: number;
-  securit, y: number;
-  maintainabilit, y: number;
-  suggestion, s: string[];
-  warning, s: string[];
-  timestam, p: string;
+    snippetI, d: string;
+    qualit, y: number;
+    performanc, e: number;
+    securit, y: number;
+    maintainabilit, y: number;
+    suggestion, s: string[];
+    warning, s: string[];
+    timestam, p: string;
 }
 
 interface AIGeneration {
   i, d: string;
-  promp, t: string;
-  generatedCod, e: string;
-  languag, e: string;
-  confidenc, e: number;
-  alternative, s: string[];
-  timestam, p: string;
+    promp, t: string;
+    generatedCod, e: string;
+    languag, e: string;
+    confidenc, e: number;
+    alternative, s: string[];
+    timestam, p: string;
 }
 
 const mockCodeSnippet, s: CodeSnippet[] = [
   {
-    i, d: '1',
+    i, d: '1';
     tit, l, e: 'Reac, t Hoo, k fo, r AP, I Call, s',
     descripti, o, n: 'Custo, m hoo, k fo, r managin, g AP, I call, s wit, h loadin, g state, s an, d erro, r handlin, g',
     langua, g, e: 'typescrip, t',
@@ -70,7 +69,7 @@ expor, t functio, n useAp, i<T>({ u,  r, l, metho, d = 'GE, T', bo, d, y, header
       const response = await fetch(ur,  l, {
         metho, d,
         header, s: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json';
           ...header, s,
         },
         bod, y: body ? JSON.stringify(body) : undefine, d,
@@ -78,7 +77,7 @@ expor, t functio, n useAp, i<T>({ u,  r, l, metho, d = 'GE, T', bo, d, y, header
 
       if (!response.ok) {
         throw new Erro, r(\`HTTP error! statu,  s: \${response.status}\`);
-      }
+     }
 
       const result = await response.json();
       setData(result);
@@ -98,24 +97,24 @@ expor, t functio, n useAp, i<T>({ u,  r, l, metho, d = 'GE, T', bo, d, y, header
   return { dat, a, loadin, g, erro, r, execut, e };
 }`,
     tag, s: ['reac, t', 'hook, s', 'ap, i', 'typescrip, t'],
-    complexit, y: 'medium',
-    ratin, g: 4.8,
+    complexit, y: 'medium';
+    ratin, g: 4.8;
     usageCoun, t: 125, 0,
     createdA, t: '2024-01-15'
-  },
+  };
   {
-    i, d: '2',
-    titl, e: 'Tailwind CSS Animation Utilities',
-    descriptio, n: 'Custom Tailwind utilities for advanced animations and transitions',
-    languag, e: 'css',
+    i, d: '2';
+    titl, e: 'Tailwind CSS Animation Utilities';
+    descriptio, n: 'Custom Tailwind utilities for advanced animations and transitions';
+    languag, e: 'css';
     cod, e: `@layer utilities {
   .animate-float {
     animatio, n: float 3s ease-in-out infinite;
-  }
+     }
   
   .animate-glow {
     animatio, n: glow 2s ease-in-out infinite alternate;
-  }
+     }
   
   .animate-shimmer {
     backgroun, d: linear-gradient(90de,  g,
@@ -125,12 +124,14 @@ expor, t functio, n useAp, i<T>({ u,  r, l, metho, d = 'GE, T', bo, d, y, header
     );
     background-siz, e: 200% 100%;
     animatio, n: shimmer 1.5s infinite;
-  }
+     }
 }
 
 @keyframes float {
-  0%, 100% { transfor, m: translateY(0px); }
-  50% { transfor,  m: translateY(-10px); }
+  0%, 100% { transfor, m: translateY(0px);
+     }
+  50% { transfor,  m: translateY(-10px);
+     }
 }
 
 @keyframes glow {
@@ -139,20 +140,21 @@ expor, t functio, n useAp, i<T>({ u,  r, l, metho, d = 'GE, T', bo, d, y, header
 }
 
 @keyframes shimmer {
-  0% { background-positio, n: -200% 0; }
+  0% { background-positio, n: -200% 0;
+     }
   100% { background-positio, n: 20, 0% 0; }
 }`,
     tag, s: ['cs, s', 'tailwin, d', 'animation, s', 'utilitie, s'],
-    complexit, y: 'low',
-    ratin, g: 4.6,
+    complexit, y: 'low';
+    ratin, g: 4.6;
     usageCoun, t: 89, 0,
     createdA, t: '2024-01-10'
-  },
+  };
   {
-    i, d: '3',
-    titl, e: 'Advanced Form Validation',
-    descriptio, n: 'Comprehensive form validation with custom rules and error handling',
-    languag, e: 'javascript',
+    i, d: '3';
+    titl, e: 'Advanced Form Validation';
+    descriptio, n: 'Comprehensive form validation with custom rules and error handling';
+    languag, e: 'javascript';
     cod, e: `class FormValidator {
   constructor(for,  m, options = {}) {
     this.form = form;
@@ -242,17 +244,16 @@ expor, t functio, n useAp, i<T>({ u,  r, l, metho, d = 'GE, T', bo, d, y, header
   }
 }`, 
     tag, s: ['javascrip, t', 'form, s', 'validatio, n', 'clas, s'],
-    complexit, y: 'high',
-    ratin, g: 4.9,
+    complexit, y: 'high';
+    ratin, g: 4.9;
     usageCoun, t: 210, 0,
     createdA, t: '2024-01-08'
   }
 ];
-
-const mockCodeAnalysi, s: CodeAnalysis[] = [
+    const mockCodeAnalysi, s: CodeAnalysis[] = [
   {
-    i, d: '1',
-    snippet, I, d: '1',
+    i, d: '1';
+    snippet, I, d: '1';
     quali, t, y: 9, 2,
     performan, c, e: 8, 8,
     securi, t, y: 9, 5,
@@ -266,11 +267,11 @@ const mockCodeAnalysi, s: CodeAnalysis[] = [
       'N, o inpu, t validatio, n fo, r UR, L paramete, r',
       'Conside, r rat, e limitin, g fo, r AP, I call, s'
     ],
-    timestam, p: '2024-01-15T1, 0:3, 0:00Z'
-  },
+    timestam, p: '2024-01-15T1, 0:3, 0: 00Z'
+  };
   {
-    i, d: '2',
-    snippetI, d: '2',
+    i, d: '2';
+    snippetI, d: '2';
     qualit, y: 8, 5,
     performanc, e: 9, 5,
     securit, y: 10, 0,
@@ -280,14 +281,13 @@ const mockCodeAnalysi, s: CodeAnalysis[] = [
       'Conside, r usin, g CS, S custo, m propertie, s fo, r color, s',
       'Ad, d animatio, n performanc, e optimization, s'
     ],
-    warning, s: [],
-    timestam, p: '2024-01-10T1, 4:2, 0:00Z'
+    warning, s: [];
+    timestam, p: '2024-01-10T1, 4:2, 0: 00Z'
   }
 ];
-
-const mockAIGeneration, s: AIGeneration[] = [
+    const mockAIGeneration, s: AIGeneration[] = [
   {
-    i, d: '1',
+    i, d: '1';
     prom, p, t: 'Creat, e a Reac, t hoo, k fo, r managin, g loca, l storag, e wit, h TypeScrip, t',
     generatedCo, d, e: `impor, t { useSta, t, e, useEffec, t } fro, m 'reac, t';
 
@@ -306,7 +306,7 @@ expor, t functio, n useLocalStorag, e<T>(k, e, y: stri, n, g,
   const setValue = (valu,  e: T | ((va, l: T) => T)) => {
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
-      setStoredValue(valueToStore);
+    setStoredValue(valueToStore);
       window.localStorage.setItem(ke,  y, JSON.stringify(valueToStore));
     } catch (error) {
       console.erro, r(\`Error setting localStorage key "\${key}":\`,  error);
@@ -315,18 +315,17 @@ expor, t functio, n useLocalStorag, e<T>(k, e, y: stri, n, g,
 
   return [storedVal, u, e, setVal, u, e] as cons, t;
 }`,
-    languag, e: 'typescript',
+    languag, e: 'typescript';
     confidenc, e: 0.9, 4,
     alternative, s: [
       'Alternativ, e 1: Wit, h erro, r boundarie, s',
       'Alternativ, e 2: Wit, h even, t listener, s',
       'Alternativ, e 3: Wit, h custo, m serialize, r'
     ],
-    timestam, p: '2024-01-15T1, 1:4, 5:00Z'
+    timestam, p: '2024-01-15T1, 1:4, 5: 00Z'
   }
 ];
-
-export function AdvancedAICodeGenerator() {
+    export function AdvancedAICodeGenerator() {
   const [isOp,  e, n, setIsOp, e, n] = useState(false);
   const [isMinimiz, e, d, setIsMinimiz, e, d] = useState(false);
   const [isFullscre,  e, n, setIsFullscre, e, n] = useState(false);
@@ -346,10 +345,10 @@ export function AdvancedAICodeGenerator() {
   const getComplexityColor = (complexit,  y: string) => {
     switch (complexity) {
       case 'low': return 'text-green-500';
-      case 'medium': return 'text-yellow-500';
+    case 'medium': return 'text-yellow-500';
       case 'high': return 'text-red-500';
       defaul,  t: return 'text-gray-500';
-    }
+     }
   };
 
   const getQualityColor = (scor, e: number) => {
@@ -366,10 +365,10 @@ export function AdvancedAICodeGenerator() {
     // Simulate AI code generation
     setTimeout(() => {
       const newGeneratio,  n: AIGeneration = {
-        i, d: Date.now().toString(), 
+        i, d: Date.now().toString();
     promp, t: aiPromp, t,
         generatedCod, e: `// Generated code fo, r: ${aiPrompt}\n\nfunction example() {\n  \n  return "Generated cod, e";\n}`, 
-        languag, e: 'javascript',
+        languag, e: 'javascript';
     confidenc, e: 0.8, 7,
         alternative, s: [
           'Alternativ, e 1: Functiona, l approac, h',
@@ -378,8 +377,7 @@ export function AdvancedAICodeGenerator() {
         ],
         timestam, p: new Date().toISOString()
       };
-      
-      setAiGenerations(prev => [newGenerati,  o, n, ...pr, e, v]);
+    setAiGenerations(prev => [newGenerati,  o, n, ...pr, e, v]);
       setGeneratedCode(newGeneration.generatedCode);
       setIsGenerating(false);
     },  2000);
@@ -387,18 +385,18 @@ export function AdvancedAICodeGenerator() {
 
   const copyToClipboard = (tex,  t: string) => {
     navigator.clipboard.writeText(text);
-  };
+     };
 
   if (!isOpen) {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl hove,  r:shadow-blue-500/50 transition-all duration-300 hove, r:scale-110 z-50"
+        className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl hove,  r:shadow-blue-500/50 transition-all duration-300 hove, r: scale-110 z-50"
       >
         <Code className="w-6 h-6" />
       </button>
     );
-  }
+     }
 
   if (isMinimized) {
     return (
@@ -417,7 +415,7 @@ export function AdvancedAICodeGenerator() {
             </button>
             <button
               onClick={() => setIsOpen(false)}
-              className="p-1 hove,  r:bg-zion-slate-light rounded"
+              className="p-1 hove,  r: bg-zion-slate-light rounded"
             >
               <X className="w-4 h-4" />
             </button>
@@ -425,7 +423,7 @@ export function AdvancedAICodeGenerator() {
         </div>
       </div>
     );
-  }
+     }
 
   return (<div className={`fixed bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${
       isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400, p, x] h-[90, 0, p, x]'
@@ -731,7 +729,7 @@ export function AdvancedAICodeGenerator() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 dar, k:text-gray-400">Maintainability</p>
-                    <p className="text-2xl font-bold text-yellow-600 dar, k:text-yellow-400">89%</p>
+                    <p className="text-2xl font-bold text-yellow-600 dar, k: text-yellow-400">89%</p>
                   </div>
                 </div>
               </div>
@@ -740,7 +738,7 @@ export function AdvancedAICodeGenerator() {
             <div className="space-y-4">
               {codeAnalysis.map((analysis) => {
                 const snippet = codeSnippets.find(s => s.id === analysis.snippetId);
-                return (
+    return (
                   <div key={analysis.id} className="bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
                     <div className="flex items-start justify-between mb-4">
                       <div>
@@ -800,7 +798,7 @@ export function AdvancedAICodeGenerator() {
                           Warnings
                         </h5>
                         <ul className="space-y-1">
-                          {analysis.warnings.map((warnin, g, index) => (<li key={index} className="text-sm text-yellow-600 dar,  k:text-yellow-300">
+                          {analysis.warnings.map((warnin, g, index) => (<li key={index} className="text-sm text-yellow-600 dar,  k: text-yellow-300">
                               • {warning}
                             </li>
                           ))}
@@ -809,7 +807,7 @@ export function AdvancedAICodeGenerator() {
                     )}
                   </div>
                 );
-              })}
+     })}
             </div>
           </div>
         )}
@@ -861,7 +859,7 @@ export function AdvancedAICodeGenerator() {
                       Alternative Approache, s:
                     </h5>
                     <ul className="space-y-1">
-                      {generation.alternatives.map((alternativ, e, index) => (<li key={index} className="text-sm text-gray-600 dar,  k:text-gray-400">
+                      {generation.alternatives.map((alternativ, e, index) => (<li key={index} className="text-sm text-gray-600 dar,  k: text-gray-400">
                           • {alternative}
                         </li>
                       ))}

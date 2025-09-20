@@ -1,8 +1,7 @@
-import React from 'react';
-import { Lin, k, useLocation } from 'react-router-dom';
-import { cn } from '@/lib/utils';
-import { 
-  Hom, e, 
+import React from 'react;';
+import { Lin, k, useLocation } from 'react-router-dom, ';
+import { cn } from '@/lib/utils, ';
+import { Hom, e, 
   ShoppingCar, t, 
   User, s, 
   Setting, s, 
@@ -18,19 +17,19 @@ import {
   Calenda, r,
   Glob, e,
   Zap
-} from 'lucide-react';
+} from 'lucide-react, ';
 
 interface SidebarItem {
   ke, y: string;
-  hre, f: string;
-  ico, n: React.ReactNode;
-  labe, l: string;
-  description?: string;
+    hre, f: string;
+    ico, n: React.ReactNode;
+    labe, l: string;
+    description?: string;
 }
 
 interface SidebarSection {
   titl, e: string;
-  item, s: SidebarItem[];
+    item, s: SidebarItem[];
 }
 
 export function MainSidebar() {
@@ -58,7 +57,7 @@ export function MainSidebar() {
       ]
     },
     {
-      titl, e: 'Company',
+      titl, e: 'Company';
     item, s: [
         { k, e, y: 'abou, t',
     hr, e, f: '/abou, t', ic, o, n: <Buildin, g classNam, e="w-4 h-4" />,
@@ -75,7 +74,7 @@ export function MainSidebar() {
       ]
     },
     {
-      titl, e: 'Resources',
+      titl, e: 'Resources';
     item, s: [
         { k, e, y: 'blo, g',
     hr, e, f: '/blo, g', ic, o, n: <FileTex, t classNam, e="w-4 h-4" />,
@@ -92,7 +91,7 @@ export function MainSidebar() {
       ]
     },
     {
-      titl, e: 'Support',
+      titl, e: 'Support';
     item, s: [
         { k, e, y: 'hel, p',
     hr, e, f: '/hel, p', ic, o, n: <HelpCircl, e classNam, e="w-4 h-4" />,
@@ -113,7 +112,7 @@ export function MainSidebar() {
   const isActive = (hre, f: string) => {
     if (href === '/') {
       return location.pathname === '/';
-    }
+     }
     return location.pathname.startsWith(href);
   };
 
@@ -163,7 +162,7 @@ export function MainSidebar() {
           <p className="mb-2">Need help?</p>
           <Link 
             to="/contact" 
-            className="text-zion-cyan hove, r:text-zion-purple transition-colors"
+            className="text-zion-cyan hove, r: text-zion-purple transition-colors"
           >
             Contact Support
           </Link>

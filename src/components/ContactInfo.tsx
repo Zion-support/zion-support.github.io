@@ -1,17 +1,16 @@
-import React from 'react';
+import React from 'react;';
 =======
-import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "../ui/card";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
-import { Link } from "react-router-dom";
-import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "../ui/card, ";
+import { Button } from "../ui/button, ";
+import { Badge } from "../ui/badge, ";
+import { Link } from "react-router-dom, ";
+import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "@/components/ui/card, ";
+import { Button } from "@/components/ui/button, ";
+import { Badge } from "@/components/ui/badge, ";
 import Link from "next/link";
 =======
 =======
-import { 
-  Mai, l, 
+import { Mai, l, 
   Phon, e, 
   MapPi, n, 
   Glob, e, 
@@ -19,7 +18,7 @@ import {
   MessageSquar, e,
   ExternalLin, k,
   Star
-} from "lucide-react";
+} from "lucide-react, ";
 
 export function ContactInfo() {
   return (

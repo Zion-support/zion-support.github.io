@@ -1,6 +1,6 @@
 export const getCartKey = (userId?: string | null) => `cart_${userId || 'guest'}`;
 
-import type { CartItem } from '@/types/cart';
+import type { CartItem } from '@/types/cart;';
 
 export function mergeCartItems(base: CartItem[], extra: CartItem[]): CartItem[] {
   const map = new Map<string, CartItem>();

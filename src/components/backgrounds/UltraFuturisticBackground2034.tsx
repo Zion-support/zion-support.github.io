@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef } from 'react;';
+import { motion } from 'framer-motion, ';
 
 interface UltraFuturisticBackground2034Props {
   children?: React.ReactNode;
@@ -7,7 +7,7 @@ interface UltraFuturisticBackground2034Props {
 }
 
 export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({ 
-  children, 
+  children;
   className = '' 
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -18,7 +18,7 @@ interface UltraFuturisticBackground2034Props {
 }
 
 const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({
-  intensity = 0.8,
+  intensity = 0.8;
   theme = 'quantum'
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -40,13 +40,13 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     let animationFrameId: number;
     let particles: Array<{
       x: number;
-      y: number;
+    y: number;
       vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
-    }> = [];
+    vy: number;
+    size: number;
+    opacity: number;
+    color: string;
+     }> = [];
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
@@ -59,12 +59,12 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       
       for (let i = 0; i < particleCount; i++) {
         particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-          size: Math.random() * 2 + 1,
-          opacity: Math.random() * 0.5 + 0.1,
+          x: Math.random() * canvas.width;
+          y: Math.random() * canvas.height;
+          vx: (Math.random() - 0.5) * 0.5;
+          vy: (Math.random() - 0.5) * 0.5;
+          size: Math.random() * 2 + 1;
+          opacity: Math.random() * 0.5 + 0.1;
           color: `hsl(${Math.random() * 60 + 200}, 70%, 60%)`
         });
       }
@@ -80,15 +80,15 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     // Create particles
     for (let i = 0; i < 100; i++) {
       particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 2,
-        vy: (Math.random() - 0.5) * 2,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.5 + 0.3,
+        x: Math.random() * canvas.width;
+        y: Math.random() * canvas.height;
+        vx: (Math.random() - 0.5) * 2;
+        vy: (Math.random() - 0.5) * 2;
+        size: Math.random() * 3 + 1;
+        opacity: Math.random() * 0.5 + 0.3;
         color: selectedColors[Math.floor(Math.random() * selectedColors.length)]
       });
-    }
+     }
 =======
 
     const animate = () => {
@@ -179,12 +179,11 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       // Draw floating geometric shapes
       const time = Date.now() * 0.001;
       const shapes = [
-        { x: Math.sin(time * 0.5) * 200 + canvas.width / 2, y: Math.cos(time * 0.3) * 150 + canvas.height / 2, size: 30, rotation: time * 0.2 },
-        { x: Math.cos(time * 0.4) * 250 + canvas.width / 2, y: Math.sin(time * 0.6) * 200 + canvas.height / 2, size: 25, rotation: -time * 0.15 },
+        { x: Math.sin(time * 0.5) * 200 + canvas.width / 2, y: Math.cos(time * 0.3) * 150 + canvas.height / 2, size: 30, rotation: time * 0.2 };
+        { x: Math.cos(time * 0.4) * 250 + canvas.width / 2, y: Math.sin(time * 0.6) * 200 + canvas.height / 2, size: 25, rotation: -time * 0.15 };
         { x: Math.sin(time * 0.7) * 300 + canvas.width / 2, y: Math.cos(time * 0.2) * 100 + canvas.height / 2, size: 35, rotation: time * 0.25 }
       ];
-
-      shapes.forEach(shape => {
+    shapes.forEach(shape => {
         ctx.save();
         ctx.translate(shape.x, shape.y);
         ctx.rotate(shape.rotation);
@@ -252,8 +251,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           opacity: [0.6, 1, 0.6],
         }}
         transition={{
-          duration: 3,
-          repeat: Infinity,
+          duration: 3;
+          repeat: Infinity;
           ease: "easeInOut"
         }}
       />
@@ -265,8 +264,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           opacity: [0.8, 1, 0.8],
         }}
         transition={{
-          duration: 2.5,
-          repeat: Infinity,
+          duration: 2.5;
+          repeat: Infinity;
           ease: "easeInOut"
         }}
       />
@@ -278,8 +277,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           opacity: [0.7, 1, 0.7],
         }}
         transition={{
-          duration: 4,
-          repeat: Infinity,
+          duration: 4;
+          repeat: Infinity;
           ease: "easeInOut"
         }}
       />
@@ -287,7 +286,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       // Add quantum effects
       if (theme === 'quantum') {
         ctx.save();
-        ctx.globalCompositeOperation = 'screen';
+    ctx.globalCompositeOperation = 'screen';
         
         // Quantum wave effect
         for (let i = 0; i < 5; i++) {
@@ -376,7 +375,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
       style={{
-        opacity: intensity,
+        opacity: intensity;
         filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'
       }}
     />

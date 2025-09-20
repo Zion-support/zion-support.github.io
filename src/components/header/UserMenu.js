@@ -1,7 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react';
-import { useAuth } from '../../hooks/useAuth';
+import React, { useState, useRef, useEffect } from 'react;';
+import { Link } from 'react-router-dom, ';
+import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react, ';
+import { useAuth } from '../../hooks/useAuth, ';
 
 export const UserMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +31,7 @@ export const UserMenu = () => {
       <div className="flex items-center space-x-4">
         <Link
           to="/login"
-          className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+          className="text-gray-700 hover: text-blue-600 font-medium transition-colors duration-200"
         >
           Sign In
         </Link>
@@ -43,13 +43,13 @@ export const UserMenu = () => {
         </Link>
       </div>
     );
-  }
+     }
 
   return (
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+        className="flex items-center space-x-2 text-gray-700 hover: text-blue-600 transition-colors duration-200"
       >
         <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
           <User size={16} className="text-white" />

@@ -1,48 +1,47 @@
 import React from "react";
 
-import { Link, useLocation } from "react-router-dom";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare, ChevronDown, Users, Briefcase, Settings, BarChart3 } from "lucide-react";
+import { Link, useLocation } from "react-router-dom, ";
+import { cn } from "@/lib/utils, ";
+import { useAuth } from "@/hooks/useAuth, ";
+import { MessageSquare, ChevronDown, Users, Briefcase, Settings, BarChart3 } from "lucide-react, ";
 =======
 =======
 =======
-import { MessageSquare, ChevronDown, Brain, Shield, Cloud, Zap } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState, useRef, useEffect } from "react";
+import { MessageSquare, ChevronDown, Brain, Shield, Cloud, Zap } from "lucide-react, ";
+import { useTranslation } from "react-i18next, ";
+import { useState, useRef, useEffect } from "react, ";
 =======
-import { MessageSquare, ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { MessageSquare, ChevronDown } from "lucide-react, ";
+import { useTranslation } from "react-i18next, ";
+import { useState } from "react, ";
 =======
-import { MessageSquare, ChevronDown, Users, Settings, HelpCircle, FileText } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState, useRef, useEffect } from "react";
+import { MessageSquare, ChevronDown, Users, Settings, HelpCircle, FileText } from "lucide-react, ";
+import { useTranslation } from "react-i18next, ";
+import { useState, useRef, useEffect } from "react, ";
 =======
-import { MessageSquare, ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState, useEffect, useRef } from "react";
+import { MessageSquare, ChevronDown } from "lucide-react, ";
+import { useTranslation } from "react-i18next, ";
+import { useState, useEffect, useRef } from "react, ";
 =======
-import { MessageSquare, ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { MessageSquare, ChevronDown } from "lucide-react, ";
+import { useTranslation } from "react-i18next, ";
+import { useState } from "react, ";
 =======
-import { MessageSquare, ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { MessageSquare, ChevronDown } from "lucide-react, ";
+import { useTranslation } from "react-i18next, ";
+import { useState } from "react, ";
 =======
-import { MessageSquare, ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { MessageSquare, ChevronDown } from "lucide-react, ";
+import { useTranslation } from "react-i18next, ";
+import { useState } from "react, ";
 =======
 =======
-import { useTranslation } from "react-i18next";
-import {
-  DropdownMenu,
+import { useTranslation } from "react-i18next, ";
+import { DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu, ";
 =======
 =======
 
@@ -54,10 +53,12 @@ interface MainNavigationProps {
 
 interface NavigationLink {
   key: string;
-  href: string;
-  name: string;
-  matches: (path: string) => boolean;
-  dropdown?: { href: string; name: string; }[];
+    href: string;
+    name: string;
+    matches: (path: string) => boolean;
+    dropdown?: { href: string;
+    name: string;
+     }[];
 }
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
@@ -88,7 +89,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
 =======
         setDropdownOpen(false);
-      }
+     }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -108,345 +109,339 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const serviceLinks = [
-    { key: 'ai-analytics', href: '/ai-analytics-dashboard', name: 'AI Analytics' },
-    { key: 'ai-content', href: '/ai-content-generator', name: 'AI Content Generator' },
-    { key: 'cybersecurity', href: '/cybersecurity-services', name: 'Cybersecurity' },
-    { key: 'cloud-migration', href: '/cloud-migration-services', name: 'Cloud Migration' },
+    { key: 'ai-analytics', href: '/ai-analytics-dashboard', name: 'AI Analytics' };
+    { key: 'ai-content', href: '/ai-content-generator', name: 'AI Content Generator' };
+    { key: 'cybersecurity', href: '/cybersecurity-services', name: 'Cybersecurity' };
+    { key: 'cloud-migration', href: '/cloud-migration-services', name: 'Cloud Migration' };
     { key: 'it-onsite', href: '/it-onsite-services', name: 'IT Onsite Services' }
   ];
-
-  let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
-=======
-      matches: (path: string) => path.startsWith('/blog'),
+    let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
+    =======
+      matches: (path: string) => path.startsWith('/blog');
       name: t('nav.blog')
     }
   ];
-
-  let links = baseLinks;
+    let links = baseLinks;
   
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsServicesOpen(false);
-      }
+     }
     };
 
 =======
   const baseLinks: NavigationLink[] = [
     {
-      key: 'home',
-      href: '/',
-      key: 'about',
-      href: '/about',
+      key: 'home';
+      href: '/';
+      key: 'about';
+      href: '/about';
       matches: (path: string) => path.startsWith('/about')
 =======
-      key: 'about',
-      href: '/about',
+      key: 'about';
+      href: '/about';
       matches: (path: string) => path === '/about'
-    },
+    };
     {
-      key: 'services',
-      href: '/services',
+      key: 'services';
+      href: '/services';
       matches: (path: string) => path.startsWith('/services')
 =======
-      key: 'services',
-      href: '/services',
+      key: 'services';
+      href: '/services';
       matches: (path: string) => path.startsWith('/services')
-    },
+    };
     {
-      key: 'ai-services',
-      href: '/ai-services',
+      key: 'ai-services';
+      href: '/ai-services';
       matches: (path: string) => path.startsWith('/ai-services')
-    },
+    };
     {
-      key: 'it-services',
-      href: '/it-services',
+      key: 'it-services';
+      href: '/it-services';
       matches: (path: string) => path.startsWith('/it-services')
-    },
+    };
     {
-      key: 'micro-saas',
-      href: '/micro-saas',
+      key: 'micro-saas';
+      href: '/micro-saas';
       matches: (path: string) => path.startsWith('/micro-saas')
-    },
+    };
     {
-      key: 'about',
-      href: '/about',
+      key: 'about';
+      href: '/about';
       matches: (path: string) => path.startsWith('/about')
-    },
+    };
     {
-      key: 'services',
-      href: '/services',
+      key: 'services';
+      href: '/services';
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services')
 =======
 =======
-      name: 'Home',
+      name: 'Home';
       matches: (path: string) => path === '/'
-    },
+    };
     {
-      key: 'services',
-      href: '/services',
-      name: 'Services',
+      key: 'services';
+      href: '/services';
+      name: 'Services';
       matches: (path: string) => path.startsWith('/services')
-    },
+    };
     {
-      key: 'services',
-      href: '/comprehensive-services',
+      key: 'services';
+      href: '/comprehensive-services';
       matches: (path: string) => path.startsWith('/comprehensive-services') || path.startsWith('/services')
-    },
+    };
     {
-      key: 'marketplace',
-      href: '/marketplace',
-      key: 'services',
-      href: '/services',
+      key: 'marketplace';
+      href: '/marketplace';
+      key: 'services';
+      href: '/services';
       matches: (path: string) => path.startsWith('/services')
 =======
-      key: 'services',
-      href: '/services',
+      key: 'services';
+      href: '/services';
       matches: (path: string) => path.startsWith('/services')
 =======
-      key: 'services',
-      href: '/services',
+      key: 'services';
+      href: '/services';
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services')
-    },
+    };
     {
-      key: 'micro-saas',
-      href: '/micro-saas-services',
+      key: 'micro-saas';
+      href: '/micro-saas-services';
       matches: (path: string) => path.startsWith('/micro-saas-services')
 =======
 =======
       matches: (path: string) => path === '/'
-    },
+    };
     {
-      key: 'marketplace',
-      href: '/marketplace',
+      key: 'marketplace';
+      href: '/marketplace';
       matches: (path: string) => path.startsWith('/marketplace')
-    },
+    };
     {
-      key: 'services',
-      href: '/services',
+      key: 'services';
+      href: '/services';
       matches: (path: string) => path.startsWith('/services')
-    },
+    };
     {
-      key: 'services',
-      href: '/services',
+      key: 'services';
+      href: '/services';
       matches: (path: string) => path.startsWith('/services')
 =======
-      key: 'services',
-      href: '/services',
+      key: 'services';
+      href: '/services';
       matches: (path: string) => path.startsWith('/services')
 =======
-      matches: (path: string) => path.startsWith('/marketplace'),
+      matches: (path: string) => path.startsWith('/marketplace');
       name: t('nav.marketplace')
 =======
-      name: 'Marketplace',
-      matches: (path: string) => path.startsWith('/marketplace'),
+      name: 'Marketplace';
+      matches: (path: string) => path.startsWith('/marketplace');
       dropdown: [
-        { href: '/marketplace', label: 'All Products' },
-        { href: '/categories', label: 'Categories' },
-        { href: '/equipment', label: 'Equipment' },
+        { href: '/marketplace', label: 'All Products' };
+        { href: '/categories', label: 'Categories' };
+        { href: '/equipment', label: 'Equipment' };
         { href: '/green-it', label: 'Green IT' }
       ]
 =======
-      key: 'services',
-      href: '/services',
+      key: 'services';
+      href: '/services';
       matches: (path: string) => path.startsWith('/services')
 =======
-      name: 'Marketplace',
-      matches: (path: string) => path.startsWith('/marketplace'),
+      name: 'Marketplace';
+      matches: (path: string) => path.startsWith('/marketplace');
       dropdown: [
-        { href: '/services', name: 'Services' },
-        { href: '/equipment', name: 'Equipment' },
-        { href: '/categories', name: 'Categories' },
+        { href: '/services', name: 'Services' };
+        { href: '/equipment', name: 'Equipment' };
+        { href: '/categories', name: 'Categories' };
         { href: '/green-it', name: 'Green IT' }
       ]
-    },
+    };
     {
 =======
 =======
 =======
-      key: 'talent',
-      href: '/talent',
-      key: 'ai-hiring',
-      href: '/zion-hire-ai',
+      key: 'talent';
+      href: '/talent';
+      key: 'ai-hiring';
+      href: '/zion-hire-ai';
       matches: (path: string) => path.startsWith('/zion-hire-ai') || path.startsWith('/hire-ai')
     }
   ];
-
-  const moreLinks = [
+    const moreLinks = [
     {
-      matches: (path: string) => path.startsWith('/equipment'),
+      matches: (path: string) => path.startsWith('/equipment');
       name: t('nav.equipment')
-    },
+    };
     {
-      key: 'partners',
-      href: '/partners',
+      key: 'partners';
+      href: '/partners';
       matches: (path: string) => path.startsWith('/partners')
 =======
-      name: 'Talent',
-      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
+      name: 'Talent';
+      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard');
       dropdown: [
-        { href: '/talent', label: 'Find Talent' },
-        { href: '/talent/apply', label: 'Apply as Talent' },
+        { href: '/talent', label: 'Find Talent' };
+        { href: '/talent/apply', label: 'Apply as Talent' };
         { href: '/zion-hire-ai', label: 'AI Hiring' }
       ]
-    },
+    };
     {
-      key: 'enterprise',
-      href: '/enterprise',
+      key: 'enterprise';
+      href: '/enterprise';
       matches: (path: string) => path.startsWith('/enterprise')
 =======
-      name: 'Talent',
-      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
+      name: 'Talent';
+      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard');
       dropdown: [
-        { href: '/talent', name: 'Browse Talent' },
-        { href: '/talents', name: 'Talent Directory' },
+        { href: '/talent', name: 'Browse Talent' };
+        { href: '/talents', name: 'Talent Directory' };
         { href: '/hire-ai', name: 'Hire AI' }
       ]
 =======
-      key: 'equipment',
-      href: '/equipment',
+      key: 'equipment';
+      href: '/equipment';
       matches: (path: string) => path.startsWith('/equipment')
-    },
+    };
     {
-      key: 'community',
-      href: '/community',
-      key: 'about',
-      href: '/about',
+      key: 'community';
+      href: '/community';
+      key: 'about';
+      href: '/about';
       matches: (path: string) => path === '/about'
 =======
-      key: 'company',
-      href: '/about',
+      key: 'company';
+      href: '/about';
       matches: (path: string) => path.startsWith('/about') || path.startsWith('/careers') || path.startsWith('/partners') || path.startsWith('/contact')
 =======
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum');
       name: t('nav.community')
 =======
-      key: 'about',
-      href: '/about',
+      key: 'about';
+      href: '/about';
       matches: (path: string) => path === '/about'
 =======
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
-    },
+    };
     {
-      key: 'blog',
-      href: '/blog',
-      key: 'contact',
-      href: '/contact',
+      key: 'blog';
+      href: '/blog';
+      key: 'contact';
+      href: '/contact';
       matches: (path: string) => path === '/contact'
 =======
-      icon: <Users className="w-4 h-4" />,
+      icon: <Users className="w-4 h-4" />;
       description: 'Join our community'
-    },
+    };
     {
-      key: 'help',
-      href: '/help-center',
-      icon: <HelpCircle className="w-4 h-4" />,
+      key: 'help';
+      href: '/help-center';
+      icon: <HelpCircle className="w-4 h-4" />;
       description: 'Get help and support'
-    },
+    };
     {
-      key: 'faq',
-      href: '/faq',
-      icon: <HelpCircle className="w-4 h-4" />,
+      key: 'faq';
+      href: '/faq';
+      icon: <HelpCircle className="w-4 h-4" />;
       description: 'Frequently asked questions'
 =======
-      name: 'Community',
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
+      name: 'Community';
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum');
       dropdown: [
-        { href: '/community', label: 'Forums' },
-        { href: '/blog', label: 'Blog' },
+        { href: '/community', label: 'Forums' };
+        { href: '/blog', label: 'Blog' };
         { href: '/partners', label: 'Partners' }
       ]
-    },
+    };
     {
-      key: 'about',
-      href: '/about',
-      key: 'blog',
-      href: '/blog',
+      key: 'about';
+      href: '/about';
+      key: 'blog';
+      href: '/blog';
       matches: (path: string) => path.startsWith('/blog')
 =======
 =======
       matches: (path: string) => path.startsWith('/blog')
     }
   ];
-
-  const serviceDropdowns = [
+    const serviceDropdowns = [
     {
-      key: 'ai-services',
-      label: 'AI Services',
-      icon: <Brain className="h-4 w-4" />,
+      key: 'ai-services';
+      label: 'AI Services';
+      icon: <Brain className="h-4 w-4" />;
       items: [
-        { name: 'AI Content Generator', href: '/ai-content-generator' },
-        { name: 'AI Talent Matching', href: '/match' },
-        { name: 'AI Model Training', href: '/ai-training' },
-        { name: 'AI Chatbot Builder', href: '/chatbot-builder' },
-        { name: 'AI-Powered Testing', href: '/ai-testing' },
-        { name: 'AI Legal Assistant', href: '/legal-ai' },
-        { name: 'AI Translation', href: '/ai-translation' },
-        { name: 'AI Financial Advisor', href: '/financial-ai' },
+        { name: 'AI Content Generator', href: '/ai-content-generator' };
+        { name: 'AI Talent Matching', href: '/match' };
+        { name: 'AI Model Training', href: '/ai-training' };
+        { name: 'AI Chatbot Builder', href: '/chatbot-builder' };
+        { name: 'AI-Powered Testing', href: '/ai-testing' };
+        { name: 'AI Legal Assistant', href: '/legal-ai' };
+        { name: 'AI Translation', href: '/ai-translation' };
+        { name: 'AI Financial Advisor', href: '/financial-ai' };
         { name: 'AI Design Assistant', href: '/design-ai' }
       ]
-    },
+    };
     {
-      key: 'security',
-      label: 'Security',
-      icon: <Shield className="h-4 w-4" />,
+      key: 'security';
+      label: 'Security';
+      icon: <Shield className="h-4 w-4" />;
       items: [
-        { name: 'Cybersecurity Suite', href: '/cybersecurity-suite' },
-        { name: 'Data Privacy Compliance', href: '/privacy-compliance' },
-        { name: 'Security Audits', href: '/security-audits' },
-        { name: 'Penetration Testing', href: '/penetration-testing' },
+        { name: 'Cybersecurity Suite', href: '/cybersecurity-suite' };
+        { name: 'Data Privacy Compliance', href: '/privacy-compliance' };
+        { name: 'Security Audits', href: '/security-audits' };
+        { name: 'Penetration Testing', href: '/penetration-testing' };
         { name: 'Compliance Reporting', href: '/compliance' }
       ]
-    },
+    };
     {
-      key: 'cloud-devops',
-      label: 'Cloud & DevOps',
-      icon: <Cloud className="h-4 w-4" />,
+      key: 'cloud-devops';
+      label: 'Cloud & DevOps';
+      icon: <Cloud className="h-4 w-4" />;
       items: [
-        { name: 'Cloud Cost Optimizer', href: '/cloud-optimizer' },
-        { name: 'DevOps Automation', href: '/devops-platform' },
-        { name: 'API Gateway', href: '/api-gateway' },
-        { name: 'Infrastructure as Code', href: '/infrastructure' },
+        { name: 'Cloud Cost Optimizer', href: '/cloud-optimizer' };
+        { name: 'DevOps Automation', href: '/devops-platform' };
+        { name: 'API Gateway', href: '/api-gateway' };
+        { name: 'Infrastructure as Code', href: '/infrastructure' };
         { name: 'Container Management', href: '/containers' }
       ]
-    },
+    };
     {
-      key: 'business-solutions',
-      label: 'Business',
-      icon: <Zap className="h-4 w-4" />,
+      key: 'business-solutions';
+      label: 'Business';
+      icon: <Zap className="h-4 w-4" />;
       items: [
-        { name: 'Data Analytics Platform', href: '/analytics-platform' },
-        { name: 'Customer Success Platform', href: '/customer-success' },
-        { name: 'AI-Powered HR Suite', href: '/hr-suite' },
-        { name: 'Project Management', href: '/dashboard/projects' },
+        { name: 'Data Analytics Platform', href: '/analytics-platform' };
+        { name: 'Customer Success Platform', href: '/customer-success' };
+        { name: 'AI-Powered HR Suite', href: '/hr-suite' };
+        { name: 'Project Management', href: '/dashboard/projects' };
         { name: 'Enterprise Solutions', href: '/enterprise' }
       ]
     }
 =======
   const serviceLinks = [
-    { key: 'ai-analytics', href: '/ai-analytics-dashboard', name: 'AI Analytics' },
-    { key: 'ai-content', href: '/ai-content-generator', name: 'AI Content Generator' },
-    { key: 'cybersecurity', href: '/cybersecurity-services', name: 'Cybersecurity' },
-    { key: 'cloud-migration', href: '/cloud-migration-services', name: 'Cloud Migration' },
+    { key: 'ai-analytics', href: '/ai-analytics-dashboard', name: 'AI Analytics' };
+    { key: 'ai-content', href: '/ai-content-generator', name: 'AI Content Generator' };
+    { key: 'cybersecurity', href: '/cybersecurity-services', name: 'Cybersecurity' };
+    { key: 'cloud-migration', href: '/cloud-migration-services', name: 'Cloud Migration' };
     { key: 'it-onsite', href: '/it-onsite-services', name: 'IT Onsite Services' }
   ];
-
-  let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
-=======
-      matches: (path: string) => path.startsWith('/blog'),
+    let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
+    =======
+      matches: (path: string) => path.startsWith('/blog');
       name: t('nav.blog')
     }
   ];
-
-  let links = baseLinks;
+    let links = baseLinks;
   
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsServicesOpen(false);
-      }
+     }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -455,59 +450,56 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     };
   }, []);
 =======
-      name: 'About',
+      name: 'About';
       matches: (path: string) => path.startsWith('/about') || path === '/careers' || path === '/contact'
     }
   ];
-
-  let links = baseLinks;
+    let links = baseLinks;
 =======
-      name: 'Community',
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
+      name: 'Community';
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum');
       dropdown: [
-        { href: '/community', name: 'Community Hub' },
-        { href: '/blog', name: 'Blog' },
+        { href: '/community', name: 'Community Hub' };
+        { href: '/blog', name: 'Blog' };
         { href: '/partners', name: 'Partners' }
       ]
-    },
+    };
     {
-      key: 'company',
-      href: '/about',
-      name: 'Company',
-      matches: (path: string) => path.startsWith('/about') || path.startsWith('/careers'),
+      key: 'company';
+      href: '/about';
+      name: 'Company';
+      matches: (path: string) => path.startsWith('/about') || path.startsWith('/careers');
       dropdown: [
-        { href: '/about', name: 'About Us' },
-        { href: '/careers', name: 'Careers' },
+        { href: '/about', name: 'About Us' };
+        { href: '/careers', name: 'Careers' };
         { href: '/contact', name: 'Contact' }
       ]
     }
   ];
-
-  let links: NavigationLink[] = baseLinks;
-  
-  // Add authenticated-only links
+    let links: NavigationLink[] = baseLinks;
+    // Add authenticated-only links
   if (isAuthenticated) {
     links.push({
-      key: 'dashboard',
-      name: 'Dashboard',
-      href: '/dashboard',
+      key: 'dashboard';
+      name: 'Dashboard';
+      href: '/dashboard';
       matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'
     });
-  }
+     }
   
   // Add admin-only links
   if (isAdmin) {
     links.push({
-      key: 'analytics',
-      name: 'Analytics',
-      href: '/analytics',
+      key: 'analytics';
+      name: 'Analytics';
+      href: '/analytics';
       matches: (path: string) => path.startsWith('/analytics')
     });
-  }
+     }
 
   const handleDropdownToggle = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
-  };
+     };
 
   const closeDropdown = () => {
     setActiveDropdown(null);
@@ -515,7 +507,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   
   const handleDropdownToggle = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
-  };
+     };
 
   const handleDropdownClose = () => {
     setActiveDropdown(null);
@@ -523,7 +515,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   
   const handleDropdownToggle = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
-  };
+     };
 
   const closeDropdowns = () => {
     setActiveDropdown(null);
@@ -534,28 +526,27 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 =======
   const toggleDropdown = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
-  };
+     };
 
   const isDropdownActive = (key: string) => activeDropdown === key;
-  
-  return (
+    return (
     <nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
       <ul className="flex items-center gap-1">
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative overflow-hidden group",
                 link.matches(location.pathname)
                   ? "bg-gradient-to-r from-zion-purple/30 to-zion-cyan/30 text-zion-cyan shadow-lg shadow-zion-purple/20"
-                  : "text-white hover:text-zion-cyan"
+                  : "text-white hover: text-zion-cyan"
               )}
             >
               {/* Hover background effect */}
               <div className={cn(
-                "absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md",
+                "absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md";
                 link.matches(location.pathname) && "opacity-100"
               )} />
               
               {/* Glowing border effect */}
               <div className={cn(
-                "absolute inset-0 rounded-md border border-transparent group-hover:border-zion-purple/30 transition-all duration-300",
+                "absolute inset-0 rounded-md border border-transparent group-hover: border-zion-purple/30 transition-all duration-300";
                 link.matches(location.pathname) && "border-zion-cyan/50"
               )} />
               
@@ -576,7 +567,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                     "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
                     link.matches(location.pathname)
                       ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                      : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
                   {link.name}
@@ -604,7 +595,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               <Link
                 to={link.href}
                 className={cn(
-                  "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+                  "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors";
                   link.matches(location.pathname)
                     ? "bg-zion-purple/20 text-zion-cyan"
                     : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
@@ -638,14 +629,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
                   link.matches(location.pathname)
                     ? "bg-zion-purple/20 text-zion-cyan"
-                    : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                    : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                 )}
               >
                 {link.name}
               </Link>
             </li>
           );
-        })}
+     })}
 =======
 
         {/* Service Dropdowns */}
@@ -657,14 +648,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 "inline-flex h-9 items-center gap-2 rounded-md px-4 text-sm font-medium transition-colors",
                 isDropdownActive(dropdown.key)
                   ? "bg-zion-purple/20 text-zion-cyan"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
               )}
               onClick={closeDropdown}
             >
               {dropdown.icon}
               {dropdown.label}
               <ChevronDown className={cn(
-                "h-3 w-3 transition-transform duration-200",
+                "h-3 w-3 transition-transform duration-200";
                 isDropdownActive(dropdown.key) ? "rotate-180" : ""
               )} />
             </button>
@@ -678,7 +669,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       key={index}
                       to={item.href}
                       onClick={() => setActiveDropdown(null)}
-                      className="flex items-center gap-3 px-3 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-md transition-colors"
+                      className="flex items-center gap-3 px-3 py-2 text-sm text-zion-slate-light hover: text-zion-cyan hover:bg-zion-purple/10 rounded-md transition-colors"
                     >
                       {dropdown.icon}
                       {item.name}
@@ -698,10 +689,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             onMouseEnter={() => setIsServicesOpen(true)}
             onMouseLeave={() => setIsServicesOpen(false)}
             className={cn(
-              "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+              "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors";
               location.pathname.startsWith('/services') || location.pathname.startsWith('/it-onsite-services') || location.pathname.startsWith('/green-it')
                 ? "bg-zion-purple/20 text-zion-cyan"
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
             )}
           >
             Services
@@ -749,10 +740,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             onMouseEnter={() => setIsCompanyOpen(true)}
             onMouseLeave={() => setIsCompanyOpen(false)}
             className={cn(
-              "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+              "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors";
               location.pathname === '/about' || location.pathname === '/careers' || location.pathname === '/partners' || location.pathname === '/contact'
                 ? "bg-zion-purple/20 text-zion-cyan"
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
             )}
           >
             Company
@@ -805,7 +796,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           <button
             onClick={() => setDropdownOpen(!dropdownOpen)}
             className={cn(
-              "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+              "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors";
               dropdownOpen
                 ? "bg-zion-purple/20 text-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
@@ -823,7 +814,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                     key={link.key}
                     to={link.href}
                     onClick={() => setDropdownOpen(false)}
-                    className="flex items-start gap-3 p-3 rounded-md text-white hover:bg-zion-purple/10 transition-colors"
+                    className="flex items-start gap-3 p-3 rounded-md text-white hover: bg-zion-purple/10 transition-colors"
                   >
                     <div className="text-zion-cyan mt-0.5">
                       {link.icon}
@@ -845,10 +836,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           <button
             onClick={() => setIsServicesOpen(!isServicesOpen)}
             className={cn(
-              "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+              "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors";
               location.pathname.includes('/ai-') || location.pathname.includes('/cybersecurity') || location.pathname.includes('/cloud-migration')
                 ? "bg-zion-purple/20 text-zion-cyan"
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
             )}
           >
             Services
@@ -864,7 +855,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                     to={service.href}
                     onClick={() => setIsServicesOpen(false)}
                     className={cn(
-                      "block px-4 py-2 text-sm text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors",
+                      "block px-4 py-2 text-sm text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors";
                       location.pathname === service.href && "bg-zion-purple/20 text-zion-cyan"
                     )}
                   >
@@ -884,7 +875,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
               activeDropdown === 'company'
                 ? "bg-zion-purple/20 text-zion-cyan"
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
             )}
           >
             Company
@@ -931,10 +922,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           <button
             onClick={() => handleDropdownToggle('support')}
             className={cn(
-              "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+              "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors";
               activeDropdown === 'support'
                 ? "bg-zion-purple/20 text-zion-cyan"
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
             )}
           >
             Support
@@ -974,10 +965,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <Link
               to={link.href}
               className={cn(
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors";
                 link.matches(location.pathname)
                   ? "bg-zion-purple/20 text-zion-cyan"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
               )}
             >
               {link.name}
@@ -1064,14 +1055,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               to="/messages"
               className={cn(
 =======
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative";
                 location.pathname === "/messages" || location.pathname === "/inbox"
                   ? "bg-zion-purple/20 text-zion-cyan"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative",
+                  : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative";
                 location.pathname === "/messages" || location.pathname === "/inbox"
                   ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:border hover:border-zion-purple/20"
+                  : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan hover:border hover:border-zion-purple/20"
 =======
 =======
               )}

@@ -1,10 +1,10 @@
-import React from 'react';
-import { ErrorBoundar, y, FallbackProps } from 'react-error-boundary';
-import * as Sentry from '@sentry/nextjs';
-import { mutate } from 'swr';
-import { Button } from '@/components/ui/button';
-import { Aler, t, AlertDescriptio, n, AlertTitle } from '@/components/ui/alert';
-import { RefreshCc, w, AlertCircle } from 'lucide-react';
+import React from 'react;';
+import { ErrorBoundar, y, FallbackProps } from 'react-error-boundary, ';
+import * as Sentry from '@sentry/nextjs;';
+import { mutate } from 'swr, ';
+import { Button } from '@/components/ui/button, ';
+import { Aler, t, AlertDescriptio, n, AlertTitle } from '@/components/ui/alert, ';
+import { RefreshCc, w, AlertCircle } from 'lucide-react, ';
 
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed
@@ -15,7 +15,7 @@ function MarketplaceErrorFallback({ erro,  r, resetErrorBoundary }: MarketplaceE
     try {
       // Re-call SWR mutate('*') to refresh all cached data
       await mutate(() => tru,  e, undefine, d, { revalidat, e: true });
-      resetErrorBoundary();
+    resetErrorBoundary();
     } catch (retryError) {
       
       Sentry.captureException(retryError);
@@ -56,7 +56,7 @@ function MarketplaceErrorFallback({ erro,  r, resetErrorBoundary }: MarketplaceE
           If the proble,  m, persist, s, please{' '}
           <a 
             href="mailt, o:support@example.com" 
-            className="text-primary hove, r:underline"
+            className="text-primary hove, r: underline"
           >
             contact support
           </a>

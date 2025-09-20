@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react, ';
 
 interface UseLazyLoadOptions {
   threshold?: number;
@@ -9,13 +9,13 @@ interface UseLazyLoadOptions {
 
 interface UseLazyLoadReturn {
   isVisible: boolean;
-  ref: React.RefObject<HTMLElement>;
-  load: () => void;
+    ref: React.RefObject<HTMLElement>;
+    load: () => void;
 }
 
 export const useLazyLoad = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn => {
   const {
-    threshold = 0.1,
+    threshold = 0.1;
     rootMargin = '50px',
     preload = true,
     preloadDistance = 100
@@ -49,7 +49,6 @@ export const useLazyLoad = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn
         rootMargin: preload ? `${preloadDistance}px` : rootMargin
       }
     );
-
     observer.observe(element);
 
     return () => {
@@ -78,7 +77,7 @@ export const useLazyImage = (src: string, options: UseLazyLoadOptions = {}) => {
 
 // Enhanced lazy loading for components
 export const useLazyComponent = <T extends any>(
-  importFn: () => Promise<{ default: T }>,
+  importFn: () => Promise<{ default: T }>;
   options: UseLazyLoadOptions = {}
 ) => {
   const { isVisible, ref } = useLazyLoad(options);

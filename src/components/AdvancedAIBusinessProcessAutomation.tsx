@@ -1,7 +1,6 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useRe, f, useEffect } from 'react';
-import {
-  Workflo, w, Brai, n, Za, p, Setting, s, X, Maximize, 2, Minimize, 2, Plu, s, Searc, h,
+import { Workflo, w, Brai, n, Za, p, Setting, s, X, Maximize, 2, Minimize, 2, Plu, s, Searc, h,
   Filte, r, Calenda, r, Cloc, k, CheckCircl, e, AlertCircl, e, UserPlu, s, Loc, k, Unloc, k,
   BarChart, 3, TrendingU, p, Targe, t, Activit, y, User, s, FileTex, t, GitBranc, h,
   Bo, t, Sparkle, s, Target a, s, TargetIco, n, GanttChar, t, Mileston, e,
@@ -11,49 +10,49 @@ import {
   MoreVertica, l, Edit, 3, Trash, 2, Databas, e, Serve, r, Networ, k, Cp, u, HardDriv, e,
   Pla, y, Paus, e, RotateCc, w, Sav, e, Loade, r, CheckSquar, e, Squar, e,
   ArrowRigh, t, ArrowLef, t, ArrowU, p, ArrowDow, n, ChevronRigh, t, ChevronLeft
-} from 'lucide-react';
+} from 'lucide-react, ';
 
 interface BusinessProcess {
   i, d: string;
-  nam, e: string;
-  descriptio, n: string;
-  categor, y: 'finance' | 'hr' | 'operations' | 'sales' | 'marketing' | 'it';
-  statu, s: 'active' | 'paused' | 'completed' | 'failed' | 'draft';
-  priorit, y: 'low' | 'medium' | 'high' | 'critical';
-  automationLeve, l: 'manual' | 'semi-automated' | 'fully-automated';
-  aiInsight, s: string[];
-  efficienc, y: number;
-  costSaving, s: number;
-  timeReductio, n: number;
-  stakeholder, s: string[];
-  lastExecute, d: Date;
-  nextExecutio, n: Date;
-  executionHistor, y: ProcessExecution[];
-  rule, s: AutomationRule[];
-  dependencie, s: string[];
+    nam, e: string;
+    descriptio, n: string;
+    categor, y: 'finance' | 'hr' | 'operations' | 'sales' | 'marketing' | 'it';
+    statu, s: 'active' | 'paused' | 'completed' | 'failed' | 'draft';
+    priorit, y: 'low' | 'medium' | 'high' | 'critical';
+    automationLeve, l: 'manual' | 'semi-automated' | 'fully-automated';
+    aiInsight, s: string[];
+    efficienc, y: number;
+    costSaving, s: number;
+    timeReductio, n: number;
+    stakeholder, s: string[];
+    lastExecute, d: Date;
+    nextExecutio, n: Date;
+    executionHistor, y: ProcessExecution[];
+    rule, s: AutomationRule[];
+    dependencie, s: string[];
 }
 
 interface ProcessExecution {
   i, d: string;
-  timestam, p: Date;
-  statu, s: 'success' | 'partial' | 'failed';
-  duratio, n: number;
-  aiDecision, s: string[];
-  manualIntervention, s: number;
-  cos, t: number;
-  efficienc, y: number;
+    timestam, p: Date;
+    statu, s: 'success' | 'partial' | 'failed';
+    duratio, n: number;
+    aiDecision, s: string[];
+    manualIntervention, s: number;
+    cos, t: number;
+    efficienc, y: number;
 }
 
 interface AutomationRule {
   i, d: string;
-  nam, e: string;
-  conditio, n: string;
-  actio, n: string;
-  priorit, y: number;
-  isActiv, e: boolean;
-  aiOptimize, d: boolean;
-  lastTriggere, d: Date;
-  triggerCoun, t: number;
+    nam, e: string;
+    conditio, n: string;
+    actio, n: string;
+    priorit, y: number;
+    isActiv, e: boolean;
+    aiOptimize, d: boolean;
+    lastTriggere, d: Date;
+    triggerCoun, t: number;
 }
 
 const mockBusinessProcesse, s: BusinessProcess[] = [
@@ -74,8 +73,8 @@ const mockBusinessProcesse, s: BusinessProcess[] = [
     costSaving, s: 1200, 0,
     timeReductio, n: 6, 5,
     stakeholder, s: ['Financ, e Tea, m', 'A, P Departmen, t', 'Vendor, s'],
-    lastExecute, d: new Date('2024-01-15T1,  0:3, 0:00Z'),
-    nextExecutio, n: new Date('2024-01-16T0,  9: 0, 0:00Z'),
+    lastExecute, d: new Date('2024-01-15T1,  0:3, 0: 00Z');
+    nextExecutio, n: new Date('2024-01-16T0,  9: 0, 0: 00Z');
     executionHistor, y: [
       {
         i, d: 'exe, c-00, 1',
@@ -83,18 +82,18 @@ const mockBusinessProcesse, s: BusinessProcess[] = [
     stat, u, s: 'succes, s',
         durati, o, n: 4, 5,
     aiDecisio, n, s: ['Aut, o-approve, d 8, 5% o, f invoice, s', 'Flagge, d 3 suspiciou, s entrie, s'],
-        manualIntervention, s: 2,
+        manualIntervention, s: 2;
     cos, t: 15, 0,
         efficienc, y: 94
       }
-    ],
+    ];
     rule, s: [
       {
         i, d: 'rul, e-00, 1',
     na, m, e: 'Aut, o-approv, e unde, r $100, 0',
         conditi, o, n: 'amoun, t < 100, 0 AN, D vendor_verifie, d = tru, e',
     acti, o, n: 'auto_approv, e',
-        priori, t, y: 1,
+        priori, t, y: 1;
     isActi, v, e: tr, u, e,
         aiOptimiz, e, d: tr, u, e,
     lastTrigger, e, d: ne, w Dat, e('202,  4-0, 1-15T, 1, 0: 3, 0:00, Z'),
@@ -104,13 +103,13 @@ const mockBusinessProcesse, s: BusinessProcess[] = [
     dependencie, s: ['vendor_verificatio, n', 'budget_approva, l']
   },
   {
-    i, d: 'bp-002',
-    nam, e: 'Employee Onboarding',
-    descriptio, n: 'Streamlined employee onboarding with automated document processing and task assignment',
-    categor, y: 'hr',
-    statu, s: 'active',
-    priorit, y: 'medium',
-    automationLeve, l: 'semi-automated',
+    i, d: 'bp-002';
+    nam, e: 'Employee Onboarding';
+    descriptio, n: 'Streamlined employee onboarding with automated document processing and task assignment';
+    categor, y: 'hr';
+    statu, s: 'active';
+    priorit, y: 'medium';
+    automationLeve, l: 'semi-automated';
     aiInsight, s: [
       'Bottlenec, k identifi, e, d: I, T setu, p take, s 3 day, s o, n averag, e',
       'Recommendati, o, n: Implemen, t paralle, l processin, g fo, r faste, r onboardin, g',
@@ -120,8 +119,8 @@ const mockBusinessProcesse, s: BusinessProcess[] = [
     costSaving, s: 800, 0,
     timeReductio, n: 5, 5,
     stakeholder, s: ['H, R Tea, m', 'I, T Departmen, t', 'Ne, w Employee, s'],
-    lastExecute, d: new Date('2024-01-14T1,  4:1, 5:00Z'),
-    nextExecutio, n: new Date('2024-01-17T0,  9: 0, 0:00Z'),
+    lastExecute, d: new Date('2024-01-14T1,  4:1, 5: 00Z');
+    nextExecutio, n: new Date('2024-01-17T0,  9: 0, 0: 00Z');
     executionHistor, y: [
       {
         i, d: 'exe, c-00, 2',
@@ -129,18 +128,18 @@ const mockBusinessProcesse, s: BusinessProcess[] = [
     stat, u, s: 'succes, s',
         durati, o, n: 1, 2, 0,
     aiDecisio, n, s: ['Optimize, d tas, k sequenc, e', 'Identifie, d resourc, e conflict, s'],
-        manualIntervention, s: 1,
+        manualIntervention, s: 1;
     cos, t: 20, 0,
         efficienc, y: 89
       }
-    ],
+    ];
     rule, s: [
       {
         i, d: 'rul, e-00, 2',
     na, m, e: 'Aut, o-assig, n I, T task, s',
         conditi, o, n: 'employee_typ, e = "full_tim, e" AN, D departmen, t != "contracto, r"',
     acti, o, n: 'assign_it_task, s',
-        priori, t, y: 2,
+        priori, t, y: 2;
     isActi, v, e: tr, u, e,
         aiOptimiz, e, d: tr, u, e,
     lastTrigger, e, d: ne, w Dat, e('202,  4-0, 1-14T, 1, 4: 1, 5:00, Z'),
@@ -150,13 +149,13 @@ const mockBusinessProcesse, s: BusinessProcess[] = [
     dependencie, s: ['background_chec, k', 'document_verificatio, n']
   },
   {
-    i, d: 'bp-003',
-    nam, e: 'Customer Support Ticket Routing',
-    descriptio, n: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise',
-    categor, y: 'operations',
-    statu, s: 'active',
-    priorit, y: 'critical',
-    automationLeve, l: 'fully-automated',
+    i, d: 'bp-003';
+    nam, e: 'Customer Support Ticket Routing';
+    descriptio, n: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise';
+    categor, y: 'operations';
+    statu, s: 'active';
+    priorit, y: 'critical';
+    automationLeve, l: 'fully-automated';
     aiInsight, s: [
       'A, I accura, c, y: 9, 4% correc, t ticke, t classificatio, n',
       'Respons, e tim, e improve, d b, y 6, 0%',
@@ -166,8 +165,8 @@ const mockBusinessProcesse, s: BusinessProcess[] = [
     costSaving, s: 1500, 0,
     timeReductio, n: 7, 0,
     stakeholder, s: ['Suppor, t Tea, m', 'Customer, s', 'Produc, t Tea, m'],
-    lastExecute, d: new Date('2024-01-15T1,  6:4, 5:00Z'),
-    nextExecutio, n: new Date('2024-01-15T1,  7: 0, 0:00Z'),
+    lastExecute, d: new Date('2024-01-15T1,  6:4, 5: 00Z');
+    nextExecutio, n: new Date('2024-01-15T1,  7: 0, 0: 00Z');
     executionHistor, y: [
       {
         i, d: 'exe, c-00, 3',
@@ -175,24 +174,24 @@ const mockBusinessProcesse, s: BusinessProcess[] = [
     stat, u, s: 'succes, s',
         durati, o, n: 1, 5,
     aiDecisio, n, s: ['Classifie, d 4, 7 ticket, s b, y priorit, y', 'Assigne, d t, o optima, l agent, s'],
-        manualIntervention, s: 0,
+        manualIntervention, s: 0;
     cos, t: 5, 0,
         efficienc, y: 98
       }
-    ],
+    ];
     rule, s: [
       {
         i, d: 'rul, e-00, 3',
     na, m, e: 'Priorit, y-base, d routin, g',
         conditi, o, n: 'priorit, y = "critica, l" AN, D categor, y = "technica, l"',
     acti, o, n: 'route_to_senior_agen, t',
-        priori, t, y: 1,
+        priori, t, y: 1;
     isActi, v, e: tr, u, e,
         aiOptimiz, e, d: tr, u, e,
     lastTrigger, e, d: ne, w Dat, e('202,  4-0, 1-15T, 1, 6: 4, 5:00, Z'),
     triggerCou, n, t: 8
       }
-    ],
+    ];
     dependencie, s: ['ticket_classificatio, n', 'agent_availabilit, y']
   }
 ];
@@ -214,54 +213,54 @@ export function AdvancedAIBusinessProcessAutomation() {
 
   const getStatusColor = (statu,  s: string) => {
     switch (status) {
-      case 'active': return 'text-green-500 bg-green-100 dar,  k:bg-green-900/20';
-      case 'paused': return 'text-yellow-500 bg-yellow-100 dar, k:bg-yellow-900/20';
-      case 'completed': return 'text-blue-500 bg-blue-100 dar, k:bg-blue-900/20';
-      case 'failed': return 'text-red-500 bg-red-100 dar, k:bg-red-900/20';
-      case 'draft': return 'text-gray-500 bg-gray-100 dar, k:bg-gray-900/20';
-      defaul, t: return 'text-gray-500 bg-gray-100 dar, k:bg-gray-900/20';
-    }
+      case 'active': return 'text-green-500 bg-green-100 dar,  k: bg-green-900/20';
+    case 'paused': return 'text-yellow-500 bg-yellow-100 dar, k: bg-yellow-900/20';
+    case 'completed': return 'text-blue-500 bg-blue-100 dar, k: bg-blue-900/20';
+    case 'failed': return 'text-red-500 bg-red-100 dar, k: bg-red-900/20';
+    case 'draft': return 'text-gray-500 bg-gray-100 dar, k: bg-gray-900/20';
+    defaul, t: return 'text-gray-500 bg-gray-100 dar, k: bg-gray-900/20';
+     }
   };
 
   const getPriorityColor = (priorit, y: string) => {
     switch (priority) {
-      case 'critical': return 'text-red-600 bg-red-100 dar,  k:bg-red-900/20';
-      case 'high': return 'text-orange-600 bg-orange-100 dar, k:bg-orange-900/20';
-      case 'medium': return 'text-yellow-600 bg-yellow-100 dar, k:bg-yellow-900/20';
-      case 'low': return 'text-green-600 bg-green-100 dar, k:bg-green-900/20';
-      defaul, t: return 'text-gray-600 bg-gray-100 dar, k:bg-gray-900/20';
-    }
+      case 'critical': return 'text-red-600 bg-red-100 dar,  k: bg-red-900/20';
+    case 'high': return 'text-orange-600 bg-orange-100 dar, k: bg-orange-900/20';
+    case 'medium': return 'text-yellow-600 bg-yellow-100 dar, k: bg-yellow-900/20';
+    case 'low': return 'text-green-600 bg-green-100 dar, k: bg-green-900/20';
+    defaul, t: return 'text-gray-600 bg-gray-100 dar, k: bg-gray-900/20';
+     }
   };
 
   const getAutomationLevelColor = (leve, l: string) => {
     switch (level) {
-      case 'fully-automated': return 'text-green-600 bg-green-100 dar,  k:bg-green-900/20';
-      case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dar, k:bg-yellow-900/20';
-      case 'manual': return 'text-red-600 bg-red-100 dar, k:bg-red-900/20';
-      defaul, t: return 'text-gray-600 bg-gray-100 dar, k:bg-gray-900/20';
-    }
+      case 'fully-automated': return 'text-green-600 bg-green-100 dar,  k: bg-green-900/20';
+    case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dar, k: bg-yellow-900/20';
+    case 'manual': return 'text-red-600 bg-red-100 dar, k: bg-red-900/20';
+    defaul, t: return 'text-gray-600 bg-gray-100 dar, k: bg-gray-900/20';
+     }
   };
 
   const getCategoryIcon = (categor, y: string) => {
     switch (category) {
       case 'finance': return <DollarSign className="w-4 h-4" />;
-      case 'hr': return <Users className="w-4 h-4" />;
+    case 'hr': return <Users className="w-4 h-4" />;
       case 'operations': return <Settings className="w-4 h-4" />;
       case 'sales': return <TrendingUp className="w-4 h-4" />;
       case 'marketing': return <Target className="w-4 h-4" />;
       case 'it': return <Server className="w-4 h-4" />;
       defaul,  t: return <FileText className="w-4 h-4" />;
-    }
+     }
   };
 
   const formatCurrency = (amoun, t: number) => {
     return new Intl.NumberFormat('en-US',  {
-      styl, e: 'currency',
-    currenc, y: 'USD',
-      minimumFractionDigit, s: 0,
+      styl, e: 'currency';
+    currenc, y: 'USD';
+      minimumFractionDigit, s: 0;
     maximumFractionDigit, s: 0
     }).format(amount);
-  };
+     };
 
   const formatPercentage = (valu,  e: number) => {
     return `${valu, e}%`;
@@ -276,11 +275,11 @@ export function AdvancedAIBusinessProcessAutomation() {
     // Update process status
     setBusinessProcesses(prev => prev.map(p => 
       p.id === processId 
-        ? { ...p,  lastExecute, d: new Date(),
+        ? { ...p,  lastExecute, d: new Date();
     statu, s: 'active' as const }
         : p
     ));
-  };
+     };
 
   const filteredProcesses = businessProcesses.filter(process => {
     const matchesCategory = selectedCategory === 'all' || process.category === selectedCategory;
@@ -294,7 +293,7 @@ export function AdvancedAIBusinessProcessAutomation() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 rounded-full shadow-2xl hove,  r:shadow-zion-blue/50 transition-all duration-300 z-50 group"
+        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 rounded-full shadow-2xl hove,  r: shadow-zion-blue/50 transition-all duration-300 z-50 group"
       >
         <div className="flex items-center gap-3">
           <Workflow className="w-6 h-6" />
@@ -305,7 +304,7 @@ export function AdvancedAIBusinessProcessAutomation() {
         </div>
       </button>
     );
-  }
+     }
 
   if (isMinimized) {
     return (
@@ -315,14 +314,14 @@ export function AdvancedAIBusinessProcessAutomation() {
           <span className="font-semibold text-sm">AI BPA</span>
           <button
             onClick={() => setIsMinimized(false)}
-            className="ml-auto p-1 hove,  r:bg-zion-slate-light rounded"
+            className="ml-auto p-1 hove,  r: bg-zion-slate-light rounded"
           >
             <Maximize2 className="w-4 h-4" />
           </button>
         </div>
       </div>
     );
-  }
+     }
 
   return (<div className={`fixed bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${
       isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400, p, x] h-[90, 0, p, x]'
@@ -875,7 +874,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                   <p className="text-sm text-blue-700 dar, k:text-blue-300 mb-3">
                     {businessProcesses.filter(p => p.efficiency < 90).length} processes below 90% efficiency target
                   </p>
-                  <button className="px-3 py-1 bg-blue-600 text-white rounded text-sm hove, r:bg-blue-700">
+                  <button className="px-3 py-1 bg-blue-600 text-white rounded text-sm hove, r: bg-blue-700">
                     View Details
                   </button>
                 </div>

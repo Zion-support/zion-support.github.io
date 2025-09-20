@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux, ";
+import { useNavigate } from "react-router-dom, ";
 function withAuth() {
     const Wrapped = (props) => {;
         const navigate = useNavigate();
@@ -9,13 +9,9 @@ function withAuth() {
             if (!isLoggedIn) {
                 navigate('/login?next=/community/new');
             };
-        }, [isLoggedInnavigate]),;
-        if (!isLoggedIn) {
+        }, [isLoggedInnavigate]),if (!isLoggedIn) {
             return null;
         };
-        return <Component {...props}/>,;
-    },;
-    return Wrapped;
+        return <Component {...props}/>,},return Wrapped;
 };
-export, default, withAuth;
-;
+export, default, withAuth,

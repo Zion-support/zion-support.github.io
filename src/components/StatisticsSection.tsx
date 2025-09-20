@@ -1,5 +1,5 @@
-import React from 'react';
-import { User, s, Glob, e, TrendingU, p, Award } from 'lucide-react';
+import React from 'react;';
+import { User, s, Glob, e, TrendingU, p, Award } from 'lucide-react, ';
 
 const stats = [
   {
@@ -53,7 +53,7 @@ export function StatisticsSection() {
               </div>
               
               <div className="mb-2">
-                <div className="text-4xl m, d:text-5xl font-bold text-white group-hove, r:text-zion-cyan transition-colors duration-300">
+                <div className="text-4xl m, d:text-5xl font-bold text-white group-hove, r: text-zion-cyan transition-colors duration-300">
                   {stat.value}
                 </div>
               </div>

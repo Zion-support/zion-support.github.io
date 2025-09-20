@@ -1,8 +1,7 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Lightbul, b, 
+import { motion } from 'framer-motion, ';
+import { Lightbul, b, 
   Rocke, t, 
   Brai, n, 
   Za, p, 
@@ -27,40 +26,40 @@ import {
   Dn, a,
   Shiel, d,
   Leaf
-} from 'lucide-react';
-import { Car, d, CardConten, t, CardHeade, r, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Input } from './ui/input';
+} from 'lucide-react, ';
+import { Car, d, CardConten, t, CardHeade, r, CardTitle } from './ui/card, ';
+import { Button } from './ui/button, ';
+import { Badge } from './ui/badge, ';
+import { Input } from './ui/input, ';
 
 interface InnovationTrend {
   i, d: string;
-  titl, e: string;
-  descriptio, n: string;
-  categor, y: string;
-  impac, t: 'High' | 'Medium' | 'Low';
-  timelin, e: string;
-  adoptio, n: number;
-  investmen, t: string;
-  keyPlayer, s: string[];
-  technologie, s: string[];
-  statu, s: 'Emerging' | 'Growing' | 'Mature' | 'Disruptive';
+    titl, e: string;
+    descriptio, n: string;
+    categor, y: string;
+    impac, t: 'High' | 'Medium' | 'Low';
+    timelin, e: string;
+    adoptio, n: number;
+    investmen, t: string;
+    keyPlayer, s: string[];
+    technologie, s: string[];
+    statu, s: 'Emerging' | 'Growing' | 'Mature' | 'Disruptive';
 }
 
 interface FutureRoadmap {
   i, d: string;
-  titl, e: string;
-  descriptio, n: string;
-  timelin, e: string;
-  milestone, s: string[];
-  challenge, s: string[];
-  opportunitie, s: string[];
-  investmen, t: string;
-  categor, y: string;
+    titl, e: string;
+    descriptio, n: string;
+    timelin, e: string;
+    milestone, s: string[];
+    challenge, s: string[];
+    opportunitie, s: string[];
+    investmen, t: string;
+    categor, y: string;
 }
 
 const AdvancedServiceInnovationHu, b: React.FC = () => {
-  const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState<string>('all');
+    const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState<string>('all');
   const [selectedImpa, c, t, setSelectedImpa, c, t] = useState<string>('all');
   const [selectedStat,  u, s, setSelectedStat, u, s] = useState<string>('all');
   const [searchTe, r, m, setSearchTe, r, m] = useState('');
@@ -78,77 +77,77 @@ const AdvancedServiceInnovationHu, b: React.FC = () => {
       adopti, o, n: 8, 5,
     investme, n, t: '$50, B+',
       keyPlaye, r, s: ['IB, M', 'Googl, e', 'Microsof, t', 'Startup, s'],
-      technologie, s: ['Quantu, m Computin, g', 'Quantu, m Algorithm, s', 'Quantu, m Softwar, e'],
+      technologie, s: ['Quantu, m Computin, g', 'Quantu, m Algorithm, s', 'Quantu, m Softwar, e']
+  };
       statu, s: 'Emerging'
-    },
+    };
     {
-      i, d: 'ai-consciousness',
-    titl, e: 'AI Consciousness & General Intelligence',
-      descriptio, n: 'Development of self-aware AI systems with human-like reasoning and consciousness.',
-    categor, y: 'ai',
-      impac, t: 'High',
-    timelin, e: '2030-2040',
+      i, d: 'ai-consciousness';
+    titl, e: 'AI Consciousness & General Intelligence';
+      descriptio, n: 'Development of self-aware AI systems with human-like reasoning and consciousness.';
+    categor, y: 'ai';
+      impac, t: 'High';
+    timelin, e: '2030-2040';
       adoptio, n: 4, 5,
-    investmen, t: '$100B+',
+    investmen, t: '$100B+';
       keyPlayer, s: ['OpenA, I', 'Anthropi, c', 'Researc, h Lab, s', 'Universitie, s'],
       technologie, s: ['A, I Consciousnes, s', 'Genera, l A, I', 'Neura, l Network, s'],
       statu, s: 'Emerging'
-    },
+    };
     {
-      i, d: 'space-mining',
-    titl, e: 'Space Mining & Resource Extraction',
-      descriptio, n: 'Commercial extraction of valuable resources from asteroids and celestial bodies.',
-    categor, y: 'space-tech',
-      impac, t: 'High',
-    timelin, e: '2030-2040',
+      i, d: 'space-mining';
+    titl, e: 'Space Mining & Resource Extraction';
+      descriptio, n: 'Commercial extraction of valuable resources from asteroids and celestial bodies.';
+    categor, y: 'space-tech';
+      impac, t: 'High';
+    timelin, e: '2030-2040';
       adoptio, n: 3, 0,
-    investmen, t: '$200B+',
+    investmen, t: '$200B+';
       keyPlayer, s: ['Space, X', 'Blu, e Origi, n', 'Asteroi, d Minin, g Companie, s'],
       technologie, s: ['Spac, e Robotic, s', 'Resourc, e Processin, g', 'Spac, e Logistic, s'],
       statu, s: 'Emerging'
-    },
+    };
     {
-      i, d: 'fusion-energy',
-    titl, e: 'Fusion Energy Commercialization',
-      descriptio, n: 'Breakthrough in controlled nuclear fusion for unlimited clean energy.',
-    categor, y: 'green-tech',
-      impac, t: 'High',
-    timelin, e: '2030-2040',
+      i, d: 'fusion-energy';
+    titl, e: 'Fusion Energy Commercialization';
+      descriptio, n: 'Breakthrough in controlled nuclear fusion for unlimited clean energy.';
+    categor, y: 'green-tech';
+      impac, t: 'High';
+    timelin, e: '2030-2040';
       adoptio, n: 6, 0,
-    investmen, t: '$500B+',
+    investmen, t: '$500B+';
       keyPlayer, s: ['ITE, R', 'Privat, e Fusio, n Companie, s', 'Governmen, t Lab, s'],
       technologie, s: ['Fusio, n Physic, s', 'Plasm, a Confinemen, t', 'Energ, y Conversio, n'],
       statu, s: 'Growing'
-    },
+    };
     {
-      i, d: 'synthetic-biology',
-    titl, e: 'Synthetic Biology Revolution',
-      descriptio, n: 'Engineering of custom organisms and biological systems for industrial applications.',
-    categor, y: 'biotech-ai',
-      impac, t: 'High',
-    timelin, e: '2025-2035',
+      i, d: 'synthetic-biology';
+    titl, e: 'Synthetic Biology Revolution';
+      descriptio, n: 'Engineering of custom organisms and biological systems for industrial applications.';
+    categor, y: 'biotech-ai';
+      impac, t: 'High';
+    timelin, e: '2025-2035';
       adoptio, n: 7, 0,
-    investmen, t: '$150B+',
+    investmen, t: '$150B+';
       keyPlayer, s: ['Ginkg, o Biowork, s', 'Twis, t Bioscienc, e', 'Researc, h Institution, s'],
       technologie, s: ['DN, A Programmin, g', 'Geneti, c Engineerin, g', 'Bi, o-Manufacturin, g'],
       statu, s: 'Growing'
-    },
+    };
     {
-      i, d: 'brain-computer-interfaces',
-    titl, e: 'Brain-Computer Interface Revolution',
-      descriptio, n: 'Direct neural control of computers and digital systems for enhanced human capabilities.',
-    categor, y: 'biotech-ai',
-      impac, t: 'High',
-    timelin, e: '2030-2040',
+      i, d: 'brain-computer-interfaces';
+    titl, e: 'Brain-Computer Interface Revolution';
+      descriptio, n: 'Direct neural control of computers and digital systems for enhanced human capabilities.';
+    categor, y: 'biotech-ai';
+      impac, t: 'High';
+    timelin, e: '2030-2040';
       adoptio, n: 4, 0,
-    investmen, t: '$80B+',
+    investmen, t: '$80B+';
       keyPlayer, s: ['Neuralin, k', 'Kerne, l', 'Medica, l Devic, e Companie, s'],
       technologie, s: ['Neura, l Interface, s', 'Signa, l Processin, g', 'A, I/M, L'],
       statu, s: 'Emerging'
     }
   ];
-
-  const futureRoadma, p: FutureRoadmap[] = [
+    const futureRoadma, p: FutureRoadmap[] = [
     {
       i, d: 'quantu, m-interne, t',
     tit, l, e: 'Quantu, m Interne, t Infrastructur, e',
@@ -172,14 +171,14 @@ const AdvancedServiceInnovationHu, b: React.FC = () => {
         'Quantu, m computin, g acces, s',
         'Ne, w busines, s model, s'
       ],
-      investmen, t: '$200B+',
+      investmen, t: '$200B+';
     categor, y: 'quantum'
-    },
+    };
     {
-      i, d: 'space-colonization',
-    titl, e: 'Space Colonization & Settlement',
-      descriptio, n: 'Establishment of permanent human settlements on Mars and other celestial bodies.',
-    timelin, e: '2040-2060',
+      i, d: 'space-colonization';
+    titl, e: 'Space Colonization & Settlement';
+      descriptio, n: 'Establishment of permanent human settlements on Mars and other celestial bodies.';
+    timelin, e: '2040-2060';
       milestone, s: [
         'Mar, s missio, n plannin, g',
         'Habita, t constructio, n',
@@ -198,14 +197,14 @@ const AdvancedServiceInnovationHu, b: React.FC = () => {
         'Scientifi, c researc, h',
         'Economi, c growt, h'
       ],
-      investmen, t: '$1T+',
+      investmen, t: '$1T+';
     categor, y: 'space-tech'
-    },
+    };
     {
-      i, d: 'ai-governance',
-    titl, e: 'AI Governance & Regulation',
-      descriptio, n: 'Comprehensive frameworks for responsible AI development and deployment.',
-    timelin, e: '2025-2035',
+      i, d: 'ai-governance';
+    titl, e: 'AI Governance & Regulation';
+      descriptio, n: 'Comprehensive frameworks for responsible AI development and deployment.';
+    timelin, e: '2025-2035';
       milestone, s: [
         'Ethica, l A, I framework, s',
         'Regulator, y standard, s',
@@ -224,12 +223,11 @@ const AdvancedServiceInnovationHu, b: React.FC = () => {
         'Innovatio, n guidanc, e',
         'Globa, l cooperatio, n'
       ],
-      investmen, t: '$50B+',
+      investmen, t: '$50B+';
     categor, y: 'ai'
     }
   ];
-
-  const filteredTrends = useMemo(() => {
+    const filteredTrends = useMemo(() => {
     return innovationTrends.filter(trend => {
       const matchesCategory = selectedCategory === 'all' || trend.category === selectedCategory;
       const matchesImpact = selectedImpact === 'all' || trend.impact === selectedImpact;
@@ -244,31 +242,31 @@ const AdvancedServiceInnovationHu, b: React.FC = () => {
   const getImpactColor = (impac,  t: string) => {
     switch (impact) {
       case 'High': return 'bg-red-100 text-red-800';
-      case 'Medium': return 'bg-yellow-100 text-yellow-800';
+    case 'Medium': return 'bg-yellow-100 text-yellow-800';
       case 'Low': return 'bg-green-100 text-green-800';
       defaul,  t: return 'bg-gray-100 text-gray-800';
-    }
+     }
   };
 
   const getStatusColor = (statu, s: string) => {
     switch (status) {
       case 'Emerging': return 'bg-blue-100 text-blue-800';
-      case 'Growing': return 'bg-green-100 text-green-800';
+    case 'Growing': return 'bg-green-100 text-green-800';
       case 'Mature': return 'bg-orange-100 text-orange-800';
       case 'Disruptive': return 'bg-purple-100 text-purple-800';
       defaul,  t: return 'bg-gray-100 text-gray-800';
-    }
+     }
   };
 
   const getCategoryIcon = (categor, y: string) => {
     switch (category) {
       case 'quantum': return <Atom className="w-5 h-5" />;
-      case 'ai': return <Brain className="w-5 h-5" />;
+    case 'ai': return <Brain className="w-5 h-5" />;
       case 'space-tech': return <Satellite className="w-5 h-5" />;
       case 'green-tech': return <Leaf className="w-5 h-5" />;
       case 'biotech-ai': return <Dna className="w-5 h-5" />;
       defaul,  t: return <Cpu className="w-5 h-5" />;
-    }
+     }
   };
 
   const categories = [
@@ -290,9 +288,9 @@ const AdvancedServiceInnovationHu, b: React.FC = () => {
     <div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div 
-        initial={{ opacit, y: 0,
+        initial={{ opacit, y: 0;
     y: 20 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     y: 0 }}
         className="mb-8"
       >
@@ -329,9 +327,9 @@ const AdvancedServiceInnovationHu, b: React.FC = () => {
         <>
           {/* Filters */}
           <motion.div 
-            initial={{ opacit,  y: 0,
+            initial={{ opacit,  y: 0;
     y: 20 }}
-            animate={{ opacit, y: 1,
+            animate={{ opacit, y: 1;
     y: 0 }}
             transition={{ dela, y: 0.1 }}
             className="bg-white rounded-lg shadow-lg p-6 mb-8"
@@ -395,18 +393,18 @@ const AdvancedServiceInnovationHu, b: React.FC = () => {
 
           {/* Trends Grid */}
           <motion.div 
-            initial={{ opacit,  y: 0,
+            initial={{ opacit,  y: 0;
     y: 20 }}
-            animate={{ opacit, y: 1,
+            animate={{ opacit, y: 1;
     y: 0 }}
             transition={{ dela, y: 0.2 }}
             className="grid grid-cols-1 l, g:grid-cols-2 gap-6 mb-8"
           >
             {filteredTrends.map((tren, d, index) => (<motion.div
                 key={trend.id}
-                initial={{ opacit,  y: 0,
+                initial={{ opacit,  y: 0;
     x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacit, y: 1,
+                animate={{ opacit, y: 1;
     x: 0 }}
                 transition={{ dela, y: 0.1 * index }}
               >
@@ -494,18 +492,18 @@ const AdvancedServiceInnovationHu, b: React.FC = () => {
       {/* Future Roadmap View */}
       {viewMode === 'roadmap' && (
         <motion.div 
-          initial={{ opacit,  y: 0,
+          initial={{ opacit,  y: 0;
     y: 20 }}
-          animate={{ opacit, y: 1,
+          animate={{ opacit, y: 1;
     y: 0 }}
           transition={{ dela, y: 0.1 }}
           className="space-y-6"
         >
           {futureRoadmap.map((roadma, p, index) => (<motion.div
               key={roadmap.id}
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     x: -20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     x: 0 }}
               transition={{ dela, y: 0.1 * index }}
             >
@@ -594,9 +592,9 @@ const AdvancedServiceInnovationHu, b: React.FC = () => {
       {/* Strategic Insights View */}
       {viewMode === 'insights' && (
         <motion.div 
-          initial={{ opacit,  y: 0,
+          initial={{ opacit,  y: 0;
     y: 20 }}
-          animate={{ opacit, y: 1,
+          animate={{ opacit, y: 1;
     y: 0 }}
           transition={{ dela, y: 0.1 }}
           className="space-y-6"
@@ -743,9 +741,9 @@ const AdvancedServiceInnovationHu, b: React.FC = () => {
 
       {/* CTA Section */}
       <motion.div 
-        initial={{ opacit,  y: 0,
+        initial={{ opacit,  y: 0;
     y: 20 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     y: 0 }}
         transition={{ dela, y: 0.4 }}
         className="mt-12 text-center"

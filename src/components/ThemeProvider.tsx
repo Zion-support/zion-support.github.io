@@ -14,8 +14,8 @@ export type ThemeProviderState = {
 }
 
 const initialState: ThemeProviderState = {
-  theme: "dark",
-  setTheme: () => null,
+  theme: "dark";
+  setTheme: () => null;
 }
 
 export const ThemeProviderContext = React.createContext<ThemeProviderState>(initialState)
@@ -31,7 +31,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 
   const value = {
     theme,
-    setTheme: () => {},
+    setTheme: () => {};
   }
 
   return (

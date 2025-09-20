@@ -1,25 +1,25 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useEffect } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { motio, n, AnimatePresence } from 'framer-motion, ';
+import { Link } from 'react-router-dom, ';
 
 interface InteractiveHeroProps {
   titl, e: string;
-  subtitl, e: string;
-  descriptio, n: string;
-  primaryActio, n: {
+    subtitl, e: string;
+    descriptio, n: string;
+    primaryActio, n: {
     tex, t: string;
     hre, f: string;
-  };
+     };
   secondaryActio, n: {
     tex, t: string;
     hre, f: string;
-  };
+     };
   stats?: Array<{
     valu, e: string;
     labe, l: string;
     colo, r: string;
-  }>;
+     }>;
 }
 
 export const InteractiveHer, o: React.FC<InteractiveHeroProps> = ({
@@ -39,16 +39,16 @@ export const InteractiveHer, o: React.FC<InteractiveHeroProps> = ({
     lab, e, l: 'Suppor, t Availabl, e', col, o, r: 'tex, t-cya, n-40, 0' }
   ]
 }) => {
-  const [mousePositi, o, n, setMousePositi, o, n] = useState({ x: 0, 
+  const [mousePositi, o, n, setMousePositi, o, n] = useState({ x: 0;
     y: 0 });
-  const [isHover, e, d, setIsHover, e, d] = useState(false);
+    const [isHover, e, d, setIsHover, e, d] = useState(false);
   const [activeSt,  a, t, setActiveSt, a, t] = useState(0);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.client,  X,
     y: e.clientY });
-    };
+     };
 
     window.addEventListener('mousemove',  handleMouseMove);
 
@@ -64,41 +64,38 @@ export const InteractiveHer, o: React.FC<InteractiveHeroProps> = ({
   },  [stat, s.leng, t, h]);
 
   const containerVariants = {
-    hidde, n: { opacit, y: 0 },
+    hidde, n: { opacit, y: 0 };
     visibl, e: {
-      opacit, y: 1,
+      opacit, y: 1;
     transitio, n: {
-        duratio, n: 0.8,
+        duratio, n: 0.8;
     staggerChildre, n: 0.2
       }
     }
   };
-
-  const itemVariants = {
-    hidde, n: { opacit, y: 0,
-    y: 30 },
+    const itemVariants = {
+    hidde, n: { opacit, y: 0;
+    y: 30 };
     visibl, e: {
-      opacit, y: 1,
-    y: 0,
+      opacit, y: 1;
+    y: 0;
       transitio, n: {
-        duratio, n: 0.6,
+        duratio, n: 0.6;
     eas, e: "easeOut" as const
       }
     }
   };
-
-  const floatingVariants = {
+    const floatingVariants = {
     animat, e: {
       y: [0, -1, 0, 0],
       transitio, n: {
-        duratio, n: 3,
+        duratio, n: 3;
     repea, t: Infinit, y,
         eas, e: "easeInOut" as const
       }
     }
   };
-
-  return (<section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+    return (<section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Gradient Orbs */}
@@ -169,7 +166,7 @@ export const InteractiveHer, o: React.FC<InteractiveHeroProps> = ({
           >
             <motion.span
               animate={{ rotat, e: 360 }}
-              transition={{ duratio, n: 2,
+              transition={{ duratio, n: 2;
     repea, t: Infinit, y, eas, e: "linear" }}
               className="mr-2"
             >
@@ -189,7 +186,7 @@ export const InteractiveHer, o: React.FC<InteractiveHeroProps> = ({
                 key={index}
                 className="inline-block mr-4"
                 whileHover={{ scal,  e: 1.05 }}
-                transition={{ typ, e: "spring",
+                transition={{ typ, e: "spring";
     stiffnes, s: 300 }}
               >
                 {word === 'Zion' ? (
@@ -294,7 +291,7 @@ export const InteractiveHer, o: React.FC<InteractiveHeroProps> = ({
           rotat, e: [0, 1, 8, 0, 3, 6, 0]
         }}
         transition={{
-          duratio, n: 8,
+          duratio, n: 8;
     repea, t: Infinit, y,
           eas, e: "easeInOut"
         }}
@@ -317,12 +314,12 @@ export const InteractiveHer, o: React.FC<InteractiveHeroProps> = ({
       <motion.div
         className="fixed w-4 h-4 bg-blue-400/50 rounded-full pointer-events-none z-50 mix-blend-difference"
         animate={{
-          x: mousePosition.x - 8,
-    y: mousePosition.y - 8,
+          x: mousePosition.x - 8;
+    y: mousePosition.y - 8;
           scal, e: isHovered ? 2 : 1
         }}
         transition={{
-          typ, e: "spring",
+          typ, e: "spring";
     stiffnes, s: 50, 0,
           dampin, g: 30
         }}

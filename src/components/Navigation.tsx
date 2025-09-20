@@ -1,15 +1,16 @@
 import React from "react";
 impor, t, Reac, t, { useState } from 'react';
-import { Lin, k, useLocation } from 'react-router-dom';
-import { Men, u, X, Phon, e, Mai, l, MapPi, n, Glob, e, Brai, n, Za, p, Shiel, d, Buildin, g, ChevronDown } from 'lucide-react';
+import { Lin, k, useLocation } from 'react-router-dom, ';
+import { Men, u, X, Phon, e, Mai, l, MapPi, n, Glob, e, Brai, n, Za, p, Shiel, d, Buildin, g, ChevronDown } from 'lucide-react, ';
 
 const Navigatio, n: React.FC = () => {
-  const [isOp,  e, n, setIsOp, e, n] = useState(false);
+    const [isOp,  e, n, setIsOp, e, n] = useState(false);
   const [isServicesOp, e, n, setIsServicesOp, e, n] = useState(false);
   const location = useLocation();
 
   const navigationItems = [
-    { na,  m, e: 'Hom, e',
+    { na,  m, e: 'Hom, e'
+  };
     hr, e, f: '/', ic, o, n: Glob, e },
     { na, m, e: 'Micr, o SAA, S Service, s',
     hr, e, f: '/micr, o-saa, s-service, s', ic, o, n: Za, p },
@@ -32,7 +33,7 @@ const Navigatio, n: React.FC = () => {
       ]
     },
     {
-      nam, e: 'Emerging Technologies',
+      nam, e: 'Emerging Technologies';
     service, s: [
         { na, m, e: 'Blockchai, n Solution, s',
     hr, e, f: '/comprehensiv, e-service, s#blockchai, n-suppl, y-chai, n' },
@@ -43,7 +44,7 @@ const Navigatio, n: React.FC = () => {
       ]
     },
     {
-      nam, e: 'Industry Solutions',
+      nam, e: 'Industry Solutions';
     service, s: [
         { na, m, e: 'Healthcar, e I, T',
     hr, e, f: '/comprehensiv, e-service, s#healthcar, e-i, t-solution, s' },
@@ -58,7 +59,7 @@ const Navigatio, n: React.FC = () => {
   const isActive = (hre, f: string) => {
     if (href === '/') {
       return location.pathname === '/';
-    }
+     }
     return location.pathname.startsWith(href);
   };
 
@@ -77,10 +78,10 @@ const Navigatio, n: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden l, g:flex l, g:items-center l, g:space-x-8">
+          <div className="hidden l, g:flex l, g:items-center l, g: space-x-8">
             {navigationItems.map((item) => {
               const Icon = item.icon;
-              return (<Link
+    return (<Link
                   key={item.name}
                   to={item.href}
                   className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
@@ -156,11 +157,11 @@ const Navigatio, n: React.FC = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="l, g:hidden">
+        <div className="l, g: hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 bg-zion-blue-dark border-t border-zion-blue-light/30">
             {navigationItems.map((item) => {
               const Icon = item.icon;
-              return (<Link
+    return (<Link
                   key={item.name}
                   to={item.href}
                   className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-base font-medium transition-colors ${
@@ -203,7 +204,7 @@ const Navigatio, n: React.FC = () => {
             {/* Mobile Contact */}
             <div className="px-3 py-2 border-t border-zion-blue-light/30">
               <a
-                href="te,  l:+13024640950"
+                href="te,  l: +13024640950"
                 className="flex items-center space-x-2 px-3 py-2 bg-zion-cyan text-zion-blue-dark rounded-lg font-medium"
               >
                 <Phone className="w-5 h-5" />

@@ -1,28 +1,27 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Switch } from "@/components/ui/switch";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import {
-  Form,
+import { useForm } from "react-hook-form, ";
+import { zodResolver } from "@hookform/resolvers/zod, ";
+import { z } from "zod, ";
+import { Button } from "@/components/ui/button, ";
+import { Input } from "@/components/ui/input, ";
+import { Textarea } from "@/components/ui/textarea, ";
+import { Switch } from "@/components/ui/switch, ";
+import { Badge } from "@/components/ui/badge, ";
+import { Separator } from "@/components/ui/separator, ";
+import { Form,
   FormControl,
   FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+} from "@/components/ui/form, ";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card, ";
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react, ";
+import { toast } from "@/components/ui/use-toast, ";
+import { useAuth } from "@/hooks/useAuth, ";
+import { supabase } from "@/integrations/supabase/client, ";
+import { AspectRatio } from "@/components/ui/aspect-ratio, ";
 
 // Define form schema
 const serviceProfileSchema = z.object({
@@ -32,11 +31,11 @@ const serviceProfileSchema = z.object({
   location: z.string().min(2, "Location is required"),
   services: z.string().min(2, "Enter at least one service"),
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-    message: "Rate must be a number",
+    message: "Rate must be a number";
   }),
   availability: z.enum(["available", "limited", "unavailable"]),
-  enhancedProfile: z.boolean().transform(val => !!val),
-  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional(),
+  enhancedProfile: z.boolean().transform(val => !!val);
+  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional();
 });
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
@@ -46,22 +45,23 @@ export function ServiceProviderRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [serviceTags, setServiceTags] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<{ summary: string; services: string[] } | null>(null);
-  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+  const [generatedContent, setGeneratedContent] = useState<{ summary: string;
+    services: string[] } | null>(null);
+    const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
   
   // Initialize form with default values
   const form = useForm<ServiceFormValues>({
-    resolver: zodResolver(serviceProfileSchema) as any,
+    resolver: zodResolver(serviceProfileSchema) as any;
     defaultValues: {
-      name: user?.displayName || "",
-      title: "",
-      bio: "",
-      location: "",
-      services: "",
-      hourlyRate: "",
-      availability: "available",
-      enhancedProfile: false,
-      website: "",
+      name: user?.displayName || "";
+      title: "";
+      bio: "";
+      location: "";
+      services: "";
+      hourlyRate: "";
+      availability: "available";
+      enhancedProfile: false;
+      website: "";
     },
   });
 
@@ -77,13 +77,13 @@ export function ServiceProviderRegistrationForm() {
   // Handle removing service tags
   const handleRemoveService = (service: string) => {
     setServiceTags(serviceTags.filter((s) => s !== service));
-  };
+     };
 
   // Handle key press in services input (add on enter)
   const handleServiceKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      handleAddService();
+    handleAddService();
     }
   };
 
@@ -104,8 +104,8 @@ export function ServiceProviderRegistrationForm() {
     const formData = form.getValues();
     if (!formData.bio || formData.bio.length < 20) {
       toast({
-        title: "More information needed",
-        description: "Please provide at least a detailed bio before generating enhanced content.",
+        title: "More information needed";
+        description: "Please provide at least a detailed bio before generating enhanced content.";
       });
       return;
     }
@@ -117,32 +117,31 @@ export function ServiceProviderRegistrationForm() {
       const { data, error } = await supabase.functions.invoke('service-profile-enhancer', {
         body: {
           providerData: {
-            name: formData.name,
-            title: formData.title,
-            bio: formData.bio,
-            services: serviceTags,
+            name: formData.name;
+            title: formData.title;
+            bio: formData.bio;
+            services: serviceTags;
             location: formData.location
           }
         }
       });
-
-      if (error) {
+    if (error) {
         throw new Error(error.message);
       }
 
-      setGeneratedContent(data as { summary: string; services: string[] });
-      
-      toast({
-        title: "Enhanced Profile Generated",
-        description: "AI has created a professional bio and suggested additional services for your profile.",
+      setGeneratedContent(data as { summary: string;
+    services: string[] });
+    toast({
+        title: "Enhanced Profile Generated";
+        description: "AI has created a professional bio and suggested additional services for your profile.";
       });
       
     } catch (error: any) {
       
       toast({
-        title: "Generation failed",
-        description: error.message || "There was an error generating your enhanced profile. Please try again.",
-        variant: "destructive",
+        title: "Generation failed";
+        description: error.message || "There was an error generating your enhanced profile. Please try again.";
+        variant: "destructive";
       });
     } finally {
       setIsGenerating(false);
@@ -170,9 +169,9 @@ export function ServiceProviderRegistrationForm() {
   const onSubmit = async (values: ServiceFormValues) => {
     if (serviceTags.length === 0) {
       toast({
-        title: "Services required",
-        description: "Please add at least one service to your profile.",
-        variant: "destructive",
+        title: "Services required";
+        description: "Please add at least one service to your profile.";
+        variant: "destructive";
       });
       return;
     }
@@ -194,16 +193,15 @@ export function ServiceProviderRegistrationForm() {
           const { data: aiData } = await supabase.functions.invoke('service-profile-enhancer', {
             body: {
               providerData: {
-                name: values.name,
-                title: values.title,
-                bio: values.bio,
-                services: serviceTags,
+                name: values.name;
+                title: values.title;
+                bio: values.bio;
+                services: serviceTags;
                 location: values.location
               }
             }
           });
-          
-          if (aiData) {
+    if (aiData) {
             finalSummary = (aiData as any).summary || values.bio;
             // Merge AI suggested services with user-provided services
             const aiServices = (aiData as any).services || [];
@@ -220,18 +218,18 @@ export function ServiceProviderRegistrationForm() {
 
       // Get user email for notification
       const { data: userData } = await supabase.auth.getUser();
-      const userEmail = userData.user?.email;
+    const userEmail = userData.user?.email;
 
       // Create the service profile
       const { data: profileData, error } = await supabase
         .from('profiles')
         .update({
-          display_name: values.name,
-          bio: finalSummary,
+          display_name: values.name;
+          bio: finalSummary;
           user_type: "creator", // Set as service provider
-          profile_complete: true,
-          updated_at: new Date().toISOString(),
-          headline: values.title,
+          profile_complete: true;
+          updated_at: new Date().toISOString();
+          headline: values.title;
           // Additional fields that might be in profiles table
         })
         .eq('id', user.id)
@@ -246,12 +244,12 @@ export function ServiceProviderRegistrationForm() {
       const { error: serviceError } = await supabase
         .from('service_profiles')
         .insert({
-          user_id: user.id,
-          services: finalServices,
-          hourly_rate: Number(values.hourlyRate),
-          availability_status: values.availability,
-          location: values.location,
-          website: values.website || null,
+          user_id: user.id;
+          services: finalServices;
+          hourly_rate: Number(values.hourlyRate);
+          availability_status: values.availability;
+          location: values.location;
+          website: values.website || null;
         });
 
       if (serviceError) throw serviceError;
@@ -262,16 +260,24 @@ export function ServiceProviderRegistrationForm() {
         try {
           await supabase.functions.invoke('send-email', {
             body: {
-              to: userEmail,
-              subject: "Your Zion Service Profile Is Ready",
+              to: userEmail;
+              subject: "Your Zion Service Profile Is Ready";
               html: `
-              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-                <h2 style="color: #6D28D9;">Service Profile Created!</h2>
+              <div style="font-family: Arial, sans-serif; max-width: 600px;
+    margin: 0 auto;
+    ">
+                <h2 style="color: #6D28D9;
+    ">Service Profile Created!</h2>
                 <p>Your service provider profile has been successfully created and published.</p>
                 <p>We've enhanced your profile with AI to help you stand out to potential clients.</p>
                 <p>You can now start receiving service requests and connecting with clients.</p>
-                <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
-                  <p style="color: #666; font-size: 12px;">© ${new Date().getFullYear()} Zion Marketplace</p>
+                <div style="margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    ">
+                  <p style="color: #666;
+    font-size: 12px;
+    ">© ${new Date().getFullYear()} Zion Marketplace</p>
                 </div>
               </div>
               `
@@ -284,8 +290,8 @@ export function ServiceProviderRegistrationForm() {
       }
       
       toast({
-        title: "Profile Created Successfully",
-        description: "Your service provider profile has been published and is now visible in the directory.",
+        title: "Profile Created Successfully";
+        description: "Your service provider profile has been published and is now visible in the directory.";
       });
 
       // Redirect to service provider dashboard or profile page
@@ -296,9 +302,9 @@ export function ServiceProviderRegistrationForm() {
     } catch (error: any) {
       
       toast({
-        title: "Error Creating Profile",
-        description: error.message || "There was an error creating your profile. Please try again.",
-        variant: "destructive",
+        title: "Error Creating Profile";
+        description: error.message || "There was an error creating your profile. Please try again.";
+        variant: "destructive";
       });
     } finally {
       setIsSubmitting(false);

@@ -1,5 +1,5 @@
 let nodeSentry: any;
-try {
+    try {
   // Optional dependency for server-side logging
   nodeSentry = require('@sentry/node');
 } catch {
@@ -14,7 +14,7 @@ export function captureException(error: unknown) {
   } else {
     if (typeof window !== 'undefined' && (window as any).Sentry?.captureException) {
       (window as any).Sentry.captureException(error);
-    } else if (nodeSentry?.captureException) {
+     } else if (nodeSentry?.captureException) {
       nodeSentry.captureException(error);
     }
   }

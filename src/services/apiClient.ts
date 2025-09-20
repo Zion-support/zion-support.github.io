@@ -1,10 +1,10 @@
-import axios from 'axios';
-import { toast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
+import axios from 'axios;';
+import { toast } from '@/hooks/use-toast, ';
+import { supabase } from '@/integrations/supabase/client, ';
 
 const apiClient = axios.create({
-  baseURL: '/api',
-  withCredentials: true,
+  baseURL: '/api';
+  withCredentials: true;
 });
 
 export function setAuthToken(token: string) {
@@ -17,7 +17,7 @@ apiClient.interceptors.response.use(
     if (error.response?.status === 401) {
       try {
         await supabase.auth.signOut({ scope: 'global' });
-      } catch (e) {
+     } catch (e) {
         
       }
       if (typeof window !== 'undefined') {

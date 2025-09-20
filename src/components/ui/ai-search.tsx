@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
+import React, { useState, useEffect, useRef, useCallback } from 'react;';
+import { motion, AnimatePresence } from 'framer-motion, ';
+import { Search,
   X,
   Filter,
   Sparkles,
@@ -15,44 +14,44 @@ import {
   History,
   Bookmark,
   Share2
-} from 'lucide-react';
-import { Button } from './button';
-import { Badge } from './badge';
+} from 'lucide-react, ';
+import { Button } from './button, ';
+import { Badge } from './badge, ';
 
 interface SearchResult {
   id: string;
-  title: string;
-  description: string;
-  category: string;
-  tags: string[];
-  relevance: number;
-  rating: number;
-  reviews: number;
-  location?: string;
+    title: string;
+    description: string;
+    category: string;
+    tags: string[];
+    relevance: number;
+    rating: number;
+    reviews: number;
+    location?: string;
   price?: string;
   type: 'service' | 'talent' | 'company' | 'article';
-  metadata: {
+    metadata: {
     lastUpdated: string;
     verified: boolean;
     featured: boolean;
-  };
+     };
 }
 
 interface AISearchProps {
   enabled?: boolean;
   placeholder?: string;
   onSearch?: (query: string, filters: SearchFilters) => void;
-  onResultClick?: (result: SearchResult) => void;
-  className?: string;
+    onResultClick?: (result: SearchResult) => void;
+    className?: string;
 }
 
 interface SearchFilters {
   category: string[];
-  priceRange: [number, number];
+    priceRange: [number, number];
   rating: number;
-  location: string[];
-  verified: boolean;
-  featured: boolean;
+    location: string[];
+    verified: boolean;
+    featured: boolean;
 }
 
 export function AISearch({
@@ -70,15 +69,14 @@ export function AISearch({
   const [searchHistory, setSearchHistory] = useState<string[]>([]);
   const [savedSearches, setSavedSearches] = useState<string[]>([]);
   const [filters, setFilters] = useState<SearchFilters>({
-    category: [],
+    category: [];
     priceRange: [0, 10000],
-    rating: 0,
-    location: [],
-    verified: false,
+    rating: 0;
+    location: [];
+    verified: false;
     featured: false
   });
-  
-  const [results, setResults] = useState<SearchResult[]>([]);
+    const [results, setResults] = useState<SearchResult[]>([]);
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [_selectedResult, setSelectedResult] = useState<SearchResult | null>(null);
   
@@ -90,7 +88,6 @@ export function AISearch({
   // Mock suggestions based on query
   const generateSuggestions = useCallback((searchQuery: string) => {
     if (!searchQuery.trim()) return [];
-    
     const baseSuggestions = [
       'AI services',
       'Machine learning',
@@ -112,7 +109,6 @@ export function AISearch({
   // Handle search input
   const handleSearchInput = useCallback((value: string) => {
     setQuery(value);
-    
     if (value.trim()) {
       const newSuggestions = generateSuggestions(value);
       setSuggestions(newSuggestions);
@@ -126,62 +122,60 @@ export function AISearch({
     // Perform search
   const performSearch = useCallback(async (searchQuery: string, searchFilters: SearchFilters) => {
     setIsSearching(true);
-
     // Mock search results
     const mockResults: SearchResult[] = [
       {
-        id: '1',
-        title: 'AI-Powered Business Intelligence Platform',
-        description: 'Advanced analytics and insights powered by machine learning algorithms',
-        category: 'AI & Analytics',
+        id: '1';
+        title: 'AI-Powered Business Intelligence Platform';
+        description: 'Advanced analytics and insights powered by machine learning algorithms';
+        category: 'AI & Analytics';
         tags: ['Business Intelligence', 'Machine Learning', 'Analytics', 'Dashboard'],
-        relevance: 0.95,
-        rating: 4.8,
-        reviews: 1247,
+        relevance: 0.95;
+        rating: 4.8;
+        reviews: 1247;
         price: '$2,500/month',
-        type: 'service',
+        type: 'service';
         metadata: {
-          lastUpdated: '2024-01-15',
-          verified: true,
+          lastUpdated: '2024-01-15';
+          verified: true;
           featured: true
         }
-      },
+      };
       {
-        id: '2',
-        title: 'Senior AI Engineer - Remote',
-        description: 'Experienced AI engineer specializing in deep learning and NLP',
-        category: 'Talent',
+        id: '2';
+        title: 'Senior AI Engineer - Remote';
+        description: 'Experienced AI engineer specializing in deep learning and NLP';
+        category: 'Talent';
         tags: ['AI Engineer', 'Deep Learning', 'NLP', 'Remote'],
-        relevance: 0.92,
-        rating: 4.9,
-        reviews: 89,
-        price: '$150/hour',
-        type: 'talent',
+        relevance: 0.92;
+        rating: 4.9;
+        reviews: 89;
+        price: '$150/hour';
+        type: 'talent';
         metadata: {
-          lastUpdated: '2024-01-20',
-          verified: true,
+          lastUpdated: '2024-01-20';
+          verified: true;
           featured: false
         }
-      },
+      };
       {
-        id: '3',
-        title: 'Quantum Computing Solutions Inc.',
-        description: 'Leading provider of quantum computing services and consulting',
-        category: 'Quantum Technology',
+        id: '3';
+        title: 'Quantum Computing Solutions Inc.';
+        description: 'Leading provider of quantum computing services and consulting';
+        category: 'Quantum Technology';
         tags: ['Quantum Computing', 'Consulting', 'Research', 'Enterprise'],
-        relevance: 0.88,
-        rating: 4.7,
-        reviews: 456,
+        relevance: 0.88;
+        rating: 4.7;
+        reviews: 456;
         location: 'San Francisco, CA',
-        type: 'company',
+        type: 'company';
         metadata: {
-          lastUpdated: '2024-01-18',
-          verified: true,
+          lastUpdated: '2024-01-18';
+          verified: true;
           featured: true
         }
       }
     ];
-
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 800));
 
@@ -248,11 +242,11 @@ export function AISearch({
   const shareResults = useCallback(() => {
     if (navigator.share) {
       navigator.share({
-        title: 'Search Results from Zion Tech Group',
-        text: `Check out these results for "${query}"`,
+        title: 'Search Results from Zion Tech Group';
+        text: `Check out these results for "${query}"`;
         url: window.location.href
       });
-    } else {
+     } else {
       // Fallback to copying to clipboard
       navigator.clipboard.writeText(
         `Search Results for "${query}": ${window.location.href}`
@@ -264,7 +258,7 @@ export function AISearch({
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       handleSearch();
-    } else if (e.key === 'Escape') {
+     } else if (e.key === 'Escape') {
       setIsOpen(false);
       setQuery('');
     }
@@ -282,7 +276,7 @@ export function AISearch({
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
-      }
+     }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -353,7 +347,7 @@ export function AISearch({
             exit={{ opacity: 0, scale: 0.8 }}
             onClick={() => {
               setQuery('');
-              setResults([]);
+    setResults([]);
               setSuggestions([]);
               setIsOpen(false);
             }}
@@ -425,7 +419,7 @@ export function AISearch({
                         onChange={(e) => {
                           const selected = Array.from(e.target.selectedOptions, option => option.value);
                           setFilters(prev => ({ ...prev, category: selected }));
-                        }}
+     }}
                         className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none"
                       >
                         <option value="AI & Analytics">AI & Analytics</option>
@@ -519,7 +513,7 @@ export function AISearch({
                           setQuery(suggestion);
                           performSearch(suggestion, filters);
                         }}
-                        className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white flex items-center justify-between group"
+                        className="w-full text-left p-2 rounded-lg hover: bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white flex items-center justify-between group"
                       >
                         <span>{suggestion}</span>
                         <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
