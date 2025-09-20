@@ -26,7 +26,7 @@ const DEFAULTS = {
   image: 'https://ziontechgroup.com/og-image.svg'
 };
 
-export default function SEO({ 
+export function generateMetadata({ 
   title, 
   description, 
   keywords, 
@@ -38,7 +38,11 @@ export default function SEO({
   noindex, 
   nofollow, 
   jsonLd 
+<<<<<<< HEAD
 }: SEOProps) {
+=======
+}: SEOProps): Metadata {
+>>>>>>> 3fc2a955f123ed886687073091dfb0346a1dae99
   const pathname = usePathname();
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || DEFAULTS.url;
   const pageTitle = title || DEFAULTS.title;
@@ -72,64 +76,58 @@ export default function SEO({
   
   const canonicalUrl = withTrailingSlash(canonical ? toAbsoluteUrl(canonical) : normalizedCanonical);
 
-  // Default JSON-LD if none provided
-  const defaultJsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": baseUrl,
-      "logo": `${baseUrl.replace(/\/$/, '')}/favicon.svg`,
-      "sameAs": [
-        "https://www.linkedin.com/company/zion-tech-group",
-        "https://github.com/Zion-Holdings",
-        "https://www.instagram.com/ziontechgroup",
-        "https://www.youtube.com/@ziontechgroup",
-        "https://twitter.com/ziontechgroup"
-      ]
+  return {
+    title: pageTitle,
+    description: pageDescription,
+    keywords: keywords,
+    robots: robotsContent,
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        'x-default': canonicalUrl,
+        'en': canonicalUrl,
+      },
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "url": baseUrl,
-      "name": "Zion Tech Group",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": `${baseUrl.replace(/\/$/, '')}/search?q={search_term_string}`,
-        "query-input": "required name=search_term_string"
-      }
-    }
-  ];
+    openGraph: {
+      title: pageTitle,
+      description: pageDescription,
+      url: canonicalUrl,
+      type: 'website',
+      siteName: 'Zion Tech Group',
+      locale: 'en_US',
+      images: [
+        {
+          url: imageUrl,
+          alt: imageAlt,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: pageTitle,
+      description: pageDescription,
+      images: [imageUrl],
+    },
+  };
+}
 
-  return (
-    <Head>
-      <title>{pageTitle}</title>
-      <meta name="description" content={pageDescription} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="robots" content={robotsContent} />
-      <link rel="canonical" href={canonicalUrl} />
-      <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
-      <link rel="alternate" hrefLang="en" href={canonicalUrl} />
-      <meta property="og:title" content={pageTitle} />
-      <meta property="og:description" content={pageDescription} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      <meta property="og:image" content={imageUrl} />
-      <meta property="og:image:alt" content={imageAlt} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={pageTitle} />
-      <meta name="twitter:description" content={pageDescription} />
-      <meta name="twitter:image" content={imageUrl} />
-      <meta name="twitter:image:alt" content={imageAlt} />
-      {jsonLd ? (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      ) : (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(defaultJsonLd) }} />
-      )}
-    </Head>
-  );
+// Legacy component for backward compatibility
+export default function SEO({ 
+  title, 
+  description, 
+  keywords, 
+  url, 
+  canonical, 
+  ogImage, 
+  image, 
+  noIndex, 
+  noindex, 
+  nofollow, 
+  jsonLd 
+}: SEOProps) {
+  // This component is now deprecated in favor of generateMetadata
+  // but kept for backward compatibility
+  return null;
 }
