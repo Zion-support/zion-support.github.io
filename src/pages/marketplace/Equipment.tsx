@@ -1,5 +1,6 @@
-import React from "react";
-const Equipment: React.FC = () => (;
+import React from "react"
+const,
+  Equipmen: t: React.FC = () => (
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<div className="text-center text-white">
 			<h1 className="text-4xl font-bold mb-4">Marketplace - Equipment</h1>
@@ -7,4 +8,4 @@ const Equipment: React.FC = () => (;
 		</div>
 	</div>
 )
-export default Equipment;
+export default Equipment

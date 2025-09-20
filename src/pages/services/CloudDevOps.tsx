@@ -1,210 +1,294 @@
-import React from "react";
-import { SEO } from "../../components/SEO";
-import { Cloud, Code, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Star, Users, Globe, Server, Database, Lock, RefreshCw, GitBranch, Docker, Kubernetes } from "lucide-react";
-import { Link } from "react-router-dom";
-export default function CloudDevOps() {;
-  const services = [;
-    {;
-      name: 'Cloud Infrastructure',icon: Cloud,description: 'Scalable and secure cloud infrastructure design and implementation',features: [;
-        'Multi-cloud architecture designAWS, Azure, and GCP expertise';
-        'Infrastructure as Code (IaC)Auto-scaling and load balancing';
-        'High availability and disaster recoveryCost optimization strategies';
+import React from "react"
+import { SEO } from "../../components/SEO"
+import { Cloud, Code, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Star, Users, Globe, Server, Database, Lock, RefreshCw, GitBranch, Docker, Kubernetes } from "lucide-react"
+import { Link } from "react-router-dom"
+export default function CloudDevOps() {
+  const services = [
+    {
+      na,
+  m: e: 'Cloud Infrastructure',ic,
+  o: n: Cloud,descripti,
+  o: n: 'Scalable and secure cloud infrastructure design and implementation',featur,
+  e: s: [
+        'Multi-cloud architecture designAWS, Azure, and GCP expertise'
+        'Infrastructure as Code (IaC)Auto-scaling and load balancing'
+        'High availability and disaster recoveryCost optimization strategies'
       ]
-      benefits: [;
-        '99.9% uptime guarantee50% cost reduction';
-        'Instant scalabilityEnhanced security posture';
+      benefi,
+  t: s: [
+        '99.9% uptime guarantee50% cost reduction'
+        'Instant scalabilityEnhanced security posture'
       ]
-      color: 'from-blue-500 to-cyan-500';
-    }
-    {;
-      name: 'DevOps Automation',icon: Code,description: 'Streamline development and operations with intelligent automation',features: [;
-        'CI/CD pipeline automationInfrastructure automation';
-        'Testing and deployment automationMonitoring and alerting';
-        'Performance optimizationSecurity automation';
+      colo,
+  r: 'from-blue-500 to-cyan-500'
+    }, {
+      na,
+  m: e: 'DevOps Automation',ic,
+  o: n: Code,descripti,
+  o: n: 'Streamline development and operations with intelligent automation',featur,
+  e: s: [
+        'CI/CD pipeline automationInfrastructure automation'
+        'Testing and deployment automationMonitoring and alerting'
+        'Performance optimizationSecurity automation'
       ]
-      benefits: [;
-        '10x faster deploymentsReduced human error';
-        'Improved collaborationFaster time to market';
+      benefi,
+  t: s: [
+        '10x faster deploymentsReduced human error'
+        'Improved collaborationFaster time to market'
       ]
-      color: 'from-green-500 to-emerald-500';
-    }
-    {;
-      name: 'Container Orchestration',icon: Docker,description: 'Modern containerization and orchestration solutions',features: [;
-        'Docker containerizationKubernetes orchestration';
-        'Microservices architectureService mesh implementation';
-        'Container securityMonitoring and logging';
+      colo,
+  r: 'from-green-500 to-emerald-500'
+    }, {
+      na,
+  m: e: 'Container Orchestration',ic,
+  o: n: Docker,descripti,
+  o: n: 'Modern containerization and orchestration solutions',featur,
+  e: s: [
+        'Docker containerizationKubernetes orchestration'
+        'Microservices architectureService mesh implementation'
+        'Container securityMonitoring and logging'
       ]
-      benefits: [;
-        'Improved resource utilizationFaster application deployment';
-        'Better scalabilityEnhanced portability';
+      benefi,
+  t: s: [
+        'Improved resource utilizationFaster application deployment'
+        'Better scalabilityEnhanced portability'
       ]
-      color: 'from-purple-500 to-pink-500';
-    }
-    {;
-      name: 'Security & Compliance',icon: Shield,description: 'Comprehensive security and compliance solutions',features: [;
-        'Identity and access managementNetwork security';
-        'Data encryptionCompliance frameworks';
-        'Security monitoringIncident response';
+      colo,
+  r: 'from-purple-500 to-pink-500'
+    }, {
+      na,
+  m: e: 'Security & Compliance',ic,
+  o: n: Shield,descripti,
+  o: n: 'Comprehensive security and compliance solutions',featur,
+  e: s: [
+        'Identity and access managementNetwork security'
+        'Data encryptionCompliance frameworks'
+        'Security monitoringIncident response'
       ]
-      benefits: [;
-        'Enhanced security postureRegulatory compliance';
-        'Reduced security risks24/7 threat monitoring';
+      benefi,
+  t: s: [
+        'Enhanced security postureRegulatory compliance'
+        'Reduced security risks24/7 threat monitoring'
       ]
-      color: 'from-red-500 to-orange-500';
-    }
-    {;
-      name: 'Monitoring & Analytics',icon: BarChart3,description: 'Real-time monitoring and analytics for optimal performance',features: [;
-        'Application performance monitoringInfrastructure monitoring';
-        'Log aggregation and analysisReal-time alerting';
-        'Performance optimizationCapacity planning';
+      colo,
+  r: 'from-red-500 to-orange-500'
+    }, {
+      na,
+  m: e: 'Monitoring & Analytics',ic,
+  o: n: BarChart3,descripti,
+  o: n: 'Real-time monitoring and analytics for optimal performance',featur,
+  e: s: [
+        'Application performance monitoringInfrastructure monitoring'
+        'Log aggregation and analysisReal-time alerting'
+        'Performance optimizationCapacity planning'
       ]
-      benefits: [;
-        'Proactive issue detectionImproved performance';
-        'Better resource planningReduced downtime';
+      benefi,
+  t: s: [
+        'Proactive issue detectionImproved performance'
+        'Better resource planningReduced downtime'
       ]
-      color: 'from-indigo-500 to-purple-500';
-    }
-    {;
-      name: 'Database Management',icon: Database,description: 'Scalable and reliable database solutions',features: [;
-        'Database design and optimizationHigh availability setup';
-        'Backup and recoveryPerformance tuning';
-        'Security hardeningMigration services';
+      colo,
+  r: 'from-indigo-500 to-purple-500'
+    }, {
+      na,
+  m: e: 'Database Management',ic,
+  o: n: Database,descripti,
+  o: n: 'Scalable and reliable database solutions',featur,
+  e: s: [
+        'Database design and optimizationHigh availability setup'
+        'Backup and recoveryPerformance tuning'
+        'Security hardeningMigration services'
       ]
-      benefits: [;
-        'Improved performanceEnhanced reliability';
-        'Better data securityReduced maintenance overhead';
+      benefi,
+  t: s: [
+        'Improved performanceEnhanced reliability'
+        'Better data securityReduced maintenance overhead'
       ]
-      color: 'from-emerald-500 to-green-500';
+      colo,
+  r: 'from-emerald-500 to-green-500'
     }
   ]
-  const technologies = [;
-    {{ name: 'AWS', icon: Cloud, category: 'Cloud Platform' }}
-    {{ name: 'Azure', icon: Cloud, category: 'Cloud Platform' }}
-    {{ name: 'Google Cloud', icon: Cloud, category: 'Cloud Platform' }}
-    {{ name: 'Docker', icon: Docker, category: 'Containerization' }}
-    {{ name: 'Kubernetes', icon: Kubernetes, category: 'Orchestration' }}
-    {{ name: 'Terraform', icon: Code, category: 'Infrastructure' }}
-    {{ name: 'Jenkins', icon: RefreshCw, category: 'CI/CD' }}
-    {{ name: 'GitLab CI', icon: GitBranch, category: 'CI/CD' }}
-    {{ name: 'Ansible', icon: Zap, category: 'Automation' }}
-    {{ name: 'Prometheus', icon: BarChart3, category: 'Monitoring' }}
-    {{ name: 'Grafana', icon: BarChart3, category: 'Visualization' }}
-    {{ name: 'ELK Stack', icon: BarChart3, category: 'Logging' }}
+  const technologies = [
+    { na,
+  m: e: 'AWS', ic,
+  o: n: Cloud, catego,
+  r: y: 'Cloud Platform' }, { na,
+  m: e: 'Azure', ic,
+  o: n: Cloud, catego,
+  r: y: 'Cloud Platform' }, { na,
+  m: e: 'Google Cloud', ic,
+  o: n: Cloud, catego,
+  r: y: 'Cloud Platform' }, { na,
+  m: e: 'Docker', ic,
+  o: n: Docker, catego,
+  r: y: 'Containerization' }, { na,
+  m: e: 'Kubernetes', ic,
+  o: n: Kubernetes, catego,
+  r: y: 'Orchestration' }, { na,
+  m: e: 'Terraform', ic,
+  o: n: Code, catego,
+  r: y: 'Infrastructure' }, { na,
+  m: e: 'Jenkins', ic,
+  o: n: RefreshCw, catego,
+  r: y: 'CI/CD' }, { na,
+  m: e: 'GitLab CI', ic,
+  o: n: GitBranch, catego,
+  r: y: 'CI/CD' }, { na,
+  m: e: 'Ansible', ic,
+  o: n: Zap, catego,
+  r: y: 'Automation' }, { na,
+  m: e: 'Prometheus', ic,
+  o: n: BarChart3, catego,
+  r: y: 'Monitoring' }, { na,
+  m: e: 'Grafana', ic,
+  o: n: BarChart3, catego,
+  r: y: 'Visualization' }, { na,
+  m: e: 'ELK Stack', ic,
+  o: n: BarChart3, catego,
+  r: y: 'Logging' }
   ]
-  const caseStudies = [;
-    {;
-      company: 'TechCorp Inc.',industry: 'E-commerce',challenge: 'Legacy infrastructure causing 40% downtime during peak seasons',solution: 'Migrated to AWS with auto-scaling and implemented CI/CD pipelines',results: [;
-        '99.9% uptime achieved60% reduction in infrastructure costs';
-        'Deployment time reduced from 4 hours to 15 minutes';
+  const caseStudies = [
+    {
+      compa,
+  n: y: 'TechCorp Inc.',indust,
+  r: y: 'E-commerce',challen,
+  g: e: 'Legacy infrastructure causing 40% downtime during peak seasons',soluti,
+  o: n: 'Migrated to AWS with auto-scaling and implemented CI/CD pipelines',resul,
+  t: s: [
+        '99.9% uptime achieved60% reduction in infrastructure costs'
+        'Deployment time reduced from 4 hours to 15 minutes'
       ]
-    }
-    {;
-      company: 'HealthPlus Systems',industry: 'Healthcare',challenge: 'Manual deployment processes causing delays and errors',solution: 'Implemented containerization with Kubernetes and automated CI/CD',results: [;
-        'Zero deployment errors90% faster deployment cycles';
-        'Improved compliance and security';
+    }, {
+      compa,
+  n: y: 'HealthPlus Systems',indust,
+  r: y: 'Healthcare',challen,
+  g: e: 'Manual deployment processes causing delays and errors',soluti,
+  o: n: 'Implemented containerization with Kubernetes and automated CI/CD',resul,
+  t: s: [
+        'Zero deployment errors90% faster deployment cycles'
+        'Improved compliance and security'
       ]
-    }
-    {;
-      company: 'StartupXYZ',industry: 'SaaS',challenge: 'Need for rapid scaling and cost optimization',solution: 'Multi-cloud strategy with infrastructure as code and monitoring',results: [;
-        '10x faster scaling capability50% cost optimization';
-        'Improved developer productivity';
+    }, {
+      compa,
+  n: y: 'StartupXYZ',indust,
+  r: y: 'SaaS',challen,
+  g: e: 'Need for rapid scaling and cost optimization',soluti,
+  o: n: 'Multi-cloud strategy with infrastructure as code and monitoring',resul,
+  t: s: [
+        '10x faster scaling capability50% cost optimization'
+        'Improved developer productivity'
       ]
     }
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO ;
-        title="Cloud DevOps Services - Zion Tech Group";
-        description="Transform your infrastructure with our comprehensive Cloud DevOps services including cloud migration, automation, containerization, and security solutions.";
+      <SEO 
+        title="Cloud DevOps Services - Zion Tech Group"
+        description="Transform your infrastructure with our comprehensive Cloud DevOps services including cloud migration, automation, containerization, and security solutions."
       />
-      ;
-      {{/* Hero Section */}}
+      
+      {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-green-500/10"></div>
         <div className="container-responsive relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Cloud;
+            <h1 className="text-5xl,
+  m: d:text-6xl font-bold text-white mb-6">
+              Cloud
               <span className="bg-gradient-to-r from-blue-400 via-cyan-500 to-green-500 bg-clip-text text-transparent"> DevOps</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Accelerate your digital transformation with modern cloud infrastructure, intelligent automation, ;
-              and DevOps best practices that drive efficiency and innovation.;
+              Accelerate your digital transformation with modern cloud infrastructure, intelligent automation, 
+              and DevOps best practices that drive efficiency and innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link;
-                to="/request-quote";
-                className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25";"
+              <Link
+                to="/request-quote"
+                className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600,
+  hove: r: from-blue-600,
+  hove: r:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-300,
+  transform: hover:scale-105 shadow-lg,
+  hove: r:shadow-blue-500/25";"
               >
-                Get Cloud Assessment;
+                Get Cloud Assessment
               </Link>
-              <Link;
-                to="/contact";
-                className="className="px-8 py-4 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold rounded-lg transition-all duration-300";"
+              <Link
+                to="/contact"
+                className="className="px-8 py-4 border border-blue-400 text-blue-400,
+  hove: r:bg-blue-400 hove,
+  r:text-white font-semibold rounded-lg transition-all duration-300";"
               >
-                Schedule Consultation;
+                Schedule Consultation
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {{/* Services Grid */}}
+      {/* Services Grid */}
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Cloud DevOps Solutions;
+              Comprehensive Cloud DevOps Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From cloud migration to continuous deployment, we provide end-to-end solutions that ;
-              modernize your infrastructure and accelerate your development cycles.;
+              From cloud migration to continuous deployment, we provide end-to-end solutions that 
+              modernize your infrastructure and accelerate your development cycles.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (;
-              <div;
-                key={{service.name}}
-                className="className="group p-8 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50";"
+          <div className="grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={service.name}
+                className="className="group p-8 rounded-2xl bg-slate-800/50,
+  hove: r: bg-slate-800 transition-all duration-300 hove,
+  r:scale-105 border border-slate-700/50";"
               >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hov,
+  e: r:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                ;
+                
                 <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                ;
+                
                 <div className="space-y-3 mb-6">
-                  <h4 className="font-semibold text-cyan-400">Key Features:</h4>
+                  <h4 className="font-semibold text-cyan-400">Key,
+  Feature: s:</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (;
+                    {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                        {{feature}}
+                        {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 <div className="space-y-3 mb-6">
-                  <h4 className="font-semibold text-green-400">Key Benefits:</h4>
+                  <h4 className="font-semibold text-green-400">Key,
+  Benefit: s:</h4>
                   <ul className="space-y-2">
-                    {service.benefits.map((benefit, idx) => (;
+                    {service.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                         <Zap className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        {{benefit}}
+                        {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <Link;
-                  to="/request-quote";
-                  className="className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors";"
+                <Link
+                  to="/request-quote"
+                  className="className="inline-flex items-center gap-2 text-blue-400,
+  hove: r:text-blue-300 font-medium transition-colors";"
                 >
-                  Learn More;
+                  Learn More
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -213,22 +297,25 @@ export default function CloudDevOps() {;
         </div>
       </section>
 
-      {{/* Technology Stack */}}
+      {/* Technology Stack */}
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Technology Stack;
+              Technology Stack
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We leverage cutting-edge technologies and tools to deliver robust, scalable, and secure solutions.;
+              We leverage cutting-edge technologies and tools to deliver robust, scalable, and secure solutions.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {technologies.map((tech, index) => (;
+          <div className="grid grid-cols-2,
+  m: d: grid-cols-4 l,
+  g:grid-cols-6 gap-6">
+            {technologies.map((tech, index) => (
               <div key={index} className="text-center group">
-                <div className="w-20 h-20 mx-auto mb-4 bg-slate-700/50 rounded-xl flex items-center justify-center group-hover:bg-slate-700 transition-colors duration-300">
+                <div className="w-20 h-20 mx-auto mb-4 bg-slate-700/50 rounded-xl flex items-center justify-center group-hov,
+  e: r:bg-slate-700 transition-colors duration-300">
                   <tech.icon className="w-10 h-10 text-blue-400" />
                 </div>
                 <h3 className="font-semibold text-white text-sm mb-1">{tech.name}</h3>
@@ -239,44 +326,48 @@ export default function CloudDevOps() {;
         </div>
       </section>
 
-      {{/* Case Studies */}}
+      {/* Case Studies */}
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Success Stories;
+              Success Stories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how we've transformed organizations with our Cloud DevOps solutions;
+              See how we've transformed organizations with our Cloud DevOps solutions
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (;
+          <div className="grid grid-cols-1,
+  m: d:grid-cols-3 gap-8">
+            {caseStudies.map((study, index) => (
               <div key={index} className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-white mb-2">{study.company}</h3>
                   <p className="text-sm text-blue-400 mb-1">{study.industry}</p>
                 </div>
-                ;
+                
                 <div className="space-y-4 mb-6">
                   <div>
-                    <h4 className="font-semibold text-cyan-400 mb-2">Challenge:</h4>
+                    <h4 className="font-semibold text-cyan-400 mb-2">Challen,
+  g: e:</h4>
                     <p className="text-sm text-gray-300">{study.challenge}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-green-400 mb-2">Solution:</h4>
+                    <h4 className="font-semibold text-green-400 mb-2">Soluti,
+  o: n:</h4>
                     <p className="text-sm text-gray-300">{study.solution}</p>
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-white mb-3">Results:</h4>
+                  <h4 className="font-semibold text-white mb-3">Resul,
+  t: s:</h4>
                   <ul className="space-y-2">
-                    {study.results.map((result, idx) => (;
+                    {study.results.map((result, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        {{result}}
+                        {result}
                       </li>
                     ))}
                   </ul>
@@ -287,36 +378,50 @@ export default function CloudDevOps() {;
         </div>
       </section>
 
-      {{/* Process Section */}}
+      {/* Process Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Our Cloud DevOps Process;
+              Our Cloud DevOps Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A proven methodology that ensures successful cloud transformation and DevOps implementation;
+              A proven methodology that ensures successful cloud transformation and DevOps implementation
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
-            {[;
-              {;
-                step: '01',title: 'Assessment & Planning',description: 'Evaluate current infrastructure and plan migration strategy',icon: BarChart3;
+          <div className="grid grid-cols-1,
+  m: d: grid-cols-4 gap-8">
+            {[
+              {
+                ste,
+  p: '01',tit,
+  l: e: 'Assessment & Planning',descripti,
+  o: n: 'Evaluate current infrastructure and plan migration strategy',ic,
+  o: n: BarChart3
+              }, {
+                st,
+  e: p: '02',tit,
+  l: e: 'Design & Architecture',descripti,
+  o: n: 'Design scalable cloud architecture and DevOps workflows',ic,
+  o: n: Code
+              }, {
+                st,
+  e: p: '03',tit,
+  l: e: 'Implementation',descripti,
+  o: n: 'Execute migration and implement automation tools',ic,
+  o: n: Zap
+              }, {
+                st,
+  e: p: '04',tit,
+  l: e: 'Optimization',descripti,
+  o: n: 'Monitor performance and continuously optimize',ic,
+  o: n: RefreshCw
               }
-              {;
-                step: '02',title: 'Design & Architecture',description: 'Design scalable cloud architecture and DevOps workflows',icon: Code;
-              }
-              {;
-                step: '03',title: 'Implementation',description: 'Execute migration and implement automation tools',icon: Zap;
-              }
-              {;
-                step: '04',title: 'Optimization',description: 'Monitor performance and continuously optimize',icon: RefreshCw;
-              }
-            ].map((phase, index) => (;
+            ].map((phase, index) => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-2xl font-bold text-white">
-                  {{phase.step}}
+                  {phase.step}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{phase.title}</h3>
                 <p className="text-gray-300">{phase.description}</p>
@@ -326,29 +431,35 @@ export default function CloudDevOps() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {/* CTA Section */}
       <section className="py-20">
         <div className="container-responsive">
           <div className="bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-green-500/10 rounded-3xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Infrastructure?;
+              Ready to Transform Your Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our Cloud DevOps solutions can modernize your infrastructure;
-              accelerate your development cycles, and drive operational excellence.;
+              Let's discuss how our Cloud DevOps solutions can modernize your infrastructure
+              accelerate your development cycles, and drive operational excellence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link;
-                to="/request-quote";
-                className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 hover: from-blue-600 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25";"
+              <Link
+                to="/request-quote"
+                className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600,
+  hove: r: from-blue-600,
+  hove: r:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-300,
+  transform: hover:scale-105 shadow-lg,
+  hove: r:shadow-blue-500/25";"
               >
-                Get Started Today;
+                Get Started Today
               </Link>
-              <Link;
-                to="/contact";
-                className="className="px-8 py-4 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold rounded-lg transition-all duration-300";"
+              <Link
+                to="/contact"
+                className="className="px-8 py-4 border border-blue-400 text-blue-400,
+  hove: r:bg-blue-400 hove,
+  r:text-white font-semibold rounded-lg transition-all duration-300";"
               >
-                Schedule Free Consultation;
+                Schedule Free Consultation
               </Link>
             </div>
           </div>

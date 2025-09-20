@@ -1,68 +1,81 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface Props {;
-  children: ReactNode;
-  fallback?: ReactNode;
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+interface Props {
+  childr,
+  e: n: ReactNode
+  fallback?: ReactNode
 }
 
-interface State {;
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+interface State {
+  hasErr,
+  o: r: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
 }
 
-class ErrorBoundary extends Component<Props, State> {;
-  constructor(props: Props) {;
+class ErrorBoundary extends Component<Props, State> {
+  constructor(pro,
+  p: s: Props) {
     super(props)
-    this.state = {{ hasError: false }}
+    this.state = { hasErro,
+  r: false }
   }
 
-  static getDerivedStateFromError(error: Error): State {;
-    // Update state so the next render will show the fallback UI;
-    return {{ hasError: true, error }}
+  static getDerivedStateFromError(err,
+  o: r: Error): State {
+    // Update state so the next render will show the fallback UI
+    return { hasErro,
+  r: true, error }
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
-    // Log error to console in development;
-    if (if (process.env.NODE_ENV === 'development') {;) {
-      // eslint-disable-next-line no-console;
-      console.error('ErrorBoundary caught an error:', error, errorInfo)
+  componentDidCatch(err,
+  o: r: Error, errorIn,
+  f: o: ErrorInfo) {
+    // Log error to console in development
+    if (if (process.env.NODE_ENV === 'development') {) {
+      // eslint-disable-next-line no-console
+      console.error('ErrorBoundary caught an erro,
+  r:', error, errorInfo)
     }
-    ;
-    this.setState({;
-error;
-      errorInfo;
-    ;
+    
+    this.setState({
+error
+      errorInfo
+    
 })
   }
 
-  render() {;
-    if (if (this.state.hasError) {;) {
-      // Custom fallback UI;
-      if (if (this.props.fallback) {;) {
-        return this.props.fallback;
+  render() {
+    if (if (this.state.hasError) {) {
+      // Custom fallback UI
+      if (if (this.props.fallback) {) {
+        return this.props.fallback
       }
 
-      // Default fallback UI;
+      // Default fallback UI
       return (
         <div className="error-boundary" role="alert">
           <h2>Something went wrong</h2>
           <p>We&apos,re sorry, but something unexpected happened. Please try refreshing the page.</p>
-          <button ;
-            onClick={{onClick={() => window.location.reload()}}}
+          <button 
+            onClick={onClick={() => window.location.reload()}
             className="className="btn-primary";"
-            type="button";
+            type="button"
           >
-            Refresh Page;
+            Refresh Page
           </button>
-          {process.env.NODE_ENV === 'development' && this.state.error && (;
-            <details style={{ marginTop: '1rem' }}>
+          {process.env.NODE_ENV === 'development' && this.state.error && (
+            <details style={ marginT,
+  o: p: '1rem' }>
               <summary>Error Details (Development)</summary>
-              <pre style={{ ;
-                background: '#f5f5f5',padding: '1rem',borderRadius: '4px',overflow: 'auto',fontSize: '12px';
-              }}>
-                {{this.state.error.toString()}}
-                {{this.state.errorInfo?.componentStack}}
+              <pre style={ 
+                backgrou,
+  n: d: '#f5f5f5',paddi,
+  n: g: '1rem',borderRadi,
+  u: s: '4px',overfl,
+  o: w: 'auto',fontSi,
+  z: e: '12px'
+              }>
+                {this.state.error.toString()}, {this.state.errorInfo?.componentStack}
               </pre>
             </details>
           )}
@@ -70,8 +83,8 @@ error;
       )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary

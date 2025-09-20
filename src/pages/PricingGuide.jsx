@@ -1,74 +1,98 @@
-import React, { useState } from "react";
-import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from "@/data/expandedServices";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock } from "lucide-react";
-import SEO from "@/components/SEO";
-export default function PricingGuide() {;
+import React, { useState } from "react"
+import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from "@/data/expandedServices"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock } from "lucide-react"
+import SEO from "@/components/SEO"
+export default function PricingGuide() {
     const [selectedCategory, setSelectedCategory] = useState('all')
-    const filteredServices = selectedCategory === 'all';
-        ? EXPANDED_SERVICES;
+    const filteredServices = selectedCategory === 'all'
+        ? EXPANDED_SERVICES
         : EXPANDED_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory)
-    const getCategoryIcon = (category) => {;
-        const const icons = {; = {
-            'AI Development': <Brain className="w-6 h-6"/>;
-            'Cloud Services': <Cloud className="w-6 h-6"/>;
-            'DevOps': <Zap className="w-6 h-6"/>;
-            'Cybersecurity': <Shield className="w-6 h-6"/>;
-            'Data & Analytics': <Database className="w-6 h-6"/>;
-            'Digital Transformation': <TrendingUp className="w-6 h-6"/>;
-            'Emerging Tech': <Globe className="w-6 h-6"/>;
+    const getCategoryIcon = (category) () => {
+        const const icons = { = {
+            'AI Development': <Brain className="w-6 h-6"/>
+            'Cloud Services': <Cloud className="w-6 h-6"/>
+            'DevOps': <Zap className="w-6 h-6"/>
+            'Cybersecurity': <Shield className="w-6 h-6"/>
+            'Data & Analytics': <Database className="w-6 h-6"/>
+            'Digital Transformation': <TrendingUp className="w-6 h-6"/>
+            'Emerging Tech': <Globe className="w-6 h-6"/>
             'Managed Services': <Lock className="w-6 h-6"/>
         }
-        return icons[category] || <Star className="w-6 h-6"/>;
+        return icons[category] || <Star className="w-6 h-6"/>
     }
-    const formatPrice = (price) => {;
-        if (if (price >= 1000) {;) {
-            return `$${(price / 1000).toFixed(0)}K`;
+    const formatPrice = (price) () => {
+        if (if (price >= 1000) {) {
+            return `$${(price / 1000).toFixed(0)}K`
         }
-        return `$${price}`;
+        return `$${price}`
     }
-    const getMarketComparison = (price, category) => {;
-        const const comparisons = {; = {
-            'AI Development': {{ avg: price * 1.3, savings: 23 }}
-            'Cloud Services': {{ avg: price * 1.25, savings: 20 }}
-            'DevOps': {{ avg: price * 1.35, savings: 26 }}
-            'Cybersecurity': {{ avg: price * 1.4, savings: 29 }}
-            'Data & Analytics': {{ avg: price * 1.3, savings: 23 }}
-            'Digital Transformation': {{ avg: price * 1.45, savings: 31 }}
-            'Emerging Tech': {{ avg: price * 1.5, savings: 33 }}
-            'Managed Services': {{ avg: price * 1.2, savings: 17 }}
+    const getMarketComparison = (price, category) () => {
+        const const comparisons = { = {
+            'AI Development': { a,
+  v: g: price * 1.3, savin,
+  g: s: 23 }
+            'Cloud Services': { a,
+  v: g: price * 1.25, savin,
+  g: s: 20 }
+            'DevOps': { a,
+  v: g: price * 1.35, savin,
+  g: s: 26 }
+            'Cybersecurity': { a,
+  v: g: price * 1.4, savin,
+  g: s: 29 }
+            'Data & Analytics': { a,
+  v: g: price * 1.3, savin,
+  g: s: 23 }
+            'Digital Transformation': { a,
+  v: g: price * 1.45, savin,
+  g: s: 31 }
+            'Emerging Tech': { a,
+  v: g: price * 1.5, savin,
+  g: s: 33 }
+            'Managed Services': { a,
+  v: g: price * 1.2, savin,
+  g: s: 17 }
         }
-        return comparisons[category] || {{ avg: price * 1.3, savings: 23 }}
+        return comparisons[category] || { a,
+  v: g: price * 1.3, savin,
+  g: s: 23 }
     }
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
-      <SEO title="IT Services Pricing Guide - Zion Tech Group" description="Comprehensive pricing guide for enterprise IT services, AI development, cybersecurity, cloud migration, and digital transformation. Competitive rates with guaranteed ROI." keywords="IT services pricing, AI development cost, cybersecurity pricing, cloud migration cost, digital transformation pricing, managed services pricing" canonical="https://ziontechgroup.com/pricing-guide"/>
+      <SEO title="IT Services Pricing Guide - Zion Tech Group" description="Comprehensive pricing guide for enterprise IT services, AI development, cybersecurity, cloud migration, and digital transformation. Competitive rates with guaranteed ROI." keywords="IT services pricing, AI development cost, cybersecurity pricing, cloud migration cost, digital transformation pricing, managed services pricing" canonical="htt,
+  p: s://ziontechgroup.com/pricing-guide"/>
 
-      {{/* Hero Section */}}
+      {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            IT Services Pricing Guide;
+          <h1 className="text-4xl,
+  m: d: text-6xl font-bold text-white mb-6">
+            IT Services Pricing Guide
           </h1>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
-            Transparent pricing for enterprise technology solutions. Compare our competitive rates ;
-            with market averages and discover the value we deliver.;
+            Transparent pricing for enterprise technology solutions. Compare our competitive rates 
+            with market averages and discover the value we deliver.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-cyan hover:text-white">
+            <Button size="lg" className="bg-white text-zion-purple,
+  hove: r:bg-zion-cyan,
+  hove: r:text-white">
               <Phone className="w-5 h-5 mr-2"/>
-              Get Custom Quote;
+              Get Custom Quote
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">
+            <Button size="lg" variant="outline" className="border-white text-white,
+  hove: r:bg-white hove,
+  r:text-zion-purple">
               <Mail className="w-5 h-5 mr-2"/>
-              Schedule Consultation;
+              Schedule Consultation
             </Button>
           </div>
         </div>
       </div>
 
-      {{/* Contact Information Banner */}}
+      {/* Contact Information Banner */}
       <div className="bg-zion-blue-dark py-6 px-4 border-b border-zion-blue-light">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-8 text-zion-cyan">
@@ -88,17 +112,18 @@ export default function PricingGuide() {;
         </div>
       </div>
 
-      {{/* Pricing Overview */}}
+      {/* Pricing Overview */}
       <div className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Pricing Overview</h2>
             <p className="text-zion-slate-light text-lg">
-              Competitive pricing with guaranteed ROI and transparent cost structure;
+              Competitive pricing with guaranteed ROI and transparent cost structure
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1,
+  m: d:grid-cols-3 gap-8 mb-16">
             <Card className="bg-white/5 border-zion-blue-light text-center">
               <CardHeader>
                 <div className="mx-auto p-3 rounded-full bg-green-500/20 text-green-400 mb-4">
@@ -139,37 +164,41 @@ export default function PricingGuide() {;
             </Card>
           </div>
 
-          {{/* Category Filter */}}
+          {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Button variant={selectedCategory === 'all' ? 'default' : 'outline'} onClick={() => setSelectedCategory('all')} className="bg-zion-purple hover:bg-zion-purple-dark">
-              All Categories;
+            <Button variant={selectedCategory === 'all' ? 'default' : 'outline'} onClick={() => setSelectedCategory('all')} className="bg-zion-purple,
+  hove: r:bg-zion-purple-dark">
+              All Categories
             </Button>
-            {EXPANDED_SERVICE_CATEGORIES.map((category) => (<Button key={category.value} variant={selectedCategory === category.value ? 'default' : 'outline'} onClick={() => setSelectedCategory(category.value)} className={selectedCategory === category.value ? 'bg-zion-purple hover:bg-zion-purple-dark' : ''}>
-                {{category.label}}
+            {EXPANDED_SERVICE_CATEGORIES.map((category) => (<Button key={category.value} variant={selectedCategory === category.value ? 'default' : 'outline'} onClick={() => setSelectedCategory(category.value)} className={selectedCategory === category.value ? 'bg-zion-purple,
+  hove: r:bg-zion-purple-dark' : ''}>
+                {category.label}
               </Button>))}
           </div>
 
-          {{/* Services Pricing Grid */}}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredServices.map((service) => {;
+          {/* Services Pricing Grid */}
+          <div className="grid grid-cols-1,
+  l: g:grid-cols-2 gap-8">
+            {filteredServices.map((service) () => {
             const marketComparison = getMarketComparison(service.price, service.category)
-            return (<Card key={service.id} className="bg-white/5 border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300">
+            return (<Card key={service.id} className="bg-white/5 border-zion-blue-light,
+  hove: r:border-zion-purple/50 transition-all duration-300">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-3">
                       <div className="p-2 rounded-lg bg-zion-purple/20 text-zion-cyan">
-                        {{getCategoryIcon(service.category)}}
+                        {getCategoryIcon(service.category)}
                       </div>
                       {service.featured && (<Badge className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
-                          Featured;
+                          Featured
                         </Badge>)}
                     </div>
                     <CardTitle className="text-white text-xl mb-2">{service.title}</CardTitle>
                     <CardDescription className="text-zion-slate-light">
-                      {{service.description}}
+                      {service.description}
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    {{/* Pricing Section */}}
+                    {/* Pricing Section */}
                     <div className="bg-zion-blue-dark/50 rounded-lg p-4 mb-6">
                       <div className="flex items-center justify-between mb-4">
                         <div>
@@ -187,41 +216,47 @@ export default function PricingGuide() {;
                       </div>
                     </div>
 
-                    {{/* Service Details */}}
+                    {/* Service Details */}
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center gap-2 text-zion-slate-light">
                         <Clock className="w-4 h-4"/>
-                        <span className="text-sm">Delivery: {service.availability}</span>
+                        <span className="text-sm">Delive,
+  r: y: {service.availability}</span>
                       </div>
                       <div className="flex items-center gap-2 text-zion-slate-light">
                         <Globe className="w-4 h-4"/>
-                        <span className="text-sm">Location: {service.location}</span>
+                        <span className="text-sm">Locati,
+  o: n: {service.location}</span>
                       </div>
                       {service.rating && (<div className="flex items-center gap-2 text-zion-slate-light">
                           <Star className="w-4 h-4 text-yellow-400 fill-current"/>
                           <span className="text-sm">{service.rating} ({service.reviewCount} reviews)</span>
-                        </div>)}
-                      {service.aiScore && (<div className="flex items-center gap-2 text-zion-slate-light">
+                        </div>)}, {service.aiScore && (<div className="flex items-center gap-2 text-zion-slate-light">
                           <Brain className="w-4 h-4 text-zion-cyan"/>
-                          <span className="text-sm">AI Score: {service.aiScore}%</span>
+                          <span className="text-sm">AI,
+  Scor: e: {service.aiScore}%</span>
                         </div>)}
                     </div>
 
-                    {{/* Tags */}}
+                    {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-6">
                       {service.tags.slice(0, 4).map((tag) => (<Badge key={tag} variant="secondary" className="bg-zion-blue-light text-zion-cyan">
-                          {{tag}}
+                          {tag}
                         </Badge>))}
                     </div>
 
-                    {{/* CTA Buttons */}}
+                    {/* CTA Buttons */}
                     <div className="flex gap-2">
-                      <Button size="sm" variant="outline" className="border-zion-purple text-zion-purple hover: bg-zion-purple hover:text-white flex-1">
+                      <Button size="sm" variant="outline" className="border-zion-purple text-zion-purple,
+  hove: r: bg-zion-purple,
+  hove: r:text-white flex-1">
                         <Mail className="w-4 h-4 mr-1"/>
-                        Get Quote;
+                        Get Quote
                       </Button>
-                      <Button size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple flex-1">
-                        Learn More;
+                      <Button size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark,
+  hove: r:from-zion-purple-light hove,
+  r:to-zion-purple flex-1">
+                        Learn More
                       </Button>
                     </div>
                   </CardContent>
@@ -232,23 +267,25 @@ export default function PricingGuide() {;
           {filteredServices.length === 0 && (<div className="text-center py-16">
               <div className="text-zion-slate-light text-xl mb-4">No services found in this category</div>
               <Button onClick={() => setSelectedCategory('all')}>
-                View All Services;
+                View All Services
               </Button>
             </div>)}
         </div>
       </div>
 
-      {{/* Value Proposition */}}
+      {/* Value Proposition */}
       <div className="py-16 px-4 bg-zion-blue-dark">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
             <p className="text-zion-slate-light text-lg">
-              We deliver exceptional value through expertise, innovation, and proven results;
+              We deliver exceptional value through expertise, innovation, and proven results
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-4 gap-6">
             <Card className="bg-zion-blue border-zion-blue-light text-center">
               <CardHeader>
                 <div className="mx-auto p-3 rounded-full bg-zion-purple/20 text-zion-cyan mb-4">
@@ -258,7 +295,7 @@ export default function PricingGuide() {;
               </CardHeader>
               <CardContent>
                 <p className="text-zion-slate-light text-sm">
-                  Certified professionals with 10+ years of experience in enterprise technology;
+                  Certified professionals with 10+ years of experience in enterprise technology
                 </p>
               </CardContent>
             </Card>
@@ -272,7 +309,7 @@ export default function PricingGuide() {;
               </CardHeader>
               <CardContent>
                 <p className="text-zion-slate-light text-sm">
-                  99.9% uptime guarantee with comprehensive service level agreements;
+                  99.9% uptime guarantee with comprehensive service level agreements
                 </p>
               </CardContent>
             </Card>
@@ -286,7 +323,7 @@ export default function PricingGuide() {;
               </CardHeader>
               <CardContent>
                 <p className="text-zion-slate-light text-sm">
-                  Every solution designed to maximize return on investment and business value;
+                  Every solution designed to maximize return on investment and business value
                 </p>
               </CardContent>
             </Card>
@@ -300,7 +337,7 @@ export default function PricingGuide() {;
               </CardHeader>
               <CardContent>
                 <p className="text-zion-slate-light text-sm">
-                  Services available worldwide with local expertise and global best practices;
+                  Services available worldwide with local expertise and global best practices
                 </p>
               </CardContent>
             </Card>
@@ -308,27 +345,36 @@ export default function PricingGuide() {;
         </div>
       </div>
 
-      {{/* Contact CTA Section */}}
+      {/* Contact CTA Section */}
       <div className="py-20 px-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-zion-cyan mb-8 max-w-2xl mx-auto">
-            Contact us today for a personalized quote and consultation. Our experts will help you ;
-            choose the right services for your business needs and budget.;
+            Contact us today for a personalized quote and consultation. Our experts will help you 
+            choose the right services for your business needs and budget.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-cyan hover:text-white">
+            <Button size="lg" className="bg-white text-zion-purple,
+  hove: r: bg-zion-cyan,
+  hove: r:text-white">
               <Phone className="w-5 h-5 mr-2"/>
-              Call +1 302 464 0950;
+              Call +1 302 464 0950
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">
+            <Button size="lg" variant="outline" className="border-white text-white,
+  hove: r:bg-white,
+  hove: r:text-zion-purple">
               <Mail className="w-5 h-5 mr-2"/>
-              Email kleber@ziontechgroup.com;
+              Email kleber@ziontechgroup.com
             </Button>
           </div>
           <div className="mt-8 text-zion-cyan">
-            <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
-            <p>Website: <a href="https://ziontechgroup.com" className="underline hover:text-white">https://ziontechgroup.com</a></p>
+            <p>Visit u,
+  s: 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p>Websi,
+  t: e: <a href="htt,
+  p: s://ziontechgroup.com" className="underline,
+  hove: r:text-white">http,
+  s://ziontechgroup.com</a></p>
           </div>
         </div>
       </div>

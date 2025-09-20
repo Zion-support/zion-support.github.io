@@ -1,54 +1,97 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
+import React, { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react"
 interface Testimonial {
-  id: number,name: string,role: string,company: string,content: string,rating: number,avatar: string,industry: string
+  id: number,na,
+  m: e: string,ro,
+  l: e: string,compa,
+  n: y: string,conte,
+  n: t: string,rati,
+  n: g: number,avat,
+  a: r: string,indust,
+  r: y: string
 }
 
-const Testimonials: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const testimonials: Testimonial[] = [
+const,
+  Testimonial: s: React.FC = () () => {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const,
+  testimonial: s: Testimonial[] = [
     {
-      id: 1,name: "Sarah Chen",role: "CTO",company: "TechFlow Solutions",content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency. The team's expertise in cybersecurity gave us peace of mind.",rating: 5,avatar: "/images/testimonials/sarah-chen.jpg",industry: "Technology"
-    };
-    {
-      id: 2,name: "Marcus Rodriguez",role: "VP of Operations",company: "Global Manufacturing Co.",content: "Implementing Zion's cloud solutions was seamless. Our development cycles went from months to weeks, and the scalability has been incredible. Their support team is always available when we need them.",
-      rating: 5,avatar: "/images/testimonials/marcus-rodriguez.jpg",industry: "Manufacturing"
-    };
-    {
-      id: 3,name: "Dr. Emily Watson",role: "Research Director",company: "Quantum Research Institute",content: "Working with Zion on our quantum computing initiatives has been groundbreaking. Their expertise in cutting-edge technologies is unmatched. They've helped us achieve breakthroughs we never thought possible.",rating: 5,avatar: "/images/testimonials/emily-watson.jpg",industry: "Research"
-    };
-    {
-      id: 4,name: "David Kim",role: "CEO",company: "FinTech Innovations",content: "Zion's cybersecurity solutions are enterprise-grade. They helped us achieve SOC 2 compliance in record time and their threat detection systems have prevented multiple potential breaches.",rating: 5,avatar: "/images/testimonials/david-kim.jpg",industry: "Financial Services"
+      i,
+  d: 1,na,
+  m: e: "Sarah Chen",ro,
+  l: e: "CTO",compa,
+  n: y: "TechFlow Solutions",conte,
+  n: t: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency. The team's expertise in cybersecurity gave us peace of mind.",rati,
+  n: g: 5,avat,
+  a: r: "/images/testimonials/sarah-chen.jpg",indust,
+  r: y: "Technology"
+    }, {
+      id: 2,na,
+  m: e: "Marcus Rodriguez",ro,
+  l: e: "VP of Operations",compa,
+  n: y: "Global Manufacturing Co.",conte,
+  n: t: "Implementing Zion's cloud solutions was seamless. Our development cycles went from months to weeks, and the scalability has been incredible. Their support team is always available when we need them.",
+      rati,
+  n: g: 5,avat,
+  a: r: "/images/testimonials/marcus-rodriguez.jpg",indust,
+  r: y: "Manufacturing"
+    }, {
+      id: 3,na,
+  m: e: "Dr. Emily Watson",ro,
+  l: e: "Research Director",compa,
+  n: y: "Quantum Research Institute",conte,
+  n: t: "Working with Zion on our quantum computing initiatives has been groundbreaking. Their expertise in cutting-edge technologies is unmatched. They've helped us achieve breakthroughs we never thought possible.",rati,
+  n: g: 5,avat,
+  a: r: "/images/testimonials/emily-watson.jpg",indust,
+  r: y: "Research"
+    }, {
+      id: 4,na,
+  m: e: "David Kim",ro,
+  l: e: "CEO",compa,
+  n: y: "FinTech Innovations",conte,
+  n: t: "Zion's cybersecurity solutions are enterprise-grade. They helped us achieve SOC 2 compliance in record time and their threat detection systems have prevented multiple potential breaches.",rati,
+  n: g: 5,avat,
+  a: r: "/images/testimonials/david-kim.jpg",indust,
+  r: y: "Financial Services"
     }
-  ];
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  ]
+  const nextTestimonial = () () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
   },
 
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const prevTestimonial = () () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
   },
 
-  const goToTestimonial = (index: number) => {
+  const goToTestimonial = (ind,
+  e: x: number) () => {
     setCurrentIndex(index)
-  };
+  }
   return (
     <section className="py-20 bg-gradient-to-b from-zion-slate to-zion-slate-dark" role="region" aria-labelledby="testimonials-heading">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4,
+  s: m: px-6,
+  l: g:px-8">
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={ opacit,
+  y: 0, y: 30 }
+          whileInView={ opaci,
+  t: y: 1, y: 0 }
+          transition={ durati,
+  o: n: 0.8 }
+          viewport={ on,
+  c: e: true }
         >
           <div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full">
             <Quote className="w-4 h-4 text-zion-cyan mr-2" />
             <span className="text-zion-cyan text-sm font-medium">Client Success Stories</span>
           </div>
 
-          <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 id="testimonials-heading" className="text-4xl,
+  m: d:text-5xl font-bold text-white mb-6">
             What Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Clients Say</span>
           </h2>
 
@@ -62,11 +105,16 @@ const Testimonials: React.FC = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
-              className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
+              initial={ opaci,
+  t: y: 0, x: 100 }
+              animate={ opaci,
+  t: y: 1, x: 0 }
+              exit={ opaci,
+  t: y: 0, x: -100 }
+              transition={ durati,
+  o: n: 0.5 }
+              className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8,
+  m: d:p-12 text-center relative overflow-hidden"
             >
               {/* Background decoration */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 rounded-full blur-3xl" />
@@ -80,7 +128,8 @@ const Testimonials: React.FC = () => {
               </div>
 
               {/* Quote */}
-              <blockquote className="text-xl md:text-2xl text-white mb-8 leading-relaxed italic">
+              <blockquote className="text-xl,
+  m: d:text-2xl text-white mb-8 leading-relaxed italic">
                 "{testimonials[currentIndex].content}"
               </blockquote>
 
@@ -108,7 +157,13 @@ const Testimonials: React.FC = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan,
+  hove: r: bg-zion-cyan,
+  hove: r:text-white transition-all duration-300,
+  hove: r:scale-110,
+  focu: s:outline-none,
+  focu: s:ring-2 focu,
+  s:ring-zion-cyan/50"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -116,7 +171,13 @@ const Testimonials: React.FC = () => {
 
           <button
             onClick={nextTestimonial}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan,
+  hove: r: bg-zion-cyan,
+  hove: r:text-white transition-all duration-300,
+  hove: r:scale-110,
+  focu: s:outline-none,
+  focu: s:ring-2 focu,
+  s:ring-zion-cyan/50"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-6 h-6" />
@@ -132,7 +193,8 @@ const Testimonials: React.FC = () => {
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentIndex
                   ? 'bg-zion-cyan scale-125'
-                  : 'bg-zion-slate-light hover:bg-zion-cyan/50'
+                  : 'bg-zion-slate-light,
+  hove: r:bg-zion-cyan/50'
               }`}
               aria-label={`Go to testimonial ${index + 1}`}
             />
@@ -142,13 +204,19 @@ const Testimonials: React.FC = () => {
         {/* Trust Indicators */}
         <motion.div
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
+          initial={ opaci,
+  t: y: 0, y: 20 }
+          whileInView={ opaci,
+  t: y: 1, y: 0 }
+          transition={ durati,
+  o: n: 0.8, del,
+  a: y: 0.4 }
+          viewport={ on,
+  c: e: true }
         >
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-2xl mx-auto">
+          <div className="grid grid-cols-2,
+  m: d: grid-cols-4 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-cyan mb-2">98%</div>
               <div className="text-zion-slate-light text-sm">Client Satisfaction</div>
@@ -170,5 +238,5 @@ const Testimonials: React.FC = () => {
       </div>
     </section>
   )
-};
-export default Testimonials;
+}
+export default Testimonials

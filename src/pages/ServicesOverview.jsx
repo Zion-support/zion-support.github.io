@@ -1,151 +1,265 @@
-import React from "react";
-import SEO from "@/components/SEO";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from "lucide-react";
-export default function ServicesOverview() {;
-    const serviceCategories = [;
-        {;
-            name: "AI & Machine Learning",description: "Cutting-edge artificial intelligence solutions for business transformation",icon: Brain,color: "from-purple-600 to-blue-600",services: [;
-                {;
-                    name: "AI Strategy & Consulting",description: "Strategic guidance on implementing AI solutions",price: "From $2,500";
-                    href: "/services/ai";
-                }
-                {;
-                    name: "Machine Learning Development",description: "Custom ML models and algorithms",price: "From $5,000";
-                    href: "/services/ai";
-                }
-                {;
-                    name: "AI-Powered Applications",description: "Intelligent automation and insights",price: "From $8,500";
-                    href: "/services/ai";
-                }
-            ]
-        }
-        {;
-            name: "Data Analytics & BI",description: "Transform raw data into actionable business intelligence",icon: Database,color: "from-blue-600 to-indigo-600",services: [;
-                {;
-                    name: "Business Intelligence & Reporting",description: "Interactive dashboards and automated reporting",price: "From $3,500/month";
-                    href: "/services/data-analytics";
-                }
-                {;
-                    name: "Predictive Analytics & Forecasting",description: "Machine learning for future insights",price: "From $5,000/month";
-                    href: "/services/data-analytics";
-                }
-                {;
-                    name: "Data Engineering & ETL",description: "Robust data pipelines and warehouses",price: "From $4,500/month";
-                    href: "/services/data-analytics";
-                }
-            ]
-        }
-        {;
-            name: "IoT & Edge Computing",description: "Connected ecosystems and real-time edge processing",icon: Wifi,color: "from-green-600 to-emerald-600",services: [;
-                {;
-                    name: "IoT Device Management Platform",description: "Comprehensive IoT device management",price: "From $4,200/month";
-                    href: "/services/iot-edge-computing";
-                }
-                {;
-                    name: "Edge Computing Infrastructure",description: "Real-time data processing at the edge",price: "From $5,500/month";
-                    href: "/services/iot-edge-computing";
-                }
-                {;
-                    name: "Smart City & Industrial IoT",description: "IoT solutions for smart cities and manufacturing",price: "From $6,500/month";
-                    href: "/services/iot-edge-computing";
+import React from "react"
+import SEO from "@/components/SEO"
+import Link from "next/link"
+import { motion } from "framer-motion"
+import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from "lucide-react"
+export default function ServicesOverview() {
+    const serviceCategories = [
+        {
+            na,
+  m: e: "AI & Machine Learning",descripti,
+  o: n: "Cutting-edge artificial intelligence solutions for business transformation",ic,
+  o: n: Brain,col,
+  o: r: "from-purple-600 to-blue-600",servic,
+  e: s: [
+                {
+                    nam,
+  e: "AI Strategy & Consulting",descripti,
+  o: n: "Strategic guidance on implementing AI solutions",pri,
+  c: e: "From $2,500"
+                    hr,
+  e: f: "/services/ai"
+                }, {
+                    na,
+  m: e: "Machine Learning Development",descripti,
+  o: n: "Custom ML models and algorithms",pri,
+  c: e: "From $5,000"
+                    hr,
+  e: f: "/services/ai"
+                }, {
+                    na,
+  m: e: "AI-Powered Applications",descripti,
+  o: n: "Intelligent automation and insights",pri,
+  c: e: "From $8,500"
+                    hr,
+  e: f: "/services/ai"
                 }
             ]
-        }
-        {;
-            name: "Blockchain & Web3",description: "Decentralized applications and blockchain solutions",icon: LinkIcon,color: "from-purple-600 to-indigo-600",services: [;
-                {;
-                    name: "Smart Contract Development",description: "Secure, audited smart contracts";
-                    price: "From $8,500/project";
-                    href: "/services/blockchain-web3";
-                }
-                {;
-                    name: "DeFi Platform Development",description: "Complete DeFi platforms and protocols",price: "From $25,000/project";
-                    href: "/services/blockchain-web3";
-                }
-                {;
-                    name: "NFT Marketplace & Collections",description: "Custom NFT platforms and generative art",price: "From $12,000/project";
-                    href: "/services/blockchain-web3";
-                }
-            ]
-        }
-        {;
-            name: "DevOps & Cloud",description: "Modern software delivery and cloud infrastructure",icon: Cloud,color: "from-orange-600 to-red-600",services: [;
-                {;
-                    name: "Cloud Migration & Strategy",description: "Multi-cloud strategy and migration",price: "From $8,500/project";
-                    href: "/services/devops-cloud";
-                }
-                {;
-                    name: "CI/CD Pipeline Development",description: "Automated software delivery pipelines",price: "From $6,500/project";
-                    href: "/services/devops-cloud";
-                }
-                {;
-                    name: "Container Orchestration & Kubernetes",description: "Enterprise-grade container management",price: "From $7,500/project";
-                    href: "/services/devops-cloud";
+        }, {
+            na,
+  m: e: "Data Analytics & BI",descripti,
+  o: n: "Transform raw data into actionable business intelligence",ic,
+  o: n: Database,col,
+  o: r: "from-blue-600 to-indigo-600",servic,
+  e: s: [
+                {
+                    nam,
+  e: "Business Intelligence & Reporting",descripti,
+  o: n: "Interactive dashboards and automated reporting",pri,
+  c: e: "From $3,500/month"
+                    hr,
+  e: f: "/services/data-analytics"
+                }, {
+                    na,
+  m: e: "Predictive Analytics & Forecasting",descripti,
+  o: n: "Machine learning for future insights",pri,
+  c: e: "From $5,000/month"
+                    hr,
+  e: f: "/services/data-analytics"
+                }, {
+                    na,
+  m: e: "Data Engineering & ETL",descripti,
+  o: n: "Robust data pipelines and warehouses",pri,
+  c: e: "From $4,500/month"
+                    hr,
+  e: f: "/services/data-analytics"
                 }
             ]
-        }
-        {;
-            name: "Cybersecurity",description: "Advanced security solutions and threat protection",icon: Shield,color: "from-red-600 to-pink-600",services: [;
-                {;
-                    name: "Security Assessment & Auditing",description: "Comprehensive security evaluations",price: "From $5,000";
-                    href: "/services/cybersecurity";
+        }, {
+            na,
+  m: e: "IoT & Edge Computing",descripti,
+  o: n: "Connected ecosystems and real-time edge processing",ic,
+  o: n: Wifi,col,
+  o: r: "from-green-600 to-emerald-600",servic,
+  e: s: [
+                {
+                    nam,
+  e: "IoT Device Management Platform",descripti,
+  o: n: "Comprehensive IoT device management",pri,
+  c: e: "From $4,200/month"
+                    hr,
+  e: f: "/services/iot-edge-computing"
+                }, {
+                    na,
+  m: e: "Edge Computing Infrastructure",descripti,
+  o: n: "Real-time data processing at the edge",pri,
+  c: e: "From $5,500/month"
+                    hr,
+  e: f: "/services/iot-edge-computing"
+                }, {
+                    na,
+  m: e: "Smart City & Industrial IoT",descripti,
+  o: n: "IoT solutions for smart cities and manufacturing",pri,
+  c: e: "From $6,500/month"
+                    hr,
+  e: f: "/services/iot-edge-computing"
                 }
-                {;
-                    name: "Threat Detection & Response",description: "Real-time security monitoring",price: "From $4,500/month";
-                    href: "/services/cybersecurity";
+            ]
+        }, {
+            na,
+  m: e: "Blockchain & Web3",descripti,
+  o: n: "Decentralized applications and blockchain solutions",ic,
+  o: n: LinkIcon,col,
+  o: r: "from-purple-600 to-indigo-600",servic,
+  e: s: [
+                {
+                    nam,
+  e: "Smart Contract Development",descripti,
+  o: n: "Secure, audited smart contracts"
+                    pri,
+  c: e: "From $8,500/project"
+                    hr,
+  e: f: "/services/blockchain-web3"
+                }, {
+                    na,
+  m: e: "DeFi Platform Development",descripti,
+  o: n: "Complete DeFi platforms and protocols",pri,
+  c: e: "From $25,000/project"
+                    hr,
+  e: f: "/services/blockchain-web3"
+                }, {
+                    na,
+  m: e: "NFT Marketplace & Collections",descripti,
+  o: n: "Custom NFT platforms and generative art",pri,
+  c: e: "From $12,000/project"
+                    hr,
+  e: f: "/services/blockchain-web3"
                 }
-                {;
-                    name: "Compliance & Governance",description: "Regulatory compliance and security frameworks",price: "From $6,000/month";
-                    href: "/services/cybersecurity";
+            ]
+        }, {
+            na,
+  m: e: "DevOps & Cloud",descripti,
+  o: n: "Modern software delivery and cloud infrastructure",ic,
+  o: n: Cloud,col,
+  o: r: "from-orange-600 to-red-600",servic,
+  e: s: [
+                {
+                    nam,
+  e: "Cloud Migration & Strategy",descripti,
+  o: n: "Multi-cloud strategy and migration",pri,
+  c: e: "From $8,500/project"
+                    hr,
+  e: f: "/services/devops-cloud"
+                }, {
+                    na,
+  m: e: "CI/CD Pipeline Development",descripti,
+  o: n: "Automated software delivery pipelines",pri,
+  c: e: "From $6,500/project"
+                    hr,
+  e: f: "/services/devops-cloud"
+                }, {
+                    na,
+  m: e: "Container Orchestration & Kubernetes",descripti,
+  o: n: "Enterprise-grade container management",pri,
+  c: e: "From $7,500/project"
+                    hr,
+  e: f: "/services/devops-cloud"
+                }
+            ]
+        }, {
+            na,
+  m: e: "Cybersecurity",descripti,
+  o: n: "Advanced security solutions and threat protection",ic,
+  o: n: Shield,col,
+  o: r: "from-red-600 to-pink-600",servic,
+  e: s: [
+                {
+                    nam,
+  e: "Security Assessment & Auditing",descripti,
+  o: n: "Comprehensive security evaluations",pri,
+  c: e: "From $5,000"
+                    hr,
+  e: f: "/services/cybersecurity"
+                }, {
+                    na,
+  m: e: "Threat Detection & Response",descripti,
+  o: n: "Real-time security monitoring",pri,
+  c: e: "From $4,500/month"
+                    hr,
+  e: f: "/services/cybersecurity"
+                }, {
+                    na,
+  m: e: "Compliance & Governance",descripti,
+  o: n: "Regulatory compliance and security frameworks",pri,
+  c: e: "From $6,000/month"
+                    hr,
+  e: f: "/services/cybersecurity"
                 }
             ]
         }
     ]
-    const stats = [;
-        {{ label: "Services Offered", value: "50+", icon: Target }}
-        {{ label: "Industries Served", value: "15+", icon: Users }}
-        {{ label: "Technologies", value: "100+", icon: Server }}
-        {{ label: "Client Satisfaction", value: "98%", icon: Check }}
+    const stats = [
+        { lab,
+  e: l: "Services Offered", val,
+  u: e: "50+", ic,
+  o: n: Target }, { lab,
+  e: l: "Industries Served", val,
+  u: e: "15+", ic,
+  o: n: Users }, { lab,
+  e: l: "Technologies", val,
+  u: e: "100+", ic,
+  o: n: Server }, { lab,
+  e: l: "Client Satisfaction", val,
+  u: e: "98%", ic,
+  o: n: Check }
     ]
-    const const containerVariants = {; = {
-        hidden: {{ opacity: 0 }}
-        visible: {;
-            opacity: 1,transition: {;
-                staggerChildren: 0.1;
+    const const containerVariants = { = {
+        hidd,
+  e: n: { opacit,
+  y: 0 }
+        visib,
+  l: e: {
+            opacit,
+  y: 1,transiti,
+  o: n: {
+                staggerChildre,
+  n: 0.1
             }
         }
     }
-    const const itemVariants = {; = {
-        hidden: {{ y: 20, opacity: 0 }}
-        visible: {;
-            y: 0,opacity: 1,transition: {;
-                duration: 0.5,ease: "easeOut";
+    const const itemVariants = { = {
+        hidd,
+  e: n: { ,
+  y: 20, opaci,
+  t: y: 0 }
+        visib,
+  l: e: {
+            ,
+  y: 0,opaci,
+  t: y: 1,transiti,
+  o: n: {
+                duratio,
+  n: 0.5,ea,
+  s: e: "easeOut"
             }
         }
     }
     return (<div className="min-h-screen bg-background">
-      <SEO title="All Services - Zion Tech Group Comprehensive Technology Solutions" description="Explore our complete range of technology services including AI, data analytics, IoT, blockchain, DevOps, and cybersecurity solutions." keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services" canonical="https://ziontechgroup.com/services"/>
+      <SEO title="All Services - Zion Tech Group Comprehensive Technology Solutions" description="Explore our complete range of technology services including AI, data analytics, IoT, blockchain, DevOps, and cybersecurity solutions." keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services" canonical="htt,
+  p: s://ziontechgroup.com/services"/>
 
-      {{/* Hero Section */}}
+      {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-            Our Complete Service Portfolio;
+          <h1 className="text-5xl,
+  m: d: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            Our Complete Service Portfolio
           </h1>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-            Discover our comprehensive range of technology solutions designed to transform your business. ;
-            From AI and data analytics to IoT and blockchain, we have the expertise to drive your success.;
+          <p className="text-xl m,
+  d:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+            Discover our comprehensive range of technology solutions designed to transform your business. 
+            From AI and data analytics to IoT and blockchain, we have the expertise to drive your success.
           </p>
         </div>
       </section>
 
-      {{/* Stats Section */}}
+      {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.div className="grid grid-cols-2,
+  m: d:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={ on,
+  c: e: true }>
             {stats.map((stat, index) => (<motion.div key={stat.label} variants={itemVariants} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-white"/>
@@ -157,17 +271,19 @@ export default function ServicesOverview() {;
         </div>
       </section>
 
-      {{/* Services Overview */}}
+      {/* Services Overview */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div className="text-center mb-16" variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.div className="text-center mb-16" variants={itemVariants} initial="hidden" whileInView="visible" viewport={ on,
+  c: e: true }>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Service Categories</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our comprehensive range of technology solutions organized by category;
+              Explore our comprehensive range of technology solutions organized by category
             </p>
           </motion.div>
 
-          <motion.div className="space-y-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.div className="space-y-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={ on,
+  c: e: true }>
             {serviceCategories.map((category, index) => (<motion.div key={category.name} variants={itemVariants} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
                 <div className={`bg-gradient-to-r ${category.color} p-8 text-white`}>
                   <div className="flex items-center mb-4">
@@ -182,23 +298,27 @@ export default function ServicesOverview() {;
                 </div>
 
                 <div className="p-8">
-                  <div className="grid md:grid-cols-3 gap-6">
-                    {category.services.map((service, serviceIndex) => (<div key={serviceIndex} className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-blue-300 transition-colors">
+                  <div className="grid,
+  m: d:grid-cols-3 gap-6">
+                    {category.services.map((service, serviceIndex) => (<div key={serviceIndex} className="bg-gray-50 rounded-xl p-6 border border-gray-200,
+  hove: r:border-blue-300 transition-colors">
                         <h4 className="text-xl font-semibold text-gray-900 mb-3">{service.name}</h4>
                         <p className="text-gray-600 mb-4">{service.description}</p>
                         <div className="flex items-center justify-between">
                           <span className="text-lg font-semibold text-blue-600">{service.price}</span>
-                          <Link to={service.href} className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
-                            Learn More;
+                          <Link to={service.href} className="inline-flex items-center text-blue-600,
+  hove: r:text-blue-700 font-medium">
+                            Learn More
                             <ArrowRight className="w-4 h-4 ml-1"/>
                           </Link>
                         </div>
                       </div>))}
                   </div>
-                  ;
+                  
                   <div className="mt-8 text-center">
-                    <Link to={category.services[0].href} className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r ${category.color} hover:opacity-90 transition-opacity`}>
-                      Explore All {category.name} Services;
+                    <Link to={category.services[0].href} className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r ${category.color} hov,
+  e: r:opacity-90 transition-opacity`}>
+                      Explore All {category.name} Services
                       <ArrowRight className="w-5 h-5 ml-2"/>
                     </Link>
                   </div>
@@ -208,24 +328,27 @@ export default function ServicesOverview() {;
         </div>
       </section>
 
-      {{/* Why Choose Us Section */}}
+      {/* Why Choose Us Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div className="text-center mb-16" variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.div className="text-center mb-16" variants={itemVariants} initial="hidden" whileInView="visible" viewport={ on,
+  c: e: true }>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We combine deep technical expertise with business acumen to deliver solutions that drive real value;
+              We combine deep technical expertise with business acumen to deliver solutions that drive real value
             </p>
           </motion.div>
 
-          <motion.div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.div className="grid,
+  m: d:grid-cols-3 gap-8 max-w-6xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={ on,
+  c: e: true }>
             <motion.div variants={itemVariants} className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-blue-600"/>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Expert Team</h3>
               <p className="text-gray-600">
-                Certified professionals with deep expertise across multiple technology domains;
+                Certified professionals with deep expertise across multiple technology domains
               </p>
             </motion.div>
 
@@ -235,7 +358,7 @@ export default function ServicesOverview() {;
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Proven Results</h3>
               <p className="text-gray-600">
-                Track record of successful implementations and measurable business outcomes;
+                Track record of successful implementations and measurable business outcomes
               </p>
             </motion.div>
 
@@ -245,28 +368,35 @@ export default function ServicesOverview() {;
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation Focus</h3>
               <p className="text-gray-600">
-                Stay ahead with cutting-edge technologies and emerging industry trends;
+                Stay ahead with cutting-edge technologies and emerging industry trends
               </p>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.h2 className="text-4xl font-bold mb-6" variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            Ready to Transform Your Business?;
+          <motion.h2 className="text-4xl font-bold mb-6" variants={itemVariants} initial="hidden" whileInView="visible" viewport={ on,
+  c: e: true }>
+            Ready to Transform Your Business?
           </motion.h2>
-          <motion.p className="text-xl mb-8 max-w-3xl mx-auto" variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            Let our technology experts help you choose the right solutions and implement them successfully;
+          <motion.p className="text-xl mb-8 max-w-3xl mx-auto" variants={itemVariants} initial="hidden" whileInView="visible" viewport={ on,
+  c: e: true }>
+            Let our technology experts help you choose the right solutions and implement them successfully
           </motion.p>
-          <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <Link to="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors">
-              Get Started Today;
+          <motion.div className="flex flex-col,
+  s: m:flex-row gap-4 justify-center" variants={itemVariants} initial="hidden" whileInView="visible" viewport={ on,
+  c: e: true }>
+            <Link to="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold,
+  hove: r: bg-gray-100 transition-colors">
+              Get Started Today
             </Link>
-            <Link to="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Schedule Consultation;
+            <Link to="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
+  hove: r:bg-white hove,
+  r:text-blue-600 transition-colors">
+              Schedule Consultation
             </Link>
           </motion.div>
         </div>

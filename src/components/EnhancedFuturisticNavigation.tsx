@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from "react"
+import { Link, useLocation } from "react-router-dom"
+import { motion, AnimatePresence } from "framer-motion"
 import {
   Menu,
   X,
@@ -218,110 +218,264 @@ import {
   Chi,
   Psi,
   Omega
-} from "lucide-react";
-export const EnhancedFuturisticNavigation: React.FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+} from "lucide-react"
+export,
+  const: EnhancedFuturisticNavigation: React.FC = () () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-  const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+  const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
+  useEffect(() () => {
+    const handleScroll = () () => {
+      setScrolled(window.scrollY > 20)
     },
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
-  useEffect(() => {
-    setMobileMenuOpen(false);
-    setActiveDropdown(null);
-  }, [location.pathname]);
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
+  useEffect(() () => {
+    setMobileMenuOpen(false)
+    setActiveDropdown(null)
+  }, [location.pathname])
+  const handleSearch = (e: React.FormEvent) () => {
+    e.preventDefault()
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`,
     }
   },
 
-  const toggleDropdown = (dropdown: string) => {
+  const toggleDropdown = (dropdo,
+  w: n: string) () => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
-  };
+  }
   const navigationItems = [
     {
-      name: 'Home',href: '/',icon: Home,color: 'from-zion-cyan to-zion-blue',isMain: true
-    };
-    {
-      name: 'AI & Consciousness',href: '/ai-services',icon: Brain,color: 'from-zion-purple to-zion-pink',dropdown: [
-        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' };
-        { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' };
-        { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' };
-        { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' };
-        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' };
-        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
+      na,
+  m: e: 'Home',hr,
+  e: f: '/',ic,
+  o: n: Home,col,
+  o: r: 'from-zion-cyan to-zion-blue',isMa,
+  i: n: true
+    }, {
+      na,
+  m: e: 'AI & Consciousness',hr,
+  e: f: '/ai-services',ic,
+  o: n: Brain,col,
+  o: r: 'from-zion-purple to-zion-pink',dropdo,
+  w: n: [
+        { nam,
+  e: 'AI Consciousness Simulator', hr,
+  e: f: '/ai-services/consciousness-simulator', ic,
+  o: n: Brain, descripti,
+  o: n: 'Advanced AI consciousness research platform' }, { na,
+  m: e: 'Quantum Emotion Processor', hr,
+  e: f: '/ai-services/quantum-emotion', ic,
+  o: n: Heart, descripti,
+  o: n: 'Quantum-powered emotional intelligence' }, { na,
+  m: e: 'AI Autonomous Systems', hr,
+  e: f: '/ai-services/autonomous-systems', ic,
+  o: n: Cpu, descripti,
+  o: n: 'Self-managing AI infrastructure' }, { na,
+  m: e: 'Neural Network Architect', hr,
+  e: f: '/ai-services/neural-architect', ic,
+  o: n: Network, descripti,
+  o: n: 'Custom neural network design' }, { na,
+  m: e: 'AI Ethics Framework', hr,
+  e: f: '/ai-services/ai-ethics', ic,
+  o: n: Shield, descripti,
+  o: n: 'Ethical AI development tools' }, { na,
+  m: e: 'Predictive Analytics', hr,
+  e: f: '/ai-services/predictive-analytics', ic,
+  o: n: TrendingUp, descripti,
+  o: n: 'AI-powered business insights' }
       ]
-    };
-    {
-      name: 'Micro SAAS',href: '/micro-saas',icon: Code,color: 'from-zion-purple to-zion-cyan',dropdown: [
-        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: BarChart3, description: 'Intelligent business analytics platform' };
-        { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience', icon: Users, description: '360° customer journey management' };
-        { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing', icon: Atom, description: 'Quantum computing solutions' };
-        { name: 'Supply Chain Optimizer', href: '/micro-saas/supply-chain', icon: Globe, description: 'AI-powered supply chain management' };
-        { name: 'Cybersecurity Platform', href: '/micro-saas/cybersecurity', icon: ShieldCheck, description: 'Advanced threat protection' };
-        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge', icon: Cpu, description: 'Edge computing solutions' };
-        { name: 'Content Creation AI', href: '/micro-saas/content-creation', icon: FileText, description: 'AI-powered content generation' };
-        { name: 'HR Management Suite', href: '/micro-saas/hr-platform', icon: Briefcase, description: 'Modern HR management platform' }
+    }, {
+      na,
+  m: e: 'Micro SAAS',hr,
+  e: f: '/micro-saas',ic,
+  o: n: Code,col,
+  o: r: 'from-zion-purple to-zion-cyan',dropdo,
+  w: n: [
+        { nam,
+  e: 'AI Business Intelligence', hr,
+  e: f: '/micro-saas/ai-business-intelligence', ic,
+  o: n: BarChart3, descripti,
+  o: n: 'Intelligent business analytics platform' }, { na,
+  m: e: 'Customer Experience Hub', hr,
+  e: f: '/micro-saas/customer-experience', ic,
+  o: n: Users, descripti,
+  o: n: '360° customer journey management' }, { na,
+  m: e: 'Quantum Computing Suite', hr,
+  e: f: '/micro-saas/quantum-computing', ic,
+  o: n: Atom, descripti,
+  o: n: 'Quantum computing solutions' }, { na,
+  m: e: 'Supply Chain Optimizer', hr,
+  e: f: '/micro-saas/supply-chain', ic,
+  o: n: Globe, descripti,
+  o: n: 'AI-powered supply chain management' }, { na,
+  m: e: 'Cybersecurity Platform', hr,
+  e: f: '/micro-saas/cybersecurity', ic,
+  o: n: ShieldCheck, descripti,
+  o: n: 'Advanced threat protection' }, { na,
+  m: e: 'IoT Edge Computing', hr,
+  e: f: '/micro-saas/iot-edge', ic,
+  o: n: Cpu, descripti,
+  o: n: 'Edge computing solutions' }, { na,
+  m: e: 'Content Creation AI', hr,
+  e: f: '/micro-saas/content-creation', ic,
+  o: n: FileText, descripti,
+  o: n: 'AI-powered content generation' }, { na,
+  m: e: 'HR Management Suite', hr,
+  e: f: '/micro-saas/hr-platform', ic,
+  o: n: Briefcase, descripti,
+  o: n: 'Modern HR management platform' }
       ]
-    };
-    {
-      name: 'IT Services',href: '/it-services',icon: Network,color: 'from-zion-blue to-zion-purple',dropdown: [
-        { name: 'Infrastructure Management', href: '/it-services/infrastructure', icon: Server, description: 'Complete infrastructure solutions' };
-        { name: 'Digital Transformation', href: '/it-services/digital-transformation', icon: Zap, description: 'Digital transformation consulting' };
-        { name: 'IT Consulting', href: '/it-services/consulting', icon: Users, description: 'Expert IT consulting services' };
-        { name: 'Onsite Support', href: '/it-services/onsite-support', icon: Wifi, description: '24/7 onsite technical support' };
-        { name: 'Green IT Solutions', href: '/it-services/green-it', icon: Heart, description: 'Sustainable IT infrastructure' };
-        { name: '5G Network Solutions', href: '/it-services/5g-solutions', icon: Satellite, description: 'Next-gen network infrastructure' }
+    }, {
+      na,
+  m: e: 'IT Services',hr,
+  e: f: '/it-services',ic,
+  o: n: Network,col,
+  o: r: 'from-zion-blue to-zion-purple',dropdo,
+  w: n: [
+        { nam,
+  e: 'Infrastructure Management', hr,
+  e: f: '/it-services/infrastructure', ic,
+  o: n: Server, descripti,
+  o: n: 'Complete infrastructure solutions' }, { na,
+  m: e: 'Digital Transformation', hr,
+  e: f: '/it-services/digital-transformation', ic,
+  o: n: Zap, descripti,
+  o: n: 'Digital transformation consulting' }, { na,
+  m: e: 'IT Consulting', hr,
+  e: f: '/it-services/consulting', ic,
+  o: n: Users, descripti,
+  o: n: 'Expert IT consulting services' }, { na,
+  m: e: 'Onsite Support', hr,
+  e: f: '/it-services/onsite-support', ic,
+  o: n: Wifi, descripti,
+  o: n: '24/7 onsite technical support' }, { na,
+  m: e: 'Green IT Solutions', hr,
+  e: f: '/it-services/green-it', ic,
+  o: n: Heart, descripti,
+  o: n: 'Sustainable IT infrastructure' }, { na,
+  m: e: '5G Network Solutions', hr,
+  e: f: '/it-services/5g-solutions', ic,
+  o: n: Satellite, descripti,
+  o: n: 'Next-gen network infrastructure' }
       ]
-    };
-    {
-      name: 'Emerging Tech',href: '/emerging-tech',icon: Rocket,color: 'from-zion-cyan to-zion-purple',dropdown: [
-        { name: 'Quantum Computing', href: '/emerging-tech/quantum-computing', icon: Atom, description: 'Quantum computing solutions' };
-        { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi', icon: Lock, description: 'Blockchain and DeFi platforms' };
-        { name: 'Space Technology', href: '/emerging-tech/space-tech', icon: Satellite, description: 'Space technology innovations' };
-        { name: 'Biotechnology', href: '/emerging-tech/biotech', icon: Dna, description: 'Biotech and healthcare solutions' };
-        { name: 'Nanotechnology', href: '/emerging-tech/nanotech', icon: Microscope, description: 'Nanotechnology applications' };
-        { name: 'Augmented Reality', href: '/emerging-tech/ar-vr', icon: Eye, description: 'AR/VR development services' }
+    }, {
+      na,
+  m: e: 'Emerging Tech',hr,
+  e: f: '/emerging-tech',ic,
+  o: n: Rocket,col,
+  o: r: 'from-zion-cyan to-zion-purple',dropdo,
+  w: n: [
+        { nam,
+  e: 'Quantum Computing', hr,
+  e: f: '/emerging-tech/quantum-computing', ic,
+  o: n: Atom, descripti,
+  o: n: 'Quantum computing solutions' }, { na,
+  m: e: 'Blockchain & DeFi', hr,
+  e: f: '/emerging-tech/blockchain-defi', ic,
+  o: n: Lock, descripti,
+  o: n: 'Blockchain and DeFi platforms' }, { na,
+  m: e: 'Space Technology', hr,
+  e: f: '/emerging-tech/space-tech', ic,
+  o: n: Satellite, descripti,
+  o: n: 'Space technology innovations' }, { na,
+  m: e: 'Biotechnology', hr,
+  e: f: '/emerging-tech/biotech', ic,
+  o: n: Dna, descripti,
+  o: n: 'Biotech and healthcare solutions' }, { na,
+  m: e: 'Nanotechnology', hr,
+  e: f: '/emerging-tech/nanotech', ic,
+  o: n: Microscope, descripti,
+  o: n: 'Nanotechnology applications' }, { na,
+  m: e: 'Augmented Reality', hr,
+  e: f: '/emerging-tech/ar-vr', ic,
+  o: n: Eye, descripti,
+  o: n: 'AR/VR development services' }
       ]
-    };
-    {
-      name: 'Marketplace',href: '/marketplace',icon: ShoppingCart,color: 'from-zion-purple to-zion-cyan',dropdown: [
-        { name: 'AI Products', href: '/marketplace/ai-products', icon: Brain, description: 'AI-powered products and tools' };
-        { name: 'IT Equipment', href: '/marketplace/it-equipment', icon: Monitor, description: 'Professional IT equipment' };
-        { name: 'Software Solutions', href: '/marketplace/software', icon: Code, description: 'Enterprise software solutions' };
-        { name: 'Professional Services', href: '/marketplace/services', icon: Briefcase, description: 'Expert professional services' };
-        { name: 'Talent Network', href: '/marketplace/talent', icon: Users, description: 'Skilled professionals network' };
-        { name: 'Innovation Hub', href: '/marketplace/innovation', icon: Lightbulb, description: 'Innovation and R&D services' }
+    }, {
+      na,
+  m: e: 'Marketplace',hr,
+  e: f: '/marketplace',ic,
+  o: n: ShoppingCart,col,
+  o: r: 'from-zion-purple to-zion-cyan',dropdo,
+  w: n: [
+        { nam,
+  e: 'AI Products', hr,
+  e: f: '/marketplace/ai-products', ic,
+  o: n: Brain, descripti,
+  o: n: 'AI-powered products and tools' }, { na,
+  m: e: 'IT Equipment', hr,
+  e: f: '/marketplace/it-equipment', ic,
+  o: n: Monitor, descripti,
+  o: n: 'Professional IT equipment' }, { na,
+  m: e: 'Software Solutions', hr,
+  e: f: '/marketplace/software', ic,
+  o: n: Code, descripti,
+  o: n: 'Enterprise software solutions' }, { na,
+  m: e: 'Professional Services', hr,
+  e: f: '/marketplace/services', ic,
+  o: n: Briefcase, descripti,
+  o: n: 'Expert professional services' }, { na,
+  m: e: 'Talent Network', hr,
+  e: f: '/marketplace/talent', ic,
+  o: n: Users, descripti,
+  o: n: 'Skilled professionals network' }, { na,
+  m: e: 'Innovation Hub', hr,
+  e: f: '/marketplace/innovation', ic,
+  o: n: Lightbulb, descripti,
+  o: n: 'Innovation and R&D services' }
       ]
-    };
-    {
-      name: 'Comprehensive',href: '/services-overview',icon: BarChart3,color: 'from-zion-green to-zion-emerald',dropdown: [
-        { name: 'Services Overview', href: '/services-overview', icon: BarChart3, description: 'Complete portfolio of all services' };
-        { name: 'Pricing Guide', href: '/pricing-guide', icon: Calculator, description: 'Detailed pricing and ROI analysis' };
-        { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027', icon: Crown, description: 'Most advanced services for 2027' };
-        { name: 'Innovative Services', href: '/innovative-services-2027', icon: Lightbulb, description: 'Cutting-edge innovative solutions' }
+    }, {
+      na,
+  m: e: 'Comprehensive',hr,
+  e: f: '/services-overview',ic,
+  o: n: BarChart3,col,
+  o: r: 'from-zion-green to-zion-emerald',dropdo,
+  w: n: [
+        { nam,
+  e: 'Services Overview', hr,
+  e: f: '/services-overview', ic,
+  o: n: BarChart3, descripti,
+  o: n: 'Complete portfolio of all services' }, { na,
+  m: e: 'Pricing Guide', hr,
+  e: f: '/pricing-guide', ic,
+  o: n: Calculator, descripti,
+  o: n: 'Detailed pricing and ROI analysis' }, { na,
+  m: e: 'Ultimate Services 2027', hr,
+  e: f: '/enhanced-innovative-services-2027', ic,
+  o: n: Crown, descripti,
+  o: n: 'Most advanced services for 2027' }, { na,
+  m: e: 'Innovative Services', hr,
+  e: f: '/innovative-services-2027', ic,
+  o: n: Lightbulb, descripti,
+  o: n: 'Cutting-edge innovative solutions' }
       ]
-    };
-    {
-      name: 'About',href: '/about',icon: Info,color: 'from-zion-blue to-zion-cyan',isMain: true
-    };
-    {
-      name: 'Contact',href: '/contact',icon: Phone,color: 'from-zion-cyan to-zion-purple',isMain: true
+    }, {
+      na,
+  m: e: 'About',hr,
+  e: f: '/about',ic,
+  o: n: Info,col,
+  o: r: 'from-zion-blue to-zion-cyan',isMa,
+  i: n: true
+    }, {
+      na,
+  m: e: 'Contact',hr,
+  e: f: '/contact',ic,
+  o: n: Phone,col,
+  o: r: 'from-zion-cyan to-zion-purple',isMa,
+  i: n: true
     }
-  ];
+  ]
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className={`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      <nav className={`hidden,
+  l: g:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10'
           : 'bg-transparent'
@@ -331,10 +485,12 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hov,
+  e: r: scale-110 transition-transform duration-300">
                   <span className="text-white font-bold text-xl">Z</span>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl blur-lg opacity-50 group-hove,
+  r:opacity-75 transition-opacity duration-300"></div>
               </div>
               <div>
                 <div className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -354,7 +510,9 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                       className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
                         location.pathname === item.href
                           ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-                          : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'
+                          : 'text-gray-300,
+  hove: r: text-white hove,
+  r:bg-zion-slate-light/30'
                       }`}
                     >
                       {item.icon && <item.icon className="w-4 h-4" />}
@@ -369,23 +527,29 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                       className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
                         location.pathname === item.href
                           ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-                          : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'
+                          : 'text-gray-300,
+  hove: r: text-white hove,
+  r:bg-zion-slate-light/30'
                       }`}
                     >
                       {item.icon && <item.icon className="w-4 h-4" />}
                       <span>{item.name}</span>
                     </Link>
-                  )}
-
-                  {/* Dropdown Menu */}
-                  {item.dropdown && (
+                  )}, {/* Dropdown Menu */}, {item.dropdown && (
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                          transition={{ duration: 0.2 }}
+                          initial={ opaci,
+  t: y: 0, y: 10, sca,
+  l: e: 0.95 }
+                          animate={ opaci,
+  t: y: 1, y: 0, sca,
+  l: e: 1 }
+                          exit={ opaci,
+  t: y: 0, y: 10, sca,
+  l: e: 0.95 }
+                          transition={ durati,
+  o: n: 0.2 }
                           className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
                         >
                           <div className="p-4">
@@ -394,13 +558,16 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                                 <Link
                                   key={dropdownItem.name}
                                   to={dropdownItem.href}
-                                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-slate-light/30 transition-all duration-200 group"
+                                  className="flex items-start space-x-3 p-3 rounded-lg,
+  hove: r: bg-zion-slate-light/30 transition-all duration-200 group"
                                 >
-                                  <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                                  <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg flex items-center justify-center group-hove,
+  r:scale-110 transition-transform duration-200">
                                     {dropdownItem.icon && <dropdownItem.icon className="w-4 h-4 text-zion-cyan" />}
                                   </div>
                                   <div className="flex-1">
-                                    <div className="font-medium text-white group-hover:text-zion-cyan transition-colors duration-200">
+                                    <div className="font-medium text-white group-hov,
+  e: r:text-zion-cyan transition-colors duration-200">
                                       {dropdownItem.name}
                                     </div>
                                     <div className="text-sm text-gray-400 mt-1">
@@ -429,16 +596,24 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                   placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-64 pl-10 pr-4 py-2 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+                  className="w-64 pl-10 pr-4 py-2 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400,
+  focu: s: outline-none,
+  focu: s:border-zion-cyan/40,
+  focu: s:ring-2 focu,
+  s:ring-zion-cyan/20"
                 />
               </form>
 
               {/* User Menu */}
               <div className="flex items-center space-x-3">
-                <button className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200">
+                <button className="p-2 text-gray-400,
+  hove: r: text-white,
+  hove: r:bg-zion-slate-light/30 rounded-lg transition-all duration-200">
                   <Bell className="w-5 h-5" />
                 </button>
-                <button className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200">
+                <button className="p-2 text-gray-400,
+  hove: r:text-white hove,
+  r:bg-zion-slate-light/30 rounded-lg transition-all duration-200">
                   <User className="w-5 h-5" />
                 </button>
               </div>
@@ -472,7 +647,9 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
+                className="p-2 text-gray-400,
+  hove: r: text-white hove,
+  r:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
@@ -484,10 +661,17 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              initial={ opaci,
+  t: y: 0, heig,
+  h: t: 0 }
+              animate={ opaci,
+  t: y: 1, heig,
+  h: t: 'auto' }
+              exit={ opaci,
+  t: y: 0, heig,
+  h: t: 0 }
+              transition={ durati,
+  o: n: 0.3 }
               className="bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden"
             >
               <div className="max-w-7xl mx-auto px-6 py-6">
@@ -499,7 +683,11 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                     placeholder="Search services..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+                    className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400,
+  focu: s: outline-none,
+  focu: s:border-zion-cyan/40,
+  focu: s:ring-2 focu,
+  s:ring-zion-cyan/20"
                   />
                 </form>
 
@@ -514,7 +702,9 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                             className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-between ${
                               location.pathname === item.href
                                 ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white'
-                                : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'
+                                : 'text-gray-300,
+  hove: r: text-white hove,
+  r:bg-zion-slate-light/30'
                             }`}
                           >
                             <div className="flex items-center space-x-3">
@@ -530,17 +720,26 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                           <AnimatePresence>
                             {activeDropdown === item.name && (
                               <motion.div
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: 'auto' }}
-                                exit={{ opacity: 0, height: 0 }}
-                                transition={{ duration: 0.3 }}
+                                initial={ opaci,
+  t: y: 0, heig,
+  h: t: 0 }
+                                animate={ opaci,
+  t: y: 1, heig,
+  h: t: 'auto' }
+                                exit={ opaci,
+  t: y: 0, heig,
+  h: t: 0 }
+                                transition={ durati,
+  o: n: 0.3 }
                                 className="ml-6 mt-2 space-y-1 overflow-hidden"
                               >
                                 {item.dropdown.map((dropdownItem) => (
                                   <Link
                                     key={dropdownItem.name}
                                     to={dropdownItem.href}
-                                    className="block px-4 py-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
+                                    className="block px-4 py-2 text-gray-400,
+  hove: r: text-white hove,
+  r:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
                                   >
                                     {dropdownItem.name}
                                   </Link>
@@ -555,7 +754,9 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                           className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
                             location.pathname === item.href
                               ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white'
-                              : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'
+                              : 'text-gray-300,
+  hove: r: text-white hove,
+  r:bg-zion-slate-light/30'
                           }`}
                         >
                           <div className="flex items-center space-x-3">
@@ -589,5 +790,5 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
-  );
-};
+  )
+}

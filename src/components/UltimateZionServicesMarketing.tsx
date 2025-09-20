@@ -1,46 +1,90 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { ultimateZionServices2025 } from "../data/ultimate-zion-services-2025";
-const UltimateZionServicesMarketing: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+import React, { useState } from "react"
+import { motion } from "framer-motion"
+import { ultimateZionServices2025 } from "../data/ultimate-zion-services-2025"
+const,
+  UltimateZionServicesMarketin: g: React.FC = () () => {
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = [
     { 
-      id: 'quantum-computing',name: 'Quantum Computing & AI',icon: '⚛️',color: 'from-blue-600 to-cyan-600',description: 'Revolutionary quantum computing solutions that solve previously impossible problems',marketSize: '$65.4 billion by 2027',growthRate: '500% annually'
-    };
-    { 
-      id: 'blockchain-web3',name: 'Blockchain & Web3',icon: '🔗',color: 'from-green-600 to-emerald-600',description: 'Next-generation decentralized solutions with AI optimization',marketSize: '$67.4 billion by 2027',growthRate: '400% annually'
-    };
-    { 
-      id: 'space-tech',name: 'Space Technology',icon: '🛰️',color: 'from-indigo-600 to-purple-600',description: 'AI-powered satellite and space mission management',marketSize: '$469.8 billion by 2027',growthRate: '300% annually'
-    };
-    { 
-      id: 'biotech-ai',name: 'Biotech & AI',icon: '🧬',color: 'from-red-600 to-pink-600',description: 'Revolutionary biomedical research and drug discovery',marketSize: '$67.8 billion by 2027',growthRate: '600% annually'
-    };
-    { 
-      id: 'emerging-tech',name: 'Emerging Technology',icon: '🚀',color: 'from-orange-600 to-red-600',description: 'Cutting-edge technologies that define the future',marketSize: '$3.7 billion by 2027',growthRate: '800% annually'
-    };
-    { 
-      id: 'micro-saas',name: 'Micro SAAS Solutions',icon: '💻',color: 'from-blue-600 to-indigo-600',description: 'Intelligent business automation and optimization',marketSize: '$15.8 billion by 2027',growthRate: '200% annually'
-    };
-    { 
-      id: 'it-services',name: 'Enterprise IT Services',icon: '🖥️',color: 'from-gray-600 to-slate-600',description: 'Advanced infrastructure and DevOps solutions',marketSize: '$25.2 billion by 2027',growthRate: '150% annually'
+      id: 'quantum-computing',na,
+  m: e: 'Quantum Computing & AI',ic,
+  o: n: '⚛️',col,
+  o: r: 'from-blue-600 to-cyan-600',descripti,
+  o: n: 'Revolutionary quantum computing solutions that solve previously impossible problems',marketSi,
+  z: e: '$65.4 billion by 2027',growthRa,
+  t: e: '500% annually'
+    }, { 
+      id: 'blockchain-web3',na,
+  m: e: 'Blockchain & Web3',ic,
+  o: n: '🔗',col,
+  o: r: 'from-green-600 to-emerald-600',descripti,
+  o: n: 'Next-generation decentralized solutions with AI optimization',marketSi,
+  z: e: '$67.4 billion by 2027',growthRa,
+  t: e: '400% annually'
+    }, { 
+      id: 'space-tech',na,
+  m: e: 'Space Technology',ic,
+  o: n: '🛰️',col,
+  o: r: 'from-indigo-600 to-purple-600',descripti,
+  o: n: 'AI-powered satellite and space mission management',marketSi,
+  z: e: '$469.8 billion by 2027',growthRa,
+  t: e: '300% annually'
+    }, { 
+      id: 'biotech-ai',na,
+  m: e: 'Biotech & AI',ic,
+  o: n: '🧬',col,
+  o: r: 'from-red-600 to-pink-600',descripti,
+  o: n: 'Revolutionary biomedical research and drug discovery',marketSi,
+  z: e: '$67.8 billion by 2027',growthRa,
+  t: e: '600% annually'
+    }, { 
+      id: 'emerging-tech',na,
+  m: e: 'Emerging Technology',ic,
+  o: n: '🚀',col,
+  o: r: 'from-orange-600 to-red-600',descripti,
+  o: n: 'Cutting-edge technologies that define the future',marketSi,
+  z: e: '$3.7 billion by 2027',growthRa,
+  t: e: '800% annually'
+    }, { 
+      id: 'micro-saas',na,
+  m: e: 'Micro SAAS Solutions',ic,
+  o: n: '💻',col,
+  o: r: 'from-blue-600 to-indigo-600',descripti,
+  o: n: 'Intelligent business automation and optimization',marketSi,
+  z: e: '$15.8 billion by 2027',growthRa,
+  t: e: '200% annually'
+    }, { 
+      id: 'it-services',na,
+  m: e: 'Enterprise IT Services',ic,
+  o: n: '🖥️',col,
+  o: r: 'from-gray-600 to-slate-600',descripti,
+  o: n: 'Advanced infrastructure and DevOps solutions',marketSi,
+  z: e: '$25.2 billion by 2027',growthRa,
+  t: e: '150% annually'
     }
-  ];
-  const getServicesByCategory = (categoryId: string) => {
-    if (categoryId === 'all') return ultimateZionServices2025;
+  ]
+  const getServicesByCategory = (category,
+  I: d: string) () => {
+    if (categoryId === 'all') return ultimateZionServices2025
     return ultimateZionServices2025.filter(service => service.category === categoryId)
-  };
-  const selectedServices = getServicesByCategory(selectedCategory);
+  }
+  const selectedServices = getServicesByCategory(selectedCategory)
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
-            className="text-4xl md:text-6xl font-bold mb-6" 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.6 }}
+            className="text-4xl,
+  m: d:text-6xl font-bold mb-6" 
+            initial={ opacit,
+  y: 0, y: 20 } 
+            whileInView={ opaci,
+  t: y: 1, y: 0 } 
+            transition={ durati,
+  o: n: 0.6 }
           >
             Zion Technology Group
             <br />
@@ -51,9 +95,13 @@ const UltimateZionServicesMarketing: React.FC = () => {
           
           <motion.p 
             className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto" 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={ opaci,
+  t: y: 0, y: 20 } 
+            whileInView={ opaci,
+  t: y: 1, y: 0 } 
+            transition={ durati,
+  o: n: 0.6, del,
+  a: y: 0.2 }
           >
             Leading the future with revolutionary quantum computing, AI-powered solutions, blockchain innovations, 
             and cutting-edge technology services that transform industries and create unprecedented value.
@@ -61,10 +109,15 @@ const UltimateZionServicesMarketing: React.FC = () => {
 
           {/* Company Highlights */}
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12" 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.6, delay: 0.4 }}
+            className="grid grid-cols-1,
+  m: d: grid-cols-4 gap-6 mb-12" 
+            initial={ opacit,
+  y: 0, y: 20 } 
+            whileInView={ opaci,
+  t: y: 1, y: 0 } 
+            transition={ durati,
+  o: n: 0.6, del,
+  a: y: 0.4 }
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
               <div className="text-3xl mb-2">🚀</div>
@@ -91,14 +144,19 @@ const UltimateZionServicesMarketing: React.FC = () => {
           {/* Contact Information */}
           <motion.div 
             className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-4xl mx-auto border border-purple-400/30" 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.6, delay: 0.6 }}
+            initial={ opaci,
+  t: y: 0, y: 20 } 
+            whileInView={ opaci,
+  t: y: 1, y: 0 } 
+            transition={ durati,
+  o: n: 0.6, del,
+  a: y: 0.6 }
           >
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               🚀 Ready to Transform Your Business?
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+            <div className="grid grid-cols-1,
+  m: d: grid-cols-3 gap-6 text-sm">
               <div className="text-center">
                 <div className="text-purple-400 font-semibold text-lg mb-2">📱 Contact Us</div>
                 <div className="text-gray-300">+1 302 464 0950</div>
@@ -112,8 +170,10 @@ const UltimateZionServicesMarketing: React.FC = () => {
               <div className="text-center">
                 <div className="text-purple-400 font-semibold text-lg mb-2">🌐 Website</div>
                 <div className="text-gray-300">
-                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" 
-                     className="text-blue-400 hover:text-blue-300 transition-colors">
+                  <a href="htt,
+  p: s://ziontechgroup.com" target="_blank" rel="noopener noreferrer" 
+                     className="text-blue-400 hove,
+  r:text-blue-300 transition-colors">
                     ziontechgroup.com
                   </a>
                 </div>
@@ -130,13 +190,18 @@ const UltimateZionServicesMarketing: React.FC = () => {
       </section>
 
       {/* Category Navigation */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="flex flex-wrap gap-4 justify-center" 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.6 }}
+            initial={ opacit,
+  y: 0, y: 20 } 
+            whileInView={ opaci,
+  t: y: 1, y: 0 } 
+            transition={ durati,
+  o: n: 0.6 }
           >
             {categories.map((category) => (
               <button 
@@ -145,7 +210,9 @@ const UltimateZionServicesMarketing: React.FC = () => {
                 className={`px-6 py-3 rounded-xl border transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 border-purple-400 text-white shadow-lg'
-                    : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40'
+                    : 'bg-white/10 border-white/20 text-gray-300,
+  hove: r: bg-white/20 hove,
+  r:border-white/40'
                 }`}
               >
                 <span className="mr-2 text-lg">{category.icon}</span>
@@ -156,29 +223,35 @@ const UltimateZionServicesMarketing: React.FC = () => {
         </div>
       </section>
 
-      {/* Category Overview */}
-      {selectedCategory !== 'all' && (
-        <section className="py-12 px-4 sm: px-6 lg:px-8">
+      {/* Category Overview */}, {selectedCategory !== 'all' && (
+        <section className="py-12 px-4,
+  s: m: px-6,
+  l: g:px-8">
           <div className="max-w-7xl mx-auto">
-            {(() => {
-              const category = categories.find(c => c.id === selectedCategory);
-              if (!category) return null;
+            {(() () => {
+              const category = categories.find(c => c.id === selectedCategory)
+              if (!category) return null
               return (
                 <motion.div 
                   className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
+                  initial={ opacit,
+  y: 0, y: 20 }
+                  whileInView={ opaci,
+  t: y: 1, y: 0 }
+                  transition={ durati,
+  o: n: 0.6 }
                 >
                   <div className="text-center mb-8">
                     <div className="text-6xl mb-4">{category.icon}</div>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                    <h2 className="text-3xl,
+  m: d:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                       {category.name}
                     </h2>
                     <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
                       {category.description}
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                    <div className="grid grid-cols-1,
+  m: d:grid-cols-2 gap-6 max-w-2xl mx-auto">
                       <div className="bg-white/10 rounded-lg p-4">
                         <div className="text-purple-400 font-semibold">Market Size</div>
                         <div className="text-white text-lg">{category.marketSize}</div>
@@ -190,52 +263,76 @@ const UltimateZionServicesMarketing: React.FC = () => {
                     </div>
                   </div>
                 </motion.div>
-              );
+              )
             })()}
           </div>
         </section>
-      )}
-
-      {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      )}, {/* Services Grid */}
+      <section className="py-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
-            className="text-3xl md:text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            className="text-3xl,
+  m: d:text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"
+            initial={ opacit,
+  y: 0, y: 20 }
+            whileInView={ opaci,
+  t: y: 1, y: 0 }
+            transition={ durati,
+  o: n: 0.6 }
           >
             {selectedCategory === 'all' ? 'All Revolutionary Services' : `${categories.find(c => c.id === selectedCategory)?.name} Services`}
           </motion.h2>
           
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" 
-            variants={{
-              hidden: { opacity: 0 };
-              visible: {
-                opacity: 1,transition: {
-                  staggerChildren: 0.1,delayChildren: 0.2
+            className="grid grid-cols-1,
+  m: d: grid-cols-2,
+  l: g:grid-cols-3 gap-8" 
+            variants={
+              hidd,
+  e: n: { opacit,
+  y: 0 }
+              visib,
+  l: e: {
+                opacit,
+  y: 1,transiti,
+  o: n: {
+                  staggerChildre,
+  n: 0.1,delayChildr,
+  e: n: 0.2
                 }
               }
-            }} 
+            } 
             initial="hidden" 
             whileInView="visible" 
-            viewport={{ once: true }}
+            viewport={ on,
+  c: e: true }
           >
             {selectedServices.map((service, index) => (
               <motion.div 
                 key={service.id} 
-                variants={{
-                  hidden: { opacity: 0, y: 20 };
-                  visible: {
-                    opacity: 1,y: 0,transition: { duration: 0.5 }
+                variants={
+                  hidd,
+  e: n: { opacit,
+  y: 0, y: 20 }
+                  visib,
+  l: e: {
+                    opacit,
+  y: 1,y: 0,transiti,
+  o: n: { duratio,
+  n: 0.5 }
                   }
-                }}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
+                }
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20,
+  hove: r: border-white/40 transition-all duration-300,
+  hove: r:transform hove,
+  r:scale-105 group"
               >
                 {/* Service Header */}
                 <div className="text-center mb-6">
-                  <div className={`text-6xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`text-6xl mb-4 group-hov,
+  e: r:scale-110 transition-transform duration-300`}>
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
@@ -262,19 +359,23 @@ const UltimateZionServicesMarketing: React.FC = () => {
                   <h4 className="text-purple-400 font-semibold mb-2">💰 Investment & Value</h4>
                   <div className="space-y-1 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-gray-400">Monthly:</span>
+                      <span className="text-gray-400">Month,
+  l: y:</span>
                       <span className="text-green-400 font-semibold">{service.pricing.monthly}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-400">Yearly:</span>
+                      <span className="text-gray-400">Year,
+  l: y:</span>
                       <span className="text-green-400 font-semibold">{service.pricing.yearly}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-400">Market Price:</span>
+                      <span className="text-gray-400">Market,
+  Pric: e:</span>
                       <span className="text-blue-400 font-semibold">{service.pricing.marketPrice}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-400">Setup:</span>
+                      <span className="text-gray-400">Set,
+  u: p:</span>
                       <span className="text-yellow-400 font-semibold">{service.pricing.setup}</span>
                     </div>
                   </div>
@@ -308,19 +409,17 @@ const UltimateZionServicesMarketing: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Market Information */}
-                {service.marketSize && (
+                {/* Market Information */}, {service.marketSize && (
                   <div className="mb-6">
                     <h4 className="text-purple-400 font-semibold mb-2">🌍 Market Opportunity</h4>
                     <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-lg p-3">
                       <p className="text-blue-400 text-sm font-semibold">
-                        Market Size: {service.marketSize}
+                        Market,
+  Siz: e: {service.marketSize}
                       </p>
                     </div>
                   </div>
-                )}
-
-                {/* Trial and Setup */}
+                )}, {/* Trial and Setup */}
                 <div className="flex justify-between items-center mb-6 text-sm">
                   <div className="text-center">
                     <div className="text-purple-400 font-semibold">🆓 Trial</div>
@@ -334,7 +433,10 @@ const UltimateZionServicesMarketing: React.FC = () => {
 
                 {/* Call to Action */}
                 <div className="text-center">
-                  <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600,
+  hove: r: from-purple-700,
+  hove: r:to-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hove,
+  r:scale-105">
                     🚀 Get Started Today
                   </button>
                   <p className="text-xs text-gray-400 mt-2">
@@ -345,10 +447,14 @@ const UltimateZionServicesMarketing: React.FC = () => {
                 {/* Contact Quick Access */}
                 <div className="mt-4 text-center">
                   <div className="text-xs text-gray-400">
-                    📞 <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">
+                    📞 <a href="t,
+  e: l: +13024640950" className="text-blue-400,
+  hove: r:text-blue-300">
                       +1 302 464 0950
                     </a> | 
-                    ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
+                    ✉️ <a href="mail,
+  t: o:kleber@ziontechgroup.com" className="text-blue-400 hove,
+  r:text-blue-300">
                       kleber@ziontechgroup.com
                     </a>
                   </div>
@@ -360,26 +466,37 @@ const UltimateZionServicesMarketing: React.FC = () => {
       </section>
 
       {/* Bottom CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div 
             className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={ opacit,
+  y: 0, y: 20 }
+            whileInView={ opaci,
+  t: y: 1, y: 0 }
+            transition={ durati,
+  o: n: 0.6 }
           >
-            <h2 className="text-3xl md: text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            <h2 className="text-3xl,
+  m: d: text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Ready to Lead the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join the revolution and transform your business with cutting-edge technology solutions. 
               Our team of experts is ready to help you implement these game-changing services.
             </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col,
+  m: d:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600,
+  hove: r:from-purple-700,
+  hove: r:to-pink-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300,
+  transform: hover:scale-105">
                 🚀 Schedule a Consultation
               </button>
-              <button className="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
+              <button className="bg-white/10 hove,
+  r:bg-white/20 border border-white/30 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
                 📋 View Full Portfolio
               </button>
             </div>
@@ -393,5 +510,5 @@ const UltimateZionServicesMarketing: React.FC = () => {
       </section>
     </div>
   )
-};
-export default UltimateZionServicesMarketing;
+}
+export default UltimateZionServicesMarketing

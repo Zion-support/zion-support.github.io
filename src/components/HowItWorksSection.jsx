@@ -1,99 +1,168 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from "lucide-react";
+import React, { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from "lucide-react"
 const steps = [
     {
-        icon: <Search className="w-8 h-8"/>,title: "Discover",description: "Browse our comprehensive catalog of 100+ micro SAAS services and solutions",
-      color: "from-zion-cyan to-zion-cyan-dark",
-      bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
-      details: [
-            "AI-powered search and filtering";
+        ic,
+  o: n: <Search className="w-8 h-8"/>,tit,
+  l: e: "Discover",descripti,
+  o: n: "Browse our comprehensive catalog of 100+ micro SAAS services and solutions",
+      col,
+  o: r: "from-zion-cyan to-zion-cyan-dark",
+      bgCol,
+  o: r: "from-zion-cyan/20 to-zion-cyan-dark/20",
+      detai,
+  l: s: [
+            "AI-powered search and filtering"
             "Curated service categories",
             "Industry-specific solutions",
             "Real-time availability"
         ],
-        duration: "Immediate",success: "95% match rate"
-    };
-    {
-        icon: <Users className="w-8 h-8"/>,title: "Connect",description: "Get matched with the perfect service or solution for your business needs",
-      color: "from-zion-purple to-zion-purple-dark",
-      bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-      details: [
-            "Smart matching algorithm";
+        durati,
+  o: n: "Immediate",succe,
+  s: s: "95% match rate"
+    }, {
+        ic,
+  o: n: <Users className="w-8 h-8"/>,tit,
+  l: e: "Connect",descripti,
+  o: n: "Get matched with the perfect service or solution for your business needs",
+      col,
+  o: r: "from-zion-purple to-zion-purple-dark",
+      bgCol,
+  o: r: "from-zion-purple/20 to-zion-purple-dark/20",
+      detai,
+  l: s: [
+            "Smart matching algorithm"
             "Service verification",
             "Portfolio review",
             "Direct communication"
         ],
-        duration: "2-4 hours",success: "98% satisfaction"
-    };
-    {
-        icon: <FileText className="w-8 h-8"/>,title: "Plan",description: "Collaborate on requirements, timeline, and implementation strategy",
-        color: "from-zion-blue to-zion-blue-dark",bgColor: "from-zion-blue/20 to-zion-blue-dark/20",details: [
-            "Interactive planning";
+        durati,
+  o: n: "2-4 hours",succe,
+  s: s: "98% satisfaction"
+    }, {
+        ic,
+  o: n: <FileText className="w-8 h-8"/>,tit,
+  l: e: "Plan",descripti,
+  o: n: "Collaborate on requirements, timeline, and implementation strategy",
+        col,
+  o: r: "from-zion-blue to-zion-blue-dark",bgCol,
+  o: r: "from-zion-blue/20 to-zion-blue-dark/20",detai,
+  l: s: [
+            "Interactive planning"
             "Timeline optimization",
             "Resource allocation",
             "Risk assessment"
         ],
-        duration: "4-8 hours",success: "90% on-time delivery"
-    };
-    {
-        icon: <Rocket className="w-8 h-8"/>,title: "Execute",description: "Watch your vision come to life with our expert implementation",
-      color: "from-zion-cyan-light to-zion-cyan",
-      bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
-      details: [
-            "Agile implementation";
+        durati,
+  o: n: "4-8 hours",succe,
+  s: s: "90% on-time delivery"
+    }, {
+        ic,
+  o: n: <Rocket className="w-8 h-8"/>,tit,
+  l: e: "Execute",descripti,
+  o: n: "Watch your vision come to life with our expert implementation",
+      col,
+  o: r: "from-zion-cyan-light to-zion-cyan",
+      bgCol,
+  o: r: "from-zion-cyan-light/20 to-zion-cyan/20",
+      detai,
+  l: s: [
+            "Agile implementation"
             "Regular progress updates",
             "Quality assurance",
             "Performance monitoring"
         ],
-        duration: "1-4 weeks",success: "99% quality score"
-    };
-    {
-        icon: <CheckCircle className="w-8 h-8"/>,title: "Deliver",description: "Receive your completed solution with ongoing support and maintenance",
-      color: "from-zion-purple-light to-zion-purple",
-      bgColor: "from-zion-purple-light/20 to-zion-purple/20",
-      details: [
-            "Comprehensive testing";
+        durati,
+  o: n: "1-4 weeks",succe,
+  s: s: "99% quality score"
+    }, {
+        ic,
+  o: n: <CheckCircle className="w-8 h-8"/>,tit,
+  l: e: "Deliver",descripti,
+  o: n: "Receive your completed solution with ongoing support and maintenance",
+      col,
+  o: r: "from-zion-purple-light to-zion-purple",
+      bgCol,
+  o: r: "from-zion-purple-light/20 to-zion-purple/20",
+      detai,
+  l: s: [
+            "Comprehensive testing"
             "Documentation delivery",
             "Training and handover",
             "Post-launch support"
         ],
-        duration: "Ongoing",success: "100% client retention"
+        durati,
+  o: n: "Ongoing",succe,
+  s: s: "100% client retention"
     }
-];
+]
 const stats = [
-    { icon: <Clock className="w-6 h-6"/>, value: "3x Faster", label: "Implementation" };
-    { icon: <Target className="w-6 h-6"/>, value: "99.9%", label: "Success Rate" };
-    { icon: <TrendingUp className="w-6 h-6"/>, value: "50%", label: "Cost Reduction" };
-    { icon: <Award className="w-6 h-6"/>, value: "1000+", label: "Services Delivered" }
-];
+    { ic,
+  o: n: <Clock className="w-6 h-6"/>, val,
+  u: e: "3x Faster", lab,
+  e: l: "Implementation" }, { ic,
+  o: n: <Target className="w-6 h-6"/>, val,
+  u: e: "99.9%", lab,
+  e: l: "Success Rate" }, { ic,
+  o: n: <TrendingUp className="w-6 h-6"/>, val,
+  u: e: "50%", lab,
+  e: l: "Cost Reduction" }, { ic,
+  o: n: <Award className="w-6 h-6"/>, val,
+  u: e: "1000+", lab,
+  e: l: "Services Delivered" }
+]
 export function HowItWorksSection() {
-    const [hoveredStep, setHoveredStep] = useState(null);
-    const [activeStep, setActiveStep] = useState(0);
+    const [hoveredStep, setHoveredStep] = useState(null)
+    const [activeStep, setActiveStep] = useState(0)
     const containerVariants = {
-        hidden: { opacity: 0 };
-        visible: {
-            opacity: 1,transition: {
-                staggerChildren: 0.2,delayChildren: 0.1
+        hidd,
+  e: n: { opacit,
+  y: 0 }
+        visib,
+  l: e: {
+            opacit,
+  y: 1,transiti,
+  o: n: {
+                staggerChildre,
+  n: 0.2,delayChildr,
+  e: n: 0.1
             }
         }
-    };
+    }
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 };
-        visible: {
-            opacity: 1,y: 0,transition: {
-                duration: 0.8,ease: "easeOut"
+        hidd,
+  e: n: { ,
+  y: 30, opaci,
+  t: y: 0 }
+        visib,
+  l: e: {
+            opacit,
+  y: 1,y: 0,transiti,
+  o: n: {
+                duratio,
+  n: 0.8,ea,
+  s: e: "easeOut"
             }
         }
-    };
+    }
     const statsVariants = {
-        hidden: { opacity: 0, scale: 0.8 };
-        visible: {
-            opacity: 1,scale: 1,transition: {
-                duration: 0.6,ease: "easeOut"
+        hidd,
+  e: n: { opacit,
+  y: 0, sca,
+  l: e: 0.8 }
+        visib,
+  l: e: {
+            opacit,
+  y: 1,sca,
+  l: e: 1,transiti,
+  o: n: {
+                duratio,
+  n: 0.6,ea,
+  s: e: "easeOut"
             }
         }
-    };
+    }
     return (
         <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
             {/* Background decorative elements */}
@@ -107,38 +176,60 @@ export function HowItWorksSection() {
                 {/* Section Header */}
                 <motion.div 
                     className="text-center mb-16" 
-                    initial={{ opacity: 0, y: 20 }} 
-                    whileInView={{ opacity: 1, y: 0 }} 
-                    viewport={{ once: true }} 
-                    transition={{ duration: 0.6 }}
+                    initial={ opaci,
+  t: y: 0, y: 20 } 
+                    whileInView={ opaci,
+  t: y: 1, y: 0 } 
+                    viewport={ on,
+  c: e: true } 
+                    transition={ durati,
+  o: n: 0.6 }
                 >
                     <motion.div 
                         className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/20 backdrop-blur-sm rounded-full border border-zion-cyan/30 mb-6"
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
+                        initial={ opaci,
+  t: y: 0, sca,
+  l: e: 0.8 }
+                        whileInView={ opaci,
+  t: y: 1, sca,
+  l: e: 1 }
+                        viewport={ on,
+  c: e: true }
+                        transition={ durati,
+  o: n: 0.6, del,
+  a: y: 0.2 }
                     >
                         <Rocket className="h-5 w-5 text-zion-cyan" />
                         <span className="text-zion-cyan text-sm font-medium">How It Works</span>
                     </motion.div>
                     
                     <motion.h2 
-                        className="text-4xl md:text-5xl font-bold text-white mb-6"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
+                        className="text-4xl,
+  m: d: text-5xl font-bold text-white mb-6"
+                        initial={ opacit,
+  y: 0, y: 20 }
+                        whileInView={ opaci,
+  t: y: 1, y: 0 }
+                        viewport={ on,
+  c: e: true }
+                        transition={ durati,
+  o: n: 0.6, del,
+  a: y: 0.3 }
                     >
                         Simple 5-Step Process
                     </motion.h2>
                     
                     <motion.p 
                         className="text-xl text-zion-slate-light max-w-3xl mx-auto"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
+                        initial={ opaci,
+  t: y: 0, y: 20 }
+                        whileInView={ opaci,
+  t: y: 1, y: 0 }
+                        viewport={ on,
+  c: e: true }
+                        transition={ durati,
+  o: n: 0.6, del,
+  a: y: 0.4 }
                     >
                         From discovery to delivery, our streamlined process ensures you get the right 
                         micro SAAS solution quickly and efficiently.
@@ -147,11 +238,14 @@ export function HowItWorksSection() {
 
                 {/* Steps Grid */}
                 <motion.div 
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16"
+                    className="grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-5 gap-6 mb-16"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                    viewport={ on,
+  c: e: true }
                 >
                     {steps.map((step, index) => (
                         <motion.div
@@ -168,7 +262,10 @@ export function HowItWorksSection() {
                             </div>
 
                             {/* Step Card */}
-                            <div className={`bg-gradient-to-br ${step.bgColor} backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full transition-all duration-300 hover:border-zion-cyan/30 hover:transform hover:scale-105 cursor-pointer`}>
+                            <div className={`bg-gradient-to-br ${step.bgColor} backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full transition-all duration-300,
+  hove: r: border-zion-cyan/30,
+  hove: r:transform hove,
+  r:scale-105 cursor-pointer`}>
                                 {/* Icon */}
                                 <div className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-2xl flex items-center justify-center text-white mb-4 mx-auto`}>
                                     {step.icon}
@@ -188,14 +285,22 @@ export function HowItWorksSection() {
                                 <AnimatePresence>
                                     {hoveredStep === index && (
                                         <motion.div
-                                            initial={{ opacity: 0, height: 0 }}
-                                            animate={{ opacity: 1, height: "auto" }}
-                                            exit={{ opacity: 0, height: 0 }}
-                                            transition={{ duration: 0.3 }}
+                                            initial={ opaci,
+  t: y: 0, heig,
+  h: t: 0 }
+                                            animate={ opaci,
+  t: y: 1, heig,
+  h: t: "auto" }
+                                            exit={ opaci,
+  t: y: 0, heig,
+  h: t: 0 }
+                                            transition={ durati,
+  o: n: 0.3 }
                                             className="overflow-hidden"
                                         >
                                             <div className="border-t border-white/20 pt-4 mt-4">
-                                                <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Features:</h4>
+                                                <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key,
+  Feature: s:</h4>
                                                 <ul className="space-y-2 mb-4">
                                                     {step.details.map((detail, idx) => (
                                                         <li key={idx} className="flex items-center gap-2 text-zion-slate-light text-xs">
@@ -227,31 +332,43 @@ export function HowItWorksSection() {
                 {/* Stats Section */}
                 <motion.div 
                     className="text-center mb-16"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
+                    initial={ opaci,
+  t: y: 0, y: 20 }
+                    whileInView={ opaci,
+  t: y: 1, y: 0 }
+                    viewport={ on,
+  c: e: true }
+                    transition={ durati,
+  o: n: 0.6, del,
+  a: y: 0.5 }
                 >
                     <h3 className="text-2xl font-bold text-white mb-8">
                         Why Choose Zion Tech Group?
                     </h3>
                     
                     <motion.div 
-                        className="grid grid-cols-2 md:grid-cols-4 gap-8"
+                        className="grid grid-cols-2,
+  m: d:grid-cols-4 gap-8"
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true }}
+                        viewport={ on,
+  c: e: true }
                     >
                         {stats.map((stat, index) => (
                             <motion.div
                                 key={index}
                                 variants={statsVariants}
                                 className="text-center group"
-                                whileHover={{ scale: 1.05 }}
-                                transition={{ type: "spring", stiffness: 400 }}
+                                whileHover={ sca,
+  l: e: 1.05 }
+                                transition={ ty,
+  p: e: "spring", stiffne,
+  s: s: 400 }
                             >
-                                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center text-white mb-4 mx-auto group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300">
+                                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center text-white mb-4 mx-auto group-hov,
+  e: r: shadow-lg group-hove,
+  r:shadow-zion-cyan/25 transition-all duration-300">
                                     {stat.icon}
                                 </div>
                                 <div className="text-2xl font-bold text-zion-cyan mb-2">
@@ -268,22 +385,35 @@ export function HowItWorksSection() {
                 {/* CTA Section */}
                 <motion.div 
                     className="text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
+                    initial={ opaci,
+  t: y: 0, y: 20 }
+                    whileInView={ opaci,
+  t: y: 1, y: 0 }
+                    viewport={ on,
+  c: e: true }
+                    transition={ durati,
+  o: n: 0.6, del,
+  a: y: 0.6 }
                 >
                     <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
                         <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
                             <p className="text-white text-lg mb-4">
                                 Ready to get started with your micro SAAS solution?
                             </p>
-                            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                                <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                            <div className="flex flex-col,
+  s: m: flex-row gap-4 justify-center">
+                                <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple,
+  hove: r:from-zion-cyan-dark,
+  hove: r:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300,
+  transform: hover:scale-105,
+  hove: r:shadow-lg,
+  hove: r:shadow-zion-cyan/25">
                                     <Shield className="w-5 h-5" />
                                     Get Started Today
                                 </button>
-                                <button className="inline-flex items-center gap-3 border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300">
+                                <button className="inline-flex items-center gap-3 border-2 border-zion-cyan text-zion-cyan,
+  hove: r:bg-zion-cyan hove,
+  r:text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300">
                                     <Users className="w-5 h-5" />
                                     Schedule Demo
                                 </button>

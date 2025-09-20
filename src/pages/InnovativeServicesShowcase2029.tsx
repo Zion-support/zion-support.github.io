@@ -1,53 +1,53 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ;
-  Brain;
-  Shield, ;
-  Cloud, ;
-  Zap, ;
-  Rocket, ;
-  Star, ;
-  TrendingUp, ;
-  CheckCircle, ;
-  ArrowRight;
-  Globe;
-  Cpu;
-  Lock;
-  Heart;
-  Users;
-  ShoppingCart;
-  BookOpen;
-  MessageCircle;
-  HelpCircle;
-  DollarSign;
-  Gauge;
-  Workflow;
-  Atom;
-  Target;
-  Award;
-  Code;
-  Truck;
-  Building;
-  BarChart3;
-  PenTool;
-  Eye;
-  Server;
-  Smartphone;
-  Database;
-  Network;
-  Clock;
-  PanelLeft;
-  Search;
-  Filter;
-  Grid;
-  List;
-  Play;
-  Pause;
-  Volume2;
-  VolumeX;
-} from "lucide-react";
-import { innovativeMicroSAASServices2029 } from "../../data/innovative-micro-saas-2029";
-export default function InnovativeServicesShowcase2029() {;
+import React, { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { 
+  Brain
+  Shield, 
+  Cloud, 
+  Zap, 
+  Rocket, 
+  Star, 
+  TrendingUp, 
+  CheckCircle, 
+  ArrowRight
+  Globe
+  Cpu
+  Lock
+  Heart
+  Users
+  ShoppingCart
+  BookOpen
+  MessageCircle
+  HelpCircle
+  DollarSign
+  Gauge
+  Workflow
+  Atom
+  Target
+  Award
+  Code
+  Truck
+  Building
+  BarChart3
+  PenTool
+  Eye
+  Server
+  Smartphone
+  Database
+  Network
+  Clock
+  PanelLeft
+  Search
+  Filter
+  Grid
+  List
+  Play
+  Pause
+  Volume2
+  VolumeX
+} from "lucide-react"
+import { innovativeMicroSAASServices2029 } from "../../data/innovative-micro-saas-2029"
+export default function InnovativeServicesShowcase2029() {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [searchQuery, setSearchQuery] = useState('')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
@@ -56,164 +56,212 @@ export default function InnovativeServicesShowcase2029() {;
 
   const categories = [['AllAI & Analytics', 'CybersecurityAI & Operations', 'Blockchain & SecurityAI & Legal Tech', 'IoT & Edge ComputingAI & Healthcare', 'Quantum Computing & AIAI & Fintech', 'Sustainability & Consulting'];]
 
-  const filteredServices = innovativeMicroSAASServices2029.filter(service => {;
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+  const filteredServices = innovativeMicroSAASServices2029.filter(service () () => {
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory
+    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tagline.toLowerCase().includes(searchQuery.toLowerCase())
-    return matchesCategory && matchesSearch;
+    return matchesCategory && matchesSearch
   })
 
   const togglePlayPause = () => setIsPlaying(!isPlaying)
   const toggleMute = () => setIsMuted(!isMuted)
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      {{/* Animated Background */}}
+      {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-        ;
-        {{/* Floating Particles */}}
+        
+        {/* Floating Particles */}
         <div className="absolute inset-0">
-          {[...Array(50)].map((_, i) => (;
-            <motion.div;
-              key={{i}}
+          {[...Array(50)].map((_, i) => (
+            <motion.div
+              key={i}
               className="className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30";"
-              animate={{;
+              animate={
                 x: [[0, 100, 0];]
                 y: [[0, -100, 0];]
-                opacity: [[0.3, 0.8, 0.3];]
-              }}
-              transition={{;
-                duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 5;
-              }}
-              style={{;
-                left: `${Math.random() * 100}%`;
-                top: `${Math.random() * 100}%`;
-              }}
+                opaci,
+  t: y: [[0.3, 0.8, 0.3];]
+              }
+              transition={
+                durati,
+  o: n: Math.random() * 10 + 10,repe,
+  a: t: Infinity,del,
+  a: y: Math.random() * 5
+              }
+              style={
+                le,
+  f: t: `${Math.random() * 100}%`
+                t,
+  o: p: `${Math.random() * 100}%`
+              }
             />
           ))}
         </div>
       </div>
 
-      {{/* Header Section */}}
-      <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+      {/* Header Section */}
+      <div className="relative z-10 pt-20 pb-16 px-4,
+  s: m: px-6,
+  l: g:px-8">
+        <motion.div
+          initial={ opacit,
+  y: 0, y: 20 }
+          animate={ opaci,
+  t: y: 1, y: 0 }
+          transition={ durati,
+  o: n: 0.8 }
           className="className="max-w-7xl mx-auto text-center";"
         >
-          <motion.div;
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
+          <motion.div
+            initial={ sca,
+  l: e: 0.8 }
+            animate={ sca,
+  l: e: 1 }
+            transition={ durati,
+  o: n: 1, del,
+  a: y: 0.2 }
             className="className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6";"
           >
             <Star className="w-4 h-4 mr-2 text-yellow-400" />
-            Revolutionary 2029 Services;
+            Revolutionary 2029 Services
           </motion.div>
-          ;
-          <motion.h1;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="className="text-4xl md:text-6xl font-bold text-white mb-6";"
+          
+          <motion.h1
+            initial={ opaci,
+  t: y: 0, y: 20 }
+            animate={ opaci,
+  t: y: 1, y: 0 }
+            transition={ durati,
+  o: n: 0.8, del,
+  a: y: 0.3 }
+            className="className="text-4xl,
+  m: d: text-6xl font-bold text-white mb-6";"
           >
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Next-Generation;
+              Next-Generation
             </span>
             <br />
             <span className="text-white">Micro SAAS Solutions</span>
           </motion.h1>
-          ;
-          <motion.p;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+          
+          <motion.p
+            initial={ opacit,
+  y: 0, y: 20 }
+            animate={ opaci,
+  t: y: 1, y: 0 }
+            transition={ durati,
+  o: n: 0.8, del,
+  a: y: 0.4 }
             className="className="text-xl text-gray-300 max-w-3xl mx-auto mb-8";"
           >
-            Experience the future of business technology with our cutting-edge micro SAAS services. ;
-            From quantum computing to AI-powered healthcare, we're revolutionizing how businesses operate.;
+            Experience the future of business technology with our cutting-edge micro SAAS services. 
+            From quantum computing to AI-powered healthcare, we're revolutionizing how businesses operate.
           </motion.p>
 
-          {{/* Audio Controls */}}
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+          {/* Audio Controls */}
+          <motion.div
+            initial={ opaci,
+  t: y: 0, y: 20 }
+            animate={ opaci,
+  t: y: 1, y: 0 }
+            transition={ durati,
+  o: n: 0.8, del,
+  a: y: 0.5 }
             className="className="flex items-center justify-center space-x-4 mb-8";"
           >
-            <button;
-              onClick={{onClick={togglePlayPause}}}
-              className="className="p-3 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-110";"
+            <button
+              onClick={onClick={togglePlayPause}
+              className="className="p-3 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500,
+  hove: r: from-cyan-600,
+  hove: r:to-purple-600 transition-all duration-300 transform hove,
+  r:scale-110";"
             >
-              {{isPlaying ? <Pause className="w-5 h-5 text-white" /> : <Play className="w-5 h-5 text-white" />}}
+              {isPlaying ? <Pause className="w-5 h-5 text-white" /> : <Play className="w-5 h-5 text-white" />}
             </button>
-            <button;
-              onClick={{onClick={toggleMute}}}
-              className="className="p-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-110";"
+            <button
+              onClick={onClick={toggleMute}
+              className="className="p-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500,
+  hove: r: from-purple-600,
+  hove: r:to-pink-600 transition-all duration-300 transform hove,
+  r:scale-110";"
             >
-              {{isMuted ? <VolumeX className="w-5 h-5 text-white" /> : <Volume2 className="w-5 h-5 text-white" />}}
+              {isMuted ? <VolumeX className="w-5 h-5 text-white" /> : <Volume2 className="w-5 h-5 text-white" />}
             </button>
           </motion.div>
         </motion.div>
       </div>
 
-      {{/* Search and Filter Section */}}
-      <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-12">
+      {/* Search and Filter Section */}
+      <div className="relative z-10 px-4,
+  s: m: px-6,
+  l: g:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+          <motion.div
+            initial={ opacit,
+  y: 0, y: 20 }
+            animate={ opaci,
+  t: y: 1, y: 0 }
+            transition={ durati,
+  o: n: 0.8, del,
+  a: y: 0.6 }
             className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20";"
           >
-            <div className="flex flex-col lg:flex-row gap-6 items-center">
-              {{/* Search */}}
+            <div className="flex flex-col,
+  l: g:flex-row gap-6 items-center">
+              {/* Search */}
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input;
-                  type="text";
-                  placeholder="Search innovative services...";
-                  value={{searchQuery}}
-                  onChange={{(e) => setSearchQuery(e.target.value)}}
-                  className="className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
+                <input
+                  type="text"
+                  placeholder="Search innovative services..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400,
+  focu: s: outline-none,
+  focu: s:ring-2,
+  focu: s:ring-cyan-500 focu,
+  s:border-transparent";"
                 />
               </div>
 
-              {{/* Category Filter */}}
+              {/* Category Filter */}
               <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (;
-                  <button;
-                    key={{category}}
-                    onClick={{onClick={() => setSelectedCategory(category)}}}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${;
-                      selectedCategory === category;
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg';
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20';
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={onClick={() => setSelectedCategory(category)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                      selectedCategory === category
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg'
+                        : 'bg-white/10 text-gray-300,
+  hove: r:bg-white/20 border border-white/20'
                     }`}
                   >
-                    {{category}}
+                    {category}
                   </button>
                 ))}
               </div>
 
-              {{/* View Mode Toggle */}}
+              {/* View Mode Toggle */}
               <div className="flex bg-white/10 rounded-lg p-1 border border-white/20">
-                <button;
-                  onClick={{onClick={() => setViewMode('grid')}}}
-                  className={`p-2 rounded-md transition-all duration-300 ${;
-                    viewMode === 'grid' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white' : 'text-gray-400 hover:text-white';
+                <button
+                  onClick={onClick={() => setViewMode('grid')}
+                  className={`p-2 rounded-md transition-all duration-300 ${
+                    viewMode === 'grid' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white' : 'text-gray-400,
+  hove: r:text-white'
                   }`}
                 >
                   <Grid className="w-5 h-5" />
                 </button>
-                <button;
-                  onClick={{onClick={() => setViewMode('list')}}}
-                  className={`p-2 rounded-md transition-all duration-300 ${;
-                    viewMode === 'list' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white' : 'text-gray-400 hover:text-white';
+                <button
+                  onClick={onClick={() => setViewMode('list')}
+                  className={`p-2 rounded-md transition-all duration-300 ${
+                    viewMode === 'list' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white' : 'text-gray-400,
+  hove: r:text-white'
                   }`}
                 >
                   <List className="w-5 h-5" />
@@ -224,57 +272,75 @@ export default function InnovativeServicesShowcase2029() {;
         </div>
       </div>
 
-      {{/* Services Grid */}}
-      <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
+      {/* Services Grid */}
+      <div className="relative z-10 px-4,
+  s: m: px-6,
+  l: g:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
-          <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className={`grid gap-6 ${;
-              viewMode === 'grid' ;
-                ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' ;
-                : 'grid-cols-1';
+          <motion.div
+            initial={ opacit,
+  y: 0 }
+            animate={ opaci,
+  t: y: 1 }
+            transition={ durati,
+  o: n: 0.8, del,
+  a: y: 0.7 }
+            className={`grid gap-6 ${
+              viewMode === 'grid' 
+                ? 'grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-3' 
+                : 'grid-cols-1'
             }`}
           >
             <AnimatePresence>
-              {filteredServices.map((service, index) => (;
-                <motion.div;
-                  key={{service.id}}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`group relative ${;
-                    viewMode === 'list' ? 'flex flex-col lg:flex-row' : '';
+              {filteredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={ opaci,
+  t: y: 0, y: 20 }
+                  animate={ opaci,
+  t: y: 1, y: 0 }
+                  exit={ opaci,
+  t: y: 0, y: -20 }
+                  transition={ durati,
+  o: n: 0.5, del,
+  a: y: index * 0.1 }
+                  className={`group relative ${
+                    viewMode === 'list' ? 'flex flex-col,
+  l: g:flex-row' : ''
                   }`}
                 >
-                  <div className={`bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 ${;
-                    viewMode === 'list' ? 'flex-1' : '';
+                  <div className={`bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden transition-all duration-500,
+  hove: r: scale-105,
+  hove: r:shadow-2xl hove,
+  r:shadow-cyan-500/25 ${
+                    viewMode === 'list' ? 'flex-1' : ''
                   }`}>
-                    {{/* Service Header */}}
+                    {/* Service Header */}
                     <div className={`p-6 ${service.popular ? 'bg-gradient-to-r from-yellow-500/20 to-orange-500/20' : ''}`}>
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex items-center space-x-3">
                           <div className="text-3xl">{service.icon}</div>
                           <div>
-                            <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
-                              {{service.name}}
+                            <h3 className="text-xl font-bold text-white group-hov,
+  e: r:text-cyan-300 transition-colors duration-300">
+                              {service.name}
                             </h3>
                             <p className="text-gray-400 text-sm">{service.category}</p>
                           </div>
                         </div>
-                        {service.popular && (;
+                        {service.popular && (
                           <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium rounded-full">
-                            Popular;
+                            Popular
                           </span>
                         )}
                       </div>
-                      ;
+                      
                       <p className="text-gray-300 mb-4 leading-relaxed">
-                        {{service.tagline}}
+                        {service.tagline}
                       </p>
-                      ;
+                      
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center space-x-2">
                           <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -288,29 +354,29 @@ export default function InnovativeServicesShowcase2029() {;
                       </div>
                     </div>
 
-                    {{/* Service Content */}}
+                    {/* Service Content */}
                     <div className="p-6 pt-0">
                       <p className="text-gray-300 mb-6 leading-relaxed">
-                        {{service.description}}
+                        {service.description}
                       </p>
 
-                      {{/* Features */}}
+                      {/* Features */}
                       <div className="mb-6">
                         <h4 className="text-white font-semibold mb-3 flex items-center">
                           <CheckCircle className="w-4 h-4 mr-2 text-cyan-400" />
-                          Key Features;
+                          Key Features
                         </h4>
                         <div className="grid grid-cols-1 gap-2">
-                          {service.features.slice(0, 3).map((feature, idx) => (;
+                          {service.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center text-sm text-gray-400">
                               <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
-                              {{feature}}
+                              {feature}
                             </div>
                           ))}
                         </div>
                       </div>
 
-                      {{/* Market Info */}}
+                      {/* Market Info */}
                       <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                         <div>
                           <p className="text-gray-400">Market Size</p>
@@ -322,22 +388,27 @@ export default function InnovativeServicesShowcase2029() {;
                         </div>
                       </div>
 
-                      {{/* ROI */}}
+                      {/* ROI */}
                       <div className="mb-6 p-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl border border-green-500/30">
                         <p className="text-green-300 text-sm font-medium">ROI Impact</p>
                         <p className="text-white font-semibold">{service.roi}</p>
                       </div>
 
-                      {{/* Action Buttons */}}
+                      {/* Action Buttons */}
                       <div className="flex space-x-3">
-                        <a;
-                          href={{service.link}}
-                          className="className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-medium py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center group";"
+                        <a
+                          href={service.link}
+                          className="className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500,
+  hove: r: from-cyan-600,
+  hove: r:to-purple-600 text-white font-medium py-3 px-4 rounded-xl transition-all duration-300,
+  transform: hover:scale-105 flex items-center justify-center group";"
                         >
-                          Learn More;
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                          Learn More
+                          <ArrowRight className="w-4 h-4 ml-2 group-hov,
+  e: r:translate-x-1 transition-transform duration-300" />
                         </a>
-                        <button className="px-4 py-3 border border-white/20 text-white rounded-xl hover:bg-white/10 transition-all duration-300">
+                        <button className="px-4 py-3 border border-white/20 text-white rounded-xl hove,
+  r:bg-white/10 transition-all duration-300">
                           <MessageCircle className="w-5 h-5" />
                         </button>
                       </div>
@@ -348,11 +419,12 @@ export default function InnovativeServicesShowcase2029() {;
             </AnimatePresence>
           </motion.div>
 
-          {{/* No Results */}}
-          {filteredServices.length === 0 && (;
-            <motion.div;
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+          {/* No Results */}, {filteredServices.length === 0 && (
+            <motion.div
+              initial={ opaci,
+  t: y: 0 }
+              animate={ opaci,
+  t: y: 1 }
               className="className="text-center py-20";"
             >
               <div className="text-gray-400 text-xl mb-4">No services found</div>
@@ -362,39 +434,53 @@ export default function InnovativeServicesShowcase2029() {;
         </div>
       </div>
 
-      {{/* Contact CTA */}}
-      <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
+      {/* Contact CTA */}
+      <div className="relative z-10 px-4,
+  s: m: px-6,
+  l: g:px-8 pb-20">
         <div className="max-w-4xl mx-auto">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+          <motion.div
+            initial={ opacit,
+  y: 0, y: 20 }
+            animate={ opaci,
+  t: y: 1, y: 0 }
+            transition={ durati,
+  o: n: 0.8, del,
+  a: y: 0.8 }
             className="className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-lg rounded-3xl p-8 border border-cyan-500/30 text-center";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?;
+              Ready to Transform Your Business?
             </h2>
             <p className="text-gray-300 mb-8 text-lg">
-              Get in touch with our team to discuss how these innovative solutions can drive your business forward.;
+              Get in touch with our team to discuss how these innovative solutions can drive your business forward.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-                href="/contact";
-                className="className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-medium py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105";"
+            <div className="flex flex-col,
+  s: m: flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="className="bg-gradient-to-r from-cyan-500 to-purple-500,
+  hove: r:from-cyan-600,
+  hove: r:to-purple-600 text-white font-medium py-4 px-8 rounded-xl transition-all duration-300,
+  transform: hover:scale-105";"
               >
-                Contact Us;
+                Contact Us
               </a>
-              <a;
-                href="/request-quote";
-                className="className="border border-white/20 text-white font-medium py-4 px-8 rounded-xl hover:bg-white/10 transition-all duration-300";"
+              <a
+                href="/request-quote"
+                className="className="border border-white/20 text-white font-medium py-4 px-8 rounded-xl,
+  hove: r:bg-white/10 transition-all duration-300";"
               >
-                Request Quote;
+                Request Quote
               </a>
             </div>
             <div className="mt-8 text-gray-400">
-              <p>Mobile: +1 302 464 0950</p>
-              <p>Email: kleber@ziontechgroup.com</p>
-              <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
+              <p>Mobi,
+  l: e: +1 302 464 0950</p>
+              <p>Ema,
+  i: l: kleber@ziontechgroup.com</p>
+              <p>Addres,
+  s: 364 E Main St STE 1008 Middletown DE 19709</p>
             </div>
           </motion.div>
         </div>

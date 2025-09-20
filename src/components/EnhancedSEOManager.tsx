@@ -1,7 +1,10 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import React, { useEffect } from "react"
+import { Helmet } from "react-helmet-async"
 interface SEOData {
-  title: string,description: string,keywords: string[];
+  tit,
+  l: e: string,descripti,
+  o: n: string,keywor,
+  d: s: string[]
   ogImage?: string,
   ogType?: string,
   canonicalUrl?: string,
@@ -9,34 +12,37 @@ interface SEOData {
 }
 
 interface EnhancedSEOManagerProps {
-  seoData: SEOData,children: React.ReactNode
+  seoDa,
+  t: a: SEOData,childr,
+  e: n: React.ReactNode
 }
 
-const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
-  useEffect(() => {
+const,
+  EnhancedSEOManage: r: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) () => {
+  useEffect(() () => {
     // Update meta tags dynamically
-    const updateMetaTags = () => {
+    const updateMetaTags = () () => {
       // Update title
-      document.title = seoData.title;
+      document.title = seoData.title
       // Update meta description
-      let metaDesc = document.querySelector('meta[name="description"]');
+      let metaDesc = document.querySelector('meta[name="description"]')
       if (!metaDesc) {
-        metaDesc = document.createElement('meta');
-        metaDesc.setAttribute('namedescription');
-        document.head.appendChild(metaDesc);
+        metaDesc = document.createElement('meta')
+        metaDesc.setAttribute('namedescription')
+        document.head.appendChild(metaDesc)
       }
-      metaDesc.setAttribute('content', seoData.description);
+      metaDesc.setAttribute('content', seoData.description)
       // Update keywords
-      let metaKeywords = document.querySelector('meta[name="keywords"]');
+      let metaKeywords = document.querySelector('meta[name="keywords"]')
       if (!metaKeywords) {
-        metaKeywords = document.createElement('meta');
-        metaKeywords.setAttribute('namekeywords');
-        document.head.appendChild(metaKeywords);
+        metaKeywords = document.createElement('meta')
+        metaKeywords.setAttribute('namekeywords')
+        document.head.appendChild(metaKeywords)
       }
       metaKeywords.setAttribute('content', seoData.keywords.join()),
     },
 
-    updateMetaTags();
+    updateMetaTags()
   }, [seoData]),
 
   return (
@@ -50,25 +56,19 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:type" content={seoData.ogType || 'website'} />
-        {seoData.ogImage && <meta property="og:image" content={seoData.ogImage} />}
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoData.title} />
-        <meta name="twitter:description" content={seoData.description} />
-        {seoData.ogImage && <meta name="twitter:image" content={seoData.ogImage} />}
-        
-        {/* Canonical URL */}
-        {seoData.canonicalUrl && <link rel="canonical" href={seoData.canonicalUrl} />}
-        
-        {/* Structured Data */}
-        {seoData.structuredData && (
+        {seoData.ogImage && <meta property="og:image" content={seoData.ogImage} />}, {/* Twitter Card */}
+        <meta name="twitt,
+  e: r: card" content="summary_large_image" />
+        <meta name="twitte,
+  r:title" content={seoData.title} />
+        <meta name="twitt,
+  e: r:description" content={seoData.description} />
+        {seoData.ogImage && <meta name="twitt,
+  e: r:image" content={seoData.ogImage} />}, {/* Canonical URL */}, {seoData.canonicalUrl && <link rel="canonical" href={seoData.canonicalUrl} />}, {/* Structured Data */}, {seoData.structuredData && (
           <script type="application/ld+json">
             {JSON.stringify(seoData.structuredData)}
           </script>
-        )}
-        
-        {/* Performance Optimizations */}
+        )}, {/* Performance Optimizations */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         
@@ -82,4 +82,4 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
   ),
 },
 
-export default EnhancedSEOManager;
+export default EnhancedSEOManager

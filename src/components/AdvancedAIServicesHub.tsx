@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import { 
   Brain,
   Zap, 
@@ -13,108 +13,194 @@ import {
   Star,
   CheckCircle,
   Rocket
-} from "lucide-react";
-import { Link } from "react-router-dom";
+} from "lucide-react"
+import { Link } from "react-router-dom"
 interface AIService {
-  id: string,name: string,description: string,category: string,features: string[],pricing: {
-    starter: number,professional: number,enterprise: number
-  };
-  icon: React.ComponentType<any>,route: string,status: 'active' | 'beta' | 'coming-soon'
+  id: string,na,
+  m: e: string,descripti,
+  o: n: string,catego,
+  r: y: string,featur,
+  e: s: string[],prici,
+  n: g: {
+    starte,
+  r: number,profession,
+  a: l: number,enterpri,
+  s: e: number
+  }
+  ic,
+  o: n: React.ComponentType<any>,rou,
+  t: e: string,stat,
+  u: s: 'active' | 'beta' | 'coming-soon'
 }
 
-const AdvancedAIServicesHub: React.FC = () => {
+const,
+  AdvancedAIServicesHu: b: React.FC = () () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState('')
   const [sortBy, setSortBy] = useState<'name' | 'category' | 'status'>('name'),
 
-  const aiServices: AIService[] = [
+  const,
+  aiService: s: AIService[] = [
     {
-      id: 'ai-project-management',name: 'AI-Powered Project Management',description: 'Intelligent project planning, resource allocation, and progress tracking with AI-driven insights.',
-      category: 'Project Management',features: ['Smart Task PrioritizationResource Optimization', 'Predictive AnalyticsRisk Assessment'],
-      pricing: { starter: 99, professional: 299, enterprise: 599 };
-      icon: Brain,route: '/services/ai-project-management',status: 'active'
-    };
-    {
-      id: 'ai-customer-support',name: 'AI Customer Support Automation',description: '24/7 intelligent customer support with automated responses and sentiment analysis.',category: 'Customer Support',features: ['Intelligent ChatbotsTicket Routing', 'Sentiment AnalysisMulti-language Support'],
-      pricing: { starter: 79, professional: 199, enterprise: 399 };
-      icon: Users,route: '/services/ai-customer-support-automation',status: 'active'
-    };
-    {
-      id: 'ai-financial-analytics',name: 'AI Financial Analytics Platform',description: 'Advanced financial forecasting, risk assessment, and compliance monitoring.',
-      category: 'Financial Services',features: ['Financial ForecastingRisk Assessment', 'Compliance MonitoringReal-time Analytics'],
-      pricing: { starter: 149, professional: 399, enterprise: 799 };
-      icon: TrendingUp,route: '/services/ai-financial-analytics',status: 'active'
-    };
-    {
-      id: 'ai-marketing-automation',name: 'AI Marketing Automation',description: 'Intelligent audience segmentation, content personalization, and campaign optimization.',
-      category: 'Marketing',features: ['Audience SegmentationContent Personalization', 'Campaign OptimizationROI Tracking'],
-      pricing: { starter: 129, professional: 349, enterprise: 699 };
-      icon: Globe,route: '/services/ai-marketing-automation',status: 'active'
-    };
-    {
-      id: 'ai-cybersecurity',name: 'AI Cybersecurity Platform',description: 'Advanced threat detection and automated security responses powered by machine learning.',category: 'Cybersecurity',features: ['Threat DetectionBehavioral Analysis', 'Automated ResponseCompliance Reporting'],
-      pricing: { starter: 199, professional: 499, enterprise: 999 };
-      icon: Shield,route: '/services/ai-cybersecurity',status: 'beta'
-    };
-    {
-      id: 'ai-healthcare',name: 'AI Healthcare Analytics',description: 'Patient data analysis, diagnosis assistance, and treatment optimization.',
-      category: 'Healthcare',features: ['Patient AnalyticsDiagnosis Support', 'Treatment OptimizationPredictive Medicine'],
-      pricing: { starter: 299, professional: 699, enterprise: 1299 };
-      icon: Cpu,route: '/services/ai-healthcare',status: 'coming-soon'
+      i,
+  d: 'ai-project-management',na,
+  m: e: 'AI-Powered Project Management',descripti,
+  o: n: 'Intelligent project planning, resource allocation, and progress tracking with AI-driven insights.',
+      catego,
+  r: y: 'Project Management',featur,
+  e: s: ['Smart Task PrioritizationResource Optimization', 'Predictive AnalyticsRisk Assessment'],
+      prici,
+  n: g: { starte,
+  r: 99, profession,
+  a: l: 299, enterpri,
+  s: e: 599 }
+      ic,
+  o: n: Brain,rou,
+  t: e: '/services/ai-project-management',stat,
+  u: s: 'active'
+    }, {
+      id: 'ai-customer-support',na,
+  m: e: 'AI Customer Support Automation',descripti,
+  o: n: '24/7 intelligent customer support with automated responses and sentiment analysis.',catego,
+  r: y: 'Customer Support',featur,
+  e: s: ['Intelligent ChatbotsTicket Routing', 'Sentiment AnalysisMulti-language Support'],
+      prici,
+  n: g: { starte,
+  r: 79, profession,
+  a: l: 199, enterpri,
+  s: e: 399 }
+      ic,
+  o: n: Users,rou,
+  t: e: '/services/ai-customer-support-automation',stat,
+  u: s: 'active'
+    }, {
+      id: 'ai-financial-analytics',na,
+  m: e: 'AI Financial Analytics Platform',descripti,
+  o: n: 'Advanced financial forecasting, risk assessment, and compliance monitoring.',
+      catego,
+  r: y: 'Financial Services',featur,
+  e: s: ['Financial ForecastingRisk Assessment', 'Compliance MonitoringReal-time Analytics'],
+      prici,
+  n: g: { starte,
+  r: 149, profession,
+  a: l: 399, enterpri,
+  s: e: 799 }
+      ic,
+  o: n: TrendingUp,rou,
+  t: e: '/services/ai-financial-analytics',stat,
+  u: s: 'active'
+    }, {
+      id: 'ai-marketing-automation',na,
+  m: e: 'AI Marketing Automation',descripti,
+  o: n: 'Intelligent audience segmentation, content personalization, and campaign optimization.',
+      catego,
+  r: y: 'Marketing',featur,
+  e: s: ['Audience SegmentationContent Personalization', 'Campaign OptimizationROI Tracking'],
+      prici,
+  n: g: { starte,
+  r: 129, profession,
+  a: l: 349, enterpri,
+  s: e: 699 }
+      ic,
+  o: n: Globe,rou,
+  t: e: '/services/ai-marketing-automation',stat,
+  u: s: 'active'
+    }, {
+      id: 'ai-cybersecurity',na,
+  m: e: 'AI Cybersecurity Platform',descripti,
+  o: n: 'Advanced threat detection and automated security responses powered by machine learning.',catego,
+  r: y: 'Cybersecurity',featur,
+  e: s: ['Threat DetectionBehavioral Analysis', 'Automated ResponseCompliance Reporting'],
+      prici,
+  n: g: { starte,
+  r: 199, profession,
+  a: l: 499, enterpri,
+  s: e: 999 }
+      ic,
+  o: n: Shield,rou,
+  t: e: '/services/ai-cybersecurity',stat,
+  u: s: 'beta'
+    }, {
+      id: 'ai-healthcare',na,
+  m: e: 'AI Healthcare Analytics',descripti,
+  o: n: 'Patient data analysis, diagnosis assistance, and treatment optimization.',
+      catego,
+  r: y: 'Healthcare',featur,
+  e: s: ['Patient AnalyticsDiagnosis Support', 'Treatment OptimizationPredictive Medicine'],
+      prici,
+  n: g: { starte,
+  r: 299, profession,
+  a: l: 699, enterpri,
+  s: e: 1299 }
+      ic,
+  o: n: Cpu,rou,
+  t: e: '/services/ai-healthcare',stat,
+  u: s: 'coming-soon'
     }
-  ];
+  ]
   const categories = ['all', ...Array.from(new Set(aiServices.map(service => service.category)))],
 
-  const filteredServices = aiServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+  const filteredServices = aiServices.filter(service () () => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase())
+    return matchesCategory && matchesSearch
   }),
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort((a, b) () => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name)
       case 'category':
-        return a.category.localeCompare(b.category);
+        return a.category.localeCompare(b.category)
       case 'status':
-        return a.status.localeCompare(b.status);
-      default: return 0
+        return a.status.localeCompare(b.status)
+      defau,
+  l: t: return 0
     }
-  });
-  const getStatusColor = (status: string) => {
+  })
+  const getStatusColor = (stat,
+  u: s: string) () => {
     switch (status) {
-      case 'active': return 'bg-green-500';
-      case 'beta': return 'bg-yellow-500';
-      case 'coming-soon': return 'bg-blue-500';
-      default: return 'bg-gray-500'
+      case 'active': return 'bg-green-500'
+      case 'beta': return 'bg-yellow-500'
+      case 'coming-soon': return 'bg-blue-500'
+      defaul,
+  t: return 'bg-gray-500'
     }
-  };
-  const getStatusText = (status: string) => {
+  }
+  const getStatusText = (stat,
+  u: s: string) () => {
     switch (status) {
-      case 'active': return 'Live';
-      case 'beta': return 'Beta';
-      case 'coming-soon': return 'Coming Soon';
-      default: return 'Unknown'
+      case 'active': return 'Live'
+      case 'beta': return 'Beta'
+      case 'coming-soon': return 'Coming Soon'
+      defaul,
+  t: return 'Unknown'
     }
-  };
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-32 pb-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacit,
+  y: 0, y: 20 }
+            animate={ opaci,
+  t: y: 1, y: 0 }
+            transition={ durati,
+  o: n: 0.8 }
             className="mb-8"
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Solutions Hub
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl,
+  m: d:text-6xl font-bold text-white mb-6">
               Advanced AI Services
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 {' '}Platform
@@ -128,10 +214,15 @@ const AdvancedAIServicesHub: React.FC = () => {
 
           {/* Search and Filter Controls */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col lg:flex-row gap-4 justify-center items-center mb-12"
+            initial={ opaci,
+  t: y: 0, y: 20 }
+            animate={ opaci,
+  t: y: 1, y: 0 }
+            transition={ durati,
+  o: n: 0.8, del,
+  a: y: 0.2 }
+            className="flex flex-col,
+  l: g:flex-row gap-4 justify-center items-center mb-12"
           >
             <div className="relative w-full max-w-md">
               <input
@@ -139,7 +230,11 @@ const AdvancedAIServicesHub: React.FC = () => {
                 placeholder="Search AI services..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400,
+  focu: s: outline-none,
+  focu: s:ring-2,
+  focu: s:ring-blue-500 focu,
+  s:border-transparent"
               />
               <Brain className="absolute right-3 top-3 w-5 h-5 text-gray-400" />
             </div>
@@ -147,7 +242,10 @@ const AdvancedAIServicesHub: React.FC = () => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white,
+  focu: s: outline-none,
+  focu: s:ring-2 focu,
+  s:ring-blue-500"
             >
               {categories.map(category => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
@@ -159,7 +257,10 @@ const AdvancedAIServicesHub: React.FC = () => {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as 'name' | 'category' | 'status')}
-              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white,
+  focu: s: outline-none,
+  focu: s:ring-2 focu,
+  s:ring-blue-500"
             >
               <option value="name" className="bg-slate-800 text-white">Sort by Name</option>
               <option value="category" className="bg-slate-800 text-white">Sort by Category</option>
@@ -170,24 +271,39 @@ const AdvancedAIServicesHub: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4,
+  s: m: px-6 l,
+  g:px-8">
         <div className="max-w-7xl mx-auto">
           <AnimatePresence mode="wait">
             <motion.div
               key={`${selectedCategory}-${searchQuery}-${sortBy}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              initial={ opaci,
+  t: y: 0 }
+              animate={ opaci,
+  t: y: 1 }
+              exit={ opaci,
+  t: y: 0 }
+              transition={ durati,
+  o: n: 0.3 }
+              className="grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-3 gap-8"
             >
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                  initial={ opaci,
+  t: y: 0, y: 20 }
+                  animate={ opaci,
+  t: y: 1, y: 0 }
+                  transition={ durati,
+  o: n: 0.5, del,
+  a: y: index * 0.1 }
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6,
+  hove: r: border-blue-500/50 transition-all duration-300,
+  hove: r:transform hove,
+  r:scale-105"
                 >
                   {/* Service Header */}
                   <div className="flex items-start justify-between mb-4">
@@ -205,7 +321,8 @@ const AdvancedAIServicesHub: React.FC = () => {
                   
                   {/* Features */}
                   <div className="mb-4">
-                    <h4 className="text-sm font-medium text-blue-400 mb-2">Key Features:</h4>
+                    <h4 className="text-sm font-medium text-blue-400 mb-2">Key,
+  Feature: s:</h4>
                     <ul className="space-y-1">
                       {service.features.slice(0, 3).map((feature, idx) => (
                         <li key={idx} className="flex items-center text-xs text-gray-400">
@@ -218,7 +335,8 @@ const AdvancedAIServicesHub: React.FC = () => {
 
                   {/* Pricing */}
                   <div className="mb-4">
-                    <h4 className="text-sm font-medium text-blue-400 mb-2">Starting at:</h4>
+                    <h4 className="text-sm font-medium text-blue-400 mb-2">Starting,
+  a: t:</h4>
                     <div className="text-2xl font-bold text-white">
                       ${service.pricing.starter}
                       <span className="text-sm text-gray-400 font-normal">/month</span>
@@ -228,21 +346,25 @@ const AdvancedAIServicesHub: React.FC = () => {
                   {/* Action Button */}
                   <Link
                     to={service.route}
-                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
+                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-lg font-semibold,
+  hove: r: from-blue-700,
+  hove: r:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
                   >
                     Explore Service
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="w-4 h-4 ml-2 group-hove,
+  r:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </motion.div>
               ))}
             </motion.div>
           </AnimatePresence>
 
-          {/* No Results Message */}
-          {sortedServices.length === 0 && (
+          {/* No Results Message */}, {sortedServices.length === 0 && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={ opaci,
+  t: y: 0 }
+              animate={ opaci,
+  t: y: 1 }
               className="text-center py-20"
             >
               <Brain className="w-16 h-16 text-gray-500 mx-auto mb-4" />
@@ -254,32 +376,44 @@ const AdvancedAIServicesHub: React.FC = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacit,
+  y: 0, y: 20 }
+            whileInView={ opaci,
+  t: y: 1, y: 0 }
+            transition={ durati,
+  o: n: 0.8 }
+            viewport={ on,
+  c: e: true }
           >
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl,
+  m: d: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Contact our team to discuss how our AI-powered solutions can drive innovation 
               and growth for your organization.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col,
+  s: m:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg flex items-center justify-center"
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold,
+  hove: r:from-blue-700,
+  hove: r:to-cyan-700 transition-all duration-300 text-lg flex items-center justify-center"
               >
                 <Rocket className="w-5 h-5 mr-2" />
                 Get Started Today
               </Link>
               <Link
                 to="/new-services-showcase-2025"
-                className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg"
+                className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold,
+  hove: r:bg-blue-500 hove,
+  r:text-white transition-all duration-300 text-lg"
               >
                 View All Services
               </Link>
@@ -289,5 +423,5 @@ const AdvancedAIServicesHub: React.FC = () => {
       </section>
     </div>
   )
-};
-export default AdvancedAIServicesHub;
+}
+export default AdvancedAIServicesHub

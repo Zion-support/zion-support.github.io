@@ -1,34 +1,92 @@
-export const completeSitemap = [;
-    // Main Pages;
-    {{ path: '/', label: 'Home', description: 'Zion Tech Group homepage' }}
-    {{ path: '/about', label: 'About Us', description: 'Learn about Zion Tech Group' }}
-    {{ path: '/careers', label: 'Careers', description: 'Join our team' }}
-    {{ path: '/contact', label: 'Contact', description: 'Get in touch with us' }}
-    {{ path: '/sitemap', label: 'Sitemap', description: 'Complete site navigation' }}
-    {{ path: '/privacy', label: 'Privacy Policy', description: 'Our privacy practices' }}
-    {{ path: '/terms', label: 'Terms of Service', description: 'Terms and conditions' }}
-    // Marketplace;
-    {{ path: '/marketplace', label: 'Marketplace', description: 'Browse products and services' }}
-    {{ path: '/services', label: 'Services', description: 'Professional services' }}
-    {{ path: '/talent', label: 'Find Talent', description: 'Connect with skilled professionals' }}
-    {{ path: '/equipment', label: 'Equipment', description: 'Browse equipment listings' }}
-    {{ path: '/categories', label: 'Categories', description: 'Browse by category' }}
-    {{ path: '/green-it', label: 'Green IT', description: 'Sustainable technology solutions' }}
-    {{ path: '/it-onsite-services', label: 'IT Onsite Services', description: 'On-site IT support' }}
-    // Community & Support;
-    {{ path: '/community', label: 'Community', description: 'Join our community' }}
-    {{ path: '/blog', label: 'Blog', description: 'Latest news and insights' }}
-    {{ path: '/faq', label: 'FAQ', description: 'Frequently asked questions' }}
-    {{ path: '/help', label: 'Help Center', description: 'Get help and support' }}
-    // AI & Tools;
-    {{ path: '/match', label: 'AI Matcher', description: 'AI-powered talent matching' }}
-    {{ path: '/zion-hire-ai', label: 'Zion Hire AI', description: 'AI hiring assistant' }}
-    {{ path: '/request-quote', label: 'Request Quote', description: 'Get a custom quote' }}
-    // Partners & Business;
-    {{ path: '/partners', label: 'Partners', description: 'Our business partners' }}
-    {{ path: '/developers', label: 'Developer Portal', description: 'Developer resources' }}
-    {{ path: '/api-docs', label: 'API Documentation', description: 'Technical documentation' }}
-    // Authentication;
-    {{ path: '/login', label: 'Login', description: 'Sign in to your account' }}
-    {{ path: '/signup', label: 'Sign Up', description: 'Create a new account' }}
+export const completeSitemap = [
+    // Main Pages
+    { pa,
+  t: h: '/', lab,
+  e: l: 'Home', descripti,
+  o: n: 'Zion Tech Group homepage' }, { pa,
+  t: h: '/about', lab,
+  e: l: 'About Us', descripti,
+  o: n: 'Learn about Zion Tech Group' }, { pa,
+  t: h: '/careers', lab,
+  e: l: 'Careers', descripti,
+  o: n: 'Join our team' }, { pa,
+  t: h: '/contact', lab,
+  e: l: 'Contact', descripti,
+  o: n: 'Get in touch with us' }, { pa,
+  t: h: '/sitemap', lab,
+  e: l: 'Sitemap', descripti,
+  o: n: 'Complete site navigation' }, { pa,
+  t: h: '/privacy', lab,
+  e: l: 'Privacy Policy', descripti,
+  o: n: 'Our privacy practices' }, { pa,
+  t: h: '/terms', lab,
+  e: l: 'Terms of Service', descripti,
+  o: n: 'Terms and conditions' }
+    // Marketplace
+    { pa,
+  t: h: '/marketplace', lab,
+  e: l: 'Marketplace', descripti,
+  o: n: 'Browse products and services' }, { pa,
+  t: h: '/services', lab,
+  e: l: 'Services', descripti,
+  o: n: 'Professional services' }, { pa,
+  t: h: '/talent', lab,
+  e: l: 'Find Talent', descripti,
+  o: n: 'Connect with skilled professionals' }, { pa,
+  t: h: '/equipment', lab,
+  e: l: 'Equipment', descripti,
+  o: n: 'Browse equipment listings' }, { pa,
+  t: h: '/categories', lab,
+  e: l: 'Categories', descripti,
+  o: n: 'Browse by category' }, { pa,
+  t: h: '/green-it', lab,
+  e: l: 'Green IT', descripti,
+  o: n: 'Sustainable technology solutions' }, { pa,
+  t: h: '/it-onsite-services', lab,
+  e: l: 'IT Onsite Services', descripti,
+  o: n: 'On-site IT support' }
+    // Community & Support
+    { pa,
+  t: h: '/community', lab,
+  e: l: 'Community', descripti,
+  o: n: 'Join our community' }, { pa,
+  t: h: '/blog', lab,
+  e: l: 'Blog', descripti,
+  o: n: 'Latest news and insights' }, { pa,
+  t: h: '/faq', lab,
+  e: l: 'FAQ', descripti,
+  o: n: 'Frequently asked questions' }, { pa,
+  t: h: '/help', lab,
+  e: l: 'Help Center', descripti,
+  o: n: 'Get help and support' }
+    // AI & Tools
+    { pa,
+  t: h: '/match', lab,
+  e: l: 'AI Matcher', descripti,
+  o: n: 'AI-powered talent matching' }, { pa,
+  t: h: '/zion-hire-ai', lab,
+  e: l: 'Zion Hire AI', descripti,
+  o: n: 'AI hiring assistant' }, { pa,
+  t: h: '/request-quote', lab,
+  e: l: 'Request Quote', descripti,
+  o: n: 'Get a custom quote' }
+    // Partners & Business
+    { pa,
+  t: h: '/partners', lab,
+  e: l: 'Partners', descripti,
+  o: n: 'Our business partners' }, { pa,
+  t: h: '/developers', lab,
+  e: l: 'Developer Portal', descripti,
+  o: n: 'Developer resources' }, { pa,
+  t: h: '/api-docs', lab,
+  e: l: 'API Documentation', descripti,
+  o: n: 'Technical documentation' }
+    // Authentication
+    { pa,
+  t: h: '/login', lab,
+  e: l: 'Login', descripti,
+  o: n: 'Sign in to your account' }, { pa,
+  t: h: '/signup', lab,
+  e: l: 'Sign Up', descripti,
+  o: n: 'Create a new account' }
 ]
