@@ -19,9 +19,8 @@ fi
 echo "Running Next.js build..."
 NODE_OPTIONS="--openssl-legacy-provider" npm run build
 
-# Run the export
-echo "Running Next.js export..."
-npx next export
+# Export is now handled by the build process with output: 'export'
+echo "Static export completed during build process"
 
 # Restore tsconfig.json
 if [ -f "tsconfig.json.netlify-backup" ]; then
