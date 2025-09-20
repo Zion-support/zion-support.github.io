@@ -179,7 +179,7 @@ export const generateDynamicSuggestions = (
   availableTags: string[] = []
 ): SearchSuggestion[] => {
   const suggestions: SearchSuggestion[] = [];
-    const lowerQuery = query.toLowerCase();
+  const lowerQuery = query.toLowerCase();
 
   // Add exact query as first suggestion
   if (query.trim()) {
@@ -188,7 +188,7 @@ export const generateDynamicSuggestions = (
       type: 'recent',
       id: `query-${query}`
     });
-     }
+  }
 
   // Add matching categories
   availableCategories
@@ -200,7 +200,7 @@ export const generateDynamicSuggestions = (
         type: 'category',
         id: `category-${category}`
       });
-     });
+    });
 
   // Add matching tags
   availableTags
@@ -212,7 +212,7 @@ export const generateDynamicSuggestions = (
         type: 'tag',
         id: `tag-${tag}`
       });
-     });
+    });
 
   // Add recent searches that match
   recentSearches
@@ -224,7 +224,7 @@ export const generateDynamicSuggestions = (
         type: 'recent',
         id: `recent-${search}`
       });
-     });
+    });
 
   return suggestions.slice(0, 8); // Limit to 8 suggestions
 };
@@ -276,7 +276,7 @@ export const debounce = <T extends (...args: any[]) => any>(
   wait: number
 ): ((...args: Parameters<T>) => void) => {
   let timeout: ReturnType<typeof setTimeout>;
-    return (...args: Parameters<T>) => {
+  return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
