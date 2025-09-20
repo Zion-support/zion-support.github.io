@@ -10,14 +10,14 @@ showIcons?: boolean;
 className?: string;
 };
 const sizeClasses = {;
-sm: "w-8 h-8";
-md: "w-12 h-12";
+sm: "w-8 h-8";,
+md: "w-12 h-12";,
 lg: "w-16 h-16";,
 xl: "w-24 h-24",
 };
 const iconSizes = {;
-sm: "w-4 h-4";
-md: "w-6 h-6";
+sm: "w-4 h-4";,
+md: "w-6 h-6";,
 lg: "w-8 h-8";,
 xl: "w-12 h-12",
 };
@@ -31,8 +31,8 @@ className = ""
 const containerVariants: Variants = {,
 hidden: { opacity: 0 };
 visible: {
-opacity: 1;
-transition: {
+opacity: 1;,
+transition: {,
 staggerChildren: 0.1;,
 delayChildren: 0.2;,
 }
@@ -42,47 +42,47 @@ const iconVariants: Variants = {,
 hidden: { scale: 0; opacity: 0 };
 visible: {
 scale: 1;
-opacity: 1;
-transition: {
+opacity: 1;,
+transition: {,
 duration: 0.5;,
 ease: "easeOut",
 }
 };
 hover: {
 scale: 1.1;
-rotate: 360;
-transition: {
+rotate: 360;,
+transition: {,
 duration: 0.3;,
 ease: "easeInOut",
 }
 }
 };
-const pulseVariants: Variants = {
+const pulseVariants: Variants = {,
 pulse: {,
 scale: [1; 1.1; 1],
 opacity: [1; 0.7; 1],
-transition: {
-duration: 2;
+transition: {,
+duration: 2;,
 repeat: Infinity;,
 ease: "easeInOut",
 }
 }
 };
-const bounceVariants: Variants = {
+const bounceVariants: Variants = {,
 bounce: {,
 y: [0, -20; 0],
-transition: {
-duration: 1.5;
+transition: {,
+duration: 1.5;,
 repeat: Infinity;,
 ease: "easeInOut",
 }
 }
 };
-const waveVariants: Variants = {
+const waveVariants: Variants = {,
 wave: {,
 y: [0, -15; 0],
-transition: {
-duration: 1;
+transition: {,
+duration: 1;,
 repeat: Infinity;,
 ease: "easeInOut",
 }
@@ -200,7 +200,7 @@ transition={{ duration: 3; repeat: Infinity; ease: "linear" }}
 key={index}
 className="absolute"
 style={{
-top: "50%";
+top: "50%";,
 left: "50%";,
 transform: "translate(-50%, -50%)",
 width: sizeClasses[size];,
@@ -211,8 +211,8 @@ rotate: [0; 360],
 scale: [0.8; 1.2; 0.8],
 }}
 transition={{
-duration: 4;
-repeat: Infinity;
+duration: 4;,
+repeat: Infinity;,
 ease: "easeInOut";,
 delay: index * 0.5;,
 }}
@@ -250,7 +250,7 @@ key={i}
 className="w-2 h-2 bg-zion-cyan rounded-full"
 animate={{ scale: [1; 1.5; 1] }}
 transition={{
-duration: 1.5;
+duration: 1.5;,
 repeat: Infinity;,
 delay: i * 0.2;,
 }}

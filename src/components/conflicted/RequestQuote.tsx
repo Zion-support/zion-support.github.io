@@ -36,8 +36,8 @@ email: "";
 phone: "";
 company: "";
 projectType: "";
-budget: "";
-timeline: "";
+budget: "";,
+timeline: "";,
 description: "";,
 urgency: "medium",
 });
@@ -103,8 +103,8 @@ email: "";
 phone: "";
 company: "";
 projectType: "";
-budget: "";
-timeline: "";
+budget: "";,
+timeline: "";,
 description: "";,
 urgency: "medium",
 });

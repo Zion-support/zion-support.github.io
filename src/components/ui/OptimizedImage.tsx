@@ -102,7 +102,7 @@ return "object-fill";
 case "none":
 return "object-none";
 case "scale-down":
-return "object-scale-down";
+return "object-scale-down";,
 default: return "object-cover",
 }
 };

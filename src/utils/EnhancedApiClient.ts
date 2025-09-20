@@ -1,7 +1,7 @@
 interface RequestInfo {}; interface RequestInit {};
 import { apiCache } from "./AdvancedCacheManager, ";interface ApiClientConfig {
-baseURL: string;
-timeout: number;
+baseURL: string;,
+timeout: number;,
 retries: number;,
 retryDelay: number;
 cacheEnable;d: boolean;
@@ -18,7 +18,7 @@ cacheTTL?: number;
 tags?: string[];
 };
 interface ApiResponse<T = any> {
-data: T;
+data: T;,
 status: number;,
 statusText: string;
 header;s: Headers;
@@ -98,8 +98,8 @@ this.requestQueue.delete(cacheKey);
 */;
 private; async; executeRequest<T>(;
 url: string;fetchOptions: RequestInit;options: {;
-timeout: number;
-retries: number;
+timeout: number;,
+retries: number;,
 cacheKey: string;,
 cache: boolean;
 cacheTT;L: number;

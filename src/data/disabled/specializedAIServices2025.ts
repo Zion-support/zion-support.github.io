@@ -17,8 +17,8 @@ tags: string[];
 estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
-contactInfo: {
-phone: string;
+contactInfo: {,
+phone: string;,
 email: string;,
 website: string;,
 };
@@ -27,8 +27,8 @@ integrations: string[];
 compliance: string[];
 roi: string;
 competitors: string[];
-innovationLevel: string;
-marketTrend: string;
+innovationLevel: string;,
+marketTrend: string;,
 aiModel: string;,
 trainingData: string;,
 }

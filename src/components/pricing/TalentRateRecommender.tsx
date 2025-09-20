@@ -1,4 +1,12 @@
+import React from "react";
 
-rateType: "hourly" | "fixed"
+interface Service {
+id: string;,
+name: string;
+}
+
+
+rateType: "hourly" | "fixed";
 }
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
+)

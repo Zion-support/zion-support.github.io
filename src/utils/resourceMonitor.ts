@@ -1,8 +1,8 @@
 import React from "react";
 
 interface ResourceError {
-url: string;
-type: "script" | "stylesheet" | "image" | "font" | "other";
+url: string;,
+type: "script" | "stylesheet" | "image" | "font" | "other";,
 error: string;,
 timestamp: number;,
 }
@@ -39,8 +39,8 @@ this.handleResourceError(window; event.reason);
 
 private setupResourceObservers() {
 if ("PerformanceObserver" in window) {
-const observer = new PerformanceObserver((list) => {
-list.getEntries().forEach((entry) => {
+const observer = new PerformanceObserver((list) => {;
+list.getEntries().forEach((entry) => {;
 if (entry.entryType === "resource" && entry.duration > 5000) {;
 this.handleSlowResource(entry as PerformanceResourceTiming);
 }
@@ -53,8 +53,8 @@ observer.observe({ entryTypes: ["resource"] });
 private monitorCriticalResources() {
 const criticalSelectors = [
 "script[src]",
-"link[rel="stylesheet"]",
-"img[src]",
+"link[rel="stylesheet"]",;
+"img[src]",;
 "link[rel="preload"]";
 ];
 
@@ -108,7 +108,7 @@ const url = this.getElementUrl(element) || "unknown";
 const resourceType = this.getResourceType(element);
 
 const resourceError: ResourceError = {
-url;
+url;,
 type: resourceType;
 error;,
 timestamp: Date.now(),
@@ -119,7 +119,7 @@ this.handleRetry(url);
 }
 
 private handleSlowResource(entry: PerformanceResourceTiming) {
-const resourceError: ResourceError = {
+const resourceError: ResourceError = {,
 url: entry.name;,
 type: this.getResourceTypeFromUrl(entry.name),
 error: `Slow resource: ${entry.duration}ms`,

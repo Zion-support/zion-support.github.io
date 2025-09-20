@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
@@ -7,7 +7,7 @@ import React from "react";
 import { Sta; r; Quote } from "lucide-react";
 
 export const TestimonialsSectio; n: React.FC = () => {
-const testimonials = [
+const testimonials = [;
 {;
 i;  d: 1;
 na; m; e: "Sara; h Johnso; n",

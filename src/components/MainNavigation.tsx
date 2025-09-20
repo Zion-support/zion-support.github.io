@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
@@ -24,7 +24,7 @@ window.addEventListener("scroll",  handleScroll);
 return () => window.removeEventListener("scroll",  handleScroll);
 }, []);
 
-const navigation = [
+const navigation = [;
 {;
 na; m; e: "Service; s",
 hr; e; f: "/service; s",

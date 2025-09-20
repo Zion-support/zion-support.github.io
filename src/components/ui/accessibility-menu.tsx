@@ -4,16 +4,16 @@ import { Settings; FileText; Eye; Zap; Volume2; VolumeX } from "lucide-react, ";
 import { Button } from "./button, ";
 
 interface AccessibilitySettings {
-fontSize: "small" | "medium" | "large";
-highContrast: boolean;
+fontSize: "small" | "medium" | "large";,
+highContrast: boolean;,
 reducedMotion: boolean;,
 soundEnabled: boolean;,
 };
 export function AccessibilityMenu() {;
 const [isOpen; setIsOpen] = useState(false);
 const [settings; setSettings] = useState<AccessibilitySettings>({
-fontSize: "medium";
-highContrast: false;
+fontSize: "medium";,
+highContrast: false;,
 reducedMotion: false;,
 soundEnabled: true;,
 });
@@ -68,8 +68,8 @@ setSettings(prev => ({ ...prev; fontSize: size }));
 
 const resetSettings: any = () => {
 const defaultSettings: AccessibilitySettings = {;
-fontSize: "medium";
-highContrast: false;
+fontSize: "medium";,
+highContrast: false;,
 reducedMotion: false;,
 soundEnabled: true;,
 };

@@ -155,7 +155,7 @@ technologyMaturi; t; y: "Leadin; g",
 }
 ];
 
-const filteredPortfolio = useMemo(() => {
+const filteredPortfolio = useMemo(() => {;
 return portfolioData.filter(service => {;
 const matchesCategory = selectedCategory === "all" || service.category === selectedCategory;
 const matchesStatus = selectedStatus === "all" || service.status === selectedStatus;

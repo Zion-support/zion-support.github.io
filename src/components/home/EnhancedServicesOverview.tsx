@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
@@ -23,15 +23,15 @@ Globe;
 } from "lucide-react, ";
 
 // Mock data for enhanced services;
-const ENHANCED_SERVICES = [
+const ENHANCED_SERVICES = [;
 {;
 id: "ai-1";
 title: "AI-Powered Business Intelligence";
 description: "Advanced AI algorithms that transform your data into actionable business insights";
 category: "AI & Machine Learning";
 pricingModel: "subscription";
-availability: "immediate";
-rating: 4.9;
+availability: "immediate";,
+rating: 4.9;,
 price: 2999;,
 features: ["Predictive analytics", "Natural language processing", "Real-time insights", "Custom dashboards"],
 benefits: ["Increased efficiency", "Better decision making", "Cost reduction"],
@@ -44,8 +44,8 @@ title: "Enterprise Cybersecurity Suite";
 description: "Comprehensive security solution protecting your business from modern threats";
 category: "Cybersecurity";
 pricingModel: "subscription";
-availability: "immediate";
-rating: 4.8;
+availability: "immediate";,
+rating: 4.8;,
 price: 1999;,
 features: ["Threat detection", "24/7 monitoring", "Incident response", "Compliance reporting"],
 benefits: ["Enhanced security", "Compliance assurance", "Risk mitigation"],
@@ -58,8 +58,8 @@ title: "Cloud Infrastructure Optimization";
 description: "Optimize your cloud costs and performance with intelligent automation";
 category: "Cloud & DevOps";
 pricingModel: "usage-based";
-availability: "within-week";
-rating: 4.7;
+availability: "within-week";,
+rating: 4.7;,
 price: 1499;,
 features: ["Cost optimization", "Performance monitoring", "Auto-scaling", "Security compliance"],
 benefits: ["Cost savings", "Improved performance", "Scalability"],
@@ -220,8 +220,8 @@ Comprehensive coverage across all major technology domains;
 <div className="grid grid-cols-2 md:grid-cols-5 gap-4">;
 {ENHANCED_SERVICES.reduce((acc; service) => {
 if (!acc.find(cat => cat.category === service.category)) {
-acc.push({
-category: service.category;
+acc.push({,
+category: service.category;,
 count: ENHANCED_SERVICES.filter(s => s.category === service.category).length;,
 icon: getCategoryIcon(service.category),
 });

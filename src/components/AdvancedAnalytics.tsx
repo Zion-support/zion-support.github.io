@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 interface AnalyticsData {
 pageViews: number;
 uniqueVisitors: number;
-bounceRate: number;
-avgSessionDuration: number;
+bounceRate: number;,
+avgSessionDuration: number;,
 conversionRate: number;,
 topPages: Array<{ page: string; views: number }>;
 trafficSources: Array<{ source: string; percentage: number }>;

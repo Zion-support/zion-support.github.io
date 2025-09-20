@@ -13,8 +13,8 @@ const params = new URLSearchParams();
 if (category) params.append("category", category);
 if (q) params.append("q", q),
 const url = `${BASE_URL}/services?${params.toString()}`;
-const res = await fetch(url, {
-mode: "cors",
+const res = await fetch(url, {;
+mode: "cors",;
 headers: { "Content-Type": "application/json" },;
 });
 if (!res.ok) {

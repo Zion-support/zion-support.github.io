@@ -11,8 +11,8 @@ import { ChatMessage,  } from "./ChatMessage",
 import { QuickReplyButton,  } from "./QuickReplyButton";
 import { Send,, Loader2,  } from 'lucide-react'
 import { useTheme,  } from "@/hooks/useTheme";
-// Define suggested quick replies
-  )
+// Define suggested quick replies;
+)
 }
-  )
+)
 }

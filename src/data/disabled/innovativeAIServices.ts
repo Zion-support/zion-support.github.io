@@ -2,8 +2,8 @@ import { Routes; Route } from "react-router-dom, ";
 export interface InnovativeAIService {
 id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
 benefits: string[], useCases: string[];,
-targetAudience: string[], tags: string[];
-estimatedDelivery: string; supportLevel: string; marketPrice: string;
+targetAudience: string[], tags: string[];,
+estimatedDelivery: string; supportLevel: string; marketPrice: string;,
 contactInfo: {,
 phone: string; email: string; website: string,
 };
@@ -17,7 +17,7 @@ export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
 {,
 id: "ai-content-marketing-suite", title: "AI Content Marketing Suite";,
 description: "Comprehensive AI-powered content creation platform that generates high-quality marketing materials; social media posts; and SEO-optimized content.",
-category: "AI & Marketing", subcategory: "Content Generation";
+category: "AI & Marketing", subcategory: "Content Generation";,
 price: 399; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered content generation",
@@ -67,7 +67,7 @@ trainingData: "10M+ high-quality content samples", accuracy: "95% human-like qua
 {
 id: "ai-video-analytics-platform", title: "AI Video Analytics Platform";,
 description: "Advanced video analysis platform that uses computer vision to extract insights; detect objects; and analyze customer behavior in retail and security applications.",
-category: "AI & Computer Vision", subcategory: "Video Analytics";
+category: "AI & Computer Vision", subcategory: "Video Analytics";,
 price: 599; currency: "$";,
 pricingModel: "monthly", features: [
 "Real-time object detection",
@@ -117,7 +117,7 @@ trainingData: "5M+ video frames", accuracy: "98% detection accuracy",
 {
 id: "ai-financial-trading-assistant", title: "AI Financial Trading Assistant";,
 description: "Intelligent trading platform that uses machine learning to analyze market trends; predict price movements; and provide automated trading recommendations.",
-category: "AI & Finance", subcategory: "Trading & Investment";
+category: "AI & Finance", subcategory: "Trading & Investment";,
 price: 799; currency: "$";,
 pricingModel: "monthly", features: [
 "Real-time market analysis",
@@ -217,7 +217,7 @@ trainingData: "1M+ medical images", accuracy: "94% diagnostic accuracy",
 {
 id: "ai-supply-chain-optimization", title: "AI Supply Chain Optimization Platform";,
 description: "Intelligent supply chain management system that uses AI to predict demand; optimize inventory; and streamline logistics operations.",
-category: "AI & Operations", subcategory: "Supply Chain";
+category: "AI & Operations", subcategory: "Supply Chain";,
 price: 699; currency: "$";,
 pricingModel: "monthly", features: [
 "Demand forecasting",

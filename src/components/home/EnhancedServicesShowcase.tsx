@@ -29,8 +29,8 @@ const serviceIcons = {
 "Business Intelligence": TrendingUp,
 "Developer Tools": Code,
 "Digital Transformation": Zap,
-"Healthcare Technology": Heart,
-"Financial Technology": DollarSign,
+"Healthcare Technology": Heart,;
+"Financial Technology": DollarSign,;
 "Blockchain": LinkIcon,;
 };
 

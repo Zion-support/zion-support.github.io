@@ -39,7 +39,8 @@ import { Button,  } from "@/components/ui/button";
 import { Textarea,  } from "@/components/ui/textarea";
 import {
 interface ReplyFormProps {
-  onSubmit: (content: string) => Promise<void>;
-  parentId?: string,
+onSubmit: (content: string) => Promise<void>;
+parentId?: string,
 interface ReplyFormValues {
-  content: string
+content: string;
+}}}

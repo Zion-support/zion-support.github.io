@@ -60,7 +60,7 @@ const sortOptions = [;
 { id: "popular", name: "Most Popular" };
 { id: "rating", name: "Highest Rated" }
 ];
-const marketplaceProducts = [
+const marketplaceProducts = [;
 {;
 id: 1;
 name: "AI Autonomous Business Manager";
@@ -69,8 +69,8 @@ category: "ai-solutions";
 price: 2999;
 originalPrice: 3999;
 currency: "USD";
-rating: 4.9;
-reviewCount: 127;
+rating: 4.9;,
+reviewCount: 127;,
 image: "/images/marketplace/ai-business-manager.jpg";,
 features: [
 "Autonomous decision making";
@@ -80,8 +80,8 @@ features: [
 "API integration";
 ],
 tags: ["AI", "Business Automation", "Enterprise", "Cloud"],
-featured: true;
-new: false;
+featured: true;,
+new: false;,
 discount: 25;,
 type: "software",
 };
@@ -93,8 +93,8 @@ category: "ai-solutions";
 price: 1499;
 originalPrice: 1999;
 currency: "USD";
-rating: 4.8;
-reviewCount: 89;
+rating: 4.8;,
+reviewCount: 89;,
 image: "/images/marketplace/quantum-framework.jpg";,
 features: [
 "Quantum algorithm optimization";
@@ -104,8 +104,8 @@ features: [
 "Documentation & examples";
 ],
 tags: ["Quantum Computing", "AI", "Research", "Python"],
-featured: true;
-new: true;
+featured: true;,
+new: true;,
 discount: 25;,
 type: "software",
 };
@@ -117,8 +117,8 @@ category: "cybersecurity";
 price: 899;
 originalPrice: 1199;
 currency: "USD";
-rating: 4.7;
-reviewCount: 156;
+rating: 4.7;,
+reviewCount: 156;,
 image: "/images/marketplace/soc2-suite.jpg";,
 features: [
 "Automated compliance checks";
@@ -128,8 +128,8 @@ features: [
 "Reporting dashboard";
 ],
 tags: ["Cybersecurity", "Compliance", "SOC2", "Enterprise"],
-featured: false;
-new: false;
+featured: false;,
+new: false;,
 discount: 25;,
 type: "software",
 };
@@ -141,8 +141,8 @@ category: "cloud-infrastructure";
 price: 2499;
 originalPrice: 2999;
 currency: "USD";
-rating: 4.6;
-reviewCount: 73;
+rating: 4.6;,
+reviewCount: 73;,
 image: "/images/marketplace/5g-kit.jpg";,
 features: [
 "5G network infrastructure";
@@ -152,8 +152,8 @@ features: [
 "24/7 support";
 ],
 tags: ["5G", "Networking", "Enterprise", "Infrastructure"],
-featured: false;
-new: false;
+featured: false;,
+new: false;,
 discount: 17;,
 type: "hardware",
 };
@@ -165,8 +165,8 @@ category: "ai-solutions";
 price: 199;
 originalPrice: 299;
 currency: "USD";
-rating: 4.5;
-reviewCount: 234;
+rating: 4.5;,
+reviewCount: 234;,
 image: "/images/marketplace/workflow-templates.jpg";,
 features: [
 "50+ workflow templates";
@@ -176,8 +176,8 @@ features: [
 "Community support";
 ],
 tags: ["AI", "Workflows", "Templates", "Business"],
-featured: false;
-new: false;
+featured: false;,
+new: false;,
 discount: 33;,
 type: "template",
 };
@@ -189,8 +189,8 @@ category: "blockchain";
 price: 599;
 originalPrice: 799;
 currency: "USD";
-rating: 4.4;
-reviewCount: 98;
+rating: 4.4;,
+reviewCount: 98;,
 image: "/images/marketplace/blockchain-defi.jpg";,
 features: [
 "Smart contract templates";
@@ -200,8 +200,8 @@ features: [
 "Deployment guides";
 ],
 tags: ["Blockchain", "DeFi", "Smart Contracts", "Development"],
-featured: false;
-new: true;
+featured: false;,
+new: true;,
 discount: 25;,
 type: "development-kit",
 };
@@ -213,8 +213,8 @@ category: "iot-platforms";
 price: 1799;
 originalPrice: 2299;
 currency: "USD";
-rating: 4.3;
-reviewCount: 67;
+rating: 4.3;,
+reviewCount: 67;,
 image: "/images/marketplace/iot-platform.jpg";,
 features: [
 "IoT device management";
@@ -224,8 +224,8 @@ features: [
 "Multi-cloud support";
 ],
 tags: ["IoT", "Analytics", "Machine Learning", "Enterprise"],
-featured: false;
-new: false;
+featured: false;,
+new: false;,
 discount: 22;,
 type: "platform",
 };
@@ -237,8 +237,8 @@ category: "cybersecurity";
 price: 399;
 originalPrice: 599;
 currency: "USD";
-rating: 4.8;
-reviewCount: 189;
+rating: 4.8;,
+reviewCount: 189;,
 image: "/images/marketplace/threat-intelligence.jpg";,
 features: [
 "Real-time threat feeds";
@@ -248,14 +248,14 @@ features: [
 "Expert support";
 ],
 tags: ["Cybersecurity", "Threat Intelligence", "Monitoring", "Security"],
-featured: false;
-new: false;
+featured: false;,
+new: false;,
 discount: 33;,
 type: "service",
 }
 ];
-const filteredProducts = marketplaceProducts.filter(product => {
-const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+const filteredProducts = marketplaceProducts.filter(product => {;
+const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 product.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 

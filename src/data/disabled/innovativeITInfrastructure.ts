@@ -17,28 +17,28 @@ tags: string[];
 estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
-contactInfo: {
-phone: string;
+contactInfo: {,
+phone: string;,
 email: string;,
 website: string;,
 };
 technology: string[];
-integrations: string[];
-compliance: string[];
+integrations: string[];,
+compliance: string[];,
 roi: string;,
 competitors: string[];,
 }
 
 export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureService[] = [
 // Green Computing Infrastructure;
-{
-id: "green-computing-infrastructure";
+{,
+id: "green-computing-infrastructure";,
 title: "Green Computing Infrastructure";,
 description: "Sustainable; energy-efficient IT infrastructure designed to reduce carbon footprint while maintaining high performance and reliability.",
 category: "Innovative IT Infrastructure";
 subcategory: "Sustainability";
-price: 2500;
-currency: "$";
+price: 2500;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Energy-efficient hardware";
@@ -72,11 +72,11 @@ targetAudience: [
 "Sustainability-focused companies";
 ],
 tags: ["Green Computing", "Sustainability", "Energy Efficiency", "Carbon Reduction", "Environmental Impact"],
-estimatedDelivery: "8-12 weeks";
+estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;500 - $10;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -89,13 +89,13 @@ competitors: ["Dell Green Computing", "HP Sustainable IT", "IBM Green Data Cente
 
 // Edge Computing Infrastructure;
 {
-id: "edge-computing-infrastructure";
+id: "edge-computing-infrastructure";,
 title: "Edge Computing Infrastructure";,
 description: "Distributed computing infrastructure that brings computation and data storage closer to data sources; reducing latency and bandwidth usage.",
 category: "Innovative IT Infrastructure";
 subcategory: "Edge Computing";
-price: 1800;
-currency: "$";
+price: 1800;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Distributed edge nodes";
@@ -129,11 +129,11 @@ targetAudience: [
 "Smart city developers";
 ],
 tags: ["Edge Computing", "IoT", "Low Latency", "Distributed Systems", "Real-time Processing"],
-estimatedDelivery: "6-10 weeks";
+estimatedDelivery: "6-10 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;800 - $7;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -151,8 +151,8 @@ title: "Quantum-Ready Infrastructure";
 description: "Future-proof IT infrastructure designed to seamlessly integrate with quantum computing systems while maintaining classical computing capabilities.";
 category: "Innovative IT Infrastructure";
 subcategory: "Quantum Computing";
-price: 3500;
-currency: "$";
+price: 3500;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Hybrid classical-quantum architecture";
@@ -186,11 +186,11 @@ targetAudience: [
 "Technology companies";
 ],
 tags: ["Quantum Computing", "Future-Proof", "Hybrid Systems", "Quantum Algorithms", "Research"],
-estimatedDelivery: "12-16 weeks";
+estimatedDelivery: "12-16 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;500 - $15;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -203,13 +203,13 @@ competitors: ["IBM Quantum Infrastructure", "Google Quantum Infrastructure", "Mi
 
 // Zero-Trust Security Infrastructure;
 {
-id: "zero-trust-security-infrastructure";
+id: "zero-trust-security-infrastructure";,
 title: "Zero-Trust Security Infrastructure";,
 description: "Comprehensive security infrastructure based on zero-trust principles; providing continuous verification and minimal access privileges.",
 category: "Innovative IT Infrastructure";
 subcategory: "Security";
-price: 2200;
-currency: "$";
+price: 2200;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Identity verification";
@@ -243,11 +243,11 @@ targetAudience: [
 "Compliance-focused companies";
 ],
 tags: ["Zero Trust", "Security", "Identity Management", "Threat Detection", "Compliance"],
-estimatedDelivery: "10-14 weeks";
+estimatedDelivery: "10-14 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;200 - $8;500/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -260,13 +260,13 @@ competitors: ["Cisco Zero Trust", "Microsoft Zero Trust", "Google BeyondCorp", "
 
 // AI-Optimized Infrastructure;
 {
-id: "ai-optimized-infrastructure";
+id: "ai-optimized-infrastructure";,
 title: "AI-Optimized Infrastructure";,
 description: "Intelligent infrastructure that automatically optimizes performance; resources; and costs using AI and machine learning algorithms.",
 category: "Innovative IT Infrastructure";
 subcategory: "AI Optimization";
-price: 2800;
-currency: "$";
+price: 2800;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "AI-powered optimization";
@@ -300,11 +300,11 @@ targetAudience: [
 "Research institutions";
 ],
 tags: ["AI Optimization", "Predictive Maintenance", "Auto-scaling", "Performance", "Automation"],
-estimatedDelivery: "10-14 weeks";
+estimatedDelivery: "10-14 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;800 - $12;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };

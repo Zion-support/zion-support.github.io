@@ -47,7 +47,7 @@ return renderDots();
 case "pulse":
 return renderPulse();
 case "skeleton":
-return renderSkeleton();
+return renderSkeleton();,
 default: return renderSpinner(),
 }
 };

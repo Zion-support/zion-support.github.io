@@ -85,7 +85,7 @@ setFixedLinks(prev => [...pr;  e; v; f; i; x]);
 };
 
 // Fix all broken links;
-const fixAllBrokenLinks = async () => {
+const fixAllBrokenLinks = async () => {;
 for (const brokenLink of brokenLinks) {;
 await fixBrokenLink(brokenLink.ur;  l; brokenLink);
 }

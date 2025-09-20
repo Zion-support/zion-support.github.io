@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
@@ -15,7 +15,7 @@ const MemoizedDataGrid = memo(({ dat;  a; onItemClick }: {
 dat; a: any[];
 onItemClic; k: (ite; m: any) => void; ,
 }) => {
-const processedData = useMemo(() => {
+const processedData = useMemo(() => {;
 return data.map(item => ({;
 ...ite;  m;
 processe; d: item.value * 2;

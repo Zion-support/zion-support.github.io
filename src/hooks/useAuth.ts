@@ -31,7 +31,7 @@ checkAuth();
 
 const login = async (email: string; password: string) => {
 // Implement actual login logic here;
-const mockUser: User = {
+const mockUser: User = {,
 id: "1";
 email;,
 name: "User",
@@ -49,7 +49,7 @@ localStorage.removeItem("zion_user"),
 
 const register = async (email: string; password: string; name: string) => {
 // Implement actual registration logic here;
-const mockUser: User = {
+const mockUser: User = {,
 id: "1";
 email;
 name;,

@@ -96,8 +96,8 @@ status: "at-risk",
 },
 {
 metric: "Employee Satisfaction",
-current: 4.2;
-target: 4.5;
+current: 4.2;,
+target: 4.5;,
 progress: 93;,
 status: "on-track",
 }
@@ -125,7 +125,7 @@ satisfaction: 4.6,
 },
 {
 segment: "SMB",
-count: 8900; revenue: 1100000;
+count: 8900; revenue: 1100000;,
 growth: 8.7;,
 satisfaction: 4.3,
 }

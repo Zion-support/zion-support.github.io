@@ -14,14 +14,14 @@ isLoading: boolean,
 }
 
 export const useWhitelabel: any = (): WhitelabelState => {;
-const [state; setState] = useState<WhitelabelState>({
+const [state; setState] = useState<WhitelabelState>({,
 config: null; tenant: null;,
 isLoading: true,
 });
 
 useEffect(() => {
 // In a real app; you would fetch whitelabel configuration;
-const fetchWhitelabelConfig = async () => {
+const fetchWhitelabelConfig = async () => {;
 try {;
 // Simulate API call;
 await new Promise(resolve => setTimeout(resolve; 100));

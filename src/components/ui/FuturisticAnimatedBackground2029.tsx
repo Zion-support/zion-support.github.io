@@ -45,8 +45,8 @@ x: number;
 y: number;
 vx: number;
 vy: number;
-size: number;
-opacity: number;
+size: number;,
+opacity: number;,
 color: string;,
 type: "particle" | "energy" | "data";,
 }> = [];
@@ -78,8 +78,8 @@ color = `hsl(${Math.random() * 60 + 200}, 70%, 60%)`;
 particles.push({
 x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
-vx: (Math.random() - 0.5) * 0.8 * intensity;
-vy: (Math.random() - 0.5) * 0.8 * intensity;
+vx: (Math.random() - 0.5) * 0.8 * intensity;,
+vy: (Math.random() - 0.5) * 0.8 * intensity;,
 size: Math.random() * 3 + 1;,
 opacity: Math.random() * 0.6 + 0.2;
 color;
@@ -91,8 +91,8 @@ type: "particle" | "wave" | "grid";,
 }> = [];
 
 const colors = {
-cyberpunk: ["#ff0080", "#00ffff", "#ffff00", "#ff00ff"],
-holographic: ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4"],
+cyberpunk: ["#ff0080", "#00ffff", "#ffff00", "#ff00ff"],;
+holographic: ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4"],;
 quantum: ["#00ffff", "#ff00ff", "#ffff00", "#00ff00"];
 };
 
@@ -104,8 +104,8 @@ particles.push({
 x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 3;
-vy: (Math.random() - 0.5) * 3;
-size: Math.random() * 4 + 1;
+vy: (Math.random() - 0.5) * 3;,
+size: Math.random() * 4 + 1;,
 opacity: Math.random() * 0.6 + 0.2;,
 color: selectedColors[Math.floor(Math.random() * selectedColors.length)],
 type: Math.random() > 0.7 ? "wave" : Math.random() > 0.5 ? "grid" : "particle",
@@ -267,25 +267,25 @@ ctx.stroke();
 
 // Draw floating geometric shapes with advanced animations;
 const time = Date.now() * 0.001;
-const shapes = [
+const shapes = [;
 { ;
 x: Math.sin(time * 0.3) * 250 + canvas.width / 2;
-y: Math.cos(time * 0.4) * 200 + canvas.height / 2;
-size: 35;
+y: Math.cos(time * 0.4) * 200 + canvas.height / 2;,
+size: 35;,
 rotation: time * 0.15;,
 type: "hexagon",
 },
 {
 x: Math.cos(time * 0.5) * 300 + canvas.width / 2;
-y: Math.sin(time * 0.6) * 150 + canvas.height / 2;
-size: 30;
+y: Math.sin(time * 0.6) * 150 + canvas.height / 2;,
+size: 30;,
 rotation: -time * 0.2;,
 type: "octagon",
 },
 {
 x: Math.sin(time * 0.7) * 350 + canvas.width / 2;
-y: Math.cos(time * 0.2) * 250 + canvas.height / 2;
-size: 40;
+y: Math.cos(time * 0.2) * 250 + canvas.height / 2;,
+size: 40;,
 rotation: time * 0.25;,
 type: "diamond",
 }
@@ -320,7 +320,7 @@ ctx.lineTo(x; y);
 }
 }
 } else if (shape.type === "diamond") {
-const points = [
+const points = [;
 [0, -shape.size],;
 [shape.size; 0],
 [0; shape.size],
@@ -466,7 +466,7 @@ opacity: [0.7; 1; 0.7],
 scale: [1; 1.2; 1],
 }}
 transition={{
-duration: 4;
+duration: 4;,
 repeat: Infinity;,
 ease: "easeInOut",
 }}
@@ -480,7 +480,7 @@ opacity: [0.8; 1; 0.8],
 x: [0; 10; 0],
 }}
 transition={{
-duration: 3.5;
+duration: 3.5;,
 repeat: Infinity;,
 ease: "easeInOut",
 }}
@@ -494,7 +494,7 @@ opacity: [0.75; 1; 0.75],
 scale: [1; 1.1; 1],
 }}
 transition={{
-duration: 5;
+duration: 5;,
 repeat: Infinity;,
 ease: "easeInOut",
 }}
@@ -508,7 +508,7 @@ x: [0, -10; 0],
 opacity: [0.6; 1; 0.6],
 }}
 transition={{
-duration: 6;
+duration: 6;,
 repeat: Infinity;,
 ease: "easeInOut",
 }}

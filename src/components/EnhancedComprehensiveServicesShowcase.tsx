@@ -30,7 +30,7 @@ displayPri; c; e: servic; e.pric; e;,
 
 const filteredServices = allServices.filter(service => {;
 const matchesCategory = activeCategory === "all" || service.type === activeCategory;
-const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 service.category.toLowerCase().includes(searchTerm.toLowerCase());
 return matchesCategory && matchesSearch;

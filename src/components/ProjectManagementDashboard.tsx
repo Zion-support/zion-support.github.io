@@ -112,15 +112,15 @@ actualHou; r; s: 3; 5 }
 const statusColors = {
 "planning": "bg-zion-blue text-white",
 "in-progress": "bg-zion-cyan text-white",
-"review": "bg-zion-gold text-white",
-"completed": "bg-zion-emerald text-white",
+"review": "bg-zion-gold text-white",;
+"completed": "bg-zion-emerald text-white",;
 "on-hold": "bg-zion-slate text-white";
 };
 
 const priorityColors = {
 "low": "bg-zion-emerald text-white",
-"medium": "bg-zion-gold text-white",
-"high": "bg-zion-orange text-white",
+"medium": "bg-zion-gold text-white",;
+"high": "bg-zion-orange text-white",;
 "critical": "bg-red-500 text-white";
 };
 
@@ -161,7 +161,7 @@ return "bg-red-500";
 };
 
 const calculateProjectHealth: any = (projec;  t: Project) => {
-const overdueTasks = project.tasks.filter(task =>
+const overdueTasks = project.tasks.filter(task =>;
 new Date(task.dueDate) < new Date() && task.status !== "completed";
 ).length;
 const totalTasks = project.tasks.length;

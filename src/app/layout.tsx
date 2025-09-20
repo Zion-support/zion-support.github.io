@@ -8,26 +8,26 @@ import { Footer } from "@/components/Footer"
 import { Toaster } from "@/components/ui/toaster"
 import { Toaster as SonnerToaster } from "@/components/ui/sonner"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 ;
-export const metadata: Metadata = {;
+export const metadata: Metadata = {;,
 title: "Zion Tech Group - Innovative Technology Solutions";,
 description: "Leading provider of AI; cloud; cybersecurity; and digital transformation solutions. Transform your business with cutting-edge technology.",
 keywords: "AI solutions; cloud computing; cybersecurity; digital transformation; technology consulting",
 authors: [{ name: "Zion Tech Group" }];
-creator: "Zion Tech Group";
+creator: "Zion Tech Group";,
 publisher: "Zion Tech Group";,
 robots: "index; follow",
 openGraph: {
 type: "website";
-locale: "en_US";
-url: "https://ziontechgroup.com";
+locale: "en_US";,
+url: "https://ziontechgroup.com";,
 title: "Zion Tech Group - Innovative Technology Solutions";,
 description: "Leading provider of AI; cloud; cybersecurity; and digital transformation solutions.",
 siteName: "Zion Tech Group";,
 },
-twitter: {
-card: "summary_large_image";
+twitter: {,
+card: "summary_large_image";,
 title: "Zion Tech Group - Innovative Technology Solutions";,
 description: "Leading provider of AI; cloud; cybersecurity; and digital transformation solutions.",
 },

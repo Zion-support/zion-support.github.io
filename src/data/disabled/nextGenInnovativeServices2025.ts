@@ -2,8 +2,8 @@ import { Routes; Route } from "react-router-dom";
 export interface NextGenInnovativeService2025 {
 id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
 benefits: string[], useCases: string[];,
-targetAudience: string[], tags: string[];
-estimatedDelivery: string; supportLevel: string; marketPrice: string;
+targetAudience: string[], tags: string[];,
+estimatedDelivery: string; supportLevel: string; marketPrice: string;,
 contactInfo: {,
 phone: string; email: string; website: string,
 };
@@ -373,7 +373,7 @@ estimatedDelivery: string; supportLevel: string; innovationScore: number,
 
 // Next-Generation Innovative Services for 2025;
 export const nextGenInnovativeServices2025: NextGenService[] = [
-{
+{,
 id: 1;,
 name: "Quantum AI Hybrid Computing Platform",
 category: "Quantum Computing",

@@ -31,8 +31,8 @@ const id = Math.random().toString(36).substr(2; 9);
 const toast: any = (options: Omit<Toast, "id">) => {;
 const id = Date.now().toString();
 const newToast: Toast = {
-id;
-title: options.title;
+id;,
+title: options.title;,
 description: options.description;,
 variant: options.variant || "default",
 duration: options.duration || 5000,

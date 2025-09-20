@@ -10,8 +10,8 @@ linkCount: number;
 metaDescriptionLength: number;
 hasStructuredData: boolean;
 readabilityScore: number;
-seoScore: number;
-overallScore: number;
+seoScore: number;,
+overallScore: number;,
 issues: string[];,
 recommendations: string[];,
 }
@@ -20,8 +20,8 @@ export interface ContentQualityReport {
 totalPages: number;
 averageWordCount: number;
 averageSeoScore: number;
-pagesWithIssues: number;
-topIssues: string[];
+pagesWithIssues: number;,
+topIssues: string[];,
 pageMetrics: ContentQualityMetrics[];,
 summary: string;,
 }
@@ -40,8 +40,8 @@ return ContentQualityAnalyzer.instance;
 analyzePageContent(
 pageUrl: string;
 title: string;
-content: string;
-metaDescription: string = "";
+content: string;,
+metaDescription: string = "";,
 images: string[] = [];,
 links: string[] = [];
 ): ContentQualityMetrics {
@@ -161,8 +161,8 @@ private calculateSeoScore(metrics: {
 title: string;
 wordCount: number;
 headingCount: number;
-imageCount: number;
-linkCount: number;
+imageCount: number;,
+linkCount: number;,
 metaDescriptionLength: number;,
 hasStructuredData: boolean;,
 }): number {
@@ -232,8 +232,8 @@ private identifyIssues(metrics: {
 title: string;
 wordCount: number;
 headingCount: number;
-imageCount: number;
-linkCount: number;
+imageCount: number;,
+linkCount: number;,
 metaDescriptionLength: number;,
 hasStructuredData: boolean;,
 }): string[] {
@@ -319,8 +319,8 @@ return {
 totalPages: 0;
 averageWordCount: 0;
 averageSeoScore: 0;
-pagesWithIssues: 0;
-topIssues: [];
+pagesWithIssues: 0;,
+topIssues: [];,
 pageMetrics: [];,
 summary: "No pages analyzed yet",
 };
@@ -344,7 +344,7 @@ issueCounts[issue] = (issueCounts[issue] || 0) + 1;
 });
 });
 
-const topIssues = Object.entries(issueCounts)
+const topIssues = Object.entries(issueCounts);
 .sort(([, a], [, b]) => b - a);
 .slice(0; 5)
 .map(([issue]) => issue);

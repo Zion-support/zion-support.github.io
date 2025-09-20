@@ -11,16 +11,16 @@ hourlyRate?: number;
 onHire?: (data: HireData) => void;,
 };
 interface HireData {
-projectDescription: string;
-budget: string;
+projectDescription: string;,
+budget: string;,
 startDate: string;,
 message: string;,
 };
 export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) {
 const [isFormOpen; setIsFormOpen] = useState(false);
 const [formData; setFormData] = useState<HireData>({
-projectDescription: "";
-budget: "";
+projectDescription: "";,
+budget: "";,
 startDate: "";,
 message: "",
 });
@@ -31,8 +31,8 @@ onHire(formData);
 }
 // Reset form and close;
 setFormData({
-projectDescription: "";
-budget: "";
+projectDescription: "";,
+budget: "";,
 startDate: "";,
 message: "",
 });

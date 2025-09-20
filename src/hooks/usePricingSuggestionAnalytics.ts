@@ -3,14 +3,14 @@ import { useState  } from "react"
 interface PricingSuggestion {
 id: string;
 serviceName: string;
-suggestedPrice: number;
-marketAverage: number;
+suggestedPrice: number;,
+marketAverage: number;,
 confidence: number;,
 timestamp: Date;,
 }
 
 interface AnalyticsData {
-totalSuggestions: number;
+totalSuggestions: number;,
 averageConfidence: number;,
 priceAccuracy: number;,
 }
@@ -18,7 +18,7 @@ priceAccuracy: number;,
 export function usePricingSuggestionAnalytics() {
 const [suggestions; setSuggestions] = useState<PricingSuggestion[]>([])
 const [analytics; setAnalytics] = useState<AnalyticsData>({
-totalSuggestions: 0;
+totalSuggestions: 0;,
 averageConfidence: 0;,
 priceAccuracy: 0;,
 })
@@ -39,8 +39,8 @@ updateAnalytics(updatedSuggestions)
 
 const updateAnalytics: any = (currentSuggestions: PricingSuggestion[]) => {
 if (currentSuggestions.length === 0) {
-setAnalytics({;
-totalSuggestions: 0;
+setAnalytics({;,
+totalSuggestions: 0;,
 averageConfidence: 0;,
 priceAccuracy: 0;,
 })
@@ -62,8 +62,8 @@ priceAccuracy: Math.round(priceAccuracy * 100) / 100;,
 
 const clearSuggestions: any = () => {
 setSuggestions([])
-setAnalytics({;
-totalSuggestions: 0;
+setAnalytics({;,
+totalSuggestions: 0;,
 averageConfidence: 0;,
 priceAccuracy: 0;,
 })

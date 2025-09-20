@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
@@ -49,16 +49,16 @@ color: "from-zion-purple to-zion-blue",
 href: "/business-intelligence",
 }
 ];
-const containerVariants = {
-hidden: { opacity: 0 }, visible: {;
-opacity: 1;
+const containerVariants = {;
+hidden: { opacity: 0 }, visible: {;,
+opacity: 1;,
 transition: {,
 staggerChildren: 0.1,
 }
 }
 };
 const itemVariants = {;
-hidden: { y: 20; opacity: 0 }, visible: {
+hidden: { y: 20; opacity: 0 }, visible: {,
 y: 0; opacity: 1; transition: {,
 duration: 0.5,
 }

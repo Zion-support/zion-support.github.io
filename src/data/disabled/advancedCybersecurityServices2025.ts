@@ -6,7 +6,7 @@ phone: string; email: string; website: string; address: string,
 
 export interface AdvancedCybersecurityService {
 id: number; name: string; category: string; description: string; pricing: string; price: number; pricingModel: string; features: string[], benefits: string[];,
-targetAudience: string[], tags: string[];
+targetAudience: string[], tags: string[];,
 contactInfo: ServiceContact; marketPrice: string; competitors: string[];,
 securityScore: number; useCases: string[], compliance: string[];,
 apiAccess: boolean; whiteLabel: boolean; customBranding: boolean; prioritySupport: boolean; trainingIncluded: boolean; dataRetention: string; uptime: string; securityFeatures: string[], integrationTime: string; scalability: string; realTimeProcessing: boolean; multilingualSupport: boolean; industrySpecific: boolean; zeroTrust: boolean; aiPowered: boolean; quantumResistant: boolean; threatIntelligence: boolean,
@@ -14,7 +14,7 @@ apiAccess: boolean; whiteLabel: boolean; customBranding: boolean; prioritySuppor
 
 // Advanced Cybersecurity Services for 2025;
 export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
-{
+{,
 id: 1; name: "Zero Trust Security Mesh";,
 category: "Zero Trust Security", description: "Comprehensive zero-trust security platform with continuous verification; micro-segmentation; and adaptive access controls",
 pricing: "Enterprise", price: 2500;,

@@ -109,8 +109,8 @@ let animationFrameId: number;
 let particles: Array<{
 x: number;
 y: number;
-vx: number;
-vy: number;
+vx: number;,
+vy: number;,
 size: number;,
 opacity: number;,
 }> = [];
@@ -128,8 +128,8 @@ for (let i = 0; i < particleCount; i++) {
 particles.push({
 x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
-vx: (Math.random() - 0.5) * 0.5;
-vy: (Math.random() - 0.5) * 0.5;
+vx: (Math.random() - 0.5) * 0.5;,
+vy: (Math.random() - 0.5) * 0.5;,
 size: Math.random() * 2 + 1;,
 opacity: Math.random() * 0.5 + 0.1,
 });
@@ -209,7 +209,7 @@ ctx.lineWidth = 2;
 for (let layer = 0; layer < 3; layer++) {
 ctx.beginPath();
 for (let x = 0; x < canvas.width; x++) {
-const y = canvas.height / 2 +
+const y = canvas.height / 2 +;
 amplitude * Math.sin(frequency * x + time + layer) +;
 layer * 30;
 if (x === 0) {

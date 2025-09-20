@@ -104,7 +104,7 @@ static validateLink(url: string; parentPage?: string): LinkValidationResult {
 // Check for protocol links;
 if (this.PROTOCOL_LINKS.some(protocol => url.startsWith(protocol))) {
 return {
-url;
+url;,
 status: "protocol";
 parentPage;,
 suggestedFix: "Keep as-is - these are valid protocol links",
@@ -142,8 +142,8 @@ parentPage,
 
 static getSuggestedFixes(): LinkFix[] {
 return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original; newUrl]) => ({
-originalUrl: original;
-newUrl: newUrl;
+originalUrl: original;,
+newUrl: newUrl;,
 type: "redirect",
 reason: "Broken internal link with available redirect mapping",
 }));

@@ -4,7 +4,8 @@ import { Card,, CardHeader,, CardTitle,, CardDescription,  } from "@/components/
 import { AlertTriangle,, AlertCircle,, ShieldAlert,  } from 'lucide-react'
 import { FraudStats,  } from "@/types/fraud";
 interface FraudStatsCardsProps {
-  stats: FraudStats;
+stats: FraudStats;
 }
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
-  return (
+return (
+})

@@ -10,100 +10,100 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 interface GeneratedContent {
 max: number;
 }
-  keyPoints: string[]
+keyPoints: string[];
 }
 interface AIListingGeneratorProps {
 initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string,
+title?: string;
+category?: string;
+keyFeatures?: string;
+targetAudience?: string,
 }
 }
 return (
-    <div className="space-y-6">
-      <Card className="border border-zion-blue-light bg-zion-blue-dark">
-        <CardHeader>
-          <CardTitle className="flex items-center text-white">
-            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
-            AI Listing Optimizer
-          </CardTitle>
-          <p className="text-sm text-zion-slate-light">
-            Provide basic information and let AI generate optimized SEO-friendly content for your listing
-          </p>
-        </CardHeader>
-        <CardContent>
-          <AIListingForm,
+<div className="space-y-6">;
+<Card className="border border-zion-blue-light bg-zion-blue-dark">;
+<CardHeader>;
+<CardTitle className="flex items-center text-white">;
+<Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />;
+AI Listing Optimizer;
+</CardTitle>;
+<p className="text-sm text-zion-slate-light">;
+Provide basic information and let AI generate optimized SEO-friendly content for your listing;
+</p>;
+</CardHeader>;
+<CardContent>;
+<AIListingForm,
 onSubmit = {handleGenerate,}
-            isLoading = {isLoading,}
-            initialValues = {initialValues,}
-          />
-        </CardContent>
-      </Card>
-      {isLoading && <LoadingContentSkeleton />}
-      {generatedContent && !isLoading && (
-        <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
-      )}
-    </div>
-  )
+isLoading = {isLoading,}
+initialValues = {initialValues,}
+/>;
+</CardContent>;
+</Card>;
+{isLoading && <LoadingContentSkeleton />}
+{generatedContent && !isLoading && (
+<GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
+)}
+</div>;
+)
 }: AIListingGeneratorProps) {
-  const {
-  toast,
+const {
+toast,
 }= useToast ()
 const [isLoading, setIsLoading] = useState (false)
 const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null> (null)
 const handleGenerate = async ({
-  title,
-category
+title,;
+category;
 keyFeatures,
 targetAudience,
 }: {
-  title: string,
+title: string,
 category: string,
-keyFeatures: string,
+keyFeatures: string,;
 targetAudience: string;
 }) => {
-  setIsLoading (true)
+setIsLoading (true)
 try {
-  const {
-  data error,
+const {
+data error,
 }= await supabase.functions.invoke ('ai-listing-generator', {
-  body: {
-  title category  keyFeatures targetAudience,
+body: {
+title category  keyFeatures targetAudience,
 })
 if (error) {
-  throw new Error (error.message)
+throw new Error (error.message)
 }if (data && (data as any) .error) {
-  throw new Error ( (data as any) .error)
+throw new Error ( (data as any) .error)
 }setGeneratedContent ( (data as any) ?.generated |null)
 toast ({
-}catch (error) {'
-  logErrorToProduction ('Error generating content:', {
-  data: error;
+}catch (error) {';
+logErrorToProduction ('Error generating content:', {
+data: error;
 })
 toast ({
 }finally {
-  setIsLoading (false)
+setIsLoading (false)
 }
-const handleApply = () => {
-  if (generatedContent && onApplyGenerated) {
-  onApplyGenerated (generatedContent)
+const handleApply: any = () => {
+if (generatedContent && onApplyGenerated) {
+onApplyGenerated (generatedContent)
 toast ({
 }
 return (<div className="space-y-6" > <Card className="border border-zion-blue-light bg-zion-blue-dark" > <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> <p className="text-sm text-zion-slate-light" > Provide basic information and let AI generate optimized SEO-friendly content for your listing </p> </CardHeader> <CardContent> <AIListingForm onSubmit= {
-  handleGenerate,
+handleGenerate,
 }isLoading= {
-  isLoading,
+isLoading,
 }initialValues= {
-  initialValues,
+initialValues,
 }/> </CardContent> </Card> {
-  isLoading && <LoadingContentSkeleton />
+isLoading && <LoadingContentSkeleton />;
 }{
-  generatedContent && !isLoading && (<GeneratedContentDisplay content= {
-  generatedContent,
+generatedContent && !isLoading && (<GeneratedContentDisplay content= {
+generatedContent,
 }onApply= {
-  handleApply,
+handleApply,
 }/>)
 }</div>)
-}'"
-}
+}'";
+}}}}))

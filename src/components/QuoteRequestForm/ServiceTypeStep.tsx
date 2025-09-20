@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
@@ -26,62 +26,63 @@ import { useIsMounted,  } from "@/hooks/useIsMounted",
 import { z,  } from "zod";
 import { logErrorToProduction } from '@/utils/productionLogger';
 const listingSchema = null;
-  return (
-    <div className="space-y-6">
-      <div>
-        <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Card,
+return (
+<div className="space-y-6">;
+<div>;
+<h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>;
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
+<Card,
 className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData.serviceType === "service" 
-                ? "bg-zion-purple/20 border-zion-purple" 
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
-            }`}
-            onClick={() => handleTypeSelect("service")}
-          >
-            <h4 className="font-medium text-white">Services</h4>
-            <p className="text-sm text-zion-slate-light">AI solutions consulting development</p>
-          </Card>
-          
-          <Card,
-className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData.serviceType === "talent" 
-                ? "bg-zion-purple/20 border-zion-purple" 
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
-            }`}
-            onClick={() => handleTypeSelect("talent")}
-          >
-            <h4 className="font-medium text-white">Talent</h4>
-            <p className="text-sm text-zion-slate-light">AI specialists developers consultants</p>
-          </Card>
-          
-          <Card,
-className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData.serviceType === "equipment" 
-                ? "bg-zion-purple/20 border-zion-purple" 
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
-            }`}
-            onClick={() => handleTypeSelect("equipment")}
-          >
-            <h4 className="font-medium text-white">Equipment</h4>
-            <p className="text-sm text-zion-slate-light">Servers workstations specialized hardware</p>
-          </Card>
-        </div>
-      </div>
-      
-      {formData.serviceType && (
-        <div className="space-y-4">
-          <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
-          
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
-            <Input,
-placeholder={`Search ${formData.serviceType}...`}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"
-            />
-          </div>
+formData.serviceType === "service";
+? "bg-zion-purple/20 border-zion-purple";
+: "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
+}`}
+onClick={() => handleTypeSelect("service")}
+>;
+<h4 className="font-medium text-white">Services</h4>;
+<p className="text-sm text-zion-slate-light">AI solutions consulting development</p>;
+</Card>;
 
-  )
+<Card,
+className={`p-4 cursor-pointer border-2 transition-colors ${
+formData.serviceType === "talent";
+? "bg-zion-purple/20 border-zion-purple";
+: "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
+}`}
+onClick={() => handleTypeSelect("talent")}
+>;
+<h4 className="font-medium text-white">Talent</h4>;
+<p className="text-sm text-zion-slate-light">AI specialists developers consultants</p>;
+</Card>;
+
+<Card,
+className={`p-4 cursor-pointer border-2 transition-colors ${
+formData.serviceType === "equipment";
+? "bg-zion-purple/20 border-zion-purple";
+: "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
+}`}
+onClick={() => handleTypeSelect("equipment")}
+>;
+<h4 className="font-medium text-white">Equipment</h4>;
+<p className="text-sm text-zion-slate-light">Servers workstations specialized hardware</p>;
+</Card>;
+</div>;
+</div>;
+
+{formData.serviceType && (
+<div className="space-y-4">;
+<h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>;
+
+<div className="relative">;
+<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />;
+<Input,
+placeholder={`Search ${formData.serviceType}...`}
+value={searchQuery}
+onChange={(e) => setSearchQuery(e.target.value)}
+className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"
+/>;
+</div>;
+
+)
 }
+)

@@ -1,3 +1,8 @@
+interface Service {
+id: string;,
+name: string;
+}
+
 import React from "react;";
 export function useScrollToTop() {
 // Simple hook to scroll to top;
@@ -23,22 +28,23 @@ export * from "./useReactId";
 export * from "./useScrollToTop";
 export * from "./usePostsByCategory";
 import { useState } from 'react'
-export const useLocalStorage = (key: string; initialValue: unknown) => {
+export const useLocalStorage: any = (key: string; initialValue: unknown) => {
 const [ storedValue, setStoredValue ] = useState(() => {    try {
-    const item = window.localStorage.getItem(key)
-    return item ? JSON.parse(item) : initialValue,
-} catch {
-export const useLocalStorage = (key: string; initialValue: unknown) => {
-      return initialValue,
+const item = window.localStorage.getItem(key)
+return item ? JSON.parse(item) : initialValue,;
+} catch {;
+export const useLocalStorage: any = (key: string; initialValue: unknown) => {
+return initialValue,
 }
-  })
-  const setValue = (value: unknown;) => {
-    try {
-      const valueToStore = value instanceof Function ? value(storedValue) : value,
+})
+const setValue: any = (value: unknown;) => {
+try {
+const valueToStore = value instanceof Function ? value(storedValue) : value,
 window.localStorage.setItem(key, JSON.stringify(valueToStore))
-    } catch (_error) {
-      console.error('Error setting localStorage:', _error)
-    }
-  }
-  return [storedValue, setValue] as const,
+} catch (_error) {
+console.error('Error setting localStorage:', _error)
+}
+}
+return [storedValue, setValue] as const,;
+};
 }

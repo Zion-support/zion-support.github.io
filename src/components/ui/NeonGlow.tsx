@@ -21,8 +21,8 @@ color === "zion-purple" ? "#a855f7" :
 color === "zion-blue" ? "#3b82f6" : "#00d4ff"),
 
 const intensityMap = {
-low: {,
-textShadow: `0 0 5px ${baseColor}, 0 0 10px ${baseColor}`,
+low: {,;
+textShadow: `0 0 5px ${baseColor}, 0 0 10px ${baseColor}`,;
 filter: `drop-shadow(0 0 2px ${baseColor})`;
 }, medium: {,
 textShadow: `0 0 10px ${baseColor}, 0 0 20px ${baseColor}, 0 0 30px ${baseColor}`,

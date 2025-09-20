@@ -99,8 +99,8 @@ const [ isLoadedsetIsLoaded] = React.useState(false),
 const optimizedSrc = optimizeUrl(src{;
 widthheightformat: "webp";,
 });
-const placeholderDataURL = blurDataURL || generateBlurDataURL()
-React.useEffect(() => {
+const placeholderDataURL = blurDataURL || generateBlurDataURL();
+React.useEffect(() => {;
 if() {;
 observeImage(imageRef);
 };

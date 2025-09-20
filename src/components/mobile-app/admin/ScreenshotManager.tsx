@@ -10,7 +10,7 @@ interface ScreenshotManagerProps {
 platform: AppPlatform;,
 };
 type Screenshot = {;
-id: string;
+id: string;,
 url: string;,
 file: File;,
 };
@@ -161,5 +161,5 @@ import { Upload,, Trash2,, Plus,  } from 'lucide-react'
 import { AppPlatform,  } from "./MetadataManager";
 import { toast,  } from "sonner";
 interface ScreenshotManagerProps {
-  platform: AppPlatform;
+platform: AppPlatform;
 }

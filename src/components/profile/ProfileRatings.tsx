@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
@@ -22,91 +22,91 @@ import { Button,  } from "@/components/ui/button";
 import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from "@/components/ui/tabs";
 interface ProfileRatingsProps {
 return (
-    <div className="space-y-6">
-      <div className="flex flex-col md:flex-row gap-6">
-        <div className="md:w-1/3">
-          <ReviewStats,
+<div className="space-y-6">;
+<div className="flex flex-col md:flex-row gap-6">;
+<div className="md:w-1/3">;
+<ReviewStats,
 averageRating={averageRating}
-            totalReviews={ratingCount}
-            ratingDistribution={ratingDistribution}          />
-        </div>
-        <div className='md:w-2/3'>
-          <Tabs defaultValue='all'>
-            <TabsList className='mb-4'>
-              <TabsTrigger value='all'>
-                All Reviews ({reviews.length})
-              </TabsTrigger>
-              <TabsTrigger value='positive'>Positive</TabsTrigger>
-              <TabsTrigger value='critical'>Critical</TabsTrigger>
-            </TabsList>
-            <TabsContent value='all'>              <ReviewsList
-        <div className="md:w-2/3">
-          <Tabs defaultValue="all">
-            <TabsList className="mb-4">
-              <TabsTrigger value="all">All Reviews ({reviews.length})</TabsTrigger>
-              <TabsTrigger value="positive">Positive</TabsTrigger>
-              <TabsTrigger value="critical">Critical</TabsTrigger>
-            </TabsList>
-            <TabsContent value="all">
-                reviews={reviews}
-                isLoading={isLoading}
-                onReportReview={reportReview}              />
-            </TabsContent>
-            <TabsContent value='positive'>
-              <ReviewsList,
+totalReviews={ratingCount}
+ratingDistribution={ratingDistribution}          />;
+</div>;
+<div className='md:w-2/3'>;
+<Tabs defaultValue='all'>;
+<TabsList className='mb-4'>;
+<TabsTrigger value='all'>;
+All Reviews ({reviews.length})
+</TabsTrigger>;
+<TabsTrigger value='positive'>Positive</TabsTrigger>;
+<TabsTrigger value='critical'>Critical</TabsTrigger>;
+</TabsList>;
+<TabsContent value='all'>              <ReviewsList;
+<div className="md:w-2/3">;
+<Tabs defaultValue="all">;
+<TabsList className="mb-4">;
+<TabsTrigger value="all">All Reviews ({reviews.length})</TabsTrigger>;
+<TabsTrigger value="positive">Positive</TabsTrigger>;
+<TabsTrigger value="critical">Critical</TabsTrigger>;
+</TabsList>;
+<TabsContent value="all">;
+reviews={reviews}
+isLoading={isLoading}
+onReportReview={reportReview}              />;
+</TabsContent>;
+<TabsContent value='positive'>;
+<ReviewsList,
 reviews={reviews.filter(r => r.rating >= 4)}                isLoading={isLoading}
-                onReportReview={reportReview}
-              />
-            </TabsContent>
-            <TabsContent value='critical'>
-              <ReviewsList,
+onReportReview={reportReview}
+/>;
+</TabsContent>;
+<TabsContent value='critical'>;
+<ReviewsList,
 reviews={reviews.filter(r => r.rating < 4)}                isLoading={isLoading}                reviews={reviews.filter((r) => r.rating >= 4)}
-            <TabsContent value="positive">
-              <ReviewsList,
+<TabsContent value="positive">;
+<ReviewsList,
 reviews={reviews.filter((r) => r.rating >= 4)}
-                isLoading={isLoading}
-                onReportReview={reportReview}
-              />
-            </TabsContent>
-            <TabsContent value='critical'>
-              <ReviewsList,
+isLoading={isLoading}
+onReportReview={reportReview}
+/>;
+</TabsContent>;
+<TabsContent value='critical'>;
+<ReviewsList,
 reviews={reviews.filter(r => r.rating < 4)}                reviews={reviews.filter((r) => r.rating < 4)}
-            <TabsContent value="critical">
-              <ReviewsList,
+<TabsContent value="critical">;
+<ReviewsList,
 reviews={reviews.filter((r) => r.rating < 4)}
-                isLoading={isLoading}
-                onReportReview={reportReview}
-              />
-            </TabsContent>
-          </Tabs>
-        </div>
-      </div>
-    </div>
-  )
+isLoading={isLoading}
+onReportReview={reportReview}
+/>;
+</TabsContent>;
+</Tabs>;
+</div>;
+</div>;
+</div>;
+)
 }, [reviews])
 //Fetch reviews when component mounts return (<div className="space-y-6" > <div className="flex flex-col md:flex-row gap-6" > <div className="md:w-1/3" > <ReviewStats averageRating= {
-  averageRating,
+averageRating,
 }totalReviews= {
-  ratingCount,
+ratingCount,
 }ratingDistribution= {
-  ratingDistribution "
+ratingDistribution ";
 }/> </div> </TabsList> <TabsContent value="all" > <ReviewsList reviews= {
-  reviews,
+reviews,
 }isLoading= {
-  isLoading,
+isLoading,
 }onReportReview= {
-  reportReview "
+reportReview ";
 }/> </TabsContent> <TabsContent value="positive" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating >= 4)
+reviews.filter ( (r) => r.rating >= 4)
 }isLoading= {
-  isLoading,
+isLoading,
 }onReportReview= {
-  reportReview "
+reportReview ";
 }/> </TabsContent> <TabsContent value="critical" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating < 4)
+reviews.filter ( (r) => r.rating < 4)
 }isLoading= {
-  isLoading,
+isLoading,
 }onReportReview= {
-  reportReview,
+reportReview,
 }/> </TabsContent> </Tabs> </div> </div> </div>)
 }"}

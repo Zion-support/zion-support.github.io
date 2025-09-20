@@ -7,7 +7,7 @@ data: any;,
 };
 export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
 const getStructuredData: any = () => {
-const baseStructure = {
+const baseStructure = {;
 '@context': 'https://schema.org',;
 '@type': type,;
 ...data;
@@ -46,8 +46,8 @@ telephone: '+1-302-464-0950',
 contactType: 'customer service',
 email: 'kleber@ziontechgroup.com',
 },
-sameAs: [
-'https://twitter.com/ziontechgroup',
+sameAs: [;
+'https://twitter.com/ziontechgroup',;
 'https://linkedin.com/company/ziontechgroup',;
 'https://github.com/ziontechgroup';
 ];
@@ -59,8 +59,8 @@ url: 'https://ziontechgroup.com',
 description: 'Advanced technology solutions and services',
 potentialAction: {
 '@type': 'SearchAction',
-target: {
-'@type': 'EntryPoint',
+target: {;
+'@type': 'EntryPoint',;
 urlTemplate: 'https://ziontechgroup.com/search?q={search_term_string}';
 },;
 'query-input': 'required name=search_term_string';

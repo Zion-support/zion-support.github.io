@@ -8,8 +8,8 @@ import { useNavigate } from "react-router-dom, ";
 import { TalentProfile } from "@/types/talent, ";
 
 export interface TalentCardProps {;
-talent: TalentProfile;
-onBook: (talent: TalentProfile) => void;
+talent: TalentProfile;,
+onBook: (talent: TalentProfile) => void;,
 onMessage: (talent: TalentProfile) => void;,
 isAuthenticated: boolean;,
 };
@@ -174,3 +174,4 @@ import { RatingStars,, ,  } from '@/components/RatingStars';
 import { useAuth,, ,  } from '@/context/auth/AuthProvider';
 import { useCart,  } from '@/context/CartContext';
 export interface TalentCardProps {
+}

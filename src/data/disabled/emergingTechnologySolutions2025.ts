@@ -17,8 +17,8 @@ tags: string[];
 estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
-contactInfo: {
-phone: string;
+contactInfo: {,
+phone: string;,
 email: string;,
 website: string;,
 };
@@ -31,22 +31,22 @@ demoUrl?: string;
 caseStudies?: string[];
 websiteUrl?: string;
 marketTrend: string;
-industryFocus: string[];
-scalability: string;
+industryFocus: string[];,
+scalability: string;,
 customizationLevel: string;,
 innovationLevel: string;,
 }
 
 export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = [
 // Blockchain & Web3 Solutions;
-{
-id: "blockchain-web3-enterprise-platform";
+{,
+id: "blockchain-web3-enterprise-platform";,
 title: "Blockchain & Web3 Enterprise Platform - Decentralized Business Solutions";,
 description: "Comprehensive blockchain and Web3 platform that enables enterprises to build decentralized applications; implement smart contracts; and leverage blockchain technology for business transformation and innovation.",
 category: "Blockchain & Web3";
 subcategory: "Enterprise Solutions";
-price: 1299;
-currency: "$";
+price: 1299;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Multi-blockchain platform support";
@@ -82,11 +82,11 @@ targetAudience: [
 "Blockchain developers";
 ],
 tags: ["Blockchain", "Web3", "Smart Contracts", "DeFi", "Enterprise"],
-estimatedDelivery: "6-8 weeks";
+estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;299 - $5;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -99,19 +99,19 @@ demoUrl: "https://ziontechgroup.com/demo/blockchain-web3";,
 caseStudies: ["Financial institution 70% cost reduction", "Manufacturing 90% transparency improvement"],
 marketTrend: "Explosive growth in enterprise blockchain adoption with 80% annual growth";,
 industryFocus: ["Financial Services", "Manufacturing", "Healthcare", "Supply Chain", "Real Estate"],
-scalability: "Enterprise-grade with multi-chain support";
+scalability: "Enterprise-grade with multi-chain support";,
 customizationLevel: "Custom blockchain solutions and smart contracts";,
 innovationLevel: "Cutting-edge Web3 and blockchain technology",
 };
 // Quantum Computing Solutions;
 {
-id: "quantum-computing-solutions-platform";
+id: "quantum-computing-solutions-platform";,
 title: "Quantum Computing Solutions Platform - Next-Generation Computing Power";,
 description: "Advanced quantum computing platform that provides quantum algorithms; quantum machine learning; and quantum optimization solutions for complex computational problems that are impossible to solve with classical computers.",
 category: "Quantum Computing";
 subcategory: "Quantum Solutions";
-price: 2499;
-currency: "$";
+price: 2499;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Quantum algorithm development";
@@ -147,11 +147,11 @@ targetAudience: [
 "Government agencies";
 ],
 tags: ["Quantum Computing", "Quantum Algorithms", "Machine Learning", "Optimization", "Research"],
-estimatedDelivery: "8-12 weeks";
+estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;499 - $10;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -164,19 +164,19 @@ demoUrl: "https://ziontechgroup.com/demo/quantum-computing";,
 caseStudies: ["Pharma company 10x faster drug discovery", "Financial firm 1000x optimization speed"],
 marketTrend: "Rapid advancement in quantum computing with 100% annual growth";,
 industryFocus: ["Research", "Pharmaceuticals", "Finance", "Technology", "Government"],
-scalability: "Quantum cloud infrastructure with unlimited computational power";
+scalability: "Quantum cloud infrastructure with unlimited computational power";,
 customizationLevel: "Custom quantum algorithms and applications";,
 innovationLevel: "Revolutionary quantum computing technology",
 };
 // Edge Computing & IoT Solutions;
 {
-id: "edge-computing-iot-platform";
+id: "edge-computing-iot-platform";,
 title: "Edge Computing & IoT Platform - Intelligent Edge Intelligence";,
 description: "Comprehensive edge computing and IoT platform that processes data at the edge; reduces latency; improves performance; and enables real-time decision making for connected devices and smart systems.",
 category: "Edge Computing & IoT";
 subcategory: "Edge Intelligence";
-price: 799;
-currency: "$";
+price: 799;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Edge computing infrastructure";
@@ -212,11 +212,11 @@ targetAudience: [
 "Transportation companies";
 ],
 tags: ["Edge Computing", "IoT", "Real-time Processing", "AI", "Connectivity"],
-estimatedDelivery: "4-6 weeks";
+estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$799 - $3;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -229,19 +229,19 @@ demoUrl: "https://ziontechgroup.com/demo/edge-computing-iot";,
 caseStudies: ["Smart city 80% response time improvement", "Manufacturing 70% efficiency increase"],
 marketTrend: "Growing adoption of edge computing with 60% annual growth";,
 industryFocus: ["Smart Cities", "Manufacturing", "Healthcare", "Transportation", "Retail"],
-scalability: "Distributed edge infrastructure with unlimited device support";
+scalability: "Distributed edge infrastructure with unlimited device support";,
 customizationLevel: "Custom edge computing solutions and IoT integrations";,
 innovationLevel: "Advanced edge computing and IoT technology",
 };
 // 5G & Advanced Connectivity Solutions;
 {
-id: "5g-advanced-connectivity-platform";
+id: "5g-advanced-connectivity-platform";,
 title: "5G & Advanced Connectivity Platform - Next-Generation Network Solutions";,
 description: "Advanced 5G and connectivity platform that provides ultra-fast wireless communication; low-latency networking; and advanced connectivity solutions for businesses; IoT devices; and emerging technologies.",
 category: "5G & Connectivity";
 subcategory: "Network Solutions";
-price: 999;
-currency: "$";
+price: 999;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "5G network infrastructure";
@@ -277,11 +277,11 @@ targetAudience: [
 "Transportation companies";
 ],
 tags: ["5G", "Connectivity", "Low Latency", "IoT", "Network Infrastructure"],
-estimatedDelivery: "6-8 weeks";
+estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$999 - $4;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -294,19 +294,19 @@ demoUrl: "https://ziontechgroup.com/demo/5g-connectivity";,
 caseStudies: ["Telecom provider 100x speed improvement", "Smart city 90% latency reduction"],
 marketTrend: "Rapid 5G deployment with 70% annual growth";,
 industryFocus: ["Telecommunications", "Healthcare", "Transportation", "Manufacturing", "Smart Cities"],
-scalability: "Enterprise 5G infrastructure with unlimited device support";
+scalability: "Enterprise 5G infrastructure with unlimited device support";,
 customizationLevel: "Custom 5G solutions and network configurations";,
 innovationLevel: "Cutting-edge 5G and connectivity technology",
 };
 // Augmented Reality & Virtual Reality Solutions;
 {
-id: "ar-vr-enterprise-platform";
+id: "ar-vr-enterprise-platform";,
 title: "AR/VR Enterprise Platform - Immersive Business Solutions";,
 description: "Comprehensive augmented reality and virtual reality platform that provides immersive experiences; training simulations; virtual collaboration; and AR/VR solutions for enterprise applications and business transformation.",
 category: "AR/VR & Immersive Technology";
 subcategory: "Enterprise Solutions";
-price: 899;
-currency: "$";
+price: 899;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "AR/VR content creation tools";
@@ -342,11 +342,11 @@ targetAudience: [
 "Educational institutions";
 ],
 tags: ["AR/VR", "Immersive Technology", "Training", "Collaboration", "3D Visualization"],
-estimatedDelivery: "4-6 weeks";
+estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$899 - $3;500/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -359,19 +359,19 @@ demoUrl: "https://ziontechgroup.com/demo/ar-vr-platform";,
 caseStudies: ["Manufacturing 70% training effectiveness improvement", "Healthcare 80% skill retention increase"],
 marketTrend: "Growing adoption of AR/VR in enterprise with 65% annual growth";,
 industryFocus: ["Manufacturing", "Healthcare", "Education", "Retail", "Real Estate"],
-scalability: "Multi-user AR/VR platform with unlimited content support";
+scalability: "Multi-user AR/VR platform with unlimited content support";,
 customizationLevel: "Custom AR/VR experiences and training programs";,
 innovationLevel: "Advanced immersive technology solutions",
 };
 // Robotics & Automation Solutions;
 {
-id: "robotics-automation-platform";
+id: "robotics-automation-platform";,
 title: "Robotics & Automation Platform - Intelligent Automation Solutions";,
 description: "Advanced robotics and automation platform that provides intelligent automation; robotic process automation (RPA), and autonomous systems for manufacturing; logistics; healthcare; and other industries.",
 category: "Robotics & Automation";
 subcategory: "Intelligent Automation";
-price: 1199;
-currency: "$";
+price: 1199;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Robotic process automation (RPA)";
@@ -407,11 +407,11 @@ targetAudience: [
 "Automation consultants";
 ],
 tags: ["Robotics", "Automation", "RPA", "Computer Vision", "Manufacturing"],
-estimatedDelivery: "6-8 weeks";
+estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;199 - $5;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -424,19 +424,19 @@ demoUrl: "https://ziontechgroup.com/demo/robotics-automation";,
 caseStudies: ["Manufacturing plant 50% productivity increase", "Warehouse 40% cost reduction"],
 marketTrend: "Growing adoption of robotics and automation with 55% annual growth";,
 industryFocus: ["Manufacturing", "Logistics", "Healthcare", "Automotive", "Electronics"],
-scalability: "Enterprise robotics platform with multi-system support";
+scalability: "Enterprise robotics platform with multi-system support";,
 customizationLevel: "Custom robotics solutions and automation workflows";,
 innovationLevel: "Advanced robotics and automation technology",
 };
 // Digital Twin & Simulation Solutions;
 {
-id: "digital-twin-simulation-platform";
+id: "digital-twin-simulation-platform";,
 title: "Digital Twin & Simulation Platform - Virtual Replica Solutions";,
 description: "Comprehensive digital twin and simulation platform that creates virtual replicas of physical systems; enables predictive modeling; and provides real-time monitoring and optimization for complex systems and processes.",
 category: "Digital Twin & Simulation";
 subcategory: "Virtual Replica Solutions";
-price: 999;
-currency: "$";
+price: 999;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Digital twin creation and management";
@@ -472,11 +472,11 @@ targetAudience: [
 "Urban planners";
 ],
 tags: ["Digital Twin", "Simulation", "IoT", "Predictive Analytics", "3D Modeling"],
-estimatedDelivery: "6-8 weeks";
+estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$999 - $4;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -489,19 +489,19 @@ demoUrl: "https://ziontechgroup.com/demo/digital-twin";,
 caseStudies: ["Manufacturing 60% downtime reduction", "Infrastructure 45% efficiency improvement"],
 marketTrend: "Growing adoption of digital twins with 70% annual growth";,
 industryFocus: ["Manufacturing", "Infrastructure", "Energy", "Healthcare", "Smart Cities"],
-scalability: "Enterprise digital twin platform with unlimited system support";
+scalability: "Enterprise digital twin platform with unlimited system support";,
 customizationLevel: "Custom digital twin solutions and simulation models";,
 innovationLevel: "Advanced digital twin and simulation technology",
 };
 // Green Technology & Sustainability Solutions;
 {
-id: "green-technology-sustainability-platform";
+id: "green-technology-sustainability-platform";,
 title: "Green Technology & Sustainability Platform - Eco-Friendly Solutions";,
 description: "Comprehensive green technology and sustainability platform that provides renewable energy solutions; carbon footprint tracking; environmental monitoring; and sustainable business practices for organizations committed to environmental responsibility.",
 category: "Green Technology & Sustainability";
 subcategory: "Environmental Solutions";
-price: 699;
-currency: "$";
+price: 699;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Carbon footprint tracking and analysis";
@@ -537,11 +537,11 @@ targetAudience: [
 "Government agencies";
 ],
 tags: ["Green Technology", "Sustainability", "Renewable Energy", "Environmental", "Carbon Tracking"],
-estimatedDelivery: "4-6 weeks";
+estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$699 - $2;500/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -554,7 +554,7 @@ demoUrl: "https://ziontechgroup.com/demo/green-technology";,
 caseStudies: ["Corporation 40% carbon footprint reduction", "Building 30% energy cost savings"],
 marketTrend: "Growing demand for green technology with 50% annual growth";,
 industryFocus: ["Manufacturing", "Real Estate", "Energy", "Transportation", "Retail"],
-scalability: "Multi-organization sustainability platform";
+scalability: "Multi-organization sustainability platform";,
 customizationLevel: "Custom sustainability solutions and reporting";,
 innovationLevel: "Advanced green technology and sustainability solutions",
 }

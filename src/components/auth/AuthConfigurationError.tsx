@@ -2,5 +2,6 @@ import { AlertTriangle,, ExternalLink,, RefreshCw,, Settings,, CheckCircle,  } f
 import { Button,, ,  } from '@/components/ui/button';
 import { Alert,, AlertDescription,  } from '@/components/ui/alert';
 interface AuthConfigurationErrorProps {
-  onRetry?: () => void;
-  showSetupButton?: boolean
+onRetry?: () => void;
+showSetupButton?: boolean;
+}

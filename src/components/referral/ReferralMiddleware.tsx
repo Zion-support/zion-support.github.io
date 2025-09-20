@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
@@ -21,8 +21,8 @@ localStorage.setItem("referralCode", code),
 }
 }, []),
 ,
-useEffect(() => {,
-// "TODO": "Add dependencies if needed,
+useEffect(() => {,;
+// "TODO": "Add dependencies if needed,;
 "}, []),;
 async function sendReferral("props": "any) {,;
 const code = localStorage.getItem("referralCode"),;

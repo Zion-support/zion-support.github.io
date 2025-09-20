@@ -26,8 +26,8 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
-rating: 4.9;
-reviewCount: 156;
+rating: 4.9;,
+reviewCount: 156;,
 featured: true;,
 location: "Global",
 availability: "2-3 Weeks",
@@ -50,8 +50,8 @@ avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=forma
 },
 images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
-rating: 4.8;
-reviewCount: 89;
+rating: 4.8;,
+reviewCount: 89;,
 featured: true;,
 location: "Global",
 availability: "1-2 Weeks",
@@ -74,8 +74,8 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
-rating: 4.9;
-reviewCount: 234;
+rating: 4.9;,
+reviewCount: 234;,
 featured: true;,
 location: "Global",
 availability: "4-6 Weeks",
@@ -99,8 +99,8 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
-rating: 4.7;
-reviewCount: 156;
+rating: 4.7;,
+reviewCount: 156;,
 featured: true;,
 location: "Global",
 availability: "3-5 Weeks",
@@ -123,8 +123,8 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
-rating: 4.9;
-reviewCount: 189;
+rating: 4.9;,
+reviewCount: 189;,
 featured: true;,
 location: "Global",
 availability: "4-8 Weeks",
@@ -167,7 +167,7 @@ email: "kleber@ziontechgroup.com",
 },
 images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-20T14:30:00.000Z",
-rating: 4.7;
+rating: 4.7;,
 reviewCount: 89;,
 location: "Global",
 availability: "Immediate",
@@ -190,7 +190,7 @@ avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=forma
 },
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-01T09:15:00.000Z",
-rating: 4.8;
+rating: 4.8;,
 reviewCount: 67;,
 location: "Global",
 availability: "2-3 Weeks",
@@ -214,8 +214,8 @@ email: "kleber@ziontechgroup.com",
 },
 images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-10T11:45:00.000Z",
-rating: 4.9;
-reviewCount: 134;
+rating: 4.9;,
+reviewCount: 134;,
 featured: true;,
 location: "Global",
 availability: "3-4 Weeks",
@@ -239,8 +239,8 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
-rating: 4.7;
-reviewCount: 98;
+rating: 4.7;,
+reviewCount: 98;,
 featured: true;,
 location: "Global",
 availability: "2-4 Weeks",
@@ -263,8 +263,8 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
-rating: 4.6;
-reviewCount: 76;
+rating: 4.6;,
+reviewCount: 76;,
 featured: true;,
 location: "Global",
 availability: "2-3 Weeks",
@@ -288,8 +288,8 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
-rating: 4.8;
-reviewCount: 145;
+rating: 4.8;,
+reviewCount: 145;,
 featured: true;,
 location: "Global",
 availability: "3-5 Weeks",
@@ -312,8 +312,8 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
-rating: 4.7;
-reviewCount: 112;
+rating: 4.7;,
+reviewCount: 112;,
 featured: true;,
 location: "Global",
 availability: "2-3 Weeks",
@@ -337,8 +337,8 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
-rating: 4.9;
-reviewCount: 67;
+rating: 4.9;,
+reviewCount: 67;,
 featured: true;,
 location: "Global",
 availability: "8-12 Weeks",
@@ -361,8 +361,8 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
-rating: 4.8;
-reviewCount: 89;
+rating: 4.8;,
+reviewCount: 89;,
 featured: true;,
 location: "Global",
 availability: "6-10 Weeks",
@@ -386,8 +386,8 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
-rating: 4.7;
-reviewCount: 123;
+rating: 4.7;,
+reviewCount: 123;,
 featured: true;,
 location: "Global",
 availability: "5-8 Weeks",
@@ -410,8 +410,8 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
-rating: 4.6;
-reviewCount: 87;
+rating: 4.6;,
+reviewCount: 87;,
 featured: true;,
 location: "Global",
 availability: "4-6 Weeks",
@@ -447,7 +447,7 @@ avatarUrl: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-25T16:20:00.000Z",
-rating: 4.9;
+rating: 4.9;,
 reviewCount: 98;,
 location: "Global",
 availability: "2-3 Weeks",
@@ -469,7 +469,7 @@ email: "kleber@ziontechgroup.com",
 },
 images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-05T13:10:00.000Z",
-rating: 4.7;
+rating: 4.7;,
 reviewCount: 76;,
 location: "Global",
 availability: "3-4 Weeks",
@@ -494,8 +494,8 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
-rating: 4.8;
-reviewCount: 156;
+rating: 4.8;,
+reviewCount: 156;,
 featured: true;,
 location: "Global",
 availability: "4-7 Weeks",
@@ -513,7 +513,7 @@ currency: "$",
 tags: ["VR", "AR", "Training", "Simulation", "Immersive"],
 images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-30T10:30:00.000Z",
-rating: 4.6;
+rating: 4.6;,
 reviewCount: 45;,
 location: "Global",
 availability: "Immediate",
@@ -535,7 +535,7 @@ email: "kleber@ziontechgroup.com",
 },
 images: ["https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-10T15:45:00.000Z",
-rating: 4.8;
+rating: 4.8;,
 reviewCount: 67;,
 location: "Global",
 availability: "1-2 Weeks",
@@ -558,7 +558,7 @@ avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-18T12:00:00.000Z",
-rating: 4.7;
+rating: 4.7;,
 reviewCount: 89;,
 location: "Global",
 availability: "2-3 Weeks",
@@ -586,8 +586,8 @@ images: ["https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=form
 createdAt: "2024-01-15T10:00:00.000Z",
 images: ["https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
-rating: 4.9;
-reviewCount: 78;
+rating: 4.9;,
+reviewCount: 78;,
 featured: true;,
 location: "Global",
 availability: "6-10 Weeks",
@@ -603,8 +603,8 @@ export const SERVICE_CATEGORIES = [
 "E-commerce",
 "Digital Marketing",
 "Healthcare",
-"FinTech",
-"IoT Solutions",
+"FinTech",;
+"IoT Solutions",;
 "Education";
 ];
 
@@ -615,8 +615,8 @@ export const SERVICE_SUBCATEGORIES = {
 "E-commerce": ["AI Optimization", "Platform Development", "Payment Systems", "Inventory Management", "Customer Experience"],
 "Digital Marketing": ["Automation", "SEO", "Social Media", "Content Strategy", "Analytics"],
 "Healthcare": ["AI Diagnostics", "Patient Management", "Telemedicine", "Medical Imaging", "Clinical Support"],
-"FinTech": ["Compliance & Security", "Payment Processing", "Risk Management", "Trading Platforms", "Digital Banking"],
-"IoT Solutions": ["Management Platform", "Building Automation", "Industrial IoT", "Smart Cities", "Connected Devices"],
+"FinTech": ["Compliance & Security", "Payment Processing", "Risk Management", "Trading Platforms", "Digital Banking"],;
+"IoT Solutions": ["Management Platform", "Building Automation", "Industrial IoT", "Smart Cities", "Connected Devices"],;
 "Education": ["Learning Management", "VR/AR Training", "Assessment Tools", "Student Analytics", "Content Creation"];
 };
 
@@ -645,7 +645,7 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-28T14:15:00.000Z",
-rating: 4.8;
+rating: 4.8;,
 reviewCount: 56;,
 location: "Global",
 availability: "2-3 Weeks",
@@ -667,7 +667,7 @@ email: "kleber@ziontechgroup.com",
 },
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-08T11:20:00.000Z",
-rating: 4.9;
+rating: 4.9;,
 reviewCount: 43;,
 location: "Global",
 availability: "3-4 Weeks",
@@ -692,8 +692,8 @@ avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=forma
 },
 images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-12T08:45:00.000Z",
-rating: 4.9;
-reviewCount: 67;
+rating: 4.9;,
+reviewCount: 67;,
 featured: true;,
 location: "Global",
 availability: "4-6 Weeks",
@@ -715,7 +715,7 @@ email: "kleber@ziontechgroup.com",
 },
 images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-12T10:30:00.000Z",
-rating: 4.7;
+rating: 4.7;,
 reviewCount: 34;,
 location: "Global",
 availability: "3-4 Weeks",
@@ -740,7 +740,7 @@ avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-22T13:45:00.000Z",
-rating: 4.6;
+rating: 4.6;,
 reviewCount: 78;,
 location: "Global",
 availability: "2-3 Weeks",
@@ -762,7 +762,7 @@ email: "kleber@ziontechgroup.com",
 },
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-18T16:20:00.000Z",
-rating: 4.8;
+rating: 4.8;,
 reviewCount: 56;,
 location: "Global",
 availability: "1-2 Weeks",
@@ -785,7 +785,7 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 },
 images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-30T12:00:00.000Z",
-rating: 4.7;
+rating: 4.7;,
 reviewCount: 45;,
 location: "Global",
 availability: "2-3 Weeks",
@@ -816,8 +816,8 @@ id: "micro-saas",
 name: "Micro SAAS",
 description: "Specialized software-as-a-service solutions for business needs",
 icon: "🚀",
-color: "from-emerald-500 to-green-600",
-services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Micro SAAS"),
+color: "from-emerald-500 to-green-600",;
+services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Micro SAAS"),;
 };
 ];
 
@@ -830,8 +830,8 @@ period: "month",
 description: "Perfect for small businesses and startups",
 features: [
 "Basic features and functionality",
-"Email support",
-"Standard integrations",
+"Email support",;
+"Standard integrations",;
 "Up to 5 users";
 ];
 },
@@ -869,7 +869,7 @@ export const CONTACT_INFO = {
 mobile: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 address: "364 E Main St STE 1008 Middletown DE 19709",
-website: "https://ziontechgroup.com",
-businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
+website: "https://ziontechgroup.com",;
+businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;
 responseTime: "24-48 hours for initial response",;
 };

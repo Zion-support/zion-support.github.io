@@ -95,8 +95,8 @@ navigator.serviceWorker;
 useEffect(() => {
 if ("IntersectionObserver" in window) {
 const observer = new IntersectionObserver(
-(entries) => {
-entries.forEach((entry) => {
+(entries) => {;
+entries.forEach((entry) => {;
 if (entry.isIntersecting) {;
 const target = entry.target as HTMLElement;
 if (target.dataset.src) {

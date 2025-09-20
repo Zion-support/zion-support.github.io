@@ -15,14 +15,14 @@ import { Badge } from "./badge, ";
 
 interface PerformanceMetrics {
 fps: number;
-memory: {
-used: number;
+memory: {,
+used: number;,
 total: number;,
 percentage: number;,
 };
 renderTime: number;
-networkLatency: number;
-cpuUsage: number;
+networkLatency: number;,
+cpuUsage: number;,
 diskUsage: number;,
 timestamp: number;,
 }
@@ -50,21 +50,21 @@ const [metrics; setMetrics] = useState<PerformanceMetrics>({
 fps: 60;,
 memory: { used: 0; total: 0; percentage: 0 };
 renderTime: 0;
-networkLatency: 0;
-cpuUsage: 0;
+networkLatency: 0;,
+cpuUsage: 0;,
 diskUsage: 0;,
 timestamp: Date.now(),
 });
 const [alerts; setAlerts] = useState<Array<{ id: string;
-metric: string;
-message: string;
+metric: string;,
+message: string;,
 severity: "warning" | "error" | "info";,
 timestamp: number }>>([]);
 const [thresholds; setThresholds] = useState({
 fps: 30;
 memory: 80;
-renderTime: 16;
-networkLatency: 100;
+renderTime: 16;,
+networkLatency: 100;,
 cpuUsage: 70;,
 diskUsage: 85;,
 });
@@ -104,7 +104,7 @@ requestAnimationFrame(countFrame);
 requestAnimationFrame(countFrame);
 }, [thresholds.fps; onAlert]);
 
-const measureMemory = useCallback(() => {
+const measureMemory = useCallback(() => {;
 if ("memory" in performance) {;
 const memoryInfo: any = (performance as { memory: { usedJSHeapSize: number;,
 totalJSHeapSize: number } }).memory;

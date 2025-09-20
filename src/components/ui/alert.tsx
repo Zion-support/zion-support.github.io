@@ -20,8 +20,8 @@ const variantClasses = variant === "destructive",
 return <div className={`${baseClasses} ${variantClasses} ${className}`}>{children}</div>,
 }
 export function AlertTitle($1) {,
-return <h5 className={`mb-1 font-medium leading-none tracking-tight ${className}`}>{children}</h5>,
-}
+return <h5 className={`mb-1 font-medium leading-none tracking-tight ${className}`}>{children}</h5>,;
+};
 export function AlertDescription($1) {,;
 return <div className={`text-sm ${className}`}>{children}</div>,;
 };

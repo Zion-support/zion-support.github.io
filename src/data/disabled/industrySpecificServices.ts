@@ -2,8 +2,8 @@ import { Routes; Route } from "react-router-dom, ";
 export interface IndustrySpecificService {
 id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
 benefits: string[], useCases: string[];,
-targetAudience: string[], tags: string[];
-estimatedDelivery: string; supportLevel: string; marketPrice: string;
+targetAudience: string[], tags: string[];,
+estimatedDelivery: string; supportLevel: string; marketPrice: string;,
 contactInfo: {,
 phone: string; email: string; website: string,
 };
@@ -21,7 +21,7 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
 {,
 id: "healthcare-ai-diagnostic-suite", title: "Healthcare AI Diagnostic Suite";,
 description: "Comprehensive AI-powered diagnostic platform designed specifically for healthcare providers; offering medical image analysis; patient data analytics; and clinical decision support.",
-category: "Healthcare Technology", subcategory: "Medical Diagnostics";
+category: "Healthcare Technology", subcategory: "Medical Diagnostics";,
 price: 4200; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered medical image analysis",
@@ -73,7 +73,7 @@ caseStudies: ["Major Hospital Network", "Radiology Practice", "Primary Care Grou
 {
 id: "financial-ai-risk-management", title: "Financial AI Risk Management Platform";,
 description: "Advanced AI-powered risk management platform designed for financial institutions; offering real-time risk assessment; fraud detection; and regulatory compliance monitoring.",
-category: "Financial Technology", subcategory: "Risk Management";
+category: "Financial Technology", subcategory: "Risk Management";,
 price: 3800; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered risk assessment",
@@ -125,7 +125,7 @@ caseStudies: ["Major Bank", "Investment Firm", "Insurance Company"];
 {
 id: "manufacturing-ai-optimization", title: "Manufacturing AI Optimization Platform";,
 description: "Intelligent manufacturing optimization platform that uses AI to improve production efficiency; quality control; and predictive maintenance for manufacturing operations.",
-category: "Manufacturing Technology", subcategory: "Production Optimization";
+category: "Manufacturing Technology", subcategory: "Production Optimization";,
 price: 2800; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered production optimization",
@@ -177,7 +177,7 @@ caseStudies: ["Automotive Manufacturer", "Electronics Producer", "Chemical Plant
 {
 id: "retail-ai-customer-intelligence", title: "Retail AI Customer Intelligence Platform";,
 description: "Comprehensive AI-powered customer intelligence platform designed for retail businesses; offering personalized marketing; inventory optimization; and customer behavior analytics.",
-category: "Retail Technology", subcategory: "Customer Intelligence";
+category: "Retail Technology", subcategory: "Customer Intelligence";,
 price: 1800; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered customer segmentation",
@@ -229,7 +229,7 @@ caseStudies: ["E-commerce Platform", "Fashion Retailer", "Electronics Store"];
 {
 id: "education-ai-learning-platform", title: "Education AI Learning Platform";,
 description: "Intelligent AI-powered learning platform designed for educational institutions; offering personalized learning experiences; adaptive assessments; and student performance analytics.",
-category: "Education Technology", subcategory: "AI Learning";
+category: "Education Technology", subcategory: "AI Learning";,
 price: 2200; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered personalized learning",
@@ -281,7 +281,7 @@ caseStudies: ["University System", "K-12 District", "Corporate Training"];
 {
 id: "transportation-ai-logistics-optimization", title: "Transportation AI Logistics Optimization Platform";,
 description: "Advanced AI-powered logistics optimization platform designed for transportation and logistics companies; offering route optimization; fleet management; and supply chain analytics.",
-category: "Transportation Technology", subcategory: "Logistics Optimization";
+category: "Transportation Technology", subcategory: "Logistics Optimization";,
 price: 3200; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered route optimization",
@@ -333,7 +333,7 @@ caseStudies: ["Major Trucking Company", "E-commerce Logistics", "Warehouse Opera
 {
 id: "energy-ai-grid-optimization", title: "Energy AI Grid Optimization Platform";,
 description: "Intelligent AI-powered energy grid optimization platform designed for utility companies; offering smart grid management; renewable energy integration; and demand response optimization.",
-category: "Energy Technology", subcategory: "Grid Optimization";
+category: "Energy Technology", subcategory: "Grid Optimization";,
 price: 4500; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered grid optimization",
@@ -385,7 +385,7 @@ caseStudies: ["Major Utility", "Grid Operator", "Renewable Energy Provider"];
 {
 id: "real-estate-ai-market-intelligence", title: "Real Estate AI Market Intelligence Platform";,
 description: "Advanced AI-powered market intelligence platform designed for real estate professionals; offering market analysis; property valuation; and investment opportunity identification.",
-category: "Real Estate Technology", subcategory: "Market Intelligence";
+category: "Real Estate Technology", subcategory: "Market Intelligence";,
 price: 1600; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered market analysis",
@@ -437,7 +437,7 @@ caseStudies: ["Real Estate Investment Firm", "Property Developer", "Real Estate 
 {
 id: "agriculture-ai-precision-farming", title: "Agriculture AI Precision Farming Platform";,
 description: "Intelligent AI-powered precision farming platform designed for agricultural operations; offering crop monitoring; yield optimization; and sustainable farming practices.",
-category: "Agriculture Technology", subcategory: "Precision Farming";
+category: "Agriculture Technology", subcategory: "Precision Farming";,
 price: 2400; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered crop monitoring",

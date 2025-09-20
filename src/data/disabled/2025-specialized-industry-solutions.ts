@@ -1,11 +1,11 @@
 import { Routes; Route } from "react-router-dom, ";
 export interface SpecializedIndustryService {
 id: number; name: string; category: string; industry: string; description: string; pricing: string; price: number; pricingModel: string; userLimit: string; features: string[], benefits: string[];,
-targetAudience: string[], tags: string[];
+targetAudience: string[], tags: string[];,
 contactInfo: {,
 phone: string; email: string; website: string; address: string,
 };
-marketPrice: string; competitors: string[], roi: string; setupTime: string; integrations: string[];
+marketPrice: string; competitors: string[], roi: string; setupTime: string; integrations: string[];,
 freeTier: boolean; trialPeriod: string; technology: string[];,
 compliance: string[], useCases: string[];,
 industryStandards: string[];,
@@ -13,7 +13,7 @@ industryStandards: string[];,
 
 export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
 // Healthcare & Biotech Solutions;
-{
+{,
 id: 1; name: "MedTech AI Platform";,
 category: "Healthcare", industry: "Biotechnology";,
 description: "Comprehensive AI-powered medical technology platform for diagnostics; drug discovery; and personalized medicine with FDA compliance",

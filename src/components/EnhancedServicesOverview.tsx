@@ -37,7 +37,7 @@ categor; y: string;
 service; s: typeof ENHANCED_SERVICES;,
 };
 const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; services }) => {
-const categoryServices = services.filter(service =>
+const categoryServices = services.filter(service =>;
 service.category.toLowerCase().includes(category.toLowerCase());
 );
 

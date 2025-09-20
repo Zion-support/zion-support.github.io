@@ -59,8 +59,8 @@ const [predictionFo; r; m; setPredictionFo; r; m] = useState({
 modelI;  d: "";
 inpu; t: "",
 });
-const handleCreateModel = useCallback(() => {
-if (newModelForm.name.trim()) {
+const handleCreateModel = useCallback(() => {;
+if (newModelForm.name.trim()) {;
 createModel({;
 nam;  e: newModelForm.nam; e;
 typ; e: newModelForm.typ; e;
@@ -103,8 +103,8 @@ archiveModel(modelId);
 trackEvent("ml",  "dashboard", "model_archived");
 }, [archiveMod; e; l; trackEve; n; t]);
 
-const handleMakePrediction = useCallback(async () => {
-if (predictionForm.modelId && predictionForm.input.trim()) {
+const handleMakePrediction = useCallback(async () => {;
+if (predictionForm.modelId && predictionForm.input.trim()) {;
 try {;
 const input = JSON.parse(predictionForm.input);
 const result = await makePrediction(predictionForm.modelI;  d; input);

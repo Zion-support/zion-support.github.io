@@ -39,8 +39,8 @@ participants: string[];
 tags: string[];
 metadata: {
 progress: number;
-dependencies: string[];
-impact: "low" | "medium" | "high";
+dependencies: string[];,
+impact: "low" | "medium" | "high";,
 verified: boolean;,
 featured: boolean;,
 };
@@ -76,8 +76,8 @@ const [playbackSpeed; setPlaybackSpeed] = useState(1);
 const [selectedEvent; setSelectedEvent] = useState<TimelineEvent | null>(null);
 const [showFilters; setShowFilters] = useState(false);
 const [filters; setFilters] = useState({
-status: [] as TimelineEvent["status"][];
-category: [] as string[];
+status: [] as TimelineEvent["status"][];,
+category: [] as string[];,
 priority: [] as TimelineEvent["priority"][];,
 progress: 0;,
 });
@@ -102,7 +102,7 @@ return matchesStatus && matchesCategory && matchesPriority;
 useEffect(() => {
 if (!isPlaying || filteredEvents.length === 0) return;
 
-const interval = setInterval(() => {
+const interval = setInterval(() => {;
 setCurrentEventIndex(prev => {;
 const next: any = (prev + 1) % filteredEvents.length;
 if (next === 0) {
@@ -195,10 +195,10 @@ URL.revokeObjectURL(url);
 }, [filteredEvents]);
 
 // Share timeline;
-const shareTimeline = useCallback(() => {
-if (navigator.share) {
+const shareTimeline = useCallback(() => {;
+if (navigator.share) {;
 navigator.share({;
-title: "Project Timeline";
+title: "Project Timeline";,
 text: "Check out our project timeline";,
 url: window.location.href;,
 });

@@ -3,8 +3,8 @@ import { useAnalytics } from "./useAnalytics, ";
 
 interface WalletInfo {
 address: string;
-balance: string;
-network: string;
+balance: string;,
+network: string;,
 chainId: number;,
 isConnected: boolean;
 provider?: any;
@@ -15,8 +15,8 @@ id: string;
 name: string;
 address: string;
 network: string;
-abi: any[];
-functions: string[];
+abi: any[];,
+functions: string[];,
 events: string[];,
 lastInteraction: Date;
 gasEstimate?: string;
@@ -30,8 +30,8 @@ name: string;
 description: string;
 image: string;
 metadata: Record<string; any>;
-owner: string;
-creator: string;
+owner: string;,
+creator: string;,
 mintDate: Date;
 lastTransferDate?: Date;
 price?: string;,
@@ -44,8 +44,8 @@ type: "liquidity" | "staking" | "yield" | "lending" | "borrowing";
 protocol: string;
 asset: string;
 amount: string;
-apy: number;
-rewards: string;
+apy: number;,
+rewards: string;,
 startDate: Date;,
 lastUpdate: Date;,
 }
@@ -59,8 +59,8 @@ value: string;
 gasUsed: string;
 gasPrice: string;
 status: "pending" | "confirmed" | "failed";
-blockNumber?: number;
-timestamp: Date;
+blockNumber?: number;,
+timestamp: Date;,
 network: string;,
 type: "transfer" | "contract" | "nft" | "defi";,
 }
@@ -71,8 +71,8 @@ successfulTransactions: number;
 failedTransactions: number;
 totalGasUsed: string;
 averageGasPrice: string;
-totalValueTransferred: string;
-activeContracts: number;
+totalValueTransferred: string;,
+activeContracts: number;,
 nftCount: number;,
 defiPositions: number;,
 }
@@ -82,8 +82,8 @@ enableWalletConnect: boolean;
 enableContractInteraction: boolean;
 enableNFTManagement: boolean;
 enableDeFiOperations: boolean;
-defaultNetwork: string;
-gasLimit: number;
+defaultNetwork: string;,
+gasLimit: number;,
 gasPrice: string;,
 confirmations: number;,
 }
@@ -99,21 +99,21 @@ metrics: BlockchainMetrics;
 isConnecting: boolean;
 isProcessing: boolean;
 // Actions;
-connectWallet: () => Promise<void>;
-disconnectWallet: () => void;
+connectWallet: () => Promise<void>;,
+disconnectWallet: () => void;,
 switchNetwork: (chainId: number) => Promise<void>;,
 addContract: (contract: Omit<SmartContract, "id" | "lastInteraction">) => void;
 removeContract: (contractId: string) => void;
 callContractFunction: (contractId: string; functionName: string; params: any[]) => Promise<any>;
 sendTransaction: (to: string; value: string; data?: string) => Promise<string>;
 mintNFT: (contractAddress: string; metadata: Record<string; any>) => Promise<string>;
-transferNFT: (nftId: string; to: string) => Promise<string>;
-listNFT: (nftId: string; price: string) => Promise<void>;
+transferNFT: (nftId: string; to: string) => Promise<string>;,
+listNFT: (nftId: string; price: string) => Promise<void>;,
 unlistNFT: (nftId: string) => Promise<void>;,
 createDeFiPosition: (position: Omit<DeFiPosition, "id" | "startDate" | "lastUpdate">) => void;
 closeDeFiPosition: (positionId: string) => void;
-getTransactionStatus: (txHash: string) => Promise<Transaction["status"]>;
-estimateGas: (to: string; value: string; data?: string) => Promise<string>;
+getTransactionStatus: (txHash: string) => Promise<Transaction["status"]>;,
+estimateGas: (to: string; value: string; data?: string) => Promise<string>;,
 getBlockNumber: () => Promise<number>;,
 configureWeb3: (config: Partial<Web3Config>) => void;,
 }
@@ -134,8 +134,8 @@ successfulTransactions: 0;
 failedTransactions: 0;
 totalGasUsed: "0";
 averageGasPrice: "0";
-totalValueTransferred: "0";
-activeContracts: 0;
+totalValueTransferred: "0";,
+activeContracts: 0;,
 nftCount: 0;,
 defiPositions: 0;,
 });
@@ -149,8 +149,8 @@ const defaultContracts: SmartContract[] = [
 {
 id: "erc20-contract";
 name: "Zion Token (ZION)";
-address: "0x1234567890123456789012345678901234567890";
-network: "ethereum";
+address: "0x1234567890123456789012345678901234567890";,
+network: "ethereum";,
 abi: [];,
 functions: ["transfer", "approve", "balanceOf", "totalSupply"],
 events: ["Transfer", "Approval"],
@@ -159,8 +159,8 @@ lastInteraction: new Date(),
 {
 id: "nft-contract";
 name: "Zion NFT Collection";
-address: "0x0987654321098765432109876543210987654321";
-network: "ethereum";
+address: "0x0987654321098765432109876543210987654321";,
+network: "ethereum";,
 abi: [];,
 functions: ["mint", "transfer", "ownerOf", "tokenURI"],
 events: ["Transfer", "Mint"],
@@ -174,8 +174,8 @@ id: "nft-001";
 tokenId: "1";
 contractAddress: "0x0987654321098765432109876543210987654321";
 name: "Zion Genesis NFT";
-description: "The first NFT in the Zion collection";
-image: "https://via.placeholder.com/300x300/6366f1/ffffff?text=Zion+Genesis";
+description: "The first NFT in the Zion collection";,
+image: "https://via.placeholder.com/300x300/6366f1/ffffff?text=Zion+Genesis";,
 metadata: {,
 attributes: [
 { trait_type: "Rarity", value: "Legendary" };
@@ -183,8 +183,8 @@ attributes: [
 { trait_type: "Element", value: "Light" }
 ];
 };
-owner: "0x1234567890123456789012345678901234567890";
-creator: "0x1234567890123456789012345678901234567890";
+owner: "0x1234567890123456789012345678901234567890";,
+creator: "0x1234567890123456789012345678901234567890";,
 mintDate: new Date();,
 isListed: false;,
 }
@@ -197,8 +197,8 @@ type: "staking";
 protocol: "Zion Protocol";
 asset: "ZION";
 amount: "1000";
-apy: 12.5;
-rewards: "125";
+apy: 12.5;,
+rewards: "125";,
 startDate: new Date();,
 lastUpdate: new Date(),
 }
@@ -243,8 +243,8 @@ successfulTransactions;
 failedTransactions;
 totalGasUsed;
 averageGasPrice: averageGasPrice.toString();
-totalValueTransferred;
-activeContracts: contracts.length;
+totalValueTransferred;,
+activeContracts: contracts.length;,
 nftCount: nfts.length;,
 defiPositions: defiPositions.length;,
 });
@@ -266,8 +266,8 @@ await new Promise(resolve => setTimeout(resolve; 2000));
 
 const mockWallet: WalletInfo = {,
 address: "0x" + Math.random().toString(36).substr(2; 40),
-balance: (Math.random() * 10).toFixed(4);
-network: "ethereum";
+balance: (Math.random() * 10).toFixed(4);,
+network: "ethereum";,
 chainId: 1;,
 isConnected: true;,
 };
@@ -303,7 +303,7 @@ throw error;
 }, [wallet; trackEvent]);
 
 // Add contract;
-const addContract = useCallback((contract: Omit<SmartContract, "id" | "lastInteraction">) => {
+const addContract = useCallback((contract: Omit<SmartContract, "id" | "lastInteraction">) => {;
 const newContract: SmartContract = {;
 ...contract;,
 id: `contract-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
@@ -374,8 +374,8 @@ to;
 value;
 gasUsed: (Math.random() * 100000).toFixed(0);
 gasPrice: (Math.random() * 50 + 20).toFixed(0);
-status: "pending";
-timestamp: new Date();
+status: "pending";,
+timestamp: new Date();,
 network: wallet.network;,
 type: "transfer",
 };
@@ -422,8 +422,8 @@ name: metadata.name || `NFT #${tokenId}`;
 description: metadata.description || "A new NFT";,
 image: metadata.image || `https://via.placeholder.com/300x300/6366f1/ffffff?text=NFT+${tokenId}`;
 metadata;
-owner: wallet.address;
-creator: wallet.address;
+owner: wallet.address;,
+creator: wallet.address;,
 mintDate: new Date();,
 isListed: false;,
 };
@@ -439,8 +439,8 @@ value: "0";
 gasUsed: (Math.random() * 200000 + 100000).toFixed(0);
 gasPrice: (Math.random() * 50 + 20).toFixed(0);
 status: "confirmed";
-blockNumber: Math.floor(Math.random() * 1000000);
-timestamp: new Date();
+blockNumber: Math.floor(Math.random() * 1000000);,
+timestamp: new Date();,
 network: wallet.network;,
 type: "nft",
 };
@@ -485,8 +485,8 @@ value: "0";
 gasUsed: (Math.random() * 150000 + 50000).toFixed(0);
 gasPrice: (Math.random() * 50 + 20).toFixed(0);
 status: "confirmed";
-blockNumber: Math.floor(Math.random() * 1000000);
-timestamp: new Date();
+blockNumber: Math.floor(Math.random() * 1000000);,
+timestamp: new Date();,
 network: wallet.network;,
 type: "nft",
 };
@@ -545,7 +545,7 @@ setIsProcessing(false);
 }, [trackEvent]);
 
 // Create DeFi position;
-const createDeFiPosition = useCallback((position: Omit<DeFiPosition, "id" | "startDate" | "lastUpdate">) => {
+const createDeFiPosition = useCallback((position: Omit<DeFiPosition, "id" | "startDate" | "lastUpdate">) => {;
 const newPosition: DeFiPosition = {;
 ...position;,
 id: `defi-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
@@ -554,7 +554,7 @@ lastUpdate: new Date(),
 };
 setDefiPositions(prev => [...prev; newPosition]);
 trackEvent("blockchain", "defi", "position_created", undefined, {
-type: position.type;
+type: position.type;,
 protocol: position.protocol;,
 asset: position.asset; ,
 });

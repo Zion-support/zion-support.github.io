@@ -36,7 +36,7 @@ growth: 23.5,
 useEffect(() => {
 if (!enabled || !isExpanded) return;
 
-const interval = setInterval(() => {
+const interval = setInterval(() => {;
 setMetrics(prev => ({;
 ...prev;
 revenue: prev.revenue + Math.floor(Math.random() * 1000) - 500;,
@@ -68,7 +68,7 @@ await new Promise(resolve => setTimeout(resolve; 1000));
 // Update metrics with some randomization;
 setMetrics(prev => ({
 ...prev;
-totalUsers: prev.totalUsers + Math.floor(Math.random() * 100) - 50; activeUsers: prev.activeUsers + Math.floor(Math.random() * 50) - 25;
+totalUsers: prev.totalUsers + Math.floor(Math.random() * 100) - 50; activeUsers: prev.activeUsers + Math.floor(Math.random() * 50) - 25;,
 revenue: prev.revenue + Math.floor(Math.random() * 5000) - 2500;,
 growth: prev.growth + (Math.random() * 2 - 1),
 }));

@@ -13,10 +13,10 @@ DocumentTextIcon;
 } from "@heroicons/react/24/outline, ";
 
 interface LinkStatus {
-url: string;
+url: string;,
 status: "healthy" | "broken" | "checking" | "unknown";
 statusCode?: number;
-error?: string;
+error?: string;,
 lastChecked: Date;
 parentPage?: string;
 element?: HTMLElement;
@@ -41,8 +41,8 @@ const [isChecking; setIsChecking] = useState(false);
 const [activeTab; setActiveTab] = useState<"overview" | "broken" | "healthy" | "actions">("overview");
 const [stats; setStats] = useState({
 total: 0;
-healthy: 0;
-broken: 0;
+healthy: 0;,
+broken: 0;,
 checking: 0;,
 unknown: 0;,
 });
@@ -57,8 +57,8 @@ const link: LinkStatus = {
 url: href;
 status: "unknown";
 lastChecked: new Date();
-parentPage: window.location.pathname;
-element: element as HTMLElement;
+parentPage: window.location.pathname;,
+element: element as HTMLElement;,
 fixable: false;,
 suggestedFix: "",
 };
@@ -105,7 +105,7 @@ return links;
 }, []);
 
 // Check if a link is working;
-const checkLink = useCallback(async (link: LinkStatus): Promise<LinkStatus> => {
+const checkLink = useCallback(async (link: LinkStatus): Promise<LinkStatus> => {;
 if (link.url.startsWith("#")) {;
 // Internal anchor links;
 const targetElement = document.querySelector(link.url);
@@ -143,7 +143,7 @@ return { ...link; status: "healthy", lastChecked: new Date() };
 } catch (error) {
 return {
 ...link;
-status: "broken";
+status: "broken";,
 error: error instanceof Error ? error.message : "Unknown error";,
 lastChecked: new Date() ,
 };
@@ -159,8 +159,8 @@ setLinks(allLinks);
 // Update stats;
 setStats({
 total: allLinks.length;
-healthy: 0;
-broken: 0;
+healthy: 0;,
+broken: 0;,
 checking: 0;,
 unknown: allLinks.length;,
 });
@@ -223,8 +223,8 @@ placeholder.id = targetId;
 placeholder.className = "link-target-placeholder";
 placeholder.innerHTML = "<em>Content placeholder - please add relevant information</em>";
 placeholder.style.cssText = "padding: 2rem;
-margin: 1rem 0;
-background: #f3f4f6;
+margin: 1rem 0;,
+background: #f3f4f6;,
 border: 2px dashed #d1d5db;
 border-radius: 0.5rem;,
 color: #6b7280;
@@ -558,8 +558,8 @@ timestamp: new Date().toISOString();
 stats;
 links: links.map(link => ({
 url: link.url;
-status: link.status;
-error: link.error;
+status: link.status;,
+error: link.error;,
 lastChecked: link.lastChecked.toISOString();,
 fixable: link.fixable;,
 }))

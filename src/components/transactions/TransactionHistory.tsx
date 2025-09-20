@@ -14,23 +14,23 @@ import { useCurrency,, ,  } from '@/hooks/useCurrency';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface Transaction {
 provider?: {
-    display_name?: string,
+display_name?: string,
 }
-  service?: {
-    title?: string,
+service?: {
+title?: string,
 }
 }
 export function TransactionHistory() {
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>(
-    () => (safeStorage.getItem('transaction_filter') as any) |'all'
-  )
-  useEffect((,) => {
-    safeStorage.setItem('transaction_filter', filter)
-  }, [filter])
-  const { data: transactions isLoading error refetch } = useQuery({
-    queryKey: ['transactions', user?.id filter]
-    queryFn: async () => {
-  )
-}
+const { user } = useAuth();
+const { toast } = useToast();
+const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>(
+() => (safeStorage.getItem('transaction_filter') as any) |'all';
+)
+useEffect((,) => {
+safeStorage.setItem('transaction_filter', filter)
+}, [filter])
+const { data: transactions isLoading error refetch } = useQuery({
+queryKey: ['transactions', user?.id filter];
+queryFn: async () => {
+)
+}}}

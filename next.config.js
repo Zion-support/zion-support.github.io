@@ -1,80 +1,49 @@
 /** @type {import('next').NextConfig} */
+const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || undefined;
 const nextConfig = {
-  // Enable static export for Netlify
-  output: 'export',
-  trailingSlash: true,
-  
-  // Performance optimizations
-  compress: true,
-  poweredByHeader: false,
-  reactStrictMode: true,
-  
-  // Image optimization
-  images: {
-    unoptimized: true, // Required for static export
-  },
-  
-  // ESLint configuration
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  
-  // TypeScript configuration
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  
-  // Bundle analyzer
-  webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
-      // Optimize bundle size
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      };
-    }
-    return config;
-  },
-  
-  
-  // Experimental features for performance
-  experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
-  },
-  
-  // Security headers
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: [
-          {
-            key: "X-Content-Type-Options",
-            value: "nosniff"
-          },
-          {
-            key: "X-Frame-Options",
-            value: "DENY"
-          },
-          {
-            key: "X-XSS-Protection",
-            value: "1; mode=block"
-          },
-          {
-            key: "Referrer-Policy",
-            value: "origin-when-cross-origin"
-          }
-        ]
-      }
-    ];
-  }
+	reactStrictMode: true,
+	trailingSlash: true,
+	output: 'export',
+	assetPrefix,
+	images: {
+		// Using unoptimized to support static hosting/CDN without Next Image optimization
+		unoptimized: true
+	},
+	// metadataBase is now handled in layout.tsx
+	eslint: {
+		// Allow builds to pass even if there are ESLint errors
+		ignoreDuringBuilds: true,
+		dirs: []
+	},
+	typescript: {
+		// Allow builds to pass even if there are type errors; CI can run type-check separately
+		ignoreBuildErrors: true
+	},
+	// Performance optimizations
+	swcMinify: true,
+	compress: true,
+	poweredByHeader: false,
+	// Redirects are handled by _redirects file for static export compatibility
+	// Additional optimizations
+	experimental: {
+		optimizeCss: true,
+		scrollRestoration: true
+	},
+	// Webpack optimizations
+	webpack: (config, { dev, isServer }) => {
+		// Optimize bundle size
+		if (!dev && !isServer) {
+			config.optimization.splitChunks.cacheGroups = {
+				...config.optimization.splitChunks.cacheGroups,
+				vendor: {
+					test: /[\\/]node_modules[\\/]/,
+					name: 'vendors',
+					chunks: 'all',
+				},
+			};
+		}
+		return config;
+	},
 };
 
 module.exports = nextConfig;

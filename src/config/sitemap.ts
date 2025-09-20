@@ -102,7 +102,7 @@ changeFreq: "monthly", lastmod: currentDate,
 {
 path: "/signup", label: "Sign Up";,
 description: "Create a new account", priority: 0.6;,
-changeFreq: "monthly", lastmod: currentDate;
+changeFreq: "monthly", lastmod: currentDate;,
 children: [
 {,
 path: "/signup/talent", label: "Talent Registration";,
@@ -246,7 +246,7 @@ export const completeSitemap: SitemapItem[] = [
 ];
 
 // Helper function to get appropriate routes based on user role;
-export const getAccessibleRoutes: any = (;
+export const getAccessibleRoutes: any = (;,
 isAuthenticated: boolean;
 userType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin" | null,
 ) => {

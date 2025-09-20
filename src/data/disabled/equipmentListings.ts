@@ -20,7 +20,7 @@ reviewCount: 23;,
 },
 {
 id: "10gbe-switch", title: "48‑Port 10GbE Switch";,
-description: "Enterprise switch delivering ultra‑low latency for mission critical applications.", category: "Networking";
+description: "Enterprise switch delivering ultra‑low latency for mission critical applications.", category: "Networking";,
 price: 6800; currency: "$";,
 tags: ["Layer 3", "SFP+", "Managed"],
 author: {,
@@ -34,7 +34,7 @@ reviewCount: 15;,
 },
 {
 id: "intelligent-pdu", title: "Intelligent Rack PDU";,
-description: "Remotely monitor power consumption with per‑outlet switching and metering.", category: "Power";
+description: "Remotely monitor power consumption with per‑outlet switching and metering.", category: "Power";,
 price: 950; currency: "$";,
 tags: ["Remote", "Metered", "24 Outlets"],
 author: {,
@@ -48,7 +48,7 @@ reviewCount: 32;,
 },
 {
 id: "modular-ups", title: "Modular Online UPS";,
-description: "Scalable uninterrupted power supply with hot‑swappable battery modules.", category: "Power";
+description: "Scalable uninterrupted power supply with hot‑swappable battery modules.", category: "Power";,
 price: 8200; currency: "$";,
 tags: ["Hot Swap", "Scalable", "LCD"],
 author: {,
@@ -63,7 +63,7 @@ reviewCount: 12;,
 },
 {
 id: "fiber-patch-panel", title: "24‑Port Fiber Patch Panel";,
-description: "Rack mount patch panel with LC connectors for organized fiber management.", category: "Networking";
+description: "Rack mount patch panel with LC connectors for organized fiber management.", category: "Networking";,
 price: 480; currency: "$";,
 tags: ["LC", "1U", "Cable Management"],
 author: {,
@@ -77,7 +77,7 @@ reviewCount: 9;,
 },
 {
 id: "precision-cooling", title: "Precision Airflow Cooling Unit";,
-description: "Efficient cooling system designed to maintain optimal rack temperature.", category: "Cooling";
+description: "Efficient cooling system designed to maintain optimal rack temperature.", category: "Cooling";,
 price: 5400; currency: "$";,
 tags: ["Rack Mount", "Variable Speed", "Energy Efficient"],
 author: {,
@@ -92,7 +92,7 @@ reviewCount: 18;,
 },
 {
 id: "blade-server-chassis", title: "Blade Server Chassis";,
-description: "High‑density chassis supporting up to 8 hot-swappable blades for scalable compute.", category: "Servers";
+description: "High‑density chassis supporting up to 8 hot-swappable blades for scalable compute.", category: "Servers";,
 price: 9200; currency: "$";,
 tags: ["8 Blades", "Hot Swap", "Redundant PSU"],
 author: {,
@@ -106,7 +106,7 @@ reviewCount: 11;,
 },
 {
 id: "40gbe-core-switch", title: "40GbE Core Switch";,
-description: "High-performance core switch for enterprise datacenters with advanced routing features.", category: "Networking";
+description: "High-performance core switch for enterprise datacenters with advanced routing features.", category: "Networking";,
 price: 12800; currency: "$";,
 tags: ["Layer 3", "QSFP+", "Redundant Fans"],
 author: {,
@@ -120,7 +120,7 @@ reviewCount: 16;,
 },
 {
 id: "firewall-appliance", title: "Enterprise Firewall Appliance";,
-description: "Next‑generation firewall providing deep packet inspection and intrusion prevention.", category: "Security";
+description: "Next‑generation firewall providing deep packet inspection and intrusion prevention.", category: "Security";,
 price: 6200; currency: "$";,
 tags: ["NGFW", "VPN", "Gigabit"],
 author: {,
@@ -134,7 +134,7 @@ reviewCount: 14;,
 },
 {
 id: "kvm-ip-switch", title: "KVM over IP Switch";,
-description: "Remote management of multiple servers with virtual media support.", category: "Management";
+description: "Remote management of multiple servers with virtual media support.", category: "Management";,
 price: 3100; currency: "$";,
 tags: ["8 Ports", "Virtual Media", "Remote Access"],
 author: {,
@@ -148,7 +148,7 @@ reviewCount: 10;,
 },
 {
 id: "flash-storage-array", title: "All‑Flash Storage Array";,
-description: "Ultra‑fast storage platform delivering millions of IOPS for database workloads.", category: "Storage";
+description: "Ultra‑fast storage platform delivering millions of IOPS for database workloads.", category: "Storage";,
 price: 15000; currency: "$";,
 tags: ["NVMe", "SSD", "Redundant Controller"],
 author: {,
@@ -162,7 +162,7 @@ reviewCount: 20;,
 },
 {
 id: "tape-backup-library", title: "Automated Tape Backup Library";,
-description: "Scalable tape library for reliable long‑term data archiving.", category: "Storage";
+description: "Scalable tape library for reliable long‑term data archiving.", category: "Storage";,
 price: 7600; currency: "$";,
 tags: ["LTO-9", "Redundant Power", "24 Slots"],
 author: {,
@@ -176,7 +176,7 @@ reviewCount: 7;,
 },
 {
 id: "server-rack-42u", title: "42U Server Rack Cabinet";,
-description: "Standard rack cabinet with adjustable rails and locking doors.", category: "Infrastructure";
+description: "Standard rack cabinet with adjustable rails and locking doors.", category: "Infrastructure";,
 price: 1200; currency: "$";,
 tags: ["Adjustable Rails", "Lockable", "Ventilated"],
 author: {,
@@ -190,7 +190,7 @@ reviewCount: 25;,
 },
 {
 id: "dc-monitoring", title: "Data Center Monitoring System";,
-description: "Comprehensive environment and power monitoring with alerting.", category: "Management";
+description: "Comprehensive environment and power monitoring with alerting.", category: "Management";,
 price: 4700; currency: "$";,
 tags: ["Sensors", "Alerts", "Analytics"],
 author: {,
@@ -204,7 +204,7 @@ reviewCount: 13;,
 },
 {
 id: "high-capacity-router", title: "High‑Capacity Edge Router";,
-description: "Carrier-grade router providing advanced QoS and BGP routing capabilities.", category: "Networking";
+description: "Carrier-grade router providing advanced QoS and BGP routing capabilities.", category: "Networking";,
 price: 13400; currency: "$";,
 tags: ["BGP", "10GbE", "Redundant PSU"],
 author: {,
@@ -218,7 +218,7 @@ reviewCount: 17;,
 },
 {
 id: "cable-management-arm", title: "Cable Management Arm";,
-description: "Keeps server rack cabling organized and reduces strain on connections.", category: "Infrastructure";
+description: "Keeps server rack cabling organized and reduces strain on connections.", category: "Infrastructure";,
 price: 160; currency: "$";,
 tags: ["Adjustable", "Tool-Less", "1U"],
 author: {,

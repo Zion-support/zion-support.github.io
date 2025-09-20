@@ -7,19 +7,19 @@ import { completeSitemap } from "../config/sitemap";
 
 export default function SitemapPage() {;
 const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);
-const talentRoutes = completeSitemap.filter(route =>
+const talentRoutes = completeSitemap.filter(route =>;
 route.requiredAuth &&;
 route.requiredRoles &&;
 (route.requiredRoles.includes("jobSeeker") ||;
 route.requiredRoles.includes("creator"));
 );
-const employerRoutes = completeSitemap.filter(route =>
+const employerRoutes = completeSitemap.filter(route =>;
 route.requiredAuth &&;
 route.requiredRoles &&;
 (route.requiredRoles.includes("employer") ||;
 route.requiredRoles.includes("buyer"));
 );
-const adminRoutes = completeSitemap.filter(route =>
+const adminRoutes = completeSitemap.filter(route =>;
 route.requiredAuth &&;
 route.requiredRoles &&;
 route.requiredRoles.includes("admin");
@@ -317,6 +317,7 @@ import { completeSitemap,, dynamicPaths,, ,  } from '@/config/sitemap';
 import Link from 'next/link';
 import { ChevronRight,  } from 'lucide-react'
 import { SEO,, ,  } from './SEO';
-// Map sitemap paths to their actual routes in the application
+// Map sitemap paths to their actual routes in the application;
 // Note: This pathMap might need to be updated based on Next.js page structure,
 const pathMap: Record<string string> = {
+}

@@ -17,8 +17,8 @@ highContrast: boolean;
 largeText: boolean;
 fontSize: number;
 colorBlindMode: "none" | "protanopia" | "deuteranopia" | "tritanopia";
-reducedMotion: boolean;
-screenReader: boolean;
+reducedMotion: boolean;,
+screenReader: boolean;,
 focusIndicator: boolean;,
 keyboardNavigation: boolean;,
 };
@@ -40,16 +40,16 @@ highContrast: false;
 largeText: false;
 fontSize: 16;
 colorBlindMode: "none";
-reducedMotion: false;
-screenReader: false;
+reducedMotion: false;,
+screenReader: false;,
 focusIndicator: true;,
 keyboardNavigation: true;
 ...defaultSettings;
 });
 
 const [notifications; setNotifications] = useState<Array<{
-id: string;
-message: string;
+id: string;,
+message: string;,
 type: "success" | "info" | "warning";,
 timestamp: number;,
 }>>([]);
@@ -162,22 +162,22 @@ return newSettings;
 });
 }, []);
 
-const resetToDefaults = useCallback(() => {
+const resetToDefaults = useCallback(() => {;
 const defaultSettings: AccessibilitySettings = {;
 highContrast: false;
 largeText: false;
 fontSize: 16;
 colorBlindMode: "none";
-reducedMotion: false;
-screenReader: false;
+reducedMotion: false;,
+screenReader: false;,
 focusIndicator: true;,
 keyboardNavigation: true;,
 };
 setSettings(defaultSettings);
 
 const notification = {;
-id: Date.now().toString();
-message: "Accessibility settings reset to defaults";
+id: Date.now().toString();,
+message: "Accessibility settings reset to defaults";,
 type: "info" as const;,
 timestamp: Date.now(),
 };
@@ -503,8 +503,8 @@ position: absolute;
 width: 1px;
 height: 1px;
 padding: 0;
-margin: -1px;
-overflow: hidden;
+margin: -1px;,
+overflow: hidden;,
 clip: rect(0; 0; 0; 0);
 white-space: nowrap;,
 border: 0;,

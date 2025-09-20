@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface LinkHealthResult {
-url: string;
+url: string;,
 status: "healthy" | "unhealthy" | "error";
 statusCode?: number;
 responseTime?: number;
@@ -21,7 +21,7 @@ private config: Required<LinkHealthConfig>;
 
 constructor(config: LinkHealthConfig = {}) {
 this.config = {
-timeout: config.timeout || 10000;
+timeout: config.timeout || 10000;,
 retries: config.retries || 3;,
 userAgent: config.userAgent || "Zion-Tech-Group-Link-Checker/1.0",
 followRedirects: config.followRedirects !== false;,
@@ -33,8 +33,8 @@ const startTime = Date.now();
 
 try {
 const response = await fetch(url, {
-method: "HEAD",
-signal: AbortSignal.timeout(this.config.timeout),
+method: "HEAD",;
+signal: AbortSignal.timeout(this.config.timeout),;
 headers: {;
 "User-Agent": this.config.userAgent;
 },
@@ -120,8 +120,8 @@ lastChecked: new Date(),
 
 getHealthSummary(results: LinkHealthResult[]): {
 total: number;
-healthy: number;
-unhealthy: number;
+healthy: number;,
+unhealthy: number;,
 errors: number;,
 averageResponseTime: number;,
 } {

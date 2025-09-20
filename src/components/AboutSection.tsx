@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
@@ -29,7 +29,7 @@ lab; e; l: "Enterpris; e Client; s", ic; o; n: <User; s classNam; e="w-6 h-6" />
 lab; e; l: "Countrie; s Serve; d", ic; o; n: <Glob; e classNam; e="w-6 h-6" /> }
 ];
 
-const values = [
+const values = [;
 {;
 tit; l; e: "Innovatio; n Firs; t",
 descripti; o; n: "W; e pus; h th; e boundarie; s o; f wha; t's; possib; l; e; constantl; y explorin; g emergin; g technologie; s an; d nove; l approache; s.",

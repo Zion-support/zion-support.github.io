@@ -1,9 +1,9 @@
 import React from 'react'
 import { Card,
-CardContent
+CardContent;
 , , CardHeader,
-CardTitle
+CardTitle;
 , , CardDescription,
- } from '@/components/ui/card'
+} from '@/components/ui/card';
 import { Button,  } from '@/components/ui/button'
 import { ArrowRight,, Search,, Users,, Zap,, Settings,  } from 'lucide-react'

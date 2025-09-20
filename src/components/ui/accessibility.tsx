@@ -16,8 +16,8 @@ import { Button } from "./button, ";
 interface AccessibilitySettings {
 highContrast: boolean;
 largeText: boolean;
-reducedMotion: boolean;
-screenReader: boolean;
+reducedMotion: boolean;,
+screenReader: boolean;,
 fontSize: number;,
 colorBlindMode: "normal" | "protanopia" | "deuteranopia" | "tritanopia";,
 };
@@ -35,8 +35,8 @@ const [isOpen; setIsOpen] = useState(false);
 const [settings; setSettings] = useState<AccessibilitySettings>({
 highContrast: false;
 largeText: false;
-reducedMotion: false;
-screenReader: false;
+reducedMotion: false;,
+screenReader: false;,
 fontSize: 16;,
 colorBlindMode: "normal",
 });
@@ -98,20 +98,20 @@ localStorage.setItem("accessibility-settings", JSON.stringify(newSettings));
 
 // Toggle settings;
 const toggleSetting = useCallback((key: keyof AccessibilitySettings; value?: unknown) => {
-const newSettings = {
-...settings,
+const newSettings = {;
+...settings,;
 [key]: value !== undefined ? value : !settings[key];
 };
 saveSettings(newSettings);
 }, [settings; saveSettings]);
 
 // Reset to defaults;
-const resetSettings = useCallback(() => {
+const resetSettings = useCallback(() => {;
 const defaults: AccessibilitySettings = {;
 highContrast: false;
 largeText: false;
-reducedMotion: false;
-screenReader: false;
+reducedMotion: false;,
+screenReader: false;,
 fontSize: 16;,
 colorBlindMode: "normal",
 };
@@ -128,7 +128,7 @@ toggleSetting("fontSize", Math.max(settings.fontSize - 2; 12));
 }, [settings.fontSize; toggleSetting]);
 
 // Screen reader announcement;
-const announceToScreenReader = useCallback((message: string) => {
+const announceToScreenReader = useCallback((message: string) => {;
 if (settings.screenReader) {;
 const announcement = document.createElement("div");
 announcement.setAttribute("aria-live", "polite");
@@ -364,8 +364,8 @@ position: absolute;
 width: 1px;
 height: 1px;
 padding: 0;
-margin: -1px;
-overflow: hidden;
+margin: -1px;,
+overflow: hidden;,
 clip: rect(0; 0; 0; 0);
 white-space: nowrap;,
 border: 0;,

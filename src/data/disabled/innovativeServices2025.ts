@@ -11,24 +11,24 @@ pricingModel: "one-time" | "monthly" | "yearly" | "per-user" | "per-project";
 features: string[];
 benefits: string[];
 marketPrice: string;
-contactInfo: {
-phone: string;
+contactInfo: {,
+phone: string;,
 email: string;,
 website: string;,
 };
-technology: string[];
+technology: string[];,
 estimatedDelivery: string;,
 supportLevel: "basic" | "standard" | "premium" | "enterprise";,
 }
 
 export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
-{
-id: "ai-autonomous-business-manager";
+{,
+id: "ai-autonomous-business-manager";,
 title: "AI Autonomous Business Manager";,
 description: "Fully autonomous AI system that manages business operations; makes strategic decisions; and optimizes processes in real-time.",
 category: "AI & Automation";
-price: 2500;
-currency: "USD";
+price: 2500;,
+currency: "USD";,
 pricingModel: "monthly";,
 features: [
 "24/7 autonomous business monitoring";
@@ -46,8 +46,8 @@ benefits: [
 "Scalable operations";
 ],
 marketPrice: "$2;500 - $5;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -60,8 +60,8 @@ id: "quantum-neural-network-platform";
 title: "Quantum Neural Network Platform";
 description: "Next-generation quantum computing platform with neural network capabilities for complex problem solving and optimization.";
 category: "Quantum Computing";
-price: 15000;
-currency: "USD";
+price: 15000;,
+currency: "USD";,
 pricingModel: "monthly";,
 features: [
 "Quantum neural processing";
@@ -79,8 +79,8 @@ benefits: [
 "Future-proof technology";
 ],
 marketPrice: "$15;000 - $25;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -89,12 +89,12 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise",
 };
 {
-id: "blockchain-defi-solutions";
+id: "blockchain-defi-solutions";,
 title: "Blockchain DeFi Solutions";,
 description: "Comprehensive blockchain and DeFi platform for financial services; smart contracts; and decentralized applications.",
 category: "Blockchain & DeFi";
-price: 8000;
-currency: "USD";
+price: 8000;,
+currency: "USD";,
 pricingModel: "monthly";,
 features: [
 "Smart contract development";
@@ -112,8 +112,8 @@ benefits: [
 "Innovative financial products";
 ],
 marketPrice: "$8;000 - $15;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -122,12 +122,12 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium",
 };
 {
-id: "iot-data-analytics-platform";
+id: "iot-data-analytics-platform";,
 title: "IoT Data Analytics Platform";,
 description: "Advanced IoT platform with real-time data analytics; predictive maintenance; and intelligent automation.",
 category: "IoT & Analytics";
-price: 5000;
-currency: "USD";
+price: 5000;,
+currency: "USD";,
 pricingModel: "monthly";,
 features: [
 "Real-time IoT monitoring";
@@ -145,8 +145,8 @@ benefits: [
 "Scalable infrastructure";
 ],
 marketPrice: "$5;000 - $10;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -155,12 +155,12 @@ estimatedDelivery: "3-5 weeks";,
 supportLevel: "standard",
 };
 {
-id: "ai-cybersecurity-automation";
+id: "ai-cybersecurity-automation";,
 title: "AI Cybersecurity Automation";,
 description: "Intelligent cybersecurity platform that automatically detects; prevents; and responds to threats using AI.",
 category: "Cybersecurity";
-price: 12000;
-currency: "USD";
+price: 12000;,
+currency: "USD";,
 pricingModel: "monthly";,
 features: [
 "AI threat detection";
@@ -178,8 +178,8 @@ benefits: [
 "Cost-effective security";
 ],
 marketPrice: "$12;000 - $20;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
@@ -194,7 +194,7 @@ export const INNOVATIVE_SERVICE_CATEGORIES = [
 "Blockchain & DeFi",
 "IoT & Analytics",
 "Cybersecurity",
-"Cloud Infrastructure",
-"Data Science",
+"Cloud Infrastructure",;
+"Data Science",;
 "Machine Learning";
 ];

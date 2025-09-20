@@ -1,8 +1,8 @@
 import React from "react";
 
 export interface ServiceContact {
-phone: string;
-email: string;
+phone: string;,
+email: string;,
 website: string;,
 address: string;,
 }
@@ -36,8 +36,8 @@ maintenanceIncluded: boolean;
 trainingIncluded: boolean;
 documentationProvided: boolean;
 warrantyPeriod: string;
-disasterRecovery: boolean;
-backupSolutions: boolean;
+disasterRecovery: boolean;,
+backupSolutions: boolean;,
 monitoringTools: boolean;,
 reportingCapabilities: boolean;,
 }
@@ -45,11 +45,11 @@ reportingCapabilities: boolean;,
 // Enhanced IT Services for 2025;
 export const enhancedITServices2025: ITService[] = [
 {
-id: 1;
-name: "Cloud Migration & Strategy";
+id: 1;,
+name: "Cloud Migration & Strategy";,
 category: "Cloud Services";,
 description: "Comprehensive cloud migration services with strategy planning; implementation; and optimization for modern businesses",
-hourlyRate: 150;
+hourlyRate: 150;,
 projectRate: 25000;,
 features: [
 "Cloud strategy assessment";
@@ -72,17 +72,17 @@ benefits: [
 targetAudience: ["Enterprises", "SMBs", "Startups", "Government", "Healthcare"],
 tags: ["Cloud Migration", "AWS", "Azure", "GCP", "Strategy", "Implementation"],
 contactInfo: {
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/cloud-migration";,
 address: "364 E Main St STE 1008 Middletown DE 19709",
 };
 marketPrice: "$150-250/hour, $25K-100K per project",
 competitors: ["Accenture", "Deloitte", "AWS Professional Services"],
-responseTime: "4 hours";
+responseTime: "4 hours";,
 sla: "99.9% uptime guarantee";,
 certifications: ["AWS Solutions Architect", "Azure Solutions Architect", "GCP Professional Cloud Architect"],
-deliveryTime: "4-12 weeks";
+deliveryTime: "4-12 weeks";,
 support: "24/7 support included";,
 expertise: ["Cloud Architecture", "DevOps", "Security", "Performance Optimization"],
 technologies: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"],
@@ -94,17 +94,17 @@ maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
 warrantyPeriod: "1 year";
-disasterRecovery: true;
-backupSolutions: true;
+disasterRecovery: true;,
+backupSolutions: true;,
 monitoringTools: true;,
 reportingCapabilities: true;,
 };
 {
-id: 2;
-name: "Cybersecurity Assessment & Implementation";
+id: 2;,
+name: "Cybersecurity Assessment & Implementation";,
 category: "Cybersecurity";,
 description: "Comprehensive cybersecurity services including assessment; implementation; and ongoing monitoring for enterprise security",
-hourlyRate: 175;
+hourlyRate: 175;,
 projectRate: 35000;,
 features: [
 "Security assessment";
@@ -127,17 +127,17 @@ benefits: [
 targetAudience: ["Enterprises", "Healthcare", "Financial Services", "Government", "Manufacturing"],
 tags: ["Cybersecurity", "Security Assessment", "Compliance", "Threat Detection", "Incident Response"],
 contactInfo: {
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/cybersecurity";,
 address: "364 E Main St STE 1008 Middletown DE 19709",
 };
 marketPrice: "$175-300/hour, $35K-150K per project",
 competitors: ["PwC", "KPMG", "Deloitte Cyber"],
-responseTime: "2 hours for critical issues";
+responseTime: "2 hours for critical issues";,
 sla: "99.99% security guarantee";,
 certifications: ["CISSP", "CISM", "CEH", "CompTIA Security+"],
-deliveryTime: "6-16 weeks";
+deliveryTime: "6-16 weeks";,
 support: "24/7 security operations center";,
 expertise: ["Threat Intelligence", "Incident Response", "Compliance", "Security Architecture"],
 technologies: ["SIEM", "EDR", "Firewalls", "IDS/IPS", "Vulnerability scanners"],
@@ -149,17 +149,17 @@ maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
 warrantyPeriod: "1 year";
-disasterRecovery: true;
-backupSolutions: true;
+disasterRecovery: true;,
+backupSolutions: true;,
 monitoringTools: true;,
 reportingCapabilities: true;,
 };
 {
-id: 3;
-name: "DevOps Implementation & Automation";
+id: 3;,
+name: "DevOps Implementation & Automation";,
 category: "DevOps";,
 description: "End-to-end DevOps implementation with CI/CD pipelines; automation; and infrastructure as code for modern development teams",
-hourlyRate: 140;
+hourlyRate: 140;,
 projectRate: 20000;,
 features: [
 "CI/CD pipeline setup";
@@ -182,17 +182,17 @@ benefits: [
 targetAudience: ["Development Teams", "Startups", "Enterprises", "Tech Companies", "Financial Services"],
 tags: ["DevOps", "CI/CD", "Automation", "Infrastructure", "Monitoring"],
 contactInfo: {
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/devops";,
 address: "364 E Main St STE 1008 Middletown DE 19709",
 };
 marketPrice: "$140-200/hour, $20K-80K per project",
 competitors: ["ThoughtWorks", "Red Hat", "Atlassian"],
-responseTime: "8 hours";
+responseTime: "8 hours";,
 sla: "99.5% uptime guarantee";,
 certifications: ["AWS DevOps Engineer", "Azure DevOps Engineer", "Kubernetes Administrator"],
-deliveryTime: "3-8 weeks";
+deliveryTime: "3-8 weeks";,
 support: "Business hours + emergency support";,
 expertise: ["CI/CD", "Infrastructure", "Automation", "Monitoring", "Security"],
 technologies: ["Jenkins", "GitLab CI", "Kubernetes", "Docker", "Terraform", "Ansible"],
@@ -204,17 +204,17 @@ maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
 warrantyPeriod: "6 months";
-disasterRecovery: true;
-backupSolutions: true;
+disasterRecovery: true;,
+backupSolutions: true;,
 monitoringTools: true;,
 reportingCapabilities: true;,
 };
 {
-id: 4;
-name: "Data Center Design & Implementation";
+id: 4;,
+name: "Data Center Design & Implementation";,
 category: "Infrastructure";,
 description: "Comprehensive data center services including design; implementation; and management for enterprise-grade infrastructure",
-hourlyRate: 160;
+hourlyRate: 160;,
 projectRate: 50000;,
 features: [
 "Data center design";
@@ -237,17 +237,17 @@ benefits: [
 targetAudience: ["Enterprises", "Government", "Healthcare", "Financial Services", "Manufacturing"],
 tags: ["Data Center", "Infrastructure", "Network", "Storage", "Security"],
 contactInfo: {
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/data-center";,
 address: "364 E Main St STE 1008 Middletown DE 19709",
 };
 marketPrice: "$160-250/hour, $50K-500K per project",
 competitors: ["HPE", "Dell", "Cisco", "IBM"],
-responseTime: "4 hours";
+responseTime: "4 hours";,
 sla: "99.99% uptime guarantee";,
 certifications: ["Cisco CCNP", "VMware VCP", "Microsoft MCSE"],
-deliveryTime: "8-24 weeks";
+deliveryTime: "8-24 weeks";,
 support: "24/7 support included";,
 expertise: ["Data Center Design", "Network Architecture", "Storage", "Security", "Power Management"],
 technologies: ["Cisco", "VMware", "Microsoft", "HPE", "Dell", "NetApp"],
@@ -259,8 +259,8 @@ maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
 warrantyPeriod: "3 years";
-disasterRecovery: true;
-backupSolutions: true;
+disasterRecovery: true;,
+backupSolutions: true;,
 monitoringTools: true;,
 reportingCapabilities: true;,
 };
@@ -268,8 +268,8 @@ reportingCapabilities: true;,
 id: 5;
 name: "Network Security & Firewall Implementation";
 category: "Network Security";
-description: "Advanced network security services with next-generation firewall implementation and comprehensive security architecture";
-hourlyRate: 145;
+description: "Advanced network security services with next-generation firewall implementation and comprehensive security architecture";,
+hourlyRate: 145;,
 projectRate: 18000;,
 features: [
 "Security assessment";
@@ -292,17 +292,17 @@ benefits: [
 targetAudience: ["Enterprises", "Healthcare", "Financial Services", "Education", "Government"],
 tags: ["Network Security", "Firewall", "VPN", "Intrusion Detection", "Compliance"],
 contactInfo: {
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/network-security";,
 address: "364 E Main St STE 1008 Middletown DE 19709",
 };
 marketPrice: "$145-200/hour, $18K-75K per project",
 competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
-responseTime: "4 hours";
+responseTime: "4 hours";,
 sla: "99.9% security guarantee";,
 certifications: ["Cisco CCNP Security", "Palo Alto Networks", "CompTIA Security+"],
-deliveryTime: "2-6 weeks";
+deliveryTime: "2-6 weeks";,
 support: "Business hours + emergency support";,
 expertise: ["Network Security", "Firewall Management", "VPN", "Intrusion Detection"],
 technologies: ["Cisco ASA", "Palo Alto Networks", "Fortinet", "Check Point", "OpenVPN"],
@@ -314,17 +314,17 @@ maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
 warrantyPeriod: "1 year";
-disasterRecovery: true;
-backupSolutions: true;
+disasterRecovery: true;,
+backupSolutions: true;,
 monitoringTools: true;,
 reportingCapabilities: true;,
 };
 {
-id: 6;
-name: "Business Intelligence & Analytics Implementation";
+id: 6;,
+name: "Business Intelligence & Analytics Implementation";,
 category: "Data & Analytics";,
 description: "Comprehensive BI and analytics implementation with data warehousing; reporting; and advanced analytics capabilities",
-hourlyRate: 155;
+hourlyRate: 155;,
 projectRate: 30000;,
 features: [
 "Data assessment";
@@ -347,17 +347,17 @@ benefits: [
 targetAudience: ["Enterprises", "Financial Services", "Healthcare", "Retail", "Manufacturing"],
 tags: ["Business Intelligence", "Analytics", "Data Warehouse", "Reporting", "ETL"],
 contactInfo: {
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/bi-analytics";,
 address: "364 E Main St STE 1008 Middletown DE 19709",
 };
 marketPrice: "$155-225/hour, $30K-120K per project",
 competitors: ["Deloitte", "Accenture", "PwC", "Tableau Professional Services"],
-responseTime: "8 hours";
+responseTime: "8 hours";,
 sla: "99.5% availability guarantee";,
 certifications: ["Microsoft Power BI", "Tableau", "Snowflake", "AWS Data Analytics"],
-deliveryTime: "6-16 weeks";
+deliveryTime: "6-16 weeks";,
 support: "Business hours + emergency support";,
 expertise: ["Data Architecture", "ETL", "Reporting", "Analytics", "Data Governance"],
 technologies: ["Power BI", "Tableau", "Snowflake", "AWS", "Azure", "SQL Server"],
@@ -369,8 +369,8 @@ maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
 warrantyPeriod: "1 year";
-disasterRecovery: true;
-backupSolutions: true;
+disasterRecovery: true;,
+backupSolutions: true;,
 monitoringTools: true;,
 reportingCapabilities: true;,
 };
@@ -378,8 +378,8 @@ reportingCapabilities: true;,
 id: 7;
 name: "Mobile App Development & Integration";
 category: "Mobile Development";
-description: "End-to-end mobile application development with native and cross-platform solutions for iOS and Android";
-hourlyRate: 120;
+description: "End-to-end mobile application development with native and cross-platform solutions for iOS and Android";,
+hourlyRate: 120;,
 projectRate: 15000;,
 features: [
 "App design & development";
@@ -402,17 +402,17 @@ benefits: [
 targetAudience: ["Startups", "SMBs", "Enterprises", "Healthcare", "Financial Services"],
 tags: ["Mobile Development", "iOS", "Android", "Cross-platform", "API Integration"],
 contactInfo: {
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/mobile-development";,
 address: "364 E Main St STE 1008 Middletown DE 19709",
 };
 marketPrice: "$120-180/hour, $15K-100K per project",
 competitors: ["Appinventiv", "Fueled", "Y Media Labs", "Dom & Tom"],
-responseTime: "24 hours";
+responseTime: "24 hours";,
 sla: "99% availability guarantee";,
 certifications: ["Apple Developer", "Google Developer", "React Native", "Flutter"],
-deliveryTime: "8-20 weeks";
+deliveryTime: "8-20 weeks";,
 support: "Business hours + emergency support";,
 expertise: ["iOS Development", "Android Development", "Cross-platform", "UI/UX", "API Integration"],
 technologies: ["Swift", "Kotlin", "React Native", "Flutter", "Node.js", "Firebase"],
@@ -424,17 +424,17 @@ maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
 warrantyPeriod: "6 months";
-disasterRecovery: false;
-backupSolutions: true;
+disasterRecovery: false;,
+backupSolutions: true;,
 monitoringTools: true;,
 reportingCapabilities: true;,
 };
 {
-id: 8;
-name: "IT Consulting & Digital Transformation";
+id: 8;,
+name: "IT Consulting & Digital Transformation";,
 category: "Consulting";,
 description: "Strategic IT consulting services for digital transformation; technology assessment; and strategic planning",
-hourlyRate: 200;
+hourlyRate: 200;,
 projectRate: 40000;,
 features: [
 "Technology assessment";
@@ -457,17 +457,17 @@ benefits: [
 targetAudience: ["Enterprises", "Government", "Healthcare", "Financial Services", "Manufacturing"],
 tags: ["IT Consulting", "Digital Transformation", "Strategy", "Technology Assessment", "Change Management"],
 contactInfo: {
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/it-consulting";,
 address: "364 E Main St STE 1008 Middletown DE 19709",
 };
 marketPrice: "$200-300/hour, $40K-200K per project",
 competitors: ["McKinsey", "BCG", "Bain", "Deloitte Digital"],
-responseTime: "24 hours";
+responseTime: "24 hours";,
 sla: "Professional service guarantee";,
 certifications: ["PMP", "ITIL", "TOGAF", "Agile"],
-deliveryTime: "4-20 weeks";
+deliveryTime: "4-20 weeks";,
 support: "Business hours + scheduled meetings";,
 expertise: ["Digital Strategy", "Technology Assessment", "Change Management", "Project Management"],
 technologies: ["Enterprise Architecture", "Cloud Platforms", "Digital Tools", "Analytics"],
@@ -479,17 +479,17 @@ maintenanceIncluded: false;
 trainingIncluded: true;
 documentationProvided: true;
 warrantyPeriod: "N/A";
-disasterRecovery: false;
-backupSolutions: false;
+disasterRecovery: false;,
+backupSolutions: false;,
 monitoringTools: false;,
 reportingCapabilities: true;,
 };
 {
-id: 9;
-name: "Managed IT Services & Support";
+id: 9;,
+name: "Managed IT Services & Support";,
 category: "Managed Services";,
 description: "Comprehensive managed IT services including 24/7 monitoring; support; and proactive maintenance for businesses",
-hourlyRate: 85;
+hourlyRate: 85;,
 projectRate: 12000;,
 features: [
 "24/7 monitoring";
@@ -512,17 +512,17 @@ benefits: [
 targetAudience: ["SMBs", "Enterprises", "Healthcare", "Financial Services", "Manufacturing"],
 tags: ["Managed Services", "24/7 Support", "Monitoring", "Maintenance", "Help Desk"],
 contactInfo: {
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/managed-services";,
 address: "364 E Main St STE 1008 Middletown DE 19709",
 };
 marketPrice: "$85-150/hour, $12K-60K per month",
 competitors: ["Datto", "ConnectWise", "Kaseya", "SolarWinds"],
-responseTime: "1 hour for critical issues";
+responseTime: "1 hour for critical issues";,
 sla: "99.9% uptime guarantee";,
 certifications: ["ITIL", "CompTIA", "Microsoft", "Cisco"],
-deliveryTime: "2-4 weeks";
+deliveryTime: "2-4 weeks";,
 support: "24/7 support included";,
 expertise: ["IT Infrastructure", "Network Management", "Security", "Support"],
 technologies: ["RMM tools", "PSA platforms", "Monitoring tools", "Security tools"],
@@ -534,8 +534,8 @@ maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
 warrantyPeriod: "Ongoing";
-disasterRecovery: true;
-backupSolutions: true;
+disasterRecovery: true;,
+backupSolutions: true;,
 monitoringTools: true;,
 reportingCapabilities: true;,
 };
@@ -543,8 +543,8 @@ reportingCapabilities: true;,
 id: 10;
 name: "Web Application Development & Hosting";
 category: "Web Development";
-description: "Full-stack web application development with modern technologies and enterprise-grade hosting solutions";
-hourlyRate: 110;
+description: "Full-stack web application development with modern technologies and enterprise-grade hosting solutions";,
+hourlyRate: 110;,
 projectRate: 18000;,
 features: [
 "Full-stack development";
@@ -567,17 +567,17 @@ benefits: [
 targetAudience: ["Startups", "SMBs", "Enterprises", "E-commerce", "Healthcare"],
 tags: ["Web Development", "Full-stack", "Responsive Design", "API", "Hosting"],
 contactInfo: {
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/web-development";,
 address: "364 E Main St STE 1008 Middletown DE 19709",
 };
 marketPrice: "$110-170/hour, $18K-80K per project",
 competitors: ["Toptal", "Upwork", "Freelancer", "Agency rates"],
-responseTime: "24 hours";
+responseTime: "24 hours";,
 sla: "99.5% uptime guarantee";,
 certifications: ["Microsoft", "AWS", "Google Cloud", "React", "Node.js"],
-deliveryTime: "6-16 weeks";
+deliveryTime: "6-16 weeks";,
 support: "Business hours + emergency support";,
 expertise: ["Frontend Development", "Backend Development", "Database Design", "DevOps"],
 technologies: ["React", "Node.js", "Python", "PostgreSQL", "AWS", "Docker"],
@@ -589,8 +589,8 @@ maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
 warrantyPeriod: "6 months";
-disasterRecovery: true;
-backupSolutions: true;
+disasterRecovery: true;,
+backupSolutions: true;,
 monitoringTools: true;,
 reportingCapabilities: true;,
 }

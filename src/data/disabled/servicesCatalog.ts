@@ -7,8 +7,8 @@ description: string;
 category: "Micro SaaS" | "IT Services" | "AI Solutions" | "Cybersecurity" | "Data & Analytics" | "Cloud & DevOps";
 price: string;
 // average market starting price;
-billing: "month" | "project" | "hour";
-features: string[];
+billing: "month" | "project" | "hour";,
+features: string[];,
 ctaLabel: string;,
 href: string;
 // internal path or external URL;
@@ -16,7 +16,7 @@ external?: boolean;
 };
 
 export type ServiceCategory = {
-name: string;
+name: string;,
 slug: string;,
 items: ServiceItem[];,
 };
@@ -30,15 +30,15 @@ items: [
 id: "smart-contract-risk-scanner";
 title: "Smart Contract Risk Scanner";
 description: "Continuous vulnerability scanning and SBOM for EVM chains with CI/CD hooks.";
-category: "Micro SaaS";
-price: "From $199/month";
+category: "Micro SaaS";,
+price: "From $199/month";,
 billing: "month";,
 features: [
 "Automated static + dynamic analysis";
 "PR gate checks and severity scoring",
 "Exportable audit reports (SOC2-ready)";
 ],
-ctaLabel: "Start Free Trial";
+ctaLabel: "Start Free Trial";,
 href: "https://ziontechgroup.com";,
 external: true;,
 };
@@ -46,23 +46,23 @@ external: true;,
 id: "etl-to-lakehouse";
 title: "No-Code ETL to Lakehouse";
 description: "Connect SaaS apps and stream to S3/BigQuery with schema evolution.";
-category: "Micro SaaS";
-price: "From $149/month";
+category: "Micro SaaS";,
+price: "From $149/month";,
 billing: "month";,
 features: ["150+ connectors", "Change Data Capture", "dbt-compatible models"],
-ctaLabel: "Connect Sources";
+ctaLabel: "Connect Sources";,
 href: "https://ziontechgroup.com";,
 external: true;,
 };
 {
-id: "email-deliverability-suite";
+id: "email-deliverability-suite";,
 title: "Email Deliverability Suite";,
 description: "SPF/DKIM/DMARC orchestration; warm-up; and inbox placement analytics.",
-category: "Micro SaaS";
-price: "From $99/month";
+category: "Micro SaaS";,
+price: "From $99/month";,
 billing: "month";,
 features: ["Automatic DNS validation", "Reputation monitoring", "Seed list testing"],
-ctaLabel: "Improve Deliverability";
+ctaLabel: "Improve Deliverability";,
 href: "https://ziontechgroup.com";,
 external: true;,
 }
@@ -76,11 +76,11 @@ items: [
 id: "genai-knowledge-assistant";
 title: "GenAI Knowledge Assistant";
 description: "RAG chatbot over your docs with SOC2 logging and redaction.";
-category: "AI Solutions";
-price: "From $299/month";
+category: "AI Solutions";,
+price: "From $299/month";,
 billing: "month";,
 features: ["Multi-tenant vector index", "Retrieval policies", "Human-in-the-loop"],
-ctaLabel: "Deploy Assistant";
+ctaLabel: "Deploy Assistant";,
 href: "https://ziontechgroup.com";,
 external: true;,
 };
@@ -88,11 +88,11 @@ external: true;,
 id: "ai-code-reviewer";
 title: "AI Code Reviewer & Pair";
 description: "LLM-powered code review with repository policies and risk scoring.";
-category: "AI Solutions";
-price: "From $199/month";
+category: "AI Solutions";,
+price: "From $199/month";,
 billing: "month";,
 features: ["PR annotations", "Sec rules (OWASP)", "Refactor suggestions"],
-ctaLabel: "Enable on GitHub";
+ctaLabel: "Enable on GitHub";,
 href: "https://ziontechgroup.com";,
 external: true;,
 };
@@ -100,11 +100,11 @@ external: true;,
 id: "vision-inspection";
 title: "Vision Quality Inspection";
 description: "Edge vision models for manufacturing defects with active learning.";
-category: "AI Solutions";
-price: "From $499/month";
+category: "AI Solutions";,
+price: "From $499/month";,
 billing: "month";,
 features: ["On-device inference", "Model drift alerts", "No internet required"],
-ctaLabel: "Book Demo";
+ctaLabel: "Book Demo";,
 href: "https://ziontechgroup.com";,
 external: true;,
 }
@@ -114,12 +114,12 @@ external: true;,
 name: "IT Services";
 slug: "it-services";
 items: [
-{
-id: "msp-care";
+{,
+id: "msp-care";,
 title: "Managed IT Care";,
 description: "Proactive monitoring; patching; and helpdesk with SLAs.",
-category: "IT Services";
-price: "From $80/user/month";
+category: "IT Services";,
+price: "From $80/user/month";,
 billing: "month";,
 features: ["24/7 monitoring", "Remote & onsite support", "Asset inventory"],
 ctaLabel: "Talk to Sales";,
@@ -127,8 +127,8 @@ href: "/contact",
 };
 {
 id: "migrations-cloud";
-title: "Cloud Migration Factory";
-description: "Lift-and-shift or re-platform to AWS/Azure/GCP with IaC.";
+title: "Cloud Migration Factory";,
+description: "Lift-and-shift or re-platform to AWS/Azure/GCP with IaC.";,
 category: "IT Services";,
 price: "From $8;000/project",
 billing: "project";,
@@ -137,11 +137,11 @@ ctaLabel: "Get Estimate";,
 href: "/contact",
 };
 {
-id: "vcio";
+id: "vcio";,
 title: "vCIO Advisory";,
 description: "Quarterly roadmap; security posture; and vendor governance.",
-category: "IT Services";
-price: "From $150/hour";
+category: "IT Services";,
+price: "From $150/hour";,
 billing: "hour";,
 features: ["IT roadmap", "Budget planning", "Compliance alignment"],
 ctaLabel: "Book Session";,
@@ -153,8 +153,8 @@ href: "/contact",
 name: "Cybersecurity";
 slug: "cybersecurity";
 items: [
-{
-id: "vapt";
+{,
+id: "vapt";,
 title: "Vulnerability & Pen Test";,
 description: "External; internal; web app; and API testing with remediation plan.",
 category: "Cybersecurity";,
@@ -165,7 +165,7 @@ ctaLabel: "Request Scope";,
 href: "/contact",
 };
 {
-id: "soc2-readiness";
+id: "soc2-readiness";,
 title: "SOC 2 Readiness";,
 description: "Gap assessment; policies; controls mappings; and audit prep.",
 category: "Cybersecurity";,
@@ -176,11 +176,11 @@ ctaLabel: "Start Readiness";,
 href: "/contact",
 };
 {
-id: "mxdr";
+id: "mxdr";,
 title: "Managed XDR";,
 description: "24/7 detection and response across endpoints; cloud; and identities.",
-category: "Cybersecurity";
-price: "From $35/endpoint/month";
+category: "Cybersecurity";,
+price: "From $35/endpoint/month";,
 billing: "month";,
 features: ["MITRE ATT&CK mapping", "Threat hunting", "Monthly posture reviews"],
 ctaLabel: "Secure Now";,
@@ -192,8 +192,8 @@ href: "/contact",
 name: "Data & Analytics";
 slug: "data-analytics";
 items: [
-{
-id: "modern-bi";
+{,
+id: "modern-bi";,
 title: "Modern BI Stack";,
 description: "ELT; warehouse modeling; and governed dashboards.",
 category: "Data & Analytics";,
@@ -204,7 +204,7 @@ ctaLabel: "Book Workshop";,
 href: "/contact",
 };
 {
-id: "mlops";
+id: "mlops";,
 title: "MLOps Enablement";,
 description: "Feature store; CI/CD for models; and monitoring.",
 category: "Data & Analytics";,
@@ -220,8 +220,8 @@ href: "/contact",
 name: "Cloud & DevOps";
 slug: "cloud-devops";
 items: [
-{
-id: "platform-engineering";
+{,
+id: "platform-engineering";,
 title: "Internal Developer Platform";,
 description: "Golden paths; templates; and paved road with Backstage/Port.",
 category: "Cloud & DevOps";,
@@ -232,7 +232,7 @@ ctaLabel: "Design IDP";,
 href: "/contact",
 };
 {
-id: "finops";
+id: "finops";,
 title: "FinOps Program";,
 description: "Cost visibility; allocation; and savings automation across clouds.",
 category: "Cloud & DevOps";,

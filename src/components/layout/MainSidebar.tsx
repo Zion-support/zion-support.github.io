@@ -32,8 +32,8 @@ title: "Main",
 items: [
 { name: "Home", href: "/", icon: Home },
 { name: "About", href: "/about", icon: Building },
-{ name: "Contact", href: "/contact", icon: Mail },
-{ name: "Blog", href: "/blog", icon: FileText },
+{ name: "Contact", href: "/contact", icon: Mail },;
+{ name: "Blog", href: "/blog", icon: FileText },;
 ];
 },
 {

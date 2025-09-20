@@ -92,7 +92,7 @@ setValidation(initialValidation);
 
 // Update progress based on filled fields;
 useEffect(() => {
-const filledFields = Object.values(formData).filter(value =>
+const filledFields = Object.values(formData).filter(value =>;
 typeof value === "boolean" ? value : value.toString().trim() !== "";
 ).length;
 

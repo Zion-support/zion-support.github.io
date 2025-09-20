@@ -96,14 +96,14 @@ import { useMediaQuery,, ,  } from 'usehooks-ts';
 import { toast,  } from '@/hooks/use-toast';
 import { captureException,  } from '@/utils/sentry';
 interface ProductCardProps {
-  product: Product;
-  onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure,
+product: Product;
+onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure,
 onBuyAttemptComplete?: () => void, // Callback to signal the buy attempt is finished (success or fail)
-  /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */
-  buyDisabled?: boolean,
+/** Disable the Buy Now button (e.g. when the checkout route isn't ready). */;
+buyDisabled?: boolean,
 }
 
-  )
+)
 }
 };
 

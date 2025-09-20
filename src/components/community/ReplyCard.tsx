@@ -55,3 +55,4 @@ import { Badge,  } from "@/components/ui/badge",
 import { ForumReply,  } from "@/types/community";
 import { cn,  } from "@/lib/utils";
 interface ReplyCardProps {
+}

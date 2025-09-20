@@ -38,7 +38,7 @@ document.body.style.overflow = "unset";
 };
 }, [isOp; e; n; onTogg; l; e]);
 
-const navigationItems = [
+const navigationItems = [;
 {;
 lab; e; l: "Service; s",
 hr; e; f: "/service; s",

@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface MicroSaasService {
-id: string; title: string; description: string; category: string; marketPrice: string; website: string; contactEmail: string; marketPrice: string; website: string; contactEmail: string; marketPrice: string; website: string; contactEmail: string; tags: string[], aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; featured: boolean; location: string; availability: string; featured: boolean; location: string; availability: string; author: {
+id: string; title: string; description: string; category: string; marketPrice: string; website: string; contactEmail: string; marketPrice: string; website: string; contactEmail: string; marketPrice: string; website: string; contactEmail: string; tags: string[], aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; featured: boolean; location: string; availability: string; featured: boolean; location: string; availability: string; author: {,
 name: string; id: string;
 avatarUrl?: string;,
 verified: boolean; verified: boolean; verified: boolean,
@@ -390,13 +390,13 @@ features: [
 "Customer satisfaction tracking",
 "Multi-channel support",
 "Knowledge base",
-pricing: {
+pricing: {,
 monthly: number; yearly: number; currency: string;,
 features: string[],
 };
 features: string[], benefits: string[];,
 useCases: string[], targetAudience: string[];,
-integration: string[], support: string[];
+integration: string[], support: string[];,
 link: string;
 badge?: string;,
 icon: string;,
@@ -408,8 +408,8 @@ id: "ai-content-generator",
 title: "AI Content Generator Pro",
 description: "Generate high-quality; SEO-optimized content for blogs; social media; and marketing campaigns using advanced AI.",
 category: "Content & Marketing",
-pricing: {
-monthly: 29;
+pricing: {,
+monthly: 29;,
 yearly: 290;,
 currency: "$",
 features: ["Unlimited content generation", "SEO optimization", "Multi-language support", "Brand voice customization"];
@@ -447,7 +447,7 @@ id: "smart-invoice-manager",
 title: "Smart Invoice Manager",
 description: "Automated invoice processing; expense tracking; and financial reporting for small to medium businesses.",
 category: "Finance & Accounting",
-pricing: {
+pricing: {,
 monthly: 19; yearly: 190;,
 currency: "$",
 features: ["Unlimited invoices", "Expense tracking", "Financial reports", "Multi-currency support"];
@@ -484,7 +484,7 @@ id: "project-collaboration-hub",
 title: "Project Collaboration Hub",
 description: "Streamlined project management with real-time collaboration; task tracking; and team communication tools.",
 category: "Project Management",
-pricing: {
+pricing: {,
 monthly: 25; yearly: 250;,
 currency: "$",
 features: ["Unlimited projects", "Team collaboration", "File sharing", "Time tracking"];
@@ -522,7 +522,7 @@ id: "ai-customer-support",
 title: "AI Customer Support Suite",
 description: "Intelligent customer support automation with chatbots; ticket management; and analytics.",
 category: "Customer Support",
-pricing: {
+pricing: {,
 monthly: 39; yearly: 390;,
 currency: "$",
 features: ["Unlimited conversations", "AI chatbot", "Ticket management", "Analytics dashboard"];
@@ -559,7 +559,7 @@ id: "data-analytics-platform",
 title: "Data Analytics Platform",
 description: "Comprehensive data analytics and visualization platform for business intelligence and decision making.",
 category: "Analytics & BI",
-pricing: {
+pricing: {,
 monthly: 49; yearly: 490;,
 currency: "$",
 features: ["Unlimited data sources", "Custom dashboards", "Real-time analytics", "Advanced reporting"];
@@ -596,7 +596,7 @@ id: "ai-recruitment-assistant",
 title: "AI Recruitment Assistant",
 description: "Intelligent hiring platform that automates candidate screening; matching; and interview scheduling.",
 category: "HR & Recruitment",
-pricing: {
+pricing: {,
 monthly: 35; yearly: 350;,
 currency: "$",
 features: ["Unlimited job postings", "AI candidate matching", "Interview scheduling", "Analytics dashboard"];
@@ -634,7 +634,7 @@ id: "cybersecurity-monitor",
 title: "Cybersecurity Monitor",
 description: "Real-time threat detection; vulnerability assessment; and security compliance monitoring.",
 category: "Cybersecurity",
-pricing: {
+pricing: {,
 monthly: 45; yearly: 450;,
 currency: "$",
 features: ["Threat monitoring", "Vulnerability scanning", "Compliance reporting", "Security alerts"];
@@ -671,7 +671,7 @@ id: "cloud-cost-optimizer",
 title: "Cloud Cost Optimizer",
 description: "Intelligent cloud cost management and optimization for AWS; Azure; and Google Cloud platforms.",
 category: "Cloud Management",
-pricing: {
+pricing: {,
 monthly: 30; yearly: 300;,
 currency: "$",
 features: ["Multi-cloud monitoring", "Cost optimization", "Resource management", "Budget alerts"];
@@ -708,7 +708,7 @@ id: "ai-marketing-automation",
 title: "AI Marketing Automation",
 description: "Intelligent marketing automation with AI-powered personalization; campaign optimization; and analytics.",
 category: "Marketing Automation",
-pricing: {
+pricing: {,
 monthly: 55; yearly: 550;,
 currency: "$",
 features: ["Unlimited campaigns", "AI personalization", "Advanced analytics", "Multi-channel marketing"];
@@ -746,7 +746,7 @@ id: "api-management-platform",
 title: "API Management Platform",
 description: "Comprehensive API development; testing; monitoring; and documentation platform for developers.",
 category: "Developer Tools",
-pricing: {
+pricing: {,
 monthly: 40; yearly: 400;,
 currency: "$",
 features: ["Unlimited APIs", "Testing tools", "Performance monitoring", "Developer portal"];

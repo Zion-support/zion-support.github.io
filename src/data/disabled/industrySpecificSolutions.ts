@@ -4,7 +4,7 @@ id: string; title: string; description: string; industry: string; category: stri
 features: string[], benefits: string[];,
 useCases: string[], targetAudience: string[];,
 tags: string[], estimatedDelivery: string;,
-supportLevel: "basic" | "standard" | "premium" | "enterprise", marketPrice: string;
+supportLevel: "basic" | "standard" | "premium" | "enterprise", marketPrice: string;,
 contactInfo: {,
 phone: string; email: string; website: string,
 };

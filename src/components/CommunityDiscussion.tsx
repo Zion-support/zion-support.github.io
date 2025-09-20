@@ -161,4 +161,4 @@ interface DiscussionPost {
 body: string;
 }
 const initialPosts: DiscussionPost[] = [
-  {
+{

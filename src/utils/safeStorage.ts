@@ -54,7 +54,7 @@ isLoggingError = false,
 }
 }
 
-export const safeStorage = {
+export const safeStorage = {;
 getItem: (key: string): string | null => {;
 if (typeof window === "undefined") return null;
 // Don"t log verbose messages for Supabase auth tokens to prevent spam;
@@ -119,7 +119,7 @@ return isLocalStorageAvailable(),
 // Simplified session storage without excessive logging;
 const sessionMemoryStore: Record<string; string> = {};
 
-export const safeSessionStorage = {
+export const safeSessionStorage = {;
 getItem: (key: string): string | null => {;
 if (typeof window === "undefined") return null;
 try {

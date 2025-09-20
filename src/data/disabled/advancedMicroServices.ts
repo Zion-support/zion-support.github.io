@@ -17,8 +17,8 @@ tags: string[];
 estimatedDelivery: string;
 supportLevel: "basic" | "standard" | "premium" | "enterprise";
 marketPrice: string;
-contactInfo: {
-phone: string;
+contactInfo: {,
+phone: string;,
 email: string;,
 website: string;,
 };
@@ -39,14 +39,14 @@ securityFeatures?: string[];
 
 export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
 // AI-Powered Business Intelligence;
-{
-id: "ai-business-intelligence-suite";
+{,
+id: "ai-business-intelligence-suite";,
 title: "AI Business Intelligence Suite";,
 description: "Advanced AI-powered business intelligence platform that transforms raw data into actionable insights; predictive analytics; and automated reporting for enterprise decision-making.",
 category: "AI & Analytics";
 subcategory: "Business Intelligence";
-price: 899;
-currency: "$";
+price: 899;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Real-time data processing and analysis";
@@ -85,17 +85,17 @@ targetAudience: [
 "Marketing directors";
 ],
 tags: ["AI", "Business Intelligence", "Analytics", "Machine Learning", "Data Visualization"],
-estimatedDelivery: "2-3 weeks";
+estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$899 - $2;999/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
 aiScore: 98;
-rating: 4.9;
-reviewCount: 156;
+rating: 4.9;,
+reviewCount: 156;,
 featured: true;,
 technologyStack: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 apiEndpoints: ["/api/v1/analytics", "/api/v1/forecasting", "/api/v1/reports"],
@@ -106,13 +106,13 @@ securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role
 
 // Quantum-Safe Cybersecurity Platform;
 {
-id: "quantum-safe-cybersecurity";
+id: "quantum-safe-cybersecurity";,
 title: "Quantum-Safe Cybersecurity Platform";,
 description: "Next-generation cybersecurity platform that implements quantum-resistant encryption algorithms; advanced threat detection; and zero-trust security architecture for future-proof protection.",
 category: "Cybersecurity";
 subcategory: "Advanced Protection";
-price: 1299;
-currency: "$";
+price: 1299;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Quantum-resistant encryption algorithms";
@@ -151,17 +151,17 @@ targetAudience: [
 "Security analysts";
 ],
 tags: ["Cybersecurity", "Quantum Computing", "AI", "Zero Trust", "Compliance"],
-estimatedDelivery: "3-4 weeks";
+estimatedDelivery: "3-4 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;299 - $4;999/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
 aiScore: 97;
-rating: 4.8;
-reviewCount: 89;
+rating: 4.8;,
+reviewCount: 89;,
 featured: true;,
 technologyStack: ["Rust", "Go", "Python", "Kubernetes", "Elasticsearch", "Prometheus"],
 apiEndpoints: ["/api/v1/threats", "/api/v1/incidents", "/api/v1/compliance"],
@@ -172,13 +172,13 @@ securityFeatures: ["Post-quantum cryptography", "Behavioral analytics", "Threat 
 
 // Edge Computing Orchestration Platform;
 {
-id: "edge-computing-orchestration";
+id: "edge-computing-orchestration";,
 title: "Edge Computing Orchestration Platform";,
 description: "Intelligent edge computing platform that optimizes application deployment; manages distributed resources; and provides real-time processing capabilities for IoT and edge devices.",
 category: "Edge Computing";
 subcategory: "Orchestration";
-price: 699;
-currency: "$";
+price: 699;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Distributed application deployment";
@@ -217,17 +217,17 @@ targetAudience: [
 "Application developers";
 ],
 tags: ["Edge Computing", "IoT", "Cloud Native", "DevOps", "Real-time Processing"],
-estimatedDelivery: "2-3 weeks";
+estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$699 - $2;499/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
 aiScore: 95;
-rating: 4.7;
-reviewCount: 134;
+rating: 4.7;,
+reviewCount: 134;,
 featured: true;,
 technologyStack: ["Kubernetes", "Docker", "Go", "Rust", "WebAssembly", "MQTT"],
 apiEndpoints: ["/api/v1/deployments", "/api/v1/devices", "/api/v1/analytics"],
@@ -238,13 +238,13 @@ securityFeatures: ["Device authentication", "Data encryption", "Access control",
 
 // Blockchain Supply Chain Transparency;
 {
-id: "blockchain-supply-chain";
+id: "blockchain-supply-chain";,
 title: "Blockchain Supply Chain Transparency Platform";,
 description: "End-to-end supply chain visibility platform using blockchain technology to ensure transparency; traceability; and compliance across global supply networks.",
 category: "Blockchain";
 subcategory: "Supply Chain";
-price: 599;
-currency: "$";
+price: 599;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "End-to-end product traceability";
@@ -283,17 +283,17 @@ targetAudience: [
 "Sustainability managers";
 ],
 tags: ["Blockchain", "Supply Chain", "Traceability", "Compliance", "Sustainability"],
-estimatedDelivery: "4-5 weeks";
+estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$599 - $1;999/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
 aiScore: 93;
-rating: 4.6;
-reviewCount: 78;
+rating: 4.6;,
+reviewCount: 78;,
 featured: true;,
 technologyStack: ["Hyperledger Fabric", "Ethereum", "IPFS", "Node.js", "React", "MongoDB"],
 apiEndpoints: ["/api/v1/traceability", "/api/v1/compliance", "/api/v1/analytics"],
@@ -304,13 +304,13 @@ securityFeatures: ["Immutable records", "Cryptographic verification", "Access co
 
 // AI-Powered DevOps Automation;
 {
-id: "ai-devops-automation";
+id: "ai-devops-automation";,
 title: "AI-Powered DevOps Automation Platform";,
 description: "Intelligent DevOps platform that automates software development; testing; deployment; and monitoring using AI and machine learning for continuous improvement.",
 category: "DevOps";
 subcategory: "Automation";
-price: 799;
-currency: "$";
+price: 799;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Intelligent CI/CD pipelines";
@@ -349,17 +349,17 @@ targetAudience: [
 "Platform engineers";
 ],
 tags: ["DevOps", "Automation", "CI/CD", "AI", "Cloud Native"],
-estimatedDelivery: "2-3 weeks";
+estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$799 - $2;799/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
 aiScore: 96;
-rating: 4.8;
-reviewCount: 167;
+rating: 4.8;,
+reviewCount: 167;,
 featured: true;,
 technologyStack: ["Jenkins", "GitLab CI", "Kubernetes", "Docker", "Terraform", "Ansible"],
 apiEndpoints: ["/api/v1/pipelines", "/api/v1/deployments", "/api/v1/monitoring"],
@@ -370,13 +370,13 @@ securityFeatures: ["Secure code scanning", "Access control", "Audit logging", "E
 
 // Quantum Machine Learning Platform;
 {
-id: "quantum-ml-platform";
+id: "quantum-ml-platform";,
 title: "Quantum Machine Learning Platform";,
 description: "Revolutionary platform that combines quantum computing with machine learning to solve complex optimization problems; accelerate AI training; and unlock new computational capabilities.",
 category: "Quantum Computing";
 subcategory: "Machine Learning";
-price: 2499;
-currency: "$";
+price: 2499;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Quantum algorithm optimization";
@@ -415,17 +415,17 @@ targetAudience: [
 "Government agencies";
 ],
 tags: ["Quantum Computing", "Machine Learning", "Optimization", "Research", "Innovation"],
-estimatedDelivery: "6-8 weeks";
+estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;499 - $9;999/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
 aiScore: 99;
-rating: 4.9;
-reviewCount: 45;
+rating: 4.9;,
+reviewCount: 45;,
 featured: true;,
 technologyStack: ["Qiskit", "Cirq", "PennyLane", "Python", "Jupyter", "TensorFlow"],
 apiEndpoints: ["/api/v1/quantum", "/api/v1/optimization", "/api/v1/simulation"],
@@ -436,13 +436,13 @@ securityFeatures: ["Quantum-safe encryption", "Secure quantum communication", "A
 
 // Autonomous Data Governance Platform;
 {
-id: "autonomous-data-governance";
+id: "autonomous-data-governance";,
 title: "Autonomous Data Governance Platform";,
 description: "AI-powered data governance platform that automatically discovers; classifies; and manages data assets while ensuring compliance; privacy; and security across the organization.",
 category: "Data Management";
 subcategory: "Governance";
-price: 899;
-currency: "$";
+price: 899;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Automated data discovery and classification";
@@ -481,17 +481,17 @@ targetAudience: [
 "Legal teams";
 ],
 tags: ["Data Governance", "Compliance", "Privacy", "AI", "Data Management"],
-estimatedDelivery: "3-4 weeks";
+estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$899 - $3;499/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
 aiScore: 94;
-rating: 4.7;
-reviewCount: 112;
+rating: 4.7;,
+reviewCount: 112;,
 featured: true;,
 technologyStack: ["Python", "Apache Atlas", "Apache Ranger", "Elasticsearch", "Kafka", "Spark"],
 apiEndpoints: ["/api/v1/governance", "/api/v1/compliance", "/api/v1/quality"],
@@ -502,13 +502,13 @@ securityFeatures: ["Data encryption", "Access control", "Audit logging", "Privac
 
 // Intelligent API Management Platform;
 {
-id: "intelligent-api-management";
+id: "intelligent-api-management";,
 title: "Intelligent API Management Platform";,
 description: "Advanced API management platform with AI-powered analytics; automated documentation; security monitoring; and intelligent rate limiting for modern API ecosystems.",
 category: "API Management";
 subcategory: "Intelligent Platform";
-price: 649;
-currency: "$";
+price: 649;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "AI-powered API analytics and insights";
@@ -547,17 +547,17 @@ targetAudience: [
 "Platform engineers";
 ],
 tags: ["API Management", "Microservices", "Developer Experience", "Security", "Analytics"],
-estimatedDelivery: "2-3 weeks";
+estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$649 - $2;199/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
 aiScore: 95;
-rating: 4.8;
-reviewCount: 203;
+rating: 4.8;,
+reviewCount: 203;,
 featured: true;,
 technologyStack: ["Kong", "Apigee", "AWS API Gateway", "Azure API Management", "Node.js", "Python"],
 apiEndpoints: ["/api/v1/management", "/api/v1/analytics", "/api/v1/security"],
@@ -568,13 +568,13 @@ securityFeatures: ["OAuth 2.0", "JWT tokens", "Rate limiting", "Threat detection
 
 // Hyperautomation Workflow Platform;
 {
-id: "hyperautomation-workflow";
+id: "hyperautomation-workflow";,
 title: "Hyperautomation Workflow Platform";,
 description: "Comprehensive hyperautomation platform that combines RPA; AI; and process mining to automate complex business processes and workflows across the organization.",
 category: "Automation";
 subcategory: "Hyperautomation";
-price: 1099;
-currency: "$";
+price: 1099;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Intelligent process discovery and mining";
@@ -613,17 +613,17 @@ targetAudience: [
 "Business process owners";
 ],
 tags: ["Hyperautomation", "RPA", "AI", "Process Mining", "Workflow Automation"],
-estimatedDelivery: "4-5 weeks";
+estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;099 - $3;999/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
 aiScore: 96;
-rating: 4.8;
-reviewCount: 178;
+rating: 4.8;,
+reviewCount: 178;,
 featured: true;,
 technologyStack: ["UiPath", "Automation Anywhere", "Blue Prism", "Python", "Node.js", "Kubernetes"],
 apiEndpoints: ["/api/v1/automation", "/api/v1/workflows", "/api/v1/analytics"],

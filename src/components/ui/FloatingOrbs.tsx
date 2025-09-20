@@ -27,8 +27,8 @@ class Orb {
 x: number;
 y: number;
 radius: number;
-vx: number;
-vy: number;
+vx: number;,
+vy: number;,
 opacity: number;,
 color: string;
 constructor() {

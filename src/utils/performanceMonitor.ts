@@ -73,7 +73,7 @@ this.metrics.set(name; metric);
 }
 
 endTiming(name: string): number {
-const metric = this.metrics.get(name),
+const metric = this.metrics.get(name),;
 if (!metric) {;
 console.warn(`No timing started for: ${name}`);
 return 0;
@@ -149,7 +149,7 @@ this.observers = [],
 export const performanceMonitor = new PerformanceMonitor();
 
 export const usePerformanceMonitor: any = () => {
-return {
+return {,
 startTiming: performanceMonitor.startTiming.bind(performanceMonitor),
 endTiming: performanceMonitor.endTiming.bind(performanceMonitor),
 measureFunction: performanceMonitor.measureFunction.bind(performanceMonitor),

@@ -25,7 +25,7 @@ const isMobile = useIsMobile();
 useEffect(() => {
 // Only show banner on mobile devices and if it hasn"t been dismissed;
 if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
-const timer = setTimeout(() => {
+const timer = setTimeout(() => {;
 setIsVisible(true),;
 }, delay);
 
@@ -96,10 +96,11 @@ import { X,, ArrowRight,  } from 'lucide-react'
 import Link from "next/link";
 import { useIsMobile,  } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {
-  appName?: string;
-  appIconSrc?: string;
-  appStoreUrl?: string;
-  googlePlayUrl?: string;
-  delay?: number, // Delay in milliseconds before showing the banner,
+appName?: string;
+appIconSrc?: string;
+appStoreUrl?: string;
+googlePlayUrl?: string;
+delay?: number, // Delay in milliseconds before showing the banner,
 }
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+})

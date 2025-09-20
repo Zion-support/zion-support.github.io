@@ -9,7 +9,7 @@ id: string; name: string; description: string; brand: string; category: string;
 subcategory?: string;,
 images: string[], price: number; currency: string;
 rating?: number;
-reviewCount?: number;
+reviewCount?: number;,
 inStock: boolean;
 expectedShipping?: string;,
 specifications: EquipmentSpecification[], features: string[];

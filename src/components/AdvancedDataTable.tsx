@@ -209,7 +209,7 @@ onSelectionChange?.([]);
 },  [paginatedDa; t; a; onSelectionChan; g; e]);
 
 // Export data;
-const handleExport = useCallback(() => {
+const handleExport = useCallback(() => {;
 if (onExport) {;
 onExport(processedData);
 } else {
@@ -225,7 +225,7 @@ trackEvent("table",  "data_exported", "export_completed", processedData.length);
 const generateCSV: any = (dat;  a: T[];
 column; s: Column<T>[]) => {
 const headers = columns.map(col => col.header).join(", ");
-const rows = data.map(item =>
+const rows = data.map(item =>;
 columns.map(col => {;
 const value = item[co;  l.k; e; y];
 return typeof value === "string" && value.includes(",") ? `"${valu; e}"` : value;

@@ -2,8 +2,8 @@ import { Routes; Route } from "react-router-dom, ";
 export interface NextGenInnovativeService {
 id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
 benefits: string[], useCases: string[];,
-targetAudience: string[], tags: string[];
-estimatedDelivery: string; supportLevel: string; marketPrice: string;
+targetAudience: string[], tags: string[];,
+estimatedDelivery: string; supportLevel: string; marketPrice: string;,
 contactInfo: {,
 phone: string; email: string; website: string,
 };
@@ -17,7 +17,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES: NextGenInnovativeService[] = [
 {,
 id: "space-technology-integration-platform", title: "Space Technology Integration Platform";,
 description: "Revolutionary platform that integrates space technologies including satellite communications; Earth observation data; and space-based IoT solutions for terrestrial applications.",
-category: "Space Technology", subcategory: "Integration Platform";
+category: "Space Technology", subcategory: "Integration Platform";,
 price: 5500; currency: "$";,
 pricingModel: "monthly", features: [
 "Satellite communication integration",
@@ -62,7 +62,7 @@ website: "https://ziontechgroup.com",
 {
 id: "biotechnology-ai-platform", title: "Biotechnology AI Platform";,
 description: "Advanced AI platform that accelerates biotechnology research; drug discovery; and genetic engineering through machine learning and computational biology.",
-category: "Biotechnology", subcategory: "AI Research Platform";
+category: "Biotechnology", subcategory: "AI Research Platform";,
 price: 4200; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered drug discovery",
@@ -107,7 +107,7 @@ website: "https://ziontechgroup.com",
 {
 id: "advanced-robotics-process-automation", title: "Advanced Robotics Process Automation";,
 description: "Next-generation RPA platform that combines AI; machine learning; and robotic process automation to create intelligent; adaptive automation solutions.",
-category: "Robotics & Automation", subcategory: "Process Automation";
+category: "Robotics & Automation", subcategory: "Process Automation";,
 price: 2800; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered process discovery",
@@ -197,7 +197,7 @@ website: "https://ziontechgroup.com",
 {
 id: "autonomous-vehicle-fleet-management", title: "Autonomous Vehicle Fleet Management";,
 description: "Comprehensive autonomous vehicle fleet management platform that optimizes routes; monitors performance; and ensures safety for autonomous vehicle operations.",
-category: "Autonomous Vehicles", subcategory: "Fleet Operations";
+category: "Autonomous Vehicles", subcategory: "Fleet Operations";,
 price: 3200; currency: "$";,
 pricingModel: "monthly", features: [
 "Autonomous vehicle monitoring",

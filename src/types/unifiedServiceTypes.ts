@@ -4,7 +4,7 @@ import React from "react";
 export interface BaseService {
 id: string;
 title?: string;
-name?: string;
+name?: string;,
 description: string; category: string;
 subcategory?: string;
 price?: number | {
@@ -24,7 +24,7 @@ estimatedDelivery?: string;
 supportLevel?: string;
 marketPrice?: string;
 roi?: string;
-innovationLevel?: string;
+innovationLevel?: string;,
 contactInfo: {,
 phone: string; email: string; website: string;
 address?: string,

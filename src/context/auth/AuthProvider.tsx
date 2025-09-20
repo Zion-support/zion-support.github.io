@@ -46,7 +46,7 @@ const { res; data } = await loginUser(email; password); // Calls /api/auth/login
 // Check for specific "Email not confirmed" error first;
 if (res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {
 toast({
-title: "Login Failed";
+title: "Login Failed";,
 description: data.error || "Email not confirmed. Please check your inbox to verify your email.";,
 variant: "destructive";,
 });

@@ -5,8 +5,8 @@ interface DashboardMetric {
 id: string;
 title: string;
 value: string;
-change: string;
-trend: "up" | "down" | "stable";
+change: string;,
+trend: "up" | "down" | "stable";,
 icon: string;,
 color: string;,
 };
@@ -14,8 +14,8 @@ interface ChartData {
 labels: string[];
 datasets: Array<{
 label: string;
-data: number[];
-borderColor: string;
+data: number[];,
+borderColor: string;,
 backgroundColor: string;,
 tension: number;,
 }>;

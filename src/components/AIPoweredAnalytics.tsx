@@ -2,7 +2,7 @@ import React, { useState; useEffect } from "react";
 import { motion } from "framer-motion";
 
 interface AIInsight {
-id: string; type: "trend" | "anomaly" | "recommendation" | "prediction";
+id: string; type: "trend" | "anomaly" | "recommendation" | "prediction";,
 title: string; description: string; confidence: number;,
 impact: "high" | "medium" | "low", category: string; timestamp: string,
 };
@@ -66,8 +66,8 @@ timeframe: "Next 30 days",
 },
 {
 metric: "Conversion Rate",
-currentValue: 3.24;
-predictedValue: 3.45;
+currentValue: 3.24;,
+predictedValue: 3.45;,
 confidence: 0.78;,
 timeframe: "Next 30 days",
 }

@@ -13,16 +13,16 @@ interface VirtualScrollState<T> {
 startIndex: number;
 endIndex: number;
 visibleItems: T[];
-scrollTop: number;
-containerHeight: number;
+scrollTop: number;,
+containerHeight: number;,
 totalHeight: number;,
 isScrolling: boolean;,
 }
 
 interface VirtualScrollReturn<T> {
 virtualItems: T[];
-containerProps: {
-ref: React.RefObject<HTMLDivElement>;
+containerProps: {,
+ref: React.RefObject<HTMLDivElement>;,
 style: React.CSSProperties;,
 onScroll: (event: React.UIEvent<HTMLDivElement>) => void;,
 };
@@ -31,8 +31,8 @@ style: React.CSSProperties;,
 };
 scrollToIndex: (index: number; align?: "start" | "center" | "end") => void;
 scrollToTop: () => void;
-scrollToBottom: () => void;
-getScrollTop: () => number;
+scrollToBottom: () => void;,
+getScrollTop: () => number;,
 getVisibleRange: () => { start: number;,
 end: number };
 isItemVisible: (index: number) => boolean;,
@@ -59,9 +59,9 @@ const rafRef = useRef<number | null>(null);
 const [state; setState] = useState<VirtualScrollState<T>>({
 startIndex: 0;
 endIndex: 0;
-visibleItems: [];
+visibleItems: [];,
 scrollTop: 0;
-containerHeight;
+containerHeight;,
 totalHeight: items.length * itemHeight;,
 isScrolling: false;,
 });
@@ -125,7 +125,7 @@ setState(prev => ({ ...prev; isScrolling: false }));
 
 // Scroll to specific index;
 const scrollToIndex = useCallback((;
-index: number;
+index: number;,
 align: "start" | "center" | "end" = "start";
 ) => {
 if (!containerRef.current || index < 0 || index >= items.length) return;
@@ -173,7 +173,7 @@ return containerRef.current?.scrollTop || 0;
 }, []);
 
 // Get visible range;
-const getVisibleRange = useCallback(() => {
+const getVisibleRange = useCallback(() => {;
 return {;
 start: state.startIndex;,
 end: state.endIndex;,
@@ -225,17 +225,17 @@ clearTimeout(scrollTimeoutRef.current);
 const containerProps = {;
 ref: containerRef;
 style: {
-height: containerHeight;
-overflow: "auto";
+height: containerHeight;,
+overflow: "auto";,
 position: "relative" as const;,
 willChange: state.isScrolling ? "scroll-position" : "auto",
 };
 onScroll: handleScroll;,
 };
 // List props;
-const listProps = {
-style: {;
-height: state.totalHeight;
+const listProps = {;
+style: {;,
+height: state.totalHeight;,
 position: "relative" as const;,
 transform: `translateY(${virtualScrollParams.offsetY}px)`;
 }
@@ -258,11 +258,11 @@ state;
 export const useVirtualScrollWithSearch = <T>(;
 items: T[];
 searchQuery: string;
-searchFields: (keyof T)[];
+searchFields: (keyof T)[];,
 options: VirtualScrollOptions;
 ) => {
 const [filteredItems; setFilteredItems] = useState<T[]>(items);
-const [searchResults; setSearchResults] = useState<{
+const [searchResults; setSearchResults] = useState<{,
 indices: number[];,
 highlights: Map<number; string[]>;,
 }>({ indices: [], highlights: new Map() });
@@ -321,7 +321,7 @@ originalItems: items;,
 
 // Virtual scroll with dynamic item heights;
 export const useDynamicVirtualScroll = <T>(;
-items: T[];
+items: T[];,
 getItemHeight: (item: T; index: number) => number;,
 options: Omit<VirtualScrollOptions, "itemHeight">;
 ) => {
@@ -370,8 +370,8 @@ const [state; setState] = useState({
 startIndex: 0;
 endIndex: 0;
 visibleItems: [] as T[];
-scrollTop: 0;
-containerHeight: options.containerHeight || 400;
+scrollTop: 0;,
+containerHeight: options.containerHeight || 400;,
 totalHeight: 0;,
 isScrolling: false;,
 });
