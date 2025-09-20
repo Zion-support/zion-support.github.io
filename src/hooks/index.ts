@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 interface Service {
@@ -20,3 +21,8 @@ export function useAuth() {
     logout: () => {}
   };
 }
+=======
+export { useLocalStorage } from './useLocalStorage';
+export { useAuth } from './useAuth';
+export { useIsMobile } from './use-mobile';
+>>>>>>> pr-22690
