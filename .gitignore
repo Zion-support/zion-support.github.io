@@ -165,3 +165,4 @@ Desktop.ini
 logs/enhanced-sync-manager.log
 logs/enhanced-sync-manager.log.backup
 automation/logs/autonomous-system.log .next/
+dist/

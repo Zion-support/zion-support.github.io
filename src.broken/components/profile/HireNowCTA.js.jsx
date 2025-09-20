@@ -7,7 +7,17 @@ export default function Page() {
   };
   const handleChange = e => {
 
+<<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js.jsx
     setFormData(prev => ({
+=======
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev: HireData) => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+>>>>>>> origin/zion-enhancements-v6:src/components/profile/HireNowCTA.tsx
 
       ...prev,
       [e.target.name]: e.target.value}));

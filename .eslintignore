@@ -109,11 +109,7 @@ zion-website/
 *.py
 *.sh
 *.cjs
-*.js
-*.jsx
-*.ts
-*.tsx
-!src/
-!App.tsx
-!index.html
-!main.jsx
+
+# Disabled components and utils
+components-disabled/
+utils-disabled/

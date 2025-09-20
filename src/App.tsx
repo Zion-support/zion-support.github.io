@@ -1,56 +1,35 @@
-import React, { Suspense, lazy } from 'react';
+import * as React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { ThemeProvider } from "./components/ThemeProvider";
-import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import ErrorBoundary from './components/ErrorBoundary';
+import { ThemeProvider } from './components/ThemeProvider';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import LoadingSpinner from './components/LoadingSpinner';
 
-// Core pages - minimal set for working build
-const Home = lazy(() => import('./pages/Home'));
-const ServicesPage = lazy(() => import('./pages/Services'));
-const ContactPage = lazy(() => import('./pages/Contact'));
-const AboutPage = lazy(() => import('./pages/About'));
+// Lazy load components for better performance
+const LazyHome = React.lazy(() => import('./components/Home'));
+const LazyServices = React.lazy(() => import('./components/Services'));
+const LazyAbout = React.lazy(() => import('./components/About'));
+const LazyContact = React.lazy(() => import('./components/Contact'));
 
-// Loading spinner component
-const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
-  </div>
-);
-
-const App = () => {
+const App: React.FC = () => {
   return (
-    <ErrorBoundary>
-      <ThemeProvider>
-        <WhitelabelProvider>
-            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-              <Header />
-              
-              <main className="flex-1">
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    {/* Core Routes */}
-                    <Route path="/" element={<Home />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    
-                    
-                    {/* 404 Route */}
-                    <Route path="*" element={<div className="min-h-screen flex items-center justify-center text-white">Page not found</div>} />
-                  </Routes>
-                </Suspense>
-              </main>
-              
-              <Footer />
-              <SonnerToaster />
-            </div>
-            
-        </WhitelabelProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
+    <ThemeProvider>
+      <AccessibilityEnhancer>
+        <PerformanceMonitor />
+        <React.Suspense fallback={
+          <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+            <LoadingSpinner size="lg" text="Loading application..." />
+          </div>
+        }>
+          <Routes>
+            <Route path="/" element={<LazyHome />} />
+            <Route path="/services" element={<LazyServices />} />
+            <Route path="/about" element={<LazyAbout />} />
+            <Route path="/contact" element={<LazyContact />} />
+          </Routes>
+          </React.Suspense>
+      </AccessibilityEnhancer>
+    </ThemeProvider>
   );
 };
 
