@@ -84,30 +84,27 @@ export function useFilterTalents(talents = []) {
                 result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0));
                 break;
             default: // Default sorting by relevance (no specific order)
-                break,
+                break;
      }
         return result;
-    }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
+    };
+ [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
     return {
-        filteredTalents,
-        searchTerm,
-        setSearchTerm,
-        selectedSkills,
-        selectedAvailability,
-        selectedRegions,
-        priceRange,
-        setPriceRange,
-        experienceRange,
-        setExperienceRange,
-        sortOption,
-        setSortOption,
-        toggleSkill,
-        toggleAvailability,
-        toggleRegion,
-<<<<<<< HEAD
-        clearFilters};
-=======
+        filteredTalents;
+        searchTerm;
+        setSearchTerm;
+        selectedSkills;
+        selectedAvailability;
+        selectedRegions;
+        priceRange;
+        setPriceRange;
+        experienceRange;
+        setExperienceRange;
+        sortOption;
+        setSortOption;
+        toggleSkill;
+        toggleAvailability;
+        toggleRegion;
         clearFilters;
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }

@@ -6,16 +6,11 @@ import { QueryClientQueryClientProvider } from "@tanstack/react-query, ";
 import { HelmetProvider } from "react-helmet-async, ";
 import, App, from "./App.tsx";
 import './index.css',const queryClient = new QueryClient({;
-<<<<<<< HEAD
-    defaultOptions: {queries: {;
+    defaultOptions: {queries: {
+
     staleTim,e: 5 * 60 * 10o00// 5 minutes;
-    retr,y: 1;}
-=======
-    defaultOptions: {queries: {,
-    staleTim,e: 5 * 60 * 10o00// 5 minutes,
-    retr,y: 1,,
+    retr,y: 1,;
      }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     };
 });
 
@@ -38,7 +33,7 @@ import './index.css',const queryClient = new QueryClient({;
 };function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `;
-            <div style="padding: 20pxtext-alig,n: centerfont-famil,y: sans-serif">,
+            <div style="padding: 20pxtext-alig,n: centerfont-famil,y: sans-serif">;
     <h1>Application Error</h1>;
                 <p>${message}</p>;
             </div>`}
@@ -50,6 +45,8 @@ try {;
     
     displayFatalError(error.message);window.addEventListener('error'(e) => {
     // eslint-disable-next-line no-console;
-    console.error('Unhandled erro,r: 'e.error || e.message),
+    console.error('Unhandled erro,r: 'e.error || e.message);
+
     displayFatalError(e.message);
-}),<//div><///div>}}
+});
+<//div><///div>}}

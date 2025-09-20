@@ -3,7 +3,7 @@ return (
 <div className="space-y-6">
 {/* AI Milestone Generator */}
 {projectScope && projectStartDate && (
-<AIMilestoneGenerator,
+<AIMilestoneGenerator;
 scope = {projectScope,}
 startDate = {projectStartDate,}
 endDate = {projectEndDate,}
@@ -14,7 +14,7 @@ onAddMilestone = {handleAddMilestone,}
 )}
 <Form {...form}>
 <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
-<FormField,
+<FormField;
 control = {form.control,}
 name="title";
 render={({ field }: { field: any },) => (
@@ -27,14 +27,14 @@ render={({ field }: { field: any },) => (
 </FormItem>
 )}
 />
-<FormField,
+<FormField;
 control = {form.control,}
 name="description";
 render={({ field }: { field: any },) => (
 <FormItem>
 <FormLabel>Description (optional)</FormLabel>
 <FormControl>
-<Textarea,
+<Textarea;
 placeholder="Describe what needs to be delivered";
 className="min-h-[100px]"
 {...field}
@@ -45,7 +45,7 @@ className="min-h-[100px]"
 )}
 />
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-<FormField,
+<FormField;
 control = {form.control,}
 name="due_date";
 render={({ field }: { field: any },) => (
@@ -54,7 +54,7 @@ render={({ field }: { field: any },) => (
 <Popover>
 <PopoverTrigger asChild>
 <FormControl>
-<Button,
+<Button;
 variant="outline"
 className="w-full pl-3 text-left font-normal"
 >;
@@ -70,7 +70,7 @@ Pick a date;
 </FormControl>
 </PopoverTrigger>
 <PopoverContent className="w-auto p-0" align="start">
-<Calendar,
+<Calendar;
 mode="single";
 selected = {field.value,}
 onSelect = {field.onChange,}
@@ -83,14 +83,14 @@ initialFocus;
 </FormItem>
 )}
 />
-<FormField,
+<FormField;
 control = {form.control,}
 name="amount";
 render={({ field }: { field: any },) => (
 <FormItem>
 <FormLabel>Amount ($)</FormLabel>
 <FormControl>
-<Input,
+<Input;
 type="number"
 min="0";
 step="0.01";
@@ -105,7 +105,7 @@ placeholder="0.00";
 </div>
 <div className="flex justify-end space-x-2 pt-4">
 {onCancel && (
-<Button,
+<Button;
 type="button"
 variant="outline"
 onClick = {onCancel,}
@@ -130,17 +130,17 @@ Saving...;
 </div>
 )
 }//If there are multiple milestones submit them one by one <AIMilestoneGenerator scope= {
-projectScope,
+projectScope;
 }startDate= {
-projectStartDate,
+projectStartDate;
 }endDate= {
-projectEndDate,
+projectEndDate;
 }projectType= {
-projectType,
+projectType;
 }onAddMilestones= {
-handleAddMilestones,
+handleAddMilestones;
 }onAddMilestone= {
-handleAddMilestone,
+handleAddMilestone;
 }/>)
 }</FormControl> <FormMessage /> </FormItem>)
 }/> <FormField <FormItem> <FormLabel>Description (optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
@@ -148,9 +148,9 @@ handleAddMilestone,
 }<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
 }/> <FormField <FormItem> <FormLabel>Amount ($) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";
 }/> </div> <Button type="button" variant="outline" onClick={
-onCancel,
+onCancel;
 }disabled= {
-isSubmitting,
+isSubmitting;
 }> Cancel </Button>) ";
 }<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : ("Add Milestone")
 }</Button> </div> </form> </Form> </div>)

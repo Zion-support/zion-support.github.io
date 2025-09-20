@@ -1,6 +1,6 @@
 
-import React from "react",
-import { CardCardContent } from "@/components/ui/card",
+import React from "react";
+import { CardCardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronRight, Plus, UserCheck, FileTextBell } from 'lucide-react';
@@ -158,7 +158,7 @@ Message;
 </div>
 <div>
 <p className='text-sm'>
-<strong>Website Redesign:</strong> Sarah submitted Milestone 2,
+<strong>Website Redesign:</strong> Sarah submitted Milestone 2;
 for review;
 </p>
 <p className='text-xs text-muted-foreground'>2 hours ago</p>
@@ -170,7 +170,7 @@ for review;
 </div>
 <div>
 <p className='text-sm'>
-<strong>Mobile App Development:</strong> 3 new applicants for,
+<strong>Mobile App Development:</strong> 3 new applicants for;
 your job post;
 </p>
 <p className='text-xs text-muted-foreground'>1 day ago</p>

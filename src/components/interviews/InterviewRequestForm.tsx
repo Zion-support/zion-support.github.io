@@ -3,7 +3,7 @@ import { toast,  } from "@/components/ui/use-toast";
 import { useInterviews,  } from "@/hooks/useInterviews";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface InterviewRequestFormProps {
-talent: TalentProfile;,
+talent: TalentProfile;
 onClose: () => void;
 userDetails?: UserProfile;
 {field.value ? (
@@ -16,13 +16,13 @@ format(field.value, 'PPP')
 </FormControl>
 </PopoverTrigger>
 <PopoverContent className='w-auto p-0' align='start'>
-<Calendar,
+<Calendar;
 mode='single';
 selected={field.value}
 onSelect={field.onChange}
 disabled={date =>
 date < new Date() |date > addDays(new Date(), 90)
-}                      initialFocus,
+}                      initialFocus;
 className='p-3 pointer-events-auto'
 />
 </PopoverContent>
@@ -31,16 +31,16 @@ className='p-3 pointer-events-auto'
 </FormItem>
 )}
 />
-<FormField,
+<FormField;
 control={form.control}
 name='time';
 render={({
-field,
+field;
 }: {
 field: ControllerRenderProps<z.infer<typeof formSchema>, 'time'>
 }) => (              <FormItem>
 <FormLabel>Time</FormLabel>
-<Select,
+<Select;
 onValueChange={field.onChange}
 defaultValue={field.value}
 >;
@@ -62,11 +62,11 @@ defaultValue={field.value}
 />
 </div>
 <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-<FormField,
+<FormField;
 control={form.control}
 name='duration';
 render={({
-field,
+field;
 }: {
 field: ControllerRenderProps<;
 z.infer<typeof formSchema>
@@ -74,7 +74,7 @@ z.infer<typeof formSchema>
 >;
 }) => (              <FormItem>
 <FormLabel>Duration</FormLabel>
-<Select,
+<Select;
 onValueChange={field.onChange}
 defaultValue={field.value}
 >;
@@ -94,11 +94,11 @@ defaultValue={field.value}
 </FormItem>
 )}
 />
-<FormField,
+<FormField;
 control={form.control}
 name='platform';
 render={({
-field,
+field;
 }: {
 field: ControllerRenderProps<;
 z.infer<typeof formSchema>
@@ -106,7 +106,7 @@ z.infer<typeof formSchema>
 >;
 }) => (              <FormItem>
 <FormLabel>Platform</FormLabel>
-<Select,
+<Select;
 onValueChange={field.onChange}
 defaultValue={field.value}
 >;
@@ -128,11 +128,11 @@ defaultValue={field.value}
 />
 </div>
 {form.watch('platform') !== 'in-app' && (
-<FormField,
+<FormField;
 control={form.control}
 name='meetingLink';
 render={({
-field,
+field;
 }: {
 field: ControllerRenderProps<;
 z.infer<typeof formSchema>
@@ -141,7 +141,7 @@ z.infer<typeof formSchema>
 }) => (              <FormItem>
 <FormLabel>Meeting Link (Optional)</FormLabel>
 <FormControl>
-<Input,
+<Input;
 placeholder={`Add your ${form.watch('platform')} link here`}
 {...field}
 />
@@ -151,17 +151,17 @@ placeholder={`Add your ${form.watch('platform')} link here`}
 )}
 />
 )}
-<FormField,
+<FormField;
 control={form.control}
 name='notes';
 render={({
-field,
+field;
 }: {
 field: ControllerRenderProps<z.infer<typeof formSchema>, 'notes'>
 }) => (            <FormItem>
 <FormLabel>Notes (Optional)</FormLabel>
 <FormControl>
-<Textarea,
+<Textarea;
 placeholder="Share what you'd like to discuss in this interview";
 className='h-20'
 {...field}
@@ -198,30 +198,30 @@ setIsSubmitting (false)
 }/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) ";
 }<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
 }/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {
-field.onChange,
+field.onChange;
 }defaultValue= {
 field.value ";
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) )
 }</SelectContent> </Select> <FormMessage /> </FormItem>) ";
 }/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {
-field.onChange,
+field.onChange;
 }defaultValue= {
 field.value ";
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)
 }/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {
-field.onChange,
+field.onChange;
 }defaultValue= {
 field.value ";
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google-meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)
 }/> </div> {';
 form.watch ('platform') !== 'in-app' && (<FormField control= {
-form.control,
+form.control;
 }<FormItem> <FormLabel>Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {
 `Add your $ {';
 form.watch ('platform')
 }link here`;
 }{
-...field,
+...field;
 }/> </FormControl> <FormMessage /> </FormItem>)
 }/>)
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)

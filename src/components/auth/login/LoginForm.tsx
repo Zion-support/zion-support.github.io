@@ -1,26 +1,26 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
-import React from "react",
+import React from "react";
 const LoginForm: React.FC = () => {
-,
-return (,
-<div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className="text-xl font-bold mb-4">LoginForm</h3>,
+;
+return (;
+<div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">;
+<h3 className="text-xl font-bold mb-4">LoginForm</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>
-},
-</div>)},
+};
+</div>)};
 export default LoginForm;<//div><///div>
 import { useState,  } from "react";
 import { useRouter,, ,  } from 'next/router';
-import { useForm,, ControllerRenderProps,  } from "react-hook-form",
-import { zodResolver,  } from "@hookform/resolvers/zod",
+import { useForm,, ControllerRenderProps,  } from "react-hook-form";
+import { zodResolver,  } from "@hookform/resolvers/zod";
 import { z,  } from "zod";
 import { LogIn,, User,, Eye,, EyeOff,  } from 'lucide-react'
 import { fireEvent,, ,  } from '@/lib/analytics';
-import { useAuth,  } from "@/context/auth/AuthProvider",
+import { useAuth,  } from "@/context/auth/AuthProvider";
 import { Button,  } from "@/components/ui/button";
 import { Input,  } from "@/components/ui/input";
 import {
@@ -29,11 +29,11 @@ form.setFocus(firstError)
 }        })}
 className='space-y-6'
 >;
-<FormField,
+<FormField;
 control={form.control}
 name='email';
 render={({
-field,
+field;
 }: {
 field: ControllerRenderProps<LoginFormValues 'email'>
 }) => (            <FormItem>
@@ -42,7 +42,7 @@ Email address;
 </FormLabel>
 <FormControl>
 <div className='relative'>
-<Input,
+<Input;
 placeholder='you@example.com';
 aria-label='Email address';
 aria-invalid={!!form.formState.errors.email}
@@ -55,18 +55,18 @@ className='bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border
 </FormItem>
 )}
 />
-<FormField,
+<FormField;
 control={form.control}
 name='password';
 render={({
-field,
+field;
 }: {
 field: ControllerRenderProps<LoginFormValues 'password'>
 }) => (            <FormItem>
 <FormLabel className='text-zion-slate-light'>Password</FormLabel>
 <FormControl>
 <div className='relative'>
-<Input,
+<Input;
 type={showPassword ? 'text' : 'password'}
 placeholder='Enter password';
 aria-label='Password';
@@ -74,7 +74,7 @@ aria-invalid={!!form.formState.errors.password}
 className='bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple'                    {...field}
 />
 <LogIn className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
-<Button,
+<Button;
 type='button'
 variant='ghost'
 size='sm';
@@ -95,17 +95,17 @@ onClick={() => setShowPassword(!showPassword)}                  >
 </FormItem>
 )}
 />
-<FormField,
+<FormField;
 control={form.control}
 name='rememberMe';
 render={({
-field,
+field;
 }: {
 field: ControllerRenderProps<LoginFormValues 'rememberMe'>
 }) => (
 <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
 <FormControl>
-<Checkbox,
+<Checkbox;
 checked={field.value}
 onCheckedChange={field.onChange}
 className='border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white'
@@ -125,7 +125,7 @@ Remember me;
 {/* If "Remember me" was previously here it's moved. */}
 </div>
 <div className='text-sm'>
-<Link,
+<Link;
 href='/forgot-password';
 className='font-medium text-zion-cyan hover:text-zion-cyan-light'
 >;
@@ -133,7 +133,7 @@ Forgot password?;
 </Link>
 </div>
 </div>
-<Button,
+<Button;
 type='submit'
 className='w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible'
 disabled={isLoading |isSubmitting}        >
@@ -145,7 +145,7 @@ disabled={isLoading |isSubmitting}        >
 </p>
 )}
 <div className='flex justify-between mt-4'>
-<Button,
+<Button;
 type='button'
 variant='secondary'
 className='w-1/2 mr-2'
@@ -153,7 +153,7 @@ onClick={handleResendEmail}
 disabled={isResending}          >
 {isResending ? 'Sending...' : 'Resend / Verify e-mail'}
 </Button>
-<Button,
+<Button;
 type='button'
 variant='outline'
 className='w-1/2 ml-2'
@@ -162,7 +162,7 @@ Check status;
 </Button>
 </div>
 <p className='text-sm text-center mt-4'>
-<Link,
+<Link;
 href='/signup';
 className='font-medium text-zion-cyan hover:text-zion-cyan-light'
 >;
@@ -195,7 +195,7 @@ headers: {';
 'Content-Type': 'application/json';
 }
 body: JSON.stringify ({
-email,
+email;
 })
 })
 const data = await response.json ();
@@ -214,13 +214,13 @@ if (!email) {';
 form.setError ('root', {';
 message: 'Please enter your email address.';
 })
-return,
+return;
 }router.push (`/verify-status?email=$ {
 encodeURIComponent (email)
 }`)
 }
 }> {
-form.formState.errors.root && (<Alert variant="destructive" className="mb-4" > form.formState.errors.root.message,
+form.formState.errors.root && (<Alert variant="destructive" className="mb-4" > form.formState.errors.root.message;
 }</AlertDescription> </Alert>)
 }<form;
 }) ";
@@ -229,7 +229,7 @@ form.formState.errors.root && (<Alert variant="destructive" className="mb-4" > f
 }</span> </Button> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
 }/> <FormField <FormItem className="flex flex-row items-start space-x-3 space-y-0"> space-y-1 leading-none"> <FormLabel className=" text-zion-slate-light">Remember me</FormLabel> </div> </FormItem>) ";
 }/> </div> <div className=" text-sm"> <Link href=" /forgot-password"className=" font-medium text-zion-cyan hover:text-zion-cyan-light"> Forgot password? </Link> </div> </div> <Button {
-verificationMessage,
+verificationMessage;
 }</p>) ";
 }<div className=" flex justify-between mt-4" > <Button > {';
 isResending ? 'Sending...': 'Resend / Verify e-mail';

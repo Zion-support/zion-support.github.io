@@ -1,11 +1,16 @@
-<<<<<<< HEAD
-expect(screen.getByRole(main") || screen.getByText(/.*/)).toBeInTheDocument(), import { render;screen  } from &apos,@testing-library/react",", ",", import Search from &apos,./Search", describe('Search&apos,() => { it('renders without crashing&apos,() => { render(&apos}}&apos,<Search />) expect(screen.getByRole('main&apos) || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content&apos,() => {", render(&apos}<Search />), render(<Search />),",", expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument(),"" })", "}},", ",",";
-expect(screen.getByRole(main") || screen.getByText(/.*/)).toBeInTheDocument(), import { render;screen } from &apos,@testing-library/react",", ",", import Search from &apos,./Search", describe('Search&apos,() => { it('renders without crashing&apos,() => { render(&apos}}&apos,<Search />) expect(screen.getByRole('main&apos) || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content&apos,() => {", render(&apos}<Search />), render(<Search />),",", expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument(),"" })", "}},",", ))</Search /><//Search />
-=======
-expect(screen.getByRole(main") || screen.getByText(/.*/)).toBeInTheDocument(),, import { render,screen  } from &apos,@testing-library/react",", ,",", import Search from &apos,./Search", describe(&apos,Search&apos,() => { it(&apos,renders without crashing&apos,() => { render(&apos}}&apos,<Search />) expect(screen.getByRole(&apos,main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});
+expect(screen.getByRole(main") || screen.getByText(/.*/)).toBeInTheDocument();
+, import { render,screen  } from &apos,@testing-library/react",", ,",", import Search from &apos,./Search", describe(&apos,Search&apos,() => { it(&apos,renders without crashing&apos,() => { render(&apos}}&apos,<Search />) expect(screen.getByRole(&apos,main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});
 
-    it(&apos,displays expected content&apos,() => {", render(&apos}<Search />), render(<Search />),",", expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument(),"" })", "}},", ",",",
-expect(screen.getByRole(main") || screen.getByText(/.*/)).toBeInTheDocument(),, import { render,screen } from &apos,@testing-library/react",", ,",", import Search from &apos,./Search", describe(&apos,Search&apos,() => { it(&apos,renders without crashing&apos,() => { render(&apos}}&apos,<Search />) expect(screen.getByRole(&apos,main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});
+    it(&apos,displays expected content&apos,() => {", render(&apos}<Search />);
+ render(<Search />);
+",", expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();
+"" })", "}};
+", ",",";
+expect(screen.getByRole(main") || screen.getByText(/.*/)).toBeInTheDocument();
+, import { render,screen } from &apos,@testing-library/react",", ,",", import Search from &apos,./Search", describe(&apos,Search&apos,() => { it(&apos,renders without crashing&apos,() => { render(&apos}}&apos,<Search />) expect(screen.getByRole(&apos,main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});
 
-    it(&apos,displays expected content&apos,() => {", render(&apos}<Search />), render(<Search />),",", expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument(),"" })", "}},",", ))</Search /><//Search />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+    it(&apos,displays expected content&apos,() => {", render(&apos}<Search />);
+ render(<Search />);
+",", expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();
+"" })", "}};
+",", ))</Search /><//Search />

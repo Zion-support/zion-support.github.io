@@ -1,9 +1,9 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
-// Performance optimization utilities,
+// Performance optimization utilities;
 export const optimizeImages: any = () => {;
 const images = document.querySelectorAll('img');
 images.forEach(img => {
@@ -30,7 +30,7 @@ document.head.appendChild(link);
 };
 
 export const optimizeBundleSize: any = () => {
-// Dynamic imports for non-critical components,
+// Dynamic imports for non-critical components;
 const loadComponent = componentName => {    return import(`./components/${componentName}`)
 }
 return { loadComponent }

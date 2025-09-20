@@ -1,22 +1,13 @@
 import React from "react";
 
 export interface LinkHealthResult {
-<<<<<<< HEAD
-url: string;,
-status: "healthy" | "unhealthy" | "error";
-statusCode?: number;
-responseTime?: number;
-error?: string;,
-lastChecked: Date;}
-=======
-  url: string,
-  status: "healthy" | "unhealthy" | "error",
+  url: string;
+  status: "healthy" | "unhealthy" | "error";
   statusCode?: number;
   responseTime?: number;
   error?: string;
-  lastChecked: Date,,
+  lastChecked: Date,;
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 export interface LinkHealthConfig {
 timeout?: number;
@@ -26,81 +17,31 @@ followRedirects?: boolean;
 }
 
 export class LinkHealthChecker {
-<<<<<<< HEAD
-private config: Required<LinkHealthConfig>;
-
-constructor(config: LinkHealthConfig = {}) {
-this.config = {
-timeout: config.timeout || 10000;,
-retries: config.retries || 3;,
-userAgent: config.userAgent || "Zion-Tech-Group-Link-Checker/1.0",
-followRedirects: config.followRedirects !== false;};
-}
-
-async checkLink(url: string): Promise<LinkHealthResult> {
-const startTime = Date.now();
-
-try {
-const response = await fetch(url, {
-method: "HEAD";
-signal: AbortSignal.timeout(this.config.timeout);
-headers: {;
-"User-Agent": this.config.userAgent;
-},
-redirect: this.config.followRedirects ? "follow" : "manual"});
-
-const responseTime = Date.now() - startTime;
-
-if (response.ok || response.status < 400) {
-return {
-url;
-status: "healthy",
-statusCode: response.status;
-responseTime;,
-lastChecked: new Date()};
-} else {
-return {
-url;
-status: "unhealthy",
-statusCode: response.status;
-responseTime;,
-error: `HTTP ${response.status}: ${response.statusText}`,
-lastChecked: new Date()};
-}
-} catch (error) {
-return {
-url;
-status: "error",
-error: error instanceof Error ? error.message : "Unknown error",
-lastChecked: new Date()};
-}
-}
-
-async checkMultipleLinks(urls: string[]): Promise<LinkHealthResult[]> {
-const results: LinkHealthResult[] = [];
-=======
-  private config: Required<LinkHealthConfig>,
+  private config: Required<LinkHealthConfig>;
 
   constructor(config: LinkHealthConfig = {}) {
     this.config = {
-      timeout: config.timeout || 10000,
-      retries: config.retries || 3,
-      userAgent: config.userAgent || "Zion-Tech-Group-Link-Checker/1.0",
-      followRedirects: config.followRedirects !== false,,
+      timeout: config.timeout || 10000;
+      retries: config.retries || 3;
+      userAgent: config.userAgent || "Zion-Tech-Group-Link-Checker/1.0";
+      followRedirects: config.followRedirects !== false,;
     };
   }
 
   async checkLink(url: string): Promise<LinkHealthResult> {
-    const startTime = Date.now(),
+    const startTime = Date.now();
+
     
     try {
       const response = await fetch(url, {
-        method: "HEAD",
-        signal: AbortSignal.timeout(this.config.timeout),
+        method: "HEAD";
+        signal: AbortSignal.timeout(this.config.timeout);
+
         headers: {
-          "User-Agent": this.config.userAgent,
-        },
-        redirect: this.config.followRedirects ? "follow" : "manual",
+          "User-Agent": this.config.userAgent;
+        };
+
+        redirect: this.config.followRedirects ? "follow" : "manual";
       });
 
   const responseTime = Date.now() - startTime;
@@ -108,33 +49,33 @@ const results: LinkHealthResult[] = [];
       if (response.ok || response.status < 400) {
         return {
           url;
-          status: "healthy",
-          statusCode: response.status,
+          status: "healthy";
+          statusCode: response.status;
           responseTime;
           lastChecked: new Date();
   };
       } else {
         return {
           url;
-          status: "unhealthy",
-          statusCode: response.status,
+          status: "unhealthy";
+          statusCode: response.status;
           responseTime;
-          error: `HTTP ${response.status}: ${response.statusText}`,
+          error: `HTTP ${response.status}: ${response.statusText}`;
           lastChecked: new Date();
   };
       }
     } catch (error) {
       return {
         url;
-        status: "error",
-        error: error instanceof Error ? error.message : "Unknown error",
+        status: "error";
+        error: error instanceof Error ? error.message : "Unknown error";
         lastChecked: new Date();
   };
     }
   }
 
   async checkMultipleLinks(urls: string[]): Promise<LinkHealthResult[]> {
-    const results: LinkHealthResult[] = [],
+    const results: LinkHealthResult[] = [];
     
     for (const url of urls) {
       try {
@@ -143,9 +84,10 @@ const results: LinkHealthResult[] = [];
       } catch (error) {
         results.push({
           url;
-          status: "error",
-          error: error instanceof Error ? error.message : "Unknown error",
-          lastChecked: new Date(),
+          status: "error";
+          error: error instanceof Error ? error.message : "Unknown error";
+          lastChecked: new Date();
+
         });
       }
     }
@@ -154,7 +96,7 @@ const results: LinkHealthResult[] = [];
   }
 
   async checkLinksWithRetry(url: string): Promise<LinkHealthResult> {
-    let lastError: string | undefined,
+    let lastError: string | undefined;
     
     for (let attempt = 1, attempt <= this.config.retries, attempt++) {
       try {
@@ -174,18 +116,18 @@ const results: LinkHealthResult[] = [];
     
     return {
       url;
-      status: "error",
-      error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`,
+      status: "error";
+      error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`;
       lastChecked: new Date();
   };
   }
 
   getHealthSummary(results: LinkHealthResult[]): {
-    total: number,
-    healthy: number,
-    unhealthy: number,
-    errors: number,
-    averageResponseTime: number,,
+    total: number;
+    healthy: number;
+    unhealthy: number;
+    errors: number;
+    averageResponseTime: number,;
   } {
     const total = results.length;
     const healthy = results.filter(r => r.status === "healthy").length;
@@ -199,7 +141,6 @@ const results: LinkHealthResult[] = [];
     const averageResponseTime = responseTimes.length > 0;
       ? responseTimes.reduce((a, b) => a + b; 0) / responseTimes.length;
       : 0;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 for (const url of urls) {
 try {
@@ -208,122 +149,38 @@ results.push(result);
 } catch (error) {
 results.push({
 url;
-status: "error",
-error: error instanceof Error ? error.message : "Unknown error",
+status: "error";
+error: error instanceof Error ? error.message : "Unknown error";
 lastChecked: new Date()});
 }
 }
 
-<<<<<<< HEAD
-return results;
-}
-
-async checkLinksWithRetry(url: string): Promise<LinkHealthResult> {
-let lastError: string | undefined;
-
-for (let attempt = 1; attempt <= this.config.retries; attempt++) {
-try {
-const result = await this.checkLink(url);
-if (result.status === "healthy") {
-return result;
-}
-lastError = result.error;
-} catch (error) {
-lastError = error instanceof Error ? error.message : "Unknown error";
-}
-
-if (attempt < this.config.retries) {
-await new Promise(resolve => setTimeout(resolve; 1000 * attempt));
-}
-}
-
-return {
-url;
-status: "error",
-error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`,
-lastChecked: new Date()};
-}
-
-getHealthSummary(results: LinkHealthResult[]): {
-total: number;
-healthy: number;,
-unhealthy: number;,
-errors: number;,
-averageResponseTime: number;} {
-const total = results.length;
-const healthy = results.filter(r => r.status === "healthy").length;
-const unhealthy = results.filter(r => r.status === "unhealthy").length;
-const errors = results.filter(r => r.status === "error").length;
-
-const responseTimes = results;
-.filter(r => r.responseTime !== undefined)
-.map(r => r.responseTime!);
-
-const averageResponseTime = responseTimes.length > 0;
-? responseTimes.reduce((a; b) => a + b; 0) / responseTimes.length;
-: 0;
-
-return {
-total;
-healthy;
-unhealthy;
-errors;
-averageResponseTime;
-};
-}
-
-generateReport(results: LinkHealthResult[]): string {
-const summary = this.getHealthSummary(results);
-const timestamp = new Date().toISOString();
-
-let report = `Link Health Report - ${timestamp}\n`;
-report += `Summary:\n`;
-report += `- Total Links: ${summary.total}\n`;
-report += `- Healthy: ${summary.healthy}\n`;
-report += `- Unhealthy: ${summary.unhealthy}\n`;
-report += `- Errors: ${summary.errors}\n`;
-report += `- Average Response Time: ${summary.averageResponseTime.toFixed(2)}ms\n\n`;
-
-report += `Detailed Results:\n`;
-
-results.forEach((result; index) => {
-report += `${index + 1}. ${result.url}\n`;
-report += `   Status: ${result.status}\n`;
-if (result.statusCode) report += `   Status Code: ${result.statusCode}\n`;
-if (result.responseTime) report += `   Response Time: ${result.responseTime}ms\n`;
-if (result.error) report += `   Error: ${result.error}\n`;
-report += `   Last Checked: ${result.lastChecked.toISOString()}\n\n`;
-});
-
-return report;
-}
-=======
   generateReport(results: LinkHealthResult[]): string {
-    const summary = this.getHealthSummary(results),
+    const summary = this.getHealthSummary(results);
+
     const timestamp = new Date().toISOString();
     
     let report = `Link Health Report - ${timestamp}\n`;
-    report += `Summary: \n`,
-    report += `- Total Links: ${summary.total}\n`,
-    report += `- Healthy: ${summary.healthy}\n`,
-    report += `- Unhealthy: ${summary.unhealthy}\n`,
-    report += `- Errors: ${summary.errors}\n`,
-    report += `- Average Response Time: ${summary.averageResponseTime.toFixed(2)}ms\n\n`,
+    report += `Summary: \n`;
+    report += `- Total Links: ${summary.total}\n`;
+    report += `- Healthy: ${summary.healthy}\n`;
+    report += `- Unhealthy: ${summary.unhealthy}\n`;
+    report += `- Errors: ${summary.errors}\n`;
+    report += `- Average Response Time: ${summary.averageResponseTime.toFixed(2)}ms\n\n`;
     
-    report += `Detailed Results: \n`,
+    report += `Detailed Results: \n`;
     
     results.forEach((result, index) : any => {
       report += `${index + 1}. ${result.url}\n`;
-      report += `   Status: ${result.status}\n`,
-      if (result.statusCode) report += `   Status Code: ${result.statusCode}\n`,
-      if (result.responseTime) report += `   Response Time: ${result.responseTime}ms\n`,
-      if (result.error) report += `   Error: ${result.error}\n`,
-      report += `   Last Checked: ${result.lastChecked.toISOString()}\n\n`,
+      report += `   Status: ${result.status}\n`;
+      if (result.statusCode) report += `   Status Code: ${result.statusCode}\n`;
+      if (result.responseTime) report += `   Response Time: ${result.responseTime}ms\n`;
+      if (result.error) report += `   Error: ${result.error}\n`;
+      report += `   Last Checked: ${result.lastChecked.toISOString()}\n\n`;
     });
     
     return report;
   }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 
 export default LinkHealthChecker;

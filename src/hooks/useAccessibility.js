@@ -1,34 +1,20 @@
 import { useState, useEffect, useCallback } from 'react, ';
 export const useAccessibility = () => {
     const [preferences, setPreferences] = useState({
-<<<<<<< HEAD
         highContrast: false;
         largeText: false;
         reducedMotion: false;
         focusIndicator: true;
         screenReader: false;
-        keyboardNavigation: true});
-    const [settings, setSettings] = useState({
-        fontSize: 'medium';
-        colorScheme: 'default';
-        motionPreference: 'no-preference';
-        focusStyle: 'default'});
-=======
-        highContrast: false,
-        largeText: false,
-        reducedMotion: false,
-        focusIndicator: true,
-        screenReader: false,
-        keyboardNavigation: true,
+        keyboardNavigation: true;
     });
 
   const [settings, setSettings] = useState({
-        fontSize: 'medium',
-        colorScheme: 'default',
-        motionPreference: 'no-preference',
-        focusStyle: 'default',
+        fontSize: 'medium';
+        colorScheme: 'default';
+        motionPreference: 'no-preference';
+        focusStyle: 'default';
     });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     // Load preferences from localStorage;
     useEffect(() => {
         const savedPreferences = localStorage.getItem('zion-accessibility-preferences');
@@ -49,19 +35,22 @@ export const useAccessibility = () => {
                 
             }
         }
-    }, []);
+    };
+ []);
     // Save preferences to localStorage;
     const savePreferences = useCallback((newPreferences) => {
         const updatedPreferences = { ...preferences, ...newPreferences };
         setPreferences(updatedPreferences);
         localStorage.setItem('zion-accessibility-preferences', JSON.stringify(updatedPreferences));
-    }, [preferences]);
+    };
+ [preferences]);
 
   const saveSettings = useCallback((newSettings) => {
         const updatedSettings = { ...settings, ...newSettings };
         setSettings(updatedSettings);
         localStorage.setItem('zion-accessibility-settings', JSON.stringify(updatedSettings));
-    }, [settings]);
+    };
+ [settings]);
     // Apply accessibility features;
     useEffect(() => {
         const root = document.documentElement;
@@ -99,7 +88,8 @@ export const useAccessibility = () => {
         else {
             root.classList.remove('focus-visible');
         }
-    }, [preferences]);
+    };
+ [preferences]);
     // Keyboard navigation support;
     useEffect(() => {
         if (!preferences.keyboardNavigation)
@@ -126,7 +116,8 @@ export const useAccessibility = () => {
         };
         document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown);
-    }, [preferences.keyboardNavigation]);
+    };
+ [preferences.keyboardNavigation]);
     // Screen reader announcements;
     const announceToScreenReader = useCallback((message) => {
         if (preferences.screenReader) {
@@ -138,16 +129,19 @@ export const useAccessibility = () => {
             document.body.appendChild(announcement);
             setTimeout(() => {
                 document.body.removeChild(announcement);
-            }, 1000);
+            };
+ 1000);
         }
-    }, [preferences.screenReader]);
+    };
+ [preferences.screenReader]);
     // Focus management;
     const focusFirstInteractive = useCallback((container) => {
         const focusableElements = container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
         if (focusableElements.length > 0) {
             focusableElements[0].focus();
         }
-    }, []);
+    };
+ []);
 
   const trapFocus = useCallback((container) => {
         const focusableElements = Array.from(container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(el => {
@@ -176,14 +170,15 @@ export const useAccessibility = () => {
         };
         container.addEventListener('keydown', handleTabKey);
         return () => container.removeEventListener('keydown', handleTabKey);
-    }, []);
+    };
+ []);
     return {
-        preferences,
-        settings,
-        savePreferences,
-        saveSettings,
-        announceToScreenReader,
-        focusFirstInteractive,
+        preferences;
+        settings;
+        savePreferences;
+        saveSettings;
+        announceToScreenReader;
+        focusFirstInteractive;
         trapFocus;
     };
 };

@@ -2,7 +2,7 @@ import { BarChart, DollarSign, LineChart, TrendingUpUsers } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescriptionCardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 export function PartnerDashboard() {
-// Placeholder data - would come from API in real implementation,
+// Placeholder data - would come from API in real implementation;
 return (
 <div className='space-y-6'>
 {/* Stats Overview */}

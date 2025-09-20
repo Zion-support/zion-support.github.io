@@ -1,4 +1,4 @@
-action?: string,
+action?: string;
 }
 interface OnboardingTrackerProps {
 return (
@@ -9,7 +9,7 @@ return (
 </div>
 {/* Progress bar */}
 <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
-<div,
+<div;
 className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 style={{ width: `${progress}%` }}
 ></div>
@@ -29,7 +29,7 @@ style={{ width: `${progress}%` }}
 <div className="text-sm font-medium text-white">{step.label}</div>
 </div>
 {!step.completed && step.action && (
-<Button,
+<Button;
 asChild;
 variant="ghost"
 size="sm";
@@ -54,7 +54,7 @@ step.id ";
 step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>)
 }</div> </div> {";
 !step.completed && step.action && (<Button asChild variant=" ghost"size=" sm"className=" text-zion-purple hover:text-zion-cyan hover:bg-zion-blue" > <Link href= {
-step.link,
+step.link;
 }> </Link> </Button>)
 }</div>) )
 }</div> </div>)

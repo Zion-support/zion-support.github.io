@@ -1,7 +1,7 @@
 import { ChevronDown,, ChevronUp,  } from 'lucide-react'
 return (
 <div className="mb-6 border-b border-zion-blue-light pb-6">
-<button,
+<button;
 onClick={toggleSection}
 className="flex w-full items-center justify-between text-white font-medium"
 >;
@@ -18,7 +18,7 @@ className="flex w-full items-center justify-between text-white font-medium"
 <span>{experienceRange[0]} years</span>
 <span>{experienceRange[1]} years</span>
 </div>
-<Slider,
+<Slider;
 aria-label='Experience range'            aria-label="Experience range";
 value={[experienceRange[0], experienceRange[1]]}
 min={0}

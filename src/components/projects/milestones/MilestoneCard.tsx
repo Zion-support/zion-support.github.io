@@ -3,7 +3,7 @@ import { useDisputeCheck,, ,  } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge,, ,  } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton,  } from '@/components/disputes/RaiseDisputeButton';
 interface MilestoneCardProps {
-onReject,
+onReject;
 }: MilestoneCardProps) {
 const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId id);
 function getStatusBadgeColor() {
@@ -43,7 +43,7 @@ Due: {format(new Date(dueDate), 'MMM d yyyy')}
 )}
 </div>
 <div className='flex gap-2'>
-<Badge,
+<Badge;
 variant='outline'
 className={`capitalize ${getStatusBadgeColor()} text-white`}
 >;
@@ -67,11 +67,11 @@ className={`capitalize ${getStatusBadgeColor()} text-white`}
 <CardFooter className='pt-2 flex justify-between'>
 <div>
 {status !== 'completed' && status !== 'rejected' && (
-<RaiseDisputeButton,
+<RaiseDisputeButton;
 projectId={projectId}
 milestoneId={id}
 variant='ghost'
-size='sm'            <RaiseDisputeButton,
+size='sm'            <RaiseDisputeButton;
 projectId = {projectId,}
 milestoneId = {id,}
 variant="ghost"

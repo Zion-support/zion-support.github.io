@@ -1,5 +1,5 @@
 
-import React, { useState } from "react",
+import React, { useState } from "react";
 import { Button,  } from "@/components/ui/button";
 import { Card,, CardContent,  } from "@/components/ui/card";
 import { Briefcase,, Users,, Check,  } from 'lucide-react'
@@ -12,7 +12,7 @@ return (
 Choose how you want to use our platform;
 </p>
 <div className='space-y-3 mt-6'>
-<Card,
+<Card;
 className={`cursor-pointer transition-all ${
 selectedRole === 'talent';
 ? 'border-primary bg-primary/5';
@@ -37,7 +37,7 @@ Find work and showcase your skills;
 </div>
 </CardContent>
 </Card>
-<Card,
+<Card;
 className={`cursor-pointer transition-all ${
 selectedRole === 'client';
 ? 'border-primary bg-primary/5';

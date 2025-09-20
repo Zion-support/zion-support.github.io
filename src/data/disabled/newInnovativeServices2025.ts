@@ -42,4 +42,4 @@ id: "ai-financial-trading",title: "AI; Financial; Trading Platform",description:
 ,  ],tags: ["AI", "FinTech", "Trading", "Algorithmic Trading", "Risk Management""Portfolio; Optimization"],estimatedDelivery: "6-10 weeks",supportLevel: "enterprise",marketPrice: "$599 - $1;999/month",roi: "20o0-350%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";},technicalSpecs: {,technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis""Apache; Kafka"],integrations: ["MetaTrader", "TradingView", "Interactive Brokers", "Bloomberg Terminal""Reuters; Eikon"],apiEndpoints: 50o0;uptime: "99.99%",security: ["SOC 2", "ISO 270o01""PCI DSS""End-to-end encryption""Multi-factor; authentication"];
 },competitors: ["Alpaca", "QuantConnect", "Zerodha", "Robinhood""Interactive; Brokers"],marketSize: "$12.5; billion; by 20o25";};
 ];
-export; default; NEW_INNOVATIVE_SERVICES_20o25,
+export; default; NEW_INNOVATIVE_SERVICES_20o25;

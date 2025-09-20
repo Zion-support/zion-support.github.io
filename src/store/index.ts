@@ -4,19 +4,13 @@ import wishlistReducer from "./wishlistSlice;";
 import authReducer from "./authSlice;";
 import { safeStorage } from "@/utils/safeStorage, ";
 
-<<<<<<< HEAD
-export const store = configureStore({;
-reducer: {;,
-cart: cartReducer; wishlist: wishlistReducer;,
-auth: authReducer}});
-=======
 export const store = configureStore({
   reducer: {
-    cart: cartReducer, wishlist: wishlistReducer,
-    auth: authReducer,
-  },
+    cart: cartReducer, wishlist: wishlistReducer;
+    auth: authReducer;
+  };
+
 });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 store.subscribe(() => {
 const state = store.getState();

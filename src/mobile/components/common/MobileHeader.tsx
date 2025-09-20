@@ -9,7 +9,7 @@ className
 <div className="flex items-center justify-between h-14 px-4">
 <div className="flex items-center">
 {showBack && (
-<Button,
+<Button;
 variant="ghost"
 size="icon";
 className="mr-2"
@@ -25,7 +25,7 @@ onClick = {(,) => router.back(),}
 </div>
 <div className="flex items-center space-x-2">
 {showNotifications && (
-<Button,
+<Button;
 variant="ghost"
 size="icon";
 onClick = {onNotificationsClick,}
@@ -38,19 +38,19 @@ onClick = {onNotificationsClick,}
 <Button variant='ghost' size='icon' onClick={onSettingsClick}>
 <Settings className='h-5 w-5' />
 <span className='sr-only'>Settings</span>
-showBack = false,
-showNotifications = false,
-showSettings = false,
+showBack = false;
+showNotifications = false;
+showSettings = false;
 className
-onNotificationsClick,
-onSettingsClick,
+onNotificationsClick;
+onSettingsClick;
 }: MobileHeaderProps) {
 const router = useRouter();
 >;
 <div className='flex items-center justify-between h-14 px-4'>
 <div className='flex items-center'>
 {showBack && (
-<Button,
+<Button;
 variant='ghost'
 size='icon';
 className='mr-2'
@@ -72,7 +72,7 @@ onClick={() => router.back()}
 {showSettings && (
 <Button variant='ghost' size='icon' onClick={onSettingsClick}>
 <Settings className='h-5 w-5' />
-<span className='sr-only'>Settings</span>            </Button>            <Button,
+<span className='sr-only'>Settings</span>            </Button>            <Button;
 variant="ghost"
 size="icon";
 onClick = {onSettingsClick,}

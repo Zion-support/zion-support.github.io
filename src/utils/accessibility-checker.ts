@@ -1,11 +1,11 @@
 import React from "react";
 
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
-// Accessibility checker utilities,
+// Accessibility checker utilities;
 export const checkAccessibility: any = () => {;
 console.log('Checking accessibility...');
 }

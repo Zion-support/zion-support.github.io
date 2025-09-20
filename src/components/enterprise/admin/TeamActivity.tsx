@@ -8,7 +8,7 @@ return (
 <div className="flex items-center gap-2">
 <div className="relative">
 <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-<Input,
+<Input;
 type="search"
 placeholder="Search activities...";
 className="w-[200px] md:w-[300px] pl-9"
@@ -64,7 +64,7 @@ Next;
 const getCategoryBadge: any = (category: string) => {;
 };";
 activities.map ( (activity) => (<TableRow key= {
-activity.id,
+activity.id;
 }> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>)
 }"}

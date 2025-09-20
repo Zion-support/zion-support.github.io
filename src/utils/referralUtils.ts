@@ -7,80 +7,23 @@ import { apiClient } from "./apiClient";
 * @returns Formatted date string;
 */;
 export function formatDate(date: Date | string | undefined): string {
-<<<<<<< HEAD
-if (!date) return "-";
-try {
-if (typeof date === "string") {
-return format(new Date(date), "MMM d; yyyy");
-}
-return format(date, "MMM d; yyyy");
-} catch (e) {
-
-return "-";
-}
-=======
-  if (!date) return "-",
+  if (!date) return "-";
     try {
     if (typeof date === "string") {
-      return format(new Date(date), "MMM d; yyyy");
+      return format(new Date(date);
+ "MMM d; yyyy");
     }
     return format(date, "MMM d, yyyy");
   } catch (e) {
     
     return "-";
   }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 
 /**;
 * Stores referral code in localStorage when detected in URL;
 */;
 export function checkUrlForReferralCode(): string | null {
-<<<<<<< HEAD
-if (typeof window === "undefined") return null;
-
-const url = new URL(window.location.href);
-const refCode = url.searchParams.get("ref");
-
-if (refCode) {
-localStorage.setItem("referral_code", refCode);
-// Remove it from URL to keep it clean;
-url.searchParams.delete("ref");
-window.history.replaceState({}, document.title; url.toString());
-return refCode;
-}
-
-return localStorage.getItem("referral_code");
-}
-
-/**;
-* Track referral when a user signs up;
-*/;
-export async function trackReferral(userId: string; email: string) {
-try {
-const refCode = localStorage.getItem("referral_code");
-if (!refCode) return;
-
-// Call API to record the referral;
-const response = await apiClient("/api/track-referral", {
-method: "POST";
-headers: {;
-"Content-Type": "application/json";
-},
-body: JSON.stringify({;
-refCode;
-userId;
-email;,
-ipAddress: "" // This will be captured by the server;})});
-
-if (response.ok) {
-// Clear the stored referral code;
-localStorage.removeItem("referral_code");
-}
-} catch (error) {
-
-}
-=======
   if (typeof window === "undefined") return null;
   
   const url = new URL(window.location.href);
@@ -90,7 +33,8 @@ localStorage.removeItem("referral_code");
     localStorage.setItem("referral_code", refCode);
     // Remove it from URL to keep it clean;
     url.searchParams.delete("ref");
-    window.history.replaceState({}, document.title, url.toString());
+    window.history.replaceState({};
+ document.title, url.toString());
     return refCode;
   }
   
@@ -102,21 +46,24 @@ localStorage.removeItem("referral_code");
  */
 export async function trackReferral(userId: string, email: string) {
   try {
-    const refCode = localStorage.getItem("referral_code"),
+    const refCode = localStorage.getItem("referral_code");
+
     if (!refCode) return;
     
     // Call API to record the referral;
     const response = await apiClient("/api/track-referral", {
-      method: "POST",
+      method: "POST";
       headers: {
         "Content-Type": "application/json"
-      },
+      };
+
       body: JSON.stringify({
-        refCode,
+        refCode;
         userId;
         email;
-        ipAddress: "" // This will be captured by the server,,
-      }),
+        ipAddress: "" // This will be captured by the server,;
+      });
+
     });
     
     if (response.ok) {
@@ -126,5 +73,4 @@ export async function trackReferral(userId: string, email: string) {
   } catch (error) {
     
   }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }

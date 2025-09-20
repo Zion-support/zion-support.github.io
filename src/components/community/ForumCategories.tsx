@@ -1,63 +1,35 @@
 import React from "react";
 import { ForumCategoryInfo } from "@/types/community";
 
-<<<<<<< HEAD
-export default function ForumCategories() {
-const categories: ForumCategoryInfo[] = [
-{,
-id: "1",
-name: "General Discussion";
-description: "General topics and discussions";
-postCount: 150; adminOnly: false;,
-icon: "message-circle",
-lastPost: {,
-title: "Welcome to the community!",
-author: "Admin",
-date: "2024-01-15"}
-},
-{
-id: "2",
-name: "Technical Support",
-description: "Get help with technical issues",
-postCount: 89;,
-adminOnly: false;,
-icon: "code",
-lastPost: {,
-title: "API integration question",
-author: "Developer123",
-date: "2024-01-14"}
-}
-];
-=======
 export default function ForumCategories() : any {
   const categories: ForumCategoryInfo[] = [
     {
-      id: "1",
-      name: "General Discussion",;
-      description: "General topics and discussions",;
-      postCount: 150, adminOnly: false,
-      icon: "message-circle",
+      id: "1";
+      name: "General Discussion";
+      description: "General topics and discussions";
+      postCount: 150, adminOnly: false;
+      icon: "message-circle";
       lastPost: {
-        title: "Welcome to the community!",
-        author: "Admin",
-        date: "2024-01-15",
+        title: "Welcome to the community!";
+        author: "Admin";
+        date: "2024-01-15";
       }
-    },
+    };
+
     {
-      id: "2",
-      name: "Technical Support",
-      description: "Get help with technical issues",
-      postCount: 89,
-      adminOnly: false,
-      icon: "code",
+      id: "2";
+      name: "Technical Support";
+      description: "Get help with technical issues";
+      postCount: 89;
+      adminOnly: false;
+      icon: "code";
       lastPost: {
-        title: "API integration question",
-        author: "Developer123",
-        date: "2024-01-14",
+        title: "API integration question";
+        author: "Developer123";
+        date: "2024-01-14";
       }
     }
   ];
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 return (
 <div className="space-y-4">
@@ -72,28 +44,6 @@ return (
 )}
 
 interface ForumCategoriesProps {
-<<<<<<< HEAD
-categories: Array<{,
-id: string; name: string; description: string; postCount: number}>
-}
-
-const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
-return (
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-{categories.map((category) => (
-<div key={category.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-<h3 className="text-xl font-semibold text-white mb-2">{category.name}</h3>
-<p className="text-zion-slate-light mb-4">{category.description}</p>
-<div className="flex justify-between items-center">
-<span className="text-sm text-zion-slate-light">
-{category.postCount} posts,
-</span>
-</div>
-</div>
-))}
-</div>
-);
-=======
   categories: Array<{
     id: string, name: string, description: string, postCount: number;
   }>;
@@ -108,29 +58,16 @@ const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) : any =
           <p className="text-zion-slate-light mb-4">{category.description}</p>
           <div className="flex justify-between items-center">
             <span className="text-sm text-zion-slate-light">
-              {category.postCount} posts,
+              {category.postCount} posts;
             </span>
           </div>
         </div>
       ))}
     </div>
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 };
 
 export default ForumCategories;
 }
 }
-<<<<<<< HEAD
 <//div><///div>)))
-import Link from "next/link",
-import { Card, CardContent, CardHeader, CardTitleCardDescription } from "@/components/ui/card";
-import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare, Briefcase, Code, FileTextMegaphone } from 'lucide-react';
-import { ForumCategoryInfo } from "@/types/community";
-const categories: ForumCategoryInfo[] = [
-{
-}
-=======
-<//div><///div>)))
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e

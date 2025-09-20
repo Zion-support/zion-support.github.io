@@ -6,8 +6,8 @@ intensity?: "low" | "medium" | "high";
 className?: string;
 };
 export function FuturisticBackground({
-variant = "particles",
-intensity = "medium",
+variant = "particles";
+intensity = "medium";
 className = "" ;
 }: FuturisticBackgroundProps) {;
 const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -27,30 +27,17 @@ canvas.height = window.innerHeight;
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
-<<<<<<< HEAD
-// Particle system;
-if (variant === "particles") {
-const particles: Array<{
-x: number;
-y: number;
-vx: number;
-vy: number;,
-size: number;,
-opacity: number;,
-color: string;}> = [];
-=======
     // Particle system;
     if (variant === "particles") {
       const particles: Array<{
-        x: number,
-    y: number,
-        vx: number,
-    vy: number,
-    size: number,
-    opacity: number,
-    color: string,,
+        x: number;
+    y: number;
+        vx: number;
+    vy: number;
+    size: number;
+    opacity: number;
+    color: string,;
      }> = [];
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const colors = [;
 "#00ffff", // Cyan;
@@ -63,51 +50,17 @@ const colors = [;
 "#ff8000"  // Orange;
 ];
 
-<<<<<<< HEAD
-// Create particles;
-const particleCount = intensity === "high" ? 200 : intensity === "medium" ? 100 : 50;
-for (let i = 0; i < particleCount; i++) {
-particles.push({
-x: Math.random() * canvas.width;
-y: Math.random() * canvas.height;
-vx: (Math.random() - 0.5) * 2;
-vy: (Math.random() - 0.5) * 2;,
-size: Math.random() * 3 + 1;,
-opacity: Math.random() * 0.8 + 0.2;,
-color: colors[Math.floor(Math.random() * colors.length)]});
-}
-
-// Animation loop;
-const animate: any = () => {;
-ctx.clearRect(0; 0; canvas.width; canvas.height);
-
-// Update and draw particles;
-particles.forEach((particle; index) => {
-// Update position;
-particle.x += particle.vx;
-particle.y += particle.vy;
-
-// Bounce off edges;
-if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
-if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
-
-// Wrap around edges;
-if (particle.x < 0) particle.x = canvas.width;
-if (particle.x > canvas.width) particle.x = 0;
-if (particle.y < 0) particle.y = canvas.height;
-if (particle.y > canvas.height) particle.y = 0;
-=======
       // Create particles;
       const particleCount = intensity === "high" ? 200 : intensity === "medium" ? 100 : 50;
       for (let i = 0, i < particleCount, i++) {
         particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 2,
-          vy: (Math.random() - 0.5) * 2,
-          size: Math.random() * 3 + 1,
-          opacity: Math.random() * 0.8 + 0.2,
-          color: colors[Math.floor(Math.random() * colors.length)],
+          x: Math.random() * canvas.width;
+          y: Math.random() * canvas.height;
+          vx: (Math.random() - 0.5) * 2;
+          vy: (Math.random() - 0.5) * 2;
+          size: Math.random() * 3 + 1;
+          opacity: Math.random() * 0.8 + 0.2;
+          color: colors[Math.floor(Math.random() * colors.length)];
         });
      }
 
@@ -225,7 +178,8 @@ if (particle.y > canvas.height) particle.y = 0;
         
         for (let i = 0, i < waveCount, i++) {
           ctx.beginPath();
-          ctx.strokeStyle = `hsl(${180 + i * 60}, 100%, 50%)`;
+          ctx.strokeStyle = `hsl(${180 + i * 60};
+ 100%, 50%)`;
           ctx.lineWidth = 2;
           ctx.globalAlpha = 0.6;
           
@@ -253,7 +207,7 @@ if (particle.y > canvas.height) particle.y = 0;
     // Matrix system;
     if (variant === "matrix") {
       const characters = "01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン";
-      const drops: number[] = [],
+      const drops: number[] = [];
     const fontSize = intensity === "high" ? 12 : intensity === "medium" ? 16 : 20;
       const columns = Math.floor(canvas.width / fontSize);
       
@@ -284,7 +238,6 @@ if (particle.y > canvas.height) particle.y = 0;
       
       animate();
     }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 // Draw particle;
 ctx.beginPath();
@@ -380,7 +333,8 @@ const waveCount = intensity === "high" ? 5 : intensity === "medium" ? 3 : 2;
 
 for (let i = 0; i < waveCount; i++) {
 ctx.beginPath();
-ctx.strokeStyle = `hsl(${180 + i * 60}, 100%, 50%)`;
+ctx.strokeStyle = `hsl(${180 + i * 60};
+ 100%, 50%)`;
 ctx.lineWidth = 2;
 ctx.globalAlpha = 0.6;
 
@@ -443,7 +397,8 @@ animate();
 return () => {
 window.removeEventListener("resize", resizeCanvas);
 };
-}, [variant; intensity]);
+};
+ [variant; intensity]);
 
 return (
 <canvas;
@@ -459,35 +414,11 @@ background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)";
 // Neon text component;
 export function NeonText({ ;
 children;
-color = "#00ffff",
-glowIntensity = "medium",
+color = "#00ffff";
+glowIntensity = "medium";
 className = ""
 }: {
-<<<<<<< HEAD
-children: React.ReactNode;
-color?: string;
-glowIntensity?: "low" | "medium" | "high";
-className?: string;
-}) {
-const glowSize = glowIntensity === "high" ? "0 0 20px" : glowIntensity === "medium" ? "0 0 15px" : "0 0 10px";
-
-return (
-<span;
-className={className}
-style={{
-color: color;,
-textShadow: `;
-${glowSize} ${color};
-0 0 30px ${color},
-0 0 40px ${color}
-`,
-animation: "neon-pulse 2s ease-in-out infinite alternate"}}
->;
-{children}
-</span>
-);
-=======
-  children: React.ReactNode,
+  children: React.ReactNode;
     color?: string;
   glowIntensity?: "low" | "medium" | "high";
   className?: string;
@@ -498,58 +429,30 @@ animation: "neon-pulse 2s ease-in-out infinite alternate"}}
     <span;
       className={className}
       style={{
-        color: color,
+        color: color;
         textShadow: `
-          ${glowSize} ${color},
-          0 0 30px ${color},
+          ${glowSize} ${color};
+
+          0 0 30px ${color};
+
           0 0 40px ${color}
-        `,
-        animation: "neon-pulse 2s ease-in-out infinite alternate",
+        `;
+        animation: "neon-pulse 2s ease-in-out infinite alternate";
       }}
     >
       {children}
     </span>
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 
 // Futuristic card component;
 export function FuturisticCard({ ;
 children;
-className = "",
-glowColor = "#00ffff",
+className = "";
+glowColor = "#00ffff";
 intensity = "medium";
 }: {
-<<<<<<< HEAD
-children: React.ReactNode;
-className?: string;
-glowColor?: string;
-intensity?: "low" | "medium" | "high";
-}) {
-const glowSize = intensity === "high" ? "0 0 30px" : intensity === "medium" ? "0 0 20px" : "0 0 10px";
-
-return (
-<div;
-className={`relative overflow-hidden rounded-lg border border-transparent bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm ${className}`}
-style={{
-boxShadow: `0 0 ${glowSize} ${glowColor}`;
-borderColor: `${glowColor}40`;
-}}
->;
-<div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20" />
-<div className="relative z-10 p-6">
-{children}
-</div>
-<div;
-className="absolute inset-0 opacity-20"
-style={{
-background: `linear-gradient(45deg; transparent 30%, ${glowColor}20 50%, transparent 70%)`,
-animation: "shimmer 3s ease-in-out infinite"}}
-/>
-</div>
-);
-=======
-  children: React.ReactNode,
+  children: React.ReactNode;
     className?: string;
   glowColor?: string;
   intensity?: "low" | "medium" | "high";
@@ -557,10 +460,10 @@ animation: "shimmer 3s ease-in-out infinite"}}
   const glowSize = intensity === "high" ? "0 0 30px" : intensity === "medium" ? "0 0 20px" : "0 0 10px";
   
   return (
-    <div,
+    <div;
       className={`relative overflow-hidden rounded-lg border border-transparent bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm ${className}`}
       style={{
-        boxShadow: `0 0 ${glowSize} ${glowColor}`,
+        boxShadow: `0 0 ${glowSize} ${glowColor}`;
         borderColor: `${glowColor}40`
       }}
     >
@@ -571,51 +474,35 @@ animation: "shimmer 3s ease-in-out infinite"}}
       <div, 
         className="absolute inset-0 opacity-20"
         style={{
-          background: `linear-gradient(45deg, transparent 30%, ${glowColor}20 50%, transparent 70%)`,
+          background: `linear-gradient(45deg, transparent 30%, ${glowColor}20 50%, transparent 70%)`;
           animation: "shimmer 3s ease-in-out infinite";
   }}
       />
     </div>
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 
 // Add CSS animations;
 const style = document.createElement("style");
-<<<<<<< HEAD
-style.textContent = `;
-@keyframes neon-pulse {
-from {
-text-shadow: 0 0 10px currentColor; 0 0 20px currentColor; 0 0 30px currentColor;}
-to {
-text-shadow: 0 0 5px currentColor; 0 0 10px currentColor; 0 0 15px currentColor;}
-}
-
-@keyframes shimmer {
-0% {
-transform: translateX(-100%);}
-100% {
-transform: translateX(100%);}
-}
-=======
 style.textContent = `
   @keyframes neon-pulse {
     from {
-      text-shadow: 0 0 10px currentColor, 0 0 20px currentColor; 0 0 30px currentColor;,
+      text-shadow: 0 0 10px currentColor, 0 0 20px currentColor; 0 0 30px currentColor;
     }
     to {
-      text-shadow: 0 0 5px currentColor, 0 0 10px currentColor; 0 0 15px currentColor;,
+      text-shadow: 0 0 5px currentColor, 0 0 10px currentColor; 0 0 15px currentColor;
     }
   }
   
   @keyframes shimmer {
     0% {
-      transform: translateX(-100%),,
+      transform: translateX(-100%);
+;
      }
     100% {
-      transform: translateX(100%),,
+      transform: translateX(100%);
+;
      }
   }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 `;
 document.head.appendChild(style);<//div><///div>

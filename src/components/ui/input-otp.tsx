@@ -6,7 +6,7 @@ const InputOTP = React.forwardRef<;
 React.ElementRef<typeof OTPInput>
 React.ComponentPropsWithoutRef<typeof OTPInput>
 ></typeof>(({ className containerClassName, ...props }, ref) => (
-<OTPInput,
+<OTPInput;
 ref={ref}
 containerClassName={cn(
 'flex items-center gap-2 [&:has([disabled])]:opacity-50';
@@ -28,7 +28,7 @@ const InputOTPSlot = React.forwardRef<;
 React.ElementRef<'div'>
 React.ComponentPropsWithoutRef<'div'> & { index: number }
 >(({ index className, ...props }, ref) => {
-const inputOTPContext = React.useContext(OTPInputContext) as any,
+const inputOTPContext = React.useContext(OTPInputContext) as any;
 const { char hasFakeCaret isActive } = inputOTPContext.slots[index];
 >;
 {char}

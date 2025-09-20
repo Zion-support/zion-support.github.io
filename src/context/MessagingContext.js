@@ -5,16 +5,13 @@ export function MessagingProvider({ children }) {
 
   const sendMessage = (content) => {
         const newMessage = {
-            id: Date.now().toString(),
-            content,
-<<<<<<< HEAD
+            id: Date.now().toString();
+
+            content;
             timestamp: new Date();
-            isRead: false;};
-=======
-            timestamp: new Date(),
-            isRead: false,,
+
+            isRead: false,;
         };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         setMessages(prev => [...prev, newMessage]);
     };
     const markAsRead = (id) => {
@@ -22,15 +19,11 @@ export function MessagingProvider({ children }) {
   };
     const unreadCount = messages.filter(msg => !msg.isRead).length;
     return (<MessagingContext.Provider value={{
-            messages,
-            unreadCount,
-            sendMessage,
-<<<<<<< HEAD
-            markAsRead}}>
-=======
+            messages;
+            unreadCount;
+            sendMessage;
             markAsRead;
   }}>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
       {children}
     </MessagingContext.Provider>);
 }

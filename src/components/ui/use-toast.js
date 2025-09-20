@@ -5,26 +5,30 @@ export function useToast() {
   const toast = useCallback((options) => {
         const id = Math.random().toString(36).substr(2, 9);
         const newToast = {
-            id,
-            title: options.title,
-            description: options.description,
-            variant: options.variant || 'default',
+            id;
+            title: options.title;
+            description: options.description;
+            variant: options.variant || 'default';
             duration: options.duration || 5000};
         setToasts(prev => [...prev, newToast]);
         // Auto-remove toast after duration;
         setTimeout(() => {
             setToasts(prev => prev.filter(toast => toast.id !== id));
-        }, newToast.duration);
+        };
+ newToast.duration);
         return id;
-    }, []);
+    };
+ []);
 
   const dismiss = useCallback((id) => {
         setToasts(prev => prev.filter(toast => toast.id !== id));
-    }, []);
+    };
+ []);
 
   const dismissAll = useCallback(() => {
         setToasts([]);
-    }, []);
+    };
+ []);
 import { useState } from 'react';
 export function useToast() {
     const [toasts, setToasts] = useState([]);
@@ -32,15 +36,16 @@ export function useToast() {
   const toast = (options) => {
         const id = Date.now().toString();
         const newToast = {
-            id,
-            duration: 5000,
+            id;
+            duration: 5000;
             ...options;
         };
         setToasts(prev => [...prev, newToast]);
         // Auto remove toast after duration;
         setTimeout(() => {
             setToasts(prev => prev.filter(t => t.id !== id));
-        }, newToast.duration);
+        };
+ newToast.duration);
         return id;
     };
     const dismiss = (id) => {
@@ -59,22 +64,18 @@ export function useToast() {
         return toast({ title, description, type: 'info' });
   };
     return {
-        toasts,
-        toast,
-        dismiss,
-<<<<<<< HEAD
-        dismissAll};
-=======
+        toasts;
+        toast;
+        dismiss;
         dismissAll;
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 // Export a default toast function for backward compatibility;
 export const toast = (options) => {
     // This is a simplified version - in a real app, you'd want to use a toast context;
-        success,
-        error,
-        warning,
+        success;
+        error;
+        warning;
         info;
     };
 }

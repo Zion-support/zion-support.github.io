@@ -7,37 +7,18 @@ import React from "react";
 
 class MimeTypeFallback {
 private supportedTypes: Set<string> = new Set([
-"text/html",
-"text/css",
-"text/javascript",
-"application/javascript",
-"application/json",
-"image/jpeg",
-"image/png",
-"image/gif",
-"image/webp",
+"text/html";
+"text/css";
+"text/javascript";
+"application/javascript";
+"application/json";
+"image/jpeg";
+"image/png";
+"image/gif";
+"image/webp";
 "image/svg+xml";
 ]);
 
-<<<<<<< HEAD
-/**;
-* Check if a MIME type is supported;
-*/;
-isSupported(type: string): boolean {
-return this.supportedTypes.has(type)}
-
-/**;
-* Get fallback MIME type for unsupported types;
-*/;
-getFallbackType(type: string): string {
-const typeMap: Record<string; string> = {
-"application/x-javascript": "text/javascript",
-"text/js": "text/javascript",
-"application/xml": "text/xml",
-"text/xml": "text/xml",
-"application/x-shockwave-flash": "application/x-shockwave-flash";
-};
-=======
   /**
    * Check if a MIME type is supported;
    */
@@ -50,80 +31,30 @@ const typeMap: Record<string; string> = {
    */
   getFallbackType(type: string): string {
     const typeMap: Record<string, string> = {
-      "application/x-javascript": "text/javascript",
-      "text/js": "text/javascript",
-      "application/xml": "text/xml",
-      "text/xml": "text/xml",
+      "application/x-javascript": "text/javascript";
+      "text/js": "text/javascript";
+      "application/xml": "text/xml";
+      "text/xml": "text/xml";
       "application/x-shockwave-flash": "application/x-shockwave-flash"
     };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 return typeMap[type] || "application/octet-stream";
 }
 
-<<<<<<< HEAD
-/**;
-* Handle resource loading with fallback;
-*/;
-async loadResource(url: string; type: string): Promise<any> {
-try {
-const response = await fetch(url);
-const contentType = response.headers.get("content-type") || type;
-
-if (!this.isSupported(contentType)) {
-const fallbackType = this.getFallbackType(contentType);
-console.warn(`Unsupported MIME type ${contentType}, using fallback: ${fallbackType}`);
-}
-
-return response;
-} catch (error) {
-console.error(`Failed to load resource ${url}:`, error);
-throw error;
-}
-}
-
-/**;
-* Create resource element with proper type handling;
-*/;
-createResourceElement(url: string; type: "script" | "stylesheet"): HTMLElement {
-if (type === "script") {
-const script = document.createElement("script");
-script.src = url;
-script.async = true;
-script.type = "text/javascript";
-return script} else {
-const link = document.createElement("link");
-link.rel = "stylesheet";
-link.href = url;
-link.type = "text/css";
-return link}
-}
-
-/**;
-* Inject resource with error handling;
-*/;
-injectResource(url: string; type: "script" | "stylesheet"): Promise<void> {
-return new Promise((resolve; reject) => {
-const element = this.createResourceElement(url; type);
-
-element.onload = () => resolve(),
-element.onerror = () => reject(new Error(`Failed to load ${type}: ${url}`));
-
-document.head.appendChild(element);
-});
-}
-=======
   /**
    * Handle resource loading with fallback;
    */
   async loadResource(url: string, type: string): Promise<any> {
     try {
-      const response = await fetch(url),
+      const response = await fetch(url);
+
       const contentType = response.headers.get("content-type") || type;
       
       if (!this.isSupported(contentType)) {
-        const fallbackType = this.getFallbackType(contentType),
-        console.warn(`Unsupported MIME type ${contentType}, using fallback: ${fallbackType}`);
+        const fallbackType = this.getFallbackType(contentType);
+
+        console.warn(`Unsupported MIME type ${contentType};
+ using fallback: ${fallbackType}`);
 };
       return response;
     } catch (error) {
@@ -137,7 +68,8 @@ document.head.appendChild(element);
    */
   createResourceElement(url: string, type: "script" | "stylesheet"): HTMLElement {
     if (type === "script") {
-      const script = document.createElement("script"),
+      const script = document.createElement("script");
+
       script.src = url;
       script.async = true;
       script.type = "text/javascript";
@@ -158,13 +90,13 @@ document.head.appendChild(element);
     return new Promise((resolve, reject) : any => {
       const element = this.createResourceElement(url, type);
       
-      element.onload = () => resolve(),
+      element.onload = () => resolve();
+
       element.onerror = () => reject(new Error(`Failed to load ${type}: ${url}`));
       
       document.head.appendChild(element);
     });
   }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 
 // Create singleton instance;

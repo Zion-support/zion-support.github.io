@@ -5,11 +5,11 @@ import { ResumeOption,, ,  } from '../resume-selector/types';
 import { ResumePreviewCard,, ,  } from './ResumePreviewCard';
 import { Resume,  } from '@/types/resume';
 interface SelectResumeSectionProps {
-resumeOptions: ResumeOption[];,
-selectedResume: ResumeOption | null;,
-handleResumeSelect: (resumeId: string) => void;,
-handleDownloadResume: () => void;,
-isLoading: boolean,
+resumeOptions: ResumeOption[];
+selectedResume: ResumeOption | null;
+handleResumeSelect: (resumeId: string) => void;
+handleDownloadResume: () => void;
+isLoading: boolean;
 export function SelectResumeSection({
 isLoading,
 }: SelectResumeSectionProps) {
@@ -19,7 +19,7 @@ return (
 <p className='text-sm text-zion-slate'>No saved resumes found.</p>
 ) : (
 <>
-{resumeOptions.map(option => (            <button,
+{resumeOptions.map(option => (            <button;
 key = {option.id,}
 className={`w-full text-left p-3 rounded-md transition ${
 selectedResume?.id === option.id;
@@ -35,7 +35,7 @@ onClick = {(,) => handleResumeSelect(option.id),}
 </button>
 ))}
 {resumeOptions.map((option) => (
-<button,
+<button;
 key={option.id}
 className={`w-full text-left p-3 rounded-md transition ${
 selectedResume?.id === option.id;
@@ -51,7 +51,7 @@ onClick={() => handleResumeSelect(option.id)}
 </button>
 ))}
 {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
-<ResumePreviewCard,
+<ResumePreviewCard;
 resume = {selectedResume.resume as Resume,}
 onDownload = {handleDownloadResume,}
 isLoading = {isLoading,}

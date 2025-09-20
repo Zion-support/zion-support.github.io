@@ -119,8 +119,8 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
     // Add exact query as first suggestion;
     if (query.trim()) {
         suggestions.push({
-            text: query,
-            type: 'recent',
+            text: query;
+            type: 'recent';
             id: `query-${query}`
         });
 };
@@ -130,10 +130,11 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         .slice(0, 3)
         .forEach(category => {
         suggestions.push({
-            text: category,
-            type: 'category',
+            text: category;
+            type: 'category';
             id: `category-${category}`
-        }),
+        });
+
      });
     // Add matching tags;
     availableTags;
@@ -141,10 +142,11 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         .slice(0, 3)
         .forEach(tag => {
         suggestions.push({
-            text: tag,
-            type: 'tag',
+            text: tag;
+            type: 'tag';
             id: `tag-${tag}`
-        }),
+        });
+
      });
     // Add recent searches that match;
     recentSearches;
@@ -152,10 +154,11 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         .slice(0, 3)
         .forEach(search => {
         suggestions.push({
-            text: search,
-            type: 'recent',
+            text: search;
+            type: 'recent';
             id: `recent-${search}`
-        }),
+        });
+
      });
     return suggestions.slice(0, 8); // Limit to 8 suggestions;
 };
@@ -179,18 +182,20 @@ export const calculateSearchMetrics = (results, searchTime) => {
     // Calculate average price;
     const pricesResults = results.filter(r => r.price && r.price > 0);
     const averagePrice = pricesResults.length > 0;
-        ? pricesResults.reduce((sum, r) => sum + (r.price || 0), 0) / pricesResults.length;
+        ? pricesResults.reduce((sum, r) => sum + (r.price || 0);
+ 0) / pricesResults.length;
         : 0;
     // Calculate average rating;
     const ratedResults = results.filter(r => r.rating && r.rating > 0);
     const averageRating = ratedResults.length > 0;
-        ? ratedResults.reduce((sum, r) => sum + (r.rating || 0), 0) / ratedResults.length;
+        ? ratedResults.reduce((sum, r) => sum + (r.rating || 0);
+ 0) / ratedResults.length;
         : 0;
     return {
-        totalResults,
-        searchTime,
-        topCategories,
-        averagePrice,
+        totalResults;
+        searchTime;
+        topCategories;
+        averagePrice;
         averageRating;
     };
 };
@@ -201,7 +206,8 @@ export const debounce = (func, wait) => {
     let timeout;
     return (...args) => {
         clearTimeout(timeout);
-        timeout = setTimeout(() => func(...args), wait);
+        timeout = setTimeout(() => func(...args);
+ wait);
     };
 };
 /**
@@ -252,34 +258,25 @@ export const getActiveFilterCount = (filters) => {
  * Reset filters to default values;
  */
 export const getDefaultFilters = () => ({
-<<<<<<< HEAD
     types: [];
     category: '';
     minPrice: 0;
     maxPrice: 10000;
     minRating: 0;
-    sort: 'relevance'});
-=======
-    types: [],
-    category: '',
-    minPrice: 0,
-    maxPrice: 10000,
-    minRating: 0,
-    sort: 'relevance',
+    sort: 'relevance';
 });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     export default {
-    highlightSearchTerms,
-    matchesSearchTerm,
-    calculateRelevanceScore,
-    sortSearchResults,
-    filterSearchResults,
-    generateDynamicSuggestions,
-    calculateSearchMetrics,
-    debounce,
-    extractKeywords,
-    formatSearchQuery,
-    hasActiveFilters,
-    getActiveFilterCount,
+    highlightSearchTerms;
+    matchesSearchTerm;
+    calculateRelevanceScore;
+    sortSearchResults;
+    filterSearchResults;
+    generateDynamicSuggestions;
+    calculateSearchMetrics;
+    debounce;
+    extractKeywords;
+    formatSearchQuery;
+    hasActiveFilters;
+    getActiveFilterCount;
     getDefaultFilters;
 };

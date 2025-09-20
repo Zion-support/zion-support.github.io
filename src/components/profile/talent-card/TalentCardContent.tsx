@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import { MapPin,  } from 'lucide-react'
 import { TalentCardSkills,  } from "./TalentCardSkills";
 interface TalentCardContentProps {
-summary: string | undefined;,
-bio: string;,
-timezone: string | undefined;,
-skills: string[] | undefined,
+summary: string | undefined;
+bio: string;
+timezone: string | undefined;
+skills: string[] | undefined;
 return (
 <div>
 {/* Location */}
@@ -17,7 +17,7 @@ return (
 </div>
 )}
 {/* Short bio or summary - longer on hover for desktop */}
-<div,
+<div;
 className='overflow-hidden transition-all duration-300'        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
 onMouseEnter={() => setIsHovering(true)}
 onMouseLeave={() => setIsHovering(false)}
@@ -27,7 +27,7 @@ onMouseLeave={() => setIsHovering(false)}
 </div>
 )}
 {/* Short bio or summary - longer on hover for desktop */}
-<div,
+<div;
 className="overflow-hidden transition-all duration-300"
 style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
 onMouseEnter = {() => setIsHovering(true),}

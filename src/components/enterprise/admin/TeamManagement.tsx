@@ -13,7 +13,7 @@ Add Team Member;
 <DialogHeader>
 <DialogTitle>Add Team Member</DialogTitle>
 <DialogDescription>
-Send an invitation to join your workspace. They'll receive an,
+Send an invitation to join your workspace. They'll receive an;
 email with instructions.;
 </DialogDescription>
 </DialogHeader>
@@ -22,7 +22,7 @@ email with instructions.;
 <Label htmlFor='email' className='text-right'>
 Email;
 </Label>
-<Input,
+<Input;
 id='email';
 type='email'
 placeholder='colleague@company.com';
@@ -34,7 +34,7 @@ onChange={e => setNewMemberEmail(e.target.value)}                />
 <Label htmlFor='role' className='text-right'>
 Role;
 </Label>
-<select,
+<select;
 id='role';
 className='col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50'
 >;
@@ -46,7 +46,7 @@ className='col-span-3 flex h-10 w-full rounded-md border border-input bg-backgro
 </div>
 </div>
 <DialogFooter>
-<Button,
+<Button;
 variant='outline'
 onClick={() => setIsAddingMember(false)}
 >;
@@ -89,7 +89,7 @@ Cancel;
 </TableCell>
 <TableCell>{member.role}</TableCell>
 <TableCell>
-<Badge,
+<Badge;
 variant={member.status === 'active' ? 'default' : 'outline'}                  >
 {member.status}
 </Badge>
@@ -98,7 +98,7 @@ variant={member.status === 'active' ? 'default' : 'outline'}                  >
 <TableCell className='text-right'>
 <div className='flex justify-end gap-2'>
 {member.status === 'pending' ? (
-<Button,
+<Button;
 variant='ghost'
 size='sm';
 onClick={() => handleResendInvite(member.email)}                      >
@@ -106,7 +106,7 @@ onClick={() => handleResendInvite(member.email)}                      >
 Resend;
 </Button>
 ) : (
-<Button,
+<Button;
 variant='ghost'
 size='sm';
 className='text-destructive hover:text-destructive'
@@ -133,9 +133,9 @@ teamMembers.map ( (member) => (<TableRow key= {
 member.id ";
 }> <TableCell> .join ("")
 }</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {
-member.role,
+member.role;
 }</TableCell> <TableCell> <Badge > {
-member.status,
+member.status;
 }</Badge> </TableCell> <TableCell> {
 member.lastActive ";
 }</TableCell> <TableCell className="text-right"> onClick={

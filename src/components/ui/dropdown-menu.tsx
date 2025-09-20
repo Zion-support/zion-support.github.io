@@ -1,32 +1,32 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
-import React from "react",
+import React from "react";
 const dropdown-menu: React.FC = () => {
-,
-return (,
-<div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className="text-xl font-bold mb-4">dropdown-menu</h3>,
+;
+return (;
+<div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">;
+<h3 className="text-xl font-bold mb-4">dropdown-menu</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>
-},
-</div>)},
+};
+</div>)};
 export default dropdown-menu;<//div><///div>
 import * as React from &quot;react&quot;
 import * as DropdownMenuPrimitive from &quot;@radix-ui/react-dropdown-menu&quot;
 import { Check,, ChevronRight,, Circle,  } from 'lucide-react'
 import { cn,  } from &quot;@/lib/utils&quot;
-const DropdownMenu = DropdownMenuPrimitive.Root,
-const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger,
-const DropdownMenuGroup = DropdownMenuPrimitive.Group,
-const DropdownMenuPortal = DropdownMenuPrimitive.Portal,
-const DropdownMenuSub = DropdownMenuPrimitive.Sub,
-const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup,
+const DropdownMenu = DropdownMenuPrimitive.Root;
+const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
+const DropdownMenuGroup = DropdownMenuPrimitive.Group;
+const DropdownMenuPortal = DropdownMenuPrimitive.Portal;
+const DropdownMenuSub = DropdownMenuPrimitive.Sub;
+const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup;
 const DropdownMenuSubTrigger = React.forwardRef<;
 React.ElementRef<typeof DropdownMenuPrimitive.SubTrigger>
 React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {
-inset?: boolean,
+inset?: boolean;
 };
 >(({ className inset children, ...props }, ref) => (;
 <DropdownMenuPrimitive.SubTrigger;
@@ -43,12 +43,12 @@ className
 </DropdownMenuPrimitive.SubTrigger>
 ))
 DropdownMenuSubTrigger.displayName =;
-DropdownMenuPrimitive.SubTrigger.displayName,
+DropdownMenuPrimitive.SubTrigger.displayName;
 const DropdownMenuSubContent = React.forwardRef<;
 React.ElementRef<typeof DropdownMenuPrimitive.SubContent>
 React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubContent>
 >(({ className, ...props }, ref) => (
-<DropdownMenuPrimitive.SubContent,
+<DropdownMenuPrimitive.SubContent;
 ref={ref}
 className={cn(;
 &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
@@ -158,36 +158,36 @@ React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>
 >(({ className, ...props }, ref) => (;
 <DropdownMenuPrimitive.Separator;
 ref={ref}
-className={cn(&quot;-mx-1 my-1 h-px bg-muted&quot;, className)}
+className={cn(&quot;-mx-1 my-1 h-px bg-muted&quot; className)}
 {...props}
 />
 ))
-DropdownMenuSeparator.displayName = DropdownMenuPrimitive.Separator.displayName,
+DropdownMenuSeparator.displayName = DropdownMenuPrimitive.Separator.displayName;
 const DropdownMenuShortcut: any = ({
 className
-...props,
+...props;
 }: React.HTMLAttributes<HTMLSpanElement>) => {
 return (
 <span;
-className={cn(&quot;ml-auto text-xs tracking-widest opacity-60&quot;, className)}
+className={cn(&quot;ml-auto text-xs tracking-widest opacity-60&quot; className)}
 {...props}
 />
 );
 }
 DropdownMenuShortcut.displayName = &quot;DropdownMenuShortcut&quot;
 export {
-DropdownMenu,
+DropdownMenu;
 DropdownMenuTrigger;
-DropdownMenuContent,
+DropdownMenuContent;
 DropdownMenuItem;
-DropdownMenuCheckboxItem,
+DropdownMenuCheckboxItem;
 DropdownMenuRadioItem;
-DropdownMenuLabel,
+DropdownMenuLabel;
 DropdownMenuSeparator;
-DropdownMenuShortcut,
+DropdownMenuShortcut;
 DropdownMenuGroup;
-DropdownMenuPortal,
+DropdownMenuPortal;
 DropdownMenuSub;
-DropdownMenuSubContent,
+DropdownMenuSubContent;
 DropdownMenuSubTrigger;
 DropdownMenuRadioGroup}

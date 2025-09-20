@@ -76,4 +76,4 @@ id: "quantum-internet-infrastructure",title: "Quantum; Internet; Infrastructure"
 ,  ],tags: ["Quantum Internet", "Infrastructure", "Networking", "Security""Innovation"],estimatedDelivery: "16-24 weeks",supportLevel: "enterprise",innovationLevel: "Cutting-edge",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
 };
 ];
-export; default; SPECIALIZED_SERVICES_20o25,
+export; default; SPECIALIZED_SERVICES_20o25;

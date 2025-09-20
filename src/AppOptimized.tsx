@@ -1,5 +1,5 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
@@ -22,61 +22,22 @@ const About = lazy(() => import("./pages/About"));
 const Services = lazy(() => import("./pages/Services"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Blog = lazy(() => import("./pages/Blog"));// Create; a; separate query; client; for better performance;
-<<<<<<< HEAD
-const queryClient = new QueryClient({;
-defaultOptions: {;
-querie;s: {
-staleTim;e: 5 * 60 * 10o00, // 5; minutes; cacheTime: 10 * 60 * 10o00, // 10; minutes; retry: 3;retryDelay: (attemptIndex) => Math.min(10o00 * 2 ** attemptIndex; 30o000);,
-},mutations: {;
-retr;y: 1;,
-}
-}
-});
-const AppOptimized: React.FC = () => {
-return (;
-<ErrorBoundary>
-<HelmetProvider>
-<QueryClientProvider client={queryClient}>
-<Provider store={store}>
-<SecurityEnhancer>
-<AccessibilityEnhancer>
-<MobileOptimizer>
-<Router>
-<SEOHead />
-<div className="min-h-screen bg-gray-50">
-<Suspense fallback={<LoadingSpinner />}>
-<Routes>
-<Route path="/" element={<Home />} />
-<Route path="/about" element={<About />} />
-<Route path="/services" element={<Services />} />
-<Route path="/contact" element={<Contact />} />
-<Route path="/blog" element={<Blog />} />
-</Routes>
-</Suspense>
-</div>
-{process.env.NODE_ENV === "development" && <PerformanceMonitor />}
-</Router>
-</MobileOptimizer>
-</AccessibilityEnhancer>
-</SecurityEnhancer>
-</Provider>
-</QueryClientProvider>
-</HelmetProvider>
-</ErrorBoundary>
-);
-=======
 const queryClient = new QueryClient({
   defaultOptions: {
     querie,s: {
-      staleTim,e: 5 * 60 * 10o00, // 5, minutes, cacheTime: 10 * 60 * 10o00, // 10, minutes, retry: 3,retryDelay: (attemptIndex) => Math.min(10o00 * 2 ** attemptIndex, 30o000);,
-    },mutations: {,
-    retr;y: 1,,
+      staleTim,e: 5 * 60 * 10o00, // 5, minutes, cacheTime: 10 * 60 * 10o00, // 10, minutes, retry: 3,retryDelay: (attemptIndex) => Math.min(10o00 * 2 ** attemptIndex, 30o000);
+
+    };
+mutations: {
+
+    retr;y: 1,;
      }
   }
 });
 
   const AppOptimized: React.FC = () => {
-  return (,
+  return (
+
     <ErrorBoundary>;
       <HelmetProvider>;
         <QueryClientProvider client={queryClient}>;
@@ -107,5 +68,5 @@ const queryClient = new QueryClient({
       </HelmetProvider>;
     </ErrorBoundary>;
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
-},export; default; AppOptimized,<//ErrorBoundary><///ErrorBoundary>
+};
+export; default; AppOptimized,<//ErrorBoundary><///ErrorBoundary>

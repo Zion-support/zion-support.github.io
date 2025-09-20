@@ -1,11 +1,11 @@
 import React from "react";
 
-// Enhanced loading spinner with different variants,
+// Enhanced loading spinner with different variants;
 interface LoadingSpinnerProps {
-size?: 'sm' | 'md' | 'lg' | 'xl',
+size?: 'sm' | 'md' | 'lg' | 'xl';
 variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
 className?: string;
 showText?: boolean;
-text?: string,
+text?: string;
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 }})

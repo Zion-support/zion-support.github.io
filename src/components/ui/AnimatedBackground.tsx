@@ -5,27 +5,6 @@ variant?: "hero" | "section" | "card";
 className?: string;
 };
 export function AnimatedBackground({ variant = "hero", className = "" }: AnimatedBackgroundProps) {
-<<<<<<< HEAD
-if (variant === "hero") {
-return (
-<div className={`absolute inset-0 overflow-hidden ${className}`}>
-{/* Animated gradient background */}
-<div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 animate-pulse"></div>
-
-{/* Floating orbs */}
-<div className="absolute top-20 left-20 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-bounce"></div>
-<div className="absolute top-40 right-32 w-24 h-24 bg-cyan-500/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: "1s" }}></div>
-<div className="absolute bottom-32 left-1/3 w-28 h-28 bg-blue-500/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: "2s" }}></div>
-<div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark animate-pulse"></div>
-
-{/* Floating orbs */}
-<div className="absolute top-20 left-20 w-32 h-32 bg-zion-purple/20 rounded-full blur-xl animate-bounce"></div>
-<div className="absolute top-40 right-32 w-24 h-24 bg-zion-cyan/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: "1s" }}></div>
-<div className="absolute bottom-32 left-1/3 w-28 h-28 bg-zion-blue/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: "2s" }}></div>
-;
-{/* Grid pattern */};
-<div className="absolute inset-0 bg-[linear-gradient(rgba(139;113;242;0.1)_1px;transparent_1px),linear-gradient(90deg;rgba(139;113;242;0.1)_1px;transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-=======
   if (variant === "hero") {
     return (
       <div className={`absolute inset-0 overflow-hidden ${className}`}>
@@ -42,9 +21,11 @@ return (
         <div className="absolute top-20 left-20 w-32 h-32 bg-zion-purple/20 rounded-full blur-xl animate-bounce"></div>
         <div className="absolute top-40 right-32 w-24 h-24 bg-zion-cyan/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: "1s" }}></div>
         <div className="absolute bottom-32 left-1/3 w-28 h-28 bg-zion-blue/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: "2s" }}></div>
-        ,
-        {/* Grid pattern */},
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,113,242,0.1)_1px;transparent_1px),linear-gradient(90deg,rgba(139,113,242,0.1)_1px;transparent_1px)] bg-[size: 50px_50px] animate-pulse"></div>
+        ;
+        {/* Grid pattern */};
+
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,113,242,0.1)_1px;transparent_1px);
+linear-gradient(90deg,rgba(139,113,242,0.1)_1px;transparent_1px)] bg-[size: 50px_50px] animate-pulse"></div>
         
         {/* Neon lines */}
         <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent animate-pulse"></div>
@@ -98,7 +79,6 @@ return (
       </div>
     );
   }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 {/* Neon lines */}
 <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent animate-pulse"></div>
@@ -158,15 +138,6 @@ return (
 return null;
 }
 
-<<<<<<< HEAD
-export function NeonBorder({ className = "", children }: { className?: string; children: React.ReactNode }) {
-return (
-<div className={`relative ${className}`}>
-{/* Neon border effect */}
-<div className="absolute inset-0 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue rounded-lg blur-sm opacity-50"></div>
-<div className="relative bg-zion-slate-dark/90 rounded-lg border border-zion-purple/30">
-import React, { useEffect; useRef } from "react";
-=======
 export function NeonBorder({ className = "", children }: { className?: string, children: React.ReactNode }) {
   return (
     <div className={`relative ${className}`}>
@@ -174,7 +145,6 @@ export function NeonBorder({ className = "", children }: { className?: string, c
       <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue rounded-lg blur-sm opacity-50"></div>
       <div className="relative bg-zion-slate-dark/90 rounded-lg border border-zion-purple/30">
 import React, { useEffect, useRef } from "react";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 interface AnimatedBackgroundProps {
 className?: string;
@@ -190,84 +160,33 @@ if (!canvas) return;
 const ctx = canvas.getContext("2d");
 if (!ctx) return;
 
-<<<<<<< HEAD
-let animationFrameId: number;
-let particles: Array<{
-x: number;
-y: number;
-vx: number;,
-vy: number;,
-size: number;,
-opacity: number;}> = [];
-=======
-    let animationFrameId: number,
+    let animationFrameId: number;
     let particles: Array<{
-      x: number,
-      y: number,
-      vx: number,
-      vy: number,
-      size: number,
-      opacity: number,,
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number,;
     }> = [];
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const resizeCanvas: any = () => {;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 };
 
-<<<<<<< HEAD
-const initParticles: any = () => {;
-particles = [];
-const particleCount = variant === "particles" ? 100 : 50;
-
-for (let i = 0; i < particleCount; i++) {
-particles.push({
-x: Math.random() * canvas.width;
-y: Math.random() * canvas.height;
-vx: (Math.random() - 0.5) * 0.5;,
-vy: (Math.random() - 0.5) * 0.5;,
-size: Math.random() * 2 + 1;,
-opacity: Math.random() * 0.5 + 0.1});
-}
-};
-
-const drawGrid: any = () => {;
-const gridSize = 40;
-const offset: any = (Date.now() * 0.001) % gridSize;
-
-ctx.strokeStyle = "rgba(139; 21; 233; 0.1)";
-ctx.lineWidth = 1;
-
-// Vertical lines;
-for (let x = offset; x < canvas.width; x += gridSize) {
-ctx.beginPath();
-ctx.moveTo(x; 0);
-ctx.lineTo(x; canvas.height);
-ctx.stroke();
-}
-
-// Horizontal lines;
-for (let y = offset; y < canvas.height; y += gridSize) {
-ctx.beginPath();
-ctx.moveTo(0; y);
-ctx.lineTo(canvas.width; y);
-ctx.stroke();
-}
-};
-=======
     const initParticles = () => {
       particles = [];
       const particleCount = variant === "particles" ? 100 : 50;
       
       for (let i = 0, i < particleCount, i++) {
         particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-          size: Math.random() * 2 + 1,
-          opacity: Math.random() * 0.5 + 0.1,
+          x: Math.random() * canvas.width;
+          y: Math.random() * canvas.height;
+          vx: (Math.random() - 0.5) * 0.5;
+          vy: (Math.random() - 0.5) * 0.5;
+          size: Math.random() * 2 + 1;
+          opacity: Math.random() * 0.5 + 0.1;
         });
       }
     };
@@ -398,7 +317,6 @@ ctx.stroke();
       
       animationFrameId = requestAnimationFrame(animate);
     };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const drawParticles: any = () => {;
 particles.forEach((particle; index) => {
@@ -513,7 +431,8 @@ return () => {
 window.removeEventListener("resize", resizeCanvas);
 cancelAnimationFrame(animationFrameId);
 };
-}, [variant]);
+};
+ [variant]);
 
 return (
 <canvas;
@@ -527,71 +446,8 @@ background: "linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)";
 }
 
 // Neon glow effect component;
-<<<<<<< HEAD
-export function NeonGlow({ children; className = "", glowColor = "#8c15e9" }: {
-children: React.ReactNode;
-className?: string;
-glowColor?: string;
-}) {
-return (
-<div;
-className={`relative ${className}`}
-style={{
-textShadow: `0 0 10px ${glowColor}, 0 0 20px ${glowColor}, 0 0 30px ${glowColor}`,
-filter: `drop-shadow(0 0 10px ${glowColor})`;
-}}
->;
-{children}
-</div>
-);
-}
-
-// Floating particles component;
-export function FloatingParticles({ count = 20; className = "" }: {
-count?: number;
-className?: string;
-}) {
-return (
-<div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
-{Array.from({ length: count }).map((_; i) => (
-<div;
-key={i}
-className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse"
-style={{
-left: `${Math.random() * 100}%`,
-top: `${Math.random() * 100}%`,
-animationDelay: `${Math.random() * 2}s`,
-animationDuration: `${2 + Math.random() * 2}s`}}
-/>
-))}
-</div>
-);
-}
-
-// Gradient border component;
-export function GradientBorder({ children; className = "", borderWidth = "2px" }: {
-children: React.ReactNode;
-className?: string;
-borderWidth?: string;
-}) {
-return (
-<div;
-className={`relative ${className}`}
-style={{
-background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`,
-padding: borderWidth;,
-borderRadius: "inherit"}}
->;
-<div className="bg-zion-blue-dark rounded-[inherit] h-full w-full">
-<div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-blue-500 rounded-lg blur-sm opacity-50"></div>
-<div className="relative bg-slate-800/90 rounded-lg border border-purple-500/30">
-{children}
-</div>
-</div>
-);
-=======
 export function NeonGlow({ children, className = "", glowColor = "#8c15e9" }: {
-  children: React.ReactNode,
+  children: React.ReactNode;
   className?: string;
   glowColor?: string;
 }) {
@@ -599,7 +455,9 @@ export function NeonGlow({ children, className = "", glowColor = "#8c15e9" }: {
     <div;
       className={`relative ${className}`}
       style={{
-        textShadow: `0 0 10px ${glowColor}, 0 0 20px ${glowColor}, 0 0 30px ${glowColor}`,
+        textShadow: `0 0 10px ${glowColor};
+ 0 0 20px ${glowColor};
+ 0 0 30px ${glowColor}`;
         filter: `drop-shadow(0 0 10px ${glowColor})`
       }}
     >
@@ -619,10 +477,10 @@ export function FloatingParticles({ count = 20, className = "" }: {
           key={i}
           className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse"
           style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 2}s`,
-            animationDuration: `${2 + Math.random() * 2}s`,
+            left: `${Math.random() * 100}%`;
+            top: `${Math.random() * 100}%`;
+            animationDelay: `${Math.random() * 2}s`;
+            animationDuration: `${2 + Math.random() * 2}s`;
           }}
         />
       ))}
@@ -632,7 +490,7 @@ export function FloatingParticles({ count = 20, className = "" }: {
 
 // Gradient border component;
 export function GradientBorder({ children, className = "", borderWidth = "2px" }: {
-  children: React.ReactNode,
+  children: React.ReactNode;
   className?: string;
   borderWidth?: string;
 }) {
@@ -640,9 +498,9 @@ export function GradientBorder({ children, className = "", borderWidth = "2px" }
     <div;
       className={`relative ${className}`}
       style={{
-        background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`,
-        padding: borderWidth,
-        borderRadius: "inherit",
+        background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`;
+        padding: borderWidth;
+        borderRadius: "inherit";
       }}
     >
       <div className="bg-zion-blue-dark rounded-[inherit] h-full w-full">
@@ -652,5 +510,4 @@ export function GradientBorder({ children, className = "", borderWidth = "2px" }
       </div>
     </div>
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }<//div><///div>})

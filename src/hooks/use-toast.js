@@ -6,10 +6,10 @@ export function useToast() {
   const toast = useCallback((message, options = {}) => {
     const id = Math.random().toString(36).substr(2, 9);
     const newToast = {
-      id,
-      message,
-      type: options.type || 'default',
-      duration: options.duration || 5000,
+      id;
+      message;
+      type: options.type || 'default';
+      duration: options.duration || 5000;
     };
 
     setToasts(prev => [...prev, newToast]);
@@ -28,9 +28,9 @@ export function useToast() {
   }, []);
 
   return {
-    toast,
-    dismiss,
-    toasts,
+    toast;
+    dismiss;
+    toasts;
   };
 }
 

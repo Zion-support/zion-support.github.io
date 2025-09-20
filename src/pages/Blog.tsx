@@ -2,73 +2,73 @@ import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {,
-metadataBase: new URL('https://ziontechgroup.com'),
-title: 'Blog - AI, Quantum Computing & Technology Insights',
-description: 'Stay updated with the latest insights, trends, and innovations in AI, quantum computing, and technology from Zion Tech Group experts.',
-keywords: ['blog', 'AI insights', 'quantum computing', 'technology trends', 'innovation', 'tech news'],
-openGraph: {,
-title: 'Blog - AI, Quantum Computing & Technology Insights',
-description: 'Latest insights and innovations in AI and technology.',
-type: 'website',
-url: 'https://ziontechgroup.com/blog';
-}
-}
+export const metadata: Metadata = {
+  metadataBase: new URL('https://ziontechgroup.com'),
+  title: 'Blog - AI, Quantum Computing & Technology Insights',
+  description: 'Stay updated with the latest insights, trends, and innovations in AI, quantum computing, and technology from Zion Tech Group experts.',
+  keywords: ['blog', 'AI insights', 'quantum computing', 'technology trends', 'innovation', 'tech news'],
+  openGraph: {
+    title: 'Blog - AI, Quantum Computing & Technology Insights',
+    description: 'Latest insights and innovations in AI and technology.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/blog'
+  }
+};
 
 export default function BlogPage() {
 const blogPosts = [
-{
-title: 'The Future of AI: 2025 Predictions and Beyond',
-excerpt: 'Exploring the revolutionary AI technologies that will reshape industries in 2025 and beyond.',
-date: '2025-01-15',
-readTime: '5 min read',
-category: 'AI',
-href: '/blog/ai-2025-predictions';
-image: '🤖';
-},
-{
-title: 'Quantum Computing Breakthrough: What It Means for Business',
-excerpt: 'Understanding the latest quantum computing advances and their practical business applications.',
-date: '2025-01-12',
-readTime: '7 min read',
-category: 'Quantum Computing',
-href: '/blog/quantum-computing-breakthrough',
-image: '⚛️';
-},
-{
-title: 'Automation Revolution: Transforming Enterprise Operations',
-excerpt: 'How intelligent automation is revolutionizing business processes and driving efficiency.',
-date: '2025-01-10',
-readTime: '6 min read',
-category: 'Automation',
-href: '/blog/automation-revolution',
-image: '⚙️';
-},
-{
-title: 'AI Ethics: Building Responsible Technology',
-excerpt: 'The importance of ethical AI development and implementation in modern enterprises.',
-date: '2025-01-08',
-readTime: '8 min read',
-category: 'Ethics',
-href: '/blog/ai-ethics',
-image: '⚖️';
-},
-{
-title: 'Digital Transformation: A Complete Guide',
-excerpt: 'A comprehensive guide to successful digital transformation strategies and implementation.',
-date: '2025-01-05',
-readTime: '10 min read',
-category: 'Digital Transformation',
-href: '/blog/digital-transformation-guide',
-image: '🚀';
-},
-{
-title: 'Machine Learning in Production: Best Practices',
-excerpt: 'Essential practices for deploying and maintaining machine learning models in production environments.',
-date: '2025-01-03',
-readTime: '9 min read',
-category: 'Machine Learning',
-href: '/blog/ml-production-best-practices',
+  {
+    title: 'The Future of AI: 2025 Predictions and Beyond',
+    excerpt: 'Exploring the revolutionary AI technologies that will reshape industries in 2025 and beyond.',
+    date: '2025-01-15',
+    readTime: '5 min read',
+    category: 'AI',
+    href: '/blog/ai-2025-predictions',
+    image: '🤖'
+  },
+  {
+    title: 'Quantum Computing Breakthrough: What It Means for Business',
+    excerpt: 'Understanding the latest quantum computing advances and their practical business applications.',
+    date: '2025-01-12',
+    readTime: '7 min read',
+    category: 'Quantum Computing',
+    href: '/blog/quantum-computing-breakthrough',
+    image: '⚛️'
+  },
+  {
+    title: 'Automation Revolution: Transforming Enterprise Operations',
+    excerpt: 'How intelligent automation is revolutionizing business processes and driving efficiency.',
+    date: '2025-01-10',
+    readTime: '6 min read',
+    category: 'Automation',
+    href: '/blog/automation-revolution',
+    image: '⚙️'
+  },
+  {
+    title: 'AI Ethics: Building Responsible Technology',
+    excerpt: 'The importance of ethical AI development and implementation in modern enterprises.',
+    date: '2025-01-08',
+    readTime: '8 min read',
+    category: 'Ethics',
+    href: '/blog/ai-ethics',
+    image: '⚖️'
+  },
+  {
+    title: 'Digital Transformation: A Complete Guide',
+    excerpt: 'A comprehensive guide to successful digital transformation strategies and implementation.',
+    date: '2025-01-05',
+    readTime: '10 min read',
+    category: 'Digital Transformation',
+    href: '/blog/digital-transformation-guide',
+    image: '🚀'
+  },
+  {
+    title: 'Machine Learning in Production: Best Practices',
+    excerpt: 'Essential practices for deploying and maintaining machine learning models in production environments.',
+    date: '2025-01-03',
+    readTime: '9 min read',
+category: 'Machine Learning';
+href: '/blog/ml-production-best-practices';
 image: '🧠';
 }
 ];

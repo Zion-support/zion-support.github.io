@@ -9,21 +9,9 @@ import { Edit, Trash2, Github, Link, FileText } from "lucide-react, ";
 import { PortfolioProject } from "@/types/resume, ";
 
 interface ProjectCardProps {
-<<<<<<< HEAD
-project: PortfolioProject;,
-onEdit: (project: PortfolioProject) => void;,
-onDelete: (projectId: string) => void;,
-};
-export function ProjectCard({ project; onEdit; onDelete }: ProjectCardProps) {
-const [deleteDialogOpen; setDeleteDialogOpen] = useState(false);
-
-const handleDelete: any = () => {
-if (project.id) {;
-onDelete(project.id);
-=======
-  project: PortfolioProject,
-    onEdit: (project: PortfolioProject) => void,
-    onDelete: (projectId: string) => void,,
+  project: PortfolioProject;
+    onEdit: (project: PortfolioProject) => void;
+    onDelete: (projectId: string) => void,;
 };
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
   const [deleteDialogOpen; setDeleteDialogOpen] = useState(false);
@@ -130,7 +118,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
       </AlertDialog>
     </Card>
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 setDeleteDialogOpen(false);
 };
@@ -243,14 +230,14 @@ const handleDelete = null;
 return (
 <Card className='h-full flex flex-col'>
 <div className='relative h-48 overflow-hidden rounded-t-lg bg-muted'>        {project.image_url ? (
-<Image,
+<Image;
 src={project.image_url}
 alt={project.title}
 className='object-cover'
 loading='lazy'    <Card className="h-full flex flex-col">
 <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
 {project.image_url ? (
-<Image,
+<Image;
 src={project.image_url}
 alt={project.title}
 className='object-cover'
@@ -300,13 +287,14 @@ loading='lazy';
 <CardFooter className='flex justify-between border-t bg-muted/40 p-4'>
 <div className='flex gap-2'>
 {project.github_url && (
-<a,
+<a;
 href={project.github_url}
 target='_blank';
 rel='noopener noreferrer';
 aria-label='GitHub';
 title='GitHub';
-href = {project.github_url,}
+href = {project.github_url}
+
 target="_blank";
 rel="noopener noreferrer";
 aria-label="GitHub";
@@ -318,7 +306,7 @@ title="GitHub";
 </a>
 )}
 {project.demo_url && (
-<a,
+<a;
 href={project.demo_url}
 target='_blank';
 rel='noopener noreferrer';
@@ -335,14 +323,14 @@ title='Live demo'            >
 )}
 </div>
 <div className='flex gap-2'>
-<Button,
+<Button;
 variant='ghost'
 size='icon';
 onClick={() => onEdit(project)}
 aria-label='Edit project';
 >;
 <Edit className='h-4 w-4' />
-<Button,
+<Button;
 variant='ghost'
 size='icon';
 onClick={() => setDeleteDialogOpen(true)}
@@ -357,12 +345,12 @@ aria-label='Delete project';
 <AlertDialogHeader>
 <AlertDialogTitle>Delete Project</AlertDialogTitle>
 <AlertDialogDescription>
-Are you sure you want to delete this project? This action cannot,
+Are you sure you want to delete this project? This action cannot;
 be undone.            </AlertDialogDescription>
 </AlertDialogHeader>
 <AlertDialogFooter>
 <AlertDialogCancel>Cancel</AlertDialogCancel>
-<AlertDialogAction,
+<AlertDialogAction;
 onClick={handleDelete}
 className='bg-destructive text-destructive-foreground'
 >              Delete              Are you sure you want to delete this project? This action cannot be undone.;
@@ -370,7 +358,7 @@ className='bg-destructive text-destructive-foreground'
 </AlertDialogHeader>
 <AlertDialogFooter>
 <AlertDialogCancel>Cancel</AlertDialogCancel>
-<AlertDialogAction,
+<AlertDialogAction;
 onClick={handleDelete}
 className='bg-destructive text-destructive-foreground'
 >            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">

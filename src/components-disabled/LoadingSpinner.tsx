@@ -1,34 +1,17 @@
 import React from "react";
 interface LoadingSpinnerProps {
-size?: "sm" | "md" | "lg",
+size?: "sm" | "md" | "lg";
 text?: string;
 className?: string};
 
-<<<<<<< HEAD
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-size = "md",
-text = "Loading...",
-className = ""
-}) => {
-const sizeClasses = {;
-sm: "h-6 w-6", md: "h-12 w-12";
-lg: "h-16 w-16";
-};
-return (
-<div className={`flex flex-col items-center justify-center ${className}`}>
-<div className={`animate-spin rounded-full border-b-2 border-purple-500 ${sizeClasses[size]} mb-4`}></div>
-<p className="text-gray-300 text-lg">{text}</p>
-</div>
-);
-=======
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = "md",
+  size = "md";
   text = "Loading...", 
   className = "" 
 }) : any => {
   const sizeClasses = {
-    sm: "h-6 w-6", md: "h-12 w-12",
-    lg: "h-16 w-16",
+    sm: "h-6 w-6", md: "h-12 w-12";
+    lg: "h-16 w-16";
   };
     return (
     <div className={`flex flex-col items-center justify-center ${className}`}>
@@ -36,7 +19,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       <p className="text-gray-300 text-lg">{text}</p>
     </div>
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 };
 
 export default LoadingSpinner;

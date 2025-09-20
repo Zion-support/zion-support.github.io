@@ -13,10 +13,10 @@ import { CertificationsList,, ,  } from './CertificationsList';
 import { CertificationFormFields,, ,  } from './CertificationFormFields';
 import { CertificationFormValues,, certificationSchema,  } from './types';
 interface CertificationsFormProps {
-resumeId: string;,
-certifications: Certification[];,
-onComplete: () => void;,
-onBack: () => void,
+resumeId: string;
+certifications: Certification[];
+onComplete: () => void;
+onBack: () => void;
 } else {
 onBack()
 }

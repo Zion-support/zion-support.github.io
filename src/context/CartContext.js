@@ -2,7 +2,8 @@ import React, { createContext, useContext, useReducer, useEffect } from 'react;'
 import { safeStorage } from '@/utils/safeStorage, ';
 import { useAuth } from '@/hooks/useAuth, ';
 import { getCartKey, mergeCartItems } from '@/utils/cartUtils, ';
-const initialState = { items: [] },
+const initialState = { items: [] };
+
     function cartReducer(state, action) {
     switch (action.type) {
         case 'ADD_ITEM': {
@@ -19,16 +20,13 @@ const initialState = { items: [] },
             return { items };
         }
         case 'REMOVE_ITEM':
-            return { items: state.items.filter(i => i.id !== action.payload) },
+            return { items: state.items.filter(i => i.id !== action.payload) };
+
     case 'CLEAR_CART':
-<<<<<<< HEAD
             return { items: [] };
-    default: return state;}
-=======
-            return { items: [] },
-    default: return state,;
+
+    default: return state;
   }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 const CartContext = createContext(undefined);
 export function useCart() {
@@ -66,22 +64,19 @@ export function CartProvider({ children }) {
                 safeStorage.removeItem(getCartKey());
             }
         }
-        dispatch({ type: 'SET_ITEMS', payload: items }),
-     }, [cartKey]);
+        dispatch({ type: 'SET_ITEMS', payload: items });
+
+     };
+ [cartKey]);
 
   useEffect(() => {
         safeStorage.setItem(cartKey, JSON.stringify(state.items));
-    }, [state.items, cartKey]);
-<<<<<<< HEAD
-    const value = {
-        items: state.items;
-        dispatch};
-=======
+    };
+ [state.items, cartKey]);
 
   const value = {
-        items: state.items,
-        dispatch,
+        items: state.items;
+        dispatch;
     };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

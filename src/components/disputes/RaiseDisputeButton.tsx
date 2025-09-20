@@ -7,10 +7,10 @@ projectId: string;
 milestoneId?: string;
 variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
 size?: "default" | "sm" | "lg" | "icon";
-className?: string,
+className?: string;
 return (
 <>
-<Button,
+<Button;
 variant={variant}
 size={size}
 className={className}
@@ -23,11 +23,11 @@ Raise Dispute;
 <DialogHeader>
 <DialogTitle>Raise a Dispute</DialogTitle>
 <DialogDescription>
-Please provide details about the issue you're experiencing with,
+Please provide details about the issue you're experiencing with;
 this project.;
 </DialogDescription>
 </DialogHeader>
-<DisputeForm,
+<DisputeForm;
 projectId={projectId}
 milestoneId={milestoneId}
 onDisputeCreated={handleDisputeCreated}

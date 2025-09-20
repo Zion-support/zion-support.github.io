@@ -1,60 +1,52 @@
 // Advanced Cybersecurity Services for 2025;
 export const advancedCybersecurityServices2025 = [
     {
-        id: 1,
-        name: "Zero Trust Security Mesh",
-        category: "Zero Trust Security",
-        description: "Comprehensive zero-trust security platform with continuous verification, micro-segmentation, and adaptive access controls",
-        pricing: "Enterprise",
-        price: 2500,
-        pricingModel: "monthly",
+        id: 1;
+        name: "Zero Trust Security Mesh";
+        category: "Zero Trust Security";
+        description: "Comprehensive zero-trust security platform with continuous verification, micro-segmentation, and adaptive access controls";
+        pricing: "Enterprise";
+        price: 2500;
+        pricingModel: "monthly";
         features: [
-            "Continuous verification",
-            "Micro-segmentation",
-            "Adaptive access controls",
-            "Identity verification",
-            "Device trust scoring",
-            "Behavioral analytics",
-            "Real-time monitoring",
+            "Continuous verification";
+            "Micro-segmentation";
+            "Adaptive access controls";
+            "Identity verification";
+            "Device trust scoring";
+            "Behavioral analytics";
+            "Real-time monitoring";
             "Automated response"
-        ],
+        ];
         benefits: [
-            "Eliminate trust assumptions",
-            "Reduce attack surface",
-            "Continuous protection",
-            "Compliance adherence",
-            "Operational efficiency",
+            "Eliminate trust assumptions";
+            "Reduce attack surface";
+            "Continuous protection";
+            "Compliance adherence";
+            "Operational efficiency";
             "Cost savings"
-        ],
-        targetAudience: ["Enterprises", "Financial institutions", "Healthcare providers", "Government agencies", "Critical infrastructure"],
-        tags: ["Zero Trust", "Security", "Access Control", "Identity", "Compliance", "Threat Protection"],
+        ];
+        targetAudience: ["Enterprises", "Financial institutions", "Healthcare providers", "Government agencies", "Critical infrastructure"];
+        tags: ["Zero Trust", "Security", "Access Control", "Identity", "Compliance", "Threat Protection"];
         contactInfo: {
-<<<<<<< HEAD:src/data/disabled/advancedCybersecurityServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/zero-trust-security-mesh";
-            address: "364 E Main St STE 1008 Middletown DE 19709"};
-=======
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/zero-trust-security-mesh",
-            address: "364 E Main St STE 1008 Middletown DE 19709",
+            address: "364 E Main St STE 1008 Middletown DE 19709";
         };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedCybersecurityServices2025.js
-        marketPrice: "$2,500-12,000/month",
-        competitors: ["Palo Alto Networks", "Cisco", "VMware", "Microsoft"],
-        securityScore: 99,
-        useCases: ["Enterprise Security", "Cloud Security", "Remote Work", "IoT Security", "Compliance", "Threat Prevention"],
-        compliance: ["NIST", "ISO 27001", "SOC 2", "GDPR", "HIPAA", "PCI DSS"],
-        apiAccess: true,
-        whiteLabel: true,
-        customBranding: true,
-        prioritySupport: true,
-        trainingIncluded: true,
-        dataRetention: "10 years",
-        uptime: "99.99%",
-        securityFeatures: ["Zero-trust architecture", "Continuous monitoring", "Threat detection", "Automated response"],
-<<<<<<< HEAD:src/data/disabled/advancedCybersecurityServices2025.js
+        marketPrice: "$2,500-12,000/month";
+        competitors: ["Palo Alto Networks", "Cisco", "VMware", "Microsoft"];
+        securityScore: 99;
+        useCases: ["Enterprise Security", "Cloud Security", "Remote Work", "IoT Security", "Compliance", "Threat Prevention"];
+        compliance: ["NIST", "ISO 27001", "SOC 2", "GDPR", "HIPAA", "PCI DSS"];
+        apiAccess: true;
+        whiteLabel: true;
+        customBranding: true;
+        prioritySupport: true;
+        trainingIncluded: true;
+        dataRetention: "10 years";
+        uptime: "99.99%";
+        securityFeatures: ["Zero-trust architecture", "Continuous monitoring", "Threat detection", "Automated response"];
         integrationTime: "4-8 weeks";
         scalability: "Enterprise-wide deployment";
         realTimeProcessing: true;
@@ -63,74 +55,55 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: true;
         aiPowered: true;
         quantumResistant: true;
-        threatIntelligence: true};
-=======
-        integrationTime: "4-8 weeks",
-        scalability: "Enterprise-wide deployment",
-        realTimeProcessing: true,
-        multilingualSupport: true,
-        industrySpecific: true,
-        zeroTrust: true,
-        aiPowered: true,
-        quantumResistant: true,
-        threatIntelligence: true,
+        threatIntelligence: true;
     };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedCybersecurityServices2025.js
     {
-        id: 2,
-        name: "AI-Powered Threat Intelligence",
-        category: "Threat Intelligence",
-        description: "Advanced AI-driven threat intelligence platform with real-time threat detection, predictive analytics, and automated response",
-        pricing: "Professional",
-        price: 1800,
-        pricingModel: "monthly",
+        id: 2;
+        name: "AI-Powered Threat Intelligence";
+        category: "Threat Intelligence";
+        description: "Advanced AI-driven threat intelligence platform with real-time threat detection, predictive analytics, and automated response";
+        pricing: "Professional";
+        price: 1800;
+        pricingModel: "monthly";
         features: [
-            "Real-time threat detection",
-            "Predictive analytics",
-            "Behavioral analysis",
-            "Threat hunting",
-            "Vulnerability assessment",
-            "Incident response",
-            "Threat modeling",
+            "Real-time threat detection";
+            "Predictive analytics";
+            "Behavioral analysis";
+            "Threat hunting";
+            "Vulnerability assessment";
+            "Incident response";
+            "Threat modeling";
             "Risk scoring"
-        ],
+        ];
         benefits: [
-            "Proactive threat prevention",
-            "Faster response times",
-            "Reduced false positives",
-            "Better risk assessment",
-            "Cost savings",
+            "Proactive threat prevention";
+            "Faster response times";
+            "Reduced false positives";
+            "Better risk assessment";
+            "Cost savings";
             "Competitive advantage"
-        ],
-        targetAudience: ["Security operations centers", "CISOs", "Security analysts", "Enterprises", "Government agencies"],
-        tags: ["Threat Intelligence", "AI", "Security Analytics", "Threat Detection", "Incident Response", "Risk Management"],
+        ];
+        targetAudience: ["Security operations centers", "CISOs", "Security analysts", "Enterprises", "Government agencies"];
+        tags: ["Threat Intelligence", "AI", "Security Analytics", "Threat Detection", "Incident Response", "Risk Management"];
         contactInfo: {
-<<<<<<< HEAD:src/data/disabled/advancedCybersecurityServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-threat-intelligence";
-            address: "364 E Main St STE 1008 Middletown DE 19709"};
-=======
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/ai-threat-intelligence",
-            address: "364 E Main St STE 1008 Middletown DE 19709",
+            address: "364 E Main St STE 1008 Middletown DE 19709";
         };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedCybersecurityServices2025.js
-        marketPrice: "$1,800-8,000/month",
-        competitors: ["CrowdStrike", "SentinelOne", "Recorded Future", "ThreatConnect"],
-        securityScore: 98,
-        useCases: ["Threat Detection", "Incident Response", "Vulnerability Management", "Risk Assessment", "Security Operations", "Compliance"],
-        compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "Industry standards"],
-        apiAccess: true,
-        whiteLabel: true,
-        customBranding: true,
-        prioritySupport: true,
-        trainingIncluded: true,
-        dataRetention: "7 years",
-        uptime: "99.9%",
-        securityFeatures: ["AI-powered detection", "Real-time monitoring", "Automated response", "Threat correlation"],
-<<<<<<< HEAD:src/data/disabled/advancedCybersecurityServices2025.js
+        marketPrice: "$1,800-8,000/month";
+        competitors: ["CrowdStrike", "SentinelOne", "Recorded Future", "ThreatConnect"];
+        securityScore: 98;
+        useCases: ["Threat Detection", "Incident Response", "Vulnerability Management", "Risk Assessment", "Security Operations", "Compliance"];
+        compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "Industry standards"];
+        apiAccess: true;
+        whiteLabel: true;
+        customBranding: true;
+        prioritySupport: true;
+        trainingIncluded: true;
+        dataRetention: "7 years";
+        uptime: "99.9%";
+        securityFeatures: ["AI-powered detection", "Real-time monitoring", "Automated response", "Threat correlation"];
         integrationTime: "3-6 weeks";
         scalability: "Enterprise deployment";
         realTimeProcessing: true;
@@ -139,74 +112,55 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: false;
         aiPowered: true;
         quantumResistant: false;
-        threatIntelligence: true};
-=======
-        integrationTime: "3-6 weeks",
-        scalability: "Enterprise deployment",
-        realTimeProcessing: true,
-        multilingualSupport: true,
-        industrySpecific: true,
-        zeroTrust: false,
-        aiPowered: true,
-        quantumResistant: false,
-        threatIntelligence: true,
+        threatIntelligence: true;
     };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedCybersecurityServices2025.js
     {
-        id: 3,
-        name: "Quantum-Resistant Cryptography",
-        category: "Post-Quantum Security",
-        description: "Future-proof cryptography solutions resistant to quantum computing attacks with hybrid encryption and quantum key distribution",
-        pricing: "Enterprise",
-        price: 3000,
-        pricingModel: "monthly",
+        id: 3;
+        name: "Quantum-Resistant Cryptography";
+        category: "Post-Quantum Security";
+        description: "Future-proof cryptography solutions resistant to quantum computing attacks with hybrid encryption and quantum key distribution";
+        pricing: "Enterprise";
+        price: 3000;
+        pricingModel: "monthly";
         features: [
-            "Post-quantum algorithms",
-            "Quantum key distribution",
-            "Hybrid encryption",
-            "Quantum-resistant signatures",
-            "Lattice-based cryptography",
-            "Code-based encryption",
-            "Multivariate cryptography",
+            "Post-quantum algorithms";
+            "Quantum key distribution";
+            "Hybrid encryption";
+            "Quantum-resistant signatures";
+            "Lattice-based cryptography";
+            "Code-based encryption";
+            "Multivariate cryptography";
             "Hash-based signatures"
-        ],
+        ];
         benefits: [
-            "Future-proof security",
-            "Quantum resistance",
-            "Long-term protection",
-            "Compliance readiness",
-            "Competitive advantage",
+            "Future-proof security";
+            "Quantum resistance";
+            "Long-term protection";
+            "Compliance readiness";
+            "Competitive advantage";
             "Investment protection"
-        ],
-        targetAudience: ["Financial institutions", "Government agencies", "Healthcare providers", "Critical infrastructure", "Research institutions"],
-        tags: ["Post-Quantum", "Cryptography", "Quantum Security", "Encryption", "Future-Proof", "Advanced Security"],
+        ];
+        targetAudience: ["Financial institutions", "Government agencies", "Healthcare providers", "Critical infrastructure", "Research institutions"];
+        tags: ["Post-Quantum", "Cryptography", "Quantum Security", "Encryption", "Future-Proof", "Advanced Security"];
         contactInfo: {
-<<<<<<< HEAD:src/data/disabled/advancedCybersecurityServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/quantum-resistant-cryptography";
-            address: "364 E Main St STE 1008 Middletown DE 19709"};
-=======
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/quantum-resistant-cryptography",
-            address: "364 E Main St STE 1008 Middletown DE 19709",
+            address: "364 E Main St STE 1008 Middletown DE 19709";
         };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedCybersecurityServices2025.js
-        marketPrice: "$3,000-15,000/month",
-        competitors: ["ISARA", "PQShield", "Cryptosense", "Quantum Xchange"],
-        securityScore: 99,
-        useCases: ["Data Encryption", "Digital Signatures", "Key Management", "Secure Communication", "Long-term Storage", "Compliance"],
-        compliance: ["NIST", "ISO 27001", "FIPS", "Industry standards", "Future regulations"],
-        apiAccess: true,
-        whiteLabel: true,
-        customBranding: true,
-        prioritySupport: true,
-        trainingIncluded: true,
-        dataRetention: "20+ years",
-        uptime: "99.9%",
-        securityFeatures: ["Quantum-resistant algorithms", "Hybrid encryption", "Quantum key distribution", "Post-quantum signatures"],
-<<<<<<< HEAD:src/data/disabled/advancedCybersecurityServices2025.js
+        marketPrice: "$3,000-15,000/month";
+        competitors: ["ISARA", "PQShield", "Cryptosense", "Quantum Xchange"];
+        securityScore: 99;
+        useCases: ["Data Encryption", "Digital Signatures", "Key Management", "Secure Communication", "Long-term Storage", "Compliance"];
+        compliance: ["NIST", "ISO 27001", "FIPS", "Industry standards", "Future regulations"];
+        apiAccess: true;
+        whiteLabel: true;
+        customBranding: true;
+        prioritySupport: true;
+        trainingIncluded: true;
+        dataRetention: "20+ years";
+        uptime: "99.9%";
+        securityFeatures: ["Quantum-resistant algorithms", "Hybrid encryption", "Quantum key distribution", "Post-quantum signatures"];
         integrationTime: "6-12 weeks";
         scalability: "Enterprise deployment";
         realTimeProcessing: true;
@@ -215,74 +169,55 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: false;
         aiPowered: false;
         quantumResistant: true;
-        threatIntelligence: false};
-=======
-        integrationTime: "6-12 weeks",
-        scalability: "Enterprise deployment",
-        realTimeProcessing: true,
-        multilingualSupport: true,
-        industrySpecific: true,
-        zeroTrust: false,
-        aiPowered: false,
-        quantumResistant: true,
-        threatIntelligence: false,
+        threatIntelligence: false;
     };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedCybersecurityServices2025.js
     {
-        id: 4,
-        name: "Privacy-Preserving Analytics",
-        category: "Privacy Engineering",
-        description: "Advanced privacy-preserving analytics platform using differential privacy, federated learning, and secure multi-party computation",
-        pricing: "Professional",
-        price: 1200,
-        pricingModel: "monthly",
+        id: 4;
+        name: "Privacy-Preserving Analytics";
+        category: "Privacy Engineering";
+        description: "Advanced privacy-preserving analytics platform using differential privacy, federated learning, and secure multi-party computation";
+        pricing: "Professional";
+        price: 1200;
+        pricingModel: "monthly";
         features: [
-            "Differential privacy",
-            "Federated learning",
-            "Secure multi-party computation",
-            "Homomorphic encryption",
-            "Privacy-preserving ML",
-            "Data anonymization",
-            "Consent management",
+            "Differential privacy";
+            "Federated learning";
+            "Secure multi-party computation";
+            "Homomorphic encryption";
+            "Privacy-preserving ML";
+            "Data anonymization";
+            "Consent management";
             "Privacy auditing"
-        ],
+        ];
         benefits: [
-            "Data privacy protection",
-            "Regulatory compliance",
-            "Trust building",
-            "Innovation enablement",
-            "Risk reduction",
+            "Data privacy protection";
+            "Regulatory compliance";
+            "Trust building";
+            "Innovation enablement";
+            "Risk reduction";
             "Competitive advantage"
-        ],
-        targetAudience: ["Healthcare providers", "Financial institutions", "Research institutions", "Government agencies", "Tech companies"],
-        tags: ["Privacy Engineering", "Differential Privacy", "Federated Learning", "Data Protection", "Compliance", "Analytics"],
+        ];
+        targetAudience: ["Healthcare providers", "Financial institutions", "Research institutions", "Government agencies", "Tech companies"];
+        tags: ["Privacy Engineering", "Differential Privacy", "Federated Learning", "Data Protection", "Compliance", "Analytics"];
         contactInfo: {
-<<<<<<< HEAD:src/data/disabled/advancedCybersecurityServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/privacy-preserving-analytics";
-            address: "364 E Main St STE 1008 Middletown DE 19709"};
-=======
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/privacy-preserving-analytics",
-            address: "364 E Main St STE 1008 Middletown DE 19709",
+            address: "364 E Main St STE 1008 Middletown DE 19709";
         };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedCybersecurityServices2025.js
-        marketPrice: "$1,200-6,000/month",
-        competitors: ["Privacera", "BigID", "OneTrust", "Collibra"],
-        securityScore: 97,
-        useCases: ["Healthcare Analytics", "Financial Analysis", "Research Collaboration", "Customer Insights", "Compliance", "Data Sharing"],
-        compliance: ["GDPR", "CCPA", "HIPAA", "GLBA", "Industry standards"],
-        apiAccess: true,
-        whiteLabel: true,
-        customBranding: true,
-        prioritySupport: true,
-        trainingIncluded: true,
-        dataRetention: "User-controlled",
-        uptime: "99.9%",
-        securityFeatures: ["Differential privacy", "Federated learning", "Secure computation", "Privacy auditing"],
-<<<<<<< HEAD:src/data/disabled/advancedCybersecurityServices2025.js
+        marketPrice: "$1,200-6,000/month";
+        competitors: ["Privacera", "BigID", "OneTrust", "Collibra"];
+        securityScore: 97;
+        useCases: ["Healthcare Analytics", "Financial Analysis", "Research Collaboration", "Customer Insights", "Compliance", "Data Sharing"];
+        compliance: ["GDPR", "CCPA", "HIPAA", "GLBA", "Industry standards"];
+        apiAccess: true;
+        whiteLabel: true;
+        customBranding: true;
+        prioritySupport: true;
+        trainingIncluded: true;
+        dataRetention: "User-controlled";
+        uptime: "99.9%";
+        securityFeatures: ["Differential privacy", "Federated learning", "Secure computation", "Privacy auditing"];
         integrationTime: "4-8 weeks";
         scalability: "Enterprise deployment";
         realTimeProcessing: true;
@@ -291,74 +226,55 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: false;
         aiPowered: true;
         quantumResistant: false;
-        threatIntelligence: false};
-=======
-        integrationTime: "4-8 weeks",
-        scalability: "Enterprise deployment",
-        realTimeProcessing: true,
-        multilingualSupport: true,
-        industrySpecific: true,
-        zeroTrust: false,
-        aiPowered: true,
-        quantumResistant: false,
-        threatIntelligence: false,
+        threatIntelligence: false;
     };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedCybersecurityServices2025.js
     {
-        id: 5,
-        name: "Cloud Security Posture Management",
-        category: "Cloud Security",
-        description: "Comprehensive cloud security platform with continuous monitoring, compliance management, and automated remediation",
-        pricing: "Professional",
-        price: 1500,
-        pricingModel: "monthly",
+        id: 5;
+        name: "Cloud Security Posture Management";
+        category: "Cloud Security";
+        description: "Comprehensive cloud security platform with continuous monitoring, compliance management, and automated remediation";
+        pricing: "Professional";
+        price: 1500;
+        pricingModel: "monthly";
         features: [
-            "Continuous monitoring",
-            "Compliance management",
-            "Automated remediation",
-            "Risk assessment",
-            "Security scoring",
-            "Policy enforcement",
-            "Incident response",
+            "Continuous monitoring";
+            "Compliance management";
+            "Automated remediation";
+            "Risk assessment";
+            "Security scoring";
+            "Policy enforcement";
+            "Incident response";
             "Reporting dashboard"
-        ],
+        ];
         benefits: [
-            "Reduced cloud risks",
-            "Compliance adherence",
-            "Automated security",
-            "Cost savings",
-            "Better visibility",
+            "Reduced cloud risks";
+            "Compliance adherence";
+            "Automated security";
+            "Cost savings";
+            "Better visibility";
             "Operational efficiency"
-        ],
-        targetAudience: ["Cloud users", "DevOps teams", "Security teams", "Compliance officers", "Enterprises"],
-        tags: ["Cloud Security", "Compliance", "Risk Management", "Automation", "Monitoring", "Security Posture"],
+        ];
+        targetAudience: ["Cloud users", "DevOps teams", "Security teams", "Compliance officers", "Enterprises"];
+        tags: ["Cloud Security", "Compliance", "Risk Management", "Automation", "Monitoring", "Security Posture"];
         contactInfo: {
-<<<<<<< HEAD:src/data/disabled/advancedCybersecurityServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/cloud-security-posture";
-            address: "364 E Main St STE 1008 Middletown DE 19709"};
-=======
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/cloud-security-posture",
-            address: "364 E Main St STE 1008 Middletown DE 19709",
+            address: "364 E Main St STE 1008 Middletown DE 19709";
         };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedCybersecurityServices2025.js
-        marketPrice: "$1,500-7,000/month",
-        competitors: ["Prisma Cloud", "AWS Security Hub", "Azure Security Center", "Google Cloud Security"],
-        securityScore: 96,
-        useCases: ["Cloud Security", "Compliance Management", "Risk Assessment", "Incident Response", "Policy Enforcement", "Security Monitoring"],
-        compliance: ["SOC 2", "ISO 27001", "NIST", "Cloud security standards", "Industry regulations"],
-        apiAccess: true,
-        whiteLabel: true,
-        customBranding: true,
-        prioritySupport: true,
-        trainingIncluded: true,
-        dataRetention: "7 years",
-        uptime: "99.9%",
-        securityFeatures: ["Continuous monitoring", "Automated remediation", "Risk scoring", "Policy enforcement"],
-<<<<<<< HEAD:src/data/disabled/advancedCybersecurityServices2025.js
+        marketPrice: "$1,500-7,000/month";
+        competitors: ["Prisma Cloud", "AWS Security Hub", "Azure Security Center", "Google Cloud Security"];
+        securityScore: 96;
+        useCases: ["Cloud Security", "Compliance Management", "Risk Assessment", "Incident Response", "Policy Enforcement", "Security Monitoring"];
+        compliance: ["SOC 2", "ISO 27001", "NIST", "Cloud security standards", "Industry regulations"];
+        apiAccess: true;
+        whiteLabel: true;
+        customBranding: true;
+        prioritySupport: true;
+        trainingIncluded: true;
+        dataRetention: "7 years";
+        uptime: "99.9%";
+        securityFeatures: ["Continuous monitoring", "Automated remediation", "Risk scoring", "Policy enforcement"];
         integrationTime: "2-4 weeks";
         scalability: "Multi-cloud deployment";
         realTimeProcessing: true;
@@ -367,74 +283,55 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: true;
         aiPowered: true;
         quantumResistant: false;
-        threatIntelligence: true};
-=======
-        integrationTime: "2-4 weeks",
-        scalability: "Multi-cloud deployment",
-        realTimeProcessing: true,
-        multilingualSupport: true,
-        industrySpecific: true,
-        zeroTrust: true,
-        aiPowered: true,
-        quantumResistant: false,
-        threatIntelligence: true,
+        threatIntelligence: true;
     };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedCybersecurityServices2025.js
     {
-        id: 6,
-        name: "IoT Security Guardian",
-        category: "IoT Security",
-        description: "Comprehensive IoT security platform with device authentication, network segmentation, and behavioral monitoring",
-        pricing: "Professional",
-        price: 800,
-        pricingModel: "monthly",
+        id: 6;
+        name: "IoT Security Guardian";
+        category: "IoT Security";
+        description: "Comprehensive IoT security platform with device authentication, network segmentation, and behavioral monitoring";
+        pricing: "Professional";
+        price: 800;
+        pricingModel: "monthly";
         features: [
-            "Device authentication",
-            "Network segmentation",
-            "Behavioral monitoring",
-            "Threat detection",
-            "Vulnerability scanning",
-            "Firmware updates",
-            "Access controls",
+            "Device authentication";
+            "Network segmentation";
+            "Behavioral monitoring";
+            "Threat detection";
+            "Vulnerability scanning";
+            "Firmware updates";
+            "Access controls";
             "Security analytics"
-        ],
+        ];
         benefits: [
-            "IoT device protection",
-            "Network security",
-            "Threat prevention",
-            "Compliance adherence",
-            "Operational efficiency",
+            "IoT device protection";
+            "Network security";
+            "Threat prevention";
+            "Compliance adherence";
+            "Operational efficiency";
             "Risk reduction"
-        ],
-        targetAudience: ["Manufacturing companies", "Healthcare providers", "Smart cities", "Retail chains", "Energy companies"],
-        tags: ["IoT Security", "Device Security", "Network Security", "Threat Detection", "Compliance", "Device Management"],
+        ];
+        targetAudience: ["Manufacturing companies", "Healthcare providers", "Smart cities", "Retail chains", "Energy companies"];
+        tags: ["IoT Security", "Device Security", "Network Security", "Threat Detection", "Compliance", "Device Management"];
         contactInfo: {
-<<<<<<< HEAD:src/data/disabled/advancedCybersecurityServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/iot-security-guardian";
-            address: "364 E Main St STE 1008 Middletown DE 19709"};
-=======
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/iot-security-guardian",
-            address: "364 E Main St STE 1008 Middletown DE 19709",
+            address: "364 E Main St STE 1008 Middletown DE 19709";
         };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedCybersecurityServices2025.js
-        marketPrice: "$800-4,000/month",
-        competitors: ["Armis", "Forescout", "Nozomi Networks", "Claroty"],
-        securityScore: 95,
-        useCases: ["Device Security", "Network Protection", "Threat Detection", "Compliance", "Device Management", "Security Monitoring"],
-        compliance: ["ISO 27001", "NIST", "Industry standards", "IoT security frameworks"],
-        apiAccess: true,
-        whiteLabel: true,
-        customBranding: true,
-        prioritySupport: true,
-        trainingIncluded: true,
-        dataRetention: "5 years",
-        uptime: "99.9%",
-        securityFeatures: ["Device authentication", "Network segmentation", "Behavioral monitoring", "Threat detection"],
-<<<<<<< HEAD:src/data/disabled/advancedCybersecurityServices2025.js
+        marketPrice: "$800-4,000/month";
+        competitors: ["Armis", "Forescout", "Nozomi Networks", "Claroty"];
+        securityScore: 95;
+        useCases: ["Device Security", "Network Protection", "Threat Detection", "Compliance", "Device Management", "Security Monitoring"];
+        compliance: ["ISO 27001", "NIST", "Industry standards", "IoT security frameworks"];
+        apiAccess: true;
+        whiteLabel: true;
+        customBranding: true;
+        prioritySupport: true;
+        trainingIncluded: true;
+        dataRetention: "5 years";
+        uptime: "99.9%";
+        securityFeatures: ["Device authentication", "Network segmentation", "Behavioral monitoring", "Threat detection"];
         integrationTime: "2-4 weeks";
         scalability: "Large IoT deployments";
         realTimeProcessing: true;
@@ -443,18 +340,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: true;
         aiPowered: true;
         quantumResistant: false;
-        threatIntelligence: true}
-=======
-        integrationTime: "2-4 weeks",
-        scalability: "Large IoT deployments",
-        realTimeProcessing: true,
-        multilingualSupport: true,
-        industrySpecific: true,
-        zeroTrust: true,
-        aiPowered: true,
-        quantumResistant: false,
-        threatIntelligence: true,
+        threatIntelligence: true;
     }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedCybersecurityServices2025.js
 ];
     export default advancedCybersecurityServices2025;

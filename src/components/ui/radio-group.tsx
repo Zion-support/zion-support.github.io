@@ -8,7 +8,7 @@ React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
 >(({ className, ...props }, ref) => {
 return (
 <RadioGroupPrimitive.Root;
-className={cn(&quot;grid gap-2&quot;, className)}
+className={cn(&quot;grid gap-2&quot; className)}
 {...props}
 ref={ref}
 />
@@ -33,5 +33,5 @@ className
 </RadioGroupPrimitive.Item>
 )
 })
-RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName,
+RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName;
 export { RadioGroup RadioGroupItem }

@@ -10,12 +10,12 @@ return (
 {' '}
 {/* Using renamed AvatarPrimitive */}
 {application.talent_profile?.profile_picture_url && !avatarError ? (
-<Image,
+<Image;
 src={application.talent_profile.profile_picture_url}
 alt={talentName}
 width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
-height={36} // Corresponds to h-9 w-9,
-className='rounded-full object-cover' // Ensure rounded and object-cover,
+height={36} // Corresponds to h-9 w-9;
+className='rounded-full object-cover' // Ensure rounded and object-cover;
 onError={() => setAvatarError(true)}
 priority={false}              />
 ) : (
@@ -44,7 +44,7 @@ addSuffix: true;
 <StatusBadge status={application.status} />
 </TableCell>
 <TableCell>
-<Button,
+<Button;
 variant='ghost'
 size='sm';
 onClick={() => onViewScore(application)}
@@ -56,7 +56,7 @@ className='flex items-center gap-1'        >
 <TableCell>
 {application.resume ? (
 <Button variant='ghost' size='sm' asChild>
-<a,
+<a;
 href={application.resume.file_url |'#'}
 target='_blank';
 rel='noopener noreferrer';
@@ -69,7 +69,7 @@ rel='noopener noreferrer';
 )}
 </TableCell>
 <TableCell className='text-right'>
-<ApplicationActions,
+<ApplicationActions;
 application = {application,}
 processingId = {processingId,}
 onViewApplication = {onViewApplication,}

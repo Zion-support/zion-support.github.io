@@ -1,5 +1,5 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
@@ -32,11 +32,11 @@ return (
 Help Center;
 </h1>
 <p className='text-zion-slate-light mb-6'>
-Find answers to common questions or get in touch with our support,
+Find answers to common questions or get in touch with our support;
 team.;
 </p>
 <div className='relative mb-8'>
-<Input,
+<Input;
 placeholder='Search for help articles...';
 value={searchQuery}
 onChange={e => setSearchQuery(e.target.value)}
@@ -51,21 +51,21 @@ className='pl-10'            />
 </TabsList>
 <TabsContent value='articles'>
 {!selectedCategory && !selectedArticle && (
-<HelpCategoryList,
+<HelpCategoryList;
 categories={HELP_CATEGORIES}
 onCategorySelect={handleCategorySelect}
 searchQuery={searchQuery}                />
 )}
 {selectedCategory && !selectedArticle && (
 <>
-<Button,
+<Button;
 variant='ghost'
 onClick={handleBackToCategories}
 className='mb-4'
 >;
 ← All Categories;
 </Button>
-<HelpArticleList,
+<HelpArticleList;
 categoryId={selectedCategory}
 onArticleSelect={handleArticleSelect}
 searchQuery={searchQuery}                  />
@@ -73,7 +73,7 @@ searchQuery={searchQuery}                  />
 )}
 {selectedArticle && (
 <>
-<Button,
+<Button;
 variant='ghost'
 onClick={handleBackToArticles}
 className='mb-4'                  >
@@ -94,10 +94,10 @@ Frequently Asked Questions;
 How does the AI matching work?;
 </h3>
 <p className='text-zion-slate-light'>
-Our AI matching algorithm analyzes your requirements and,
-preferences to match you with the most compatible talent,
-or services. The process takes into account skills,
-experience availability and past performance to ensure,
+Our AI matching algorithm analyzes your requirements and;
+preferences to match you with the most compatible talent;
+or services. The process takes into account skills;
+experience availability and past performance to ensure;
 optimal results.;
 </p>
 </div>
@@ -106,9 +106,9 @@ optimal results.;
 How do I hire someone on Zion?;
 </h3>
 <p className='text-zion-slate-light'>
-To hire talent on Zion post a job or project review,
-matches or applications interview candidates through our,
-platform and extend an offer. Our secure payment system,
+To hire talent on Zion post a job or project review;
+matches or applications interview candidates through our;
+platform and extend an offer. Our secure payment system;
 protects both parties throughout the engagement.;
 </p>
 </div>
@@ -117,9 +117,9 @@ protects both parties throughout the engagement.;
 What are the payment terms?;
 </h3>
 <p className='text-zion-slate-light'>
-Zion offers flexible payment options including,
-milestone-based payments hourly rates or fixed project,
-fees. Funds are held in escrow until deliverables are,
+Zion offers flexible payment options including;
+milestone-based payments hourly rates or fixed project;
+fees. Funds are held in escrow until deliverables are;
 approved ensuring security for both clients and talent.;
 </p>
 </div>
@@ -128,9 +128,9 @@ approved ensuring security for both clients and talent.;
 How do I contact support?;
 </h3>
 <p className='text-zion-slate-light'>
-You can reach our support team through the chat widget at,
-the bottom right of any page by emailing,
-support@ziontechgroup.com or by scheduling a call with,
+You can reach our support team through the chat widget at;
+the bottom right of any page by emailing;
+support@ziontechgroup.com or by scheduling a call with;
 our team through the Contact tab.;
 </p>
 </div>
@@ -144,13 +144,13 @@ our team through the Contact tab.;
 Contact Support;
 </h2>
 <p className='text-zion-slate-light mb-4'>
-Our support team is available 24/7 to assist you with any,
+Our support team is available 24/7 to assist you with any;
 questions or issues.;
 </p>
 <div className='space-y-4'>
 <div className='flex items-center'>
 <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>
-<svg,
+<svg;
 xmlns='http://www.w3.org/2000/svg';
 className='h-5 w-5 text-zion-purple'
 viewBox='0 0 20 20';
@@ -160,7 +160,7 @@ fill='currentColor';
 <path d='M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z' />
 </svg>
 </div>
-<a,
+<a;
 href='mailto:support@ziontechgroup.com';
 className='text-zion-cyan hover:underline'
 >;
@@ -169,7 +169,7 @@ support@ziontechgroup.com;
 </div>
 <div className='flex items-center'>
 <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>
-<svg,
+<svg;
 xmlns='http://www.w3.org/2000/svg';
 className='h-5 w-5 text-zion-purple'
 viewBox='0 0 20 20';
@@ -192,7 +192,7 @@ Open Live Chat;
 Feedback & Suggestions;
 </h2>
 <p className='text-zion-slate-light mb-4'>
-We value your input and are constantly looking to improve,
+We value your input and are constantly looking to improve;
 our platform.;
 </p>
 <form className='space-y-4'>
@@ -203,7 +203,7 @@ our platform.;
 <Input placeholder='Subject' />
 </div>
 <div>
-<textarea,
+<textarea;
 className='w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-black'
 placeholder='Your feedback or suggestion';
 />

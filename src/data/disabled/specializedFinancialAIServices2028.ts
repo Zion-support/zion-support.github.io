@@ -65,4 +65,4 @@ id: "ai-insurance-underwriting-20o28",title: "AI-Powered; Insurance; Underwritin
 ,  ],tags: ["Financial AI", "Insurance", "Underwriting", "Risk; Assessment""Automation"],estimatedDelivery: "16-20 weeks",supportLevel: "enterprise",marketPrice: "$16;999 - $48;0o00/month",roi: "350-650%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";},technicalSpecs: {,technology: ["Python", "TensorFlow", "Scikit-learn", "PostgreSQL", "Redis""Kubernetes"],integrations: ["Insurance systems", "Claims systems", "Customer databases""Risk; management, platforms"],apiEndpoints: 250;uptime: "99.9%",security: ["SOC 2", "ISO 270o01""Data encryption""Access controls""Audit; trails"];
 },competitors: ["Lemonade", "Root Insurance", "Metromile", "Oscar; Health""Hippo"],marketSize: "$94.7; billion; by 20o28",regulatoryCompliance: ["Insurance regulations", "SOC 2", "ISO 270o01""Data; privacy, laws"];
 };
-],export; default; SPECIALIZED_FINANCIAL_AI_SERVICES_20o28,
+],export; default; SPECIALIZED_FINANCIAL_AI_SERVICES_20o28;

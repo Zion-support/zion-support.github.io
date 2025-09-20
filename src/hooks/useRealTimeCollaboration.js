@@ -2,33 +2,22 @@ import { useState, useEffect, useRef, useCallback, useMemo } from 'react, ';
 import { useAnalytics } from './useAnalytics, ';
 export const useRealTimeCollaboration = (options, wsConfig) => {
     const { trackEvent } = useAnalytics({
-<<<<<<< HEAD
         enableTracking: true;
-        enableUserBehaviorTracking: true});
-    const [state, setState] = useState({
+        enableUserBehaviorTracking: true;
+    });
+
+  const [state, setState] = useState({
         users: new Map();
+
         messages: [];
         isConnected: false;
         connectionStatus: 'disconnected';
         lastActivity: new Date();
-        conflicts: []});
-    const wsRef = useRef(null);
-=======
-        enableTracking: true,
-        enableUserBehaviorTracking: true,
-    });
 
-  const [state, setState] = useState({
-        users: new Map(),
-        messages: [],
-        isConnected: false,
-        connectionStatus: 'disconnected',
-        lastActivity: new Date(),
-        conflicts: [],
+        conflicts: [];
     });
 
   const wsRef = useRef(null);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     const reconnectAttemptsRef = useRef(0);
     const heartbeatIntervalRef = useRef(null);
     const reconnectTimeoutRef = useRef(null);
@@ -38,51 +27,42 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
     // Generate user color;
     const generateUserColor = useCallback((userId) => {
         const colors = [
-            '#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6',
+            '#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6';
             '#06B6D4', '#F97316', '#84CC16', '#EC4899', '#6366F1'
         ];
         const hash = userId.split('').reduce((a, b) => {
             a = ((a << 5) - a + b.charCodeAt(0)) & 0xffffffff;
             return a;
-        }, 0);
+        };
+ 0);
         return colors[Math.abs(hash) % colors.length];
-    }, []);
+    };
+ []);
     // Initialize WebSocket connection;
     const initializeConnection = useCallback(() => {
         if (wsRef.current?.readyState === WebSocket.OPEN)
             return;
         try {
-            const wsUrl = wsConfig?.url || `wss: //your-websocket-server.com/collaboration/${options.roomId}`,
+            const wsUrl = wsConfig?.url || `wss: //your-websocket-server.com/collaboration/${options.roomId}`;
     wsRef.current = new WebSocket(wsUrl, wsConfig?.protocols);
             wsRef.current.onopen = () => {
     setState(prev => ({
                     ...prev;
   };
-<<<<<<< HEAD
                     isConnected: true;
-                    connectionStatus: 'connected'}));
-=======
-                    isConnected: true,
-                    connectionStatus: 'connected',
+                    connectionStatus: 'connected';
                 }));
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     // Send user join message;
                 sendMessage({
-                    type: 'user_join',
-                    userId: options.userId,
+                    type: 'user_join';
+                    userId: options.userId;
                     payload: {
-<<<<<<< HEAD
                         name: options.userName;
                         avatar: options.userAvatar;
                         color: generateUserColor(options.userId);
-                        timestamp: new Date()}
-=======
-                        name: options.userName,
-                        avatar: options.userAvatar,
-                        color: generateUserColor(options.userId),
+
                         timestamp: new Date();
 };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
                 });
     // Start heartbeat;
                 startHeartbeat();
@@ -103,15 +83,10 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             };
             wsRef.current.onclose = (event) => {
                 setState(prev => ({
-                    ...prev,
-<<<<<<< HEAD
+                    ...prev;
                     isConnected: false;
-                    connectionStatus: 'disconnected'}));
-=======
-                    isConnected: false,
-                    connectionStatus: 'disconnected',
+                    connectionStatus: 'disconnected';
                 }));
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     stopHeartbeat();
                 stopPresenceUpdates();
                 // Attempt reconnection;
@@ -119,14 +94,9 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                     scheduleReconnection();
                 }
                 trackEvent('collaboration', 'connection_lost', 'websocket_disconnected', undefined, {
-<<<<<<< HEAD
                     code: event.code;
-                    reason: event.reason});
-=======
-                    code: event.code,
-                    reason: event.reason,
+                    reason: event.reason;
                 });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
      };
             wsRef.current.onerror = (error) => {
                 
@@ -138,18 +108,15 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             trackEvent('collaboration', 'connection_failed', 'websocket_init_failed', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'});
      }
-    }, [options, wsConfig, generateUserColor, trackEvent]);
+    };
+ [options, wsConfig, generateUserColor, trackEvent]);
     // Send message through WebSocket;
     const sendMessage = useCallback((message) => {
         const fullMessage = {
-            ...message,
-            id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-<<<<<<< HEAD
-            timestamp: new Date()};
-=======
+            ...message;
+            id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
             timestamp: new Date();
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     if (wsRef.current?.readyState === WebSocket.OPEN) {
             wsRef.current.send(JSON.stringify(fullMessage));
             trackEvent('collaboration', 'message_sent', message.type, undefined, { messageId: fullMessage.id });
@@ -159,7 +126,8 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             messageQueueRef.current.push(fullMessage);
             trackEvent('collaboration', 'message_queued', message.type, undefined, { messageId: fullMessage.id });
 };
-    }, [trackEvent]);
+    };
+ [trackEvent]);
     // Handle incoming messages;
     const handleIncomingMessage = useCallback((message) => {
         setState(prev => {
@@ -189,42 +157,30 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             newState.messages = [...prev.messages, message].slice(-(options.messageRetention || 1000));
             return newState;
         });
-<<<<<<< HEAD
-        trackEvent('collaboration', 'message_received', message.type, undefined, {
-            messageId: message.id;
-            userId: message.userId});
-=======
 
     trackEvent('collaboration', 'message_received', message.type, undefined, {
-            messageId: message.id,
-            userId: message.userId,
+            messageId: message.id;
+            userId: message.userId;
         });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
-     }, [options.messageRetention, trackEvent]);
+     };
+ [options.messageRetention, trackEvent]);
     // Handle user join;
     const handleUserJoin = useCallback((message) => {
         setState(prev => {
             const newUsers = new Map(prev.users);
             newUsers.set(message.userId, {
-<<<<<<< HEAD
                 id: message.userId;
                 name: message.payload.name;
                 avatar: message.payload.avatar;
                 color: message.payload.color;
                 isOnline: true;
-                lastSeen: new Date()});
-=======
-                id: message.userId,
-                name: message.payload.name,
-                avatar: message.payload.avatar,
-                color: message.payload.color,
-                isOnline: true,
-                lastSeen: new Date(),
+                lastSeen: new Date();
+
             });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     return { ...prev, users: newUsers };
   });
-    }, []);
+    };
+ []);
     // Handle user leave;
     const handleUserLeave = useCallback((message) => {
         setState(prev => {
@@ -235,7 +191,8 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
 };
             return { ...prev, users: newUsers };
   });
-    }, []);
+    };
+ []);
     // Handle presence update;
     const handlePresenceUpdate = useCallback((message) => {
         setState(prev => {
@@ -246,7 +203,8 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
 };
             return { ...prev, users: newUsers };
   });
-    }, []);
+    };
+ []);
     // Handle cursor movement;
     const handleCursorMove = useCallback((message) => {
         if (!options.enableCursors)
@@ -256,12 +214,13 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             const user = newUsers.get(message.userId);
             if (user) {
                 newUsers.set(message.userId, {
-                    ...user,
+                    ...user;
                     cursor: message.payload});
      }
             return { ...prev, users: newUsers };
   });
-    }, [options.enableCursors]);
+    };
+ [options.enableCursors]);
     // Handle selection change;
     const handleSelectionChange = useCallback((message) => {
         if (!options.enableSelection)
@@ -271,12 +230,13 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             const user = newUsers.get(message.userId);
             if (user) {
                 newUsers.set(message.userId, {
-                    ...user,
+                    ...user;
                     selection: message.payload});
      }
             return { ...prev, users: newUsers };
   });
-    }, [options.enableSelection]);
+    };
+ [options.enableSelection]);
     // Handle text change;
     const handleTextChange = useCallback((message) => {
         if (!options.enableTextSync)
@@ -284,28 +244,24 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         // Handle conflict resolution;
         if (message.metadata?.conflictResolution) {
             setState(prev => ({
-                ...prev,
+                ...prev;
                 conflicts: [...prev.conflicts, {
-<<<<<<< HEAD
                         id: message.id;
                         type: 'text_change';
                         resolution: 'pending';
-                        timestamp: new Date()}]
-=======
-                        id: message.id,
-                        type: 'text_change',
-                        resolution: 'pending',
-                        timestamp: new Date(),
+                        timestamp: new Date();
+
                     }]
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
             }));
      }
         // Emit text change event;
         const event = new CustomEvent('collaborationTextChange', {
             detail: { message, userId: message.userId }
-        }),
+        });
+
     window.dispatchEvent(event);
-    }, [options.enableTextSync]);
+    };
+ [options.enableTextSync]);
     // Start heartbeat;
     const startHeartbeat = useCallback(() => {
         if (heartbeatIntervalRef.current)
@@ -313,109 +269,119 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         heartbeatIntervalRef.current = setInterval(() => {
             if (wsRef.current?.readyState === WebSocket.OPEN) {
                 sendMessage({
-                    type: 'presence_update',
-                    userId: options.userId,
+                    type: 'presence_update';
+                    userId: options.userId;
                     payload: { timestamp: new Date() }
                 });
 };
-        }, options.heartbeatInterval || 30000);
-    }, [options.userId, options.heartbeatInterval, sendMessage]);
+        };
+ options.heartbeatInterval || 30000);
+    };
+ [options.userId, options.heartbeatInterval, sendMessage]);
     // Stop heartbeat;
     const stopHeartbeat = useCallback(() => {
         if (heartbeatIntervalRef.current) {
             clearInterval(heartbeatIntervalRef.current);
             heartbeatIntervalRef.current = null;
         }
-    }, []);
+    };
+ []);
     // Start presence updates;
     const startPresenceUpdates = useCallback(() => {
         if (presenceUpdateRef.current)
             return;
         presenceUpdateRef.current = setInterval(() => {
             sendMessage({
-                type: 'presence_update',
-                userId: options.userId,
+                type: 'presence_update';
+                userId: options.userId;
                 payload: { timestamp: new Date() }
-            }),
-     }, 10000);
-    }, [options.userId, sendMessage]);
+            });
+
+     };
+ 10000);
+    };
+ [options.userId, sendMessage]);
     // Stop presence updates;
     const stopPresenceUpdates = useCallback(() => {
         if (presenceUpdateRef.current) {
             clearInterval(presenceUpdateRef.current);
             presenceUpdateRef.current = null;
         }
-    }, []);
+    };
+ []);
     // Schedule reconnection;
     const scheduleReconnection = useCallback(() => {
         if (reconnectTimeoutRef.current)
             return;
         reconnectAttemptsRef.current++;
-        setState(prev => ({ ...prev, connectionStatus: 'reconnecting' })),
+        setState(prev => ({ ...prev, connectionStatus: 'reconnecting' }));
+
     reconnectTimeoutRef.current = setTimeout(() => {
             initializeConnection();
             reconnectTimeoutRef.current = null;
-        }, (options.reconnectDelay || 1000) * Math.pow(2, reconnectAttemptsRef.current - 1));
-    }, [options.reconnectDelay, initializeConnection]);
+        };
+ (options.reconnectDelay || 1000) * Math.pow(2, reconnectAttemptsRef.current - 1));
+    };
+ [options.reconnectDelay, initializeConnection]);
     // Public API methods;
     const updateCursor = useCallback((x, y, element) => {
         if (!options.enableCursors)
             return;
         sendMessage({
-            type: 'cursor_move',
-            userId: options.userId,
+            type: 'cursor_move';
+            userId: options.userId;
             payload: { x, y, element }
         });
-    }, [options.enableCursors, options.userId, sendMessage]);
+    };
+ [options.enableCursors, options.userId, sendMessage]);
 
   const updateSelection = useCallback((start, end, text) => {
         if (!options.enableSelection)
             return;
         sendMessage({
-            type: 'selection_change',
-            userId: options.userId,
+            type: 'selection_change';
+            userId: options.userId;
             payload: { start, end, text }
         });
-    }, [options.enableSelection, options.userId, sendMessage]);
+    };
+ [options.enableSelection, options.userId, sendMessage]);
 
   const syncTextChange = useCallback((change) => {
         if (!options.enableTextSync)
             return;
         sendMessage({
-            type: 'text_change',
-            userId: options.userId,
-            payload: change,
+            type: 'text_change';
+            userId: options.userId;
+            payload: change;
             metadata: {
-<<<<<<< HEAD
                 sessionId: options.roomId;
                 version: Date.now();
-                conflictResolution: options.conflictResolution}
-=======
-                sessionId: options.roomId,
-                version: Date.now(),
-                conflictResolution: options.conflictResolution,
+
+                conflictResolution: options.conflictResolution;
             }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         });
-     }, [options.enableTextSync, options.userId, options.roomId, options.conflictResolution, sendMessage]);
+     };
+ [options.enableTextSync, options.userId, options.roomId, options.conflictResolution, sendMessage]);
 
   const resolveConflict = useCallback((conflictId, resolution) => {
         setState(prev => ({
-            ...prev,
-            conflicts: prev.conflicts.map(conflict => conflict.id === conflictId,
+            ...prev;
+            conflicts: prev.conflicts.map(conflict => conflict.id === conflictId;
                 ? { ...conflict, resolution }
                 : conflict)
         }));
         trackEvent('collaboration', 'conflict_resolved', resolution, undefined, { conflictId });
-    }, [trackEvent]);
+    };
+ [trackEvent]);
 
   const disconnect = useCallback(() => {
         if (wsRef.current) {
             sendMessage({
-                type: 'user_leave',
-                userId: options.userId,
+                type: 'user_leave';
+                userId: options.userId;
                 payload: { timestamp: new Date() }
-            }),
+            });
+
     wsRef.current.close();
             wsRef.current = null;
         }
@@ -426,24 +392,21 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             reconnectTimeoutRef.current = null;
         }
         setState(prev => ({
-            ...prev,
-<<<<<<< HEAD
+            ...prev;
             isConnected: false;
-            connectionStatus: 'disconnected'}));
-=======
-            isConnected: false,
-            connectionStatus: 'disconnected',
+            connectionStatus: 'disconnected';
         }));
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     trackEvent('collaboration', 'user_disconnected', 'manual_disconnect');
-    }, [options.userId, sendMessage, stopHeartbeat, stopPresenceUpdates, trackEvent]);
+    };
+ [options.userId, sendMessage, stopHeartbeat, stopPresenceUpdates, trackEvent]);
     // Initialize connection on mount;
     useEffect(() => {
         initializeConnection();
         return () => {
             disconnect();
         };
-    }, [initializeConnection, disconnect]);
+    };
+ [initializeConnection, disconnect]);
     // Process queued messages when connection is restored;
     useEffect(() => {
         if (state.isConnected && messageQueueRef.current.length > 0) {
@@ -457,19 +420,22 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
 
     trackEvent('collaboration', 'queued_messages_sent', 'batch_send', queuedMessages.length);
         }
-    }, [state.isConnected, trackEvent]);
+    };
+ [state.isConnected, trackEvent]);
     // Computed values;
     const onlineUsers = useMemo(() => {
         return Array.from(state.users.values()).filter((user) => {
             return typeof user === 'object' && user !== null && 'isOnline' in user && user.isOnline;
         });
-    }, [state.users]);
+    };
+ [state.users]);
 
   const offlineUsers = useMemo(() => {
         return Array.from(state.users.values()).filter((user) => {
             return typeof user === 'object' && user !== null && 'isOnline' in user && !user.isOnline;
         });
-    }, [state.users]);
+    };
+ [state.users]);
 
   const activeCursors = useMemo(() => {
         return Array.from(state.users.values())
@@ -477,7 +443,8 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             return typeof user === 'object' && user !== null && 'isOnline' in user && user.isOnline && 'cursor' in user && !!user.cursor;
         })
             .map(user => ({ ...user.cursor, user }));
-    }, [state.users]);
+    };
+ [state.users]);
 
   const activeSelections = useMemo(() => {
         return Array.from(state.users.values())
@@ -485,32 +452,27 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             return typeof user === 'object' && user !== null && 'isOnline' in user && user.isOnline && 'selection' in user && !!user.selection;
         })
             .map(user => ({ ...user.selection, user }));
-    }, [state.users]);
+    };
+ [state.users]);
     return {
         // State;
-        state,
-        onlineUsers,
-        offlineUsers,
-        activeCursors,
-        activeSelections,
+        state;
+        onlineUsers;
+        offlineUsers;
+        activeCursors;
+        activeSelections;
         // Actions;
-        updateCursor,
-        updateSelection,
-        syncTextChange,
-        resolveConflict,
-        disconnect,
+        updateCursor;
+        updateSelection;
+        syncTextChange;
+        resolveConflict;
+        disconnect;
         // Connection management;
-        initializeConnection,
-        sendMessage,
+        initializeConnection;
+        sendMessage;
         // Utilities;
-<<<<<<< HEAD
         isConnected: state.isConnected;
         connectionStatus: state.connectionStatus;
-        lastActivity: state.lastActivity};
-=======
-        isConnected: state.isConnected,
-        connectionStatus: state.connectionStatus,
-        lastActivity: state.lastActivity,
+        lastActivity: state.lastActivity;
     };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 };

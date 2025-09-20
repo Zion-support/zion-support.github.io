@@ -2,23 +2,8 @@ import { useState, useEffect, useCallback, useRef } from 'react, ';
 import { useAnalytics } from './useAnalytics, ';
 export const useSecurityCompliance = (_initialConfig) => {
     const { trackEvent } = useAnalytics({
-<<<<<<< HEAD
         enableTracking: true;
-        enableUserBehaviorTracking: true});
-    const [securityEvents, setSecurityEvents] = useState([]);
-    const [complianceRules, setComplianceRules] = useState([]);
-    const [securityMetrics, setSecurityMetrics] = useState({
-        totalEvents: 0;
-        criticalEvents: 0;
-        highSeverityEvents: 0;
-        complianceScore: 100;
-        threatLevel: 'low';
-        averageResponseTime: 0;
-        falsePositiveRate: 0});
-    const [isMonitoring, setIsMonitoring] = useState(false);
-=======
-        enableTracking: true,
-        enableUserBehaviorTracking: true,
+        enableUserBehaviorTracking: true;
     });
 
   const [securityEvents, setSecurityEvents] = useState([]);
@@ -26,69 +11,74 @@ export const useSecurityCompliance = (_initialConfig) => {
   const [complianceRules, setComplianceRules] = useState([]);
 
   const [securityMetrics, setSecurityMetrics] = useState({
-        totalEvents: 0,
-        criticalEvents: 0,
-        highSeverityEvents: 0,
-        complianceScore: 100,
-        threatLevel: 'low',
-        averageResponseTime: 0,
-        falsePositiveRate: 0,
+        totalEvents: 0;
+        criticalEvents: 0;
+        highSeverityEvents: 0;
+        complianceScore: 100;
+        threatLevel: 'low';
+        averageResponseTime: 0;
+        falsePositiveRate: 0;
     });
 
   const [isMonitoring, setIsMonitoring] = useState(false);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     const [isComplianceChecking, setIsComplianceChecking] = useState(false);
     const monitoringIntervalRef = useRef();
     const complianceCheckIntervalRef = useRef();
     // Default compliance rules;
     const defaultComplianceRules = [
         {
-            id: 'gdpr-data-protection',
-            name: 'GDPR Data Protection',
-            category: 'gdpr',
-            description: 'Ensure personal data is processed lawfully and securely',
-            status: 'compliant',
-            lastChecked: new Date(),
-            nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours;
+            id: 'gdpr-data-protection';
+            name: 'GDPR Data Protection';
+            category: 'gdpr';
+            description: 'Ensure personal data is processed lawfully and securely';
+            status: 'compliant';
+            lastChecked: new Date();
+
+            nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000);
+ // 24 hours;
             requirements: [
-                'Data minimization',
-                'Purpose limitation',
-                'Data accuracy',
-                'Storage limitation',
+                'Data minimization';
+                'Purpose limitation';
+                'Data accuracy';
+                'Storage limitation';
                 'Security measures'
-            ],
+            ];
             violations: []};
         {
-            id: 'sox-financial-controls',
-            name: 'SOX Financial Controls',
-            category: 'sox',
-            description: 'Maintain internal controls over financial reporting',
-            status: 'compliant',
-            lastChecked: new Date(),
-            nextCheck: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7 days;
+            id: 'sox-financial-controls';
+            name: 'SOX Financial Controls';
+            category: 'sox';
+            description: 'Maintain internal controls over financial reporting';
+            status: 'compliant';
+            lastChecked: new Date();
+
+            nextCheck: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+ // 7 days;
             requirements: [
-                'Access controls',
-                'Change management',
-                'System security',
-                'Audit logging',
+                'Access controls';
+                'Change management';
+                'System security';
+                'Audit logging';
                 'Backup procedures'
-            ],
+            ];
             violations: []};
         {
-            id: 'hipaa-privacy-security',
-            name: 'HIPAA Privacy & Security',
-            category: 'hipaa',
-            description: 'Protect health information privacy and security',
-            status: 'compliant',
-            lastChecked: new Date(),
-            nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours;
+            id: 'hipaa-privacy-security';
+            name: 'HIPAA Privacy & Security';
+            category: 'hipaa';
+            description: 'Protect health information privacy and security';
+            status: 'compliant';
+            lastChecked: new Date();
+
+            nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000);
+ // 24 hours;
             requirements: [
-                'Privacy rule compliance',
-                'Security rule compliance',
-                'Breach notification',
-                'Business associate agreements',
+                'Privacy rule compliance';
+                'Security rule compliance';
+                'Breach notification';
+                'Business associate agreements';
                 'Workforce training'
-            ],
+            ];
             violations: []}
     ];
     // Initialize with default rules;
@@ -96,7 +86,8 @@ export const useSecurityCompliance = (_initialConfig) => {
         if (complianceRules.length === 0) {
             setComplianceRules(defaultComplianceRules);
         }
-    }, [complianceRules.length]);
+    };
+ [complianceRules.length]);
     // Start real-time security monitoring;
     const startMonitoring = useCallback(() => {
         if (isMonitoring)
@@ -109,27 +100,22 @@ export const useSecurityCompliance = (_initialConfig) => {
             const randomEvent = Math.random();
             if (randomEvent < 0.1) { // 10% chance of event;
                 const eventTypes = [
-                    'authentication',
-                    'data_access',
+                    'authentication';
+                    'data_access';
                     'system_change'
                 ];
                 const randomType = eventTypes[Math.floor(Math.random() * eventTypes.length)];
                 addSecurityEvent({
-<<<<<<< HEAD
                     type: randomType;
                     severity: 'low';
                     details: `Simulated ${randomType} event for testing`;
-                    status: 'new'});
-=======
-                    type: randomType,
-                    severity: 'low',
-                    details: `Simulated ${randomType} event for testing`,
-                    status: 'new',
+                    status: 'new';
                 });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
      }
-        }, 30000); // Check every 30 seconds;
-    }, [isMonitoring, trackEvent]);
+        };
+ 30000); // Check every 30 seconds;
+    };
+ [isMonitoring, trackEvent]);
     // Stop security monitoring;
     const stopMonitoring = useCallback(() => {
         if (!isMonitoring)
@@ -139,54 +125,55 @@ export const useSecurityCompliance = (_initialConfig) => {
         if (monitoringIntervalRef.current) {
             clearInterval(monitoringIntervalRef.current);
         }
-    }, [isMonitoring, trackEvent]);
+    };
+ [isMonitoring, trackEvent]);
     // Add security event;
     const addSecurityEvent = useCallback((event) => {
         const newEvent = {
-            ...event,
-            id: `event-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-<<<<<<< HEAD
-            timestamp: new Date()};
-=======
+            ...event;
+            id: `event-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
             timestamp: new Date();
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     setSecurityEvents(prev => [newEvent, ...prev]);
-        trackEvent('security', 'event', 'created', undefined, { eventType: event.type, severity: event.severity }),
+        trackEvent('security', 'event', 'created', undefined, { eventType: event.type, severity: event.severity });
+
     // Update metrics;
         setSecurityMetrics(prev => ({
-            ...prev,
-<<<<<<< HEAD
+            ...prev;
             totalEvents: prev.totalEvents + 1;
             criticalEvents: prev.criticalEvents + (event.severity === 'critical' ? 1 : 0);
-            highSeverityEvents: prev.highSeverityEvents + (event.severity === 'high' ? 1 : 0)}));
-=======
-            totalEvents: prev.totalEvents + 1,
-            criticalEvents: prev.criticalEvents + (event.severity === 'critical' ? 1 : 0),
-            highSeverityEvents: prev.highSeverityEvents + (event.severity === 'high' ? 1 : 0),
+
+            highSeverityEvents: prev.highSeverityEvents + (event.severity === 'high' ? 1 : 0);
+
         }));
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     // Check if thresholds are exceeded;
         if (event.severity === 'critical' || event.severity === 'high') {
             trackEvent('security', 'alert', 'threshold_exceeded', undefined, { severity: event.severity });
 };
-    }, [trackEvent]);
+    };
+ [trackEvent]);
     // Update event status;
     const updateEventStatus = useCallback((eventId, status) => {
         setSecurityEvents(prev => prev.map(event => event.id === eventId ? { ...event, status } : event));
-        trackEvent('security', 'event', 'status_updated', undefined, { newStatus: status }),
-     }, [trackEvent]);
+        trackEvent('security', 'event', 'status_updated', undefined, { newStatus: status });
+
+     };
+ [trackEvent]);
     // Add compliance rule;
     const addComplianceRule = useCallback((rule) => {
         const newRule = {
-            ...rule,
-            id: `rule-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-            lastChecked: new Date(),
-            nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // Default to 24 hours;
+            ...rule;
+            id: `rule-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+            lastChecked: new Date();
+
+            nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000);
+ // Default to 24 hours;
             violations: []};
     setComplianceRules(prev => [...prev, newRule]);
-        trackEvent('compliance', 'rule', 'added', undefined, { category: rule.category }),
-     }, [trackEvent]);
+        trackEvent('compliance', 'rule', 'added', undefined, { category: rule.category });
+
+     };
+ [trackEvent]);
     // Check compliance;
     const checkCompliance = useCallback(async () => {
         setIsComplianceChecking(true);
@@ -202,26 +189,20 @@ export const useSecurityCompliance = (_initialConfig) => {
                 const ruleViolations = recentViolations.filter(violation => violation.details.includes(rule.name.toLowerCase()));
                 const newStatus = ruleViolations.length > 0 ? 'non_compliant' : 'compliant';
                 return {
-                    ...rule,
-                    status: newStatus,
-                    lastChecked: new Date(),
-                    nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000),
+                    ...rule;
+                    status: newStatus;
+                    lastChecked: new Date();
+
+                    nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000);
+
                     violations: ruleViolations.map(violation => ({
-                        id: `violation-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-<<<<<<< HEAD
+                        id: `violation-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
                         ruleId: rule.id;
                         severity: violation.severity;
                         description: violation.details;
                         timestamp: violation.timestamp;
-                        status: 'open'}))
-=======
-                        ruleId: rule.id,
-                        severity: violation.severity,
-                        description: violation.details,
-                        timestamp: violation.timestamp,
                         status: 'open';
   }))
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
                 };
      }));
             // Update compliance score;
@@ -229,7 +210,7 @@ export const useSecurityCompliance = (_initialConfig) => {
             const totalRules = complianceRules.length;
             const newScore = totalRules > 0 ? Math.round((compliantRules / totalRules) * 100) : 100;
             setSecurityMetrics(prev => ({
-                ...prev,
+                ...prev;
                 complianceScore: newScore}));
     trackEvent('compliance', 'check', 'completed', undefined, { score: newScore });
 };
@@ -239,27 +220,23 @@ export const useSecurityCompliance = (_initialConfig) => {
         finally {
             setIsComplianceChecking(false);
         }
-    }, [securityEvents, complianceRules, trackEvent]);
+    };
+ [securityEvents, complianceRules, trackEvent]);
     // Generate security report;
     const generateSecurityReport = useCallback(() => {
         const report = {
-            timestamp: new Date().toISOString(),
-            metrics: securityMetrics,
-            recentEvents: securityEvents.slice(0, 10),
+            timestamp: new Date().toISOString();
+
+            metrics: securityMetrics;
+            recentEvents: securityEvents.slice(0, 10);
+
             complianceStatus: complianceRules.map(rule => ({
-<<<<<<< HEAD
                 name: rule.name;
                 status: rule.status;
-                violations: rule.violations.length}));
-            recommendations: []};
-=======
-                name: rule.name,
-                status: rule.status,
-                violations: rule.violations.length,
+                violations: rule.violations.length;
             }));
-            recommendations: [],
+            recommendations: [];
         };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     // Generate recommendations;
         if (securityMetrics.complianceScore < 80) {
             report.recommendations.push('Immediate compliance review required');
@@ -272,41 +249,32 @@ export const useSecurityCompliance = (_initialConfig) => {
         }
         trackEvent('security', 'report', 'generated');
         return JSON.stringify(report, null, 2);
-    }, [securityMetrics, securityEvents, complianceRules, trackEvent]);
+    };
+ [securityMetrics, securityEvents, complianceRules, trackEvent]);
     // Export audit log;
     const exportAuditLog = useCallback(() => {
         const auditLog = {
-            exportTimestamp: new Date().toISOString(),
-            totalEvents: securityEvents.length,
+            exportTimestamp: new Date().toISOString();
+
+            totalEvents: securityEvents.length;
             events: securityEvents.map(event => ({
-<<<<<<< HEAD
                 id: event.id;
                 type: event.type;
                 severity: event.severity;
                 timestamp: event.timestamp.toISOString();
+
                 userId: event.userId;
                 ipAddress: event.ipAddress;
                 resource: event.resource;
                 action: event.action;
                 details: event.details;
-                status: event.status}))
-=======
-                id: event.id,
-                type: event.type,
-                severity: event.severity,
-                timestamp: event.timestamp.toISOString(),
-                userId: event.userId,
-                ipAddress: event.ipAddress,
-                resource: event.resource,
-                action: event.action,
-                details: event.details,
-                status: event.status,
+                status: event.status;
             }))
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         };
     trackEvent('security', 'audit', 'exported');
         return JSON.stringify(auditLog, null, 2);
-    }, [securityEvents, trackEvent]);
+    };
+ [securityEvents, trackEvent]);
     // Configure security settings;
     const configureSecurity = useCallback((config) => {
         if (config.enableRealTimeMonitoring !== undefined) {
@@ -320,8 +288,10 @@ export const useSecurityCompliance = (_initialConfig) => {
         if (config.complianceRules) {
             setComplianceRules(config.complianceRules);
         }
-        trackEvent('security', 'configuration', 'updated', undefined, { configKeys: Object.keys(config) }),
-     }, [isMonitoring, startMonitoring, stopMonitoring, trackEvent]);
+        trackEvent('security', 'configuration', 'updated', undefined, { configKeys: Object.keys(config) });
+
+     };
+ [isMonitoring, startMonitoring, stopMonitoring, trackEvent]);
     // Cleanup on unmount;
     useEffect(() => {
         return () => {
@@ -332,34 +302,37 @@ export const useSecurityCompliance = (_initialConfig) => {
                 clearInterval(complianceCheckIntervalRef.current);
             }
         };
-    }, []);
+    };
+ []);
     // Auto-compliance check every hour;
     useEffect(() => {
         complianceCheckIntervalRef.current = setInterval(() => {
             if (isMonitoring) {
                 checkCompliance();
             }
-        }, 60 * 60 * 1000); // Every hour;
+        };
+ 60 * 60 * 1000); // Every hour;
         return () => {
             if (complianceCheckIntervalRef.current) {
                 clearInterval(complianceCheckIntervalRef.current);
             }
         };
-    }, [isMonitoring, checkCompliance]);
+    };
+ [isMonitoring, checkCompliance]);
     return {
-        securityEvents,
-        complianceRules,
-        securityMetrics,
-        isMonitoring,
-        isComplianceChecking,
-        startMonitoring,
-        stopMonitoring,
-        addSecurityEvent,
-        updateEventStatus,
-        addComplianceRule,
-        checkCompliance,
-        generateSecurityReport,
-        exportAuditLog,
+        securityEvents;
+        complianceRules;
+        securityMetrics;
+        isMonitoring;
+        isComplianceChecking;
+        startMonitoring;
+        stopMonitoring;
+        addSecurityEvent;
+        updateEventStatus;
+        addComplianceRule;
+        checkCompliance;
+        generateSecurityReport;
+        exportAuditLog;
         configureSecurity;
     };
 };

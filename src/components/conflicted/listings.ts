@@ -1,42 +1,14 @@
 import React from "react";
 
 export interface ProductListing {
-<<<<<<< HEAD
-id: string; title: string; description: string; category: string; price: number; currency: string; pricingModel: "one-time" | "subscription" | "usage-based" | "custom";,
-features: string[], tags: string[];
-images?: string[];
-rating?: number;
-reviewCount?: number;,
-availability: "immediate" | "within-week" | "within-month" | "custom";
-deliveryTime?: string;,
-supportLevel: "basic" | "standard" | "premium" | "enterprise";
-compliance?: string[];
-integrations?: string[];
-documentation?: string;
-demoUrl?: string;
-website?: string;
-contactEmail?: string;
-contactPhone?: string;
-location?: string;
-company?: string;
-author?: {,
-name: string; id: string;
-avatarUrl?: string;
-email?: string};
-createdAt: string; updatedAt: string;
-featured?: boolean;
-popular?: boolean;
-new?: boolean;
-aiScore?: number;
-=======
-  id: string, title: string, description: string, category: string, price: number, currency: string, pricingModel: "one-time" | "subscription" | "usage-based" | "custom",
-    features: string[], tags: string[],
+  id: string, title: string, description: string, category: string, price: number, currency: string, pricingModel: "one-time" | "subscription" | "usage-based" | "custom";
+    features: string[], tags: string[];
     images?: string[];
   rating?: number;
   reviewCount?: number;
-  availability: "immediate" | "within-week" | "within-month" | "custom",
+  availability: "immediate" | "within-week" | "within-month" | "custom";
     deliveryTime?: string;
-  supportLevel: "basic" | "standard" | "premium" | "enterprise",
+  supportLevel: "basic" | "standard" | "premium" | "enterprise";
     compliance?: string[];
   integrations?: string[];
   documentation?: string;
@@ -47,14 +19,13 @@ aiScore?: number;
   location?: string;
   company?: string;
   author?: {
-    name: string, id: string,
+    name: string, id: string;
     avatarUrl?: string;
-    email?: string,
+    email?: string;
   };
-  createdAt: string, updatedAt: string,
+  createdAt: string, updatedAt: string;
     featured?: boolean;
   popular?: boolean;
   new?: boolean;
   aiScore?: number;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }

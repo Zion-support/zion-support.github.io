@@ -14,7 +14,7 @@ return (
 Ready to transform your talent acquisition?;
 </h2>
 <p className='text-xl text-muted-foreground mb-8'>
-Schedule a personalized demo with our enterprise team to see,
+Schedule a personalized demo with our enterprise team to see;
 how Zion AI can help you build your dream team.;
 </p>
 <div className='flex flex-col sm:flex-row gap-4'>

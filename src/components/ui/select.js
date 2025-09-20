@@ -49,9 +49,9 @@ export function SelectItem({ children, value }) {
     return (<div className={`
         flex h-10 w-full items-center justify-between rounded-md border;
         border-zion-blue-light/30 bg-zion-blue-dark/50 px-3 py-2 text-sm;
-        text-white placeholder: text-zion-slate-light/50,
-        focus: outline-none focus:ring-2 focus:ring-zion-cyan,
-        focus: border-transparent transition-colors cursor-pointer,
+        text-white placeholder: text-zion-slate-light/50;
+        focus: outline-none focus:ring-2 focus:ring-zion-cyan;
+        focus: border-transparent transition-colors cursor-pointer;
         ${className}
       `} {...props}>
       {children}
@@ -73,8 +73,8 @@ export function SelectItem({ children, className = '', value, ...props }) {
     return (<div className={`
         relative flex w-full cursor-pointer select-none items-center;
         rounded-sm px-3 py-2 text-sm text-white outline-none;
-        hover: bg-zion-blue/20 focus:bg-zion-blue/20,
-        focus: text-white transition-colors,
+        hover: bg-zion-blue/20 focus:bg-zion-blue/20;
+        focus: text-white transition-colors;
         ${className}
       `} data-value={value} {...props}>
       {children}

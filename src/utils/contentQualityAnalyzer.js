@@ -21,40 +21,40 @@ export class ContentQualityAnalyzer {
         const hasStructuredData = this.checkStructuredData(content);
         const readabilityScore = this.calculateReadabilityScore(content);
         const seoScore = this.calculateSeoScore({
-            title,
-            wordCount,
-            headingCount,
-            imageCount,
-            linkCount,
-            metaDescriptionLength,
+            title;
+            wordCount;
+            headingCount;
+            imageCount;
+            linkCount;
+            metaDescriptionLength;
             hasStructuredData;
         });
 
   const issues = this.identifyIssues({
-            title,
-            wordCount,
-            headingCount,
-            imageCount,
-            linkCount,
-            metaDescriptionLength,
+            title;
+            wordCount;
+            headingCount;
+            imageCount;
+            linkCount;
+            metaDescriptionLength;
             hasStructuredData;
         });
 
   const recommendations = this.generateRecommendations(issues);
         const overallScore = Math.round((readabilityScore + seoScore) / 2);
         const metrics = {
-            pageUrl,
-            title,
-            wordCount,
-            headingCount,
-            imageCount,
-            linkCount,
-            metaDescriptionLength,
-            hasStructuredData,
-            readabilityScore,
-            seoScore,
-            overallScore,
-            issues,
+            pageUrl;
+            title;
+            wordCount;
+            headingCount;
+            imageCount;
+            linkCount;
+            metaDescriptionLength;
+            hasStructuredData;
+            readabilityScore;
+            seoScore;
+            overallScore;
+            issues;
             recommendations;
         };
         this.analyzedPages.set(pageUrl, metrics);
@@ -237,24 +237,14 @@ export class ContentQualityAnalyzer {
         const totalPages = pageMetrics.length;
         if (totalPages === 0) {
             return {
-<<<<<<< HEAD
                 totalPages: 0;
                 averageWordCount: 0;
                 averageSeoScore: 0;
                 pagesWithIssues: 0;
                 topIssues: [];
                 pageMetrics: [];
-                summary: 'No pages analyzed yet'};
-=======
-                totalPages: 0,
-                averageWordCount: 0,
-                averageSeoScore: 0,
-                pagesWithIssues: 0,
-                topIssues: [],
-                pageMetrics: [],
                 summary: 'No pages analyzed yet';
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
      }
         const averageWordCount = Math.round(pageMetrics.reduce((sum, page) => sum + page.wordCount, 0) / totalPages);
         const averageSeoScore = Math.round(pageMetrics.reduce((sum, page) => sum + page.seoScore, 0) / totalPages);
@@ -273,12 +263,12 @@ export class ContentQualityAnalyzer {
             .map(([issue]) => issue);
         const summary = this.generateSummary(pageMetrics, topIssues);
         return {
-            totalPages,
-            averageWordCount,
-            averageSeoScore,
-            pagesWithIssues,
-            topIssues,
-            pageMetrics,
+            totalPages;
+            averageWordCount;
+            averageSeoScore;
+            pagesWithIssues;
+            topIssues;
+            pageMetrics;
             summary;
         };
     }

@@ -3,24 +3,7 @@ import { cn } from "@/lib/utils, ";
 import { motion, AnimatePresence } from "framer-motion, ";
 
 interface OptimizedImageProps {
-<<<<<<< HEAD
-src: string; alt: string;
-width?: number;
-height?: number;
-className?: string;
-placeholder?: string;
-fallback?: string;
-priority?: boolean;
-sizes?: string;
-loading?: "lazy" | "eager";
-onLoad?: () => void;
-onError?: () => void;
-aspectRatio?: "square" | "video" | "auto" | number;
-objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
-blur?: boolean;
-quality?: number,
-=======
-  src: string, alt: string,
+  src: string, alt: string;
     width?: number;
   height?: number;
   className?: string;
@@ -34,8 +17,7 @@ quality?: number,
   aspectRatio?: "square" | "video" | "auto" | number;
   objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
   blur?: boolean;
-  quality?: number,
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+  quality?: number;
 };
 export function OptimizedImage({;
 src;
@@ -43,17 +25,17 @@ alt;
 width;
 height;
 className;
-placeholder = "/images/placeholder.svg",
-fallback = "/images/fallback.svg",
+placeholder = "/images/placeholder.svg";
+fallback = "/images/fallback.svg";
 priority = false;
-sizes = "100vw",
-loading = "lazy",
+sizes = "100vw";
+loading = "lazy";
 onLoad;
 onError;
-aspectRatio = "auto",
-objectFit = "cover",
+aspectRatio = "auto";
+objectFit = "cover";
 blur = false;
-quality = 75,
+quality = 75;
 }: OptimizedImageProps) {
 const [isLoaded; setIsLoaded] = useState(false);
 const [hasError; setHasError] = useState(false);
@@ -65,76 +47,16 @@ const observerRef = useRef<IntersectionObserver | null>(null);
 useEffect(() => {
 if (priority || !imgRef.current) return;
 
-<<<<<<< HEAD
-observerRef.current = new IntersectionObserver(
-([entry]) => {
-if (entry.isIntersecting) {
-setIsInView(true);
-observerRef.current?.disconnect(),
-}
-},
-{
-rootMargin: "50px", threshold: 0.1,
-}
-);
-observerRef.current.observe(imgRef.current);
-
-return () => {
-if (observerRef.current) {
-observerRef.current.disconnect(),
-}
-};
-}, [priority]);
-
-const handleLoad: any = () => {;
-setIsLoaded(true);
-onLoad?.(),
-};
-
-const handleError: any = () => {;
-setHasError(true);
-onError?.(),
-};
-
-const getAspectRatioClass: any = () => {
-if (typeof aspectRatio === "number") {;
-return `aspect-[${aspectRatio}]`;
-}
-
-switch (aspectRatio) {
-case "square":
-return "aspect-square";
-case "video":
-return "aspect-video";
-default: return "",
-}
-};
-
-const getObjectFitClass: any = () => {
-switch (objectFit) {
-case "cover":;
-return "object-cover";
-case "contain":
-return "object-contain";
-case "fill":
-return "object-fill";
-case "none":
-return "object-none";
-case "scale-down":
-return "object-scale-down";,
-default: return "object-cover",
-}
-};
-=======
     observerRef.current = new IntersectionObserver(
       ([entry]) : any => {
         if (entry.isIntersecting) {
           setIsInView(true);
           observerRef.current?.disconnect();
 };
-      },
+      };
+
       {
-        rootMargin: "50px", threshold: 0.1,
+        rootMargin: "50px", threshold: 0.1;
       }
     );
     observerRef.current.observe(imgRef.current);
@@ -144,7 +66,8 @@ default: return "object-cover",
         observerRef.current.disconnect();
   }
     };
-  }, [priority]);
+  };
+ [priority]);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -188,7 +111,7 @@ default: return "object-cover",
 
   // Generate responsive image sources;
   const generateSrcSet = (imageSrc: string) : any => {
-    if (!imageSrc.includes("http")) return imageSrc,
+    if (!imageSrc.includes("http")) return imageSrc;
     const baseUrl = imageSrc.split("?")[0];
     const params = new URLSearchParams(imageSrc.split("?")[1] || "");
     
@@ -197,14 +120,14 @@ default: return "object-cover",
       .filter(w => !width || w <= width)
       .map(w => {
         params.set("w", w.toString());
-        params.set("q", quality.toString()),
+        params.set("q", quality.toString());
+
         return `${baseUrl}?${params.toString()} ${w}w`;
       })
       .join(", ");
     
     return srcSet;
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 // Generate responsive image sources;
 const generateSrcSet: any = (imageSrc: string) => {;
@@ -212,26 +135,13 @@ if (!imageSrc.includes("http")) return imageSrc;
 const baseUrl = imageSrc.split("?")[0];
 const params = new URLSearchParams(imageSrc.split("?")[1] || "");
 
-<<<<<<< HEAD
-const widths = [320; 640; 768; 1024; 1280; 1920];
-const srcSet = widths;
-.filter(w => !width || w <= width)
-.map(w => {
-params.set("w", w.toString());
-params.set("q", quality.toString()),
-return `${baseUrl}?${params.toString()} ${w}w`;
-})
-.join(", ");
-
-return srcSet;
-};
-=======
   return (
     <div;
       className={cn(
-        "relative overflow-hidden",
-        getAspectRatioClass(),
-        className,
+        "relative overflow-hidden";
+        getAspectRatioClass();
+
+        className;
       )}
       style={{
         width: width ? `${width}px` : "auto", height: height ? `${height}px` : "auto"
@@ -239,7 +149,7 @@ return srcSet;
     >
       <AnimatePresence mode="wait">
         {!isLoaded && (
-          <motion.div,
+          <motion.div;
             key="placeholder"
             className="absolute inset-0 bg-zion-slate-light/20 animate-pulse"
             initial={{ opacity: 1 }}
@@ -249,15 +159,16 @@ return srcSet;
         )}
       </AnimatePresence>
 
-      <img,
+      <img;
         ref={imgRef}
         src={currentSrc}
         alt={alt}
         width={width}
         height={height}
         className={cn(
-          "w-full h-full transition-opacity duration-300",
-          getObjectFitClass(),
+          "w-full h-full transition-opacity duration-300";
+          getObjectFitClass();
+
           isLoaded ? "opacity-100" : "opacity-0"
         )}
         loading={loading}
@@ -266,10 +177,9 @@ return srcSet;
         onLoad={handleLoad}
         onError={handleError}
         style={{
-          filter: blur && !isLoaded ? "blur(10px)" : "none",
+          filter: blur && !isLoaded ? "blur(10px)" : "none";
         }}
       />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const currentSrc = hasError ? fallback : (isInView ? src : placeholder);
 const srcSet = generateSrcSet(currentSrc);
@@ -277,9 +187,10 @@ const srcSet = generateSrcSet(currentSrc);
 return (
 <div;
 className={cn(
-"relative overflow-hidden",
-getAspectRatioClass(),
-className,
+"relative overflow-hidden";
+getAspectRatioClass();
+
+className;
 )}
 style={{
 width: width ? `${width}px` : "auto", height: height ? `${height}px` : "auto";
@@ -304,8 +215,9 @@ alt={alt}
 width={width}
 height={height}
 className={cn(
-"w-full h-full transition-opacity duration-300",
-getObjectFitClass(),
+"w-full h-full transition-opacity duration-300";
+getObjectFitClass();
+
 isLoaded ? "opacity-100" : "opacity-0";
 )}
 loading={loading}
@@ -314,7 +226,7 @@ srcSet={srcSet}
 onLoad={handleLoad}
 onError={handleError}
 style={{
-filter: blur && !isLoaded ? "blur(10px)" : "none",
+filter: blur && !isLoaded ? "blur(10px)" : "none";
 }}
 />
 
@@ -344,33 +256,16 @@ filter: blur && !isLoaded ? "blur(10px)" : "none",
 export function AvatarImage({;
 src;
 alt;
-size = "md",
-className,
-...props,
+size = "md";
+className;
+...props;
 }: Omit<OptimizedImageProps, "aspectRatio" | "objectFit"> & {
-size?: "sm" | "md" | "lg" | "xl",
+size?: "sm" | "md" | "lg" | "xl";
 }) {
-<<<<<<< HEAD
-const sizeClasses = {;
-sm: "w-8 h-8", md: "w-10 h-10";,
-lg: "w-12 h-12",
-xl: "w-16 h-16",
-};
-return (
-<OptimizedImage;
-src={src}
-alt={alt}
-aspectRatio="square";
-objectFit="cover";
-className={cn(sizeClasses[size], "rounded-full", className)}
-{...props}
-/>
-);
-=======
   const sizeClasses = {
-    sm: "w-8 h-8", md: "w-10 h-10",
-    lg: "w-12 h-12",
-    xl: "w-16 h-16",
+    sm: "w-8 h-8", md: "w-10 h-10";
+    lg: "w-12 h-12";
+    xl: "w-16 h-16";
   };
     return (
     <OptimizedImage;
@@ -382,15 +277,14 @@ className={cn(sizeClasses[size], "rounded-full", className)}
       {...props}
     />
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 
 // Hero image component;
 export function HeroImage({;
 src;
 alt;
-className,
-...props,
+className;
+...props;
 }: Omit<OptimizedImageProps, "aspectRatio" | "objectFit">) {
 return (
 <OptimizedImage;

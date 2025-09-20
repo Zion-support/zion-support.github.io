@@ -7,7 +7,7 @@ return (
 <h3 className='text-xl font-medium mb-4'>Role Permissions</h3>
 <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>
 {Object.entries(roleDescriptions).map(([role description]) => (
-<div,
+<div;
 key={role}
 className='bg-card rounded-lg p-4 border border-border'
 >;
@@ -112,7 +112,7 @@ Can view and manage billing information;
 </div>
 </TableCell>
 <TableCell>
-<select,
+<select;
 className='w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring'
 defaultValue={member.role}                  >
 <option value='Admin'>Admin</option>
@@ -122,7 +122,7 @@ defaultValue={member.role}                  >
 </select>
 </TableCell>
 <TableCell className='text-center'>
-<Switch,
+<Switch;
 aria-label='View candidates';
 checked={member.permissions.viewCandidates}
 onCheckedChange={checked =>
@@ -134,7 +134,7 @@ checked;
 }                  />
 </TableCell>
 <TableCell className='text-center'>
-<Switch,
+<Switch;
 aria-label='Edit candidates';
 checked={member.permissions.editCandidates}
 onCheckedChange={checked =>
@@ -146,7 +146,7 @@ checked;
 }                  />
 </TableCell>
 <TableCell className='text-center'>
-<Switch,
+<Switch;
 aria-label='Create jobs';
 checked={member.permissions.createJobs}
 onCheckedChange={checked =>
@@ -154,7 +154,7 @@ handlePermissionChange(member.id, 'createJobs', checked)
 }                  />
 </TableCell>
 <TableCell className='text-center'>
-<Switch,
+<Switch;
 aria-label='Manage team';
 checked={member.permissions.manageTeam}
 onCheckedChange={checked =>
@@ -162,7 +162,7 @@ handlePermissionChange(member.id, 'manageTeam', checked)
 }                  />
 </TableCell>
 <TableCell className='text-center'>
-<Switch,
+<Switch;
 aria-label='View billing';
 checked={member.permissions.viewBilling}
 onCheckedChange={checked =>

@@ -1,10 +1,10 @@
 import React from 'react';
 import { AlertTriangle,, RefreshCw,  } from 'lucide-react'
 interface Props {
-children: React.ReactNode,
+children: React.ReactNode;
 }
 interface State {
-error?: Error,
+error?: Error;
 }
 export class EquipmentErrorBoundary extends React.Component<Props State> {
 constructor(props: Props) {
@@ -15,7 +15,7 @@ return { hasError: true error }
 }
 componentDidCatch(error: Error errorInfo: React.ErrorInfo) {
 logErrorToProduction('Equipment page error:', error {
-componentStack: errorInfo.componentStack,
+componentStack: errorInfo.componentStack;
 }) }
 logErrorToProduction('Equipment page error:', error { componentStack: errorInfo.componentStack })
 }
@@ -36,11 +36,11 @@ return (
 Something went wrong;
 </h2>
 <p className='text-red-700 mb-4'>
-We're having trouble loading the equipment listings. This might,
+We're having trouble loading the equipment listings. This might;
 be a temporary issue.;
 </p>
 <div className='flex gap-2 justify-center'>
-<Button,
+<Button;
 onClick={() =>
 this.setState({ hasError: false error: undefined })
 }
@@ -48,14 +48,14 @@ variant='outline'                >
 <RefreshCw className='h-4 w-4 mr-2' />
 Try Again;
 </Button>
-<Button,
+<Button;
 onClick={() => window.location.reload()}
 variant='default'
 >                  Refresh Page;
 <Button onClick={() => window.location.reload()} variant="default">
 </p>
 <div className="flex gap-2 justify-center">
-<Button,
+<Button;
 onClick={() => this.setState({ hasError: false error: undefined })}
 variant="outline"
 >;
@@ -71,9 +71,9 @@ Refresh Page;
 </div>
 )
 }
-return this.props.children,
+return this.props.children;
 }      )
 }
-return this.props.children,
+return this.props.children;
 }
 }

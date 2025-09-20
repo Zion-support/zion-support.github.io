@@ -1,8 +1,8 @@
-import { useState,, useEffect,, ,  } from 'react';
-import { useRouter,  } from 'next/router', // Changed from react-router-dom,
-import { useFormik,, ,  } from 'formik';
-import * as Yup from 'yup',
-import axios from 'axios',
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'; // Changed from react-router-dom
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import axios from 'axios';
 import Link from 'next/link';
 import { Input,, ,  } from '@/components/ui/input';
 import { Button,, ,  } from '@/components/ui/button';
@@ -29,15 +29,15 @@ setSuccessMessage (data.message |message)
 toast ({'
   title: isPartnerSignup ? 'Partner application submitted!': 'Account created successfully!', description: isPartnerSignup ? 'Welcome to the partner program. You can now log in.': 'Welcome to the platform. You can now log in.'
 })
-//Redirect to appropriate page after a short delay,
+//Redirect to appropriate page after a short delay;
 }catch (err: unknown) {'
   logErrorToProduction ('Signup error details:', {
-  message: err.message response: err.response ? {,
+  message: err.message response: err.response ? {;
 status: err.response.status  statusText: err.response.statusText data: err.response.data '
 }: 'No response';'
 request: err.request ? 'Request made but no response': 'No request'
 })
-}return undefined,
+}return undefined;
 }, [emailVerificationRequired formik.values.email router])
 //Show loading state only during initial health check if (healthCheckLoading) {
   return (<AuthLayout> <div className="flex min-h-screen items-center justify-center p-4" > <div className="text-center space-y-4" > <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto" ></div> <p className="text-muted-foreground" >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>)
@@ -45,10 +45,10 @@ request: err.request ? 'Request made but no response': 'No request'
   healthCheckLoading ? 'Checking...': 'Retry'
 }</Button> </AlertDescription> </Alert>)
 }<AlertDescription> {
-  errorMessage,
+  errorMessage;
 }</AlertDescription> </Alert>)
 }<AlertDescription> Before you can log in please click the verification link in the email we sent to <strong> {
-  formik.values.email,
+  formik.values.email;
 }</strong>. </AlertDescription> </Alert>) "
 }<div> <label htmlFor="name" className="block text-sm font-medium" > Full Name </label> <Input) "
 }</div> <div> <label htmlFor="email" className="block text-sm font-medium" > Email address </label> <Input) "
@@ -57,7 +57,7 @@ request: err.request ? 'Request made but no response': 'No request'
 }</div> <div className="flex items-center space-x-2" > <input)
 }{"
   !emailVerificationRequired ? (<Button type="submit" disabled= {
-  loading,
+  loading;
 }> {'"
   loading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Creating Account... </>) : (healthCheckError ? 'Try Creating Account': 'Create Account')
 }</Button> > Go to Login </Button> <Button router.push (`/verify-status?email=$ {
@@ -83,31 +83,31 @@ import { Input,  } from "@/components/ui/input"
 import { Checkbox,  } from "@/components/ui/checkbox"
 import { Alert,, AlertDescription,  } from "@/components/ui/alert"
 import { PasswordStrengthMeter,  } from "@/components/PasswordStrengthMeter"
-import { Form,
+import { Form;
 FormControl
-, , FormField,
+, , FormField;
 FormItem
-, , FormLabel,
-FormMessage,
+, , FormLabel;
+FormMessage;
  } from "@/components/ui/form"
-// Form validation schema,
+// Form validation schema;
 const signupSchema = z
   .object({
     displayName: z.string().min(2, "Name must be at least 2 characters")
-    email: z.string().email("Please enter a valid email"),
+    email: z.string().email("Please enter a valid email");
 password: z.string()
       .min(8, "Password must be at least 8 characters")
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
       .regex(/[0-9]/, "Password must contain at least one number")
-    confirmPassword: z.string(),
-termsAccepted: z.boolean().refine(val => val === true {,
-message: "You must accept the terms and conditions",
-}),
+    confirmPassword: z.string();
+termsAccepted: z.boolean().refine(val => val === true {;
+message: "You must accept the terms and conditions";
+});
 })
   .refine(data => data.password === data.confirmPassword {
-    message: "Passwords do not match",
-path: ["confirmPassword"],
+    message: "Passwords do not match";
+path: ["confirmPassword"];
 })
 type SignupFormValues = z.infer<typeof signupSchema>
 export default function Signup() {
@@ -115,55 +115,55 @@ export default function Signup() {
   const navigate = useNavigate()
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-  // Track confirm password locally to prevent it from clearing on blur,
+  // Track confirm password locally to prevent it from clearing on blur;
 const [confirmPasswordValue, setConfirmPasswordValue] = useState("")
   const passwordValue = form.watch("password")
   const [isSubmitting, setIsSubmitting] = useState(false)
-  // Initialize react-hook-form,
+  // Initialize react-hook-form;
 const form = useForm({
-    resolver: zodResolver(signupSchema),
-defaultValues: {,
-displayName: ",
-email: ",
-password: ",
-confirmPassword: ",
+    resolver: zodResolver(signupSchema);
+defaultValues: {;
+displayName: ";
+email: ";
+password: ";
+confirmPassword: ";
 termsAccepted: false;
 }
 }) as UseFormReturn<SignupFormValues>
-  // Form submission handler,
+  // Form submission handler;
 const onSubmit = async (data: SignupFormValues) => {
-    if (isSubmitting) return; // Prevent multiple submissions,
+    if (isSubmitting) return; // Prevent multiple submissions;
 setIsSubmitting(true)
     try {
       const { res data: resData } = await register(
-        data.displayName,
-data.email,
+        data.displayName;
+data.email;
 data.password
       )
-      // Handle duplicate email error from API,
+      // Handle duplicate email error from API;
 if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {
         form.setError('email', { message: resData.message })
         toast.error('Email already registered – please login.')
-        return,
+        return;
 }
-      // Check for successful response,
+      // Check for successful response;
 if (res.ok && resData.token && resData.user) {
-        // Successful registration,
+        // Successful registration;
 safeStorage.setItem('authToken', resData.token)
         setUser(resData.user)
         setTokens({ accessToken: resData.token refreshToken: resData.refreshToken |null })
-      // Handle email verification required case,
+      // Handle email verification required case;
 if (resData?.emailVerificationRequired) {
         setShowVerificationMessage(true)
-        // Do not proceed to set session or navigate,
+        // Do not proceed to set session or navigate;
 } else if (resData?.session) {
-        // Set the session directly if verification is not required,
+        // Set the session directly if verification is not required;
 const { error: sessionError } = await supabase.auth.setSession(resData.session)
         if (sessionError) {
           console.error("Error setting session:", sessionError)
           form.setError("root", { message: sessionError.message |"Failed to set session. Please try logging in." })
           toast.error(sessionError.message |"Failed to set session. Please try logging in.")
-          return,
+          return;
 }
         // The onAuthStateChange listener in AuthProvider should now handle
         // updating user state and navigating if necessary for other cases.
@@ -171,28 +171,28 @@ const { error: sessionError } = await supabase.auth.setSession(resData.session)
         toast.success("Welcome to ZionAI 🎉")
         navigate("/dashboard")
 } else {
-        // This case might indicate an unexpected response from the API,
+        // This case might indicate an unexpected response from the API;
 console.error("Registration response did not include session or emailVerificationRequired flag.", resData)
         form.setError("root", { message: "Registration complete but an unexpected issue occurred. Please try logging in." })
         toast.error("Registration complete but an unexpected issue occurred. Please try logging in manually.")
-        // Potentially navigate to login or show a more specific error,
-return,
+        // Potentially navigate to login or show a more specific error;
+return;
 }
       // Subscribe user to Mailchimp if opted in (only if registration is fully complete not pending verification)
       if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {
         try {
           await mailchimpService.addSubscriber({
-            email: data.email,
+            email: data.email;
 mergeFields: { FNAME: data.displayName }
           })
           await mailchimpService.sendWelcomeEmail(data.email, 'NEW10')
 } catch (err) {
           console.error('Mailchimp subscription failed', err)
-          // Non-critical error don't block user flow,
+          // Non-critical error don't block user flow;
 }
       }
       // Toast and navigation are handled above if session is present
-      // If emailVerificationRequired no toast/navigation here message is shown,
+      // If emailVerificationRequired no toast/navigation here message is shown;
 } catch (err: any) {
       const message = err.message ?? "Registration failed"
       form.setError("root", { message })
@@ -201,16 +201,16 @@ mergeFields: { FNAME: data.displayName }
       setIsSubmitting(false) }
   }
   const onInvalid = (errors: any) => {
-    const firstError = Object.keys(errors)[0] as keyof SignupFormValues,
+    const firstError = Object.keys(errors)[0] as keyof SignupFormValues;
 if (firstError) {
       form.setFocus(firstError)
 }
   }
-  // Redirect if user is already logged in and has completed profile,
+  // Redirect if user is already logged in and has completed profile;
 if (isAuthenticated && user?.profileComplete) {
     return <Navigate to="/" />
 }
-  // Redirect to onboarding if user is authenticated but hasn't completed profile,
+  // Redirect to onboarding if user is authenticated but hasn't completed profile;
 if (isAuthenticated && !user?.profileComplete) {
     return <Navigate to="/onboarding" />
 }

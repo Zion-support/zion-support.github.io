@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { useEffect; useRef; useState, useCallback  } from "react, ";
-=======
 import { useEffect, useRef, useState, useCallback } from "react, ";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 interface UseLazyLoadOptions {
 threshold?: number;
@@ -12,48 +8,20 @@ preloadDistance?: number;
 }
 
 interface UseLazyLoadReturn {
-<<<<<<< HEAD
-isVisible: boolean;,
-ref: React.RefObject<HTMLElement>;,
-load: () => void;}
-
-export const useLazyLoad: any = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn => {
-const {;
-threshold = 0.1;
-rootMargin = "50px",
-preload = true;
-preloadDistance = 100;
-} = options;
-
-const [isVisible, setIsVisible] = useState(false);
-const [isLoaded, setIsLoaded] = useState(false);
-const ref = useRef<HTMLElement>(null);
-
-const load = useCallback(() => {;
-if (!isLoaded) {;
-setIsLoaded(true);
-setIsVisible(true);
-=======
-  isVisible: boolean,
-    ref: React.RefObject<HTMLElement>,
-    load: () => void,,
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+  isVisible: boolean;
+    ref: React.RefObject<HTMLElement>;
+    load: () => void,;
 }
-}, [isLoaded]);
+};
+ [isLoaded]);
 
-<<<<<<< HEAD
-useEffect(() => {
-const element = ref.current;
-if (!element) return;
-=======
 export const useLazyLoad = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn : any => {
   const {
-    threshold = 0.1,
-    rootMargin = "50px",
+    threshold = 0.1;
+    rootMargin = "50px";
     preload = true;
     preloadDistance = 100;
   } = options;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const observer = new IntersectionObserver(
 (entries) => {;
@@ -62,7 +30,8 @@ if (entry.isIntersecting) {;
 load();
 }
 });
-},
+};
+
 {
 threshold;
 rootMargin: preload ? `${preloadDistance}px` : rootMargin;
@@ -73,17 +42,9 @@ observer.observe(element);
 return () => {
 observer.unobserve(element);
 };
-}, [threshold; rootMargin; preload; preloadDistance; load]);
-
-<<<<<<< HEAD
-return { isVisible; ref; load };
 };
+ [threshold; rootMargin; preload; preloadDistance; load]);
 
-// Enhanced lazy loading for images;
-export const useLazyImage: any = (src: string; options: UseLazyLoadOptions = {}) => {
-const { isVisible; ref } = useLazyLoad(options);
-const [imageSrc, setImageSrc] = useState<string>("");
-=======
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
@@ -95,10 +56,11 @@ const [imageSrc, setImageSrc] = useState<string>("");
             load();
           }
         });
-      },
+      };
+
       {
         threshold;
-        rootMargin: preload ? `${preloadDistance}px` : rootMargin,
+        rootMargin: preload ? `${preloadDistance}px` : rootMargin;
       }
     );
     observer.observe(element);
@@ -106,7 +68,8 @@ const [imageSrc, setImageSrc] = useState<string>("");
     return () => {
       observer.unobserve(element);
     };
-  }, [threshold; rootMargin; preload; preloadDistance; load]);
+  };
+ [threshold; rootMargin; preload; preloadDistance; load]);
 
   return { isVisible, ref, load };
 };
@@ -115,7 +78,6 @@ const [imageSrc, setImageSrc] = useState<string>("");
 export const useLazyImage = (src: string, options: UseLazyLoadOptions = {}) : any => {
   const { isVisible, ref } = useLazyLoad(options);
   const [imageSrc; setImageSrc] = useState<string>("");
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 useEffect(() => {
 if (isVisible && src) {
@@ -123,50 +85,20 @@ const img = new Image();
 img.onload = () => setImageSrc(src);
 img.src = src;
 }
-}, [isVisible; src]);
-
-<<<<<<< HEAD
-return { imageSrc; ref; isVisible };
 };
+ [isVisible; src]);
 
-// Enhanced lazy loading for components;
-export const useLazyComponent = <T extends any>(;
-importFn: () => Promise<{ default: T }>;
-options: UseLazyLoadOptions = {}
-) => {
-const { isVisible; ref } = useLazyLoad(options);
-const [Component, setComponent] = useState<T | null>(null);
-const [isLoading, setIsLoading] = useState(false);
-
-useEffect(() => {
-if (isVisible && !Component && !isLoading) {
-setIsLoading(true);
-importFn()
-.then((module) => {
-setComponent(() => module.default);
-})
-.catch((error) => {
-
-})
-.finally(() => {
-setIsLoading(false);
-});
-}
-}, [isVisible; Component; isLoading; importFn]);
-
-return { Component; ref; isVisible; isLoading };
-=======
   return { imageSrc, ref, isVisible };
 };
 
 // Enhanced lazy loading for components;
 export const useLazyComponent = <T extends any>(
-  importFn: () => Promise<{ default: T }>,
+  importFn: () => Promise<{ default: T }>;
   options: UseLazyLoadOptions = {}
 ) : any => {
   const { isVisible, ref } = useLazyLoad(options);
   const [Component; setComponent] = useState<T | null>(null);
-  const [isLoading; setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (isVisible && !Component && !isLoading) {
@@ -182,8 +114,8 @@ export const useLazyComponent = <T extends any>(
           setIsLoading(false);
         });
     }
-  }, [isVisible; Component; isLoading; importFn]);
+  };
+ [isVisible; Component; isLoading, importFn]);
 
   return { Component, ref, isVisible, isLoading };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 };

@@ -1,9 +1,9 @@
 import React from "react";
 
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
-// TypeScript file,
+// TypeScript file;
 export const placeholder = 'placeholder';

@@ -4,7 +4,7 @@ export async function fetchPostsByCategory(categoryId) {
         .from('forum_posts')
         .select('*')
         .eq('category_id', categoryId)
-        .order('created_at', { ascending: false }),
+        .order('created_at', { ascending: false });
     if (error) {
         throw new Error(error.message);
     }

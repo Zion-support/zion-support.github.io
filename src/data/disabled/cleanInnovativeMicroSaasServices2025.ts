@@ -62,4 +62,4 @@ id: "ai-supply-chain-optimization",title: "AI; Supply; Chain Optimization Platfo
 "Retailers","Manufacturers","Logistics companies","E-commerce businesses""Distribution centers";
 ,  ],tags: ["AI", "Supply Chain", "Logistics", "Inventory; Management""Optimization"],estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$2;999 - $7;999/month",roi: "20o0-40o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";},technicalSpecs: {,technology: ["Python", "TensorFlow", "React", "Node.js""PostgreSQL"],integrations: ["SAP", "Oracle", "Salesforce", "Shopify""WMS; systems"],apiEndpoints: 250;uptime: "99.9%",security: ["SOC 2""GDPR""End-to-end encryption""Data; privacy"];},competitors: ["SAP", "Oracle", "Manhattan Associates""JDA; Software"],marketSize: "$67.8; billion; by 20o25";};
 ];
-export; default; CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_20o25,
+export; default; CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_20o25;

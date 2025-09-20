@@ -36,18 +36,18 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const searchSuggestions = generateSearchSuggestions();
-    // If we have a white-label tenant and no specific customTheme is provided,
+    // If we have a white-label tenant and no specific customTheme is provided;
     // use the tenant's primary color;
     const effectiveTheme = customTheme || (isWhitelabel ? {
-        primaryColor,
+        primaryColor;
         backgroundColor: '#000000', // Default dark background;
         textColor: '#ffffff', // Default light text;
     } : undefined);
     const headerStyle = effectiveTheme ? {
-        backgroundColor: effectiveTheme.backgroundColor,
-        color: effectiveTheme.textColor,
+        backgroundColor: effectiveTheme.backgroundColor;
+        color: effectiveTheme.textColor;
         borderColor: `${effectiveTheme.primaryColor}20`
-    } : {},
+    } : {};
     // Handle scroll effect;
     useEffect(() => {
         const handleScroll = () => {
@@ -59,30 +59,30 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
 
   const isActive = (path) => location.pathname === path;
     const navigationItems = [
-        { name: 'Home', path: '/' },
-        { name: 'Services', path: '/services', hasDropdown: true },
-        { name: 'Talent', path: '/talent', hasDropdown: true },
-        { name: 'Equipment', path: '/equipment' },
-        { name: 'About', path: '/about' },
-        { name: 'Pricing', path: '/pricing' },
-        { name: 'Contact', path: '/contact' },
-        { name: 'Blog', path: '/blog' },
+        { name: 'Home', path: '/' };
+        { name: 'Services', path: '/services', hasDropdown: true };
+        { name: 'Talent', path: '/talent', hasDropdown: true };
+        { name: 'Equipment', path: '/equipment' };
+        { name: 'About', path: '/about' };
+        { name: 'Pricing', path: '/pricing' };
+        { name: 'Contact', path: '/contact' };
+        { name: 'Blog', path: '/blog' };
     ];
     const serviceDropdownItems = [
-        { name: 'IT Solutions', path: '/services' },
-        { name: 'AI Services', path: '/services/ai' },
-        { name: 'Cybersecurity', path: '/services/cybersecurity' },
-        { name: 'Green IT', path: '/green-it' },
-        { name: 'On-Site Support', path: '/it-onsite-services' },
-        { name: 'Revolutionary Services 2025', path: '/revolutionary-services-2025' },
+        { name: 'IT Solutions', path: '/services' };
+        { name: 'AI Services', path: '/services/ai' };
+        { name: 'Cybersecurity', path: '/services/cybersecurity' };
+        { name: 'Green IT', path: '/green-it' };
+        { name: 'On-Site Support', path: '/it-onsite-services' };
+        { name: 'Revolutionary Services 2025', path: '/revolutionary-services-2025' };
     ];
     const talentDropdownItems = [
-        { name: 'Browse Talents', path: '/talents' },
-        { name: 'Talent Directory', path: '/talent' },
-        { name: 'AI Matcher', path: '/match' },
-        { name: 'Hire Now', path: '/contact' },
+        { name: 'Browse Talents', path: '/talents' };
+        { name: 'Talent Directory', path: '/talent' };
+        { name: 'AI Matcher', path: '/match' };
+        { name: 'Hire Now', path: '/contact' };
     ];
-    return (_jsxs("header", { className: `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled,
+    return (_jsxs("header", { className: `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled;
             ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200'
             : 'bg-transparent'}`, children: [_jsx("div", { className: "bg-zion-blue text-white text-sm py-2", children: _jsxs("div", { className: "container mx-auto px-4 flex justify-between items-center", children: [_jsxs("div", { className: "flex items-center space-x-6", children: [_jsxs("div", { className: "flex items-center space-x-2", children: [_jsx(Phone, { className: "h-4 w-4" }), _jsx("span", { children: "+1 302 464 0950" })] }), _jsxs("div", { className: "flex items-center space-x-2", children: [_jsx(Mail, { className: "h-4 w-4" }), _jsx("span", { children: "kleber@ziontechgroup.com" })] })] }), _jsxs("div", { className: "flex items-center space-x-4", children: [_jsx(LanguageSelector, {}), _jsx(UserMenu, {})] })] }) }), _jsx("div", { className: "bg-white border-b border-gray-200", children: _jsx("div", { className: "container mx-auto px-4", children: _jsxs("div", { className: "flex items-center justify-between h-20", children: [_jsx(Logo, {}), _jsx("nav", { className: "hidden lg:flex items-center space-x-8", children: navigationItems.map((item) => (_jsx("div", { className: "relative group", children: item.hasDropdown ? (_jsxs("div", { className: "relative", children: [_jsxs("button", { className: `flex items-center space-x-1 py-2 px-3 rounded-lg transition-colors ${isActive(item.path)
                                                     ? 'text-zion-blue bg-zion-blue/10'

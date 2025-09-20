@@ -2,37 +2,11 @@
 import React, { useEffect } from 'react';
 
 interface ScreenReaderAnnouncementsProps {
-<<<<<<< HEAD
-announcements: string[];
-priority?: 'polite' | 'assertive';
-};
-export const ScreenReaderAnnouncements: React.FC<ScreenReaderAnnouncementsProps> = ({
-announcements,
-priority = 'polite';
-}) => {
-return (
-<div;
-aria-live={priority}
-aria-atomic="true";
-className="sr-only"
-style={{
-position: 'absolute',
-left: '-10000px',
-width: '1px',
-height: '1px',
-overflow: 'hidden'}}
->;
-{announcements.map((announcement, index) => (
-<div key={index}>{announcement}</div>
-))};
-</div>
-);
-=======
-  announcements: string[],
+  announcements: string[];
   priority?: 'polite' | 'assertive';
 };
 export const ScreenReaderAnnouncements: React.FC<ScreenReaderAnnouncementsProps> = ({
-  announcements,
+  announcements;
   priority = 'polite'
 }) : any => {
   return (
@@ -41,10 +15,10 @@ export const ScreenReaderAnnouncements: React.FC<ScreenReaderAnnouncementsProps>
       aria-atomic="true"
       className="sr-only"
       style={{
-        position: 'absolute',
-        left: '-10000px',
-        width: '1px',
-        height: '1px',
+        position: 'absolute';
+        left: '-10000px';
+        width: '1px';
+        height: '1px';
         overflow: 'hidden';
   }}
     >
@@ -53,7 +27,6 @@ export const ScreenReaderAnnouncements: React.FC<ScreenReaderAnnouncementsProps>
       ))};
     </div>;
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 };
 
 export default ScreenReaderAnnouncements;

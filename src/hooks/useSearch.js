@@ -2,34 +2,26 @@ import { useState, useEffect, useCallback, useMemo } from 'react, ';
 export const useSearch = (data, options) => {
     const { searchFields, debounceMs = 300, fuzzySearch = true, caseSensitive = false } = options;
     const [searchState, setSearchState] = useState({
-<<<<<<< HEAD
         query: '';
         filters: {};
+
         sortBy: null;
         sortOrder: 'asc';
         results: data;
         isLoading: false;
-        totalResults: data.length});
-    const [debouncedQuery, setDebouncedQuery] = useState('');
-=======
-        query: '',
-        filters: {},
-        sortBy: null,
-        sortOrder: 'asc',
-        results: data,
-        isLoading: false,
-        totalResults: data.length,
+        totalResults: data.length;
     });
 
   const [debouncedQuery, setDebouncedQuery] = useState('');
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     // Debounce search query;
     useEffect(() => {
         const timer = setTimeout(() => {
             setDebouncedQuery(searchState.query);
-        }, debounceMs);
+        };
+ debounceMs);
         return () => clearTimeout(timer);
-    }, [searchState.query, debounceMs]);
+    };
+ [searchState.query, debounceMs]);
     // Fuzzy search algorithm;
     const fuzzyMatch = useCallback((text, query) => {
         if (!query)
@@ -46,10 +38,12 @@ export const useSearch = (data, options) => {
             }
         }
         return queryIndex === searchQuery.length;
-    }, [fuzzySearch, caseSensitive]);
+    };
+ [fuzzySearch, caseSensitive]);
     // Search and filter data;
     const processedData = useMemo(() => {
-        setSearchState(prev => ({ ...prev, isLoading: true })),
+        setSearchState(prev => ({ ...prev, isLoading: true }));
+
     let results = data;
         // Apply search;
         if (debouncedQuery) {
@@ -102,63 +96,54 @@ export const useSearch = (data, options) => {
             });
         }
         setSearchState(prev => ({
-            ...prev,
-            results,
-<<<<<<< HEAD
+            ...prev;
+            results;
             totalResults: results.length;
-            isLoading: false}));
-=======
-            totalResults: results.length,
-            isLoading: false,
+            isLoading: false;
         }));
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     return results;
-    }, [data, debouncedQuery, searchState.filters, searchState.sortBy, searchState.sortOrder, searchFields, fuzzyMatch]);
+    };
+ [data, debouncedQuery, searchState.filters, searchState.sortBy, searchState.sortOrder, searchFields, fuzzyMatch]);
     // Update search query;
     const setQuery = useCallback((query) => {
         setSearchState(prev => ({ ...prev, query }));
-    }, []);
+    };
+ []);
     // Update filters;
     const setFilter = useCallback((key, value) => {
         setSearchState(prev => ({
-            ...prev,
+            ...prev;
             filters: { ...prev.filters, [key]: value }
         }));
-    }, []);
+    };
+ []);
     // Clear all filters;
     const clearFilters = useCallback(() => {
-        setSearchState(prev => ({ ...prev, filters: {} })),
-     }, []);
+        setSearchState(prev => ({ ...prev, filters: {} }));
+
+     };
+ []);
     // Update sorting;
     const setSort = useCallback((field, order = 'asc') => {
         setSearchState(prev => ({
-            ...prev,
-<<<<<<< HEAD
+            ...prev;
             sortBy: field;
-            sortOrder: order}));
-=======
-            sortBy: field,
-            sortOrder: order,
+            sortOrder: order;
         }));
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
-     }, []);
+     };
+ []);
     // Clear search;
     const clearSearch = useCallback(() => {
         setSearchState(prev => ({
-            ...prev,
-<<<<<<< HEAD
+            ...prev;
             query: '';
             filters: {};
+
             sortBy: null;
-            sortOrder: 'asc'}));
-=======
-            query: '',
-            filters: {},
-            sortBy: null,
-            sortOrder: 'asc',
+            sortOrder: 'asc';
         }));
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
-     }, []);
+     };
+ []);
     // Get search suggestions;
     const getSuggestions = useCallback((query, maxSuggestions = 5) => {
         if (!query || query.length < 2)
@@ -178,35 +163,32 @@ export const useSearch = (data, options) => {
             });
         });
         return Array.from(suggestions).slice(0, maxSuggestions);
-    }, [data, searchFields]);
+    };
+ [data, searchFields]);
     // Pagination helper;
     const getPaginatedResults = useCallback((page, pageSize) => {
         const startIndex = (page - 1) * pageSize;
         const endIndex = startIndex + pageSize;
         return {
-            results: searchState.results.slice(startIndex, endIndex),
-<<<<<<< HEAD
+            results: searchState.results.slice(startIndex, endIndex);
+
             totalPages: Math.ceil(searchState.totalResults / pageSize);
+
             currentPage: page;
             hasNextPage: endIndex < searchState.totalResults;
-            hasPrevPage: page > 1};
-=======
-            totalPages: Math.ceil(searchState.totalResults / pageSize),
-            currentPage: page,
-            hasNextPage: endIndex < searchState.totalResults,
             hasPrevPage: page > 1;
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
-     }, [searchState.results, searchState.totalResults]);
+     };
+ [searchState.results, searchState.totalResults]);
     return {
-        ...searchState,
-        setQuery,
-        setFilter,
-        clearFilters,
-        setSort,
-        clearSearch,
-        getSuggestions,
-        getPaginatedResults,
+        ...searchState;
+        setQuery;
+        setFilter;
+        clearFilters;
+        setSort;
+        clearSearch;
+        getSuggestions;
+        getPaginatedResults;
         processedData;
     };
 };

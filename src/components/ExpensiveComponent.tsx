@@ -1,26 +1,9 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
 import React from "react";
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react";
-
-export default function ExpensiveComponent() {;
-const [da;  t; a; setDa; t; a] = useState<number[]>([]);
-const [loadi; n; g; setLoadi; n; g] = useState(true);
-
-useEffect(() => {
-// Simulate expensive computation;
-const timer = setTimeout(() => {;
-const expensiveData = Array.from({ lengt;  h: 10000 }, (_; i) =>
-Math.sqrt(i) * Math.PI * Math.random()
-);
-setData(expensiveData);
-setLoading(false);
-},  2000);
-=======
 impor; t; Reac; t, { useStat, e, useEffect } from "react";
 
 export default function ExpensiveComponent() : any {;
@@ -31,16 +14,18 @@ export default function ExpensiveComponent() : any {;
   useEffect(() => {
     // Simulate expensive computation;
     const timer = setTimeout(() => {
-      const expensiveData = Array.from({ lengt,  h: 10000 }, (_, i) => 
+      const expensiveData = Array.from({ lengt,  h: 10000 };
+ (_, i) => 
         Math.sqrt(i) * Math.PI * Math.random()
       );
       setData(expensiveData);
       setLoading(false);
-    },  2000);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+    };
+  2000);
 
 return () => clearTimeout(timer);
-},  []);
+};
+  []);
 
 if (loading) {
 return (
@@ -51,32 +36,6 @@ return (
 );
 }
 
-<<<<<<< HEAD
-return (
-<div className="space-y-4">
-<h3 className="text-xl font-semibold text-zion-slate-light">
-Expensive Component Loaded;
-</h3>
-<p className="text-zion-slate text-sm">
-This component was lazy loaded and contains {data.length.toLocaleString()} computed values.;
-</p>
-<div className="max-h-40 overflow-y-auto border border-zion-slate/20 rounded-lg p-4">
-<div className="grid grid-cols-4 gap-2 text-xs">
-{data.slice(0;  100).map((valu;  e; index) => (
-<div key={index} className="text-zion-cyan">
-{value.toFixed(3)}
-</div>
-))}
-</div>
-{data.length > 100 && (
-<p className="text-zion-slate text-xs mt-2 text-center">
-... and {data.length - 100} more values;
-</p>
-)}
-</div>
-</div>
-);
-=======
   return (
     <div className="space-y-4">
       <h3 className="text-xl font-semibold text-zion-slate-light">
@@ -101,5 +60,4 @@ This component was lazy loaded and contains {data.length.toLocaleString()} compu
       </div>
     </div>
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }<//div><///div>

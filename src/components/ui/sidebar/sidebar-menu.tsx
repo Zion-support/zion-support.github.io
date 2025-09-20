@@ -1,5 +1,5 @@
 
-import React, { forwardRef } from "react",
+import React, { forwardRef } from "react";
 import { ChevronDown,  } from 'lucide-react'
 import { cn,  } from "@/lib/utils";
 import { SafeRef,  } from "@/types/ref-types";
@@ -8,5 +8,5 @@ icon?: React.ReactNode;
 active?: boolean;
 href?: string;
 target?: string;
-badge?: React.ReactNode,
+badge?: React.ReactNode;
 }

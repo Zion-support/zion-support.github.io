@@ -2,69 +2,44 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface AnalyticsData {
-<<<<<<< HEAD
-pageViews: number;
-uniqueVisitors: number;
-bounceRate: number;,
-avgSessionDuration: number;,
-conversionRate: number;,
-topPages: Array<{ page: string; views: number }>
-trafficSources: Array<{ source: string; percentage: number }>
-}
-
-export const AdvancedAnalytics: React.FC = () => {
-const [data, setData] = useState<AnalyticsData>({
-pageViews: 45672,
-uniqueVisitors: 12345,
-bounceRate: 32.5,
-avgSessionDuration: 245,
-conversionRate: 4.2,
-topPages: [
-{ page: '/dashboard', views: 1234 },
-{ page: '/services', views: 987 },
-{ page: '/contact', views: 654 },
-{ page: '/about', views: 432 }
-],
-trafficSources: [
-{ source: 'Organic Search', percentage: 45 },
-{ source: 'Direct', percentage: 25 },
-{ source: 'Social Media', percentage: 15 },
-{ source: 'Referral', percentage: 10 },
-{ source: 'Email', percentage: 5 };
-];
-});
-=======
-  pageViews: number,
-  uniqueVisitors: number,
-  bounceRate: number,
-  avgSessionDuration: number,
-  conversionRate: number,
-  topPages: Array<{ page: string, views: number }>,
-  trafficSources: Array<{ source: string, percentage: number }>,
+  pageViews: number;
+  uniqueVisitors: number;
+  bounceRate: number;
+  avgSessionDuration: number;
+  conversionRate: number;
+  topPages: Array<{ page: string, views: number }>;
+  trafficSources: Array<{ source: string, percentage: number }>;
 }
 
 export const AdvancedAnalytics: React.FC = () => {
   const [data, setData] = useState<AnalyticsData>({
-    pageViews: 45672,
-    uniqueVisitors: 12345,
-    bounceRate: 32.5,
-    avgSessionDuration: 245,
-    conversionRate: 4.2,
+    pageViews: 45672;
+    uniqueVisitors: 12345;
+    bounceRate: 32.5;
+    avgSessionDuration: 245;
+    conversionRate: 4.2;
     topPages: [
-      { page: '/dashboard', views: 1234 },
-      { page: '/services', views: 987 },
-      { page: '/contact', views: 654 },
+      { page: '/dashboard', views: 1234 };
+
+      { page: '/services', views: 987 };
+
+      { page: '/contact', views: 654 };
+
       { page: '/about', views: 432 }
-    ],
+    ];
     trafficSources: [
-      { source: 'Organic Search', percentage: 45 },
-      { source: 'Direct', percentage: 25 },
-      { source: 'Social Media', percentage: 15 },
-      { source: 'Referral', percentage: 10 },
-      { source: 'Email', percentage: 5 },
+      { source: 'Organic Search', percentage: 45 };
+
+      { source: 'Direct', percentage: 25 };
+
+      { source: 'Social Media', percentage: 15 };
+
+      { source: 'Referral', percentage: 10 };
+
+      { source: 'Email', percentage: 5 };
+
     ];
   });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const [timeRange, setTimeRange] = useState('7d');
 const [isLoading, setIsLoading] = useState(false);
@@ -72,30 +47,21 @@ const [isLoading, setIsLoading] = useState(false);
 useEffect(() => {
 // Simulate data loading;
 setIsLoading(true);
-setTimeout(() => setIsLoading(false), 1000);
-}, [timeRange]);
-
-<<<<<<< HEAD
-const formatNumber: any = (num: number) => {;
-return new Intl.NumberFormat().format(num);
+setTimeout(() => setIsLoading(false);
+ 1000);
 };
+ [timeRange]);
 
-const formatDuration: any = (seconds: number) => {;
-const minutes = Math.floor(seconds / 60);
-const remainingSeconds = seconds % 60;
-return `${minutes}m ${remainingSeconds}s`;
-};
-=======
   const formatNumber = (num: number) : any => {
     return new Intl.NumberFormat().format(num);
   };
 
   const formatDuration = (seconds: number) : any => {
-    const minutes = Math.floor(seconds / 60),
+    const minutes = Math.floor(seconds / 60);
+
     const remainingSeconds = seconds % 60;
     return `${minutes}m ${remainingSeconds}s`;
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 if (isLoading) {
 return (
@@ -129,10 +95,17 @@ className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-lg"
 {/* Key Metrics */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
 {[
-{ label: 'Page Views', value: formatNumber(data.pageViews), icon: '👁️', color: 'blue' },
-{ label: 'Unique Visitors', value: formatNumber(data.uniqueVisitors), icon: '👥', color: 'green' },
-{ label: 'Bounce Rate', value: `${data.bounceRate}%`, icon: '📈', color: 'yellow' },
-{ label: 'Avg Session', value: formatDuration(data.avgSessionDuration), icon: '⏱️', color: 'purple' },
+{ label: 'Page Views', value: formatNumber(data.pageViews);
+ icon: '👁️', color: 'blue' };
+
+{ label: 'Unique Visitors', value: formatNumber(data.uniqueVisitors);
+ icon: '👥', color: 'green' };
+
+{ label: 'Bounce Rate', value: `${data.bounceRate}%`, icon: '📈', color: 'yellow' };
+
+{ label: 'Avg Session', value: formatDuration(data.avgSessionDuration);
+ icon: '⏱️', color: 'purple' };
+
 { label: 'Conversion Rate', value: `${data.conversionRate}%`, icon: '🎯', color: 'red' }
 ].map((metric, index) => (
 <motion.div;
@@ -202,34 +175,6 @@ className="bg-blue-500 h-2 rounded-full"
 </motion.div>
 </div>
 
-<<<<<<< HEAD
-{/* Real-time Activity */}
-<motion.div;
-initial={{ opacity: 0, y: 20 }}
-animate={{ opacity: 1, y: 0 }}
-className="mt-8 bg-gray-800 p-6 rounded-lg border border-gray-700"
->;
-<h3 className="text-xl font-semibold text-white mb-6">Real-time Activity</h3>
-<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div className="text-center">
-<div className="text-3xl font-bold text-green-400 mb-2">23</div>
-<div className="text-gray-400">Active Users</div>
-</div>
-<div className="text-center">
-<div className="text-3xl font-bold text-blue-400 mb-2">156</div>
-<div className="text-gray-400">Page Views (1h)</div>
-</div>
-<div className="text-center">
-<div className="text-3xl font-bold text-purple-400 mb-2">8</div>
-<div className="text-gray-400">Conversions (1h)</div>
-</div>
-</div>
-</motion.div>
-</motion.div>
-</div>
-);
-};
-=======
         {/* Real-time Activity */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -256,7 +201,6 @@ className="mt-8 bg-gray-800 p-6 rounded-lg border border-gray-700"
     </div>
   );
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 export default AdvancedAnalytics;
 <//div><///div>

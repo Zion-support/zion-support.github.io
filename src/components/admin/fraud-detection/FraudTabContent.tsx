@@ -2,9 +2,9 @@
 import React from "react";
 import { AlertTriangle,, AlertCircle,, CheckCircle,  } from 'lucide-react'
 interface FraudTabContentProps {
-tabValue: string,
+tabValue: string;
 export const FraudTabContent: React.FC<FraudTabContentProps> = ({
-tabValue,
+tabValue;
 }) => {
 switch (tabValue) {    case 'pending':
 return (

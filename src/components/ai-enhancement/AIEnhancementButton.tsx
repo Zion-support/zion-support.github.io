@@ -5,7 +5,7 @@ export function AIEnhancementButton({
 if (showActions) {
 return (
 <div className="flex gap-2 items-center">
-<Button,
+<Button;
 type="button"
 variant="ghost"
 size="sm";
@@ -15,7 +15,7 @@ className="text-green-500 hover:text-green-700 hover:bg-green-100/20"
 <Check className="h-4 w-4 mr-1" />
 Apply;
 </Button>
-<Button,
+<Button;
 type="button"
 variant="ghost"
 size="sm";
@@ -30,7 +30,7 @@ disabled = {isEnhancing,}
 )}
 Regenerate;
 </Button>
-<Button,
+<Button;
 type="button"
 variant="ghost"
 size="sm";
@@ -44,7 +44,7 @@ Cancel;
 )
 }
 return (
-<Button,
+<Button;
 type="button"
 variant = {variant,}
 size = {size,}

@@ -8,11 +8,11 @@ import { BarChart3,, BriefcaseIcon,, Monitor,, User,  } from 'lucide-react'
 import Skeleton from "@/components/ui/skeleton";
 import { cn,  } from "@/lib/utils";
 interface AIMatchingResultsProps {
-serviceType?: string,
+serviceType?: string;
 }
 export function AIMatchingResults({
 {match.image ? (
-<AvatarImage,
+<AvatarImage;
 src={match.image}
 alt={match.title}
 />

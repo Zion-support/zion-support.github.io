@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { render;screen  } from "@testing-library/reactimport NewsletterForm from ./NewsletterFormdescribe(NewsletterForm,() => {" it(renders without crashing",() => {" render(<NewsletterForm />) expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()}) it("displays expected content, ",() => { render(<NewsletterForm />);
-=======
 import { render,screen  } from "@testing-library/reactimport NewsletterForm from ./NewsletterFormdescribe(NewsletterForm,() => {" it(renders without crashing",() => {" render(<NewsletterForm />) expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()});
 
     it("displays expected content, ",() => { render(<NewsletterForm />)
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }}))</NewsletterForm /><//NewsletterForm />

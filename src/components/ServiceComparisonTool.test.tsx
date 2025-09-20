@@ -1,11 +1,18 @@
-<<<<<<< HEAD
-it(displays expected content",() => {,", render(<ServiceComparisonTool />),",", import { render;screen  } from &apos,@testing-library/react, ", ", import ServiceComparisonTool from &apos,./ServiceComparisonTool", describe('ServiceComparisonTool&apos,() => { it('renders without crashing&apos,() => { render(&apos}}&apos,<ServiceComparisonTool />) expect(screen.getByRole('main&apos) || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content&apos,() => {", render(&apos}<ServiceComparisonTool />), render(<ServiceComparisonTool />),",", expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument(),"" })", "}},", ",",";
-it(displays expected content",() => {,", render(<ServiceComparisonTool />),",", import { render;screen } from &apos,@testing-library/react, ", ", import ServiceComparisonTool from &apos,./ServiceComparisonTool", describe('ServiceComparisonTool&apos,() => { it('renders without crashing&apos,() => { render(&apos}}&apos,<ServiceComparisonTool />) expect(screen.getByRole('main&apos) || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content&apos,() => {", render(&apos}<ServiceComparisonTool />), render(<ServiceComparisonTool />),",", expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument(),"" })", "}},",", ))))</ServiceComparisonTool /><//ServiceComparisonTool />
-=======
-it(displays expected content",() => {,", render(<ServiceComparisonTool />),",", import { render,screen  } from &apos,@testing-library/react,,", ", import ServiceComparisonTool from &apos,./ServiceComparisonTool", describe(&apos,ServiceComparisonTool&apos,() => { it(&apos,renders without crashing&apos,() => { render(&apos}}&apos,<ServiceComparisonTool />) expect(screen.getByRole(&apos,main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});
+it(displays expected content",() => {
+", render(<ServiceComparisonTool />);
+",", import { render,screen  } from &apos,@testing-library/react,,", ", import ServiceComparisonTool from &apos,./ServiceComparisonTool", describe(&apos,ServiceComparisonTool&apos,() => { it(&apos,renders without crashing&apos,() => { render(&apos}}&apos,<ServiceComparisonTool />) expect(screen.getByRole(&apos,main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});
 
-    it(&apos,displays expected content&apos,() => {", render(&apos}<ServiceComparisonTool />), render(<ServiceComparisonTool />),",", expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument(),"" })", "}},", ",",",
-it(displays expected content",() => {,", render(<ServiceComparisonTool />),",", import { render,screen } from &apos,@testing-library/react,,", ", import ServiceComparisonTool from &apos,./ServiceComparisonTool", describe(&apos,ServiceComparisonTool&apos,() => { it(&apos,renders without crashing&apos,() => { render(&apos}}&apos,<ServiceComparisonTool />) expect(screen.getByRole(&apos,main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});
+    it(&apos,displays expected content&apos,() => {", render(&apos}<ServiceComparisonTool />);
+ render(<ServiceComparisonTool />);
+",", expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();
+"" })", "}};
+", ",",";
+it(displays expected content",() => {
+", render(<ServiceComparisonTool />);
+",", import { render,screen } from &apos,@testing-library/react,,", ", import ServiceComparisonTool from &apos,./ServiceComparisonTool", describe(&apos,ServiceComparisonTool&apos,() => { it(&apos,renders without crashing&apos,() => { render(&apos}}&apos,<ServiceComparisonTool />) expect(screen.getByRole(&apos,main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});
 
-    it(&apos,displays expected content&apos,() => {", render(&apos}<ServiceComparisonTool />), render(<ServiceComparisonTool />),",", expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument(),"" })", "}},",", ))))</ServiceComparisonTool /><//ServiceComparisonTool />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+    it(&apos,displays expected content&apos,() => {", render(&apos}<ServiceComparisonTool />);
+ render(<ServiceComparisonTool />);
+",", expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();
+"" })", "}};
+",", ))))</ServiceComparisonTool /><//ServiceComparisonTool />

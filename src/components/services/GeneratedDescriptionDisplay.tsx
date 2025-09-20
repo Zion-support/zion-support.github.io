@@ -3,7 +3,7 @@ return (
 <CardHeader>
 <CardTitle className='text-white flex items-center justify-between'>
 Generated Description;
-<Button,
+<Button;
 variant='outline'
 size='sm';
 onClick={() => setIsEditing(!isEditing)}
@@ -24,7 +24,7 @@ Edit;
 </CardHeader>
 <CardContent>
 {isEditing ? (
-<Textarea,
+<Textarea;
 value={editedDescription}
 onChange={e => setEditedDescription(e.target.value)}
 className='bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none'          />
@@ -36,7 +36,7 @@ className='bg-zion-blue border border-zion-blue-light text-white min-h-[300px] r
 </CardContent>
 {isEditing && (
 <CardFooter>
-<Button,
+<Button;
 onClick={handleSave}
 className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'          >
 Save Changes;
@@ -48,7 +48,7 @@ Save Changes;
 isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>)
 }</Button> </CardTitle> </CardHeader> <CardContent> {
 isEditing ? (<Textarea value= {
-editedDescription,
+editedDescription;
 }</div>)
 }</CardContent> {
 isEditing && (<CardFooter> <Button onClick={

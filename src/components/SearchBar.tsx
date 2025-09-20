@@ -26,7 +26,7 @@ interface SearchBarProps {
 /**;
 * The placeholder text for the search input;
 */;
-placeholder?: string,
+placeholder?: string;
 }
 /**;
 * SearchBar component that allows users to search for content.;
@@ -35,7 +35,7 @@ placeholder?: string,
 }}
 />
 {value && (
-<button,
+<button;
 className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white'
 onClick={() => onChange('')}
 aria-label='Clear search'          >
@@ -48,7 +48,7 @@ aria-label="Clear search";
 </button>
 )}
 </div>
-<AutocompleteSuggestions,
+<AutocompleteSuggestions;
 suggestions = {suggestions,}
 searchTerm = {value,}
 onSelectSuggestion = {handleSelect,}
@@ -62,17 +62,17 @@ listId = {listId,}
 () => onChange ('') ";
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>)
 }</div> <AutocompleteSuggestions suggestions= {
-suggestions,
+suggestions;
 }searchTerm= {
-value,
+value;
 }onSelectSuggestion= {
-handleSelect,
+handleSelect;
 }visible= {
-focused,
+focused;
 }highlightedIndex= {
-highlightedIndex,
+highlightedIndex;
 }listId= {
-listId,
+listId;
 }/> </div>)
 }'"  )
 }

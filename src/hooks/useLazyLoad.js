@@ -22,8 +22,8 @@ export const useLazyLoad = (options = {}) => {
                 }
             });
         }, {
-            threshold,
-            rootMargin: preload ? `${preloadDistance}px` : rootMargin,
+            threshold;
+            rootMargin: preload ? `${preloadDistance}px` : rootMargin;
         });
     observer.observe(element);
         return () => {

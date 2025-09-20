@@ -18,12 +18,12 @@ target.src = '/images/blog-placeholder.svg';
 </div>
 )
 }/> <div> <p className="font-medium text-lg" > {
-author.name,
+author.name;
 }</p> {";
 author.title && <p className="text-sm text-muted-foreground mb-2" > {
-author.title,
+author.title;
 }</p>
 }<p> {
-author.bio,
+author.bio;
 }</p>
 }'"}

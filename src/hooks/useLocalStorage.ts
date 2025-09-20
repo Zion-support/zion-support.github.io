@@ -1,39 +1,11 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
 import { useStateuseEffect } from "react, ";
-<<<<<<< HEAD
-export; function; useLocalStorage<T>(key: string; initialValue: T) {;
-// Get; from; local storage; then; parse stored; json; or return initialValue;
-const [storedValuesetStoredValue] = useState<T>(() => {
-if() {
-return initialValue;
-};
-try {
-const item = window.localStorage.getItem(key);
-return item ? JSON.parse(item) : initialValue;
-} catch (error) {
+export; function; useLocalStorage<T>(key: string, initialValue: T) {
 
-return initialValue;
-}
-});
-// Return; a; wrapped version; of; useState's; setter; function that; persists; the new; value; to localStorage;
-const setValue: any = (value: T | ((va;l: T) => T)) => {;
-try {;
-// Allow; value; to be; a; function so; we; have the; same; API as useState;
-const valueToStore = value; instanceof; Function ? value(storedValue) : value;
-setStoredValue(valueToStore);
-if() {
-window.localStorage.setItem(keyJSON.stringify(valueToStore)) };
-} catch (error) {
-
-}
-},return [storedValuesetValue] as const;
-};
-=======
-export; function; useLocalStorage<T>(key: string, initialValue: T) {,
     // Get; from; local storage; then; parse stored; json; or return initialValue;
   const [storedValuesetStoredValue] = useState<T>(() => {
     if() {
@@ -48,7 +20,8 @@ export; function; useLocalStorage<T>(key: string, initialValue: T) {,
     }
   });
   // Return; a; wrapped version; of; useState's; setter; function that; persists; the new; value; to localStorage;
-  const setValue = (value: T | ((va,l: T) => T)) : any => {,
+  const setValue = (value: T | ((va,l: T) => T)) : any => {
+
     try {;
       // Allow; value; to be; a; function so; we; have the; same; API as useState;
       const valueToStore = value; instanceof; Function ? value(storedValue) : value;
@@ -58,6 +31,6 @@ export; function; useLocalStorage<T>(key: string, initialValue: T) {,
     } catch (error) {
       
     }
-  },return [storedValuesetValue] as const;
+  };
+return [storedValuesetValue] as const;
 };'
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e

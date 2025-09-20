@@ -1,6 +1,6 @@
 
-import React from "react",
-import { Badge } from "@/components/ui/badge",
+import React from "react";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
@@ -12,7 +12,7 @@ return (
 <div>
 <h3 className='text-xl font-medium mb-4'>Usage Limits & Settings</h3>
 <p className='text-muted-foreground mb-6'>
-Configure usage limits for your team to manage your subscription,
+Configure usage limits for your team to manage your subscription;
 resources.;
 </p>
 </div>
@@ -161,7 +161,7 @@ Save Changes;
 <div>
 <h3 className='font-medium'>Need higher limits?</h3>
 <p className='text-sm text-muted-foreground'>
-Contact your account manager to discuss custom limits for your,
+Contact your account manager to discuss custom limits for your;
 enterprise.;
 </p>
 </div>

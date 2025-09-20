@@ -1,10 +1,10 @@
 import { FileText,, ShieldCheck,  } from 'lucide-react'
 interface ContractTypeCardsProps {
-onStandardClick: () => void,
-onSmartClick: () => void,
+onStandardClick: () => void;
+onSmartClick: () => void;
 export function ContractTypeCards({
-onStandardClick,
-onSmartClick,
+onStandardClick;
+onSmartClick;
 }: ContractTypeCardsProps) {
 return (
 <div className='grid md:grid-cols-2 gap-6 mb-10'>
@@ -14,8 +14,8 @@ return (
 <FileText className='h-5 w-5' />            Standard Contracts;
 <CardTitle className="flex items-center gap-2">
 <FileText className="h-5 w-5" />
-interface ContractTypeCardsProps {,
-onSmartClick: () => void,
+interface ContractTypeCardsProps {;
+onSmartClick: () => void;
 }
 export function ContractTypeCards({ onStandardClick onSmartClick }: ContractTypeCardsProps) {
 return (
@@ -87,7 +87,7 @@ Deploy agreements on Ethereum or Polygon with escrow capabilities;
 </ul>
 </CardContent>
 <CardFooter>
-<Button,
+<Button;
 className='w-full bg-gradient-to-r from-blue-600 to-indigo-600'            onClick={onSmartClick}          <ul className="space-y-2">
 <li className="text-sm">✓ All standard contract features</li>
 <li className="text-sm">✓ Automatic escrow payment release</li>
@@ -97,7 +97,7 @@ className='w-full bg-gradient-to-r from-blue-600 to-indigo-600'            onCli
 </ul>
 </CardContent>
 <CardFooter>
-<Button,
+<Button;
 className="w-full bg-gradient-to-r from-blue-600 to-indigo-600"
 onClick = {onSmartClick,}
 >;

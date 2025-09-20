@@ -1,15 +1,11 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
 import React from "react";
 
-<<<<<<< HEAD
-import { Route, Routes  } from "react-router-dom, ";
-=======
 import { Route, Routes } from "react-router-dom, ";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 import { ProtectedRoute } from "@/components/ProtectedRoute, ";
 import Marketplace from "@/pages/Marketplace";
 import Categories from "@/pages/Categories";

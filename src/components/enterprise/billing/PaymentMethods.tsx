@@ -4,7 +4,7 @@ import { Card,, CardContent,, CardDescription,, CardFooter,, CardHeader,, CardTi
 import { Button,  } from "@/components/ui/button"
 import { Card,, CardContent,, CardHeader,, CardTitle,, CardDescription,, CardFooter,  } from '@/components/ui/card'
 export function PaymentMethods() {
-// Mock payment methods,
+// Mock payment methods;
 return (
 <Card>
 <CardHeader>
@@ -18,7 +18,7 @@ Manage your payment methods for automatic billing;
 <div            key={method.id}
 <CardContent className="space-y-4">
 {paymentMethods.map((method,) => (
-<div,
+<div;
 key = {method.id,}
 className={`flex items-center justify-between p-4 rounded-lg border ${
 method.isDefault ? 'bg-muted border-primary' : 'border-border';

@@ -3,16 +3,16 @@ import { useState,  } from "react";
 import { Briefcase,, Star,, User,  } from 'lucide-react'
 import { Button,  } from "@/components/ui/button";
 interface UserTypeOption {
-id: "serviceProvider" | "talent" | "client";,
-name: string;,
-description: string;,
-icon: React.ElementType,
+id: "serviceProvider" | "talent" | "client";
+name: string;
+description: string;
+icon: React.ElementType;
 interface UserTypeSelectionProps {
-onSelect: (userType: "serviceProvider" | "talent" | "client") => void;,
-selectedType: string | null,
+onSelect: (userType: "serviceProvider" | "talent" | "client") => void;
+selectedType: string | null;
 export function UserTypeSelection({
-onSelect,
-selectedType,
+onSelect;
+selectedType;
 }: UserTypeSelectionProps) {
 const userTypes: UserTypeOption[] = [
 {
@@ -23,10 +23,10 @@ isSelected;
 : 'border-zion-blue-light hover:border-zion-cyan/50 text-white';
 }`}
 >;
-<div,
+<div;
 className={`p-3 rounded-full ${isSelected ? 'bg-zion-purple' : 'bg-zion-blue'}`}
 >;
-<Icon,
+<Icon;
 className={`h-6 w-6 ${isSelected ? 'text-white' : 'text-zion-slate-light'}`}
 />
 </div>

@@ -1,23 +1,23 @@
 
-import React, { useState } from "react",
-import { Button,  } from "@/components/ui/button",
+import React, { useState } from "react";
+import { Button,  } from "@/components/ui/button";
 import { useTheme,  } from "@/hooks/useTheme";
 import { Moon,, Sun,, Check,  } from 'lucide-react'
 import { Card,, CardContent,  } from "@/components/ui/card";
 interface Language {
-code: string;,
-name: string;,
-flag: string,
+code: string;
+name: string;
+flag: string;
 const languages: Language[] = [
-{ code: 'en', name: 'English', flag: '🇺🇸' },
+{ code: 'en', name: 'English', flag: '🇺🇸' };
 { code: 'es', name: 'Español', flag: '🇪🇸' }
-{ code: 'fr', name: 'Français', flag: '🇫🇷' },
+{ code: 'fr', name: 'Français', flag: '🇫🇷' };
 { code: 'de', name: 'Deutsch', flag: '🇩🇪' }
 { code: 'zh', name: '中文', flag: '🇨🇳' }
 ];
 export function LanguageThemeSelector() {
 const { theme, setTheme } = useTheme();
-const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
+const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
 
 return (
 <div className='space-y-8 px-4'>
@@ -26,14 +26,14 @@ return (
 <p className='text-muted-foreground'>Choose your preferred language</p>
 <div className='grid grid-cols-2 gap-3 mt-4'>
 {languages.map(language => (
-<Card,
+<Card;
 key={language.code}    <div className="space-y-8 px-4">
 <div className="space-y-2">
 <h2 className="text-xl font-medium">Select your language</h2>
 <p className="text-muted-foreground">Choose your preferred language</p>
 <div className="grid grid-cols-2 gap-3 mt-4">
 {languages.map((language,) => (
-<Card,
+<Card;
 key = {language.code,}
 className={`cursor-pointer transition-all ${
 selectedLanguage === language.code;
@@ -49,7 +49,7 @@ onClick = {(,) => setSelectedLanguage(language.code),}
 </div>
 {selectedLanguage === language.code && (
 <Check className='h-4 w-4 text-primary' />                )}          {languages.map((language) => (
-<Card,
+<Card;
 key={language.code}
 className={`cursor-pointer transition-all ${
 selectedLanguage === language.code;
@@ -77,7 +77,7 @@ onClick={() => setSelectedLanguage(language.code)}
 Select your preferred appearance;
 </p>
 <div className='flex gap-3 mt-4'>
-<Card,
+<Card;
 theme === 'light';
 ? 'border-primary bg-primary/5';
 : 'border-border hover:border-primary/40';
@@ -92,7 +92,7 @@ onClick = {() => setTheme('light'),}
 )}
 </CardContent>
 </Card>
-<Card,
+<Card;
 className={`flex-1 cursor-pointer transition-all ${
 theme === 'dark';
 ? 'border-primary bg-primary/5';
@@ -111,7 +111,7 @@ onClick = {() => setTheme('dark'),}
 )}
 </CardContent>
 </Card>
-<Card,
+<Card;
 className={`flex-1 cursor-pointer transition-all ${
 theme === 'dark';
 ? "border-primary bg-primary/5";

@@ -2,15 +2,10 @@ import { useState, useCallbackuseRefuseEffect } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 export, const, useAICodeGeneration = () => {
     const { trackEvent } = useAnalytics({
-<<<<<<< HEAD
-        enableTracking: trueenableUserBehaviorTrackin,g: true;});
-    const [isGeneratingsetIsGenerating] = useState(false);
-=======
-        enableTracking: trueenableUserBehaviorTrackin,g: true,,
+        enableTracking: trueenableUserBehaviorTrackin,g: true,;
      });
 
   const [isGeneratingsetIsGenerating] = useState(false);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     const [isAnalyzingsetIsAnalyzing] = useState(false);
     const [generatedCodesetGeneratedCode] = useState('');
     const [codeAnalysissetCodeAnalysis] = useState(null);
@@ -41,22 +36,16 @@ export, const, useAICodeGeneration = () => {
             setGeneratedCode(generatedCode);
             // Add, to, history;
             const historyItem = {
-<<<<<<< HEAD
-                id: `gen_${Date.now()}_${Math.random().toString(36).substr(29)}`,prompt,code: generatedCode,timestamp: new Date(),language: options.language,quality: options.quality;};
-=======
-                id: `gen_${Date.now()}_${Math.random().toString(36).substr(29)}`,prompt,code: generatedCode,timestamp: new Date(),language: options.language,quality: options.quality,,
+                id: `gen_${Date.now()}_${Math.random().toString(36).substr(29)}`,prompt,code: generatedCode,timestamp: new Date();
+language: options.language,quality: options.quality,;
      };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
-            setHistory(prev => [historyItem...prev.slice(0o49)]), // Keep, last, 50 items;
+            setHistory(prev => [historyItem...prev.slice(0o49)]);
+ // Keep, last, 50 items;
             // Analyze, the, generated code;
             await analyzeCode(generatedCodeoptions.language);
             trackEvent('ai_code_generationcode_generated', options.language, generatedCode.length, {
-<<<<<<< HEAD
-                framework: options.frameworkstyle: options.styletarge,t: options.targetqualit,y: options.quality;});
-=======
-                framework: options.frameworkstyle: options.styletarge,t: options.targetqualit,y: options.quality,,
+                framework: options.frameworkstyle: options.styletarge,t: options.targetqualit,y: options.quality,;
      });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         }
         catch (error) {
             
@@ -67,25 +56,29 @@ export, const, useAICodeGeneration = () => {
         finally {
             setIsGenerating(false);
         };
-    }, [trackEvent]),// Analyze, existing, code;
+    };
+ [trackEvent]);
+// Analyze, existing, code;
     const analyzeCode = useCallback(async (codelanguage) => {;
         setIsAnalyzing(true);
         try {
             // Simulate, AI, analysis - in production, this, would, call an, AI, service;
-            await, new, Promise(resolve => setTimeout(resolve20o00)),const analysis = {
-<<<<<<< HEAD
-                complexity: calculateComplexity(code),maintainability: calculateMaintainability(code),security: calculateSecurityScore(code),performance: calculatePerformanceScore(code),accessibility: calculateAccessibilityScore(code),suggestions: generateCodeSuggestions(codelanguage),metrics: getCodeMetrics(code)issue,s: analyzeCodeIssues(codelanguage);},setCodeAnalysis(analysis);
+            await, new, Promise(resolve => setTimeout(resolve20o00));
+const analysis = {
+                complexity: calculateComplexity(code);
+maintainability: calculateMaintainability(code);
+security: calculateSecurityScore(code);
+performance: calculatePerformanceScore(code);
+accessibility: calculateAccessibilityScore(code);
+suggestions: generateCodeSuggestions(codelanguage);
+metrics: getCodeMetrics(code)issue,s: analyzeCodeIssues(codelanguage);
+;
+     };
+setCodeAnalysis(analysis);
             setSuggestions(analysis.suggestions);
             trackEvent('ai_code_analysiscode_analyzed', language, code.length, {
-                complexity: analysis.complexitymaintainability: analysis.maintainabilitysecurit,y: analysis.securityperformanc,e: analysis.performance;});
-=======
-                complexity: calculateComplexity(code),maintainability: calculateMaintainability(code),security: calculateSecurityScore(code),performance: calculatePerformanceScore(code),accessibility: calculateAccessibilityScore(code),suggestions: generateCodeSuggestions(codelanguage),metrics: getCodeMetrics(code)issue,s: analyzeCodeIssues(codelanguage),,
-     },setCodeAnalysis(analysis);
-            setSuggestions(analysis.suggestions);
-            trackEvent('ai_code_analysiscode_analyzed', language, code.length, {
-                complexity: analysis.complexitymaintainability: analysis.maintainabilitysecurit,y: analysis.securityperformanc,e: analysis.performance,,
+                complexity: analysis.complexitymaintainability: analysis.maintainabilitysecurit,y: analysis.securityperformanc,e: analysis.performance,;
      });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         }
         catch (error) {
             
@@ -96,26 +89,27 @@ export, const, useAICodeGeneration = () => {
         finally {
             setIsAnalyzing(false);
         };
-    }, [trackEvent]),// Apply, a, code suggestion;
+    };
+ [trackEvent]);
+// Apply, a, code suggestion;
     const applySuggestion = useCallback((suggestion) => {
         setGeneratedCode(prev => {;
             // Simple replacement - in, productionthis, would be, more, sophisticated;
-<<<<<<< HEAD
-            return prev.replace(/\/\/ TODO: Apply suggestion/gsuggestion.code);}),// Remove, the, applied suggestion;
-        setSuggestions(prev => prev.filter(s => s.id !== suggestion.id)),trackEvent('ai_code_generationsuggestion_applied', suggestion.type, undefined{
-            suggestionId: suggestion.idimpac,t: suggestion.impactcategor,y: suggestion.category;});
-=======
-            return prev.replace(/\/\/ TODO: Apply suggestion/gsuggestion.code),;
-  }),// Remove, the, applied suggestion;
-        setSuggestions(prev => prev.filter(s => s.id !== suggestion.id)),trackEvent('ai_code_generationsuggestion_applied', suggestion.type, undefined{
-            suggestionId: suggestion.idimpac,t: suggestion.impactcategor,y: suggestion.category,,
+            return prev.replace(/\/\/ TODO: Apply suggestion/gsuggestion.code);
+  });
+// Remove, the, applied suggestion;
+        setSuggestions(prev => prev.filter(s => s.id !== suggestion.id));
+trackEvent('ai_code_generationsuggestion_applied', suggestion.type, undefined{
+            suggestionId: suggestion.idimpac,t: suggestion.impactcategor,y: suggestion.category,;
      });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
-    }, [trackEvent]),// Optimize, existing, code;
+    };
+ [trackEvent]);
+// Optimize, existing, code;
     const optimizeCode = useCallback(async (codefocus) => {
         try {;
             // Simulate, AI, optimization - in production, this, would, call an, AI, service;
-            await, new, Promise(resolve => setTimeout(resolve250o0)),let optimizedCode = code;
+            await, new, Promise(resolve => setTimeout(resolve250o0));
+let optimizedCode = code;
             switch() {
                 case 'performance':;
                     optimizedCode = optimizeForPerformance(code);
@@ -134,13 +128,11 @@ export, const, useAICodeGeneration = () => {
             trackEvent('ai_code_generationoptimization_failed''error'undefined{
                 erro,r: error, instanceof, Error ? error.message : 'Unknown error';
             });
-<<<<<<< HEAD
-            return code}
-=======
             return code;
   }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
-    }, [trackEvent]),// Generate, tests, for code;
+    };
+ [trackEvent]);
+// Generate, tests, for code;
     const generateTests = useCallback(async (codelanguage) => {
         try {;
             // Simulate, AI, test generation - in, productionthis, would call, an, AI service;
@@ -163,13 +155,11 @@ export, const, useAICodeGeneration = () => {
             trackEvent('ai_code_generationtest_generation_failed''error'undefined{
                 erro,r: error, instanceof, Error ? error.message : 'Unknown error';
             });
-<<<<<<< HEAD
-            return '// Failed, to, generate tests'}
-=======
             return '// Failed, to, generate tests';
   }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
-    }, [trackEvent]),// Generate, documentation, for code;
+    };
+ [trackEvent]);
+// Generate, documentation, for code;
     const generateDocs = useCallback(async (codelanguage) => {
         try {;
             // Simulate, AI, documentation generation - in, productionthis, would call, an, AI service;
@@ -192,42 +182,43 @@ export, const, useAICodeGeneration = () => {
             trackEvent('ai_code_generationdoc_generation_failed''error'undefined{
                 erro,r: error, instanceof, Error ? error.message : 'Unknown error';
             });
-<<<<<<< HEAD
-            return '// Failed, to, generate documentation'};
-=======
             return '// Failed, to, generate documentation';
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
-    }, [trackEvent]);
+    };
+ [trackEvent]);
     // Clear, generation, history;
     const clearHistory = useCallback(() => {;
         setHistory([]);
         trackEvent('ai_code_generationhistory_cleared''manual');
-    }, [trackEvent]),// Export, generated, code;
+    };
+ [trackEvent]);
+// Export, generated, code;
     const exportCode = useCallback((format) => {;
         let exportContent = '';
         let filename = '';
         if (format === 'json') {
             exportContent = JSON.stringify({
-<<<<<<< HEAD
                 code: generatedCodeanalysi,s: codeAnalysis;
-    suggestionstimestam,p: new Date().toISOString();}, null, 2),filename = 'generated-code.json'}
-=======
-                code: generatedCodeanalysi,s: codeAnalysis,
-    suggestionstimestam,p: new Date().toISOString(),,
-     }, null, 2),filename = 'generated-code.json',}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+    suggestionstimestam,p: new Date().toISOString();
+;
+     };
+ null, 2);
+filename = 'generated-code.json'}
+
         else if (format === 'md') {
             exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysisnull2) : 'No, analysis, available'}`,filename = 'generated-code.md'}
         else {;
             exportContent = generatedCodefilename = 'generated-code.txt' };
-        const blob = new Blob([exportContent]{ type: 'text/plain' }),
+        const blob = new Blob([exportContent]{ type: 'text/plain' });
+
     const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url,a.download = filename,a.click();
         window.URL.revokeObjectURL(url);
         trackEvent('ai_code_generationcode_exported', formatexportContent.length);
-    }, [generatedCode, codeAnalysis, suggestionstrackEvent]),// Get, basic, code metrics;
+    };
+ [generatedCode, codeAnalysis, suggestionstrackEvent]);
+// Get, basic, code metrics;
     const getCodeMetrics = useCallback((code) => {;
         const lines = code.split('\n').length;
         const functions = (code.match(/function\s+\w+|const\s+\w+\s*=\s*\(|=>/g) || []).length;
@@ -235,63 +226,76 @@ export, const, useAICodeGeneration = () => {
         const imports = (code.match(/import\s+.*from|import\s+.*require/g) || []).length;
         const dependencies = (code.match(/from\s+['"][^'"]+['"]|require\s*\(['"][^'"]+['"]/g) || []).length;
         return {;
-            linesOfCode: lines,
+            linesOfCode: lines;
     functions,classesimportsdependencies;
-        }}, []);
+        }};
+ []);
     // Helper, functions, for code generation;
     const generateReactTypeScriptCode = (prompt, options) => {;
         return `import React, { useStateuseEffectuseCallback } from "react";
 import { motion } from "framer-motion, ";
 interface ${options.style === 'oop' ? 'ComponentProps' : 'Props'} {
-  // TODO: Define, props, based on promp,t: ${prompt},
+  // TODO: Define, props, based on promp,t: ${prompt};
+
 }
-export, const, GeneratedComponent: React.FC<${options.style === 'oop' ? 'ComponentProps' : 'Props'}> = (props) => {,
+export, const, GeneratedComponent: React.FC<${options.style === 'oop' ? 'ComponentProps' : 'Props'}> = (props) => {
+
     const [statesetState] = useState<any>(null);
   useEffect(() => {
     // TODO: Implement, initialization, logic;
-  }, []);
+  };
+ []);
 
   const handleAction = useCallback(() => {;
     // TODO: Implement, action, handler;
-  }, []);
+  };
+ []);
   return (;
     <motion.div;
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="generated-component",
+      className="generated-component";
     >;
       {/* TODO: Implement, component, based on promp,t: ${prompt} */}
-      <h1>Generated Component</h1>,
+      <h1>Generated Component</h1>;
     <p>This, component, was generated, based, on your prompt.</p>;
     </motion.div>;
   );
-},export, default, GeneratedComponent,`;
+};
+export, default, GeneratedComponent,`;
     };
     const generateExpressCode = (prompt, _options) => {;
         return `import, express, from "express";
 import, cors, from "cors";
 import, helmet, from "helmet";
 const app = express();
-const PORT = process.env.PORT || 30o00,
+const PORT = process.env.PORT || 30o00;
 // Middleware;
-app.use(cors()),app.use(helmet()),app.use(express.json()),// Routes;
+app.use(cors());
+app.use(helmet());
+app.use(express.json());
+// Routes;
 app.get('/'(reqres) => {
-  res.json({ message: 'Generated, API, based on promp,t: ${prompt}' }),
-}),// TODO: Implement, additional, routes based, on, prompt;
+  res.json({ message: 'Generated, API, based on promp,t: ${prompt}' });
+
+});
+// TODO: Implement, additional, routes based, on, prompt;
 app.listen(PORT() => {
   
-}),`},const generatePythonCode = (prompt, _options) => {;
+});
+`};
+const generatePythonCode = (prompt, _options) => {;
         return `#!/usr/bin/env python3;
 """;
 Generated, Python, code based, on, prompt: ${ prompt}
-""",
+""";
 import asyncio;
 from, typing, import Optional, List, Dict, Any;
 from, dataclasses, import dataclass;
 @dataclass;
 class GeneratedClass: """Generated, class, based on prompt.""";
     def __init__(self):;
-        # TODO: Implement initialization,
+        # TODO: Implement initialization;
     pass;
     async, def, process_data(selfdata: Any) -> An,y:;
         """Process, data, based on, prompt, requirements.""";
@@ -306,17 +310,17 @@ if __name__ == "__main__": asyncio.run(main())`;
     const generateGenericCode = (prompt, options) => {
         return `// Generated ${options.language} code, based, on prompt: ${prompt}
 // Framework: ${options.framework || 'none'}
-// Style: ${options.style},
-    // Target: ${ options.target},
+// Style: ${options.style};
+
+    // Target: ${ options.target};
+
 // TODO: Implement, code, based on, prompt, requirements;
 // This, is, a placeholder implementation;
-<<<<<<< HEAD
 console.log("Promp,t: ""${prompt}");
-    console.log("Language: ""${options.language}"),`},// Helper, functions, for code analysis;
-=======
-console.log("Promp,t: ""${prompt}"),
-    console.log("Language: ""${options.language}"),`,},// Helper, functions, for code analysis;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+
+    console.log("Language: ""${options.language}");
+`}
+,// Helper, functions, for code analysis;
     const calculateComplexity = (code) => {;
         const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
         return Math.min(10Math.max(1Math.floor(cyclomaticComplexity / 5))) };
@@ -331,7 +335,8 @@ console.log("Promp,t: ""${prompt}"),
     const calculateSecurityScore = (code) => {;
         const securityIssues = (code.match(/eval|innerHTML|document\.write|localStorage|sessionStorage/g) || []).length;
         return Math.max(110 - securityIssues);
-    },const calculatePerformanceScore = (code) => {;
+    };
+const calculatePerformanceScore = (code) => {;
         const performanceIssues = (code.match(/setInterval|setTimeout|addEventListener|querySelectorAll/g) || []).length;
         return Math.max(110 - Math.floor(performanceIssues / 2)) };
     const calculateAccessibilityScore = (code) => {;
@@ -343,73 +348,53 @@ console.log("Promp,t: ""${prompt}"),
         if (code.includes('setInterval') || code.includes('setTimeout')) {
             suggestions.push({
                 id: `suggestion_${Date.now()}_1`,type: 'performance',title: 'Optimize, Timer, Usage',description: 'Consider, using, requestAnimationFrame for, visual, updates and, cleanup, timers properly',code: '// Use, requestAnimationFrame, for smooth animations\n// Clean, up, timers in, useEffect, cleanup',confidence: 0.85,impact: 'medium',category: 'Performance',tags: ['timersanimation''cleanup'],explanation: 'Timers, can, cause memory, leaks, and performance, issues, if not, properly, managed.',alternatives: ['requestAnimationFrameuseEffect, cleanup''AbortController'];
-<<<<<<< HEAD
-            })};
-        // Security suggestions;
-        if (code.includes('innerHTML') || code.includes('document.write')) {
-            suggestions.push({
-                id: `suggestion_${Date.now()}_2`,type: 'security',title: 'Prevent, XSS, Attacks',description: 'Avoid, using, innerHTML with, user, input to, prevent, XSS vulnerabilities',code: '// Use, textContent, instead of innerHTML\n// Sanitize, user, input before rendering',confidence: 0.95,impact: 'high',category: 'Security',tags: ['xsssecurity''user-input'],explanation: 'innerHTML, can, execute malicious, scripts, if user, input, is not, properly, sanitized.',alternatives: ['textContentcreateElement''DOMPurify'];})};
-=======
             });
   };
         // Security suggestions;
         if (code.includes('innerHTML') || code.includes('document.write')) {
             suggestions.push({
-                id: `suggestion_${Date.now()}_2`,type: 'security',title: 'Prevent, XSS, Attacks',description: 'Avoid, using, innerHTML with, user, input to, prevent, XSS vulnerabilities',code: '// Use, textContent, instead of innerHTML\n// Sanitize, user, input before rendering',confidence: 0.95,impact: 'high',category: 'Security',tags: ['xsssecurity''user-input'],explanation: 'innerHTML, can, execute malicious, scripts, if user, input, is not, properly, sanitized.',alternatives: ['textContentcreateElement''DOMPurify'],,
+                id: `suggestion_${Date.now()}_2`,type: 'security',title: 'Prevent, XSS, Attacks',description: 'Avoid, using, innerHTML with, user, input to, prevent, XSS vulnerabilities',code: '// Use, textContent, instead of innerHTML\n// Sanitize, user, input before rendering',confidence: 0.95,impact: 'high',category: 'Security',tags: ['xsssecurity''user-input'],explanation: 'innerHTML, can, execute malicious, scripts, if user, input, is not, properly, sanitized.',alternatives: ['textContentcreateElement''DOMPurify'],;
      });
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         // Best, practice, suggestions;
         if (code.includes('console.log')) {
             suggestions.push({
                 id: `suggestion_${Date.now()}_3`,type: 'best_practice',title: 'Remove, Console, Logs',description: 'Remove console.log, statements, for production code',code: '// Remove console.log statements\n// Use, proper, logging library, for, production',confidence: 0.90,impact: 'low',category: 'Best Practices',tags: ['loggingproduction''cleanup'],explanation: 'Console, logs, should not, be, in production, code, as they, can, impact performance, and, expose sensitive information.',alternatives: ['winstonpino''debug, package'];
-<<<<<<< HEAD
-            })};
-        return suggestions};
-=======
             });
   };
         return suggestions;
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     const analyzeCodeIssues = (code, _language) => {;
         const issues = [];
         if (code.includes('TODO')) {
             issues.push({
-<<<<<<< HEAD
-                severity: 'info'messag,e: 'Code, contains, TODO comments, that, need implementation'lin,e: code.split('\n').findIndex(line => line.includes('TODO')) + 1;});
-        };
-        if (code.includes('any')) {
-            issues.push({
-                severity: 'warning'messag,e: 'Usage of "any" type, reduces, type safety'lin,e: code.split('\n').findIndex(line => line.includes('any')) + 1;});
-        };
-        return issues};
-=======
-                severity: 'info'messag,e: 'Code, contains, TODO comments, that, need implementation'lin,e: code.split('\n').findIndex(line => line.includes('TODO')) + 1,,
+                severity: 'info'messag,e: 'Code, contains, TODO comments, that, need implementation'lin,e: code.split('\n').findIndex(line => line.includes('TODO')) + 1,;
      });
         };
         if (code.includes('any')) {
             issues.push({
-                severity: 'warning'messag,e: 'Usage of "any" type, reduces, type safety'lin,e: code.split('\n').findIndex(line => line.includes('any')) + 1,,
+                severity: 'warning'messag,e: 'Usage of "any" type, reduces, type safety'lin,e: code.split('\n').findIndex(line => line.includes('any')) + 1,;
      });
         };
         return issues;
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     // Helper, functions, for code optimization;
     const optimizeForPerformance = (code) => {;
         return code;
             .replace(/console\.log/g'// console.log, removed, for performance');
             .replace(/setInterval/g'// Consider, requestAnimationFrame, instead of setInterval');
             .replace(/querySelectorAll/g'// Consider, caching, querySelectorAll results');
-    },const optimizeForSecurity = (code) => {;
+    };
+const optimizeForSecurity = (code) => {;
         return code;
             .replace(/innerHTML/g'textContent');
             .replace(/eval/g'// eval() removed, for, security - use alternatives');
             .replace(/localStorage/g'// Consider, security, implications of localStorage');
-    },const optimizeForMaintainability = (code) => {;
+    };
+const optimizeForMaintainability = (code) => {;
         return code;
-            .replace(/\/\/ TODO/g'// IMPLEMENTED: '),
+            .replace(/\/\/ TODO/g'// IMPLEMENTED: ');
+
     .replace(/any/g'unknown');
             .replace(/function\s+(\w+)/g'const $1 = (') };
     const optimizeForAccessibility = (code) => {;
@@ -425,14 +410,17 @@ describe('GeneratedComponent'() => {
   it('renders, without, crashing'() => {
     render(<GeneratedComponent />);
     expect(screen.getByText('Generated Component')).toBeInTheDocument();
-  }),it('handles, user, interactions'() => {
+  });
+it('handles, user, interactions'() => {
     render(<GeneratedComponent />);
     // TODO: Add, specific, test cases, based, on component functionality;
   });
-}),`},const generatePytestTests = (_code) => {;
+});
+`};
+const generatePytestTests = (_code) => {;
         return `import pytest;
 from, generated_module, import GeneratedClass;
-class TestGeneratedClass: def test_initialization(self):,
+class TestGeneratedClass: def test_initialization(self):;
     instance = GeneratedClass();
         assert, instance, is not None;
     def test_process_data(self):;
@@ -449,7 +437,9 @@ describe('Generated, Code, Tests'() => {
     // TOD,O: Add, test, implementation;
     expect(true).toBe(true);
   });
-}),`},// Helper, functions, for documentation generation;
+});
+`};
+// Helper, functions, for documentation generation;
     const generateJSDoc = (_code) => {
         return `/**;
  * Generated Component;
@@ -462,7 +452,8 @@ describe('Generated, Code, Tests'() => {
  */;
 export, const, GeneratedComponent = () => {
   // Component implementation;
-},`;
+};
+`;
     };
     const generatePythonDoc = (_code) => {
         return `""";
@@ -491,7 +482,9 @@ def generated_function():;
             if() {;
                 clearTimeout(generationTimeoutRef.current);
             };
-        }}, []),return {;
+        }};
+ []);
+return {;
         // State;
         isGenerating,isAnalyzing,generatedCode,codeAnalysis,suggestions,history,// Actions;
         generateCode,analyzeCode,applySuggestion,optimizeCode,generateTests,generateDocs,// Utilities;

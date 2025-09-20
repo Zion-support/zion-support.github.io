@@ -1,28 +1,16 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
 import React from "react;";
-<<<<<<< HEAD
-export function useScrollToTop() {
-// Simple hook to scroll to top;
-React.useEffect(() => {
-window.scrollTo(0; 0),
-}, []);
-}
-
-export function useAuth() {
-// Simple auth hook;
-return {
-user: null; isAuthenticated: false,
-};
-=======
 export function useScrollToTop() : any {
   // Simple hook to scroll to top;
   React.useEffect(() => {
-    window.scrollTo(0, 0),
-  }, []);
+    window.scrollTo(0, 0);
+
+  };
+ []);
 }
 
 export function useAuth() : any {
@@ -30,7 +18,6 @@ export function useAuth() : any {
   return {
     user: null, isAuthenticated: false;
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 
 // Export all hooks from messaging directory;
@@ -49,12 +36,12 @@ const item = window.localStorage.getItem(key)
 return item ? JSON.parse(item) : initialValue;
 } catch {;
 export const useLocalStorage: any = (key: string; initialValue: unknown) => {
-return initialValue,
+return initialValue;
 }
 })
 const setValue: any = (value: unknown;) => {
 try {
-const valueToStore = value instanceof Function ? value(storedValue) : value,
+const valueToStore = value instanceof Function ? value(storedValue) : value;
 window.localStorage.setItem(key, JSON.stringify(valueToStore))
 } catch (_error) {
 console.error('Error setting localStorage:', _error)

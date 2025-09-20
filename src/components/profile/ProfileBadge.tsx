@@ -1,15 +1,15 @@
 <span>{text}</span>
 </div>
 )
-type className,
+type className;
 }: ProfileBadgeProps) {
 const badgeConfig = {
 verified: {
-const {,
+const {;
 icon: Icon  text colors;
 }= badgeConfig[type];
 }> <Icon className="w-3 h-3" /> <span> {
-text,
+text;
 }</span>
 }'"  );
 }

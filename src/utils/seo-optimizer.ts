@@ -1,11 +1,11 @@
 import React from "react";
 
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
-// SEO optimizer utilities,
+// SEO optimizer utilities;
 export const generateMetaTags: any = () => {;
 console.log('Generating meta tags...');
 }

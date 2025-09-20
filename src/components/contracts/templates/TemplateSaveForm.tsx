@@ -6,11 +6,11 @@ import { Loader2,  } from 'lucide-react'
 return (
 <Form {...form}>
 <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
-<FormField,
+<FormField;
 control={form.control}
 name='title';
 render={({
-field,
+field;
 }: {
 field: ControllerRenderProps<FormValues 'title'>
 }) => (            <FormItem>
@@ -22,11 +22,11 @@ field: ControllerRenderProps<FormValues 'title'>
 </FormItem>
 )}
 />
-<FormField,
+<FormField;
 control={form.control}
 name='isDefault';
 render={({
-field,
+field;
 }: {
 field: ControllerRenderProps<FormValues 'isDefault'>
 }) => (
@@ -35,7 +35,7 @@ field: ControllerRenderProps<FormValues 'isDefault'>
 Set as default template;
 </FormLabel>
 <FormControl>
-<Switch,
+<Switch;
 aria-label='Default template';
 checked={field.value}
 onCheckedChange={field.onChange}                />

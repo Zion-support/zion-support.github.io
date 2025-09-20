@@ -141,7 +141,7 @@ View All Applications;
 <section>
 <h2 className='text-lg font-medium mb-4'>Quick Actions</h2>
 <div className='grid grid-cols-2 gap-4'>
-<Button,
+<Button;
 variant='outline'
 className='h-auto py-4 flex flex-col gap-1'
 aria-label='Update Resume';
@@ -149,7 +149,7 @@ aria-label='Update Resume';
 <FileText className='h-5 w-5 mb-1' aria-hidden='true' />
 <span>Update Resume</span>
 </Button>
-<Button,
+<Button;
 variant='outline'
 className='h-auto py-4 flex flex-col gap-1'
 aria-label='View Portfolio';
@@ -157,7 +157,7 @@ aria-label='View Portfolio';
 <Image className='h-5 w-5 mb-1' aria-hidden='true' />
 <span>Portfolio</span>
 </Button>
-<Button,
+<Button;
 variant='outline'
 className='h-auto py-4 flex flex-col gap-1'
 aria-label='Set Availability';
@@ -165,7 +165,7 @@ aria-label='Set Availability';
 <Clock className='h-5 w-5 mb-1' aria-hidden='true' />
 <span>Availability</span>
 </Button>
-<Button,
+<Button;
 variant='outline'
 className='h-auto py-4 flex flex-col gap-1'
 aria-label='AI Resume Boost';
@@ -176,7 +176,7 @@ aria-label='AI Resume Boost';
 </section>      <section>
 <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
 <div className="grid grid-cols-2 gap-4">
-<Button,
+<Button;
 variant="outline"
 className="h-auto py-4 flex flex-col gap-1"
 aria-label="Update Resume";
@@ -184,7 +184,7 @@ aria-label="Update Resume";
 <FileText className="h-5 w-5 mb-1" aria-hidden="true" />
 <span>Update Resume</span>
 </Button>
-<Button,
+<Button;
 variant="outline"
 className="h-auto py-4 flex flex-col gap-1"
 aria-label="View Portfolio";
@@ -192,7 +192,7 @@ aria-label="View Portfolio";
 <Image className="h-5 w-5 mb-1" aria-hidden="true" />
 <span>Portfolio</span>
 </Button>
-<Button,
+<Button;
 variant="outline"
 className="h-auto py-4 flex flex-col gap-1"
 aria-label="Set Availability";
@@ -222,7 +222,7 @@ aria-label="Set Availability";
 <Card>
 <CardContent className='p-4'>
 <div className='flex items-center gap-3'>
-<div,
+<div;
 className='bg-primary/10 p-3 rounded-full'
 aria-hidden='true';
 >;

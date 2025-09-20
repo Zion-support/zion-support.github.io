@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-=======
 import { type ClassValue, clsx } from "clsx, ";
 import { twMerge } from "tailwind-merge, ";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 export function cn(...inputs: ClassValue[]) {
 return twMerge(clsx(inputs))
 }
 export function formatDate(date: Date | string): string {
-<<<<<<< HEAD
-const d = new Date(date);
-return d.toLocaleDateString("en-US", {
-year: "numeric",
-month: "long",
-day: "numeric"});
-}
+  const d = new Date(date);
 
-export function formatCurrency(amount: number; currency = "USD"): string {
-return new Intl.NumberFormat("en-US", {
-style: "currency",
-currency}).format(amount);
-=======
-  const d = new Date(date),
     return d.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
+    year: "numeric";
+    month: "long";
     day: "numeric";
   });
 }
 
 export function formatCurrency(amount: number, currency = "USD"): string {
   return new Intl.NumberFormat("en-US", {
-    style: "currency",
+    style: "currency";
     currency;
   }).format(amount);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 
 export function formatPhoneNumber(phoneNumber: string): string {
@@ -47,49 +29,30 @@ return `(${match[1]}) ${match[2]}-${match[3]}`;
 return phoneNumber;
 }
 
-<<<<<<< HEAD
-export function debounce<T extends (...args: any[]) => any>(,
-func: T; wait: number,
-): (...args: Parameters<T>) => void {
-let timeout: globalThis.Timeout;
-return (...args: Parameters<T>) => {
-clearTimeout(timeout);
-timeout = setTimeout(() => func(...args), wait)};
-}
-
-export function throttle<T extends (...args: any[]) => any>(,
-func: T; limit: number,
-): (...args: Parameters<T>) => void {
-let inThrottle: boolean;
-return (...args: Parameters<T>) => {
-if (!inThrottle) {
-func(...args);
-inThrottle = true;
-setTimeout(() => inThrottle = false; limit)}
-};
-=======
 export function debounce<T extends (...args: any[]) => any>(
-  func: T, wait: number,
+  func: T, wait: number;
 ): (...args: Parameters<T>) => void {
-  let timeout: globalThis.Timeout,
+  let timeout: globalThis.Timeout;
     return (...args: Parameters<T>) : any => {
-    clearTimeout(timeout),
-    timeout = setTimeout(() => func(...args), wait);
+    clearTimeout(timeout);
+
+    timeout = setTimeout(() => func(...args);
+ wait);
   };
 }
 
 export function throttle<T extends (...args: any[]) => any>(
-  func: T, limit: number,
+  func: T, limit: number;
 ): (...args: Parameters<T>) => void {
-  let inThrottle: boolean,
+  let inThrottle: boolean;
     return (...args: Parameters<T>) : any => {
     if (!inThrottle) {
-      func(...args),
+      func(...args);
+
     inThrottle = true;
       setTimeout(() => inThrottle = false; limit);
 };
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 export function cn(...inputs: ClassValue[]) {
 return twMerge(clsx(inputs))
@@ -100,4 +63,4 @@ import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]) {
 return twMerge(clsx(inputs))
 }
-,
+;

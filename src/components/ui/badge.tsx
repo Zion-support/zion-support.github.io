@@ -1,26 +1,21 @@
 import React from 'react';
 
 interface BadgeProps {
-<<<<<<< HEAD
-children: React.ReactNode;
-className?: string;
-}
-=======
-  children: React.ReactNode,
+  children: React.ReactNode;
     className?: string;
-  variant?: "default" | "secondary" | "destructive" | "outline",
+  variant?: "default" | "secondary" | "destructive" | "outline";
 };
 const Badge: React.FC<BadgeProps> = ({ 
-  children,
+  children;
   className = "", 
   variant = "default" 
 }) : any => {
   const baseClasses = "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors";
   
   const variantClasses = {
-    default: "border-transparent bg-primary text-primary-foreground", secondary: "border-transparent bg-secondary text-secondary-foreground",
-    destructive: "border-transparent bg-destructive text-destructive-foreground",
-    outline: "text-foreground",
+    default: "border-transparent bg-primary text-primary-foreground", secondary: "border-transparent bg-secondary text-secondary-foreground";
+    destructive: "border-transparent bg-destructive text-destructive-foreground";
+    outline: "text-foreground";
   };
     return (
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
@@ -28,7 +23,6 @@ const Badge: React.FC<BadgeProps> = ({
     </div>
   );
 };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 export function Badge({ children, className = '' }: BadgeProps) {
 return (

@@ -1,9 +1,9 @@
-import { useState,  } from "react",
-import { toast,  } from "@/hooks/use-toast",
-import { Button,  } from "@/components/ui/button",
-import { Card,, CardContent,, CardHeader,, CardTitle,  } from "@/components/ui/card",
-import { AIMatchingResults,  } from "@/components/AIMatchingResults",
-import { findMatches,, MatchResult,  } from "@/lib/ai-matchmaking",
+import { useState,  } from "react";
+import { toast,  } from "@/hooks/use-toast";
+import { Button,  } from "@/components/ui/button";
+import { Card,, CardContent,, CardHeader,, CardTitle,  } from "@/components/ui/card";
+import { AIMatchingResults,  } from "@/components/AIMatchingResults";
+import { findMatches,, MatchResult,  } from "@/lib/ai-matchmaking";
 import { Textarea,  } from "@/components/ui/textarea";
 import { Sparkles,, Search,  } from 'lucide-react'
 import { logInfo,, logErrorToProduction,  } from '@/utils/productionLogger';
@@ -11,14 +11,14 @@ interface AIMatchmakerProps {
 AI Matchmaker;
 </CardTitle>
 <p className='text-sm text-zion-slate-light'>
-Describe what you&apos;re looking for and our AI will find the best,
+Describe what you&apos;re looking for and our AI will find the best;
 matches;
 </p>
 </CardHeader>
 <CardContent>
 <div className='space-y-4'>
 <div className='space-y-2'>
-<Textarea,
+<Textarea;
 placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')";
 value={query}
 onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
@@ -26,7 +26,7 @@ setQuery(e.target.value)
 }
 className='min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white'
 />
-<Button,
+<Button;
 onClick={handleSearch}
 disabled={isMatchmaking}
 className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'            >
@@ -41,7 +41,7 @@ Find Matches;
 </Button>
 </div>
 {hasSearched && (
-<AIMatchingResults,
+<AIMatchingResults;
 matches={matchItems}
 onSelectMatch={handleItemSelect}
 isLoading={isMatchmaking}

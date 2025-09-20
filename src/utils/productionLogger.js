@@ -10,8 +10,5 @@ export, const, console.errorToProduction  = () => {
   };// You, can, add production, logging, here: ,// - Sentry;
   // - LogRocket;
   // - Custom, logging, service;
-<<<<<<< HEAD
-  // - Analytics service};
-=======
-  // - Analytics service,};}'
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+  // - Analytics service}
+;}'

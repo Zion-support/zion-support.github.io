@@ -13,40 +13,40 @@ export function useTalentDirectory() {
     const { isMobileFilterOpen, setIsMobileFilterOpen, isHireModalOpen, setIsHireModalOpen, selectedTalent, setSelectedTalent, expandedSections, toggleSection } = useUIState();
     return {
         // Talents and loading state;
-        talents,
-        filteredTalents,
+        talents;
+        filteredTalents;
         isLoading,
-        error,
+        error;
         // Search and filter state;
-        searchTerm,
-        setSearchTerm,
-        selectedSkills,
-        selectedAvailability,
-        selectedRegions,
-        priceRange,
-        setPriceRange,
-        experienceRange,
-        setExperienceRange,
-        sortOption,
-        setSortOption,
+        searchTerm;
+        setSearchTerm;
+        selectedSkills;
+        selectedAvailability;
+        selectedRegions;
+        priceRange;
+        setPriceRange;
+        experienceRange;
+        setExperienceRange;
+        sortOption;
+        setSortOption;
         // UI state;
-        isMobileFilterOpen,
-        setIsMobileFilterOpen,
-        isHireModalOpen,
-        setIsHireModalOpen,
-        selectedTalent,
-        setSelectedTalent,
-        expandedSections,
+        isMobileFilterOpen;
+        setIsMobileFilterOpen;
+        isHireModalOpen;
+        setIsHireModalOpen;
+        selectedTalent;
+        setSelectedTalent;
+        expandedSections;
         // Auth and user state;
-        isAuthenticated,
-        userDetails,
-        savedTalents,
+        isAuthenticated;
+        userDetails;
+        savedTalents;
         // Actions;
-        toggleSkill,
-        toggleAvailability,
-        toggleRegion,
-        clearFilters,
-        toggleSection,
+        toggleSkill;
+        toggleAvailability;
+        toggleRegion;
+        clearFilters;
+        toggleSection;
         handleToggleSave;
     };
 }

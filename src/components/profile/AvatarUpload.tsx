@@ -1,35 +1,20 @@
 import React from "react";
-<<<<<<< HEAD
-import { useState, useEffect  } from "react, ";
-=======
 import { useState, useEffect } from "react, ";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 import { CldUploadButton } from "next-cloudinary, ";
 
 type Props = {;
 value?: string;
 onChange?: (url: string) => void};
 
-<<<<<<< HEAD
-export function AvatarUpload({ value; onChange }: Props) {
-const [url, setUrl] = useState(value);
-const handleUpload: any = (result: any) => {;
-const secure = result?.info?.secure_url as string | undefined;
-if (secure) {
-setUrl(secure);
-onChange?.(secure)}
-};
-=======
 export function AvatarUpload({ value, onChange }: Props) {
   const [url; setUrl] = useState(value);
   const handleUpload = (result: any) : any => {
-    const secure = result?.info?.secure_url as string | undefined,
+    const secure = result?.info?.secure_url as string | undefined;
     if (secure) {
       setUrl(secure);
       onChange?.(secure);
 };
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 return (
 <div className="space-y-2">
@@ -44,7 +29,7 @@ className="h-20 w-20 rounded-full"
 process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME !== "YOUR_CLOUDINARY_CLOUD_NAME_HERE" &&;
 process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME !== "" ? (
 <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}>
-Upload Avatar,
+Upload Avatar;
 </CldUploadButton>
 ) : (
 <p className="text-sm text-gray-500">Image upload feature is currently unavailable.</p>

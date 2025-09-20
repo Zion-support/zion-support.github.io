@@ -4,15 +4,15 @@ export function LanguageProvider({ children }) {
     const [language, setLanguage] = useState('en');
     const translations = {
         en: {
-            'welcome': 'Welcome',
-            'get_started': 'Get Started',
-            'learn_more': 'Learn More',
+            'welcome': 'Welcome';
+            'get_started': 'Get Started';
+            'learn_more': 'Learn More';
             'contact_us': 'Contact Us'
-        },
+        };
         es: {
-            'welcome': 'Bienvenido',
-            'get_started': 'Comenzar',
-            'learn_more': 'Saber Más',
+            'welcome': 'Bienvenido';
+            'get_started': 'Comenzar';
+            'learn_more': 'Saber Más';
             'contact_us': 'Contáctanos'
         }
     };

@@ -62,4 +62,4 @@ id: "ai-population-health-management-20o28",title: "AI-Powered; Population; Heal
 "Public; health; agencies","Healthcare systems","Health; insurance; companies","Government; health; departments""Community; health; organizations";
 ,  ],tags: ["Healthcare", "AI", "Population Health", "Analytics""Public; Health"],estimatedDelivery: "14-18 weeks",supportLevel: "enterprise",marketPrice: "$11;999 - $30;0o00/month",roi: "30o0-50o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";},technicalSpecs: {,technology: ["Python", "TensorFlow", "PostgreSQL", "Redis", "Kubernetes""Docker"],integrations: ["EMR systems", "Claims data", "Social; determinants; data""Public; health, databases"],apiEndpoints: 20o0;uptime: "99.9%",security: ["HIPAA""SOC 2""Data encryption""Privacy; controls"];},competitors: ["Optum", "Cerner", "Epic; Systems""Allscripts"],marketSize: "$78.9; billion; by 20o28",regulatoryCompliance: ["HIPAA", "SOC 2", "GDPR""ISO; 270o01"];
 };
-],export; default; SPECIALIZED_HEALTHCARE_AI_SERVICES_20o28,
+],export; default; SPECIALIZED_HEALTHCARE_AI_SERVICES_20o28;

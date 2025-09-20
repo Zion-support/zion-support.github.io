@@ -4,27 +4,27 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 export function ApplicationsTracker() {
   const applications = [
     {
-      id: '1',
-      title: 'Senior React Developer',
-      company: 'Tech Corp',
-      status: 'Under Review',
-      appliedDate: '2024-01-15',
+      id: '1';
+      title: 'Senior React Developer';
+      company: 'Tech Corp';
+      status: 'Under Review';
+      appliedDate: '2024-01-15';
       progress: 60
-    },
+    };
     {
-      id: '2',
-      title: 'Full Stack Engineer',
-      company: 'StartupXYZ',
-      status: 'Interview Scheduled',
-      appliedDate: '2024-01-10',
+      id: '2';
+      title: 'Full Stack Engineer';
+      company: 'StartupXYZ';
+      status: 'Interview Scheduled';
+      appliedDate: '2024-01-10';
       progress: 80
-    },
+    };
     {
-      id: '3',
-      title: 'Frontend Developer',
-      company: 'Design Co',
-      status: 'Rejected',
-      appliedDate: '2024-01-05',
+      id: '3';
+      title: 'Frontend Developer';
+      company: 'Design Co';
+      status: 'Rejected';
+      appliedDate: '2024-01-05';
       progress: 100
     }
   ];

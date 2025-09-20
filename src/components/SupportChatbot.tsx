@@ -5,7 +5,7 @@ import { ChatMessage,, ChatInput,, ,  } from '@/components/ChatAssistant';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface Msg { id: string role: 'user' | 'assistant', message: string }
 
-// Fallback responses when API is unavailable,
+// Fallback responses when API is unavailable;
 if (!open) {
 onClick={() => setOpen(true)}
 size='icon';
@@ -20,7 +20,7 @@ return (
 <div className='fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40'>
 <div className='bg-zion-blue-dark p-2 flex justify-between items-center'>
 <span className='text-white font-medium'>Help Bot</span>
-<Button,
+<Button;
 variant='ghost'
 size='icon';
 className='text-white'
@@ -29,12 +29,12 @@ aria-label='Close help bot'        >
 <X className='h-5 w-5' />
 </Button>
 </div>
-<div,
+<div;
 className='flex-1 overflow-y-auto p-3 space-y-4'
 style={{ maxHeight: '400px' }}
 >;
 {messages.length === 0 && (
-<ChatMessage,
+<ChatMessage;
 role='assistant';
 message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?";
 />
@@ -51,16 +51,16 @@ message="Hi! I'm here to help you with questions about Zion. What can I assist y
 </div>
 )
 }catch () {
-//ignore parse errors,
+//ignore parse errors;
 }';
 }buffer = lines[lines.length - 1] |'';
 }catch (err) {';
 logErrorToProduction ('Chatbot error:', {
 data: err;
 })
-//Provide a helpful fallback response instead of generic error const errorMsg: Msg = {',
-id: Date.now () .toString () + '-e';',
-role: 'assistant',
+//Provide a helpful fallback response instead of generic error const errorMsg: Msg = {';
+id: Date.now () .toString () + '-e';';
+role: 'assistant';
 message: fallbackResponse;
 }
 setMessages (prev => [...prev errorMsg])
@@ -73,15 +73,15 @@ setTyping (false)
 }> <X className="h-5 w-5" /> </Button> </div> <ChatMessage role="assistant" message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" />)
 }{
 messages.map (m => (<ChatMessage key= {
-m.id,
+m.id;
 }role= {
-m.role,
+m.role;
 }message= {
-m.message,
+m.message;
 }/>) )
 })
 }<div ref= {
-endRef,
+endRef;
 }/> </div> </div> </div>)
 }'";
 }

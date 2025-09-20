@@ -22,7 +22,7 @@ className={`h-5 w-5 mt-1 ${a.achieved ? 'text-green-600' : 'text-muted-foregroun
 <p className='text-sm text-muted-foreground'>{a.description}</p>            </div>
 <p className="font-medium">{a.title}</p>
 <p className="text-sm text-muted-foreground">{a.description}</p>
-<BadgeCheck,
+<BadgeCheck;
 className={`h-5 w-5 mt-1 ${a.achieved ? "text-green-600" : "text-muted-foreground"}`}
 />
 <div>

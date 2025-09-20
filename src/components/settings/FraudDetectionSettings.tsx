@@ -8,7 +8,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 import { Accordion;
 , , AccordionContent;
 , , AccordionItem;
-, , AccordionTrigger } from "@/components/ui/accordion",
+, , AccordionTrigger } from "@/components/ui/accordion";
 import { toast,, ,  } from '@/hooks/use-toast';
 import { supabase,, ,  } from '@/integrations/supabase/client';
 import { useAuth,  } from '@/hooks/useAuth';
@@ -42,7 +42,7 @@ Message Content Scanning;
 Scan message content for potentially harmful or abusive material;
 </p>
 </div>
-<Switch,
+<Switch;
 id="message-scanning";
 aria-label="Message scanning";
 checked={messageScanningEnabled}
@@ -59,7 +59,7 @@ Activity Monitoring;
 Monitor account activity for suspicious patterns;
 </p>
 </div>
-<Switch,
+<Switch;
 id="activity-monitoring";
 aria-label="Activity monitoring";
 checked={activityMonitoringEnabled}
@@ -76,7 +76,7 @@ AI-powered Analysis;
 Use AI to analyze content and behavior for potential fraud;
 </p>
 </div>
-<Switch,
+<Switch;
 id="ai-analysis";
 aria-label="AI analysis";
 checked={aiAnalysisEnabled}
@@ -111,7 +111,7 @@ We prioritize keeping our marketplace safe while respecting your privacy.;
 </Accordion>
 
 <div className="pt-2">
-<Button,
+<Button;
 onClick={handleSavePreferences}
 disabled={isSaving}
 className="bg-zion-purple hover:bg-zion-purple-light"

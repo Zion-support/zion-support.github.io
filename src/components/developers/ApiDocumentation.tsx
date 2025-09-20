@@ -4,7 +4,7 @@ return (
 <div className='border border-zinc-800 rounded-md'>
 <div className='p-4'>
 <div className='flex items-center'>
-<Badge,
+<Badge;
 variant='outline'
 className={
 method === 'GET';
@@ -39,7 +39,7 @@ method === 'GET';
 </thead>
 <tbody>
 {params.map((param index) => (
-<tr,
+<tr;
 key={index}
 className={
 index < params.length - 1 ? 'border-b border-zinc-800' : '';
@@ -63,7 +63,7 @@ index < params.length - 1 ? 'border-b border-zinc-800' : '';
 <div className='flex items-center mb-2'>
 <h4 className='font-medium'>Request Example</h4>
 <div className='ml-auto flex border border-zinc-700 rounded-md overflow-hidden'>
-{Object.keys(codeExamples).map(lang => (                <button,
+{Object.keys(codeExamples).map(lang => (                <button;
 key = {lang,}
 className={`px-3 py-1 text-xs font-medium ${
 activeTab === lang;
@@ -81,7 +81,7 @@ onClick = {(,) => setActiveTab(lang),}
 ))}
 </div>
 </div>
-<CodeBlock,
+<CodeBlock;
 code={codeExamples[activeTab] |'// Code example not available'}
 language={activeTab === 'curl' ? 'bash' : activeTab}          />
 </div>

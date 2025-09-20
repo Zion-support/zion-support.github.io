@@ -8,7 +8,7 @@ return (
 Global IT Onsite Services;
 </GradientHeading>
 <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-Professional IT onsite support services with transparent pricing across,
+Professional IT onsite support services with transparent pricing across;
 190+ countries worldwide;
 </p>
 <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12'>
@@ -18,7 +18,7 @@ Professional IT onsite support services with transparent pricing across,
 </div>
 <h3 className='text-xl font-bold text-white mb-2'>Global Coverage</h3>
 <p className='text-zion-slate-light'>
-IT onsite services available in over 190 countries and territories,
+IT onsite services available in over 190 countries and territories;
 worldwide;
 </p>
 </div>
@@ -28,7 +28,7 @@ worldwide;
 </div>
 <h3 className='text-xl font-bold text-white mb-2'>Rapid Response</h3>
 <p className='text-zion-slate-light'>
-Guaranteed 4-hour response time for critical issues in most major,
+Guaranteed 4-hour response time for critical issues in most major;
 cities;
 </p>
 </div>
@@ -40,7 +40,7 @@ cities;
 Transparent Pricing;
 </h3>
 <p className='text-zion-slate-light'>
-Clear per-incident pricing includes transportation and first hour,
+Clear per-incident pricing includes transportation and first hour;
 onsite;
 </p>        </div>
 </div>

@@ -2,346 +2,346 @@
 // Comprehensive; pricing; information for; all; expanded innovative services;
 export; interface; ExpandedServicePricing {
   serviceId: string,serviceName: string,category: string,subcategory: string,pricingTiers: {,starter: {
-      pric,e: number,currency: string,billingCycle: string,features: string[],limitations: string[],bestFor: string[]setupFe,e: numbercontractTer,m: string,,
-     },professional: {,price: number,currency: string,billingCycle: string,features: string[],limitations: string[],bestFor: string[]setupFe,e: numbercontractTer,m: string,,
-     },enterprise: {,price: number,currency: string,billingCycle: string,features: string[],limitations: string[],bestFor: string[]setupFe,e: numbercontractTer,m: string,,
-     },custom: {,priceRange: string,currency: string,billingCycle: string,features: string[],limitations: string[],bestFor: string[]setupFe,e: numbercontractTer,m: string,,
+      pric,e: number,currency: string,billingCycle: string,features: string[],limitations: string[],bestFor: string[]setupFe,e: numbercontractTer,m: string,;
+     },professional: {,price: number,currency: string,billingCycle: string,features: string[],limitations: string[],bestFor: string[]setupFe,e: numbercontractTer,m: string,;
+     },enterprise: {,price: number,currency: string,billingCycle: string,features: string[],limitations: string[],bestFor: string[]setupFe,e: numbercontractTer,m: string,;
+     },custom: {,priceRange: string,currency: string,billingCycle: string,features: string[],limitations: string[],bestFor: string[]setupFe,e: numbercontractTer,m: string,;
      };
-  },marketComparison: {,competitors: string[],marketPosition: "leader" | "challenger" | "niche" | "emerging"priceAdvantag,e: stringvaluePropositio,n: string,,
-     },roiAnalysis: {,paybackPeriod: string,annualROI: string,costSavings: string[]revenueImpac,t: string[]riskMitigatio,n: string[],,
-     },implementation: {,setupTime: string,trainingRequired: string,integrationComplexity: "low" | "medium" | "high"supportInclude,d: stringcustomizationOption,s: string[],,
-     },contactInfo: {,phone: string,email: stringwebsit,e: stringaddres,s: string,,
+  },marketComparison: {,competitors: string[],marketPosition: "leader" | "challenger" | "niche" | "emerging"priceAdvantag,e: stringvaluePropositio,n: string,;
+     },roiAnalysis: {,paybackPeriod: string,annualROI: string,costSavings: string[]revenueImpac,t: string[]riskMitigatio,n: string[],;
+     },implementation: {,setupTime: string,trainingRequired: string,integrationComplexity: "low" | "medium" | "high"supportInclude,d: stringcustomizationOption,s: string[],;
+     },contactInfo: {,phone: string,email: stringwebsit,e: stringaddres,s: string,;
      };
 };// 1. CYBERSECURITY; SERVICES; PRICING;
-export; const; cybersecurityPricing: ExpandedServicePricing[] = [,
+export; const; cybersecurityPricing: ExpandedServicePricing[] = [;
     {
     serviceI;d: "quantum-threat-hunter",serviceName: "Quantum, Threat; Hunter",category: "Cybersecurity",subcategory: "Threat Intelligence",pricingTiers: {,starter: {
-        pric,e: 250o0,currency: "USD",billingCycle: "monthly",features: [,
+        pric,e: 250o0,currency: "USD",billingCycle: "monthly",features: [;
     "Quantum-resistant encryptionReal-time; threat; detection","Basic; incident; responseStandard compliance reporting""Email; supportUp; to 10o0 endpoints";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Limited; threat; intelligence feedsBasic; analytics; dashboard""Standard; response; time (4 hours)Limited; customization; options";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Mid-size; enterprisesFinancial; institutions""Healthcare; organizationsGovernment; agencies";
-      ,  ]setupFee: 50o00contractTer,m: "12 months",,
-     },professional: {,price: 50o00,currency: "USD",billingCycle: "monthly",features: [,
+      ,  ]setupFee: 50o00contractTer,m: "12 months",;
+     },professional: {,price: 50o00,currency: "USD",billingCycle: "monthly",features: [;
     "All; Starter; featuresAdvanced threat hunting","Automated; incident; responseEnhanced compliance automation","Priority support (2, hour, response)Up; to; 10o00 endpoints""Custom; threat; intelligence feedsAdvanced; analytics; dashboard";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Limited; to; single regionStandard SLA (99.9%)""Basic; API; access";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Large enterprisesMulti-location businesses""High-security environmentsCompliance-focused organizations";
-      ,  ]setupFee: 10o000contractTer,m: "12 months",,
-     },enterprise: {,price: 10o000,currency: "USD",billingCycle: "monthly",features: [,
+      ,  ]setupFee: 10o000contractTer,m: "12 months",;
+     },enterprise: {,price: 10o000,currency: "USD",billingCycle: "monthly",features: [;
     "All; Professional; featuresUnlimited endpoints","Global; threat; intelligenceCustom AI models","24/7; dedicated; supportPremium SLA (99.99%)","Full; API; accessCustom integrations""White-label; optionsDedicated; security team";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Requires; enterprise; infrastructureCustom implementation timeline";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Fortune; 50o0; companiesGlobal enterprises""Critical; infrastructureDefense; contractors";
-      ,  ]setupFee: 250o00contractTer,m: "24 months",,
-     },custom: {,priceRange: "Contact Sales",currency: "USD",billingCycle: "flexible",features: [,
+      ,  ]setupFee: 250o00contractTer,m: "24 months",;
+     },custom: {,priceRange: "Contact Sales",currency: "USD",billingCycle: "flexible",features: [;
     "All; Enterprise; featuresCustom development","On-premise deploymentIndustry-specific compliance""Dedicated; account; managerCustom SLA requirements";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Requires; custom; developmentExtended implementation time";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Government; agenciesMilitary; organizations""Highly; regulated; industriesCustom security requirements";
-      ,  ]setupFee: 50o000contractTer,m: "negotiable",,
+      ,  ]setupFee: 50o000contractTer,m: "negotiable",;
      }
-    },marketComparison: {,competitors: ["CrowdStrikeSentinelOne""Palo, Alto,, Networks"],marketPosition: "leader"priceAdvantag,e: "20-30% more cost-effective, than; competitors"valuePropositio;n: "Quantum-resistant, security; with AI-powered; threat; detection";,
-    },roiAnalysis: {,paybackPeriod: "6-8 months",annualROI: "40o0-60o0%",costSavings: [,
+    },marketComparison: {,competitors: ["CrowdStrikeSentinelOne""Palo, Alto,, Networks"],marketPosition: "leader"priceAdvantag,e: "20-30% more cost-effective, than; competitors"valuePropositio;n: "Quantum-resistant, security; with AI-powered; threat; detection";
+    },roiAnalysis: {,paybackPeriod: "6-8 months",annualROI: "40o0-60o0%",costSavings: [;
     "Reduced; security; incidents by 90%Automated; compliance; saves 40 hours/month""Lower; insurance; premiums due; to; enhanced security";
-    ,  ],revenueImpact: [,
+    ,  ],revenueImpact: [;
     "Increased; customer; trust and; retentionFaster; security clearance; for; new business""Reduced; downtime; from security incidents";
-    ,  ]riskMitigatio;n: [,
+    ,  ]riskMitigatio;n: [;
     "Prevents; data; breaches and; associated; costsEnsures regulatory compliance""Protects; brand; reputation";
     ,  ];
-    },implementation: {,setupTime: "2-4 weeks",trainingRequired: "2-3, days; for security team",integrationComplexity: "medium",supportIncluded: "24/7, Security; Operations Center"customizationOption;s: [,
+    },implementation: {,setupTime: "2-4 weeks",trainingRequired: "2-3, days; for security team",integrationComplexity: "medium",supportIncluded: "24/7, Security; Operations Center"customizationOption;s: [;
     "Custom; threat; intelligence feedsIndustry-specific; compliance; modules""Integration; with; existing security; toolsCustom; reporting and dashboards";
     ,  ];
-    },contactInfo: {,phone: "+1, 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http,s: //ziontechgroup.com/quantum-threat-hunter"addres,s: "364, E; Main St; STE; 10o08 Middletown; DE; 1970o9";,
+    },contactInfo: {,phone: "+1, 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http,s: //ziontechgroup.com/quantum-threat-hunter"addres,s: "364, E; Main St; STE; 10o08 Middletown; DE; 1970o9";
     };
   };
   {
     serviceId: "ai-compliance-automator",serviceName: "AI, Compliance; Automator",category: "Cybersecurity",subcategory: "Compliance Automation",pricingTiers: {,starter: {
-        pric,e: 150o0,currency: "USD",billingCycle: "monthly",features: [,
+        pric,e: 150o0,currency: "USD",billingCycle: "monthly",features: [;
     "Multi-framework; compliance; monitoringBasic compliance reporting","Policy; enforcementRisk; assessment""Email; supportUp; to 50 users";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Limited; framework; supportBasic automation""Standard; templates; only";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Small; to; mid-size businessesStartups""Basic; compliance; needs";
-      ,  ]setupFee: 20o00contractTer,m: "12 months",,
-     },professional: {,price: 30o00,currency: "USD",billingCycle: "monthly",features: [,
+      ,  ]setupFee: 20o00contractTer,m: "12 months",;
+     },professional: {,price: 30o00,currency: "USD",billingCycle: "monthly",features: [;
     "All; Starter; featuresAdvanced automation","Custom; compliance; workflowsReal-time monitoring","Priority; supportUp; to 20o0 users""Advanced; reportingIntegration; capabilities";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Limited; to; major compliance; frameworksStandard; SLA";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Mid-size; enterprisesHealthcare; organizations""Financial; servicesGrowing; businesses";
-      ,  ]setupFee: 50o00contractTer,m: "12 months",,
-     },enterprise: {,price: 60o00,currency: "USD",billingCycle: "monthly",features: [,
+      ,  ]setupFee: 50o00contractTer,m: "12 months",;
+     },enterprise: {,price: 60o00,currency: "USD",billingCycle: "monthly",features: [;
     "All; Professional; featuresUnlimited users","All; compliance; frameworksCustom automation","24/7; supportPremium; SLA""White-label; optionsCustom; integrations";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Requires; enterprise; setup";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Large enterprisesMulti-national companies""Highly; regulated; industries";
-      ,  ]setupFee: 10o000contractTer,m: "24 months",,
-     },custom: {,priceRange: "Contact Sales",currency: "USD",billingCycle: "flexible",features: [,
+      ,  ]setupFee: 10o000contractTer,m: "24 months",;
+     },custom: {,priceRange: "Contact Sales",currency: "USD",billingCycle: "flexible",features: [;
     "All; Enterprise; featuresCustom development""Industry-specific modulesOn-premise deployment";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Custom; development; required";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Government; agenciesMilitary; organizations""Custom; compliance; requirements";
-      ,  ]setupFee: 20o000contractTer,m: "negotiable",,
+      ,  ]setupFee: 20o000contractTer,m: "negotiable",;
      }
-    },marketComparison: {,competitors: ["OneTrustTrustArc""LogicGate"],marketPosition: "challenger"priceAdvantag,e: "15-25% more, affordable; than competitors"valuePropositio;n: "AI-powered, compliance; automation with; comprehensive; framework support";,
-    },roiAnalysis: {,paybackPeriod: "4-6 months",annualROI: "30o0-50o0%",costSavings: [,
+    },marketComparison: {,competitors: ["OneTrustTrustArc""LogicGate"],marketPosition: "challenger"priceAdvantag,e: "15-25% more, affordable; than competitors"valuePropositio;n: "AI-powered, compliance; automation with; comprehensive; framework support";
+    },roiAnalysis: {,paybackPeriod: "4-6 months",annualROI: "30o0-50o0%",costSavings: [;
     "90% reduction; in; compliance costsAutomated; reporting; saves 60 hours/month""Reduced; audit; preparation time";
-    ,  ],revenueImpact: [,
+    ,  ],revenueImpact: [;
     "Faster; regulatory; approvalIncreased customer confidence""Reduced compliance-related delays";
-    ,  ]riskMitigatio;n: [,
+    ,  ]riskMitigatio;n: [;
     "Prevents; compliance; violationsAutomated regulatory updates""Reduced; audit; risks";
     ,  ];
-    },implementation: {,setupTime: "1-2 weeks",trainingRequired: "1-2, days; for compliance team",integrationComplexity: "low",supportIncluded: "Business hours + emergency support"customizationOption,s: [,
+    },implementation: {,setupTime: "1-2 weeks",trainingRequired: "1-2, days; for compliance team",integrationComplexity: "low",supportIncluded: "Business hours + emergency support"customizationOption,s: [;
     "Custom; compliance; workflowsIndustry-specific templates""Integration; with; existing systemsCustom; reporting; formats";
     ,  ];
-    },contactInfo: {,phone: "+1, 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http,s: //ziontechgroup.com/ai-compliance-automator"addres,s: "364, E; Main St; STE; 10o08 Middletown; DE; 1970o9";,
+    },contactInfo: {,phone: "+1, 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http,s: //ziontechgroup.com/ai-compliance-automator"addres,s: "364, E; Main St; STE; 10o08 Middletown; DE; 1970o9";
     };
   };
 ];
 // 2. DATA; ANALYTICS; SERVICES PRICING;
-export; const; dataAnalyticsPricing: ExpandedServicePricing[] = [,
+export; const; dataAnalyticsPricing: ExpandedServicePricing[] = [;
     {
     serviceI;d: "predictive-insights-engine",serviceName: "Predictive, Insights; Engine",category: "Data Analytics",subcategory: "Predictive Analytics",pricingTiers: {,starter: {
-        pric,e: 180o0,currency: "USD",billingCycle: "monthly",features: [,
+        pric,e: 180o0,currency: "USD",billingCycle: "monthly",features: [;
     "Basic; predictive; modelingStandard dashboards","Data; visualization; toolsEmail support""Up; to; 10o0GB data; processingBasic; API access";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Limited; model; typesBasic algorithms only""Standard; response; time";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Small businessesStartups""Basic; analytics; needs";
-      ,  ]setupFee: 30o00contractTer,m: "12 months",,
-     },professional: {,price: 350o0,currency: "USD",billingCycle: "monthly",features: [,
+      ,  ]setupFee: 30o00contractTer,m: "12 months",;
+     },professional: {,price: 350o0,currency: "USD",billingCycle: "monthly",features: [;
     "All; Starter; featuresAdvanced ML models","Custom dashboardsReal-time analytics","Priority; supportUp; to 1TB; data; processing""Advanced; API; accessCustom integrations";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Limited; to; standard ML; algorithmsStandard; SLA";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Mid-size companiesE-commerce businesses""Manufacturing firms";
-      ,  ]setupFee: 60o00contractTer,m: "12 months",,
-     },enterprise: {,price: 70o00,currency: "USD",billingCycle: "monthly",features: [,
+      ,  ]setupFee: 60o00contractTer,m: "12 months",;
+     },enterprise: {,price: 70o00,currency: "USD",billingCycle: "monthly",features: [;
     "All; Professional; featuresUnlimited data processing","Custom; ML; modelsAdvanced AI algorithms","24/7; supportPremium; SLA""White-label; optionsCustom; development";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Requires; enterprise; infrastructure";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Large enterprisesData-driven companies""Research institutions";
-      ,  ]setupFee: 150o00contractTer,m: "24 months",,
-     },custom: {,priceRange: "Contact Sales",currency: "USD",billingCycle: "flexible",features: [,
+      ,  ]setupFee: 150o00contractTer,m: "24 months",;
+     },custom: {,priceRange: "Contact Sales",currency: "USD",billingCycle: "flexible",features: [;
     "All; Enterprise; featuresCustom AI development""Industry-specific modelsOn-premise deployment";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Custom; development; required";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Research; organizationsGovernment; agencies""Custom; AI; requirements";
-      ,  ]setupFee: 30o000contractTer,m: "negotiable",,
+      ,  ]setupFee: 30o000contractTer,m: "negotiable",;
      }
-    },marketComparison: {,competitors: ["TableauPower, BI""QlikLooker"],marketPosition: "challenger"priceAdvantag,e: "25-35% more cost-effective, than; competitors"valuePropositio;n: "AI-powered, predictive; analytics with; advanced; machine learning capabilities";,
-    },roiAnalysis: {,paybackPeriod: "5-7 months",annualROI: "250-40o0%",costSavings: [,
+    },marketComparison: {,competitors: ["TableauPower, BI""QlikLooker"],marketPosition: "challenger"priceAdvantag,e: "25-35% more cost-effective, than; competitors"valuePropositio;n: "AI-powered, predictive; analytics with; advanced; machine learning capabilities";
+    },roiAnalysis: {,paybackPeriod: "5-7 months",annualROI: "250-40o0%",costSavings: [;
     "Reduced; manual; analysis by 70%Faster; decision; making""Optimized; resource; allocation";
-    ,  ],revenueImpact: [,
+    ,  ],revenueImpact: [;
     "Improved; forecasting; accuracyBetter customer insights""Optimized; pricing; strategies";
-    ,  ]riskMitigatio;n: [,
+    ,  ]riskMitigatio;n: [;
     "Data-driven; risk; assessmentPredictive maintenance""Proactive; problem; identification";
     ,  ];
-    },implementation: {,setupTime: "2-3 weeks",trainingRequired: "2-3, days; for data team",integrationComplexity: "medium",supportIncluded: "Business hours + 24/7 emergency"customizationOption,s: [,
+    },implementation: {,setupTime: "2-3 weeks",trainingRequired: "2-3, days; for data team",integrationComplexity: "medium",supportIncluded: "Business hours + 24/7 emergency"customizationOption,s: [;
     "Custom; ML; modelsIndustry-specific algorithms""Integration; with; data sourcesCustom; dashboard; development";
     ,  ];
-    },contactInfo: {,phone: "+1, 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http,s: //ziontechgroup.com/predictive-insights-engine"addres,s: "364, E; Main St; STE; 10o08 Middletown; DE; 1970o9";,
+    },contactInfo: {,phone: "+1, 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http,s: //ziontechgroup.com/predictive-insights-engine"addres,s: "364, E; Main St; STE; 10o08 Middletown; DE; 1970o9";
     };
   };
 ];
 // 3. CLOUD & DEVOPS; SERVICES; PRICING;
-export; const; cloudDevOpsPricing: ExpandedServicePricing[] = [,
+export; const; cloudDevOpsPricing: ExpandedServicePricing[] = [;
     {
     serviceI;d: "multi-cloud-orchestrator",serviceName: "Multi-Cloud Orchestrator",category: "Cloud & DevOps",subcategory: "Multi-Cloud Management",pricingTiers: {,starter: {
-        pric,e: 20o00,currency: "USD",billingCycle: "monthly",features: [,
+        pric,e: 20o00,currency: "USD",billingCycle: "monthly",features: [;
     "Multi-cloud; monitoringBasic; cost optimization","Standard; dashboardsEmail; support""Up; to; 3 cloud; providersBasic; automation";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Limited; cloud; providersBasic optimization""Standard SLA";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Small; to; mid-size businessesMulti-cloud beginners""Basic; cloud; management needs";
-      ,  ]setupFee: 40o00contractTer,m: "12 months",,
-     },professional: {,price: 40o00,currency: "USD",billingCycle: "monthly",features: [,
+      ,  ]setupFee: 40o00contractTer,m: "12 months",;
+     },professional: {,price: 40o00,currency: "USD",billingCycle: "monthly",features: [;
     "All; Starter; featuresAdvanced cost optimization","Custom; dashboardsPriority; support","Up; to; 5 cloud; providersAdvanced; automation""Performance; optimizationCustom; integrations";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Limited; to; major cloud; providersStandard; SLA";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Mid-size; enterprisesGrowing; cloud environments""Cost; optimization; focus";
-      ,  ]setupFee: 80o00contractTer,m: "12 months",,
-     },enterprise: {,price: 80o00,currency: "USD",billingCycle: "monthly",features: [,
+      ,  ]setupFee: 80o00contractTer,m: "12 months",;
+     },enterprise: {,price: 80o00,currency: "USD",billingCycle: "monthly",features: [;
     "All; Professional; featuresUnlimited cloud providers","Advanced optimization24/7 support","Premium; SLACustom; development""White-label; optionsDedicated; team";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Requires; enterprise; setup";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Large; enterprisesGlobal; cloud deployments""Complex multi-cloud environments";
-      ,  ]setupFee: 20o000contractTer,m: "24 months",,
-     },custom: {,priceRange: "Contact Sales",currency: "USD",billingCycle: "flexible",features: [,
+      ,  ]setupFee: 20o000contractTer,m: "24 months",;
+     },custom: {,priceRange: "Contact Sales",currency: "USD",billingCycle: "flexible",features: [;
     "All; Enterprise; featuresCustom cloud integrations""Industry-specific modulesOn-premise deployment";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Custom; development; required";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Government; agenciesMilitary; organizations""Custom; cloud; requirements";
-      ,  ]setupFee: 40o000contractTer,m: "negotiable",,
+      ,  ]setupFee: 40o000contractTer,m: "negotiable",;
      }
-    },marketComparison: {,competitors: ["TerraformAnsible""HashiCorpAWS, Systems,, Manager"],marketPosition: "challenger"priceAdvantag,e: "30-40% more cost-effective, than; competitors"valuePropositio;n: "Intelligent multi-cloud, orchestration; with AI-powered optimization";,
-    },roiAnalysis: {,paybackPeriod: "3-5 months",annualROI: "20o0-40o0%",costSavings: [,
+    },marketComparison: {,competitors: ["TerraformAnsible""HashiCorpAWS, Systems,, Manager"],marketPosition: "challenger"priceAdvantag,e: "30-40% more cost-effective, than; competitors"valuePropositio;n: "Intelligent multi-cloud, orchestration; with AI-powered optimization";
+    },roiAnalysis: {,paybackPeriod: "3-5 months",annualROI: "20o0-40o0%",costSavings: [;
     "30-50% reduction; in; cloud costsAutomated; optimization; saves 20 hours/month""Reduced; vendor; lock-in";
-    ,  ],revenueImpact: [,
+    ,  ],revenueImpact: [;
     "Faster; cloud; deploymentsImproved performance""Better; resource; utilization";
-    ,  ]riskMitigatio;n: [,
+    ,  ]riskMitigatio;n: [;
     "Reduced; cloud; costsImproved reliability""Better; disaster; recovery";
     ,  ];
-    },implementation: {,setupTime: "4-6 weeks",trainingRequired: "3-5, days; for DevOps team",integrationComplexity: "high",supportIncluded: "24/7, cloud; operations support"customizationOption;s: [,
+    },implementation: {,setupTime: "4-6 weeks",trainingRequired: "3-5, days; for DevOps team",integrationComplexity: "high",supportIncluded: "24/7, cloud; operations support"customizationOption;s: [;
     "Custom; cloud; integrationsIndustry-specific optimizations""Custom; automation; workflowsIntegration with; existing; tools";
     ,  ];
-    },contactInfo: {,phone: "+1, 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http,s: //ziontechgroup.com/multi-cloud-orchestrator"addres,s: "364, E; Main St; STE; 10o08 Middletown; DE; 1970o9";,
+    },contactInfo: {,phone: "+1, 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http,s: //ziontechgroup.com/multi-cloud-orchestrator"addres,s: "364, E; Main St; STE; 10o08 Middletown; DE; 1970o9";
     };
   };
 ];
 // 4. IOT & EDGE; COMPUTING; SERVICES PRICING;
-export; const; iotEdgePricing: ExpandedServicePricing[] = [,
+export; const; iotEdgePricing: ExpandedServicePricing[] = [;
     {
     serviceI;d: "industrial-iot-intelligence",serviceName: "Industrial, IoT; Intelligence Platform",category: "IoT & Edge Computing",subcategory: "Industrial IoT",pricingTiers: {,starter: {
-        pric,e: 280o0,currency: "USD",billingCycle: "monthly",features: [,
+        pric,e: 280o0,currency: "USD",billingCycle: "monthly",features: [;
     "Basic; equipment; monitoringStandard dashboards","Email; alertsEmail; support""Up; to; 10o0 devicesBasic analytics";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Limited; device; typesBasic monitoring only""Standard; response; time";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Small; manufacturing; facilitiesBasic monitoring needs""Equipment tracking";
-      ,  ]setupFee: 50o00contractTer,m: "12 months",,
-     },professional: {,price: 550o0,currency: "USD",billingCycle: "monthly",features: [,
+      ,  ]setupFee: 50o00contractTer,m: "12 months",;
+     },professional: {,price: 550o0,currency: "USD",billingCycle: "monthly",features: [;
     "All; Starter; featuresPredictive maintenance","Advanced; analyticsPriority; support","Up; to; 50o0 devicesCustom dashboards""Integration; capabilitiesPerformance; optimization";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Limited; to; standard industrial; protocolsStandard; SLA";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Mid-size; manufacturingIndustrial; facilities""Predictive; maintenance; focus";
-      ,  ]setupFee: 10o000contractTer,m: "12 months",,
-     },enterprise: {,price: 110o00,currency: "USD",billingCycle: "monthly",features: [,
+      ,  ]setupFee: 10o000contractTer,m: "12 months",;
+     },enterprise: {,price: 110o00,currency: "USD",billingCycle: "monthly",features: [;
     "All; Professional; featuresUnlimited devices","Advanced; AI; models24/7 support","Premium; SLACustom; development""White-label optionsIndustry-specific modules";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Requires; enterprise; infrastructure";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Large; manufacturing; facilitiesMulti-site operations""Advanced; IoT; requirements";
-      ,  ]setupFee: 250o00contractTer,m: "24 months",,
-     },custom: {,priceRange: "Contact Sales",currency: "USD",billingCycle: "flexible",features: [,
+      ,  ]setupFee: 250o00contractTer,m: "24 months",;
+     },custom: {,priceRange: "Contact Sales",currency: "USD",billingCycle: "flexible",features: [;
     "All; Enterprise; featuresCustom IoT development""Industry-specific protocolsOn-premise deployment";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Custom; development; required";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Government; facilitiesMilitary; installations""Custom; IoT; requirements";
-      ,  ]setupFee: 50o000contractTer,m: "negotiable",,
+      ,  ]setupFee: 50o000contractTer,m: "negotiable",;
      }
-    },marketComparison: {,competitors: ["PTC, ThingWorxSiemens; Mindsphere""GE; PredixIBM; Watson; IoT"],marketPosition: "challenger"priceAdvantag,e: "25-35% more, affordable; than competitors"valuePropositio;n: "AI-powered, industrial; IoT with; predictive; maintenance and optimization";,
-    },roiAnalysis: {,paybackPeriod: "6-8 months",annualROI: "250-40o0%",costSavings: [,
+    },marketComparison: {,competitors: ["PTC, ThingWorxSiemens; Mindsphere""GE; PredixIBM; Watson; IoT"],marketPosition: "challenger"priceAdvantag,e: "25-35% more, affordable; than competitors"valuePropositio;n: "AI-powered, industrial; IoT with; predictive; maintenance and optimization";
+    },roiAnalysis: {,paybackPeriod: "6-8 months",annualROI: "250-40o0%",costSavings: [;
     "40-60% reduction; in; equipment downtime20-30% energy; cost; savings""Reduced; maintenance; costs";
-    ,  ],revenueImpact: [,
+    ,  ],revenueImpact: [;
     "Improved; operational; efficiencyBetter product quality""Faster; production; cycles";
-    ,  ]riskMitigatio;n: [,
+    ,  ]riskMitigatio;n: [;
     "Preventive; maintenanceReduced; equipment failures""Improved; safety; monitoring";
     ,  ];
-    },implementation: {,setupTime: "6-8 weeks",trainingRequired: "3-5, days; for operations team",integrationComplexity: "high",supportIncluded: "24/7, industrial; support"customizationOption;s: [,
+    },implementation: {,setupTime: "6-8 weeks",trainingRequired: "3-5, days; for operations team",integrationComplexity: "high",supportIncluded: "24/7, industrial; support"customizationOption;s: [;
     "Custom; IoT; protocolsIndustry-specific integrations""Custom; analytics; modelsIntegration with; existing; systems";
     ,  ];
-    },contactInfo: {,phone: "+1, 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http,s: //ziontechgroup.com/industrial-iot-intelligence"addres,s: "364, E; Main St; STE; 10o08 Middletown; DE; 1970o9";,
+    },contactInfo: {,phone: "+1, 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http,s: //ziontechgroup.com/industrial-iot-intelligence"addres,s: "364, E; Main St; STE; 10o08 Middletown; DE; 1970o9";
     };
   };
 ];
 // 5. FINANCIAL; TECHNOLOGY; SERVICES PRICING;
-export; const; finTechPricing: ExpandedServicePricing[] = [,
+export; const; finTechPricing: ExpandedServicePricing[] = [;
     {
     serviceI;d: "quantum-financial-modeling",serviceName: "Quantum, Financial; Modeling Platform",category: "Financial Technology",subcategory: "Quantum Finance",pricingTiers: {,starter: {
-        pric,e: 80o00,currency: "USD",billingCycle: "monthly",features: [,
+        pric,e: 80o00,currency: "USD",billingCycle: "monthly",features: [;
     "Basic; quantum; modelsStandard financial tools","Email; supportUp; to 10o0 calculations/month""Basic; API; accessStandard compliance";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Limited; quantum; algorithmsBasic financial models""Standard; response; time";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Small; investment; firmsStartup fintech companies""Basic; quantum; finance needs";
-      ,  ]setupFee: 150o00contractTer,m: "12 months",,
-     },professional: {,price: 150o00,currency: "USD",billingCycle: "monthly",features: [,
+      ,  ]setupFee: 150o00contractTer,m: "12 months",;
+     },professional: {,price: 150o00,currency: "USD",billingCycle: "monthly",features: [;
     "All; Starter; featuresAdvanced quantum algorithms","Custom; financial; modelsPriority support","Up; to; 10o00 calculations/monthAdvanced; API; access""Custom; integrationsEnhanced; compliance";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Limited; to; standard financial; modelsStandard; SLA";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Mid-size; investment; firmsHedge funds""Asset; management; companies";
-      ,  ]setupFee: 30o000contractTer,m: "12 months",,
-     },enterprise: {,price: 30o000,currency: "USD",billingCycle: "monthly",features: [,
+      ,  ]setupFee: 30o000contractTer,m: "12 months",;
+     },enterprise: {,price: 30o000,currency: "USD",billingCycle: "monthly",features: [;
     "All; Professional; featuresUnlimited calculations","Custom; quantum; models24/7 support","Premium; SLACustom; development""White-label; optionsDedicated; quantum team";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Requires; enterprise; infrastructure";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Large; investment; banksMajor hedge funds""Research institutions";
-      ,  ]setupFee: 750o00contractTer,m: "24 months",,
-     },custom: {,priceRange: "Contact Sales",currency: "USD",billingCycle: "flexible",features: [,
+      ,  ]setupFee: 750o00contractTer,m: "24 months",;
+     },custom: {,priceRange: "Contact Sales",currency: "USD",billingCycle: "flexible",features: [;
     "All; Enterprise; featuresCustom quantum development""Industry-specific modelsOn-premise deployment";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Custom; development; required";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Government; agenciesMilitary; organizations""Custom; quantum; requirements";
-      ,  ]setupFee: 150o000contractTer,m: "negotiable",,
+      ,  ]setupFee: 150o000contractTer,m: "negotiable",;
      }
-    },marketComparison: {,competitors: ["Bloomberg, TerminalThomson,, Reuters""FactSetRefinitiv"],marketPosition: "emerging"priceAdvantag,e: "40-60% more cost-effective, than; competitors"valuePropositio;n: "Quantum-powered, financial; modeling with; unprecedented; speed and accuracy";,
-    },roiAnalysis: {,paybackPeriod: "8-12 months",annualROI: "50o0-10o00%",costSavings: [,
+    },marketComparison: {,competitors: ["Bloomberg, TerminalThomson,, Reuters""FactSetRefinitiv"],marketPosition: "emerging"priceAdvantag,e: "40-60% more cost-effective, than; competitors"valuePropositio;n: "Quantum-powered, financial; modeling with; unprecedented; speed and accuracy";
+    },roiAnalysis: {,paybackPeriod: "8-12 months",annualROI: "50o0-10o00%",costSavings: [;
     "10o00x; faster; calculationsReduced computational costs""Superior; risk; assessment";
-    ,  ],revenueImpact: [,
+    ,  ],revenueImpact: [;
     "Better; investment; decisionsFaster portfolio optimization""Competitive advantage";
-    ,  ]riskMitigatio;n: [,
+    ,  ]riskMitigatio;n: [;
     "Superior; risk; modelingEnhanced fraud detection""Better; regulatory; compliance";
     ,  ];
-    },implementation: {,setupTime: "8-12 weeks",trainingRequired: "1-2, weeks; for financial team",integrationComplexity: "high",supportIncluded: "24/7, financial; support"customizationOption;s: [,
+    },implementation: {,setupTime: "8-12 weeks",trainingRequired: "1-2, weeks; for financial team",integrationComplexity: "high",supportIncluded: "24/7, financial; support"customizationOption;s: [;
     "Custom; quantum; algorithmsIndustry-specific models""Integration; with; trading platformsCustom; compliance; modules";
     ,  ];
-    },contactInfo: {,phone: "+1, 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http,s: //ziontechgroup.com/quantum-financial-modeling"addres,s: "364, E; Main St; STE; 10o08 Middletown; DE; 1970o9";,
+    },contactInfo: {,phone: "+1, 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http,s: //ziontechgroup.com/quantum-financial-modeling"addres,s: "364, E; Main St; STE; 10o08 Middletown; DE; 1970o9";
     };
   };
 ];
 // 6. HEALTHCARE; TECHNOLOGY; SERVICES PRICING;
-export; const; healthcarePricing: ExpandedServicePricing[] = [,
+export; const; healthcarePricing: ExpandedServicePricing[] = [;
     {
     serviceI;d: "ai-diagnostic-assistant",serviceName: "AI, Diagnostic; Assistant",category: "Healthcare Technology",subcategory: "AI Diagnostics",pricingTiers: {,starter: {
-        pric,e: 350o0,currency: "USD",billingCycle: "monthly",features: [,
+        pric,e: 350o0,currency: "USD",billingCycle: "monthly",features: [;
     "Basic; diagnostic; toolsStandard medical models","Email; supportUp; to 50 providers""Basic; integrationsStandard; compliance";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Limited; diagnostic; capabilitiesBasic AI models""Standard; response; time";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Small; clinicsPrivate; practices""Basic; diagnostic; needs";
-      ,  ]setupFee: 70o00contractTer,m: "12 months",,
-     },professional: {,price: 70o00,currency: "USD",billingCycle: "monthly",features: [,
+      ,  ]setupFee: 70o00contractTer,m: "12 months",;
+     },professional: {,price: 70o00,currency: "USD",billingCycle: "monthly",features: [;
     "All; Starter; featuresAdvanced diagnostic tools","Custom; AI; modelsPriority support","Up; to; 20o0 providersAdvanced integrations""Enhanced; complianceCustom; workflows";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Limited; to; standard medical; specialtiesStandard; SLA";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Mid-size; hospitalsSpecialty; clinics""Diagnostic centers";
-      ,  ]setupFee: 150o00contractTer,m: "12 months",,
-     },enterprise: {,price: 140o00,currency: "USD",billingCycle: "monthly",features: [,
+      ,  ]setupFee: 150o00contractTer,m: "12 months",;
+     },enterprise: {,price: 140o00,currency: "USD",billingCycle: "monthly",features: [;
     "All; Professional; featuresUnlimited providers","Custom; AI; development24/7 support","Premium; SLACustom; integrations""White-label; optionsDedicated; medical team";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Requires; enterprise; setup";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Large; hospital; systemsAcademic medical centers""Research institutions";
-      ,  ]setupFee: 350o00contractTer,m: "24 months",,
-     },custom: {,priceRange: "Contact Sales",currency: "USD",billingCycle: "flexible",features: [,
+      ,  ]setupFee: 350o00contractTer,m: "24 months",;
+     },custom: {,priceRange: "Contact Sales",currency: "USD",billingCycle: "flexible",features: [;
     "All; Enterprise; featuresCustom medical AI""Industry-specific modulesOn-premise deployment";
-      ,  ],limitations: [,
+      ,  ],limitations: [;
     "Custom; development; required";
-      ,  ],bestFor: [,
+      ,  ],bestFor: [;
     "Government; agenciesMilitary; medical facilities""Custom; medical; requirements";
-      ,  ]setupFee: 70o000contractTer,m: "negotiable",,
+      ,  ]setupFee: 70o000contractTer,m: "negotiable",;
      }
-    },marketComparison: {,competitors: ["IBM, Watson; HealthGoogle Health""Microsoft; HealthcarePhilips,, Healthcare"],marketPosition: "challenger"priceAdvantag,e: "30-40% more, affordable; than competitors"valuePropositio;n: "AI-powered, diagnostic; assistance with; advanced; medical AI capabilities";,
-    },roiAnalysis: {,paybackPeriod: "6-10 months",annualROI: "30o0-60o0%",costSavings: [,
+    },marketComparison: {,competitors: ["IBM, Watson; HealthGoogle Health""Microsoft; HealthcarePhilips,, Healthcare"],marketPosition: "challenger"priceAdvantag,e: "30-40% more, affordable; than competitors"valuePropositio;n: "AI-powered, diagnostic; assistance with; advanced; medical AI capabilities";
+    },roiAnalysis: {,paybackPeriod: "6-10 months",annualROI: "30o0-60o0%",costSavings: [;
     "Improved; diagnostic; accuracyReduced diagnostic time""Lower; medical; errors";
-    ,  ],revenueImpact: [,
+    ,  ],revenueImpact: [;
     "Better; patient; outcomesIncreased provider efficiency""Faster; treatment; planning";
-    ,  ]riskMitigatio;n: [,
+    ,  ]riskMitigatio;n: [;
     "Reduced; diagnostic; errorsBetter patient safety""Enhanced compliance";
     ,  ];
-    },implementation: {,setupTime: "6-8 weeks",trainingRequired: "2-3, days; for medical staff",integrationComplexity: "high",supportIncluded: "24/7, medical; support"customizationOption;s: [,
+    },implementation: {,setupTime: "6-8 weeks",trainingRequired: "2-3, days; for medical staff",integrationComplexity: "high",supportIncluded: "24/7, medical; support"customizationOption;s: [;
     "Custom; medical; AI modelsSpecialty-specific modules""Integration; with; EHR systemsCustom; compliance; workflows";
     ,  ];
-    },contactInfo: {,phone: "+1, 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http,s: //ziontechgroup.com/ai-diagnostic-assistant"addres,s: "364, E; Main St; STE; 10o08 Middletown; DE; 1970o9";,
+    },contactInfo: {,phone: "+1, 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http,s: //ziontechgroup.com/ai-diagnostic-assistant"addres,s: "364, E; Main St; STE; 10o08 Middletown; DE; 1970o9";
     };
   };
 ];
@@ -353,12 +353,12 @@ export; const; ALL_EXPANDED_SERVICES_PRICING = [;
 ];
 // Helper functions;
 export; const; getPricingByServiceId = (serviceId: string): ExpandedServicePricing | undefined : any => {
-  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId),
+  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId);
     export; const; getPricingByCategory = (category: string): ExpandedServicePricing[] : any => {
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category),
+  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category);
     export; const; getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[] : any => {
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory),
-    export; const; searchPricing = (quer,y: string): ExpandedServicePricing[] : any => {,
+  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory);
+    export; const; searchPricing = (quer,y: string): ExpandedServicePricing[] : any => {;
     const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>;
     pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||;

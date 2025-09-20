@@ -15,59 +15,59 @@ Enter your details to complete your purchase as a guest.;
 </DialogHeader>
 {!isProdDomain() && (
 <div className='rounded-md bg-amber-500/20 p-2 text-center text-amber-400'>
-Pay with test data – use card 4242 4242 4242 4242 and any future,
+Pay with test data – use card 4242 4242 4242 4242 and any future;
 date.;
 </div>
 )}
 <form onSubmit={handleSubmit} className='space-y-4'>
 <div className='space-y-2'>
-<Label,
+<Label;
 htmlFor='guest-email';
 className='text-white flex items-center gap-2'
 >;
 <Mail className='h-4 w-4 text-zion-cyan' />
 Email Address;
 </Label>
-<Input,
+<Input;
 id='guest-email';
 type='email'
 value={email |''}
 onChange={e => setEmail(e.target.value |'')}
-placeholder='your.email@example.com'              required,
+placeholder='your.email@example.com'              required;
 className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light'
 />
 </div>
 <div className='space-y-2'>
-<Label,
+<Label;
 htmlFor='guest-address';
 className='text-white flex items-center gap-2'
 >;
 <MapPin className='h-4 w-4 text-zion-cyan' />
 Shipping Address;
 </Label>
-<Textarea,
+<Textarea;
 id='guest-address';
 value={address |''}
 onChange={e => setAddress(e.target.value |'')}
-placeholder='Enter your full shipping address...'              required,
+placeholder='Enter your full shipping address...'              required;
 className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]'
 />
 </div>
 <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>
 <p className='text-yellow-400 text-sm'>
-💡 Creating an account allows you to track your order and checkout,
+💡 Creating an account allows you to track your order and checkout;
 faster next time.;
 </p>
 </div>
 <DialogFooter className='space-x-2'>
-<Button,
+<Button;
 type='button'
 variant='outline'
 onClick={() => onOpenChange(false)}
 className='border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10'            >
 Cancel;
 </Button>
-<Button,
+<Button;
 type='submit'
 disabled={isSubmitting |!email |!address}
 className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'            >

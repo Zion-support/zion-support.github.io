@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { UserCheck, Star, CalendarCheckBriefcaseIcon } from 'lucide-react';

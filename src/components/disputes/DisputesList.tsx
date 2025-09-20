@@ -80,43 +80,43 @@ return (
 return (
 <div className='space-y-4'>
 <div className='flex gap-2 mb-4 overflow-x-auto pb-2'>
-<Button,
+<Button;
 variant={statusFilter === 'all' ? 'default' : 'outline'}
 onClick={() => setStatusFilter('all')}
 size='sm'        >
 All;
 </Button>
-<Button,
+<Button;
 variant={statusFilter === 'open' ? 'default' : 'outline'}
 onClick={() => setStatusFilter('open')}
 size='sm'        >
 Open;
 </Button>
-<Button,
+<Button;
 variant={statusFilter === 'under_review' ? 'default' : 'outline'}
 onClick={() => setStatusFilter('under_review')}
 size='sm'        >
 Under Review;
 </Button>
-<Button,
+<Button;
 variant={statusFilter === 'resolved' ? 'default' : 'outline'}
 onClick={() => setStatusFilter('resolved')}
 size='sm'        >
 Resolved;
 </Button>
-<Button,
+<Button;
 variant={statusFilter === 'closed' ? 'default' : 'outline'}
 onClick={() => setStatusFilter('closed')}
 size='sm'        >    <div className="space-y-4">
 <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
-<Button,
+<Button;
 variant={statusFilter === "all" ? "default" : "outline"}
 onClick={() => setStatusFilter("all")}
 size="sm";
 >;
 All;
 </Button>
-<Button,
+<Button;
 variant={statusFilter === "open" ? "default" : "outline"}
 onClick={() => setStatusFilter("open")}
 size="sm";
@@ -124,7 +124,7 @@ size="sm";
 >;
 Open;
 </Button>
-<Button,
+<Button;
 variant={statusFilter === "under_review" ? "default" : "outline"}
 onClick={() => setStatusFilter("under_review")}
 size="sm";
@@ -132,7 +132,7 @@ size="sm";
 >;
 Under Review;
 </Button>
-<Button,
+<Button;
 variant={statusFilter === "resolved" ? "default" : "outline"}
 onClick={() => setStatusFilter("resolved")}
 size="sm";
@@ -140,7 +140,7 @@ size="sm";
 >;
 Resolved;
 </Button>
-<Button,
+<Button;
 variant={statusFilter === "closed" ? "default" : "outline"}
 onClick={() => setStatusFilter("closed")}
 size="sm";

@@ -1,5 +1,5 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { BriefcaseIcon,, Clock,  } from 'lucide-react'
 export function ActiveProjectsCard() {
 const { projects, isLoading } = useProjects();
-const [activeProjects, setActiveProjects] = useState<Project[]>([]),
+const [activeProjects, setActiveProjects] = useState<Project[]>([]);
 
 useEffect(() => {
 if (projects && !isLoading) {
@@ -27,7 +27,7 @@ return (
 <CardContent>
 <div className='space-y-2'>
 {[1 2].map(idx => (
-<div,
+<div;
 key={idx}
 className='h-16 animate-pulse bg-muted rounded'
 ></div>            ))}
@@ -95,7 +95,7 @@ return (
 <div key={project.id} className='border rounded-md p-3'>
 <div className='flex justify-between items-start mb-2'>
 <h3 className='font-medium text-sm'>{project.job?.title}</h3>
-<Badge,
+<Badge;
 variant={
 project.status === 'in_progress' ? 'default' : 'outline';
 }
@@ -106,7 +106,7 @@ project.status === 'in_progress';
 }          <div key={project.id} className="border rounded-md p-3">
 <div className="flex justify-between items-start mb-2">
 <h3 className="font-medium text-sm">{project.job?.title}</h3>
-<Badge,
+<Badge;
 variant = {project.status === "in_progress" ? "default" : "outline",}
 className = {project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : "",}
 >;

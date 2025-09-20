@@ -1,5 +1,5 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
@@ -38,21 +38,6 @@ const Contact: any = () => (
 );
 
 const App: React.FC = () => {
-<<<<<<< HEAD
-return (
-<ErrorBoundary>
-<ThemeProvider>
-<Routes>
-<Route path="/" element={<Home />} />
-<Route path="/services" element={<Services />} />
-<Route path="/about" element={<About />} />
-<Route path="/contact" element={<Contact />} />
-</Routes>
-</ThemeProvider>
-</ErrorBoundary>
-);
-};
-=======
   return (
     <ErrorBoundary>
       <ThemeProvider>
@@ -66,7 +51,6 @@ return (
     </ErrorBoundary>
   );
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 export default App;<//ErrorBoundary><///ErrorBoundary>
 import React from 'react'
@@ -75,7 +59,7 @@ import Header from './components/Header'
 import { Footer } from './components/Footer'
 import Sidebar from './components/layout/Sidebar'
 import ErrorBoundary from './components/ErrorBoundary'
-// Import pages,
+// Import pages;
 import HomePage from './pages/Home'
 import AboutPage from './pages/About'
 import ContactPage from './pages/Contact'

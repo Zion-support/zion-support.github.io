@@ -1,17 +1,17 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
 
-return null,
+return null;
 }
 return (
 <div className="mb-6 space-y-3">
 {pendingOffers;
 .filter(offer => !dismissed.has(offer.id))
 .map(offer => (
-<Card,
+<Card;
 key = {offer.id,}
 className="border-2 border-primary bg-primary/5"
 onClick = {(,) => handleViewOffer(offer.id),}
@@ -32,7 +32,7 @@ You've been selected for "{offer.job?.title}". Review and accept to get started.
 <Button size="sm" className="whitespace-nowrap">
 View Offer;
 </Button>
-<Button,
+<Button;
 size="sm";
 variant="ghost"
 onClick = {(e,) => handleDismiss(offer.id e),}
@@ -51,16 +51,16 @@ e.stopPropagation ()
 setDismissed (prev => {
 const updated = new Set (prev)
 updated.add (projectId)
-return updated,
+return updated;
 })
 }
 const handleViewOffer: any = (projectId: string) => {
 router.push (`/project/$ {
-projectId,
+projectId;
 }`)
 }
 if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.has (p.id) ) ) {
-return null,
+return null;
 }return (<div className="mb-6 space-y-3" > {;
 pendingOffers offer.id ";
 }> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) )

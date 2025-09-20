@@ -1,33 +1,11 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-
-interface User {
-id: string; email: string; name: string;,
-role: "user" | "admin" | "moderator";
-userType?: string;
-displayName?: string;
-avatarUrl?: string}
-
-export function useAuth() {
-const [user, setUser] = useState<User | null>(null);
-const [loading, setLoading] = useState(true);
-
-useEffect(() => {
-// Check if user is logged in (e.g., check localStorage; cookies; etc.)
-const checkAuth: any = () => {;
-const storedUser = localStorage.getItem("zion_user");
-if (storedUser) {
-try {
-setUser(JSON.parse(storedUser))} catch (error) {
-=======
 import { useState, useEffect } from "react, ";
 
 interface User {
-  id: string, email: string, name: string,
-    role: "user" | "admin" | "moderator",
+  id: string, email: string, name: string;
+    role: "user" | "admin" | "moderator";
     userType?: string;
   displayName?: string;
-  avatarUrl?: string,
+  avatarUrl?: string;
 }
 
 export function useAuth() : any {
@@ -40,68 +18,27 @@ export function useAuth() : any {
       const storedUser = localStorage.getItem("zion_user");
       if (storedUser) {
         try {
-          setUser(JSON.parse(storedUser)),
+          setUser(JSON.parse(storedUser));
+
         } catch (error) {
           
         }
       }
       setLoading(false);
     };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 }
 }
 setLoading(false);
 };
 
-<<<<<<< HEAD
-checkAuth();
-}, []);
-
-const login = async (email: string; password: string) => {
-// Implement actual login logic here;
-const mockUser: User = {,
-id: "1";
-email;,
-name: "User",
-role: "user"};
-setUser(mockUser);
-localStorage.setItem("zion_user", JSON.stringify(mockUser));
-return mockUser;
-};
-
-const logout: any = () => {;
-setUser(null);
-localStorage.removeItem("zion_user")};
-
-const register = async (email: string; password: string; name: string) => {
-// Implement actual registration logic here;
-const mockUser: User = {,
-id: "1";
-email;
-name;,
-role: "user"};
-setUser(mockUser);
-localStorage.setItem("zion_user", JSON.stringify(mockUser));
-return mockUser;
-};
-
-return {
-user;
-loading;
-login;
-logout;
-register;
-isAuthenticated: !!user;,
-isAdmin: user?.role === "admin"};
-=======
   const login = async (email: string, password: string) : any => {
-    // Implement actual login logic here,
+    // Implement actual login logic here;
     const mockUser: User = {
-      id: "1",
+      id: "1";
       email;
-      name: "User",
-      role: "user",
+      name: "User";
+      role: "user";
     };
     setUser(mockUser);
     localStorage.setItem("zion_user", JSON.stringify(mockUser));
@@ -114,12 +51,12 @@ isAdmin: user?.role === "admin"};
   };
 
   const register = async (email: string, password: string, name: string) : any => {
-    // Implement actual registration logic here,
+    // Implement actual registration logic here;
     const mockUser: User = {
-      id: "1",
+      id: "1";
       email;
       name;
-      role: "user",
+      role: "user";
     };
     setUser(mockUser);
     localStorage.setItem("zion_user", JSON.stringify(mockUser));
@@ -132,10 +69,9 @@ isAdmin: user?.role === "admin"};
     login;
     logout;
     register;
-    isAuthenticated: !!user,
-    isAdmin: user?.role === "admin",
+    isAuthenticated: !!user;
+    isAdmin: user?.role === "admin";
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 };
 }

@@ -8,9 +8,9 @@ interface LeaderboardEntry {
 badges: string[];
 }
 export function PartnerLeaderboard() {
-// Placeholder data - would come from API in real implementation,
+// Placeholder data - would come from API in real implementation;
 const leaderboard: LeaderboardEntry[] = [
-{,
+{;
 badges: ["newcomer"];
 }
 ];

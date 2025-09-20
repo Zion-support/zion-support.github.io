@@ -27,7 +27,7 @@ project={project}
 onEdit={() => setEditingProject(project)}
 onDelete={handleDeleteProject}
 {projects.map((project,) => (
-<ProjectCard,
+<ProjectCard;
 key = {project.id,}
 project = {project,}
 onEdit = {(,) => setEditingProject(project),}
@@ -47,10 +47,10 @@ onDelete = {handleDeleteProject,}
 No portfolio projects yet;
 </h3>
 <p className='text-muted-foreground max-w-md mx-auto'>
-Add your best work to showcase your skills and experience to,
+Add your best work to showcase your skills and experience to;
 potential employers.;
 </p>
-<Button,
+<Button;
 onClick={() => setShowAddProject(true)}
 className='mt-2'                >            <CardContent>
 <div className="flex flex-col items-center gap-4">
@@ -61,7 +61,7 @@ className='mt-2'                >            <CardContent>
 <p className="text-muted-foreground max-w-md mx-auto">
 Add your best work to showcase your skills and experience to potential employers.;
 </p>
-<Button,
+<Button;
 onClick={() => setShowAddProject(true)}
 className="mt-2"
 >;

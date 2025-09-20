@@ -1,25 +1,25 @@
 import React from "react";
 
 interface Milestone {
-id: string;,
-title: string;,
-dueDate: string;,
-status: "completed" | "in_progress" | "pending";,
-paymentStatus: "paid" | "pending" | "overdue";,
-amount: string,
+id: string;
+title: string;
+dueDate: string;
+status: "completed" | "in_progress" | "pending";
+paymentStatus: "paid" | "pending" | "overdue";
+amount: string;
 interface ProjectViewProps {
-project: {,
-id: string;,
-title: string;,
-client: {,
+project: {;
+id: string;
+title: string;
+client: {;
 name: string;
-avatar?: string,
-},
+avatar?: string;
+};
 startDate: string;
-endDate?: string;,
-status: string;,
-totalAmount: string;,
-progress: number;,
+endDate?: string;
+status: string;
+totalAmount: string;
+progress: number;
 description: string;
 }
 milestones: Milestone[];
@@ -34,7 +34,7 @@ return (
 <h2 className='text-lg font-medium'>{project.title}</h2>
 <div className='flex items-center gap-2 mt-1'>
 <Avatar className='h-6 w-6'>
-<AvatarImage,
+<AvatarImage;
 src={project.client.avatar}
 alt={project.client.name}
 />
@@ -78,14 +78,14 @@ alt={project.client.name}
 <Button size='sm' variant='outline' className='gap-1 flex-1'>
 <FileText className='h-4 w-4' /> Contract;
 </Button>
-<Button,
+<Button;
 size='sm';
 variant='outline'
 className='gap-1 flex-1'
 onClick={messageClient}              >
 <MessageSquare className='h-4 w-4' /> Message;
 </Button>
-<Button,
+<Button;
 size='sm';
 className='gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light'
 onClick={startProjectCall}              >
@@ -109,7 +109,7 @@ onClick={startProjectCall}              >
 )}
 <h3 className='font-medium'>{milestone.title}</h3>
 </div>
-<Badge,
+<Badge;
 variant={
 milestone.paymentStatus === 'paid';
 ? 'default';
@@ -135,7 +135,7 @@ milestone.paymentStatus === 'paid';
 {milestone.status.replace('_', ' ')}
 </span>
 </div>
-<Button,
+<Button;
 size='sm';
 variant='outline'
 className='w-full mt-3 gap-1'

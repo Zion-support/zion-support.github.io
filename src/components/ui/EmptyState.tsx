@@ -5,8 +5,8 @@ text?: string;
 description?: string;
 onRetry?: () => void;
 showRetry?: boolean;
-icon?: React.ReactNode,
-icon,
+icon?: React.ReactNode;
+icon;
 }: EmptyStateProps) {
 return (
 <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
@@ -18,8 +18,8 @@ return (
 </h3>
 {description && (
 <p className='text-gray-400 mb-6 max-w-md'>{description}</p>
-showRetry = false,
-icon,
+showRetry = false;
+icon;
 }: EmptyStateProps) {
 return (
 <div className='flex flex-col items-center justify-center py-16 px-4 text-center'>
@@ -30,14 +30,14 @@ return (
 {description && (
 <p className='text-gray-400 mb-6 max-w-md'>{description}</p>      )}
 {showRetry && onRetry && (
-<Button,
+<Button;
 onClick={onRetry}
 variant='outline'
 className='flex items-center gap-2'
 >;
 <RefreshCw className='h-4 w-4' />          Try Again      )}
 {showRetry && onRetry && (
-<Button,
+<Button;
 onClick={onRetry}
 variant='outline'
 className='flex items-center gap-2'
@@ -47,7 +47,7 @@ className='flex items-center gap-2'
 </p>
 )}
 {showRetry && onRetry && (
-<Button,
+<Button;
 onClick={onRetry}
 variant="outline"
 className="flex items-center gap-2"

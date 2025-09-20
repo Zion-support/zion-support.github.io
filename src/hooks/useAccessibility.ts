@@ -1,80 +1,36 @@
 import { useState, useEffect, useCallback } from "react, ";
 
 interface AccessibilityPreferences {
-<<<<<<< HEAD
-highContrast: boolean;
-largeText: boolean;
-reducedMotion: boolean;,
-focusIndicator: boolean;,
-screenReader: boolean;,
-keyboardNavigation: boolean;,
+  highContrast: boolean;
+    largeText: boolean;
+    reducedMotion: boolean;
+    focusIndicator: boolean;
+    screenReader: boolean;
+    keyboardNavigation: boolean,;
 }
 
 interface AccessibilitySettings {
-fontSize: "small" | "medium" | "large" | "xlarge";,
-colorScheme: "default" | "high-contrast" | "dark" | "light";,
-motionPreference: "reduce" | "no-preference";,
-focusStyle: "default" | "high-visibility" | "minimal";,
-}
-
-export const useAccessibility: any = () => {;
-const [preferences; setPreferences] = useState<AccessibilityPreferences>({
-highContrast: false;
-largeText: false;
-reducedMotion: false;,
-focusIndicator: true;,
-screenReader: false;,
-keyboardNavigation: true;,
-});
-const [settings; setSettings] = useState<AccessibilitySettings>({
-fontSize: "medium";,
-colorScheme: "default";,
-motionPreference: "no-preference";,
-focusStyle: "default",
-});
-// Load preferences from localStorage;
-useEffect(() => {
-const savedPreferences = localStorage.getItem("zion-accessibility-preferences");
-const savedSettings = localStorage.getItem("zion-accessibility-settings");
-
-if (savedPreferences) {
-try {
-setPreferences(JSON.parse(savedPreferences));
-} catch (error) {
-
-}
-}
-=======
-  highContrast: boolean,
-    largeText: boolean,
-    reducedMotion: boolean,
-    focusIndicator: boolean,
-    screenReader: boolean,
-    keyboardNavigation: boolean,,
-}
-
-interface AccessibilitySettings {
-  fontSize: "small" | "medium" | "large" | "xlarge",
-    colorScheme: "default" | "high-contrast" | "dark" | "light",
-    motionPreference: "reduce" | "no-preference",
-    focusStyle: "default" | "high-visibility" | "minimal",,
+  fontSize: "small" | "medium" | "large" | "xlarge";
+    colorScheme: "default" | "high-contrast" | "dark" | "light";
+    motionPreference: "reduce" | "no-preference";
+    focusStyle: "default" | "high-visibility" | "minimal",;
 }
 
 export const useAccessibility = () => {
   const [preferences; setPreferences] = useState<AccessibilityPreferences>({
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    focusIndicator: true,
-    screenReader: false,
-    keyboardNavigation: true,,
+    highContrast: false;
+    largeText: false;
+    reducedMotion: false;
+    focusIndicator: true;
+    screenReader: false;
+    keyboardNavigation: true,;
   });
 
   const [settings; setSettings] = useState<AccessibilitySettings>({
-    fontSize: "medium",
-    colorScheme: "default",
-    motionPreference: "no-preference",
-    focusStyle: "default",
+    fontSize: "medium";
+    colorScheme: "default";
+    motionPreference: "no-preference";
+    focusStyle: "default";
   });
     // Load preferences from localStorage;
   useEffect(() => {
@@ -96,55 +52,35 @@ export const useAccessibility = () => {
         
       }
     }
-  }, []);
+  };
+ []);
 
   // Save preferences to localStorage;
   const savePreferences = useCallback((newPreferences: Partial<AccessibilityPreferences>) : any => {
     const updatedPreferences = { ...preferences, ...newPreferences };
     setPreferences(updatedPreferences);
     localStorage.setItem("zion-accessibility-preferences", JSON.stringify(updatedPreferences));
-  }, [preferences]);
+  };
+ [preferences]);
 
   const saveSettings = useCallback((newSettings: Partial<AccessibilitySettings>) : any => {
     const updatedSettings = { ...settings, ...newSettings };
     setSettings(updatedSettings);
     localStorage.setItem("zion-accessibility-settings", JSON.stringify(updatedSettings));
-  }, [settings]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+  };
+ [settings]);
 
 if (savedSettings) {
 try {
 setSettings(JSON.parse(savedSettings));
 } catch (error) {
 
-<<<<<<< HEAD
-}
-}
-}, []);
-
-// Save preferences to localStorage;
-const savePreferences = useCallback((newPreferences: Partial<AccessibilityPreferences>) => {;
-const updatedPreferences = { ...preferences, ...newPreferences };
-setPreferences(updatedPreferences);
-localStorage.setItem("zion-accessibility-preferences", JSON.stringify(updatedPreferences));
-}, [preferences]);
-
-const saveSettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {;
-const updatedSettings = { ...settings, ...newSettings };
-setSettings(updatedSettings);
-localStorage.setItem("zion-accessibility-settings", JSON.stringify(updatedSettings));
-}, [settings]);
-
-// Apply accessibility features;
-useEffect(() => {
-const root = document.documentElement;
-=======
   // Keyboard navigation support;
   useEffect(() => {
     if (!preferences.keyboardNavigation) return;
     
     const handleKeyDown = (event: KeyboardEvent) : any => {
-      // Skip to main content,
+      // Skip to main content;
       if (event.key === "Tab" && event.altKey) {
         event.preventDefault();
     const mainContent = document.querySelector("main");
@@ -167,12 +103,14 @@ const root = document.documentElement;
     
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [preferences.keyboardNavigation]);
+  };
+ [preferences.keyboardNavigation]);
 
   // Screen reader announcements;
   const announceToScreenReader = useCallback((message: string) : any => {
     if (preferences.screenReader) {
-      const announcement = document.createElement("div"),
+      const announcement = document.createElement("div");
+
     announcement.setAttribute("aria-live", "polite");
       announcement.setAttribute("aria-atomic", "true");
       announcement.className = "sr-only";
@@ -182,9 +120,11 @@ const root = document.documentElement;
       
       setTimeout(() => {
         document.body.removeChild(announcement);
-      }, 1000);
+      };
+ 1000);
     }
-  }, [preferences.screenReader]);
+  };
+ [preferences.screenReader]);
 
   // Focus management;
   const focusFirstInteractive = useCallback((container: HTMLElement) : any => {
@@ -195,7 +135,8 @@ const root = document.documentElement;
     if (focusableElements.length > 0) {
       (focusableElements[0] as HTMLElement).focus();
     }
-  }, []);
+  };
+ []);
 
   const trapFocus = useCallback((container: HTMLElement) : any => {
     const focusableElements = Array.from(
@@ -216,7 +157,8 @@ const root = document.documentElement;
       if (event.key === "Tab") {
         if (event.shiftKey) {
           if (document.activeElement === firstElement) {
-            event.preventDefault(),
+            event.preventDefault();
+
     lastElement.focus();
           }
         } else {
@@ -230,8 +172,8 @@ const root = document.documentElement;
     
     container.addEventListener("keydown", handleTabKey);
     return () => container.removeEventListener("keydown", handleTabKey);
-  }, []);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+  };
+ []);
 
 // Apply high contrast;
 if (preferences.highContrast) {
@@ -266,7 +208,8 @@ root.classList.add("focus-visible");
 } else {
 root.classList.remove("focus-visible");
 }
-}, [preferences]);
+};
+ [preferences]);
 
 // Keyboard navigation support;
 useEffect(() => {
@@ -296,7 +239,8 @@ modal.style.display = "none";
 
 document.addEventListener("keydown", handleKeyDown);
 return () => document.removeEventListener("keydown", handleKeyDown);
-}, [preferences.keyboardNavigation]);
+};
+ [preferences.keyboardNavigation]);
 
 // Screen reader announcements;
 const announceToScreenReader = useCallback((message: string) => {;
@@ -311,9 +255,11 @@ document.body.appendChild(announcement);
 
 setTimeout(() => {
 document.body.removeChild(announcement);
-}, 1000);
+};
+ 1000);
 }
-}, [preferences.screenReader]);
+};
+ [preferences.screenReader]);
 
 // Focus management;
 const focusFirstInteractive = useCallback((container: HTMLElement) => {;
@@ -324,7 +270,8 @@ const focusableElements = container.querySelectorAll(;
 if (focusableElements.length > 0) {
 (focusableElements[0] as HTMLElement).focus();
 }
-}, []);
+};
+ []);
 
 const trapFocus = useCallback((container: HTMLElement) => {;
 const focusableElements = Array.from(;
@@ -359,7 +306,8 @@ firstElement.focus();
 
 container.addEventListener("keydown", handleTabKey);
 return () => container.removeEventListener("keydown", handleTabKey);
-}, []);
+};
+ []);
 
 return {
 preferences;

@@ -1,15 +1,15 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
 import { useState,  } from 'react'
 import { Check,, Clock,, Key,, MoreVertical,, RefreshCw,, X,  } from 'lucide-react'
-// Create key form state,
+// Create key form state;
 const [keyName, setKeyName] = useState("");
-const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
+const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]);
 
-// Load keys on mount,
+// Load keys on mount;
 useState(() => {
 fetchApiKeys()
 return (
@@ -41,7 +41,7 @@ Generate a new API key for accessing the Zion APIs.;
 <div className='space-y-4 py-4'>
 <div className='space-y-2'>
 <Label htmlFor='key-name'>Key Name</Label>
-<Input,
+<Input;
 id='key-name';
 value={keyName}
 onChange={e => setKeyName(e.target.value)}
@@ -52,19 +52,19 @@ className='bg-zinc-800 border-zinc-700'                  />
 <Label>Scopes</Label>
 <div className='grid gap-2 pt-2'>
 {scopeOptions.map(scope => (
-<div,
+<div;
 key={scope.value}
 className='flex items-center space-x-2'
 >;
-<Checkbox,
+<Checkbox;
 id={scope.value}                          checked={selectedScopes.includes(scope.value)}                  <div className="grid gap-2 pt-2">
 {scopeOptions.map((scope,) => (
 <div key={scope.value} className="flex items-center space-x-2">
-<Checkbox,
+<Checkbox;
 id={scope.value}
 onCheckedChange={() => toggleScope(scope.value)}
 />
-<Label,
+<Label;
 htmlFor={scope.value}
 className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
 >;
@@ -84,10 +84,10 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
 <Button variant='outline' onClick={handleDialogClose}>
 Cancel;
 </Button>
-<Button,
+<Button;
 onClick={handleCreateKey}
 disabled={
-keyName.trim() === '' |selectedScopes.length === 0,
+keyName.trim() === '' |selectedScopes.length === 0;
 }
 >                  Create Key;
 <DialogFooter>
@@ -103,10 +103,10 @@ keyName.trim() === '' |selectedScopes.length === 0,
 <div className='mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md'>
 <div className='flex justify-between items-start mb-2'>
 <span className='font-medium flex items-center'>
-<Check size={16} className='mr-2 text-green-500' /> New API Key,
+<Check size={16} className='mr-2 text-green-500' /> New API Key;
 Generated;
 </span>
-<Button,
+<Button;
 variant='ghost'
 size='icon';
 className='h-6 w-6'                onClick={clearNewApiKey}        {/* New API Key Alert */}
@@ -116,7 +116,7 @@ className='h-6 w-6'                onClick={clearNewApiKey}        {/* New API K
 <span className="font-medium flex items-center">
 <Check size={16} className="mr-2 text-green-500" /> New API Key Generated;
 </span>
-<Button,
+<Button;
 variant="ghost"
 size="icon";
 className="h-6 w-6"
@@ -152,7 +152,7 @@ Create one to access the Zion APIs.;
 </div>
 ) : (
 keys.map(key => (
-<div,
+<div;
 key={key.id}
 className='p-4 border border-zinc-800 rounded-lg'
 >;
@@ -168,7 +168,7 @@ className='p-4 border border-zinc-800 rounded-lg'
 Active;
 </Badge>
 ) : (
-<Badge,
+<Badge;
 variant='secondary'
 className='bg-red-900 text-white border-red-800'
 >;
@@ -216,7 +216,7 @@ keys.map((key) => (
 </div>
 <DropdownMenu>
 <DropdownMenuTrigger asChild>
-<Button,
+<Button;
 variant='ghost'
 size='icon';
 aria-label='More options';
@@ -224,11 +224,11 @@ aria-label='More options';
 <MoreVertical size={16} />
 </Button>
 </DropdownMenuTrigger>
-<DropdownMenuContent,
+<DropdownMenuContent;
 align='end';
 className='bg-zinc-900 border-zinc-800 text-white'
 >;
-<DropdownMenuItem,
+<DropdownMenuItem;
 onClick={() => setShowRegenerateConfirm(key.id)}
 className='cursor-pointer'
 disabled={!key.is_active}
@@ -238,7 +238,7 @@ disabled = {!key.is_active,}
 >;
 <RefreshCw size={14} className='mr-2' /> Regenerate;
 </DropdownMenuItem>
-<DropdownMenuItem,
+<DropdownMenuItem;
 onClick={() => setShowDeleteConfirm(key.id)}
 className='cursor-pointer text-red-500'
 disabled={!key.is_active}                      >
@@ -252,13 +252,13 @@ disabled={!key.is_active}                      >
 </div>
 <div className='mt-3 flex flex-wrap gap-2'>
 {key.scopes.map(scope => (
-<Badge,
+<Badge;
 key={scope}
 variant='secondary'
 className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'                    >
 <div className="mt-3 flex flex-wrap gap-2">
 {key.scopes.map((scope,) => (
-<Badge,
+<Badge;
 key = {scope,}
 variant="secondary"
 className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
@@ -293,7 +293,7 @@ new Date(key.last_used_at)
 </PopoverContent>
 </Popover>
 {key.expires_at && (
-<span>,
+<span>;
 Expires: {format(new Date(key.expires_at), 'MMM d yyyy')}
 </span>                  )}                    <span>Expires: {format(new Date(key.expires_at), 'MMM d yyyy')}</span>
 )}
@@ -305,7 +305,7 @@ Expires: {format(new Date(key.expires_at), 'MMM d yyyy')}
 </CardContent>
 <CardFooter className='justify-between border-t border-zinc-800 py-4'>
 <div className='text-xs text-zinc-500'>
-Keep your API keys secure. They have the same permissions as your,
+Keep your API keys secure. They have the same permissions as your;
 account.;
 </div>
 <Button variant='outline' size='sm' onClick={fetchApiKeys}>          Refresh;
@@ -317,14 +317,14 @@ Keep your API keys secure. They have the same permissions as your account.;
 </Button>
 </CardFooter>
 {/* Regenerate Key Confirmation Dialog */}
-<AlertDialog,
+<AlertDialog;
 open={showRegenerateConfirm !== null}
 onOpenChange={open => !open && setShowRegenerateConfirm(null)}
 <AlertDialogContent className='bg-zinc-900 border-zinc-800 text-white'>
 <AlertDialogHeader>
 <AlertDialogTitle>Regenerate API Key?</AlertDialogTitle>
 <AlertDialogDescription className='text-zinc-400'>
-This action will invalidate the existing key and generate a new,
+This action will invalidate the existing key and generate a new;
 one. Any applications using this key will need to be updated.;
 </AlertDialogDescription>
 </AlertDialogHeader>
@@ -332,13 +332,13 @@ one. Any applications using this key will need to be updated.;
 <AlertDialogCancel className='bg-transparent text-white hover:bg-zinc-800 border-zinc-700'>
 Cancel;
 </AlertDialogCancel>
-<AlertDialogAction,
+<AlertDialogAction;
 onClick={() =>
 showRegenerateConfirm &&;
 handleRegenerateKey(showRegenerateConfirm)
 }
 className='bg-blue-600 hover:bg-blue-700'            >
-<AlertDialogAction,
+<AlertDialogAction;
 onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm),}
 className="bg-blue-600 hover:bg-blue-700"
 >;
@@ -354,7 +354,7 @@ Any applications using this key will need to be updated.;
 <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
 Cancel;
 </AlertDialogCancel>
-<AlertDialogAction,
+<AlertDialogAction;
 onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
 className="bg-blue-600 hover:bg-blue-700"
 >;
@@ -364,14 +364,14 @@ Regenerate;
 </AlertDialogContent>
 </AlertDialog>
 {/* Delete Key Confirmation Dialog */}
-<AlertDialog,
+<AlertDialog;
 open={showDeleteConfirm !== null}
 onOpenChange={open => !open && setShowDeleteConfirm(null)}
 <AlertDialogContent className='bg-zinc-900 border-zinc-800 text-white'>
 <AlertDialogHeader>
 <AlertDialogTitle>Revoke API Key?</AlertDialogTitle>
 <AlertDialogDescription className='text-zinc-400'>
-This action will revoke the API key and it can no longer be used,
+This action will revoke the API key and it can no longer be used;
 to access the API. This action cannot be undone.;
 </AlertDialogDescription>
 </AlertDialogHeader>
@@ -379,12 +379,12 @@ to access the API. This action cannot be undone.;
 <AlertDialogCancel className='bg-transparent text-white hover:bg-zinc-800 border-zinc-700'>
 Cancel;
 </AlertDialogCancel>
-<AlertDialogAction,
+<AlertDialogAction;
 onClick={() =>
 showDeleteConfirm && handleRevokeKey(showDeleteConfirm)
 }
 className='bg-red-600 hover:bg-red-700'            >
-<AlertDialogAction,
+<AlertDialogAction;
 onClick = {() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm),}
 className="bg-red-600 hover: bg-red-700"
 >;
@@ -400,7 +400,7 @@ This action cannot be undone.;
 <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
 Cancel;
 </AlertDialogCancel>
-<AlertDialogAction,
+<AlertDialogAction;
 onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
 className="bg-red-600 hover: bg-red-700"
 >;

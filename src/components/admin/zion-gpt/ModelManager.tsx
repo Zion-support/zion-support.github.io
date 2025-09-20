@@ -1,7 +1,7 @@
 import { useState,, useEffect,, ,  } from 'react';
-import { Button,  } from "@/components/ui/button",
-import { Card,, CardContent,, CardDescription,, CardHeader,, CardTitle,  } from "@/components/ui/card",
-import { Table,, TableBody,, TableCell,, TableHead,, TableHeader,, TableRow,  } from "@/components/ui/table",
+import { Button,  } from "@/components/ui/button";
+import { Card,, CardContent,, CardDescription,, CardHeader,, CardTitle,  } from "@/components/ui/card";
+import { Table,, TableBody,, TableCell,, TableHead,, TableHeader,, TableRow,  } from "@/components/ui/table";
 import { Badge,  } from "@/components/ui/badge";
 import { Loader2,, RefreshCw,, Play,, CheckCircle,, AlertCircle,  } from 'lucide-react'
 import { supabase,, ,  } from '@/integrations/supabase/client';
@@ -9,7 +9,7 @@ import { ModelConfig,, ,  } from '@/utils/zion-gpt';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface ModelVersionData extends ModelConfig {
 trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-errorMessage?: string,
+errorMessage?: string;
 }
 
 return (
@@ -65,7 +65,7 @@ Manage fine-tuned AI models for different platform features;
 <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
 <TableCell className="text-right">
 {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
-<Button,
+<Button;
 variant="ghost"
 size="sm";
 onClick = {(,) => checkTrainingStatus(model.id),}
@@ -79,7 +79,7 @@ disabled = {activeJobs[model.id],}
 <span className="ml-1">Check</span>
 </Button>
 ) : model.trainingStatus === 'succeeded' ? (
-<Button,
+<Button;
 variant = {model.active ? "outline" : "default",}
 size="sm";
 onClick = {(,) => toggleModelActive(model.id model.active model.purpose),}
@@ -95,7 +95,7 @@ onClick = {(,) => toggleModelActive(model.id model.active model.purpose),}
 )}
 </Button>
 ) : (
-<Button,
+<Button;
 variant="ghost"
 size="sm";
 className="text-red-500"

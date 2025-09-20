@@ -31,24 +31,24 @@ export type AnyService =
 // Master services object combining all services;
 export const masterComprehensiveServices2025 = {;
 // Original services;
-original: {,
-microSaas: enhancedMicroSaasServices2025;,
-itServices: enhancedITServices2025;,
-aiServices: enhancedAIServices2025;,
+original: {;
+microSaas: enhancedMicroSaasServices2025;
+itServices: enhancedITServices2025;
+aiServices: enhancedAIServices2025;
 };
 // Expanded services;
 expanded: allExpandedServices2025;
-// Additional services;,
+// Additional services;
 additional: allAdditionalServices2025;
-// Cutting-edge services;,
-cuttingEdge: allCuttingEdgeServices2025;,
+// Cutting-edge services;
+cuttingEdge: allCuttingEdgeServices2025;
 };
 // Get all services as a flat array;
 export const getAllServices: any = (): AnyService[] => {
 const allServices = [
-...enhancedMicroSaasServices2025,
-...enhancedITServices2025,
-...enhancedAIServices2025,
+...enhancedMicroSaasServices2025;
+...enhancedITServices2025;
+...enhancedAIServices2025;
 ...Object.values(allExpandedServices2025).flat();
 ...Object.values(allAdditionalServices2025).flat();
 ...Object.values(allCuttingEdgeServices2025).flat();
@@ -134,18 +134,18 @@ const allServices = getAllServices();
 
 const stats = {;
 totalServices: allServices.length;
-byType: {,
-microSaas: allServices.filter(s => "pricing" in s && "userLimit" in s).length;,
-itServices: allServices.filter(s => "hourlyRate" in s && "projectRate" in s).length;,
-aiServices: allServices.filter(s => "aiModels" in s && "aiScore" in s).length;,
+byType: {;
+microSaas: allServices.filter(s => "pricing" in s && "userLimit" in s).length;
+itServices: allServices.filter(s => "hourlyRate" in s && "projectRate" in s).length;
+aiServices: allServices.filter(s => "aiModels" in s && "aiScore" in s).length;
 };
-byPricing: {,
-freemium: allServices.filter(s => "pricing" in s && s.pricing === "Freemium").length;,
-professional: allServices.filter(s => "pricing" in s && s.pricing === "Professional").length;,
-enterprise: allServices.filter(s => "pricing" in s && s.pricing === "Enterprise").length;,
+byPricing: {;
+freemium: allServices.filter(s => "pricing" in s && s.pricing === "Freemium").length;
+professional: allServices.filter(s => "pricing" in s && s.pricing === "Professional").length;
+enterprise: allServices.filter(s => "pricing" in s && s.pricing === "Enterprise").length;
 };
-categories: [...new Set(allServices.map(s => s.category))].length;,
-priceRanges: {,
+categories: [...new Set(allServices.map(s => s.category))].length;
+priceRanges: {;
 low: allServices.filter(s => {
 if ("price" in s && typeof s.price === "number") return s.price < 100;
 if ("hourlyRate" in s && typeof s.hourlyRate === "number") return s.hourlyRate < 100;

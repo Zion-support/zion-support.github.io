@@ -1,12 +1,12 @@
 import React from "react";
 
 interface ResourceItem {
-id: string;,
-title: string;,
-description: string;,
-type: 'image' | 'video' | 'document' | 'link';,
-icon: JSX.Element;,
-url: string,
+id: string;
+title: string;
+description: string;
+type: 'image' | 'video' | 'document' | 'link';
+icon: JSX.Element;
+url: string;
 export function PartnerResources() {
 const resources: ResourceItem[] = [
 {
@@ -22,7 +22,7 @@ Download brand assets and marketing materials to promote Zion AI;
 <CardContent>
 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
 {resources.map(resource => (
-<Card,
+<Card;
 key={resource.id}
 className='bg-zion-blue border-zion-blue-light overflow-hidden'
 >;
@@ -34,7 +34,7 @@ className='bg-zion-blue border-zion-blue-light overflow-hidden'
 <p className='text-xs text-zion-slate-light mb-4'>
 {resource.description}
 </p>
-<Button,
+<Button;
 onClick={() => handleDownload(resource)}
 size='sm';
 variant='outline'
@@ -62,14 +62,14 @@ Best practices for promoting the Zion AI Marketplace;
 <li>Use our official brand assets from the resources provided</li>
 <li>Share your unique referral link in your content</li>
 <li>
-Highlight the benefits of the Zion AI Marketplace for both,
+Highlight the benefits of the Zion AI Marketplace for both;
 talent and clients;
 </li>
 <li>
 Be transparent that you're a partner and may earn from referrals;
 </li>
 <li>
-Focus on how the platform can help your audience solve their AI,
+Focus on how the platform can help your audience solve their AI;
 talent needs;
 </li>
 </ul>
@@ -90,14 +90,14 @@ talent needs;
 <CardHeader>
 <CardTitle>Partner Support</CardTitle>
 <CardDescription>
-Need help with your affiliate marketing? Contact our partner support,
+Need help with your affiliate marketing? Contact our partner support;
 team.;
 </CardDescription>
 </CardHeader>
 <CardContent className='flex flex-col items-center text-center py-6'>
 <p className='text-zion-slate-light mb-4'>
-Our partner success team is available to help you maximize your,
-partnership with Zion AI Marketplace. Feel free to reach out if you,
+Our partner success team is available to help you maximize your;
+partnership with Zion AI Marketplace. Feel free to reach out if you;
 have questions about promotions resources or payment.;
 </p>
 <Button className='bg-zion-purple hover:bg-zion-purple-dark'>

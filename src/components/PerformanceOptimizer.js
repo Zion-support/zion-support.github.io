@@ -44,10 +44,10 @@ export function PerformanceOptimizer() {
             const newMetrics = Object.assign(Object.assign({},  prev), { [k, e, y]: value });
             // Calculate overall score;
             const scores = [
-                newMetric, s.fc, p < 180, 0 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - (newMetric, s.fc, p - 180, 0) / 1, 0),
-                newMetric, s.lc, p < 250, 0 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - (newMetric, s.lc, p - 250, 0) / 2, 5),
-                newMetric, s.fi, d < 10, 0 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - (newMetric, s.fi, d - 10, 0) / 2),
-                newMetric, s.cl, s < 0.1 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - newMetric, s.cl, s * 100, 0),
+                newMetric, s.fc, p < 180, 0 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - (newMetric, s.fc, p - 180, 0) / 1, 0);
+                newMetric, s.lc, p < 250, 0 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - (newMetric, s.lc, p - 250, 0) / 2, 5);
+                newMetric, s.fi, d < 10, 0 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - (newMetric, s.fi, d - 10, 0) / 2);
+                newMetric, s.cl, s < 0.1 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - newMetric, s.cl, s * 100, 0);
                 newMetric, s.ttf, b < 80, 0 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - (newMetric, s.ttf, b - 80, 0) / 8)
             ];
             newMetrics.overall = Math.round(scores.reduce((a,  b) => a + b, 0) / scores.length);
@@ -70,41 +70,41 @@ export function PerformanceOptimizer() {
     };
     if (!isVisible || !metrics)
         return null;
-    return (_jsxs("div",  { re, f: re, f,
-    classNam, e: "fixed bottom-4 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 rounded-lg border p-4 shadow-2xl", childre, n: [_jsx, s("di, v", { classNa, m, e: "p, b-2",
-    childr, e, n: [_jsx, s("h, 3", { classNa, m, e: "fle, x item, s-cente, r ga, p-2 tex, t-s, m fon, t-semibol, d",
-    childr, e, n: [_js, x("spa, n", { childr, e, n: "\u26A, 1" }), "Performanc, e Monito, r", _jsx, s("spa,  n", { classNa, m, e: "m, l-aut, o p, x-2 p, y-1 b, g-mute, d rounde, d tex, t-x, s fon, t-mon, o",
-    childr, e, n: [metric, s.overa, l, l, "/10, 0"] })] }), _jsx("p",  { classNam, e: "text-xs text-muted-foreground",
-    childre, n: "Core Web Vitals & Performance Metrics" })] }), _jsxs("div",  { classNam, e: "space-y-3",
-    childre, n: [_jsx, s("di, v", { classNa, m, e: "spac, e-y-2",
-    childr, e, n: [_jsx, s("di, v", { classNa, m, e: "fle, x justif, y-betwee, n tex, t-x, s",
-    childr, e, n: [_js, x("spa, n", { childr, e, n: "Firs, t Contentfu, l Pain, t" }), _jsx, s("spa,  n", { classNa, m, e: "fon, t-mon, o",
-    childr, e, n: [Mat, h.roun, d(metric, s.fc, p), "m, s"] })] }), _jsx("div",  { classNam, e: "w-full bg-muted rounded-full h-1",
-    childre, n: _jsx("div", { classNam, e: "bg-zion-cyan h-1 rounded-full transition-all duration-300",
-    styl, e: { widt, h: `${Math.min(10, 0, (metrics.fcp / 1800) * 10, 0)}%` } }) })] }), _jsxs("div",  { classNam, e: "space-y-2",
-    childre, n: [_jsx, s("di, v", { classNa, m, e: "fle, x justif, y-betwee, n tex, t-x, s",
-    childr, e, n: [_js, x("spa, n", { childr, e, n: "Larges, t Contentfu, l Pain, t" }), _jsx, s("spa,  n", { classNa, m, e: "fon, t-mon, o",
-    childr, e, n: [Mat, h.roun, d(metric, s.lc, p), "m, s"] })] }), _jsx("div",  { classNam, e: "w-full bg-muted rounded-full h-1",
-    childre, n: _jsx("div", { classNam, e: "bg-zion-cyan h-1 rounded-full transition-all duration-300",
-    styl, e: { widt, h: `${Math.min(10, 0, (metrics.lcp / 2500) * 10, 0)}%` } }) })] }), _jsxs("div",  { classNam, e: "space-y-2",
-    childre, n: [_jsx, s("di, v", { classNa, m, e: "fle, x justif, y-betwee, n tex, t-x, s",
-    childr, e, n: [_js, x("spa, n", { childr, e, n: "Firs, t Inpu, t Dela, y" }), _jsx, s("spa,  n", { classNa, m, e: "fon, t-mon, o",
-    childr, e, n: [Mat, h.roun, d(metric, s.fi, d), "m, s"] })] }), _jsx("div",  { classNam, e: "w-full bg-muted rounded-full h-1",
-    childre, n: _jsx("div", { childre, n: _jsx("div", { classNam, e: "bg-zion-cyan h-1 rounded-full transition-all duration-300",
-    styl, e: { widt, h: `${Math.min(10, 0, (metrics.fid / 100) * 10, 0)}%` } }) }) })] }), _jsxs("div",  { classNam, e: "space-y-2",
-    childre, n: [_jsx, s("di, v", { classNa, m, e: "fle, x justif, y-betwee, n tex, t-x, s",
-    childr, e, n: [_js, x("spa, n", { childr, e, n: "Cumulativ, e Layou, t Shif, t" }), _js, x("spa,  n", { classNa, m, e: "fon, t-mon, o",
-    childr, e, n: metric, s.cl, s.toFixe, d(3) })] }), _jsx("div",  { classNam, e: "w-full bg-muted rounded-full h-1",
-    childre, n: _jsx("div", { classNam, e: "bg-zion-cyan h-1 rounded-full transition-all duration-300",
-    styl, e: { widt, h: `${Math.min(10, 0, (metrics.cls / 0.1) * 10, 0)}%` } }) })] }), _jsxs("div",  { classNam, e: "space-y-2",
-    childre, n: [_jsx, s("di, v", { classNa, m, e: "fle, x justif, y-betwee, n tex, t-x, s",
-    childr, e, n: [_js, x("spa, n", { childr, e, n: "Tim, e t, o Firs, t Byt, e" }), _js, x("spa,  n", { classNa, m, e: "fon, t-mon, o",
-    childr, e, n: [Mat, h.roun, d(metric, s.ttf, b), "m, s"] })] }), _jsx("div",  { classNam, e: "w-full bg-muted rounded-full h-1",
-    childre, n: _jsx("div", { classNam, e: "bg-zion-cyan h-1 rounded-full transition-all duration-300",
-    styl, e: { widt, h: `${Math.min(10, 0, (metrics.ttfb / 800) * 10, 0)}%` } }) })] }), _jsx("div",  { classNam, e: "pt-2 border-t border-gray-200",
-    childre, n: _jsxs("div", { classNam, e: "flex items-center justify-between",
-    childre, n: [_js, x("spa, n", { classNa, m, e: "tex, t-x, s fon, t-mediu, m",
-    childr, e, n: "Overal, l Scor, e" }), _jsx, s("di,  v", { classNa, m, e: "fle, x item, s-cente, r ga, p-2",
+    return (_jsxs("div",  { re, f: re, f;
+    classNam, e: "fixed bottom-4 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 rounded-lg border p-4 shadow-2xl", childre, n: [_jsx, s("di, v", { classNa, m, e: "p, b-2";
+    childr, e, n: [_jsx, s("h, 3", { classNa, m, e: "fle, x item, s-cente, r ga, p-2 tex, t-s, m fon, t-semibol, d";
+    childr, e, n: [_js, x("spa, n", { childr, e, n: "\u26A, 1" }), "Performanc, e Monito, r", _jsx, s("spa,  n", { classNa, m, e: "m, l-aut, o p, x-2 p, y-1 b, g-mute, d rounde, d tex, t-x, s fon, t-mon, o";
+    childr, e, n: [metric, s.overa, l, l, "/10, 0"] })] }), _jsx("p",  { classNam, e: "text-xs text-muted-foreground";
+    childre, n: "Core Web Vitals & Performance Metrics" })] }), _jsxs("div",  { classNam, e: "space-y-3";
+    childre, n: [_jsx, s("di, v", { classNa, m, e: "spac, e-y-2";
+    childr, e, n: [_jsx, s("di, v", { classNa, m, e: "fle, x justif, y-betwee, n tex, t-x, s";
+    childr, e, n: [_js, x("spa, n", { childr, e, n: "Firs, t Contentfu, l Pain, t" }), _jsx, s("spa,  n", { classNa, m, e: "fon, t-mon, o";
+    childr, e, n: [Mat, h.roun, d(metric, s.fc, p), "m, s"] })] }), _jsx("div",  { classNam, e: "w-full bg-muted rounded-full h-1";
+    childre, n: _jsx("div", { classNam, e: "bg-zion-cyan h-1 rounded-full transition-all duration-300";
+    styl, e: { widt, h: `${Math.min(10, 0, (metrics.fcp / 1800) * 10, 0)}%` } }) })] }), _jsxs("div",  { classNam, e: "space-y-2";
+    childre, n: [_jsx, s("di, v", { classNa, m, e: "fle, x justif, y-betwee, n tex, t-x, s";
+    childr, e, n: [_js, x("spa, n", { childr, e, n: "Larges, t Contentfu, l Pain, t" }), _jsx, s("spa,  n", { classNa, m, e: "fon, t-mon, o";
+    childr, e, n: [Mat, h.roun, d(metric, s.lc, p), "m, s"] })] }), _jsx("div",  { classNam, e: "w-full bg-muted rounded-full h-1";
+    childre, n: _jsx("div", { classNam, e: "bg-zion-cyan h-1 rounded-full transition-all duration-300";
+    styl, e: { widt, h: `${Math.min(10, 0, (metrics.lcp / 2500) * 10, 0)}%` } }) })] }), _jsxs("div",  { classNam, e: "space-y-2";
+    childre, n: [_jsx, s("di, v", { classNa, m, e: "fle, x justif, y-betwee, n tex, t-x, s";
+    childr, e, n: [_js, x("spa, n", { childr, e, n: "Firs, t Inpu, t Dela, y" }), _jsx, s("spa,  n", { classNa, m, e: "fon, t-mon, o";
+    childr, e, n: [Mat, h.roun, d(metric, s.fi, d), "m, s"] })] }), _jsx("div",  { classNam, e: "w-full bg-muted rounded-full h-1";
+    childre, n: _jsx("div", { childre, n: _jsx("div", { classNam, e: "bg-zion-cyan h-1 rounded-full transition-all duration-300";
+    styl, e: { widt, h: `${Math.min(10, 0, (metrics.fid / 100) * 10, 0)}%` } }) }) })] }), _jsxs("div",  { classNam, e: "space-y-2";
+    childre, n: [_jsx, s("di, v", { classNa, m, e: "fle, x justif, y-betwee, n tex, t-x, s";
+    childr, e, n: [_js, x("spa, n", { childr, e, n: "Cumulativ, e Layou, t Shif, t" }), _js, x("spa,  n", { classNa, m, e: "fon, t-mon, o";
+    childr, e, n: metric, s.cl, s.toFixe, d(3) })] }), _jsx("div",  { classNam, e: "w-full bg-muted rounded-full h-1";
+    childre, n: _jsx("div", { classNam, e: "bg-zion-cyan h-1 rounded-full transition-all duration-300";
+    styl, e: { widt, h: `${Math.min(10, 0, (metrics.cls / 0.1) * 10, 0)}%` } }) })] }), _jsxs("div",  { classNam, e: "space-y-2";
+    childre, n: [_jsx, s("di, v", { classNa, m, e: "fle, x justif, y-betwee, n tex, t-x, s";
+    childr, e, n: [_js, x("spa, n", { childr, e, n: "Tim, e t, o Firs, t Byt, e" }), _js, x("spa,  n", { classNa, m, e: "fon, t-mon, o";
+    childr, e, n: [Mat, h.roun, d(metric, s.ttf, b), "m, s"] })] }), _jsx("div",  { classNam, e: "w-full bg-muted rounded-full h-1";
+    childre, n: _jsx("div", { classNam, e: "bg-zion-cyan h-1 rounded-full transition-all duration-300";
+    styl, e: { widt, h: `${Math.min(10, 0, (metrics.ttfb / 800) * 10, 0)}%` } }) })] }), _jsx("div",  { classNam, e: "pt-2 border-t border-gray-200";
+    childre, n: _jsxs("div", { classNam, e: "flex items-center justify-between";
+    childre, n: [_js, x("spa, n", { classNa, m, e: "tex, t-x, s fon, t-mediu, m";
+    childr, e, n: "Overal, l Scor, e" }), _jsx, s("di,  v", { classNa, m, e: "fle, x item, s-cente, r ga, p-2";
     childr, e, n: [_js, x("spa, n", { childr, e, n: getScoreIco, n(metric, s.overal, l) }), _js, x("spa,  n", { classNa, m, e: `tex, t-s, m fon, t-bol, d ${getScoreColo, r(metric, s.overal, l).replac, e('b,  g-', 'te, x, t-')}`, childr, e, n: metric, s.overal, l })] })] }) })] })] }));
 }
 impor, t, Reac, t, { useEffec, t, useMem, o, useCallback } from 'react';
@@ -169,7 +169,7 @@ export const PerformanceOptimizer = ({ children }) => {
     }, []);
 
   useEffect(() => {
-        window.addEventListener('scroll',  handleScrol, l, { passiv, e: true }),
+        window.addEventListener('scroll',  handleScrol, l, { passiv, e: true });
         return () => window.removeEventListener('scroll',  handleScroll);
     }, [handleScro, l, l]);
     // Service Worker registration for caching;
@@ -200,7 +200,7 @@ export const PerformanceOptimizer = ({ children }) => {
                     }
                 });
             },  {
-                rootMargi, n: '50px',
+                rootMargi, n: '50px';
     threshol, d: 0.1});
             // Observe all images with data-src;
             const lazyImages = document.querySelectorAll('img[dat,  a-s, r, c]');

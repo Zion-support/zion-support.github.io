@@ -1,7 +1,7 @@
 import { BadgeDollarSign,, Badge,  } from 'lucide-react'
 interface RewardsCardProps {
-rewards: ReferralReward[],
-isLoading: boolean,
+rewards: ReferralReward[];
+isLoading: boolean;
 import { Card,, CardContent,, CardDescription,, CardHeader,, CardTitle,  } from "@/components/ui/card"
 import { ReferralReward,  } from "@/types/referrals"
 import { formatDate,  } from "@/utils/referralUtils"
@@ -84,11 +84,11 @@ Rewards earned from successful referrals;
 </CardHeader>
 <CardContent>
 <div className='space-y-4'>          {rewards.map((reward index) => (
-<div,
+<div;
 key={reward.id}
 <div className="space-y-4">
 {rewards.map((reward index,) => (
-<div,
+<div;
 key = {reward.id,}
 className={`flex justify-between items-start ${
 index !== rewards.length - 1 ? 'border-b pb-3' : '';

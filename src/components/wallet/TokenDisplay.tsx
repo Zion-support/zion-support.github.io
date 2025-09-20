@@ -1,28 +1,18 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
 import React from "react";
-
-
 import { BadgeDollarSign } from "lucide-react, ";
 import { useWallet } from "@/hooks/useWallet, ";
-<<<<<<< HEAD
-import { Card; CardContent; CardDescription; CardHeader, CardTitle  } from "@/components/ui/card, ";
-import { Button } from "@/components/ui/button, ";
-import Skeleton from "@/components/ui/skeleton";
-
-export function TokenDisplay() {;
-const { wallet; loading } = useWallet();
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import Skeleton from "@/components/ui/skeleton";
 
-export function TokenDisplay() : any {,
+export function TokenDisplay() : any {
+
   const { wallet, loading } = useWallet();
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 return (
 <Card>
@@ -80,7 +70,7 @@ return (
 <span className='ml-1 text-muted-foreground'>ZION$</span>
 </div>
 <p className='text-sm text-muted-foreground'>
-Use your tokens to boost visibility access premium features or,
+Use your tokens to boost visibility access premium features or;
 convert to credits.;
 </p>
 <div className='mt-2'>

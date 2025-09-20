@@ -1,22 +1,22 @@
 import React from "react";
 
 interface BrowseItem {
-id: string;,
-title: string;,
-subtitle: string;,
+id: string;
+title: string;
+subtitle: string;
 description: string;
-location?: string;,
+location?: string;
 badges: string[];
 price?: string;
 image?: string;
 match?: number;
-timePosted?: string,
+timePosted?: string;
 interface BrowseCardsProps {
-items: BrowseItem[];,
-type: "jobs" | "talents";,
-onViewDetails: (id: string) => void,
+items: BrowseItem[];
+type: "jobs" | "talents";
+onViewDetails: (id: string) => void;
 export function BrowseCards({ items type onViewDetails }: BrowseCardsProps) {
-const [savedItems, setSavedItems] = useState<string[]>([]),
+const [savedItems, setSavedItems] = useState<string[]>([]);
 
 const toggleSaved = null;
 return (
@@ -52,7 +52,7 @@ return (
 </p>
 </div>
 </div>
-<button,
+<button;
 className='h-8 w-8 flex items-center justify-center'
 onClick={() => toggleSaved(item.id)}                >
 {savedItems.includes(item.id) ? (
@@ -64,7 +64,7 @@ onClick={() => toggleSaved(item.id)}                >
 </div>
 <div className='mt-3 flex flex-wrap gap-1'>
 {item.badges.map((badge index) => (
-<Badge,
+<Badge;
 key={index}
 variant='outline'
 className='text-xs font-normal'                  >                      <AvatarImage src={item.image} alt={item.title} />
@@ -80,7 +80,7 @@ className='text-xs font-normal'                  >                      <AvatarI
 <p className="text-sm text-muted-foreground">{item.subtitle}</p>
 </div>
 </div>
-<button,
+<button;
 className="h-8 w-8 flex items-center justify-center"
 onClick={() => toggleSaved(item.id)}
 >;
@@ -93,7 +93,7 @@ onClick={() => toggleSaved(item.id)}
 </div>
 <div className="mt-3 flex flex-wrap gap-1">
 {item.badges.map((badge index) => (
-<Badge,
+<Badge;
 key = {index,}
 variant="outline"
 className="text-xs font-normal"
@@ -148,7 +148,7 @@ className="text-xs font-normal"
 </div>
 </div>
 <div className='border-t border-border p-3 flex justify-end'>
-<Button,
+<Button;
 size='sm';
 onClick={() => onViewDetails(item.id)}
 className='gap-1'              >

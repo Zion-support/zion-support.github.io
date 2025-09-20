@@ -1,6 +1,6 @@
 import React from "react";
 
-redirectUrl?: string,
+redirectUrl?: string;
 }
 export function PaymentButton({
 >;

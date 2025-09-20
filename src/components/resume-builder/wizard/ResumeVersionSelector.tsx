@@ -2,8 +2,8 @@ import { Save,, ChevronDown,, Plus,, Loader2,  } from 'lucide-react'
 import { Resume,, ,  } from '@/types/resume';
 import { useResume,  } from '@/hooks/useResume';
 interface ResumeVersionSelectorProps {
-currentResume: Resume;,
-onResumeChange: (resumeId: string) => void,
+currentResume: Resume;
+onResumeChange: (resumeId: string) => void;
 return (
 <div className='flex items-center gap-2'>
 <span className='text-sm text-muted-foreground'>Resume:</span>
@@ -16,13 +16,13 @@ return (
 </DropdownMenuTrigger>
 <DropdownMenuContent align='end'>
 {existingResumes.map(resume => (
-<DropdownMenuItem,
+<DropdownMenuItem;
 key={resume.id}
 onClick={() => onResumeChange(resume.id!)}
 className='cursor-pointer'            >              className="cursor-pointer"
 <DropdownMenuContent align="end">
 {existingResumes.map((resume) => (
-<DropdownMenuItem,
+<DropdownMenuItem;
 key={resume.id}
 onClick={() => onResumeChange(resume.id!)}
 className="cursor-pointer"
@@ -31,7 +31,7 @@ className="cursor-pointer"
 </DropdownMenuItem>
 ))}
 <DropdownMenuSeparator />
-<DropdownMenuItem,
+<DropdownMenuItem;
 onClick={() => setSaveDialogOpen(true)}
 className='cursor-pointer'          >
 <Plus className='h-4 w-4 mr-2' />            Save as new version;
@@ -53,7 +53,7 @@ Save as new version;
 <DialogTitle>Save as new resume version</DialogTitle>
 </DialogHeader>
 <div className='py-4'>
-<Input,
+<Input;
 value={newResumeTitle}
 onChange={e => setNewResumeTitle(e.target.value)}
 placeholder='Enter resume title (e.g. DevOps Resume)';
@@ -63,7 +63,7 @@ placeholder='Enter resume title (e.g. DevOps Resume)';
 <Button variant='outline' onClick={() => setSaveDialogOpen(false)}>
 Cancel;
 </Button>
-<Button,
+<Button;
 onClick={handleCreateNewVersion}
 disabled={!newResumeTitle.trim() |isLoading}
 className='gap-2'
@@ -73,13 +73,13 @@ placeholder="Enter resume title (e.g. DevOps Resume)";
 />
 </div>
 <DialogFooter>
-<Button,
+<Button;
 variant="outline"
 onClick = {() => setSaveDialogOpen(false),}
 >;
 Cancel;
 </Button>
-<Button,
+<Button;
 onClick = {handleCreateNewVersion,}
 disabled = {!newResumeTitle.trim() |isLoading,}
 className="gap-2"
@@ -96,7 +96,7 @@ Save;
 )
 }
 > {
-resume.basic info.title,
+resume.basic info.title;
 }</DropdownMenuItem>) )
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>)
 }";

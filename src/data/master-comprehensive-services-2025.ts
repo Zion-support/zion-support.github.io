@@ -32,25 +32,25 @@ export type AnyService =
 export const masterComprehensiveServices2025 = {
   // Original services;
   original: {
-    microSaas: enhancedMicroSaasServices2025,
-    itServices: enhancedITServices2025,
-    aiServices: enhancedAIServices2025,,
+    microSaas: enhancedMicroSaasServices2025;
+    itServices: enhancedITServices2025;
+    aiServices: enhancedAIServices2025,;
   };
   // Expanded services;
-  expanded: allExpandedServices2025,
+  expanded: allExpandedServices2025;
   // Additional services;
-  additional: allAdditionalServices2025,
+  additional: allAdditionalServices2025;
   // Cutting-edge services;
-  cuttingEdge: allCuttingEdgeServices2025,,
+  cuttingEdge: allCuttingEdgeServices2025,;
 };
     // Get all services as a flat array;
 export const getAllServices = (): AnyService[] : any => {
   const allServices = [
-    ...enhancedMicroSaasServices2025,
-    ...enhancedITServices2025,
-    ...enhancedAIServices2025,
-    ...Object.values(allExpandedServices2025).flat(),
-    ...Object.values(allAdditionalServices2025).flat(),
+    ...enhancedMicroSaasServices2025;
+    ...enhancedITServices2025;
+    ...enhancedAIServices2025;
+    ...Object.values(allExpandedServices2025).flat();
+    ...Object.values(allAdditionalServices2025).flat();
     ...Object.values(allCuttingEdgeServices2025).flat()
   ];
   return allServices;
@@ -58,13 +58,13 @@ export const getAllServices = (): AnyService[] : any => {
 
 // Get services by category across all service types;
 export const getMasterServicesByCategory = (category: string): AnyService[] : any => {
-  const allServices = getAllServices(),
+  const allServices = getAllServices();
     return allServices.filter(service => service.category === category);
 };
 
 // Get services by price range across all service types;
 export const getMasterServicesByPriceRange = (minPrice: number, maxPrice: number): AnyService[] : any => {
-  const allServices = getAllServices(),
+  const allServices = getAllServices();
     return allServices.filter(service => {
     if ("price" in service && typeof service.price === "number") {
       return service.price >= minPrice && service.price <= maxPrice;
@@ -81,13 +81,13 @@ export const getMasterServicesByPriceRange = (minPrice: number, maxPrice: number
 
 // Get popular services across all categories;
 export const getMasterPopularServices = (limit: number = 20): AnyService[] : any => {
-  const allServices = getAllServices(),
+  const allServices = getAllServices();
     return allServices.slice(0, limit);
 };
 
 // Search services across all categories;
 export const searchMasterServices = (query: string): AnyService[] : any => {
-  const allServices = getAllServices(),
+  const allServices = getAllServices();
     const searchTerm = query.toLowerCase();
   return allServices.filter(service => 
     service.name.toLowerCase().includes(searchTerm) ||
@@ -98,7 +98,7 @@ export const searchMasterServices = (query: string): AnyService[] : any => {
 
 // Get services by technology/domain;
 export const getMasterServicesByTechnology = (technology: string): AnyService[] : any => {
-  const allServices = getAllServices(),
+  const allServices = getAllServices();
     const techTerm = technology.toLowerCase();
   return allServices.filter(service => 
     service.tags.some(tag => tag.toLowerCase().includes(techTerm)) ||
@@ -109,7 +109,7 @@ export const getMasterServicesByTechnology = (technology: string): AnyService[] 
 
 // Get services by target audience;
 export const getMasterServicesByAudience = (audience: string): AnyService[] : any => {
-  const allServices = getAllServices(),
+  const allServices = getAllServices();
     const audienceTerm = audience.toLowerCase();
   return allServices.filter(service => 
     service.targetAudience.some(target => target.toLowerCase().includes(audienceTerm))
@@ -118,7 +118,7 @@ export const getMasterServicesByAudience = (audience: string): AnyService[] : an
 
 // Get services by pricing tier;
 export const getMasterServicesByPricing = (pricing: string): AnyService[] : any => {
-  const allServices = getAllServices(),
+  const allServices = getAllServices();
     const pricingTerm = pricing.toLowerCase();
   return allServices.filter(service => {
     if ("pricing" in service) {
@@ -133,31 +133,31 @@ export const getMasterServicesStats = () => {
   const allServices = getAllServices();
   
   const stats = {
-    totalServices: allServices.length,
+    totalServices: allServices.length;
     byType: {
-      microSaas: allServices.filter(s => "pricing" in s && "userLimit" in s).length,
-      itServices: allServices.filter(s => "hourlyRate" in s && "projectRate" in s).length,
-      aiServices: allServices.filter(s => "aiModels" in s && "aiScore" in s).length,,
+      microSaas: allServices.filter(s => "pricing" in s && "userLimit" in s).length;
+      itServices: allServices.filter(s => "hourlyRate" in s && "projectRate" in s).length;
+      aiServices: allServices.filter(s => "aiModels" in s && "aiScore" in s).length,;
     };
     byPricing: {
-      freemium: allServices.filter(s => "pricing" in s && s.pricing === "Freemium").length,
-      professional: allServices.filter(s => "pricing" in s && s.pricing === "Professional").length,
-      enterprise: allServices.filter(s => "pricing" in s && s.pricing === "Enterprise").length,,
+      freemium: allServices.filter(s => "pricing" in s && s.pricing === "Freemium").length;
+      professional: allServices.filter(s => "pricing" in s && s.pricing === "Professional").length;
+      enterprise: allServices.filter(s => "pricing" in s && s.pricing === "Enterprise").length,;
     };
-    categories: [...new Set(allServices.map(s => s.category))].length,
+    categories: [...new Set(allServices.map(s => s.category))].length;
     priceRanges: {
       low: allServices.filter(s => {
-        if ("price" in s && typeof s.price === "number") return s.price < 100,
+        if ("price" in s && typeof s.price === "number") return s.price < 100;
     if ("hourlyRate" in s && typeof s.hourlyRate === "number") return s.hourlyRate < 100;
         return false;
       }).length;
       medium: allServices.filter(s => {
-        if ("price" in s && typeof s.price === "number") return s.price >= 100 && s.price < 1000,
+        if ("price" in s && typeof s.price === "number") return s.price >= 100 && s.price < 1000;
     if ("hourlyRate" in s && typeof s.hourlyRate === "number") return s.hourlyRate >= 100 && s.hourlyRate < 200;
         return false;
       }).length;
       high: allServices.filter(s => {
-        if ("price" in s && typeof s.price === "number") return s.price >= 1000,
+        if ("price" in s && typeof s.price === "number") return s.price >= 1000;
     if ("hourlyRate" in s && typeof s.hourlyRate === "number") return s.hourlyRate >= 200;
         return false;
       }).length;
@@ -169,7 +169,7 @@ export const getMasterServicesStats = () => {
 
 // Get featured services (high-value, innovative services)
 export const getMasterFeaturedServices = (limit: number = 10): AnyService[] : any => {
-  const allServices = getAllServices(),
+  const allServices = getAllServices();
     // Score services based on various factors;
   const scoredServices = allServices.map(service => {
     let score = 0;
@@ -199,7 +199,7 @@ export const getMasterFeaturedServices = (limit: number = 10): AnyService[] : an
     
     // Bonus for cutting-edge categories;
     const cuttingEdgeCategories = [
-      "Quantum Computing", "Neuromorphic Computing", "Brain-Computer Interface",
+      "Quantum Computing", "Neuromorphic Computing", "Brain-Computer Interface";
       "Synthetic Biology", "Fusion Energy", "Hyperloop", "4D Manufacturing"
     ];
     if (cuttingEdgeCategories.includes(service.category)) {
@@ -217,7 +217,7 @@ export const getMasterFeaturedServices = (limit: number = 10): AnyService[] : an
 
 // Get trending services (services with high ROI and innovation)
 export const getMasterTrendingServices = (limit: number = 10): AnyService[] : any => {
-  const allServices = getAllServices(),
+  const allServices = getAllServices();
     const trendingServices = allServices.filter(service => {
     // Look for services with high ROI indicators;
     if ("roi" in service) {

@@ -74,23 +74,17 @@ export function PrimaryNav() {
                 router.push(`/blog/${sugg.slug}`);
             }
             else {
-                // Default: search results page with slug,
+                // Default: search results page with slug;
                 router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
      }
             setQuery('');
             // Track analytics event;
             if (typeof window !== 'undefined' && window.gtag) {
                 window.gtag('event', 'search_suggestion_click', {
-<<<<<<< HEAD
                     search_term: sugg.text;
                     suggestion_type: sugg.type;
-                    suggestion_id: sugg.id || sugg.slug});
-=======
-                    search_term: sugg.text,
-                    suggestion_type: sugg.type,
-                    suggestion_id: sugg.id || sugg.slug,
+                    suggestion_id: sugg.id || sugg.slug;
                 });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
      }
         }} searchSuggestions={suggestions}/>
             </form>

@@ -1,4 +1,4 @@
-import React { useState useRef useEffect } from 'react',
+import React { useState useRef useEffect } from 'react';
 import Image from 'next/image';
 import { motion,, AnimatePresence,, ,  } from 'framer-motion';
 import { ImageIcon,, AlertTriangle,  } from 'lucide-react'
@@ -6,7 +6,7 @@ import { cn,, ,  } from '@/lib/utils';
 import { imageOptimization,, ,  } from '@/utils/performance';
 import { logWarn,  } from '@/utils/productionLogger';
 interface OptimizedImageProps {
-src: string;,
+src: string;
 alt: string;
 width?: number;
 height?: number;
@@ -26,15 +26,15 @@ retryCount?: number;
 showLoadingProgress?: boolean;
 fill?: boolean;
 blurDataURL?: string;
-loading?: 'lazy' | 'eager',
+loading?: 'lazy' | 'eager';
 style?: React.CSSProperties;
-objectPosition?: string,
+objectPosition?: string;
 }
 
 interface ImageMetrics {
-loadTime: number;,
-fileSize: number;,
-format: string;,
+loadTime: number;
+fileSize: number;
+format: string;
 wasOptimized: boolean;
 }
 

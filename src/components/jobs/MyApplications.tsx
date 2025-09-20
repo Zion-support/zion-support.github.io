@@ -1,11 +1,11 @@
 
-import { useState,  } from "react",
-import { useJobApplications,  } from "@/hooks/useJobApplications",
-import { Card,, CardContent,, CardHeader,, CardTitle,  } from "@/components/ui/card",
-import { Badge,  } from "@/components/ui/badge",
-import { Button,  } from "@/components/ui/button",
+import { useState,  } from "react";
+import { useJobApplications,  } from "@/hooks/useJobApplications";
+import { Card,, CardContent,, CardHeader,, CardTitle,  } from "@/components/ui/card";
+import { Badge,  } from "@/components/ui/badge";
+import { Button,  } from "@/components/ui/button";
 import { Loader2,, MessageSquare,, ExternalLink,  } from 'lucide-react'
-import { formatDistanceToNow,  } from "date-fns",
+import { formatDistanceToNow,  } from "date-fns";
 import Link from "next/link";
 import { ApplicationStatus,  } from "@/types/jobs";
 export function MyApplications() {
@@ -60,7 +60,7 @@ Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true
 </p>
 )}
 <div className="flex justify-between items-center">
-<Button,
+<Button;
 variant="outline"
 size="sm";
 className="text-xs"
@@ -70,7 +70,7 @@ asChild;
 <ExternalLink className="h-3 w-3 mr-1" /> View Job;
 </Link>
 </Button>
-<Button,
+<Button;
 variant="default"
 size="sm";
 className="text-xs"

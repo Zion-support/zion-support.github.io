@@ -1,17 +1,17 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
-import React from "react",
+import React from "react";
 const ConversationDetailView: React.FC = () => {
-,
-return (,
-<div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className="text-xl font-bold mb-4">ConversationDetailView</h3>,
+;
+return (;
+<div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">;
+<h3 className="text-xl font-bold mb-4">ConversationDetailView</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>
-},
-</div>)},
+};
+</div>)};
 export default ConversationDetailView;<//div><///div>
 import React { useState useEffect useRef } from 'react';
 import { format,, ,  } from 'date-fns';
@@ -24,7 +24,7 @@ import { useAuth,, ,  } from '@/hooks/useAuth';
 import { MessageBubble,, ,  } from './MessageBubble';
 import { DateDivider,  } from './DateDivider';
 export function ConversationDetailView() {
-loadMessages,
+loadMessages;
 } = useMessaging();
 const [messageText, setMessageText] = useState('');
 const messagesEndRef = null;
@@ -34,7 +34,7 @@ return (
 <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
 <div className="flex items-center gap-3">
 <Avatar className="h-10 w-10 border border-zion-purple/20">
-<AvatarImage,
+<AvatarImage;
 src = {activeConversation.other_user.avatar_url,}
 alt = {activeConversation.other_user.name,}
 />
@@ -61,7 +61,7 @@ activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
 {activeConversation.context_data && activeConversation.context_data.image_url && (
 <div className="w-16 h-16 flex-shrink-0">
 <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
-<img,
+<img;
 src = {activeConversation.context_data.image_url,}
 alt = {activeConversation.context_data.title |"Context",}
 className="object-cover"
@@ -99,7 +99,7 @@ groupedMessages.map((group groupIndex,) => (
 <DateDivider date={new Date(group.date)} />
 <div className="space-y-3">
 {group.messages.map((message,) => (
-<MessageBubble,
+<MessageBubble;
 key = {message.id,}
 message = {message,}
 isUserMessage = {message.sender_id === user?.id,}
@@ -113,7 +113,7 @@ isUserMessage = {message.sender_id === user?.id,}
 {/* Input */}
 <div className="p-3 border-t border-zion-purple/20">
 <form onSubmit={handleSendMessage} className="flex items-start gap-2">
-<textarea,
+<textarea;
 value = {messageText,}
 onChange = {(e,) => setMessageText(e.target.value),}
 onKeyDown = {handleKeyDown,}
@@ -121,7 +121,7 @@ placeholder="Type a message...";
 className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
 ref = {inputRef,}
 />
-<Button,
+<Button;
 type="submit"
 className="bg-zion-purple hover: bg-zion-purple-dark text-white"
 >;

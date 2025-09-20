@@ -6,10 +6,10 @@ return (
 <div className='relative aspect-video max-w-3xl mx-auto'>
 {!loaded && (
 <>
-<Image,
+<Image;
 src={poster}
 alt={`${title} poster`}
-fill,
+fill;
 className='object-cover rounded'
 />
 <div className='absolute inset-0 flex items-center justify-center bg-black/30'>
@@ -19,7 +19,7 @@ className='object-cover rounded'
 </div>
 </>
 )}
-<iframe,
+<iframe;
 className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
 src={src}
 title={title}

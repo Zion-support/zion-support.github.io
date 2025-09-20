@@ -26,15 +26,16 @@ export function useWebhooks() {
         setLoading(true);
         setError(null);
         try {
-            const { data: { session } } = await supabase.auth.getSession(),
+            const { data: { session } } = await supabase.auth.getSession();
+
     if (!session) {
                 setError("Authentication required");
                 return;
             }
             const response = await apiClient(`${getWebhookUrl()}/webhooks`, {
-                method: 'GET',
+                method: 'GET';
                 headers: {
-                    'Authorization': `Bearer ${session.access_token}`,
+                    'Authorization': `Bearer ${session.access_token}`;
                     'Content-Type': 'application/json'
                 }
             });
@@ -49,16 +50,10 @@ export function useWebhooks() {
             
             setError(err instanceof Error ? err.message : 'An unknown error occurred');
             toast({
-<<<<<<< HEAD
                 variant: "destructive";
                 title: "Error fetching webhooks";
-                description: err instanceof Error ? err.message : 'An unknown error occurred';});
-=======
-                variant: "destructive",
-                title: "Error fetching webhooks",
-                description: err instanceof Error ? err.message : 'An unknown error occurred',,
+                description: err instanceof Error ? err.message : 'An unknown error occurred',;
             });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         }
         finally {
             setLoading(false);
@@ -71,21 +66,23 @@ export function useWebhooks() {
         setLoading(true);
         setError(null);
         try {
-            const { data: { session } } = await supabase.auth.getSession(),
+            const { data: { session } } = await supabase.auth.getSession();
+
     if (!session) {
                 setError("Authentication required");
                 return;
             }
             const response = await apiClient(`${getWebhookUrl()}/create`, {
-                method: 'POST',
+                method: 'POST';
                 headers: {
-                    'Authorization': `Bearer ${session.access_token}`,
+                    'Authorization': `Bearer ${session.access_token}`;
                     'Content-Type': 'application/json'
-                },
+                };
+
                 body: JSON.stringify({
-                    name,
-                    url,
-                    eventTypes,
+                    name;
+                    url;
+                    eventTypes;
                     secret;
                 })
             });
@@ -97,30 +94,19 @@ export function useWebhooks() {
             // Add the new webhook to the list;
             setWebhooks(prev => [result.webhook, ...prev]);
             toast({
-<<<<<<< HEAD
                 title: "Webhook Created";
-                description: "Your webhook has been created successfully.";});
-=======
-                title: "Webhook Created",
-                description: "Your webhook has been created successfully.",,
+                description: "Your webhook has been created successfully.",;
             });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
             return result.webhook;
         }
         catch (err) {
             
             setError(err instanceof Error ? err.message : 'An unknown error occurred');
             toast({
-<<<<<<< HEAD
                 variant: "destructive";
                 title: "Error creating webhook";
-                description: err instanceof Error ? err.message : 'An unknown error occurred';});
-=======
-                variant: "destructive",
-                title: "Error creating webhook",
-                description: err instanceof Error ? err.message : 'An unknown error occurred',,
+                description: err instanceof Error ? err.message : 'An unknown error occurred',;
             });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         }
         finally {
             setLoading(false);
@@ -133,17 +119,19 @@ export function useWebhooks() {
         setLoading(true);
         setError(null);
         try {
-            const { data: { session } } = await supabase.auth.getSession(),
+            const { data: { session } } = await supabase.auth.getSession();
+
     if (!session) {
                 setError("Authentication required");
                 return;
             }
             const response = await apiClient(`${getWebhookUrl()}/toggle`, {
-                method: 'POST',
+                method: 'POST';
                 headers: {
-                    'Authorization': `Bearer ${session.access_token}`,
+                    'Authorization': `Bearer ${session.access_token}`;
                     'Content-Type': 'application/json'
-                },
+                };
+
                 body: JSON.stringify({ webhookId, isActive })
             });
 
@@ -152,10 +140,11 @@ export function useWebhooks() {
                 throw new Error(result.error || 'Failed to update webhook');
             }
             // Update the webhook in the list;
-            setWebhooks(prev => prev.map(webhook => webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook)),
+            setWebhooks(prev => prev.map(webhook => webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook));
+
     toast({
-                title: isActive ? "Webhook Activated" : "Webhook Deactivated",
-                description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`,
+                title: isActive ? "Webhook Activated" : "Webhook Deactivated";
+                description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`;
             });
             return result;
         }
@@ -163,16 +152,10 @@ export function useWebhooks() {
             
             setError(err instanceof Error ? err.message : 'An unknown error occurred');
             toast({
-<<<<<<< HEAD
                 variant: "destructive";
                 title: "Error updating webhook";
-                description: err instanceof Error ? err.message : 'An unknown error occurred';});
-=======
-                variant: "destructive",
-                title: "Error updating webhook",
-                description: err instanceof Error ? err.message : 'An unknown error occurred',,
+                description: err instanceof Error ? err.message : 'An unknown error occurred',;
             });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         }
         finally {
             setLoading(false);
@@ -185,19 +168,22 @@ export function useWebhooks() {
         setLoading(true);
         setError(null);
         try {
-            const { data: { session } } = await supabase.auth.getSession(),
+            const { data: { session } } = await supabase.auth.getSession();
+
     if (!session) {
                 setError("Authentication required");
                 return;
             }
             const response = await apiClient(`${getWebhookUrl()}/delete`, {
-                method: 'POST',
+                method: 'POST';
                 headers: {
-                    'Authorization': `Bearer ${session.access_token}`,
+                    'Authorization': `Bearer ${session.access_token}`;
                     'Content-Type': 'application/json'
-                },
+                };
+
                 body: JSON.stringify({ webhookId })
-            }),
+            });
+
     const result = await response.json();
             if (!response.ok) {
                 throw new Error(result.error || 'Failed to delete webhook');
@@ -205,30 +191,19 @@ export function useWebhooks() {
             // Remove the webhook from the list;
             setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId));
             toast({
-<<<<<<< HEAD
                 title: "Webhook Deleted";
-                description: "The webhook has been deleted successfully.";});
-=======
-                title: "Webhook Deleted",
-                description: "The webhook has been deleted successfully.",,
+                description: "The webhook has been deleted successfully.",;
             });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
             return result;
         }
         catch (err) {
             
             setError(err instanceof Error ? err.message : 'An unknown error occurred');
             toast({
-<<<<<<< HEAD
                 variant: "destructive";
                 title: "Error deleting webhook";
-                description: err instanceof Error ? err.message : 'An unknown error occurred';});
-=======
-                variant: "destructive",
-                title: "Error deleting webhook",
-                description: err instanceof Error ? err.message : 'An unknown error occurred',,
+                description: err instanceof Error ? err.message : 'An unknown error occurred',;
             });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         }
         finally {
             setLoading(false);
@@ -242,17 +217,19 @@ export function useWebhooks() {
         setError(null);
         setTestResult(null);
         try {
-            const { data: { session } } = await supabase.auth.getSession(),
+            const { data: { session } } = await supabase.auth.getSession();
+
     if (!session) {
                 setError("Authentication required");
                 return;
             }
             const response = await apiClient(`${getWebhookUrl()}/test`, {
-                method: 'POST',
+                method: 'POST';
                 headers: {
-                    'Authorization': `Bearer ${session.access_token}`,
+                    'Authorization': `Bearer ${session.access_token}`;
                     'Content-Type': 'application/json'
-                },
+                };
+
                 body: JSON.stringify({ webhookId, eventType })
             });
 
@@ -262,21 +239,16 @@ export function useWebhooks() {
             }
             // Store test result;
             setTestResult({
-<<<<<<< HEAD
                 status: result.status;
                 statusText: result.statusText;
-                responseBody: result.responseBody});
-=======
-                status: result.status,
-                statusText: result.statusText,
-                responseBody: result.responseBody,
+                responseBody: result.responseBody;
             });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     // Update last triggered timestamp;
-            setWebhooks(prev => prev.map(webhook => webhook.id === webhookId ? { ...webhook, last_triggered_at: new Date().toISOString() } : webhook)),
+            setWebhooks(prev => prev.map(webhook => webhook.id === webhookId ? { ...webhook, last_triggered_at: new Date().toISOString() } : webhook));
+
     toast({
-                title: "Webhook Test Sent",
-                description: `Test completed with status: ${result.status} ${result.statusText}`,
+                title: "Webhook Test Sent";
+                description: `Test completed with status: ${result.status} ${result.statusText}`;
             });
             return result;
         }
@@ -284,36 +256,26 @@ export function useWebhooks() {
             
             setError(err instanceof Error ? err.message : 'An unknown error occurred');
             toast({
-<<<<<<< HEAD
                 variant: "destructive";
                 title: "Error testing webhook";
-                description: err instanceof Error ? err.message : 'An unknown error occurred';});
-=======
-                variant: "destructive",
-                title: "Error testing webhook",
-                description: err instanceof Error ? err.message : 'An unknown error occurred',,
+                description: err instanceof Error ? err.message : 'An unknown error occurred',;
             });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         }
         finally {
             setLoading(false);
         }
     };
     return {
-        webhooks,
-        loading,
-        error,
-        testResult,
-        fetchWebhooks,
-        createWebhook,
-        toggleWebhook,
-        deleteWebhook,
-        testWebhook,
-<<<<<<< HEAD
-        clearTestResult: () => setTestResult(null)};
-=======
+        webhooks;
+        loading;
+        error;
+        testResult;
+        fetchWebhooks;
+        createWebhook;
+        toggleWebhook;
+        deleteWebhook;
+        testWebhook;
         clearTestResult: () => setTestResult(null);
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 '

@@ -6,12 +6,12 @@ scopeSummary;
 startDate;
 endDate;
 projectType;
-onMilestonesGenerated,
+onMilestonesGenerated;
 }: MilestoneSuggestionsProps) {
 return (
 <div className='space-y-4'>
 {!showSuggestions && (
-<Button,
+<Button;
 variant='outline'
 onClick={handleGenerateMilestones}
 disabled={isGenerating |!scopeSummary |!startDate}
@@ -108,7 +108,7 @@ These milestones will be added to your contract;
 )
 }
 <Button variant="outline" onClick={
-handleGenerateMilestones,
+handleGenerateMilestones;
 }> {";
 isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating milestones... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Suggest Project Milestones with AI </>)
 }</Button>)

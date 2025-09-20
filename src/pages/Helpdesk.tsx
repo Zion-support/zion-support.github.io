@@ -1,5 +1,5 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 

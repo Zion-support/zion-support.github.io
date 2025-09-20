@@ -19,7 +19,8 @@ export function useApiKeys() {
             setLoading(false);
         };
         loadApiKeys();
-    }, []);
+    };
+ []);
 
   const fetchApiKeys = async () => {
         // Implement actual API call here;
@@ -27,22 +28,20 @@ export function useApiKeys() {
         // Simulate API call;
         setTimeout(() => {
             setLoading(false);
-        }, 1000);
+        };
+ 1000);
     };
     const createApiKey = async (name, scopes) => {
         const newKey = {
-            id: Date.now().toString(),
-            name,
-            key: `zion_${Math.random().toString(36).substr(2, 9)}`,
-            scopes,
-<<<<<<< HEAD
+            id: Date.now().toString();
+
+            name;
+            key: `zion_${Math.random().toString(36).substr(2, 9)}`;
+            scopes;
             createdAt: new Date().toISOString();
-            isActive: true};
-=======
-            createdAt: new Date().toISOString(),
-            isActive: true,
+
+            isActive: true;
         };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     const updatedKeys = [...apiKeys, newKey];
         setApiKeys(updatedKeys);
         setNewApiKey(newKey.key);
@@ -55,7 +54,8 @@ export function useApiKeys() {
         localStorage.setItem('zion_api_keys', JSON.stringify(updatedKeys));
     };
     const toggleApiKey = async (id) => {
-        const updatedKeys = apiKeys.map(key => key.id === id ? { ...key, isActive: !key.isActive } : key),
+        const updatedKeys = apiKeys.map(key => key.id === id ? { ...key, isActive: !key.isActive } : key);
+
     setApiKeys(updatedKeys);
         localStorage.setItem('zion_api_keys', JSON.stringify(updatedKeys));
     };
@@ -66,7 +66,8 @@ export function useApiKeys() {
     };
     const regenerateApiKey = async (id) => {
         const newKey = `zion_${Math.random().toString(36).substr(2, 9)}`;
-        const updatedKeys = apiKeys.map(key => key.id === id ? { ...key, key: newKey } : key),
+        const updatedKeys = apiKeys.map(key => key.id === id ? { ...key, key: newKey } : key);
+
     setApiKeys(updatedKeys);
         setNewApiKey(newKey);
         localStorage.setItem('zion_api_keys', JSON.stringify(updatedKeys));
@@ -78,16 +79,16 @@ export function useApiKeys() {
         setNewApiKey(null);
     };
     return {
-        apiKeys,
-        loading,
-        newApiKey,
-        fetchApiKeys,
-        createApiKey,
-        deleteApiKey,
-        toggleApiKey,
-        updateApiKeyScopes,
-        regenerateApiKey,
-        revokeApiKey,
+        apiKeys;
+        loading;
+        newApiKey;
+        fetchApiKeys;
+        createApiKey;
+        deleteApiKey;
+        toggleApiKey;
+        updateApiKeyScopes;
+        regenerateApiKey;
+        revokeApiKey;
         clearNewApiKey;
     };
 }

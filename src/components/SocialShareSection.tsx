@@ -4,7 +4,7 @@ import { toast,  } from "./ui/use-toast";
 import { useTranslation,  } from 'react-i18next';
 export function SocialShareSection() {
 const { t } = useTranslation();
-// Current URL is not available during SSR guard with typeof check,
+// Current URL is not available during SSR guard with typeof check;
 return (
 <section className='py-12 bg-zion-blue'>
 <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
@@ -18,7 +18,7 @@ Help others discover the future of AI & tech marketplace;
 </p>
 </div>
 <div className='flex flex-wrap gap-3'>
-{shareLinks.map((link index) => (              <Button,
+{shareLinks.map((link index) => (              <Button;
 key = {index,}
 className={`${link.color} text-white`}
 size='sm';

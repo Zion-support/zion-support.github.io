@@ -2,16 +2,16 @@ import * as React from &quot;react&quot;
 import * as ContextMenuPrimitive from &quot;@radix-ui/react-context-menu&quot;
 import { Check,, ChevronRight,, Circle,  } from 'lucide-react'
 import { cn,  } from &quot;@/lib/utils&quot;
-const ContextMenu = ContextMenuPrimitive.Root,
-const ContextMenuTrigger = ContextMenuPrimitive.Trigger,
-const ContextMenuGroup = ContextMenuPrimitive.Group,
-const ContextMenuPortal = ContextMenuPrimitive.Portal,
-const ContextMenuSub = ContextMenuPrimitive.Sub,
-const ContextMenuRadioGroup = ContextMenuPrimitive.RadioGroup,
+const ContextMenu = ContextMenuPrimitive.Root;
+const ContextMenuTrigger = ContextMenuPrimitive.Trigger;
+const ContextMenuGroup = ContextMenuPrimitive.Group;
+const ContextMenuPortal = ContextMenuPrimitive.Portal;
+const ContextMenuSub = ContextMenuPrimitive.Sub;
+const ContextMenuRadioGroup = ContextMenuPrimitive.RadioGroup;
 const ContextMenuSubTrigger = React.forwardRef<;
 React.ElementRef<typeof ContextMenuPrimitive.SubTrigger>
 React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {
-inset?: boolean,
+inset?: boolean;
 };
 >(({ className inset children, ...props }, ref) => (;
 <ContextMenuPrimitive.SubTrigger;
@@ -27,12 +27,12 @@ className
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
 </ContextMenuPrimitive.SubTrigger>
 ))
-ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName,
+ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName;
 const ContextMenuSubContent = React.forwardRef<;
 React.ElementRef<typeof ContextMenuPrimitive.SubContent>
 React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubContent>
 >(({ className, ...props }, ref) => (
-<ContextMenuPrimitive.SubContent,
+<ContextMenuPrimitive.SubContent;
 ref={ref}
 className={cn(;
 &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
@@ -140,17 +140,17 @@ React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>
 >(({ className, ...props }, ref) => (;
 <ContextMenuPrimitive.Separator;
 ref={ref}
-className={cn(&quot;-mx-1 my-1 h-px bg-border&quot;, className)}
+className={cn(&quot;-mx-1 my-1 h-px bg-border&quot; className)}
 {...props}
 />
 ))
-ContextMenuSeparator.displayName = ContextMenuPrimitive.Separator.displayName,
+ContextMenuSeparator.displayName = ContextMenuPrimitive.Separator.displayName;
 const ContextMenuShortcut: any = ({
 className
-...props,
+...props;
 }: React.HTMLAttributes<HTMLSpanElement>) => {
 return (
-<span,
+<span;
 className={cn(;
 &quot;ml-auto text-xs tracking-widest text-muted-foreground&quot;
 className
@@ -161,18 +161,18 @@ className
 }
 ContextMenuShortcut.displayName = &quot;ContextMenuShortcut&quot;
 export {
-ContextMenu,
+ContextMenu;
 ContextMenuTrigger;
-ContextMenuContent,
+ContextMenuContent;
 ContextMenuItem;
-ContextMenuCheckboxItem,
+ContextMenuCheckboxItem;
 ContextMenuRadioItem;
-ContextMenuLabel,
+ContextMenuLabel;
 ContextMenuSeparator;
-ContextMenuShortcut,
+ContextMenuShortcut;
 ContextMenuGroup;
-ContextMenuPortal,
+ContextMenuPortal;
 ContextMenuSub;
-ContextMenuSubContent,
+ContextMenuSubContent;
 ContextMenuSubTrigger;
 ContextMenuRadioGroup}

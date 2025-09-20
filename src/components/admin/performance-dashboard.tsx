@@ -1,9 +1,9 @@
 interface BundleChunk {
-name: string;,
-size: number;,
-loadTime: number;,
-cached: boolean;,
-type: string,
+name: string;
+size: number;
+loadTime: number;
+cached: boolean;
+type: string;
 export function PerformanceDashboard() {
 return (
 <div className='space-y-6'>
@@ -12,12 +12,12 @@ return (
 <div>
 <h2 className='text-2xl font-bold'>Performance Dashboard</h2>
 <p className='text-muted-foreground'>
-Monitor bundle size performance metrics and optimization,
+Monitor bundle size performance metrics and optimization;
 opportunities;
 </p>
 </div>
 <Button onClick={collectMetrics} disabled={isLoading}>
-<RefreshCw,
+<RefreshCw;
 className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
 />
 {isLoading ? 'Collecting...' : 'Refresh'}
@@ -41,7 +41,7 @@ Performance Score;
 <span className='text-2xl font-bold'>
 {metrics.performanceScore}/100;
 </span>
-<Badge,
+<Badge;
 variant={
 metrics.performanceScore >= 90 ? 'default' : 'secondary';
 }
@@ -149,7 +149,7 @@ Bundle Chunks;
 {chunks.length > 0 ? (
 <div className='space-y-2'>
 {chunks.slice(0 10).map((chunk index) => (
-<div,
+<div;
 key={chunk.name}
 className='flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded'
 >;
@@ -208,7 +208,7 @@ Optimization Recommendations;
 Bundle splitting implemented;
 </p>
 <p className='text-sm text-blue-700 dark:text-blue-300'>
-Your bundle is properly split into framework vendor and,
+Your bundle is properly split into framework vendor and;
 application chunks;
 </p>
 </div>
@@ -220,7 +220,7 @@ application chunks;
 Performance monitoring active;
 </p>
 <p className='text-sm text-green-700 dark:text-green-300'>
-Real-time performance tracking is helping optimize your,
+Real-time performance tracking is helping optimize your;
 application;
 </p>
 </div>
@@ -233,7 +233,7 @@ application;
 Consider more aggressive code splitting;
 </p>
 <p className='text-sm text-yellow-700 dark:text-yellow-300'>
-Bundle size is above 2MB. Consider implementing dynamic,
+Bundle size is above 2MB. Consider implementing dynamic;
 imports for heavy components
 </p>
 </div>

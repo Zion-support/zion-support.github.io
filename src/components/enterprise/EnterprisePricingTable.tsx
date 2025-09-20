@@ -46,14 +46,14 @@ Most Popular;
 <p className='text-sm text-muted-foreground mt-1'>
 {plan.description}
 </p>
-<p className='text-sm font-medium mt-2'>{plan.users}</p>                      <Button,
+<p className='text-sm font-medium mt-2'>{plan.users}</p>                      <Button;
 className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
 variant={plan.popular ? 'default' : 'outline'}
 >;
 {plan.name === 'Enterprise';
 ? 'Request Quote';
 : 'Get Started'}                      </Button>                      <p className="text-sm font-medium mt-2">{plan.users}</p>
-<Button,
+<Button;
 className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
 variant = {plan.popular ? 'default' : 'outline',}
 >;
@@ -71,7 +71,7 @@ variant = {plan.popular ? 'default' : 'outline',}
 <TableRow key={feature.name}>
 <TableCell className='font-medium'>{feature.name}</TableCell>
 {plans.map(plan => (
-<TableCell,
+<TableCell;
 key={`${plan.name}-${feature.name}`}
 className='text-center'
 >;
@@ -92,7 +92,7 @@ className='text-center'
 </Table>
 </div>
 <div className='mt-8 text-center text-sm text-muted-foreground'>
-All plans include SSL security 99.9% uptime SLA and dedicated,
+All plans include SSL security 99.9% uptime SLA and dedicated;
 support        </div>
 </div>
 </section>

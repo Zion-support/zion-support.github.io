@@ -1,5 +1,5 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
@@ -11,7 +11,7 @@ import { Table;
 , , TableCell;
 , , TableHead;
 , , TableHeader;
-, , TableRow,
+, , TableRow;
 } from '@/components/ui/table';
 import { Button,  } from '@/components/ui/button';
 import { DropdownMenu;
@@ -28,7 +28,7 @@ const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
 const [isLoading, setIsLoading] = useState(true);
 useEffect(() => {
 loadTenants()
-}, []),
+}, []);
 
 }
 }

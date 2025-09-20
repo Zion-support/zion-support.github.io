@@ -1,26 +1,15 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from "react;";
 
 interface AccessibilityContextType {
-<<<<<<< HEAD
-isHighContrast: boolean;
-isReducedMotion: boolean;
-isLargeText: boolean;
-toggleHighContrast: () => void;
-toggleReducedMotion: () => void;,
-toggleLargeText: () => void;,
-focusTrap: (element: HTMLElement | null) => void;,
-announceToScreenReader: (message: string) => void;};
-=======
-  isHighContrast: boolean,
-    isReducedMotion: boolean,
-    isLargeText: boolean,
-    toggleHighContrast: () => void,
-    toggleReducedMotion: () => void,
-    toggleLargeText: () => void,
-    focusTrap: (element: HTMLElement | null) => void,
-    announceToScreenReader: (message: string) => void,,
+  isHighContrast: boolean;
+    isReducedMotion: boolean;
+    isLargeText: boolean;
+    toggleHighContrast: () => void;
+    toggleReducedMotion: () => void;
+    toggleLargeText: () => void;
+    focusTrap: (element: HTMLElement | null) => void;
+    announceToScreenReader: (message: string) => void,;
 };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
 export const useAccessibility: any = () => {;
@@ -32,38 +21,10 @@ return context;
 };
 
 interface AccessibilityProviderProps {
-<<<<<<< HEAD
-children: ReactNode;};
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {;
-const [isHighContrast, setIsHighContrast] = useState(false);
-const [isReducedMotion, setIsReducedMotion] = useState(false);
-const [isLargeText, setIsLargeText] = useState(false);
-
-// Check for user preferences on mount;
-useEffect(() => {
-// Check for reduced motion preference;
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-setIsReducedMotion(prefersReducedMotion);
-
-// Check for high contrast preference;
-const prefersHighContrast = window.matchMedia("(prefers-contrast: high)").matches;
-setIsHighContrast(prefersHighContrast);
-
-// Check for large text preference;
-const prefersLargeText = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-setIsLargeText(prefersLargeText);
-
-// Listen for preference changes;
-const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-const contrastQuery = window.matchMedia("(prefers-contrast: high)");
-const handleMotionChange: any = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
-const handleContrastChange: any = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
-motionQuery.addEventListener("change", handleMotionChange);
-contrastQuery.addEventListener("change", handleContrastChange);
-=======
-  children: ReactNode,,
+  children: ReactNode,;
 };
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) : any => {,
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) : any => {
+
   const [isHighContrast; setIsHighContrast] = useState(false);
   const [isReducedMotion; setIsReducedMotion] = useState(false);
   const [isLargeText; setIsLargeText] = useState(false);
@@ -71,31 +32,35 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   // Check for user preferences on mount;
   useEffect(() => {
     // Check for reduced motion preference;
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     setIsReducedMotion(prefersReducedMotion);
 
     // Check for high contrast preference;
-    const prefersHighContrast = window.matchMedia("(prefers-contrast: high)").matches,
+    const prefersHighContrast = window.matchMedia("(prefers-contrast: high)").matches;
     setIsHighContrast(prefersHighContrast);
 
     // Check for large text preference;
-    const prefersLargeText = window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    const prefersLargeText = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     setIsLargeText(prefersLargeText);
 
     // Listen for preference changes;
-    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)"),
-    const contrastQuery = window.matchMedia("(prefers-contrast: high)"),
-    const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches),
-    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches),
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    const contrastQuery = window.matchMedia("(prefers-contrast: high)");
+
+    const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
+
+    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
+
     motionQuery.addEventListener("change", handleMotionChange);
     contrastQuery.addEventListener("change", handleContrastChange);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 return () => {
 motionQuery.removeEventListener("change", handleMotionChange);
 contrastQuery.removeEventListener("change", handleContrastChange);
 };
-}, []);
+};
+ []);
 
 // Apply accessibility classes to body;
 useEffect(() => {
@@ -113,21 +78,12 @@ body.classList.add("reduced-motion");
 body.classList.remove("reduced-motion");
 }
 
-<<<<<<< HEAD
-if (isLargeText) {
-body.classList.add("large-text");
-} else {
-body.classList.remove("large-text");
-}
-}, [isHighContrast; isReducedMotion; isLargeText]);
-=======
   // Focus trap functionality;
   const focusTrap = (element: HTMLElement | null) : any => {
-    if (!element) return,
+    if (!element) return;
     const focusableElements = element.querySelectorAll(
       "button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])"
     );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 // Focus trap functionality;
 const focusTrap: any = (element: HTMLElement | null) => {;
@@ -138,15 +94,12 @@ const focusableElements = element.querySelectorAll(;
 
 if (focusableElements.length === 0) return;
 
-<<<<<<< HEAD
-const firstElement = focusableElements[0] as HTMLElement;
-const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-=======
     const handleKeyDown = (e: KeyboardEvent) : any => {
       if (e.key === "Tab") {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
-            e.preventDefault(),
+            e.preventDefault();
+
     lastElement.focus();
           }
         } else {
@@ -157,7 +110,6 @@ const lastElement = focusableElements[focusableElements.length - 1] as HTMLEleme
         }
       }
     };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const handleKeyDown: any = (e: KeyboardEvent) => {
 if (e.key === "Tab") {
@@ -178,20 +130,14 @@ firstElement.focus();
 element.addEventListener("keydown", handleKeyDown);
 firstElement.focus();
 
-<<<<<<< HEAD
-return () => {
-element.removeEventListener("keydown", handleKeyDown);
-};
-};
-=======
   // Screen reader announcements;
   const announceToScreenReader = (message: string) : any => {
-    const announcement = document.createElement("div"),
+    const announcement = document.createElement("div");
+
     announcement.setAttribute("aria-live", "polite");
     announcement.setAttribute("aria-atomic", "true");
     announcement.className = "sr-only";
     announcement.textContent = message;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 // Screen reader announcements;
 const announceToScreenReader: any = (message: string) => {;
@@ -203,23 +149,15 @@ announcement.textContent = message;
 
 document.body.appendChild(announcement);
 
-<<<<<<< HEAD
-// Remove after announcement;
-setTimeout(() => {
-document.body.removeChild(announcement);
-}, 1000);
-};
-=======
   // Keyboard shortcuts;
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) : any => {
-      // Ctrl/Cmd + K for high contrast toggle,
+      // Ctrl/Cmd + K for high contrast toggle;
       if ((e.ctrlKey || e.metaKey) && e.key === "k") {
         e.preventDefault();
     toggleHighContrast();
         announceToScreenReader(`High contrast ${isHighContrast ? "disabled" : "enabled"}`);
       }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 // Keyboard shortcuts;
 useEffect(() => {
@@ -248,24 +186,19 @@ announceToScreenReader(`Large text ${isLargeText ? "disabled" : "enabled"}`);
 
 document.addEventListener("keydown", handleKeyDown);
 return () => document.removeEventListener("keydown", handleKeyDown);
-}, [isHighContrast; isReducedMotion; isLargeText]);
+};
+ [isHighContrast; isReducedMotion; isLargeText]);
 
-<<<<<<< HEAD
-const toggleHighContrast: any = () => setIsHighContrast(prev => !prev);
-const toggleReducedMotion: any = () => setIsReducedMotion(prev => !prev);
-const toggleLargeText: any = () => setIsLargeText(prev => !prev);
-=======
   const value: AccessibilityContextType = {
-    isHighContrast,
+    isHighContrast;
     isReducedMotion;
     isLargeText;
     toggleHighContrast;
     toggleReducedMotion;
     toggleLargeText;
     focusTrap;
-    announceToScreenReader,
+    announceToScreenReader;
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const value: AccessibilityContextType = {
 isHighContrast;
@@ -285,19 +218,8 @@ return (
 };
 
 // Accessibility toolbar component;
-<<<<<<< HEAD
-export const AccessibilityToolbar: React.FC = () => {;
-const {;
-isHighContrast;
-isReducedMotion;
-isLargeText;
-toggleHighContrast;
-toggleReducedMotion;
-toggleLargeText;
-};
-} = useAccessibility();
-=======
-export const AccessibilityToolbar: React.FC = () => {,
+export const AccessibilityToolbar: React.FC = () => {
+
     const {;
     isHighContrast;
     isReducedMotion;
@@ -307,7 +229,6 @@ export const AccessibilityToolbar: React.FC = () => {,
     toggleLargeText;
   };
   } = useAccessibility();
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 return (
 <div className="fixed bottom-4 left-4 z-50 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-4 shadow-2xl shadow-zion-cyan/20">
@@ -336,40 +257,6 @@ aria-label={`${isReducedMotion ? "Disable" : "Enable"} reduced motion`}
 Reduced Motion;
 </button>
 
-<<<<<<< HEAD
-<button;
-onClick={toggleLargeText}
-className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-isLargeText;
-? "bg-zion-cyan text-zion-blue-dark";
-: "bg-zion-blue-light/20 text-zion-slate-light hover: bg-zion-blue-light/30"}`}
-aria-label={`${isLargeText ? "Disable" : "Enable"} large text`}
->;
-Large Text;
-</button>
-
-<div className="text-xs text-zion-slate-light text-center pt-2 border-t border-zion-cyan/20">
-<p>Keyboard shortcuts:</p>
-<p>Ctrl/Cmd + K: High Contrast</p>
-<p>Ctrl/Cmd + M: Reduced Motion</p>
-<p>Ctrl/Cmd + L: Large Text</p>
-</div>
-</div>
-</div>
-);
-};
-
-// Skip to main content link;
-export const SkipToMainContent: React.FC = () => {;
-return (;
-<a;
-href="#main-content";
-className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark"
->;
-Skip to main content;
-</a>
-);
-=======
         <div className="text-xs text-zion-slate-light text-center pt-2 border-t border-zion-cyan/20">
           <p>Keyboard shortcuts: </p>
           <p>Ctrl/Cmd + K: High Contrast</p>
@@ -382,14 +269,14 @@ Skip to main content;
   };
 
 // Skip to main content link;
-export const SkipToMainContent: React.FC = () => {,
+export const SkipToMainContent: React.FC = () => {
+
   return (;
     <a;
       href="#main-content"
       className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark"
     >
-      Skip to main content,
+      Skip to main content;
     </a>
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 };<//a><///a>

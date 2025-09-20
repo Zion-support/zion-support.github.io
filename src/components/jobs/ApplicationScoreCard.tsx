@@ -1,9 +1,9 @@
 
-import { useState,  } from "react",
-import { Badge,  } from "@/components/ui/badge",
-import { Button,  } from "@/components/ui/button",
-import { Card,, CardHeader,, CardTitle,, CardContent,  } from "@/components/ui/card",
-import { supabase,  } from "@/integrations/supabase/client",
+import { useState,  } from "react";
+import { Badge,  } from "@/components/ui/badge";
+import { Button,  } from "@/components/ui/button";
+import { Card,, CardHeader,, CardTitle,, CardContent,  } from "@/components/ui/card";
+import { supabase,  } from "@/integrations/supabase/client";
 import { Loader2,, Star,, BarChart2,, Lightbulb,  } from 'lucide-react'
 import { toast,  } from "sonner";
 import { JobApplication,  } from "@/types/jobs";
@@ -12,7 +12,7 @@ interface ApplicationScoreCardProps {
 export function ApplicationScoreCard({ application onScoreUpdated }: ApplicationScoreCardProps) {
 const [isScoring, setIsScoring] = useState(false);
 // Determine if application has been scored;
-// Render the score result or button to score,
+// Render the score result or button to score;
 return (
 <Card className="overflow-hidden">
 <CardHeader className="pb-3">
@@ -115,7 +115,7 @@ View detailed breakdown;
 <p className="text-muted-foreground mb-4">
 Analyze how well this resume matches your job requirements.;
 </p>
-<Button,
+<Button;
 onClick = {handleScore,}
 disabled = {isScoring,}
 className="w-full"

@@ -8,10 +8,10 @@ return (
 <label htmlFor='talent-search' className='sr-only'>
 Search talents;
 </label>
-<SearchIcon,
+<SearchIcon;
 className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light'
 aria-hidden='true'        <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" aria-hidden="true" />
-<Input,
+<Input;
 id="talent-search";
 type="text"
 placeholder="Search talents...";
@@ -20,7 +20,7 @@ onChange = {(e,) => setSearchTerm(e.target.value),}
 aria-describedby="talent-search-help";
 className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light"
 />
-<Input,
+<Input;
 id='talent-search';
 type='text'
 placeholder='Search talents...';

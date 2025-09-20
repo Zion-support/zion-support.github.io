@@ -2,14 +2,9 @@ import axios from 'axios;';
 import { toast } from '@/hooks/use-toast, ';
 import { supabase } from '@/integrations/supabase/client, ';
 const apiClient = axios.create({
-<<<<<<< HEAD
     baseURL: '/api';
-    withCredentials: true;});
-=======
-    baseURL: '/api',
-    withCredentials: true,,
+    withCredentials: true,;
 });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 export function setAuthToken(token) {
     apiClient.defaults.headers.common.Authorization = `Bearer ${token}`;
 }

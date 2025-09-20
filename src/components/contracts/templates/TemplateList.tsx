@@ -1,19 +1,19 @@
 
-import { ContractTemplate,  } from "@/types/contracts",
-import { Button,  } from "@/components/ui/button",
+import { ContractTemplate,  } from "@/types/contracts";
+import { Button,  } from "@/components/ui/button";
 import { Loader2,, Edit,, Trash,, Star,, StarOff,  } from 'lucide-react'
-import { useContractTemplates,  } from "@/hooks/useContractTemplates",
-import { Card,, CardContent,  } from "@/components/ui/card",
-import { Separator,  } from "@/components/ui/separator",
-import { Tooltip,, TooltipContent,, TooltipProvider,, TooltipTrigger,  } from "@/components/ui/tooltip",
+import { useContractTemplates,  } from "@/hooks/useContractTemplates";
+import { Card,, CardContent,  } from "@/components/ui/card";
+import { Separator,  } from "@/components/ui/separator";
+import { Tooltip,, TooltipContent,, TooltipProvider,, TooltipTrigger,  } from "@/components/ui/tooltip";
 import { useAuth,  } from "@/hooks/useAuth";
-// useRouter replaces the old useLocation hook from react-router,
+// useRouter replaces the old useLocation hook from react-router;
 }
 export function TemplateList({
 templates;
-isLoading;
+isLoading,
 onSelect;
-onEdit,
+onEdit;
 }: TemplateListProps) {
 if (isLoading) {
 return (
@@ -48,7 +48,7 @@ Last updated: {new Date(template.updated_at).toLocaleDateString()}
 </p>
 </div>
 <div className="flex items-center gap-2">
-<Button,
+<Button;
 variant="ghost"
 size="icon";
 onClick = {() => onEdit(template),}
@@ -60,7 +60,7 @@ aria-label="Edit template";
 <TooltipProvider>
 <Tooltip>
 <TooltipTrigger asChild>
-<Button,
+<Button;
 variant="ghost"
 size="icon";
 onClick = {(,) => handleSetDefault(template.id),}
@@ -81,7 +81,7 @@ Please log in to use this feature;
 <StarOff className="h-4 w-4" />
 </Button>
 )}
-<Button,
+<Button;
 variant="ghost"
 size="icon";
 onClick = {() => handleDeleteClick(template.id),}
@@ -92,7 +92,7 @@ aria-label="Delete template";
 </div>
 </div>
 <Separator className="my-3" />
-<Button,
+<Button;
 onClick = {() => onSelect(template),}
 variant="outline"
 className="w-full"
@@ -112,7 +112,7 @@ Are you sure you want to delete this template? This action cannot be undone.;
 </AlertDialogHeader>
 <AlertDialogFooter>
 <AlertDialogCancel>Cancel</AlertDialogCancel>
-<AlertDialogAction,
+<AlertDialogAction;
 className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
 onClick = {handleDeleteConfirm,}
 >;
@@ -126,11 +126,11 @@ Delete;
 }
 const handleSetDefault = async (templateId: string) => {
 if (!user) {
-const currentPath = router.asPath,
+const currentPath = router.asPath;
 router.push (`/auth/login?returnTo=$ {
 encodeURIComponent (currentPath)
 }`)
-return,
+return;
 }await setDefaultTemplate.mutateAsync (templateId)
 }
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
@@ -147,10 +147,10 @@ new Date (template.updated at) .toLocaleDateString () ";
 }</Tooltip> </TooltipProvider>) : (<Button variant="ghost" size="icon" disabled aria-label="Default template"> <StarOff className="h-4 w-4" /> </Button>) ";
 }<Button > <Trash className="h-4 w-4 text-destructive" /> </Button> </div> </div> <Separator className="my-3" /> <Button className="w-full" > Use This Template </Button> </CardContent> </Card>) )
 }<AlertDialog open= {
-!!templateToDelete,
+!!templateToDelete;
 }onOpenChange= {
 () => setTemplateToDelete (null) ";
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
-handleDeleteConfirm,
+handleDeleteConfirm;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>);
 }'"}

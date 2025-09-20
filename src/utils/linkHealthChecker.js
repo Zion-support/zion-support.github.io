@@ -2,68 +2,53 @@ export class LinkHealthChecker {
     config;
     constructor(config = {}) {
         this.config = {
-            timeout: config.timeout || 10000,
-            retries: config.retries || 3,
-            userAgent: config.userAgent || 'Zion-Tech-Group-Link-Checker/1.0',
+            timeout: config.timeout || 10000;
+            retries: config.retries || 3;
+            userAgent: config.userAgent || 'Zion-Tech-Group-Link-Checker/1.0';
             followRedirects: config.followRedirects !== false};
     }
     async checkLink(url) {
         const startTime = Date.now();
         try {
             const response = await fetch(url, {
-                method: 'HEAD',
-                signal: AbortSignal.timeout(this.config.timeout),
+                method: 'HEAD';
+                signal: AbortSignal.timeout(this.config.timeout);
+
                 headers: {
-                    'User-Agent': this.config.userAgent,
-                },
-<<<<<<< HEAD
-                redirect: this.config.followRedirects ? 'follow' : 'manual'});
-            const responseTime = Date.now() - startTime;
-=======
-                redirect: this.config.followRedirects ? 'follow' : 'manual',
+                    'User-Agent': this.config.userAgent;
+                };
+
+                redirect: this.config.followRedirects ? 'follow' : 'manual';
             });
 
   const responseTime = Date.now() - startTime;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
             if (response.ok || response.status < 400) {
                 return {
-                    url,
-                    status: 'healthy',
-                    statusCode: response.status,
-                    responseTime,
-<<<<<<< HEAD
-                    lastChecked: new Date()};
-=======
+                    url;
+                    status: 'healthy';
+                    statusCode: response.status;
+                    responseTime;
                     lastChecked: new Date();
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
             }
             else {
                 return {
-                    url,
-                    status: 'unhealthy',
-                    statusCode: response.status,
-                    responseTime,
-                    error: `HTTP ${response.status}: ${response.statusText}`,
-<<<<<<< HEAD
-                    lastChecked: new Date()};
-=======
+                    url;
+                    status: 'unhealthy';
+                    statusCode: response.status;
+                    responseTime;
+                    error: `HTTP ${response.status}: ${response.statusText}`;
                     lastChecked: new Date();
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
             }
         }
         catch (error) {
             return {
-                url,
-                status: 'error',
-                error: error instanceof Error ? error.message : 'Unknown error',
-<<<<<<< HEAD
-                lastChecked: new Date()};
-=======
+                url;
+                status: 'error';
+                error: error instanceof Error ? error.message : 'Unknown error';
                 lastChecked: new Date();
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         }
     }
     async checkMultipleLinks(urls) {
@@ -75,9 +60,9 @@ export class LinkHealthChecker {
             }
             catch (error) {
                 results.push({
-                    url,
-                    status: 'error',
-                    error: error instanceof Error ? error.message : 'Unknown error',
+                    url;
+                    status: 'error';
+                    error: error instanceof Error ? error.message : 'Unknown error';
                     lastChecked: new Date()});
             }
         }
@@ -101,15 +86,11 @@ export class LinkHealthChecker {
             }
         }
         return {
-            url,
-            status: 'error',
-            error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`,
-<<<<<<< HEAD
-            lastChecked: new Date()};
-=======
+            url;
+            status: 'error';
+            error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`;
             lastChecked: new Date();
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     }
     getHealthSummary(results) {
         const total = results.length;
@@ -123,10 +104,10 @@ export class LinkHealthChecker {
             ? responseTimes.reduce((a, b) => a + b, 0) / responseTimes.length;
             : 0;
         return {
-            total,
-            healthy,
-            unhealthy,
-            errors,
+            total;
+            healthy;
+            unhealthy;
+            errors;
             averageResponseTime;
         };
     }
@@ -134,23 +115,23 @@ export class LinkHealthChecker {
         const summary = this.getHealthSummary(results);
         const timestamp = new Date().toISOString();
         let report = `Link Health Report - ${timestamp}\n`;
-        report += `Summary: \n`,
-        report += `- Total Links: ${summary.total}\n`,
-        report += `- Healthy: ${summary.healthy}\n`,
-        report += `- Unhealthy: ${summary.unhealthy}\n`,
-        report += `- Errors: ${summary.errors}\n`,
-        report += `- Average Response Time: ${summary.averageResponseTime.toFixed(2)}ms\n\n`,
-        report += `Detailed Results: \n`,
+        report += `Summary: \n`;
+        report += `- Total Links: ${summary.total}\n`;
+        report += `- Healthy: ${summary.healthy}\n`;
+        report += `- Unhealthy: ${summary.unhealthy}\n`;
+        report += `- Errors: ${summary.errors}\n`;
+        report += `- Average Response Time: ${summary.averageResponseTime.toFixed(2)}ms\n\n`;
+        report += `Detailed Results: \n`;
         results.forEach((result, index) => {
             report += `${index + 1}. ${result.url}\n`;
-            report += `   Status: ${result.status}\n`,
+            report += `   Status: ${result.status}\n`;
             if (result.statusCode)
-                report += `   Status Code: ${result.statusCode}\n`,
+                report += `   Status Code: ${result.statusCode}\n`;
             if (result.responseTime)
-                report += `   Response Time: ${result.responseTime}ms\n`,
+                report += `   Response Time: ${result.responseTime}ms\n`;
             if (result.error)
-                report += `   Error: ${result.error}\n`,
-            report += `   Last Checked: ${result.lastChecked.toISOString()}\n\n`,
+                report += `   Error: ${result.error}\n`;
+            report += `   Last Checked: ${result.lastChecked.toISOString()}\n\n`;
         });
         return report;
     }

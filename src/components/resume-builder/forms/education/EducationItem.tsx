@@ -35,14 +35,14 @@ return (
 )}
 </div>
 <div className='flex gap-2'>
-<Button,
+<Button;
 variant='ghost'
 size='icon';
 onClick={() => onEdit(education)}
 aria-label='Edit education'            >
 <Edit className='h-4 w-4' />
 </Button>
-<Button,
+<Button;
 variant='ghost'
 size='icon';
 onClick={() => onDelete(education.id!)}

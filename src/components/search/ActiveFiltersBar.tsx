@@ -1,22 +1,5 @@
-<<<<<<< HEAD
 import React from "react";
-import { X  } from "lucide-react", interface Filter { key: "string; value: string," } label: "string"} interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> { filters: Filte r[], onRemoveFilter: (key: string) => void; onClearAll: () => void} className="text-sm text-zion-slate-light hover: tex t-zion-cyan transition-colors underline", > Clear all, ></div> ></div> )}
-import React from "react";
-import { X } from "lucide-react", interface Filter { "key": "string, "value": "string," "} "label": "string"} interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> { "filters": "Filte r[], "onRemoveFilter": ("key": string) => void, "onClearAll": () => void"} className="text-sm text-zion-slate-light "hover": "tex t-zion-cyan transition-colors underline", > Clear all, ></div> ></div> )"};
-;<//div><///div>
-import { X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-interface SearchFilters {
-sort: string;
-}
-interface ActiveFiltersBarProps {
-className?: string}
-export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
-=======
-import React from "react",
 import { X  } from "lucide-react", interface Filter { key: "string, value: string," } label: "string"} interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> { filters: Filte r[], onRemoveFilter: (key: string) => void, onClearAll: () => void} className="text-sm text-zion-slate-light hover: tex t-zion-cyan transition-colors underline", > Clear all, ></div> ></div> )}
-import React from "react",
+import React from "react";
 import { X } from "lucide-react", interface Filter { "key": "string, "value": "string," "} "label": "string"} interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> { "filters": "Filte r[], "onRemoveFilter": ("key": string) => void, "onClearAll": () => void"} className="text-sm text-zion-slate-light "hover": "tex t-zion-cyan transition-colors underline", > Clear all, ></div> ></div> )", }
 ;<//div><///div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e

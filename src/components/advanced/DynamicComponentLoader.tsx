@@ -1,10 +1,10 @@
 'use client';
 import React {
-Suspense,
+Suspense;
 lazy;
-useState,
+useState;
 useEffect;
-ComponentType,
+ComponentType;
 } from 'react';
 import { motion,, AnimatePresence,  } from 'framer-motion'
 import { Loader2,, AlertTriangle,, Wifi,, WifiOff,, RefreshCw,  } from 'lucide-react'
@@ -13,25 +13,25 @@ import { Card,, CardContent,  } from '@/components/ui/card'
 import { cn,  } from '@/lib/utils'
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface LoadingState {
-isLoading: boolean,
-error: Error | null,
-retryCount: number,
-isOnline: boolean,
+isLoading: boolean;
+error: Error | null;
+retryCount: number;
+isOnline: boolean;
 interface DynamicLoaderProps {
 importFn: () => Promise<{ default: ComponentType<any> }>
-fallback?: React.ReactNode,
+fallback?: React.ReactNode;
 errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>
-loadingComponent?: React.ComponentType,
-enableRetry?: boolean,
-maxRetries?: number,
-prefetch?: boolean,
-className?: string,
+loadingComponent?: React.ComponentType;
+enableRetry?: boolean;
+maxRetries?: number;
+prefetch?: boolean;
+className?: string;
 children?: React.ReactNode;
 [key: string]: any;
-// Enhanced Loading Component,
+// Enhanced Loading Component;
 const EnhancedLoading: React.FC<{
-progress?: number,
-message?: string,
+progress?: number;
+message?: string;
 showProgress?: boolean;
 //   {
 //     loadingComponent: () => (

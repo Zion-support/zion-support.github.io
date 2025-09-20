@@ -1,16 +1,16 @@
 
-import React from 'react',
-import { Card,, CardContent,  } from "@/components/ui/card",
-import { Badge,  } from "@/components/ui/badge",
+import React from 'react';
+import { Card,, CardContent,  } from "@/components/ui/card";
+import { Badge,  } from "@/components/ui/badge";
 import { Button,  } from "@/components/ui/button";
 import { Download,  } from 'lucide-react'
 import { Resume,  } from "@/types/resume";
 interface ResumePreviewCardProps {
-resume: Resume;,
-onDownload: () => void;,
-isLoading: boolean,
+resume: Resume;
+onDownload: () => void;
+isLoading: boolean;
 export function ResumePreviewCard({
-resume,
+resume;
 onDownload;
 isLoading,
 }: ResumePreviewCardProps) {
@@ -28,7 +28,7 @@ return (
 </p>
 )}
 </div>
-<Button,
+<Button;
 variant='ghost'
 size='sm';
 onClick={onDownload}
@@ -46,12 +46,12 @@ className='h-8 w-8 p-0'          >
 {resume.skills && resume.skills.length > 0 && (
 <div className='flex flex-wrap gap-1 mt-2'>
 {resume.skills.slice(0 5).map((skill index) => (
-<Badge,
+<Badge;
 key={index}
 variant='outline'
 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
 {resume.skills.slice(0 5).map((skill index) => (
-<Badge,
+<Badge;
 key = {index,}
 variant="outline"
 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
@@ -59,9 +59,9 @@ className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
 </Badge>
 ))}
 {resume.skills.length > 5 && (
-<Badge,
+<Badge;
 variant='outline'
-className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge,
+className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge;
 variant="outline"
 className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
 >;

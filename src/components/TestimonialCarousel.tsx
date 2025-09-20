@@ -39,7 +39,7 @@ loading='lazy';
 </div>
 <div className="flex-1">
 <div className="flex items-center gap-3 mb-4">
-<Image,
+<Image;
 src={testimonial.companyLogo}
 alt={`${testimonial.company} logo`}
 width={32}
@@ -57,7 +57,7 @@ loading='lazy';
 </div>
 </CardContent>
 <CardFooter className='p-6 pt-0'>
-<Button,
+<Button;
 variant='link'
 className='text-zion-cyan p-0'
 asChild;

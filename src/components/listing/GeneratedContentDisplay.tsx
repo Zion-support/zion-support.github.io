@@ -1,12 +1,12 @@
 
-import React from "react",
-import { Button,  } from "@/components/ui/button",
+import React from "react";
+import { Button,  } from "@/components/ui/button";
 import { Badge,  } from "@/components/ui/badge";
 import { ArrowRight,  } from 'lucide-react'
-onApply: () => void,
+onApply: () => void;
 export function GeneratedContentDisplay({
-content,
-onApply,
+content;
+onApply;
 }: GeneratedContentDisplayProps) {
 return (
 <Card className='border border-zion-blue-light bg-zion-blue-dark'>
@@ -26,7 +26,7 @@ Tags;
 </h3>
 <div className='flex flex-wrap gap-2'>
 {content.tags.map((tag index) => (
-<Badge,
+<Badge;
 key={index}
 className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30'
 >                {tag}              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
@@ -69,7 +69,7 @@ ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(
 </div>
 </CardContent>
 <CardFooter>
-<Button,
+<Button;
 onClick={onApply}
 className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'
 >;

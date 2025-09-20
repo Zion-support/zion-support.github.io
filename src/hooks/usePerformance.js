@@ -1,30 +1,18 @@
 import { useEffect, useRef, useState } from 'react, ';
 export function usePerformance() {
     const [metrics, setMetrics] = useState({
-<<<<<<< HEAD
         fcp: null;
         lcp: null;
         fid: null;
         cls: null;
         ttfb: null;
         domLoad: null;
-        windowLoad: null});
-    const [observers, setObservers] = useState([]);
-    const observerRef = useRef(null);
-=======
-        fcp: null,
-        lcp: null,
-        fid: null,
-        cls: null,
-        ttfb: null,
-        domLoad: null,
-        windowLoad: null,
+        windowLoad: null;
     });
 
   const [observers, setObservers] = useState([]);
 
   const observerRef = useRef(null);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     useEffect(() => {
         // Check if PerformanceObserver is supported;
         if (!('PerformanceObserver' in window)) {
@@ -64,13 +52,17 @@ export function usePerformance() {
                     clsValue += layoutShiftEntry.value;
                 }
             }
-            setMetrics(prev => ({ ...prev, cls: clsValue })),
+            setMetrics(prev => ({ ...prev, cls: clsValue }));
+
      });
         // Start observing;
         try {
-            fcpObserver.observe({ entryTypes: ['paint'] }),
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }),
-    fidObserver.observe({ entryTypes: ['first-input'] }),
+            fcpObserver.observe({ entryTypes: ['paint'] });
+
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    fidObserver.observe({ entryTypes: ['first-input'] });
+
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 };
         catch (error) {
@@ -80,17 +72,11 @@ export function usePerformance() {
         const navigationEntry = performance.getEntriesByType('navigation')[0];
         if (navigationEntry) {
             setMetrics(prev => ({
-                ...prev,
-<<<<<<< HEAD
+                ...prev;
                 ttfb: navigationEntry.responseStart - navigationEntry.requestStart;
                 domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
-                windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart}));
-=======
-                ttfb: navigationEntry.responseStart - navigationEntry.requestStart,
-                domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
-                windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
+                windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart;
             }));
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
      }
         // Cleanup;
         return () => {
@@ -99,16 +85,22 @@ export function usePerformance() {
             fidObserver.disconnect();
             clsObserver.disconnect();
         };
-    }, []);
+    };
+ []);
     // Get performance rating;
     const getRating = (metric, value) => {
         const thresholds = {
-            fcp: { good: 1800, poor: 3000 },
-            lcp: { good: 2500, poor: 4000 },
-            fid: { good: 100, poor: 300 },
-            cls: { good: 0.1, poor: 0.25 },
+            fcp: { good: 1800, poor: 3000 };
+
+            lcp: { good: 2500, poor: 4000 };
+
+            fid: { good: 100, poor: 300 };
+
+            cls: { good: 0.1, poor: 0.25 };
+
             ttfb: { good: 800, poor: 1800 }
-        },
+        };
+
     const threshold = thresholds[metric];
         if (!threshold)
             return 'good';
@@ -124,7 +116,8 @@ export function usePerformance() {
         Object.entries(metrics).forEach(([key, value]) => {
             if (value !== null) {
                 result.push({
-                    name: key.toUpperCase(),
+                    name: key.toUpperCase();
+
                     value;
   };
                     rating: getRating(key, value)
@@ -153,12 +146,8 @@ export function usePerformance() {
                 case 'good': return 100;
                 case 'needs-improvement': return 65;
                 case 'poor': return 0;
-<<<<<<< HEAD
-                default: return 0;}
-=======
-                default: return 0,;
+                default: return 0;
   }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         });
         return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
     };
@@ -171,16 +160,10 @@ export function usePerformance() {
             entries.forEach((entry) => {
                 if (entry.duration > 50) {
                     console.warn('Long task detected:', {
-<<<<<<< HEAD
                         duration: entry.duration;
                         startTime: entry.startTime;
-                        name: entry.name});
-=======
-                        duration: entry.duration,
-                        startTime: entry.startTime,
-                        name: entry.name,
+                        name: entry.name;
                     });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
      }
             });
         });
@@ -191,14 +174,17 @@ export function usePerformance() {
             
         }
         return () => longTaskObserver.disconnect();
-    }, []);
+    };
+ []);
     return {
-        metrics,
-        observers: getMetricsWithRatings(),
-        performanceScore: getPerformanceScore(),
-        logMetrics,
+        metrics;
+        observers: getMetricsWithRatings();
+
+        performanceScore: getPerformanceScore();
+
+        logMetrics;
         getRating: (metric) => {
-            const value = metrics[metric],
+            const value = metrics[metric];
     return value !== null ? getRating(metric, value) : null;
         }
     };
@@ -218,7 +204,8 @@ export function usePerformanceEvent(eventName, callback) {
             
         }
         return () => observer.disconnect();
-    }, [eventName, callback]);
+    };
+ [eventName, callback]);
 }
 // Hook for measuring time between renders;
 export function useRenderTime() {

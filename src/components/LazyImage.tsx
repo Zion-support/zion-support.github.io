@@ -3,50 +3,19 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface LazyImageProps {
-<<<<<<< HEAD
-src: string;,
-alt: string;
-className?: string;
-placeholder?: string;
-onLoad?: () => void;
-onError?: () => void;
-};
-export const LazyImage: React.FC<LazyImageProps> = ({
-src,
-alt;
-className = '';
-placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
-onLoad,
-onError;
-}) => {
-const [isLoaded, setIsLoaded] = useState(false);
-const [isInView, setIsInView] = useState(false);
-const imgRef = useRef<HTMLImageElement>(null);
-
-useEffect(() => {
-const observer = new IntersectionObserver(;
-([entry]) => {;
-if (entry.isIntersecting) {;
-setIsInView(true);
-observer.disconnect();
-}
-},
-{ threshold: 0.1 }
-);
-=======
-  src: string,
-  alt: string,
+  src: string;
+  alt: string;
   className?: string;
   placeholder?: string;
   onLoad?: () => void;
   onError?: () => void;
 };
 export const LazyImage: React.FC<LazyImageProps> = ({
-  src,
-  alt,;
-  className = '',;
-  placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
-  onLoad,
+  src;
+  alt;
+  className = '';
+  placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+';
+  onLoad;
   onError
 }) : any => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -60,17 +29,17 @@ export const LazyImage: React.FC<LazyImageProps> = ({
           setIsInView(true);
           observer.disconnect();
         }
-      },
-      { threshold: 0.1 }
-    ),
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+      };
 
+      { threshold: 0.1 }
+    );
 if (imgRef.current) {
 observer.observe(imgRef.current);
 }
 
 return () => observer.disconnect();
-}, []);
+};
+ []);
 
 const handleLoad: any = () => {;
 setIsLoaded(true);
@@ -81,28 +50,6 @@ const handleError: any = () => {;
 onError?.();
 };
 
-<<<<<<< HEAD
-return (
-<div ref={imgRef} className={className}>
-{isInView && (
-<motion.img;
-src={isLoaded ? src : placeholder}
-alt={alt}
-onLoad={handleLoad}
-onError={handleError}
-initial={{ opacity: 0 }}
-animate={{ opacity: isLoaded ? 1 : 0.3 }}
-transition={{ duration: 0.3 }}
-className="w-full h-full object-cover"
-/>
-)}
-{!isInView && (
-<div className="w-full h-full bg-gray-200 animate-pulse" />
-)}
-</div>
-);
-};
-=======
   return (
     <div ref={imgRef} className={className}>
       {isInView && (
@@ -123,7 +70,6 @@ className="w-full h-full object-cover"
     </div>
   );
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 export default LazyImage;
 <//div><///div>

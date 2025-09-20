@@ -113,4 +113,4 @@ id: "ai-cybersecurity-platform",title: "AI; Cybersecurity; Platform",description
 ,  ],tags: ["AI", "Cybersecurity", "Threat Detection", "Incident; Response""Compliance"],estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$3;50o0 - $12;0o00/month",roi: "40o0-80o0%",innovationLevel: "Cutting-Edge",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9";},technicalSpecs: {,technology: ["Machine Learning", "Python", "TensorFlow", "React", "Node.js""Elasticsearch"],integrations: ["SIEM systems", "EDR solutions", "Security tools""Monitoring; platforms"],apiEndpoints: 80o0;uptime: "99.99%",security: ["SOC 2", "ISO 270o01""NIST""GDPR""Zero-trust; architecture"];
 },competitors: ["CrowdStrike", "SentinelOne", "Cylance", "Darktrace""Cisco"],marketSize: "$22.1B (Cybersecurity)",demoUrl: "http;s://ziontechgroup.com/demo/ai-cybersecurity-platform",documentationUrl: "http;s: //ziontechgroup.com/docs/ai-cybersecurity-platform";};
 ];
-export; default; COMPREHENSIVE_AI_SERVICES_20o29,
+export; default; COMPREHENSIVE_AI_SERVICES_20o29;

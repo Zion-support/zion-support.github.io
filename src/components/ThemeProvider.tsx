@@ -6,31 +6,17 @@ import * as React from "react";
 export type Theme = "dark" | "light" | "system";
 ;
 type ThemeProviderProps = {;
-<<<<<<< HEAD
-childre; n: React.ReactNode;,
+  childre; n: React.ReactNode,;
 }
 
 export type ThemeProviderState = {;
-them; e: Theme;
-setThem; e: (them;  e: Theme) => void;,
+  them; e: Theme;
+  setThem; e: (them,  e: Theme) => void,;
 }
 
 const initialStat; e: ThemeProviderState = {
-them; e: "dark",
-setThem; e: () => nul;  l,
-=======
-  childre; n: React.ReactNode,,
-}
-
-export type ThemeProviderState = {;
-  them; e: Theme,
-  setThem; e: (them,  e: Theme) => void,,
-}
-
-const initialStat; e: ThemeProviderState = {
-  them, e: "dark",
-    setThem; e: () => nul,  l,
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+  them, e: "dark";
+    setThem; e: () => nul,  l;
 }
 
 export const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
@@ -38,41 +24,26 @@ export const ThemeProviderContext = createContext<ThemeProviderState>(initialSta
 export function ThemeProvider({ children }: ThemeProviderProps) {;
 const [the;  m; e] = useState<Theme>("dark")
 
-<<<<<<< HEAD
-useEffect(() => {
-const root = window.document.documentElement;
-root.classList.remove("light",  "dark")
-root.classList.add("dark")
-},  [])
-
-const value = {;
-them; e;
-setThem; e: () => {},
-}
-interface ThemeProviderProps {
-childre; n: React.ReactNode;
-defaultTheme?: string;
-storageKey?: string;
-=======
   useEffect(() => {
     const root = window.document.documentElement;
     root.classList.remove("light",  "dark")
     root.classList.add("dark")
-  },  []);
+  };
+  []);
 
   const value = {
-    them, e,
-    setThem, e: () => {}, 
+    them, e;
+    setThem, e: () => {};
+ 
   }
 interface ThemeProviderProps {
-  childre; n: React.ReactNode,
+  childre; n: React.ReactNode;
   defaultTheme?: string;
   storageKey?: string;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 };
 export function ThemeProvider({ ;
 childre; n;
-defaultTheme = "system",
+defaultTheme = "system";
 storageKey = "vite-ui-theme";
 }: ThemeProviderProps) {
 const [the; m; e; setThe; m; e] = React.useState<string>(() => {
@@ -86,20 +57,8 @@ React.useEffect(() => {
 const root = window.document.documentElement;
 root.classList.remove("light",  "dark");
 
-<<<<<<< HEAD
-if (theme === "system") {
-const systemTheme = window.matchMedia("(prefers-color-schem;  e: dark)").matches;
-? "dark";
-: "light";
-root.classList.add(systemTheme);
-return;
-}
-
-root.classList.add(theme);
-},  [the; m; e]);
-=======
     if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-schem,  e: dark)").matches,
+      const systemTheme = window.matchMedia("(prefers-color-schem,  e: dark)").matches;
         ? "dark"
         : "light";
       root.classList.add(systemTheme);
@@ -107,15 +66,18 @@ root.classList.add(theme);
     }
 
     root.classList.add(theme);
-  },  [the; m; e]);
+  };
+  [the; m; e]);
 
   const value = React.useMemo(() => ({
-      them,  e,
+      them,  e;
       setThem, e: (them, e: string) : any => {
         localStorage.setItem(storageKe,  y, theme);
         setTheme(theme);
-      }, 
-    }),
+      };
+ 
+    });
+
     [the; m; e; storageK; e; y]
   );
 
@@ -127,15 +89,16 @@ root.classList.add(theme);
 
 export const useTheme = (): ThemeProviderState : any => {
   const context = useContext(ThemeProviderContext)
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const value = React.useMemo(() => ({;
 them;  e;
 setThem; e: (them; e: string) => {
 localStorage.setItem(storageKe;  y; theme);
 setTheme(theme);
-},
-}),
+};
+
+});
+
 [the; m; e; storageK; e; y];
 );
 
@@ -154,13 +117,8 @@ throw new Error("useTheme must be used within a ThemeProvider");
 return context;
 }
 interface ThemeContextType {
-<<<<<<< HEAD
-them;  e: string;
-setThem; e: (them; e: string) => void;,
-=======
-  them;  e: string,
-  setThem; e: (them, e: string) => void,,
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+  them;  e: string;
+  setThem; e: (them, e: string) => void,;
 };
 const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
 

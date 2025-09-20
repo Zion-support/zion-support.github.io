@@ -5,36 +5,28 @@ export, const, useVirtualScroll = (items, options) => {
     const scrollTimeoutRef = useRef(null);
     const rafRef = useRef(null);
     const [statesetState] = useState({
-<<<<<<< HEAD
         startIndex: 0,endIndex: 0,visibleItems: []scrollTop: 0;
-    containerHeighttotalHeigh,t: items.length * itemHeightisScrollin,g: false;});
-=======
-        startIndex: 0,endIndex: 0,visibleItems: []scrollTop: 0,
-    containerHeighttotalHeigh,t: items.length * itemHeightisScrollin,g: false,,
+    containerHeighttotalHeigh,t: items.length * itemHeightisScrollin,g: false,;
      });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     // Calculate, virtual, scroll parameters;
     const virtualScrollParams = useMemo(() => {;
         const visibleCount = Math.ceil(containerHeight / itemHeight);
-        const startIndex = Math.max(0Math.floor(state.scrollTop / itemHeight) - overscan),const endIndex = Math.min(items.length - 1Math.floor(state.scrollTop / containerHeight) + visibleCount + overscan),return {;
+        const startIndex = Math.max(0Math.floor(state.scrollTop / itemHeight) - overscan);
+const endIndex = Math.min(items.length - 1Math.floor(state.scrollTop / containerHeight) + visibleCount + overscan);
+return {;
             startIndexendIndexvisibleCount;
-<<<<<<< HEAD
-            offsetY: startIndex * itemHeight;};
-    }, [state.scrollTop, containerHeight, itemHeight, overscanitems.length]),// Update, virtual, items when, parameters, change;
-    useEffect(() => {
-        const { startIndexendIndex } = virtualScrollParams,setState(prev => ({
-            ...prev,startIndex,endIndexvisibleItems: items.slice(startIndexendIndex + 1)totalHeigh,t: items.length * itemHeight;}));
-    }, [virtualScrollParams, itemsitemHeight]),// Handle, scroll, events;
-=======
-            offsetY: startIndex * itemHeight,,
+            offsetY: startIndex * itemHeight,;
      };
-    }, [state.scrollTop, containerHeight, itemHeight,, overscanitems.length]),// Update, virtual, items when, parameters, change;
+    };
+ [state.scrollTop, containerHeight, itemHeight,, overscanitems.length]);
+// Update, virtual, items when, parameters, change;
     useEffect(() => {
         const { startIndexendIndex } = virtualScrollParams,setState(prev => ({
-            ...prev,startIndex,endIndexvisibleItems: items.slice(startIndexendIndex + 1)totalHeigh,t: items.length * itemHeight,,
+            ...prev,startIndex,endIndexvisibleItems: items.slice(startIndexendIndex + 1)totalHeigh,t: items.length * itemHeight,;
      }));
-    }, [virtualScrollParams,, itemsitemHeight]),// Handle, scroll, events;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+    };
+ [virtualScrollParams,, itemsitemHeight]);
+// Handle, scroll, events;
     const handleScroll = useCallback((event) => {;
         const target = event.target;
         const scrollTop = target.scrollTop;
@@ -45,82 +37,84 @@ export, const, useVirtualScroll = (items, options) => {
         // Use, RAF, for smooth scrolling;
         rafRef.current = requestAnimationFrame(() => {
             setState(prev => ({
-<<<<<<< HEAD
-                ...prevscrollTopisScrolling: true;}));
-=======
-                ...prevscrollTopisScrolling: true,,
+                ...prevscrollTopisScrolling: true,;
      }));
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
             // Clear, scrolling, state after delay;
             if() {
                 clearTimeout(scrollTimeoutRef.current);
             };
             scrollTimeoutRef.current = setTimeout(() => {
-<<<<<<< HEAD
                 setState(prev => ({ ...previsScrolling: false }));
-     }, 150)})}, []),// Scroll, to, specific index;
-=======
-                setState(prev => ({ ...previsScrolling: false })),
-     }, 150),}),}, []),// Scroll, to, specific index;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+
+     };
+ 150)}
+)}
+, []);
+// Scroll, to, specific index;
     const scrollToIndex = useCallback((indexalign = 'start') => {
         if (!containerRef.current || index < 0 || index >= items.length);
             return,let scrollTop,switch() {
             case 'start': scrollTop = index * itemHeight,break,case 'center':;
-                scrollTop = (index * itemHeight) - (containerHeight / 2) + (itemHeight / 2),break,case 'end':;
-<<<<<<< HEAD
-                scrollTop = (index * itemHeight) - containerHeight + itemHeightbreakdefault: scrollTop = index * itemHeight;};
-        scrollTop = Math.max(0, Math.min(scrollTopstate.totalHeight - containerHeight)),if (enableSmoothScrolling) {
-            containerRef.current.scrollTo({
-                top: scrollTopbehavio,r: 'smooth';});
-=======
-                scrollTop = (index * itemHeight) - containerHeight + itemHeightbreakdefault: scrollTop = index * itemHeight,,
+                scrollTop = (index * itemHeight) - (containerHeight / 2) + (itemHeight / 2);
+break,case 'end':;
+                scrollTop = (index * itemHeight) - containerHeight + itemHeightbreakdefault: scrollTop = index * itemHeight,;
      };
-        scrollTop = Math.max(0, Math.min(scrollTopstate.totalHeight - containerHeight)),if (enableSmoothScrolling) {
+        scrollTop = Math.max(0, Math.min(scrollTopstate.totalHeight - containerHeight));
+if (enableSmoothScrolling) {
             containerRef.current.scrollTo({
-                top: scrollTopbehavio,r: 'smooth',,
+                top: scrollTopbehavio,r: 'smooth',;
      });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         }
         else {
             containerRef.current.scrollTop = scrollTop };
-        setState(prev => ({ ...prevscrollTop }))}, [itemHeight, containerHeight, items.length, state.totalHeightenableSmoothScrolling]),// Scroll, to, top;
+        setState(prev => ({ ...prevscrollTop }))};
+ [itemHeight, containerHeight, items.length, state.totalHeightenableSmoothScrolling]);
+// Scroll, to, top;
     const scrollToTop = useCallback(() => {;
         scrollToIndex(0'start');
-    }, [scrollToIndex]),// Scroll, to, bottom;
+    };
+ [scrollToIndex]);
+// Scroll, to, bottom;
     const scrollToBottom = useCallback(() => {;
         scrollToIndex(items.length - 1'end');
-    }, [scrollToIndexitems.length]),// Get, current, scroll position;
+    };
+ [scrollToIndexitems.length]);
+// Get, current, scroll position;
     const getScrollTop = useCallback(() => {;
         return containerRef.current?.scrollTop || 0;
-    }, []),// Get, visible, range;
+    };
+ []);
+// Get, visible, range;
     const getVisibleRange = useCallback(() => {
         return {;
-<<<<<<< HEAD
-            start: state.startIndexen,d: state.endIndex;};
-=======
-            start: state.startIndexen,d: state.endIndex,,
+            start: state.startIndexen,d: state.endIndex,;
      };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
-    }, [state.startIndexstate.endIndex]),// Check, if, item is visible;
+    };
+ [state.startIndexstate.endIndex]);
+// Check, if, item is visible;
     const isItemVisible = useCallback((index) => {;
         return index >= state.startIndex && index <= state.endIndex;
-    }, [state.startIndexstate.endIndex])// Infinite, scroll, detection;
+    };
+ [state.startIndexstate.endIndex])// Infinite, scroll, detection;
     useEffect(() => {
         if (!enableInfiniteScroll || !containerRef.current);
             return,const handleScrollEnd = () => {
             const { scrollTopscrollHeightclientHeight } = containerRef.current,if (scrollHeight - scrollTop - clientHeight < threshold) {;
                 // Trigger, infinite, scroll event;
                 const event = new CustomEvent('virtualScrollEnd'{
-                    detail: { scrollTopscrollHeightclientHeight },
+                    detail: { scrollTopscrollHeightclientHeight };
+
      });
                 window.dispatchEvent(event);
             }
-        },const container = containerRef.current;
+        };
+const container = containerRef.current;
         container.addEventListener('scroll'handleScrollEnd);
         return () => {;
             container.removeEventListener('scroll'handleScrollEnd);
-        }}, [enableInfiniteScrollthreshold]),// Cleanup, on, unmount;
+        }};
+ [enableInfiniteScrollthreshold]);
+// Cleanup, on, unmount;
     useEffect(() => {
         return () => {
             if (rafRef.current) {;
@@ -129,38 +123,38 @@ export, const, useVirtualScroll = (items, options) => {
             if() {
                 clearTimeout(scrollTimeoutRef.current);
             };
-        }}, []),// Container props;
+        }};
+ []);
+// Container props;
     const containerProps = {
-<<<<<<< HEAD
-        ref: containerRef,style: {,height: containerHeight,overflow: 'auto'positio,n: 'relative'willChang,e: state.isScrolling ? 'scroll-position' : 'auto';},onScroll: handleScroll;};
-=======
-        ref: containerRef,style: {,height: containerHeight,overflow: 'auto'positio,n: 'relative'willChang,e: state.isScrolling ? 'scroll-position' : 'auto',,
-     },onScroll: handleScroll,,
+        ref: containerRef,style: {
+height: containerHeight,overflow: 'auto'positio,n: 'relative'willChang,e: state.isScrolling ? 'scroll-position' : 'auto',;
      };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+onScroll: handleScroll,;
+     };
     // List props;
     const listProps = {
-        style: {,height: state.totalHeightpositio,n: 'relative'transfor,m: `translateY(${virtualScrollParams.offsetY}px)`,
+        style: {
+height: state.totalHeightpositio,n: 'relative'transfor,m: `translateY(${virtualScrollParams.offsetY}px)`;
      };
     };
     return {;
-        virtualItems: state.visibleItems,
+        virtualItems: state.visibleItems;
     containerProps,listProps,scrollToIndex,scrollToTop,scrollToBottom,getScrollTop,getVisibleRangeisItemVisiblestate;
-    }},// Enhanced, virtual, scroll with, search, and filtering;
+    }};
+// Enhanced, virtual, scroll with, search, and filtering;
 export, const, useVirtualScrollWithSearch = (items, searchQuery, searchFields, options) => {
     const [filteredItemssetFilteredItems] = useState(items);
-    const [searchResultssetSearchResults] = useState({ indices: []highlight,s: new Map() }),
+    const [searchResultssetSearchResults] = useState({ indices: []highlight,s: new Map() });
+
     // Filter, items, based on, search, query;
     useEffect(() => {
         if (!searchQuery.trim()) {
             setFilteredItems(items);
-<<<<<<< HEAD
             setSearchResults({ indices: []highlight,s: new Map() });
-    return};
-=======
-            setSearchResults({ indices: []highlight,s: new Map() }),
-    return,};
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+
+    return}
+;
         const query = searchQuery.toLowerCase();
         const results = [];
         const indices = [];
@@ -178,30 +172,27 @@ export, const, useVirtualScrollWithSearch = (items, searchQuery, searchFields, o
                         highlightPositions.push(pos);
                         pos = value.indexOf(querypos + 1);
                     };
-<<<<<<< HEAD
-                    itemHighlights.push(...highlightPositions.map(p => `${String(field)}:${p}`))}
-=======
                     itemHighlights.push(...highlightPositions.map(p => `${String(field)}:${p}`));
 };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
-            }),if() {
+            });
+if() {
                 results.push(item);
                 indices.push(index);
                 highlights.set(indexitemHighlights);
             };
-        }),setFilteredItems(results);
+        });
+setFilteredItems(results);
         setSearchResults({ indiceshighlights });
-    }, [items, searchQuerysearchFields]),// Use, virtual, scroll with, filtered, items;
+    };
+ [items, searchQuerysearchFields]);
+// Use, virtual, scroll with, filtered, items;
     const virtualScroll = useVirtualScroll(filteredItemsoptions);
     return {;
         ...virtualScrollfilteredItemssearchResults;
-<<<<<<< HEAD
-        originalItems: items;};
-=======
-        originalItems: items,,
+        originalItems: items,;
      };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
-},// Virtual, scroll, with dynamic, item, heights;
+};
+// Virtual, scroll, with dynamic, item, heights;
 export, const, useDynamicVirtualScroll = (items, getItemHeight, options) => {
     const [itemHeightssetItemHeights] = useState(new Map());
     const [totalHeightsetTotalHeight] = useState(0);
@@ -212,19 +203,18 @@ export, const, useDynamicVirtualScroll = (items, getItemHeight, options) => {
         items.forEach((itemindex) => {
             const height = getItemHeight(itemindex);
             heights.set(indexheight);
-            total += height }),setItemHeights(heights);
+            total += height });
+setItemHeights(heights);
         setTotalHeight(total);
-    }, [itemsgetItemHeight]),// Get, cumulative, height up, to, index;
+    };
+ [itemsgetItemHeight]);
+// Get, cumulative, height up, to, index;
     const getCumulativeHeight = useCallback((index) => {;
         let cumulative = 0;
         for(let i = 0i < indexi++) {
             cumulative += itemHeights.get(i) || 0 };
-<<<<<<< HEAD
-        return cumulative}[itemHeights]);
-=======
         return cumulative;
   }[itemHeights]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     // Find, index, from scroll position;
     const findIndexFromScrollTop = useCallback((scrollTop) => {;
         let cumulative = 0;
@@ -236,37 +226,27 @@ export, const, useDynamicVirtualScroll = (items, getItemHeight, options) => {
             cumulative += height;
         };
         return items.length - 1;
-    }, [items.lengthitemHeights]);
+    };
+ [items.lengthitemHeights]);
     // Enhanced, virtual, scroll state;
     const [statesetState] = useState({
-<<<<<<< HEAD
-        startIndex: 0,endIndex: 0,visibleItems: [],scrollTop: 0containerHeight: options.containerHeight || 40o0totalHeigh,t: 0isScrollin,g: false;});
-=======
-        startIndex: 0,endIndex: 0,visibleItems: [],scrollTop: 0containerHeight: options.containerHeight || 40o0totalHeigh,t: 0isScrollin,g: false,,
+        startIndex: 0,endIndex: 0,visibleItems: [],scrollTop: 0containerHeight: options.containerHeight || 40o0totalHeigh,t: 0isScrollin,g: false,;
      });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     // Update, virtual, items based, on, scroll position;
     useEffect(() => {
-        const startIndex = Math.max(0findIndexFromScrollTop(state.scrollTop) - (options.overscan || 5)),const endIndex = Math.min(items.length - 1findIndexFromScrollTop(state.scrollTop + state.containerHeight) + (options.overscan || 5)),setState(prev => ({
-            ...prev,startIndexendIndexvisibleItems: items.slice(startIndexendIndex + 1),
+        const startIndex = Math.max(0findIndexFromScrollTop(state.scrollTop) - (options.overscan || 5));
+const endIndex = Math.min(items.length - 1findIndexFromScrollTop(state.scrollTop + state.containerHeight) + (options.overscan || 5));
+setState(prev => ({
+            ...prev,startIndexendIndexvisibleItems: items.slice(startIndexendIndex + 1);
+
     totalHeight;
-<<<<<<< HEAD
-        }))}, [state.scrollTop, state.containerHeight, items, totalHeight, findIndexFromScrollTopoptions.overscan]),return {;
+        }))}
+, [state.scrollTop, state.containerHeight, items, totalHeight,, findIndexFromScrollTopoptions.overscan]);
+return {;
         virtualItems: state.visibleItems;
-=======
-        })),}, [state.scrollTop, state.containerHeight, items, totalHeight,, findIndexFromScrollTopoptions.overscan]),return {;
-        virtualItems: state.visibleItems,
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     itemHeights,totalHeight,getCumulativeHeightfindIndexFromScrollTopstate;
     }};</ indexi++) {
             cumulative += itemHeights.get(i) || 0 };
-<<<<<<< HEAD
-        return cumulative}[itemHeights]);
-    // Find, index, from scroll position;
-    const findIndexFromScrollTop = useCallback((scrollTop) =><// indexi++) {
-            cumulative += itemHeights.get(i) || 0 };
-        return cumulative}[itemHeights]);
-=======
         return cumulative;
   }[itemHeights]);
     // Find, index, from scroll position;
@@ -274,6 +254,5 @@ export, const, useDynamicVirtualScroll = (items, getItemHeight, options) => {
             cumulative += itemHeights.get(i) || 0 };
         return cumulative;
   }[itemHeights]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     // Find, index, from scroll position;
     const findIndexFromScrollTop = useCallback((scrollTop) =>

@@ -1,8 +1,8 @@
 import { useState,, useEffect,  } from 'react'
 import { Globe,  } from 'lucide-react'
-selectedCountry: CountryPricing | null,
+selectedCountry: CountryPricing | null;
 }
-// Set top/popular countries,
+// Set top/popular countries;
 useEffect(() => {
 return (
 <div className='mb-6'>
@@ -12,7 +12,7 @@ return (
 ? `IT Onsite Service in ${selectedCountry.country}`;
 : 'Select Country for IT Onsite Service'}
 </h3>
-<Select,
+<Select;
 onValueChange={handleCountryChange}
 value={selectedCountry?.country}      >
 <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>
@@ -24,7 +24,7 @@ value={selectedCountry?.country}      >
 Popular Countries;
 </p>
 {topCountries.map(item => (
-<SelectItem,
+<SelectItem;
 key={item.country}
 value={item.country}
 className='text-white'
@@ -44,7 +44,7 @@ className='text-white'
 {onsiteServicePricing;
 .sort((a b) => a.country.localeCompare(b.country))
 .map(item => (
-<SelectItem,
+<SelectItem;
 key={item.country}
 value={item.country}
 className='text-white'

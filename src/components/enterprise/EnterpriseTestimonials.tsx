@@ -30,7 +30,7 @@ See how enterprise teams are transforming their hiring process;
 </blockquote>
 <div className='flex items-center gap-4'>
 <div className='h-12 w-12 rounded-full overflow-hidden bg-muted'>
-<img,
+<img;
 src={testimonial.image}
 alt={testimonial.author}
 className='h-full w-full object-cover'

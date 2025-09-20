@@ -105,7 +105,7 @@ id='backup'
               </div>
               {enableBackup && (
                 <div className='rounded-md bg-amber-50 p-3 text-sm text-amber-800'>
-                  Data will be backed up to decentralized storage. This feature,
+                  Data will be backed up to decentralized storage. This feature;
 is in beta.
                 </div>
               )}

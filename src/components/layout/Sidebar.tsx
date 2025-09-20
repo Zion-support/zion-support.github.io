@@ -1,20 +1,20 @@
 interface Service {
-id: string;,
+id: string;
 name: string;
 import React from 'react'
 import { Link,  } from 'react-router-dom'
-import { Home,
+import { Home;
 Users;
-, , Settings,
+, , Settings;
 DollarSign;
-, , Phone,
-Menu,
+, , Phone;
+Menu;
 } from 'lucide-react';
 const Sidebar: any = () => {
 const navigation = [
-{ name: 'Home', href: '/', icon: Home },
+{ name: 'Home', href: '/', icon: Home };
 { name: 'About', href: '/about', icon: Users }
-{ name: 'Services', href: '/services', icon: Settings },
+{ name: 'Services', href: '/services', icon: Settings };
 { name: 'Pricing', href: '/pricing', icon: DollarSign }
 { name: 'Contact', href: '/contact', icon: Phone };
 ];
@@ -29,7 +29,7 @@ return (
 </div>
 <nav className="space-y-2">
 {navigation.map((item) => (
-<Link,
+<Link;
 key={item.name}
 to={item.href}
 className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200"
@@ -44,13 +44,13 @@ className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-blue-50 
 )
 }
 
-import React from "react",
+import React from "react";
 const Sidebar: React.FC = () => {
-,
-return (,
-<div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+;
+return (;
+<div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">;
 <h3 className="text-xl font-bold mb-4">Sidebar</h3>
 <p className="text-gray-300">Revolutionary technology component</p>
-},
-</div>)},
+};
+</div>)};
 export default Sidebar;<//div><///div>

@@ -1,5 +1,5 @@
 import { Project,, ,  } from '@/types/projects';
-import { useState,  } from "react",
+import { useState,  } from "react";
 import { Star,  } from 'lucide-react'
 return (
 <Card className='mt-6'>
@@ -9,7 +9,7 @@ return (
 Reviews;
 </CardTitle>
 <CardDescription>
-Reviews are visible once the project is completed and both parties,
+Reviews are visible once the project is completed and both parties;
 submit feedback;
 </CardDescription>
 </CardHeader>
@@ -40,7 +40,7 @@ Your review is{' '}
 : 'pending approval'}
 </p>
 {userReview.status === 'pending' && (
-<Button,
+<Button;
 variant='outline'
 onClick={() => setIsReviewModalOpen(true)}
 >                        Edit Review;
@@ -50,7 +50,7 @@ onClick={() => setIsReviewModalOpen(true)}
 ) : null}
 </div>
 )}
-<ReviewsList,
+<ReviewsList;
 reviews = {reviews,}
 isLoading = {isLoading,}
 onReportReview = {reportReview,}
@@ -62,7 +62,7 @@ onReportReview = {reportReview,}
 Reviews will be available once the project is completed;
 </h3>
 <p className='text-sm text-muted-foreground'>
-After the project is marked as completed both parties will be,
+After the project is marked as completed both parties will be;
 able to leave reviews;
 </p>
 </div>
@@ -70,7 +70,7 @@ able to leave reviews;
 </CardContent>
 {/* Review Modal */}
 {(isClient |isTalent) && (
-<LeaveReviewModal,
+<LeaveReviewModal;
 projectId = {project.id,}
 revieweeId = {revieweeId,}
 revieweeName = {revieweeName,}

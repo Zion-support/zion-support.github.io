@@ -2,66 +2,68 @@ import React from "react;";
 import { cn } from "@/lib/utils, ";
 
 interface NeonGlowProps {
-<<<<<<< HEAD
-children: React.ReactNode;
-color?: "zion-cyan" | "zion-purple" | "zion-blue" | "custom";
-intensity?: "low" | "medium" | "high";
-className?: string;
-customColor?: string};
-export function NeonGlow({ ;
-children;
-color = "zion-cyan",
-intensity = "medium",
-className = "",
-customColor}: NeonGlowProps) {
-const getGlowStyles: any = () => {
-const baseColor = customColor || (color === "zion-cyan" ? "#00d4ff" :
-color === "zion-purple" ? "#a855f7" :
-color === "zion-blue" ? "#3b82f6" : "#00d4ff"),
-=======
-  children: React.ReactNode,
+  children: React.ReactNode;
     color?: "zion-cyan" | "zion-purple" | "zion-blue" | "custom";
   intensity?: "low" | "medium" | "high";
   className?: string;
-  customColor?: string,
+  customColor?: string;
 };
 export function NeonGlow({ ;
   children; 
   color = "zion-cyan", 
-  intensity = "medium",
-  className = "",
-  customColor,
+  intensity = "medium";
+  className = "";
+  customColor;
 }: NeonGlowProps) {
   const getGlowStyles = () => {
     const baseColor = customColor || (color === "zion-cyan" ? "#00d4ff" : 
                                     color === "zion-purple" ? "#a855f7" : 
-                                    color === "zion-blue" ? "#3b82f6" : "#00d4ff"),
+                                    color === "zion-blue" ? "#3b82f6" : "#00d4ff");
+
     
     const intensityMap = {
       low: {
-        textShadow: `0 0 5px ${baseColor}, 0 0 10px ${baseColor}`,
+        textShadow: `0 0 5px ${baseColor};
+ 0 0 10px ${baseColor}`;
         filter: `drop-shadow(0 0 2px ${baseColor})`
-      }, medium: {
-        textShadow: `0 0 10px ${baseColor}, 0 0 20px ${baseColor}, 0 0 30px ${baseColor}`,
+      };
+ medium: {
+        textShadow: `0 0 10px ${baseColor};
+ 0 0 20px ${baseColor};
+ 0 0 30px ${baseColor}`;
         filter: `drop-shadow(0 0 5px ${baseColor}) drop-shadow(0 0 10px ${baseColor})`
-      }, high: {
-        textShadow: `0 0 15px ${baseColor}, 0 0 30px ${baseColor}, 0 0 45px ${baseColor}, 0 0 60px ${baseColor}`,
+      };
+ high: {
+        textShadow: `0 0 15px ${baseColor};
+ 0 0 30px ${baseColor};
+ 0 0 45px ${baseColor};
+ 0 0 60px ${baseColor}`;
         filter: `drop-shadow(0 0 8px ${baseColor}) drop-shadow(0 0 15px ${baseColor}) drop-shadow(0 0 25px ${baseColor})`
       }
-    },
+    };
+
     return intensityMap[intensity];
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const intensityMap = {
 low: {;
-textShadow: `0 0 5px ${baseColor}, 0 0 10px ${baseColor}`;
+textShadow: `0 0 5px ${baseColor};
+ 0 0 10px ${baseColor}`;
 filter: `drop-shadow(0 0 2px ${baseColor})`;
-}, medium: {,
-textShadow: `0 0 10px ${baseColor}, 0 0 20px ${baseColor}, 0 0 30px ${baseColor}`,
+};
+ medium: {
+
+textShadow: `0 0 10px ${baseColor};
+ 0 0 20px ${baseColor};
+ 0 0 30px ${baseColor}`;
 filter: `drop-shadow(0 0 5px ${baseColor}) drop-shadow(0 0 10px ${baseColor})`;
-}, high: {,
-textShadow: `0 0 15px ${baseColor}, 0 0 30px ${baseColor}, 0 0 45px ${baseColor}, 0 0 60px ${baseColor}`,
+};
+ high: {
+
+textShadow: `0 0 15px ${baseColor};
+ 0 0 30px ${baseColor};
+ 0 0 45px ${baseColor};
+ 0 0 60px ${baseColor}`;
 filter: `drop-shadow(0 0 8px ${baseColor}) drop-shadow(0 0 15px ${baseColor}) drop-shadow(0 0 25px ${baseColor})`;
 };
 };

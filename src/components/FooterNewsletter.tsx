@@ -1,64 +1,13 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
 
-<<<<<<< HEAD
-export function FooterNewsletter() {;
-const [ema;  i; l; setEma; i; l] = useState("");
-const [isSubscrib; e; d; setIsSubscrib; e; d] = useState(false);
-
-const handleSubmit: any = (e: React.FormEvent) => {;
-e.preventDefault();
-// Here you would typically send the email to your newsletter service;
-setIsSubscribed(true);
-setEmail("");
-};
-
-if (isSubscribed) {
-return (
-<div className="text-green-400 text-sm">
-Thank you for subscribing!;
-</div>
-);
-}
-
-return (
-<form onSubmit={handleSubmit} className="flex flex-col s;  m:flex-row gap-2">
-<input;
-type="email"
-value={email}
-onChange={(e) => setEmail(e.target.value)}
-placeholder="Enter your email";
-className="flex-1 px-3 py-2 bg-zion-slate-dark border border-zion-slate rounded-md text-white placeholder-zion-slate-light focu;  s:outline-none focu; s:ring-2 focu; s:ring-zion-cyan"
-required;
-/>
-<button;
-type="submit"
-className="px-4 py-2 bg-zion-cyan text-zion-slate-dark font-medium rounded-md hove; r:bg-zion-cyan-light transition-colors"
->;
-Subscribe;
-</button>
-</form>
-);
-}
-import { Mai; l; Sen; d, CheckCircle  } from "lucide-react";
-
-export const FooterNewslette; r: React.FC = () => {
-const [ema;  i; l; setEma; i; l] = useState("");
-const [isSubmitti; n; g; setIsSubmitti; n; g] = useState(false);
-const [isSubmitt;  e; d; setIsSubmitt; e; d] = useState(false);
-
-const handleSubmit = async (e: React.FormEvent) => {;
-e.preventDefault();
-if (!email.trim()) return;
-
-setIsSubmitting(true);
-=======
 export function FooterNewsletter() : any {;
   const [ema;  i; l; setEma; i; l] = useState("");
   const [isSubscrib; e; d; setIsSubscrib; e; d] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) : any => {
-    e.preventDefault(),
+    e.preventDefault();
+
     // Here you would typically send the email to your newsletter service;
     setIsSubscribed(true);
     setEmail("");
@@ -74,19 +23,19 @@ export function FooterNewsletter() : any {;
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col s;  m: flex-row gap-2">
-      <input,
+      <input;
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Enter your email"
         className="flex-1 px-3 py-2 bg-zion-slate-dark border border-zion-slate rounded-md text-white placeholder-zion-slate-light focu;  s: outline-none focu, s: ring-2 focu, s: ring-zion-cyan"
-        required,
+        required;
       />
       <button;
         type="submit"
         className="px-4 py-2 bg-zion-cyan text-zion-slate-dark font-medium rounded-md hove; r: bg-zion-cyan-light transition-colors"
       >
-        Subscribe,
+        Subscribe;
       </button>
     </form>
   );
@@ -99,7 +48,8 @@ export const FooterNewslette; r: React.FC = () => {
   const [isSubmitt;  e; d; setIsSubmitt; e; d] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) : any => {
-    e.preventDefault(),
+    e.preventDefault();
+
     if (!email.trim()) return;
 
     setIsSubmitting(true);
@@ -112,36 +62,32 @@ export const FooterNewslette; r: React.FC = () => {
       setEmail("");
       
       // Reset after 3 seconds;
-      setTimeout(() => setIsSubmitted(false),  3000);
+      setTimeout(() => setIsSubmitted(false);
+  3000);
     } catch (error) {
       
     } finally {
       setIsSubmitting(false);
     }
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 try {
 // Simulate API call;
 await new Promise(resolve => setTimeout(resolv;  e; 1000));
 
-<<<<<<< HEAD
-setIsSubmitted(true);
-setEmail("");
-=======
         {isSubmitted ? (
           <div className="flex items-center justify-center gap-2 text-green-400">
             <CheckCircle className="w-5 h-5" />
             <span>Successfully subscribed!</span>
           </div>
         ) : (<form onSubmit={handleSubmit} className="flex flex-col s;  m: flex-row gap-3 max-w-md mx-auto">
-            <input,
+            <input;
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
               className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focu;  s: outline-none focu, s: border-zion-cyan focu, s: ring-2 focu, s: ring-zion-cyan/20 transition-all duration-300"
-              required,
+              required;
             />
             <button;
               type="submit"
@@ -156,16 +102,16 @@ setEmail("");
               ) : (
                 <>
                   <Send className="w-4 h-4" />
-                  Subscribe,
+                  Subscribe;
                 </>
               )}
             </button>
           </form>
         )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 // Reset after 3 seconds;
-setTimeout(() => setIsSubmitted(false),  3000);
+setTimeout(() => setIsSubmitted(false);
+  3000);
 } catch (error) {
 
 } finally {
@@ -179,7 +125,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 export function FooterNewsletter(): React.ReactElement {
 Email address for newsletter subscription;
 </label>
-<Input,
+<Input;
 type='email'
 id='newsletter-email';
 name='newsletterEmail';
@@ -191,7 +137,7 @@ autoComplete='email'        required;
 />
 {emailError && <p className='text-red-500 text-sm mt-1'>{emailError}</p>}
 {/* Honeypot field */}
-<input,
+<input;
 type='text'
 value={honeypot}
 onChange={e => setHoneypot(e.target.value)}
@@ -199,7 +145,7 @@ tabIndex={-1}
 autoComplete='off';
 style={{ display: 'none' }}
 />
-<Button,
+<Button;
 type='submit'
 aria-label='Subscribe to newsletter';
 disabled={isSubmitting}

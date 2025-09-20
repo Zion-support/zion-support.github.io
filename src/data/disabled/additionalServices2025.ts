@@ -3,7 +3,7 @@ import React from "react";
 export; interface; AdditionalService {
 id: string;title: string;description: string;category: string;price: number;
 currency?: string;pricingModel?: string;features?: string[],benefits?: string[],useCases?: string[],tags?: string[],estimatedDelivery?: string;supportLevel?: string;marketPrice: string;
-roi?: string;innovationLevel?: string;contactInfo?: {,
+roi?: string;innovationLevel?: string;contactInfo?: {;
 phone: stringemai;l: stringwebsit;e: string;};
 };export; const; ADDITIONAL_MICRO_SAAS_SERVICES_20o25: AdditionalService[] = [;
 {

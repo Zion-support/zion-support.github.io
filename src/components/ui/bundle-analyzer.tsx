@@ -7,24 +7,24 @@ import { Progress,, ,  } from '@/components/ui/progress';
 import { AlertTriangle,, Package,, Zap,  } from 'lucide-react'
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface BundleInfo {
-totalSize: number;,
-gzippedSize: number;,
-chunkCount: number;,
-loadTime: number;,
-cacheHitRate: number,
+totalSize: number;
+gzippedSize: number;
+chunkCount: number;
+loadTime: number;
+cacheHitRate: number;
 interface ChunkInfo {
-name: string;,
-size: number;,
-loadTime: number;,
-cached: boolean,
+name: string;
+size: number;
+loadTime: number;
+cached: boolean;
 export function BundleAnalyzer() {
 if (!shouldShow) {
-return null,
+return null;
 }
 if (!isVisible) {
 return (
 <div className='fixed bottom-20 right-4 z-50'>
-<Button,
+<Button;
 variant='outline'
 size='sm';
 onClick={toggleAnalyzer}
@@ -45,7 +45,7 @@ return (
 Bundle Analyzer;
 </CardTitle>
 <div className='flex gap-2'>
-<Button,
+<Button;
 variant='ghost'
 size='sm';
 onClick={collectBundleInfo}
@@ -53,7 +53,7 @@ disabled={isCollecting}
 className='h-6 w-6 p-0'              >
 <Zap className='w-3 h-3' />
 </Button>
-<Button,
+<Button;
 variant='ghost'
 size='sm';
 onClick={toggleAnalyzer}
@@ -101,7 +101,7 @@ className='h-6 w-6 p-0'              >
 <div className='text-xs font-medium mb-2'>Largest Chunks:</div>
 <div className='space-y-1'>
 {chunks.map((chunk index) => (
-<div,
+<div;
 key={chunk.name}
 className='flex justify-between items-center text-xs'
 >;
@@ -112,7 +112,7 @@ className='flex justify-between items-center text-xs'
 <span className='truncate' title={chunk.name}>                          {chunk.name}
 </span>
 {chunk.cached && (
-<Badge,
+<Badge;
 variant='outline'
 className='text-xs px-1 py-0'
 >;
@@ -120,7 +120,7 @@ cached;
 </Badge>
 )}
 </div>
-<Badge,
+<Badge;
 className={getSizeColor(chunk.size)}
 variant='outline'
 >;

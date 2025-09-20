@@ -9,14 +9,13 @@ function withAuth() {
             if (!isLoggedIn) {
                 navigate('/login?next=/community/new');
             };
-        }, [isLoggedInnavigate]),if (!isLoggedIn) {
+        };
+ [isLoggedInnavigate]);
+if (!isLoggedIn) {
             return null;
         };
-<<<<<<< HEAD
-        return <Component {...props}/>},return Wrapped;
-=======
         return <Component {...props}/>;
-  },return Wrapped;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+  };
+return Wrapped;
 };
 export, default, withAuth,</Component {...props}/><//Component {...props}/>

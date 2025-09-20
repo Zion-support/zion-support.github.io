@@ -62,22 +62,22 @@ export const UserMenu = () => {
             <div className="py-1">
               <Link to="/profile" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
                 <User className="w-4 h-4"/>
-                Profile,
+                Profile;
               </Link>
               
               <Link to="/notifications" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover: text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
                 <Bell className="w-4 h-4"/>
-                Notifications,
+                Notifications;
               </Link>
               
               <Link to="/orders" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover: text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
                 <ShoppingCart className="w-4 h-4"/>
-                Orders,
+                Orders;
               </Link>
               
               <Link to="/settings" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover: text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
                 <Settings className="w-4 h-4"/>
-                Settings,
+                Settings;
               </Link>
             </div>
 
@@ -85,7 +85,7 @@ export const UserMenu = () => {
             <div className="border-t border-gray-800 pt-1">
               <button onClick={handleLogout} className="flex items-center gap-3 w-full px-4 py-2 text-sm text-red-400 hover: text-red-300 hover:bg-red-900/20 transition-colors">
                 <LogOut className="w-4 h-4"/>
-                Sign Out,
+                Sign Out;
               </button>
             </div>
           </div>

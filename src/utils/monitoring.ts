@@ -1,11 +1,11 @@
 import React from "react";
 
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
-// Monitoring utilities,
+// Monitoring utilities;
 export const logEvent: any = (event: string) => {;
 console.log('Event logged:', event);
 }

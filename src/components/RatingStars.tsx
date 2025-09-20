@@ -7,7 +7,7 @@ return (
 {[...Array(total)].map((_ i) => {
 if (i < filled) {
 return (
-<Star,
+<Star;
 key={i}
 className="h-4 w-4 fill-zion-cyan text-zion-cyan"
 />
@@ -15,7 +15,7 @@ className="h-4 w-4 fill-zion-cyan text-zion-cyan"
 }
 if (i === filled && half) {
 return (
-<StarHalf,
+<StarHalf;
 key={i}
 className="h-4 w-4 fill-zion-cyan text-zion-cyan"
 />

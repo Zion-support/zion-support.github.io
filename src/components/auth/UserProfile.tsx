@@ -7,18 +7,18 @@ import { Badge } from '@/components/ui/badge'
 import { User, LogOut, LogIn } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import type {
-User as SupabaseUser,
+User as SupabaseUser;
 AuthChangeEvent;
-Session,
+Session;
 } from '@supabase/supabase-js';
 interface UserProfileProps {
-onUserChange?: (user: SupabaseUser | null) => void,
+onUserChange?: (user: SupabaseUser | null) => void;
 export default function UserProfile({ onUserChange }: UserProfileProps) {
 const [user, setUser] = useState<SupabaseUser | null>(null)
 const [loading, setLoading] = useState(true)
 const router = useRouter()
 useEffect(() =></SupabaseUser> {
-// Get initial session,
+// Get initial session;
 const getInitialSession = async () => {
 const {
 data: { session }
@@ -28,7 +28,7 @@ setLoading(false)
 onUserChange?.(session?.user ?? null)
 }
 getInitialSession()
-// Listen for auth changes,
+// Listen for auth changes;
 const {
 data: { subscription }
 } = supabase.auth.onAuthStateChange(

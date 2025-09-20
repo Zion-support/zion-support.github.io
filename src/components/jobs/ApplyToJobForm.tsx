@@ -1,19 +1,19 @@
 import { useState,  } from "react";
 import { useRouter,, ,  } from 'next/router';
-import { useJobApplications,  } from "@/hooks/useJobApplications",
-import { useResume,  } from "@/hooks/useResume",
-import { useAuth,  } from "@/hooks/useAuth",
-import { Button,  } from "@/components/ui/button",
-import { Textarea,  } from "@/components/ui/textarea",
-import { Label,  } from "@/components/ui/label",
-import { Select,, SelectContent,, SelectItem,, SelectTrigger,, SelectValue,  } from "@/components/ui/select",
-import { Alert,, AlertDescription,  } from "@/components/ui/alert",
+import { useJobApplications,  } from "@/hooks/useJobApplications";
+import { useResume,  } from "@/hooks/useResume";
+import { useAuth,  } from "@/hooks/useAuth";
+import { Button,  } from "@/components/ui/button";
+import { Textarea,  } from "@/components/ui/textarea";
+import { Label,  } from "@/components/ui/label";
+import { Select,, SelectContent,, SelectItem,, SelectTrigger,, SelectValue,  } from "@/components/ui/select";
+import { Alert,, AlertDescription,  } from "@/components/ui/alert";
 import { AlertCircle,, FileText,, Loader2,  } from 'lucide-react'
-import { formatDistanceToNow,  } from "date-fns",
+import { formatDistanceToNow,  } from "date-fns";
 import { Job,  } from "@/types/jobs";
 import { toast,  } from "sonner";
 interface ApplyToJobFormProps {
-onSuccess?: () => void,
+onSuccess?: () => void;
 }
 export function ApplyToJobForm({ job onSuccess }: ApplyToJobFormProps) {
 return (
@@ -33,7 +33,7 @@ Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
 <div className="space-y-4">
 <div>
 <Label htmlFor="coverLetter">Cover Letter</Label>
-<Textarea,
+<Textarea;
 id="coverLetter";
 value = {coverLetter,}
 onChange = {(e,) => setCoverLetter(e.target.value),}
@@ -53,7 +53,7 @@ Provide a brief introduction and highlight your relevant skills and experience.;
 <span>Loading your resumes...</span>
 </div>
 ) : resumes && resumes.length > 0 ? (
-<Select,
+<Select;
 value = {selectedResumeId,}
 onValueChange = {setSelectedResumeId,}
 >;
@@ -70,7 +70,7 @@ return (
 </SelectItem>
 )
 }
-return null,
+return null;
 })}
 </SelectContent>
 </Select>
@@ -80,7 +80,7 @@ return null,
 <FileText className="h-5 w-5 text-muted-foreground" />
 <span>No resumes found</span>
 </div>
-<Button,
+<Button;
 variant="outline"
 size="sm";
 type="button"
@@ -93,7 +93,7 @@ Create Resume;
 </div>
 <div>
 <Label htmlFor="cvUpload">Or Upload CV (PDF)</Label>
-<input,
+<input;
 id="cvUpload";
 type="file"
 accept=".pdf";
@@ -103,7 +103,7 @@ onChange = {(e,) => setResumeFile(e.target.files?.[0] |null),}
 </div>
 </div>
 <div className="flex justify-end gap-2">
-<Button,
+<Button;
 type="button"
 variant="outline"
 disabled = {isSubmitting,}
@@ -132,16 +132,16 @@ if (onSuccess) {
 }finally {
 setIsSubmitting (false)
 }
-handleSubmit,
+handleSubmit;
 }className="space-y-6"> <div> <AlertCircle className="h-4 w-4" /> <AlertDescription> {
-error,
+error;
 }</AlertDescription> </Alert>) ";
 }<div className="space-y-4" > <div> <Label htmlFor="coverLetter" >Cover Letter</Label> <Textarea className="mt-1" /> <p className="text-xs text-muted-foreground mt-1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items-center gap-2 mt-2"> <Loader2 className="h-4 w-4 animate-spin" /> <span>Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {
-selectedResumeId,
+selectedResumeId;
 }onValueChange= {
 setSelectedResumeId ";
 }> <SelectTrigger className="mt-1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent> </SelectItem>)
-}return null,
+}return null;
 })
 }</SelectContent> </Select> > Create Resume </Button> </div>) ";
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")

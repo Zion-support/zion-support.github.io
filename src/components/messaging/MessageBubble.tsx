@@ -12,7 +12,7 @@ return (
 )}>
 <div className="whitespace-pre-wrap">{message.content}</div>
 {message.attachment_url && (
-<a,
+<a;
 href={message.attachment_url}
 target="_blank";
 rel="noopener noreferrer";
