@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useEffect } from 'react';
+import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -45,6 +45,7 @@ import {
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import { ErrorBoundary } from "@/components/ui/ErrorBoundary";
 
 // Lazy load heavy components
 const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"));
@@ -117,6 +118,7 @@ interface MicroSaasService {
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     // Simulate loading time for better UX
@@ -127,7 +129,12 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  const stats: StatItem[] = [
+  const handleError = useCallback((error: Error) => {
+    console.error('Home component error:', error);
+    setError(error.message);
+  }, []);
+
+  const stats: StatItem[] = useMemo(() => [
     {
       value: "500+",
       label: "Projects Delivered",
@@ -156,9 +163,9 @@ export default function Home() {
       icon: Shield,
       color: "from-purple-400 to-pink-500"
     }
-  ];
+  ], []);
 
-  const aiServices: AIService[] = [
+  const aiServices: AIService[] = useMemo(() => [
     {
       title: "AI Business Intelligence",
       description: "Transform your data into actionable insights with advanced analytics and machine learning",
@@ -183,7 +190,7 @@ export default function Home() {
       href: "/services/ai-sales-copilot",
       color: "from-green-400 to-emerald-500"
     }
-  ];
+  ], []);
 
   const serviceCategories: ServiceCategory[] = [
     {
@@ -315,8 +322,25 @@ export default function Home() {
     );
   }
 
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+        <div className="text-center text-white">
+          <div className="text-red-500 text-xl mb-4">Something went wrong</div>
+          <p className="text-gray-300">{error}</p>
+          <button 
+            onClick={() => setError(null)}
+            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Try Again
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <>
+    <ErrorBoundary onError={handleError}>
       <SEO 
         title="Zion Tech Group - AI-Powered Business Solutions"
         description="Transform your business with cutting-edge AI solutions, cloud infrastructure, and digital transformation services. Expert IT consulting for the modern enterprise."
@@ -578,6 +602,6 @@ export default function Home() {
           <ServicesShowcase />
         </Suspense>
       </div>
-    </>
+    </ErrorBoundary>
   );
 }
