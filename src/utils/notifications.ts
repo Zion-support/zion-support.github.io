@@ -1,7 +1,19 @@
+interface NotificationOptions {
   type?: 'success' | 'error' | 'warning' | 'info';
   duration?: number;
   position?: 'top' | 'bottom' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
   closable?: boolean;
+}
+
+class NotificationManager {
+  add(message: string, options?: NotificationOptions) {
+    // Implementation for adding notifications
+    console.log('Notification:', message, options);
+  }
+}
+
+const notificationManager = new NotificationManager();
+
 // Convenience functions
 export const notify = {
   success: (message: string, options?: Omit<NotificationOptions, 'type'>) =>
