@@ -207,6 +207,16 @@ function App() {
         <PerformanceMonitor />
         <EnhancedPerformanceMonitor />
         <EnhancedAccessibilityEnhancer />
+        
+        {/* Loading Screen */}
+        {isLoading && (
+          <div className="loading-screen" role="status" aria-label="Loading application">
+            <div className="loading-spinner">
+              <div className="spinner"></div>
+            </div>
+            <p className="loading-text">Loading Zion Tech Group...</p>
+          </div>
+        )}
       
       <main id="main-content">
       <header className="App-header">
