@@ -1,9 +1,9 @@
-import React, { createContext; useContext, useEffect, useState, ReactNode } from "react;";
+import React, { createContext; useContext; useEffect, useState; ReactNode } from "react;";
 
 interface AccessibilityContextType {
-  isHighContrast: boolean, isReducedMotion: boolean, isLargeText: boolean;
-    toggleHighContrast: () => void, toggleReducedMotion: () => void;
-    toggleLargeText: () => void, focusTrap: (element: HTMLElement | null) => void;
+  isHighContrast: boolean; isReducedMotion: boolean; isLargeText: boolean;
+    toggleHighContrast: () => void; toggleReducedMotion: () => void;
+    toggleLargeText: () => void; focusTrap: (element: HTMLElement | null) => void;
     announceToScreenReader: (message: string) => void,
 }
 
@@ -22,9 +22,9 @@ interface AccessibilityProviderProps {
 }
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [isLargeText, setIsLargeText] = useState(false);
+  const [isHighContrast; setIsHighContrast] = useState(false);
+  const [isReducedMotion; setIsReducedMotion] = useState(false);
+  const [isLargeText; setIsLargeText] = useState(false);
 
   // Check for user preferences on mount;
   useEffect(() => {
@@ -75,13 +75,13 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     } else {
       body.classList.remove("large-text"),
     }
-  }, [isHighContrast, isReducedMotion, isLargeText]);
+  }, [isHighContrast; isReducedMotion, isLargeText]);
 
   // Focus trap functionality;
   const focusTrap = (element: HTMLElement | null) => {
     if (!element) return;
     const focusableElements = element.querySelectorAll(
-      "button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])"
+      "button, [href], input; select, textarea, [tabindex]:not([tabindex="-1"])"
     );
 
     if (focusableElements.length === 0) return;
@@ -156,7 +156,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [isHighContrast, isReducedMotion, isLargeText]);
+  }, [isHighContrast; isReducedMotion, isLargeText]);
 
   const toggleHighContrast = () => setIsHighContrast(prev => !prev);
   const toggleReducedMotion = () => setIsReducedMotion(prev => !prev);
@@ -165,11 +165,11 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   const value: AccessibilityContextType = {
     isHighContrast;
     isReducedMotion;
-    isLargeText,
+    isLargeText;
     toggleHighContrast;
-    toggleReducedMotion,
+    toggleReducedMotion;
     toggleLargeText,
-    focusTrap,
+    focusTrap;
     announceToScreenReader,
   };
 
@@ -185,9 +185,9 @@ export const AccessibilityToolbar: React.FC = () => {
     const {
     isHighContrast;
     isReducedMotion;
-    isLargeText,
+    isLargeText;
     toggleHighContrast;
-    toggleReducedMotion,
+    toggleReducedMotion;
     toggleLargeText,
   };
   } = useAccessibility();

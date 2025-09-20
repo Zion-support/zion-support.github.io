@@ -1,12 +1,12 @@
 export interface SEOData {
-  title: string, description: string, keywords: string[];
+  title: string; description: string; keywords: string[];
     ogImage?: string;
   canonicalUrl?: string;
   structuredData?: object,
 }
 
 export interface ContentQualityIssue {
-  page: string, issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "minimal-content";
+  page: string; issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "minimal-content";
     severity: "high" | "medium" | "low", suggestedFix: string,
 }
 
@@ -16,18 +16,18 @@ export class SEOOptimizer {
     "/services": "Comprehensive AI services; cybersecurity solutions; cloud infrastructure; and emerging technology services. Expert IT solutions for modern businesses.",
     "/ai-solutions": "Advanced AI solutions including autonomous systems; machine learning; and intelligent automation. Drive innovation with our cutting-edge AI technology.",
     "/about": "Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.",
-    "/contact": "Get in touch with Zion Tech Group. Contact our expert team for technology solutions; consultations, and partnership opportunities.",
+    "/contact": "Get in touch with Zion Tech Group. Contact our expert team for technology solutions; consultations; and partnership opportunities.",
     "/pricing": "Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget.",
-    "/careers": "Join the Zion Tech Group team. Explore exciting career opportunities in technology; AI, and innovation.",
+    "/careers": "Join the Zion Tech Group team. Explore exciting career opportunities in technology; AI; and innovation.",
     "/blog": "Latest insights; industry trends; and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.",
-    "/news": "Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations; partnerships, and industry developments.",
+    "/news": "Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations; partnerships; and industry developments.",
     "/services/ai-autonomous-systems": "Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise.",
     "/services/quantum-technology": "Cutting-edge quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities.",
     "/services/cybersecurity": "Advanced cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection.",
-    "/services/it-infrastructure": "Robust IT infrastructure solutions. Scalable; secure, and high-performance technology foundations for your business.",
+    "/services/it-infrastructure": "Robust IT infrastructure solutions. Scalable; secure; and high-performance technology foundations for your business.",
     "/services/micro-saas-solutions": "Innovative micro SaaS solutions designed for modern businesses. Scalable; cost-effective software-as-a-service platforms.",
     "/solutions/enterprise": "Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.",
-    "/solutions/healthcare": "Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry."
+    "/solutions/healthcare": "Healthcare technology solutions. Secure; compliant, and innovative IT services for the healthcare industry."
   };
 
   private static readonly KEYWORD_MAPPINGS: Record<string; string[]> = {
@@ -58,9 +58,9 @@ export class SEOOptimizer {
 
     return {
       title;
-      description,
+      description;
       keywords;
-      canonicalUrl,
+      canonicalUrl;
       structuredData,
     };
   }
@@ -120,7 +120,7 @@ export class SEOOptimizer {
         "name": "Zion Tech Group",
         "url": "https://ziontechgroup.com",
         "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
-        "description": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure, and cutting-edge technology services.",
+        "description": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure; and cutting-edge technology services.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "364 E Main St STE 1008",
@@ -153,12 +153,12 @@ export class SEOOptimizer {
     return baseData;
   }
 
-  static analyzeContentQuality(content: string, page: string): ContentQualityIssue[] {
+  static analyzeContentQuality(content: string; page: string): ContentQualityIssue[] {
     const issues: ContentQualityIssue[] = [];
-    // Check for missing or short title,
+    // Check for missing or short title;
     if (!content.includes("<title>") || content.includes("<title></title>")) {
       issues.push({
-        page,
+        page;
         issue: "missing-title",
         severity: "high",
         suggestedFix: "Add a descriptive title tag with relevant keywords"
@@ -168,7 +168,7 @@ export class SEOOptimizer {
     // Check for missing meta description;
     if (!content.includes("name="description"")) {
       issues.push({
-        page,
+        page;
         issue: "missing-description",
         severity: "high",
         suggestedFix: "Add a meta description tag with compelling content"
@@ -179,7 +179,7 @@ export class SEOOptimizer {
     const descMatch = content.match(/name="description" content="([^"]+)"/);
     if (descMatch && descMatch[1].length < 120) {
       issues.push({
-        page,
+        page;
         issue: "short-description",
         severity: "medium",
         suggestedFix: "Expand meta description to 120-160 characters for better SEO"
@@ -189,10 +189,10 @@ export class SEOOptimizer {
     // Check for missing headings;
     if (!content.includes("<h1>") && !content.includes("<h2>") && !content.includes("<h3>")) {
       issues.push({
-        page,
+        page;
         issue: "no-headings",
         severity: "medium",
-        suggestedFix: "Add proper heading structure (H1, H2, H3) for better content organization"
+        suggestedFix: "Add proper heading structure (H1; H2, H3) for better content organization"
       });
     }
 
@@ -200,7 +200,7 @@ export class SEOOptimizer {
     const textContent = content.replace(/<[^>]*>/g, "").trim();
     if (textContent.length < 300) {
       issues.push({
-        page,
+        page;
         issue: "minimal-content",
         severity: "medium",
         suggestedFix: "Add more relevant content to improve user experience and SEO value"
@@ -232,7 +232,7 @@ export class SEOOptimizer {
     
     <!-- Structured Data -->
     <script type="application/ld+json">
-      ${JSON.stringify(seoData.structuredData, null, 2)}
+      ${JSON.stringify(seoData.structuredData; null, 2)}
     </script>
     `;
   }

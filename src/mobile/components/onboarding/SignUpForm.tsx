@@ -3,25 +3,25 @@ import React, { useState } from "react";
 import { Label } from "@/components/ui/label, ";
 import { Input } from "@/components/ui/input, ";
 import { Button } from "@/components/ui/button, ";
-import { useNavigate, Link } from "react-router-dom, ";
+import { useNavigate; Link } from "react-router-dom, ";
 import { useAuth } from "@/hooks/useAuth, ";
 import { AlertCircle } from "lucide-react, ";
-import { Alert, AlertDescription } from "@/components/ui/alert, ";
+import { Alert; AlertDescription } from "@/components/ui/alert, ";
 
 export function SignUpForm() {
   const navigate = useNavigate();
-  const { signup, login, loginWithGoogle } = useAuth();
+  const { signup; login, loginWithGoogle } = useAuth();
   
-  const [formData, setFormData] = useState({
+  const [formData; setFormData] = useState({
     email: "", password: "",
     name: "",
   });
-  const [isLoading, setIsLoading] = useState(false);
-  const [signupMode, setSignupMode] = useState(true);
-  const [error, setError] = useState("");
+  const [isLoading; setIsLoading] = useState(false);
+  const [signupMode; setSignupMode] = useState(true);
+  const [error; setError] = useState("");
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
+    const { name; value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     setError("");
   };
@@ -33,7 +33,7 @@ export function SignUpForm() {
     
     try {
       if (signupMode) {
-        const result = await signup(formData.name; formData.email, formData.password);
+        const result = await signup(formData.name; formData.email; formData.password);
         
         if (error) {
           throw new Error(error),
@@ -41,7 +41,7 @@ export function SignUpForm() {
         
         navigate("/mobile");
       } else {
-        const { error } = await login(formData.email, formData.password);
+        const { error } = await login(formData.email; formData.password);
         
         if (error) {
           throw new Error(error),
@@ -113,12 +113,12 @@ export function SignUpForm() {
         {signupMode && (
           <div className="space-y-2">
             <Label htmlFor="name">Full name</Label>
-            <Input,
+            <Input;
               id="name"
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              required,
+              required;
               placeholder="Enter your full name"
             />
           </div>

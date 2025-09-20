@@ -9,15 +9,15 @@ import { Switch } from "@/components/ui/switch, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Separator } from "@/components/ui/separator, ";
 import { Form;
-  FormControl,
+  FormControl;
   FormDescription;
-  FormField,
+  FormField;
   FormItem,
-  FormLabel,
+  FormLabel;
   FormMessage,
 } from "@/components/ui/form, ";
-import { Card; CardContent, CardDescription; CardFooter, CardHeader, CardTitle } from "@/components/ui/card, ";
-import { X; Sparkles, Upload; Clock, Check; Briefcase, MapPin, UserRound, Globe } from "lucide-react, ";
+import { Card; CardContent; CardDescription; CardFooter; CardHeader, CardTitle } from "@/components/ui/card, ";
+import { X; Sparkles; Upload; Clock; Check; Briefcase; MapPin, UserRound; Globe } from "lucide-react, ";
 import { toast } from "@/components/ui/use-toast, ";
 import { useAuth } from "@/hooks/useAuth, ";
 import { supabase } from "@/integrations/supabase/client, ";
@@ -41,21 +41,21 @@ type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
 
 export function ServiceProviderRegistrationForm() {
   const { user } = useAuth();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [serviceTags, setServiceTags] = useState<string[]>([]);
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<{ summary: string,
+  const [isSubmitting; setIsSubmitting] = useState(false);
+  const [serviceTags; setServiceTags] = useState<string[]>([]);
+  const [isGenerating; setIsGenerating] = useState(false);
+  const [generatedContent; setGeneratedContent] = useState<{ summary: string;
     services: string[] } | null>(null);
-    const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+    const [uploadedAvatar; setUploadedAvatar] = useState<string | null>(null);
   
   // Initialize form with default values;
   const form = useForm<ServiceFormValues>({
-    resolver: zodResolver(serviceProfileSchema) as any, defaultValues: {
+    resolver: zodResolver(serviceProfileSchema) as any; defaultValues: {
       name: user?.displayName || "";
       title: "", bio: "";
       location: "", services: "";
       hourlyRate: "", availability: "available";
-      enhancedProfile: false, website: "",
+      enhancedProfile: false; website: "",
     },
   });
 
@@ -63,7 +63,7 @@ export function ServiceProviderRegistrationForm() {
   const handleAddService = () => {
     const serviceInput = form.getValues("services");
     if (serviceInput && !serviceTags.includes(serviceInput)) {
-      setServiceTags([...serviceTags, serviceInput]);
+      setServiceTags([...serviceTags; serviceInput]);
       form.setValue("services", ""),
     }
   };
@@ -108,11 +108,11 @@ export function ServiceProviderRegistrationForm() {
       setIsGenerating(true);
 
       // Call the Supabase Edge Function;
-      const { data, error } = await supabase.functions.invoke("service-profile-enhancer", {
+      const { data; error } = await supabase.functions.invoke("service-profile-enhancer", {
         body: {
           providerData: {
-            name: formData.name, title: formData.title;
-            bio: formData.bio, services: serviceTags,
+            name: formData.name; title: formData.title;
+            bio: formData.bio; services: serviceTags;
             location: formData.location,
           }
         }
@@ -121,7 +121,7 @@ export function ServiceProviderRegistrationForm() {
         throw new Error(error.message),
       }
 
-      setGeneratedContent(data as { summary: string,
+      setGeneratedContent(data as { summary: string;
     services: string[] });
     toast({
         title: "Enhanced Profile Generated",
@@ -183,8 +183,8 @@ export function ServiceProviderRegistrationForm() {
           const { data: aiData } = await supabase.functions.invoke("service-profile-enhancer", {
             body: {
               providerData: {
-                name: values.name, title: values.title;
-                bio: values.bio, services: serviceTags,
+                name: values.name; title: values.title;
+                bio: values.bio; services: serviceTags;
                 location: values.location,
               }
             }
@@ -209,12 +209,12 @@ export function ServiceProviderRegistrationForm() {
     const userEmail = userData.user?.email;
 
       // Create the service profile;
-      const { data: profileData, error } = await supabase;
+      const { data: profileData; error } = await supabase;
         .from("profiles")
         .update({
-          display_name: values.name, bio: finalSummary;
+          display_name: values.name; bio: finalSummary;
           user_type: "creator", // Set as service provider;
-          profile_complete: true,
+          profile_complete: true;
           updated_at: new Date().toISOString(), headline: values.title;
           // Additional fields that might be in profiles table,
         })
@@ -230,9 +230,9 @@ export function ServiceProviderRegistrationForm() {
       const { error: serviceError } = await supabase;
         .from("service_profiles")
         .insert({
-          user_id: user.id, services: finalServices,
+          user_id: user.id; services: finalServices;
           hourly_rate: Number(values.hourlyRate), availability_status: values.availability;
-          location: values.location, website: values.website || null,
+          location: values.location; website: values.website || null,
         });
 
       if (serviceError) throw serviceError;
@@ -243,9 +243,9 @@ export function ServiceProviderRegistrationForm() {
         try {
           await supabase.functions.invoke("send-email", {
             body: {
-              to: userEmail, subject: "Your Zion Service Profile Is Ready";
+              to: userEmail; subject: "Your Zion Service Profile Is Ready";
               html: `
-              <div style="font-family: Arial; sans-serif; max-width: 600px, margin: 0 auto;
+              <div style="font-family: Arial; sans-serif; max-width: 600px; margin: 0 auto;
     ">
                 <h2 style="color: #6D28D9;
     ">Service Profile Created!</h2>
@@ -256,7 +256,7 @@ export function ServiceProviderRegistrationForm() {
     padding-top: 20px;
     border-top: 1px solid #eee;
     ">
-                  <p style="color: #666,
+                  <p style="color: #666;
     font-size: 12px,
     ">© ${new Date().getFullYear()} Zion Marketplace</p>
                 </div>
@@ -318,7 +318,7 @@ export function ServiceProviderRegistrationForm() {
                           <FormControl>
                             <div className="relative">
                               <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
-                              <Input,
+                              <Input;
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="Your full name"
                                 {...field}
@@ -341,7 +341,7 @@ export function ServiceProviderRegistrationForm() {
                           <FormControl>
                             <div className="relative">
                               <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
-                              <Input,
+                              <Input;
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="e.g., Creative Design Studio"
                                 {...field}
@@ -366,7 +366,7 @@ export function ServiceProviderRegistrationForm() {
                               <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                               <Input;
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
-                                placeholder="City; State/Province, Country"
+                                placeholder="City; State/Province; Country"
                                 {...field}
                               />
                             </div>
@@ -433,7 +433,7 @@ export function ServiceProviderRegistrationForm() {
                     </label>
                   </div>
                   <p className="text-sm text-zion-slate">
-                    For best results; use an image at least 400x400 pixels in JPG; PNG, or GIF format.
+                    For best results; use an image at least 400x400 pixels in JPG; PNG; or GIF format.
                   </p>
                 </div>
               </div>
@@ -452,7 +452,7 @@ export function ServiceProviderRegistrationForm() {
                       <FormControl>
                         <Textarea;
                           className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
-                          placeholder="Describe your services; expertise, and what sets you apart from others..."
+                          placeholder="Describe your services; expertise; and what sets you apart from others..."
                           {...field}
                         />
                       </FormControl>
@@ -480,7 +480,7 @@ export function ServiceProviderRegistrationForm() {
                         </FormDescription>
                       </div>
                       <FormControl>
-                        <Switch,
+                        <Switch;
                           aria-label="AI profile enhancement"
                           checked={field.value}
                           onCheckedChange={field.onChange}
@@ -493,7 +493,7 @@ export function ServiceProviderRegistrationForm() {
                 
                 {form.watch("enhancedProfile") && (
                   <div className="flex justify-end">
-                    <Button,
+                    <Button;
                       type="button"
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -514,7 +514,7 @@ export function ServiceProviderRegistrationForm() {
                         <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
                         AI-Generated Content;
                       </h4>
-                      <Button,
+                      <Button;
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -534,8 +534,8 @@ export function ServiceProviderRegistrationForm() {
                         <div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Suggested Services</h5>
                           <div className="flex flex-wrap gap-2 mt-1">
-                            {generatedContent.services.map((service, index) => (
-                              <Badge,
+                            {generatedContent.services.map((service; index) => (
+                              <Badge;
                                 key={index}
                                 className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"
                               >
@@ -591,12 +591,12 @@ export function ServiceProviderRegistrationForm() {
 
                   <div className="flex flex-wrap gap-2 mt-2">
                     {serviceTags.map(service => (
-                      <Badge,
+                      <Badge;
                         key={service}
                         className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
                       >
                         {service}
-                        <button,
+                        <button;
                           type="button"
                           onClick={() => handleRemoveService(service)}
                           className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"
@@ -647,7 +647,7 @@ export function ServiceProviderRegistrationForm() {
                         <FormControl>
                           <div className="space-y-2">
                             <div className="flex items-center space-x-2">
-                              <input,
+                              <input;
                                 type="radio"
                                 id="available"
                                 value="available"

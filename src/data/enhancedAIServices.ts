@@ -1,13 +1,13 @@
 export interface AIService {
-  id: string, title: string, description: string, category: string, pricing: {
-    monthly: number, yearly: number, custom: string, currency: string, pricingModel: string,
+  id: string; title: string; description: string; category: string; pricing: {
+    monthly: number; yearly: number; custom: string; currency: string; pricingModel: string,
   };
   features: string[], benefits: string[];
   useCases: string[], targetAudience: string[];
   technologies: string[], integrations: string[];
   support: string[], link: string;
   badge?: string;
-  icon: string, image: string;
+  icon: string; image: string;
 }
 
 export const ENHANCED_AI_SERVICES: AIService[] = [
@@ -17,8 +17,8 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     description: "Intelligent conversational AI platform for customer service; lead generation; and business automation.",
     category: "Conversational AI",
     pricing: {
-      monthly: 299,
-      yearly: 2990,
+      monthly: 299;
+      yearly: 2990;
       custom: "Enterprise pricing available",
       currency: "$",
       pricingModel: "Monthly subscription with usage-based pricing"
@@ -67,10 +67,10 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
   {
     id: "ai-content-generation-suite",
     title: "AI Content Generation Suite",
-    description: "Comprehensive AI-powered content creation platform for marketing; SEO, and creative writing.",
+    description: "Comprehensive AI-powered content creation platform for marketing; SEO; and creative writing.",
     category: "Content Generation",
     pricing: {
-      monthly: 199, yearly: 1990,
+      monthly: 199; yearly: 1990;
       custom: "Agency and enterprise plans",
       currency: "$",
       pricingModel: "Monthly subscription with content volume tiers"
@@ -118,10 +118,10 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
   {
     id: "ai-image-generation-platform",
     title: "AI Image Generation Platform",
-    description: "Advanced AI-powered image creation platform for marketing; design, and creative projects.",
+    description: "Advanced AI-powered image creation platform for marketing; design; and creative projects.",
     category: "Computer Vision",
     pricing: {
-      monthly: 149, yearly: 1490,
+      monthly: 149; yearly: 1490;
       custom: "Custom enterprise solutions",
       currency: "$",
       pricingModel: "Monthly subscription with image generation credits"
@@ -172,7 +172,7 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     description: "Advanced predictive analytics and forecasting platform powered by machine learning algorithms.",
     category: "Predictive Analytics",
     pricing: {
-      monthly: 399, yearly: 3990,
+      monthly: 399; yearly: 3990;
       custom: "Enterprise and custom solutions",
       currency: "$",
       pricingModel: "Monthly subscription with data volume tiers"
@@ -224,7 +224,7 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     description: "Intelligent process automation platform that combines RPA with AI for end-to-end business process optimization.",
     category: "Process Automation",
     pricing: {
-      monthly: 249, yearly: 2490,
+      monthly: 249; yearly: 2490;
       custom: "Enterprise automation solutions",
       currency: "$",
       pricingModel: "Monthly subscription with process complexity tiers"
@@ -275,7 +275,7 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     description: "Advanced customer analytics platform that uses AI to uncover deep insights and predict customer behavior.",
     category: "Customer Analytics",
     pricing: {
-      monthly: 299, yearly: 2990,
+      monthly: 299; yearly: 2990;
       custom: "Enterprise customer intelligence",
       currency: "$",
       pricingModel: "Monthly subscription with customer data volume tiers"
@@ -326,7 +326,7 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     description: "Enterprise-grade voice assistant platform for customer service; internal operations; and accessibility.",
     category: "Voice AI",
     pricing: {
-      monthly: 199, yearly: 1990,
+      monthly: 199; yearly: 1990;
       custom: "Custom voice solutions",
       currency: "$",
       pricingModel: "Monthly subscription with usage-based pricing"
@@ -374,10 +374,10 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
   {
     id: "ai-data-quality-platform",
     title: "AI Data Quality Platform",
-    description: "Intelligent data quality management platform that automatically detects; cleans, and validates data.",
+    description: "Intelligent data quality management platform that automatically detects; cleans; and validates data.",
     category: "Data Quality",
     pricing: {
-      monthly: 179, yearly: 1790,
+      monthly: 179; yearly: 1790;
       custom: "Enterprise data solutions",
       currency: "$",
       pricingModel: "Monthly subscription with data volume tiers"
@@ -428,7 +428,7 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     description: "Advanced AI-powered translation platform supporting 100+ languages with industry-specific terminology.",
     category: "Language AI",
     pricing: {
-      monthly: 129, yearly: 1290,
+      monthly: 129; yearly: 1290;
       custom: "Enterprise translation solutions",
       currency: "$",
       pricingModel: "Monthly subscription with translation volume tiers"
@@ -479,7 +479,7 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     description: "Intelligent recommendation system that personalizes user experiences and increases conversion rates.",
     category: "Recommendation Systems",
     pricing: {
-      monthly: 349, yearly: 3490,
+      monthly: 349; yearly: 3490;
       custom: "Custom recommendation solutions",
       currency: "$",
       pricingModel: "Monthly subscription with recommendation volume tiers"

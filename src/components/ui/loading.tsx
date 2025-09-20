@@ -11,7 +11,7 @@ interface LoadingProps {
 export function Loading({ 
   size = "md", 
   variant = "spinner", 
-  className,
+  className;
   text, 
 }: LoadingProps) {
   const sizeClasses = {
@@ -66,7 +66,7 @@ export function Loading({
 // Skeleton loading for content;
 export function Skeleton({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div,
+    <div;
       className={cn("animate-pulse rounded-md bg-zion-slate-light/20", className)}
       {...props}
     />

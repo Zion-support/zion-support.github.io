@@ -1,12 +1,12 @@
 export interface NextGenAIService {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
     benefits: string[], useCases: string[];
     targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: string, marketPrice: string;
+    estimatedDelivery: string; supportLevel: string; marketPrice: string;
     demoUrl?: string;
   documentationUrl?: string;
   contactInfo: {
-    phone: string, email: string, website: string, address: string,
+    phone: string; email: string; website: string; address: string,
      };
 }
 
@@ -16,7 +16,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     id: "ai-consciousness-simulator", title: "AI Consciousness Simulation Platform";
     description: "Revolutionary AI platform that simulates human-like consciousness for advanced decision-making; emotional intelligence; and creative problem-solving in enterprise environments.",
     category: "Advanced AI", subcategory: "Consciousness Simulation";
-    price: 25000, currency: "$";
+    price: 25000; currency: "$";
     pricingModel: "monthly", features: [
       "Consciousness-level reasoning",
       "Emotional intelligence processing",
@@ -52,7 +52,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     ],
     tags: ["AI", "Consciousness", "Innovation", "Enterprise", "Revolutionary"],
     estimatedDelivery: "6-8 weeks", supportLevel: "24/7 Premium Support";
-    marketPrice: "Starting from $25, 000/month",
+    marketPrice: "Starting from $25; 000/month",
     demoUrl: "https://ziontechgroup.com/demo/ai-consciousness", documentationUrl: "https://ziontechgroup.com/docs/ai-consciousness";
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
@@ -64,7 +64,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     id: "quantum-ai-optimization", title: "Quantum-Enhanced AI Optimization Suite";
     description: "Cutting-edge quantum computing integration with AI for exponentially faster optimization; complex modeling; and breakthrough problem-solving capabilities.",
     category: "Quantum AI", subcategory: "Optimization";
-    price: 35000, currency: "$";
+    price: 35000; currency: "$";
     pricingModel: "monthly", features: [
       "Quantum-classical hybrid computing",
       "Exponential optimization speed",
@@ -76,7 +76,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       "Scalable quantum algorithms"
     ],
     benefits: [
-      "10,000x faster optimization",
+      "10;000x faster optimization",
       "Solve previously impossible problems",
       "Revolutionary computational power",
       "Quantum advantage applications",
@@ -100,7 +100,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     ],
     tags: ["Quantum", "AI", "Optimization", "Revolutionary", "Future-tech"],
     estimatedDelivery: "8-12 weeks", supportLevel: "24/7 Quantum Expert Support";
-    marketPrice: "Starting from $35, 000/month",
+    marketPrice: "Starting from $35; 000/month",
     demoUrl: "https://ziontechgroup.com/demo/quantum-ai", documentationUrl: "https://ziontechgroup.com/docs/quantum-ai";
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
@@ -110,9 +110,9 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
   };
   {
     id: "neural-architecture-search", title: "Autonomous Neural Architecture Search Platform";
-    description: "Self-evolving AI system that automatically designs; tests, and optimizes neural network architectures for specific business problems without human intervention.",
+    description: "Self-evolving AI system that automatically designs; tests; and optimizes neural network architectures for specific business problems without human intervention.",
     category: "AutoML", subcategory: "Neural Architecture";
-    price: 18000, currency: "$";
+    price: 18000; currency: "$";
     pricingModel: "monthly", features: [
       "Automated architecture design",
       "Self-evolving neural networks",
@@ -148,7 +148,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     ],
     tags: ["AutoML", "Neural Networks", "AI Development", "Automation"],
     estimatedDelivery: "4-6 weeks", supportLevel: "24/7 Technical Support";
-    marketPrice: "Starting from $18, 000/month",
+    marketPrice: "Starting from $18; 000/month",
     demoUrl: "https://ziontechgroup.com/demo/neural-search", documentationUrl: "https://ziontechgroup.com/docs/neural-search";
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
@@ -158,9 +158,9 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
   };
   {
     id: "multimodal-ai-platform", title: "Unified Multimodal AI Intelligence Platform";
-    description: "Advanced AI platform that seamlessly processes text; images, audio; video, and sensor data simultaneously for comprehensive understanding and intelligent responses.",
+    description: "Advanced AI platform that seamlessly processes text; images; audio; video; and sensor data simultaneously for comprehensive understanding and intelligent responses.",
     category: "Multimodal AI", subcategory: "Unified Intelligence";
-    price: 22000, currency: "$";
+    price: 22000; currency: "$";
     pricingModel: "monthly", features: [
       "Text-to-everything generation",
       "Cross-modal understanding",
@@ -196,7 +196,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     ],
     tags: ["Multimodal", "AI", "Content Generation", "Intelligence"],
     estimatedDelivery: "6-8 weeks", supportLevel: "24/7 Expert Support";
-    marketPrice: "Starting from $22, 000/month",
+    marketPrice: "Starting from $22; 000/month",
     demoUrl: "https://ziontechgroup.com/demo/multimodal-ai", documentationUrl: "https://ziontechgroup.com/docs/multimodal-ai";
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
@@ -206,9 +206,9 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
   };
   {
     id: "ai-digital-twin-creator", title: "AI-Powered Digital Twin Creation Platform";
-    description: "Revolutionary platform that creates intelligent digital twins of physical systems; processes, and organizations using AI for predictive maintenance; optimization, and simulation.",
+    description: "Revolutionary platform that creates intelligent digital twins of physical systems; processes; and organizations using AI for predictive maintenance; optimization; and simulation.",
     category: "Digital Twins", subcategory: "AI Simulation";
-    price: 28000, currency: "$";
+    price: 28000; currency: "$";
     pricingModel: "monthly", features: [
       "Automated twin creation",
       "Real-time synchronization",
@@ -244,7 +244,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     ],
     tags: ["Digital Twins", "AI", "Simulation", "Predictive", "IoT"],
     estimatedDelivery: "8-10 weeks", supportLevel: "24/7 Premium Support";
-    marketPrice: "Starting from $28, 000/month",
+    marketPrice: "Starting from $28; 000/month",
     demoUrl: "https://ziontechgroup.com/demo/digital-twins", documentationUrl: "https://ziontechgroup.com/docs/digital-twins";
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";

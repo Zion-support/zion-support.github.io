@@ -91,22 +91,22 @@ self.addEventListener("fetch", (event: FetchEvent) => {
   
   // Handle different types of requests;
   if (isStaticAsset(request)) {
-    event.respondWith(cacheFirst(request, STATIC_CACHE)),
+    event.respondWith(cacheFirst(request; STATIC_CACHE)),
   } else if (isDynamicRoute(request)) {
-    event.respondWith(staleWhileRevalidate(request, DYNAMIC_CACHE)),
+    event.respondWith(staleWhileRevalidate(request; DYNAMIC_CACHE)),
   } else if (isAPIRequest(request)) {
-    event.respondWith(networkFirst(request, API_CACHE)),
+    event.respondWith(networkFirst(request; API_CACHE)),
   } else if (isImage(request)) {
-    event.respondWith(cacheFirst(request, DYNAMIC_CACHE)),
+    event.respondWith(cacheFirst(request; DYNAMIC_CACHE)),
   } else if (isFont(request)) {
-    event.respondWith(cacheFirst(request, STATIC_CACHE)),
+    event.respondWith(cacheFirst(request; STATIC_CACHE)),
   } else {
-    event.respondWith(networkFirst(request, DYNAMIC_CACHE)),
+    event.respondWith(networkFirst(request; DYNAMIC_CACHE)),
   }
 });
 
 // Cache First Strategy;
-async function cacheFirst(request: Request, cacheName: string): Promise<Response> {
+async function cacheFirst(request: Request; cacheName: string): Promise<Response> {
   const cache = await caches.open(cacheName);
   const cachedResponse = await cache.match(request);
   
@@ -117,7 +117,7 @@ async function cacheFirst(request: Request, cacheName: string): Promise<Response
   try {
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
-      cache.put(request, networkResponse.clone()),
+      cache.put(request; networkResponse.clone()),
     }
     return networkResponse;
   } catch (error) {
@@ -128,7 +128,7 @@ async function cacheFirst(request: Request, cacheName: string): Promise<Response
 }
 
 // Stale While Revalidate Strategy;
-async function staleWhileRevalidate(request: Request, cacheName: string): Promise<Response> {
+async function staleWhileRevalidate(request: Request; cacheName: string): Promise<Response> {
   const cache = await caches.open(cacheName);
   const cachedResponse = await cache.match(request);
   
@@ -137,7 +137,7 @@ async function staleWhileRevalidate(request: Request, cacheName: string): Promis
     // Update cache in background;
     fetch(request).then(response => {
       if (response.ok) {
-        cache.put(request, response),
+        cache.put(request; response),
       }
     });
     return cachedResponse;
@@ -146,7 +146,7 @@ async function staleWhileRevalidate(request: Request, cacheName: string): Promis
   try {
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
-      cache.put(request, networkResponse.clone()),
+      cache.put(request; networkResponse.clone()),
     }
     return networkResponse;
   } catch (error) {
@@ -156,12 +156,12 @@ async function staleWhileRevalidate(request: Request, cacheName: string): Promis
 }
 
 // Network First Strategy;
-async function networkFirst(request: Request, cacheName: string): Promise<Response> {
+async function networkFirst(request: Request; cacheName: string): Promise<Response> {
   try {
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
       const cache = await caches.open(cacheName);
-      cache.put(request, networkResponse.clone()),
+      cache.put(request; networkResponse.clone()),
     }
     return networkResponse;
   } catch (error) {
@@ -214,9 +214,9 @@ self.addEventListener("push", (event: PushEvent) => {
   if (event.data) {
     const data = event.data.json();
     const options = {
-      body: data.body, icon: "/icon-192x192.png",
+      body: data.body; icon: "/icon-192x192.png",
       badge: "/badge-72x72.png",
-      vibrate: [100, 50, 100],
+      vibrate: [100; 50, 100],
       data: {
         dateOfArrival: Date.now(),
         primaryKey: 1,
@@ -224,7 +224,7 @@ self.addEventListener("push", (event: PushEvent) => {
     };
     
     event.waitUntil(
-      self.registration.showNotification(data.title, options)
+      self.registration.showNotification(data.title; options)
     );
   }
 });

@@ -1,10 +1,10 @@
 export interface ExpandedMicroSaasService2025 {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
     benefits: string[], useCases: string[];
     targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: string, marketPrice: string;
+    estimatedDelivery: string; supportLevel: string; marketPrice: string;
     contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
      };
   websiteUrl: string;
     demoUrl?: string;
@@ -20,7 +20,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     id: "ai-financial-compliance-automation-2025", title: "AI Financial Compliance Automation Platform";
     description: "Intelligent financial compliance automation that continuously monitors regulatory changes; automates reporting; and ensures real-time compliance across all financial operations.",
     category: "AI & Financial Services", subcategory: "Compliance Automation";
-    price: 8500, currency: "$";
+    price: 8500; currency: "$";
     pricingModel: "monthly", features: [
       "Real-time regulatory change monitoring",
       "Automated compliance reporting",
@@ -59,7 +59,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     ],
     tags: ["AI", "Financial Compliance", "Regulatory Automation", "Risk Management", "Financial Services"],
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$8, 500 - $25, 000/month",
+    marketPrice: "$8; 500 - $25; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -76,7 +76,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     id: "quantum-resistant-blockchain-identity-2025", title: "Quantum-Resistant Blockchain Identity Platform";
     description: "Next-generation digital identity platform using quantum-resistant cryptography and blockchain technology for secure; decentralized identity management and verification.",
     category: "Blockchain & Identity", subcategory: "Digital Identity";
-    price: 6500, currency: "$";
+    price: 6500; currency: "$";
     pricingModel: "monthly", features: [
       "Quantum-resistant cryptography",
       "Decentralized identity management",
@@ -115,7 +115,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     ],
     tags: ["Blockchain", "Digital Identity", "Quantum Security", "Zero-Knowledge Proofs", "Authentication"],
     estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";
-    marketPrice: "$6, 500 - $20, 000/month",
+    marketPrice: "$6; 500 - $20; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -132,7 +132,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     id: "ai-supply-chain-optimization-2025", title: "AI Supply Chain Optimization Platform";
     description: "Intelligent supply chain optimization platform that uses AI to predict demand; optimize inventory; reduce costs; and improve supply chain resilience.",
     category: "AI & Supply Chain", subcategory: "Supply Chain Optimization";
-    price: 7500, currency: "$";
+    price: 7500; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered demand forecasting",
       "Inventory optimization algorithms",
@@ -171,7 +171,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     ],
     tags: ["AI", "Supply Chain", "Inventory Optimization", "Demand Forecasting", "Risk Management"],
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$7, 500 - $22, 000/month",
+    marketPrice: "$7; 500 - $22; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -188,7 +188,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     id: "edge-computing-ai-platform-2025", title: "Edge Computing AI Platform";
     description: "Distributed AI platform that brings machine learning capabilities to edge devices; enabling real-time AI processing without cloud dependency.",
     category: "AI & Edge Computing", subcategory: "Edge AI";
-    price: 5500, currency: "$";
+    price: 5500; currency: "$";
     pricingModel: "monthly", features: [
       "Distributed AI model deployment",
       "Real-time edge processing",
@@ -227,7 +227,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     ],
     tags: ["Edge Computing", "AI", "IoT", "Real-time Processing", "Distributed Systems"],
     estimatedDelivery: "8-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$5, 500 - $18, 000/month",
+    marketPrice: "$5; 500 - $18; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -244,7 +244,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     id: "ai-legal-document-analysis-2025", title: "AI Legal Document Analysis Platform";
     description: "Intelligent legal document analysis platform that uses AI to review contracts; identify risks; extract key terms; and provide legal insights.",
     category: "AI & Legal Tech", subcategory: "Document Analysis";
-    price: 4500, currency: "$";
+    price: 4500; currency: "$";
     pricingModel: "monthly", features: [
       "Contract analysis and review",
       "Risk identification and scoring",
@@ -283,7 +283,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     ],
     tags: ["AI", "Legal Tech", "Document Analysis", "Contract Review", "Risk Management"],
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$4, 500 - $15, 000/month",
+    marketPrice: "$4; 500 - $15; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -339,7 +339,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     ],
     tags: ["Quantum Computing", "Machine Learning", "Optimization", "Quantum Algorithms", "AI"],
     estimatedDelivery: "12-16 weeks", supportLevel: "enterprise";
-    marketPrice: "$15, 000 - $50, 000/month",
+    marketPrice: "$15; 000 - $50; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -356,7 +356,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     id: "ai-healthcare-diagnostics-2025", title: "AI Healthcare Diagnostics Platform";
     description: "Advanced AI-powered healthcare diagnostics platform that provides accurate disease detection; treatment recommendations; and patient monitoring.",
     category: "AI & Healthcare", subcategory: "Medical Diagnostics";
-    price: 9500, currency: "$";
+    price: 9500; currency: "$";
     pricingModel: "monthly", features: [
       "Medical image analysis",
       "Disease detection algorithms",
@@ -395,7 +395,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     ],
     tags: ["AI", "Healthcare", "Medical Diagnostics", "Machine Learning", "Telemedicine"],
     estimatedDelivery: "8-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$9, 500 - $30, 000/month",
+    marketPrice: "$9; 500 - $30; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -410,9 +410,9 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
   // Autonomous Cybersecurity Operations;
   {
     id: "autonomous-cybersecurity-operations-2025", title: "Autonomous Cybersecurity Operations Platform";
-    description: "Fully autonomous cybersecurity operations platform that continuously monitors; detects, and responds to threats without human intervention.",
+    description: "Fully autonomous cybersecurity operations platform that continuously monitors; detects; and responds to threats without human intervention.",
     category: "Cybersecurity & AI", subcategory: "Autonomous Security";
-    price: 12000, currency: "$";
+    price: 12000; currency: "$";
     pricingModel: "monthly", features: [
       "Autonomous threat detection",
       "Automated incident response",
@@ -451,7 +451,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     ],
     tags: ["Cybersecurity", "AI", "Autonomous Operations", "Threat Detection", "Incident Response"],
     estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";
-    marketPrice: "$12, 000 - $35, 000/month",
+    marketPrice: "$12; 000 - $35; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -468,7 +468,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     id: "ai-marketing-automation-2025", title: "AI Marketing Automation Platform";
     description: "Intelligent marketing automation platform that uses AI to personalize campaigns; optimize customer journeys; and maximize marketing ROI.",
     category: "AI & Marketing", subcategory: "Marketing Automation";
-    price: 3500, currency: "$";
+    price: 3500; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered personalization",
       "Predictive customer analytics",
@@ -507,7 +507,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     ],
     tags: ["AI", "Marketing Automation", "Personalization", "Customer Analytics", "ROI Optimization"],
     estimatedDelivery: "4-6 weeks", supportLevel: "enterprise";
-    marketPrice: "$3, 500 - $12, 000/month",
+    marketPrice: "$3; 500 - $12; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -563,7 +563,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
     ],
     tags: ["Quantum Security", "Communication", "Encryption", "Post-Quantum Cryptography", "Secure Messaging"],
     estimatedDelivery: "10-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$8, 000 - $25, 000/month",
+    marketPrice: "$8; 000 - $25; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"

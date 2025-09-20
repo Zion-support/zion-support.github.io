@@ -1,8 +1,8 @@
 export interface InnovativeService2025 {
-  id: string, title: string, description: string, category: string, price: number, currency: string, pricingModel: "one-time" | "monthly" | "yearly" | "per-user" | "per-project";
+  id: string; title: string; description: string; category: string; price: number; currency: string; pricingModel: "one-time" | "monthly" | "yearly" | "per-user" | "per-project";
     features: string[], benefits: string[];
-    marketPrice: string, contactInfo: {
-    phone: string, email: string, website: string,
+    marketPrice: string; contactInfo: {
+    phone: string; email: string; website: string,
      };
   technology: string[], estimatedDelivery: string;
     supportLevel: "basic" | "standard" | "premium" | "enterprise";
@@ -29,7 +29,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
       "Data-driven insights",
       "Scalable operations"
     ],
-    marketPrice: "$2, 500 - $5, 000/month",
+    marketPrice: "$2; 500 - $5; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -39,7 +39,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
   {
     id: "quantum-neural-network-platform", title: "Quantum Neural Network Platform";
     description: "Next-generation quantum computing platform with neural network capabilities for complex problem solving and optimization.", category: "Quantum Computing";
-    price: 15000, currency: "USD";
+    price: 15000; currency: "USD";
     pricingModel: "monthly", features: [
       "Quantum neural processing",
       "Complex optimization algorithms",
@@ -55,7 +55,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
       "Advanced AI capabilities",
       "Future-proof technology"
     ],
-    marketPrice: "$15, 000 - $25, 000/month",
+    marketPrice: "$15; 000 - $25; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -82,7 +82,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
       "Automated compliance",
       "Innovative financial products"
     ],
-    marketPrice: "$8, 000 - $15, 000/month",
+    marketPrice: "$8; 000 - $15; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -109,7 +109,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
       "Cost optimization",
       "Scalable infrastructure"
     ],
-    marketPrice: "$5, 000 - $10, 000/month",
+    marketPrice: "$5; 000 - $10; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -118,7 +118,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
   };
   {
     id: "ai-cybersecurity-automation", title: "AI Cybersecurity Automation";
-    description: "Intelligent cybersecurity platform that automatically detects; prevents, and responds to threats using AI.",
+    description: "Intelligent cybersecurity platform that automatically detects; prevents; and responds to threats using AI.",
     category: "Cybersecurity", price: 12000;
     currency: "USD", pricingModel: "monthly";
     features: [
@@ -136,7 +136,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
       "Compliance automation",
       "Cost-effective security"
     ],
-    marketPrice: "$12, 000 - $20, 000/month",
+    marketPrice: "$12; 000 - $20; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"

@@ -1,16 +1,16 @@
 import React from "react";
-import { useState; useEffect, createContext, useContext, ReactNode } from "react, ";
+import { useState; useEffect; createContext, useContext; ReactNode } from "react, ";
 
 interface User {
-  id: string, email: string;
+  id: string; email: string;
     name?: string;
   role?: string;
   avatar?: string,
 }
 
 interface AuthContextType {
-  user: User | null, loading: boolean;
-    login: (email: string, password: string) => Promise<void>, register: (email: string, password: string, name: string) => Promise<void>, logout: () => Promise<void>;
+  user: User | null; loading: boolean;
+    login: (email: string; password: string) => Promise<void>, register: (email: string; password: string; name: string) => Promise<void>, logout: () => Promise<void>;
     updateProfile: (data: Partial<User>) => Promise<void>,
 }
 
@@ -29,8 +29,8 @@ interface AuthProviderProps {
 }
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [user; setUser] = useState<User | null>(null);
+  const [loading; setLoading] = useState(true);
 
   useEffect(() => {
     // Check if user is logged in on mount;
@@ -54,7 +54,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     checkAuth();
   }, []);
 
-  const login = async (email: string, password: string) => {
+  const login = async (email: string; password: string) => {
     try {
       setLoading(true);
     // In a real app; you would make an API call to your backend;
@@ -78,14 +78,14 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  const register = async (email: string, password: string, name: string) => {
+  const register = async (email: string; password: string; name: string) => {
     try {
       setLoading(true);
     // In a real app; you would make an API call to your backend;
       // For now; we"ll simulate a successful registration;
       const mockUser: User = {
         id: "1";
-        email,
+        email;
         name,
         role: "user"
       };
@@ -133,9 +133,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const value: AuthContextType = {
     user;
     loading;
-    login,
+    login;
     register;
-    logout,
+    logout;
     updateProfile,
   };
 

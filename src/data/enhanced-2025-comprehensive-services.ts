@@ -1,13 +1,13 @@
-import { Routes, Route } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 export interface EnhancedService {
-  id: string, name: string, tagline: string, description: string, price: string, period: string, features: string[];
-    category: string, marketSize: string, targetAudience: string, competitiveAdvantage: string, useCases: string[];
+  id: string; name: string; tagline: string; description: string; price: string; period: string; features: string[];
+    category: string; marketSize: string; targetAudience: string; competitiveAdvantage: string; useCases: string[];
     integrations: string[], compliance: string[];
-    website: string, contact: {
-    phone: string, email: string, address: string,
+    website: string; contact: {
+    phone: string; email: string; address: string,
      };
-  trialDays: number, setupTime: string, competitors: string[];
-    roi: string, launchDate: string, customers: number, rating: number, reviews: number, technology: string[], apiEndpoints: number, uptime: string, securityFeatures: string[];
+  trialDays: number; setupTime: string; competitors: string[];
+    roi: string; launchDate: string; customers: number; rating: number; reviews: number; technology: string[], apiEndpoints: number; uptime: string; securityFeatures: string[];
 }
 
 export const enhanced2025ComprehensiveServices: EnhancedService[] = [
@@ -47,9 +47,9 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     }, trialDays: 21;
     setupTime: "2-3 business days", competitors: ["Tableau", "Power BI", "Qlik", "Looker", "Domo"],
     roi: "Average customer sees 450% ROI within 6 months", launchDate: "2024-03-15";
-    customers: 1800, rating: 4.9, reviews: 890;
+    customers: 1800; rating: 4.9; reviews: 890;
     technology: ["Machine Learning", "Natural Language Processing", "Real-time Analytics", "Predictive Modeling"],
-    apiEndpoints: 150, uptime: "99.9%";
+    apiEndpoints: 150; uptime: "99.9%";
     securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
   },
 
@@ -59,7 +59,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     tagline: "Future-proof your security with quantum-resistant encryption", description: "Next-generation cybersecurity platform that implements quantum-resistant cryptographic algorithms to protect against future quantum computing threats. Features include advanced threat detection; zero-trust architecture; and automated incident response.",
     price: "$599", period: "/month";
     features: [
-      "Quantum-resistant encryption algorithms (CRYSTALS-Kyber, CRYSTALS-Dilithium)",
+      "Quantum-resistant encryption algorithms (CRYSTALS-Kyber; CRYSTALS-Dilithium)",
       "Advanced threat detection with AI-powered analysis",
       "Zero-trust architecture implementation",
       "Automated incident response and remediation",
@@ -89,9 +89,9 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     }, trialDays: 30;
     setupTime: "1-2 weeks", competitors: ["CrowdStrike", "SentinelOne", "Carbon Black", "Cylance", "Darktrace"],
     roi: "Average customer sees 300% ROI through threat prevention and compliance savings", launchDate: "2024-02-20";
-    customers: 950, rating: 4.8, reviews: 420;
+    customers: 950; rating: 4.8; reviews: 420;
     technology: ["Quantum-Resistant Cryptography", "Artificial Intelligence", "Machine Learning", "Zero-Trust Architecture"],
-    apiEndpoints: 200, uptime: "99.99%";
+    apiEndpoints: 200; uptime: "99.99%";
     securityFeatures: ["Quantum-resistant encryption", "Multi-layer security", "Real-time threat intelligence", "Automated response"]
   },
 
@@ -131,16 +131,16 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     }, trialDays: 14;
     setupTime: "3-5 business days", competitors: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions", "Azure DevOps"],
     roi: "Average customer sees 400% ROI through automation and efficiency gains", launchDate: "2024-04-10";
-    customers: 2200, rating: 4.7, reviews: 680;
+    customers: 2200; rating: 4.7; reviews: 680;
     technology: ["Artificial Intelligence", "Machine Learning", "Automation", "Infrastructure as Code"],
-    apiEndpoints: 180, uptime: "99.95%";
+    apiEndpoints: 180; uptime: "99.95%";
     securityFeatures: ["Automated security updates", "Access control", "Audit logging", "Encryption at rest"]
   },
 
   // Blockchain Supply Chain Transparency Platform;
   {
     id: "blockchain-supply-chain-transparency", name: "Blockchain Supply Chain Transparency Platform";
-    tagline: "End-to-end supply chain visibility with blockchain technology", description: "Comprehensive supply chain management platform that leverages blockchain technology to provide complete transparency; traceability, and compliance across the entire supply chain. Features include smart contracts; real-time tracking; and automated compliance reporting.",
+    tagline: "End-to-end supply chain visibility with blockchain technology", description: "Comprehensive supply chain management platform that leverages blockchain technology to provide complete transparency; traceability; and compliance across the entire supply chain. Features include smart contracts; real-time tracking; and automated compliance reporting.",
     price: "$249", period: "/month";
     features: [
       "Blockchain-based supply chain tracking",
@@ -173,9 +173,9 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     }, trialDays: 30;
     setupTime: "2-4 weeks", competitors: ["IBM Food Trust", "VeChain", "Walmart Blockchain", "Maersk TradeLens"],
     roi: "Average customer sees 250% ROI through efficiency gains and compliance savings", launchDate: "2024-01-30";
-    customers: 1200, rating: 4.6, reviews: 340;
+    customers: 1200; rating: 4.6; reviews: 340;
     technology: ["Blockchain", "Smart Contracts", "IoT Sensors", "Real-time Tracking"],
-    apiEndpoints: 120, uptime: "99.8%";
+    apiEndpoints: 120; uptime: "99.8%";
     securityFeatures: ["Immutable records", "Cryptographic verification", "Access control", "Audit trails"]
   },
 
@@ -215,9 +215,9 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     }, trialDays: 45;
     setupTime: "4-6 weeks", competitors: ["IBM Watson Health", "Cerner HealtheIntent", "Epic Healthy Planet", "Optum Analytics"],
     roi: "Average customer sees 350% ROI through improved outcomes and cost savings", launchDate: "2024-03-01";
-    customers: 650, rating: 4.9, reviews: 280;
+    customers: 650; rating: 4.9; reviews: 280;
     technology: ["Artificial Intelligence", "Machine Learning", "Predictive Analytics", "Natural Language Processing"],
-    apiEndpoints: 250, uptime: "99.99%";
+    apiEndpoints: 250; uptime: "99.99%";
     securityFeatures: ["HIPAA compliance", "End-to-end encryption", "Access control", "Audit logging"]
   },
 
@@ -225,7 +225,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
   {
     id: "quantum-machine-learning-platform", name: "Quantum Machine Learning Platform";
     tagline: "Harness quantum computing power for advanced machine learning", description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems that are intractable for classical computers. Features include quantum algorithms; hybrid classical-quantum workflows; and quantum advantage demonstrations.",
-    price: "$1, 299",
+    price: "$1; 299",
     period: "/month", features: [
       "Quantum machine learning algorithms and implementations",
       "Hybrid classical-quantum computing workflows",
@@ -257,9 +257,9 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     }, trialDays: 60;
     setupTime: "6-8 weeks", competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "Amazon Braket"],
     roi: "Research institutions see breakthrough discoveries; commercial applications show 500%+ ROI",
-    launchDate: "2024-05-15", customers: 180, rating: 4.8, reviews: 95;
+    launchDate: "2024-05-15", customers: 180; rating: 4.8; reviews: 95;
     technology: ["Quantum Computing", "Machine Learning", "Quantum Algorithms", "Hybrid Computing"],
-    apiEndpoints: 80, uptime: "99.5%";
+    apiEndpoints: 80; uptime: "99.5%";
     securityFeatures: ["Quantum encryption", "Secure access", "Data protection", "Research protocols"]
   },
 
@@ -299,9 +299,9 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     }, trialDays: 30;
     setupTime: "2-3 weeks", competitors: ["Alpaca", "QuantConnect", "MetaTrader", "TradingView Pro", "Interactive Brokers"],
     roi: "Average customer sees 200-400% ROI through improved trading performance", launchDate: "2024-02-15";
-    customers: 450, rating: 4.7, reviews: 220;
+    customers: 450; rating: 4.7; reviews: 220;
     technology: ["Artificial Intelligence", "Machine Learning", "Algorithmic Trading", "Risk Management"],
-    apiEndpoints: 300, uptime: "99.99%";
+    apiEndpoints: 300; uptime: "99.99%";
     securityFeatures: ["Multi-factor authentication", "Encryption", "Audit trails", "Regulatory compliance"]
   },
 
@@ -323,7 +323,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
       "Comprehensive monitoring and analytics"
     ],
     category: "IoT & Edge Computing", marketSize: "$9.8B";
-    targetAudience: "Manufacturing companies; smart cities; utilities, transportation companies",
+    targetAudience: "Manufacturing companies; smart cities; utilities; transportation companies",
     competitiveAdvantage: "Edge AI processing; real-time capabilities; local data processing; and comprehensive security",
     useCases: [
       "Smart manufacturing and Industry 4.0",
@@ -341,16 +341,16 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     }, trialDays: 21;
     setupTime: "1-2 weeks", competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "FogHorn", "ClearBlade"],
     roi: "Average customer sees 300% ROI through operational efficiency and cost savings", launchDate: "2024-04-20";
-    customers: 1800, rating: 4.6, reviews: 520;
+    customers: 1800; rating: 4.6; reviews: 520;
     technology: ["Edge Computing", "Internet of Things", "Artificial Intelligence", "Real-time Processing"],
-    apiEndpoints: 200, uptime: "99.9%";
+    apiEndpoints: 200; uptime: "99.9%";
     securityFeatures: ["Edge encryption", "Secure communication", "Access control", "Device authentication"]
   },
 
   // AI-Powered Legal Research Platform;
   {
     id: "ai-legal-research-platform", name: "AI Legal Research Platform";
-    tagline: "Revolutionize legal research with AI-powered insights", description: "Advanced legal research platform that uses AI to analyze case law; statutes, and legal documents to provide comprehensive insights and recommendations. Features include natural language search; precedent analysis; and automated legal document generation.",
+    tagline: "Revolutionize legal research with AI-powered insights", description: "Advanced legal research platform that uses AI to analyze case law; statutes; and legal documents to provide comprehensive insights and recommendations. Features include natural language search; precedent analysis; and automated legal document generation.",
     price: "$199", period: "/month";
     features: [
       "AI-powered legal document analysis",
@@ -383,16 +383,16 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     }, trialDays: 14;
     setupTime: "1-2 business days", competitors: ["LexisNexis", "Westlaw", "Fastcase", "Casetext", "Ravel Law"],
     roi: "Average customer sees 250% ROI through time savings and improved research quality", launchDate: "2024-03-10";
-    customers: 3200, rating: 4.8, reviews: 890;
+    customers: 3200; rating: 4.8; reviews: 890;
     technology: ["Artificial Intelligence", "Natural Language Processing", "Machine Learning", "Legal Analytics"],
-    apiEndpoints: 150, uptime: "99.9%";
+    apiEndpoints: 150; uptime: "99.9%";
     securityFeatures: ["Client confidentiality", "Data encryption", "Access control", "Audit logging"]
   },
 
   // Autonomous Marketing Campaign Platform;
   {
     id: "autonomous-marketing-campaign-platform", name: "Autonomous Marketing Campaign Platform";
-    tagline: "AI-powered marketing campaigns that run themselves", description: "Intelligent marketing platform that autonomously creates; optimizes, and manages marketing campaigns across multiple channels. Features include AI-generated content; automated A/B testing; and real-time performance optimization.",
+    tagline: "AI-powered marketing campaigns that run themselves", description: "Intelligent marketing platform that autonomously creates; optimizes; and manages marketing campaigns across multiple channels. Features include AI-generated content; automated A/B testing; and real-time performance optimization.",
     price: "$179", period: "/month";
     features: [
       "AI-generated marketing content and copy",
@@ -425,9 +425,9 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     }, trialDays: 14;
     setupTime: "2-3 business days", competitors: ["HubSpot", "Mailchimp", "ActiveCampaign", "ConvertKit", "Drip"],
     roi: "Average customer sees 350% ROI through improved campaign performance and automation", launchDate: "2024-01-25";
-    customers: 4100, rating: 4.7, reviews: 1200;
+    customers: 4100; rating: 4.7; reviews: 1200;
     technology: ["Artificial Intelligence", "Machine Learning", "Marketing Automation", "Predictive Analytics"],
-    apiEndpoints: 180, uptime: "99.9%";
+    apiEndpoints: 180; uptime: "99.9%";
     securityFeatures: ["Data encryption", "Access control", "Compliance monitoring", "Audit trails"]
   }
 ];
@@ -470,9 +470,9 @@ export const specializedIndustryServices: EnhancedService[] = [
     }, trialDays: 30;
     setupTime: "2-4 weeks", competitors: ["GE Digital", "Siemens Mindsphere", "ABB Ability", "Schneider Electric EcoStruxure"],
     roi: "Average customer sees 400% ROI through production optimization and maintenance savings", launchDate: "2024-04-05";
-    customers: 680, rating: 4.8, reviews: 240;
+    customers: 680; rating: 4.8; reviews: 240;
     technology: ["Artificial Intelligence", "IoT Sensors", "Predictive Analytics", "Energy Management"],
-    apiEndpoints: 120, uptime: "99.9%";
+    apiEndpoints: 120; uptime: "99.9%";
     securityFeatures: ["Grid security", "Data encryption", "Access control", "Audit logging"]
   },
 
@@ -512,9 +512,9 @@ export const specializedIndustryServices: EnhancedService[] = [
     }, trialDays: 21;
     setupTime: "2-3 weeks", competitors: ["Manhattan Associates", "JDA Software", "Oracle Transportation", "SAP Transportation"],
     roi: "Average customer sees 300% ROI through route optimization and operational efficiency", launchDate: "2024-03-20";
-    customers: 1500, rating: 4.6, reviews: 420;
+    customers: 1500; rating: 4.6; reviews: 420;
     technology: ["Artificial Intelligence", "Machine Learning", "IoT Sensors", "Autonomous Systems"],
-    apiEndpoints: 160, uptime: "99.9%";
+    apiEndpoints: 160; uptime: "99.9%";
     securityFeatures: ["Fleet security", "Data encryption", "Access control", "Real-time monitoring"]
   }
 ];

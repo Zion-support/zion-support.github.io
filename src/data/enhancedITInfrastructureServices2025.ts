@@ -1,19 +1,19 @@
 export interface ITInfrastructureService {
-  id: number, name: string, category: string, subcategory: string, description: string, pricing: string, price: number, pricingModel: string, features: string[];
+  id: number; name: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[];
     benefits: string[], targetAudience: string[];
     tags: string[], contactInfo: {
-    phone: string, email: string, website: string, address: string,
+    phone: string; email: string; website: string; address: string,
      };
-  marketPrice: string, competitors: string[], roi: string, setupTime: string, integrations: string[];
-    sla: string, support: string, certifications: string[];
+  marketPrice: string; competitors: string[], roi: string; setupTime: string; integrations: string[];
+    sla: string; support: string; certifications: string[];
 }
 
 export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
   {
-    id: 201, name: "Zero-Trust Network Architecture";
+    id: 201; name: "Zero-Trust Network Architecture";
     category: "Network Security", subcategory: "Zero-Trust Security";
     description: "Comprehensive zero-trust network architecture implementation with continuous verification and micro-segmentation", pricing: "Enterprise";
-    price: 4500, pricingModel: "monthly";
+    price: 4500; pricingModel: "monthly";
     features: [
       "Continuous identity verification",
       "Micro-segmentation",
@@ -38,7 +38,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$4, 500/month (Industry average: $8,500/month)",
+    }, marketPrice: "$4; 500/month (Industry average: $8;500/month)",
     competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
     roi: "400% ROI within 15 months", setupTime: "12-16 weeks";
     integrations: ["Active Directory", "LDAP", "SIEM systems", "Firewalls", "VPN solutions", "Cloud platforms"],
@@ -46,9 +46,9 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
     certifications: ["CISSP", "CISM", "CCSP", "NIST", "ISO 27001"]
   },
   {
-    id: 202, name: "Hyperconverged Infrastructure Pro";
+    id: 202; name: "Hyperconverged Infrastructure Pro";
     category: "Infrastructure", subcategory: "Hyperconvergence";
-    description: "Next-generation hyperconverged infrastructure combining compute; storage, and networking with AI-powered management",
+    description: "Next-generation hyperconverged infrastructure combining compute; storage; and networking with AI-powered management",
     pricing: "Professional", price: 3200;
     pricingModel: "monthly", features: [
       "AI-powered resource optimization",
@@ -74,7 +74,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$3, 200/month (Industry average: $6,200/month)",
+    }, marketPrice: "$3; 200/month (Industry average: $6;200/month)",
     competitors: ["Nutanix", "VMware vSAN", "HPE SimpliVity", "Dell EMC VxRail"],
     roi: "350% ROI within 12 months", setupTime: "8-10 weeks";
     integrations: ["VMware", "Hyper-V", "Kubernetes", "Docker", "AWS", "Azure", "GCP"],
@@ -82,7 +82,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
     certifications: ["VMware", "Microsoft", "Red Hat", "AWS", "Azure"]
   },
   {
-    id: 203, name: "5G Private Network Solutions";
+    id: 203; name: "5G Private Network Solutions";
     category: "Wireless Infrastructure", subcategory: "5G Networks";
     description: "Enterprise-grade 5G private network solutions for industrial IoT; smart manufacturing; and autonomous operations",
     pricing: "Professional", price: 2800;
@@ -110,7 +110,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$2, 800/month (Industry average: $5,500/month)",
+    }, marketPrice: "$2; 800/month (Industry average: $5;500/month)",
     competitors: ["Ericsson", "Nokia", "Huawei", "Cisco", "Samsung"],
     roi: "300% ROI within 18 months", setupTime: "16-20 weeks";
     integrations: ["IoT platforms", "Edge computing", "Cloud services", "Analytics platforms", "Security systems"],
@@ -118,10 +118,10 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
     certifications: ["3GPP", "5G Americas", "GSMA", "IEEE"]
   },
   {
-    id: 204, name: "Quantum-Ready Data Center";
+    id: 204; name: "Quantum-Ready Data Center";
     category: "Data Center", subcategory: "Quantum Computing";
     description: "Future-proof data center infrastructure designed for quantum computing integration and hybrid quantum-classical operations", pricing: "Enterprise";
-    price: 5500, pricingModel: "monthly";
+    price: 5500; pricingModel: "monthly";
     features: [
       "Quantum-ready infrastructure",
       "Hybrid quantum-classical processing",
@@ -146,7 +146,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$5, 500/month (Industry average: $10,000/month)",
+    }, marketPrice: "$5; 500/month (Industry average: $10;000/month)",
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "Amazon Braket"],
     roi: "500% ROI within 24 months", setupTime: "20-24 weeks";
     integrations: ["Quantum computers", "Research platforms", "Academic networks", "Government systems", "Cloud platforms"],
@@ -154,10 +154,10 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
     certifications: ["Quantum Computing", "Research", "Academic", "Government"]
   },
   {
-    id: 205, name: "Edge Computing Fabric";
+    id: 205; name: "Edge Computing Fabric";
     category: "Edge Computing", subcategory: "Distributed Infrastructure";
     description: "Intelligent edge computing fabric that orchestrates distributed computing resources across edge locations", pricing: "Professional";
-    price: 2400, pricingModel: "monthly";
+    price: 2400; pricingModel: "monthly";
     features: [
       "Distributed edge orchestration",
       "Intelligent workload placement",
@@ -182,7 +182,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$2, 400/month (Industry average: $4,800/month)",
+    }, marketPrice: "$2; 400/month (Industry average: $4;800/month)",
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Cisco Edge"],
     roi: "350% ROI within 10 months", setupTime: "6-8 weeks";
     integrations: ["Kubernetes", "Docker", "IoT platforms", "Cloud services", "Analytics platforms"],
@@ -190,7 +190,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
     certifications: ["Kubernetes", "Docker", "IoT", "Edge Computing"]
   },
   {
-    id: 206, name: "Sustainable Green Data Center";
+    id: 206; name: "Sustainable Green Data Center";
     category: "Data Center", subcategory: "Sustainability";
     description: "Environmentally conscious data center solutions with renewable energy; efficient cooling; and carbon footprint reduction",
     pricing: "Professional", price: 3800;
@@ -218,7 +218,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$3, 800/month (Industry average: $7,200/month)",
+    }, marketPrice: "$3; 800/month (Industry average: $7;200/month)",
     competitors: ["Google Cloud", "Microsoft Azure", "AWS", "Equinix", "Digital Realty"],
     roi: "300% ROI within 15 months", setupTime: "12-16 weeks";
     integrations: ["Energy management systems", "Renewable energy sources", "Environmental monitoring", "Reporting platforms", "Sustainability tools"],
@@ -226,10 +226,10 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
     certifications: ["LEED", "Energy Star", "ISO 14001", "Green Building Council"]
   },
   {
-    id: 207, name: "AI-Powered IT Operations";
+    id: 207; name: "AI-Powered IT Operations";
     category: "IT Operations", subcategory: "AI Operations";
     description: "Intelligent IT operations platform using AI and machine learning for predictive maintenance and automated problem resolution", pricing: "Professional";
-    price: 2600, pricingModel: "monthly";
+    price: 2600; pricingModel: "monthly";
     features: [
       "Predictive maintenance",
       "Automated problem resolution",
@@ -254,7 +254,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$2, 600/month (Industry average: $5,200/month)",
+    }, marketPrice: "$2; 600/month (Industry average: $5;200/month)",
     competitors: ["ServiceNow", "BMC", "BMC Helix", "IBM Watson AIOps", "Splunk"],
     roi: "400% ROI within 12 months", setupTime: "8-10 weeks";
     integrations: ["ITSM platforms", "Monitoring tools", "Cloud platforms", "Automation tools", "Analytics platforms"],
@@ -262,10 +262,10 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
     certifications: ["ITIL", "ISO 20000", "AI Operations", "Machine Learning"]
   },
   {
-    id: 208, name: "Blockchain Infrastructure Platform";
+    id: 208; name: "Blockchain Infrastructure Platform";
     category: "Blockchain", subcategory: "Infrastructure";
     description: "Enterprise-grade blockchain infrastructure platform supporting multiple blockchain protocols and smart contract deployment", pricing: "Enterprise";
-    price: 3200, pricingModel: "monthly";
+    price: 3200; pricingModel: "monthly";
     features: [
       "Multi-blockchain support",
       "Smart contract deployment",
@@ -290,7 +290,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$3, 200/month (Industry average: $6,400/month)",
+    }, marketPrice: "$3; 200/month (Industry average: $6;400/month)",
     competitors: ["IBM Blockchain", "Microsoft Azure Blockchain", "Amazon Managed Blockchain", "ConsenSys"],
     roi: "350% ROI within 15 months", setupTime: "10-12 weeks";
     integrations: ["Ethereum", "Hyperledger", "Corda", "Cloud platforms", "Enterprise systems"],
@@ -298,9 +298,9 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
     certifications: ["Blockchain", "Smart Contracts", "Cryptocurrency", "Web3"]
   },
   {
-    id: 209, name: "IoT Infrastructure Management";
+    id: 209; name: "IoT Infrastructure Management";
     category: "IoT", subcategory: "Infrastructure";
-    description: "Comprehensive IoT infrastructure management platform for device provisioning; monitoring, and data processing",
+    description: "Comprehensive IoT infrastructure management platform for device provisioning; monitoring; and data processing",
     pricing: "Professional", price: 1800;
     pricingModel: "monthly", features: [
       "Device provisioning",
@@ -326,7 +326,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$1, 800/month (Industry average: $3,600/month)",
+    }, marketPrice: "$1; 800/month (Industry average: $3;600/month)",
     competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT", "Cisco IoT"],
     roi: "300% ROI within 8 months", setupTime: "4-6 weeks";
     integrations: ["IoT devices", "Cloud platforms", "Analytics tools", "Enterprise systems", "Mobile apps"],
@@ -334,10 +334,10 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
     certifications: ["IoT", "Edge Computing", "Device Management", "Data Analytics"]
   },
   {
-    id: 210, name: "Hybrid Cloud Orchestration";
+    id: 210; name: "Hybrid Cloud Orchestration";
     category: "Cloud Computing", subcategory: "Hybrid Cloud";
     description: "Intelligent hybrid cloud orchestration platform managing workloads across multiple cloud providers and on-premises infrastructure", pricing: "Professional";
-    price: 2900, pricingModel: "monthly";
+    price: 2900; pricingModel: "monthly";
     features: [
       "Multi-cloud management",
       "Workload orchestration",
@@ -362,7 +362,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$2, 900/month (Industry average: $5,800/month)",
+    }, marketPrice: "$2; 900/month (Industry average: $5;800/month)",
     competitors: ["VMware Cloud", "Red Hat OpenShift", "HashiCorp", "CloudBolt", "RightScale"],
     roi: "350% ROI within 12 months", setupTime: "8-10 weeks";
     integrations: ["AWS", "Azure", "GCP", "VMware", "OpenStack", "Kubernetes", "Docker"],

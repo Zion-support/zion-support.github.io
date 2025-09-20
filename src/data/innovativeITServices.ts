@@ -1,13 +1,13 @@
 export interface InnovativeITService {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
     benefits: string[], useCases: string[];
     targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: string, marketPrice: string;
+    estimatedDelivery: string; supportLevel: string; marketPrice: string;
     contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
      };
   technology: string[], integrations: string[];
-    compliance: string[], roi: string, competitors: string[], marketSize: string, growthRate: string;
+    compliance: string[], roi: string; competitors: string[], marketSize: string; growthRate: string;
 }
 
 export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
@@ -16,7 +16,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     id: "quantum-computing-as-a-service", title: "Quantum Computing as a Service (QCaaS)";
     description: "Enterprise-grade quantum computing platform that provides access to quantum processors; quantum algorithms; and quantum software development tools through the cloud.",
     category: "Quantum Technology", subcategory: "Cloud Computing";
-    price: 5000, currency: "$";
+    price: 5000; currency: "$";
     pricingModel: "monthly", features: [
       "Quantum processor access",
       "Quantum algorithm library",
@@ -51,7 +51,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     ],
     tags: ["Quantum Computing", "Cloud Services", "Research", "Innovation", "Advanced Computing"],
     estimatedDelivery: "8-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$5, 000 - $25, 000/month",
+    marketPrice: "$5; 000 - $25; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -66,7 +66,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     id: "edge-computing-infrastructure", title: "Edge Computing Infrastructure Platform";
     description: "Distributed edge computing platform that brings computation and data storage closer to data sources; reducing latency and improving real-time processing capabilities.",
     category: "Edge Computing", subcategory: "Infrastructure";
-    price: 1200, currency: "$";
+    price: 1200; currency: "$";
     pricingModel: "monthly", features: [
       "Distributed edge nodes",
       "Real-time data processing",
@@ -101,7 +101,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     ],
     tags: ["Edge Computing", "IoT", "5G", "Real-time Processing", "Distributed Systems"],
     estimatedDelivery: "6-8 weeks", supportLevel: "premium";
-    marketPrice: "$1, 200 - $4, 500/month",
+    marketPrice: "$1; 200 - $4; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -116,7 +116,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     id: "zero-trust-security-architecture", title: "Zero Trust Security Architecture Platform";
     description: "Comprehensive zero trust security platform that implements continuous verification; least privilege access; and micro-segmentation to protect modern IT environments.",
     category: "Cybersecurity", subcategory: "Zero Trust";
-    price: 2500, currency: "$";
+    price: 2500; currency: "$";
     pricingModel: "monthly", features: [
       "Identity verification",
       "Device trust assessment",
@@ -151,7 +151,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     ],
     tags: ["Zero Trust", "Cybersecurity", "Identity Management", "Network Security", "Compliance"],
     estimatedDelivery: "8-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$2, 500 - $8, 000/month",
+    marketPrice: "$2; 500 - $8; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -166,7 +166,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     id: "multi-cloud-management-platform", title: "Multi-Cloud Management Platform";
     description: "Unified platform for managing multiple cloud providers; optimizing costs; ensuring compliance; and providing seamless workload portability across different cloud environments.",
     category: "Cloud Management", subcategory: "Multi-Cloud";
-    price: 800, currency: "$";
+    price: 800; currency: "$";
     pricingModel: "monthly", features: [
       "Multi-cloud dashboard",
       "Cost optimization",
@@ -201,7 +201,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     ],
     tags: ["Multi-Cloud", "Cloud Management", "Cost Optimization", "DevOps", "Compliance"],
     estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$800 - $3, 000/month",
+    marketPrice: "$800 - $3; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -214,9 +214,9 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
   // API Management and Governance;
   {
     id: "api-management-governance", title: "API Management and Governance Platform";
-    description: "Comprehensive API management platform that provides design; development, security; monitoring, and governance capabilities for enterprise API ecosystems.",
+    description: "Comprehensive API management platform that provides design; development; security; monitoring; and governance capabilities for enterprise API ecosystems.",
     category: "API Management", subcategory: "Governance";
-    price: 600, currency: "$";
+    price: 600; currency: "$";
     pricingModel: "monthly", features: [
       "API design and documentation",
       "Developer portal",
@@ -251,7 +251,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     ],
     tags: ["API Management", "Microservices", "Developer Experience", "Integration", "Governance"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$600 - $2, 500/month",
+    marketPrice: "$600 - $2; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -264,9 +264,9 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
   // DevOps Automation Platform;
   {
     id: "devops-automation-platform", title: "DevOps Automation Platform";
-    description: "Comprehensive DevOps automation platform that streamlines software development; testing, deployment; and operations through intelligent automation and orchestration.",
+    description: "Comprehensive DevOps automation platform that streamlines software development; testing; deployment; and operations through intelligent automation and orchestration.",
     category: "DevOps", subcategory: "Automation";
-    price: 450, currency: "$";
+    price: 450; currency: "$";
     pricingModel: "monthly", features: [
       "CI/CD pipeline automation",
       "Infrastructure as code",
@@ -301,7 +301,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     ],
     tags: ["DevOps", "Automation", "CI/CD", "Infrastructure as Code", "Monitoring"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$450 - $1, 800/month",
+    marketPrice: "$450 - $1; 800/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -316,7 +316,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     id: "data-mesh-architecture-platform", title: "Data Mesh Architecture Platform";
     description: "Modern data architecture platform that implements data mesh principles; enabling decentralized data ownership; self-service data infrastructure; and domain-driven data products.",
     category: "Data Architecture", subcategory: "Data Mesh";
-    price: 1500, currency: "$";
+    price: 1500; currency: "$";
     pricingModel: "monthly", features: [
       "Domain-driven data products",
       "Self-service data infrastructure",
@@ -351,7 +351,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     ],
     tags: ["Data Mesh", "Data Architecture", "Data Governance", "Microservices", "Data Products"],
     estimatedDelivery: "8-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$1, 500 - $6, 000/month",
+    marketPrice: "$1; 500 - $6; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -366,7 +366,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     id: "green-it-infrastructure", title: "Green IT Infrastructure Platform";
     description: "Sustainable IT infrastructure platform that optimizes energy consumption; reduces carbon footprint; and implements green computing practices for environmentally conscious organizations.",
     category: "Green IT", subcategory: "Sustainability";
-    price: 800, currency: "$";
+    price: 800; currency: "$";
     pricingModel: "monthly", features: [
       "Energy consumption monitoring",
       "Carbon footprint tracking",
@@ -401,7 +401,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     ],
     tags: ["Green IT", "Sustainability", "Energy Efficiency", "ESG", "Environmental Compliance"],
     estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$800 - $3, 000/month",
+    marketPrice: "$800 - $3; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"

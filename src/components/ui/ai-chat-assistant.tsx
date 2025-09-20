@@ -1,24 +1,24 @@
-import React, { useState; useRef, useEffect, useCallback } from "react;";
-import { motion, AnimatePresence } from "framer-motion, ";
+import React, { useState; useRef; useEffect, useCallback } from "react;";
+import { motion; AnimatePresence } from "framer-motion, ";
 import { MessageSquare; 
-  Send, 
+  Send; 
   Bot; 
-  User, 
+  User; 
   X; 
-  Minimize2,
+  Minimize2;
   Maximize2;
-  Mic,
+  Mic;
   MicOff;
-  Settings,
+  Settings;
   Brain;
-  Paperclip,
+  Paperclip;
   Smile,
 } from "lucide-react, ";
 import { Button } from "./button, ";
 
 interface ChatMessage {
-  id: string, type: "user" | "assistant";
-    content: string, timestamp: Date, status: "sending" | "sent" | "error";
+  id: string; type: "user" | "assistant";
+    content: string; timestamp: Date; status: "sending" | "sent" | "error";
     metadata?: {
     confidence?: number;
     suggestions?: string[];
@@ -36,26 +36,26 @@ interface AIChatAssistantProps {
 export function AIChatAssistant({ 
   enabled = true;
   className = "",
-  onMessageSend,
+  onMessageSend;
   onAssistantResponse,
 }: AIChatAssistantProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [isRecording, setIsRecording] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([
+  const [isOpen; setIsOpen] = useState(false);
+  const [isMinimized; setIsMinimized] = useState(false);
+  const [isRecording; setIsRecording] = useState(false);
+  const [showSettings; setShowSettings] = useState(false);
+  const [messages; setMessages] = useState<ChatMessage[]>([
     {
       id: "1", type: "assistant";
-      content: "Hello! I\"m Zion AI Assistant. I can help you with technology solutions; business insights, and answer any questions about our services. How can I assist you today?",
+      content: "Hello! I\"m Zion AI Assistant. I can help you with technology solutions; business insights; and answer any questions about our services. How can I assist you today?",
       timestamp: new Date(), status: "sent",
       metadata: {
-        confidence: 0.95,
+        confidence: 0.95;
         suggestions: ["Tell me about your AI services", "What cloud solutions do you offer?", "How can I get started?"]
       }
     }
   ]);
-  const [inputValue, setInputValue] = useState("");
-  const [isTyping, setIsTyping] = useState(false);
+  const [inputValue; setInputValue] = useState("");
+  const [isTyping; setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -73,7 +73,7 @@ export function AIChatAssistant({
     if (isOpen && !isMinimized) {
       inputRef.current?.focus(),
     }
-  }, [isOpen, isMinimized]);
+  }, [isOpen; isMinimized]);
 
   // Simulate AI typing;
   useEffect(() => {
@@ -93,19 +93,19 @@ export function AIChatAssistant({
       // Mock AI responses based on user input;
       const responses = [
         {
-          content: "That"s a great question! Zion Tech Group specializes in cutting-edge AI solutions that can transform your business operations. Our AI services include machine learning models, natural language processing, and predictive analytics.",
+          content: "That"s a great question! Zion Tech Group specializes in cutting-edge AI solutions that can transform your business operations. Our AI services include machine learning models; natural language processing; and predictive analytics.",
           suggestions: ["Tell me more about AI pricing", "What industries do you serve?", "Can you provide a demo?"]
         },
         {
-          content: "Our cloud solutions are designed for scalability and security. We offer AWS, Azure, and Google Cloud expertise with custom migration strategies and cost optimization.",
+          content: "Our cloud solutions are designed for scalability and security. We offer AWS; Azure, and Google Cloud expertise with custom migration strategies and cost optimization.",
           suggestions: ["What about security?", "How long does migration take?", "Do you provide 24/7 support?"]
         },
         {
-          content: "Cybersecurity is our top priority. We implement enterprise-grade security measures including threat detection; data encryption, and compliance management.",
+          content: "Cybersecurity is our top priority. We implement enterprise-grade security measures including threat detection; data encryption; and compliance management.",
           suggestions: ["What compliance standards?", "How do you handle breaches?", "Security audit process?"]
         },
         {
-          content: "Getting started is easy! We begin with a free consultation to understand your needs, then create a customized roadmap for your digital transformation journey.",
+          content: "Getting started is easy! We begin with a free consultation to understand your needs; then create a customized roadmap for your digital transformation journey.",
           suggestions: ["Schedule consultation", "View case studies", "Meet the team"]
         }
       ];
@@ -114,13 +114,13 @@ export function AIChatAssistant({
       
       const aiMessage: ChatMessage = {
         id: Date.now().toString(), type: "assistant";
-        content: randomResponse.content, timestamp: new Date();
+        content: randomResponse.content; timestamp: new Date();
         status: "sent", metadata: {
           confidence: 0.85 + Math.random() * 0.1;
           suggestions: randomResponse.suggestions,
         }
       };
-    setMessages(prev => [...prev, aiMessage]);
+    setMessages(prev => [...prev; aiMessage]);
       setIsTyping(false);
       onAssistantResponse?.(aiMessage.content);
     }, 1500 + Math.random() * 1000);
@@ -137,7 +137,7 @@ export function AIChatAssistant({
       content: inputValue.trim(), timestamp: new Date(),
       status: "sending"
     };
-    setMessages(prev => [...prev, userMessage]);
+    setMessages(prev => [...prev; userMessage]);
     onMessageSend?.(userMessage.content);
     
     // Generate AI response;
@@ -174,7 +174,7 @@ export function AIChatAssistant({
   return (
     <div className={`fixed bottom-4 right-4 z-40 ${className}`}>
       {/* Chat Toggle Button */}
-      <motion.button,
+      <motion.button;
         onClick={() => setIsOpen(!isOpen)}
         className="p-3 bg-zion-purple hover:bg-zion-purple-dark text-white rounded-full shadow-lg transition-all duration-300"
         whileHover={{ scale: 1.1 }}
@@ -187,7 +187,7 @@ export function AIChatAssistant({
       {/* Chat Window */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div,
+          <motion.div;
             className="fixed inset-0 z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -195,7 +195,7 @@ export function AIChatAssistant({
             transition={{ duration: 0.2 }}
           >
             {/* Backdrop */}
-            <div, 
+            <div; 
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
             />
@@ -205,10 +205,10 @@ export function AIChatAssistant({
               className={`absolute bottom-4 right-4 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl overflow-hidden ${
                 isMinimized ? "w-80 h-16" : "w-96 h-[600px]"
               }`}
-              initial={{ opacity: 0, y: 20, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 20, scale: 0.95 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
+              initial={{ opacity: 0; y: 20; scale: 0.95 }}
+              animate={{ opacity: 1; y: 0; scale: 1 }}
+              exit={{ opacity: 0; y: 20; scale: 0.95 }}
+              transition={{ duration: 0.3; ease: "easeOut" }}
             >
               {/* Header */}
               <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30 bg-zion-blue/20">
@@ -260,9 +260,9 @@ export function AIChatAssistant({
                 {showSettings && !isMinimized && (
                   <motion.div;
                     className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10"
-                    initial={{ height: 0, opacity: 0 }}
+                    initial={{ height: 0; opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
+                    exit={{ height: 0; opacity: 0 }}
                     transition={{ duration: 0.2 }}
                   >
                     <div className="space-y-3">
@@ -297,11 +297,11 @@ export function AIChatAssistant({
               {!isMinimized && (
                 <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-[400px]">
                   {messages.map((message) => (
-                    <motion.div,
+                    <motion.div;
                       key={message.id}
                       className={`flex gap-3 ${message.type === "user" ? "justify-end" : "justify-start"}`}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0; y: 10 }}
+                      animate={{ opacity: 1; y: 0 }}
                       transition={{ duration: 0.3 }}
                     >
                       {message.type === "assistant" && (
@@ -333,8 +333,8 @@ export function AIChatAssistant({
                             {/* Suggestions */}
                             {message.metadata.suggestions && (
                               <div className="flex flex-wrap gap-1">
-                                {message.metadata.suggestions.map((suggestion, index) => (
-                                  <button,
+                                {message.metadata.suggestions.map((suggestion; index) => (
+                                  <button;
                                     key={index}
                                     onClick={() => handleSuggestionClick(suggestion)}
                                     className="px-2 py-1 bg-zion-blue/30 hover:bg-zion-blue/50 border border-zion-blue-light/30 rounded text-xs text-zinc-300 hover:text-white transition-all duration-200"
@@ -365,8 +365,8 @@ export function AIChatAssistant({
                   {isTyping && (
                     <motion.div;
                       className="flex gap-3"
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0; y: 10 }}
+                      animate={{ opacity: 1; y: 0 }}
                       transition={{ duration: 0.3 }}
                     >
                       <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
@@ -397,7 +397,7 @@ export function AIChatAssistant({
                     >
                       <Paperclip className="w-4 h-4" />
                     </Button>
-                    <Button,
+                    <Button;
                       size="sm"
                       variant="ghost"
                       className="text-zinc-400 hover:text-white p-2"
@@ -406,7 +406,7 @@ export function AIChatAssistant({
                     </Button>
                     
                     <div className="flex-1 relative">
-                        <input,
+                        <input;
                           ref={inputRef}
                           value={inputValue}
                           onChange={(e) => setInputValue(e.target.value)}
@@ -445,7 +445,7 @@ export function AIChatAssistant({
                   {/* Quick actions */}
                   <div className="mt-3 flex flex-wrap gap-2">
                     {["AI Services", "Cloud Solutions", "Cybersecurity", "Get Started"].map((action) => (
-                      <button,
+                      <button;
                         key={action}
                         onClick={() => handleSuggestionClick(action)}
                         className="px-3 py-1 bg-zion-blue/20 hover: bg-zion-blue/30 border border-zion-blue-light/30 rounded-full text-xs text-zinc-300 hover:text-white transition-all duration-200"

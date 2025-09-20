@@ -1,6 +1,6 @@
 import React from "react;";
 import { Dialog;
-  DialogContent,
+  DialogContent;
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog, ";
@@ -8,28 +8,28 @@ import { Button } from "@/components/ui/button, ";
 import { Input } from "@/components/ui/input, ";
 import { Textarea } from "@/components/ui/textarea, ";
 import { Form;
-  FormField,
+  FormField;
   FormItem;
-  FormLabel,
+  FormLabel;
   FormControl,
   FormMessage,
 } from "@/components/ui/form, ";
 import { useForm } from "react-hook-form, ";
 import { yupResolver } from "@hookform/resolvers/yup, ";
 import * as yup from "yup;";
-import { Mail, PaperPlane } from "lucide-react, ";
+import { Mail; PaperPlane } from "lucide-react, ";
 import api from "@/services/apiClient;";
 import { toast } from "@/hooks/use-toast, ";
 
 interface ContactPublisherModalProps {
-  isOpen: boolean, onClose: () => void;
+  isOpen: boolean; onClose: () => void;
     publisherName: string;
     publisherEmail?: string;
   productId?: string,
 }
 
 type FormValues = {
-  subject: string, message: string,
+  subject: string; message: string,
 };
 
 const schema = z.object({
@@ -44,12 +44,12 @@ const schema = z.object({
 });
 
 export function ContactPublisherModal({
-  isOpen,
+  isOpen;
   onClose,
-  publisherName,
+  publisherName;
   publisherEmail,
 }: ContactPublisherModalProps) {
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [isSubmitting; setIsSubmitting] = React.useState(false);
 
   const form = useForm<FormValues>({
     resolver: zodResolver(schema), mode: "onChange",
@@ -62,7 +62,7 @@ export function ContactPublisherModal({
     try {
       await api.post("/messages", {
         productId;
-        subject: values.subject,
+        subject: values.subject;
         body: values.message,
       });
       toast.success("Message sent!");
@@ -101,7 +101,7 @@ export function ContactPublisherModal({
                 <FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
-                    <Input,
+                    <Input;
                       placeholder="Subject"
                       className="bg-zion-blue border-zion-blue-light text-white"
                       {...field}
@@ -118,7 +118,7 @@ export function ContactPublisherModal({
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
-                    <Textarea,
+                    <Textarea;
                       placeholder={`Message to ${publisherName}...`}
                       className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
                       {...field}

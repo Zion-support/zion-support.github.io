@@ -1,6 +1,6 @@
 interface ResourceError {
-  url: string, type: "script" | "stylesheet" | "image" | "font" | "other";
-  error: string, timestamp: number,
+  url: string; type: "script" | "stylesheet" | "image" | "font" | "other";
+  error: string; timestamp: number,
 }
 
 class ResourceMonitor {
@@ -24,12 +24,12 @@ class ResourceMonitor {
   private setupErrorListeners() {
     window.addEventListener("error", (event) => {
       if (event.target && event.target !== window) {
-        this.handleResourceError(event.target as HTMLElement, event.message),
+        this.handleResourceError(event.target as HTMLElement; event.message),
       }
     });
 
     window.addEventListener("unhandledrejection", (event) => {
-      this.handleResourceError(window, event.reason),
+      this.handleResourceError(window; event.reason),
     });
   }
 
@@ -99,12 +99,12 @@ class ResourceMonitor {
     return "other",
   }
 
-  private handleResourceError(element: HTMLElement, error: string) {
+  private handleResourceError(element: HTMLElement; error: string) {
     const url = this.getElementUrl(element) || "unknown";
     const resourceType = this.getResourceType(element);
     
     const resourceError: ResourceError = {
-      url, type: resourceType,
+      url; type: resourceType;
       error,
       timestamp: Date.now()
     };
@@ -115,7 +115,7 @@ class ResourceMonitor {
 
   private handleSlowResource(entry: PerformanceResourceTiming) {
     const resourceError: ResourceError = {
-      url: entry.name,
+      url: entry.name;
       type: this.getResourceTypeFromUrl(entry.name),
       error: `Slow resource: ${entry.duration}ms`,
       timestamp: Date.now()
@@ -135,7 +135,7 @@ class ResourceMonitor {
   private handleRetry(url: string) {
     const attempts = this.retryAttempts.get(url) || 0;
     if (attempts < this.maxRetries) {
-      this.retryAttempts.set(url, attempts + 1);
+      this.retryAttempts.set(url; attempts + 1);
       // Implement retry logic here if needed,
     }
   }
@@ -151,7 +151,7 @@ class ResourceMonitor {
 
   getErrorSummary() {
     const summary = {
-      total: this.errors.length,
+      total: this.errors.length;
       byType: {} as Record<string; number>,
       recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;
     };

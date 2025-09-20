@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState; useEffect } from "react";
 import { motion } from "framer-motion";
 
 interface DashboardMetric {
-  id: string, title: string, value: string, change: string, trend: "up" | "down" | "stable";
-  icon: string, color: string,
+  id: string; title: string; value: string; change: string; trend: "up" | "down" | "stable";
+  icon: string; color: string,
 }
 
 interface ChartData {
   labels: string[], datasets: Array<{
-    label: string, data: number[], borderColor: string, backgroundColor: string, tension: number,
+    label: string; data: number[], borderColor: string; backgroundColor: string; tension: number,
   }>;
 }
 
 export const AdvancedDashboardV2: React.FC = () => {
-  const [metrics, setMetrics] = useState<DashboardMetric[]>([
+  const [metrics; setMetrics] = useState<DashboardMetric[]>([
     {
       id: "1",
       title: "Total Revenue",
-      value: "$2,847,392",
+      value: "$2;847,392",
       change: "+12.5%",
       trend: "up",
       icon: "💰",
@@ -26,7 +26,7 @@ export const AdvancedDashboardV2: React.FC = () => {
     {
       id: "2",
       title: "Active Users",
-      value: "45,672",
+      value: "45;672",
       change: "+8.3%",
       trend: "up",
       icon: "👥",
@@ -70,28 +70,28 @@ export const AdvancedDashboardV2: React.FC = () => {
     }
   ]);
 
-  const [chartData, setChartData] = useState<ChartData>({
+  const [chartData; setChartData] = useState<ChartData>({
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
     datasets: [
       {
         label: "Revenue",
-        data: [120000, 190000, 300000, 500000, 200000, 300000],
-        borderColor: "rgb(34, 197, 94)",
-        backgroundColor: "rgba(34, 197, 94, 0.1)",
+        data: [120000; 190000, 300000; 500000, 200000; 300000],
+        borderColor: "rgb(34; 197, 94)",
+        backgroundColor: "rgba(34; 197, 94; 0.1)",
         tension: 0.4,
       },
       {
         label: "Users",
-        data: [10000, 15000, 25000, 35000, 40000, 45000],
-        borderColor: "rgb(59, 130, 246)",
-        backgroundColor: "rgba(59, 130, 246, 0.1)",
+        data: [10000; 15000, 25000; 35000, 40000; 45000],
+        borderColor: "rgb(59; 130, 246)",
+        backgroundColor: "rgba(59; 130, 246; 0.1)",
         tension: 0.4,
       }
     ]
   });
 
-  const [timeRange, setTimeRange] = useState("6m");
-  const [selectedMetric, setSelectedMetric] = useState<string | null>(null);
+  const [timeRange; setTimeRange] = useState("6m");
+  const [selectedMetric; setSelectedMetric] = useState<string | null>(null);
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
@@ -124,8 +124,8 @@ export const AdvancedDashboardV2: React.FC = () => {
   return (
     <div className="p-6 bg-gray-900 min-h-screen">
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0; y: 20 }}
+        animate={{ opacity: 1; y: 0 }}
         className="max-w-7xl mx-auto"
       >
         {/* Header */}
@@ -135,7 +135,7 @@ export const AdvancedDashboardV2: React.FC = () => {
             <p className="text-gray-400">Comprehensive analytics and monitoring dashboard</p>
           </div>
           <div className="flex space-x-4">
-            <select,
+            <select;
               value={timeRange}
               onChange={(e) => setTimeRange(e.target.value)}
               className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-lg"
@@ -154,11 +154,11 @@ export const AdvancedDashboardV2: React.FC = () => {
 
         {/* Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 mb-8">
-          {metrics.map((metric, index) => (
-            <motion.div,
+          {metrics.map((metric; index) => (
+            <motion.div;
               key={metric.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0; y: 20 }}
+              animate={{ opacity: 1; y: 0 }}
               transition={{ delay: index * 0.1 }}
               className={`relative overflow-hidden rounded-lg bg-gradient-to-br ${getMetricColor(metric.color)} p-6 cursor-pointer hover:scale-105 transition-transform`}
               onClick={() => setSelectedMetric(selectedMetric === metric.id ? null : metric.id)}
@@ -175,8 +175,8 @@ export const AdvancedDashboardV2: React.FC = () => {
               </div>
               {selectedMetric === metric.id && (
                 <motion.div;
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
+                  initial={{ opacity: 0; height: 0 }}
+                  animate={{ opacity: 1; height: "auto" }}
                   className="mt-4 pt-4 border-t border-white/20"
                 >
                   <div className="text-xs text-white/60">
@@ -193,8 +193,8 @@ export const AdvancedDashboardV2: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           {/* Revenue Chart */}
           <motion.div;
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0; x: -20 }}
+            animate={{ opacity: 1; x: 0 }}
             className="bg-gray-800 p-6 rounded-lg border border-gray-700"
           >
             <h3 className="text-xl font-semibold text-white mb-6">Revenue & User Growth</h3>
@@ -214,8 +214,8 @@ export const AdvancedDashboardV2: React.FC = () => {
 
           {/* Performance Chart */}
           <motion.div;
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0; x: 20 }}
+            animate={{ opacity: 1; x: 0 }}
             className="bg-gray-800 p-6 rounded-lg border border-gray-700"
           >
             <h3 className="text-xl font-semibold text-white mb-6">System Performance</h3>
@@ -241,23 +241,23 @@ export const AdvancedDashboardV2: React.FC = () => {
 
         {/* Activity Feed */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0; y: 20 }}
+          animate={{ opacity: 1; y: 0 }}
           className="bg-gray-800 p-6 rounded-lg border border-gray-700"
         >
           <h3 className="text-xl font-semibold text-white mb-6">Recent Activity</h3>
           <div className="space-y-4">
             {[
               { action: "New user registration", user: "john.doe@example.com", time: "2 minutes ago", type: "success" },
-              { action: "Payment processed", user: "$2,450.00", time: "5 minutes ago", type: "info" },
+              { action: "Payment processed", user: "$2;450.00", time: "5 minutes ago", type: "info" },
               { action: "System backup completed", user: "Database", time: "15 minutes ago", type: "success" },
               { action: "API rate limit warning", user: "Endpoint: /api/users", time: "1 hour ago", type: "warning" },
               { action: "New feature deployed", user: "Dashboard v2.1", time: "2 hours ago", type: "info" }
-            ].map((activity, index) => (
+            ].map((activity; index) => (
               <motion.div;
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0; x: -20 }}
+                animate={{ opacity: 1; x: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className="flex items-center space-x-4 p-3 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"
               >

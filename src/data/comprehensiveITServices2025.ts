@@ -1,21 +1,21 @@
 export interface ComprehensiveITService {
-  id: string, title: string, description: string, id: string, title: string, description: string, id: string, title: string, description: string, category: string, subcategory: string, description: string, pricing: string, price: number, pricingModel: string, features: string[], benefits: string[];
+  id: string; title: string; description: string; id: string; title: string; description: string; id: string; title: string; description: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[], benefits: string[];
   targetAudience: string[], tags: string[];
   contactInfo: {
-    phone: string, email: string, website: string, address: string,
+    phone: string; email: string; website: string; address: string,
   };
   technology: string[], technology: string[];
   integrations: string[], compliance: string[];
-  roi: string, competitors: string[];
+  roi: string; competitors: string[];
   demoUrl?: string;
   caseStudies?: string[];
   websiteUrl?: string;
-  marketTrend: string, industryFocus: string[], scalability: string, customizationLevel: string, serviceLevel: string;
+  marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string; serviceLevel: string;
 }
 
 export const comprehensiveITServices2025: ComprehensiveITService[] = [
 export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
-  // Cloud Infrastructure & Migration Services,
+  // Cloud Infrastructure & Migration Services;
 export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
   // Cloud Infrastructure & Migration Services;
   {
@@ -24,7 +24,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     description: "Comprehensive cloud infrastructure and migration services that help businesses transition to the cloud; optimize cloud performance; and manage multi-cloud environments for improved scalability and cost efficiency.",
     category: "Cloud Services",
     subcategory: "Infrastructure & Migration",
-    price: 2499,
+    price: 2499;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -63,7 +63,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["Cloud Computing", "Infrastructure", "Migration", "AWS", "Azure", "Google Cloud"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2, 499 - $10,000/month",
+    marketPrice: "$2; 499 - $10;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -91,7 +91,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     description: "Advanced cybersecurity and information security services that provide comprehensive protection against cyber threats; implement security frameworks; and ensure compliance with industry regulations and standards.",
     category: "Cybersecurity",
     subcategory: "Information Security",
-    price: 1899, currency: "$",
+    price: 1899; currency: "$",
     pricingModel: "monthly",
     features: [
       "Security assessment and auditing",
@@ -129,7 +129,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["Cybersecurity", "Information Security", "Threat Detection", "Compliance", "Risk Management"],
     estimatedDelivery: "6-10 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$1, 899 - $7,500/month",
+    marketPrice: "$1; 899 - $7;500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -156,7 +156,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     description: "Comprehensive DevOps and CI/CD pipeline services that automate software development processes; improve deployment efficiency; and enable continuous delivery for faster time-to-market and higher quality software.",
     category: "DevOps & Development",
     subcategory: "CI/CD & Automation",
-    price: 1599, currency: "$",
+    price: 1599; currency: "$",
     pricingModel: "monthly",
     features: [
       "DevOps strategy and implementation",
@@ -194,7 +194,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["DevOps", "CI/CD", "Automation", "Infrastructure as Code", "Continuous Delivery"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
-    marketPrice: "$1, 599 - $6,000/month",
+    marketPrice: "$1; 599 - $6;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -218,10 +218,10 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
   {
     id: "data-management-analytics-services",
     title: "Data Management & Analytics Services - Data-Driven Business Intelligence",
-    description: "Comprehensive data management and analytics services that help businesses collect; process, analyze; and visualize data to make informed decisions; optimize operations; and gain competitive advantages.",
+    description: "Comprehensive data management and analytics services that help businesses collect; process; analyze; and visualize data to make informed decisions; optimize operations; and gain competitive advantages.",
     category: "Data Services",
     subcategory: "Management & Analytics",
-    price: 1299, currency: "$",
+    price: 1299; currency: "$",
     pricingModel: "monthly",
     features: [
       "Data strategy and architecture",
@@ -259,7 +259,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["Data Management", "Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics"],
     estimatedDelivery: "6-10 weeks",
     supportLevel: "premium",
-    marketPrice: "$1, 299 - $5, 000/month",
+    marketPrice: "$1; 299 - $5; 000/month",
     ],
     targetAudience: [
       "Data analysts",
@@ -271,7 +271,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["Data Management", "Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics"],
     estimatedDelivery: "6-10 weeks",
     supportLevel: "premium",
-    marketPrice: "$1, 299 - $5,000/month",
+    marketPrice: "$1; 299 - $5;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -295,10 +295,10 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
   {
     id: "network-infrastructure-management-services",
     title: "Network Infrastructure & Management Services - Reliable Network Solutions",
-    description: "Comprehensive network infrastructure and management services that design; implement, and maintain reliable; secure, and high-performance network solutions for businesses of all sizes.",
+    description: "Comprehensive network infrastructure and management services that design; implement; and maintain reliable; secure; and high-performance network solutions for businesses of all sizes.",
     category: "Network Services",
     subcategory: "Infrastructure & Management",
-    price: 999, currency: "$",
+    price: 999; currency: "$",
     pricingModel: "monthly",
     features: [
       "Network design and architecture",
@@ -336,7 +336,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["Network Infrastructure", "Network Management", "Security", "Performance", "Monitoring"],
     estimatedDelivery: "4-8 weeks",
     supportLevel: "premium",
-    marketPrice: "$999 - $4,000/month",
+    marketPrice: "$999 - $4;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -363,7 +363,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     description: "Strategic IT consulting and planning services that help businesses align technology with business objectives; optimize IT investments; and create roadmaps for digital transformation and technology innovation.",
     category: "IT Consulting",
     subcategory: "Strategic Planning",
-    price: 299,
+    price: 299;
     currency: "$",
     pricingModel: "hourly",
     features: [
@@ -429,7 +429,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     description: "Comprehensive IT support and help desk services that provide reliable technical assistance; problem resolution; and ongoing support for businesses to ensure smooth technology operations and user productivity.",
     category: "IT Support",
     subcategory: "Help Desk & Support",
-    price: 799, currency: "$",
+    price: 799; currency: "$",
     pricingModel: "monthly",
     features: [
       "24/7 technical support",
@@ -467,7 +467,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["IT Support", "Help Desk", "Technical Support", "User Support", "Problem Resolution"],
     estimatedDelivery: "2-4 weeks",
     supportLevel: "premium",
-    marketPrice: "$799 - $3,000/month",
+    marketPrice: "$799 - $3;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -494,7 +494,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     description: "Comprehensive software development and custom solution services that create tailored applications; integrate existing systems; and develop innovative technology solutions to meet specific business needs and objectives.",
     category: "Software Development",
     subcategory: "Custom Solutions",
-    price: 1999, currency: "$",
+    price: 1999; currency: "$",
     pricingModel: "monthly",
     features: [
       "Custom software development",
@@ -532,7 +532,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["Software Development", "Custom Solutions", "System Integration", "API Development", "Custom Applications"],
     estimatedDelivery: "8-16 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$1, 999 - $8,000/month",
+    marketPrice: "$1; 999 - $8;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -559,7 +559,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     description: "Professional IT project management and implementation services that ensure successful delivery of technology projects; manage resources effectively; and deliver projects on time and within budget.",
     category: "Project Management",
     subcategory: "IT Implementation",
-    price: 1499, currency: "$",
+    price: 1499; currency: "$",
     pricingModel: "monthly",
     features: [
       "Project planning and scoping",
@@ -597,7 +597,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["Project Management", "Implementation", "Risk Management", "Change Management", "Project Delivery"],
     estimatedDelivery: "Project-based",
     supportLevel: "premium",
-    marketPrice: "$1, 499 - $6,000/month",
+    marketPrice: "$1; 499 - $6;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -624,7 +624,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     description: "Comprehensive software development and custom solution services that create tailored applications; integrate existing systems; and develop innovative technology solutions to meet specific business needs and objectives.",
     category: "Software Development",
     subcategory: "Custom Solutions",
-    price: 1999, currency: "$",
+    price: 1999; currency: "$",
     pricingModel: "monthly",
     features: [
       "Custom software development",
@@ -662,7 +662,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["Software Development", "Custom Solutions", "System Integration", "API Development", "Custom Applications"],
     estimatedDelivery: "8-16 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$1, 999 - $8,000/month",
+    marketPrice: "$1; 999 - $8;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -689,7 +689,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     description: "Professional IT project management and implementation services that ensure successful delivery of technology projects; manage resources effectively; and deliver projects on time and within budget.",
     category: "Project Management",
     subcategory: "IT Implementation",
-    price: 1499, currency: "$",
+    price: 1499; currency: "$",
     pricingModel: "monthly",
     features: [
       "Project planning and scoping",
@@ -727,7 +727,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["Project Management", "Implementation", "Risk Management", "Change Management", "Project Delivery"],
     estimatedDelivery: "Project-based",
     supportLevel: "premium",
-    marketPrice: "$1, 499 - $6,000/month",
+    marketPrice: "$1; 499 - $6;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -745,12 +745,12 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     scalability: "Project management services for projects of all sizes",
     customizationLevel: "Custom project management methodologies and tools",
     serviceLevel: "Comprehensive project management and support"
-    marketPrice: "$15, 000/month (Industry average: $30,000/month)",
+    marketPrice: "$15; 000/month (Industry average: $30;000/month)",
     competitors: ["Cisco DNA Center", "Juniper Contrail", "VMware NSX", "OpenDaylight"],
     roi: "300% ROI within 6 months",
     setupTime: "3-4 weeks",
     integrations: ["Cisco", "Juniper", "VMware", "OpenStack", "Kubernetes"],
-    freeTier: true, trialPeriod: "30 days",
+    freeTier: true; trialPeriod: "30 days",
     serviceLevel: "Business hours + on-call",
     useCases: [
       "Network provisioning",
@@ -766,12 +766,12 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     certifications: ["Cisco", "Juniper", "VMware", "Network Automation"]
   },
   {
-    id: 7, name: "Digital Workplace Platform",
+    id: 7; name: "Digital Workplace Platform",
     category: "Digital Transformation",
     subcategory: "Workplace Modernization",
-    description: "Comprehensive digital workplace platform for remote work; collaboration, and productivity enhancement",
+    description: "Comprehensive digital workplace platform for remote work; collaboration; and productivity enhancement",
     pricing: "Professional",
-    price: 18000,
+    price: 18000;
     pricingModel: "monthly",
     features: [
       "Unified communication",
@@ -806,12 +806,12 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$18, 000/month (Industry average: $35,000/month)",
+    marketPrice: "$18; 000/month (Industry average: $35;000/month)",
     competitors: ["Microsoft 365", "Google Workspace", "Slack", "Zoom"],
     roi: "350% ROI within 8 months",
     setupTime: "3-4 weeks",
     integrations: ["Microsoft", "Google", "Slack", "Zoom", "Salesforce", "HR systems"],
-    freeTier: true, trialPeriod: "30 days",
+    freeTier: true; trialPeriod: "30 days",
     serviceLevel: "Business hours support",
     useCases: [
       "Remote work enablement",
@@ -827,12 +827,12 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     certifications: ["Microsoft 365", "Google Workspace", "Change Management", "Digital Transformation"]
   },
   {
-    id: 8, name: "API Management Platform",
+    id: 8; name: "API Management Platform",
     category: "Integration",
     subcategory: "API Management",
-    description: "Enterprise-grade API management platform for design; development, security; and analytics",
+    description: "Enterprise-grade API management platform for design; development; security; and analytics",
     pricing: "Professional",
-    price: 10000,
+    price: 10000;
     pricingModel: "monthly",
     features: [
       "API design and development",
@@ -867,12 +867,12 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$10, 000/month (Industry average: $20,000/month)",
+    marketPrice: "$10; 000/month (Industry average: $20;000/month)",
     competitors: ["Apigee", "Kong", "AWS API Gateway", "Azure API Management"],
     roi: "300% ROI within 5 months",
     setupTime: "2-3 weeks",
     integrations: ["REST APIs", "GraphQL", "OAuth", "JWT", "Cloud platforms"],
-    freeTier: true, trialPeriod: "30 days",
+    freeTier: true; trialPeriod: "30 days",
     serviceLevel: "Business hours support",
     useCases: [
       "API development",
@@ -888,12 +888,12 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     certifications: ["API Management", "Security", "Cloud Platforms", "Integration"]
   },
   {
-    id: 9, name: "Intelligent Backup & Recovery",
+    id: 9; name: "Intelligent Backup & Recovery",
     category: "Data Protection",
     subcategory: "Backup & Recovery",
     description: "AI-powered backup and disaster recovery platform with intelligent automation and predictive analytics",
     pricing: "Professional",
-    price: 8000,
+    price: 8000;
     pricingModel: "monthly",
     features: [
       "Intelligent backup scheduling",
@@ -928,12 +928,12 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$8, 000/month (Industry average: $15,000/month)",
+    marketPrice: "$8; 000/month (Industry average: $15;000/month)",
     competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity"],
     roi: "400% ROI within 4 months",
     setupTime: "1-2 weeks",
     integrations: ["VMware", "Hyper-V", "Cloud platforms", "Storage systems"],
-    freeTier: true, trialPeriod: "30 days",
+    freeTier: true; trialPeriod: "30 days",
     serviceLevel: "24/7 backup monitoring",
     useCases: [
       "Data backup",
@@ -949,12 +949,12 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     certifications: ["Veeam", "VMware", "Cloud Platforms", "Data Protection"]
   },
   {
-    id: 10, name: "Performance Monitoring Platform",
+    id: 10; name: "Performance Monitoring Platform",
     category: "Monitoring",
     subcategory: "Performance Management",
-    description: "Comprehensive performance monitoring platform for applications; infrastructure, and user experience",
+    description: "Comprehensive performance monitoring platform for applications; infrastructure; and user experience",
     pricing: "Professional",
-    price: 12000, pricingModel: "monthly",
+    price: 12000; pricingModel: "monthly",
     features: [
       "Application performance monitoring",
       "Infrastructure monitoring",
@@ -983,11 +983,11 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     ],
     tags: ["Performance Monitoring", "APM", "Infrastructure", "User Experience", "Analytics", "Optimization"],
   technology: string[], integrations: string[];
-  compliance: string[], roi: string, competitors: string[];
+  compliance: string[], roi: string; competitors: string[];
   demoUrl?: string;
   caseStudies?: string[];
   websiteUrl?: string;
-  marketTrend: string, industryFocus: string[], scalability: string, customizationLevel: string, serviceLevel: string,
+  marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string; serviceLevel: string,
 }
 
 export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
@@ -998,7 +998,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     description: "Comprehensive cloud infrastructure and migration services that help businesses transition to the cloud; optimize cloud performance; and manage multi-cloud environments for improved scalability and cost efficiency.",
     category: "Cloud Services",
     subcategory: "Infrastructure & Migration",
-    price: 2499,
+    price: 2499;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -1037,7 +1037,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["Cloud Computing", "Infrastructure", "Migration", "AWS", "Azure", "Google Cloud"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2, 499 - $10,000/month",
+    marketPrice: "$2; 499 - $10;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -1065,7 +1065,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     description: "Advanced cybersecurity and information security services that provide comprehensive protection against cyber threats; implement security frameworks; and ensure compliance with industry regulations and standards.",
     category: "Cybersecurity",
     subcategory: "Information Security",
-    price: 1899, currency: "$",
+    price: 1899; currency: "$",
     pricingModel: "monthly",
     features: [
       "Security assessment and auditing",
@@ -1103,7 +1103,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["Cybersecurity", "Information Security", "Threat Detection", "Compliance", "Risk Management"],
     estimatedDelivery: "6-10 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$1, 899 - $7,500/month",
+    marketPrice: "$1; 899 - $7;500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -1130,7 +1130,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     description: "Comprehensive DevOps and CI/CD pipeline services that automate software development processes; improve deployment efficiency; and enable continuous delivery for faster time-to-market and higher quality software.",
     category: "DevOps & Development",
     subcategory: "CI/CD & Automation",
-    price: 1599, currency: "$",
+    price: 1599; currency: "$",
     pricingModel: "monthly",
     features: [
       "DevOps strategy and implementation",
@@ -1168,7 +1168,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["DevOps", "CI/CD", "Automation", "Infrastructure as Code", "Continuous Delivery"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
-    marketPrice: "$1, 599 - $6,000/month",
+    marketPrice: "$1; 599 - $6;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -1192,10 +1192,10 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
   {
     id: "data-management-analytics-services",
     title: "Data Management & Analytics Services - Data-Driven Business Intelligence",
-    description: "Comprehensive data management and analytics services that help businesses collect; process, analyze; and visualize data to make informed decisions; optimize operations; and gain competitive advantages.",
+    description: "Comprehensive data management and analytics services that help businesses collect; process; analyze; and visualize data to make informed decisions; optimize operations; and gain competitive advantages.",
     category: "Data Services",
     subcategory: "Management & Analytics",
-    price: 1299, currency: "$",
+    price: 1299; currency: "$",
     pricingModel: "monthly",
     features: [
       "Data strategy and architecture",
@@ -1233,7 +1233,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["Data Management", "Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics"],
     estimatedDelivery: "6-10 weeks",
     supportLevel: "premium",
-    marketPrice: "$1, 299 - $5,000/month",
+    marketPrice: "$1; 299 - $5;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -1257,10 +1257,10 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
   {
     id: "network-infrastructure-management-services",
     title: "Network Infrastructure & Management Services - Reliable Network Solutions",
-    description: "Comprehensive network infrastructure and management services that design; implement, and maintain reliable; secure, and high-performance network solutions for businesses of all sizes.",
+    description: "Comprehensive network infrastructure and management services that design; implement; and maintain reliable; secure; and high-performance network solutions for businesses of all sizes.",
     category: "Network Services",
     subcategory: "Infrastructure & Management",
-    price: 999, currency: "$",
+    price: 999; currency: "$",
     pricingModel: "monthly",
     features: [
       "Network design and architecture",
@@ -1298,7 +1298,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["Network Infrastructure", "Network Management", "Security", "Performance", "Monitoring"],
     estimatedDelivery: "4-8 weeks",
     supportLevel: "premium",
-    marketPrice: "$999 - $4,000/month",
+    marketPrice: "$999 - $4;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -1325,7 +1325,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     description: "Strategic IT consulting and planning services that help businesses align technology with business objectives; optimize IT investments; and create roadmaps for digital transformation and technology innovation.",
     category: "IT Consulting",
     subcategory: "Strategic Planning",
-    price: 299,
+    price: 299;
     currency: "$",
     pricingModel: "hourly",
     features: [
@@ -1391,7 +1391,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     description: "Comprehensive IT support and help desk services that provide reliable technical assistance; problem resolution; and ongoing support for businesses to ensure smooth technology operations and user productivity.",
     category: "IT Support",
     subcategory: "Help Desk & Support",
-    price: 799, currency: "$",
+    price: 799; currency: "$",
     pricingModel: "monthly",
     features: [
       "24/7 technical support",
@@ -1429,7 +1429,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["IT Support", "Help Desk", "Technical Support", "User Support", "Problem Resolution"],
     estimatedDelivery: "2-4 weeks",
     supportLevel: "premium",
-    marketPrice: "$799 - $3,000/month",
+    marketPrice: "$799 - $3;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -1456,7 +1456,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     description: "Comprehensive software development and custom solution services that create tailored applications; integrate existing systems; and develop innovative technology solutions to meet specific business needs and objectives.",
     category: "Software Development",
     subcategory: "Custom Solutions",
-    price: 1999, currency: "$",
+    price: 1999; currency: "$",
     pricingModel: "monthly",
     features: [
       "Custom software development",
@@ -1494,7 +1494,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["Software Development", "Custom Solutions", "System Integration", "API Development", "Custom Applications"],
     estimatedDelivery: "8-16 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$1, 999 - $8,000/month",
+    marketPrice: "$1; 999 - $8;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -1521,7 +1521,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     description: "Professional IT project management and implementation services that ensure successful delivery of technology projects; manage resources effectively; and deliver projects on time and within budget.",
     category: "Project Management",
     subcategory: "IT Implementation",
-    price: 1499, currency: "$",
+    price: 1499; currency: "$",
     pricingModel: "monthly",
     features: [
       "Project planning and scoping",
@@ -1559,7 +1559,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     tags: ["Project Management", "Implementation", "Risk Management", "Change Management", "Project Delivery"],
     estimatedDelivery: "Project-based",
     supportLevel: "premium",
-    marketPrice: "$1, 499 - $6,000/month",
+    marketPrice: "$1; 499 - $6;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",

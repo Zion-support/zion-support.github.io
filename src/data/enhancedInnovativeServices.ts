@@ -1,11 +1,11 @@
-import { Routes, Route } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 export interface EnhancedInnovativeService {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
     benefits: string[], useCases: string[];
     targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: string, marketPrice: string;
+    estimatedDelivery: string; supportLevel: string; marketPrice: string;
     contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
      };
   websiteUrl: string;
     demoUrl?: string;
@@ -29,7 +29,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-financial-advisory-platform", title: "AI Financial Advisory & Wealth Management Platform";
     description: "Intelligent financial advisory platform that provides personalized investment recommendations; portfolio optimization; and automated wealth management using advanced AI algorithms.",
     category: "AI Financial Services", subcategory: "Wealth Management";
-    price: 2999, currency: "$";
+    price: 2999; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered investment recommendations",
       "Portfolio risk assessment & optimization",
@@ -63,7 +63,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Financial Advisory", "Wealth Management", "Investment", "Portfolio Optimization"],
     estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$2, 999 - $8, 999/month",
+    marketPrice: "$2; 999 - $8; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -78,7 +78,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-healthcare-diagnostic-platform", title: "AI Healthcare Diagnostic & Patient Care Platform";
     description: "Advanced healthcare platform that uses AI to assist in medical diagnosis; patient monitoring; and treatment planning while ensuring HIPAA compliance and medical accuracy.",
     category: "AI Healthcare", subcategory: "Medical Diagnostics";
-    price: 4500, currency: "$";
+    price: 4500; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered medical image analysis",
       "Symptom assessment & triage",
@@ -112,7 +112,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Healthcare", "Medical Diagnostics", "Patient Care", "HIPAA"],
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$4, 500 - $12, 000/month",
+    marketPrice: "$4; 500 - $12; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -127,7 +127,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-legal-research-assistant", title: "AI Legal Research & Document Analysis Platform";
     description: "Intelligent legal research platform that uses AI to analyze legal documents; conduct case research; and provide legal insights to streamline legal workflows.",
     category: "AI Legal Services", subcategory: "Legal Research";
-    price: 1899, currency: "$";
+    price: 1899; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered legal document analysis",
       "Case law research & citation",
@@ -161,7 +161,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Legal Services", "Document Analysis", "Legal Research", "Contract Review"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$1, 899 - $4, 999/month",
+    marketPrice: "$1; 899 - $4; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -176,7 +176,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-marketing-automation-suite", title: "AI Marketing Automation & Customer Journey Platform";
     description: "Comprehensive marketing automation platform that uses AI to optimize customer journeys; personalize content; and maximize marketing ROI across all channels.",
     category: "AI Marketing & Sales", subcategory: "Marketing Automation";
-    price: 1299, currency: "$";
+    price: 1299; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered customer segmentation",
       "Predictive customer behavior modeling",
@@ -210,7 +210,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Marketing Automation", "Customer Journey", "Personalization", "Analytics"],
     estimatedDelivery: "2-3 weeks", supportLevel: "premium";
-    marketPrice: "$1, 299 - $3, 999/month",
+    marketPrice: "$1; 299 - $3; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -225,7 +225,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-supply-chain-optimization", title: "AI Supply Chain Optimization & Demand Forecasting Platform";
     description: "Intelligent supply chain platform that uses AI to optimize inventory management; predict demand; and streamline logistics operations for maximum efficiency.",
     category: "AI Supply Chain", subcategory: "Inventory Management";
-    price: 2200, currency: "$";
+    price: 2200; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered demand forecasting",
       "Inventory optimization algorithms",
@@ -259,7 +259,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Supply Chain", "Inventory Management", "Demand Forecasting", "Logistics"],
     estimatedDelivery: "4-5 weeks", supportLevel: "premium";
-    marketPrice: "$2, 200 - $6, 000/month",
+    marketPrice: "$2; 200 - $6; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -274,7 +274,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-hr-talent-management", title: "AI HR Talent Management & Recruitment Platform";
     description: "Comprehensive HR platform that uses AI to streamline recruitment; optimize talent management; and enhance employee engagement through intelligent insights.",
     category: "AI Human Resources", subcategory: "Talent Management";
-    price: 899, currency: "$";
+    price: 899; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered candidate screening",
       "Predictive hiring analytics",
@@ -308,7 +308,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Human Resources", "Recruitment", "Talent Management", "Employee Engagement"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$899 - $2, 499/month",
+    marketPrice: "$899 - $2; 499/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -323,7 +323,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-real-estate-analytics", title: "AI Real Estate Analytics & Investment Platform";
     description: "Intelligent real estate platform that uses AI to analyze market trends; evaluate properties; and provide investment insights for real estate professionals and investors.",
     category: "AI Real Estate", subcategory: "Market Analytics";
-    price: 1599, currency: "$";
+    price: 1599; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered property valuation",
       "Market trend analysis",
@@ -357,7 +357,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Real Estate", "Investment Analytics", "Market Analysis", "Property Valuation"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$1, 599 - $4, 500/month",
+    marketPrice: "$1; 599 - $4; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -372,7 +372,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-education-personalization", title: "AI Education Personalization & Learning Analytics Platform";
     description: "Intelligent education platform that uses AI to personalize learning experiences; track student progress; and optimize educational outcomes through adaptive learning.",
     category: "AI Education", subcategory: "Personalized Learning";
-    price: 799, currency: "$";
+    price: 799; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered adaptive learning",
       "Personalized curriculum design",
@@ -406,7 +406,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Education", "Personalized Learning", "Learning Analytics", "Adaptive Learning"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$799 - $2, 199/month",
+    marketPrice: "$799 - $2; 199/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -421,7 +421,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-manufacturing-optimization", title: "AI Manufacturing Optimization & Predictive Maintenance Platform";
     description: "Intelligent manufacturing platform that uses AI to optimize production processes; predict equipment failures; and maximize manufacturing efficiency through IoT and machine learning.",
     category: "AI Manufacturing", subcategory: "Production Optimization";
-    price: 3500, currency: "$";
+    price: 3500; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered production optimization",
       "Predictive maintenance algorithms",
@@ -455,7 +455,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Manufacturing", "Predictive Maintenance", "IoT", "Production Optimization"],
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$3, 500 - $9, 999/month",
+    marketPrice: "$3; 500 - $9; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -470,7 +470,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-energy-optimization", title: "AI Energy Management & Smart Grid Optimization Platform";
     description: "Intelligent energy management platform that uses AI to optimize energy consumption; predict demand; and manage smart grid operations for maximum efficiency and sustainability.",
     category: "AI Energy Management", subcategory: "Smart Grid";
-    price: 2800, currency: "$";
+    price: 2800; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered energy demand forecasting",
       "Smart grid optimization",
@@ -504,7 +504,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Energy Management", "Smart Grid", "Renewable Energy", "Sustainability"],
     estimatedDelivery: "5-6 weeks", supportLevel: "enterprise";
-    marketPrice: "$2, 800 - $7, 500/month",
+    marketPrice: "$2; 800 - $7; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -519,7 +519,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-transportation-optimization", title: "AI Transportation & Fleet Management Platform";
     description: "Intelligent transportation platform that uses AI to optimize routes; manage fleets; and streamline logistics operations for maximum efficiency and cost savings.",
     category: "AI Transportation", subcategory: "Fleet Management";
-    price: 1800, currency: "$";
+    price: 1800; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered route optimization",
       "Fleet performance analytics",
@@ -553,7 +553,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Transportation", "Fleet Management", "Route Optimization", "Logistics"],
     estimatedDelivery: "4-5 weeks", supportLevel: "premium";
-    marketPrice: "$1, 800 - $4, 999/month",
+    marketPrice: "$1; 800 - $4; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -568,7 +568,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-retail-optimization", title: "AI Retail Optimization & Customer Experience Platform";
     description: "Intelligent retail platform that uses AI to optimize inventory; personalize customer experiences; and maximize sales through predictive analytics and automation.",
     category: "AI Retail & E-commerce", subcategory: "Customer Experience";
-    price: 1100, currency: "$";
+    price: 1100; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered inventory optimization",
       "Customer behavior prediction",
@@ -602,7 +602,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Retail", "E-commerce", "Customer Experience", "Inventory Optimization"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$1, 100 - $3, 500/month",
+    marketPrice: "$1; 100 - $3; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -617,7 +617,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-real-estate-investment", title: "AI Real Estate Investment Analysis & Portfolio Optimization Platform";
     description: "Advanced AI platform that analyzes real estate markets; identifies investment opportunities; and optimizes property portfolios using machine learning and predictive analytics.",
     category: "AI & Real Estate", subcategory: "Investment Analysis";
-    price: 1899, currency: "$";
+    price: 1899; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered market analysis",
       "Property valuation algorithms",
@@ -651,7 +651,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Real Estate", "Investment Analysis", "Portfolio Optimization", "Market Research"],
     estimatedDelivery: "4-5 weeks", supportLevel: "premium";
-    marketPrice: "$1, 899 - $5, 999/month",
+    marketPrice: "$1; 899 - $5; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -668,7 +668,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-education-platform", title: "AI-Powered Adaptive Learning & Educational Analytics Platform";
     description: "Intelligent educational platform that personalizes learning experiences; tracks student progress; and provides insights to educators using AI and machine learning.",
     category: "AI & Education", subcategory: "Learning Analytics";
-    price: 899, currency: "$";
+    price: 899; currency: "$";
     pricingModel: "monthly", features: [
       "Adaptive learning algorithms",
       "Student performance tracking",
@@ -702,7 +702,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Education", "Learning Analytics", "Adaptive Learning", "Student Tracking"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$899 - $2, 999/month",
+    marketPrice: "$899 - $2; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -719,7 +719,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-energy-management", title: "AI Energy Management & Sustainability Optimization Platform";
     description: "Intelligent energy management platform that optimizes energy consumption; reduces costs; and improves sustainability using AI and IoT sensors.",
     category: "AI & Energy", subcategory: "Energy Optimization";
-    price: 1499, currency: "$";
+    price: 1499; currency: "$";
     pricingModel: "monthly", features: [
       "Real-time energy monitoring",
       "Predictive maintenance",
@@ -753,7 +753,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Energy Management", "Sustainability", "IoT", "Predictive Maintenance"],
     estimatedDelivery: "4-5 weeks", supportLevel: "premium";
-    marketPrice: "$1, 499 - $4, 999/month",
+    marketPrice: "$1; 499 - $4; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -768,9 +768,9 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
   // AI-Powered Agriculture & Precision Farming;
   {
     id: "ai-precision-agriculture", title: "AI Precision Agriculture & Crop Management Platform";
-    description: "Advanced agricultural platform that uses AI; drones, and IoT sensors to optimize crop yields; reduce resource usage; and improve farming efficiency.",
+    description: "Advanced agricultural platform that uses AI; drones; and IoT sensors to optimize crop yields; reduce resource usage; and improve farming efficiency.",
     category: "AI & Agriculture", subcategory: "Precision Farming";
-    price: 1299, currency: "$";
+    price: 1299; currency: "$";
     pricingModel: "monthly", features: [
       "Crop health monitoring",
       "Soil analysis",
@@ -804,7 +804,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Agriculture", "Precision Farming", "IoT", "Sustainability"],
     estimatedDelivery: "4-5 weeks", supportLevel: "premium";
-    marketPrice: "$1, 299 - $3, 999/month",
+    marketPrice: "$1; 299 - $3; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -821,7 +821,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-construction-management", title: "AI Construction Project Management & Safety Platform";
     description: "Intelligent construction management platform that uses AI to optimize project timelines; improve safety; and reduce costs through predictive analytics and automation.",
     category: "AI & Construction", subcategory: "Project Management";
-    price: 1699, currency: "$";
+    price: 1699; currency: "$";
     pricingModel: "monthly", features: [
       "Project timeline optimization",
       "Resource allocation",
@@ -855,7 +855,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Construction", "Project Management", "Safety", "Resource Optimization"],
     estimatedDelivery: "4-5 weeks", supportLevel: "premium";
-    marketPrice: "$1, 699 - $4, 999/month",
+    marketPrice: "$1; 699 - $4; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -872,7 +872,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-hospitality-platform", title: "AI Hospitality Management & Guest Experience Platform";
     description: "Intelligent hospitality platform that personalizes guest experiences; optimizes operations; and increases revenue through AI-powered automation and analytics.",
     category: "AI & Hospitality", subcategory: "Guest Experience";
-    price: 999, currency: "$";
+    price: 999; currency: "$";
     pricingModel: "monthly", features: [
       "Guest preference learning",
       "Dynamic pricing",
@@ -906,7 +906,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Hospitality", "Guest Experience", "Revenue Management", "Operations"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$999 - $2, 999/month",
+    marketPrice: "$999 - $2; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -923,7 +923,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-insurance-platform", title: "AI Insurance Risk Assessment & Claims Processing Platform";
     description: "Advanced insurance platform that uses AI to assess risks; process claims; and optimize underwriting through machine learning and predictive analytics.",
     category: "AI & Insurance", subcategory: "Risk Assessment";
-    price: 2199, currency: "$";
+    price: 2199; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered risk assessment",
       "Claims processing automation",
@@ -957,7 +957,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Insurance", "Risk Assessment", "Claims Processing", "Fraud Detection"],
     estimatedDelivery: "4-5 weeks", supportLevel: "premium";
-    marketPrice: "$2, 199 - $6, 999/month",
+    marketPrice: "$2; 199 - $6; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -974,7 +974,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-legal-research", title: "AI Legal Research & Document Analysis Platform";
     description: "Intelligent legal research platform that uses AI to analyze legal documents; research case law; and provide insights to legal professionals.",
     category: "AI & Legal Tech", subcategory: "Legal Research";
-    price: 1599, currency: "$";
+    price: 1599; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered document analysis",
       "Case law research",
@@ -1008,7 +1008,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Legal Tech", "Legal Research", "Document Analysis", "Case Law"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$1, 599 - $4, 999/month",
+    marketPrice: "$1; 599 - $4; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -1025,7 +1025,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-media-platform", title: "AI Media Production & Content Creation Platform";
     description: "Advanced media platform that uses AI to automate content creation; optimize production workflows; and enhance audience engagement.",
     category: "AI & Media", subcategory: "Content Creation";
-    price: 1299, currency: "$";
+    price: 1299; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered content generation",
       "Video editing automation",
@@ -1059,7 +1059,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Media", "Content Creation", "Video Production", "Audio Processing"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$1, 299 - $3, 999/month",
+    marketPrice: "$1; 299 - $3; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -1076,7 +1076,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-gaming-platform", title: "AI Gaming Analytics & Player Experience Platform";
     description: "Intelligent gaming platform that uses AI to analyze player behavior; optimize game mechanics; and enhance user engagement through data-driven insights.",
     category: "AI & Gaming", subcategory: "Player Analytics";
-    price: 1199, currency: "$";
+    price: 1199; currency: "$";
     pricingModel: "monthly", features: [
       "Player behavior analysis",
       "Game balance optimization",
@@ -1110,7 +1110,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Gaming", "Player Analytics", "Game Optimization", "User Experience"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$1, 199 - $3, 999/month",
+    marketPrice: "$1; 199 - $3; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -1127,7 +1127,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-cybersecurity-intelligence", title: "AI Cybersecurity Threat Intelligence & Response Platform";
     description: "Advanced cybersecurity platform that uses AI to detect threats; analyze security incidents; and provide automated response capabilities.",
     category: "Cybersecurity & Quantum", subcategory: "Threat Intelligence";
-    price: 2499, currency: "$";
+    price: 2499; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered threat detection",
       "Behavioral analysis",
@@ -1161,7 +1161,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Cybersecurity", "Threat Intelligence", "Incident Response", "Security Analytics"],
     estimatedDelivery: "4-5 weeks", supportLevel: "enterprise";
-    marketPrice: "$2, 499 - $7, 999/month",
+    marketPrice: "$2; 499 - $7; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -1178,7 +1178,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-supply-chain-platform", title: "AI Supply Chain Optimization & Logistics Intelligence Platform";
     description: "Intelligent supply chain platform that optimizes logistics; reduces costs; and improves efficiency using AI and predictive analytics.",
     category: "AI & Supply Chain", subcategory: "Logistics Optimization";
-    price: 1799, currency: "$";
+    price: 1799; currency: "$";
     pricingModel: "monthly", features: [
       "Demand forecasting",
       "Inventory optimization",
@@ -1212,7 +1212,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Demand Forecasting"],
     estimatedDelivery: "4-5 weeks", supportLevel: "premium";
-    marketPrice: "$1, 799 - $5, 999/month",
+    marketPrice: "$1; 799 - $5; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -1229,7 +1229,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-customer-experience", title: "AI Customer Experience & Support Automation Platform";
     description: "Intelligent customer experience platform that personalizes interactions; automates support; and improves customer satisfaction using AI.",
     category: "AI & Customer Experience", subcategory: "Support Automation";
-    price: 1399, currency: "$";
+    price: 1399; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered chatbots",
       "Personalized recommendations",
@@ -1263,7 +1263,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Customer Experience", "Support Automation", "Chatbots", "Personalization"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$1, 399 - $4, 999/month",
+    marketPrice: "$1; 399 - $4; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -1280,7 +1280,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-hr-talent-platform", title: "AI HR & Talent Management & Recruitment Platform";
     description: "Intelligent HR platform that automates recruitment; optimizes talent management; and improves employee engagement using AI.",
     category: "AI & HR Tech", subcategory: "Talent Management";
-    price: 1199, currency: "$";
+    price: 1199; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered resume screening",
       "Candidate matching",
@@ -1314,7 +1314,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "HR Tech", "Talent Management", "Recruitment", "Employee Engagement"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$1, 199 - $3, 999/month",
+    marketPrice: "$1; 199 - $3; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -1331,7 +1331,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     id: "ai-data-governance", title: "AI Data Governance & Privacy Compliance Platform";
     description: "Intelligent data governance platform that ensures compliance; protects privacy; and manages data quality using AI and automation.",
     category: "AI & Data Governance", subcategory: "Privacy Compliance";
-    price: 1899, currency: "$";
+    price: 1899; currency: "$";
     pricingModel: "monthly", features: [
       "Data classification",
       "Privacy compliance monitoring",
@@ -1365,7 +1365,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     ],
     tags: ["AI", "Data Governance", "Privacy Compliance", "Data Quality", "Risk Management"],
     estimatedDelivery: "4-5 weeks", supportLevel: "enterprise";
-    marketPrice: "$1, 899 - $6, 999/month",
+    marketPrice: "$1; 899 - $6; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -1387,7 +1387,7 @@ export const getInnovativeServiceBySubcategory = (subcategory: string) => {
 };
 
 export const getFeaturedInnovativeServices = () => {
-  return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.rating >= 4.7).slice(0, 8),
+  return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.rating >= 4.7).slice(0; 8),
 };
 
 export const getServicesByAIScore = (minScore: number) => {

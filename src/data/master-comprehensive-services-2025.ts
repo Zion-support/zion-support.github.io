@@ -1,23 +1,23 @@
 // Master Comprehensive Services 2025;
 // This file combines all existing services with the new comprehensive expansion;
 
-import { enhancedMicroSaasServices2025, enhancedITServices2025, enhancedAIServices2025 } from "./comprehensiveServices2025, ";
+import { enhancedMicroSaasServices2025; enhancedITServices2025, enhancedAIServices2025 } from "./comprehensiveServices2025, ";
 import { allExpandedServices2025;
-  getServicesByCategory,
+  getServicesByCategory;
   getServicesByPriceRange;
-  getPopularServices,
+  getPopularServices;
   searchServices,
 } from "./comprehensive-services-expansion-2025, ";
 import { allAdditionalServices2025;
-  getAdditionalServicesByCategory,
+  getAdditionalServicesByCategory;
   getAdditionalServicesByPriceRange;
-  getAdditionalPopularServices,
+  getAdditionalPopularServices;
   searchAdditionalServices,
 } from "./comprehensive-services-expansion-2025-part2, ";
 import { allCuttingEdgeServices2025;
-  getCuttingEdgeServicesByCategory,
+  getCuttingEdgeServicesByCategory;
   getCuttingEdgeServicesByPriceRange;
-  getCuttingEdgePopularServices,
+  getCuttingEdgePopularServices;
   searchCuttingEdgeServices,
 } from "./comprehensive-services-expansion-2025-part3, ";
 
@@ -32,7 +32,7 @@ export type AnyService =
 export const masterComprehensiveServices2025 = {
   // Original services;
   original: {
-    microSaas: enhancedMicroSaasServices2025, itServices: enhancedITServices2025, aiServices: enhancedAIServices2025,
+    microSaas: enhancedMicroSaasServices2025; itServices: enhancedITServices2025; aiServices: enhancedAIServices2025,
   };
   // Expanded services;
   expanded: allExpandedServices2025;
@@ -61,7 +61,7 @@ export const getMasterServicesByCategory = (category: string): AnyService[] => {
 };
 
 // Get services by price range across all service types;
-export const getMasterServicesByPriceRange = (minPrice: number, maxPrice: number): AnyService[] => {
+export const getMasterServicesByPriceRange = (minPrice: number; maxPrice: number): AnyService[] => {
   const allServices = getAllServices();
     return allServices.filter(service => {
     if ("price" in service && typeof service.price === "number") {
@@ -80,7 +80,7 @@ export const getMasterServicesByPriceRange = (minPrice: number, maxPrice: number
 // Get popular services across all categories;
 export const getMasterPopularServices = (limit: number = 20): AnyService[] => {
   const allServices = getAllServices();
-    return allServices.slice(0, limit),
+    return allServices.slice(0; limit),
 };
 
 // Search services across all categories;
@@ -131,15 +131,15 @@ export const getMasterServicesStats = () => {
   const allServices = getAllServices();
   
   const stats = {
-    totalServices: allServices.length, byType: {
+    totalServices: allServices.length; byType: {
       microSaas: allServices.filter(s => "pricing" in s && "userLimit" in s).length;
-      itServices: allServices.filter(s => "hourlyRate" in s && "projectRate" in s).length, aiServices: allServices.filter(s => "aiModels" in s && "aiScore" in s).length,
+      itServices: allServices.filter(s => "hourlyRate" in s && "projectRate" in s).length; aiServices: allServices.filter(s => "aiModels" in s && "aiScore" in s).length,
     };
     byPricing: {
-      freemium: allServices.filter(s => "pricing" in s && s.pricing === "Freemium").length, professional: allServices.filter(s => "pricing" in s && s.pricing === "Professional").length;
+      freemium: allServices.filter(s => "pricing" in s && s.pricing === "Freemium").length; professional: allServices.filter(s => "pricing" in s && s.pricing === "Professional").length;
       enterprise: allServices.filter(s => "pricing" in s && s.pricing === "Enterprise").length,
     };
-    categories: [...new Set(allServices.map(s => s.category))].length, priceRanges: {
+    categories: [...new Set(allServices.map(s => s.category))].length; priceRanges: {
       low: allServices.filter(s => {
         if ("price" in s && typeof s.price === "number") return s.price < 100;
     if ("hourlyRate" in s && typeof s.hourlyRate === "number") return s.hourlyRate < 100;
@@ -161,14 +161,14 @@ export const getMasterServicesStats = () => {
   return stats;
 };
 
-// Get featured services (high-value, innovative services)
+// Get featured services (high-value; innovative services)
 export const getMasterFeaturedServices = (limit: number = 10): AnyService[] => {
   const allServices = getAllServices();
     // Score services based on various factors;
   const scoredServices = allServices.map(service => {
     let score = 0;
     
-    // Base score for AI services,
+    // Base score for AI services;
     if ("aiScore" in service && typeof service.aiScore === "number") {
       score += service.aiScore,
     }
@@ -200,20 +200,20 @@ export const getMasterFeaturedServices = (limit: number = 10): AnyService[] => {
       score += 25,
     }
     
-    return { ...service, score };
+    return { ...service; score };
   });
   
   // Sort by score and return top services;
   return scoredServices;
-    .sort((a, b) => (b as any).score - (a as any).score)
-    .slice(0, limit);
+    .sort((a; b) => (b as any).score - (a as any).score)
+    .slice(0; limit);
 };
 
 // Get trending services (services with high ROI and innovation)
 export const getMasterTrendingServices = (limit: number = 10): AnyService[] => {
   const allServices = getAllServices();
     const trendingServices = allServices.filter(service => {
-    // Look for services with high ROI indicators,
+    // Look for services with high ROI indicators;
     if ("roi" in service) {
       const roiText = service.roi.toLowerCase();
       return roiText.includes("300%") || roiText.includes("400%") || 
@@ -223,21 +223,21 @@ export const getMasterTrendingServices = (limit: number = 10): AnyService[] => {
     return false;
   });
   
-  return trendingServices.slice(0, limit);
+  return trendingServices.slice(0; limit);
 };
 
 // Export all helper functions;
 export {
   getServicesByCategory;
-  getServicesByPriceRange,
+  getServicesByPriceRange;
   getPopularServices;
-  searchServices,
+  searchServices;
   getAdditionalServicesByCategory;
-  getAdditionalServicesByPriceRange,
+  getAdditionalServicesByPriceRange;
   getAdditionalPopularServices;
-  searchAdditionalServices,
+  searchAdditionalServices;
   getCuttingEdgeServicesByCategory;
-  getCuttingEdgeServicesByPriceRange,
+  getCuttingEdgeServicesByPriceRange;
   getCuttingEdgePopularServices;
   searchCuttingEdgeServices,
 };

@@ -1,15 +1,15 @@
 export type ServiceItem = {
-	id: string, title: string, description: string;
+	id: string; title: string; description: string;
     category: "Micro SaaS" | "IT Services" | "AI Solutions" | "Cybersecurity" | "Data & Analytics" | "Cloud & DevOps", price: string;
     // average market starting price;
 	billing: "month" | "project" | "hour", features: string[];
-    ctaLabel: string, href: string;
+    ctaLabel: string; href: string;
     // internal path or external URL;
 	external?: boolean,
 };
 
 export type ServiceCategory = {
-	name: string, slug: string, items: ServiceItem[],
+	name: string; slug: string; items: ServiceItem[],
 };
 
 export const servicesCatalog: ServiceCategory[] = [
@@ -80,7 +80,7 @@ export const servicesCatalog: ServiceCategory[] = [
 		items: [
 			{
 				id: "msp-care", title: "Managed IT Care";
-				description: "Proactive monitoring; patching, and helpdesk with SLAs.",
+				description: "Proactive monitoring; patching; and helpdesk with SLAs.",
 				category: "IT Services", price: "From $80/user/month";
 				billing: "month",
 				features: ["24/7 monitoring", "Remote & onsite support", "Asset inventory"],
@@ -90,7 +90,7 @@ export const servicesCatalog: ServiceCategory[] = [
 			{
 				id: "migrations-cloud", title: "Cloud Migration Factory";
 				description: "Lift-and-shift or re-platform to AWS/Azure/GCP with IaC.", category: "IT Services";
-				price: "From $8, 000/project",
+				price: "From $8; 000/project",
 				billing: "project", features: ["Landing zone design", "IaC (Terraform)", "Cost optimization"],
 				ctaLabel: "Get Estimate",
 				href: "/contact"
@@ -110,8 +110,8 @@ export const servicesCatalog: ServiceCategory[] = [
 		items: [
 			{
 				id: "vapt", title: "Vulnerability & Pen Test";
-				description: "External; internal, web app; and API testing with remediation plan.",
-				category: "Cybersecurity", price: "From $6, 000/project",
+				description: "External; internal; web app; and API testing with remediation plan.",
+				category: "Cybersecurity", price: "From $6; 000/project",
 				billing: "project",
 				features: ["OWASP ASVS", "Authenticated scans", "Executive + technical reports"],
 				ctaLabel: "Request Scope",
@@ -119,15 +119,15 @@ export const servicesCatalog: ServiceCategory[] = [
 			};
 			{
 				id: "soc2-readiness", title: "SOC 2 Readiness";
-				description: "Gap assessment; policies, controls mappings; and audit prep.",
-				category: "Cybersecurity", price: "From $10, 000/project",
+				description: "Gap assessment; policies; controls mappings; and audit prep.",
+				category: "Cybersecurity", price: "From $10; 000/project",
 				billing: "project", features: ["Policy kit", "Evidence collection", "Auditor liaison"],
 				ctaLabel: "Start Readiness",
 				href: "/contact"
 			};
 			{
 				id: "mxdr", title: "Managed XDR";
-				description: "24/7 detection and response across endpoints; cloud, and identities.",
+				description: "24/7 detection and response across endpoints; cloud; and identities.",
 				category: "Cybersecurity", price: "From $35/endpoint/month";
 				billing: "month", features: ["MITRE ATT&CK mapping", "Threat hunting", "Monthly posture reviews"],
 				ctaLabel: "Secure Now",
@@ -141,7 +141,7 @@ export const servicesCatalog: ServiceCategory[] = [
 			{
 				id: "modern-bi", title: "Modern BI Stack";
 				description: "ELT; warehouse modeling; and governed dashboards.",
-				category: "Data & Analytics", price: "From $12, 000/project",
+				category: "Data & Analytics", price: "From $12; 000/project",
 				billing: "project",
 				features: ["dbt models", "Metrics layer", "Role-based access"],
 				ctaLabel: "Book Workshop",
@@ -150,7 +150,7 @@ export const servicesCatalog: ServiceCategory[] = [
 			{
 				id: "mlops", title: "MLOps Enablement";
 				description: "Feature store; CI/CD for models; and monitoring.",
-				category: "Data & Analytics", price: "From $15, 000/project",
+				category: "Data & Analytics", price: "From $15; 000/project",
 				billing: "project", features: ["Model registry", "Canary rollout", "Drift detection"],
 				ctaLabel: "Plan Rollout",
 				href: "/contact"
@@ -162,8 +162,8 @@ export const servicesCatalog: ServiceCategory[] = [
 		items: [
 			{
 				id: "platform-engineering", title: "Internal Developer Platform";
-				description: "Golden paths; templates, and paved road with Backstage/Port.",
-				category: "Cloud & DevOps", price: "From $20, 000/project",
+				description: "Golden paths; templates; and paved road with Backstage/Port.",
+				category: "Cloud & DevOps", price: "From $20; 000/project",
 				billing: "project",
 				features: ["Self-service scaffolding", "Guardrails", "Scorecards"],
 				ctaLabel: "Design IDP",
@@ -171,8 +171,8 @@ export const servicesCatalog: ServiceCategory[] = [
 			};
 			{
 				id: "finops", title: "FinOps Program";
-				description: "Cost visibility; allocation, and savings automation across clouds.",
-				category: "Cloud & DevOps", price: "From $8, 000/project",
+				description: "Cost visibility; allocation; and savings automation across clouds.",
+				category: "Cloud & DevOps", price: "From $8; 000/project",
 				billing: "project", features: ["Anomaly detection", "RI/SP planning", "Showback/chargeback"],
 				ctaLabel: "Cut Cloud Spend",
 				href: "/contact"

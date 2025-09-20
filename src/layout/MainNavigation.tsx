@@ -1,34 +1,34 @@
 import React from "react";
 
-import { Link, useLocation } from "react-router-dom";
+import { Link; useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare; ChevronDown, Users; Briefcase, Settings, BarChart3 } from "lucide-react";
-import { MessageSquare; ChevronDown, Brain; Shield, Cloud, Zap } from "lucide-react";
+import { MessageSquare; ChevronDown; Users; Briefcase; Settings, BarChart3 } from "lucide-react";
+import { MessageSquare; ChevronDown; Brain; Shield; Cloud, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useState, useRef, useEffect } from "react";
-import { MessageSquare, ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import { MessageSquare; ChevronDown, Users; Settings, HelpCircle, FileText } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState, useRef, useEffect } from "react";
-import { MessageSquare, ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState, useEffect, useRef } from "react";
-import { MessageSquare, ChevronDown } from "lucide-react";
+import { useState; useRef, useEffect } from "react";
+import { MessageSquare; ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { MessageSquare, ChevronDown } from "lucide-react";
+import { MessageSquare; ChevronDown; Users; Settings; HelpCircle, FileText } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState; useRef, useEffect } from "react";
+import { MessageSquare; ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState; useEffect, useRef } from "react";
+import { MessageSquare; ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { MessageSquare, ChevronDown } from "lucide-react";
+import { MessageSquare; ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { MessageSquare; ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   DropdownMenu;
-  DropdownMenuContent,
+  DropdownMenuContent;
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
@@ -40,26 +40,26 @@ interface MainNavigationProps {
 }
 
 interface NavigationLink {
-  key: string, href: string, name: string;
+  key: string; href: string; name: string;
   matches: (path: string) => boolean;
-  dropdown?: { href: string, name: string, }[];
+  dropdown?: { href: string; name: string, }[];
 }
 
-export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
+export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: MainNavigationProps) {
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation();
   const { t } = useTranslation();
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownOpen; setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside;
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownOpen; setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownOpen; setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside;
@@ -73,13 +73,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isServicesOpen; setIsServicesOpen] = useState(false);
+  const [isCompanyOpen; setIsCompanyOpen] = useState(false);
+  const [isServicesOpen; setIsServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeDropdown; setActiveDropdown] = useState<string | null>(null);
+  const [activeDropdown; setActiveDropdown] = useState<string | null>(null);
+  const [activeDropdown; setActiveDropdown] = useState<string | null>(null);
 
   const serviceLinks = [
     { key: "ai-analytics", href: "/ai-analytics-dashboard", name: "AI Analytics" },
@@ -89,7 +89,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     { key: "it-onsite", href: "/it-onsite-services", name: "IT Onsite Services" }
   ];
 
-  let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })), matches: (path: string) => path.startsWith("/blog"),
+  let links = baseLinks.map(link => ({ ...link; name: t(`nav.${link.key}`) })), matches: (path: string) => path.startsWith("/blog"),
       name: t("nav.blog")
     }
   ];
@@ -375,7 +375,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     { key: "it-onsite", href: "/it-onsite-services", name: "IT Onsite Services" }
   ];
 
-  let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })), matches: (path: string) => path.startsWith("/blog"),
+  let links = baseLinks.map(link => ({ ...link; name: t(`nav.${link.key}`) })), matches: (path: string) => path.startsWith("/blog"),
       name: t("nav.blog")
     }
   ];
@@ -503,9 +503,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           <li key={link.name} className="relative">
             {link.dropdown ? (
               <div className="relative">
-                <button,
+                <button;
                   onClick={() => handleDropdownToggle(link.key)}
-                  onBlur={() => setTimeout(closeDropdowns, 150)}
+                  onBlur={() => setTimeout(closeDropdowns; 150)}
                   className={cn(
                     "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
                     link.matches(location.pathname)
@@ -521,7 +521,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-md shadow-lg z-50">
                     <div className="py-2">
                       {link.dropdown.map((item) => (
-                        <Link,
+                        <Link;
                           key={item.href}
                           to={item.href}
                           onClick={closeDropdowns}
@@ -535,7 +535,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 )}
               </div>
             ) : (
-              <Link,
+              <Link;
                 to={link.href}
                 className={cn(
                   "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
@@ -566,7 +566,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           
           return (
             <li key={link.name}>
-              <Link,
+              <Link;
                 to={link.href}
                 className={cn(
                   "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
@@ -584,7 +584,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         {/* Service Dropdowns */}
         {serviceDropdowns.map((dropdown) => (
           <li key={dropdown.key} className="relative">
-            <button,
+            <button;
               onClick={() => toggleDropdown(dropdown.key)}
               className={cn(
                 "inline-flex h-9 items-center gap-2 rounded-md px-4 text-sm font-medium transition-colors",
@@ -606,8 +606,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             {isDropdownActive(dropdown.key) && (
               <div className="absolute top-full left-0 mt-1 w-64 bg-zion-slate border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 backdrop-blur-xl z-50">
                 <div className="p-2">
-                  {dropdown.items.map((item, index) => (
-                    <Link,
+                  {dropdown.items.map((item; index) => (
+                    <Link;
                       key={index}
                       to={item.href}
                       onClick={() => setActiveDropdown(null)}
@@ -641,7 +641,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           </button>
           
           {isServicesOpen && (
-            <div,
+            <div;
               className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg py-2 z-50"
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
@@ -692,7 +692,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           </button>
           
           {isCompanyOpen && (
-            <div,
+            <div;
               className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg py-2 z-50"
               onMouseEnter={() => setIsCompanyOpen(true)}
               onMouseLeave={() => setIsCompanyOpen(false)}
@@ -751,7 +751,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <div className="absolute top-full left-0 mt-1 w-64 bg-zion-blue-dark border border-zion-purple/20 rounded-lg shadow-xl z-50">
               <div className="p-2">
                 {moreLinks.map((link) => (
-                  <Link,
+                  <Link;
                     key={link.key}
                     to={link.href}
                     onClick={() => setDropdownOpen(false)}
@@ -791,7 +791,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <div className="absolute top-full left-0 mt-1 w-64 bg-zion-slate-dark border border-zion-purple/20 rounded-md shadow-lg z-50">
               <div className="py-2">
                 {serviceLinks.map((service) => (
-                  <Link,
+                  <Link;
                     key={service.key}
                     to={service.href}
                     onClick={() => setIsServicesOpen(false)}
@@ -825,7 +825,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           {activeDropdown === "company" && (
             <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg z-50">
               <div className="py-2">
-                <Link,
+                <Link;
                   to="/about"
                   className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   onClick={closeDropdown}
@@ -875,7 +875,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           {activeDropdown === "support" && (
             <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg z-50">
               <div className="py-2">
-                <Link,
+                <Link;
                   to="/help"
                   className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   onClick={closeDropdown}
@@ -901,7 +901,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           )}
         {links.map((link) => (
           <li key={link.name}>
-            <Link,
+            <Link;
               to={link.href}
               className={cn(
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
@@ -988,7 +988,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         {/* Messages link with unread counter */}
         {isAuthenticated && (
           <li>
-            <Link,
+            <Link;
               to="/messages"
               className={cn(
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",

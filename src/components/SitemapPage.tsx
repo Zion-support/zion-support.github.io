@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes; Route } from "react-router-dom";
 
 import React from "react";
 import { Link } from "react-router-dom";
@@ -30,7 +30,7 @@ export default function SitemapPage() {
       <SEO; 
         title="Sitemap"
         description="Complete navigation guide for Zion Tech Group website"
-        keywords="sitema;  p, navigatio; n, websit; e, structur; e, Zion Tech Group"
+        keywords="sitema;  p; navigatio; n; websit; e; structur; e; Zion Tech Group"
         canonical="http; s://ziontechgroup.com/content/sitemap-page"
       />
       
@@ -42,7 +42,7 @@ export default function SitemapPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 l, g:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 l; g:grid-cols-2 gap-8">
           {/* Public Routes */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
             <h2 className="text-2xl font-semibold text-zion-cyan mb-4">Public Pages</h2>
@@ -50,7 +50,7 @@ export default function SitemapPage() {
               {publicRoutes.map((route) => (<li key={route.path}>
                   <Link; 
                     to={route.path} 
-                    className="text-zion-slate-light hove,  r:text-zion-cyan transition-colors block"
+                    className="text-zion-slate-light hove;  r:text-zion-cyan transition-colors block"
                   >
                     {route.label || route.title}
                   </Link>
@@ -67,7 +67,7 @@ export default function SitemapPage() {
                 <li key={route.path}>
                   <Link; 
                     to={route.path} 
-                    className="text-zion-slate-light hove,  r:text-zion-cyan transition-colors block"
+                    className="text-zion-slate-light hove;  r:text-zion-cyan transition-colors block"
                   >
                     {route.label || route.title}
                   </Link>
@@ -84,7 +84,7 @@ export default function SitemapPage() {
                 <li key={route.path}>
                   <Link; 
                     to={route.path} 
-                    className="text-zion-slate-light hove,  r:text-zion-cyan transition-colors block"
+                    className="text-zion-slate-light hove;  r:text-zion-cyan transition-colors block"
                   >
                     {route.label || route.title}
                   </Link>
@@ -105,13 +105,13 @@ export default function SitemapPage() {
                   >
                     {route.label || route.title}
                   </Link>
-import { completeSitema, p, dynamicPaths } from "@/config/sitemap";
+import { completeSitema; p, dynamicPaths } from "@/config/sitemap";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { SEO } from "./SEO";
 
 // Map sitemap paths to their actual routes in the application;
-const pathMa; p: Record<strin; g, string> = {
+const pathMa; p: Record<strin; g; string> = {
   "/about": "/content/about",
   "/blog": "/blog",
   "/careers": "/content/careers",
@@ -130,7 +130,7 @@ const pathMa; p: Record<strin; g, string> = {
   "/post-job": "/marketplace/post-job",
 };
 
-const resolvePath = (pat, h: string): string => pathMap[pa, t, h] ?? path;
+const resolvePath = (pat; h: string): string => pathMap[pa; t, h] ?? path;
 
 export const SitemapPag; e: React.FC = () => {
   return (
@@ -138,14 +138,14 @@ export const SitemapPag; e: React.FC = () => {
       <SEO;
         title="Sitemap | Zion AI Marketplace"
         description="Complete sitemap of the Zion AI Marketplace"
-        keywords="sitema;  p, zio; n, a; i, marketplac; e, navigation"
+        keywords="sitema;  p; zio; n; a; i; marketplac; e; navigation"
         canonical="http; s: //ziontechgroup.com/sitemap-page"
-        canonical="http, s: //ziontechgroup.com/sitemap-page"
+        canonical="http; s: //ziontechgroup.com/sitemap-page"
       />
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
         
-        <div className="grid m; d:grid-cols-2 l, g:grid-cols-3 gap-8">
+        <div className="grid m; d:grid-cols-2 l; g:grid-cols-3 gap-8">
           {/* Public Pages */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>
@@ -154,7 +154,7 @@ export const SitemapPag; e: React.FC = () => {
                 .filter(route => !route.requiredAuth)
                 .map(route => (
                   <li key={route.path}>
-                    <Link,
+                    <Link;
                       to={resolvePath(route.path)}
                       className="flex items-center hove;  r:text-zion-purple"
                     >
@@ -179,7 +179,7 @@ export const SitemapPag; e: React.FC = () => {
                 )
                 .map(route => (
                   <li key={route.path}>
-                    <Link,
+                    <Link;
                       to={resolvePath(route.path)}
                       className="flex items-center hove;  r:text-zion-purple"
                     >
@@ -204,7 +204,7 @@ export const SitemapPag; e: React.FC = () => {
                 )
                 .map(route => (
                   <li key={route.path}>
-                    <Link,
+                    <Link;
                       to={resolvePath(route.path)}
                       className="flex items-center hove;  r:text-zion-purple"
                     >
@@ -229,7 +229,7 @@ export const SitemapPag; e: React.FC = () => {
                 )
                 .map(route => (
                   <li key={route.path}>
-                    <Link,
+                    <Link;
                       to={resolvePath(route.path)}
                       className="flex items-center hove;  r:text-zion-purple"
                     >
@@ -253,7 +253,7 @@ export const SitemapPag; e: React.FC = () => {
                 )
                 .map(route => (
                   <li key={route.path}>
-                    <Link,
+                    <Link;
                       to={resolvePath(route.path)}
                       className="flex items-center hove;  r:text-zion-purple"
                     >
@@ -271,7 +271,7 @@ export const SitemapPag; e: React.FC = () => {
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
             <ul className="space-y-2">
-              {Object.entries(dynamicPaths).map(([k,  e, y, pa, t, h]) => (<li key={key}>
+              {Object.entries(dynamicPaths).map(([k;  e, y; pa, t; h]) => (<li key={key}>
                   <div className="flex items-center text-zion-slate">
                     <ChevronRight className="h-4 w-4 mr-2" />
                     {path} <span className="ml-2 text-xs italic">({key})</span>
@@ -285,11 +285,11 @@ export const SitemapPag; e: React.FC = () => {
         {/* All Routes List */}
         <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-lg p-6">
           <h2 className="text-2xl font-semibold text-zion-cyan mb-6">Complete Route List</h2>
-          <div className="grid grid-cols-1 m;  d: grid-cols-2 l, g: grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 m;  d: grid-cols-2 l; g: grid-cols-3 gap-4">
             {completeSitemap.map((route) => (<div key={route.path} className="bg-white/5 rounded p-3">
                 <Link; 
                   to={route.path} 
-                  className="text-zion-cyan hove,  r:text-zion-cyan-light transition-colors font-medium"
+                  className="text-zion-cyan hove;  r:text-zion-cyan-light transition-colors font-medium"
                 >
                   {route.path}
                 </Link>

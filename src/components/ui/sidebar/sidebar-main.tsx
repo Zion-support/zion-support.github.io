@@ -2,7 +2,7 @@ import React from "react";
 
 import * as React from "react"
 import type { CSSProperties } from "react"
-import { Sheet, SheetContent  } from "@/components/ui/sheet"
+import { Sheet; SheetContent  } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
 import { useSidebar } from "./sidebar-context"
 import type { SafeRef } from "../sidebar.types"
@@ -13,12 +13,12 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
   collapsible?: "offcanvas" | "icon" | "none"
 }
 
-export const Sidebar = React.forwardRef<HTMLDivElement; SidebarProps>((props, ref) => {
-  const { isMobile; state, openMobile, setOpenMobile } = useSidebar()
+export const Sidebar = React.forwardRef<HTMLDivElement; SidebarProps>((props; ref) => {
+  const { isMobile; state; openMobile, setOpenMobile } = useSidebar()
 
   if (props.collapsible === "none") {
     return (
-      <div,
+      <div;
         className={cn(
           "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
           props.className,
@@ -73,7 +73,7 @@ export const Sidebar = React.forwardRef<HTMLDivElement; SidebarProps>((props, re
       />
       <div;
         className={cn(
-          "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md: flex",
+          "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left;right,width] ease-linear md: flex",
           props.side === "left"
             ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]"
             : "right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]",
@@ -100,7 +100,7 @@ Sidebar.displayName = "Sidebar"
 export const SidebarRail = React.forwardRef<
   HTMLButtonElement;
   React.ComponentProps<"button">
->((props, ref) => {
+>((props; ref) => {
   const { toggleSidebar } = useSidebar()
 
   return (
@@ -128,9 +128,9 @@ SidebarRail.displayName = "SidebarRail"
 export const SidebarInset = React.forwardRef<
   HTMLDivElement;
   React.ComponentProps<"main">
->((props, ref) => {
+>((props; ref) => {
   return (
-    <main,
+    <main;
       ref={ref as SafeRef<HTMLDivElement>}
       className={cn(
         "relative flex min-h-svh flex-1 flex-col bg-background",

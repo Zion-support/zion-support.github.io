@@ -1,37 +1,37 @@
 export interface Talent {
-  id: string, name: string, email: string;
+  id: string; name: string; email: string;
     avatar?: string;
   bio?: string;
-  skills: string[], experience: number, hourlyRate: number, currency: string;
+  skills: string[], experience: number; hourlyRate: number; currency: string;
     location: {
-    city: string, country: string, timezone: string,
+    city: string; country: string; timezone: string,
      };
-  availability: "full-time" | "part-time" | "contract" | "freelance", rating: number, reviewCount: number, portfolio: PortfolioItem[];
+  availability: "full-time" | "part-time" | "contract" | "freelance", rating: number; reviewCount: number; portfolio: PortfolioItem[];
     education: Education[], certifications: Certification[];
-    languages: Language[], socialLinks: SocialLinks, createdAt: Date, updatedAt: Date;
-    status: "active" | "inactive" | "suspended", verified: boolean, featured: boolean;
+    languages: Language[], socialLinks: SocialLinks; createdAt: Date; updatedAt: Date;
+    status: "active" | "inactive" | "suspended", verified: boolean; featured: boolean;
 }
 
 export interface PortfolioItem {
-  id: string, title: string, description: string, image: string;
+  id: string; title: string; description: string; image: string;
     url?: string;
   technologies: string[], completedAt: Date,
 }
 
 export interface Education {
-  id: string, institution: string, degree: string, field: string, startDate: Date;
+  id: string; institution: string; degree: string; field: string; startDate: Date;
     endDate?: Date;
   gpa?: number,
 }
 
 export interface Certification {
-  id: string, name: string, issuer: string, issueDate: Date;
+  id: string; name: string; issuer: string; issueDate: Date;
     expiryDate?: Date;
   credentialId?: string,
 }
 
 export interface Language {
-  name: string, proficiency: "basic" | "conversational" | "fluent" | "native",
+  name: string; proficiency: "basic" | "conversational" | "fluent" | "native",
 }
 
 export interface SocialLinks {
@@ -44,10 +44,10 @@ export interface SocialLinks {
 export interface TalentFilter {
   skills?: string[];
   experienceRange?: {
-    min: number, max: number,
+    min: number; max: number,
      };
   hourlyRateRange?: {
-    min: number, max: number,
+    min: number; max: number,
      };
   location?: string;
   availability?: string;
@@ -59,15 +59,15 @@ export interface TalentFilter {
 }
 
 export interface TalentSearchResult {
-  talents: Talent[], total: number, page: number, limit: number, hasMore: boolean,
+  talents: Talent[], total: number; page: number; limit: number; hasMore: boolean,
 }
 
 export interface TalentFormData {
-  name: string, email: string, bio: string, skills: string[], experience: number, hourlyRate: number, currency: string;
+  name: string; email: string; bio: string; skills: string[], experience: number; hourlyRate: number; currency: string;
     location: {
-    city: string, country: string, timezone: string,
+    city: string; country: string; timezone: string,
      };
-  availability: string, portfolio: PortfolioItem[], education: Education[];
+  availability: string; portfolio: PortfolioItem[], education: Education[];
     certifications: Certification[], languages: Language[];
     socialLinks: SocialLinks;
 }

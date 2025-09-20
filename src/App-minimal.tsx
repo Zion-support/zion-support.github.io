@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Routes, Route } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 import { ThemeProvider } from "./components/ThemeProvider, ";
 import ErrorBoundary from "./components/ErrorBoundary-simple";
 // Minimal working components;

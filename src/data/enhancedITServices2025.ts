@@ -1,24 +1,24 @@
 export interface ServiceContact {
-  phone: string, email: string, website: string, address: string,
+  phone: string; email: string; website: string; address: string,
 }
 
 export interface ITService {
-  id: number, name: string, category: string, description: string, hourlyRate: number, projectRate: number, features: string[];
+  id: number; name: string; category: string; description: string; hourlyRate: number; projectRate: number; features: string[];
     benefits: string[], targetAudience: string[];
-    tags: string[], contactInfo: ServiceContact, marketPrice: string, competitors: string[];
-    responseTime: string, sla: string, certifications: string[];
-    deliveryTime: string, support: string, expertise: string[];
+    tags: string[], contactInfo: ServiceContact; marketPrice: string; competitors: string[];
+    responseTime: string; sla: string; certifications: string[];
+    deliveryTime: string; support: string; expertise: string[];
     technologies: string[], compliance: string[];
-    scalability: string, securityFeatures: string[], integrationCapabilities: string[];
-    maintenanceIncluded: boolean, trainingIncluded: boolean, documentationProvided: boolean, warrantyPeriod: string, disasterRecovery: boolean, backupSolutions: boolean, monitoringTools: boolean, reportingCapabilities: boolean,
+    scalability: string; securityFeatures: string[], integrationCapabilities: string[];
+    maintenanceIncluded: boolean; trainingIncluded: boolean; documentationProvided: boolean; warrantyPeriod: string; disasterRecovery: boolean; backupSolutions: boolean; monitoringTools: boolean; reportingCapabilities: boolean,
 }
 
 // Enhanced IT Services for 2025;
 export const enhancedITServices2025: ITService[] = [
   {
-    id: 1, name: "Cloud Migration & Strategy";
-    category: "Cloud Services", description: "Comprehensive cloud migration services with strategy planning; implementation, and optimization for modern businesses",
-    hourlyRate: 150, projectRate: 25000, features: [
+    id: 1; name: "Cloud Migration & Strategy";
+    category: "Cloud Services", description: "Comprehensive cloud migration services with strategy planning; implementation; and optimization for modern businesses",
+    hourlyRate: 150; projectRate: 25000; features: [
       "Cloud strategy assessment",
       "Migration planning",
       "Data migration",
@@ -52,13 +52,13 @@ export const enhancedITServices2025: ITService[] = [
     compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
     scalability: "Enterprise-grade", securityFeatures: ["Zero-trust architecture", "Encryption", "IAM", "Compliance monitoring"],
     integrationCapabilities: ["API integration", "Legacy system migration", "Third-party tools"],
-    maintenanceIncluded: true, trainingIncluded: true, documentationProvided: true;
-    warrantyPeriod: "1 year", disasterRecovery: true, backupSolutions: true, monitoringTools: true, reportingCapabilities: true;
+    maintenanceIncluded: true; trainingIncluded: true; documentationProvided: true;
+    warrantyPeriod: "1 year", disasterRecovery: true; backupSolutions: true; monitoringTools: true; reportingCapabilities: true;
   };
   {
-    id: 2, name: "Cybersecurity Assessment & Implementation";
-    category: "Cybersecurity", description: "Comprehensive cybersecurity services including assessment; implementation, and ongoing monitoring for enterprise security",
-    hourlyRate: 175, projectRate: 35000, features: [
+    id: 2; name: "Cybersecurity Assessment & Implementation";
+    category: "Cybersecurity", description: "Comprehensive cybersecurity services including assessment; implementation; and ongoing monitoring for enterprise security",
+    hourlyRate: 175; projectRate: 35000; features: [
       "Security assessment",
       "Vulnerability scanning",
       "Penetration testing",
@@ -92,13 +92,13 @@ export const enhancedITServices2025: ITService[] = [
     compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
     scalability: "Enterprise-grade", securityFeatures: ["Zero-trust", "Multi-factor auth", "Encryption", "Audit logging"],
     integrationCapabilities: ["Security tools", "SIEM systems", "Compliance platforms"],
-    maintenanceIncluded: true, trainingIncluded: true, documentationProvided: true;
-    warrantyPeriod: "1 year", disasterRecovery: true, backupSolutions: true, monitoringTools: true, reportingCapabilities: true;
+    maintenanceIncluded: true; trainingIncluded: true; documentationProvided: true;
+    warrantyPeriod: "1 year", disasterRecovery: true; backupSolutions: true; monitoringTools: true; reportingCapabilities: true;
   };
   {
-    id: 3, name: "DevOps Implementation & Automation";
-    category: "DevOps", description: "End-to-end DevOps implementation with CI/CD pipelines; automation, and infrastructure as code for modern development teams",
-    hourlyRate: 140, projectRate: 20000, features: [
+    id: 3; name: "DevOps Implementation & Automation";
+    category: "DevOps", description: "End-to-end DevOps implementation with CI/CD pipelines; automation; and infrastructure as code for modern development teams",
+    hourlyRate: 140; projectRate: 20000; features: [
       "CI/CD pipeline setup",
       "Infrastructure as Code",
       "Automation implementation",
@@ -132,13 +132,13 @@ export const enhancedITServices2025: ITService[] = [
     compliance: ["SOC 2", "ISO 27001", "GDPR"],
     scalability: "Enterprise-grade", securityFeatures: ["Secure pipelines", "Access controls", "Audit logging", "Compliance"],
     integrationCapabilities: ["Version control", "Cloud platforms", "Monitoring tools", "Security tools"],
-    maintenanceIncluded: true, trainingIncluded: true, documentationProvided: true;
-    warrantyPeriod: "6 months", disasterRecovery: true, backupSolutions: true, monitoringTools: true, reportingCapabilities: true;
+    maintenanceIncluded: true; trainingIncluded: true; documentationProvided: true;
+    warrantyPeriod: "6 months", disasterRecovery: true; backupSolutions: true; monitoringTools: true; reportingCapabilities: true;
   };
   {
-    id: 4, name: "Data Center Design & Implementation";
-    category: "Infrastructure", description: "Comprehensive data center services including design; implementation, and management for enterprise-grade infrastructure",
-    hourlyRate: 160, projectRate: 50000, features: [
+    id: 4; name: "Data Center Design & Implementation";
+    category: "Infrastructure", description: "Comprehensive data center services including design; implementation; and management for enterprise-grade infrastructure",
+    hourlyRate: 160; projectRate: 50000; features: [
       "Data center design",
       "Infrastructure implementation",
       "Network architecture",
@@ -172,13 +172,13 @@ export const enhancedITServices2025: ITService[] = [
     compliance: ["SOC 2", "ISO 27001", "TIA-942", "Uptime Institute"],
     scalability: "Enterprise-grade", securityFeatures: ["Physical security", "Network security", "Access controls", "Monitoring"],
     integrationCapabilities: ["Legacy systems", "Cloud platforms", "Monitoring tools", "Security systems"],
-    maintenanceIncluded: true, trainingIncluded: true, documentationProvided: true;
-    warrantyPeriod: "3 years", disasterRecovery: true, backupSolutions: true, monitoringTools: true, reportingCapabilities: true;
+    maintenanceIncluded: true; trainingIncluded: true; documentationProvided: true;
+    warrantyPeriod: "3 years", disasterRecovery: true; backupSolutions: true; monitoringTools: true; reportingCapabilities: true;
   };
   {
-    id: 5, name: "Network Security & Firewall Implementation";
+    id: 5; name: "Network Security & Firewall Implementation";
     category: "Network Security", description: "Advanced network security services with next-generation firewall implementation and comprehensive security architecture";
-    hourlyRate: 145, projectRate: 18000, features: [
+    hourlyRate: 145; projectRate: 18000; features: [
       "Security assessment",
       "Firewall implementation",
       "Network segmentation",
@@ -212,13 +212,13 @@ export const enhancedITServices2025: ITService[] = [
     compliance: ["SOC 2", "ISO 27001", "PCI DSS", "HIPAA"],
     scalability: "Enterprise-grade", securityFeatures: ["Next-gen firewall", "Intrusion detection", "VPN", "Network segmentation"],
     integrationCapabilities: ["Security tools", "Monitoring systems", "Compliance platforms"],
-    maintenanceIncluded: true, trainingIncluded: true, documentationProvided: true;
-    warrantyPeriod: "1 year", disasterRecovery: true, backupSolutions: true, monitoringTools: true, reportingCapabilities: true;
+    maintenanceIncluded: true; trainingIncluded: true; documentationProvided: true;
+    warrantyPeriod: "1 year", disasterRecovery: true; backupSolutions: true; monitoringTools: true; reportingCapabilities: true;
   };
   {
-    id: 6, name: "Business Intelligence & Analytics Implementation";
-    category: "Data & Analytics", description: "Comprehensive BI and analytics implementation with data warehousing; reporting, and advanced analytics capabilities",
-    hourlyRate: 155, projectRate: 30000, features: [
+    id: 6; name: "Business Intelligence & Analytics Implementation";
+    category: "Data & Analytics", description: "Comprehensive BI and analytics implementation with data warehousing; reporting; and advanced analytics capabilities",
+    hourlyRate: 155; projectRate: 30000; features: [
       "Data assessment",
       "Data warehouse design",
       "ETL implementation",
@@ -252,13 +252,13 @@ export const enhancedITServices2025: ITService[] = [
     compliance: ["SOC 2", "ISO 27001", "GDPR", "SOX"],
     scalability: "Enterprise-grade", securityFeatures: ["Data encryption", "Access controls", "Audit logging", "Compliance"],
     integrationCapabilities: ["ERP systems", "CRM systems", "Cloud platforms", "Legacy systems"],
-    maintenanceIncluded: true, trainingIncluded: true, documentationProvided: true;
-    warrantyPeriod: "1 year", disasterRecovery: true, backupSolutions: true, monitoringTools: true, reportingCapabilities: true;
+    maintenanceIncluded: true; trainingIncluded: true; documentationProvided: true;
+    warrantyPeriod: "1 year", disasterRecovery: true; backupSolutions: true; monitoringTools: true; reportingCapabilities: true;
   };
   {
-    id: 7, name: "Mobile App Development & Integration";
+    id: 7; name: "Mobile App Development & Integration";
     category: "Mobile Development", description: "End-to-end mobile application development with native and cross-platform solutions for iOS and Android";
-    hourlyRate: 120, projectRate: 15000, features: [
+    hourlyRate: 120; projectRate: 15000; features: [
       "App design & development",
       "Cross-platform development",
       "API integration",
@@ -292,13 +292,13 @@ export const enhancedITServices2025: ITService[] = [
     compliance: ["GDPR", "CCPA", "App Store guidelines", "Google Play policies"],
     scalability: "Enterprise-grade", securityFeatures: ["App security", "Data encryption", "Secure API", "Compliance"],
     integrationCapabilities: ["Backend systems", "Third-party APIs", "Payment gateways", "Analytics"],
-    maintenanceIncluded: true, trainingIncluded: true, documentationProvided: true;
-    warrantyPeriod: "6 months", disasterRecovery: false, backupSolutions: true, monitoringTools: true, reportingCapabilities: true;
+    maintenanceIncluded: true; trainingIncluded: true; documentationProvided: true;
+    warrantyPeriod: "6 months", disasterRecovery: false; backupSolutions: true; monitoringTools: true; reportingCapabilities: true;
   };
   {
-    id: 8, name: "IT Consulting & Digital Transformation";
+    id: 8; name: "IT Consulting & Digital Transformation";
     category: "Consulting", description: "Strategic IT consulting services for digital transformation; technology assessment; and strategic planning",
-    hourlyRate: 200, projectRate: 40000, features: [
+    hourlyRate: 200; projectRate: 40000; features: [
       "Technology assessment",
       "Digital strategy",
       "Technology roadmap",
@@ -332,13 +332,13 @@ export const enhancedITServices2025: ITService[] = [
     compliance: ["Industry standards", "Best practices", "Regulatory requirements"],
     scalability: "Enterprise-grade", securityFeatures: ["Security assessment", "Compliance review", "Risk management"],
     integrationCapabilities: ["Legacy systems", "New technologies", "Business processes"],
-    maintenanceIncluded: false, trainingIncluded: true, documentationProvided: true;
-    warrantyPeriod: "N/A", disasterRecovery: false, backupSolutions: false, monitoringTools: false, reportingCapabilities: true;
+    maintenanceIncluded: false; trainingIncluded: true; documentationProvided: true;
+    warrantyPeriod: "N/A", disasterRecovery: false; backupSolutions: false; monitoringTools: false; reportingCapabilities: true;
   };
   {
-    id: 9, name: "Managed IT Services & Support";
-    category: "Managed Services", description: "Comprehensive managed IT services including 24/7 monitoring; support, and proactive maintenance for businesses",
-    hourlyRate: 85, projectRate: 12000, features: [
+    id: 9; name: "Managed IT Services & Support";
+    category: "Managed Services", description: "Comprehensive managed IT services including 24/7 monitoring; support; and proactive maintenance for businesses",
+    hourlyRate: 85; projectRate: 12000; features: [
       "24/7 monitoring",
       "Proactive maintenance",
       "Help desk support",
@@ -372,13 +372,13 @@ export const enhancedITServices2025: ITService[] = [
     compliance: ["SOC 2", "ISO 27001", "Industry specific"],
     scalability: "Enterprise-grade", securityFeatures: ["Security monitoring", "Threat detection", "Compliance management"],
     integrationCapabilities: ["Existing tools", "Cloud platforms", "Security systems"],
-    maintenanceIncluded: true, trainingIncluded: true, documentationProvided: true;
-    warrantyPeriod: "Ongoing", disasterRecovery: true, backupSolutions: true, monitoringTools: true, reportingCapabilities: true;
+    maintenanceIncluded: true; trainingIncluded: true; documentationProvided: true;
+    warrantyPeriod: "Ongoing", disasterRecovery: true; backupSolutions: true; monitoringTools: true; reportingCapabilities: true;
   };
   {
-    id: 10, name: "Web Application Development & Hosting";
+    id: 10; name: "Web Application Development & Hosting";
     category: "Web Development", description: "Full-stack web application development with modern technologies and enterprise-grade hosting solutions";
-    hourlyRate: 110, projectRate: 18000, features: [
+    hourlyRate: 110; projectRate: 18000; features: [
       "Full-stack development",
       "Responsive design",
       "Database design",
@@ -412,8 +412,8 @@ export const enhancedITServices2025: ITService[] = [
     compliance: ["GDPR", "CCPA", "WCAG", "Security standards"],
     scalability: "Enterprise-grade", securityFeatures: ["HTTPS", "Security headers", "Input validation", "Authentication"],
     integrationCapabilities: ["Third-party APIs", "Payment gateways", "Analytics", "CRM systems"],
-    maintenanceIncluded: true, trainingIncluded: true, documentationProvided: true;
-    warrantyPeriod: "6 months", disasterRecovery: true, backupSolutions: true, monitoringTools: true, reportingCapabilities: true;
+    maintenanceIncluded: true; trainingIncluded: true; documentationProvided: true;
+    warrantyPeriod: "6 months", disasterRecovery: true; backupSolutions: true; monitoringTools: true; reportingCapabilities: true;
   }
 ];
     export default enhancedITServices2025;

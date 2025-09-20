@@ -1,10 +1,10 @@
 export interface AdditionalInnovativeMicroSaasService2025 {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
     benefits: string[], useCases: string[];
     targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: string, marketPrice: string;
+    estimatedDelivery: string; supportLevel: string; marketPrice: string;
     contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
      };
   websiteUrl?: string;
   demoUrl?: string;
@@ -20,9 +20,9 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
     id: "ai-content-marketing-automation-2025", title: "AI-Powered Content Creation & Marketing Automation Platform";
     description: "Comprehensive content creation and marketing automation platform that generates personalized content; optimizes campaigns; and drives engagement across all channels.",
     category: "AI & Marketing", subcategory: "Content Creation";
-    price: 2800, currency: "$";
+    price: 2800; currency: "$";
     pricingModel: "monthly", features: [
-      "AI-powered content generation for blogs; social media, and email",
+      "AI-powered content generation for blogs; social media; and email",
       "Personalized content recommendations",
       "Multi-channel campaign automation",
       "Real-time performance analytics",
@@ -54,7 +54,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
     ],
     tags: ["AI", "Content Creation", "Marketing Automation", "SEO", "Social Media"],
     estimatedDelivery: "2-3 weeks", supportLevel: "premium";
-    marketPrice: "$2, 800 - $8, 000/month",
+    marketPrice: "$2; 800 - $8; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -69,9 +69,9 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
   // Blockchain-Based Supply Chain Transparency;
   {
     id: "blockchain-supply-chain-transparency-2025", title: "Blockchain-Based Supply Chain Transparency Platform";
-    description: "End-to-end supply chain transparency solution using blockchain technology for traceability; compliance, and trust across global supply networks.",
+    description: "End-to-end supply chain transparency solution using blockchain technology for traceability; compliance; and trust across global supply networks.",
     category: "Blockchain & Web3", subcategory: "Supply Chain";
-    price: 4200, currency: "$";
+    price: 4200; currency: "$";
     pricingModel: "monthly", features: [
       "Real-time supply chain tracking",
       "Blockchain-based product authentication",
@@ -105,7 +105,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
     ],
     tags: ["Blockchain", "Supply Chain", "Transparency", "Traceability", "Compliance"],
     estimatedDelivery: "4-6 weeks", supportLevel: "enterprise";
-    marketPrice: "$4, 200 - $15, 000/month",
+    marketPrice: "$4; 200 - $15; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -122,7 +122,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
     id: "quantum-secure-communication-2025", title: "Quantum-Secure Communication & Encryption Platform";
     description: "Next-generation communication platform with quantum-resistant encryption; ensuring data security against current and future cyber threats.",
     category: "Cybersecurity & Quantum", subcategory: "Quantum Security";
-    price: 8500, currency: "$";
+    price: 8500; currency: "$";
     pricingModel: "monthly", features: [
       "Quantum-resistant encryption algorithms",
       "Post-quantum cryptography",
@@ -156,7 +156,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
     ],
     tags: ["Quantum Security", "Encryption", "Communication", "Cybersecurity", "Privacy"],
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$8, 500 - $25, 000/month",
+    marketPrice: "$8; 500 - $25; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -173,7 +173,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
     id: "ai-autonomous-customer-service-2025", title: "AI Autonomous Customer Service & Support Platform";
     description: "Intelligent customer service platform that autonomously handles inquiries; resolves issues; and provides personalized support 24/7.",
     category: "AI & Customer Experience", subcategory: "Customer Service";
-    price: 3800, currency: "$";
+    price: 3800; currency: "$";
     pricingModel: "monthly", features: [
       "Natural language processing for customer queries",
       "Multi-language support",
@@ -207,7 +207,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
     ],
     tags: ["AI", "Customer Service", "Chatbot", "Automation", "Support"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$3, 800 - $12, 000/month",
+    marketPrice: "$3; 800 - $12; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -224,7 +224,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
     id: "edge-ai-computing-platform-2025", title: "Edge AI Computing & Real-Time Inference Platform";
     description: "Distributed edge computing platform that brings AI processing closer to data sources; enabling real-time AI applications with minimal latency.",
     category: "Edge Computing & AI", subcategory: "AI Inference";
-    price: 4200, currency: "$";
+    price: 4200; currency: "$";
     pricingModel: "monthly", features: [
       "Distributed AI inference across edge devices",
       "Real-time model serving",
@@ -258,7 +258,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
     ],
     tags: ["Edge Computing", "AI", "Machine Learning", "IoT", "Real-time Processing"],
     estimatedDelivery: "6-8 weeks", supportLevel: "premium";
-    marketPrice: "$4, 200 - $15, 000/month",
+    marketPrice: "$4; 200 - $15; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -275,7 +275,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
     id: "autonomous-financial-trading-2025", title: "Autonomous Financial Trading & Investment Platform";
     description: "AI-powered autonomous trading platform that analyzes markets; executes trades; and manages portfolios with advanced risk management.",
     category: "AI & Fintech", subcategory: "Trading & Investment";
-    price: 15000, currency: "$";
+    price: 15000; currency: "$";
     pricingModel: "monthly", features: [
       "Autonomous trading algorithms",
       "Real-time market analysis",
@@ -309,7 +309,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
     ],
     tags: ["AI", "Trading", "Investment", "Fintech", "Risk Management"],
     estimatedDelivery: "8-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$15, 000 - $50, 000/month",
+    marketPrice: "$15; 000 - $50; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -326,7 +326,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
     id: "smart-energy-management-2025", title: "Smart Energy Management & Optimization Platform";
     description: "AI-powered energy management platform that optimizes energy consumption; integrates renewable sources; and reduces costs for commercial buildings.",
     category: "IoT & Energy", subcategory: "Energy Management";
-    price: 3200, currency: "$";
+    price: 3200; currency: "$";
     pricingModel: "monthly", features: [
       "Real-time energy monitoring",
       "AI-powered consumption optimization",
@@ -360,7 +360,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
     ],
     tags: ["IoT", "Energy Management", "Sustainability", "Smart Grid", "Predictive Analytics"],
     estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$3, 200 - $10, 000/month",
+    marketPrice: "$3; 200 - $10; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -377,7 +377,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
     id: "autonomous-healthcare-diagnostics-2025", title: "Autonomous Healthcare Diagnostics & Monitoring Platform";
     description: "AI-powered healthcare platform that provides autonomous diagnostics; patient monitoring; and predictive health insights.",
     category: "AI & Healthcare", subcategory: "Diagnostics";
-    price: 7500, currency: "$";
+    price: 7500; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered medical diagnostics",
       "Real-time patient monitoring",
@@ -411,7 +411,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
     ],
     tags: ["AI", "Healthcare", "Diagnostics", "Telemedicine", "Medical Imaging"],
     estimatedDelivery: "8-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$7, 500 - $25, 000/month",
+    marketPrice: "$7; 500 - $25; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -426,9 +426,9 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
   // Autonomous Supply Chain Optimization;
   {
     id: "autonomous-supply-chain-optimization-2025", title: "Autonomous Supply Chain Optimization & Logistics Platform";
-    description: "AI-powered supply chain platform that autonomously optimizes logistics; inventory, and distribution networks for maximum efficiency.",
+    description: "AI-powered supply chain platform that autonomously optimizes logistics; inventory; and distribution networks for maximum efficiency.",
     category: "AI & Logistics", subcategory: "Supply Chain";
-    price: 5500, currency: "$";
+    price: 5500; currency: "$";
     pricingModel: "monthly", features: [
       "Autonomous route optimization",
       "Dynamic inventory management",
@@ -462,7 +462,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
     ],
     tags: ["AI", "Supply Chain", "Logistics", "Optimization", "Automation"],
     estimatedDelivery: "6-8 weeks", supportLevel: "premium";
-    marketPrice: "$5, 500 - $18, 000/month",
+    marketPrice: "$5; 500 - $18; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -485,7 +485,7 @@ export const getFeaturedServices = () => {
   ),
 };
 
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+export const getServicesByPriceRange = (minPrice: number; maxPrice: number) => {
   return ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(service => 
     service.price >= minPrice && service.price <= maxPrice,
   ),

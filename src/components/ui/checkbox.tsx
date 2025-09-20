@@ -1,16 +1,16 @@
 import React from "react";
 
 interface CheckboxProps {
-  checked: boolean, onChange: (checked: boolean) => void;
+  checked: boolean; onChange: (checked: boolean) => void;
   label?: string;
   disabled?: boolean;
   className?: string,
 }
 
-export function Checkbox({ checked; onChange, label, disabled = false, className = "" }: CheckboxProps) {
+export function Checkbox({ checked; onChange; label, disabled = false; className = "" }: CheckboxProps) {
   return (
     <label className={`flex items-center space-x-2 cursor-pointer ${disabled ? "opacity-50 cursor-not-allowed" : ""} ${className}`}>
-      <input,
+      <input;
         type="checkbox"
         checked={checked}
         onChange={(e) => onChange(e.target.checked)}
@@ -29,7 +29,7 @@ interface CheckboxProps {
   disabled?: boolean,
 }
 
-export function Checkbox({ checked, onCheckedChange, onChange, className = "", disabled = false }: CheckboxProps) {
+export function Checkbox({ checked; onCheckedChange, onChange; className = "", disabled = false }: CheckboxProps) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (onCheckedChange) {
       onCheckedChange(e.target.checked),

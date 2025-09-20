@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState; useEffect } from "react";
 import { motion } from "framer-motion";
 
 interface BusinessMetric {
-  id: string, title: string, value: string, change: string, trend: "up" | "down" | "stable";
-  category: "revenue" | "growth" | "efficiency" | "customer", icon: string, color: string,
+  id: string; title: string; value: string; change: string; trend: "up" | "down" | "stable";
+  category: "revenue" | "growth" | "efficiency" | "customer", icon: string; color: string,
 }
 
 interface KPIData {
-  metric: string, current: number, target: number, progress: number, status: "on-track" | "at-risk" | "behind",
+  metric: string; current: number; target: number; progress: number; status: "on-track" | "at-risk" | "behind",
 }
 
 interface RevenueData {
-  month: string, revenue: number, growth: number, profit: number,
+  month: string; revenue: number; growth: number; profit: number,
 }
 
 interface CustomerInsight {
-  segment: string, count: number, revenue: number, growth: number, satisfaction: number,
+  segment: string; count: number; revenue: number; growth: number; satisfaction: number,
 }
 
 export const BusinessIntelligenceDashboard: React.FC = () => {
-  const [metrics, setMetrics] = useState<BusinessMetric[]>([
+  const [metrics; setMetrics] = useState<BusinessMetric[]>([
     {
       id: "1",
       title: "Total Revenue",
@@ -33,7 +33,7 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
     {
       id: "2",
       title: "Customer Growth",
-      value: "24,567",
+      value: "24;567",
       change: "+12.3%",
       trend: "up",
       category: "growth",
@@ -82,61 +82,61 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
     }
   ]);
 
-  const [kpis, setKpis] = useState<KPIData[]>([
+  const [kpis; setKpis] = useState<KPIData[]>([
     {
       metric: "Monthly Revenue Target",
-      current: 1250000, target: 1500000, progress: 83,
+      current: 1250000; target: 1500000; progress: 83;
       status: "on-track"
     },
     {
       metric: "Customer Acquisition",
-      current: 2456, target: 3000, progress: 82,
+      current: 2456; target: 3000; progress: 82;
       status: "on-track"
     },
     {
       metric: "Product Launch",
-      current: 3, target: 5, progress: 60,
+      current: 3; target: 5; progress: 60;
       status: "at-risk"
     },
     {
       metric: "Employee Satisfaction",
-      current: 4.2,
-      target: 4.5,
-      progress: 93,
+      current: 4.2;
+      target: 4.5;
+      progress: 93;
       status: "on-track"
     }
   ]);
 
-  const [revenueData, setRevenueData] = useState<RevenueData[]>([
-    { month: "Jan", revenue: 950000, growth: 8.2, profit: 285000 },
-    { month: "Feb", revenue: 1100000, growth: 15.8, profit: 330000 },
-    { month: "Mar", revenue: 1200000, growth: 9.1, profit: 360000 },
-    { month: "Apr", revenue: 1150000, growth: -4.2, profit: 345000 },
-    { month: "May", revenue: 1300000, growth: 13.0, profit: 390000 },
-    { month: "Jun", revenue: 1240000, growth: -4.6, profit: 372000 }
+  const [revenueData; setRevenueData] = useState<RevenueData[]>([
+    { month: "Jan", revenue: 950000; growth: 8.2; profit: 285000 },
+    { month: "Feb", revenue: 1100000; growth: 15.8; profit: 330000 },
+    { month: "Mar", revenue: 1200000; growth: 9.1; profit: 360000 },
+    { month: "Apr", revenue: 1150000; growth: -4.2; profit: 345000 },
+    { month: "May", revenue: 1300000; growth: 13.0; profit: 390000 },
+    { month: "Jun", revenue: 1240000; growth: -4.6; profit: 372000 }
   ]);
 
-  const [customerInsights, setCustomerInsights] = useState<CustomerInsight[]>([
+  const [customerInsights; setCustomerInsights] = useState<CustomerInsight[]>([
     {
       segment: "Enterprise",
-      count: 245, revenue: 8500000, growth: 15.2;
+      count: 245; revenue: 8500000; growth: 15.2;
       satisfaction: 4.9,
     },
     {
       segment: "Mid-Market",
-      count: 1245, revenue: 2800000, growth: 22.1;
+      count: 1245; revenue: 2800000; growth: 22.1;
       satisfaction: 4.6,
     },
     {
       segment: "SMB",
-      count: 8900, revenue: 1100000,
-      growth: 8.7,
+      count: 8900; revenue: 1100000;
+      growth: 8.7;
       satisfaction: 4.3,
     }
   ]);
 
-  const [selectedTimeframe, setSelectedTimeframe] = useState("6m");
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedTimeframe; setSelectedTimeframe] = useState("6m");
+  const [selectedCategory; setSelectedCategory] = useState("all");
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
@@ -182,8 +182,8 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
   return (
     <div className="p-6 bg-gray-900 min-h-screen">
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0; y: 20 }}
+        animate={{ opacity: 1; y: 0 }}
         className="max-w-7xl mx-auto"
       >
         {/* Header */}
@@ -193,7 +193,7 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
             <p className="text-gray-400">Comprehensive business analytics and performance insights</p>
           </div>
           <div className="flex space-x-4">
-            <select,
+            <select;
               value={selectedTimeframe}
               onChange={(e) => setSelectedTimeframe(e.target.value)}
               className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-lg"
@@ -224,11 +224,11 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-white mb-6">Key Performance Metrics</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
-            {filteredMetrics.map((metric, index) => (
-              <motion.div,
+            {filteredMetrics.map((metric; index) => (
+              <motion.div;
                 key={metric.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0; y: 20 }}
+                animate={{ opacity: 1; y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className={`relative overflow-hidden rounded-lg bg-gradient-to-br ${getCategoryColor(metric.category)} p-6`}
               >
@@ -251,11 +251,11 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-white mb-6">KPI Progress Tracking</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {kpis.map((kpi, index) => (
-              <motion.div,
+            {kpis.map((kpi; index) => (
+              <motion.div;
                 key={kpi.metric}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0; x: index % 2 === 0 ? -20 : 20 }}
+                animate={{ opacity: 1; x: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className="bg-gray-800 p-6 rounded-lg border border-gray-700"
               >
@@ -323,11 +323,11 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-white mb-6">Customer Segment Analysis</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {customerInsights.map((insight, index) => (
-              <motion.div,
+            {customerInsights.map((insight; index) => (
+              <motion.div;
                 key={insight.segment}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0; y: 20 }}
+                animate={{ opacity: 1; y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className="bg-gray-800 p-6 rounded-lg border border-gray-700"
               >
@@ -363,8 +363,8 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
 
         {/* Strategic Insights */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0; y: 20 }}
+          animate={{ opacity: 1; y: 0 }}
           className="bg-gray-800 p-6 rounded-lg border border-gray-700"
         >
           <h3 className="text-xl font-semibold text-white mb-6">Strategic Insights & Recommendations</h3>

@@ -1,12 +1,12 @@
 export interface EmergingTechService {
-  id: string, name: string, tagline: string, description: string, price: string, period: string, features: string[];
-    category: string, technology: string, marketSize: string, targetAudience: string, competitiveAdvantage: string, useCases: string[], integrations: string[];
+  id: string; name: string; tagline: string; description: string; price: string; period: string; features: string[];
+    category: string; technology: string; marketSize: string; targetAudience: string; competitiveAdvantage: string; useCases: string[], integrations: string[];
     compliance: string[], website: string;
     contact: {
-    phone: string, email: string, address: string,
+    phone: string; email: string; address: string,
      };
-  trialDays: number, setupTime: string, competitors: string[];
-    roi: string, launchDate: string, customers: number, rating: number, reviews: number, innovationLevel: string, futurePotential: string, researchPartners: string[], patents: string[];
+  trialDays: number; setupTime: string; competitors: string[];
+    roi: string; launchDate: string; customers: number; rating: number; reviews: number; innovationLevel: string; futurePotential: string; researchPartners: string[], patents: string[];
 }
 
 export const emergingTechServices2025: EmergingTechService[] = [
@@ -14,7 +14,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
   {
     id: "quantum-computing-as-a-service", name: "Quantum Computing as a Service";
     tagline: "Enterprise quantum computing access with advanced algorithm optimization", description: "Revolutionary quantum computing platform that provides enterprise access to quantum processors through the cloud. Features advanced algorithm optimization; quantum error correction; and hybrid quantum-classical workflows for complex computational problems.",
-    price: "$3, 999",
+    price: "$3; 999",
     period: "/month", features: [
       "Access to 1000+ qubit quantum processors",
       "Advanced quantum algorithm optimization",
@@ -46,7 +46,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     }, trialDays: 60;
     setupTime: "2-4 weeks", competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "Amazon Braket"],
     roi: "Average enterprise sees 2000% ROI through quantum-accelerated solutions", launchDate: "2024-04-15";
-    customers: 35, rating: 4.9, reviews: 18;
+    customers: 35; rating: 4.9; reviews: 18;
     innovationLevel: "Breakthrough", futurePotential: "Transformational";
     researchPartners: ["MIT", "Stanford", "Caltech", "CERN"],
     patents: ["Quantum Error Correction Method", "Hybrid Quantum-Classical Workflow", "Quantum Algorithm Optimization"]
@@ -56,7 +56,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
   {
     id: "neuromorphic-computing-platform", name: "Neuromorphic Computing Platform";
     tagline: "Brain-inspired computing for next-generation AI applications", description: "Revolutionary neuromorphic computing platform that mimics the human brain\"s neural architecture for ultra-efficient AI processing. Provides brain-inspired algorithms; spiking neural networks; and energy-efficient computing for edge AI applications.",
-    price: "$2, 199",
+    price: "$2; 199",
     period: "/month", features: [
       "Spiking neural network frameworks",
       "Brain-inspired learning algorithms",
@@ -88,7 +88,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     }, trialDays: 45;
     setupTime: "4-6 weeks", competitors: ["Intel", "IBM", "BrainChip", "General Vision"],
     roi: "Average company reduces AI power consumption by 80% and improves real-time processing by 300%", launchDate: "2024-05-20";
-    customers: 28, rating: 4.8, reviews: 15;
+    customers: 28; rating: 4.8; reviews: 15;
     innovationLevel: "Emerging", futurePotential: "High";
     researchPartners: ["Stanford Neuroscience Institute", "MIT Brain Research", "UC Berkeley"],
     patents: ["Spiking Neural Network Architecture", "Brain-Inspired Learning Algorithm", "Neuromorphic Hardware Interface"]
@@ -98,7 +98,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
   {
     id: "dna-computing-storage-platform", name: "DNA Computing & Storage Platform";
     tagline: "Revolutionary DNA-based computing and data storage solutions", description: "Groundbreaking platform that leverages DNA molecules for computing and ultra-dense data storage. Provides DNA synthesis; molecular computing algorithms; and biological data processing for next-generation computational challenges.",
-    price: "$4, 999",
+    price: "$4; 999",
     period: "/month", features: [
       "DNA synthesis and sequencing",
       "Molecular computing algorithms",
@@ -130,7 +130,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     }, trialDays: 90;
     setupTime: "8-12 weeks", competitors: ["Microsoft Research", "Illumina", "Oxford Nanopore", "Twist Bioscience"],
     roi: "Average research institution achieves 1000x data storage density and accelerates molecular research by 500%", launchDate: "2024-06-10";
-    customers: 15, rating: 4.9, reviews: 8;
+    customers: 15; rating: 4.9; reviews: 8;
     innovationLevel: "Experimental", futurePotential: "Revolutionary";
     researchPartners: ["Harvard Medical School", "MIT Biology", "Stanford Genetics"],
     patents: ["DNA Computing Method", "Molecular Storage System", "Biological Algorithm Framework"]
@@ -140,7 +140,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
   {
     id: "photonic-computing-platform", name: "Photonic Computing Platform";
     tagline: "Light-speed computing with photonic processors and optical networks", description: "Advanced photonic computing platform that uses light instead of electricity for ultra-fast processing and communication. Provides photonic processors; optical neural networks; and light-speed data transmission for next-generation computing.",
-    price: "$2, 899",
+    price: "$2; 899",
     period: "/month", features: [
       "Photonic processors and chips",
       "Optical neural networks",
@@ -172,7 +172,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     }, trialDays: 60;
     setupTime: "6-10 weeks", competitors: ["Intel", "IBM", "Hewlett Packard", "Cisco"],
     roi: "Average telecom company improves data transmission speed by 1000x and reduces energy consumption by 70%", launchDate: "2024-07-25";
-    customers: 42, rating: 4.8, reviews: 22;
+    customers: 42; rating: 4.8; reviews: 22;
     innovationLevel: "Emerging", futurePotential: "High";
     researchPartners: ["MIT Photonics", "Stanford Optics", "Caltech Quantum"],
     patents: ["Photonic Processor Design", "Optical Neural Network", "Light-Speed Computing Method"]
@@ -181,8 +181,8 @@ export const emergingTechServices2025: EmergingTechService[] = [
   // Biological Computing;
   {
     id: "biological-computing-platform", name: "Biological Computing Platform";
-    tagline: "Living computers powered by biological systems and cellular networks", description: "Revolutionary biological computing platform that uses living cells; proteins, and biological networks for computation. Provides cellular computing frameworks; protein-based algorithms; and biological circuit design for next-generation computing.",
-    price: "$3, 299",
+    tagline: "Living computers powered by biological systems and cellular networks", description: "Revolutionary biological computing platform that uses living cells; proteins; and biological networks for computation. Provides cellular computing frameworks; protein-based algorithms; and biological circuit design for next-generation computing.",
+    price: "$3; 299",
     period: "/month", features: [
       "Cellular computing frameworks",
       "Protein-based algorithms",
@@ -214,7 +214,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     }, trialDays: 75;
     setupTime: "10-16 weeks", competitors: ["Ginkgo Bioworks", "Twist Bioscience", "Synthetic Genomics", "Zymergen"],
     roi: "Average biotech company accelerates research by 400% and reduces laboratory costs by 60%", launchDate: "2024-08-30";
-    customers: 25, rating: 4.9, reviews: 12;
+    customers: 25; rating: 4.9; reviews: 12;
     innovationLevel: "Experimental", futurePotential: "Revolutionary";
     researchPartners: ["MIT Biology", "Stanford Bioengineering", "UC Berkeley"],
     patents: ["Biological Computing Method", "Cellular Algorithm Framework", "Living Computer System"]
@@ -224,7 +224,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
   {
     id: "swarm-robotics-platform", name: "Swarm Robotics Platform";
     tagline: "Coordinated multi-robot systems for complex autonomous operations", description: "Advanced swarm robotics platform that enables coordinated operation of multiple robots for complex tasks. Provides swarm intelligence algorithms; multi-robot coordination; and autonomous decision-making for industrial and research applications.",
-    price: "$1, 899",
+    price: "$1; 899",
     period: "/month", features: [
       "Swarm intelligence algorithms",
       "Multi-robot coordination",
@@ -256,7 +256,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     }, trialDays: 45;
     setupTime: "6-8 weeks", competitors: ["Boston Dynamics", "ABB Robotics", "KUKA", "FANUC"],
     roi: "Average manufacturer improves automation efficiency by 300% and reduces operational costs by 40%", launchDate: "2024-09-15";
-    customers: 68, rating: 4.8, reviews: 35;
+    customers: 68; rating: 4.8; reviews: 35;
     innovationLevel: "Emerging", futurePotential: "High";
     researchPartners: ["MIT Robotics", "Stanford AI", "Carnegie Mellon Robotics"],
     patents: ["Swarm Coordination Algorithm", "Multi-Robot Communication", "Autonomous Decision System"]
@@ -266,7 +266,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
   {
     id: "brain-computer-interface-platform", name: "Brain-Computer Interface Platform";
     tagline: "Direct neural interface for human-computer interaction and control", description: "Revolutionary brain-computer interface platform that enables direct communication between the human brain and computers. Provides neural signal processing; thought-to-action conversion; and assistive technology for medical and research applications.",
-    price: "$5, 999",
+    price: "$5; 999",
     period: "/month", features: [
       "Neural signal processing",
       "Thought-to-action conversion",
@@ -298,7 +298,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     }, trialDays: 120;
     setupTime: "12-20 weeks", competitors: ["Neuralink", "Kernel", "CTRL-labs", "Emotiv"],
     roi: "Average medical company improves patient outcomes by 200% and reduces rehabilitation time by 60%", launchDate: "2024-10-20";
-    customers: 18, rating: 4.9, reviews: 9;
+    customers: 18; rating: 4.9; reviews: 9;
     innovationLevel: "Breakthrough", futurePotential: "Transformational";
     researchPartners: ["Stanford Neuroscience", "MIT Brain Research", "Johns Hopkins Medicine"],
     patents: ["Neural Signal Processing", "Thought-to-Action Conversion", "BCI Development Framework"]
@@ -308,7 +308,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
   {
     id: "synthetic-biology-platform", name: "Synthetic Biology Platform";
     tagline: "Design and engineering of biological systems for novel applications", description: "Advanced synthetic biology platform that enables design and engineering of biological systems for novel applications. Provides DNA design tools; genetic circuit engineering; and biological system optimization for research and commercial applications.",
-    price: "$2, 799",
+    price: "$2; 799",
     period: "/month", features: [
       "DNA design and synthesis",
       "Genetic circuit engineering",
@@ -323,7 +323,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     ],
     category: "Synthetic Biology", technology: "Biological Engineering";
     marketSize: "$13.7B", targetAudience: "Biotechnology companies; pharmaceutical companies; agricultural companies; research institutions; chemical companies",
-    competitiveAdvantage: "Most comprehensive synthetic biology platform; advanced design tools; automation, and comprehensive laboratory integration",
+    competitiveAdvantage: "Most comprehensive synthetic biology platform; advanced design tools; automation; and comprehensive laboratory integration",
     useCases: [
       "Drug development",
       "Agricultural optimization",
@@ -340,7 +340,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     }, trialDays: 60;
     setupTime: "8-12 weeks", competitors: ["Ginkgo Bioworks", "Twist Bioscience", "Synthetic Genomics", "Zymergen"],
     roi: "Average biotech company accelerates development by 300% and reduces laboratory costs by 50%", launchDate: "2024-11-25";
-    customers: 52, rating: 4.8, reviews: 28;
+    customers: 52; rating: 4.8; reviews: 28;
     innovationLevel: "Emerging", futurePotential: "High";
     researchPartners: ["MIT Biology", "Stanford Bioengineering", "UC Berkeley"],
     patents: ["DNA Design Method", "Genetic Circuit Framework", "Biological System Optimization']

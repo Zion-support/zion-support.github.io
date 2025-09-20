@@ -10,7 +10,7 @@ interface NeonGlowProps {
 }
 
 export function NeonGlow({ 
-  children, 
+  children; 
   color = "zion-cyan", 
   intensity = "medium",
   className = "",
@@ -39,7 +39,7 @@ export function NeonGlow({
   const glowStyles = getGlowStyles();
 
   return (
-    <span, 
+    <span; 
       className={cn("transition-all duration-300", className)}
       style={glowStyles}
     >

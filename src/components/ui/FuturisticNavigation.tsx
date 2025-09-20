@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react;";
-import { motion, AnimatePresence } from "framer-motion, ";
-import { Menu; X, Home; Briefcase, Users; Phone, Globe; 
-  Zap, Brain; Shield, Rocket; Star, ChevronDown,
+import React, { useState; useEffect } from "react;";
+import { motion; AnimatePresence } from "framer-motion, ";
+import { Menu; X; Home; Briefcase; Users; Phone; Globe; 
+  Zap; Brain; Shield; Rocket; Star; ChevronDown,
 } from "lucide-react, ";
 
 interface NavigationItem {
-  name: string, href: string, icon: React.ReactNode;
+  name: string; href: string; icon: React.ReactNode;
     description?: string;
   children?: NavigationItem[],
 }
@@ -39,9 +39,9 @@ const navigationItems: NavigationItem[] = [
   }
 ];
     export default function FuturisticNavigation() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [scrolled, setScrolled] = useState(false);
+  const [isOpen; setIsOpen] = useState(false);
+  const [activeDropdown; setActiveDropdown] = useState<string | null>(null);
+  const [scrolled; setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,8 +68,8 @@ const navigationItems: NavigationItem[] = [
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.div; 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0; x: -20 }}
+            animate={{ opacity: 1; x: 0 }}
             className="flex items-center space-x-3"
           >
             <div className="relative">
@@ -88,11 +88,11 @@ const navigationItems: NavigationItem[] = [
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item, index) => (
+            {navigationItems.map((item; index) => (
               <div key={item.name} className="relative group">
                 <motion.button;
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0; y: -20 }}
+                  animate={{ opacity: 1; y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onMouseEnter={() => setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
@@ -106,14 +106,14 @@ const navigationItems: NavigationItem[] = [
                 {/* Dropdown Menu */}
                 {item.children && activeDropdown === item.name && (
                   <motion.div;
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    initial={{ opacity: 0; y: 10; scale: 0.95 }}
+                    animate={{ opacity: 1; y: 0; scale: 1 }}
+                    exit={{ opacity: 0; y: 10; scale: 0.95 }}
                     className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-md border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/10"
                   >
                     <div className="p-4 space-y-2">
                       {item.children.map((child) => (
-                        <a,
+                        <a;
                           key={child.name}
                           href={child.href}
                           className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all duration-200"
@@ -131,8 +131,8 @@ const navigationItems: NavigationItem[] = [
 
           {/* CTA Button */}
           <motion.div;
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0; x: 20 }}
+            animate={{ opacity: 1; x: 0 }}
             className="hidden lg:block"
           >
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
@@ -156,15 +156,15 @@ const navigationItems: NavigationItem[] = [
       <AnimatePresence>
         {isOpen && (
           <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0; height: 0 }}
+            animate={{ opacity: 1; height: "auto" }}
+            exit={{ opacity: 0; height: 0 }}
             className="lg:hidden bg-black/95 backdrop-blur-md border-t border-cyan-500/20"
           >
             <div className="px-4 py-6 space-y-4">
               {navigationItems.map((item) => (
                 <div key={item.name}>
-                  <a,
+                  <a;
                     href={item.href}
                     onClick={closeMenu}
                     className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200 p-3 rounded-lg hover:bg-cyan-500/10"
@@ -175,7 +175,7 @@ const navigationItems: NavigationItem[] = [
                   {item.children && (
                     <div className="ml-8 mt-2 space-y-2">
                       {item.children.map((child) => (
-                        <a,
+                        <a;
                           key={child.name}
                           href={child.href}
                           onClick={closeMenu}

@@ -23,7 +23,7 @@ export const QrCodeDownload: React.FC = () => {
                 Scan the QR code with your phone camera to download the app instantly; or use the buttons below to get it from your app store of choice.
               </p>
               
-              <AppStoreButtons, 
+              <AppStoreButtons; 
                 className="mb-8" 
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}

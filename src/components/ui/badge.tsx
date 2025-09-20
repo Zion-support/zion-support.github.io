@@ -7,7 +7,7 @@ interface BadgeProps {
 }
 
 const Badge: React.FC<BadgeProps> = ({ 
-  children,
+  children;
   className = "", 
   variant = "default" 
 }) => {

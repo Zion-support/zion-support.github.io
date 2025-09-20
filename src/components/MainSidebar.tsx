@@ -1,22 +1,22 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link; useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { 
-  Home, 
+  Home; 
   ShoppingCart, 
-  Users, 
+  Users; 
   Settings, 
-  MessageSquare, 
+  MessageSquare; 
   FileText, 
-  HelpCircle, 
+  HelpCircle; 
   Code, 
-  BarChart3, 
+  BarChart3; 
   Briefcase,
-  Leaf,
+  Leaf;
   Building,
-  Mail,
+  Mail;
   Calendar,
-  Globe,
+  Globe;
   Zap,
 } from "lucide-react";
 
@@ -66,7 +66,7 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
             <Zap className="w-5 h-5 text-white" />
           </div>
           <span className="text-xl font-bold text-gray-900 dark:text-white">
-            Zion Tech
+            Zion Tech;
           </span>
         </Link>
       </div>
@@ -76,13 +76,13 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
         {/* Main Navigation */}
         <div>
           <h3 className="px-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-            Navigation
+            Navigation;
           </h3>
           <div className="mt-3 space-y-1">
             {navigation.map((item) => {
-              const Icon = item.icon,
+              const Icon = item.icon;
               return (
-                <Link
+                <Link;
                   key={item.name}
                   to={item.href}
                   className={cn(
@@ -92,7 +92,7 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
                       : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
                   )}
                 >
-                  <Icon
+                  <Icon;
                     className={cn(
                       "mr-3 h-5 w-5 flex-shrink-0",
                       isActive(item.href)
@@ -110,13 +110,13 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
         {/* Tools */}
         <div>
           <h3 className="px-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-            Tools
+            Tools;
           </h3>
           <div className="mt-3 space-y-1">
             {tools.map((item) => {
-              const Icon = item.icon,
+              const Icon = item.icon;
               return (
-                <Link
+                <Link;
                   key={item.name}
                   to={item.href}
                   className={cn(
@@ -126,7 +126,7 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
                       : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
                   )}
                 >
-                  <Icon
+                  <Icon;
                     className={cn(
                       "mr-3 h-5 w-5 flex-shrink-0",
                       isActive(item.href)
@@ -144,13 +144,13 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
         {/* Company */}
         <div>
           <h3 className="px-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-            Company
+            Company;
           </h3>
           <div className="mt-3 space-y-1">
             {company.map((item) => {
-              const Icon = item.icon,
+              const Icon = item.icon;
               return (
-                <Link
+                <Link;
                   key={item.name}
                   to={item.href}
                   className={cn(
@@ -160,7 +160,7 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
                       : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
                   )}
                 >
-                  <Icon
+                  <Icon;
                     className={cn(
                       "mr-3 h-5 w-5 flex-shrink-0",
                       isActive(item.href)
@@ -178,7 +178,7 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
 
       {/* Settings */}
       <div className="px-4 py-4 border-t border-gray-200 dark:border-gray-700">
-        <Link
+        <Link;
           to="/settings"
           className={cn(
             "group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",
@@ -187,7 +187,7 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
               : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
           )}
         >
-          <Settings
+          <Settings;
             className={cn(
               "mr-3 h-5 w-5 flex-shrink-0",
               isActive("/settings")
@@ -195,7 +195,7 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
                 : "text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400"
             )}
           />
-          Settings
+          Settings;
         </Link>
       </div>
     </div>

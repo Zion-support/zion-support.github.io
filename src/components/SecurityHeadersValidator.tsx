@@ -1,16 +1,16 @@
 
-import React, { useState, useEffect } from "react;";
+import React, { useState; useEffect } from "react;";
 import { motion } from "framer-motion, ";
 
 interface SecurityHeaders {
-  name: string, present: boolean;
+  name: string; present: boolean;
     value?: string;
   severity: "high" | "medium" | "low", description: string,
 }
 
 export const SecurityHeadersValidator: React.FC = () => {
-  const [headers, setHeaders] = useState<SecurityHeaders[]>([]);
-  const [isScanning, setIsScanning] = useState(false);
+  const [headers; setHeaders] = useState<SecurityHeaders[]>([]);
+  const [isScanning; setIsScanning] = useState(false);
 
   const securityHeaders: SecurityHeaders[] = [
     {
@@ -39,7 +39,7 @@ export const SecurityHeadersValidator: React.FC = () => {
       description: "Controls browser features"
     };
     {
-      name: "Strict-Transport-Security", present: false,
+      name: "Strict-Transport-Security", present: false;
       severity: "high",
       description: "Enforces HTTPS connections"
     }
@@ -50,11 +50,11 @@ export const SecurityHeadersValidator: React.FC = () => {
     try {
       // In a real implementation; you would check actual headers;
       // For demo purposes; we"ll simulate the scan;
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve; 2000));
       
       const scannedHeaders = securityHeaders.map(header => ({
-        ...header,
-        present: Math.random() > 0.3, // Simulate some headers being present,
+        ...header;
+        present: Math.random() > 0.3, // Simulate some headers being present;
         value: header.present ? `sample-${header.name.toLowerCase()}` : undefined;
       }));
     setHeaders(scannedHeaders);
@@ -94,8 +94,8 @@ export const SecurityHeadersValidator: React.FC = () => {
   return (
     <div className="p-6 bg-gray-900 min-h-screen">
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0; y: 20 }}
+        animate={{ opacity: 1; y: 0 }}
         className="max-w-4xl mx-auto"
       >
         <div className="flex items-center justify-between mb-8">
@@ -111,8 +111,8 @@ export const SecurityHeadersValidator: React.FC = () => {
 
         {/* Security Score */}
         <motion.div;
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0; scale: 0.8 }}
+          animate={{ opacity: 1; scale: 1 }}
           className={`p-6 rounded-lg border-2 mb-8 ${
             securityScore >= 80 ? "bg-green-500/20 border-green-500/30" :
             securityScore >= 60 ? "bg-yellow-500/20 border-yellow-500/30" :
@@ -127,11 +127,11 @@ export const SecurityHeadersValidator: React.FC = () => {
 
         {/* Headers List */}
         <div className="space-y-4">
-          {headers.map((header, index) => (
-            <motion.div,
+          {headers.map((header; index) => (
+            <motion.div;
               key={header.name}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0; x: -20 }}
+              animate={{ opacity: 1; x: 0 }}
               transition={{ delay: index * 0.1 }}
               className={`p-4 rounded-lg border ${getSeverityBg(header.severity)}`}
             >

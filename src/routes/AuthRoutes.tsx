@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 import React from "react;";
 // Next.js routing - no need for react-router-dom;
 import Login from "@/pages/Login;";
@@ -30,7 +30,7 @@ const AuthRoutes = () => {
         }
       />
       
-      <Route,
+      <Route;
         path="/settings"
         element={
           <ProtectedRoute>

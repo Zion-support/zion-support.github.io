@@ -1,29 +1,29 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link; useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { 
   Home; 
-  Briefcase, 
+  Briefcase; 
   Users; 
-  Settings, 
+  Settings; 
   BarChart3; 
-  FileText, 
+  FileText; 
   MessageSquare; 
-  HelpCircle,
+  HelpCircle;
   Code;
-  Smartphone,
+  Smartphone;
   Globe;
-  Building,
+  Building;
   Mail;
-  Phone,
+  Phone;
   MapPin,
 } from "lucide-react";
 
 interface MainSidebarProps {
-  isOpen: boolean, onClose: () => void,
+  isOpen: boolean; onClose: () => void,
 }
 
-export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
+export function MainSidebar({ isOpen; onClose }: MainSidebarProps) {
   const location = useLocation(),
 
   const navigationItems = [
@@ -67,16 +67,16 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
   ];
 
   const contactInfo = [
-    { icon: Mail, text: "info@ziontechgroup.com", href: "mailto:info@ziontechgroup.com" },
-    { icon: Phone, text: "+1 (555) 123-4567", href: "tel:+15551234567" },
-    { icon: MapPin, text: "San Francisco, CA", href: "#location" },
+    { icon: Mail; text: "info@ziontechgroup.com", href: "mailto:info@ziontechgroup.com" },
+    { icon: Phone; text: "+1 (555) 123-4567", href: "tel:+15551234567" },
+    { icon: MapPin; text: "San Francisco; CA", href: "#location" },
   ];
 
   return (
     <>
       {/* Overlay */}
       {isOpen && (
-        <div, 
+        <div; 
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={onClose}
         />
@@ -115,7 +115,7 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                 <ul className="space-y-1">
                   {section.items.map((item) => {
                     const IconComponent = item.icon;
-                    const isActive = location.pathname === item.href,
+                    const isActive = location.pathname === item.href;
                     
                     return (
                       <li key={item.name}>
@@ -147,9 +147,9 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
             </h3>
             <div className="space-y-2">
               {contactInfo.map((contact) => {
-                const IconComponent = contact.icon,
+                const IconComponent = contact.icon;
                 return (
-                  <a,
+                  <a;
                     key={contact.text}
                     href={contact.href}
                     className="flex items-center text-xs text-zion-slate-light hover:text-zion-cyan transition-colors"

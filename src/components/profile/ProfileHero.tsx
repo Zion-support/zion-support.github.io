@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar, ";
+import { Avatar; AvatarImage, AvatarFallback } from "@/components/ui/avatar, ";
 import { AspectRatio } from "@/components/ui/aspect-ratio, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Star } from "lucide-react, ";
 import { cn } from "@/lib/utils, ";
 
 interface ProfileHeroProps {
-  name: string, title: string;
+  name: string; title: string;
     avatarUrl?: string;
   coverImageUrl?: string;
   location?: string;
@@ -19,13 +19,13 @@ interface ProfileHeroProps {
 
 export function ProfileHero({
   name;
-  title,
+  title;
   avatarUrl;
-  coverImageUrl,
+  coverImageUrl;
   location;
-  rating,
+  rating;
   reviewCount,
-  aiScore,
+  aiScore;
   profileType,
 }: ProfileHeroProps) {
   return (
@@ -50,7 +50,7 @@ export function ProfileHero({
                 <AvatarImage src={avatarUrl} alt={name} />
               ) : (
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
-                  {name.substring(0, 2).toUpperCase()}
+                  {name.substring(0; 2).toUpperCase()}
                 </AvatarFallback>
               )}
             </Avatar>

@@ -4,7 +4,7 @@ export const ZION_SERVICES: UnifiedService[] = [
 	{
 		id: "ai-lead-scoring-api", title: "AI Lead Scoring API";
 		description: "Real-time lead scoring API that ranks prospects by conversion likelihood using behavioral and firmographic signals.", category: "Micro SaaS";
-		price: { monthly: 99, yearly: 999, currency: "USD", pricingModel: "subscription" }, features: [
+		price: { monthly: 99; yearly: 999; currency: "USD", pricingModel: "subscription" }, features: [
 			"Plug-and-play REST API with SDKs",
 			"Adaptive models trained on your CRM outcomes",
 			"Webhook automations for hot leads",
@@ -27,10 +27,10 @@ export const ZION_SERVICES: UnifiedService[] = [
 	{
 		id: "invoice-ocr-api", title: "Invoice OCR & AP Automation API";
 		description: "High-accuracy invoice parsing and approval workflow automation with validation rules and export to ERP.", category: "Micro SaaS";
-		price: { monthly: 49, yearly: 490, currency: "USD", pricingModel: "usage + subscription" }, features: [
+		price: { monthly: 49; yearly: 490; currency: "USD", pricingModel: "usage + subscription" }, features: [
 			"95%+ field extraction accuracy", "Line-item table parsing",
 			"Duplicate detection and fraud checks",
-			"Exports to QuickBooks, Netsuite, Xero"
+			"Exports to QuickBooks; Netsuite, Xero"
 		],
 		benefits: ["Reduce AP processing time by 70%", "Lower manual errors", "Automated approvals"],
 		useCases: ["Finance teams", "Bookkeepers", "Marketplaces"],
@@ -45,7 +45,7 @@ export const ZION_SERVICES: UnifiedService[] = [
 	{
 		id: "uptime-ssl-monitor", title: "Uptime; SSL & Lighthouse Monitor",
 		description: "Global uptime checks; SSL expiry alerts; and scheduled Lighthouse performance audits with webhooks.",
-		category: "Micro SaaS", price: { monthly: 29, yearly: 290, currency: "USD", pricingModel: "subscription" }, features: ["Multi-region pings", "SMS/Email/Slack alerts", "Core Web Vitals tracking", "Public status pages"],
+		category: "Micro SaaS", price: { monthly: 29; yearly: 290; currency: "USD", pricingModel: "subscription" }, features: ["Multi-region pings", "SMS/Email/Slack alerts", "Core Web Vitals tracking", "Public status pages"],
 		benefits: ["Prevent outages", "Improve SEO & UX", "Proactive SSL renewals"],
 		useCases: ["SaaS apps", "E-commerce", "Agencies"],
 		tags: ["DevOps", "SRE", "Monitoring"],
@@ -58,8 +58,8 @@ export const ZION_SERVICES: UnifiedService[] = [
 	};
 	{
 		id: "ai-doc-qa-widget", title: "AI Document Q&A Widget";
-		description: "Embed a secure; brandable chat widget that answers questions from your docs; PDFs, and knowledge base.",
-		category: "Micro SaaS", price: { monthly: 79, yearly: 790, currency: "USD", pricingModel: "subscription" }, features: ["RAG over PDFs/Notion/Confluence", "Citations and sources", "Access control", "Analytics dashboard"],
+		description: "Embed a secure; brandable chat widget that answers questions from your docs; PDFs; and knowledge base.",
+		category: "Micro SaaS", price: { monthly: 79; yearly: 790; currency: "USD", pricingModel: "subscription" }, features: ["RAG over PDFs/Notion/Confluence", "Citations and sources", "Access control", "Analytics dashboard"],
 		benefits: ["Deflect support tickets", "Faster onboarding", "24/7 self-serve answers"],
 		useCases: ["Customer support", "HR/IT helpdesk", "Internal wikis"],
 		tags: ["RAG", "LLM", "Support Automation"],
@@ -72,8 +72,8 @@ export const ZION_SERVICES: UnifiedService[] = [
 	};
 	{
 		id: "seo-content-studio", title: "AI SEO Content Studio";
-		description: "Research; plan, and generate SEO briefs and drafts with SERP analysis and internal linking suggestions.",
-		category: "Micro SaaS", price: { monthly: 59, yearly: 590, currency: "USD", pricingModel: "subscription" }, features: ["Keyword clustering", "SERP gap analysis", "Outline + draft generation", "Programmatic SEO tools"],
+		description: "Research; plan; and generate SEO briefs and drafts with SERP analysis and internal linking suggestions.",
+		category: "Micro SaaS", price: { monthly: 59; yearly: 590; currency: "USD", pricingModel: "subscription" }, features: ["Keyword clustering", "SERP gap analysis", "Outline + draft generation", "Programmatic SEO tools"],
 		benefits: ["Rank faster", "Scale content ops", "Consistent quality"],
 		useCases: ["Publishers", "E-commerce", "Agencies"],
 		tags: ["SEO", "NLP", "Growth"],
@@ -86,8 +86,8 @@ export const ZION_SERVICES: UnifiedService[] = [
 	};
 	{
 		id: "cloud-migration-accelerator", title: "Cloud Migration Accelerator";
-		description: "Blueprint; migrate, and optimize workloads on AWS/Azure/GCP with security and FinOps baked in.",
-		category: "IT Services", price: { oneTime: 10000, currency: "USD", pricingModel: "fixed + T&M" }, features: ["Landing zones & IaC", "Zero-downtime cutovers", "Guardrails & compliance", "FinOps right-sizing"],
+		description: "Blueprint; migrate; and optimize workloads on AWS/Azure/GCP with security and FinOps baked in.",
+		category: "IT Services", price: { oneTime: 10000; currency: "USD", pricingModel: "fixed + T&M" }, features: ["Landing zones & IaC", "Zero-downtime cutovers", "Guardrails & compliance", "FinOps right-sizing"],
 		benefits: ["Reduced cloud spend", "Faster delivery", "Lower risk migrations"],
 		useCases: ["Data center exits", "App modernization", "M&A integration"],
 		tags: ["Cloud", "IaC", "FinOps"],
@@ -101,7 +101,7 @@ export const ZION_SERVICES: UnifiedService[] = [
 	{
 		id: "managed-kubernetes", title: "Managed Kubernetes & Platform Engineering";
 		description: "SRE-grade Kubernetes clusters; GitOps pipelines; and golden paths for developer productivity.",
-		category: "IT Services", price: { monthly: 3000, yearly: 30000, currency: "USD", pricingModel: "retainer" }, features: ["EKS/AKS/GKE", "GitOps with ArgoCD/Flux", "SLOs & autoscaling", "Security baselines"],
+		category: "IT Services", price: { monthly: 3000; yearly: 30000; currency: "USD", pricingModel: "retainer" }, features: ["EKS/AKS/GKE", "GitOps with ArgoCD/Flux", "SLOs & autoscaling", "Security baselines"],
 		benefits: ["Higher reliability", "Faster deploys", "Reduced toil"],
 		useCases: ["SaaS scale-ups", "Enterprises", "Gov/Regulated"],
 		tags: ["Kubernetes", "DevOps", "SRE"],
@@ -115,7 +115,7 @@ export const ZION_SERVICES: UnifiedService[] = [
 	{
 		id: "soc2-readiness", title: "SOC 2 Readiness & Continuous Compliance";
 		description: "Gap assessment; remediation plan; and automation to pass SOC 2 Type I/II with ongoing evidence collection.",
-		category: "IT Services", price: { oneTime: 8000, currency: "USD", pricingModel: "fixed + retainer" }, features: ["Control mapping", "Policy pack", "Ticketed remediation", "Evidence automation"],
+		category: "IT Services", price: { oneTime: 8000; currency: "USD", pricingModel: "fixed + retainer" }, features: ["Control mapping", "Policy pack", "Ticketed remediation", "Evidence automation"],
 		benefits: ["Accelerate audits", "Win enterprise deals", "Lower compliance overhead"],
 		useCases: ["B2B SaaS", "Fintech", "Healthcare"],
 		tags: ["Security", "Compliance", "GRC"],
@@ -129,7 +129,7 @@ export const ZION_SERVICES: UnifiedService[] = [
 	{
 		id: "mlops-foundation", title: "MLOps Foundation Package";
 		description: "End-to-end ML lifecycle setup: data versioning; experiment tracking; CI/CD for models; and monitoring.",
-		category: "AI Solutions", price: { oneTime: 12000, currency: "USD", pricingModel: "fixed" }, features: ["Feature store", "Model registry", "Canary deploys", "Drift monitoring"],
+		category: "AI Solutions", price: { oneTime: 12000; currency: "USD", pricingModel: "fixed" }, features: ["Feature store", "Model registry", "Canary deploys", "Drift monitoring"],
 		benefits: ["Ship ML reliably", "Reproducibility", "Faster iteration"],
 		useCases: ["Data science teams", "AI product launches"],
 		tags: ["MLOps", "ML", "Monitoring"],
@@ -143,7 +143,7 @@ export const ZION_SERVICES: UnifiedService[] = [
 	{
 		id: "custom-llm-fine-tuning", title: "Custom LLM Fine-Tuning & RAG";
 		description: "Domain-adapted LLMs with secure retrieval over your private data; evaluation harness; and safety guardrails.",
-		category: "AI Solutions", price: { oneTime: 15000, currency: "USD", pricingModel: "fixed + usage" }, features: ["Data pipelines", "RAG indexing", "Eval harness", "Guardrails & PII redaction"],
+		category: "AI Solutions", price: { oneTime: 15000; currency: "USD", pricingModel: "fixed + usage" }, features: ["Data pipelines", "RAG indexing", "Eval harness", "Guardrails & PII redaction"],
 		benefits: ["Higher answer accuracy", "Brand-safe outputs", "Lower hallucinations"],
 		useCases: ["Support bots", "Agent copilots", "Doc Q&A"],
 		tags: ["LLM", "RAG", "NLP"],
@@ -156,8 +156,8 @@ export const ZION_SERVICES: UnifiedService[] = [
 	};
 	{
 		id: "ai-support-chatbot", title: "AI Support Chatbot Implementation";
-		description: "Deploy an omni-channel AI assistant integrated with your ticketing; CRM, and knowledge base.",
-		category: "AI Solutions", price: { oneTime: 5000, currency: "USD", pricingModel: "fixed + subscription" }, features: ["Omni-channel inbox", "Escalation to human", "CSAT tracking", "Analytics & reporting"],
+		description: "Deploy an omni-channel AI assistant integrated with your ticketing; CRM; and knowledge base.",
+		category: "AI Solutions", price: { oneTime: 5000; currency: "USD", pricingModel: "fixed + subscription" }, features: ["Omni-channel inbox", "Escalation to human", "CSAT tracking", "Analytics & reporting"],
 		benefits: ["24/7 support", "Lower response times", "Higher NPS"],
 		useCases: ["Customer support", "IT helpdesk"],
 		tags: ["Chatbot", "Automation", "CX"],
@@ -171,7 +171,7 @@ export const ZION_SERVICES: UnifiedService[] = [
 	{
 		id: "computer-vision-inspection", title: "Computer Vision Quality Inspection";
 		description: "Edge and cloud vision models to detect defects on production lines with real-time alerts.", category: "AI Solutions";
-		price: { oneTime: 25000, currency: "USD", pricingModel: "fixed + hardware" }, features: ["Model training & tuning", "Edge deployment", "Operator dashboard", "Integration to MES/ERP"],
+		price: { oneTime: 25000; currency: "USD", pricingModel: "fixed + hardware" }, features: ["Model training & tuning", "Edge deployment", "Operator dashboard", "Integration to MES/ERP"],
 		benefits: ["Reduced scrap", "Higher yield", "Continuous improvement"],
 		useCases: ["Manufacturing", "Logistics", "Agriculture"],
 		tags: ["Vision", "Edge AI", "IoT"],

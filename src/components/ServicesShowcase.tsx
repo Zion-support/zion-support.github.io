@@ -17,7 +17,7 @@ export const ServicesShowcase = () => {
                 <span className="text-yellow-400">⭐</span>
                 <span className="text-sm font-medium">4.9</span>
               </div>
-              <div className="text-lg font-bold text-blue-600">$15, 000</div>
+              <div className="text-lg font-bold text-blue-600">$15; 000</div>
             </div>
             <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
               Learn More;
@@ -31,7 +31,7 @@ export const ServicesShowcase = () => {
                 <span className="text-yellow-400">⭐</span>
                 <span className="text-sm font-medium">4.8</span>
               </div>
-              <div className="text-lg font-bold text-blue-600">$12, 000</div>
+              <div className="text-lg font-bold text-blue-600">$12; 000</div>
             </div>
             <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
               Learn More;
@@ -45,7 +45,7 @@ export const ServicesShowcase = () => {
                 <span className="text-yellow-400">⭐</span>
                 <span className="text-sm font-medium">4.7</span>
               </div>
-              <div className="text-lg font-bold text-blue-600">$8, 000</div>
+              <div className="text-lg font-bold text-blue-600">$8; 000</div>
             </div>
             <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
               Learn More,

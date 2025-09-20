@@ -1,14 +1,14 @@
 export interface ComprehensiveInnovativeService2025 {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string;
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string;
     pricingModel: "one-time" | "monthly" | "yearly" | "per-user" | "per-project" | "usage-based" | "freemium", features: string[];
     benefits: string[], useCases: string[];
     targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: "basic" | "standard" | "premium" | "enterprise";
-    marketPrice: string, contactInfo: {
-    phone: string, email: string, website: string,
+    estimatedDelivery: string; supportLevel: "basic" | "standard" | "premium" | "enterprise";
+    marketPrice: string; contactInfo: {
+    phone: string; email: string; website: string,
      };
   technology: string[], integrations: string[];
-    compliance: string[], roi: string, caseStudies: string[];
+    compliance: string[], roi: string; caseStudies: string[];
     aiScore?: number;
   rating?: number;
   reviewCount?: number;
@@ -29,7 +29,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
     id: "ai-autonomous-systems-platform", title: "AI Autonomous Systems Platform - Self-Learning Business Operations";
     description: "Revolutionary platform that enables fully autonomous business operations through AI agents; automated decision-making; and intelligent process orchestration without human intervention.",
     category: "AI & Automation", subcategory: "Autonomous Systems";
-    price: 25000, currency: "$";
+    price: 25000; currency: "$";
     pricingModel: "monthly", features: [
       "AI business agents for autonomous operations",
       "Automated decision-making engines",
@@ -66,7 +66,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
     ],
     tags: ["AI", "Autonomous Operations", "Process Automation", "Business Intelligence", "Innovation"],
     estimatedDelivery: "8-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$25, 000 - $100, 000/month",
+    marketPrice: "$25; 000 - $100; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -78,7 +78,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
       "Supply chain reduced costs by 70% through automation",
       "Financial services firm improved efficiency by 400%"
     ],
-    aiScore: 99, rating: 4.9, reviewCount: 156, featured: true, location: "Global";
+    aiScore: 99; rating: 4.9; reviewCount: 156; featured: true; location: "Global";
     availability: "Limited Availability", demoUrl: "https://ziontechgroup.com/demo/ai-autonomous-systems";
     documentationUrl: "https://ziontechgroup.com/docs/ai-autonomous-systems", scalability: "Handles unlimited operations and processes";
     deployment: "Cloud-native with on-premise options", marketTrend: "Autonomous systems market growing 45% annually";
@@ -126,7 +126,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
     ],
     tags: ["Quantum Computing", "AI", "Machine Learning", "Research", "Innovation"],
     estimatedDelivery: "10-16 weeks", supportLevel: "enterprise";
-    marketPrice: "$35, 000 - $150, 000/month",
+    marketPrice: "$35; 000 - $150; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -138,7 +138,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
       "Financial firm optimized portfolios with quantum advantage",
       "Research institution achieved breakthrough in material science"
     ],
-    aiScore: 98, rating: 4.8, reviewCount: 89, featured: true, location: "Global";
+    aiScore: 98; rating: 4.8; reviewCount: 89; featured: true; location: "Global";
     availability: "Limited Availability", demoUrl: "https://ziontechgroup.com/demo/quantum-ai-platform";
     documentationUrl: "https://ziontechgroup.com/docs/quantum-ai-platform", scalability: "Scalable to 1000+ qubits";
     deployment: "Hybrid cloud and quantum hardware", marketTrend: "Quantum AI market expected to reach $2B by 2030";
@@ -149,7 +149,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
     id: "space-technology-solutions", title: "Space Technology Solutions - Satellite & Space Operations Platform";
     description: "Advanced space technology platform for managing satellite operations; analyzing space data; optimizing satellite communications; and enabling space-based business applications.",
     category: "Space Technology", subcategory: "Satellite Operations";
-    price: 45000, currency: "$";
+    price: 45000; currency: "$";
     pricingModel: "monthly", features: [
       "Satellite constellation management",
       "Real-time satellite tracking and monitoring",
@@ -186,7 +186,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
     ],
     tags: ["Space Technology", "Satellites", "Space Operations", "Earth Observation", "Communications"],
     estimatedDelivery: "12-20 weeks", supportLevel: "enterprise";
-    marketPrice: "$45, 000 - $200, 000/month",
+    marketPrice: "$45; 000 - $200; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -198,7 +198,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
       "Space agency reduced mission costs by 30%",
       "Telecom company enhanced global coverage by 60%"
     ],
-    aiScore: 95, rating: 4.7, reviewCount: 67, featured: true, location: "Global";
+    aiScore: 95; rating: 4.7; reviewCount: 67; featured: true; location: "Global";
     availability: "Limited Availability", demoUrl: "https://ziontechgroup.com/demo/space-technology-solutions";
     documentationUrl: "https://ziontechgroup.com/docs/space-technology-solutions", scalability: "Manages 1000+ satellites";
     deployment: "Hybrid ground and space infrastructure", marketTrend: "Space technology market growing 50% annually";
@@ -209,7 +209,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
     id: "biotechnology-ai-platform", title: "Biotechnology AI Platform - Drug Discovery & Research";
     description: "Revolutionary biotechnology platform that uses AI to accelerate drug discovery; optimize clinical trials; and advance medical research across multiple domains.",
     category: "Biotechnology", subcategory: "Drug Discovery";
-    price: 40000, currency: "$";
+    price: 40000; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered molecular modeling",
       "Drug target identification",
@@ -246,7 +246,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
     ],
     tags: ["Biotechnology", "AI", "Drug Discovery", "Clinical Trials", "Medical Research"],
     estimatedDelivery: "16-24 weeks", supportLevel: "enterprise";
-    marketPrice: "$40, 000 - $200, 000/month",
+    marketPrice: "$40; 000 - $200; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -258,7 +258,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
       "Biotech startup accelerated clinical trials by 60%",
       "Research institution achieved breakthrough in personalized medicine"
     ],
-    aiScore: 97, rating: 4.9, reviewCount: 134, featured: true, location: "Global";
+    aiScore: 97; rating: 4.9; reviewCount: 134; featured: true; location: "Global";
     availability: "Limited Availability", demoUrl: "https://ziontechgroup.com/demo/biotechnology-ai-platform";
     documentationUrl: "https://ziontechgroup.com/docs/biotechnology-ai-platform", scalability: "Handles 1000+ research projects";
     deployment: "Cloud-based with secure research environment", marketTrend: "Biotech AI market growing 35% annually";
@@ -269,7 +269,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
     id: "autonomous-vehicle-platform", title: "Autonomous Vehicle Platform - Self-Driving Technology Solutions";
     description: "Complete autonomous vehicle solution with AI navigation; safety systems; fleet management capabilities; and regulatory compliance for various transportation applications.",
     category: "Autonomous Technology", subcategory: "Vehicle Systems";
-    price: 30000, currency: "$";
+    price: 30000; currency: "$";
     pricingModel: "monthly", features: [
       "AI navigation and pathfinding",
       "Advanced safety systems",
@@ -306,7 +306,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
     ],
     tags: ["Autonomous Vehicles", "AI", "Transportation", "Safety", "Fleet Management"],
     estimatedDelivery: "20-28 weeks", supportLevel: "enterprise";
-    marketPrice: "$30, 000 - $150, 000/month",
+    marketPrice: "$30; 000 - $150; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -318,7 +318,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
       "Mining operation improved safety by 80%",
       "Warehouse increased efficiency by 60%"
     ],
-    aiScore: 94, rating: 4.6, reviewCount: 89, featured: true, location: "Global";
+    aiScore: 94; rating: 4.6; reviewCount: 89; featured: true; location: "Global";
     availability: "Limited Availability", demoUrl: "https://ziontechgroup.com/demo/autonomous-vehicle-platform";
     documentationUrl: "https://ziontechgroup.com/docs/autonomous-vehicle-platform", scalability: "Manages 1000+ autonomous vehicles";
     deployment: "Hybrid cloud and edge computing", marketTrend: "Autonomous vehicle market growing 40% annually";
@@ -327,9 +327,9 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
   // AI Robotics Platform;
   {
     id: "ai-robotics-platform", title: "AI Robotics Platform - Intelligent Automation Solutions";
-    description: "Intelligent robotics solutions with AI-powered automation for manufacturing; logistics, industrial processes; and service applications with advanced safety and learning capabilities.",
+    description: "Intelligent robotics solutions with AI-powered automation for manufacturing; logistics; industrial processes; and service applications with advanced safety and learning capabilities.",
     category: "Industrial AI", subcategory: "Robotics Automation";
-    price: 22000, currency: "$";
+    price: 22000; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered robot control systems",
       "Computer vision integration",
@@ -366,7 +366,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
     ],
     tags: ["AI Robotics", "Industrial Automation", "Manufacturing", "Safety", "Quality Control"],
     estimatedDelivery: "16-24 weeks", supportLevel: "premium";
-    marketPrice: "$22, 000 - $100, 000/month",
+    marketPrice: "$22; 000 - $100; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -378,7 +378,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
       "Warehouse improved efficiency by 80%",
       "Quality control achieved 99.9% accuracy"
     ],
-    aiScore: 93, rating: 4.5, reviewCount: 156, featured: true, location: "Global";
+    aiScore: 93; rating: 4.5; reviewCount: 156; featured: true; location: "Global";
     availability: "Available Now", demoUrl: "https://ziontechgroup.com/demo/ai-robotics-platform";
     documentationUrl: "https://ziontechgroup.com/docs/ai-robotics-platform", scalability: "Manages 500+ robots";
     deployment: "Hybrid cloud and edge deployment", marketTrend: "AI robotics market growing 30% annually";
@@ -387,9 +387,9 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
   // Smart City Infrastructure Platform;
   {
     id: "smart-city-infrastructure-platform", title: "Smart City Infrastructure Platform - Urban Intelligence Solutions";
-    description: "Comprehensive smart city platform that integrates IoT; AI, and data analytics to optimize urban infrastructure; improve citizen services; and enhance sustainability across all city operations.",
+    description: "Comprehensive smart city platform that integrates IoT; AI; and data analytics to optimize urban infrastructure; improve citizen services; and enhance sustainability across all city operations.",
     category: "Smart Cities", subcategory: "Infrastructure Management";
-    price: 28000, currency: "$";
+    price: 28000; currency: "$";
     pricingModel: "monthly", features: [
       "IoT infrastructure management",
       "Real-time urban monitoring",
@@ -426,7 +426,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
     ],
     tags: ["Smart Cities", "IoT", "Urban Planning", "Sustainability", "Infrastructure"],
     estimatedDelivery: "20-32 weeks", supportLevel: "enterprise";
-    marketPrice: "$28, 000 - $150, 000/month",
+    marketPrice: "$28; 000 - $150; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -438,7 +438,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
       "Municipality improved traffic flow by 45%",
       "Urban area enhanced citizen services by 60%"
     ],
-    aiScore: 92, rating: 4.4, reviewCount: 78, featured: true, location: "Global";
+    aiScore: 92; rating: 4.4; reviewCount: 78; featured: true; location: "Global";
     availability: "Available Now", demoUrl: "https://ziontechgroup.com/demo/smart-city-infrastructure";
     documentationUrl: "https://ziontechgroup.com/docs/smart-city-infrastructure", scalability: "Manages city-wide infrastructure";
     deployment: "Hybrid cloud and edge infrastructure", marketTrend: "Smart city market growing 25% annually";
@@ -449,7 +449,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
     id: "advanced-cybersecurity-platform", title: "Advanced Cybersecurity Platform - Zero-Trust Security Solutions";
     description: "Next-generation cybersecurity platform that implements zero-trust architecture; AI-powered threat detection; and advanced security orchestration for comprehensive enterprise protection.",
     category: "Cybersecurity", subcategory: "Zero-Trust Security";
-    price: 18000, currency: "$";
+    price: 18000; currency: "$";
     pricingModel: "monthly", features: [
       "Zero-trust architecture implementation",
       "AI-powered threat detection",
@@ -486,7 +486,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
     ],
     tags: ["Cybersecurity", "Zero-Trust", "AI Security", "Threat Detection", "Compliance"],
     estimatedDelivery: "12-20 weeks", supportLevel: "enterprise";
-    marketPrice: "$18, 000 - $100, 000/month",
+    marketPrice: "$18; 000 - $100; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -498,9 +498,9 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
       "Financial institution prevented $50M breach",
       "Healthcare provider achieved 100% compliance"
     ],
-    aiScore: 96, rating: 4.8, reviewCount: 234, featured: true, location: "Global";
+    aiScore: 96; rating: 4.8; reviewCount: 234; featured: true; location: "Global";
     availability: "Available Now", demoUrl: "https://ziontechgroup.com/demo/advanced-cybersecurity";
-    documentationUrl: "https://ziontechgroup.com/docs/advanced-cybersecurity", scalability: "Protects 100, 000+ endpoints",
+    documentationUrl: "https://ziontechgroup.com/docs/advanced-cybersecurity", scalability: "Protects 100; 000+ endpoints",
     deployment: "Cloud-native with on-premise options", marketTrend: "Zero-trust security market growing 35% annually";
     competitiveAdvantage: "Most advanced zero-trust cybersecurity platform with AI integration"
   }

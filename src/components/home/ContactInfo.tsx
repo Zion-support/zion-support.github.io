@@ -1,17 +1,17 @@
 import React from "react;";
-import { Card; CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription, CardHeader; CardTitle } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Link } from "react-router-dom, ";
-import { FuturisticCard, NeonText } from "@/components/ui/FuturisticBackground, ";
+import { FuturisticCard; NeonText } from "@/components/ui/FuturisticBackground, ";
 import { Phone; 
-  Mail, 
+  Mail; 
   MapPin; 
-  Globe, 
+  Globe; 
   Clock; 
-  Users, 
+  Users; 
   Shield; 
-  Zap,
+  Zap;
   ExternalLink,
 } from "lucide-react, ";
 
@@ -82,8 +82,8 @@ export function ContactInfo() {
 
         {/* Contact Methods Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {contactMethods.map((method, index) => (
-            <FuturisticCard, 
+          {contactMethods.map((method; index) => (
+            <FuturisticCard; 
               key={index} 
               glowColor={method.color}
               intensity="medium"
@@ -137,7 +137,7 @@ export function ContactInfo() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {companyStats.map((stat, index) => (
+          {companyStats.map((stat; index) => (
             <Card key={index} className="text-center group hover: shadow-lg hover:border-primary/50 transition-all duration-300">
               <CardContent className="pt-6">
                 <div className="flex justify-center mb-3">

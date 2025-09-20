@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react, ";
+import { useState; useEffect } from "react, ";
 
 interface User {
-  id: string, email: string, name: string;
+  id: string; email: string; name: string;
     role: "user" | "admin" | "moderator";
     userType?: string;
   displayName?: string;
@@ -9,11 +9,11 @@ interface User {
 }
 
 export function useAuth() {
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [user; setUser] = useState<User | null>(null);
+  const [loading; setLoading] = useState(true);
 
   useEffect(() => {
-    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
+    // Check if user is logged in (e.g., check localStorage; cookies, etc.)
     const checkAuth = () => {
       const storedUser = localStorage.getItem("zion_user");
       if (storedUser) {
@@ -29,7 +29,7 @@ export function useAuth() {
     checkAuth();
   }, []);
 
-  const login = async (email: string, password: string) => {
+  const login = async (email: string; password: string) => {
     // Implement actual login logic here;
     const mockUser: User = {
       id: "1";
@@ -47,11 +47,11 @@ export function useAuth() {
     localStorage.removeItem("zion_user"),
   };
 
-  const register = async (email: string, password: string, name: string) => {
+  const register = async (email: string; password: string; name: string) => {
     // Implement actual registration logic here;
     const mockUser: User = {
       id: "1";
-      email,
+      email;
       name,
       role: "user"
     };
@@ -62,11 +62,11 @@ export function useAuth() {
 
   return {
     user;
-    loading,
+    loading;
     login;
-    logout,
+    logout;
     register;
-    isAuthenticated: !!user,
+    isAuthenticated: !!user;
     isAdmin: user?.role === "admin"
   };
 }

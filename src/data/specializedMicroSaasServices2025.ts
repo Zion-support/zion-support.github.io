@@ -1,10 +1,10 @@
 export interface SpecializedMicroSaasService2025 {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
     benefits: string[], useCases: string[];
     targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: string, marketPrice: string;
+    estimatedDelivery: string; supportLevel: string; marketPrice: string;
     contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
      };
   websiteUrl: string;
     demoUrl?: string;
@@ -22,7 +22,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     id: "ai-content-generation-suite-2025", title: "AI Content Generation Suite 2025";
     description: "Comprehensive AI-powered content creation platform that generates high-quality; SEO-optimized content for blogs; social media; and marketing campaigns.",
     category: "Content Marketing", subcategory: "AI Generation";
-    price: 299, currency: "$";
+    price: 299; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered blog post generation",
       "Social media content creation",
@@ -75,7 +75,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     id: "smart-invoice-management-system", title: "Smart Invoice Management System";
     description: "Intelligent invoice processing and management platform that automates billing; payment tracking; and financial reporting using AI and OCR technology.",
     category: "Financial Management", subcategory: "Invoice Processing";
-    price: 199, currency: "$";
+    price: 199; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered invoice scanning and processing",
       "Automated payment reminders",
@@ -128,7 +128,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     id: "ai-customer-support-platform", title: "AI Customer Support Platform";
     description: "Intelligent customer support system that uses AI to provide instant responses; route tickets; and automate support workflows for improved customer satisfaction.",
     category: "Customer Service", subcategory: "AI Support";
-    price: 399, currency: "$";
+    price: 399; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered chatbot support",
       "Intelligent ticket routing",
@@ -162,7 +162,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     ],
     tags: ["Customer Support", "AI", "Chatbot", "Automation", "Customer Service"],
     estimatedDelivery: "2-3 weeks", supportLevel: "premium";
-    marketPrice: "$399 - $1, 299/month",
+    marketPrice: "$399 - $1; 299/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -181,7 +181,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     id: "smart-project-management-tool", title: "Smart Project Management Tool";
     description: "AI-enhanced project management platform that automates task allocation; tracks progress; and provides intelligent insights for better project outcomes.",
     category: "Project Management", subcategory: "AI Enhancement";
-    price: 249, currency: "$";
+    price: 249; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered task prioritization",
       "Automated resource allocation",
@@ -234,7 +234,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     id: "ai-email-marketing-platform", title: "AI Email Marketing Platform";
     description: "Intelligent email marketing platform that uses AI to optimize send times; personalize content; and improve campaign performance for maximum engagement.",
     category: "Email Marketing", subcategory: "AI Optimization";
-    price: 179, currency: "$";
+    price: 179; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered send time optimization",
       "Personalized content generation",
@@ -277,7 +277,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     complianceStandards: ["GDPR", "CAN-SPAM", "Data Privacy"],
     integrationCapabilities: ["Shopify", "WooCommerce", "CRM Systems", "Analytics Tools", "Social Media"],
     freeTier: {
-      features: ["1,000 emails per month", "Basic AI features", "Standard templates"],
+      features: ["1;000 emails per month", "Basic AI features", "Standard templates"],
       limitations: ["Limited AI models", "Basic analytics", "No custom branding"]
     }
   },
@@ -287,7 +287,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     id: "smart-inventory-management-system", title: "Smart Inventory Management System";
     description: "AI-powered inventory management platform that predicts demand; optimizes stock levels; and automates reordering for efficient inventory control.",
     category: "Inventory Management", subcategory: "AI Prediction";
-    price: 349, currency: "$";
+    price: 349; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered demand forecasting",
       "Automated reorder points",
@@ -321,7 +321,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     ],
     tags: ["Inventory Management", "AI", "Supply Chain", "Automation", "Analytics"],
     estimatedDelivery: "2-3 weeks", supportLevel: "premium";
-    marketPrice: "$349 - $1, 199/month",
+    marketPrice: "$349 - $1; 199/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -340,7 +340,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     id: "ai-social-media-manager", title: "AI Social Media Manager";
     description: "Intelligent social media management platform that automates posting; generates content; and optimizes engagement across multiple social media channels.",
     category: "Social Media", subcategory: "AI Management";
-    price: 199, currency: "$";
+    price: 199; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered content generation",
       "Automated posting scheduling",
@@ -393,7 +393,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     id: "smart-time-tracking-solution", title: "Smart Time Tracking Solution";
     description: "AI-enhanced time tracking platform that automatically categorizes activities; generates insights; and optimizes productivity for individuals and teams.",
     category: "Productivity", subcategory: "Time Management";
-    price: 129, currency: "$";
+    price: 129; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered activity categorization",
       "Automatic time tracking",
@@ -444,9 +444,9 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
   // AI-Powered Lead Generation Platform;
   {
     id: "ai-lead-generation-platform", title: "AI Lead Generation Platform";
-    description: "Intelligent lead generation platform that uses AI to identify; qualify, and nurture prospects for improved sales conversion and business growth.",
+    description: "Intelligent lead generation platform that uses AI to identify; qualify; and nurture prospects for improved sales conversion and business growth.",
     category: "Sales & Marketing", subcategory: "Lead Generation";
-    price: 449, currency: "$";
+    price: 449; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered prospect identification",
       "Lead scoring and qualification",
@@ -480,7 +480,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     ],
     tags: ["Lead Generation", "AI", "Sales", "Marketing", "Automation"],
     estimatedDelivery: "2-3 weeks", supportLevel: "premium";
-    marketPrice: "$449 - $1, 499/month",
+    marketPrice: "$449 - $1; 499/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -497,9 +497,9 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
   // Smart Document Management System;
   {
     id: "smart-document-management-system", title: "Smart Document Management System";
-    description: "AI-powered document management platform that automatically categorizes; searches, and organizes documents for improved workflow efficiency and collaboration.",
+    description: "AI-powered document management platform that automatically categorizes; searches; and organizes documents for improved workflow efficiency and collaboration.",
     category: "Document Management", subcategory: "AI Organization";
-    price: 279, currency: "$";
+    price: 279; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered document categorization",
       "Advanced search and retrieval",

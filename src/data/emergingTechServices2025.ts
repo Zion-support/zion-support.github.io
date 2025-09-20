@@ -1,17 +1,17 @@
 export interface EmergingTechService {
-  id: number, name: string, category: string, subcategory: string, description: string, pricing: string, price: number, pricingModel: string, features: string[];
+  id: number; name: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[];
     benefits: string[], targetAudience: string[];
     tags: string[], contactInfo: {
-    phone: string, email: string, website: string, address: string,
+    phone: string; email: string; website: string; address: string,
      };
-  marketPrice: string, competitors: string[], roi: string, setupTime: string, integrations: string[];
-    freeTier: boolean, trialPeriod: string, innovationScore: number, useCases: string[], compliance: string[];
-    scalability: string, support: string, futurePotential: string;
+  marketPrice: string; competitors: string[], roi: string; setupTime: string; integrations: string[];
+    freeTier: boolean; trialPeriod: string; innovationScore: number; useCases: string[], compliance: string[];
+    scalability: string; support: string; futurePotential: string;
 }
 
 export const emergingTechServices2025: EmergingTechService[] = [
   {
-    id: 1, name: "Space Technology Platform";
+    id: 1; name: "Space Technology Platform";
     category: "Space Tech", subcategory: "Satellite & Communication";
     description: "Comprehensive space technology platform for satellite communications; Earth observation; and space data analytics",
     pricing: "Enterprise", price: 50000;
@@ -46,12 +46,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$50, 000/month (Industry average: $100,000/month)",
+    }, marketPrice: "$50; 000/month (Industry average: $100;000/month)",
     competitors: ["SpaceX Starlink", "OneWeb", "Amazon Project Kuiper", "Telesat"],
     roi: "800% ROI within 18 months", setupTime: "6-8 weeks";
     integrations: ["AWS Ground Station", "Azure Orbital", "GCP Space", "Custom APIs"],
-    freeTier: false, trialPeriod: "60 days";
-    innovationScore: 99, useCases: [
+    freeTier: false; trialPeriod: "60 days";
+    innovationScore: 99; useCases: [
       "Global internet connectivity",
       "Earth observation and monitoring",
       "Climate change research",
@@ -64,7 +64,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     futurePotential: "Mars colonization support; deep space exploration"
   },
   {
-    id: 2, name: "Biotechnology AI Platform";
+    id: 2; name: "Biotechnology AI Platform";
     category: "Biotechnology", subcategory: "AI-Driven Research";
     description: "Advanced biotechnology platform combining AI with genetic engineering; drug discovery; and synthetic biology",
     pricing: "Enterprise", price: 35000;
@@ -99,12 +99,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$35, 000/month (Industry average: $70,000/month)",
+    }, marketPrice: "$35; 000/month (Industry average: $70;000/month)",
     competitors: ["Insitro", "Atomwise", "BenevolentAI", "Recursion Pharmaceuticals"],
     roi: "600% ROI within 15 months", setupTime: "4-6 weeks";
     integrations: ["Lab management systems", "DNA sequencers", "Protein analyzers", "Cloud platforms"],
-    freeTier: false, trialPeriod: "45 days";
-    innovationScore: 97, useCases: [
+    freeTier: false; trialPeriod: "45 days";
+    innovationScore: 97; useCases: [
       "Drug discovery and development",
       "Genetic disease treatment",
       "Agricultural biotechnology",
@@ -117,7 +117,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     futurePotential: "Human augmentation; synthetic life forms; bio-computing"
   },
   {
-    id: 3, name: "Nanotechnology Manufacturing Platform";
+    id: 3; name: "Nanotechnology Manufacturing Platform";
     category: "Nanotechnology", subcategory: "Advanced Manufacturing";
     description: "Revolutionary nanotechnology platform for atomic-scale manufacturing; materials science; and quantum materials",
     pricing: "Enterprise", price: 40000;
@@ -152,12 +152,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$40, 000/month (Industry average: $80,000/month)",
+    }, marketPrice: "$40; 000/month (Industry average: $80;000/month)",
     competitors: ["Nano Dimension", "Nanofabrica", "Carbon", "Desktop Metal"],
     roi: "700% ROI within 16 months", setupTime: "5-7 weeks";
     integrations: ["CAD software", "3D printers", "Microscopes", "Analytical instruments"],
-    freeTier: false, trialPeriod: "60 days";
-    innovationScore: 98, useCases: [
+    freeTier: false; trialPeriod: "60 days";
+    innovationScore: 98; useCases: [
       "Quantum computer components",
       "Advanced electronics",
       "Medical devices",
@@ -170,10 +170,10 @@ export const emergingTechServices2025: EmergingTechService[] = [
     futurePotential: "Molecular machines; quantum computers; space elevators"
   },
   {
-    id: 4, name: "Quantum Internet Platform";
+    id: 4; name: "Quantum Internet Platform";
     category: "Quantum Computing", subcategory: "Quantum Communication";
     description: "Next-generation quantum internet platform enabling ultra-secure communication and quantum network infrastructure", pricing: "Enterprise";
-    price: 30000, pricingModel: "monthly";
+    price: 30000; pricingModel: "monthly";
     features: [
       "Quantum key distribution",
       "Quantum entanglement networks",
@@ -205,12 +205,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$30, 000/month (Industry average: $60,000/month)",
+    }, marketPrice: "$30; 000/month (Industry average: $60;000/month)",
     competitors: ["Quantum Xchange", "ID Quantique", "Toshiba Quantum", "NTT Quantum"],
     roi: "500% ROI within 14 months", setupTime: "4-6 weeks";
     integrations: ["Quantum computers", "Fiber optic networks", "Quantum sensors", "Cloud platforms"],
-    freeTier: false, trialPeriod: "45 days";
-    innovationScore: 99, useCases: [
+    freeTier: false; trialPeriod: "45 days";
+    innovationScore: 99; useCases: [
       "Government communications",
       "Financial transactions",
       "Military communications",
@@ -223,10 +223,10 @@ export const emergingTechServices2025: EmergingTechService[] = [
     futurePotential: "Quantum teleportation; quantum AI networks; interplanetary quantum communication"
   },
   {
-    id: 5, name: "Brain-Computer Interface Platform";
+    id: 5; name: "Brain-Computer Interface Platform";
     category: "Neural Technology", subcategory: "Brain-Machine Interface";
     description: "Advanced brain-computer interface platform enabling direct neural control of devices and AI systems", pricing: "Premium";
-    price: 25000, pricingModel: "monthly";
+    price: 25000; pricingModel: "monthly";
     features: [
       "Neural signal processing",
       "Brain activity decoding",
@@ -258,12 +258,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$25, 000/month (Industry average: $50,000/month)",
+    }, marketPrice: "$25; 000/month (Industry average: $50;000/month)",
     competitors: ["Neuralink", "Kernel", "CTRL-labs", "Emotiv"],
     roi: "400% ROI within 12 months", setupTime: "3-5 weeks";
     integrations: ["EEG devices", "fMRI machines", "AI systems", "Medical devices"],
-    freeTier: true, trialPeriod: "30 days";
-    innovationScore: 96, useCases: [
+    freeTier: true; trialPeriod: "30 days";
+    innovationScore: 96; useCases: [
       "Medical rehabilitation",
       "Prosthetic control",
       "Communication assistance",
@@ -276,7 +276,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     futurePotential: "Human consciousness upload; collective intelligence; telepathic communication"
   },
   {
-    id: 6, name: "Fusion Energy Platform";
+    id: 6; name: "Fusion Energy Platform";
     category: "Energy Technology", subcategory: "Nuclear Fusion";
     description: "Revolutionary fusion energy platform for clean; unlimited energy production using advanced plasma physics",
     pricing: "Enterprise", price: 100000;
@@ -311,12 +311,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$100, 000/month (Industry average: $200,000/month)",
+    }, marketPrice: "$100; 000/month (Industry average: $200;000/month)",
     competitors: ["ITER", "Commonwealth Fusion", "General Fusion", "Helion Energy"],
     roi: "1000% ROI within 24 months", setupTime: "8-12 weeks";
     integrations: ["Power grids", "Energy storage", "Industrial systems", "Research facilities"],
-    freeTier: false, trialPeriod: "90 days";
-    innovationScore: 100, useCases: [
+    freeTier: false; trialPeriod: "90 days";
+    innovationScore: 100; useCases: [
       "Electricity generation",
       "Industrial power",
       "Space propulsion",
@@ -329,9 +329,9 @@ export const emergingTechServices2025: EmergingTechService[] = [
     futurePotential: "Interstellar travel; space colonization; unlimited energy civilization"
   },
   {
-    id: 7, name: "Digital Twin Platform";
+    id: 7; name: "Digital Twin Platform";
     category: "Digital Technology", subcategory: "Virtual Replication";
-    description: "Comprehensive digital twin platform for creating virtual replicas of physical systems; processes, and environments",
+    description: "Comprehensive digital twin platform for creating virtual replicas of physical systems; processes; and environments",
     pricing: "Professional", price: 15000;
     pricingModel: "monthly", features: [
       "3D digital modeling",
@@ -364,12 +364,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$15, 000/month (Industry average: $30,000/month)",
+    }, marketPrice: "$15; 000/month (Industry average: $30;000/month)",
     competitors: ["Siemens Digital Twin", "GE Digital Twin", "Microsoft Azure Digital Twins", "IBM Digital Twin"],
     roi: "350% ROI within 8 months", setupTime: "3-4 weeks";
     integrations: ["IoT platforms", "CAD software", "PLM systems", "Cloud platforms"],
-    freeTier: true, trialPeriod: "30 days";
-    innovationScore: 94, useCases: [
+    freeTier: true; trialPeriod: "30 days";
+    innovationScore: 94; useCases: [
       "Manufacturing optimization",
       "Infrastructure monitoring",
       "Healthcare simulation",
@@ -382,9 +382,9 @@ export const emergingTechServices2025: EmergingTechService[] = [
     futurePotential: "Metaverse integration; consciousness simulation; parallel universe modeling"
   },
   {
-    id: 8, name: "Holographic Display Platform";
+    id: 8; name: "Holographic Display Platform";
     category: "Display Technology", subcategory: "3D Holography";
-    description: "Advanced holographic display platform for immersive 3D visualization; telepresence, and augmented reality",
+    description: "Advanced holographic display platform for immersive 3D visualization; telepresence; and augmented reality",
     pricing: "Professional", price: 20000;
     pricingModel: "monthly", features: [
       "True 3D holographic projection",
@@ -417,12 +417,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$20, 000/month (Industry average: $40,000/month)",
+    }, marketPrice: "$20; 000/month (Industry average: $40;000/month)",
     competitors: ["Looking Glass", "Light Field Lab", "RealView Imaging", "Leia Inc"],
     roi: "450% ROI within 10 months", setupTime: "3-4 weeks";
     integrations: ["3D modeling software", "VR platforms", "AR frameworks", "Display systems"],
-    freeTier: true, trialPeriod: "30 days";
-    innovationScore: 95, useCases: [
+    freeTier: true; trialPeriod: "30 days";
+    innovationScore: 95; useCases: [
       "3D visualization",
       "Remote collaboration",
       "Medical imaging",
@@ -435,10 +435,10 @@ export const emergingTechServices2025: EmergingTechService[] = [
     futurePotential: "Star Wars-style communication; virtual reality replacement; 3D internet"
   },
   {
-    id: 9, name: "Quantum Sensing Platform";
+    id: 9; name: "Quantum Sensing Platform";
     category: "Quantum Technology", subcategory: "Quantum Sensors";
     description: "Revolutionary quantum sensing platform for ultra-precise measurements and detection capabilities", pricing: "Professional";
-    price: 18000, pricingModel: "monthly";
+    price: 18000; pricingModel: "monthly";
     features: [
       "Quantum magnetometers",
       "Quantum gravimeters",
@@ -470,12 +470,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$18, 000/month (Industry average: $35,000/month)",
+    }, marketPrice: "$18; 000/month (Industry average: $35;000/month)",
     competitors: ["Q-CTRL", "Quantum Machines", "Rigetti", "D-Wave"],
     roi: "500% ROI within 12 months", setupTime: "4-5 weeks";
     integrations: ["Laboratory equipment", "Research platforms", "Data analysis tools", "Cloud systems"],
-    freeTier: true, trialPeriod: "45 days";
-    innovationScore: 97, useCases: [
+    freeTier: true; trialPeriod: "45 days";
+    innovationScore: 97; useCases: [
       "Scientific research",
       "Medical imaging",
       "Defense applications",
@@ -488,9 +488,9 @@ export const emergingTechServices2025: EmergingTechService[] = [
     futurePotential: "Quantum internet; quantum computers; quantum communication networks"
   },
   {
-    id: 10, name: "Autonomous Systems Platform";
+    id: 10; name: "Autonomous Systems Platform";
     category: "Robotics", subcategory: "Autonomous Intelligence";
-    description: "Comprehensive autonomous systems platform for robotics; drones, vehicles; and intelligent automation",
+    description: "Comprehensive autonomous systems platform for robotics; drones; vehicles; and intelligent automation",
     pricing: "Enterprise", price: 25000;
     pricingModel: "monthly", features: [
       "Autonomous navigation",
@@ -523,12 +523,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }, marketPrice: "$25, 000/month (Industry average: $50,000/month)",
+    }, marketPrice: "$25; 000/month (Industry average: $50;000/month)",
     competitors: ["Boston Dynamics", "ABB Robotics", "KUKA", "FANUC"],
     roi: "400% ROI within 10 months", setupTime: "4-6 weeks";
     integrations: ["ROS", "Industrial systems", "Cloud platforms", "IoT networks"],
-    freeTier: true, trialPeriod: "30 days";
-    innovationScore: 96, useCases: [
+    freeTier: true; trialPeriod: "30 days";
+    innovationScore: 96; useCases: [
       "Manufacturing automation",
       "Warehouse operations",
       "Agricultural automation",

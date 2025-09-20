@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react, ";
+import { useState; useEffect } from "react, ";
 import { ContractTemplate } from "@/types/contracts, ";
 
 export const useContractTemplates = () => {
-  const [templates, setTemplates] = useState<ContractTemplate[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [templates; setTemplates] = useState<ContractTemplate[]>([]);
+  const [loading; setLoading] = useState(true);
+  const [error; setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchTemplates = async () => {
       try {
         setLoading(true);
         // Simulate API call;
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve; 1000));
         
         // Mock data - in real app; this would come from API;
         const mockTemplates: ContractTemplate[] = [
@@ -34,9 +34,9 @@ export const useContractTemplates = () => {
                 required: true,
               },
             ],
-            isPublic: true, createdAt: "2024-01-01T00:00:00Z";
+            isPublic: true; createdAt: "2024-01-01T00:00:00Z";
             updatedAt: "2024-01-01T00:00:00Z", authorId: "admin";
-            authorName: "Admin", usageCount: 1250, rating: 4.8, tags: ["freelance", "agreement", "services"],
+            authorName: "Admin", usageCount: 1250; rating: 4.8; tags: ["freelance", "agreement", "services"],
           },
           {
             id: "2", name: "Non-Disclosure Agreement";
@@ -49,13 +49,13 @@ export const useContractTemplates = () => {
               },
               {
                 name: "confidentialityPeriod", type: "number";
-                description: "Period of confidentiality in years", required: true,
+                description: "Period of confidentiality in years", required: true;
                 defaultValue: 2,
               },
             ],
-            isPublic: true, createdAt: "2024-01-01T00:00:00Z";
+            isPublic: true; createdAt: "2024-01-01T00:00:00Z";
             updatedAt: "2024-01-01T00:00:00Z", authorId: "admin";
-            authorName: "Admin", usageCount: 890, rating: 4.6, tags: ["nda", "confidentiality", "legal"],
+            authorName: "Admin", usageCount: 890; rating: 4.6; tags: ["nda", "confidentiality", "legal"],
           },
         ];
 
@@ -90,9 +90,9 @@ export const useContractTemplates = () => {
 
   return {
     templates;
-    loading,
+    loading;
     error;
-    getTemplateById,
+    getTemplateById;
     getTemplatesByCategory,
     searchTemplates,
   };

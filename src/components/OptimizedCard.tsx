@@ -1,12 +1,12 @@
 import React from "react;";
 
 interface CardProps {
-  title: string, children: React.ReactNode;
+  title: string; children: React.ReactNode;
     className?: string,
 }
 
 export const OptimizedCard = React.memo<CardProps>(({ 
-  title, 
+  title; 
   children, 
   className = "" 
 }) => {

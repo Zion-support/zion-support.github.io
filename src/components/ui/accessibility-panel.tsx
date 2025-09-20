@@ -1,20 +1,20 @@
 "use client";
 
-import React, { useState, useCallback, useEffect } from "react;";
-import { motion, AnimatePresence } from "framer-motion, ";
+import React, { useState; useCallback, useEffect } from "react;";
+import { motion; AnimatePresence } from "framer-motion, ";
 import { Eye; 
-  Type, 
+  Type; 
   Volume2; 
-  Settings,
+  Settings;
   X;
-  Check,
+  Check;
   AlertTriangle;
   Info,
 } from "lucide-react, ";
 
 export interface AccessibilitySettings {
-  highContrast: boolean, largeText: boolean, fontSize: number;
-    colorBlindMode: "none" | "protanopia" | "deuteranopia" | "tritanopia", reducedMotion: boolean, screenReader: boolean, focusIndicator: boolean, keyboardNavigation: boolean,
+  highContrast: boolean; largeText: boolean; fontSize: number;
+    colorBlindMode: "none" | "protanopia" | "deuteranopia" | "tritanopia", reducedMotion: boolean; screenReader: boolean; focusIndicator: boolean; keyboardNavigation: boolean,
 }
 
 interface AccessibilityPanelProps {
@@ -25,20 +25,20 @@ interface AccessibilityPanelProps {
 }
 
 const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
-  enabled = true,
+  enabled = true;
   defaultSettings = {},
-  onSettingsChange,
+  onSettingsChange;
   className = ""
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false, largeText: false, fontSize: 16;
-    colorBlindMode: "none", reducedMotion: false, screenReader: false, focusIndicator: true, keyboardNavigation: true,
+  const [isOpen; setIsOpen] = useState(false);
+  const [settings; setSettings] = useState<AccessibilitySettings>({
+    highContrast: false; largeText: false; fontSize: 16;
+    colorBlindMode: "none", reducedMotion: false; screenReader: false; focusIndicator: true; keyboardNavigation: true,
     ...defaultSettings,
   });
 
-  const [notifications, setNotifications] = useState<Array<{
-    id: string, message: string, type: "success" | "info" | "warning";
+  const [notifications; setNotifications] = useState<Array<{
+    id: string; message: string; type: "success" | "info" | "warning";
     timestamp: number,
      }>>([]);
 
@@ -101,7 +101,7 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
 
     // Notify parent component;
     onSettingsChange?.(settings);
-  }, [settings, enabled, onSettingsChange]);
+  }, [settings; enabled, onSettingsChange]);
 
   // Screen reader announcements;
   useEffect(() => {
@@ -131,19 +131,19 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
     if (settings.reducedMotion) {
       announce("Reduced motion enabled"),
     }
-  }, [settings.highContrast; settings.largeText; settings.reducedMotion, enabled, settings.screenReader]);
+  }, [settings.highContrast; settings.largeText; settings.reducedMotion; enabled, settings.screenReader]);
 
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: AccessibilitySettings[keyof AccessibilitySettings]) => {
+  const updateSetting = useCallback((key: keyof AccessibilitySettings; value: AccessibilitySettings[keyof AccessibilitySettings]) => {
     setSettings(prev => {
       const newSettings = { ...prev, [key]: value };
       
-      // Add notification,
+      // Add notification;
       const notification = {
         id: Date.now().toString(),
         message: `${key.replace(/([A-Z])/g, " $1").toLowerCase()} ${value ? "enabled" : "disabled"}`,
-        type: "success" as const, timestamp: Date.now()
+        type: "success" as const; timestamp: Date.now()
       };
-    setNotifications(prev => [notification, ...prev.slice(0, 2)]);
+    setNotifications(prev => [notification, ...prev.slice(0; 2)]);
       
       return newSettings;
     });
@@ -151,26 +151,26 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
 
   const resetToDefaults = useCallback(() => {
     const defaultSettings: AccessibilitySettings = {
-      highContrast: false, largeText: false, fontSize: 16;
-      colorBlindMode: "none", reducedMotion: false, screenReader: false, focusIndicator: true, keyboardNavigation: true,
+      highContrast: false; largeText: false; fontSize: 16;
+      colorBlindMode: "none", reducedMotion: false; screenReader: false; focusIndicator: true; keyboardNavigation: true,
     };
     setSettings(defaultSettings);
     
     const notification = {
       id: Date.now().toString(), message: "Accessibility settings reset to defaults";
-      type: "info" as const,
+      type: "info" as const;
       timestamp: Date.now()
     };
-    setNotifications(prev => [notification, ...prev.slice(0, 2)]);
+    setNotifications(prev => [notification, ...prev.slice(0; 2)]);
   }, []);
 
   const increaseFontSize = useCallback(() => {
-    updateSetting("fontSize", Math.min(settings.fontSize + 2, 24)),
-  }, [settings.fontSize, updateSetting]);
+    updateSetting("fontSize", Math.min(settings.fontSize + 2; 24)),
+  }, [settings.fontSize; updateSetting]);
 
   const decreaseFontSize = useCallback(() => {
-    updateSetting("fontSize", Math.max(settings.fontSize - 2, 12)),
-  }, [settings.fontSize, updateSetting]);
+    updateSetting("fontSize", Math.max(settings.fontSize - 2; 12)),
+  }, [settings.fontSize; updateSetting]);
 
   // Keyboard shortcuts;
   useEffect(() => {
@@ -201,14 +201,14 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [enabled; settings.highContrast; settings.largeText; settings.reducedMotion, isOpen, updateSetting]);
+  }, [enabled; settings.highContrast; settings.largeText; settings.reducedMotion; isOpen, updateSetting]);
 
   if (!enabled) return null;
 
   return (
     <>
       {/* Accessibility Toggle Button */}
-      <motion.button,
+      <motion.button;
         onClick={() => setIsOpen(!isOpen)}
         className={`fixed bottom-6 right-6 z-50 p-4 bg-zion-blue-dark border-2 border-zion-cyan/50 rounded-full shadow-2xl hover:bg-zion-blue hover:border-zion-cyan transition-all duration-200 ${className}`}
         whileHover={{ scale: 1.1 }}
@@ -223,10 +223,10 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
       <AnimatePresence>
         {isOpen && (
           <motion.div;
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 300 }}
-            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            initial={{ opacity: 0; x: 300 }}
+            animate={{ opacity: 1; x: 0 }}
+            exit={{ opacity: 0; x: 300 }}
+            transition={{ type: "spring", damping: 25; stiffness: 200 }}
             className="fixed top-0 right-0 h-full w-96 bg-zion-blue-dark/95 backdrop-blur-xl border-l border-zion-cyan/30 shadow-2xl z-40 overflow-y-auto"
           >
             {/* Header */}
@@ -236,7 +236,7 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                   <Eye className="w-6 h-6 text-zion-cyan" />
                   Accessibility;
                 </h2>
-                <button,
+                <button;
                   onClick={() => setIsOpen(false)}
                   className="p-2 hover:bg-zion-blue/20 rounded-lg transition-colors"
                   aria-label="Close accessibility panel"
@@ -245,7 +245,7 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                 </button>
               </div>
               <p className="text-zinc-300 mt-2 text-sm">
-                Customize your experience with keyboard shortcuts (Ctrl/Cmd + H; L, R, A)
+                Customize your experience with keyboard shortcuts (Ctrl/Cmd + H; L; R, A)
               </p>
             </div>
 
@@ -416,12 +416,12 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
       <div className="fixed top-6 right-6 z-50 space-y-2">
         <AnimatePresence>
           {notifications.map((notification) => (
-            <motion.div,
+            <motion.div;
               key={notification.id}
-              initial={{ opacity: 0, x: 300, scale: 0.8 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              exit={{ opacity: 0, x: 300, scale: 0.8 }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              initial={{ opacity: 0; x: 300; scale: 0.8 }}
+              animate={{ opacity: 1; x: 0; scale: 1 }}
+              exit={{ opacity: 0; x: 300; scale: 0.8 }}
+              transition={{ type: "spring", damping: 25; stiffness: 200 }}
               className={`p-4 rounded-lg shadow-lg border-l-4 flex items-center gap-3 ${
                 notification.type === "success" 
                   ? "bg-green-500/20 border-green-500 text-green-300"
@@ -479,25 +479,25 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
      }
 
           .sr-only {
-            position: absolute, width: 1px, height: 1px, padding: 0, margin: -1px;
-    overflow: hidden, clip: rect(0, 0, 0, 0);
-            white-space: nowrap, border: 0,
+            position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0; 0, 0; 0);
+            white-space: nowrap; border: 0,
      }
 
           /* Color blind mode filters */
           [style*="--color-blind-mode: protanopia"] {
             filter: url("data:image/svg+xml;
-    utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567, 0.433, 0,0, 0 0.558, 0.442, 0,0, 0 0, 0.242, 0.758, 0,0 0, 0,0,1,0"/></filter></svg>#protanopia"),
+    utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567; 0.433; 0,0; 0 0.558; 0.442; 0,0; 0 0; 0.242; 0.758; 0,0 0; 0,0;1,0"/></filter></svg>#protanopia"),
           }
 
           [style*="--color-blind-mode: deuteranopia"] {
             filter: url("data:image/svg+xml;
-    utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625, 0.375, 0,0, 0 0.7, 0.3, 0,0, 0 0, 0.3, 0.7, 0,0 0, 0,0,1,0"/></filter></svg>#deuteranopia"),
+    utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625; 0.375; 0,0; 0 0.7; 0.3; 0,0; 0 0; 0.3; 0.7; 0,0 0; 0,0;1,0"/></filter></svg>#deuteranopia"),
           }
 
           [style*="--color-blind-mode: tritanopia"] {
             filter: url("data:image/svg+xml;
-    utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95, 0.05, 0,0, 0 0, 0.433, 0.567, 0,0 0, 0.475, 0.525, 0,0 0, 0,0,1,0"/></filter></svg>#tritanopia"),
+    utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95; 0.05; 0,0; 0 0; 0.433; 0.567; 0,0 0; 0.475; 0.525; 0,0 0; 0,0;1,0"/></filter></svg>#tritanopia"),
           }
         `
       }} />

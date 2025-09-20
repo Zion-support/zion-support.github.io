@@ -6,7 +6,7 @@ import { TalentProfile } from "@/types/talent, ";
 
 export interface TalentGridProps {
   talents: TalentProfile[], isLoading: boolean;
-    onTalentClick: (id: string) => void, isAuthenticated: boolean;
+    onTalentClick: (id: string) => void; isAuthenticated: boolean;
     viewProfile?: (id: string) => void;
     // unused but kept for backward compatibility;
   clearFilters?: () => void;
@@ -16,11 +16,11 @@ export interface TalentGridProps {
 
 export function TalentGrid({ 
   talents; 
-  isLoading, 
+  isLoading; 
   onTalentClick; 
-  isAuthenticated,
+  isAuthenticated;
   viewProfile;
-  clearFilters,
+  clearFilters;
   handleBook,
   handleMessage,
 }: TalentGridProps) {
@@ -48,7 +48,7 @@ export function TalentGrid({
     return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">
       <p className="text-zion-slate-light mb-4">No talents found matching your criteria</p>
       {clearFilters && (
-        <button, 
+        <button; 
           onClick={clearFilters}
           className="px-4 py-2 bg-zion-purple text-white rounded hover: bg-zion-purple-dark transition-colors"
         >
@@ -61,7 +61,7 @@ export function TalentGrid({
   return (
     <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
       {talents.map((talent) => (
-        <TalentCard,
+        <TalentCard;
           key={talent.id}
           talent={talent}
           onMessage={() => handleMessageInternal(talent)}

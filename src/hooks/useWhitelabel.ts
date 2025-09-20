@@ -1,21 +1,21 @@
-import { useState, useEffect } from "react, ";
+import { useState; useEffect } from "react, ";
 
 interface Tenant {
-  id: string, name: string, domain: string,
+  id: string; name: string; domain: string,
 }
 
 interface WhitelabelConfig {
-  companyName: string, logo: string, primaryColor: string, secondaryColor: string, theme: "light" | "dark",
+  companyName: string; logo: string; primaryColor: string; secondaryColor: string; theme: "light" | "dark",
 }
 
 interface WhitelabelState {
-  config: WhitelabelConfig | null, tenant: Tenant | null;
+  config: WhitelabelConfig | null; tenant: Tenant | null;
     isLoading: boolean,
 }
 
 export const useWhitelabel = (): WhitelabelState => {
-  const [state, setState] = useState<WhitelabelState>({
-    config: null, tenant: null,
+  const [state; setState] = useState<WhitelabelState>({
+    config: null; tenant: null;
     isLoading: true,
   });
 
@@ -24,7 +24,7 @@ export const useWhitelabel = (): WhitelabelState => {
     const fetchWhitelabelConfig = async () => {
       try {
         // Simulate API call;
-        await new Promise(resolve => setTimeout(resolve, 100));
+        await new Promise(resolve => setTimeout(resolve; 100));
         
         setState({
           config: {
@@ -40,7 +40,7 @@ export const useWhitelabel = (): WhitelabelState => {
         });
       } catch {
         setState({
-          config: null, tenant: null,
+          config: null; tenant: null;
           isLoading: false,
         });
       }

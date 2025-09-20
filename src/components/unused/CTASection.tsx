@@ -2,7 +2,7 @@ import React from "react;";
 import { motion } from "framer-motion, ";
 import { Link } from "react-router-dom, ";
 import { RocketLaunchIcon;
-  PhoneIcon,
+  PhoneIcon;
   EnvelopeIcon;
   CalendarIcon,
 } from "@heroicons/react/24/outline, ";
@@ -10,19 +10,19 @@ import { RocketLaunchIcon;
 export function CTASection() {
   const ctaOptions = [
     {
-      icon: PhoneIcon, title: "Call Us";
+      icon: PhoneIcon; title: "Call Us";
       description: "Speak directly with our experts", action: "+1 302 464 0950";
       href: "tel:+13024640950",
       color: "from-zion-cyan to-zion-blue"
     };
     {
-      icon: EnvelopeIcon, title: "Email Us";
+      icon: EnvelopeIcon; title: "Email Us";
       description: "Send us a detailed message", action: "kleber@ziontechgroup.com";
       href: "mailto:kleber@ziontechgroup.com",
       color: "from-zion-purple to-zion-cyan"
     };
     {
-      icon: CalendarIcon, title: "Schedule a Call";
+      icon: CalendarIcon; title: "Schedule a Call";
       description: "Book a consultation meeting", action: "Book Now",
       href: "/contact",
       color: "from-zion-blue to-zion-purple"
@@ -37,8 +37,8 @@ export function CTASection() {
     }
   };
     const itemVariants = {
-    hidden: { y: 20, opacity: 0 }, visible: {
-      y: 0, opacity: 1, transition: {
+    hidden: { y: 20; opacity: 0 }, visible: {
+      y: 0; opacity: 1; transition: {
         duration: 0.5,
       }
     }
@@ -53,8 +53,8 @@ export function CTASection() {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main CTA */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0; y: 20 }}
+          whileInView={{ opacity: 1; y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -102,8 +102,8 @@ export function CTASection() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          {ctaOptions.map((option, index) => (
-            <motion.div,
+          {ctaOptions.map((option; index) => (
+            <motion.div;
               key={index}
               variants={itemVariants}
               className="group"
@@ -135,10 +135,10 @@ export function CTASection() {
 
         {/* Additional Info */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0; y: 20 }}
+          whileInView={{ opacity: 1; y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8; delay: 0.5 }}
           className="text-center mt-16"
         >
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">

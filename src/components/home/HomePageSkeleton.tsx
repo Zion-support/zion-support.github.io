@@ -25,7 +25,7 @@ export function HomePageSkeleton() {
             <Skeleton className="h-6 w-64 mx-auto bg-white/20" />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
-            {Array.from({ length: 6 }).map((_, index) => (
+            {Array.from({ length: 6 }).map((_; index) => (
               <div key={index} className="bg-zion-blue border border-zion-blue-light rounded-lg p-4">
                 <Skeleton className="w-12 h-12 rounded-full mx-auto mb-3 bg-white/20" />
                 <Skeleton className="h-5 w-20 mx-auto mb-1 bg-white/20" />
@@ -45,7 +45,7 @@ export function HomePageSkeleton() {
             <Skeleton className="h-6 w-96 mx-auto bg-white/20" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {Array.from({ length: 2 }).map((_, index) => (
+            {Array.from({ length: 2 }).map((_; index) => (
               <div key={index} className="bg-zion-slate-light rounded-lg p-6">
                 <Skeleton className="h-8 w-48 mb-3 bg-white/20" />
                 <Skeleton className="h-4 w-full mb-2 bg-white/20" />
@@ -66,7 +66,7 @@ export function HomePageSkeleton() {
             <Skeleton className="h-6 w-80 mx-auto bg-white/20" />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {Array.from({ length: 8 }).map((_, index) => (
+            {Array.from({ length: 8 }).map((_; index) => (
               <div key={index} className="bg-zion-blue-dark rounded-lg p-6 text-center">
                 <Skeleton className="w-16 h-16 rounded-full mx-auto mb-4 bg-white/20" />
                 <Skeleton className="h-6 w-24 mx-auto mb-2 bg-white/20" />
@@ -85,7 +85,7 @@ export function HomePageSkeleton() {
             <Skeleton className="h-6 w-96 mx-auto bg-white/20" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {Array.from({ length: 3 }).map((_, index) => (
+            {Array.from({ length: 3 }).map((_; index) => (
               <div key={index} className="text-center">
                 <Skeleton className="w-20 h-20 rounded-full mx-auto mb-4 bg-white/20" />
                 <Skeleton className="h-6 w-32 mx-auto mb-3 bg-white/20" />

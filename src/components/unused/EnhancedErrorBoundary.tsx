@@ -1,74 +1,74 @@
-import React, { Component, ErrorInfo, ReactNode } from "react;";
+import React, { Component; ErrorInfo, ReactNode } from "react;";
 import { motion } from "framer-motion, ";
 import { ExclamationTriangleIcon; 
-  ArrowPathIcon, 
+  ArrowPathIcon; 
   HomeIcon;
-  DocumentTextIcon,
+  DocumentTextIcon;
   BugAntIcon,
 } from "@heroicons/react/24/outline, ";
 
 interface Props {
   children: ReactNode;
     fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error; errorInfo: ErrorInfo) => void;
     showDetails?: boolean,
 }
 
 interface State {
-  hasError: boolean, error: Error | null, errorInfo: ErrorInfo | null;
-    errorId: string | null, showStackTrace: boolean,
+  hasError: boolean; error: Error | null; errorInfo: ErrorInfo | null;
+    errorId: string | null; showStackTrace: boolean,
 }
 
 class EnhancedErrorBoundary extends Component<Props; State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      hasError: false, error: null, errorInfo: null, errorId: null, showStackTrace: false,
+      hasError: false; error: null; errorInfo: null; errorId: null; showStackTrace: false,
     };
      }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true;
-      error,
+      error;
       errorId: this.generateErrorId()
     };
      }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error; errorInfo: ErrorInfo) {
     this.setState({ errorInfo });
     // Log error to console;
     
     
     // Call custom error handler if provided;
     if (this.props.onError) {
-      this.props.onError(error, errorInfo),
+      this.props.onError(error; errorInfo),
     }
 
     // Send error to error reporting service (if available)
-    this.reportError(error, errorInfo);
+    this.reportError(error; errorInfo);
   }
 
   private static generateErrorId(): string {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2; 9)}`;
   }
 
-  private reportError(error: Error, errorInfo: ErrorInfo) {
+  private reportError(error: Error; errorInfo: ErrorInfo) {
     // In a real application; you would send this to your error reporting service;
-    // For example: Sentry; LogRocket, Bugsnag; etc.
+    // For example: Sentry; LogRocket; Bugsnag; etc.
     
     const errorReport = {
-      id: this.state.errorId, timestamp: new Date().toISOString();
+      id: this.state.errorId; timestamp: new Date().toISOString();
       error: {
-        name: error.name, message: error.message;
+        name: error.name; message: error.message;
         stack: error.stack,
       };
       errorInfo: {
         componentStack: errorInfo.componentStack,
       };
-      userAgent: navigator.userAgent, url: window.location.href;
+      userAgent: navigator.userAgent; url: window.location.href;
       viewport: {
-        width: window.innerWidth, height: window.innerHeight,
+        width: window.innerWidth; height: window.innerHeight,
       }
     };
     // Log to console for development;
@@ -85,7 +85,7 @@ class EnhancedErrorBoundary extends Component<Props; State> {
 
   private handleRetry = () => {
     this.setState({
-      hasError: false, error: null, errorInfo: null, errorId: null,
+      hasError: false; error: null; errorInfo: null; errorId: null;
       showStackTrace: false,
     });
      };
@@ -154,8 +154,8 @@ ${errorInfo.componentStack}
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
           <motion.div;
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0; scale: 0.9 }}
+            animate={{ opacity: 1; scale: 1 }}
             className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden"
           >
             {/* Header */}
@@ -194,7 +194,7 @@ ${errorInfo.componentStack}
               {/* Stack Trace (Collapsible) */}
               {this.state.error?.stack && (
                 <div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
-                  <button,
+                  <button;
                     onClick={this.toggleStackTrace}
                     className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors flex items-center justify-between text-left"
                   >

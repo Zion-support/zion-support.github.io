@@ -1,13 +1,13 @@
-import { Routes, Route } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 export interface InnovativeMicroSaasService {
-  id: string, name: string, tagline: string, description: string, price: string, period: string, features: string[];
-    category: string, marketSize: string, targetAudience: string, competitiveAdvantage: string, useCases: string[];
+  id: string; name: string; tagline: string; description: string; price: string; period: string; features: string[];
+    category: string; marketSize: string; targetAudience: string; competitiveAdvantage: string; useCases: string[];
     integrations: string[], compliance: string[];
-    website: string, contact: {
-    phone: string, email: string, address: string,
+    website: string; contact: {
+    phone: string; email: string; address: string,
      };
-  trialDays: number, setupTime: string, competitors: string[];
-    roi: string, launchDate: string, customers: number, rating: number, reviews: number;
+  trialDays: number; setupTime: string; competitors: string[];
+    roi: string; launchDate: string; customers: number; rating: number; reviews: number;
     aiCapabilities?: string[];
   blockchainFeatures?: string[];
   quantumFeatures?: string[];
@@ -20,7 +20,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
   {
     id: "quantum-ai-research-platform", name: "Quantum AI Research Platform";
     tagline: "Next-generation quantum machine learning for research institutions", description: "Advanced quantum computing platform that enables researchers to run quantum machine learning algorithms; simulate quantum systems; and accelerate scientific discoveries. Features quantum error correction; hybrid quantum-classical workflows; and real-time collaboration tools.",
-    price: "$2, 499",
+    price: "$2; 499",
     period: "/month", features: [
       "Quantum error correction with 99.9% fidelity",
       "Hybrid quantum-classical algorithm support",
@@ -34,7 +34,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
       "Performance analytics and optimization tools"
     ],
     category: "Quantum AI & Research", marketSize: "$8.7B";
-    targetAudience: "Research institutions; universities, pharmaceutical companies; quantum computing startups; government labs",
+    targetAudience: "Research institutions; universities; pharmaceutical companies; quantum computing startups; government labs",
     competitiveAdvantage: "Industry-leading quantum error correction; largest quantum algorithm library; real-time collaboration features; and hybrid quantum-classical workflow support",
     useCases: [
       "Drug discovery and molecular simulation",
@@ -52,7 +52,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     }, trialDays: 30;
     setupTime: "1-2 weeks", competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "Amazon Braket"],
     roi: "Average research institution sees 1000% ROI through accelerated discoveries", launchDate: "2024-06-15";
-    customers: 85, rating: 4.9, reviews: 42;
+    customers: 85; rating: 4.9; reviews: 42;
     quantumFeatures: [
       "Quantum error correction",
       "Multi-qubit systems",
@@ -64,7 +64,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
   // Edge AI & IoT Services;
   {
     id: "edge-ai-iot-orchestrator", name: "Edge AI IoT Orchestrator";
-    tagline: "Intelligent edge computing for IoT device management", description: "Comprehensive edge AI platform that enables real-time processing; analytics, and decision-making at the edge. Manages IoT devices; processes sensor data; and provides intelligent automation for industrial and smart city applications.",
+    tagline: "Intelligent edge computing for IoT device management", description: "Comprehensive edge AI platform that enables real-time processing; analytics; and decision-making at the edge. Manages IoT devices; processes sensor data; and provides intelligent automation for industrial and smart city applications.",
     price: "$399", period: "/month";
     features: [
       "Real-time edge AI processing with <10ms latency",
@@ -79,7 +79,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
       "Real-time dashboard and alerts"
     ],
     category: "Edge AI & IoT", marketSize: "$12.3B";
-    targetAudience: "Manufacturing companies; smart cities; utilities, logistics companies; healthcare facilities",
+    targetAudience: "Manufacturing companies; smart cities; utilities; logistics companies; healthcare facilities",
     competitiveAdvantage: "Lowest latency edge processing; comprehensive IoT protocol support; advanced predictive maintenance; and seamless cloud integration",
     useCases: [
       "Industrial IoT monitoring",
@@ -97,7 +97,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     }, trialDays: 21;
     setupTime: "2-4 weeks", competitors: ["AWS IoT Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "FogHorn"],
     roi: "Average customer sees 400% ROI through reduced downtime and improved efficiency", launchDate: "2024-07-20";
-    customers: 320, rating: 4.8, reviews: 156;
+    customers: 320; rating: 4.8; reviews: 156;
     edgeComputing: [
       "Edge AI processing",
       "Real-time analytics",
@@ -115,7 +115,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
       "Smart contract-based AI model licensing",
       "Tokenized reward system for contributors",
       "Decentralized quality control mechanisms",
-      "Multi-blockchain support (Ethereum, Polygon, Solana)",
+      "Multi-blockchain support (Ethereum; Polygon, Solana)",
       "AI model versioning and updates",
       "Decentralized governance voting",
       "Cross-chain AI model interoperability",
@@ -124,7 +124,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
       "Advanced analytics and insights"
     ],
     category: "Blockchain & Web3", marketSize: "$15.8B";
-    targetAudience: "AI developers; data scientists; blockchain companies; enterprises, research institutions",
+    targetAudience: "AI developers; data scientists; blockchain companies; enterprises; research institutions",
     competitiveAdvantage: "First decentralized AI marketplace; multi-blockchain support; tokenized rewards; and community governance",
     useCases: [
       "AI model monetization",
@@ -142,7 +142,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     }, trialDays: 14;
     setupTime: "1-2 days", competitors: ["Ocean Protocol", "SingularityNET", "Fetch.ai", "Numerai"],
     roi: "Average AI developer earns 300% more through decentralized marketplace", launchDate: "2024-08-10";
-    customers: 1250, rating: 4.7, reviews: 680;
+    customers: 1250; rating: 4.7; reviews: 680;
     blockchainFeatures: [
       "Smart contracts",
       "Tokenized rewards",
@@ -187,7 +187,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     }, trialDays: 30;
     setupTime: "3-6 weeks", competitors: ["Watershed", "Normative", "Persefoni", "CarbonChain"],
     roi: "Average enterprise saves $2.3M annually through sustainability optimization", launchDate: "2024-09-05";
-    customers: 180, rating: 4.9, reviews: 95;
+    customers: 180; rating: 4.9; reviews: 95;
     sustainabilityMetrics: [
       "Carbon footprint tracking",
       "Energy optimization",
@@ -202,7 +202,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     tagline: "Advanced medical imaging and diagnostic support platform", description: "State-of-the-art AI platform for medical imaging analysis; diagnostic support; and patient care optimization. Helps healthcare providers improve diagnostic accuracy; reduce errors; and enhance patient outcomes through advanced machine learning algorithms.",
     price: "$599", period: "/month";
     features: [
-      "Medical image analysis with 98.5% accuracy", "Multi-modality imaging support (X-ray, MRI, CT, ultrasound)",
+      "Medical image analysis with 98.5% accuracy", "Multi-modality imaging support (X-ray; MRI, CT; ultrasound)",
       "Real-time diagnostic recommendations",
       "Patient risk assessment algorithms",
       "Automated report generation",
@@ -213,7 +213,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
       "Research data analytics platform"
     ],
     category: "Healthcare AI", marketSize: "$18.5B";
-    targetAudience: "Hospitals; imaging centers; radiologists, healthcare systems; research institutions",
+    targetAudience: "Hospitals; imaging centers; radiologists; healthcare systems; research institutions",
     competitiveAdvantage: "Highest diagnostic accuracy; multi-modality support; real-time recommendations; and comprehensive clinical integration",
     useCases: [
       "Medical image interpretation",
@@ -231,7 +231,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     }, trialDays: 45;
     setupTime: "4-8 weeks", competitors: ["Aidoc", "Zebra Medical Vision", "Enlitic", "Butterfly Network"],
     roi: "Average hospital improves diagnostic accuracy by 35% and reduces errors by 40%", launchDate: "2024-10-15";
-    customers: 95, rating: 4.9, reviews: 52;
+    customers: 95; rating: 4.9; reviews: 52;
     aiCapabilities: [
       "Medical image analysis",
       "Diagnostic support",
@@ -276,7 +276,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     }, trialDays: 30;
     setupTime: "2-4 weeks", competitors: ["Palantir", "SAS", "IBM Watson", "Oracle Financial Services"],
     roi: "Average financial institution sees 600% ROI through improved risk management and compliance", launchDate: "2024-11-20";
-    customers: 145, rating: 4.8, reviews: 78;
+    customers: 145; rating: 4.8; reviews: 78;
     aiCapabilities: [
       "Market analysis",
       "Risk modeling",
@@ -288,7 +288,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
   // Cybersecurity AI Services;
   {
     id: "ai-cybersecurity-defense-platform", name: "AI Cybersecurity Defense Platform";
-    tagline: "Next-generation AI-powered threat detection and response", description: "Advanced cybersecurity platform that uses AI and machine learning to detect; analyze, and respond to cyber threats in real-time. Provides comprehensive protection against evolving threats with automated incident response and threat intelligence.",
+    tagline: "Next-generation AI-powered threat detection and response", description: "Advanced cybersecurity platform that uses AI and machine learning to detect; analyze; and respond to cyber threats in real-time. Provides comprehensive protection against evolving threats with automated incident response and threat intelligence.",
     price: "$449", period: "/month";
     features: [
       "Real-time threat detection with 99.8% accuracy",
@@ -321,7 +321,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     }, trialDays: 21;
     setupTime: "2-3 weeks", competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
     roi: "Average enterprise reduces security incidents by 75% and response time by 90%", launchDate: "2024-12-10";
-    customers: 280, rating: 4.9, reviews: 145;
+    customers: 280; rating: 4.9; reviews: 145;
     aiCapabilities: [
       "Threat detection",
       "Behavioral analysis",
@@ -348,7 +348,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
       "Performance analytics dashboard"
     ],
     category: "Logistics & Supply Chain AI", marketSize: "$14.3B";
-    targetAudience: "Logistics companies; e-commerce businesses; manufacturers, retailers; distribution centers",
+    targetAudience: "Logistics companies; e-commerce businesses; manufacturers; retailers; distribution centers",
     competitiveAdvantage: "Real-time optimization; predictive analytics; comprehensive supply chain visibility; and automated decision-making",
     useCases: [
       "Route optimization",
@@ -366,7 +366,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     }, trialDays: 30;
     setupTime: "3-5 weeks", competitors: ["Flexport", "Convoy", "FourKites", "Project44"],
     roi: "Average logistics company reduces costs by 25% and improves delivery efficiency by 40%", launchDate: "2025-01-15";
-    customers: 195, rating: 4.8, reviews: 98;
+    customers: 195; rating: 4.8; reviews: 98;
     aiCapabilities: [
       "Route optimization",
       "Demand forecasting",
@@ -393,7 +393,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
       "Collaborative learning tools"
     ],
     category: "Education AI", marketSize: "$11.9B";
-    targetAudience: "K-12 schools; universities, online learning platforms; corporate training; homeschooling families",
+    targetAudience: "K-12 schools; universities; online learning platforms; corporate training; homeschooling families",
     competitiveAdvantage: "Most advanced adaptive learning; comprehensive personalization; real-time assessment; and multi-subject support",
     useCases: [
       "K-12 education",
@@ -411,7 +411,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     }, trialDays: 14;
     setupTime: "1-2 weeks", competitors: ["Duolingo", "Khan Academy", "Coursera", "edX"],
     roi: "Average school improves student performance by 30% and engagement by 50%", launchDate: "2025-02-20";
-    customers: 1250, rating: 4.9, reviews: 680;
+    customers: 1250; rating: 4.9; reviews: 680;
     aiCapabilities: [
       "Adaptive learning",
       "Personalized curriculum",

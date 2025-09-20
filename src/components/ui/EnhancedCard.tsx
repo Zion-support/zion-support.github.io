@@ -13,10 +13,10 @@ interface EnhancedCardProps {
 
 export function EnhancedCard({ 
   children; 
-  className, 
+  className; 
   variant = "default",
   hover = true;
-  onClick,
+  onClick;
   as: Component = "div",
   href,
 }: EnhancedCardProps) {
@@ -34,7 +34,7 @@ export function EnhancedCard({
     baseClasses;
     variantClasses[variant],
     hoverClasses;
-    interactiveClasses,
+    interactiveClasses;
     className,
   );
 
@@ -58,7 +58,7 @@ export function EnhancedCardHeader({
   children; 
   className, 
 }: { 
-  children: React.ReactNode,
+  children: React.ReactNode;
     className?: string, 
 }) {
   return (
@@ -73,7 +73,7 @@ export function EnhancedCardContent({
   children; 
   className, 
 }: { 
-  children: React.ReactNode,
+  children: React.ReactNode;
     className?: string, 
 }) {
   return (
@@ -88,7 +88,7 @@ export function EnhancedCardFooter({
   children; 
   className, 
 }: { 
-  children: React.ReactNode,
+  children: React.ReactNode;
     className?: string, 
 }) {
   return (

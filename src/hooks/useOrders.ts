@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query, ";
 
 export interface Order {
-  orderId: string, date: string, total: number, status: string, invoiceUrl: string,
+  orderId: string; date: string; total: number; status: string; invoiceUrl: string,
 }
 
 export function useGetOrdersQuery(userId?: string) {
@@ -15,6 +15,6 @@ export function useGetOrdersQuery(userId?: string) {
       }
       return (await res.json()) as Order[];
     },
-    enabled: !!userId, initialData: [] as Order[];
+    enabled: !!userId; initialData: [] as Order[];
   });
 }

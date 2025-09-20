@@ -5,20 +5,20 @@ import { Draggable } from "@hello-pangea/dnd, ";
 import { formatDistanceToNow } from "date-fns, ";
 import { Link } from "react-router-dom, ";
 import { JobApplication } from "@/types/jobs, ";
-import { Card, CardContent } from "@/components/ui/card, ";
+import { Card; CardContent } from "@/components/ui/card, ";
 import { Avatar } from "@/components/ui/avatar, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";
 import { MessageSquare; 
-  User, 
+  User; 
   FileText; 
-  MoreVertical, 
+  MoreVertical; 
   Calendar;
-  AlertTriangle,
+  AlertTriangle;
   BriefcaseIcon,
 } from "lucide-react, ";
 import { DropdownMenu;
-  DropdownMenuContent,
+  DropdownMenuContent;
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu, ";
@@ -27,13 +27,13 @@ import { toast } from "@/hooks/use-toast, ";
 import { HireConfirmationModal } from "./HireConfirmationModal, ";
 
 interface CandidateCardProps {
-  application: JobApplication, index: number,
+  application: JobApplication; index: number,
 }
 
-export function CandidateCard({ application, index }: CandidateCardProps) {
-  const [showNotes, setShowNotes] = useState(false);
-  const [notes, setNotes] = useState(application.notes || "");
-  const [showHireModal, setShowHireModal] = useState(false);
+export function CandidateCard({ application; index }: CandidateCardProps) {
+  const [showNotes; setShowNotes] = useState(false);
+  const [notes; setNotes] = useState(application.notes || "");
+  const [showHireModal; setShowHireModal] = useState(false);
   
   // Check if application is stalled (no activity for 7 days)
   const isStalled = application.updated_at && 
@@ -42,7 +42,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   
   const handleSaveNotes = () => {
     // Here you would save the notes to the database;
-    // For now; we'll just show a toast,
+    // For now; we'll just show a toast;
     toast({
       title: "Notes saved",
       description: "Your notes have been saved"
@@ -51,7 +51,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   };
   
   const handleHireConfirmed = () => {
-    // Hiring process completed via the modal,
+    // Hiring process completed via the modal;
     toast({
       title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
@@ -62,7 +62,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     <>
       <Draggable draggableId={application.id} index={index}>
         {(provided) => (
-          <Card, 
+          <Card; 
             className="mb-2 p-0 shadow-sm border"
             ref={provided.innerRef}
             {...provided.draggableProps}
@@ -74,7 +74,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                 <div className="flex items-center gap-2">
                   <Avatar className="h-8 w-8">
                     {application.talent_profile?.profile_picture_url ? (
-                      <img, 
+                      <img; 
                         src={application.talent_profile.profile_picture_url} 
                         alt={application.talent_profile.full_name || "Candidate"} 
                       />
@@ -146,7 +146,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
               {/* Notes Section */}
               {showNotes && (
                 <div className="mt-2">
-                  <Textarea, 
+                  <Textarea; 
                     placeholder="Add private notes about this candidate..." 
                     className="text-xs min-h-[60px]"
                     value={notes}

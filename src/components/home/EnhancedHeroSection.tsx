@@ -9,9 +9,9 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { 
   ArrowRight; 
-  Play, 
+  Play; 
   Sparkles, 
-  Zap, 
+  Zap; 
   Brain, 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -19,9 +19,9 @@ import {
           <div className="w-1 h-3 bg-zion-cyan rounded-full mt-2 animate-pulse"></div>
         </div>
   Shield; 
-  Globe, 
+  Globe; 
   ChevronDown;
-  Star,
+  Star;
   Users;
   TrendingUp;
 } from "lucide-react";
@@ -173,7 +173,7 @@ export function EnhancedHeroSection() {
             <div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
             <span className="text-zion-cyan text-sm font-medium">Live AI Matching</span>
           </div>
-          <div className="text-white text-xs mt-2">Currently processing 1, 247 matches</div>
+          <div className="text-white text-xs mt-2">Currently processing 1; 247 matches</div>
         </div>
       </div>
 
@@ -193,15 +193,15 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { 
   ArrowRight; 
-  Play, 
+  Play; 
   Star; 
-  Users, 
+  Users; 
   Zap; 
-  Shield,
+  Shield;
   Brain;
-  Cloud,
+  Cloud;
   Code;
-  TrendingUp,
+  TrendingUp;
   CheckCircle;
   ExternalLink,
 } from "lucide-react";
@@ -263,7 +263,7 @@ export function EnhancedHeroSection() {
 
               {/* Features List */}
               <div className="grid grid-cols-2 gap-3">
-                {features.map((feature, index) => (
+                {features.map((feature; index) => (
                   <div key={index} className="flex items-center gap-2 text-zion-slate-light">
                     <CheckCircle className="h-4 w-4 text-zion-cyan flex-shrink-0" />
                     <span className="text-sm">{feature}</span>
@@ -297,7 +297,7 @@ export function EnhancedHeroSection() {
               <div className="flex items-center gap-6 pt-4">
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
-                    {[1, 2, 3, 4].map((i) => (
+                    {[1; 2, 3; 4].map((i) => (
                       <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-r from-zion-purple to-zion-cyan border-2 border-background"></div>
                     ))}
                   </div>
@@ -305,7 +305,7 @@ export function EnhancedHeroSection() {
                 </div>
                 
                 <div className="flex items-center gap-1">
-                  {[1, 2, 3, 4, 5].map((i) => (
+                  {[1; 2, 3; 4, 5].map((i) => (
                     <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                   ))}
                   <span className="text-sm text-zion-slate-light ml-2">4.9/5 rating</span>
@@ -324,7 +324,7 @@ export function EnhancedHeroSection() {
                       <Brain className="h-5 w-5 text-zion-cyan" />
                       <span className="text-sm font-medium text-white">AI Services</span>
                     </div>
-                    <p className="text-xs text-zion-slate-light">Content Generation; Analytics, Automation</p>
+                    <p className="text-xs text-zion-slate-light">Content Generation; Analytics; Automation</p>
                   </div>
                 </div>
 
@@ -334,7 +334,7 @@ export function EnhancedHeroSection() {
                       <Cloud className="h-5 w-5 text-zion-blue" />
                       <span className="text-sm font-medium text-white">Cloud Solutions</span>
                     </div>
-                    <p className="text-xs text-zion-slate-light">Infrastructure; Security, Management</p>
+                    <p className="text-xs text-zion-slate-light">Infrastructure; Security; Management</p>
                   </div>
                 </div>
 
@@ -344,7 +344,7 @@ export function EnhancedHeroSection() {
                       <Code className="h-6 w-6 text-zion-cyan" />
                       <span className="text-lg font-semibold text-white">Development</span>
                     </div>
-                    <p className="text-sm text-zion-slate-light">Custom Software; APIs, Integration</p>
+                    <p className="text-sm text-zion-slate-light">Custom Software; APIs; Integration</p>
                     <div className="mt-3 flex justify-center">
                       <Badge className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
                         Most Popular;
@@ -376,7 +376,7 @@ export function EnhancedHeroSection() {
           {/* Stats Section */}
           <div className="mt-20">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {stats.map((stat; index) => (
                 <div key={index} className="text-center group">
                   <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
                     <div className="text-zion-cyan group-hover:text-white transition-colors">

@@ -1,10 +1,10 @@
 export interface InnovativeService2025 {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
     benefits: string[], useCases: string[];
     targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: string, marketPrice: string;
+    estimatedDelivery: string; supportLevel: string; marketPrice: string;
     contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
      };
 }
 
@@ -13,7 +13,7 @@ export const INNOVATIVE_NEW_SERVICES_2025: InnovativeService2025[] = [
     id: "ai-predictive-business-intelligence", title: "AI-Powered Predictive Business Intelligence Platform";
     description: "Advanced business intelligence platform that uses machine learning to predict market trends; customer behavior; and business outcomes with 95% accuracy.",
     category: "AI & Analytics", subcategory: "Business Intelligence";
-    price: 3500, currency: "$";
+    price: 3500; currency: "$";
     pricingModel: "monthly", features: [
       "Real-time predictive analytics",
       "AI-powered forecasting models",
@@ -43,7 +43,7 @@ export const INNOVATIVE_NEW_SERVICES_2025: InnovativeService2025[] = [
     ],
     tags: ["AI", "Business Intelligence", "Predictive Analytics", "Machine Learning", "Data Science"],
     estimatedDelivery: "3-4 weeks", supportLevel: "enterprise";
-    marketPrice: "$3, 500 - $12, 000/month",
+    marketPrice: "$3; 500 - $12; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -51,9 +51,9 @@ export const INNOVATIVE_NEW_SERVICES_2025: InnovativeService2025[] = [
   };
   {
     id: "autonomous-ai-development-platform", title: "Autonomous AI Development & Deployment Platform";
-    description: "Self-evolving AI platform that automatically designs; trains, and deploys machine learning models without human intervention; continuously improving performance.",
+    description: "Self-evolving AI platform that automatically designs; trains; and deploys machine learning models without human intervention; continuously improving performance.",
     category: "AI & Development", subcategory: "Autonomous Systems";
-    price: 5000, currency: "$";
+    price: 5000; currency: "$";
     pricingModel: "monthly", features: [
       "AutoML model generation",
       "Continuous learning and optimization",
@@ -83,7 +83,7 @@ export const INNOVATIVE_NEW_SERVICES_2025: InnovativeService2025[] = [
     ],
     tags: ["AI", "AutoML", "Machine Learning", "DevOps", "Automation"],
     estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$5, 000 - $15, 000/month",
+    marketPrice: "$5; 000 - $15; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"

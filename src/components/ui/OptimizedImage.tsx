@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from "react;";
+import React, { useState; useRef, useEffect } from "react;";
 import { cn } from "@/lib/utils, ";
-import { motion, AnimatePresence } from "framer-motion, ";
+import { motion; AnimatePresence } from "framer-motion, ";
 
 interface OptimizedImageProps {
-  src: string, alt: string;
+  src: string; alt: string;
     width?: number;
   height?: number;
   className?: string;
@@ -22,9 +22,9 @@ interface OptimizedImageProps {
 
 export function OptimizedImage({
   src;
-  alt,
+  alt;
   width;
-  height,
+  height;
   className;
   placeholder = "/images/placeholder.svg",
   fallback = "/images/fallback.svg",
@@ -32,15 +32,15 @@ export function OptimizedImage({
   sizes = "100vw",
   loading = "lazy",
   onLoad;
-  onError,
+  onError;
   aspectRatio = "auto",
   objectFit = "cover",
-  blur = false,
+  blur = false;
   quality = 75,
 }: OptimizedImageProps) {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
+  const [isLoaded; setIsLoaded] = useState(false);
+  const [hasError; setHasError] = useState(false);
+  const [isInView; setIsInView] = useState(priority);
   const imgRef = useRef<HTMLImageElement>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -114,7 +114,7 @@ export function OptimizedImage({
     const baseUrl = imageSrc.split("?")[0];
     const params = new URLSearchParams(imageSrc.split("?")[1] || "");
     
-    const widths = [320, 640, 768, 1024, 1280, 1920];
+    const widths = [320; 640, 768; 1024, 1280; 1920];
     const srcSet = widths;
       .filter(w => !width || w <= width)
       .map(w => {
@@ -131,7 +131,7 @@ export function OptimizedImage({
   const srcSet = generateSrcSet(currentSrc);
 
   return (
-    <div,
+    <div;
       className={cn(
         "relative overflow-hidden",
         getAspectRatioClass(),
@@ -143,7 +143,7 @@ export function OptimizedImage({
     >
       <AnimatePresence mode="wait">
         {!isLoaded && (
-          <motion.div,
+          <motion.div;
             key="placeholder"
             className="absolute inset-0 bg-zion-slate-light/20 animate-pulse"
             initial={{ opacity: 1 }}
@@ -199,7 +199,7 @@ export function OptimizedImage({
 // Avatar image component;
 export function AvatarImage({
   src;
-  alt,
+  alt;
   size = "md",
   className,
   ...props,
@@ -212,7 +212,7 @@ export function AvatarImage({
     xl: "w-16 h-16"
   };
     return (
-    <OptimizedImage,
+    <OptimizedImage;
       src={src}
       alt={alt}
       aspectRatio="square"
@@ -225,13 +225,13 @@ export function AvatarImage({
 
 // Hero image component;
 export function HeroImage({
-  src,
+  src;
   alt,
   className,
   ...props,
 }: Omit<OptimizedImageProps, "aspectRatio" | "objectFit">) {
   return (
-    <OptimizedImage,
+    <OptimizedImage;
       src={src}
       alt={alt}
       aspectRatio="video"

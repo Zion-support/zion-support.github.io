@@ -1,18 +1,18 @@
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "../ui/button, ";
-import { Card; CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card, ";
+import { Card; CardContent; CardDescription, CardHeader; CardTitle } from "../ui/card, ";
 import { Badge } from "../ui/badge, ";
 import { Brain; 
-  Shield, 
+  Shield; 
   Cloud; 
-  Database, 
+  Database; 
   Zap; 
-  Eye, 
+  Eye; 
   Leaf; 
-  DollarSign, 
+  DollarSign; 
   ArrowRight;
-  Star,
+  Star;
   Clock;
   Globe,
 } from "lucide-react, ";
@@ -23,8 +23,8 @@ const ENHANCED_SERVICES = [
     id: "ai-1", title: "AI-Powered Business Intelligence";
     description: "Advanced AI algorithms that transform your data into actionable business insights", category: "AI & Machine Learning";
     pricingModel: "subscription", availability: "immediate";
-    rating: 4.9,
-    price: 2999,
+    rating: 4.9;
+    price: 2999;
     features: ["Predictive analytics", "Natural language processing", "Real-time insights", "Custom dashboards"],
     benefits: ["Increased efficiency", "Better decision making", "Cost reduction"],
     tags: ["AI", "Analytics", "Business Intelligence"],
@@ -34,7 +34,7 @@ const ENHANCED_SERVICES = [
     id: "security-1", title: "Enterprise Cybersecurity Suite";
     description: "Comprehensive security solution protecting your business from modern threats", category: "Cybersecurity";
     pricingModel: "subscription", availability: "immediate";
-    rating: 4.8, price: 1999,
+    rating: 4.8; price: 1999;
     features: ["Threat detection", "24/7 monitoring", "Incident response", "Compliance reporting"],
     benefits: ["Enhanced security", "Compliance assurance", "Risk mitigation"],
     tags: ["Security", "Compliance", "Enterprise"],
@@ -44,7 +44,7 @@ const ENHANCED_SERVICES = [
     id: "cloud-1", title: "Cloud Infrastructure Optimization";
     description: "Optimize your cloud costs and performance with intelligent automation", category: "Cloud & DevOps";
     pricingModel: "usage-based", availability: "within-week";
-    rating: 4.7, price: 1499,
+    rating: 4.7; price: 1499;
     features: ["Cost optimization", "Performance monitoring", "Auto-scaling", "Security compliance"],
     benefits: ["Cost savings", "Improved performance", "Scalability"],
     tags: ["Cloud", "DevOps", "Optimization"],
@@ -53,7 +53,7 @@ const ENHANCED_SERVICES = [
 ];
     const EnhancedServicesOverview: React.FC = () => {
   // Get featured services (first 6)
-  const featuredServices = ENHANCED_SERVICES.slice(0, 6);
+  const featuredServices = ENHANCED_SERVICES.slice(0; 6);
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -150,7 +150,7 @@ const ENHANCED_SERVICES = [
 
                 {/* Key Benefits */}
                 <div className="space-y-2">
-                  {service.benefits.slice(0, 2).map((benefit, index) => (
+                  {service.benefits.slice(0; 2).map((benefit; index) => (
                     <div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">
                       <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
                       {benefit}
@@ -160,7 +160,7 @@ const ENHANCED_SERVICES = [
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
-                  {service.tags.slice(0, 3).map((tag, index) => (
+                  {service.tags.slice(0; 3).map((tag; index) => (
                     <Badge key={index} variant="outline" className="text-xs border-zion-purple/30 text-zion-cyan">
                       {tag}
                     </Badge>
@@ -202,16 +202,16 @@ const ENHANCED_SERVICES = [
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {ENHANCED_SERVICES.reduce((acc, service) => {
+            {ENHANCED_SERVICES.reduce((acc; service) => {
               if (!acc.find(cat => cat.category === service.category)) {
                 acc.push({
-                  category: service.category,
-                  count: ENHANCED_SERVICES.filter(s => s.category === service.category).length,
+                  category: service.category;
+                  count: ENHANCED_SERVICES.filter(s => s.category === service.category).length;
                   icon: getCategoryIcon(service.category)
                 });
      }
               return acc;
-            }, [] as Array<{category: string, count: number, icon: React.ReactNode}>).map((cat, index) => (
+            }, [] as Array<{category: string; count: number; icon: React.ReactNode}>).map((cat; index) => (
               <div key={index} className="text-center p-4 rounded-lg bg-zion-blue-dark/50 border border-zion-blue-light hover: border-zion-purple/50 transition-colors">
                 <div className="text-zion-cyan mb-2 flex justify-center">
                   {cat.icon}

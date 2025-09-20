@@ -8,13 +8,13 @@ interface ButtonProps {
 }
 
 export const OptimizedButton = React.memo<ButtonProps>(({ 
-  children, 
+  children; 
   onClick, 
   variant = "primary", 
   disabled = false, 
 }) => {
   return (
-    <button,
+    <button;
       className={`btn btn-${variant}`}
       onClick={onClick}
       disabled={disabled}

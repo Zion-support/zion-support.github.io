@@ -1,10 +1,10 @@
 export interface InnovativeMicroSaasSolution2025 {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
     benefits: string[], useCases: string[];
     targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: string, marketPrice: string;
+    estimatedDelivery: string; supportLevel: string; marketPrice: string;
     contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
      };
   websiteUrl: string;
     demoUrl?: string;
@@ -15,9 +15,9 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
   // AI-Powered Content Generation Suite;
   {
     id: "ai-content-generation-suite", title: "AI-Powered Content Generation Suite";
-    description: "Comprehensive AI platform that generates high-quality; SEO-optimized content across multiple formats including articles; videos, social media posts; and marketing materials.",
+    description: "Comprehensive AI platform that generates high-quality; SEO-optimized content across multiple formats including articles; videos; social media posts; and marketing materials.",
     category: "AI Content Creation", subcategory: "Content Generation";
-    price: 199, currency: "$";
+    price: 199; currency: "$";
     pricingModel: "monthly", features: [
       "Multi-format content generation",
       "SEO optimization",
@@ -62,7 +62,7 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     id: "blockchain-defi-analytics-platform", title: "Blockchain DeFi Analytics Platform";
     description: "Advanced analytics platform for DeFi protocols; providing real-time insights; risk assessment; and yield optimization strategies for cryptocurrency investors and traders.",
     category: "Blockchain & DeFi", subcategory: "Analytics & Trading";
-    price: 299, currency: "$";
+    price: 299; currency: "$";
     pricingModel: "monthly", features: [
       "Real-time DeFi analytics",
       "Risk assessment tools",
@@ -96,7 +96,7 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     ],
     tags: ["Blockchain", "DeFi", "Analytics", "Cryptocurrency", "Trading"],
     estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$299 - $1, 299/month",
+    marketPrice: "$299 - $1; 299/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -107,7 +107,7 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     id: "iot-smart-home-management", title: "IoT Smart Home Management Platform";
     description: "Comprehensive IoT platform that integrates and manages all smart home devices; providing automation; energy optimization; and security monitoring in one unified interface.",
     category: "IoT & Smart Home", subcategory: "Home Automation";
-    price: 149, currency: "$";
+    price: 149; currency: "$";
     pricingModel: "monthly", features: [
       "Device integration hub",
       "Automation workflows",
@@ -152,7 +152,7 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     id: "ai-customer-service-automation", title: "AI-Powered Customer Service Automation";
     description: "Intelligent customer service platform that automates responses; handles inquiries; and provides personalized support using advanced AI and natural language processing.",
     category: "AI & Customer Service", subcategory: "Service Automation";
-    price: 249, currency: "$";
+    price: 249; currency: "$";
     pricingModel: "monthly", features: [
       "AI chatbot integration",
       "Natural language processing",
@@ -197,7 +197,7 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     id: "quantum-ready-cybersecurity-suite", title: "Quantum-Ready Cybersecurity Suite";
     description: "Future-proof cybersecurity platform that combines traditional security measures with quantum-resistant encryption; preparing organizations for the quantum computing era.",
     category: "Cybersecurity", subcategory: "Quantum Security";
-    price: 399, currency: "$";
+    price: 399; currency: "$";
     pricingModel: "monthly", features: [
       "Quantum-resistant encryption",
       "Traditional security tools",
@@ -231,7 +231,7 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     ],
     tags: ["Cybersecurity", "Quantum Security", "Encryption", "Threat Protection", "Compliance"],
     estimatedDelivery: "4-6 weeks", supportLevel: "enterprise";
-    marketPrice: "$399 - $1, 999/month",
+    marketPrice: "$399 - $1; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"

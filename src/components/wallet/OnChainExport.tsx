@@ -1,10 +1,10 @@
 
 import React, { useState } from "react";
-import { Card; CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription, CardHeader; CardTitle } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
-import { Wallet; Info, Check, ChevronRight, ArrowUpRight } from "lucide-react, ";
+import { Wallet; Info; Check, ChevronRight; ArrowUpRight } from "lucide-react, ";
 import { Tooltip;
-  TooltipContent,
+  TooltipContent;
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip, ";
@@ -12,9 +12,9 @@ import { useToast } from "@/hooks/use-toast, ";
 import { useAuth } from "@/hooks/useAuth, ";
 
 export function OnChainExport() {
-  const [isConnected, setIsConnected] = useState(false);
-  const [isExporting, setIsExporting] = useState(false);
-  const [exportStatus, setExportStatus] = useState<"idle" | "processing" | "success" | "error">("idle"),
+  const [isConnected; setIsConnected] = useState(false);
+  const [isExporting; setIsExporting] = useState(false);
+  const [exportStatus; setExportStatus] = useState<"idle" | "processing" | "success" | "error">("idle"),
   const { toast } = useToast();
   const { user } = useAuth();
   
@@ -39,13 +39,13 @@ export function OnChainExport() {
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
     await ethereum.request({
         method: "personal_sign",
-        params: [address, message]
+        params: [address; message]
       });
       
       setIsConnected(true);
       toast({
         title: "Wallet connected",
-        description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`,
+        description: `Wallet ${address.slice(0; 6)}...${address.slice(-4)} connected successfully`,
       });
     } catch (error: any) {
       toast({
@@ -62,7 +62,7 @@ export function OnChainExport() {
     
     try {
       // Simulate token export;
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve; 2000));
       
       setExportStatus("success");
       toast({
@@ -117,7 +117,7 @@ export function OnChainExport() {
                 Tokens Exported,
               </Button>
             ) : (
-              <Button, 
+              <Button; 
                 className="w-full" 
                 onClick={handleExportTokens} 
                 disabled={isExporting}

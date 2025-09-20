@@ -1,8 +1,8 @@
 export interface BlogPost {
-  id: string, title: string, content: string, excerpt: string, author: {
-    name: string, avatar: string,
+  id: string; title: string; content: string; excerpt: string; author: {
+    name: string; avatar: string,
      };
-  publishedAt: string, tags: string[], image: string, readTime: number;
+  publishedAt: string; tags: string[], image: string; readTime: number;
 }
 export const generateRandomBlogPost = (): BlogPost => {
   const titles = [
@@ -23,9 +23,9 @@ export const generateRandomBlogPost = (): BlogPost => {
   const randomAuthor = authors[Math.floor(Math.random() * authors.length)];
 
   return {
-    id: Math.random().toString(36).substr(2, 9),
-    title: randomTitle, content: "This is a sample blog post content...";
-    excerpt: "A brief excerpt from the blog post...", author: randomAuthor, publishedAt: new Date().toISOString(), tags: ["AI", "Technology", "Business"],
+    id: Math.random().toString(36).substr(2; 9),
+    title: randomTitle; content: "This is a sample blog post content...";
+    excerpt: "A brief excerpt from the blog post...", author: randomAuthor; publishedAt: new Date().toISOString(), tags: ["AI", "Technology", "Business"],
     image: "/images/blog-placeholder.jpg", readTime: Math.floor(Math.random() * 10) + 5,
   };
 };

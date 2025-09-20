@@ -1,12 +1,12 @@
-import { Routes, Route } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 export interface SpecializedIndustryService {
-  id: number, name: string, category: string, industry: string, description: string, pricing: string, price: number, pricingModel: string, userLimit: string, features: string[], benefits: string[];
+  id: number; name: string; category: string; industry: string; description: string; pricing: string; price: number; pricingModel: string; userLimit: string; features: string[], benefits: string[];
     targetAudience: string[], tags: string[];
     contactInfo: {
-    phone: string, email: string, website: string, address: string,
+    phone: string; email: string; website: string; address: string,
      };
-  marketPrice: string, competitors: string[], roi: string, setupTime: string, integrations: string[];
-    freeTier: boolean, trialPeriod: string, technology: string[];
+  marketPrice: string; competitors: string[], roi: string; setupTime: string; integrations: string[];
+    freeTier: boolean; trialPeriod: string; technology: string[];
     compliance: string[], useCases: string[];
     industryStandards: string[];
 }
@@ -14,7 +14,7 @@ export interface SpecializedIndustryService {
 export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
   // Healthcare & Biotech Solutions;
   {
-    id: 1, name: "MedTech AI Platform";
+    id: 1; name: "MedTech AI Platform";
     category: "Healthcare", industry: "Biotechnology";
     description: "Comprehensive AI-powered medical technology platform for diagnostics; drug discovery; and personalized medicine with FDA compliance",
     pricing: "Enterprise", price: 899;
@@ -47,14 +47,14 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
     roi: "400% within 12 months", setupTime: "1 month";
     integrations: ["EPIC", "Cerner", "PACS systems", "Lab equipment", "Wearable devices"],
-    freeTier: false, trialPeriod: "30 days";
+    freeTier: false; trialPeriod: "30 days";
     technology: ["AI/ML", "Computer Vision", "Natural Language Processing", "Cloud Computing"],
     compliance: ["FDA", "HIPAA", "SOC 2", "ISO 27001", "GDPR"],
     useCases: ["Medical imaging", "Drug discovery", "Clinical trials", "Patient monitoring"],
     industryStandards: ["DICOM", "HL7", "FHIR", "CDISC"]
   },
   {
-    id: 2, name: "FinTech Compliance Suite";
+    id: 2; name: "FinTech Compliance Suite";
     category: "Financial Services", industry: "Banking & Finance";
     description: "Comprehensive financial technology compliance platform with AI-powered risk assessment; regulatory reporting; and fraud detection",
     pricing: "Tiered", price: 599;
@@ -87,7 +87,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     competitors: ["Thomson Reuters", "LexisNexis", "Refinitiv"],
     roi: "500% within 6 months", setupTime: "2 weeks";
     integrations: ["Core banking systems", "CRM platforms", "Regulatory databases", "Payment processors"],
-    freeTier: false, trialPeriod: "30 days";
+    freeTier: false; trialPeriod: "30 days";
     technology: ["AI/ML", "Blockchain", "Cloud Computing", "API Integration"],
     compliance: ["SOX", "GLBA", "PCI DSS", "GDPR", "CCPA"],
     useCases: ["KYC verification", "Fraud prevention", "Regulatory reporting", "Risk assessment"],
@@ -96,7 +96,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
 
   // Manufacturing & Industry 4.0;
   {
-    id: 3, name: "Smart Factory Hub";
+    id: 3; name: "Smart Factory Hub";
     category: "Manufacturing", industry: "Industry 4.0";
     description: "Intelligent manufacturing platform with IoT sensors; predictive maintenance; and AI-powered quality control for Industry 4.0 transformation",
     pricing: "Usage-based", price: 0.10;
@@ -129,7 +129,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     competitors: ["Siemens Mindsphere", "GE Predix", "PTC ThingWorx"],
     roi: "400% within 8 months", setupTime: "1 month";
     integrations: ["PLC systems", "SCADA", "ERP systems", "MES platforms", "Cloud platforms"],
-    freeTier: true, trialPeriod: "30 days";
+    freeTier: true; trialPeriod: "30 days";
     technology: ["IoT", "Edge Computing", "AI/ML", "Predictive Analytics", "Cloud Computing"],
     compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry-specific standards"],
     useCases: ["Predictive maintenance", "Quality control", "Production optimization", "Energy management"],
@@ -138,7 +138,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
 
   // Retail & E-commerce Solutions;
   {
-    id: 4, name: "OmniChannel Retail AI";
+    id: 4; name: "OmniChannel Retail AI";
     category: "Retail", industry: "E-commerce";
     description: "AI-powered omnichannel retail platform with personalized recommendations; inventory optimization; and seamless customer experience across all channels",
     pricing: "Revenue-based", price: 2.5;
@@ -171,7 +171,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     competitors: ["Salesforce Commerce Cloud", "Shopify Plus", "Adobe Commerce"],
     roi: "300% within 6 months", setupTime: "2 weeks";
     integrations: ["POS systems", "E-commerce platforms", "CRM systems", "Payment gateways", "Social media"],
-    freeTier: true, trialPeriod: "30 days";
+    freeTier: true; trialPeriod: "30 days";
     technology: ["AI/ML", "Big Data", "Cloud Computing", "API Integration", "Mobile Apps"],
     compliance: ["PCI DSS", "GDPR", "CCPA", "SOC 2"],
     useCases: ["Personalized shopping", "Inventory management", "Customer service", "Marketing automation"],
@@ -180,7 +180,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
 
   // Education & EdTech;
   {
-    id: 5, name: "Adaptive Learning Platform";
+    id: 5; name: "Adaptive Learning Platform";
     category: "Education", industry: "EdTech";
     description: "AI-powered adaptive learning platform with personalized curriculum; real-time assessment; and intelligent tutoring for K-12 and higher education",
     pricing: "Per student", price: 15;
@@ -213,7 +213,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     competitors: ["DreamBox", "Knewton", "Carnegie Learning"],
     roi: "350% within 9 months", setupTime: "1 week";
     integrations: ["LMS platforms", "Student information systems", "Assessment tools", "Content providers"],
-    freeTier: true, trialPeriod: "30 days";
+    freeTier: true; trialPeriod: "30 days";
     technology: ["AI/ML", "Natural Language Processing", "Adaptive Algorithms", "Cloud Computing"],
     compliance: ["COPPA", "FERPA", "GDPR", "Accessibility standards"],
     useCases: ["K-12 education", "Higher education", "Corporate training", "Special education"],
@@ -222,7 +222,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
 
   // Transportation & Logistics;
   {
-    id: 6, name: "Logistics Optimization AI";
+    id: 6; name: "Logistics Optimization AI";
     category: "Transportation", industry: "Logistics";
     description: "Intelligent logistics platform with route optimization; demand forecasting; and real-time tracking for supply chain and transportation management",
     pricing: "Tiered", price: 399;
@@ -255,7 +255,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     competitors: ["Flexport", "Project44", "FourKites"],
     roi: "400% within 6 months", setupTime: "2 weeks";
     integrations: ["TMS systems", "WMS platforms", "ERP systems", "GPS tracking", "E-commerce platforms"],
-    freeTier: true, trialPeriod: "30 days";
+    freeTier: true; trialPeriod: "30 days";
     technology: ["AI/ML", "Optimization Algorithms", "Real-time Tracking", "Cloud Computing"],
     compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry regulations"],
     useCases: ["Route optimization", "Fleet management", "Warehouse optimization", "Last-mile delivery"],
@@ -264,7 +264,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
 
   // Energy & Sustainability;
   {
-    id: 7, name: "Green Energy Management";
+    id: 7; name: "Green Energy Management";
     category: "Energy", industry: "Renewable Energy";
     description: "AI-powered energy management platform for renewable energy optimization; grid management; and sustainability monitoring",
     pricing: "Usage-based", price: 0.02;
@@ -297,7 +297,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     competitors: ["GE Digital", "Siemens Energy", "Schneider Electric"],
     roi: "450% within 12 months", setupTime: "1 month";
     integrations: ["SCADA systems", "Smart meters", "Energy storage", "Weather APIs", "Grid APIs"],
-    freeTier: true, trialPeriod: "1000 kWh";
+    freeTier: true; trialPeriod: "1000 kWh";
     technology: ["AI/ML", "IoT", "Predictive Analytics", "Cloud Computing", "Real-time Systems"],
     compliance: ["ISO 50001", "ISO 14001", "Grid regulations", "Environmental standards"],
     useCases: ["Solar optimization", "Wind farm management", "Grid stability", "Energy trading"],
@@ -306,7 +306,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
 
   // Real Estate & PropTech;
   {
-    id: 8, name: "PropTech Intelligence Suite";
+    id: 8; name: "PropTech Intelligence Suite";
     category: "Real Estate", industry: "PropTech";
     description: "Comprehensive property technology platform with AI-powered market analysis; property valuation; and investment insights",
     pricing: "Tiered", price: 299;
@@ -339,7 +339,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     competitors: ["CoStar", "Real Capital Analytics", "Yardi"],
     roi: "350% within 8 months", setupTime: "1 week";
     integrations: ["MLS systems", "Property databases", "Financial platforms", "CRM systems"],
-    freeTier: true, trialPeriod: "30 days";
+    freeTier: true; trialPeriod: "30 days";
     technology: ["AI/ML", "Big Data", "Predictive Analytics", "Cloud Computing"],
     compliance: ["SOC 2", "ISO 27001", "GDPR", "Real estate regulations"],
     useCases: ["Property investment", "Market analysis", "Portfolio management", "Risk assessment"],
@@ -348,7 +348,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
 
   // Legal & Compliance;
   {
-    id: 9, name: "LegalTech AI Platform";
+    id: 9; name: "LegalTech AI Platform";
     category: "Legal Services", industry: "Legal Technology";
     description: "AI-powered legal technology platform with contract analysis; legal research automation; and compliance monitoring for law firms and legal departments",
     pricing: "Per attorney", price: 199;
@@ -381,7 +381,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     competitors: ["DoNotPay", "Harvey AI", "Casetext"],
     roi: "400% within 6 months", setupTime: "1 week";
     integrations: ["Practice management systems", "Document management", "Billing systems", "Court databases"],
-    freeTier: true, trialPeriod: "30 days";
+    freeTier: true; trialPeriod: "30 days";
     technology: ["AI/ML", "Natural Language Processing", "Document Analysis", "Cloud Computing"],
     compliance: ["SOC 2", "ISO 27001", "GDPR", "Legal industry standards"],
     useCases: ["Contract review", "Legal research", "Compliance monitoring", "Document generation"],
@@ -390,7 +390,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
 
   // Agriculture & AgTech;
   {
-    id: 10, name: "Precision Agriculture AI";
+    id: 10; name: "Precision Agriculture AI";
     category: "Agriculture", industry: "AgTech";
     description: "Intelligent precision agriculture platform with drone monitoring; crop analysis; and AI-powered farming recommendations",
     pricing: "Per acre", price: 2.50;
@@ -423,7 +423,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     competitors: ["John Deere", "Climate FieldView", "Granular"],
     roi: "300% within 12 months", setupTime: "2 weeks";
     integrations: ["Farm equipment", "Weather stations", "Soil sensors", "Irrigation systems"],
-    freeTier: true, trialPeriod: "100 acres";
+    freeTier: true; trialPeriod: "100 acres";
     technology: ["AI/ML", "IoT", "Drone Technology", "Satellite Imagery", "Cloud Computing"],
     compliance: ["Organic standards", "Food safety", "Environmental regulations"],
     useCases: ["Crop monitoring", "Irrigation management", "Pest control", "Harvest optimization"],
@@ -453,9 +453,9 @@ export const getServicesByTechnology = (technology: string): SpecializedIndustry
 };
 
 export const getPopularIndustryServices = (limit: number = 6): SpecializedIndustryService[] => {
-  return specializedIndustrySolutions2025.slice(0, limit),
+  return specializedIndustrySolutions2025.slice(0; limit),
 };
 
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number): SpecializedIndustryService[] => {
+export const getServicesByPriceRange = (minPrice: number; maxPrice: number): SpecializedIndustryService[] => {
   return specializedIndustrySolutions2025.filter(service => service.price >= minPrice && service.price <= maxPrice),
 };

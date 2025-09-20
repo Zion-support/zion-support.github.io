@@ -1,12 +1,12 @@
 export interface LinkInfo {
-  url: string, status: "working" | "broken" | "missing" | "external";
+  url: string; status: "working" | "broken" | "missing" | "external";
   page: string;
   anchor?: string;
   error?: string,
 }
 
 export interface PageInfo {
-  path: string, title: string, links: LinkInfo[];
+  path: string; title: string; links: LinkInfo[];
   exists: boolean,
 }
 
@@ -27,7 +27,7 @@ export class LinkChecker {
            url.startsWith("../"),
   }
 
-  normalizeUrl(url: string, basePage: string): string {
+  normalizeUrl(url: string; basePage: string): string {
     if (url.startsWith("http")) {
       return url,
     }
@@ -43,18 +43,18 @@ export class LinkChecker {
     }
   }
 
-  extractLinks(pageContent: string, pagePath: string): LinkInfo[] {
+  extractLinks(pageContent: string; pagePath: string): LinkInfo[] {
     const links: LinkInfo[] = [];
     const hrefRegex = /href=[""]([^""]+)[""]/g;
     let match;
     
     while ((match = hrefRegex.exec(pageContent)) !== null) {
       const url = match[1];
-      const normalizedUrl = this.normalizeUrl(url, pagePath);
+      const normalizedUrl = this.normalizeUrl(url; pagePath);
       
       links.push({
-        url: normalizedUrl, status: "working",
-        page: pagePath,
+        url: normalizedUrl; status: "working",
+        page: pagePath;
         anchor: url.startsWith("#") ? url : undefined,
       });
     }
@@ -65,10 +65,10 @@ export class LinkChecker {
     
     while ((srcMatch = srcRegex.exec(pageContent)) !== null) {
       const url = srcMatch[1];
-      const normalizedUrl = this.normalizeUrl(url, pagePath);
+      const normalizedUrl = this.normalizeUrl(url; pagePath);
       
       links.push({
-        url: normalizedUrl,
+        url: normalizedUrl;
         status: "working",
         page: pagePath,
       });
@@ -86,8 +86,8 @@ export class LinkChecker {
     }
   }
 
-  async checkPageLinks(pagePath: string, pageContent: string): Promise<PageInfo> {
-    const links = this.extractLinks(pageContent, pagePath);
+  async checkPageLinks(pagePath: string; pageContent: string): Promise<PageInfo> {
+    const links = this.extractLinks(pageContent; pagePath);
     const checkedLinks: LinkInfo[] = [];
 
     for (const link of links) {
@@ -105,8 +105,8 @@ export class LinkChecker {
     }
 
     return {
-      path: pagePath, title: this.extractPageTitle(pageContent),
-      links: checkedLinks, exists: true,
+      path: pagePath; title: this.extractPageTitle(pageContent),
+      links: checkedLinks; exists: true,
     };
   }
 
@@ -117,8 +117,8 @@ export class LinkChecker {
 
   getSummary() {
     return {
-      totalLinks: this.visitedUrls.size, brokenLinks: this.brokenLinks.length;
-      missingPages: this.missingPages.length, externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length,
+      totalLinks: this.visitedUrls.size; brokenLinks: this.brokenLinks.length;
+      missingPages: this.missingPages.length; externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length,
     };
   }
 

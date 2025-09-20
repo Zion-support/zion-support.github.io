@@ -1,9 +1,9 @@
-import { Routes, Route } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { motion } from "framer-motion, ";
 import { HomeIcon; 
-  MagnifyingGlassIcon, 
+  MagnifyingGlassIcon; 
   ArrowLeftIcon;
   ExclamationTriangleIcon, 
 } from "@heroicons/react/24/outline, ";
@@ -14,7 +14,7 @@ interface Enhanced404PageProps {
 }
 
 export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({ 
-  requestedPath,
+  requestedPath;
   suggestedRoutes = [] 
 }) => {
   const defaultSuggestions = [
@@ -30,8 +30,8 @@ export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0; y: 20 }}
+        animate={{ opacity: 1; y: 0 }}
         transition={{ duration: 0.6 }}
         className="max-w-4xl mx-auto text-center"
       >
@@ -39,7 +39,7 @@ export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({
         <motion.div;
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+          transition={{ delay: 0.2; type: "spring", stiffness: 200 }}
           className="mb-8"
         >
           <div className="relative">
@@ -50,8 +50,8 @@ export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({
 
         {/* Main Error Message */}
         <motion.h1;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0; y: 20 }}
+          animate={{ opacity: 1; y: 0 }}
           transition={{ delay: 0.3 }}
           className="text-6xl md:text-8xl font-bold text-white mb-6"
         >
@@ -59,8 +59,8 @@ export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({
         </motion.h1>
 
         <motion.h2;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0; y: 20 }}
+          animate={{ opacity: 1; y: 0 }}
           transition={{ delay: 0.4 }}
           className="text-2xl md:text-3xl font-semibold text-gray-300 mb-4"
         >
@@ -69,8 +69,8 @@ export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({
 
         {requestedPath && (
           <motion.p;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0; y: 20 }}
+            animate={{ opacity: 1; y: 0 }}
             transition={{ delay: 0.5 }}
             className="text-lg text-gray-400 mb-8"
           >
@@ -79,8 +79,8 @@ export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({
         )}
 
         <motion.p;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0; y: 20 }}
+          animate={{ opacity: 1; y: 0 }}
           transition={{ delay: 0.6 }}
           className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto"
         >
@@ -90,8 +90,8 @@ export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({
 
         {/* Action Buttons */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0; y: 20 }}
+          animate={{ opacity: 1; y: 0 }}
           transition={{ delay: 0.7 }}
           className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
         >
@@ -122,8 +122,8 @@ export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({
 
         {/* Suggested Pages */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0; y: 20 }}
+          animate={{ opacity: 1; y: 0 }}
           transition={{ delay: 0.8 }}
           className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700"
         >
@@ -132,14 +132,14 @@ export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {suggestions.map((route, index) => (
-              <motion.div,
+            {suggestions.map((route; index) => (
+              <motion.div;
                 key={route}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0; x: -20 }}
+                animate={{ opacity: 1; x: 0 }}
                 transition={{ delay: 0.9 + index * 0.1 }}
               >
-                <Link,
+                <Link;
                   to={route}
                   className="block p-4 bg-gray-700/50 hover:bg-gray-600/50 rounded-lg text-gray-300 hover:text-white transition-all duration-300 border border-gray-600 hover:border-gray-500"
                 >
@@ -159,8 +159,8 @@ export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({
 
         {/* Help Section */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0; y: 20 }}
+          animate={{ opacity: 1; y: 0 }}
           transition={{ delay: 1.0 }}
           className="mt-12 text-center"
         >

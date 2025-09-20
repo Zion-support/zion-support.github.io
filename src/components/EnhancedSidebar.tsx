@@ -1,4 +1,4 @@
-import { import { motion, AnimatePresence   } from "framer-motion",
+import { import { motion; AnimatePresence   } from "framer-motion",
 ,
 export default function Page("props": "any) {,
     setExpandedSections(newExpanded)"},
@@ -18,7 +18,7 @@ export default function Page("props": "any) {,
         { "name": "Careers", "href": "/careers", "icon": "Briefcas e "},",
         { "name": "Partners", "href": "/partners", "icon": "Handshak e "}              </button>,
               <AnimatePresence>,
-                {expandedSections.has(section.title) && (<motion.div,
+                {expandedSections.has(section.title) && (<motion.div;
                     initial = {,
   { "opacity": "0",
   "height": "0,
@@ -34,7 +34,7 @@ export default function Page("props": "any) {,
                     transition={{ "duration": "0.3 "}}",
                     className="ml-7 mt-2 space-y-1",
                   >,
-                    {section.items.map((item) => (<Link,
+                    {section.items.map((item) => (<Link;
                         key={item.name}
                         initial = {,
   { "opacity": "0",

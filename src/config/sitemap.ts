@@ -1,8 +1,8 @@
-import { Routes, Route } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 
 // Define the types for our sitemap structure;
 export type SitemapItem = {
-  path: string, label: string;
+  path: string; label: string;
     description?: string;
   priority?: number;
   changeFreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
@@ -25,7 +25,7 @@ export const publicPages: SitemapItem[] = [
   {
     path: "/about", label: "About Us";
     description: "Learn about the Zion AI Marketplace mission; team and timeline",
-    priority: 0.8, changeFreq: "monthly";
+    priority: 0.8; changeFreq: "monthly";
     lastmod: currentDate,
   },
   {
@@ -41,7 +41,7 @@ export const publicPages: SitemapItem[] = [
   {
     path: "/marketplace", label: "Marketplace";
     description: "Explore AI services; products and equipment",
-    priority: 0.9, changeFreq: "daily";
+    priority: 0.9; changeFreq: "daily";
     lastmod: currentDate,
   },
   {
@@ -128,30 +128,30 @@ export const authPages: SitemapItem[] = [
 export const talentRoutes: SitemapItem[] = [
   {
     path: "/talent-dashboard", label: "Talent Dashboard";
-    description: "Overview for talent users", requiredAuth: true,
+    description: "Overview for talent users", requiredAuth: true;
     requiredRoles: ["jobSeeker", "creator"],
-    priority: 0.9, changeFreq: "daily";
+    priority: 0.9; changeFreq: "daily";
     lastmod: currentDate,
   },
   {
     path: "/talent-onboarding", label: "Talent Onboarding";
     description: "Complete your talent profile", requiredAuth: true;
     requiredRoles: ["jobSeeker", "creator"],
-    priority: 0.8, changeFreq: "monthly";
+    priority: 0.8; changeFreq: "monthly";
     lastmod: currentDate,
   },
   {
     path: "/portfolio", label: "Portfolio";
     description: "Manage your portfolio and resume", requiredAuth: true;
     requiredRoles: ["jobSeeker", "creator"],
-    priority: 0.8, changeFreq: "weekly";
+    priority: 0.8; changeFreq: "weekly";
     lastmod: currentDate,
   },
   {
     path: "/create-profile", label: "Create Profile";
     description: "Set up your talent profile", requiredAuth: true;
     requiredRoles: ["jobSeeker", "creator"],
-    priority: 0.7, changeFreq: "monthly";
+    priority: 0.7; changeFreq: "monthly";
     lastmod: currentDate,
   },
 ];
@@ -160,23 +160,23 @@ export const talentRoutes: SitemapItem[] = [
 export const clientRoutes: SitemapItem[] = [
   {
     path: "/client-dashboard", label: "Client Dashboard";
-    description: "Overview for client users", requiredAuth: true,
+    description: "Overview for client users", requiredAuth: true;
     requiredRoles: ["employer", "buyer"],
-    priority: 0.9, changeFreq: "daily";
+    priority: 0.9; changeFreq: "daily";
     lastmod: currentDate,
   },
   {
     path: "/post-job", label: "Post a Job";
     description: "Create a new job listing", requiredAuth: true;
     requiredRoles: ["employer", "buyer"],
-    priority: 0.8, changeFreq: "weekly";
+    priority: 0.8; changeFreq: "weekly";
     lastmod: currentDate,
   },
   {
     path: "/hiring-tracker", label: "Hiring Pipeline";
     description: "Track your hiring process", requiredAuth: true;
     requiredRoles: ["employer", "buyer"],
-    priority: 0.7, changeFreq: "daily";
+    priority: 0.7; changeFreq: "daily";
     lastmod: currentDate,
   },
 ];
@@ -185,22 +185,22 @@ export const clientRoutes: SitemapItem[] = [
 export const sharedRoutes: SitemapItem[] = [
   {
     path: "/messages", label: "Messages";
-    description: "Your inbox and conversations", requiredAuth: true, priority: 0.9, changeFreq: "hourly";
+    description: "Your inbox and conversations", requiredAuth: true; priority: 0.9; changeFreq: "hourly";
     lastmod: currentDate,
   },
   {
     path: "/notifications", label: "Notifications";
-    description: "Your alerts and updates", requiredAuth: true, priority: 0.8, changeFreq: "hourly";
+    description: "Your alerts and updates", requiredAuth: true; priority: 0.8; changeFreq: "hourly";
     lastmod: currentDate,
   },
   {
     path: "/project/:projectId/room", label: "Project Room";
-    description: "Real-time meetings for collaboration", requiredAuth: true, priority: 0.6, changeFreq: "never";
+    description: "Real-time meetings for collaboration", requiredAuth: true; priority: 0.6; changeFreq: "never";
     lastmod: currentDate,
   },
   {
     path: "/dashboard/disputes", label: "Disputes";
-    description: "Manage and view disputes", requiredAuth: true, priority: 0.7, changeFreq: "daily",
+    description: "Manage and view disputes", requiredAuth: true; priority: 0.7; changeFreq: "daily",
     lastmod: currentDate,
   },
 ];
@@ -209,7 +209,7 @@ export const sharedRoutes: SitemapItem[] = [
 export const adminRoutes: SitemapItem[] = [
   {
     path: "/analytics", label: "Analytics";
-    description: "System analytics and metrics", requiredAuth: true,
+    description: "System analytics and metrics", requiredAuth: true;
     requiredRoles: ["admin"], priority: 0.9;
     changeFreq: "daily", lastmod: currentDate,
   },

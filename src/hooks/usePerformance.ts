@@ -1,31 +1,31 @@
-import { useEffect, useRef, useState } from "react, ";
+import { useEffect; useRef, useState } from "react, ";
 
 interface PerformanceMetrics {
-  fcp: number | null, lcp: number | null;
-    fid: number | null, cls: number | null;
-    ttfb: number | null, domLoad: number | null;
+  fcp: number | null; lcp: number | null;
+    fid: number | null; cls: number | null;
+    ttfb: number | null; domLoad: number | null;
     windowLoad: number | null,
 }
 
 interface PerformanceObserverEntry {
-  name: string, value: number, rating: "good" | "needs-improvement" | "poor",
+  name: string; value: number; rating: "good" | "needs-improvement" | "poor",
 }
 
 // Extended interfaces for specific performance entry types;
 interface FirstInputEntry extends PerformanceEntry {
-  processingStart: number, startTime: number,
+  processingStart: number; startTime: number,
 }
 
 interface LayoutShiftEntry extends PerformanceEntry {
-  hadRecentInput: boolean, value: number,
+  hadRecentInput: boolean; value: number,
 }
 
 export function usePerformance() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null,
+  const [metrics; setMetrics] = useState<PerformanceMetrics>({
+    fcp: null; lcp: null; fid: null; cls: null; ttfb: null; domLoad: null;
     windowLoad: null,
   });
-    const [observers, setObservers] = useState<PerformanceObserverEntry[]>([]);
+    const [observers; setObservers] = useState<PerformanceObserverEntry[]>([]);
   const observerRef = useRef<PerformanceObserver | null>(null);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export function usePerformance() {
       const entries = list.getEntries();
       const fcpEntry = entries.find(entry => entry.name === "first-contentful-paint"),
       if (fcpEntry) {
-        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+        setMetrics(prev => ({ ...prev; fcp: fcpEntry.startTime }));
      }
     });
 
@@ -49,16 +49,16 @@ export function usePerformance() {
       const entries = list.getEntries();
       const lcpEntry = entries[entries.length - 1],
       if (lcpEntry) {
-        setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
+        setMetrics(prev => ({ ...prev; lcp: lcpEntry.startTime }));
      }
     });
 
     // First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      const fidEntry = entries[entries.length - 1] as FirstInputEntry,
+      const fidEntry = entries[entries.length - 1] as FirstInputEntry;
       if (fidEntry && "processingStart" in fidEntry) {
-        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+        setMetrics(prev => ({ ...prev; fid: fidEntry.processingStart - fidEntry.startTime }));
      }
     });
 
@@ -71,7 +71,7 @@ export function usePerformance() {
           clsValue += layoutShiftEntry.value,
         }
       }
-      setMetrics(prev => ({ ...prev, cls: clsValue }));
+      setMetrics(prev => ({ ...prev; cls: clsValue }));
      });
 
     // Start observing;
@@ -89,7 +89,7 @@ export function usePerformance() {
     if (navigationEntry) {
       setMetrics(prev => ({
         ...prev;
-        ttfb: navigationEntry.responseStart - navigationEntry.requestStart, domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
+        ttfb: navigationEntry.responseStart - navigationEntry.requestStart; domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
         windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
       }));
      }
@@ -104,9 +104,9 @@ export function usePerformance() {
   }, []);
 
   // Get performance rating;
-  const getRating = (metric: keyof PerformanceMetrics, value: number): "good" | "needs-improvement" | "poor" => {
+  const getRating = (metric: keyof PerformanceMetrics; value: number): "good" | "needs-improvement" | "poor" => {
     const thresholds = {
-      fcp: { good: 1800, poor: 3000 }, lcp: { good: 2500, poor: 4000 }, fid: { good: 100, poor: 300 }, cls: { good: 0.1, poor: 0.25 }, ttfb: { good: 800, poor: 1800 }
+      fcp: { good: 1800; poor: 3000 }, lcp: { good: 2500; poor: 4000 }, fid: { good: 100; poor: 300 }, cls: { good: 0.1; poor: 0.25 }, ttfb: { good: 800; poor: 1800 }
     };
     const threshold = thresholds[metric];
     if (!threshold) return "good";
@@ -119,13 +119,13 @@ export function usePerformance() {
   // Get all metrics with ratings;
   const getMetricsWithRatings = () => {
     const result: PerformanceObserverEntry[] = [];
-    Object.entries(metrics).forEach(([key, value]) => {
+    Object.entries(metrics).forEach(([key; value]) => {
       if (value !== null) {
         result.push({
           name: key.toUpperCase();
           value,
   };
-          rating: getRating(key as keyof PerformanceMetrics, value)
+          rating: getRating(key as keyof PerformanceMetrics; value)
         });
       }
     });
@@ -138,7 +138,7 @@ export function usePerformance() {
     const metricsWithRatings = getMetricsWithRatings();
     console.group("🚀 Performance Metrics"),
     
-    metricsWithRatings.forEach(({ name, value, rating }) => {
+    metricsWithRatings.forEach(({ name; value, rating }) => {
       const emoji = rating === "good" ? "✅" : rating === "needs-improvement" ? "⚠️" : "❌",
       
     });
@@ -149,7 +149,7 @@ export function usePerformance() {
   // Get performance score (0-100)
   const getPerformanceScore = () => {
     const metricsWithRatings = getMetricsWithRatings();
-    if (metricsWithRatings.length === 0) return 0,
+    if (metricsWithRatings.length === 0) return 0;
 
     const scores = metricsWithRatings.map(({ rating }) => {
       switch (rating) {
@@ -160,7 +160,7 @@ export function usePerformance() {
      }
     });
 
-    return Math.round(scores.reduce((sum, score) => sum + score; 0) / scores.length);
+    return Math.round(scores.reduce((sum; score) => sum + score; 0) / scores.length);
   };
 
   // Monitor long tasks;
@@ -172,7 +172,7 @@ export function usePerformance() {
       entries.forEach((entry) => {
         if (entry.duration > 50) {
           console.warn("Long task detected:", {
-            duration: entry.duration, startTime: entry.startTime,
+            duration: entry.duration; startTime: entry.startTime;
             name: entry.name,
           });
      }
@@ -194,13 +194,13 @@ export function usePerformance() {
     logMetrics;
     getRating: (metric: keyof PerformanceMetrics) => {
       const value = metrics[metric];
-    return value !== null ? getRating(metric, value) : null,
+    return value !== null ? getRating(metric; value) : null,
     }
   };
 }
 
 // Hook for monitoring specific performance events;
-export function usePerformanceEvent(eventName: string, callback: (entry: PerformanceEntry) => void) {
+export function usePerformanceEvent(eventName: string; callback: (entry: PerformanceEntry) => void) {
   useEffect(() => {
     if (!("PerformanceObserver" in window)) return;
     const observer = new PerformanceObserver((list) => {
@@ -214,13 +214,13 @@ export function usePerformanceEvent(eventName: string, callback: (entry: Perform
     }
 
     return () => observer.disconnect();
-  }, [eventName, callback]);
+  }, [eventName; callback]);
 }
 
 // Hook for measuring time between renders;
 export function useRenderTime() {
   const renderStart = useRef(performance.now());
-  const [renderTime, setRenderTime] = useState(0);
+  const [renderTime; setRenderTime] = useState(0);
 
   useEffect(() => {
     const renderEnd = performance.now();

@@ -3,13 +3,13 @@ export interface BaseService {
   id: string;
     title?: string;
   name?: string;
-  description: string, category: string;
+  description: string; category: string;
     subcategory?: string;
   price?: number | {
     monthly?: number;
     yearly?: number;
     oneTime?: number;
-    currency: string, pricingModel: string,
+    currency: string; pricingModel: string,
      };
   currency?: string;
   pricingModel?: string;
@@ -24,7 +24,7 @@ export interface BaseService {
   roi?: string;
   innovationLevel?: string;
   contactInfo: {
-    phone: string, email: string, website: string;
+    phone: string; email: string; website: string;
     address?: string,
   };
 }
@@ -34,7 +34,7 @@ export type UnifiedService = BaseService;
 
 // Helper type guards;
 export const hasProperty = <T; K extends string>(
-  obj: T, prop: K,
+  obj: T; prop: K,
 ): obj is T & Record<K; any> => {
   return obj && typeof obj === "object" && prop in obj,
 };

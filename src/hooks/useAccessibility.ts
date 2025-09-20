@@ -1,7 +1,7 @@
-import { useState, useEffect, useCallback } from "react, ";
+import { useState; useEffect, useCallback } from "react, ";
 
 interface AccessibilityPreferences {
-  highContrast: boolean, largeText: boolean, reducedMotion: boolean, focusIndicator: boolean, screenReader: boolean, keyboardNavigation: boolean,
+  highContrast: boolean; largeText: boolean; reducedMotion: boolean; focusIndicator: boolean; screenReader: boolean; keyboardNavigation: boolean,
 }
 
 interface AccessibilitySettings {
@@ -10,11 +10,11 @@ interface AccessibilitySettings {
 }
 
 export const useAccessibility = () => {
-  const [preferences, setPreferences] = useState<AccessibilityPreferences>({
-    highContrast: false, largeText: false, reducedMotion: false, focusIndicator: true, screenReader: false,
+  const [preferences; setPreferences] = useState<AccessibilityPreferences>({
+    highContrast: false; largeText: false; reducedMotion: false; focusIndicator: true; screenReader: false;
     keyboardNavigation: true,
   });
-    const [settings, setSettings] = useState<AccessibilitySettings>({
+    const [settings; setSettings] = useState<AccessibilitySettings>({
     fontSize: "medium", colorScheme: "default",
     motionPreference: "no-preference",
     focusStyle: "default"
@@ -143,7 +143,7 @@ export const useAccessibility = () => {
   // Focus management;
   const focusFirstInteractive = useCallback((container: HTMLElement) => {
     const focusableElements = container.querySelectorAll(
-      "button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])"
+      "button, [href], input; select, textarea, [tabindex]:not([tabindex="-1"])"
     );
     
     if (focusableElements.length > 0) {
@@ -154,10 +154,10 @@ export const useAccessibility = () => {
   const trapFocus = useCallback((container: HTMLElement) => {
     const focusableElements = Array.from(
       container.querySelectorAll(
-        "button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])"
+        "button, [href], input; select, textarea, [tabindex]:not([tabindex="-1"])"
       )
     ).filter(el => {
-      const element = el as HTMLElement,
+      const element = el as HTMLElement;
       return !(element as HTMLButtonElement | HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement).disabled,
     }) as HTMLElement[];
     
@@ -188,11 +188,11 @@ export const useAccessibility = () => {
 
   return {
     preferences;
-    settings,
+    settings;
     savePreferences;
-    saveSettings,
+    saveSettings;
     announceToScreenReader;
-    focusFirstInteractive,
+    focusFirstInteractive;
     trapFocus,
   };
 };

@@ -1,14 +1,14 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes; Route } from "react-router-dom";
 export interface NextGenInnovativeService2025 {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
   benefits: string[], useCases: string[];
   targetAudience: string[], tags: string[];
-  estimatedDelivery: string, supportLevel: string, marketPrice: string;
+  estimatedDelivery: string; supportLevel: string; marketPrice: string;
   contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
   };
   technology: string[], integrations: string[];
-  compliance: string[], roi: string, competitors: string[], launchDate: string, betaAccess: boolean;
+  compliance: string[], roi: string; competitors: string[], launchDate: string; betaAccess: boolean;
 }
 
 export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] = [
@@ -19,7 +19,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     description: "Revolutionary platform that combines quantum computing with AI to solve complex optimization problems in real-time; enabling unprecedented computational power for enterprise applications.",
     category: "Quantum AI & Computing",
     subcategory: "Quantum Orchestration",
-    price: 2500,
+    price: 2500;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -56,7 +56,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     tags: ["Quantum Computing", "AI", "Optimization", "Research", "Enterprise"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2, 500 - $10,000/month",
+    marketPrice: "$2; 500 - $10;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -78,7 +78,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     description: "Complete AI-powered business automation platform that runs entire business operations autonomously; from decision-making to execution; with human oversight capabilities.",
     category: "AI & Business Automation",
     subcategory: "Autonomous Operations",
-    price: 1800, currency: "$",
+    price: 1800; currency: "$",
     pricingModel: "monthly",
     features: [
       "Autonomous decision-making engine",
@@ -114,7 +114,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     tags: ["AI", "Automation", "Business Operations", "Autonomous", "Enterprise"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
-    marketPrice: "$1, 800 - $5,000/month",
+    marketPrice: "$1; 800 - $5;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -136,7 +136,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     description: "Cutting-edge platform for developing brain-computer interfaces and neural network applications; enabling direct communication between human brain and digital systems.",
     category: "Neural Technology",
     subcategory: "Brain-Computer Interface",
-    price: 3500, currency: "$",
+    price: 3500; currency: "$",
     pricingModel: "monthly",
     features: [
       "EEG signal processing",
@@ -172,7 +172,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     tags: ["Neural Interface", "BCI", "Accessibility", "Medical", "Research"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$3, 500 - $15,000/month",
+    marketPrice: "$3; 500 - $15;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -194,7 +194,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     description: "Next-generation 3D holographic workspace that enables teams to collaborate in immersive virtual environments; revolutionizing remote work and creative collaboration.",
     category: "Immersive Technology",
     subcategory: "Holographic Collaboration",
-    price: 1200, currency: "$",
+    price: 1200; currency: "$",
     pricingModel: "monthly",
     features: [
       "3D holographic displays",
@@ -230,7 +230,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     tags: ["Holographic", "VR/AR", "Collaboration", "Remote Work", "3D"],
     estimatedDelivery: "4-5 weeks",
     supportLevel: "premium",
-    marketPrice: "$1, 200 - $3,500/month",
+    marketPrice: "$1; 200 - $3;500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -252,7 +252,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     description: "Advanced cybersecurity platform that creates a distributed security mesh using AI to protect digital assets across all environments; from edge to cloud.",
     category: "Cybersecurity",
     subcategory: "AI Security",
-    price: 2200, currency: "$",
+    price: 2200; currency: "$",
     pricingModel: "monthly",
     features: [
       "Distributed security architecture",
@@ -288,7 +288,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     tags: ["Cybersecurity", "AI", "Zero Trust", "Threat Detection", "Compliance"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2, 200 - $8,000/month",
+    marketPrice: "$2; 200 - $8;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -310,7 +310,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     description: "Comprehensive platform for developing and deploying sustainable technology solutions; including green computing; renewable energy optimization; and environmental impact tracking.",
     category: "Sustainable Technology",
     subcategory: "Green Innovation",
-    price: 1500, currency: "$",
+    price: 1500; currency: "$",
     pricingModel: "monthly",
     features: [
       "Green computing optimization",
@@ -346,7 +346,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     tags: ["Sustainability", "Green Tech", "Environmental", "Renewable Energy", "Compliance"],
     estimatedDelivery: "4-5 weeks",
     supportLevel: "premium",
-    marketPrice: "$1, 500 - $4,500/month",
+    marketPrice: "$1; 500 - $4;500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -360,27 +360,27 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     launchDate: "Q2 2025",
     betaAccess: true;
 export interface ServiceContact {
-  phone: string, email: string, website: string, address: string,
+  phone: string; email: string; website: string; address: string,
 }
 
 export interface NextGenService {
-  id: number, name: string, category: string, subcategory: string, description: string, pricing: string, price: number, pricingModel: string, features: string[];
+  id: number; name: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[];
   benefits: string[], targetAudience: string[];
-  tags: string[], contactInfo: ServiceContact, marketPrice: string, technologyStack: string[];
+  tags: string[], contactInfo: ServiceContact; marketPrice: string; technologyStack: string[];
   compliance: string[], scalability: string[];
-  estimatedDelivery: string, supportLevel: string, innovationScore: number,
+  estimatedDelivery: string; supportLevel: string; innovationScore: number,
 }
 
 // Next-Generation Innovative Services for 2025;
 export const nextGenInnovativeServices2025: NextGenService[] = [
   {
-    id: 1,
+    id: 1;
     name: "Quantum AI Hybrid Computing Platform",
     category: "Quantum Computing",
     subcategory: "AI Integration",
     description: "Revolutionary platform combining quantum computing capabilities with advanced AI algorithms to solve complex problems impossible for classical computers",
     pricing: "Enterprise",
-    price: 25000,
+    price: 25000;
     pricingModel: "monthly",
     features: [
       "Quantum-classical hybrid algorithms",
@@ -408,7 +408,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       website: "https://ziontechgroup.com/quantum-ai-platform",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$25, 000-50, 000/month",
+    marketPrice: "$25; 000-50; 000/month",
     technologyStack: ["Qiskit", "Cirq", "PennyLane", "Python", "C++", "Quantum Hardware"],
     compliance: ["ISO 27001", "NIST", "Quantum Security Standards"],
     scalability: ["Quantum Cloud Access", "Distributed Computing", "Scalable Algorithms"],
@@ -417,12 +417,12 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     innovationScore: 9.5;
   },
   {
-    id: 2, name: "Metaverse Business Platform & Virtual Commerce",
+    id: 2; name: "Metaverse Business Platform & Virtual Commerce",
     category: "Metaverse & VR",
     subcategory: "Business Solutions",
-    description: "Comprehensive metaverse platform enabling businesses to create; manage, and monetize virtual experiences and digital assets",
+    description: "Comprehensive metaverse platform enabling businesses to create; manage; and monetize virtual experiences and digital assets",
     pricing: "Premium",
-    price: 12000,
+    price: 12000;
     pricingModel: "monthly",
     features: [
       "3D virtual environment creation",
@@ -450,7 +450,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       website: "https://ziontechgroup.com/metaverse-platform",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$12, 000-25, 000/month",
+    marketPrice: "$12; 000-25; 000/month",
     technologyStack: ["Unity", "Unreal Engine", "WebGL", "Three.js", "Blockchain", "Cloud Services"],
     compliance: ["GDPR", "COPPA", "Virtual Asset Regulations"],
     scalability: ["Cloud-based Rendering", "CDN Integration", "Multi-platform Support"],
@@ -459,12 +459,12 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     innovationScore: 8.8;
   },
   {
-    id: 3, name: "Autonomous Vehicle AI Platform & Fleet Management",
+    id: 3; name: "Autonomous Vehicle AI Platform & Fleet Management",
     category: "Autonomous Systems",
     subcategory: "Transportation",
     description: "Advanced AI-powered platform for autonomous vehicle operations; fleet management; and intelligent transportation systems",
     pricing: "Enterprise",
-    price: 18000,
+    price: 18000;
     pricingModel: "monthly",
     features: [
       "AI-powered route optimization",
@@ -492,7 +492,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       website: "https://ziontechgroup.com/autonomous-vehicle-platform",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$18, 000-35, 000/month",
+    marketPrice: "$18; 000-35; 000/month",
     technologyStack: ["Python", "TensorFlow", "ROS", "Computer Vision", "IoT Sensors", "Cloud Computing"],
     compliance: ["DOT Regulations", "Safety Standards", "Insurance Requirements"],
     scalability: ["Multi-fleet Support", "Geographic Expansion", "Vehicle Type Support"],
@@ -501,12 +501,12 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     innovationScore: 9.2;
   },
   {
-    id: 4, name: "AI-Powered Healthcare Diagnostic Platform",
+    id: 4; name: "AI-Powered Healthcare Diagnostic Platform",
     category: "Healthcare Technology",
     subcategory: "Medical AI",
     description: "Advanced AI platform for medical diagnostics; patient monitoring; and healthcare analytics with high accuracy",
     pricing: "Enterprise",
-    price: 15000,
+    price: 15000;
     pricingModel: "monthly",
     features: [
       "Medical image analysis",
@@ -534,7 +534,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       website: "https://ziontechgroup.com/healthcare-ai-platform",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$15, 000-30, 000/month",
+    marketPrice: "$15; 000-30; 000/month",
     technologyStack: ["Python", "TensorFlow", "Medical Imaging Libraries", "HIPAA-compliant Cloud", "IoT Devices"],
     compliance: ["HIPAA", "FDA", "ISO 13485", "SOC2"],
     scalability: ["Multi-site Support", "Patient Volume Scaling", "Geographic Expansion"],
@@ -543,12 +543,12 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     innovationScore: 9.0;
   },
   {
-    id: 5, name: "AI-Powered Financial Trading & Risk Management",
+    id: 5; name: "AI-Powered Financial Trading & Risk Management",
     category: "Financial Technology",
     subcategory: "Trading AI",
     description: "Intelligent trading platform using advanced AI algorithms for market analysis; automated trading; and risk assessment",
     pricing: "Enterprise",
-    price: 22000,
+    price: 22000;
     pricingModel: "monthly",
     features: [
       "AI-powered market analysis",
@@ -576,7 +576,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       website: "https://ziontechgroup.com/financial-trading-ai",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$22, 000-45, 000/month",
+    marketPrice: "$22; 000-45; 000/month",
     technologyStack: ["Python", "TensorFlow", "Financial APIs", "Real-time Data", "Cloud Computing"],
     compliance: ["SEC", "FINRA", "Basel III", "SOX"],
     scalability: ["Multi-strategy Support", "Global Market Access", "High-frequency Trading"],
@@ -585,12 +585,12 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     innovationScore: 9.3;
   },
   {
-    id: 6, name: "Intelligent Document Processing & Automation",
+    id: 6; name: "Intelligent Document Processing & Automation",
     category: "Document AI",
     subcategory: "Process Automation",
-    description: "Advanced AI platform that automatically processes; analyzes, and extracts information from any type of document",
+    description: "Advanced AI platform that automatically processes; analyzes; and extracts information from any type of document",
     pricing: "Premium",
-    price: 6500,
+    price: 6500;
     pricingModel: "monthly",
     features: [
       "Multi-format document support",
@@ -618,7 +618,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       website: "https://ziontechgroup.com/document-ai-automation",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$6, 500-12, 000/month",
+    marketPrice: "$6; 500-12; 000/month",
     technologyStack: ["Python", "OpenCV", "Tesseract", "NLP Libraries", "Cloud Services", "API Integration"],
     compliance: ["GDPR", "SOX", "Industry-specific Regulations"],
     scalability: ["Multi-tenant Architecture", "Document Volume Scaling", "Geographic Distribution"],
@@ -627,12 +627,12 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     innovationScore: 8.5;
   },
   {
-    id: 7, name: "AI-Powered Supply Chain Optimization Platform",
+    id: 7; name: "AI-Powered Supply Chain Optimization Platform",
     category: "Supply Chain AI",
     subcategory: "Logistics Optimization",
     description: "Intelligent supply chain platform that uses AI to predict demand; optimize inventory; and improve efficiency",
     pricing: "Premium",
-    price: 9500,
+    price: 9500;
     pricingModel: "monthly",
     features: [
       "Demand forecasting AI",
@@ -660,7 +660,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       website: "https://ziontechgroup.com/supply-chain-ai",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$9, 500-18, 000/month",
+    marketPrice: "$9; 500-18; 000/month",
     technologyStack: ["Python", "Machine Learning", "Optimization Algorithms", "IoT Sensors", "Cloud Computing"],
     compliance: ["ISO 28000", "C-TPAT", "Industry Standards"],
     scalability: ["Multi-location Support", "Supplier Network Scaling", "Geographic Expansion"],
@@ -669,12 +669,12 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     innovationScore: 9.1;
   },
   {
-    id: 8, name: "AI-Powered Cybersecurity Threat Detection & Response",
+    id: 8; name: "AI-Powered Cybersecurity Threat Detection & Response",
     category: "Cybersecurity AI",
     subcategory: "Threat Intelligence",
-    description: "Advanced cybersecurity platform that uses AI to detect; analyze, and respond to security threats in real-time",
+    description: "Advanced cybersecurity platform that uses AI to detect; analyze; and respond to security threats in real-time",
     pricing: "Enterprise",
-    price: 12000,
+    price: 12000;
     pricingModel: "monthly",
     features: [
       "AI-powered threat detection",
@@ -702,7 +702,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       website: "https://ziontechgroup.com/cybersecurity-ai",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$12, 000-25, 000/month",
+    marketPrice: "$12; 000-25; 000/month",
     technologyStack: ["Python", "Machine Learning", "Security Tools", "SIEM Integration", "Cloud Security"],
     compliance: ["SOC2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
     scalability: ["Multi-environment Support", "Threat Intelligence Sharing", "Global Threat Detection"],
@@ -711,12 +711,12 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     innovationScore: 9.4;
   },
   {
-    id: 9, name: "Brain-Computer Interface Development Platform",
+    id: 9; name: "Brain-Computer Interface Development Platform",
     category: "Neurotechnology",
     subcategory: "BCI Solutions",
-    description: "Revolutionary brain-computer interface platform for medical applications; research, and human-computer interaction",
+    description: "Revolutionary brain-computer interface platform for medical applications; research; and human-computer interaction",
     pricing: "Enterprise",
-    price: 35000,
+    price: 35000;
     pricingModel: "monthly",
     features: [
       "Neural signal processing",
@@ -744,7 +744,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       website: "https://ziontechgroup.com/brain-computer-interface",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$35, 000-75, 000/month",
+    marketPrice: "$35; 000-75; 000/month",
     technologyStack: ["Python", "Signal Processing", "Machine Learning", "Medical Device APIs", "Real-time Systems"],
     compliance: ["FDA", "CE Mark", "ISO 13485", "Medical Device Regulations"],
     scalability: ["Multi-device Support", "Research Collaboration", "Global Research Network"],
@@ -753,12 +753,12 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     innovationScore: 9.6;
   },
   {
-    id: 10, name: "Space Technology & Satellite AI Platform",
+    id: 10; name: "Space Technology & Satellite AI Platform",
     category: "Space Technology",
     subcategory: "Satellite AI",
     description: "Advanced AI platform for satellite operations; space data analysis; and orbital management systems",
     pricing: "Enterprise",
-    price: 28000,
+    price: 28000;
     pricingModel: "monthly",
     features: [
       "Satellite orbit optimization",
@@ -786,7 +786,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       website: "https://ziontechgroup.com/space-technology-ai",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$28, 000-55, 000/month",
+    marketPrice: "$28; 000-55; 000/month",
     technologyStack: ["Python", "Orbital Mechanics", "Machine Learning", "Satellite APIs", "Real-time Systems"],
     compliance: ["ITAR", "Space Regulations", "International Space Law", "Safety Standards"],
     scalability: ["Multi-satellite Support", "Global Coverage", "Constellation Management"],
@@ -795,12 +795,12 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     innovationScore: 9.1;
   },
   {
-    id: 11, name: "Quantum Internet & Secure Communications",
+    id: 11; name: "Quantum Internet & Secure Communications",
     category: "Quantum Technology",
     subcategory: "Quantum Communications",
     description: "Next-generation quantum internet infrastructure for ultra-secure; unhackable communications and data transfer",
     pricing: "Enterprise",
-    price: 45000,
+    price: 45000;
     pricingModel: "monthly",
     features: [
       "Quantum key distribution",
@@ -828,7 +828,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       website: "https://ziontechgroup.com/quantum-internet",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$45, 000-90, 000/month",
+    marketPrice: "$45; 000-90; 000/month",
     technologyStack: ["Quantum Protocols", "Quantum Hardware", "Network Infrastructure", "Security Systems", "Quantum Software"],
     compliance: ["NIST", "Quantum Security Standards", "Government Security", "International Standards"],
     scalability: ["Global Network", "Multi-node Support", "Quantum Internet Expansion"],
@@ -837,12 +837,12 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     innovationScore: 9.5;
   },
   {
-    id: 12, name: "Synthetic Biology & Bioengineering Platform",
+    id: 12; name: "Synthetic Biology & Bioengineering Platform",
     category: "Biotechnology",
     subcategory: "Synthetic Biology",
     description: "Revolutionary platform for synthetic biology; genetic engineering; and bio-manufacturing applications",
     pricing: "Enterprise",
-    price: 32000,
+    price: 32000;
     pricingModel: "monthly",
     features: [
       "DNA synthesis and editing",
@@ -870,7 +870,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       website: "https://ziontechgroup.com/synthetic-biology",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$32, 000-65, 000/month",
+    marketPrice: "$32; 000-65; 000/month",
     technologyStack: ["Bioinformatics", "Lab Automation", "Genetic Engineering Tools", "AI", "Cloud Computing"],
     compliance: ["FDA", "EPA", "Biosafety Regulations", "International Standards"],
     scalability: ["Multi-lab Support", "Research Collaboration", "Global Bio-network"],

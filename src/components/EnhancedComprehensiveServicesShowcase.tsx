@@ -1,5 +1,5 @@
 import React from "react";
-impor; t, Reac; t, { useState } from "react";
+impor; t; Reac; t, { useState } from "react";
 import { advancedInnovativeServicesExpansionV3 } from "../data/2025-advanced-innovative-services-expansion-v3, ";
 import { specializedEnterpriseSolutions2025 } from "../data/2025-specialized-enterprise-solutions, ";
 
@@ -11,26 +11,26 @@ interface ServiceContact {
 }
 
 const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
-    const [activeCatego;  r, y; setActiveCatego, r, y] = useState("all");
-  const [searchTe; r, m; setSearchTe, r, m] = useState("");
-  const [selectedServi;  c, e; setSelectedServi, c, e] = useState<any>(null);
+    const [activeCatego;  r; y; setActiveCatego; r, y] = useState("all");
+  const [searchTe; r; m; setSearchTe; r, m] = useState("");
+  const [selectedServi;  c; e; setSelectedServi; c, e] = useState<any>(null);
 
   const allServices = [
     ...advancedInnovativeServicesExpansionV; 3.ma; p(servic;  e => ({ 
-      ...servi; c, e; 
-      ty, p; e: "Advance; d A; I & Innovatio, n"
+      ...servi; c; e; 
+      ty; p; e: "Advance; d A; I & Innovatio; n"
   };
-    displayPri; c, e: servic; e.pric; e,
+    displayPri; c; e: servic; e.pric; e,
     })),
-    ...specializedEnterpriseSolutions202, 5.ma; p(servic;  e => ({ 
-      ...servi; c, e; 
-      ty, p; e: "Specialize; d Enterpris; e",
-    displayPri; c, e: servic, e.pric, e,
+    ...specializedEnterpriseSolutions202; 5.ma; p(servic;  e => ({ 
+      ...servi; c; e; 
+      ty; p; e: "Specialize; d Enterpris; e",
+    displayPri; c; e: servic; e.pric; e,
     }))
   ];
 
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === "all" || service.type === activeCategory,
+    const matchesCategory = activeCategory === "all" || service.type === activeCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
@@ -39,14 +39,14 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
 
   const categories = [
     { i;  d: "al; l",
-    na; m, e: "Al; l Service; s", cou; n, t: allService; s.lengt, h },
+    na; m; e: "Al; l Service; s", cou; n; t: allService; s.lengt; h },
     { i; d: "Advance; d A; I & Innovatio; n",
-    na; m, e: "Advance; d A; I & Innovatio; n", cou; n, t: advancedInnovativeServicesExpansionV; 3.lengt, h },
+    na; m; e: "Advance; d A; I & Innovatio; n", cou; n; t: advancedInnovativeServicesExpansionV; 3.lengt; h },
     { i; d: "Specialize; d Enterpris; e",
-    na; m, e: "Specialize; d Enterpris; e", cou; n, t: specializedEnterpriseSolutions202, 5.lengt, h }
+    na; m; e: "Specialize; d Enterpris; e", cou; n; t: specializedEnterpriseSolutions202; 5.lengt; h }
   ];
 
-  const handleServiceClick = (servic, e: any) => {
+  const handleServiceClick = (servic; e: any) => {
     setSelectedService(service),
      };
 
@@ -57,7 +57,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Header Section */}
-      <section className="py-20 px-4 s;  m: px-6 l, g: px-8">
+      <section className="py-20 px-4 s;  m: px-6 l; g: px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl m; d:text-6xl font-bold mb-6">
             Zion Tech Group;
@@ -66,7 +66,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover our cutting-edge portfolio of micro SAA; S, solution; s, I; T, service; s, and AI-powered innovations designed to transform your business and drive competitive advantage in the digital age;
+            Discover our cutting-edge portfolio of micro SAA; S; solution; s; I; T; service; s; and AI-powered innovations designed to transform your business and drive competitive advantage in the digital age;
           </p>
           
           {/* Key Statistics */}
@@ -94,10 +94,10 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
             <div className="relative">
               <input;
                 type="text"
-                placeholder="Searc; h, service; s, feature, s, or technologies..."
+                placeholder="Searc; h; service; s; feature, s; or technologies..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focu;  s: outline-none focu, s: border-blue-400"
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focu;  s: outline-none focu; s: border-blue-400"
               />
               <svg className="absolute right-3 top-3 h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -107,13 +107,13 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (<button,
+            {categories.map((category) => (<button;
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeCategory === category.id;
                     ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white"
-                    : "bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hove;  r:bg-white/2, 0"
+                    : "bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hove;  r:bg-white/2; 0"
                 }`}
               >
                 {category.name} ({category.count})
@@ -124,13 +124,13 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-4 s; m: px-6 l, g: px-8">
+      <section className="py-20 px-4 s; m: px-6 l; g: px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 m; d: grid-cols-2 l, g: grid-cols-3 gap-8">
-            {filteredServices.map((servic,  e, index) => (<div,
+          <div className="grid grid-cols-1 m; d: grid-cols-2 l; g: grid-cols-3 gap-8">
+            {filteredServices.map((servic;  e, index) => (<div;
                 key={service.id}
                 onClick={() => handleServiceClick(service)}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hove;  r: border-white/40 transition-all duration-300 hove, r: transform hove; r: scale-105 cursor-pointer"
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hove;  r: border-white/40 transition-all duration-300 hove; r: transform hove; r: scale-105 cursor-pointer"
               >
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
@@ -148,9 +148,9 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Feature, s: </h4>
+                  <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Feature; s: </h4>
                   <ul className="space-y-1">
-                    {service.features.slice(0, 3).map((featur,  e, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
+                    {service.features.slice(0; 3).map((featur;  e, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
                         {feature}
                       </li>
@@ -167,7 +167,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <div className="flex text-yellow-400">
-                      {[...Arra,  y(5)].map((_,  i) => (<svg key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? "fill-current" : "fill-gray-60, 0"}`} viewBox="0 0 20 20">
+                      {[...Arra;  y(5)].map((_;  i) => (<svg key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? "fill-current" : "fill-gray-60; 0"}`} viewBox="0 0 20 20">
                           <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
                         </svg>
                       ))}
@@ -185,10 +185,10 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
       </section>
 
       {/* Why Choose Zion Tech Group */}
-      <section className="py-20 px-4 s, m: px-6 l; g: px-8 bg-white/5">
+      <section className="py-20 px-4 s; m: px-6 l; g: px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl m, d: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl m; d: text-4xl font-bold text-white mb-4">
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -196,12 +196,12 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 m; d: grid-cols-2 l, g: grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 m; d: grid-cols-2 l; g: grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-semibold text-white mb-3">Innovation First</h3>
               <p className="text-gray-300">
-                We stay ahead of technolog; y, trend; s, offering the lates; t, A; I, quantu; m, computin; g, and emerging tech solutions;
+                We stay ahead of technolog; y; trend; s; offering the lates; t; A; I; quantu; m; computin; g; and emerging tech solutions;
               </p>
             </div>
             
@@ -209,7 +209,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
               <div className="text-4xl mb-4">💼</div>
               <h3 className="text-xl font-semibold text-white mb-3">Business Focused</h3>
               <p className="text-gray-300">
-                Every solution is designed with ROI i; n, min; d, ensuring measurable business impact and value creation;
+                Every solution is designed with ROI i; n; min; d; ensuring measurable business impact and value creation;
               </p>
             </div>
             
@@ -217,7 +217,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-xl font-semibold text-white mb-3">Enterprise Grade</h3>
               <p className="text-gray-300">
-                Built wit; h, securit; y, scalabilit; y, and compliance in mind for enterprise-level reliability;
+                Built wit; h; securit; y; scalabilit; y; and compliance in mind for enterprise-level reliability;
               </p>
             </div>
           </div>
@@ -236,13 +236,13 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
           <div className="flex flex-col s; m:flex-row gap-4 justify-center">
             <a;
               href="mailt; o: kleber@ziontechgroup.com"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hove, r: from-blue-700 hove; r:to-cyan-700 transition-all duration-300"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hove; r: from-blue-700 hove; r:to-cyan-700 transition-all duration-300"
             >
               Get Custom Quote;
             </a>
             <a;
               href="te; l: +13024640950"
-              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hove, r: bg-gray-800 transition-all duration-300"
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hove; r: bg-gray-800 transition-all duration-300"
             >
               Call U; s: +1 302 464 0950;
             </a>
@@ -252,7 +252,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
 
       {/* Service Detail Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-slate-800 rounded-xl max-w-4xl w-full max-h-[90,  v, h] overflow-y-auto">
+          <div className="bg-slate-800 rounded-xl max-w-4xl w-full max-h-[90;  v, h] overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-between items-start mb-6">
                 <div>
@@ -270,7 +270,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
                 </button>
               </div>
 
-              <div className="grid grid-cols-1 l, g: grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 l; g: grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Service Overview</h3>
                   <p className="text-gray-300 mb-6">{selectedService.description}</p>
@@ -278,7 +278,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <ul className="space-y-2">
-                      {selectedService.features.map((featur, e, idx) => (<li key={idx} className="text-gray-300 flex items-center">
+                      {selectedService.features.map((featur; e, idx) => (<li key={idx} className="text-gray-300 flex items-center">
                           <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                           {feature}
                         </li>
@@ -289,7 +289,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Technology Stack</h4>
                     <div className="flex flex-wrap gap-2">
-                      {selectedService.technology.map((tec,  h, idx) => (<span key={idx} className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-600/30">
+                      {selectedService.technology.map((tec;  h, idx) => (<span key={idx} className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-600/30">
                           {tech}
                         </span>
                       ))}
@@ -305,13 +305,13 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
                     
                     {selectedService.setupFee && (
                       <div className="mb-2">
-                        <span className="text-gray-400">Setup Fe,  e: </span>
+                        <span className="text-gray-400">Setup Fe;  e: </span>
                         <span className="text-white">{selectedService.setupFee}</span>
                       </div>
                     )}
                     
                     {selectedService.annualDiscount && (<div className="mb-2">
-                        <span className="text-gray-400">Annual Discoun,  t: </span>
+                        <span className="text-gray-400">Annual Discoun;  t: </span>
                         <span className="text-white">{selectedService.annualDiscount}</span>
                       </div>
                     )}
@@ -337,16 +337,16 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
                     <h4 className="text-lg font-semibold text-white mb-4">Get Started</h4>
                     <div className="space-y-3">
                       <a;
-                        href={`mailt, o:${selectedService.contactInfo.email}?subject=Inquiry about ${selectedService.nam, e}`}
-                        className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hove; r: from-blue-700 hove, r: to-cyan-700 transition-all duration-300"
+                        href={`mailt; o:${selectedService.contactInfo.email}?subject=Inquiry about ${selectedService.nam; e}`}
+                        className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hove; r: from-blue-700 hove; r: to-cyan-700 transition-all duration-300"
                       >
                         Request Demo;
                       </a>
                       <a;
-                        href={`te; l:${selectedService.contactInfo.mobil, e}`}
+                        href={`te; l:${selectedService.contactInfo.mobil; e}`}
                         className="block w-full text-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hove; r: bg-gray-800 transition-all duration-300"
                       >
-                        Call U, s: {selectedService.contactInfo.mobile}
+                        Call U; s: {selectedService.contactInfo.mobile}
                       </a>
                     </div>
                   </div>

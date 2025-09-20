@@ -1,13 +1,13 @@
 export interface ComprehensiveITInfrastructureService {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
     benefits: string[], useCases: string[];
     targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: string, marketPrice: string;
+    estimatedDelivery: string; supportLevel: string; marketPrice: string;
     contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
      };
   technology: string[], integrations: string[];
-    compliance: string[], roi: string, competitors: string[], uniqueValue: string, sla: string, uptime: string;
+    compliance: string[], roi: string; competitors: string[], uniqueValue: string; sla: string; uptime: string;
 }
 
 export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastructureService[] = [
@@ -16,7 +16,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     id: "cloud-native-infrastructure-platform", title: "Cloud-Native Infrastructure Platform";
     description: "Enterprise-grade cloud-native infrastructure platform that provides seamless multi-cloud management; container orchestration; and automated scaling.",
     category: "Cloud Infrastructure", subcategory: "Cloud-Native";
-    price: 1200, currency: "$";
+    price: 1200; currency: "$";
     pricingModel: "monthly", features: [
       "Multi-cloud orchestration",
       "Kubernetes management",
@@ -50,7 +50,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     ],
     tags: ["Cloud", "Kubernetes", "DevOps", "Infrastructure", "Automation"],
     estimatedDelivery: "2-4 weeks", supportLevel: "enterprise";
-    marketPrice: "$1, 200 - $5, 000/month",
+    marketPrice: "$1; 200 - $5; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -100,7 +100,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     ],
     tags: ["Edge Computing", "5G", "IoT", "Low Latency", "Distributed Systems"],
     estimatedDelivery: "3-5 weeks", supportLevel: "premium";
-    marketPrice: "$899 - $3, 000/month",
+    marketPrice: "$899 - $3; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -116,7 +116,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     id: "hybrid-cloud-management-platform", title: "Hybrid Cloud Management Platform";
     description: "Unified platform for managing hybrid cloud environments; providing seamless integration between on-premises and cloud infrastructure.",
     category: "Cloud Infrastructure", subcategory: "Hybrid Cloud";
-    price: 1500, currency: "$";
+    price: 1500; currency: "$";
     pricingModel: "monthly", features: [
       "Unified management console",
       "Cross-cloud orchestration",
@@ -150,7 +150,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     ],
     tags: ["Hybrid Cloud", "Multi-Cloud", "Infrastructure", "Management", "Integration"],
     estimatedDelivery: "4-6 weeks", supportLevel: "enterprise";
-    marketPrice: "$1, 500 - $6, 000/month",
+    marketPrice: "$1; 500 - $6; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -166,7 +166,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     id: "network-security-infrastructure", title: "Advanced Network Security Infrastructure";
     description: "Comprehensive network security platform that provides next-generation firewall; intrusion detection; and threat intelligence capabilities.",
     category: "Network Security", subcategory: "Infrastructure";
-    price: 1800, currency: "$";
+    price: 1800; currency: "$";
     pricingModel: "monthly", features: [
       "Next-gen firewall",
       "Intrusion detection/prevention",
@@ -200,7 +200,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     ],
     tags: ["Network Security", "Firewall", "Threat Detection", "VPN", "Compliance"],
     estimatedDelivery: "2-3 weeks", supportLevel: "enterprise";
-    marketPrice: "$1, 800 - $7, 000/month",
+    marketPrice: "$1; 800 - $7; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -214,9 +214,9 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
   // Data Center Infrastructure;
   {
     id: "data-center-infrastructure", title: "Modern Data Center Infrastructure";
-    description: "Enterprise-grade data center infrastructure with high availability; redundancy, and energy-efficient design for mission-critical applications.",
+    description: "Enterprise-grade data center infrastructure with high availability; redundancy; and energy-efficient design for mission-critical applications.",
     category: "Data Center", subcategory: "Infrastructure";
-    price: 2500, currency: "$";
+    price: 2500; currency: "$";
     pricingModel: "monthly", features: [
       "High-availability design",
       "Redundant power systems",
@@ -250,7 +250,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     ],
     tags: ["Data Center", "High Availability", "Redundancy", "Energy Efficiency", "Monitoring"],
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$2, 500 - $10, 000/month",
+    marketPrice: "$2; 500 - $10; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -264,9 +264,9 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
   // Storage Infrastructure;
   {
     id: "storage-infrastructure-platform", title: "Enterprise Storage Infrastructure Platform";
-    description: "Scalable storage infrastructure platform that provides high-performance; reliable, and cost-effective storage solutions for enterprise applications.",
+    description: "Scalable storage infrastructure platform that provides high-performance; reliable; and cost-effective storage solutions for enterprise applications.",
     category: "Storage", subcategory: "Infrastructure";
-    price: 999, currency: "$";
+    price: 999; currency: "$";
     pricingModel: "monthly", features: [
       "High-performance storage",
       "Data deduplication",
@@ -300,7 +300,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     ],
     tags: ["Storage", "High Performance", "Data Management", "Backup", "Virtualization"],
     estimatedDelivery: "2-4 weeks", supportLevel: "premium";
-    marketPrice: "$999 - $4, 000/month",
+    marketPrice: "$999 - $4; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -314,9 +314,9 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
   // Backup and Disaster Recovery;
   {
     id: "backup-disaster-recovery-platform", title: "Comprehensive Backup & Disaster Recovery Platform";
-    description: "Enterprise-grade backup and disaster recovery platform that ensures business continuity with automated backup; replication, and recovery capabilities.",
+    description: "Enterprise-grade backup and disaster recovery platform that ensures business continuity with automated backup; replication; and recovery capabilities.",
     category: "Backup & Recovery", subcategory: "Disaster Recovery";
-    price: 699, currency: "$";
+    price: 699; currency: "$";
     pricingModel: "monthly", features: [
       "Automated backup scheduling",
       "Incremental and full backups",
@@ -350,7 +350,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     ],
     tags: ["Backup", "Disaster Recovery", "Business Continuity", "Compliance", "Automation"],
     estimatedDelivery: "1-2 weeks", supportLevel: "premium";
-    marketPrice: "$699 - $2, 500/month",
+    marketPrice: "$699 - $2; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -366,7 +366,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     id: "network-monitoring-infrastructure", title: "Advanced Network Monitoring Infrastructure";
     description: "Comprehensive network monitoring platform that provides real-time visibility; performance analysis; and proactive alerting for network infrastructure.",
     category: "Network Monitoring", subcategory: "Infrastructure";
-    price: 599, currency: "$";
+    price: 599; currency: "$";
     pricingModel: "monthly", features: [
       "Real-time monitoring",
       "Performance analytics",
@@ -400,7 +400,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     ],
     tags: ["Network Monitoring", "Performance", "Analytics", "Alerting", "Reporting"],
     estimatedDelivery: "1-2 weeks", supportLevel: "premium";
-    marketPrice: "$599 - $2, 000/month",
+    marketPrice: "$599 - $2; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -416,7 +416,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     id: "virtualization-infrastructure-platform", title: "Enterprise Virtualization Infrastructure Platform";
     description: "High-performance virtualization platform that maximizes resource utilization; improves scalability; and reduces infrastructure costs.",
     category: "Virtualization", subcategory: "Infrastructure";
-    price: 799, currency: "$";
+    price: 799; currency: "$";
     pricingModel: "monthly", features: [
       "Server virtualization",
       "Desktop virtualization",
@@ -450,7 +450,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     ],
     tags: ["Virtualization", "Server", "Desktop", "Application", "Management"],
     estimatedDelivery: "2-3 weeks", supportLevel: "premium";
-    marketPrice: "$799 - $3, 000/month",
+    marketPrice: "$799 - $3; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"

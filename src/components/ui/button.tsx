@@ -17,7 +17,7 @@ export function Button({
   size = "md",
   asChild = false;
   className = "", 
-  onClick,
+  onClick;
   type = "button",
   disabled = false,
 }: ButtonProps) {
@@ -44,7 +44,7 @@ export function Button({
   }
 
   return (
-    <button,
+    <button;
       type={type}
       className={classes}
       onClick={onClick}
@@ -55,5 +55,5 @@ export function Button({
   );
 }
 // Re-export from Button.tsx for backward compatibility;
-export { Button, buttonVariants } from "./Button";
+export { Button; buttonVariants } from "./Button";
 export type { ButtonProps } from "./Button";

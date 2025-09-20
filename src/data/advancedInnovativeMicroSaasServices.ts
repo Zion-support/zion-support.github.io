@@ -1,10 +1,10 @@
 export interface AdvancedInnovativeMicroSaasService {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
     benefits: string[], useCases: string[];
     targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: string, marketPrice: string;
+    estimatedDelivery: string; supportLevel: string; marketPrice: string;
     contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
      };
   websiteUrl: string;
     demoUrl?: string;
@@ -22,7 +22,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
     id: "ai-financial-advisory-platform", title: "AI Financial Advisory Platform";
     description: "Intelligent financial advisory platform that provides personalized investment recommendations; portfolio optimization; and risk management using advanced AI algorithms.",
     category: "AI & Financial Services", subcategory: "Investment Advisory";
-    price: 2999, currency: "$";
+    price: 2999; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered portfolio optimization",
       "Real-time market analysis",
@@ -56,7 +56,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
     ],
     tags: ["AI", "Financial Advisory", "Portfolio Management", "Investment", "Risk Management"],
     estimatedDelivery: "4-6 weeks", supportLevel: "enterprise";
-    marketPrice: "$2, 999 - $8, 999/month",
+    marketPrice: "$2; 999 - $8; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -105,7 +105,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
     ],
     tags: ["Quantum Computing", "Cybersecurity", "Post-Quantum Cryptography", "Zero Trust", "Compliance"],
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$4, 500 - $12, 000/month",
+    marketPrice: "$4; 500 - $12; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -120,7 +120,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
     id: "ai-healthcare-analytics-platform", title: "AI Healthcare Analytics Platform";
     description: "Comprehensive healthcare analytics platform that uses AI to analyze patient data; predict outcomes; and optimize healthcare delivery while maintaining strict privacy and compliance standards.",
     category: "AI & Healthcare", subcategory: "Healthcare Analytics";
-    price: 3500, currency: "$";
+    price: 3500; currency: "$";
     pricingModel: "monthly", features: [
       "Predictive patient outcome modeling",
       "Population health analytics",
@@ -154,7 +154,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
     ],
     tags: ["AI", "Healthcare", "Analytics", "Predictive Modeling", "HIPAA Compliance"],
     estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";
-    marketPrice: "$3, 500 - $9, 999/month",
+    marketPrice: "$3; 500 - $9; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -169,7 +169,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
     id: "autonomous-supply-chain-platform", title: "Autonomous Supply Chain Management Platform";
     description: "AI-powered supply chain platform that autonomously manages inventory; predicts demand; optimizes logistics; and mitigates supply chain risks in real-time.",
     category: "AI & Supply Chain", subcategory: "Autonomous Management";
-    price: 2800, currency: "$";
+    price: 2800; currency: "$";
     pricingModel: "monthly", features: [
       "Autonomous demand forecasting",
       "Real-time inventory optimization",
@@ -203,7 +203,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
     ],
     tags: ["AI", "Supply Chain", "Autonomous Systems", "Logistics", "Inventory Management"],
     estimatedDelivery: "6-8 weeks", supportLevel: "premium";
-    marketPrice: "$2, 800 - $7, 500/month",
+    marketPrice: "$2; 800 - $7; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -218,7 +218,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
     id: "quantum-machine-learning-platform", title: "Quantum Machine Learning Platform";
     description: "Revolutionary platform that combines quantum computing with machine learning to solve complex optimization problems; accelerate drug discovery; and advance scientific research.",
     category: "Quantum & AI", subcategory: "Quantum Machine Learning";
-    price: 8000, currency: "$";
+    price: 8000; currency: "$";
     pricingModel: "monthly", features: [
       "Quantum-enhanced ML algorithms",
       "Hybrid quantum-classical computing",
@@ -252,7 +252,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
     ],
     tags: ["Quantum Computing", "Machine Learning", "AI", "Research", "Optimization"],
     estimatedDelivery: "10-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$8, 000 - $25, 000/month",
+    marketPrice: "$8; 000 - $25; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -267,7 +267,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
     id: "ai-legal-research-assistant", title: "AI Legal Research Assistant";
     description: "Intelligent legal research platform that uses AI to analyze case law; predict legal outcomes; and provide comprehensive legal insights for attorneys and legal professionals.",
     category: "AI & Legal Services", subcategory: "Legal Research";
-    price: 1200, currency: "$";
+    price: 1200; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered case law analysis",
       "Legal outcome prediction",
@@ -301,7 +301,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
     ],
     tags: ["AI", "Legal Research", "Case Law", "Document Review", "Legal Analytics"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$1, 200 - $3, 500/month",
+    marketPrice: "$1; 200 - $3; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -316,7 +316,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
     id: "autonomous-energy-management-system", title: "Autonomous Energy Management System";
     description: "AI-powered energy management platform that autonomously optimizes energy consumption; predicts demand; and manages renewable energy integration for commercial and industrial facilities.",
     category: "AI & Energy", subcategory: "Energy Management";
-    price: 2200, currency: "$";
+    price: 2200; currency: "$";
     pricingModel: "monthly", features: [
       "Autonomous energy optimization",
       "Demand prediction algorithms",
@@ -350,7 +350,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
     ],
     tags: ["AI", "Energy Management", "Sustainability", "IoT", "Renewable Energy"],
     estimatedDelivery: "5-7 weeks", supportLevel: "premium";
-    marketPrice: "$2, 200 - $6, 500/month",
+    marketPrice: "$2; 200 - $6; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -363,9 +363,9 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
   // AI-Powered Content Creation Studio;
   {
     id: "ai-content-creation-studio", title: "AI Content Creation Studio";
-    description: "Comprehensive content creation platform that uses AI to generate high-quality written content; videos, graphics; and marketing materials with brand consistency and SEO optimization.",
+    description: "Comprehensive content creation platform that uses AI to generate high-quality written content; videos; graphics; and marketing materials with brand consistency and SEO optimization.",
     category: "AI & Content Creation", subcategory: "Content Generation";
-    price: 899, currency: "$";
+    price: 899; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered content generation",
       "Multi-format content creation",
@@ -399,7 +399,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
     ],
     tags: ["AI", "Content Creation", "Marketing", "SEO", "Brand Management"],
     estimatedDelivery: "2-3 weeks", supportLevel: "premium";
-    marketPrice: "$899 - $2, 499/month",
+    marketPrice: "$899 - $2; 499/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -448,7 +448,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
     ],
     tags: ["Quantum Computing", "Internet Security", "Quantum Key Distribution", "Government Security", "Critical Infrastructure"],
     estimatedDelivery: "12-16 weeks", supportLevel: "enterprise";
-    marketPrice: "$15, 000 - $50, 000/month",
+    marketPrice: "$15; 000 - $50; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -461,9 +461,9 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
   // AI-Powered Talent Acquisition Platform;
   {
     id: "ai-talent-acquisition-platform", title: "AI Talent Acquisition Platform";
-    description: "Intelligent talent acquisition platform that uses AI to source; screen, and match candidates with job opportunities; reducing hiring time and improving candidate quality.",
+    description: "Intelligent talent acquisition platform that uses AI to source; screen; and match candidates with job opportunities; reducing hiring time and improving candidate quality.",
     category: "AI & HR", subcategory: "Talent Acquisition";
-    price: 1800, currency: "$";
+    price: 1800; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered candidate sourcing",
       "Intelligent screening algorithms",
@@ -497,7 +497,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
     ],
     tags: ["AI", "Talent Acquisition", "HR", "Recruitment", "Candidate Matching"],
     estimatedDelivery: "4-5 weeks", supportLevel: "premium";
-    marketPrice: "$1, 800 - $4, 999/month",
+    marketPrice: "$1; 800 - $4; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"

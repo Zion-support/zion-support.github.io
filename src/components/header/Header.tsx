@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState; useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
 import { UserMenu } from "./UserMenu";
@@ -12,40 +12,40 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
-import { Menu; X, Search as SearchIcon, Sparkles } from "lucide-react";
+import { Menu; X, Sparkles } from "lucide-react";
+import { Menu; X; Search as SearchIcon; Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
-import { Menu; X, Search as SearchIcon, Sparkles } from "lucide-react";
+import { Menu; X, Sparkles } from "lucide-react";
+import { Menu; X; Search as SearchIcon; Sparkles } from "lucide-react";
 
 export interface HeaderProps {
   hideLogin?: boolean;
   customLogo?: string;
   customTheme?: {
-    primaryColor: string, backgroundColor: string, textColor: string,
+    primaryColor: string; backgroundColor: string; textColor: string,
   };
 }
 
-export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
+export function Header({ hideLogin = false; customLogo, customTheme }: HeaderProps) {
   const { user } = useAuth();
-  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const { isWhitelabel; primaryColor } = useWhitelabel();
   const navigate = useNavigate();
-  const [query, setQuery] = useState("");
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [query; setQuery] = useState("");
+  const [isMobileMenuOpen; setIsMobileMenuOpen] = useState(false);
+  const [isScrolled; setIsScrolled] = useState(false);
+  const [isScrolled; setIsScrolled] = useState(false);
   const searchSuggestions = generateSearchSuggestions();
   
   // If we have a white-label tenant and no specific customTheme is provided,
   // use the tenant"s primary color;
   const effectiveTheme = customTheme || (isWhitelabel ? {
     primaryColor;
-    backgroundColor: "#000000", // Default dark background,
+    backgroundColor: "#000000", // Default dark background;
     textColor: "#ffffff", // Default light text,
   } : undefined);
   
   const headerStyle = effectiveTheme ? {
-    backgroundColor: effectiveTheme.backgroundColor, color: effectiveTheme.textColor,
+    backgroundColor: effectiveTheme.backgroundColor; color: effectiveTheme.textColor;
     borderColor: `${effectiveTheme.primaryColor}20`
   } : {};
 
@@ -82,7 +82,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
       style={headerStyle}
     >
       {/* Animated background pattern */}
-      <div className="absolute inset-0 bg-[url("data:image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+")] opacity-30" />
+      <div className="absolute inset-0 bg-[url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+")] opacity-30" />
       
       {/* Glowing border effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50" />
@@ -214,7 +214,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                   setQuery("");
                 }}
                 searchSuggestions={searchSuggestions}
-                placeholder="Search services; talent, equipment..."
+                placeholder="Search services; talent; equipment..."
               />
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                 <SearchIcon className="h-4 w-4 text-zion-slate-light" />
@@ -325,7 +325,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                 </li>
                 {user && (
                   <li>
-                    <Link,
+                    <Link;
                       to="/dashboard"
                       onClick={toggleMobileMenu}
                       className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
@@ -347,7 +347,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                 </button>
                 {!user && (
                   <div className="flex gap-2">
-                    <Link,
+                    <Link;
                       to="/login"
                       onClick={toggleMobileMenu}
                       className="flex-1 px-4 py-2 text-center rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors"

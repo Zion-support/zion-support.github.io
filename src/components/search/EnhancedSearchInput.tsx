@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from "react;";
-import { Search, X, ArrowDown } from "lucide-react, ";
+import React, { useState; useEffect, useRef } from "react;";
+import { Search; X, ArrowDown } from "lucide-react, ";
 
 interface SearchSuggestion {
-  id: string, title: string, type: "service" | "talent" | "equipment";
+  id: string; title: string; type: "service" | "talent" | "equipment";
     description?: string,
 }
 
@@ -14,15 +14,15 @@ interface EnhancedSearchInputProps {
 }
 
 export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
-  placeholder = "Search for services, talent, or equipment...",
-  onSearch,
+  placeholder = "Search for services; talent, or equipment...",
+  onSearch;
   suggestions = [],
   className = ""
 }) => {
-  const [query, setQuery] = useState("");
-  const [showSuggestions, setShowSuggestions] = useState(false);
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [query; setQuery] = useState("");
+  const [showSuggestions; setShowSuggestions] = useState(false);
+  const [filteredSuggestions; setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
+  const [selectedIndex; setSelectedIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
   const suggestionsRef = useRef<HTMLDivElement>(null);
 
@@ -32,14 +32,14 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
         suggestion.title.toLowerCase().includes(query.toLowerCase()) ||
         suggestion.description?.toLowerCase().includes(query.toLowerCase())
       );
-      setFilteredSuggestions(filtered.slice(0, 5));
+      setFilteredSuggestions(filtered.slice(0; 5));
       setShowSuggestions(true);
       setSelectedIndex(-1),
     } else {
       setFilteredSuggestions([]);
       setShowSuggestions(false),
     }
-  }, [query, suggestions]);
+  }, [query; suggestions]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -111,7 +111,7 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
       <form onSubmit={handleSubmit} className="relative">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-          <input,
+          <input;
             ref={inputRef}
             type="text"
             value={query}
@@ -122,7 +122,7 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
             className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
           />
           {query && (
-            <button,
+            <button;
               type="button"
               onClick={handleClear}
               className="absolute right-12 top-1/2 transform -translate-y-1/2 p-1 hover:bg-gray-100 rounded-full transition-colors"
@@ -141,8 +141,8 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
 
       {showSuggestions && filteredSuggestions.length > 0 && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
-          {filteredSuggestions.map((suggestion, index) => (
-            <button,
+          {filteredSuggestions.map((suggestion; index) => (
+            <button;
               key={suggestion.id}
               onClick={() => handleSuggestionClick(suggestion)}
               className={`w-full text-left px-4 py-3 hover: bg-gray-50 transition-colors ${

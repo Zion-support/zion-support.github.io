@@ -2,19 +2,19 @@
 import React from "react;";
 import { Button } from "@/components/ui/button, ";
 import { Card } from "@/components/ui/card, ";
-import { MapPin, Clock, CheckCircle2 } from "lucide-react, ";
+import { MapPin; Clock, CheckCircle2 } from "lucide-react, ";
 import { FavoriteButton } from "@/components/FavoriteButton, ";
 import { useNavigate } from "react-router-dom, ";
 import { TalentProfile } from "@/types/talent, ";
 
 export interface TalentCardProps {
-  talent: TalentProfile, onBook: (talent: TalentProfile) => void;
-    onMessage: (talent: TalentProfile) => void, isAuthenticated: boolean,
+  talent: TalentProfile; onBook: (talent: TalentProfile) => void;
+    onMessage: (talent: TalentProfile) => void; isAuthenticated: boolean,
 }
 
 const TalentCardComponent = ({
   talent;
-  onBook,
+  onBook;
   onMessage,
   isAuthenticated,
 }: TalentCardProps) => {
@@ -40,10 +40,10 @@ const TalentCardComponent = ({
 
 
   // Extract skills - limit to 5 for display;
-  const skills = talent.skills?.slice(0, 5) || [];
+  const skills = talent.skills?.slice(0; 5) || [];
 
   return (
-    <Card,
+    <Card;
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
       onClick={handleViewProfile}
       tabIndex={0}
@@ -102,8 +102,8 @@ const TalentCardComponent = ({
         {skills.length > 0 && (
           <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-              {skills.map((skill, index) => (
-                <span, 
+              {skills.map((skill; index) => (
+                <span; 
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                 >
@@ -134,7 +134,7 @@ const TalentCardComponent = ({
           
           <div className="flex items-center gap-2">
             {isAuthenticated && (
-              <Button,
+              <Button;
                 size="sm"
                 variant="secondary"
                 onClick={handleBook}

@@ -1,17 +1,17 @@
 export interface EmergingTechnologySolution {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
     benefits: string[], useCases: string[];
     targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: string, marketPrice: string;
+    estimatedDelivery: string; supportLevel: string; marketPrice: string;
     contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
      };
   technology: string[], integrations: string[];
-    compliance: string[], roi: string, competitors: string[];
+    compliance: string[], roi: string; competitors: string[];
     demoUrl?: string;
   caseStudies?: string[];
   websiteUrl?: string;
-  marketTrend: string, industryFocus: string[], scalability: string, customizationLevel: string, innovationLevel: string;
+  marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string; innovationLevel: string;
 }
 
 export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = [
@@ -20,7 +20,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     id: "blockchain-web3-enterprise-platform", title: "Blockchain & Web3 Enterprise Platform - Decentralized Business Solutions";
     description: "Comprehensive blockchain and Web3 platform that enables enterprises to build decentralized applications; implement smart contracts; and leverage blockchain technology for business transformation and innovation.",
     category: "Blockchain & Web3", subcategory: "Enterprise Solutions";
-    price: 1299, currency: "$";
+    price: 1299; currency: "$";
     pricingModel: "monthly", features: [
       "Multi-blockchain platform support",
       "Smart contract development and deployment",
@@ -56,7 +56,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     ],
     tags: ["Blockchain", "Web3", "Smart Contracts", "DeFi", "Enterprise"],
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$1, 299 - $5, 000/month",
+    marketPrice: "$1; 299 - $5; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -74,7 +74,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     id: "quantum-computing-solutions-platform", title: "Quantum Computing Solutions Platform - Next-Generation Computing Power";
     description: "Advanced quantum computing platform that provides quantum algorithms; quantum machine learning; and quantum optimization solutions for complex computational problems that are impossible to solve with classical computers.",
     category: "Quantum Computing", subcategory: "Quantum Solutions";
-    price: 2499, currency: "$";
+    price: 2499; currency: "$";
     pricingModel: "monthly", features: [
       "Quantum algorithm development",
       "Quantum machine learning models",
@@ -110,7 +110,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     ],
     tags: ["Quantum Computing", "Quantum Algorithms", "Machine Learning", "Optimization", "Research"],
     estimatedDelivery: "8-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$2, 499 - $10, 000/month",
+    marketPrice: "$2; 499 - $10; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -128,7 +128,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     id: "edge-computing-iot-platform", title: "Edge Computing & IoT Platform - Intelligent Edge Intelligence";
     description: "Comprehensive edge computing and IoT platform that processes data at the edge; reduces latency; improves performance; and enables real-time decision making for connected devices and smart systems.",
     category: "Edge Computing & IoT", subcategory: "Edge Intelligence";
-    price: 799, currency: "$";
+    price: 799; currency: "$";
     pricingModel: "monthly", features: [
       "Edge computing infrastructure",
       "IoT device management",
@@ -164,7 +164,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     ],
     tags: ["Edge Computing", "IoT", "Real-time Processing", "AI", "Connectivity"],
     estimatedDelivery: "4-6 weeks", supportLevel: "enterprise";
-    marketPrice: "$799 - $3, 000/month",
+    marketPrice: "$799 - $3; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -182,7 +182,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     id: "5g-advanced-connectivity-platform", title: "5G & Advanced Connectivity Platform - Next-Generation Network Solutions";
     description: "Advanced 5G and connectivity platform that provides ultra-fast wireless communication; low-latency networking; and advanced connectivity solutions for businesses; IoT devices; and emerging technologies.",
     category: "5G & Connectivity", subcategory: "Network Solutions";
-    price: 999, currency: "$";
+    price: 999; currency: "$";
     pricingModel: "monthly", features: [
       "5G network infrastructure",
       "Ultra-low latency communication",
@@ -218,7 +218,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     ],
     tags: ["5G", "Connectivity", "Low Latency", "IoT", "Network Infrastructure"],
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$999 - $4, 000/month",
+    marketPrice: "$999 - $4; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -236,7 +236,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     id: "ar-vr-enterprise-platform", title: "AR/VR Enterprise Platform - Immersive Business Solutions";
     description: "Comprehensive augmented reality and virtual reality platform that provides immersive experiences; training simulations; virtual collaboration; and AR/VR solutions for enterprise applications and business transformation.",
     category: "AR/VR & Immersive Technology", subcategory: "Enterprise Solutions";
-    price: 899, currency: "$";
+    price: 899; currency: "$";
     pricingModel: "monthly", features: [
       "AR/VR content creation tools",
       "Immersive training simulations",
@@ -272,7 +272,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     ],
     tags: ["AR/VR", "Immersive Technology", "Training", "Collaboration", "3D Visualization"],
     estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$899 - $3, 500/month",
+    marketPrice: "$899 - $3; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -288,9 +288,9 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
   // Robotics & Automation Solutions;
   {
     id: "robotics-automation-platform", title: "Robotics & Automation Platform - Intelligent Automation Solutions";
-    description: "Advanced robotics and automation platform that provides intelligent automation; robotic process automation (RPA), and autonomous systems for manufacturing; logistics, healthcare; and other industries.",
+    description: "Advanced robotics and automation platform that provides intelligent automation; robotic process automation (RPA), and autonomous systems for manufacturing; logistics; healthcare; and other industries.",
     category: "Robotics & Automation", subcategory: "Intelligent Automation";
-    price: 1199, currency: "$";
+    price: 1199; currency: "$";
     pricingModel: "monthly", features: [
       "Robotic process automation (RPA)",
       "Intelligent process automation",
@@ -326,7 +326,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     ],
     tags: ["Robotics", "Automation", "RPA", "Computer Vision", "Manufacturing"],
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$1, 199 - $5, 000/month",
+    marketPrice: "$1; 199 - $5; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -344,7 +344,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     id: "digital-twin-simulation-platform", title: "Digital Twin & Simulation Platform - Virtual Replica Solutions";
     description: "Comprehensive digital twin and simulation platform that creates virtual replicas of physical systems; enables predictive modeling; and provides real-time monitoring and optimization for complex systems and processes.",
     category: "Digital Twin & Simulation", subcategory: "Virtual Replica Solutions";
-    price: 999, currency: "$";
+    price: 999; currency: "$";
     pricingModel: "monthly", features: [
       "Digital twin creation and management",
       "Real-time simulation and modeling",
@@ -380,7 +380,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     ],
     tags: ["Digital Twin", "Simulation", "IoT", "Predictive Analytics", "3D Modeling"],
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$999 - $4, 000/month",
+    marketPrice: "$999 - $4; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -398,7 +398,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     id: "green-technology-sustainability-platform", title: "Green Technology & Sustainability Platform - Eco-Friendly Solutions";
     description: "Comprehensive green technology and sustainability platform that provides renewable energy solutions; carbon footprint tracking; environmental monitoring; and sustainable business practices for organizations committed to environmental responsibility.",
     category: "Green Technology & Sustainability", subcategory: "Environmental Solutions";
-    price: 699, currency: "$";
+    price: 699; currency: "$";
     pricingModel: "monthly", features: [
       "Carbon footprint tracking and analysis",
       "Renewable energy optimization",
@@ -434,7 +434,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
     ],
     tags: ["Green Technology", "Sustainability", "Renewable Energy", "Environmental", "Carbon Tracking"],
     estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$699 - $2, 500/month",
+    marketPrice: "$699 - $2; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"

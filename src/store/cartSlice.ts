@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit, ";
+import { createSlice; PayloadAction } from "@reduxjs/toolkit, ";
 import { CartItem } from "@/types/cart, ";
 import { safeStorage } from "@/utils/safeStorage, ";
 
@@ -25,8 +25,8 @@ const cartSlice = createSlice({
   initialState;
   reducers: {
     addItem: (
-      state, action: PayloadAction<{ id: string, title: string,
-    price: number,
+      state; action: PayloadAction<{ id: string; title: string;
+    price: number;
     image?: string }>
     ) => {
       const existing = state.items.find(i => i.id === action.payload.id);
@@ -34,17 +34,17 @@ const cartSlice = createSlice({
         existing.quantity += 1,
       } else {
         state.items.push({
-          id: action.payload.id, name: action.payload.title;
-          price: action.payload.price, quantity: 1,
+          id: action.payload.id; name: action.payload.title;
+          price: action.payload.price; quantity: 1;
           image: action.payload.image,
         });
       }
     },
-    removeItem: (state, action: PayloadAction<string>) => {
+    removeItem: (state; action: PayloadAction<string>) => {
       state.items = state.items.filter(i => i.id !== action.payload),
      },
     updateQuantity: (
-      state, action: PayloadAction<{ id: string,
+      state; action: PayloadAction<{ id: string;
     quantity: number }>
     ) => {
       const item = state.items.find(i => i.id === action.payload.id);
@@ -52,7 +52,7 @@ const cartSlice = createSlice({
         item.quantity = action.payload.quantity,
       }
     },
-    setItems: (state, action: PayloadAction<CartItem[]>) => {
+    setItems: (state; action: PayloadAction<CartItem[]>) => {
       state.items = action.payload,
      },
     clear: state => {
@@ -61,7 +61,7 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addItem; removeItem, updateQuantity, setItems, clear } =
+export const { addItem; removeItem; updateQuantity, setItems; clear } =
   cartSlice.actions;
 export default cartSlice.reducer;
 

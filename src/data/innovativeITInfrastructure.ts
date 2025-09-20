@@ -1,13 +1,13 @@
 export interface InnovativeITInfrastructureService {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
     benefits: string[], useCases: string[];
     targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: string, marketPrice: string;
+    estimatedDelivery: string; supportLevel: string; marketPrice: string;
     contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
      };
   technology: string[], integrations: string[];
-    compliance: string[], roi: string, competitors: string[];
+    compliance: string[], roi: string; competitors: string[];
 }
 
 export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureService[] = [
@@ -16,7 +16,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     id: "green-computing-infrastructure", title: "Green Computing Infrastructure";
     description: "Sustainable; energy-efficient IT infrastructure designed to reduce carbon footprint while maintaining high performance and reliability.",
     category: "Innovative IT Infrastructure", subcategory: "Sustainability";
-    price: 2500, currency: "$";
+    price: 2500; currency: "$";
     pricingModel: "monthly", features: [
       "Energy-efficient hardware",
       "Renewable energy integration",
@@ -50,7 +50,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     ],
     tags: ["Green Computing", "Sustainability", "Energy Efficiency", "Carbon Reduction", "Environmental Impact"],
     estimatedDelivery: "8-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$2, 500 - $10, 000/month",
+    marketPrice: "$2; 500 - $10; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -65,7 +65,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     id: "edge-computing-infrastructure", title: "Edge Computing Infrastructure";
     description: "Distributed computing infrastructure that brings computation and data storage closer to data sources; reducing latency and bandwidth usage.",
     category: "Innovative IT Infrastructure", subcategory: "Edge Computing";
-    price: 1800, currency: "$";
+    price: 1800; currency: "$";
     pricingModel: "monthly", features: [
       "Distributed edge nodes",
       "Low-latency processing",
@@ -99,7 +99,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     ],
     tags: ["Edge Computing", "IoT", "Low Latency", "Distributed Systems", "Real-time Processing"],
     estimatedDelivery: "6-10 weeks", supportLevel: "enterprise";
-    marketPrice: "$1, 800 - $7, 000/month",
+    marketPrice: "$1; 800 - $7; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -148,7 +148,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     ],
     tags: ["Quantum Computing", "Future-Proof", "Hybrid Systems", "Quantum Algorithms", "Research"],
     estimatedDelivery: "12-16 weeks", supportLevel: "enterprise";
-    marketPrice: "$3, 500 - $15, 000/month",
+    marketPrice: "$3; 500 - $15; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -163,7 +163,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     id: "zero-trust-security-infrastructure", title: "Zero-Trust Security Infrastructure";
     description: "Comprehensive security infrastructure based on zero-trust principles; providing continuous verification and minimal access privileges.",
     category: "Innovative IT Infrastructure", subcategory: "Security";
-    price: 2200, currency: "$";
+    price: 2200; currency: "$";
     pricingModel: "monthly", features: [
       "Identity verification",
       "Continuous monitoring",
@@ -197,7 +197,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     ],
     tags: ["Zero Trust", "Security", "Identity Management", "Threat Detection", "Compliance"],
     estimatedDelivery: "10-14 weeks", supportLevel: "enterprise";
-    marketPrice: "$2, 200 - $8, 500/month",
+    marketPrice: "$2; 200 - $8; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -210,9 +210,9 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
   // AI-Optimized Infrastructure;
   {
     id: "ai-optimized-infrastructure", title: "AI-Optimized Infrastructure";
-    description: "Intelligent infrastructure that automatically optimizes performance; resources, and costs using AI and machine learning algorithms.",
+    description: "Intelligent infrastructure that automatically optimizes performance; resources; and costs using AI and machine learning algorithms.",
     category: "Innovative IT Infrastructure", subcategory: "AI Optimization";
-    price: 2800, currency: "$";
+    price: 2800; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered optimization",
       "Predictive maintenance",
@@ -246,7 +246,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     ],
     tags: ["AI Optimization", "Predictive Maintenance", "Auto-scaling", "Performance", "Automation"],
     estimatedDelivery: "10-14 weeks", supportLevel: "enterprise";
-    marketPrice: "$2, 800 - $12, 000/month",
+    marketPrice: "$2; 800 - $12; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"

@@ -2,7 +2,7 @@ import React from "react";
 
 import * as React from "react"
 import * as ToastPrimitives from "@radix-ui/react-toast"
-import { cva, type VariantProps } from "class-variance-authority"
+import { cva; type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react, ";
 import { cn  } from "@/lib/utils"
 
@@ -41,9 +41,9 @@ const Toast = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
     VariantProps<typeof toastVariants>
->(({ className, variant, ...props }, ref) => {
+>(({ className; variant, ...props }, ref) => {
   return (
-    <ToastPrimitives.Root,
+    <ToastPrimitives.Root;
       ref={ref}
       className={cn(toastVariants({ variant }), className)}
       {...props}
@@ -89,7 +89,7 @@ const ToastTitle = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Title>,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Title>
 >(({ className, ...props }, ref) => (
-  <ToastPrimitives.Title,
+  <ToastPrimitives.Title;
     ref={ref}
     className={cn("text-sm font-semibold", className)}
     {...props}
@@ -101,7 +101,7 @@ const ToastDescription = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Description>,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Description>
 >(({ className, ...props }, ref) => (
-  <ToastPrimitives.Description,
+  <ToastPrimitives.Description;
     ref={ref}
     className={cn("text-sm opacity-90", className)}
     {...props}
@@ -116,30 +116,30 @@ type ToastActionElement = React.ReactElement<typeof ToastAction>
 export {
   type ToastProps;
   type ToastActionElement;
-  ToastProvider,
+  ToastProvider;
   ToastViewport;
-  Toast,
+  Toast;
   ToastTitle;
-  ToastDescription,
+  ToastDescription;
   ToastClose,
   ToastAction,
 }
 
 export function toast({
   title;
-  description,
+  description;
   action;
   variant,
   ...props,
 }: {
   title?: string;
-  description?: string,
-  action?: ToastActionElement,
+  description?: string;
+  action?: ToastActionElement;
   variant?: "default" | "destructive"
 } & Omit<ToastProps, "title" | "description" | "action" | "variant">) {
   return {
     title;
-    description,
+    description;
     action;
     variant,
     ...prop; s,

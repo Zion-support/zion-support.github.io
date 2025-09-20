@@ -1,16 +1,16 @@
 export interface AdvancedMicroSAASService {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
     benefits: string[], useCases: string[];
     targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: string, marketPrice: string;
+    estimatedDelivery: string; supportLevel: string; marketPrice: string;
     contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
      };
   technology: string[], integrations: string[];
-    compliance: string[], roi: string, competitors: string[], marketTrend: string, innovationLevel: string, aiCapabilities: string[];
-    scalability: string, securityFeatures: string[], customizationOptions: string[];
-    apiAccess: boolean, mobileSupport: boolean, whiteLabel: boolean, multiTenant: boolean, realTimeAnalytics: boolean, automationLevel: string, deploymentModel: string, backupRecovery: string, monitoring: string[];
-    supportChannels: string[], trainingIncluded: boolean, documentation: string[], communityAccess: boolean, updatesFrequency: string, dataRetention: string, sla: string, uptime: string;
+    compliance: string[], roi: string; competitors: string[], marketTrend: string; innovationLevel: string; aiCapabilities: string[];
+    scalability: string; securityFeatures: string[], customizationOptions: string[];
+    apiAccess: boolean; mobileSupport: boolean; whiteLabel: boolean; multiTenant: boolean; realTimeAnalytics: boolean; automationLevel: string; deploymentModel: string; backupRecovery: string; monitoring: string[];
+    supportChannels: string[], trainingIncluded: boolean; documentation: string[], communityAccess: boolean; updatesFrequency: string; dataRetention: string; sla: string; uptime: string;
 }
 
 export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
@@ -19,7 +19,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     id: "ai-customer-experience-platform", title: "AI Customer Experience & Sentiment Analysis Platform";
     description: "Intelligent platform that analyzes customer interactions across all channels; predicts customer behavior; and provides personalized experiences using advanced AI and machine learning.",
     category: "AI & Customer Experience", subcategory: "Customer Analytics";
-    price: 899, currency: "$";
+    price: 899; currency: "$";
     pricingModel: "monthly", features: [
       "Real-time sentiment analysis",
       "Customer behavior prediction",
@@ -57,7 +57,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     ],
     tags: ["AI", "Customer Experience", "Sentiment Analysis", "Machine Learning", "Automation", "Analytics"],
     estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$899 - $3, 500/month",
+    marketPrice: "$899 - $3; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -69,12 +69,12 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     aiCapabilities: ["Natural Language Processing", "Machine Learning", "Predictive Analytics", "Computer Vision"],
     scalability: "Auto-scaling cloud infrastructure supporting 1M+ users", securityFeatures: ["End-to-end encryption", "SOC 2 compliance", "GDPR compliance", "Data anonymization"],
     customizationOptions: ["White-label branding", "Custom workflows", "API customization", "UI/UX customization"],
-    apiAccess: true, mobileSupport: true, whiteLabel: true, multiTenant: true, realTimeAnalytics: true;
+    apiAccess: true; mobileSupport: true; whiteLabel: true; multiTenant: true; realTimeAnalytics: true;
     automationLevel: "Advanced AI automation with human oversight", deploymentModel: "Cloud-native with on-premise options";
     backupRecovery: "99.99% uptime with automated disaster recovery", monitoring: ["Real-time performance monitoring", "Error tracking", "User behavior analytics", "System health checks"],
     supportChannels: ["24/7 live chat", "Email support", "Phone support", "Video consultations"],
-    trainingIncluded: true, documentation: ["API documentation", "User guides", "Video tutorials", "Best practices"],
-    communityAccess: true, updatesFrequency: "Weekly feature updates";
+    trainingIncluded: true; documentation: ["API documentation", "User guides", "Video tutorials", "Best practices"],
+    communityAccess: true; updatesFrequency: "Weekly feature updates";
     dataRetention: "Configurable retention policies", sla: "99.9% uptime guarantee";
     uptime: "99.95%"
   };
@@ -83,7 +83,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     id: "blockchain-supply-chain-transparency", title: "Blockchain Supply Chain Transparency & Traceability Platform";
     description: "Revolutionary blockchain-based platform that provides end-to-end supply chain visibility; ensuring product authenticity; ethical sourcing; and regulatory compliance.",
     category: "Blockchain & Supply Chain", subcategory: "Supply Chain Transparency";
-    price: 1500, currency: "$";
+    price: 1500; currency: "$";
     pricingModel: "monthly", features: [
       "End-to-end product tracking",
       "Smart contract automation",
@@ -121,7 +121,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     ],
     tags: ["Blockchain", "Supply Chain", "Transparency", "Traceability", "Smart Contracts", "Compliance"],
     estimatedDelivery: "8-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$1, 500 - $6, 000/month",
+    marketPrice: "$1; 500 - $6; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -133,12 +133,12 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     aiCapabilities: ["Predictive analytics", "Anomaly detection", "Quality prediction", "Demand forecasting"],
     scalability: "Blockchain network supporting 10M+ transactions per day", securityFeatures: ["Immutable blockchain records", "Cryptographic verification", "Multi-signature wallets", "Zero-knowledge proofs"],
     customizationOptions: ["Custom smart contracts", "Branded interfaces", "Integration APIs", "Workflow customization"],
-    apiAccess: true, mobileSupport: true, whiteLabel: true, multiTenant: true, realTimeAnalytics: true;
+    apiAccess: true; mobileSupport: true; whiteLabel: true; multiTenant: true; realTimeAnalytics: true;
     automationLevel: "Full blockchain automation with smart contracts", deploymentModel: "Hybrid cloud with blockchain nodes";
     backupRecovery: "Immutable blockchain backup with cross-chain recovery", monitoring: ["Blockchain health monitoring", "Transaction monitoring", "Network performance", "Smart contract execution"],
     supportChannels: ["24/7 blockchain support", "Technical consultation", "Compliance guidance", "Implementation support"],
-    trainingIncluded: true, documentation: ["Blockchain documentation", "Smart contract guides", "Integration tutorials", "Compliance documentation"],
-    communityAccess: true, updatesFrequency: "Monthly blockchain upgrades";
+    trainingIncluded: true; documentation: ["Blockchain documentation", "Smart contract guides", "Integration tutorials", "Compliance documentation"],
+    communityAccess: true; updatesFrequency: "Monthly blockchain upgrades";
     dataRetention: "Permanent blockchain records", sla: "99.99% blockchain uptime";
     uptime: "99.99%"
   };
@@ -147,7 +147,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     id: "ai-predictive-maintenance-platform", title: "AI Predictive Maintenance & IoT Asset Management Platform";
     description: "Intelligent platform that uses IoT sensors; AI algorithms; and machine learning to predict equipment failures; optimize maintenance schedules; and reduce downtime.",
     category: "AI & IoT", subcategory: "Predictive Maintenance";
-    price: 1200, currency: "$";
+    price: 1200; currency: "$";
     pricingModel: "monthly", features: [
       "IoT sensor integration",
       "AI failure prediction",
@@ -185,7 +185,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     ],
     tags: ["AI", "IoT", "Predictive Maintenance", "Machine Learning", "Asset Management", "Industry 4.0"],
     estimatedDelivery: "6-10 weeks", supportLevel: "premium";
-    marketPrice: "$1, 200 - $5, 000/month",
+    marketPrice: "$1; 200 - $5; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -197,12 +197,12 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     aiCapabilities: ["Machine learning algorithms", "Anomaly detection", "Pattern recognition", "Predictive modeling"],
     scalability: "IoT platform supporting 100K+ sensors and devices", securityFeatures: ["IoT security protocols", "Data encryption", "Access control", "Secure communication"],
     customizationOptions: ["Custom ML models", "Industry-specific algorithms", "Integration customization", "Dashboard customization"],
-    apiAccess: true, mobileSupport: true, whiteLabel: true, multiTenant: true, realTimeAnalytics: true;
+    apiAccess: true; mobileSupport: true; whiteLabel: true; multiTenant: true; realTimeAnalytics: true;
     automationLevel: "AI-driven automation with human oversight", deploymentModel: "Edge-to-cloud hybrid deployment";
     backupRecovery: "Real-time data backup with disaster recovery", monitoring: ["IoT device monitoring", "AI model performance", "System health", "Predictive accuracy"],
     supportChannels: ["24/7 technical support", "IoT consultation", "AI model training", "Implementation support"],
-    trainingIncluded: true, documentation: ["IoT integration guides", "AI model documentation", "API references", "Best practices"],
-    communityAccess: true, updatesFrequency: "Bi-weekly AI model updates";
+    trainingIncluded: true; documentation: ["IoT integration guides", "AI model documentation", "API references", "Best practices"],
+    communityAccess: true; updatesFrequency: "Bi-weekly AI model updates";
     dataRetention: "Configurable retention with long-term analytics", sla: "99.5% uptime guarantee";
     uptime: "99.7%"
   };
@@ -249,7 +249,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     ],
     tags: ["Quantum Security", "Post-Quantum Cryptography", "Encryption", "Communication", "Zero Trust", "Compliance"],
     estimatedDelivery: "12-16 weeks", supportLevel: "enterprise";
-    marketPrice: "$3, 000 - $15, 000/month",
+    marketPrice: "$3; 000 - $15; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -261,12 +261,12 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     aiCapabilities: ["Quantum-resistant AI", "Threat detection", "Risk assessment", "Security analytics"],
     scalability: "Quantum-safe infrastructure supporting global communication networks", securityFeatures: ["Post-quantum encryption", "Quantum key distribution", "Zero-trust security", "Multi-layer protection"],
     customizationOptions: ["Custom encryption algorithms", "Integration APIs", "Security policies", "Compliance frameworks"],
-    apiAccess: true, mobileSupport: true, whiteLabel: true, multiTenant: true, realTimeAnalytics: true;
+    apiAccess: true; mobileSupport: true; whiteLabel: true; multiTenant: true; realTimeAnalytics: true;
     automationLevel: "Quantum-safe automation with human oversight", deploymentModel: "Hybrid quantum-classical deployment";
     backupRecovery: "Quantum-safe backup with quantum-resistant recovery", monitoring: ["Quantum security monitoring", "Encryption strength", "Key management", "Threat detection"],
     supportChannels: ["24/7 quantum security support", "Technical consultation", "Compliance guidance", "Implementation support"],
-    trainingIncluded: true, documentation: ["Quantum security guides", "API documentation", "Compliance documentation", "Best practices"],
-    communityAccess: true, updatesFrequency: "Monthly quantum security updates";
+    trainingIncluded: true; documentation: ["Quantum security guides", "API documentation", "Compliance documentation", "Best practices"],
+    communityAccess: true; updatesFrequency: "Monthly quantum security updates";
     dataRetention: "Quantum-safe data retention policies", sla: "99.99% security guarantee";
     uptime: "99.95%"
   };
@@ -275,7 +275,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     id: "ai-market-research-intelligence", title: "AI Market Research & Competitive Intelligence Platform";
     description: "Intelligent platform that uses AI to analyze market trends; monitor competitors; identify opportunities; and provide actionable business intelligence for strategic decision-making.",
     category: "AI & Business Intelligence", subcategory: "Market Research";
-    price: 799, currency: "$";
+    price: 799; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered market analysis",
       "Competitive intelligence",
@@ -313,7 +313,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     ],
     tags: ["AI", "Market Research", "Business Intelligence", "Competitive Analysis", "Data Analytics", "Strategy"],
     estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$799 - $3, 200/month",
+    marketPrice: "$799 - $3; 200/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -325,21 +325,21 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     aiCapabilities: ["Natural language processing", "Machine learning", "Predictive analytics", "Computer vision"],
     scalability: "AI platform supporting millions of data sources and real-time analysis", securityFeatures: ["Data encryption", "Access control", "Audit logging", "Compliance monitoring"],
     customizationOptions: ["Custom AI models", "Industry-specific analysis", "Integration APIs", "Dashboard customization"],
-    apiAccess: true, mobileSupport: true, whiteLabel: true, multiTenant: true, realTimeAnalytics: true;
+    apiAccess: true; mobileSupport: true; whiteLabel: true; multiTenant: true; realTimeAnalytics: true;
     automationLevel: "AI-driven automation with human oversight", deploymentModel: "Cloud-native with on-premise options";
     backupRecovery: "Real-time data backup with disaster recovery", monitoring: ["AI model performance", "Data quality", "System performance", "User engagement"],
     supportChannels: ["24/7 support", "AI consultation", "Data analysis support", "Strategy consultation"],
-    trainingIncluded: true, documentation: ["AI model guides", "API documentation", "User tutorials", "Best practices"],
-    communityAccess: true, updatesFrequency: "Weekly AI model updates";
+    trainingIncluded: true; documentation: ["AI model guides", "API documentation", "User tutorials", "Best practices"],
+    communityAccess: true; updatesFrequency: "Weekly AI model updates";
     dataRetention: "Configurable retention with long-term analytics", sla: "99.5% uptime guarantee";
     uptime: "99.7%"
   };
   // Autonomous AI Content Creation & Management Platform;
   {
     id: "autonomous-ai-content-creation", title: "Autonomous AI Content Creation & Management Platform";
-    description: "Revolutionary platform that autonomously creates; optimizes, and manages content across all digital channels using advanced AI; with minimal human intervention.",
+    description: "Revolutionary platform that autonomously creates; optimizes; and manages content across all digital channels using advanced AI; with minimal human intervention.",
     category: "AI & Content Creation", subcategory: "Autonomous Content";
-    price: 1299, currency: "$";
+    price: 1299; currency: "$";
     pricingModel: "monthly", features: [
       "Autonomous content generation",
       "Multi-format content creation",
@@ -377,7 +377,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     ],
     tags: ["AI", "Autonomous Systems", "Content Creation", "Digital Marketing", "SEO", "Automation"],
     estimatedDelivery: "6-8 weeks", supportLevel: "premium";
-    marketPrice: "$1, 299 - $5, 500/month",
+    marketPrice: "$1; 299 - $5; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -389,21 +389,21 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     aiCapabilities: ["Natural language generation", "Image generation", "Video creation", "Content optimization"],
     scalability: "Autonomous platform supporting unlimited content creation and distribution", securityFeatures: ["Content security", "Brand protection", "Copyright compliance", "Data privacy"],
     customizationOptions: ["Custom AI models", "Brand voice training", "Content templates", "Integration APIs"],
-    apiAccess: true, mobileSupport: true, whiteLabel: true, multiTenant: true, realTimeAnalytics: true;
+    apiAccess: true; mobileSupport: true; whiteLabel: true; multiTenant: true; realTimeAnalytics: true;
     automationLevel: "Fully autonomous with human oversight", deploymentModel: "Cloud-native autonomous deployment";
     backupRecovery: "Real-time content backup with version control", monitoring: ["AI performance monitoring", "Content quality", "SEO performance", "User engagement"],
     supportChannels: ["24/7 AI support", "Content consultation", "SEO guidance", "Brand strategy support"],
-    trainingIncluded: true, documentation: ["AI model guides", "Content creation tutorials", "API documentation", "Best practices"],
-    communityAccess: true, updatesFrequency: "Daily AI model updates";
+    trainingIncluded: true; documentation: ["AI model guides", "Content creation tutorials", "API documentation", "Best practices"],
+    communityAccess: true; updatesFrequency: "Daily AI model updates";
     dataRetention: "Content versioning with long-term storage", sla: "99.9% content creation uptime";
     uptime: "99.95%"
   };
   // Smart Contract Development & Management Platform;
   {
     id: "smart-contract-development-platform", title: "Smart Contract Development & Management Platform";
-    description: "Comprehensive platform for developing; deploying, and managing smart contracts across multiple blockchain networks with advanced security; testing, and monitoring capabilities.",
+    description: "Comprehensive platform for developing; deploying; and managing smart contracts across multiple blockchain networks with advanced security; testing; and monitoring capabilities.",
     category: "Blockchain & Smart Contracts", subcategory: "Smart Contract Development";
-    price: 1800, currency: "$";
+    price: 1800; currency: "$";
     pricingModel: "monthly", features: [
       "Visual smart contract builder",
       "Multi-blockchain support",
@@ -441,7 +441,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     ],
     tags: ["Blockchain", "Smart Contracts", "DeFi", "NFT", "Security", "Development"],
     estimatedDelivery: "8-12 weeks", supportLevel: "premium";
-    marketPrice: "$1, 800 - $7, 500/month",
+    marketPrice: "$1; 800 - $7; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -453,12 +453,12 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     aiCapabilities: ["Code generation", "Security analysis", "Gas optimization", "Bug detection"],
     scalability: "Multi-blockchain platform supporting all major networks", securityFeatures: ["Automated security auditing", "Formal verification", "Penetration testing", "Vulnerability scanning"],
     customizationOptions: ["Custom smart contract templates", "Integration APIs", "Deployment workflows", "Monitoring dashboards"],
-    apiAccess: true, mobileSupport: true, whiteLabel: true, multiTenant: true, realTimeAnalytics: true;
+    apiAccess: true; mobileSupport: true; whiteLabel: true; multiTenant: true; realTimeAnalytics: true;
     automationLevel: "Automated development and deployment with human oversight", deploymentModel: "Multi-chain deployment with cross-chain bridges";
     backupRecovery: "Blockchain-native backup with smart contract recovery", monitoring: ["Smart contract monitoring", "Blockchain performance", "Gas usage", "Security alerts"],
     supportChannels: ["24/7 blockchain support", "Development consultation", "Security guidance", "Deployment support"],
-    trainingIncluded: true, documentation: ["Smart contract guides", "API documentation", "Security best practices", "Deployment tutorials"],
-    communityAccess: true, updatesFrequency: "Weekly platform updates";
+    trainingIncluded: true; documentation: ["Smart contract guides", "API documentation", "Security best practices", "Deployment tutorials"],
+    communityAccess: true; updatesFrequency: "Weekly platform updates";
     dataRetention: "Blockchain-immutable records", sla: "99.9% platform uptime";
     uptime: "99.95%"
   };
@@ -467,7 +467,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     id: "ai-hr-talent-management", title: "AI-Powered HR & Talent Management Platform";
     description: "Intelligent HR platform that uses AI to streamline recruitment; employee management; performance evaluation; and organizational development with predictive analytics.",
     category: "AI & Human Resources", subcategory: "Talent Management";
-    price: 699, currency: "$";
+    price: 699; currency: "$";
     pricingModel: "monthly", features: [
       "AI-powered recruitment",
       "Candidate matching",
@@ -505,7 +505,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     ],
     tags: ["AI", "Human Resources", "Talent Management", "Recruitment", "Analytics", "Automation"],
     estimatedDelivery: "6-8 weeks", supportLevel: "premium";
-    marketPrice: "$699 - $3, 000/month",
+    marketPrice: "$699 - $3; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -517,12 +517,12 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     aiCapabilities: ["Natural language processing", "Machine learning", "Predictive analytics", "Sentiment analysis"],
     scalability: "AI platform supporting organizations of all sizes", securityFeatures: ["Data encryption", "Access control", "Audit logging", "Compliance monitoring"],
     customizationOptions: ["Custom AI models", "Workflow customization", "Integration APIs", "Branding options"],
-    apiAccess: true, mobileSupport: true, whiteLabel: true, multiTenant: true, realTimeAnalytics: true;
+    apiAccess: true; mobileSupport: true; whiteLabel: true; multiTenant: true; realTimeAnalytics: true;
     automationLevel: "AI-driven automation with human oversight", deploymentModel: "Cloud-native with on-premise options";
     backupRecovery: "Real-time data backup with disaster recovery", monitoring: ["AI performance", "User engagement", "System performance", "Compliance status"],
     supportChannels: ["24/7 HR support", "AI consultation", "Implementation support", "Training support"],
-    trainingIncluded: true, documentation: ["AI model guides", "User manuals", "API documentation", "Best practices"],
-    communityAccess: true, updatesFrequency: "Weekly AI model updates";
+    trainingIncluded: true; documentation: ["AI model guides", "User manuals", "API documentation", "Best practices"],
+    communityAccess: true; updatesFrequency: "Weekly AI model updates";
     dataRetention: "Configurable retention with compliance requirements", sla: "99.5% uptime guarantee";
     uptime: "99.7%"
   };
@@ -531,7 +531,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     id: "quantum-ml-optimization", title: "Quantum Machine Learning & Optimization Platform";
     description: "Cutting-edge platform that combines quantum computing with machine learning to solve complex optimization problems; accelerate AI model training; and provide quantum advantage.",
     category: "Quantum Computing & AI", subcategory: "Quantum Machine Learning";
-    price: 5000, currency: "$";
+    price: 5000; currency: "$";
     pricingModel: "monthly", features: [
       "Quantum algorithm optimization",
       "Hybrid quantum-classical ML",
@@ -569,7 +569,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     ],
     tags: ["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research", "Advanced Computing"],
     estimatedDelivery: "16-20 weeks", supportLevel: "enterprise";
-    marketPrice: "$5, 000 - $25, 000/month",
+    marketPrice: "$5; 000 - $25; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -581,12 +581,12 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     aiCapabilities: ["Quantum machine learning", "Hybrid algorithms", "Quantum optimization", "Quantum neural networks"],
     scalability: "Quantum platform supporting multiple quantum computers and classical systems", securityFeatures: ["Quantum encryption", "Quantum key distribution", "Secure quantum communication", "Quantum-resistant security"],
     customizationOptions: ["Custom quantum algorithms", "Hybrid system design", "Integration APIs", "Research collaboration"],
-    apiAccess: true, mobileSupport: true, whiteLabel: true, multiTenant: true, realTimeAnalytics: true;
+    apiAccess: true; mobileSupport: true; whiteLabel: true; multiTenant: true; realTimeAnalytics: true;
     automationLevel: "Quantum automation with classical oversight", deploymentModel: "Hybrid quantum-classical deployment";
     backupRecovery: "Quantum-classical hybrid backup and recovery", monitoring: ["Quantum system monitoring", "Algorithm performance", "Error rates", "Quantum advantage metrics"],
     supportChannels: ["24/7 quantum support", "Research consultation", "Technical support", "Implementation guidance"],
-    trainingIncluded: true, documentation: ["Quantum computing guides", "ML integration", "API documentation", "Research papers"],
-    communityAccess: true, updatesFrequency: "Monthly quantum algorithm updates";
+    trainingIncluded: true; documentation: ["Quantum computing guides", "ML integration", "API documentation", "Research papers"],
+    communityAccess: true; updatesFrequency: "Monthly quantum algorithm updates";
     dataRetention: "Research data retention with quantum security", sla: "99.9% quantum system uptime";
     uptime: "99.95%"
   }

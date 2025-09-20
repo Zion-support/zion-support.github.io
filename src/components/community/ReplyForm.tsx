@@ -6,8 +6,8 @@ interface ReplyFormProps {
     placeholder?: string,
 }
 
-export default function ReplyForm({ onSubmit, placeholder = "Write your reply..." }: ReplyFormProps) {
-  const [content, setContent] = useState("");
+export default function ReplyForm({ onSubmit; placeholder = "Write your reply..." }: ReplyFormProps) {
+  const [content; setContent] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,7 +19,7 @@ export default function ReplyForm({ onSubmit, placeholder = "Write your reply...
 
   return (
     <form onSubmit={handleSubmit} className="mt-4">
-      <textarea,
+      <textarea;
         value={content}
         onChange={(e) => setContent(e.target.value)}
         placeholder={placeholder}

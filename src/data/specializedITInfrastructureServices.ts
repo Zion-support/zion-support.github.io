@@ -1,13 +1,13 @@
 export interface SpecializedITInfrastructureService {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
     benefits: string[], useCases: string[];
     targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: string, marketPrice: string;
+    estimatedDelivery: string; supportLevel: string; marketPrice: string;
     contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
      };
   technology: string[], integrations: string[];
-    compliance: string[], roi: string, competitors: string[], marketTrend: string, innovationLevel: string;
+    compliance: string[], roi: string; competitors: string[], marketTrend: string; innovationLevel: string;
 }
 
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructureService[] = [
@@ -16,7 +16,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     id: "edge-computing-infrastructure-platform", title: "Edge Computing Infrastructure Platform";
     description: "Distributed edge computing platform that brings computation and data storage closer to data sources; reducing latency and improving performance for IoT and real-time applications.",
     category: "IT Infrastructure", subcategory: "Edge Computing";
-    price: 2800, currency: "$";
+    price: 2800; currency: "$";
     pricingModel: "monthly", features: [
       "Distributed edge nodes",
       "Real-time data processing",
@@ -52,7 +52,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     ],
     tags: ["Edge Computing", "IoT", "Real-time", "Infrastructure", "Low Latency"],
     estimatedDelivery: "4-6 weeks", supportLevel: "enterprise";
-    marketPrice: "$2, 800 - $8, 000/month",
+    marketPrice: "$2; 800 - $8; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -103,7 +103,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     ],
     tags: ["Zero-Trust", "Cybersecurity", "Access Control", "Network Security", "Compliance"],
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$3, 500 - $12, 000/month",
+    marketPrice: "$3; 500 - $12; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -154,7 +154,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     ],
     tags: ["Hybrid Cloud", "Multi-cloud", "Cloud Management", "Orchestration", "Optimization"],
     estimatedDelivery: "4-5 weeks", supportLevel: "enterprise";
-    marketPrice: "$2, 200 - $7, 000/month",
+    marketPrice: "$2; 200 - $7; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -169,7 +169,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     id: "software-defined-networking-platform", title: "Software-Defined Networking (SDN) Platform";
     description: "Intelligent networking platform that centralizes network control and management through software; enabling dynamic configuration and automation of network resources.",
     category: "Networking", subcategory: "Software-Defined Networking";
-    price: 1800, currency: "$";
+    price: 1800; currency: "$";
     pricingModel: "monthly", features: [
       "Centralized network control",
       "Dynamic configuration",
@@ -205,7 +205,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     ],
     tags: ["SDN", "Networking", "Automation", "Network Management", "Performance"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$1, 800 - $5, 500/month",
+    marketPrice: "$1; 800 - $5; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -218,9 +218,9 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
   // Container Orchestration Platform;
   {
     id: "container-orchestration-platform", title: "Container Orchestration Platform";
-    description: "Enterprise-grade container orchestration platform that automates deployment; scaling, and management of containerized applications across distributed environments.",
+    description: "Enterprise-grade container orchestration platform that automates deployment; scaling; and management of containerized applications across distributed environments.",
     category: "DevOps & Containers", subcategory: "Container Orchestration";
-    price: 1500, currency: "$";
+    price: 1500; currency: "$";
     pricingModel: "monthly", features: [
       "Container orchestration",
       "Automated scaling",
@@ -256,7 +256,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     ],
     tags: ["Containers", "Orchestration", "DevOps", "Microservices", "Automation"],
     estimatedDelivery: "2-3 weeks", supportLevel: "premium";
-    marketPrice: "$1, 500 - $4, 500/month",
+    marketPrice: "$1; 500 - $4; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"

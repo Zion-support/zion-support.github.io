@@ -1,17 +1,17 @@
-import { Routes, Route } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 export interface SpecializedIndustrySolution {
-  id: string, title: string, description: string, industry: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[], benefits: string[];
+  id: string; title: string; description: string; industry: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[], benefits: string[];
     useCases: string[], targetAudience: string[];
-    tags: string[], estimatedDelivery: string, supportLevel: string, marketPrice: string;
+    tags: string[], estimatedDelivery: string; supportLevel: string; marketPrice: string;
     contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
      };
   technology: string[], integrations: string[];
-    compliance: string[], roi: string, competitors: string[];
+    compliance: string[], roi: string; competitors: string[];
     demoUrl?: string;
   caseStudies?: string[];
   websiteUrl?: string;
-  industryChallenges: string[], marketOpportunity: string, competitiveAdvantage: string;
+  industryChallenges: string[], marketOpportunity: string; competitiveAdvantage: string;
 }
 
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] = [
@@ -57,7 +57,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     ],
     tags: ["Healthcare AI", "Medical Diagnostics", "Image Analysis", "Clinical Decision Support", "Telemedicine"],
     estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";
-    marketPrice: "$45, 000 - $120, 000/month",
+    marketPrice: "$45; 000 - $120; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -111,7 +111,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     ],
     tags: ["Financial Compliance", "RegTech", "AI Monitoring", "Risk Management", "Regulatory Reporting"],
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$32, 000 - $85, 000/month",
+    marketPrice: "$32; 000 - $85; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -165,7 +165,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     ],
     tags: ["Manufacturing IoT", "Smart Factory", "Predictive Maintenance", "Quality Control", "Supply Chain"],
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$25, 000 - $65, 000/month",
+    marketPrice: "$25; 000 - $65; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -219,7 +219,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     ],
     tags: ["Retail AI", "Customer Personalization", "Inventory Optimization", "Demand Forecasting", "Marketing Automation"],
     estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$18, 000 - $45, 000/month",
+    marketPrice: "$18; 000 - $45; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -273,7 +273,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     ],
     tags: ["Energy Management", "Smart Grid", "Renewable Energy", "Predictive Analytics", "Sustainability"],
     estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";
-    marketPrice: "$35, 000 - $90, 000/month",
+    marketPrice: "$35; 000 - $90; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -327,7 +327,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     ],
     tags: ["Logistics AI", "Supply Chain", "Route Optimization", "Fleet Management", "Real-time Tracking"],
     estimatedDelivery: "5-7 weeks", supportLevel: "premium";
-    marketPrice: "$22, 000 - $55, 000/month",
+    marketPrice: "$22; 000 - $55; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -381,7 +381,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     ],
     tags: ["Education AI", "Personalized Learning", "Adaptive Content", "Learning Analytics", "Student Engagement"],
     estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$15, 000 - $40, 000/month",
+    marketPrice: "$15; 000 - $40; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -435,7 +435,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     ],
     tags: ["Real Estate AI", "Market Intelligence", "Property Analytics", "Investment Analysis", "Risk Assessment"],
     estimatedDelivery: "5-7 weeks", supportLevel: "premium";
-    marketPrice: "$20, 000 - $50, 000/month",
+    marketPrice: "$20; 000 - $50; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"

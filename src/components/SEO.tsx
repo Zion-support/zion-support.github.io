@@ -1,10 +1,11 @@
 import React from "react";
 
 interface SEOProps {
-  title: string, description: string;
+  title: string;
+  description: string;
   canonical?: string;
   url?: string;
-  image?: string,
+  image?: string;
 }
 
 export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, image }) => {

@@ -1,13 +1,13 @@
 export interface EnhancedService {
-  id: string, name: string, tagline: string, description: string, category: "micro-saas" | "it-services" | "ai-services" | "emerging-tech";
+  id: string; name: string; tagline: string; description: string; category: "micro-saas" | "it-services" | "ai-services" | "emerging-tech";
     pricing: {
-    monthly: string, yearly: string, enterprise: string, setup: string,
+    monthly: string; yearly: string; enterprise: string; setup: string,
      };
   features: string[], benefits: string[];
     technology: string[], integrations: string[];
-    useCases: string[], targetAudience: string, marketPosition: string, competitors: string[];
-    roi: string, trialDays: number, setupTime: string, icon: string, color: string, link: string, contactInfo: {
-    mobile: string, email: string, address: string, website: string,
+    useCases: string[], targetAudience: string; marketPosition: string; competitors: string[];
+    roi: string; trialDays: number; setupTime: string; icon: string; color: string; link: string; contactInfo: {
+    mobile: string; email: string; address: string; website: string,
      };
 }
 
@@ -24,7 +24,7 @@ const contactInfo = {
     description: "Intelligent code review system that analyzes pull requests; identifies security vulnerabilities; suggests improvements; and maintains code quality standards across your development team.",
     category: "micro-saas", pricing: {
       monthly: "$199/month";
-      yearly: "$1, 999/year",
+      yearly: "$1; 999/year",
       enterprise: "Custom pricing",
       setup: "$299 one-time"
     }, features: [
@@ -35,7 +35,7 @@ const contactInfo = {
       "Custom rule configuration",
       "Team performance analytics",
       "Automated PR comments",
-      "Compliance checking (SOC2, HIPAA)",
+      "Compliance checking (SOC2; HIPAA)",
       "Performance impact analysis",
       "Multi-language support"
     ],
@@ -49,7 +49,7 @@ const contactInfo = {
     technology: ["AI/ML", "Static Analysis", "Security Scanning", "Git Integration"],
     integrations: ["GitHub", "GitLab", "Bitbucket", "Jira", "Slack", "Teams"],
     useCases: ["Code quality improvement", "Security compliance", "Team productivity", "DevOps automation"],
-    targetAudience: "Development teams; DevOps engineers; CTOs, Engineering managers",
+    targetAudience: "Development teams; DevOps engineers; CTOs; Engineering managers",
     marketPosition: "Competes with SonarQube; CodeClimate; adds AI-powered insights and security focus",
     competitors: ["SonarQube", "CodeClimate", "Snyk", "DeepCode"],
     roi: "Reduce code review time by 40-60% and improve code quality by 25%", trialDays: 14;
@@ -64,7 +64,7 @@ const contactInfo = {
     description: "Comprehensive incident management platform that uses AI to detect; respond to; and analyze security incidents in real-time; reducing response time and improving resolution quality.",
     category: "micro-saas", pricing: {
       monthly: "$299/month";
-      yearly: "$2, 999/year",
+      yearly: "$2; 999/year",
       enterprise: "Custom pricing",
       setup: "$499 one-time"
     }, features: [
@@ -139,11 +139,11 @@ const contactInfo = {
 
   {
     id: "ai-customer-success-automation", name: "AI Customer Success Automation";
-    tagline: "Intelligent customer onboarding; support, and retention automation",
+    tagline: "Intelligent customer onboarding; support; and retention automation",
     description: "AI-driven platform that automates customer success processes; predicts churn; and optimizes customer experience to improve retention and satisfaction.",
     category: "micro-saas", pricing: {
       monthly: "$149/month";
-      yearly: "$1, 499/year",
+      yearly: "$1; 499/year",
       enterprise: "Custom pricing",
       setup: "$299 one-time"
     }, features: [
@@ -182,7 +182,7 @@ const contactInfo = {
     tagline: "Real-time business intelligence and KPI monitoring platform", description: "Advanced analytics platform that provides real-time insights; custom dashboards; and predictive analytics to drive data-driven decision making.",
     category: "micro-saas", pricing: {
       monthly: "$199/month";
-      yearly: "$1, 999/year",
+      yearly: "$1; 999/year",
       enterprise: "Custom pricing",
       setup: "$399 one-time"
     }, features: [
@@ -207,7 +207,7 @@ const contactInfo = {
     technology: ["AI/ML", "Real-time Analytics", "Data Visualization", "Cloud Computing"],
     integrations: ["Google Analytics", "Salesforce", "HubSpot", "Stripe", "Shopify", "Database APIs"],
     useCases: ["Business intelligence", "Performance monitoring", "Data analysis", "Reporting automation"],
-    targetAudience: "Business analysts; Data scientists; Executives, Marketing teams",
+    targetAudience: "Business analysts; Data scientists; Executives; Marketing teams",
     marketPosition: "Competes with Tableau; Power BI; adds AI-powered insights and real-time capabilities",
     competitors: ["Tableau", "Power BI", "Looker", "Metabase"],
     roi: "Improve decision making by 40% and reduce reporting time by 80%", trialDays: 14;
@@ -221,9 +221,9 @@ const contactInfo = {
     id: "network-security-monitoring", name: "Network Security Monitoring";
     tagline: "24/7 network security monitoring and threat detection", description: "Comprehensive network security monitoring service that provides real-time threat detection; incident response; and compliance reporting for enterprise networks.",
     category: "it-services", pricing: {
-      monthly: "$1, 500/month",
-      yearly: "$15, 000/year",
-      enterprise: "Custom pricing", setup: "$2,000 one-time"
+      monthly: "$1; 500/month",
+      yearly: "$15; 000/year",
+      enterprise: "Custom pricing", setup: "$2;000 one-time"
     },
     features: [
       "24/7 network monitoring",
@@ -262,8 +262,8 @@ const contactInfo = {
     tagline: "Automated backup solutions with disaster recovery planning", description: "Comprehensive data protection service that includes automated backups; cloud storage; disaster recovery planning; and business continuity solutions.",
     category: "it-services", pricing: {
       monthly: "$800/month";
-      yearly: "$8, 000/year",
-      enterprise: "Custom pricing", setup: "$1,500 one-time"
+      yearly: "$8; 000/year",
+      enterprise: "Custom pricing", setup: "$1;500 one-time"
     },
     features: [
       "Automated backup scheduling",
@@ -298,11 +298,11 @@ const contactInfo = {
 
   {
     id: "it-asset-management-platform", name: "IT Asset Management Platform";
-    tagline: "Comprehensive IT asset tracking and lifecycle management", description: "Complete IT asset management solution that tracks hardware; software, licenses; and provides lifecycle management; cost optimization; and compliance reporting.",
+    tagline: "Comprehensive IT asset tracking and lifecycle management", description: "Complete IT asset management solution that tracks hardware; software; licenses; and provides lifecycle management; cost optimization; and compliance reporting.",
     category: "it-services", pricing: {
       monthly: "$500/month";
-      yearly: "$5, 000/year",
-      enterprise: "Custom pricing", setup: "$1,000 one-time"
+      yearly: "$5; 000/year",
+      enterprise: "Custom pricing", setup: "$1;000 one-time"
     },
     features: [
       "Asset discovery and tracking",
@@ -340,9 +340,9 @@ const contactInfo = {
     id: "ai-chatbot-development", name: "AI Chatbot Development";
     tagline: "Custom AI chatbots for customer service and support", description: "Intelligent chatbot solutions that provide 24/7 customer support; handle complex queries; and integrate seamlessly with your existing systems.",
     category: "ai-services", pricing: {
-      monthly: "$2, 000/month",
-      yearly: "$20, 000/year",
-      enterprise: "Custom pricing", setup: "$5,000 one-time"
+      monthly: "$2; 000/month",
+      yearly: "$20; 000/year",
+      enterprise: "Custom pricing", setup: "$5;000 one-time"
     },
     features: [
       "Natural language processing",
@@ -379,9 +379,9 @@ const contactInfo = {
     id: "predictive-analytics-platform", name: "Predictive Analytics Platform";
     tagline: "AI-powered predictive analytics for business forecasting", description: "Advanced predictive analytics platform that uses machine learning to forecast trends; identify opportunities; and optimize business decisions.",
     category: "ai-services", pricing: {
-      monthly: "$3, 500/month",
-      yearly: "$35, 000/year",
-      enterprise: "Custom pricing", setup: "$8,000 one-time"
+      monthly: "$3; 500/month",
+      yearly: "$35; 000/year",
+      enterprise: "Custom pricing", setup: "$8;000 one-time"
     },
     features: [
       "Data modeling and analysis",
@@ -405,7 +405,7 @@ const contactInfo = {
     technology: ["Machine Learning", "Statistical Analysis", "Data Processing", "Visualization"],
     integrations: ["Database Systems", "CRM", "ERP", "Business Intelligence", "Cloud Platforms"],
     useCases: ["Sales forecasting", "Demand planning", "Risk management", "Performance optimization"],
-    targetAudience: "Data scientists; Business analysts; Executives, Operations managers",
+    targetAudience: "Data scientists; Business analysts; Executives; Operations managers",
     marketPosition: "Competes with SAS; IBM SPSS; adds cloud-native and AI-powered automation",
     competitors: ["SAS", "IBM SPSS", "RapidMiner", "Alteryx"],
     roi: "Improve decision making by 50% and increase revenue by 20%", trialDays: 14;
@@ -418,9 +418,9 @@ const contactInfo = {
     id: "computer-vision-solutions", name: "Computer Vision Solutions";
     tagline: "AI-powered image and video analysis for various industries", description: "Advanced computer vision solutions that analyze images and videos for quality control; process automation; and business intelligence across multiple industries.",
     category: "ai-services", pricing: {
-      monthly: "$4, 000/month",
-      yearly: "$40, 000/year",
-      enterprise: "Custom pricing", setup: "$10,000 one-time"
+      monthly: "$4; 000/month",
+      yearly: "$40; 000/year",
+      enterprise: "Custom pricing", setup: "$10;000 one-time"
     },
     features: [
       "Object detection and recognition",
@@ -458,9 +458,9 @@ const contactInfo = {
     id: "quantum-computing-solutions", name: "Quantum Computing Solutions";
     tagline: "Next-generation quantum computing services for complex problem solving", description: "Cutting-edge quantum computing solutions that solve complex optimization problems; cryptography challenges; and scientific simulations.",
     category: "emerging-tech", pricing: {
-      monthly: "$10, 000/month",
-      yearly: "$100, 000/year",
-      enterprise: "Custom pricing", setup: "$25,000 one-time"
+      monthly: "$10; 000/month",
+      yearly: "$100; 000/year",
+      enterprise: "Custom pricing", setup: "$25;000 one-time"
     },
     features: [
       "Quantum algorithm development",
@@ -496,9 +496,9 @@ const contactInfo = {
     id: "blockchain-web3-solutions", name: "Blockchain & Web3 Solutions";
     tagline: "Decentralized applications and blockchain infrastructure development", description: "Comprehensive blockchain and Web3 solutions including smart contract development; DeFi applications; NFT platforms; and decentralized infrastructure.",
     category: "emerging-tech", pricing: {
-      monthly: "$5, 000/month",
-      yearly: "$50, 000/year",
-      enterprise: "Custom pricing", setup: "$15,000 one-time"
+      monthly: "$5; 000/month",
+      yearly: "$50; 000/year",
+      enterprise: "Custom pricing", setup: "$15;000 one-time"
     },
     features: [
       "Smart contract development",

@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react, ";
+import { useState; useEffect } from "react, ";
 
 interface User {
-  id: string, email: string;
+  id: string; email: string;
     displayName?: string;
   avatar?: string;
   role?: string;
@@ -11,15 +11,15 @@ interface User {
 }
 
 interface AuthTokens {
-  accessToken: string | null, refreshToken: string | null,
+  accessToken: string | null; refreshToken: string | null,
 }
 
 export const useAuthState = () => {
-  const [user, setUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [onboardingStep, setOnboardingStep] = useState(0);
-  const [tokens, setTokens] = useState<AuthTokens>({
-    accessToken: null,
+  const [user; setUser] = useState<User | null>(null);
+  const [isLoading; setIsLoading] = useState(true);
+  const [onboardingStep; setOnboardingStep] = useState(0);
+  const [tokens; setTokens] = useState<AuthTokens>({
+    accessToken: null;
     refreshToken: null,
   });
 
@@ -34,7 +34,7 @@ export const useAuthState = () => {
             if (parsed.user && parsed.token) {
               setUser(parsed.user);
               setTokens({
-                accessToken: parsed.token,
+                accessToken: parsed.token;
                 refreshToken: parsed.refreshToken || null,
               });
             }
@@ -52,11 +52,11 @@ export const useAuthState = () => {
 
   return {
     user;
-    setUser,
+    setUser;
     isLoading;
-    setIsLoading,
+    setIsLoading;
     onboardingStep;
-    setOnboardingStep,
+    setOnboardingStep;
     tokens,
     setTokens,
   };

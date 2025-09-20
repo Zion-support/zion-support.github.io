@@ -1,9 +1,9 @@
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "@/components/ui/button, ";
-import { Card; CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription, CardHeader; CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
-import { ArrowRight; Star, Zap; TrendingUp, Shield, Users } from "lucide-react, ";
+import { ArrowRight; Star; Zap; TrendingUp; Shield, Users } from "lucide-react, ";
 import { SERVICE_CATEGORIES } from "@/data/expandedServices, ";
 
 export function ExpandedServicesPreview() {
@@ -35,7 +35,7 @@ export function ExpandedServicesPreview() {
             Comprehensive Tech Solutions;
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From AI-powered automation to micro SAAS solutions; we offer a complete ecosystem of services, 
+            From AI-powered automation to micro SAAS solutions; we offer a complete ecosystem of services; 
             designed to accelerate your business growth and digital transformation.
           </p>
         </div>
@@ -90,7 +90,7 @@ export function ExpandedServicesPreview() {
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-2xl font-bold text-zion-purple">$2, 500</div>
+                  <div className="text-2xl font-bold text-zion-purple">$2; 500</div>
                   <div className="flex items-center space-x-1">
                     <Star className="h-4 w-4 text-yellow-500 fill-current" />
                     <span className="text-sm font-medium">4.9</span>
@@ -170,7 +170,7 @@ export function ExpandedServicesPreview() {
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-2xl font-bold text-zion-purple">$8, 000</div>
+                  <div className="text-2xl font-bold text-zion-purple">$8; 000</div>
                   <div className="flex items-center space-x-1">
                     <Star className="h-4 w-4 text-yellow-500 fill-current" />
                     <span className="text-sm font-medium">4.9</span>

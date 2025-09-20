@@ -7,7 +7,7 @@ export function mergeCartItems(base: CartItem[], extra: CartItem[]): CartItem[] 
   base.forEach(i => map.set(i.id, { ...i }));
   extra.forEach(i => {
     const existing = map.get(i.id);
-    if (existing) existing.quantity += i.quantity,
+    if (existing) existing.quantity += i.quantity;
     else map.set(i.id, { ...i });
   });
   return Array.from(map.values());

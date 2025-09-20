@@ -10,7 +10,7 @@ interface GradientHeadingProps {
 }
 
 export function GradientHeading({ 
-  children, 
+  children; 
   variant = "primary",
   size = "2xl",
   className = "",
@@ -42,7 +42,7 @@ export function GradientHeading({
   };
 
   return (
-    <h1, 
+    <h1; 
       className={cn(
         "font-bold leading-tight",
         getSizeClasses(),

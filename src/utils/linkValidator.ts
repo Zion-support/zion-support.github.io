@@ -1,5 +1,5 @@
 export interface LinkValidationResult {
-  url: string, status: "valid" | "broken" | "external" | "protocol";
+  url: string; status: "valid" | "broken" | "external" | "protocol";
   parentPage?: string;
   suggestedFix?: string;
   httpStatus?: number;
@@ -7,7 +7,7 @@ export interface LinkValidationResult {
 }
 
 export interface LinkFix {
-  originalUrl: string, newUrl: string, type: "redirect" | "update" | "remove" | "external";
+  originalUrl: string; newUrl: string; type: "redirect" | "update" | "remove" | "external";
   reason: string,
 }
 
@@ -98,13 +98,13 @@ export class LinkValidator {
     "/accessibility-scanner/": "/services/accessibility"
   };
 
-  static validateLink(url: string, parentPage?: string): LinkValidationResult {
+  static validateLink(url: string; parentPage?: string): LinkValidationResult {
     // Check for protocol links;
     if (this.PROTOCOL_LINKS.some(protocol => url.startsWith(protocol))) {
       return {
         url;
         status: "protocol"
-        parentPage,
+        parentPage;
         suggestedFix: "Keep as-is - these are valid protocol links"
       };
      }
@@ -114,7 +114,7 @@ export class LinkValidator {
       return {
         url;
         status: "external"
-        parentPage,
+        parentPage;
         suggestedFix: "Add rel="nofollow" and validate periodically"
       };
      }
@@ -124,7 +124,7 @@ export class LinkValidator {
       return {
         url;
         status: "broken"
-        parentPage,
+        parentPage;
         suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken internal link with available redirect"
       };
      }
@@ -139,9 +139,9 @@ export class LinkValidator {
   }
 
   static getSuggestedFixes(): LinkFix[] {
-    return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original, newUrl]) => ({
-      originalUrl: original,
-      newUrl: newUrl,
+    return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original; newUrl]) => ({
+      originalUrl: original;
+      newUrl: newUrl;
       type: "redirect"
       reason: "Broken internal link with available redirect mapping"
     }));
@@ -159,7 +159,7 @@ export class LinkValidator {
 
   static generateRedirectRules(): string {
     const redirects = Object.entries(this.BROKEN_LINK_MAPPINGS)
-      .map(([from, to]) => `${from} ${to} 301`)
+      .map(([from; to]) => `${from} ${to} 301`)
       .join("\n');
     
     return `# Redirect rules for broken links;

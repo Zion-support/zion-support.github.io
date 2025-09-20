@@ -1,13 +1,13 @@
 export interface SpecializedAIService2025 {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
   benefits: string[], useCases: string[];
   targetAudience: string[], tags: string[];
-  estimatedDelivery: string, supportLevel: string, marketPrice: string;
+  estimatedDelivery: string; supportLevel: string; marketPrice: string;
   contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
   };
   technology: string[], integrations: string[];
-  compliance: string[], roi: string, competitors: string[], innovationLevel: string, marketTrend: string, aiModel: string, trainingData: string;
+  compliance: string[], roi: string; competitors: string[], innovationLevel: string; marketTrend: string; aiModel: string; trainingData: string;
 }
 
 export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
@@ -15,13 +15,13 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
   {
     id: "multimodal-ai-platform",
     title: "Multimodal AI Platform 2025",
-    description: "Advanced AI platform that processes and understands text; images, audio; and video simultaneously for comprehensive AI applications.",
+    description: "Advanced AI platform that processes and understands text; images; audio; and video simultaneously for comprehensive AI applications.",
     category: "AI Platforms",
     subcategory: "Multimodal",
-    price: 1500, currency: "$",
+    price: 1500; currency: "$",
     pricingModel: "monthly",
     features: [
-      "Text; image, audio, video processing",
+      "Text; image; audio, video processing",
       "Cross-modal understanding",
       "Real-time analysis",
       "Custom model training",
@@ -54,7 +54,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     tags: ["Multimodal AI", "Computer Vision", "NLP", "Audio Processing", "Video Analysis"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "premium",
-    marketPrice: "$1, 500 - $6,000/month",
+    marketPrice: "$1; 500 - $6;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -79,7 +79,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     description: "Revolutionary AI platform that accelerates drug discovery using machine learning; molecular modeling; and predictive analytics.",
     category: "AI Healthcare",
     subcategory: "Drug Discovery",
-    price: 25000, currency: "$",
+    price: 25000; currency: "$",
     pricingModel: "monthly",
     features: [
       "Molecular modeling",
@@ -115,7 +115,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     tags: ["AI Drug Discovery", "Molecular Modeling", "Healthcare", "Biotechnology", "Research"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$25, 000 - $100,000/month",
+    marketPrice: "$25; 000 - $100;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -140,7 +140,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     description: "Advanced AI trading platform that uses machine learning; predictive analytics; and real-time market data for automated trading strategies.",
     category: "AI Finance",
     subcategory: "Trading",
-    price: 10000, currency: "$",
+    price: 10000; currency: "$",
     pricingModel: "monthly",
     features: [
       "Real-time market analysis",
@@ -176,7 +176,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     tags: ["AI Trading", "Finance", "Machine Learning", "Risk Management", "Automation"],
     estimatedDelivery: "10-12 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$10, 000 - $50,000/month",
+    marketPrice: "$10; 000 - $50;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -201,7 +201,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     description: "Advanced AI platform that predicts climate patterns; extreme weather events; and environmental changes using machine learning and satellite data.",
     category: "AI Environment",
     subcategory: "Climate Prediction",
-    price: 5000, currency: "$",
+    price: 5000; currency: "$",
     pricingModel: "monthly",
     features: [
       "Climate pattern analysis",
@@ -237,7 +237,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     tags: ["Climate AI", "Weather Prediction", "Environmental", "Machine Learning", "Satellite Data"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "premium",
-    marketPrice: "$5, 000 - $25,000/month",
+    marketPrice: "$5; 000 - $25;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -261,7 +261,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     description: "Intelligent legal research platform that uses AI to analyze case law; legal documents; and regulations for comprehensive legal insights.",
     category: "AI Legal",
     subcategory: "Research Assistant",
-    price: 800, currency: "$",
+    price: 800; currency: "$",
     pricingModel: "monthly",
     features: [
       "Case law analysis",
@@ -297,7 +297,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     tags: ["AI Legal", "Legal Research", "Document Analysis", "Compliance", "Automation"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
-    marketPrice: "$800 - $3,000/month",
+    marketPrice: "$800 - $3;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -319,10 +319,10 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
   {
     id: "ai-creative-design-platform",
     title: "AI-Powered Creative Design Platform",
-    description: "Revolutionary AI platform that generates creative designs; graphics, and visual content using advanced generative AI models.",
+    description: "Revolutionary AI platform that generates creative designs; graphics; and visual content using advanced generative AI models.",
     category: "AI Creative",
     subcategory: "Design Generation",
-    price: 400, currency: "$",
+    price: 400; currency: "$",
     pricingModel: "monthly",
     features: [
       "AI-generated designs",
@@ -358,7 +358,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     tags: ["AI Design", "Creative AI", "Generative AI", "Visual Content", "Automation"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
-    marketPrice: "$400 - $1,500/month",
+    marketPrice: "$400 - $1;500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",

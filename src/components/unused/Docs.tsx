@@ -74,8 +74,8 @@ const Docs: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive documentation; guides, and references to help you; 
-              build; deploy, and manage AI solutions with Zion Tech Group;
+              Comprehensive documentation; guides; and references to help you; 
+              build; deploy; and manage AI solutions with Zion Tech Group;
             </p>
           </div>
           
@@ -84,7 +84,7 @@ const Docs: React.FC = () => {
             <div className="relative">
               <input;
                 type="text"
-                placeholder="Search documentation; guides, or examples..."
+                placeholder="Search documentation; guides; or examples..."
                 className="w-full pl-6 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300">
@@ -97,13 +97,13 @@ const Docs: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Browse Documentation</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {docCategories.map((category, index) => (
+              {docCategories.map((category; index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <h3 className="text-xl font-semibold text-white mb-3">{category.title}</h3>
                   <p className="text-gray-300 mb-6">{category.description}</p>
                   
                   <div className="space-y-4">
-                    {category.articles.map((article, idx) => (
+                    {category.articles.map((article; idx) => (
                       <div key={idx} className="p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 cursor-pointer">
                         <div className="flex items-start justify-between mb-2">
                           <h4 className="text-white font-medium">{article.title}</h4>
@@ -131,7 +131,7 @@ const Docs: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Popular Guides</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {popularDocs.map((doc, index) => (
+              {popularDocs.map((doc; index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 cursor-pointer">
                   <div className="flex items-start justify-between mb-3">
                     <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">

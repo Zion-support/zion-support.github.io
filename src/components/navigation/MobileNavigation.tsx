@@ -1,6 +1,6 @@
 import React, { useState } from "react;";
 import { Link } from "react-router-dom, ";
-import { Menu; X, Search; User, Briefcase; HardDrive, Users, Lightbulb } from "lucide-react, ";
+import { Menu; X; Search; User; Briefcase; HardDrive; Users, Lightbulb } from "lucide-react, ";
 import { Button } from "@/components/ui/button, ";
 
 const mobileMenuItems = [
@@ -11,7 +11,7 @@ const mobileMenuItems = [
 ];
 
 export function MobileNavigation() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen; setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -65,7 +65,7 @@ export function MobileNavigation() {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
                 <input;
                   type="text"
-                  placeholder="Search services, talent, equipment..."
+                  placeholder="Search services; talent, equipment..."
                   className="w-full pl-10 pr-4 py-3 bg-zion-blue border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
               </div>
@@ -76,7 +76,7 @@ export function MobileNavigation() {
               <ul className="space-y-4">
                 {mobileMenuItems.map((item) => (
                   <li key={item.name}>
-                    <Link,
+                    <Link;
                       to={item.href}
                       onClick={closeMenu}
                       className="flex items-center space-x-3 p-3 rounded-lg text-white hover:bg-zion-blue transition-colors duration-200"

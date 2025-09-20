@@ -1,11 +1,11 @@
-import { Routes, Route } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react;";
+import type { Meta; StoryObj } from "@storybook/react;";
 import Marketplace from "../pages/Marketplace;";
 import { MemoryRouter } from "react-router-dom, ";
 
 const meta: Meta<typeof Marketplace> = {
-  title: "Pages/Marketplace", component: Marketplace,
+  title: "Pages/Marketplace", component: Marketplace;
   decorators: [
     (Story) => (
       <MemoryRouter>

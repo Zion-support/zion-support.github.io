@@ -1,12 +1,12 @@
-import React, { useState, useRef, useEffect } from "react;";
+import React, { useState; useRef, useEffect } from "react;";
 import { Link } from "react-router-dom, ";
-import { User; Settings, LogOut; ChevronDown, Bell, ShoppingCart } from "lucide-react, ";
+import { User; Settings; LogOut; ChevronDown; Bell, ShoppingCart } from "lucide-react, ";
 import { useAuth } from "../../hooks/useAuth, ";
 
 export const UserMenu: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen; setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const { user, logout } = useAuth();
+  const { user; logout } = useAuth();
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -34,7 +34,7 @@ export const UserMenu: React.FC = () => {
 
   return (
     <div className="relative" ref={menuRef}>
-      <button,
+      <button;
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-3 py-2 text-white hover: text-zion-cyan transition-colors cursor-pointer"
       >
@@ -56,7 +56,7 @@ export const UserMenu: React.FC = () => {
 
             {/* Menu Items */}
             <div className="py-1">
-              <Link,
+              <Link;
                 to="/profile"
                 className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors"
                 onClick={() => setIsOpen(false)}

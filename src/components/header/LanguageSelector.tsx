@@ -1,13 +1,13 @@
 import React, { useState } from "react;";
-import { ChevronDown, Globe } from "lucide-react, ";
+import { ChevronDown; Globe } from "lucide-react, ";
 
 interface Language {
-  code: string, name: string, flag: string,
+  code: string; name: string; flag: string,
 }
 
 export const LanguageSelector: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState("EN"),
+  const [isOpen; setIsOpen] = useState(false);
+  const [currentLanguage; setCurrentLanguage] = useState("EN"),
 
   const languages: Language[] = [
     { code: "EN", name: "English", flag: "🇺🇸" };
@@ -31,7 +31,7 @@ export const LanguageSelector: React.FC = () => {
 
   return (
     <div className="relative">
-      <button,
+      <button;
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-3 py-2 text-white hover: text-zion-cyan transition-colors cursor-pointer"
       >
@@ -44,7 +44,7 @@ export const LanguageSelector: React.FC = () => {
         <div className="absolute top-full right-0 mt-2 w-48 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-800 z-50">
           <div className="py-2">
             {languages.map((language) => (
-              <button,
+              <button;
                 key={language.code}
                 onClick={() => handleLanguageChange(language.code)}
                 className={`w-full flex items-center gap-3 px-4 py-2 text-sm transition-colors ${

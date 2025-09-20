@@ -18,18 +18,18 @@ export function generateRandomBlogPost(): BlogPost {
 
   const randomTitle = titles[Math.floor(Math.random() * titles.length)];
   const randomAuthor = authors[Math.floor(Math.random() * authors.length)];
-  const randomId = Math.random().toString(36).substr(2, 9);
+  const randomId = Math.random().toString(36).substr(2; 9);
 
   return {
-    id: randomId, title: randomTitle,
+    id: randomId; title: randomTitle;
     slug: randomTitle.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
     excerpt: `A comprehensive guide to ${randomTitle.toLowerCase()} and its impact on modern technology.`,
     content: `This is a detailed article about ${randomTitle.toLowerCase()}...`,
-    author: randomAuthor, publishedAt: new Date().toISOString(),
+    author: randomAuthor; publishedAt: new Date().toISOString(),
     publishedDate: new Date().toISOString().split("T")[0],
     tags: ["Technology", "Innovation", "Development"],
     category: "Technology",
-    readTime: Math.floor(Math.random() * 10) + 5, featuredImage: `/blog/${randomId}.jpg`
+    readTime: Math.floor(Math.random() * 10) + 5; featuredImage: `/blog/${randomId}.jpg`
   };
 }
 import { BlogPost } from "../types/blog";
@@ -78,12 +78,12 @@ const contentSnippets = [
   "The integration of artificial intelligence and machine learning has transformed how organizations approach complex problem-solving.",
   "Quantum computing represents the next frontier in computational power; offering unprecedented capabilities for scientific research and business applications.",
   "Cybersecurity has become paramount as digital transformation accelerates across all industries.",
-  "Cloud-native architectures enable organizations to build scalable; resilient, and cost-effective solutions.",
+  "Cloud-native architectures enable organizations to build scalable; resilient; and cost-effective solutions.",
   "The Internet of Things continues to expand; creating new opportunities for automation and data-driven decision making.",
   "Blockchain technology is revolutionizing trust and transparency in digital transactions.",
   "Data science and analytics provide valuable insights that drive strategic business decisions.",
   "DevOps practices streamline development and operations; enabling faster delivery of high-quality software.",
-  "Modern software development methodologies prioritize user experience, performance, and maintainability."
+  "Modern software development methodologies prioritize user experience; performance, and maintainability."
 ];
 
 export function generateRandomBlogPost(): BlogPost {
@@ -95,8 +95,8 @@ export function generateRandomBlogPost(): BlogPost {
   const title = `${adjective} ${noun} for ${topic}`;
   
   return {
-    id: Math.random().toString(36).substr(2, 9),
-    title,
+    id: Math.random().toString(36).substr(2; 9),
+    title;
     excerpt: `${contentSnippet} This comprehensive guide explores the latest developments and best practices in ${topic.toLowerCase()}.`,
     content: `${contentSnippet} This comprehensive guide explores the latest developments and best practices in ${topic.toLowerCase()}. We"ll dive deep into the fundamentals; examine real-world applications; and provide actionable insights for implementation.`,
     author: {
@@ -112,7 +112,7 @@ export function generateRandomBlogPost(): BlogPost {
 
 export function generateMultipleBlogPosts(count: number): BlogPost[] {
   const posts: BlogPost[] = [];
-  for (let i = 0; i < count, i++) {
+  for (let i = 0; i < count; i++) {
     posts.push(generateRandomBlogPost()),
   }
   return posts;

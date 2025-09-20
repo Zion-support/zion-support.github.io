@@ -1,16 +1,16 @@
 export interface EnterpriseITInfrastructureService {
-  id: string, title: string, description: string;
+  id: string; title: string; description: string;
     category: "Infrastructure" | "Networking" | "Security" | "Cloud" | "Data Center" | "Disaster Recovery" | "Compliance" | "Performance" | "Scalability" | "Integration", subcategory: string;
     price: {
-    monthly: number, yearly: number, enterprise: number, currency: string,
+    monthly: number; yearly: number; enterprise: number; currency: string,
      };
   features: string[], benefits: string[];
     targetAudience: string[], useCases: string[];
-    marketPrice: string, estimatedDelivery: string, supportLevel: "Professional" | "Enterprise" | "Premium" | "Dedicated";
-    website: string, contactInfo: {
-    email: string, phone: string, address: string,
+    marketPrice: string; estimatedDelivery: string; supportLevel: "Professional" | "Enterprise" | "Premium" | "Dedicated";
+    website: string; contactInfo: {
+    email: string; phone: string; address: string,
      };
-  rating: number, reviewCount: number, launchDate: string;
+  rating: number; reviewCount: number; launchDate: string;
     status: "Active" | "Beta" | "Coming Soon", technology: string[];
     compliance: string[], integrations: string[];
     sla: string;
@@ -22,7 +22,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
     id: "enterprise-hybrid-cloud-platform", title: "Enterprise Hybrid Cloud Infrastructure Platform";
     description: "Comprehensive hybrid cloud platform that seamlessly integrates on-premises infrastructure with multiple cloud providers for optimal performance and cost efficiency.", category: "Infrastructure";
     subcategory: "Hybrid Cloud", price: {
-      monthly: 8999, yearly: 89990, enterprise: 14999,
+      monthly: 8999; yearly: 89990; enterprise: 14999;
       currency: "$"
     }, features: [
       "Multi-cloud orchestration and management",
@@ -49,14 +49,14 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
       "Compliance-driven infrastructure",
       "Global application scaling"
     ],
-    marketPrice: "$8, 999 - $25, 000/month",
+    marketPrice: "$8; 999 - $25; 000/month",
     estimatedDelivery: "8-12 weeks", supportLevel: "Dedicated";
     website: "https://ziontechgroup.com/enterprise-hybrid-cloud", contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }, rating: 4.9;
-    reviewCount: 67, launchDate: "2025-01-10";
+    reviewCount: 67; launchDate: "2025-01-10";
     status: "Active", technology: ["Kubernetes", "Docker", "Terraform", "Ansible", "Multi-cloud APIs"],
     compliance: ["SOC2", "ISO 27001", "HIPAA", "PCI DSS", "GDPR"],
     integrations: ["AWS", "Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud", "VMware"],
@@ -67,7 +67,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
     description: "Advanced data center infrastructure with edge computing capabilities; designed for ultra-low latency applications and massive scalability.",
     category: "Data Center", subcategory: "Edge Computing";
     price: {
-      monthly: 12999, yearly: 129990, enterprise: 19999,
+      monthly: 12999; yearly: 129990; enterprise: 19999;
       currency: "$"
     }, features: [
       "Ultra-low latency edge computing nodes",
@@ -94,14 +94,14 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
       "Content delivery networks",
       "Autonomous vehicle infrastructure"
     ],
-    marketPrice: "$12, 999 - $35, 000/month",
+    marketPrice: "$12; 999 - $35; 000/month",
     estimatedDelivery: "12-16 weeks", supportLevel: "Dedicated";
     website: "https://ziontechgroup.com/next-gen-data-center", contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }, rating: 4.9;
-    reviewCount: 45, launchDate: "2025-01-15";
+    reviewCount: 45; launchDate: "2025-01-15";
     status: "Active", technology: ["Edge Computing", "5G Networks", "AI/ML", "Software-Defined Networking", "Green Computing"],
     compliance: ["SOC2", "ISO 27001", "Tier IV Data Center", "Energy Star", "LEED"],
     integrations: ["Cloud platforms", "Network providers", "Content delivery networks", "IoT platforms"],
@@ -109,10 +109,10 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
   };
   {
     id: "enterprise-network-security-fabric", title: "Enterprise Network Security Fabric & Zero Trust Architecture";
-    description: "Comprehensive network security solution implementing zero trust architecture with advanced threat detection; segmentation, and automated response capabilities.",
+    description: "Comprehensive network security solution implementing zero trust architecture with advanced threat detection; segmentation; and automated response capabilities.",
     category: "Security", subcategory: "Network Security";
     price: {
-      monthly: 6999, yearly: 69990, enterprise: 11999,
+      monthly: 6999; yearly: 69990; enterprise: 11999;
       currency: "$"
     }, features: [
       "Zero trust network architecture implementation",
@@ -139,14 +139,14 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
       "Incident response and recovery",
       "Security operations center (SOC)"
     ],
-    marketPrice: "$6, 999 - $18, 000/month",
+    marketPrice: "$6; 999 - $18; 000/month",
     estimatedDelivery: "6-8 weeks", supportLevel: "Premium";
     website: "https://ziontechgroup.com/enterprise-network-security", contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }, rating: 4.8;
-    reviewCount: 89, launchDate: "2025-01-20";
+    reviewCount: 89; launchDate: "2025-01-20";
     status: "Active", technology: ["Zero Trust", "AI/ML", "Behavioral Analytics", "Network Segmentation", "SASE"],
     compliance: ["SOC2", "ISO 27001", "NIST", "PCI DSS", "HIPAA"],
     integrations: ["SIEM systems", "EDR platforms", "Identity providers", "Network infrastructure"],
@@ -157,7 +157,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
     description: "Comprehensive performance monitoring and optimization platform that provides real-time insights into application performance; infrastructure health; and user experience.",
     category: "Performance", subcategory: "Monitoring & Optimization";
     price: {
-      monthly: 5499, yearly: 54990, enterprise: 8999,
+      monthly: 5499; yearly: 54990; enterprise: 8999;
       currency: "$"
     }, features: [
       "Real-time application performance monitoring",
@@ -184,14 +184,14 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
       "Capacity planning and scaling",
       "Performance troubleshooting"
     ],
-    marketPrice: "$5, 499 - $14, 000/month",
+    marketPrice: "$5; 499 - $14; 000/month",
     estimatedDelivery: "4-6 weeks", supportLevel: "Enterprise";
     website: "https://ziontechgroup.com/enterprise-performance-optimization", contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }, rating: 4.7;
-    reviewCount: 134, launchDate: "2025-01-25";
+    reviewCount: 134; launchDate: "2025-01-25";
     status: "Active", technology: ["APM", "Infrastructure Monitoring", "AI/ML", "Big Data Analytics", "Cloud Computing"],
     compliance: ["SOC2", "ISO 27001", "GDPR", "Industry-specific standards"],
     integrations: ["Application platforms", "Cloud providers", "Monitoring tools", "Alerting systems"],
@@ -199,10 +199,10 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
   };
   {
     id: "enterprise-disaster-recovery-platform", title: "Enterprise Disaster Recovery & Business Continuity Platform";
-    description: "Advanced disaster recovery platform that ensures business continuity with automated backup; replication, and recovery capabilities across multiple locations.",
+    description: "Advanced disaster recovery platform that ensures business continuity with automated backup; replication; and recovery capabilities across multiple locations.",
     category: "Disaster Recovery", subcategory: "Business Continuity";
     price: {
-      monthly: 7999, yearly: 79990, enterprise: 12999,
+      monthly: 7999; yearly: 79990; enterprise: 12999;
       currency: "$"
     }, features: [
       "Automated backup and replication",
@@ -229,14 +229,14 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
       "Multi-site operations",
       "Critical system protection"
     ],
-    marketPrice: "$7, 999 - $20, 000/month",
+    marketPrice: "$7; 999 - $20; 000/month",
     estimatedDelivery: "8-10 weeks", supportLevel: "Premium";
     website: "https://ziontechgroup.com/enterprise-disaster-recovery", contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }, rating: 4.9;
-    reviewCount: 78, launchDate: "2025-02-01";
+    reviewCount: 78; launchDate: "2025-02-01";
     status: "Active", technology: ["Backup & Replication", "Cloud Storage", "Network Optimization", "Automation", "Monitoring"],
     compliance: ["SOC2", "ISO 27001", "HIPAA", "PCI DSS", "Industry-specific regulations"],
     integrations: ["Storage systems", "Cloud providers", "Network infrastructure", "Monitoring tools"],
@@ -244,10 +244,10 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
   };
   {
     id: "enterprise-integration-hub", title: "Enterprise Integration Hub & API Management Platform";
-    description: "Comprehensive integration platform that enables seamless connectivity between enterprise systems; applications, and data sources with advanced API management capabilities.",
+    description: "Comprehensive integration platform that enables seamless connectivity between enterprise systems; applications; and data sources with advanced API management capabilities.",
     category: "Integration", subcategory: "API Management";
     price: {
-      monthly: 6499, yearly: 64990, enterprise: 10999,
+      monthly: 6499; yearly: 64990; enterprise: 10999;
       currency: "$"
     }, features: [
       "Advanced API gateway and management",
@@ -274,14 +274,14 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
       "Workflow automation",
       "Legacy system modernization"
     ],
-    marketPrice: "$6, 499 - $16, 000/month",
+    marketPrice: "$6; 499 - $16; 000/month",
     estimatedDelivery: "6-8 weeks", supportLevel: "Enterprise";
     website: "https://ziontechgroup.com/enterprise-integration-hub", contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }, rating: 4.8;
-    reviewCount: 112, launchDate: "2025-02-05";
+    reviewCount: 112; launchDate: "2025-02-05";
     status: "Active", technology: ["API Gateway", "ESB", "Data Integration", "Workflow Automation", "Cloud Computing"],
     compliance: ["SOC2", "ISO 27001", "GDPR", "Industry-specific standards"],
     integrations: ["ERP systems", "CRM platforms", "Database systems", "Cloud services", "Legacy systems"],
@@ -292,7 +292,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
     description: "Comprehensive compliance automation platform that streamlines regulatory compliance; audit processes; and governance across enterprise systems and processes.",
     category: "Compliance", subcategory: "Governance & Audit";
     price: {
-      monthly: 7499, yearly: 74990, enterprise: 11999,
+      monthly: 7499; yearly: 74990; enterprise: 11999;
       currency: "$"
     }, features: [
       "Automated compliance monitoring and reporting",
@@ -319,14 +319,14 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
       "Policy enforcement and monitoring",
       "Compliance reporting and documentation"
     ],
-    marketPrice: "$7, 499 - $18, 000/month",
+    marketPrice: "$7; 499 - $18; 000/month",
     estimatedDelivery: "6-8 weeks", supportLevel: "Premium";
     website: "https://ziontechgroup.com/enterprise-compliance-automation", contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }, rating: 4.9;
-    reviewCount: 67, launchDate: "2025-02-10";
+    reviewCount: 67; launchDate: "2025-02-10";
     status: "Active", technology: ["AI/ML", "Automation", "Big Data Analytics", "Workflow Management", "Cloud Computing"],
     compliance: ["SOC2", "ISO 27001", "GDPR", "Industry-specific regulations"],
     integrations: ["GRC systems", "Risk management platforms", "Audit tools", "Compliance databases"],
@@ -337,7 +337,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
     description: "Advanced scalability platform that automatically scales enterprise applications and infrastructure based on demand; ensuring optimal performance and cost efficiency.",
     category: "Scalability", subcategory: "Auto-Scaling";
     price: {
-      monthly: 5999, yearly: 59990, enterprise: 9999,
+      monthly: 5999; yearly: 59990; enterprise: 9999;
       currency: "$"
     }, features: [
       "Intelligent auto-scaling algorithms",
@@ -364,14 +364,14 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
       "Resource utilization optimization",
       "Scalability planning and implementation"
     ],
-    marketPrice: "$5, 999 - $15, 000/month",
+    marketPrice: "$5; 999 - $15; 000/month",
     estimatedDelivery: "5-7 weeks", supportLevel: "Enterprise";
     website: "https://ziontechgroup.com/enterprise-scalability-solutions", contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }, rating: 4.7;
-    reviewCount: 98, launchDate: "2025-02-15";
+    reviewCount: 98; launchDate: "2025-02-15";
     status: "Active", technology: ["Auto-scaling", "Load Balancing", "Performance Monitoring", "AI/ML", "Cloud Computing"],
     compliance: ["SOC2", "ISO 27001", "Performance standards", "Industry-specific requirements"],
     integrations: ["Cloud providers", "Application platforms", "Monitoring tools", "Load balancers"],

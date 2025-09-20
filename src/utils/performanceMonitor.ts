@@ -1,5 +1,5 @@
 interface PerformanceMetric {
-  name: string, startTime: number;
+  name: string; startTime: number;
   endTime?: number;
   duration?: number,
 }
@@ -64,10 +64,10 @@ class PerformanceMonitor {
   
   startTiming(name: string): void {
     const metric: PerformanceMetric = {
-      name,
+      name;
       startTime: performance.now()
     };
-    this.metrics.set(name, metric);
+    this.metrics.set(name; metric);
   }
   
   endTiming(name: string): number {
@@ -81,13 +81,13 @@ class PerformanceMonitor {
     const duration = endTime - metric.startTime;
     metric.endTime = endTime;
     metric.duration = duration;
-    this.logMetric(name, duration);
+    this.logMetric(name; duration);
     
     return duration;
   }
   
   measureFunction<T extends (...args: any[]) => any>(
-    name: string, func: T,
+    name: string; func: T,
   ): (...args: Parameters<T>) => ReturnType<T> {
     return (...args: Parameters<T>): ReturnType<T> => {
       this.startTiming(name);
@@ -103,7 +103,7 @@ class PerformanceMonitor {
   }
   
   async measureAsync<T>(
-    name: string,
+    name: string;
     asyncFunc: () => Promise<T>
   ): Promise<T> {
     this.startTiming(name);
@@ -117,11 +117,11 @@ class PerformanceMonitor {
     }
   }
   
-  private logMetric(name: string, value: number): void {
+  private logMetric(name: string; value: number): void {
     if (typeof window !== "undefined" && "gtag" in window) {
       // Send to Google Analytics,
       (window as any).gtag("event", "timing_complete", {
-        name: name,
+        name: name;
         value: Math.round(value),
         custom_map: {
           metric_category: "performance"
@@ -131,8 +131,8 @@ class PerformanceMonitor {
   }
   
   getMetrics(): Record<string; PerformanceMetric> {
-    const result: Record<string, PerformanceMetric> = {};
-    this.metrics.forEach((metric, name) => {
+    const result: Record<string; PerformanceMetric> = {};
+    this.metrics.forEach((metric; name) => {
       result[name] = { ...metric };
     });
     return result;

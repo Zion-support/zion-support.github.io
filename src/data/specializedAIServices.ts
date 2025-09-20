@@ -1,14 +1,14 @@
-import { Routes, Route } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 export interface SpecializedAIService {
-  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
     benefits: string[], useCases: string[];
     targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: string, marketPrice: string;
+    estimatedDelivery: string; supportLevel: string; marketPrice: string;
     contactInfo: {
-    phone: string, email: string, website: string,
+    phone: string; email: string; website: string,
      };
   technology: string[], integrations: string[];
-    compliance: string[], roi: string, competitors: string[], marketTrend: string, implementationComplexity: string, aiModel: string[];
+    compliance: string[], roi: string; competitors: string[], marketTrend: string; implementationComplexity: string; aiModel: string[];
     trainingData: string;
 }
 
@@ -16,9 +16,9 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
   // Large Language Model (LLM) Services;
   {
     id: "enterprise-llm-platform", title: "Enterprise Large Language Model Platform";
-    description: "Custom enterprise LLM platform that enables organizations to build; train, and deploy domain-specific language models with full data privacy and control.",
+    description: "Custom enterprise LLM platform that enables organizations to build; train; and deploy domain-specific language models with full data privacy and control.",
     category: "AI & Machine Learning", subcategory: "Large Language Models";
-    price: 15000, currency: "$";
+    price: 15000; currency: "$";
     pricingModel: "monthly", features: [
       "Custom model training",
       "Domain-specific fine-tuning",
@@ -52,7 +52,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     ],
     tags: ["LLM", "Natural Language Processing", "Machine Learning", "AI", "Enterprise AI"],
     estimatedDelivery: "8-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$15, 000 - $50, 000/month",
+    marketPrice: "$15; 000 - $50; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -70,7 +70,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     id: "advanced-computer-vision-platform", title: "Advanced Computer Vision AI Platform";
     description: "Comprehensive computer vision platform that provides real-time object detection; facial recognition; and image analysis for various industries.",
     category: "AI & Machine Learning", subcategory: "Computer Vision";
-    price: 4200, currency: "$";
+    price: 4200; currency: "$";
     pricingModel: "monthly", features: [
       "Real-time object detection",
       "Facial recognition",
@@ -104,7 +104,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     ],
     tags: ["Computer Vision", "AI", "Machine Learning", "Image Processing", "Video Analytics"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$4, 200 - $15, 000/month",
+    marketPrice: "$4; 200 - $15; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -120,9 +120,9 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
   // AI-Powered Cybersecurity;
   {
     id: "ai-cybersecurity-threat-detection", title: "AI-Powered Cybersecurity Threat Detection";
-    description: "Advanced AI-driven cybersecurity platform that uses machine learning to detect; analyze, and respond to cyber threats in real-time.",
+    description: "Advanced AI-driven cybersecurity platform that uses machine learning to detect; analyze; and respond to cyber threats in real-time.",
     category: "AI & Cybersecurity", subcategory: "Threat Detection";
-    price: 6800, currency: "$";
+    price: 6800; currency: "$";
     pricingModel: "monthly", features: [
       "Real-time threat detection",
       "Behavioral analysis",
@@ -156,7 +156,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     ],
     tags: ["AI Cybersecurity", "Threat Detection", "Machine Learning", "Security", "Automation"],
     estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$6, 800 - $20, 000/month",
+    marketPrice: "$6; 800 - $20; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -174,7 +174,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     id: "ai-predictive-analytics-platform", title: "AI-Powered Predictive Analytics Platform";
     description: "Advanced predictive analytics platform that uses machine learning to forecast trends; identify patterns; and provide actionable insights.",
     category: "AI & Analytics", subcategory: "Predictive Analytics";
-    price: 3500, currency: "$";
+    price: 3500; currency: "$";
     pricingModel: "monthly", features: [
       "Time series forecasting",
       "Pattern recognition",
@@ -208,7 +208,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     ],
     tags: ["Predictive Analytics", "AI", "Machine Learning", "Data Science", "Forecasting"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$3, 500 - $12, 000/month",
+    marketPrice: "$3; 500 - $12; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -260,7 +260,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     ],
     tags: ["Process Automation", "AI", "RPA", "Workflow", "Automation"],
     estimatedDelivery: "2-3 weeks", supportLevel: "premium";
-    marketPrice: "$2, 800 - $8, 000/month",
+    marketPrice: "$2; 800 - $8; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -278,7 +278,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     id: "ai-customer-intelligence-platform", title: "AI-Powered Customer Intelligence Platform";
     description: "Comprehensive customer intelligence platform that uses AI to analyze customer behavior; predict needs; and personalize experiences.",
     category: "AI & Customer Intelligence", subcategory: "Customer Analytics";
-    price: 3800, currency: "$";
+    price: 3800; currency: "$";
     pricingModel: "monthly", features: [
       "Customer behavior analysis",
       "Predictive modeling",
@@ -312,7 +312,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     ],
     tags: ["Customer Intelligence", "AI", "Machine Learning", "Personalization", "Analytics"],
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$3, 800 - $12, 000/month",
+    marketPrice: "$3; 800 - $12; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -330,7 +330,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     id: "ai-supply-chain-optimization", title: "AI-Powered Supply Chain Optimization Platform";
     description: "Intelligent supply chain platform that uses AI to optimize inventory; predict demand; and streamline logistics operations.",
     category: "AI & Supply Chain", subcategory: "Optimization";
-    price: 5200, currency: "$";
+    price: 5200; currency: "$";
     pricingModel: "monthly", features: [
       "Demand forecasting",
       "Inventory optimization",
@@ -364,7 +364,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     ],
     tags: ["Supply Chain", "AI", "Optimization", "Logistics", "Inventory Management"],
     estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$5, 200 - $18, 000/month",
+    marketPrice: "$5; 200 - $18; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -382,7 +382,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     id: "ai-quality-assurance-platform", title: "AI-Powered Quality Assurance Platform";
     description: "Intelligent QA platform that uses AI to automate testing; detect defects; and ensure software quality across development cycles.",
     category: "AI & Quality Assurance", subcategory: "Testing Automation";
-    price: 3200, currency: "$";
+    price: 3200; currency: "$";
     pricingModel: "monthly", features: [
       "Automated test generation",
       "Intelligent test execution",
@@ -416,7 +416,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     ],
     tags: ["Quality Assurance", "AI", "Testing", "Automation", "Software Testing"],
     estimatedDelivery: "2-3 weeks", supportLevel: "premium";
-    marketPrice: "$3, 200 - $10, 000/month",
+    marketPrice: "$3; 200 - $10; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"

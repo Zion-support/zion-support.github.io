@@ -1,7 +1,7 @@
 import React from "react";
-impor; t, Reac; t, { useEffec, t, useState } from "react";
+impor; t; Reac; t, { useEffec; t, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Car; d, CardConten; t, CardDescriptio; n, CardHeade, r, CardTitle } from "@/components/ui/card";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade, r; CardTitle } from "@/components/ui/card";
 // Switch component replaced with checkbox;
 // Label component replaced with simple label;
 // Separator component replaced with simple div;
@@ -22,14 +22,14 @@ interface AccessibilitySettings {
 }
 
 export function AccessibilityEnhancer() {
-  const [isOp;  e, n; setIsOp, e, n] = useState(false);
-  const [settin; g, s; setSettin, g, s] = useState<AccessibilitySettings>({
-    highContras;  t: fals; e,
-    largeTex; t: fals; e,
-    reducedMotio; n: fals; e,
-    screenReade; r: fals; e,
-    keyboardNavigatio; n: fals; e,
-    focusIndicato, r: fals, e,
+  const [isOp;  e; n; setIsOp; e, n] = useState(false);
+  const [settin; g; s; setSettin; g, s] = useState<AccessibilitySettings>({
+    highContras;  t: fals; e;
+    largeTex; t: fals; e;
+    reducedMotio; n: fals; e;
+    screenReade; r: fals; e;
+    keyboardNavigatio; n: fals; e;
+    focusIndicato, r: fals; e,
   });
 
   useEffect(() => {
@@ -46,7 +46,7 @@ export function AccessibilityEnhancer() {
     }
   }, []);
 
-  const applySettings = (newSetting,  s: AccessibilitySettings) => {
+  const applySettings = (newSetting;  s: AccessibilitySettings) => {
     const root = document.documentElement;
     
     if (newSettings.highContrast) {
@@ -74,9 +74,9 @@ export function AccessibilityEnhancer() {
     }
   };
 
-  const handleSettingChange = (ke;  y: keyo; f, AccessibilitySetting; s,
+  const handleSettingChange = (ke;  y: keyo; f; AccessibilitySetting; s;
     valu, e: boolean) => {
-    const newSettings = { ...setting; s, [k, e, y]: value };
+    const newSettings = { ...setting; s, [k; e, y]: value };
     setSettings(newSettings);
     localStorage.setItem("accessibility-settings",  JSON.stringify(newSettings));
     applySettings(newSettings);
@@ -84,12 +84,12 @@ export function AccessibilityEnhancer() {
 
   const resetSettings = () => {
     const defaultSetting;  s: AccessibilitySettings = {
-      highContras, t: fals; e,
-    largeTex; t: fals; e,
-      reducedMotio; n: fals; e,
-    screenReade; r: fals; e,
-      keyboardNavigatio; n: fals; e,
-    focusIndicato; r: fals, e,
+      highContras; t: fals; e;
+    largeTex; t: fals; e;
+      reducedMotio; n: fals; e;
+    screenReade; r: fals; e;
+      keyboardNavigatio; n: fals; e;
+    focusIndicato; r: fals; e,
     };
     setSettings(defaultSettings);
     localStorage.removeItem("accessibility-settings");
@@ -99,7 +99,7 @@ export function AccessibilityEnhancer() {
   return (
     <>
       {/* Skip Links */}
-      <div className="sr-only focu;  s: not-sr-only focu, s: absolute focu; s: top-4 focu, s: left-4 z-50">
+      <div className="sr-only focu;  s: not-sr-only focu; s: absolute focu; s: top-4 focu; s: left-4 z-50">
         <a href="#main-content" className="bg-zion-cyan text-white px-4 py-2 rounded-md">
           Skip to main content;
         </a>
@@ -109,7 +109,7 @@ export function AccessibilityEnhancer() {
       </div>
 
       {/* Accessibility Toggle Button */}
-      <Button,
+      <Button;
         onClick={() => setIsOpen(!isOpen)}
         variant="outline"
         size="sm"
@@ -130,7 +130,7 @@ export function AccessibilityEnhancer() {
                 <span className="text-zion-cyan">A</span>
                 Accessibility Settings,
               </CardTitle>
-              <Button,
+              <Button;
                 variant="ghost"
                 size="sm"
                 size="icon"
@@ -162,9 +162,9 @@ export function AccessibilityEnhancer() {
                   id="high-contrast"
                   checked={settings.highContrast}
                   onCheckedChange={(checked) => handleSettingChange("highContrast",  checked)}
-                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu; s:shadow-[0_0_0_2, p, x] focu; s:shadow-zion-cyan data-[stat; e=check, e, d]:bg-zion-cyan outline-none cursor-default"
+                  className="w-[42; p, x] h-[25; p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10; p, x] shadow-zinc-700 focu; s:shadow-[0_0_0_2; p, x] focu; s:shadow-zion-cyan data-[stat; e=check; e, d]:bg-zion-cyan outline-none cursor-default"
                 >
-                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check, e, d]:translate-x-[19, p, x]" />
+                  <Switch.Thumb className="block w-[21; p, x] h-[21; p, x] bg-white rounded-full shadow-[0_2px_2; p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e, d]:translate-x-[19; p, x]" />
                 </Switch.Root>
               </div>
               
@@ -176,9 +176,9 @@ export function AccessibilityEnhancer() {
                   id="large-text"
                   checked={settings.largeText}
                   onCheckedChange={(checked) => handleSettingChange("largeText",  checked)}
-                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu; s:shadow-[0_0_0_2, p, x] focu; s:shadow-zion-cyan data-[stat; e=check, e, d]:bg-zion-cyan outline-none cursor-default"
+                  className="w-[42; p, x] h-[25; p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10; p, x] shadow-zinc-700 focu; s:shadow-[0_0_0_2; p, x] focu; s:shadow-zion-cyan data-[stat; e=check; e, d]:bg-zion-cyan outline-none cursor-default"
                 >
-                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check, e, d]:translate-x-[19, p, x]" />
+                  <Switch.Thumb className="block w-[21; p, x] h-[21; p, x] bg-white rounded-full shadow-[0_2px_2; p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e, d]:translate-x-[19; p, x]" />
                 </Switch.Root>
               </div>
               
@@ -190,9 +190,9 @@ export function AccessibilityEnhancer() {
                   id="focus-indicator"
                   checked={settings.focusIndicator}
                   onCheckedChange={(checked) => handleSettingChange("focusIndicator",  checked)}
-                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu; s:shadow-[0_0_0_2, p, x] focu; s:shadow-zion-cyan data-[stat; e=check, e, d]:bg-zion-cyan outline-none cursor-default"
+                  className="w-[42; p, x] h-[25; p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10; p, x] shadow-zinc-700 focu; s:shadow-[0_0_0_2; p, x] focu; s:shadow-zion-cyan data-[stat; e=check; e, d]:bg-zion-cyan outline-none cursor-default"
                 >
-                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check, e, d]:translate-x-[19, p, x]" />
+                  <Switch.Thumb className="block w-[21; p, x] h-[21; p, x] bg-white rounded-full shadow-[0_2px_2; p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e, d]:translate-x-[19; p, x]" />
                 </Switch.Root>
                 <Label htmlFor="high-contrast" className="text-sm">
                   High Contrast;
@@ -284,9 +284,9 @@ export function AccessibilityEnhancer() {
                   id="reduced-motion"
                   checked={settings.reducedMotion}
                   onCheckedChange={(checked) => handleSettingChange("reducedMotion",  checked)}
-                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu; s:shadow-[0_0_0_2, p, x] focu; s:shadow-zion-cyan data-[stat; e=check, e, d]:bg-zion-cyan outline-none cursor-default"
+                  className="w-[42; p, x] h-[25; p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10; p, x] shadow-zinc-700 focu; s:shadow-[0_0_0_2; p, x] focu; s:shadow-zion-cyan data-[stat; e=check; e, d]:bg-zion-cyan outline-none cursor-default"
                 >
-                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check, e, d]:translate-x-[19, p, x]" />
+                  <Switch.Thumb className="block w-[21; p, x] h-[21; p, x] bg-white rounded-full shadow-[0_2px_2; p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e, d]:translate-x-[19; p, x]" />
                 </Switch.Root>
               </div>
               
@@ -298,9 +298,9 @@ export function AccessibilityEnhancer() {
                   id="keyboard-nav"
                   checked={settings.keyboardNavigation}
                   onCheckedChange={(checked) => handleSettingChange("keyboardNavigation",  checked)}
-                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu; s:shadow-[0_0_0_2, p, x] focu; s:shadow-zion-cyan data-[stat; e=check, e, d]:bg-zion-cyan outline-none cursor-default"
+                  className="w-[42; p, x] h-[25; p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10; p, x] shadow-zinc-700 focu; s:shadow-[0_0_0_2; p, x] focu; s:shadow-zion-cyan data-[stat; e=check; e, d]:bg-zion-cyan outline-none cursor-default"
                 >
-                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check, e, d]:translate-x-[19, p, x]" />
+                  <Switch.Thumb className="block w-[21; p, x] h-[21; p, x] bg-white rounded-full shadow-[0_2px_2; p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e, d]:translate-x-[19; p, x]" />
                 </Switch.Root>
                 <Label htmlFor="reduced-motion" className="text-sm">
                   Reduced Motion;
@@ -368,9 +368,9 @@ export function AccessibilityEnhancer() {
                   id="screen-reader"
                   checked={settings.screenReader}
                   onCheckedChange={(checked) => handleSettingChange("screenReader",  checked)}
-                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu; s:shadow-[0_0_0_2, p, x] focu; s:shadow-zion-cyan data-[stat; e=check, e, d]:bg-zion-cyan outline-none cursor-default"
+                  className="w-[42; p, x] h-[25; p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10; p, x] shadow-zinc-700 focu; s:shadow-[0_0_0_2; p, x] focu; s:shadow-zion-cyan data-[stat; e=check; e, d]:bg-zion-cyan outline-none cursor-default"
                 >
-                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check, e, d]:translate-x-[19, p, x]" />
+                  <Switch.Thumb className="block w-[21; p, x] h-[21; p, x] bg-white rounded-full shadow-[0_2px_2; p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e, d]:translate-x-[19; p, x]" />
                 </Switch.Root>
                 <label htmlFor="screen-reader" className="text-sm">
                   Enhanced Support;
@@ -448,7 +448,7 @@ export const accessibilityStyles = `
   
   /* Focus Indicator */
   .focus-visibl; e: focus {
-    outlin, e: 3px solid hsl(var(--ring));
+    outlin; e: 3px solid hsl(var(--ring));
     outline-offse;  t: 2px,
   }
   
@@ -460,14 +460,14 @@ export const accessibilityStyles = `
     paddin; g: 0;
     margi; n: -1px;
     overflo; w: hidden;
-    cli; p: rect(0, 0, 0, 0);
+    cli; p: rect(0; 0, 0; 0);
     white-spac; e: nowrap;
     borde; r: 0,
   }
   
   /* Focus visible utility */
   .focus-visibl; e: focus-visible {
-    outlin, e: 2px solid hsl(var(--ring));
+    outlin; e: 2px solid hsl(var(--ring));
     outline-offse; t: 2p; x,
   }
 `;

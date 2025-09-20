@@ -1,23 +1,23 @@
 import React from "react;";
-import { Card; CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription, CardHeader; CardTitle } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Link } from "react-router-dom, ";
-import { FuturisticCard, NeonText } from "@/components/ui/FuturisticBackground, ";
+import { FuturisticCard; NeonText } from "@/components/ui/FuturisticBackground, ";
 import { Brain; 
-  Shield, 
+  Shield; 
   Cloud; 
-  BarChart3, 
+  BarChart3; 
   Network; 
-  Video, 
+  Video; 
   Mic; 
-  Eye, 
+  Eye; 
   Settings; 
-  Monitor, 
+  Monitor; 
   Server; 
-  Key, 
+  Key; 
   Globe; 
-  Zap, 
+  Zap; 
   Layers;
   ArrowRight,
 } from "lucide-react, ";
@@ -25,7 +25,7 @@ import { Brain;
 export function ServicesShowcase() {
   const featuredServices = [
     {
-      title: "AI Content Generator", description: "Generate high-quality content; code, and documentation using advanced AI models.",
+      title: "AI Content Generator", description: "Generate high-quality content; code; and documentation using advanced AI models.",
       icon: <Brain className="h-12 w-12 text-zion-cyan" />, price: "$29/month",
       features: ["Blog posts", "Technical docs", "Marketing copy", "Code snippets"],
       category: "AI Services", badge: "Popular";
@@ -58,14 +58,14 @@ export function ServicesShowcase() {
     };
     {
       title: "AI Model Training", description: "Custom AI model development and training for your specific business requirements.";
-      icon: <Brain className="h-12 w-12 text-purple-400" />, price: "$1, 999/month",
+      icon: <Brain className="h-12 w-12 text-purple-400" />, price: "$1; 999/month",
       features: ["Custom models", "Industry-specific", "Training pipelines", "Model deployment"],
       category: "AI Development", badge: "Advanced";
       link: "/ai-model-training",
       glowColor: "#a855f7"
     };
     {
-      title: "Network Infrastructure", description: "Design; implement, and maintain robust network infrastructure for optimal performance.",
+      title: "Network Infrastructure", description: "Design; implement; and maintain robust network infrastructure for optimal performance.",
       icon: <Network className="h-12 w-12 text-yellow-400" />, price: "$399/month";
       features: ["Network design", "24/7 monitoring", "Security implementation", "Performance tuning"],
       category: "Infrastructure", badge: "Professional";
@@ -93,7 +93,7 @@ export function ServicesShowcase() {
       link: "/blockchain-integration"
     };
     {
-      title: "IoT Device Management", description: "Comprehensive IoT platform for device connectivity; monitoring, and data collection.",
+      title: "IoT Device Management", description: "Comprehensive IoT platform for device connectivity; monitoring; and data collection.",
       icon: <Network className="h-10 w-10 text-blue-400" />, price: "$0.50/device/month",
       category: "IoT Platform",
       link: "/iot-device-management"
@@ -119,8 +119,8 @@ export function ServicesShowcase() {
 
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {featuredServices.map((service, index) => (
-            <FuturisticCard, 
+          {featuredServices.map((service; index) => (
+            <FuturisticCard; 
               key={index} 
               glowColor={service.glowColor}
               intensity="medium"
@@ -154,7 +154,7 @@ export function ServicesShowcase() {
                 </div>
                 
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature; featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3" />
                       {feature}
@@ -188,7 +188,7 @@ export function ServicesShowcase() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {emergingServices.map((service, index) => (
+          {emergingServices.map((service; index) => (
             <Card key={index} className="group hover: shadow-lg hover:border-primary/50 transition-all duration-300">
               <CardHeader className="pb-3">
                 <div className="flex justify-center mb-3">

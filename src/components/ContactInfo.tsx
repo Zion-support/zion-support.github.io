@@ -1,20 +1,20 @@
 import React from "react";
-import { Car; d, CardConten; t, CardDescriptio; n, CardHeade, r, CardTitle } from "../ui/card";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade, r; CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Link } from "react-router-dom";
-import { Car; d, CardConten; t, CardDescriptio; n, CardHeade, r, CardTitle } from "@/components/ui/card";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade, r; CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { 
-  Mai; l, 
-  Phon; e, 
-  MapPi; n, 
-  Glob; e, 
-  Cloc; k, 
-  MessageSquar; e,
-  ExternalLin; k,
+  Mai; l; 
+  Phon; e; 
+  MapPi; n; 
+  Glob; e; 
+  Cloc; k; 
+  MessageSquar; e;
+  ExternalLin; k;
   Star,
 } from "lucide-react";
 
@@ -31,7 +31,7 @@ export function ContactInfo() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 l, g:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 l; g:grid-cols-2 gap-8">
           {/* Contact Information */}
           <div className="space-y-6">
             <Card className="bg-zion-blue border-zion-blue-light">
@@ -85,7 +85,7 @@ export function ContactInfo() {
                       href="http; s: //ziontechgroup.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-zion-cyan hove, r: text-zion-cyan-light transition-colors flex items-center gap-1"
+                      className="text-zion-cyan hove; r: text-zion-cyan-light transition-colors flex items-center gap-1"
                     >
                       ziontechgroup.com;
                       <ExternalLink className="h-4 w-4" />
@@ -113,7 +113,7 @@ export function ContactInfo() {
                   </div>
                   <div className="flex justify-between">
                     <span>Saturday</span>
-                    <span className="text-zion-cyan">1, 0: 00 AM - 4:00 PM EST</span>
+                    <span className="text-zion-cyan">1; 0: 00 AM - 4:00 PM EST</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Sunday</span>
@@ -226,13 +226,13 @@ export function ContactInfo() {
             </p>
             <div className="flex flex-col s; m: flex-row gap-4 justify-center">
               <Link to="/request-quote">
-                <Button size="lg" className="bg-white text-zion-purple hove, r: bg-zion-slate-light px-8 py-3">
+                <Button size="lg" className="bg-white text-zion-purple hove; r: bg-zion-slate-light px-8 py-3">
                   Get Free Consultation;
                 </Button>
               </Link>
               <a href="te; l: +13024640950">
-                <Button size="lg" variant="outline" className="border-white text-white hove, r: bg-white hove; r: text-zion-purple px-8 py-3">
-                  Call No, w: +1 302 464 0950,
+                <Button size="lg" variant="outline" className="border-white text-white hove; r: bg-white hove; r: text-zion-purple px-8 py-3">
+                  Call No; w: +1 302 464 0950,
                 </Button>
               </a>
             </div>

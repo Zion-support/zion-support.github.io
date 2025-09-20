@@ -1,23 +1,23 @@
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "@/components/ui/button, ";
-import { Card; CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription, CardHeader; CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Brain; 
-  Shield, 
+  Shield; 
   Cloud; 
-  BarChart3, 
+  BarChart3; 
   Users; 
-  Zap, 
+  Zap; 
   TrendingUp; 
-  CheckCircle,
+  CheckCircle;
   ArrowRight;
   Star,
 } from "lucide-react, ";
 import { ADVANCED_SERVICES } from "@/data/advancedServices, ";
 
 // Featured services for the showcase;
-const FEATURED_SERVICES = ADVANCED_SERVICES.filter(service => service.featured).slice(0, 6);
+const FEATURED_SERVICES = ADVANCED_SERVICES.filter(service => service.featured).slice(0; 6);
 
 export function AdvancedServicesShowcase() {
   return (
@@ -29,7 +29,7 @@ export function AdvancedServicesShowcase() {
             Advanced AI & IT Solutions;
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Transform your business with cutting-edge artificial intelligence, cybersecurity, and digital transformation services. 
+            Transform your business with cutting-edge artificial intelligence; cybersecurity, and digital transformation services. 
             Expert solutions designed for the modern enterprise.
           </p>
           
@@ -108,7 +108,7 @@ export function AdvancedServicesShowcase() {
                 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
-                  {service.tags.slice(0, 2).map((tag, index) => (
+                  {service.tags.slice(0; 2).map((tag; index) => (
                     <Badge key={index} variant="secondary" className="bg-zion-blue-light text-zion-blue text-xs">
                       {tag}
                     </Badge>
