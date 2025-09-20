@@ -1,51 +1,32 @@
 
 import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { useAuth } from "@/hooks/useAuth",
-import { useRouter } from "next/router",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { toast } from "sonner",
-import { supabase } from "@/integrations/supabase/client",
-import { Switch } from "@/components/ui/switch";
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { Header,  } from "@/components/Header",
+import { SEO,  } from "@/components/SEO",
+import { useAuth,  } from "@/hooks/useAuth",
+import { useRouter,  } from "next/router",
+import { Card,, CardContent,, CardDescription,, CardHeader,, CardTitle,  } from "@/components/ui/card",
+import { Input,  } from "@/components/ui/input",
+import { Label,  } from "@/components/ui/label",
+import { Button,  } from "@/components/ui/button",
+import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from "@/components/ui/tabs",
+import { Select,, SelectContent,, SelectItem,, SelectTrigger,, SelectValue,  } from "@/components/ui/select",
+import { toast,  } from "sonner",
+import { supabase,  } from "@/integrations/supabase/client",
+import { Switch,  } from "@/components/ui/switch";
+import { logErrorToProduction,  } from '@/utils/productionLogger';
 export default function TenantOnboarding() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-<<<<<<< HEAD
-    brand_name: "";
-    subdomain: "";
-    logo_url: "";
-    primary_color: "#9b87f5";
-    theme_preset: "light";
-    company_size: "";
-    industry: "";
-    custom_domain: "";
-=======
-    brand_name: ""
-    subdomain: ""
-    logo_url: ""
-    primary_color: "#9b87f5"
-    theme_preset: "light"
-    company_size: ""
-    industry: ""
-    custom_domain: ""
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-    is_co_branded: true
-  });
-  // Check if user has admin role
-  const isAdmin = null;
+is_co_branded: true;
+});
+  // Check if user has admin role,
+const isAdmin = null;
   return (
     <>
-      <SEO 
-        title="Tenant Onboarding - Zion AI Marketplace"
+      <SEO,
+title="Tenant Onboarding - Zion AI Marketplace"
         description="Onboard a new white-label tenant to the Zion AI Marketplace platform."
       />
       <Header />
@@ -77,8 +58,8 @@ export default function TenantOnboarding() {
                   <TabsContent value="company" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="brand_name">Company Name</Label>
-                      <Input
-                        id="brand_name"
+                      <Input,
+id="brand_name"
                         name="brand_name"
                         value={formData.brand_name}
                         onChange={handleInputChange}
@@ -89,8 +70,8 @@ export default function TenantOnboarding() {
                     
                     <div className="space-y-2">
                       <Label htmlFor="industry">Industry</Label>
-                      <Select 
-                        name="industry" 
+                      <Select,
+name="industry" 
                         value={formData.industry} 
                         onValueChange={(value) => handleSelectChange("industry", value)}
                       >
@@ -112,8 +93,8 @@ export default function TenantOnboarding() {
                     
                     <div className="space-y-2">
                       <Label htmlFor="company_size">Company Size</Label>
-                      <Select 
-                        name="company_size" 
+                      <Select,
+name="company_size" 
                         value={formData.company_size} 
                         onValueChange={(value) => handleSelectChange("company_size", value)}
                       >
@@ -135,8 +116,8 @@ export default function TenantOnboarding() {
                   <TabsContent value="branding" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="logo_url">Logo URL</Label>
-                      <Input
-                        id="logo_url"
+                      <Input,
+id="logo_url"
                         name="logo_url"
                         value={formData.logo_url}
                         onChange={handleInputChange}
@@ -150,16 +131,16 @@ export default function TenantOnboarding() {
                     <div className="space-y-2">
                       <Label htmlFor="primary_color">Primary Brand Color</Label>
                       <div className="flex items-center gap-2">
-                        <Input
-                          id="primary_color"
+                        <Input,
+id="primary_color"
                           name="primary_color"
                           type="color"
                           value={formData.primary_color}
                           onChange={handleInputChange}
                           className="w-12 p-1 h-10"
                         />
-                        <Input
-                          name="primary_color"
+                        <Input,
+name="primary_color"
                           value={formData.primary_color}
                           onChange={handleInputChange}
                           placeholder="#9b87f5"
@@ -169,8 +150,8 @@ export default function TenantOnboarding() {
                     
                     <div className="space-y-2">
                       <Label htmlFor="theme_preset">Theme Preset</Label>
-                      <Select 
-                        name="theme_preset" 
+                      <Select,
+name="theme_preset" 
                         value={formData.theme_preset} 
                         onValueChange={(value) => handleSelectChange("theme_preset", value)}
                       >
@@ -194,8 +175,8 @@ export default function TenantOnboarding() {
                           Show "Powered by Zion AI" in the footer and elsewhere
                         </p>
                       </div>
-                      <Switch
-                        id="is_co_branded"
+                      <Switch,
+id="is_co_branded"
                         checked={formData.is_co_branded}
                         onCheckedChange={(checked) => handleSwitchChange("is_co_branded", checked)}
                       />
@@ -206,8 +187,8 @@ export default function TenantOnboarding() {
                     <div className="space-y-2">
                       <Label htmlFor="subdomain">Subdomain</Label>
                       <div className="flex items-center">
-                        <Input
-                          id="subdomain"
+                        <Input,
+id="subdomain"
                           name="subdomain"
                           value={formData.subdomain}
                           onChange={handleInputChange}
@@ -224,15 +205,15 @@ export default function TenantOnboarding() {
                     
                     <div className="space-y-2">
                       <Label htmlFor="custom_domain">Custom Domain (Optional)</Label>
-                      <Input
-                        id="custom_domain"
+                      <Input,
+id="custom_domain"
                         name="custom_domain"
                         value={formData.custom_domain}
                         onChange={handleInputChange}
                         placeholder="hire.yourcompany.com"
                       />
                       <p className="text-xs text-muted-foreground">
-                        If you want to use your own domain, enter it here. You'll need to configure DNS records.
+                        If you want to use your own domain enter it here. You'll need to configure DNS records.
                       </p>
                     </div>
                   </TabsContent>

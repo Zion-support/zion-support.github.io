@@ -1,19 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import {
-  Home
-  Users
-  Settings
-  DollarSign
-  Phone
-  Menu
-} from 'lucide-react'
+import { Link,  } from 'react-router-dom'
+import { Home,
+Users
+, , Settings,
+DollarSign
+, , Phone,
+Menu,
+ } from 'lucide-react'
 const Sidebar = () => {
   const navigation = [
-    { name: 'Home', href: '/', icon: Home }
-    { name: 'About', href: '/about', icon: Users }
-    { name: 'Services', href: '/services', icon: Settings }
-    { name: 'Pricing', href: '/pricing', icon: DollarSign }
+    { name: 'Home', href: '/', icon: Home },
+{ name: 'About', href: '/about', icon: Users }
+    { name: 'Services', href: '/services', icon: Settings },
+{ name: 'Pricing', href: '/pricing', icon: DollarSign }
     { name: 'Contact', href: '/contact', icon: Phone }
   ]
   return (
@@ -27,8 +26,8 @@ const Sidebar = () => {
         </div>
         <nav className="space-y-2">
           {navigation.map((item) => (
-            <Link
-              key={item.name}
+            <Link,
+key={item.name}
               to={item.href}
               className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200"
             >

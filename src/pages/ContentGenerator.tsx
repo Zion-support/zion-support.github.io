@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from 'react',
-import { Header } from "@/components/Header",
-import { Button } from "@/components/ui/button",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Textarea } from "@/components/ui/textarea",
-import { Input } from "@/components/ui/input",
-import { Switch } from "@/components/ui/switch",
-import { Label } from "@/components/ui/label",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { toast } from "sonner",
-import { Loader2 } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useRouter  } from 'next/router';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import React { useState useEffect } from 'react',
+import { Header,  } from "@/components/Header",
+import { Button,  } from "@/components/ui/button",
+import { Select,, SelectContent,, SelectItem,, SelectTrigger,, SelectValue,  } from "@/components/ui/select",
+import { Textarea,  } from "@/components/ui/textarea",
+import { Input,  } from "@/components/ui/input",
+import { Switch,  } from "@/components/ui/switch",
+import { Label,  } from "@/components/ui/label",
+import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from "@/components/ui/tabs",
+import { Card,, CardContent,, CardDescription,, CardFooter,, CardHeader,, CardTitle,  } from "@/components/ui/card",
+import { toast,  } from "sonner",
+import { Loader2,  } from 'lucide-react'
+import { supabase,  } from "@/integrations/supabase/client",
+import { useAuth,  } from "@/hooks/useAuth",
+import { ScrollArea,  } from "@/components/ui/scroll-area";
+import { useRouter,, ,  } from 'next/router';
+import { logErrorToProduction } from '@/utils/productionLogger';
 export default function ContentGenerator() {
 
   const { user, isLoading } = useAuth();
   const router = null;
-  // Check if user is still loading
-  if (isLoading) {
+  // Check if user is still loading,
+if (isLoading) {
     return (
       <>
         <Header />
@@ -65,14 +65,14 @@ export default function ContentGenerator() {
 
                   <div className="space-y-2">
                     <Label htmlFor="topic" className="text-white">Main Topic / User Prompt</Label>
-                    <Input
-                      id="topic"
+                    <Input,
+id="topic"
                       placeholder={
                         contentType === 'blog' ? "e.g., Benefits of AI in Marketing" :
                         contentType === 'serviceDescription' ? "e.g., AI-Powered Chatbot Solutions" :
                         contentType === 'faq' ? "e.g., How does AI improve customer service?" :
-                        "e.g., May Platform Updates" // Newsletter or default
-                      }
+                        "e.g., May Platform Updates" // Newsletter or default,
+}
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       value={topic}
                       onChange={(e) => setTopic(e.target.value)}
@@ -80,10 +80,10 @@ export default function ContentGenerator() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="keywords" className="text-white">Keywords (Optional, comma-separated)</Label>
-                    <Input
-                      id="keywords"
-                      placeholder="e.g., AI, machine learning, SEO"
+                    <Label htmlFor="keywords" className="text-white">Keywords (Optional comma-separated)</Label>
+                    <Input,
+id="keywords"
+                      placeholder="e.g., AI machine learning SEO"
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       value={keywords}
                       onChange={(e) => setKeywords(e.target.value)}
@@ -92,8 +92,8 @@ export default function ContentGenerator() {
                   
                   <div className="space-y-2">
                     <Label htmlFor="customPrompt" className="text-white">Detailed Instructions / Custom Prompt (Optional)</Label>
-                    <Textarea
-                      id="customPrompt"
+                    <Textarea,
+id="customPrompt"
                       placeholder="Optionally provide more detailed instructions or a full custom prompt for the AI..."
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-[100px]"
                       value={customPrompt}
@@ -105,8 +105,8 @@ export default function ContentGenerator() {
                     <>
                       <div className="flex items-center justify-between">
                         <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>
-                        <Switch
-                          id="autoPublish"
+                        <Switch,
+id="autoPublish"
                           checked={autoPublish}
                           onCheckedChange={setAutoPublish}
                         />
@@ -114,8 +114,8 @@ export default function ContentGenerator() {
                       
                       <div className="flex items-center justify-between">
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
-                        <Switch
-                          id="includeImage"
+                        <Switch,
+id="includeImage"
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
                         />
@@ -126,8 +126,8 @@ export default function ContentGenerator() {
                   {contentType === 'newsletter' && (
                     <div className="space-y-2">
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>
-                      <Input
-                        id="testEmail"
+                      <Input,
+id="testEmail"
                         type="email"
                         placeholder="your@email.com"
                         className="bg-zion-blue border border-zion-blue-light text-white"
@@ -138,8 +138,8 @@ export default function ContentGenerator() {
                   )}
                 </CardContent>
                 <CardFooter>
-                  <Button
-                    onClick={generateContent}
+                  <Button,
+onClick={generateContent}
                     disabled={isGenerating}
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   >
@@ -180,9 +180,9 @@ export default function ContentGenerator() {
                       {/* Specific handling for newsletter test send can be re-added if needed */}
                       {contentType === 'newsletter' && previewContent.subject && ( // Assuming generatedContent might be the body for newsletter
                         <div className="mt-4 flex justify-end">
-                          <Button
-                            onClick={sendTestNewsletter} // sendTestNewsletter would need to be adapted if previewContent structure changed significantly
-                            disabled={!testEmail}
+                          <Button,
+onClick={sendTestNewsletter} // sendTestNewsletter would need to be adapted if previewContent structure changed significantly,
+disabled={!testEmail}
                             className="bg-zion-blue-light hover:bg-zion-blue text-white"
                           >
                             Send Test to {testEmail || "your email"}
@@ -193,8 +193,8 @@ export default function ContentGenerator() {
                   ) : (
                     <div className="flex flex-col items-center justify-center py-12 text-center">
                       <div className="bg-zion-blue-light/20 p-6 rounded-full mb-4">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
+                        <svg,
+xmlns="http://www.w3.org/2000/svg"
                           width="24"
                           height="24"
                           viewBox="0 0 24 24"

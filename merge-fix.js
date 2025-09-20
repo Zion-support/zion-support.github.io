@@ -2,13 +2,13 @@ const fs = require('fs'); const path = require('path');  function fixMergeConfli
 const fs = require('fs');
 const path = require('path');
 console.log('🔧 Starting Merge Conflict Resolution');
-// Function to fix merge conflicts in a file
+// Function to fix merge conflicts in a file,
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
-    // Remove merge conflict markers and keep HEAD version
-    content = content.replace(/
+    // Remove merge conflict markers and keep HEAD version,
+content = content.replace(/
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed merge conflicts "in": ${path.relative(process.cwd(), filePath)}`);
@@ -17,7 +17,7 @@ function fixMergeConflicts(filePath) {
     console.log(`❌ Error fixing ${filePath}: ${error.message}`);
     return false}
 }
-// Function to get all files recursively
+// Function to get all files recursively,
 function getAllFiles(dir, extensions) {
   let files = [];
   try {
@@ -30,10 +30,10 @@ function getAllFiles(dir, extensions) {
         files.push(fullPath)}
     }
   } catch (error) {
-    // Skip directories that can't be read
-  }
+    // Skip directories that can't be read,
+}
   return files}
-// Main execution
+// Main execution,
 async function main() {
   console.log('🔍 Scanning for merge conflicts...');
   const files = getAllFiles(process.cwd(), ['.tsx', '.ts', '.jsx', '.js', '.json', '.md']);

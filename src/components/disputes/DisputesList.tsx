@@ -1,99 +1,4 @@
-<<<<<<< HEAD
-
-import React, { useState } from "react",
-import { Dispute, DisputeStatus } from "@/types/disputes",
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table",
-import Skeleton from "@/components/ui/skeleton",
-import { formatDistanceToNow } from "date-fns";
-import { ShieldAlert } from 'lucide-react'
-import Link from "next/link";
-type DisputesListProps = any;
-=======
-import React, { useState } from 'react'
-import { Dispute, DisputeStatus } from '@/types/disputes'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import {  Table,  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
-} from '@/components/ui/table'
-import Skeleton from '@/components/ui/skeleton'
-import { formatDistanceToNow } from 'date-fns'
-import { ShieldAlert } from 'lucide-react'
-import Link from 'next/link'
-type DisputesListProps = {
-  disputes: Dispute[]
-isLoading: boolean
-}
-export function DisputesList({ disputes, isLoading }: DisputesListProps) {
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | 'all'>(
-    'all'
-  )
-  const filteredDisputes =
-    statusFilter === 'all'
-      ? disputes
-      : disputes.filter(dispute => dispute.status === statusFilter)
-  const getStatusBadgeVariant = (status: DisputeStatus,) => {
-    switch (status) {
-      case 'open':
-        return 'default'
-      case 'under_review':
-        return 'secondary'
-      case 'resolved':
-        return 'outline'; // Changed from "success" to "outline"
-      case 'closed':
-        return 'outline'
-      default:
-        return 'default'
-import React, { useState } from "react"
-import { Dispute, DisputeStatus } from "@/types/disputes"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import {
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow} from "@/components/ui/table"
-import Skeleton from "@/components/ui/skeleton"
-import { formatDistanceToNow } from "date-fns"
-import Link from "next/link"
-type DisputesListProps = {
-  disputes: Dispute[]
-  isLoading: boolean
-}
-export function DisputesList({ disputes, isLoading }: DisputesListProps) {
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all")
-  const filteredDisputes = statusFilter === "all"
-    ? disputes
-    : disputes.filter(dispute => dispute.status === statusFilter)
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
-    switch (status) {
-      case "open": return "default"
-      case "under_review":
-        return "secondary"
-      case "resolved":
-        return "outline", // Changed from "success" to "outline"
-      case "closed":
-        return "outline"
-      default:
-        return "default"
-    }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  if (isLoading) {
+if (isLoading) {
     return (
       <div className='space-y-4'>
         <div className='flex gap-2 mb-4'>
@@ -121,7 +26,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {[...Array(5)].map((_, i,) => (
+              {[...Array(5)].map((_ i,) => (
                 <TableRow key={i}>
                   <TableCell>
                     <Skeleton className='h-4 w-24' />
@@ -175,68 +80,68 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   return (
     <div className='space-y-4'>
       <div className='flex gap-2 mb-4 overflow-x-auto pb-2'>
-        <Button
-          variant={statusFilter === 'all' ? 'default' : 'outline'}
+        <Button,
+variant={statusFilter === 'all' ? 'default' : 'outline'}
           onClick={() => setStatusFilter('all')}
           size='sm'        >
           All
         </Button>
-        <Button
-          variant={statusFilter === 'open' ? 'default' : 'outline'}
+        <Button,
+variant={statusFilter === 'open' ? 'default' : 'outline'}
           onClick={() => setStatusFilter('open')}
           size='sm'        >
           Open
         </Button>
-        <Button
-          variant={statusFilter === 'under_review' ? 'default' : 'outline'}
+        <Button,
+variant={statusFilter === 'under_review' ? 'default' : 'outline'}
           onClick={() => setStatusFilter('under_review')}
           size='sm'        >
           Under Review
         </Button>
-        <Button
-          variant={statusFilter === 'resolved' ? 'default' : 'outline'}
+        <Button,
+variant={statusFilter === 'resolved' ? 'default' : 'outline'}
           onClick={() => setStatusFilter('resolved')}
           size='sm'        >
           Resolved
         </Button>
-        <Button
-          variant={statusFilter === 'closed' ? 'default' : 'outline'}
+        <Button,
+variant={statusFilter === 'closed' ? 'default' : 'outline'}
           onClick={() => setStatusFilter('closed')}
           size='sm'        >    <div className="space-y-4">
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
-        <Button
-          variant={statusFilter === "all" ? "default" : "outline"}
+        <Button,
+variant={statusFilter === "all" ? "default" : "outline"}
           onClick={() => setStatusFilter("all")}
           size="sm"
         >
           All
         </Button>
-        <Button
-          variant={statusFilter === "open" ? "default" : "outline"}
+        <Button,
+variant={statusFilter === "open" ? "default" : "outline"}
           onClick={() => setStatusFilter("open")}
           size="sm"
           size="sm"
         >
           Open
         </Button>
-        <Button
-          variant={statusFilter === "under_review" ? "default" : "outline"}
+        <Button,
+variant={statusFilter === "under_review" ? "default" : "outline"}
           onClick={() => setStatusFilter("under_review")}
           size="sm"
           size="sm"
         >
           Under Review
         </Button>
-        <Button
-          variant={statusFilter === "resolved" ? "default" : "outline"}
+        <Button,
+variant={statusFilter === "resolved" ? "default" : "outline"}
           onClick={() => setStatusFilter("resolved")}
           size="sm"
           size="sm"
         >
           Resolved
         </Button>
-        <Button
-          variant={statusFilter === "closed" ? "default" : "outline"}
+        <Button,
+variant={statusFilter === "closed" ? "default" : "outline"}
           onClick={() => setStatusFilter("closed")}
           size="sm"
           size="sm"
@@ -281,15 +186,15 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                 </TableCell>
                 <TableCell>
                   {formatDistanceToNow(new Date(dispute.created_at), {
-                    addSuffix: true
-                  })}                      Talent: {dispute.talent_profile?.display_name |"Unknown Talent"}
+                    addSuffix: true;
+})}                      Talent: {dispute.talent_profile?.display_name |"Unknown Talent"}
                     </span>
                   </div>
                 </TableCell>
                 <TableCell>
                   {formatDistanceToNow(new Date(dispute.created_at), {
-                    addSuffix: true
-                  })}
+                    addSuffix: true;
+})}
                 </TableCell>
                 <TableCell>
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>
@@ -334,7 +239,7 @@ if (isLoading) {"
   dispute.id "
 }> </TableCell> <TableCell> <div className="flex flex-col text-sm" > <span> </span> </div> </TableCell> <TableCell> {
   formatDistanceToNow (new Date (dispute.created at), {
-  addSuffix: true
+  addSuffix: true;
 })
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) )
 }</TableBody> </Table> </div> </div>)

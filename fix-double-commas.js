@@ -1,12 +1,12 @@
-#!/usr/bin/env node
+#!/usr/bin/env node,
 import fs from "fs";
 import path from "path";
 function fixDoubleCommas(filePath) {
   try {
     const content = fs.readFileSync(filePath, "utf8");
     let modified = false;
-    // Fix double commas in import statements
-    const doubleCommaRegex = /,\s*,/g;
+    // Fix double commas in import statements,
+const doubleCommaRegex = /,\s*,/g;
     const fixedContent = content.replace(doubleCommaRegex, ",");
     if (fixedContent !== content) {
       fs.writeFileSync(filePath, fixedContent, "utf8");
@@ -26,8 +26,8 @@ function findFilesWithDoubleCommas(dir) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
-        // Skip certain directories
-        if (
+        // Skip certain directories,
+if (
           [
             "node_modules"
             ".git"
@@ -56,7 +56,7 @@ function findFilesWithDoubleCommas(dir) {
   traverse(dir);
   return files;
 }
-// Main execution
+// Main execution,
 const files = findFilesWithDoubleCommas(".");
 let fixedCount = 0;
 console.log(`Found ${files.length} files to check for double commas...`);

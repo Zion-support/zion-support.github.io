@@ -1,23 +1,23 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 interface Props {
-  children: ReactNode
+  children: ReactNode;
 }
 interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
+  hasError: boolean,
+error?: Error,
+errorInfo?: ErrorInfo,
 }
-class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
     super(props)
     this.state = { hasError: false }
   }
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return { hasError: true error }
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo)
-    this.setState({ error, errorInfo })
+  componentDidCatch(error: Error errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error errorInfo)
+    this.setState({ error errorInfo })
   }
   render() {
     if (this.state.hasError) {
@@ -33,17 +33,17 @@ class ErrorBoundary extends Component<Props, State> {
               <h2 className="text-xl font-semibold text-gray-900">Something went wrong</h2>
             </div>
             <p className="text-gray-600 mb-4">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We're sorry but something unexpected happened. Please try refreshing the page.
             </p>
             <div className="space-y-3">
-              <button
-                onClick={() => window.location.reload()}
+              <button,
+onClick={() => window.location.reload()}
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Refresh Page
               </button>
-              <button
-                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+              <button,
+onClick={() => this.setState({ hasError: false error: undefined errorInfo: undefined })}
                 className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors"
               >
                 Try Again
@@ -64,7 +64,7 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       )
     }
-    return this.props.children
-  }
+    return this.props.children,
+}
 }
 export default ErrorBoundary

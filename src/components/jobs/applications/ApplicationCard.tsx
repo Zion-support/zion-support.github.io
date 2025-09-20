@@ -1,99 +1,16 @@
-<<<<<<< HEAD
-
-import { useState } from "react",
-import { formatDistanceToNow } from "date-fns",
-import { JobApplication } from "@/types/jobs",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react'
-import Link from "next/link",
-import { StatusBadge } from "./StatusBadge",
-import { ApplicationProgress } from "./ApplicationProgress";
-import { toast } from "sonner";
-=======
-import { useState } from 'react'
-import { formatDistanceToNow } from 'date-fns'
-import { JobApplication } from '@/types/jobs'
-import { Button } from '@/components/ui/button'
-import {
-  Card
-  CardContent
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-  FileText
-  MessageSquare
-  HelpCircle
-  Calendar
-  ExternalLink
-  Download
-} from 'lucide-react'
-import Link from 'next/link'
-import { StatusBadge } from './StatusBadge'
-import { ApplicationProgress } from './ApplicationProgress'
-import { toast } from 'sonner'
-import { useState } from "react"
-import { formatDistanceToNow } from "date-fns"
-import { JobApplication } from "@/types/jobs"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react'; import Link from "next/link"
-import { StatusBadge } from "./StatusBadge"
-import { ApplicationProgress } from "./ApplicationProgress"
-import { toast } from "sonner"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface ApplicationCardProps {
-  application: JobApplication
+  application: JobApplication,
 export function ApplicationCard({ application }: ApplicationCardProps) {
-  const [ expanded, setExpanded ] = useState(false)
-  const handleDownloadResume = () => {
-    // This would typically download the resume file
-    toast.info('Resume download functionality will be implemented soon') }
-  const renderActionButtons = () => {
-    switch (application.status) {interface ApplicationCardProps {
-  application: JobApplication
-}
-export function ApplicationCard({ application }: ApplicationCardProps) {
-<<<<<<< HEAD
-  const [expanded, setExpanded] = useState(false);
-  const handleDownloadResume = null;
-=======
   const [expanded, setExpanded] = useState(false)
   const handleDownloadResume = () => {
-    // This would typically download the resume file
-    toast.info("Resume download functionality will be implemented soon")
-  }
+    // This would typically download the resume file,
+toast.info('Resume download functionality will be implemented soon') }
   const renderActionButtons = () => {
-    switch (application.status) {
-      case 'shortlisted':
-        return (
-          <Button variant='default' size='sm'>
-            <Calendar className='h-4 w-4 mr-1' /> Prepare for Interview
-        )
-      case 'interview':
-        return (
-          <Button variant='default' size='sm'>
-            <Calendar className='h-4 w-4 mr-1' /> View Interview Details
-          </Button>
-        )
-      case 'hired':
-          >
-            <FileText className='h-4 w-4 mr-1' /> View Offer
-          </Button>
-        )
-      case 'rejected':
-        return (
-          <Button variant='outline' size='sm'>
-            <HelpCircle className='h-4 w-4 mr-1' /> View Feedback
-          </Button>
-        )
-      default:
-        return null
-    }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return (
+    switch (application.status) {interface ApplicationCardProps {
+  application: JobApplication;
+}
+export function ApplicationCard({ application }: ApplicationCardProps) {
+return (
     <Card className='overflow-hidden'>
       <CardHeader className='pb-3'>
         <div className='flex justify-between items-start'>
@@ -102,8 +19,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             <div className='text-sm text-muted-foreground mt-1'>
               Applied{' '}
               {formatDistanceToNow(new Date(application.created_at), {
-                addSuffix: true
-              })}            </div>            <CardTitle>{application.job?.title |"Unknown Job"}</CardTitle>
+                addSuffix: true;
+})}            </div>            <CardTitle>{application.job?.title |"Unknown Job"}</CardTitle>
             <div className="text-sm text-muted-foreground mt-1">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </div>
@@ -132,8 +49,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
                       {application.resume.title |'Resume'}
                     </span>
                   </div>
-                  <Button
-                    variant='ghost'
+                  <Button,
+variant='ghost'
                     size='sm'
                     onClick={handleDownloadResume}
                   >
@@ -187,8 +104,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
       </CardContent>
       <CardFooter className='flex flex-col gap-3 pt-0'>
         <div className='flex justify-between items-center w-full'>
-          <Button
-            variant='ghost'
+          <Button,
+variant='ghost'
             size='sm'
             onClick={() => setExpanded(!expanded)}
           >
@@ -207,8 +124,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client          </Link>          </Button>
           <div className="flex gap-2">
             {renderActionButtons()}
-            <Button
-              variant="outline"
+            <Button,
+variant="outline"
               size="sm"
               asChild
             >
@@ -221,8 +138,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         <Button variant='secondary' size='sm' className='w-full' asChild>
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client
-        <Button
-          variant="secondary"
+        <Button,
+variant="secondary"
           size="sm"
           className="w-full"
           asChild
@@ -234,10 +151,10 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
     </Card>
   )
 default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadge status= {
-  application.status
+  application.status,
 }/> </div> </CardHeader> {"
   application.cover letter && (<div> <h4 className="text-sm font-medium mb-1" >Your Cover Letter</h4> <p className="text-sm text-muted-foreground" > {
-  application.cover letter
+  application.cover letter,
 }</p> </div>)
 }</Button> </div> </div>)
 }{"

@@ -1,50 +1,4 @@
-<<<<<<< HEAD
-
-import React, { useState } from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Input } from "@/components/ui/input";
-import { toast } from "sonner";
-import { Check, Copy, ExternalLink } from 'lucide-react'
-export function ZapierIntegration() {
-  const [copied, setCopied] = useState(false);
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
-  const handleCopyApiKey = null;
-=======
-import React, { useState } from 'react'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import {
-  Card
-  CardContent
-  CardFooter
-  CardHeader
-} from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { toast } from 'sonner'
-import { Check, Copy, ExternalLink } from 'lucide-react'
-export function ZapierIntegration() {
-  const [copied, setCopied] = useState(false)
-  const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R')
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-import { Zap } from 'lucide-react'
-export function ZapierIntegration() {
-  const [copied, setCopied] = useState(false)
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")
-  const handleCopyApiKey = () => {
-    navigator.clipboard.writeText(apiKey)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-    toast.success('API key copied to clipboard')
-    navigator.clipboard.writeText(apiKey)
-    setCopied(true)
-    setTimeout((,) => setCopied(false), 2000)
-    toast.success("API key copied to clipboard")
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return (
+return (
     <div className='space-y-6'>
       <div className='grid md:grid-cols-3 gap-6'>
         <Card className='md:col-span-2'>
@@ -58,19 +12,19 @@ export function ZapierIntegration() {
           </CardHeader>
           <CardContent>
             <p className='text-sm text-muted-foreground mb-4'>
-              Connect Zion with 3,000+ apps via Zapier. Use your API key below
-              to set up integrations.
+              Connect Zion with 3000+ apps via Zapier. Use your API key below,
+to set up integrations.
             </p>
             <div className='space-y-4'>
               <div className='space-y-2'>
                 <label className='text-sm font-medium'>Your Zion API Key</label>
                 <div className='flex gap-2'>
-                  <Input
-                    value={apiKey}
-                    readOnly
-                    className='font-mono text-sm'                  />
-                  <Button
-                    size='sm'
+                  <Input,
+value={apiKey}
+                    readOnly,
+className='font-mono text-sm'                  />
+                  <Button,
+size='sm'
                     variant='outline'
                     onClick={handleCopyApiKey}
                   >
@@ -137,8 +91,8 @@ export function ZapierIntegration() {
         </CardHeader>
         <CardContent>
           <p className='text-sm text-muted-foreground mb-4'>
-            Use these webhook triggers to start Zaps when events happen in your
-            Zion account.
+            Use these webhook triggers to start Zaps when events happen in your,
+Zion account.
           </p>
           <div className='grid md:grid-cols-3 gap-4'>
             <div className='border rounded-md p-4'>

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node,
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -66,17 +66,17 @@ class AdvancedSourceFixer {
       if (wasFixed) {
         fs.writeFileSync(filePath, fixedContent);
         this.fixes.push({
-          file: filePath
-          timestamp: new Date().toISOString()
-          fixes: this.getAppliedFixes(content, fixedContent)
+          file: filePath,
+timestamp: new Date().toISOString(),
+fixes: this.getAppliedFixes(content, fixedContent)
         });
         this.log(`Fixed: ${filePath}`);
       }
     } catch (error) {
       this.errors.push({
-        file: filePath
-        error: error.message
-        timestamp: new Date().toISOString()
+        file: filePath,
+error: error.message,
+timestamp: new Date().toISOString()
       });
       this.log(`Error fixing ${filePath}: ${error.message}`, "ERROR");
     }
@@ -117,19 +117,19 @@ class AdvancedSourceFixer {
   }
   fixParsingErrors(content, filePath) {
     let fixed = content;
-    // Fix unterminated strings
-    fixed = fixed.replace(/"[^"]*$/gm, '"');
+    // Fix unterminated strings,
+fixed = fixed.replace(/"[^"]*$/gm, '"');
     fixed = fixed.replace(/'[^']*$/gm, "'");
-    // Fix duplicate keywords
-    fixed = fixed.replace(/import\s+from\s+from/g, "import React from");
+    // Fix duplicate keywords,
+fixed = fixed.replace(/import\s+from\s+from/g, "import React from");
     fixed = fixed.replace(/export\s+from\s+from/g, "export default");
     fixed = fixed.replace(/function\s+function/g, "function");
     fixed = fixed.replace(/const\s+const/g, "const");
     fixed = fixed.replace(/let\s+let/g, "let");
-    // Add missing semicolons
-    fixed = fixed.replace(/([^}])\n/g, "$1;\n");
-    // Fix JSX tags
-    fixed = fixed.replace(/<([^>]*)\s*>/g, "<$1>");
+    // Add missing semicolons,
+fixed = fixed.replace(/([^}])\n/g, "$1;\n");
+    // Fix JSX tags,
+fixed = fixed.replace(/<([^>]*)\s*>/g, "<$1>");
     fixed = fixed.replace(/<\/([^>]*)\s*>/g, "</$1>");
     return fixed;
   }
@@ -152,13 +152,13 @@ class AdvancedSourceFixer {
   }
   fixSyntaxIssues(content, filePath) {
     let fixed = content;
-    // Fix duplicate keywords
-    fixed = fixed.replace(/\bconst\s+const\b/g, "const");
+    // Fix duplicate keywords,
+fixed = fixed.replace(/\bconst\s+const\b/g, "const");
     fixed = fixed.replace(/\blet\s+let\b/g, "let");
     fixed = fixed.replace(/\bvar\s+var\b/g, "var");
     fixed = fixed.replace(/\bfunction\s+function\b/g, "function");
-    // Fix trailing commas
-    fixed = fixed.replace(/\{\s*,\s*\}/g, "{}");
+    // Fix trailing commas,
+fixed = fixed.replace(/\{\s*,\s*\}/g, "{}");
     fixed = fixed.replace(/\{\s*,\s*/g, "{");
     fixed = fixed.replace(/\[\s*,\s*\]/g, "[]");
     fixed = fixed.replace(/\[\s*,\s*/g, "[");
@@ -186,12 +186,12 @@ class AdvancedSourceFixer {
   }
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString()
-      totalFilesFixed: this.fixes.length
-      totalErrors: this.errors.length
-      fixes: this.fixes
-      errors: this.errors
-    }
+      timestamp: new Date().toISOString(),
+totalFilesFixed: this.fixes.length,
+totalErrors: this.errors.length,
+fixes: this.fixes,
+errors: this.errors,
+}
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
   }

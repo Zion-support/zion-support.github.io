@@ -9,10 +9,10 @@ const server = http.createServer((req, res) => {
       JSON.stringify({
         "status": 'healthy'
         "timestamp": new Date().toISOString()
-        uptime: process.uptime()
-        memory: process.memoryUsage()
-        pid: process.pid
-      })
+        uptime: process.uptime(),
+memory: process.memoryUsage()
+        pid: process.pid,
+})
     )} else {
     res.writeHead(404, {
   Content-Type': 'text/"plain":  })';

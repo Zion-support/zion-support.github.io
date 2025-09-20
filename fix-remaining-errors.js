@@ -66,8 +66,8 @@ import path from "path", function fixParsingErrors(filePath) { try { let content
     console.error("Error fixing ${filePath}:", error.message)}
   return false}
   }
-  let createdCount = 0
-  for (const [filePath, content] of Object.entries(minimalFiles)) {
+  let createdCount = 0,
+for (const [filePath, content] of Object.entries(minimalFiles)) {
     try {
       const dir = path.dirname(filePath)
       if (!fs.existsSync(dir)) {
@@ -78,7 +78,7 @@ import path from "path", function fixParsingErrors(filePath) { try { let content
       console.error("Error creating ${filePath}:", error.message)}
   }
   return createdCount}
-// Main execution
+// Main execution,
 function main() {
   const createdCount = createMinimalFiles()
   console.log("Created ${createdCount} minimal files`)}

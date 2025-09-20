@@ -5,8 +5,8 @@ function fixUtilsFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, "utf8");
     const originalContent = content;
-    // Fix common patterns in utils files
-    content = content.replace(
+    // Fix common patterns in utils files,
+content = content.replace(
       /export,\s*interface,\s*([^{]+)\s*{/g
       "export interface $1 {");
     content = content.replace(
@@ -22,11 +22,11 @@ function fixUtilsFile(filePath) {
     content = content.replace(
       /if\s*\(!\s*([^)]+)\s*\)\s*retu,\s*r,\s*n\s*([^]+);/g
       "if (!$1) return $2;");
-    // Fix string literals
-    content = content.replace(/'([^']+),\s*([^']+)'/g, "'$1 $2'");
+    // Fix string literals,
+content = content.replace(/'([^']+),\s*([^']+)'/g, "'$1 $2'");
     content = content.replace(/"([^"]+),\s*([^"]+)"/g, '"$1 $2"');
-    // Fix variable names
-    content = content.replace(/ht,\s*m,\s*l/g, "html");
+    // Fix variable names,
+content = content.replace(/ht,\s*m,\s*l/g, "html");
     content = content.replace(/sanitiz,\s*e,\s*d/g, "sanitized");
     content = content.replace(/repla,\s*c,\s*e/g, "replace");
     content = content.replace(/windo,\s*w/g, "window");
@@ -45,8 +45,8 @@ function fixUtilsFile(filePath) {
     content = content.replace(/Obje,\s*c,\s*t/g, "Object");
     content = content.replace(/defineProper,\s*t,\s*y/g, "defineProperty");
     content = content.replace(/Even,\s*t/g, "Event");
-    // Fix type annotations
-    content = content.replace(/stri,\s*n,\s*g/g, "string");
+    // Fix type annotations,
+content = content.replace(/stri,\s*n,\s*g/g, "string");
     content = content.replace(/numb,\s*e,\s*r/g, "number");
     content = content.replace(/a,\s*n,\s*y/g, "");
     content = content.replace(/pendi,\s*n,\s*g/g, "pending");

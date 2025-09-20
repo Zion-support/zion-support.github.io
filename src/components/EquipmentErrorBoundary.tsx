@@ -1,56 +1,29 @@
 import React from 'react';
-import { AlertTriangle, RefreshCw } from 'lucide-react'
-<<<<<<< HEAD
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent  } from '@/components/ui/card';
-import {logErrorToProduction} from '@/utils/productionLogger';
-=======
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { logErrorToProduction } from '@/utils/productionLogger'
+import { AlertTriangle,, RefreshCw,  } from 'lucide-react'
 interface Props {
-  children: React.ReactNode
-interface State {
-  hasError: boolean
-  error?: Error
-export class EquipmentErrorBoundary extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = { hasError: false }
-  hasError: boolean
-  error?: Error
-}
-import {logErrorToProduction} from '@/utils/productionLogger'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-interface Props {
-  children: React.ReactNode
+  children: React.ReactNode,
 }
 interface State {
-<<<<<<< HEAD
-  hasError: boolean;
-=======
-  hasError: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  error?: Error
+error?: Error,
 }
-export class EquipmentErrorBoundary extends React.Component<Props, State> {
+export class EquipmentErrorBoundary extends React.Component<Props State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false }
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return { hasError: true error }
   }
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    logErrorToProduction('Equipment page error:', error, {
-      componentStack: errorInfo.componentStack
-    }) }
-    logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack })
+  componentDidCatch(error: Error errorInfo: React.ErrorInfo) {
+    logErrorToProduction('Equipment page error:', error {
+      componentStack: errorInfo.componentStack,
+}) }
+    logErrorToProduction('Equipment page error:', error { componentStack: errorInfo.componentStack })
   }
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return { hasError: true error }
   }
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack })
+  componentDidCatch(error: Error errorInfo: React.ErrorInfo) {
+    logErrorToProduction('Equipment page error:', error { componentStack: errorInfo.componentStack })
   }
   render() {
     if (this.state.hasError) {
@@ -63,27 +36,27 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                 Something went wrong
               </h2>
               <p className='text-red-700 mb-4'>
-                We're having trouble loading the equipment listings. This might
-                be a temporary issue.
+                We're having trouble loading the equipment listings. This might,
+be a temporary issue.
               </p>
               <div className='flex gap-2 justify-center'>
-                <Button
-                  onClick={() =>
-                    this.setState({ hasError: false, error: undefined })
+                <Button,
+onClick={() =>
+                    this.setState({ hasError: false error: undefined })
                   }
                   variant='outline'                >
                   <RefreshCw className='h-4 w-4 mr-2' />
                   Try Again
                 </Button>
-                <Button
-                  onClick={() => window.location.reload()}
+                <Button,
+onClick={() => window.location.reload()}
                   variant='default'
                 >                  Refresh Page
                 <Button onClick={() => window.location.reload()} variant="default">
               </p>
               <div className="flex gap-2 justify-center">
-                <Button
-                  onClick={() => this.setState({ hasError: false, error: undefined })}
+                <Button,
+onClick={() => this.setState({ hasError: false error: undefined })}
                   variant="outline"
                 >
                   <RefreshCw className="h-4 w-4 mr-2" />
@@ -98,9 +71,9 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
         </div>
       )
     }
-    return this.props.children
-  }      )
+    return this.props.children,
+}      )
     }
-    return this.props.children
-  }
+    return this.props.children,
+}
 }

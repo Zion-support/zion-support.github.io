@@ -1,85 +1,33 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react'
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react';
-import { useMessaging } from '@/context/MessagingContext';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { ConversationsList, ConversationDetailView } from '@/components/messaging';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { toast } from 'sonner';
-import { Button } from '@/components/ui/button';
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
-import { useRouter } from 'next/router'; // Changed from react-router-dom
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5,
+import React { useEffect useState } from 'react';
+import { MessageSquare,, Video,  } from 'lucide-react';
+import { useMessaging,  } from '@/context/MessagingContext';
+import { ProtectedRoute,  } from '@/components/ProtectedRoute';
+import { ConversationsList,, ConversationDetailView,  } from '@/components/messaging';
+import { useIsMobile,  } from '@/hooks/use-mobile';
+import { toast,  } from 'sonner';
+import { Button,  } from '@/components/ui/button';
+import { LoadingSpinner,  } from '@/components/ui/enhanced-loading-states';
+import { useRouter,  } from 'next/router'; // Changed from react-router-dom
 =======
 
-import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react'
-import { useMessaging  } from '@/context/MessagingContext';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { ConversationsList, ConversationDetailView  } from '@/components/messaging';
-import { useIsMobile  } from '@/hooks/use-mobile';
-import { toast  } from 'sonner';
-import { Button  } from '@/components/ui/button';
-import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
-import { useRouter } from 'next/router', // Changed from react-router-dom
-import {logErrorToProduction} from '@/utils/productionLogger';
+import React { useEffect useState } from 'react';
+import { MessageSquare,, Video,  } from 'lucide-react'
+import { useMessaging,, ,  } from '@/context/MessagingContext';
+import { ProtectedRoute,, ,  } from '@/components/ProtectedRoute';
+import { ConversationsList,, ConversationDetailView,, ,  } from '@/components/messaging';
+import { useIsMobile,, ,  } from '@/hooks/use-mobile';
+import { toast,, ,  } from 'sonner';
+import { Button,, ,  } from '@/components/ui/button';
+import { LoadingSpinner,, ,  } from '@/components/ui/enhanced-loading-states';
+import { useRouter,  } from 'next/router', // Changed from react-router-dom,
+import { logErrorToProduction } from '@/utils/productionLogger';
 export default function MessagingInbox() {
-<<<<<<< HEAD
-
-  const { 
-    conversations;
-    activeConversation;
-    setActiveConversation;
-=======
-  const {
-    conversations
-    activeConversation
-    setActiveConversation
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-    markAsRead;
+markAsRead;
     fetchConversations;
-    isLoading
-  } = useMessaging();
-<<<<<<< HEAD
-  const isMobile = null;
-=======
-  const isMobile = useIsMobile();
-  const router = useRouter(), // Changed from navigate
-  const [activeCall, setActiveCall] = useState<string | null>(null);
-  useEffect((,) => {
-    // Fetch conversations when component mounts
-    const loadData = async () => {
-      try {
-        await fetchConversations()
-      } catch (error) {
-        logErrorToProduction('Failed to load conversations:', { data: error })
-        toast.error("Failed to load messages. Please try again.")
-      }
-    }
-    loadData()
-  }, [fetchConversations]);
-  const startVideoCall = () => {
-    if (!activeConversation) {
-      toast.error("Please select a conversation first");
-      return
-    }
-    const roomId = `msg-${activeConversation.id}`;
-    setActiveCall(roomId);
-    // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-    });
-    // Navigate to video call page
-    router.push(`/call/${roomId}`), // Changed from navigate
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return (
+    isLoading,
+} = useMessaging();
+return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto py-8 px-4">
@@ -89,8 +37,8 @@ export default function MessagingInbox() {
               Messages
             </h1>
             {activeConversation && (
-              <Button
-                onClick = {startVideoCall,}
+              <Button,
+onClick = {startVideoCall,}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
               >
                 <Video className="h-4 w-4" />
@@ -106,8 +54,8 @@ export default function MessagingInbox() {
                   <LoadingSpinner variant="primary" />
                 </div>
               ) : (
-                <ConversationsList
-                  conversations = {conversations,}
+                <ConversationsList,
+conversations = {conversations,}
                   activeConversation = {activeConversation,}
                   setActiveConversation = {setActiveConversation,}
                   markAsRead = {markAsRead,}

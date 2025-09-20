@@ -1,167 +1,17 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import { useRouter  } from 'next/router';
-import Link from 'next/link',
-import { SEO } from "@/components/SEO",
-import JsonLd from "@/components/JsonLd",
-import { Button } from "@/components/ui/button",
-import ImageWithRetry from '@/components/ui/ImageWithRetry',
-=======
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import { SEO } from '@/components/SEO'
-import JsonLd from '@/components/JsonLd'
-import { Button } from '@/components/ui/button'
-import ImageWithRetry from '@/components/ui/ImageWithRetry'
-import {
-  ArrowLeft
-  Calendar
-  Clock
-  ChevronLeft
-  ChevronRight
-  Share2
-  Facebook
-  Twitter
-  Linkedin
-} from 'lucide-react'
-import type { BlogPost as BlogPostType } from '@/types/blog'
-import { Separator } from '@/components/ui/separator'
-import ReactMarkdown from 'react-markdown'
-import { logErrorToProduction } from '@/utils/productionLogger'
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from '@/data/blog-posts'
-import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout'
-import { fetchWithRetry } from '@/utils/fetchWithRetry'
-export default function BlogPost() {
-  const router = useRouter()
-  const { slug } = router.query as { slug: string }
-  const [post, setPost] = useState<BlogPostType | null>(null)
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
-  const [showShareMenu, setShowShareMenu] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const timedOut = useSkeletonTimeout(20000)
-  useEffect(() => {import { useRouter } from 'next/router'
-import { SEO } from "@/components/SEO"
-import JsonLd from "@/components/JsonLd"
-import { Button } from "@/components/ui/button"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
+import { ArrowLeft,, Calendar,, Clock,, ChevronLeft,, ChevronRight,, Share2,, Facebook,, Twitter,, Linkedin,  } from 'lucide-react'
 import type { BlogPost as BlogPostType } from "@/types/blog",
-import { Separator } from "@/components/ui/separator";
+import { Separator,  } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
-import { logErrorToProduction } from '@/utils/productionLogger';
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts";
-import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
-import { fetchWithRetry } from '@/utils/fetchWithRetry';
+import { logErrorToProduction,  } from '@/utils/productionLogger';
+// Importing the sample blog posts - in a real app you would fetch this from an API,
+import { BLOG_POSTS,  } from "@/data/blog-posts";
+import { useSkeletonTimeout,  } from '@/hooks/useSkeletonTimeout';
+import { fetchWithRetry,  } from '@/utils/fetchWithRetry';
 export default function BlogPost() {
-<<<<<<< HEAD
-
-  const router = null;
-=======
-  const router = useRouter()
-  const { slug } = router.query as { slug: string }
-  const [post, setPost] = useState<BlogPostType | null>(null)
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
-  const [showShareMenu, setShowShareMenu] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const timedOut = useSkeletonTimeout(20000)
-  useEffect((,) => {
-    const fetchPost = async () => {
-      setIsLoading(true)
-      setError(null)
-      try {
-        const data = await fetchWithRetry(`/api/blog/${slug}`)
-        setPost(data)
-        const related = BLOG_POSTS.filter(
-          p =>
-            p.id !== data.id &&
-            (p.category === data.category |
-              p.tags.some(tag => data.tags.includes(tag)))
-        ).slice(0, 3)
-        setRelatedPosts(related)
-        setIsLoading(false)
-        return } catch (err) {
-        logErrorToProduction('Failed to fetch blog post', { data: err })
-        setError('Failed to load article')
-      }
-      const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
-        setPost(currentPost)
-        const related = BLOG_POSTS.filter(
-          p =>
-            p.id !== currentPost.id &&
-            (p.category === currentPost.category |
-              p.tags.some(tag => currentPost.tags.includes(tag)))
-        ).slice(0, 3)
-        setRelatedPosts(related) } else {
-        router.replace('/blog')
-      }
-      setIsLoading(false)
-    }
-    fetchPost()
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [slug, router])
-  if (isLoading && !timedOut) {
-    return (
-      <div className='min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center'>
-        <div className='animate-pulse'>Loading article...</div>
-      </div>
-    )
-  }
-  if (!post && (error |timedOut)) {
-    return (
-      <div className='min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4'>
-        <p>Failed to load article.</p>
-        <Button onClick={(,) => router.reload()}>Retry</Button>
-      </div>
-    )
-  }
-  // If post is still null after loading, show not found
-  if (!post) {
-    return (
-      <div className='min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4'>
-        <p>Article not found.</p>
-        <Button onClick={(,) => router.push('/blog')}>Back to Blog</Button>
-      </div>
-    )
-  }
-  // Helper function to get share URL
-  const getShareUrl = (platform: string) => {
-    if (!post) return ''
-    const url = encodeURIComponent(window.location.href)
-    const title = encodeURIComponent(post.title)
-    switch (platform) {
-      case 'facebook':        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
-    switch (platform) {
-      case 'facebook':
-        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
-      case 'twitter':
-        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`
-      case 'linkedin':
-        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`
-      default:
-        return '#'
-  }
-  const articleLd = {
-    '@context': 'https://schema.org'
-    '@type': 'BlogPosting'
-    headline: post.title
-    description: post.excerpt
-    image: post.featuredImage
-    datePublished: post.publishedDate
-    author: {
-      '@type': 'Person'
-      name: post.author.name
-    }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return (
+return (
     <>
-      <SEO
-        title={post.title}
+      <SEO,
+title={post.title}
         description={post.excerpt}
         keywords={post.tags.join(', ')}
         ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
@@ -171,8 +21,8 @@ export default function BlogPost() {
         <div className='container mx-auto'>
           {/* Back to blog button */}
           <div className='mb-8'>
-            <Button
-              variant='outline'
+            <Button,
+variant='outline'
               className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
               asChild
             >
@@ -194,8 +44,8 @@ export default function BlogPost() {
             {/* Author and metadata */}
             <div className='flex flex-col sm:flex-row sm:items-center justify-between mb-8'>
               <div className='flex items-center mb-4 sm:mb-0'>
-                <ImageWithRetry
-                  src={post.author.avatarUrl}
+                <ImageWithRetry,
+src={post.author.avatarUrl}
                   alt={post.author.name}
                   className='w-12 h-12 rounded-full mr-3'
                   fallbackSrc='/images/blog-placeholder.svg'                />
@@ -216,8 +66,8 @@ export default function BlogPost() {
                   <span className='text-sm'>{post.readTime}</span>
                 </div>
                 <div className='relative'>
-                  <Button
-                    variant='ghost'
+                  <Button,
+variant='ghost'
                     size='sm'
                     className='text-zion-slate-light hover:text-white hover:bg-zion-blue-dark'
                     onClick={() => setShowShareMenu(!showShareMenu)}                  >
@@ -226,8 +76,8 @@ export default function BlogPost() {
                   </Button>
                   {showShareMenu && (
                     <div className='absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10'>
-                      <a
-                        href={getShareUrl('facebook')}
+                      <a,
+href={getShareUrl('facebook')}
                         target='_blank'
                         rel='noopener noreferrer'
                         className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
@@ -236,8 +86,8 @@ export default function BlogPost() {
                         <Facebook className='h-4 w-4 mr-2' />
                         <span>Facebook</span>
                       </a>
-                      <a
-                        href={getShareUrl('twitter')}
+                      <a,
+href={getShareUrl('twitter')}
                         target='_blank'
                         rel='noopener noreferrer'
                         className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
@@ -246,8 +96,8 @@ export default function BlogPost() {
                         <Twitter className='h-4 w-4 mr-2' />
                         <span>Twitter</span>
                       </a>
-                      <a
-                        href={getShareUrl('linkedin')}
+                      <a,
+href={getShareUrl('linkedin')}
                         target='_blank'
                         rel='noopener noreferrer'
                         className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
@@ -265,8 +115,8 @@ export default function BlogPost() {
           {/* Featured image */}
           <div className='mb-12 max-w-5xl mx-auto'>
             <div className='aspect-[21/9] rounded-lg overflow-hidden'>
-              <ImageWithRetry
-                src={post.featuredImage}
+              <ImageWithRetry,
+src={post.featuredImage}
                 alt={post.featuredImageAlt |post.title}
                 className='object-cover w-full h-full'
                 fallbackSrc='/images/blog-placeholder.svg'              />
@@ -280,8 +130,8 @@ export default function BlogPost() {
             {/* Tags */}
             <div className='flex flex-wrap gap-2 mt-12'>
               {post.tags.map(tag => (
-                <span
-                  key={tag}
+                <span,
+key={tag}
                   className='text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full'                >
                   #{tag}
                 </span>
@@ -296,16 +146,16 @@ export default function BlogPost() {
                 </h3>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                   {relatedPosts.map(relatedPost => (
-                    <Link
-                      key={relatedPost.id}                      href={`/blog/${relatedPost.slug}`}
+                    <Link,
+key={relatedPost.id}                      href={`/blog/${relatedPost.slug}`}
                       className='bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300'
                     >
                       <div className='aspect-[16/9] relative'>
-                        <ImageWithRetry
-                          src={relatedPost.featuredImage}
+                        <ImageWithRetry,
+src={relatedPost.featuredImage}
                           alt={
-                            relatedPost.featuredImageAlt |relatedPost.title
-                          }
+                            relatedPost.featuredImageAlt |relatedPost.title,
+}
                           className='object-cover w-full h-full'
                           fallbackSrc='/images/blog-placeholder.svg'                        />
                       </div>
@@ -337,8 +187,8 @@ export default function BlogPost() {
             </div>
             {/* Navigation */}
             <div className='flex justify-between items-center mt-12'>
-              <Button
-                variant='outline'
+              <Button,
+variant='outline'
                 className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
                 asChild
               >
@@ -358,61 +208,61 @@ outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-b
   getShareUrl ('facebook') "
 }target=" blank"rel=" noopener noreferrer"className=" flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"aria-label=" Share on Facebook"title=" Share on Facebook"> <Facebook className=" h-4 w-4 mr-2"/> <span>Facebook</span> </Link> <a > <Twitter className=" h-4 w-4 mr-2"/> <span>Twitter</span> </Link> <a > <Linkedin className=" h-4 w-4 mr-2"/> <span>LinkedIn</span> </Link> </div>)
 }</div> </div> </div> </div> /> </div> </div> <ReactMarkdown> {
-  post.content
+  post.content,
 }</ReactMarkdown> </div> <span key= {
   tag "
 }className=" text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"> # {
-  tag
+  tag,
 }</span>) ) "
 }</div> <Separator className=" my-12 bg-zion-blue-light"/> > <div className=" aspect-[16/9] relative"> <ImageWithRetry </div> </Link>) )
 }</div> </div>) "
 }<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>)
 }'"import React from 'react'
-import { SEO } from '@/components / SEO'
+import { SEO,  } from '@/components / SEO'
 export default function Page() {
     ],
 }
   const formatDate = (dateString: string) => {
     return new Date(dateString) .toLocaleDateString('en - US', {
-      year: 'numeric'
-      month: 'long'
+      year: 'numeric',
+month: 'long'
       day: 'numeric',
 })
 }
   const getCategoryIcon = (category: string) => {
-    const categoryIcons: { [key: string]: any } = {
-      ai: Brain
-      quantum: Cpu
-      security: Shield
-      cloud: Cloud
-      business: TrendingUp
-      iot: Network
-      emerging: Zap,
+    const categoryIcons: { [key: string]: any } = {,
+ai: Brain,
+quantum: Cpu,
+security: Shield,
+cloud: Cloud,
+business: TrendingUp,
+iot: Network,
+emerging: Zap;
 }
-    return categoryIcons[category] |BookOpen
+    return categoryIcons[category] |BookOpen,
 }
   const getCategoryName = (category: string) => {
-    const categoryNames: { [key: string]: string } = {
-      ai: 'Artificial Intelligence'
-      quantum: 'Quantum Computing'
-      security: 'Cybersecurity'
-      cloud: 'Cloud & DevOps'
-      business: 'Business Insights'
-      iot: 'IoT & Edge'
-      emerging: 'Emerging Tech',
+    const categoryNames: { [key: string]: string } = {,
+ai: 'Artificial Intelligence'
+      quantum: 'Quantum Computing',
+security: 'Cybersecurity'
+      cloud: 'Cloud & DevOps',
+business: 'Business Insights'
+      iot: 'IoT & Edge',
+emerging: 'Emerging Tech',
 }
     return categoryNames[category] |'Uncategorized'
 }
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
-      <SEO
-        title={`${blogPost.title} - Zion Tech Group Blog`}
+      <SEO,
+title={`${blogPost.title} - Zion Tech Group Blog`}
         description={blogPost.excerpt}
       />
       {/* Navigation */}
       <section className="py-6 bg-slate -800 / 50">
         <div className="container mx - auto px-4">
-          <Link
-            to="/blog"
+          <Link,
+to="/blog"
             className="inline - flex items - center space - x-2 text-cyan - 400 hover:text-cyan - 300 transition - colors duration -200">
             <ArrowLeft className="w-4 h-4" />
             <span > Back to Blog</span>
@@ -422,9 +272,9 @@ export default function Page() {
       {/* Article Header */}
       <section className="py-12">
         <div className="container mx - auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <motion.div,
+initial={{ opacity: 0 y: 20 }}
+            animate={{ opacity: 1 y: 0 }}
             transition={{ duration: 0.8 }}
             className="max - w-4xl mx -auto">
             {/* Category and Featured Badge */}
@@ -492,9 +342,9 @@ export default function Page() {
       <section className="py-12">
         <div className="container mx - auto px-4">
           <div className="max - w-4xl mx -auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+            <motion.div,
+initial={{ opacity: 0 y: 20 }}
+              whileInView={{ opacity: 1 y: 0 }}
               transition={{ duration: 0.8 }}
               className="prose prose - invert prose - lg max - w-none">
               {/* Featured Image */}
@@ -505,8 +355,8 @@ export default function Page() {
                 </div>
               </div>
               {/* Article Content */}
-              <div
-                className="text-gray - 300 leading -relaxed"
+              <div,
+className="text-gray - 300 leading -relaxed"
                 // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: blogPost.content }}
               />
             </motion.div>
@@ -521,8 +371,8 @@ export default function Page() {
               <Tag className="w-5 h-5 text-cyan -400" />
               <span className="text-white font -medium">Tags:</span>
               <div className="flex flex - wrap gap-2">
-                {blogPost.tags.map(tag => (<span
-                    key={tag}
+                {blogPost.tags.map(tag => (<span,
+key={tag}
                     className="px-3 py-1 bg-slate - 700 / 50 text-cyan - 400 text-sm rounded-full border border-slate - 600 / 50 hover:border-cyan - 400 / 50 transition - all duration -200">
                     {tag}
                   </span>) ) }
@@ -535,9 +385,9 @@ export default function Page() {
       <section className="py-12">
         <div className="container mx - auto px-4">
           <div className="max - w-4xl mx -auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+            <motion.div,
+initial={{ opacity: 0 y: 20 }}
+              whileInView={{ opacity: 1 y: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-slate - 800 / 50 p - 8 rounded-2xl border border-slate -700 / 50">
               <h3 className="text-2xl font - bold text-white mb-4">
@@ -562,9 +412,9 @@ export default function Page() {
       {/* Related Posts */}
       <section className="py-20 bg-slate -800 / 50">
         <div className="container mx - auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+          <motion.div,
+initial={{ opacity: 0 y: 20 }}
+            whileInView={{ opacity: 1 y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16">
             <h2 className="text-4xl font - bold text-white mb-4">
@@ -575,11 +425,11 @@ export default function Page() {
             </p>
           </motion.div>
           <div className="grid md:grid - cols - 3 gap-8 max - w-6xl mx -auto">
-            {blogPost.relatedPosts.map((post, index) => (<motion.article
-                key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {blogPost.relatedPosts.map((post index) => (<motion.article,
+key={post.id}
+                initial={{ opacity: 0 y: 20 }}
+                whileInView={{ opacity: 1 y: 0 }}
+                transition={{ duration: 0.5 delay: index * 0.1 }}
                 className="bg-slate - 700 / 50 rounded-xl border border-slate - 600 / 50 overflow-hidden hover:border-cyan - 400 / 50 transition - all duration -300 group">
                 <div className="h-48 bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 flex items - center justify -center">
                   <BookOpen className="w-16 h-16 text-cyan -400" />
@@ -614,25 +464,25 @@ export default function Page() {
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx - auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+          <motion.div,
+initial={{ opacity: 0 y: 20 }}
+            whileInView={{ opacity: 1 y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max - w-4xl mx -auto">
             <h2 className="text-4xl font - bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray - 300 mb-8">
-              Let's discuss how our AI - powered solutions can drive innovation
-              and growth for your organization.</p>
+              Let's discuss how our AI - powered solutions can drive innovation,
+and growth for your organization.</p>
             <div className="flex flex - wrap justify - center gap-4">
-              <Link
-                to="/contact"
+              <Link,
+to="/contact"
                 className="px-8 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white font - semibold rounded-lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration -300">
                 Get Started Today
               </Link>
-              <Link
-                to="/services"
+              <Link,
+to="/services"
                 className="px-8 py-3 border border-cyan - 400 text-cyan - 400 font - semibold rounded-lg hover:bg-cyan - 400 hover:text-white transition - all duration -300">
                 Explore Our Services
               </Link>

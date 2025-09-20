@@ -1,85 +1,17 @@
-import { useState, useEffect } from 'react'
-import { Star } from 'lucide-react'
-import { ReviewStats } from "@/components/reviews/ReviewStats",
-import { ReviewsList } from "@/components/reviews/ReviewsList",
-import { useReviews } from "@/hooks/useReviews",
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useState,, useEffect,  } from 'react'
+import { Star,  } from 'lucide-react'
+import { ReviewStats,  } from "@/components/reviews/ReviewStats",
+import { ReviewsList,  } from "@/components/reviews/ReviewsList",
+import { useReviews,  } from "@/hooks/useReviews",
+import { Button,  } from "@/components/ui/button";
+import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from "@/components/ui/tabs";
 interface ProfileRatingsProps {
-<<<<<<< HEAD
-  userId: string;
-  averageRating?: number;
-  ratingCount?: number
-}
-
-export function ProfileRatings({ userId, averageRating;
-=======
-  userId: string
-averageRating?: number
-ratingCount?: number
-}export function ProfileRatings ({
-  userId,  averageRating = 0, ratingCount = 0
-}: ProfileRatingsProps) {
-  const {
-  reviews, isLoading,  fetchUserReviews, reportReview
-}= useReviews ()
-const [ratingDistribution, setRatingDistribution] = useState<Record<number number>> ({
-})
-//Calculate rating distribution useEffect ( () => {
-  if (reviews.length > 0) {
-  const distribution: Record<number number> = {
-  1: 0, 2: 0, 3: 0,  4: 0, 5: 0
-}
-reviews.forEach ( (review) => {
-  if (review.rating >= 1 && review.rating <= 5) {
-  distribution[review.rating] = (distribution[review.rating] |0) + 1
-export function ProfileRatings({
-  userId
-  averageRating = 0
-  ratingCount = 0
-}: ProfileRatingsProps) {
-  const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews()
-  const [ratingDistribution, setRatingDistribution] = useState<
-    Record<number, number>
-  >({})
-  // Calculate rating distribution
-  useEffect((,) => {
-    if (reviews.length > 0) {
-      const distribution: Record<number, number> = {
-        1: 0
-        2: 0
-        3: 0
-        4: 0
-        5: 0
-      }
-      reviews.forEach(review => {        if (review.rating >= 1 && review.rating <= 5) {
-          distribution[review.rating] = (distribution[review.rating] |0) + 1
-        }
-      })
-      setRatingDistribution(distribution)
-    }
-  }, [reviews])
-  // Fetch reviews when component mounts
-  useEffect(() => {
-    fetchUserReviews(userId)
-  }, [userId])
-  return (
-    <div className='space-y-6'>
-      <div className='flex flex-col md:flex-row gap-6'>
-        <div className='md:w-1/3'>          <ReviewStats
+return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/3">
-  useEffect(() => {
-    fetchUserReviews(userId)
-  }, [userId])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return (
-    <div className="space-y-6">
-      <div className="flex flex-col md:flex-row gap-6">
-        <div className="md:w-1/3">
-          <ReviewStats
-            averageRating={averageRating}
+          <ReviewStats,
+averageRating={averageRating}
             totalReviews={ratingCount}
             ratingDistribution={ratingDistribution}          />
         </div>
@@ -106,27 +38,27 @@ export function ProfileRatings({
                 onReportReview={reportReview}              />
             </TabsContent>
             <TabsContent value='positive'>
-              <ReviewsList
-                reviews={reviews.filter(r => r.rating >= 4)}                isLoading={isLoading}
+              <ReviewsList,
+reviews={reviews.filter(r => r.rating >= 4)}                isLoading={isLoading}
                 onReportReview={reportReview}
               />
             </TabsContent>
             <TabsContent value='critical'>
-              <ReviewsList
-                reviews={reviews.filter(r => r.rating < 4)}                isLoading={isLoading}                reviews={reviews.filter((r) => r.rating >= 4)}
+              <ReviewsList,
+reviews={reviews.filter(r => r.rating < 4)}                isLoading={isLoading}                reviews={reviews.filter((r) => r.rating >= 4)}
             <TabsContent value="positive">
-              <ReviewsList
-                reviews={reviews.filter((r) => r.rating >= 4)}
+              <ReviewsList,
+reviews={reviews.filter((r) => r.rating >= 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />
             </TabsContent>
             <TabsContent value='critical'>
-              <ReviewsList
-                reviews={reviews.filter(r => r.rating < 4)}                reviews={reviews.filter((r) => r.rating < 4)}
+              <ReviewsList,
+reviews={reviews.filter(r => r.rating < 4)}                reviews={reviews.filter((r) => r.rating < 4)}
             <TabsContent value="critical">
-              <ReviewsList
-                reviews={reviews.filter((r) => r.rating < 4)}
+              <ReviewsList,
+reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />
@@ -138,28 +70,28 @@ export function ProfileRatings({
   )
 }, [reviews])
 //Fetch reviews when component mounts return (<div className="space-y-6" > <div className="flex flex-col md:flex-row gap-6" > <div className="md:w-1/3" > <ReviewStats averageRating= {
-  averageRating
+  averageRating,
 }totalReviews= {
-  ratingCount
+  ratingCount,
 }ratingDistribution= {
   ratingDistribution "
 }/> </div> </TabsList> <TabsContent value="all" > <ReviewsList reviews= {
-  reviews
+  reviews,
 }isLoading= {
-  isLoading
+  isLoading,
 }onReportReview= {
   reportReview "
 }/> </TabsContent> <TabsContent value="positive" > <ReviewsList reviews= {
   reviews.filter ( (r) => r.rating >= 4)
 }isLoading= {
-  isLoading
+  isLoading,
 }onReportReview= {
   reportReview "
 }/> </TabsContent> <TabsContent value="critical" > <ReviewsList reviews= {
   reviews.filter ( (r) => r.rating < 4)
 }isLoading= {
-  isLoading
+  isLoading,
 }onReportReview= {
-  reportReview
+  reportReview,
 }/> </TabsContent> </Tabs> </div> </div> </div>)
 }"}

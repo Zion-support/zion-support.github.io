@@ -1,85 +1,12 @@
-<<<<<<< HEAD
-
-import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
-import { Textarea  } from '@/components/ui/textarea';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-=======
-import React, { useState } from 'react'
-import {
-  Card
-  CardContent
-  CardHeader
-  CardTitle
-  CardFooter
-} from '@/components/ui/card'; import React, { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
-import { Textarea } from '@/components/ui/textarea'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
-  useAIContentEnhancer
-  AIEnhancementOptions
-} from '@/hooks/useAIContentEnhancer'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface AIEnhancementPanelProps {
-  title: string;
-  defaultOptions: AIEnhancementOptions;
+  title: string;,
+defaultOptions: AIEnhancementOptions;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
-  initialContent?: string
+  initialContent?: string,
 export function AIEnhancementPanel({
-<<<<<<< HEAD
-  title;
-  defaultOptions;
-  onApply;
-  onClose;
-  showInstructions;
-=======
-  title
-  defaultOptions
-  onApply
-  onClose
-  showInstructions = true
-  initialContent = ''
-}: AIEnhancementPanelProps) {
-  const [options, setOptions] = useState<AIEnhancementOptions>({
-    ...defaultOptions
-    content: initialContent |defaultOptions.content
-  })
-  const [generatedContent, setGeneratedContent] = useState<string>('')
-  const [copied, setCopied] = useState(false)
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer()
-  const handleGenerate = async () => {
-    const result = await enhanceContent(options)
-    if (result) {
-      setGeneratedContent(result)
-    }
-  }
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    field: keyof AIEnhancementOptions
-  ,) => {
-    setOptions({
-      ...options
-      [field]: e.target.value
-    })
-  }
-  const handleApply = () => {
-    onApply(generatedContent)
-    if (onClose) onClose()
-  }
-  const handleCopy = () => {
-    navigator.clipboard.writeText(generatedContent)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return (
+return (
     <Card className='w-full max-w-2xl mx-auto'>
       <CardHeader>
         <CardTitle className='flex items-center gap-2'>
@@ -91,8 +18,8 @@ export function AIEnhancementPanel({
         {/* Input area */}
         <div className='space-y-2'>
           <label className='text-sm font-medium'>Content to enhance</label>
-          <Textarea
-            placeholder='Enter your content to enhance...'
+          <Textarea,
+placeholder='Enter your content to enhance...'
             className='min-h-[100px]'
             value={options.content}
             onChange={e => handleInputChange(e, 'content')}          />
@@ -100,8 +27,8 @@ export function AIEnhancementPanel({
         {/* Context input */}
         <div className='space-y-2'>
           <label className='text-sm font-medium'>Context (optional)</label>
-          <Textarea
-            placeholder='Add any relevant context to guide the AI...'
+          <Textarea,
+placeholder='Add any relevant context to guide the AI...'
             className='min-h-[60px]'
             value={options.context}
             onChange={e => handleInputChange(e, 'context')}          />
@@ -112,15 +39,15 @@ export function AIEnhancementPanel({
             <label className='text-sm font-medium'>
               Special instructions (optional)
             </label>
-            <Input
-              placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
+            <Input,
+placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
               onChange={e => handleInputChange(e, 'instructions')}            />
           </div>
         )}
         {/* Generate button */}
-        <Button
-          onClick={handleGenerate}
+        <Button,
+onClick={handleGenerate}
           className='w-full'
           disabled={isEnhancing |(!options.content && !options.context)}        >
           {isEnhancing ? (
@@ -140,8 +67,8 @@ export function AIEnhancementPanel({
           <div className='space-y-2 mt-4'>
             <div className='flex justify-between items-center'>
               <label className='text-sm font-medium'>Generated content</label>
-              <Button
-                variant='ghost'
+              <Button,
+variant='ghost'
                 size='sm'
                 onClick={handleCopy}
                 className='h-8'              >
@@ -157,8 +84,8 @@ export function AIEnhancementPanel({
               </Button>
             </div>
             <div className='relative'>
-              <Textarea
-                value={generatedContent}
+              <Textarea,
+value={generatedContent}
                 onChange={e => setGeneratedContent(e.target.value)}
                 className='min-h-[200px]'              />
             </div>

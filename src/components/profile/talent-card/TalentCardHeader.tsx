@@ -1,29 +1,14 @@
 import React from 'react'
-import { BadgeCheck } from 'lucide-react'
-import { TalentCardAvatar } from "./TalentCardAvatar";
-import { TalentCardAvailability } from "./TalentCardAvailability";
+import { BadgeCheck,  } from 'lucide-react'
+import { TalentCardAvatar,  } from "./TalentCardAvatar";
+import { TalentCardAvailability,  } from "./TalentCardAvailability";
 interface TalentCardHeaderProps {
-  fullName: string;
-  professionalTitle: string;
+  fullName: string;,
+professionalTitle: string;
   profilePicture?: string;
-  availabilityType: string;
-  yearsExperience: number
-<<<<<<< HEAD
-}
-
-export function TalentCardHeader({ 
-  fullName;
-  professionalTitle;
-  profilePicture;
-  availabilityType;
-=======
-export function TalentCardHeader({
-  fullName
-  professionalTitle
-  profilePicture
-  availabilityType
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  yearsExperience
+  availabilityType: string;,
+yearsExperience: number,
+yearsExperience,
 }: TalentCardHeaderProps) {
   return (
     <div className='flex items-start gap-4 mb-4'>
@@ -34,8 +19,8 @@ export function TalentCardHeader({
             {fullName}
             {/* AI score could be used for verification badge */}
             {yearsExperience > 5 && (
-              <BadgeCheck
-                className='h-4 w-4 text-zion-cyan'
+              <BadgeCheck,
+className='h-4 w-4 text-zion-cyan'
                 aria-label='Verified Expert'
               />
             )}

@@ -1,23 +1,23 @@
-#!/usr/bin/env node
+#!/usr/bin/env node,
 import fs from "fs";
 import path from "path";
 function fixImportSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
-    // Fix semicolons in import statements
-    const importSemicolonRegex =
+    // Fix semicolons in import statements,
+const importSemicolonRegex =
       /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content.replace(importSemicolonRegex, (match, imports) => {
-      // Replace semicolons with commas in import lists
-      const fixedImports = imports.replace(/;/g, ",");
+      // Replace semicolons with commas in import lists,
+const fixedImports = imports.replace(/;/g, ",");
       return match.replace(imports, fixedImports);
     });
-    // Fix missing commas in import statements
-    const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
+    // Fix missing commas in import statements,
+const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content.replace(importCommaRegex, (match, imports) => {
-      // Add missing commas between import items
-      const fixedImports = imports
+      // Add missing commas between import items,
+const fixedImports = imports
         .split(/\s+/)
         .filter((item) => item.trim())
         .join(", ");
@@ -25,8 +25,8 @@ function fixImportSyntax(filePath) {
     });
     // Fix object property syntax errors (semicolon instead of comma)
     content = content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
-    // Fix function parameter syntax errors
-    content = content.replace(
+    // Fix function parameter syntax errors,
+content = content.replace(
       /function\s*\(([^)]+)\)\s*{/g
       (match, params) => {
         const fixedParams = params.replace(/;/g, ",");
@@ -51,8 +51,8 @@ function findFilesWithSyntaxErrors(dir) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
-        // Skip certain directories
-        if (
+        // Skip certain directories,
+if (
           [
             "node_modules"
             ".git"
@@ -80,7 +80,7 @@ function findFilesWithSyntaxErrors(dir) {
   traverse(dir);
   return files;
 }
-// Main execution
+// Main execution,
 const files = findFilesWithSyntaxErrors(".");
 let fixedCount = 0;
 console.log(`Found ${files.length} files to check for syntax errors...`);

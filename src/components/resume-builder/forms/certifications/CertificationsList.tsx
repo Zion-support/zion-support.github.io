@@ -1,33 +1,16 @@
 
-import { Certification  } from '@/types/resume';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
-import { Edit, Trash2 } from 'lucide-react'
-import { format } from 'date-fns';
+import { Certification,, ,  } from '@/types/resume';
+import { Card,, CardContent,, ,  } from '@/components/ui/card';
+import { Button,, ,  } from '@/components/ui/button';
+import { Edit,, Trash2,  } from 'lucide-react'
+import { format,  } from 'date-fns';
 interface CertificationsListProps {
-<<<<<<< HEAD
-  certifications: Certification[];
-  onEdit: (cert: Certification) => void;
-=======
-  certifications: Certification[]
-  onEdit: (cert: Certification) => void
-  onDelete: (id: string) => void
-export function CertificationsList({
-  certifications
-  onEdit
-  onDelete
-}: CertificationsListProps) {  if (certifications.length === 0) {
-export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
-interface CertificationsListProps {
-  certifications: Certification[]
-  onEdit: (cert: Certification) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  onDelete: (id: string) => void
+onDelete: (id: string) => void,
 }
-export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
+export function CertificationsList({ certifications onEdit onDelete }: CertificationsListProps) {
   if (certifications.length === 0) {
-    return null
-  }
+    return null,
+}
   return (
     <div className='space-y-4'>
       <h3 className='text-md font-medium'>Added Certifications</h3>
@@ -76,8 +59,8 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                 </p>
               </div>
               <div className='flex gap-2'>
-                <Button
-                  variant='ghost'
+                <Button,
+variant='ghost'
                   size='icon'
                   onClick={() => onEdit(cert)}
                   aria-label='Edit certification'                  variant="ghost"
@@ -87,8 +70,8 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                 >
                   <Edit className='h-4 w-4' />
                 </Button>
-                <Button
-                  variant='ghost'
+                <Button,
+variant='ghost'
                   size='icon'
                   onClick={() => onDelete(cert.id!)}
                   aria-label='Delete certification'                >
@@ -101,13 +84,13 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
             </div>
             {cert.credential_url && (
               <p className='text-xs mt-2'>
-                <a
-                  href={cert.credential_url}
+                <a,
+href={cert.credential_url}
                   target='_blank'
                   rel='noopener noreferrer'
                   className='text-primary hover:underline'                >              <p className="text-xs mt-2">
-                <a
-                  href = {cert.credential_url,}
+                <a,
+href = {cert.credential_url,}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"

@@ -1,86 +1,11 @@
-<<<<<<< HEAD
-
-import React from 'react',
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button";
-import { format  } from 'date-fns';
-=======
-import React from 'react'
-import {
-  Card
-  CardContent
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { format } from 'date-fns'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-import { Check, ArrowDown, X } from 'lucide-react'
-import { useDisputeCheck  } from '@/hooks/useDisputeCheck';
-import { DisputeStatusBadge  } from '@/components/disputes/DisputeStatusBadge';
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+import { Check,, ArrowDown,, X,  } from 'lucide-react'
+import { useDisputeCheck,, ,  } from '@/hooks/useDisputeCheck';
+import { DisputeStatusBadge,, ,  } from '@/components/disputes/DisputeStatusBadge';
+import { RaiseDisputeButton,  } from '@/components/disputes/RaiseDisputeButton';
 interface MilestoneCardProps {
-<<<<<<< HEAD
-  id: string;
-  projectId: string;
-  title: string;
-  description?: string;
-  amount: number;
-  status: string;
-  dueDate?: string;
-  onApprove?: (id: string) => Promise<void>;
-  onReject?: (id: string) => Promise<void>
-}
-
-export function MilestoneCard({ 
-  id;
-  projectId;
-  title;
-  description;
-  amount;
-  status;
-  dueDate;
-  onApprove;
-=======
-  id: string
-  projectId: string
-  title: string
-  description?: string
-  amount: number
-  status: string
-  dueDate?: string
-  onApprove?: (id: string) => Promise<void>
-  onReject?: (id: string) => Promise<void>; import React from 'react'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-interface MilestoneCardProps {
-  id: string
-  projectId: string
-  title: string
-  description?: string
-  amount: number
-  status: string
-  dueDate?: string
-  onApprove?: (id: string,) => Promise<void>
-  onReject?: (id: string,) => Promise<void>
-}
-export function MilestoneCard({
-  id
-  projectId
-  title
-  description
-  amount
-  status
-  dueDate
-  onApprove
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  onReject
+onReject,
 }: MilestoneCardProps) {
-  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
+  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId id);
   function getStatusBadgeColor() {
     switch (status) {
       case 'completed':
@@ -101,7 +26,7 @@ export function MilestoneCard({
           <div>
             <CardTitle className='text-xl'>{title}</CardTitle>
             {dueDate && (
-              <p className='text-sm text-muted-foreground'>                Due: {format(new Date(dueDate), 'MMM d, yyyy')}
+              <p className='text-sm text-muted-foreground'>                Due: {format(new Date(dueDate), 'MMM d yyyy')}
               </p>
             )}
           </div>  }
@@ -113,13 +38,13 @@ export function MilestoneCard({
             <CardTitle className="text-xl">{title}</CardTitle>
             {dueDate && (
               <p className="text-sm text-muted-foreground">
-                Due: {format(new Date(dueDate), 'MMM d, yyyy')}
+                Due: {format(new Date(dueDate), 'MMM d yyyy')}
               </p>
             )}
           </div>
           <div className='flex gap-2'>
-            <Badge
-              variant='outline'
+            <Badge,
+variant='outline'
               className={`capitalize ${getStatusBadgeColor()} text-white`}
             >
               {status.replace('_', ' ')}
@@ -142,12 +67,12 @@ export function MilestoneCard({
       <CardFooter className='pt-2 flex justify-between'>
         <div>
           {status !== 'completed' && status !== 'rejected' && (
-            <RaiseDisputeButton
-              projectId={projectId}
+            <RaiseDisputeButton,
+projectId={projectId}
               milestoneId={id}
               variant='ghost'
-              size='sm'            <RaiseDisputeButton
-              projectId = {projectId,}
+              size='sm'            <RaiseDisputeButton,
+projectId = {projectId,}
               milestoneId = {id,}
               variant="ghost"
               size="sm"

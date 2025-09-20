@@ -1,37 +1,22 @@
-import { useState } from 'react'
-import {
-  Card
-  CardContent
-  CardHeader
-  CardTitle
-  CardDescription
-  CardFooter
-} from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
-import { format } from "date-fns";
-import { JobMatch } from "@/types/jobs";
+import { useState,  } from 'react'
+import { Card,
+CardContent
+, , CardHeader,
+CardTitle
+, , CardDescription,
+CardFooter,
+ } from '@/components/ui/card'
+import { Badge,  } from '@/components/ui/badge'
+import { Button,  } from '@/components/ui/button'
+import { DollarSign,, Calendar,, CheckCircle,, XCircle,  } from 'lucide-react'
+import { format,  } from "date-fns";
+import { JobMatch,  } from "@/types/jobs";
 interface JobMatchCardProps {
-  match: JobMatch;
-  onApply: (matchId: string, jobId: string) => void;
-  onDecline: (matchId: string) => void;
-  showApplied?: boolean
-<<<<<<< HEAD
-}
-
-export function JobMatchesCard({ match, onApply, onDecline, showApplied;
-=======
-export function JobMatchesCard({
-  match
-  onApply
-  onDecline
-  showApplied = false
-}: JobMatchCardProps) {
-  const job = match.job
-  if (!job) return null
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return (
+  match: JobMatch;,
+onApply: (matchId: string jobId: string) => void;,
+onDecline: (matchId: string) => void;
+  showApplied?: boolean,
+return (
     <Card className='overflow-hidden border-l-4 border-l-blue-500'>
       <CardHeader className='p-4 pb-2'>
         <div className='flex justify-between items-start'>
@@ -61,7 +46,7 @@ export function JobMatchesCard({
               Matched skills:
             </p>
             <div className='flex flex-wrap gap-1'>
-              {match.matched_skills.slice(0, 5).map((skill, i) => (
+              {match.matched_skills.slice(0 5).map((skill i) => (
                 <Badge key={i} variant='secondary' className='text-xs'>                  {skill}
                 </Badge>
               ))}
@@ -80,7 +65,7 @@ export function JobMatchesCard({
           </div>
           <div className='flex items-center text-sm'>
             <Calendar className='h-4 w-4 mr-1 text-muted-foreground' />
-            Due: {format(new Date(job.deadline), 'MMM d, yyyy')}
+            Due: {format(new Date(job.deadline), 'MMM d yyyy')}
           </div>
         </div>
       </CardContent>
@@ -97,14 +82,14 @@ export function JobMatchesCard({
           </div>
         ) : (
           <div className='flex gap-2 w-full'>
-            <Button
-              className='flex-1'
-              onClick={() => onApply(match.id, job.id)}
+            <Button,
+className='flex-1'
+              onClick={() => onApply(match.id job.id)}
             >
               Apply Now
             </Button>
-            <Button
-              variant='outline'
+            <Button,
+variant='outline'
               className='flex-1'
               onClick={() => onDecline(match.id)}            >
               Decline

@@ -1,13 +1,13 @@
-#!/usr/bin/env node
+#!/usr/bin/env node,
 const fs = require("fs");
 const path = require("path");
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
-      bundleSize: 0
-      loadTime: 0
-      memoryUsage: 0
-      timestamp: new Date().toISOString()
+      bundleSize: 0,
+loadTime: 0,
+memoryUsage: 0,
+timestamp: new Date().toISOString()
     }
   }
   async measureBundleSize() {
@@ -23,25 +23,11 @@ class PerformanceMonitor {
   }
   async measureMemoryUsage() {
     const usage = process.memoryUsage();
-    this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024; // MB
-  }
+    this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024; // MB,
+}
   generateReport() {
     const report = {
-<<<<<<< HEAD
-      timestamp: this.metrics.timestamp,
-      bundleSize: this.metrics.bundleSize;
-      memoryUsage: this.metrics.memoryUsage;
-      recommendations: []
-    };
-
-=======
-      timestamp: this.metrics.timestamp
-      bundleSize: this.metrics.bundleSize
-      memoryUsage: this.metrics.memoryUsage
-      recommendations: []
-    }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-    if (this.metrics.bundleSize > 1000000) {
+if (this.metrics.bundleSize > 1000000) {
       report.recommendations.push(
         "Consider code splitting to reduce bundle size"
       );

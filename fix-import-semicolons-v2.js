@@ -1,8 +1,8 @@
-#!/usr/bin/env node
+#!/usr/bin/env node,
 import fs from "fs";
 import path from "path";
 import { glob } from "glob";
-// Find all TypeScript and JavaScript files
+// Find all TypeScript and JavaScript files,
 const files = glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process.cwd() });
 let totalFixed = 0;
 files.forEach((file) => {
@@ -10,15 +10,15 @@ files.forEach((file) => {
     const filePath = path.join(process.cwd(), file);
     let content = fs.readFileSync(filePath, "utf8");
     const modified = false;
-    // Fix import statements with double punctuation
-    content = content.replace(
+    // Fix import statements with double punctuation,
+content = content.replace(
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g
       (match) => {
         return match.replace(";", ";");
       }
     );
-    // Fix import statements missing semicolons
-    content = content.replace(
+    // Fix import statements missing semicolons,
+content = content.replace(
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
       (match) => {
         if (!match.trim().endsWith(";")) {
@@ -28,8 +28,8 @@ files.forEach((file) => {
       }
     );
     // Fix other common syntax issues
-    // Fix missing semicolons after variable declarations
-    content = content.replace(
+    // Fix missing semicolons after variable declarations,
+content = content.replace(
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm
       (match, varName) => {
         if (

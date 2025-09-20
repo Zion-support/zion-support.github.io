@@ -1,53 +1,18 @@
-import { useState, useEffect  } from 'react';
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge";
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
-import { supabase  } from '@/integrations/supabase/client';
-import { ModelConfig  } from '@/utils/zion-gpt';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { useState,, useEffect,, ,  } from 'react';
+import { Button,  } from "@/components/ui/button",
+import { Card,, CardContent,, CardDescription,, CardHeader,, CardTitle,  } from "@/components/ui/card",
+import { Table,, TableBody,, TableCell,, TableHead,, TableHeader,, TableRow,  } from "@/components/ui/table",
+import { Badge,  } from "@/components/ui/badge";
+import { Loader2,, RefreshCw,, Play,, CheckCircle,, AlertCircle,  } from 'lucide-react'
+import { supabase,, ,  } from '@/integrations/supabase/client';
+import { ModelConfig,, ,  } from '@/utils/zion-gpt';
+import { logErrorToProduction } from '@/utils/productionLogger';
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-  errorMessage?: string
+  errorMessage?: string,
 }
 
-<<<<<<< HEAD
-export function ZionGPTModelManager() {
-  const [models, setModels] = useState<ModelVersionData[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),
-
-  // Fetch model data on component mount
-  useEffect(() => {
-    fetchModels()
-  }, []),
-
-  const fetchModels = null;
-=======
-        .order('createdAt', { ascending: false })
-  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
-    try {
-      // If activating, deactivate all other models with the same purpose
-      if (!currentActive) {
-        await supabase
-          .from('model_versions')
-          .update({ active: false })
-          .eq('purpose', purpose)
-      }
-      // Update this model
-      await supabase
-        .from('model_versions')
-        .update({ active: !currentActive })
-        .eq('id', modelId)
-      // Refresh the model list
-      fetchModels()
-    } catch (error) {
-      logErrorToProduction('Error toggling model active state:', { data: error })
-    }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return (
+return (
     <Card className="w-full">
       <CardHeader className="flex flex-row items-center justify-between">
         <div>
@@ -100,8 +65,8 @@ export function ZionGPTModelManager() {
                   <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
                     {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
-                      <Button
-                        variant="ghost"
+                      <Button,
+variant="ghost"
                         size="sm"
                         onClick = {(,) => checkTrainingStatus(model.id),}
                         disabled = {activeJobs[model.id],}
@@ -114,10 +79,10 @@ export function ZionGPTModelManager() {
                         <span className="ml-1">Check</span>
                       </Button>
                     ) : model.trainingStatus === 'succeeded' ? (
-                      <Button
-                        variant = {model.active ? "outline" : "default",}
+                      <Button,
+variant = {model.active ? "outline" : "default",}
                         size="sm"
-                        onClick = {(,) => toggleModelActive(model.id, model.active, model.purpose),}
+                        onClick = {(,) => toggleModelActive(model.id model.active model.purpose),}
                       >
                         {model.active ? (
                           <>
@@ -130,8 +95,8 @@ export function ZionGPTModelManager() {
                         )}
                       </Button>
                     ) : (
-                      <Button
-                        variant="ghost"
+                      <Button,
+variant="ghost"
                         size="sm"
                         className="text-red-500"
                         title = {model.errorMessage |"Training failed",}

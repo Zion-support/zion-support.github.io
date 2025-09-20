@@ -1,46 +1,19 @@
 
 import React from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { toast } from "@/hooks/use-toast";
-import {
-<<<<<<< HEAD
-  Card;
-  CardContent;
-  CardDescription;
-  CardFooter;
-  CardHeader;
-  CardTitle} from "@/components/ui/card",
-=======
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-import { Sparkles } from 'lucide-react'
-import { Progress } from "@/components/ui/progress";
+import { Badge,  } from "@/components/ui/badge",
+import { Button,  } from "@/components/ui/button",
+import { Input,  } from "@/components/ui/input";
+import { toast,  } from "@/hooks/use-toast";
+import { import, {, Sparkles,  } from 'lucide-react'
+import { Progress,  } from "@/components/ui/progress";
 export function UsageStats() {
-<<<<<<< HEAD
-  const handleSaveChanges = null;
-=======
-  const handleSaveChanges = () => {
-    toast({
-      title: 'Limits updated'
-      description: 'The new usage limits have been saved successfully.'
-    })
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return (
+return (
     <div className='space-y-8'>
       <div>
         <h3 className='text-xl font-medium mb-4'>Usage Limits & Settings</h3>
         <p className='text-muted-foreground mb-6'>
-          Configure usage limits for your team to manage your subscription
-          resources.
+          Configure usage limits for your team to manage your subscription,
+resources.
         </p>
       </div>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
@@ -149,7 +122,7 @@ export function UsageStats() {
             <div>
               <div className='flex items-center justify-between mb-2'>
                 <div className='text-sm font-medium'>Monthly budget</div>
-                <Badge variant='outline'>$1,250 / $5,000</Badge>
+                <Badge variant='outline'>$1250 / $5000</Badge>
               </div>
               <Progress value={25} className='h-2' />
             </div>
@@ -188,8 +161,8 @@ export function UsageStats() {
           <div>
             <h3 className='font-medium'>Need higher limits?</h3>
             <p className='text-sm text-muted-foreground'>
-              Contact your account manager to discuss custom limits for your
-              enterprise.
+              Contact your account manager to discuss custom limits for your,
+enterprise.
             </p>
           </div>
         </div>

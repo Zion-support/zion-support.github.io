@@ -240,8 +240,8 @@ export default new ${fileName.replace(/[^a-zA-Z0-9]/g, "")}Service();
 const typeTemplate = (fileName) => "// ${fileName} types;
 export interface ${fileName.replace(/[^a-zA-Z0-9]/g, "")}Type {
   "id": string;
-  name: string;
-  createdAt: Date;
+  name: string;,
+createdAt: Date;
   updatedAt: Date}
 export default ${fileName.replace(/[^a-zA-Z0-9]/g, "")}Type;
 ";

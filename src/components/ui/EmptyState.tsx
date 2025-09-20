@@ -1,28 +1,12 @@
-import { Package, RefreshCw } from 'lucide-react'
-import { Button } from './button';
+import { Package,, RefreshCw,  } from 'lucide-react'
+import { Button,  } from './button';
 interface EmptyStateProps {
   text?: string;
   description?: string;
   onRetry?: () => void;
   showRetry?: boolean;
-  icon?: React.ReactNode
-<<<<<<< HEAD
-}
-
-export function EmptyState({ 
-  text;
-=======
-export function EmptyState({
-  text = 'No items available'
-  description
-  onRetry
-export function EmptyState({
-  text = "No items available"
-  description
-  onRetry
-  showRetry = false
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  icon
+  icon?: React.ReactNode,
+icon,
 }: EmptyStateProps) {
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
@@ -34,8 +18,8 @@ export function EmptyState({
       </h3>
       {description && (
         <p className='text-gray-400 mb-6 max-w-md'>{description}</p>
-  showRetry = false
-  icon
+  showRetry = false,
+icon,
 }: EmptyStateProps) {
   return (
     <div className='flex flex-col items-center justify-center py-16 px-4 text-center'>
@@ -46,15 +30,15 @@ export function EmptyState({
       {description && (
         <p className='text-gray-400 mb-6 max-w-md'>{description}</p>      )}
       {showRetry && onRetry && (
-        <Button
-          onClick={onRetry}
+        <Button,
+onClick={onRetry}
           variant='outline'
           className='flex items-center gap-2'
         >
           <RefreshCw className='h-4 w-4' />          Try Again      )}
       {showRetry && onRetry && (
-        <Button
-          onClick={onRetry}
+        <Button,
+onClick={onRetry}
           variant='outline'
           className='flex items-center gap-2'
         >
@@ -63,8 +47,8 @@ export function EmptyState({
         </p>
       )}
       {showRetry && onRetry && (
-        <Button
-          onClick={onRetry}
+        <Button,
+onClick={onRetry}
           variant="outline"
           className="flex items-center gap-2"
         >

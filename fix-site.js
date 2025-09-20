@@ -2,14 +2,14 @@ const fs = require('fs');
 console.log('🔧 Fixing site loading issues...');
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
-const nextConfig = {reactStrictMode: true;
-  eslint: { ignoreDuringBuilds: true }
-  typescript: { ignoreBuildErrors: true }
-  pageExtensions: ['tsxtsjsxjs'];
+const nextConfig = {reactStrictMode: true;,
+eslint: { ignoreDuringBuilds: true },
+typescript: { ignoreBuildErrors: true },
+pageExtensions: ['tsxtsjsxjs'];
   images: {domains: ["localhost", "ziontechgroup.com"];
   }
-  output: 'standalone';
-  trailingSlash: false;
+  output: 'standalone';,
+trailingSlash: false;
   distDir: '.next';
 }
 module.exports = nextConfig,`;

@@ -1,81 +1,7 @@
-<<<<<<< HEAD
-import React from "react",
-import { cn } from "@/lib/utils",
-import { Badge } from "@/components/ui/badge",
-import Link from "next/link";
-import Image from "next/image";
-interface ListingCardProps {
-  id?: string;
-  title: string;
-  description: string;
-  images?: string[];
-  category: string;
-  tags?: string[];
-  author?: { name: string, id?: string, avatarUrl?: string, email?: string },
-  className?: string;
-  profileType?: 'service' | 'talent'
-}
-
-export function ListingCard({ 
-  id;
-  title;
-  description;
-  images;
-  category;
-  tags;
-  author;
-  className;
-  profileType;
-        className
-      )}
-    >
-=======
-import React from 'react'
-import { cn } from '@/lib/utils'
-import { Badge } from '@/components/ui/badge'
-import Link from 'next/link'
-import Image from 'next/image';interface ListingCardProps {
-  id?: string
-  title: string
-  description: string
-  images?: string[]
-  category: string
-  tags?: string[]
-  author?: { name: string, id?: string, avatarUrl?: string, email?: string }
-  className?: string
-  profileType?: 'service' | 'talent'
-}
-interface ListingCardProps {
-  id?: string
-  title: string
-  description: string
-  images?: string[]
-  category: string
-  tags?: string[]
-  author?: { name: string; id?: string; avatarUrl?: string; email?: string }
-  className?: string
-  profileType?: 'service' | 'talent'
-export function ListingCard({
-  id
-  title
-  description
-  images
-  category
-  tags
-  author
-  className
-  profileType = 'service'
-}: ListingCardProps) {
-  // Generate a profile ID based on the listing data
-  // In a real app, this would be a proper ID from the database
-  const profileId =
-    id |(profileType === 'service' ? 'service-provider-1' : 'talent-1')
-      >
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       {images && images.length > 0 && images[0] && (
         <div className='h-48 w-full overflow-hidden relative'>
-          <Image
-            src={images[0]}
+          <Image,
+src={images[0]}
             alt={title}
             className='object-cover transition-transform duration-300 group-hover:scale-105'
             loading='lazy'          />
@@ -83,8 +9,8 @@ export function ListingCard({
       )}
       <div className='flex flex-col p-4 flex-grow'>
         <div className='mb-2'>
-          <Badge
-            variant='secondary'
+          <Badge,
+variant='secondary'
             className='bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30'
           >
             {category}
@@ -96,14 +22,14 @@ export function ListingCard({
         <p className='text-zion-slate mb-4 flex-grow'>{description}</p>
         {tags && tags.length > 0 && (
           <div className='flex flex-wrap gap-2 mb-4'>
-            {tags.map((tag, i) => (
-              <Badge
-                key={i}
+            {tags.map((tag i) => (
+              <Badge,
+key={i}
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'
               >                {tag}              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
           <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag, i) => (
+            {tags.map((tag i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
               </Badge>
@@ -113,8 +39,8 @@ export function ListingCard({
         {author && (
           <div className='flex items-center mt-auto pt-4 border-t border-zion-blue-light'>
             {author.avatarUrl ? (
-              <Image
-                src={author.avatarUrl}
+              <Image,
+src={author.avatarUrl}
                 alt={author.name}
                 width={32}
                 height={32}

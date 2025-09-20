@@ -13,8 +13,8 @@ const SidebarNavigation: React.FC = () => {
       {/* Sidebar */}
       <div className={`${isOpen ? 'w-64' : 'w-16'} transition-all duration-300 bg-white shadow-lg`}>
         <div className="p-4">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
+          <button,
+onClick={() => setIsOpen(!isOpen)}
             className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -22,8 +22,8 @@ const SidebarNavigation: React.FC = () => {
         </div>
         <nav className="mt-4">
           {navigationItems.map((item) => (
-            <Link
-              key={item.name}
+            <Link,
+key={item.name}
               href={item.href}
               className="flex items-center p-4 text-gray-700 hover:bg-gray-100 transition-colors"
             >

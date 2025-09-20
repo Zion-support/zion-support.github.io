@@ -1,8 +1,8 @@
-#!/usr/bin/env node
+#!/usr/bin/env node,
 import fs from "fs";
 import path from "path";
 import { glob } from "glob";
-// Find all TypeScript and JavaScript files
+// Find all TypeScript and JavaScript files,
 const files = glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process.cwd() });
 let totalFixed = 0;
 files.forEach((file) => {
@@ -10,8 +10,8 @@ files.forEach((file) => {
     const filePath = path.join(process.cwd(), file);
     let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
-    // Fix import statements missing semicolons
-    const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
+    // Fix import statements missing semicolons,
+const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
     const matches = content.match(importRegex);
     if (matches) {
       matches.forEach((match) => {
@@ -23,8 +23,8 @@ files.forEach((file) => {
       });
     }
     // Fix other common syntax issues
-    // Fix missing semicolons after variable declarations
-    content = content.replace(
+    // Fix missing semicolons after variable declarations,
+content = content.replace(
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm
       (match, varName) => {
         if (

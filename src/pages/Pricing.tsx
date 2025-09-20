@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,  } from 'react-router-dom';
 const Pricing: React.FC = () => {
   const [isAnnual, setIsAnnual] = useState(false);
   const plans = [
     {
-      name: "Starter"
-      description: "Perfect for small businesses getting started"
-      monthlyPrice: 99
-      annualPrice: 79
-      features: [
+      name: "Starter",
+description: "Perfect for small businesses getting started"
+      monthlyPrice: 99,
+annualPrice: 79,
+features: [
         "Up to 5 team members"
         "Basic AI features"
         "Email support"
@@ -16,15 +16,15 @@ const Pricing: React.FC = () => {
         "Basic analytics"
         "Standard security"
       ]
-      color: "from-gray-500 to-gray-600"
-      popular: false
-    }
+      color: "from-gray-500 to-gray-600",
+popular: false;
+}
     {
-      name: "Professional"
-      description: "Ideal for growing businesses"
-      monthlyPrice: 299
-      annualPrice: 239
-      features: [
+      name: "Professional",
+description: "Ideal for growing businesses"
+      monthlyPrice: 299,
+annualPrice: 239,
+features: [
         "Up to 25 team members"
         "Advanced AI features"
         "Priority support"
@@ -34,15 +34,15 @@ const Pricing: React.FC = () => {
         "API access"
         "Custom integrations"
       ]
-      color: "from-blue-500 to-purple-600"
-      popular: true
-    }
+      color: "from-blue-500 to-purple-600",
+popular: true;
+}
     {
-      name: "Enterprise"
-      description: "For large organizations with complex needs"
-      monthlyPrice: 799
-      annualPrice: 639
-      features: [
+      name: "Enterprise",
+description: "For large organizations with complex needs"
+      monthlyPrice: 799,
+annualPrice: 639,
+features: [
         "Unlimited team members"
         "Full AI suite"
         "24/7 dedicated support"
@@ -54,30 +54,30 @@ const Pricing: React.FC = () => {
         "Dedicated account manager"
         "SLA guarantee"
       ]
-      color: "from-purple-500 to-pink-600"
-      popular: false
-    }
+      color: "from-purple-500 to-pink-600",
+popular: false;
+}
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">Simple, Transparent Pricing</h1>
+          <h1 className="text-5xl font-bold text-white mb-6">Simple Transparent Pricing</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
             Choose the perfect plan for your business. All plans include our core features with no hidden fees.
           </p>
           {/* Billing Toggle */}
           <div className="flex items-center justify-center space-x-4 mb-8">
             <span className={`text-lg ${!isAnnual ? 'text-white font-semibold' : 'text-blue-200'}`}>Monthly</span>
-            <button
-              onClick={() => setIsAnnual(!isAnnual)}
+            <button,
+onClick={() => setIsAnnual(!isAnnual)}
               className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                 isAnnual ? 'bg-white' : 'bg-blue-200'
               }`}
             >
-              <span
-                className={`inline-block h-4 w-4 transform rounded-full bg-blue-600 transition-transform ${
+              <span,
+className={`inline-block h-4 w-4 transform rounded-full bg-blue-600 transition-transform ${
                   isAnnual ? 'translate-x-6' : 'translate-x-1'
                 }`}
               />
@@ -92,9 +92,9 @@ const Pricing: React.FC = () => {
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {plans.map((plan, index) => (
-              <div
-                key={index}
+            {plans.map((plan index) => (
+              <div,
+key={index}
                 className={`relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
                   plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
                 }`}
@@ -123,7 +123,7 @@ const Pricing: React.FC = () => {
                     )}
                   </div>
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
                         <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -132,8 +132,8 @@ const Pricing: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    to="/contact"
+                  <Link,
+to="/contact"
                     className={`w-full py-4 px-6 rounded-lg font-semibold text-lg text-center transition-all duration-300 transform hover:scale-105 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'
@@ -158,11 +158,11 @@ const Pricing: React.FC = () => {
           <div className="space-y-8">
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I change plans anytime?</h3>
-              <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing differences.</p>
+              <p className="text-gray-600">Yes you can upgrade or downgrade your plan at any time. Changes take effect immediately and we'll prorate any billing differences.</p>
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">What payment methods do you accept?</h3>
-              <p className="text-gray-600">We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can also pay via invoice.</p>
+              <p className="text-gray-600">We accept all major credit cards PayPal and bank transfers for annual plans. Enterprise customers can also pay via invoice.</p>
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Is there a free trial?</h3>
@@ -174,7 +174,7 @@ const Pricing: React.FC = () => {
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you offer custom enterprise solutions?</h3>
-              <p className="text-gray-600">Absolutely! Our Enterprise plan includes custom features, dedicated support, and tailored solutions for large organizations.</p>
+              <p className="text-gray-600">Absolutely! Our Enterprise plan includes custom features dedicated support and tailored solutions for large organizations.</p>
             </div>
           </div>
         </div>
@@ -185,14 +185,14 @@ const Pricing: React.FC = () => {
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using Zion Tech to accelerate their growth.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
+            <Link,
+to="/contact"
               className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
             >
               Start Free Trial
             </Link>
-            <Link
-              to="/contact"
+            <Link,
+to="/contact"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
             >
               Talk to Sales

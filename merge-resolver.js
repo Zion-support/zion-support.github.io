@@ -3,13 +3,13 @@ const fs = require('fs'); const path = require('path');  function fixMergeConfli
 const fs = require('fs');
 const path = require('path');
 console.log('🔧 Starting Merge Conflict Resolution');
-// Function to fix merge conflicts in a file
+// Function to fix merge conflicts in a file,
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
-    // Remove merge conflict markers and keep HEAD version
-    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?
+    // Remove merge conflict markers and keep HEAD version,
+content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
@@ -34,7 +34,7 @@ if (stat.isDirectory () && !item.startsWith ('.') && item !== 'node modules') {
 }
 }
 }catch (error) {
-  //Skip directories that can't be read
+  //Skip directories that can't be read,
 }return files;
 }//Main execution async function main () {
   console.log ('🔍 Scanning for merge conflicts...');
@@ -51,10 +51,10 @@ for (const file of files) {
         files.push(fullPath)}
     }
   } catch (error) {
-    // Skip directories that can't be read
-  }
+    // Skip directories that can't be read,
+}
   return files}
-// Main execution
+// Main execution,
 async function main() {
   console.log('🔍 Scanning for merge conflicts...');
   const files = getAllFiles(process.cwd(), ['.tsx', '.ts', '.jsx', '.js', '.json', '.md']);
@@ -67,17 +67,17 @@ async function main() {
         }
       }
     } catch (error) {
-      // Skip files that can't be read
-    }
+      // Skip files that can't be read,
+}
   }
   console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
   console.log('🎉 Merge conflict resolution completed!');}
 }
 }catch (error) {
-  // Skip files that can't be read
+  // Skip files that can't be read,
 }
 }console.log (`✅ Fixed merge conflicts in $ {
-  fixedCount
+  fixedCount,
 }files`);
 console.log ('🎉 Merge conflict resolution completed!');
 }main () .catch (console.error);

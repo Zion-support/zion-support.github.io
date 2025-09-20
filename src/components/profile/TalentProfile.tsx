@@ -1,68 +1,30 @@
 import React from 'react'
-import { Handshake, MessageSquare, Star } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { HireNowCTA } from "./HireNowCTA",
-import { ProfileHero } from "./ProfileHero",
-import { ProfileSkills } from "./ProfileSkills",
-import { ProfileExperience } from "./ProfileExperience",
-import { ProfileProjects } from "./ProfileProjects",
-import { ProfileAvailability } from "./ProfileAvailability",
-import { ProfileContact } from "./ProfileContact",
-import { ProfileRatings } from "./ProfileRatings",
-import { TalentProfile as TalentProfileType } from "@/types/talent",
-import { useAuth } from "@/hooks/useAuth";
-import { Availability } from "@/types/profile";
+import { Handshake,, MessageSquare,, Star,  } from 'lucide-react'
+import { Button,  } from "@/components/ui/button",
+import { HireNowCTA,  } from "./HireNowCTA",
+import { ProfileHero,  } from "./ProfileHero",
+import { ProfileSkills,  } from "./ProfileSkills",
+import { ProfileExperience,  } from "./ProfileExperience",
+import { ProfileProjects,  } from "./ProfileProjects",
+import { ProfileAvailability,  } from "./ProfileAvailability",
+import { ProfileContact,  } from "./ProfileContact",
+import { ProfileRatings,  } from "./ProfileRatings",
+import { TalentProfile,, as,, TalentProfileType,  } from "@/types/talent",
+import { useAuth,  } from "@/hooks/useAuth";
+import { Availability,  } from "@/types/profile";
 interface TalentProfileProps {
-  profile: TalentProfileType;
-  onRequestHire: () => void;
-  onMessageTalent?: () => void
-<<<<<<< HEAD
-}
-
-export function TalentProfile({ 
-  profile;
-  onRequestHire;
-=======
-export function TalentProfile({
-  profile
-  onRequestHire
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  onMessageTalent
+  profile: TalentProfileType;,
+onRequestHire: () => void;
+  onMessageTalent?: () => void,
+onMessageTalent,
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth();
-  // Create proper availability object from talent profile
-<<<<<<< HEAD
-  const availability: Availability;
-=======
-  const availability: Availability = {
-    status:
-      profile.availability_type === 'full_time'
-        ? 'available'
-        : profile.availability_type === 'part_time'
-          ? 'limited'
-          : 'unavailable'
-    message: `${profile.professional_title} with ${profile.years_experience} years of experience`
-  }
-  // Create proper skills array for ProfileSkills component
-  const skillsArray =
-    profile.skills?.map(skill => ({
-      name: skill
-      level: 3, // Default level since we don't have this data
-    })) |[]
-  // Create proper projects array for ProfileProjects component
-  const projectsArray =
-    profile.key_projects?.map((proj, i) => ({
-      id: `project-${i}`
-      title: proj.title
-      description: proj.description
-      date: new Date().toISOString(), // Default date since we don't have this data
-    })) |[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return (
+  // Create proper availability object from talent profile,
+return (
     <div className='container mx-auto px-4 py-8'>
       {/* Profile Header */}
-      <ProfileHero
-        name={profile.full_name}
+      <ProfileHero,
+name={profile.full_name}
         title={profile.professional_title}
         avatarUrl={profile.profile_picture_url}
         profileType='talent'
@@ -74,8 +36,8 @@ export function TalentProfile({
         <div className='space-y-8'>
           <ProfileSkills skills={skillsArray} />
           <ProfileAvailability availability={availability} />
-          <ProfileContact
-            email={profile.user_id}
+          <ProfileContact,
+email={profile.user_id}
             profileName={profile.full_name}
             profileType='talent'          />
         </div>
@@ -100,8 +62,8 @@ export function TalentProfile({
               <Star className='mr-2 h-5 w-5 text-yellow-400' />
               Reviews & Ratings
             </h2>
-            <ProfileRatings
-              userId={profile.id}
+            <ProfileRatings,
+userId={profile.id}
               averageRating={profile.average_rating}
               ratingCount={profile.rating_count}            />
           </div>
@@ -113,22 +75,22 @@ export function TalentProfile({
                   Ready to collaborate?
                 </h3>
                 <p className='text-zion-slate mb-6 max-w-md'>
-                  Connect with {profile.full_name} for your next project and get
-                  started right away.
+                  Connect with {profile.full_name} for your next project and get,
+started right away.
                   {profile.hourly_rate &&
                     ` Rate starts at $${profile.hourly_rate}/hour.`}
                 </p>
                 <div className='flex flex-wrap gap-4 justify-center'>
-                  <Button
-                    size='lg'
+                  <Button,
+size='lg'
                     className='bg-zion-purple text-white hover:bg-zion-purple-dark'
                     onClick={onRequestHire}                  >
                     <Handshake className='mr-2 h-5 w-5' />
                     Hire Now
                   </Button>
                   {onMessageTalent && (
-                    <Button
-                      size='lg'
+                    <Button,
+size='lg'
                       variant='outline'
                       className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
                       onClick={onMessageTalent}                    >

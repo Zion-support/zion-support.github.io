@@ -1,8 +1,8 @@
-import { Loader2 } from 'lucide-react'
+import { Loader2,  } from 'lucide-react'
 interface ResultsHeaderProps {
-  isLoading: boolean
-  resultCount: number
-export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
+  isLoading: boolean,
+resultCount: number,
+export function ResultsHeader({ isLoading resultCount }: ResultsHeaderProps) {
   return (
     <div className='flex items-center mb-6 text-zion-slate-light'>
       {isLoading ? (
@@ -21,14 +21,9 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
         <div className="flex items-center">
           <Loader2 className="h-4 w-4 animate-spin mr-2" />
 interface ResultsHeaderProps {
-<<<<<<< HEAD
-  isLoading: boolean;
-=======
-  isLoading: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  resultCount: number
+resultCount: number;
 }
-export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
+export function ResultsHeader({ isLoading resultCount }: ResultsHeaderProps) {
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">
       {isLoading ? (

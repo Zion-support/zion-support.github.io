@@ -1,205 +1,23 @@
-import { useState } from 'react'
-import { useMutation } from '@tanstack/react-query'
-import { Check, X, User, Star, MoreHorizontal } from 'lucide-react'
-import { format } from "date-fns",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client";
-import { Review, ReviewStatus } from "@/types/reviews";
+import { useState,  } from 'react'
+import { useMutation,  } from '@tanstack/react-query'
+import { Check,, X,, User,, Star,, MoreHorizontal,  } from 'lucide-react'
+import { format,  } from "date-fns",
+import { toast,  } from "@/hooks/use-toast",
+import { supabase,  } from "@/integrations/supabase/client";
+import { Review,, ReviewStatus,  } from "@/types/reviews";
 import {
-<<<<<<< HEAD
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogFooter;
-  DialogHeader;
-  DialogTitle} from "@/components/ui/dialog",
-import {
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-interface ReviewsModerationTableProps {
-  reviews: Review[];
-  isLoading: boolean;
-  onRefresh: () => void
-}
-
-export function ReviewsModerationTable({
-  reviews;
-  isLoading;
-  onRefresh}: ReviewsModerationTableProps) {
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null),
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
-  const { mutate: updateReviewStatus, isPending } = useMutation({
-    mutationFn: async ({
-      reviewId;
-      status}: {
-      reviewId: string;
-=======
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
-} from '@/components/ui/table'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'; import {
-  Dialog
-  DialogContent
-  DialogDescription
-  DialogFooter
-  DialogHeader
-  DialogTitle
-} from '@/components/ui/dialog'
-  DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-interface ReviewsModerationTableProps {
-  reviews: Review[]
-isLoading: boolean
-onRefresh: () => void
-}export function ReviewsModerationTable ({
-  reviews
-isLoading
-onRefresh
-}: ReviewsModerationTableProps) {
-  const [selectedReview, setSelectedReview] = useState<Review | null> (null)
-const [viewDetailsOpen,  setViewDetailsOpen] = useState (false)
-const {
-  mutate: updateReviewStatus, isPending
-}= useMutation ({
-  mutationFn: async ({
-  reviewId
-status
-}: {
-  reviewId: string
-status: ReviewStatus
-}) => {
-  const {
-  error
-}= await supabase .from ("reviews") .update ({
-  status
-}) if (error) throw error
-return {
-  reviewId, status
-export function ReviewsModerationTable({
-  reviews
-  isLoading
-  onRefresh
-}: ReviewsModerationTableProps) {
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null)
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false)
-  const { mutate: updateReviewStatus, isPending } = useMutation({
-    mutationFn: async ({
-      reviewId
-      status
-    }: {
-      reviewId: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-      status: ReviewStatus
-    }) => {      const { error } = await supabase
+status: ReviewStatus;
+}) => {      const { error } = await supabase
         .from('reviews')
         .update({ status })
         .eq("id", reviewId);
       if (error) throw error;
-      return { reviewId, status }
-<<<<<<< HEAD
-    };
-    onSuccess: (data) => {
+      return { reviewId status }
+setViewDetailsOpen(false)
+    }
+    onError: (error: Error;) => {
       toast({
-        title: "Review updated";
-        description: `Review has been ${data.status}.`});
-      onRefresh();
-=======
-    }
-    onSuccess: data => {      toast({
-        title: 'Review updated'
-        description: `Review has been ${data.status}.`
-      })
-      onRefresh()
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-      setViewDetailsOpen(false)
-    }
-    onError: (error: Error,) => {
-      toast({
-<<<<<<< HEAD
-        title: "Error";
-        description: `Failed to update review: ${error.message}`,
-        variant: "destructive"})
-    }}),
-
-  const getInitials = null;
-=======
-        title: 'Error'
-        description: `Failed to update review: ${error.message}`
-        variant: 'destructive'
-      })
-    }
-  })
-  const getInitials = (name: string,) => {
-    return name
-      .split(' ')
-      .map(n => n[0])
-      .join('')
-      .toUpperCase()
-  }
-  if (isLoading) {
-    return (
-      <div className='space-y-4'>
-        <div className='h-12 w-full bg-muted rounded animate-pulse' />
-        <div className='h-16 w-full bg-muted rounded animate-pulse' />
-        <div className='h-16 w-full bg-muted rounded animate-pulse' />
-        <div className='h-16 w-full bg-muted rounded animate-pulse' />
-      </div>
-    )
-  }
-  if (reviews.length === 0) {
-    return (
-      <div className='py-10 text-center'>
-        <h3 className='text-lg font-medium mb-2'>No reviews to moderate</h3>
-        <p className='text-muted-foreground'>
-          All reviews have been processed. Check back later for new submissions.
-        </p>
-      </div>
-    )
-  }
-  const handleApprove = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: 'approved' })
-  }
-  const handleReject = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: 'rejected' })
-  }
-  const handleViewDetails = (review: Review) => {
-    setSelectedReview(review)
-    setViewDetailsOpen(true)
-  }
-  const renderStars = (rating: number,) => {
-    return (
-      <div className='flex'>
-        {[1, 2, 3, 4, 5].map(star => (
-          <Star
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}          />
-        ))}
-      </div>
-    )
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return (
+return (
     <>
       <Table>
         <TableHeader>
@@ -218,8 +36,8 @@ export function ReviewsModerationTable({
                 <div className='flex items-center gap-2'>
                   <Avatar className='h-8 w-8'>
                     {review.reviewer_profile?.avatar_url ? (
-                      <AvatarImage
-                        src={review.reviewer_profile.avatar_url}
+                      <AvatarImage,
+src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |''}                      />
                     ) : (
                       <AvatarFallback>
@@ -244,7 +62,7 @@ export function ReviewsModerationTable({
               </TableCell>
               <TableCell>{renderStars(review.rating)}</TableCell>
               <TableCell>
-                {format(new Date(review.created_at), 'MMM d, yyyy')}
+                {format(new Date(review.created_at), 'MMM d yyyy')}
               </TableCell>
               <TableCell>
                 <Badge variant='outline'>
@@ -263,16 +81,16 @@ export function ReviewsModerationTable({
                 <div className='flex justify-end gap-2'>
                   {review.status === 'pending' && (
                     <>
-                      <Button
-                        size='sm'
+                      <Button,
+size='sm'
                         variant='outline'
                         className='h-8 w-8 p-0'
                         onClick={() => handleApprove(review.id)}
                         disabled={isPending}                      >
                         <Check className='h-4 w-4 text-green-500' />
                       </Button>
-                      <Button
-                        size='sm'
+                      <Button,
+size='sm'
                         variant='outline'
                         className='h-8 w-8 p-0'
                         onClick={() => handleReject(review.id)}
@@ -288,17 +106,17 @@ export function ReviewsModerationTable({
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align='end'>
-                      <DropdownMenuItem
-                        onClick={() => handleViewDetails(review)}
+                      <DropdownMenuItem,
+onClick={() => handleViewDetails(review)}
                       >
                         View details
                       </DropdownMenuItem>
                       {review.status === 'approved' && (
-                        <DropdownMenuItem
-                          onClick={() =>
+                        <DropdownMenuItem,
+onClick={() =>
                             updateReviewStatus({
-                              reviewId: review.id
-                              status: 'rejected'
+                              reviewId: review.id,
+status: 'rejected'
                             })
                           }
                         >
@@ -306,11 +124,11 @@ export function ReviewsModerationTable({
                         </DropdownMenuItem>
                       )}
                       {review.status === 'rejected' && (
-                        <DropdownMenuItem
-                          onClick={() =>
+                        <DropdownMenuItem,
+onClick={() =>
                             updateReviewStatus({
-                              reviewId: review.id
-                              status: 'approved'
+                              reviewId: review.id,
+status: 'approved'
                             })
                           }
                         >                          Mark as approved
@@ -331,7 +149,7 @@ export function ReviewsModerationTable({
               <DialogTitle>Review Details</DialogTitle>
               <DialogDescription>
                 Review submitted on{' '}
-                {format(new Date(selectedReview.created_at), 'MMMM d, yyyy')}
+                {format(new Date(selectedReview.created_at), 'MMMM d yyyy')}
               </DialogDescription>
             </DialogHeader>
             <div className='space-y-4'>
@@ -339,8 +157,8 @@ export function ReviewsModerationTable({
                 <div className='flex items-center gap-2'>
                   <Avatar>
                     {selectedReview.reviewer_profile?.avatar_url ? (
-                      <AvatarImage
-                        src={selectedReview.reviewer_profile.avatar_url}
+                      <AvatarImage,
+src={selectedReview.reviewer_profile.avatar_url}
                         alt={selectedReview.reviewer_profile.display_name |''}                      />
                     ) : (
                       <AvatarFallback>
@@ -390,8 +208,8 @@ export function ReviewsModerationTable({
                     </Badge>
                   )}
                   {selectedReview.would_work_again !== undefined && (
-                    <Badge
-                      variant={
+                    <Badge,
+variant={
                         selectedReview.would_work_again
                           ? 'default'
                           : 'secondary'
@@ -409,8 +227,8 @@ export function ReviewsModerationTable({
                     Reports: {selectedReview.report_count}
                   </h4>
                   <p className='text-sm text-red-700'>
-                    This review has been reported by users and may need
-                    investigation.
+                    This review has been reported by users and may need,
+investigation.
                   </p>
                 </div>
               )}
@@ -418,14 +236,14 @@ export function ReviewsModerationTable({
             <DialogFooter>
               {selectedReview.status === 'pending' && (
                 <>
-                  <Button
-                    variant='destructive'
+                  <Button,
+variant='destructive'
                     onClick={() => handleReject(selectedReview.id)}
                     disabled={isPending}                  >
                     Reject
                   </Button>
-                  <Button
-                    onClick = {() => handleApprove(selectedReview.id),}
+                  <Button,
+onClick = {() => handleApprove(selectedReview.id),}
                     disabled = {isPending,}
                   >
                     Approve
@@ -433,12 +251,12 @@ export function ReviewsModerationTable({
                 </>
               )}
               {selectedReview.status === 'approved' && (
-                <Button
-                  variant='destructive'
+                <Button,
+variant='destructive'
                   onClick={() =>
                     updateReviewStatus({
-                      reviewId: selectedReview.id
-                      status: 'rejected'
+                      reviewId: selectedReview.id,
+status: 'rejected'
                     })
                   }
                   disabled={isPending}                >
@@ -446,11 +264,11 @@ export function ReviewsModerationTable({
                 </Button>
               )}
               {selectedReview.status === 'rejected' && (
-                <Button
-                  onClick={() =>
+                <Button,
+onClick={() =>
                     updateReviewStatus({
-                      reviewId: selectedReview.id
-                      status: 'approved'
+                      reviewId: selectedReview.id,
+status: 'approved'
                     })
                   }
                   disabled={isPending}                >
@@ -469,8 +287,8 @@ export function ReviewsModerationTable({
   return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div>
 }
   return (<div className="flex"> {
-  [1, 2, 3,  4, 5].map ( (star) => (<Star key= {
-  star
+  [1 2, 3  4, 5].map ( (star) => (<Star key= {
+  star,
 }/>) )
 }</div>)
 };"
@@ -479,7 +297,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
   review.id "
 }> <TableCell> <div className="flex items-center gap-2"> <Avatar className="h-8 w-8"> {
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
-  review.reviewer profile.avatar url
+  review.reviewer profile.avatar url,
 }alt= {"
   review.reviewer profile.display name |""
 }/>) : (<AvatarFallback> {"
@@ -502,7 +320,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</DropdownMenuContent> </DropdownMenu> </div> </TableCell> </TableRow>) ) "
 }</TableBody> </Table> </DialogDescription> </DialogHeader> <div className=" space-y-4"> <div className=" flex items-center justify-between"> <div className=" flex items-center gap-2"> <Avatar> {
   selectedReview.reviewer profile?.avatar url ? (<AvatarImage src= {
-  selectedReview.reviewer profile.avatar url
+  selectedReview.reviewer profile.avatar url,
 }alt= {"
   selectedReview.reviewer profile.display name |""
 }/>) : (<AvatarFallback> {"
@@ -513,7 +331,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</div> </div> <div className="border rounded-md p-3 bg-muted/20"> <p className="whitespace-pre-wrap"> {
   selectedReview.review text "
 }</p> </div> <div className="space-y-2"> <h4 className="text-sm font-medium">Additional Ratings</h4> Timeliness: {
-  selectedReview.timeliness rating
+  selectedReview.timeliness rating,
 }/5 </Badge>)
 }{
   selectedReview.would work again !== undefined && (<Badge variant= {"
@@ -526,11 +344,11 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</div> <DialogFooter> <Button variant=" destructive" onClick={
   () => handleReject (selectedReview.id)
 }disabled= {
-  isPending
+  isPending,
 }> Reject </Button> <Button onClick={
   () => handleApprove (selectedReview.id)
 }disabled= {
-  isPending
+  isPending,
 }> Approve </Button> </>)
 }> Mark as Rejected </Button>)
 }> Mark as Approved </Button>)

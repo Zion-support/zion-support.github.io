@@ -1,31 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { Bell, Check, X, AlertCircle, Info, CheckCircle } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+import React { useState useEffect } from 'react';
+import { Bell,, Check,, X,, AlertCircle,, Info,, CheckCircle,  } from 'lucide-react';
+import { Badge,  } from '@/components/ui/badge';
+import { Button,  } from '@/components/ui/button';
+import { Card,, CardContent,, CardHeader,, CardTitle,  } from '@/components/ui/card';
+import { useAuth,  } from '@/hooks/useAuth';
+import { toast,  } from '@/hooks/use-toast';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5,
 interface Notification {
-  id: string;
-  type: 'message' | 'order' | 'system' | 'promotion';
-  title: string;
-  message: string;
-  timestamp: Date;
-  read: boolean;
+  id: string;,
+type: 'message' | 'order' | 'system' | 'promotion';
+  title: string;,
+message: string;
+  timestamp: Date;,
+read: boolean;
   actionUrl?: string;
 }
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-}
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 const getNotificationIcon = (type: string) => {
   switch (type) {
     case 'message':
@@ -55,34 +44,34 @@ export default function Notifications() {
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    // Mock data - replace with actual API call
-    const mockNotifications: Notification[] = [
+    // Mock data - replace with actual API call,
+const mockNotifications: Notification[] = [
       {
-        id: '1'
-        type: 'message'
-        title: 'New Message'
-        message: 'You have received a new message from John Doe'
-        timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
-        read: false
-        actionUrl: '/messaging'
+        id: '1',
+type: 'message'
+        title: 'New Message',
+message: 'You have received a new message from John Doe'
+        timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago,
+read: false,
+actionUrl: '/messaging'
       }
       {
-        id: '2'
-        type: 'order'
-        title: 'Order Update'
-        message: 'Your order #12345 has been shipped'
-        timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago
-        read: true
-        actionUrl: '/orders'
+        id: '2',
+type: 'order'
+        title: 'Order Update',
+message: 'Your order #12345 has been shipped'
+        timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago,
+read: true,
+actionUrl: '/orders'
       }
       {
-        id: '3'
-        type: 'system'
-        title: 'System Maintenance'
-        message: 'Scheduled maintenance will occur tonight at 2 AM'
-        timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24), // 1 day ago
-        read: false
-      }
+        id: '3',
+type: 'system'
+        title: 'System Maintenance',
+message: 'Scheduled maintenance will occur tonight at 2 AM'
+        timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24), // 1 day ago,
+read: false;
+}
     ];
     setNotifications(mockNotifications);
     setLoading(false);
@@ -91,18 +80,18 @@ export default function Notifications() {
     setNotifications(prev =>
       prev.map(notification =>
         notification.id === id
-          ? { ...notification, read: true }
+          ? { ...notification read: true }
           : notification
       )
     );
   }
   const markAllAsRead = () => {
     setNotifications(prev =>
-      prev.map(notification => ({ ...notification, read: true }))
+      prev.map(notification => ({ ...notification read: true }))
     );
     toast({
-      title: "Success"
-      description: "All notifications marked as read"
+      title: "Success",
+description: "All notifications marked as read"
     });
   }
   const deleteNotification = (id: string) => {
@@ -115,7 +104,7 @@ export default function Notifications() {
         <div className="animate-pulse">
           <div className="h-8 bg-gray-200 rounded w-1/4 mb-4"></div>
           <div className="space-y-4">
-            {[1, 2, 3].map(i => (
+            {[1 2, 3].map(i => (
               <div key={i} className="h-20 bg-gray-200 rounded"></div>
             ))}
           </div>
@@ -123,26 +112,7 @@ export default function Notifications() {
       </div>
     );
   }
-<<<<<<< HEAD
-
-=======
-import React, { useState } from 'react';
-import { useNotifications } from '@/context/notifications/NotificationContext';
-import { NotificationType;
-  NotificationContextType } from '@/context/notifications';
-import { formatDistanceToNow  } from 'date-fns';
-import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings, Package } from 'lucide-react'
-import { Button  } from '@/components/ui/button';
-import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
-import { Badge  } from '@/components/ui/badge';
-import Skeleton from '@/components/ui/skeleton';
-import { SEO  } from '@/components/SEO';
-import { useRouter  } from 'next/router';
-import { cn } from '@/lib/utils';
-const getNotificationIcon = null;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return (
+return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-3xl font-bold">Notifications</h1>
@@ -164,8 +134,8 @@ const getNotificationIcon = null;
       ) : (
         <div className="space-y-4">
           {notifications.map((notification) => (
-            <Card
-              key={notification.id}
+            <Card,
+key={notification.id}
               className={`transition-all hover:shadow-md ${
                 !notification.read ? 'border-l-4 border-l-blue-500 bg-blue-50' : ''
               }`}
@@ -194,16 +164,16 @@ const getNotificationIcon = null;
                   </div>
                   <div className="flex items-center space-x-2 ml-4">
                     {!notification.read && (
-                      <Button
-                        size="sm"
+                      <Button,
+size="sm"
                         variant="ghost"
                         onClick={() => markAsRead(notification.id)}
                       >
                         <Check className="h-4 w-4" />
                       </Button>
                     )}
-                    <Button
-                      size="sm"
+                    <Button,
+size="sm"
                       variant="ghost"
                       onClick={() => deleteNotification(notification.id)}
                     >
@@ -219,7 +189,4 @@ const getNotificationIcon = null;
     </div>
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

@@ -1,45 +1,18 @@
 import Image from "next/image";
-import { Twitter, Linkedin } from 'lucide-react'
+import { Twitter,, Linkedin,  } from 'lucide-react'
 interface Speaker {
-  name: string
-  title: string
-  avatar: string
-  twitter?: string
-  linkedin?: string
-  linkedin?: string
+  name: string,
+title: string,
+avatar: string,
+twitter?: string,
+linkedin?: string,
+linkedin?: string,
 }
 interface Speaker {
-<<<<<<< HEAD
-  name: string;
-  title: string;
-  avatar: string;
-  twitter?: string;
-=======
-  name: string
-  title: string
-  avatar: string
-  twitter?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  linkedin?: string
+linkedin?: string,
 }
 const speakers: Speaker[] = [
   {
-<<<<<<< HEAD
-    name: 'Alex Zion';
-    title: 'Founder & CEO';
-    avatar: 'https://placehold.co/100x100';
-    twitter: '#';
-    linkedin: '#'}],
-
-=======
-    name: 'Alex Zion'
-    title: 'Founder & CEO'
-    avatar: 'https://placehold.co/100x100'
-    twitter: '#'
-    linkedin: '#'
-  }
-]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export function SpeakersSection() {
   return (
     <section className='py-12 bg-zion-blue-dark text-white' id='speakers'>
@@ -63,8 +36,8 @@ export function SpeakersSection() {
               <p className='text-sm opacity-80'>{sp.title}</p>
               <div className='flex justify-center gap-3 text-zion-cyan'>
                 {sp.twitter && (
-                  <a
-                    href={sp.twitter}
+                  <a,
+href={sp.twitter}
                     aria-label='Twitter'
                     target='_blank'
                     rel='noopener noreferrer'
@@ -81,8 +54,8 @@ export function SpeakersSection() {
                   </a>
                 )}
                 {sp.linkedin && (
-                  <a
-                    href={sp.linkedin}
+                  <a,
+href={sp.linkedin}
                     aria-label='LinkedIn'
                     target='_blank'
                     rel='noopener noreferrer'

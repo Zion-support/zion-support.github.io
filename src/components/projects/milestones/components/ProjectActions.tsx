@@ -1,28 +1,17 @@
 
 import React from 'react';
-import { Button  } from '@/components/ui/button';
+import { Button,, ,  } from '@/components/ui/button';
 import Link from 'next/link';
-import { ShieldAlert } from 'lucide-react'
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+import { ShieldAlert,  } from 'lucide-react'
+import { RaiseDisputeButton,  } from '@/components/disputes/RaiseDisputeButton';
 interface ProjectActionsProps {
-  projectId: string;
-  isUnderDispute: boolean;
+  projectId: string;,
+isUnderDispute: boolean;
   disputeId?: string;
-  isTalent: boolean;
-  onAddMilestone: () => void
+  isTalent: boolean;,
+onAddMilestone: () => void,
 export function ProjectActions({
-<<<<<<< HEAD
-  projectId;
-  isUnderDispute;
-  disputeId;
-  isTalent;
-=======
-  projectId
-  isUnderDispute
-  disputeId
-  isTalent
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  onAddMilestone
+onAddMilestone,
 }: ProjectActionsProps) {
   return (
     <div className='flex gap-2'>

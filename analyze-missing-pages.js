@@ -1,8 +1,8 @@
 import fs from "fs";
 import { execSync } from "child_process";
-// Read sitemap.xml
+// Read sitemap.xml,
 const sitemapContent = fs.readFileSync("sitemap.xml", "utf8");
-// Extract URLs from sitemap
+// Extract URLs from sitemap,
 const urlMatches = sitemapContent.match(
   /<loc>https:\/\/ziontechgroup\.com\/([^<]+)<\/loc>/g
 );
@@ -14,7 +14,7 @@ const sitemapUrls = urlMatches
       return url === "" ? "index" : url;
     })
   : [];
-// Get actual pages
+// Get actual pages,
 const actualPages = execSync(
   'find pages -name "*.tsx" -type f | sed "s/pages\\///g" | sed "s/\\.tsx$//g"'
   { encoding: "utf8" }
@@ -34,10 +34,10 @@ extraPages.forEach((page) => console.log(`- ${page}`));
 console.log("\n=== PAGES THAT NEED SUBDIRECTORIES ===");
 const pagesNeedingSubdirs = sitemapUrls.filter((url) => url.includes("/"));
 pagesNeedingSubdirs.forEach((page) => console.log(`- ${page}`));
-// Check for broken internal links
+// Check for broken internal links,
 console.log("\n=== CHECKING FOR BROKEN INTERNAL LINKS ===");
 const brokenLinks = [];
-// Check each actual page for internal links
+// Check each actual page for internal links,
 actualPages.forEach((page) => {
   try {
     const pageContent = fs.readFileSync(`pages/${page}.tsx`, "utf8");
@@ -52,10 +52,10 @@ actualPages.forEach((page) => {
           !sitemapUrls.includes(fullLink)
         ) {
           brokenLinks.push({
-            page
-            brokenLink: `/${link}`
-            fullLink
-          });
+            page,
+brokenLink: `/${link}`
+            fullLink,
+});
         }
       });
     }

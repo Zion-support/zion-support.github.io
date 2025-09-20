@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link,  } from 'react-router-dom';
 const Home: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -14,14 +14,14 @@ const Home: React.FC = () => {
               Leading AI-powered technology solutions for modern businesses. Transform your digital future with cutting-edge innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/services"
+              <Link,
+to="/services"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 font-semibold text-lg shadow-2xl"
               >
                 Explore Services
               </Link>
-              <Link
-                to="/contact"
+              <Link,
+to="/contact"
                 className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
               >
                 Get Started
@@ -49,7 +49,7 @@ const Home: React.FC = () => {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">AI-Powered Solutions</h3>
-              <p className="text-gray-300">Leverage artificial intelligence to automate processes, gain insights, and drive innovation across your organization.</p>
+              <p className="text-gray-300">Leverage artificial intelligence to automate processes gain insights and drive innovation across your organization.</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 group">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -100,8 +100,8 @@ const Home: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl text-blue-100 mb-8">Join thousands of companies already using Zion Tech to accelerate their digital transformation.</p>
-          <Link
-            to="/contact"
+          <Link,
+to="/contact"
             className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl inline-block"
           >
             Start Your Journey Today

@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react';
 import path from 'node:path';
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()]
-  resolve: {
+  plugins: [react()],
+resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
       '@components': path.resolve(__dirname, './src/components')
@@ -16,25 +16,25 @@ export default defineConfig({
       '@assets': path.resolve(__dirname, './src/assets')
     }
   }
-  css: {
-    postcss: false
+  css: {,
+postcss: false,
+}
+  esbuild: {,
+loader: 'tsx'
+    include: /src\/.*\.[jt]sx?$/,
+exclude: []
   }
-  esbuild: {
-    loader: 'tsx'
-    include: /src\/.*\.[jt]sx?$/
-    exclude: []
-  }
-  build: {
-    target: 'esnext'
-    minify: 'terser'
-    sourcemap: false
-    rollupOptions: {
-      output: {
+  build: {,
+target: 'esnext'
+    minify: 'terser',
+sourcemap: false,
+rollupOptions: {,
+output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom']
         }
-        chunkFileNames: 'js/[name]-[hash].js'
-        entryFileNames: 'js/[name]-[hash].js'
+        chunkFileNames: 'js/[name]-[hash].js',
+entryFileNames: 'js/[name]-[hash].js'
         assetFileNames: (assetInfo) => {
           const name = assetInfo.name |'';
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
@@ -44,10 +44,10 @@ export default defineConfig({
         }
       }
     }
-    chunkSizeWarningLimit: 1000
-  }
-  optimizeDeps: {
-    include: [
+    chunkSizeWarningLimit: 1000,
+}
+  optimizeDeps: {,
+include: [
       'react'
       'react-dom'
       'react-router-dom'
@@ -58,14 +58,14 @@ export default defineConfig({
     ]
     exclude: ['@radix-ui/react-icons']
   }
-  server: {
-    port: 3000
-    host: true
-    open: true
-  }
-  preview: {
-    port: 4173
-    host: true
-    open: true
-  }
+  server: {,
+port: 3000,
+host: true,
+open: true,
+}
+  preview: {,
+port: 4173,
+host: true,
+open: true,
+}
 });

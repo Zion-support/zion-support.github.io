@@ -1,34 +1,4 @@
-<<<<<<< HEAD
-
-import React from "react",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge";
-=======
-import React from 'react'
-import {
-  Card
-  CardContent
-  CardHeader
-  CardTitle
-  CardDescription
-} from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-  ChevronRight
-  FileText
-  Image
-  Clock
-  Zap
-  BookOpen
-} from 'lucide-react'
-import Link from 'next/link'
-import React from "react"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
+import { ChevronRight,, FileText,, Image,, Clock,, Zap,, BookOpen,  } from 'lucide-react'
 import Link from "next/link";
 export function TalentDashboard() {
   return (
@@ -171,32 +141,32 @@ export function TalentDashboard() {
       <section>
         <h2 className='text-lg font-medium mb-4'>Quick Actions</h2>
         <div className='grid grid-cols-2 gap-4'>
-          <Button
-            variant='outline'
+          <Button,
+variant='outline'
             className='h-auto py-4 flex flex-col gap-1'
             aria-label='Update Resume'
           >
             <FileText className='h-5 w-5 mb-1' aria-hidden='true' />
             <span>Update Resume</span>
           </Button>
-          <Button
-            variant='outline'
+          <Button,
+variant='outline'
             className='h-auto py-4 flex flex-col gap-1'
             aria-label='View Portfolio'
           >
             <Image className='h-5 w-5 mb-1' aria-hidden='true' />
             <span>Portfolio</span>
           </Button>
-          <Button
-            variant='outline'
+          <Button,
+variant='outline'
             className='h-auto py-4 flex flex-col gap-1'
             aria-label='Set Availability'
           >
             <Clock className='h-5 w-5 mb-1' aria-hidden='true' />
             <span>Availability</span>
           </Button>
-          <Button
-            variant='outline'
+          <Button,
+variant='outline'
             className='h-auto py-4 flex flex-col gap-1'
             aria-label='AI Resume Boost'
           >
@@ -206,24 +176,24 @@ export function TalentDashboard() {
       </section>      <section>
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
         <div className="grid grid-cols-2 gap-4">
-          <Button
-            variant="outline"
+          <Button,
+variant="outline"
             className="h-auto py-4 flex flex-col gap-1"
             aria-label="Update Resume"
           >
             <FileText className="h-5 w-5 mb-1" aria-hidden="true" />
             <span>Update Resume</span>
           </Button>
-          <Button
-            variant="outline"
+          <Button,
+variant="outline"
             className="h-auto py-4 flex flex-col gap-1"
             aria-label="View Portfolio"
           >
             <Image className="h-5 w-5 mb-1" aria-hidden="true" />
             <span>Portfolio</span>
           </Button>
-          <Button
-            variant="outline"
+          <Button,
+variant="outline"
             className="h-auto py-4 flex flex-col gap-1"
             aria-label="Set Availability"
           >
@@ -252,8 +222,8 @@ export function TalentDashboard() {
         <Card>
           <CardContent className='p-4'>
             <div className='flex items-center gap-3'>
-              <div
-                className='bg-primary/10 p-3 rounded-full'
+              <div,
+className='bg-primary/10 p-3 rounded-full'
                 aria-hidden='true'
               >
                 <BookOpen className='h-6 w-6 text-primary' />

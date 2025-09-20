@@ -1,25 +1,25 @@
 'use client'
-import React, { useEffect, useState } from 'react'
-import {supabase} from '@/utils/supabase/client'
-import {Button} from '@/components/ui/button'
-import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card'
-import {Badge} from '@/components/ui/badge'
-import {User, LogOut, LogIn} from 'lucide-react'
-import {useRouter} from 'next/navigation'
+import React { useEffect useState } from 'react'
+import { supabase } from '@/utils/supabase/client'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { User, LogOut, LogIn } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 import type {
-  User as SupabaseUser
-  AuthChangeEvent
-  Session
+  User as SupabaseUser,
+AuthChangeEvent
+  Session,
 } from '@supabase/supabase-js'
 interface UserProfileProps {
-  onUserChange?: (user: SupabaseUser | null) => void
+  onUserChange?: (user: SupabaseUser | null) => void,
 export default function UserProfile({ onUserChange }: UserProfileProps) {
   const [user, setUser] = useState<SupabaseUser | null>(null)
   const [loading, setLoading] = useState(true)
   const router = useRouter()
   useEffect(() =></SupabaseUser> {
-    // Get initial session
-    const getInitialSession = async () => {
+    // Get initial session,
+const getInitialSession = async () => {
       const {
         data: { session }
       } = await supabase.auth.getSession()
@@ -28,11 +28,11 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
       onUserChange?.(session?.user ?? null)
     }
     getInitialSession()
-    // Listen for auth changes
-    const {
+    // Listen for auth changes,
+const {
       data: { subscription }
     } = supabase.auth.onAuthStateChange(
-      (event: AuthChangeEvent, session: Session | null) => {
+      (event: AuthChangeEvent session: Session | null) => {
         setUser(session?.user ?? null)
         setLoading(false)
         onUserChange?.(session?.user ?? null)

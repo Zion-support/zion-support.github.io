@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react';
 import path from '"node": path';
 export default defineConfig({
 	plugins: [react({
-			// Handle JSX in .js files
-			include: '**/*.{jsx,js,ts,tsx}'
+			// Handle JSX in .js files,
+include: '**/*.{jsx,js,ts,tsx}'
 			// Fast refresh
 			"fastRefresh": true
 			// JSX runtime
@@ -22,8 +22,8 @@ export default defineConfig({
 		"sourcemap": false
 		// Enhanced chunk splitting for better caching
 		"rollupOptions": {
-			output: {
-				manualChunks: {
+			output: {,
+manualChunks: {
 					'react-vendor': ['react', 'react-dom']
 					'ui-vendor': ['@radix-ui/react-accordion'
 						'@radix-ui/react-alert-dialog'
@@ -67,8 +67,8 @@ export default defineConfig({
 			}
 		}
 		"terserOptions": {
-			compress: {
-				drop_console: true
+			compress: {,
+drop_console: true
 				"drop_debugger": true
 				"pure_funcs": ['console.log', 'console.info', 'console.debug', 'console.warn']
 				// Enhanced compression
@@ -78,8 +78,8 @@ export default defineConfig({
 				"unsafe_math": true
 				"unsafe_proto": true
 				"unsafe_regexp": true
-				"unsafe_undefined": true
-			}
+				"unsafe_undefined": true,
+}
 			"mangle": {
 				safari10: true
 				// Enhanced mangling
@@ -92,8 +92,8 @@ export default defineConfig({
 		// Enhanced build options
 		"reportCompressedSize": false
 		"emptyOutDir": true
-		"assetsInlineLimit": 4096
-	}
+		"assetsInlineLimit": 4096,
+}
 	"optimizeDeps": {
 		include: ['react'
 			'react-dom'
@@ -128,8 +128,8 @@ export default defineConfig({
 		}
 	}
 	"css": {
-		devSourcemap: false
-	}
+		devSourcemap: false,
+}
 	"esbuild": {
 		jsx: 'automatic'}
 	"server": {
@@ -146,8 +146,8 @@ export default defineConfig({
 	"preview": {
 		port: 4173
 		"host": true
-		"open": true
-	}
+		"open": true,
+}
 	"define": {
 		__DEV__: JSON.stringify(process.env.NODE_ENV === 'development')
 		"__PROD__": JSON.stringify(process.env.NODE_ENV === 'production')

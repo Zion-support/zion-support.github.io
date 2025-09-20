@@ -1,77 +1,20 @@
 
 import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent } from "@/components/ui/card",
-import { Loader2, Globe } from 'lucide-react'
-import { useTranslation } from "react-i18next",
-import { useTranslationService } from "@/hooks/useTranslationService",
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
-import { toast } from "@/components/ui/use-toast";
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { Button,  } from "@/components/ui/button",
+import { Input,  } from "@/components/ui/input",
+import { Textarea,  } from "@/components/ui/textarea",
+import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from "@/components/ui/tabs",
+import { Card,, CardContent,  } from "@/components/ui/card",
+import { Loader2,, Globe,  } from 'lucide-react'
+import { useTranslation,  } from "react-i18next",
+import { useTranslationService,  } from "@/hooks/useTranslationService",
+import { useLanguage,, SupportedLanguage,  } from "@/context/LanguageContext",
+import { toast,  } from "@/components/ui/use-toast";
+import { logErrorToProduction } from '@/utils/productionLogger';
 interface TranslatableJobFormProps {
-<<<<<<< HEAD
-  onSubmit: (formData: any) => void;
-  isSubmitting?: boolean
-=======
-  onSubmit: (formData: any) => void
-  isSubmitting?: boolean }
-export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
-  const { t } = useTranslation()
-  const { translateContent, isTranslating } = useTranslationService()
-  const { supportedLanguages, currentLanguage } = useLanguage()
-  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage)
-  // Form fields with translations
-  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
-    en: ""
-    es: ""
-    fr: ""
-    pt: ""
-    ar: ""
-  })
-    ar: ""
-  })
-    let sourceLanguage: SupportedLanguage = 'en'
-    let content = ''
-        content = title[lang]
-        sourceLanguage = lang
-        break } else if (field === 'description' && description[lang]) {
-        content = description[lang]
-        sourceLanguage = lang
-        break
-      } else if (field === 'requirements' && requirements[lang]) {
-        content = requirements[lang]
-        sourceLanguage = lang
-        break
-        title: t('translation.no_content')
-        description: t('translation.add_content_first')
-        variant: "destructive"
-      })
-      return
-          variant: "destructive"
-      })
-      return
-        title: t('translation.translation_success')
-        description: t('translation.content_translated')
-      })
-    } catch (error) {
-      logErrorToProduction('Error translating ${field}:', { data: error })
-      toast({
-        title: t('translation.translation_failed')
-        description: error instanceof Error ? error.message : t('translation.unknown_error')
-        variant: "destructive"
-      })
-    }
-  }
-  // Ensure all translations are available
-  const ensureAllTranslations = async () => {
-    const promises = []
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
 
-export function TranslatableJobForm({ onSubmit, isSubmitting;
+export function TranslatableJobForm({ onSubmit isSubmitting;
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -87,8 +30,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
             <label htmlFor="title" className="text-lg font-medium">
               {t('jobs.job_title')}
             </label>
-            <Button
-              type="button"
+            <Button,
+type="button"
               size="sm"
               variant="outline"
               onClick={() => autoTranslate('title')}
@@ -116,8 +59,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
             {supportedLanguages.map((lang) => (
               <TabsContent key={lang.code} value={lang.code} className="mt-2">
                 <div className="space-y-1">
-                  <Input
-                    id={`title-${lang.code}`}
+                  <Input,
+id={`title-${lang.code}`}
                     value={title[lang.code] || ''}
                     onChange={(e) => handleTitleChange(e.target.value)}
                     className="w-full"
@@ -134,8 +77,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
             <label htmlFor="description" className="text-lg font-medium">
               {t('jobs.job_description')}
             </label>
-            <Button
-              type="button"
+            <Button,
+type="button"
               size="sm"
               variant="outline"
               onClick={() => autoTranslate('description')}
@@ -162,8 +105,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
             
             {supportedLanguages.map((lang) => (
               <TabsContent key={lang.code} value={lang.code} className="mt-2">
-                <Textarea
-                  id={`description-${lang.code}`}
+                <Textarea,
+id={`description-${lang.code}`}
                   value={description[lang.code] || ''}
                   onChange={(e) => handleDescriptionChange(e.target.value)}
                   className="min-h-32 w-full"
@@ -179,8 +122,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
             <label htmlFor="requirements" className="text-lg font-medium">
               {t('jobs.skills_required')}
             </label>
-            <Button
-              type="button"
+            <Button,
+type="button"
               size="sm"
               variant="outline"
               onClick={() => autoTranslate('requirements')}
@@ -207,8 +150,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
             
             {supportedLanguages.map((lang) => (
               <TabsContent key={lang.code} value={lang.code} className="mt-2">
-                <Textarea
-                  id={`requirements-${lang.code}`}
+                <Textarea,
+id={`requirements-${lang.code}`}
                   value={requirements[lang.code] || ''}
                   onChange={(e) => handleRequirementsChange(e.target.value)}
                   className="min-h-24 w-full"
@@ -224,8 +167,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
             <label htmlFor="budget" className="text-lg font-medium">
               {t('jobs.budget')}
             </label>
-            <Input
-              id="budget"
+            <Input,
+id="budget"
               value={budget}
               onChange={(e) => setBudget(e.target.value)}
               placeholder="$1000 - $2000"
@@ -236,8 +179,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
             <label htmlFor="deadline" className="text-lg font-medium">
               {t('jobs.deadline')}
             </label>
-            <Input
-              id="deadline"
+            <Input,
+id="deadline"
               type="date"
               value={deadline}
               onChange={(e) => setDeadline(e.target.value)}
@@ -248,8 +191,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
       </div>
       
       <div className="pt-4">
-        <Button
-          type="submit"
+        <Button,
+type="submit"
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan"
           disabled={isSubmitting || isTranslating}
         >

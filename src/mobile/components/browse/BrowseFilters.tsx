@@ -1,31 +1,15 @@
 import React, { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Slider } from '@/components/ui/slider'
-import { Switch } from '@/components/ui/switch'
-import { Input } from '@/components/ui/input'
-import {
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from '@/components/ui/select'
-import { X, Filter } from 'lucide-react'
-<<<<<<< HEAD
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
-import { Badge } from "@/components/ui/badge",
-import { Label } from "@/components/ui/label";
-=======
-  Sheet
-  SheetContent
-  SheetHeader
-  SheetTitle
-  SheetFooter
-  SheetTrigger
-} from '@/components/ui/sheet'
-import { Badge } from '@/components/ui/badge'
-import { Label } from '@/components/ui/label'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+import { Button,  } from '@/components/ui/button'
+import { Slider,  } from '@/components/ui/slider'
+import { Switch,  } from '@/components/ui/switch'
+import { Input,  } from '@/components/ui/input'
+import { Select,
+SelectContent
+, , SelectItem,
+SelectTrigger
+, , SelectValue,
+ } from '@/components/ui/select'
+import { X,, Filter,  } from 'lucide-react'
 interface BrowseFiltersProps {
   type: 'jobs' | 'talents'
 export function BrowseFilters({ type }: BrowseFiltersProps) {
@@ -54,26 +38,26 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     <div className='space-y-2'>
                       <Label>Job Type</Label>
                       <div className='flex gap-2 flex-wrap'>
-                        <Badge
-                          variant='outline'
+                        <Badge,
+variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Full Time
                         </Badge>
-                        <Badge
-                          variant='outline'
+                        <Badge,
+variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Part Time
                         </Badge>
-                        <Badge
-                          variant='outline'
+                        <Badge,
+variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Contract
                         </Badge>
-                        <Badge
-                          variant='outline'
+                        <Badge,
+variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Freelance
@@ -83,20 +67,20 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     <div className='space-y-2'>
                       <Label>Experience Level</Label>
                       <div className='flex gap-2 flex-wrap'>
-                        <Badge
-                          variant='outline'
+                        <Badge,
+variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Entry Level
                         </Badge>
-                        <Badge
-                          variant='outline'
+                        <Badge,
+variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Mid Level
                         </Badge>
-                        <Badge
-                          variant='outline'
+                        <Badge,
+variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Senior
@@ -109,26 +93,26 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     <div className='space-y-2'>
                       <Label>Specialization</Label>
                       <div className='flex gap-2 flex-wrap'>
-                        <Badge
-                          variant='outline'
+                        <Badge,
+variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Developer
                         </Badge>
-                        <Badge
-                          variant='outline'
+                        <Badge,
+variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Designer
                         </Badge>
-                        <Badge
-                          variant='outline'
+                        <Badge,
+variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Marketing
                         </Badge>
-                        <Badge
-                          variant='outline'
+                        <Badge,
+variant='outline'
                           className='cursor-pointer hover:bg-primary/5'
                         >
                           Content
@@ -137,9 +121,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     </div>
                     <div className='space-y-2'>
                       <Label>Experience (years)</Label>
-                      <Slider
-                        aria-label='Years of experience'
-                        defaultValue={[0, 10]}
+                      <Slider,
+aria-label='Years of experience'
+                        defaultValue={[0 10]}
                         max={20}
                         step={1}
                         className='my-4'                      />
@@ -175,38 +159,38 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                 <div className='space-y-2'>
                   <Label>Skills</Label>
                   <div className='grid grid-cols-2 gap-2'>
-                    <Badge
-                      variant='outline'
+                    <Badge,
+variant='outline'
                       className='cursor-pointer hover:bg-primary/5 justify-start'
                     >
                       JavaScript
                     </Badge>
-                    <Badge
-                      variant='outline'
+                    <Badge,
+variant='outline'
                       className='cursor-pointer hover:bg-primary/5 justify-start'
                     >
                       React
                     </Badge>
-                    <Badge
-                      variant='outline'
+                    <Badge,
+variant='outline'
                       className='cursor-pointer hover:bg-primary/5 justify-start'
                     >
                       Python
                     </Badge>
-                    <Badge
-                      variant='outline'
+                    <Badge,
+variant='outline'
                       className='cursor-pointer hover:bg-primary/5 justify-start'
                     >
                       Figma
                     </Badge>
-                    <Badge
-                      variant='outline'
+                    <Badge,
+variant='outline'
                       className='cursor-pointer hover:bg-primary/5 justify-start'
                     >
                       UI/UX
                     </Badge>
-                    <Badge
-                      variant='outline'
+                    <Badge,
+variant='outline'
                       className='cursor-pointer hover:bg-primary/5 justify-start'
                     >
                       Node.js
@@ -222,8 +206,8 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                 <Button variant='outline' className='w-full'>
                   Reset
                 </Button>
-                <Button
-                  className='w-full'
+                <Button,
+className='w-full'
                   onClick={() => addFilter('Experience: 3+ years')}
                 >
                   Apply Filters
@@ -242,14 +226,14 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
             </SelectContent>
           </Select>
           {activeFilters.map(filter => (
-            <Badge
-              key={filter}
+            <Badge,
+key={filter}
               variant='secondary'
               className='flex items-center gap-1'
             >
               {filter}
-              <X
-                className='h-3 w-3 cursor-pointer'
+              <X,
+className='h-3 w-3 cursor-pointer'
                 onClick={() => removeFilter(filter)}              />
             </Badge>
           ))}

@@ -1,4 +1,4 @@
-// Monitoring utilities
+// Monitoring utilities,
 export const logEvent = (event: string) => {
   console.log('Event logged:', event);
 }

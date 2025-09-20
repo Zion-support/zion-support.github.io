@@ -1,4 +1,4 @@
-import { Check } from 'lucide-react'
+import { Check,  } from 'lucide-react'
 export function ServiceIncludes() {
   return (
     <div className='bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20'>
@@ -14,8 +14,8 @@ export function ServiceIncludes() {
             <div>
               <h3 className='text-white font-medium'>Transportation to Site</h3>
               <p className='text-zion-slate-light'>
-                All travel costs to your location are included in the base
-                price.
+                All travel costs to your location are included in the base,
+price.
               </p>
             </div>
           </div>

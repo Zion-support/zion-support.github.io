@@ -1,8 +1,8 @@
 
 import React, { useState } from "react",
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, Users, Check } from 'lucide-react'
+import { Button,  } from "@/components/ui/button";
+import { Card,, CardContent,  } from "@/components/ui/card";
+import { Briefcase,, Users,, Check,  } from 'lucide-react'
 
 type UserRole = any;
   return (
@@ -12,8 +12,8 @@ type UserRole = any;
         Choose how you want to use our platform
       </p>
       <div className='space-y-3 mt-6'>
-        <Card
-          className={`cursor-pointer transition-all ${
+        <Card,
+className={`cursor-pointer transition-all ${
             selectedRole === 'talent'
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
@@ -37,8 +37,8 @@ type UserRole = any;
             </div>
           </CardContent>
         </Card>
-        <Card
-          className={`cursor-pointer transition-all ${
+        <Card,
+className={`cursor-pointer transition-all ${
             selectedRole === 'client'
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'

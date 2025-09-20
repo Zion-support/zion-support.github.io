@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node,
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -24,10 +24,10 @@ export default function ${componentName}() {
 function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, "utf8");
-    // Check if it's a React component file
-    if (filePath.endsWith(".jsx") |filePath.endsWith(".tsx")) {
-      // If file is empty or has syntax errors, create a valid component
-        const newContent = createValidReactComponent(filePath);
+    // Check if it's a React component file,
+if (filePath.endsWith(".jsx") |filePath.endsWith(".tsx")) {
+      // If file is empty or has syntax errors, create a valid component,
+const newContent = createValidReactComponent(filePath);
         fs.writeFileSync(filePath, newContent);
         console.log(`Fixed: ${filePath}`);
         return 1;

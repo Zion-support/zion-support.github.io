@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Switch  } from '@/components/ui/switch';
-import { Button  } from '@/components/ui/button';
-import { Label  } from '@/components/ui/label';
-import { ShieldAlert, Info } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
-import {
-  Accordion;
-  AccordionContent;
-  AccordionItem;
-  AccordionTrigger} from "@/components/ui/accordion",
-import { toast  } from '@/hooks/use-toast';
-import { supabase  } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
+import { Card,, CardContent,, CardDescription,, CardHeader,, CardTitle,, ,  } from '@/components/ui/card';
+import { Switch,, ,  } from '@/components/ui/switch';
+import { Button,, ,  } from '@/components/ui/button';
+import { Label,, ,  } from '@/components/ui/label';
+import { ShieldAlert,, Info,  } from 'lucide-react'
+import { logErrorToProduction } from '@/utils/productionLogger';
+import { Accordion;
+, , AccordionContent;
+, , AccordionItem;
+, , AccordionTrigger } from "@/components/ui/accordion",
+import { toast,, ,  } from '@/hooks/use-toast';
+import { supabase,, ,  } from '@/integrations/supabase/client';
+import { useAuth,  } from '@/hooks/useAuth';
 export function FraudDetectionSettings() {
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
@@ -43,8 +42,8 @@ export function FraudDetectionSettings() {
                   Scan message content for potentially harmful or abusive material
                 </p>
               </div>
-              <Switch
-                id="message-scanning"
+              <Switch,
+id="message-scanning"
                 aria-label="Message scanning"
                 checked={messageScanningEnabled}
                 onCheckedChange={setMessageScanningEnabled}
@@ -60,8 +59,8 @@ export function FraudDetectionSettings() {
                   Monitor account activity for suspicious patterns
                 </p>
               </div>
-              <Switch
-                id="activity-monitoring"
+              <Switch,
+id="activity-monitoring"
                 aria-label="Activity monitoring"
                 checked={activityMonitoringEnabled}
                 onCheckedChange={setActivityMonitoringEnabled}
@@ -77,8 +76,8 @@ export function FraudDetectionSettings() {
                   Use AI to analyze content and behavior for potential fraud
                 </p>
               </div>
-              <Switch
-                id="ai-analysis"
+              <Switch,
+id="ai-analysis"
                 aria-label="AI analysis"
                 checked={aiAnalysisEnabled}
                 onCheckedChange={setAiAnalysisEnabled}
@@ -104,7 +103,7 @@ export function FraudDetectionSettings() {
                   <li>Monitoring for suspicious account activities</li>
                 </ul>
                 <p>
-                  You can opt out of some of these protections, but this may limit your ability to use certain platform features. 
+                  You can opt out of some of these protections but this may limit your ability to use certain platform features. 
                   We prioritize keeping our marketplace safe while respecting your privacy.
                 </p>
               </AccordionContent>
@@ -112,8 +111,8 @@ export function FraudDetectionSettings() {
           </Accordion>
           
           <div className="pt-2">
-            <Button 
-              onClick={handleSavePreferences}
+            <Button,
+onClick={handleSavePreferences}
               disabled={isSaving}
               className="bg-zion-purple hover:bg-zion-purple-light"
             >

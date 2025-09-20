@@ -1,55 +1,7 @@
-import { Project  } from '@/types/projects';
-import { useState } from "react",
-import { Star } from 'lucide-react'
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReviewsList } from "@/components/reviews/ReviewsList",
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
-import { useReviews } from "@/hooks/useReviews";
-import { useAuth } from "@/hooks/useAuth";
-interface ProjectReviewSectionProps {
-  project: Project
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
-  const { user } = useAuth();
-  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id);
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
-  const isCompleted = null;
-=======
-import { Button } from '@/components/ui/button'
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { ReviewsList } from '@/components/reviews/ReviewsList'
-import { LeaveReviewModal } from '@/components/reviews/LeaveReviewModal'
-import { useReviews } from '@/hooks/useReviews'
-import { useAuth } from '@/hooks/useAuth'
-interface ProjectReviewSectionProps {
-  project: Project
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
-  const { user } = useAuth()
-  const { reviews, userReview, isLoading, reportReview } = useReviews(
-    project.id
-  )
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false)
-  const isCompleted = project.status === 'completed'
-  const isClient = user?.id === project.client_id
-  const isTalent = user?.id === project.talent_id
-  const clientProfile = project?.talent_profile
-  const talentProfile = project.talent_profile
-  // Determine who the current user needs to review
-  const revieweeId = isClient ? project.talent_id : project.client_id
-  const revieweeName = isClient
-    ? talentProfile?.full_name |'Talent'
-    : clientProfile?.full_name |'Client'
-  const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview
-  const hasLeftReview = userReview != null
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return (
+import { Project,, ,  } from '@/types/projects';
+import { useState,  } from "react",
+import { Star,  } from 'lucide-react'
+return (
     <Card className='mt-6'>
       <CardHeader>
         <CardTitle className='flex items-center gap-2'>
@@ -57,8 +9,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           Reviews
         </CardTitle>
         <CardDescription>
-          Reviews are visible once the project is completed and both parties
-          submit feedback
+          Reviews are visible once the project is completed and both parties,
+submit feedback
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -88,8 +40,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                         : 'pending approval'}
                     </p>
                     {userReview.status === 'pending' && (
-                      <Button
-                        variant='outline'
+                      <Button,
+variant='outline'
                         onClick={() => setIsReviewModalOpen(true)}
                       >                        Edit Review
                       </Button>
@@ -98,8 +50,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                 ) : null}
               </div>
             )}
-            <ReviewsList
-              reviews = {reviews,}
+            <ReviewsList,
+reviews = {reviews,}
               isLoading = {isLoading,}
               onReportReview = {reportReview,}
             />
@@ -110,16 +62,16 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
               Reviews will be available once the project is completed
             </h3>
             <p className='text-sm text-muted-foreground'>
-              After the project is marked as completed, both parties will be
-              able to leave reviews
+              After the project is marked as completed both parties will be,
+able to leave reviews
             </p>
           </div>
         )}
       </CardContent>
       {/* Review Modal */}
       {(isClient |isTalent) && (
-        <LeaveReviewModal
-          projectId = {project.id,}
+        <LeaveReviewModal,
+projectId = {project.id,}
           revieweeId = {revieweeId,}
           revieweeName = {revieweeName,}
           isOpen = {isReviewModalOpen,}

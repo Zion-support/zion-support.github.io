@@ -1,65 +1,11 @@
-<<<<<<< HEAD
-
-import { useState, useEffect } from "react",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import Link from "next/link",
-import { SEO } from "@/components/SEO",
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { SuggestedJobs } from "@/components/jobs/SuggestedJobs",
-import { useAuth } from "@/hooks/useAuth",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Avatar } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",
-import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps",
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
-import { MyApplications } from "@/components/jobs/MyApplications",
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
-=======
-import { useState, useEffect } from 'react'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import Link from 'next/link'
-import { SEO } from '@/components/SEO'
-import {
-  BriefcaseIcon
-  UserIcon
-  MessageSquare
-  Star
-  PlusCircle
-  FileText
-  Inbox
-  Video
-} from 'lucide-react'
-import { ProtectedRoute } from '@/components/ProtectedRoute'
-import { SuggestedJobs } from '@/components/jobs/SuggestedJobs'
-import { useAuth } from '@/hooks/useAuth'
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Avatar } from '@/components/ui/avatar'
-import { Badge } from '@/components/ui/badge'
-import { TalentOnboardingSteps } from '@/components/onboarding/TalentOnboardingSteps'
-import { AdvancedOnboardingSteps } from '@/components/onboarding/AdvancedOnboardingSteps'
-import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
-import { MyApplications } from '@/components/jobs/MyApplications'
-import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner'
-import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
   const onboardingStatus = null;
   return (
     <>
-      <SEO
-        title='Talent Dashboard | Zion AI Marketplace'
+      <SEO,
+title='Talent Dashboard | Zion AI Marketplace'
         description='Your personalized talent dashboard with job matches and professional opportunities.'
       />
       <main className='container mx-auto px-4 py-8'>
@@ -94,8 +40,8 @@ function TalentDashboardContent() {
                   <div className='flex items-center gap-3'>
                     <Avatar className='h-12 w-12 border'>
                       {user?.avatarUrl ? (
-                        <img
-                          src={user.avatarUrl}
+                        <img,
+src={user.avatarUrl}
                           alt={user.displayName |'User'}
                           loading='lazy'
                         />
@@ -200,8 +146,8 @@ function TalentDashboardContent() {
                 <div className='mt-4 flex justify-center'>
                   <Button variant='outline' asChild>
                     <Link href='/dashboard/talent/applications'>
-                      <Inbox className='h-4 w-4 mr-2' /> View Full Application
-                      Tracker
+                      <Inbox className='h-4 w-4 mr-2' /> View Full Application,
+Tracker
                     </Link>
                   </Button>
                 </div>

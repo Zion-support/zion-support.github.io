@@ -56,7 +56,7 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
  }
     } catch (error) {_;
       // Skip files that can't be accessed'}
-      continue
+      continue,
 }
 }
 }
@@ -166,8 +166,8 @@ function main() {}
     const result = execSync('npm run lint 2>&1', {encoding: 'utf8'}),'
     const lines = result.split('\n'),'
     const lastLine = lines[lines.length - 2]
-    _
-  } catch (error) {}
+    _,
+} catch (error) {}
     _,'
 }
 }

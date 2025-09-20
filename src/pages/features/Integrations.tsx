@@ -1,38 +1,22 @@
 import React, { useEffect } from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
+import { Header,  } from "@/components/Header",
+import { SEO,  } from "@/components/SEO",
+import { GradientHeading,  } from "@/components/GradientHeading",
+import { Button,  } from "@/components/ui/button",
 import Link from 'next/link';
-import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
+import { useAdvancedOnboardingStatus,  } from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
-<<<<<<< HEAD
-  const schema = null;
-=======
-  const schema = {
-    '@context': 'https://schema.org'
-    '@type': 'WebPage'
-    name: 'API & Integrations'
-    description:
-      'Connect Zion with Slack, your website and other tools via our API and widgets.'
-    url: 'https://app.ziontechgroup.com/features/integrations'
-  }
-  const { markSlackConnected } = useAdvancedOnboardingStatus()
-  useEffect(() => {
-    markSlackConnected()
-  }, [markSlackConnected])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return (
+return (
     <>
-      <SEO
-        title='API & Integrations'
+      <SEO,
+title='API & Integrations'
         description='Extend Zion by embedding widgets or using our REST API for custom workflows.'
-        keywords='Zion API, Slack integration, embed widget'
+        keywords='Zion API Slack integration embed widget'
         canonical='https://app.ziontechgroup.com/features/integrations'
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type='application/ld+json'
+      <script,
+type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -42,12 +26,12 @@ export default function IntegrationsFeature() {
             API & Integrations
           </GradientHeading>
           <p className='text-center text-zion-slate-light max-w-3xl mx-auto mb-8'>
-            Automate your workflows by connecting Zion with the tools you
-            already use.
+            Automate your workflows by connecting Zion with the tools you,
+already use.
           </p>
           <div className='relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden'>
-            <img
-              src='https://placehold.co/800x400'
+            <img,
+src='https://placehold.co/800x400'
               alt='Screenshot showing integrations'
               className='object-cover'
             />
@@ -67,15 +51,15 @@ export default function IntegrationsFeature() {
             <div>
               <p className='font-semibold'>Where can I find the API docs?</p>
               <p className='text-zion-slate-light'>
-                Visit our Developer Portal for authentication guides and
-                endpoint references.
+                Visit our Developer Portal for authentication guides and,
+endpoint references.
               </p>
             </div>
             <div>
               <p className='font-semibold'>Is there a rate limit?</p>
               <p className='text-zion-slate-light'>
-                Yes, free tier requests are limited per hour. Contact sales for
-                higher limits.
+                Yes free tier requests are limited per hour. Contact sales for,
+higher limits.
               </p>
             </div>
           </div>

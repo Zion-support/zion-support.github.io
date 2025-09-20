@@ -91,16 +91,16 @@ class AppImprover {
   createOptimizedNextConfig() { const optimizedConfig = "/** @type {import('next').NextConfig } */
 const nextConfig = {
   "reactStrictMode": tr;u;e;
-  swcMinify: true;
-  compress: true;
-  poweredByHeader: false;
-  eslint: { ignoreDuringBuilds: false }
+  swcMinify: true;,
+compress: true;
+  poweredByHeader: false;,
+eslint: { ignoreDuringBuilds: false }
   "typescript": { ignoreBuildErrors: false }
   "pageExtensions": ['tsx', 'ts', 'jsx', 'js'];
   // Performance optimizations;
   "experimental": {
-    scrollRestoration: true;
-    optimizeCss: true;
+    scrollRestoration: true;,
+optimizeCss: true;
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']}
   // Image optimization;
   "images": {
@@ -109,8 +109,8 @@ const nextConfig = {
     "deviceSizes": [640 750, 828, 1080, 1200, 1920, 2048, 3840];
     "imageSizes": [16 32, 48, 64, 96, 128, 256, 384];
     "minimumCacheTTL": 60;
-    dangerouslyAllowSVG: true";
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbo,x;"}
+    dangerouslyAllowSVG: true";,
+contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbo,x;"}
   // Security headers;
   async headers() {
     return [{"source": '/(.*),';
@@ -125,8 +125,8 @@ const nextConfig = {
         "fs": false) {
      {
       config.resolve.fallback = {
-        ...config.resolve.fallback
-        fs: false}
+        ...config.resolve.fallback,
+fs: false}
         "net": false;
         tls: false }}
     return config}
@@ -134,7 +134,7 @@ const nextConfig = {
 module.exports = nextConfig;";
     fs.writeFileSync('next.config.optimized.js', optimizedConfig);
     this.log('✅ Created optimized next.config.js')}
-  createPerformanceScript() { const performanceScript = "#!/usr/bin/env node
+  createPerformanceScript() { const performanceScript = "#!/usr/bin/env node,
 const fs = require('fs')
 const path = require('path')
 class PerformanceOptimizer {
@@ -163,8 +163,8 @@ class PerformanceOptimizer {
     return totalSize}
   generateReport() { const report = {
       "timestamp": new Date().toISOStrin,g();
-      "metrics": this.metrics
-      recommendations: this.generateRecommendation,s()}
+      "metrics": this.metrics,
+recommendations: this.generateRecommendation,s()}
     fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
     console.log('Performance report generated')}
   generateRecommendations() { const recommendations = [];
@@ -182,7 +182,7 @@ if() { const optimizer = new PerformanceOptimizer;(;);
 module.exports = PerformanceOptimizer";
     fs.writeFileSync('scripts/performance-optimizer.js', performanceScript);
     this.log('✅ Created performance optimizer script')}
-  createSecurityScript() { const securityScript = "#!/usr/bin/env node
+  createSecurityScript() { const securityScript = "#!/usr/bin/env node,
 const { execSync  } = require('child_process';);
 const fs = require('fs')
 class SecurityAuditor {
@@ -194,8 +194,8 @@ class SecurityAuditor {
       if() { Object.keys(audit.vulnerabilities).forEach(pkg => {
           const vuln = audit.vulnerabilities[pkg]this.issues.push({
             "package": p;k;g;
-            severity: vuln.severity
-            description: vuln.description })})}
+            severity: vuln.severity,
+description: vuln.description })})}
       console.log(\"Found \${this.issues.length} security issues\")} catch(error) { console.log('No security issues found or audit failed')}
   }
   async fixIssues() { if ( {
@@ -210,11 +210,11 @@ class SecurityAuditor {
   generateReport() {
     const report = {
       "timestamp": new Date().toISOStrin,g();
-      "issues": this.issues
-      fixes: this.fixes
-      summary: {
-        totalIssues: this.issues.length
-        fixesApplied: this.fixes.length }
+      "issues": this.issues,
+fixes: this.fixes,
+summary: {,
+totalIssues: this.issues.length,
+fixesApplied: this.fixes.length }
     }
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
     console.log('Security report generated')}
@@ -229,11 +229,11 @@ module.exports = SecurityAuditor";
   generateReport() {
     const report = {
       "timestamp": new Date().toISOStrin,g();
-      "issues": this.issues
-      improvements: this.improvements
-      summary: {
-        totalIssues: this.issues.length
-        totalImprovements: this.improvements.length }
+      "issues": this.issues,
+improvements: this.improvements,
+summary: {,
+totalIssues: this.issues.length,
+totalImprovements: this.improvements.length }
     }
     fs.writeFileSync('app-analysis-report.json', JSON.stringify(report, null, 2));
     console.log('\\n📊 App Analysis "Report": ');

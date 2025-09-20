@@ -1,74 +1,10 @@
-<<<<<<< HEAD
-
-import { useState } from 'react';
-import { DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuSeparator;
-  DropdownMenuTrigger 
- } from '@/components/ui/dropdown-menu';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle  } from '@/components/ui/dialog';
-=======
-import { useState } from 'react'
-import {import { useState } from 'react'
-import {
-  DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuSeparator
-  DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-  Dialog
-  DialogContent
-  DialogFooter
-  DialogHeader
-  DialogTitle
-} from '@/components/ui/dialog'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react'
-import { Resume  } from '@/types/resume';
-import { useResume } from '@/hooks/useResume';
+import { Save,, ChevronDown,, Plus,, Loader2,  } from 'lucide-react'
+import { Resume,, ,  } from '@/types/resume';
+import { useResume,  } from '@/hooks/useResume';
 interface ResumeVersionSelectorProps {
-  currentResume: Resume;
-  onResumeChange: (resumeId: string) => void
-<<<<<<< HEAD
-}
-
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {
-  const { createResume, fetchResume } = useResume();
-  const [saveDialogOpen, setSaveDialogOpen] = useState(false);
-  const [newResumeTitle, setNewResumeTitle] = useState('');
-  const [existingResumes, setExistingResumes] = useState<Resume[]>([]),
-  const [isLoading, setIsLoading] = useState(false);
-  const handleCreateNewVersion = null;
-=======
-export function ResumeVersionSelector({
-  currentResume
-  onResumeChange
-}: ResumeVersionSelectorProps) {
-  const { createResume, fetchResume } = useResume()
-  const [saveDialogOpen, setSaveDialogOpen] = useState(false)
-  const [newResumeTitle, setNewResumeTitle] = useState('')
-  const [existingResumes, setExistingResumes] = useState<Resume[]>([])
-  const [isLoading, setIsLoading] = useState(false)
-  const handleCreateNewVersion = async () => {
-    if (newResumeTitle.trim()) {
-      setIsLoading(true)
-      const resumeId = await createResume({ title: newResumeTitle.trim() })
-      if (resumeId) {
-        await fetchResume(resumeId)
-        onResumeChange(resumeId)
-        setSaveDialogOpen(false)
-        setNewResumeTitle('')
-      setIsLoading(false)
-    }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return (
+  currentResume: Resume;,
+onResumeChange: (resumeId: string) => void,
+return (
     <div className='flex items-center gap-2'>
       <span className='text-sm text-muted-foreground'>Resume:</span>
       <DropdownMenu>
@@ -80,14 +16,14 @@ export function ResumeVersionSelector({
         </DropdownMenuTrigger>
         <DropdownMenuContent align='end'>
           {existingResumes.map(resume => (
-            <DropdownMenuItem
-              key={resume.id}
+            <DropdownMenuItem,
+key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
               className='cursor-pointer'            >              className="cursor-pointer"
         <DropdownMenuContent align="end">
           {existingResumes.map((resume) => (
-            <DropdownMenuItem
-              key={resume.id}
+            <DropdownMenuItem,
+key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
               className="cursor-pointer"
             >
@@ -95,8 +31,8 @@ export function ResumeVersionSelector({
             </DropdownMenuItem>
           ))}
           <DropdownMenuSeparator />
-          <DropdownMenuItem
-            onClick={() => setSaveDialogOpen(true)}
+          <DropdownMenuItem,
+onClick={() => setSaveDialogOpen(true)}
             className='cursor-pointer'          >
             <Plus className='h-4 w-4 mr-2' />            Save as new version
           </DropdownMenuItem>
@@ -117,8 +53,8 @@ export function ResumeVersionSelector({
             <DialogTitle>Save as new resume version</DialogTitle>
           </DialogHeader>
           <div className='py-4'>
-            <Input
-              value={newResumeTitle}
+            <Input,
+value={newResumeTitle}
               onChange={e => setNewResumeTitle(e.target.value)}
               placeholder='Enter resume title (e.g. DevOps Resume)'
             />
@@ -127,8 +63,8 @@ export function ResumeVersionSelector({
             <Button variant='outline' onClick={() => setSaveDialogOpen(false)}>
               Cancel
             </Button>
-            <Button
-              onClick={handleCreateNewVersion}
+            <Button,
+onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() |isLoading}
               className='gap-2'
               value = {newResumeTitle,}
@@ -137,14 +73,14 @@ export function ResumeVersionSelector({
             />
           </div>
           <DialogFooter>
-            <Button
-              variant="outline"
+            <Button,
+variant="outline"
               onClick = {() => setSaveDialogOpen(false),}
             >
               Cancel
             </Button>
-            <Button
-              onClick = {handleCreateNewVersion,}
+            <Button,
+onClick = {handleCreateNewVersion,}
               disabled = {!newResumeTitle.trim() |isLoading,}
               className="gap-2"
             >
@@ -160,7 +96,7 @@ export function ResumeVersionSelector({
   )
 }
 > {
-  resume.basic info.title
+  resume.basic info.title,
 }</DropdownMenuItem>) )
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>)
 }"

@@ -1,4 +1,4 @@
-// Performance optimization utilities
+// Performance optimization utilities,
 export const optimizeImages = () => {
   const images = document.querySelectorAll('img');
   images.forEach(img => {
@@ -25,8 +25,8 @@ export const preloadCriticalResources = null;
 };
 
 export const optimizeBundleSize = () => {
-  // Dynamic imports for non-critical components
-  const loadComponent = componentName => {    return import(`./components/${componentName}`)
+  // Dynamic imports for non-critical components,
+const loadComponent = componentName => {    return import(`./components/${componentName}`)
   }
   return { loadComponent }
 }

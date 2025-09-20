@@ -18,7 +18,7 @@ if (fs.existsSync(apiDisabledDir)) {fixTypeScriptFiles(apiDisabledDir);
         console.log(`Error processing ${fullPath}: ${error.message}`)}
     }
   })}
-// Fix all TypeScript files in api-disabled directory
+// Fix all TypeScript files in api-disabled directory,
 const apiDisabledDir = path.join(__dirname, 'api-disabled')
 if (fs.existsSync(apiDisabledDir)) {
   fixTypeScriptFiles(apiDisabledDir)

@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { HelpCategoryList } from './HelpCategoryList'
-import { HelpArticleList } from './HelpArticleList'
-import { HelpArticleView } from './HelpArticleView'
-import { HELP_CATEGORIES } from './help-content'
-import { Search } from 'lucide-react'
+import { Input,  } from '@/components/ui/input'
+import { Button,  } from '@/components/ui/button'
+import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from '@/components/ui/tabs'
+import { HelpCategoryList,  } from './HelpCategoryList'
+import { HelpArticleList,  } from './HelpArticleList'
+import { HelpArticleView,  } from './HelpArticleView'
+import { HELP_CATEGORIES,  } from './help-content'
+import { Search,  } from 'lucide-react'
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null)
@@ -19,31 +19,7 @@ export default function HelpCenter() {
     setSelectedArticle(articleId)
   }
 export default function HelpCenter() {
-<<<<<<< HEAD
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-  const handleCategorySelect = null;
-=======
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null)
-  const [searchQuery, setSearchQuery] = useState("")
-  const handleCategorySelect = (categoryId: string,) => {
-    setSelectedCategory(categoryId)
-    setSelectedArticle(null)
-  }
-  const handleArticleSelect = (articleId: string,) => {
-    setSelectedArticle(articleId)
-  }
-  const handleBackToCategories = () => {
-    setSelectedCategory(null)
-    setSelectedArticle(null)
-  }
-  const handleBackToArticles = () => {
-    setSelectedArticle(null)
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return (
+return (
     <>
       <div className='container mx-auto px-4 py-8'>
         <div className='max-w-4xl mx-auto'>
@@ -51,12 +27,12 @@ export default function HelpCenter() {
             Help Center
           </h1>
           <p className='text-zion-slate-light mb-6'>
-            Find answers to common questions or get in touch with our support
-            team.
+            Find answers to common questions or get in touch with our support,
+team.
           </p>
           <div className='relative mb-8'>
-            <Input
-              placeholder='Search for help articles...'
+            <Input,
+placeholder='Search for help articles...'
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
               className='pl-10'            />
@@ -70,30 +46,30 @@ export default function HelpCenter() {
             </TabsList>
             <TabsContent value='articles'>
               {!selectedCategory && !selectedArticle && (
-                <HelpCategoryList
-                  categories={HELP_CATEGORIES}
+                <HelpCategoryList,
+categories={HELP_CATEGORIES}
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}                />
               )}
               {selectedCategory && !selectedArticle && (
                 <>
-                  <Button
-                    variant='ghost'
+                  <Button,
+variant='ghost'
                     onClick={handleBackToCategories}
                     className='mb-4'
                   >
                     ← All Categories
                   </Button>
-                  <HelpArticleList
-                    categoryId={selectedCategory}
+                  <HelpArticleList,
+categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}                  />
                 </>
               )}
               {selectedArticle && (
                 <>
-                  <Button
-                    variant='ghost'
+                  <Button,
+variant='ghost'
                     onClick={handleBackToArticles}
                     className='mb-4'                  >
                     ← Back to Articles
@@ -113,11 +89,11 @@ export default function HelpCenter() {
                       How does the AI matching work?
                     </h3>
                     <p className='text-zion-slate-light'>
-                      Our AI matching algorithm analyzes your requirements and
-                      preferences to match you with the most compatible talent
-                      or services. The process takes into account skills
-                      experience, availability, and past performance to ensure
-                      optimal results.
+                      Our AI matching algorithm analyzes your requirements and,
+preferences to match you with the most compatible talent,
+or services. The process takes into account skills,
+experience availability and past performance to ensure,
+optimal results.
                     </p>
                   </div>
                   <div>
@@ -125,10 +101,10 @@ export default function HelpCenter() {
                       How do I hire someone on Zion?
                     </h3>
                     <p className='text-zion-slate-light'>
-                      To hire talent on Zion, post a job or project, review
-                      matches or applications, interview candidates through our
-                      platform, and extend an offer. Our secure payment system
-                      protects both parties throughout the engagement.
+                      To hire talent on Zion post a job or project review,
+matches or applications interview candidates through our,
+platform and extend an offer. Our secure payment system,
+protects both parties throughout the engagement.
                     </p>
                   </div>
                   <div>
@@ -136,10 +112,10 @@ export default function HelpCenter() {
                       What are the payment terms?
                     </h3>
                     <p className='text-zion-slate-light'>
-                      Zion offers flexible payment options including
-                      milestone-based payments, hourly rates, or fixed project
-                      fees. Funds are held in escrow until deliverables are
-                      approved, ensuring security for both clients and talent.
+                      Zion offers flexible payment options including,
+milestone-based payments hourly rates or fixed project,
+fees. Funds are held in escrow until deliverables are,
+approved ensuring security for both clients and talent.
                     </p>
                   </div>
                   <div>
@@ -147,10 +123,10 @@ export default function HelpCenter() {
                       How do I contact support?
                     </h3>
                     <p className='text-zion-slate-light'>
-                      You can reach our support team through the chat widget at
-                      the bottom right of any page, by emailing
-                      support@ziontechgroup.com, or by scheduling a call with
-                      our team through the Contact tab.
+                      You can reach our support team through the chat widget at,
+the bottom right of any page by emailing,
+support@ziontechgroup.com or by scheduling a call with,
+our team through the Contact tab.
                     </p>
                   </div>
                 </div>
@@ -163,14 +139,14 @@ export default function HelpCenter() {
                     Contact Support
                   </h2>
                   <p className='text-zion-slate-light mb-4'>
-                    Our support team is available 24/7 to assist you with any
-                    questions or issues.
+                    Our support team is available 24/7 to assist you with any,
+questions or issues.
                   </p>
                   <div className='space-y-4'>
                     <div className='flex items-center'>
                       <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
+                        <svg,
+xmlns='http://www.w3.org/2000/svg'
                           className='h-5 w-5 text-zion-purple'
                           viewBox='0 0 20 20'
                           fill='currentColor'
@@ -179,8 +155,8 @@ export default function HelpCenter() {
                           <path d='M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z' />
                         </svg>
                       </div>
-                      <a
-                        href='mailto:support@ziontechgroup.com'
+                      <a,
+href='mailto:support@ziontechgroup.com'
                         className='text-zion-cyan hover:underline'
                       >
                         support@ziontechgroup.com
@@ -188,8 +164,8 @@ export default function HelpCenter() {
                     </div>
                     <div className='flex items-center'>
                       <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
+                        <svg,
+xmlns='http://www.w3.org/2000/svg'
                           className='h-5 w-5 text-zion-purple'
                           viewBox='0 0 20 20'
                           fill='currentColor'
@@ -211,8 +187,8 @@ export default function HelpCenter() {
                     Feedback & Suggestions
                   </h2>
                   <p className='text-zion-slate-light mb-4'>
-                    We value your input and are constantly looking to improve
-                    our platform.
+                    We value your input and are constantly looking to improve,
+our platform.
                   </p>
                   <form className='space-y-4'>
                     <div>
@@ -222,8 +198,8 @@ export default function HelpCenter() {
                       <Input placeholder='Subject' />
                     </div>
                     <div>
-                      <textarea
-                        className='w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-black'
+                      <textarea,
+className='w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-black'
                         placeholder='Your feedback or suggestion'
                       />
                     </div>
