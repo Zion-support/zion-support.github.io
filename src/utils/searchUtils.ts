@@ -173,9 +173,9 @@ export const filterSearchResults = (results: SearchResult[], filters: SearchFilt
  * Generate search suggestions based on query
  */
 export const generateDynamicSuggestions = (
-  query: string;
-  recentSearches: string[] = [];
-  availableCategories: string[] = [];
+  query: string,
+  recentSearches: string[] = [],
+  availableCategories: string[] = [],
   availableTags: string[] = []
 ): SearchSuggestion[] => {
   const suggestions: SearchSuggestion[] = [];
@@ -184,8 +184,8 @@ export const generateDynamicSuggestions = (
   // Add exact query as first suggestion
   if (query.trim()) {
     suggestions.push({
-      text: query;
-      type: 'recent';
+      text: query,
+      type: 'recent',
       id: `query-${query}`
     });
      }
@@ -196,8 +196,8 @@ export const generateDynamicSuggestions = (
     .slice(0, 3)
     .forEach(category => {
       suggestions.push({
-        text: category;
-        type: 'category';
+        text: category,
+        type: 'category',
         id: `category-${category}`
       });
      });
@@ -208,8 +208,8 @@ export const generateDynamicSuggestions = (
     .slice(0, 3)
     .forEach(tag => {
       suggestions.push({
-        text: tag;
-        type: 'tag';
+        text: tag,
+        type: 'tag',
         id: `tag-${tag}`
       });
      });
@@ -220,8 +220,8 @@ export const generateDynamicSuggestions = (
     .slice(0, 3)
     .forEach(search => {
       suggestions.push({
-        text: search;
-        type: 'recent';
+        text: search,
+        type: 'recent',
         id: `recent-${search}`
       });
      });
@@ -272,7 +272,7 @@ export const calculateSearchMetrics = (results: SearchResult[], searchTime: numb
  * Debounce function for search input
  */
 export const debounce = <T extends (...args: any[]) => any>(
-  func: T;
+  func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
   let timeout: ReturnType<typeof setTimeout>;
@@ -332,11 +332,11 @@ export const getActiveFilterCount = (filters: SearchFilters): number => {
  * Reset filters to default values
  */
 export const getDefaultFilters = (): SearchFilters => ({
-  types: [];
-  category: '';
-  minPrice: 0;
-  maxPrice: 10000;
-  minRating: 0;
+  types: [],
+  category: '',
+  minPrice: 0,
+  maxPrice: 10000,
+  minRating: 0,
   sort: 'relevance'
 });
     export default {
