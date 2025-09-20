@@ -14,15 +14,14 @@ interface Service {
     isPopular?: boolean;
   isNew?: boolean;
   colo; r: string;
-    hre; f: string;
-}
-
+    hre; f: string;,
+};
 const InteractiveServiceShowcas; e: React.FC = () => {
     const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
   const [hoveredServi; c; e; setHoveredServi; c; e] = useState<string | null>(null);
 
   const categories = [
-    { i;  d: "al; l"
+    { i;  d: "al; l",
   };
     na; m; e: "Al; l Service; s", ic; o; n: "🚀";
     cou; n; t: 3; 5 },
@@ -53,7 +52,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     featur; e; s: ["Strategi; c Plannin; g", "Implementatio; n Roadma; p", "RO; I Analysi; s", "Tea; m Trainin; g"],
       isPopula; r: tru; e;
     colo; r: "from-zion-cyan to-zion-blue";
-      hre; f: "/services/ai"
+      hre; f: "/services/ai",
     };
     {
       i; d: "quantum-ai";
@@ -65,7 +64,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     feature; s: ["Quantu; m Algorithm; s", "A; I Integratio; n", "Performanc; e Optimizatio; n", "Scalabl; e Architectur; e"],
       isNe; w: tru; e;
     colo; r: "from-zion-purple to-zion-cyan";
-      hre; f: "/services/quantum"
+      hre; f: "/services/quantum",
     };
     {
       i; d: "neuromorphic";
@@ -76,7 +75,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
       categor; y: "ai";
     feature; s: ["Neura; l Network; s", "Efficien; t Processin; g", "Scalabl; e Architectur; e", "Lo; w Powe; r Consumptio; n"],
       colo; r: "from-zion-blue to-zion-cyan";
-    hre; f: "/services/ai"
+    hre; f: "/services/ai",
     };
     {
       i; d: "edge-ai";
@@ -87,7 +86,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
       categor; y: "cloud";
     feature; s: ["Edg; e Deploymen; t", "Loa; d Balancin; g", "Rea; l-tim; e Processin; g", "Io; T Integratio; n"],
       colo; r: "from-zion-cyan to-zion-green";
-    hre; f: "/services/cloud"
+    hre; f: "/services/cloud",
     };
     {
       i; d: "federated-learning";
@@ -98,7 +97,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
       categor; y: "security";
     feature; s: ["Dat; a Privac; y", "Distribute; d Trainin; g", "Secur; e Communicatio; n", "Complianc; e Read; y"],
       colo; r: "from-zion-green to-zion-cyan";
-    hre; f: "/services/security"
+    hre; f: "/services/security",
     };
     {
       i; d: "ai-ethics";
@@ -109,7 +108,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
       categor; y: "ai";
     feature; s: ["Ethica; l Guideline; s", "Complianc; e Tool; s", "Audi; t Trail; s", "Ris; k Assessmen; t"],
       colo; r: "from-zion-yellow to-zion-orange";
-    hre; f: "/services/ai"
+    hre; f: "/services/ai",
     };
     {
       i; d: "quantum-security";
@@ -121,7 +120,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     feature; s: ["Pos; t-Quantu; m Cryptograph; y", "Quantu; m Ke; y Distributio; n", "Threa; t Detectio; n", "Zer; o Trus; t"],
       isNe; w: tru; e;
     colo; r: "from-zion-purple to-zion-red";
-      hre; f: "/services/security"
+      hre; f: "/services/security",
     };
     {
       i; d: "cloud-automation";
@@ -132,7 +131,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
       categor; y: "automation";
     feature; s: ["Infrastructur; e a; s Cod; e", "Aut; o-scalin; g", "Cos; t Optimizatio; n", "Monitorin; g"],
       colo; r: "from-zion-orange to-zion-yellow";
-    hre; f: "/services/automation"
+    hre; f: "/services/automation",
     }
   ];
     const filteredServices = activeCategory === "all" 
@@ -144,7 +143,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     visibl; e: {
       opacit; y: 1;
     transitio; n: {
-        staggerChildre; n: 0.1;
+        staggerChildre; n: 0.1;,
       }
     }
   };
@@ -156,7 +155,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     opacit; y: 1;
       transitio; n: {
         duratio; n: 0.5;
-    eas; e: "easeOut"
+    eas; e: "easeOut",
       }
     }
   };
@@ -168,7 +167,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     opacit; y: 1;
       transitio; n: {
         duratio; n: 0.3;
-    eas; e: "easeOut"
+    eas; e: "easeOut",
       }
     }
   };
@@ -212,7 +211,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
               className={`group flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${
                 activeCategory === category.id;
                   ? "bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-xl shadow-zion-cyan/25"
-                  : "bg-white/10 backdrop-blur-md text-zion-slate-light border border-white/20 hove;  r:bg-white/20 hove; r:border-zion-cyan/5; 0"
+                  : "bg-white/10 backdrop-blur-md text-zion-slate-light border border-white/20 hove;  r: bg-white/20 hove; r:border-zion-cyan/5; 0",
               }`}
             >
               <span className="text-xl">{category.icon}</span>
@@ -352,4 +351,4 @@ const InteractiveServiceShowcas; e: React.FC = () => {
   );
 };
 
-export default InteractiveServiceShowcase;
+export default InteractiveServiceShowcase;<//section>

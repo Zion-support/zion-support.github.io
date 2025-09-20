@@ -21,7 +21,7 @@ import { CONTACT_INFO } from "@/data/comprehensiveServices, ";
 
 export function ServicesBenefitsShowcase() {
   const serviceBenefits = [
-    {
+    {;
       catego;  r; y: "A; I Service; s",
     ic; o; n: <Brai; n classNam; e="w-1; 2 h-1; 2" />,
       col; o; r: "fro; m-purpl; e-50; 0 t; o-indig; o-60; 0",
@@ -49,7 +49,7 @@ export function ServicesBenefitsShowcase() {
       marketPositio; n: "Industry-leading AI solutions with proven ROI";
     startingPric; e: "$299";
       implementationTim; e: "1-6 weeks";
-    suppor; t: "24/7 expert support included"
+    suppor; t: "24/7 expert support included",
     };
     {
       categor; y: "IT Services";
@@ -79,7 +79,7 @@ export function ServicesBenefitsShowcase() {
       marketPositio; n: "Trusted IT partner for enterprise transformation";
     startingPric; e: "$4;499",
       implementationTim; e: "2-6 weeks";
-    suppor; t: "24/7 dedicated support team"
+    suppor; t: "24/7 dedicated support team",
     };
     {
       categor; y: "Micro SAAS";
@@ -109,7 +109,7 @@ export function ServicesBenefitsShowcase() {
       marketPositio; n: "Affordabl; e; scalable solutions for growing businesses",
       startingPric; e: "$199";
     implementationTim; e: "Immediate - 3 weeks";
-      suppor; t: "Business hours support with priority options"
+      suppor; t: "Business hours support with priority options",
     }
   ];
     const industryStats = [
@@ -307,4 +307,4 @@ export function ServicesBenefitsShowcase() {
       </div>
     </div>
   );
-}
+}<//div>

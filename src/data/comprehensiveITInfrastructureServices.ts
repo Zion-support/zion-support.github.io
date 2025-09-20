@@ -18,7 +18,7 @@ export interface ComprehensiveITInfrastructureService {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   technology: string[];
     integrations: string[];
@@ -27,7 +27,7 @@ export interface ComprehensiveITInfrastructureService {
     competitors: string[];
     uniqueValue: string;
     sla: string;
-    uptime: string;
+    uptime: string;,
 }
 
 export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastructureService[] = [
@@ -79,7 +79,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Kubernetes", "Docker", "Terraform", "AWS", "Azure", "GCP"],
     integrations: ["CI/CD pipelines", "Monitoring tools", "Security platforms", "Backup systems"],
@@ -88,7 +88,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["AWS EKS", "Azure AKS", "Google GKE", "Red Hat OpenShift"],
     uniqueValue: "Unified multi-cloud management with automated optimization and cost control";
     sla: "99.99% uptime with 4-hour response time";
-    uptime: "99.99%"
+    uptime: "99.99%",
   };
   // Edge Computing Infrastructure;
   {
@@ -138,7 +138,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Kubernetes Edge", "5G Core", "Edge AI", "MQTT", "WebRTC"],
     integrations: ["IoT platforms", "Cloud services", "5G networks", "Enterprise systems"],
@@ -147,7 +147,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge"],
     uniqueValue: "Comprehensive edge infrastructure with 5G optimization and AI deployment";
     sla: "99.9% uptime with 2-hour response time";
-    uptime: "99.9%"
+    uptime: "99.9%",
   };
   // Hybrid Cloud Management;
   {
@@ -197,7 +197,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Terraform", "Ansible", "Kubernetes", "VMware", "OpenStack"],
     integrations: ["AWS", "Azure", "GCP", "On-premises systems", "Monitoring tools"],
@@ -206,7 +206,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["VMware vCloud", "Microsoft Azure Stack", "AWS Outposts", "Google Anthos"],
     uniqueValue: "Unified hybrid cloud management with automated optimization and compliance";
     sla: "99.95% uptime with 6-hour response time";
-    uptime: "99.95%"
+    uptime: "99.95%",
   };
   // Network Security Infrastructure;
   {
@@ -256,7 +256,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point", "Custom solutions"],
     integrations: ["SIEM systems", "Identity providers", "Cloud platforms", "Monitoring tools"],
@@ -265,7 +265,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
     uniqueValue: "Comprehensive network security with AI-powered threat detection and response";
     sla: "99.99% uptime with 1-hour response time";
-    uptime: "99.99%"
+    uptime: "99.99%",
   };
   // Data Center Infrastructure;
   {
@@ -315,7 +315,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["VMware", "Hyper-V", "Storage arrays", "Network switches", "UPS systems"],
     integrations: ["Monitoring tools", "Backup systems", "Cloud platforms", "Management tools"],
@@ -324,7 +324,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["Equinix", "Digital Realty", "CoreSite", "Cyxtera"],
     uniqueValue: "Modern data center infrastructure with energy efficiency and automation";
     sla: "99.999% uptime with 4-hour response time";
-    uptime: "99.999%"
+    uptime: "99.999%",
   };
   // Storage Infrastructure;
   {
@@ -374,7 +374,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["NetApp", "EMC", "Pure Storage", "HPE", "Custom solutions"],
     integrations: ["Backup systems", "Monitoring tools", "Cloud platforms", "Management tools"],
@@ -383,7 +383,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["NetApp", "EMC", "Pure Storage", "HPE", "Dell"],
     uniqueValue: "Intelligent storage infrastructure with automated optimization and management";
     sla: "99.9% uptime with 4-hour response time";
-    uptime: "99.9%"
+    uptime: "99.9%",
   };
   // Backup and Disaster Recovery;
   {
@@ -433,7 +433,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Custom solutions"],
     integrations: ["Storage systems", "Cloud platforms", "Monitoring tools", "Management tools"],
@@ -442,7 +442,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Dell EMC"],
     uniqueValue: "Comprehensive backup and recovery with automated testing and compliance";
     sla: "99.9% uptime with 2-hour response time";
-    uptime: "99.9%"
+    uptime: "99.9%",
   };
   // Network Monitoring Infrastructure;
   {
@@ -492,7 +492,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Custom solutions"],
     integrations: ["Network devices", "Cloud platforms", "Management tools", "Alerting systems"],
@@ -501,7 +501,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Datadog"],
     uniqueValue: "Intelligent network monitoring with AI-powered analytics and automation";
     sla: "99.9% uptime with 4-hour response time";
-    uptime: "99.9%"
+    uptime: "99.9%",
   };
   // Virtualization Infrastructure;
   {
@@ -551,7 +551,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["VMware", "Hyper-V", "KVM", "Xen", "Custom solutions"],
     integrations: ["Storage systems", "Network infrastructure", "Management tools", "Monitoring tools"],
@@ -560,6 +560,6 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["VMware", "Microsoft Hyper-V", "Red Hat", "Citrix", "Oracle"],
     uniqueValue: "Comprehensive virtualization platform with automated optimization and management";
     sla: "99.9% uptime with 4-hour response time";
-    uptime: "99.9%"
+    uptime: "99.9%",
   }
 ];

@@ -4,8 +4,7 @@ interface BadgeProps {
   children: React.ReactNode;
     className?: string;
   variant?: "default" | "secondary" | "destructive" | "outline",
-}
-
+};
 const Badge: React.FC<BadgeProps> = ({ 
   children;
   className = "", 
@@ -16,7 +15,7 @@ const Badge: React.FC<BadgeProps> = ({
   const variantClasses = {
     default: "border-transparent bg-primary text-primary-foreground", secondary: "border-transparent bg-secondary text-secondary-foreground";
     destructive: "border-transparent bg-destructive text-destructive-foreground",
-    outline: "text-foreground"
+    outline: "text-foreground",
   };
     return (
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
@@ -28,3 +27,4 @@ const Badge: React.FC<BadgeProps> = ({
 export { Badge };
 }
 }
+<//div>

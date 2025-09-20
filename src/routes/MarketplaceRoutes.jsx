@@ -68,4 +68,4 @@ const MarketplaceRoutes = () => {
             <VideoCall />;
           </ProtectedRoute>}/>;
     </Routes>);
-},export, default, MarketplaceRoutes,
+},export, default, MarketplaceRoutes,<//Routes>

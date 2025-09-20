@@ -18,7 +18,7 @@ export interface InnovativeMicroSaasService {
     contact: {
     phone: string;
     email: string;
-    address: string;
+    address: string;,
      };
   trialDays: number;
     setupTime: string;
@@ -73,7 +73,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 30;
     setupTime: "1-2 weeks";
@@ -128,7 +128,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 21;
     setupTime: "2-4 weeks";
@@ -183,7 +183,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 14;
     setupTime: "1-2 days";
@@ -238,7 +238,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 30;
     setupTime: "3-6 weeks";
@@ -293,7 +293,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 45;
     setupTime: "4-8 weeks";
@@ -348,7 +348,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 30;
     setupTime: "2-4 weeks";
@@ -403,7 +403,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 21;
     setupTime: "2-3 weeks";
@@ -458,7 +458,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 30;
     setupTime: "3-5 weeks";
@@ -513,7 +513,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 14;
     setupTime: "1-2 weeks";

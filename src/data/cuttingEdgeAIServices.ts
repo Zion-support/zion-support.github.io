@@ -18,7 +18,7 @@ export interface CuttingEdgeAIService {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   websiteUrl: string;
     demoUrl?: string;
@@ -74,9 +74,9 @@ export const CUTTING_EDGE_AI_SERVICES: CuttingEdgeAIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
-    websiteUrl: "https://ziontechgroup.com/autonomous-ai-research"
+    websiteUrl: "https://ziontechgroup.com/autonomous-ai-research",
   };
   // AI Consciousness Evolution Platform;
   {
@@ -126,9 +126,9 @@ export const CUTTING_EDGE_AI_SERVICES: CuttingEdgeAIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
-    websiteUrl: "https://ziontechgroup.com/ai-consciousness-evolution"
+    websiteUrl: "https://ziontechgroup.com/ai-consciousness-evolution",
   };
   // AI Autonomous Business Manager;
   {
@@ -178,9 +178,9 @@ export const CUTTING_EDGE_AI_SERVICES: CuttingEdgeAIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
-    websiteUrl: "https://ziontechgroup.com/ai-business-manager"
+    websiteUrl: "https://ziontechgroup.com/ai-business-manager",
   };
   // AI Autonomous Creative Director;
   {
@@ -230,9 +230,9 @@ export const CUTTING_EDGE_AI_SERVICES: CuttingEdgeAIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
-    websiteUrl: "https://ziontechgroup.com/ai-creative-director"
+    websiteUrl: "https://ziontechgroup.com/ai-creative-director",
   };
   // AI Autonomous Code Review System;
   {
@@ -282,8 +282,8 @@ export const CUTTING_EDGE_AI_SERVICES: CuttingEdgeAIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
-    websiteUrl: "https://ziontechgroup.com/ai-code-review"
+    websiteUrl: "https://ziontechgroup.com/ai-code-review",
   }
 ];

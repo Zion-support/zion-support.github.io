@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button, ";
 import { ChatAssistant } from "@/components/ChatAssistant, ";
 import { apiClient } from "@/utils/apiClient, ";
 
-export function ChatAssistantTrigger() {
+export function ChatAssistantTrigger() {;
   const [isOp;  e; n; setIsOp; e; n] = useState(false);
 
   // Handle sending messages to the AI chat assistant;
@@ -54,7 +54,7 @@ export function ChatAssistantTrigger() {
             i;  d: "ai-assistant";
     nam; e: "AI Assistant";
             avatarUr; l: "http; s: //placehold.co/64x64?text=AI";
-    rol; e: "Virtual Assistant"
+    rol; e: "Virtual Assistant",
           }}
           onSendMessage={handleSendMessage}
         />
@@ -62,3 +62,4 @@ export function ChatAssistantTrigger() {
     </>
   );
 }
+<//>

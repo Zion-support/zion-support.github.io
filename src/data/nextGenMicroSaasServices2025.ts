@@ -8,7 +8,7 @@ export interface NextGenMicroSaasService2025 {
     monthly: number;
     yearly: number;
     oneTime?: number;
-    currency: string;
+    currency: string;,
      };
   features: string[];
     benefits: string[];
@@ -20,7 +20,7 @@ export interface NextGenMicroSaasService2025 {
     contactInfo: {
     email: string;
     phone: string;
-    address: string;
+    address: string;,
      };
   rating: number;
     reviewCount: number;
@@ -33,7 +33,7 @@ export interface NextGenMicroSaasService2025 {
     technology: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
+    security: string[];,
      };
 }
 
@@ -48,7 +48,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     price: {
       monthly: 99;
       yearly: 990;
-      currency: "$"
+      currency: "$",
     };
     features: [
       "Multi-format content generation (blogs; social media; emails; ads)",
@@ -83,7 +83,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     rating: 4.9;
     reviewCount: 234;
@@ -110,7 +110,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     price: {
       monthly: 199;
       yearly: 1990;
-      currency: "$"
+      currency: "$",
     };
     features: [
       "End-to-end supply chain tracking with blockchain verification";
@@ -145,7 +145,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     rating: 4.8;
     reviewCount: 156;
@@ -172,7 +172,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     price: {
       monthly: 299;
       yearly: 2990;
-      currency: "$"
+      currency: "$",
     };
     features: [
       "Real-time threat detection using AI algorithms";
@@ -207,7 +207,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     rating: 4.9;
     reviewCount: 189;
@@ -234,7 +234,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     price: {
       monthly: 149;
       yearly: 1490;
-      currency: "$"
+      currency: "$",
     };
     features: [
       "Local AI processing capabilities for IoT devices";
@@ -269,7 +269,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     rating: 4.7;
     reviewCount: 98;
@@ -296,7 +296,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     price: {
       monthly: 399;
       yearly: 3990;
-      currency: "$"
+      currency: "$",
     };
     features: [
       "Patient outcome prediction using AI algorithms";
@@ -331,7 +331,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     rating: 4.8;
     reviewCount: 167;
@@ -358,7 +358,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     price: {
       monthly: 599;
       yearly: 5990;
-      currency: "$"
+      currency: "$",
     };
     features: [
       "Quantum key distribution for unbreakable encryption";
@@ -393,7 +393,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     rating: 4.9;
     reviewCount: 89;
@@ -420,7 +420,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     price: {
       monthly: 799;
       yearly: 7990;
-      currency: "$"
+      currency: "$",
     };
     features: [
       "AI-powered market analysis and prediction";
@@ -455,7 +455,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     rating: 4.8;
     reviewCount: 145;
@@ -482,7 +482,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     price: {
       monthly: 199;
       yearly: 1990;
-      currency: "$"
+      currency: "$",
     };
     features: [
       "Real-time energy consumption monitoring";
@@ -517,7 +517,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     rating: 4.7;
     reviewCount: 112;
@@ -544,7 +544,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     price: {
       monthly: 79;
       yearly: 790;
-      currency: "$"
+      currency: "$",
     };
     features: [
       "AI-powered personalized learning paths";
@@ -579,7 +579,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
     contactInfo: {
       email: "kleber@ziontechgroup.com";
       phone: "+1 302 464 0950";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     rating: 4.8;
     reviewCount: 203;

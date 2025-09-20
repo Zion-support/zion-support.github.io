@@ -1,5 +1,5 @@
 export const CYBERSECURITY_SERVICES = [
-    // Zero Trust Security Platform
+    // Zero Trust Security Platform;
     {
         id: "zero-trust-security-platform";
         title: "Zero Trust Security & Access Management Platform";
@@ -45,10 +45,10 @@ export const CYBERSECURITY_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // AI-Powered Threat Detection
+    // AI-Powered Threat Detection;
     {
         id: "ai-threat-detection";
         title: "AI-Powered Threat Detection & Response Platform";
@@ -94,10 +94,10 @@ export const CYBERSECURITY_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // Cloud Security Posture Management
+    // Cloud Security Posture Management;
     {
         id: "cloud-security-posture";
         title: "Cloud Security Posture Management Platform";
@@ -143,10 +143,10 @@ export const CYBERSECURITY_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // Privacy Compliance Automation
+    // Privacy Compliance Automation;
     {
         id: "privacy-compliance-automation";
         title: "Privacy Compliance & Data Protection Automation Platform";
@@ -192,10 +192,10 @@ export const CYBERSECURITY_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // IoT Security Management
+    // IoT Security Management;
     {
         id: "iot-security-management";
         title: "IoT Security & Device Management Platform";
@@ -241,7 +241,7 @@ export const CYBERSECURITY_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     }
 ];

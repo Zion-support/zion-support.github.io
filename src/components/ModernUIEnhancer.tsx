@@ -11,5 +11,5 @@ export default function ModernUIEnhancer(props: any) {return (,
         </p>,
       </div>",
     </div>,
-  ),,',
-"}, ";
+  ),,',;
+"}, ";<//div>

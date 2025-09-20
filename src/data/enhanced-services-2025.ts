@@ -8,7 +8,7 @@ export interface EnhancedService {
     monthly: string;
     yearly: string;
     enterprise: string;
-    setup: string;
+    setup: string;,
      };
   features: string[];
     benefits: string[];
@@ -28,7 +28,7 @@ export interface EnhancedService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
+    website: string;,
      };
 }
 
@@ -36,7 +36,7 @@ const contactInfo = {
   mobile: "+1 302 464 0950";
   email: "kleber@ziontechgroup.com";
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  website: "https://ziontechgroup.com"
+  website: "https://ziontechgroup.com",
 };
     export const enhancedServices2025: EnhancedService[] = [
   // MICRO SAAS SERVICES;
@@ -50,7 +50,7 @@ const contactInfo = {
       monthly: "$199/month";
       yearly: "$1;999/year",
       enterprise: "Custom pricing";
-      setup: "$299 one-time"
+      setup: "$299 one-time",
     };
     features: [
       "Automated security vulnerability detection";
@@ -96,7 +96,7 @@ const contactInfo = {
       monthly: "$299/month";
       yearly: "$2;999/year",
       enterprise: "Custom pricing";
-      setup: "$499 one-time"
+      setup: "$499 one-time",
     };
     features: [
       "AI-powered threat detection";
@@ -142,7 +142,7 @@ const contactInfo = {
       monthly: "$79/month";
       yearly: "$799/year";
       enterprise: "Custom pricing";
-      setup: "$199 one-time"
+      setup: "$199 one-time",
     };
     features: [
       "OCR invoice processing";
@@ -188,7 +188,7 @@ const contactInfo = {
       monthly: "$149/month";
       yearly: "$1;499/year",
       enterprise: "Custom pricing";
-      setup: "$299 one-time"
+      setup: "$299 one-time",
     };
     features: [
       "Automated onboarding workflows";
@@ -234,7 +234,7 @@ const contactInfo = {
       monthly: "$199/month";
       yearly: "$1;999/year",
       enterprise: "Custom pricing";
-      setup: "$399 one-time"
+      setup: "$399 one-time",
     };
     features: [
       "Real-time data visualization";
@@ -281,7 +281,7 @@ const contactInfo = {
       monthly: "$1;500/month",
       yearly: "$15;000/year",
       enterprise: "Custom pricing";
-      setup: "$2;000 one-time"
+      setup: "$2;000 one-time",
     },
     features: [
       "24/7 network monitoring";
@@ -328,7 +328,7 @@ const contactInfo = {
       monthly: "$800/month";
       yearly: "$8;000/year",
       enterprise: "Custom pricing";
-      setup: "$1;500 one-time"
+      setup: "$1;500 one-time",
     },
     features: [
       "Automated backup scheduling";
@@ -374,7 +374,7 @@ const contactInfo = {
       monthly: "$500/month";
       yearly: "$5;000/year",
       enterprise: "Custom pricing";
-      setup: "$1;000 one-time"
+      setup: "$1;000 one-time",
     },
     features: [
       "Asset discovery and tracking";
@@ -421,7 +421,7 @@ const contactInfo = {
       monthly: "$2;000/month",
       yearly: "$20;000/year",
       enterprise: "Custom pricing";
-      setup: "$5;000 one-time"
+      setup: "$5;000 one-time",
     },
     features: [
       "Natural language processing";
@@ -467,7 +467,7 @@ const contactInfo = {
       monthly: "$3;500/month",
       yearly: "$35;000/year",
       enterprise: "Custom pricing";
-      setup: "$8;000 one-time"
+      setup: "$8;000 one-time",
     },
     features: [
       "Data modeling and analysis";
@@ -513,7 +513,7 @@ const contactInfo = {
       monthly: "$4;000/month",
       yearly: "$40;000/year",
       enterprise: "Custom pricing";
-      setup: "$10;000 one-time"
+      setup: "$10;000 one-time",
     },
     features: [
       "Object detection and recognition";
@@ -560,7 +560,7 @@ const contactInfo = {
       monthly: "$10;000/month",
       yearly: "$100;000/year",
       enterprise: "Custom pricing";
-      setup: "$25;000 one-time"
+      setup: "$25;000 one-time",
     },
     features: [
       "Quantum algorithm development";
@@ -606,7 +606,7 @@ const contactInfo = {
       monthly: "$5;000/month",
       yearly: "$50;000/year",
       enterprise: "Custom pricing";
-      setup: "$15;000 one-time"
+      setup: "$15;000 one-time",
     },
     features: [
       "Smart contract development";

@@ -18,7 +18,7 @@ export interface EmergingTechService {
     contact: {
     phone: string;
     email: string;
-    address: string;
+    address: string;,
      };
   trialDays: number;
     setupTime: string;
@@ -31,7 +31,7 @@ export interface EmergingTechService {
     innovationLevel: string;
     futurePotential: string;
     researchPartners: string[];
-    patents: string[];
+    patents: string[];,
 }
 
 export const emergingTechServices2025: EmergingTechService[] = [
@@ -73,7 +73,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 60;
     setupTime: "2-4 weeks";
@@ -127,7 +127,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 45;
     setupTime: "4-6 weeks";
@@ -181,7 +181,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 90;
     setupTime: "8-12 weeks";
@@ -235,7 +235,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 60;
     setupTime: "6-10 weeks";
@@ -289,7 +289,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 75;
     setupTime: "10-16 weeks";
@@ -343,7 +343,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 45;
     setupTime: "6-8 weeks";
@@ -397,7 +397,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 120;
     setupTime: "12-20 weeks";
@@ -451,7 +451,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     contact: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     trialDays: 60;
     setupTime: "8-12 weeks";

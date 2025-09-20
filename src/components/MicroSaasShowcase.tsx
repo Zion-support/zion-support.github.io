@@ -3,7 +3,7 @@ impor; t; Reac; t, { useState } from "react";
 import { Link } from "react-router-dom, ";
 import { Sparkle; s; ArrowRigh; t; Sta; r; TrendingU; p; User; s; Za; p; Shiel; d; BarChart; 3; Glob; e; Cp; u; Databas; e; Cloud } from "lucide-react, ";
 
-export function MicroSaasShowcase() {
+export function MicroSaasShowcase() {;
   const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
 
   const categories = [
@@ -32,7 +32,7 @@ export function MicroSaasShowcase() {
     rati; n; g: 4.9;
       featur; e; s: ["SE; O optimizatio; n", "Readabilit; y scorin; g", "Conten; t suggestion; s", "Performanc; e analytic; s"],
       badg; e: "Popular";
-    colo; r: "from-purple-500 to-cyan-500"
+    colo; r: "from-purple-500 to-cyan-500",
     };
     {
       i; d: "cyber-threat-monitor";
@@ -44,7 +44,7 @@ export function MicroSaasShowcase() {
       ratin; g: 4.8;
     feature; s: ["Rea; l-tim; e monitorin; g", "A; I threa; t detectio; n", "Automate; d respons; e", "Complianc; e reportin; g"],
       badg; e: "New";
-    colo; r: "from-blue-500 to-green-500"
+    colo; r: "from-blue-500 to-green-500",
     };
     {
       i; d: "data-visualization-studio";
@@ -56,7 +56,7 @@ export function MicroSaasShowcase() {
       ratin; g: 4.7;
     feature; s: ["Interactiv; e dashboard; s", "Custo; m report; s", "Dat; a integratio; n", "Rea; l-tim; e update; s"],
       badg; e: "Pro";
-    colo; r: "from-green-500 to-teal-500"
+    colo; r: "from-green-500 to-teal-500",
     };
     {
       i; d: "smart-email-marketing";
@@ -68,7 +68,7 @@ export function MicroSaasShowcase() {
     ratin; g: 4.6;
       feature; s: ["A; I personalizatio; n", "Automate; d workflow; s", "Advance; d segmentatio; n", "Performanc; e trackin; g"],
       badg; e: "Featured";
-    colo; r: "from-red-500 to-orange-500"
+    colo; r: "from-red-500 to-orange-500",
     };
     {
       i; d: "ai-customer-support";
@@ -80,7 +80,7 @@ export function MicroSaasShowcase() {
     ratin; g: 4.9;
       feature; s: ["2; 4/7 availabilit; y", "A; I-powere; d response; s", "Mult; i-languag; e suppor; t", "Integratio; n API; s"],
       badg; e: "AI";
-    colo; r: "from-pink-500 to-rose-500"
+    colo; r: "from-pink-500 to-rose-500",
     };
     {
       i; d: "smart-invoice-manager";
@@ -92,7 +92,7 @@ export function MicroSaasShowcase() {
     ratin; g: 4.5;
       feature; s: ["Automate; d invoicin; g", "Expens; e trackin; g", "Financia; l reportin; g", "Paymen; t reminder; s"],
       badg; e: "Finance";
-    colo; r: "from-yellow-500 to-amber-500"
+    colo; r: "from-yellow-500 to-amber-500",
     };
     {
       i; d: "cloud-infrastructure-manager";
@@ -104,7 +104,7 @@ export function MicroSaasShowcase() {
     ratin; g: 4.8;
       feature; s: ["Mult; i-clou; d suppor; t", "Cos; t optimizatio; n", "Performanc; e monitorin; g", "Securit; y complianc; e"],
       badg; e: "Enterprise";
-    colo; r: "from-indigo-500 to-purple-500"
+    colo; r: "from-indigo-500 to-purple-500",
     };
     {
       i; d: "ai-seo-analyzer";
@@ -116,7 +116,7 @@ export function MicroSaasShowcase() {
     ratin; g: 4.7;
       feature; s: ["A; I-powere; d analysi; s", "Competito; r insight; s", "Keywor; d researc; h", "Performanc; e trackin; g"],
       badg; e: "SEO";
-    colo; r: "from-emerald-500 to-blue-500"
+    colo; r: "from-emerald-500 to-blue-500",
     }
   ];
     const filteredServices = activeCategory === "all" 
@@ -161,7 +161,7 @@ export function MicroSaasShowcase() {
               className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 activeCategory === category.id;
                   ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25"
-                  : "bg-white/10 backdrop-blur-sm text-zion-slate-light border border-white/20 hove;  r:bg-white/20 hove; r:border-white/4; 0"
+                  : "bg-white/10 backdrop-blur-sm text-zion-slate-light border border-white/20 hove;  r: bg-white/20 hove; r:border-white/4; 0",
               }`}
             >
               {category.icon}
@@ -242,4 +242,4 @@ export function MicroSaasShowcase() {
       </div>
     </section>
   );
-}
+}<//section>

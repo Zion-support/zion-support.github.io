@@ -7,4 +7,4 @@ const ComprehensiveOptimizer: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default ComprehensiveOptimizer,
+export default ComprehensiveOptimizer,;<//div>

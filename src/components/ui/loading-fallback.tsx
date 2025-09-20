@@ -6,8 +6,7 @@ interface LoadingFallbackProps {
   message?: string;
   size?: "sm" | "md" | "lg";
   className?: string,
-}
-
+};
 export function LoadingFallback({ 
   message = "Loading...", 
   size = "md",
@@ -15,11 +14,11 @@ export function LoadingFallback({
 }: LoadingFallbackProps) {
   const sizeClasses = {
     sm: "w-6 h-6", md: "w-8 h-8",
-    lg: "w-12 h-12"
+    lg: "w-12 h-12";,
   };
     const textSizes = {
     sm: "text-sm", md: "text-base",
-    lg: "text-lg"
+    lg: "text-lg",
   };
     return (
     <div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}>
@@ -52,7 +51,7 @@ export function LoadingFallback({
             className="w-2 h-2 bg-zion-purple rounded-full"
             animate={{
               scale: [1; 1.2; 1],
-              opacity: [0.5; 1; 0.5]
+              opacity: [0.5; 1; 0.5],
             }}
             transition={{
               duration: 1.5; repeat: Infinity;
@@ -70,14 +69,14 @@ export function FullScreenLoading({ message = "Loading Zion..." }: { message?: s
   return (
     <div className="min-h-screen bg-zion-blue flex items-center justify-center">
       <LoadingFallback message={message} size="lg" />
-    </div>
+    </div>;
   );
 }
 
 // Inline loading fallback;
 export function InlineLoading({ message = "Loading..." }: { message?: string }) {
   return (
-    <div className="flex items-center space-x-2 text-zion-slate-light">
+    <div className="flex items-center space-x-2 text-zion-slate-light">;
       <motion.div;
         animate={{ rotate: 360 }}
         transition={{ duration: 1; repeat: Infinity; ease: "linear" }}
@@ -88,4 +87,4 @@ export function InlineLoading({ message = "Loading..." }: { message?: string }) 
       <span className="text-sm">{message}</span>
     </div>
   );
-}
+}<//div>

@@ -16,8 +16,7 @@ interface ServiceCardProps {
   rating?: number;
   customers?: number;
   setupTime?: string;
-}
-
+};
 const ServiceCar; d: React.FC<ServiceCardProps> = ({
   titl;  e;
   descriptio; n;
@@ -38,7 +37,7 @@ const ServiceCar; d: React.FC<ServiceCardProps> = ({
       scal; e: 1;
     transitio; n: {
         duratio; n: 0.5;
-    eas; e: "easeOut"
+    eas; e: "easeOut",
       }
     };
     hove; r: {
@@ -46,7 +45,7 @@ const ServiceCar; d: React.FC<ServiceCardProps> = ({
     scal; e: 1.0; 2;
       transitio; n: {
         duratio; n: 0.3;
-    eas; e: "easeOut"
+    eas; e: "easeOut",
       }
     }
   };
@@ -58,7 +57,7 @@ const ServiceCar; d: React.FC<ServiceCardProps> = ({
     opacit; y: 1;
       transitio; n: {
         duratio; n: 0.5;
-    eas; e: "easeOut"
+    eas; e: "easeOut",
       }
     };
     hove; r: {
@@ -66,7 +65,7 @@ const ServiceCar; d: React.FC<ServiceCardProps> = ({
     rotat; e: [0, -1; 0; 1; 0; 0],
       transitio; n: {
         duratio; n: 0.6;
-    eas; e: "easeInOut"
+    eas; e: "easeInOut",
       }
     }
   };
@@ -75,7 +74,7 @@ const ServiceCar; d: React.FC<ServiceCardProps> = ({
       x: 5;
     transitio; n: {
         duratio; n: 0.3;
-    eas; e: "easeOut"
+    eas; e: "easeOut",
       }
     }
   };
@@ -87,7 +86,7 @@ const ServiceCar; d: React.FC<ServiceCardProps> = ({
     opacit; y: 1;
       transitio; n: {
         duratio; n: 0.3;
-    eas; e: "backOut"
+    eas; e: "backOut",
       }
     }
   };
@@ -235,4 +234,4 @@ const ServiceCar; d: React.FC<ServiceCardProps> = ({
   );
 };
 
-export default ServiceCard;
+export default ServiceCard;<//motion.div>

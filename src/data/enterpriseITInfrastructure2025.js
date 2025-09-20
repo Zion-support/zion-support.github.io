@@ -1,5 +1,5 @@
 export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
-    // Enterprise Infrastructure Services
+    // Enterprise Infrastructure Services;
     {
         id: 'enterprise-hybrid-cloud-platform';
         title: 'Enterprise Hybrid Cloud Infrastructure Platform';
@@ -10,7 +10,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
             monthly: 8999;
             yearly: 89990;
             enterprise: 14999;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'Multi-cloud orchestration and management';
@@ -44,7 +44,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.9;
         reviewCount: 67;
@@ -53,7 +53,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['Kubernetes', 'Docker', 'Terraform', 'Ansible', 'Multi-cloud APIs'],
         compliance: ['SOC2', 'ISO 27001', 'HIPAA', 'PCI DSS', 'GDPR'],
         integrations: ['AWS', 'Azure', 'Google Cloud', 'IBM Cloud', 'Oracle Cloud', 'VMware'],
-        sla: '99.99% uptime guarantee'
+        sla: '99.99% uptime guarantee',
     };
     {
         id: 'next-generation-data-center-solutions';
@@ -65,7 +65,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
             monthly: 12999;
             yearly: 129990;
             enterprise: 19999;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'Ultra-low latency edge computing nodes';
@@ -99,7 +99,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.9;
         reviewCount: 45;
@@ -108,7 +108,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['Edge Computing', '5G Networks', 'AI/ML', 'Software-Defined Networking', 'Green Computing'],
         compliance: ['SOC2', 'ISO 27001', 'Tier IV Data Center', 'Energy Star', 'LEED'],
         integrations: ['Cloud platforms', 'Network providers', 'Content delivery networks', 'IoT platforms'],
-        sla: '99.995% uptime guarantee'
+        sla: '99.995% uptime guarantee',
     };
     {
         id: 'enterprise-network-security-fabric';
@@ -120,7 +120,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
             monthly: 6999;
             yearly: 69990;
             enterprise: 11999;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'Zero trust network architecture implementation';
@@ -154,7 +154,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.8;
         reviewCount: 89;
@@ -163,7 +163,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['Zero Trust', 'AI/ML', 'Behavioral Analytics', 'Network Segmentation', 'SASE'],
         compliance: ['SOC2', 'ISO 27001', 'NIST', 'PCI DSS', 'HIPAA'],
         integrations: ['SIEM systems', 'EDR platforms', 'Identity providers', 'Network infrastructure'],
-        sla: '99.9% uptime guarantee'
+        sla: '99.9% uptime guarantee',
     };
     {
         id: 'enterprise-performance-optimization-suite';
@@ -175,7 +175,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
             monthly: 5499;
             yearly: 54990;
             enterprise: 8999;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'Real-time application performance monitoring';
@@ -209,7 +209,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.7;
         reviewCount: 134;
@@ -218,7 +218,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['APM', 'Infrastructure Monitoring', 'AI/ML', 'Big Data Analytics', 'Cloud Computing'],
         compliance: ['SOC2', 'ISO 27001', 'GDPR', 'Industry-specific standards'],
         integrations: ['Application platforms', 'Cloud providers', 'Monitoring tools', 'Alerting systems'],
-        sla: '99.9% uptime guarantee'
+        sla: '99.9% uptime guarantee',
     };
     {
         id: 'enterprise-disaster-recovery-platform';
@@ -230,7 +230,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
             monthly: 7999;
             yearly: 79990;
             enterprise: 12999;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'Automated backup and replication';
@@ -264,7 +264,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.9;
         reviewCount: 78;
@@ -273,7 +273,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['Backup & Replication', 'Cloud Storage', 'Network Optimization', 'Automation', 'Monitoring'],
         compliance: ['SOC2', 'ISO 27001', 'HIPAA', 'PCI DSS', 'Industry-specific regulations'],
         integrations: ['Storage systems', 'Cloud providers', 'Network infrastructure', 'Monitoring tools'],
-        sla: '99.99% recovery time guarantee'
+        sla: '99.99% recovery time guarantee',
     };
     {
         id: 'enterprise-integration-hub';
@@ -285,7 +285,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
             monthly: 6499;
             yearly: 64990;
             enterprise: 10999;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'Advanced API gateway and management';
@@ -319,7 +319,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.8;
         reviewCount: 112;
@@ -328,7 +328,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['API Gateway', 'ESB', 'Data Integration', 'Workflow Automation', 'Cloud Computing'],
         compliance: ['SOC2', 'ISO 27001', 'GDPR', 'Industry-specific standards'],
         integrations: ['ERP systems', 'CRM platforms', 'Database systems', 'Cloud services', 'Legacy systems'],
-        sla: '99.9% uptime guarantee'
+        sla: '99.9% uptime guarantee',
     };
     {
         id: 'enterprise-compliance-automation-suite';
@@ -340,7 +340,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
             monthly: 7499;
             yearly: 74990;
             enterprise: 11999;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'Automated compliance monitoring and reporting';
@@ -374,7 +374,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.9;
         reviewCount: 67;
@@ -383,7 +383,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['AI/ML', 'Automation', 'Big Data Analytics', 'Workflow Management', 'Cloud Computing'],
         compliance: ['SOC2', 'ISO 27001', 'GDPR', 'Industry-specific regulations'],
         integrations: ['GRC systems', 'Risk management platforms', 'Audit tools', 'Compliance databases'],
-        sla: '99.9% uptime guarantee'
+        sla: '99.9% uptime guarantee',
     };
     {
         id: 'enterprise-scalability-solutions';
@@ -395,7 +395,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
             monthly: 5999;
             yearly: 59990;
             enterprise: 9999;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'Intelligent auto-scaling algorithms';
@@ -429,7 +429,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.7;
         reviewCount: 98;
@@ -438,7 +438,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['Auto-scaling', 'Load Balancing', 'Performance Monitoring', 'AI/ML', 'Cloud Computing'],
         compliance: ['SOC2', 'ISO 27001', 'Performance standards', 'Industry-specific requirements'],
         integrations: ['Cloud providers', 'Application platforms', 'Monitoring tools', 'Load balancers'],
-        sla: '99.9% uptime guarantee'
+        sla: '99.9% uptime guarantee',
     }
 ];
     export default ENTERPRISE_IT_INFRASTRUCTURE_2025;

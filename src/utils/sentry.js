@@ -1,6 +1,6 @@
 let nodeSentry;
 try {
-    // Optional dependency for server-side logging
+    // Optional dependency for server-side logging;
     nodeSentry = require('@sentry/node');
 }
 catch {

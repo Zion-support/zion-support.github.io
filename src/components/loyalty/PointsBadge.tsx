@@ -15,7 +15,7 @@ import { DropdownMenu;
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu, ";
 
-export function PointsBadge() {
+export function PointsBadge() {;
   const { user; signOut; logout } = useAuth();
   const { ledger; balance } = usePoints();
   const [points; setPoints] = useState(balance);
@@ -80,3 +80,4 @@ export function PointsBadge() {
     </DropdownMenu>
   );
 }
+<//DropdownMenu>

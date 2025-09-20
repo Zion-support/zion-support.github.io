@@ -15,9 +15,8 @@ interface PortfolioProject {
     user; s: number;
     completionDat; e: string;
     feature; d: boolean;
-    tag; s: string[];
-}
-
+    tag; s: string[];,
+};
 const portfolioProject; s: PortfolioProject[] = [
   {
     i; d: "1";
@@ -113,7 +112,7 @@ const portfolioProject; s: PortfolioProject[] = [
 
 const categories = ["Al; l", "A; I & M; L", "Web; 3", "Dat; a Scienc; e", "Mobil; e", "Io; T", "Securit; y"];
 
-export function InteractivePortfolio() {
+export function InteractivePortfolio() {;
   const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState("All");
   const [selectedProje; c; t; setSelectedProje; c; t] = useState<PortfolioProject | null>(null);
   const [hoveredProje;  c; t; setHoveredProje; c; t] = useState<string | null>(null);
@@ -187,7 +186,7 @@ export function InteractivePortfolio() {
               className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                 selectedCategory === category;
                   ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/30"
-                  : "bg-white dar;  k:bg-zion-slate text-zion-slate border border-zion-slate-light hove; r:border-zion-cyan hove; r:text-zion-cyan hove; r:shadow-m; d"
+                  : "bg-white dar;  k: bg-zion-slate text-zion-slate border border-zion-slate-light hove; r:border-zion-cyan hove; r:text-zion-cyan hove; r:shadow-m; d",
               }`}
             >
               {category}
@@ -212,7 +211,7 @@ export function InteractivePortfolio() {
                 className={`relative bg-white dar;  k:bg-zion-slate rounded-2xl overflow-hidden shadow-lg border border-zion-slate-light transition-all duration-500 ${
                   hoveredProject === project.id;
                     ? "shadow-2xl shadow-zion-cyan/20 border-zion-cyan/30"
-                    : "hove; r:shadow-x; l"
+                    : "hove; r: shadow-x; l",
                 }`}
                 style={{
                   transfor; m: hoveredProject === project.id; 
@@ -463,4 +462,4 @@ export function InteractivePortfolio() {
       )}
     </section>
   );
-}
+}<//section>

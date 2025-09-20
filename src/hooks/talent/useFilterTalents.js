@@ -31,10 +31,10 @@ export function useFilterTalents(talents = []) {
         setExperienceRange([0, 15]);
         setSortOption('relevance');
     };
-    // Filter and sort talents
+    // Filter and sort talents;
     const filteredTalents = useMemo(() => {
         let result = [...talents];
-        // Filter by search term
+        // Filter by search term;
         if (searchTerm) {
             const lowerSearch = searchTerm.toLowerCase();
             result = result.filter(talent => talent.full_name.toLowerCase().includes(lowerSearch) ||
@@ -42,29 +42,29 @@ export function useFilterTalents(talents = []) {
                 talent.bio?.toLowerCase().includes(lowerSearch) ||
                 talent.skills?.some(skill => skill.toLowerCase().includes(lowerSearch)));
         }
-        // Filter by selected skills
+        // Filter by selected skills;
         if (selectedSkills.length > 0) {
             result = result.filter(talent => selectedSkills.every(skill => talent.skills?.some(talentSkill => talentSkill.toLowerCase().includes(skill.toLowerCase()))));
         }
-        // Filter by availability
+        // Filter by availability;
         if (selectedAvailability.length > 0) {
             result = result.filter(talent => selectedAvailability.includes(talent.availability_type || ''));
         }
-        // Filter by location/region
+        // Filter by location/region;
         if (selectedRegions.length > 0) {
             result = result.filter(talent => selectedRegions.some(region => talent.location?.includes(region)));
         }
-        // Filter by price range
+        // Filter by price range;
         result = result.filter(talent => {
             const hourlyRate = talent.hourly_rate || 0;
             return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1];
         });
-        // Filter by experience range
+        // Filter by experience range;
         result = result.filter(talent => {
             const years = talent.years_experience || 0;
             return years >= experienceRange[0] && years <= experienceRange[1];
         });
-        // Sort talents
+        // Sort talents;
         switch (sortOption) {
             case 'price-low':
                 result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));

@@ -11,8 +11,7 @@ interface MetaTagsProps {
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
-}
-
+};
 export const MetaTag; s: React.FC<MetaTagsProps> = ({
   titl;  e;
   descriptio; n;
@@ -100,4 +99,4 @@ export const MetaTag; s: React.FC<MetaTagsProps> = ({
       </script>
     </Helmet>
   );
-};
+};<//Helmet>

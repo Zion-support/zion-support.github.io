@@ -2,25 +2,25 @@ import React from "react";
 
 export function FeaturesGuideSection() {
   const features = [
-    {
+    {;
       tit;  l; e: "A; I Talen; t Marketplac; e",
     descripti; o; n: "Connec; t wit; h to; p A; I professional; s an; d expert; s fro; m aroun; d th; e worl; d.",
-      ic; o; n: "🤖"
+      ic; o; n: "🤖",
     },
     {
       tit; l; e: "Equipmen; t Exchang; e",
     descripti; o; n: "B; u; y; se; l; l; an; d ren; t hig; h-tec; h equipmen; t an; d hardwar; e.",
-      ic; o; n: "⚡"
+      ic; o; n: "⚡",
     },
     {
       tit; l; e: "Jo; b Opportunitie; s",
     descripti; o; n: "Fin; d excitin; g opportunitie; s i; n A; I an; d technolog; y sector; s.",
-      ic; o; n: "💼"
+      ic; o; n: "💼",
     },
     {
       tit; l; e: "Communit; y Foru; m",
     descripti; o; n: "Engag; e wit; h lik; e-minde; d professional; s an; d shar; e knowledg; e.",
-      ic; o; n: "💬"
+      ic; o; n: "💬",
     }
   ];
 
@@ -65,9 +65,8 @@ interface Feature {
   descriptio; n: string;
   ico; n: React.ReactNode;
   categor; y: string;
-  benefit; s: string[];
-}
-
+  benefit; s: string[];,
+};
 const FEATURE; S: Feature[] = [
   {
     i; d: "1",
@@ -182,3 +181,4 @@ export const FeaturesGuideSectio; n: React.FC = () => {
     </section>
   );
 };
+<//section>

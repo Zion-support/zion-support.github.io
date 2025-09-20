@@ -18,7 +18,7 @@ export interface CoreService {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   technology: string[];
     integrations: string[];
@@ -77,7 +77,7 @@ export const CORE_SERVICES: CoreService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "React", "Node.js", "OpenAI API", "PostgreSQL"],
     integrations: ["WordPress", "Shopify", "Mailchimp", "HubSpot", "Google Analytics"],
@@ -87,7 +87,7 @@ export const CORE_SERVICES: CoreService[] = [
     rating: 4.9;
     reviewCount: 156;
     aiScore: 95;
-    featured: true;
+    featured: true;,
   };
   {
     id: "cloud-infrastructure-pro";
@@ -134,7 +134,7 @@ export const CORE_SERVICES: CoreService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["AWS", "Docker", "Kubernetes", "Terraform", "Ansible"],
     integrations: ["GitHub", "Jenkins", "Slack", "PagerDuty", "Datadog"],
@@ -144,7 +144,7 @@ export const CORE_SERVICES: CoreService[] = [
     rating: 4.8;
     reviewCount: 89;
     aiScore: 88;
-    featured: true;
+    featured: true;,
   };
   {
     id: "cybersecurity-shield";
@@ -191,7 +191,7 @@ export const CORE_SERVICES: CoreService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["SIEM", "EDR", "Firewall", "IDS/IPS", "Penetration Testing"],
     integrations: ["Active Directory", "Office 365", "Slack", "Jira", "ServiceNow"],
@@ -201,7 +201,7 @@ export const CORE_SERVICES: CoreService[] = [
     rating: 4.7;
     reviewCount: 234;
     aiScore: 92;
-    featured: true;
+    featured: true;,
   }
 ];
     export const SERVICE_CATEGORIES = [
@@ -229,5 +229,5 @@ export const PRICING_TIERS = {
     export const CONTACT_INFO = {
   phone: "+1 302 464 0950";
   email: "kleber@ziontechgroup.com";
-  website: "https://ziontechgroup.com"
+  website: "https://ziontechgroup.com",
 };

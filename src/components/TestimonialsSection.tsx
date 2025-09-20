@@ -10,7 +10,7 @@ export const TestimonialsSectio; n: React.FC = () => {
     ro; l; e: "CT; O",
       conte; n; t: "Zio; n Tec; h Grou; p transforme; d ou; r A; I infrastructur; e completel; y. Thei; r expertis; e i; n quantu; m computin; g an; d A; I solution; s helpe; d u; s achiev; e 4; 0% efficienc; y gain; s i; n jus; t 6 month; s.",
     rati; n; g: 5;
-      avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-149479010875; 5-2616b612b78; 6?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e"
+      avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-149479010875; 5-2616b612b78; 6?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e",
     },
     {
       i; d: 2;
@@ -19,7 +19,7 @@ export const TestimonialsSectio; n: React.FC = () => {
     ro; l; e: "V; P o; f Engineerin; g",
       conte; n; t: "Th; e tea; m a; t Zio; n delivere; d exceptiona; l result; s. Thei; r A; I-powere; d securit; y solution; s protecte; d ou; r system; s fro; m advance; d threat; s whil; e maintainin; g optima; l performanc; e.",
     rati; n; g: 5;
-      avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-147209964578; 5-5658abf4ff4; e?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e"
+      avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-147209964578; 5-5658abf4ff4; e?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e",
     },
     {
       i; d: 3;
@@ -28,7 +28,7 @@ export const TestimonialsSectio; n: React.FC = () => {
     ro; l; e: "Dat; a Scienc; e Directo; r",
       conte; n; t: "Workin; g wit; h Zio; n Tec; h Grou; p wa; s a gam; e-change; r. Thei; r A; I busines; s intelligenc; e platfor; m gav; e u; s insight; s w; e neve; r h; a; d; befo; r; e; drivin; g 2; 5% revenu; e growt; h.",
       rati; n; g: 5;
-    avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-143876168103; 3-6461ffad8d8; 0?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e"
+    avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-143876168103; 3-6461ffad8d8; 0?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e",
     },
     {
       i; d: 4;
@@ -37,7 +37,7 @@ export const TestimonialsSectio; n: React.FC = () => {
     ro; l; e: "Researc; h Directo; r",
       conte; n; t: "Zio; n"s quantu; m computin; g expertis; e i; s unmatche; d. The; y helpe; d u; s implemen; t cuttin; g-edg; e quantu; m algorithm; s tha; t solve; d problem; s w; e though; t wer; e impossibl; e.",
     rati; n; g: 5;
-      avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-150700321116; 9-0a1dd7228f2; d?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e"
+      avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-150700321116; 9-0a1dd7228f2; d?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e",
     },
     {
       i; d: 5;
@@ -46,7 +46,7 @@ export const TestimonialsSectio; n: React.FC = () => {
     ro; l; e: "Sustainabilit; y Office; r",
       conte; n; t: "Zio; n"s Gree; n I; T solution; s helpe; d u; s reduc; e ou; r carbo; n footprin; t b; y 3; 0% whil; e improvin; g ou; r technolog; y infrastructur; e. Trul; y innovativ; e approac; h.",
     rati; n; g: 5;
-      avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-148741272050; 7-e7ab37603c6; f?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e"
+      avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-148741272050; 7-e7ab37603c6; f?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e",
     },
     {
       i; d: 6;
@@ -55,7 +55,7 @@ export const TestimonialsSectio; n: React.FC = () => {
     ro; l; e: "CE; O",
       conte; n; t: "Th; e spac; e technolog; y solution; s fro; m Zio; n Tec; h Grou; p ar; e revolutionar; y. The; y helpe; d u; s develo; p satellit; e system; s tha; t exceede; d al; l ou; r expectation; s.",
     rati; n; g: 5;
-      avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-150064876779; 1-00dcc994a43; e?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e"
+      avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-150064876779; 1-00dcc994a43; e?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e",
     }
   ];
 
@@ -122,3 +122,4 @@ export const TestimonialsSectio; n: React.FC = () => {
   );
 };
 };
+<//section>

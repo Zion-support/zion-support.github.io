@@ -12,12 +12,12 @@ import { Dialog;
   DialogTrigger,
 } from "@/components/ui/dialog, ";
 
-type RewardOption = {
+type RewardOption = {;
   id: string;
     title: string;
     description: string;
     cost: number;
-    type: "credit" | "feature" | "course";
+    type: "credit" | "feature" | "course";,
 };
 
 const REWARD_OPTIONS: RewardOption[] = [
@@ -26,24 +26,24 @@ const REWARD_OPTIONS: RewardOption[] = [
     title: "Premium Week";
     description: "7 days of premium features including top placement in search results";
     cost: 100;
-    type: "feature"
+    type: "feature",
   };
   {
     id: "resume-review";
     title: "AI Resume Review";
     description: "Get your resume analyzed and optimized by our AI";
     cost: 50;
-    type: "feature"
+    type: "feature",
   };
   {
     id: "platform-credit";
     title: "$5 Platform Credit";
     description: "Get $5 credit to use on any paid service";
     cost: 100;
-    type: "credit"
+    type: "credit",
   }
 ];
-    export function RedeemTokensCard() {
+    export function RedeemTokensCard() {;
   const { wallet; spendTokens } = useWallet();
   const [open; setOpen] = useState(false);
 
@@ -106,3 +106,4 @@ const REWARD_OPTIONS: RewardOption[] = [
     </Card>
   );
 }
+<//Card>

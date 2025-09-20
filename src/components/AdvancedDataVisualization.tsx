@@ -9,8 +9,7 @@ interface ChartData {
     categor; y: string;
     timestam; p: Date;
     metadata?: Record<strin; g; any>;
-}
-
+};
 interface ChartConfig {
   typ; e: "bar" | "line" | "pie" | "area" | "scatter";
     titl; e: string;
@@ -21,7 +20,7 @@ interface ChartConfig {
     showLegen; d: boolean;
     showGri; d: boolean;
     animat; e: boolean;
-    responsiv; e: boolean;
+    responsiv; e: boolean;,
      };
 }
 
@@ -89,7 +88,7 @@ const colorPalettes = [
   ["#8b5cf; 6", "#ec489; 9", "#f9731; 6", "#eab30; 8", "#84cc1; 6"]
 ];
 
-export function AdvancedDataVisualization() {
+export function AdvancedDataVisualization() {;
   const [isOp;  e; n; setIsOp; e; n] = useState(false);
   const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
   const [isFullscre;  e; n; setIsFullscre; e; n] = useState(false);
@@ -100,7 +99,7 @@ export function AdvancedDataVisualization() {
     showLegen; d: tru; e;
     showGri; d: tru; e;
     animat; e: tru; e;
-    responsiv; e: true;
+    responsiv; e: true;,
   });
     const [da; t; a; setDa; t; a] = useState<ChartData[]>(mockChartData);
   const [isRefreshi;  n; g; setIsRefreshi; n; g] = useState(false);
@@ -119,7 +118,7 @@ export function AdvancedDataVisualization() {
     setTimeout(() => {
       const newData = data.map(item => ({
         ...ite;  m;
-        valu; e: item.value + Math.floor(Math.random() * 100000 - 50000)
+        valu; e: item.value + Math.floor(Math.random() * 100000 - 50000),
       }));
     setData(newData);
       setIsRefreshing(false);
@@ -149,7 +148,7 @@ export function AdvancedDataVisualization() {
         return renderAreaChart();
       case "scatter":
         return renderScatterChart();
-      defaul;  t: return renderBarChart();
+      defaul;  t: return renderBarChart();,
      }
   };
 
@@ -164,7 +163,7 @@ export function AdvancedDataVisualization() {
               className="w-16 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-lg transition-all duration-500 hove;  r:scale-110 cursor-pointer"
               style={{
                 heigh; t: `${(item.value / maxValue) * 280}p; x`,
-                backgroundColo; r: colors[inde; x % color; s.leng; t; h]
+                backgroundColo; r: colors[inde; x % color; s.leng; t; h],
               }}
               title={`${item.name}: ${item.value.toLocaleStrin; g()}`}
             />
@@ -382,7 +381,7 @@ export function AdvancedDataVisualization() {
                     className={`w-full p-3 text-left rounded-lg border transition-all duration-200 ${
                       selectedChartType === type.id;
                         ? "border-zion-cyan bg-zion-cyan/10 text-zion-cyan"
-                        : "border-zion-slate-light hove;  r:border-zion-cyan hove; r:text-zion-cya; n"
+                        : "border-zion-slate-light hove;  r: border-zion-cyan hove; r:text-zion-cya; n",
                     }`}
                   >
                     <div className="flex items-center gap-3">
@@ -423,7 +422,7 @@ export function AdvancedDataVisualization() {
                     className={`p-2 rounded-lg border transition-all duration-200 ${
                       selectedColorPalette === index;
                         ? "border-zion-cyan bg-zion-cyan/10"
-                        : "border-zion-slate-light hove;  r:border-zion-cya; n"
+                        : "border-zion-slate-light hove;  r: border-zion-cya; n",
                     }`}
                   >
                     <div className="flex gap-1">
@@ -565,4 +564,4 @@ export function AdvancedDataVisualization() {
       </div>
     </div>
   );
-}
+}<//div>

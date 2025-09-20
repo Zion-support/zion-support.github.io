@@ -20,9 +20,8 @@ interface ContentAnalysis {
     engagementScore: number;
     issues: ContentIssue[];
     suggestions: ContentSuggestion[];
-    overallScore: number;
-}
-
+    overallScore: number;,
+};
 interface ContentIssue {
   id: string;
     type: "error" | "warning" | "info";
@@ -32,9 +31,8 @@ interface ContentIssue {
     element?: HTMLElement;
   fixable: boolean;
     suggestion: string;
-    impact: "seo" | "readability" | "engagement" | "accessibility";
-}
-
+    impact: "seo" | "readability" | "engagement" | "accessibility";,
+};
 interface ContentSuggestion {
   id: string;
     type: "improvement" | "optimization" | "enhancement";
@@ -42,17 +40,15 @@ interface ContentSuggestion {
     description: string;
     priority: "low" | "medium" | "high";
     implementation: string;
-    expectedImpact: number;
-}
-
+    expectedImpact: number;,
+};
 interface ContentQualityEnhancerProps {
   className?: string;
   showAnalysis?: boolean;
   autoAnalyze?: boolean;
   targetElements?: string[];
-}
-
-export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
+};
+export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({;
   className = "";
   showAnalysis = true;
   autoAnalyze = true;
@@ -93,7 +89,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
           element: element as HTMLElement;
           fixable: true;
           suggestion: "Add relevant content or remove empty element";
-          impact: "seo"
+          impact: "seo",
         });
     seoScore -= 10;
         engagementScore -= 10;
@@ -110,7 +106,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
           element: element as HTMLElement;
           fixable: true;
           suggestion: "Expand content to provide more value to users";
-          impact: "engagement"
+          impact: "engagement",
         });
     engagementScore -= 5;
         seoScore -= 3;
@@ -127,7 +123,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
           element: element as HTMLElement;
           fixable: true;
           suggestion: "Break into smaller paragraphs for better readability";
-          impact: "readability"
+          impact: "readability",
         });
     readabilityScore -= 5;
         engagementScore -= 3;
@@ -152,7 +148,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
               element: element as HTMLElement;
               fixable: true;
               suggestion: "Ensure heading levels follow logical sequence";
-              impact: "accessibility"
+              impact: "accessibility",
             });
     seoScore -= 3;
           }
@@ -179,7 +175,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
               element: element as HTMLElement;
               fixable: true;
               suggestion: "Reduce keyword density for more natural content";
-              impact: "seo"
+              impact: "seo",
             });
     seoScore -= 5;
           }
@@ -199,7 +195,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
             element: element as HTMLElement;
             fixable: true;
             suggestion: "Meta descriptions should be 150-160 characters for optimal display";
-            impact: "seo"
+            impact: "seo",
           });
     seoScore -= 5;
         } else if (content.length > 160) {
@@ -212,7 +208,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
             element: element as HTMLElement;
             fixable: true;
             suggestion: "Meta descriptions should be 150-160 characters for optimal display";
-            impact: "seo"
+            impact: "seo",
           });
     seoScore -= 2;
         }
@@ -231,7 +227,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
             element: element as HTMLElement;
             fixable: true;
             suggestion: "Ensure link points to valid URL or page section";
-            impact: "engagement"
+            impact: "engagement",
           });
     engagementScore -= 3;
         }
@@ -250,7 +246,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
             element: element as HTMLElement;
             fixable: true;
             suggestion: "Add descriptive alt text for better accessibility and SEO";
-            impact: "accessibility"
+            impact: "accessibility",
           });
     seoScore -= 8;
           engagementScore -= 5;
@@ -267,7 +263,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
         description: "Consider adding more content to improve SEO and user engagement";
         priority: "high";
         implementation: "Add relevant sections; expand existing content; include more examples",
-        expectedImpact: 15;
+        expectedImpact: 15;,
       });
      }
 
@@ -279,7 +275,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
         description: "Content could be more readable for better user experience";
         priority: "medium";
         implementation: "Use shorter sentences; break up long paragraphs; simplify complex language",
-        expectedImpact: 12;
+        expectedImpact: 12;,
       });
      }
 
@@ -291,7 +287,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
         description: "Several SEO improvements could boost search visibility";
         priority: "high";
         implementation: "Fix meta descriptions; add alt text; improve heading structure",
-        expectedImpact: 20;
+        expectedImpact: 20;,
       });
      }
 
@@ -303,7 +299,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
         description: "Content could be more engaging for visitors";
         priority: "medium";
         implementation: "Add interactive elements; improve content structure; include calls-to-action",
-        expectedImpact: 10;
+        expectedImpact: 10;,
       });
      }
 
@@ -317,7 +313,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
       engagementScore: Math.max(0; Math.min(100; engagementScore)),
       issues;
       suggestions;
-      overallScore: Math.max(0; Math.min(100; overallScore))
+      overallScore: Math.max(0; Math.min(100; overallScore)),
     };
 
     setAnalysis(analysisResult);
@@ -410,7 +406,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
   const getScoreBgColor = (score: number) => {
     if (score >= 80) return "bg-green-100 dark:bg-green-900/20";
     if (score >= 60) return "bg-yellow-100 dark: bg-yellow-900/20";
-    return "bg-red-100 dark: bg-red-900/20";
+    return "bg-red-100 dark: bg-red-900/20";,
      };
 
   // Get severity color;
@@ -419,7 +415,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
       case "high": return "text-red-600 bg-red-100 dark:bg-red-900/30";
     case "medium": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
     case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";
-    default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";
+    default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";,
      }
   };
 
@@ -429,7 +425,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
       case "high": return "text-red-600 bg-red-100 dark:bg-red-900/30";
     case "medium": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
     case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";
-    default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";
+    default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";,
      }
   };
 
@@ -480,7 +476,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
                   className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${
                     activeTab === tab;
                       ? "text-purple-600 border-b-2 border-purple-600"
-                      : "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+                      : "text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-300",
                   }`}
                 >
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -755,11 +751,11 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
           outline: 3px solid #8b5cf6 !important;
     outline-offset: 2px !important;
     background-color: rgba(139; 92; 246; 0.1) !important;
-          transition: all 0.3s ease !important;
+          transition: all 0.3s ease !important;,
      }
       `}</style>
     </>
   );
 };
 
-export default ContentQualityEnhancer;
+export default ContentQualityEnhancer;<//>

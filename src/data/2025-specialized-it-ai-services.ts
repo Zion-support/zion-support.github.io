@@ -31,7 +31,7 @@ export interface SpecializedITService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
+    website: string;,
      };
   realImplementation: boolean;
     implementationDetails: string;
@@ -42,7 +42,7 @@ export interface SpecializedITService {
     marketPrice: string;
     certifications: string[];
     sla: string;
-    support: string;
+    support: string;,
 }
 
 export const specializedITServices2025: SpecializedITService[] = [
@@ -89,7 +89,7 @@ export const specializedITServices2025: SpecializedITService[] = [
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Neuromorphic computing platform with brain-inspired architecture; ultra-efficient processing; and research collaboration tools.",
@@ -100,7 +100,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     marketPrice: "$3;500-$5;000/month",
     certifications: ["Research Collaboration Agreements", "Academic Partnerships", "ISO 27001"],
     sla: "99.0% uptime guarantee";
-    support: "Research hours support with dedicated neuromorphic specialists"
+    support: "Research hours support with dedicated neuromorphic specialists",
   };
   // Federated Learning Platform;
   {
@@ -145,7 +145,7 @@ export const specializedITServices2025: SpecializedITService[] = [
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Federated learning platform with privacy-preserving protocols; distributed training; and compliance automation.",
@@ -156,7 +156,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     marketPrice: "$2;000-$3;000/month",
     certifications: ["SOC 2 Type II", "GDPR Compliant", "HIPAA Compliant", "ISO 27001"],
     sla: "99.9% uptime guarantee";
-    support: "Business hours support with dedicated privacy specialists"
+    support: "Business hours support with dedicated privacy specialists",
   };
   // AI Ethics & Governance Platform;
   {
@@ -201,7 +201,7 @@ export const specializedITServices2025: SpecializedITService[] = [
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "AI ethics and governance platform with comprehensive frameworks; bias detection; and compliance automation.",
@@ -212,7 +212,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     marketPrice: "$1;500-$2;500/month",
     certifications: ["SOC 2 Type II", "ISO 27001", "GDPR Compliant", "AI Ethics Certification"],
     sla: "99.9% uptime guarantee";
-    support: "Business hours support with dedicated ethics specialists"
+    support: "Business hours support with dedicated ethics specialists",
   };
   // Edge AI Orchestration Platform;
   {
@@ -257,7 +257,7 @@ export const specializedITServices2025: SpecializedITService[] = [
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Edge AI orchestration platform with intelligent workload management; load balancing; and multi-cloud coordination.",
@@ -268,7 +268,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     marketPrice: "$1;500-$2;500/month",
     certifications: ["ISO 27001", "SOC 2 Type II", "Edge Computing Standards", "Multi-cloud Certified"],
     sla: "99.9% uptime guarantee";
-    support: "Business hours support with dedicated edge computing specialists"
+    support: "Business hours support with dedicated edge computing specialists",
   };
   // AI-Powered DevOps Automation;
   {
@@ -313,7 +313,7 @@ export const specializedITServices2025: SpecializedITService[] = [
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "AI-powered DevOps automation platform with intelligent CI/CD optimization; infrastructure management; and multi-cloud support.",
@@ -324,7 +324,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     marketPrice: "$1;200-$2;000/month",
     certifications: ["SOC 2 Type II", "ISO 27001", "DevOps Certified", "Multi-cloud Certified"],
     sla: "99.9% uptime guarantee";
-    support: "24/7 technical support with dedicated DevOps specialists"
+    support: "24/7 technical support with dedicated DevOps specialists",
   };
   // AI-Powered Data Quality Platform;
   {
@@ -369,7 +369,7 @@ export const specializedITServices2025: SpecializedITService[] = [
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "AI-powered data quality platform with automated validation; quality scoring; and data improvement capabilities.",
@@ -380,7 +380,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     marketPrice: "$1;000-$1;800/month",
     certifications: ["SOC 2 Type II", "ISO 27001", "Data Quality Certified", "GDPR Compliant"],
     sla: "99.9% uptime guarantee";
-    support: "Business hours support with dedicated data specialists"
+    support: "Business hours support with dedicated data specialists",
   };
   // AI-Powered API Management Platform;
   {
@@ -425,7 +425,7 @@ export const specializedITServices2025: SpecializedITService[] = [
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "AI-powered API management platform with intelligent optimization; security detection; and performance monitoring.",
@@ -436,7 +436,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     marketPrice: "$1;000-$1;600/month",
     certifications: ["SOC 2 Type II", "ISO 27001", "API Security Certified", "OAuth 2.0 Compliant"],
     sla: "99.9% uptime guarantee";
-    support: "Business hours support with dedicated API specialists"
+    support: "Business hours support with dedicated API specialists",
   };
   // AI-Powered Network Security Platform;
   {
@@ -481,7 +481,7 @@ export const specializedITServices2025: SpecializedITService[] = [
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "AI-powered network security platform with intelligent threat detection; behavioral analysis; and automated response.",
@@ -492,7 +492,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     marketPrice: "$1;800-$3;000/month",
     certifications: ["SOC 2 Type II", "ISO 27001", "NIST Compliance", "FedRAMP"],
     sla: "99.99% uptime guarantee";
-    support: "24/7 security operations center with dedicated security engineers'
+    support: "24/7 security operations center with dedicated security engineers',
   }
 ];
     export default specializedITServices2025;

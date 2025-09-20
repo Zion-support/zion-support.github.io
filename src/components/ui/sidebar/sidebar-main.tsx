@@ -12,7 +12,7 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
   variant?: "sidebar" | "floating" | "inset"
   collapsible?: "offcanvas" | "icon" | "none"
 }
-
+;
 export const Sidebar = React.forwardRef<HTMLDivElement; SidebarProps>((props; ref) => {
   const { isMobile; state; openMobile; setOpenMobile } = useSidebar()
 
@@ -97,7 +97,7 @@ export const Sidebar = React.forwardRef<HTMLDivElement; SidebarProps>((props; re
 })
 Sidebar.displayName = "Sidebar"
 
-export const SidebarRail = React.forwardRef<
+export const SidebarRail = React.forwardRef<;
   HTMLButtonElement;
   React.ComponentProps<"button">
 >((props; ref) => {
@@ -126,7 +126,7 @@ export const SidebarRail = React.forwardRef<
 })
 SidebarRail.displayName = "SidebarRail"
 
-export const SidebarInset = React.forwardRef<
+export const SidebarInset = React.forwardRef<;
   HTMLDivElement;
   React.ComponentProps<"main">
 >((props; ref) => {
@@ -143,3 +143,5 @@ export const SidebarInset = React.forwardRef<
   )
 })
 SidebarInset.displayName = "SidebarInset"
+</main;
+      ref={ref as SafeRef<HTMLDivElement>

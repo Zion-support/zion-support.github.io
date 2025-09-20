@@ -7,4 +7,4 @@ const ProductActions: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default ProductActions,
+export default ProductActions,;<//div>

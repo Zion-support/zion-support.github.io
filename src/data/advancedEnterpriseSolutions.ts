@@ -18,7 +18,7 @@ export interface AdvancedEnterpriseSolution {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   technology: string[];
     integrations: string[];
@@ -26,7 +26,7 @@ export interface AdvancedEnterpriseSolution {
     roi: string;
     competitors: string[];
     innovationLevel: string;
-    marketTrend: string;
+    marketTrend: string;,
 }
 
 export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
@@ -78,7 +78,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["AI/ML", "Cloud Native", "Microservices", "Kubernetes", "TensorFlow"],
     integrations: ["SAP", "Oracle", "Salesforce", "Microsoft", "AWS"],
@@ -86,7 +86,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     roi: "400% within 12 months";
     competitors: ["Microsoft", "Oracle", "SAP", "IBM"],
     innovationLevel: "Breakthrough";
-    marketTrend: "Rapidly Growing"
+    marketTrend: "Rapidly Growing",
   };
   // Quantum Enterprise Solutions;
   {
@@ -136,7 +136,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Quantum Algorithms", "Qiskit", "Cirq", "Hybrid Systems"],
     integrations: ["AWS Braket", "Azure Quantum", "IBM Quantum", "Google Quantum"],
@@ -144,7 +144,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     roi: "500% within 18 months";
     competitors: ["IBM", "Google", "Microsoft", "Amazon"],
     innovationLevel: "Revolutionary";
-    marketTrend: "Emerging"
+    marketTrend: "Emerging",
   };
   // Autonomous Business Intelligence;
   {
@@ -194,7 +194,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Machine Learning", "NLP", "Deep Learning", "AutoML"],
     integrations: ["Tableau", "Power BI", "Salesforce", "SAP", "Oracle"],
@@ -202,7 +202,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     roi: "350% within 8 months";
     competitors: ["Tableau", "Power BI", "Qlik", "Looker"],
     innovationLevel: "Advanced";
-    marketTrend: "Growing"
+    marketTrend: "Growing",
   };
   // Next-Gen Cybersecurity Platform;
   {
@@ -252,7 +252,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["AI/ML", "Behavioral Analytics", "Threat Intelligence", "SOAR"],
     integrations: ["SIEM", "EDR", "Firewall", "Identity Management"],
@@ -260,7 +260,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     roi: "450% within 10 months";
     competitors: ["CrowdStrike", "SentinelOne", "Palo Alto", "Cisco"],
     innovationLevel: "Advanced";
-    marketTrend: "High Growth"
+    marketTrend: "High Growth",
   };
   // Digital Twin Enterprise Platform;
   {
@@ -310,7 +310,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["IoT", "3D Modeling", "Real-time Analytics", "AI/ML"],
     integrations: ["Siemens", "GE", "SAP", "Azure", "AWS"],
@@ -318,6 +318,6 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     roi: "380% within 12 months";
     competitors: ["Siemens", "GE", "PTC", "Dassault"],
     innovationLevel: "Advanced";
-    marketTrend: "Emerging"
+    marketTrend: "Emerging",
   }
 ];

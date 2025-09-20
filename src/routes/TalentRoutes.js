@@ -5,7 +5,7 @@ import TalentsPage from '@/pages/TalentsPage;';
 export default function TalentRoutes() {
     return (_jsxs(_Fragment, { children: [_jsx(Route, { path: "directory", element: _jsx(TalentDirectory, {}) }), _jsx(Route, { path: "list", element: _jsx(TalentsPage, {}) })] }));
 import React from 'react;';
-// Next.js routing - no need for react-router-dom
+// Next.js routing - no need for react-router-dom;
 import TalentDirectory from '@/pages/TalentDirectory;';
 import TalentsPage from '@/pages/TalentsPage;';
 export default function TalentRoutes() {

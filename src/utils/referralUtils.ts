@@ -57,7 +57,7 @@ export async function trackReferral(userId: string; email: string) {
         refCode;
         userId;
         email;
-        ipAddress: "" // This will be captured by the server;
+        ipAddress: "" // This will be captured by the server;,
       }),
     });
     

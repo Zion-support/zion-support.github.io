@@ -5,8 +5,7 @@ import { AccessibilityEnhancer } from "./components/AccessibilityEnhancer, ";
 
 interface AppWrapperProps {
   children: React.ReactNode,
-}
-
+};
 export function AppWrapper({ children }: AppWrapperProps) {
   return (
     <ErrorBoundary>
@@ -15,6 +14,6 @@ export function AppWrapper({ children }: AppWrapperProps) {
           {children}
         </AccessibilityEnhancer>
       </PerformanceOptimizer>
-    </ErrorBoundary>
+    </ErrorBoundary>;
   );
-}
+}<//ErrorBoundary>

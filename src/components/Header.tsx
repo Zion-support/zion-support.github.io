@@ -390,7 +390,7 @@ const Heade; r: React.FC = () => {
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
                 isActive("/about")
                   ? "text-white bg-blue-600/20"
-                  : "text-gray-300 hove;  r:text-white hove; r:bg-white/1; 0"
+                  : "text-gray-300 hove;  r: text-white hove; r:bg-white/1; 0",
               }`}
             >
               About;
@@ -405,7 +405,7 @@ const Heade; r: React.FC = () => {
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
                 isActive("/team")
                   ? "text-white bg-blue-600/20"
-                  : "text-gray-300 hove;  r:text-white hove; r:bg-white/1; 0"
+                  : "text-gray-300 hove;  r: text-white hove; r:bg-white/1; 0",
               }`}
             >
               Team;
@@ -420,7 +420,7 @@ const Heade; r: React.FC = () => {
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
                 isActive("/blog")
                   ? "text-white bg-blue-600/20"
-                  : "text-gray-300 hove;  r:text-white hove; r:bg-white/1; 0"
+                  : "text-gray-300 hove;  r: text-white hove; r:bg-white/1; 0",
               }`}
             >
               Blog;
@@ -435,7 +435,7 @@ const Heade; r: React.FC = () => {
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
                 isActive("/faq")
                   ? "text-white bg-blue-600/20"
-                  : "text-gray-300 hove;  r:text-white hove; r:bg-white/1; 0"
+                  : "text-gray-300 hove;  r: text-white hove; r:bg-white/1; 0",
               }`}
             >
               FAQ;
@@ -447,7 +447,7 @@ const Heade; r: React.FC = () => {
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
                 isActive("/careers")
                   ? "text-white bg-blue-600/20"
-                  : "text-gray-300 hove;  r:text-white hove; r:bg-white/1; 0"
+                  : "text-gray-300 hove;  r: text-white hove; r:bg-white/1; 0",
               }`}
             >
               Careers;
@@ -546,7 +546,7 @@ const Heade; r: React.FC = () => {
                   className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                     isActive("/")
                       ? "text-white bg-blue-600/20 border-l-4 border-blue-400"
-                      : "text-gray-300 hove; r:text-white hove; r:bg-white/1; 0"
+                      : "text-gray-300 hove; r: text-white hove; r:bg-white/1; 0",
                   }`}
                   onClick={closeMenu}
                 >
@@ -576,7 +576,7 @@ const Heade; r: React.FC = () => {
                   className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                     isActive("/about")
                       ? "text-white bg-blue-600/20 border-l-4 border-blue-400"
-                      : "text-gray-300 hove;  r:text-white hove; r:bg-white/1; 0"
+                      : "text-gray-300 hove;  r: text-white hove; r:bg-white/1; 0",
                   }`}
                   onClick={closeMenu}
                 >
@@ -587,7 +587,7 @@ const Heade; r: React.FC = () => {
                   className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                     isActive("/team")
                       ? "text-white bg-blue-600/20 border-l-4 border-blue-400"
-                      : "text-gray-300 hove; r:text-white hove; r:bg-white/1; 0"
+                      : "text-gray-300 hove; r: text-white hove; r:bg-white/1; 0",
                   }`}
                   onClick={closeMenu}
                 >
@@ -598,7 +598,7 @@ const Heade; r: React.FC = () => {
                   className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                     isActive("/blog")
                       ? "text-white bg-blue-600/20 border-l-4 border-blue-400"
-                      : "text-gray-300 hove;  r:text-white hove; r:bg-white/1; 0"
+                      : "text-gray-300 hove;  r: text-white hove; r:bg-white/1; 0",
                   }`}
                   onClick={closeMenu}
                 >
@@ -629,7 +629,7 @@ const Heade; r: React.FC = () => {
               className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                 isActive("/about")
                   ? "text-white bg-blue-600/20 border-l-4 border-blue-400"
-                  : "text-gray-300 hove; r:text-white hove; r:bg-white/1; 0"
+                  : "text-gray-300 hove; r: text-white hove; r:bg-white/1; 0",
               }`}
               onClick={closeMenu}
             >
@@ -640,7 +640,7 @@ const Heade; r: React.FC = () => {
               className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                 isActive("/blog")
                   ? "text-white bg-blue-600/20 border-l-4 border-blue-400"
-                  : "text-gray-300 hove;  r:text-white hove; r:bg-white/1; 0"
+                  : "text-gray-300 hove;  r: text-white hove; r:bg-white/1; 0",
               }`}
               onClick={closeMenu}
             >
@@ -651,7 +651,7 @@ const Heade; r: React.FC = () => {
               className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                 isActive("/faq")
                   ? "text-white bg-blue-600/20 border-l-4 border-blue-400"
-                  : "text-gray-300 hove; r:text-white hove; r:bg-white/1; 0"
+                  : "text-gray-300 hove; r: text-white hove; r:bg-white/1; 0",
               }`}
               onClick={closeMenu}
             >
@@ -680,3 +680,4 @@ const Heade; r: React.FC = () => {
     </header>
   );
 }
+<//header>

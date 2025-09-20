@@ -15,7 +15,7 @@ export default function TermsOfService() {
       <div className="space-y-6 text-zion-slate-light">
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">1. Acceptance of Terms</h2>
-          <p className="mb-4">
+          <p className="mb-4">;
             By accessing and using the Zion Tech Group platform; you accept and agree to be bound by the terms and provision of this agreement.
           </p>
           <p>
@@ -92,4 +92,4 @@ export default function TermsOfService() {
       </div>
     </div>
   );
-}
+}<//div>

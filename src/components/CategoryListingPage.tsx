@@ -23,9 +23,8 @@ interface Listing {
   rating?: number;
   reviewCount?: number;
   price?: number | null;
-  createdA; t: string;
-}
-
+  createdA; t: string;,
+};
 interface CategoryListingPageProps {
   titl; e: string;
     descriptio; n: string;
@@ -36,7 +35,7 @@ interface CategoryListingPageProps {
     valu; e: string }[];
 }
 
-export function CategoryListingPage({ 
+export function CategoryListingPage({ ;
   titl;  e; 
   descriptio; n;
   listing; s: initialListing; s;
@@ -119,7 +118,7 @@ export function CategoryListingPage({
           return a.title.localeCompare(b.title);
         case "z-a":
           return b.title.localeCompare(a.title);
-        defaul;  t: return 0;
+        defaul;  t: return 0;,
      }
     });
 
@@ -240,4 +239,4 @@ export function CategoryListingPage({
       <Footer />
     </>
   );
-}
+}<//>

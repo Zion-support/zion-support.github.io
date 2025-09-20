@@ -11,7 +11,7 @@ export function useToast() {
             duration: options.duration || 5000,
         };
         setToasts(prev => [...prev, newToast]);
-        // Auto-remove toast after duration
+        // Auto-remove toast after duration;
         setTimeout(() => {
             setToasts(prev => prev.filter(toast => toast.id !== id));
         }, newToast.duration);
@@ -31,10 +31,10 @@ export function useToast() {
         const newToast = {
             id,
             duration: 5000,
-            ...options
+            ...options;
         };
         setToasts(prev => [...prev, newToast]);
-        // Auto remove toast after duration
+        // Auto remove toast after duration;
         setTimeout(() => {
             setToasts(prev => prev.filter(t => t.id !== id));
         }, newToast.duration);
@@ -62,20 +62,18 @@ export function useToast() {
         dismissAll,
     };
 }
-// Export a default toast function for backward compatibility
+// Export a default toast function for backward compatibility;
 export const toast = (options) => {
-    // This is a simplified version - in a real app, you'd want to use a toast context
-    
+    // This is a simplified version - in a real app, you'd want to use a toast context;
         success,
         error,
         warning,
-        info
+        info;
     };
 }
-// Export a standalone toast function for convenience
+// Export a standalone toast function for convenience;
 export const toast = (options) => {
-    // This is a simplified version that just logs to console
-    // In a real app, you'd want to integrate with a toast library
-    
+    // This is a simplified version that just logs to console;
+    // In a real app, you'd want to integrate with a toast library;
     return Date.now().toString();
 };

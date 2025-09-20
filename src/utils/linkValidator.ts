@@ -105,7 +105,7 @@ export class LinkValidator {
         url;
         status: "protocol"
         parentPage;
-        suggestedFix: "Keep as-is - these are valid protocol links"
+        suggestedFix: "Keep as-is - these are valid protocol links",
       };
      }
 
@@ -115,7 +115,7 @@ export class LinkValidator {
         url;
         status: "external"
         parentPage;
-        suggestedFix: "Add rel="nofollow" and validate periodically"
+        suggestedFix: "Add rel="nofollow" and validate periodically",
       };
      }
 
@@ -125,7 +125,7 @@ export class LinkValidator {
         url;
         status: "broken"
         parentPage;
-        suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken internal link with available redirect"
+        suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken internal link with available redirect",
       };
      }
 
@@ -143,7 +143,7 @@ export class LinkValidator {
       originalUrl: original;
       newUrl: newUrl;
       type: "redirect"
-      reason: "Broken internal link with available redirect mapping"
+      reason: "Broken internal link with available redirect mapping",
     }));
      }
 

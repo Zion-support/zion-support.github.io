@@ -18,7 +18,7 @@ export interface InnovativeAIService2025 {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   websiteUrl: string;
     demoUrl?: string;
@@ -27,7 +27,7 @@ export interface InnovativeAIService2025 {
     complianceStandards: string[];
     integrationCapabilities: string[];
     roiMetrics: string[];
-    competitiveAdvantages: string[];
+    competitiveAdvantages: string[];,
 }
 
 export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
@@ -84,7 +84,7 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-autonomous-customer-service-2025";
     technologyStack: ["GPT-5", "Claude 3.5", "Natural Language Processing", "Machine Learning", "API Integration"],
@@ -147,7 +147,7 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-predictive-maintenance-2025";
     technologyStack: ["Machine Learning", "IoT Sensors", "Data Analytics", "Cloud Computing", "Edge Computing"],
@@ -210,7 +210,7 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-content-creation-studio-2025";
     technologyStack: ["GPT-5", "DALL-E 3", "Stable Diffusion", "Natural Language Processing", "Computer Vision"],
@@ -273,7 +273,7 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-financial-trading-platform-2025";
     technologyStack: ["Machine Learning", "Deep Learning", "Financial APIs", "Real-time Data", "Cloud Computing"],
@@ -336,7 +336,7 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-healthcare-research-platform-2025";
     technologyStack: ["Deep Learning", "Natural Language Processing", "Bioinformatics", "Cloud Computing", "Data Analytics"],
@@ -399,7 +399,7 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-energy-optimization-platform-2025";
     technologyStack: ["Machine Learning", "IoT Sensors", "Energy Management", "Cloud Computing", "Data Analytics"],
@@ -462,7 +462,7 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-supply-chain-risk-management-2025";
     technologyStack: ["Machine Learning", "Predictive Analytics", "Risk Modeling", "Data Analytics", "Cloud Computing"],
@@ -525,7 +525,7 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-legal-research-analysis-2025";
     technologyStack: ["Natural Language Processing", "Machine Learning", "Legal Databases", "Document AI", "Cloud Computing"],
@@ -588,7 +588,7 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-creative-design-studio-2025";
     technologyStack: ["Generative AI", "Computer Vision", "Design Algorithms", "Creative AI", "Cloud Computing"],

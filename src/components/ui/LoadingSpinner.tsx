@@ -10,11 +10,10 @@ interface LoadingSpinnerProps {
   className?: string;
   text?: string;
   showText?: boolean,
-}
-
+};
 export function LoadingSpinner({
   size = "md",
-  color = "primary",
+  color = "primary",;
   customColor;
   className;
   text = "Loading...",
@@ -24,14 +23,14 @@ export function LoadingSpinner({
     sm: "w-4 h-4",
     md: "w-6 h-6",
     lg: "w-8 h-8",
-    xl: "w-12 h-12"
+    xl: "w-12 h-12",
   };
 
   const colorClasses = {
     primary: "border-zion-purple",
     secondary: "border-zion-cyan",
     white: "border-white",
-    custom: ""
+    custom: "",
   };
 
   const borderColor = customColor || colorClasses[color];
@@ -47,13 +46,13 @@ export function LoadingSpinner({
         animate={{ rotate: 360 }}
         transition={{
           duration: 1; repeat: Infinity;
-          ease: "linear"
+          ease: "linear",
         }}
         role="status"
         aria-label="Loading"
 export function LoadingSpinner({ 
   size = "md", 
-  color = "primary", 
+  color = "primary", ;
   customColor;
   className = "",
   text = "Loading...",
@@ -63,7 +62,7 @@ export function LoadingSpinner({
     sm: "w-4 h-4",
     md: "w-8 h-8",
     lg: "w-12 h-12",
-    xl: "w-16 h-16"
+    xl: "w-16 h-16",
   };
 
   const colorClasses = {
@@ -77,7 +76,7 @@ export function LoadingSpinner({
     sm: "text-xs",
     md: "text-sm",
     lg: "text-base",
-    xl: "text-lg"
+    xl: "text-lg",
   };
 
   return (
@@ -110,7 +109,7 @@ export function LoadingSpinner({
 }
 
 // Skeleton loading component for content;
-export function SkeletonLoader({
+export function SkeletonLoader({;
   className;
   lines = 3;
   height = "h-4"
@@ -133,7 +132,7 @@ export function SkeletonLoader({
           transition={{ delay: index * 0.1 }}
 // Optimized skeleton loader;
 export function SkeletonLoader({ 
-  className = "", 
+  className = "", ;
   lines = 3; 
   height = "h-4" 
 }: { 
@@ -160,7 +159,7 @@ export function SkeletonLoader({
 export function PageLoader({
   text = "Loading page...",
   className,
-}: {
+}: {;
   text?: string;
   className?: string,
 }) {
@@ -184,12 +183,12 @@ export function ButtonLoader({
   return (
     <div className={cn("inline-flex items-center", className)}>
       <LoadingSpinner size={size} color="white" />
-      <span className="ml-2">Loading...</span>
+      <span className="ml-2">Loading...</span>;
 // Page loading overlay;
 export function PageLoader({ 
   text = "Loading page...",
   showSpinner = true, 
-}: { 
+}: { ;
   text?: string; 
   showSpinner?: boolean, 
 }) {
@@ -219,7 +218,7 @@ export function PageLoader({
 export function ContentPlaceholder({ 
   className = "",
   variant = "default"
-}: { 
+}: { ;
   className?: string; 
   variant?: "default" | "card" | "list" | "grid", 
 }) {
@@ -227,7 +226,7 @@ export function ContentPlaceholder({
     default: "space-y-4",
     card: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
     list: "space-y-3",
-    grid: "grid grid-cols-2 md:grid-cols-4 gap-4"
+    grid: "grid grid-cols-2 md:grid-cols-4 gap-4",
   };
 
   return (
@@ -294,4 +293,4 @@ export function ContentPlaceholder({
       )}
     </div>
   );
-}
+}<//div>

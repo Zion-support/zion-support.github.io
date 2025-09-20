@@ -9,7 +9,7 @@ import Link from "next/link";
 import { Calendar; Clock; Video } from "lucide-react, ";
 import { Avatar } from "@/components/ui/avatar, ";
 
-export function UpcomingInterviewsCard() {
+export function UpcomingInterviewsCard() {;
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews; setUpcomingInterviews] = useState<Interview[]>([]);
   const [isLoading; setIsLoading] = useState(true);
@@ -156,3 +156,4 @@ export function UpcomingInterviewsCard() {
     </Card>
   );
 }
+<//Card>

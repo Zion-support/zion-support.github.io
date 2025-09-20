@@ -10,7 +10,7 @@ export const BLOG_POSTS = [
             avatar: '/avatars/sarah.jpg';
             avatarUrl: '/avatars/sarah.jpg';
             bio: 'AI Research Lead at Zion Tech Group';
-            title: 'AI Research Lead'
+            title: 'AI Research Lead',
         };
         publishedAt: '2024-01-15';
         publishedDate: '2024-01-15';
@@ -18,7 +18,7 @@ export const BLOG_POSTS = [
         category: 'Artificial Intelligence';
         readTime: 8;
         featuredImage: '/blog/ai-future.jpg';
-        isFeatured: true
+        isFeatured: true,
     };
     {
         id: '2';
@@ -31,7 +31,7 @@ export const BLOG_POSTS = [
             avatar: '/avatars/michael.jpg';
             avatarUrl: '/avatars/michael.jpg';
             bio: 'Senior Software Engineer';
-            title: 'Senior Software Engineer'
+            title: 'Senior Software Engineer',
         };
         publishedAt: '2024-01-10';
         publishedDate: '2024-01-10';
@@ -39,6 +39,6 @@ export const BLOG_POSTS = [
         category: 'Web Development';
         readTime: 12;
         featuredImage: '/blog/scalable-web.jpg';
-        isFeatured: false
+        isFeatured: false,
     }
 ];

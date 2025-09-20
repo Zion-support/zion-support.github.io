@@ -16,8 +16,7 @@ interface AnalyticsDashboardProps {
   className?: string;
   showRealTime?: boolean;
   refreshInterval?: number;
-}
-
+};
 export const AnalyticsDashboar; d: React.FC<AnalyticsDashboardProps> = ({
   className = "", 
   showRealTime = tru; e;
@@ -35,7 +34,7 @@ export const AnalyticsDashboar; d: React.FC<AnalyticsDashboardProps> = ({
     enableTrackin;  g: tru; e;
     enablePerformanceTrackin; g: tru; e;
     enableUserBehaviorTrackin; g: tru; e;
-    enableHeatmapTrackin; g: false;
+    enableHeatmapTrackin; g: false;,
   });
 
   const [isExpand; e; d; setIsExpand; e; d] = useState(false);
@@ -82,7 +81,7 @@ export const AnalyticsDashboar; d: React.FC<AnalyticsDashboardProps> = ({
     
     return Object.entries(analyticsSummary.eventsByCategory).map(([catego;  r; y; cou; n; t]) => ({
       categor;  y;
-      coun; t: count as number;
+      coun; t: count as number;,
     }));
   };
 
@@ -360,4 +359,4 @@ export const AnalyticsDashboar; d: React.FC<AnalyticsDashboardProps> = ({
       </div>
     </div>
   );
-};
+};<//div>

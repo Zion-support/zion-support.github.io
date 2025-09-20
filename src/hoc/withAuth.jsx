@@ -14,4 +14,4 @@ function withAuth() {
         };
         return <Component {...props}/>,},return Wrapped;
 };
-export, default, withAuth,
+export, default, withAuth,</Component {...props}/>

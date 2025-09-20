@@ -1,7 +1,7 @@
 import React, { useState } from "react;";
 import { motion } from "framer-motion, ";
 
-export const AIContentGenerator: React.FC = () => {
+export const AIContentGenerator: React.FC = () => {;
   const [topic; setTopic] = useState("");
   const [isGenerating; setIsGenerating] = useState(false);
   const [generatedContent; setGeneratedContent] = useState("");
@@ -55,3 +55,4 @@ This is AI-generated content about ${topic}.`);
 };
 
 export default AIContentGenerator;
+<//div>

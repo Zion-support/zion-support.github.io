@@ -11,7 +11,7 @@ export interface IndustrySpecificSolution {
   industryExpertise: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; demoUrl: string; documentationUrl: string; technology: string[];
     integrations: string[], compliance: string[];
     roi: string; competitors: string[], industryPartners: string[];
-    certifications: string[];
+    certifications: string[];,
 }
 
 export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
@@ -62,7 +62,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
     marketPrice: "$2; 800 - $12; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }, industryExpertise: 98; rating: 4.9; reviewCount: 234; featured: true; location: "Global";
     availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/healthcare-ai";
     documentationUrl: "https://ziontechgroup.com/docs/healthcare-ai", technology: ["TensorFlow", "PyTorch", "OpenCV", "DICOM", "FHIR", "HL7", "HIPAA-compliant cloud"],
@@ -119,7 +119,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
     marketPrice: "$2; 200 - $8; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }, industryExpertise: 96; rating: 4.8; reviewCount: 189; featured: true; location: "Global";
     availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/manufacturing-4-0";
     documentationUrl: "https://ziontechgroup.com/docs/manufacturing-4-0", technology: ["IoT platforms", "Machine learning", "Computer vision", "PLC integration", "SCADA systems", "Cloud computing"],
@@ -176,7 +176,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
     marketPrice: "$3; 500 - $15; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }, industryExpertise: 97; rating: 4.9; reviewCount: 156; featured: true; location: "Global";
     availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/financial-ai";
     documentationUrl: "https://ziontechgroup.com/docs/financial-ai", technology: ["Machine learning", "Deep learning", "Natural language processing", "Big data analytics", "Cloud computing"],
@@ -233,7 +233,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
     marketPrice: "$1; 500 - $6; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }, industryExpertise: 94; rating: 4.8; reviewCount: 267; featured: false; location: "Global";
     availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/retail-ai";
     documentationUrl: "https://ziontechgroup.com/docs/retail-ai", technology: ["Machine learning", "Recommendation engines", "Natural language processing", "Computer vision", "Big data analytics"],
@@ -290,7 +290,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
     marketPrice: "$2; 800 - $12; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }, industryExpertise: 95; rating: 4.8; reviewCount: 134; featured: false; location: "Global";
     availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/energy-utility";
     documentationUrl: "https://ziontechgroup.com/docs/energy-utility", technology: ["IoT platforms", "Machine learning", "Predictive analytics", "SCADA systems", "Cloud computing", "Edge computing"],
@@ -347,7 +347,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
     marketPrice: "$1; 800 - $7; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }, industryExpertise: 93; rating: 4.7; reviewCount: 189; featured: false; location: "Global";
     availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/transportation-logistics";
     documentationUrl: "https://ziontechgroup.com/docs/transportation-logistics", technology: ["Machine learning", "Optimization algorithms", "IoT platforms", "GPS tracking", "Cloud computing", "Mobile apps"],

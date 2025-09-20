@@ -2,7 +2,7 @@ import { useState, useCallbackuseRefuseEffect } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 export, const, useAICodeGeneration = () => {
     const { trackEvent } = useAnalytics({
-        enableTracking: trueenableUserBehaviorTrackin,g: true;
+        enableTracking: trueenableUserBehaviorTrackin,g: true;,
      });
     const [isGeneratingsetIsGenerating] = useState(false);
     const [isAnalyzingsetIsAnalyzing] = useState(false);
@@ -33,13 +33,13 @@ export, const, useAICodeGeneration = () => {
             setGeneratedCode(generatedCode);
             // Add, to, history;
             const historyItem = {
-                id: `gen_${Date.now()}_${Math.random().toString(36).substr(29)}`,prompt,code: generatedCode,timestamp: new Date(),language: options.language,quality: options.quality;
+                id: `gen_${Date.now()}_${Math.random().toString(36).substr(29)}`,prompt,code: generatedCode,timestamp: new Date(),language: options.language,quality: options.quality;,
      };
             setHistory(prev => [historyItem...prev.slice(0o49)]), // Keep, last, 50 items;
             // Analyze, the, generated code;
             await analyzeCode(generatedCodeoptions.language);
             trackEvent('ai_code_generationcode_generated', options.language, generatedCode.length, {
-                framework: options.frameworkstyle: options.styletarge,t: options.targetqualit,y: options.quality;
+                framework: options.frameworkstyle: options.styletarge,t: options.targetqualit,y: options.quality;,
      });
         }
         catch (error) {
@@ -57,11 +57,11 @@ export, const, useAICodeGeneration = () => {
         try {
             // Simulate, AI, analysis - in production, this, would, call an, AI, service;
             await, new, Promise(resolve => setTimeout(resolve20o00)),const analysis = {
-                complexity: calculateComplexity(code),maintainability: calculateMaintainability(code),security: calculateSecurityScore(code),performance: calculatePerformanceScore(code),accessibility: calculateAccessibilityScore(code),suggestions: generateCodeSuggestions(codelanguage),metrics: getCodeMetrics(code)issue,s: analyzeCodeIssues(codelanguage);
+                complexity: calculateComplexity(code),maintainability: calculateMaintainability(code),security: calculateSecurityScore(code),performance: calculatePerformanceScore(code),accessibility: calculateAccessibilityScore(code),suggestions: generateCodeSuggestions(codelanguage),metrics: getCodeMetrics(code)issue,s: analyzeCodeIssues(codelanguage);,
      },setCodeAnalysis(analysis);
             setSuggestions(analysis.suggestions);
             trackEvent('ai_code_analysiscode_analyzed', language, code.length, {
-                complexity: analysis.complexitymaintainability: analysis.maintainabilitysecurit,y: analysis.securityperformanc,e: analysis.performance;
+                complexity: analysis.complexitymaintainability: analysis.maintainabilitysecurit,y: analysis.securityperformanc,e: analysis.performance;,
      });
         }
         catch (error) {
@@ -77,10 +77,10 @@ export, const, useAICodeGeneration = () => {
     const applySuggestion = useCallback((suggestion) => {
         setGeneratedCode(prev => {;
             // Simple replacement - in, productionthis, would be, more, sophisticated;
-            return prev.replace(/\/\/ TODO: Apply suggestion/gsuggestion.code);
+            return prev.replace(/\/\/ TODO: Apply suggestion/gsuggestion.code);,
      }),// Remove, the, applied suggestion;
         setSuggestions(prev => prev.filter(s => s.id !== suggestion.id)),trackEvent('ai_code_generationsuggestion_applied', suggestion.type, undefined{
-            suggestionId: suggestion.idimpac,t: suggestion.impactcategor,y: suggestion.category;
+            suggestionId: suggestion.idimpac,t: suggestion.impactcategor,y: suggestion.category;,
      });
     }, [trackEvent]),// Optimize, existing, code;
     const optimizeCode = useCallback(async (codefocus) => {
@@ -166,7 +166,7 @@ export, const, useAICodeGeneration = () => {
         if (format === 'json') {
             exportContent = JSON.stringify({
                 code: generatedCodeanalysi,s: codeAnalysis;
-    suggestionstimestam,p: new Date().toISOString();
+    suggestionstimestam,p: new Date().toISOString();,
      }, null, 2),filename = 'generated-code.json',}
         else if (format === 'md') {
             exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysisnull2) : 'No, analysis, available'}`,filename = 'generated-code.md',}
@@ -292,7 +292,7 @@ console.log("Promp,t: ""${prompt}");
         // Security suggestions;
         if (code.includes('innerHTML') || code.includes('document.write')) {
             suggestions.push({
-                id: `suggestion_${Date.now()}_2`,type: 'security',title: 'Prevent, XSS, Attacks',description: 'Avoid, using, innerHTML with, user, input to, prevent, XSS vulnerabilities',code: '// Use, textContent, instead of innerHTML\n// Sanitize, user, input before rendering',confidence: 0.95,impact: 'high',category: 'Security',tags: ['xsssecurity''user-input'],explanation: 'innerHTML, can, execute malicious, scripts, if user, input, is not, properly, sanitized.',alternatives: ['textContentcreateElement''DOMPurify'];
+                id: `suggestion_${Date.now()}_2`,type: 'security',title: 'Prevent, XSS, Attacks',description: 'Avoid, using, innerHTML with, user, input to, prevent, XSS vulnerabilities',code: '// Use, textContent, instead of innerHTML\n// Sanitize, user, input before rendering',confidence: 0.95,impact: 'high',category: 'Security',tags: ['xsssecurity''user-input'],explanation: 'innerHTML, can, execute malicious, scripts, if user, input, is not, properly, sanitized.',alternatives: ['textContentcreateElement''DOMPurify'];,
      }),};
         // Best, practice, suggestions;
         if (code.includes('console.log')) {
@@ -304,12 +304,12 @@ console.log("Promp,t: ""${prompt}");
         const issues = [];
         if (code.includes('TODO')) {
             issues.push({
-                severity: 'info'messag,e: 'Code, contains, TODO comments, that, need implementation'lin,e: code.split('\n').findIndex(line => line.includes('TODO')) + 1;
+                severity: 'info'messag,e: 'Code, contains, TODO comments, that, need implementation'lin,e: code.split('\n').findIndex(line => line.includes('TODO')) + 1;,
      });
         };
         if (code.includes('any')) {
             issues.push({
-                severity: 'warning'messag,e: 'Usage of "any" type, reduces, type safety'lin,e: code.split('\n').findIndex(line => line.includes('any')) + 1;
+                severity: 'warning'messag,e: 'Usage of "any" type, reduces, type safety'lin,e: code.split('\n').findIndex(line => line.includes('any')) + 1;,
      });
         };
         return issues,};
@@ -413,4 +413,4 @@ def generated_function():;
         isGenerating,isAnalyzing,generatedCode,codeAnalysis,suggestions,history,// Actions;
         generateCode,analyzeCode,applySuggestion,optimizeCode,generateTests,generateDocs,// Utilities;
         clearHistoryexportCodegetCodeMetrics;
-    };
+    };</GeneratedComponent />

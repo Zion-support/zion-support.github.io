@@ -1,5 +1,5 @@
 export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
-    // AI-Powered Content Creation Suite
+    // AI-Powered Content Creation Suite;
     {
         id: 'ai-content-creation-suite-2025';
         title: 'Zion AI Content Creation Suite 2025';
@@ -9,7 +9,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 99;
             yearly: 990;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'Multi-format content generation (blogs, social media, emails, ads)',
@@ -44,7 +44,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.9;
         reviewCount: 234;
@@ -60,7 +60,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
             security: ['End-to-end encryption', 'Two-factor authentication', 'Regular security audits']
         }
     },
-    // Blockchain-Based Supply Chain Management
+    // Blockchain-Based Supply Chain Management;
     {
         id: 'blockchain-supply-chain-management-2025';
         title: 'Zion Blockchain Supply Chain Management 2025';
@@ -70,7 +70,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 199;
             yearly: 1990;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'End-to-end supply chain tracking with blockchain verification';
@@ -105,7 +105,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.8;
         reviewCount: 156;
@@ -121,7 +121,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
             security: ['Blockchain encryption', 'Multi-signature wallets', 'Regular security audits']
         }
     },
-    // AI-Powered Cybersecurity Threat Detection
+    // AI-Powered Cybersecurity Threat Detection;
     {
         id: 'ai-cybersecurity-threat-detection-2025';
         title: 'Zion AI Cybersecurity Threat Detection 2025';
@@ -131,7 +131,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 299;
             yearly: 2990;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'Real-time threat detection using AI algorithms';
@@ -166,7 +166,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.9;
         reviewCount: 189;
@@ -182,7 +182,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
             security: ['End-to-end encryption', 'Zero-trust architecture', 'Regular penetration testing']
         }
     },
-    // IoT Edge Computing Platform
+    // IoT Edge Computing Platform;
     {
         id: 'iot-edge-computing-platform-2025';
         title: 'Zion IoT Edge Computing Platform 2025';
@@ -192,7 +192,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 149;
             yearly: 1490;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'Local AI processing capabilities for IoT devices';
@@ -227,7 +227,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.7;
         reviewCount: 98;
@@ -243,7 +243,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
             security: ['Edge security', 'Data encryption', 'Access control', 'Regular updates']
         }
     },
-    // AI-Powered Healthcare Analytics
+    // AI-Powered Healthcare Analytics;
     {
         id: 'ai-healthcare-analytics-2025';
         title: 'Zion AI Healthcare Analytics Platform 2025';
@@ -253,7 +253,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 399;
             yearly: 3990;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'Patient outcome prediction using AI algorithms';
@@ -288,7 +288,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.8;
         reviewCount: 167;
@@ -304,7 +304,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
             security: ['HIPAA compliance', 'Data encryption', 'Access controls', 'Audit logging']
         }
     },
-    // Quantum-Secure Communication Platform
+    // Quantum-Secure Communication Platform;
     {
         id: 'quantum-secure-communication-2025';
         title: 'Zion Quantum-Secure Communication Platform 2025';
@@ -314,7 +314,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 599;
             yearly: 5990;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'Quantum key distribution for unbreakable encryption';
@@ -349,7 +349,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.9;
         reviewCount: 89;
@@ -365,7 +365,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
             security: ['Quantum encryption', 'Post-quantum algorithms', 'Quantum key management', 'Regular security audits']
         }
     },
-    // AI-Powered Financial Trading Platform
+    // AI-Powered Financial Trading Platform;
     {
         id: 'ai-financial-trading-platform-2025';
         title: 'Zion AI Financial Trading Platform 2025';
@@ -375,7 +375,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 799;
             yearly: 7990;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'AI-powered market analysis and prediction';
@@ -410,7 +410,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.8;
         reviewCount: 145;
@@ -426,7 +426,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
             security: ['Financial-grade encryption', 'Multi-factor authentication', 'Regular security audits', 'Compliance monitoring']
         }
     },
-    // Sustainable Energy Management Platform
+    // Sustainable Energy Management Platform;
     {
         id: 'sustainable-energy-management-2025';
         title: 'Zion Sustainable Energy Management Platform 2025';
@@ -436,7 +436,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 199;
             yearly: 1990;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'Real-time energy consumption monitoring';
@@ -471,7 +471,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.7;
         reviewCount: 112;
@@ -487,7 +487,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
             security: ['Data encryption', 'Access controls', 'Regular security audits', 'Compliance monitoring']
         }
     },
-    // AI-Powered Education Platform
+    // AI-Powered Education Platform;
     {
         id: 'ai-education-platform-2025';
         title: 'Zion AI Education Platform 2025';
@@ -497,7 +497,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 79;
             yearly: 790;
-            currency: '$'
+            currency: '$',
         };
         features: [
             'AI-powered personalized learning paths';
@@ -532,7 +532,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         rating: 4.8;
         reviewCount: 203;

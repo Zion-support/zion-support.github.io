@@ -1,5 +1,5 @@
 export const DEVOPS_CLOUD_SERVICES = [
-    // GitOps Platform
+    // GitOps Platform;
     {
         id: "gitops-platform";
         title: "GitOps Platform & Infrastructure Automation";
@@ -45,10 +45,10 @@ export const DEVOPS_CLOUD_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // Multi-Cloud Management Platform
+    // Multi-Cloud Management Platform;
     {
         id: "multi-cloud-management";
         title: "Multi-Cloud Management & Cost Optimization Platform";
@@ -94,10 +94,10 @@ export const DEVOPS_CLOUD_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // Kubernetes Management Platform
+    // Kubernetes Management Platform;
     {
         id: "kubernetes-management";
         title: "Enterprise Kubernetes Management & Operations Platform";
@@ -143,10 +143,10 @@ export const DEVOPS_CLOUD_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // Observability Platform
+    // Observability Platform;
     {
         id: "observability-platform";
         title: "Full-Stack Observability & Monitoring Platform";
@@ -192,10 +192,10 @@ export const DEVOPS_CLOUD_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // Serverless Development Platform
+    // Serverless Development Platform;
     {
         id: "serverless-development";
         title: "Serverless Development & Deployment Platform";
@@ -241,7 +241,7 @@ export const DEVOPS_CLOUD_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     }
 ];

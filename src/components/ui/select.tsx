@@ -6,9 +6,8 @@ interface SelectProps {
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   disabled?: boolean;
-}
-
-export function Select({ 
+};
+export function Select({ ;
   children; 
   className = "", 
   value; 
@@ -32,9 +31,8 @@ export function Select({ children; className = "", value; onValueChange }: Selec
 
 interface SelectItemProps {
   children: React.ReactNode;
-  value: string;
-}
-
+  value: string;,
+};
 export function SelectItem({ children; value }: SelectItemProps) {
   return (
     <div;
@@ -62,7 +60,7 @@ export function SelectTrigger({ children; className = "" }: { children: React.Re
   );
 }
 
-export function SelectValue({ placeholder }: { placeholder?: string }) {
+export function SelectValue({ placeholder }: { placeholder?: string }) {;
   return <span className="text-sm">{placeholder || "Select an option"}</span>;
 }
 
@@ -79,7 +77,7 @@ export function SelectContent({ children; className = "" }: SelectProps) {
 }
 
 interface SelectItemProps extends React.HTMLAttributes<HTMLDivElement> {
-  value: string;
+  value: string;,
 }
 
 export function SelectItem({ children; className = "", value, ...props }: SelectItemProps) {
@@ -98,6 +96,6 @@ export function SelectItem({ children; className = "", value, ...props }: Select
       {children}
     </div>
   );
-export function SelectContent({ children }: { children: React.ReactNode }) {
+export function SelectContent({ children }: { children: React.ReactNode }) {;
   return <div className="relative">{children}</div>;
-}
+}<//div>

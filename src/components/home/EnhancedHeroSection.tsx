@@ -57,7 +57,7 @@ export function EnhancedHeroSection() {
 
         {/* Main Heading */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8">
-          <span className="block bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent neon-pulse">
+          <span className="block bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent neon-pulse">;
             ZION;
           </span>
           <span className="block text-2xl md:text-4xl lg:text-5xl text-white mt-4 font-normal">
@@ -212,7 +212,7 @@ export function EnhancedHeroSection() {
     { label: "Active Users", value: "50K+", icon: <Users className="h-5 w-5" /> },
     { label: "Services Delivered", value: "10K+", icon: <Zap className="h-5 w-5" /> },
     { label: "Success Rate", value: "99.9%", icon: <Shield className="h-5 w-5" /> },
-    { label: "Global Reach", value: "150+", icon: <TrendingUp className="h-5 w-5" /> }
+    { label: "Global Reach", value: "150+", icon: <TrendingUp className="h-5 w-5" /> };
   ];
 
   const features = [
@@ -425,4 +425,4 @@ export function EnhancedHeroSection() {
       </section>
     </SimpleFuturisticBackground>
   );
-}
+}<//SimpleFuturisticBackground>

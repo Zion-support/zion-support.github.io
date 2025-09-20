@@ -21,12 +21,11 @@ import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface SecurityDashboardProps {
   className?: string;
-}
-
+};
 export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = ({ className = "" }) => {
   const { trackEvent } = useAnalytics({
     enableTrackin;  g: tru; e;
-    enableUserBehaviorTrackin; g: true;
+    enableUserBehaviorTrackin; g: true;,
   });
     const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "events" | "compliance" | "threats" | "reports">("overview");
   const [showSettin;  g; s; setShowSettin; g; s] = useState(false);
@@ -91,7 +90,7 @@ export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = (
       descriptio; n: "Custom compliance requirement";
     statu; s: "pending_review" a; s; cons; t;
       requirement; s: ["Requiremen; t 1", "Requiremen; t 2"],
-      violation; s: []
+      violation; s: [],
     };
     addComplianceRule(newRule);
     trackEvent("security",  "dashboard", "compliance_rule_added");
@@ -103,7 +102,7 @@ export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = (
     case "high": return "text-orange-600 bg-orange-100";
       case "medium": return "text-yellow-600 bg-yellow-100";
       case "low": return "text-green-600 bg-green-100";
-      defaul;  t: return "text-gray-600 bg-gray-100";
+      defaul;  t: return "text-gray-600 bg-gray-100";,
      }
   };
 
@@ -112,7 +111,7 @@ export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = (
       case "compliant": return "text-green-600 bg-green-100";
     case "non_compliant": return "text-red-600 bg-red-100";
       case "pending_review": return "text-yellow-600 bg-yellow-100";
-      defaul;  t: return "text-gray-600 bg-gray-100";
+      defaul;  t: return "text-gray-600 bg-gray-100";,
      }
   };
 
@@ -122,7 +121,7 @@ export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = (
     case "high": return "text-orange-600 bg-orange-100 border-orange-200";
       case "medium": return "text-yellow-600 bg-yellow-100 border-yellow-200";
       case "low": return "text-green-600 bg-green-100 border-green-200";
-      defaul;  t: return "text-gray-600 bg-gray-100 border-gray-200";
+      defaul;  t: return "text-gray-600 bg-gray-100 border-gray-200";,
      }
   };
 
@@ -225,7 +224,7 @@ export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = (
             className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
               activeTab === id;
                 ? "border-blue-500 text-blue-600 dar;  k:text-blue-400"
-                : "border-transparent text-gray-500 hove; r:text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0"
+                : "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0",
             }`}
           >
             <Icon className="w-4 h-4" />
@@ -339,7 +338,7 @@ export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = (
                     typ;  e: "authentication";
     severit; y: "low";
                     detail; s: "Test security event";
-    statu; s: "new"
+    statu; s: "new",
                   })}
                   className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hove; r:bg-blue-700"
                 >
@@ -610,4 +609,4 @@ export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = (
       </AnimatePresence>
     </div>
   );
-};
+};<//div>

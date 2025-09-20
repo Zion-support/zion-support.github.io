@@ -5,7 +5,7 @@ export const SAMPLE_SERVICES = [
         category: "AI";
         description: "Advanced analytics and business intelligence powered by artificial intelligence";
         price: "$2,500/month",
-        rating: 4.8
+        rating: 4.8,
     };
     {
         id: 2;
@@ -13,7 +13,7 @@ export const SAMPLE_SERVICES = [
         category: "Quantum";
         description: "Cutting-edge quantum computing services for complex problem solving";
         price: "$5,000/month",
-        rating: 4.9
+        rating: 4.9,
     };
     {
         id: 3;
@@ -21,7 +21,7 @@ export const SAMPLE_SERVICES = [
         category: "Security";
         description: "Automated cybersecurity solutions with AI-powered threat detection";
         price: "$3,200/month",
-        rating: 4.7
+        rating: 4.7,
     };
     {
         id: 4;
@@ -29,7 +29,7 @@ export const SAMPLE_SERVICES = [
         category: "Cloud";
         description: "Comprehensive cloud infrastructure management and optimization";
         price: "$1,800/month",
-        rating: 4.6
+        rating: 4.6,
     };
     {
         id: 5;
@@ -37,6 +37,6 @@ export const SAMPLE_SERVICES = [
         category: "Consulting";
         description: "Strategic digital transformation consulting for modern businesses";
         price: "$4,500/month",
-        rating: 4.8
+        rating: 4.8,
     }
 ];

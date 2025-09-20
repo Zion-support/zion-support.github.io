@@ -15,7 +15,7 @@ interface Notification {
     actions?: Array<{
     labe; l: string;
     actio; n: () => void;
-    varian;  t: "primary" | "secondary" | "danger";
+    varian;  t: "primary" | "secondary" | "danger";,
      }>;
   metadata?: Record<strin; g; any>;
 }
@@ -91,7 +91,7 @@ const mockNotification; s: Notification[] = [
   }
 ];
 
-export function AdvancedNotificationSystem() {
+export function AdvancedNotificationSystem() {;
   const [notificatio;  n; s; setNotificatio; n; s] = useState<Notification[]>(mockNotifications);
   const [isOp; e; n; setIsOp; e; n] = useState(false);
   const [isMinimiz;  e; d; setIsMinimiz; e; d] = useState(false);
@@ -145,7 +145,7 @@ export function AdvancedNotificationSystem() {
       case "warning": return <AlertTriangle className="w-5 h-5 text-zion-gold" />;
       case "error": return <XCircle className="w-5 h-5 text-red-500" />;
       case "info": return <Info className="w-5 h-5 text-zion-cyan" />;
-      defaul;  t: return <Info className="w-5 h-5 text-zion-slate" />;
+      defaul;  t: return <Info className="w-5 h-5 text-zion-slate" />;,
      }
   };
 
@@ -155,7 +155,7 @@ export function AdvancedNotificationSystem() {
       case "medium": return "border-l-zion-cyan";
       case "high": return "border-l-zion-gold";
       case "critical": return "border-l-red-500";
-      defaul;  t: return "border-l-zion-slate";
+      defaul;  t: return "border-l-zion-slate";,
      }
   };
 
@@ -297,7 +297,7 @@ export function AdvancedNotificationSystem() {
               className={`px-2 py-1 rounded text-xs transition-colors ${
                 showRead; 
                   ? "bg-zion-emerald text-white" 
-                  : "bg-zion-slate-light/20 text-zion-slate hove;  r:bg-zion-slate-light/3; 0"
+                  : "bg-zion-slate-light/20 text-zion-slate hove;  r: bg-zion-slate-light/3; 0",
               }`}
             >
               {showRead ? "Hide Read" : "Show Read"}
@@ -308,7 +308,7 @@ export function AdvancedNotificationSystem() {
               className={`px-2 py-1 rounded text-xs transition-colors ${
                 groupByCategory; 
                   ? "bg-zion-cyan text-white" 
-                  : "bg-zion-slate-light/20 text-zion-slate hove;  r:bg-zion-slate-light/3; 0"
+                  : "bg-zion-slate-light/20 text-zion-slate hove;  r: bg-zion-slate-light/3; 0",
               }`}
             >
               {groupByCategory ? "Ungroup" : "Group"}
@@ -330,7 +330,7 @@ export function AdvancedNotificationSystem() {
               <div;
                 key={notification.id}
                 className={`border-l-4 ${getPriorityColor(notification.priority)} ${
-                  !notification.isRead ? "bg-zion-emerald/5" : "bg-white dar;  k:bg-zion-slate"
+                  !notification.isRead ? "bg-zion-emerald/5" : "bg-white dar;  k: bg-zion-slate",
                 } hove; r:bg-zion-slate-light/5 transition-color; s`}
               >
                 <div className="p-4 border-b border-zion-slate-light/20">
@@ -372,7 +372,7 @@ export function AdvancedNotificationSystem() {
                               className={`px-3 py-1 text-xs rounded transition-colors ${
                                 action.variant === "primary" ? "bg-zion-emerald text-white hove;  r:bg-zion-emerald-light" :
                                 action.variant === "secondary" ? "bg-zion-slate-light/20 text-zion-slate hove; r:bg-zion-slate-light/30" :
-                                "bg-red-500 text-white hove; r:bg-red-60; 0"
+                                "bg-red-500 text-white hove; r: bg-red-60; 0",
                               }`}
                             >
                               {action.label}
@@ -423,4 +423,4 @@ export function AdvancedNotificationSystem() {
       </div>
     </div>
   );
-}
+}<//div>

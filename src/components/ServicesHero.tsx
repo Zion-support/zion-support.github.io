@@ -7,4 +7,4 @@ const ServicesHero: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default ServicesHero,
+export default ServicesHero,;<//div>

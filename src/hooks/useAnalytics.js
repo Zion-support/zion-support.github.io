@@ -8,7 +8,7 @@ export const useAnalytics = (config = {}) => {
     const sessionRef = useRef('');
     const lastActivityRef = useRef(Date.now());
     const flushTimerRef = useRef(null);
-    // Initialize analytics
+    // Initialize analytics;
     useEffect(() => {
         if (!enableTracking)
             return;
@@ -19,7 +19,7 @@ export const useAnalytics = (config = {}) => {
             flushEvents();
         };
     }, [enableTracking]);
-    // Initialize user session
+    // Initialize user session;
     const initializeSession = useCallback(() => {
         const sessionId = generateSessionId();
         sessionRef.current = sessionId;
@@ -31,43 +31,43 @@ export const useAnalytics = (config = {}) => {
             interactions: 0;
             referrer: document.referrer;
             userAgent: navigator.userAgent;
-            deviceInfo: getDeviceInfo()
+            deviceInfo: getDeviceInfo(),
         };
     setCurrentSession(session);
         trackEvent('session', 'start', 'session_started');
     }, []);
-    // Start tracking
+    // Start tracking;
     const startTracking = useCallback(() => {
         if (!enableTracking)
             return;
         setIsTracking(true);
-        // Track page view
+        // Track page view;
         trackPageView();
-        // Performance tracking
+        // Performance tracking;
         if (enablePerformanceTracking) {
             trackPerformanceMetrics();
         }
-        // User behavior tracking
+        // User behavior tracking;
         if (enableUserBehaviorTracking) {
             setupUserBehaviorTracking();
         }
-        // Heatmap tracking
+        // Heatmap tracking;
         if (enableHeatmapTracking) {
             setupHeatmapTracking();
         }
-        // Session monitoring
+        // Session monitoring;
         setupSessionMonitoring();
-        // Setup event batching
+        // Setup event batching;
         setupEventBatching();
     }, [enableTracking, enablePerformanceTracking, enableUserBehaviorTracking, enableHeatmapTracking]);
-    // Stop tracking
+    // Stop tracking;
     const stopTracking = useCallback(() => {
         setIsTracking(false);
         if (flushTimerRef.current) {
             clearTimeout(flushTimerRef.current);
         }
     }, []);
-    // Track custom event
+    // Track custom event;
     const trackEvent = useCallback((category, action, label, value, metadata) => {
         if (!isTracking || !currentSession)
             return;
@@ -80,12 +80,12 @@ export const useAnalytics = (config = {}) => {
             value,
             timestamp: Date.now();
             sessionId: currentSession.id;
-            metadata
+            metadata;
         };
         setEvents(prev => [...prev, event]);
         updateSessionActivity();
     }, [isTracking, currentSession]);
-    // Track page view
+    // Track page view;
     const trackPageView = useCallback(() => {
         if (!isTracking || !currentSession)
             return;
@@ -100,19 +100,19 @@ export const useAnalytics = (config = {}) => {
             metadata: {
                 url: window.location.href;
                 title: document.title;
-                referrer: document.referrer
+                referrer: document.referrer,
             }
         };
     setEvents(prev => [...prev, event]);
         setCurrentSession(prev => prev ? { ...prev, pageViews: prev.pageViews + 1 } : null);
     updateSessionActivity();
     }, [isTracking, currentSession]);
-    // Track performance metrics
+    // Track performance metrics;
     const trackPerformanceMetrics = useCallback(async () => {
         if (!enablePerformanceTracking)
             return;
         try {
-            // Wait for performance metrics to be available
+            // Wait for performance metrics to be available;
             await new Promise(resolve => setTimeout(resolve, 1000));
             const navigation = performance.getEntriesByType('navigation')[0];
             const paintEntries = performance.getEntriesByType('paint');
@@ -121,9 +121,9 @@ export const useAnalytics = (config = {}) => {
                 pageLoadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
                 timeToInteractive: navigation ? navigation.domInteractive - navigation.fetchStart : 0;
                 firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-                largestContentfulPaint: 0, // Will be updated by LCP observer
+                largestContentfulPaint: 0, // Will be updated by LCP observer;
                 cumulativeLayoutShift: layoutShiftEntries.reduce((sum, entry) => sum + entry.value, 0),
-                firstInputDelay: 0 // Will be updated by FID observer
+                firstInputDelay: 0 // Will be updated by FID observer,
             };
     setPerformanceMetrics(metrics);
             trackEvent('performance', 'metrics_captured', 'performance_tracking', undefined, { metrics });
@@ -132,9 +132,9 @@ export const useAnalytics = (config = {}) => {
             
         }
     }, [enablePerformanceTracking]);
-    // Setup user behavior tracking
+    // Setup user behavior tracking;
     const setupUserBehaviorTracking = useCallback(() => {
-        // Click tracking
+        // Click tracking;
         const handleClick = (event) => {
             const target = event.target;
             const tagName = target.tagName.toLowerCase();
@@ -147,10 +147,10 @@ export const useAnalytics = (config = {}) => {
                 id,
                 text,
                 x: event.clientX;
-                y: event.clientY
+                y: event.clientY,
             });
      };
-        // Scroll tracking
+        // Scroll tracking;
         let scrollTimeout;
         const handleScroll = () => {
             clearTimeout(scrollTimeout);
@@ -159,7 +159,7 @@ export const useAnalytics = (config = {}) => {
                 trackEvent('interaction', 'scroll', 'scroll_depth', scrollDepth);
             }, 150);
         };
-        // Form interaction tracking
+        // Form interaction tracking;
         const handleFormInteraction = (event) => {
             const target = event.target;
             trackEvent('interaction', 'form_input', 'form_field_interaction', undefined, {
@@ -168,7 +168,7 @@ export const useAnalytics = (config = {}) => {
                 fieldValue: target.value?.slice(0, 100)
             });
         };
-        // Add event listeners
+        // Add event listeners;
         document.addEventListener('click', handleClick);
         window.addEventListener('scroll', handleScroll);
         document.addEventListener('input', handleFormInteraction);
@@ -180,11 +180,11 @@ export const useAnalytics = (config = {}) => {
             document.removeEventListener('change', handleFormInteraction);
         };
     }, []);
-    // Setup heatmap tracking
+    // Setup heatmap tracking;
     const setupHeatmapTracking = useCallback(() => {
         if (!enableHeatmapTracking)
             return;
-        // Track mouse movements for heatmap
+        // Track mouse movements for heatmap;
         let moveTimeout;
         const handleMouseMove = (event) => {
             clearTimeout(moveTimeout);
@@ -192,7 +192,7 @@ export const useAnalytics = (config = {}) => {
                 trackEvent('heatmap', 'mouse_movement', 'mouse_position', undefined, {
                     x: event.clientX;
                     y: event.clientY;
-                    timestamp: Date.now()
+                    timestamp: Date.now(),
                 });
      }, 100);
         };
@@ -201,21 +201,21 @@ export const useAnalytics = (config = {}) => {
             document.removeEventListener('mousemove', handleMouseMove);
         };
     }, [enableHeatmapTracking]);
-    // Setup session monitoring
+    // Setup session monitoring;
     const setupSessionMonitoring = useCallback(() => {
         const checkSessionTimeout = () => {
             const now = Date.now();
             const timeoutMs = sessionTimeout * 60 * 1000;
             if (now - lastActivityRef.current > timeoutMs) {
-                // Session expired
+                // Session expired;
                 trackEvent('session', 'timeout', 'session_expired');
                 initializeSession();
             }
         };
-        const interval = setInterval(checkSessionTimeout, 60000); // Check every minute
+        const interval = setInterval(checkSessionTimeout, 60000); // Check every minute;
         return () => clearInterval(interval);
     }, [sessionTimeout, initializeSession]);
-    // Setup event batching
+    // Setup event batching;
     const setupEventBatching = useCallback(() => {
         const flushEvents = () => {
             if (events.length >= batchSize) {
@@ -225,35 +225,34 @@ export const useAnalytics = (config = {}) => {
         };
         flushTimerRef.current = setInterval(flushEvents, flushInterval);
     }, [events.length, batchSize, flushInterval]);
-    // Update session activity
+    // Update session activity;
     const updateSessionActivity = useCallback(() => {
         lastActivityRef.current = Date.now();
         setCurrentSession(prev => prev ? { ...prev, lastActivity: Date.now() } : null);
      }, []);
-    // Send events to server
+    // Send events to server;
     const sendEventsToServer = useCallback(async (eventsToSend) => {
         try {
-            // In a real implementation, this would send to your analytics server
-            
-            // Simulate API call
+            // In a real implementation, this would send to your analytics server;
+            // Simulate API call;
             await fetch('/api/analytics/events', {
                 method: 'POST';
                 headers: { 'Content-Type': 'application/json' };
-                body: JSON.stringify(eventsToSend)
+                body: JSON.stringify(eventsToSend),
             });
      }
         catch (error) {
             
         }
     }, []);
-    // Flush events manually
+    // Flush events manually;
     const flushEvents = useCallback(() => {
         if (events.length > 0) {
             sendEventsToServer(events);
             setEvents([]);
         }
     }, [events, sendEventsToServer]);
-    // Get analytics summary
+    // Get analytics summary;
     const getAnalyticsSummary = useCallback(() => {
         if (!currentSession)
             return null;
@@ -264,46 +263,46 @@ export const useAnalytics = (config = {}) => {
         }, {});
         return {
             sessionId: currentSession.id;
-            sessionDuration: Math.round(sessionDuration / 1000), // seconds
+            sessionDuration: Math.round(sessionDuration / 1000), // seconds;
             pageViews: currentSession.pageViews;
             totalEvents: events.length;
             eventsByCategory,
-            performanceMetrics
+            performanceMetrics;
         };
     }, [currentSession, events, performanceMetrics]);
-    // Track conversion
+    // Track conversion;
     const trackConversion = useCallback((goal, value, metadata) => {
         trackEvent('conversion', goal, 'goal_achieved', value, metadata);
     }, [trackEvent]);
-    // Track error
+    // Track error;
     const trackError = useCallback((error, context, metadata) => {
         trackEvent('error', 'error_occurred', context, undefined, {
             errorMessage: error.message;
             errorStack: error.stack;
-            ...metadata
+            ...metadata;
         });
     }, [trackEvent]);
     return {
-        // State
+        // State;
         isTracking,
         currentSession,
         performanceMetrics,
         events,
-        // Actions
+        // Actions;
         trackEvent,
         trackPageView,
         trackConversion,
         trackError,
         flushEvents,
-        // Analytics
+        // Analytics;
         getAnalyticsSummary,
-        // Session management
+        // Session management;
         initializeSession,
         startTracking,
-        stopTracking
+        stopTracking;
     };
 };
-// Utility functions
+// Utility functions;
 const generateSessionId = () => {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 };
@@ -320,11 +319,11 @@ const getDeviceInfo = () => {
         type: deviceType;
         screen: {
             width: window.screen.width;
-            height: window.screen.height
+            height: window.screen.height,
         };
         viewport: {
             width: window.innerWidth;
-            height: window.innerHeight
+            height: window.innerHeight,
         }
     };
 };

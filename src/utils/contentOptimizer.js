@@ -14,7 +14,7 @@ export class ContentOptimizer {
             wordCount,
             headingCount,
             imageCount,
-            linkCount
+            linkCount;
         });
         const suggestions = this.generateSuggestions(issues, page);
         return {
@@ -26,11 +26,11 @@ export class ContentOptimizer {
             readabilityScore,
             seoScore,
             issues,
-            suggestions
+            suggestions;
         };
     }
     static countWords(content) {
-        // Remove HTML tags and count words
+        // Remove HTML tags and count words;
         const textContent = content.replace(/<[^>]*>/g, ' ').trim();
         return textContent.split(/\s+/).filter(word => word.length > 0).length;
     }
@@ -53,12 +53,12 @@ export class ContentOptimizer {
         const syllables = this.countSyllables(textContent);
         if (sentences.length === 0 || words.length === 0)
             return 0;
-        // Flesch Reading Ease formula
+        // Flesch Reading Ease formula;
         const score = 206.835 - (1.015 * (words.length / sentences.length)) - (84.6 * (syllables / words.length));
         return Math.max(0, Math.min(100, score));
     }
     static countSyllables(text) {
-        // Simplified syllable counting
+        // Simplified syllable counting;
         const words = text.toLowerCase().split(/\s+/);
         let syllableCount = 0;
         words.forEach(word => {
@@ -66,7 +66,7 @@ export class ContentOptimizer {
                 syllableCount += 1;
             }
             else {
-                // Count vowel groups
+                // Count vowel groups;
                 const vowelGroups = word.match(/[aeiouy]+/g);
                 syllableCount += vowelGroups ? vowelGroups.length : 1;
             }
@@ -75,23 +75,23 @@ export class ContentOptimizer {
     }
     static calculateSEOScore(content, page) {
         let score = 100;
-        // Check for title
+        // Check for title;
         if (!content.includes('<title>'))
             score -= 20;
-        // Check for meta description
+        // Check for meta description;
         if (!content.includes('name="description"'))
             score -= 15;
-        // Check for headings
+        // Check for headings;
         if (!content.includes('<h1>'))
             score -= 10;
         if (!content.includes('<h2>'))
             score -= 5;
-        // Check for images with alt text
+        // Check for images with alt text;
         const images = content.match(/<img[^>]*>/gi) || [];
         const imagesWithAlt = images.filter(img => img.includes('alt='));
         if (images.length > 0 && imagesWithAlt.length === 0)
             score -= 10;
-        // Check for internal links
+        // Check for internal links;
         const internalLinks = content.match(/href="\/[^"]*"/g) || [];
         if (internalLinks.length < 2)
             score -= 10;
@@ -99,43 +99,43 @@ export class ContentOptimizer {
     }
     static identifyIssues(content, page, metrics) {
         const issues = [];
-        // Check for missing headings
+        // Check for missing headings;
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {
             issues.push({
                 type: 'missing-headings';
                 severity: 'high';
                 description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`;
-                location: 'Page structure'
+                location: 'Page structure',
             });
      }
-        // Check for minimal content
+        // Check for minimal content;
         if (metrics.wordCount < this.MIN_WORD_COUNT) {
             issues.push({
                 type: 'minimal-content';
                 severity: 'medium';
                 description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`;
-                location: 'Content body'
+                location: 'Content body',
             });
      }
-        // Check for no images
+        // Check for no images;
         if (metrics.imageCount === 0) {
             issues.push({
                 type: 'no-images';
                 severity: 'medium';
                 description: 'No images found. Images improve user engagement and SEO';
-                location: 'Content body'
+                location: 'Content body',
             });
      }
-        // Check for poor structure
+        // Check for poor structure;
         if (metrics.headingCount === 0 && metrics.wordCount > 100) {
             issues.push({
                 type: 'poor-structure';
                 severity: 'high';
                 description: 'Content lacks proper heading structure for organization';
-                location: 'Page structure'
+                location: 'Page structure',
             });
      }
-        // Check for missing keywords
+        // Check for missing keywords;
         const pageKeywords = this.extractPageKeywords(page);
         const contentKeywords = this.extractContentKeywords(content);
         const missingKeywords = pageKeywords.filter(kw => !contentKeywords.includes(kw));
@@ -144,7 +144,7 @@ export class ContentOptimizer {
                 type: 'missing-keywords';
                 severity: 'medium';
                 description: `Missing important keywords: ${missingKeywords.join(', ')}`,
-                location: 'Content optimization'
+                location: 'Content optimization',
             });
      }
         return issues;
@@ -158,7 +158,7 @@ export class ContentOptimizer {
                         type: 'add-headings';
                         priority: 'high';
                         description: 'Add proper heading structure (H1, H2, H3) to organize content',
-                        example: '<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>'
+                        example: '<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>',
                     });
     break;
                 case 'minimal-content':
@@ -198,7 +198,7 @@ export class ContentOptimizer {
         return suggestions;
     }
     static extractPageKeywords(page) {
-        // Extract keywords from page path
+        // Extract keywords from page path;
         const segments = page.split('/').filter(Boolean);
         const keywords = [];
         segments.forEach(segment => {
@@ -211,7 +211,7 @@ export class ContentOptimizer {
         // Extract potential keywords from content (simplified)
         const textContent = content.replace(/<[^>]*>/g, ' ').toLowerCase();
         const words = textContent.split(/\s+/).filter(w => w.length > 3);
-        // Count word frequency and return most common
+        // Count word frequency and return most common;
         const wordCount = {};
         words.forEach(word => {
             wordCount[word] = (wordCount[word] || 0) + 1;
@@ -322,7 +322,7 @@ export class ContentOptimizer {
             service: 'Professional service description with key benefits and features. Expert solutions for your business needs.';
             about: 'Learn about our company, mission, and values. Discover how we deliver innovative technology solutions.',
             contact: 'Get in touch with our expert team. Contact us for technology solutions, consultations, and support.',
-            blog: 'Insightful article about technology trends and solutions. Expert analysis and practical advice for businesses.'
+            blog: 'Insightful article about technology trends and solutions. Expert analysis and practical advice for businesses.',
         };
     const baseDescription = baseDescriptions[contentType];
         const pageKeywords = this.extractPageKeywords(page).join(' ');
