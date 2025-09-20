@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 const { execSync, spawn } = require('child_process');
-=======
-
-
->>>>>>> origin/merge-pr-12271
 const fs = require('fs');
 const path = require('path');
 
@@ -24,12 +19,7 @@ class ErrorMonitor {
 
   log(message) {
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] ${message}\n`;
-=======
-
-    const logMessage = `[${timestamp}] ${message}\n`;`
->>>>>>> origin/merge-pr-12271
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   }
@@ -156,12 +146,6 @@ class ErrorMonitor {
     
     this.lastCheck = new Date();
   }
-<<<<<<< HEAD
-=======
-});
-};
-module.exports = ErrorMonitor;
->>>>>>> origin/merge-pr-12271
 
   async start() {
     this.log('Error Monitor started');
@@ -176,11 +160,8 @@ module.exports = ErrorMonitor;
   }
 }
 
-<<<<<<< HEAD
 // Start the error monitor
 const monitor = new ErrorMonitor();
 monitor.start().catch(console.error);
 
 module.exports = ErrorMonitor;
-=======
->>>>>>> origin/merge-pr-12271

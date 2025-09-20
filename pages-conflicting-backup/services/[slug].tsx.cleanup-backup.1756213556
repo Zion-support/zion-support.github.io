@@ -1,37 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import { SERVICES } from '@/data/servicesData';
 import { slugify } from '@/lib/slugify';
 import Custom404 from '../404';
 import type { ProductListing } from '@/types/listings';
-=======
-import Head from 'next/head';
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
-<<<<<<< HEAD
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../../data/extra-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { newlyAddedServices } from '../../data/newly-added-services';
-import { curatedMarketServices } from '../../data/curated-market-services';
-import { new2025Services } from '../../data/new-2025-services';
-import { marketValidatedServices } from '../../data/market-validated-services';
-import { moreRealServices2025 } from '../../data/more-real-services-2025';
-import { verified2025Additions } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025';
-import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
-import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
-import { realQ4Services2025, } from '../../data/real-2025-q4-additions';
-import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
-import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
-import { real2026Q3Additions } from '../../data/real-2026-q3-additions';
-import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
-import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
-import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
-import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
-import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
-import { real2027Q4Additions } from '../../data/real-2027-q4-additions';
->>>>>>> origin/main
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 
