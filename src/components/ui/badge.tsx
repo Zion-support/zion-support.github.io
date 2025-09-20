@@ -1,30 +1,24 @@
-import React from "react;";
+import React from 'react';
 
 interface BadgeProps {
-children: React.ReactNode;
-className?: string;
-variant?: "default" | "secondary" | "destructive" | "outline",
-};
-const Badge: React.FC<BadgeProps> = ({
-children;
-className = "",
-variant = "default"
-}) => {
-const baseClasses = "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors";
-
-const variantClasses = {;
-default: "border-transparent bg-primary text-primary-foreground", secondary: "border-transparent bg-secondary text-secondary-foreground";,
-destructive: "border-transparent bg-destructive text-destructive-foreground",
-outline: "text-foreground",
-};
-return (
-<div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>;
-{children}
-</div>;
-);
-};
-
-export { Badge };
+  children: React.ReactNode;
+  className?: string;
+  variant?: 'default' | 'secondary' | 'destructive' | 'outline';
 }
+
+export function Badge({ children, className = '', variant = 'default' }: BadgeProps) {
+  const baseClasses = 'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium';
+  
+  const variantClasses = {
+    default: 'bg-blue-100 text-blue-800',
+    secondary: 'bg-gray-100 text-gray-800',
+    destructive: 'bg-red-100 text-red-800',
+    outline: 'border border-gray-200 text-gray-800'
+  };
+
+  return (
+    <span className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
+      {children}
+    </span>
+  );
 }
-<//div><///div>;

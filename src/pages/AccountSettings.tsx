@@ -6,9 +6,29 @@ import { SEO } from '@/components/SEO';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Wallet, Database, Save } from 'lucide-react'
+import { Wallet, Database, Save } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Label } from '@/components/ui/label';
+import { Switch } from '@/components/ui/switch';
+import { Separator } from '@/components/ui/separator';
 
 export default function AccountSettings() {
+  const [didHandle, setDidHandle] = useState('');
+  const [displayWeb3, setDisplayWeb3] = useState(false);
+  const [enableBackup, setEnableBackup] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { user } = useAuth();
+
+  const handleConnectWallet = () => {
+    // Wallet connection logic
+  };
+
+  const handleSave = async () => {
+    setIsSubmitting(true);
+    // Save logic
+    setIsSubmitting(false);
+  };
+
   return (
     <>
       <SEO title='Account Settings' description='Manage your account' />
@@ -27,9 +47,10 @@ export default function AccountSettings() {
               <div className='space-y-2'>
                 <Label htmlFor='email'>Email Address</Label>
                 <Input
-id='email'
-                  value={user?.email |''}                  disabled,
-className='bg-gray-100'
+                  id='email'
+                  value={user?.email || ''}
+                  disabled
+                  className='bg-gray-100'
                 />
               </div>
               <div className='space-y-2'>

@@ -1,19 +1,18 @@
-import React from "react";
+import React from 'react';
 
-,
-,
-,
+interface SeparatorProps {
+  className?: string;
+  orientation?: 'horizontal' | 'vertical';
 }
-{...props},
-/>,
-),
-),
-Separator.displayName = SeparatorPrimitive.Root.displayName,
-,
-export { Separator },
-export { Separator }
-</SeparatorPrimitive>,
-</typeof>,
-</typeof>,
-export { Separator };
-,;<//typeof><///typeof>;
+
+export function Separator({ className = '', orientation = 'horizontal' }: SeparatorProps) {
+  return (
+    <div
+      className={`
+        bg-gray-200 dark:bg-gray-700
+        ${orientation === 'horizontal' ? 'h-px w-full' : 'w-px h-full'}
+        ${className}
+      `}
+    />
+  );
+}
