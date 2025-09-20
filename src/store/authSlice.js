@@ -28,7 +28,7 @@ export const loginUser = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  }
+  };
 ),
 
 // Async thunk for signup
@@ -60,7 +60,7 @@ export const signupUser = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  }
+  };
 ),
 
 // Async thunk for logout
@@ -75,7 +75,7 @@ export const logoutUser = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  }
+  };
 ),
 
 // Async thunk for checking auth status
@@ -96,7 +96,7 @@ export const checkAuthStatus = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  }
+  };
 ),
 
 const initialState = {
@@ -189,7 +189,7 @@ const authSlice = createSlice({
         state.user = null,
         state.token = null,
       }),
-  }
+  };
 }),
 
 export const { clearError, setUser, setLoggedIn } = authSlice.actions,

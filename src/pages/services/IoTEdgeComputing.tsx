@@ -275,4 +275,4 @@ export default function IoTEdgeComputing() {
       </section>
     </div>
   )
-}
+};

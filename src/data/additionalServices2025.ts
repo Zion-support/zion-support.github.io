@@ -14,7 +14,7 @@ export interface AdditionalService {
   contactInfo?: {
     phone: string,email: string,website: string
   };
-}
+};
 
 export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
   {
@@ -112,7 +112,7 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
     roi: "170-260%",innovationLevel: "Advanced",contactInfo: {,
       phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
     }
-  }
+  };
 ];
 export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [
   {
@@ -126,5 +126,5 @@ export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [
   {
     id: "genai-content-studio-pro",title: "GenAI Content Studio Pro",description: "Enterprise-grade LLM content workflows with guardrails, brand voice, and human-in-the-loop.",
     category: "AI & Content",price: 999,marketPrice: "$1,000 - $3,000/month"
-  }
+  };
 ];

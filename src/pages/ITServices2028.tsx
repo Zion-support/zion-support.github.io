@@ -87,7 +87,7 @@ const itServices2028 = [
       'Mobile accessAPI integration'
     ],
     popular: false,icon: BarChart3,color: 'from-emerald-600 to-teal-700',category: 'Data & Analytics',realService: true,marketSize: '$11.2B data analytics market',growthRate: '220% annual growth',rating: 4.6,reviews: 156,customers: 89
-  }
+  };
 ];
 const ITServices2028: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

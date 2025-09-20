@@ -7,7 +7,7 @@ interface PerformanceMetrics {
   networkLatency: number;
   fps: number;
   lighthouseScore: number;
-}
+};
 
 export default function PerformanceMonitor() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -65,7 +65,9 @@ export default function PerformanceMonitor() {
       fps,
       lighthouseScore: Math.round(lighthouseScore)
     });
+  }, []);
 
+  useEffect(() => {
     // Show performance monitor on Ctrl+Shift+P
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {

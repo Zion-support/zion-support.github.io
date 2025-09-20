@@ -1030,4 +1030,4 @@ export default function Talent() {
       </section>
     </div>
   )
-}
+};

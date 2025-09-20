@@ -326,7 +326,7 @@ const blockchainSolutions = [
     ],
     price: "From $200,000",
     timeline: "18-30 weeks",category: "Integration",technologies: ["Integration", "APIs", "Migration", "Legacy Systems"]
-  }
+  };
 ],
 
 const blockchainTechnologies = [
@@ -341,7 +341,7 @@ const blockchainTechnologies = [
   },
   {
     name: "Cryptography",description: "Advanced cryptographic security solutions",icon: Lock,useCase: "Security & Privacy",reliability: "High"
-  }
+  };
 ];
 const successStories = [
   {
@@ -355,7 +355,7 @@ const successStories = [
   {
     id: 3,company: "Healthcare Identity Solutions",industry: "Healthcare",challenge: "Needed secure patient identity management system",solution: "Built blockchain-based identity management platform",results: "100% data security, 90% faster verification, better privacy, improved compliance",
     logo: "HIS"
-  }
+  };
 ];
 const processSteps = [
   {
@@ -369,7 +369,7 @@ const processSteps = [
   },
   {
     step: 4,title: "Testing & Deployment",description: "Test blockchain systems and deploy to production",icon: Gauge,duration: "4-8 weeks"
-  }
+  };
 ];
 const blockchainBenefits = [
   {
@@ -384,7 +384,7 @@ const blockchainBenefits = [
   },
   {
     title: "Cost Reduction",description: "Blockchain eliminates intermediaries and reduces operational costs",icon: TrendingUp,examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]
-  }
+  };
 ],
 
 export default function BlockchainEnterpriseSolutions() {
@@ -769,4 +769,4 @@ export default function BlockchainEnterpriseSolutions() {
       </section>
     </div>
   )
-}
+};

@@ -222,7 +222,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     marketPrice: "$9,000-16,000",
     competitors: ["Tableau", "Power BI", "Qlik"],
     roi: "350% within 9 months",setupTime: "5-7 weeks",integrations: ["SQL Databases", "NoSQL Databases", "Cloud Storage", "CRM Systems", "ERP Systems"]
-  }
+  };
 ],
 export const getComprehensivePricingGuide2027 = () => comprehensivePricingGuide2027;
 export const getComprehensivePricingGuide2027ByCategory = (category: string) =>

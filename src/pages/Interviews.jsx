@@ -124,9 +124,8 @@ function InterviewsContent() {
       </main>
       
     </>);
-}
+};
 export default function Interviews() {
     return (<ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>);
-}

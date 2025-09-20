@@ -4,10 +4,11 @@
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
   // add more env variables as needed
-};
+}
 
 interface ImportMeta {
   readonly env: ImportMetaEnv;
+}
 
 // Import React types properly
 import * as React from "react";
@@ -34,12 +35,13 @@ declare module 'lovable-tagger' {
 
 // Add Node.js globals
 declare const __dirname: string;
-declare const process: {,
+declare const process: {
   env: {
     [key: string]: string | undefined;
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
   };
+};
 
 // Badge component type fixes
 declare module '@/components/ui/badge' {
@@ -55,7 +57,7 @@ declare module '@/components/ui/badge' {
       | "info";
     children?: React.ReactNode;
     key?: string | number;
-  };
+  }
 
   export const Badge: React.FC<BadgeProps>;
 
@@ -67,7 +69,7 @@ declare module '@/components/FeatureCard' {
     icon: React.ReactNode;
     className?: string;
     key?: number | string;
-  };
+  }
 
   export const FeatureCard: React.FC<FeatureCardProps>;
 
@@ -86,7 +88,7 @@ declare module '@/components/ListingScoreCard' {
     reviewCount?: number;
     key?: string | number;
     variant?: string;
-  };
+  }
 
   export const ListingScoreCard: React.FC<ListingScoreCardProps>;
 
@@ -97,7 +99,7 @@ declare module '@/components/ChatAssistant/ChatMessage' {
     message: string;
     timestamp?: Date;
     key?: string | number;
-  };
+  }
 
   export const ChatMessage: React.FC<ChatMessageProps>;
 
@@ -108,7 +110,7 @@ declare module '@/components/ProductListingCard' {
     view?: any;  // Made optional to fix the errors
     onRequestQuote?: (listingId: string) => void;
     key?: string | number;
-  };
+  }
 
   export const ProductListingCard: React.FC<ProductListingCardProps>;
 
@@ -121,13 +123,15 @@ declare module '@livekit/components-react' {
     serverUrl?: string;
     onDisconnect?: () => void;
     className?: string;
-  };
+  }
 
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
+}
 
 declare module '@livekit/components-styles' {
   // Empty stub for the styles
+}
 
 // Stubs for optional UI libraries used by the project
 declare module 'cmdk';

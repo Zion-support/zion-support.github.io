@@ -10,7 +10,6 @@ interface Benefit {
   stats: string;
   features: string[];
 }
-;
 const benefits: Benefit[] = [
   {
     title: "AI-Powered Matchmaking",
@@ -67,7 +66,7 @@ const benefits: Benefit[] = [
       "Bulk discount options",
       "Transparent cost structure"
     ]
-  }
+  };
 ],
 
 export function BenefitsSection() {
@@ -248,4 +247,3 @@ export function BenefitsSection() {
       </div>
     </section>
   );
-}

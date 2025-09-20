@@ -473,4 +473,4 @@ export default function CaseStudies() {
       </section>
     </div>
   )
-}
+};

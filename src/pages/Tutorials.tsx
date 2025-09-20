@@ -248,6 +248,6 @@ const Tutorials = () => {
       </section>
     </div>
   )
-}
+};
 
 export default Tutorials;

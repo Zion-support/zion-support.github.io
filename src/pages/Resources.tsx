@@ -517,4 +517,4 @@ export default function Resources() {
       </section>
     </div>
   )
-}
+};

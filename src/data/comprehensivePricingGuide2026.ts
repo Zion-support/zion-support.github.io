@@ -3,7 +3,7 @@
 
 export interface PricingTier {
   name: string,price: number,currency: string,billing: string,features: string[],benefits: string[],targetAudience: string[],roi: string,setupTime: string,supportLevel: string,innovationLevel: string
-}
+};
 
 export interface ServicePricing {
   id: string,title: string,description: string,category: string,subcategory: string,pricingTiers: PricingTier[],marketPrice: string,competitors: string[],marketSize: string,growthRate: string,contactInfo: {,
@@ -13,7 +13,6 @@ export interface ServicePricing {
     technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[]
   },
   aiCapabilities: string[],complianceFeatures: string[],scalabilityFeatures: string[]
-}
 
 export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
   {
@@ -528,7 +527,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     aiCapabilities: ["Computer Vision", "Machine Learning", "Natural Language Processing", "Predictive Analytics", "Pattern Recognition"],
     complianceFeatures: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],
     scalabilityFeatures: ["Cloud-native", "Multi-tenant", "Auto-scaling", "Global deployment", "High availability"]
-  }
+  };
 ],
 
 export default COMPREHENSIVE_PRICING_GUIDE_2026;

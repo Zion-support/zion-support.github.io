@@ -182,5 +182,5 @@ export class SEOOptimizer {
     </script>
     `;
     }
-}
+};
 export const seoOptimizer = new SEOOptimizer();

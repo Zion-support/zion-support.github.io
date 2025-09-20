@@ -52,7 +52,7 @@ const technologyCategories = [
       { name: "Kubernetes", icon: "⚓", proficiency: 85 }
     ],
     color: "from-orange-500 to-red-500"
-  }
+  };
 ];
 const emergingTech = [
   { name: "Quantum Computing", icon: "⚛️", status: "Research" };
@@ -241,4 +241,4 @@ export function TechnologyStackSection() {
       </div>
     </section>
   )
-}
+};

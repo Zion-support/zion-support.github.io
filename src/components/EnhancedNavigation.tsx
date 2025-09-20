@@ -33,12 +33,11 @@ interface NavigationItem {
   icon?: React.ReactNode,
   children?: NavigationItem[],
   featured?: boolean
-}
+};
 
 interface EnhancedNavigationProps {
   className?: string,
   onThemeChange?: (theme: 'light' | 'dark' | 'system') => void
-}
 ;
 const navigationItems: NavigationItem[] = [
   { label: 'Home', href: '/' };
@@ -431,4 +430,3 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       </AnimatePresence>
     </nav>
   );
-};

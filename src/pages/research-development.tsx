@@ -90,7 +90,7 @@ const researchAreas = [
       'Cloud SecurityDevOps Automation'
     ],
     publications: 20,patents: 10,projects: 16
-  }
+  };
 ];
 const researchProjects = [
   {
@@ -146,7 +146,7 @@ const researchProjects = [
       '4 research publicationsIndustry standards contribution'
     ],
     icon: Brain,color: 'from-purple-500 to-indigo-600'
-  }
+  };
 ];
 const publications = [
   {
@@ -163,7 +163,7 @@ const publications = [
   };
   {
     id: 5,title: 'Security-First Cloud Architecture Patterns',authors: ['Dr. Lisa GarciaDr. David Kim'],journal: 'Cloud Computing Security',year: 2026,citations: 38,area: 'Cloud-Native',abstract: 'This paper introduces security-first design patterns for cloud-native applications...'
-  }
+  };
 ];
 const patents = [
   {
@@ -183,7 +183,7 @@ const patents = [
   };
   {
     id: 5,title: 'Cloud Security Architecture Pattern',inventors: ['Dr. Lisa Garcia'],filingDate: '2026-02-15',status: 'Pending',patentNumber: 'US 2026/0098765',area: 'Cloud-Native',description: 'A security architecture pattern for cloud-native applications.'
-  }
+  };
 ];
 export default function ResearchDevelopment() {
   const [selectedArea, setSelectedArea] = useState('All');
@@ -648,4 +648,4 @@ export default function ResearchDevelopment() {
       </section>
     </div>
   )
-}
+};

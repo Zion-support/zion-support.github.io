@@ -236,4 +236,4 @@ export default function AICustomerExperienceSupport() {
       </section>
     </div>
   )
-}
+};

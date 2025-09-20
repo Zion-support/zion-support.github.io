@@ -3,14 +3,13 @@ import { motion } from "framer-motion";
 interface Props {
   children: ReactNode;
   fallback?: ReactNode
-}
+};
 
 interface State {
   hasError: boolean;
   error?: Error,
   errorInfo?: ErrorInfo,
   retryCount: number
-}
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -18,7 +17,7 @@ class ErrorBoundary extends Component<Props, State> {
     this.state = {
       hasError: false,retryCount: 0
     };
-  }
+  };
 
   static getDerivedStateFromError(error: Error): State {
     return {
@@ -26,7 +25,7 @@ class ErrorBoundary extends Component<Props, State> {
       error,
       retryCount: 0
     };
-  }
+  };
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
@@ -38,7 +37,7 @@ error,
 
     // Log error to external service
     this.logError(error, errorInfo);
-  }
+  };
 
   logError = (error: Error, errorInfo: ErrorInfo) => {
     // Log to console for development
@@ -166,7 +165,6 @@ error,
     }
 ;
     return this.props.children;
-  }
-}
+  };
 
 export { ErrorBoundary };

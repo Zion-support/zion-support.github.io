@@ -23,18 +23,16 @@ interface SearchResult {
   date?: string,
   rating?: number,
   type: 'service' | 'article' | 'team' | 'technology'
-}
+};
 
 interface FilterOption {
   id: string,label: string,value: string,count: number
-}
 
 interface SearchAndFilterSystemProps {
   data: SearchResult[];
   onResultsChange?: (results: SearchResult[]) => void;
   placeholder?: string,
   showFilters?: boolean
-}
 
 export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   data,
@@ -448,4 +446,3 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       )}
     </div>
   );
-};

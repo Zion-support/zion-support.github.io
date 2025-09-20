@@ -4,11 +4,10 @@ interface SecurityEvent {
   ipAddress?: string,
   payload?: string,
   blocked: boolean
-}
+};
 
 interface SecurityConfig {
   enableXSSProtection: boolean,enableCSRFProtection: boolean,enableInputValidation: boolean,enableRateLimiting: boolean,enableSecurityHeaders: boolean,enableContentSecurityPolicy: boolean
-}
 
 export const SecurityEnhancer: React.FC = () => {
   const [securityEvents, setSecurityEvents] = useState<SecurityEvent[]>([]);
@@ -468,4 +467,3 @@ export const SecurityEnhancer: React.FC = () => {
       </div>
     </div>
   );
-};

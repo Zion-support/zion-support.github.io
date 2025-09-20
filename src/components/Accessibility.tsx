@@ -59,16 +59,16 @@ export function Accessibility() {
             break;
         }
       }
-    },
+    };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []),
+  }, []);
 
   const applySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     // Apply font size
-    root.style.fontSize = `${newSettings.fontSize}px`,
+    root.style.fontSize = `${newSettings.fontSize}px`;
     
     // Apply high contrast
     if (newSettings.highContrast) {
@@ -97,11 +97,11 @@ export function Accessibility() {
   },
 
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
-    const newSettings = { ...settings, [key]: value },
+    const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings)),
-  },
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+  };
 
   const increaseFontSize = () => {
     if (settings.fontSize < 24) {
@@ -116,8 +116,12 @@ export function Accessibility() {
   },
 
   const resetSettings = () => {
-    const defaultSettings: AccessibilitySettings = {,
-      fontSize: 16,highContrast: false,reducedMotion: false,soundEnabled: true,theme: 'auto'
+    const defaultSettings: AccessibilitySettings = {
+      fontSize: 16,
+      highContrast: false,
+      reducedMotion: false,
+      soundEnabled: true,
+      theme: 'auto'
     };
     setSettings(defaultSettings);
     applySettings(defaultSettings);
@@ -320,4 +324,3 @@ export function Accessibility() {
       </AnimatePresence>
     </>
   );
-}

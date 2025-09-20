@@ -67,7 +67,7 @@ export function generateRandomListing(): MarketplaceItem {
     location: location || 'Remote',availability: Math.random() > 0.8 ? 'limited' : 'available',deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,
     warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`
   };
-}
+};
 
 export function generateRandomListings(count: number): MarketplaceItem[] {
   const listings: MarketplaceItem[] = [];
@@ -75,4 +75,3 @@ export function generateRandomListings(count: number): MarketplaceItem[] {
     listings.push(generateRandomListing())
   };
   return listings;
-}

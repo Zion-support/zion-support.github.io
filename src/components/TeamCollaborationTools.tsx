@@ -67,30 +67,25 @@ import {
 } from "lucide-react";
 interface TeamMember {
   id: string,name: string,role: string,department: string,avatar: string,status: 'online' | 'away' | 'busy' | 'offline',lastSeen: string,skills: string[],projects: string[],availability: 'available' | 'busy' | 'unavailable'
-}
+};
 
 interface Project {
   id: string,name: string,description: string,status: 'planning' | 'active' | 'review' | 'completed' | 'on-hold',priority: 'low' | 'medium' | 'high' | 'critical',progress: number,startDate: string,endDate: string,teamMembers: string[],tasks: Task[],budget: number,client: string,tags: string[]
-}
 
 interface Task {
   id: string,title: string,description: string,status: 'todo' | 'in-progress' | 'review' | 'completed',priority: 'low' | 'medium' | 'high' | 'critical',assignee: string,dueDate: string,estimatedHours: number,actualHours: number,dependencies: string[],tags: string[],comments: Comment[]
-}
 
 interface Comment {
   id: string,author: string,content: string,timestamp: string,likes: number,replies: Comment[]
-}
 
 interface Message {
   id: string,sender: string,content: string,timestamp: string,type: 'text' | 'file' | 'image' | 'link';
   attachments?: string[],
   reactions: { type: string, count: number }[],
   isRead: boolean
-}
 
 interface FileItem {
   id: string,name: string,type: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other',size: number,uploadedBy: string,uploadDate: string,lastModified: string,tags: string[],sharedWith: string[],permissions: 'view' | 'edit' | 'admin',version: string
-}
 
 interface TeamCollaborationToolsProps {
   showTeamMembers?: boolean;
@@ -98,7 +93,6 @@ interface TeamCollaborationToolsProps {
   showCommunication?: boolean,
   showFileSharing?: boolean,
   maxItems?: number,
-}
 
 export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   showTeamMembers = true;
@@ -857,4 +851,3 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       )}
     </div>
   );
-};

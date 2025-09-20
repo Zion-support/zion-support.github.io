@@ -49,7 +49,7 @@ export const QuoteRequestForm = () => {
         </CardContent>
       </Card>
     );
-  }
+  };
 ;
   return (
     <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">

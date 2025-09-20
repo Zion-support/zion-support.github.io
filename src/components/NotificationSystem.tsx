@@ -26,7 +26,7 @@ export interface Notification {
   priority: 'low' | 'medium' | 'high';
   category?: string,
   icon?: React.ReactNode
-}
+};
 
 interface NotificationSystemProps {
   maxNotifications?: number,
@@ -35,11 +35,9 @@ interface NotificationSystemProps {
   enableVibration?: boolean,
   autoDismiss?: boolean,
   defaultDuration?: number,
-}
 
 interface NotificationSettings {
   sound: boolean,vibration: boolean,autoDismiss: boolean,position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left',maxNotifications: number,defaultDuration: number
-}
 
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   maxNotifications = 5;
@@ -442,7 +440,6 @@ export const useNotifications = () => {
     }
   }, []);
   return { addNotification };
-};
 // Utility functions for common notification types
 export const notificationUtils = {
   success: (title: string, message: string, options?: Partial<Notification>) => {
@@ -503,5 +500,4 @@ export const notificationUtils = {
         ...options
       });
     }
-  }
-};
+  };

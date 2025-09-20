@@ -36,5 +36,5 @@ export default function CheckoutPerformanceOptimizer() {
       </section>
     </div>
   )
-}
+};
 

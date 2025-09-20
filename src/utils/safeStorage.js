@@ -26,7 +26,7 @@ function isLocalStorageAvailable() {
         localStorageAvailable = false,
         return false;
     }
-}
+};
 ;
 function safeConsoleError(message, error) {
     const env = globalThis.process?.env?.NODE_ENV ?? 'production';
@@ -39,7 +39,6 @@ function safeConsoleError(message, error) {
     catch {
         // Silent fail if console.error causes recursion
     }
-}
 export const safeStorage = {
   getItem: (key) => {
     try {
@@ -77,5 +76,4 @@ export const safeStorage = {
       console.warn('Failed to clear localStorage:', error);
       return false;
     }
-  }
-};
+  };

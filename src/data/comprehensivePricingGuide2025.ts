@@ -6,7 +6,7 @@ export interface PricingTier {
   savings?: string,
   setupFee?: number,
   contractLength?: string
-}
+};
 
 export interface ServicePricing {
   serviceId: string,serviceName: string,category: string,description: string,pricingTiers: PricingTier[],marketComparison: {,
@@ -21,7 +21,6 @@ export interface ServicePricing {
   integrations: string[],support: {,
     responseTime: string,channels: string[],sla: string
   };
-}
 
 export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
   {
@@ -457,6 +456,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
       responseTime: "2 hours",channels: ["Email", "Phone", "Chat", "Video"],
       sla: "99.99% uptime"
     }
-  }
+  };
 ];
 export default COMPREHENSIVE_PRICING_GUIDE_2025;

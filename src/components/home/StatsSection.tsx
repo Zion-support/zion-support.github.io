@@ -3,11 +3,10 @@ import React, { useEffect, useRef, useState } from "react";
 interface Stat {
   number: string,label: string,description: string,avatar: string,icon: React.ComponentType<{ className?: string }>,
   color: string
-}
+};
 
 interface StatsSectionProps {
   stats: Stat[]
-}
 ;
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const ref = useRef(null);

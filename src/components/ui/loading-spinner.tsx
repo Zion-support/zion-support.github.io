@@ -6,14 +6,12 @@ interface LoadingSpinnerProps {
   text?: string,
   showText?: boolean,
   className?: string,
-}
+};
 ;
 const sizeClasses = {
   sm: 'w-8 h-8',md: 'w-12 h-12',lg: 'w-16 h-16',xl: 'w-32 h-32'
-};
 const colorClasses = {
   primary: 'border-cyan-400',secondary: 'border-blue-400',white: 'border-white',cyan: 'border-cyan-400'
-};
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md';
   color = 'primary',
@@ -62,7 +60,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       <span className="sr-only">Loading, please wait</span>
     </div>
   ),
-};
 
 // Optimized spinner for inline use
 export const InlineSpinner: React.FC<{ size?: 'sm' | 'md', className?: string }> = ({ 

@@ -398,4 +398,4 @@ export default function ComprehensivePricingGuide2029() {
       </div>
     </div>
   )
-}
+};

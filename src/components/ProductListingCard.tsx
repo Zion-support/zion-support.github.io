@@ -20,7 +20,7 @@ interface ProductListingCardProps {
    * `/marketplace/listing` to preserve existing behaviour.
    */
   detailBasePath?: string
-}
+};
 
 export function ProductListingCard({
   listing,
@@ -198,6 +198,5 @@ export function ProductListingCard({
       </div>
     </div>
   );
-}
 
 export default React.memo(ProductListingCard);

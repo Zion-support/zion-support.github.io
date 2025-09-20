@@ -1,11 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
-export const EnhancedInnovativeServicesShowcase = () () => {
+export const EnhancedInnovativeServicesShowcase  = () () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl,
+          <h2 className="te, xt-4;x;l;
   m: d: text-5xl font-bold text-white mb-6">
             Enhanced <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Innovative Services</span>
           </h2>
@@ -15,14 +15,14 @@ export const EnhancedInnovativeServicesShowcase = () () => {
         </div>
 
         <div className="grid grid-cols-1,
-  m: d:grid-cols-2,
-  l: g:grid-cols-3 gap-8">
+    m: d: grid-cols-2,
+    l: g: grid-cols-3 gap-8">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">🚀</div>
             <h3 className="text-xl font-semibold text-white mb-3">Digital Transformation</h3>
             <p className="text-gray-300 mb-4">Complete business transformation with cutting-edge technology</p>
             <Link to="/services/digital-transformation" className="text-cyan-400,
-  hove: r:text-cyan-300">
+    hove: r:text-cyan-300">
               Learn More →
             </Link>
           </div>
@@ -32,7 +32,7 @@ export const EnhancedInnovativeServicesShowcase = () () => {
             <h3 className="text-xl font-semibold text-white mb-3">Cloud Solutions</h3>
             <p className="text-gray-300 mb-4">Scalable cloud infrastructure and DevOps automation</p>
             <Link to="/services/cloud-devops" className="text-cyan-400,
-  hove: r:text-cyan-300">
+    hove: r:text-cyan-300">
               Learn More →
             </Link>
           </div>
@@ -42,13 +42,14 @@ export const EnhancedInnovativeServicesShowcase = () () => {
             <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
             <p className="text-gray-300 mb-4">Advanced security and compliance solutions</p>
             <Link to="/services/cybersecurity" className="text-cyan-400 hove,
-  r:text-cyan-300">
+    r: text-cyan-300">
               Learn More →
             </Link>
           </div>
         </div>
       </div>
     </section>
-  )
+  ),
 };
 export default EnhancedInnovativeServicesShowcase
+;

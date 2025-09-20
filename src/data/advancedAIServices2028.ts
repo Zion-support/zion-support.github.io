@@ -6,7 +6,7 @@ export interface AdvancedAIService2028 {
     technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[]
   },
   competitors: string[],marketSize: string
-}
+};
 
 export const ADVANCED_AI_SERVICES_2028: AdvancedAIService2028[] = [
   // AI-Powered Quantum Computing Solutions
@@ -253,5 +253,5 @@ export const ADVANCED_AI_SERVICES_2028: AdvancedAIService2028[] = [
     },
     competitors: ["Alpaca", "QuantConnect", "MetaTrader", "NinjaTrader"],
     marketSize: "$28.9 billion by 2027"
-  }
+  };
 ];

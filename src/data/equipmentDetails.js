@@ -91,7 +91,7 @@ export const equipmentDetails = [
     ],
     availability: "In Stock",location: "Miami, FL",
     warranty: "2 years",delivery: "1-2 business days",rating: 4.5,reviews: 78
-  }
+  };
 ];
 export const getEquipmentById = (id) => {
   return equipmentDetails.find(equipment => equipment.id === id);

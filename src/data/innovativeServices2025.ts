@@ -219,7 +219,7 @@ export const INNOVATIVE_SERVICES_2025: ProductListing[] = [
     marketPrice: "$1,500-3,500",
     competitors: ["Asana", "Trello", "Monday.com", "ClickUp"],
     roi: "150% within 3 months",setupTime: "2-3 weeks",integrations: ["Calendar", "File Storage", "Communication Tools", "Time Tracking", "Reporting"]
-  }
+  };
 ],
 
 export const INNOVATIVE_SERVICE_CATEGORIES_2025 = {
@@ -241,7 +241,7 @@ export const INNOVATIVE_SERVICE_CATEGORIES_2025 = {
   };
   "Micro SaaS": {
     icon: "💼",description: "Affordable software solutions for small businesses",color: "from-orange-500 to-red-500",count: 3
-  }
+  };
 };
 export const INNOVATIVE_SERVICE_SUBCATEGORIES_2025 = {
   "AI & Machine Learning": [
@@ -275,7 +275,6 @@ export const INNOVATIVE_SERVICE_SUBCATEGORIES_2025 = {
     "Helpdesk",
     "Project Management"
   ]
-};
 export const INNOVATIVE_PRICING_TIERS_2025 = {
   "Starter": {
     price: "$2,000 - $5,000",
@@ -291,11 +290,9 @@ export const INNOVATIVE_PRICING_TIERS_2025 = {
     price: "$16,000 - $30,000",
     features: ["Enterprise features", "24/7 support", "Custom integrations", "Unlimited users", "White-label options", "Dedicated account manager"],
     color: "from-purple-500 to-pink-500"
-  }
-};
+  };
 export const INNOVATIVE_CONTACT_INFO_2025 = {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709",hours: "Monday - Friday: 9:00 AM - 6:00 PM EST",emergency: "24/7 Emergency Support Available"
-};
 export const INNOVATIVE_SERVICE_GUARANTEES_2025 = {
   "Quality Assurance": "100% satisfaction guarantee with 30-day money-back policy";
   "Performance": "99.9% uptime guarantee with SLA commitments",
@@ -303,4 +300,3 @@ export const INNOVATIVE_SERVICE_GUARANTEES_2025 = {
   "Support": "24/7 technical support with response time guarantees";
   "Updates": "Regular feature updates and security patches included";
   "Training": "Comprehensive onboarding and training included"
-};

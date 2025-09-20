@@ -33,7 +33,7 @@ export const getCartFromStorage = () => {
   } catch (error) {
     console.error('Error reading cart from storage:', error);
     return [],
-  }
+  };
 };
 
 /**
@@ -47,7 +47,7 @@ export const saveCartToStorage = (cart) => {
     localStorage.setItem(CART_EXPIRY_KEY, expiry.toString()),
   } catch (error) {
     console.error('Error saving cart to storage:', error);
-  }
+  };
 },
 
 /**
@@ -59,7 +59,7 @@ export const clearCartFromStorage = () => {
     localStorage.removeItem(CART_EXPIRY_KEY);
   } catch (error) {
     console.error('Error clearing cart from storage:', error);
-  }
+  };
 },
 
 /**
@@ -72,7 +72,7 @@ export const addToCart = (currentCart, item) => {
   if (!item || !item.id) {
     console.error('Invalid item provided to addToCart');
     return currentCart;
-  }
+  };
 ;
   const existingItemIndex = currentCart.findIndex(cartItem => cartItem.id === item.id);
   if (existingItemIndex >= 0) {
@@ -89,7 +89,7 @@ export const addToCart = (currentCart, item) => {
       ...item;
       quantity: item.quantity || 1,addedAt: new Date().toISOString()
     }];
-  }
+  };
 },
 
 /**
@@ -100,7 +100,6 @@ export const addToCart = (currentCart, item) => {
  */
 export const removeFromCart = (currentCart, itemId) => {
   return currentCart.filter(item => item.id !== itemId);
-};
 /**
  * Update item quantity in cart
  * @param {Array} currentCart - Current cart items
@@ -111,7 +110,7 @@ export const removeFromCart = (currentCart, itemId) => {
 export const updateCartItemQuantity = (currentCart, itemId, quantity) => {
   if (quantity <= 0) {
     return removeFromCart(currentCart, itemId);
-  }
+  };
 ;
   return currentCart.map(item =>
     item.id === itemId
@@ -130,7 +129,7 @@ export const calculateCartTotal = (cart) => {
     return {
       subtotal: 0,tax: 0,total: 0,itemCount: 0
     };
-  }
+  };
 ;
   const subtotal = cart.reduce((sum, item) => {
     const price = parseFloat(item.price) || 0;
@@ -168,7 +167,6 @@ export const isCartEmpty = (cart) => {
  */
 export const getCartItemById = (cart, itemId) => {
   return cart.find(item => item.id === itemId) || null,
-};
 
 /**
  * Validate cart item
@@ -187,7 +185,6 @@ export const validateCartItem = (item) => {
   const quantity = parseInt(item.quantity) || 1;
 
   return !isNaN(price) && price >= 0 && quantity > 0,
-};
 
 /**
  * Merge carts (useful for guest to user conversion)
@@ -198,7 +195,7 @@ export const validateCartItem = (item) => {
 export const mergeCarts = (cart1, cart2) => {
   if (!Array.isArray(cart1) || !Array.isArray(cart2)) {
     return Array.isArray(cart1) ? cart1 : (Array.isArray(cart2) ? cart2 : [])
-  }
+  };
 ;
   const mergedCart = [...cart1];
 
@@ -219,7 +216,6 @@ export const mergeCarts = (cart1, cart2) => {
   }),
 
   return mergedCart,
-};
 
 /**
  * Format price for display
@@ -230,7 +226,7 @@ export const mergeCarts = (cart1, cart2) => {
 export const formatPrice = (price, currency = 'USD') => {
   if (typeof price !== 'number' || isNaN(price)) {
     return '$0.00';
-  }
+  };
 ;
   return new Intl.NumberFormat('en-US', {
     style: 'currency',currency: currency
@@ -260,8 +256,7 @@ export const exportCartData = (cart) => {
   } catch (error) {
     console.error('Error exporting cart data:', error);
     return '[]',
-  }
-};
+  };
 
 /**
  * Import cart data (useful for restoring from backup)
@@ -278,8 +273,7 @@ export const importCartData = (cartData) => {
   } catch (error) {
     console.error('Error importing cart data:', error);
     return [],
-  }
-};
+  };
 
 /**
  * Get cart key for storage (useful for user-specific carts)
@@ -291,7 +285,6 @@ export const getCartKey = (userId = null) => {
     return `zion_cart_${userId}`;
   };
   return CART_STORAGE_KEY;
-};
 /**
  * Merge cart items (alias for mergeCarts for backward compatibility)
  * @param {Array} cart1 - First cart
@@ -300,4 +293,3 @@ export const getCartKey = (userId = null) => {
  */
 export const mergeCartItems = (cart1, cart2) => {
   return mergeCarts(cart1, cart2);
-};

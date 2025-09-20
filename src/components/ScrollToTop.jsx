@@ -46,6 +46,6 @@ export function ScrollToTop() {
       )}
     </AnimatePresence>
   );
-}
+};
 
 export default ScrollToTop;

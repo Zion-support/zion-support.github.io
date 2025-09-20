@@ -331,4 +331,4 @@ export default function ComprehensiveServicesShowcase2025() {
       </section>
     </div>
   )
-}
+};

@@ -6,7 +6,7 @@ export interface ComprehensiveITService2028 {
     technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[]
   },
   competitors: string[],marketSize: string,growthRate: string,rating: number,reviews: number,customers: number
-}
+};
 
 export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
   // Cloud Infrastructure & DevOps
@@ -448,6 +448,6 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
     },
     competitors: ["PMI", "PRINCE2", "Agile methodologies", "Scrum", "Kanban"],
     marketSize: "$6.6 billion",growthRate: "10.8% annually",rating: 4.8,reviews: 198,customers: 134
-  }
+  };
 ];
 export default COMPREHENSIVE_IT_SERVICES_2028;

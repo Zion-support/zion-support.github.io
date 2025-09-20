@@ -15,18 +15,17 @@ interface AccessibilityContextType {
   voiceNavigation: boolean;
   toggleVoiceNavigation: () => void;
 }
-;
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
   if (!context) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
-  };
+  }
   return context;
 };
 
 interface AccessibilityProviderProps {
-  children: ReactNode
+  children: ReactNode;
 }
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
@@ -286,4 +285,3 @@ export const FocusTrap: React.FC<{ children: ReactNode, isActive?: boolean }> = 
   }, [isActive]),
 
   return <>{children}</>;
-};

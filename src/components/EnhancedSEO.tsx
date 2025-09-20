@@ -27,7 +27,7 @@ interface SEOProps {
   googleAnalyticsId?: string;
   googleTagManagerId?: string;
   customMeta?: Array<{ name: string; content: string; property?: string }>;
-}
+};
 
 export const EnhancedSEO: React.FC<SEOProps> = ({
   title = 'Zion - Advanced Technology Solutions',

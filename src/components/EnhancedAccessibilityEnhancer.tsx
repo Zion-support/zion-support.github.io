@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 interface AccessibilitySettings {
   highContrast: boolean,largeText: boolean,reducedMotion: boolean,focusVisible: boolean,screenReader: boolean,keyboardNavigation: boolean
-}
+};
 
 export function EnhancedAccessibilityEnhancer() {
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -204,4 +204,3 @@ export function EnhancedAccessibilityEnhancer() {
       </div>
     </>
   )
-}

@@ -421,4 +421,4 @@ export default function Developers() {
       </section>
     </div>
   )
-}
+};

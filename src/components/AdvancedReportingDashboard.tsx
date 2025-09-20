@@ -24,18 +24,16 @@ import {
 } from "lucide-react";
 interface ReportData {
   id: string,title: string,type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical',category: string,data: any,lastUpdated: string,status: 'active' | 'archived' | 'draft',priority: 'low' | 'medium' | 'high' | 'critical',tags: string[],description: string,author: string,views: number,downloads: number,rating: number
-}
+};
 
 interface ReportMetrics {
   totalReports: number,activeReports: number,totalViews: number,totalDownloads: number,averageRating: number,topCategories: Array<{ name: string, count: number, percentage: number }>,
   recentActivity: Array<{ action: string, timestamp: string, user: string }>;
-}
 
 interface AdvancedReportingDashboardProps {
   showMetrics?: boolean,
   showFilters?: boolean,
   maxReports?: number,
-}
 
 export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
   showMetrics = true;
@@ -719,4 +717,3 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       </AnimatePresence>
     </div>
   );
-};

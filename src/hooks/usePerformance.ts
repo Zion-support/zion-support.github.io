@@ -15,14 +15,13 @@ interface PerformanceConfig {
     network: { warning: number; error: number };
   };
   onAlert?: (alert: PerformanceAlert) => void;
-}
+};
 
 interface PerformanceState {
   metrics: PerformanceMetrics;
   alerts: PerformanceAlert[];
   isMonitoring: boolean;
   history: PerformanceMetrics[];
-}
 
 const defaultConfig: Required<PerformanceConfig> = {
   enableFPSMonitoring: true,
@@ -38,7 +37,6 @@ const defaultConfig: Required<PerformanceConfig> = {
     network: { warning: 100, error: 200 },
   },
   onAlert: () => {},
-};
 
 export const usePerformance = (config: PerformanceConfig = {}) => {
   const mergedConfig = { ...defaultConfig, ...config };
@@ -329,7 +327,6 @@ export const usePerformance = (config: PerformanceConfig = {}) => {
     getMetricTrend,
     getPerformanceScore,
   };
-};
 
 // Performance utilities
 export const measureRenderTime = (componentName: string) => {
@@ -345,7 +342,6 @@ export const measureRenderTime = (componentName: string) => {
     
     return renderTime;
   };
-};
 
 export const measureAsyncOperation = async <T>(
   operation: () => Promise<T>,
@@ -372,8 +368,7 @@ export const measureAsyncOperation = async <T>(
     }
     
     throw error;
-  }
-};
+  };
 
 export const createPerformanceMarker = (name: string) => {
   performance.mark(`${name}-start`);
@@ -389,6 +384,5 @@ export const createPerformanceMarker = (name: string) => {
       }
     }
   };
-};
 
 export default usePerformance;

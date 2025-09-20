@@ -4,7 +4,7 @@ interface InnovativeServicesOverviewProps {
   maxServices?: number,
   category?: string,
   showViewAllButton?: boolean,
-}
+};
 ;
 const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
   maxServices = 6;

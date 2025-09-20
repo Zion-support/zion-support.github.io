@@ -7,7 +7,7 @@ interface LoadingSpinnerProps {
   text?: string,
   showProgress?: boolean,
   progress?: number,
-}
+};
 ;
 const iconVariants = {
   animate: {,
@@ -16,8 +16,7 @@ const iconVariants = {
       rotate: { duration: 2, repeat: Infinity, ease: "linear" },
       scale: { duration: 1, repeat: Infinity, ease: "easeInOut" }
     }
-  }
-};
+  };
 const pulseVariants = {
   animate: {,
     scale: [1, 1.1, 1],
@@ -25,8 +24,7 @@ const pulseVariants = {
     transition: {,
       duration: 2,repeat: Infinity,ease: "easeInOut"
     }
-  }
-};
+  };
 export function EnhancedLoadingSpinner({ 
   size = 'md', 
   variant = 'default';
@@ -159,7 +157,6 @@ export function EnhancedLoadingSpinner({
       </motion.div>
     </div>
   );
-}
 
 // Export as ZionLoadingSpinner for backward compatibility
 export const ZionLoadingSpinner = EnhancedLoadingSpinner;

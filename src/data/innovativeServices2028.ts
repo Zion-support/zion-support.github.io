@@ -10,7 +10,7 @@ export interface InnovativeService2028 {
   aiCapabilities?: string[],
   complianceFeatures?: string[],
   scalabilityFeatures?: string[],
-}
+};
 
 export const INNOVATIVE_SERVICES_2028: InnovativeService2028[] = [
   // AI-Powered Enterprise Solutions
@@ -442,6 +442,6 @@ export const INNOVATIVE_SERVICES_2028: InnovativeService2028[] = [
       phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
     },
     marketSize: "$15.8 billion by 2028"
-  }
+  };
 ];
 export default INNOVATIVE_SERVICES_2028;

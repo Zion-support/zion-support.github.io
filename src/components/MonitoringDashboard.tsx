@@ -10,7 +10,7 @@ interface MonitoringData {
   conversionRate: number;
   bounceRate: number;
   averageSessionDuration: number;
-}
+};
 
 interface Alert {
   id: string;
@@ -18,7 +18,6 @@ interface Alert {
   message: string;
   timestamp: Date;
   resolved: boolean;
-}
 
 interface MonitoringDashboardProps {
   enableRealTime?: boolean;
@@ -26,7 +25,6 @@ interface MonitoringDashboardProps {
   autoRefresh?: boolean;
   refreshInterval?: number;
   className?: string;
-}
 
 const MonitoringDashboard: React.FC<MonitoringDashboardProps> = ({
   enableRealTime = true,
@@ -345,6 +343,5 @@ const MonitoringDashboard: React.FC<MonitoringDashboardProps> = ({
       </div>
     </div>
   );
-};
 
 export default MonitoringDashboard;

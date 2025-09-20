@@ -435,4 +435,4 @@ export default function DevOpsCloudServices() {
         </div>
       </section>
     </div>)
-}
+};

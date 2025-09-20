@@ -358,4 +358,4 @@ export default function DigitalTwin() {
       </section>
     </div>
   )
-}
+};

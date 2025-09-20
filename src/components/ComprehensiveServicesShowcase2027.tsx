@@ -61,11 +61,10 @@ const benefits = [
   },
   {
     icon: <CheckCircle className="h-6 w-6"/>,title: "Quality Guaranteed",description: "30-day money-back guarantee with free migration support"
-  }
+  };
 ];
 const contactInfo = {
   mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
-};
 export function ComprehensiveServicesShowcase2027() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -358,6 +357,5 @@ export function ComprehensiveServicesShowcase2027() {
       </div>
     </div>
   );
-}
 
 export default ComprehensiveServicesShowcase2027;

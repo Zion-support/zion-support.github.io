@@ -85,7 +85,6 @@ function CategoryContent({ categoryId, category, IconComponent, user }) {
           {canCreatePost && <CreatePostButton categoryId={categoryId}/>}
         </div>)}
     </div>);
-}
 export default function ForumCategoryPage() {
     const { categoryId } = useParams();
     const { user } = useAuth();
@@ -101,4 +100,3 @@ export default function ForumCategoryPage() {
         <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>
       </Suspense>
     </>);
-}

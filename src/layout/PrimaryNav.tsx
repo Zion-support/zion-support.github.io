@@ -34,7 +34,7 @@ export function PrimaryNav() {
     unreadCount = messaging.unreadCount;
   } catch {
     // context not available
-  }
+  };
 ;
   const cartCount = useSelector((s: RootState) =>
     s.cart.items.reduce((sum, i) => sum + i.quantity, 0);
@@ -186,4 +186,4 @@ export function PrimaryNav() {
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
   );
-}
+};

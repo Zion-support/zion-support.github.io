@@ -218,4 +218,4 @@ export default function AIAutonomousCodeReview() {
         </div>
       </section>
     </div>)
-}
+};

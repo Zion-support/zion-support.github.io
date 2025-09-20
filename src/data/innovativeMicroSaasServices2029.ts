@@ -108,7 +108,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     marketPrice: "$1,000-2,500",
     competitors: ["Veeam", "Acronis", "Carbonite"],
     roi: "400% within 6 months",setupTime: "2-3 weeks",integrations: ["AWS S3", "Azure Blob", "Google Cloud Storage", "Dropbox", "OneDrive", "Google Drive"]
-  }
+  };
 ],
 
 export default INNOVATIVE_MICRO_SAAS_SERVICES_2029;
