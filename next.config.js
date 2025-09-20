@@ -59,6 +59,10 @@ const nextConfig = {
     return config;
   },
   
+  // Force static export
+  generateBuildId: async () => {
+    return 'build-' + Date.now()
+  },
 };
 
 module.exports = nextConfig;
