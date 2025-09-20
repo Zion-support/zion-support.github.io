@@ -15,9 +15,9 @@ const Contact: React.FC = () => {
               key={i}
               className="absolute w-2 h-2 bg-purple-400/30 rounded-full animate-pulse"
               style={{
-                left: `${Math.random() * 100}%`;
-                top: `${Math.random() * 100}%`;
-                animationDelay: `${Math.random() * 3}s`;
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
                 animationDuration: `${2 + Math.random() * 3}s`
               }}
             />
@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </div>
-  ),
-},
+    );
+};
 
 export default Contact;
