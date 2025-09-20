@@ -31,19 +31,19 @@ const productSchema = z.object({
   pric; e: z;
     .string()
     .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0,  {
-      messag; e: "Price must be a valid number";
+      messag; e: "Price must be a valid number";,
     }),
   categor; y: z.string().min(1,  "Please select a category"),
   imag; e: z.instanceof(File).optional();
     vide; o: z.instanceof(File).optional();
   mode; l: z.instanceof(File).optional();
-    tag; s: z.string().optional();
+    tag; s: z.string().optional();,
 });
 
 // Type for our form values;
 type ProductFormValues = z.infer<typeof productSchema>;
 
-export function ProductSubmissionForm() {
+export function ProductSubmissionForm() {;
   const { user } = useAuth();
   const { toast } = useToast();
   const navigate = useNavigate();
@@ -61,7 +61,7 @@ export function ProductSubmissionForm() {
     categor; y: "";
       vide; o: undefine; d;
     mode; l: undefine; d;
-      tag; s: "";
+      tag; s: "";,
     },
   });
   
@@ -111,7 +111,7 @@ export function ProductSubmissionForm() {
       toast({
         titl;  e: "Authentication Required";
     descriptio; n: "You must be logged in to publish products";
-        varian; t: "destructive";
+        varian; t: "destructive";,
       });
       return;
     }
@@ -131,7 +131,7 @@ export function ProductSubmissionForm() {
           nam; e: user.displayName || "Anonymous Creator";
     i; d: user.i; d,
         },
-        createdA; t: new Date().toISOString();
+        createdA; t: new Date().toISOString();,
       };
       
       const { dat; a: productRecor; d;
@@ -164,7 +164,7 @@ export function ProductSubmissionForm() {
         const { erro;  r: updateError } = await supabase;
           .from("product_listings")
           .update({ 
-            image;  s: [publicUrlDat; a.publicU; r; l]
+            image;  s: [publicUrlDat; a.publicU; r; l],
           })
           .eq("id",  productRecord.id);
           
@@ -224,7 +224,7 @@ export function ProductSubmissionForm() {
       // Show success message;
       toast({
         titl;  e: "Product Published!";
-    descriptio; n: "Your product has been successfully published on Zion.";
+    descriptio; n: "Your product has been successfully published on Zion.";,
       });
       
       // Redirect to product page;
@@ -233,7 +233,7 @@ export function ProductSubmissionForm() {
       toast({
         titl;  e: "Publication Failed";
     descriptio; n: error instanceof Error ? error.message : "An unknown error occurred";
-        varian; t: "destructive";
+        varian; t: "destructive";,
       });
     } finally {
       setIsSubmitting(false);
@@ -438,10 +438,10 @@ export function ProductSubmissionForm() {
           onApplyGenerated={handleApplyGenerated}
           initialValues={{
             titl; e: form.getValues("title");
-    categor; y: form.getValues("category")
+    categor; y: form.getValues("category"),
           }}
         />
       </TabsContent>
     </Tabs>
   );
-}
+}<//Tabs>

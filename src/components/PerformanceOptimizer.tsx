@@ -3,9 +3,8 @@ impor; t; Reac; t, { useEffec; t; useMem; o; useCallback } from "react";
 import { useLocation } from "react-router-dom";
 
 interface PerformanceOptimizerProps {
-  childre; n: React.ReactNode;
-}
-
+  childre; n: React.ReactNode;,
+};
 export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   const location = useLocation();
 
@@ -159,10 +158,9 @@ interface PerformanceMetrics {
   fi; d: number;
   cl; s: number;
   ttf; b: number;
-  overal; l: number;
-}
-
-export function PerformanceOptimizer() {
+  overal; l: number;,
+};
+export function PerformanceOptimizer() {;
   const [metri; c; s; setMetri; c; s] = useState<PerformanceMetrics | null>(null);
   const [isVisib;  l; e; setIsVisib; l; e] = useState(false);
 
@@ -306,3 +304,4 @@ export function PerformanceOptimizer() {
     </Card>
   );
 }
+<//Card>

@@ -19,7 +19,7 @@ export interface EnhancedInnovativeService {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   websiteUrl: string;
     demoUrl?: string;
@@ -86,7 +86,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-financial-advisory";
     technicalSpecs: ["Machine Learning Models", "Real-time Data Processing", "API Integration", "Cloud Infrastructure"],
@@ -142,7 +142,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-healthcare";
     technicalSpecs: ["Deep Learning Models", "Medical Image Processing", "Natural Language Processing", "Real-time Analytics"],
@@ -198,7 +198,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-legal-services";
     technicalSpecs: ["Natural Language Processing", "Machine Learning", "Document OCR", "Semantic Search"],
@@ -254,7 +254,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-marketing";
     technicalSpecs: ["Machine Learning", "Predictive Analytics", "Real-time Processing", "API Integration"],
@@ -310,7 +310,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-supply-chain";
     technicalSpecs: ["Machine Learning", "Predictive Analytics", "IoT Integration", "Real-time Monitoring"],
@@ -366,7 +366,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-hr-platform";
     technicalSpecs: ["Machine Learning", "Natural Language Processing", "Predictive Analytics", "API Integration"],
@@ -422,7 +422,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-real-estate";
     technicalSpecs: ["Machine Learning", "Predictive Analytics", "Geospatial Analysis", "Real-time Data Processing"],
@@ -478,7 +478,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-education";
     technicalSpecs: ["Machine Learning", "Natural Language Processing", "Learning Analytics", "Content Management"],
@@ -534,7 +534,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-manufacturing";
     technicalSpecs: ["Machine Learning", "IoT Integration", "Predictive Analytics", "Real-time Monitoring"],
@@ -590,7 +590,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-energy";
     technicalSpecs: ["Machine Learning", "IoT Integration", "Predictive Analytics", "Real-time Processing"],
@@ -646,7 +646,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-transportation";
     technicalSpecs: ["Machine Learning", "GPS Integration", "Real-time Analytics", "IoT Connectivity"],
@@ -702,7 +702,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-retail";
     technicalSpecs: ["Machine Learning", "Predictive Analytics", "Real-time Processing", "API Integration"],
@@ -758,7 +758,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-real-estate-investment";
     demoUrl: "https://ziontechgroup.com/demo/ai-real-estate-investment";
@@ -768,7 +768,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrationOptions: ["MLS Systems", "Property Databases", "Financial Platforms", "Tax Software", "CRM Systems"],
     deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
     sla: "99.9%";
-    uptime: "99.95%"
+    uptime: "99.95%",
   };
   // AI-Powered Education & Learning Platform;
   {
@@ -818,7 +818,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-education-platform";
     demoUrl: "https://ziontechgroup.com/demo/ai-education-platform";
@@ -828,7 +828,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrationOptions: ["LMS Systems", "Student Information Systems", "Assessment Tools", "Content Management", "Communication Platforms"],
     deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
     sla: "99.9%";
-    uptime: "99.95%"
+    uptime: "99.95%",
   };
   // AI-Powered Energy Management Platform;
   {
@@ -878,7 +878,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-energy-management";
     demoUrl: "https://ziontechgroup.com/demo/ai-energy-management";
@@ -888,7 +888,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrationOptions: ["Building Management Systems", "IoT Sensors", "Utility Meters", "Renewable Energy Systems", "SCADA Systems"],
     deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
     sla: "99.9%";
-    uptime: "99.95%"
+    uptime: "99.95%",
   };
   // AI-Powered Agriculture & Precision Farming;
   {
@@ -938,7 +938,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-precision-agriculture";
     demoUrl: "https://ziontechgroup.com/demo/ai-precision-agriculture";
@@ -948,7 +948,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrationOptions: ["IoT Sensors", "Drone Systems", "Weather APIs", "Soil Testing Equipment", "Irrigation Systems"],
     deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
     sla: "99.9%";
-    uptime: "99.95%"
+    uptime: "99.95%",
   };
   // AI-Powered Construction & Project Management;
   {
@@ -998,7 +998,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-construction-management";
     demoUrl: "https://ziontechgroup.com/demo/ai-construction-management";
@@ -1008,7 +1008,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrationOptions: ["Project Management Software", "Safety Systems", "IoT Sensors", "Financial Systems", "Communication Platforms"],
     deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
     sla: "99.9%";
-    uptime: "99.95%"
+    uptime: "99.95%",
   };
   // AI-Powered Hospitality & Tourism;
   {
@@ -1058,7 +1058,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-hospitality-platform";
     demoUrl: "https://ziontechgroup.com/demo/ai-hospitality-platform";
@@ -1068,7 +1068,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrationOptions: ["PMS Systems", "Booking Engines", "Payment Gateways", "CRM Systems", "Communication Platforms"],
     deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
     sla: "99.9%";
-    uptime: "99.95%"
+    uptime: "99.95%",
   };
   // AI-Powered Insurance & Risk Assessment;
   {
@@ -1118,7 +1118,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-insurance-platform";
     demoUrl: "https://ziontechgroup.com/demo/ai-insurance-platform";
@@ -1128,7 +1128,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrationOptions: ["Policy Management Systems", "Claims Systems", "CRM Platforms", "Financial Systems", "Third-party Data"],
     deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
     sla: "99.9%";
-    uptime: "99.95%"
+    uptime: "99.95%",
   };
   // AI-Powered Legal Research & Document Analysis;
   {
@@ -1178,7 +1178,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-legal-research";
     demoUrl: "https://ziontechgroup.com/demo/ai-legal-research";
@@ -1188,7 +1188,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrationOptions: ["Legal Research Databases", "Document Management Systems", "Case Management Software", "Legal Libraries", "Court Systems"],
     deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
     sla: "99.9%";
-    uptime: "99.95%"
+    uptime: "99.95%",
   };
   // AI-Powered Media & Content Creation;
   {
@@ -1238,7 +1238,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-media-platform";
     demoUrl: "https://ziontechgroup.com/demo/ai-media-platform";
@@ -1248,7 +1248,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrationOptions: ["Video Editing Software", "Audio Processing Tools", "Content Management Systems", "Social Media Platforms", "Analytics Tools"],
     deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
     sla: "99.9%";
-    uptime: "99.95%"
+    uptime: "99.95%",
   };
   // AI-Powered Gaming & Entertainment;
   {
@@ -1298,7 +1298,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-gaming-platform";
     demoUrl: "https://ziontechgroup.com/demo/ai-gaming-platform";
@@ -1308,7 +1308,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrationOptions: ["Game Engines", "Analytics Platforms", "Payment Systems", "Social Platforms", "Advertising Networks"],
     deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
     sla: "99.9%";
-    uptime: "99.95%"
+    uptime: "99.95%",
   };
   // AI-Powered Cybersecurity & Threat Intelligence;
   {
@@ -1358,7 +1358,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-cybersecurity-intelligence";
     demoUrl: "https://ziontechgroup.com/demo/ai-cybersecurity-intelligence";
@@ -1368,7 +1368,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrationOptions: ["SIEM Systems", "EDR Platforms", "Firewalls", "Identity Management", "Security Tools"],
     deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
     sla: "99.99%";
-    uptime: "99.99%"
+    uptime: "99.99%",
   };
   // AI-Powered Supply Chain & Logistics;
   {
@@ -1418,7 +1418,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-supply-chain-platform";
     demoUrl: "https://ziontechgroup.com/demo/ai-supply-chain-platform";
@@ -1428,7 +1428,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrationOptions: ["ERP Systems", "WMS Platforms", "TMS Solutions", "Supplier Portals", "Financial Systems"],
     deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
     sla: "99.9%";
-    uptime: "99.95%"
+    uptime: "99.95%",
   };
   // AI-Powered Customer Experience & Support;
   {
@@ -1478,7 +1478,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-customer-experience";
     demoUrl: "https://ziontechgroup.com/demo/ai-customer-experience";
@@ -1488,7 +1488,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrationOptions: ["CRM Systems", "Help Desk Platforms", "Communication Tools", "Analytics Platforms", "Social Media"],
     deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
     sla: "99.9%";
-    uptime: "99.95%"
+    uptime: "99.95%",
   };
   // AI-Powered HR & Talent Management;
   {
@@ -1538,7 +1538,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-hr-talent-platform";
     demoUrl: "https://ziontechgroup.com/demo/ai-hr-talent-platform";
@@ -1548,7 +1548,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrationOptions: ["ATS Systems", "HRIS Platforms", "Job Boards", "Background Check Services", "Assessment Tools"],
     deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
     sla: "99.9%";
-    uptime: "99.95%"
+    uptime: "99.95%",
   };
   // AI-Powered Data Governance & Privacy;
   {
@@ -1598,7 +1598,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-data-governance";
     demoUrl: "https://ziontechgroup.com/demo/ai-data-governance";
@@ -1608,7 +1608,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrationOptions: ["Data Warehouses", "CRM Systems", "ERP Platforms", "Security Tools", "Analytics Platforms"],
     deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
     sla: "99.99%";
-    uptime: "99.99%"
+    uptime: "99.99%",
   }
 ];
     export const getInnovativeServiceByCategory = (category: string) => {

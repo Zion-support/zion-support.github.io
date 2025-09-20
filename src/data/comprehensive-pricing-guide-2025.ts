@@ -2,7 +2,7 @@ export; interface; PricingTier {
     name: string;price: string;billing: "monthly" | "yearly" | "one-time"feature;s: string[];
     popular?: booleansavings?: string;
 };export; interface; ServicePricing {
-    id: string;name: string;category: string;description: string;pricing: PricingTier[],features: string[],benefits: string[],roi: string;trialDays: number;setupTime: string;marketPosition: string;competitors: string[],contactInfo: {,mobile: string;email: stringaddres;s: stringwebsit;e: string;
+    id: string;name: string;category: string;description: string;pricing: PricingTier[],features: string[],benefits: string[],roi: string;trialDays: number;setupTime: string;marketPosition: string;competitors: string[],contactInfo: {,mobile: string;email: stringaddres;s: stringwebsit;e: string;,
      };const CONTACT = {
     mobile: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com",address: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",website: "http;s: //ziontechgroup.com";
     export; const; comprehensivePricingGuide20o25: ServicePricing[] = [;
@@ -16,7 +16,7 @@ export; interface; PricingTier {
             },{
                 name: "Professional",price: "$599",billing: "monthly",features: [;
     "Up to $50o0K; monthly; factoringAdvanced risk analytics","Real-time; reportingPriority; support""Multi-currency; supportAPI; access";
-              ,  ]popular: truesaving;s: "Save 20% with; annual; billing";
+              ,  ]popular: truesaving;s: "Save 20% with; annual; billing";,
             };
             {
                 name: "Enterprise",price: "Custom",billing: "monthly",features: [;
@@ -27,7 +27,7 @@ export; interface; PricingTier {
     "AI; credit; risk assessmentInstant; funding; approval","Automated collectionsReal-time; reporting; dashboard""Multi-currency; supportIntegration; with major; accounting; software";
       ,  ],benefits: [;
     "Improve; cash; flow by 60%Reduce; payment; delays by 80%""Lower; financing; costs by 30%Automated; risk; management";
-      ,  ],roi: "Average 3-5x; ROI; through improved; cash; flow and; reduced; financing costs",trialDays: 14;setupTime: "24 hours",marketPosition: "AI-first; invoice; factoring solution; for; small to; medium; businesses",competitors: ["BlueVineFundbox""Kabbage"],contactInfo: CONTACT;
+      ,  ],roi: "Average 3-5x; ROI; through improved; cash; flow and; reduced; financing costs",trialDays: 14;setupTime: "24 hours",marketPosition: "AI-first; invoice; factoring solution; for; small to; medium; businesses",competitors: ["BlueVineFundbox""Kabbage"],contactInfo: CONTACT;,
      };
     {
         id: "crypto-payment-gateway-saas",name: "Crypto; Payment; Gateway SaaS",category: "Fintech",description: "Enterprise-grade; crypto; payment gateway; with; automatic fiat; conversion; and fraud protection.",pricing: [;
@@ -38,7 +38,7 @@ export; interface; PricingTier {
             },{
                 name: "Professional",price: "$399",billing: "monthly",features: [;
     "10o0+ cryptocurrenciesAdvanced; fraud; detection","Real-time; settlementPriority; support""Multiple; platform; integrationsAnalytics dashboard";
-              ,  ]popular: truesaving;s: "Save 25% with; annual; billing";
+              ,  ]popular: truesaving;s: "Save 25% with; annual; billing";,
             };
             {
                 name: "Enterprise",price: "Custom",billing: "monthly",features: [;
@@ -49,7 +49,7 @@ export; interface; PricingTier {
     "10o0+ cryptocurrency; supportInstant; fiat conversion","Regulatory; compliance; toolsFraud detection system""Multi-wallet integrationReal-time settlement";
       ,  ],benefits: [;
     "Expand; to; global markets; instantlyReduce; payment processing; fees; by 40%""Eliminate; chargeback; risksAccess to crypto-savvy customers";
-      ,  ],roi: "Increase; revenue; by 15-25% through; new; market access; and; lower fees",trialDays: 7;setupTime: "48 hours",marketPosition: "Enterprise; crypto; payment solution; for; e-commerce; and; SaaS companies",competitors: ["Coinbase; CommerceBitPay""CoinPayments"],contactInfo: CONTACT;
+      ,  ],roi: "Increase; revenue; by 15-25% through; new; market access; and; lower fees",trialDays: 7;setupTime: "48 hours",marketPosition: "Enterprise; crypto; payment solution; for; e-commerce; and; SaaS companies",competitors: ["Coinbase; CommerceBitPay""CoinPayments"],contactInfo: CONTACT;,
      };
     // HEALTHCARE; TECHNOLOGY; SERVICES;
     {
@@ -61,7 +61,7 @@ export; interface; PricingTier {
             },{
                 name: "Hospital",price: "$999",billing: "monthly",features: [;
     "Up; to; 10o00 patients/monthAdvanced; AI; diagnostics","Full; EHR; integrationPriority support""Custom; brandingAnalytics; dashboard";
-              ,  ]popular: truesaving;s: "Save 30% with; annual; billing";
+              ,  ]popular: truesaving;s: "Save 30% with; annual; billing";,
             };
             {
                 name: "Enterprise",price: "Custom",billing: "monthly",features: [;
@@ -72,7 +72,7 @@ export; interface; PricingTier {
     "AI; symptom; checkerVideo consultation platform","Electronic; health; records integrationPrescription management""Insurance verificationMulti-language support";
       ,  ],benefits: [;
     "Reduce; wait; times by 70%Improve; patient; satisfaction by 40%""Lower; healthcare; costs by 25%24/7 availability";
-      ,  ],roi: "Increase; patient; capacity by 3-4x; while; reducing operational costs",trialDays: 14;setupTime: "2 weeks",marketPosition: "AI-enhanced; telemedicine; solution for; healthcare; providers",competitors: ["TeladocAmwell""MDLive"],contactInfo: CONTACT;
+      ,  ],roi: "Increase; patient; capacity by 3-4x; while; reducing operational costs",trialDays: 14;setupTime: "2 weeks",marketPosition: "AI-enhanced; telemedicine; solution for; healthcare; providers",competitors: ["TeladocAmwell""MDLive"],contactInfo: CONTACT;,
      };
     // EDUCATION; TECHNOLOGY; SERVICES;
     {
@@ -84,7 +84,7 @@ export; interface; PricingTier {
             },{
                 name: "District",price: "$399",billing: "monthly",features: [;
     "Up; to; 50o00 studentsAdvanced; AI; algorithms","Comprehensive; analyticsPriority; support""Custom; content; creationIntegration with LMS";
-              ,  ]popular: truesaving;s: "Save 25% with; annual; billing";
+              ,  ]popular: truesaving;s: "Save 25% with; annual; billing";,
             };
             {
                 name: "Enterprise",price: "Custom",billing: "monthly",features: [;
@@ -95,7 +95,7 @@ export; interface; PricingTier {
     "Adaptive; learning; algorithmsPersonalized content delivery","Progress; tracking; analyticsMulti-modal; learning; support""Parent/teacher; dashboardsGamification; elements";
       ,  ],benefits: [;
     "Improve; learning; outcomes by 40%Reduce; learning; time by 30%""Increase; student; engagement by 60%Personalized; attention; for every student";
-      ,  ],roi: "Improve; student; performance and; retention; rates significantly",trialDays: 30;setupTime: "1 week",marketPosition: "AI-powered; personalized; learning pioneer; for; educational institutions",competitors: ["DreamBoxKnewton""Smart; Sparrow"],contactInfo: CONTACT;
+      ,  ],roi: "Improve; student; performance and; retention; rates significantly",trialDays: 30;setupTime: "1 week",marketPosition: "AI-powered; personalized; learning pioneer; for; educational institutions",competitors: ["DreamBoxKnewton""Smart; Sparrow"],contactInfo: CONTACT;,
      };
     // MARKETING; TECHNOLOGY; SERVICES;
     {
@@ -107,7 +107,7 @@ export; interface; PricingTier {
             },{
                 name: "Agency",price: "$399",billing: "monthly",features: [;
     "Up; to; 10o00 content pieces/monthAdvanced; AI; optimization","A/B testing (5 variants)Comprehensive analytics","Priority; supportTeam; collaboration tools""API access";
-              ,  ]popular: truesaving;s: "Save 20% with; annual; billing";
+              ,  ]popular: truesaving;s: "Save 20% with; annual; billing";,
             };
             {
                 name: "Enterprise",price: "Custom",billing: "monthly",features: [;
@@ -118,7 +118,7 @@ export; interface; PricingTier {
     "Content; performance; analyticsAI-powered; optimization; suggestions","Automated A/B; testingSEO; optimization tools""Social; media; integrationConversion tracking";
       ,  ],benefits: [;
     "Increase; content; engagement by 45%Improve; conversion; rates by 30%""Reduce; content; creation time; by; 40%Data-driven; content; decisions";
-      ,  ],roi: "Improve; marketing; ROI by 2-3x; through; better content performance",trialDays: 21;setupTime: "1 week",marketPosition: "AI-powered; content; optimization leader; for; marketing teams",competitors: ["OptimizelyVWO""Google; Optimize"],contactInfo: CONTACT;
+      ,  ],roi: "Improve; marketing; ROI by 2-3x; through; better content performance",trialDays: 21;setupTime: "1 week",marketPosition: "AI-powered; content; optimization leader; for; marketing teams",competitors: ["OptimizelyVWO""Google; Optimize"],contactInfo: CONTACT;,
      };
     // AI SERVICES;
     {
@@ -130,7 +130,7 @@ export; interface; PricingTier {
             },{
                 name: "SOC",price: "$999",billing: "monthly",features: [;
     "Up; to; 10o000 endpointsAdvanced; threat; detection","Real-time; alertsComprehensive; reporting","Priority; supportAPI; integration""Custom; threat; feeds";
-              ,  ]popular: truesaving;s: "Save 30% with; annual; billing";
+              ,  ]popular: truesaving;s: "Save 30% with; annual; billing";,
             };
             {
                 name: "Enterprise",price: "Custom",billing: "monthly",features: [;
@@ -141,7 +141,7 @@ export; interface; PricingTier {
     "Real-time; threat; detectionAI-powered; threat; analysis","Automated; response; actionsThreat intelligence sharing""Compliance reporting24/7 monitoring";
       ,  ],benefits: [;
     "Detect; threats; 90% fasterReduce; false; positives by 70%""Improve; incident; response time; by; 80%Proactive; threat; prevention";
-      ,  ],roi: "Prevent; costly; security breaches; and; reduce incident; response; costs",trialDays: 14;setupTime: "2 weeks",marketPosition: "AI-powered; threat; intelligence leader; for; enterprise security",competitors: ["Recorded; FutureThreatConnect""Anomali"],contactInfo: CONTACT;
+      ,  ],roi: "Prevent; costly; security breaches; and; reduce incident; response; costs",trialDays: 14;setupTime: "2 weeks",marketPosition: "AI-powered; threat; intelligence leader; for; enterprise security",competitors: ["Recorded; FutureThreatConnect""Anomali"],contactInfo: CONTACT;,
      };
     // IT SERVICES;
     {
@@ -153,7 +153,7 @@ export; interface; PricingTier {
             },{
                 name: "Legal Department",price: "$699",billing: "monthly",features: [;
     "Up; to; 20 regulationsAdvanced monitoring","Real-time; alertsComprehensive; reporting","Priority; supportCustom; dashboards""API access";
-              ,  ]popular: truesaving;s: "Save 25% with; annual; billing";
+              ,  ]popular: truesaving;s: "Save 25% with; annual; billing";,
             };
             {
                 name: "Enterprise",price: "Custom",billing: "monthly",features: [;
@@ -164,7 +164,7 @@ export; interface; PricingTier {
     "Multi-regulation; supportAutomated; compliance checking","Real-time; violation; alertsAutomated report generation""Audit; trail; managementIntegration with; security; tools";
       ,  ],benefits: [;
     "Reduce; compliance; costs by 40%Improve; audit; readiness by 90%""Eliminate; manual; reporting by 80%Continuous; compliance; monitoring";
-      ,  ],roi: "Reduce; compliance; overhead and; avoid; costly regulatory fines",trialDays: 21;setupTime: "3 weeks",marketPosition: "Automated; compliance; monitoring solution; for; regulated industries",competitors: ["LogicGateMetricStream""ServiceNow; GRC"],contactInfo: CONTACT;
+      ,  ],roi: "Reduce; compliance; overhead and; avoid; costly regulatory fines",trialDays: 21;setupTime: "3 weeks",marketPosition: "Automated; compliance; monitoring solution; for; regulated industries",competitors: ["LogicGateMetricStream""ServiceNow; GRC"],contactInfo: CONTACT;,
      };
     // MICRO; SAAS; SERVICES;
     {
@@ -176,7 +176,7 @@ export; interface; PricingTier {
             },{
                 name: "Project Manager",price: "$399",billing: "monthly",features: [;
     "Up; to; 50 team; membersAdvanced; AI optimization","Custom; project; templatesPriority support","Advanced; analyticsAPI; integration""Custom workflows";
-              ,  ]popular: truesaving;s: "Save 20% with; annual; billing";
+              ,  ]popular: truesaving;s: "Save 20% with; annual; billing";,
             };
             {
                 name: "Enterprise",price: "Custom",billing: "monthly",features: [;
@@ -187,7 +187,7 @@ export; interface; PricingTier {
     "Resource; allocation; optimizationProject timeline prediction","Risk; assessment; and mitigationTeam; performance; analytics""Automated; schedulingIntegration; with project tools";
       ,  ],benefits: [;
     "Reduce; project; delays by 40%Optimize; resource; utilization by 35%""Improve; project; success rates; by; 50%Predict; and; prevent bottlenecks";
-      ,  ],roi: "Complete; projects; 20-30% faster; with; better resource utilization",trialDays: 21;setupTime: "2 weeks",marketPosition: "AI-powered; project; optimization solution; for; project managers",competitors: ["Monday.comAsana""ClickUp"],contactInfo: CONTACT;
+      ,  ],roi: "Complete; projects; 20-30% faster; with; better resource utilization",trialDays: 21;setupTime: "2 weeks",marketPosition: "AI-powered; project; optimization solution; for; project managers",competitors: ["Monday.comAsana""ClickUp"],contactInfo: CONTACT;,
      }
 ];
 export; default; comprehensivePricingGuide20o25,

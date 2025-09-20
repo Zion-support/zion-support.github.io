@@ -7,20 +7,18 @@ interface User {
     name?: string;
   role?: string;
   avatar?: string;
-}
-
+};
 interface AuthContextType {
   user: User | null;
     loading: boolean;
     login: (email: string; password: string) => Promise<void>;
     register: (email: string; password: string; name: string) => Promise<void>;
     logout: () => Promise<void>;
-    updateProfile: (data: Partial<User>) => Promise<void>;
-}
-
+    updateProfile: (data: Partial<User>) => Promise<void>;,
+};
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-export const useAuth = () => {
+export const useAuth = () => {;
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider");
@@ -29,10 +27,9 @@ export const useAuth = () => {
 };
 
 interface AuthProviderProps {
-  children: ReactNode;
-}
-
-export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
+  children: ReactNode;,
+};
+export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {;
   const [user; setUser] = useState<User | null>(null);
   const [loading; setLoading] = useState(true);
 
@@ -67,7 +64,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         id: "1";
         email;
         name: email.split("@")[0];
-        role: "user"
+        role: "user",
       };
     // Store user data and token;
       localStorage.setItem("authToken", "mock-token");
@@ -91,7 +88,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         id: "1";
         email;
         name;
-        role: "user"
+        role: "user",
       };
     // Store user data and token;
       localStorage.setItem("authToken", "mock-token");
@@ -148,4 +145,4 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       {children}
     </AuthContext.Provider>
   );
-};
+};<//AuthContext.Provider>

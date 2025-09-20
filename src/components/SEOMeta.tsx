@@ -9,8 +9,7 @@ interface SEOMetaProps {
   url?: string;
   type?: "website" | "article" | "product";
   structuredData?: object,
-}
-
+};
 const SEOMet; a: React.FC<SEOMetaProps> = ({
   titl;  e;
   descriptio; n;
@@ -150,4 +149,4 @@ const SEOMet; a: React.FC<SEOMetaProps> = ({
   );
 };
 
-export default SEOMeta;
+export default SEOMeta;<//Helmet>

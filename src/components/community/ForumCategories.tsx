@@ -6,13 +6,13 @@ export default function ForumCategories() {
     {
       id: "1",
       name: "General Discussion",
-      description: "General topics and discussions",
+      description: "General topics and discussions",;
       postCount: 150; adminOnly: false;
       icon: "message-circle",
       lastPost: {
         title: "Welcome to the community!",
         author: "Admin",
-        date: "2024-01-15"
+        date: "2024-01-15",
       }
     },
     {
@@ -25,7 +25,7 @@ export default function ForumCategories() {
       lastPost: {
         title: "API integration question",
         author: "Developer123",
-        date: "2024-01-14"
+        date: "2024-01-14",
       }
     }
   ];
@@ -69,3 +69,4 @@ const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
 export default ForumCategories;
 }
 }
+<//div>

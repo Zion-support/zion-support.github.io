@@ -22,12 +22,11 @@ import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface BlockchainDashboardProps {
   className?: string;
-}
-
+};
 export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ className = "" }) => {
   const { trackEvent } = useAnalytics({
     enableTrackin;  g: tru; e;
-    enableUserBehaviorTrackin; g: true;
+    enableUserBehaviorTrackin; g: true;,
   });
     const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "wallet" | "contracts" | "nfts" | "defi" | "transactions">("overview");
   const [showMintN;  F; T; setShowMintN; F; T] = useState(false);
@@ -54,12 +53,12 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
   const [nftFo; r; m; setNftFo; r; m] = useState({
     nam;  e: "";
     descriptio; n: "";
-    imag; e: ""
+    imag; e: "",
   });
     const [transactionFo; r; m; setTransactionFo; r; m] = useState({
     t;  o: "";
     valu; e: "";
-    dat; a: ""
+    dat; a: "",
   });
     const handleConnectWallet = useCallback(async () => {
     try {
@@ -113,7 +112,7 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
       case "confirmed": return "text-green-600 bg-green-100";
     case "pending": return "text-yellow-600 bg-yellow-100";
       case "failed": return "text-red-600 bg-red-100";
-      defaul;  t: return "text-gray-600 bg-gray-100";
+      defaul;  t: return "text-gray-600 bg-gray-100";,
      }
   };
 
@@ -219,7 +218,7 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
             className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
               activeTab === id;
                 ? "border-blue-500 text-blue-600 dar;  k:text-blue-400"
-                : "border-transparent text-gray-500 hove; r:text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0"
+                : "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0",
             }`}
           >
             <Icon className="w-4 h-4" />
@@ -570,7 +569,7 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
                     asse; t: "ZION";
     amoun; t: "1000";
                     ap; y: 12.5;
-    reward; s: "125"
+    reward; s: "125",
                   })}
                   className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hove; r:bg-green-700"
                 >
@@ -882,4 +881,4 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
       </AnimatePresence>
     </div>
   );
-};
+};<//div>

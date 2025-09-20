@@ -1,5 +1,5 @@
 export const SPECIALIZED_AI_SERVICES = [
-    // Large Language Model (LLM) Services
+    // Large Language Model (LLM) Services;
     {
         id: "enterprise-llm-platform";
         title: "Enterprise Large Language Model Platform";
@@ -47,7 +47,7 @@ export const SPECIALIZED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["PyTorch", "TensorFlow", "Hugging Face", "Transformers", "CUDA", "Distributed Training"],
         integrations: ["Data Lakes", "MLOps Platforms", "API Gateways", "Monitoring Tools", "Security Systems"],
@@ -59,7 +59,7 @@ export const SPECIALIZED_AI_SERVICES = [
         aiModel: ["GPT-4", "Claude", "LLaMA", "Custom Models", "Fine-tuned Models"],
         trainingData: "Enterprise data, industry-specific datasets, custom training data"
     },
-    // Computer Vision AI Platform
+    // Computer Vision AI Platform;
     {
         id: "advanced-computer-vision-platform";
         title: "Advanced Computer Vision AI Platform";
@@ -107,7 +107,7 @@ export const SPECIALIZED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["OpenCV", "TensorFlow", "PyTorch", "CUDA", "Edge TPU", "Computer Vision Models"],
         integrations: ["Cameras", "IoT Devices", "Cloud Platforms", "Analytics Tools", "Security Systems"],
@@ -119,7 +119,7 @@ export const SPECIALIZED_AI_SERVICES = [
         aiModel: ["YOLO", "ResNet", "EfficientNet", "Custom Models", "Pre-trained Models"],
         trainingData: "Image datasets, industry-specific images, custom training data"
     },
-    // AI-Powered Cybersecurity
+    // AI-Powered Cybersecurity;
     {
         id: "ai-cybersecurity-threat-detection";
         title: "AI-Powered Cybersecurity Threat Detection";
@@ -167,7 +167,7 @@ export const SPECIALIZED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["TensorFlow", "PyTorch", "Scikit-learn", "Deep Learning", "NLP", "Graph Analytics"],
         integrations: ["SIEM Systems", "EDR Solutions", "Firewalls", "Identity Providers", "Monitoring Tools"],
@@ -179,7 +179,7 @@ export const SPECIALIZED_AI_SERVICES = [
         aiModel: ["Neural Networks", "Random Forests", "Gradient Boosting", "Custom Models", "Ensemble Methods"],
         trainingData: "Threat data, network logs, security incidents, malware samples"
     },
-    // AI-Powered Predictive Analytics
+    // AI-Powered Predictive Analytics;
     {
         id: "ai-predictive-analytics-platform";
         title: "AI-Powered Predictive Analytics Platform";
@@ -227,7 +227,7 @@ export const SPECIALIZED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "R", "TensorFlow", "Scikit-learn", "Prophet", "Time Series Models"],
         integrations: ["Data Warehouses", "BI Tools", "ERP Systems", "CRM Systems", "Analytics Platforms"],
@@ -239,7 +239,7 @@ export const SPECIALIZED_AI_SERVICES = [
         aiModel: ["LSTM", "Random Forests", "Gradient Boosting", "ARIMA", "Prophet Models"],
         trainingData: "Historical data, time series data, business metrics, external datasets"
     },
-    // AI-Powered Process Automation
+    // AI-Powered Process Automation;
     {
         id: "ai-process-automation-platform";
         title: "AI-Powered Process Automation Platform";
@@ -287,7 +287,7 @@ export const SPECIALIZED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "UiPath", "Automation Anywhere", "Blue Prism", "Machine Learning", "NLP"],
         integrations: ["ERP Systems", "CRM Systems", "Document Management", "Email Systems", "Databases"],
@@ -299,7 +299,7 @@ export const SPECIALIZED_AI_SERVICES = [
         aiModel: ["Decision Trees", "Neural Networks", "NLP Models", "Computer Vision", "Custom Models"],
         trainingData: "Process data, workflow logs, business rules, historical processes"
     },
-    // AI-Powered Customer Intelligence
+    // AI-Powered Customer Intelligence;
     {
         id: "ai-customer-intelligence-platform";
         title: "AI-Powered Customer Intelligence Platform";
@@ -347,7 +347,7 @@ export const SPECIALIZED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "Scikit-learn", "NLP", "Recommendation Systems", "Deep Learning"],
         integrations: ["CRM Systems", "Marketing Platforms", "E-commerce Platforms", "Analytics Tools", "Data Sources"],
@@ -359,7 +359,7 @@ export const SPECIALIZED_AI_SERVICES = [
         aiModel: ["Collaborative Filtering", "Content-based Filtering", "Neural Networks", "Gradient Boosting", "Custom Models"],
         trainingData: "Customer data, transaction history, behavioral data, demographic information"
     },
-    // AI-Powered Supply Chain Optimization
+    // AI-Powered Supply Chain Optimization;
     {
         id: "ai-supply-chain-optimization";
         title: "AI-Powered Supply Chain Optimization Platform";
@@ -407,7 +407,7 @@ export const SPECIALIZED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "Scikit-learn", "Optimization Algorithms", "Time Series Models", "Graph Analytics"],
         integrations: ["ERP Systems", "WMS", "TMS", "Supplier Systems", "Analytics Platforms"],
@@ -419,7 +419,7 @@ export const SPECIALIZED_AI_SERVICES = [
         aiModel: ["LSTM", "Random Forests", "Linear Programming", "Genetic Algorithms", "Custom Models"],
         trainingData: "Historical demand, inventory levels, supplier data, logistics information"
     },
-    // AI-Powered Quality Assurance
+    // AI-Powered Quality Assurance;
     {
         id: "ai-quality-assurance-platform";
         title: "AI-Powered Quality Assurance Platform";
@@ -467,7 +467,7 @@ export const SPECIALIZED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Selenium", "Appium", "JUnit", "TestNG", "Machine Learning", "NLP", "Computer Vision"],
         integrations: ["CI/CD Pipelines", "Test Management Tools", "Bug Tracking Systems", "Monitoring Tools", "Reporting Tools"],

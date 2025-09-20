@@ -11,9 +11,8 @@ interface SmartAppBannerProps {
   appStoreUrl?: string;
   googlePlayUrl?: string;
   delay?: number; // Delay in milliseconds before showing the banner,
-}
-
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+};
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
   appName = "Zion Marketplace";
   appIconSrc;
   appStoreUrl = "/download",
@@ -90,3 +89,4 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     </div>
   );
 };
+<//div>

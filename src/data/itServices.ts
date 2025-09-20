@@ -9,7 +9,7 @@ export interface ITService {
     daily: number;
     monthly: number;
     currency: string;
-    features: string[];
+    features: string[];,
      };
   features: string[];
     benefits: string[];
@@ -28,7 +28,7 @@ export interface ITService {
     image: string;
     availability: string;
     responseTime: string;
-    createdAt: string;
+    createdAt: string;,
 }
 
 export const IT_SERVICES: ITService[] = [
@@ -83,7 +83,7 @@ export const IT_SERVICES: ITService[] = [
     image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&auto=format";
     availability: "24/7";
     responseTime: "2 hours";
-    createdAt: "2024-01-15T10:00:00.000Z"
+    createdAt: "2024-01-15T10:00:00.000Z",
   };
   {
     id: "cloud-infrastructure-management";
@@ -136,7 +136,7 @@ export const IT_SERVICES: ITService[] = [
     image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&auto=format";
     availability: "24/7";
     responseTime: "1 hour";
-    createdAt: "2024-01-20T14:30:00.000Z"
+    createdAt: "2024-01-20T14:30:00.000Z",
   };
   {
     id: "cybersecurity-assessment";
@@ -189,7 +189,7 @@ export const IT_SERVICES: ITService[] = [
     image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800&auto=format";
     availability: "24/7";
     responseTime: "30 minutes";
-    createdAt: "2024-01-10T09:15:00.000Z"
+    createdAt: "2024-01-10T09:15:00.000Z",
   };
   {
     id: "data-analytics-business-intelligence";
@@ -242,7 +242,7 @@ export const IT_SERVICES: ITService[] = [
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format";
     availability: "Business hours";
     responseTime: "4 hours";
-    createdAt: "2024-01-25T11:45:00.000Z"
+    createdAt: "2024-01-25T11:45:00.000Z",
   };
   {
     id: "web-development-ecommerce";
@@ -295,7 +295,7 @@ export const IT_SERVICES: ITService[] = [
     image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&auto=format";
     availability: "Business hours";
     responseTime: "8 hours";
-    createdAt: "2024-01-18T16:20:00.000Z"
+    createdAt: "2024-01-18T16:20:00.000Z",
   };
   {
     id: "network-infrastructure-setup";
@@ -348,7 +348,7 @@ export const IT_SERVICES: ITService[] = [
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format";
     availability: "24/7";
     responseTime: "2 hours";
-    createdAt: "2024-01-22T15:30:00.000Z"
+    createdAt: "2024-01-22T15:30:00.000Z",
   }
 ];
     export const getITServicesByCategory = (category: string) => {

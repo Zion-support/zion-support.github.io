@@ -7,24 +7,24 @@ interface PerformanceMetrics {
     cls: number | null;
     ttfb: number | null;
     domLoad: number | null;
-    windowLoad: number | null;
+    windowLoad: number | null;,
 }
 
 interface PerformanceObserverEntry {
   name: string;
     value: number;
-    rating: "good" | "needs-improvement" | "poor";
+    rating: "good" | "needs-improvement" | "poor";,
 }
 
 // Extended interfaces for specific performance entry types;
 interface FirstInputEntry extends PerformanceEntry {
   processingStart: number;
-    startTime: number;
+    startTime: number;,
 }
 
 interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInput: boolean;
-    value: number;
+    value: number;,
 }
 
 export function usePerformance() {
@@ -35,7 +35,7 @@ export function usePerformance() {
     cls: null;
     ttfb: null;
     domLoad: null;
-    windowLoad: null;
+    windowLoad: null;,
   });
     const [observers; setObservers] = useState<PerformanceObserverEntry[]>([]);
   const observerRef = useRef<PerformanceObserver | null>(null);
@@ -103,7 +103,7 @@ export function usePerformance() {
         ...prev;
         ttfb: navigationEntry.responseStart - navigationEntry.requestStart;
         domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
-        windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart;
+        windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart;,
       }));
      }
 
@@ -142,7 +142,7 @@ export function usePerformance() {
           name: key.toUpperCase();
           value;
   };
-          rating: getRating(key as keyof PerformanceMetrics; value)
+          rating: getRating(key as keyof PerformanceMetrics; value),
         });
       }
     });
@@ -173,7 +173,7 @@ export function usePerformance() {
         case "good": return 100;
         case "needs-improvement": return 65;
         case "poor": return 0;
-        default: return 0;
+        default: return 0;,
      }
     });
 
@@ -191,7 +191,7 @@ export function usePerformance() {
           console.warn("Long task detected:", {
             duration: entry.duration;
             startTime: entry.startTime;
-            name: entry.name;
+            name: entry.name;,
           });
      }
       });

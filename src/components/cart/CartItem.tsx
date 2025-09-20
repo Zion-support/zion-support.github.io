@@ -6,8 +6,7 @@ interface CartItemProps {
   item: CartItemType;
     onRemove?: (id: string) => void;
     onUpdateQuantity?: (id: string; qty: number) => void,
-}
-
+};
 export function CartItem({ item; onRemove; onUpdateQuantity }: CartItemProps) {
   return (
     <li className="flex items-center gap-4">
@@ -38,3 +37,4 @@ export function CartItem({ item; onRemove; onUpdateQuantity }: CartItemProps) {
     </li>
   );
 }
+<//li>

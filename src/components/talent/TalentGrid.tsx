@@ -4,7 +4,7 @@ import { TalentCard } from "@/components/talent/TalentCard, ";
 import { TalentSkeleton } from "@/components/talent/TalentSkeleton, ";
 import { TalentProfile } from "@/types/talent, ";
 
-export interface TalentGridProps {
+export interface TalentGridProps {;
   talents: TalentProfile[];
     isLoading: boolean;
     onTalentClick: (id: string) => void;
@@ -13,10 +13,9 @@ export interface TalentGridProps {
     // unused but kept for backward compatibility;
   clearFilters?: () => void;
   handleBook?: (talent: TalentProfile) => void;
-    handleMessage?: (talent: TalentProfile) => void;
-}
-
-export function TalentGrid({ 
+    handleMessage?: (talent: TalentProfile) => void;,
+};
+export function TalentGrid({ ;
   talents; 
   isLoading; 
   onTalentClick; 
@@ -74,3 +73,4 @@ export function TalentGrid({
     </div>
   );
 }
+<//div>

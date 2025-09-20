@@ -55,7 +55,7 @@ export const additionalAdvancedAIServices2025: AIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/quantum-neural-networks",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$4; 500-15; 000/month",
     aiModels: ["Quantum Neural Networks", "Hybrid models", "Quantum ML", "Custom algorithms"],
     accuracy: "Quantum advantage", trainingData: "Quantum datasets";
@@ -89,7 +89,7 @@ export const additionalAdvancedAIServices2025: AIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/autonomous-ai-agents",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$3; 200-10; 000/month",
     aiModels: ["Reinforcement Learning", "Multi-agent systems", "Decision trees", "Neural networks"],
     accuracy: "95.3%", trainingData: "Multi-domain datasets";
@@ -128,12 +128,12 @@ export const advancedBlockchainServices2025: MicroSaasService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/cross-chain-bridge",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$399-1; 299/month",
     competitors: ["Multichain", "Stargate", "Hop Protocol"],
     roi: "600% within 12 months", setupTime: "1-2 weeks";
     integrations: ["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],
-    freeTier: false; trialPeriod: "7 days"
+    freeTier: false; trialPeriod: "7 days",
   };
   {
     id: 2; name: "Decentralized Identity Platform";
@@ -163,12 +163,12 @@ export const advancedBlockchainServices2025: MicroSaasService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/decentralized-identity",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$249-799/month";
     competitors: ["Microsoft", "IBM", "Sovrin"],
     roi: "400% within 10 months", setupTime: "2-3 weeks";
     integrations: ["Ethereum", "Polygon", "Identity protocols", "Enterprise systems"],
-    freeTier: true; trialPeriod: "14 days"
+    freeTier: true; trialPeriod: "14 days",
   }
 ];
     // Advanced Cybersecurity Services;
@@ -199,11 +199,11 @@ export const advancedCybersecurityServices2025: ITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-soc-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$20; 000-60; 000/project",
     responseTime: "30 minutes", sla: "99.99% uptime";
     certifications: ["CISSP", "CISM", "GCIH", "GCFA"],
-    deliveryTime: "8-10 weeks", support: "24/7"
+    deliveryTime: "8-10 weeks", support: "24/7",
   };
   {
     id: 2; name: "Quantum-Safe Cryptography";
@@ -231,11 +231,11 @@ export const advancedCybersecurityServices2025: ITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/quantum-safe-cryptography",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$30; 000-80; 000/project",
     responseTime: "4 hours", sla: "99.9% uptime";
     certifications: ["Cryptography", "Security", "Quantum Computing"],
-    deliveryTime: "12-16 weeks", support: "Business hours"
+    deliveryTime: "12-16 weeks", support: "Business hours",
   }
 ];
     // Advanced Cloud & DevOps Services;
@@ -266,11 +266,11 @@ export const advancedCloudDevOpsServices2025: ITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-devops-automation",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$18; 000-50; 000/project",
     responseTime: "6 hours", sla: "99.5% uptime";
     certifications: ["AWS", "Azure", "GCP", "Kubernetes", "Docker"],
-    deliveryTime: "6-8 weeks", support: "Business hours"
+    deliveryTime: "6-8 weeks", support: "Business hours",
   }
 ];
     // Advanced Healthcare Services;
@@ -302,7 +302,7 @@ export const advancedHealthcareServices2025: AIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/genomic-ai-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$4; 200-15; 000/month",
     aiModels: ["Deep learning", "Neural networks", "Custom ML", "Bioinformatics"],
     accuracy: "97.1%", trainingData: "Genomic datasets";
@@ -341,12 +341,12 @@ export const advancedIoTServices2025: MicroSaasService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/industrial-iot-analytics",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$1; 500-6; 000/month",
     competitors: ["Siemens", "GE Digital", "PTC"],
     roi: "350% within 18 months", setupTime: "3-5 weeks";
     integrations: ["SCADA systems", "ERP platforms", "MES systems", "Cloud platforms"],
-    freeTier: false; trialPeriod: "30 days"
+    freeTier: false; trialPeriod: "30 days",
   }
 ];
     // Advanced Quantum Services;
@@ -378,7 +378,7 @@ export const advancedQuantumServices2025: AIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/quantum-ml-suite",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$6; 000-25; 000/month",
     aiModels: ["Quantum ML", "Hybrid models", "Quantum algorithms", "Custom models"],
     accuracy: "Quantum advantage", trainingData: "Quantum datasets";
@@ -417,12 +417,12 @@ export const advancedSpaceServices2025: MicroSaasService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/space-traffic-management",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$2; 500-10; 000/month",
     competitors: ["LeoLabs", "Space-Track", "ESA"],
     roi: "500% within 24 months", setupTime: "4-6 weeks";
     integrations: ["Satellite systems", "Tracking networks", "Regulatory databases", "Communication systems"],
-    freeTier: false; trialPeriod: "30 days"
+    freeTier: false; trialPeriod: "30 days",
   }
 ];
     // Advanced Sustainability Services;
@@ -455,12 +455,12 @@ export const advancedSustainabilityServices2025: MicroSaasService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/circular-economy-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$299-999/month";
     competitors: ["Ellen MacArthur Foundation", "Circularity Capital", "Circle Economy"],
     roi: "250% within 12 months", setupTime: "2-3 weeks";
     integrations: ["ERP systems", "Waste management", "Supply chain platforms", "Sustainability databases"],
-    freeTier: true; trialPeriod: "21 days"
+    freeTier: true; trialPeriod: "21 days",
   }
 ];
     // Advanced Fintech Services;
@@ -493,12 +493,12 @@ export const advancedFintechServices2025: MicroSaasService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/regtech-compliance",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$1; 200-4; 000/month",
     competitors: ["ComplyAdvantage", "RegTech", "Compliance.ai"],
     roi: "400% within 15 months", setupTime: "3-4 weeks";
     integrations: ["Banking systems", "Regulatory databases", "Risk management", "Reporting systems"],
-    freeTier: false; trialPeriod: "21 days"
+    freeTier: false; trialPeriod: "21 days",
   }
 ];
     // Export all additional services;

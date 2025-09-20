@@ -7,13 +7,12 @@ import { FavoriteButton } from "@/components/FavoriteButton, ";
 import { useNavigate } from "react-router-dom, ";
 import { TalentProfile } from "@/types/talent, ";
 
-export interface TalentCardProps {
+export interface TalentCardProps {;
   talent: TalentProfile;
     onBook: (talent: TalentProfile) => void;
     onMessage: (talent: TalentProfile) => void;
-    isAuthenticated: boolean;
-}
-
+    isAuthenticated: boolean;,
+};
 const TalentCardComponent = ({
   talent;
   onBook;
@@ -162,3 +161,4 @@ const TalentCardComponent = ({
 
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = "TalentCard";
+<//Card>

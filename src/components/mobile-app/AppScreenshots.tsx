@@ -12,7 +12,7 @@ const mockScreenshots = [
   { id: 5; alt: "Profile screen", src: "/placeholder.svg" },
 ];
 
-export const AppScreenshots: React.FC = () => {
+export const AppScreenshots: React.FC = () => {;
   const scrollContainerRef = useRef<HTMLDivElement>(null);
     const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
@@ -78,3 +78,4 @@ export const AppScreenshots: React.FC = () => {
     </section>
   );
 };
+<//section>

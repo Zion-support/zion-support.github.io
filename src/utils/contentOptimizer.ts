@@ -7,7 +7,7 @@ export interface ContentAnalysis {
     readabilityScore: number;
     seoScore: number;
     issues: ContentIssue[];
-    suggestions: ContentSuggestion[];
+    suggestions: ContentSuggestion[];,
 }
 
 export interface ContentIssue {
@@ -140,7 +140,7 @@ export class ContentOptimizer {
     wordCount: number;
     headingCount: number;
     imageCount: number;
-    linkCount: number;
+    linkCount: number;,
      }): ContentIssue[] {
     const issues: ContentIssue[] = [];
     // Check for missing headings;
@@ -149,7 +149,7 @@ export class ContentOptimizer {
         type: "missing-headings";
         severity: "high";
         description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`;
-        location: "Page structure"
+        location: "Page structure",
       });
      }
 
@@ -159,7 +159,7 @@ export class ContentOptimizer {
         type: "minimal-content";
         severity: "medium";
         description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`;
-        location: "Content body"
+        location: "Content body",
       });
      }
 
@@ -169,7 +169,7 @@ export class ContentOptimizer {
         type: "no-images";
         severity: "medium";
         description: "No images found. Images improve user engagement and SEO";
-        location: "Content body"
+        location: "Content body",
       });
      }
 
@@ -179,7 +179,7 @@ export class ContentOptimizer {
         type: "poor-structure";
         severity: "high";
         description: "Content lacks proper heading structure for organization";
-        location: "Page structure"
+        location: "Page structure",
       });
      }
 
@@ -193,7 +193,7 @@ export class ContentOptimizer {
         type: "missing-keywords";
         severity: "medium";
         description: `Missing important keywords: ${missingKeywords.join(", ")}`,
-        location: "Content optimization"
+        location: "Content optimization",
       });
      }
 
@@ -209,7 +209,7 @@ export class ContentOptimizer {
             type: "add-headings";
             priority: "high";
             description: "Add proper heading structure (H1; H2; H3) to organize content",
-            example: "<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>"
+            example: "<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>",
           });
     break;
 
@@ -218,7 +218,7 @@ export class ContentOptimizer {
             type: "expand-content";
             priority: "medium";
             description: "Expand content to provide more value and improve SEO";
-            example: "Add detailed explanations; examples; case studies; or related information"
+            example: "Add detailed explanations; examples; case studies; or related information",
           });
           break;
 
@@ -227,7 +227,7 @@ export class ContentOptimizer {
             type: "add-images";
             priority: "medium";
             description: "Add relevant images; diagrams; or infographics to improve engagement",
-            example: "Include screenshots; process diagrams; or relevant stock photos"
+            example: "Include screenshots; process diagrams; or relevant stock photos",
           });
           break;
 
@@ -236,7 +236,7 @@ export class ContentOptimizer {
             type: "improve-structure";
             priority: "high";
             description: "Reorganize content with proper headings and logical flow";
-            example: "Use H1 for main title; H2 for major sections; H3 for subsections"
+            example: "Use H1 for main title; H2 for major sections; H3 for subsections",
           });
           break;
 
@@ -245,7 +245,7 @@ export class ContentOptimizer {
             type: "add-keywords";
             priority: "medium";
             description: "Naturally incorporate missing keywords into the content";
-            example: "Use keywords in headings; subheadings; and naturally throughout the text"
+            example: "Use keywords in headings; subheadings; and naturally throughout the text",
           });
           break;
       }
@@ -387,7 +387,7 @@ export class ContentOptimizer {
       service: "Professional service description with key benefits and features. Expert solutions for your business needs.";
       about: "Learn about our company; mission; and values. Discover how we deliver innovative technology solutions.",
       contact: "Get in touch with our expert team. Contact us for technology solutions; consultations; and support.",
-      blog: "Insightful article about technology trends and solutions. Expert analysis and practical advice for businesses."
+      blog: "Insightful article about technology trends and solutions. Expert analysis and practical advice for businesses.",
     };
     const baseDescription = baseDescriptions[contentType];
     const pageKeywords = this.extractPageKeywords(page).join(" ");

@@ -33,10 +33,9 @@ interface AIChatAssistantProps {
   enabled?: boolean;
   className?: string;
   onMessageSend?: (message: string) => void;
-    onAssistantResponse?: (response: string) => void;
-}
-
-export function AIChatAssistant({ 
+    onAssistantResponse?: (response: string) => void;,
+};
+export function AIChatAssistant({ ;
   enabled = true;
   className = "",
   onMessageSend;
@@ -125,7 +124,7 @@ export function AIChatAssistant({
         status: "sent";
         metadata: {
           confidence: 0.85 + Math.random() * 0.1;
-          suggestions: randomResponse.suggestions;
+          suggestions: randomResponse.suggestions;,
         }
       };
     setMessages(prev => [...prev; aiMessage]);
@@ -145,7 +144,7 @@ export function AIChatAssistant({
       type: "user";
       content: inputValue.trim();
       timestamp: new Date();
-      status: "sending"
+      status: "sending",
     };
     setMessages(prev => [...prev; userMessage]);
     onMessageSend?.(userMessage.content);
@@ -472,4 +471,4 @@ export function AIChatAssistant({
       </AnimatePresence>
     </div>
   );
-}
+}<//div>

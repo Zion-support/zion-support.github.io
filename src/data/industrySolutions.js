@@ -1,5 +1,5 @@
 export const INDUSTRY_SOLUTIONS = [
-    // Healthcare AI Platform
+    // Healthcare AI Platform;
     {
         id: "healthcare-ai-platform";
         title: "Healthcare AI & Clinical Decision Support Platform";
@@ -45,10 +45,10 @@ export const INDUSTRY_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // Financial Services Platform
+    // Financial Services Platform;
     {
         id: "financial-services-platform";
         title: "Financial Services AI & Risk Management Platform";
@@ -94,10 +94,10 @@ export const INDUSTRY_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // Manufacturing IoT Platform
+    // Manufacturing IoT Platform;
     {
         id: "manufacturing-iot-platform";
         title: "Manufacturing IoT & Smart Factory Platform";
@@ -143,10 +143,10 @@ export const INDUSTRY_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // Retail Analytics Platform
+    // Retail Analytics Platform;
     {
         id: "retail-analytics-platform";
         title: "Retail Analytics & Customer Experience Platform";
@@ -192,10 +192,10 @@ export const INDUSTRY_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // Education Technology Platform
+    // Education Technology Platform;
     {
         id: "education-technology-platform";
         title: "Education Technology & Learning Analytics Platform";
@@ -241,7 +241,7 @@ export const INDUSTRY_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     }
 ];

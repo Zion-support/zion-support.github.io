@@ -27,8 +27,7 @@ interface ProductCardProps {
     onBuy?: () => void;
   /** Disable the Buy Now button (e.g. when the checkout route isn"t ready). */
   buyDisabled?: boolean;
-}
-
+};
 export default function ProductCard({ produc;  t; onBu; y; buyDisabled = false }: ProductCardProps) {
   const { isAuthenticated } = useAuth();
   const { isWishliste;  d; toggle } = useWishlist();
@@ -60,7 +59,7 @@ export default function ProductCard({ produc;  t; onBu; y; buyDisabled = false }
         i;  d: product.i; d;
     titl; e: productTitl; e;
         pric; e: product.price ?? 0;
-    imag; e: imageUrl || undefine; d;
+    imag; e: imageUrl || undefine; d;,
   };
       })
     );
@@ -155,3 +154,4 @@ export default function ProductCard({ produc;  t; onBu; y; buyDisabled = false }
     </div>
   );
 }
+<//div>

@@ -29,7 +29,7 @@ export interface AdvancedInnovativeService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
+    website: string;,
      };
   realImplementation: boolean;
     implementationDetails: string;
@@ -45,7 +45,7 @@ export interface AdvancedInnovativeService {
     setupFee: string;
     monthlyFee: string;
     annualDiscount: string;
-    enterprisePricing: string;
+    enterprisePricing: string;,
 }
 
 export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] = [
@@ -92,7 +92,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Fully operational AI-powered BI platform with machine learning algorithms; real-time data processing; and automated insights generation.",
@@ -108,7 +108,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
     setupFee: "$5;000",
     monthlyFee: "$2;499",
     annualDiscount: "15% off annual billing";
-    enterprisePricing: "Custom pricing for 1000+ users"
+    enterprisePricing: "Custom pricing for 1000+ users",
   };
   // CYBERSECURITY & THREAT INTELLIGENCE;
   {
@@ -153,7 +153,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Operational quantum-resistant cybersecurity platform with AI threat detection; zero-trust architecture; and compliance automation.",
@@ -169,7 +169,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
     setupFee: "$10;000",
     monthlyFee: "$3;999",
     annualDiscount: "20% off annual billing";
-    enterprisePricing: "Custom pricing for enterprise deployments"
+    enterprisePricing: "Custom pricing for enterprise deployments",
   };
   // CLOUD & DEVOPS AUTOMATION;
   {
@@ -214,7 +214,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Fully operational cloud orchestration platform with AI-powered optimization; multi-cloud management; and automated infrastructure management.",
@@ -230,7 +230,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
     setupFee: "$3;000",
     monthlyFee: "$1;999",
     annualDiscount: "10% off annual billing";
-    enterprisePricing: "Custom pricing for large deployments"
+    enterprisePricing: "Custom pricing for large deployments",
   };
   // BLOCKCHAIN & WEB3 SOLUTIONS;
   {
@@ -275,7 +275,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Operational enterprise blockchain platform with multi-chain support; smart contract automation; and enterprise-grade security.",
@@ -291,7 +291,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
     setupFee: "$15;000",
     monthlyFee: "$4;999",
     annualDiscount: "25% off annual billing";
-    enterprisePricing: "Custom pricing for enterprise deployments"
+    enterprisePricing: "Custom pricing for enterprise deployments",
   };
   // IOT & EDGE COMPUTING;
   {
@@ -336,7 +336,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Fully operational AI-powered IoT edge platform with real-time processing; predictive analytics; and secure edge-to-cloud communication.",
@@ -352,7 +352,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
     setupFee: "$8;000",
     monthlyFee: "$2;999",
     annualDiscount: "15% off annual billing";
-    enterprisePricing: "Custom pricing for large IoT deployments"
+    enterprisePricing: "Custom pricing for large IoT deployments",
   };
   // DIGITAL TWIN & SIMULATION;
   {
@@ -397,7 +397,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Operational digital twin platform with 3D modeling; real-time simulation; IoT integration; and advanced analytics capabilities.",
@@ -413,7 +413,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
     setupFee: "$25;000",
     monthlyFee: "$5;999",
     annualDiscount: "30% off annual billing";
-    enterprisePricing: "Custom pricing for enterprise deployments"
+    enterprisePricing: "Custom pricing for enterprise deployments",
   };
   // AUTOMATED TESTING & QUALITY ASSURANCE;
   {
@@ -458,7 +458,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Fully operational AI-powered testing automation platform with intelligent test generation; automated execution; and comprehensive reporting.",
@@ -474,7 +474,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
     setupFee: "$2;000",
     monthlyFee: "$1;499",
     annualDiscount: "10% off annual billing";
-    enterprisePricing: "Custom pricing for large development teams"
+    enterprisePricing: "Custom pricing for large development teams",
   };
   // DATA PRIVACY & COMPLIANCE;
   {
@@ -519,7 +519,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Operational compliance management platform with multi-framework support; automated monitoring; and comprehensive reporting capabilities.",
@@ -535,7 +535,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
     setupFee: "$8;000",
     monthlyFee: "$3;499",
     annualDiscount: "20% off annual billing";
-    enterprisePricing: "Custom pricing for enterprise deployments"
+    enterprisePricing: "Custom pricing for enterprise deployments",
   }
 ];
     export default advancedInnovativeServicesExpansionV3;

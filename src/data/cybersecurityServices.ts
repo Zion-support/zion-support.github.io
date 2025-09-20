@@ -18,7 +18,7 @@ export interface CybersecurityService {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
 }
 
@@ -69,7 +69,7 @@ export const CYBERSECURITY_SERVICES: CybersecurityService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }
   };
   // AI-Powered Threat Detection;
@@ -118,7 +118,7 @@ export const CYBERSECURITY_SERVICES: CybersecurityService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }
   };
   // Cloud Security Posture Management;
@@ -167,7 +167,7 @@ export const CYBERSECURITY_SERVICES: CybersecurityService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }
   };
   // Privacy Compliance Automation;
@@ -216,7 +216,7 @@ export const CYBERSECURITY_SERVICES: CybersecurityService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }
   };
   // IoT Security Management;
@@ -265,7 +265,7 @@ export const CYBERSECURITY_SERVICES: CybersecurityService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }
   }
 ];

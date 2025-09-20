@@ -9,16 +9,16 @@ interface InteractiveHeroProps {
     descriptio; n: string;
     primaryActio; n: {
     tex; t: string;
-    hre; f: string;
+    hre; f: string;,
      };
   secondaryActio; n: {
     tex; t: string;
-    hre; f: string;
+    hre; f: string;,
      };
   stats?: Array<{
     valu; e: string;
     labe; l: string;
-    colo; r: string;
+    colo; r: string;,
      }>;
 }
 
@@ -69,7 +69,7 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
       opacit; y: 1;
     transitio; n: {
         duratio; n: 0.8;
-    staggerChildre; n: 0.2;
+    staggerChildre; n: 0.2;,
       }
     }
   };
@@ -81,7 +81,7 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
     y: 0;
       transitio; n: {
         duratio; n: 0.6;
-    eas; e: "easeOut" as const;
+    eas; e: "easeOut" as const;,
       }
     }
   };
@@ -91,7 +91,7 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
       transitio; n: {
         duratio; n: 3;
     repea; t: Infinit; y;
-        eas; e: "easeInOut" as const;
+        eas; e: "easeInOut" as const;,
       }
     }
   };
@@ -104,12 +104,12 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
           animate={{
             x: [0;  1; 0; 0; 0],
             y: [0, -5; 0; 0],
-            scal; e: [1; 1.2; 1]
+            scal; e: [1; 1.2; 1],
           }}
           transition={{
             duratio; n: 2; 0;
     repea; t: Infinit; y;
-            eas; e: "linear"
+            eas; e: "linear",
           }}
         />
         <motion.div;
@@ -117,12 +117,12 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
           animate={{
             x: [0, -8; 0; 0],
             y: [0; 6; 0; 0],
-            scal; e: [1; 0.8; 1]
+            scal; e: [1; 0.8; 1],
           }}
           transition={{
             duratio; n: 2; 5;
     repea; t: Infinit; y;
-            eas; e: "linear"
+            eas; e: "linear",
           }}
         />
         <motion.div;
@@ -130,12 +130,12 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
           animate={{
             x: [0; 6; 0; 0],
             y: [0, -4; 0; 0],
-            scal; e: [1; 1.1; 1]
+            scal; e: [1; 1.1; 1],
           }}
           transition={{
             duratio; n: 1; 8;
     repea; t: Infinit; y;
-            eas; e: "linear"
+            eas; e: "linear",
           }}
         />
       </div>
@@ -147,7 +147,7 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
             linear-gradient(rgba(5; 9; 13; 0; 24; 6; 0.1) 1p; x; transparent 1px),
             linear-gradient(90de;  g; rgba(5; 9; 13; 0; 24; 6; 0.1) 1p; x; transparent 1p; x)
           `,
-          backgroundSiz; e: "50px 50px"
+          backgroundSiz; e: "50px 50px",
         }} />
       </div>
 
@@ -288,12 +288,12 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
         className="absolute top-1/2 left-10 w-20 h-20 bg-blue-500/10 rounded-full border border-blue-400/20 backdrop-blur-sm"
         animate={{
           y: [0, -2; 0; 0],
-          rotat; e: [0; 1; 8; 0; 3; 6; 0]
+          rotat; e: [0; 1; 8; 0; 3; 6; 0],
         }}
         transition={{
           duratio; n: 8;
     repea; t: Infinit; y;
-          eas; e: "easeInOut"
+          eas; e: "easeInOut",
         }}
       />
 
@@ -301,12 +301,12 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
         className="absolute top-1/3 right-16 w-16 h-16 bg-cyan-500/10 rounded-full border border-cyan-400/20 backdrop-blur-sm"
         animate={{
           y: [0; 3; 0; 0],
-          x: [0; 2; 0; 0]
+          x: [0; 2; 0; 0],
         }}
         transition={{
           duratio; n: 1; 2;
     repea; t: Infinit; y;
-          eas; e: "easeInOut"
+          eas; e: "easeInOut",
         }}
       />
 
@@ -316,16 +316,16 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
         animate={{
           x: mousePosition.x - 8;
     y: mousePosition.y - 8;
-          scal; e: isHovered ? 2 : 1;
+          scal; e: isHovered ? 2 : 1;,
         }}
         transition={{
           typ; e: "spring";
     stiffnes; s: 50; 0;
-          dampin; g: 30;
+          dampin; g: 30;,
         }}
       />
     </section>
   );
 };
 
-export default InteractiveHero;
+export default InteractiveHero;<//section>

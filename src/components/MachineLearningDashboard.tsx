@@ -24,12 +24,11 @@ import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface MLDashboardProps {
   className?: string;
-}
-
+};
 export const MachineLearningDashboar; d: React.FC<MLDashboardProps> = ({ className = "" }) => {
   const { trackEvent } = useAnalytics({
     enableTrackin;  g: tru; e;
-    enableUserBehaviorTrackin; g: true;
+    enableUserBehaviorTrackin; g: true;,
   });
     const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "models" | "training" | "predictions" | "analytics">("overview");
   const [showCreateMod;  e; l; setShowCreateMod; e; l] = useState(false);
@@ -54,18 +53,18 @@ export const MachineLearningDashboar; d: React.FC<MLDashboardProps> = ({ classNa
   const [newModelFo; r; m; setNewModelFo; r; m] = useState({
     nam;  e: "";
     typ; e: "classification" a; s; cons; t;
-    framewor; k: "tensorflow" as const;
+    framewor; k: "tensorflow" as const;,
   });
     const [predictionFo; r; m; setPredictionFo; r; m] = useState({
     modelI;  d: "";
-    inpu; t: ""
+    inpu; t: "",
   });
     const handleCreateModel = useCallback(() => {
     if (newModelForm.name.trim()) {
       createModel({
         nam;  e: newModelForm.nam; e;
     typ; e: newModelForm.typ; e;
-        framewor; k: newModelForm.framework;
+        framewor; k: newModelForm.framework;,
       });
     setNewModelForm({ nam;  e: "";
     typ; e: "classification", framewor; k: "tensorflow" });
@@ -79,7 +78,7 @@ export const MachineLearningDashboar; d: React.FC<MLDashboardProps> = ({ classNa
       learningRat; e: 0.00; 1;
     batchSiz; e: 3; 2;
       epoch; s: 10; 0;
-    optimize; r: "adam"
+    optimize; r: "adam",
     };
     try {
       await startTraining(modelI;  d; hyperparameters);
@@ -153,7 +152,7 @@ export const MachineLearningDashboar; d: React.FC<MLDashboardProps> = ({ classNa
     case "ready": return "text-blue-600 bg-blue-100";
       case "training": return "text-yellow-600 bg-yellow-100";
       case "archived": return "text-gray-600 bg-gray-100";
-      defaul;  t: return "text-gray-600 bg-gray-100";
+      defaul;  t: return "text-gray-600 bg-gray-100";,
      }
   };
 
@@ -163,7 +162,7 @@ export const MachineLearningDashboar; d: React.FC<MLDashboardProps> = ({ classNa
     case "completed": return "text-green-600 bg-green-100";
       case "failed": return "text-red-600 bg-red-100";
       case "pending": return "text-yellow-600 bg-yellow-100";
-      defaul;  t: return "text-gray-600 bg-gray-100";
+      defaul;  t: return "text-gray-600 bg-gray-100";,
      }
   };
 
@@ -175,7 +174,7 @@ export const MachineLearningDashboar; d: React.FC<MLDashboardProps> = ({ classNa
       case "nlp": return <Brain className="w-4 h-4" />;
       case "computer_vision": return <Eye className="w-4 h-4" />;
       case "recommendation": return <Zap className="w-4 h-4" />;
-      defaul;  t: return <Brain className="w-4 h-4" />;
+      defaul;  t: return <Brain className="w-4 h-4" />;,
      }
   };
 
@@ -235,7 +234,7 @@ export const MachineLearningDashboar; d: React.FC<MLDashboardProps> = ({ classNa
             className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
               activeTab === id;
                 ? "border-purple-500 text-purple-600 dar;  k:text-purple-400"
-                : "border-transparent text-gray-500 hove; r:text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0"
+                : "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0",
             }`}
           >
             <Icon className="w-4 h-4" />
@@ -827,4 +826,4 @@ export const MachineLearningDashboar; d: React.FC<MLDashboardProps> = ({ classNa
       </div>
     </div>
   );
-};
+};<//div>

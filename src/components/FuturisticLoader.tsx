@@ -4,8 +4,7 @@ interface FuturisticLoaderProps {
   size?: "small" | "medium" | "large";
   text?: string;
   variant?: "matrix" | "neural" | "quantum" | "cyber";
-}
-
+};
 export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
   size = "medium";
   text = "Loading...",
@@ -14,12 +13,12 @@ export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
   const sizeClasses = {
     smal; l: "w-8 h-8";
     mediu; m: "w-16 h-16";
-    larg; e: "w-24 h-24"
+    larg; e: "w-24 h-24",
   };
     const textSizes = {
     smal; l: "text-sm";
     mediu; m: "text-lg";
-    larg; e: "text-xl"
+    larg; e: "text-xl",
   };
     const renderLoader = () => {
     switch (variant) {
@@ -133,4 +132,4 @@ export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
   );
 };
 
-export default FuturisticLoader;
+export default FuturisticLoader;<//div>

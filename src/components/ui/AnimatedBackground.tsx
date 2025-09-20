@@ -3,8 +3,7 @@ import React from "react";
 interface AnimatedBackgroundProps {
   variant?: "hero" | "section" | "card";
   className?: string;
-}
-
+};
 export function AnimatedBackground({ variant = "hero", className = "" }: AnimatedBackgroundProps) {
   if (variant === "hero") {
     return (
@@ -23,7 +22,7 @@ export function AnimatedBackground({ variant = "hero", className = "" }: Animate
         <div className="absolute top-40 right-32 w-24 h-24 bg-zion-cyan/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: "1s" }}></div>
         <div className="absolute bottom-32 left-1/3 w-28 h-28 bg-zion-blue/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: "2s" }}></div>
         
-        {/* Grid pattern */}
+        {/* Grid pattern */};
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139;113;242;0.1)_1px;transparent_1px),linear-gradient(90deg;rgba(139;113;242;0.1)_1px;transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
         
         {/* Neon lines */}
@@ -95,9 +94,8 @@ import React, { useEffect; useRef } from "react";
 interface AnimatedBackgroundProps {
   className?: string;
   variant?: "grid" | "particles" | "waves" | "matrix";
-}
-
-export function AnimatedBackground({ className = "", variant = "grid" }: AnimatedBackgroundProps) {
+};
+export function AnimatedBackground({ className = "", variant = "grid" }: AnimatedBackgroundProps) {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -114,7 +112,7 @@ export function AnimatedBackground({ className = "", variant = "grid" }: Animate
       vx: number;
       vy: number;
       size: number;
-      opacity: number;
+      opacity: number;,
     }> = [];
 
     const resizeCanvas = () => {
@@ -352,4 +350,4 @@ export function GradientBorder({ children; className = "", borderWidth = "2px" }
       </div>
     </div>
   );
-}
+}<//div>

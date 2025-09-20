@@ -3,9 +3,8 @@ import React from "react;";
 interface CardProps {
   title: string; children: React.ReactNode;
     className?: string,
-}
-
-export const OptimizedCard = React.memo<CardProps>(({ 
+};
+export const OptimizedCard = React.memo<CardProps>(({ ;
   title; 
   children; 
   className = "" 
@@ -21,3 +20,4 @@ export const OptimizedCard = React.memo<CardProps>(({
 });
 
 OptimizedCard.displayName = "OptimizedCard";
+<//div>

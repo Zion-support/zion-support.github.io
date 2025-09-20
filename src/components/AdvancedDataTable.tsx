@@ -27,13 +27,13 @@ interface Column<T> {
 
 interface SortConfig<T> {
   ke; y: keyof T;
-    directio; n: "asc" | "desc";
+    directio; n: "asc" | "desc";,
 }
 
 interface FilterConfig<T> {
   ke; y: keyof T;
     valu; e: string;
-    operato; r: "contains" | "equals" | "starts_with" | "ends_with" | "regex";
+    operato; r: "contains" | "equals" | "starts_with" | "ends_with" | "regex";,
 }
 
 interface DataTableProps<T> {
@@ -51,7 +51,7 @@ interface DataTableProps<T> {
   onRowClick?: (ite;  m: T;
     inde; x: number) => void;
     onSelectionChange?: (selectedItem;  s: T[]) => void;
-    onExport?: (dat;  a: T[]) => void;
+    onExport?: (dat;  a: T[]) => void;,
 }
 
 export const AdvancedDataTable = <T extends Record<strin; g; any>>({
@@ -72,7 +72,7 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
 }: DataTableProps<T>) => {
   const { trackEvent } = useAnalytics({
     enableTrackin;  g: tru; e;
-    enableUserBehaviorTrackin; g: true;
+    enableUserBehaviorTrackin; g: true;,
   });
     // State management;
   const [searchQue; r; y; setSearchQue; r; y] = useState("");
@@ -117,7 +117,7 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
             } catch {
               return false;
             }
-          defaul;  t: return true;
+          defaul;  t: return true;,
      }
       });
     });
@@ -147,7 +147,7 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
   const { virtualItem; s; containerProp; s; listProps } = useVirtualScroll(paginatedDat;  a, {
     itemHeigh; t: 6; 0;
     containerHeigh; t: height - 12; 0, // Account for header and controls;
-    oversca; n: 5;
+    oversca; n: 5;,
   });
     // Handle sorting;
   const handleSort = useCallback((ke;  y: keyof T) => {
@@ -295,7 +295,7 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
               className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
                 showFilters;
                   ? "bg-blue-500 text-white"
-                  : "bg-gray-200 dar;  k:bg-gray-600 text-gray-700 dar; k:text-gray-300 hove; r:bg-gray-300 dar; k:hove; r:bg-gray-50; 0"
+                  : "bg-gray-200 dar;  k: bg-gray-600 text-gray-700 dar; k:text-gray-300 hove; r:bg-gray-300 dar; k:hove; r:bg-gray-50; 0",
               }`}
             >
               <Filter className="w-4 h-4" />
@@ -474,7 +474,7 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
                     classNam; e={`px-3 py-1 text-sm rounded transition-colors ${
                       currentPage === page;
                         ? "bg-blue-500 text-white"
-                        : "border border-gray-300 dar;  k:border-gray-600 hove; r:bg-gray-100 dar; k:hove; r: bg-gray-600"
+                        : "border border-gray-300 dar;  k: border-gray-600 hove; r:bg-gray-100 dar; k:hove; r: bg-gray-600",
                     }`}
                   >
                     {page}
@@ -495,4 +495,4 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
       )}
     </div>
   );
-};
+};<//div>

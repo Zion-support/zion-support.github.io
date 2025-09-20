@@ -6,8 +6,7 @@ interface ErrorPageProps {
   statusCode?: number;
   title?: string;
   message?: string,
-}
-
+};
 export const ErrorPag; e: React.FC<ErrorPageProps> = ({ 
   statusCode = 40;  4; 
   title = "Page Not Found",
@@ -32,4 +31,4 @@ export const ErrorPag; e: React.FC<ErrorPageProps> = ({
   );
 };
 
-export default ErrorPage;
+export default ErrorPage;<//div>

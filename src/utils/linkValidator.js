@@ -16,7 +16,7 @@ export class LinkValidator {
         'whatsapp: '
     ];
     static BROKEN_LINK_MAPPINGS = {
-        // Fix common broken internal links
+        // Fix common broken internal links;
         '/quantum-neural-network-platform/': '/services/quantum-technology',
         '/autonomous-business-operations-platform/': '/services/ai-autonomous-systems',
         '/ai-powered-it-asset-management/': '/services/it-infrastructure',
@@ -84,40 +84,40 @@ export class LinkValidator {
         '/accessibility-scanner/': '/services/accessibility'
     };
     static validateLink(url, parentPage) {
-        // Check for protocol links
+        // Check for protocol links;
         if (this.PROTOCOL_LINKS.some(protocol => url.startsWith(protocol))) {
             return {
                 url,
                 status: 'protocol';
                 parentPage,
-                suggestedFix: 'Keep as-is - these are valid protocol links'
+                suggestedFix: 'Keep as-is - these are valid protocol links',
             };
      }
-        // Check for external links
+        // Check for external links;
         if (this.isExternalLink(url)) {
             return {
                 url,
                 status: 'external';
                 parentPage,
-                suggestedFix: 'Add rel="nofollow" and validate periodically'
+                suggestedFix: 'Add rel="nofollow" and validate periodically',
             };
      }
-        // Check for broken internal links that have mappings
+        // Check for broken internal links that have mappings;
         if (this.BROKEN_LINK_MAPPINGS[url]) {
             return {
                 url,
                 status: 'broken';
                 parentPage,
                 suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`;
-                error: 'Broken internal link with available redirect'
+                error: 'Broken internal link with available redirect',
             };
      }
-        // For now, assume internal links are valid
-        // In a real implementation, you'd check against actual routes
+        // For now, assume internal links are valid;
+        // In a real implementation, you'd check against actual routes;
         return {
             url,
             status: 'valid';
-            parentPage
+            parentPage;
         };
     }
     static getSuggestedFixes() {
@@ -125,7 +125,7 @@ export class LinkValidator {
             originalUrl: original;
             newUrl: newUrl;
             type: 'redirect';
-            reason: 'Broken internal link with available redirect mapping'
+            reason: 'Broken internal link with available redirect mapping',
         }));
      }
     static isExternalLink(url) {
@@ -134,7 +134,7 @@ export class LinkValidator {
     return !urlObj.hostname.includes('ziontechgroup.com');
         }
         catch {
-            // If it's a relative URL, it's internal
+            // If it's a relative URL, it's internal;
             return false;
         }
     }
@@ -142,7 +142,7 @@ export class LinkValidator {
         const redirects = Object.entries(this.BROKEN_LINK_MAPPINGS)
             .map(([from, to]) => `${from} ${to} 301`)
             .join('\n');
-        return `# Redirect rules for broken links
+        return `# Redirect rules for broken links;
 ${redirects}`;
     }
     static generateSitemapExclusions() {

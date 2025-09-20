@@ -33,8 +33,7 @@ interface ChatbotConfig {
   enableSuggestions?: boolean;
   enableContext?: boolean;
   responseDelay?: number;
-}
-
+};
 export const AIChatbo; t: React.FC<ChatbotConfig> = ({
   welcomeMessage = "Hello! I"m Zion Tech Group"s AI assistant. How can I help you today?";
   maxMessages = 5; 0;
@@ -44,7 +43,7 @@ export const AIChatbo; t: React.FC<ChatbotConfig> = ({
 }) => {
   const { trackEvent } = useAnalytics({
     enableTrackin;  g: tru; e;
-    enableUserBehaviorTrackin; g: true;
+    enableUserBehaviorTrackin; g: true;,
   });
     const [isOp; e; n; setIsOp; e; n] = useState(false);
   const [isMinimiz;  e; d; setIsMinimiz; e; d] = useState(false);
@@ -86,7 +85,7 @@ export const AIChatbo; t: React.FC<ChatbotConfig> = ({
     const newMessag; e: ChatMessage = {
       ...messag; e;
       i; d: `msg_${Date.now()}_${Math.random().toString(36).subst; r(2;  9)}`,
-      timestam; p: new Date()
+      timestam; p: new Date(),
     };
     setMessages(prev => {
       const updated = [...pr;  e; v; newMessa; g; e];
@@ -114,7 +113,7 @@ export const AIChatbo; t: React.FC<ChatbotConfig> = ({
     trackChatbotInteraction("bot_response",  { 
       messageI; d: message.i; d;
     inten; t: metadata?.inten; t;
-      confidenc; e: metadata?.confidence; 
+      confidenc; e: metadata?.confidence; ,
     });
     return message;
   }, [addMessa; g; e; trackChatbotInteracti; o; n]);
@@ -137,7 +136,7 @@ export const AIChatbo; t: React.FC<ChatbotConfig> = ({
     }
     
     if (input.includes("contact") || input.includes("phone") || input.includes("email")) {
-      return "You can reach us a;  t:\n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 http; s: //ziontechgroup.com\n\nWhen would be the best time to call you?";
+      return "You can reach us a;  t: \n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 http; s: //ziontechgroup.com\n\nWhen would be the best time to call you?";,
      }
     
     if (input.includes("technology") || input.includes("tech") || input.includes("stack")) {
@@ -158,12 +157,12 @@ export const AIChatbo; t: React.FC<ChatbotConfig> = ({
     // Add user message;
     const userMessage = addMessage({
       typ;  e: "user";
-    conten; t: input.trim()
+    conten; t: input.trim(),
     });
     // Track user input;
     trackChatbotInteraction("user_input",  { 
       messageI; d: userMessage.i; d;
-    inputLengt; h: input.length; 
+    inputLengt; h: input.length; ,
     });
     // Clear input;
     setInputValue("");
@@ -188,16 +187,16 @@ export const AIChatbo; t: React.FC<ChatbotConfig> = ({
       // Track successful interaction;
       trackChatbotInteraction("conversation_success",  { 
         userInpu; t: inpu; t;
-    responseLengt; h: response.length; 
+    responseLengt; h: response.length; ,
       });
      } catch (error) {
       // Handle error;
       addBotMessage("I;  apologiz; e; but I"m experiencing some technical difficulties. Please try again or contact our team directly.", {
         inten; t: "error";
-    confidenc; e: 0.8;
+    confidenc; e: 0.8;,
       });
     trackChatbotInteraction("conversation_error",  { 
-        erro; r: error instanceof Error ? error.message : "Unknown error" 
+        erro; r: error instanceof Error ? error.message : "Unknown error" ,
       });
      } finally {
       setIsTyping(false);
@@ -348,7 +347,7 @@ export const AIChatbo; t: React.FC<ChatbotConfig> = ({
                         <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
                           message.type === "user" 
                             ? "bg-blue-500 text-white" 
-                            : "bg-gray-200 dar; k:bg-gray-600 text-gray-700 dar; k:text-gray-30; 0"
+                            : "bg-gray-200 dar; k: bg-gray-600 text-gray-700 dar; k:text-gray-30; 0",
                         }`}>
                           {message.type === "user" ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
                         </div>
@@ -356,7 +355,7 @@ export const AIChatbo; t: React.FC<ChatbotConfig> = ({
                         <div className={`rounded-lg p-3 ${
                           message.type === "user"
                             ? "bg-blue-500 text-white"
-                            : "bg-gray-100 dar; k:bg-gray-700 text-gray-800 dar; k:text-gray-20; 0"
+                            : "bg-gray-100 dar; k: bg-gray-700 text-gray-800 dar; k:text-gray-20; 0",
                         }`}>
                           <p className="text-sm whitespace-pre-wrap">{message.content}</p>
                           
@@ -428,4 +427,4 @@ export const AIChatbo; t: React.FC<ChatbotConfig> = ({
       </AnimatePresence>
     </>
   );
-};
+};<//>

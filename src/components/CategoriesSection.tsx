@@ -28,5 +28,6 @@ export const CategoriesSection = () => {
         </div>
       </div>
     </div>
-  ),
+  ),;
 };
+<//div>

@@ -7,4 +7,4 @@ const TeamRecommendationDisplay: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default TeamRecommendationDisplay,
+export default TeamRecommendationDisplay,;<//div>

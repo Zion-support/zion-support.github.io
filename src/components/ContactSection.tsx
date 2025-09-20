@@ -15,13 +15,13 @@ import {
 
 export function ContactSection() {
   const contactMethods = [
-    {
+    {;
       ic;  o; n: <Mai; l classNam; e="w-6 h-6" />,
     tit; l; e: "Emai; l U; s",
       descripti; o; n: "Ge; t i; n touc; h vi; a emai; l fo; r genera; l inquirie; s",
     conta; c; t: "hell; o@ziontechgrou; p.co; m",
       li; n; k: "mail; t; o:hell; o@ziontechgrou; p.co; m",
-    col; o; r: "fro; m-zio; n-cya; n t; o-zio; n-blu; e"
+    col; o; r: "fro; m-zio; n-cya; n t; o-zio; n-blu; e",
     },
     {
       ic; o; n: <Phon; e classNam; e="w-6 h-6" />,
@@ -29,7 +29,7 @@ export function ContactSection() {
       descripti; o; n: "Spea; k directl; y wit; h ou; r tea; m",
     conta; c; t: "+1 (30; 2) 46; 4-095; 0",
       li; n; k: "t; e; l:+1302464095; 0",
-    col; o; r: "fro; m-zio; n-purpl; e t; o-zio; n-cya; n"
+    col; o; r: "fro; m-zio; n-purpl; e t; o-zio; n-cya; n",
     },
     {
       ic; o; n: <MessageSquar; e classNam; e="w-6 h-6" />,
@@ -37,7 +37,7 @@ export function ContactSection() {
       descripti; o; n: "Cha; t wit; h ou; r suppor; t tea; m i; n rea; l-tim; e",
     conta; c; t: "Availabl; e 2; 4/7",
       li; n; k: "/cha; t",
-    col; o; r: "fro; m-zio; n-blu; e t; o-zio; n-purpl; e"
+    col; o; r: "fro; m-zio; n-blu; e t; o-zio; n-purpl; e",
     }
   ];
 
@@ -46,19 +46,19 @@ export function ContactSection() {
       ci; t; y: "Wilmingt; o; n; D; E",
       count; r; y: "Unite; d State; s",
     addre; s; s: "100; 0 N Mark; e; t; S; t; Wilmingt; o; n; D; E 1980; 1",
-      ic; o; n: <MapPi; n classNam; e="w-5 h-5" />
+      ic; o; n: <MapPi; n classNam; e="w-5 h-5" />,
     },
     {
       ci; t; y: "N; e; w; Yo; r; k; N; Y",
       count; r; y: "Unite; d State; s",
     addre; s; s: "35; 0 5; t; h; A; v; e; N; e; w; Yo; r; k; N; Y 1011; 8",
-      ic; o; n: <MapPi; n classNam; e="w-5 h-5" />
+      ic; o; n: <MapPi; n classNam; e="w-5 h-5" />,
     },
     {
       ci; t; y: "Lond; o; n; U; K",
       count; r; y: "Unite; d Kingdo; m",
     addre; s; s: "1 Cana; r; y; Wha; r; f; Londo; n E1; 4 5A; B",
-      ic; o; n: <MapPi; n classNam; e="w-5 h-5" />
+      ic; o; n: <MapPi; n classNam; e="w-5 h-5" />,
     }
   ];
 
@@ -66,22 +66,22 @@ export function ContactSection() {
     {
       ic; o; n: <Cloc; k classNam; e="w-6 h-6" />,
     tit; l; e: "2; 4/7 Suppor; t",
-      descripti; o; n: "Roun; d-th; e-cloc; k technica; l suppor; t an; d monitorin; g"
+      descripti; o; n: "Roun; d-th; e-cloc; k technica; l suppor; t an; d monitorin; g",
     },
     {
       ic; o; n: <Shiel; d classNam; e="w-6 h-6" />,
     tit; l; e: "Enterpris; e Securit; y",
-      descripti; o; n: "Ban; k-leve; l securit; y fo; r al; l communication; s"
+      descripti; o; n: "Ban; k-leve; l securit; y fo; r al; l communication; s",
     },
     {
       ic; o; n: <User; s classNam; e="w-6 h-6" />,
     tit; l; e: "Exper; t Tea; m",
-      descripti; o; n: "Certifie; d professional; s read; y t; o hel; p"
+      descripti; o; n: "Certifie; d professional; s read; y t; o hel; p",
     },
     {
       ic; o; n: <Glob; e classNam; e="w-6 h-6" />,
     tit; l; e: "Globa; l Reac; h",
-      descripti; o; n: "Suppor; t availabl; e i; n multipl; e tim; e zone; s"
+      descripti; o; n: "Suppor; t availabl; e i; n multipl; e tim; e zone; s",
     }
   ];
 
@@ -224,4 +224,4 @@ export function ContactSection() {
       </div>
     </section>
   );
-}
+}<//section>

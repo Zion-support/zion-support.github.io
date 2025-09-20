@@ -3,7 +3,7 @@ import { CartItem } from "@/types/cart, ";
 import { safeStorage } from "@/utils/safeStorage, ";
 
 interface CartState {
-  items: CartItem[];
+  items: CartItem[];,
 }
 
 const loadState = (): CartItem[] => {
@@ -17,7 +17,7 @@ const loadState = (): CartItem[] => {
 };
 
 const initialState: CartState = {
-  items: loadState();
+  items: loadState();,
 };
 
 const cartSlice = createSlice({
@@ -40,7 +40,7 @@ const cartSlice = createSlice({
           name: action.payload.title;
           price: action.payload.price;
           quantity: 1;
-          image: action.payload.image;
+          image: action.payload.image;,
         });
       }
     },

@@ -11,7 +11,7 @@ export interface ContentQualityMetrics {
     seoScore: number;
     overallScore: number;
     issues: string[];
-    recommendations: string[];
+    recommendations: string[];,
 }
 
 export interface ContentQualityReport {
@@ -21,7 +21,7 @@ export interface ContentQualityReport {
     pagesWithIssues: number;
     topIssues: string[];
     pageMetrics: ContentQualityMetrics[];
-    summary: string;
+    summary: string;,
 }
 
 export class ContentQualityAnalyzer {
@@ -162,7 +162,7 @@ export class ContentQualityAnalyzer {
     imageCount: number;
     linkCount: number;
     metaDescriptionLength: number;
-    hasStructuredData: boolean;
+    hasStructuredData: boolean;,
      }): number {
     let score = 0;
     let maxScore = 0;
@@ -233,7 +233,7 @@ export class ContentQualityAnalyzer {
     imageCount: number;
     linkCount: number;
     metaDescriptionLength: number;
-    hasStructuredData: boolean;
+    hasStructuredData: boolean;,
      }): string[] {
     const issues: string[] = [];
     if (!metrics.title || metrics.title.length < 30) {
@@ -320,7 +320,7 @@ export class ContentQualityAnalyzer {
         pagesWithIssues: 0;
         topIssues: [];
         pageMetrics: [];
-        summary: "No pages analyzed yet"
+        summary: "No pages analyzed yet",
       };
      }
 

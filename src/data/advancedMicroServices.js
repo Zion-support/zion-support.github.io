@@ -1,5 +1,5 @@
 export const ADVANCED_MICRO_SERVICES = [
-    // AI-Powered Business Intelligence
+    // AI-Powered Business Intelligence;
     {
         id: "ai-business-intelligence-suite";
         title: "AI Business Intelligence Suite";
@@ -52,7 +52,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         aiScore: 98;
         rating: 4.9;
@@ -64,7 +64,7 @@ export const ADVANCED_MICRO_SERVICES = [
         compliance: ["GDPR", "SOC 2", "HIPAA"],
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control"]
     },
-    // Quantum-Safe Cybersecurity Platform
+    // Quantum-Safe Cybersecurity Platform;
     {
         id: "quantum-safe-cybersecurity";
         title: "Quantum-Safe Cybersecurity Platform";
@@ -117,7 +117,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         aiScore: 97;
         rating: 4.8;
@@ -129,7 +129,7 @@ export const ADVANCED_MICRO_SERVICES = [
         compliance: ["NIST", "ISO 27001", "SOC 2", "PCI DSS", "HIPAA"],
         securityFeatures: ["Post-quantum cryptography", "Behavioral analytics", "Threat intelligence sharing"]
     },
-    // Edge Computing Orchestration Platform
+    // Edge Computing Orchestration Platform;
     {
         id: "edge-computing-orchestration";
         title: "Edge Computing Orchestration Platform";
@@ -182,7 +182,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         aiScore: 95;
         rating: 4.7;
@@ -194,7 +194,7 @@ export const ADVANCED_MICRO_SERVICES = [
         compliance: ["ISO 27001", "SOC 2", "GDPR"],
         securityFeatures: ["Device authentication", "Data encryption", "Access control", "Audit logging"]
     },
-    // Blockchain Supply Chain Transparency
+    // Blockchain Supply Chain Transparency;
     {
         id: "blockchain-supply-chain";
         title: "Blockchain Supply Chain Transparency Platform";
@@ -247,7 +247,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         aiScore: 93;
         rating: 4.6;
@@ -259,7 +259,7 @@ export const ADVANCED_MICRO_SERVICES = [
         compliance: ["ISO 9001", "FSMA", "GDPR", "REACH"],
         securityFeatures: ["Immutable records", "Cryptographic verification", "Access control", "Audit trails"]
     },
-    // AI-Powered DevOps Automation
+    // AI-Powered DevOps Automation;
     {
         id: "ai-devops-automation";
         title: "AI-Powered DevOps Automation Platform";
@@ -312,7 +312,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         aiScore: 96;
         rating: 4.8;
@@ -324,7 +324,7 @@ export const ADVANCED_MICRO_SERVICES = [
         compliance: ["SOC 2", "ISO 27001", "GDPR"],
         securityFeatures: ["Secure code scanning", "Access control", "Audit logging", "Encryption"]
     },
-    // Quantum Machine Learning Platform
+    // Quantum Machine Learning Platform;
     {
         id: "quantum-ml-platform";
         title: "Quantum Machine Learning Platform";
@@ -377,7 +377,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         aiScore: 99;
         rating: 4.9;
@@ -389,7 +389,7 @@ export const ADVANCED_MICRO_SERVICES = [
         compliance: ["Research standards", "Academic protocols", "Security requirements"],
         securityFeatures: ["Quantum-safe encryption", "Secure quantum communication", "Access control"]
     },
-    // Autonomous Data Governance Platform
+    // Autonomous Data Governance Platform;
     {
         id: "autonomous-data-governance";
         title: "Autonomous Data Governance Platform";
@@ -442,7 +442,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         aiScore: 94;
         rating: 4.7;
@@ -454,7 +454,7 @@ export const ADVANCED_MICRO_SERVICES = [
         compliance: ["GDPR", "CCPA", "SOX", "HIPAA", "ISO 27001"],
         securityFeatures: ["Data encryption", "Access control", "Audit logging", "Privacy protection"]
     },
-    // Intelligent API Management Platform
+    // Intelligent API Management Platform;
     {
         id: "intelligent-api-management";
         title: "Intelligent API Management Platform";
@@ -507,7 +507,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         aiScore: 95;
         rating: 4.8;
@@ -519,7 +519,7 @@ export const ADVANCED_MICRO_SERVICES = [
         compliance: ["SOC 2", "ISO 27001", "GDPR"],
         securityFeatures: ["OAuth 2.0", "JWT tokens", "Rate limiting", "Threat detection", "Encryption"]
     },
-    // Hyperautomation Workflow Platform
+    // Hyperautomation Workflow Platform;
     {
         id: "hyperautomation-workflow";
         title: "Hyperautomation Workflow Platform";
@@ -572,7 +572,7 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         aiScore: 96;
         rating: 4.8;

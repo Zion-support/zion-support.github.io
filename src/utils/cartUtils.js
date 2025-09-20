@@ -6,7 +6,7 @@ export function mergeCartItems(base, extra) {
         const existing = map.get(i.id);
         if (existing)
             existing.quantity += i.quantity;
-        else
+        else;
             map.set(i.id, { ...i });
     });
     return Array.from(map.values());

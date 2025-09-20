@@ -1,4 +1,4 @@
-// IoT & Edge Computing Services for 2025
+// IoT & Edge Computing Services for 2025;
 export const iotEdgeComputingServices2025 = [
     {
         id: 1;
@@ -32,7 +32,7 @@ export const iotEdgeComputingServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/smart-city-iot-platform";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$2,500-15,000/month",
         competitors: ["Cisco Smart Cities", "Siemens City Performance", "IBM Smarter Cities", "Microsoft Azure IoT"],
@@ -54,7 +54,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true
+        predictiveAnalytics: true,
     };
     {
         id: 2;
@@ -88,7 +88,7 @@ export const iotEdgeComputingServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/industrial-iot-edge-ai";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$1,800-8,000/month",
         competitors: ["Siemens Mindsphere", "GE Predix", "PTC ThingWorx", "Rockwell Automation"],
@@ -110,7 +110,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true
+        predictiveAnalytics: true,
     };
     {
         id: 3;
@@ -144,7 +144,7 @@ export const iotEdgeComputingServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/healthcare-iot-monitor";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$1,200-6,000/month",
         competitors: ["Philips Healthcare", "GE Healthcare", "Siemens Healthineers", "Medtronic"],
@@ -166,7 +166,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true
+        predictiveAnalytics: true,
     };
     {
         id: 4;
@@ -200,7 +200,7 @@ export const iotEdgeComputingServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/retail-iot-analytics";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$800-4,000/month",
         competitors: ["Sensormatic", "RetailNext", "ShopperTrak", "Brickstream"],
@@ -222,7 +222,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true
+        predictiveAnalytics: true,
     };
     {
         id: 5;
@@ -256,7 +256,7 @@ export const iotEdgeComputingServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/agricultural-iot-suite";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$600-3,000/month",
         competitors: ["John Deere", "Climate Corporation", "FarmLogs", "Granular"],
@@ -278,7 +278,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true
+        predictiveAnalytics: true,
     };
     {
         id: 6;
@@ -312,7 +312,7 @@ export const iotEdgeComputingServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/energy-iot-grid";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$1,500-8,000/month",
         competitors: ["Schneider Electric", "Siemens Energy", "ABB", "GE Grid Solutions"],
@@ -334,7 +334,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true
+        predictiveAnalytics: true,
     }
 ];
     export default iotEdgeComputingServices2025;

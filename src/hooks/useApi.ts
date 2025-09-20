@@ -37,5 +37,5 @@ interface UseApiOptions {
     };
   }, [immediatefetchData]),return {;
     dataloadingerror;
-    refetch: fetchData;
+    refetch: fetchData;,
      };

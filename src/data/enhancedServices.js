@@ -1,6 +1,6 @@
-// Enhanced real micro SAAS services and solutions
+// Enhanced real micro SAAS services and solutions;
 export const ENHANCED_SERVICES = [
-    // AI & Machine Learning Services
+    // AI & Machine Learning Services;
     {
         id: "ai-automation-suite";
         title: "AI Process Automation Suite";
@@ -13,7 +13,7 @@ export const ENHANCED_SERVICES = [
             name: "Zion Tech Group";
             id: "zion-tech-group";
             avatarUrl: "https://ziontechgroup.com/wp-content/uploads/2024/01/zion-logo.png";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
@@ -22,7 +22,7 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "2-3 Weeks";
-        aiScore: 96
+        aiScore: 96,
     };
     {
         id: "ai-customer-insights";
@@ -35,7 +35,7 @@ export const ENHANCED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-20T14:30:00.000Z";
@@ -43,7 +43,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 89;
         location: "Global";
         availability: "1-2 Weeks";
-        aiScore: 93
+        aiScore: 93,
     };
     {
         id: "ai-content-optimization";
@@ -56,7 +56,7 @@ export const ENHANCED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-25T09:15:00.000Z";
@@ -64,9 +64,9 @@ export const ENHANCED_SERVICES = [
         reviewCount: 234;
         location: "Global";
         availability: "Immediate";
-        aiScore: 91
+        aiScore: 91,
     };
-    // Cloud & Infrastructure Services
+    // Cloud & Infrastructure Services;
     {
         id: "multi-cloud-orchestration";
         title: "Multi-Cloud Orchestration Platform";
@@ -78,7 +78,7 @@ export const ENHANCED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-30T11:45:00.000Z";
@@ -87,7 +87,7 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "3-4 Weeks";
-        aiScore: 94
+        aiScore: 94,
     };
     {
         id: "edge-computing-solution";
@@ -100,7 +100,7 @@ export const ENHANCED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-02-05T13:20:00.000Z";
@@ -108,9 +108,9 @@ export const ENHANCED_SERVICES = [
         reviewCount: 45;
         location: "Global";
         availability: "4-6 Weeks";
-        aiScore: 92
+        aiScore: 92,
     };
-    // Cybersecurity Services
+    // Cybersecurity Services;
     {
         id: "ai-threat-detection";
         title: "AI-Powered Threat Detection System";
@@ -122,7 +122,7 @@ export const ENHANCED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-02-10T15:30:00.000Z";
@@ -131,7 +131,7 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "3-4 Weeks";
-        aiScore: 95
+        aiScore: 95,
     };
     {
         id: "zero-trust-security";
@@ -144,7 +144,7 @@ export const ENHANCED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-02-15T10:15:00.000Z";
@@ -152,9 +152,9 @@ export const ENHANCED_SERVICES = [
         reviewCount: 67;
         location: "Global";
         availability: "6-8 Weeks";
-        aiScore: 93
+        aiScore: 93,
     };
-    // Data & Analytics Services
+    // Data & Analytics Services;
     {
         id: "real-time-data-pipeline";
         title: "Real-Time Data Pipeline Platform";
@@ -166,7 +166,7 @@ export const ENHANCED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-02-20T12:00:00.000Z";
@@ -174,7 +174,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 89;
         location: "Global";
         availability: "2-3 Weeks";
-        aiScore: 90
+        aiScore: 90,
     };
     {
         id: "predictive-maintenance-ai";
@@ -187,7 +187,7 @@ export const ENHANCED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-02-25T14:45:00.000Z";
@@ -195,9 +195,9 @@ export const ENHANCED_SERVICES = [
         reviewCount: 56;
         location: "Global";
         availability: "4-5 Weeks";
-        aiScore: 92
+        aiScore: 92,
     };
-    // Business Intelligence & Reporting
+    // Business Intelligence & Reporting;
     {
         id: "ai-business-intelligence";
         title: "AI-Enhanced Business Intelligence Suite";
@@ -209,7 +209,7 @@ export const ENHANCED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-03-01T09:30:00.000Z";
@@ -218,9 +218,9 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "1-2 Weeks";
-        aiScore: 94
+        aiScore: 94,
     };
-    // Development & DevOps Services
+    // Development & DevOps Services;
     {
         id: "ai-code-review";
         title: "AI-Powered Code Review Assistant";
@@ -232,7 +232,7 @@ export const ENHANCED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-03-05T11:20:00.000Z";
@@ -240,7 +240,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 234;
         location: "Global";
         availability: "Immediate";
-        aiScore: 93
+        aiScore: 93,
     };
     {
         id: "devops-automation";
@@ -253,7 +253,7 @@ export const ENHANCED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-03-10T13:45:00.000Z";
@@ -261,9 +261,9 @@ export const ENHANCED_SERVICES = [
         reviewCount: 98;
         location: "Global";
         availability: "2-3 Weeks";
-        aiScore: 91
+        aiScore: 91,
     };
-    // Digital Transformation Services
+    // Digital Transformation Services;
     {
         id: "digital-transformation-consulting";
         title: "Digital Transformation Strategy & Implementation";
@@ -275,7 +275,7 @@ export const ENHANCED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-03-15T10:00:00.000Z";
@@ -284,9 +284,9 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "8-12 Weeks";
-        aiScore: 95
+        aiScore: 95,
     };
-    // Industry-Specific Solutions
+    // Industry-Specific Solutions;
     {
         id: "healthcare-ai-platform";
         title: "Healthcare AI Analytics Platform";
@@ -298,7 +298,7 @@ export const ENHANCED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-03-20T14:30:00.000Z";
@@ -306,7 +306,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 34;
         location: "Global";
         availability: "6-8 Weeks";
-        aiScore: 94
+        aiScore: 94,
     };
     {
         id: "fintech-compliance-ai";
@@ -319,7 +319,7 @@ export const ENHANCED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-03-25T16:15:00.000Z";
@@ -327,9 +327,9 @@ export const ENHANCED_SERVICES = [
         reviewCount: 67;
         location: "Global";
         availability: "4-6 Weeks";
-        aiScore: 93
+        aiScore: 93,
     };
-    // Emerging Technology Services
+    // Emerging Technology Services;
     {
         id: "blockchain-enterprise";
         title: "Enterprise Blockchain Solutions";
@@ -341,7 +341,7 @@ export const ENHANCED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1639762681485-074d7f9d5b1b?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-03-30T12:00:00.000Z";
@@ -350,7 +350,7 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "8-12 Weeks";
-        aiScore: 95
+        aiScore: 95,
     };
     {
         id: "quantum-computing-readiness";
@@ -363,7 +363,7 @@ export const ENHANCED_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com"
+            email: "kleber@ziontechgroup.com",
         };
         images: ["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-04-01T09:45:00.000Z";
@@ -371,10 +371,10 @@ export const ENHANCED_SERVICES = [
         reviewCount: 12;
         location: "Global";
         availability: "4-6 Weeks";
-        aiScore: 94
+        aiScore: 94,
     }
 ];
-    // Service categories for filtering
+    // Service categories for filtering;
 export const ENHANCED_SERVICE_CATEGORIES = [
     { label: 'AI & Machine Learning', value: 'ai-ml' };
     { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' };
@@ -388,16 +388,16 @@ export const ENHANCED_SERVICE_CATEGORIES = [
     { label: 'Blockchain', value: 'blockchain' };
     { label: 'Quantum Computing', value: 'quantum-computing' }
 ];
-    // Pricing tiers for different service levels
+    // Pricing tiers for different service levels;
 export const SERVICE_PRICING_TIERS = {
     basic: { range: "$500 - $2,000", description: "Essential services for small businesses" };
     professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies" };
     enterprise: { range: "$8,000 - $25,000+", description: "Custom enterprise solutions with dedicated support" }
 };
-    // Contact information
+    // Contact information;
 export const CONTACT_INFO = {
     mobile: "+1 302 464 0950";
     email: "kleber@ziontechgroup.com";
     address: "364 E Main St STE 1008 Middletown DE 19709";
-    website: "https://ziontechgroup.com"
+    website: "https://ziontechgroup.com",
 };

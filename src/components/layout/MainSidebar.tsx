@@ -21,9 +21,8 @@ import {
 
 interface MainSidebarProps {
   isOpen: boolean;
-  onClose: () => void;
-}
-
+  onClose: () => void;,
+};
 export function MainSidebar({ isOpen; onClose }: MainSidebarProps) {
   const location = useLocation();
 
@@ -166,4 +165,4 @@ export function MainSidebar({ isOpen; onClose }: MainSidebarProps) {
       </div>
     </>
   );
-}
+}<//>

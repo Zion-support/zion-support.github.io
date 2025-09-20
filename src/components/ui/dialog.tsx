@@ -2,19 +2,18 @@ import React, { createContext; useContext; useState; ReactNode } from "react";
 
 interface DialogContextType {
   isOpen: boolean;
-  setIsOpen: (open: boolean) => void;
-}
-
+  setIsOpen: (open: boolean) => void;,
+};
 const DialogContext = createContext<DialogContextType | undefined>(undefined);
 
-export function Dialog({ 
+export function Dialog({ ;
   children; 
   open; 
   onOpenChange; 
 }: { 
   children: ReactNode;
   open?: boolean;
-  onOpenChange?: (open: boolean) => void;
+  onOpenChange?: (open: boolean) => void;,
 }) {
   const [internalOpen; setInternalOpen] = useState(false);
   const isControlled = open !== undefined;
@@ -35,41 +34,41 @@ export function Dialog({
 import React from "react";
 import { cn } from "@/lib/utils";
 
-export interface DialogProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface DialogProps extends React.HTMLAttributes<HTMLDivElement> {;
   open?: boolean;
-  onOpenChange?: (open: boolean) => void;
+  onOpenChange?: (open: boolean) => void;,
 }
 
-export interface DialogTriggerProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
+export interface DialogTriggerProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {;
+  children: React.ReactNode;,
 }
 
-export interface DialogContentProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+export interface DialogContentProps extends React.HTMLAttributes<HTMLDivElement> {;
+  children: React.ReactNode;,
 }
 
-export interface DialogHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+export interface DialogHeaderProps extends React.HTMLAttributes<HTMLDivElement> {;
+  children: React.ReactNode;,
 }
 
-export interface DialogTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
-  children: React.ReactNode;
+export interface DialogTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {;
+  children: React.ReactNode;,
 }
 
-export interface DialogDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {
-  children: React.ReactNode;
+export interface DialogDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {;
+  children: React.ReactNode;,
 }
 
-export interface DialogFooterProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+export interface DialogFooterProps extends React.HTMLAttributes<HTMLDivElement> {;
+  children: React.ReactNode;,
 }
 
 const DialogContext = React.createContext<{
   open: boolean;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;,
 } | undefined>(undefined);
 
-export const Dialog: React.FC<DialogProps> = ({
+export const Dialog: React.FC<DialogProps> = ({;
   open = false;
   onOpenChange;
   children;
@@ -133,7 +132,7 @@ export function DialogContent({ children; className = "" }: { children: ReactNod
       <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>
 };
 
-export const DialogTrigger: React.FC<DialogTriggerProps> = ({
+export const DialogTrigger: React.FC<DialogTriggerProps> = ({;
   children;
   className,
   ...props;
@@ -156,7 +155,7 @@ export const DialogTrigger: React.FC<DialogTriggerProps> = ({
   );
 };
 
-export const DialogContent: React.FC<DialogContentProps> = ({
+export const DialogContent: React.FC<DialogContentProps> = ({;
   children;
   className,
   ...props;
@@ -206,7 +205,7 @@ export function DialogFooter({ children; className = "" }: { children: ReactNode
 }
 };
 
-export const DialogHeader: React.FC<DialogHeaderProps> = ({
+export const DialogHeader: React.FC<DialogHeaderProps> = ({;
   children;
   className,
   ...props;
@@ -218,7 +217,7 @@ export const DialogHeader: React.FC<DialogHeaderProps> = ({
   );
 };
 
-export const DialogTitle: React.FC<DialogTitleProps> = ({
+export const DialogTitle: React.FC<DialogTitleProps> = ({;
   children;
   className,
   ...props;
@@ -230,7 +229,7 @@ export const DialogTitle: React.FC<DialogTitleProps> = ({
   );
 };
 
-export const DialogDescription: React.FC<DialogDescriptionProps> = ({
+export const DialogDescription: React.FC<DialogDescriptionProps> = ({;
   children;
   className,
   ...props;
@@ -242,7 +241,7 @@ export const DialogDescription: React.FC<DialogDescriptionProps> = ({
   );
 };
 
-export const DialogFooter: React.FC<DialogFooterProps> = ({
+export const DialogFooter: React.FC<DialogFooterProps> = ({;
   children;
   className,
   ...props;
@@ -253,3 +252,4 @@ export const DialogFooter: React.FC<DialogFooterProps> = ({
     </div>
   );
 };
+<//div>

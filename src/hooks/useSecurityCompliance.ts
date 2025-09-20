@@ -25,7 +25,7 @@ interface ComplianceRule {
     lastChecked: Date;
     nextCheck: Date;
     requirements: string[];
-    violations: ComplianceViolation[];
+    violations: ComplianceViolation[];,
 }
 
 interface ComplianceViolation {
@@ -46,7 +46,7 @@ interface SecurityMetrics {
     threatLevel: "low" | "medium" | "high" | "critical";
     lastIncident?: Date;
   averageResponseTime: number;
-    falsePositiveRate: number;
+    falsePositiveRate: number;,
 }
 
 interface SecurityConfig {
@@ -58,7 +58,7 @@ interface SecurityConfig {
     alertThresholds: {
     criticalEvents: number;
     highSeverityEvents: number;
-    complianceViolations: number;
+    complianceViolations: number;,
      };
 }
 
@@ -78,13 +78,13 @@ interface SecurityComplianceHook {
   checkCompliance: () => Promise<void>;
     generateSecurityReport: () => string;
     exportAuditLog: () => string;
-    configureSecurity: (config: Partial<SecurityConfig>) => void;
+    configureSecurity: (config: Partial<SecurityConfig>) => void;,
 }
 
 export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>): SecurityComplianceHook => {
   const { trackEvent } = useAnalytics({
     enableTracking: true;
-    enableUserBehaviorTracking: true;
+    enableUserBehaviorTracking: true;,
   });
     const [securityEvents; setSecurityEvents] = useState<SecurityEvent[]>([]);
   const [complianceRules; setComplianceRules] = useState<ComplianceRule[]>([]);
@@ -95,7 +95,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
     complianceScore: 100;
     threatLevel: "low";
     averageResponseTime: 0;
-    falsePositiveRate: 0;
+    falsePositiveRate: 0;,
   });
     const [isMonitoring; setIsMonitoring] = useState(false);
   const [isComplianceChecking; setIsComplianceChecking] = useState(false);
@@ -120,7 +120,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
         "Storage limitation",
         "Security measures"
       ],
-      violations: []
+      violations: [],
     };
     {
       id: "sox-financial-controls";
@@ -137,7 +137,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
         "Audit logging",
         "Backup procedures"
       ],
-      violations: []
+      violations: [],
     };
     {
       id: "hipaa-privacy-security";
@@ -154,7 +154,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
         "Business associate agreements",
         "Workforce training"
       ],
-      violations: []
+      violations: [],
     }
   ];
     // Initialize with default rules;
@@ -187,7 +187,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
           type: randomType;
           severity: "low";
           details: `Simulated ${randomType} event for testing`;
-          status: "new"
+          status: "new",
         });
      }
     }, 30000); // Check every 30 seconds;
@@ -210,7 +210,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
     const newEvent: SecurityEvent = {
       ...event;
       id: `event-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
-      timestamp: new Date()
+      timestamp: new Date(),
     };
     setSecurityEvents(prev => [newEvent, ...prev]);
     trackEvent("security", "event", "created", undefined, { eventType: event.type; severity: event.severity });
@@ -219,7 +219,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
       ...prev;
       totalEvents: prev.totalEvents + 1;
       criticalEvents: prev.criticalEvents + (event.severity === "critical" ? 1 : 0);
-      highSeverityEvents: prev.highSeverityEvents + (event.severity === "high" ? 1 : 0)
+      highSeverityEvents: prev.highSeverityEvents + (event.severity === "high" ? 1 : 0),
     }));
     // Check if thresholds are exceeded;
     if (event.severity === "critical" || event.severity === "high") {
@@ -244,7 +244,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
       id: `rule-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
       lastChecked: new Date();
       nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // Default to 24 hours;
-      violations: []
+      violations: [],
     };
     setComplianceRules(prev => [...prev; newRule]);
     trackEvent("compliance", "rule", "added", undefined, { category: rule.category });
@@ -283,7 +283,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
               severity: violation.severity;
               description: violation.details;
               timestamp: violation.timestamp;
-              status: "open"
+              status: "open",
             }))
           };
      })
@@ -296,7 +296,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
 
       setSecurityMetrics(prev => ({
         ...prev;
-        complianceScore: newScore;
+        complianceScore: newScore;,
       }));
     trackEvent("compliance", "check", "completed", undefined, { score: newScore });
      } catch (error) {
@@ -315,9 +315,9 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
       complianceStatus: complianceRules.map(rule => ({
         name: rule.name;
         status: rule.status;
-        violations: rule.violations.length;
+        violations: rule.violations.length;,
       }));
-      recommendations: [] as string[]
+      recommendations: [] as string[],
     };
     // Generate recommendations;
     if (securityMetrics.complianceScore < 80) {
@@ -349,7 +349,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
         resource: event.resource;
         action: event.action;
         details: event.details;
-        status: event.status;
+        status: event.status;,
       }))
     };
     trackEvent("security", "audit", "exported");

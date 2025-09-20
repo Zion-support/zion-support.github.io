@@ -42,7 +42,7 @@ interface TimelineEvent {
     dependencies: string[];
     impact: "low" | "medium" | "high";
     verified: boolean;
-    featured: boolean;
+    featured: boolean;,
      };
   actions?: {
     label: string;
@@ -60,9 +60,8 @@ interface InteractiveTimelineProps {
   onEventClick?: (event: TimelineEvent) => void;
     onStatusChange?: (eventId: string; status: TimelineEvent["status"]) => void;
     className?: string;
-}
-
-export function InteractiveTimeline({
+};
+export function InteractiveTimeline({;
   enabled = true;
   events;
   autoPlay = false;
@@ -80,7 +79,7 @@ export function InteractiveTimeline({
     status: [] as TimelineEvent["status"][];
     category: [] as string[];
     priority: [] as TimelineEvent["priority"][];
-    progress: 0;
+    progress: 0;,
   });
     const [viewMode; setViewMode] = useState<"timeline" | "list" | "kanban">("timeline");
   const [zoomLevel; setZoomLevel] = useState(1);
@@ -154,7 +153,7 @@ export function InteractiveTimeline({
         return "border-yellow-500/50 bg-yellow-500/10";
       case "low":
         return "border-green-500/50 bg-green-500/10";
-      default: return "border-zinc-500/50 bg-zinc-500/10";
+      default: return "border-zinc-500/50 bg-zinc-500/10";,
      }
   };
 
@@ -201,7 +200,7 @@ export function InteractiveTimeline({
       navigator.share({
         title: "Project Timeline";
         text: "Check out our project timeline";
-        url: window.location.href;
+        url: window.location.href;,
       });
      } else {
       navigator.clipboard.writeText(window.location.href);
@@ -229,7 +228,7 @@ export function InteractiveTimeline({
                 className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${
                   viewMode === mode;
                     ? "bg-zion-cyan text-zion-blue-dark"
-                    : "text-zinc-400 hover:text-white"
+                    : "text-zinc-400 hover: text-white",
                 }`}
               >
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
@@ -503,7 +502,7 @@ export function InteractiveTimeline({
                     className={`flex-1 p-4 rounded-lg border transition-all duration-300 cursor-pointer ${
                       isCurrent;
                         ? "border-zion-cyan/50 bg-zion-cyan/10"
-                        : "border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10"
+                        : "border-zion-blue-light/30 hover: border-zion-blue-light/50 hover:bg-zion-blue/10",
                     }`}
                     onClick={() => handleEventClick(event)}
                   >
@@ -772,4 +771,4 @@ export function InteractiveTimeline({
       </AnimatePresence>
     </div>
   );
-}
+}<//div>

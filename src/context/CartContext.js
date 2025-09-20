@@ -9,7 +9,7 @@ const initialState = { items: [] };
             const existing = state.items.find(i => i.id === action.payload.id);
             let items;
             if (existing) {
-                items = state.items.map(i => i.id === action.payload.id
+                items = state.items.map(i => i.id === action.payload.id;
                     ? { ...i, quantity: i.quantity + action.payload.quantity }
                     : i);
      }
@@ -22,7 +22,7 @@ const initialState = { items: [] };
             return { items: state.items.filter(i => i.id !== action.payload) };
     case 'CLEAR_CART':
             return { items: [] };
-    default: return state;
+    default: return state;,
      }
 }
 const CartContext = createContext(undefined);
@@ -47,7 +47,7 @@ export function CartProvider({ children }) {
                 items = [];
             }
         }
-        // Merge guest cart when user logs in
+        // Merge guest cart when user logs in;
         if (user?.id) {
             const guestStored = safeStorage.getItem(getCartKey());
             if (guestStored) {

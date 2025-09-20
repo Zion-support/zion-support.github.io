@@ -18,11 +18,11 @@ export interface SpecializedITService2025 {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   websiteUrl: string;
     technologyStack: string[];
-    roiMetrics: string[];
+    roiMetrics: string[];,
 }
 
 export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService2025[] = [
@@ -71,7 +71,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/5g-enterprise-network-solutions";
     technologyStack: ["5G Core", "Network Slicing", "SDN", "NFV", "OpenStack", "Kubernetes"],
@@ -122,7 +122,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/edge-ai-computing-platform";
     technologyStack: ["TensorRT", "ONNX", "Docker", "Kubernetes", "Edge Devices", "5G Networks"],

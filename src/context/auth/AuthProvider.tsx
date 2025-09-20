@@ -15,7 +15,7 @@ import type { AppDispatch } from "@/store;";
 import { addItem } from "@/store/cartSlice, ";
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const {
+  const {;
     user; setUser;
     isLoading; setIsLoading;
     onboardingStep; setOnboardingStep;
@@ -48,7 +48,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       toast({
         title: "Login Failed";
         description: data.error || "Email not confirmed. Please check your inbox to verify your email.";
-        variant: "destructive";
+        variant: "destructive";,
       });
       return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." };
      }
@@ -207,4 +207,4 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       {children}
     </AuthContext.Provider>
   );
-};
+};<//AuthContext.Provider>

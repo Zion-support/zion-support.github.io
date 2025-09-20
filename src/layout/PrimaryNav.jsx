@@ -76,7 +76,7 @@ export, function, PrimaryNav() {
             // Track, analytics, event;
             if (typeof window !== 'undefined' && window.gtag) {
                 window.gtag('eventsearch_suggestion_click'{
-                    search_term: sugg.textsuggestion_typ,e: sugg.typesuggestion_i,d: sugg.id || sugg.slug;
+                    search_term: sugg.textsuggestion_typ,e: sugg.typesuggestion_i,d: sugg.id || sugg.slug;,
      });
             }
         }} searchSuggestions={suggestions}/>;
@@ -130,4 +130,4 @@ export, function, PrimaryNav() {
         </div>)}
       {isMobile && <MobileBottomNav unreadCount={unreadCount}/>};
     </>);
-};
+};<//>

@@ -1,5 +1,5 @@
 export const ADVANCED_AI_SERVICES = [
-    // AI-Powered Financial Trading Platform
+    // AI-Powered Financial Trading Platform;
     {
         id: "ai-financial-trading-platform";
         title: "AI Financial Trading Platform";
@@ -47,7 +47,7 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "PyTorch", "Redis", "PostgreSQL", "Apache Kafka"],
         integrations: ["Bloomberg Terminal", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
@@ -55,9 +55,9 @@ export const ADVANCED_AI_SERVICES = [
         roi: "400% within 12 months";
         competitors: ["Alpaca", "QuantConnect", "Zipline", "Backtrader"],
         marketSize: "$12.5 billion";
-        growthRate: "23.5% annually"
+        growthRate: "23.5% annually",
     };
-    // AI-Powered Healthcare Diagnostics
+    // AI-Powered Healthcare Diagnostics;
     {
         id: "ai-healthcare-diagnostics";
         title: "AI Healthcare Diagnostics Platform";
@@ -105,7 +105,7 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["TensorFlow", "PyTorch", "OpenCV", "DICOM", "HL7 FHIR", "React"],
         integrations: ["Epic", "Cerner", "Allscripts", "Practice Fusion", "eClinicalWorks"],
@@ -113,9 +113,9 @@ export const ADVANCED_AI_SERVICES = [
         roi: "250% within 18 months";
         competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "NVIDIA Clara"],
         marketSize: "$8.2 billion";
-        growthRate: "28.7% annually"
+        growthRate: "28.7% annually",
     };
-    // AI-Powered Supply Chain Optimization
+    // AI-Powered Supply Chain Optimization;
     {
         id: "ai-supply-chain-optimization";
         title: "AI Supply Chain Optimization Platform";
@@ -163,7 +163,7 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "Apache Spark", "PostgreSQL", "Redis", "React"],
         integrations: ["SAP", "Oracle", "NetSuite", "Salesforce", "Shopify", "WMS systems"],
@@ -171,9 +171,9 @@ export const ADVANCED_AI_SERVICES = [
         roi: "300% within 12 months";
         competitors: ["Blue Yonder", "Manhattan Associates", "Oracle SCM", "SAP SCM"],
         marketSize: "$15.8 billion";
-        growthRate: "18.9% annually"
+        growthRate: "18.9% annually",
     };
-    // AI-Powered Cybersecurity Threat Detection
+    // AI-Powered Cybersecurity Threat Detection;
     {
         id: "ai-cybersecurity-threat-detection";
         title: "AI Cybersecurity Threat Detection Platform";
@@ -221,7 +221,7 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "PostgreSQL", "React"],
         integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],
@@ -229,9 +229,9 @@ export const ADVANCED_AI_SERVICES = [
         roi: "350% within 12 months";
         competitors: ["Darktrace", "CrowdStrike", "SentinelOne", "Cylance"],
         marketSize: "$22.4 billion";
-        growthRate: "31.2% annually"
+        growthRate: "31.2% annually",
     };
-    // AI-Powered Content Creation Studio
+    // AI-Powered Content Creation Studio;
     {
         id: "ai-content-creation-studio";
         title: "AI Content Creation Studio";
@@ -279,7 +279,7 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["GPT-4", "DALL-E", "Stable Diffusion", "React", "Node.js", "PostgreSQL"],
         integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social platforms"],
@@ -287,9 +287,9 @@ export const ADVANCED_AI_SERVICES = [
         roi: "400% within 6 months";
         competitors: ["Jasper", "Copy.ai", "Lumen5", "Canva Pro"],
         marketSize: "$18.7 billion";
-        growthRate: "26.4% annually"
+        growthRate: "26.4% annually",
     };
-    // AI-Powered Legal Document Analysis
+    // AI-Powered Legal Document Analysis;
     {
         id: "ai-legal-document-analysis";
         title: "AI Legal Document Analysis Platform";
@@ -337,7 +337,7 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["NLP", "Machine Learning", "Python", "React", "PostgreSQL", "Elasticsearch"],
         integrations: ["DocuSign", "Adobe Acrobat", "Microsoft Office", "Legal databases", "Case management systems"],
@@ -345,9 +345,9 @@ export const ADVANCED_AI_SERVICES = [
         roi: "280% within 12 months";
         competitors: ["Kira Systems", "Luminance", "eBrevia", "ContractPodAi"],
         marketSize: "$6.8 billion";
-        growthRate: "22.1% annually"
+        growthRate: "22.1% annually",
     };
-    // AI-Powered Real Estate Analytics
+    // AI-Powered Real Estate Analytics;
     {
         id: "ai-real-estate-analytics";
         title: "AI Real Estate Analytics Platform";
@@ -395,7 +395,7 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "PostgreSQL", "React", "Redis", "Machine Learning"],
         integrations: ["MLS systems", "Zillow API", "Redfin API", "Property databases", "Financial data sources"],
@@ -403,9 +403,9 @@ export const ADVANCED_AI_SERVICES = [
         roi: "320% within 12 months";
         competitors: ["Zillow Offers", "Redfin", "Opendoor", "Compass"],
         marketSize: "$9.3 billion";
-        growthRate: "19.8% annually"
+        growthRate: "19.8% annually",
     };
-    // AI-Powered Energy Management
+    // AI-Powered Energy Management;
     {
         id: "ai-energy-management";
         title: "AI Energy Management Platform";
@@ -453,7 +453,7 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time series databases"],
         integrations: ["Building management systems", "Smart meters", "Solar panels", "Battery storage", "Utility APIs"],
@@ -461,6 +461,6 @@ export const ADVANCED_AI_SERVICES = [
         roi: "250% within 18 months";
         competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
         marketSize: "$11.2 billion";
-        growthRate: "24.6% annually"
+        growthRate: "24.6% annually",
     }
 ];

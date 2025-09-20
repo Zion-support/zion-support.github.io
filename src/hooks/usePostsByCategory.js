@@ -3,7 +3,7 @@ export function usePostsByCategory(categoryId) {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        // Simulate API call
+        // Simulate API call;
         setLoading(true);
         setTimeout(() => {
             const mockPosts = [
@@ -15,7 +15,7 @@ export function usePostsByCategory(categoryId) {
                         id: '1';
                         name: 'John Doe';
                         avatar: '/avatars/john.jpg';
-                        role: 'user'
+                        role: 'user',
                     };
                     authorId: '1';
                     category: categoryId;
@@ -34,7 +34,7 @@ export function usePostsByCategory(categoryId) {
                     isAnswered: false;
                     authorName: 'John Doe';
                     authorAvatar: '/avatars/john.jpg';
-                    authorRole: 'user'
+                    authorRole: 'user',
                 }
             ];
     setPosts(mockPosts);

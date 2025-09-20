@@ -8,7 +8,7 @@ export interface NextGenInnovativeService2025 {
     phone: string; email: string; website: string,
   };
   technology: string[], integrations: string[];
-  compliance: string[], roi: string; competitors: string[], launchDate: string; betaAccess: boolean;
+  compliance: string[], roi: string; competitors: string[], launchDate: string; betaAccess: boolean;,
 }
 
 export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] = [
@@ -60,7 +60,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Qiskit", "TensorFlow", "Python", "Rust", "Quantum Hardware"],
     integrations: ["AWS Braket", "IBM Quantum", "Google Quantum", "Azure Quantum"],
@@ -68,7 +68,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     roi: "500% within 12 months",
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
     launchDate: "Q1 2025",
-    betaAccess: true;
+    betaAccess: true;,
   },
 
   // Autonomous AI Business Operations Suite;
@@ -118,7 +118,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
     integrations: ["Salesforce", "HubSpot", "QuickBooks", "Slack", "Microsoft 365"],
@@ -126,7 +126,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     roi: "400% within 8 months",
     competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
     launchDate: "Q2 2025",
-    betaAccess: true;
+    betaAccess: true;,
   },
 
   // Neural Interface Development Platform;
@@ -176,7 +176,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Python", "TensorFlow", "PyTorch", "C++", "CUDA"],
     integrations: ["Medical devices", "Research platforms", "Gaming engines"],
@@ -184,7 +184,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     roi: "300% within 18 months",
     competitors: ["Neuralink", "Kernel", "CTRL-labs"],
     launchDate: "Q3 2025",
-    betaAccess: false;
+    betaAccess: false;,
   },
 
   // Holographic Collaboration Workspace;
@@ -234,7 +234,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Unity", "Unreal Engine", "WebGL", "WebXR", "Three.js"],
     integrations: ["Slack", "Microsoft Teams", "Zoom", "Figma", "Autodesk"],
@@ -242,7 +242,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     roi: "250% within 6 months",
     competitors: ["Microsoft Mesh", "Meta Horizon", "Spatial"],
     launchDate: "Q2 2025",
-    betaAccess: true;
+    betaAccess: true;,
   },
 
   // AI-Powered Cybersecurity Mesh;
@@ -292,7 +292,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Python", "TensorFlow", "Kubernetes", "Docker", "Elasticsearch"],
     integrations: ["SIEM systems", "EDR solutions", "Cloud platforms", "Identity providers"],
@@ -300,7 +300,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     roi: "350% within 12 months",
     competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks"],
     launchDate: "Q1 2025",
-    betaAccess: true;
+    betaAccess: true;,
   },
 
   // Sustainable Tech Innovation Hub;
@@ -350,7 +350,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Python", "IoT platforms", "Blockchain", "Machine Learning", "Cloud Computing"],
     integrations: ["Energy management systems", "IoT sensors", "Sustainability platforms"],
@@ -406,7 +406,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-ai-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     marketPrice: "$25; 000-50; 000/month",
     technologyStack: ["Qiskit", "Cirq", "PennyLane", "Python", "C++", "Quantum Hardware"],
@@ -414,7 +414,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     scalability: ["Quantum Cloud Access", "Distributed Computing", "Scalable Algorithms"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
-    innovationScore: 9.5;
+    innovationScore: 9.5;,
   },
   {
     id: 2; name: "Metaverse Business Platform & Virtual Commerce",
@@ -448,7 +448,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/metaverse-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     marketPrice: "$12; 000-25; 000/month",
     technologyStack: ["Unity", "Unreal Engine", "WebGL", "Three.js", "Blockchain", "Cloud Services"],
@@ -456,7 +456,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     scalability: ["Cloud-based Rendering", "CDN Integration", "Multi-platform Support"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
-    innovationScore: 8.8;
+    innovationScore: 8.8;,
   },
   {
     id: 3; name: "Autonomous Vehicle AI Platform & Fleet Management",
@@ -490,7 +490,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/autonomous-vehicle-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     marketPrice: "$18; 000-35; 000/month",
     technologyStack: ["Python", "TensorFlow", "ROS", "Computer Vision", "IoT Sensors", "Cloud Computing"],
@@ -498,7 +498,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     scalability: ["Multi-fleet Support", "Geographic Expansion", "Vehicle Type Support"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
-    innovationScore: 9.2;
+    innovationScore: 9.2;,
   },
   {
     id: 4; name: "AI-Powered Healthcare Diagnostic Platform",
@@ -532,7 +532,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/healthcare-ai-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     marketPrice: "$15; 000-30; 000/month",
     technologyStack: ["Python", "TensorFlow", "Medical Imaging Libraries", "HIPAA-compliant Cloud", "IoT Devices"],
@@ -540,7 +540,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     scalability: ["Multi-site Support", "Patient Volume Scaling", "Geographic Expansion"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
-    innovationScore: 9.0;
+    innovationScore: 9.0;,
   },
   {
     id: 5; name: "AI-Powered Financial Trading & Risk Management",
@@ -574,7 +574,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/financial-trading-ai",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     marketPrice: "$22; 000-45; 000/month",
     technologyStack: ["Python", "TensorFlow", "Financial APIs", "Real-time Data", "Cloud Computing"],
@@ -582,7 +582,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     scalability: ["Multi-strategy Support", "Global Market Access", "High-frequency Trading"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
-    innovationScore: 9.3;
+    innovationScore: 9.3;,
   },
   {
     id: 6; name: "Intelligent Document Processing & Automation",
@@ -616,7 +616,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/document-ai-automation",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     marketPrice: "$6; 500-12; 000/month",
     technologyStack: ["Python", "OpenCV", "Tesseract", "NLP Libraries", "Cloud Services", "API Integration"],
@@ -624,7 +624,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     scalability: ["Multi-tenant Architecture", "Document Volume Scaling", "Geographic Distribution"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
-    innovationScore: 8.5;
+    innovationScore: 8.5;,
   },
   {
     id: 7; name: "AI-Powered Supply Chain Optimization Platform",
@@ -658,7 +658,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/supply-chain-ai",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     marketPrice: "$9; 500-18; 000/month",
     technologyStack: ["Python", "Machine Learning", "Optimization Algorithms", "IoT Sensors", "Cloud Computing"],
@@ -666,7 +666,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     scalability: ["Multi-location Support", "Supplier Network Scaling", "Geographic Expansion"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
-    innovationScore: 9.1;
+    innovationScore: 9.1;,
   },
   {
     id: 8; name: "AI-Powered Cybersecurity Threat Detection & Response",
@@ -700,7 +700,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/cybersecurity-ai",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     marketPrice: "$12; 000-25; 000/month",
     technologyStack: ["Python", "Machine Learning", "Security Tools", "SIEM Integration", "Cloud Security"],
@@ -708,7 +708,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     scalability: ["Multi-environment Support", "Threat Intelligence Sharing", "Global Threat Detection"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
-    innovationScore: 9.4;
+    innovationScore: 9.4;,
   },
   {
     id: 9; name: "Brain-Computer Interface Development Platform",
@@ -742,7 +742,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/brain-computer-interface",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     marketPrice: "$35; 000-75; 000/month",
     technologyStack: ["Python", "Signal Processing", "Machine Learning", "Medical Device APIs", "Real-time Systems"],
@@ -750,7 +750,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     scalability: ["Multi-device Support", "Research Collaboration", "Global Research Network"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
-    innovationScore: 9.6;
+    innovationScore: 9.6;,
   },
   {
     id: 10; name: "Space Technology & Satellite AI Platform",
@@ -784,7 +784,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/space-technology-ai",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     marketPrice: "$28; 000-55; 000/month",
     technologyStack: ["Python", "Orbital Mechanics", "Machine Learning", "Satellite APIs", "Real-time Systems"],
@@ -792,7 +792,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     scalability: ["Multi-satellite Support", "Global Coverage", "Constellation Management"],
     estimatedDelivery: "14-18 weeks",
     supportLevel: "enterprise",
-    innovationScore: 9.1;
+    innovationScore: 9.1;,
   },
   {
     id: 11; name: "Quantum Internet & Secure Communications",
@@ -826,7 +826,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-internet",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     marketPrice: "$45; 000-90; 000/month",
     technologyStack: ["Quantum Protocols", "Quantum Hardware", "Network Infrastructure", "Security Systems", "Quantum Software"],
@@ -834,7 +834,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     scalability: ["Global Network", "Multi-node Support", "Quantum Internet Expansion"],
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
-    innovationScore: 9.5;
+    innovationScore: 9.5;,
   },
   {
     id: 12; name: "Synthetic Biology & Bioengineering Platform",
@@ -868,7 +868,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/synthetic-biology",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     marketPrice: "$32; 000-65; 000/month",
     technologyStack: ["Bioinformatics", "Lab Automation", "Genetic Engineering Tools", "AI", "Cloud Computing"],
@@ -876,7 +876,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     scalability: ["Multi-lab Support", "Research Collaboration", "Global Bio-network"],
     estimatedDelivery: "18-24 weeks",
     supportLevel: "enterprise",
-    innovationScore: 9.2;
+    innovationScore: 9.2;,
   }
 ];
 

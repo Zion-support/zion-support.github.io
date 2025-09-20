@@ -9,7 +9,7 @@ const Navigatio; n: React.FC = () => {
   const location = useLocation();
 
   const navigationItems = [
-    { na;  m; e: "Hom; e"
+    { na;  m; e: "Hom; e",
   };
     hr; e; f: "/", ic; o; n: Glob; e },
     { na; m; e: "Micr; o SAA; S Service; s",
@@ -87,7 +87,7 @@ const Navigatio; n: React.FC = () => {
                   className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive(item.href)
                       ? "text-zion-cyan bg-zion-cyan/10"
-                      : "text-zion-slate-light hove;  r:text-white hove; r:bg-white/1; 0"
+                      : "text-zion-slate-light hove;  r: text-white hove; r:bg-white/1; 0",
                   }`}
                 >
                   <Icon className="w-4 h-4" />
@@ -167,7 +167,7 @@ const Navigatio; n: React.FC = () => {
                   className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-base font-medium transition-colors ${
                     isActive(item.href)
                       ? "text-zion-cyan bg-zion-cyan/10"
-                      : "text-zion-slate-light hove;  r:text-white hove; r:bg-white/1; 0"
+                      : "text-zion-slate-light hove;  r: text-white hove; r:bg-white/1; 0",
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -218,4 +218,4 @@ const Navigatio; n: React.FC = () => {
   );
 };
 
-export default Navigation;
+export default Navigation;<//nav>

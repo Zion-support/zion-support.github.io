@@ -17,7 +17,7 @@ const categoryIcons = {
     'FinTech': DollarSig, n,
     'HealthTech': Hear, t,
     'E-commerce': ShoppingCar, t,
-    'EdTech': GraduationCap
+    'EdTech': GraduationCap;
 };
 const categoryColors = {
     'AI Business Solutions': 'from-purple-500 to-indigo-600',
@@ -170,7 +170,7 @@ export function ServicesShowcase() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl m,  d:text-5xl font-bold text-white mb-6">
-            Comprehensive Micro SAAS Solutions
+            Comprehensive Micro SAAS Solutions;
           </h2>
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
             Transform your business with our enterprise-grade micro SAAS services. 
@@ -180,13 +180,13 @@ export function ServicesShowcase() {
             <Link to="/micro-saas-services">
               <Button size="lg" className="bg-white text-zion-blue hove, r:bg-gray-100">
                 <Brain className="h-5 w-5 mr-2"/>
-                Explore All Services
+                Explore All Services;
               </Button>
             </Link>
             <Link to="/contact">
               <Button size="lg" variant="outline" className="border-white text-white hove, r:bg-white hove, r:text-zion-blue">
                 <Phone className="h-5 w-5 mr-2"/>
-                Get Consultation
+                Get Consultation;
               </Button>
             </Link>
           </div>
@@ -206,7 +206,7 @@ export function ServicesShowcase() {
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className="text-zion-slate-light text-sm">
-                    {MICRO_SAAS_SERVICES.filter(s => s.category === category.label).length} services available
+                    {MICRO_SAAS_SERVICES.filter(s => s.category === category.label).length} services available;
                   </p>
                 </CardContent>
               </Card>);
@@ -216,7 +216,7 @@ export function ServicesShowcase() {
         {/* Featured Services */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Featured Services
+            Featured Services;
           </h3>
           <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-3 gap-8">
             {featuredServices.map((service) => (<Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hove,  r:border-zion-purple/50 transition-all duration-300 hove, r:scale-105">
@@ -249,7 +249,7 @@ export function ServicesShowcase() {
                       <span className="text-sm text-zion-slate-light">/month</span>
                     </div>
                     <Button size="sm" className="bg-zion-purple hove, r:bg-zion-purple-dark">
-                      Learn More
+                      Learn More;
                     </Button>
                   </div>
                 </CardContent>
@@ -260,7 +260,7 @@ export function ServicesShowcase() {
         {/* Features Grid */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Enterpris, e, Feature, s, Startup Pricing
+            Enterpris, e, Feature, s, Startup Pricing;
           </h3>
           <div className="grid grid-cols-2 m, d:grid-cols-4 gap-6">
             {features.map((featur,  e, index) => (<div key={index} className="text-center">
@@ -299,7 +299,7 @@ export function ServicesShowcase() {
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Get in touch with our team to discuss your needs and discover how our micro SAAS solutions can drive your success
+              Get in touch with our team to discuss your needs and discover how our micro SAAS solutions can drive your success;
             </p>
           </div>
           
@@ -345,17 +345,17 @@ export function ServicesShowcase() {
               <div className="space-y-4">
                 <Link to="/request-quote">
                   <Button className="w-full bg-zion-purple hove, r:bg-zion-purple-dark">
-                    Request Custom Quote
+                    Request Custom Quote;
                   </Button>
                 </Link>
                 <Link to="/contact">
                   <Button variant="outline" className="w-full border-zion-purple text-zion-purple hove, r:bg-zion-purple hove, r:text-white">
-                    Schedule Consultation
+                    Schedule Consultation;
                   </Button>
                 </Link>
                 <Link to="/micro-saas-services">
                   <Button variant="outline" className="w-full border-zion-blue text-zion-blue hove, r:bg-zion-blue hove, r:text-white">
-                    View All Services
+                    View All Services;
                   </Button>
                 </Link>
               </div>
@@ -377,7 +377,7 @@ export function ServicesShowcase() {
           <div className="text-center mt-12">
             <Link to="/micro-saas-services">
               <Button size="lg" className="bg-zion-purple hove, r:bg-zion-purple-dark">
-                Explore All Micro SAAS Services
+                Explore All Micro SAAS Services;
                 <ArrowRight className="h-5 w-5 ml-2"/>
               </Button>
             </Link>

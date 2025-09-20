@@ -18,15 +18,16 @@ const meta: Meta<typeof Marketplace> = {
 type Story = StoryObj<typeof Marketplace>;
 
 export const Grid: Story = {
-  render: () => {
+  render: () => {;
     localStorage.setItem("marketplaceView", "grid");
     return <Marketplace />,
   }
 };
 
 export const List: Story = {
-  render: () => {
+  render: () => {;
     localStorage.setItem("marketplaceView", "list");
     return <Marketplace />,
   }
 };
+</Marketplace />

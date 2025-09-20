@@ -7,4 +7,4 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default InnovativeServicesShowcase2025,
+export default InnovativeServicesShowcase2025,;<//div>

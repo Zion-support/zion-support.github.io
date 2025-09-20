@@ -1,5 +1,5 @@
 export const ENHANCED_INNOVATIVE_SERVICES = [
-    // AI-Powered Financial Services
+    // AI-Powered Financial Services;
     {
         id: "ai-financial-advisory-platform";
         title: "AI Financial Advisory & Wealth Management Platform";
@@ -47,14 +47,14 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-financial-advisory";
         technicalSpecs: ["Machine Learning Models", "Real-time Data Processing", "API Integration", "Cloud Infrastructure"],
         integrations: ["Bloomberg", "Reuters", "Yahoo Finance", "Trading Platforms", "Banking APIs"],
         compliance: ["SEC", "FINRA", "GDPR", "SOC 2", "PCI DSS"]
     },
-    // AI-Powered Healthcare Solutions
+    // AI-Powered Healthcare Solutions;
     {
         id: "ai-healthcare-diagnostic-platform";
         title: "AI Healthcare Diagnostic & Patient Care Platform";
@@ -102,14 +102,14 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-healthcare";
         technicalSpecs: ["Deep Learning Models", "Medical Image Processing", "Natural Language Processing", "Real-time Analytics"],
         integrations: ["Epic", "Cerner", "PACS Systems", "Lab Information Systems", "Pharmacy Systems"],
         compliance: ["HIPAA", "FDA", "SOC 2", "HITECH", "ISO 27001"]
     },
-    // AI-Powered Legal Services
+    // AI-Powered Legal Services;
     {
         id: "ai-legal-research-assistant";
         title: "AI Legal Research & Document Analysis Platform";
@@ -157,14 +157,14 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-legal-services";
         technicalSpecs: ["Natural Language Processing", "Machine Learning", "Document OCR", "Semantic Search"],
         integrations: ["Westlaw", "LexisNexis", "Clio", "Practice Management Systems", "Document Management"],
         compliance: ["Data Privacy", "Attorney-Client Privilege", "SOC 2", "GDPR"]
     },
-    // AI-Powered Marketing & Sales
+    // AI-Powered Marketing & Sales;
     {
         id: "ai-marketing-automation-suite";
         title: "AI Marketing Automation & Customer Journey Platform";
@@ -212,14 +212,14 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-marketing";
         technicalSpecs: ["Machine Learning", "Predictive Analytics", "Real-time Processing", "API Integration"],
         integrations: ["Shopify", "WooCommerce", "HubSpot", "Salesforce", "Google Analytics", "Facebook Ads"],
         compliance: ["GDPR", "CCPA", "SOC 2", "Data Privacy"]
     },
-    // AI-Powered Supply Chain Management
+    // AI-Powered Supply Chain Management;
     {
         id: "ai-supply-chain-optimization";
         title: "AI Supply Chain Optimization & Demand Forecasting Platform";
@@ -267,14 +267,14 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-supply-chain";
         technicalSpecs: ["Machine Learning", "Predictive Analytics", "IoT Integration", "Real-time Monitoring"],
         integrations: ["ERP Systems", "WMS", "TMS", "E-commerce Platforms", "Supplier Portals"],
         compliance: ["ISO 9001", "SOC 2", "GDPR", "Industry Standards"]
     },
-    // AI-Powered Human Resources
+    // AI-Powered Human Resources;
     {
         id: "ai-hr-talent-management";
         title: "AI HR Talent Management & Recruitment Platform";
@@ -322,14 +322,14 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-hr-platform";
         technicalSpecs: ["Machine Learning", "Natural Language Processing", "Predictive Analytics", "API Integration"],
         integrations: ["ATS Systems", "HRIS", "LinkedIn", "Job Boards", "Background Check Services"],
         compliance: ["EEOC", "ADA", "FCRA", "SOC 2", "GDPR"]
     },
-    // AI-Powered Real Estate
+    // AI-Powered Real Estate;
     {
         id: "ai-real-estate-analytics";
         title: "AI Real Estate Analytics & Investment Platform";
@@ -377,14 +377,14 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-real-estate";
         technicalSpecs: ["Machine Learning", "Predictive Analytics", "Geospatial Analysis", "Real-time Data Processing"],
         integrations: ["MLS Systems", "Property Databases", "Financial Data Sources", "Market Data APIs"],
         compliance: ["Real Estate Regulations", "Data Privacy", "SOC 2", "Industry Standards"]
     },
-    // AI-Powered Education
+    // AI-Powered Education;
     {
         id: "ai-education-personalization";
         title: "AI Education Personalization & Learning Analytics Platform";
@@ -432,14 +432,14 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-education";
         technicalSpecs: ["Machine Learning", "Natural Language Processing", "Learning Analytics", "Content Management"],
         integrations: ["LMS Systems", "Student Information Systems", "Content Libraries", "Assessment Tools"],
         compliance: ["FERPA", "COPPA", "SOC 2", "Data Privacy", "Educational Standards"]
     },
-    // AI-Powered Manufacturing
+    // AI-Powered Manufacturing;
     {
         id: "ai-manufacturing-optimization";
         title: "AI Manufacturing Optimization & Predictive Maintenance Platform";
@@ -487,14 +487,14 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-manufacturing";
         technicalSpecs: ["Machine Learning", "IoT Integration", "Predictive Analytics", "Real-time Monitoring"],
         integrations: ["MES Systems", "SCADA", "ERP Systems", "IoT Devices", "Quality Control Systems"],
         compliance: ["ISO 9001", "ISO 14001", "SOC 2", "Industry 4.0 Standards"]
     },
-    // AI-Powered Energy Management
+    // AI-Powered Energy Management;
     {
         id: "ai-energy-optimization";
         title: "AI Energy Management & Smart Grid Optimization Platform";
@@ -542,14 +542,14 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-energy";
         technicalSpecs: ["Machine Learning", "IoT Integration", "Predictive Analytics", "Real-time Processing"],
         integrations: ["SCADA Systems", "Smart Meters", "Renewable Energy Systems", "Energy Trading Platforms"],
         compliance: ["ISO 50001", "SOC 2", "Energy Regulations", "Grid Standards"]
     },
-    // AI-Powered Transportation & Logistics
+    // AI-Powered Transportation & Logistics;
     {
         id: "ai-transportation-optimization";
         title: "AI Transportation & Fleet Management Platform";
@@ -597,14 +597,14 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-transportation";
         technicalSpecs: ["Machine Learning", "GPS Integration", "Real-time Analytics", "IoT Connectivity"],
         integrations: ["GPS Systems", "Fleet Management Software", "TMS", "Fuel Cards", "Maintenance Systems"],
         compliance: ["DOT Regulations", "ELD Compliance", "SOC 2", "Transportation Standards"]
     },
-    // AI-Powered Retail & E-commerce
+    // AI-Powered Retail & E-commerce;
     {
         id: "ai-retail-optimization";
         title: "AI Retail Optimization & Customer Experience Platform";
@@ -652,14 +652,14 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-retail";
         technicalSpecs: ["Machine Learning", "Predictive Analytics", "Real-time Processing", "API Integration"],
         integrations: ["POS Systems", "E-commerce Platforms", "Inventory Management", "Customer Databases", "Payment Systems"],
         compliance: ["PCI DSS", "GDPR", "SOC 2", "Retail Regulations"]
     },
-    // AI-Powered Real Estate Investment Platform
+    // AI-Powered Real Estate Investment Platform;
     {
         id: "ai-real-estate-investment";
         title: "AI Real Estate Investment Analysis & Portfolio Optimization Platform";
@@ -707,7 +707,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-real-estate-investment";
         demoUrl: "https://ziontechgroup.com/demo/ai-real-estate-investment";
@@ -717,9 +717,9 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["MLS Systems", "Property Databases", "Financial Platforms", "Tax Software", "CRM Systems"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%"
+        uptime: "99.95%",
     };
-    // AI-Powered Education & Learning Platform
+    // AI-Powered Education & Learning Platform;
     {
         id: "ai-education-platform";
         title: "AI-Powered Adaptive Learning & Educational Analytics Platform";
@@ -767,7 +767,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-education-platform";
         demoUrl: "https://ziontechgroup.com/demo/ai-education-platform";
@@ -777,9 +777,9 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["LMS Systems", "Student Information Systems", "Assessment Tools", "Content Management", "Communication Platforms"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%"
+        uptime: "99.95%",
     };
-    // AI-Powered Energy Management Platform
+    // AI-Powered Energy Management Platform;
     {
         id: "ai-energy-management";
         title: "AI Energy Management & Sustainability Optimization Platform";
@@ -827,7 +827,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-energy-management";
         demoUrl: "https://ziontechgroup.com/demo/ai-energy-management";
@@ -837,9 +837,9 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Building Management Systems", "IoT Sensors", "Utility Meters", "Renewable Energy Systems", "SCADA Systems"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%"
+        uptime: "99.95%",
     };
-    // AI-Powered Agriculture & Precision Farming
+    // AI-Powered Agriculture & Precision Farming;
     {
         id: "ai-precision-agriculture";
         title: "AI Precision Agriculture & Crop Management Platform";
@@ -887,7 +887,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-precision-agriculture";
         demoUrl: "https://ziontechgroup.com/demo/ai-precision-agriculture";
@@ -897,9 +897,9 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["IoT Sensors", "Drone Systems", "Weather APIs", "Soil Testing Equipment", "Irrigation Systems"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%"
+        uptime: "99.95%",
     };
-    // AI-Powered Construction & Project Management
+    // AI-Powered Construction & Project Management;
     {
         id: "ai-construction-management";
         title: "AI Construction Project Management & Safety Platform";
@@ -947,7 +947,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-construction-management";
         demoUrl: "https://ziontechgroup.com/demo/ai-construction-management";
@@ -957,9 +957,9 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Project Management Software", "Safety Systems", "IoT Sensors", "Financial Systems", "Communication Platforms"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%"
+        uptime: "99.95%",
     };
-    // AI-Powered Hospitality & Tourism
+    // AI-Powered Hospitality & Tourism;
     {
         id: "ai-hospitality-platform";
         title: "AI Hospitality Management & Guest Experience Platform";
@@ -1007,7 +1007,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-hospitality-platform";
         demoUrl: "https://ziontechgroup.com/demo/ai-hospitality-platform";
@@ -1017,9 +1017,9 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["PMS Systems", "Booking Engines", "Payment Gateways", "CRM Systems", "Communication Platforms"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%"
+        uptime: "99.95%",
     };
-    // AI-Powered Insurance & Risk Assessment
+    // AI-Powered Insurance & Risk Assessment;
     {
         id: "ai-insurance-platform";
         title: "AI Insurance Risk Assessment & Claims Processing Platform";
@@ -1067,7 +1067,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-insurance-platform";
         demoUrl: "https://ziontechgroup.com/demo/ai-insurance-platform";
@@ -1077,9 +1077,9 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Policy Management Systems", "Claims Systems", "CRM Platforms", "Financial Systems", "Third-party Data"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%"
+        uptime: "99.95%",
     };
-    // AI-Powered Legal Research & Document Analysis
+    // AI-Powered Legal Research & Document Analysis;
     {
         id: "ai-legal-research";
         title: "AI Legal Research & Document Analysis Platform";
@@ -1127,7 +1127,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-legal-research";
         demoUrl: "https://ziontechgroup.com/demo/ai-legal-research";
@@ -1137,9 +1137,9 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Legal Research Databases", "Document Management Systems", "Case Management Software", "Legal Libraries", "Court Systems"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%"
+        uptime: "99.95%",
     };
-    // AI-Powered Media & Content Creation
+    // AI-Powered Media & Content Creation;
     {
         id: "ai-media-platform";
         title: "AI Media Production & Content Creation Platform";
@@ -1187,7 +1187,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-media-platform";
         demoUrl: "https://ziontechgroup.com/demo/ai-media-platform";
@@ -1197,9 +1197,9 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Video Editing Software", "Audio Processing Tools", "Content Management Systems", "Social Media Platforms", "Analytics Tools"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%"
+        uptime: "99.95%",
     };
-    // AI-Powered Gaming & Entertainment
+    // AI-Powered Gaming & Entertainment;
     {
         id: "ai-gaming-platform";
         title: "AI Gaming Analytics & Player Experience Platform";
@@ -1247,7 +1247,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-gaming-platform";
         demoUrl: "https://ziontechgroup.com/demo/ai-gaming-platform";
@@ -1257,9 +1257,9 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Game Engines", "Analytics Platforms", "Payment Systems", "Social Platforms", "Advertising Networks"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%"
+        uptime: "99.95%",
     };
-    // AI-Powered Cybersecurity & Threat Intelligence
+    // AI-Powered Cybersecurity & Threat Intelligence;
     {
         id: "ai-cybersecurity-intelligence";
         title: "AI Cybersecurity Threat Intelligence & Response Platform";
@@ -1307,7 +1307,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-cybersecurity-intelligence";
         demoUrl: "https://ziontechgroup.com/demo/ai-cybersecurity-intelligence";
@@ -1317,9 +1317,9 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["SIEM Systems", "EDR Platforms", "Firewalls", "Identity Management", "Security Tools"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.99%";
-        uptime: "99.99%"
+        uptime: "99.99%",
     };
-    // AI-Powered Supply Chain & Logistics
+    // AI-Powered Supply Chain & Logistics;
     {
         id: "ai-supply-chain-platform";
         title: "AI Supply Chain Optimization & Logistics Intelligence Platform";
@@ -1367,7 +1367,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-supply-chain-platform";
         demoUrl: "https://ziontechgroup.com/demo/ai-supply-chain-platform";
@@ -1377,9 +1377,9 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["ERP Systems", "WMS Platforms", "TMS Solutions", "Supplier Portals", "Financial Systems"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%"
+        uptime: "99.95%",
     };
-    // AI-Powered Customer Experience & Support
+    // AI-Powered Customer Experience & Support;
     {
         id: "ai-customer-experience";
         title: "AI Customer Experience & Support Automation Platform";
@@ -1427,7 +1427,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-customer-experience";
         demoUrl: "https://ziontechgroup.com/demo/ai-customer-experience";
@@ -1437,9 +1437,9 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["CRM Systems", "Help Desk Platforms", "Communication Tools", "Analytics Platforms", "Social Media"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%"
+        uptime: "99.95%",
     };
-    // AI-Powered HR & Talent Management
+    // AI-Powered HR & Talent Management;
     {
         id: "ai-hr-talent-platform";
         title: "AI HR & Talent Management & Recruitment Platform";
@@ -1487,7 +1487,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-hr-talent-platform";
         demoUrl: "https://ziontechgroup.com/demo/ai-hr-talent-platform";
@@ -1497,9 +1497,9 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["ATS Systems", "HRIS Platforms", "Job Boards", "Background Check Services", "Assessment Tools"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%"
+        uptime: "99.95%",
     };
-    // AI-Powered Data Governance & Privacy
+    // AI-Powered Data Governance & Privacy;
     {
         id: "ai-data-governance";
         title: "AI Data Governance & Privacy Compliance Platform";
@@ -1547,7 +1547,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-data-governance";
         demoUrl: "https://ziontechgroup.com/demo/ai-data-governance";
@@ -1557,7 +1557,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Data Warehouses", "CRM Systems", "ERP Platforms", "Security Tools", "Analytics Platforms"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.99%";
-        uptime: "99.99%"
+        uptime: "99.99%",
     }
 ];
     export const getInnovativeServiceByCategory = (category) => {

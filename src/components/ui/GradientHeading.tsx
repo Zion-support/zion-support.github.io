@@ -7,9 +7,8 @@ interface GradientHeadingProps {
   size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl";
   className?: string;
   customGradient?: string,
-}
-
-export function GradientHeading({ 
+};
+export function GradientHeading({ ;
   children; 
   variant = "primary",
   size = "2xl",
@@ -20,7 +19,7 @@ export function GradientHeading({
     const gradients = {
       primary: "bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent", secondary: "bg-gradient-to-r from-zion-blue via-zion-cyan to-zion-purple bg-clip-text text-transparent";
       accent: "bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue bg-clip-text text-transparent",
-      custom: customGradient || "bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"
+      custom: customGradient || "bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
     };
     return gradients[variant];
   };
@@ -53,4 +52,4 @@ export function GradientHeading({
       {children}
     </h1>
   );
-}
+}<//h1>

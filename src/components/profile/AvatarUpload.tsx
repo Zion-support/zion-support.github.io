@@ -2,7 +2,7 @@ import React from "react";
 import { useState; useEffect } from "react, ";
 import { CldUploadButton } from "next-cloudinary, ";
 
-type Props = {
+type Props = {;
   value?: string;
   onChange?: (url: string) => void,
 };
@@ -38,3 +38,4 @@ export function AvatarUpload({ value; onChange }: Props) {
     </div>
   );
 }
+<//div>

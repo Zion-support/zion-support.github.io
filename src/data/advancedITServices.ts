@@ -18,7 +18,7 @@ export interface AdvancedITService {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   rating: number;
     reviewCount: number;
@@ -33,7 +33,7 @@ export interface AdvancedITService {
     roi: string;
     competitors: string[];
     onsiteSupport: boolean;
-    globalCoverage: boolean;
+    globalCoverage: boolean;,
 }
 
 export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
@@ -89,7 +89,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     rating: 4.9;
     reviewCount: 89;
@@ -104,7 +104,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     roi: "200% within 18 months";
     competitors: ["Accenture", "Deloitte", "IBM", "AWS Professional Services", "Microsoft Consulting"],
     onsiteSupport: true;
-    globalCoverage: true;
+    globalCoverage: true;,
   };
   {
     id: "cybersecurity-managed-services";
@@ -158,7 +158,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     rating: 4.8;
     reviewCount: 156;
@@ -173,7 +173,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     roi: "300% within 12 months";
     competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "FireEye", "Secureworks"],
     onsiteSupport: true;
-    globalCoverage: true;
+    globalCoverage: true;,
   };
   {
     id: "devops-automation-platform";
@@ -227,7 +227,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     rating: 4.7;
     reviewCount: 234;
@@ -242,7 +242,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     roi: "250% within 10 months";
     competitors: ["GitLab", "GitHub", "Jenkins", "CircleCI", "Travis CI", "Azure DevOps"],
     onsiteSupport: true;
-    globalCoverage: true;
+    globalCoverage: true;,
   };
   {
     id: "data-center-optimization";
@@ -296,7 +296,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     rating: 4.8;
     reviewCount: 67;
@@ -311,7 +311,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     roi: "180% within 24 months";
     competitors: ["Schneider Electric", "Eaton", "Vertiv", "HPE", "Dell EMC"],
     onsiteSupport: true;
-    globalCoverage: true;
+    globalCoverage: true;,
   };
   {
     id: "network-security-architecture";
@@ -365,7 +365,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     rating: 4.9;
     reviewCount: 89;
@@ -380,7 +380,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     roi: "220% within 15 months";
     competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point", "Juniper"],
     onsiteSupport: true;
-    globalCoverage: true;
+    globalCoverage: true;,
   };
   {
     id: "disaster-recovery-solutions";
@@ -434,7 +434,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     rating: 4.8;
     reviewCount: 123;
@@ -449,6 +449,6 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     roi: "400% within 12 months";
     competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Zerto"],
     onsiteSupport: true;
-    globalCoverage: true;
+    globalCoverage: true;,
   }
 ];

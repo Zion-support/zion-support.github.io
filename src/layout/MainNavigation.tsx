@@ -37,8 +37,7 @@ interface MainNavigationProps {
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
-}
-
+};
 interface NavigationLink {
   key: string;
   href: string;
@@ -93,7 +92,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
 
   let links = baseLinks.map(link => ({ ...link; name: t(`nav.${link.key}`) }));
       matches: (path: string) => path.startsWith("/blog"),
-      name: t("nav.blog")
+      name: t("nav.blog"),
     }
   ];
 
@@ -116,7 +115,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
       matches: (path: string) => path.startsWith("/about")
       key: "about",
       href: "/about",
-      matches: (path: string) => path === "/about"
+      matches: (path: string) => path === "/about",
     },
     {
       key: "services",
@@ -124,45 +123,45 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
       matches: (path: string) => path.startsWith("/services")
       key: "services",
       href: "/services",
-      matches: (path: string) => path.startsWith("/services")
+      matches: (path: string) => path.startsWith("/services"),
     },
     {
       key: "ai-services",
       href: "/ai-services",
-      matches: (path: string) => path.startsWith("/ai-services")
+      matches: (path: string) => path.startsWith("/ai-services"),
     },
     {
       key: "it-services",
       href: "/it-services",
-      matches: (path: string) => path.startsWith("/it-services")
+      matches: (path: string) => path.startsWith("/it-services"),
     },
     {
       key: "micro-saas",
       href: "/micro-saas",
-      matches: (path: string) => path.startsWith("/micro-saas")
+      matches: (path: string) => path.startsWith("/micro-saas"),
     },
     {
       key: "about",
       href: "/about",
-      matches: (path: string) => path.startsWith("/about")
+      matches: (path: string) => path.startsWith("/about"),
     },
     {
       key: "services",
       href: "/services",
       matches: (path: string) => path.startsWith("/services") || path.startsWith("/it-onsite-services")
       name: "Home",
-      matches: (path: string) => path === "/"
+      matches: (path: string) => path === "/",
     },
     {
       key: "services",
       href: "/services",
       name: "Services",
-      matches: (path: string) => path.startsWith("/services")
+      matches: (path: string) => path.startsWith("/services"),
     },
     {
       key: "services",
       href: "/comprehensive-services",
-      matches: (path: string) => path.startsWith("/comprehensive-services") || path.startsWith("/services")
+      matches: (path: string) => path.startsWith("/comprehensive-services") || path.startsWith("/services"),
     },
     {
       key: "marketplace",
@@ -175,23 +174,23 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
       matches: (path: string) => path.startsWith("/services")
       key: "services",
       href: "/services",
-      matches: (path: string) => path.startsWith("/services") || path.startsWith("/it-onsite-services")
+      matches: (path: string) => path.startsWith("/services") || path.startsWith("/it-onsite-services"),
     },
     {
       key: "micro-saas",
       href: "/micro-saas-services",
       matches: (path: string) => path.startsWith("/micro-saas-services")
-      matches: (path: string) => path === "/"
+      matches: (path: string) => path === "/",
     },
     {
       key: "marketplace",
       href: "/marketplace",
-      matches: (path: string) => path.startsWith("/marketplace")
+      matches: (path: string) => path.startsWith("/marketplace"),
     },
     {
       key: "services",
       href: "/services",
-      matches: (path: string) => path.startsWith("/services")
+      matches: (path: string) => path.startsWith("/services"),
     },
     {
       key: "services",
@@ -227,14 +226,14 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
       href: "/talent",
       key: "ai-hiring",
       href: "/zion-hire-ai",
-      matches: (path: string) => path.startsWith("/zion-hire-ai") || path.startsWith("/hire-ai")
+      matches: (path: string) => path.startsWith("/zion-hire-ai") || path.startsWith("/hire-ai"),
     }
   ];
 
   const moreLinks = [
     {
       matches: (path: string) => path.startsWith("/equipment"),
-      name: t("nav.equipment")
+      name: t("nav.equipment"),
     },
     {
       key: "partners",
@@ -261,7 +260,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
       ]
       key: "equipment",
       href: "/equipment",
-      matches: (path: string) => path.startsWith("/equipment")
+      matches: (path: string) => path.startsWith("/equipment"),
     },
     {
       key: "community",
@@ -277,7 +276,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
       key: "about",
       href: "/about",
       matches: (path: string) => path === "/about"
-      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
+      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum"),
     },
     {
       key: "blog",
@@ -286,13 +285,13 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
       href: "/contact",
       matches: (path: string) => path === "/contact"
       icon: <Users className="w-4 h-4" />,
-      description: "Join our community"
+      description: "Join our community",
     },
     {
       key: "help",
       href: "/help-center",
       icon: <HelpCircle className="w-4 h-4" />,
-      description: "Get help and support"
+      description: "Get help and support",
     },
     {
       key: "faq",
@@ -313,7 +312,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
       key: "blog",
       href: "/blog",
       matches: (path: string) => path.startsWith("/blog")
-      matches: (path: string) => path.startsWith("/blog")
+      matches: (path: string) => path.startsWith("/blog"),
     }
   ];
 
@@ -380,7 +379,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
 
   let links = baseLinks.map(link => ({ ...link; name: t(`nav.${link.key}`) }));
       matches: (path: string) => path.startsWith("/blog"),
-      name: t("nav.blog")
+      name: t("nav.blog"),
     }
   ];
 
@@ -400,7 +399,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
     };
   }, []);
       name: "About",
-      matches: (path: string) => path.startsWith("/about") || path === "/careers" || path === "/contact"
+      matches: (path: string) => path.startsWith("/about") || path === "/careers" || path === "/contact",
     }
   ];
 
@@ -434,7 +433,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
       key: "dashboard",
       name: "Dashboard",
       href: "/dashboard",
-      matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard"
+      matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard",
     });
   }
   
@@ -444,7 +443,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
       key: "analytics",
       name: "Analytics",
       href: "/analytics",
-      matches: (path: string) => path.startsWith("/analytics")
+      matches: (path: string) => path.startsWith("/analytics"),
     });
   }
 
@@ -1032,3 +1031,4 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
     </nav>
   );
 }
+<//nav>

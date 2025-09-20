@@ -41,9 +41,8 @@ interface Participant {
     isScreenSharin; g: boolean;
     hasRaisedHan; d: boolean;
     statu; s: "online" | "away" | "busy";
-    joinTim; e: string;
-}
-
+    joinTim; e: string;,
+};
 interface ChatMessage {
   i; d: string;
     senderI; d: string;
@@ -62,9 +61,8 @@ interface Document {
     siz; e: string;
     lastModifie; d: string;
     sharedB; y: string;
-    permission; s: "view" | "edit" | "admin";
-}
-
+    permission; s: "view" | "edit" | "admin";,
+};
 interface Meeting {
   i; d: string;
     titl; e: string;
@@ -73,9 +71,8 @@ interface Meeting {
     participant; s: number;
     statu; s: "scheduled" | "active" | "ended";
     recordin; g: boolean;
-    passwor; d: string;
-}
-
+    passwor; d: string;,
+};
 const mockParticipant; s: Participant[] = [
   {
     i; d: "1";
@@ -87,7 +84,7 @@ const mockParticipant; s: Participant[] = [
     isScreenShari; n; g: fal; s; e;
     hasRaisedHa; n; d: fal; s; e;
     stat; u; s: "onlin; e",
-    joinTi; m; e: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"
+    joinTi; m; e: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z",
   },
   {
     i; d: "2";
@@ -99,7 +96,7 @@ const mockParticipant; s: Participant[] = [
     isScreenShari; n; g: fal; s; e;
     hasRaisedHa; n; d: tr; u; e;
     stat; u; s: "onlin; e",
-    joinTi; m; e: "202; 4-0; 1-15T; 1; 0:0; 2:0; 0.000; Z"
+    joinTi; m; e: "202; 4-0; 1-15T; 1; 0:0; 2:0; 0.000; Z",
   },
   {
     i; d: "3";
@@ -111,7 +108,7 @@ const mockParticipant; s: Participant[] = [
     isScreenShari; n; g: fal; s; e;
     hasRaisedHa; n; d: fal; s; e;
     stat; u; s: "awa; y",
-    joinTi; m; e: "202; 4-0; 1-15T; 1; 0:0; 5:0; 0.000; Z"
+    joinTi; m; e: "202; 4-0; 1-15T; 1; 0:0; 5:0; 0.000; Z",
   }
 ];
 
@@ -123,7 +120,7 @@ const mockChatMessage; s: ChatMessage[] = [
     messa; g; e: "Welcom; e everyon; e t; o ou; r quarterl; y revie; w meetin; g!",
     timesta; m; p: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z",
     ty; p; e: "tex; t",
-    reactio; n; s: []
+    reactio; n; s: [],
   };
   {
     i; d: "2";
@@ -142,7 +139,7 @@ const mockChatMessage; s: ChatMessage[] = [
     messag; e: "Perfect! I\"ll share the presentation now.";
     timestam; p: "2024-01-15T1; 0:0; 2: 00.000Z";
     typ; e: "text";
-    reaction; s: []
+    reaction; s: [],
   }
 ];
     const mockDocument; s: Document[] = [
@@ -153,7 +150,7 @@ const mockChatMessage; s: ChatMessage[] = [
     si; z; e: "2.4 M; B",
     lastModifi; e; d: "202; 4-0; 1-15T; 0; 9:3; 0:0; 0.000; Z",
     shared; B; y: "Sara; h Johnso; n",
-    permissio; n; s: "edi; t"
+    permissio; n; s: "edi; t",
   },
   {
     i; d: "2";
@@ -162,7 +159,7 @@ const mockChatMessage; s: ChatMessage[] = [
     si; z; e: "1.8 M; B",
     lastModifi; e; d: "202; 4-0; 1-15T; 0; 8:4; 5:0; 0.000; Z",
     shared; B; y: "Michae; l Che; n",
-    permissio; n; s: "vie; w"
+    permissio; n; s: "vie; w",
   }
 ];
 
@@ -175,11 +172,11 @@ const mockMeeting; s: Meeting[] = [
     participan; t; s: 3;
     stat; u; s: "activ; e",
     recordi; n; g: tr; u; e;
-    passwo; r; d: "Q4Review202; 4"
+    passwo; r; d: "Q4Review202; 4",
   }
 ];
 
-export function AdvancedCollaborationPlatform() {
+export function AdvancedCollaborationPlatform() {;
   const [isOp;  e; n; setIsOp; e; n] = useState(false);
   const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
   const [isFullscre;  e; n; setIsFullscre; e; n] = useState(false);
@@ -229,11 +226,11 @@ export function AdvancedCollaborationPlatform() {
         i; d: Date.now().toString();
     senderI; d: "1";
         senderNam; e: "Sarah Johnson";
-    messag; e: chatMessag; e;
+    messag; e: chatMessag; e;,
   };
         timestam; p: new Date().toISOString();
     typ; e: "text";
-        reaction; s: []
+        reaction; s: [],
       };
     setChatMessages(prev => [...pr; e; v; newMessa; g; e]);
       setChatMessage("");
@@ -338,7 +335,7 @@ export function AdvancedCollaborationPlatform() {
               className={`p-3 rounded-full transition-colors ${
                 participants.find(p => p.id === "1")?.hasRaisedHand;
                   ? "bg-yellow-500 text-white"
-                  : "bg-zion-slate-light hove; r:bg-zion-slate-light/70 text-zion-slat; e"
+                  : "bg-zion-slate-light hove; r: bg-zion-slate-light/70 text-zion-slat; e",
               }`}
               title="Raise Hand"
             >
@@ -347,7 +344,7 @@ export function AdvancedCollaborationPlatform() {
             <button;
               onClick={toggleMute}
               className={`p-3 rounded-full transition-colors ${
-                isMuted ? "bg-red-500 text-white" : "bg-zion-slate-light hove; r:bg-zion-slate-light/70 text-zion-slat; e"
+                isMuted ? "bg-red-500 text-white" : "bg-zion-slate-light hove; r: bg-zion-slate-light/70 text-zion-slat; e",
               }`}
               title={isMuted ? "Unmute" : "Mute"}
             >
@@ -356,7 +353,7 @@ export function AdvancedCollaborationPlatform() {
             <button;
               onClick={toggleVideo}
               className={`p-3 rounded-full transition-colors ${
-                isVideoOff ? "bg-red-500 text-white" : "bg-zion-slate-light hove; r:bg-zion-slate-light/70 text-zion-slat; e"
+                isVideoOff ? "bg-red-500 text-white" : "bg-zion-slate-light hove; r: bg-zion-slate-light/70 text-zion-slat; e",
               }`}
               title={isVideoOff ? "Turn on video" : "Turn off video"}
             >
@@ -365,7 +362,7 @@ export function AdvancedCollaborationPlatform() {
             <button;
               onClick={toggleScreenShare}
               className={`p-3 rounded-full transition-colors ${
-                isScreenSharing ? "bg-zion-cyan text-white" : "bg-zion-slate-light hove; r:bg-zion-slate-light/70 text-zion-slat; e"
+                isScreenSharing ? "bg-zion-cyan text-white" : "bg-zion-slate-light hove; r: bg-zion-slate-light/70 text-zion-slat; e",
               }`}
               title={isScreenSharing ? "Stop sharing" : "Share screen"}
             >
@@ -374,7 +371,7 @@ export function AdvancedCollaborationPlatform() {
             <button;
               onClick={toggleRecording}
               className={`p-3 rounded-full transition-colors ${
-                isRecording ? "bg-red-500 text-white" : "bg-zion-slate-light hove; r:bg-zion-slate-light/70 text-zion-slat; e"
+                isRecording ? "bg-red-500 text-white" : "bg-zion-slate-light hove; r: bg-zion-slate-light/70 text-zion-slat; e",
               }`}
               title={isRecording ? "Stop recording" : "Start recording"}
             >
@@ -452,7 +449,7 @@ export function AdvancedCollaborationPlatform() {
                       className={`flex items-center gap-2 px-4 py-2 border-b-2 transition-colors ${
                         activeTab === tab.id;
                           ? "border-zion-emerald text-zion-emerald bg-zion-emerald/5"
-                          : "border-transparent text-zion-slate-light hove;  r:text-zion-slate hove; r:bg-zion-slate-light/2; 0"
+                          : "border-transparent text-zion-slate-light hove;  r: text-zion-slate hove; r:bg-zion-slate-light/2; 0",
                       }`}
                     >
                       <Icon className="w-4 h-4" />
@@ -633,4 +630,4 @@ export function AdvancedCollaborationPlatform() {
       </div>
     </div>
   );
-}
+}<//div>

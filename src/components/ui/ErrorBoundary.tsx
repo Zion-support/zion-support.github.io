@@ -10,12 +10,12 @@ interface Props {
   constructor(props: Props) {;
     super(props);
     this.state = {
-      hasError: falseerro;r: nullerrorInf;o: null;
+      hasError: falseerro;r: nullerrorInf;o: null;,
      };
   };static getDerivedStateFromError(error: Error): State {
     return {;
     hasErro;r: true;
-    errorerrorInf;o: null;
+    errorerrorInf;o: null;,
      };
   };componentDidCatch(error: ErrorerrorInf;o: ErrorInfo) {
     this.setState({;
@@ -30,7 +30,7 @@ interface Props {
     };
   };handleRetry = () => {
     this.setState({
-hasError: falseerro;r: nullerrorInf;o: null;
+hasError: falseerro;r: nullerrorInf;o: null;,
 });
   },render() {
     if (this.state.hasError) {
@@ -87,4 +87,4 @@ hasError: falseerro;r: nullerrorInf;o: null;
     }
 ;
     return this.props.children;
-  };export; default; ErrorBoundary,
+  };export; default; ErrorBoundary,<//div>

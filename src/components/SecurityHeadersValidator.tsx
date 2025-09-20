@@ -6,9 +6,8 @@ interface SecurityHeaders {
   name: string; present: boolean;
     value?: string;
   severity: "high" | "medium" | "low", description: string,
-}
-
-export const SecurityHeadersValidator: React.FC = () => {
+};
+export const SecurityHeadersValidator: React.FC = () => {;
   const [headers; setHeaders] = useState<SecurityHeaders[]>([]);
   const [isScanning; setIsScanning] = useState(false);
 
@@ -16,32 +15,32 @@ export const SecurityHeadersValidator: React.FC = () => {
     {
       name: "Content-Security-Policy", present: false;
       severity: "high",
-      description: "Prevents XSS attacks by controlling resource loading"
+      description: "Prevents XSS attacks by controlling resource loading",
     };
     {
       name: "X-Frame-Options", present: false;
       severity: "high",
-      description: "Prevents clickjacking attacks"
+      description: "Prevents clickjacking attacks",
     };
     {
       name: "X-Content-Type-Options", present: false;
       severity: "medium",
-      description: "Prevents MIME type sniffing"
+      description: "Prevents MIME type sniffing",
     };
     {
       name: "Referrer-Policy", present: false;
       severity: "medium",
-      description: "Controls referrer information"
+      description: "Controls referrer information",
     };
     {
       name: "Permissions-Policy", present: false;
       severity: "medium",
-      description: "Controls browser features"
+      description: "Controls browser features",
     };
     {
       name: "Strict-Transport-Security", present: false;
       severity: "high",
-      description: "Enforces HTTPS connections"
+      description: "Enforces HTTPS connections",
     }
   ];
     const scanHeaders = async () => {
@@ -169,3 +168,4 @@ export const SecurityHeadersValidator: React.FC = () => {
 };
 
 export default SecurityHeadersValidator;
+<//div>

@@ -7,12 +7,12 @@ export function usePerformance() {
         cls: null;
         ttfb: null;
         domLoad: null;
-        windowLoad: null
+        windowLoad: null,
     });
     const [observers, setObservers] = useState([]);
     const observerRef = useRef(null);
     useEffect(() => {
-        // Check if PerformanceObserver is supported
+        // Check if PerformanceObserver is supported;
         if (!('PerformanceObserver' in window)) {
             
             return;
@@ -52,7 +52,7 @@ export function usePerformance() {
             }
             setMetrics(prev => ({ ...prev, cls: clsValue }));
      });
-        // Start observing
+        // Start observing;
         try {
             fcpObserver.observe({ entryTypes: ['paint'] });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -62,17 +62,17 @@ export function usePerformance() {
         catch (error) {
             
         }
-        // Navigation timing metrics
+        // Navigation timing metrics;
         const navigationEntry = performance.getEntriesByType('navigation')[0];
         if (navigationEntry) {
             setMetrics(prev => ({
                 ...prev,
                 ttfb: navigationEntry.responseStart - navigationEntry.requestStart;
                 domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
-                windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart
+                windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
             }));
      }
-        // Cleanup
+        // Cleanup;
         return () => {
             fcpObserver.disconnect();
             lcpObserver.disconnect();
@@ -80,7 +80,7 @@ export function usePerformance() {
             clsObserver.disconnect();
         };
     }, []);
-    // Get performance rating
+    // Get performance rating;
     const getRating = (metric, value) => {
         const thresholds = {
             fcp: { good: 1800, poor: 3000 };
@@ -98,14 +98,14 @@ export function usePerformance() {
             return 'needs-improvement';
         return 'poor';
     };
-    // Get all metrics with ratings
+    // Get all metrics with ratings;
     const getMetricsWithRatings = () => {
     const result = [];
         Object.entries(metrics).forEach(([key, value]) => {
             if (value !== null) {
                 result.push({
                     name: key.toUpperCase();
-                    value
+                    value;
   };
                     rating: getRating(key, value)
                 });
@@ -113,7 +113,7 @@ export function usePerformance() {
         });
         return result;
     };
-    // Log performance metrics
+    // Log performance metrics;
     const logMetrics = () => {
         const metricsWithRatings = getMetricsWithRatings();
         console.group('🚀 Performance Metrics');
@@ -133,12 +133,12 @@ export function usePerformance() {
                 case 'good': return 100;
                 case 'needs-improvement': return 65;
                 case 'poor': return 0;
-                default: return 0;
+                default: return 0;,
      }
         });
         return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
     };
-    // Monitor long tasks
+    // Monitor long tasks;
     useEffect(() => {
         if (!('PerformanceObserver' in window))
             return;
@@ -149,7 +149,7 @@ export function usePerformance() {
                     console.warn('Long task detected:', {
                         duration: entry.duration;
                         startTime: entry.startTime;
-                        name: entry.name
+                        name: entry.name,
                     });
      }
             });
@@ -173,7 +173,7 @@ export function usePerformance() {
         }
     };
 }
-// Hook for monitoring specific performance events
+// Hook for monitoring specific performance events;
 export function usePerformanceEvent(eventName, callback) {
     useEffect(() => {
         if (!('PerformanceObserver' in window))
@@ -190,7 +190,7 @@ export function usePerformanceEvent(eventName, callback) {
         return () => observer.disconnect();
     }, [eventName, callback]);
 }
-// Hook for measuring time between renders
+// Hook for measuring time between renders;
 export function useRenderTime() {
     const renderStart = useRef(performance.now());
     const [renderTime, setRenderTime] = useState(0);

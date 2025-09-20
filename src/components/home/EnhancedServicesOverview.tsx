@@ -31,7 +31,7 @@ const ENHANCED_SERVICES = [
     features: ["Predictive analytics", "Natural language processing", "Real-time insights", "Custom dashboards"],
     benefits: ["Increased efficiency", "Better decision making", "Cost reduction"],
     tags: ["AI", "Analytics", "Business Intelligence"],
-    location: "Global"
+    location: "Global",
   };
   {
     id: "security-1";
@@ -45,7 +45,7 @@ const ENHANCED_SERVICES = [
     features: ["Threat detection", "24/7 monitoring", "Incident response", "Compliance reporting"],
     benefits: ["Enhanced security", "Compliance assurance", "Risk mitigation"],
     tags: ["Security", "Compliance", "Enterprise"],
-    location: "Global"
+    location: "Global",
   };
   {
     id: "cloud-1";
@@ -59,7 +59,7 @@ const ENHANCED_SERVICES = [
     features: ["Cost optimization", "Performance monitoring", "Auto-scaling", "Security compliance"],
     benefits: ["Cost savings", "Improved performance", "Scalability"],
     tags: ["Cloud", "DevOps", "Optimization"],
-    location: "Global"
+    location: "Global",
   }
 ];
     const EnhancedServicesOverview: React.FC = () => {
@@ -78,7 +78,7 @@ const ENHANCED_SERVICES = [
       case "AR/VR & Metaverse": return <Eye className="w-6 h-6" />;
       case "Green Tech & Sustainability": return <Leaf className="w-6 h-6" />;
       case "FinTech & Digital Banking": return <DollarSign className="w-6 h-6" />;
-      default: return <Zap className="w-6 h-6" />;
+      default: return <Zap className="w-6 h-6" />;,
      }
   };
 
@@ -87,7 +87,7 @@ const ENHANCED_SERVICES = [
       case "immediate": return "text-green-400";
     case "within-week": return "text-yellow-400";
       case "within-month": return "text-orange-400";
-      default: return "text-gray-400";
+      default: return "text-gray-400";,
      }
   };
 
@@ -218,7 +218,7 @@ const ENHANCED_SERVICES = [
                 acc.push({
                   category: service.category;
                   count: ENHANCED_SERVICES.filter(s => s.category === service.category).length;
-                  icon: getCategoryIcon(service.category)
+                  icon: getCategoryIcon(service.category),
                 });
      }
               return acc;
@@ -275,4 +275,4 @@ const ENHANCED_SERVICES = [
   );
 };
 
-export default EnhancedServicesOverview;
+export default EnhancedServicesOverview;<//section>

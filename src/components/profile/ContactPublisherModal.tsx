@@ -27,11 +27,10 @@ interface ContactPublisherModalProps {
     publisherName: string;
     publisherEmail?: string;
   productId?: string;
-}
-
-type FormValues = {
+};
+type FormValues = {;
   subject: string;
-    message: string;
+    message: string;,
 };
 
 const schema = z.object({
@@ -45,7 +44,7 @@ const schema = z.object({
     .nonempty("Message is required"),
 });
 
-export function ContactPublisherModal({
+export function ContactPublisherModal({;
   isOpen;
   onClose;
   publisherName;
@@ -66,7 +65,7 @@ export function ContactPublisherModal({
       await api.post("/messages", {
         productId;
         subject: values.subject;
-        body: values.message;
+        body: values.message;,
       });
       toast.success("Message sent!");
       form.reset();
@@ -146,3 +145,4 @@ export function ContactPublisherModal({
     </Dialog>
   );
 }
+<//Dialog>

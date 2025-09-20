@@ -1,5 +1,5 @@
 export const INNOVATIVE_AI_SERVICES_2025 = [
-    // AI-Powered Autonomous Customer Service
+    // AI-Powered Autonomous Customer Service;
     {
         id: "ai-autonomous-customer-service-2025";
         title: "AI Autonomous Customer Service Platform";
@@ -52,7 +52,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-autonomous-customer-service-2025";
         technologyStack: ["GPT-5", "Claude 3.5", "Natural Language Processing", "Machine Learning", "API Integration"],
@@ -61,7 +61,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         roiMetrics: ["70% cost reduction", "90% response time improvement", "24/7 availability"],
         competitiveAdvantages: ["Fully autonomous", "Multi-language support", "Emotion detection", "Continuous learning"]
     },
-    // AI-Powered Predictive Maintenance
+    // AI-Powered Predictive Maintenance;
     {
         id: "ai-predictive-maintenance-2025";
         title: "AI Predictive Maintenance Platform";
@@ -114,7 +114,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-predictive-maintenance-2025";
         technologyStack: ["Machine Learning", "IoT Sensors", "Data Analytics", "Cloud Computing", "Edge Computing"],
@@ -123,7 +123,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         roiMetrics: ["50% downtime reduction", "30% cost reduction", "Extended equipment life"],
         competitiveAdvantages: ["AI-powered prediction", "Real-time monitoring", "Industry expertise", "Cost optimization"]
     },
-    // AI-Powered Content Creation Studio
+    // AI-Powered Content Creation Studio;
     {
         id: "ai-content-creation-studio-2025";
         title: "AI Content Creation Studio";
@@ -176,7 +176,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-content-creation-studio-2025";
         technologyStack: ["GPT-5", "DALL-E 3", "Stable Diffusion", "Natural Language Processing", "Computer Vision"],
@@ -185,7 +185,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         roiMetrics: ["10x faster creation", "60% cost reduction", "Brand consistency"],
         competitiveAdvantages: ["Multimedia AI", "Brand consistency", "SEO optimization", "Scalable production"]
     },
-    // AI-Powered Financial Trading Platform
+    // AI-Powered Financial Trading Platform;
     {
         id: "ai-financial-trading-platform-2025";
         title: "AI Financial Trading Platform";
@@ -238,7 +238,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-financial-trading-platform-2025";
         technologyStack: ["Machine Learning", "Deep Learning", "Financial APIs", "Real-time Data", "Cloud Computing"],
@@ -247,7 +247,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         roiMetrics: ["Performance improvement", "Cost reduction", "Risk mitigation"],
         competitiveAdvantages: ["AI-powered trading", "Risk management", "Compliance automation", "Multi-asset support"]
     },
-    // AI-Powered Healthcare Research Platform
+    // AI-Powered Healthcare Research Platform;
     {
         id: "ai-healthcare-research-platform-2025";
         title: "AI Healthcare Research Platform";
@@ -300,7 +300,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-healthcare-research-platform-2025";
         technologyStack: ["Deep Learning", "Natural Language Processing", "Bioinformatics", "Cloud Computing", "Data Analytics"],
@@ -309,7 +309,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         roiMetrics: ["Faster drug discovery", "Optimized trials", "Cost reduction"],
         competitiveAdvantages: ["Healthcare expertise", "Research focus", "Compliance automation", "Collaboration tools"]
     },
-    // AI-Powered Energy Optimization Platform
+    // AI-Powered Energy Optimization Platform;
     {
         id: "ai-energy-optimization-platform-2025";
         title: "AI Energy Optimization Platform";
@@ -362,7 +362,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-energy-optimization-platform-2025";
         technologyStack: ["Machine Learning", "IoT Sensors", "Energy Management", "Cloud Computing", "Data Analytics"],
@@ -371,7 +371,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         roiMetrics: ["25% cost reduction", "Energy efficiency", "Sustainability improvement"],
         competitiveAdvantages: ["Energy expertise", "AI optimization", "Sustainability focus", "Grid integration"]
     },
-    // AI-Powered Supply Chain Risk Management
+    // AI-Powered Supply Chain Risk Management;
     {
         id: "ai-supply-chain-risk-management-2025";
         title: "AI Supply Chain Risk Management Platform";
@@ -424,7 +424,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-supply-chain-risk-management-2025";
         technologyStack: ["Machine Learning", "Predictive Analytics", "Risk Modeling", "Data Analytics", "Cloud Computing"],
@@ -433,7 +433,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         roiMetrics: ["Risk reduction", "Disruption prevention", "Cost optimization"],
         competitiveAdvantages: ["Risk expertise", "AI prediction", "Global coverage", "Compliance automation"]
     },
-    // AI-Powered Legal Research & Analysis
+    // AI-Powered Legal Research & Analysis;
     {
         id: "ai-legal-research-analysis-2025";
         title: "AI Legal Research & Analysis Platform";
@@ -486,7 +486,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-legal-research-analysis-2025";
         technologyStack: ["Natural Language Processing", "Machine Learning", "Legal Databases", "Document AI", "Cloud Computing"],
@@ -495,7 +495,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         roiMetrics: ["80% time reduction", "Cost reduction", "Compliance improvement"],
         competitiveAdvantages: ["Legal expertise", "AI research", "Comprehensive coverage", "Collaboration tools"]
     },
-    // AI-Powered Creative Design Studio
+    // AI-Powered Creative Design Studio;
     {
         id: "ai-creative-design-studio-2025";
         title: "AI Creative Design Studio";
@@ -548,7 +548,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-creative-design-studio-2025";
         technologyStack: ["Generative AI", "Computer Vision", "Design Algorithms", "Creative AI", "Cloud Computing"],

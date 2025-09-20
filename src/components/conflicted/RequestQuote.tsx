@@ -28,7 +28,7 @@ import { Calculator;
   Briefcase;
 } from "lucide-react, ";
 
-export default function RequestQuote() {
+export default function RequestQuote() {;
   const [formData; setFormData] = useState({
     firstName: "";
     lastName: "";
@@ -39,7 +39,7 @@ export default function RequestQuote() {
     budget: "";
     timeline: "";
     description: "";
-    urgency: "medium"
+    urgency: "medium",
   });
     const [submissionStatus; setSubmissionStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
@@ -106,7 +106,7 @@ export default function RequestQuote() {
           budget: "";
           timeline: "";
           description: "";
-          urgency: "medium"
+          urgency: "medium",
         });
     setSubmissionStatus("idle");
       }, 3000);
@@ -262,7 +262,7 @@ export default function RequestQuote() {
                           className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${
                             formData.projectType === type.value;
                               ? "border-cyan-400 bg-cyan-400/20"
-                              : "border-white/20 hover:border-cyan-400/50"
+                              : "border-white/20 hover: border-cyan-400/50",
                           }`}
                         >
                           <input;
@@ -333,7 +333,7 @@ export default function RequestQuote() {
                           className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${
                             formData.urgency === level.value;
                               ? "border-cyan-400 bg-cyan-400/20"
-                              : "border-white/20 hover:border-cyan-400/50"
+                              : "border-white/20 hover: border-cyan-400/50",
                           }`}
                         >
                           <input;
@@ -374,7 +374,7 @@ export default function RequestQuote() {
                     className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2 ${
                       !isFormValid || submissionStatus === "submitting"
                         ? "bg-gray-600 text-gray-400 cursor-not-allowed"
-                        : "bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25"
+                        : "bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover: from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25",
                     }`}
                   >
                     {submissionStatus === "submitting" ? (
@@ -547,3 +547,4 @@ export default function RequestQuote() {
   );
 }
 
+<//div>

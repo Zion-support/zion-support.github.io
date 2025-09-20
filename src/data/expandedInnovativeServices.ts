@@ -19,7 +19,7 @@ export interface ExpandedInnovativeService {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   technology: string[];
     integrations: string[];
@@ -81,7 +81,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["OpenAI GPT-4", "React", "Node.js", "MongoDB", "AWS"],
     integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Buffer"],
@@ -89,7 +89,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     roi: "400% within 8 months";
     competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
     demoUrl: "https://ziontechgroup.com/demo/ai-content-suite";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite"
+    documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite",
   };
   // AI-Powered Video Analytics Platform;
   {
@@ -141,7 +141,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["TensorFlow", "OpenCV", "Python", "React", "AWS", "Docker"],
     integrations: ["CCTV systems", "IP cameras", "Security platforms", "Analytics tools"],
@@ -200,7 +200,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
     integrations: ["Plaid", "Yodlee", "TD Ameritrade", "Charles Schwab", "Fidelity"],
@@ -259,7 +259,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["TensorFlow", "PyTorch", "Python", "React", "DICOM", "HL7"],
     integrations: ["PACS systems", "EHR systems", "Radiology information systems"],
@@ -318,7 +318,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
     integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify"],
@@ -377,7 +377,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["NLP", "Python", "React", "Node.js", "Elasticsearch", "PostgreSQL"],
     integrations: ["Westlaw", "LexisNexis", "Clio", "MyCase", "PracticePanther"],
@@ -436,7 +436,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
     integrations: ["MLS systems", "Zillow", "Redfin", "Realtor.com", "Property databases"],
@@ -495,7 +495,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
     integrations: ["Workday", "BambooHR", "Greenhouse", "Lever", "Slack"],
@@ -554,7 +554,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "TensorFlow", "React", "Node.js", "IoT protocols", "PostgreSQL"],
     integrations: ["Building management systems", "Smart meters", "Solar panels", "Battery storage"],
@@ -613,7 +613,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Computer Vision", "Python", "TensorFlow", "React", "IoT", "PostgreSQL"],
     integrations: ["MES systems", "ERP systems", "PLC controllers", "Quality control equipment"],
@@ -672,7 +672,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
     integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
@@ -731,7 +731,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Computer Vision", "Python", "TensorFlow", "React", "IoT", "PostgreSQL"],
     integrations: ["Weather APIs", "Satellite imagery", "Farm equipment", "Soil sensors"],
@@ -790,7 +790,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
     integrations: ["TMS systems", "GPS tracking", "Fuel cards", "Maintenance systems"],
@@ -849,7 +849,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "Machine Learning", "React", "Node.js", "PostgreSQL", "Redis"],
     integrations: ["Policy management systems", "Claims systems", "CRM systems", "Payment gateways"],
@@ -908,7 +908,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
     integrations: ["Unity", "Unreal Engine", "Steam", "Twitch", "Discord"],

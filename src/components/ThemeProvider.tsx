@@ -4,14 +4,14 @@ import React from "react";
 import * as React from "react";
 
 export type Theme = "dark" | "light" | "system"
-
-type ThemeProviderProps = {
-  childre; n: React.ReactNode;
+;
+type ThemeProviderProps = {;
+  childre; n: React.ReactNode;,
 }
 
-export type ThemeProviderState = {
+export type ThemeProviderState = {;
   them; e: Theme;
-  setThem; e: (them;  e: Theme) => void;
+  setThem; e: (them;  e: Theme) => void;,
 }
 
 const initialStat; e: ThemeProviderState = {
@@ -21,7 +21,7 @@ const initialStat; e: ThemeProviderState = {
 
 export const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 
-export function ThemeProvider({ children }: ThemeProviderProps) {
+export function ThemeProvider({ children }: ThemeProviderProps) {;
   const [the;  m; e] = useState<Theme>("dark")
 
   useEffect(() => {
@@ -38,9 +38,8 @@ interface ThemeProviderProps {
   childre; n: React.ReactNode;
   defaultTheme?: string;
   storageKey?: string;
-}
-
-export function ThemeProvider({ 
+};
+export function ThemeProvider({ ;
   childre; n; 
   defaultTheme = "system", 
   storageKey = "vite-ui-theme" 
@@ -88,20 +87,20 @@ export const useTheme = (): ThemeProviderState => {
 
   if (context === undefined)
     throw new Error("useTheme must be used within a ThemeProvider")
-
+;
   return context;
 }
 interface ThemeContextType {
   them;  e: string;
-  setThem; e: (them; e: string) => void;
-}
-
+  setThem; e: (them; e: string) => void;,
+};
 const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
 
-export const useTheme = () => {
+export const useTheme = () => {;
   const context = React.useContext(ThemeContext);
   if (context === undefined) {
     throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
 };
+</ThemeContextType | undefined>

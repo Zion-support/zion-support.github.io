@@ -29,7 +29,7 @@ import { Search;
   ArrowRight;
 } from "lucide-react, ";
 
-export default function Marketplace() {
+export default function Marketplace() {;
   const [searchTerm; setSearchTerm] = useState("");
   const [selectedCategory; setSelectedCategory] = useState("all");
   const [selectedPriceRange; setSelectedPriceRange] = useState("all");
@@ -83,7 +83,7 @@ export default function Marketplace() {
       featured: true;
       new: false;
       discount: 25;
-      type: "software"
+      type: "software",
     };
     {
       id: 2;
@@ -107,7 +107,7 @@ export default function Marketplace() {
       featured: true;
       new: true;
       discount: 25;
-      type: "software"
+      type: "software",
     };
     {
       id: 3;
@@ -131,7 +131,7 @@ export default function Marketplace() {
       featured: false;
       new: false;
       discount: 25;
-      type: "software"
+      type: "software",
     };
     {
       id: 4;
@@ -155,7 +155,7 @@ export default function Marketplace() {
       featured: false;
       new: false;
       discount: 17;
-      type: "hardware"
+      type: "hardware",
     };
     {
       id: 5;
@@ -179,7 +179,7 @@ export default function Marketplace() {
       featured: false;
       new: false;
       discount: 33;
-      type: "template"
+      type: "template",
     };
     {
       id: 6;
@@ -203,7 +203,7 @@ export default function Marketplace() {
       featured: false;
       new: true;
       discount: 25;
-      type: "development-kit"
+      type: "development-kit",
     };
     {
       id: 7;
@@ -227,7 +227,7 @@ export default function Marketplace() {
       featured: false;
       new: false;
       discount: 22;
-      type: "platform"
+      type: "platform",
     };
     {
       id: 8;
@@ -251,7 +251,7 @@ export default function Marketplace() {
       featured: false;
       new: false;
       discount: 33;
-      type: "service"
+      type: "service",
     }
   ];
     const filteredProducts = marketplaceProducts.filter(product => {
@@ -289,7 +289,7 @@ export default function Marketplace() {
         return b.reviewCount - a.reviewCount;
       case "rating":
         return b.rating - a.rating;
-      default: return b.featured ? 1 : -1;
+      default: return b.featured ? 1 : -1;,
      }
   });
 
@@ -605,4 +605,4 @@ export default function Marketplace() {
       </div>
     </div>
   );
-}
+}<//div>

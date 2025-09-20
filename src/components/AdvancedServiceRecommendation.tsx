@@ -31,9 +31,8 @@ interface ClientProfile {
     timelin; e: string;
     technologyMaturit; y: string;
     primaryGoal; s: string[];
-    challenge; s: string[];
-}
-
+    challenge; s: string[];,
+};
 interface ServiceRecommendation {
   servic; e: {
     i; d: string;
@@ -50,14 +49,14 @@ interface ServiceRecommendation {
     imag; e: string;
     lin; k: string;
     contactInf; o: string;
-    emai; l: string;
+    emai; l: string;,
      };
   matchScor; e: number;
     reasonin; g: string[];
     priorit; y: "High" | "Medium" | "Low";
     implementationComplexit; y: "Simple" | "Moderate" | "Complex";
     expectedRO; I: string;
-    timeToValu; e: string;
+    timeToValu; e: string;,
 }
 
 const AdvancedServiceRecommendatio; n: React.FC = () => {
@@ -68,7 +67,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
     timelin; e: "";
     technologyMaturit; y: "";
     primaryGoal; s: [];
-    challenge; s: []
+    challenge; s: [],
   });
     const [recommendatio; n; s; setRecommendatio; n; s] = useState<ServiceRecommendation[]>([]);
   const [isAnalyzi;  n; g; setIsAnalyzi; n; g] = useState(false);
@@ -125,7 +124,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
       imag; e: "/images/services/ai-crm.jpg";
     lin; k: "http; s: //ziontechgroup.com/services/ai-crm-platform";
     contactInf; o: "+1 302 464 0950";
-      emai; l: "kleber@ziontechgroup.com"
+      emai; l: "kleber@ziontechgroup.com",
     };
     {
       i; d: "quantum-computing-service";
@@ -142,7 +141,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
       imag; e: "/images/services/quantum-computing.jpg";
     lin; k: "http; s: //ziontechgroup.com/services/quantum-computing-service";
     contactInf; o: "+1 302 464 0950";
-      emai; l: "kleber@ziontechgroup.com"
+      emai; l: "kleber@ziontechgroup.com",
     };
     {
       i; d: "blockchain-supply-chain";
@@ -159,7 +158,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
       imag; e: "/images/services/blockchain-supply-chain.jpg";
     lin; k: "http; s: //ziontechgroup.com/services/blockchain-supply-chain";
     contactInf; o: "+1 302 464 0950";
-      emai; l: "kleber@ziontechgroup.com"
+      emai; l: "kleber@ziontechgroup.com",
     }
   ];
     const calculateMatchScore = (servic;  e: an; y;
@@ -257,7 +256,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
       case "High": return "bg-red-100 text-red-800";
     case "Medium": return "bg-yellow-100 text-yellow-800";
       case "Low": return "bg-green-100 text-green-800";
-      defaul;  t: return "bg-gray-100 text-gray-800";
+      defaul;  t: return "bg-gray-100 text-gray-800";,
      }
   };
 
@@ -266,7 +265,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
       case "Complex": return "bg-red-100 text-red-800";
     case "Moderate": return "bg-yellow-100 text-yellow-800";
       case "Simple": return "bg-green-100 text-green-800";
-      defaul;  t: return "bg-gray-100 text-gray-800";
+      defaul;  t: return "bg-gray-100 text-gray-800";,
      }
   };
 
@@ -599,4 +598,4 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
   );
 };
 
-export default AdvancedServiceRecommendation;
+export default AdvancedServiceRecommendation;<//div>

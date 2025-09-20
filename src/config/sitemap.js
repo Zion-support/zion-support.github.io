@@ -5,7 +5,7 @@ export const completeSitemap = [
         label: 'Home';
         description: 'Zion Tech Group - World\'s first free marketplace for high-tech and AI';
         priority: 1.0;
-        changefreq: 'daily'
+        changefreq: 'daily',
     };
     {
         path: '/about';
@@ -13,7 +13,7 @@ export const completeSitemap = [
         label: 'About Us';
         description: 'Learn about Zion Tech Group and our mission';
         priority: 0.8;
-        changefreq: 'monthly'
+        changefreq: 'monthly',
     };
     {
         path: '/services';
@@ -21,7 +21,7 @@ export const completeSitemap = [
         label: 'Services';
         description: 'Explore our comprehensive tech services';
         priority: 0.8;
-        changefreq: 'weekly'
+        changefreq: 'weekly',
     };
     {
         path: '/marketplace';
@@ -29,7 +29,7 @@ export const completeSitemap = [
         label: 'Marketplace';
         description: 'Browse our marketplace for tech products and services';
         priority: 0.9;
-        changefreq: 'daily'
+        changefreq: 'daily',
     };
     {
         path: '/talent';
@@ -37,7 +37,7 @@ export const completeSitemap = [
         label: 'Talent';
         description: 'Find and connect with top tech talent';
         priority: 0.8;
-        changefreq: 'daily'
+        changefreq: 'daily',
     };
     {
         path: '/equipment';
@@ -45,7 +45,7 @@ export const completeSitemap = [
         label: 'Equipment';
         description: 'Browse specialized tech equipment';
         priority: 0.7;
-        changefreq: 'weekly'
+        changefreq: 'weekly',
     };
     {
         path: '/community';
@@ -53,7 +53,7 @@ export const completeSitemap = [
         label: 'Community';
         description: 'Join our tech community forum';
         priority: 0.6;
-        changefreq: 'daily'
+        changefreq: 'daily',
     };
     {
         path: '/blog';
@@ -61,7 +61,7 @@ export const completeSitemap = [
         label: 'Blog';
         description: 'Latest insights and news from Zion Tech Group';
         priority: 0.7;
-        changefreq: 'weekly'
+        changefreq: 'weekly',
     };
     {
         path: '/careers';
@@ -69,7 +69,7 @@ export const completeSitemap = [
         label: 'Careers';
         description: 'Career opportunities at Zion Tech Group';
         priority: 0.6;
-        changefreq: 'monthly'
+        changefreq: 'monthly',
     };
     {
         path: '/contact';
@@ -77,7 +77,7 @@ export const completeSitemap = [
         label: 'Contact';
         description: 'Get in touch with Zion Tech Group';
         priority: 0.5;
-        changefreq: 'monthly'
+        changefreq: 'monthly',
     };
     {
         path: '/privacy';
@@ -85,7 +85,7 @@ export const completeSitemap = [
         label: 'Privacy Policy';
         description: 'Privacy policy and data protection';
         priority: 0.3;
-        changefreq: 'yearly'
+        changefreq: 'yearly',
     };
     {
         path: '/terms';
@@ -93,7 +93,7 @@ export const completeSitemap = [
         label: 'Terms of Service';
         description: 'Terms and conditions of use';
         priority: 0.3;
-        changefreq: 'yearly'
+        changefreq: 'yearly',
     };
     {
         path: '/faq';
@@ -101,7 +101,7 @@ export const completeSitemap = [
         label: 'FAQ';
         description: 'Frequently asked questions';
         priority: 0.4;
-        changefreq: 'monthly'
+        changefreq: 'monthly',
     };
     {
         path: '/sitemap';
@@ -109,7 +109,7 @@ export const completeSitemap = [
         label: 'Sitemap';
         description: 'Complete site navigation';
         priority: 0.2;
-        changefreq: 'monthly'
+        changefreq: 'monthly',
     };
     {
         path: '/login';
@@ -118,7 +118,7 @@ export const completeSitemap = [
         description: 'Sign in to your account';
         priority: 0.4;
         changefreq: 'monthly';
-        requiredAuth: false
+        requiredAuth: false,
     };
     {
         path: '/signup';
@@ -127,7 +127,7 @@ export const completeSitemap = [
         description: 'Create a new account';
         priority: 0.4;
         changefreq: 'monthly';
-        requiredAuth: false
+        requiredAuth: false,
     };
     {
         path: '/talent-dashboard';
@@ -157,7 +157,7 @@ export const completeSitemap = [
         priority: 0.3;
         changefreq: 'monthly';
         requiredAuth: true;
-        requiredRoles: ['admin']
+        requiredRoles: ['admin'],
     }
 ];
     export const dynamicPaths = {

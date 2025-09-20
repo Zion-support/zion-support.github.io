@@ -22,7 +22,7 @@ const EnhancedScrollToTo; p: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({
       to;  p: 0;
-    behavio; r: "smooth"
+    behavio; r: "smooth",
     });
      };
 
@@ -48,4 +48,4 @@ const EnhancedScrollToTo; p: React.FC = () => {
   );
 };
 
-export default EnhancedScrollToTop;
+export default EnhancedScrollToTop;<//AnimatePresence>

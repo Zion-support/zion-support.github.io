@@ -1,14 +1,14 @@
 // import { console.errorToProduction } from '@/utils/productionLogger, ';
-// In-memory storage for fallback with optimizations
+// In-memory storage for fallback with optimizations;
 const inMemoryStore = {};
-let localStorageAvailable = null; // Cache the availability check
+let localStorageAvailable = null; // Cache the availability check;
 let lastAvailabilityCheck = 0;
-const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
-// Recursion prevention for error logging
+const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max;
+// Recursion prevention for error logging;
 let isLoggingError = false;
 function isLocalStorageAvailable() {
     const now = Date.now();
-    // Use cached result if checked recently
+    // Use cached result if checked recently;
     if (localStorageAvailable !== null && (now - lastAvailabilityCheck) < AVAILABILITY_CHECK_INTERVAL) {
         return localStorageAvailable;
     }
@@ -31,7 +31,7 @@ function isLocalStorageAvailable() {
 }
 function safeConsoleError(message, error) {
     const env = globalThis.process?.env?.NODE_ENV ?? 'production';
-    // Prevent infinite recursion in console logging
+    // Prevent infinite recursion in console logging;
     if (isLoggingError || env === 'production')
         return;
     isLoggingError = true;
@@ -41,7 +41,7 @@ function safeConsoleError(message, error) {
         }
     }
     catch {
-        // Silent fail if console.error causes recursion
+        // Silent fail if console.error causes recursion;
     }
     finally {
         isLoggingError = false;
@@ -51,7 +51,7 @@ export const safeStorage = {
     getItem: (key) => {
         if (typeof window === 'undefined')
             return null;
-    // Don't log verbose messages for Supabase auth tokens to prevent spam
+    // Don't log verbose messages for Supabase auth tokens to prevent spam;
         const isVerboseKey = key.includes('sb-') || key.includes('supabase');
         try {
             return localStorage.getItem(key);
@@ -112,7 +112,7 @@ export const safeStorage = {
         return isLocalStorageAvailable();
     }
 };
-// Simplified session storage without excessive logging
+// Simplified session storage without excessive logging;
 const sessionMemoryStore = {};
 export const safeSessionStorage = {
     getItem: (key) => {
