@@ -1,11 +1,20 @@
 import React from 'react'
 import { Metadata } from 'next'
+<<<<<<< HEAD
+
+export const metadata: Metadata = {
+  title: 'Autonomous Systems 2026 - Revolutionary Self-Managing Business Operations',
+  description: 'Discover the future of autonomous business systems. Self-managing operations, zero-touch processes, and intelligent automation that will revolutionize enterprise operations in 2026.',
+  keywords: ['autonomous systems', 'business automation', 'self-managing operations', 'zero-touch processes', 'intelligent automation', 'enterprise operations']
+}
+=======
 export const metadata: Metadata = {
   title: "Autonomous Systems 2026 - Zion Holdings",
   description: "Next-generation autonomous systems and AI technologies for 2026"
 }
 
 
+>>>>>>> b7869ab51a45f4f8fb089360cbce2775c9005796
 
 export default function AutonomousSystems2026Page() {
   return (
