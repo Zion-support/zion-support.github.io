@@ -30,7 +30,7 @@ const nextConfig = {
   // Ignore build errors to allow deployment with syntax issues
   typescript: {
     ignoreBuildErrors: true,
-    tsconfigPath: './tsconfig.json',
+    // tsconfigPath: './tsconfig.json',
   },
   eslint: {
     ignoreDuringBuilds: true,
