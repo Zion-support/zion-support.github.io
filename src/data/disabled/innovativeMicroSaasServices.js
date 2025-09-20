@@ -16,7 +16,12 @@ price: number;
     contactInfo: {
     phone: string;
     email: string;
+<<<<<<< HEAD
     website: string;}
+=======
+    website: string;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ;aiScore ?  : number;
 rating ?  : number;
 reviewCount ?  : number;
@@ -34,8 +39,7 @@ marketTrend ?  : string;
 competitiveAdvantage ?  : string;
 export const INNOVATIVE_MICRO_SAAS_SERVICES = [
     // AI-Powered Content Creation & Management;
-    {
-        competitors: string[];
+    {competitors: string[];
         category: 'AI & Automation' | 'Business Intelligence' | 'Digital Marketing' | 'Productivity' | 'Security & Compliance' | 'Development Tools' | 'Analytics' | 'Collaboration' | 'Finance & HR' | 'Industry Specific';
         subcategory: string;
         price: {
@@ -50,8 +54,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
         useCases: string[];
         integration: string[];
         website: string;
-        contactInfo: {
-            email: string;
+        contactInfo: {email: string;
             phone: string;
             address: string};
         rating: number;
@@ -218,7 +221,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     technology: ["TensorFlow Lite", "ONNX", "Docker", "Kubernetes", "MQTT"],
         integrations;
     ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT brokers"],
@@ -239,7 +247,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
     string[];
     freeTrial: boolean;
     freeTrialDays: number;
+<<<<<<< HEAD
     demoUrl: string;}
+=======
+    demoUrl: string;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export const INNOVATIVE_MICRO_SAAS_SERVICES = [
     // Web3 & Blockchain Solutions;
     {
@@ -260,8 +273,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
         ]
     },
     // Metaverse Business Solutions;
-    {
-        id: "metaverse-business-solutions";
+    {id: "metaverse-business-solutions";
         title: "Metaverse Business Solutions";
         description: "Complete platform for businesses to establish presence in the metaverse, including virtual offices, events, and customer experiences.",
         category: "Innovative Micro SAAS";
@@ -464,7 +476,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     aiScore: 97;
         rating;
     4.8,
@@ -535,7 +552,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     technology: ["Solidity", "React", "Node.js", "Ethereum", "Polygon", "Solana"],
         integrations;
     ["MetaMask", "WalletConnect", "OpenSea", "Uniswap", "Chainlink"],
@@ -546,7 +568,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
     ["Chainlink", "The Graph", "Alchemy"],
         freeTrialtrue,
         freeTrialDays14,
+<<<<<<< HEAD
         demoUrl"https: //demo.ziontechgroup.com/web3-automation";}
+=======
+        demoUrl"https: //demo.ziontechgroup.com/web3-automation";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // Quantum Computing Services;
 {
     id: "quantum-business-solutions";
@@ -628,7 +655,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
         estimatedDelivery"8-10 weeks",
         supportLevel"enterprise",
         marketPrice"$3,499 - $10,000/month",
+<<<<<<< HEAD
         websiteUrl"https: //ziontechgroup.com/quantum-optimization";}
+=======
+        websiteUrl"https: //ziontechgroup.com/quantum-optimization";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // New Innovative Micro SAAS Services;
 {
     id: "ai-content-factory-pro";
@@ -645,11 +677,15 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
     aiCapabilities: string[];
     securityFeatures: string[];
     scalability: string;
+<<<<<<< HEAD
     uptime: string;}
+=======
+    uptime: string;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export const INNOVATIVE_MICRO_SAAS_SERVICES = [
     // AI-Powered Content Generation & SEO;
-    {
-        id: "ai-content-seo-platform";
+    {id: "ai-content-seo-platform";
         title: "AI Content Generation & SEO Platform";
         description: "Advanced AI-powered content creation platform that generates SEO-optimized content, analyzes competitors, and provides real-time optimization suggestions.",
         category: "AI & Content Marketing";
@@ -713,8 +749,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
         scalability: "Handles 10M+ content pieces monthly";
         uptime: "99.9% SLA"};
     // Blockchain-Based Supply Chain Transparency;
-    {
-        id: "blockchain-supply-chain-platform";
+    {id: "blockchain-supply-chain-platform";
         title: "Blockchain Supply Chain Transparency Platform";
         description: "Revolutionary blockchain-powered platform that provides end-to-end supply chain visibility, traceability, and compliance management for global businesses.",
         category: "Blockchain & Supply Chain";
@@ -804,8 +839,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
             description, 'Real-time business intelligence powered by AI that transforms raw data into actionable insights, predictive analytics, and automated reporting.',
             category, 'AI & Analytics',
             subcategory, 'Business Intelligence',
-            price, {
-                starter: 199;
+            price, {starter: 199;
                 professional: 499;
                 enterprise: 1299;
                 currency: '$'};
@@ -866,8 +900,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
         ]
     },
     // Cybersecurity Compliance Platform;
-    {
-        id: 'zion-cyber-compliance-suite';
+    {id: 'zion-cyber-compliance-suite';
         title: 'Zion Cyber Compliance Suite';
         description: 'Comprehensive cybersecurity compliance platform that automates security assessments, compliance monitoring, and regulatory reporting for multiple frameworks.',
         category: 'Cybersecurity';
@@ -931,8 +964,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
         marketPrice: '$299 - $1,999/month',
         deliveryTime: '3-4 weeks'};
     // Cloud Cost Optimization Platform;
-    {
-        id: 'zion-cloud-cost-optimizer';
+    {id: 'zion-cloud-cost-optimizer';
         title: 'Zion Cloud Cost Optimizer';
         description: 'Intelligent cloud cost optimization platform that analyzes usage patterns, identifies waste, and automatically optimizes cloud spending across AWS, Azure, and GCP.',
         category: 'Cloud & Infrastructure';
@@ -1143,7 +1175,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum Hardware APIs"],
         integrations;
     ["IBM Quantum", "Google Quantum", "Amazon Braket", "Azure Quantum"],
@@ -1154,7 +1191,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
     ["IBM Quantum", "Google Quantum", "D-Wave"],
         freeTrialtrue,
         freeTrialDays7,
+<<<<<<< HEAD
         demoUrl"https: //demo.ziontechgroup.com/quantum-solutions";}
+=======
+        demoUrl"https: //demo.ziontechgroup.com/quantum-solutions";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // Edge Computing & IoT Platform;
 {
     id: "edge-iot-intelligence";
@@ -1346,7 +1388,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
         {
             phone: "+1 302 464 0950";
                 email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
                 website"https: //ziontechgroup.com";}
+=======
+                website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         technology: ["Python", "TensorFlow", "React", "Node.js", "Elasticsearch"],
             integrations;
         ["DocuSign", "Adobe Acrobat", "Microsoft Word", "Clio", "PracticePanther"],
@@ -1399,7 +1446,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     aiScore: 94;
         rating;
     4.7,
@@ -1430,7 +1482,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
         description"Advanced IoT platform with edge computing capabilities for real-time data processing, local AI inference, and seamless cloud integration for industrial and commercial applications.",
         category"IoT & Edge Computing",
         subcategory"Edge Intelligence",
+<<<<<<< HEAD
         website"https: //ziontechgroup.com";}
+=======
+        website"https: //ziontechgroup.com";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technology: ["TensorFlow Lite", "Edge TPU", "Kubernetes", "MQTT", "WebRTC"],
     integrations;
 ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Siemens Mindsphere"],
@@ -1501,7 +1558,12 @@ technology: ["TensorFlow Lite", "Edge TPU", "Kubernetes", "MQTT", "WebRTC"],
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     technology: ["Unity", "Unreal Engine", "WebXR", "Three.js", "WebGL"],
         integrations;
     ["Meta Quest", "HTC Vive", "Microsoft HoloLens", "SteamVR"],
@@ -1512,7 +1574,12 @@ technology: ["TensorFlow Lite", "Edge TPU", "Kubernetes", "MQTT", "WebRTC"],
     ["Meta Horizon", "Microsoft Mesh", "Spatial"],
         freeTrialtrue,
         freeTrialDays14,
+<<<<<<< HEAD
         demoUrl"https: //demo.ziontechgroup.com/metaverse-hub";}
+=======
+        demoUrl"https: //demo.ziontechgroup.com/metaverse-hub";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // Green Tech & Sustainability Platform;
 {
     id: "green-tech-sustainability";
@@ -1567,7 +1634,12 @@ technology: ["TensorFlow Lite", "Edge TPU", "Kubernetes", "MQTT", "WebRTC"],
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     technology: ["Python", "IoT Sensors", "Machine Learning", "Blockchain", "Cloud Computing"],
         integrations;
     ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "Energy APIs"],
@@ -1578,7 +1650,12 @@ technology: ["TensorFlow Lite", "Edge TPU", "Kubernetes", "MQTT", "WebRTC"],
     ["Watershed", "Normative", "Persefoni"],
         freeTrialtrue,
         freeTrialDays30,
+<<<<<<< HEAD
         demoUrl"https: //demo.ziontechgroup.com/green-tech";}
+=======
+        demoUrl"https: //demo.ziontechgroup.com/green-tech";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // Cybersecurity Mesh Platform;
 {
     id: "cybersecurity-mesh-platform";
@@ -1633,7 +1710,12 @@ technology: ["TensorFlow Lite", "Edge TPU", "Kubernetes", "MQTT", "WebRTC"],
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     technology: ["AI/ML", "Blockchain", "Zero Trust Architecture", "Threat Intelligence APIs"],
         integrations;
     ["SIEM Systems", "EDR Solutions", "Identity Providers", "Cloud Platforms"],
@@ -1644,7 +1726,12 @@ technology: ["TensorFlow Lite", "Edge TPU", "Kubernetes", "MQTT", "WebRTC"],
     ["CrowdStrike", "SentinelOne", "Palo Alto Networks"],
         freeTrialtrue,
         freeTrialDays14,
+<<<<<<< HEAD
         demoUrl"https: //demo.ziontechgroup.com/cybersecurity-mesh";}
+=======
+        demoUrl"https: //demo.ziontechgroup.com/cybersecurity-mesh";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // Digital Twin Platform;
 {
     id: "digital-twin-platform";
@@ -1737,15 +1824,24 @@ technology: ["TensorFlow Lite", "Edge TPU", "Kubernetes", "MQTT", "WebRTC"],
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
     competitors: string[];
     deployment: string;
     customization: string;
     support: string;}
+=======
+            website"https: //ziontechgroup.com";
+     }
+    competitors: string[];
+    deployment: string;
+    customization: string;
+    support: string;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export const INNOVATIVE_MICRO_SAAS_SERVICES = [
     // AI-Powered Project Management;
-    {
-        id: "ai-project-management-suite";
+    {id: "ai-project-management-suite";
         title: "AI Project Management Suite";
         description: "Intelligent project management platform that uses AI to predict project timelines, identify risks, and optimize resource allocation for maximum efficiency.",
         category: "Micro SAAS";
@@ -1796,8 +1892,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
     // AI-Powered Legal Document Analysis;
     ;
     // AI-Powered Legal Document Analysis;
-    {
-        id: "ai-legal-doc-analyzer";
+    {id: "ai-legal-doc-analyzer";
         name: "AI Legal Document Analyzer";
         description: "Advanced AI-powered legal document analysis platform that automatically reviews contracts, identifies risks, and provides legal insights. Uses natural language processing to analyze legal text and extract key information.",
         price: 449;
@@ -1890,7 +1985,12 @@ technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     technology: ["React", "Node.js", "PostgreSQL", "Python", "Redis"],
         integrations;
     ["Shopify", "WooCommerce", "QuickBooks", "Xero", "ShipStation"],
@@ -1904,8 +2004,7 @@ technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
         support"Priority support with dedicated account manager";
 }
 // AI Customer Feedback Analyzer;
-{
-    id: "ai-customer-feedback-analyzer";
+{id: "ai-customer-feedback-analyzer";
         title"AI Customer Feedback Analyzer",
         description"Intelligent feedback analysis platform that uses natural language processing to extract insights from customer reviews, surveys, and social media mentions.",
         category"Micro SAAS",
@@ -1990,8 +2089,7 @@ technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
             customization: "Custom sentiment models and dashboards";
             support: "Email and chat support during business hours"};
         // Automated Social Media Manager;
-        {
-            id: "automated-social-media-manager";
+        {id: "automated-social-media-manager";
             title: "Automated Social Media Manager";
             description: "AI-powered social media management platform that automatically creates, schedules, and optimizes content across multiple platforms for maximum engagement.",
             category: "Micro SAAS";
@@ -2052,7 +2150,12 @@ technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
             title: "Smart Contract Management Platform";
             description: "Intelligent contract management system that uses AI to analyze contracts, identify risks, and automate compliance monitoring for legal and business teams.",
             category: "Micro SAAS";
+<<<<<<< HEAD
             subcategory: "Legal Tech";},
+=======
+            subcategory: "Legal Tech";
+        },
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         technology;
     ["Unity", "Unreal Engine", "WebXR", "React", "Node.js"],
         integrations;
@@ -2081,7 +2184,12 @@ technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
     ["Siemens", "GE Digital", "PTC", "Microsoft Azure"],
         freeTrialtrue,
         freeTrialDays21,
+<<<<<<< HEAD
         demoUrl"https: //demo.ziontechgroup.com/digital-twin";}
+=======
+        demoUrl"https: //demo.ziontechgroup.com/digital-twin";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // AI-Powered Content Creation Platform;
 {
     id: "ai-content-creation-platform";
@@ -2170,7 +2278,12 @@ technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     "AI contract review",
         "Risk identification",
         "Legal compliance checking",
@@ -2362,7 +2475,12 @@ technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     aiScore: 99;
         rating;
     4.9,
@@ -2442,7 +2560,12 @@ technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     aiScore: 98;
         rating;
     4.9,
@@ -2522,7 +2645,12 @@ technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     aiScore: 96;
         rating;
     4.8,
@@ -2662,7 +2790,12 @@ technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     aiScore: 95;
         rating;
     4.8,
@@ -2742,7 +2875,12 @@ technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     aiScore: 92;
         rating;
     4.7,
@@ -2822,7 +2960,12 @@ technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     technology: ["React", "Node.js", "Python", "PostgreSQL", "InfluxDB"],
         integrations;
     ["Solar panels", "Smart meters", "Building management systems", "Weather APIs", "Utility APIs"],
@@ -2886,7 +3029,12 @@ technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     technology: ["React", "Node.js", "Python", "TensorFlow", "PostgreSQL"],
         integrations;
     ["Plaid", "Yodlee", "Tax software", "Brokerage accounts", "Banking APIs"],
@@ -2958,7 +3106,12 @@ technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     technology: ["GPT-4", "BERT", "React", "Node.js", "MongoDB", "Redis"],
         integrations;
     ["WordPress", "Shopify", "Mailchimp", "Hootsuite", "Google Analytics"],
@@ -3022,7 +3175,12 @@ technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     technology: ["Python", "Scikit-learn", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations;
     ["QuickBooks", "Shopify", "Square", "Stripe", "Google Analytics"],
@@ -3061,12 +3219,16 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES = [
         title: "AI-Powered Video Production & Editing Platform";
         description: "Intelligent video creation platform that automates video production, editing, and optimization using AI algorithms for content creators and businesses.",
         category: "AI & Creative Technology";
+<<<<<<< HEAD
         subcategory: "Video Production";}
+=======
+        subcategory: "Video Production";
+    }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ];
 // New Innovative Micro SAAS Services;
 export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES = [
-    {
-        id: "ai-powered-project-management";
+    {id: "ai-powered-project-management";
         title: "AI-Powered Project Management Suite";
         description: "Intelligent project management platform that uses AI to predict project risks, optimize resource allocation, and automate task prioritization.",
         category: "Business Operations";
@@ -3114,8 +3276,7 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"}
     };
-    {
-        id: "quantum-secure-communication";
+    {id: "quantum-secure-communication";
         title: "Quantum-Secure Communication Platform";
         description: "Next-generation communication platform using quantum encryption for unbreakable security. Perfect for financial institutions, healthcare, and government agencies.",
         category: "Cybersecurity";
@@ -3199,7 +3360,12 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES = [
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 "Blockchain-based tracking",
     "Real-time visibility",
@@ -3241,7 +3407,12 @@ benefits: [
 {
     phone: "+1 302 464 0950";
         email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
         website"https: //ziontechgroup.com";}
+=======
+        website"https: //ziontechgroup.com";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {
     id: "ai-powered-hr-automation";
         title"AI-Powered HR Automation Suite",
@@ -3295,10 +3466,14 @@ benefits: [
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
-{
-    id: "iot-smart-building-management";
+{id: "iot-smart-building-management";
         title"IoT Smart Building Management System",
         description"Intelligent building management platform that optimizes energy consumption, security, and maintenance using IoT sensors and AI analytics.",
         category"IoT & Smart Cities",
@@ -3427,7 +3602,12 @@ benefits: [
         {
             phone: "+1 302 464 0950";
                 email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
                 website"https: //ziontechgroup.com";}
+=======
+                website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         aiScore: 99;
             rating;
         4.9,
@@ -3462,9 +3642,7 @@ benefits: [
             currency"$",
             pricingModel"monthly",
             features;
-        [
-            "Quantum algorithm optimization",
-        ];
+        ["Quantum algorithm optimization"];
     }
 }
 {
@@ -3557,7 +3735,12 @@ benefits: [
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     aiScore: 100;
         rating;
     5.0,
@@ -3637,7 +3820,12 @@ benefits: [
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     aiScore: 97;
         rating;
     4.8,
@@ -3717,7 +3905,12 @@ benefits: [
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 ;
 id: 'zion-ai-support-automation';
@@ -4655,57 +4848,83 @@ id: 'zion-ai-support-automation';
 }
 ;
 export const INNOVATIVE_SAAS_CATEGORIES = [
-    {
-        label: 'AI & Automation';
+    {label: 'AI & Automation';
         value: 'ai-automation';
         description: 'Intelligent automation solutions powered by artificial intelligence';
         icon: '🤖';
         serviceCount: 4};
+<<<<<<< HEAD
     {
         label: 'Business Intelligence';
+=======
+    {label: 'Business Intelligence';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         value: 'business-intelligence';
         description: 'Data-driven insights and analytics for better decision making';
         icon: '📊';
         serviceCount: 1};
+<<<<<<< HEAD
     {
         label: 'Digital Marketing';
+=======
+    {label: 'Digital Marketing';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         value: 'digital-marketing';
         description: 'AI-powered marketing automation and optimization tools';
         icon: '📈';
         serviceCount: 1};
+<<<<<<< HEAD
     {
         label: 'Productivity';
+=======
+    {label: 'Productivity';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         value: 'productivity';
         description: 'Tools to streamline workflows and increase team efficiency';
         icon: '⚡';
         serviceCount: 1};
+<<<<<<< HEAD
     {
         label: 'Security & Compliance';
+=======
+    {label: 'Security & Compliance';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         value: 'security-compliance';
         description: 'Enterprise-grade security and compliance management';
         icon: '🔒';
         serviceCount: 1};
+<<<<<<< HEAD
     {
         label: 'Development Tools';
+=======
+    {label: 'Development Tools';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         value: 'development-tools';
         description: 'Advanced development and coding assistance tools';
         icon: '💻';
         serviceCount: 1};
+<<<<<<< HEAD
     {
         label: 'Finance & HR';
+=======
+    {label: 'Finance & HR';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         value: 'finance-hr';
         description: 'Automated financial and human resource management';
         icon: '👥';
         serviceCount: 1};
+<<<<<<< HEAD
     {
         label: 'Industry Specific';
+=======
+    {label: 'Industry Specific';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         value: 'industry-specific';
         description: 'Specialized solutions for specific industries';
         icon: '🏭';
         serviceCount: 1}
 ];
-    export const CONTACT_INFO = {
-    mobile: "+1 302 464 0950";
+    export const CONTACT_INFO = {mobile: "+1 302 464 0950";
     email: "kleber@ziontechgroup.com";
     address: "364 E Main St STE 1008, Middletown DE 19709",
     website: "https://ziontechgroup.com";
@@ -4797,7 +5016,12 @@ true,
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 // AI-Powered Agriculture Analytics;
 {
@@ -4839,7 +5063,12 @@ true,
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 // AI-Powered Manufacturing Quality Control;
 {
@@ -4881,7 +5110,12 @@ true,
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 // AI-Powered Customer Churn Prediction;
 {
@@ -4923,7 +5157,12 @@ true,
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 // AI-Powered Fraud Detection;
 {
@@ -4965,7 +5204,12 @@ true,
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 // AI-Powered Video Analytics;
 {
@@ -5007,7 +5251,12 @@ true,
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 // AI-Powered Language Translation;
 {
@@ -5049,7 +5298,12 @@ true,
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 // AI-Powered Email Marketing Optimization;
 {
@@ -5091,7 +5345,12 @@ true,
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 // AI-Powered SEO Optimization;
 {
@@ -5133,7 +5392,12 @@ true,
     {
         phone: "+1 302 464 0950";
             email"kleber@ziontechgroup.com",
+<<<<<<< HEAD
             website"https: //ziontechgroup.com";}
+=======
+            website"https: //ziontechgroup.com";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 ;
 export const INNOVATIVE_CATEGORIES = [
@@ -5171,8 +5435,7 @@ export const INNOVATIVE_PRICING_TIERS = {
     professional: { name: 'Professional', multiplier: 1.5 };
     enterprise: { name: 'Enterprise', multiplier: 2.5 }
 };
-    export const INNOVATIVE_CONTACT_INFO = {
-    mobile: "+1 302 464 0950";
+    export const INNOVATIVE_CONTACT_INFO = {mobile: "+1 302 464 0950";
     email: "kleber@ziontechgroup.com";
     address: "364 E Main St STE 1008 Middletown DE 19709";
     website: "https://ziontechgroup.com"};

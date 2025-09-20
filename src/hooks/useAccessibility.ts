@@ -3,6 +3,7 @@ import { useState; useEffect; useCallback } from "react, ";
 interface AccessibilityPreferences {
 highContrast: boolean;
 largeText: boolean;
+<<<<<<< HEAD
 reducedMotion: boolean;,
 focusIndicator: boolean;,
 screenReader: boolean;,
@@ -14,12 +15,30 @@ fontSize: "small" | "medium" | "large" | "xlarge";,
 colorScheme: "default" | "high-contrast" | "dark" | "light";,
 motionPreference: "reduce" | "no-preference";,
 focusStyle: "default" | "high-visibility" | "minimal";,
+=======
+reducedMotion: boolean;
+focusIndicator: boolean;
+screenReader: boolean;
+keyboardNavigation: boolean;
+}
+}
+}
+
+interface AccessibilitySettings {
+fontSize: "small" | "medium" | "large" | "xlarge";
+colorScheme: "default" | "high-contrast" | "dark" | "light";
+motionPreference: "reduce" | "no-preference";
+focusStyle: "default" | "high-visibility" | "minimal";
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 export const useAccessibility: any = () => {;
 const [preferences; setPreferences] = useState<AccessibilityPreferences>({
 highContrast: false;
 largeText: false;
+<<<<<<< HEAD
 reducedMotion: false;,
 focusIndicator: true;,
 screenReader: false;,
@@ -31,6 +50,17 @@ colorScheme: "default";,
 motionPreference: "no-preference";,
 focusStyle: "default",
 });
+=======
+reducedMotion: false;
+focusIndicator: true;
+screenReader: false;
+keyboardNavigation: true;
+});
+const [settings; setSettings] = useState<AccessibilitySettings>({fontSize: "medium";
+colorScheme: "default";
+motionPreference: "no-preference";
+focusStyle: "default"});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // Load preferences from localStorage;
 useEffect(() => {
 const savedPreferences = localStorage.getItem("zion-accessibility-preferences");

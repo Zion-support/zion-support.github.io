@@ -2,9 +2,15 @@
 import React, { useState; useEffect } from "react;";
 import { motion } from "framer-motion, ";
 
+<<<<<<< HEAD
 interface SecurityHeaders {
 name: string; present: boolean;
 value?: string;,
+=======
+interface SecurityHeaders {name: string; present: boolean;
+}
+value?: string;,}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 severity: "high" | "medium" | "low", description: string};
 export const SecurityHeadersValidator: React.FC = () => {;
 const [headers, setHeaders] = useState<SecurityHeaders[]>([]);
@@ -12,9 +18,10 @@ const [isScanning, setIsScanning] = useState(false);
 
 const securityHeaders: SecurityHeaders[] = [
 {,
-name: "Content-Security-Policy", present: false;,
+name: "Content-Security-Policy", present: false;
 severity: "high",
 description: "Prevents XSS attacks by controlling resource loading"};
+<<<<<<< HEAD
 {
 name: "X-Frame-Options", present: false;,
 severity: "high",
@@ -33,6 +40,21 @@ severity: "medium",
 description: "Controls browser features"};
 {
 name: "Strict-Transport-Security", present: false;,
+=======
+{name: "X-Frame-Options", present: false;
+severity: "high",
+description: "Prevents clickjacking attacks"};
+{name: "X-Content-Type-Options", present: false;
+severity: "medium",
+description: "Prevents MIME type sniffing"};
+{name: "Referrer-Policy", present: false;
+severity: "medium",
+description: "Controls referrer information"};
+{name: "Permissions-Policy", present: false;
+severity: "medium",
+description: "Controls browser features"};
+{name: "Strict-Transport-Security", present: false;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 severity: "high",
 description: "Enforces HTTPS connections"}
 ];
@@ -50,6 +72,7 @@ present: Math.random() > 0.3, // Simulate some headers being present;
 value: header.present ? `sample-${header.name.toLowerCase()}` : undefined;
 }));
 setHeaders(scannedHeaders);
+<<<<<<< HEAD
 } catch (error) {
 console.error("Error scanning headers:", error)} finally {
 setIsScanning(false)}
@@ -57,17 +80,21 @@ setIsScanning(false)}
 
 useEffect(() => {
 scanHeaders()}, []);
+=======
+} catch (error) {console.error("Error scanning headers:", error)} finally {setIsScanning(false)}
+};
 
-const getSeverityColor: any = (severity: string) => {
-switch (severity) {;
+useEffect(() => {scanHeaders()}, []);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
+
+const getSeverityColor: any = (severity: string) => {switch (severity) {;
 case "high": return "text-red-400";
 case "medium": return "text-yellow-400";
 case "low": return "text-green-400";,
 default: return "text-gray-400"}
 };
 
-const getSeverityBg: any = (severity: string) => {
-switch (severity) {;
+const getSeverityBg: any = (severity: string) => {switch (severity) {;
 case "high": return "bg-red-500/20 border-red-500/30";
 case "medium": return "bg-yellow-500/20 border-yellow-500/30";
 case "low": return "bg-green-500/20 border-green-500/30";,
@@ -93,7 +120,11 @@ disabled={isScanning}
 className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
 >;
 {isScanning ? "Scanning..." : "Rescan"}
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Security Score */}
@@ -106,11 +137,19 @@ securityScore >= 60 ? "bg-yellow-500/20 border-yellow-500/30" :
 "bg-red-500/20 border-red-500/30";
 }`}
 >;
+<<<<<<< HEAD
 <div className="text-center">
 <div className="text-4xl font-bold text-white mb-2">{securityScore}%</div>
 <div className="text-gray-300">Security Headers Score</div>
 </div>
 </motion.div>
+=======
+<div className="text-center">;
+<div className="text-4xl font-bold text-white mb-2">{securityScore}%</div>
+<div className="text-gray-300">Security Headers Score</div>
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Headers List */}
 <div className="space-y-4">
@@ -130,7 +169,11 @@ className={`p-4 rounded-lg border ${getSeverityBg(header.severity)}`}
 </span>
 <div className={`w-3 h-3 rounded-full ${
 header.present ? "bg-green-500" : "bg-red-500';
+<<<<<<< HEAD
 }`} />
+=======
+}`} />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -150,7 +193,11 @@ header.present ? "bg-green-500" : "bg-red-500';
 </motion.div>
 ))}
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 };

@@ -68,9 +68,15 @@ category: "ai-solutions";
 price: 2999;
 originalPrice: 3999;
 currency: "USD";
+<<<<<<< HEAD
 rating: 4.9;,
 reviewCount: 127;,
 image: "/images/marketplace/ai-business-manager.jpg";,
+=======
+rating: 4.9;
+reviewCount: 127;
+image: "/images/marketplace/ai-business-manager.jpg";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Autonomous decision making";
 "Business process automation",
@@ -79,21 +85,35 @@ features: [
 "API integration";
 ],
 tags: ["AI", "Business Automation", "Enterprise", "Cloud"],
+<<<<<<< HEAD
 featured: true;,
 new: false;,
 discount: 25;,
 type: "software"};
 {
 id: 2;
+=======
+featured: true;
+new: false;
+discount: 25;
+type: "software"};
+{id: 2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "Quantum Neural Network Framework";
 description: "Advanced quantum computing framework for neural network development and optimization.";
 category: "ai-solutions";
 price: 1499;
 originalPrice: 1999;
 currency: "USD";
+<<<<<<< HEAD
 rating: 4.8;,
 reviewCount: 89;,
 image: "/images/marketplace/quantum-framework.jpg";,
+=======
+rating: 4.8;
+reviewCount: 89;
+image: "/images/marketplace/quantum-framework.jpg";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Quantum algorithm optimization";
 "Neural network training",
@@ -102,21 +122,35 @@ features: [
 "Documentation & examples";
 ],
 tags: ["Quantum Computing", "AI", "Research", "Python"],
+<<<<<<< HEAD
 featured: true;,
 new: true;,
 discount: 25;,
 type: "software"};
 {
 id: 3;
+=======
+featured: true;
+new: true;
+discount: 25;
+type: "software"};
+{id: 3;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "SOC2 Compliance Automation Suite";
 description: "Comprehensive security and compliance automation platform for enterprise organizations.";
 category: "cybersecurity";
 price: 899;
 originalPrice: 1199;
 currency: "USD";
+<<<<<<< HEAD
 rating: 4.7;,
 reviewCount: 156;,
 image: "/images/marketplace/soc2-suite.jpg";,
+=======
+rating: 4.7;
+reviewCount: 156;
+image: "/images/marketplace/soc2-suite.jpg";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Automated compliance checks";
 "Security assessment tools",
@@ -125,21 +159,35 @@ features: [
 "Reporting dashboard";
 ],
 tags: ["Cybersecurity", "Compliance", "SOC2", "Enterprise"],
+<<<<<<< HEAD
 featured: false;,
 new: false;,
 discount: 25;,
 type: "software"};
 {
 id: 4;
+=======
+featured: false;
+new: false;
+discount: 25;
+type: "software"};
+{id: 4;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "5G Enterprise Network Kit";
 description: "Complete 5G networking solution for enterprise environments with advanced security.";
 category: "cloud-infrastructure";
 price: 2499;
 originalPrice: 2999;
 currency: "USD";
+<<<<<<< HEAD
 rating: 4.6;,
 reviewCount: 73;,
 image: "/images/marketplace/5g-kit.jpg";,
+=======
+rating: 4.6;
+reviewCount: 73;
+image: "/images/marketplace/5g-kit.jpg";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "5G network infrastructure";
 "Enterprise security",
@@ -148,21 +196,35 @@ features: [
 "24/7 support";
 ],
 tags: ["5G", "Networking", "Enterprise", "Infrastructure"],
+<<<<<<< HEAD
 featured: false;,
 new: false;,
 discount: 17;,
 type: "hardware"};
 {
 id: 5;
+=======
+featured: false;
+new: false;
+discount: 17;
+type: "hardware"};
+{id: 5;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "AI Workflow Templates Pack";
 description: "Collection of 50+ pre-built AI workflow templates for common business processes.";
 category: "ai-solutions";
 price: 199;
 originalPrice: 299;
 currency: "USD";
+<<<<<<< HEAD
 rating: 4.5;,
 reviewCount: 234;,
 image: "/images/marketplace/workflow-templates.jpg";,
+=======
+rating: 4.5;
+reviewCount: 234;
+image: "/images/marketplace/workflow-templates.jpg";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "50+ workflow templates";
 "Customizable designs",
@@ -171,21 +233,35 @@ features: [
 "Community support";
 ],
 tags: ["AI", "Workflows", "Templates", "Business"],
+<<<<<<< HEAD
 featured: false;,
 new: false;,
 discount: 33;,
 type: "template"};
 {
 id: 6;
+=======
+featured: false;
+new: false;
+discount: 33;
+type: "template"};
+{id: 6;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "Blockchain DeFi Development Kit";
 description: "Complete toolkit for building decentralized finance applications on blockchain.";
 category: "blockchain";
 price: 599;
 originalPrice: 799;
 currency: "USD";
+<<<<<<< HEAD
 rating: 4.4;,
 reviewCount: 98;,
 image: "/images/marketplace/blockchain-defi.jpg";,
+=======
+rating: 4.4;
+reviewCount: 98;
+image: "/images/marketplace/blockchain-defi.jpg";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Smart contract templates";
 "DeFi protocol examples",
@@ -194,21 +270,35 @@ features: [
 "Deployment guides";
 ],
 tags: ["Blockchain", "DeFi", "Smart Contracts", "Development"],
+<<<<<<< HEAD
 featured: false;,
 new: true;,
 discount: 25;,
 type: "development-kit"};
 {
 id: 7;
+=======
+featured: false;
+new: true;
+discount: 25;
+type: "development-kit"};
+{id: 7;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "IoT Data Analytics Platform";
 description: "Enterprise IoT platform with advanced analytics and machine learning capabilities.";
 category: "iot-platforms";
 price: 1799;
 originalPrice: 2299;
 currency: "USD";
+<<<<<<< HEAD
 rating: 4.3;,
 reviewCount: 67;,
 image: "/images/marketplace/iot-platform.jpg";,
+=======
+rating: 4.3;
+reviewCount: 67;
+image: "/images/marketplace/iot-platform.jpg";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "IoT device management";
 "Real-time analytics",
@@ -217,21 +307,35 @@ features: [
 "Multi-cloud support";
 ],
 tags: ["IoT", "Analytics", "Machine Learning", "Enterprise"],
+<<<<<<< HEAD
 featured: false;,
 new: false;,
 discount: 22;,
 type: "platform"};
 {
 id: 8;
+=======
+featured: false;
+new: false;
+discount: 22;
+type: "platform"};
+{id: 8;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "Cybersecurity Threat Intelligence";
 description: "Real-time threat intelligence and security monitoring service.";
 category: "cybersecurity";
 price: 399;
 originalPrice: 599;
 currency: "USD";
+<<<<<<< HEAD
 rating: 4.8;,
 reviewCount: 189;,
 image: "/images/marketplace/threat-intelligence.jpg";,
+=======
+rating: 4.8;
+reviewCount: 189;
+image: "/images/marketplace/threat-intelligence.jpg";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Real-time threat feeds";
 "Security alerts",
@@ -240,9 +344,15 @@ features: [
 "Expert support";
 ],
 tags: ["Cybersecurity", "Threat Intelligence", "Monitoring", "Security"],
+<<<<<<< HEAD
 featured: false;,
 new: false;,
 discount: 33;,
+=======
+featured: false;
+new: false;
+discount: 33;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 type: "service"}
 ];
 const filteredProducts = marketplaceProducts.filter(product => {;
@@ -280,7 +390,12 @@ case "popular":
 return b.reviewCount - a.reviewCount;
 case "rating":
 return b.rating - a.rating;
+<<<<<<< HEAD
 default: return b.featured ? 1 : -1;}
+=======
+default: return b.featured ? 1 : -1;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 });
 
 const formatPrice: any = (price: number; currency: string) => {
@@ -310,7 +425,11 @@ Technology Marketplace;
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Discover cutting-edge technology solutions; AI platforms; and enterprise tools;
 from Zion Tech Group. Find the perfect solution for your business needs.;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -329,7 +448,11 @@ placeholder="Search products; services; or solutions...";
 value={searchTerm}
 onChange={(e) => setSearchTerm(e.target.value)}
 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -345,7 +468,11 @@ className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-w
 {category.name} ({category.count})
 </option>
 ))}
+<<<<<<< HEAD
 </select>
+=======
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Price Range Filter */}
@@ -360,7 +487,11 @@ className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-w
 {range.name}
 </option>
 ))}
+<<<<<<< HEAD
 </select>
+=======
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -378,9 +509,15 @@ className="px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white te
 {option.name}
 </option>
 ))}
+<<<<<<< HEAD
 </select>
 </div>
 <div className="text-gray-300 text-sm">
+=======
+</select>;
+</div>
+<div className="text-gray-300 text-sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {filteredProducts.length} products found;
 </div>
 </div>
@@ -397,6 +534,7 @@ Discover our most popular and innovative technology solutions;
 </p>
 <div className="flex flex-wrap justify-center gap-4">
 {marketplaceProducts.filter(p => p.featured).slice(0; 3).map((product) => (
+<<<<<<< HEAD
 <div key={product.id} className="bg-white/10 rounded-lg p-4 border border-white/20">
 <div className="flex items-center space-x-3">
 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
@@ -405,6 +543,16 @@ Discover our most popular and innovative technology solutions;
 <div className="text-left">
 <h3 className="text-white font-semibold">{product.name}</h3>
 <p className="text-gray-300 text-sm">{formatPrice(product.price; product.currency)}</p>
+=======
+<div key={product.id} className="bg-white/10 rounded-lg p-4 border border-white/20">;
+<div className="flex items-center space-x-3">;
+<div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">;
+<getCategoryIcon categoryId={product.category} className="w-6 h-6 text-white" />;
+</div>
+<div className="text-left">;
+<h3 className="text-white font-semibold">{product.name}</h3>;
+<p className="text-gray-300 text-sm">{formatPrice(product.price; product.currency)}</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -424,7 +572,11 @@ product.featured ? "ring-2 ring-yellow-500" : "";
 }`}
 >;
 {/* Product Image */}
+<<<<<<< HEAD
 <div className="relative h-48 bg-gradient-to-br from-blue-600 to-purple-600">
+=======
+<div className="relative h-48 bg-gradient-to-br from-blue-600 to-purple-600">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="absolute inset-0 bg-black/20"></div>
 {product.featured && (
 <div className="absolute top-4 left-4 bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
@@ -441,15 +593,23 @@ New;
 -{product.discount}%;
 </div>
 )}
+<<<<<<< HEAD
 <div className="absolute bottom-4 right-4">
 <div className="flex items-center space-x-1 bg-black/50 rounded-lg px-2 py-1">
 <Star className="w-4 h-4 text-yellow-400 fill-current" />
 <span className="text-white text-sm font-medium">{product.rating}</span>
+=======
+<div className="absolute bottom-4 right-4">;
+<div className="flex items-center space-x-1 bg-black/50 rounded-lg px-2 py-1">;
+<Star className="w-4 h-4 text-yellow-400 fill-current" />;
+<span className="text-white text-sm font-medium">{product.rating}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 
 {/* Product Content */}
+<<<<<<< HEAD
 <div className="p-6">
 <div className="flex items-center justify-between mb-3">
 <div className="flex items-center space-x-2">
@@ -465,6 +625,23 @@ New;
 <button className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-200">
 <Eye className="w-4 h-4 text-gray-400 hover:text-blue-400" />
 </button>
+=======
+<div className="p-6">;
+<div className="flex items-center justify-between mb-3">;
+<div className="flex items-center space-x-2">;
+<div className="p-2 bg-white/10 rounded-lg">;
+<getCategoryIcon categoryId={product.category} className="w-4 h-4 text-blue-400" />;
+</div>
+<span className="text-gray-400 text-sm">{getCategoryName(product.category)}</span>;
+</div>
+<div className="flex items-center space-x-2">;
+<button className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-200">;
+<Heart className="w-4 h-4 text-gray-400 hover:text-red-400" />;
+</button>;
+<button className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-200">;
+<Eye className="w-4 h-4 text-gray-400 hover:text-blue-400" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -486,7 +663,11 @@ New;
 {feature}
 </li>
 ))}
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Tags */}
@@ -511,12 +692,21 @@ className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full border borde
 )}
 <span className="text-2xl font-bold text-white">
 {formatPrice(product.price; product.currency)}
+<<<<<<< HEAD
 </span>
 </div>
 <div className="flex items-center space-x-1">
 <Star className="w-4 h-4 text-yellow-400 fill-current" />
 <span className="text-gray-300 text-sm">{product.rating}</span>
 <span className="text-gray-400 text-sm">({product.reviewCount})</span>
+=======
+</span>;
+</div>
+<div className="flex items-center space-x-1">;
+<Star className="w-4 h-4 text-yellow-400 fill-current" />;
+<span className="text-gray-300 text-sm">{product.rating}</span>;
+<span className="text-gray-400 text-sm">({product.reviewCount})</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -528,17 +718,28 @@ Add to Cart;
 </button>
 <button className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg border border-white/20 transition-colors duration-200">
 Details;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 ))}
 </div>
 ) : (
+<<<<<<< HEAD
 <div className="text-center py-12">
 <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
 <h3 className="text-xl font-semibold text-gray-300 mb-2">No products found</h3>
 <p className="text-gray-400">Try adjusting your search or filter criteria.</p>
+=======
+<div className="text-center py-12">;
+<Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />;
+<h3 className="text-xl font-semibold text-gray-300 mb-2">No products found</h3>;
+<p className="text-gray-400">Try adjusting your search or filter criteria.</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 
@@ -564,12 +765,17 @@ to="/services";
 className="px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg border border-white/20 transition-colors duration-200"
 >;
 View Services;
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 
 {/* Marketplace Statistics */}
+<<<<<<< HEAD
 <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6">
 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
 <Globe className="w-12 h-12 text-blue-400 mx-auto mb-4" />
@@ -588,6 +794,26 @@ View Services;
 </div>
 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
 <Shield className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+=======
+<div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6">;
+<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">;
+<Globe className="w-12 h-12 text-blue-400 mx-auto mb-4" />;
+<div className="text-3xl font-bold text-white mb-2">24+</div>
+<div className="text-gray-300">Products Available</div>
+</div>
+<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">;
+<Users className="w-12 h-12 text-green-400 mx-auto mb-4" />;
+<div className="text-3xl font-bold text-white mb-2">1;200+</div>
+<div className="text-gray-300">Happy Customers</div>
+</div>
+<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">;
+<Star className="w-12 h-12 text-yellow-400 mx-auto mb-4" />;
+<div className="text-3xl font-bold text-white mb-2">4.8</div>
+<div className="text-gray-300">Average Rating</div>
+</div>
+<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">;
+<Shield className="w-12 h-12 text-purple-400 mx-auto mb-4" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-3xl font-bold text-white mb-2">100%</div>
 <div className="text-gray-300">Secure Transactions</div>
 </div>

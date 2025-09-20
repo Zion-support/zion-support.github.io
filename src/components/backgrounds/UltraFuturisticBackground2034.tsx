@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 
 interface UltraFuturisticBackground2034Props {
 children?: React.ReactNode;
-className?: string;
+}
+className?: string;}
 };
 export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({ ;
 children;
@@ -13,7 +14,8 @@ const canvasRef = useRef<HTMLCanvasElement>(null);
 
 interface UltraFuturisticBackground2034Props {
 intensity?: number;
-theme?: "quantum" | "neon" | "holographic";
+}
+theme?: "quantum" | "neon" | "holographic";}
 };
 const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({
 intensity = 0.8;
@@ -38,10 +40,18 @@ let particles: Array<{
 x: number;
 y: number;
 vx: number;
+<<<<<<< HEAD
 vy: number;,
 size: number;,
 opacity: number;,
 color: string;}> = [];
+=======
+vy: number;
+size: number;
+opacity: number;
+color: string;
+}> = [];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 const resizeCanvas: any = () => {;
 canvas.width = window.innerWidth;
@@ -57,9 +67,15 @@ particles.push({
 x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 0.5;
+<<<<<<< HEAD
 vy: (Math.random() - 0.5) * 0.5;,
 size: Math.random() * 2 + 1;,
 opacity: Math.random() * 0.5 + 0.1;,
+=======
+vy: (Math.random() - 0.5) * 0.5;
+size: Math.random() * 2 + 1;
+opacity: Math.random() * 0.5 + 0.1;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 color: `hsl(${Math.random() * 60 + 200}, 70%, 60%)`;
 });
 }
@@ -73,14 +89,19 @@ holographic: ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4"];
 const selectedColors = colors[theme];
 
 // Create particles;
-for (let i = 0; i < 100; i++) {
-particles.push({
+for (let i = 0; i < 100; i++) {particles.push({
 x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 2;
+<<<<<<< HEAD
 vy: (Math.random() - 0.5) * 2;,
 size: Math.random() * 3 + 1;,
 opacity: Math.random() * 0.5 + 0.3;,
+=======
+vy: (Math.random() - 0.5) * 2;
+size: Math.random() * 3 + 1;
+opacity: Math.random() * 0.5 + 0.3;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 color: selectedColors[Math.floor(Math.random() * selectedColors.length)]});
 }
 
@@ -241,10 +262,17 @@ animate={{
 y: [0, -20; 0],
 opacity: [0.6; 1; 0.6]}}
 transition={{
+<<<<<<< HEAD
 duration: 3;,
 repeat: Infinity;,
 ease: "easeInOut"}}
 />
+=======
+duration: 3;
+repeat: Infinity;
+ease: "easeInOut"}}
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 <motion.div;
 className="absolute top-40 right-32 w-1 h-1 bg-cyan-400 rounded-full opacity-80"
@@ -252,10 +280,17 @@ animate={{
 y: [0; 15; 0],
 opacity: [0.8; 1; 0.8]}}
 transition={{
+<<<<<<< HEAD
 duration: 2.5;,
 repeat: Infinity;,
 ease: "easeInOut"}}
 />
+=======
+duration: 2.5;
+repeat: Infinity;
+ease: "easeInOut"}}
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 <motion.div;
 className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full opacity-70"
@@ -263,10 +298,17 @@ animate={{
 x: [0; 10; 0],
 opacity: [0.7; 1; 0.7]}}
 transition={{
+<<<<<<< HEAD
 duration: 4;,
 repeat: Infinity;,
 ease: "easeInOut"}}
 />
+=======
+duration: 4;
+repeat: Infinity;
+ease: "easeInOut"}}
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 // Add quantum effects;
 if (theme === "quantum") {
@@ -360,9 +402,15 @@ return (
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
+<<<<<<< HEAD
 opacity: intensity;,
 filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
 />
+=======
+opacity: intensity;
+filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 };
 
@@ -370,12 +418,20 @@ export default UltraFuturisticBackground2034;</canvas;
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
+<<<<<<< HEAD
 opacity: intensity;,
+=======
+opacity: intensity;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
 /><//canvas;
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
+<<<<<<< HEAD
 opacity: intensity;,
+=======
+opacity: intensity;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
 />}})

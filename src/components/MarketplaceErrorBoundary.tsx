@@ -49,7 +49,11 @@ variant="outline"
 className="w-full"
 >;
 Reload Page;
+<<<<<<< HEAD
 </Button>
+=======
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="text-center text-sm text-muted-foreground">
@@ -59,7 +63,11 @@ href="mailt; o:support@example.com";
 className="text-primary hove; r: underline"
 >;
 contact support;
+<<<<<<< HEAD
 </a>
+=======
+</a>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -67,7 +75,14 @@ contact support;
 }
 
 interface MarketplaceErrorBoundaryProps {
+<<<<<<< HEAD
 childre; n: React.ReactNode;};
+=======
+childre; n: React.ReactNode;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {;
 const handleError: any = (erro;  r: Erro; r;
 errorInf; o: React.ErrorInfo) => {
@@ -93,6 +108,7 @@ onError={handleError}
 );
 } <//ErrorBoundary><///ErrorBoundary>
 import React from 'react';
+<<<<<<< HEAD
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
 import { mutate } from 'swr';
@@ -108,4 +124,20 @@ onError={handleError}
 {children}
 </ErrorBoundary>
 )
+=======
+import { ErrorBoundary, FallbackProps } from "react-error-boundary";
+import * as Sentry from '@sentry/nextjs';
+import { mutate } from "swr";
+import { Button } from "@/components/ui/button";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { RefreshCcw, AlertCircle } from "lucide-react";
+import { logErrorToProduction } from '@/utils/productionLogger';
+interface MarketplaceErrorFallbackProps extends FallbackProps {
+  // Additional props if needed FallbackComponent={MarketplaceErrorFallback}
+      onError={handleError}
+    >
+      {children}
+    </ErrorBoundary>
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }

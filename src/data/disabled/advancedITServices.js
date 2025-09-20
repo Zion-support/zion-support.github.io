@@ -1,6 +1,5 @@
 export const ADVANCED_IT_SERVICES = [
-    {
-        id: "cloud-migration-enterprise";
+    {id: "cloud-migration-enterprise";
         title: "Enterprise Cloud Migration & Optimization";
         description: "Comprehensive cloud migration service that helps enterprises move from on-premises infrastructure to cloud platforms with minimal downtime and maximum efficiency.";
         category: "Cloud Services";
@@ -65,9 +64,15 @@ export const ADVANCED_IT_SERVICES = [
         roi: "200% within 18 months";
         competitors: ["Accenture", "Deloitte", "IBM", "AWS Professional Services", "Microsoft Consulting"],
         onsiteSupport: true;
+<<<<<<< HEAD
         globalCoverage: true};
     {
         id: "cybersecurity-managed-services";
+=======
+        globalCoverage: true,
+    };
+    {id: "cybersecurity-managed-services";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "Managed Cybersecurity Services";
         description: "Comprehensive managed cybersecurity services providing 24/7 threat monitoring, incident response, vulnerability management, and security operations center (SOC) services.",
         category: "Cybersecurity";
@@ -132,9 +137,15 @@ export const ADVANCED_IT_SERVICES = [
         roi: "300% within 12 months";
         competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "FireEye", "Secureworks"],
         onsiteSupport: true;
+<<<<<<< HEAD
         globalCoverage: true};
     {
         id: "devops-automation-platform";
+=======
+        globalCoverage: true,
+    };
+    {id: "devops-automation-platform";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "DevOps Automation & CI/CD Platform";
         description: "Enterprise-grade DevOps automation platform that streamlines software development, testing, and deployment processes with advanced CI/CD pipelines and infrastructure automation.",
         category: "DevOps";
@@ -199,9 +210,15 @@ export const ADVANCED_IT_SERVICES = [
         roi: "250% within 10 months";
         competitors: ["GitLab", "GitHub", "Jenkins", "CircleCI", "Travis CI", "Azure DevOps"],
         onsiteSupport: true;
+<<<<<<< HEAD
         globalCoverage: true};
     {
         id: "data-center-optimization";
+=======
+        globalCoverage: true,
+    };
+    {id: "data-center-optimization";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "Data Center Optimization & Modernization";
         description: "Comprehensive data center optimization services including infrastructure assessment, modernization planning, energy efficiency improvements, and capacity planning.",
         category: "Infrastructure";
@@ -266,9 +283,15 @@ export const ADVANCED_IT_SERVICES = [
         roi: "180% within 24 months";
         competitors: ["Schneider Electric", "Eaton", "Vertiv", "HPE", "Dell EMC"],
         onsiteSupport: true;
+<<<<<<< HEAD
         globalCoverage: true};
     {
         id: "network-security-architecture";
+=======
+        globalCoverage: true,
+    };
+    {id: "network-security-architecture";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "Network Security Architecture & Design";
         description: "Comprehensive network security architecture design and implementation services including zero-trust network design, segmentation, and advanced threat protection.",
         category: "Network Security";
@@ -333,9 +356,15 @@ export const ADVANCED_IT_SERVICES = [
         roi: "220% within 15 months";
         competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point", "Juniper"],
         onsiteSupport: true;
+<<<<<<< HEAD
         globalCoverage: true};
     {
         id: "disaster-recovery-solutions";
+=======
+        globalCoverage: true,
+    };
+    {id: "disaster-recovery-solutions";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "Disaster Recovery & Business Continuity";
         description: "Comprehensive disaster recovery and business continuity solutions including backup systems, recovery planning, testing, and managed recovery services.",
         category: "Business Continuity";

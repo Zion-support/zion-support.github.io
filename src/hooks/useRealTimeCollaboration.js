@@ -1,11 +1,17 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react, ';
 import { useAnalytics } from './useAnalytics, ';
 export const useRealTimeCollaboration = (options, wsConfig) => {
+<<<<<<< HEAD
     const { trackEvent } = useAnalytics({
         enableTracking: true;
         enableUserBehaviorTracking: true});
     const [state, setState] = useState({
         users: new Map();
+=======
+    const { trackEvent } = useAnalytics({enableTracking: true;
+        enableUserBehaviorTracking: true});
+    const [state, setState] = useState({users: new Map();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         messages: [];
         isConnected: false;
         connectionStatus: 'disconnected';
@@ -43,8 +49,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                     isConnected: true;
                     connectionStatus: 'connected'}));
     // Send user join message;
-                sendMessage({
-                    type: 'user_join';
+                sendMessage({type: 'user_join';
                     userId: options.userId;
                     payload: {
                         name: options.userName;
@@ -69,8 +74,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                     
                 }
             };
-            wsRef.current.onclose = (event) => {
-                setState(prev => ({
+            wsRef.current.onclose = (event) => {setState(prev => ({
                     ...prev,
                     isConnected: false;
                     connectionStatus: 'disconnected'}));
@@ -80,8 +84,12 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                 if (reconnectAttemptsRef.current < (options.reconnectAttempts || 5)) {
                     scheduleReconnection();
                 }
+<<<<<<< HEAD
                 trackEvent('collaboration', 'connection_lost', 'websocket_disconnected', undefined, {
                     code: event.code;
+=======
+                trackEvent('collaboration', 'connection_lost', 'websocket_disconnected', undefined, {code: event.code;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
                     reason: event.reason});
      };
             wsRef.current.onerror = (error) => {
@@ -89,9 +97,13 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                 trackEvent('collaboration', 'connection_error', 'websocket_error', undefined, { error: error.toString() });
      };
         }
+<<<<<<< HEAD
         catch (error) {
             
             trackEvent('collaboration', 'connection_failed', 'websocket_init_failed', undefined, {
+=======
+        catch (error) {trackEvent('collaboration', 'connection_failed', 'websocket_init_failed', undefined, {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
                 error: error instanceof Error ? error.message : 'Unknown error'});
      }
     }, [options, wsConfig, generateUserColor, trackEvent]);
@@ -140,13 +152,16 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             newState.messages = [...prev.messages, message].slice(-(options.messageRetention || 1000));
             return newState;
         });
+<<<<<<< HEAD
         trackEvent('collaboration', 'message_received', message.type, undefined, {
             messageId: message.id;
+=======
+        trackEvent('collaboration', 'message_received', message.type, undefined, {messageId: message.id;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             userId: message.userId});
      }, [options.messageRetention, trackEvent]);
     // Handle user join;
-    const handleUserJoin = useCallback((message) => {
-        setState(prev => {
+    const handleUserJoin = useCallback((message) => {setState(prev => {
             const newUsers = new Map(prev.users);
             newUsers.set(message.userId, {
                 id: message.userId;
@@ -181,8 +196,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
      });
     }, []);
     // Handle cursor movement;
-    const handleCursorMove = useCallback((message) => {
-        if (!options.enableCursors)
+    const handleCursorMove = useCallback((message) => {if (!options.enableCursors)
             return;
         setState(prev => {
             const newUsers = new Map(prev.users);
@@ -196,8 +210,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
      });
     }, [options.enableCursors]);
     // Handle selection change;
-    const handleSelectionChange = useCallback((message) => {
-        if (!options.enableSelection)
+    const handleSelectionChange = useCallback((message) => {if (!options.enableSelection)
             return;
         setState(prev => {
             const newUsers = new Map(prev.users);
@@ -211,8 +224,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
      });
     }, [options.enableSelection]);
     // Handle text change;
-    const handleTextChange = useCallback((message) => {
-        if (!options.enableTextSync)
+    const handleTextChange = useCallback((message) => {if (!options.enableTextSync)
             return;
         // Handle conflict resolution;
         if (message.metadata?.conflictResolution) {
@@ -301,8 +313,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             payload: { start, end, text }
         });
     }, [options.enableSelection, options.userId, sendMessage]);
-    const syncTextChange = useCallback((change) => {
-        if (!options.enableTextSync)
+    const syncTextChange = useCallback((change) => {if (!options.enableTextSync)
             return;
         sendMessage({
             type: 'text_change';
@@ -339,8 +350,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             clearTimeout(reconnectTimeoutRef.current);
             reconnectTimeoutRef.current = null;
         }
-        setState(prev => ({
-            ...prev,
+        setState(prev => ({...prev,
             isConnected: false;
             connectionStatus: 'disconnected'}));
     trackEvent('collaboration', 'user_disconnected', 'manual_disconnect');
@@ -390,8 +400,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         })
             .map(user => ({ ...user.selection, user }));
     }, [state.users]);
-    return {
-        // State;
+    return {// State;
         state,
         onlineUsers,
         offlineUsers,

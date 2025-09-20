@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import React from "react, import { SEO  } from "@/components/SEO";
+=======
+import React from "react,,
+,;
+import { SEO  } from "@/components/SEO";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export default function FuturisticAnimatedBackground(props: any) {return (,
 <div className="min-h-screen bg-white">,
 <SEO title="FuturisticAnimatedBackground - Zion Tech Group" description="Professional FuturisticAnimatedBackground services by Zion Tech Group"  />,
@@ -7,7 +13,14 @@ export default function FuturisticAnimatedBackground(props: any) {return (,
 <p className="text-gray-300 text-lg">,
 Professional FuturisticAnimatedBackground services to help your business grow.,
 </p>,
+<<<<<<< HEAD
 </div>",
 </div>
 ), ';
 "}, ";<//div><///div>
+=======
+</div>",;
+</div>,;
+),,',;
+"}, ";<//div><///div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

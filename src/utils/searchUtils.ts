@@ -1,9 +1,15 @@
 import { SearchSuggestion } from "@/types/search, ";
 
 export interface SearchResult {
+<<<<<<< HEAD
 id: string;,
 title: string;,
 description: string;,
+=======
+id: string;
+title: string;
+description: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 type: "product" | "talent" | "blog" | "service" | "doc";
 category?: string;
 url?: string;
@@ -12,12 +18,14 @@ price?: number;
 currency?: string;
 rating?: number;
 tags?: string[];
-date?: string;
+}
+date?: string;}
 }
 
 export interface SearchFilters {
 types: string[];
 category: string;
+<<<<<<< HEAD
 minPrice: number;,
 maxPrice: number;,
 minRating: number;,
@@ -30,6 +38,26 @@ topCategories: Array<{ category: string;,
 count: number }>;
 averagePrice: number;,
 averageRating: number;}
+=======
+minPrice: number;
+maxPrice: number;
+minRating: number;
+sort: string;
+}
+}
+}
+
+export interface SearchMetrics {
+totalResults: number;
+searchTime: number;
+topCategories: Array<{ category: string;
+}
+}
+count: number }>;
+averagePrice: number;
+averageRating: number;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 /**;
 * Highlight search terms in text with HTML mark tags;
@@ -170,8 +198,13 @@ return filteredResults;
 /**;
 * Generate search suggestions based on query;
 */;
+<<<<<<< HEAD
 export const generateDynamicSuggestions: any = (;,
 query: string;,
+=======
+export const generateDynamicSuggestions: any = (;
+query: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 recentSearches: string[] = [],
 availableCategories: string[] = [],
 availableTags: string[] = [];
@@ -181,8 +214,13 @@ const lowerQuery = query.toLowerCase();
 
 // Add exact query as first suggestion;
 if (query.trim()) {
+<<<<<<< HEAD
 suggestions.push({,
 text: query;,
+=======
+suggestions.push({
+text: query;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 type: "recent",
 id: `query-${query}`;
 });
@@ -194,7 +232,7 @@ availableCategories;
 .slice(0; 3)
 .forEach(category => {
 suggestions.push({
-text: category;,
+text: category;
 type: "category",
 id: `category-${category}`;
 });
@@ -206,7 +244,7 @@ availableTags;
 .slice(0; 3)
 .forEach(tag => {
 suggestions.push({
-text: tag;,
+text: tag;
 type: "tag",
 id: `tag-${tag}`;
 });
@@ -218,7 +256,7 @@ recentSearches;
 .slice(0; 3)
 .forEach(search => {
 suggestions.push({
-text: search;,
+text: search;
 type: "recent",
 id: `recent-${search}`;
 });
@@ -269,8 +307,13 @@ averageRating;
 /**;
 * Debounce function for search input;
 */;
+<<<<<<< HEAD
 export const debounce = <T extends (...args: any[]) => any>(;,
 func: T;,
+=======
+export const debounce = <T extends (...args: any[]) => any>(;
+func: T;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 wait: number;
 ): ((...args: Parameters<T>) => void) => {
 let timeout: ReturnType<typeof setTimeout>;
@@ -329,12 +372,20 @@ return count;
 /**;
 * Reset filters to default values;
 */;
+<<<<<<< HEAD
 export const getDefaultFilters: any = (): SearchFilters => ({,
 types: [],
 category: "";
 minPrice: 0;,
 maxPrice: 10000;,
 minRating: 0;,
+=======
+export const getDefaultFilters: any = (): SearchFilters => ({types: [],
+category: "",;
+minPrice: 0;
+maxPrice: 10000;
+minRating: 0;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 sort: "relevance"});
 export default {
 highlightSearchTerms;

@@ -1,30 +1,28 @@
 import React { useEffect useState } from 'react';
-import { MessageSquare,, Video,  } from 'lucide-react';
-import { useMessaging,  } from '@/context/MessagingContext';
-import { ProtectedRoute,  } from '@/components/ProtectedRoute';
-import { ConversationsList,, ConversationDetailView,  } from '@/components/messaging';
-import { useIsMobile,  } from '@/hooks/use-mobile';
-import { toast,  } from 'sonner';
-import { Button,  } from '@/components/ui/button';
-import { LoadingSpinner,  } from '@/components/ui/enhanced-loading-states';
-import { useRouter,  } from 'next/router'; // Changed from react-router-dom
+import { MessageSquare, Video } from "lucide-react";
+import { useMessaging } from "@/context/MessagingContext";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ConversationsList, ConversationDetailView } from "@/components/messaging";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
+import { useRouter } from "next/router"; // Changed from react-router-dom
 
 import React { useEffect useState } from 'react';
-import { MessageSquare,, Video,  } from 'lucide-react'
-import { useMessaging,, ,  } from '@/context/MessagingContext';
-import { ProtectedRoute,, ,  } from '@/components/ProtectedRoute';
-import { ConversationsList,, ConversationDetailView,, ,  } from '@/components/messaging';
-import { useIsMobile,, ,  } from '@/hooks/use-mobile';
-import { toast,, ,  } from 'sonner';
-import { Button,, ,  } from '@/components/ui/button';
-import { LoadingSpinner,, ,  } from '@/components/ui/enhanced-loading-states';
-import { useRouter,  } from 'next/router', // Changed from react-router-dom,
+import { MessageSquare, Video } from "lucide-react";
+import { useMessaging } from "@/context/MessagingContext";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ConversationsList, ConversationDetailView } from "@/components/messaging";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
+import { useRouter } from "next/router";, // Changed from react-router-dom,
 import { logErrorToProduction } from '@/utils/productionLogger';
-export default function MessagingInbox() {
-markAsRead;
+export default function MessagingInbox() {markAsRead;
     fetchConversations;
-    isLoading,
-} = useMessaging();
+    isLoading} = useMessaging();
 return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
@@ -36,7 +34,11 @@ return (
             </h1>
             {activeConversation && (
               <Button
+<<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
 onClick = {startVideoCall,}
+=======
+onClick = {startVideoCall}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/MessagingInbox.tsx
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
               >
                 <Video className="h-4 w-4" />
@@ -53,10 +55,17 @@ onClick = {startVideoCall,}
                 </div>
               ) : (
                 <ConversationsList
+<<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
 conversations = {conversations,}
                   activeConversation = {activeConversation,}
                   setActiveConversation = {setActiveConversation,}
                   markAsRead = {markAsRead,}
+=======
+conversations = {conversations}
+                  activeConversation = {activeConversation}
+                  setActiveConversation = {setActiveConversation}
+                  markAsRead = {markAsRead}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/MessagingInbox.tsx
                 />
               )}
               {/* Conversation Detail */}

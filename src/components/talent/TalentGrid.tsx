@@ -5,15 +5,28 @@ import { TalentSkeleton } from "@/components/talent/TalentSkeleton, ";
 import { TalentProfile } from "@/types/talent, ";
 
 export interface TalentGridProps {;
+<<<<<<< HEAD
 talents: TalentProfile[];,
 isLoading: boolean;,
 onTalentClick: (id: string) => void;,
+=======
+talents: TalentProfile[];
+isLoading: boolean;
+onTalentClick: (id: string) => void;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 isAuthenticated: boolean;
 viewProfile?: (id: string) => void;
 // unused but kept for backward compatibility;
 clearFilters?: () => void;
 handleBook?: (talent: TalentProfile) => void;
+<<<<<<< HEAD
 handleMessage?: (talent: TalentProfile) => void;};
+=======
+handleMessage?: (talent: TalentProfile) => void;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function TalentGrid({ ;
 talents;
 isLoading;

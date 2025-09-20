@@ -3,15 +3,21 @@ import { cn } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
-interface LoadingSpinnerProps {
-size?: "sm" | "md" | "lg" | "xl";
+interface LoadingSpinnerProps {size?: "sm" | "md" | "lg" | "xl";
 color?: "primary" | "secondary" | "white" | "custom";
 customColor?: string;
 className?: string;
+<<<<<<< HEAD
 text?: string;
 showText?: boolean};
 export function LoadingSpinner({
 size = "md";
+=======
+}
+text?: string;}
+showText?: boolean};
+export function LoadingSpinner({size = "md";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 color = "primary";
 customColor;
 className;
@@ -36,19 +42,20 @@ const borderColor = customColor || colorClasses[color];
 return (
 <div className={cn("flex flex-col items-center justify-center", className)}>
 <motion.div;
-className={cn(
-"border-2 border-t-transparent rounded-full animate-spin",
+className={cn("border-2 border-t-transparent rounded-full animate-spin",
 sizeClasses[size],
-borderColor,
-)}
+borderColor)}
 animate={{ rotate: 360 }}
 transition={{
+<<<<<<< HEAD
 duration: 1; repeat: Infinity;,
+=======
+duration: 1; repeat: Infinity;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ease: "linear"}}
 role="status";
 aria-label="Loading";
-export function LoadingSpinner({
-size = "md", ;
+export function LoadingSpinner({size = "md", ;
 color = "primary", ;
 customColor;
 className = "",
@@ -83,7 +90,11 @@ animate={{ rotate: 360 }}
 transition={{ duration: 1; repeat: Infinity; ease: "linear" }}
 style={{
 borderTopColor: customColor && color === "custom" ? customColor : undefined}}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {showText && (
 <motion.p;
@@ -108,19 +119,22 @@ export function SkeletonLoader({;
 className;
 lines = 3;
 height = "h-4";
-}: {
-className?: string;
+}: {className?: string;
 lines?: number;
 height?: string}) {
 return (
+<<<<<<< HEAD
 <div className={cn("space-y-3", className)}>
 {Array.from({ length: lines }).map((_; index) => (
 <motion.div;
+=======
+<div className={cn("space-y-3", className)}>;
+{Array.from({ length: lines }).map((_; index) => (<motion.div;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 key={index}
 className={cn(
 "bg-zion-slate-light/20 rounded animate-pulse",
-height,
-)}
+height)}
 initial={{ opacity: 0 }}
 animate={{ opacity: 1 }}
 transition={{ delay: index * 0.1 }}
@@ -129,8 +143,7 @@ export function SkeletonLoader({ ;
 className = "", ;
 lines = 3;
 height = "h-4";
-}: {
-className?: string;
+}: {className?: string;
 lines?: number;
 height?: string}) {
 return (
@@ -156,19 +169,30 @@ className;
 text?: string;
 className?: string}) {
 return (
+<<<<<<< HEAD
 <div className={cn("min-h-screen flex items-center justify-center", className)}>
 <div className="text-center">
 <LoadingSpinner size="xl" color="primary" showText text={text} />
+=======
+<div className={cn("min-h-screen flex items-center justify-center", className)}>;
+<div className="text-center">;
+<LoadingSpinner size="xl" color="primary" showText text={text} />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 );
 }
 
 // Button loading state;
+<<<<<<< HEAD
 export function ButtonLoader({
 size = "sm",
 className}: {
 size?: "sm" | "md" | "lg",
+=======
+export function ButtonLoader({size = "sm",
+className}: {size?: "sm" | "md" | "lg",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 className?: string}) {
 return (
 <div className={cn("inline-flex items-center", className)}>
@@ -178,7 +202,7 @@ return (
 export function PageLoader({
 text = "Loading page...",
 showSpinner = true, ;
-}: { ;
+}: {;
 text?: string;
 showSpinner?: boolean}) {
 return (
@@ -197,9 +221,15 @@ transition={{ delay: 0.3; duration: 0.3 }}
 className="mt-4 text-lg text-zion-slate-light font-medium"
 >;
 {text}
+<<<<<<< HEAD
 </motion.p>
 </div>
 </motion.div>
+=======
+</motion.p>;
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }
 
@@ -207,7 +237,7 @@ className="mt-4 text-lg text-zion-slate-light font-medium"
 export function ContentPlaceholder({
 className = "",
 variant = "default";
-}: { ;
+}: {;
 className?: string;
 variant?: "default" | "card" | "list" | "grid"}) {
 const variants = {
@@ -245,12 +275,21 @@ animate={{ opacity: 1; x: 0 }}
 transition={{ delay: index * 0.05; duration: 0.3 }}
 className="flex items-center space-x-4"
 >;
+<<<<<<< HEAD
 <div className="w-12 h-12 bg-white/10 rounded-full animate-pulse" />
 <div className="flex-1 space-y-2">
 <div className="h-4 bg-white/10 rounded-lg animate-pulse" />
 <div className="h-3 bg-white/10 rounded-lg w-2/3 animate-pulse" />
 </div>
 </motion.div>
+=======
+<div className="w-12 h-12 bg-white/10 rounded-full animate-pulse" />;
+<div className="flex-1 space-y-2">;
+<div className="h-4 bg-white/10 rounded-lg animate-pulse" />;
+<div className="h-3 bg-white/10 rounded-lg w-2/3 animate-pulse" />;
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))
 ) : variant === "grid" ? (
 // Grid placeholders;

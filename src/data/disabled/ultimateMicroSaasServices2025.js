@@ -1,7 +1,6 @@
 export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
     // AI-Powered Business Intelligence & Analytics;
-    {
-        id: "ai-business-intelligence-platform";
+    {id: "ai-business-intelligence-platform";
         title: "AI Business Intelligence Platform";
         description: "Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights, and create actionable reports for business decision-making.",
         category: "AI & Analytics";
@@ -54,8 +53,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Customer Experience Platform;
-    {
-        id: "ai-customer-experience-platform";
+    {id: "ai-customer-experience-platform";
         title: "AI Customer Experience Platform";
         description: "Comprehensive customer experience platform that uses AI to personalize interactions, predict customer needs, and optimize every touchpoint across the customer journey.",
         category: "AI & Customer Experience";
@@ -108,8 +106,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Supply Chain Optimization;
-    {
-        id: "ai-supply-chain-optimization";
+    {id: "ai-supply-chain-optimization";
         title: "AI Supply Chain Optimization Platform";
         description: "Intelligent supply chain platform that uses AI to optimize inventory management, demand forecasting, and logistics operations for maximum efficiency and cost savings.",
         category: "AI & Supply Chain";
@@ -162,8 +159,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Financial Technology Platform;
-    {
-        id: "ai-fintech-platform";
+    {id: "ai-fintech-platform";
         title: "AI FinTech Platform";
         description: "Comprehensive financial technology platform that uses AI to automate financial processes, detect fraud, and provide intelligent financial insights for businesses and individuals.",
         category: "AI & FinTech";
@@ -216,8 +212,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Healthcare Technology Platform;
-    {
-        id: "ai-healthcare-platform";
+    {id: "ai-healthcare-platform";
         title: "AI Healthcare Technology Platform";
         description: "Advanced healthcare technology platform that uses AI to improve patient care, automate medical processes, and provide intelligent healthcare insights for medical professionals.",
         category: "AI & Healthcare";
@@ -270,8 +265,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Education Technology Platform;
-    {
-        id: "ai-education-platform";
+    {id: "ai-education-platform";
         title: "AI Education Technology Platform";
         description: "Innovative education technology platform that uses AI to personalize learning experiences, automate assessment, and provide intelligent educational insights for students and educators.",
         category: "AI & Education";
@@ -324,8 +318,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Marketing Automation Platform;
-    {
-        id: "ai-marketing-automation";
+    {id: "ai-marketing-automation";
         title: "AI Marketing Automation Platform";
         description: "Intelligent marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI across all marketing channels and touchpoints.",
         category: "AI & Marketing";
@@ -378,8 +371,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Human Resources Platform;
-    {
-        id: "ai-hr-platform";
+    {id: "ai-hr-platform";
         title: "AI Human Resources Platform";
         description: "Comprehensive HR platform that uses AI to streamline recruitment, optimize employee management, and provide intelligent insights for human resources professionals.",
         category: "AI & Human Resources";
@@ -432,8 +424,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Legal Technology Platform;
-    {
-        id: "ai-legal-tech-platform";
+    {id: "ai-legal-tech-platform";
         title: "AI Legal Technology Platform";
         description: "Advanced legal technology platform that uses AI to automate legal research, document analysis, and case management for legal professionals and law firms.",
         category: "AI & Legal Technology";
@@ -486,8 +477,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Real Estate Technology Platform;
-    {
-        id: "ai-real-estate-platform";
+    {id: "ai-real-estate-platform";
         title: "AI Real Estate Technology Platform";
         description: "Innovative real estate platform that uses AI to optimize property management, automate transactions, and provide intelligent insights for real estate professionals and investors.",
         category: "AI & Real Estate";
@@ -540,8 +530,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Manufacturing Technology Platform;
-    {
-        id: "ai-manufacturing-platform";
+    {id: "ai-manufacturing-platform";
         title: "AI Manufacturing Technology Platform";
         description: "Advanced manufacturing platform that uses AI to optimize production processes, predict maintenance needs, and improve quality control for manufacturing operations.",
         category: "AI & Manufacturing";
@@ -594,8 +583,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Energy Management Platform;
-    {
-        id: "ai-energy-management";
+    {id: "ai-energy-management";
         title: "AI Energy Management Platform";
         description: "Intelligent energy management platform that uses AI to optimize energy consumption, predict demand, and improve sustainability for businesses and organizations.",
         category: "AI & Energy";
@@ -648,8 +636,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Transportation & Logistics Platform;
-    {
-        id: "ai-transportation-logistics";
+    {id: "ai-transportation-logistics";
         title: "AI Transportation & Logistics Platform";
         description: "Comprehensive transportation and logistics platform that uses AI to optimize routes, predict demand, and improve efficiency across all transportation operations.",
         category: "AI & Transportation";
@@ -702,8 +689,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Agriculture Technology Platform;
-    {
-        id: "ai-agriculture-platform";
+    {id: "ai-agriculture-platform";
         title: "AI Agriculture Technology Platform";
         description: "Innovative agriculture platform that uses AI to optimize crop management, predict yields, and improve farming efficiency for agricultural operations.",
         category: "AI & Agriculture";
@@ -756,8 +742,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
             website: "https://ziontechgroup.com"}
     };
     // AI-Powered Environmental Monitoring Platform;
-    {
-        id: "ai-environmental-monitoring";
+    {id: "ai-environmental-monitoring";
         title: "AI Environmental Monitoring Platform";
         description: "Advanced environmental monitoring platform that uses AI to track environmental conditions, predict changes, and provide insights for environmental management and sustainability.",
         category: "AI & Environment";

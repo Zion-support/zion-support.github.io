@@ -2,21 +2,28 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react;";
 import { motion } from "framer-motion, ";
 import { Link } from "react-router-dom, ";
 import { RocketLaunchIcon;
 PhoneIcon;
+<<<<<<< HEAD
 EnvelopeIcon, CalendarIcon  } from "@heroicons/react/24/outline, ";
+=======
+EnvelopeIcon;
+CalendarIcon } from "@heroicons/react/24/outline, ";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
-export function CTASection() {
-const ctaOptions = [;
+export function CTASection() {const ctaOptions = [;
 {;
-icon: PhoneIcon; title: "Call Us";,
-description: "Speak directly with our experts", action: "+1 302 464 0950";,
+icon: PhoneIcon; title: "Call Us";
+description: "Speak directly with our experts", action: "+1 302 464 0950";
 href: "tel:+13024640950",
 color: "from-zion-cyan to-zion-blue"};
+<<<<<<< HEAD
 {
 icon: EnvelopeIcon; title: "Email Us";,
 description: "Send us a detailed message", action: "kleber@ziontechgroup.com";,
@@ -24,6 +31,13 @@ href: "mailto:kleber@ziontechgroup.com",
 color: "from-zion-purple to-zion-cyan"};
 {
 icon: CalendarIcon; title: "Schedule a Call";,
+=======
+{icon: EnvelopeIcon; title: "Email Us";
+description: "Send us a detailed message", action: "kleber@ziontechgroup.com";
+href: "mailto:kleber@ziontechgroup.com",
+color: "from-zion-purple to-zion-cyan"};
+{icon: CalendarIcon; title: "Schedule a Call";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 description: "Book a consultation meeting", action: "Book Now",
 href: "/contact",
 color: "from-zion-blue to-zion-purple"}
@@ -36,8 +50,12 @@ staggerChildren: 0.1}
 }
 };
 const itemVariants = {;
+<<<<<<< HEAD
 hidden: { y: 20; opacity: 0 }, visible: {,
 y: 0; opacity: 1; transition: {,
+=======
+hidden: { y: 20; opacity: 0 }, visible: {y: 0; opacity: 1; transition: {,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 duration: 0.5}
 }
 };
@@ -88,9 +106,15 @@ to="/services";
 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
 >;
 Explore Services;
+<<<<<<< HEAD
 </Link>
 </div>
 </motion.div>
+=======
+</Link>;
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Contact Options */}
 <motion.div;
@@ -109,8 +133,13 @@ className="group"
 <Link to={option.href} className="block">
 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:border-zion-cyan/30 transition-all duration-300 hover:scale-105 text-center">
 {/* Icon */}
+<<<<<<< HEAD
 <div className={`w-16 h-16 bg-gradient-to-br ${option.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
 <option.icon className="w-8 h-8 text-white" />
+=======
+<div className={`w-16 h-16 bg-gradient-to-br ${option.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>;
+<option.icon className="w-8 h-8 text-white" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Content */}
@@ -126,8 +155,13 @@ className="group"
 {option.action}
 </div>
 </div>
+<<<<<<< HEAD
 </Link>
 </motion.div>
+=======
+</Link>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </motion.div>
 
@@ -139,6 +173,7 @@ viewport={{ once: true }}
 transition={{ duration: 0.8; delay: 0.5 }}
 className="text-center mt-16"
 >;
+<<<<<<< HEAD
 <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
 <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
 <span className="text-zion-slate-light text-sm">
@@ -148,5 +183,16 @@ Response within 2 hours • Free initial consultation;
 </motion.div>
 </div>
 </section>
+=======
+<div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">;
+<div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
+<span className="text-zion-slate-light text-sm">;
+Response within 2 hours • Free initial consultation;
+</span>;
+</div>
+</motion.div>;
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }<//section><///section>

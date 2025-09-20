@@ -1,7 +1,6 @@
 export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
     // AI-Powered Business Intelligence & Analytics;
-    {
-        id: "ai-business-intelligence-suite";
+    {id: "ai-business-intelligence-suite";
         title: "AI Business Intelligence Suite - Intelligent Data Insights";
         description: "Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting for data-driven decision making.",
         category: "AI & Business Intelligence";
@@ -62,8 +61,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         scalability: "Enterprise-grade with unlimited users and data";
         customizationLevel: "Highly customizable with white-label options"};
     // AI-Powered Customer Experience Platform;
-    {
-        id: "ai-customer-experience-platform";
+    {id: "ai-customer-experience-platform";
         title: "AI Customer Experience Platform - Personalized Customer Journeys";
         description: "Comprehensive AI-powered customer experience platform that personalizes customer interactions, predicts customer needs, and optimizes customer journeys across all touchpoints.",
         category: "AI & Customer Experience";
@@ -124,8 +122,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         scalability: "Handles millions of customer interactions";
         customizationLevel: "Fully customizable customer journey workflows"};
     // AI-Powered Supply Chain & Logistics Optimization;
-    {
-        id: "ai-supply-chain-optimizer-pro";
+    {id: "ai-supply-chain-optimizer-pro";
         title: "AI Supply Chain Optimizer Pro - Intelligent Logistics Management";
         description: "Advanced AI-powered supply chain optimization platform that predicts demand, optimizes inventory, reduces costs, and improves delivery efficiency through machine learning algorithms.",
         category: "AI & Supply Chain";
@@ -186,8 +183,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         scalability: "Enterprise-grade with multi-company support";
         customizationLevel: "Industry-specific optimization algorithms"};
     // AI-Powered Financial Technology Platform;
-    {
-        id: "ai-fintech-platform-elite";
+    {id: "ai-fintech-platform-elite";
         title: "AI FinTech Platform Elite - Intelligent Financial Solutions";
         description: "Comprehensive AI-powered financial technology platform that provides intelligent banking, investment management, risk assessment, and financial planning solutions for businesses and individuals.",
         category: "AI & Financial Technology";
@@ -248,8 +244,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         scalability: "Banking-grade infrastructure with unlimited scalability";
         customizationLevel: "White-label solutions for financial institutions"};
     // AI-Powered Healthcare & Medical Solutions;
-    {
-        id: "ai-healthcare-solutions-suite";
+    {id: "ai-healthcare-solutions-suite";
         title: "AI Healthcare Solutions Suite - Intelligent Medical Technology";
         description: "Comprehensive AI-powered healthcare platform that provides diagnostic assistance, patient monitoring, medical image analysis, and healthcare workflow optimization for medical professionals and institutions.",
         category: "AI & Healthcare";
@@ -310,8 +305,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         scalability: "Enterprise healthcare infrastructure with multi-institution support";
         customizationLevel: "Specialized medical AI models for different specialties"};
     // AI-Powered Education & Learning Platform;
-    {
-        id: "ai-education-learning-platform";
+    {id: "ai-education-learning-platform";
         title: "AI Education & Learning Platform - Intelligent Learning Solutions";
         description: "Advanced AI-powered education platform that personalizes learning experiences, provides intelligent tutoring, automates assessment, and optimizes educational content delivery for students and educators.",
         category: "AI & Education";
@@ -372,8 +366,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         scalability: "Multi-institution platform with unlimited student support";
         customizationLevel: "Customizable learning paths and curriculum design"};
     // AI-Powered Cybersecurity & Threat Intelligence;
-    {
-        id: "ai-cybersecurity-threat-intelligence";
+    {id: "ai-cybersecurity-threat-intelligence";
         title: "AI Cybersecurity & Threat Intelligence - Advanced Security Solutions";
         description: "Comprehensive AI-powered cybersecurity platform that provides real-time threat detection, automated incident response, vulnerability assessment, and security intelligence for organizations of all sizes.",
         category: "AI & Cybersecurity";
@@ -434,8 +427,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         scalability: "Enterprise-grade security infrastructure with unlimited scalability";
         customizationLevel: "Industry-specific security frameworks and compliance"};
     // AI-Powered Marketing & Advertising Platform;
-    {
-        id: "ai-marketing-advertising-platform";
+    {id: "ai-marketing-advertising-platform";
         title: "AI Marketing & Advertising Platform - Intelligent Marketing Solutions";
         description: "Advanced AI-powered marketing platform that optimizes campaigns, personalizes content, predicts customer behavior, and automates marketing workflows for maximum ROI and customer engagement.",
         category: "AI & Marketing";
@@ -496,8 +488,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         scalability: "Multi-client platform with unlimited campaign support";
         customizationLevel: "Custom marketing workflows and automation rules"};
     // AI-Powered Human Resources & Talent Management;
-    {
-        id: "ai-hr-talent-management-suite";
+    {id: "ai-hr-talent-management-suite";
         title: "AI HR & Talent Management Suite - Intelligent People Management";
         description: "Comprehensive AI-powered HR platform that streamlines recruitment, optimizes employee performance, predicts turnover, and automates HR processes for better talent management and organizational success.",
         category: "AI & Human Resources";
@@ -558,8 +549,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         scalability: "Multi-company platform with enterprise HR capabilities";
         customizationLevel: "Customizable HR workflows and compliance frameworks"};
     // AI-Powered Legal Technology & Compliance;
-    {
-        id: "ai-legal-technology-compliance";
+    {id: "ai-legal-technology-compliance";
         title: "AI Legal Technology & Compliance - Intelligent Legal Solutions";
         description: "Advanced AI-powered legal technology platform that automates contract analysis, provides legal research assistance, monitors compliance, and optimizes legal workflows for law firms and legal departments.",
         category: "AI & Legal Technology";
@@ -620,8 +610,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         scalability: "Enterprise legal platform with multi-firm support";
         customizationLevel: "Industry-specific legal workflows and compliance frameworks"};
     // AI-Powered Real Estate & Property Management;
-    {
-        id: "ai-real-estate-property-management";
+    {id: "ai-real-estate-property-management";
         title: "AI Real Estate & Property Management - Intelligent Property Solutions";
         description: "Comprehensive AI-powered real estate platform that optimizes property management, predicts market trends, automates tenant screening, and provides intelligent property insights for real estate professionals and investors.",
         category: "AI & Real Estate";
@@ -682,8 +671,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         scalability: "Multi-property platform with unlimited portfolio support";
         customizationLevel: "Customizable property workflows and reporting"};
     // AI-Powered Manufacturing & Industrial IoT;
-    {
-        id: "ai-manufacturing-industrial-iot";
+    {id: "ai-manufacturing-industrial-iot";
         title: "AI Manufacturing & Industrial IoT - Intelligent Manufacturing Solutions";
         description: "Advanced AI-powered manufacturing platform that optimizes production processes, predicts equipment failures, monitors quality control, and enables smart manufacturing through IoT integration and machine learning.",
         category: "AI & Manufacturing";

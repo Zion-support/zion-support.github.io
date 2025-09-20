@@ -1,7 +1,6 @@
 export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
     // Quantum AI Orchestration Platform;
-    {
-        id: "quantum-ai-orchestration-platform";
+    {id: "quantum-ai-orchestration-platform";
         title: "Quantum AI Orchestration Platform";
         description: "Revolutionary platform that combines quantum computing with AI to solve complex optimization problems in real-time, enabling unprecedented computational power for enterprise applications.",
         category: "Quantum AI & Computing";
@@ -56,8 +55,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         launchDate: "Q1 2025";
         betaAccess: true};
     // Autonomous AI Business Operations Suite;
-    {
-        id: "autonomous-ai-business-operations-suite";
+    {id: "autonomous-ai-business-operations-suite";
         title: "Autonomous AI Business Operations Suite";
         description: "Complete AI-powered business automation platform that runs entire business operations autonomously, from decision-making to execution, with human oversight capabilities.",
         category: "AI & Business Automation";
@@ -112,8 +110,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         launchDate: "Q2 2025";
         betaAccess: true};
     // Neural Interface Development Platform;
-    {
-        id: "neural-interface-development-platform";
+    {id: "neural-interface-development-platform";
         title: "Neural Interface Development Platform";
         description: "Cutting-edge platform for developing brain-computer interfaces and neural network applications, enabling direct communication between human brain and digital systems.",
         category: "Neural Technology";
@@ -168,8 +165,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         launchDate: "Q3 2025";
         betaAccess: false};
     // Holographic Collaboration Workspace;
-    {
-        id: "holographic-collaboration-workspace";
+    {id: "holographic-collaboration-workspace";
         title: "Holographic Collaboration Workspace";
         description: "Next-generation 3D holographic workspace that enables teams to collaborate in immersive virtual environments, revolutionizing remote work and creative collaboration.",
         category: "Immersive Technology";
@@ -224,8 +220,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         launchDate: "Q2 2025";
         betaAccess: true};
     // AI-Powered Cybersecurity Mesh;
-    {
-        id: "ai-powered-cybersecurity-mesh";
+    {id: "ai-powered-cybersecurity-mesh";
         title: "AI-Powered Cybersecurity Mesh";
         description: "Advanced cybersecurity platform that creates a distributed security mesh using AI to protect digital assets across all environments, from edge to cloud.",
         category: "Cybersecurity";
@@ -280,8 +275,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         launchDate: "Q1 2025";
         betaAccess: true};
     // Sustainable Tech Innovation Hub;
-    {
-        id: "sustainable-tech-innovation-hub";
+    {id: "sustainable-tech-innovation-hub";
         title: "Sustainable Tech Innovation Hub";
         description: "Comprehensive platform for developing and deploying sustainable technology solutions, including green computing, renewable energy optimization, and environmental impact tracking.",
         category: "Sustainable Technology";

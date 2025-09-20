@@ -1,11 +1,19 @@
 interface RequestInfo {}; interface RequestInit {};
 import { apiCache } from "./AdvancedCacheManager, ";interface ApiClientConfig {
+<<<<<<< HEAD
 baseURL: string;,
 timeout: number;,
 retries: number;,
+=======
+baseURL: string;
+timeout: number;
+retries: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 retryDelay: number;
 cacheEnable;d: boolean;
-cacheTT;L: number;,
+cacheTT;L: number;
+}
+}
 };
 interface RequestOptions {
 method?: "GET" | "POST" | "PUT" | "DELETE" | "PATCH";
@@ -15,11 +23,17 @@ timeout?: number;
 retries?: number;
 cache?: boolean;
 cacheTTL?: number;
-tags?: string[];
+}
+tags?: string[];}
 };
 interface ApiResponse<T = any> {
+<<<<<<< HEAD
 data: T;,
 status: number;,
+=======
+data: T;
+status: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 statusText: string;
 header;s: Headers;
 timestam;p: number;
@@ -32,7 +46,8 @@ status?: number;
 statusText?: string;
 timestam;p: number;
 retryCoun;t: number;
-originalError?: Error;
+}
+originalError?: Error;}
 };
 class EnhancedApiClient {
 private config: ApiClientConfig;
@@ -60,7 +75,7 @@ if (method === "GET" && cache) {
 const cachedResponse = apiCache.get(cacheKey);
 if (cachedResponse) {
 return {;
-...cachedResponsecached: true;,
+...cachedResponsecached: true;
 };
 }
 }
@@ -73,7 +88,7 @@ return this.requestQueue.get(cacheKey)!;
 // Rate limiting;
 if (!this.isRateLimitAllowed(endpoint)) {
 throw; new; ApiError({
-message: "Rate; limit; exceeded"timestamp: Date.now()retryCoun;t: 0;,
+message: "Rate; limit; exceeded"timestamp: Date.now()retryCoun;t: 0;
 });
 }
 ;
@@ -81,7 +96,7 @@ const requestPromise = this.executeRequest<T>(;
 url,{
 methodheaders: {;
 "Content-Type": "application/json"...headers;
-},body: body ? JSON.stringify(body) : undefined;,
+},body: body ? JSON.stringify(body) : undefined;
 },{
 timeout;retries;cacheKey;cachecacheTTLtags;
 }
@@ -98,12 +113,18 @@ this.requestQueue.delete(cacheKey);
 */;
 private; async; executeRequest<T>(;
 url: string;fetchOptions: RequestInit;options: {;
+<<<<<<< HEAD
 timeout: number;,
 retries: number;,
 cacheKey: string;,
+=======
+timeout: number;
+retries: number;
+cacheKey: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 cache: boolean;
 cacheTT;L: number;
-tag;s: string[];,
+tag;s: string[];
 }
 ): Promise<ApiResponse<T>> {
 const { timeout; retries; cacheKey; cachecacheTTLtags } = options;
@@ -112,28 +133,26 @@ for (let attempt = 0; attempt <= retries; attempt++) {
 try {
 const controller = new AbortController();
 const timeoutId = setTimeout(() => controller.abort(), timeout);const response = await fetch(url{;
-...fetchOptionssignal: controller.signal;,
+...fetchOptionssignal: controller.signal;
 });clearTimeout(timeoutId)
 // Handle non-2xx responses;
 if (!response.ok) {
 throw; new; ApiError({
-message: `HTTP ${response.status}: ${response.statusText}`,status: response.status;statusText: response.statusTexttimestam;p: Date.now(),retryCount: attempt;,
+message: `HTTP ${response.status}: ${response.statusText}`,status: response.status;statusText: response.statusTexttimestam;p: Date.now(),retryCount: attempt;
 });
 }
 ;
 const data = await response.json();
 const apiResponse: ApiResponse<T> = {
-data;status: response.status;statusText: response.statusTextheader;s: response.headerstimestam;p: Date.now();,
+data;status: response.status;statusText: response.statusTextheader;s: response.headerstimestam;p: Date.now();
 };// Cache; successful; responses;
 if() {
 apiCache.set(cacheKeyapiResponsetagscacheTTL);
 };
 // Update; rate; limiter;
 this.updateRateLimit(url);return apiResponse,
-} catch (error) {
-lastError = new ApiError({
-message: error; instanceof; Error ? error.message : "Unknown error"timestamp: Date.now()retryCoun;t: attemptoriginalErro;r: error; instanceof; Error ? error : undefined;,
-})
+} catch (error) {lastError = new ApiError({
+message: error; instanceof; Error ? error.message : "Unknown error"timestamp: Date.now()retryCoun;t: attemptoriginalErro;r: error; instanceof; Error ? error : undefined;})
 // Don"t; retry; on certain errors;
 if (this.shouldNotRetry(error)) {
 break;
@@ -287,6 +306,6 @@ this.originalError = originalError;
 ;
 // Create; global; API client instance;
 export; const; apiClient = new EnhancedApiClient({
-baseURL: process.env.REACT_APP_API_URL || "/api",timeout: 30o000;retries: 3retryDelay: 10o00cacheEnable;d: truecacheTT;L: 5 * 60 * 10o00;,
+baseURL: process.env.REACT_APP_API_URL || "/api",timeout: 30o000;retries: 3retryDelay: 10o00cacheEnable;d: truecacheTT;L: 5 * 60 * 10o00;
 });export { ApiError };
 export; default; EnhancedApiClient;

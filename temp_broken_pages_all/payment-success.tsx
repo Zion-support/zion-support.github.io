@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { Button,, ,  } from '@/components/ui/button';
-import { useRouter,  } from 'next/router', // Changed from useNavigate,
-import { CheckCircle2,  } from 'lucide-react'
-import { useTranslation,  } from 'react-i18next';
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/router";, // Changed from useNavigate,
+import { CheckCircle2 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 export default function PaymentSuccess() {
   const router = null;
   return (
@@ -20,15 +20,18 @@ export default function PaymentSuccess() {
         </p>
         <div className='flex flex-col space-y-3'>
           <Button
+<<<<<<< HEAD:temp_broken_pages_all/payment-success.tsx
 onClick={() => router.push('/dashboard')} // Changed to router.push,
 className='bg-zion-purple hover:bg-zion-purple-dark text-white'
+=======
+onClick={() => router.push('/dashboard')} // Changed to router.push className='bg-zion-purple hover:bg-zion-purple-dark text-white'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/payment-success.tsx
           >
             {t('errors.go_to_dashboard')}
           </Button>
           <Button
 variant='outline'
-            onClick={() => router.push('/')} // Changed to router.push,
-className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'          >  return (
+            onClick={() => router.push('/')} // Changed to router.push className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'          >  return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
         <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">
@@ -40,15 +43,18 @@ className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light
         </p>
         <div className="flex flex-col space-y-3">
           <Button
+<<<<<<< HEAD:temp_broken_pages_all/payment-success.tsx
 onClick={() => router.push('/dashboard')} // Changed to router.push,
 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+=======
+onClick={() => router.push('/dashboard')} // Changed to router.push className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/payment-success.tsx
           >
             {t('errors.go_to_dashboard')}
           </Button>
           <Button
 variant="outline"
-            onClick={() => router.push('/')} // Changed to router.push,
-className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+            onClick={() => router.push('/')} // Changed to router.push className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
           >
             {t('errors.return_home')}
           </Button>

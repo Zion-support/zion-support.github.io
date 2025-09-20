@@ -1,7 +1,6 @@
 export const ENHANCED_INNOVATIVE_SERVICES = [
     // AI-Powered Financial Services;
-    {
-        id: "ai-financial-advisory-platform";
+    {id: "ai-financial-advisory-platform";
         title: "AI Financial Advisory & Wealth Management Platform";
         description: "Intelligent financial advisory platform that provides personalized investment recommendations, portfolio optimization, and automated wealth management using advanced AI algorithms.",
         category: "AI Financial Services";
@@ -54,8 +53,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         compliance: ["SEC", "FINRA", "GDPR", "SOC 2", "PCI DSS"]
     },
     // AI-Powered Healthcare Solutions;
-    {
-        id: "ai-healthcare-diagnostic-platform";
+    {id: "ai-healthcare-diagnostic-platform";
         title: "AI Healthcare Diagnostic & Patient Care Platform";
         description: "Advanced healthcare platform that uses AI to assist in medical diagnosis, patient monitoring, and treatment planning while ensuring HIPAA compliance and medical accuracy.",
         category: "AI Healthcare";
@@ -108,8 +106,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         compliance: ["HIPAA", "FDA", "SOC 2", "HITECH", "ISO 27001"]
     },
     // AI-Powered Legal Services;
-    {
-        id: "ai-legal-research-assistant";
+    {id: "ai-legal-research-assistant";
         title: "AI Legal Research & Document Analysis Platform";
         description: "Intelligent legal research platform that uses AI to analyze legal documents, conduct case research, and provide legal insights to streamline legal workflows.",
         category: "AI Legal Services";
@@ -162,8 +159,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         compliance: ["Data Privacy", "Attorney-Client Privilege", "SOC 2", "GDPR"]
     },
     // AI-Powered Marketing & Sales;
-    {
-        id: "ai-marketing-automation-suite";
+    {id: "ai-marketing-automation-suite";
         title: "AI Marketing Automation & Customer Journey Platform";
         description: "Comprehensive marketing automation platform that uses AI to optimize customer journeys, personalize content, and maximize marketing ROI across all channels.",
         category: "AI Marketing & Sales";
@@ -216,8 +212,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         compliance: ["GDPR", "CCPA", "SOC 2", "Data Privacy"]
     },
     // AI-Powered Supply Chain Management;
-    {
-        id: "ai-supply-chain-optimization";
+    {id: "ai-supply-chain-optimization";
         title: "AI Supply Chain Optimization & Demand Forecasting Platform";
         description: "Intelligent supply chain platform that uses AI to optimize inventory management, predict demand, and streamline logistics operations for maximum efficiency.",
         category: "AI Supply Chain";
@@ -270,8 +265,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         compliance: ["ISO 9001", "SOC 2", "GDPR", "Industry Standards"]
     },
     // AI-Powered Human Resources;
-    {
-        id: "ai-hr-talent-management";
+    {id: "ai-hr-talent-management";
         title: "AI HR Talent Management & Recruitment Platform";
         description: "Comprehensive HR platform that uses AI to streamline recruitment, optimize talent management, and enhance employee engagement through intelligent insights.",
         category: "AI Human Resources";
@@ -324,8 +318,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         compliance: ["EEOC", "ADA", "FCRA", "SOC 2", "GDPR"]
     },
     // AI-Powered Real Estate;
-    {
-        id: "ai-real-estate-analytics";
+    {id: "ai-real-estate-analytics";
         title: "AI Real Estate Analytics & Investment Platform";
         description: "Intelligent real estate platform that uses AI to analyze market trends, evaluate properties, and provide investment insights for real estate professionals and investors.",
         category: "AI Real Estate";
@@ -378,8 +371,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         compliance: ["Real Estate Regulations", "Data Privacy", "SOC 2", "Industry Standards"]
     },
     // AI-Powered Education;
-    {
-        id: "ai-education-personalization";
+    {id: "ai-education-personalization";
         title: "AI Education Personalization & Learning Analytics Platform";
         description: "Intelligent education platform that uses AI to personalize learning experiences, track student progress, and optimize educational outcomes through adaptive learning.",
         category: "AI Education";
@@ -432,8 +424,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         compliance: ["FERPA", "COPPA", "SOC 2", "Data Privacy", "Educational Standards"]
     },
     // AI-Powered Manufacturing;
-    {
-        id: "ai-manufacturing-optimization";
+    {id: "ai-manufacturing-optimization";
         title: "AI Manufacturing Optimization & Predictive Maintenance Platform";
         description: "Intelligent manufacturing platform that uses AI to optimize production processes, predict equipment failures, and maximize manufacturing efficiency through IoT and machine learning.",
         category: "AI Manufacturing";
@@ -486,8 +477,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         compliance: ["ISO 9001", "ISO 14001", "SOC 2", "Industry 4.0 Standards"]
     },
     // AI-Powered Energy Management;
-    {
-        id: "ai-energy-optimization";
+    {id: "ai-energy-optimization";
         title: "AI Energy Management & Smart Grid Optimization Platform";
         description: "Intelligent energy management platform that uses AI to optimize energy consumption, predict demand, and manage smart grid operations for maximum efficiency and sustainability.",
         category: "AI Energy Management";
@@ -540,8 +530,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         compliance: ["ISO 50001", "SOC 2", "Energy Regulations", "Grid Standards"]
     },
     // AI-Powered Transportation & Logistics;
-    {
-        id: "ai-transportation-optimization";
+    {id: "ai-transportation-optimization";
         title: "AI Transportation & Fleet Management Platform";
         description: "Intelligent transportation platform that uses AI to optimize routes, manage fleets, and streamline logistics operations for maximum efficiency and cost savings.",
         category: "AI Transportation";
@@ -594,8 +583,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         compliance: ["DOT Regulations", "ELD Compliance", "SOC 2", "Transportation Standards"]
     },
     // AI-Powered Retail & E-commerce;
-    {
-        id: "ai-retail-optimization";
+    {id: "ai-retail-optimization";
         title: "AI Retail Optimization & Customer Experience Platform";
         description: "Intelligent retail platform that uses AI to optimize inventory, personalize customer experiences, and maximize sales through predictive analytics and automation.",
         category: "AI Retail & E-commerce";
@@ -648,8 +636,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         compliance: ["PCI DSS", "GDPR", "SOC 2", "Retail Regulations"]
     },
     // AI-Powered Real Estate Investment Platform;
-    {
-        id: "ai-real-estate-investment";
+    {id: "ai-real-estate-investment";
         title: "AI Real Estate Investment Analysis & Portfolio Optimization Platform";
         description: "Advanced AI platform that analyzes real estate markets, identifies investment opportunities, and optimizes property portfolios using machine learning and predictive analytics.",
         category: "AI & Real Estate";
@@ -706,8 +693,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         sla: "99.9%";
         uptime: "99.95%"};
     // AI-Powered Education & Learning Platform;
-    {
-        id: "ai-education-platform";
+    {id: "ai-education-platform";
         title: "AI-Powered Adaptive Learning & Educational Analytics Platform";
         description: "Intelligent educational platform that personalizes learning experiences, tracks student progress, and provides insights to educators using AI and machine learning.",
         category: "AI & Education";
@@ -764,8 +750,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         sla: "99.9%";
         uptime: "99.95%"};
     // AI-Powered Energy Management Platform;
-    {
-        id: "ai-energy-management";
+    {id: "ai-energy-management";
         title: "AI Energy Management & Sustainability Optimization Platform";
         description: "Intelligent energy management platform that optimizes energy consumption, reduces costs, and improves sustainability using AI and IoT sensors.",
         category: "AI & Energy";
@@ -822,8 +807,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         sla: "99.9%";
         uptime: "99.95%"};
     // AI-Powered Agriculture & Precision Farming;
-    {
-        id: "ai-precision-agriculture";
+    {id: "ai-precision-agriculture";
         title: "AI Precision Agriculture & Crop Management Platform";
         description: "Advanced agricultural platform that uses AI, drones, and IoT sensors to optimize crop yields, reduce resource usage, and improve farming efficiency.",
         category: "AI & Agriculture";
@@ -880,8 +864,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         sla: "99.9%";
         uptime: "99.95%"};
     // AI-Powered Construction & Project Management;
-    {
-        id: "ai-construction-management";
+    {id: "ai-construction-management";
         title: "AI Construction Project Management & Safety Platform";
         description: "Intelligent construction management platform that uses AI to optimize project timelines, improve safety, and reduce costs through predictive analytics and automation.",
         category: "AI & Construction";
@@ -938,8 +921,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         sla: "99.9%";
         uptime: "99.95%"};
     // AI-Powered Hospitality & Tourism;
-    {
-        id: "ai-hospitality-platform";
+    {id: "ai-hospitality-platform";
         title: "AI Hospitality Management & Guest Experience Platform";
         description: "Intelligent hospitality platform that personalizes guest experiences, optimizes operations, and increases revenue through AI-powered automation and analytics.",
         category: "AI & Hospitality";
@@ -996,8 +978,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         sla: "99.9%";
         uptime: "99.95%"};
     // AI-Powered Insurance & Risk Assessment;
-    {
-        id: "ai-insurance-platform";
+    {id: "ai-insurance-platform";
         title: "AI Insurance Risk Assessment & Claims Processing Platform";
         description: "Advanced insurance platform that uses AI to assess risks, process claims, and optimize underwriting through machine learning and predictive analytics.",
         category: "AI & Insurance";
@@ -1054,8 +1035,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         sla: "99.9%";
         uptime: "99.95%"};
     // AI-Powered Legal Research & Document Analysis;
-    {
-        id: "ai-legal-research";
+    {id: "ai-legal-research";
         title: "AI Legal Research & Document Analysis Platform";
         description: "Intelligent legal research platform that uses AI to analyze legal documents, research case law, and provide insights to legal professionals.",
         category: "AI & Legal Tech";
@@ -1112,8 +1092,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         sla: "99.9%";
         uptime: "99.95%"};
     // AI-Powered Media & Content Creation;
-    {
-        id: "ai-media-platform";
+    {id: "ai-media-platform";
         title: "AI Media Production & Content Creation Platform";
         description: "Advanced media platform that uses AI to automate content creation, optimize production workflows, and enhance audience engagement.",
         category: "AI & Media";
@@ -1170,8 +1149,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         sla: "99.9%";
         uptime: "99.95%"};
     // AI-Powered Gaming & Entertainment;
-    {
-        id: "ai-gaming-platform";
+    {id: "ai-gaming-platform";
         title: "AI Gaming Analytics & Player Experience Platform";
         description: "Intelligent gaming platform that uses AI to analyze player behavior, optimize game mechanics, and enhance user engagement through data-driven insights.",
         category: "AI & Gaming";
@@ -1228,8 +1206,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         sla: "99.9%";
         uptime: "99.95%"};
     // AI-Powered Cybersecurity & Threat Intelligence;
-    {
-        id: "ai-cybersecurity-intelligence";
+    {id: "ai-cybersecurity-intelligence";
         title: "AI Cybersecurity Threat Intelligence & Response Platform";
         description: "Advanced cybersecurity platform that uses AI to detect threats, analyze security incidents, and provide automated response capabilities.",
         category: "Cybersecurity & Quantum";
@@ -1286,8 +1263,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         sla: "99.99%";
         uptime: "99.99%"};
     // AI-Powered Supply Chain & Logistics;
-    {
-        id: "ai-supply-chain-platform";
+    {id: "ai-supply-chain-platform";
         title: "AI Supply Chain Optimization & Logistics Intelligence Platform";
         description: "Intelligent supply chain platform that optimizes logistics, reduces costs, and improves efficiency using AI and predictive analytics.",
         category: "AI & Supply Chain";
@@ -1344,8 +1320,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         sla: "99.9%";
         uptime: "99.95%"};
     // AI-Powered Customer Experience & Support;
-    {
-        id: "ai-customer-experience";
+    {id: "ai-customer-experience";
         title: "AI Customer Experience & Support Automation Platform";
         description: "Intelligent customer experience platform that personalizes interactions, automates support, and improves customer satisfaction using AI.",
         category: "AI & Customer Experience";
@@ -1402,8 +1377,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         sla: "99.9%";
         uptime: "99.95%"};
     // AI-Powered HR & Talent Management;
-    {
-        id: "ai-hr-talent-platform";
+    {id: "ai-hr-talent-platform";
         title: "AI HR & Talent Management & Recruitment Platform";
         description: "Intelligent HR platform that automates recruitment, optimizes talent management, and improves employee engagement using AI.",
         category: "AI & HR Tech";
@@ -1460,8 +1434,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         sla: "99.9%";
         uptime: "99.95%"};
     // AI-Powered Data Governance & Privacy;
-    {
-        id: "ai-data-governance";
+    {id: "ai-data-governance";
         title: "AI Data Governance & Privacy Compliance Platform";
         description: "Intelligent data governance platform that ensures compliance, protects privacy, and manages data quality using AI and automation.",
         category: "AI & Data Governance";

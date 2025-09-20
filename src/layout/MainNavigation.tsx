@@ -26,23 +26,30 @@ import { MessageSquare; ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import {
-DropdownMenu;
+import { DropdownMenu;
 DropdownMenuContent;
 DropdownMenuItem;
-DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 interface MainNavigationProps {
 isAdmin?: boolean;
 unreadCount?: number;
-className?: string;
+}
+className?: string;}
 };
 interface NavigationLink {
+<<<<<<< HEAD
 key: string;,
 href: string;,
 name: string;,
+=======
+key: string;
+href: string;
+name: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 matches: (path: string) => boolean;
+}
+}
 dropdown?: { href: string; name: string; }[];
 }
 
@@ -115,56 +122,38 @@ href: "/about",
 matches: (path: string) => path.startsWith("/about"),
 key: "about",
 href: "/about",
-matches: (path: string) => path === "/about",
-},
-{
-key: "services",
+matches: (path: string) => path === "/about"},
+{key: "services",
 href: "/services",
 matches: (path: string) => path.startsWith("/services"),
 key: "services",
 href: "/services",
-matches: (path: string) => path.startsWith("/services"),
-},
-{
-key: "ai-services",
+matches: (path: string) => path.startsWith("/services")},
+{key: "ai-services",
 href: "/ai-services",
-matches: (path: string) => path.startsWith("/ai-services"),
-},
-{
-key: "it-services",
+matches: (path: string) => path.startsWith("/ai-services")},
+{key: "it-services",
 href: "/it-services",
-matches: (path: string) => path.startsWith("/it-services"),
-},
-{
-key: "micro-saas",
+matches: (path: string) => path.startsWith("/it-services")},
+{key: "micro-saas",
 href: "/micro-saas",
-matches: (path: string) => path.startsWith("/micro-saas"),
-},
-{
-key: "about",
+matches: (path: string) => path.startsWith("/micro-saas")},
+{key: "about",
 href: "/about",
-matches: (path: string) => path.startsWith("/about"),
-},
-{
-key: "services",
+matches: (path: string) => path.startsWith("/about")},
+{key: "services",
 href: "/services",
 matches: (path: string) => path.startsWith("/services") || path.startsWith("/it-onsite-services"),
 name: "Home",
-matches: (path: string) => path === "/",
-},
-{
-key: "services",
+matches: (path: string) => path === "/"},
+{key: "services",
 href: "/services",
 name: "Services",
-matches: (path: string) => path.startsWith("/services"),
-},
-{
-key: "services",
+matches: (path: string) => path.startsWith("/services")},
+{key: "services",
 href: "/comprehensive-services",
-matches: (path: string) => path.startsWith("/comprehensive-services") || path.startsWith("/services"),
-},
-{
-key: "marketplace",
+matches: (path: string) => path.startsWith("/comprehensive-services") || path.startsWith("/services")},
+{key: "marketplace",
 href: "/marketplace",
 key: "services",
 href: "/services",
@@ -174,24 +163,17 @@ href: "/services",
 matches: (path: string) => path.startsWith("/services"),
 key: "services",
 href: "/services",
-matches: (path: string) => path.startsWith("/services") || path.startsWith("/it-onsite-services"),
-},
-{
-key: "micro-saas",
+matches: (path: string) => path.startsWith("/services") || path.startsWith("/it-onsite-services")},
+{key: "micro-saas",
 href: "/micro-saas-services",
 matches: (path: string) => path.startsWith("/micro-saas-services"),
-matches: (path: string) => path === "/",
-},
-{
-key: "marketplace",
+matches: (path: string) => path === "/"},
+{key: "marketplace",
 href: "/marketplace",
-matches: (path: string) => path.startsWith("/marketplace"),
-},
-{
-key: "services",
+matches: (path: string) => path.startsWith("/marketplace")},
+{key: "services",
 href: "/services",
-matches: (path: string) => path.startsWith("/services"),
-},
+matches: (path: string) => path.startsWith("/services")},
 {
 key: "services",
 href: "/services",
@@ -221,20 +203,16 @@ dropdown: [
 { href: "/green-it", name: "Green IT" }
 ];
 },
-{
-key: "talent",
+{key: "talent",
 href: "/talent",
 key: "ai-hiring",
 href: "/zion-hire-ai",
-matches: (path: string) => path.startsWith("/zion-hire-ai") || path.startsWith("/hire-ai"),
-}
+matches: (path: string) => path.startsWith("/zion-hire-ai") || path.startsWith("/hire-ai")}
 ];
 
 const moreLinks = [
-{
-matches: (path: string) => path.startsWith("/equipment"),
-name: t("nav.equipment"),
-},
+{matches: (path: string) => path.startsWith("/equipment"),
+name: t("nav.equipment")},
 {
 key: "partners",
 href: "/partners",
@@ -262,8 +240,7 @@ key: "equipment",
 href: "/equipment",
 matches: (path: string) => path.startsWith("/equipment"),
 },
-{
-key: "community",
+{key: "community",
 href: "/community",
 key: "about",
 href: "/about",
@@ -276,23 +253,18 @@ name: t("nav.community"),
 key: "about",
 href: "/about",
 matches: (path: string) => path === "/about",
-matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum"),
-},
-{
-key: "blog",
+matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")},
+{key: "blog",
 href: "/blog",
 key: "contact",
 href: "/contact",
 matches: (path: string) => path === "/contact",
 icon: <Users className="w-4 h-4" />,
-description: "Join our community",
-},
-{
-key: "help",
+description: "Join our community"},
+{key: "help",
 href: "/help-center",
 icon: <HelpCircle className="w-4 h-4" />,
-description: "Get help and support",
-},
+description: "Get help and support"},
 {
 key: "faq",
 href: "/faq",
@@ -306,14 +278,12 @@ dropdown: [
 { href: "/partners", label: "Partners" }
 ];
 },
-{
-key: "about",
+{key: "about",
 href: "/about",
 key: "blog",
 href: "/blog",
 matches: (path: string) => path.startsWith("/blog"),
-matches: (path: string) => path.startsWith("/blog"),
-};
+matches: (path: string) => path.startsWith("/blog")};
 ];
 
 const serviceDropdowns = [
@@ -400,6 +370,7 @@ document.removeEventListener("mousedown", handleClickOutside);
 }, []);
 name: "About",
 matches: (path: string) => path.startsWith("/about") || path === "/careers" || path === "/contact",
+<<<<<<< HEAD
 ? 'bg-zion-purple/20 text-zion-cyan';
 : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
 ),}
@@ -411,6 +382,19 @@ matches: (path: string) => path.startsWith("/about") || path === "/careers" || p
 {cartCount}
 </span>
 import { ChevronDown,, Menu,, X,, Home,, Settings,, Users,, Building,, Globe,, Zap,, Brain,, Shield,, Cloud,, Code,, BarChart3',, ,  } from 'lucide-react'
+=======
+                        ? 'bg-zion-purple/20 text-zion-cyan'
+                        : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
+                    ),}
+                  >
+                    <ShoppingCart className='w-4 h-4 mr-1' />
+                    {t('nav.cart', 'Cart')}
+                    {cartCount > 0 && (
+                      <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>
+                        {cartCount}
+                      </span>
+import { ChevronDown, Menu, X, Home, Settings, Users, Building, Globe, Zap, Brain, Shield, Cloud, Code, BarChart3' } from "lucide-react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export default function Page() { [])
 const baseLinks: NavigationLink[] = [{,
 key: 'home',
@@ -504,23 +488,19 @@ dropdown: [
 let links: NavigationLink[] = baseLinks;
 
 // Add authenticated-only links;
-if (isAuthenticated) {
-links.push({,
+if (isAuthenticated) {links.push({,
 key: "dashboard",
 name: "Dashboard",
 href: "/dashboard",
-matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard",
-});
+matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard"});
 }
 
 // Add admin-only links;
-if (isAdmin) {
-links.push({
+if (isAdmin) {links.push({
 key: "analytics",
 name: "Analytics",
 href: "/analytics",
-matches: (path: string) => path.startsWith("/analytics"),
-});
+matches: (path: string) => path.startsWith("/analytics")});
 }
 
 const handleDropdownToggle: any = (key: string) => {;
@@ -748,7 +728,11 @@ to="/zion-hire-ai";
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
 >;
 AI Hiring Solutions;
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </li>
@@ -805,7 +789,11 @@ to="/blog";
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
 >;
 Blog;
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </li>
@@ -839,17 +827,29 @@ className="flex items-start gap-3 p-3 rounded-md text-white hover:bg-zion-purple
 <div className="text-zion-cyan mt-0.5">
 {link.icon}
 </div>
+<<<<<<< HEAD
 <div>
 <div className="font-medium text-sm">{t(`nav.${link.key}`)}</div>
 <div className="text-xs text-zion-slate-light">{link.description}</div>
 </div>
 </Link>
+=======
+<div>;
+<div className="font-medium text-sm">{t(`nav.${link.key}`)}</div>
+<div className="text-xs text-zion-slate-light">{link.description}</div>
+</div>
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 </div>
 )}
 </div>
+<<<<<<< HEAD
 </li>
+=======
+</li>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Services Dropdown */}
 <li className="relative" ref={dropdownRef}>
@@ -931,7 +931,11 @@ className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text
 onClick={closeDropdown}
 >;
 Contact;
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 )}
@@ -974,7 +978,11 @@ className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text
 onClick={closeDropdown}
 >;
 IT Services;
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 )}
@@ -1129,6 +1137,7 @@ return ()
 renderDropdown()
 link,
 link.key === 'services' ? isServicesOpen : isCompOpen,
+<<<<<<< HEAD
 link.key === 'services' ? setIsServicesOpen : setIsCompOpen;
 )
 ) : (
@@ -1154,6 +1163,33 @@ className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/1
 <AnimatePresence>
 {isMobileMenuOpen &&;
 <motion.div,
+=======
+link.key === 'services' ? setIsServicesOpen : setIsCompOpen
+              )
+            ) : (
+              <Link
+to={link.href}`
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link)
+                    ? 'bg-zion-cyan text-white''
+                    : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
+}`}
+                {link.name}
+              </Link>
+            )}
+          </div>
+        ))}
+      </div>
+      {/* Mobile Menu Button */}
+      <button
+onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}"
+        className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
+"
+        {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </button>
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isMobileMenuOpen &&
+          <motion.div,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 initial = {
 { opacity: 0,
 x: '100%';
@@ -1166,6 +1202,7 @@ exit = {
 { opacity: 0,
 x: '100%';
 }}
+<<<<<<< HEAD
 transition={{ duration: 0.3 }}";
 className="lg:hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50"
 ";
@@ -1195,10 +1232,42 @@ className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm
 <div className="ml-4 mt-2 space-y-1">
 {link.children.map((child: unknown (
 <Link,
+=======
+            transition={{ duration: 0.3 }}"
+            className="lg:hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50"
+"
+            <div className="p-6">"
+              <div className="flex justify-between items-center mb-8">"
+                <h2 className="text-xl font-bold text-white">Menu</h2>
+                <button
+onClick={() => setIsMobileMenuOpen(false)}"
+                  className="p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
+"
+                  <X className="w-6 h-6"  />                </button>
+              </div>
+"
+              <div className="space-y-2">
+                {baseLinks.map(link: unknown <div key={link.key}>
+                    {link.children ? (
+                      <div>
+                        <button
+onClick={() => setActiveDropdown(activeDropdown === link.key ? null : link.key)}`
+                          className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm font-medium rounded-md transition-colors ${isActive(link)
+                              ? 'bg-zion-cyan text-white''
+                              : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
+}`}
+                          {link.name}'`
+                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>
+                        {activeDropdown === link.key && (;"
+                          <div className="ml-4 mt-2 space-y-1">
+                            {link.children.map((child: unknown (
+                              <Link
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 key={child.key}
 to={child.href}`;
 className={`block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors ${isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''`
 }`}
+<<<<<<< HEAD
 onClick={: unknown setIsMobileMenuOpen(false)}
 {child.name}
 </Link>
@@ -1233,4 +1302,40 @@ onClick={: unknown setIsMobileMenuOpen(false)}
 <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
 </>
 );  )
+=======
+                                onClick={: unknown setIsMobileMenuOpen(false)}
+                                {child.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <Link
+to={link.href}`
+                        className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive(link)
+                            ? 'bg-zion-cyan text-white''
+                            : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
+}`}
+                        onClick={: unknown setIsMobileMenuOpen(false)}
+                        {link.name}
+                      </Link>
+                    )}
+                  </Link>
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  <MiniCartPreview />
+                </HoverCardContent>
+              </HoverCard>
+            </li>
+          </ul>
+          <div className='flex items-center gap-2 mt-4 md:mt-0 md:ml-auto'>
+            <LanguageSelector />
+          </div>
+        </div>
+      </nav>
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+</>
+  );  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }

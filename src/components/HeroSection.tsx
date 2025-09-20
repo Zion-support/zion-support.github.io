@@ -2,9 +2,12 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react";
 
+<<<<<<< HEAD
 export const HeroSection: any = () => {
 return (
 <div className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900">
@@ -12,6 +15,14 @@ return (
 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
 <div className="text-center">
 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+=======
+export const HeroSection: any = () => {return (
+<div className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900">;
+<div className="absolute inset-0 bg-black/20"></div>
+<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">;
+<div className="text-center">;
+<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Transform Your Business with;
 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> AI Technology</span>
 </h1>
@@ -24,10 +35,18 @@ Get Started Today;
 </button>
 <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
 Watch Demo,
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 </div>
 )};
+<<<<<<< HEAD
 <//div><///div>
+=======
+<//div><///div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

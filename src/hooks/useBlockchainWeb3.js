@@ -1,16 +1,19 @@
 import { useState, useEffect, useCallback, useRef } from 'react, ';
 import { useAnalytics } from './useAnalytics, ';
 export const useBlockchainWeb3 = (initialConfig) => {
+<<<<<<< HEAD
     const { trackEvent } = useAnalytics({
         enableTracking: true;
+=======
+    const { trackEvent } = useAnalytics({enableTracking: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         enableUserBehaviorTracking: true});
     const [wallet, setWallet] = useState(null);
     const [contracts, setContracts] = useState([]);
     const [nfts, setNfts] = useState([]);
     const [defiPositions, setDefiPositions] = useState([]);
     const [transactions, setTransactions] = useState([]);
-    const [metrics, setMetrics] = useState({
-        totalTransactions: 0;
+    const [metrics, setMetrics] = useState({totalTransactions: 0;
         successfulTransactions: 0;
         failedTransactions: 0;
         totalGasUsed: '0';
@@ -24,8 +27,7 @@ export const useBlockchainWeb3 = (initialConfig) => {
     const transactionPollingRef = useRef(new Map());
     // Default contracts;
     const defaultContracts = [
-        {
-            id: 'erc20-contract';
+        {id: 'erc20-contract';
             name: 'Zion Token (ZION)';
             address: '0x1234567890123456789012345678901234567890';
             network: 'ethereum';
@@ -33,8 +35,12 @@ export const useBlockchainWeb3 = (initialConfig) => {
             functions: ['transfer', 'approve', 'balanceOf', 'totalSupply'],
             events: ['Transfer', 'Approval'],
             lastInteraction: new Date()};
+<<<<<<< HEAD
         {
             id: 'nft-contract';
+=======
+        {id: 'nft-contract';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             name: 'Zion NFT Collection';
             address: '0x0987654321098765432109876543210987654321';
             network: 'ethereum';
@@ -66,8 +72,7 @@ export const useBlockchainWeb3 = (initialConfig) => {
     ];
     // Default DeFi positions;
     const defaultDefiPositions = [
-        {
-            id: 'defi-001';
+        {id: 'defi-001';
             type: 'staking';
             protocol: 'Zion Protocol';
             asset: 'ZION';
@@ -90,8 +95,7 @@ export const useBlockchainWeb3 = (initialConfig) => {
         }
     }, [contracts.length, nfts.length, defiPositions.length]);
     // Update metrics when data changes;
-    const updateMetrics = useCallback(() => {
-        const totalTransactions = transactions.length;
+    const updateMetrics = useCallback(() => {const totalTransactions = transactions.length;
         const successfulTransactions = transactions.filter(tx => tx.status === 'confirmed').length;
         const failedTransactions = transactions.filter(tx => tx.status === 'failed').length;
         const totalGasUsed = transactions;
@@ -122,8 +126,7 @@ export const useBlockchainWeb3 = (initialConfig) => {
         updateMetrics();
     }, [updateMetrics]);
     // Connect wallet;
-    const connectWallet = useCallback(async () => {
-        setIsConnecting(true);
+    const connectWallet = useCallback(async () => {setIsConnecting(true);
         trackEvent('blockchain', 'wallet', 'connect_started');
         try {
             // Simulate wallet connection;
@@ -185,8 +188,7 @@ export const useBlockchainWeb3 = (initialConfig) => {
         if (!contract) {
             throw new Error('Contract not found');
         }
-        trackEvent('blockchain', 'contract', 'function_called', undefined, {
-            contractId,
+        trackEvent('blockchain', 'contract', 'function_called', undefined, {contractId,
             functionName,
             network: contract.network});
     // Simulate contract call;
@@ -201,7 +203,12 @@ export const useBlockchainWeb3 = (initialConfig) => {
                 return '1000000';
             case 'ownerOf':
                 return wallet?.address || '0x0000000000000000000000000000000000000000';
+<<<<<<< HEAD
             default: return 'success';}
+=======
+            default: return 'success';
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     }, [contracts, wallet, trackEvent]);
     // Send transaction;
     const sendTransaction = useCallback(async (to, value, data) => {
@@ -367,8 +374,7 @@ export const useBlockchainWeb3 = (initialConfig) => {
             startDate: new Date();
             lastUpdate: new Date()};
     setDefiPositions(prev => [...prev, newPosition]);
-        trackEvent('blockchain', 'defi', 'position_created', undefined, {
-            type: position.type;
+        trackEvent('blockchain', 'defi', 'position_created', undefined, {type: position.type;
             protocol: position.protocol;
             asset: position.asset});
      }, [trackEvent]);
@@ -378,8 +384,7 @@ export const useBlockchainWeb3 = (initialConfig) => {
         trackEvent('blockchain', 'defi', 'position_closed', undefined, { positionId });
     }, [trackEvent]);
     // Get transaction status;
-    const getTransactionStatus = useCallback(async (txHash) => {
-        // Simulate status checking;
+    const getTransactionStatus = useCallback(async (txHash) => {// Simulate status checking;
         await new Promise(resolve => setTimeout(resolve, 1000));
         // Randomly update status;
         const statuses = ['pending', 'confirmed', 'failed'];

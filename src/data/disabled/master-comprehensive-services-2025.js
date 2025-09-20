@@ -5,8 +5,7 @@ import { allExpandedServices2025, getServicesByCategory, getServicesByPriceRange
 import { allAdditionalServices2025, getAdditionalServicesByCategory, getAdditionalServicesByPriceRange, getAdditionalPopularServices, searchAdditionalServices } from './comprehensive-services-expansion-2025-part2, ';
 import { allCuttingEdgeServices2025, getCuttingEdgeServicesByCategory, getCuttingEdgeServicesByPriceRange, getCuttingEdgePopularServices, searchCuttingEdgeServices } from './comprehensive-services-expansion-2025-part3, ';
 // Master services object combining all services;
-export const masterComprehensiveServices2025 = {
-    // Original services;
+export const masterComprehensiveServices2025 = {// Original services;
     original: {
         microSaas: enhancedMicroSaasServices2025;
         itServices: enhancedITServices2025;
@@ -90,16 +89,19 @@ export const getMasterServicesByPricing = (pricing) => {
     });
 };
 // Get services statistics;
-export const getMasterServicesStats = () => {
-    const allServices = getAllServices();
+export const getMasterServicesStats = () => {const allServices = getAllServices();
     const stats = {
         totalServices: allServices.length;
         byType: {
             microSaas: allServices.filter(s => 'pricing' in s && 'userLimit' in s).length;
             itServices: allServices.filter(s => 'hourlyRate' in s && 'projectRate' in s).length;
             aiServices: allServices.filter(s => 'aiModels' in s && 'aiScore' in s).length};
+<<<<<<< HEAD
         byPricing: {
             freemium: allServices.filter(s => 'pricing' in s && s.pricing === 'Freemium').length;
+=======
+        byPricing: {freemium: allServices.filter(s => 'pricing' in s && s.pricing === 'Freemium').length;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             professional: allServices.filter(s => 'pricing' in s && s.pricing === 'Professional').length;
             enterprise: allServices.filter(s => 'pricing' in s && s.pricing === 'Enterprise').length};
         categories: [...new Set(allServices.map(s => s.category))].length;

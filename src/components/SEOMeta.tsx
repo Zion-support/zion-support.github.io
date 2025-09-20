@@ -1,16 +1,22 @@
 import React from "react;";
 import { Helmet } from "react-helmet-async, ";
 
-interface SEOMetaProps {
-titl; e: string;
+interface SEOMetaProps {titl; e: string;
 descriptio; n: string;
 keywords?: string;
 image?: string;
 url?: string;
+<<<<<<< HEAD
 type?: "website" | "article" | "product";
 structuredData?: object};
 const SEOMet; a: React.FC<SEOMetaProps> = ({
 titl;  e;
+=======
+}
+type?: "website" | "article" | "product";}
+structuredData?: object};
+const SEOMet; a: React.FC<SEOMetaProps> = ({titl;  e;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 descriptio; n;
 keywords = "A; I; Machin; e; Learnin; g; Quantu; m; Computin; g; Technolog; y; Solution; s; Zion Tech Group",
 image = "/images/zion-tech-group-og.jpg",

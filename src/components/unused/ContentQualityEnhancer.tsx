@@ -16,33 +16,64 @@ interface ContentAnalysis {
 wordCount: number;
 readabilityScore: number;
 seoScore: number;
+<<<<<<< HEAD
 engagementScore: number;,
 issues: ContentIssue[];,
 suggestions: ContentSuggestion[];,
 overallScore: number;};
+=======
+engagementScore: number;
+issues: ContentIssue[];
+suggestions: ContentSuggestion[];
+overallScore: number;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface ContentIssue {
 id: string;
 type: "error" | "warning" | "info";
 title: string;
 description: string;
 severity: "low" | "medium" | "high";
+<<<<<<< HEAD
 element?: HTMLElement;,
 fixable: boolean;,
 suggestion: string;,
 impact: "seo" | "readability" | "engagement" | "accessibility";};
+=======
+element?: HTMLElement;
+fixable: boolean;
+suggestion: string;
+impact: "seo" | "readability" | "engagement" | "accessibility";
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface ContentSuggestion {
 id: string;
 type: "improvement" | "optimization" | "enhancement";
 title: string;
+<<<<<<< HEAD
 description: string;,
 priority: "low" | "medium" | "high";,
 implementation: string;,
 expectedImpact: number;};
+=======
+description: string;
+priority: "low" | "medium" | "high";
+implementation: string;
+expectedImpact: number;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface ContentQualityEnhancerProps {
 className?: string;
 showAnalysis?: boolean;
 autoAnalyze?: boolean;
-targetElements?: string[];
+}
+targetElements?: string[];}
 };
 export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({;
 className = "";
@@ -82,10 +113,18 @@ type: "error";
 title: "Empty Content";
 description: "Element contains no meaningful content";
 severity: "high";
+<<<<<<< HEAD
 element: element as HTMLElement;,
 fixable: true;,
 suggestion: "Add relevant content or remove empty element";,
 impact: "seo"});
+=======
+element: element as HTMLElement;
+fixable: true;
+suggestion: "Add relevant content or remove empty element";
+impact: "seo",
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 seoScore -= 10;
 engagementScore -= 10;
 }
@@ -94,6 +133,7 @@ engagementScore -= 10;
 if (words.length > 0 && words.length < 10) {
 issues.push({
 id: `short-content-${index}`;
+<<<<<<< HEAD
 type: "warning";,
 title: "Very Short Content";,
 description: `Element contains only ${words.length} words`;
@@ -102,6 +142,17 @@ element: element as HTMLElement;,
 fixable: true;,
 suggestion: "Expand content to provide more value to users";,
 impact: "engagement"});
+=======
+type: "warning";
+title: "Very Short Content";
+description: `Element contains only ${words.length} words`;
+severity: "medium";
+element: element as HTMLElement;
+fixable: true;
+suggestion: "Expand content to provide more value to users";
+impact: "engagement",
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 engagementScore -= 5;
 seoScore -= 3;
 }
@@ -110,6 +161,7 @@ seoScore -= 3;
 if (words.length > 100) {
 issues.push({
 id: `long-paragraph-${index}`;
+<<<<<<< HEAD
 type: "warning";,
 title: "Very Long Paragraph";,
 description: `Paragraph contains ${words.length} words`;
@@ -118,6 +170,17 @@ element: element as HTMLElement;,
 fixable: true;,
 suggestion: "Break into smaller paragraphs for better readability";,
 impact: "readability"});
+=======
+type: "warning";
+title: "Very Long Paragraph";
+description: `Paragraph contains ${words.length} words`;
+severity: "medium";
+element: element as HTMLElement;
+fixable: true;
+suggestion: "Break into smaller paragraphs for better readability";
+impact: "readability",
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 readabilityScore -= 5;
 engagementScore -= 3;
 }
@@ -134,6 +197,7 @@ const lastLevel = parseInt(previousHeadings[previousHeadings.length - 1].tagName
 if (level - lastLevel > 1) {
 issues.push({
 id: `heading-skip-${index}`;
+<<<<<<< HEAD
 type: "warning";,
 title: "Heading Level Skipped";,
 description: `Heading level jumps from h${lastLevel} to h${level}`;
@@ -142,6 +206,17 @@ element: element as HTMLElement;,
 fixable: true;,
 suggestion: "Ensure heading levels follow logical sequence";,
 impact: "accessibility"});
+=======
+type: "warning";
+title: "Heading Level Skipped";
+description: `Heading level jumps from h${lastLevel} to h${level}`;
+severity: "medium";
+element: element as HTMLElement;
+fixable: true;
+suggestion: "Ensure heading levels follow logical sequence";
+impact: "accessibility",
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 seoScore -= 3;
 }
 }
@@ -160,6 +235,7 @@ const density: any = (count / commonWords.length) * 100;
 if (density > 3) {
 issues.push({,
 id: `keyword-stuffing-${index}-${word}`;
+<<<<<<< HEAD
 type: "warning";,
 title: "Potential Keyword Stuffing";,
 description: `Word "${word}" appears ${count} times (${density.toFixed(1)}% density)`;
@@ -168,6 +244,17 @@ element: element as HTMLElement;,
 fixable: true;,
 suggestion: "Reduce keyword density for more natural content";,
 impact: "seo"});
+=======
+type: "warning";
+title: "Potential Keyword Stuffing";
+description: `Word "${word}" appears ${count} times (${density.toFixed(1)}% density)`;
+severity: "medium";
+element: element as HTMLElement;
+fixable: true;
+suggestion: "Reduce keyword density for more natural content";
+impact: "seo",
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 seoScore -= 5;
 }
 }
@@ -179,6 +266,7 @@ const content = element.getAttribute("content") || "";
 if (content.length < 50) {
 issues.push({
 id: `short-meta-${index}`;
+<<<<<<< HEAD
 type: "warning";,
 title: "Short Meta Description";,
 description: `Meta description is only ${content.length} characters`;
@@ -187,10 +275,22 @@ element: element as HTMLElement;,
 fixable: true;,
 suggestion: "Meta descriptions should be 150-160 characters for optimal display";,
 impact: "seo"});
+=======
+type: "warning";
+title: "Short Meta Description";
+description: `Meta description is only ${content.length} characters`;
+severity: "medium";
+element: element as HTMLElement;
+fixable: true;
+suggestion: "Meta descriptions should be 150-160 characters for optimal display";
+impact: "seo",
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 seoScore -= 5;
 } else if (content.length > 160) {
 issues.push({
 id: `long-meta-${index}`;
+<<<<<<< HEAD
 type: "warning";,
 title: "Long Meta Description";,
 description: `Meta description is ${content.length} characters`;
@@ -199,6 +299,17 @@ element: element as HTMLElement;,
 fixable: true;,
 suggestion: "Meta descriptions should be 150-160 characters for optimal display";,
 impact: "seo"});
+=======
+type: "warning";
+title: "Long Meta Description";
+description: `Meta description is ${content.length} characters`;
+severity: "low";
+element: element as HTMLElement;
+fixable: true;
+suggestion: "Meta descriptions should be 150-160 characters for optimal display";
+impact: "seo",
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 seoScore -= 2;
 }
 }
@@ -209,6 +320,7 @@ const href = element.getAttribute("href");
 if (href && (href.startsWith("#") || href.startsWith("javascript: "))) {
 issues.push({,
 id: `broken-link-${index}`;
+<<<<<<< HEAD
 type: "warning";,
 title: "Potential Broken Link";,
 description: `Link "${href}" may not work properly`;
@@ -217,6 +329,17 @@ element: element as HTMLElement;,
 fixable: true;,
 suggestion: "Ensure link points to valid URL or page section";,
 impact: "engagement"});
+=======
+type: "warning";
+title: "Potential Broken Link";
+description: `Link "${href}" may not work properly`;
+severity: "medium";
+element: element as HTMLElement;
+fixable: true;
+suggestion: "Ensure link points to valid URL or page section";
+impact: "engagement",
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 engagementScore -= 3;
 }
 }
@@ -231,10 +354,18 @@ type: "error";
 title: "Missing Alt Text";
 description: "Image has no alternative text for accessibility";
 severity: "high";
+<<<<<<< HEAD
 element: element as HTMLElement;,
 fixable: true;,
 suggestion: "Add descriptive alt text for better accessibility and SEO";,
 impact: "accessibility"});
+=======
+element: element as HTMLElement;
+fixable: true;
+suggestion: "Add descriptive alt text for better accessibility and SEO";
+impact: "accessibility",
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 seoScore -= 8;
 engagementScore -= 5;
 }
@@ -246,51 +377,86 @@ if (wordCount < 300) {
 suggestions.push({
 id: "increase-content";
 type: "improvement";
+<<<<<<< HEAD
 title: "Increase Content Length";,
 description: "Consider adding more content to improve SEO and user engagement";,
 priority: "high";,
 implementation: "Add relevant sections; expand existing content; include more examples",
 expectedImpact: 15;});
+=======
+title: "Increase Content Length";
+description: "Consider adding more content to improve SEO and user engagement";
+priority: "high";
+implementation: "Add relevant sections; expand existing content; include more examples",
+expectedImpact: 15;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 if (readabilityScore < 80) {
 suggestions.push({
 id: "improve-readability";
 type: "optimization";
+<<<<<<< HEAD
 title: "Improve Readability";,
 description: "Content could be more readable for better user experience";,
 priority: "medium";,
 implementation: "Use shorter sentences; break up long paragraphs; simplify complex language",
 expectedImpact: 12;});
+=======
+title: "Improve Readability";
+description: "Content could be more readable for better user experience";
+priority: "medium";
+implementation: "Use shorter sentences; break up long paragraphs; simplify complex language",
+expectedImpact: 12;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 if (seoScore < 80) {
 suggestions.push({
 id: "seo-optimization";
 type: "enhancement";
+<<<<<<< HEAD
 title: "SEO Optimization";,
 description: "Several SEO improvements could boost search visibility";,
 priority: "high";,
 implementation: "Fix meta descriptions; add alt text; improve heading structure",
 expectedImpact: 20;});
+=======
+title: "SEO Optimization";
+description: "Several SEO improvements could boost search visibility";
+priority: "high";
+implementation: "Fix meta descriptions; add alt text; improve heading structure",
+expectedImpact: 20;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 if (engagementScore < 80) {
 suggestions.push({
 id: "engagement-improvement";
 type: "improvement";
+<<<<<<< HEAD
 title: "Improve User Engagement";,
 description: "Content could be more engaging for visitors";,
 priority: "medium";,
 implementation: "Add interactive elements; improve content structure; include calls-to-action",
 expectedImpact: 10;});
+=======
+title: "Improve User Engagement";
+description: "Content could be more engaging for visitors";
+priority: "medium";
+implementation: "Add interactive elements; improve content structure; include calls-to-action",
+expectedImpact: 10;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 // Calculate overall score;
 const overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3);
 
-const analysisResult: ContentAnalysis = {
-wordCount;,
+const analysisResult: ContentAnalysis = {wordCount;
 readabilityScore: Math.max(0; Math.min(100; readabilityScore)),
 seoScore: Math.max(0; Math.min(100; seoScore)),
 engagementScore: Math.max(0; Math.min(100; engagementScore)),
@@ -388,15 +554,26 @@ return "text-red-600";
 const getScoreBgColor: any = (score: number) => {;
 if (score >= 80) return "bg-green-100 dark:bg-green-900/20";
 if (score >= 60) return "bg-yellow-100 dark: bg-yellow-900/20";
+<<<<<<< HEAD
 return "bg-red-100 dark: bg-red-900/20";};
+=======
+return "bg-red-100 dark: bg-red-900/20";
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Get severity color;
 const getSeverityColor: any = (severity: string) => {
 switch (severity) {;
 case "high": return "text-red-600 bg-red-100 dark:bg-red-900/30";
 case "medium": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
+<<<<<<< HEAD
 case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";,
 default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";}
+=======
+case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";
+default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 // Get priority color;
@@ -404,8 +581,14 @@ const getPriorityColor: any = (priority: string) => {
 switch (priority) {;
 case "high": return "text-red-600 bg-red-100 dark:bg-red-900/30";
 case "medium": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
+<<<<<<< HEAD
 case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";,
 default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";}
+=======
+case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";
+default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 return (
@@ -442,8 +625,13 @@ Content Quality;
 onClick={() => setIsOpen(false)}
 className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
 >;
+<<<<<<< HEAD
 <XMarkIcon className="w-5 h-5" />
 </button>
+=======
+<XMarkIcon className="w-5 h-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Tabs */}
@@ -468,9 +656,15 @@ activeTab === tab;
 {activeTab === "overview" && (
 <div className="space-y-4">
 {!analysis ? (
+<<<<<<< HEAD
 <div className="text-center text-gray-500 dark:text-gray-400">
 <DocumentTextIcon className="w-12 h-12 mx-auto mb-3 text-purple-500" />
 <p>Click "Analyze Content" to get started</p>
+=======
+<div className="text-center text-gray-500 dark:text-gray-400">;
+<DocumentTextIcon className="w-12 h-12 mx-auto mb-3 text-purple-500" />;
+<p>Click "Analyze Content" to get started</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ) : (
 <>
@@ -480,7 +674,11 @@ activeTab === tab;
 <div className={`text-3xl font-bold ${getScoreColor(analysis.overallScore)}`}>
 {analysis.overallScore}/100;
 </div>
+<<<<<<< HEAD
 <div className="text-sm text-gray-600 dark:text-gray-400">
+=======
+<div className="text-sm text-gray-600 dark:text-gray-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Overall Content Quality Score;
 </div>
 </div>
@@ -492,7 +690,11 @@ Overall Content Quality Score;
 <div className="text-2xl font-bold text-gray-900 dark:text-white">
 {analysis.wordCount.toLocaleString()}
 </div>
+<<<<<<< HEAD
 <div className="text-sm text-gray-600 dark:text-gray-400">
+=======
+<div className="text-sm text-gray-600 dark:text-gray-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Total Words;
 </div>
 </div>
@@ -505,7 +707,11 @@ Total Words;
 <div className={`text-lg font-bold ${getScoreColor(analysis.readabilityScore)}`}>
 {analysis.readabilityScore}
 </div>
+<<<<<<< HEAD
 <div className="text-xs text-gray-600 dark:text-gray-400">
+=======
+<div className="text-xs text-gray-600 dark:text-gray-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Readability;
 </div>
 </div>
@@ -516,7 +722,11 @@ Readability;
 <div className={`text-lg font-bold ${getScoreColor(analysis.seoScore)}`}>
 {analysis.seoScore}
 </div>
+<<<<<<< HEAD
 <div className="text-xs text-gray-600 dark:text-gray-400">
+=======
+<div className="text-xs text-gray-600 dark:text-gray-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 SEO;
 </div>
 </div>
@@ -527,7 +737,11 @@ SEO;
 <div className={`text-lg font-bold ${getScoreColor(analysis.engagementScore)}`}>
 {analysis.engagementScore}
 </div>
+<<<<<<< HEAD
 <div className="text-xs text-gray-600 dark:text-gray-400">
+=======
+<div className="text-xs text-gray-600 dark:text-gray-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Engagement;
 </div>
 </div>
@@ -535,14 +749,23 @@ Engagement;
 </div>
 
 {/* Summary */}
+<<<<<<< HEAD
 <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
 <div className="text-sm text-blue-800 dark:text-blue-200">
+=======
+<div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">;
+<div className="text-sm text-blue-800 dark:text-blue-200">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="font-medium mb-1">Summary:</div>
 <div>{analysis.issues.length} issues found</div>
 <div>{analysis.suggestions.length} suggestions available</div>
 </div>
 </div>
+<<<<<<< HEAD
 </>
+=======
+</>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {/* Analyze Button */}
@@ -552,7 +775,11 @@ disabled={isAnalyzing}
 className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors"
 >;
 {isAnalyzing ? "Analyzing..." : "Analyze Content"}
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 
@@ -560,6 +787,7 @@ className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-wh
 {activeTab === "issues" && (
 <div className="space-y-4">
 {!analysis ? (
+<<<<<<< HEAD
 <div className="text-center text-gray-500 dark:text-gray-400">
 <ExclamationTriangleIcon className="w-12 h-12 mx-auto mb-3 text-yellow-500" />
 <p>No analysis available</p>
@@ -568,6 +796,16 @@ className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-wh
 <div className="text-center text-gray-500 dark:text-gray-400">
 <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500" />
 <p>No issues found! Great job!</p>
+=======
+<div className="text-center text-gray-500 dark:text-gray-400">;
+<ExclamationTriangleIcon className="w-12 h-12 mx-auto mb-3 text-yellow-500" />;
+<p>No analysis available</p>;
+</div>
+) : analysis.issues.length === 0 ? (
+<div className="text-center text-gray-500 dark:text-gray-400">;
+<CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500" />;
+<p>No issues found! Great job!</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ) : (
 <div className="space-y-3">
@@ -608,9 +846,15 @@ Auto-fixable;
 </span>
 )}
 </div>
+<<<<<<< HEAD
 <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
 <strong>Suggestion:</strong> {issue.suggestion}
 </p>
+=======
+<p className="text-xs text-gray-500 dark:text-gray-400 mt-2">;
+<strong>Suggestion:</strong> {issue.suggestion}
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -624,6 +868,7 @@ Auto-fixable;
 {activeTab === "suggestions" && (
 <div className="space-y-4">
 {!analysis ? (
+<<<<<<< HEAD
 <div className="text-center text-gray-500 dark:text-gray-400">
 <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500" />
 <p>No analysis available</p>
@@ -632,6 +877,16 @@ Auto-fixable;
 <div className="text-center text-gray-500 dark:text-gray-400">
 <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500" />
 <p>No suggestions available</p>
+=======
+<div className="text-center text-gray-500 dark:text-gray-400">;
+<InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500" />;
+<p>No analysis available</p>;
+</div>
+) : analysis.suggestions.length === 0 ? (
+<div className="text-center text-gray-500 dark:text-gray-400">;
+<CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500" />;
+<p>No suggestions available</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ) : (
 <div className="space-y-3">
@@ -656,11 +911,19 @@ className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-blue-50
 </span>
 <span className="text-xs px-2 py-1 rounded bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300">
 +{suggestion.expectedImpact} Impact;
+<<<<<<< HEAD
 </span>
 </div>
 <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
 <strong>Implementation:</strong> {suggestion.implementation}
 </p>
+=======
+</span>;
+</div>
+<p className="text-xs text-gray-500 dark:text-gray-400 mt-2">;
+<strong>Implementation:</strong> {suggestion.implementation}
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -672,10 +935,17 @@ className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-blue-50
 
 {/* Actions Tab */}
 {activeTab === "actions" && (
+<<<<<<< HEAD
 <div className="space-y-4">
 <div className="text-center text-gray-500 dark:text-gray-400">
 <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-purple-500" />
 <p>Take action to improve content quality</p>
+=======
+<div className="space-y-4">;
+<div className="text-center text-gray-500 dark:text-gray-400">;
+<WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-purple-500" />;
+<p>Take action to improve content quality</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Auto-fix Button */}
@@ -719,7 +989,11 @@ Export Report;
 </div>
 )}
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 
@@ -729,9 +1003,16 @@ Export Report;
 outline: 3px solid #8b5cf6 !important;
 outline-offset: 2px !important;
 background-color: rgba(139; 92; 246; 0.1) !important;,
+<<<<<<< HEAD
 transition: all 0.3s ease !important;}
 `}</style>
 </>
+=======
+transition: all 0.3s ease !important;
+}
+`}</style>;
+</>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 };
 

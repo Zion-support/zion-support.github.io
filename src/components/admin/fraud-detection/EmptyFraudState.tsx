@@ -17,6 +17,13 @@ return (
 }
 '";
 import React from "react"
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from 'lucide-react';
 interface EmptyFraudStateProps {
+=======
+import { Button } from "@/components/ui/button"
+import { ShieldAlert } from 'lucide-react'
+interface EmptyFraudStateProps {;
+;}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

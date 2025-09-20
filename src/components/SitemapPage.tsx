@@ -39,7 +39,11 @@ canonical="http; s://ziontechgroup.com/content/sitemap-page";
 <h1 className="text-4xl font-bold text-white mb-4">Site Map</h1>
 <p className="text-xl text-zion-slate-light">
 Complete navigation guide for Zion Tech Group;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="grid grid-cols-1 l; g:grid-cols-2 gap-8">
@@ -56,7 +60,11 @@ className="text-zion-slate-light hove;  r:text-zion-cyan transition-colors block
 </Link>
 </li>
 ))}
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Talent Routes */}
@@ -73,7 +81,11 @@ className="text-zion-slate-light hove;  r:text-zion-cyan transition-colors block
 </Link>
 </li>
 ))}
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Employer Routes */}
@@ -90,7 +102,11 @@ className="text-zion-slate-light hove;  r:text-zion-cyan transition-colors block
 </Link>
 </li>
 ))}
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Admin Routes */}
@@ -111,8 +127,7 @@ import { ChevronRight } from "lucide-react";
 import { SEO } from "./SEO";
 
 // Map sitemap paths to their actual routes in the application;
-const pathMa; p: Record<strin; g; string> = {
-"/about": "/content/about",
+const pathMa; p: Record<strin; g; string> = {"/about": "/content/about",
 "/blog": "/blog",
 "/careers": "/content/careers",
 "/green-it": "/content/green-it",
@@ -127,8 +142,7 @@ const pathMa; p: Record<strin; g; string> = {
 "/messages": "/dashboard/messages",
 "/notifications": "/dashboard/notifications",
 "/project/:projectId/room": "/dashboard/project/:projectId/room",
-"/post-job": "/marketplace/post-job",
-};
+"/post-job": "/marketplace/post-job"};
 
 const resolvePath: any = (pat; h: string): string => pathMap[pa; t; h] ?? path;
 
@@ -164,7 +178,11 @@ className="flex items-center hove;  r:text-zion-purple"
 </li>
 ))
 }
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Talent Routes */}
@@ -189,7 +207,11 @@ className="flex items-center hove;  r:text-zion-purple"
 </li>
 ))
 }
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Client Routes */}
@@ -214,7 +236,11 @@ className="flex items-center hove;  r:text-zion-purple"
 </li>
 ))
 }
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Shared Routes */}
@@ -239,7 +265,11 @@ className="flex items-center hove;  r:text-zion-purple"
 </li>
 ))
 }
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Admin Routes */}
@@ -263,6 +293,7 @@ className="flex items-center hove;  r:text-zion-purple"
 </li>
 ))
 }
+<<<<<<< HEAD
 </ul>
 </div>
 
@@ -279,6 +310,24 @@ className="flex items-center hove;  r:text-zion-purple"
 </li>
 ))}
 </ul>
+=======
+</ul>;
+</div>
+
+{/* Dynamic Routes */}
+<div className="bg-zion-blue-dark p-6 rounded-lg">;
+<h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>;
+<p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>;
+<ul className="space-y-2">;
+{Object.entries(dynamicPaths).map(([k;  e; y; pa; t; h]) => (<li key={key}>;
+<div className="flex items-center text-zion-slate">;
+<ChevronRight className="h-4 w-4 mr-2" />;
+{path} <span className="ml-2 text-xs italic">({key})</span>;
+</div>
+</li>;
+))}
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -298,7 +347,11 @@ className="text-zion-cyan hove;  r:text-zion-cyan-light transition-colors font-m
 </span>
 <p className="text-sm text-zion-slate-light mt-1">
 {route.description}
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -308,16 +361,26 @@ className="text-zion-cyan hove;  r:text-zion-cyan-light transition-colors font-m
 );
 }
 </div>
+<<<<<<< HEAD
 </>
+=======
+</>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 };
 <//><///>}))
 import React from 'react';
-import { completeSitemap,, dynamicPaths,, ,  } from '@/config/sitemap';
+import { completeSitemap, dynamicPaths } from "@/config/sitemap";
 import Link from 'next/link';
+<<<<<<< HEAD
 import { ChevronRight,  } from 'lucide-react'
 import { SEO,, ,  } from './SEO';
 // Map sitemap paths to their actual routes in the application;
+=======
+import { ChevronRight } from "lucide-react";
+import { SEO } from "./SEO";
+// Map sitemap paths to their actual routes in the application
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // Note: This pathMap might need to be updated based on Next.js page structure,
 const pathMap: Record<string string> = {
 }

@@ -19,6 +19,7 @@ supportLevel: string;
 marketPrice: string;
 roi: string;
 innovationLevel: string;
+<<<<<<< HEAD
 contactInfo: {,
 phone: string;,
 email: string;,
@@ -30,6 +31,23 @@ apiEndpoints: number;,
 uptime: string;,
 security: string[];,
 compliance: string[];};
+=======
+contactInfo: {
+phone: string;
+email: string;
+website: string;
+}
+}
+};
+technicalSpecs?: {
+technology: string[];
+integrations: string[];
+apiEndpoints: number;
+uptime: string;
+security: string[];
+compliance: string[];
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 competitors: string[];
 demoUrl?: string;
 caseStudies?: string[];
@@ -37,6 +55,7 @@ caseStudies?: string[];
 
 export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] = [
 // Advanced AI & Machine Learning Services;
+<<<<<<< HEAD
 {,
 id: "ai-multimodal-orchestrator";,
 title: "AI Multimodal Orchestrator Pro";,
@@ -46,6 +65,16 @@ subcategory: "Multimodal AI";
 price: 2499;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-multimodal-orchestrator";
+title: "AI Multimodal Orchestrator Pro";
+description: "Revolutionary AI platform that seamlessly orchestrates text; image; video; and audio processing for comprehensive content understanding and generation.",
+category: "Advanced AI & ML";
+subcategory: "Multimodal AI";
+price: 2499;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Cross-modal content understanding";
 "Unified AI model orchestration",
@@ -80,6 +109,7 @@ targetAudience: [
 "CTOs";
 ],
 tags: ["AI", "Multimodal", "Content Generation", "Machine Learning", "Automation"],
+<<<<<<< HEAD
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;499 - $8;000/month",
@@ -88,21 +118,37 @@ innovationLevel: "Cutting-edge";
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "4-6 weeks";
+supportLevel: "enterprise";
+marketPrice: "$2;499 - $8;000/month",
+roi: "400-600%";
+innovationLevel: "Cutting-edge";
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["GPT-4", "DALL-E 3", "Whisper", "React", "Python", "TensorFlow"],
 integrations: ["OpenAI API", "Azure", "AWS", "Google Cloud", "Custom APIs"],
+<<<<<<< HEAD
 apiEndpoints: 50;,
 uptime: "99.99%";,
+=======
+apiEndpoints: 50;
+uptime: "99.99%";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 security: ["SOC 2", "ISO 27001", "GDPR", "CCPA"],
 compliance: ["AI Ethics", "Bias Detection", "Audit Trails"];
 },
 competitors: ["OpenAI", "Anthropic", "Cohere", "AI21 Labs"],
-demoUrl: "https://ziontechgroup.com/demo/ai-multimodal";,
+demoUrl: "https://ziontechgroup.com/demo/ai-multimodal";
 caseStudies: ["Media company 300% efficiency boost", "E-commerce 5x content output"];
 },
 
 // Blockchain & Web3 Services;
+<<<<<<< HEAD
 {
 id: "blockchain-enterprise-suite";,
 title: "Blockchain Enterprise Suite Pro";,
@@ -112,6 +158,16 @@ subcategory: "Enterprise Blockchain";
 price: 3999;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "blockchain-enterprise-suite";
+title: "Blockchain Enterprise Suite Pro";
+description: "Comprehensive enterprise blockchain solution for supply chain transparency; smart contracts; and decentralized applications with enterprise-grade security.",
+category: "Blockchain & Web3";
+subcategory: "Enterprise Blockchain";
+price: 3999;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Multi-chain support (Ethereum; Polygon; Solana)",
 "Smart contract development & auditing",
@@ -146,6 +202,7 @@ targetAudience: [
 "Legal firms";
 ],
 tags: ["Blockchain", "Web3", "Smart Contracts", "DeFi", "NFTs"],
+<<<<<<< HEAD
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;999 - $15;000/month",
@@ -154,18 +211,34 @@ innovationLevel: "Revolutionary";
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "6-8 weeks";
+supportLevel: "enterprise";
+marketPrice: "$3;999 - $15;000/month",
+roi: "300-500%";
+innovationLevel: "Revolutionary";
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["Ethereum", "Solidity", "React", "Node.js", "IPFS", "Web3.js"],
 integrations: ["MetaMask", "WalletConnect", "Chainlink", "The Graph"],
+<<<<<<< HEAD
 apiEndpoints: 100;,
 uptime: "99.95%";,
+=======
+apiEndpoints: 100;
+uptime: "99.95%";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 security: ["Multi-sig wallets", "Cold storage", "Audit trails"],
 compliance: ["KYC/AML", "GDPR", "Financial regulations"];
 },
 competitors: ["ConsenSys", "Chainalysis", "Alchemy", "Infura"],
 demoUrl: "https://ziontechgroup.com/demo/blockchain-suite"};
 // Quantum Computing Services;
+<<<<<<< HEAD
 {
 id: "quantum-optimization-platform";,
 title: "Quantum Optimization Platform Elite";,
@@ -175,6 +248,16 @@ subcategory: "Optimization";
 price: 5999;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "quantum-optimization-platform";
+title: "Quantum Optimization Platform Elite";
+description: "Advanced quantum computing platform for solving complex optimization problems in logistics; finance; and scientific research with hybrid quantum-classical algorithms.",
+category: "Quantum Computing";
+subcategory: "Optimization";
+price: 5999;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Hybrid quantum-classical algorithms";
 "Real-time quantum simulation",
@@ -209,6 +292,7 @@ targetAudience: [
 "Technology companies";
 ],
 tags: ["Quantum Computing", "Optimization", "AI", "Research", "Enterprise"],
+<<<<<<< HEAD
 estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$5;999 - $25;000/month",
@@ -217,18 +301,34 @@ innovationLevel: "Revolutionary";
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "8-12 weeks";
+supportLevel: "enterprise";
+marketPrice: "$5;999 - $25;000/month",
+roi: "400-800%";
+innovationLevel: "Revolutionary";
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["IBM Qiskit", "Google Cirq", "Microsoft Q#", "Python", "Quantum algorithms"],
 integrations: ["IBM Quantum", "Google Quantum", "Azure Quantum", "AWS Braket"],
+<<<<<<< HEAD
 apiEndpoints: 25;,
 uptime: "99.9%";,
+=======
+apiEndpoints: 25;
+uptime: "99.9%";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 security: ["Quantum-safe cryptography", "Multi-factor authentication"],
 compliance: ["Research ethics", "Data privacy", "Export controls"];
 },
 competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],
 demoUrl: "https://ziontechgroup.com/demo/quantum-platform"};
 // Advanced Cybersecurity Services;
+<<<<<<< HEAD
 {
 id: "ai-threat-intelligence-platform";,
 title: "AI Threat Intelligence Platform Pro";,
@@ -238,6 +338,16 @@ subcategory: "Threat Intelligence";
 price: 3499;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-threat-intelligence-platform";
+title: "AI Threat Intelligence Platform Pro";
+description: "Next-generation cybersecurity platform that uses AI to detect; analyze; and respond to advanced threats in real-time with predictive capabilities.",
+category: "Advanced Cybersecurity";
+subcategory: "Threat Intelligence";
+price: 3499;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered threat detection";
 "Real-time threat analysis",
@@ -272,6 +382,7 @@ targetAudience: [
 "Risk managers";
 ],
 tags: ["Cybersecurity", "AI", "Threat Intelligence", "SOC", "Compliance"],
+<<<<<<< HEAD
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;499 - $12;000/month",
@@ -280,18 +391,34 @@ innovationLevel: "Cutting-edge";
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "4-6 weeks";
+supportLevel: "enterprise";
+marketPrice: "$3;499 - $12;000/month",
+roi: "300-500%";
+innovationLevel: "Cutting-edge";
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["Machine Learning", "NLP", "Python", "Elasticsearch", "Kafka", "React"],
 integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Cloud platforms"],
+<<<<<<< HEAD
 apiEndpoints: 75;,
 uptime: "99.99%";,
+=======
+apiEndpoints: 75;
+uptime: "99.99%";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 security: ["Zero-trust architecture", "Encryption at rest", "Multi-factor auth"],
 compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"];
 },
 competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "FireEye"],
 demoUrl: "https://ziontechgroup.com/demo/ai-threat-intelligence"};
 // Edge Computing & IoT Services;
+<<<<<<< HEAD
 {
 id: "edge-ai-orchestrator";,
 title: "Edge AI Orchestrator Platform";,
@@ -301,6 +428,16 @@ subcategory: "Edge AI";
 price: 1999;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "edge-ai-orchestrator";
+title: "Edge AI Orchestrator Platform";
+description: "Intelligent edge computing platform that brings AI processing closer to data sources for real-time analytics; automation; and decision-making.",
+category: "Edge Computing & IoT";
+subcategory: "Edge AI";
+price: 1999;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Distributed AI processing";
 "Real-time edge analytics",
@@ -335,6 +472,7 @@ targetAudience: [
 "Healthcare providers";
 ],
 tags: ["Edge Computing", "IoT", "AI", "Real-time Analytics", "Automation"],
+<<<<<<< HEAD
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;999 - $8;000/month",
@@ -343,18 +481,34 @@ innovationLevel: "Cutting-edge";
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "6-8 weeks";
+supportLevel: "premium";
+marketPrice: "$1;999 - $8;000/month",
+roi: "350-600%";
+innovationLevel: "Cutting-edge";
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["Kubernetes", "Docker", "Python", "TensorFlow Lite", "MQTT", "React"],
 integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Custom protocols"],
+<<<<<<< HEAD
 apiEndpoints: 150;,
 uptime: "99.95%";,
+=======
+apiEndpoints: 150;
+uptime: "99.95%";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 security: ["Edge encryption", "Device authentication", "Secure boot"],
 compliance: ["GDPR", "CCPA", "Industry standards"];
 },
 competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "NVIDIA Jetson"],
 demoUrl: "https://ziontechgroup.com/demo/edge-ai-orchestrator"};
 // Advanced Data Analytics Services;
+<<<<<<< HEAD
 {
 id: "real-time-data-fabric";,
 title: "Real-Time Data Fabric Platform";,
@@ -364,6 +518,16 @@ subcategory: "Real-time Processing";
 price: 2799;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "real-time-data-fabric";
+title: "Real-Time Data Fabric Platform";
+description: "Unified data platform that provides real-time data processing; analytics; and insights across multiple sources with AI-powered automation.",
+category: "Advanced Data Analytics";
+subcategory: "Real-time Processing";
+price: 2799;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Real-time data streaming";
 "Multi-source data integration",
@@ -398,6 +562,7 @@ targetAudience: [
 "C-level executives";
 ],
 tags: ["Data Analytics", "Real-time Processing", "AI", "Data Integration", "Business Intelligence"],
+<<<<<<< HEAD
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$2;799 - $10;000/month",
@@ -406,18 +571,34 @@ innovationLevel: "Cutting-edge";
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "6-8 weeks";
+supportLevel: "premium";
+marketPrice: "$2;799 - $10;000/month",
+roi: "400-700%";
+innovationLevel: "Cutting-edge";
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["Apache Kafka", "Apache Spark", "Python", "React", "PostgreSQL", "Redis"],
 integrations: ["Cloud platforms", "Databases", "APIs", "BI tools", "ML platforms"],
+<<<<<<< HEAD
 apiEndpoints: 200;,
 uptime: "99.99%";,
+=======
+apiEndpoints: 200;
+uptime: "99.99%";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 security: ["Data encryption", "Access controls", "Audit logging"],
 compliance: ["GDPR", "CCPA", "SOC 2", "Industry standards"];
 },
 competitors: ["Databricks", "Snowflake", "Confluent", "Apache Kafka"],
 demoUrl: "https://ziontechgroup.com/demo/real-time-data-fabric"};
 // Autonomous Systems Services;
+<<<<<<< HEAD
 {
 id: "autonomous-workflow-orchestrator";,
 title: "Autonomous Workflow Orchestrator Pro";,
@@ -427,6 +608,16 @@ subcategory: "Workflow Automation";
 price: 1899;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "autonomous-workflow-orchestrator";
+title: "Autonomous Workflow Orchestrator Pro";
+description: "Intelligent workflow automation platform that uses AI to design; optimize; and execute complex business processes autonomously.",
+category: "Autonomous Systems";
+subcategory: "Workflow Automation";
+price: 1899;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered workflow design";
 "Autonomous process execution",
@@ -461,6 +652,7 @@ targetAudience: [
 "Automation engineers";
 ],
 tags: ["Automation", "AI", "Workflow", "Process Optimization", "RPA"],
+<<<<<<< HEAD
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;899 - $7;000/month",
@@ -469,18 +661,34 @@ innovationLevel: "Cutting-edge";
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "4-6 weeks";
+supportLevel: "premium";
+marketPrice: "$1;899 - $7;000/month",
+roi: "300-500%";
+innovationLevel: "Cutting-edge";
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
 integrations: ["CRM systems", "ERP platforms", "Email systems", "APIs", "Databases"],
+<<<<<<< HEAD
 apiEndpoints: 100;,
 uptime: "99.95%";,
+=======
+apiEndpoints: 100;
+uptime: "99.95%";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 security: ["Role-based access", "Audit logging", "Data encryption"],
 compliance: ["GDPR", "CCPA", "SOC 2", "Industry standards"];
 },
 competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"],
 demoUrl: "https://ziontechgroup.com/demo/autonomous-workflow"};
 // Digital Twin Services;
+<<<<<<< HEAD
 {
 id: "digital-twin-platform";,
 title: "Digital Twin Platform Elite";,
@@ -490,6 +698,16 @@ subcategory: "Asset Management";
 price: 4499;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "digital-twin-platform";
+title: "Digital Twin Platform Elite";
+description: "Advanced digital twin platform for creating virtual replicas of physical assets; processes; and systems with real-time monitoring and predictive capabilities.",
+category: "Digital Twin Technology";
+subcategory: "Asset Management";
+price: 4499;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "3D digital twin creation";
 "Real-time asset monitoring",
@@ -524,6 +742,7 @@ targetAudience: [
 "IT managers";
 ],
 tags: ["Digital Twin", "IoT", "Predictive Maintenance", "3D Modeling", "Asset Management"],
+<<<<<<< HEAD
 estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$4;499 - $18;000/month",
@@ -532,18 +751,34 @@ innovationLevel: "Cutting-edge";
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "8-12 weeks";
+supportLevel: "enterprise";
+marketPrice: "$4;499 - $18;000/month",
+roi: "400-800%";
+innovationLevel: "Cutting-edge";
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["Unity 3D", "Unreal Engine", "Python", "React", "Three.js", "WebGL"],
 integrations: ["IoT platforms", "SCADA systems", "Building management", "Energy systems"],
+<<<<<<< HEAD
 apiEndpoints: 75;,
 uptime: "99.95%";,
+=======
+apiEndpoints: 75;
+uptime: "99.95%";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 security: ["3D model protection", "Access controls", "Data encryption"],
 compliance: ["Industry standards", "Data privacy", "Security protocols"];
 },
 competitors: ["Siemens", "GE Digital", "PTC", "Bentley Systems"],
 demoUrl: "https://ziontechgroup.com/demo/digital-twin-platform"};
 // Metaverse Development Services;
+<<<<<<< HEAD
 {
 id: "metaverse-development-platform";,
 title: "Metaverse Development Platform Pro";,
@@ -553,6 +788,16 @@ subcategory: "Development Platform";
 price: 3299;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "metaverse-development-platform";
+title: "Metaverse Development Platform Pro";
+description: "Comprehensive platform for building immersive metaverse experiences; virtual worlds; and digital environments with advanced 3D graphics and AI integration.",
+category: "Metaverse & VR/AR";
+subcategory: "Development Platform";
+price: 3299;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "3D world building tools";
 "VR/AR development kits",
@@ -587,6 +832,7 @@ targetAudience: [
 "Marketing agencies";
 ],
 tags: ["Metaverse", "VR/AR", "3D Development", "Gaming", "Virtual Reality"],
+<<<<<<< HEAD
 estimatedDelivery: "8-12 weeks";,
 supportLevel: "premium";,
 marketPrice: "$3;299 - $12;000/month",
@@ -595,18 +841,34 @@ innovationLevel: "Revolutionary";
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "8-12 weeks";
+supportLevel: "premium";
+marketPrice: "$3;299 - $12;000/month",
+roi: "350-600%";
+innovationLevel: "Revolutionary";
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["Unity 3D", "Unreal Engine", "WebXR", "Three.js", "React", "Node.js"],
 integrations: ["VR headsets", "AR devices", "Payment systems", "Social platforms"],
+<<<<<<< HEAD
 apiEndpoints: 125;,
 uptime: "99.9%";,
+=======
+apiEndpoints: 125;
+uptime: "99.9%";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 security: ["Content protection", "User privacy", "Payment security"],
 compliance: ["GDPR", "CCPA", "Content moderation", "Age verification"];
 },
 competitors: ["Roblox", "Decentraland", "Meta", "Unity", "Epic Games"],
 demoUrl: "https://ziontechgroup.com/demo/metaverse-platform"};
 // Green Technology Services;
+<<<<<<< HEAD
 {
 id: "sustainable-tech-optimizer";,
 title: "Sustainable Technology Optimizer";,
@@ -616,6 +878,16 @@ subcategory: "Sustainability";
 price: 1599;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "sustainable-tech-optimizer";
+title: "Sustainable Technology Optimizer";
+description: "AI-powered platform for optimizing energy consumption; reducing carbon footprint; and implementing sustainable technology solutions across organizations.",
+category: "Green Technology";
+subcategory: "Sustainability";
+price: 1599;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Energy consumption monitoring";
 "Carbon footprint tracking",
@@ -650,6 +922,7 @@ targetAudience: [
 "CSR managers";
 ],
 tags: ["Sustainability", "Green Technology", "Energy Optimization", "Carbon Tracking", "Compliance"],
+<<<<<<< HEAD
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;599 - $6;000/month",
@@ -658,12 +931,27 @@ innovationLevel: "Cutting-edge";
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "4-6 weeks";
+supportLevel: "premium";
+marketPrice: "$1;599 - $6;000/month",
+roi: "250-400%";
+innovationLevel: "Cutting-edge";
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time-series DB"],
 integrations: ["Building management systems", "Energy monitoring", "IoT platforms", "Analytics tools"],
+<<<<<<< HEAD
 apiEndpoints: 80;,
 uptime: "99.9%";,
+=======
+apiEndpoints: 80;
+uptime: "99.9%";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 security: ["Data encryption", "Access controls", "Audit logging"],
 compliance: ["ISO 14001", "LEED certification", "Sustainability standards"];
 },

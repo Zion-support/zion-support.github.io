@@ -10,19 +10,31 @@ interface Props {
 children: ReactNode;
 fallback?: ReactNode;
 onError?: (error: Error; errorInfo: ErrorInfo) => void;
-showDetails?: boolean;
+}
+showDetails?: boolean;}
 };
 interface State {
 hasError: boolean;
+<<<<<<< HEAD
 error: Error | null;,
 errorInfo: ErrorInfo | null;,
 errorId: string | null;,
 showStackTrace: boolean;};
+=======
+error: Error | null;
+errorInfo: ErrorInfo | null;
+errorId: string | null;
+showStackTrace: boolean;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 class EnhancedErrorBoundary extends Component<Props; State> {
 constructor(props: Props) {
 super(props);
 this.state = {
 hasError: false;
+<<<<<<< HEAD
 error: null;,
 errorInfo: null;,
 errorId: null;,
@@ -31,6 +43,16 @@ showStackTrace: false;};
 
 static getDerivedStateFromError(error: Error): Partial<State> {
 return {,
+=======
+error: null;
+errorInfo: null;
+errorId: null;
+showStackTrace: false;
+};
+}
+
+static getDerivedStateFromError(error: Error): Partial<State> {return {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 hasError: true;
 error;,
 errorId: this.generateErrorId()};
@@ -61,6 +83,7 @@ private reportError(error: Error; errorInfo: ErrorInfo) {
 const errorReport = {;
 id: this.state.errorId;
 timestamp: new Date().toISOString();
+<<<<<<< HEAD
 error: {,
 name: error.name;,
 message: error.message;,
@@ -72,6 +95,22 @@ url: window.location.href;,
 viewport: {,
 width: window.innerWidth;,
 height: window.innerHeight;}
+=======
+error: {
+name: error.name;
+message: error.message;
+stack: error.stack;
+};
+errorInfo: {,
+componentStack: errorInfo.componentStack;
+};
+userAgent: navigator.userAgent;
+url: window.location.href;
+viewport: {
+width: window.innerWidth;
+height: window.innerHeight;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 // Log to console for development;
 if (process.env.NODE_ENV === "development") {
@@ -88,10 +127,18 @@ console.groupEnd();
 private handleRetry = () => {
 this.setState({
 hasError: false;
+<<<<<<< HEAD
 error: null;,
 errorInfo: null;,
 errorId: null;,
 showStackTrace: false;});
+=======
+error: null;
+errorInfo: null;
+errorId: null;
+showStackTrace: false;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 private handleGoHome = () => {
@@ -163,12 +210,21 @@ animate={{ opacity: 1; scale: 1 }}
 className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden"
 >;
 {/* Header */}
+<<<<<<< HEAD
 <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-white">
 <div className="flex items-center space-x-3">
 <ExclamationTriangleIcon className="w-8 h-8" />
 <div>
 <h1 className="text-2xl font-bold">Something went wrong</h1>
 <p className="text-red-100">We"ve encountered an unexpected error</p>
+=======
+<div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-white">;
+<div className="flex items-center space-x-3">;
+<ExclamationTriangleIcon className="w-8 h-8" />;
+<div>;
+<h1 className="text-2xl font-bold">Something went wrong</h1>;
+<p className="text-red-100">We"ve encountered an unexpected error</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -214,7 +270,11 @@ this.state.showStackTrace ? "rotate-180" : "';
 <div className="p-4 bg-slate-900 text-slate-100 font-mono text-sm overflow-x-auto">
 <pre className="whitespace-pre-wrap break-words">
 {this.state.error.stack}
+<<<<<<< HEAD
 </pre>
+=======
+</pre>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </div>
@@ -226,12 +286,21 @@ this.state.showStackTrace ? "rotate-180" : "';
 <div className="px-4 py-3 bg-slate-50 dark:bg-slate-700 border-b border-slate-200 dark:border-slate-700">
 <span className="font-medium text-slate-700 dark:text-slate-300">
 Component Stack;
+<<<<<<< HEAD
 </span>
 </div>
 <div className="p-4 bg-slate-900 text-slate-100 font-mono text-sm overflow-x-auto">
 <pre className="whitespace-pre-wrap break-words">
 {this.state.errorInfo.componentStack}
 </pre>
+=======
+</span>;
+</div>
+<div className="p-4 bg-slate-900 text-slate-100 font-mono text-sm overflow-x-auto">;
+<pre className="whitespace-pre-wrap break-words">;
+{this.state.errorInfo.componentStack}
+</pre>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 )}
@@ -250,9 +319,15 @@ className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-blue-6
 onClick={this.handleGoHome}
 className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white font-medium rounded-lg transition-colors"
 >;
+<<<<<<< HEAD
 <HomeIcon className="w-5 h-5" />
 <span>Go Home</span>
 </button>
+=======
+<HomeIcon className="w-5 h-5" />;
+<span>Go Home</span>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Report Issue */}
@@ -261,20 +336,34 @@ className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-slate-
 onClick={this.handleReportIssue}
 className="inline-flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors"
 >;
+<<<<<<< HEAD
 <BugAntIcon className="w-4 h-4" />
 <span>Report this issue</span>
 </button>
+=======
+<BugAntIcon className="w-4 h-4" />;
+<span>Report this issue</span>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Help Text */}
 <div className="text-center text-sm text-slate-500 dark:text-slate-400">
 <p>If this problem persists; please contact our support team.</p>
 <p className="mt-1">,
+<<<<<<< HEAD
 Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">kleber@ziontechgroup.com</a>
 </p>
 </div>
 </div>
 </motion.div>
+=======
+Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">kleber@ziontechgroup.com</a>;
+</p>;
+</div>
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 }

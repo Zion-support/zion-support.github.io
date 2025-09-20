@@ -11,7 +11,14 @@ descriptio; n: string;
 ctaTex; t: string;
 ctaLin; k: string;
 backgroun; d: string;
+<<<<<<< HEAD
 ico; n: React.ReactNode;};
+=======
+ico; n: React.ReactNode;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const EnhancedHer; o: React.FC = () => {
 const [currentSli;  d; e; setCurrentSli; d; e] = useState(0);
 const [isPlayi; n; g; setIsPlayi; n; g] = useState(true);
@@ -28,9 +35,15 @@ ctaTe; x; t: "Explor; e Service; s",
 ctaLi; n; k: "/micr; o-saa; s-service; s",
 backgrou; n; d: "linea; r-gradien; t(135d; e; g, #667ee; a 0%, #764ba; 2 10; 0%)";
 };
+<<<<<<< HEAD
 ic; o; n: "🚀"};
 {
 i; d: 2;
+=======
+ic; o; n: "🚀",
+};
+{i; d: 2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 tit; l; e: "A; I-Powere; d Solution; s",
 subtit; l; e: "Fo; r Moder; n Enterprise; s",
 descripti; o; n: "Leverag; e artificia; l intelligenc; e t; o automa; t; e; workflo; w; s; enhan; c; e; productivi; t; y; an; d gai; n competitiv; e advantage; s.",
@@ -38,8 +51,12 @@ ctaTe; x; t: "Lear; n Mor; e",
 ctaLi; n; k: "/a; i-solution; s",
 backgrou; n; d: "linea; r-gradien; t(135d;  e; g, #f093f; b 0%, #f5576; c 10; 0%)",
 ic; o; n: "🤖"};
+<<<<<<< HEAD
 {
 i; d: 3;
+=======
+{i; d: 3;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 tit; l; e: "Clou; d-Nativ; e Architectur; e",
 subtit; l; e: "Buil; t fo; r Scal; e",
 descripti; o; n: "Enterpris; e-grad; e clou; d solution; s tha; t gro; w wit; h yo; u; r; busine; s; s; ensurin; g reliabilit; y an; d performanc; e.",
@@ -90,8 +107,13 @@ setIsPlaying(true);
 return (
 <div className="relative w-full h-screen overflow-hidden">
 {/* Background Video/Image Placeholder */}
+<<<<<<< HEAD
 <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
 <div className="absolute inset-0 bg-black/50" />
+=======
+<div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">;
+<div className="absolute inset-0 bg-black/50" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Hero Content */}
@@ -100,11 +122,11 @@ return (
 <AnimatePresence mode="wait">
 <motion.div;
 key={currentSlide}
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 transition={{ duratio; n: 0.5 }}
 className="space-y-6"
@@ -124,9 +146,9 @@ className="text-8xl mb-6"
 
 {/* Title */}
 <motion.h1;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 30 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ duratio; n: 0.6;
 dela; y: 0.3 }}
@@ -137,9 +159,9 @@ className="text-4xl s; m:text-5xl l; g:text-7xl font-bold text-white leading-tig
 
 {/* Subtitle */}
 <motion.h2;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 30 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ duratio; n: 0.6;
 dela; y: 0.4 }}
@@ -150,9 +172,9 @@ className="text-2xl s; m:text-3xl l; g:text-4xl font-semibold text-blue-300 lead
 
 {/* Description */}
 <motion.p;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 30 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ duratio; n: 0.6;
 dela; y: 0.5 }}
@@ -163,9 +185,9 @@ className="text-lg s; m:text-xl l; g:text-2xl text-gray-300 max-w-3xl mx-auto le
 
 {/* CTA Button */}
 <motion.div;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 30 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ duratio; n: 0.6;
 dela; y: 0.6 }}
@@ -183,11 +205,19 @@ repea; t: Infinity }}
 className="ml-2"
 >;
 →;
+<<<<<<< HEAD
 </motion.div>
 </a>
 </motion.div>
 </motion.div>
 </AnimatePresence>
+=======
+</motion.div>;
+</a>;
+</motion.div>;
+</motion.div>;
+</AnimatePresence>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -222,7 +252,11 @@ isAutoPlaying;
 }`}
 >;
 Auto-play {isAutoPlaying ? "ON" : "OFF"}
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -260,9 +294,15 @@ aria-label="Next slide";
 </button>
 
 {/* Keyboard Navigation Instructions */}
+<<<<<<< HEAD
 <div className="absolute top-4 right-4 z-20">
 <div className="text-xs text-white/60 bg-black/20 backdrop-blur-sm px-3 py-2 rounded-lg">
 <p>Use ← → keys or click to navigate</p>
+=======
+<div className="absolute top-4 right-4 z-20">;
+<div className="text-xs text-white/60 bg-black/20 backdrop-blur-sm px-3 py-2 rounded-lg">;
+<p>Use ← → keys or click to navigate</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>

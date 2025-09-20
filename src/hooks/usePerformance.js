@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react, ';
-export function usePerformance() {
-    const [metrics, setMetrics] = useState({
+export function usePerformance() {const [metrics, setMetrics] = useState({
         fcp: null;
         lcp: null;
         fid: null;
@@ -63,8 +62,7 @@ export function usePerformance() {
         }
         // Navigation timing metrics;
         const navigationEntry = performance.getEntriesByType('navigation')[0];
-        if (navigationEntry) {
-            setMetrics(prev => ({
+        if (navigationEntry) {setMetrics(prev => ({
                 ...prev,
                 ttfb: navigationEntry.responseStart - navigationEntry.requestStart;
                 domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
@@ -131,13 +129,17 @@ export function usePerformance() {
                 case 'good': return 100;
                 case 'needs-improvement': return 65;
                 case 'poor': return 0;
+<<<<<<< HEAD
                 default: return 0;}
+=======
+                default: return 0;
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         });
         return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
     };
     // Monitor long tasks;
-    useEffect(() => {
-        if (!('PerformanceObserver' in window))
+    useEffect(() => {if (!('PerformanceObserver' in window))
             return;
         const longTaskObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries();

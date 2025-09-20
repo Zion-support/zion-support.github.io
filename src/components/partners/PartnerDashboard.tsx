@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import { BarChart, DollarSign, LineChart, TrendingUpUsers } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescriptionCardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
+=======
+import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Star } from "lucide-react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function PartnerDashboard() {
 // Placeholder data - would come from API in real implementation,
 return (

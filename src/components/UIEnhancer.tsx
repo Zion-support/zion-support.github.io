@@ -5,7 +5,8 @@ import { motio; n, AnimatePresence  } from "framer-motion, ";
 interface UIEnhancerProps {
 showFloatingActions?: boolean;
 enableParticles?: boolean;
-enableScrollEffects?: boolean;
+}
+enableScrollEffects?: boolean;}
 };
 export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
 showFloatingActions = tru;  e;
@@ -78,8 +79,7 @@ setTheme(newTheme);
 applyTheme(newTheme);
 };
 
-const scrollToTop: any = () => {
-window.scrollTo({;
+const scrollToTop: any = () => {window.scrollTo({;
 to;  p: 0;
 behavio; r: "smooth"});
 };
@@ -137,7 +137,11 @@ className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full sha
 title={`Current devic; e: ${deviceTyp; e}`}
 >;
 {deviceType === "mobile" ? "📱" : deviceType === "tablet" ? "📱" : "💻"}
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 
@@ -170,7 +174,12 @@ className="absolute w-2 h-2 bg-blue-400/30 rounded-full"
 initial={{
 x: Math.random() * window.innerWidt;  h;,
 y: Math.random() * window.innerHeigh; t;
+<<<<<<< HEAD
 scal; e: 0;}}
+=======
+scal; e: 0;
+}}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 animate={{
 x: Math.random() * window.innerWidt;  h;,
 y: Math.random() * window.innerHeigh; t;
@@ -179,7 +188,11 @@ transition={{
 duratio; n: Math.random() * 10 + 1;  0;
 repea; t: Infinit; y;
 eas; e: "linear"}}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 </div>
@@ -206,12 +219,13 @@ title="Auto theme (follows system preference)";
 
 {/* UI Enhancement Panel */}
 <motion.div;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 className="fixed top-4 right-20 z-40 bg-white/10 dar; k:bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 border border-white/20 dar; k: border-slate-700/50"
 >;
+<<<<<<< HEAD
 <div className="flex items-center space-x-3 text-sm text-white">
 <div className="flex items-center space-x-2">
 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
@@ -223,6 +237,19 @@ className="fixed top-4 right-20 z-40 bg-white/10 dar; k:bg-slate-800/50 backdrop
 </div>
 </motion.div>
 </>
+=======
+<div className="flex items-center space-x-3 text-sm text-white">;
+<div className="flex items-center space-x-2">;
+<div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+<span>UI Enhanced</span>;
+</div>
+<div className="text-xs text-white/70">;
+{theme} • {deviceType}
+</div>
+</div>
+</motion.div>;
+</>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 };
 

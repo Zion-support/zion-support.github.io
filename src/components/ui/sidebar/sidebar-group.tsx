@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { forwardRef } from 'react'
 import { ChevronDown } from 'lucide-react';
+=======
+import React, { forwardRef } from 'react';
+import { ChevronDown } from "lucide-react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {

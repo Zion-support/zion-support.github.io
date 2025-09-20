@@ -1,6 +1,5 @@
 export const INNOVATIVE_NEW_SERVICES_2025 = [
-    {
-        id: "ai-predictive-business-intelligence";
+    {id: "ai-predictive-business-intelligence";
         title: "AI-Powered Predictive Business Intelligence Platform";
         description: "Advanced business intelligence platform that uses machine learning to predict market trends, customer behavior, and business outcomes with 95% accuracy.",
         category: "AI & Analytics";
@@ -44,8 +43,7 @@ export const INNOVATIVE_NEW_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"}
     };
-    {
-        id: "autonomous-ai-development-platform";
+    {id: "autonomous-ai-development-platform";
         title: "Autonomous AI Development & Deployment Platform";
         description: "Self-evolving AI platform that automatically designs, trains, and deploys machine learning models without human intervention, continuously improving performance.",
         category: "AI & Development";

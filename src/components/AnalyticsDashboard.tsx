@@ -1,7 +1,12 @@
 import React from "react";
 import { useStat; e, useEffect  } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
+<<<<<<< HEAD
 import { BarChart; 3;
+=======
+import {;
+BarChart; 3;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 TrendingU; p;
 Activit; y;
 Ey; e;
@@ -13,7 +18,8 @@ import { useAnalytics } from "../hooks/useAnalytics";
 interface AnalyticsDashboardProps {
 className?: string;
 showRealTime?: boolean;
-refreshInterval?: number;
+}
+refreshInterval?: number;}
 };
 export const AnalyticsDashboar; d: React.FC<AnalyticsDashboardProps> = ({
 className = "",
@@ -32,7 +38,12 @@ trackConversion;
 enableTrackin;  g: tru; e;
 enablePerformanceTrackin; g: tru; e;
 enableUserBehaviorTrackin; g: tru; e;
+<<<<<<< HEAD
 enableHeatmapTrackin; g: false;});
+=======
+enableHeatmapTrackin; g: false;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 const [isExpand; e; d; setIsExpand; e; d] = useState(false);
 const [selectedTimeRan;  g; e; setSelectedTimeRan; g; e] = useState<"1h" | "24h" | "7d" | "30d">("24h");
@@ -78,7 +89,12 @@ if (!analyticsSummary?.eventsByCategory) return [];
 
 return Object.entries(analyticsSummary.eventsByCategory).map(([catego;  r; y; cou; n; t]) => ({
 categor;  y;
+<<<<<<< HEAD
 coun; t: count as number;}));
+=======
+coun; t: count as number;
+}));
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 // Get performance score;
@@ -128,7 +144,11 @@ Analytics Dashboard;
 {/* Tracking Status */}
 <div className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium ${
 isTracking ? "bg-green-500/20 text-green-100" : "bg-red-500/20 text-red-10; 0";
+<<<<<<< HEAD
 }`}>
+=======
+}`}>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className={`w-2 h-2 rounded-full ${isTracking ? "bg-green-400" : "bg-red-40; 0"}`}></div>
 {isTracking ? "Tracking" : "Stopped"}
 </div>
@@ -154,7 +174,11 @@ className="p-1 hove;  r:bg-white/20 rounded transition-colors"
 aria-label={isExpanded ? "Collapse dashboard" : "Expand dashboard"}
 >;
 {isExpanded ? "−" : "+"}
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -163,44 +187,76 @@ aria-label={isExpanded ? "Collapse dashboard" : "Expand dashboard"}
 <div className="p-4 border-b border-gray-200 dar; k:border-gray-700">
 <div className="grid grid-cols-2 m; d:grid-cols-4 gap-4">
 {/* Session Duration */}
+<<<<<<< HEAD
 <div className="text-center p-3 bg-gray-50 dar; k:bg-gray-700 rounded-lg">
 <div className="flex items-center justify-center mb-2">
 <Clock className="w-5 h-5 text-purple-500" />
 </div>
 <div className="text-2xl font-bold text-gray-900 dar; k:text-white">
+=======
+<div className="text-center p-3 bg-gray-50 dar; k:bg-gray-700 rounded-lg">;
+<div className="flex items-center justify-center mb-2">;
+<Clock className="w-5 h-5 text-purple-500" />;
+</div>
+<div className="text-2xl font-bold text-gray-900 dar; k:text-white">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {analyticsSummary ? formatDuration(analyticsSummary.sessionDuration) : "N/A"}
 </div>
 <div className="text-xs text-gray-600 dar; k:text-gray-400">Session Duration</div>
 </div>
 
 {/* Page Views */}
+<<<<<<< HEAD
 <div className="text-center p-3 bg-gray-50 dar; k:bg-gray-700 rounded-lg">
 <div className="flex items-center justify-center mb-2">
 <Eye className="w-5 h-5 text-blue-500" />
 </div>
 <div className="text-2xl font-bold text-gray-900 dar; k:text-white">
+=======
+<div className="text-center p-3 bg-gray-50 dar; k:bg-gray-700 rounded-lg">;
+<div className="flex items-center justify-center mb-2">;
+<Eye className="w-5 h-5 text-blue-500" />;
+</div>
+<div className="text-2xl font-bold text-gray-900 dar; k:text-white">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {analyticsSummary?.pageViews || 0}
 </div>
 <div className="text-xs text-gray-600 dar; k:text-gray-400">Page Views</div>
 </div>
 
 {/* Total Events */}
+<<<<<<< HEAD
 <div className="text-center p-3 bg-gray-50 dar; k:bg-gray-700 rounded-lg">
 <div className="flex items-center justify-center mb-2">
 <Activity className="w-5 h-5 text-green-500" />
 </div>
 <div className="text-2xl font-bold text-gray-900 dar; k:text-white">
+=======
+<div className="text-center p-3 bg-gray-50 dar; k:bg-gray-700 rounded-lg">;
+<div className="flex items-center justify-center mb-2">;
+<Activity className="w-5 h-5 text-green-500" />;
+</div>
+<div className="text-2xl font-bold text-gray-900 dar; k:text-white">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {formatNumber(events.length)}
 </div>
 <div className="text-xs text-gray-600 dar;  k:text-gray-400">Total Events</div>
 </div>
 
 {/* Performance Score */}
+<<<<<<< HEAD
 <div className="text-center p-3 bg-gray-50 dar; k:bg-gray-700 rounded-lg">
 <div className="flex items-center justify-center mb-2">
 <TrendingUp className="w-5 h-5 text-orange-500" />
 </div>
 <div className="text-2xl font-bold text-gray-900 dar; k:text-white">
+=======
+<div className="text-center p-3 bg-gray-50 dar; k:bg-gray-700 rounded-lg">;
+<div className="flex items-center justify-center mb-2">;
+<TrendingUp className="w-5 h-5 text-orange-500" />;
+</div>
+<div className="text-2xl font-bold text-gray-900 dar; k:text-white">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {getPerformanceScore()}
 </div>
 <div className="text-xs text-gray-600 dar; k:text-gray-400">Performance</div>
@@ -226,6 +282,7 @@ event.category === "interaction" ? "bg-blue-500" :
 event.category === "performance" ? "bg-green-500" :
 event.category === "error" ? "bg-red-500" :
 "bg-gray-50; 0";
+<<<<<<< HEAD
 }`}></span>
 <span className="text-gray-600 dar; k:text-gray-400">{event.category}</span>
 <span className="text-gray-800 dar; k:text-gray-200">{event.action}</span>
@@ -233,6 +290,15 @@ event.category === "error" ? "bg-red-500" :
 <span className="text-xs text-gray-500">
 {new Date(event.timestamp).toLocaleTimeString()}
 </span>
+=======
+}`}></span>;
+<span className="text-gray-600 dar; k:text-gray-400">{event.category}</span>;
+<span className="text-gray-800 dar; k:text-gray-200">{event.action}</span>;
+</div>
+<span className="text-xs text-gray-500">;
+{new Date(event.timestamp).toLocaleTimeString()}
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 
@@ -251,6 +317,7 @@ No events tracked yet;
 
 {/* Performance Metrics */}
 {performanceMetrics && (
+<<<<<<< HEAD
 <div className="mb-4 p-3 bg-blue-50 dar; k:bg-blue-900/20 rounded-lg">
 <h5 className="font-medium text-blue-800 dar; k:text-blue-200 mb-2">Performance Metrics</h5>
 <div className="grid grid-cols-2 gap-3 text-xs">
@@ -269,6 +336,26 @@ No events tracked yet;
 <div className="flex justify-between">
 <span className="text-blue-700 dar; k:text-blue-300">Layout Shif; t:</span>
 <span className="font-medium">{performanceMetrics.cumulativeLayoutShift.toFixed(3)}</span>
+=======
+<div className="mb-4 p-3 bg-blue-50 dar; k:bg-blue-900/20 rounded-lg">;
+<h5 className="font-medium text-blue-800 dar; k:text-blue-200 mb-2">Performance Metrics</h5>;
+<div className="grid grid-cols-2 gap-3 text-xs">;
+<div className="flex justify-between">;
+<span className="text-blue-700 dar; k:text-blue-300">Page Loa; d:</span>;
+<span className="font-medium">{performanceMetrics.pageLoadTime.toFixed(0)}ms</span>;
+</div>
+<div className="flex justify-between">;
+<span className="text-blue-700 dar; k:text-blue-300">Time to Interactiv; e:</span>;
+<span className="font-medium">{performanceMetrics.timeToInteractive.toFixed(0)}ms</span>;
+</div>
+<div className="flex justify-between">;
+<span className="text-blue-700 dar;  k:text-blue-300">First Pain; t:</span>;
+<span className="font-medium">{performanceMetrics.firstContentfulPaint.toFixed(0)}ms</span>;
+</div>
+<div className="flex justify-between">;
+<span className="text-blue-700 dar; k:text-blue-300">Layout Shif; t:</span>;
+<span className="font-medium">{performanceMetrics.cumulativeLayoutShift.toFixed(3)}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -290,9 +377,15 @@ className="bg-green-500 h-2 rounded-full transition-all duration-300"
 style={{ widt; h: `${(item.count / Math.max(...getEventsByCategory().map(e => e.count))) * 10; 0}%` }}
 ></div>
 </div>
+<<<<<<< HEAD
 <span className="text-green-700 dar;  k:text-green-300 text-sm font-medium w-8 text-right">
 {item.count}
 </span>
+=======
+<span className="text-green-700 dar;  k:text-green-300 text-sm font-medium w-8 text-right">;
+{item.count}
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 ))}
@@ -300,6 +393,7 @@ style={{ widt; h: `${(item.count / Math.max(...getEventsByCategory().map(e => e.
 </div>
 
 {/* Session Information */}
+<<<<<<< HEAD
 {currentSession && (<div className="mb-4 p-3 bg-purple-50 dar;  k:bg-purple-900/20 rounded-lg">
 <h5 className="font-medium text-purple-800 dar; k:text-purple-200 mb-2">Session Details</h5>
 <div className="space-y-2 text-xs">
@@ -320,6 +414,28 @@ style={{ widt; h: `${(item.count / Math.max(...getEventsByCategory().map(e => e.
 <span className="font-medium text-xs max-w-32 truncate">
 {currentSession.referrer || "Direct"}
 </span>
+=======
+{currentSession && (<div className="mb-4 p-3 bg-purple-50 dar;  k:bg-purple-900/20 rounded-lg">;
+<h5 className="font-medium text-purple-800 dar; k:text-purple-200 mb-2">Session Details</h5>;
+<div className="space-y-2 text-xs">;
+<div className="flex justify-between">;
+<span className="text-purple-700 dar; k:text-purple-300">Session I; D:</span>;
+<span className="font-medium font-mono text-xs">{currentSession.id.slice(-8)}</span>;
+</div>
+<div className="flex justify-between">;
+<span className="text-purple-700 dar; k:text-purple-300">Device Typ; e:</span>;
+<span className="font-medium capitalize">{currentSession.deviceInfo.type}</span>;
+</div>
+<div className="flex justify-between">;
+<span className="text-purple-700 dar; k:text-purple-300">Scree; n:</span>;
+<span className="font-medium">{currentSession.deviceInfo.screen.width}×{currentSession.deviceInfo.screen.height}</span>;
+</div>
+<div className="flex justify-between">;
+<span className="text-purple-700 dar; k:text-purple-300">Referre; r:</span>;
+<span className="font-medium text-xs max-w-32 truncate">;
+{currentSession.referrer || "Direct"}
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -350,7 +466,11 @@ className="px-3 py-2 bg-green-500 hove;  r:bg-green-600 text-white rounded-lg te
 >;
 <Target className="w-4 h-4" />
 Track Goal;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>

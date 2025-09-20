@@ -55,8 +55,13 @@ size="sm";
 onClick={closeMenu}
 className="p-2 text-white hover:bg-zion-blue"
 >;
+<<<<<<< HEAD
 <X className="w-6 h-6" />
 </Button>
+=======
+<X className="w-6 h-6" />;
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Search bar */}
@@ -67,7 +72,11 @@ className="p-2 text-white hover:bg-zion-blue"
 type="text"
 placeholder="Search services; talent; equipment...";
 className="w-full pl-10 pr-4 py-3 bg-zion-blue border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -84,9 +93,15 @@ className="flex items-center space-x-3 p-3 rounded-lg text-white hover:bg-zion-b
 <div className="text-zion-cyan">
 {item.icon}
 </div>
+<<<<<<< HEAD
 <span className="font-medium">{item.name}</span>
 </Link>
 </li>
+=======
+<span className="font-medium">{item.name}</span>;
+</Link>;
+</li>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </ul>
 </nav>
@@ -109,6 +124,7 @@ className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-
 >;
 <Link to="/login" onClick={closeMenu}>
 Log In;
+<<<<<<< HEAD
 </Link>
 </Button>
 </div>
@@ -118,6 +134,17 @@ Log In;
 <div className="text-center text-zion-slate-light text-sm">
 <p>© 2024 Zion Tech Group</p>
 <p className="mt-1">All rights reserved</p>
+=======
+</Link>;
+</Button>;
+</div>
+
+{/* Footer */}
+<div className="p-6 border-t border-zion-blue-light">;
+<div className="text-center text-zion-slate-light text-sm">;
+<p>© 2024 Zion Tech Group</p>;
+<p className="mt-1">All rights reserved</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>

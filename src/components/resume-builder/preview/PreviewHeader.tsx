@@ -1,11 +1,12 @@
 
-import { Button,, ,  } from '@/components/ui/button';
-import { ArrowLeft,, FileText,, Link,  } from 'lucide-react'
-import { PdfExportButton,, ,  } from '../PdfExportButton';
-import { Resume,, ,  } from '@/types/resume';
-import { useState,, ,  } from 'react';
-import { useIsMobile,  } from '@/hooks/use-mobile';
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, FileText, Link } from "lucide-react";
+import { PdfExportButton } from "../PdfExportButton";
+import { Resume } from "@/types/resume";
+import { useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 interface PreviewHeaderProps {
+<<<<<<< HEAD
 resume: Resume;,
 onBack: () => void,
 export function PreviewHeader({ resume onBack }: PreviewHeaderProps) {
@@ -15,6 +16,18 @@ className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' 
 >;
 <PdfExportButton resume={resume} />
 <Button,
+=======
+  resume: Resume;
+}
+onBack: () => void,}
+export function PreviewHeader({ resume onBack }: PreviewHeaderProps) {
+      </Button>
+      <div
+className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}
+      >
+        <PdfExportButton resume={resume} />
+        <Button
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 variant='outline'
 onClick={handleBrowserPrint}
 disabled={isPrinting}

@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD:temp_broken_pages_all/Pricing.tsx
 import { Link } from 'react-router-dom';
+=======
+import { Link } from "react-router-dom";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/Pricing.tsx
 const Pricing: React.FC = () => {
   const [isAnnual, setIsAnnual] = useState(false);
   const plans = [
@@ -92,7 +96,11 @@ className={`inline-block h-4 w-4 transform rounded-full bg-blue-600 transition-t
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<<<<<<< HEAD:temp_broken_pages_all/Pricing.tsx
               {plans.map((plan, index) => (
+=======
+            {plans.map((plan index) => (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/Pricing.tsx
               <div
 key={index}
                 className={`relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${

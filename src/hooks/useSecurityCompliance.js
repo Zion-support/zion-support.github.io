@@ -1,13 +1,16 @@
 import { useState, useEffect, useCallback, useRef } from 'react, ';
 import { useAnalytics } from './useAnalytics, ';
 export const useSecurityCompliance = (_initialConfig) => {
+<<<<<<< HEAD
     const { trackEvent } = useAnalytics({
         enableTracking: true;
+=======
+    const { trackEvent } = useAnalytics({enableTracking: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         enableUserBehaviorTracking: true});
     const [securityEvents, setSecurityEvents] = useState([]);
     const [complianceRules, setComplianceRules] = useState([]);
-    const [securityMetrics, setSecurityMetrics] = useState({
-        totalEvents: 0;
+    const [securityMetrics, setSecurityMetrics] = useState({totalEvents: 0;
         criticalEvents: 0;
         highSeverityEvents: 0;
         complianceScore: 100;
@@ -20,8 +23,7 @@ export const useSecurityCompliance = (_initialConfig) => {
     const complianceCheckIntervalRef = useRef();
     // Default compliance rules;
     const defaultComplianceRules = [
-        {
-            id: 'gdpr-data-protection';
+        {id: 'gdpr-data-protection';
             name: 'GDPR Data Protection';
             category: 'gdpr';
             description: 'Ensure personal data is processed lawfully and securely';
@@ -36,8 +38,12 @@ export const useSecurityCompliance = (_initialConfig) => {
                 'Security measures'
             ],
             violations: []};
+<<<<<<< HEAD
         {
             id: 'sox-financial-controls';
+=======
+        {id: 'sox-financial-controls';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             name: 'SOX Financial Controls';
             category: 'sox';
             description: 'Maintain internal controls over financial reporting';
@@ -52,8 +58,12 @@ export const useSecurityCompliance = (_initialConfig) => {
                 'Backup procedures'
             ],
             violations: []};
+<<<<<<< HEAD
         {
             id: 'hipaa-privacy-security';
+=======
+        {id: 'hipaa-privacy-security';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             name: 'HIPAA Privacy & Security';
             category: 'hipaa';
             description: 'Protect health information privacy and security';
@@ -119,8 +129,7 @@ export const useSecurityCompliance = (_initialConfig) => {
     setSecurityEvents(prev => [newEvent, ...prev]);
         trackEvent('security', 'event', 'created', undefined, { eventType: event.type, severity: event.severity });
     // Update metrics;
-        setSecurityMetrics(prev => ({
-            ...prev,
+        setSecurityMetrics(prev => ({...prev,
             totalEvents: prev.totalEvents + 1;
             criticalEvents: prev.criticalEvents + (event.severity === 'critical' ? 1 : 0);
             highSeverityEvents: prev.highSeverityEvents + (event.severity === 'high' ? 1 : 0)}));
@@ -177,8 +186,12 @@ export const useSecurityCompliance = (_initialConfig) => {
             const compliantRules = complianceRules.filter(rule => rule.status === 'compliant').length;
             const totalRules = complianceRules.length;
             const newScore = totalRules > 0 ? Math.round((compliantRules / totalRules) * 100) : 100;
+<<<<<<< HEAD
             setSecurityMetrics(prev => ({
                 ...prev,
+=======
+            setSecurityMetrics(prev => ({...prev,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
                 complianceScore: newScore}));
     trackEvent('compliance', 'check', 'completed', undefined, { score: newScore });
      }
@@ -190,8 +203,7 @@ export const useSecurityCompliance = (_initialConfig) => {
         }
     }, [securityEvents, complianceRules, trackEvent]);
     // Generate security report;
-    const generateSecurityReport = useCallback(() => {
-        const report = {
+    const generateSecurityReport = useCallback(() => {const report = {
             timestamp: new Date().toISOString();
             metrics: securityMetrics;
             recentEvents: securityEvents.slice(0, 10),
@@ -199,7 +211,12 @@ export const useSecurityCompliance = (_initialConfig) => {
                 name: rule.name;
                 status: rule.status;
                 violations: rule.violations.length}));
+<<<<<<< HEAD
             recommendations: []};
+=======
+            recommendations: [],
+        };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     // Generate recommendations;
         if (securityMetrics.complianceScore < 80) {
             report.recommendations.push('Immediate compliance review required');
@@ -214,8 +231,7 @@ export const useSecurityCompliance = (_initialConfig) => {
         return JSON.stringify(report, null, 2);
     }, [securityMetrics, securityEvents, complianceRules, trackEvent]);
     // Export audit log;
-    const exportAuditLog = useCallback(() => {
-        const auditLog = {
+    const exportAuditLog = useCallback(() => {const auditLog = {
             exportTimestamp: new Date().toISOString();
             totalEvents: securityEvents.length;
             events: securityEvents.map(event => ({

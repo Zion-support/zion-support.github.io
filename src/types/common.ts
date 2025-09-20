@@ -4,19 +4,34 @@ import React from "react";
 export; interface; BaseEntity {
 id: string;
 createdA;t: string;
+<<<<<<< HEAD
 updatedA;t: string;};export; interface; ApiResponse<T> {
+=======
+updatedA;t: string;
+};export; interface; ApiResponse<T> {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 data: T;
 message: string;
 success: boolean;
 timestam;p: string;
 export; interface; PaginatedResponse<T> extends ApiResponse<T[]> {
 pagination: {;
+<<<<<<< HEAD
 page: number;,
 limit: number;,
 total: number;,
 totalPages: number;
 hasNex;t: boolean;
 hasPre;v: boolean;};export; interface; ErrorResponse {
+=======
+page: number;
+limit: number;
+total: number;
+totalPages: number;
+hasNex;t: boolean;
+hasPre;v: boolean;
+};export; interface; ErrorResponse {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 error: string;
 message: string;
 statusCode: number;
@@ -87,6 +102,7 @@ primaryColor: string;
 secondaryColor: string;
 accentColo;r: string;
 export; interface; UserPreferences {
+<<<<<<< HEAD
 theme: ThemeConfig;,
 language: string;,
 notifications: {;,
@@ -97,6 +113,20 @@ accessibility: {;,
 highContrast: boolean;
 reducedMotio;n: boolean;
 fontSiz;e: "small" | "medium" | "large";};export; interface; NavigationItem {
+=======
+theme: ThemeConfig;
+language: string;
+notifications: {;
+email: boolean;
+pus;h: boolean;
+sm;s: boolean;
+};
+accessibility: {;
+highContrast: boolean;
+reducedMotio;n: boolean;
+fontSiz;e: "small" | "medium" | "large";
+};export; interface; NavigationItem {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 label: string;
 pat;h: string;
 icon?: string;
@@ -119,6 +149,7 @@ data: T[];
 columns: TableColumn<T>[];
 loading?: boolean;
 pagination?: {
+<<<<<<< HEAD
 page: number;,
 limit: number;,
 total: number;,
@@ -131,6 +162,23 @@ onSort: (fiel;d: keyof Tdirectio;n: "asc" | "desc") => void;};
 selection?: {
 selected: string[];
 onSelectionChang;e: (selecte;d: string[]) => void;};export; interface; ChartDataPoint {
+=======
+page: number;
+limit: number;
+total: number;
+onPageChange: (page: number) => void;
+onLimitChang;e: (limi;t: number) => void;
+};
+sorting?: {
+field: keyof T;
+direction: "asc" | "desc";
+onSort: (fiel;d: keyof Tdirectio;n: "asc" | "desc") => void;
+};
+selection?: {
+selected: string[];
+onSelectionChang;e: (selecte;d: string[]) => void;
+};export; interface; ChartDataPoint {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 label: string;
 valu;e: number;
 color?: string;
@@ -174,14 +222,25 @@ custom?: (value: any) => string | null;
 export; interface; ValidationSchema {
 [key:, string]: ValidationRule;
 export; interface; NotificationConfig {
+<<<<<<< HEAD
 id: string;,
 type: "success" | "error" | "warning" | "info";,
 title: string;,
+=======
+id: string;
+type: "success" | "error" | "warning" | "info";
+title: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 message: string;
 duration?: number;
 action?: {
 labe;l: string;
+<<<<<<< HEAD
 onClic;k: () => void;};
+=======
+onClic;k: () => void;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 dismissible?: boolean;
 export; interface; SearchFilters {
 query?: string;
@@ -189,10 +248,19 @@ category?: string;
 tags?: string[];
 dateRange?: {
 start: Date;
+<<<<<<< HEAD
 en;d: Date;};
 priceRange?: {
 min: number;
 ma;x: number;};
+=======
+en;d: Date;
+};
+priceRange?: {
+min: number;
+ma;x: number;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 sortBy?: string;
 sortOrder?: "asc" | "desc";export; interface; FileUploadConfig {
 accept?: string;
@@ -201,9 +269,15 @@ maxFiles?: number;
 multiple?: boolean;
 onUpload: (files: File[]) => Promise<void>;
 onError?: (erro;r: string) => void;
+<<<<<<< HEAD
 export; interface; ModalConfig {,
 id: string;,
 title: string;,
+=======
+export; interface; ModalConfig {
+id: string;
+title: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 content: React.ReactNode;
 size?: "sm" | "md" | "lg" | "xl" | "full";
 closable?: boolean;
@@ -216,7 +290,12 @@ loading?: boolean;
 };
 secondary?: {
 label: string;
+<<<<<<< HEAD
 onClic;k: () => void;};
+=======
+onClic;k: () => void;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };export; interface; ToastConfig {
 id: string;,
 type: "success" | "error" | "warning" | "info";
@@ -225,7 +304,12 @@ message: string;
 duration?: number;
 action?: {
 labe;l: string;
+<<<<<<< HEAD
 onClic;k: () => void;};export; interface; KeyboardShortcut {
+=======
+onClic;k: () => void;
+};export; interface; KeyboardShortcut {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 key: string;
 ctrlKey?: boolean;
 shiftKey?: boolean;
@@ -239,7 +323,12 @@ key: string;,
 defaultValue: any;
 serializer?: {,
 serialize: (value: any) => string;
+<<<<<<< HEAD
 deserializ;e: (valu;e: string) => any;};export; interface; DebounceConfig {
+=======
+deserializ;e: (valu;e: string) => any;
+};export; interface; DebounceConfig {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 delay: number;
 leading?: boolean;
 trailing?: boolean;
@@ -297,7 +386,12 @@ xssProtection?: boolean;
 contentSecurityPolicy?: string;
 rateLimiting?: {
 windowMs: number;
+<<<<<<< HEAD
 maxRequest;s: number;};export; interface; MonitoringConfig {
+=======
+maxRequest;s: number;
+};export; interface; MonitoringConfig {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 performance?: boolean;
 errors?: boolean;
 userBehavior?: boolean;
@@ -305,15 +399,26 @@ customMetrics?: boolean;
 alerting?: {
 enabled: boolean;
 threshold;s: Record<stringnumber>;
+<<<<<<< HEAD
 channel;s: string[];};export; interface; DeploymentConfig {
+=======
+channel;s: string[];
+};export; interface; DeploymentConfig {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 environment: "development" | "staging" | "production";
 version: string;
 buildNumber: string;
 timestamp: string;
 feature;s: FeatureFlag[ ];
+<<<<<<< HEAD
 export; interface; HealthCheck {,
 status: "healthy" | "degraded" | "unhealthy";,
 timestamp: string;,
+=======
+export; interface; HealthCheck {
+status: "healthy" | "degraded" | "unhealthy";
+timestamp: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 services: {
 [serviceNam;e:, string]: {
 statu;s: "up" | "down" | "degraded";
@@ -321,7 +426,12 @@ responseTime?: number;
 error?: string;
 };
 };
-metrics: {;,
+metrics: {;
 cpu: number;
 memor;y: number;
+<<<<<<< HEAD
 dis;k: number;};}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+=======
+dis;k: number;
+};}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

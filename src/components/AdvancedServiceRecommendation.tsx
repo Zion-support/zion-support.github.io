@@ -30,7 +30,14 @@ budge; t: string;
 timelin; e: string;
 technologyMaturit; y: string;
 primaryGoal; s: string[];
+<<<<<<< HEAD
 challenge; s: string[];};
+=======
+challenge; s: string[];
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface ServiceRecommendation {
 servic; e: {
 i; d: string;
@@ -47,16 +54,27 @@ targetAudienc; e: string[];
 imag; e: string;
 lin; k: string;
 contactInf; o: string;
+<<<<<<< HEAD
 emai; l: string;};
+=======
+emai; l: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 matchScor; e: number;
 reasonin; g: string[];
 priorit; y: "High" | "Medium" | "Low";
 implementationComplexit; y: "Simple" | "Moderate" | "Complex";
 expectedRO; I: string;
+<<<<<<< HEAD
 timeToValu; e: string;}
+=======
+timeToValu; e: string;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
-const AdvancedServiceRecommendatio; n: React.FC = () => {
-const [clientProfi;  l; e; setClientProfi; l; e] = useState<ClientProfile>({
+const AdvancedServiceRecommendatio; n: React.FC = () => {const [clientProfi;  l; e; setClientProfi; l; e] = useState<ClientProfile>({
 industr; y: "";
 companySiz; e: "";
 budge; t: "";
@@ -120,8 +138,12 @@ imag; e: "/images/services/ai-crm.jpg";
 lin; k: "http; s: //ziontechgroup.com/services/ai-crm-platform";
 contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com"};
+<<<<<<< HEAD
 {
 i; d: "quantum-computing-service";
+=======
+{i; d: "quantum-computing-service";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Quantum Computing as a Service";
 descriptio; n: "Enterprise-grade quantum computing platform for complex computational problems.";
 categor; y: "quantum";
@@ -136,8 +158,12 @@ imag; e: "/images/services/quantum-computing.jpg";
 lin; k: "http; s: //ziontechgroup.com/services/quantum-computing-service";
 contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com"};
+<<<<<<< HEAD
 {
 i; d: "blockchain-supply-chain";
+=======
+{i; d: "blockchain-supply-chain";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Blockchain Supply Chain Solution";
 descriptio; n: "Transparent and secure supply chain management using blockchain technology.";
 categor; y: "blockchain";
@@ -248,7 +274,12 @@ switch (priority) {
 case "High": return "bg-red-100 text-red-800";
 case "Medium": return "bg-yellow-100 text-yellow-800";
 case "Low": return "bg-green-100 text-green-800";
+<<<<<<< HEAD
 defaul;  t: return "bg-gray-100 text-gray-800";}
+=======
+defaul;  t: return "bg-gray-100 text-gray-800";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getComplexityColor: any = (complexit; y: string) => {
@@ -256,7 +287,12 @@ switch (complexity) {
 case "Complex": return "bg-red-100 text-red-800";
 case "Moderate": return "bg-yellow-100 text-yellow-800";
 case "Simple": return "bg-green-100 text-green-800";
+<<<<<<< HEAD
 defaul;  t: return "bg-gray-100 text-gray-800";}
+=======
+defaul;  t: return "bg-gray-100 text-gray-800";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const isFormComplete: any = () => {
@@ -268,9 +304,9 @@ clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0;
 return (<div className="max-w-7xl mx-auto p-6">
 {/* Header */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 className="text-center mb-8"
 >;
@@ -285,9 +321,9 @@ Our AI analyzes your profile to suggest the perfect solutions for your business.
 
 {/* Client Profile Form */}
 <motion.div;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.1 }}
 className="bg-white rounded-lg shadow-lg p-6 mb-8"
@@ -309,7 +345,11 @@ className="w-full p-3 border border-zion-slate-light rounded-md"
 {industries.map(industry => (
 <option key={industry} value={industry}>{industry}</option>
 ))}
+<<<<<<< HEAD
 </select>
+=======
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -323,7 +363,11 @@ className="w-full p-3 border border-zion-slate-light rounded-md"
 {companySizes.map(size => (
 <option key={size} value={size}>{size}</option>
 ))}
+<<<<<<< HEAD
 </select>
+=======
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -337,7 +381,11 @@ className="w-full p-3 border border-zion-slate-light rounded-md"
 {budgets.map(budget => (
 <option key={budget} value={budget}>{budget}</option>
 ))}
+<<<<<<< HEAD
 </select>
+=======
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -351,7 +399,11 @@ className="w-full p-3 border border-zion-slate-light rounded-md"
 {timelines.map(timeline => (
 <option key={timeline} value={timeline}>{timeline}</option>
 ))}
+<<<<<<< HEAD
 </select>
+=======
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -365,7 +417,11 @@ className="w-full p-3 border border-zion-slate-light rounded-md"
 {technologyMaturityLevels.map(level => (
 <option key={level} value={level}>{level}</option>
 ))}
+<<<<<<< HEAD
 </select>
+=======
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -422,7 +478,11 @@ onClick={generateRecommendations}
 disabled={!isFormComplete() || isAnalyzing}
 >;
 {isAnalyzing ? (
+<<<<<<< HEAD
 <>
+=======
+<>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
 Analyzing Your Profile...;
 </>
@@ -432,16 +492,22 @@ Analyzing Your Profile...;
 Get AI Recommendations;
 </>
 )}
+<<<<<<< HEAD
 </Button>
 </div>
 </motion.div>
+=======
+</Button>;
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Recommendations Results */}
 {showResults && (
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.2 }}
 >;
@@ -452,9 +518,9 @@ Your Personalized Service Recommendations;
 <div className="space-y-6">
 {recommendations.map((re; c; index) => (<motion.div;
 key={rec.service.id}
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 x: -20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 x: 0 }}
 transition={{ dela; y: 0.1 * index }}
 >;
@@ -478,7 +544,11 @@ Complexit;  y: {rec.implementationComplexity}
 </Badge>
 <Badge className="bg-zion-cyan/10 text-zion-cyan">
 Match Scor; e: {rec.matchScore}%;
+<<<<<<< HEAD
 </Badge>
+=======
+</Badge>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -486,12 +556,20 @@ Match Scor; e: {rec.matchScore}%;
 <div className="text-2xl font-bold text-zion-cyan mb-1">
 {rec.service.price}
 </div>
+<<<<<<< HEAD
 <div className="text-sm text-zion-slate-light">
+=======
+<div className="text-sm text-zion-slate-light">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {rec.service.duration}
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </CardHeader>
+=======
+</CardHeader>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 <CardContent>
 <div className="grid grid-cols-1 l; g:grid-cols-2 gap-6">
@@ -506,13 +584,18 @@ Why This Service Matches;
 {reason}
 </li>
 ))}
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
 <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
 <BarChart3 className="w-4 h-4 text-zion-cyan" />
 Implementation Details;
+<<<<<<< HEAD
 </h4>
 <div className="space-y-3">
 <div className="flex justify-between">
@@ -528,6 +611,23 @@ Implementation Details;
 <Badge variant="outline" className="text-xs">
 {rec.service.category.toUpperCase()}
 </Badge>
+=======
+</h4>;
+<div className="space-y-3">;
+<div className="flex justify-between">;
+<span className="text-sm text-zion-slate-light">Expected RO;  I:</span>;
+<span className="text-sm font-medium text-zion-slate-dark">{rec.expectedROI}</span>;
+</div>
+<div className="flex justify-between">;
+<span className="text-sm text-zion-slate-light">Time to Valu; e:</span>;
+<span className="text-sm font-medium text-zion-slate-dark">{rec.timeToValue}</span>;
+</div>
+<div className="flex justify-between">;
+<span className="text-sm text-zion-slate-light">Categor; y:</span>;
+<Badge variant="outline" className="text-xs">;
+{rec.service.category.toUpperCase()}
+</Badge>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -537,6 +637,7 @@ className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hove; r:from-zi
 onClick={() => window.open(rec.service.lin;  k, "_blank")}
 >;
 Learn More;
+<<<<<<< HEAD
 <ArrowRight className="w-4 h-4 ml-2" />
 </Button>
 </div>
@@ -545,14 +646,24 @@ Learn More;
 </CardContent>
 </Card>
 </motion.div>
+=======
+<ArrowRight className="w-4 h-4 ml-2" />;
+</Button>;
+</div>
+</div>
+</div>
+</CardContent>;
+</Card>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 
 {/* CTA Section */}
 <motion.div;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.4 }}
 className="mt-12 text-center"
@@ -578,11 +689,19 @@ onClick={() => window.open("te;  l:+13024640950", "_blank")}
 >;
 <Zap className="w-5 h-5 mr-2" />
 Call Now;
+<<<<<<< HEAD
 </Button>
 </div>
 </div>
 </motion.div>
 </motion.div>
+=======
+</Button>;
+</div>
+</div>
+</motion.div>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </div>
 );

@@ -1,9 +1,10 @@
 
-import React from "react",
-import { Button,  } from "@/components/ui/button";
-import { type,, Company,  } from "./CompanyDashboard";
-import { Bell,, Users,, Settings,  } from 'lucide-react'
+import React from "react";;
+import { Button } from "@/components/ui/button";
+import { type, Company } from "./CompanyDashboard";
+import { Bell, Users, Settings } from "lucide-react";
 interface WorkspaceHeaderProps {
+<<<<<<< HEAD
 company: Company,
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
 return (
@@ -12,6 +13,16 @@ return (
 <div className='flex items-center gap-4'>
 <div className='h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border'>
 <img,
+=======
+  company: Company,}
+export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
+  return (
+    <div className='space-y-6'>
+      <div className='flex items-center justify-between'>
+        <div className='flex items-center gap-4'>
+          <div className='h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border'>
+            <img
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 src={company.logoUrl |'/placeholder.svg'}
 alt={company.name}
 className='max-h-10 max-w-10'
@@ -30,13 +41,24 @@ loading='lazy'            />
 interface WorkspaceHeaderProps {
 company: Company;
 }
+}
+}
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
+<<<<<<< HEAD
 return (
 <div className="space-y-6">
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-4">
 <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">
 <img,
+=======
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">
+            <img
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 src={company.logoUrl |"/placeholder.svg"}
 alt={company.name}
 className="max-h-10 max-w-10"

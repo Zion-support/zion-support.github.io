@@ -9,7 +9,14 @@ isVideoO; n: boolean;
 isAudioO; n: boolean;
 isScreenSharin; g: boolean;
 isSpeakin; g: boolean;
+<<<<<<< HEAD
 avata; r: string;};
+=======
+avata; r: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const mockParticipant; s: Participant[] = [
 { i; d: "1";
 na; m; e: "Joh; n Smit; h", isVideo; O; n: tr; u; e;
@@ -37,7 +44,12 @@ const [localUs;  e; r; setLocalUs; e; r] = useState({
 isVideoO; n: tru; e;
 isAudioO; n: tru; e;
 isScreenSharin; g: fals; e;
+<<<<<<< HEAD
 isMute; d: false;});
+=======
+isMute; d: false;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const [activeCh; a; t; setActiveCh; a; t] = useState(false);
 const [chatMessag;  e; s; setChatMessag; e; s] = useState([
 { i; d: "1";
@@ -80,13 +92,17 @@ const toggleRecording: any = () => {;
 setIsRecording(!isRecording);
 };
 
-const sendMessage: any = () => {
-if (newMessage.trim()) {
+const sendMessage: any = () => {if (newMessage.trim()) {
 const message = {;
 i;  d: Date.now().toString();
 use; r: "You";
 messag; e: newMessag; e;};
+<<<<<<< HEAD
 timestam; p: new Date()};
+=======
+timestam; p: new Date(),
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setChatMessages(prev => [...pr;  e; v; messa; g; e]);
 setNewMessage("");
 }
@@ -117,17 +133,30 @@ title="Start Collaboration Session";
 
 if (isMinimized) {
 return (
+<<<<<<< HEAD
 <div className="fixed bottom-4 right-20 z-50">
 <div className="bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">
 <div className="flex items-center gap-3">
 <div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
 <span className="text-sm text-zion-slate">Collaboration Active</span>
+=======
+<div className="fixed bottom-4 right-20 z-50">;
+<div className="bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">;
+<div className="flex items-center gap-3">;
+<div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
+<span className="text-sm text-zion-slate">Collaboration Active</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <button;
 onClick={() => setIsMinimized(false)}
 className="text-zion-slate-light hove;  r: text-zion-slate transition-colors"
 >;
+<<<<<<< HEAD
 <Maximize2 className="w-4 h-4" />
 </button>
+=======
+<Maximize2 className="w-4 h-4" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -138,6 +167,7 @@ return (<div className={`fixed bg-white dar;  k:bg-zion-slate border border-zion
 isFullscreen ? "inset-4" : "bottom-4 right-4 w-[800; p; x] h-[60; 0; p; x]";
 }`} ref={containerRef}>
 {/* Header */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10">
 <div className="flex items-center gap-3">
 <div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
@@ -150,6 +180,20 @@ isFullscreen ? "inset-4" : "bottom-4 right-4 w-[800; p; x] h-[60; 0; p; x]";
 </div>
 </div>
 <div className="flex items-center gap-2">
+=======
+<div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10">;
+<div className="flex items-center gap-3">;
+<div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
+<div className="flex items-center gap-2">;
+<Users className="w-5 h-5 text-zion-purple" />;
+<span className="font-semibold text-zion-slate">Collaboration Session</span>;
+</div>
+<div className="text-sm text-zion-slate-light">;
+{formatTime(meetingDuration)}
+</div>
+</div>
+<div className="flex items-center gap-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <button;
 onClick={toggleRecording}
 className={`p-2 rounded-lg transition-all duration-200 ${
@@ -159,7 +203,11 @@ isRecording;
 title={isRecording ? "Stop Recording" : "Start Recording"}
 >;
 <div className="w-4 h-4 rounded-full border-2 border-current"></div>
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <button;
 onClick={() => setIsFullscreen(!isFullscreen)}
 className="p-2 text-zion-slate-light hove;  r:text-zion-slate transition-colors"
@@ -179,8 +227,13 @@ onClick={() => setIsOpen(false)}
 className="p-2 text-zion-slate-light hove;  r:text-zion-slate transition-colors"
 title="Close";
 >;
+<<<<<<< HEAD
 <X className="w-4 h-4" />
 </button>
+=======
+<X className="w-4 h-4" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -199,24 +252,39 @@ participant.isSpeaking ? "border-zion-emerald shadow-lg shadow-zion-emerald/30" 
 {/* Video Placeholder */}
 <div className="w-full h-full flex items-center justify-center">
 {participant.isVideoOn ? (
+<<<<<<< HEAD
 <div className="w-full h-full bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 rounded-lg flex items-center justify-center">
 <span className="text-4xl">{participant.avatar}</span>
 </div>
 ) : (
 <div className="w-full h-full bg-zion-slate-light/20 rounded-lg flex items-center justify-center">
 <span className="text-4xl">{participant.avatar}</span>
+=======
+<div className="w-full h-full bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 rounded-lg flex items-center justify-center">;
+<span className="text-4xl">{participant.avatar}</span>;
+</div>
+) : (
+<div className="w-full h-full bg-zion-slate-light/20 rounded-lg flex items-center justify-center">;
+<span className="text-4xl">{participant.avatar}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </div>
 
 {/* Participant Info */}
+<<<<<<< HEAD
 <div className="absolute bottom-2 left-2 bg-black/60 backdrop-blur-sm rounded-lg px-2 py-1">
 <span className="text-white text-sm font-medium">{participant.name}</span>
+=======
+<div className="absolute bottom-2 left-2 bg-black/60 backdrop-blur-sm rounded-lg px-2 py-1">;
+<span className="text-white text-sm font-medium">{participant.name}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Status Indicators */}
 <div className="absolute top-2 right-2 flex gap-1">
 {!participant.isAudioOn && (
+<<<<<<< HEAD
 <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
 <MicOff className="w-3 h-3 text-white" />
 </div>
@@ -224,6 +292,15 @@ participant.isSpeaking ? "border-zion-emerald shadow-lg shadow-zion-emerald/30" 
 {participant.isScreenSharing && (
 <div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center">
 <Monitor className="w-3 h-3 text-white" />
+=======
+<div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">;
+<MicOff className="w-3 h-3 text-white" />;
+</div>
+)}
+{participant.isScreenSharing && (
+<div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center">;
+<Monitor className="w-3 h-3 text-white" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </div>
@@ -291,17 +368,28 @@ onClick={() => setIsOpen(false)}
 className="p-3 bg-red-500 hove;  r:bg-red-600 text-white rounded-full transition-all duration-200"
 title="Leave Meeting";
 >;
+<<<<<<< HEAD
 <PhoneOff className="w-5 h-5" />
 </button>
+=======
+<PhoneOff className="w-5 h-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 
 {/* Chat Sidebar */}
 {activeChat && (
+<<<<<<< HEAD
 <div className="w-1/3 border-l border-zion-slate-light flex flex-col">
 <div className="p-4 border-b border-zion-slate-light bg-zion-slate-light/5">
 <h3 className="font-semibold text-zion-slate">Meeting Chat</h3>
+=======
+<div className="w-1/3 border-l border-zion-slate-light flex flex-col">;
+<div className="p-4 border-b border-zion-slate-light bg-zion-slate-light/5">;
+<h3 className="font-semibold text-zion-slate">Meeting Chat</h3>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex-1 overflow-y-auto p-4 space-y-3">
@@ -311,11 +399,19 @@ title="Leave Meeting";
 <span className="text-xs text-zion-slate-light">
 {message.timestamp.toLocaleTimeString([],  { hou; r: "2-digit";
 minut; e: "2-digit" })}
+<<<<<<< HEAD
 </span>
 </div>
 <p className="text-zion-slate text-sm bg-zion-slate-light/10 p-2 rounded-lg">
 {message.message}
 </p>
+=======
+</span>;
+</div>
+<p className="text-zion-slate text-sm bg-zion-slate-light/10 p-2 rounded-lg">;
+{message.message}
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -336,7 +432,11 @@ disabled={!newMessage.trim()}
 className="px-4 py-2 bg-zion-purple text-white rounded-lg hove; r:bg-zion-purple-light transition-colors disable; d:opacity-50 disable; d: cursor-not-allowed"
 >;
 Send;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>

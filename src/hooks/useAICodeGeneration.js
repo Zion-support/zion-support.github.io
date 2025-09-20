@@ -1,8 +1,12 @@
 import { useState, useCallback, useRef, useEffect } from 'react, ';
 import { useAnalytics } from './useAnalytics, ';
 export const useAICodeGeneration = () => {
+<<<<<<< HEAD
     const { trackEvent } = useAnalytics({
         enableTracking: true;
+=======
+    const { trackEvent } = useAnalytics({enableTracking: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         enableUserBehaviorTracking: true});
     const [isGenerating, setIsGenerating] = useState(false);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -43,15 +47,18 @@ export const useAICodeGeneration = () => {
     setHistory(prev => [historyItem, ...prev.slice(0, 49)]); // Keep last 50 items;
             // Analyze the generated code;
             await analyzeCode(generatedCode, options.language);
-            trackEvent('ai_code_generation', 'code_generated', options.language, generatedCode.length, {
-                framework: options.framework;
+            trackEvent('ai_code_generation', 'code_generated', options.language, generatedCode.length, {framework: options.framework;
                 style: options.style;
                 target: options.target;
                 quality: options.quality});
      }
+<<<<<<< HEAD
         catch (error) {
             
             trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
+=======
+        catch (error) {trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
                 error: error instanceof Error ? error.message : 'Unknown error'});
      }
         finally {
@@ -76,15 +83,18 @@ export const useAICodeGeneration = () => {
             };
             setCodeAnalysis(analysis);
             setSuggestions(analysis.suggestions);
-            trackEvent('ai_code_analysis', 'code_analyzed', language, code.length, {
-                complexity: analysis.complexity;
+            trackEvent('ai_code_analysis', 'code_analyzed', language, code.length, {complexity: analysis.complexity;
                 maintainability: analysis.maintainability;
                 security: analysis.security;
                 performance: analysis.performance});
      }
+<<<<<<< HEAD
         catch (error) {
             
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
+=======
+        catch (error) {trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
                 error: error instanceof Error ? error.message : 'Unknown error'});
      }
         finally {
@@ -99,8 +109,7 @@ export const useAICodeGeneration = () => {
         });
         // Remove the applied suggestion;
         setSuggestions(prev => prev.filter(s => s.id !== suggestion.id));
-        trackEvent('ai_code_generation', 'suggestion_applied', suggestion.type, undefined, {
-            suggestionId: suggestion.id;
+        trackEvent('ai_code_generation', 'suggestion_applied', suggestion.type, undefined, {suggestionId: suggestion.id;
             impact: suggestion.impact;
             category: suggestion.category});
      }, [trackEvent]);
@@ -127,9 +136,13 @@ export const useAICodeGeneration = () => {
             trackEvent('ai_code_generation', 'code_optimized', focus, optimizedCode.length);
             return optimizedCode;
         }
+<<<<<<< HEAD
         catch (error) {
             
             trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
+=======
+        catch (error) {trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
                 error: error instanceof Error ? error.message : 'Unknown error'});
     return code;
         }
@@ -152,9 +165,13 @@ export const useAICodeGeneration = () => {
             trackEvent('ai_code_generation', 'tests_generated', language, testCode.length);
             return testCode;
         }
+<<<<<<< HEAD
         catch (error) {
             
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
+=======
+        catch (error) {trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
                 error: error instanceof Error ? error.message : 'Unknown error'});
     return '// Failed to generate tests';
         }
@@ -177,9 +194,13 @@ export const useAICodeGeneration = () => {
             trackEvent('ai_code_generation', 'docs_generated', language, docs.length);
             return docs;
         }
+<<<<<<< HEAD
         catch (error) {
             
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
+=======
+        catch (error) {trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
                 error: error instanceof Error ? error.message : 'Unknown error'});
     return '// Failed to generate documentation';
         }
@@ -190,8 +211,7 @@ export const useAICodeGeneration = () => {
         trackEvent('ai_code_generation', 'history_cleared', 'manual');
     }, [trackEvent]);
     // Export generated code;
-    const exportCode = useCallback((format) => {
-        let exportContent = '';
+    const exportCode = useCallback((format) => {let exportContent = '';
         let filename = '';
         if (format === 'json') {
             exportContent = JSON.stringify({
@@ -242,14 +262,17 @@ interface ${options.style === 'oop' ? 'ComponentProps' : 'Props'} {
   // TODO: Define props based on prompt: ${prompt}
 }
 
-export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'ComponentProps' : 'Props'}> = (props) => {
-  const [state, setState] = useState<any>(null);
+export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'ComponentProps' : 'Props'}> = (props) => {const [state, setState] = useState<any>(null);
 
   useEffect(() => {
     // TODO: Implement initialization logic}, []);
 
+<<<<<<< HEAD
   const handleAction = useCallback(() => {
     // TODO: Implement action handler}, []);
+=======
+  const handleAction = useCallback(() => {// TODO: Implement action handler}, []);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
   return (
     <motion.div;
@@ -407,16 +430,14 @@ if __name__ == "__main__":
         }
         return suggestions;
     };
-    const analyzeCodeIssues = (code, _language) => {
-        const issues = [];
+    const analyzeCodeIssues = (code, _language) => {const issues = [];
         if (code.includes('TODO')) {
             issues.push({
                 severity: 'info';
                 message: 'Code contains TODO comments that need implementation';
                 line: code.split('\n').findIndex(line => line.includes('TODO')) + 1});
      }
-        if (code.includes('any')) {
-            issues.push({
+        if (code.includes('any')) {issues.push({
                 severity: 'warning';
                 message: 'Usage of "any" type reduces type safety';
                 line: code.split('\n').findIndex(line => line.includes('any')) + 1});
@@ -459,8 +480,12 @@ describe('GeneratedComponent', () => {
     expect(screen.getByText('Generated Component')).toBeInTheDocument();
   });
 
+<<<<<<< HEAD
   it('handles user interactions', () => {
     render(<GeneratedComponent />);
+=======
+  it('handles user interactions', () => {render(<GeneratedComponent />);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     // TODO: Add specific test cases based on component functionality});
 });`;
     };

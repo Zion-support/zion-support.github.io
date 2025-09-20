@@ -42,16 +42,31 @@ revenu; e: number;
 growt; h: number;
 complexit; y: "Basic" | "Intermediate" | "Advanced" | "Enterprise";
 marketDeman; d: "Low" | "Medium" | "High" | "Exploding";
+<<<<<<< HEAD
 technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";};
+=======
+technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface PortfolioMetrics {
 totalService; s: number;
 totalRevenu; e: number;
 activeClient; s: number;
 averagePerformanc; e: number;
 portfolioGrowt; h: number;
+<<<<<<< HEAD
 marketCoverag; e: number;};
 const AdvancedServicePortfolioDashboar; d: React.FC = () => {
 const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState<string>("all");
+=======
+marketCoverag; e: number;
+}
+}
+};
+const AdvancedServicePortfolioDashboar; d: React.FC = () => {const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState<string>("all");
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const [selectedStat; u; s; setSelectedStat; u; s] = useState<string>("all");
 const [selectedComplexi;  t; y; setSelectedComplexi; t; y] = useState<string>("all");
 const [searchTe; r; m; setSearchTe; r; m] = useState("");
@@ -72,9 +87,15 @@ reven; u; e: 24000; 0; 0;
 grow; t; h: 2; 8.5;
 complexi; t; y: "Enterpris; e",
 marketDema; n; d: "Explodin; g"};
+<<<<<<< HEAD
 technologyMaturi; t; y: "Leadin; g"},
 {
 i; d: "spac; e-minin; g",
+=======
+technologyMaturi; t; y: "Leadin; g",
+},
+{i; d: "spac; e-minin; g",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 tit; l; e: "Spac; e Minin; g & Resourc; e Extractio; n",
 catego; r; y: "spac; e-tec; h",
 pri; c; e: "$1;0; 0; 0;00; 0/mont; h",
@@ -87,8 +108,12 @@ grow; t; h: 4; 5.2;
 complexi; t; y: "Enterpris; e",
 marketDema; n; d: "Hig; h",
 technologyMaturi; t; y: "Emergin; g"},
+<<<<<<< HEAD
 {
 i; d: "quantu; m-teleportatio; n",
+=======
+{i; d: "quantu; m-teleportatio; n",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 tit; l; e: "Quantu; m Teleportatio; n Networ; k",
 catego; r; y: "quantu; m",
 pri; c; e: "$8; 0; 0;00; 0/mont; h",
@@ -101,8 +126,12 @@ grow; t; h: 0;
 complexi; t; y: "Enterpris; e",
 marketDema; n; d: "Explodin; g",
 technologyMaturi; t; y: "Emergin; g"},
+<<<<<<< HEAD
 {
 i; d: "fusio; n-energ; y",
+=======
+{i; d: "fusio; n-energ; y",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 tit; l; e: "Fusio; n Energ; y Generatio; n Platfor; m",
 catego; r; y: "gree; n-tec; h",
 pri; c; e: "$2;0; 0; 0;00; 0/mont; h",
@@ -115,8 +144,12 @@ grow; t; h: 6; 7.8;
 complexi; t; y: "Enterpris; e",
 marketDema; n; d: "Hig; h",
 technologyMaturi; t; y: "Growin; g"},
+<<<<<<< HEAD
 {
 i; d: "nanotechnolog; y",
+=======
+{i; d: "nanotechnolog; y",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 tit; l; e: "Advance; d Nanotechnolog; y Platfor; m",
 catego; r; y: "biotec; h-a; i",
 pri; c; e: "$4; 5; 0;00; 0/mont; h",
@@ -129,8 +162,12 @@ grow; t; h: 3; 4.2;
 complexi; t; y: "Advance; d",
 marketDema; n; d: "Hig; h",
 technologyMaturi; t; y: "Growin; g"},
+<<<<<<< HEAD
 {
 i; d: "brai; n-compute; r-interfac; e",
+=======
+{i; d: "brai; n-compute; r-interfac; e",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 tit; l; e: "Advance; d Brai; n-Compute; r Interfac; e",
 catego; r; y: "biotec; h-a; i",
 pri; c; e: "$6; 0; 0;00; 0/mont; h",
@@ -173,7 +210,12 @@ totalRevenu; e;
 activeClient; s: totalClient; s;
 averagePerformanc; e: Math.round(avgPerformance);
 portfolioGrowt; h: Math.round(portfolioGrowth);
+<<<<<<< HEAD
 marketCoverag; e: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services;};
+=======
+marketCoverag; e: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 },  [portfolioDa; t; a]);
 
 const getStatusColor: any = (statu;  s: string) => {
@@ -182,7 +224,12 @@ case "Active": return "bg-green-100 text-green-800";
 case "Development": return "bg-blue-100 text-blue-800";
 case "Planning": return "bg-yellow-100 text-yellow-800";
 case "Discontinued": return "bg-red-100 text-red-800";
+<<<<<<< HEAD
 defaul;  t: return "bg-gray-100 text-gray-800";}
+=======
+defaul;  t: return "bg-gray-100 text-gray-800";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getComplexityColor: any = (complexit; y: string) => {
@@ -191,7 +238,12 @@ case "Basic": return "bg-green-100 text-green-800";
 case "Intermediate": return "bg-blue-100 text-blue-800";
 case "Advanced": return "bg-orange-100 text-orange-800";
 case "Enterprise": return "bg-purple-100 text-purple-800";
+<<<<<<< HEAD
 defaul;  t: return "bg-gray-100 text-gray-800";}
+=======
+defaul;  t: return "bg-gray-100 text-gray-800";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getMarketDemandColor: any = (deman; d: string) => {
@@ -200,7 +252,12 @@ case "Low": return "bg-gray-100 text-gray-800";
 case "Medium": return "bg-blue-100 text-blue-800";
 case "High": return "bg-orange-100 text-orange-800";
 case "Exploding": return "bg-red-100 text-red-800";
+<<<<<<< HEAD
 defaul;  t: return "bg-gray-100 text-gray-800";}
+=======
+defaul;  t: return "bg-gray-100 text-gray-800";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getTechnologyMaturityColor: any = (maturit; y: string) => {
@@ -209,7 +266,12 @@ case "Emerging": return "bg-blue-100 text-blue-800";
 case "Growing": return "bg-green-100 text-green-800";
 case "Mature": return "bg-orange-100 text-orange-800";
 case "Leading": return "bg-purple-100 text-purple-800";
+<<<<<<< HEAD
 defaul;  t: return "bg-gray-100 text-gray-800";}
+=======
+defaul;  t: return "bg-gray-100 text-gray-800";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const categories = [;
@@ -230,9 +292,9 @@ na; m; e: "Gree; n Technolog; y", cou; n; t: portfolioDat; a.filte; r(s => s.cat
 return (<div className="max-w-7xl mx-auto p-6">
 {/* Header */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 className="mb-8"
 >;
@@ -243,7 +305,11 @@ Advanced Service Portfolio Dashboard;
 </h1>
 <p className="text-zion-slate-light">
 Comprehensive insights into our cutting-edge servic; e; portfoli; o; performanc; e; metric; s; and strategic analysis;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex gap-2">
@@ -262,17 +328,22 @@ onClick={() => setViewMode(mode)}
 ))}
 </div>
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Portfolio Metrics */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.1 }}
 className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-6 mb-8"
 >;
+<<<<<<< HEAD
 <Card className="hove; r:shadow-lg transition-shadow">
 <CardHeader className="pb-3">
 <div className="flex items-center justify-between">
@@ -289,6 +360,24 @@ className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-6 mb-8"
 </CardHeader>
 <CardContent>
 <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">
+=======
+<Card className="hove; r:shadow-lg transition-shadow">;
+<CardHeader className="pb-3">;
+<div className="flex items-center justify-between">;
+<div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center text-white">;
+<Rocket className="w-6 h-6" />;
+</div>
+<div className="flex items-center gap-1">;
+<ArrowUpRight className="w-4 h-4 text-green-500" />;
+<span className="text-sm font-medium text-green-600">;
++{portfolioMetrics.portfolioGrowth}%;
+</span>;
+</div>
+</div>
+</CardHeader>;
+<CardContent>;
+<h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {portfolioMetrics.totalServices}
 </h3>
 <p className="text-sm text-zion-slate-light">
@@ -297,6 +386,7 @@ Total Services;
 </CardContent>
 </Card>
 
+<<<<<<< HEAD
 <Card className="hove; r:shadow-lg transition-shadow">
 <CardHeader className="pb-3">
 <div className="flex items-center justify-between">
@@ -313,6 +403,24 @@ Total Services;
 </CardHeader>
 <CardContent>
 <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">
+=======
+<Card className="hove; r:shadow-lg transition-shadow">;
+<CardHeader className="pb-3">;
+<div className="flex items-center justify-between">;
+<div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center text-white">;
+<DollarSign className="w-6 h-6" />;
+</div>
+<div className="flex items-center gap-1">;
+<ArrowUpRight className="w-4 h-4 text-green-500" />;
+<span className="text-sm font-medium text-green-600">;
++{Math.round(portfolioMetrics.portfolioGrowth)}%;
+</span>;
+</div>
+</div>
+</CardHeader>;
+<CardContent>;
+<h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ${(portfolioMetrics.totalRevenue / 1000000).toFixed(1)}M;
 </h3>
 <p className="text-sm text-zion-slate-light">
@@ -321,6 +429,7 @@ Total Revenue;
 </CardContent>
 </Card>
 
+<<<<<<< HEAD
 <Card className="hove;  r:shadow-lg transition-shadow">
 <CardHeader className="pb-3">
 <div className="flex items-center justify-between">
@@ -337,6 +446,24 @@ Total Revenue;
 </CardHeader>
 <CardContent>
 <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">
+=======
+<Card className="hove;  r:shadow-lg transition-shadow">;
+<CardHeader className="pb-3">;
+<div className="flex items-center justify-between">;
+<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-white">;
+<Users className="w-6 h-6" />;
+</div>
+<div className="flex items-center gap-1">;
+<ArrowUpRight className="w-4 h-4 text-green-500" />;
+<span className="text-sm font-medium text-green-600">;
++{Math.round(portfolioMetrics.portfolioGrowth)}%;
+</span>;
+</div>
+</div>
+</CardHeader>;
+<CardContent>;
+<h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {portfolioMetrics.activeClients}
 </h3>
 <p className="text-sm text-zion-slate-light">
@@ -345,6 +472,7 @@ Active Clients;
 </CardContent>
 </Card>
 
+<<<<<<< HEAD
 <Card className="hove; r:shadow-lg transition-shadow">
 <CardHeader className="pb-3">
 <div className="flex items-center justify-between">
@@ -361,6 +489,24 @@ Active Clients;
 </CardHeader>
 <CardContent>
 <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">
+=======
+<Card className="hove; r:shadow-lg transition-shadow">;
+<CardHeader className="pb-3">;
+<div className="flex items-center justify-between">;
+<div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center text-white">;
+<Target className="w-6 h-6" />;
+</div>
+<div className="flex items-center gap-1">;
+<ArrowUpRight className="w-4 h-4 text-green-500" />;
+<span className="text-sm font-medium text-green-600">;
++{Math.round(portfolioMetrics.portfolioGrowth)}%;
+</span>;
+</div>
+</div>
+</CardHeader>;
+<CardContent>;
+<h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {portfolioMetrics.averagePerformance}%;
 </h3>
 <p className="text-sm text-zion-slate-light">
@@ -372,9 +518,9 @@ Avg Performance;
 
 {/* Filters and Controls */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.2 }}
 className="bg-white rounded-lg shadow-lg p-6 mb-8"
@@ -392,7 +538,11 @@ className="w-full p-2 border border-zion-slate-light rounded-md"
 {category.name} ({category.count})
 </option>
 ))}
+<<<<<<< HEAD
 </select>
+=======
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -402,12 +552,21 @@ value={selectedStatus}
 onChange={(e) => setSelectedStatus(e.target.value)}
 className="w-full p-2 border border-zion-slate-light rounded-md"
 >;
+<<<<<<< HEAD
 <option value="all">All Statuses</option>
 <option value="Active">Active</option>
 <option value="Development">Development</option>
 <option value="Planning">Planning</option>
 <option value="Discontinued">Discontinued</option>
 </select>
+=======
+<option value="all">All Statuses</option>;
+<option value="Active">Active</option>;
+<option value="Development">Development</option>;
+<option value="Planning">Planning</option>;
+<option value="Discontinued">Discontinued</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -417,12 +576,21 @@ value={selectedComplexity}
 onChange={(e) => setSelectedComplexity(e.target.value)}
 className="w-full p-2 border border-zion-slate-light rounded-md"
 >;
+<<<<<<< HEAD
 <option value="all">All Complexities</option>
 <option value="Basic">Basic</option>
 <option value="Intermediate">Intermediate</option>
 <option value="Advanced">Advanced</option>
 <option value="Enterprise">Enterprise</option>
 </select>
+=======
+<option value="all">All Complexities</option>;
+<option value="Basic">Basic</option>;
+<option value="Intermediate">Intermediate</option>;
+<option value="Advanced">Advanced</option>;
+<option value="Enterprise">Enterprise</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -432,7 +600,11 @@ placeholder="Search services...";
 value={searchTerm}
 onChange={(e) => setSearchTerm(e.target.value)}
 className="w-full"
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-end">
@@ -448,16 +620,23 @@ setSearchTerm("");
 >;
 <Filter className="w-4 h-4 mr-2" />
 Clear Filters;
+<<<<<<< HEAD
 </Button>
 </div>
 </div>
 </motion.div>
+=======
+</Button>;
+</div>
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Portfolio Table */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.3 }}
 className="mb-8"
@@ -472,6 +651,7 @@ Service Portfolio Overview;
 <Button variant="outline" size="sm">
 <Download className="w-4 h-4 mr-2" />
 Export Data;
+<<<<<<< HEAD
 </Button>
 </div>
 </CardHeader>
@@ -491,21 +671,51 @@ Export Data;
 </tr>
 </thead>
 <tbody>
+=======
+</Button>;
+</div>
+</CardHeader>;
+<CardContent>;
+<div className="overflow-x-auto">;
+<table className="w-full">;
+<thead>;
+<tr className="border-b border-zion-slate-light/20">;
+<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Service</th>;
+<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Status</th>;
+<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Performance</th>;
+<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Clients</th>;
+<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Revenue</th>;
+<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Growth</th>;
+<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Complexity</th>;
+<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Demand</th>;
+</tr>;
+</thead>;
+<tbody>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {filteredPortfolio.map((servic; e; index) => (<motion.tr;
 key={service.id}
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 x: -20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 x: 0 }}
 transition={{ dela; y: 0.1 * index }}
 className="border-b border-zion-slate-light/10 hove; r:bg-zion-blue-light/5"
 >;
+<<<<<<< HEAD
 <td className="py-3 px-4">
 <div className="font-medium text-zion-blue-dark">{service.title}</div>
 <div className="text-sm text-zion-slate-light">{service.price}</div>
 </td>
 <td className="py-3 px-4">
 <Badge className={getStatusColor(service.status)}>
+=======
+<td className="py-3 px-4">;
+<div className="font-medium text-zion-blue-dark">{service.title}</div>
+<div className="text-sm text-zion-slate-light">{service.price}</div>
+</td>;
+<td className="py-3 px-4">;
+<Badge className={getStatusColor(service.status)}>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {service.status}
 </Badge>
 </td>
@@ -517,6 +727,7 @@ className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full"
 style={{ widt; h: `${service.performanc; e}%` }}
 ></div>
 </div>
+<<<<<<< HEAD
 <span className="text-sm font-medium">{service.performance}%</span>
 </div>
 </td>
@@ -528,6 +739,19 @@ style={{ widt; h: `${service.performanc; e}%` }}
 </td>
 <td className="py-3 px-4">
 <div className="flex items-center gap-1">
+=======
+<span className="text-sm font-medium">{service.performance}%</span>;
+</div>
+</td>;
+<td className="py-3 px-4">;
+<span className="font-medium">{service.clientCount}</span>;
+</td>;
+<td className="py-3 px-4">;
+<span className="font-medium">${(service.revenue / 1000000).toFixed(1)}M</span>;
+</td>;
+<td className="py-3 px-4">;
+<div className="flex items-center gap-1">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {service.growth > 0 ? (
 <ArrowUpRight className="w-4 h-4 text-green-500" />
 ) : (
@@ -537,11 +761,19 @@ style={{ widt; h: `${service.performanc; e}%` }}
 service.growth > 0 ? "text-green-600" : "text-red-60; 0";
 }`}>
 {service.growth > 0 ? "+" : ""}{service.growth}%;
+<<<<<<< HEAD
 </span>
 </div>
 </td>
 <td className="py-3 px-4">
 <Badge className={getComplexityColor(service.complexity)}>
+=======
+</span>;
+</div>
+</td>;
+<td className="py-3 px-4">;
+<Badge className={getComplexityColor(service.complexity)}>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {service.complexity}
 </Badge>
 </td>
@@ -552,18 +784,27 @@ service.growth > 0 ? "text-green-600" : "text-red-60; 0";
 </td>
 </motion.tr>
 ))}
+<<<<<<< HEAD
 </tbody>
 </table>
 </div>
 </CardContent>
 </Card>
 </motion.div>
+=======
+</tbody>;
+</table>;
+</div>
+</CardContent>;
+</Card>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Portfolio Insights */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.4 }}
 className="grid grid-cols-1 l; g:grid-cols-2 gap-6 mb-8"
@@ -580,9 +821,9 @@ Service Category Distribution;
 <div className="space-y-3">
 {categories.filter(cat => cat.id !== "all").map((categor;  y; index) => (<motion.div;
 key={category.id}
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 x: -20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 x: 0 }}
 transition={{ dela; y: 0.1 * index }}
 className="flex items-center justify-between"
@@ -595,10 +836,17 @@ index === 2 ? "bg-green-500" :
 index === 3 ? "bg-orange-500" :
 index === 4 ? "bg-red-500" : "bg-gray-50; 0";
 }`}></div>
+<<<<<<< HEAD
 <span className="font-medium text-zion-slate-dark">{category.name}</span>
 </div>
 <div className="flex items-center gap-2">
 <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">
+=======
+<span className="font-medium text-zion-slate-dark">{category.name}</span>;
+</div>
+<div className="flex items-center gap-2">;
+<div className="w-20 bg-zion-slate-light/20 rounded-full h-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div;
 className={`h-2 rounded-full ${
 index === 0 ? "bg-blue-500" :
@@ -610,6 +858,7 @@ index === 4 ? "bg-red-500" : "bg-gray-50; 0";
 style={{ widt; h: `${(category.count / portfolioData.length) * 10; 0}%` }}
 ></div>
 </div>
+<<<<<<< HEAD
 <span className="text-sm font-medium text-zion-slate-light">{category.count}</span>
 </div>
 </motion.div>
@@ -617,6 +866,15 @@ style={{ widt; h: `${(category.count / portfolioData.length) * 10; 0}%` }}
 </div>
 </CardContent>
 </Card>
+=======
+<span className="text-sm font-medium text-zion-slate-light">{category.count}</span>;
+</div>
+</motion.div>;
+))}
+</div>
+</CardContent>;
+</Card>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Portfolio Insights */}
 <Card>
@@ -624,6 +882,7 @@ style={{ widt; h: `${(category.count / portfolioData.length) * 10; 0}%` }}
 <CardTitle className="flex items-center gap-2">
 <Brain className="w-5 h-5 text-zion-cyan" />
 Portfolio Insights;
+<<<<<<< HEAD
 </CardTitle>
 </CardHeader>
 <CardContent>
@@ -645,6 +904,29 @@ Portfolio Insights;
 <p className="text-sm text-zion-slate-light">
 {portfolioData.filter(s => s.performance > 90).length} services with >90% performance;
 </p>
+=======
+</CardTitle>;
+</CardHeader>;
+<CardContent>;
+<div className="space-y-4">;
+<div className="flex items-start gap-3 p-3 bg-zion-green/10 rounded-lg">;
+<TrendingUp className="w-5 h-5 text-zion-green mt-1" />;
+<div>;
+<h4 className="font-semibold text-zion-slate-dark">High Growth Services</h4>;
+<p className="text-sm text-zion-slate-light">;
+{portfolioData.filter(s => s.growth > 30).length} services showing &gt;30% growth;
+</p>;
+</div>
+</div>
+
+<div className="flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg">;
+<Star className="w-5 h-5 text-zion-blue mt-1" />;
+<div>;
+<h4 className="font-semibold text-zion-slate-dark">Top Performers</h4>;
+<p className="text-sm text-zion-slate-light">;
+{portfolioData.filter(s => s.performance > 90).length} services with &gt;90% performance;
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -654,6 +936,7 @@ Portfolio Insights;
 <h4 className="font-semibold text-zion-slate-dark">Market Leaders</h4>
 <p className="text-sm text-zion-slate-light">
 {portfolioData.filter(s => s.technologyMaturity === "Leading").length} services in leading position;
+<<<<<<< HEAD
 </p>
 </div>
 </div>
@@ -661,12 +944,21 @@ Portfolio Insights;
 </CardContent>
 </Card>
 </motion.div>
+=======
+</p>;
+</div>
+</div>
+</div>
+</CardContent>;
+</Card>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* CTA Section */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.5 }}
 className="text-center"
@@ -692,10 +984,17 @@ onClick={() => window.open("te;  l:+13024640950", "_blank")}
 >;
 <Zap className="w-5 h-5 mr-2" />
 Call Now;
+<<<<<<< HEAD
 </Button>
 </div>
 </div>
 </motion.div>
+=======
+</Button>;
+</div>
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 };

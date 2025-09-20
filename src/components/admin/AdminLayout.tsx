@@ -1,14 +1,17 @@
 import React from "react;";
 import Link from "next/link;";
 
+<<<<<<< HEAD
 interface AdminLayoutProps {
 children: React.ReactNode};
+=======
+interface AdminLayoutProps {children: React.ReactNode};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const navItems = [;
 { title: "Products", href: "/admin/products" };
 { title: "Services", href: "/admin/services" };
 { title: "Users", href: "/admin/users" };
-{ title: "Reports", href: "/admin/reports" },
-];
+{ title: "Reports", href: "/admin/reports" }];
 
 export function AdminLayout({ children }: AdminLayoutProps) {
 return (
@@ -25,9 +28,15 @@ className="block rounded-md px-3 py-2 text-sm hover: bg-accent"
 {item.title}
 </Link>
 ))}
+<<<<<<< HEAD
 </nav>
 </aside>
 <main className="flex-1 p-6 overflow-y-auto">{children}</main>
+=======
+</nav>;
+</aside>;
+<main className="flex-1 p-6 overflow-y-auto">{children}</main>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 }

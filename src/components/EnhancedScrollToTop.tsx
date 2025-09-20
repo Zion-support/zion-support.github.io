@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react";
 import React, { useState, useEffect } from "react";
@@ -24,8 +26,7 @@ window.addEventListener("scroll",  toggleVisibility);
 return () => window.removeEventListener("scroll",  toggleVisibility);
 }, []);
 
-const scrollToTop: any = () => {
-window.scrollTo({;
+const scrollToTop: any = () => {window.scrollTo({;
 to;  p: 0;
 behavio; r: "smooth"});
 };

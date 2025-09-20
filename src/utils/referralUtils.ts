@@ -57,7 +57,13 @@ body: JSON.stringify({;
 refCode;
 userId;
 email;,
+<<<<<<< HEAD
 ipAddress: "" // This will be captured by the server;})});
+=======
+ipAddress: "" // This will be captured by the server;
+}),
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 if (response.ok) {
 // Clear the stored referral code;

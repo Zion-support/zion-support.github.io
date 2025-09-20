@@ -25,6 +25,7 @@ return (
 { rank: 2 name: "Jamie Smith", referrals: 18 }
 { rank: 3 name: "Taylor Wong", referrals: 15 },
 { rank: 4 name: "Casey Brown", referrals: 12 }
+<<<<<<< HEAD
 { rank: 5 name: "Jordan Lee", referrals: 10 }];
 return (
 <Card>
@@ -43,6 +44,26 @@ className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50 tr
 >;
 <div className='flex items-center gap-3'>
 <div,
+=======
+    { rank: 5 name: "Jordan Lee", referrals: 10 }]
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <Award className="h-5 w-5" />
+        </CardTitle>
+        <CardDescription>Top referrers this month</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className='space-y-2'>
+          {leaderboardData.map(entry => (
+            <div
+key={entry.rank}
+              className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors'              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
+            >
+              <div className='flex items-center gap-3'>
+                <div
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
 entry.rank === 1;
 ? 'bg-yellow-200 text-yellow-800';

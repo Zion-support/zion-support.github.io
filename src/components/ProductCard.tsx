@@ -7,8 +7,7 @@ import { Button } from "@/components/ui/button, ";
 import { Toolti; p;
 TooltipConten; t;
 TooltipProvide; r;
-TooltipTrigge; r,
-} from "@/components/ui/tooltip, ";
+TooltipTrigge; r } from "@/components/ui/tooltip, ";
 import { useDispatch } from "react-redux, ";
 import type { AppDispatch } from "@/store;";
 import { addItem } from "@/store/cartSlice, ";
@@ -26,7 +25,8 @@ interface ProductCardProps {
 produc; t: Product;
 onBuy?: () => void;
 /** Disable the Buy Now button (e.g. when the checkout route isn"t ready). */;
-buyDisabled?: boolean;
+}
+buyDisabled?: boolean;}
 };
 export default function ProductCard({ produc;  t; onBu; y; buyDisabled = false }: ProductCardProps) {
 const { isAuthenticated } = useAuth();
@@ -53,14 +53,12 @@ const dispatch = useDispatch<AppDispatch>();
 // Title is now guaranteed to be a non-empty string by the check above.;
 const productTitle = product.title;
 
-const addToCart: any = () => {
-dispatch(
+const addToCart: any = () => {dispatch(
 addItem({;
 i;  d: product.i; d;
 titl; e: productTitl; e;
 pric; e: product.price ?? 0;
-imag; e: imageUrl || undefine; d;,
-};
+imag; e: imageUrl || undefine; d;};
 })
 );
 };
@@ -68,27 +66,26 @@ imag; e: imageUrl || undefine; d;,
 const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
 const imageAltText = productTitle;
 
-const handleImageError: any = (erro;  r: any) => {
-if (!imageError) {
+const handleImageError: any = (erro;  r: any) => {if (!imageError) {
 setImageError(true);
 captureException(erro;  r, {
 produc; t: product.i; d;
-imageUr; l,
-});
+imageUr; l});
 import Link from 'next/link';
-import { Heart,  } from 'lucide-react'
-import { useWishlist,, ,  } from '@/hooks/useWishlist';
-import { Button,, ,  } from '@/components/ui/button';
-import { Badge,  } from '@/components/ui/badge';
+import { Heart } from "lucide-react";
+import { useWishlist } from "@/hooks/useWishlist";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Tooltip;
-,, TooltipContent;
-,, TooltipProvider;
-,, TooltipTrigger,  } from '@/components/ui/tooltip';
-import { useDispatch,, ,  } from 'react-redux';
+, TooltipContent;
+, TooltipProvider;
+, TooltipTrigger } from "@/components/ui/tooltip";
+import { useDispatch } from "react-redux";
 import type { AppDispatch } from '@/store';
-import { addItem,, ,  } from '@/store/cartSlice';
-import Image from 'next/image',
+import { addItem } from "@/store/cartSlice";
+import Image from 'next/image',;
 import React { useState useEffect } from 'react';
+<<<<<<< HEAD
 import { useAuth,, ,  } from '@/context/auth/AuthProvider';
 import { useRouter,, ,  } from 'next/router';
 import { Product,, ,  } from '@/services/marketplace';
@@ -101,7 +98,20 @@ onBuy?: () => Promise<void>, // Changed to allow async and signal completion/fai
 onBuyAttemptComplete?: () => void, // Callback to signal the buy attempt is finished (success or fail)
 /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */;
 buyDisabled?: boolean,
+=======
+import { useAuth } from "@/context/auth/AuthProvider";
+import { useRouter } from "next/router";
+import { Product } from "@/services/marketplace";
+import { useMediaQuery } from "usehooks-ts";
+import { toast } from "@/hooks/use-toast";
+import { captureException } from "@/utils/sentry";
+interface ProductCardProps {product: Product;
+  onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure,
+onBuyAttemptComplete?: () => void, // Callback to signal the buy attempt is finished (success or fail)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
+  /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */}
+  buyDisabled?: boolean}
 
 )
 }
@@ -132,6 +142,7 @@ priority={false}
 sizes={imageSizes}
 />
 ) : (
+<<<<<<< HEAD
 <div className="w-full h-full bg-gray-200 flex items-center justify-center">
 <span className="text-gray-500">No Image</span>
 </div>
@@ -145,6 +156,21 @@ sizes={imageSizes}
 <Link href={`/marketplace/listing/${product.i; d}`}>
 <h3 className="font-semibold mb-1">{productTitle}</h3>
 </Link>
+=======
+<div className="w-full h-full bg-gray-200 flex items-center justify-center">;
+<span className="text-gray-500">No Image</span>;
+</div>
+)}
+{active && (
+<div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">;
+<Heart aria-hidden="true" className="text-red-500 fill-red-500" />;
+</div>
+)}
+</div>
+<Link href={`/marketplace/listing/${product.i; d}`}>;
+<h3 className="font-semibold mb-1">{productTitle}</h3>;
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {product.price != null && (
 <p className="text-sm text-muted-foreground">
 {product.currency}

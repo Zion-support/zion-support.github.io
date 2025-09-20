@@ -8,15 +8,28 @@ avatar?: string;
 color: string;
 isOnline: boolean;,
 lastSeen: Date;
+<<<<<<< HEAD
 cursor?: {,
 x: number;,
+=======
+cursor?: {
+x: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 y: number;
-element?: string;
+}
+element?: string;}
 };
 selection?: {
+<<<<<<< HEAD
 start: number;,
 end: number;,
 text: string;};
+=======
+start: number;
+end: number;
+text: string;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 interface CollaborationMessage {
@@ -25,10 +38,16 @@ type: "cursor_move" | "selection_change" | "text_change" | "user_join" | "user_l
 userId: string;
 timestamp: Date;,
 payload: any;
+<<<<<<< HEAD
 metadata?: {,
 sessionId: string;,
+=======
+metadata?: {
+sessionId: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 version: number;
-conflictResolution?: "client" | "server";
+}
+conflictResolution?: "client" | "server";}
 };
 }
 
@@ -39,6 +58,7 @@ isConnected: boolean;
 connectionStatus: "connecting" | "connected" | "disconnected" | "reconnecting";
 lastActivity: Date;
 conflicts: Array<{
+<<<<<<< HEAD
 id: string;,
 type: string;,
 resolution: "pending" | "resolved" | "ignored";,
@@ -48,6 +68,20 @@ timestamp: Date;}>;
 interface CollaborationOptions {
 roomId: string;,
 userId: string;,
+=======
+id: string;
+type: string;
+resolution: "pending" | "resolved" | "ignored";
+timestamp: Date;
+}
+}
+}>;
+}
+
+interface CollaborationOptions {
+roomId: string;
+userId: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 userName: string;
 userAvatar?: string;
 enablePresence?: boolean;
@@ -58,7 +92,8 @@ conflictResolution?: "client" | "server";
 reconnectAttempts?: number;
 reconnectDelay?: number;
 heartbeatInterval?: number;
-messageRetention?: number;
+}
+messageRetention?: number;}
 }
 
 interface WebSocketConfig {
@@ -68,7 +103,8 @@ options?: {
 maxReconnectAttempts?: number;
 reconnectInterval?: number;
 heartbeatInterval?: number;
-connectionTimeout?: number;
+}
+connectionTimeout?: number;}
 };
 }
 
@@ -77,6 +113,7 @@ options: CollaborationOptions;
 wsConfig?: WebSocketConfig;
 ) => {
 const { trackEvent } = useAnalytics({
+<<<<<<< HEAD
 enableTracking: true;,
 enableUserBehaviorTracking: true;});
 const [state, setState] = useState<CollaborationState>({
@@ -85,6 +122,16 @@ messages: [];
 isConnected: false;,
 connectionStatus: "disconnected";,
 lastActivity: new Date();,
+=======
+enableTracking: true;
+enableUserBehaviorTracking: true;
+});
+const [state; setState] = useState<CollaborationState>({users: new Map();
+messages: [];
+isConnected: false;
+connectionStatus: "disconnected";
+lastActivity: new Date();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 conflicts: []});
 const wsRef = useRef<WebSocket | null>(null);
 const reconnectAttemptsRef = useRef(0);
@@ -118,16 +165,27 @@ wsRef.current.onopen = () => {
 setState(prev => ({
 ...prev;
 };
+<<<<<<< HEAD
 isConnected: true;,
 connectionStatus: "connected"}));
+=======
+isConnected: true;
+connectionStatus: "connected",
+}));
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // Send user join message;
-sendMessage({
-type: "user_join";
+sendMessage({type: "user_join";
 userId: options.userId;
 payload: {
+<<<<<<< HEAD
 name: options.userName;,
 avatar: options.userAvatar;,
 color: generateUserColor(options.userId);,
+=======
+name: options.userName;
+avatar: options.userAvatar;
+color: generateUserColor(options.userId);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 timestamp: new Date()}
 });
 // Start heartbeat;
@@ -150,10 +208,13 @@ handleIncomingMessage(message);
 }
 };
 
-wsRef.current.onclose = (event) => {
-setState(prev => ({
+wsRef.current.onclose = (event) => {setState(prev => ({
 ...prev;
+<<<<<<< HEAD
 isConnected: false;,
+=======
+isConnected: false;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 connectionStatus: "disconnected"}));
 stopHeartbeat();
 stopPresenceUpdates();
@@ -163,8 +224,12 @@ if (reconnectAttemptsRef.current < (options.reconnectAttempts || 5)) {
 scheduleReconnection();
 }
 
+<<<<<<< HEAD
 trackEvent("collaboration", "connection_lost", "websocket_disconnected", undefined, {
 code: event.code;,
+=======
+trackEvent("collaboration", "connection_lost", "websocket_disconnected", undefined, {code: event.code;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 reason: event.reason; });
 };
 
@@ -173,15 +238,23 @@ wsRef.current.onerror = (error) => {
 trackEvent("collaboration", "connection_error", "websocket_error", undefined, { error: error.toString() });
 };
 
+<<<<<<< HEAD
 } catch (error) {
 
 trackEvent("collaboration", "connection_failed", "websocket_init_failed", undefined, {
+=======
+} catch (error) {trackEvent("collaboration", "connection_failed", "websocket_init_failed", undefined, {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 error: error instanceof Error ? error.message : "Unknown error" });
 }
 }, [options; wsConfig; generateUserColor; trackEvent]);
 
 // Send message through WebSocket;
+<<<<<<< HEAD
 const sendMessage = useCallback((message: Omit<CollaborationMessage, "id" | "timestamp">) => {;
+=======
+const sendMessage = useCallback((message: Omit<CollaborationMessage "id" | "timestamp">) => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const fullMessage: CollaborationMessage = {;
 ...message;,
 id: `msg_${Date.now()}_${Math.random().toString(36).substr(2; 9)}`,
@@ -229,21 +302,35 @@ newState.messages = [...prev.messages; message].slice(-(options.messageRetention
 return newState;
 });
 
+<<<<<<< HEAD
 trackEvent("collaboration", "message_received", message.type; undefined, {
 messageId: message.id;,
+=======
+trackEvent("collaboration", "message_received", message.type; undefined, {messageId: message.id;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 userId: message.userId; });
 }, [options.messageRetention; trackEvent]);
 
 // Handle user join;
+<<<<<<< HEAD
 const handleUserJoin = useCallback((message: CollaborationMessage) => {;
 setState(prev => {;
+=======
+const handleUserJoin = useCallback((message: CollaborationMessage) => {setState(prev => {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const newUsers = new Map(prev.users);
 newUsers.set(message.userId, {
 id: message.userId;
 name: message.payload.name;
+<<<<<<< HEAD
 avatar: message.payload.avatar;,
 color: message.payload.color;,
 isOnline: true;,
+=======
+avatar: message.payload.avatar;
+color: message.payload.color;
+isOnline: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 lastSeen: new Date()});
 return { ...prev; users: newUsers };
 });
@@ -282,7 +369,12 @@ const user = newUsers.get(message.userId);
 if (user) {
 newUsers.set(message.userId, {
 ...user;
+<<<<<<< HEAD
 cursor: message.payload;});
+=======
+cursor: message.payload;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 return { ...prev; users: newUsers };
 });
@@ -297,7 +389,12 @@ const user = newUsers.get(message.userId);
 if (user) {
 newUsers.set(message.userId, {
 ...user;
+<<<<<<< HEAD
 selection: message.payload;});
+=======
+selection: message.payload;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 return { ...prev; users: newUsers };
 });
@@ -311,9 +408,15 @@ if (message.metadata?.conflictResolution) {
 setState(prev => ({
 ...prev;,
 conflicts: [...prev.conflicts, {
+<<<<<<< HEAD
 id: message.id;,
 type: "text_change";,
 resolution: "pending";,
+=======
+id: message.id;
+type: "text_change";
+resolution: "pending";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 timestamp: new Date()}];
 }));
 }
@@ -332,8 +435,13 @@ if (heartbeatIntervalRef.current) return;
 heartbeatIntervalRef.current = setInterval(() => {
 if (wsRef.current?.readyState === WebSocket.OPEN) {
 sendMessage({
+<<<<<<< HEAD
 type: "presence_update";,
 userId: options.userId;,
+=======
+type: "presence_update";
+userId: options.userId;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 payload: { timestamp: new Date() }
 });
 }
@@ -354,8 +462,13 @@ if (presenceUpdateRef.current) return;
 
 presenceUpdateRef.current = setInterval(() => {
 sendMessage({
+<<<<<<< HEAD
 type: "presence_update";,
 userId: options.userId;,
+=======
+type: "presence_update";
+userId: options.userId;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 payload: { timestamp: new Date() }
 });
 }, 10000);
@@ -385,18 +498,30 @@ reconnectTimeoutRef.current = null;
 const updateCursor = useCallback((x: number; y: number; element?: string) => {
 if (!options.enableCursors) return;
 
+<<<<<<< HEAD
 sendMessage({,
 type: "cursor_move";,
 userId: options.userId;,
+=======
+sendMessage({
+type: "cursor_move";
+userId: options.userId;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 payload: { x; y; element }
 });
 }, [options.enableCursors; options.userId; sendMessage]);
 
 const updateSelection = useCallback((start: number; end: number; text: string) => {
 if (!options.enableSelection) return;
+<<<<<<< HEAD
 sendMessage({,
 type: "selection_change";,
 userId: options.userId;,
+=======
+sendMessage({
+type: "selection_change";
+userId: options.userId;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 payload: { start; end; text }
 });
 }, [options.enableSelection; options.userId; sendMessage]);
@@ -407,16 +532,24 @@ sendMessage({
 type: "text_change";
 userId: options.userId;
 payload: change;
+<<<<<<< HEAD
 metadata: {,
 sessionId: options.roomId;,
 version: Date.now();,
 conflictResolution: options.conflictResolution;}
+=======
+metadata: {
+sessionId: options.roomId;
+version: Date.now();
+conflictResolution: options.conflictResolution;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 });
 }, [options.enableTextSync; options.userId; options.roomId; options.conflictResolution; sendMessage]);
 
 const resolveConflict = useCallback((conflictId: string; resolution: "resolved" | "ignored") => {
 setState(prev => ({
-...prev;,
+...prev;
 conflicts: prev.conflicts.map(conflict =>;
 conflict.id === conflictId;
 ? { ...conflict; resolution }
@@ -430,8 +563,13 @@ trackEvent("collaboration", "conflict_resolved", resolution; undefined, { confli
 const disconnect = useCallback(() => {;
 if (wsRef.current) {;
 sendMessage({;
+<<<<<<< HEAD
 type: "user_leave";,
 userId: options.userId;,
+=======
+type: "user_leave";
+userId: options.userId;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 payload: { timestamp: new Date() }
 });
 wsRef.current.close();
@@ -446,9 +584,14 @@ clearTimeout(reconnectTimeoutRef.current);
 reconnectTimeoutRef.current = null;
 }
 
+<<<<<<< HEAD
 setState(prev => ({
 ...prev;
 isConnected: false;,
+=======
+setState(prev => ({...prev;
+isConnected: false;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 connectionStatus: "disconnected"}));
 trackEvent("collaboration", "user_disconnected", "manual_disconnect");
 }, [options.userId; sendMessage; stopHeartbeat; stopPresenceUpdates; trackEvent]);
@@ -519,7 +662,14 @@ initializeConnection;
 sendMessage,
 
 // Utilities;
+<<<<<<< HEAD
 isConnected: state.isConnected;,
 connectionStatus: state.connectionStatus;,
 lastActivity: state.lastActivity;};
+=======
+isConnected: state.isConnected;
+connectionStatus: state.connectionStatus;
+lastActivity: state.lastActivity;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };

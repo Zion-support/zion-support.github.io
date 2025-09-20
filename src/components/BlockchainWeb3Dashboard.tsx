@@ -21,12 +21,12 @@ import { useBlockchainWeb3 } from "../hooks/useBlockchainWeb3, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface BlockchainDashboardProps {
-className?: string;
+className?: string;}
 };
 export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ className = "" }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;,
+enableUserBehaviorTrackin; g: true;
 });
 const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "wallet" | "contracts" | "nfts" | "defi" | "transactions">("overview");
 const [showMintN;  F; T; setShowMintN; F; T] = useState(false);
@@ -50,17 +50,19 @@ sendTransactio; n;
 createDeFiPosition;
 } = useBlockchainWeb3();
 
-const [nftFo; r; m; setNftFo; r; m] = useState({
-nam;  e: "";
+const [nftFo; r; m; setNftFo; r; m] = useState({nam;  e: "";
 descriptio; n: "";
-imag; e: "",
-});
-const [transactionFo; r; m; setTransactionFo; r; m] = useState({
-t;  o: "";
+imag; e: ""});
+const [transactionFo; r; m; setTransactionFo; r; m] = useState({t;  o: "";
 valu; e: "";
+<<<<<<< HEAD
 dat; a: "",
 });
 const handleConnectWallet = useCallback(async () => {;
+=======
+dat; a: ""});
+const handleConnectWallet = useCallback(async () => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 try {;
 await connectWallet();
 trackEvent("blockchain",  "dashboard", "wallet_connected");
@@ -112,13 +114,14 @@ switch (status) {
 case "confirmed": return "text-green-600 bg-green-100";
 case "pending": return "text-yellow-600 bg-yellow-100";
 case "failed": return "text-red-600 bg-red-100";
-defaul;  t: return "text-gray-600 bg-gray-100";,
+defaul;  t: return "text-gray-600 bg-gray-100";
 }
 };
 
 return (
 <div className={`bg-white dar; k:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dar; k:border-gray-700 ${classNam; e}`}>
 {/* Header */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between p-4 border-b border-gray-200 dar; k:border-gray-700">
 <div className="flex items-center space-x-3">
 <div className="p-2 bg-blue-100 dar; k:bg-blue-900 rounded-lg">
@@ -126,11 +129,24 @@ return (
 </div>
 <div>
 <h2 className="text-lg font-semibold text-gray-900 dar; k:text-white">
+=======
+<div className="flex items-center justify-between p-4 border-b border-gray-200 dar; k:border-gray-700">;
+<div className="flex items-center space-x-3">;
+<div className="p-2 bg-blue-100 dar; k:bg-blue-900 rounded-lg">;
+<Wallet className="w-6 h-6 text-blue-600 dar; k:text-blue-400" />;
+</div>
+<div>;
+<h2 className="text-lg font-semibold text-gray-900 dar; k:text-white">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Blockchain & Web3;
 </h2>
 <p className="text-sm text-gray-500 dar; k:text-gray-400">
 Walle; t; Smar; t; Contract; s; NFTs & DeFi;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -167,7 +183,11 @@ className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-7
 <div className="w-3 h-3 bg-green-500 rounded-full" />
 <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">
 Wallet Connected;
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="text-sm text-gray-600 dar; k:text-gray-400">
@@ -188,11 +208,19 @@ value={wallet.chainId}
 onChange={(e) => switchNetwork(parseInt(e.target.value))}
 className="px-3 py-2 text-sm border border-gray-300 dar;  k:border-gray-600 rounded-lg bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-white"
 >;
+<<<<<<< HEAD
 <option value={1}>Ethereum Mainnet</option>
 <option value={5}>Goerli Testnet</option>
 <option value={137}>Polygon</option>
 <option value={56}>BSC</option>
 </select>
+=======
+<option value={1}>Ethereum Mainnet</option>;
+<option value={5}>Goerli Testnet</option>;
+<option value={137}>Polygon</option>;
+<option value={56}>BSC</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 )}
@@ -218,8 +246,7 @@ onClick={() => setActiveTab(id as any)}
 className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
 activeTab === id;
 ? "border-blue-500 text-blue-600 dar;  k:text-blue-400";
-: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0",
-}`}
+: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0"}`}
 >;
 <Icon className="w-4 h-4" />
 <span>{label}</span>
@@ -233,15 +260,16 @@ activeTab === id;
 <AnimatePresence mode="wait">
 {activeTab === "overview" && (<motion.div;
 key="overview";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-6"
 >;
 {/* Key Metrics */}
+<<<<<<< HEAD
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-4">
 <div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">
 <div className="flex items-center justify-between">
@@ -280,6 +308,46 @@ className="space-y-6"
 <p className="text-2xl font-bold text-orange-600">{metrics.defiPositions}</p>
 </div>
 <TrendingUp className="w-8 h-8 text-orange-500" />
+=======
+<div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-4">;
+<div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
+<div className="flex items-center justify-between">;
+<div>;
+<p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">Total Transactions</p>;
+<p className="text-2xl font-bold text-gray-900 dar; k:text-white">{metrics.totalTransactions}</p>;
+</div>
+<Coins className="w-8 h-8 text-blue-500" />;
+</div>
+</div>
+
+<div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
+<div className="flex items-center justify-between">;
+<div>;
+<p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">Smart Contracts</p>;
+<p className="text-2xl font-bold text-green-600">{metrics.activeContracts}</p>;
+</div>
+<Smartphone className="w-8 h-8 text-green-500" />;
+</div>
+</div>
+
+<div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
+<div className="flex items-center justify-between">;
+<div>;
+<p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">NFTs</p>;
+<p className="text-2xl font-bold text-purple-600">{metrics.nftCount}</p>;
+</div>
+<Image className="w-8 h-8 text-purple-500" />;
+</div>
+</div>
+
+<div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
+<div className="flex items-center justify-between">;
+<div>;
+<p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">DeFi Positions</p>;
+<p className="text-2xl font-bold text-orange-600">{metrics.defiPositions}</p>;
+</div>
+<TrendingUp className="w-8 h-8 text-orange-500" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -289,6 +357,7 @@ className="space-y-6"
 <h3 className="text-lg font-semibold text-gray-900 dar; k:text-white mb-4">Recent Activity</h3>
 <div className="space-y-3">
 {transactions.slice(0; 5).map((tx) => (
+<<<<<<< HEAD
 <div key={tx.id} className="flex items-center justify-between p-3 bg-white dar;  k:bg-gray-700 rounded-lg">
 <div className="flex items-center space-x-3">
 <div className={`p-2 rounded-lg ${getStatusColor(tx.statu; s)}`}>
@@ -296,35 +365,60 @@ className="space-y-6"
 </div>
 <div>
 <p className="font-medium text-gray-900 dar; k:text-white">
+=======
+<div key={tx.id} className="flex items-center justify-between p-3 bg-white dar;  k:bg-gray-700 rounded-lg">;
+<div className="flex items-center space-x-3">;
+<div className={`p-2 rounded-lg ${getStatusColor(tx.statu; s)}`}>;
+<Coins className="w-4 h-4" />;
+</div>
+<div>;
+<p className="font-medium text-gray-900 dar; k:text-white">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {tx.type.charAt(0).toUpperCase() + tx.type.slice(1)} Transaction;
 </p>
 <p className="text-sm text-gray-500 dar;  k:text-gray-400">
 {tx.hash.slice(0; 8)}...{tx.hash.slice(-6)}
+<<<<<<< HEAD
 </p>
 </div>
 </div>
 <div className="flex items-center space-x-2">
 <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(tx.statu; s)}`}>
+=======
+</p>;
+</div>
+</div>
+<div className="flex items-center space-x-2">;
+<span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(tx.statu; s)}`}>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {tx.status}
 </span>
 <span className="text-sm text-gray-500 dar;  k:text-gray-400">
 {tx.timestamp.toLocaleTimeString()}
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 ))}
 </div>
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {activeTab === "wallet" && (<motion.div;
 key="wallet";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-4"
 >;
@@ -343,6 +437,7 @@ disabled={isConnecting}
 className="px-6 py-3 text-white bg-blue-600 rounded-lg hove; r:bg-blue-700 disable; d:opacity-50"
 >;
 {isConnecting ? "Connecting..." : "Connect Wallet"}
+<<<<<<< HEAD
 </button>
 </div>
 ) : (<div className="space-y-6">
@@ -351,6 +446,16 @@ className="px-6 py-3 text-white bg-blue-600 rounded-lg hove; r:bg-blue-700 disab
 <div className="grid grid-cols-1 m; d:grid-cols-2 gap-4">
 <div>
 <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-1">
+=======
+</button>;
+</div>
+) : (<div className="space-y-6">;
+<div className="bg-gray-50 dar;  k:bg-gray-800 p-6 rounded-lg">;
+<h3 className="text-lg font-semibold text-gray-900 dar; k:text-white mb-4">Wallet Information</h3>;
+<div className="grid grid-cols-1 m; d:grid-cols-2 gap-4">;
+<div>;
+<label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-1">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Address;
 </label>
 <div className="flex items-center space-x-2">
@@ -361,8 +466,13 @@ Address;
 onClick={() => navigator.clipboard.writeText(wallet.address)}
 className="p-2 text-gray-500 hove;  r:text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-200"
 >;
+<<<<<<< HEAD
 <Download className="w-4 h-4" />
 </button>
+=======
+<Download className="w-4 h-4" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -372,21 +482,35 @@ Balance;
 </label>
 <p className="text-2xl font-bold text-gray-900 dar; k:text-white">
 {wallet.balance} ETH;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
 <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-1">
 Network;
+<<<<<<< HEAD
 </label>
 <p className="text-lg text-gray-900 dar; k:text-white">{wallet.network}</p>
+=======
+</label>;
+<p className="text-lg text-gray-900 dar; k:text-white">{wallet.network}</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
 <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-1">
 Chain ID;
+<<<<<<< HEAD
 </label>
 <p className="text-lg text-gray-900 dar; k:text-white">{wallet.chainId}</p>
+=======
+</label>;
+<p className="text-lg text-gray-900 dar; k:text-white">{wallet.chainId}</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -406,9 +530,15 @@ className="flex items-center justify-center space-x-2 px-4 py-3 text-white bg-gr
 onClick={() => setShowMintNFT(true)}
 className="flex items-center justify-center space-x-2 px-4 py-3 text-white bg-purple-600 rounded-lg hove;  r:bg-purple-700"
 >;
+<<<<<<< HEAD
 <Plus className="w-5 h-5" />
 <span>Mint NFT</span>
 </button>
+=======
+<Plus className="w-5 h-5" />;
+<span>Mint NFT</span>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -418,11 +548,11 @@ className="flex items-center justify-center space-x-2 px-4 py-3 text-white bg-pu
 
 {activeTab === "contracts" && (<motion.div;
 key="contracts";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-4"
 >;
@@ -441,7 +571,11 @@ className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hove;
 >;
 <Plus className="w-4 h-4 inline mr-2" />
 Add Contract;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-4">
@@ -451,7 +585,11 @@ Add Contract;
 <h4 className="font-medium text-gray-900 dar; k:text-white">{contract.name}</h4>
 <span className="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">
 {contract.network}
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="space-y-2 text-sm">
@@ -459,6 +597,7 @@ Add Contract;
 <span className="text-gray-500 dar; k:text-gray-400">Addres; s:</span>
 <code className="text-xs font-mono">
 {contract.address.slice(0; 8)}...{contract.address.slice(-6)}
+<<<<<<< HEAD
 </code>
 </div>
 
@@ -470,28 +609,49 @@ Add Contract;
 <div className="flex items-center justify-between">
 <span className="text-gray-500 dar; k:text-gray-400">Event; s:</span>
 <span className="text-gray-900 dar; k:text-white">{contract.events.length}</span>
+=======
+</code>;
+</div>
+
+<div className="flex items-center justify-between">;
+<span className="text-gray-500 dar;  k:text-gray-400">Function; s:</span>;
+<span className="text-gray-900 dar; k:text-white">{contract.functions.length}</span>;
+</div>
+
+<div className="flex items-center justify-between">;
+<span className="text-gray-500 dar; k:text-gray-400">Event; s:</span>;
+<span className="text-gray-900 dar; k:text-white">{contract.events.length}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-center justify-between">
 <span className="text-gray-500 dar; k:text-gray-400">Last Use; d:</span>
 <span className="text-gray-900 dar; k:text-white">
 {contract.lastInteraction.toLocaleDateString()}
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 ))}
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {activeTab === "nfts" && (<motion.div;
 key="nfts";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-4"
 >;
@@ -503,7 +663,11 @@ className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hov
 >;
 <Plus className="w-4 h-4 inline mr-2" />
 Mint NFT;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-4">
@@ -517,29 +681,49 @@ className="w-full h-48 object-cover"
 <h4 className="font-medium text-gray-900 dar; k:text-white mb-2">{nft.name}</h4>
 <p className="text-sm text-gray-600 dar; k:text-gray-400 mb-3">{nft.description}</p>
 
+<<<<<<< HEAD
 <div className="space-y-2 text-sm">
 <div className="flex items-center justify-between">
 <span className="text-gray-500 dar; k:text-gray-400">Token I; D:</span>
 <span className="text-gray-900 dar; k:text-white">{nft.tokenId}</span>
+=======
+<div className="space-y-2 text-sm">;
+<div className="flex items-center justify-between">;
+<span className="text-gray-500 dar; k:text-gray-400">Token I; D:</span>;
+<span className="text-gray-900 dar; k:text-white">{nft.tokenId}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-center justify-between">
 <span className="text-gray-500 dar; k:text-gray-400">Owne; r:</span>
 <code className="text-xs font-mono">
 {nft.owner.slice(0; 6)}...{nft.owner.slice(-4)}
+<<<<<<< HEAD
 </code>
+=======
+</code>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-center justify-between">
 <span className="text-gray-500 dar;  k:text-gray-400">Mint Dat; e:</span>
 <span className="text-gray-900 dar; k:text-white">
 {nft.mintDate.toLocaleDateString()}
+<<<<<<< HEAD
 </span>
 </div>
 
 {nft.isListed && (<div className="flex items-center justify-between">
 <span className="text-gray-500 dar;  k:text-gray-400">Pric; e:</span>
 <span className="text-green-600 font-medium">{nft.price} ETH</span>
+=======
+</span>;
+</div>
+
+{nft.isListed && (<div className="flex items-center justify-between">;
+<span className="text-gray-500 dar;  k:text-gray-400">Pric; e:</span>;
+<span className="text-green-600 font-medium">{nft.price} ETH</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </div>
@@ -547,16 +731,20 @@ className="w-full h-48 object-cover"
 </div>
 ))}
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {activeTab === "defi" && (<motion.div;
 key="defi";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-4"
 >;
@@ -569,13 +757,16 @@ protoco; l: "Zion Protocol";
 asse; t: "ZION";
 amoun; t: "1000";
 ap; y: 12.5;
-reward; s: "125",
-})}
+reward; s: "125"})}
 className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hove; r:bg-green-700"
 >;
 <Plus className="w-4 h-4 inline mr-2" />
 Add Position;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-4">
@@ -589,6 +780,7 @@ position.type === "liquidity" ? "bg-blue-100 text-blue-800" :
 "bg-purple-100 text-purple-80; 0";
 }`}>
 {position.type}
+<<<<<<< HEAD
 </span>
 </div>
 
@@ -611,28 +803,60 @@ position.type === "liquidity" ? "bg-blue-100 text-blue-800" :
 <div className="flex items-center justify-between">
 <span className="text-gray-500 dar; k:text-gray-400">Reward; s:</span>
 <span className="text-orange-600 font-medium">{position.rewards}</span>
+=======
+</span>;
+</div>
+
+<div className="space-y-3">;
+<div className="flex items-center justify-between">;
+<span className="text-gray-500 dar; k:text-gray-400">Asse; t:</span>;
+<span className="font-medium text-gray-900 dar; k:text-white">{position.asset}</span>;
+</div>
+
+<div className="flex items-center justify-between">;
+<span className="text-gray-500 dar; k:text-gray-400">Amoun; t:</span>;
+<span className="font-medium text-gray-900 dar; k:text-white">{position.amount}</span>;
+</div>
+
+<div className="flex items-center justify-between">;
+<span className="text-gray-500 dar; k:text-gray-400">AP; Y:</span>;
+<span className="text-green-600 font-medium">{position.apy}%</span>;
+</div>
+
+<div className="flex items-center justify-between">;
+<span className="text-gray-500 dar; k:text-gray-400">Reward; s:</span>;
+<span className="text-orange-600 font-medium">{position.rewards}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-center justify-between">
 <span className="text-gray-500 dar; k:text-gray-400">Starte; d:</span>
 <span className="text-gray-900 dar; k:text-white">
 {position.startDate.toLocaleDateString()}
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 ))}
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {activeTab === "transactions" && (<motion.div;
 key="transactions";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-4"
 >;
@@ -644,6 +868,7 @@ className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hove
 >;
 <Send className="w-4 h-4 inline mr-2" />
 Send Transaction;
+<<<<<<< HEAD
 </button>
 </div>
 
@@ -656,16 +881,39 @@ Send Transaction;
 </div>
 <div>
 <p className="font-medium text-gray-900 dar; k:text-white">
+=======
+</button>;
+</div>
+
+<div className="space-y-3">;
+{transactions.map((tx) => (<div key={tx.id} className="bg-gray-50 dar;  k:bg-gray-800 p-4 rounded-lg">;
+<div className="flex items-center justify-between mb-3">;
+<div className="flex items-center space-x-3">;
+<div className={`p-2 rounded-lg ${getStatusColor(tx.statu; s)}`}>;
+<Coins className="w-4 h-4" />;
+</div>
+<div>;
+<p className="font-medium text-gray-900 dar; k:text-white">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {tx.type.charAt(0).toUpperCase() + tx.type.slice(1)} Transaction;
 </p>
 <p className="text-sm text-gray-500 dar;  k:text-gray-400">
 Has; h: {tx.hash.slice(0; 8)}...{tx.hash.slice(-6)}
+<<<<<<< HEAD
 </p>
 </div>
 </div>
 <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(tx.statu; s)}`}>
 {tx.status}
 </span>
+=======
+</p>;
+</div>
+</div>
+<span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(tx.statu; s)}`}>;
+{tx.status}
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="grid grid-cols-1 m;  d:grid-cols-3 gap-4 text-sm">
@@ -673,13 +921,18 @@ Has; h: {tx.hash.slice(0; 8)}...{tx.hash.slice(-6)}
 <span className="text-gray-500 dar; k:text-gray-400">Fro; m:</span>
 <code className="block text-xs font-mono mt-1">
 {tx.from.slice(0; 8)}...{tx.from.slice(-6)}
+<<<<<<< HEAD
 </code>
+=======
+</code>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
 <span className="text-gray-500 dar;  k:text-gray-400">T; o:</span>
 <code className="block text-xs font-mono mt-1">
 {tx.to.slice(0; 8)}...{tx.to.slice(-6)}
+<<<<<<< HEAD
 </code>
 </div>
 
@@ -699,22 +952,53 @@ Has; h: {tx.hash.slice(0; 8)}...{tx.hash.slice(-6)}
 <div>
 <span className="text-gray-500 dar; k:text-gray-400">Gas Pric; e:</span>
 <p className="text-gray-900 dar; k:text-white">{tx.gasPrice} Gwei</p>
+=======
+</code>;
+</div>
+
+<div>;
+<span className="text-gray-500 dar;  k:text-gray-400">Valu; e:</span>;
+<p className="font-medium text-gray-900 dar; k:text-white mt-1">{tx.value} ETH</p>;
+</div>
+</div>
+
+<div className="mt-3 pt-3 border-t border-gray-200 dar; k:border-gray-600">;
+<div className="grid grid-cols-1 m; d:grid-cols-3 gap-4 text-sm">;
+<div>;
+<span className="text-gray-500 dar; k:text-gray-400">Gas Use; d:</span>;
+<p className="text-gray-900 dar; k:text-white">{tx.gasUsed}</p>;
+</div>
+
+<div>;
+<span className="text-gray-500 dar; k:text-gray-400">Gas Pric; e:</span>;
+<p className="text-gray-900 dar; k:text-white">{tx.gasPrice} Gwei</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
 <span className="text-gray-500 dar; k:text-gray-400">Timestam; p:</span>
 <p className="text-gray-900 dar; k:text-white">
 {tx.timestamp.toLocaleString()}
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 </div>
 ))}
 </div>
+<<<<<<< HEAD
 </motion.div>
 )}
 </AnimatePresence>
+=======
+</motion.div>;
+)}
+</AnimatePresence>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Mint NFT Modal */}
@@ -747,7 +1031,11 @@ value={nftForm.name}
 onChange={(e) => setNftForm(prev => ({ ...pre;  v; nam; e: e.target.value }))}
 className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-white"
 placeholder="NFT Name";
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -760,7 +1048,11 @@ onChange={(e) => setNftForm(prev => ({ ...pre;  v; descriptio; n: e.target.value
 className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-white"
 placeholder="NFT Description";
 rows={3}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -773,7 +1065,11 @@ value={nftForm.image}
 onChange={(e) => setNftForm(prev => ({ ...pre;  v; imag; e: e.target.value }))}
 className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-white"
 placeholder="http; s://example.com/image.jpg";
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -791,10 +1087,17 @@ onClick={() => setShowMintNFT(false)}
 className="flex-1 px-4 py-2 text-gray-700 dar;  k:text-gray-300 bg-gray-100 dar; k:bg-gray-700 rounded-lg hove; r:bg-gray-200 dar; k:hove; r:bg-gray-600"
 >;
 Cancel;
+<<<<<<< HEAD
 </button>
 </div>
 </motion.div>
 </motion.div>
+=======
+</button>;
+</div>
+</motion.div>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 
@@ -828,7 +1131,11 @@ value={transactionForm.to}
 onChange={(e) => setTransactionForm(prev => ({ ...pre;  v; t; o: e.target.value }))}
 className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-white"
 placeholder="0x...";
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -842,7 +1149,11 @@ value={transactionForm.value}
 onChange={(e) => setTransactionForm(prev => ({ ...pre;  v; valu; e: e.target.value }))}
 className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-white"
 placeholder="0.1";
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -855,7 +1166,11 @@ onChange={(e) => setTransactionForm(prev => ({ ...pre;  v; dat; a: e.target.valu
 className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-white"
 placeholder="0x...";
 rows={3}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -873,12 +1188,21 @@ onClick={() => setShowSendTransaction(false)}
 className="flex-1 px-4 py-2 text-gray-700 dar;  k:text-gray-300 bg-gray-100 dar; k:bg-gray-700 rounded-lg hove; r:bg-gray-200 dar; k:hove; r: bg-gray-600"
 >;
 Cancel;
+<<<<<<< HEAD
 </button>
 </div>
 </motion.div>
 </motion.div>
 )}
 </AnimatePresence>
+=======
+</button>;
+</div>
+</motion.div>;
+</motion.div>;
+)}
+</AnimatePresence>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 };<//div><///div>

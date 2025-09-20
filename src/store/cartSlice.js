@@ -12,7 +12,12 @@ const loadState = () => {
     }
 };
 const initialState = {
+<<<<<<< HEAD
     items: loadState();};
+=======
+    items: loadState();
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const cartSlice = createSlice({
     name: 'cart';
     initialState,
@@ -28,7 +33,12 @@ const cartSlice = createSlice({
                     name: action.payload.title;
                     price: action.payload.price;
                     quantity: 1;
+<<<<<<< HEAD
                     image: action.payload.image;});
+=======
+                    image: action.payload.image;
+                });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             }
         },
         removeItem: (state, action) => {

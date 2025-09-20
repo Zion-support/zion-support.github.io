@@ -1,8 +1,14 @@
 // Test setup file for Jest,
 import '@testing-library/jest-dom'
+<<<<<<< HEAD
 // Mock window.matchMedia,
 Object.defineProperty(window, 'matchMedia', {
 writable: true;,
+=======
+// Mock window.matchMedia,;
+Object.defineProperty(window, 'matchMedia', {;
+  writable: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 value: jest.fn().mockImplementation(query => ({,
 matches: false;
 media: query;,
@@ -31,6 +37,7 @@ unobserve() {}
 // Mock console methods to reduce noise in tests,
 const originalError = console.error,
 const originalWarn = console.warn,
+<<<<<<< HEAD
 beforeAll(() => {
 console.error = (...args: any[]) => {
 if (
@@ -55,3 +62,23 @@ afterAll(() => {
 console.error = originalError;
 console.warn = originalWarn;
 })
+=======
+beforeAll(() => {console.error = (...args: any[]) => {
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('Warning: ReactDOM.render is no longer supported')
+    ) {
+      return}
+    originalError.call(console, ...args)
+  }
+  console.warn = (...args: any[]) => {if (
+      typeof args[0] === 'string' &&
+      (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
+    ) {
+      return}
+    originalWarn.call(console, ...args)
+  }
+})
+afterAll(() => {console.error = originalError,
+console.warn = originalWarn})
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

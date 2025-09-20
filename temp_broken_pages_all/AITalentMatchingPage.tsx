@@ -14,5 +14,5 @@ title="AI Talent Matching"
       ctaText="Start Matching Talent"
       ctaLink="/contact"
     />
-  )
-}
+  );
+};

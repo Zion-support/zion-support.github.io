@@ -1,7 +1,6 @@
 // Specialized Innovative Services for 2025;
 export const specializedInnovativeServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Digital Twin & Simulation Platform";
         category: "Digital Twins";
         subcategory: "Simulation & Modeling";
@@ -40,9 +39,15 @@ export const specializedInnovativeServices2025 = [
         scalability: ["Multi-system Support", "Cloud-based Rendering", "Real-time Processing"],
         estimatedDelivery: "8-12 weeks";
         supportLevel: "premium";
+<<<<<<< HEAD
         innovationScore: 9.1};
     {
         id: 2;
+=======
+        innovationScore: 9.1,
+    };
+    {id: 2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Federated Learning & Privacy-Preserving AI";
         category: "Privacy AI";
         subcategory: "Federated Learning";
@@ -81,9 +86,15 @@ export const specializedInnovativeServices2025 = [
         scalability: ["Multi-organization Support", "Global Collaboration", "Scalable Training"],
         estimatedDelivery: "10-14 weeks";
         supportLevel: "enterprise";
+<<<<<<< HEAD
         innovationScore: 9.3};
     {
         id: 3;
+=======
+        innovationScore: 9.3,
+    };
+    {id: 3;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Neuromorphic Computing Platform";
         category: "Neuromorphic Computing";
         subcategory: "Brain-Inspired AI";
@@ -122,9 +133,15 @@ export const specializedInnovativeServices2025 = [
         scalability: ["Multi-processor Support", "Distributed Computing", "Scalable Neural Networks"],
         estimatedDelivery: "16-20 weeks";
         supportLevel: "enterprise";
+<<<<<<< HEAD
         innovationScore: 9.5};
     {
         id: 4;
+=======
+        innovationScore: 9.5,
+    };
+    {id: 4;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Holographic Display & 3D Visualization";
         category: "Holographic Technology";
         subcategory: "3D Visualization";
@@ -163,9 +180,15 @@ export const specializedInnovativeServices2025 = [
         scalability: ["Multi-display Support", "Network Distribution", "Content Scaling"],
         estimatedDelivery: "12-16 weeks";
         supportLevel: "premium";
+<<<<<<< HEAD
         innovationScore: 9.2};
     {
         id: 5;
+=======
+        innovationScore: 9.2,
+    };
+    {id: 5;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Ambient Intelligence & Smart Environment";
         category: "Ambient Intelligence";
         subcategory: "Smart Environments";
@@ -204,9 +227,15 @@ export const specializedInnovativeServices2025 = [
         scalability: ["Multi-location Support", "Sensor Network Scaling", "Geographic Expansion"],
         estimatedDelivery: "14-18 weeks";
         supportLevel: "enterprise";
+<<<<<<< HEAD
         innovationScore: 9.0};
     {
         id: 6;
+=======
+        innovationScore: 9.0,
+    };
+    {id: 6;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Swarm Robotics & Autonomous Systems";
         category: "Swarm Robotics";
         subcategory: "Autonomous Systems";
@@ -245,9 +274,15 @@ export const specializedInnovativeServices2025 = [
         scalability: ["Multi-robot Support", "Task Complexity Scaling", "Geographic Expansion"],
         estimatedDelivery: "16-20 weeks";
         supportLevel: "enterprise";
+<<<<<<< HEAD
         innovationScore: 9.4};
     {
         id: 7;
+=======
+        innovationScore: 9.4,
+    };
+    {id: 7;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Bio-Inspired Computing & Evolutionary Algorithms";
         category: "Bio-Inspired Computing";
         subcategory: "Evolutionary AI";
@@ -286,9 +321,15 @@ export const specializedInnovativeServices2025 = [
         scalability: ["Multi-problem Support", "Algorithm Scaling", "Distributed Computing"],
         estimatedDelivery: "10-14 weeks";
         supportLevel: "premium";
+<<<<<<< HEAD
         innovationScore: 8.8};
     {
         id: 8;
+=======
+        innovationScore: 8.8,
+    };
+    {id: 8;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Quantum Machine Learning & AI";
         category: "Quantum AI";
         subcategory: "Quantum Machine Learning";

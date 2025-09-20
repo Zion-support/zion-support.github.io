@@ -1,7 +1,6 @@
 export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
     // Enterprise Infrastructure Services;
-    {
-        id: 'enterprise-hybrid-cloud-platform';
+    {id: 'enterprise-hybrid-cloud-platform';
         title: 'Enterprise Hybrid Cloud Infrastructure Platform';
         description: 'Comprehensive hybrid cloud platform that seamlessly integrates on-premises infrastructure with multiple cloud providers for optimal performance and cost efficiency.';
         category: 'Infrastructure';
@@ -40,8 +39,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         estimatedDelivery: '8-12 weeks';
         supportLevel: 'Dedicated';
         website: 'https://ziontechgroup.com/enterprise-hybrid-cloud';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
             address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.9;
@@ -51,9 +49,15 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['Kubernetes', 'Docker', 'Terraform', 'Ansible', 'Multi-cloud APIs'],
         compliance: ['SOC2', 'ISO 27001', 'HIPAA', 'PCI DSS', 'GDPR'],
         integrations: ['AWS', 'Azure', 'Google Cloud', 'IBM Cloud', 'Oracle Cloud', 'VMware'],
+<<<<<<< HEAD
         sla: '99.99% uptime guarantee'};
     {
         id: 'next-generation-data-center-solutions';
+=======
+        sla: '99.99% uptime guarantee',
+    };
+    {id: 'next-generation-data-center-solutions';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: 'Next-Generation Data Center & Edge Computing Solutions';
         description: 'Advanced data center infrastructure with edge computing capabilities, designed for ultra-low latency applications and massive scalability.',
         category: 'Data Center';
@@ -92,8 +96,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         estimatedDelivery: '12-16 weeks';
         supportLevel: 'Dedicated';
         website: 'https://ziontechgroup.com/next-gen-data-center';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
             address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.9;
@@ -103,9 +106,15 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['Edge Computing', '5G Networks', 'AI/ML', 'Software-Defined Networking', 'Green Computing'],
         compliance: ['SOC2', 'ISO 27001', 'Tier IV Data Center', 'Energy Star', 'LEED'],
         integrations: ['Cloud platforms', 'Network providers', 'Content delivery networks', 'IoT platforms'],
+<<<<<<< HEAD
         sla: '99.995% uptime guarantee'};
     {
         id: 'enterprise-network-security-fabric';
+=======
+        sla: '99.995% uptime guarantee',
+    };
+    {id: 'enterprise-network-security-fabric';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: 'Enterprise Network Security Fabric & Zero Trust Architecture';
         description: 'Comprehensive network security solution implementing zero trust architecture with advanced threat detection, segmentation, and automated response capabilities.',
         category: 'Security';
@@ -144,8 +153,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         estimatedDelivery: '6-8 weeks';
         supportLevel: 'Premium';
         website: 'https://ziontechgroup.com/enterprise-network-security';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
             address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.8;
@@ -155,9 +163,15 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['Zero Trust', 'AI/ML', 'Behavioral Analytics', 'Network Segmentation', 'SASE'],
         compliance: ['SOC2', 'ISO 27001', 'NIST', 'PCI DSS', 'HIPAA'],
         integrations: ['SIEM systems', 'EDR platforms', 'Identity providers', 'Network infrastructure'],
+<<<<<<< HEAD
         sla: '99.9% uptime guarantee'};
     {
         id: 'enterprise-performance-optimization-suite';
+=======
+        sla: '99.9% uptime guarantee',
+    };
+    {id: 'enterprise-performance-optimization-suite';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: 'Enterprise Performance Optimization & Monitoring Suite';
         description: 'Comprehensive performance monitoring and optimization platform that provides real-time insights into application performance, infrastructure health, and user experience.',
         category: 'Performance';
@@ -196,8 +210,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         estimatedDelivery: '4-6 weeks';
         supportLevel: 'Enterprise';
         website: 'https://ziontechgroup.com/enterprise-performance-optimization';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
             address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.7;
@@ -207,9 +220,15 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['APM', 'Infrastructure Monitoring', 'AI/ML', 'Big Data Analytics', 'Cloud Computing'],
         compliance: ['SOC2', 'ISO 27001', 'GDPR', 'Industry-specific standards'],
         integrations: ['Application platforms', 'Cloud providers', 'Monitoring tools', 'Alerting systems'],
+<<<<<<< HEAD
         sla: '99.9% uptime guarantee'};
     {
         id: 'enterprise-disaster-recovery-platform';
+=======
+        sla: '99.9% uptime guarantee',
+    };
+    {id: 'enterprise-disaster-recovery-platform';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: 'Enterprise Disaster Recovery & Business Continuity Platform';
         description: 'Advanced disaster recovery platform that ensures business continuity with automated backup, replication, and recovery capabilities across multiple locations.',
         category: 'Disaster Recovery';
@@ -248,8 +267,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         estimatedDelivery: '8-10 weeks';
         supportLevel: 'Premium';
         website: 'https://ziontechgroup.com/enterprise-disaster-recovery';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
             address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.9;
@@ -259,9 +277,15 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['Backup & Replication', 'Cloud Storage', 'Network Optimization', 'Automation', 'Monitoring'],
         compliance: ['SOC2', 'ISO 27001', 'HIPAA', 'PCI DSS', 'Industry-specific regulations'],
         integrations: ['Storage systems', 'Cloud providers', 'Network infrastructure', 'Monitoring tools'],
+<<<<<<< HEAD
         sla: '99.99% recovery time guarantee'};
     {
         id: 'enterprise-integration-hub';
+=======
+        sla: '99.99% recovery time guarantee',
+    };
+    {id: 'enterprise-integration-hub';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: 'Enterprise Integration Hub & API Management Platform';
         description: 'Comprehensive integration platform that enables seamless connectivity between enterprise systems, applications, and data sources with advanced API management capabilities.',
         category: 'Integration';
@@ -300,8 +324,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         estimatedDelivery: '6-8 weeks';
         supportLevel: 'Enterprise';
         website: 'https://ziontechgroup.com/enterprise-integration-hub';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
             address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.8;
@@ -311,9 +334,15 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['API Gateway', 'ESB', 'Data Integration', 'Workflow Automation', 'Cloud Computing'],
         compliance: ['SOC2', 'ISO 27001', 'GDPR', 'Industry-specific standards'],
         integrations: ['ERP systems', 'CRM platforms', 'Database systems', 'Cloud services', 'Legacy systems'],
+<<<<<<< HEAD
         sla: '99.9% uptime guarantee'};
     {
         id: 'enterprise-compliance-automation-suite';
+=======
+        sla: '99.9% uptime guarantee',
+    };
+    {id: 'enterprise-compliance-automation-suite';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: 'Enterprise Compliance Automation & Governance Suite';
         description: 'Comprehensive compliance automation platform that streamlines regulatory compliance, audit processes, and governance across enterprise systems and processes.',
         category: 'Compliance';
@@ -352,8 +381,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         estimatedDelivery: '6-8 weeks';
         supportLevel: 'Premium';
         website: 'https://ziontechgroup.com/enterprise-compliance-automation';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
             address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.9;
@@ -363,9 +391,15 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['AI/ML', 'Automation', 'Big Data Analytics', 'Workflow Management', 'Cloud Computing'],
         compliance: ['SOC2', 'ISO 27001', 'GDPR', 'Industry-specific regulations'],
         integrations: ['GRC systems', 'Risk management platforms', 'Audit tools', 'Compliance databases'],
+<<<<<<< HEAD
         sla: '99.9% uptime guarantee'};
     {
         id: 'enterprise-scalability-solutions';
+=======
+        sla: '99.9% uptime guarantee',
+    };
+    {id: 'enterprise-scalability-solutions';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: 'Enterprise Scalability & Auto-Scaling Solutions';
         description: 'Advanced scalability platform that automatically scales enterprise applications and infrastructure based on demand, ensuring optimal performance and cost efficiency.',
         category: 'Scalability';
@@ -404,8 +438,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         estimatedDelivery: '5-7 weeks';
         supportLevel: 'Enterprise';
         website: 'https://ziontechgroup.com/enterprise-scalability-solutions';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
             address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.7;

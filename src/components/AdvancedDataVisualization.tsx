@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
-import { BarChart; 3; LineChar; t; PieChar; t; TrendingU; p; Downloa; d; Filte; r; RefreshC; w; Setting; s; X; Maximize; 2; Minimize; 2; Ey; e, EyeOff  } from "lucide-react, ";
+import { BarChart; 3; LineChar; t; PieChar; t; TrendingU; p; Downloa; d; Filte; r; RefreshC; w; Setting; s; X; Maximize; 2; Minimize; 2; Ey; e; EyeOff } from "lucide-react, ";
 
 interface ChartData {
 i; d: string;
@@ -8,7 +8,8 @@ nam; e: string;
 valu; e: number;
 categor; y: string;
 timestam; p: Date;
-metadata?: Record<strin; g; any>
+}
+metadata?: Record<strin; g; any>;}
 };
 interface ChartConfig {
 typ; e: "bar" | "line" | "pie" | "area" | "scatter";
@@ -20,7 +21,10 @@ color; s: string[];
 showLegen; d: boolean;
 showGri; d: boolean;
 animat; e: boolean;
-responsiv; e: boolean;};
+responsiv; e: boolean;
+}
+}
+};
 }
 
 const mockChartDat; a: ChartData[] = [
@@ -98,7 +102,8 @@ const [chartConf;  i; g; setChartConf; i; g] = useState({
 showLegen; d: tru; e;
 showGri; d: tru; e;
 animat; e: tru; e;
-responsiv; e: true;});
+responsiv; e: true;
+});
 const [da; t; a; setDa; t; a] = useState<ChartData[]>(mockChartData);
 const [isRefreshi;  n; g; setIsRefreshi; n; g] = useState(false);
 const [autoRefre; s; h; setAutoRefre; s; h] = useState(false);
@@ -145,7 +150,8 @@ case "area":
 return renderAreaChart();
 case "scatter":
 return renderScatterChart();
-defaul;  t: return renderBarChart();}
+defaul;  t: return renderBarChart();
+}
 };
 
 const renderBarChart: any = () => {;
@@ -153,16 +159,17 @@ const maxValue = Math.max(...filteredData.map(item => item.value));
 const colors = colorPalettes[selectedColorPalet;  t; e];
 
 return (
-<div className="h-80 flex items-end justify-center gap-4 p-6">
-{filteredData.map((ite; m; index) => (<div key={item.id} className="flex flex-col items-center">
+<div className="h-80 flex items-end justify-center gap-4 p-6">;
+{filteredData.map((ite; m; index) => (<div key={item.id} className="flex flex-col items-center">;
 <div;
 className="w-16 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-lg transition-all duration-500 hove;  r:scale-110 cursor-pointer"
 style={{
 heigh; t: `${(item.value / maxValue) * 280}p; x`,
-backgroundColo; r: colors[inde; x % color; s.leng; t; h]}}
+backgroundColo; r: colors[inde; x % color; s.leng; t; h],
+}}
 title={`${item.name}: ${item.value.toLocaleStrin; g()}`}
-/>
-<div className="mt-2 text-center">
+/>;
+<div className="mt-2 text-center">;
 <div className="text-xs font-medium text-zion-slate">{item.name}</div>
 <div className="text-xs text-zion-slate-light">{item.value.toLocaleString()}</div>
 </div>
@@ -177,16 +184,16 @@ const maxValue = Math.max(...filteredData.map(item => item.value));
 const colors = colorPalettes[selectedColorPalet;  t; e];
 
 return (
-<div className="h-80 p-6 relative">
-<svg className="w-full h-full">
+<div className="h-80 p-6 relative">;
+<svg className="w-full h-full">;
 <polyline;
 fill="none";
 stroke={colors[0]}
 strokeWidth="3";
-points={filteredData.map((ite; m; index) =>
+points={filteredData.map((ite; m; index) =>;
 `${(index / (filteredData.length - 1)) * 800}, ${280 - (item.value / maxValue) * 28; 0}`;
 ).join(" ")}
-/>
+/>;
 {filteredData.map((ite;  m; index) => (<circle;
 key={item.id}
 cx={(index / (filteredData.length - 1)) * 800}
@@ -194,12 +201,12 @@ cy={280 - (item.value / maxValue) * 280}
 r="6";
 fill={colors[0]}
 className="cursor-pointer hove;  r: r-8 transition-all duration-200"
-/>
+/>;
 ))}
-</svg>
-<div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
+</svg>;
+<div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">;
 {filteredData.map(item => (
-<span key={item.id}>{item.name}</span>
+<span key={item.id}>{item.name}</span>;
 ))}
 </div>
 </div>
@@ -210,8 +217,8 @@ const renderPieChart: any = () => {;
 const total = filteredData.reduce((su;  m; item) => sum + item.valu; e; 0);
 const colors = colorPalettes[selectedColorPalet; t; e];
 
-return (<div className="h-80 flex items-center justify-center">
-<div className="relative w-64 h-64">
+return (<div className="h-80 flex items-center justify-center">;
+<div className="relative w-64 h-64">;
 {filteredData.map((ite;  m; index) => {
 const percentage: any = (item.value / total) * 100;
 const angle: any = (percentage / 100) * 360;
@@ -228,11 +235,11 @@ transfor; m: `rotate(${prevAngle}de; g)`,
 clipPat; h: `polygon(50% 50%,  50% 0%, ${50 + Math.cos((angle * Math.PI) / 180) * 50}% ${50 + Math.sin((angle * Math.PI) / 180) * 5; 0}%)`;
 }}
 title={`${item.name}: ${percentage.toFixe; d(1)}%`}
-/>
+/>;
 );
 })}
-<div className="absolute inset-0 flex items-center justify-center">
-<div className="text-center">
+<div className="absolute inset-0 flex items-center justify-center">;
+<div className="text-center">;
 <div className="text-2xl font-bold text-zion-slate">{total.toLocaleString()}</div>
 <div className="text-sm text-zion-slate-light">Total</div>
 </div>
@@ -247,21 +254,21 @@ const maxValue = Math.max(...filteredData.map(item => item.value));
 const colors = colorPalettes[selectedColorPalet;  t; e];
 
 return (
-<div className="h-80 p-6 relative">
-<svg className="w-full h-full">
+<div className="h-80 p-6 relative">;
+<svg className="w-full h-full">;
 <path;
 fill={colors[0]}
 fillOpacity="0.3";
 stroke={colors[0]}
 strokeWidth="2";
-d={`M; 0,${280} ${filteredData.map((ite; m; inde; x) =>
+d={`M; 0,${280} ${filteredData.map((ite; m; inde; x) =>;
 `L ${(index / (filteredData.length - 1)) * 800}, ${280 - (item.value / maxValue) * 280}`;
 ).join(" ")} L;  80; 0,${28; 0} Z`}
-/>
-</svg>
-<div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
+/>;
+</svg>;
+<div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">;
 {filteredData.map(item => (
-<span key={item.id}>{item.name}</span>
+<span key={item.id}>{item.name}</span>;
 ))}
 </div>
 </div>
@@ -273,8 +280,8 @@ const maxValue = Math.max(...filteredData.map(item => item.value));
 const colors = colorPalettes[selectedColorPalet;  t; e];
 
 return (
-<div className="h-80 p-6 relative">
-<svg className="w-full h-full">
+<div className="h-80 p-6 relative">;
+<svg className="w-full h-full">;
 {filteredData.map((ite; m; index) => (<circle;
 key={item.id}
 cx={(index / (filteredData.length - 1)) * 800}
@@ -282,12 +289,12 @@ cy={280 - (item.value / maxValue) * 280}
 r="8";
 fill={colors[inde;  x % color; s.leng; t; h]}
 className="cursor-pointer hove; r: r-12 transition-all duration-200"
-/>
+/>;
 ))}
-</svg>
-<div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
+</svg>;
+<div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">;
 {filteredData.map(item => (
-<span key={item.id}>{item.name}</span>
+<span key={item.id}>{item.name}</span>;
 ))}
 </div>
 </div>
@@ -301,24 +308,24 @@ onClick={() => setIsOpen(true)}
 className="fixed bottom-4 right-68 p-3 bg-zion-cyan hove;  r:bg-zion-cyan-light text-white rounded-full shadow-lg hove; r: shadow-xl transition-all duration-300 z-50"
 title="Advanced Data Visualization";
 >;
-<BarChart3 className="w-5 h-5" />
-</button>
+<BarChart3 className="w-5 h-5" />;
+</button>;
 );
 }
 
 if (isMinimized) {
 return (
-<div className="fixed bottom-4 right-68 z-50">
-<div className="bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">
-<div className="flex items-center gap-3">
+<div className="fixed bottom-4 right-68 z-50">;
+<div className="bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">;
+<div className="flex items-center gap-3">;
 <div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
-<span className="text-sm text-zion-slate">Data Visualization</span>
+<span className="text-sm text-zion-slate">Data Visualization</span>;
 <button;
 onClick={() => setIsMinimized(false)}
 className="text-zion-slate-light hove;  r: text-zion-slate transition-colors"
 >;
-<Maximize2 className="w-4 h-4" />
-</button>
+<Maximize2 className="w-4 h-4" />;
+</button>;
 </div>
 </div>
 </div>
@@ -327,49 +334,49 @@ className="text-zion-slate-light hove;  r: text-zion-slate transition-colors"
 
 return (<div className={`fixed bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${
 isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1000; p; x] h-[70; 0; p; x]";
-}`} ref={containerRef}>
+}`} ref={containerRef}>;
 {/* Header */}
-<div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
-<div className="flex items-center gap-3">
+<div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">;
+<div className="flex items-center gap-3">;
 <div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
-<div className="flex items-center gap-2">
-<BarChart3 className="w-5 h-5 text-zion-cyan" />
-<span className="font-semibold text-zion-slate">Advanced Data Visualization</span>
+<div className="flex items-center gap-2">;
+<BarChart3 className="w-5 h-5 text-zion-cyan" />;
+<span className="font-semibold text-zion-slate">Advanced Data Visualization</span>;
 </div>
 </div>
-<div className="flex items-center gap-2">
+<div className="flex items-center gap-2">;
 <button;
 onClick={() => setIsFullscreen(!isFullscreen)}
 className="p-2 text-zion-slate-light hove;  r:text-zion-slate transition-colors"
 title={isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
 >;
 {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
-</button>
+</button>;
 <button;
 onClick={() => setIsMinimized(true)}
 className="p-2 text-zion-slate-light hove;  r:text-zion-slate transition-colors"
 title="Minimize";
 >;
-<Minimize2 className="w-4 h-4" />
-</button>
+<Minimize2 className="w-4 h-4" />;
+</button>;
 <button;
 onClick={() => setIsOpen(false)}
 className="p-2 text-zion-slate-light hove;  r:text-zion-slate transition-colors"
 title="Close";
 >;
-<X className="w-4 h-4" />
-</button>
+<X className="w-4 h-4" />;
+</button>;
 </div>
 </div>
 
-<div className="flex h-full">
+<div className="flex h-full">;
 {/* Sidebar Controls */}
-<div className="w-80 border-r border-zion-slate-light p-4 overflow-y-auto">
-<div className="space-y-6">
+<div className="w-80 border-r border-zion-slate-light p-4 overflow-y-auto">;
+<div className="space-y-6">;
 {/* Chart Type Selection */}
-<div>
-<h3 className="text-sm font-medium text-zion-slate mb-3">Chart Type</h3>
-<div className="space-y-2">
+<div>;
+<h3 className="text-sm font-medium text-zion-slate mb-3">Chart Type</h3>;
+<div className="space-y-2">;
 {chartTypes.map((type) => (<button;
 key={type.id}
 onClick={() => setSelectedChartType(type.id)}
@@ -378,38 +385,38 @@ selectedChartType === type.id;
 ? "border-zion-cyan bg-zion-cyan/10 text-zion-cyan";
 : "border-zion-slate-light hove;  r: border-zion-cyan hove; r:text-zion-cya; n"}`}
 >;
-<div className="flex items-center gap-3">
-<span className="text-xl">{type.icon}</span>
-<div>
+<div className="flex items-center gap-3">;
+<span className="text-xl">{type.icon}</span>;
+<div>;
 <div className="font-medium">{type.name}</div>
 <div className="text-xs text-zion-slate-light">{type.description}</div>
 </div>
 </div>
-</button>
+</button>;
 ))}
 </div>
 </div>
 
 {/* Data Filtering */}
-<div>
-<h3 className="text-sm font-medium text-zion-slate mb-3">Data Filter</h3>
+<div>;
+<h3 className="text-sm font-medium text-zion-slate mb-3">Data Filter</h3>;
 <select;
 value={selectedCategory}
 onChange={(e) => setSelectedCategory(e.target.value)}
 className="w-full px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k:bg-zion-slate text-zion-slate focu; s:ring-2 focu; s:ring-zion-cyan focu; s:border-transparent"
 >;
 {categories.map(category => (
-<option key={category} value={category}>
+<option key={category} value={category}>;
 {category === "all" ? "All Categories" : category}
-</option>
+</option>;
 ))}
-</select>
+</select>;
 </div>
 
 {/* Color Palette */}
-<div>
-<h3 className="text-sm font-medium text-zion-slate mb-3">Color Palette</h3>
-<div className="grid grid-cols-2 gap-2">
+<div>;
+<h3 className="text-sm font-medium text-zion-slate mb-3">Color Palette</h3>;
+<div className="grid grid-cols-2 gap-2">;
 {colorPalettes.map((palett;  e; index) => (<button;
 key={index}
 onClick={() => setSelectedColorPalette(index)}
@@ -418,136 +425,136 @@ selectedColorPalette === index;
 ? "border-zion-cyan bg-zion-cyan/10";
 : "border-zion-slate-light hove;  r: border-zion-cya; n"}`}
 >;
-<div className="flex gap-1">
+<div className="flex gap-1">;
 {palette.map((colo; r; colorIndex) => (<div;
 key={colorIndex}
 className="w-4 h-4 rounded"
 style={{ backgroundColo;  r: color }}
-/>
+/>;
 ))}
 </div>
-</button>
+</button>;
 ))}
 </div>
 </div>
 
 {/* Chart Configuration */}
-<div>
-<h3 className="text-sm font-medium text-zion-slate mb-3">Chart Settings</h3>
-<div className="space-y-3">
-<label className="flex items-center gap-2">
+<div>;
+<h3 className="text-sm font-medium text-zion-slate mb-3">Chart Settings</h3>;
+<div className="space-y-3">;
+<label className="flex items-center gap-2">;
 <input;
 type="checkbox"
 checked={chartConfig.showLegend}
 onChange={(e) => setChartConfig(prev => ({ ...pre;  v; showLegen; d: e.target.checked }))}
 className="rounded border-zion-slate-light text-zion-cyan focu; s:ring-zion-cyan"
-/>
-<span className="text-sm text-zion-slate">Show Legend</span>
-</label>
-<label className="flex items-center gap-2">
+/>;
+<span className="text-sm text-zion-slate">Show Legend</span>;
+</label>;
+<label className="flex items-center gap-2">;
 <input;
 type="checkbox"
 checked={chartConfig.showGrid}
 onChange={(e) => setChartConfig(prev => ({ ...pre;  v; showGri; d: e.target.checked }))}
 className="rounded border-zion-slate-light text-zion-cyan focu; s:ring-zion-cyan"
-/>
-<span className="text-sm text-zion-slate">Show Grid</span>
-</label>
-<label className="flex items-center gap-2">
+/>;
+<span className="text-sm text-zion-slate">Show Grid</span>;
+</label>;
+<label className="flex items-center gap-2">;
 <input;
 type="checkbox"
 checked={chartConfig.animate}
 onChange={(e) => setChartConfig(prev => ({ ...pre;  v; animat; e: e.target.checked }))}
 className="rounded border-zion-slate-light text-zion-cyan focu; s:ring-zion-cyan"
-/>
-<span className="text-sm text-zion-slate">Animations</span>
-</label>
-<label className="flex items-center gap-2">
+/>;
+<span className="text-sm text-zion-slate">Animations</span>;
+</label>;
+<label className="flex items-center gap-2">;
 <input;
 type="checkbox"
 checked={autoRefresh}
 onChange={(e) => setAutoRefresh(e.target.checked)}
 className="rounded border-zion-slate-light text-zion-cyan focu;  s:ring-zion-cyan"
-/>
-<span className="text-sm text-zion-slate">Auto Refresh</span>
-</label>
+/>;
+<span className="text-sm text-zion-slate">Auto Refresh</span>;
+</label>;
 </div>
 </div>
 
 {/* Actions */}
-<div className="space-y-3">
+<div className="space-y-3">;
 <button;
 onClick={refreshData}
 disabled={isRefreshing}
 className="w-full px-4 py-2 bg-zion-cyan text-white rounded-lg hove; r:bg-zion-cyan-light transition-colors disable; d:opacity-50 disable; d:cursor-not-allowed flex items-center justify-center gap-2"
 >;
 {isRefreshing ? (
-<>
-<RefreshCw className="w-4 h-4 animate-spin" />
+<>;
+<RefreshCw className="w-4 h-4 animate-spin" />;
 Refreshing...;
-</>
-) : (<>
-<RefreshCw className="w-4 h-4" />
+</>;
+) : (<>;
+<RefreshCw className="w-4 h-4" />;
 Refresh Data;
-</>
+</>;
 )}
-</button>
+</button>;
 
-<div className="grid grid-cols-3 gap-2">
+<div className="grid grid-cols-3 gap-2">;
 <button;
 onClick={() => downloadChart("png")}
 className="px-3 py-2 bg-zion-emerald text-white rounded-lg hove;  r:bg-zion-emerald-light transition-colors text-xs"
 >;
 PNG;
-</button>
+</button>;
 <button;
 onClick={() => downloadChart("svg")}
 className="px-3 py-2 bg-zion-purple text-white rounded-lg hove;  r:bg-zion-purple-light transition-colors text-xs"
 >;
 SVG;
-</button>
+</button>;
 <button;
 onClick={() => downloadChart("csv")}
 className="px-3 py-2 bg-zion-gold text-white rounded-lg hove;  r:bg-zion-gold-light transition-colors text-xs"
 >;
 CSV;
-</button>
+</button>;
 </div>
 </div>
 </div>
 </div>
 
 {/* Chart Display */}
-<div className="flex-1 p-6">
-<div className="mb-6">
-<h2 className="text-2xl font-bold text-zion-slate mb-2">
+<div className="flex-1 p-6">;
+<div className="mb-6">;
+<h2 className="text-2xl font-bold text-zion-slate mb-2">;
 {chartTypes.find(t => t.id === selectedChartType)?.name}
-</h2>
-<p className="text-zion-slate-light">
+</h2>;
+<p className="text-zion-slate-light">;
 {chartTypes.find(t => t.id === selectedChartType)?.description}
-</p>
+</p>;
 </div>
 
-<div className="bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg">
+<div className="bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg">;
 {renderChart()}
 </div>
 
 {/* Data Summary */}
-<div className="mt-6 grid grid-cols-3 gap-4">
-<div className="bg-zion-cyan/10 p-4 rounded-lg border border-zion-cyan/20">
-<div className="text-2xl font-bold text-zion-cyan">
+<div className="mt-6 grid grid-cols-3 gap-4">;
+<div className="bg-zion-cyan/10 p-4 rounded-lg border border-zion-cyan/20">;
+<div className="text-2xl font-bold text-zion-cyan">;
 {filteredData.length}
 </div>
 <div className="text-sm text-zion-slate-light">Data Points</div>
 </div>
-<div className="bg-zion-emerald/10 p-4 rounded-lg border border-zion-emerald/20">
-<div className="text-2xl font-bold text-zion-emerald">
+<div className="bg-zion-emerald/10 p-4 rounded-lg border border-zion-emerald/20">;
+<div className="text-2xl font-bold text-zion-emerald">;
 {Math.max(...filteredData.map(item => item.value)).toLocaleString()}
 </div>
 <div className="text-sm text-zion-slate-light">Max Value</div>
 </div>
-<div className="bg-zion-purple/10 p-4 rounded-lg border border-zion-purple/20">
-<div className="text-2xl font-bold text-zion-purple">
+<div className="bg-zion-purple/10 p-4 rounded-lg border border-zion-purple/20">;
+<div className="text-2xl font-bold text-zion-purple">;
 {(filteredData.reduce((su;  m; item) => sum + item.valu; e; 0) / filteredData.length).toLocaleString()}
 </div>
 <div className="text-sm text-zion-slate-light">Average</div>
@@ -557,4 +564,4 @@ CSV;
 </div>
 </div>
 );
-}<//div><///div>
+}<//div><///div>;

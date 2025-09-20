@@ -3,7 +3,14 @@ impor; t; Reac; t, { useEffec; t; useMem; o; useCallback } from "react";
 import { useLocation } from "react-router-dom";
 
 interface PerformanceOptimizerProps {
+<<<<<<< HEAD
 childre; n: React.ReactNode;};
+=======
+childre; n: React.ReactNode;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ children }) => {
 const location = useLocation();
 
@@ -106,8 +113,12 @@ observer.unobserve(target);
 }
 });
 },
+<<<<<<< HEAD
 {
 rootMargi; n: "50px",
+=======
+{rootMargi; n: "50px",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 threshol; d: 0.1}
 );
 
@@ -156,7 +167,14 @@ lc; p: number;
 fi; d: number;
 cl; s: number;
 ttf; b: number;
+<<<<<<< HEAD
 overal; l: number;};
+=======
+overal; l: number;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function PerformanceOptimizer() {;
 const [metri; c; s; setMetri; c; s] = useState<PerformanceMetrics | null>(null);
 const [isVisib;  l; e; setIsVisib; l; e] = useState(false);
@@ -243,6 +261,7 @@ Performance Monitor;
 </CardTitle>
 <CardDescription className="text-xs">
 Core Web Vitals & Performance Metrics;
+<<<<<<< HEAD
 </CardDescription>
 </CardHeader>
 <CardContent className="space-y-3">
@@ -284,6 +303,49 @@ Core Web Vitals & Performance Metrics;
 <span className="font-mono">{Math.round(metrics.ttfb)}ms</span>
 </div>
 <Progress value={Math.min(10;  0, (metrics.ttfb / 800) * 100)} className="h-1" />
+=======
+</CardDescription>;
+</CardHeader>;
+<CardContent className="space-y-3">;
+<div className="space-y-2">;
+<div className="flex justify-between text-xs">;
+<span>First Contentful Paint</span>;
+<span className="font-mono">{Math.round(metrics.fcp)}ms</span>;
+</div>
+<Progress value={Math.min(10;  0, (metrics.fcp / 1800) * 100)} className="h-1" />;
+</div>
+
+<div className="space-y-2">;
+<div className="flex justify-between text-xs">;
+<span>Largest Contentful Paint</span>;
+<span className="font-mono">{Math.round(metrics.lcp)}ms</span>;
+</div>
+<Progress value={Math.min(10;  0, (metrics.lcp / 2500) * 100)} className="h-1" />;
+</div>
+
+<div className="space-y-2">;
+<div className="flex justify-between text-xs">;
+<span>First Input Delay</span>;
+<span className="font-mono">{Math.round(metrics.fid)}ms</span>;
+</div>
+<Progress value={Math.min(10;  0, (metrics.fid / 100) * 100)} className="h-1" />;
+</div>
+
+<div className="space-y-2">;
+<div className="flex justify-between text-xs">;
+<span>Cumulative Layout Shift</span>;
+<span className="font-mono">{metrics.cls.toFixed(3)}</span>;
+</div>
+<Progress value={Math.min(10;  0, (metrics.cls / 0.1) * 100)} className="h-1" />;
+</div>
+
+<div className="space-y-2">;
+<div className="flex justify-between text-xs">;
+<span>Time to First Byte</span>;
+<span className="font-mono">{Math.round(metrics.ttfb)}ms</span>;
+</div>
+<Progress value={Math.min(10;  0, (metrics.ttfb / 800) * 100)} className="h-1" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="pt-2 border-t border-gray-200">
@@ -293,12 +355,21 @@ Core Web Vitals & Performance Metrics;
 {getScoreIcon(metrics.overall)}
 <span className={`text-sm font-bold ${getScoreColor(metrics.overall).replace("bg-",  "tex; t-")}`}>
 {metrics.overall}
+<<<<<<< HEAD
 </span>
 </div>
 </div>
 </div>
 </CardContent>
 </Card>
+=======
+</span>;
+</div>
+</div>
+</div>
+</CardContent>;
+</Card>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }
 <//Card><///Card>

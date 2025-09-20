@@ -1,7 +1,6 @@
 // Innovative IT Services for 2025;
 export const innovativeITServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Zero-Trust Network Architecture";
         category: "Cybersecurity";
         description: "Implementation of zero-trust security architecture with continuous verification, micro-segmentation, and adaptive access controls",
@@ -37,9 +36,15 @@ export const innovativeITServices2025 = [
         sla: "99.9% uptime";
         certifications: ["CISSP", "CISM", "CCSP", "SANS"],
         deliveryTime: "4-6 weeks";
+<<<<<<< HEAD
         support: "24/7 premium support"};
     {
         id: 2;
+=======
+        support: "24/7 premium support",
+    };
+    {id: 2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Quantum-Ready Infrastructure";
         category: "Infrastructure";
         description: "Design and implementation of quantum-ready IT infrastructure prepared for post-quantum cryptography and quantum computing integration";
@@ -75,9 +80,15 @@ export const innovativeITServices2025 = [
         sla: "99.95% uptime";
         certifications: ["Quantum Computing", "Cryptography", "Infrastructure", "Security"],
         deliveryTime: "8-12 weeks";
+<<<<<<< HEAD
         support: "24/7 enterprise support"};
     {
         id: 3;
+=======
+        support: "24/7 enterprise support",
+    };
+    {id: 3;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI-Powered DevOps Automation";
         category: "DevOps";
         description: "Intelligent DevOps automation platform with AI-driven deployment, monitoring, and optimization capabilities",
@@ -113,9 +124,15 @@ export const innovativeITServices2025 = [
         sla: "99.9% uptime";
         certifications: ["AWS", "Azure", "GCP", "DevOps", "Kubernetes"],
         deliveryTime: "3-4 weeks";
+<<<<<<< HEAD
         support: "Business hours + emergency support"};
     {
         id: 4;
+=======
+        support: "Business hours + emergency support",
+    };
+    {id: 4;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Edge Computing Infrastructure";
         category: "Infrastructure";
         description: "Design and deployment of edge computing infrastructure for low-latency applications and IoT deployments";
@@ -151,9 +168,15 @@ export const innovativeITServices2025 = [
         sla: "99.9% uptime";
         certifications: ["Edge Computing", "IoT", "Infrastructure", "Networking"],
         deliveryTime: "6-8 weeks";
+<<<<<<< HEAD
         support: "Business hours + emergency support"};
     {
         id: 5;
+=======
+        support: "Business hours + emergency support",
+    };
+    {id: 5;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Blockchain Infrastructure Services";
         category: "Blockchain";
         description: "Enterprise blockchain infrastructure design, deployment, and management for secure decentralized applications",
@@ -189,9 +212,15 @@ export const innovativeITServices2025 = [
         sla: "99.9% uptime";
         certifications: ["Blockchain", "Ethereum", "Hyperledger", "Security"],
         deliveryTime: "8-10 weeks";
+<<<<<<< HEAD
         support: "24/7 premium support"};
     {
         id: 6;
+=======
+        support: "24/7 premium support",
+    };
+    {id: 6;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Green IT Infrastructure";
         category: "Sustainability";
         description: "Energy-efficient IT infrastructure design and implementation with carbon footprint reduction and sustainability optimization";
@@ -227,9 +256,15 @@ export const innovativeITServices2025 = [
         sla: "99.9% uptime";
         certifications: ["LEED", "Energy Star", "Sustainability", "Green Building"],
         deliveryTime: "6-8 weeks";
+<<<<<<< HEAD
         support: "Business hours + emergency support"};
     {
         id: 7;
+=======
+        support: "Business hours + emergency support",
+    };
+    {id: 7;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI Infrastructure Optimization";
         category: "AI Infrastructure";
         description: "Specialized infrastructure optimization for AI workloads, including GPU clusters, distributed training, and inference optimization",
@@ -265,9 +300,15 @@ export const innovativeITServices2025 = [
         sla: "99.95% uptime";
         certifications: ["AI/ML", "GPU Computing", "Distributed Systems", "Performance"],
         deliveryTime: "8-12 weeks";
+<<<<<<< HEAD
         support: "24/7 premium support"};
     {
         id: 8;
+=======
+        support: "24/7 premium support",
+    };
+    {id: 8;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Hybrid Cloud Architecture";
         category: "Cloud";
         description: "Design and implementation of hybrid cloud architectures with seamless integration between on-premises and cloud environments";

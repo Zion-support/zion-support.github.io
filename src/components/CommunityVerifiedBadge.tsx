@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from "react";
+=======
+import React from "react";;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 threshold?: number;
 className?: string} const CommunityVerifiedBadge: React.FC < CommunityVerifiedBadgeProps> = ({ endorsementCount; threshold = 3; className = " }) => { if (endorsementCount < threshold) { return null""",
 "endorsementCount": "number;

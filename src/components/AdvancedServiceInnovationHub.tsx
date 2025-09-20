@@ -42,7 +42,14 @@ adoptio; n: number;
 investmen; t: string;
 keyPlayer; s: string[];
 technologie; s: string[];
+<<<<<<< HEAD
 statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";};
+=======
+statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface FutureRoadmap {
 i; d: string;
 titl; e: string;
@@ -52,7 +59,14 @@ milestone; s: string[];
 challenge; s: string[];
 opportunitie; s: string[];
 investmen; t: string;
+<<<<<<< HEAD
 categor; y: string;};
+=======
+categor; y: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const AdvancedServiceInnovationHu; b: React.FC = () => {
 const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState<string>("all");
 const [selectedImpa; c; t; setSelectedImpa; c; t] = useState<string>("all");
@@ -74,9 +88,15 @@ investme; n; t: "$50; B+",
 keyPlaye; r; s: ["IB; M", "Googl; e", "Microsof; t", "Startup; s"],
 technologie; s: ["Quantu; m Computin; g", "Quantu; m Algorithm; s", "Quantu; m Softwar; e"];
 };
+<<<<<<< HEAD
 statu; s: "Emerging"};
 {
 i; d: "ai-consciousness";
+=======
+statu; s: "Emerging",
+};
+{i; d: "ai-consciousness";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "AI Consciousness & General Intelligence";
 descriptio; n: "Development of self-aware AI systems with human-like reasoning and consciousness.";
 categor; y: "ai";
@@ -87,8 +107,12 @@ investmen; t: "$100B+";
 keyPlayer; s: ["OpenA; I", "Anthropi; c", "Researc; h Lab; s", "Universitie; s"],
 technologie; s: ["A; I Consciousnes; s", "Genera; l A; I", "Neura; l Network; s"],
 statu; s: "Emerging"};
+<<<<<<< HEAD
 {
 i; d: "space-mining";
+=======
+{i; d: "space-mining";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Space Mining & Resource Extraction";
 descriptio; n: "Commercial extraction of valuable resources from asteroids and celestial bodies.";
 categor; y: "space-tech";
@@ -99,8 +123,12 @@ investmen; t: "$200B+";
 keyPlayer; s: ["Space; X", "Blu; e Origi; n", "Asteroi; d Minin; g Companie; s"],
 technologie; s: ["Spac; e Robotic; s", "Resourc; e Processin; g", "Spac; e Logistic; s"],
 statu; s: "Emerging"};
+<<<<<<< HEAD
 {
 i; d: "fusion-energy";
+=======
+{i; d: "fusion-energy";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Fusion Energy Commercialization";
 descriptio; n: "Breakthrough in controlled nuclear fusion for unlimited clean energy.";
 categor; y: "green-tech";
@@ -111,8 +139,12 @@ investmen; t: "$500B+";
 keyPlayer; s: ["ITE; R", "Privat; e Fusio; n Companie; s", "Governmen; t Lab; s"],
 technologie; s: ["Fusio; n Physic; s", "Plasm; a Confinemen; t", "Energ; y Conversio; n"],
 statu; s: "Growing"};
+<<<<<<< HEAD
 {
 i; d: "synthetic-biology";
+=======
+{i; d: "synthetic-biology";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Synthetic Biology Revolution";
 descriptio; n: "Engineering of custom organisms and biological systems for industrial applications.";
 categor; y: "biotech-ai";
@@ -123,8 +155,12 @@ investmen; t: "$150B+";
 keyPlayer; s: ["Ginkg; o Biowork; s", "Twis; t Bioscienc; e", "Researc; h Institution; s"],
 technologie; s: ["DN; A Programmin; g", "Geneti; c Engineerin; g", "Bi; o-Manufacturin; g"],
 statu; s: "Growing"};
+<<<<<<< HEAD
 {
 i; d: "brain-computer-interfaces";
+=======
+{i; d: "brain-computer-interfaces";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Brain-Computer Interface Revolution";
 descriptio; n: "Direct neural control of computers and digital systems for enhanced human capabilities.";
 categor; y: "biotech-ai";
@@ -137,8 +173,7 @@ technologie; s: ["Neura; l Interface; s", "Signa; l Processin; g", "A; I/M; L"],
 statu; s: "Emerging"}
 ];
 const futureRoadma; p: FutureRoadmap[] = [
-{
-i; d: "quantu; m-interne; t",
+{i; d: "quantu; m-interne; t",
 tit; l; e: "Quantu; m Interne; t Infrastructur; e",
 descripti; o; n: "Globa; l quantu; m interne; t enablin; g ultr; a-secu; r; e; instan; t communicatio; n worldwid; e.",
 timeli; n; e: "203; 0-204; 0",
@@ -162,8 +197,12 @@ opportunitie; s: [
 ],
 investmen; t: "$200B+";
 categor; y: "quantum"};
+<<<<<<< HEAD
 {
 i; d: "space-colonization";
+=======
+{i; d: "space-colonization";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Space Colonization & Settlement";
 descriptio; n: "Establishment of permanent human settlements on Mars and other celestial bodies.";
 timelin; e: "2040-2060";
@@ -187,8 +226,12 @@ opportunitie; s: [
 ],
 investmen; t: "$1T+";
 categor; y: "space-tech"};
+<<<<<<< HEAD
 {
 i; d: "ai-governance";
+=======
+{i; d: "ai-governance";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "AI Governance & Regulation";
 descriptio; n: "Comprehensive frameworks for responsible AI development and deployment.";
 timelin; e: "2025-2035";
@@ -230,7 +273,12 @@ switch (impact) {
 case "High": return "bg-red-100 text-red-800";
 case "Medium": return "bg-yellow-100 text-yellow-800";
 case "Low": return "bg-green-100 text-green-800";
+<<<<<<< HEAD
 defaul;  t: return "bg-gray-100 text-gray-800";}
+=======
+defaul;  t: return "bg-gray-100 text-gray-800";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -239,17 +287,32 @@ case "Emerging": return "bg-blue-100 text-blue-800";
 case "Growing": return "bg-green-100 text-green-800";
 case "Mature": return "bg-orange-100 text-orange-800";
 case "Disruptive": return "bg-purple-100 text-purple-800";
+<<<<<<< HEAD
 defaul;  t: return "bg-gray-100 text-gray-800";}
+=======
+defaul;  t: return "bg-gray-100 text-gray-800";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getCategoryIcon: any = (categor; y: string) => {
 switch (category) {
+<<<<<<< HEAD
 case "quantum": return <Atom className="w-5 h-5" />
 case "ai": return <Brain className="w-5 h-5" />
 case "space-tech": return <Satellite className="w-5 h-5" />
 case "green-tech": return <Leaf className="w-5 h-5" />
 case "biotech-ai": return <Dna className="w-5 h-5" />
 defaul;  t: return <Cpu className="w-5 h-5" />}
+=======
+case "quantum": return <Atom className="w-5 h-5" />;
+case "ai": return <Brain className="w-5 h-5" />;
+case "space-tech": return <Satellite className="w-5 h-5" />;
+case "green-tech": return <Leaf className="w-5 h-5" />;
+case "biotech-ai": return <Dna className="w-5 h-5" />;
+defaul;  t: return <Cpu className="w-5 h-5" />;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const categories = [;
@@ -271,9 +334,9 @@ return (
 <div className="max-w-7xl mx-auto p-6">
 {/* Header */}
 <motion.div;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 className="mb-8"
 >;
@@ -284,7 +347,11 @@ Advanced Service Innovation Hub;
 </h1>
 <p className="text-zion-slate-light">
 Explore cutting-edge innovatio; n; trend; s; future technolog; y; roadmap; s; and strategic insights for the next generation of services;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex gap-2">
@@ -303,16 +370,20 @@ onClick={() => setViewMode(mode)}
 ))}
 </div>
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Innovation Trends View */}
 {viewMode === "trends" && (
 <>
 {/* Filters */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.1 }}
 className="bg-white rounded-lg shadow-lg p-6 mb-8"
@@ -330,7 +401,11 @@ className="w-full p-2 border border-zion-slate-light rounded-md"
 {category.name}
 </option>
 ))}
+<<<<<<< HEAD
 </select>
+=======
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -340,11 +415,19 @@ value={selectedImpact}
 onChange={(e) => setSelectedImpact(e.target.value)}
 className="w-full p-2 border border-zion-slate-light rounded-md"
 >;
+<<<<<<< HEAD
 <option value="all">All Impact Levels</option>
 <option value="High">High Impact</option>
 <option value="Medium">Medium Impact</option>
 <option value="Low">Low Impact</option>
 </select>
+=======
+<option value="all">All Impact Levels</option>;
+<option value="High">High Impact</option>;
+<option value="Medium">Medium Impact</option>;
+<option value="Low">Low Impact</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -354,12 +437,21 @@ value={selectedStatus}
 onChange={(e) => setSelectedStatus(e.target.value)}
 className="w-full p-2 border border-zion-slate-light rounded-md"
 >;
+<<<<<<< HEAD
 <option value="all">All Statuses</option>
 <option value="Emerging">Emerging</option>
 <option value="Growing">Growing</option>
 <option value="Mature">Mature</option>
 <option value="Disruptive">Disruptive</option>
 </select>
+=======
+<option value="all">All Statuses</option>;
+<option value="Emerging">Emerging</option>;
+<option value="Growing">Growing</option>;
+<option value="Mature">Mature</option>;
+<option value="Disruptive">Disruptive</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -369,25 +461,32 @@ placeholder="Search trends...";
 value={searchTerm}
 onChange={(e) => setSearchTerm(e.target.value)}
 className="w-full"
+<<<<<<< HEAD
 />
 </div>
 </div>
 </motion.div>
+=======
+/>;
+</div>
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Trends Grid */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.2 }}
 className="grid grid-cols-1 l; g:grid-cols-2 gap-6 mb-8"
 >;
 {filteredTrends.map((tren; d; index) => (<motion.div;
 key={trend.id}
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 x: index % 2 === 0 ? -20 : 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 x: 0 }}
 transition={{ dela; y: 0.1 * index }}
 >;
@@ -398,8 +497,13 @@ transition={{ dela; y: 0.1 * index }}
 <div className="w-10 h-10 bg-zion-blue-light/10 rounded-lg flex items-center justify-center">
 {getCategoryIcon(trend.category)}
 </div>
+<<<<<<< HEAD
 <div>
 <CardTitle className="text-lg text-zion-blue-dark">
+=======
+<div>;
+<CardTitle className="text-lg text-zion-blue-dark">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {trend.title}
 </CardTitle>
 <div className="flex gap-2 mt-2">
@@ -408,22 +512,37 @@ transition={{ dela; y: 0.1 * index }}
 </Badge>
 <Badge className={getStatusColor(trend.status)}>
 {trend.status}
+<<<<<<< HEAD
 </Badge>
+=======
+</Badge>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </CardHeader>
+=======
+</CardHeader>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 <CardContent>
 <p className="text-zion-slate-light mb-4">
 {trend.description}
 </p>
 
+<<<<<<< HEAD
 <div className="space-y-3">
 <div className="flex justify-between items-center">
 <span className="text-sm text-zion-slate-light">Timelin;  e:</span>
 <span className="text-sm font-medium text-zion-slate-dark">{trend.timeline}</span>
+=======
+<div className="space-y-3">;
+<div className="flex justify-between items-center">;
+<span className="text-sm text-zion-slate-light">Timelin;  e:</span>;
+<span className="text-sm font-medium text-zion-slate-dark">{trend.timeline}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex justify-between items-center">
@@ -435,6 +554,7 @@ className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full"
 style={{ widt; h: `${trend.adoptio; n}%` }}
 ></div>
 </div>
+<<<<<<< HEAD
 <span className="text-sm font-medium">{trend.adoption}%</span>
 </div>
 </div>
@@ -442,6 +562,15 @@ style={{ widt; h: `${trend.adoptio; n}%` }}
 <div className="flex justify-between items-center">
 <span className="text-sm text-zion-slate-light">Investmen; t:</span>
 <span className="text-sm font-medium text-zion-cyan">{trend.investment}</span>
+=======
+<span className="text-sm font-medium">{trend.adoption}%</span>;
+</div>
+</div>
+
+<div className="flex justify-between items-center">;
+<span className="text-sm text-zion-slate-light">Investmen; t:</span>;
+<span className="text-sm font-medium text-zion-cyan">{trend.investment}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -464,9 +593,15 @@ style={{ widt; h: `${trend.adoptio; n}%` }}
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </CardContent>
 </Card>
 </motion.div>
+=======
+</CardContent>;
+</Card>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </motion.div>
 </>
@@ -475,18 +610,18 @@ style={{ widt; h: `${trend.adoptio; n}%` }}
 {/* Future Roadmap View */}
 {viewMode === "roadmap" && (
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.1 }}
 className="space-y-6"
 >;
 {futureRoadmap.map((roadma; p; index) => (<motion.div;
 key={roadmap.id}
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 x: -20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 x: 0 }}
 transition={{ dela; y: 0.1 * index }}
 >;
@@ -498,11 +633,19 @@ transition={{ dela; y: 0.1 * index }}
 <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center text-white">
 {getCategoryIcon(roadmap.category)}
 </div>
+<<<<<<< HEAD
 <div>
 <CardTitle className="text-xl text-zion-blue-dark">
 {roadmap.title}
 </CardTitle>
 <p className="text-zion-slate-light">{roadmap.description}</p>
+=======
+<div>;
+<CardTitle className="text-xl text-zion-blue-dark">;
+{roadmap.title}
+</CardTitle>;
+<p className="text-zion-slate-light">{roadmap.description}</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -515,11 +658,19 @@ Investmen; t: {roadmap.investment}
 </Badge>
 <Badge className="bg-zion-purple/10 text-zion-purple">
 {roadmap.category.toUpperCase()}
+<<<<<<< HEAD
 </Badge>
 </div>
 </div>
 </div>
 </CardHeader>
+=======
+</Badge>;
+</div>
+</div>
+</div>
+</CardHeader>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 <CardContent>
 <div className="grid grid-cols-1 l;  g:grid-cols-3 gap-6">
@@ -527,47 +678,82 @@ Investmen; t: {roadmap.investment}
 <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
 <CheckCircle className="w-4 h-4 text-green-500" />
 Key Milestones;
+<<<<<<< HEAD
 </h4>
 <ul className="space-y-2">
 {roadmap.milestones.map((mileston; e; idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
+=======
+</h4>;
+<ul className="space-y-2">;
+{roadmap.milestones.map((mileston; e; idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
 {milestone}
 </li>
 ))}
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
 <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
 <Shield className="w-4 h-4 text-orange-500" />
 Challenges;
+<<<<<<< HEAD
 </h4>
 <ul className="space-y-2">
 {roadmap.challenges.map((challeng;  e; idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
+=======
+</h4>;
+<ul className="space-y-2">;
+{roadmap.challenges.map((challeng;  e; idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
 {challenge}
 </li>
 ))}
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
 <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
 <Star className="w-4 h-4 text-yellow-500" />
 Opportunities;
+<<<<<<< HEAD
 </h4>
 <ul className="space-y-2">
 {roadmap.opportunities.map((opportunit;  y; idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
+=======
+</h4>;
+<ul className="space-y-2">;
+{roadmap.opportunities.map((opportunit;  y; idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
 {opportunity}
 </li>
 ))}
+<<<<<<< HEAD
 </ul>
 </div>
 </div>
 </CardContent>
 </Card>
 </motion.div>
+=======
+</ul>;
+</div>
+</div>
+</CardContent>;
+</Card>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </motion.div>
 )}
@@ -575,9 +761,9 @@ Opportunities;
 {/* Strategic Insights View */}
 {viewMode === "insights" && (
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.1 }}
 className="space-y-6"
@@ -588,6 +774,7 @@ className="space-y-6"
 <CardTitle className="flex items-center gap-2">
 <TrendingUp className="w-5 h-5 text-zion-green" />
 Investment Trends;
+<<<<<<< HEAD
 </CardTitle>
 </CardHeader>
 <CardContent>
@@ -626,12 +813,53 @@ Investment Trends;
 </div>
 </CardContent>
 </Card>
+=======
+</CardTitle>;
+</CardHeader>;
+<CardContent>;
+<div className="space-y-4">;
+<div className="flex justify-between items-center">;
+<span className="text-zion-slate-light">Quantum Technology</span>;
+<span className="font-semibold text-zion-cyan">$150B+</span>;
+</div>
+<div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
+<div className="bg-zion-cyan h-2 rounded-full" style={{ widt; h: "85%" }}></div>
+</div>
+
+<div className="flex justify-between items-center">;
+<span className="text-zion-slate-light">AI & Machine Learning</span>;
+<span className="font-semibold text-zion-purple">$300B+</span>;
+</div>
+<div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
+<div className="bg-zion-purple h-2 rounded-full" style={{ widt; h: "95%" }}></div>
+</div>
+
+<div className="flex justify-between items-center">;
+<span className="text-zion-slate-light">Space Technology</span>;
+<span className="font-semibold text-zion-blue">$200B+</span>;
+</div>
+<div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
+<div className="bg-zion-blue h-2 rounded-full" style={{ widt; h: "70%" }}></div>
+</div>
+
+<div className="flex justify-between items-center">;
+<span className="text-zion-slate-light">Biotech AI</span>;
+<span className="font-semibold text-zion-green">$100B+</span>;
+</div>
+<div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
+<div className="bg-zion-green h-2 rounded-full" style={{ widt; h: "60%" }}></div>
+</div>
+</div>
+</CardContent>;
+</Card>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 <Card>
 <CardHeader>
 <CardTitle className="flex items-center gap-2">
 <Users className="w-5 h-5 text-zion-blue" />
 Market Adoption;
+<<<<<<< HEAD
 </CardTitle>
 </CardHeader>
 <CardContent>
@@ -670,6 +898,46 @@ Market Adoption;
 </div>
 </CardContent>
 </Card>
+=======
+</CardTitle>;
+</CardHeader>;
+<CardContent>;
+<div className="space-y-4">;
+<div className="flex justify-between items-center">;
+<span className="text-zion-slate-light">Early Adopters</span>;
+<span className="font-semibold text-zion-cyan">15%</span>;
+</div>
+<div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
+<div className="bg-zion-cyan h-2 rounded-full" style={{ widt; h: "15%" }}></div>
+</div>
+
+<div className="flex justify-between items-center">;
+<span className="text-zion-slate-light">Growing Market</span>;
+<span className="font-semibold text-zion-purple">35%</span>;
+</div>
+<div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
+<div className="bg-zion-purple h-2 rounded-full" style={{ widt; h: "35%" }}></div>
+</div>
+
+<div className="flex justify-between items-center">;
+<span className="text-zion-slate-light">Mainstream</span>;
+<span className="font-semibold text-zion-blue">40%</span>;
+</div>
+<div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
+<div className="bg-zion-blue h-2 rounded-full" style={{ widt; h: "40%" }}></div>
+</div>
+
+<div className="flex justify-between items-center">;
+<span className="text-zion-slate-light">Mature Market</span>;
+<span className="font-semibold text-zion-green">10%</span>;
+</div>
+<div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
+<div className="bg-zion-green h-2 rounded-full" style={{ widt; h: "10%" }}></div>
+</div>
+</div>
+</CardContent>;
+</Card>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <Card>
@@ -695,8 +963,13 @@ Develop AI ethics and governance frameworks;
 <li className="text-sm text-zion-slate-light flex items-start gap-2">
 <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
 Establish partnerships with space technology companies;
+<<<<<<< HEAD
 </li>
 </ul>
+=======
+</li>;
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -713,6 +986,7 @@ Develop synthetic biology capabilities;
 <li className="text-sm text-zion-slate-light flex items-start gap-2">
 <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0" />
 Invest in fusion energy research;
+<<<<<<< HEAD
 </li>
 </ul>
 </div>
@@ -720,13 +994,22 @@ Invest in fusion energy research;
 </CardContent>
 </Card>
 </motion.div>
+=======
+</li>;
+</ul>;
+</div>
+</div>
+</CardContent>;
+</Card>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {/* CTA Section */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.4 }}
 className="mt-12 text-center"
@@ -752,10 +1035,17 @@ onClick={() => window.open("te;  l:+13024640950", "_blank")}
 >;
 <Zap className="w-5 h-5 mr-2" />
 Speak with an Expert;
+<<<<<<< HEAD
 </Button>
 </div>
 </div>
 </motion.div>
+=======
+</Button>;
+</div>
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 };

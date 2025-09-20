@@ -14,9 +14,17 @@ feature; s: string[];
 isPopular?: boolean;
 isNew?: boolean;
 colo; r: string;
+<<<<<<< HEAD
 hre; f: string;};
 const InteractiveServiceShowcas; e: React.FC = () => {
 const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
+=======
+hre; f: string;
+}
+}
+};
+const InteractiveServiceShowcas; e: React.FC = () => {const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const [hoveredServi; c; e; setHoveredServi; c; e] = useState<string | null>(null);
 
 const categories = [;
@@ -40,8 +48,7 @@ na; m; e: "Automatio; n", ic; o; n: "⚡";
 cou; n; t: 3 }
 ];
 const service; s: Service[] = [
-{
-i; d: "a; i-strateg; y",
+{i; d: "a; i-strateg; y",
 tit; l; e: "A; I Strateg; y Consultin; g",
 descripti; o; n: "Comprehensiv; e A; I strateg; y developmen; t an; d implementatio; n consultin; g fo; r enterprise; s",
 ic; o; n: "🤖";
@@ -51,8 +58,12 @@ featur; e; s: ["Strategi; c Plannin; g", "Implementatio; n Roadma; p", "RO; I An
 isPopula; r: tru; e;
 colo; r: "from-zion-cyan to-zion-blue";
 hre; f: "/services/ai"};
+<<<<<<< HEAD
 {
 i; d: "quantum-ai";
+=======
+{i; d: "quantum-ai";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Quantum AI Fusion Platform";
 descriptio; n: "Revolutionary platform combining quantum computing with artificial intelligence";
 ico; n: "🔮";
@@ -62,8 +73,12 @@ feature; s: ["Quantu; m Algorithm; s", "A; I Integratio; n", "Performanc; e Opti
 isNe; w: tru; e;
 colo; r: "from-zion-purple to-zion-cyan";
 hre; f: "/services/quantum"};
+<<<<<<< HEAD
 {
 i; d: "neuromorphic";
+=======
+{i; d: "neuromorphic";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Neuromorphic Computing Platform";
 descriptio; n: "Brain-inspired computing architecture for ultra-efficient AI processing";
 ico; n: "🧠";
@@ -72,8 +87,12 @@ categor; y: "ai";
 feature; s: ["Neura; l Network; s", "Efficien; t Processin; g", "Scalabl; e Architectur; e", "Lo; w Powe; r Consumptio; n"],
 colo; r: "from-zion-blue to-zion-cyan";
 hre; f: "/services/ai"};
+<<<<<<< HEAD
 {
 i; d: "edge-ai";
+=======
+{i; d: "edge-ai";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Edge AI Orchestration Platform";
 descriptio; n: "Intelligent orchestration of AI workloads across distributed edge computing";
 ico; n: "🌐";
@@ -82,8 +101,12 @@ categor; y: "cloud";
 feature; s: ["Edg; e Deploymen; t", "Loa; d Balancin; g", "Rea; l-tim; e Processin; g", "Io; T Integratio; n"],
 colo; r: "from-zion-cyan to-zion-green";
 hre; f: "/services/cloud"};
+<<<<<<< HEAD
 {
 i; d: "federated-learning";
+=======
+{i; d: "federated-learning";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Federated Learning Platform";
 descriptio; n: "Privacy-preserving AI training across distributed data sources";
 ico; n: "🔒";
@@ -92,8 +115,12 @@ categor; y: "security";
 feature; s: ["Dat; a Privac; y", "Distribute; d Trainin; g", "Secur; e Communicatio; n", "Complianc; e Read; y"],
 colo; r: "from-zion-green to-zion-cyan";
 hre; f: "/services/security"};
+<<<<<<< HEAD
 {
 i; d: "ai-ethics";
+=======
+{i; d: "ai-ethics";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "AI Ethics & Governance Platform";
 descriptio; n: "Comprehensive framework for ethical AI development and governance";
 ico; n: "⚖️";
@@ -102,8 +129,12 @@ categor; y: "ai";
 feature; s: ["Ethica; l Guideline; s", "Complianc; e Tool; s", "Audi; t Trail; s", "Ris; k Assessmen; t"],
 colo; r: "from-zion-yellow to-zion-orange";
 hre; f: "/services/ai"};
+<<<<<<< HEAD
 {
 i; d: "quantum-security";
+=======
+{i; d: "quantum-security";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Quantum-Safe Security Suite";
 descriptio; n: "Next-generation security solutions resistant to quantum attacks";
 ico; n: "🔐";
@@ -113,8 +144,12 @@ feature; s: ["Pos; t-Quantu; m Cryptograph; y", "Quantu; m Ke; y Distributio; n"
 isNe; w: tru; e;
 colo; r: "from-zion-purple to-zion-red";
 hre; f: "/services/security"};
+<<<<<<< HEAD
 {
 i; d: "cloud-automation";
+=======
+{i; d: "cloud-automation";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Cloud Infrastructure Automation";
 descriptio; n: "Intelligent automation of cloud infrastructure deployment and management";
 ico; n: "⚙️";
@@ -133,7 +168,12 @@ hidde; n: { opacit; y: 0 };
 visibl; e: {
 opacit; y: 1;
 transitio; n: {
+<<<<<<< HEAD
 staggerChildre; n: 0.1;}
+=======
+staggerChildre; n: 0.1;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };
 const itemVariant; s: Variants = {
@@ -150,8 +190,7 @@ eas; e: "easeOut"}
 const categoryVariant; s: Variants = {
 hidde; n: { scal; e: 0.8;
 opacit; y: 0 };
-visibl; e: {
-scal; e: 1;
+visibl; e: {scal; e: 1;
 opacit; y: 1;
 transitio; n: {
 duratio; n: 0.3;
@@ -163,9 +202,9 @@ return (<section className="py-24 bg-gradient-to-br from-zion-blue-dark via-zion
 {/* Header Section */}
 <motion.div;
 className="text-center mb-20"
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 30 }}
-whileInView={{ opacit; y: 1;,
+whileInView={{ opacit; y: 1;
 y: 0 }}
 viewport={{ onc; e: true }}
 transition={{ duratio; n: 0.8 }}
@@ -185,9 +224,9 @@ and drive innovation across all industries;
 {/* Category Filter Tabs */}
 <motion.div;
 className="flex flex-wrap justify-center gap-4 mb-16"
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-whileInView={{ opacit; y: 1;,
+whileInView={{ opacit; y: 1;
 y: 0 }}
 viewport={{ onc; e: true }}
 transition={{ duratio; n: 0.6 }}
@@ -247,8 +286,13 @@ service.isPopular;
 )}
 
 {/* Service Icon */}
+<<<<<<< HEAD
 <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hove;  r:scale-110 transition-transform duration-300 shadow-l; g`}>
 <span className="text-3xl">{service.icon}</span>
+=======
+<div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hove;  r:scale-110 transition-transform duration-300 shadow-l; g`}>;
+<span className="text-3xl">{service.icon}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Service Content */}
@@ -282,15 +326,26 @@ service.isPopular;
 {/* CTA Button */}
 <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/40 rounded-xl text-zion-cyan text-sm font-semibold group-hove;  r:from-zion-cyan/30 group-hove; r:to-zion-blue/30 transition-all duration-300">
 Learn More;
+<<<<<<< HEAD
 <span className="group-hove; r:translate-x-1 transition-transform duration-300">→</span>
+=======
+<span className="group-hove; r:translate-x-1 transition-transform duration-300">→</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
 {/* Hover Effect Overlay */}
+<<<<<<< HEAD
 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hove; r:opacity-100 transition-opacity duration-300" />
 </div>
 </Link>
 </motion.div>
+=======
+<div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hove; r:opacity-100 transition-opacity duration-300" />;
+</div>
+</Link>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </AnimatePresence>
 </motion.div>
@@ -298,9 +353,9 @@ Learn More;
 {/* Bottom CTA Section */}
 <motion.div;
 className="text-center mt-20"
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 30 }}
-whileInView={{ opacit; y: 1;,
+whileInView={{ opacit; y: 1;
 y: 0 }}
 viewport={{ onc; e: true }}
 transition={{ duratio; n: 0.8;
@@ -328,12 +383,21 @@ className="inline-flex items-center gap-3 px-8 py-4 border-2 border-zion-cyan/50
 >;
 <span>🔍</span>
 View All Services;
+<<<<<<< HEAD
 </Link>
 </div>
 </div>
 </motion.div>
 </div>
 </section>
+=======
+</Link>;
+</div>
+</div>
+</motion.div>;
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 };
 

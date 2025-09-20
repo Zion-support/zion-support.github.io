@@ -17,14 +17,25 @@ tags: string[];
 estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
+<<<<<<< HEAD
 contactInfo: {,
 phone: string;,
 email: string;,
 website: string;};
+=======
+contactInfo: {
+phone: string;
+email: string;
+website: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technology: string[];
 integrations: string[];
 compliance: string[];
 roi: string;
+<<<<<<< HEAD
 competitors: string[];,
 uniqueValue: string;,
 sla: string;,
@@ -41,6 +52,24 @@ subcategory: "Cloud-Native";
 price: 1200;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+competitors: string[];
+uniqueValue: string;
+sla: string;
+uptime: string;
+}
+
+export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastructureService[] = [
+// Cloud-Native Infrastructure;
+{id: "cloud-native-infrastructure-platform";
+title: "Cloud-Native Infrastructure Platform";
+description: "Enterprise-grade cloud-native infrastructure platform that provides seamless multi-cloud management; container orchestration; and automated scaling.",
+category: "Cloud Infrastructure";
+subcategory: "Cloud-Native";
+price: 1200;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Multi-cloud orchestration";
 "Kubernetes management",
@@ -73,31 +102,52 @@ targetAudience: [
 "Infrastructure managers";
 ],
 tags: ["Cloud", "Kubernetes", "DevOps", "Infrastructure", "Automation"],
+<<<<<<< HEAD
 estimatedDelivery: "2-4 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;200 - $5;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "2-4 weeks";
+supportLevel: "enterprise";
+marketPrice: "$1;200 - $5;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "Terraform", "AWS", "Azure", "GCP"],
 integrations: ["CI/CD pipelines", "Monitoring tools", "Security platforms", "Backup systems"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
-roi: "300% within 8 months";,
+roi: "300% within 8 months";
 competitors: ["AWS EKS", "Azure AKS", "Google GKE", "Red Hat OpenShift"],
+<<<<<<< HEAD
 uniqueValue: "Unified multi-cloud management with automated optimization and cost control";,
 sla: "99.99% uptime with 4-hour response time";,
 uptime: "99.99%"};
+=======
+uniqueValue: "Unified multi-cloud management with automated optimization and cost control";
+sla: "99.99% uptime with 4-hour response time";
+uptime: "99.99%",
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // Edge Computing Infrastructure;
-{
-id: "edge-computing-infrastructure";
+{id: "edge-computing-infrastructure";
 title: "Edge Computing Infrastructure Platform";
 description: "Distributed edge computing infrastructure that brings processing power closer to data sources for ultra-low latency applications.";
 category: "Edge Computing";
 subcategory: "Infrastructure";
+<<<<<<< HEAD
 price: 899;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+price: 899;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Distributed edge nodes";
 "5G network optimization",
@@ -130,18 +180,28 @@ targetAudience: [
 "Transportation companies";
 ],
 tags: ["Edge Computing", "5G", "IoT", "Low Latency", "Distributed Systems"],
+<<<<<<< HEAD
 estimatedDelivery: "3-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$899 - $3;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "3-5 weeks";
+supportLevel: "premium";
+marketPrice: "$899 - $3;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes Edge", "5G Core", "Edge AI", "MQTT", "WebRTC"],
 integrations: ["IoT platforms", "Cloud services", "5G networks", "Enterprise systems"],
 compliance: ["SOC 2", "ISO 27001", "Industry-specific standards"],
-roi: "250% within 10 months";,
+roi: "250% within 10 months";
 competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge"],
+<<<<<<< HEAD
 uniqueValue: "Comprehensive edge infrastructure with 5G optimization and AI deployment";,
 sla: "99.9% uptime with 2-hour response time";,
 uptime: "99.9%"};
@@ -155,6 +215,21 @@ subcategory: "Hybrid Cloud";
 price: 1500;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+uniqueValue: "Comprehensive edge infrastructure with 5G optimization and AI deployment";
+sla: "99.9% uptime with 2-hour response time";
+uptime: "99.9%",
+};
+// Hybrid Cloud Management;
+{id: "hybrid-cloud-management-platform";
+title: "Hybrid Cloud Management Platform";
+description: "Unified platform for managing hybrid cloud environments; providing seamless integration between on-premises and cloud infrastructure.",
+category: "Cloud Infrastructure";
+subcategory: "Hybrid Cloud";
+price: 1500;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Unified management console";
 "Cross-cloud orchestration",
@@ -187,18 +262,28 @@ targetAudience: [
 "Enterprise architects";
 ],
 tags: ["Hybrid Cloud", "Multi-Cloud", "Infrastructure", "Management", "Integration"],
+<<<<<<< HEAD
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;500 - $6;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "4-6 weeks";
+supportLevel: "enterprise";
+marketPrice: "$1;500 - $6;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technology: ["Terraform", "Ansible", "Kubernetes", "VMware", "OpenStack"],
 integrations: ["AWS", "Azure", "GCP", "On-premises systems", "Monitoring tools"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
-roi: "280% within 12 months";,
+roi: "280% within 12 months";
 competitors: ["VMware vCloud", "Microsoft Azure Stack", "AWS Outposts", "Google Anthos"],
+<<<<<<< HEAD
 uniqueValue: "Unified hybrid cloud management with automated optimization and compliance";,
 sla: "99.95% uptime with 6-hour response time";,
 uptime: "99.95%"};
@@ -212,6 +297,21 @@ subcategory: "Infrastructure";
 price: 1800;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+uniqueValue: "Unified hybrid cloud management with automated optimization and compliance";
+sla: "99.95% uptime with 6-hour response time";
+uptime: "99.95%",
+};
+// Network Security Infrastructure;
+{id: "network-security-infrastructure";
+title: "Advanced Network Security Infrastructure";
+description: "Comprehensive network security platform that provides next-generation firewall; intrusion detection; and threat intelligence capabilities.",
+category: "Network Security";
+subcategory: "Infrastructure";
+price: 1800;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Next-gen firewall";
 "Intrusion detection/prevention",
@@ -244,18 +344,28 @@ targetAudience: [
 "Compliance officers";
 ],
 tags: ["Network Security", "Firewall", "Threat Detection", "VPN", "Compliance"],
+<<<<<<< HEAD
 estimatedDelivery: "2-3 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;800 - $7;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "2-3 weeks";
+supportLevel: "enterprise";
+marketPrice: "$1;800 - $7;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technology: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point", "Custom solutions"],
 integrations: ["SIEM systems", "Identity providers", "Cloud platforms", "Monitoring tools"],
 compliance: ["NIST", "FIPS", "SOC 2", "ISO 27001", "GDPR"],
-roi: "200% within 8 months";,
+roi: "200% within 8 months";
 competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
+<<<<<<< HEAD
 uniqueValue: "Comprehensive network security with AI-powered threat detection and response";,
 sla: "99.99% uptime with 1-hour response time";,
 uptime: "99.99%"};
@@ -269,6 +379,21 @@ subcategory: "Infrastructure";
 price: 2500;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+uniqueValue: "Comprehensive network security with AI-powered threat detection and response";
+sla: "99.99% uptime with 1-hour response time";
+uptime: "99.99%",
+};
+// Data Center Infrastructure;
+{id: "data-center-infrastructure";
+title: "Modern Data Center Infrastructure";
+description: "Enterprise-grade data center infrastructure with high availability; redundancy; and energy-efficient design for mission-critical applications.",
+category: "Data Center";
+subcategory: "Infrastructure";
+price: 2500;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "High-availability design";
 "Redundant power systems",
@@ -301,18 +426,28 @@ targetAudience: [
 "Compliance officers";
 ],
 tags: ["Data Center", "High Availability", "Redundancy", "Energy Efficiency", "Monitoring"],
+<<<<<<< HEAD
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;500 - $10;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "6-8 weeks";
+supportLevel: "enterprise";
+marketPrice: "$2;500 - $10;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technology: ["VMware", "Hyper-V", "Storage arrays", "Network switches", "UPS systems"],
 integrations: ["Monitoring tools", "Backup systems", "Cloud platforms", "Management tools"],
 compliance: ["SOC 2", "ISO 27001", "Uptime Institute", "Industry-specific"],
-roi: "180% within 15 months";,
+roi: "180% within 15 months";
 competitors: ["Equinix", "Digital Realty", "CoreSite", "Cyxtera"],
+<<<<<<< HEAD
 uniqueValue: "Modern data center infrastructure with energy efficiency and automation";,
 sla: "99.999% uptime with 4-hour response time";,
 uptime: "99.999%"};
@@ -326,6 +461,21 @@ subcategory: "Infrastructure";
 price: 999;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+uniqueValue: "Modern data center infrastructure with energy efficiency and automation";
+sla: "99.999% uptime with 4-hour response time";
+uptime: "99.999%",
+};
+// Storage Infrastructure;
+{id: "storage-infrastructure-platform";
+title: "Enterprise Storage Infrastructure Platform";
+description: "Scalable storage infrastructure platform that provides high-performance; reliable; and cost-effective storage solutions for enterprise applications.",
+category: "Storage";
+subcategory: "Infrastructure";
+price: 999;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "High-performance storage";
 "Data deduplication",
@@ -358,18 +508,28 @@ targetAudience: [
 "Data architects";
 ],
 tags: ["Storage", "High Performance", "Data Management", "Backup", "Virtualization"],
+<<<<<<< HEAD
 estimatedDelivery: "2-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$999 - $4;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "2-4 weeks";
+supportLevel: "premium";
+marketPrice: "$999 - $4;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technology: ["NetApp", "EMC", "Pure Storage", "HPE", "Custom solutions"],
 integrations: ["Backup systems", "Monitoring tools", "Cloud platforms", "Management tools"],
 compliance: ["SOC 2", "ISO 27001", "Industry-specific standards"],
-roi: "250% within 10 months";,
+roi: "250% within 10 months";
 competitors: ["NetApp", "EMC", "Pure Storage", "HPE", "Dell"],
+<<<<<<< HEAD
 uniqueValue: "Intelligent storage infrastructure with automated optimization and management";,
 sla: "99.9% uptime with 4-hour response time";,
 uptime: "99.9%"};
@@ -383,6 +543,21 @@ subcategory: "Disaster Recovery";
 price: 699;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+uniqueValue: "Intelligent storage infrastructure with automated optimization and management";
+sla: "99.9% uptime with 4-hour response time";
+uptime: "99.9%",
+};
+// Backup and Disaster Recovery;
+{id: "backup-disaster-recovery-platform";
+title: "Comprehensive Backup & Disaster Recovery Platform";
+description: "Enterprise-grade backup and disaster recovery platform that ensures business continuity with automated backup; replication; and recovery capabilities.",
+category: "Backup & Recovery";
+subcategory: "Disaster Recovery";
+price: 699;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Automated backup scheduling";
 "Incremental and full backups",
@@ -415,18 +590,28 @@ targetAudience: [
 "IT managers";
 ],
 tags: ["Backup", "Disaster Recovery", "Business Continuity", "Compliance", "Automation"],
+<<<<<<< HEAD
 estimatedDelivery: "1-2 weeks";,
 supportLevel: "premium";,
 marketPrice: "$699 - $2;500/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "1-2 weeks";
+supportLevel: "premium";
+marketPrice: "$699 - $2;500/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technology: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Custom solutions"],
 integrations: ["Storage systems", "Cloud platforms", "Monitoring tools", "Management tools"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
-roi: "300% within 6 months";,
+roi: "300% within 6 months";
 competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Dell EMC"],
+<<<<<<< HEAD
 uniqueValue: "Comprehensive backup and recovery with automated testing and compliance";,
 sla: "99.9% uptime with 2-hour response time";,
 uptime: "99.9%"};
@@ -440,6 +625,21 @@ subcategory: "Infrastructure";
 price: 599;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+uniqueValue: "Comprehensive backup and recovery with automated testing and compliance";
+sla: "99.9% uptime with 2-hour response time";
+uptime: "99.9%",
+};
+// Network Monitoring Infrastructure;
+{id: "network-monitoring-infrastructure";
+title: "Advanced Network Monitoring Infrastructure";
+description: "Comprehensive network monitoring platform that provides real-time visibility; performance analysis; and proactive alerting for network infrastructure.",
+category: "Network Monitoring";
+subcategory: "Infrastructure";
+price: 599;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Real-time monitoring";
 "Performance analytics",
@@ -472,18 +672,28 @@ targetAudience: [
 "Operations teams";
 ],
 tags: ["Network Monitoring", "Performance", "Analytics", "Alerting", "Reporting"],
+<<<<<<< HEAD
 estimatedDelivery: "1-2 weeks";,
 supportLevel: "premium";,
 marketPrice: "$599 - $2;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "1-2 weeks";
+supportLevel: "premium";
+marketPrice: "$599 - $2;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technology: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Custom solutions"],
 integrations: ["Network devices", "Cloud platforms", "Management tools", "Alerting systems"],
 compliance: ["SOC 2", "ISO 27001", "Industry-specific standards"],
-roi: "280% within 8 months";,
+roi: "280% within 8 months";
 competitors: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Datadog"],
+<<<<<<< HEAD
 uniqueValue: "Intelligent network monitoring with AI-powered analytics and automation";,
 sla: "99.9% uptime with 4-hour response time";,
 uptime: "99.9%"};
@@ -497,6 +707,21 @@ subcategory: "Infrastructure";
 price: 799;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+uniqueValue: "Intelligent network monitoring with AI-powered analytics and automation";
+sla: "99.9% uptime with 4-hour response time";
+uptime: "99.9%",
+};
+// Virtualization Infrastructure;
+{id: "virtualization-infrastructure-platform";
+title: "Enterprise Virtualization Infrastructure Platform";
+description: "High-performance virtualization platform that maximizes resource utilization; improves scalability; and reduces infrastructure costs.",
+category: "Virtualization";
+subcategory: "Infrastructure";
+price: 799;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Server virtualization";
 "Desktop virtualization",
@@ -529,19 +754,35 @@ targetAudience: [
 "Operations teams";
 ],
 tags: ["Virtualization", "Server", "Desktop", "Application", "Management"],
+<<<<<<< HEAD
 estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$799 - $3;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "2-3 weeks";
+supportLevel: "premium";
+marketPrice: "$799 - $3;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"};
 technology: ["VMware", "Hyper-V", "KVM", "Xen", "Custom solutions"],
 integrations: ["Storage systems", "Network infrastructure", "Management tools", "Monitoring tools"],
 compliance: ["SOC 2", "ISO 27001", "Industry-specific standards"],
-roi: "250% within 10 months";,
+roi: "250% within 10 months";
 competitors: ["VMware", "Microsoft Hyper-V", "Red Hat", "Citrix", "Oracle"],
+<<<<<<< HEAD
 uniqueValue: "Comprehensive virtualization platform with automated optimization and management";,
 sla: "99.9% uptime with 4-hour response time";,
 uptime: "99.9%"}
+=======
+uniqueValue: "Comprehensive virtualization platform with automated optimization and management";
+sla: "99.9% uptime with 4-hour response time";
+uptime: "99.9%",
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ];

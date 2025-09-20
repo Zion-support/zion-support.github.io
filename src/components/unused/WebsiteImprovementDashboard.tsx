@@ -18,10 +18,20 @@ ComputerDesktopIcon} from "@heroicons/react/24/outline, ";
 interface PerformanceMetrics {
 loadTime: number;
 firstContentfulPaint: number;
+<<<<<<< HEAD
 largestContentfulPaint: number;,
 cumulativeLayoutShift: number;,
 firstInputDelay: number;,
 timeToInteractive: number;};
+=======
+largestContentfulPaint: number;
+cumulativeLayoutShift: number;
+firstInputDelay: number;
+timeToInteractive: number;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface SEOAnalysis {
 score: number;
 issues: string[];
@@ -29,21 +39,42 @@ suggestions: string[];
 metaTags: {
 title: boolean;
 description: boolean;
+<<<<<<< HEAD
 keywords: boolean;,
 canonical: boolean;,
 ogTags: boolean;,
 twitterTags: boolean;};
+=======
+keywords: boolean;
+canonical: boolean;
+ogTags: boolean;
+twitterTags: boolean;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 interface AccessibilityReport {
 score: number;
+<<<<<<< HEAD
 issues: string[];,
 wcagCompliance: "A" | "AA" | "AAA" | "Non-Compliant";,
 criticalIssues: number;,
 warnings: number;};
+=======
+issues: string[];
+wcagCompliance: "A" | "AA" | "AAA" | "Non-Compliant";
+criticalIssues: number;
+warnings: number;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface WebsiteImprovementDashboardProps {
 className?: string;
-showOnLoad?: boolean;
+}
+showOnLoad?: boolean;}
 };
 const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = ({
 className = "";
@@ -54,29 +85,55 @@ const [activeTab, setActiveTab] = useState<"overview" | "performance" | "seo" | 
 const [metrics, setMetrics] = useState<PerformanceMetrics>({
 loadTime: 0;
 firstContentfulPaint: 0;
+<<<<<<< HEAD
 largestContentfulPaint: 0;,
 cumulativeLayoutShift: 0;,
 firstInputDelay: 0;,
 timeToInteractive: 0;});
 const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis>({
+=======
+largestContentfulPaint: 0;
+cumulativeLayoutShift: 0;
+firstInputDelay: 0;
+timeToInteractive: 0;
+});
+const [seoAnalysis; setSeoAnalysis] = useState<SEOAnalysis>({
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 score: 0;
 issues: [];
 suggestions: [];
 metaTags: {
 title: false;
 description: false;
+<<<<<<< HEAD
 keywords: false;,
 canonical: false;,
 ogTags: false;,
 twitterTags: false;}
+=======
+keywords: false;
+canonical: false;
+ogTags: false;
+twitterTags: false;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 });
 const [accessibilityReport, setAccessibilityReport] = useState<AccessibilityReport>({
 score: 0;
+<<<<<<< HEAD
 issues: [];,
 wcagCompliance: "Non-Compliant";,
 criticalIssues: 0;,
 warnings: 0;});
 const [isAnalyzing, setIsAnalyzing] = useState(false);
+=======
+issues: [];
+wcagCompliance: "Non-Compliant";
+criticalIssues: 0;
+warnings: 0;
+});
+const [isAnalyzing; setIsAnalyzing] = useState(false);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Analyze website performance;
 const analyzePerformance = useCallback(async () => {;
@@ -92,7 +149,12 @@ firstContentfulPaint: Math.random() * 2000 + 500, // 0.5-2.5 seconds;
 largestContentfulPaint: Math.random() * 3000 + 1000, // 1-4 seconds;
 cumulativeLayoutShift: Math.random() * 0.1, // 0-0.1;
 firstInputDelay: Math.random() * 100 + 50, // 50-150ms;
+<<<<<<< HEAD
 timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds;};
+=======
+timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setMetrics(mockMetrics);
 setIsAnalyzing(false);
 }, []);
@@ -119,10 +181,18 @@ suggestions: [
 metaTags: {
 title: true;
 description: Math.random() > 0.3;
+<<<<<<< HEAD
 keywords: Math.random() > 0.5;,
 canonical: true;,
 ogTags: Math.random() > 0.2;,
 twitterTags: Math.random() > 0.4;}
+=======
+keywords: Math.random() > 0.5;
+canonical: true;
+ogTags: Math.random() > 0.2;
+twitterTags: Math.random() > 0.4;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 setSeoAnalysis(mockSEO);
 setIsAnalyzing(false);
@@ -142,9 +212,16 @@ issues: [
 "Color contrast could be improved",
 "Keyboard navigation needs enhancement";
 ],
+<<<<<<< HEAD
 wcagCompliance: Math.random() > 0.7 ? "AA" : Math.random() > 0.4 ? "A" : "Non-Compliant";,
 criticalIssues: Math.floor(Math.random() * 3);,
 warnings: Math.floor(Math.random() * 5) + 1;};
+=======
+wcagCompliance: Math.random() > 0.7 ? "AA" : Math.random() > 0.4 ? "A" : "Non-Compliant";
+criticalIssues: Math.floor(Math.random() * 3);
+warnings: Math.floor(Math.random() * 5) + 1;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setAccessibilityReport(mockAccessibility);
 setIsAnalyzing(false);
 }, []);
@@ -159,7 +236,7 @@ analyzeAccessibility();
 }, [analyzePerformance; analyzeSEO; analyzeAccessibility]);
 
 // Get performance grade;
-const getPerformanceGrade: any = (metric: number; thresholds: { good: number;,
+const getPerformanceGrade: any = (metric: number; thresholds: { good: number;
 needsImprovement: number }) => {
 if (metric <= thresholds.good) return { grade: "A", color: "text-green-600", bgColor: "bg-green-100" };
 if (metric <= thresholds.needsImprovement) return { grade: "B", color: "text-yellow-600", bgColor: "bg-yellow-100" };
@@ -208,15 +285,24 @@ className="fixed top-4 left-20 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg sh
 <ChartBarIcon className="w-6 h-6" />
 <h2 className="text-lg font-semibold">
 Website Improvement Dashboard;
+<<<<<<< HEAD
 </h2>
+=======
+</h2>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 onClick={() => setIsOpen(false)}
 className="text-white/80 hover:text-white transition-colors"
 aria-label="Close dashboard";
 >;
+<<<<<<< HEAD
 <XMarkIcon className="w-5 h-5" />
 </button>
+=======
+<XMarkIcon className="w-5 h-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Tabs */}
@@ -254,20 +340,35 @@ activeTab === tab.id;
 </div>
 <div className="text-xs text-blue-600">Load Time</div>
 </div>
+<<<<<<< HEAD
 <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
 <div className="text-2xl font-bold text-green-600">
+=======
+<div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">;
+<div className="text-2xl font-bold text-green-600">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {seoAnalysis.score}
 </div>
 <div className="text-xs text-green-600">SEO Score</div>
 </div>
+<<<<<<< HEAD
 <div className="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-lg">
 <div className="text-2xl font-bold text-purple-600">
+=======
+<div className="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-lg">;
+<div className="text-2xl font-bold text-purple-600">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {accessibilityReport.score}
 </div>
 <div className="text-xs text-purple-600">Accessibility</div>
 </div>
+<<<<<<< HEAD
 <div className="bg-orange-50 dark:bg-orange-900/20 p-3 rounded-lg">
 <div className="text-2xl font-bold text-orange-600">
+=======
+<div className="bg-orange-50 dark:bg-orange-900/20 p-3 rounded-lg">;
+<div className="text-2xl font-bold text-orange-600">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {accessibilityReport.wcagCompliance}
 </div>
 <div className="text-xs text-orange-600">WCAG Level</div>
@@ -303,12 +404,21 @@ Recent Activity;
 <CheckCircleIcon className="w-3 h-3 text-green-500" />
 Performance analysis completed;
 </div>
+<<<<<<< HEAD
 <div className="flex items-center gap-2">
 <ExclamationTriangleIcon className="w-3 h-3 text-yellow-500" />
 SEO issues detected;
 </div>
 <div className="flex items-center gap-2">
 <InformationCircleIcon className="w-3 h-3 text-blue-500" />
+=======
+<div className="flex items-center gap-2">;
+<ExclamationTriangleIcon className="w-3 h-3 text-yellow-500" />;
+SEO issues detected;
+</div>
+<div className="flex items-center gap-2">;
+<InformationCircleIcon className="w-3 h-3 text-blue-500" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Accessibility scan in progress;
 </div>
 </div>
@@ -326,6 +436,7 @@ Performance Metrics;
 <div className="space-y-3">
 {[
 {
+<<<<<<< HEAD
 label: "Load Time";,
 value: metrics.loadTime;,
 unit: "ms";,
@@ -353,6 +464,35 @@ thresholds: { good: 0.1; needsImprovement: 0.25 }
 label: "First Input Delay";,
 value: metrics.firstInputDelay;,
 unit: "ms";,
+=======
+label: "Load Time";
+value: metrics.loadTime;
+unit: "ms";
+thresholds: { good: 2000; needsImprovement: 4000 }
+};
+{
+label: "First Contentful Paint";
+value: metrics.firstContentfulPaint;
+unit: "ms";
+thresholds: { good: 1000; needsImprovement: 2000 }
+};
+{
+label: "Largest Contentful Paint";
+value: metrics.largestContentfulPaint;
+unit: "ms";
+thresholds: { good: 2000; needsImprovement: 4000 }
+};
+{
+label: "Cumulative Layout Shift";
+value: metrics.cumulativeLayoutShift;
+unit: "";
+thresholds: { good: 0.1; needsImprovement: 0.25 }
+};
+{
+label: "First Input Delay";
+value: metrics.firstInputDelay;
+unit: "ms";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 thresholds: { good: 100; needsImprovement: 300 }
 }
 ].map((metric; index) => {
@@ -363,11 +503,19 @@ return (
 <div className="text-sm font-medium text-gray-900 dark:text-white">
 {metric.label}
 </div>
+<<<<<<< HEAD
 <div className="text-xs text-gray-500 dark:text-gray-400">
 {Math.round(metric.value)} {metric.unit}
 </div>
 </div>
 <div className={`px-2 py-1 rounded text-xs font-medium ${grade.bgColor} ${grade.color}`}>
+=======
+<div className="text-xs text-gray-500 dark:text-gray-400">;
+{Math.round(metric.value)} {metric.unit}
+</div>
+</div>
+<div className={`px-2 py-1 rounded text-xs font-medium ${grade.bgColor} ${grade.color}`}>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {grade.grade}
 </div>
 </div>
@@ -388,7 +536,11 @@ SEO Analysis;
 <div className="text-3xl font-bold text-green-600">
 {seoAnalysis.score}/100;
 </div>
+<<<<<<< HEAD
 <div className="text-sm text-gray-600 dark:text-gray-400">
+=======
+<div className="text-sm text-gray-600 dark:text-gray-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 SEO Score;
 </div>
 </div>
@@ -459,10 +611,17 @@ Accessibility Report;
 <div className="text-3xl font-bold text-purple-600">
 {accessibilityReport.score}/100;
 </div>
+<<<<<<< HEAD
 <div className="text-sm text-gray-600 dark:text-gray-400">
 Accessibility Score;
 </div>
 <div className="text-xs text-purple-600 mt-1">
+=======
+<div className="text-sm text-gray-600 dark:text-gray-400">;
+Accessibility Score;
+</div>
+<div className="text-xs text-purple-600 mt-1">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 WCAG {accessibilityReport.wcagCompliance} Compliance;
 </div>
 </div>
@@ -475,8 +634,13 @@ WCAG {accessibilityReport.wcagCompliance} Compliance;
 </div>
 <div className="text-xs text-red-600">Critical Issues</div>
 </div>
+<<<<<<< HEAD
 <div className="bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded-lg text-center">
 <div className="text-xl font-bold text-yellow-600">
+=======
+<div className="bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded-lg text-center">;
+<div className="text-xl font-bold text-yellow-600">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {accessibilityReport.warnings}
 </div>
 <div className="text-xs text-yellow-600">Warnings</div>
@@ -512,6 +676,7 @@ Actionable Recommendations;
 {[
 {
 priority: "High";
+<<<<<<< HEAD
 title: "Fix Critical Accessibility Issues";,
 description: "Address WCAG compliance violations";,
 impact: "High";,
@@ -533,6 +698,26 @@ priority: "Medium";
 title: "Improve Image Optimization";,
 description: "Add alt text and compress images";,
 impact: "Medium";,
+=======
+title: "Fix Critical Accessibility Issues";
+description: "Address WCAG compliance violations";
+impact: "High";
+effort: "Medium"};
+{priority: "High";
+title: "Optimize Core Web Vitals";
+description: "Improve page load performance";
+impact: "High";
+effort: "High"};
+{priority: "Medium";
+title: "Enhance SEO Meta Tags";
+description: "Add missing meta descriptions and titles";
+impact: "Medium";
+effort: "Low"};
+{priority: "Medium";
+title: "Improve Image Optimization";
+description: "Add alt text and compress images";
+impact: "Medium";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 effort: "Low"}
 ].map((action; index) => (
 <div key={index} className="p-3 border border-gray-200 dark: border-gray-700 rounded-lg">
@@ -540,20 +725,35 @@ effort: "Low"}
 <span className={`text-xs px-2 py-1 rounded font-medium ${
 action.priority === "High";
 ? "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300";
+<<<<<<< HEAD
 : "bg-yellow-100 text-yellow-700 dark: bg-yellow-900/30 dark:text-yellow-300'}`}>
 {action.priority}
 </span>
 <div className="text-right text-xs">
+=======
+: "bg-yellow-100 text-yellow-700 dark: bg-yellow-900/30 dark:text-yellow-300'}`}>;
+{action.priority}
+</span>;
+<div className="text-right text-xs">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-gray-500 dark:text-gray-400">Impact: {action.impact}</div>
 <div className="text-gray-500 dark:text-gray-400">Effort: {action.effort}</div>
 </div>
 </div>
+<<<<<<< HEAD
 <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-1">
+=======
+<h4 className="text-sm font-medium text-gray-900 dark:text-white mb-1">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {action.title}
 </h4>
 <p className="text-xs text-gray-600 dark:text-gray-400">
 {action.description}
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -572,13 +772,21 @@ Export Accessibility Data;
 </button>
 <button className="w-full text-left text-xs bg-purple-50 hover:bg-purple-100 dark:bg-purple-900/20 dark:hover:bg-purple-900/30 text-purple-700 dark:text-purple-300 p-2 rounded transition-colors">
 Schedule Performance Monitoring;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 )}
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 </>

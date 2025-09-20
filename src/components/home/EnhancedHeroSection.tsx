@@ -2,12 +2,21 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import { ArrowRight;
 import React from "react", import { Button  } from "@/components/ui/button";
+=======
+import {;
+ArrowRight;
+import React from "react";
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import {;
@@ -17,8 +26,13 @@ Sparkles;
 Zap;
 Brain,
 {/* Scroll Indicator */}
+<<<<<<< HEAD
 <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
 <div className="w-6 h-10 border-2 border-zion-cyan rounded-full flex justify-center">
+=======
+<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">;
+<div className="w-6 h-10 border-2 border-zion-cyan rounded-full flex justify-center">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="w-1 h-3 bg-zion-cyan rounded-full mt-2 animate-pulse"></div>
 </div>
 Shield;
@@ -43,7 +57,11 @@ return (
 <div className="absolute inset-0 cyber-grid opacity-20"></div>
 
 {/* Animated lines */}
+<<<<<<< HEAD
 <div className="absolute top-0 left-0 w-full h-full">
+=======
+<div className="absolute top-0 left-0 w-full h-full">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent animate-pulse"></div>
 <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-purple to-transparent animate-pulse delay-1000"></div>
 <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-blue to-transparent animate-pulse delay-2000"></div>
@@ -53,9 +71,15 @@ return (
 {/* Main Content */}
 <div className="relative z-10 container mx-auto px-4 text-center">
 {/* Badge */}
+<<<<<<< HEAD
 <div className="inline-flex items-center gap-2 bg-zion-cyan/10 text-zion-cyan px-6 py-3 rounded-full text-sm font-medium mb-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:bg-zion-cyan/20">
 <Sparkles className="h-4 w-4 animate-pulse" />
 <span className="neon-text">New Micro SAAS Services Available</span>
+=======
+<div className="inline-flex items-center gap-2 bg-zion-cyan/10 text-zion-cyan px-6 py-3 rounded-full text-sm font-medium mb-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:bg-zion-cyan/20">;
+<Sparkles className="h-4 w-4 animate-pulse" />;
+<span className="neon-text">New Micro SAAS Services Available</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Main Heading */}
@@ -97,8 +121,13 @@ className="border-2 border-zion-purple text-zion-purple hover:bg-zion-purple hov
 <Link to="/request-quote">
 <Users className="h-6 w-6 mr-3" />
 Get Started;
+<<<<<<< HEAD
 </Link>
 </Button>
+=======
+</Link>;
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Stats Section */}
@@ -109,20 +138,35 @@ Get Started;
 </div>
 <div className="text-zion-slate-light text-sm md:text-base">Micro SAAS Services</div>
 </div>
+<<<<<<< HEAD
 <div className="text-center group">
 <div className="text-3xl md:text-4xl font-bold text-zion-purple mb-2 group-hover:scale-110 transition-transform duration-300">
+=======
+<div className="text-center group">;
+<div className="text-3xl md:text-4xl font-bold text-zion-purple mb-2 group-hover:scale-110 transition-transform duration-300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 10K+;
 </div>
 <div className="text-zion-slate-light text-sm md:text-base">AI Professionals</div>
 </div>
+<<<<<<< HEAD
 <div className="text-center group">
 <div className="text-3xl md:text-4xl font-bold text-zion-blue mb-2 group-hover:scale-110 transition-transform duration-300">
+=======
+<div className="text-center group">;
+<div className="text-3xl md:text-4xl font-bold text-zion-blue mb-2 group-hover:scale-110 transition-transform duration-300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 99.9%;
 </div>
 <div className="text-zion-slate-light text-sm md:text-base">Uptime Guarantee</div>
 </div>
+<<<<<<< HEAD
 <div className="text-center group">
 <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2 group-hover:scale-110 transition-transform duration-300">
+=======
+<div className="text-center group">;
+<div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2 group-hover:scale-110 transition-transform duration-300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 24/7;
 </div>
 <div className="text-zion-slate-light text-sm md:text-base">Support Available</div>
@@ -130,6 +174,7 @@ Get Started;
 </div>
 
 {/* Service Categories Preview */}
+<<<<<<< HEAD
 <div className="mb-16">
 <h3 className="text-2xl font-semibold text-white mb-8">Our Service Categories</h3>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -148,14 +193,40 @@ Get Started;
 <div className="group p-4 rounded-lg bg-zion-blue-dark/30 hover:bg-zion-cyan/20 transition-all duration-300 hover:scale-105 border border-zion-blue-light/20 hover:border-zion-cyan/50">
 <Globe className="h-8 w-8 text-zion-cyan mx-auto mb-2 group-hover:scale-110 transition-transform" />
 <span className="text-zion-slate-light text-sm text-center block group-hover:text-zion-cyan transition-colors">Integration</span>
+=======
+<div className="mb-16">;
+<h3 className="text-2xl font-semibold text-white mb-8">Our Service Categories</h3>;
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">;
+<div className="group p-4 rounded-lg bg-zion-blue-dark/30 hover:bg-zion-cyan/20 transition-all duration-300 hover:scale-105 border border-zion-blue-light/20 hover:border-zion-cyan/50">;
+<Brain className="h-8 w-8 text-zion-cyan mx-auto mb-2 group-hover:scale-110 transition-transform" />;
+<span className="text-zion-slate-light text-sm text-center block group-hover:text-zion-cyan transition-colors">AI Services</span>;
+</div>
+<div className="group p-4 rounded-lg bg-zion-blue-dark/30 hover:bg-zion-cyan/20 transition-all duration-300 hover:scale-105 border border-zion-blue-light/20 hover:border-zion-cyan/50">;
+<Shield className="h-8 w-8 text-zion-cyan mx-auto mb-2 group-hover:scale-110 transition-transform" />;
+<span className="text-zion-slate-light text-sm text-center block group-hover:text-zion-cyan transition-colors">IT Solutions</span>;
+</div>
+<div className="group p-4 rounded-lg bg-zion-blue-dark/30 hover:bg-zion-cyan/20 transition-all duration-300 hover:scale-105 border border-zion-blue-light/20 hover:border-zion-cyan/50">;
+<Zap className="h-8 w-8 text-zion-cyan mx-auto mb-2 group-hover:scale-110 transition-transform" />;
+<span className="text-zion-slate-light text-sm text-center block group-hover:text-zion-cyan transition-colors">Automation</span>;
+</div>
+<div className="group p-4 rounded-lg bg-zion-blue-dark/30 hover:bg-zion-cyan/20 transition-all duration-300 hover:scale-105 border border-zion-blue-light/20 hover:border-zion-cyan/50">;
+<Globe className="h-8 w-8 text-zion-cyan mx-auto mb-2 group-hover:scale-110 transition-transform" />;
+<span className="text-zion-slate-light text-sm text-center block group-hover:text-zion-cyan transition-colors">Integration</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 
 {/* Trust Indicators */}
+<<<<<<< HEAD
 <div className="mb-16">
 <p className="text-zion-slate-light mb-6">Trusted by leading companies worldwide</p>
 <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+=======
+<div className="mb-16">;
+<p className="text-zion-slate-light mb-6">Trusted by leading companies worldwide</p>;
+<div className="flex flex-wrap justify-center items-center gap-8 opacity-60">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-zion-cyan font-bold text-xl">TechCorp</div>
 <div className="text-zion-purple font-bold text-xl">InnovateAI</div>
 <div className="text-zion-blue font-bold text-xl">DataFlow</div>
@@ -164,37 +235,67 @@ Get Started;
 </div>
 
 {/* Scroll Indicator */}
+<<<<<<< HEAD
 <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
 <ChevronDown className="h-6 w-6 text-zion-cyan" />
+=======
+<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">;
+<ChevronDown className="h-6 w-6 text-zion-cyan" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
 {/* Floating Action Cards */}
+<<<<<<< HEAD
 <div className="absolute top-1/4 right-8 hidden lg:block">
 <div className="glass-effect p-4 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105">
 <div className="flex items-center gap-3">
 <div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
 <span className="text-zion-cyan text-sm font-medium">Live AI Matching</span>
+=======
+<div className="absolute top-1/4 right-8 hidden lg:block">;
+<div className="glass-effect p-4 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105">;
+<div className="flex items-center gap-3">;
+<div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
+<span className="text-zion-cyan text-sm font-medium">Live AI Matching</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <div className="text-white text-xs mt-2">Currently processing 1;247 matches</div>
 </div>
 </div>
 
+<<<<<<< HEAD
 <div className="absolute bottom-1/4 left-8 hidden lg:block">
 <div className="glass-effect p-4 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
 <div className="flex items-center gap-3">
 <Star className="h-4 w-4 text-zion-purple" />
 <span className="text-zion-purple text-sm font-medium">New Services</span>
+=======
+<div className="absolute bottom-1/4 left-8 hidden lg:block">;
+<div className="glass-effect p-4 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">;
+<div className="flex items-center gap-3">;
+<Star className="h-4 w-4 text-zion-purple" />;
+<span className="text-zion-purple text-sm font-medium">New Services</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <div className="text-white text-xs mt-2">12 new micro SAAS services added this week</div>
 </div>
 </div>
+<<<<<<< HEAD
 </section>
+=======
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import { ArrowRight;
+=======
+import {;
+ArrowRight;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Play;
 Star;
 Users;
@@ -209,10 +310,17 @@ ExternalLink} from "lucide-react";
 import { SimpleFuturisticBackground } from "@/components/ui/FuturisticBackground";
 
 export function EnhancedHeroSection() {
+<<<<<<< HEAD
 const stats = [;
 { label: "Active Users", value: "50K+", icon: <Users className="h-5 w-5" /> };
 { label: "Services Delivered", value: "10K+", icon: <Zap className="h-5 w-5" /> };
 { label: "Success Rate", value: "99.9%", icon: <Shield className="h-5 w-5" /> };
+=======
+const stats = [
+{ label: "Active Users", value: "50K+", icon: <Users className="h-5 w-5" /> },
+{ label: "Services Delivered", value: "10K+", icon: <Zap className = "h-5 w-5" /> };
+{ label: "Success Rate", value: "99.9%", icon: <Shield className = "h-5 w-5" /> };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 { label: "Global Reach", value: "150+", icon: <TrendingUp className="h-5 w-5" /> };
 ];
 
@@ -235,9 +343,15 @@ return (
 {/* Left Column - Main Content */}
 <div className="space-y-8">
 {/* Badge */}
+<<<<<<< HEAD
 <div className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-full px-4 py-2 backdrop-blur-sm">
 <Brain className="h-4 w-4 text-zion-cyan" />
 <span className="text-sm font-medium text-zion-cyan">AI-Powered Technology Solutions</span>
+=======
+<div className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-full px-4 py-2 backdrop-blur-sm">;
+<Brain className="h-4 w-4 text-zion-cyan" />;
+<span className="text-sm font-medium text-zion-cyan">AI-Powered Technology Solutions</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Main Heading */}
@@ -259,15 +373,25 @@ Marketplace;
 <p className="text-xl md:text-2xl text-zion-slate-light max-w-2xl leading-relaxed">
 Discover cutting-edge AI services; enterprise IT solutions; and innovative SaaS platforms.;
 Connect with top talent and transform your business with next-generation technology.;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Features List */}
 <div className="grid grid-cols-2 gap-3">
 {features.map((feature; index) => (
+<<<<<<< HEAD
 <div key={index} className="flex items-center gap-2 text-zion-slate-light">
 <CheckCircle className="h-4 w-4 text-zion-cyan flex-shrink-0" />
 <span className="text-sm">{feature}</span>
+=======
+<div key={index} className="flex items-center gap-2 text-zion-slate-light">;
+<CheckCircle className="h-4 w-4 text-zion-cyan flex-shrink-0" />;
+<span className="text-sm">{feature}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -289,9 +413,15 @@ variant="outline"
 className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50 px-8 py-4 text-lg font-semibold gap-3 backdrop-blur-sm"
 onClick={() => window.open("https://ziontechgroup.com/demo", "_blank")}
 >;
+<<<<<<< HEAD
 <Play className="h-5 w-5" />
 <span>Watch Demo</span>
 </Button>
+=======
+<Play className="h-5 w-5" />;
+<span>Watch Demo</span>;
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Trust Indicators */}
@@ -302,14 +432,22 @@ onClick={() => window.open("https://ziontechgroup.com/demo", "_blank")}
 <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-r from-zion-purple to-zion-cyan border-2 border-background"></div>
 ))}
 </div>
+<<<<<<< HEAD
 <span className="text-sm text-zion-slate-light">Trusted by 50K+ users</span>
+=======
+<span className="text-sm text-zion-slate-light">Trusted by 50K+ users</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-center gap-1">
 {[1; 2; 3; 4; 5].map((i) => (
 <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
 ))}
+<<<<<<< HEAD
 <span className="text-sm text-zion-slate-light ml-2">4.9/5 rating</span>
+=======
+<span className="text-sm text-zion-slate-light ml-2">4.9/5 rating</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -319,6 +457,7 @@ onClick={() => window.open("https://ziontechgroup.com/demo", "_blank")}
 {/* Main Visual Container */}
 <div className="relative">
 {/* Floating Cards */}
+<<<<<<< HEAD
 <div className="absolute -top-8 -left-8 w-64 h-40 bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl backdrop-blur-sm animate-float">
 <div className="p-4">
 <div className="flex items-center gap-2 mb-2">
@@ -350,12 +489,49 @@ onClick={() => window.open("https://ziontechgroup.com/demo", "_blank")}
 <Badge className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
 Most Popular;
 </Badge>
+=======
+<div className="absolute -top-8 -left-8 w-64 h-40 bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl backdrop-blur-sm animate-float">;
+<div className="p-4">;
+<div className="flex items-center gap-2 mb-2">;
+<Brain className="h-5 w-5 text-zion-cyan" />;
+<span className="text-sm font-medium text-white">AI Services</span>;
+</div>
+<p className="text-xs text-zion-slate-light">Content Generation; Analytics; Automation</p>;
+</div>
+</div>
+
+<div className="absolute -top-4 -right-4 w-56 h-32 bg-gradient-to-br from-zion-blue/20 to-zion-purple/20 border border-zion-blue/30 rounded-2xl backdrop-blur-sm animate-float delay-1000">;
+<div className="p-4">;
+<div className="flex items-center gap-2 mb-2">;
+<Cloud className="h-5 w-5 text-zion-blue" />;
+<span className="text-sm font-medium text-white">Cloud Solutions</span>;
+</div>
+<p className="text-xs text-zion-slate-light">Infrastructure; Security; Management</p>;
+</div>
+</div>
+
+<div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-72 h-44 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl backdrop-blur-sm animate-float delay-500">;
+<div className="p-6 text-center">;
+<div className="flex items-center justify-center gap-2 mb-3">;
+<Code className="h-6 w-6 text-zion-cyan" />;
+<span className="text-lg font-semibold text-white">Development</span>;
+</div>
+<p className="text-sm text-zion-slate-light">Custom Software; APIs; Integration</p>;
+<div className="mt-3 flex justify-center">;
+<Badge className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">;
+Most Popular;
+</Badge>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 
 {/* Central Orb */}
+<<<<<<< HEAD
 <div className="relative w-80 h-80 mx-auto">
+=======
+<div className="relative w-80 h-80 mx-auto">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="absolute inset-0 bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue rounded-full animate-pulse-slow"></div>
 <div className="absolute inset-4 bg-gradient-to-r from-zion-purple-dark via-zion-slate to-zion-blue-dark rounded-full"></div>
 <div className="absolute inset-8 bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue rounded-full animate-pulse-slow delay-1000"></div>
@@ -363,8 +539,13 @@ Most Popular;
 <div className="absolute inset-16 bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue rounded-full animate-pulse-slow delay-500"></div>
 
 {/* Center Content */}
+<<<<<<< HEAD
 <div className="absolute inset-0 flex items-center justify-center">
 <div className="text-center">
+=======
+<div className="absolute inset-0 flex items-center justify-center">;
+<div className="text-center">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-4xl font-bold text-white mb-2">ZION</div>
 <div className="text-sm text-zion-cyan">Tech Group</div>
 </div>
@@ -418,12 +599,21 @@ onClick={() => window.open("https://ziontechgroup.com/services", "_blank')}
 >;
 <Zap className="h-4 w-4" />
 Explore Services;
+<<<<<<< HEAD
 </Button>
+=======
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </section>
 </SimpleFuturisticBackground>
+=======
+</section>;
+</SimpleFuturisticBackground>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }<//SimpleFuturisticBackground><///SimpleFuturisticBackground>}})

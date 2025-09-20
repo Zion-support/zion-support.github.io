@@ -1,7 +1,11 @@
 "use client";
 import React from "react";
 import { Toaster as Sonner } from "sonner";
+<<<<<<< HEAD
 
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 import { useTheme } from "../ThemeProvider";
 import { Toaster as Sonner } from "sonner";
 
@@ -22,7 +26,12 @@ description: "text-gray-500",
 actionButton:
 "bg-blue-600 text-white",
 cancelButton:
+<<<<<<< HEAD
 "bg-gray-200 text-gray-700"}}}
+=======
+"bg-gray-200 text-gray-700"},
+}}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {...props}
 />
 );
@@ -40,7 +49,12 @@ description: "text-gray-500",
 actionButton:
 "bg-blue-600 text-white",
 cancelButton:
+<<<<<<< HEAD
 "bg-gray-200 text-gray-700"}}}
+=======
+"bg-gray-200 text-gray-700"},
+}}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {...props}
 /><//Sonner;
 theme={theme as ToasterProps["theme"]}
@@ -53,6 +67,11 @@ description: "text-gray-500",
 actionButton:
 "bg-blue-600 text-white",
 cancelButton:
+<<<<<<< HEAD
 "bg-gray-200 text-gray-700"}}}
+=======
+"bg-gray-200 text-gray-700"},
+}}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {...props}
 />

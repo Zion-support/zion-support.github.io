@@ -10,11 +10,18 @@ version: string;
 accuracy: number;
 precision: number;
 recall: number;
+<<<<<<< HEAD
 f1Score: number;,
 trainingDataSize: number;,
 lastTrained: Date;,
+=======
+f1Score: number;
+trainingDataSize: number;
+lastTrained: Date;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 status: "training" | "ready" | "deployed" | "archived";
-metadata?: Record<string; any>;
+}
+metadata?: Record<string; any>;}
 }
 
 interface TrainingJob {
@@ -26,23 +33,40 @@ startTime: Date;
 endTime?: Date;
 hyperparameters: Record<string; any>;
 metrics: {
+<<<<<<< HEAD
 loss: number[];,
 accuracy: number[];,
 validationLoss: number[];,
 validationAccuracy: number[];};
+=======
+loss: number[];
+accuracy: number[];
+validationLoss: number[];
+validationAccuracy: number[];
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 error?: string;
 }
 
 interface PredictionRequest {
 id: string;
+<<<<<<< HEAD
 modelId: string;,
 input: any;,
 timestamp: Date;,
+=======
+modelId: string;
+input: any;
+timestamp: Date;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 status: "pending" | "processing" | "completed" | "failed";
 result?: any;
 confidence?: number;
 processingTime?: number;
-error?: string;
+}
+error?: string;}
 }
 
 interface MLMetrics {
@@ -53,20 +77,40 @@ totalPredictions: number;
 successfulPredictions: number;
 averageResponseTime: number;
 trainingJobs: {
+<<<<<<< HEAD
 total: number;,
 running: number;,
 completed: number;,
 failed: number;};
+=======
+total: number;
+running: number;
+completed: number;
+failed: number;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 interface MLConfig {
 enableAutoTraining: boolean;
 enableModelVersioning: boolean;
 enableABTesting: boolean;
+<<<<<<< HEAD
 enablePerformanceMonitoring: boolean;,
 maxConcurrentTrainingJobs: number;,
 predictionTimeout: number;,
 accuracyThreshold: number;}
+=======
+enablePerformanceMonitoring: boolean;
+maxConcurrentTrainingJobs: number;
+predictionTimeout: number;
+accuracyThreshold: number;
+}
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 interface MachineLearningHook {
 // State;
@@ -77,13 +121,14 @@ metrics: MLMetrics;,
 isTraining: boolean;,
 isPredicting: boolean;
 // Actions;,
-createModel: (model: Omit<AIModel, "id" | "version" | "accuracy" | "precision" | "recall" | "f1Score" | "trainingDataSize" | "lastTrained" | "status">) => void;
+createModel: (model: Omit<AIModel "id" | "version" | "accuracy" | "precision" | "recall" | "f1Score" | "trainingDataSize" | "lastTrained" | "status">) => void;
 startTraining: (modelId: string; hyperparameters: Record<string; any>) => Promise<void>;
 stopTraining: (jobId: string) => void;
 deployModel: (modelId: string) => void;
 archiveModel: (modelId: string) => void;
 makePrediction: (modelId: string; input: any) => Promise<any>;
 updateModelMetrics: (modelId: string; metrics: Partial<AIModel>) => void;
+<<<<<<< HEAD
 getModelPerformance: (modelId: string) => AIModel | undefined;,
 exportModel: (modelId: string) => string;,
 importModel: (modelData: string) => void;,
@@ -97,6 +142,25 @@ const [models, setModels] = useState<AIModel[]>([]);
 const [trainingJobs, setTrainingJobs] = useState<TrainingJob[]>([]);
 const [predictions, setPredictions] = useState<PredictionRequest[]>([]);
 const [metrics, setMetrics] = useState<MLMetrics>({
+=======
+getModelPerformance: (modelId: string) => AIModel | undefined;
+exportModel: (modelId: string) => string;
+importModel: (modelData: string) => void;
+configureML: (config: Partial<MLConfig>) => void;
+}
+}
+}
+
+export const useMachineLearning: any = (_initialConfig?: Partial<MLConfig>): MachineLearningHook => {
+const { trackEvent } = useAnalytics({;
+enableTracking: true;
+enableUserBehaviorTracking: true;
+});
+const [models; setModels] = useState<AIModel[]>([]);
+const [trainingJobs; setTrainingJobs] = useState<TrainingJob[]>([]);
+const [predictions; setPredictions] = useState<PredictionRequest[]>([]);
+const [metrics; setMetrics] = useState<MLMetrics>({
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 totalModels: 0;
 activeModels: 0;
 averageAccuracy: 0;
@@ -104,10 +168,18 @@ totalPredictions: 0;
 successfulPredictions: 0;
 averageResponseTime: 0;
 trainingJobs: {
+<<<<<<< HEAD
 total: 0;,
 running: 0;,
 completed: 0;,
 failed: 0;}
+=======
+total: 0;
+running: 0;
+completed: 0;
+failed: 0;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 });
 const [isTraining, setIsTraining] = useState(false);
 const [isPredicting, setIsPredicting] = useState(false);
@@ -117,8 +189,7 @@ const predictionTimeoutsRef = useRef<Map<string; globalThis.Timeout>>(new Map())
 
 // Default models;
 const defaultModels: AIModel[] = [
-{
-id: "sentiment-analysis-001";
+{id: "sentiment-analysis-001";
 name: "Sentiment Analysis Model";
 type: "nlp";
 framework: "tensorflow";
@@ -126,12 +197,20 @@ version: "1.0.0";
 accuracy: 0.89;
 precision: 0.87;
 recall: 0.91;
+<<<<<<< HEAD
 f1Score: 0.89;,
 trainingDataSize: 10000;,
 lastTrained: new Date();,
 status: "ready"};
 {
 id: "customer-segmentation-001";
+=======
+f1Score: 0.89;
+trainingDataSize: 10000;
+lastTrained: new Date();
+status: "ready"};
+{id: "customer-segmentation-001";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "Customer Segmentation Model";
 type: "clustering";
 framework: "scikit-learn";
@@ -139,12 +218,20 @@ version: "1.0.0";
 accuracy: 0.92;
 precision: 0.90;
 recall: 0.94;
+<<<<<<< HEAD
 f1Score: 0.92;,
 trainingDataSize: 50000;,
 lastTrained: new Date();,
 status: "deployed"};
 {
 id: "demand-forecasting-001";
+=======
+f1Score: 0.92;
+trainingDataSize: 50000;
+lastTrained: new Date();
+status: "deployed"};
+{id: "demand-forecasting-001";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "Demand Forecasting Model";
 type: "regression";
 framework: "pytorch";
@@ -152,9 +239,15 @@ version: "1.0.0";
 accuracy: 0.85;
 precision: 0.83;
 recall: 0.87;
+<<<<<<< HEAD
 f1Score: 0.85;,
 trainingDataSize: 25000;,
 lastTrained: new Date();,
+=======
+f1Score: 0.85;
+trainingDataSize: 25000;
+lastTrained: new Date();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 status: "ready"}
 ];
 // Initialize with default models;
@@ -192,10 +285,18 @@ totalPredictions;
 successfulPredictions;
 averageResponseTime: Math.round(averageResponseTime * 100) / 100;
 trainingJobs: {
+<<<<<<< HEAD
 total: trainingJobsTotal;,
 running: trainingJobsRunning;,
 completed: trainingJobsCompleted;,
 failed: trainingJobsFailed;}
+=======
+total: trainingJobsTotal;
+running: trainingJobsRunning;
+completed: trainingJobsCompleted;
+failed: trainingJobsFailed;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 });
 }, [models; predictions; trainingJobs]);
 
@@ -205,7 +306,11 @@ updateMetrics();
 }, [updateMetrics]);
 
 // Create new model;
+<<<<<<< HEAD
 const createModel = useCallback((model: Omit<AIModel, "id" | "version" | "accuracy" | "precision" | "recall" | "f1Score" | "trainingDataSize" | "lastTrained" | "status">) => {;
+=======
+const createModel = useCallback((model: Omit<AIModel "id" | "version" | "accuracy" | "precision" | "recall" | "f1Score" | "trainingDataSize" | "lastTrained" | "status">) => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const newModel: AIModel = {;
 ...model;,
 id: `model-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
@@ -213,10 +318,18 @@ version: "1.0.0";
 accuracy: 0;
 precision: 0;
 recall: 0;
+<<<<<<< HEAD
 f1Score: 0;,
 trainingDataSize: 0;,
 lastTrained: new Date();,
 status: "ready"};
+=======
+f1Score: 0;
+trainingDataSize: 0;
+lastTrained: new Date();
+status: "ready",
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setModels(prev => [...prev; newModel]);
 trackEvent("ml", "model", "created", undefined, { modelType: model.type; framework: model.framework });
 }, [trackEvent]);
@@ -245,18 +358,28 @@ status: "running";
 progress: 0;
 startTime: new Date();
 hyperparameters;
+<<<<<<< HEAD
 metrics: {
 loss: [];,
 accuracy: [];,
 validationLoss: [];,
+=======
+metrics: {loss: [];
+accuracy: [];
+validationLoss: [];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 validationAccuracy: []}
 };
 setTrainingJobs(prev => [...prev; trainingJob]);
 setIsTraining(true);
 trackEvent("ml", "training", "started", undefined, { modelId; modelType: model.type });
 // Simulate training progress;
+<<<<<<< HEAD
 const interval = setInterval(() => {;
 setTrainingJobs(prev =>;
+=======
+const interval = setInterval(() => {setTrainingJobs(prev =>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 prev.map(job => {
 if (job.id === trainingJob.id && job.status === "running") {;
 const newProgress = Math.min(job.progress + Math.random() * 10; 100);
@@ -278,27 +401,40 @@ updateModelMetrics(modelId, {
 accuracy: finalAccuracy;
 precision: finalPrecision;
 recall: finalRecall;
+<<<<<<< HEAD
 f1Score: finalF1Score;,
 trainingDataSize: Math.floor(Math.random() * 100000) + 10000;,
 lastTrained: new Date();,
 status: "ready"});
 return {
 ...job;
+=======
+f1Score: finalF1Score;
+trainingDataSize: Math.floor(Math.random() * 100000) + 10000;
+lastTrained: new Date();
+status: "ready"});
+return {...job;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 status: "completed";
 progress: 100;,
 endTime: new Date();,
 metrics: {
-...job.metrics;,
+...job.metrics;
 loss: [...job.metrics.loss; newLoss],
 accuracy: [...job.metrics.accuracy; finalAccuracy]}
 };
 }
 
+<<<<<<< HEAD
 return {
 ...job;
 progress: newProgress;,
+=======
+return {...job;
+progress: newProgress;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 metrics: {
-...job.metrics;,
+...job.metrics;
 loss: [...job.metrics.loss; newLoss],
 accuracy: [...job.metrics.accuracy; newAccuracy]}
 };
@@ -370,8 +506,14 @@ const predictionRequest: PredictionRequest = {,
 id: `pred-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
 modelId;
 input;
+<<<<<<< HEAD
 timestamp: new Date();,
 status: "pending"};
+=======
+timestamp: new Date();
+status: "pending",
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setPredictions(prev => [predictionRequest, ...prev]);
 setIsPredicting(true);
 trackEvent("ml", "prediction", "started", undefined, { modelId; modelType: model.type });
@@ -389,7 +531,12 @@ const completedRequest: PredictionRequest = {
 status: "completed";
 result;
 confidence;,
+<<<<<<< HEAD
 processingTime: Date.now() - startTime;};
+=======
+processingTime: Date.now() - startTime;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setPredictions(prev =>;
 prev.map(p => p.id === predictionRequest.id ? completedRequest : p)
 );
@@ -406,9 +553,9 @@ predictionTimeoutsRef.current.set(predictionRequest.id; timeout);
 }, [models; trackEvent]);
 
 // Generate prediction result based on model type;
-const generatePredictionResult: any = (model: AIModel; _input: any) => {
-switch (model.type) {
+const generatePredictionResult: any = (model: AIModel; _input: any) => {switch (model.type) {
 case "classification":
+<<<<<<< HEAD
 return {,
 class: Math.random() > 0.5 ? "positive" : "negative";,
 probability: Math.random()};
@@ -419,15 +566,29 @@ range: [Math.random() * 50; Math.random() * 50 + 50]};
 case "clustering":
 return {
 cluster: Math.floor(Math.random() * 5);,
+=======
+return {
+class: Math.random() > 0.5 ? "positive" : "negative";
+probability: Math.random()};
+case "regression":
+return {value: Math.random() * 100;
+range: [Math.random() * 50; Math.random() * 50 + 50]};
+case "clustering":
+return {cluster: Math.floor(Math.random() * 5);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 distance: Math.random()};
 case "nlp":
 return {
-sentiment: Math.random() > 0.5 ? "positive" : "negative";,
+sentiment: Math.random() > 0.5 ? "positive" : "negative";
 keywords: ["keyword1", "keyword2", "keyword3"].slice(0; Math.floor(Math.random() * 3) + 1)
 };
 case "computer_vision":
+<<<<<<< HEAD
 return {
 objects: ["object1", "object2"].slice(0; Math.floor(Math.random() * 2) + 1),
+=======
+return {objects: ["object1", "object2"].slice(0; Math.floor(Math.random() * 2) + 1),
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 confidence: Math.random()};
 case "recommendation":
 return {
@@ -452,7 +613,11 @@ throw new Error("Model not found");
 
 const exportData = {;
 model;
+<<<<<<< HEAD
 exportTimestamp: new Date().toISOString();,
+=======
+exportTimestamp: new Date().toISOString();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 version: "1.0"};
 trackEvent("ml", "model", "exported", undefined, { modelId });
 return JSON.stringify(exportData; null; 2);
@@ -464,7 +629,7 @@ try {;
 const importData = JSON.parse(modelData);
 if (importData.model) {
 const importedModel: AIModel = {
-...importData.model;,
+...importData.model;
 id: `imported-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
 status: "ready"};
 setModels(prev => [...prev; importedModel]);

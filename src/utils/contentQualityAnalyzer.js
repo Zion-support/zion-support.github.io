@@ -230,8 +230,7 @@ export class ContentQualityAnalyzer {
         recommendations.push('Include relevant keywords naturally throughout the content');
         return recommendations;
     }
-    generateReport() {
-        const pageMetrics = Array.from(this.analyzedPages.values());
+    generateReport() {const pageMetrics = Array.from(this.analyzedPages.values());
         const totalPages = pageMetrics.length;
         if (totalPages === 0) {
             return {

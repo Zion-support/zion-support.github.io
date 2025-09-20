@@ -2,19 +2,36 @@ import React from "react";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+<<<<<<< HEAD
 import Image from "next/image";
 export interface Benefit {
 title: string;,
 description: string;
 icon?: React.ReactNode;
+=======
+export interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
+
 export interface Testimonial {
+<<<<<<< HEAD
 name: string;
 role?: string;,
 text: string;
 avatar?: string;
+=======
+  name: string;
+  role?: string;
+  text: string;
+  avatar?: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
+
 interface ServiceLandingTemplateProps {
+<<<<<<< HEAD
 title: string;
 subtitle: string;
 heroImage?: string;
@@ -157,3 +174,14 @@ Join thousands of satisfied customers who trust our service.;
 </div>
 );
 };
+=======
+  title: string;
+  subtitle: string;
+  heroImage?: string;
+  description: string;
+  benefits: Benefit[];
+  ctaText: string;
+  ctaLink: string;
+  testimonials?: Testimonial[];
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

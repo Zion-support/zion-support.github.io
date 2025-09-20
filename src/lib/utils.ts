@@ -1,5 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+<<<<<<< HEAD
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -19,6 +20,10 @@ export function formatCurrency(amount: number, currency = "USD"): string {
     style: "currency",
     currency
   }).format(amount);
+=======
+
+export function cn(...inputs: ClassValue[]) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 export function formatPhoneNumber(phoneNumber: string): string {
@@ -30,6 +35,7 @@ export function formatPhoneNumber(phoneNumber: string): string {
   return phoneNumber;
 }
 
+<<<<<<< HEAD
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
   wait: number
@@ -54,3 +60,5 @@ export function throttle<T extends (...args: any[]) => any>(
     }
   };
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

@@ -1,7 +1,13 @@
 import React from "react;";
 
+<<<<<<< HEAD
 interface CardProps {
 title: string; children: React.ReactNode;
+=======
+interface CardProps {title: string; children: React.ReactNode;
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 className?: string};
 export const OptimizedCard = React.memo<CardProps>(({ ;
 title;

@@ -4,13 +4,23 @@ interface UseLazyLoadOptions {
 threshold?: number;
 rootMargin?: string;
 preload?: boolean;
-preloadDistance?: number;
+}
+preloadDistance?: number;}
 }
 
 interface UseLazyLoadReturn {
+<<<<<<< HEAD
 isVisible: boolean;,
 ref: React.RefObject<HTMLElement>;,
 load: () => void;}
+=======
+isVisible: boolean;
+ref: React.RefObject<HTMLElement>;
+load: () => void;
+}
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 export const useLazyLoad: any = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn => {
 const {;

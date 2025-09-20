@@ -22,9 +22,18 @@ export interface HeaderProps {;
 hideLogin?: boolean;
 customLogo?: string;
 customTheme?: {
+<<<<<<< HEAD
 primaryColor: string;,
 backgroundColor: string;,
 textColor: string;};
+=======
+primaryColor: string;
+backgroundColor: string;
+textColor: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 export function Header({ hideLogin = false; customLogo; customTheme }: HeaderProps) {
@@ -46,8 +55,13 @@ textColor: "#ffffff", // Default light text;
 } : undefined);
 
 const headerStyle = effectiveTheme ? {;
+<<<<<<< HEAD
 backgroundColor: effectiveTheme.backgroundColor;,
 color: effectiveTheme.textColor;,
+=======
+backgroundColor: effectiveTheme.backgroundColor;
+color: effectiveTheme.textColor;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 borderColor: `${effectiveTheme.primaryColor}20`;
 } : {};
 
@@ -98,9 +112,15 @@ style={headerStyle}
 <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
 
 {/* Search Bar */}
+<<<<<<< HEAD
 <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
 <div className="ml-6 flex-1 hidden md:block">
 <MainNavigation />
+=======
+<form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">;
+<div className="ml-6 flex-1 hidden md:block">;
+<MainNavigation />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Desktop Search */}
@@ -142,12 +162,21 @@ Pricing;
 </div>
 
 {/* Mobile Menu */}
+<<<<<<< HEAD
 <MobileMenu className="md:hidden" />
 </div>
 {/* Mobile Menu */}
 <MobileMenu className="md:hidden" />
 </div>
 <>
+=======
+<MobileMenu className="md:hidden" />;
+</div>
+{/* Mobile Menu */}
+<MobileMenu className="md:hidden" />;
+</div>
+<>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <header;
 className={`sticky top-0 z-50 w-full transition-all duration-300 ${
 isScrolled;
@@ -160,6 +189,7 @@ style={headerStyle}
 <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
 
 {/* Desktop Navigation */}
+<<<<<<< HEAD
 <div className="ml-6 flex-1 hidden lg:block">
 <MainNavigation />
 </div>
@@ -167,6 +197,15 @@ style={headerStyle}
 {/* Search Bar */}
 <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-6">
 <div className="relative group">
+=======
+<div className="ml-6 flex-1 hidden lg:block">;
+<MainNavigation />;
+</div>
+
+{/* Search Bar */}
+<form onSubmit={handleSubmit} className="hidden md:block w-80 mx-6">;
+<div className="relative group">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 <EnhancedSearchInput;
 value={query}
@@ -176,12 +215,21 @@ navigate(`/search?q=${encodeURIComponent(text)}`);
 setQuery("");
 }}
 searchSuggestions={searchSuggestions}
+<<<<<<< HEAD
 />
 <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
 <SearchIcon className="h-4 w-4 text-zion-slate-light" />
 </div>
 </div>
 </form>
+=======
+/>;
+<div className="absolute right-3 top-1/2 transform -translate-y-1/2">;
+<SearchIcon className="h-4 w-4 text-zion-slate-light" />;
+</div>
+</div>
+</form>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Right Side Actions */}
 <div className="flex items-center gap-3">
@@ -200,7 +248,11 @@ onClick={toggleMobileMenu}
 className="lg:hidden p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors"
 >;
 {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -217,6 +269,7 @@ setQuery("");
 }}
 searchSuggestions={searchSuggestions}
 placeholder="Search services; talent; equipment...";
+<<<<<<< HEAD
 />
 <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
 <SearchIcon className="h-4 w-4 text-zion-slate-light" />
@@ -225,6 +278,16 @@ placeholder="Search services; talent; equipment...";
 </form>
 </div>
 </header>
+=======
+/>;
+<div className="absolute right-3 top-1/2 transform -translate-y-1/2">;
+<SearchIcon className="h-4 w-4 text-zion-slate-light" />;
+</div>
+</div>
+</form>;
+</div>
+</header>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Mobile Navigation Menu */}
 {isMobileMenuOpen && (
@@ -236,8 +299,13 @@ placeholder="Search services; talent; equipment...";
 onClick={toggleMobileMenu}
 className="p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10"
 >;
+<<<<<<< HEAD
 <X className="h-5 w-5" />
 </button>
+=======
+<X className="h-5 w-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <nav className="flex-1 p-4">
@@ -362,7 +430,11 @@ onClick={toggleMobileMenu}
 className="flex-1 px-4 py-2 text-center rounded-lg bg-zion-purple text-white hover:bg-zion-purple-dark transition-colors"
 >;
 Sign Up;
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </div>

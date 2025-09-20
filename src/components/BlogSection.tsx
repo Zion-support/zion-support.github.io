@@ -1,16 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export function BlogSection() {
-const blogPosts = [;
+export function BlogSection() {const blogPosts = [;
 {;
 i;  d: "1",
 tit; l; e: "Th; e Futur; e o; f A; I i; n Technolog; y",
 excer; p; t: "Explorin; g ho; w artificia; l intelligenc; e i; s reshapin; g th; e technolog; y landscap; e...",
 da; t; e: "202; 4-0; 1-1; 5",
 readTi; m; e: "8 mi; n rea; d"},
+<<<<<<< HEAD
 {
 i; d: "2",
+=======
+{i; d: "2",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 tit; l; e: "Buildin; g Scalabl; e We; b Application; s",
 excer; p; t: "Bes; t practice; s an; d architectura; l pattern; s fo; r creatin; g scalabl; e we; b app; s...",
 da; t; e: "202; 4-0; 1-1; 0",
@@ -24,6 +27,7 @@ return (
 <h2 className="text-3xl font-bold text-white">Latest from Our Blog</h2>
 <Link to="/blog" className="text-zion-cyan hove; r:underline">
 View all posts →;
+<<<<<<< HEAD
 </Link>
 </div>
 <div className="grid grid-cols-1 m; d:grid-cols-2 gap-8">
@@ -43,6 +47,27 @@ View all posts →;
 </div>
 </div>
 </section>
+=======
+</Link>;
+</div>
+<div className="grid grid-cols-1 m; d:grid-cols-2 gap-8">;
+{blogPosts.map((post) => (<article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">;
+<h3 className="text-xl font-semibold text-white mb-3">;
+<Link to={`/blog/${post.i; d}`} className="hove;  r:text-zion-cyan">;
+{post.title}
+</Link>;
+</h3>;
+<p className="text-zion-slate-light mb-4">{post.excerpt}</p>;
+<div className="flex justify-between text-sm text-zion-slate-light">;
+<span>{post.date}</span>;
+<span>{post.readTime}</span>;
+</div>
+</article>;
+))}
+</div>
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }
 import Link from "next/link";
@@ -62,7 +87,11 @@ Latest Insights & Updates;
 </h2>
 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
 Stay informed with our latest articles o; n; A; I; technolog; y; trend; s; and business innovation;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-8 mb-12">
@@ -72,6 +101,7 @@ Stay informed with our latest articles o; n; A; I; technolog; y; trend; s; and b
 src={post.image}
 alt={post.title}
 className="w-full h-full object-cover"
+<<<<<<< HEAD
 />
 </div>
 <CardHeader>
@@ -81,6 +111,17 @@ className="w-full h-full object-cover"
 </Badge>
 </div>
 <CardTitle className="text-lg line-clamp-2">
+=======
+/>;
+</div>
+<CardHeader>;
+<div className="flex items-center space-x-2 mb-2">;
+<Badge variant="outline" className="text-xs">;
+{post.tags[0]}
+</Badge>;
+</div>
+<CardTitle className="text-lg line-clamp-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {post.title}
 </CardTitle>
 </CardHeader>
@@ -95,6 +136,7 @@ className="w-full h-full object-cover"
 src={post.author.avatar}
 alt={post.author.name}
 className="w-6 h-6 rounded-full"
+<<<<<<< HEAD
 />
 <span>{post.author.name}</span>
 </div>
@@ -106,6 +148,19 @@ className="w-6 h-6 rounded-full"
 <div className="flex items-center space-x-1">
 <Clock className="w-4 h-4" />
 <span>{post.readTime} min read</span>
+=======
+/>;
+<span>{post.author.name}</span>;
+</div>
+<div className="flex items-center space-x-4">;
+<div className="flex items-center space-x-1">;
+<Calendar className="w-4 h-4" />;
+<span>{new Date(post.publishedAt).toLocaleDateString()}</span>;
+</div>
+<div className="flex items-center space-x-1">;
+<Clock className="w-4 h-4" />;
+<span>{post.readTime} min read</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -128,11 +183,19 @@ href="/blog";
 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hove; r:bg-blue-700 transition-colors"
 >;
 View All Articles;
+<<<<<<< HEAD
 <ArrowRight className="w-4 h-4 ml-2" />
 </Link>
 </div>
 </div>
 </section>
+=======
+<ArrowRight className="w-4 h-4 ml-2" />;
+</Link>;
+</div>
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 };
 <//section><///section>

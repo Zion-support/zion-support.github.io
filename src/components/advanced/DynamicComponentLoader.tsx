@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React {
 Suspense,
@@ -11,15 +12,35 @@ import { Loader2,, AlertTriangle,, Wifi,, WifiOff,, RefreshCw,  } from 'lucide-r
 import { Button,  } from '@/components/ui/button'
 import { Card,, CardContent,  } from '@/components/ui/card'
 import { cn,  } from '@/lib/utils'
+=======
+'use client'
+import React {Suspense,
+lazy
+  useState,
+useEffect;
+  ComponentType} from 'react';
+import { motion, AnimatePresence } from "framer-motion";
+import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface LoadingState {
 isLoading: boolean,
 error: Error | null,
 retryCount: number,
 isOnline: boolean,
+<<<<<<< HEAD
 interface DynamicLoaderProps {
 importFn: () => Promise<{ default: ComponentType<any> }>
 fallback?: React.ReactNode,
+=======
+}
+interface DynamicLoaderProps {}
+  importFn: () => Promise<{ default: ComponentType<any> }>
+  fallback?: React.ReactNode,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>
 loadingComponent?: React.ComponentType,
 enableRetry?: boolean,

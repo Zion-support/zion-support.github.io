@@ -8,9 +8,15 @@ export function useTalentData() {
     const { data, isLoading, error } = useQuery({
         queryKey: ['talent-profiles'];
         queryFn: fetchTalentProfiles;
+<<<<<<< HEAD
         initialData: [];});
     return {
         talents: data ?? [];
+=======
+        initialData: [];
+    });
+    return {talents: data ?? [];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         isLoading,
         error};
 }

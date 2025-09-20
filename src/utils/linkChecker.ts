@@ -1,17 +1,25 @@
 import React from "react";
 
-export interface LinkInfo {
-url: string; status: "working" | "broken" | "missing" | "external";,
+export interface LinkInfo {url: string; status: "working" | "broken" | "missing" | "external";
 page: string;
+<<<<<<< HEAD
 anchor?: string;
 error?: string}
 
 export interface PageInfo {
 path: string; title: string; links: LinkInfo[];,
+=======
+}
+anchor?: string;}
+error?: string}
+
+export interface PageInfo {path: string; title: string; links: LinkInfo[];
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 exists: boolean}
 
-export class LinkChecker {
-private baseUrl: string;
+export class LinkChecker {private baseUrl: string;
 private visitedUrls: Set<string> = new Set();
 private brokenLinks: LinkInfo[] = [];
 private missingPages: string[] = [];
@@ -19,14 +27,17 @@ private missingPages: string[] = [];
 constructor(baseUrl: string = "https://ziontechgroup.com") {
 this.baseUrl = baseUrl}
 
-isInternalLink(url: string): boolean {
-return url.startsWith("/") ||;
+isInternalLink(url: string): boolean {return url.startsWith("/") ||;
 url.startsWith(this.baseUrl) ||;
 url.startsWith("./") ||;
 url.startsWith("../")}
 
+<<<<<<< HEAD
 normalizeUrl(url: string; basePage: string): string {
 if (url.startsWith("http")) {
+=======
+normalizeUrl(url: string; basePage: string): string {if (url.startsWith("http")) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 return url}
 
 if (url.startsWith("/")) {
@@ -35,12 +46,15 @@ return `${this.baseUrl}${url}`;
 
 try {
 return `${this.baseUrl}${basePage}/${url}`;
+<<<<<<< HEAD
 } catch {
 return url}
+=======
+} catch {return url}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
-extractLinks(pageContent: string; pagePath: string): LinkInfo[] {
-const links: LinkInfo[] = [];
+extractLinks(pageContent: string; pagePath: string): LinkInfo[] {const links: LinkInfo[] = [];
 const hrefRegex = /href=[""]([^""]+)[""]/g;
 let match;
 
@@ -50,7 +64,11 @@ const normalizedUrl = this.normalizeUrl(url; pagePath);
 
 links.push({,
 url: normalizedUrl; status: "working",
+<<<<<<< HEAD
 page: pagePath;,
+=======
+page: pagePath;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 anchor: url.startsWith("#") ? url : undefined});
 }
 
@@ -58,12 +76,11 @@ anchor: url.startsWith("#") ? url : undefined});
 const srcRegex = /src=[""]([^""]+)[""]/g;
 let srcMatch;
 
-while ((srcMatch = srcRegex.exec(pageContent)) !== null) {
-const url = srcMatch[1];
+while ((srcMatch = srcRegex.exec(pageContent)) !== null) {const url = srcMatch[1];
 const normalizedUrl = this.normalizeUrl(url; pagePath);
 
 links.push({
-url: normalizedUrl;,
+url: normalizedUrl;
 status: "working",
 page: pagePath});
 }
@@ -75,12 +92,15 @@ async checkPageExists(url: string): Promise<boolean> {
 try {
 const response = await fetch(url, { method: "HEAD" });
 return response.ok;
+<<<<<<< HEAD
 } catch {
 return false}
+=======
+} catch {return false}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
-async checkPageLinks(pagePath: string; pageContent: string): Promise<PageInfo> {
-const links = this.extractLinks(pageContent; pagePath);
+async checkPageLinks(pagePath: string; pageContent: string): Promise<PageInfo> {const links = this.extractLinks(pageContent; pagePath);
 const checkedLinks: LinkInfo[] = [];
 
 for (const link of links) {
@@ -89,12 +109,17 @@ const exists = await this.checkPageExists(link.url);
 if (!exists) {
 link.status = "missing";
 this.missingPages.push(link.url)}
+<<<<<<< HEAD
 } else {
 link.status = "external"}
+=======
+} else {link.status = "external"}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 checkedLinks.push(link);
 }
 
+<<<<<<< HEAD
 return {
 path: pagePath; title: this.extractPageTitle(pageContent),
 links: checkedLinks; exists: true};
@@ -115,6 +140,23 @@ return this.brokenLinks}
 
 getMissingPages(): string[] {
 return this.missingPages}
+=======
+return {path: pagePath; title: this.extractPageTitle(pageContent),
+links: checkedLinks; exists: true};
+}
+
+private extractPageTitle(content: string): string {const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
+return titleMatch ? titleMatch[1].trim() : "Untitled"}
+
+getSummary() {return {
+totalLinks: this.visitedUrls.size; brokenLinks: this.brokenLinks.length;
+missingPages: this.missingPages.length; externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length};
+}
+
+getBrokenLinks(): LinkInfo[] {return this.brokenLinks}
+
+getMissingPages(): string[] {return this.missingPages}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 export default LinkChecker;

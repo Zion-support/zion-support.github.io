@@ -1,11 +1,20 @@
 import React from "react";
 
+<<<<<<< HEAD
 export interface SpecializedITInfrastructureService2025 {
 id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
 benefits: string[], useCases: string[];,
 targetAudience: string[], tags: string[];,
 estimatedDelivery: string; supportLevel: string; marketPrice: string;,
 contactInfo: {,
+=======
+export interface SpecializedITInfrastructureService2025 {id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
+benefits: string[], useCases: string[];
+targetAudience: string[], tags: string[];
+estimatedDelivery: string; supportLevel: string; marketPrice: string;
+}
+contactInfo: {,}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 phone: string; email: string; website: string};
 websiteUrl: string;
 demoUrl?: string;
@@ -22,7 +31,7 @@ title: "Edge Computing Infrastructure Platform",
 description: "Comprehensive edge computing platform that brings processing power closer to data sources; enabling real-time analytics; low-latency applications; and distributed computing capabilities.",
 category: "Edge Computing",
 subcategory: "Infrastructure Platform",
-price: 2800;,
+price: 2800;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -64,12 +73,16 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"},
+<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure"},
+=======
+websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure",
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Quantum-Ready Cloud Infrastructure;
 // Quantum Network Infrastructure;
-{
-id: "quantum-network-infrastructure",
+{id: "quantum-network-infrastructure",
 title: "Quantum Network Infrastructure",
 description: "Next-generation quantum network infrastructure that enables quantum communications; quantum key distribution; and quantum internet protocols for ultra-secure data transmission.",
 category: "Quantum Networking",
@@ -115,11 +128,15 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"},
+<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/quantum-network-infrastructure"},
+=======
+websiteUrl: "https://ziontechgroup.com/quantum-network-infrastructure",
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // 5G Enterprise Infrastructure Solutions;
-{
-id: "5g-enterprise-infrastructure-solutions",
+{id: "5g-enterprise-infrastructure-solutions",
 title: "5G Enterprise Infrastructure Solutions",
 description: "Comprehensive 5G enterprise infrastructure that provides ultra-fast connectivity; low latency; and massive IoT support for enterprise applications and digital transformation.",
 category: "5G Technology",
@@ -165,11 +182,15 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"},
+<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure"},
+=======
+websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure",
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Autonomous DevOps Infrastructure;
-{
-id: "autonomous-devops-infrastructure",
+{id: "autonomous-devops-infrastructure",
 title: "Autonomous DevOps Infrastructure",
 description: "Self-healing; self-optimizing infrastructure platform that automatically manages deployments; scaling; monitoring; and incident response using AI and machine learning.",
 category: "IT Infrastructure",
@@ -225,8 +246,7 @@ scalability: "Infinite auto-scaling",
 uptime: "99.99% availability"},
 
 // Zero-Trust Security Infrastructure;
-{
-id: "zero-trust-security-infrastructure",
+{id: "zero-trust-security-infrastructure",
 title: "Zero-Trust Security Infrastructure",
 description: "Comprehensive zero-trust security platform that implements continuous verification; least-privilege access; and micro-segmentation across all infrastructure components.",
 category: "IT Infrastructure",
@@ -282,8 +302,7 @@ scalability: "Enterprise-wide deployment",
 uptime: "99.9% security availability"},
 
 // Green Computing Infrastructure;
-{
-id: "green-computing-infrastructure",
+{id: "green-computing-infrastructure",
 title: "Green Computing Infrastructure",
 description: "Environmentally sustainable infrastructure platform that optimizes energy consumption; uses renewable energy sources; and implements carbon-neutral computing practices.",
 category: "IT Infrastructure",
@@ -339,8 +358,7 @@ scalability: "Sustainable scaling",
 uptime: "99.5% green availability"},
 
 // Hybrid Multi-Cloud Orchestration;
-{
-id: "hybrid-multi-cloud-orchestration",
+{id: "hybrid-multi-cloud-orchestration",
 title: "Hybrid Multi-Cloud Orchestration",
 description: "Intelligent platform that orchestrates workloads across multiple cloud providers and on-premises infrastructure; optimizing costs; performance; and compliance.",
 category: "IT Infrastructure",
@@ -394,11 +412,15 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"},
+<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/hybrid-cloud-infrastructure"},
+=======
+websiteUrl: "https://ziontechgroup.com/hybrid-cloud-infrastructure",
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // AI-Powered Infrastructure Management;
-{
-id: "ai-powered-infrastructure-management",
+{id: "ai-powered-infrastructure-management",
 title: "AI-Powered Infrastructure Management",
 description: "Intelligent infrastructure management platform that uses AI to optimize performance; predict failures; and automate infrastructure operations for maximum efficiency.",
 category: "AI Infrastructure",
@@ -444,5 +466,12 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"},
+<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/ai-infrastructure-management"}
 ];}
+=======
+websiteUrl: "https://ziontechgroup.com/ai-infrastructure-management",
+}
+];
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

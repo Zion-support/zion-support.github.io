@@ -7,11 +7,23 @@ import { AppPlatform } from "./MetadataManager, ";
 import { toast } from "sonner, ";
 
 interface ScreenshotManagerProps {
+<<<<<<< HEAD
 platform: AppPlatform;};
 type Screenshot = {;
 id: string;,
 url: string;,
 file: File;};
+=======
+platform: AppPlatform;
+}
+}
+};
+type Screenshot = {;
+id: string;
+url: string;
+file: File;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
 const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
@@ -120,7 +132,11 @@ className="mt-2"
 >;
 <Plus className="mr-2 h-4 w-4" />
 Select Files;
+<<<<<<< HEAD
 </Button>
+=======
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="text-xs text-gray-300 mb-4">
@@ -142,6 +158,7 @@ className="w-full h-auto rounded border border-zion-purple/20"
 onClick={() => removeScreenshot(screenshot.id)}
 className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
 >;
+<<<<<<< HEAD
 <Trash2 className="h-3 w-3" />
 </button>
 </div>
@@ -156,8 +173,26 @@ import React { useState useRef } from "react",
 import { Card, CardHeader, CardTitleCardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Upload, Trash2Plus } from 'lucide-react';
+=======
+<Trash2 className="h-3 w-3" />;
+</button>;
+</div>
+))}
+</div>
+</CardContent>;
+</Card>;
+);
+};
+<//Card><///Card>;
+import React { useState useRef } from "react",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";,
+import { Button } from "@/components/ui/button";,
+import { Upload, Trash2, Plus } from "lucide-react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
 interface ScreenshotManagerProps {
 platform: AppPlatform;
+}
+}
 }

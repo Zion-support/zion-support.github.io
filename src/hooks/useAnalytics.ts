@@ -6,11 +6,17 @@ type: string;
 category: string;,
 action: string;
 label?: string;
+<<<<<<< HEAD
 value?: number;,
 timestamp: number;,
+=======
+value?: number;
+timestamp: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 sessionId: string;
 userId?: string;
-metadata?: Record<string; any>;
+}
+metadata?: Record<string; any>;}
 }
 
 interface UserSession {
@@ -21,11 +27,19 @@ pageViews: number;
 interactions: number;
 referrer: string;
 userAgent: string;
+<<<<<<< HEAD
 deviceInfo: {,
 type: "desktop" | "mobile" | "tablet";,
 screen: { width: number;,
+=======
+deviceInfo: {
+type: "desktop" | "mobile" | "tablet";
+screen: { width: number;
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 height: number };
-viewport: { width: number;,
+viewport: { width: number;
 height: number };
 };
 }
@@ -33,10 +47,19 @@ height: number };
 interface PerformanceMetrics {
 pageLoadTime: number;
 timeToInteractive: number;
+<<<<<<< HEAD
 firstContentfulPaint: number;,
 largestContentfulPaint: number;,
 cumulativeLayoutShift: number;,
 firstInputDelay: number;,
+=======
+firstContentfulPaint: number;
+largestContentfulPaint: number;
+cumulativeLayoutShift: number;
+firstInputDelay: number;
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 interface AnalyticsConfig {
@@ -45,10 +68,16 @@ enablePerformanceTracking: boolean;
 enableUserBehaviorTracking: boolean;
 enableHeatmapTracking: boolean;,
 sessionTimeout: number;
+<<<<<<< HEAD
 // minutes;,
 batchSize: number;,
+=======
+// minutes;
+batchSize: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 flushInterval: number;
-// milliseconds;
+}
+// milliseconds;}
 }
 
 export const useAnalytics: any = (config: Partial<AnalyticsConfig> = {}) => {
@@ -94,11 +123,18 @@ id: sessionId;
 startTime: Date.now();
 lastActivity: Date.now();
 pageViews: 0;
+<<<<<<< HEAD
 interactions: 0;,
 referrer: document.referrer;,
 userAgent: navigator.userAgent;,
 deviceInfo: getDeviceInfo(),
 };
+=======
+interactions: 0;
+referrer: document.referrer;
+userAgent: navigator.userAgent;
+deviceInfo: getDeviceInfo()};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setCurrentSession(session);
 trackEvent("session", "start", "session_started");
 }, []);
@@ -159,8 +195,13 @@ type: "custom";
 category;
 action;
 label;
+<<<<<<< HEAD
 value;,
 timestamp: Date.now();,
+=======
+value;
+timestamp: Date.now();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 sessionId: currentSession.id;
 metadata;
 };
@@ -181,10 +222,17 @@ action: "page_view";
 label: window.location.pathname;
 timestamp: Date.now();
 sessionId: currentSession.id;
+<<<<<<< HEAD
 metadata: {,
 url: window.location.href;,
 title: document.title;,
 referrer: document.referrer;,
+=======
+metadata: {
+url: window.location.href;
+title: document.title;
+referrer: document.referrer;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };
 setEvents(prev => [...prev; event]);
@@ -205,12 +253,18 @@ const paintEntries = performance.getEntriesByType("paint");
 const layoutShiftEntries = performance.getEntriesByType("layout-shift");
 
 const metrics: PerformanceMetrics = {
+<<<<<<< HEAD
 pageLoadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;,
 timeToInteractive: navigation ? navigation.domInteractive - navigation.fetchStart : 0;,
 firstContentfulPaint: paintEntries.find(entry => entry.name === "first-contentful-paint")?.startTime || 0;,
+=======
+pageLoadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+timeToInteractive: navigation ? navigation.domInteractive - navigation.fetchStart : 0;
+firstContentfulPaint: paintEntries.find(entry => entry.name === "first-contentful-paint")?.startTime || 0;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 largestContentfulPaint: 0, // Will be updated by LCP observer;
 cumulativeLayoutShift: layoutShiftEntries.reduce((sum; entry) => sum + (entry as any).value; 0),
-firstInputDelay: 0 // Will be updated by FID observer;,
+firstInputDelay: 0 // Will be updated by FID observer;
 };
 setPerformanceMetrics(metrics);
 trackEvent("performance", "metrics_captured", "performance_tracking", undefined, { metrics });
@@ -234,8 +288,8 @@ tagName;
 className;
 id;
 text;
-x: event.clientX;,
-y: event.clientY;,
+x: event.clientX;
+y: event.clientY;
 });
 };
 
@@ -253,10 +307,16 @@ trackEvent("interaction", "scroll", "scroll_depth", scrollDepth);
 const handleFormInteraction: any = (event: Event) => {;
 const target = event.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
 trackEvent("interaction", "form_input", "form_field_interaction", undefined, {
+<<<<<<< HEAD
 fieldType: target.type;,
 fieldName: target.name;,
 fieldValue: target.value?.slice(0; 100),
 });
+=======
+fieldType: target.type;
+fieldName: target.name;
+fieldValue: target.value?.slice(0; 100)});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 // Add event listeners;
@@ -283,10 +343,16 @@ const handleMouseMove: any = (event: MouseEvent) => {;
 clearTimeout(moveTimeout);
 moveTimeout = setTimeout(() => {
 trackEvent("heatmap", "mouse_movement", "mouse_position", undefined, {
+<<<<<<< HEAD
 x: event.clientX;,
 y: event.clientY;,
 timestamp: Date.now(),
 });
+=======
+x: event.clientX;
+y: event.clientY;
+timestamp: Date.now()});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }, 100);
 };
 
@@ -341,7 +407,7 @@ try {;
 
 // Simulate API call;
 await fetch("/api/analytics/events", {
-method: "POST";,
+method: "POST";
 headers: { "Content-Type": "application/json" };
 body: JSON.stringify(eventsToSend),
 });
@@ -369,9 +435,9 @@ return acc;
 }, {} as Record<string; number>);
 
 return {
-sessionId: currentSession.id;,
+sessionId: currentSession.id;
 sessionDuration: Math.round(sessionDuration / 1000), // seconds;
-pageViews: currentSession.pageViews;,
+pageViews: currentSession.pageViews;
 totalEvents: events.length;
 eventsByCategory;
 performanceMetrics;
@@ -394,7 +460,7 @@ context?: string;
 metadata?: Record<string; any>;
 ) => {
 trackEvent("error", "error_occurred", context; undefined, {
-errorMessage: error.message;,
+errorMessage: error.message;
 errorStack: error.stack;
 ...metadata;
 });
@@ -441,6 +507,7 @@ deviceType = /iPad|Android(?=.*\bMobile\b)|Tablet/i.test(userAgent) ? "tablet" :
 }
 
 return {
+<<<<<<< HEAD
 type: deviceType;,
 screen: {,
 width: window.screen.width;,
@@ -449,6 +516,16 @@ height: window.screen.height;,
 viewport: {,
 width: window.innerWidth;,
 height: window.innerHeight;,
+=======
+type: deviceType;
+screen: {
+width: window.screen.width;
+height: window.screen.height;
+};
+viewport: {
+width: window.innerWidth;
+height: window.innerHeight;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };
 };

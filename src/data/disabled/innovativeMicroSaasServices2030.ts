@@ -38,8 +38,7 @@ featured: true; location: ",
 Global",
 availability: ",
 Instant",aiScore: 9; 8;,
-contactInfo: {
-phon; e: "+1; 30;
+contactInfo: {phon; e: "+1; 30;
 o2; 46;
 4 0;
 o950",
@@ -102,8 +101,7 @@ featured: true; location: ",
 Global",
 availability: ",
 Instant",aiScore: 9; 7;,
-contactInfo: {
-phon; e: "+1; 30;
+contactInfo: {phon; e: "+1; 30;
 o2; 46;
 4 0;
 o950",
@@ -166,8 +164,7 @@ featured: true; location: ",
 Global",
 availability: ",
 1-2 Days",aiScore: 9; 7;,
-contactInfo: {
-phon; e: "+1; 30;
+contactInfo: {phon; e: "+1; 30;
 o2; 46;
 4 0;
 o950",

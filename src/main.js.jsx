@@ -26,7 +26,14 @@ const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
             retry: 1;
+<<<<<<< HEAD
             refetchOnWindowFocus: false;}}});
+=======
+            refetchOnWindowFocus: false;
+        },
+    },
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const rootElement = document.getElementById('root');
 function renderApp() {
     const app = (<React.StrictMode>

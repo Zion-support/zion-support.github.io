@@ -1,7 +1,6 @@
 export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
     // AI-Powered Autonomous Systems;
-    {
-        id: "ai-autonomous-systems-platform";
+    {id: "ai-autonomous-systems-platform";
         title: "AI Autonomous Systems Platform - Self-Learning Business Operations";
         description: "Revolutionary platform that enables fully autonomous business operations through AI agents, automated decision-making, and intelligent process orchestration without human intervention.",
         category: "AI & Automation";
@@ -73,8 +72,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         marketTrend: "Autonomous systems market growing 45% annually";
         competitiveAdvantage: "Only platform enabling fully autonomous business operations"};
     // Quantum AI Platform;
-    {
-        id: "quantum-ai-platform";
+    {id: "quantum-ai-platform";
         title: "Quantum AI Platform - Next-Generation AI Computing";
         description: "Cutting-edge platform that combines quantum computing with artificial intelligence to solve previously intractable problems and accelerate AI model training by orders of magnitude.";
         category: "Quantum Computing";
@@ -146,8 +144,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         marketTrend: "Quantum AI market expected to reach $2B by 2030";
         competitiveAdvantage: "First-to-market quantum AI platform with hybrid capabilities"};
     // Space Technology Solutions;
-    {
-        id: "space-technology-solutions";
+    {id: "space-technology-solutions";
         title: "Space Technology Solutions - Satellite & Space Operations Platform";
         description: "Advanced space technology platform for managing satellite operations, analyzing space data, optimizing satellite communications, and enabling space-based business applications.",
         category: "Space Technology";
@@ -219,8 +216,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         marketTrend: "Space technology market growing 50% annually";
         competitiveAdvantage: "Most comprehensive space operations platform with AI integration"};
     // Biotechnology AI Platform;
-    {
-        id: "biotechnology-ai-platform";
+    {id: "biotechnology-ai-platform";
         title: "Biotechnology AI Platform - Drug Discovery & Research";
         description: "Revolutionary biotechnology platform that uses AI to accelerate drug discovery, optimize clinical trials, and advance medical research across multiple domains.",
         category: "Biotechnology";
@@ -292,8 +288,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         marketTrend: "Biotech AI market growing 35% annually";
         competitiveAdvantage: "Most advanced AI-powered biotechnology platform for drug discovery"};
     // Autonomous Vehicle Platform;
-    {
-        id: "autonomous-vehicle-platform";
+    {id: "autonomous-vehicle-platform";
         title: "Autonomous Vehicle Platform - Self-Driving Technology Solutions";
         description: "Complete autonomous vehicle solution with AI navigation, safety systems, fleet management capabilities, and regulatory compliance for various transportation applications.",
         category: "Autonomous Technology";
@@ -365,8 +360,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         marketTrend: "Autonomous vehicle market growing 40% annually";
         competitiveAdvantage: "Most comprehensive autonomous vehicle platform with AI safety systems"};
     // AI Robotics Platform;
-    {
-        id: "ai-robotics-platform";
+    {id: "ai-robotics-platform";
         title: "AI Robotics Platform - Intelligent Automation Solutions";
         description: "Intelligent robotics solutions with AI-powered automation for manufacturing, logistics, industrial processes, and service applications with advanced safety and learning capabilities.",
         category: "Industrial AI";
@@ -438,8 +432,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         marketTrend: "AI robotics market growing 30% annually";
         competitiveAdvantage: "Most intelligent robotics platform with advanced AI safety features"};
     // Smart City Infrastructure Platform;
-    {
-        id: "smart-city-infrastructure-platform";
+    {id: "smart-city-infrastructure-platform";
         title: "Smart City Infrastructure Platform - Urban Intelligence Solutions";
         description: "Comprehensive smart city platform that integrates IoT, AI, and data analytics to optimize urban infrastructure, improve citizen services, and enhance sustainability across all city operations.",
         category: "Smart Cities";
@@ -511,8 +504,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         marketTrend: "Smart city market growing 25% annually";
         competitiveAdvantage: "Most comprehensive smart city platform with AI-powered optimization"};
     // Advanced Cybersecurity Platform;
-    {
-        id: "advanced-cybersecurity-platform";
+    {id: "advanced-cybersecurity-platform";
         title: "Advanced Cybersecurity Platform - Zero-Trust Security Solutions";
         description: "Next-generation cybersecurity platform that implements zero-trust architecture, AI-powered threat detection, and advanced security orchestration for comprehensive enterprise protection.",
         category: "Cybersecurity";

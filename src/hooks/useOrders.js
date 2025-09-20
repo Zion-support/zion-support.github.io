@@ -12,5 +12,10 @@ export function useGetOrdersQuery(userId) {
             return (await res.json());
         },
         enabled: !!userId;
+<<<<<<< HEAD
         initialData: [];});
+=======
+        initialData: [];
+    });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }

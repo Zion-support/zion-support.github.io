@@ -1,7 +1,6 @@
 // Advanced AI & Machine Learning Services;
 export const advancedAIServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "QuantumAI Vision Pro";
         category: "Computer Vision";
         description: "Next-generation AI-powered computer vision platform with quantum-inspired algorithms for ultra-accurate image and video analysis";
@@ -41,8 +40,7 @@ export const advancedAIServices2025 = [
         aiScore: 97;
         useCases: ["Medical diagnosis", "Quality control", "Security monitoring", "Autonomous systems"]
     },
-    {
-        id: 2;
+    {id: 2;
         name: "NeuralFlow Studio";
         category: "AI Development";
         description: "Comprehensive AI model development and deployment platform with automated MLOps and model lifecycle management";
@@ -82,8 +80,7 @@ export const advancedAIServices2025 = [
         aiScore: 92;
         useCases: ["Predictive analytics", "Recommendation systems", "Fraud detection", "Process optimization"]
     },
-    {
-        id: 3;
+    {id: 3;
         name: "EmotionAI Analytics";
         category: "Emotional Intelligence";
         description: "Advanced emotional intelligence platform that analyzes human emotions, sentiment, and behavioral patterns in real-time",
@@ -126,8 +123,7 @@ export const advancedAIServices2025 = [
 ];
 // Blockchain & Web3 Services;
 export const blockchainWeb3Services2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "DeFi Portfolio Manager";
         category: "DeFi";
         pricing: "Freemium";
@@ -166,9 +162,15 @@ export const blockchainWeb3Services2025 = [
         setupTime: "20 minutes";
         integrations: ["Ethereum", "Polygon", "BSC", "Arbitrum", "Optimism"],
         freeTier: true;
+<<<<<<< HEAD
         trialPeriod: "7 days"};
     {
         id: 2;
+=======
+        trialPeriod: "7 days",
+    };
+    {id: 2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "NFT Marketplace Builder";
         category: "NFT";
         pricing: "Professional";
@@ -211,8 +213,7 @@ export const blockchainWeb3Services2025 = [
 ];
     // Cybersecurity & Compliance Services;
 export const cybersecurityServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Zero Trust Security Suite";
         category: "Cybersecurity";
         description: "Comprehensive zero trust security platform with advanced threat detection, identity management, and compliance monitoring",
@@ -248,9 +249,15 @@ export const cybersecurityServices2025 = [
         sla: "99.9% uptime";
         certifications: ["CISSP", "CISM", "ISO 27001", "SOC 2"],
         deliveryTime: "4-6 weeks";
+<<<<<<< HEAD
         support: "24/7"};
     {
         id: 2;
+=======
+        support: "24/7",
+    };
+    {id: 2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI-Powered Threat Hunting";
         category: "Threat Intelligence";
         description: "Advanced AI-driven threat hunting and incident response service with real-time monitoring and automated remediation";
@@ -290,8 +297,7 @@ export const cybersecurityServices2025 = [
 ];
     // Cloud & DevOps Services;
 export const cloudDevOpsServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Multi-Cloud Orchestration";
         category: "Cloud Management";
         description: "Unified multi-cloud management platform with automated provisioning, cost optimization, and compliance monitoring",
@@ -331,8 +337,7 @@ export const cloudDevOpsServices2025 = [
 ];
     // Healthcare & Biotech Services;
 export const healthcareBiotechServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "MedAI Diagnostics";
         category: "Healthcare AI";
         description: "AI-powered medical diagnostics platform with advanced imaging analysis, disease prediction, and treatment recommendations",
@@ -375,8 +380,7 @@ export const healthcareBiotechServices2025 = [
 ];
 // IoT & Edge Computing Services;
 export const iotEdgeServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "SmartCity IoT Platform";
         category: "IoT";
         pricing: "Enterprise";
@@ -419,8 +423,7 @@ export const iotEdgeServices2025 = [
 ];
     // Quantum Computing Services;
 export const quantumComputingServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Quantum Optimization Engine";
         category: "Quantum Computing";
         description: "Quantum computing optimization platform for complex mathematical problems, logistics optimization, and financial modeling",
@@ -463,8 +466,7 @@ export const quantumComputingServices2025 = [
 ];
 // Space & Aerospace Services;
 export const spaceAerospaceServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Satellite Data Analytics";
         category: "Space Tech";
         pricing: "Professional";
@@ -507,8 +509,7 @@ export const spaceAerospaceServices2025 = [
 ];
     // Sustainability & Green Tech Services;
 export const sustainabilityServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Carbon Footprint Tracker";
         category: "Sustainability";
         pricing: "Freemium";
@@ -551,8 +552,7 @@ export const sustainabilityServices2025 = [
 ];
     // Fintech & Digital Banking Services;
 export const fintechServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "AI-Powered Credit Scoring";
         category: "Fintech";
         pricing: "Professional";
@@ -595,8 +595,7 @@ export const fintechServices2025 = [
 ];
     // Education & EdTech Services;
 export const educationEdTechServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Adaptive Learning Platform";
         category: "EdTech";
         pricing: "Freemium";
@@ -639,8 +638,7 @@ export const educationEdTechServices2025 = [
 ];
     // Real Estate & PropTech Services;
 export const realEstatePropTechServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Smart Property Management";
         category: "PropTech";
         pricing: "Professional";
@@ -683,8 +681,7 @@ export const realEstatePropTechServices2025 = [
 ];
     // Logistics & Supply Chain Services;
 export const logisticsSupplyChainServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Supply Chain Intelligence";
         category: "Logistics";
         pricing: "Enterprise";
@@ -727,8 +724,7 @@ export const logisticsSupplyChainServices2025 = [
 ];
     // Entertainment & Media Services;
 export const entertainmentMediaServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "AI Content Creation Studio";
         category: "Media";
         pricing: "Professional";
@@ -770,8 +766,7 @@ export const entertainmentMediaServices2025 = [
         trialPeriod: "14 days"}
 ];
     // Export all services;
-export const allExpandedServices2025 = {
-    advancedAI: advancedAIServices2025;
+export const allExpandedServices2025 = {advancedAI: advancedAIServices2025;
     blockchain: blockchainWeb3Services2025;
     cybersecurity: cybersecurityServices2025;
     cloudDevOps: cloudDevOpsServices2025;

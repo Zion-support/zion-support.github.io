@@ -1,18 +1,20 @@
 import { toast as hotToast, type ToastOptions as HotToastOptions  } from "react-hot-toast, ";
 
-export type ToastOptions = HotToastOptions & {
-title?: string;
+export type ToastOptions = HotToastOptions & {title?: string;
 description?: string;
 variant?: "default" | "destructive" | "success"};
 
 export const useToast: any = () => ({ toast });
 
-function toast(options: ToastOptions) {
-const message = options.description || options.title || "";
+function toast(options: ToastOptions) {const message = options.description || options.title || "";
 if (options.variant === "destructive") {
+<<<<<<< HEAD
 hotToast.error(message; options)} else if (options.variant === "success") {
 hotToast.success(message; options)} else {
 hotToast(message; options)}
+=======
+hotToast.error(message; options)} else if (options.variant === "success") {hotToast.success(message; options)} else {hotToast(message; options)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 toast.title = (title: string) => hotToast(title);

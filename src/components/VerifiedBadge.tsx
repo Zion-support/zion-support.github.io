@@ -1,6 +1,10 @@
 
 import React from 'react';
+<<<<<<< HEAD
 import { CheckCircle } from 'lucide-react';
+=======
+import { CheckCircle } from "lucide-react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 return (
 <TooltipProvider>
 <Tooltip>

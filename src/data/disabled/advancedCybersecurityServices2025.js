@@ -1,7 +1,6 @@
 // Advanced Cybersecurity Services for 2025;
 export const advancedCybersecurityServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Zero Trust Security Mesh";
         category: "Zero Trust Security";
         description: "Comprehensive zero-trust security platform with continuous verification, micro-segmentation, and adaptive access controls",
@@ -54,9 +53,15 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: true;
         aiPowered: true;
         quantumResistant: true;
+<<<<<<< HEAD
         threatIntelligence: true};
     {
         id: 2;
+=======
+        threatIntelligence: true,
+    };
+    {id: 2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI-Powered Threat Intelligence";
         category: "Threat Intelligence";
         description: "Advanced AI-driven threat intelligence platform with real-time threat detection, predictive analytics, and automated response",
@@ -109,9 +114,15 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: false;
         aiPowered: true;
         quantumResistant: false;
+<<<<<<< HEAD
         threatIntelligence: true};
     {
         id: 3;
+=======
+        threatIntelligence: true,
+    };
+    {id: 3;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Quantum-Resistant Cryptography";
         category: "Post-Quantum Security";
         description: "Future-proof cryptography solutions resistant to quantum computing attacks with hybrid encryption and quantum key distribution";
@@ -164,9 +175,15 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: false;
         aiPowered: false;
         quantumResistant: true;
+<<<<<<< HEAD
         threatIntelligence: false};
     {
         id: 4;
+=======
+        threatIntelligence: false,
+    };
+    {id: 4;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Privacy-Preserving Analytics";
         category: "Privacy Engineering";
         description: "Advanced privacy-preserving analytics platform using differential privacy, federated learning, and secure multi-party computation",
@@ -219,9 +236,15 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: false;
         aiPowered: true;
         quantumResistant: false;
+<<<<<<< HEAD
         threatIntelligence: false};
     {
         id: 5;
+=======
+        threatIntelligence: false,
+    };
+    {id: 5;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Cloud Security Posture Management";
         category: "Cloud Security";
         description: "Comprehensive cloud security platform with continuous monitoring, compliance management, and automated remediation",
@@ -274,9 +297,15 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: true;
         aiPowered: true;
         quantumResistant: false;
+<<<<<<< HEAD
         threatIntelligence: true};
     {
         id: 6;
+=======
+        threatIntelligence: true,
+    };
+    {id: 6;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "IoT Security Guardian";
         category: "IoT Security";
         description: "Comprehensive IoT security platform with device authentication, network segmentation, and behavioral monitoring",

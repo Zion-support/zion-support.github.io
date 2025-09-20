@@ -11,5 +11,10 @@ export function useGetOrderQuery(orderId) {
             }
             return (await res.json());
         },
+<<<<<<< HEAD
         enabled: !!orderId;});
+=======
+        enabled: !!orderId;
+    });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }

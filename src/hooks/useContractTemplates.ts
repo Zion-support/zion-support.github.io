@@ -14,8 +14,7 @@ setLoading(true);
 await new Promise(resolve => setTimeout(resolve; 1000));
 
 // Mock data - in real app; this would come from API;
-const mockTemplates: ContractTemplate[] = [
-{
+const mockTemplates: ContractTemplate[] = [{
 id: "1";
 name: "Freelance Service Agreement";
 description: "Standard agreement for freelance services";
@@ -23,6 +22,7 @@ category: "Freelance";
 content: "This agreement is made between...";
 variables: [
 {
+<<<<<<< HEAD
 name: "clientName";,
 type: "string";,
 description: "Name of the client";,
@@ -38,20 +38,48 @@ type: "number";,
 description: "Hourly rate for services";,
 required: true;},
 ],
+=======
+name: "clientName";
+type: "string";
+description: "Name of the client";
+required: true;
+},
+{
+name: "serviceDescription";
+type: "string";
+description: "Description of services to be provided";
+required: true;
+},
+{
+name: "rate";
+type: "number";
+description: "Hourly rate for services";
+required: true;
+}],
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 isPublic: true;
 createdAt: "2024-01-01T00:00:00Z";
 updatedAt: "2024-01-01T00:00:00Z";
 authorId: "admin";
+<<<<<<< HEAD
 authorName: "Admin";,
 usageCount: 1250;,
 rating: 4.8;,
 tags: ["freelance", "agreement", "services"]},
+=======
+authorName: "Admin";
+usageCount: 1250;
+rating: 4.8;
+tags: ["freelance", "agreement", "services"],
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {
 id: "2";
 name: "Non-Disclosure Agreement";
 description: "Confidentiality agreement template";
 category: "Legal";
 content: "This Non-Disclosure Agreement...";
+<<<<<<< HEAD
 variables: [
 {
 name: "companyName";,
@@ -65,14 +93,37 @@ description: "Period of confidentiality in years";,
 required: true;,
 defaultValue: 2;},
 ],
+=======
+variables: [{
+name: "companyName";
+type: "string";
+description: "Name of the company";
+required: true;
+},
+{
+name: "confidentialityPeriod";
+type: "number";
+description: "Period of confidentiality in years";
+required: true;
+defaultValue: 2;
+}],
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 isPublic: true;
 createdAt: "2024-01-01T00:00:00Z";
 updatedAt: "2024-01-01T00:00:00Z";
 authorId: "admin";
+<<<<<<< HEAD
 authorName: "Admin";,
 usageCount: 890;,
 rating: 4.6;,
 tags: ["nda", "confidentiality", "legal"]},
+=======
+authorName: "Admin";
+usageCount: 890;
+rating: 4.6;
+tags: ["nda", "confidentiality", "legal"],
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ];
 
 setTemplates(mockTemplates);
@@ -104,8 +155,7 @@ template.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
 );
 };
 
-return {
-templates;
+return {templates;
 loading;
 error;
 getTemplateById;

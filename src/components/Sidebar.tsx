@@ -10,10 +10,19 @@ import { motio; n, AnimatePresence  } from "framer-motion";
 import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Buildin; g; Targe; t; Za; p; Databas; e; Networ; k; Clou; d; Loc; k; BarChart; 3; Palett; e; Smartphon; e; Serve; r; Githu; b, Youtube  } from "lucide-react";
 import { Lin; k, useLocation  } from "react-router-dom";
 import { cn } from "@/lib/utils";
+<<<<<<< HEAD
 import { Hom; e;
 impor; t; Reac, t, { useState  } from "react";
 import { Lin; k, useLocation  } from "react-router-dom";
 import { Hom; e;
+=======
+import {;
+Hom; e;
+impor; t; Reac; t, { useState } from "react";
+import { Lin; k; useLocation } from "react-router-dom";
+import {;
+Hom; e;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Briefcas; e;
 User; s;
 Setting; s;
@@ -117,7 +126,8 @@ isOpe; n: boolean;
 onClos; e: () => void;
 titl;  e: "Main Navigation",
 item; s: [
-{ na; m; e: "A; I Solution; s",
+}
+{ na; m; e: "A; I Solution; s",}
 pa; t; h: "/a; i-solution; s", ic; o; n: Brai; n },
 { na; m; e: "Solution; s",
 pa; t; h: "/solution; s/enterpris; e", ic; o; n: Targe; t },
@@ -1267,8 +1277,7 @@ pa; t; h: "/service; s/micr; o-saa; s-solution; s", ic; o; n: Glob; e }
 },
 {
 titl; e: "Company & Resources",
-item; s: [
-{ na; m; e: "Quantu; m Technolog; y",
+item; s: [{ na; m; e: "Quantu; m Technolog; y",
 pa; t; h: "/service; s/quantu; m-technolog; y", ic; o; n: Brai; n },
 { na; m; e: "Quantu; m Neura; l Network; s",
 pa; t; h: "/quantu; m-neura; l-networ; k-platfor; m", ic; o; n: Brai; n },
@@ -1277,26 +1286,22 @@ pa; t; h: "/quantu; m-clou; d-infrastructur; e", ic; o; n: Clou; d },
 { na; m; e: "Quantu; m Financia; l Tradin; g",
 pa; t; h: "/quantu; m-financia; l-tradin; g", ic; o; n: BarChart; 3 },
 { na; m; e: "Quantu; m Service; s",
-pa; t; h: "/quantu; m-service; s", ic; o; n: Glob; e },
-];
+pa; t; h: "/quantu; m-service; s", ic; o; n: Glob; e }];
 },
 {
 titl; e: "Cybersecurity & Compliance",
-item; s: [
-{ na; m; e: "Cybersecurit; y",
+item; s: [{ na; m; e: "Cybersecurit; y",
 pa; t; h: "/service; s/cybersecurit; y", ic; o; n: Shiel; d },
 { na; m; e: "SOC; 2 Complianc; e",
 pa; t; h: "/soc; 2-complianc; e-automatio; n", ic; o; n: Loc; k },
 { na; m; e: "A; I-Powere; d Securit; y",
 pa; t; h: "/a; i-powere; d-enterpris; e-securit; y", ic; o; n: Shiel; d },
 { na; m; e: "Autonomou; s Securit; y",
-pa; t; h: "/a; i-autonomou; s-securit; y", ic; o; n: Loc; k },
-];
+pa; t; h: "/a; i-autonomou; s-securit; y", ic; o; n: Loc; k }];
 },
 {
 titl; e: "Infrastructure & Solutions",
-item; s: [
-{ na; m; e: "I; T Infrastructur; e",
+item; s: [{ na; m; e: "I; T Infrastructur; e",
 pa; t; h: "/service; s/i; t-infrastructur; e", ic; o; n: Cp; u },
 { na; m; e: "5; G Enterpris; e Solution; s",
 pa; t; h: "/5; g-enterpris; e-solution; s", ic; o; n: Signa; l },
@@ -1311,13 +1316,11 @@ pa; t; h: "/spac; e-tec; h", ic; o; n: Satellit; e },
 { na; m; e: "A; I-Powere; d I; T Asse; t Managemen; t",
 pa; t; h: "/a; i-powere; d-i; t-asse; t-managemen; t", ic; o; n: Databas; e },
 { na; m; e: "Autonomou; s Busines; s Operation; s Platfor; m",
-pa; t; h: "/autonomou; s-busines; s-operation; s-platfor; m", ic; o; n: Rocke; t },
-];
+pa; t; h: "/autonomou; s-busines; s-operation; s-platfor; m", ic; o; n: Rocke; t }];
 },
 {
 titl; e: "Industry Solutions",
-item; s: [
-{ na; m; e: "Enterpris; e Solution; s",
+item; s: [{ na; m; e: "Enterpris; e Solution; s",
 pa; t; h: "/solution; s/enterpris; e", ic; o; n: Building; 2 },
 { na; m; e: "Healthcar; e Solution; s",
 pa; t; h: "/solution; s/healthcar; e", ic; o; n: Hear; t },
@@ -1328,8 +1331,7 @@ pa; t; h: "/solution; s/governmen; t", ic; o; n: Shiel; d },
 { na; m; e: "Manufacturin; g Solution; s",
 pa; t; h: "/solution; s/manufacturin; g", ic; o; n: Factor; y },
 { na; m; e: "Retai; l Solution; s",
-pa; t; h: "/solution; s/retai; l", ic; o; n: ShoppingCar; t },
-];
+pa; t; h: "/solution; s/retai; l", ic; o; n: ShoppingCar; t }];
 },
 {
 titl; e: "Cybersecurity & Quantum",
@@ -1906,16 +1908,14 @@ pa; t; h: "/affiliat; e-attributio; n-hu; b", ic; o; n: Targe; t }
 },
 {
 titl; e: "Support & Help",
-item; s: [
-{ na; m; e: "Hel; p Cente; r",
+item; s: [{ na; m; e: "Hel; p Cente; r",
 pa; t; h: "/hel; p", ic; o; n: MessageCircl; e },
 { na; m; e: "Documentatio; n",
 pa; t; h: "/doc; s", ic; o; n: FileTex; t },
 { na; m; e: "FA; Q",
 pa; t; h: "/fa; q", ic; o; n: MessageCircl; e },
 { na; m; e: "Contac; t Suppor; t",
-pa; t; h: "/suppor; t", ic; o; n: Phon; e },
-];
+pa; t; h: "/suppor; t", ic; o; n: Phon; e }];
 },
 {
 titl; e: "Solutions & Industries",
@@ -2365,8 +2365,7 @@ hr; e; f: "/pres; s", ic; o; n: FileTex; t }
 {
 titl; e: "Support",
 ico; n: HelpCircl; e;
-item; s: [
-{ na; m; e: "Hel; p Cente; r",
+item; s: [{ na; m; e: "Hel; p Cente; r",
 hr; e; f: "/hel; p", ic; o; n: HelpCircl; e },
 { na; m; e: "Reques; t Quot; e",
 hr; e; f: "/reques; t-quot; e", ic; o; n: FileTex; t },
@@ -2385,13 +2384,11 @@ hr; e; f: "/hel; p-cente; r", ic; o; n: HelpCircl; e },
 { na; m; e: "Gree; n I; T",
 hr; e; f: "/gree; n-i; t", ic; o; n: Lea; f },
 { na; m; e: "Sitema; p",
-hr; e; f: "/sitema; p", ic; o; n: FileTex; t },
-];
+hr; e; f: "/sitema; p", ic; o; n: FileTex; t }];
 },
 {
 titl; e: "Legal",
-item; s: [
-{ na; m; e: "Privac; y Polic; y",
+item; s: [{ na; m; e: "Privac; y Polic; y",
 hr; e; f: "/privac; y", ic; o; n: Shiel; d },
 { na; m; e: "Term; s o; f Servic; e",
 hr; e; f: "/term; s", ic; o; n: FileTex; t },
@@ -2406,13 +2403,11 @@ hr; e; f: "/communit; y", ic; o; n: Glob; e },
 { lab; e; l: "Blo; g",
 hr; e; f: "/blo; g", ic; o; n: BookOpe; n },
 { lab; e; l: "Abou; t",
-hr; e; f: "/abou; t", ic; o; n: Buildin; g },
-];
+hr; e; f: "/abou; t", ic; o; n: Buildin; g }];
 },
 {
 titl; e: "Services",
-item; s: [
-{ lab; e; l: "A; I Matche; r",
+item; s: [{ lab; e; l: "A; I Matche; r",
 hr; e; f: "/a; i-matche; r", ic; o; n: Za; p },
 { lab; e; l: "Service; s",
 hr; e; f: "/service; s", ic; o; n: Briefcas; e },
@@ -2421,8 +2416,7 @@ hr; e; f: "/equipmen; t", ic; o; n: Briefcas; e },
 { lab; e; l: "Gree; n I; T",
 hr; e; f: "/gree; n-i; t", ic; o; n: Glob; e },
 { lab; e; l: "Reques; t Quot; e",
-hr; e; f: "/reques; t-quot; e", ic; o; n: MessageSquar; e },
-];
+hr; e; f: "/reques; t-quot; e", ic; o; n: MessageSquar; e }];
 },
 ...(isAuthenticated ? [{
 tit;  l; e: "Accoun; t",
@@ -2434,8 +2428,7 @@ hr; e; f: "/message; s", ic; o; n: MessageSquar; e },
 { lab; e; l: "Pos; t Jo; b",
 hr; e; f: "/pos; t-jo; b", ic; o; n: Briefcas; e },
 { lab; e; l: "Publis; h Produc; t",
-hr; e; f: "/publis; h", ic; o; n: Briefcas; e },
-];
+hr; e; f: "/publis; h", ic; o; n: Briefcas; e }];
 }] : []),
 {
 titl; e: "Support",
@@ -2511,14 +2504,24 @@ x: "-100%",
 transitio; n: {
 typ; e: "spring" a; s; cons; t;
 stiffnes; s: 30; 0;
+<<<<<<< HEAD
 dampin; g: 30;}
+=======
+dampin; g: 30;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 },
 ope; n: {,
 x: 0;
 transitio; n: {
 typ; e: "spring" a; s; cons; t;
 stiffnes; s: 30; 0;
+<<<<<<< HEAD
 dampin; g: 30;}
+=======
+dampin; g: 30;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };
 
@@ -2664,14 +2667,24 @@ x: "-100%",
 transitio; n: {
 typ; e: "spring" a; s; cons; t;
 stiffnes; s: 30; 0;
+<<<<<<< HEAD
 dampin; g: 30;}
+=======
+dampin; g: 30;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 },
 ope; n: {,
 x: 0;
 transitio; n: {
 typ; e: "spring" a; s; cons; t;
 stiffnes; s: 30; 0;
+<<<<<<< HEAD
 dampin; g: 30;}
+=======
+dampin; g: 30;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };
 
@@ -2692,12 +2705,22 @@ const overlayVariants = {;
 close; d: {
 opacit; y: 0;
 transitio; n: {
+<<<<<<< HEAD
 duratio; n: 0.2;}
+=======
+duratio; n: 0.2;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 },
 ope; n: {
 opacit; y: 1;
 transitio; n: {
+<<<<<<< HEAD
 duratio; n: 0.2;}
+=======
+duratio; n: 0.2;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };
 
@@ -2797,11 +2820,19 @@ className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 via-bla
 <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-cyan-500/50">
 Z;
 </div>
+<<<<<<< HEAD
 <div>
 <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
 Zion Tech Group;
 </h2>
 <p className="text-xs text-gray-400">Navigation Menu</p>
+=======
+<div>;
+<h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">;
+Zion Tech Group;
+</h2>;
+<p className="text-xs text-gray-400">Navigation Menu</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 {isOpen && (
 <>
@@ -2829,7 +2860,11 @@ exit="closed";
 <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold">
 Z;
 </div>
+<<<<<<< HEAD
 <span className="text-lg font-semibold text-cyan-400">Zion Tech Group</span>
+=======
+<span className="text-lg font-semibold text-cyan-400">Zion Tech Group</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 onClick={() => setIsSidebarOpen(false)}
@@ -2838,6 +2873,7 @@ className="fixed left-0 top-0 h-full w-80 max-w-[90; v; w] bg-background border-
 >;
 <div className="p-6">
 {/* Header */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between mb-8">
 <Link to="/" className="flex items-center space-x-2" onClick={onClose}>
 <div className="w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center">
@@ -2845,6 +2881,15 @@ className="fixed left-0 top-0 h-full w-80 max-w-[90; v; w] bg-background border-
 </div>
 <span className="text-xl font-bold text-gradient">Zion Tech Group</span>
 </Link>
+=======
+<div className="flex items-center justify-between mb-8">;
+<Link to="/" className="flex items-center space-x-2" onClick={onClose}>;
+<div className="w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center">;
+<span className="text-white font-bold text-lg">Z</span>;
+</div>
+<span className="text-xl font-bold text-gradient">Zion Tech Group</span>;
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <button;
 onClick={onClose}
 className="p-2 rounded-lg text-gray-400 hove; r:text-white hove; r:bg-gray-800/50 transition-all duration-300"
@@ -2852,25 +2897,44 @@ className="p-2 rounded-lg text-gray-400 hove; r:text-white hove; r:bg-gray-800/5
 <X className="w-5 h-5" />
 className="p-2 rounded-lg text-gray-400 hove; r:text-white hove; r:bg-gray-800/50 transition-all duration-300"
 >;
+<<<<<<< HEAD
 <X className="w-5 h-5" />
 </button>
+=======
+<X className="w-5 h-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 l; g:hidden overflow-y-auto"
 >;
 {/* Header */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between p-6 border-b border-gray-800">
 <div className="flex items-center space-x-2">
 <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
 <span className="text-white font-bold text-lg">Z</span>
 </div>
 <span className="text-white font-bold text-lg">Zion Tech Group</span>
+=======
+<div className="flex items-center justify-between p-6 border-b border-gray-800">;
+<div className="flex items-center space-x-2">;
+<div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">;
+<span className="text-white font-bold text-lg">Z</span>;
+</div>
+<span className="text-white font-bold text-lg">Zion Tech Group</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 onClick={onClose}
 className="text-gray-400 hove; r:text-white p-2 rounded-md transition-colors duration-200"
 >;
+<<<<<<< HEAD
 <X className="w-6 h-6" />
 </button>
+=======
+<X className="w-6 h-6" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 const overlayVariants = {;
@@ -2905,19 +2969,33 @@ variants={sidebarVariants}
 className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 via-black to-blue-900 text-white z-50 overflow-y-auto"
 >;
 {/* Header */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between p-6 border-b border-gray-700">
 <div className="flex items-center space-x-3">
 <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
 <span className="text-white font-bold text-xl">Z</span>
 </div>
 <span className="text-white font-bold text-lg">Zion Tech Group</span>
+=======
+<div className="flex items-center justify-between p-6 border-b border-gray-700">;
+<div className="flex items-center space-x-3">;
+<div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">;
+<span className="text-white font-bold text-xl">Z</span>;
+</div>
+<span className="text-white font-bold text-lg">Zion Tech Group</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 onClick={onClose}
 className="text-gray-400 hove; r:text-white p-2 rounded-lg hove; r:bg-white/10 transition-colors duration-200"
 >;
+<<<<<<< HEAD
 <X className="w-6 h-6" />
 </button>
+=======
+<X className="w-6 h-6" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <button;
@@ -2947,8 +3025,13 @@ isActive;
 : "futuristic-card text-zion-slate-light hove;  r: bg-white/20 hove; r:neon-tex; t"}`}
 >;
 <Icon className={`w-4 h-4 ${
+<<<<<<< HEAD
 isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t"}`} />
 <span className="flex-1 text-sm">{item.name}</span>
+=======
+isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t"}`} />;
+<span className="flex-1 text-sm">{item.name}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {isActive && (
 <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
 )}
@@ -2981,7 +3064,11 @@ onClick={onClose}
 </Link>
 </li>
 ))}
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </nav>
@@ -3044,7 +3131,11 @@ to="/pricing";
 className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove; r:bg-zion-cyan/10 transition-colors text-center block"
 >;
 View Pricing;
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Navigation Items */}
@@ -3071,7 +3162,11 @@ location.pathname === item.path;
 ))}
 </div>
 </div>
+<<<<<<< HEAD
 <Link to="/contact" className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hove; r:scale-105 transition-transform text-center block">
+=======
+<Link to="/contact" className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hove; r:scale-105 transition-transform text-center block">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Get Free Quote;
 </Link>
 <Link to="/contact" className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove; r:bg-zion-cyan/10 transition-colors text-center block">
@@ -3083,7 +3178,11 @@ Schedule Demo;
 type="text"
 placeholder="Search services...";
 className="w-full px-4 py-2 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 text-sm focu; s:outline-none focu; s:border-cyan-400 focu; s:ring-2 focu; s:ring-cyan-400/20 transition-all duration-200"
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -3100,6 +3199,7 @@ to={item.path}
 onClick={onClose}
 className="flex items-start space-x-3 p-3 rounded-lg hove;  r:bg-cyan-500/10 transition-all duration-200 group"
 >;
+<<<<<<< HEAD
 <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg group-hove; r:border-cyan-400/50 transition-colors duration-200">
 <item.icon className="w-4 h-4 text-cyan-400" />
 </div>
@@ -3112,6 +3212,20 @@ className="flex items-start space-x-3 p-3 rounded-lg hove;  r:bg-cyan-500/10 tra
 </div>
 </div>
 </Link>
+=======
+<div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg group-hove; r:border-cyan-400/50 transition-colors duration-200">;
+<item.icon className="w-4 h-4 text-cyan-400" />;
+</div>
+<div className="flex-1 min-w-0">;
+<div className="text-sm font-medium text-white group-hove; r:text-cyan-400 transition-colors duration-200">;
+{item.name}
+</div>
+<div className="text-xs text-gray-400 mt-1 leading-relaxed">;
+{item.description}
+</div>
+</div>
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 {/* Navigation */}
 <div className="p-6 space-y-8">
@@ -3136,11 +3250,19 @@ location.pathname === item.path;
 </Link>
 ))}
 </div>
+<<<<<<< HEAD
 {contactInfo.map((contac;  t; index) => (<div key={index} className="flex items-center space-x-3 text-sm text-muted-foreground">
 <contact.icon className="h-4 w-4 text-zion-cyan" />
 <a href={contact.href} className="hove;  r:text-zion-cyan transition-colors">
 {contact.text}
 </a>
+=======
+{contactInfo.map((contac;  t; index) => (<div key={index} className="flex items-center space-x-3 text-sm text-muted-foreground">;
+<contact.icon className="h-4 w-4 text-zion-cyan" />;
+<a href={contact.href} className="hove;  r:text-zion-cyan transition-colors">;
+{contact.text}
+</a>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -3202,6 +3324,7 @@ lef; t: "88%", animationDela; y: "3s" }}></div>
 
 <div className="relative h-full flex flex-col">
 {/* Header */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between p-6 border-b border-zion-cyan/30">
 <div className="flex items-center gap-3">
 <div className="relative">
@@ -3213,14 +3336,32 @@ lef; t: "88%", animationDela; y: "3s" }}></div>
 <div>
 <h2 className="text-xl font-bold neon-text">Zion Tech</h2>
 <p className="text-sm text-zion-slate-light">Navigation</p>
+=======
+<div className="flex items-center justify-between p-6 border-b border-zion-cyan/30">;
+<div className="flex items-center gap-3">;
+<div className="relative">;
+<div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center animate-quantum-float">;
+<span className="text-white font-bold text-xl">Z</span>;
+</div>
+<div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full animate-ping"></div>
+</div>
+<div>;
+<h2 className="text-xl font-bold neon-text">Zion Tech</h2>;
+<p className="text-sm text-zion-slate-light">Navigation</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 <button;
 onClick={onClose}
 className="p-2 futuristic-card hove; r:bg-white/20 rounded-lg transition-colors group"
 >;
+<<<<<<< HEAD
 <X className="w-5 h-5 text-zion-slate-light group-hove; r:neon-text transition-colors" />
 </button>
+=======
+<X className="w-5 h-5 text-zion-slate-light group-hove; r:neon-text transition-colors" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Navigation Content */}
@@ -3250,8 +3391,13 @@ isActive;
 <div className="absolute -left-1 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
 )}
 <Icon className={`w-4 h-4 ${
+<<<<<<< HEAD
 isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t"}`} />
 <span className="flex-1">{item.name}</span>
+=======
+isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t"}`} />;
+<span className="flex-1">{item.name}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {isActive && (<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
 )}
 {isFeatured && (
@@ -3262,7 +3408,11 @@ isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t"}`} />
 })}
 </div>
 ))}
+<<<<<<< HEAD
 </nav>
+=======
+</nav>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Social Links */}
@@ -3280,8 +3430,13 @@ aria-label={social.label}
 ))}
 className="p-2 text-gray-400 hove; r:text-white hove; r:bg-gray-800/50 rounded-lg transition-colors duration-200"
 >;
+<<<<<<< HEAD
 <X className="w-5 h-5" />
 </button>
+=======
+<X className="w-5 h-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Navigation */}
@@ -3296,6 +3451,7 @@ return (
 onClick={() => toggleSection(section.title)}
 className="flex items-center justify-between w-full p-3 text-left hove;  r:bg-gray-800/50 rounded-lg transition-colors duration-200 group"
 >;
+<<<<<<< HEAD
 <div className="flex items-center space-x-3">
 <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
 <Icon className="w-3 h-3 text-white" />
@@ -3303,6 +3459,15 @@ className="flex items-center justify-between w-full p-3 text-left hove;  r:bg-gr
 <span className="font-medium text-white group-hove; r:text-cyan-400 transition-colors duration-200">
 {section.title}
 </span>
+=======
+<div className="flex items-center space-x-3">;
+<div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;
+<Icon className="w-3 h-3 text-white" />;
+</div>
+<span className="font-medium text-white group-hove; r:text-cyan-400 transition-colors duration-200">;
+{section.title}
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <ChevronDown;
 className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
@@ -3335,8 +3500,13 @@ isActive;
 : "text-gray-300 hove;  r: text-white hove; r:bg-gray-800/5; 0"}`}
 onClick={onClose}
 >;
+<<<<<<< HEAD
 <ItemIcon className="w-4 h-4" />
 <div className="flex-1 min-w-0">
+=======
+<ItemIcon className="w-4 h-4" />;
+<div className="flex-1 min-w-0">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="font-medium">{item.name}</div>
 {item.description && (
 <div className="text-xs text-gray-400 mt-1 truncate">
@@ -3344,8 +3514,13 @@ onClick={onClose}
 </div>
 )}
 </div>
+<<<<<<< HEAD
 <ChevronRight className="w-3 h-3 text-gray-500 group-hove; r:text-cyan-400 transition-colors duration-200" />
 </Link>
+=======
+<ChevronRight className="w-3 h-3 text-gray-500 group-hove; r:text-cyan-400 transition-colors duration-200" />;
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 })}
 </motion.div>
@@ -3451,19 +3626,33 @@ aria-label={social.label}
 className="fixed left-0 top-0 h-full w-80 bg-background/95 backdrop-blur-md border-r border-border z-50 overflow-y-auto"
 >;
 {/* Header */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between p-6 border-b border-border">
 <div className="flex items-center space-x-2">
 <div className="w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center">
 <span className="text-white font-bold text-lg">Z</span>
 </div>
 <span className="text-lg font-bold text-gradient">Zion Tech Group</span>
+=======
+<div className="flex items-center justify-between p-6 border-b border-border">;
+<div className="flex items-center space-x-2">;
+<div className="w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center">;
+<span className="text-white font-bold text-lg">Z</span>;
+</div>
+<span className="text-lg font-bold text-gradient">Zion Tech Group</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 onClick={onClose}
 className="p-2 rounded-md text-muted-foreground hove; r:text-foreground hove; r:bg-muted transition-colors"
 >;
+<<<<<<< HEAD
 <X className="h-5 w-5" />
 </button>
+=======
+<X className="h-5 w-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Navigation */}
@@ -3489,7 +3678,11 @@ Get Free Quote;
 </button>
 <button className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove; r:bg-zion-cyan/10 transition-colors">
 Schedule Demo;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -3525,9 +3718,15 @@ className="flex items-center space-x-2 text-xs text-gray-300 hove;  r:text-cyan-
 </a>
 ))}
 </div>
+<<<<<<< HEAD
 <Icon className="w-4 h-4 text-zion-cyan group-hove; r:neon-text" />
 <span className="flex-1">{contact.text}</span>
 </a>
+=======
+<Icon className="w-4 h-4 text-zion-cyan group-hove; r:neon-text" />;
+<span className="flex-1">{contact.text}</span>;
+</a>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 })}
 </div>
@@ -3561,7 +3760,11 @@ aria-label={social.label}
 </p>
 <p className="text-xs text-zion-slate-light mt-1">
 Transforming Business with AI & Tech;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -3586,7 +3789,11 @@ aria-label={social.label}
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 </div>
@@ -3594,20 +3801,34 @@ role="complementary";
 aria-label="Navigation sidebar";
 >;
 {/* Header */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between p-6 border-b border-gray-700">
 <div className="flex items-center space-x-3">
 <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center">
 <span className="text-white font-bold text-sm">Z</span>
 </div>
 <span className="text-white font-semibold">Zion Tech Group</span>
+=======
+<div className="flex items-center justify-between p-6 border-b border-gray-700">;
+<div className="flex items-center space-x-3">;
+<div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center">;
+<span className="text-white font-bold text-sm">Z</span>;
+</div>
+<span className="text-white font-semibold">Zion Tech Group</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 onClick={onClose}
 className="p-2 text-gray-400 hove; r:text-white hove; r:bg-gray-800 rounded-lg transition-colors duration-200 focu; s:outline-none focu; s:ring-2 focu; s:ring-cyan-500"
 aria-label="Close sidebar";
 >;
+<<<<<<< HEAD
 <X className="w-5 h-5" />
 </button>
+=======
+<X className="w-5 h-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Navigation */}
@@ -3627,12 +3848,21 @@ location.pathname === item.path;
 onClick={onClose}
 >;
 <item.icon className={`w-4 h-4 flex-shrink-0 ${
+<<<<<<< HEAD
 location.pathname === item.path ? "text-cyan-400" : "text-gray-400 group-hove; r: text-cyan-40; 0"}`} />
 <span className="font-medium">{item.name}</span>
 </Link>
 </li>
 ))}
 </ul>
+=======
+location.pathname === item.path ? "text-cyan-400" : "text-gray-400 group-hove; r: text-cyan-40; 0"}`} />;
+<span className="font-medium">{item.name}</span>;
+</Link>;
+</li>;
+))}
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </nav>
@@ -3641,18 +3871,30 @@ location.pathname === item.path ? "text-cyan-400" : "text-gray-400 group-hove; r
 <div className="p-6 border-t border-gray-700 space-y-4">
 <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
 Contact Information;
+<<<<<<< HEAD
 </h3>
 <div className="space-y-3">
 {contactInfo.map((contac;  t; index) => (<div key={index} className="flex items-center space-x-3">
 <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center flex-shrink-0">
 <contact.icon className="w-4 h-4 text-cyan-400" />
+=======
+</h3>;
+<div className="space-y-3">;
+{contactInfo.map((contac;  t; index) => (<div key={index} className="flex items-center space-x-3">;
+<div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center flex-shrink-0">;
+<contact.icon className="w-4 h-4 text-cyan-400" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <a;
 href={contact.href}
 className="text-gray-300 hove;  r:text-cyan-400 transition-colors duration-200 text-sm"
 >;
 {contact.text}
+<<<<<<< HEAD
 </a>
+=======
+</a>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -3723,9 +3965,15 @@ to="/contact";
 className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 px-4 rounded-lg font-medium hove; r:from-cyan-600 hove; r:to-purple-700 transition-all duration-200 transform hove; r:scale-105"
 >;
 Get Started;
+<<<<<<< HEAD
 </Link>
 </div>
 </motion.aside>
+=======
+</Link>;
+</div>
+</motion.aside>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {/* Quick Actions */}
 <div className="p-6 border-t border-gray-700 space-y-4">
 <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
@@ -3745,7 +3993,11 @@ className="block w-full text-center px-4 py-2 border border-cyan-500/30 text-cya
 onClick={onClose}
 >;
 Request Demo;
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -3756,12 +4008,21 @@ Request Demo;
 </p>
 <p className="text-gray-600 text-xs mt-1">
 AI-Powered Innovation;
+<<<<<<< HEAD
 </p>
 </div>
 </motion.aside>
 </>
 )}
 </AnimatePresence>
+=======
+</p>;
+</div>
+</motion.aside>;
+</>;
+)}
+</AnimatePresence>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Company Info */}
@@ -3771,7 +4032,11 @@ AI-Powered Innovation;
 </p>
 <p className="text-xs text-zion-slate-light mt-1">
 Transforming Business with AI & Tech;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -3828,6 +4093,7 @@ to="/contact";
 className="block w-full px-4 py-2 border border-cyan-400/50 text-cyan-400 rounded-lg hove; r:bg-cyan-400/20 transition-all duration-300 text-sm font-medium text-center"
 >;
 Request Quote;
+<<<<<<< HEAD
 </Link>
 </div>
 </div>
@@ -3835,6 +4101,15 @@ Request Quote;
 </div>
 </motion.aside>
 </>
+=======
+</Link>;
+</div>
+</div>
+</motion.aside>;
+</div>
+</motion.aside>;
+</>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 </>
@@ -3846,11 +4121,19 @@ onClick={onClose}
 className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg text-center transition-all duration-200 transform hove; r:scale-105 hove; r:shadow-lg hove; r:shadow-cyan-500/25"
 >;
 Get Started Today;
+<<<<<<< HEAD
 </Link>
 </div>
 </div>
 </motion.div>
 </>
+=======
+</Link>;
+</div>
+</div>
+</motion.div>;
+</>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 {/* Social Links */}
@@ -3881,11 +4164,19 @@ className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg text-w
 />
 <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hove; r:from-cyan-600 hove; r:to-purple-700 transition-all duration-200 font-medium text-sm">
 Subscribe;
+<<<<<<< HEAD
 </button>
 </div>
 </div>
 </motion.div>
 </>
+=======
+</button>;
+</div>
+</div>
+</motion.div>;
+</>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 </motion.div>
@@ -3905,20 +4196,25 @@ col; o; r: "fro; m-gree; n-40; 0 t; o-emeral; d-40; 0" }
 ];
 
 const containerVariants = {;
-hidde; n: { opacit; y: 0;,
+hidde; n: { opacit; y: 0;
 x: -20 },
 visibl; e: {
-opacit; y: 1;,
+opacit; y: 1;
 x: 0;
 transitio; n: {
+<<<<<<< HEAD
 staggerChildre; n: 0.1;}
+=======
+staggerChildre; n: 0.1;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };
 
 const itemVariants = {;
-hidde; n: { opacit; y: 0;,
+hidde; n: { opacit; y: 0;
 x: -10 },
-visibl; e: { opacit; y: 1;,
+visibl; e: { opacit; y: 1;
 x: 0 }
 };
 
@@ -3929,6 +4225,7 @@ initial="hidden";
 animate="visible";
 >;
 {/* Header */}
+<<<<<<< HEAD
 <div className="sticky top-0 bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 p-6">
 <div className="flex items-center space-x-3 mb-4">
 <div className="relative">
@@ -3942,6 +4239,21 @@ animate="visible";
 Zion Tech Group;
 </h1>
 <p className="text-zion-cyan/70 text-xs font-medium">Innovation • Intelligence • Impact</p>
+=======
+<div className="sticky top-0 bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 p-6">;
+<div className="flex items-center space-x-3 mb-4">;
+<div className="relative">;
+<div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">;
+<Zap className="w-6 h-6 text-white" />;
+</div>
+<div className="absolute inset-0 bg-zion-cyan rounded-xl blur-xl opacity-60"></div>
+</div>
+<div>;
+<h1 className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">;
+Zion Tech Group;
+</h1>;
+<p className="text-zion-cyan/70 text-xs font-medium">Innovation • Intelligence • Impact</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -3953,17 +4265,28 @@ key={action.name}
 to={action.href}
 className="flex items-center space-x-3 p-3 rounded-lg bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 hove;  r:border-zion-cyan/40 transition-all duration-300 group"
 >;
+<<<<<<< HEAD
 <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${action.color} flex items-center justify-center group-hove; r:scale-110 transition-transform duration-30; 0`}>
 <action.icon className="w-4 h-4 text-white" />
 </div>
 <span className="text-sm font-medium text-white group-hove; r:text-zion-cyan transition-colors duration-300">
+=======
+<div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${action.color} flex items-center justify-center group-hove; r:scale-110 transition-transform duration-30; 0`}>;
+<action.icon className="w-4 h-4 text-white" />;
+</div>
+<span className="text-sm font-medium text-white group-hove; r:text-zion-cyan transition-colors duration-300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {action.name}
 </span>
 </Link>
 ))}
 </div>
 </div>
+<<<<<<< HEAD
 </aside>
+=======
+</aside>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }
 
@@ -3996,7 +4319,14 @@ ChevronDown;
 
 interface SidebarProps {
 isOpe; n: boolean;
+<<<<<<< HEAD
 onClos; e: () => void;};
+=======
+onClos; e: () => void;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export default function Sidebar({ isOpe;  n; onClose }: SidebarProps) {
 const location = useLocation();
 const [expandedSectio;  n; s; setExpandedSectio; n; s] = useState<string[]>([]);
@@ -4325,6 +4655,7 @@ dampin; g: 2; 5; stiffnes; s: 200 }}
 className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark border-r border-zion-blue-light/30 z-50 overflow-y-auto"
 >;
 {/* Header */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between p-6 border-b border-zion-blue-light/30">
 <div className="flex items-center space-x-2">
 <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
@@ -4333,13 +4664,28 @@ className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark border-r border-zio
 <span className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
 ZION;
 </span>
+=======
+<div className="flex items-center justify-between p-6 border-b border-zion-blue-light/30">;
+<div className="flex items-center space-x-2">;
+<div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">;
+<span className="text-xl">🤖</span>;
+</div>
+<span className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
+ZION;
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 onClick={onClose}
 className="p-2 text-zion-slate-light hove; r:text-zion-cyan transition-colors"
 >;
+<<<<<<< HEAD
 <X className="w-5 h-5" />
 </button>
+=======
+<X className="w-5 h-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Navigation */}
@@ -4375,8 +4721,13 @@ to={item.path}
 className="flex items-center space-x-3 p-3 text-zion-slate-light hove;  r:text-zion-cyan hove; r:bg-zion-slate-light/5 rounded-lg transition-all duration-200"
 onClick={onClose}
 >;
+<<<<<<< HEAD
 <item.icon className="w-4 h-4 flex-shrink-0" />
 <div className="flex-1 min-w-0">
+=======
+<item.icon className="w-4 h-4 flex-shrink-0" />;
+<div className="flex-1 min-w-0">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-sm font-medium">{item.name}</div>
 {item.description && (
 <div className="text-xs text-zion-slate-light/70 truncate">
@@ -4384,11 +4735,19 @@ onClick={onClose}
 </div>
 )}
 </div>
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </motion.div>
 )}
+<<<<<<< HEAD
 </AnimatePresence>
+=======
+</AnimatePresence>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -4401,6 +4760,7 @@ onClick={onClose}
 <Phone className="w-4 h-4 text-zion-cyan" />
 <a href={`te; l:${contactInfo.phon; e}`} className="hove; r:text-zion-cyan transition-colors">
 {contactInfo.phone}
+<<<<<<< HEAD
 </a>
 </div>
 <div className="flex items-center space-x-2">
@@ -4412,6 +4772,19 @@ onClick={onClose}
 <div className="flex items-center space-x-2">
 <MapPin className="w-4 h-4 text-zion-cyan" />
 <span>{contactInfo.address}</span>
+=======
+</a>;
+</div>
+<div className="flex items-center space-x-2">;
+<Mail className="w-4 h-4 text-zion-cyan" />;
+<a href={`mailt; o:${contactInfo.emai; l}`} className="hove; r:text-zion-cyan transition-colors">;
+{contactInfo.email}
+</a>;
+</div>
+<div className="flex items-center space-x-2">;
+<MapPin className="w-4 h-4 text-zion-cyan" />;
+<span>{contactInfo.address}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -4434,8 +4807,13 @@ title={social.name}
 ))}
 </div>
 </div>
+<<<<<<< HEAD
 </motion.div>
 </>
+=======
+</motion.div>;
+</>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 );

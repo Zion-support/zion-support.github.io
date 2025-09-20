@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react;";
 import { Card; CardContent; CardDescription; CardHeader, CardTitle  } from "@/components/ui/card, ";
@@ -19,11 +21,11 @@ Shield;
 Zap;
 ExternalLink} from "lucide-react, ";
 
-export function ContactInfo() {
-const contactMethods = [;
+export function ContactInfo() {const contactMethods = [;
 {;
 title: "Phone Support";
 description: "Speak directly with our technical experts";
+<<<<<<< HEAD
 icon: <Phone className="h-8 w-8 text-zion-cyan" />
 value: "+1 302 464 0950";,
 action: "tel:+13024640950";,
@@ -52,10 +54,38 @@ icon: <Globe className="h-8 w-8 text-zion-purple" />
 value: "ziontechgroup.com";,
 action: "https://ziontechgroup.com";,
 badge: "Official Site";,
+=======
+icon: <Phone className="h-8 w-8 text-zion-cyan" />;
+value: "+1 302 464 0950";
+action: "tel:+13024640950";
+badge: "24/7 Available";
+color: "#00ffff"};
+{title: "Email Support";
+description: "Get detailed responses to your inquiries";
+icon: <Mail className="h-8 w-8 text-zion-purple" />;
+value: "kleber@ziontechgroup.com";
+action: "mailto:kleber@ziontechgroup.com";
+badge: "Response < 2hrs";
+color: "#8c15e9"};
+{title: "Office Location";
+description: "Visit our headquarters for in-person meetings";
+icon: <MapPin className="h-8 w-8 text-zion-cyan" />;
+value: "364 E Main St STE 1008; Middletown DE 19709",
+action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";
+badge: "Open Mon-Fri";
+color: "#00ffff"};
+{title: "Main Website";
+description: "Explore our complete company portfolio";
+icon: <Globe className="h-8 w-8 text-zion-purple" />;
+value: "ziontechgroup.com";
+action: "https://ziontechgroup.com";
+badge: "Official Site";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 color: "#8c15e9"}
 ];
 const companyStats = [;
 {;
+<<<<<<< HEAD
 label: "Years Experience";,
 value: "10+";,
 icon: <Clock className="h-6 w-6 text-zion-cyan" />};
@@ -70,6 +100,19 @@ icon: <Shield className="h-6 w-6 text-zion-cyan" />};
 {
 label: "Client Satisfaction";,
 value: "98%";,
+=======
+label: "Years Experience";
+value: "10+";
+icon: <Clock className="h-6 w-6 text-zion-cyan" />};
+{label: "Team Members";
+value: "50+";
+icon: <Users className="h-6 w-6 text-zion-purple" />};
+{label: "Projects Completed";
+value: "500+";
+icon: <Shield className="h-6 w-6 text-zion-cyan" />};
+{label: "Client Satisfaction";
+value: "98%";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 icon: <Zap className="h-6 w-6 text-zion-purple" />}
 ];
 return (
@@ -87,7 +130,11 @@ Get In Touch;
 </h2>
 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
 Ready to transform your business? Our team of experts is here to help you succeed with cutting-edge technology solutions.;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Contact Methods Grid */}
@@ -104,11 +151,19 @@ className="group hover:scale-105 transition-transform duration-300"
 <div className="p-3 rounded-lg bg-black/20 backdrop-blur-sm">
 {method.icon}
 </div>
+<<<<<<< HEAD
 <Badge variant="secondary" className="bg-primary/20 text-primary">
 {method.badge}
 </Badge>
 </div>
 <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
+=======
+<Badge variant="secondary" className="bg-primary/20 text-primary">;
+{method.badge}
+</Badge>;
+</div>
+<CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {method.title}
 </CardTitle>
 <CardDescription className="text-base">
@@ -120,7 +175,11 @@ className="group hover:scale-105 transition-transform duration-300"
 <div className="p-4 bg-black/20 rounded-lg border border-zion-cyan/20">
 <p className="text-lg font-mono text-zion-cyan break-all">
 {method.value}
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <Button asChild className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
@@ -143,7 +202,11 @@ Why Choose Zion Tech Group?;
 </h3>
 <p className="text-muted-foreground">
 Proven track record of delivering exceptional results;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
@@ -155,6 +218,7 @@ Proven track record of delivering exceptional results;
 {stat.icon}
 </div>
 </div>
+<<<<<<< HEAD
 <div className="text-3xl font-bold text-primary mb-2">
 {stat.value}
 </div>
@@ -163,6 +227,16 @@ Proven track record of delivering exceptional results;
 </div>
 </CardContent>
 </Card>
+=======
+<div className="text-3xl font-bold text-primary mb-2">;
+{stat.value}
+</div>
+<div className="text-sm text-muted-foreground">;
+{stat.label}
+</div>
+</CardContent>;
+</Card>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 
@@ -185,8 +259,13 @@ Request Free Quote;
 <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
 <Link to="/contact">
 Schedule Consultation;
+<<<<<<< HEAD
 </Link>
 </Button>
+=======
+</Link>;
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Additional contact options */}
@@ -208,12 +287,20 @@ className="flex items-center justify-center gap-2 text-zion-purple hover:text-zi
 >;
 <Mail className="h-4 w-4" />
 kleber@ziontechgroup.com;
+<<<<<<< HEAD
 </a>
+=======
+</a>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </section>
+=======
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }<//section><///section>

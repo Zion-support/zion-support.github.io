@@ -4,6 +4,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 /**;
 * Performance utilities for measuring and optimizing app performance;
@@ -16,19 +18,15 @@ const end = performance.now();
 console.log(`${name} took ${end - start} milliseconds`);
 };
 
-export const debounce = <T extends (...args: any[]) => any>(;,
-func: T; wait: number,
-): ((...args: Parameters<T>) => void) => {
-let timeout: globalThis.Timeout;
+export const debounce = <T extends (...args: any[]) => any>(;
+func: T; wait: number): ((...args: Parameters<T>) => void) => {let timeout: globalThis.Timeout;
 return (...args: Parameters<T>) => {
 clearTimeout(timeout);
 timeout = setTimeout(() => func(...args), wait)};
 };
 
-export const throttle = <T extends (...args: any[]) => any>(;,
-func: T; limit: number,
-): ((...args: Parameters<T>) => void) => {
-let inThrottle: boolean;
+export const throttle = <T extends (...args: any[]) => any>(;
+func: T; limit: number): ((...args: Parameters<T>) => void) => {let inThrottle: boolean;
 return (...args: Parameters<T>) => {
 if (!inThrottle) {
 func(...args);
@@ -40,8 +38,13 @@ setTimeout(() => (inThrottle = false), limit)}
 export const getPerformanceMetrics: any = () => {;
 const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
 const paint = performance.getEntriesByType("paint");
+<<<<<<< HEAD
 return {,
 loadTime: navigation.loadEventEnd - navigation.loadEventStart; domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;,
+=======
+return {
+loadTime: navigation.loadEventEnd - navigation.loadEventStart; domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 firstPaint: paint.find(entry => entry.name === "first-paint")?.startTime || 0; firstContentfulPaint: paint.find(entry => entry.name === "first-contentful-paint")?.startTime || 0};
 };
 

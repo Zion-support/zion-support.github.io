@@ -1,7 +1,6 @@
 export const SPECIALIZED_AI_SERVICES_2025 = [
     // Multimodal AI Content Studio;
-    {
-        id: "multimodal-ai-content-studio";
+    {id: "multimodal-ai-content-studio";
         title: "Multimodal AI Content Studio";
         description: "Advanced AI platform that generates, edits, and optimizes content across multiple formats including text, images, video, and audio using state-of-the-art multimodal models.",
         category: "AI & Content Creation";
@@ -57,8 +56,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         trainingData: "Multi-billion parameter models";
         accuracy: "95%+ content quality score"};
     // AI-Powered Predictive Healthcare Analytics;
-    {
-        id: "ai-powered-predictive-healthcare-analytics";
+    {id: "ai-powered-predictive-healthcare-analytics";
         title: "AI-Powered Predictive Healthcare Analytics";
         description: "Comprehensive healthcare analytics platform that uses AI to predict patient outcomes, optimize treatment plans, and improve healthcare delivery through advanced machine learning algorithms.",
         category: "AI & Healthcare";
@@ -114,8 +112,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         trainingData: "De-identified patient data";
         accuracy: "92% prediction accuracy"};
     // Autonomous Financial Trading AI;
-    {
-        id: "autonomous-financial-trading-ai";
+    {id: "autonomous-financial-trading-ai";
         title: "Autonomous Financial Trading AI";
         description: "Advanced AI-powered trading platform that autonomously analyzes market data, executes trades, and manages portfolios using sophisticated machine learning algorithms and real-time market intelligence.",
         category: "AI & Finance";
@@ -171,8 +168,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         trainingData: "Historical market data + news sentiment";
         accuracy: "87% prediction accuracy"};
     // AI-Powered Supply Chain Optimization;
-    {
-        id: "ai-powered-supply-chain-optimization";
+    {id: "ai-powered-supply-chain-optimization";
         title: "AI-Powered Supply Chain Optimization";
         description: "Intelligent supply chain platform that uses AI to optimize logistics, predict demand, manage inventory, and reduce costs through advanced analytics and machine learning.",
         category: "AI & Supply Chain";
@@ -228,8 +224,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         trainingData: "Historical supply chain data";
         accuracy: "89% optimization accuracy"};
     // AI-Powered Legal Research Assistant;
-    {
-        id: "ai-powered-legal-research-assistant";
+    {id: "ai-powered-legal-research-assistant";
         title: "AI-Powered Legal Research Assistant";
         description: "Advanced AI platform that automates legal research, analyzes case law, generates legal documents, and provides intelligent legal insights using natural language processing and machine learning.",
         category: "AI & Legal Tech";
@@ -285,8 +280,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         trainingData: "Legal documents + case law";
         accuracy: "94% legal accuracy"};
     // AI-Powered Educational Personalization;
-    {
-        id: "ai-powered-educational-personalization";
+    {id: "ai-powered-educational-personalization";
         title: "AI-Powered Educational Personalization";
         description: "Intelligent education platform that personalizes learning experiences, adapts content to individual needs, and provides real-time feedback using advanced AI and machine learning algorithms.",
         category: "AI & Education";

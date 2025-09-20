@@ -1,10 +1,11 @@
 import React from "react";
 
 interface FuturisticHeroProps {
-title: string;,
+title: string;
 subtitle: string;
 children?: React.ReactNode;
-className?: string;
+}
+className?: string;}
 };
 export default function FuturisticHero({ title; subtitle; children; className = "" }: FuturisticHeroProps) {
 return (
@@ -13,7 +14,11 @@ return (
 <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-cyan-900"></div>
 
 {/* Animated grid pattern */}
+<<<<<<< HEAD
 <div className="absolute inset-0 opacity-20">
+=======
+<div className="absolute inset-0 opacity-20">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="absolute inset-0 bg-[linear-gradient(rgba(255;255;255;0.1)_1px;transparent_1px),linear-gradient(90deg;rgba(255;255;255;0.1)_1px;transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
 </div>
 
@@ -67,8 +72,7 @@ const floatingIcons = [;
 { icon: <Zap className="w-6 h-6" />, delay: 0.5; color: "text-cyan-400" },
 { icon: <Brain className="w-6 h-6" />, delay: 1; color: "text-purple-400" },
 { icon: <Shield className="w-6 h-6" />, delay: 1.5; color: "text-green-400" },
-{ icon: <Globe className="w-6 h-6" />, delay: 2; color: "text-blue-400" },
-];
+{ icon: <Globe className="w-6 h-6" />, delay: 2; color: "text-blue-400" }];
 
 return (
 <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -80,7 +84,11 @@ return (
 <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-500" />
 
 {/* Grid Pattern */}
+<<<<<<< HEAD
 <div className="absolute inset-0 bg-[linear-gradient(rgba(6;182;212;0.1)_1px;transparent_1px),linear-gradient(90deg;rgba(6;182;212;0.1)_1px;transparent_1px)] bg-[size:50px_50px]" />
+=======
+<div className="absolute inset-0 bg-[linear-gradient(rgba(6;182;212;0.1)_1px;transparent_1px),linear-gradient(90deg;rgba(6;182;212;0.1)_1px;transparent_1px)] bg-[size:50px_50px]" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Floating Icons */}
@@ -103,9 +111,15 @@ top: `${30 + (index % 2) * 20}%`}}
 <div;
 className="fixed w-4 h-4 bg-cyan-400 rounded-full pointer-events-none z-10 mix-blend-difference"
 style={{
+<<<<<<< HEAD
 left: mousePosition.x - 8;,
 top: mousePosition.y - 8}}
 />
+=======
+left: mousePosition.x - 8;
+top: mousePosition.y - 8}}
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Main Content */}
 <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -152,12 +166,10 @@ animate={{ opacity: 1; y: 0 }}
 transition={{ duration: 1; delay: 0.6 }}
 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto"
 >;
-{[
-{ value: "200+", label: "Revolutionary Services", icon: <Rocket className="w-8 h-8" />, color: "text-cyan-400" },
+{[{ value: "200+", label: "Revolutionary Services", icon: <Rocket className="w-8 h-8" />, color: "text-cyan-400" },
 { value: "99.99%", label: "Uptime Guarantee", icon: <Shield className="w-8 h-8" />, color: "text-green-400" },
 { value: "21", label: "Day Free Trials", icon: <Star className="w-8 h-8" />, color: "text-yellow-400" },
-{ value: "24/7", label: "AI Support", icon: <Brain className="w-8 h-8" />, color: "text-purple-400' },
-].map((stat; index) => (
+{ value: "24/7", label: "AI Support", icon: <Brain className="w-8 h-8" />, color: "text-purple-400' }].map((stat; index) => (
 <motion.div;
 key={stat.label}
 initial={{ opacity: 0; scale: 0.8 }}
@@ -168,6 +180,7 @@ className="text-center group"
 <div className={`${stat.color} mb-3 group-hover:scale-110 transition-transform duration-300`}>
 {stat.icon}
 </div>
+<<<<<<< HEAD
 <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
 {stat.value}
 </div>
@@ -175,6 +188,15 @@ className="text-center group"
 {stat.label}
 </div>
 </motion.div>
+=======
+<div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">;
+{stat.value}
+</div>
+<div className="text-gray-400 text-sm md:text-base group-hover:text-cyan-300 transition-colors duration-300">;
+{stat.label}
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </motion.div>
 
@@ -217,9 +239,15 @@ className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"
 animate={{ y: [0; 12; 0] }}
 transition={{ duration: 2; repeat: Infinity }}
 className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
+<<<<<<< HEAD
 />
 </motion.div>
 </motion.div>
+=======
+/>;
+</motion.div>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Particle Effects */}
@@ -229,13 +257,19 @@ className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
 key={i}
 className="absolute w-1 h-1 bg-cyan-400 rounded-full"
 initial={{
+<<<<<<< HEAD
 x: Math.random() * window.innerWidth;,
 y: Math.random() * window.innerHeight;,
+=======
+x: Math.random() * window.innerWidth;
+y: Math.random() * window.innerHeight;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 opacity: Math.random()}}
 animate={{
 y: [0, -100],
 opacity: [0; 1; 0]}}
 transition={{
+<<<<<<< HEAD
 duration: Math.random() * 3 + 2;,
 repeat: Infinity;,
 delay: Math.random() * 2}}
@@ -243,5 +277,14 @@ delay: Math.random() * 2}}
 ))}
 </div>
 </section>
+=======
+duration: Math.random() * 3 + 2;
+repeat: Infinity;
+delay: Math.random() * 2}}
+/>;
+))}
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }<//section><///section>})

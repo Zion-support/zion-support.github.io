@@ -1,18 +1,24 @@
 import * as React from &quot;react&quot;
 import * as ContextMenuPrimitive from &quot;@radix-ui/react-context-menu&quot;
-import { Check,, ChevronRight,, Circle,  } from 'lucide-react'
-import { cn,  } from &quot;@/lib/utils&quot;
+import { Check, ChevronRight, Circle } from "lucide-react";
+import {cn} from &quot;@/lib/utils&quot;
 const ContextMenu = ContextMenuPrimitive.Root,
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger,
 const ContextMenuGroup = ContextMenuPrimitive.Group,
 const ContextMenuPortal = ContextMenuPrimitive.Portal,
 const ContextMenuSub = ContextMenuPrimitive.Sub,
 const ContextMenuRadioGroup = ContextMenuPrimitive.RadioGroup,
+<<<<<<< HEAD
 const ContextMenuSubTrigger = React.forwardRef<;
 React.ElementRef<typeof ContextMenuPrimitive.SubTrigger>
 React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {
 inset?: boolean,
 };
+=======
+const ContextMenuSubTrigger = React.forwardRef<
+  React.ElementRef<typeof ContextMenuPrimitive.SubTrigger>
+  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {inset?: boolean}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 >(({ className inset children, ...props }, ref) => (;
 <ContextMenuPrimitive.SubTrigger;
 ref={ref}
@@ -32,6 +38,7 @@ const ContextMenuSubContent = React.forwardRef<;
 React.ElementRef<typeof ContextMenuPrimitive.SubContent>
 React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubContent>
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
 <ContextMenuPrimitive.SubContent,
 ref={ref}
 className={cn(;
@@ -40,6 +47,15 @@ className
 )}
 {...props}
 />
+=======
+  <ContextMenuPrimitive.SubContent ref={ref}
+    className={cn(
+      &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
+      className
+    )}
+    {...props}
+  />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ));
 ContextMenuSubContent.displayName = ContextMenuPrimitive.SubContent.displayName;
 const ContextMenuContent = React.forwardRef<;
@@ -145,6 +161,7 @@ className={cn(&quot;-mx-1 my-1 h-px bg-border&quot;, className)}
 />
 ))
 ContextMenuSeparator.displayName = ContextMenuPrimitive.Separator.displayName,
+<<<<<<< HEAD
 const ContextMenuShortcut: any = ({
 className
 ...props,
@@ -158,6 +175,19 @@ className
 {...props}
 />
 );
+=======
+const ContextMenuShortcut = ({className
+  ...props}: React.HTMLAttributes<HTMLSpanElement>) => {
+  return (
+    <span
+className={cn(
+        &quot;ml-auto text-xs tracking-widest text-muted-foreground&quot;
+        className
+      )}
+      {...props}
+    />;
+  );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 ContextMenuShortcut.displayName = &quot;ContextMenuShortcut&quot;
 export {

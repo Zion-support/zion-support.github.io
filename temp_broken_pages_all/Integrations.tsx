@@ -1,10 +1,10 @@
-import React, { useEffect } from "react",
-import { Header,  } from "@/components/Header",
-import { SEO,  } from "@/components/SEO",
-import { GradientHeading,  } from "@/components/GradientHeading",
-import { Button,  } from "@/components/ui/button",
+import React, { useEffect } from "react",;
+import { Header } from "@/components/Header";,
+import { SEO } from "@/components/SEO";,
+import { GradientHeading } from "@/components/GradientHeading";,
+import { Button } from "@/components/ui/button";,
 import Link from 'next/link';
-import { useAdvancedOnboardingStatus,  } from "@/hooks/useAdvancedOnboardingStatus";
+import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
 return (
     <>
@@ -72,6 +72,6 @@ higher limits.
           </div>
         </div>
       </main>
-    </>
+</>
   )
 }

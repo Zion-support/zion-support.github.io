@@ -8,10 +8,20 @@ import { useNavigate } from "react-router-dom, ";
 import { TalentProfile } from "@/types/talent, ";
 
 export interface TalentCardProps {;
+<<<<<<< HEAD
 talent: TalentProfile;,
 onBook: (talent: TalentProfile) => void;,
 onMessage: (talent: TalentProfile) => void;,
 isAuthenticated: boolean;};
+=======
+talent: TalentProfile;
+onBook: (talent: TalentProfile) => void;
+onMessage: (talent: TalentProfile) => void;
+isAuthenticated: boolean;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const TalentCardComponent: any = ({;
 talent;
 onBook;
@@ -66,23 +76,38 @@ className="w-full h-full object-cover"
 )}
 </div>
 {talent.is_verified && (
+<<<<<<< HEAD
 <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">
 <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
+=======
+<div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">;
+<CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </div>
 
 {/* Main Info */}
+<<<<<<< HEAD
 <div className="flex-1">
 <div className="flex justify-between items-start">
 <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>
 <FavoriteButton itemId={talent.id} itemType="talent" className="-mt-1" />
 </div>
 <p className="text-white font-medium">{talent.professional_title}</p>
+=======
+<div className="flex-1">;
+<div className="flex justify-between items-start">;
+<h3 className="text-lg font-bold text-white">{talent.full_name}</h3>;
+<FavoriteButton itemId={talent.id} itemType="talent" className="-mt-1" />;
+</div>
+<p className="text-white font-medium">{talent.professional_title}</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Location & Availability */}
 <div className="mt-2 flex flex-wrap gap-3 text-sm">
 {talent.location && (
+<<<<<<< HEAD
 <div className="flex items-center text-zion-slate-light">
 <MapPin className="h-4 w-4 mr-1" />
 <span>{talent.location}</span>
@@ -92,6 +117,17 @@ className="w-full h-full object-cover"
 <div className="flex items-center text-zion-slate-light">
 <Clock className="h-4 w-4 mr-1" />
 <span>{talent.availability_type}</span>
+=======
+<div className="flex items-center text-zion-slate-light">;
+<MapPin className="h-4 w-4 mr-1" />;
+<span>{talent.location}</span>;
+</div>
+)}
+{talent.availability_type && (
+<div className="flex items-center text-zion-slate-light">;
+<Clock className="h-4 w-4 mr-1" />;
+<span>{talent.availability_type}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </div>
@@ -125,7 +161,11 @@ className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-lig
 {talent.hourly_rate ? (
 <div className="text-white font-bold">
 ${talent.hourly_rate}
+<<<<<<< HEAD
 <span className="text-zion-slate-light font-normal">/hr</span>
+=======
+<span className="text-zion-slate-light font-normal">/hr</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ) : (
 <div className="text-zion-slate-light">Rate not specified</div>
@@ -150,11 +190,19 @@ onClick={handleMessage}
 className="text-zion-cyan hover:text-white hover:bg-zion-blue-light"
 >;
 Message;
+<<<<<<< HEAD
 </Button>
 </div>
 </div>
 </div>
 </Card>
+=======
+</Button>;
+</div>
+</div>
+</div>
+</Card>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 };
 
@@ -162,6 +210,7 @@ export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = "TalentCard";
 <//Card><///Card>
 import React from 'react';
+<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -172,5 +221,17 @@ import { TalentProfile } from "@/types/talent";
 import { RatingStars } from '@/components/RatingStars';
 import { useAuth } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
+=======
+import { useRouter } from "next/router";
+import { Badge } from "@/components/ui/badge";,
+import { Button } from "@/components/ui/button";,
+import { Card, CardContent, CardFooter } from "@/components/ui/card";,
+import { MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
+import { FavoriteButton } from "@/components/FavoriteButton";,
+import { TalentProfile } from "@/types/talent";
+import { RatingStars } from "@/components/RatingStars";
+import { useAuth } from "@/context/auth/AuthProvider";
+import { useCart } from "@/context/CartContext";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export interface TalentCardProps {
 }

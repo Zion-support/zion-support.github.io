@@ -1,6 +1,10 @@
 
 import { GradientHeading } from "@/components/GradientHeading";
+<<<<<<< HEAD
 import { Clock, MapDollarSign } from 'lucide-react';
+=======
+import { Clock, Map, DollarSign } from "lucide-react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function PageHero() {
 return (
 <div className='text-center mb-12'>

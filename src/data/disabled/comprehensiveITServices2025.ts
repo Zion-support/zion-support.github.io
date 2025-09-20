@@ -1,5 +1,6 @@
 import React from "react";
 
+<<<<<<< HEAD
 export interface ComprehensiveITService {
 id: string; title: string; description: string; id: string; title: string; description: string; id: string; title: string; description: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[], benefits: string[];,
 targetAudience: string[], tags: string[];,
@@ -7,11 +8,25 @@ contactInfo: {,
 phone: string; email: string; website: string; address: string};
 technology: string[], technology: string[];,
 integrations: string[], compliance: string[];,
+=======
+export interface ComprehensiveITService {id: string; title: string; description: string; id: string; title: string; description: string; id: string; title: string; description: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[], benefits: string[];
+targetAudience: string[], tags: string[];
+}
+contactInfo: {,}
+phone: string; email: string; website: string; address: string};
+technology: string[], technology: string[];
+integrations: string[], compliance: string[];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 roi: string; competitors: string[];
 demoUrl?: string;
 caseStudies?: string[];
 websiteUrl?: string;,
+<<<<<<< HEAD
 marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string; serviceLevel: string;}
+=======
+marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string; serviceLevel: string;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 export const comprehensiveITServices2025: ComprehensiveITService[] = [
 export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
@@ -24,7 +39,7 @@ title: "Cloud Infrastructure & Migration Services - Seamless Cloud Transformatio
 description: "Comprehensive cloud infrastructure and migration services that help businesses transition to the cloud; optimize cloud performance; and manage multi-cloud environments for improved scalability and cost efficiency.",
 category: "Cloud Services",
 subcategory: "Infrastructure & Migration",
-price: 2499;,
+price: 2499;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -83,8 +98,7 @@ customizationLevel: "Custom cloud solutions and migration strategies",
 serviceLevel: "24/7 managed cloud services"},
 
 // Cybersecurity & Information Security Services;
-{
-id: "cybersecurity-information-security-services",
+{id: "cybersecurity-information-security-services",
 title: "Cybersecurity & Information Security Services - Comprehensive Protection",
 description: "Advanced cybersecurity and information security services that provide comprehensive protection against cyber threats; implement security frameworks; and ensure compliance with industry regulations and standards.",
 category: "Cybersecurity",
@@ -146,8 +160,7 @@ customizationLevel: "Custom security frameworks and compliance solutions",
 serviceLevel: "24/7 security monitoring and response"},
 
 // DevOps & CI/CD Pipeline Services;
-{
-id: "devops-cicd-pipeline-services",
+{id: "devops-cicd-pipeline-services",
 title: "DevOps & CI/CD Pipeline Services - Streamlined Development Operations",
 description: "Comprehensive DevOps and CI/CD pipeline services that automate software development processes; improve deployment efficiency; and enable continuous delivery for faster time-to-market and higher quality software.",
 category: "DevOps & Development",
@@ -209,8 +222,7 @@ customizationLevel: "Custom DevOps workflows and automation rules",
 serviceLevel: "24/7 DevOps support and monitoring"},
 
 // Data Management & Analytics Services;
-{
-id: "data-management-analytics-services",
+{id: "data-management-analytics-services",
 title: "Data Management & Analytics Services - Data-Driven Business Intelligence",
 description: "Comprehensive data management and analytics services that help businesses collect; process; analyze; and visualize data to make informed decisions; optimize operations; and gain competitive advantages.",
 category: "Data Services",
@@ -284,8 +296,7 @@ customizationLevel: "Custom analytics solutions and reporting dashboards",
 serviceLevel: "24/7 data monitoring and support"},
 
 // Network Infrastructure & Management Services;
-{
-id: "network-infrastructure-management-services",
+{id: "network-infrastructure-management-services",
 title: "Network Infrastructure & Management Services - Reliable Network Solutions",
 description: "Comprehensive network infrastructure and management services that design; implement; and maintain reliable; secure; and high-performance network solutions for businesses of all sizes.",
 category: "Network Services",
@@ -347,13 +358,12 @@ customizationLevel: "Custom network solutions and security configurations",
 serviceLevel: "24/7 network monitoring and support"},
 
 // IT Consulting & Strategic Planning Services;
-{
-id: "it-consulting-strategic-planning-services",
+{id: "it-consulting-strategic-planning-services",
 title: "IT Consulting & Strategic Planning Services - Technology Strategy Excellence",
 description: "Strategic IT consulting and planning services that help businesses align technology with business objectives; optimize IT investments; and create roadmaps for digital transformation and technology innovation.",
 category: "IT Consulting",
 subcategory: "Strategic Planning",
-price: 299;,
+price: 299;
 currency: "$",
 pricingModel: "hourly",
 features: [
@@ -411,8 +421,7 @@ customizationLevel: "Custom strategic plans and technology roadmaps",
 serviceLevel: "Flexible consulting engagement models"},
 
 // IT Support & Help Desk Services;
-{
-id: "it-support-help-desk-services",
+{id: "it-support-help-desk-services",
 title: "IT Support & Help Desk Services - Reliable Technical Support",
 description: "Comprehensive IT support and help desk services that provide reliable technical assistance; problem resolution; and ongoing support for businesses to ensure smooth technology operations and user productivity.",
 category: "IT Support",
@@ -474,8 +483,7 @@ customizationLevel: "Custom support workflows and knowledge bases",
 serviceLevel: "24/7 technical support and monitoring"},
 
 // Software Development & Custom Solutions;
-{
-id: "software-development-custom-solutions",
+{id: "software-development-custom-solutions",
 title: "Software Development & Custom Solutions - Tailored Technology Solutions",
 description: "Comprehensive software development and custom solution services that create tailored applications; integrate existing systems; and develop innovative technology solutions to meet specific business needs and objectives.",
 category: "Software Development",
@@ -537,8 +545,7 @@ customizationLevel: "Fully custom software solutions and integrations",
 serviceLevel: "Comprehensive development and ongoing support"},
 
 // IT Project Management & Implementation Services;
-{
-id: "it-project-management-implementation-services",
+{id: "it-project-management-implementation-services",
 title: "IT Project Management & Implementation Services - Successful Project Delivery",
 description: "Professional IT project management and implementation services that ensure successful delivery of technology projects; manage resources effectively; and deliver projects on time and within budget.",
 category: "Project Management",
@@ -600,8 +607,7 @@ customizationLevel: "Custom support workflows and knowledge bases",
 serviceLevel: "24/7 technical support and monitoring"},
 
 // Software Development & Custom Solutions;
-{
-id: "software-development-custom-solutions",
+{id: "software-development-custom-solutions",
 title: "Software Development & Custom Solutions - Tailored Technology Solutions",
 description: "Comprehensive software development and custom solution services that create tailored applications; integrate existing systems; and develop innovative technology solutions to meet specific business needs and objectives.",
 category: "Software Development",
@@ -663,8 +669,7 @@ customizationLevel: "Fully custom software solutions and integrations",
 serviceLevel: "Comprehensive development and ongoing support"},
 
 // IT Project Management & Implementation Services;
-{
-id: "it-project-management-implementation-services",
+{id: "it-project-management-implementation-services",
 title: "IT Project Management & Implementation Services - Successful Project Delivery",
 description: "Professional IT project management and implementation services that ensure successful delivery of technology projects; manage resources effectively; and deliver projects on time and within budget.",
 category: "Project Management",
@@ -744,13 +749,12 @@ scalability: "Unlimited network devices",
 support: "Network automation expert support",
 certifications: ["Cisco", "Juniper", "VMware", "Network Automation"];
 },
-{
-id: 7; name: "Digital Workplace Platform",
+{id: 7; name: "Digital Workplace Platform",
 category: "Digital Transformation",
 subcategory: "Workplace Modernization",
 description: "Comprehensive digital workplace platform for remote work; collaboration; and productivity enhancement",
 pricing: "Professional",
-price: 18000;,
+price: 18000;
 pricingModel: "monthly",
 features: [
 "Unified communication",
@@ -804,13 +808,12 @@ scalability: "Unlimited users",
 support: "Digital workplace expert support",
 certifications: ["Microsoft 365", "Google Workspace", "Change Management", "Digital Transformation"];
 },
-{
-id: 8; name: "API Management Platform",
+{id: 8; name: "API Management Platform",
 category: "Integration",
 subcategory: "API Management",
 description: "Enterprise-grade API management platform for design; development; security; and analytics",
 pricing: "Professional",
-price: 10000;,
+price: 10000;
 pricingModel: "monthly",
 features: [
 "API design and development",
@@ -864,13 +867,12 @@ scalability: "Unlimited APIs",
 support: "API management expert support",
 certifications: ["API Management", "Security", "Cloud Platforms", "Integration"];
 },
-{
-id: 9; name: "Intelligent Backup & Recovery",
+{id: 9; name: "Intelligent Backup & Recovery",
 category: "Data Protection",
 subcategory: "Backup & Recovery",
 description: "AI-powered backup and disaster recovery platform with intelligent automation and predictive analytics",
 pricing: "Professional",
-price: 8000;,
+price: 8000;
 pricingModel: "monthly",
 features: [
 "Intelligent backup scheduling",
@@ -924,8 +926,7 @@ scalability: "Unlimited data",
 support: "Backup expert support",
 certifications: ["Veeam", "VMware", "Cloud Platforms", "Data Protection"];
 },
-{
-id: 10; name: "Performance Monitoring Platform",
+{id: 10; name: "Performance Monitoring Platform",
 category: "Monitoring",
 subcategory: "Performance Management",
 description: "Comprehensive performance monitoring platform for applications; infrastructure; and user experience",
@@ -958,7 +959,7 @@ targetAudience: [
 "Technology companies";
 ],
 tags: ["Performance Monitoring", "APM", "Infrastructure", "User Experience", "Analytics", "Optimization"],
-technology: string[], integrations: string[];,
+technology: string[], integrations: string[];
 compliance: string[], roi: string; competitors: string[];
 demoUrl?: string;
 caseStudies?: string[];
@@ -973,7 +974,7 @@ title: "Cloud Infrastructure & Migration Services - Seamless Cloud Transformatio
 description: "Comprehensive cloud infrastructure and migration services that help businesses transition to the cloud; optimize cloud performance; and manage multi-cloud environments for improved scalability and cost efficiency.",
 category: "Cloud Services",
 subcategory: "Infrastructure & Migration",
-price: 2499;,
+price: 2499;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -1032,8 +1033,7 @@ customizationLevel: "Custom cloud solutions and migration strategies",
 serviceLevel: "24/7 managed cloud services"},
 
 // Cybersecurity & Information Security Services;
-{
-id: "cybersecurity-information-security-services",
+{id: "cybersecurity-information-security-services",
 title: "Cybersecurity & Information Security Services - Comprehensive Protection",
 description: "Advanced cybersecurity and information security services that provide comprehensive protection against cyber threats; implement security frameworks; and ensure compliance with industry regulations and standards.",
 category: "Cybersecurity",
@@ -1095,8 +1095,7 @@ customizationLevel: "Custom security frameworks and compliance solutions",
 serviceLevel: "24/7 security monitoring and response"},
 
 // DevOps & CI/CD Pipeline Services;
-{
-id: "devops-cicd-pipeline-services",
+{id: "devops-cicd-pipeline-services",
 title: "DevOps & CI/CD Pipeline Services - Streamlined Development Operations",
 description: "Comprehensive DevOps and CI/CD pipeline services that automate software development processes; improve deployment efficiency; and enable continuous delivery for faster time-to-market and higher quality software.",
 category: "DevOps & Development",
@@ -1158,8 +1157,7 @@ customizationLevel: "Custom DevOps workflows and automation rules",
 serviceLevel: "24/7 DevOps support and monitoring"},
 
 // Data Management & Analytics Services;
-{
-id: "data-management-analytics-services",
+{id: "data-management-analytics-services",
 title: "Data Management & Analytics Services - Data-Driven Business Intelligence",
 description: "Comprehensive data management and analytics services that help businesses collect; process; analyze; and visualize data to make informed decisions; optimize operations; and gain competitive advantages.",
 category: "Data Services",
@@ -1221,8 +1219,7 @@ customizationLevel: "Custom analytics solutions and reporting dashboards",
 serviceLevel: "24/7 data monitoring and support"},
 
 // Network Infrastructure & Management Services;
-{
-id: "network-infrastructure-management-services",
+{id: "network-infrastructure-management-services",
 title: "Network Infrastructure & Management Services - Reliable Network Solutions",
 description: "Comprehensive network infrastructure and management services that design; implement; and maintain reliable; secure; and high-performance network solutions for businesses of all sizes.",
 category: "Network Services",
@@ -1284,13 +1281,12 @@ customizationLevel: "Custom network solutions and security configurations",
 serviceLevel: "24/7 network monitoring and support"},
 
 // IT Consulting & Strategic Planning Services;
-{
-id: "it-consulting-strategic-planning-services",
+{id: "it-consulting-strategic-planning-services",
 title: "IT Consulting & Strategic Planning Services - Technology Strategy Excellence",
 description: "Strategic IT consulting and planning services that help businesses align technology with business objectives; optimize IT investments; and create roadmaps for digital transformation and technology innovation.",
 category: "IT Consulting",
 subcategory: "Strategic Planning",
-price: 299;,
+price: 299;
 currency: "$",
 pricingModel: "hourly",
 features: [
@@ -1348,8 +1344,7 @@ customizationLevel: "Custom strategic plans and technology roadmaps",
 serviceLevel: "Flexible consulting engagement models"},
 
 // IT Support & Help Desk Services;
-{
-id: "it-support-help-desk-services",
+{id: "it-support-help-desk-services",
 title: "IT Support & Help Desk Services - Reliable Technical Support",
 description: "Comprehensive IT support and help desk services that provide reliable technical assistance; problem resolution; and ongoing support for businesses to ensure smooth technology operations and user productivity.",
 category: "IT Support",
@@ -1411,8 +1406,7 @@ customizationLevel: "Custom support workflows and knowledge bases",
 serviceLevel: "24/7 technical support and monitoring"},
 
 // Software Development & Custom Solutions;
-{
-id: "software-development-custom-solutions",
+{id: "software-development-custom-solutions",
 title: "Software Development & Custom Solutions - Tailored Technology Solutions",
 description: "Comprehensive software development and custom solution services that create tailored applications; integrate existing systems; and develop innovative technology solutions to meet specific business needs and objectives.",
 category: "Software Development",
@@ -1474,8 +1468,7 @@ customizationLevel: "Fully custom software solutions and integrations",
 serviceLevel: "Comprehensive development and ongoing support"},
 
 // IT Project Management & Implementation Services;
-{
-id: "it-project-management-implementation-services",
+{id: "it-project-management-implementation-services",
 title: "IT Project Management & Implementation Services - Successful Project Delivery",
 description: "Professional IT project management and implementation services that ensure successful delivery of technology projects; manage resources effectively; and deliver projects on time and within budget.",
 category: "Project Management",

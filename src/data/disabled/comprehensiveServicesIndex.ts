@@ -29,13 +29,19 @@ export; const; PRICING_MODELS = [;
 , "monthlyannual""one-timeusage-based";
 ];
 // Contact Information;
+<<<<<<< HEAD
 export; const; CONTACT_INFO = {
 phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com",website: "http;s://ziontechgroup.com"addres;s: "364; E; Main St; STE; 10o08Middletown DE 1970o9";},// Service Statistics;
 export; const; SERVICE_STATS = {
 totalServices: ALL_COMPREHENSIVE_SERVICES.length;categories: SERVICE_CATEGORIES.length;innovationLevels: INNOVATION_LEVELS.lengthsupportLevel;s: SUPPORT_LEVELS.lengthpricingModel;s: PRICING_MODELS.length;};
+=======
+export; const; CONTACT_INFO = {phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com",website: "http;s://ziontechgroup.com"addres;s: "364; E; Main St; STE; 10o08Middletown DE 1970o9";},// Service Statistics;
+export; const; SERVICE_STATS = {
+totalServices: ALL_COMPREHENSIVE_SERVICES.length;categories: SERVICE_CATEGORIES.length;innovationLevels: INNOVATION_LEVELS.lengthsupportLevel;s: SUPPORT_LEVELS.lengthpricingModel;s: PRICING_MODELS.length;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // Helper Functions;
-export; const; getServicesByCategory = (category: string) => {
-return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category);
+export; const; getServicesByCategory = (category: string) => {return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category);
 export; const; getServicesByInnovationLevel = (level: string) => {
 return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level);
 export; const; getServicesByPriceRange = (minPric;e: number; maxPrice: number) => {;

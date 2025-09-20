@@ -17,14 +17,25 @@ tags: string[];
 estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
+<<<<<<< HEAD
 contactInfo: {,
 phone: string;,
 email: string;,
 website: string;};
+=======
+contactInfo: {
+phone: string;
+email: string;
+website: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
 technologyStack: string[];
+<<<<<<< HEAD
 complianceStandards: string[];,
 integrationCapabilities: string[];,
 roiMetrics: string[];,
@@ -41,6 +52,24 @@ subcategory: "Compliance Automation";
 price: 8500;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+complianceStandards: string[];
+integrationCapabilities: string[];
+roiMetrics: string[];
+competitiveAdvantages: string[];
+}
+
+export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] = [
+// AI-Powered Financial Compliance Automation;
+{id: "ai-financial-compliance-automation-2025";
+title: "AI Financial Compliance Automation Platform";
+description: "Intelligent financial compliance automation that continuously monitors regulatory changes; automates reporting; and ensures real-time compliance across all financial operations.",
+category: "AI & Financial Services";
+subcategory: "Compliance Automation";
+price: 8500;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Real-time regulatory change monitoring";
 "Automated compliance reporting",
@@ -78,6 +107,7 @@ targetAudience: [
 "Regulatory consultants";
 ],
 tags: ["AI", "Financial Compliance", "Regulatory Automation", "Risk Management", "Financial Services"],
+<<<<<<< HEAD
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$8;500 - $25;000/month",
@@ -86,6 +116,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-financial-compliance-automation-2025";,
+=======
+estimatedDelivery: "6-8 weeks";
+supportLevel: "enterprise";
+marketPrice: "$8;500 - $25;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-financial-compliance-automation-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["GPT-5", "Claude 3.5 Sonnet", "Regulatory APIs", "Machine Learning", "Blockchain"],
 complianceStandards: ["SOX", "Basel III", "Dodd-Frank", "GDPR", "PCI DSS", "SOC2"],
 integrationCapabilities: ["SAP", "Oracle", "QuickBooks", "Xero", "Banking APIs", "Regulatory Databases"],
@@ -94,6 +134,7 @@ competitiveAdvantages: ["Real-time compliance", "AI-powered automation", "Multi-
 },
 
 // Quantum-Resistant Blockchain Identity Platform;
+<<<<<<< HEAD
 {
 id: "quantum-resistant-blockchain-identity-2025";,
 title: "Quantum-Resistant Blockchain Identity Platform";,
@@ -103,6 +144,16 @@ subcategory: "Digital Identity";
 price: 6500;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "quantum-resistant-blockchain-identity-2025";
+title: "Quantum-Resistant Blockchain Identity Platform";
+description: "Next-generation digital identity platform using quantum-resistant cryptography and blockchain technology for secure; decentralized identity management and verification.",
+category: "Blockchain & Identity";
+subcategory: "Digital Identity";
+price: 6500;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Quantum-resistant cryptography";
 "Decentralized identity management",
@@ -140,6 +191,7 @@ targetAudience: [
 "Identity verification services";
 ],
 tags: ["Blockchain", "Digital Identity", "Quantum Security", "Zero-Knowledge Proofs", "Authentication"],
+<<<<<<< HEAD
 estimatedDelivery: "8-10 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$6;500 - $20;000/month",
@@ -148,6 +200,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/quantum-resistant-blockchain-identity-2025";,
+=======
+estimatedDelivery: "8-10 weeks";
+supportLevel: "enterprise";
+marketPrice: "$6;500 - $20;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/quantum-resistant-blockchain-identity-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Quantum-Resistant Algorithms", "Blockchain", "Zero-Knowledge Proofs", "Cryptography", "Smart Contracts"],
 complianceStandards: ["eIDAS", "GDPR", "SOC2", "ISO 27001", "NIST", "W3C DID"],
 integrationCapabilities: ["OAuth 2.0", "SAML", "OpenID Connect", "REST APIs", "SDKs", "Mobile Apps"],
@@ -156,6 +218,7 @@ competitiveAdvantages: ["Quantum-resistant security", "Decentralized architectur
 },
 
 // AI-Powered Supply Chain Optimization;
+<<<<<<< HEAD
 {
 id: "ai-supply-chain-optimization-2025";,
 title: "AI Supply Chain Optimization Platform";,
@@ -165,6 +228,16 @@ subcategory: "Supply Chain Optimization";
 price: 7500;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-supply-chain-optimization-2025";
+title: "AI Supply Chain Optimization Platform";
+description: "Intelligent supply chain optimization platform that uses AI to predict demand; optimize inventory; reduce costs; and improve supply chain resilience.",
+category: "AI & Supply Chain";
+subcategory: "Supply Chain Optimization";
+price: 7500;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered demand forecasting";
 "Inventory optimization algorithms",
@@ -202,6 +275,7 @@ targetAudience: [
 "Operations directors";
 ],
 tags: ["AI", "Supply Chain", "Inventory Optimization", "Demand Forecasting", "Risk Management"],
+<<<<<<< HEAD
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$7;500 - $22;000/month",
@@ -210,6 +284,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-supply-chain-optimization-2025";,
+=======
+estimatedDelivery: "6-8 weeks";
+supportLevel: "enterprise";
+marketPrice: "$7;500 - $22;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-supply-chain-optimization-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Machine Learning", "Predictive Analytics", "IoT Sensors", "Cloud Computing", "Big Data Analytics"],
 complianceStandards: ["ISO 28000", "C-TPAT", "GDPR", "SOC2", "ISO 9001"],
 integrationCapabilities: ["ERP Systems", "WMS", "TMS", "Supplier Portals", "IoT Devices", "Analytics Platforms"],
@@ -218,6 +302,7 @@ competitiveAdvantages: ["AI-powered optimization", "Real-time monitoring", "Pred
 },
 
 // Edge Computing AI Platform;
+<<<<<<< HEAD
 {
 id: "edge-computing-ai-platform-2025";,
 title: "Edge Computing AI Platform";,
@@ -227,6 +312,16 @@ subcategory: "Edge AI";
 price: 5500;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "edge-computing-ai-platform-2025";
+title: "Edge Computing AI Platform";
+description: "Distributed AI platform that brings machine learning capabilities to edge devices; enabling real-time AI processing without cloud dependency.",
+category: "AI & Edge Computing";
+subcategory: "Edge AI";
+price: 5500;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Distributed AI model deployment";
 "Real-time edge processing",
@@ -264,6 +359,7 @@ targetAudience: [
 "Retail chains";
 ],
 tags: ["Edge Computing", "AI", "IoT", "Real-time Processing", "Distributed Systems"],
+<<<<<<< HEAD
 estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$5;500 - $18;000/month",
@@ -272,6 +368,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/edge-computing-ai-platform-2025";,
+=======
+estimatedDelivery: "8-12 weeks";
+supportLevel: "enterprise";
+marketPrice: "$5;500 - $18;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/edge-computing-ai-platform-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["TensorFlow Lite", "ONNX Runtime", "Edge ML Frameworks", "Container Technology", "Kubernetes"],
 complianceStandards: ["ISO 27001", "SOC2", "GDPR", "HIPAA", "NIST"],
 integrationCapabilities: ["IoT Platforms", "Cloud Services", "Edge Devices", "Data Centers", "5G Networks"],
@@ -280,6 +386,7 @@ competitiveAdvantages: ["Real-time edge processing", "Offline AI capabilities", 
 },
 
 // AI-Powered Legal Document Analysis;
+<<<<<<< HEAD
 {
 id: "ai-legal-document-analysis-2025";,
 title: "AI Legal Document Analysis Platform";,
@@ -289,6 +396,16 @@ subcategory: "Document Analysis";
 price: 4500;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-legal-document-analysis-2025";
+title: "AI Legal Document Analysis Platform";
+description: "Intelligent legal document analysis platform that uses AI to review contracts; identify risks; extract key terms; and provide legal insights.",
+category: "AI & Legal Tech";
+subcategory: "Document Analysis";
+price: 4500;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Contract analysis and review";
 "Risk identification and scoring",
@@ -326,6 +443,7 @@ targetAudience: [
 "Legal consultants";
 ],
 tags: ["AI", "Legal Tech", "Document Analysis", "Contract Review", "Risk Management"],
+<<<<<<< HEAD
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$4;500 - $15;000/month",
@@ -334,6 +452,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-legal-document-analysis-2025";,
+=======
+estimatedDelivery: "6-8 weeks";
+supportLevel: "enterprise";
+marketPrice: "$4;500 - $15;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-legal-document-analysis-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Natural Language Processing", "Machine Learning", "Document AI", "Legal Databases", "Cloud Computing"],
 complianceStandards: ["GDPR", "SOC2", "ISO 27001", "Legal Industry Standards", "Data Privacy"],
 integrationCapabilities: ["Document Management Systems", "Legal Research Platforms", "Contract Management", "E-signature Platforms", "Legal Databases"],
@@ -342,15 +470,20 @@ competitiveAdvantages: ["AI-powered analysis", "Legal expertise", "Risk scoring"
 },
 
 // Quantum Machine Learning Platform;
-{
-id: "quantum-machine-learning-platform-2025";
+{id: "quantum-machine-learning-platform-2025";
 title: "Quantum Machine Learning Platform";
 description: "Revolutionary quantum machine learning platform that leverages quantum computing to solve complex optimization problems and accelerate AI training.";
 category: "Quantum Computing & AI";
 subcategory: "Quantum ML";
+<<<<<<< HEAD
 price: 15000;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+price: 15000;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Quantum algorithm optimization";
 "Hybrid quantum-classical ML",
@@ -388,6 +521,7 @@ targetAudience: [
 "Academic institutions";
 ],
 tags: ["Quantum Computing", "Machine Learning", "Optimization", "Quantum Algorithms", "AI"],
+<<<<<<< HEAD
 estimatedDelivery: "12-16 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$15;000 - $50;000/month",
@@ -396,6 +530,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/quantum-machine-learning-platform-2025";,
+=======
+estimatedDelivery: "12-16 weeks";
+supportLevel: "enterprise";
+marketPrice: "$15;000 - $50;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/quantum-machine-learning-platform-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Quantum Computing", "Qiskit", "Cirq", "PennyLane", "Classical ML Frameworks"],
 complianceStandards: ["ISO 27001", "SOC2", "Research Standards", "Data Security", "Intellectual Property"],
 integrationCapabilities: ["Classical ML Platforms", "Cloud Services", "Research Tools", "Data Sources", "Analytics Platforms"],
@@ -404,6 +548,7 @@ competitiveAdvantages: ["Quantum advantage", "Cutting-edge technology", "Researc
 },
 
 // AI-Powered Healthcare Diagnostics;
+<<<<<<< HEAD
 {
 id: "ai-healthcare-diagnostics-2025";,
 title: "AI Healthcare Diagnostics Platform";,
@@ -413,6 +558,16 @@ subcategory: "Medical Diagnostics";
 price: 9500;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-healthcare-diagnostics-2025";
+title: "AI Healthcare Diagnostics Platform";
+description: "Advanced AI-powered healthcare diagnostics platform that provides accurate disease detection; treatment recommendations; and patient monitoring.",
+category: "AI & Healthcare";
+subcategory: "Medical Diagnostics";
+price: 9500;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Medical image analysis";
 "Disease detection algorithms",
@@ -450,6 +605,7 @@ targetAudience: [
 "Health insurance companies";
 ],
 tags: ["AI", "Healthcare", "Medical Diagnostics", "Machine Learning", "Telemedicine"],
+<<<<<<< HEAD
 estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$9;500 - $30;000/month",
@@ -458,6 +614,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-healthcare-diagnostics-2025";,
+=======
+estimatedDelivery: "8-12 weeks";
+supportLevel: "enterprise";
+marketPrice: "$9;500 - $30;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-healthcare-diagnostics-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Deep Learning", "Computer Vision", "Natural Language Processing", "Medical AI Models", "Cloud Computing"],
 complianceStandards: ["HIPAA", "FDA", "CE Mark", "ISO 13485", "SOC2", "GDPR"],
 integrationCapabilities: ["EHR Systems", "PACS", "Laboratory Systems", "Telemedicine Platforms", "Medical Devices"],
@@ -466,6 +632,7 @@ competitiveAdvantages: ["FDA-approved algorithms", "Clinical validation", "Multi
 },
 
 // Autonomous Cybersecurity Operations;
+<<<<<<< HEAD
 {
 id: "autonomous-cybersecurity-operations-2025";,
 title: "Autonomous Cybersecurity Operations Platform";,
@@ -475,6 +642,16 @@ subcategory: "Autonomous Security";
 price: 12000;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "autonomous-cybersecurity-operations-2025";
+title: "Autonomous Cybersecurity Operations Platform";
+description: "Fully autonomous cybersecurity operations platform that continuously monitors; detects; and responds to threats without human intervention.",
+category: "Cybersecurity & AI";
+subcategory: "Autonomous Security";
+price: 12000;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Autonomous threat detection";
 "Automated incident response",
@@ -512,6 +689,7 @@ targetAudience: [
 "Security service providers";
 ],
 tags: ["Cybersecurity", "AI", "Autonomous Operations", "Threat Detection", "Incident Response"],
+<<<<<<< HEAD
 estimatedDelivery: "8-10 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$12;000 - $35;000/month",
@@ -520,6 +698,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/autonomous-cybersecurity-operations-2025";,
+=======
+estimatedDelivery: "8-10 weeks";
+supportLevel: "enterprise";
+marketPrice: "$12;000 - $35;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/autonomous-cybersecurity-operations-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["AI/ML", "Threat Intelligence", "Security Orchestration", "Behavioral Analytics", "Cloud Security"],
 complianceStandards: ["SOC2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
 integrationCapabilities: ["SIEM", "EDR", "Firewalls", "Cloud Platforms", "Security Tools", "IT Infrastructure"],
@@ -528,6 +716,7 @@ competitiveAdvantages: ["Fully autonomous", "Zero human error", "24/7 protection
 },
 
 // AI-Powered Marketing Automation;
+<<<<<<< HEAD
 {
 id: "ai-marketing-automation-2025";,
 title: "AI Marketing Automation Platform";,
@@ -537,6 +726,16 @@ subcategory: "Marketing Automation";
 price: 3500;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-marketing-automation-2025";
+title: "AI Marketing Automation Platform";
+description: "Intelligent marketing automation platform that uses AI to personalize campaigns; optimize customer journeys; and maximize marketing ROI.",
+category: "AI & Marketing";
+subcategory: "Marketing Automation";
+price: 3500;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered personalization";
 "Predictive customer analytics",
@@ -574,6 +773,7 @@ targetAudience: [
 "Digital marketers";
 ],
 tags: ["AI", "Marketing Automation", "Personalization", "Customer Analytics", "ROI Optimization"],
+<<<<<<< HEAD
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;500 - $12;000/month",
@@ -582,6 +782,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-marketing-automation-2025";,
+=======
+estimatedDelivery: "4-6 weeks";
+supportLevel: "enterprise";
+marketPrice: "$3;500 - $12;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-marketing-automation-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Machine Learning", "Predictive Analytics", "Marketing APIs", "CRM Integration", "Data Analytics"],
 complianceStandards: ["GDPR", "CCPA", "SOC2", "ISO 27001", "Marketing Compliance"],
 integrationCapabilities: ["CRM Systems", "Email Platforms", "Social Media", "Analytics Tools", "E-commerce Platforms"],
@@ -590,15 +800,20 @@ competitiveAdvantages: ["AI personalization", "Predictive analytics", "Multi-cha
 },
 
 // Quantum-Secure Communication Platform;
-{
-id: "quantum-secure-communication-2025";
+{id: "quantum-secure-communication-2025";
 title: "Quantum-Secure Communication Platform";
 description: "Future-proof communication platform using quantum key distribution and post-quantum cryptography for ultra-secure communications.";
 category: "Quantum & Communication";
 subcategory: "Secure Communication";
+<<<<<<< HEAD
 price: 8000;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+price: 8000;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Quantum key distribution";
 "Post-quantum cryptography",
@@ -636,6 +851,7 @@ targetAudience: [
 "Enterprise businesses";
 ],
 tags: ["Quantum Security", "Communication", "Encryption", "Post-Quantum Cryptography", "Secure Messaging"],
+<<<<<<< HEAD
 estimatedDelivery: "10-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$8;000 - $25;000/month",
@@ -644,6 +860,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/quantum-secure-communication-2025";,
+=======
+estimatedDelivery: "10-12 weeks";
+supportLevel: "enterprise";
+marketPrice: "$8;000 - $25;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/quantum-secure-communication-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Quantum Key Distribution", "Post-Quantum Algorithms", "Encryption", "Secure Protocols", "Quantum Hardware"],
 complianceStandards: ["FIPS 140-2", "Common Criteria", "SOC2", "ISO 27001", "Government Standards"],
 integrationCapabilities: ["Communication Platforms", "Messaging Apps", "Video Conferencing", "File Sharing", "Mobile Apps"],

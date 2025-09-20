@@ -1,11 +1,22 @@
+<<<<<<< HEAD:src/pages/ApplicationStatusTracker.tsx.disabled
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ApplicationStatusTracker.tsx
 import { SEO } from '@/components/SEO';
 import { ApplicationsTracker } from '@/components/jobs/applications';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Briefcase, Inbox } from 'lucide-react';
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
+<<<<<<< HEAD:src/pages/ApplicationStatusTracker.tsx.disabled
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile();
+=======
+
+function ApplicationStatusTrackerContent() {
+  const isMobile = useIsMobile();
+  
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ApplicationStatusTracker.tsx
   return (
     <>
       <SEO
@@ -23,26 +34,66 @@ function ApplicationStatusTrackerContent() {
             </p>
           </div>
         </div>
-        <div className='grid grid-cols-1 gap-6'>
+
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
           <Card>
+<<<<<<< HEAD:src/pages/ApplicationStatusTracker.tsx.disabled
             <CardHeader className='border-b bg-muted/50'>
               <CardTitle className='flex items-center text-lg'>
                 <Inbox className='mr-2 h-5 w-5' /> Your Applications
+=======
+            <CardHeader>
+              <CardTitle className='flex items-center gap-2'>
+                <Briefcase className='w-5 h-5' />
+                Applied
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ApplicationStatusTracker.tsx
               </CardTitle>
             </CardHeader>
-            <CardContent className={`p-${isMobile ? '3' : '6'}`}>
-              <ApplicationsTracker />
+            <CardContent>
+              <p className='text-2xl font-bold'>0</p>
+              <p className='text-sm text-muted-foreground'>Applications submitted</p>
             </CardContent>
           </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className='flex items-center gap-2'>
+                <Inbox className='w-5 h-5' />
+                Under Review
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className='text-2xl font-bold'>0</p>
+              <p className='text-sm text-muted-foreground'>Applications being reviewed</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className='flex items-center gap-2'>
+                <Briefcase className='w-5 h-5' />
+                Interviews
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className='text-2xl font-bold'>0</p>
+              <p className='text-sm text-muted-foreground'>Interview scheduled</p>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className='mt-8'>
+          <ApplicationsTracker />
         </div>
       </div>
     </>
   );
 }
+
 export default function ApplicationStatusTracker() {
   return (
     <ProtectedRoute>
       <ApplicationStatusTrackerContent />
     </ProtectedRoute>
-  )
+  );
 }

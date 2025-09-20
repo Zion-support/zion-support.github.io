@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 
 interface GradientHeadingProps {
@@ -26,3 +27,9 @@ const GradientHeading: React.FC<GradientHeadingProps> = ({
 
 export default GradientHeading;
 export { GradientHeading };
+=======
+import { cn  } from "@/lib / utils";;
+import React from &apos;react&apos; import { cn } from &apos,@/lib / utils&apos,&apos,&apos;
+import _React from "react",;
+import { cn } from "@/lib / utils,";;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

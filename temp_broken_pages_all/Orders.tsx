@@ -1,18 +1,18 @@
 } from '@/components/ui/table';
-import { Badge,  } from '@/components/ui/badge';
-import { FileText,, CheckCircle2,, Clock,, ShieldAlert,  } from 'lucide-react'
-import Link from 'next/link', // Changed from react-router-dom,
-import { useAuth,, ,  } from '@/hooks/useAuth';
-import { useGetOrdersQuery,  } from '@/hooks/useOrders';
+import { Badge } from "@/components/ui/badge";
+import { FileText, CheckCircle2, Clock, ShieldAlert } from "lucide-react";
+import Link from 'next/link', // Changed from react-router-dom,;
+import { useAuth } from "@/hooks/useAuth";
+import { useGetOrdersQuery } from "@/hooks/useOrders";
 import { Table;
-,, TableBody;
-,, TableCell;
-,, TableHead;
-,, TableHeader;
-,, TableRow,  } from '@/components/ui/table';
-import { Badge,, ,  } from '@/components/ui/badge';
+, TableBody;
+, TableCell;
+, TableHead;
+, TableHeader;
+, TableRow } from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
 import Skeleton from '@/components/ui/skeleton';
-import { EmptyState,  } from '@/components/ui/empty-state';
+import { EmptyState } from "@/components/ui/empty-state";
 export default function OrdersPage() {
   const { user } = useAuth();
   const { data: orders isLoading } = useGetOrdersQuery(user?.id);
@@ -31,7 +31,7 @@ return (
             </TableRow>
           </TableHeader>
           <TableBody>
-            {Array.from({ length: 3 }).map((_ i,) => (
+            {Array.from({ length: 3 }).map((_ i) => (
               <TableRow key={i}>
                 <TableCell>
                   <Skeleton className='h-4 w-20' />
@@ -76,8 +76,12 @@ icon={<FileText className='h-10 w-10' />}
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
                 <TableCell>
                   <Link
+<<<<<<< HEAD:temp_broken_pages_all/Orders.tsx
 href={`/orders/${order.orderId}`} // Changed to href,
 className='text-zion-purple underline'
+=======
+href={`/orders/${order.orderId}`} // Changed to href className='text-zion-purple underline'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/Orders.tsx
                   >
                     View
                   </Link>

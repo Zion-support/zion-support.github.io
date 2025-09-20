@@ -1,7 +1,6 @@
 // Enhanced IT Services for 2025;
 export const enhancedITServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Cloud Migration & Strategy";
         category: "Cloud Services";
         description: "Comprehensive cloud migration services with strategy planning, implementation, and optimization for modern businesses",
@@ -52,9 +51,15 @@ export const enhancedITServices2025 = [
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
+<<<<<<< HEAD
         reportingCapabilities: true};
     {
         id: 2;
+=======
+        reportingCapabilities: true,
+    };
+    {id: 2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Cybersecurity Assessment & Implementation";
         category: "Cybersecurity";
         description: "Comprehensive cybersecurity services including assessment, implementation, and ongoing monitoring for enterprise security",
@@ -105,9 +110,15 @@ export const enhancedITServices2025 = [
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
+<<<<<<< HEAD
         reportingCapabilities: true};
     {
         id: 3;
+=======
+        reportingCapabilities: true,
+    };
+    {id: 3;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "DevOps Implementation & Automation";
         category: "DevOps";
         description: "End-to-end DevOps implementation with CI/CD pipelines, automation, and infrastructure as code for modern development teams",
@@ -158,9 +169,15 @@ export const enhancedITServices2025 = [
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
+<<<<<<< HEAD
         reportingCapabilities: true};
     {
         id: 4;
+=======
+        reportingCapabilities: true,
+    };
+    {id: 4;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Data Center Design & Implementation";
         category: "Infrastructure";
         description: "Comprehensive data center services including design, implementation, and management for enterprise-grade infrastructure",
@@ -211,9 +228,15 @@ export const enhancedITServices2025 = [
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
+<<<<<<< HEAD
         reportingCapabilities: true};
     {
         id: 5;
+=======
+        reportingCapabilities: true,
+    };
+    {id: 5;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Network Security & Firewall Implementation";
         category: "Network Security";
         description: "Advanced network security services with next-generation firewall implementation and comprehensive security architecture";
@@ -264,9 +287,15 @@ export const enhancedITServices2025 = [
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
+<<<<<<< HEAD
         reportingCapabilities: true};
     {
         id: 6;
+=======
+        reportingCapabilities: true,
+    };
+    {id: 6;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Business Intelligence & Analytics Implementation";
         category: "Data & Analytics";
         description: "Comprehensive BI and analytics implementation with data warehousing, reporting, and advanced analytics capabilities",
@@ -317,9 +346,15 @@ export const enhancedITServices2025 = [
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
+<<<<<<< HEAD
         reportingCapabilities: true};
     {
         id: 7;
+=======
+        reportingCapabilities: true,
+    };
+    {id: 7;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Mobile App Development & Integration";
         category: "Mobile Development";
         description: "End-to-end mobile application development with native and cross-platform solutions for iOS and Android";
@@ -370,9 +405,15 @@ export const enhancedITServices2025 = [
         disasterRecovery: false;
         backupSolutions: true;
         monitoringTools: true;
+<<<<<<< HEAD
         reportingCapabilities: true};
     {
         id: 8;
+=======
+        reportingCapabilities: true,
+    };
+    {id: 8;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "IT Consulting & Digital Transformation";
         category: "Consulting";
         description: "Strategic IT consulting services for digital transformation, technology assessment, and strategic planning",
@@ -423,9 +464,15 @@ export const enhancedITServices2025 = [
         disasterRecovery: false;
         backupSolutions: false;
         monitoringTools: false;
+<<<<<<< HEAD
         reportingCapabilities: true};
     {
         id: 9;
+=======
+        reportingCapabilities: true,
+    };
+    {id: 9;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Managed IT Services & Support";
         category: "Managed Services";
         description: "Comprehensive managed IT services including 24/7 monitoring, support, and proactive maintenance for businesses",
@@ -476,9 +523,15 @@ export const enhancedITServices2025 = [
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
+<<<<<<< HEAD
         reportingCapabilities: true};
     {
         id: 10;
+=======
+        reportingCapabilities: true,
+    };
+    {id: 10;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Web Application Development & Hosting";
         category: "Web Development";
         description: "Full-stack web application development with modern technologies and enterprise-grade hosting solutions";

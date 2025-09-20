@@ -1,6 +1,7 @@
 import React, { useState; useEffect } from "react";
 import { motion } from "framer-motion";
 
+<<<<<<< HEAD
 interface BusinessMetric {
 id: string; title: string; value: string; change: string; trend: "up" | "down" | "stable";,
 category: "revenue" | "growth" | "efficiency" | "customer", icon: string; color: string};
@@ -10,6 +11,15 @@ interface RevenueData {
 month: string; revenue: number; growth: number; profit: number};
 interface CustomerInsight {
 segment: string; count: number; revenue: number; growth: number; satisfaction: number};
+=======
+interface BusinessMetric {id: string; title: string; value: string; change: string; trend: "up" | "down" | "stable";
+}
+}
+category: "revenue" | "growth" | "efficiency" | "customer", icon: string; color: string};
+interface KPIData {metric: string; current: number; target: number; progress: number; status: "on-track" | "at-risk" | "behind"};
+interface RevenueData {month: string; revenue: number; growth: number; profit: number};
+interface CustomerInsight {segment: string; count: number; revenue: number; growth: number; satisfaction: number};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export const BusinessIntelligenceDashboard: React.FC = () => {;
 const [metrics, setMetrics] = useState<BusinessMetric[]>([
 {,
@@ -21,8 +31,12 @@ trend: "up",
 category: "revenue",
 icon: "💰",
 color: "green"},
+<<<<<<< HEAD
 {
 id: "2",
+=======
+{id: "2",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "Customer Growth",
 value: "24;567",
 change: "+12.3%",
@@ -30,8 +44,12 @@ trend: "up",
 category: "growth",
 icon: "👥",
 color: "blue"},
+<<<<<<< HEAD
 {
 id: "3",
+=======
+{id: "3",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "Operational Efficiency",
 value: "94.2%",
 change: "+2.1%",
@@ -39,8 +57,12 @@ trend: "up",
 category: "efficiency",
 icon: "⚡",
 color: "purple"},
+<<<<<<< HEAD
 {
 id: "4",
+=======
+{id: "4",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "Customer Satisfaction",
 value: "4.8/5",
 change: "+0.3",
@@ -48,8 +70,12 @@ trend: "up",
 category: "customer",
 icon: "⭐",
 color: "yellow"},
+<<<<<<< HEAD
 {
 id: "5",
+=======
+{id: "5",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "Market Share",
 value: "15.7%",
 change: "+3.2%",
@@ -57,8 +83,12 @@ trend: "up",
 category: "growth",
 icon: "📈",
 color: "indigo"},
+<<<<<<< HEAD
 {
 id: "6",
+=======
+{id: "6",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "Cost Reduction",
 value: "$2.1M",
 change: "-8.5%",
@@ -68,6 +98,7 @@ icon: "💸",
 color: "red"}
 ]);
 
+<<<<<<< HEAD
 const [kpis, setKpis] = useState<KPIData[]>([
 {
 metric: "Monthly Revenue Target",
@@ -86,6 +117,22 @@ metric: "Employee Satisfaction",
 current: 4.2;,
 target: 4.5;,
 progress: 93;,
+=======
+const [kpis; setKpis] = useState<KPIData[]>([
+{metric: "Monthly Revenue Target",
+current: 1250000; target: 1500000; progress: 83;
+status: "on-track"},
+{metric: "Customer Acquisition",
+current: 2456; target: 3000; progress: 82;
+status: "on-track"},
+{metric: "Product Launch",
+current: 3; target: 5; progress: 60;
+status: "at-risk"},
+{metric: "Employee Satisfaction",
+current: 4.2;
+target: 4.5;
+progress: 93;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 status: "on-track"}
 ]);
 
@@ -98,6 +145,7 @@ const [revenueData, setRevenueData] = useState<RevenueData[]>([
 { month: "Jun", revenue: 1240000; growth: -4.6; profit: 372000 }
 ]);
 
+<<<<<<< HEAD
 const [customerInsights, setCustomerInsights] = useState<CustomerInsight[]>([
 {
 segment: "Enterprise",
@@ -111,28 +159,37 @@ satisfaction: 4.6},
 segment: "SMB",
 count: 8900; revenue: 1100000;,
 growth: 8.7;,
+=======
+const [customerInsights; setCustomerInsights] = useState<CustomerInsight[]>([
+{segment: "Enterprise",
+count: 245; revenue: 8500000; growth: 15.2;
+satisfaction: 4.9},
+{segment: "Mid-Market",
+count: 1245; revenue: 2800000; growth: 22.1;
+satisfaction: 4.6},
+{segment: "SMB",
+count: 8900; revenue: 1100000;
+growth: 8.7;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 satisfaction: 4.3}
 ]);
 
 const [selectedTimeframe, setSelectedTimeframe] = useState("6m");
 const [selectedCategory, setSelectedCategory] = useState("all");
 
-const getTrendIcon: any = (trend: string) => {
-switch (trend) {;
+const getTrendIcon: any = (trend: string) => {switch (trend) {;
 case "up": return "↗️";
 case "down": return "↘️";,
 default: return "➡️"}
 };
 
-const getTrendColor: any = (trend: string) => {
-switch (trend) {;
+const getTrendColor: any = (trend: string) => {switch (trend) {;
 case "up": return "text-green-400";
 case "down": return "text-red-400";,
 default: return "text-gray-400"}
 };
 
-const getCategoryColor: any = (category: string) => {
-switch (category) {;
+const getCategoryColor: any = (category: string) => {switch (category) {;
 case "revenue": return "from-green-500 to-emerald-600";
 case "growth": return "from-blue-500 to-cyan-600";
 case "efficiency": return "from-purple-500 to-violet-600";
@@ -140,8 +197,7 @@ case "customer": return "from-yellow-500 to-amber-600";,
 default: return "from-gray-500 to-slate-600"}
 };
 
-const getStatusColor: any = (status: string) => {
-switch (status) {;
+const getStatusColor: any = (status: string) => {switch (status) {;
 case "on-track": return "text-green-400 bg-green-900";
 case "at-risk": return "text-yellow-400 bg-yellow-900";
 case "behind": return "text-red-400 bg-red-900";,
@@ -162,12 +218,21 @@ animate={{ opacity: 1; y: 0 }}
 className="max-w-7xl mx-auto"
 >;
 {/* Header */}
+<<<<<<< HEAD
 <div className="flex justify-between items-center mb-8">
 <div>
 <h1 className="text-4xl font-bold text-white mb-2">Business Intelligence Dashboard</h1>
 <p className="text-gray-400">Comprehensive business analytics and performance insights</p>
 </div>
 <div className="flex space-x-4">
+=======
+<div className="flex justify-between items-center mb-8">;
+<div>;
+<h1 className="text-4xl font-bold text-white mb-2">Business Intelligence Dashboard</h1>;
+<p className="text-gray-400">Comprehensive business analytics and performance insights</p>;
+</div>
+<div className="flex space-x-4">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <select;
 value={selectedTimeframe}
 onChange={(e) => setSelectedTimeframe(e.target.value)}
@@ -191,7 +256,11 @@ className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-lg"
 </select>
 <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
 Export Report;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -207,6 +276,7 @@ animate={{ opacity: 1; y: 0 }}
 transition={{ delay: index * 0.1 }}
 className={`relative overflow-hidden rounded-lg bg-gradient-to-br ${getCategoryColor(metric.category)} p-6`}
 >;
+<<<<<<< HEAD
 <div className="flex items-center justify-between mb-4">
 <div className="text-3xl">{metric.icon}</div>
 <div className={`text-sm font-medium ${getTrendColor(metric.trend)}`}>
@@ -218,6 +288,19 @@ className={`relative overflow-hidden rounded-lg bg-gradient-to-br ${getCategoryC
 <p className="text-2xl font-bold text-white">{metric.value}</p>
 </div>
 </motion.div>
+=======
+<div className="flex items-center justify-between mb-4">;
+<div className="text-3xl">{metric.icon}</div>
+<div className={`text-sm font-medium ${getTrendColor(metric.trend)}`}>;
+{getTrendIcon(metric.trend)} {metric.change}
+</div>
+</div>
+<div>;
+<h3 className="text-sm font-medium text-white/80 mb-1">{metric.title}</h3>;
+<p className="text-2xl font-bold text-white">{metric.value}</p>;
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 </div>
@@ -238,7 +321,11 @@ className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 <h3 className="text-lg font-semibold text-white">{kpi.metric}</h3>
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(kpi.status)}`}>
 {kpi.status.replace("-", " ")}
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="mb-4">
@@ -248,25 +335,40 @@ className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 : kpi.current}</span>
 <span>Target: {typeof kpi.target === "number" && kpi.target > 1000000,
 ? `$${(kpi.target / 1000000).toFixed(1)}M`;
+<<<<<<< HEAD
 : kpi.target}</span>
 </div>
 <div className="w-full bg-gray-700 rounded-full h-2">
+=======
+: kpi.target}</span>;
+</div>
+<div className="w-full bg-gray-700 rounded-full h-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div;
 className={`h-2 rounded-full ${
 kpi.progress >= 80 ? "bg-green-500" :
 kpi.progress >= 60 ? "bg-yellow-500" : "bg-red-500";
 }`}
 style={{ width: `${kpi.progress}%` }}
+<<<<<<< HEAD
 />
 </div>
 <div className="text-right text-sm text-gray-400 mt-1">{kpi.progress}%</div>
 </div>
 </motion.div>
+=======
+/>;
+</div>
+<div className="text-right text-sm text-gray-400 mt-1">{kpi.progress}%</div>
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 </div>
 
 {/* Revenue Analysis */}
+<<<<<<< HEAD
 <div className="mb-8">
 <h2 className="text-2xl font-semibold text-white mb-6">Revenue Analysis</h2>
 <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
@@ -287,6 +389,28 @@ style={{ width: `${kpi.progress}%` }}
 <div className="text-gray-400">Growth Rate</div>
 </div>
 <div className="text-center">
+=======
+<div className="mb-8">;
+<h2 className="text-2xl font-semibold text-white mb-6">Revenue Analysis</h2>;
+<div className="bg-gray-800 p-6 rounded-lg border border-gray-700">;
+<div className="h-64 bg-gray-700 rounded-md flex items-center justify-center text-gray-400">;
+<div className="text-center">;
+<div className="text-4xl mb-2">📊</div>
+<p>Revenue Trend Chart</p>;
+<p className="text-sm">Interactive revenue and growth visualization</p>;
+</div>
+</div>
+<div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">;
+<div className="text-center">;
+<div className="text-green-400 font-semibold">$12.4M</div>
+<div className="text-gray-400">Total Revenue</div>
+</div>
+<div className="text-center">;
+<div className="text-blue-400 font-semibold">+18.5%</div>
+<div className="text-gray-400">Growth Rate</div>
+</div>
+<div className="text-center">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-purple-400 font-semibold">$3.7M</div>
 <div className="text-gray-400">Net Profit</div>
 </div>
@@ -306,6 +430,7 @@ animate={{ opacity: 1; y: 0 }}
 transition={{ delay: index * 0.1 }}
 className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 >;
+<<<<<<< HEAD
 <div className="flex items-center justify-between mb-4">
 <h3 className="text-lg font-semibold text-white">{insight.segment}</h3>
 <div className="text-2xl">👥</div>
@@ -332,6 +457,34 @@ ${(insight.revenue / 1000000).toFixed(1)}M;
 </div>
 </div>
 </motion.div>
+=======
+<div className="flex items-center justify-between mb-4">;
+<h3 className="text-lg font-semibold text-white">{insight.segment}</h3>;
+<div className="text-2xl">👥</div>
+</div>
+
+<div className="space-y-3">;
+<div className="flex justify-between">;
+<span className="text-gray-400">Customers</span>;
+<span className="text-white font-semibold">{insight.count.toLocaleString()}</span>;
+</div>
+<div className="flex justify-between">;
+<span className="text-gray-400">Revenue</span>;
+<span className="text-green-400 font-semibold">;
+${(insight.revenue / 1000000).toFixed(1)}M;
+</span>;
+</div>
+<div className="flex justify-between">;
+<span className="text-gray-400">Growth</span>;
+<span className="text-blue-400 font-semibold">+{insight.growth}%</span>;
+</div>
+<div className="flex justify-between">;
+<span className="text-gray-400">Satisfaction</span>;
+<span className="text-yellow-400 font-semibold">{insight.satisfaction}/5</span>;
+</div>
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 </div>
@@ -342,6 +495,7 @@ initial={{ opacity: 0; y: 20 }}
 animate={{ opacity: 1; y: 0 }}
 className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 >;
+<<<<<<< HEAD
 <h3 className="text-xl font-semibold text-white mb-6">Strategic Insights & Recommendations</h3>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div>
@@ -365,6 +519,31 @@ className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 </div>
 </motion.div>
 </motion.div>
+=======
+<h3 className="text-xl font-semibold text-white mb-6">Strategic Insights & Recommendations</h3>;
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+<div>;
+<h4 className="text-lg font-semibold text-green-400 mb-3">✅ Opportunities</h4>;
+<ul className="space-y-2 text-gray-300">;
+<li>• Mid-market segment showing 22.1% growth - focus expansion</li>;
+<li>• Operational efficiency at 94.2% - optimize further</li>;
+<li>• Cost reduction of $2.1M - continue initiatives</li>;
+<li>• Customer satisfaction high at 4.8/5 - leverage for referrals</li>;
+</ul>;
+</div>
+<div>;
+<h4 className="text-lg font-semibold text-yellow-400 mb-3">⚠️ Areas of Attention</h4>;
+<ul className="space-y-2 text-gray-300">;
+<li>• Product launch KPI at 60% - needs acceleration</li>;
+<li>• SMB segment growth slowing to 8.7%</li>;
+<li>• April revenue dip of -4.2% - investigate causes</li>;
+<li>• Employee satisfaction below target at 4.2/4.5</li>;
+</ul>;
+</div>
+</div>
+</motion.div>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 };

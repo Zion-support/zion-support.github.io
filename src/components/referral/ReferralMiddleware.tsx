@@ -2,11 +2,13 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
-import React from "react",
-import { useEffect  } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
+import React from "react";
+import { useEffect  } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
 ,
 export function ReferralMiddleware("props": "any) {,
 const { user "} = useAuth(),
@@ -17,14 +19,20 @@ useEffect(() => {,
 const params = new URLSearchParams(window.location.search),
 const code = params.get("ref"),
 if(code) {,
-localStorage.setItem("referralCode", code),
-}
+localStorage.setItem("referralCode", code)}
 }, []),
 ,
+<<<<<<< HEAD
 useEffect(() => {;
 // "TODO": "Add dependencies if needed;
 "}, []);
 async function sendReferral("props": "any) {;
+=======
+useEffect(() => {,
+// "TODO": "Add dependencies if needed,;
+"}, []),;
+async function sendReferral("props": "any) {,;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const code = localStorage.getItem("referralCode");
 if(!code || !user?.id || !user?.email) return, // Guard against missing email as well;
 try {,
@@ -34,8 +42,7 @@ body: { refCode: cod e; userId: use r.id; email: use r.email }
 );
 localStorage.removeItem("referralCode"),
 } catch(err) {,
-console.error("Error tracking referral", err),
-}
+console.error("Error tracking referral", err)}
 }
 sendReferral(),
 }, [user?.id; user?.email]), // Added user?.email;

@@ -66,6 +66,7 @@ setTimeout(() => setIsSubmitted(false),  3000);
 } finally {
 setIsSubmitting(false);
 import React { useState useRef } from 'react';
+<<<<<<< HEAD
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
@@ -110,15 +111,69 @@ Subscribing...;
 </Button>
 </form>
 )
+=======
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
+import { Loader2 } from "lucide-react";
+import { logErrorToProduction } from '@/utils/productionLogger';
+export function FooterNewsletter(): React.ReactElement {
+Email address for newsletter subscription
+      </label>
+      <Input
+type='email'
+        id='newsletter-email'
+        name='newsletterEmail'
+        placeholder='Enter your email'
+        className='flex-grow bg-zion-blue-light dark:bg-zion-blue-dark text-black dark:text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple placeholder-opacity-50 placeholder:text-center'
+        value={email}
+        onChange={e => setEmail(e.target.value)}
+        autoComplete='email'        required
+      />
+      {emailError && <p className='text-red-500 text-sm mt-1'>{emailError}</p>}
+      {/* Honeypot field */}
+      <input
+type='text'
+        value={honeypot}
+        onChange={e => setHoneypot(e.target.value)}
+        tabIndex={-1}
+        autoComplete='off'
+        style={{ display: 'none' }}
+      />
+      <Button
+type='submit'
+        aria-label='Subscribe to newsletter'
+        disabled={isSubmitting}
+        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'      >
+        {isSubmitting ? (
+          <>
+            <Loader2 className='h-4 w-4 mr-2 animate-spin' />
+            Subscribing...
+</>
+        ) : (
+          'Subscribe'
+        )}
+      </Button>
+    </form>
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };
 
 return (
+<<<<<<< HEAD
 <div className="bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">
 <div className="text-center">
 <div className="flex justify-center mb-4">
 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full flex items-center justify-center">
 <Mail className="w-6 h-6 text-white" />
+=======
+<div className="bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">;
+<div className="text-center">;
+<div className="flex justify-center mb-4">;
+<div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full flex items-center justify-center">;
+<Mail className="w-6 h-6 text-white" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -130,11 +185,19 @@ Get the latest insights on A;  I; technolog; y; cybersecurit; y; trend; s; and I
 </p>
 
 {isSubmitted ? (
+<<<<<<< HEAD
 <div className="flex items-center justify-center gap-2 text-green-400">
 <CheckCircle className="w-5 h-5" />
 <span>Successfully subscribed!</span>
 </div>
 ) : (<form onSubmit={handleSubmit} className="flex flex-col s;  m:flex-row gap-3 max-w-md mx-auto">
+=======
+<div className="flex items-center justify-center gap-2 text-green-400">;
+<CheckCircle className="w-5 h-5" />;
+<span>Successfully subscribed!</span>;
+</div>
+) : (<form onSubmit={handleSubmit} className="flex flex-col s;  m:flex-row gap-3 max-w-md mx-auto">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <input;
 type="email"
 value={email}
@@ -165,7 +228,11 @@ Subscribe;
 
 <p className="text-xs text-gray-400 mt-4">
 We respect your privacy. Unsubscribe at any time.;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 );

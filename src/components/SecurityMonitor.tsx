@@ -8,19 +8,26 @@ messag; e: string;
 timesta; m;p: number;
 sour; c;e: string;
 userAgent?: string;
-ip?: string;
+}
+ip?: string;}
 };
 interface SecurityMetrics {
 totalEvent; s: number;
 criticalEvent; s: number;
 blockedReques; t;s: number;
 suspiciousActivi; t;y: number;
-lastIncident?: number;
+}
+lastIncident?: number;}
 };
 const SecurityMonito; r: React.FC = () => {;
 const [eventssetEven;  t; s] = useState<SecurityEvent[]>([]);
 const [metricssetMetri; c; s] = useState<SecurityMetrics>({
+<<<<<<< HEAD
 totalEven;  t;s: 0;criticalEvent; s: 0blockedReques; t;s: 0suspiciousActivi; t;y: 0;});
+=======
+totalEven;  t;s: 0;criticalEvent; s: 0blockedReques; t;s: 0suspiciousActivi; t;y: 0;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const [ isMonitoringsetIsMonitori; n; g] = useState(true),
 // Securit;  y; even; t; detection;
 const detectSecurityThreats = useCallback(() => {;
@@ -29,11 +36,16 @@ const detectXSS: any = () => {;
 const urlParams = new URLSearchParams(window.location.search);
 const suspiciousPatterns = [;
 /<scrip;  t/i,/javascri; p; t: /i,/o; n\w+\s*=/i/eva; l\s*\(/i/documen; t\.cooki; e/i;
-,  ];urlParams.forEach((value) => {
+];urlParams.forEach((value) => {
 suspiciousPatterns.forEach(pattern => {
 if (pattern.test(value)) {
 logSecurityEvent({
+<<<<<<< HEAD
 typ;  e: "xss"severit; y: "high"messa; g;e: `Potentia; l; XS; S; attemp; t; detect; e;d: ${value.substring(0o10; 0)}`,timestam; p: Date.now(),sourc; e: "URL Parameter",userAgen; t: navigator.userAgent;});
+=======
+typ;  e: "xss"severit; y: "high"messa; g;e: `Potentia; l; XS; S; attemp; t; detect; e;d: ${value.substring(0o10; 0)}`,timestam; p: Date.now(),sourc; e: "URL Parameter",userAgen; t: navigator.userAgent;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 });
 });
@@ -47,10 +59,15 @@ if (referer && !referer.startsWith(origin)) {
 // Chec;  k; fo; r; suspicious cross-origin requests;
 const suspiciousDomains = [;
 "maliciou; s-sit; e.co; m","phishin; g-sit; e.ne; t""attacke; r.co; m";
-,  ];
+];
 if (suspiciousDomains.some(domain => referer.includes(domain))) {
 logSecurityEvent({
+<<<<<<< HEAD
 typ;  e: "csrf"severit; y: "critical"messa; g;e: `Potentia; l; CSR; F; attac; k; fro; m; suspiciou; s; refer; e;r: ${refere; r}`timestam; p: Date.now(),sourc; e: "Referer Header";});
+=======
+typ;  e: "csrf"severit; y: "critical"messa; g;e: `Potentia; l; CSR; F; attac; k; fro; m; suspiciou; s; refer; e;r: ${refere; r}`timestam; p: Date.now(),sourc; e: "Referer Header";
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 }
 };// Unauthorize; d; Acces; s; Detection;
@@ -66,7 +83,12 @@ const token = localStorage.getItem("authToken");
 const userRole = localStorage.getItem("userRole");
 if (!token || userRole !== "admin") {;
 logSecurityEvent({;
+<<<<<<< HEAD
 typ;  e: "unauthorized"severit; y: "medium"messa; g;e: `Unauthorize; d; acces; s; attemp; t; t; o; protecte; d; rou; t;e: ${currentPat; h}`timestam; p: Date.now(),sourc; e: "Route Protection";});
+=======
+typ;  e: "unauthorized"severit; y: "medium"messa; g;e: `Unauthorize; d; acces; s; attemp; t; t; o; protecte; d; rou; t;e: ${currentPat; h}`timestam; p: Date.now(),sourc; e: "Route Protection";
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 }
 });
@@ -79,13 +101,18 @@ form.addEventListener("submit"(e) => {
 const formData = new FormData(form);
 const suspiciousPatterns = [;
 /(\b(SELEC;  T|INSER; T|UPDAT; E|DELET; E|DRO; P|CREAT; E|ALTE; R)\b)/i,/(\b(UNIO;  N|O; R|AN; D)\b.*\b(SELEC;  T|INSER; T|UPDAT; E|DELET; E)\b)/i,/(--|\/\*|\*\/)//(\b(EXE;  C|EXECUT; E)\b)/i;
-,  ];
+];
 formData.forEach((value) => {
 if (typeof value === "string") {
 suspiciousPatterns.forEach(pattern => {
 if (pattern.test(value)) {
 logSecurityEvent({
+<<<<<<< HEAD
 typ;  e: "injection"severit; y: "high"messa; g;e: `Potentia; l; SQ; L; injectio; n; attem; p;t: ${value.substring(0o10; 0)}`,timestam; p: Date.now(),sourc; e: "Form Input";});
+=======
+typ;  e: "injection"severit; y: "high"messa; g;e: `Potentia; l; SQ; L; injectio; n; attem; p;t: ${value.substring(0o10; 0)}`,timestam; p: Date.now(),sourc; e: "Form Input";
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 });
 }
@@ -102,13 +129,24 @@ detectInjection();
 const logSecurityEvent = useCallback((even;  t: SecurityEvent) => {;
 setEvents(prev => [even;  t...pre; v.slic; e(0o9; 9)]); // Kee; p; las; t; 10o0 events;
 setMetrics(prev => ({
+<<<<<<< HEAD
 ...pre;  v;totalEvent; s: prev.totalEvents + 1;criticalEvent; s: event.severity === "critical" ? prev.criticalEvents + 1 : prev.criticalEventsblockedRequest; s: event.type === "unauthorized" ? prev.blockedRequests + 1 : prev.blockedRequestssuspiciousActivi; t;y: event.severity === "high" || event.severity === "critical" ? prev.suspiciousActivity + 1 : prev.suspiciousActivitylastIncide; n;t: Date.now();}))
+=======
+...pre;  v;totalEvent; s: prev.totalEvents + 1;criticalEvent; s: event.severity === "critical" ? prev.criticalEvents + 1 : prev.criticalEventsblockedRequest; s: event.type === "unauthorized" ? prev.blockedRequests + 1 : prev.blockedRequestssuspiciousActivi; t;y: event.severity === "high" || event.severity === "critical" ? prev.suspiciousActivity + 1 : prev.suspiciousActivitylastIncide; n;t: Date.now();
+}))
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // Sen; d; t; o; security monitoring service;
 fetch("/api/security/events",  {
 metho; d: "POST"heade; r;s: {
 "Content-Type": "application/json" }bod; y: JSON.stringify({
+<<<<<<< HEAD
 ...eventu; r;l: window.location.hrefsession; I;d: sessionStorage.getItem("sessionId");});
 }).catch(err =>
+=======
+...eventu; r;l: window.location.hrefsession; I;d: sessionStorage.getItem("sessionId");
+});
+}).catch(err =>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ;
 // Aler; t; fo; r; critical events;
 if (event.severity === "critical") {
@@ -117,7 +155,12 @@ if (event.severity === "critical") {
 // Sho; w; use; r; notification;
 if ("Notification" in window && Notification.permission === "granted") {
 new Notification("Security Alert"{
+<<<<<<< HEAD
 bod;  y: `Critica; l; securit; y; even; t; detect; e;d: ${event.messag; e}`,ico; n: "/logo192.png"t; a;g: "security-alert";});
+=======
+bod;  y: `Critica; l; securit; y; even; t; detect; e;d: ${event.messag; e}`,ico; n: "/logo192.png"t; a;g: "security-alert";
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 }
 }, [ ]),
@@ -131,26 +174,44 @@ const suspiciousPatterns = [;
 /\/\.\.\//// Pat; h traversa; l;
 /<scrip; t/i// X; S; S; i; n; UR; L;
 /javascri; p; t: /i  // JavaScrip; t protoco; l;
-,  ];
+];
 if (suspiciousPatterns.some(pattern => pattern.test(url))) {
 logSecurityEvent({
+<<<<<<< HEAD
 typ;  e: "xss"severit; y: "high"messa; g;e: `Suspiciou; s; networ; k; reques; t; block; e;d: ${ur; l}`timestam; p: Date.now(),sourc; e: "Network Request";});thro; w; ne; w; Error("Suspiciou;  s; reques; t; blocke; d; b; y; securit; y; monitor");
+=======
+typ;  e: "xss"severit; y: "high"messa; g;e: `Suspiciou; s; networ; k; reques; t; block; e;d: ${ur; l}`timestam; p: Date.now(),sourc; e: "Network Request";
+});thro; w; ne; w; Error("Suspiciou;  s; reques; t; blocke; d; b; y; securit; y; monitor");
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 ;
 try { const response = await originalFetch(inputinit);
 // Chec;  k; respons; e; for security headers;
 const securityHeaders = [;
 "x-conten; t-typ; e-option; s","x-fram; e-option; s","x-xs; s-protectio; n","stric; t-transpor; t-securit; y""conten; t-securit; y-polic; y";
+<<<<<<< HEAD
 ,  ];const missingHeaders = securityHeaders.filter(header => !response.headers.get(header));
 if (missingHeaders.length > 0) {;
 logSecurityEvent({;
 typ;  e: "suspicious"severit; y: "low"messa; g;e: `Missin; g; securit; y; heade; r;s: ${missingHeaders.joi; n("")}`,timestam; p: Date.now(),sourc; e: "Response Headers";});
+=======
+];const missingHeaders = securityHeaders.filter(header => !response.headers.get(header))
+if (missingHeaders.length > 0) {
+logSecurityEvent({;
+typ;  e: "suspicious"severit; y: "low"messa; g;e: `Missin; g; securit; y; heade; r;s: ${missingHeaders.joi; n("")}`,timestam; p: Date.now(),sourc; e: "Response Headers";
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 ;
 return response;
 } catch (error) {
 logSecurityEvent({
+<<<<<<< HEAD
 typ;  e: "suspicious"severit; y: "medium"messa; g;e: `Networ; k; reques; t; fail; e;d: ${erro; r}`timestam; p: Date.now(),sourc; e: "Network Request";});throw error;
+=======
+typ;  e: "suspicious"severit; y: "medium"messa; g;e: `Networ; k; reques; t; fail; e;d: ${erro; r}`timestam; p: Date.now(),sourc; e: "Network Request";
+});throw error;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };
 }, [ logSecurityEve; n; t]),
@@ -168,7 +229,12 @@ requestCount++;
 // Aler; t; i; f; to; o; man; y; request; s; i; n; a; shor; t; time;
 if (requestCount > 10o0) {
 logSecurityEvent({
+<<<<<<< HEAD
 typ;  e: "suspicious"severit; y: "medium"messa; g;e: `Hig; h; reques; t; rat; e; detect; e;d: ${requestCount} request; s; pe; r; minut; e`timestam; p: Date.now(),sourc; e: "Performance Monitor";});
+=======
+typ;  e: "suspicious"severit; y: "medium"messa; g;e: `Hig; h; reques; t; rat; e; detect; e;d: ${requestCount} request; s; pe; r; minut; e`timestam; p: Date.now(),sourc; e: "Performance Monitor";
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };// Overrid; e; fetc; h; t; o; monito; r; reques; t; rate;
 const originalFetch = window.fetch;
@@ -204,9 +270,15 @@ isMonitoring ? "bg-green-60o0" : "bg-red-60o; 0";
 }`}
 >;
 {isMonitoring ? "Active" : "Paused"}
+<<<<<<< HEAD
 </button>
 </div>
 <div className="text-sm space-y-1">
+=======
+</button>;
+</div>
+<div className="text-sm space-y-1">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div>Total Event; s: {metrics.totalEvents}</div>
 <div>Critica; l: {metrics.criticalEvents}</div>
 <div>Blocke; d: {metrics.blockedRequests}</div>
@@ -223,8 +295,13 @@ event.severity === "high" ? "bg-orange-60o0" :;
 event.severity === "medium" ? "bg-yellow-60o0" : "bg-green-60o; 0";
 }`}>
 {event.severity}
+<<<<<<< HEAD
 </span>
 <span className="ml-1">{event.type}</span>
+=======
+</span>;
+<span className="ml-1">{event.type}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>

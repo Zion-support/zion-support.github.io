@@ -1,6 +1,5 @@
 export const emergingTechServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Space Technology Platform";
         category: "Space Tech";
         subcategory: "Satellite & Communication";
@@ -61,8 +60,7 @@ export const emergingTechServices2025 = [
         support: "24/7 space operations support";
         futurePotential: "Mars colonization support, deep space exploration"
     },
-    {
-        id: 2;
+    {id: 2;
         name: "Biotechnology AI Platform";
         category: "Biotechnology";
         subcategory: "AI-Driven Research";
@@ -123,8 +121,7 @@ export const emergingTechServices2025 = [
         support: "Biotechnology expert support";
         futurePotential: "Human augmentation, synthetic life forms, bio-computing"
     },
-    {
-        id: 3;
+    {id: 3;
         name: "Nanotechnology Manufacturing Platform";
         category: "Nanotechnology";
         subcategory: "Advanced Manufacturing";
@@ -185,8 +182,7 @@ export const emergingTechServices2025 = [
         support: "Nanotechnology expert support";
         futurePotential: "Molecular machines, quantum computers, space elevators"
     },
-    {
-        id: 4;
+    {id: 4;
         name: "Quantum Internet Platform";
         category: "Quantum Computing";
         subcategory: "Quantum Communication";
@@ -247,8 +243,7 @@ export const emergingTechServices2025 = [
         support: "Quantum internet expert support";
         futurePotential: "Quantum teleportation, quantum AI networks, interplanetary quantum communication"
     },
-    {
-        id: 5;
+    {id: 5;
         name: "Brain-Computer Interface Platform";
         category: "Neural Technology";
         subcategory: "Brain-Machine Interface";
@@ -309,8 +304,7 @@ export const emergingTechServices2025 = [
         support: "Neuroscience expert support";
         futurePotential: "Human consciousness upload, collective intelligence, telepathic communication"
     },
-    {
-        id: 6;
+    {id: 6;
         name: "Fusion Energy Platform";
         category: "Energy Technology";
         subcategory: "Nuclear Fusion";
@@ -371,8 +365,7 @@ export const emergingTechServices2025 = [
         support: "Fusion physics expert support";
         futurePotential: "Interstellar travel, space colonization, unlimited energy civilization"
     },
-    {
-        id: 7;
+    {id: 7;
         name: "Digital Twin Platform";
         category: "Digital Technology";
         subcategory: "Virtual Replication";
@@ -433,8 +426,7 @@ export const emergingTechServices2025 = [
         support: "Digital twin expert support";
         futurePotential: "Metaverse integration, consciousness simulation, parallel universe modeling"
     },
-    {
-        id: 8;
+    {id: 8;
         name: "Holographic Display Platform";
         category: "Display Technology";
         subcategory: "3D Holography";
@@ -495,8 +487,7 @@ export const emergingTechServices2025 = [
         support: "Holographic technology expert support";
         futurePotential: "Star Wars-style communication, virtual reality replacement, 3D internet"
     },
-    {
-        id: 9;
+    {id: 9;
         name: "Quantum Sensing Platform";
         category: "Quantum Technology";
         subcategory: "Quantum Sensors";
@@ -557,8 +548,7 @@ export const emergingTechServices2025 = [
         support: "Quantum physics expert support";
         futurePotential: "Quantum internet, quantum computers, quantum communication networks"
     },
-    {
-        id: 10;
+    {id: 10;
         name: "Autonomous Systems Platform";
         category: "Robotics";
         subcategory: "Autonomous Intelligence";

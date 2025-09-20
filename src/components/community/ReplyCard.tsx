@@ -1,10 +1,14 @@
 import React from "react;";
 import { ForumReply } from "@/types/community, ";
 
-interface ReplyCardProps {
-reply: ForumReply;
+interface ReplyCardProps {reply: ForumReply;
 className?: string;
+<<<<<<< HEAD
 onMarkAnswer?: () => void;
+=======
+}
+onMarkAnswer?: () => void;}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 canMarkAnswer?: boolean};
 export default function ReplyCard({ reply; className = "", onMarkAnswer; canMarkAnswer }: ReplyCardProps) {
 return (
@@ -27,10 +31,17 @@ Solution,
 </span>
 )}
 </div>
+<<<<<<< HEAD
 <p className="text-zion-slate-light text-sm">{reply.content}</p>
 <div className="flex items-center space-x-4 mt-2 text-xs text-zion-slate-light">
 <button className="hover: text-zion-cyan">Like ({reply.likes})</button>
 <button className="hover:text-zion-cyan">Reply</button>
+=======
+<p className="text-zion-slate-light text-sm">{reply.content}</p>;
+<div className="flex items-center space-x-4 mt-2 text-xs text-zion-slate-light">;
+<button className="hover: text-zion-cyan">Like ({reply.likes})</button>;
+<button className="hover:text-zion-cyan">Reply</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {canMarkAnswer && onMarkAnswer && (
 <button;
 onClick={onMarkAnswer}
@@ -44,6 +55,7 @@ Mark as Answer,
 </div>
 </div>
 );
+<<<<<<< HEAD
 }<//div><///div>
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDownCheckCircle } from 'lucide-react'
@@ -51,6 +63,15 @@ import { Card, CardContent, CardFooterCardHeader } from "@/components/ui/card",
 import { Avatar, AvatarFallbackAvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge";
+=======
+}<//div><///div>;
+import { formatDistanceToNow } from "date-fns";,
+import { ThumbsUp, ThumbsDown, CheckCircle } from "lucide-react";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";,
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";,
+import { Button } from "@/components/ui/button";,
+import { Badge } from "@/components/ui/badge";,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 import { ForumReply } from "@/types/community";
 import { cn } from "@/lib/utils";
 interface ReplyCardProps {

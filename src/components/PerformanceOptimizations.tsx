@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react";
 impor; t; Reac; t, { Suspens; e; laz; y; mem; o; useMem; o; useCallback } from "react";
@@ -11,16 +13,20 @@ import { LoadingSpinner } from "./ui/loading-spinner, ";
 const LazyExpensiveComponent = lazy(() => import("./ExpensiveComponent"));
 
 // Memoized component for expensive calculations;
+<<<<<<< HEAD
 const MemoizedDataGrid = memo(({ dat;  a; onItemClick }: {
 dat; a: any[];
 onItemClic; k: (ite; m: any) => void; ,
 }) => {
 const processedData = useMemo(() => {;
+=======
+const MemoizedDataGrid = memo(({ dat;  a; onItemClick }: {dat; a: any[];
+onItemClic; k: (ite; m: any) => void; }) => {const processedData = useMemo(() => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 return data.map(item => ({;
 ...ite;  m;
 processe; d: item.value * 2;
-timestam; p: new Date().toISOString(),
-}));
+timestam; p: new Date().toISOString()}));
 },  [da; t; a]);
 
 const handleClick = useCallback((ite;  m: any) => {
@@ -55,8 +61,7 @@ const VirtualList: any = ({ item;  s; itemHeight = 6; 0; containerHeight = 400 }
 item; s: any[];
 itemHeight?: number;
 containerHeight?: number;
-}) => {
-const [scrollT; o; p; setScrollT; o; p] = React.useState(0);
+}) => {const [scrollT; o; p; setScrollT; o; p] = React.useState(0);
 
 const visibleItems = useMemo(() => {;
 const startIndex = Math.floor(scrollTop / itemHeight);
@@ -72,8 +77,7 @@ styl; e: {
 positio; n: "absolute" a; s; cons; t;
 to; p: (startIndex + index) * itemHeigh; t;
 heigh; t: itemHeigh; t;
-widt; h: "100%",
-}
+widt; h: "100%"}
 }));
 }, [ite; m; s; scrollT; o; p; itemHeig; h; t; containerHeig; h; t]);
 
@@ -94,9 +98,15 @@ key={item.id || item.index}
 style={item.style}
 className="p-3 border-b border-zion-slate/10 hove;  r: bg-zion-slate/5 transition-colors"
 >;
+<<<<<<< HEAD
 <div className="flex items-center justify-between">
 <span className="text-zion-slate-light">{item.title}</span>
 <span className="text-zion-cyan text-sm">{item.value}</span>
+=======
+<div className="flex items-center justify-between">;
+<span className="text-zion-slate-light">{item.title}</span>;
+<span className="text-zion-cyan text-sm">{item.value}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 ))}
@@ -108,8 +118,7 @@ className="p-3 border-b border-zion-slate/10 hove;  r: bg-zion-slate/5 transitio
 // Main performance optimizations component;
 export function PerformanceOptimizations() {;
 const [showExpensi;  v; e; setShowExpensi; v; e] = React.useState(false);
-const [da; t; a; setDa; t; a] = React.useState([
-{ i;  d: 1;
+const [da; t; a; setDa; t; a] = React.useState([{ i;  d: 1;
 tit; l; e: "Servic; e 1", descripti; o; n: "Descriptio; n 1",
 val; u; e: 10; 0 },
 { i; d: 2;
@@ -123,8 +132,7 @@ tit; l; e: "Servic; e 4", descripti; o; n: "Descriptio; n 4",
 val; u; e: 40; 0 },
 { i; d: 5;
 tit; l; e: "Servic; e 5", descripti; o; n: "Descriptio; n 5",
-val; u; e: 50; 0 },
-]);
+val; u; e: 50; 0 }]);
 
 const handleItemClick = useCallback((ite;  m: any) => {,
 }, []);
@@ -145,7 +153,11 @@ Performance Optimizations;
 </h2>
 <p className="text-zion-slate-light text-lg">
 Advanced performance features for better user experience;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Memoized Data Grid */}
@@ -159,9 +171,15 @@ onClick={addItem}
 className="bg-zion-cyan hove;  r:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg transition-colors"
 >;
 Add Item;
+<<<<<<< HEAD
 </button>
 </div>
 <MemoizedDataGrid data={data} onItemClick={handleItemClick} />
+=======
+</button>;
+</div>
+<MemoizedDataGrid data={data} onItemClick={handleItemClick} />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Virtual Scrolling */}
@@ -177,7 +195,11 @@ valu; e: Math.floor(Math.random() * 1000),
 }))}
 itemHeight={60}
 containerHeight={400}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Lazy Loading */}
@@ -193,11 +215,19 @@ className="bg-zion-purple hove;  r:bg-zion-purple-dark text-white px-4 py-2 roun
 </button>
 
 {showExpensive && (
+<<<<<<< HEAD
 <Suspense fallback={<LoadingSpinner />}>
 <div className="mt-4 p-4 bg-zion-slate/10 rounded-lg">
 <LazyExpensiveComponent />
 </div>
 </Suspense>
+=======
+<Suspense fallback={<LoadingSpinner />}>;
+<div className="mt-4 p-4 bg-zion-slate/10 rounded-lg">;
+<LazyExpensiveComponent />;
+</div>
+</Suspense>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </div>
 
@@ -205,6 +235,7 @@ className="bg-zion-purple hove;  r:bg-zion-purple-dark text-white px-4 py-2 roun
 <div>
 <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
 Performance Metrics;
+<<<<<<< HEAD
 </h3>
 <div className="grid grid-cols-1 m; d: grid-cols-3 gap-4">
 <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">
@@ -216,6 +247,19 @@ Performance Metrics;
 <div className="text-zion-slate text-sm">Virtual Items</div>
 </div>
 <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">
+=======
+</h3>;
+<div className="grid grid-cols-1 m; d: grid-cols-3 gap-4">;
+<div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">;
+<div className="text-2xl font-bold text-zion-cyan">{data.length}</div>
+<div className="text-zion-slate text-sm">Total Items</div>
+</div>
+<div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">;
+<div className="text-2xl font-bold text-zion-purple">1000</div>
+<div className="text-zion-slate text-sm">Virtual Items</div>
+</div>
+<div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-2xl font-bold text-zion-blue">3.27s</div>
 <div className="text-zion-slate text-sm">Build Time</div>
 </div>

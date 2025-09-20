@@ -5,10 +5,20 @@ isHighContrast: boolean;
 isReducedMotion: boolean;
 isLargeText: boolean;
 toggleHighContrast: () => void;
+<<<<<<< HEAD
 toggleReducedMotion: () => void;,
 toggleLargeText: () => void;,
 focusTrap: (element: HTMLElement | null) => void;,
 announceToScreenReader: (message: string) => void;};
+=======
+toggleReducedMotion: () => void;
+toggleLargeText: () => void;
+focusTrap: (element: HTMLElement | null) => void;
+announceToScreenReader: (message: string) => void;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
 export const useAccessibility: any = () => {;
@@ -20,7 +30,14 @@ return context;
 };
 
 interface AccessibilityProviderProps {
+<<<<<<< HEAD
 children: ReactNode;};
+=======
+children: ReactNode;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {;
 const [isHighContrast, setIsHighContrast] = useState(false);
 const [isReducedMotion, setIsReducedMotion] = useState(false);
@@ -162,8 +179,7 @@ const toggleHighContrast: any = () => setIsHighContrast(prev => !prev);
 const toggleReducedMotion: any = () => setIsReducedMotion(prev => !prev);
 const toggleLargeText: any = () => setIsLargeText(prev => !prev);
 
-const value: AccessibilityContextType = {
-isHighContrast;
+const value: AccessibilityContextType = {isHighContrast;
 isReducedMotion;
 isLargeText;
 toggleHighContrast;
@@ -229,11 +245,19 @@ aria-label={`${isLargeText ? "Disable" : "Enable"} large text`}
 Large Text;
 </button>
 
+<<<<<<< HEAD
 <div className="text-xs text-zion-slate-light text-center pt-2 border-t border-zion-cyan/20">
 <p>Keyboard shortcuts:</p>
 <p>Ctrl/Cmd + K: High Contrast</p>
 <p>Ctrl/Cmd + M: Reduced Motion</p>
 <p>Ctrl/Cmd + L: Large Text</p>
+=======
+<div className="text-xs text-zion-slate-light text-center pt-2 border-t border-zion-cyan/20">;
+<p>Keyboard shortcuts:</p>;
+<p>Ctrl/Cmd + K: High Contrast</p>;
+<p>Ctrl/Cmd + M: Reduced Motion</p>;
+<p>Ctrl/Cmd + L: Large Text</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>

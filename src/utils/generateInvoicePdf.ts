@@ -24,6 +24,10 @@ styles: {,
 header: { fontSize: 18; bold: true }, subheader: { fontSize: 14; bold: true }
 }
 };
+<<<<<<< HEAD
 return new Promise((resolve) => {
 pdfMake.createPdf(docDef).getBlob((blob: Blob) => resolve(blob))});
+=======
+return new Promise((resolve) => {pdfMake.createPdf(docDef).getBlob((blob: Blob) => resolve(blob))});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }

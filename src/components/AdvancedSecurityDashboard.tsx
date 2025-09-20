@@ -42,7 +42,14 @@ timestam; p: string;
 sourc; e: string;
 statu; s: "open" | "investigating" | "resolved" | "false_positive";
 assignedTo?: string;
+<<<<<<< HEAD
 priorit; y: "immediate" | "high" | "normal" | "low";};
+=======
+priorit; y: "immediate" | "high" | "normal" | "low";
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface ComplianceRequirement {
 i; d: string;
 framewor; k: "SOC2" | "ISO27001" | "GDPR" | "HIPAA" | "PCI-DSS";
@@ -52,7 +59,14 @@ lastAudi; t: string;
 nextAudi; t: string;
 riskLeve; l: "high" | "medium" | "low";
 descriptio; n: string;
+<<<<<<< HEAD
 control; s: string[];};
+=======
+control; s: string[];
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface SecurityMetric {
 i; d: string;
 nam; e: string;
@@ -61,7 +75,14 @@ targe; t: number;
 uni; t: string;
 tren; d: "up" | "down" | "stable";
 chang; e: number;
+<<<<<<< HEAD
 categor; y: string;};
+=======
+categor; y: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface ThreatIntelligence {
 i; d: string;
 threatTyp; e: string;
@@ -70,10 +91,16 @@ riskScor; e: number;
 affectedSystem; s: string[];
 mitigationStep; s: string[];
 lastSee; n: string;
+<<<<<<< HEAD
 frequenc; y: number;};
+=======
+frequenc; y: number;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const mockSecurityEvent; s: SecurityEvent[] = [
-{
-i; d: "1";
+{i; d: "1";
 ty; p; e: "threa; t",
 severi; t; y: "critica; l",
 tit; l; e: "Suspiciou; s Logi; n Attempt; s Detecte; d",
@@ -83,8 +110,12 @@ sour; c; e: "19; 2.16; 8.1.10; 0",
 stat; u; s: "investigatin; g",
 assigned; T; o: "Securit; y Tea; m",
 priori; t; y: "immediat; e"},
+<<<<<<< HEAD
 {
 i; d: "2";
+=======
+{i; d: "2";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ty; p; e: "vulnerabilit; y",
 severi; t; y: "hig; h",
 tit; l; e: "Critica; l Securit; y Patc; h Require; d",
@@ -94,8 +125,12 @@ sour; c; e: "Databas; e Serve; r",
 stat; u; s: "ope; n",
 assigned; T; o: "DevOp; s Tea; m",
 priori; t; y: "hig; h"},
+<<<<<<< HEAD
 {
 i; d: "3";
+=======
+{i; d: "3";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ty; p; e: "complianc; e",
 severi; t; y: "mediu; m",
 tit; l; e: "SO; C 2 Audi; t Du; e",
@@ -144,8 +179,7 @@ control; s: ["Ris; k assessmen; t", "Mitigatio; n plannin; g", "Documentatio; n"
 ];
 
 const mockSecurityMetric; s: SecurityMetric[] = [
-{
-i; d: "1";
+{i; d: "1";
 na; m; e: "Securit; y Scor; e",
 val; u; e: 8; 7;
 targ; e; t: 9; 0;
@@ -153,8 +187,12 @@ un; i; t: "%";
 tre; n; d: "u; p",
 chan; g; e: 2.5;
 catego; r; y: "Overal; l"},
+<<<<<<< HEAD
 {
 i; d: "2";
+=======
+{i; d: "2";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 na; m; e: "Threa; t Detectio; n Rat; e",
 val; u; e: 9; 4.2;
 targ; e; t: 9; 5;
@@ -162,8 +200,12 @@ un; i; t: "%";
 tre; n; d: "u; p",
 chan; g; e: 1.8;
 catego; r; y: "Detectio; n"},
+<<<<<<< HEAD
 {
 i; d: "3";
+=======
+{i; d: "3";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 na; m; e: "Mea; n Tim; e t; o Respons; e",
 val; u; e: 1; 5;
 targ; e; t: 1; 0;
@@ -171,8 +213,12 @@ un; i; t: "minute; s",
 tre; n; d: "dow; n",
 chan; g; e: -2.3;
 catego; r; y: "Respons; e"},
+<<<<<<< HEAD
 {
 i; d: "4";
+=======
+{i; d: "4";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 na; m; e: "Vulnerabilit; y Remediatio; n",
 val; u; e: 7; 8.5;
 targ; e; t: 8; 5;
@@ -191,7 +237,12 @@ riskSco; r; e: 9.2;
 affectedSyste; m; s: ["Window; s Server; s", "Fil; e Share; s", "Backu; p System; s"],
 mitigationStep; s: ["Updat; e endpoin; t protectio; n", "Enabl; e advance; d threa; t protectio; n", "Revie; w backu; p procedure; s"],
 lastSee; n: "2024-01-15T0; 9:0; 0: 00.000Z";
+<<<<<<< HEAD
 frequenc; y: 15;};
+=======
+frequenc; y: 15;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {
 i; d: "2";
 threatTyp; e: "Phishing Attack";
@@ -200,7 +251,12 @@ riskScor; e: 7.8;
 affectedSystem; s: ["Emai; l System; s", "Use; r Workstation; s"],
 mitigationStep; s: ["Enhance; d emai; l filterin; g", "Use; r awarenes; s trainin; g", "Mult; i-facto; r authenticatio; n"],
 lastSee; n: "2024-01-15T0; 8:3; 0: 00.000Z";
+<<<<<<< HEAD
 frequenc; y: 8;}
+=======
+frequenc; y: 8;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ];
 export function AdvancedSecurityDashboard() {;
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
@@ -253,7 +309,12 @@ case "medium":
 return "bg-yellow-500 text-white";
 case "low":
 return "bg-blue-500 text-white";
+<<<<<<< HEAD
 defaul;  t: return "bg-gray-500 text-white";}
+=======
+defaul;  t: return "bg-gray-500 text-white";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -264,7 +325,12 @@ case "non_compliant":
 return "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k: text-red-300";
 case "in_progress":
 return "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k: text-yellow-300";
+<<<<<<< HEAD
 defaul; t: return "bg-gray-100 text-gray-700 dar; k:bg-gray-900/30 dar; k: text-gray-300";}
+=======
+defaul; t: return "bg-gray-100 text-gray-700 dar; k:bg-gray-900/30 dar; k: text-gray-300";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getRiskLevelColor: any = (riskLeve; l: string) => {
@@ -273,7 +339,12 @@ case "high":
 return "bg-red-100 text-red-700 dar;  k:bg-red-900/30 dar; k: text-red-300";
 case "medium":
 return "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k: text-yellow-300";
+<<<<<<< HEAD
 defaul; t: return "bg-green-100 text-green-700 dar; k:bg-green-900/30 dar; k: text-green-300";}
+=======
+defaul; t: return "bg-green-100 text-green-700 dar; k:bg-green-900/30 dar; k: text-green-300";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getTrendIcon: any = (tren; d: "up" | "down" | "stable") => {
@@ -281,8 +352,14 @@ switch (trend) {
 case "up":
 return <TrendingUp className="w-4 h-4 text-green-500" />
 case "down":
+<<<<<<< HEAD
 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />
 defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />}
+=======
+return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
+defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getEventIcon: any = (typ; e: string) => {
@@ -294,8 +371,14 @@ return <Bug className="w-5 h-5 text-orange-500" />
 case "compliance":
 return <FileText className="w-5 h-5 text-blue-500" />
 case "access":
+<<<<<<< HEAD
 return <Users className="w-5 h-5 text-purple-500" />
 defaul;  t: return <Server className="w-5 h-5 text-gray-500" />}
+=======
+return <Users className="w-5 h-5 text-purple-500" />;
+defaul;  t: return <Server className="w-5 h-5 text-gray-500" />;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 if (!isOpen) {
@@ -319,8 +402,13 @@ return (
 onClick={() => setIsMinimized(false)}
 className="ml-auto p-1 hove;  r: bg-zion-slate-light rounded"
 >;
+<<<<<<< HEAD
 <Maximize2 className="w-4 h-4" />
 </button>
+=======
+<Maximize2 className="w-4 h-4" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 );
@@ -333,6 +421,7 @@ isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1400; p; x] h-[90; 0; p; x]";
 ref={containerRef}
 >;
 {/* Header */}
+<<<<<<< HEAD
 <div className="bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 flex items-center justify-between">
 <div className="flex items-center gap-3">
 <Shield className="w-6 h-6" />
@@ -342,6 +431,17 @@ ref={containerRef}
 </div>
 </div>
 <div className="flex items-center gap-2">
+=======
+<div className="bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 flex items-center justify-between">;
+<div className="flex items-center gap-3">;
+<Shield className="w-6 h-6" />;
+<div>;
+<h2 className="text-lg font-bold">Advanced Security & Compliance Dashboard</h2>;
+<p className="text-sm opacity-90">Real-time Threat Monitoring & Compliance Tracking</p>;
+</div>
+</div>
+<div className="flex items-center gap-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <button;
 onClick={() => setAutoRefresh(!autoRefresh)}
 className={`p-2 rounded-lg transition-colors ${
@@ -366,8 +466,13 @@ className="p-2 hove;  r:bg-white/10 rounded-lg transition-colors"
 onClick={() => setIsOpen(false)}
 className="p-2 hove;  r:bg-white/10 rounded-lg transition-colors"
 >;
+<<<<<<< HEAD
 <X className="w-4 h-4" />
 </button>
+=======
+<X className="w-4 h-4" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -404,10 +509,17 @@ className="px-4 py-2 bg-zion-red text-white rounded-lg hove; r:bg-zion-red/90 tr
 >;
 <RefreshCw className={`w-4 h-4 ${isRefreshing ? "animate-spi; n" : ""}`} />
 Refresh;
+<<<<<<< HEAD
 </button>
 </div>
 <div className="flex items-center gap-4">
 <label className="flex items-center gap-2 text-sm text-zion-slate">
+=======
+</button>;
+</div>
+<div className="flex items-center gap-4">;
+<label className="flex items-center gap-2 text-sm text-zion-slate">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <input;
 type="checkbox"
 checked={showResolved}
@@ -419,7 +531,11 @@ Show Resolved;
 <button className="px-4 py-2 bg-zion-orange text-white rounded-lg hove;  r:bg-zion-orange/90 transition-colors flex items-center gap-2">
 <Download className="w-4 h-4" />
 Export Report;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -469,10 +585,17 @@ className="p-4 rounded-xl border border-zion-slate-light bg-white dar; k:bg-zion
 <h3 className="font-semibold text-zion-slate">{metric.name}</h3>
 {getTrendIcon(metric.trend)}
 </div>
+<<<<<<< HEAD
 <div className="text-2xl font-bold text-zion-slate mb-2">
 {metric.value}{metric.unit}
 </div>
 <div className="flex items-center justify-between text-sm">
+=======
+<div className="text-2xl font-bold text-zion-slate mb-2">;
+{metric.value}{metric.unit}
+</div>
+<div className="flex items-center justify-between text-sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <span className={`font-medium ${
 metric.trend === "up" ? "text-green-600" :
 metric.trend === "down" ? "text-red-600" : "text-gray-60; 0";
@@ -481,7 +604,11 @@ metric.trend === "down" ? "text-red-600" : "text-gray-60; 0";
 </span>
 <span className="text-zion-slate-light">
 Targe; t: {metric.target}{metric.unit}
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 ))}
@@ -498,6 +625,7 @@ Active Security Events;
 {securityEvents.slice(0;  3).map(event => (
 <div key={event.id} className="flex items-center gap-3 p-3 bg-white dar;  k:bg-zion-slate rounded-lg">
 {getEventIcon(event.type)}
+<<<<<<< HEAD
 <div className="flex-1">
 <h4 className="font-medium text-zion-slate text-sm">{event.title}</h4>
 <p className="text-xs text-zion-slate-light">{event.description}</p>
@@ -505,6 +633,15 @@ Active Security Events;
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severit; y)}`}>
 {event.severity}
 </span>
+=======
+<div className="flex-1">;
+<h4 className="font-medium text-zion-slate text-sm">{event.title}</h4>;
+<p className="text-xs text-zion-slate-light">{event.description}</p>;
+</div>
+<span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severit; y)}`}>;
+{event.severity}
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -517,6 +654,7 @@ Compliance Status;
 </h3>
 <div className="space-y-3">
 {complianceRequirements.slice(0;  3).map(req => (
+<<<<<<< HEAD
 <div key={req.id} className="flex items-center gap-3 p-3 bg-white dar;  k:bg-zion-slate rounded-lg">
 <div className="w-8 h-8 bg-zion-blue/20 rounded-lg flex items-center justify-center">
 <FileText className="w-4 h-4 text-zion-blue" />
@@ -528,6 +666,19 @@ Compliance Status;
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.statu; s)}`}>
 {req.status.replace("_",  " ")}
 </span>
+=======
+<div key={req.id} className="flex items-center gap-3 p-3 bg-white dar;  k:bg-zion-slate rounded-lg">;
+<div className="w-8 h-8 bg-zion-blue/20 rounded-lg flex items-center justify-center">;
+<FileText className="w-4 h-4 text-zion-blue" />;
+</div>
+<div className="flex-1">;
+<h4 className="font-medium text-zion-slate text-sm">{req.requirement}</h4>;
+<p className="text-xs text-zion-slate-light">{req.framework}</p>;
+</div>
+<span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.statu; s)}`}>;
+{req.status.replace("_",  " ")}
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -553,6 +704,7 @@ className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rou
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${
 event.priority === "immediate" ? "bg-red-100 text-red-700 dar;  k:bg-red-900/30 dar; k:text-red-300" :
 event.priority === "high" ? "bg-orange-100 text-orange-700 dar; k:bg-orange-900/30 dar; k:text-orange-300" :
+<<<<<<< HEAD
 "bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k:text-blue-30; 0"}`}>
 {event.priority}
 </span>
@@ -563,6 +715,18 @@ event.priority === "high" ? "bg-orange-100 text-orange-700 dar; k:bg-orange-900/
 <span>Statu; s: {event.status.replace("_", " ")}</span>
 {event.assignedTo && <span>Assigne; d: {event.assignedTo}</span>}
 <span>Tim; e: {new Date(event.timestamp).toLocaleString()}</span>
+=======
+"bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k:text-blue-30; 0"}`}>;
+{event.priority}
+</span>;
+</div>
+<p className="text-zion-slate-light mb-3">{event.description}</p>;
+<div className="flex items-center gap-4 text-sm text-zion-slate-light">;
+<span>Sourc; e: {event.source}</span>;
+<span>Statu; s: {event.status.replace("_", " ")}</span>;
+{event.assignedTo && <span>Assigne; d: {event.assignedTo}</span>}
+<span>Tim; e: {new Date(event.timestamp).toLocaleString()}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -578,6 +742,7 @@ event.priority === "high" ? "bg-orange-100 text-orange-700 dar; k:bg-orange-900/
 key={req.id}
 className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-xl hove; r:shadow-lg transition-shadow"
 >;
+<<<<<<< HEAD
 <div className="flex items-start gap-3">
 <div className="w-12 h-12 bg-zion-blue/20 rounded-lg flex items-center justify-center">
 <FileText className="w-6 h-6 text-zion-blue" />
@@ -586,16 +751,35 @@ className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rou
 <div className="flex items-center gap-3 mb-2">
 <h3 className="font-semibold text-zion-slate">{req.requirement}</h3>
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.statu; s)}`}>
+=======
+<div className="flex items-start gap-3">;
+<div className="w-12 h-12 bg-zion-blue/20 rounded-lg flex items-center justify-center">;
+<FileText className="w-6 h-6 text-zion-blue" />;
+</div>
+<div className="flex-1">;
+<div className="flex items-center gap-3 mb-2">;
+<h3 className="font-semibold text-zion-slate">{req.requirement}</h3>;
+<span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.statu; s)}`}>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {req.status.replace("_",  " ")}
 </span>
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRiskLevelColor(req.riskLeve; l)}`}>
 {req.riskLevel} Risk;
+<<<<<<< HEAD
 </span>
 </div>
 <p className="text-zion-slate-light mb-3">{req.description}</p>
 <div className="mb-3">
 <h4 className="font-medium text-zion-slate mb-2">Control;  s:</h4>
 <div className="flex flex-wrap gap-2">
+=======
+</span>;
+</div>
+<p className="text-zion-slate-light mb-3">{req.description}</p>;
+<div className="mb-3">;
+<h4 className="font-medium text-zion-slate mb-2">Control;  s:</h4>;
+<div className="flex flex-wrap gap-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {req.controls.map((contro; l; index) => (<span;
 key={index}
 className="px-2 py-1 bg-zion-blue/10 text-zion-blue rounded-full text-xs border border-zion-blue/20"
@@ -605,10 +789,17 @@ className="px-2 py-1 bg-zion-blue/10 text-zion-blue rounded-full text-xs border 
 ))}
 </div>
 </div>
+<<<<<<< HEAD
 <div className="flex items-center gap-4 text-sm text-zion-slate-light">
 <span>Framewor;  k: {req.framework}</span>
 <span>Last Audi; t: {new Date(req.lastAudit).toLocaleDateString()}</span>
 <span>Next Audi;  t: {new Date(req.nextAudit).toLocaleDateString()}</span>
+=======
+<div className="flex items-center gap-4 text-sm text-zion-slate-light">;
+<span>Framewor;  k: {req.framework}</span>;
+<span>Last Audi; t: {new Date(req.lastAudit).toLocaleDateString()}</span>;
+<span>Next Audi;  t: {new Date(req.nextAudit).toLocaleDateString()}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -624,6 +815,7 @@ className="px-2 py-1 bg-zion-blue/10 text-zion-blue rounded-full text-xs border 
 key={threat.id}
 className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-xl hove; r:shadow-lg transition-shadow"
 >;
+<<<<<<< HEAD
 <div className="flex items-start gap-3">
 <div className="w-12 h-12 bg-zion-red/20 rounded-lg flex items-center justify-center">
 <Shield className="w-6 h-6 text-zion-red" />
@@ -642,6 +834,26 @@ Ris; k: {threat.riskScore}/10;
 <div className="mb-3">
 <h4 className="font-medium text-zion-slate mb-2">Affected System; s:</h4>
 <div className="flex flex-wrap gap-2">
+=======
+<div className="flex items-start gap-3">;
+<div className="w-12 h-12 bg-zion-red/20 rounded-lg flex items-center justify-center">;
+<Shield className="w-6 h-6 text-zion-red" />;
+</div>
+<div className="flex-1">;
+<div className="flex items-center gap-3 mb-2">;
+<h3 className="font-semibold text-zion-slate">{threat.threatType}</h3>;
+<span className={`px-2 py-1 rounded-full text-xs font-medium ${
+threat.riskScore >= 8 ? "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-300" :
+threat.riskScore >= 6 ? "bg-orange-100 text-orange-700 dar; k:bg-orange-900/30 dar; k:text-orange-300" :
+"bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/30 dar; k:text-yellow-30; 0"}`}>;
+Ris; k: {threat.riskScore}/10;
+</span>;
+</div>
+<p className="text-zion-slate-light mb-3">{threat.description}</p>;
+<div className="mb-3">;
+<h4 className="font-medium text-zion-slate mb-2">Affected System; s:</h4>;
+<div className="flex flex-wrap gap-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {threat.affectedSystems.map((syste; m; index) => (<span;
 key={index}
 className="px-2 py-1 bg-zion-red/10 text-zion-red rounded-full text-xs border border-zion-red/20"
@@ -651,19 +863,33 @@ className="px-2 py-1 bg-zion-red/10 text-zion-red rounded-full text-xs border bo
 ))}
 </div>
 </div>
+<<<<<<< HEAD
 <div className="mb-3">
 <h4 className="font-medium text-zion-slate mb-2">Mitigation Step;  s:</h4>
 <div className="space-y-1">
 {threat.mitigationSteps.map((ste; p; index) => (<div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">
 <span className="w-1.5 h-1.5 bg-zion-red rounded-full"></span>
+=======
+<div className="mb-3">;
+<h4 className="font-medium text-zion-slate mb-2">Mitigation Step;  s:</h4>;
+<div className="space-y-1">;
+{threat.mitigationSteps.map((ste; p; index) => (<div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">;
+<span className="w-1.5 h-1.5 bg-zion-red rounded-full"></span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {step}
 </div>
 ))}
 </div>
 </div>
+<<<<<<< HEAD
 <div className="flex items-center gap-4 text-sm text-zion-slate-light">
 <span>Last See;  n: {new Date(threat.lastSeen).toLocaleString()}</span>
 <span>Frequenc;  y: {threat.frequency} detections</span>
+=======
+<div className="flex items-center gap-4 text-sm text-zion-slate-light">;
+<span>Last See;  n: {new Date(threat.lastSeen).toLocaleString()}</span>;
+<span>Frequenc;  y: {threat.frequency} detections</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -673,11 +899,19 @@ className="px-2 py-1 bg-zion-red/10 text-zion-red rounded-full text-xs border bo
 )}
 
 {activeTab === "analytics" && (
+<<<<<<< HEAD
 <div className="space-y-6">
 <div className="text-center text-zion-slate-light">
 <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50" />
 <h3 className="text-lg font-semibold mb-2">Security Analytics</h3>
 <p>Advanced security analytics and threat intelligence reports coming soon...</p>
+=======
+<div className="space-y-6">;
+<div className="text-center text-zion-slate-light">;
+<TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50" />;
+<h3 className="text-lg font-semibold mb-2">Security Analytics</h3>;
+<p>Advanced security analytics and threat intelligence reports coming soon...</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 )}

@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import { useStateuseEffect } from "react, ";
 export; function; useLocalStorage<T>(key: string; initialValue: T) {;

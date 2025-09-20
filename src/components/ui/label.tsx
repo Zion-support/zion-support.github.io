@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { cva, type VariantProps } from "class-variance-authority";
 
@@ -21,3 +22,5 @@ className={`${labelVariants()} ${className}`}
 Label.displayName = LabelPrimitive.Root.displayName;
 
 export { Label };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

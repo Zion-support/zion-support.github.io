@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Routes, Route  } from "react-router-dom, ";
 export interface IndustrySpecificSolution {
 id: string; title: string; description: string; industry: string; category: string; subcategory: string; price: number; currency: string; pricingModel: "monthly" | "yearly" | "one-time" | "per-user" | "per-project" | "usage-based";,
@@ -11,14 +12,30 @@ industryExpertise: number; rating: number; reviewCount: number; featured: boolea
 integrations: string[], compliance: string[];,
 roi: string; competitors: string[], industryPartners: string[];,
 certifications: string[];}
+=======
+import { Routes; Route } from "react-router-dom, ";
+export interface IndustrySpecificSolution {id: string; title: string; description: string; industry: string; category: string; subcategory: string; price: number; currency: string; pricingModel: "monthly" | "yearly" | "one-time" | "per-user" | "per-project" | "usage-based";
+features: string[], benefits: string[];
+useCases: string[], targetAudience: string[];
+tags: string[], estimatedDelivery: string;
+supportLevel: "basic" | "standard" | "premium" | "enterprise", marketPrice: string;
+}
+contactInfo: {,}
+phone: string; email: string; website: string};
+industryExpertise: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; demoUrl: string; documentationUrl: string; technology: string[];
+integrations: string[], compliance: string[];
+roi: string; competitors: string[], industryPartners: string[];
+certifications: string[];
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
 {,
-id: "healthcare-ai-diagnostics", title: "Healthcare AI Diagnostics & Patient Care Platform";,
+id: "healthcare-ai-diagnostics", title: "Healthcare AI Diagnostics & Patient Care Platform";
 description: "Comprehensive AI-powered healthcare platform for medical diagnostics; patient monitoring; treatment planning; and healthcare workflow optimization.",
-industry: "Healthcare", category: "AI Diagnostics";,
-subcategory: "Patient Care", price: 2800;,
-currency: "$", pricingModel: "monthly";,
+industry: "Healthcare", category: "AI Diagnostics";
+subcategory: "Patient Care", price: 2800;
+currency: "$", pricingModel: "monthly";
 features: [
 "AI-powered medical image analysis",
 "Patient data integration and analytics",
@@ -56,12 +73,17 @@ targetAudience: [
 "Healthcare technology companies";
 ],
 tags: ["Healthcare", "AI Diagnostics", "Medical Imaging", "Patient Care", "Clinical Decision Support"],
-estimatedDelivery: "8-16 weeks", supportLevel: "enterprise";,
+estimatedDelivery: "8-16 weeks", supportLevel: "enterprise";
 marketPrice: "$2; 800 - $12; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 website: "https://ziontechgroup.com"}, industryExpertise: 98; rating: 4.9; reviewCount: 234; featured: true; location: "Global";,
 availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/healthcare-ai";,
+=======
+website: "https://ziontechgroup.com"}, industryExpertise: 98; rating: 4.9; reviewCount: 234; featured: true; location: "Global";
+availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/healthcare-ai";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 documentationUrl: "https://ziontechgroup.com/docs/healthcare-ai", technology: ["TensorFlow", "PyTorch", "OpenCV", "DICOM", "FHIR", "HL7", "HIPAA-compliant cloud"],
 integrations: ["Epic", "Cerner", "Allscripts", "Medical imaging systems", "Lab information systems", "PACS"],
 compliance: ["HIPAA", "FDA", "CE Mark", "ISO 13485", "SOC 2", "GDPR"],
@@ -69,12 +91,11 @@ roi: "400% within 18 months", competitors: ["IBM Watson Health", "Google Health"
 industryPartners: ["Mayo Clinic", "Johns Hopkins", "Stanford Medicine", "Cleveland Clinic", "Medical associations"],
 certifications: ["FDA 510(k)", "CE Mark", "ISO 13485", "HIPAA Business Associate", "SOC 2 Type II"];
 },
-{
-id: "manufacturing-industry-4-0", title: "Manufacturing Industry 4.0 & Smart Factory Platform";,
+{id: "manufacturing-industry-4-0", title: "Manufacturing Industry 4.0 & Smart Factory Platform";
 description: "Comprehensive Industry 4.0 platform for smart manufacturing including IoT integration; predictive maintenance; quality control; and supply chain optimization.",
-industry: "Manufacturing", category: "Industry 4.0";,
-subcategory: "Smart Factory", price: 2200;,
-currency: "$", pricingModel: "monthly";,
+industry: "Manufacturing", category: "Industry 4.0";
+subcategory: "Smart Factory", price: 2200;
+currency: "$", pricingModel: "monthly";
 features: [
 "IoT sensor integration and monitoring",
 "Predictive maintenance and analytics",
@@ -112,12 +133,17 @@ targetAudience: [
 "Supply chain managers";
 ],
 tags: ["Manufacturing", "Industry 4.0", "IoT", "Predictive Maintenance", "Quality Control", "Smart Factory"],
-estimatedDelivery: "12-24 weeks", supportLevel: "premium";,
+estimatedDelivery: "12-24 weeks", supportLevel: "premium";
 marketPrice: "$2; 200 - $8; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 website: "https://ziontechgroup.com"}, industryExpertise: 96; rating: 4.8; reviewCount: 189; featured: true; location: "Global";,
 availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/manufacturing-4-0";,
+=======
+website: "https://ziontechgroup.com"}, industryExpertise: 96; rating: 4.8; reviewCount: 189; featured: true; location: "Global";
+availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/manufacturing-4-0";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 documentationUrl: "https://ziontechgroup.com/docs/manufacturing-4-0", technology: ["IoT platforms", "Machine learning", "Computer vision", "PLC integration", "SCADA systems", "Cloud computing"],
 integrations: ["SAP", "Oracle", "Siemens", "Rockwell Automation", "Mitsubishi", "ABB", "IoT platforms"],
 compliance: ["ISO 9001", "ISO 14001", "OHSAS 18001", "Industry 4.0 standards", "Safety regulations"],
@@ -125,12 +151,11 @@ roi: "350% within 20 months", competitors: ["Siemens", "GE Digital", "PTC", "Roc
 industryPartners: ["Manufacturing associations", "Industry 4.0 consortia", "Technology partners", "Research institutions"],
 certifications: ["ISO 9001", "ISO 14001", "OHSAS 18001", "Industry 4.0", "Safety certifications"];
 },
-{
-id: "financial-services-ai", title: "Financial Services AI & Risk Management Platform";,
+{id: "financial-services-ai", title: "Financial Services AI & Risk Management Platform";
 description: "Advanced AI platform for financial services including fraud detection; risk assessment; portfolio optimization; and regulatory compliance automation.",
-industry: "Financial Services", category: "AI & Risk Management";,
-subcategory: "Financial Technology", price: 3500;,
-currency: "$", pricingModel: "monthly";,
+industry: "Financial Services", category: "AI & Risk Management";
+subcategory: "Financial Technology", price: 3500;
+currency: "$", pricingModel: "monthly";
 features: [
 "AI-powered fraud detection and prevention",
 "Real-time risk assessment and monitoring",
@@ -168,12 +193,17 @@ targetAudience: [
 "Compliance officers";
 ],
 tags: ["Financial Services", "AI", "Risk Management", "Fraud Detection", "Compliance", "FinTech"],
-estimatedDelivery: "10-20 weeks", supportLevel: "enterprise";,
+estimatedDelivery: "10-20 weeks", supportLevel: "enterprise";
 marketPrice: "$3; 500 - $15; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 website: "https://ziontechgroup.com"}, industryExpertise: 97; rating: 4.9; reviewCount: 156; featured: true; location: "Global";,
 availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/financial-ai";,
+=======
+website: "https://ziontechgroup.com"}, industryExpertise: 97; rating: 4.9; reviewCount: 156; featured: true; location: "Global";
+availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/financial-ai";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 documentationUrl: "https://ziontechgroup.com/docs/financial-ai", technology: ["Machine learning", "Deep learning", "Natural language processing", "Big data analytics", "Cloud computing"],
 integrations: ["Bloomberg", "Reuters", "Trading platforms", "Core banking systems", "Risk management tools", "Compliance systems"],
 compliance: ["Basel III", "Solvency II", "Dodd-Frank", "SOX", "GDPR", "PCI DSS", "AML regulations"],
@@ -181,12 +211,11 @@ roi: "450% within 24 months", competitors: ["Palantir", "SAS", "IBM", "Oracle", 
 industryPartners: ["Financial institutions", "Regulatory bodies", "Industry associations", "Technology partners"],
 certifications: ["SOC 2 Type II", "ISO 27001", "PCI DSS", "Financial industry certifications", "Regulatory compliance"];
 },
-{
-id: "retail-ecommerce-ai", title: "Retail & E-commerce AI Optimization Platform";,
+{id: "retail-ecommerce-ai", title: "Retail & E-commerce AI Optimization Platform";
 description: "Comprehensive AI platform for retail and e-commerce including customer personalization; inventory optimization; demand forecasting; and marketing automation.",
-industry: "Retail & E-commerce", category: "AI Optimization";,
-subcategory: "Customer Experience", price: 1500;,
-currency: "$", pricingModel: "monthly";,
+industry: "Retail & E-commerce", category: "AI Optimization";
+subcategory: "Customer Experience", price: 1500;
+currency: "$", pricingModel: "monthly";
 features: [
 "AI-powered customer personalization",
 "Demand forecasting and inventory optimization",
@@ -224,12 +253,17 @@ targetAudience: [
 "Marketing agencies";
 ],
 tags: ["Retail", "E-commerce", "AI", "Personalization", "Inventory Optimization", "Marketing Automation"],
-estimatedDelivery: "6-12 weeks", supportLevel: "premium";,
+estimatedDelivery: "6-12 weeks", supportLevel: "premium";
 marketPrice: "$1; 500 - $6; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 website: "https://ziontechgroup.com"}, industryExpertise: 94; rating: 4.8; reviewCount: 267; featured: false; location: "Global";,
 availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/retail-ai";,
+=======
+website: "https://ziontechgroup.com"}, industryExpertise: 94; rating: 4.8; reviewCount: 267; featured: false; location: "Global";
+availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/retail-ai";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 documentationUrl: "https://ziontechgroup.com/docs/retail-ai", technology: ["Machine learning", "Recommendation engines", "Natural language processing", "Computer vision", "Big data analytics"],
 integrations: ["Shopify", "WooCommerce", "Magento", "Salesforce", "HubSpot", "Google Analytics", "Facebook Ads"],
 compliance: ["GDPR", "CCPA", "PCI DSS", "SOC 2", "Industry-specific regulations"],
@@ -237,12 +271,11 @@ roi: "320% within 15 months", competitors: ["Segment", "Amplitude", "Mixpanel", 
 industryPartners: ["E-commerce platforms", "Retail associations", "Technology partners", "Marketing platforms"],
 certifications: ["SOC 2 Type II", "ISO 27001", "PCI DSS", "Retail industry certifications"];
 },
-{
-id: "energy-utility-optimization", title: "Energy & Utility AI Optimization Platform";,
+{id: "energy-utility-optimization", title: "Energy & Utility AI Optimization Platform";
 description: "Advanced AI platform for energy and utility companies including grid optimization; demand forecasting; renewable energy integration; and predictive maintenance.",
-industry: "Energy & Utilities", category: "AI Optimization";,
-subcategory: "Grid Management", price: 2800;,
-currency: "$", pricingModel: "monthly";,
+industry: "Energy & Utilities", category: "AI Optimization";
+subcategory: "Grid Management", price: 2800;
+currency: "$", pricingModel: "monthly";
 features: [
 "Smart grid optimization and management",
 "Energy demand forecasting and load balancing",
@@ -280,12 +313,17 @@ targetAudience: [
 "Energy technology companies";
 ],
 tags: ["Energy", "Utilities", "Smart Grid", "Renewable Energy", "Predictive Maintenance", "Grid Optimization"],
-estimatedDelivery: "12-24 weeks", supportLevel: "enterprise";,
+estimatedDelivery: "12-24 weeks", supportLevel: "enterprise";
 marketPrice: "$2; 800 - $12; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 website: "https://ziontechgroup.com"}, industryExpertise: 95; rating: 4.8; reviewCount: 134; featured: false; location: "Global";,
 availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/energy-utility";,
+=======
+website: "https://ziontechgroup.com"}, industryExpertise: 95; rating: 4.8; reviewCount: 134; featured: false; location: "Global";
+availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/energy-utility";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 documentationUrl: "https://ziontechgroup.com/docs/energy-utility", technology: ["IoT platforms", "Machine learning", "Predictive analytics", "SCADA systems", "Cloud computing", "Edge computing"],
 integrations: ["SCADA systems", "Energy management systems", "Metering systems", "Renewable energy platforms", "Grid control systems"],
 compliance: ["NERC CIP", "ISO standards", "Grid codes", "Environmental regulations", "Safety standards"],
@@ -293,12 +331,11 @@ roi: "380% within 24 months", competitors: ["Siemens", "GE Digital", "ABB", "Sch
 industryPartners: ["Utility associations", "Grid operators", "Technology partners", "Research institutions"],
 certifications: ["NERC CIP", "ISO 27001", "Grid security certifications", "Energy industry standards"];
 },
-{
-id: "transportation-logistics-ai", title: "Transportation & Logistics AI Platform";,
+{id: "transportation-logistics-ai", title: "Transportation & Logistics AI Platform";
 description: "Comprehensive AI platform for transportation and logistics including route optimization; fleet management; supply chain optimization; and predictive analytics.",
-industry: "Transportation & Logistics", category: "AI Platform";,
-subcategory: "Logistics Optimization", price: 1800;,
-currency: "$", pricingModel: "monthly";,
+industry: "Transportation & Logistics", category: "AI Platform";
+subcategory: "Logistics Optimization", price: 1800;
+currency: "$", pricingModel: "monthly";
 features: [
 "AI-powered route optimization and planning",
 "Fleet management and vehicle tracking",
@@ -336,12 +373,17 @@ targetAudience: [
 "Supply chain managers";
 ],
 tags: ["Transportation", "Logistics", "Route Optimization", "Fleet Management", "Supply Chain", "AI"],
-estimatedDelivery: "8-16 weeks", supportLevel: "premium";,
+estimatedDelivery: "8-16 weeks", supportLevel: "premium";
 marketPrice: "$1; 800 - $7; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 website: "https://ziontechgroup.com"}, industryExpertise: 93; rating: 4.7; reviewCount: 189; featured: false; location: "Global";,
 availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/transportation-logistics";,
+=======
+website: "https://ziontechgroup.com"}, industryExpertise: 93; rating: 4.7; reviewCount: 189; featured: false; location: "Global";
+availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/transportation-logistics";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 documentationUrl: "https://ziontechgroup.com/docs/transportation-logistics", technology: ["Machine learning", "Optimization algorithms", "IoT platforms", "GPS tracking", "Cloud computing", "Mobile apps"],
 integrations: ["TMS systems", "WMS systems", "ERP systems", "GPS tracking", "Weather services", "Traffic data"],
 compliance: ["DOT regulations", "Safety standards", "Environmental regulations", "Industry-specific standards"],

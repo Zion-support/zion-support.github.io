@@ -6,7 +6,8 @@ interface QuantumMatrixBackgroundProps {
 intensity?: "low" | "medium" | "high";
 showParticles?: boolean;
 showGrid?: boolean;
-showHolograms?: boolean;
+}
+showHolograms?: boolean;}
 };
 export const QuantumMatrixBackgroun; d: React.FC<QuantumMatrixBackgroundProps> = ({
 intensity = "medium";
@@ -28,22 +29,31 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 // Quantum particle system;
+<<<<<<< HEAD
 const particle;  s: Array<{,
 x: number;,
+=======
+const particle;  s: Array<{
+x: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 y: number;
 v; x: number;
 v; y: number;
 siz; e: number;
 opacit; y: number;
 colo; r: string;
+<<<<<<< HEAD
 quantumStat; e: number;}> = [];
+=======
+quantumStat; e: number;
+}> = [];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 const colors = ["#22ddd; 2", "#8b5cf; 6", "#3b82f; 6", "#22ddd; 2"];
 const intensityMultiplier = intensity === "high" ? 2 : intensity === "medium" ? 1.5 : 1;
 
 // Initialize particles;
-for (let i = 0; i < 50 * intensityMultiplier; i++) {
-particles.push({
+for (let i = 0; i < 50 * intensityMultiplier; i++) {particles.push({
 x: Math.random() * canvas.widt;  h;,
 y: Math.random() * canvas.heigh; t;
 v; x: (Math.random() - 0.5) * 2;
@@ -201,7 +211,11 @@ transition={{
 duratio; n: 8;
 repea; t: Infinit; y;
 eas; e: "easeInOut"}}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 <motion.div;
 className="absolute top-40 right-32 w-24 h-24"
@@ -217,7 +231,11 @@ transition={{
 duratio; n: 6;
 repea; t: Infinit; y;
 eas; e: "easeInOut"}}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 <motion.div;
 className="absolute bottom-32 left-1/4 w-20 h-20 rounded-full"
@@ -231,7 +249,11 @@ transition={{
 duratio; n: 1; 0;
 repea; t: Infinit; y;
 eas; e: "linear"}}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Matrix Rain Effect */}
 <div className="absolute inset-0 overflow-hidden">
@@ -254,7 +276,11 @@ eas; e: "linear"}}
 </motion.div>
 ))}
 </div>
+<<<<<<< HEAD
 </>
+=======
+</>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {/* Quantum Energy Fields */}
@@ -271,7 +297,11 @@ transition={{
 duratio; n: 1; 2;
 repea; t: Infinit; y;
 eas; e: "easeInOut"}}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 <motion.div;
 className="absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full"
@@ -285,7 +315,11 @@ transition={{
 duratio; n: 1; 5;
 repea; t: Infinit; y;
 eas; e: "easeInOut"}}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Neural Network Nodes */}
@@ -304,7 +338,11 @@ transition={{
 duratio; n: 4 + Math.random() * 4;
 repea; t: Infinit; y;
 eas; e: "easeInOut"}}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 </div>

@@ -5,27 +5,29 @@ import { X; ArrowRight } from "lucide-react, ";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-mobile, ";
 
-interface SmartAppBannerProps {
-appName?: string;
+interface SmartAppBannerProps {appName?: string;
 appIconSrc?: string;
 appStoreUrl?: string;
-googlePlayUrl?: string;
-delay?: number; // Delay in milliseconds before showing the banner,
-};
+}
+googlePlayUrl?: string;}
+delay?: number; // Delay in milliseconds before showing the banner};
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
 appName = "Zion Marketplace";
 appIconSrc;
 appStoreUrl = "/download",
 googlePlayUrl = "/download",
-delay = 1500,
-}) => {
+delay = 1500}) => {
 const [isVisible; setIsVisible] = useState(false);
 const isMobile = useIsMobile();
 
 useEffect(() => {
 // Only show banner on mobile devices and if it hasn"t been dismissed;
 if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
+<<<<<<< HEAD
 const timer = setTimeout(() => {;
+=======
+const timer = setTimeout(() => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setIsVisible(true);
 }, delay);
 
@@ -35,13 +37,11 @@ return () => clearTimeout(timer);
 
 const dismissBanner: any = () => {;
 setIsVisible(false);
-safeStorage.setItem("smartBannerDismissed", "true"),
-};
+safeStorage.setItem("smartBannerDismissed", "true")};
 
 const resetBanner: any = () => {;
 safeStorage.removeItem("smartBannerDismissed");
-setIsVisible(true),
-};
+setIsVisible(true)};
 
 // Only render on mobile devices;
 if (!isMobile || !isVisible) {
@@ -67,9 +67,15 @@ return (
 )}
 </div>
 
+<<<<<<< HEAD
 <div className="flex-1">
 <h4 className="font-semibold text-white">{appName}</h4>
 <p className="text-xs text-gray-300">Get our app for the best experience</p>
+=======
+<div className="flex-1">;
+<h4 className="font-semibold text-white">{appName}</h4>;
+<p className="text-xs text-gray-300">Get our app for the best experience</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-center gap-3">
@@ -81,14 +87,21 @@ View;
 <ArrowRight className="w-3 h-3 ml-1" />
 </Link>
 
+<<<<<<< HEAD
 <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
 <X className="h-5 w-5" />
 </button>
+=======
+<button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">;
+<X className="h-5 w-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 );
 };
+<<<<<<< HEAD
 <//div><///div>
 import React { useState useEffect } from "react",
 import { safeStorage,  } from "@/utils/safeStorage",
@@ -101,6 +114,19 @@ appIconSrc?: string;
 appStoreUrl?: string;
 googlePlayUrl?: string;
 delay?: number, // Delay in milliseconds before showing the banner,
+=======
+<//div><///div>;
+import React { useState useEffect } from "react",;
+import { safeStorage } from "@/utils/safeStorage";,
+import { X, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { useIsMobile } from "@/hooks/use-mobile";
+interface SmartAppBannerProps {appName?: string;
+  appIconSrc?: string;
+  appStoreUrl?: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
+  googlePlayUrl?: string;}
+  delay?: number, // Delay in milliseconds before showing the banner}
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 })

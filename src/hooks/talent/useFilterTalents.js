@@ -83,8 +83,7 @@ export function useFilterTalents(talents = []) {
      }
         return result;
     }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
-    return {
-        filteredTalents,
+    return {filteredTalents,
         searchTerm,
         setSearchTerm,
         selectedSkills,

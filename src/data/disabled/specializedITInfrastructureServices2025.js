@@ -1,7 +1,6 @@
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
     // AI-Powered Edge Computing Platform;
-    {
-        id: "edge-computing-ai-platform";
+    {id: "edge-computing-ai-platform";
         name: "EdgeAI Computing Platform";
         category: "Edge Computing";
         subcategory: "AI-Powered Infrastructure";
@@ -55,8 +54,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         marketSize: "$8.6 billion (edge computing market)";
         growthPotential: "400% annual growth expected"};
     // AI-Powered Zero Trust Security Platform;
-    {
-        id: "zero-trust-security-ai";
+    {id: "zero-trust-security-ai";
         name: "ZeroTrust AI Security Platform";
         category: "Cybersecurity";
         subcategory: "Zero Trust Architecture";
@@ -110,8 +108,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         marketSize: "$19.6 billion (zero trust security market)";
         growthPotential: "500% annual growth expected"};
     // AI-Powered Hybrid Cloud Management Platform;
-    {
-        id: "hybrid-cloud-management-ai";
+    {id: "hybrid-cloud-management-ai";
         name: "HybridCloud AI Management";
         category: "Cloud Management";
         subcategory: "Hybrid Cloud";
@@ -165,8 +162,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         marketSize: "$12.3 billion (hybrid cloud market)";
         growthPotential: "450% annual growth expected"};
     // AI-Powered Data Center Automation Platform;
-    {
-        id: "data-center-automation-ai";
+    {id: "data-center-automation-ai";
         name: "DataCenter AI Automation";
         category: "Data Center";
         subcategory: "Automation & AI";
@@ -220,8 +216,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         marketSize: "$25.8 billion (data center automation market)";
         growthPotential: "600% annual growth expected"};
     // AI-Powered Network Performance Optimization Platform;
-    {
-        id: "network-performance-optimization-ai";
+    {id: "network-performance-optimization-ai";
         name: "NetworkAI Performance";
         category: "Network Management";
         subcategory: "Performance Optimization";

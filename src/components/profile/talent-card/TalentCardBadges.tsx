@@ -1,9 +1,15 @@
 
 import React from "react";
 import { Badge } from "@/components/ui/badge";
+<<<<<<< HEAD
 import { Award } from 'lucide-react';
 interface TalentCardBadgesProps {
 featured: boolean | undefined,
+=======
+import { Award } from "lucide-react";
+interface TalentCardBadgesProps {
+  featured: boolean | undefined,}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
 if (!featured) return null;
 return (

@@ -3,7 +3,8 @@ import React from "react";
 interface SonnerProps {
 position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
 richColors?: boolean;
-closeButton?: boolean;
+}
+closeButton?: boolean;}
 };
 export function Sonner({ ;
 position = "bottom-right",  ;

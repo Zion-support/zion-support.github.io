@@ -1,14 +1,17 @@
 import { useState, useEffect, useCallback, useRef } from 'react, ';
 import { useAnalytics } from './useAnalytics, ';
 export const useMachineLearning = (_initialConfig) => {
+<<<<<<< HEAD
     const { trackEvent } = useAnalytics({
         enableTracking: true;
+=======
+    const { trackEvent } = useAnalytics({enableTracking: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         enableUserBehaviorTracking: true});
     const [models, setModels] = useState([]);
     const [trainingJobs, setTrainingJobs] = useState([]);
     const [predictions, setPredictions] = useState([]);
-    const [metrics, setMetrics] = useState({
-        totalModels: 0;
+    const [metrics, setMetrics] = useState({totalModels: 0;
         activeModels: 0;
         averageAccuracy: 0;
         totalPredictions: 0;
@@ -26,8 +29,7 @@ export const useMachineLearning = (_initialConfig) => {
     const predictionTimeoutsRef = useRef(new Map());
     // Default models;
     const defaultModels = [
-        {
-            id: 'sentiment-analysis-001';
+        {id: 'sentiment-analysis-001';
             name: 'Sentiment Analysis Model';
             type: 'nlp';
             framework: 'tensorflow';
@@ -39,8 +41,12 @@ export const useMachineLearning = (_initialConfig) => {
             trainingDataSize: 10000;
             lastTrained: new Date();
             status: 'ready'};
+<<<<<<< HEAD
         {
             id: 'customer-segmentation-001';
+=======
+        {id: 'customer-segmentation-001';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             name: 'Customer Segmentation Model';
             type: 'clustering';
             framework: 'scikit-learn';
@@ -52,8 +58,12 @@ export const useMachineLearning = (_initialConfig) => {
             trainingDataSize: 50000;
             lastTrained: new Date();
             status: 'deployed'};
+<<<<<<< HEAD
         {
             id: 'demand-forecasting-001';
+=======
+        {id: 'demand-forecasting-001';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             name: 'Demand Forecasting Model';
             type: 'regression';
             framework: 'pytorch';
@@ -74,8 +84,7 @@ export const useMachineLearning = (_initialConfig) => {
         }
     }, [models.length]);
     // Update metrics when data changes;
-    const updateMetrics = useCallback(() => {
-        const totalModels = models.length;
+    const updateMetrics = useCallback(() => {const totalModels = models.length;
         const activeModels = models.filter(m => m.status === 'deployed').length;
         const averageAccuracy = models.length > 0;
             ? models.reduce((sum, m) => sum + m.accuracy, 0) / models.length;
@@ -141,8 +150,7 @@ export const useMachineLearning = (_initialConfig) => {
             progress: 0;
             startTime: new Date();
             hyperparameters,
-            metrics: {
-                loss: [];
+            metrics: {loss: [];
                 accuracy: [];
                 validationLoss: [];
                 validationAccuracy: []}
@@ -151,8 +159,7 @@ export const useMachineLearning = (_initialConfig) => {
         setIsTraining(true);
         trackEvent('ml', 'training', 'started', undefined, { modelId, modelType: model.type });
     // Simulate training progress;
-        const interval = setInterval(() => {
-            setTrainingJobs(prev => prev.map(job => {
+        const interval = setInterval(() => {setTrainingJobs(prev => prev.map(job => {
                 if (job.id === trainingJob.id && job.status === 'running') {
                     const newProgress = Math.min(job.progress + Math.random() * 10, 100);
                     const newLoss = job.metrics.loss.length > 0 ? job.metrics.loss[job.metrics.loss.length - 1] * 0.95 : 1.0;
@@ -249,8 +256,7 @@ export const useMachineLearning = (_initialConfig) => {
     // Simulate prediction processing;
         const startTime = Date.now();
         const processingTime = Math.random() * 1000 + 100; // 100-1100ms;
-        return new Promise((resolve, _reject) => {
-            const timeout = setTimeout(() => {
+        return new Promise((resolve, _reject) => {const timeout = setTimeout(() => {
                 const result = generatePredictionResult(model, input);
                 const confidence = Math.random() * 0.3 + 0.7; // 70-100% confidence;
                 const completedRequest = {
@@ -269,8 +275,7 @@ export const useMachineLearning = (_initialConfig) => {
         });
     }, [models, trackEvent]);
     // Generate prediction result based on model type;
-    const generatePredictionResult = (model, _input) => {
-        switch (model.type) {
+    const generatePredictionResult = (model, _input) => {switch (model.type) {
             case 'classification':
                 return {
                     class: Math.random() > 0.5 ? 'positive' : 'negative';
@@ -281,8 +286,12 @@ export const useMachineLearning = (_initialConfig) => {
                     range: [Math.random() * 50, Math.random() * 50 + 50]
                 };
             case 'clustering':
+<<<<<<< HEAD
                 return {
                     cluster: Math.floor(Math.random() * 5);
+=======
+                return {cluster: Math.floor(Math.random() * 5);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
                     distance: Math.random()};
     case 'nlp':
                 return {
@@ -290,8 +299,12 @@ export const useMachineLearning = (_initialConfig) => {
                     keywords: ['keyword1', 'keyword2', 'keyword3'].slice(0, Math.floor(Math.random() * 3) + 1)
                 };
             case 'computer_vision':
+<<<<<<< HEAD
                 return {
                     objects: ['object1', 'object2'].slice(0, Math.floor(Math.random() * 2) + 1),
+=======
+                return {objects: ['object1', 'object2'].slice(0, Math.floor(Math.random() * 2) + 1),
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
                     confidence: Math.random()};
     case 'recommendation':
                 return {
@@ -311,8 +324,7 @@ export const useMachineLearning = (_initialConfig) => {
         if (!model) {
             throw new Error('Model not found');
         }
-        const exportData = {
-            model,
+        const exportData = {model,
             exportTimestamp: new Date().toISOString();
             version: '1.0'};
     trackEvent('ml', 'model', 'exported', undefined, { modelId });

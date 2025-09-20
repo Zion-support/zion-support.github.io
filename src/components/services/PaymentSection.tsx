@@ -1,12 +1,17 @@
-import { MapPin,  } from 'lucide-react'
-import { PaymentButton,  } from "@/components/transactions/PaymentButton",
-import { CountryPricing,  } from "@/data/onsiteServicePricing";
-import { toast,  } from "@/hooks/use-toast";
+import { MapPin } from "lucide-react";
+import { PaymentButton } from "@/components/transactions/PaymentButton";,
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { toast } from "@/hooks/use-toast";
 interface PaymentSectionProps {
+<<<<<<< HEAD
 selectedCountry: CountryPricing,
+=======
+  selectedCountry: CountryPricing,}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
 // Handle successful payment,
 return (
+<<<<<<< HEAD
 <div className='text-center'>
 <p className='text-zion-slate-light mb-2'>Selected Country</p>
 <h4 className='text-xl font-bold text-white mb-2 flex items-center justify-center'>
@@ -17,6 +22,18 @@ return (
 ${selectedCountry.pricePerIncident.toFixed(2)}
 </p>
 <PaymentButton,
+=======
+    <div className='text-center'>
+      <p className='text-zion-slate-light mb-2'>Selected Country</p>
+      <h4 className='text-xl font-bold text-white mb-2 flex items-center justify-center'>
+        <MapPin className='mr-2 h-5 w-5 text-zion-purple' />
+        {selectedCountry.country}
+      </h4>
+      <p className='text-2xl font-bold text-zion-cyan mb-6'>
+        ${selectedCountry.pricePerIncident.toFixed(2)}
+      </p>
+      <PaymentButton
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 amount={selectedCountry.pricePerIncident}
 serviceId='it-onsite-service';
 providerId='zion-tech-group';

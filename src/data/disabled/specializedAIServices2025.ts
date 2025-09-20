@@ -17,19 +17,37 @@ tags: string[];
 estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
+<<<<<<< HEAD
 contactInfo: {,
 phone: string;,
 email: string;,
 website: string;};
+=======
+contactInfo: {
+phone: string;
+email: string;
+website: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technology: string[];
 integrations: string[];
 compliance: string[];
 roi: string;
 competitors: string[];
+<<<<<<< HEAD
 innovationLevel: string;,
 marketTrend: string;,
 aiModel: string;,
 trainingData: string;}
+=======
+innovationLevel: string;
+marketTrend: string;
+aiModel: string;
+trainingData: string;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
 // Multimodal AI Platform;
@@ -39,7 +57,7 @@ title: "Multimodal AI Platform 2025",
 description: "Advanced AI platform that processes and understands text; images; audio; and video simultaneously for comprehensive AI applications.",
 category: "AI Platforms",
 subcategory: "Multimodal",
-price: 1500;,
+price: 1500;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -93,13 +111,12 @@ trainingData: "Proprietary + Public Datasets"},
 
 // AI-Powered Predictive Healthcare Analytics;
 // AI-Powered Drug Discovery Platform;
-{
-id: "ai-drug-discovery-platform",
+{id: "ai-drug-discovery-platform",
 title: "AI-Powered Drug Discovery Platform",
 description: "Revolutionary AI platform that accelerates drug discovery using machine learning; molecular modeling; and predictive analytics.",
 category: "AI Healthcare",
 subcategory: "Drug Discovery",
-price: 25000;,
+price: 25000;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -153,13 +170,12 @@ trainingData: "Proprietary Pharmaceutical Data"},
 
 // Autonomous Financial Trading AI;
 // AI-Powered Financial Trading Platform;
-{
-id: "ai-financial-trading-platform",
+{id: "ai-financial-trading-platform",
 title: "AI-Powered Financial Trading Platform",
 description: "Advanced AI trading platform that uses machine learning; predictive analytics; and real-time market data for automated trading strategies.",
 category: "AI Finance",
 subcategory: "Trading",
-price: 10000;,
+price: 10000;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -213,13 +229,12 @@ trainingData: "Market Data + Historical Trading Data"},
 
 // AI-Powered Supply Chain Optimization;
 // AI-Powered Climate Prediction Engine;
-{
-id: "ai-climate-prediction-engine",
+{id: "ai-climate-prediction-engine",
 title: "AI-Powered Climate Prediction Engine",
 description: "Advanced AI platform that predicts climate patterns; extreme weather events; and environmental changes using machine learning and satellite data.",
 category: "AI Environment",
 subcategory: "Climate Prediction",
-price: 5000;,
+price: 5000;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -272,13 +287,12 @@ aiModel: "Custom Climate Prediction Models",
 trainingData: "Satellite + Historical Climate Data"},
 
 // AI-Powered Legal Research Assistant;
-{
-id: "ai-legal-research-assistant",
+{id: "ai-legal-research-assistant",
 title: "AI-Powered Legal Research Assistant",
 description: "Intelligent legal research platform that uses AI to analyze case law; legal documents; and regulations for comprehensive legal insights.",
 category: "AI Legal",
 subcategory: "Research Assistant",
-price: 800;,
+price: 800;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -332,13 +346,12 @@ trainingData: "Legal Documents + Case Law"},
 
 // AI-Powered Educational Personalization;
 // AI-Powered Creative Design Platform;
-{
-id: "ai-creative-design-platform",
+{id: "ai-creative-design-platform",
 title: "AI-Powered Creative Design Platform",
 description: "Revolutionary AI platform that generates creative designs; graphics; and visual content using advanced generative AI models.",
 category: "AI Creative",
 subcategory: "Design Generation",
-price: 400;,
+price: 400;
 currency: "$",
 pricingModel: "monthly",
 features: [

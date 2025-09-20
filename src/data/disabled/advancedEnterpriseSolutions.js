@@ -1,7 +1,6 @@
 export const ADVANCED_ENTERPRISE_SOLUTIONS = [
     // AI-Powered Enterprise Platforms;
-    {
-        id: "ai-enterprise-operating-system";
+    {id: "ai-enterprise-operating-system";
         title: "AI Enterprise Operating System";
         description: "Next-generation enterprise OS that integrates AI, automation, and real-time analytics across all business operations.",
         category: "AI Enterprise Platforms";
@@ -56,8 +55,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         innovationLevel: "Breakthrough";
         marketTrend: "Rapidly Growing"};
     // Quantum Enterprise Solutions;
-    {
-        id: "quantum-enterprise-computing";
+    {id: "quantum-enterprise-computing";
         title: "Quantum Enterprise Computing Platform";
         description: "Enterprise-grade quantum computing platform for complex problem-solving, optimization, and advanced simulations.",
         category: "Quantum Enterprise";
@@ -112,8 +110,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         innovationLevel: "Revolutionary";
         marketTrend: "Emerging"};
     // Autonomous Business Intelligence;
-    {
-        id: "autonomous-business-intelligence";
+    {id: "autonomous-business-intelligence";
         title: "Autonomous Business Intelligence Platform";
         description: "Self-learning BI platform that automatically discovers insights, generates reports, and provides actionable recommendations.",
         category: "Autonomous BI";
@@ -168,8 +165,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         innovationLevel: "Advanced";
         marketTrend: "Growing"};
     // Next-Gen Cybersecurity Platform;
-    {
-        id: "next-gen-cybersecurity";
+    {id: "next-gen-cybersecurity";
         title: "Next-Generation Cybersecurity Platform";
         description: "AI-powered cybersecurity platform with autonomous threat detection, response, and prevention capabilities.",
         category: "Cybersecurity";
@@ -224,8 +220,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         innovationLevel: "Advanced";
         marketTrend: "High Growth"};
     // Digital Twin Enterprise Platform;
-    {
-        id: "digital-twin-enterprise";
+    {id: "digital-twin-enterprise";
         title: "Digital Twin Enterprise Platform";
         description: "Comprehensive digital twin platform for simulating, monitoring, and optimizing enterprise operations in real-time.",
         category: "Digital Twins";

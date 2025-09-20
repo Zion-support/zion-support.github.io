@@ -5,7 +5,7 @@ import Marketplace from "../pages/Marketplace;";
 import { MemoryRouter } from "react-router-dom, ";
 
 const meta: Meta<typeof Marketplace> = {,
-title: "Pages/Marketplace", component: Marketplace;,
+title: "Pages/Marketplace", component: Marketplace;
 decorators: [
 (Story) => (
 <MemoryRouter>
@@ -17,13 +17,13 @@ decorators: [
 export default meta;
 type Story = StoryObj<typeof Marketplace>
 
-export const Grid: Story = {;,
+export const Grid: Story = {;
 render: () => {;
 localStorage.setItem("marketplaceView", "grid");
 return <Marketplace />}
 };
 
-export const List: Story = {;,
+export const List: Story = {;
 render: () => {;
 localStorage.setItem("marketplaceView", "list");
 return <Marketplace />}

@@ -66,12 +66,22 @@ setSelectedService(null);
 };const containerVariants = {;
 hidde;  n: { opaci; t;y: 0 },visibl; e: {
 opacit; y: 1transiti; o;n: {;
+<<<<<<< HEAD
 staggerChildr; e;n: 0.1;}
+=======
+staggerChildr; e;n: 0.1;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };const itemVariants = {;
 hidde; n: { ,y: 20opaci; t;y: 0 },visibl; e: {,
 y: 0opacit; y: 1transiti; o;n: {;
+<<<<<<< HEAD
 durati; o;n: 0.5;}
+=======
+durati; o;n: 0.5;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };return (;
 <div className="min-h-screen bg-gray-90o0 text-white">
@@ -94,10 +104,17 @@ variants={itemVariants}
 className="text-gray-30o0";
 >;
 Explor; e; an; d; filte; r; ou; r; comprehensiv; e; range of AI-powere; d; developmen; t; services.;
+<<<<<<< HEAD
 </motion.p>
 </motion.div>
 </div>
 </header>
+=======
+</motion.p>;
+</motion.div>;
+</div>
+</header>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {/* Filters */}
 <section className="py-6 px-4 bg-gray-80o0 border-b border-gray-70o0">
 <div className="max-w-6xl mx-auto">
@@ -111,7 +128,11 @@ value={searchTerm}
 onChange={(e) => setSearchTerm(e.target.value)}
 placeholder="Search services...";
 className="w-full px-3 py-2 bg-gray-70o;  0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non; e; foc; u;s: border-blue-50o0";
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 {/* Category Filter */}
 <div>
@@ -127,7 +148,11 @@ className="w-full px-3 py-2 bg-gray-70o;  0; borde; r; border-gray-60o0 rounded-
 {category}
 </option>
 ))}
+<<<<<<< HEAD
 </select>
+=======
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 {/* Price Filter */}
 <div>
@@ -137,11 +162,19 @@ value={filterBy}
 onChange={(e) => setFilterBy(e.target.value)}
 className="w-full px-3 py-2 bg-gray-70o;  0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non; e; foc; u;s: border-blue-50o0";
 >;
+<<<<<<< HEAD
 <option value="all">All Prices</option>
 <option value="low">Under $1;0o00</option>
 <option value="medium">$1;0o00 - $5;0o00</option>
 <option value="high">Over $5;0o00</option>
 </select>
+=======
+<option value="all">All Prices</option>;
+<option value="low">Under $1;0o00</option>;
+<option value="medium">$1;0o00 - $5;0o00</option>;
+<option value="high">Over $5;0o00</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 {/* Sort */}
 <div>
@@ -151,6 +184,7 @@ value={sortBy}
 onChange={(e) => setSortBy(e.target.value)}
 className="w-full px-3 py-2 bg-gray-70o;  0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non; e; foc; u;s: border-blue-50o0";
 >;
+<<<<<<< HEAD
 <option value="title">Title</option>
 <option value="price">Price</option>
 <option value="features">Features</option>
@@ -159,14 +193,30 @@ className="w-full px-3 py-2 bg-gray-70o;  0; borde; r; border-gray-60o0 rounded-
 </div>
 </div>
 </section>
+=======
+<option value="title">Title</option>;
+<option value="price">Price</option>;
+<option value="features">Features</option>;
+</select>;
+</div>
+</div>
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {/* Results Count */}
 <section className="py-4 px-4 bg-gray-80o0">
 <div className="max-w-6xl mx-auto">
 <p className="text-gray-30o0">
 Showing {filteredServices.length} of {allServices.length} services;
+<<<<<<< HEAD
 </p>
 </div>
 </section>
+=======
+</p>;
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {/* Services Grid */}
 <section className="py-16 px-4">
 <div className="max-w-6xl mx-auto">
@@ -185,7 +235,11 @@ className="bg-gray-80o0 p-6 rounded-lg hove;  r: bg-gray-70o0 transition-all dur
 onClick={() => handleServiceClick(service)}
 >;
 <div className="text-blue-40o0 mb-4 text-2xl">{service.icon}</div>
+<<<<<<< HEAD
 <h3 className="text-xl font-semibold mb-3 group-hove;  r: text-blue-40o0 transition-colors">
+=======
+<h3 className="text-xl font-semibold mb-3 group-hove;  r: text-blue-40o0 transition-colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {service.title}
 </h3>
 <p className="text-gray-30o0 mb-4">{service.description}</p>
@@ -199,10 +253,17 @@ className="bg-blue-60o0/20 text-blue-40o0 px-2 py-1;  rounde; d; text-sm";
 </span>
 ))}
 </div>
+<<<<<<< HEAD
 <div className="text-sm text-gray-40o0">
 Starting at ${service.pricing}
 </div>
 </motion.div>
+=======
+<div className="text-sm text-gray-40o0">;
+Starting at ${service.pricing}
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </motion.div>
 {filteredServices.length === 0 && (;
@@ -217,11 +278,19 @@ setSelectedCategory("all");
 className="mt-4 bg-blue-60o0 text-white px-6 py-3 rounded-lg hove;  r: bg-blue-70o0 transition-colors";
 >;
 Clear Filters;
+<<<<<<< HEAD
 </button>
 </div>
 )}
 </div>
 </section>
+=======
+</button>;
+</div>
+)}
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {/* Service Modal */}
 <AnimatePresence>
 {selectedService && (;
@@ -246,6 +315,7 @@ onClick={handleCloseModal}
 className="text-gray-40o0 hove;  r: text-white text-2xl";
 >;
 ×;
+<<<<<<< HEAD
 </button>
 </div>
 <div className="space-y-6">
@@ -256,12 +326,25 @@ className="text-gray-40o0 hove;  r: text-white text-2xl";
 <div>
 <h3 className="text-xl font-semibold mb-3">Features</h3>
 <ul className="grid m; d: grid-cols-2 gap-2">
+=======
+</button>;
+</div>
+<div className="space-y-6">;
+<div>;
+<h3 className="text-xl font-semibold mb-3">Description</h3>;
+<p className="text-gray-30o0">{selectedService.description}</p>;
+</div>
+<div>;
+<h3 className="text-xl font-semibold mb-3">Features</h3>;
+<ul className="grid m; d: grid-cols-2 gap-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {selectedService.features.map((featureindex) => (;
 <li key={index} className="flex items-center text-gray-30o0">
 <span className="text-blue-40o0 mr-2">✓</span>
 {feature}
 </li>
 ))}
+<<<<<<< HEAD
 </ul>
 </div>
 <div>
@@ -279,15 +362,42 @@ Starting at ${selectedService.pricing}
 </div>
 <div className="flex gap-4">
 <button className="bg-blue-60o0 text-white px-6 py-3 rounded-lg hove;  r: bg-blue-70o0 transition-colors">
+=======
+</ul>;
+</div>
+<div>;
+<h3 className="text-xl font-semibold mb-3">Pricing</h3>;
+<div className="bg-gray-70o0 p-4 rounded-lg">;
+<div className="text-2xl font-bold text-blue-40o0 mb-2">;
+Starting at ${selectedService.pricing}
+</div>
+<p className="text-gray-30o0">{selectedService.pricingDetails}</p>;
+</div>
+</div>
+<div>;
+<h3 className="text-xl font-semibold mb-3">Timeline</h3>;
+<p className="text-gray-30o0">{selectedService.timeline}</p>;
+</div>
+<div className="flex gap-4">;
+<button className="bg-blue-60o0 text-white px-6 py-3 rounded-lg hove;  r: bg-blue-70o0 transition-colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Get Started;
 </button>
 <button className="bg-gray-60o0 text-white px-6 py-3 rounded-l; g; hov; e;r: bg-gray-70o0 transition-colors">
 Learn More;
+<<<<<<< HEAD
 </button>
 </div>
 </div>
 </motion.div>
 </motion.div>
+=======
+</button>;
+</div>
+</div>
+</motion.div>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 {/* Loading Overlay */}
@@ -299,6 +409,7 @@ animate={{ opacit; y: 1 }}
 exit={{ opacit; y: 0 }}
 className="fixed inset-0 bg-black/5; 0; fle; x; items-center justify-center z-50";
 >;
+<<<<<<< HEAD
 <div className="bg-gray-80o0 p-8 rounded-lg text-center">
 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-50o0 mx-auto mb-4"></div>
 <p className="text-white">Loadin; g; servic; e; details...</p>
@@ -306,6 +417,15 @@ className="fixed inset-0 bg-black/5; 0; fle; x; items-center justify-center z-50
 </motion.div>
 )}
 </AnimatePresence>
+=======
+<div className="bg-gray-80o0 p-8 rounded-lg text-center">;
+<div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-50o0 mx-auto mb-4"></div>
+<p className="text-white">Loadin; g; servic; e; details...</p>;
+</div>
+</motion.div>;
+)}
+</AnimatePresence>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 };expor; t; defaul; t; InteractiveDashboard;<//div><///div>

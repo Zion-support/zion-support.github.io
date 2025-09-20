@@ -22,6 +22,6 @@ size="lg"
           </div>
         </section>
       </main>
-    </>
+</>
   )
 }

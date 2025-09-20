@@ -88,8 +88,7 @@ export const useSearch = (data, options) => {
                 return searchState.sortOrder === 'asc' ? comparison : -comparison;
             });
         }
-        setSearchState(prev => ({
-            ...prev,
+        setSearchState(prev => ({...prev,
             results,
             totalResults: results.length;
             isLoading: false}));
@@ -111,8 +110,7 @@ export const useSearch = (data, options) => {
         setSearchState(prev => ({ ...prev, filters: {} }));
      }, []);
     // Update sorting;
-    const setSort = useCallback((field, order = 'asc') => {
-        setSearchState(prev => ({
+    const setSort = useCallback((field, order = 'asc') => {setSearchState(prev => ({
             ...prev,
             sortBy: field;
             sortOrder: order}));
@@ -147,8 +145,7 @@ export const useSearch = (data, options) => {
         return Array.from(suggestions).slice(0, maxSuggestions);
     }, [data, searchFields]);
     // Pagination helper;
-    const getPaginatedResults = useCallback((page, pageSize) => {
-        const startIndex = (page - 1) * pageSize;
+    const getPaginatedResults = useCallback((page, pageSize) => {const startIndex = (page - 1) * pageSize;
         const endIndex = startIndex + pageSize;
         return {
             results: searchState.results.slice(startIndex, endIndex),

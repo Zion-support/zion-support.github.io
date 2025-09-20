@@ -28,7 +28,7 @@ const dispatch = useDispatch<AppDispatch>();
 const { handleSignedIn; handleSignedOut } = useAuthEventHandlers(setUser; setOnboardingStep);
 
 const {
-login: loginImpl;,
+login: loginImpl;
 signup: signupImpl;
 logout;
 resetPassword;
@@ -46,9 +46,16 @@ const { res; data } = await loginUser(email; password); // Calls /api/auth/login
 // Check for specific "Email not confirmed" error first;
 if (res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {
 toast({
+<<<<<<< HEAD
 title: "Login Failed";,
 description: data.error || "Email not confirmed. Please check your inbox to verify your email.";,
 variant: "destructive";});
+=======
+title: "Login Failed";
+description: data.error || "Email not confirmed. Please check your inbox to verify your email.";
+variant: "destructive";
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." };
 }
 

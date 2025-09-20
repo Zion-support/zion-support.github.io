@@ -197,8 +197,12 @@ export const PerformanceOptimizer = ({ children }) => {
                         }
                     }
                 });
+<<<<<<< HEAD
             },  {
                 rootMargi, n: '50px',
+=======
+            },  {rootMargi, n: '50px',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     threshol, d: 0.1});
             // Observe all images with data-src;
             const lazyImages = document.querySelectorAll('img[dat,  a-s, r, c]');

@@ -8,7 +8,7 @@ id: "ai-automation-suite",
 title: "AI Process Automation Suite",
 description: "Complete workflow automation solution using AI to streamline business processes; reduce manual tasks by 80%, and increase operational efficiency. Includes process mapping; RPA integration; and analytics dashboard.",
 category: "AI Automation",
-price: 2999;,
+price: 2999;
 currency: "$",
 tags: ["Process Automation", "RPA", "Workflow Optimization", "AI"],
 author: {,
@@ -20,13 +20,19 @@ images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.9; reviewCount: 156; featured: true; location: "Global",
 availability: "2-3 Weeks",
+<<<<<<< HEAD
 aiScore: 96;},
 {
 id: "ai-customer-insights",
+=======
+aiScore: 96;
+},
+{id: "ai-customer-insights",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "AI-Powered Customer Insights Platform",
 description: "Advanced customer behavior analysis using machine learning to predict churn; identify upsell opportunities; and personalize customer experiences. Integrates with CRM systems and provides actionable recommendations.",
 category: "Customer Analytics",
-price: 1899;,
+price: 1899;
 currency: "$",
 tags: ["Customer Analytics", "Predictive Analytics", "CRM Integration", "Personalization"],
 author: {,
@@ -35,16 +41,22 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-20T14:30:00.000Z",
-rating: 4.8; reviewCount: 89;,
+rating: 4.8; reviewCount: 89;
 location: "Global",
 availability: "1-2 Weeks",
+<<<<<<< HEAD
 aiScore: 93;},
 {
 id: "ai-content-optimization",
+=======
+aiScore: 93;
+},
+{id: "ai-content-optimization",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "AI Content Optimization Engine",
 description: "Intelligent content optimization tool that analyzes and improves SEO; readability; and engagement metrics. Uses NLP to suggest improvements; keyword optimization; and content structure recommendations.",
 category: "Content Marketing",
-price: 799;,
+price: 799;
 currency: "$",
 tags: ["Content Optimization", "SEO", "NLP", "Marketing"],
 author: {,
@@ -53,18 +65,22 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-25T09:15:00.000Z",
-rating: 4.7; reviewCount: 234;,
+rating: 4.7; reviewCount: 234;
 location: "Global",
 availability: "Immediate",
+<<<<<<< HEAD
 aiScore: 91;},
+=======
+aiScore: 91;
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Cloud & Infrastructure Services;
-{
-id: "multi-cloud-orchestration",
+{id: "multi-cloud-orchestration",
 title: "Multi-Cloud Orchestration Platform",
 description: "Unified management platform for AWS; Azure; and Google Cloud with automated cost optimization; security compliance monitoring; and disaster recovery orchestration. Reduces cloud costs by 25-40%.",
 category: "Cloud Management",
-price: 4499;,
+price: 4499;
 currency: "$",
 tags: ["Multi-Cloud", "Cost Optimization", "Security", "Disaster Recovery"],
 author: {,
@@ -75,13 +91,19 @@ images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=form
 createdAt: "2024-01-30T11:45:00.000Z",
 rating: 4.9; reviewCount: 78; featured: true; location: "Global",
 availability: "3-4 Weeks",
+<<<<<<< HEAD
 aiScore: 94;},
 {
 id: "edge-computing-solution",
+=======
+aiScore: 94;
+},
+{id: "edge-computing-solution",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "Edge Computing Infrastructure Solution",
 description: "Distributed edge computing platform for IoT devices; reducing latency and bandwidth costs. Includes edge node management; data processing; and real-time analytics capabilities.",
 category: "Edge Computing",
-price: 5999;,
+price: 5999;
 currency: "$",
 tags: ["Edge Computing", "IoT", "Low Latency", "Real-time Analytics"],
 author: {,
@@ -90,18 +112,22 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-05T13:20:00.000Z",
-rating: 4.8; reviewCount: 45;,
+rating: 4.8; reviewCount: 45;
 location: "Global",
 availability: "4-6 Weeks",
+<<<<<<< HEAD
 aiScore: 92;},
+=======
+aiScore: 92;
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Cybersecurity Services;
-{
-id: "ai-threat-detection",
+{id: "ai-threat-detection",
 title: "AI-Powered Threat Detection System",
 description: "Next-generation cybersecurity platform using machine learning to detect and respond to threats in real-time. Includes behavioral analysis; anomaly detection; and automated incident response.",
 category: "Cybersecurity",
-price: 6999;,
+price: 6999;
 currency: "$",
 tags: ["Threat Detection", "Machine Learning", "Incident Response", "Behavioral Analysis"],
 author: {,
@@ -112,13 +138,19 @@ images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=form
 createdAt: "2024-02-10T15:30:00.000Z",
 rating: 4.9; reviewCount: 112; featured: true; location: "Global",
 availability: "3-4 Weeks",
+<<<<<<< HEAD
 aiScore: 95;},
 {
 id: "zero-trust-security",
+=======
+aiScore: 95;
+},
+{id: "zero-trust-security",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "Zero Trust Security Implementation",
 description: "Complete zero trust security framework implementation including identity verification; device trust scoring; and continuous monitoring. Reduces security breaches by 90% and simplifies compliance.",
 category: "Security Framework",
-price: 8999;,
+price: 8999;
 currency: "$",
 tags: ["Zero Trust", "Identity Management", "Compliance", "Security Framework"],
 author: {,
@@ -127,18 +159,22 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-15T10:15:00.000Z",
-rating: 4.8; reviewCount: 67;,
+rating: 4.8; reviewCount: 67;
 location: "Global",
 availability: "6-8 Weeks",
+<<<<<<< HEAD
 aiScore: 93;},
+=======
+aiScore: 93;
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Data & Analytics Services;
-{
-id: "real-time-data-pipeline",
+{id: "real-time-data-pipeline",
 title: "Real-Time Data Pipeline Platform",
 description: "Streaming data processing platform for real-time analytics; event processing; and data integration. Supports Apache Kafka; Apache Flink; and provides real-time dashboards and alerts.",
 category: "Data Engineering",
-price: 3499;,
+price: 3499;
 currency: "$",
 tags: ["Real-time Processing", "Data Pipeline", "Streaming", "Analytics"],
 author: {,
@@ -147,16 +183,22 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-20T12:00:00.000Z",
-rating: 4.7; reviewCount: 89;,
+rating: 4.7; reviewCount: 89;
 location: "Global",
 availability: "2-3 Weeks",
+<<<<<<< HEAD
 aiScore: 90;},
 {
 id: "predictive-maintenance-ai",
+=======
+aiScore: 90;
+},
+{id: "predictive-maintenance-ai",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "AI-Powered Predictive Maintenance",
 description: "Machine learning solution for predicting equipment failures and optimizing maintenance schedules. Reduces downtime by 60% and maintenance costs by 40% through intelligent scheduling.",
 category: "Predictive Analytics",
-price: 5499;,
+price: 5499;
 currency: "$",
 tags: ["Predictive Maintenance", "IoT", "Machine Learning", "Equipment Optimization"],
 author: {,
@@ -165,18 +207,22 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-25T14:45:00.000Z",
-rating: 4.8; reviewCount: 56;,
+rating: 4.8; reviewCount: 56;
 location: "Global",
 availability: "4-5 Weeks",
+<<<<<<< HEAD
 aiScore: 92;},
+=======
+aiScore: 92;
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Business Intelligence & Reporting;
-{
-id: "ai-business-intelligence",
+{id: "ai-business-intelligence",
 title: "AI-Enhanced Business Intelligence Suite",
 description: "Advanced BI platform with natural language querying; automated insights generation; and predictive analytics. Includes customizable dashboards; automated reporting; and mobile access.",
 category: "Business Intelligence",
-price: 2499;,
+price: 2499;
 currency: "$",
 tags: ["Business Intelligence", "Natural Language", "Predictive Analytics", "Automated Insights"],
 author: {,
@@ -187,15 +233,19 @@ images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&
 createdAt: "2024-03-01T09:30:00.000Z",
 rating: 4.9; reviewCount: 178; featured: true; location: "Global",
 availability: "1-2 Weeks",
+<<<<<<< HEAD
 aiScore: 94;},
+=======
+aiScore: 94;
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Development & DevOps Services;
-{
-id: "ai-code-review",
+{id: "ai-code-review",
 title: "AI-Powered Code Review Assistant",
 description: "Intelligent code review tool that analyzes code quality; security vulnerabilities; and performance issues. Integrates with GitHub; GitLab; and provides detailed recommendations and automated fixes.",
 category: "Developer Tools",
-price: 1299;,
+price: 1299;
 currency: "$",
 tags: ["Code Review", "Code Quality", "Security", "Performance Analysis"],
 author: {,
@@ -204,16 +254,22 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-03-05T11:20:00.000Z",
-rating: 4.8; reviewCount: 234;,
+rating: 4.8; reviewCount: 234;
 location: "Global",
 availability: "Immediate",
+<<<<<<< HEAD
 aiScore: 93;},
 {
 id: "devops-automation",
+=======
+aiScore: 93;
+},
+{id: "devops-automation",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "DevOps Automation Platform",
 description: "Complete CI/CD automation platform with infrastructure as code; automated testing; deployment orchestration; and monitoring. Reduces deployment time by 80% and improves reliability.",
 category: "DevOps",
-price: 3999;,
+price: 3999;
 currency: "$",
 tags: ["CI/CD", "Infrastructure as Code", "Automation", "Monitoring"],
 author: {,
@@ -222,18 +278,22 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-03-10T13:45:00.000Z",
-rating: 4.8; reviewCount: 98;,
+rating: 4.8; reviewCount: 98;
 location: "Global",
 availability: "2-3 Weeks",
+<<<<<<< HEAD
 aiScore: 91;},
+=======
+aiScore: 91;
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Digital Transformation Services;
-{
-id: "digital-transformation-consulting",
+{id: "digital-transformation-consulting",
 title: "Digital Transformation Strategy & Implementation",
 description: "End-to-end digital transformation consulting including strategy development; technology assessment; change management; and implementation support. Helps businesses modernize operations and improve customer experience.",
 category: "Digital Transformation",
-price: 15999;,
+price: 15999;
 currency: "$",
 tags: ["Digital Transformation", "Strategy", "Change Management", "Technology Assessment"],
 author: {,
@@ -244,15 +304,19 @@ images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=form
 createdAt: "2024-03-15T10:00:00.000Z",
 rating: 4.9; reviewCount: 45; featured: true; location: "Global",
 availability: "8-12 Weeks",
+<<<<<<< HEAD
 aiScore: 95;},
+=======
+aiScore: 95;
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Industry-Specific Solutions;
-{
-id: "healthcare-ai-platform",
+{id: "healthcare-ai-platform",
 title: "Healthcare AI Analytics Platform",
 description: "HIPAA-compliant AI platform for healthcare analytics; patient outcome prediction; and operational optimization. Includes clinical decision support; resource allocation; and compliance monitoring.",
 category: "Healthcare Technology",
-price: 12999;,
+price: 12999;
 currency: "$",
 tags: ["Healthcare", "HIPAA", "Clinical Analytics", "Patient Outcomes"],
 author: {,
@@ -261,16 +325,22 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-03-20T14:30:00.000Z",
-rating: 4.9; reviewCount: 34;,
+rating: 4.9; reviewCount: 34;
 location: "Global",
 availability: "6-8 Weeks",
+<<<<<<< HEAD
 aiScore: 94;},
 {
 id: "fintech-compliance-ai",
+=======
+aiScore: 94;
+},
+{id: "fintech-compliance-ai",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "FinTech Compliance & Fraud Detection AI",
 description: "AI-powered financial compliance monitoring and fraud detection system. Includes AML screening; KYC verification; transaction monitoring; and regulatory reporting automation.",
 category: "Financial Technology",
-price: 8999;,
+price: 8999;
 currency: "$",
 tags: ["FinTech", "Compliance", "Fraud Detection", "AML", "KYC"],
 author: {,
@@ -279,18 +349,22 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-03-25T16:15:00.000Z",
-rating: 4.8; reviewCount: 67;,
+rating: 4.8; reviewCount: 67;
 location: "Global",
 availability: "4-6 Weeks",
+<<<<<<< HEAD
 aiScore: 93;},
+=======
+aiScore: 93;
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Emerging Technology Services;
-{
-id: "blockchain-enterprise",
+{id: "blockchain-enterprise",
 title: "Enterprise Blockchain Solutions",
 description: "Custom blockchain development for supply chain transparency; smart contracts; and decentralized applications. Includes private blockchain networks; smart contract development; and integration services.",
 category: "Blockchain",
-price: 19999;,
+price: 19999;
 currency: "$",
 tags: ["Blockchain", "Smart Contracts", "Supply Chain", "DApps"],
 author: {,
@@ -301,13 +375,19 @@ images: ["https://images.unsplash.com/photo-1639762681485-074d7f9d5b1b?auto=form
 createdAt: "2024-03-30T12:00:00.000Z",
 rating: 4.9; reviewCount: 23; featured: true; location: "Global",
 availability: "8-12 Weeks",
+<<<<<<< HEAD
 aiScore: 95;},
 {
 id: "quantum-computing-readiness",
+=======
+aiScore: 95;
+},
+{id: "quantum-computing-readiness",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "Quantum Computing Readiness Assessment",
 description: "Comprehensive assessment of business readiness for quantum computing adoption. Includes use case identification; technology evaluation; and implementation roadmap for quantum advantage.",
 category: "Quantum Computing",
-price: 14999;,
+price: 14999;
 currency: "$",
 tags: ["Quantum Computing", "Technology Assessment", "Strategic Planning", "Innovation"],
 author: {,
@@ -316,16 +396,22 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-04-01T09:45:00.000Z",
-rating: 4.8; reviewCount: 12;,
+rating: 4.8; reviewCount: 12;
 location: "Global",
 availability: "4-6 Weeks",
+<<<<<<< HEAD
 aiScore: 94;},
 {
 id: "ai-website-personalization",
+=======
+aiScore: 94;
+},
+{id: "ai-website-personalization",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "AI Website Personalization",
 description: "Dynamic on-site personalization that adapts content; offers; and CTAs per visitor segment using first-party data and ML scoring.",
 category: "Growth & CRO",
-price: 1299;,
+price: 1299;
 currency: "$",
 tags: ["Personalization", "CRO", "A/B Testing", "Segmentation"],
 author: {,
@@ -336,16 +422,22 @@ images: [
 "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-04-05T09:00:00.000Z",
-rating: 4.7; reviewCount: 76;,
+rating: 4.7; reviewCount: 76;
 location: "Global",
 availability: "1-2 Weeks",
+<<<<<<< HEAD
 aiScore: 90;},
 {
 id: "managed-help-desk",
+=======
+aiScore: 90;
+},
+{id: "managed-help-desk",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "Managed Help Desk (24/7)",
 description: "End-user IT support with SLA-backed response times; onboarding; remote assistance; and monthly reporting.",
 category: "Managed IT",
-price: 49;,
+price: 49;
 currency: "$",
 tags: ["Help Desk", "SLA", "Support", "ITSM"],
 author: {,
@@ -356,16 +448,22 @@ images: [
 "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-04-07T10:30:00.000Z",
-rating: 4.8; reviewCount: 142;,
+rating: 4.8; reviewCount: 142;
 location: "USA & Remote",
 availability: "Immediate",
+<<<<<<< HEAD
 aiScore: 85;},
 {
 id: "managed-endpoint-security",
+=======
+aiScore: 85;
+},
+{id: "managed-endpoint-security",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "Managed Endpoint Security (NGAV/EDR)",
 description: "Next-gen antivirus and endpoint detection and response with central monitoring; threat hunting; and automated quarantine.",
 category: "Cybersecurity",
-price: 7;,
+price: 7;
 currency: "$",
 tags: ["EDR", "AV", "Threat Hunting", "Monitoring"],
 author: {,
@@ -376,16 +474,22 @@ images: [
 "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-04-09T12:00:00.000Z",
-rating: 4.7; reviewCount: 98;,
+rating: 4.7; reviewCount: 98;
 location: "Global",
 availability: "Immediate",
+<<<<<<< HEAD
 aiScore: 88;},
 {
 id: "review-responder-ai",
+=======
+aiScore: 88;
+},
+{id: "review-responder-ai",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "ReviewResponder.ai",
 description: "Auto-generate professional responses to customer reviews across Google; Yelp; and Facebook with tone controls and approvals.",
 category: "Micro SaaS",
-price: 19;,
+price: 19;
 currency: "$",
 tags: ["Reputation", "Social", "Automation", "AI Copy"],
 author: {,
@@ -396,16 +500,22 @@ images: [
 "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-04-11T08:45:00.000Z",
-rating: 4.6; reviewCount: 211;,
+rating: 4.6; reviewCount: 211;
 location: "Global",
 availability: "Immediate",
+<<<<<<< HEAD
 aiScore: 87;},
 {
 id: "invoice-sync",
+=======
+aiScore: 87;
+},
+{id: "invoice-sync",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "InvoiceSync (AI for AP)",
 description: "AI-assisted invoice capture; reconciliation; duplicate detection; and auto-reminders integrated with QuickBooks and Xero.",
 category: "Micro SaaS",
-price: 15;,
+price: 15;
 currency: "$",
 tags: ["AP", "OCR", "Accounting", "Automation"],
 author: {,
@@ -416,16 +526,22 @@ images: [
 "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-04-13T09:10:00.000Z",
-rating: 4.5; reviewCount: 67;,
+rating: 4.5; reviewCount: 67;
 location: "Global",
 availability: "Immediate",
+<<<<<<< HEAD
 aiScore: 86;},
 {
 id: "uptime-pulse",
+=======
+aiScore: 86;
+},
+{id: "uptime-pulse",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "UptimePulse (Monitoring)",
 description: "Global uptime; SSL; DNS; and performance monitoring with Core Web Vitals and public status pages.",
 category: "Micro SaaS",
-price: 9;,
+price: 9;
 currency: "$",
 tags: ["Monitoring", "Uptime", "Status Page", "Alerts"],
 author: {,
@@ -436,24 +552,34 @@ images: [
 "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-04-15T11:25:00.000Z",
-rating: 4.6; reviewCount: 83;,
+rating: 4.6; reviewCount: 83;
 location: "Global",
 availability: "Immediate",
+<<<<<<< HEAD
 aiScore: 84;},
 {
 id: "data-quality-observability",
+=======
+aiScore: 84;
+},
+{id: "data-quality-observability",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "Data Quality & Observability",
 description: "End-to-end data quality monitoring with anomaly detection; lineage; SLAs; and incident workflows for modern data stacks.",
 category: "Data Platform",
-price: 2799;,
+price: 2799;
 currency: "$",
 tags: ["Data Quality", "Lineage", "SLAs", "Observability"]},
+<<<<<<< HEAD
 {
 id: "mlops-platform",
+=======
+{id: "mlops-platform",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "Managed MLOps Platform",
 description: "End-to-end model lifecycle management with CI/CD for ML; feature store; model registry; automated evaluations; and safe rollout.",
 category: "AI Platform",
-price: 7999;,
+price: 7999;
 currency: "$",
 tags: ["MLOps", "Model Registry", "Feature Store", "CI/CD"],
 author: {,
@@ -466,13 +592,19 @@ images: [
 createdAt: "2024-03-05T10:00:00.000Z",
 rating: 4.8; reviewCount: 64; featured: false; location: "Global",
 availability: "4-6 Weeks",
+<<<<<<< HEAD
 aiScore: 94;},
 {
 id: "finops-cost-optimization",
+=======
+aiScore: 94;
+},
+{id: "finops-cost-optimization",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "Cloud FinOps Cost Optimization",
 description: "Data-driven cloud spend optimization across AWS; Azure; and GCP with continuous rightsizing; commitment planning; and anomaly detection.",
 category: "Cloud Management",
-price: 2499;,
+price: 2499;
 currency: "$",
 tags: ["FinOps", "Cost Optimization", "AWS", "Azure", "GCP"],
 author: {,
@@ -483,16 +615,22 @@ images: [
 "https://images.unsplash.com/photo-1508711043292-8f5023f1c3d9?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-03-12T09:30:00.000Z",
-rating: 4.7; reviewCount: 102;,
+rating: 4.7; reviewCount: 102;
 location: "Global",
 availability: "2-3 Weeks",
+<<<<<<< HEAD
 aiScore: 88;},
 {
 id: "soc2-compliance-automation",
+=======
+aiScore: 88;
+},
+{id: "soc2-compliance-automation",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "SOC 2 Compliance Automation",
 description: "Automated evidence collection; control monitoring; policy management; and audit readiness with mapped tasks and dashboards.",
 category: "Security & Compliance",
-price: 3999;,
+price: 3999;
 currency: "$",
 tags: ["SOC 2", "Compliance", "Audit", "GRC"],
 author: {,
@@ -505,13 +643,19 @@ images: [
 createdAt: "2024-03-18T11:00:00.000Z",
 rating: 4.9; reviewCount: 41; featured: true; location: "Global",
 availability: "3-5 Weeks",
+<<<<<<< HEAD
 aiScore: 90;},
 {
 id: "ai-sales-sdr",
+=======
+aiScore: 90;
+},
+{id: "ai-sales-sdr",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "AI Sales SDR Automation",
 description: "Outbound research; personalized messaging; meeting scheduling; and CRM updates driven by AI agents with human-in-the-loop.",
 category: "Sales Automation",
-price: 1299;,
+price: 1299;
 currency: "$",
 tags: ["SDR", "Outreach", "Personalization", "CRM"],
 author: {,
@@ -522,16 +666,22 @@ images: [
 "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-03-22T08:15:00.000Z",
-rating: 4.6; reviewCount: 133;,
+rating: 4.6; reviewCount: 133;
 location: "Global",
 availability: "Immediate",
+<<<<<<< HEAD
 aiScore: 89;},
 {
 id: "data-governance-catalog",
+=======
+aiScore: 89;
+},
+{id: "data-governance-catalog",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "Data Governance & Catalog",
 description: "Centralized data catalog with lineage; PII detection; access workflows; and policy enforcement for compliance and productivity.",
 category: "Data Governance",
-price: 2999;,
+price: 2999;
 currency: "$",
 tags: ["Data Catalog", "Lineage", "PII", "Access Control"],
 author: {,
@@ -542,16 +692,22 @@ images: [
 "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-03-28T13:40:00.000Z",
-rating: 4.8; reviewCount: 58;,
+rating: 4.8; reviewCount: 58;
 location: "Global",
 availability: "3-4 Weeks",
+<<<<<<< HEAD
 aiScore: 91;},
 {
 id: "llm-evaluation-lab",
+=======
+aiScore: 91;
+},
+{id: "llm-evaluation-lab",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "LLM Evaluation & Safety Lab",
 description: "Red teaming; prompt-injection hardening; grounding; and automated evals for accuracy; bias; toxicity; and safety.",
 category: "AI Safety",
-price: 4999;,
+price: 4999;
 currency: "$",
 tags: ["LLM", "Safety", "Evaluations", "Red Teaming"],
 author: {,
@@ -564,7 +720,12 @@ images: [
 createdAt: "2024-04-02T10:05:00.000Z",
 rating: 4.9; reviewCount: 27; featured: true; location: "Global",
 availability: "2-3 Weeks",
+<<<<<<< HEAD
 aiScore: 96;}
+=======
+aiScore: 96;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ];
 
 // Service categories for filtering;

@@ -1,13 +1,13 @@
-import React { useState useEffect } from "react",
+import React { useState useEffect } from "react",;
 import Link from 'next/link';
-import { useRouter,, ,  } from 'next/router';
-import { format,  } from "date-fns",
-import { useAuth,  } from "@/hooks/useAuth",
-import { useProjects,  } from "@/hooks/useProjects",
-import { SEO,  } from "@/components/SEO",
-import { ProtectedRoute,  } from "@/components/ProtectedRoute",
-import { Project,, ProjectStatus,  } from "@/types/projects",
-import { Button,  } from "@/components/ui/button";
+import { useRouter } from "next/router";
+import { format } from "date-fns";,
+import { useAuth } from "@/hooks/useAuth";,
+import { useProjects } from "@/hooks/useProjects";,
+import { SEO } from "@/components/SEO";,
+import { ProtectedRoute } from "@/components/ProtectedRoute";,
+import { Project, ProjectStatus } from "@/types/projects";,
+import { Button } from "@/components/ui/button";
 import { logErrorToProduction } from '@/utils/productionLogger';
 import {
 return (
@@ -66,7 +66,7 @@ variant='outline'
                   >
                     <MessageSquare className='mr-2 h-4 w-4' /> Request Changes
                   </Button>
-                </>
+</>
               )}
               {(isClient |isTalent) && project.status === 'in_progress' && (
                 <AlertDialog>
@@ -308,8 +308,13 @@ placeholder='Add a note or update to the project...'
                             onChange={e => setNewNote(e.target.value)}
                             className='min-h-[100px] mb-2'                          />
                           <Button
+<<<<<<< HEAD:temp_broken_pages_all/ProjectDetails.tsx
 onClick = {handleSubmitNote,}
                             disabled = {!newNote.trim() |isSubmittingNote,}
+=======
+onClick = {handleSubmitNote}
+                            disabled = {!newNote.trim() |isSubmittingNote}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ProjectDetails.tsx
                           >
                             {isSubmittingNote ? 'Posting...' : 'Post Note'}
                           </Button>
@@ -470,15 +475,13 @@ canceled.
           </div>
         </div>
       </main>
-    </>
+</>
   )
 }
 setIsSubmittingNote (true)
-try {
-  if (error) throw error
-//Refresh notes,
-}catch (err: any) {'
-  logErrorToProduction ('Error adding note:', {
+try {if (error) throw error
+//Refresh notes}catch (err: any) {';
+  logErrorToProduction ('Error adding note:', {;
   data: err;
 })
 toast ({
@@ -501,9 +504,7 @@ case "changes requested": return <Badge variant="secondary">Changes Requested</B
 case "in progress": return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>;"
 case "completed": return <Badge variant="default">Completed</Badge>;"
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;"
-default: return <Badge variant="outline"> {
-  status,
-}</Badge>
+default: return <Badge variant="outline"> {status}</Badge>
 };'"
 <p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={"
   () => router.push ("/dashboard")
@@ -529,28 +530,17 @@ default: return <Badge variant="outline"> {
 }</Avatar> </div>) ) ) : (<div className=" text-center py-8"> <MessageSquare className=" h-8 w-8 text-muted-foreground mx-auto mb-2"/> <p className=" text-muted-foreground"> No notes yet. Add the first note to this project. </p> </div>)
 }</div> {"
   isOfferAccepted && (<div> <Textarea placeholder=" Add a note or update to the project..."value= {
-  newNote,
-}/> <Button onClick={
-  handleSubmitNote,
-}disabled= {
-  !newNote.trim () |isSubmittingNote,
-}> </Button> </div>) "
+  newNote}/> <Button onClick={handleSubmitNote}disabled= {!newNote.trim () |isSubmittingNote}> </Button> </div>) "
 }</div> </CardContent> </Card> </TabsContent> </TabsContent> </Tabs> </div> <div className=" order-1 lg:order-2 lg:col-span-1"> <Card> <CardHeader> <CardTitle>Project Participants</CardTitle> </CardHeader> <CardContent> />) : (<User className=" h-6 w-6"/>)
-}</Avatar> <div> onClick={
-  () => router.push (`/messages?talentId=$ {
-  project.talent id,
-}`) "
+}</Avatar> <div> onClick={() => router.push (`/messages?talentId=$ {
+  project.talent id}`) "
 }> <MessageSquare className=" mr-1 h-3 w-3"/> Message </Button>) "
 }</div> </div> />) : (<User className=" h-6 w-6"/>)
-}</Avatar> <div> onClick={
-  () => router.push (`/messages?clientId=$ {
-  project.client id,
-}`) "
+}</Avatar> <div> onClick={() => router.push (`/messages?clientId=$ {
+  project.client id}`) "
 }> <MessageSquare className=" mr-1 h-3 w-3"/> Message </Button>) "
-}</div> </div> </div> </CardContent> </Card> <CardHeader> <CardTitle>Project Status</CardTitle> </CardHeader> <CardContent> </span> </div> </div> </CardContent> </p> <Button variant=" outline"onClick={
-  () => router.push (`/messages?talentId=$ {
-  project.talent id,
-}`) "
+}</div> </div> </div> </CardContent> </Card> <CardHeader> <CardTitle>Project Status</CardTitle> </CardHeader> <CardContent> </span> </div> </div> </CardContent> </p> <Button variant=" outline"onClick={() => router.push (`/messages?talentId=$ {
+  project.talent id}`) "
 }className=" w-full"> <MessageSquare className=" mr-2 h-4 w-4" /> Discuss Changes </Button> </CardFooter>)
 }Waiting for the talent to accept your offer. </p> </CardFooter>)
 }</p> </CardFooter>)
@@ -608,6 +598,6 @@ const ProjectDetails = () => {
                 Contact Us
               </Link>
             </div>
-    </>
-  )
-}
+</>
+  );
+};

@@ -22,7 +22,12 @@ const initialState = { items: [] };
             return { items: state.items.filter(i => i.id !== action.payload) };
     case 'CLEAR_CART':
             return { items: [] };
+<<<<<<< HEAD
     default: return state;}
+=======
+    default: return state;
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 const CartContext = createContext(undefined);
 export function useCart() {
@@ -65,8 +70,12 @@ export function CartProvider({ children }) {
     useEffect(() => {
         safeStorage.setItem(cartKey, JSON.stringify(state.items));
     }, [state.items, cartKey]);
+<<<<<<< HEAD
     const value = {
         items: state.items;
+=======
+    const value = {items: state.items;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         dispatch};
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

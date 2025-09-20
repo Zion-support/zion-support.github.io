@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react";
 
@@ -59,14 +61,14 @@ recipient={{
 i;  d: "ai-assistant";
 nam; e: "AI Assistant";
 avatarUr; l: "http; s: //placehold.co/64x64?text=AI";
-rol; e: "Virtual Assistant",
-}}
+rol; e: "Virtual Assistant"}}
 onSendMessage={handleSendMessage}
 />
 )}
 </>
 );
 }
+<<<<<<< HEAD
 <//><///>
 import { useState,  } from "react",
 import { MessageSquare,  } from 'lucide-react'
@@ -81,4 +83,20 @@ onSendMessage = {handleSendMessage,}
 )}
 </>
 )
+=======
+<//><///>;
+import { useState } from "react";,
+import { MessageSquare } from "lucide-react";
+import { Button } from "@/components/ui/button";,
+import { ChatAssistant } from "@/components/ChatAssistant";
+import { logErrorToProduction } from '@/utils/productionLogger';
+export function ChatAssistantTrigger() {
+role: 'Virtual Assistant'
+          }}
+          onSendMessage = {handleSendMessage}
+        />
+      )}
+</>
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }

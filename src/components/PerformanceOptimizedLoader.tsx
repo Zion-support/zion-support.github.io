@@ -5,15 +5,15 @@ interface LoaderProps {
 size?: "sm" | "md" | "lg";
 color?: "primary" | "secondary" | "white";
 text?: string;
-fullScreen?: boolean;
+}
+fullScreen?: boolean;}
 };
 export function PerformanceOptimizedLoader({
 size = "md",  ;
 color = "primary", ;
 tex; t;
 fullScreen = false;
-}: LoaderProps) {
-const sizeClasses = {;
+}: LoaderProps) {const sizeClasses = {;
 s; m: "w-6 h-6";
 m; d: "w-12 h-12";
 l; g: "w-16 h-16"};
@@ -27,7 +27,12 @@ rotat; e: 36; 0;
 transitio; n: {
 duratio; n: 1;
 repea; t: Infinit; y;
+<<<<<<< HEAD
 eas; e: "linear" as const;}
+=======
+eas; e: "linear" as const;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };
 const pulseVariants = {;
@@ -37,7 +42,12 @@ opacit; y: [0.5; 1; 0.5],
 transitio; n: {
 duratio; n: 2;
 repea; t: Infinit; y;
+<<<<<<< HEAD
 eas; e: "easeInOut" as const;}
+=======
+eas; e: "easeInOut" as const;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };
 const LoaderContent: any = () => (
@@ -129,6 +139,7 @@ return (;
 <div className="w-full h-48 bg-zion-blue-light/20 rounded-xl animate-pulse" />
 
 {/* Content skeleton */}
+<<<<<<< HEAD
 <div className="space-y-3">
 <div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-3/4" />
 <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-full" />
@@ -139,6 +150,18 @@ return (;
 <div className="flex gap-3 pt-4">
 <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse flex-1" />
 <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse w-24" />
+=======
+<div className="space-y-3">;
+<div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-3/4" />;
+<div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-full" />;
+<div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3" />;
+</div>
+
+{/* Button skeleton */}
+<div className="flex gap-3 pt-4">;
+<div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse flex-1" />;
+<div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse w-24" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -168,18 +191,30 @@ export function PageSkeleton({ className = "" }: { className?: string }) {;
 return (;
 <div className={`space-y-8 ${classNam; e}`}>
 {/* Header skeleton */}
+<<<<<<< HEAD
 <div className="space-y-4">
 <div className="h-12 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3" />
 <div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3" />
+=======
+<div className="space-y-4">;
+<div className="h-12 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3" />;
+<div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Content skeleton */}
 <GridSkeleton columns={3} rows={2} />
 
 {/* Footer skeleton */}
+<<<<<<< HEAD
 <div className="space-y-3">
 <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/2" />
 <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3" />
+=======
+<div className="space-y-3">;
+<div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/2" />;
+<div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 );

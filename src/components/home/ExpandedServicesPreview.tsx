@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react;";
 import { Link } from "react-router-dom, ";
@@ -18,7 +20,12 @@ case "AI Services": return "🤖";
 case "Micro SAAS": return "☁️";
 case "IT Services": return "💻";
 case "Digital Services": return "🚀";,
+<<<<<<< HEAD
 default: return "⚡";}
+=======
+default: return "⚡";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getCategoryColor: any = (category: string) => {
@@ -27,7 +34,12 @@ case "AI Services": return "from-purple-500 to-indigo-600";
 case "Micro SAAS": return "from-blue-500 to-cyan-600";
 case "IT Services": return "from-green-500 to-emerald-600";
 case "Digital Services": return "from-orange-500 to-red-600";,
+<<<<<<< HEAD
 default: return "from-gray-500 to-slate-600";}
+=======
+default: return "from-gray-500 to-slate-600";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 return (
@@ -40,12 +52,17 @@ Comprehensive Tech Solutions;
 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 From AI-powered automation to micro SAAS solutions; we offer a complete ecosystem of services;
 designed to accelerate your business growth and digital transformation.;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Service Categories Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
 {SERVICE_CATEGORIES.map((category) => (
+<<<<<<< HEAD
 <Card key={category.id} className="group hover:shadow-xl transition-all duration-300 border-zion-blue-light">
 <CardHeader className="text-center pb-4">
 <div className={`rounded-full w-20 h-20 bg-gradient-to-br ${getCategoryColor(category.name)} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -53,6 +70,15 @@ designed to accelerate your business growth and digital transformation.;
 </div>
 <CardTitle className="text-xl text-zion-blue-dark">{category.name}</CardTitle>
 <CardDescription className="text-gray-600">
+=======
+<Card key={category.id} className="group hover:shadow-xl transition-all duration-300 border-zion-blue-light">;
+<CardHeader className="text-center pb-4">;
+<div className={`rounded-full w-20 h-20 bg-gradient-to-br ${getCategoryColor(category.name)} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>;
+<div className="text-3xl">{getCategoryIcon(category.name)}</div>
+</div>
+<CardTitle className="text-xl text-zion-blue-dark">{category.name}</CardTitle>;
+<CardDescription className="text-gray-600">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {category.description}
 </CardDescription>
 </CardHeader>
@@ -60,8 +86,13 @@ designed to accelerate your business growth and digital transformation.;
 <div className="text-2xl font-bold text-zion-purple mb-4">
 {category.services.length} Services;
 </div>
+<<<<<<< HEAD
 <Link to="/expanded-services">
 <Button variant="outline" className="w-full group-hover:bg-zion-purple group-hover:text-white transition-colors">
+=======
+<Link to="/expanded-services">;
+<Button variant="outline" className="w-full group-hover:bg-zion-purple group-hover:text-white transition-colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Explore Services;
 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
 </Button>
@@ -78,6 +109,7 @@ Featured Services;
 </h3>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 {/* AI Customer Service */}
+<<<<<<< HEAD
 <Card className="hover:shadow-lg transition-all duration-300">
 <CardHeader>
 <div className="flex items-center justify-between mb-2">
@@ -85,10 +117,20 @@ Featured Services;
 <Badge className="bg-blue-100 text-blue-800">AI Services</Badge>
 </div>
 <CardTitle className="text-lg text-zion-blue-dark">
+=======
+<Card className="hover:shadow-lg transition-all duration-300">;
+<CardHeader>;
+<div className="flex items-center justify-between mb-2">;
+<div className="text-2xl">🤖</div>
+<Badge className="bg-blue-100 text-blue-800">AI Services</Badge>;
+</div>
+<CardTitle className="text-lg text-zion-blue-dark">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 AI-Powered Customer Service;
 </CardTitle>
 <CardDescription>
 Intelligent chatbot automation with 24/7 availability;
+<<<<<<< HEAD
 </CardDescription>
 </CardHeader>
 <CardContent>
@@ -111,6 +153,30 @@ Intelligent chatbot automation with 24/7 availability;
 </div>
 <Link to="/expanded-services">
 <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
+=======
+</CardDescription>;
+</CardHeader>;
+<CardContent>;
+<div className="flex items-center justify-between mb-4">;
+<div className="text-2xl font-bold text-zion-purple">$2;500</div>
+<div className="flex items-center space-x-1">;
+<Star className="h-4 w-4 text-yellow-500 fill-current" />;
+<span className="text-sm font-medium">4.9</span>;
+</div>
+</div>
+<div className="space-y-2 mb-4">;
+<div className="flex items-center space-x-2 text-sm text-gray-600">;
+<Zap className="h-4 w-4 text-zion-purple" />;
+<span>AI Score: 96</span>;
+</div>
+<div className="flex items-center space-x-2 text-sm text-gray-600">;
+<TrendingUp className="h-4 w-4 text-green-500" />;
+<span>60% cost reduction</span>;
+</div>
+</div>
+<Link to="/expanded-services">;
+<Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Learn More;
 </Button>
 </Link>
@@ -118,6 +184,7 @@ Learn More;
 </Card>
 
 {/* Smart Inventory */}
+<<<<<<< HEAD
 <Card className="hover:shadow-lg transition-all duration-300">
 <CardHeader>
 <div className="flex items-center justify-between mb-2">
@@ -125,10 +192,20 @@ Learn More;
 <Badge className="bg-blue-100 text-blue-800">Micro SAAS</Badge>
 </div>
 <CardTitle className="text-lg text-zion-blue-dark">
+=======
+<Card className="hover:shadow-lg transition-all duration-300">;
+<CardHeader>;
+<div className="flex items-center justify-between mb-2">;
+<div className="text-2xl">☁️</div>
+<Badge className="bg-blue-100 text-blue-800">Micro SAAS</Badge>;
+</div>
+<CardTitle className="text-lg text-zion-blue-dark">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Smart Inventory Management;
 </CardTitle>
 <CardDescription>
 Cloud-based inventory tracking with predictive analytics;
+<<<<<<< HEAD
 </CardDescription>
 </CardHeader>
 <CardContent>
@@ -151,6 +228,30 @@ Cloud-based inventory tracking with predictive analytics;
 </div>
 <Link to="/expanded-services">
 <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
+=======
+</CardDescription>;
+</CardHeader>;
+<CardContent>;
+<div className="flex items-center justify-between mb-4">;
+<div className="text-2xl font-bold text-zion-purple">$299</div>
+<div className="flex items-center space-x-1">;
+<Star className="h-4 w-4 text-yellow-500 fill-current" />;
+<span className="text-sm font-medium">4.6</span>;
+</div>
+</div>
+<div className="space-y-2 mb-4">;
+<div className="flex items-center space-x-2 text-sm text-gray-600">;
+<Zap className="h-4 w-4 text-zion-purple" />;
+<span>AI Score: 88</span>;
+</div>
+<div className="flex items-center space-x-2 text-sm text-gray-600">;
+<TrendingUp className="h-4 w-4 text-green-500" />;
+<span>90% stockout reduction</span>;
+</div>
+</div>
+<Link to="/expanded-services">;
+<Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Learn More;
 </Button>
 </Link>
@@ -158,6 +259,7 @@ Learn More;
 </Card>
 
 {/* Cloud Migration */}
+<<<<<<< HEAD
 <Card className="hover:shadow-lg transition-all duration-300">
 <CardHeader>
 <div className="flex items-center justify-between mb-2">
@@ -165,10 +267,20 @@ Learn More;
 <Badge className="bg-purple-100 text-purple-800">IT Services</Badge>
 </div>
 <CardTitle className="text-lg text-zion-blue-dark">
+=======
+<Card className="hover:shadow-lg transition-all duration-300">;
+<CardHeader>;
+<div className="flex items-center justify-between mb-2">;
+<div className="text-2xl">💻</div>
+<Badge className="bg-purple-100 text-purple-800">IT Services</Badge>;
+</div>
+<CardTitle className="text-lg text-zion-blue-dark">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Cloud Migration Service;
 </CardTitle>
 <CardDescription>
 End-to-end cloud migration with cost optimization;
+<<<<<<< HEAD
 </CardDescription>
 </CardHeader>
 <CardContent>
@@ -196,6 +308,35 @@ Learn More;
 </Link>
 </CardContent>
 </Card>
+=======
+</CardDescription>;
+</CardHeader>;
+<CardContent>;
+<div className="flex items-center justify-between mb-4">;
+<div className="text-2xl font-bold text-zion-purple">$8;000</div>
+<div className="flex items-center space-x-1">;
+<Star className="h-4 w-4 text-yellow-500 fill-current" />;
+<span className="text-sm font-medium">4.9</span>;
+</div>
+</div>
+<div className="space-y-2 mb-4">;
+<div className="flex items-center space-x-2 text-sm text-gray-600">;
+<Zap className="h-4 w-4 text-zion-purple" />;
+<span>AI Score: 93</span>;
+</div>
+<div className="flex items-center space-x-2 text-sm text-gray-600">;
+<TrendingUp className="h-4 w-4 text-green-500" />;
+<span>30-50% cost savings</span>;
+</div>
+</div>
+<Link to="/expanded-services">;
+<Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">;
+Learn More;
+</Button>;
+</Link>;
+</CardContent>;
+</Card>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -218,12 +359,21 @@ Explore All Services;
 <Link to="/contact">
 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">
 Contact Us;
+<<<<<<< HEAD
 </Button>
 </Link>
+=======
+</Button>;
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </section>
+=======
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }<//section><///section>

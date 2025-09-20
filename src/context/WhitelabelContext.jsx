@@ -10,7 +10,13 @@ const defaultConfig = {
   contactInfo: {
     phone: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
+<<<<<<< HEAD
     address: '364 E Main St STE 1008 Middletown DE 19709';}};
+=======
+    address: '364 E Main St STE 1008 Middletown DE 19709';
+  },
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 const WhitelabelContext = createContext(defaultConfig);
 

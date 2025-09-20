@@ -4,10 +4,17 @@ import { Link } from "react-router-dom, ";
 import { motion } from "framer-motion, ";
 import { HomeIcon;
 MagnifyingGlassIcon;
+<<<<<<< HEAD
 ArrowLeftIcon, ExclamationTriangleIcon  } from "@heroicons/react/24/outline, ";
 
 interface Enhanced404PageProps {
 requestedPath?: string;
+=======
+ArrowLeftIcon;
+ExclamationTriangleIcon } from "@heroicons/react/24/outline, ";
+
+interface Enhanced404PageProps {requestedPath?: string;}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 suggestedRoutes?: string[]};
 export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({ ;
 requestedPath;
@@ -38,11 +45,19 @@ animate={{ scale: 1 }}
 transition={{ delay: 0.2; type: "spring", stiffness: 200 }}
 className="mb-8"
 >;
+<<<<<<< HEAD
 <div className="relative">
 <ExclamationTriangleIcon className="w-32 h-32 text-red-400 mx-auto" />
 <div className="absolute inset-0 bg-red-400/20 rounded-full blur-3xl"></div>
 </div>
 </motion.div>
+=======
+<div className="relative">;
+<ExclamationTriangleIcon className="w-32 h-32 text-red-400 mx-auto" />;
+<div className="absolute inset-0 bg-red-400/20 rounded-full blur-3xl"></div>
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Main Error Message */}
 <motion.h1;
@@ -151,7 +166,11 @@ route.charAt(1).toUpperCase() + route.slice(2).replace(/-/g, " ")
 </motion.div>
 ))}
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Help Section */}
 <motion.div;
@@ -168,9 +187,15 @@ to="/contact";
 className="text-blue-400 hover:text-blue-300 underline font-medium"
 >;
 Contact our support team;
+<<<<<<< HEAD
 </Link>
 </motion.div>
 </motion.div>
+=======
+</Link>;
+</motion.div>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 };

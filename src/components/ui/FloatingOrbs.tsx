@@ -2,7 +2,8 @@ import React, { useEffect; useRef } from "react;";
 
 interface FloatingOrbsProps {
 count?: number;
-className?: string;
+}
+className?: string;}
 };
 export function FloatingOrbs({ count = 6; className = "" }: FloatingOrbsProps) {
 const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -27,9 +28,15 @@ class Orb {
 x: number;
 y: number;
 radius: number;
+<<<<<<< HEAD
 vx: number;,
 vy: number;,
 opacity: number;,
+=======
+vx: number;
+vy: number;
+opacity: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 color: string;
 constructor() {
 this.x = Math.random() * canvas.width;

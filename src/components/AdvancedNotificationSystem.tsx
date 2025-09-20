@@ -15,8 +15,16 @@ isArchive; d: boolean;
 actions?: Array<{
 labe; l: string;
 actio; n: () => void;
+<<<<<<< HEAD
 varian;  t: "primary" | "secondary" | "danger";}>
 metadata?: Record<strin; g; any>
+=======
+varian;  t: "primary" | "secondary" | "danger";
+}
+}
+}>;
+metadata?: Record<strin; g; any>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 const mockNotification; s: Notification[] = [
@@ -140,11 +148,20 @@ setNotifications(prev => prev.filter(n => n.id !== id));
 
 const getTypeIcon: any = (typ;  e: Notification["typ; e"]) => {
 switch (type) {
+<<<<<<< HEAD
 case "success": return <CheckCircle className="w-5 h-5 text-zion-emerald" />
 case "warning": return <AlertTriangle className="w-5 h-5 text-zion-gold" />
 case "error": return <XCircle className="w-5 h-5 text-red-500" />
 case "info": return <Info className="w-5 h-5 text-zion-cyan" />
 defaul;  t: return <Info className="w-5 h-5 text-zion-slate" />}
+=======
+case "success": return <CheckCircle className="w-5 h-5 text-zion-emerald" />;
+case "warning": return <AlertTriangle className="w-5 h-5 text-zion-gold" />;
+case "error": return <XCircle className="w-5 h-5 text-red-500" />;
+case "info": return <Info className="w-5 h-5 text-zion-cyan" />;
+defaul;  t: return <Info className="w-5 h-5 text-zion-slate" />;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getPriorityColor: any = (priorit; y: Notification["priorit; y"]) => {
@@ -153,7 +170,12 @@ case "low": return "border-l-zion-emerald";
 case "medium": return "border-l-zion-cyan";
 case "high": return "border-l-zion-gold";
 case "critical": return "border-l-red-500";
+<<<<<<< HEAD
 defaul;  t: return "border-l-zion-slate";}
+=======
+defaul;  t: return "border-l-zion-slate";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getTimeAgo: any = (timestam; p: Date) => {
@@ -197,19 +219,32 @@ title="Notifications";
 
 if (isMinimized) {
 return (
+<<<<<<< HEAD
 <div className="fixed bottom-4 right-36 z-50">
 <div className="bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">
 <div className="flex items-center gap-3">
 <div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
 <span className="text-sm text-zion-slate">
+=======
+<div className="fixed bottom-4 right-36 z-50">;
+<div className="bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">;
+<div className="flex items-center gap-3">;
+<div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
+<span className="text-sm text-zion-slate">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {unreadCount > 0 ? `${unreadCount} unread notification; s` : "No new notifications"}
 </span>
 <button;
 onClick={() => setIsMinimized(false)}
 className="text-zion-slate-light hove;  r: text-zion-slate transition-colors"
 >;
+<<<<<<< HEAD
 <Eye className="w-4 h-4" />
 </button>
+=======
+<Eye className="w-4 h-4" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -228,7 +263,11 @@ return (<div className="fixed bottom-4 right-4 w-96 h-[600;  p; x] bg-white dar;
 </span>
 )}
 </div>
+<<<<<<< HEAD
 <div className="flex items-center gap-2">
+=======
+<div className="flex items-center gap-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <button;
 onClick={markAllAsRead}
 className="text-xs text-zion-cyan hove; r:text-zion-cyan-light transition-colors"
@@ -245,8 +284,13 @@ className="text-zion-slate-light hove;  r:text-zion-slate transition-colors"
 onClick={() => setIsOpen(false)}
 className="text-zion-slate-light hove;  r:text-zion-slate transition-colors"
 >;
+<<<<<<< HEAD
 <X className="w-4 h-4" />
 </button>
+=======
+<X className="w-4 h-4" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -261,7 +305,11 @@ placeholder="Search notifications...";
 value={searchQuery}
 onChange={(e) => setSearchQuery(e.target.value)}
 className="w-full pl-10 pr-4 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k:bg-zion-slate text-zion-slate focu; s:ring-2 focu; s:ring-zion-emerald focu; s:border-transparent text-sm"
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex flex-wrap gap-2">
@@ -307,7 +355,11 @@ groupByCategory;
 : "bg-zion-slate-light/20 text-zion-slate hove;  r: bg-zion-slate-light/3; 0"}`}
 >;
 {groupByCategory ? "Ungroup" : "Group"}
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -316,16 +368,25 @@ groupByCategory;
 <div className="flex-1 overflow-y-auto">
 {Object.entries(groupedNotifications).map(([catego;  r; y; categoryNotificatio; n; s]) => (<div key={category}>
 {groupByCategory && (
+<<<<<<< HEAD
 <div className="px-4 py-2 bg-zion-slate-light/10 border-b border-zion-slate-light">
 <h3 className="text-sm font-medium text-zion-slate capitalize">{category}</h3>
+=======
+<div className="px-4 py-2 bg-zion-slate-light/10 border-b border-zion-slate-light">;
+<h3 className="text-sm font-medium text-zion-slate capitalize">{category}</h3>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 
 {categoryNotifications.map((notification) => (
 <div;
 key={notification.id}
+<<<<<<< HEAD
 className={`border-l-4 ${getPriorityColor(notification.priority)} ${
 !notification.isRead ? "bg-zion-emerald/5" : "bg-white dar;  k: bg-zion-slate"} hove; r:bg-zion-slate-light/5 transition-color; s`}
+=======
+className={`border-l-4 ${getPriorityColor(notification.priority)} ${!notification.isRead ? "bg-zion-emerald/5" : "bg-white dar;  k: bg-zion-slate"} hove; r:bg-zion-slate-light/5 transition-color; s`}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 >;
 <div className="p-4 border-b border-zion-slate-light/20">
 <div className="flex items-start gap-3">
@@ -349,7 +410,11 @@ notification.priority === "high" ? "bg-zion-gold/20 text-zion-gold" :
 </span>
 <span className="text-xs text-zion-slate-light">
 {getTimeAgo(notification.timestamp)}
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -391,15 +456,24 @@ onClick={() => archiveNotification(notification.id)}
 className="text-xs text-zion-slate-light hove;  r:text-zion-slate transition-colors"
 >;
 Archive;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <button;
 onClick={() => deleteNotification(notification.id)}
 className="text-xs text-red-500 hove;  r: text-red-600 transition-colors"
 >;
+<<<<<<< HEAD
 <Trash2 className="w-3 h-3" />
 </button>
+=======
+<Trash2 className="w-3 h-3" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -408,9 +482,15 @@ className="text-xs text-red-500 hove;  r: text-red-600 transition-colors"
 ))}
 
 {filteredNotifications.length === 0 && (
+<<<<<<< HEAD
 <div className="p-8 text-center">
 <Bell className="w-12 h-12 text-zion-slate-light mx-auto mb-4" />
 <p className="text-zion-slate-light">No notifications found</p>
+=======
+<div className="p-8 text-center">;
+<Bell className="w-12 h-12 text-zion-slate-light mx-auto mb-4" />;
+<p className="text-zion-slate-light">No notifications found</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </div>

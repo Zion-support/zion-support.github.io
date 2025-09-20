@@ -6,7 +6,11 @@ const InputOTP = React.forwardRef<;
 React.ElementRef<typeof OTPInput>
 React.ComponentPropsWithoutRef<typeof OTPInput>
 ></typeof>(({ className containerClassName, ...props }, ref) => (
+<<<<<<< HEAD
 <OTPInput,
+=======
+  <OTPInput
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ref={ref}
 containerClassName={cn(
 'flex items-center gap-2 [&:has([disabled])]:opacity-50';
@@ -50,4 +54,8 @@ React.ComponentPropsWithoutRef<'div'>
 </div>
 ))
 InputOTPSeparator.displayName = 'InputOTPSeparator';
+<<<<<<< HEAD
 export { InputOTP InputOTPGroup InputOTPSlot InputOTPSeparator }
+=======
+export { InputOTP InputOTPGroup InputOTPSlot InputOTPSeparator };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

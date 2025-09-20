@@ -24,10 +24,17 @@ supportLevel: string;
 supportLevel: "basic" | "standard" | "premium" | "enterprise";
 supportLevel: string;
 marketPrice: string;
+<<<<<<< HEAD
 contactInfo: {,
 phone: string;,
 email: string;,
 website: string;,
+=======
+contactInfo: {
+phone: string;
+email: string;
+website: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 };
 };
@@ -37,10 +44,17 @@ export interface InnovativeMicroSaasService extends ProductListing {
 marketPrice: string;
 estimatedDelivery: string;
 supportLevel: string;
+<<<<<<< HEAD
 technology: string[];,
 integrations: string[];,
 compliance: string[];,
 roi: string;,
+=======
+technology: string[];
+integrations: string[];
+compliance: string[];
+roi: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 aiScore?: number;
 rating?: number;
@@ -75,10 +89,17 @@ price: {
 starter: number;
 professional: number;
 enterprise: number;
+<<<<<<< HEAD
 currency: string;,
 billingCycle: "monthly" | "yearly";,
 billingCycle: "monthly" | "yearly";,
 billingCycle: "monthly" | "yearly";,
+=======
+currency: string;
+billingCycle: "monthly" | "yearly";
+billingCycle: "monthly" | "yearly";
+billingCycle: "monthly" | "yearly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 features: string[];
 benefits: string[];
@@ -86,6 +107,7 @@ targetAudience: string[];
 useCases: string[];
 integration: string[];
 website: string;
+<<<<<<< HEAD
 contactInfo: {,
 email: string;,
 phone: string;,
@@ -95,6 +117,17 @@ rating: number;
 reviewCount: number;,
 launchDate: string;,
 status: "Active" | "Beta" | "Coming Soon";,
+=======
+contactInfo: {
+email: string;
+phone: string;
+address: string;
+};
+rating: number;
+reviewCount: number;
+launchDate: string;
+status: "Active" | "Beta" | "Coming Soon";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 marketPrice: string;
 "Quantum annealing algorithms",
 "Hybrid quantum-classical computing",
@@ -135,9 +168,8 @@ marketPrice: "$2;499 - $8;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
-competitors: string[];,
+website: "https://ziontechgroup.com"},
+competitors: string[];
 }
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
@@ -148,7 +180,7 @@ title: "Web3 Business Platform",
 description: "Comprehensive platform for businesses to leverage blockchain; DeFi; and Web3 technologies for innovative business models and customer engagement.",
 category: "Innovative Micro SAAS",
 subcategory: "Web3 & Blockchain",
-price: 400;,
+price: 400;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -180,7 +212,7 @@ targetAudience: [
 "Content creators",
 "Gaming companies",
 "Financial institutions",
-competitors: string[];,
+competitors: string[];
 }
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
@@ -191,7 +223,7 @@ title: "AI Content Creation Platform",
 description: "Revolutionary AI-powered platform that generates high-quality; SEO-optimized content for blogs; social media; and marketing campaigns.",
 category: "AI & Content Creation",
 subcategory: "Marketing Automation",
-price: 149;,
+price: 149;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -238,8 +270,7 @@ marketPrice: "$400 - $2;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Qiskit", "Cirq", "Python", "C++", "CUDA"],
 integrations: ["AWS Braket", "IBM Quantum", "Google Quantum", "Azure Quantum"],
 compliance: ["ISO 27001", "SOC 2", "NIST"],
@@ -248,13 +279,12 @@ competitors: ["IBM Quantum", "Google Quantum", "D-Wave", "Rigetti", "IonQ"];
 },
 
 // Edge AI Computing Platform;
-{
-id: "edge-ai-computing-platform",
+{id: "edge-ai-computing-platform",
 title: "Edge AI Computing Platform",
 description: "Distributed AI computing platform that brings machine learning capabilities to edge devices for real-time processing and reduced latency.",
 category: "Edge Computing & AI",
 subcategory: "Distributed Computing",
-price: 599;,
+price: 599;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -295,8 +325,7 @@ marketPrice: "$599 - $2;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["TensorFlow Lite", "ONNX", "Docker", "Kubernetes", "MQTT"],
 integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT brokers"],
 compliance: ["GDPR", "SOC 2", "ISO 27001"],
@@ -311,10 +340,17 @@ title: "Cybersecurity Threat Intelligence Platform",
 description: "Advanced threat intelligence platform that provides real-time cybersecurity insights; threat detection; and automated response capabilities.",
 category: "Cybersecurity",
 subcategory: "Threat Intelligence",
+<<<<<<< HEAD
 competitors: string[];,
 freeTrial: boolean;,
 freeTrialDays: number;,
 demoUrl: string;,
+=======
+competitors: string[];
+freeTrial: boolean;
+freeTrialDays: number;
+demoUrl: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
@@ -325,7 +361,7 @@ title: "Web3 Business Automation Platform",
 description: "Comprehensive Web3 automation platform for smart contracts; DeFi operations; and blockchain business processes with no-code interface.",
 category: "Web3 & Blockchain",
 subcategory: "Business Automation",
-price: 499;,
+price: 499;
 currency: "$",
 pricingModel: "monthly",
 features: [,
@@ -337,13 +373,12 @@ competitors: ["OpenSea", "Rarible", "Foundation", "SuperRare", "Manifold"];
 },
 
 // Metaverse Business Solutions;
-{
-id: "metaverse-business-solutions",
+{id: "metaverse-business-solutions",
 title: "Metaverse Business Solutions",
 description: "Complete platform for businesses to establish presence in the metaverse; including virtual offices; events; and customer experiences.",
 category: "Innovative Micro SAAS",
 subcategory: "Metaverse & Virtual Reality",
-price: 600;,
+price: 600;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -384,8 +419,7 @@ marketPrice: "$600 - $3;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Unity", "Unreal Engine", "WebGL", "Three.js", "React", "Node.js"],
 integrations: ["Meta Quest", "HTC Vive", "SteamVR", "Discord", "Zoom"],
 compliance: ["GDPR", "Accessibility standards", "Content moderation"],
@@ -400,7 +434,7 @@ title: "Sustainable Business Intelligence",
 description: "AI-powered platform that helps businesses measure; track; and optimize their environmental impact while improving profitability.",
 category: "Innovative Micro SAAS",
 subcategory: "Sustainability & ESG",
-price: 350;,
+price: 350;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -440,13 +474,12 @@ competitors: ["OpenSea", "Rarible", "Foundation", "SuperRare"];
 },
 
 // IoT Smart Home Management Platform;
-{
-id: "iot-smart-home-platform",
+{id: "iot-smart-home-platform",
 title: "IoT Smart Home Management Platform",
 description: "Comprehensive IoT platform for managing smart home devices; automation; and energy optimization with AI-powered insights.",
 category: "IoT & Smart Home",
 subcategory: "Home Automation",
-price: 79;,
+price: 79;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -491,9 +524,15 @@ estimatedDelivery: "4-6 weeks",
 supportLevel: "premium",
 marketPrice: "$350 - $1;500/month",
 aiScore: 99;
+<<<<<<< HEAD
 rating: 4.9;,
 reviewCount: 89;,
 featured: true;,
+=======
+rating: 4.9;
+reviewCount: 89;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location: "Global",
 availability: "24/7",
 demoUrl: "https://ziontechgroup.com/demo/quantum-optimization",
@@ -504,17 +543,15 @@ compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA"],
 scalability: "Unlimited quantum resources",
 deployment: "Cloud-based with on-premise options",
 roi: "300-500% within 12 months",
-timeToValue: "2-4 weeks",
-},
+timeToValue: "2-4 weeks"},
 
 // AI-Powered Cybersecurity;
-{
-id: "ai-cybersecurity-sentinel",
+{id: "ai-cybersecurity-sentinel",
 title: "AI Cybersecurity Sentinel",
 description: "Next-generation AI-powered cybersecurity platform that provides real-time threat detection; automated response; and predictive security analytics using advanced machine learning algorithms.",
 category: "Cybersecurity",
 subcategory: "AI Security",
-price: 1299;,
+price: 1299;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -557,12 +594,17 @@ marketPrice: "$1;299 - $4;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 aiScore: 97;
+<<<<<<< HEAD
 rating: 4.8;,
 reviewCount: 234;,
 featured: true;,
+=======
+rating: 4.8;
+reviewCount: 234;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location: "Global",
 availability: "24/7",
 demoUrl: "https://ziontechgroup.com/demo/ai-cybersecurity",
@@ -577,8 +619,7 @@ timeToValue: "1-2 weeks",
 },
 
 // Autonomous DevOps Platform;
-{
-id: "autonomous-devops-platform",
+{id: "autonomous-devops-platform",
 title: "Autonomous DevOps Platform",
 description: "Self-healing DevOps platform that automatically manages infrastructure; deploys applications; and optimizes performance using AI and machine learning for continuous delivery excellence.",
 category: "DevOps & Automation",
@@ -620,33 +661,42 @@ marketPrice: "$499 - $2;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Solidity", "React", "Node.js", "Ethereum", "Polygon", "Solana"],
 integrations: ["MetaMask", "WalletConnect", "OpenSea", "Uniswap", "Chainlink"],
 compliance: ["AML", "KYC", "GDPR", "Regulatory Reporting"],
 roi: "400% within 8 months",
 competitors: ["Chainlink", "The Graph", "Alchemy"],
+<<<<<<< HEAD
 freeTrial: true;,
 freeTrialDays: 14;,
+=======
+freeTrial: true;
+freeTrialDays: 14;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 demoUrl: "https://demo.ziontechgroup.com/web3-automation",
 },
 
 // Quantum Computing Services;
-{
-id: "quantum-business-solutions",
+{id: "quantum-business-solutions",
 title: "Quantum Business Solutions Platform",
 description: "Quantum computing optimization platform for complex business problems including logistics; financial modeling; and drug discovery.",
 category: "Quantum Computing",
 subcategory: "Business Optimization",
-price: 899;,
+price: 899;
 currency: "$",
 pricingModel: "monthly",
 features: [
 aiScore: 96;
+<<<<<<< HEAD
 rating: 4.9;,
 reviewCount: 167;,
 featured: true;,
+=======
+rating: 4.9;
+reviewCount: 167;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location: "Global",
 availability: "24/7",
 demoUrl: "https://ziontechgroup.com/demo/autonomous-devops",
@@ -657,17 +707,15 @@ compliance: ["ISO 27001", "SOC 2", "GDPR"],
 scalability: "Unlimited applications and infrastructure",
 deployment: "Cloud-native with on-premise options",
 roi: "250-400% within 12 months",
-timeToValue: "2-3 weeks",
-},
+timeToValue: "2-3 weeks"},
 
 // Blockchain Supply Chain Platform;
-{
-id: "blockchain-supply-chain",
+{id: "blockchain-supply-chain",
 title: "Blockchain Supply Chain Platform",
 description: "Transparent and immutable supply chain management platform using blockchain technology for end-to-end traceability; smart contracts; and automated compliance verification.",
 category: "Blockchain",
 subcategory: "Supply Chain",
-price: 699;,
+price: 699;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -707,8 +755,7 @@ tags: ["Healthcare", "AI Diagnostics", "Patient Care", "Medical Technology", "HI
 estimatedDelivery: "8-10 weeks",
 supportLevel: "enterprise",
 marketPrice: "$3;499 - $10;000/month",
-websiteUrl: "https://ziontechgroup.com/quantum-optimization",
-},
+websiteUrl: "https://ziontechgroup.com/quantum-optimization"},
 
 // New Innovative Micro SAAS Services;
 {
@@ -722,10 +769,17 @@ demoUrl?: string;
 documentationUrl?: string;
 freeTrial: boolean;
 freeTrialDays: number;
+<<<<<<< HEAD
 aiCapabilities: string[];,
 securityFeatures: string[];,
 scalability: string;,
 uptime: string;,
+=======
+aiCapabilities: string[];
+securityFeatures: string[];
+scalability: string;
+uptime: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
@@ -736,7 +790,7 @@ title: "AI Content Generation & SEO Platform",
 description: "Advanced AI-powered content creation platform that generates SEO-optimized content; analyzes competitors; and provides real-time optimization suggestions.",
 category: "AI & Content Marketing",
 subcategory: "Content Generation",
-price: 399;,
+price: 399;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -780,8 +834,7 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709",
-},
+address: "364 E Main St STE 1008 Middletown DE 19709"},
 technology: ["GPT-4", "React", "Node.js", "PostgreSQL", "Redis"],
 integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Google Analytics"],
 compliance: ["GDPR", "CCPA", "SOC 2"],
@@ -789,8 +842,13 @@ roi: "400% within 6 months",
 competitors: ["Jasper", "Copy.ai", "Writesonic", "Surfer SEO"],
 demoUrl: "https://ziontechgroup.com/demo/ai-content-seo",
 documentationUrl: "https://ziontechgroup.com/docs/ai-content-seo",
+<<<<<<< HEAD
 freeTrial: true;,
 freeTrialDays: 14;,
+=======
+freeTrial: true;
+freeTrialDays: 14;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 aiCapabilities: ["Natural Language Generation", "SEO Analysis", "Content Optimization", "Competitor Research"],
 securityFeatures: ["End-to-end encryption", "Role-based access control", "Audit logging", "Data backup"],
 scalability: "Handles 10M+ content pieces monthly",
@@ -798,13 +856,12 @@ uptime: "99.9% SLA",
 },
 
 // Blockchain-Based Supply Chain Transparency;
-{
-id: "blockchain-supply-chain-platform",
+{id: "blockchain-supply-chain-platform",
 title: "Blockchain Supply Chain Transparency Platform",
 description: "Revolutionary blockchain-powered platform that provides end-to-end supply chain visibility; traceability; and compliance management for global businesses.",
 category: "Blockchain & Supply Chain",
 subcategory: "Transparency & Traceability",
-price: 599;,
+price: 599;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -840,7 +897,7 @@ title: "AI Content Factory Pro",
 description: "Revolutionary AI-powered content creation platform that generates high-quality; SEO-optimized content across multiple formats including blogs; social media; emails; and video scripts.",
 category: "AI & Marketing",
 subcategory: "Content Creation",
-price: 299;,
+price: 299;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -883,8 +940,7 @@ marketPrice: "$299 - $1;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 }
 }
 id: "zion-ai-business-intelligence",
@@ -892,12 +948,19 @@ title: "Zion AI Business Intelligence Platform",
 description: "Real-time business intelligence powered by AI that transforms raw data into actionable insights; predictive analytics; and automated reporting.",
 category: "AI & Analytics",
 subcategory: "Business Intelligence",
+<<<<<<< HEAD
 price: {
 starter: 199;,
 professional: 499;,
 enterprise: 1299;,
 currency: "$",
 },
+=======
+price: {starter: 199;
+professional: 499;
+enterprise: 1299;
+currency: "$"},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Real-time data visualization",
 "AI-powered predictive analytics",
@@ -944,10 +1007,16 @@ website: "https://ziontechgroup.com/services/ai-business-intelligence",
 contactInfo: {,
 email: "kleber@ziontechgroup.com",
 phone: "+1 302 464 0950",
+<<<<<<< HEAD
 address: "364 E Main St STE 1008; Middletown DE 19709",
 },
 rating: 4.8;,
 reviewCount: 234;,
+=======
+address: "364 E Main St STE 1008; Middletown DE 19709"},
+rating: 4.8;
+reviewCount: 234;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 launchDate: "2024-01-15",
 status: "Active",
 marketPrice: "$199 - $1;299/month",
@@ -955,18 +1024,24 @@ deliveryTime: "2-3 weeks",
 },
 
 // Cybersecurity Compliance Platform;
-{
-id: "zion-cyber-compliance-suite",
+{id: "zion-cyber-compliance-suite",
 title: "Zion Cyber Compliance Suite",
 description: "Comprehensive cybersecurity compliance platform that automates security assessments; compliance monitoring; and regulatory reporting for multiple frameworks.",
 category: "Cybersecurity",
 subcategory: "Compliance & Governance",
 price: {
+<<<<<<< HEAD
 starter: 299;,
 professional: 799;,
 enterprise: 1999;,
 currency: "$",
 },
+=======
+starter: 299;
+professional: 799;
+enterprise: 1999;
+currency: "$"},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Multi-framework compliance (SOC2; ISO27001; GDPR; HIPAA)",
 "Automated security assessments",
@@ -1012,10 +1087,16 @@ website: "https://ziontechgroup.com/services/cyber-compliance-suite",
 contactInfo: {,
 email: "kleber@ziontechgroup.com",
 phone: "+1 302 464 0950",
+<<<<<<< HEAD
 address: "364 E Main St STE 1008; Middletown DE 19709",
 },
 rating: 4.9;,
 reviewCount: 187;,
+=======
+address: "364 E Main St STE 1008; Middletown DE 19709"},
+rating: 4.9;
+reviewCount: 187;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 launchDate: "2024-02-01",
 status: "Active",
 marketPrice: "$299 - $1;999/month",
@@ -1040,10 +1121,17 @@ competitors: string[];
 useCases: string[];
 targetAudience: string[];
 benefits: string[];
+<<<<<<< HEAD
 contactInfo: {,
 phone: string;,
 email: string;,
 website: string;,
+=======
+contactInfo: {
+phone: string;
+email: string;
+website: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 }
 
@@ -1096,8 +1184,7 @@ website: "https://ziontechgroup.com/services/ai-content-orchestrator",
 contactInfo: {,
 email: "kleber@ziontechgroup.com",
 phone: "+1 302 464 0950",
-address: "364 E Main St STE 1008; Middletown DE 19709",
-},
+address: "364 E Main St STE 1008; Middletown DE 19709"},
 "AI-powered failure prediction",
 "IoT sensor integration",
 "Real-time monitoring",
@@ -1138,8 +1225,7 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709",
-},
+address: "364 E Main St STE 1008 Middletown DE 19709"},
 technology: ["TensorFlow", "React", "Node.js", "PostgreSQL", "MQTT"],
 integrations: ["SAP", "Maximo", "CMMS systems", "Building automation", "SCADA"],
 compliance: ["ISO 55001", "OSHA", "Industry standards"],
@@ -1147,8 +1233,13 @@ roi: "350% within 8 months",
 competitors: ["Uptake", "C3.ai", "GE Digital", "Siemens"],
 demoUrl: "https://ziontechgroup.com/demo/ai-predictive-maintenance",
 documentationUrl: "https://ziontechgroup.com/docs/ai-predictive-maintenance",
+<<<<<<< HEAD
 freeTrial: true;,
 freeTrialDays: 14;,
+=======
+freeTrial: true;
+freeTrialDays: 14;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 aiCapabilities: ["Machine Learning", "Predictive Analytics", "Anomaly Detection", "Optimization"],
 securityFeatures: ["Encrypted data transmission", "Secure authentication", "Access control", "Audit logging"],
 scalability: "Thousands of IoT devices",
@@ -1156,13 +1247,12 @@ uptime: "99.9% SLA",
 },
 
 // Virtual Reality Training Platform;
-{
-id: "vr-training-platform",
+{id: "vr-training-platform",
 title: "Virtual Reality Training Platform",
 description: "Immersive VR training platform that creates realistic simulations for employee training; skill development; and safety protocols across industries.",
 category: "VR/AR & Training",
 subcategory: "Employee Development",
-price: 449;,
+price: 449;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -1206,8 +1296,7 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709",
-},
+address: "364 E Main St STE 1008 Middletown DE 19709"},
 technology: ["Unity", "Unreal Engine", "React", "Node.js", "MongoDB"],
 integrations: ["LMS systems", "HR platforms", "Analytics tools", "VR headsets"],
 compliance: ["OSHA", "Industry standards", "Accessibility"],
@@ -1215,8 +1304,13 @@ roi: "400% within 10 months",
 competitors: ["Strivr", "Virti", "Mursion", "VirtualSpeech"],
 demoUrl: "https://ziontechgroup.com/demo/vr-training",
 documentationUrl: "https://ziontechgroup.com/docs/vr-training",
+<<<<<<< HEAD
 freeTrial: true;,
 freeTrialDays: 7;,
+=======
+freeTrial: true;
+freeTrialDays: 7;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 aiCapabilities: ["Adaptive Learning", "Performance Analysis", "Personalization", "Content Generation"],
 securityFeatures: ["User authentication", "Data encryption", "Access control", "Privacy protection"],
 scalability: "Unlimited users and simulations",
@@ -1224,8 +1318,7 @@ uptime: "99.9% SLA",
 },
 
 // AI-Powered Financial Planning & Analysis;
-{
-id: "ai-financial-planning-platform",
+{id: "ai-financial-planning-platform",
 title: "AI Financial Planning & Analysis Platform",
 description: "Intelligent financial planning platform that uses AI to analyze market trends; optimize investment strategies; and provide personalized financial advice.",
 category: "AI & Finance",
@@ -1267,26 +1360,29 @@ marketPrice: "$899 - $5;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum Hardware APIs"],
 integrations: ["IBM Quantum", "Google Quantum", "Amazon Braket", "Azure Quantum"],
 compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry-specific regulations"],
 roi: "500% within 12 months",
 competitors: ["IBM Quantum", "Google Quantum", "D-Wave"],
+<<<<<<< HEAD
 freeTrial: true;,
 freeTrialDays: 7;,
+=======
+freeTrial: true;
+freeTrialDays: 7;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 demoUrl: "https://demo.ziontechgroup.com/quantum-solutions",
 },
 
 // Edge Computing & IoT Platform;
-{
-id: "edge-iot-intelligence",
+{id: "edge-iot-intelligence",
 title: "Edge IoT Intelligence Platform",
 description: "Intelligent edge computing platform for IoT devices with real-time processing; AI inference; and predictive maintenance capabilities.",
 category: "Edge Computing & IoT",
 subcategory: "Intelligent Automation",
-price: 349;,
+price: 349;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -1367,8 +1463,7 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709",
-},
+address: "364 E Main St STE 1008 Middletown DE 19709"},
 technology: ["IoT sensors", "React", "Node.js", "PostgreSQL", "MQTT"],
 integrations: ["Building automation", "Smart meters", "Solar panels", "Battery storage", "Utility APIs"],
 compliance: ["Energy Star", "LEED", "ISO 50001", "Industry standards"],
@@ -1376,8 +1471,13 @@ roi: "400% within 18 months",
 competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
 demoUrl: "https://ziontechgroup.com/demo/smart-energy",
 documentationUrl: "https://ziontechgroup.com/docs/smart-energy",
+<<<<<<< HEAD
 freeTrial: true;,
 freeTrialDays: 21;,
+=======
+freeTrial: true;
+freeTrialDays: 21;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 aiCapabilities: ["Predictive Analytics", "Optimization", "Anomaly Detection", "Load Forecasting"],
 securityFeatures: ["Encrypted communications", "Secure authentication", "Access control", "Data protection"],
 scalability: "Thousands of buildings and devices",
@@ -1399,13 +1499,12 @@ competitors: ["SmartThings", "Home Assistant", "Hubitat", "Control4"];
 },
 
 // AI-Powered Legal Document Analysis;
-{
-id: "ai-legal-document-analysis",
+{id: "ai-legal-document-analysis",
 title: "AI Legal Document Analysis Platform",
 description: "Intelligent legal document analysis platform that uses AI to review contracts; identify risks; and provide legal insights.",
 category: "AI & Legal Tech",
 subcategory: "Document Analysis",
-price: 199;,
+price: 199;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -1446,8 +1545,7 @@ marketPrice: "$199 - $899/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Python", "TensorFlow", "React", "Node.js", "Elasticsearch"],
 integrations: ["DocuSign", "Adobe Acrobat", "Microsoft Word", "Clio", "PracticePanther"],
 compliance: ["GDPR", "SOC 2", "HIPAA", "ISO 27001"],
@@ -1455,9 +1553,15 @@ roi: "300% within 5 months",
 competitors: ["Kira Systems", "Luminance", "eBrevia", "LawGeex"];
 },
 aiScore: 97;
+<<<<<<< HEAD
 rating: 4.8;,
 reviewCount: 89;,
 featured: true;,
+=======
+rating: 4.8;
+reviewCount: 89;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location: "Global",
 availability: "24/7",
 demoUrl: "https://ziontechgroup.com/demo/ai-content-factory",
@@ -1472,8 +1576,7 @@ competitiveAdvantage: "Only platform with real-time SEO optimization",
 },
 
 // Quantum-Safe Cybersecurity Platform;
-{
-id: "quantum-safe-cyber-shield",
+{id: "quantum-safe-cyber-shield",
 title: "Quantum-Safe Cyber Shield",
 description: "Next-generation cybersecurity platform that combines quantum-resistant encryption; AI threat detection; and blockchain-based security verification for enterprise-grade protection.",
 category: "Cybersecurity",
@@ -1491,12 +1594,17 @@ marketPrice: "$699 - $2;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 aiScore: 94;
+<<<<<<< HEAD
 rating: 4.7;,
 reviewCount: 123;,
 featured: true;,
+=======
+rating: 4.7;
+reviewCount: 123;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location: "Global",
 availability: "24/7",
 demoUrl: "https://ziontechgroup.com/demo/blockchain-supply-chain",
@@ -1511,32 +1619,34 @@ timeToValue: "3-4 weeks",
 },
 
 // IoT Edge Computing Platform;
-{
-id: "iot-edge-computing",
+{id: "iot-edge-computing",
 title: "IoT Edge Computing Platform",
 description: "Advanced IoT platform with edge computing capabilities for real-time data processing; local AI inference; and seamless cloud integration for industrial and commercial applications.",
 category: "IoT & Edge Computing",
 subcategory: "Edge Intelligence",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["TensorFlow Lite", "Edge TPU", "Kubernetes", "MQTT", "WebRTC"],
 integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Siemens Mindsphere"],
 compliance: ["ISO 27001", "IEC 62443", "GDPR", "Industry 4.0"],
 roi: "350% within 6 months",
 competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU"],
+<<<<<<< HEAD
 freeTrial: true;,
 freeTrialDays: 21;,
+=======
+freeTrial: true;
+freeTrialDays: 21;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 demoUrl: "https://demo.ziontechgroup.com/edge-iot",
 },
 
 // Metaverse Business Platform;
-{
-id: "metaverse-business-hub",
+{id: "metaverse-business-hub",
 title: "Metaverse Business Hub",
 description: "Comprehensive metaverse platform for businesses to create virtual offices; host events; and engage customers in immersive 3D environments.",
 category: "Metaverse & VR/AR",
 subcategory: "Business Solutions",
-price: 599;,
+price: 599;
 currency: "$",
 pricingModel: "monthly",
 features: [,
@@ -1582,26 +1692,29 @@ marketPrice: "$599 - $2;500/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Unity", "Unreal Engine", "WebXR", "Three.js", "WebGL"],
 integrations: ["Meta Quest", "HTC Vive", "Microsoft HoloLens", "SteamVR"],
 compliance: ["GDPR", "COPPA", "Accessibility Standards", "Privacy Regulations"],
 roi: "450% within 10 months",
 competitors: ["Meta Horizon", "Microsoft Mesh", "Spatial"],
+<<<<<<< HEAD
 freeTrial: true;,
 freeTrialDays: 14;,
+=======
+freeTrial: true;
+freeTrialDays: 14;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 demoUrl: "https://demo.ziontechgroup.com/metaverse-hub",
 },
 
 // Green Tech & Sustainability Platform;
-{
-id: "green-tech-sustainability",
+{id: "green-tech-sustainability",
 title: "Green Tech Sustainability Platform",
 description: "Comprehensive sustainability platform for businesses to track; optimize; and report on environmental impact with AI-powered insights.",
 category: "Green Tech & Sustainability",
 subcategory: "Environmental Management",
-price: 399;,
+price: 399;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -1642,26 +1755,29 @@ marketPrice: "$399 - $1;800/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Python", "IoT Sensors", "Machine Learning", "Blockchain", "Cloud Computing"],
 integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "Energy APIs"],
 compliance: ["ISO 14001", "GRI Standards", "SASB", "TCFD", "ESG Frameworks"],
 roi: "300% within 8 months",
 competitors: ["Watershed", "Normative", "Persefoni"],
+<<<<<<< HEAD
 freeTrial: true;,
 freeTrialDays: 30;,
+=======
+freeTrial: true;
+freeTrialDays: 30;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 demoUrl: "https://demo.ziontechgroup.com/green-tech",
 },
 
 // Cybersecurity Mesh Platform;
-{
-id: "cybersecurity-mesh-platform",
+{id: "cybersecurity-mesh-platform",
 title: "Cybersecurity Mesh Platform",
 description: "Advanced cybersecurity mesh platform providing zero-trust security; threat intelligence; and automated incident response across all digital assets.",
 category: "Cybersecurity",
 subcategory: "Zero Trust Security",
-price: 699;,
+price: 699;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -1702,21 +1818,24 @@ marketPrice: "$699 - $3;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["AI/ML", "Blockchain", "Zero Trust Architecture", "Threat Intelligence APIs"],
 integrations: ["SIEM Systems", "EDR Solutions", "Identity Providers", "Cloud Platforms"],
 compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
 roi: "400% within 6 months",
 competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks"],
+<<<<<<< HEAD
 freeTrial: true;,
 freeTrialDays: 14;,
+=======
+freeTrial: true;
+freeTrialDays: 14;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 demoUrl: "https://demo.ziontechgroup.com/cybersecurity-mesh",
 },
 
 // Digital Twin Platform;
-{
-id: "digital-twin-platform",
+{id: "digital-twin-platform",
 title: "Digital Twin Platform",
 description: "Comprehensive digital twin platform for creating virtual replicas of physical assets; processes; and systems with real-time monitoring and predictive analytics.",
 category: "Digital Twin & Simulation",
@@ -1725,7 +1844,7 @@ category: "Digital Twin & Simulation",
 description: "Comprehensive digital twin platform for creating virtual replicas of physical assets; processes; and systems with real-time monitoring and predictive analytics.",
 category: "Digital Twin & Simulation",
 subcategory: "Asset Management",
-price: 799;,
+price: 799;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -1802,12 +1921,20 @@ marketPrice: "$799 - $4;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 website: "https://ziontechgroup.com",
 },
 competitors: string[];,
 deployment: string;,
 customization: string;,
 support: string;,
+=======
+website: "https://ziontechgroup.com"},
+competitors: string[];
+deployment: string;
+customization: string;
+support: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
@@ -1818,7 +1945,7 @@ title: "AI Project Management Suite",
 description: "Intelligent project management platform that uses AI to predict project timelines; identify risks; and optimize resource allocation for maximum efficiency.",
 category: "Micro SAAS",
 subcategory: "Project Management",
-price: 149;,
+price: 149;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -1865,12 +1992,18 @@ website: "https://ziontechgroup.com";
 id: "ai-legal-doc-analyzer",
 name: "AI Legal Document Analyzer",
 description: "Advanced AI-powered legal document analysis platform that automatically reviews contracts; identifies risks; and provides legal insights. Uses natural language processing to analyze legal text and extract key information.",
-price: 449;,
+price: 449;
 category: "AI Legal Tech",
 image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800",
+<<<<<<< HEAD
 rating: 4.9;,
 review_count: 89;,
 ai_score: 96;,
+=======
+rating: 4.9;
+review_count: 89;
+ai_score: 96;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Contract analysis", "Risk assessment", "Legal research", "Document comparison", "Compliance checking", "AI-powered insights"],
 addons: ["Premium Support", "Custom Integration", "API Access"],
 marketPrice: "$449 - $1;200/month",
@@ -1887,8 +2020,7 @@ benefits: ["Reduce legal review time by 80%", "Improve accuracy by 95%", "Cost s
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 },
 
 },
@@ -1903,13 +2035,12 @@ support: "24/7 email and chat support",
 },
 
 // Smart Inventory Management System;
-{
-id: "smart-inventory-management",
+{id: "smart-inventory-management",
 title: "Smart Inventory Management System",
 description: "AI-powered inventory management solution that predicts demand; automates reordering; and optimizes stock levels to reduce costs and improve efficiency.",
 category: "Micro SAAS",
 subcategory: "Inventory Management",
-price: 199;,
+price: 199;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -1950,8 +2081,7 @@ marketPrice: "$199 - $800/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["React", "Node.js", "PostgreSQL", "Python", "Redis"],
 integrations: ["Shopify", "WooCommerce", "QuickBooks", "Xero", "ShipStation"],
 compliance: ["GDPR", "SOC 2"],
@@ -1963,13 +2093,12 @@ support: "Priority support with dedicated account manager",
 },
 
 // AI Customer Feedback Analyzer;
-{
-id: "ai-customer-feedback-analyzer",
+{id: "ai-customer-feedback-analyzer",
 title: "AI Customer Feedback Analyzer",
 description: "Intelligent feedback analysis platform that uses natural language processing to extract insights from customer reviews; surveys; and social media mentions.",
 category: "Micro SAAS",
 subcategory: "Customer Analytics",
-price: 99;,
+price: 99;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -2012,12 +2141,18 @@ marketPrice: "$99 - $400/month",
 id: "ai-real-estate-analytics",
 name: "AI Real Estate Analytics Platform",
 description: "Comprehensive real estate analytics platform using AI to predict market trends; property valuations; and investment opportunities. Provides data-driven insights for real estate professionals and investors.",
-price: 299;,
+price: 299;
 category: "AI Real Estate",
 image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800",
+<<<<<<< HEAD
 rating: 4.8;,
 review_count: 156;,
 ai_score: 93;,
+=======
+rating: 4.8;
+review_count: 156;
+ai_score: 93;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Market trend analysis", "Property valuation", "Investment scoring", "Neighborhood insights", "Rental yield calculator", "Market forecasting"],
 addons: ["Premium Support", "Custom Integration", "API Access"],
 marketPrice: "$299 - $800/month",
@@ -2034,8 +2169,7 @@ benefits: ["Improve investment decisions by 40%", "Reduce research time by 70%",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Python", "React", "Node.js", "PostgreSQL", "BERT"],
 integrations: ["SurveyMonkey", "Typeform", "Google Forms", "Social media APIs"],
 compliance: ["GDPR", "CCPA"],
@@ -2047,13 +2181,12 @@ support: "Email and chat support during business hours",
 },
 
 // Automated Social Media Manager;
-{
-id: "automated-social-media-manager",
+{id: "automated-social-media-manager",
 title: "Automated Social Media Manager",
 description: "AI-powered social media management platform that automatically creates; schedules; and optimizes content across multiple platforms for maximum engagement.",
 category: "Micro SAAS",
 subcategory: "Social Media",
-price: 79;,
+price: 79;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -2094,8 +2227,7 @@ marketPrice: "$79 - $300/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["React", "Node.js", "PostgreSQL", "OpenAI API", "Redis"],
 integrations: ["Facebook", "Instagram", "Twitter", "LinkedIn", "TikTok"],
 compliance: ["GDPR", "CCPA"],
@@ -2107,13 +2239,11 @@ support: "Email support with knowledge base",
 },
 
 // Smart Contract Management Platform;
-{
-id: "smart-contract-management",
+{id: "smart-contract-management",
 title: "Smart Contract Management Platform",
 description: "Intelligent contract management system that uses AI to analyze contracts; identify risks; and automate compliance monitoring for legal and business teams.",
 category: "Micro SAAS",
-subcategory: "Legal Tech",
-},
+subcategory: "Legal Tech"},
 technology: ["Unity", "Unreal Engine", "WebXR", "React", "Node.js"],
 integrations: ["LMS systems", "HR platforms", "Analytics tools", "VR headsets"],
 compliance: ["Accessibility standards", "Data privacy", "Industry regulations"],
@@ -2122,8 +2252,7 @@ competitors: ["Strivr", "Talespin", "PIXO VR", "VR Training", "Immersive VR Educ
 },
 
 // Green Tech Analytics Platform;
-{
-id: "green-tech-analytics-platform",
+{id: "green-tech-analytics-platform",
 title: "Green Tech Analytics Platform",
 description: "Sustainability analytics platform that helps organizations track; measure; and optimize their environmental impact and ESG performance.",
 category: "Sustainability & ESG",
@@ -2133,19 +2262,24 @@ integrations: ["Siemens Mindsphere", "GE Predix", "PTC ThingWorx", "Azure Digita
 compliance: ["ISO 27001", "Industry-specific standards", "Data privacy regulations"],
 roi: "450% within 10 months",
 competitors: ["Siemens", "GE Digital", "PTC", "Microsoft Azure"],
+<<<<<<< HEAD
 freeTrial: true;,
 freeTrialDays: 21;,
 demoUrl: "https://demo.ziontechgroup.com/digital-twin",
 },
+=======
+freeTrial: true;
+freeTrialDays: 21;
+demoUrl: "https://demo.ziontechgroup.com/digital-twin"},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // AI-Powered Content Creation Platform;
-{
-id: "ai-content-creation-platform",
+{id: "ai-content-creation-platform",
 title: "AI Content Creation Platform",
 description: "Advanced AI platform for automated content creation; including text; images; videos; and audio with brand consistency and SEO optimization.",
 category: "AI & Content Creation",
 subcategory: "Multimedia Generation",
-price: 299;,
+price: 299;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -2218,8 +2352,7 @@ marketPrice: "$299 - $1;200/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 "AI contract review",
 "Risk identification",
 "Legal compliance checking",
@@ -2260,8 +2393,7 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709",
-},
+address: "364 E Main St STE 1008 Middletown DE 19709"},
 technology: ["Natural Language Processing", "Machine Learning", "React", "Python", "PostgreSQL"],
 integrations: ["DocuSign", "Adobe Acrobat", "Legal databases", "CRM systems", "Email platforms"],
 compliance: ["GDPR", "SOC 2", "Legal industry standards", "Data privacy"],
@@ -2269,8 +2401,13 @@ roi: "500% within 12 months",
 competitors: ["Kira Systems", "Luminance", "Evisort", "ContractPodAi"],
 demoUrl: "https://ziontechgroup.com/demo/ai-legal-analysis",
 documentationUrl: "https://ziontechgroup.com/docs/ai-legal-analysis",
+<<<<<<< HEAD
 freeTrial: true;,
 freeTrialDays: 14;,
+=======
+freeTrial: true;
+freeTrialDays: 14;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 aiCapabilities: ["Natural Language Processing", "Document Classification", "Risk Assessment", "Legal Research"],
 securityFeatures: ["End-to-end encryption", "Role-based access", "Audit logging", "Data residency"],
 scalability: "Millions of documents processed",
@@ -2292,13 +2429,12 @@ competitors: ["Sphera", "EcoVadis", "Sustainalytics", "MSCI ESG", "Bloomberg ESG
 },
 
 // Fintech Compliance Platform;
-{
-id: "fintech-compliance-platform",
+{id: "fintech-compliance-platform",
 title: "Fintech Compliance Platform",
 description: "Comprehensive compliance platform for financial technology companies; automating regulatory reporting and risk management processes.",
 category: "Fintech & Compliance",
 subcategory: "Regulatory Technology",
-price: 699;,
+price: 699;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -2390,12 +2526,17 @@ marketPrice: "$599 - $3;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 aiScore: 99;
+<<<<<<< HEAD
 rating: 4.9;,
 reviewCount: 234;,
 featured: true;,
+=======
+rating: 4.9;
+reviewCount: 234;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location: "Global",
 availability: "24/7",
 demoUrl: "https://ziontechgroup.com/demo/quantum-safe-shield",
@@ -2410,13 +2551,12 @@ competitiveAdvantage: "First commercially available quantum-safe platform",
 },
 
 // Autonomous Business Operations Platform;
-{
-id: "autonomous-business-ops",
+{id: "autonomous-business-ops",
 title: "Autonomous Business Operations Platform",
 description: "Revolutionary AI platform that autonomously manages business operations including process automation; decision-making; resource optimization; and predictive maintenance.",
 category: "AI & Automation",
 subcategory: "Business Operations",
-price: 799;,
+price: 799;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -2459,12 +2599,17 @@ marketPrice: "$799 - $4;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 aiScore: 98;
+<<<<<<< HEAD
 rating: 4.9;,
 reviewCount: 167;,
 featured: true;,
+=======
+rating: 4.9;
+reviewCount: 167;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location: "Global",
 availability: "24/7",
 demoUrl: "https://ziontechgroup.com/demo/autonomous-ops",
@@ -2479,13 +2624,12 @@ competitiveAdvantage: "Only truly autonomous platform with human-level decision 
 },
 
 // Blockchain-Powered Supply Chain Transparency;
-{
-id: "blockchain-supply-chain",
+{id: "blockchain-supply-chain",
 title: "Blockchain Supply Chain Transparency Platform",
 description: "End-to-end supply chain visibility platform using blockchain technology to provide real-time tracking; authentication; and compliance verification for global supply chains.",
 category: "Blockchain & Supply Chain",
 subcategory: "Transparency & Tracking",
-price: 449;,
+price: 449;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -2528,12 +2672,17 @@ marketPrice: "$449 - $2;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 aiScore: 96;
+<<<<<<< HEAD
 rating: 4.8;,
 reviewCount: 145;,
 featured: true;,
+=======
+rating: 4.8;
+reviewCount: 145;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location: "Global",
 availability: "24/7",
 demoUrl: "https://ziontechgroup.com/demo/blockchain-supply-chain",
@@ -2548,13 +2697,12 @@ competitiveAdvantage: "Most comprehensive transparency platform with real-time c
 },
 
 // AI-Powered Healthcare Diagnostics;
-{
-id: "ai-healthcare-diagnostics",
+{id: "ai-healthcare-diagnostics",
 title: "AI Healthcare Diagnostics Assistant",
 description: "Advanced AI-powered medical diagnostics platform that assists healthcare professionals with image analysis; symptom assessment; and treatment recommendations.",
 category: "AI & Healthcare",
 subcategory: "Medical Diagnostics",
-price: 699;,
+price: 699;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -2591,9 +2739,15 @@ targetAudience: [
 "Radiologists",
 "Primary care physicians",
 aiScore: 93;
+<<<<<<< HEAD
 rating: 4.6;,
 reviewCount: 89;,
 featured: true;,
+=======
+rating: 4.6;
+reviewCount: 89;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location: "Global",
 availability: "24/7",
 demoUrl: "https://ziontechgroup.com/demo/iot-edge-computing",
@@ -2604,17 +2758,15 @@ compliance: ["ISO 27001", "IEC 62443", "NIST"],
 scalability: "Unlimited devices and sensors",
 deployment: "Hybrid edge-cloud architecture",
 roi: "180-300% within 12 months",
-timeToValue: "2-3 weeks",
-},
+timeToValue: "2-3 weeks"},
 
 // AI-Powered Marketing Automation;
-{
-id: "ai-marketing-automation",
+{id: "ai-marketing-automation",
 title: "AI Marketing Automation Suite",
 description: "Intelligent marketing automation platform that uses AI to personalize campaigns; predict customer behavior; and optimize marketing ROI across all channels and touchpoints.",
 category: "Marketing & Sales",
 subcategory: "AI Marketing",
-price: 799;,
+price: 799;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -2657,12 +2809,17 @@ marketPrice: "$799 - $3;499/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 aiScore: 95;
+<<<<<<< HEAD
 rating: 4.8;,
 reviewCount: 198;,
 featured: true;,
+=======
+rating: 4.8;
+reviewCount: 198;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location: "Global",
 availability: "24/7",
 demoUrl: "https://ziontechgroup.com/demo/ai-marketing",
@@ -2677,13 +2834,12 @@ timeToValue: "1-2 weeks",
 },
 
 // Virtual Reality Training Platform;
-{
-id: "vr-training-platform",
+{id: "vr-training-platform",
 title: "VR Training & Simulation Platform",
 description: "Immersive virtual reality platform for corporate training; skill development; and simulation-based learning with AI-powered assessment and personalized learning paths.",
 category: "VR/AR & Training",
 subcategory: "Corporate Training",
-price: 1299;,
+price: 1299;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -2726,12 +2882,17 @@ marketPrice: "$1;299 - $4;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 aiScore: 92;
+<<<<<<< HEAD
 rating: 4.7;,
 reviewCount: 76;,
 featured: true;,
+=======
+rating: 4.7;
+reviewCount: 76;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location: "Global",
 availability: "24/7",
 demoUrl: "https://ziontechgroup.com/demo/vr-training",
@@ -2746,13 +2907,12 @@ timeToValue: "4-6 weeks",
 },
 
 // Autonomous Data Center Management;
-{
-id: "autonomous-data-center",
+{id: "autonomous-data-center",
 title: "Autonomous Data Center Management",
 description: "Self-managing data center platform that automatically optimizes performance; energy efficiency; and resource allocation using AI and machine learning algorithms.",
 category: "Infrastructure",
 subcategory: "Data Center Management",
-price: 1999;,
+price: 1999;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -2795,8 +2955,7 @@ marketPrice: "$1;999 - $7;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["React", "Node.js", "Python", "PostgreSQL", "InfluxDB"],
 integrations: ["Solar panels", "Smart meters", "Building management systems", "Weather APIs", "Utility APIs"],
 compliance: ["ISO 50001", "LEED", "BREEAM", "SOC 2"],
@@ -2805,13 +2964,12 @@ competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"];
 },
 
 // AI-Powered Financial Planning Platform;
-{
-id: "ai-financial-planning-platform",
+{id: "ai-financial-planning-platform",
 title: "AI Financial Planning Platform",
 description: "Intelligent financial planning platform that provides personalized investment advice; retirement planning; and wealth management.",
 category: "AI & FinTech",
 subcategory: "Financial Planning",
-price: 179;,
+price: 179;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -2852,8 +3010,7 @@ marketPrice: "$179 - $699/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["React", "Node.js", "Python", "TensorFlow", "PostgreSQL"],
 integrations: ["Plaid", "Yodlee", "Tax software", "Brokerage accounts", "Banking APIs"],
 compliance: ["SEC", "FINRA", "SOC 2", "GDPR"],
@@ -2867,13 +3024,12 @@ competitors: ["Sphera", "EcoVadis", "Sustainalytics", "MSCI ESG", "Bloomberg ESG
 },
 
 // AI-Powered Content Creation;
-{
-id: "ai-powered-content-creation",
+{id: "ai-powered-content-creation",
 title: "AI-Powered Content Creation",
 description: "Intelligent platform that automates content creation; optimization; and distribution across multiple channels using advanced AI and NLP.",
 category: "Innovative Micro SAAS",
 subcategory: "Content & Marketing",
-price: 250;,
+price: 250;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -2914,8 +3070,7 @@ marketPrice: "$250 - $1;200/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["GPT-4", "BERT", "React", "Node.js", "MongoDB", "Redis"],
 integrations: ["WordPress", "Shopify", "Mailchimp", "Hootsuite", "Google Analytics"],
 compliance: ["GDPR", "Content guidelines", "Copyright protection"],
@@ -2924,13 +3079,12 @@ competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot", "Rytr"];
 },
 
 // Predictive Analytics for Small Business;
-{
-id: "predictive-analytics-small-business",
+{id: "predictive-analytics-small-business",
 title: "Predictive Analytics for Small Business",
 description: "Accessible predictive analytics platform designed specifically for small businesses to forecast trends; optimize operations; and make data-driven decisions.",
 category: "Innovative Micro SAAS",
 subcategory: "Analytics & Intelligence",
-price: 180;,
+price: 180;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -2971,8 +3125,7 @@ marketPrice: "$180 - $800/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Python", "Scikit-learn", "React", "Node.js", "PostgreSQL", "Redis"],
 integrations: ["QuickBooks", "Shopify", "Square", "Stripe", "Google Analytics"],
 compliance: ["GDPR", "Data privacy", "Industry standards"],
@@ -3003,15 +3156,13 @@ export const INNOVATIVE_SERVICE_CATEGORIES = [
 ];
 
 // NEW INNOVATIVE MICRO SAAS SERVICES ADDED;
-export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
-// AI-Powered Video Production Platform;
+export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [// AI-Powered Video Production Platform;
 {,
 id: "ai-video-production-platform",
 title: "AI-Powered Video Production & Editing Platform",
 description: "Intelligent video creation platform that automates video production; editing; and optimization using AI algorithms for content creators and businesses.",
 category: "AI & Creative Technology",
-subcategory: "Video Production",
-];
+subcategory: "Video Production"];
 
 // New Innovative Micro SAAS Services;
 export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
@@ -3021,7 +3172,7 @@ title: "AI-Powered Project Management Suite",
 description: "Intelligent project management platform that uses AI to predict project risks; optimize resource allocation; and automate task prioritization.",
 category: "Business Operations",
 subcategory: "Project Management",
-price: 299;,
+price: 299;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -3062,16 +3213,14 @@ marketPrice: "$299 - $899/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 },
-{
-id: "quantum-secure-communication",
+{id: "quantum-secure-communication",
 title: "Quantum-Secure Communication Platform",
 description: "Next-generation communication platform using quantum encryption for unbreakable security. Perfect for financial institutions; healthcare; and government agencies.",
 category: "Cybersecurity",
 subcategory: "Quantum Security",
-price: 1999;,
+price: 1999;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -3108,21 +3257,25 @@ targetAudience: [
 tags: ["Quantum", "Security", "Encryption", "Compliance", "Communication"],
 estimatedDelivery: "6-8 weeks",
 supportLevel: "enterprise",
-marketPrice: "$1;999 - $4;999/month",
-}
+marketPrice: "$1;999 - $4;999/month"}
 },
 
 // AI-Powered HR Recruitment;
-{
-id: "ai-hr-recruitment-suite",
+{id: "ai-hr-recruitment-suite",
 name: "AI HR Recruitment Suite",
 description: "Intelligent HR recruitment platform that automates candidate screening; skill assessment; and interview scheduling. Uses AI to match candidates with job requirements and predict job success.",
-price: 199;,
+price: 199;
 category: "AI HR Tech",
 image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800",
+<<<<<<< HEAD
 rating: 4.7;,
 review_count: 234;,
 ai_score: 91;,
+=======
+rating: 4.7;
+review_count: 234;
+ai_score: 91;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["AI candidate matching", "Skill assessment", "Interview scheduling", "Resume parsing", "Background screening", "Performance prediction"],
 addons: ["Premium Support", "Custom Integration", "API Access"],
 marketPrice: "$199 - $600/month",
@@ -3139,8 +3292,7 @@ benefits: ["Reduce hiring time by 50%", "Improve candidate quality by 35%", "Cos
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 },
 "Blockchain-based tracking",
 "Real-time visibility",
@@ -3179,16 +3331,14 @@ marketPrice: "$799 - $2;499/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 },
-{
-id: "ai-powered-hr-automation",
+{id: "ai-powered-hr-automation",
 title: "AI-Powered HR Automation Suite",
 description: "Comprehensive HR automation platform that handles recruitment; onboarding; performance management; and employee engagement using artificial intelligence.",
 category: "Human Resources",
 subcategory: "AI Automation",
-price: 399;,
+price: 399;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -3229,16 +3379,14 @@ marketPrice: "$399 - $1;199/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 },
-{
-id: "iot-smart-building-management",
+{id: "iot-smart-building-management",
 title: "IoT Smart Building Management System",
 description: "Intelligent building management platform that optimizes energy consumption; security; and maintenance using IoT sensors and AI analytics.",
 category: "IoT & Smart Cities",
 subcategory: "Building Management",
-price: 1299;,
+price: 1299;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -3282,12 +3430,18 @@ marketPrice: "$1;299 - $3;999/month",
 id: "ai-supply-chain-optimizer",
 name: "AI Supply Chain Optimizer",
 description: "Advanced supply chain optimization platform using AI to predict demand; optimize inventory; and reduce costs. Provides real-time visibility and predictive analytics for supply chain management.",
-price: 399;,
+price: 399;
 category: "AI Supply Chain",
 image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800",
+<<<<<<< HEAD
 rating: 4.8;,
 review_count: 178;,
 ai_score: 94;,
+=======
+rating: 4.8;
+review_count: 178;
+ai_score: 94;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Demand forecasting", "Inventory optimization", "Route optimization", "Supplier management", "Risk assessment", "Cost analysis"],
 addons: ["Premium Support", "Custom Integration", "API Access"],
 marketPrice: "$399 - $1;200/month",
@@ -3304,8 +3458,7 @@ benefits: ["Reduce inventory costs by 30%", "Improve forecast accuracy by 40%", 
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 },
 "AI investment recommendations",
 "Portfolio optimization",
@@ -3356,12 +3509,17 @@ marketPrice: "$699 - $3;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 aiScore: 99;
+<<<<<<< HEAD
 rating: 4.9;,
 reviewCount: 312;,
 featured: true;,
+=======
+rating: 4.9;
+reviewCount: 312;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location: "Global",
 availability: "24/7",
 demoUrl: "https://ziontechgroup.com/demo/ai-healthcare",
@@ -3376,26 +3534,23 @@ competitiveAdvantage: "Highest accuracy rates in medical image analysis",
 },
 
 // Quantum Machine Learning Platform;
-{
-id: "quantum-ml-platform",
+{id: "quantum-ml-platform",
 title: "Quantum Machine Learning Platform",
 description: "Cutting-edge platform that combines quantum computing with machine learning to solve complex optimization problems; accelerate drug discovery; and revolutionize financial modeling.",
 category: "Quantum Computing",
 subcategory: "Machine Learning",
-price: 1299;,
+price: 1299;
 currency: "$",
 pricingModel: "monthly",
 features: [
-"Quantum algorithm optimization",
-}
+"Quantum algorithm optimization"}
 },
-{
-id: "quantum-machine-learning-platform",
+{id: "quantum-machine-learning-platform",
 title: "Quantum Machine Learning Platform",
 description: "Revolutionary machine learning platform that leverages quantum computing principles to solve complex optimization problems and accelerate AI model training.",
 category: "AI & Machine Learning",
 subcategory: "Quantum AI",
-price: 2499;,
+price: 2499;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -3471,12 +3626,17 @@ marketPrice: "$1;299 - $9;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 aiScore: 100;
+<<<<<<< HEAD
 rating: 5.0;,
 reviewCount: 78;,
 featured: true;,
+=======
+rating: 5.0;
+reviewCount: 78;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location: "Global",
 availability: "24/7",
 demoUrl: "https://ziontechgroup.com/demo/quantum-ml",
@@ -3491,13 +3651,12 @@ competitiveAdvantage: "Only platform offering hybrid quantum-classical ML models
 },
 
 // Edge AI Computing Platform;
-{
-id: "edge-ai-computing",
+{id: "edge-ai-computing",
 title: "Edge AI Computing Platform",
 description: "Revolutionary edge computing platform that brings AI processing to the edge of networks; enabling real-time decision making; reduced latency; and enhanced privacy for IoT devices.",
 category: "AI & Edge Computing",
 subcategory: "Edge AI",
-price: 399;,
+price: 399;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -3540,12 +3699,17 @@ marketPrice: "$399 - $2;499/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 aiScore: 97;
+<<<<<<< HEAD
 rating: 4.8;,
 reviewCount: 134;,
 featured: true;,
+=======
+rating: 4.8;
+reviewCount: 134;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location: "Global",
 availability: "24/7",
 demoUrl: "https://ziontechgroup.com/demo/edge-ai",
@@ -3560,13 +3724,12 @@ competitiveAdvantage: "Lowest latency edge AI platform with automatic optimizati
 },
 
 // Autonomous Financial Trading Platform;
-{
-id: "autonomous-financial-trading",
+{id: "autonomous-financial-trading",
 title: "Autonomous Financial Trading Platform",
 description: "AI-powered autonomous trading platform that uses advanced algorithms; real-time market analysis; and predictive modeling to execute trades with precision and speed.",
 category: "AI & Finance",
 subcategory: "Algorithmic Trading",
-price: 899;,
+price: 899;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -3609,8 +3772,7 @@ marketPrice: "$899 - $4;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 }
 }
 ];
@@ -3625,33 +3787,49 @@ title: "Zion AI Support Automation",
 description: "Intelligent customer support automation platform that uses AI to handle customer inquiries; route tickets; and provide instant solutions while maintaining human touch.",
 category: "AI & Customer Service",
 subcategory: "Support Automation",
+<<<<<<< HEAD
 rating: 4.9;,
 reviewCount: 247;,
+=======
+rating: 4.9;
+reviewCount: 247;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 launchDate: "2024-01-15",
 status: "Active",
 marketPrice: "$99 - $799/month",
 competitiveAdvantage: "Only platform combining AI content generation with enterprise-grade orchestration and predictive analytics",
 technicalSpecs: {,
 platform: "Web-based SaaS",
+<<<<<<< HEAD
 api: true;,
 mobile: true;,
 desktop: true;,
 cloud: true;,
+=======
+api: true;
+mobile: true;
+desktop: true;
+cloud: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 },
-{
-id: "quantum-crm-intelligence",
+{id: "quantum-crm-intelligence",
 title: "Quantum CRM Intelligence",
 description: "Next-generation CRM platform powered by quantum-inspired algorithms for predictive customer behavior analysis; automated lead scoring; and intelligent sales forecasting.",
 category: "AI & Automation",
 subcategory: "Customer Relationship Management",
 price: {
+<<<<<<< HEAD
 starter: 149;,
 professional: 399;,
 enterprise: 999;,
+=======
+starter: 149;
+professional: 399;
+enterprise: 999;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 currency: "$",
-billingCycle: "monthly",
-},
+billingCycle: "monthly"},
 features: [
 "Quantum-inspired predictive analytics",
 "AI-powered lead scoring and qualification",
@@ -3696,35 +3874,52 @@ website: "https://ziontechgroup.com/services/quantum-crm-intelligence",
 contactInfo: {,
 email: "kleber@ziontechgroup.com",
 phone: "+1 302 464 0950",
+<<<<<<< HEAD
 address: "364 E Main St STE 1008; Middletown DE 19709",
 },
 rating: 4.8;,
 reviewCount: 189;,
+=======
+address: "364 E Main St STE 1008; Middletown DE 19709"},
+rating: 4.8;
+reviewCount: 189;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 launchDate: "2024-02-01",
 status: "Active",
 marketPrice: "$149 - $999/month",
 competitiveAdvantage: "First CRM platform using quantum-inspired algorithms for predictive analytics and customer behavior modeling",
 technicalSpecs: {,
 platform: "Web-based SaaS",
+<<<<<<< HEAD
 api: true;,
 mobile: true;,
 desktop: true;,
 cloud: true;,
+=======
+api: true;
+mobile: true;
+desktop: true;
+cloud: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 },
-{
-id: "cyber-shield-enterprise",
+{id: "cyber-shield-enterprise",
 title: "Cyber Shield Enterprise",
 description: "Comprehensive cybersecurity platform providing real-time threat detection; automated incident response; and compliance management for enterprises of all sizes.",
 category: "Security & Compliance",
 subcategory: "Cybersecurity",
 price: {
+<<<<<<< HEAD
 starter: 199;,
 professional: 499;,
 enterprise: 1299;,
+=======
+starter: 199;
+professional: 499;
+enterprise: 1299;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 currency: "$",
-billingCycle: "monthly",
-},
+billingCycle: "monthly"},
 features: [
 "Real-time threat detection and response",
 "AI-powered malware analysis",
@@ -3769,35 +3964,52 @@ website: "https://ziontechgroup.com/services/cyber-shield-enterprise",
 contactInfo: {,
 email: "kleber@ziontechgroup.com",
 phone: "+1 302 464 0950",
+<<<<<<< HEAD
 address: "364 E Main St STE 1008; Middletown DE 19709",
 },
 rating: 4.9;,
 reviewCount: 156;,
+=======
+address: "364 E Main St STE 1008; Middletown DE 19709"},
+rating: 4.9;
+reviewCount: 156;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 launchDate: "2024-01-20",
 status: "Active",
 marketPrice: "$199 - $1;299/month",
 competitiveAdvantage: "Only cybersecurity platform combining AI threat detection with automated compliance management and 24/7 monitoring",
 technicalSpecs: {,
 platform: "Web-based SaaS",
+<<<<<<< HEAD
 api: true;,
 mobile: true;,
 desktop: true;,
 cloud: true;,
+=======
+api: true;
+mobile: true;
+desktop: true;
+cloud: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 },
-{
-id: "data-viz-pro",
+{id: "data-viz-pro",
 title: "Data Viz Pro",
 description: "Advanced data visualization and business intelligence platform that transforms complex data into actionable insights with interactive dashboards and real-time analytics.",
 category: "Business Intelligence",
 subcategory: "Data Visualization",
 price: {
+<<<<<<< HEAD
 starter: 79;,
 professional: 199;,
 enterprise: 599;,
+=======
+starter: 79;
+professional: 199;
+enterprise: 599;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 currency: "$",
-billingCycle: "monthly",
-},
+billingCycle: "monthly"},
 features: [
 "Interactive data dashboards",
 "Real-time data streaming",
@@ -3842,35 +4054,52 @@ website: "https://ziontechgroup.com/services/data-viz-pro",
 contactInfo: {,
 email: "kleber@ziontechgroup.com",
 phone: "+1 302 464 0950",
+<<<<<<< HEAD
 address: "364 E Main St STE 1008; Middletown DE 19709",
 },
 rating: 4.7;,
 reviewCount: 134;,
+=======
+address: "364 E Main St STE 1008; Middletown DE 19709"},
+rating: 4.7;
+reviewCount: 134;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 launchDate: "2024-02-15",
 status: "Active",
 marketPrice: "$79 - $599/month",
 competitiveAdvantage: "Most intuitive data visualization platform with AI-powered insights and real-time collaboration features",
 technicalSpecs: {,
 platform: "Web-based SaaS",
+<<<<<<< HEAD
 api: true;,
 mobile: true;,
 desktop: true;,
 cloud: true;,
+=======
+api: true;
+mobile: true;
+desktop: true;
+cloud: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 },
-{
-id: "workflow-automation-hub",
+{id: "workflow-automation-hub",
 title: "Workflow Automation Hub",
 description: "Comprehensive workflow automation platform that streamlines business processes; eliminates manual tasks; and increases operational efficiency across all departments.",
 category: "AI & Automation",
 subcategory: "Workflow Automation",
 price: {
+<<<<<<< HEAD
 starter: 89;,
 professional: 249;,
 enterprise: 699;,
+=======
+starter: 89;
+professional: 249;
+enterprise: 699;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 currency: "$",
-billingCycle: "monthly",
-},
+billingCycle: "monthly"},
 features: [
 "Visual workflow builder",
 "AI-powered process optimization",
@@ -3915,35 +4144,52 @@ website: "https://ziontechgroup.com/services/workflow-automation-hub",
 contactInfo: {,
 email: "kleber@ziontechgroup.com",
 phone: "+1 302 464 0950",
+<<<<<<< HEAD
 address: "364 E Main St STE 1008; Middletown DE 19709",
 },
 rating: 4.8;,
 reviewCount: 178;,
+=======
+address: "364 E Main St STE 1008; Middletown DE 19709"},
+rating: 4.8;
+reviewCount: 178;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 launchDate: "2024-01-30",
 status: "Active",
 marketPrice: "$89 - $699/month",
 competitiveAdvantage: "Most comprehensive workflow automation platform with AI optimization and extensive integration capabilities",
 technicalSpecs: {,
 platform: "Web-based SaaS",
+<<<<<<< HEAD
 api: true;,
 mobile: true;,
 desktop: true;,
 cloud: true;,
+=======
+api: true;
+mobile: true;
+desktop: true;
+cloud: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 },
-{
-id: "ai-marketing-suite",
+{id: "ai-marketing-suite",
 title: "AI Marketing Suite",
 description: "All-in-one AI-powered marketing platform that automates campaign creation; optimization; and analysis across all digital channels with predictive analytics.",
 category: "Digital Marketing",
 subcategory: "Marketing Automation",
 price: {
+<<<<<<< HEAD
 starter: 129;,
 professional: 349;,
 enterprise: 899;,
+=======
+starter: 129;
+professional: 349;
+enterprise: 899;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 currency: "$",
-billingCycle: "monthly",
-},
+billingCycle: "monthly"},
 features: [
 "AI-powered campaign creation",
 "Multi-channel marketing automation",
@@ -3988,35 +4234,52 @@ website: "https://ziontechgroup.com/services/ai-marketing-suite",
 contactInfo: {,
 email: "kleber@ziontechgroup.com",
 phone: "+1 302 464 0950",
+<<<<<<< HEAD
 address: "364 E Main St STE 1008; Middletown DE 19709",
 },
 rating: 4.9;,
 reviewCount: 203;,
+=======
+address: "364 E Main St STE 1008; Middletown DE 19709"},
+rating: 4.9;
+reviewCount: 203;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 launchDate: "2024-02-10",
 status: "Active",
 marketPrice: "$129 - $899/month",
 competitiveAdvantage: "Only marketing platform combining AI campaign creation with predictive analytics and multi-channel automation",
 technicalSpecs: {,
 platform: "Web-based SaaS",
+<<<<<<< HEAD
 api: true;,
 mobile: true;,
 desktop: true;,
 cloud: true;,
+=======
+api: true;
+mobile: true;
+desktop: true;
+cloud: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 },
-{
-id: "quantum-project-manager",
+{id: "quantum-project-manager",
 title: "Quantum Project Manager",
 description: "Advanced project management platform using quantum-inspired algorithms for resource optimization; risk assessment; and intelligent project scheduling.",
 category: "Productivity",
 subcategory: "Project Management",
 price: {
+<<<<<<< HEAD
 starter: 69;,
 professional: 179;,
 enterprise: 499;,
+=======
+starter: 69;
+professional: 179;
+enterprise: 499;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 currency: "$",
-billingCycle: "monthly",
-},
+billingCycle: "monthly"},
 features: [
 "Quantum-inspired resource optimization",
 "AI-powered risk assessment",
@@ -4061,35 +4324,52 @@ website: "https://ziontechgroup.com/services/quantum-project-manager",
 contactInfo: {,
 email: "kleber@ziontechgroup.com",
 phone: "+1 302 464 0950",
+<<<<<<< HEAD
 address: "364 E Main St STE 1008; Middletown DE 19709",
 },
 rating: 4.7;,
 reviewCount: 145;,
+=======
+address: "364 E Main St STE 1008; Middletown DE 19709"},
+rating: 4.7;
+reviewCount: 145;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 launchDate: "2024-02-20",
 status: "Active",
 marketPrice: "$69 - $499/month",
 competitiveAdvantage: "First project management platform using quantum-inspired algorithms for resource optimization and risk assessment",
 technicalSpecs: {,
 platform: "Web-based SaaS",
+<<<<<<< HEAD
 api: true;,
 mobile: true;,
 desktop: true;,
 cloud: true;,
+=======
+api: true;
+mobile: true;
+desktop: true;
+cloud: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 },
-{
-id: "smart-hr-automation",
+{id: "smart-hr-automation",
 title: "Smart HR Automation",
 description: "Intelligent HR platform that automates recruitment; employee onboarding; performance management; and HR analytics with AI-powered insights.",
 category: "Finance & HR",
 subcategory: "Human Resources",
 price: {
+<<<<<<< HEAD
 starter: 119;,
 professional: 299;,
 enterprise: 799;,
+=======
+starter: 119;
+professional: 299;
+enterprise: 799;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 currency: "$",
-billingCycle: "monthly",
-},
+billingCycle: "monthly"},
 features: [
 "AI-powered candidate screening",
 "Automated onboarding workflows",
@@ -4134,35 +4414,52 @@ website: "https://ziontechgroup.com/services/smart-hr-automation",
 contactInfo: {,
 email: "kleber@ziontechgroup.com",
 phone: "+1 302 464 0950",
+<<<<<<< HEAD
 address: "364 E Main St STE 1008; Middletown DE 19709",
 },
 rating: 4.8;,
 reviewCount: 167;,
+=======
+address: "364 E Main St STE 1008; Middletown DE 19709"},
+rating: 4.8;
+reviewCount: 167;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 launchDate: "2024-01-25",
 status: "Active",
 marketPrice: "$119 - $799/month",
 competitiveAdvantage: "Most comprehensive HR automation platform with AI-powered insights and end-to-end process automation",
 technicalSpecs: {,
 platform: "Web-based SaaS",
+<<<<<<< HEAD
 api: true;,
 mobile: true;,
 desktop: true;,
 cloud: true;,
+=======
+api: true;
+mobile: true;
+desktop: true;
+cloud: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 },
-{
-id: "blockchain-supply-chain",
+{id: "blockchain-supply-chain",
 title: "Blockchain Supply Chain Tracker",
 description: "Transparent supply chain management platform using blockchain technology for real-time tracking; authentication; and compliance across global supply networks.",
 category: "Industry Specific",
 subcategory: "Supply Chain Management",
 price: {
+<<<<<<< HEAD
 starter: 199;,
 professional: 499;,
 enterprise: 1299;,
+=======
+starter: 199;
+professional: 499;
+enterprise: 1299;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 currency: "$",
-billingCycle: "monthly",
-},
+billingCycle: "monthly"},
 features: [
 "Blockchain-based tracking",
 "Real-time supply chain visibility",
@@ -4207,35 +4504,52 @@ website: "https://ziontechgroup.com/services/blockchain-supply-chain",
 contactInfo: {,
 email: "kleber@ziontechgroup.com",
 phone: "+1 302 464 0950",
+<<<<<<< HEAD
 address: "364 E Main St STE 1008; Middletown DE 19709",
 },
 rating: 4.9;,
 reviewCount: 89;,
+=======
+address: "364 E Main St STE 1008; Middletown DE 19709"},
+rating: 4.9;
+reviewCount: 89;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 launchDate: "2024-02-01",
 status: "Active",
 marketPrice: "$199 - $1;299/month",
 competitiveAdvantage: "Only supply chain platform combining blockchain technology with real-time tracking and compliance management",
 technicalSpecs: {,
 platform: "Web-based SaaS",
+<<<<<<< HEAD
 api: true;,
 mobile: true;,
 desktop: true;,
 cloud: true;,
+=======
+api: true;
+mobile: true;
+desktop: true;
+cloud: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 },
-{
-id: "ai-code-assistant-pro",
+{id: "ai-code-assistant-pro",
 title: "AI Code Assistant Pro",
 description: "Advanced AI-powered coding assistant that provides intelligent code suggestions; automated testing; documentation generation; and code review automation.",
 category: "Development Tools",
 subcategory: "Code Development",
 price: {
+<<<<<<< HEAD
 starter: 49;,
 professional: 129;,
 enterprise: 399;,
+=======
+starter: 49;
+professional: 129;
+enterprise: 399;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 currency: "$",
-billingCycle: "monthly",
-},
+billingCycle: "monthly"},
 features: [
 "AI-powered code completion",
 "Automated code testing",
@@ -4280,20 +4594,33 @@ website: "https://ziontechgroup.com/services/ai-code-assistant-pro",
 contactInfo: {,
 email: "kleber@ziontechgroup.com",
 phone: "+1 302 464 0950",
+<<<<<<< HEAD
 address: "364 E Main St STE 1008; Middletown DE 19709",
 },
 rating: 4.8;,
 reviewCount: 234;,
+=======
+address: "364 E Main St STE 1008; Middletown DE 19709"},
+rating: 4.8;
+reviewCount: 234;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 launchDate: "2024-01-10",
 status: "Active",
 marketPrice: "$49 - $399/month",
 competitiveAdvantage: "Most advanced AI coding assistant with automated testing; documentation; and security scanning capabilities",
 technicalSpecs: {,
 platform: "Web-based SaaS + IDE plugins",
+<<<<<<< HEAD
 api: true;,
 mobile: false;,
 desktop: true;,
 cloud: true;,
+=======
+api: true;
+mobile: false;
+desktop: true;
+cloud: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 }
 ];
@@ -4301,62 +4628,70 @@ cloud: true;,
 export const INNOVATIVE_SAAS_CATEGORIES = [
 {
 label: "AI & Automation",
+<<<<<<< HEAD
 value: "ai-automation";
 description: "Intelligent automation solutions powered by artificial intelligence";
 icon: "🤖";
 serviceCount: 4;,
+=======
+value: "ai-automation",
+description: "Intelligent automation solutions powered by artificial intelligence",
+icon: "🤖",;
+serviceCount: 4;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 },
 {
 label: "Business Intelligence",
 value: "business-intelligence",
 description: "Data-driven insights and analytics for better decision making",
 icon: "📊",
-serviceCount: 1;,
+serviceCount: 1;
 },
 {
 label: "Digital Marketing",
 value: "digital-marketing",
 description: "AI-powered marketing automation and optimization tools",
 icon: "📈",
-serviceCount: 1;,
+serviceCount: 1;
 },
 {
 label: "Productivity",
 value: "productivity",
 description: "Tools to streamline workflows and increase team efficiency",
 icon: "⚡",
-serviceCount: 1;,
+serviceCount: 1;
 },
 {
 label: "Security & Compliance",
 value: "security-compliance",
 description: "Enterprise-grade security and compliance management",
 icon: "🔒",
-serviceCount: 1;,
+serviceCount: 1;
 },
 {
 label: "Development Tools",
 value: "development-tools",
 description: "Advanced development and coding assistance tools",
 icon: "💻",
-serviceCount: 1;,
+serviceCount: 1;
 },
 {
 label: "Finance & HR",
 value: "finance-hr",
 description: "Automated financial and human resource management",
 icon: "👥",
-serviceCount: 1;,
+serviceCount: 1;
 },
 {
 label: "Industry Specific",
 value: "industry-specific",
 description: "Specialized solutions for specific industries",
 icon: "🏭",
-serviceCount: 1;,
+serviceCount: 1;
 }
 ];
 
+<<<<<<< HEAD
 export const CONTACT_INFO = {;
 mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
@@ -4366,6 +4701,16 @@ aiScore: 98;
 rating: 4.9;,
 reviewCount: 189;,
 featured: true;,
+=======
+export const CONTACT_INFO = {mobile: "+1 302 464 0950",
+email: "kleber@ziontechgroup.com",;
+address: "364 E Main St STE 1008; Middletown DE 19709",
+website: "https://ziontechgroup.com";
+aiScore: 98;
+rating: 4.9;
+reviewCount: 189;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location: "Global",
 availability: "24/7",
 demoUrl: "https://ziontechgroup.com/demo/autonomous-trading",
@@ -4376,15 +4721,20 @@ compliance: ["SEC", "FINRA", "MiFID II", "GDPR"],
 scalability: "Unlimited trading volume",
 deployment: "Multi-cloud with low-latency infrastructure",
 marketTrend: "Algorithmic trading market growing 30% annually",
-competitiveAdvantage: "Most accurate predictive models with autonomous execution",
-}
+competitiveAdvantage: "Most accurate predictive models with autonomous execution"}
 ];
 
 export default INNOVATIVE_MICRO_SAAS_SERVICES;
 aiScore: 98;
+<<<<<<< HEAD
 rating: 4.9;,
 reviewCount: 134;,
 featured: true;,
+=======
+rating: 4.9;
+reviewCount: 134;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location: "Global",
 availability: "24/7",
 demoUrl: "https://ziontechgroup.com/demo/autonomous-data-center",
@@ -4403,8 +4753,13 @@ integrations: ["WordPress", "Shopify", "Social Media APIs", "CMS Platforms"],
 compliance: ["Copyright compliance", "Content moderation", "Brand safety"],
 roi: "350% within 6 months",
 competitors: ["Jasper", "Copy.ai", "Writesonic", "Canva"],
+<<<<<<< HEAD
 freeTrial: true;,
 freeTrialDays: 14;,
+=======
+freeTrial: true;
+freeTrialDays: 14;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 demoUrl: "https://demo.ziontechgroup.com/ai-content",
 }
 ];
@@ -4413,16 +4768,21 @@ demoUrl: "https://demo.ziontechgroup.com/ai-content",
 };
 
 // AI-Powered Energy Management;
-{
-id: "ai-energy-management-platform",
+{id: "ai-energy-management-platform",
 name: "AI Energy Management Platform",
 description: "Intelligent energy management platform that optimizes energy consumption; predicts usage patterns; and identifies cost-saving opportunities. Uses IoT sensors and AI for smart energy management.",
-price: 249;,
+price: 249;
 category: "AI Energy Tech",
 image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800",
+<<<<<<< HEAD
 rating: 4.6;,
 review_count: 134;,
 ai_score: 89;,
+=======
+rating: 4.6;
+review_count: 134;
+ai_score: 89;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Energy consumption monitoring", "Usage prediction", "Cost optimization", "IoT integration", "Real-time alerts", "Sustainability reporting"],
 addons: ["Premium Support", "Custom Integration", "API Access"],
 marketPrice: "$249 - $700/month",
@@ -4439,21 +4799,25 @@ benefits: ["Reduce energy costs by 25%", "Improve efficiency by 30%", "Sustainab
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 },
 
 // AI-Powered Agriculture Analytics;
-{
-id: "ai-agriculture-analytics",
+{id: "ai-agriculture-analytics",
 name: "AI Agriculture Analytics Platform",
 description: "Comprehensive agriculture analytics platform using AI to optimize crop yields; monitor soil health; and predict weather patterns. Provides precision agriculture solutions for modern farming.",
-price: 179;,
+price: 179;
 category: "AI Agriculture",
 image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800",
+<<<<<<< HEAD
 rating: 4.7;,
 review_count: 98;,
 ai_score: 92;,
+=======
+rating: 4.7;
+review_count: 98;
+ai_score: 92;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Crop yield prediction", "Soil health monitoring", "Weather forecasting", "Precision irrigation", "Pest detection", "Harvest optimization"],
 addons: ["Premium Support", "Custom Integration", "API Access"],
 marketPrice: "$179 - $500/month",
@@ -4470,21 +4834,25 @@ benefits: ["Increase crop yields by 20%", "Reduce water usage by 30%", "Optimize
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 },
 
 // AI-Powered Manufacturing Quality Control;
-{
-id: "ai-manufacturing-quality-control",
+{id: "ai-manufacturing-quality-control",
 name: "AI Manufacturing Quality Control",
 description: "Advanced quality control platform using computer vision and AI to detect defects; monitor production lines; and ensure product quality. Provides real-time quality assurance for manufacturing.",
-price: 599;,
+price: 599;
 category: "AI Manufacturing",
 image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800",
+<<<<<<< HEAD
 rating: 4.9;,
 review_count: 167;,
 ai_score: 95;,
+=======
+rating: 4.9;
+review_count: 167;
+ai_score: 95;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Defect detection", "Production monitoring", "Quality analytics", "Real-time alerts", "Performance tracking", "Predictive maintenance"],
 addons: ["Premium Support", "Custom Integration", "API Access"],
 marketPrice: "$599 - $1;500/month",
@@ -4501,21 +4869,25 @@ benefits: ["Reduce defects by 40%", "Improve quality by 60%", "Cost savings of 3
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 },
 
 // AI-Powered Customer Churn Prediction;
-{
-id: "ai-customer-churn-prediction",
+{id: "ai-customer-churn-prediction",
 name: "AI Customer Churn Prediction",
 description: "Intelligent customer churn prediction platform that uses machine learning to identify at-risk customers and provide retention strategies. Helps businesses reduce customer churn and increase loyalty.",
-price: 199;,
+price: 199;
 category: "AI Customer Analytics",
 image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800",
+<<<<<<< HEAD
 rating: 4.6;,
 review_count: 145;,
 ai_score: 90;,
+=======
+rating: 4.6;
+review_count: 145;
+ai_score: 90;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Churn prediction", "Risk scoring", "Retention strategies", "Customer segmentation", "Behavioral analysis", "Predictive alerts"],
 addons: ["Premium Support", "Custom Integration", "API Access"],
 marketPrice: "$199 - $600/month",
@@ -4532,21 +4904,25 @@ benefits: ["Reduce churn by 30%", "Increase customer lifetime value by 25%", "Im
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 },
 
 // AI-Powered Fraud Detection;
-{
-id: "ai-fraud-detection-system",
+{id: "ai-fraud-detection-system",
 name: "AI Fraud Detection System",
 description: "Advanced fraud detection platform using machine learning to identify fraudulent transactions; suspicious activities; and security threats in real-time. Provides comprehensive fraud prevention for businesses.",
-price: 349;,
+price: 349;
 category: "AI Security",
 image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800",
+<<<<<<< HEAD
 rating: 4.8;,
 review_count: 223;,
 ai_score: 94;,
+=======
+rating: 4.8;
+review_count: 223;
+ai_score: 94;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Real-time fraud detection", "Behavioral analysis", "Risk scoring", "Alert system", "Case management", "Compliance reporting"],
 addons: ["Premium Support", "Custom Integration", "API Access"],
 marketPrice: "$349 - $1;000/month",
@@ -4563,21 +4939,25 @@ benefits: ["Reduce fraud losses by 60%", "Improve detection accuracy by 40%", "R
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 },
 
 // AI-Powered Video Analytics;
-{
-id: "ai-video-analytics-platform",
+{id: "ai-video-analytics-platform",
 name: "AI Video Analytics Platform",
 description: "Comprehensive video analytics platform using computer vision and AI to analyze video content; detect objects; and extract insights. Provides intelligent video monitoring and analysis solutions.",
-price: 299;,
+price: 299;
 category: "AI Video Analytics",
 image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800",
+<<<<<<< HEAD
 rating: 4.7;,
 review_count: 189;,
 ai_score: 91;,
+=======
+rating: 4.7;
+review_count: 189;
+ai_score: 91;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Object detection", "Face recognition", "Motion analysis", "Content moderation", "Video search", "Real-time alerts"],
 addons: ["Premium Support", "Custom Integration", "API Access"],
 marketPrice: "$299 - $800/month",
@@ -4594,21 +4974,25 @@ benefits: ["Improve security by 50%", "Reduce manual review time by 70%", "Conte
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 },
 
 // AI-Powered Language Translation;
-{
-id: "ai-language-translation-service",
+{id: "ai-language-translation-service",
 name: "AI Language Translation Service",
 description: "Advanced AI-powered language translation service supporting 100+ languages with high accuracy and context awareness. Provides real-time translation for businesses and individuals.",
-price: 149;,
+price: 149;
 category: "AI Language Tech",
 image: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800",
+<<<<<<< HEAD
 rating: 4.8;,
 review_count: 267;,
 ai_score: 93;,
+=======
+rating: 4.8;
+review_count: 267;
+ai_score: 93;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["100+ languages", "Real-time translation", "Context awareness", "Document translation", "Voice translation", "API access"],
 addons: ["Premium Support", "Custom Integration", "API Access"],
 marketPrice: "$149 - $400/month",
@@ -4625,21 +5009,25 @@ benefits: ["Reach global audience", "Improve customer experience", "Reduce trans
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 },
 
 // AI-Powered Email Marketing Optimization;
-{
-id: "ai-email-marketing-optimizer",
+{id: "ai-email-marketing-optimizer",
 name: "AI Email Marketing Optimizer",
 description: "Intelligent email marketing platform that uses AI to optimize subject lines; content; timing; and segmentation. Provides data-driven email marketing strategies for better engagement and conversions.",
-price: 199;,
+price: 199;
 category: "AI Marketing",
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+<<<<<<< HEAD
 rating: 4.7;,
 review_count: 198;,
 ai_score: 92;,
+=======
+rating: 4.7;
+review_count: 198;
+ai_score: 92;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Subject line optimization", "Content personalization", "Send time optimization", "A/B testing", "Segmentation", "Performance analytics"],
 addons: ["Premium Support", "Custom Integration", "API Access"],
 marketPrice: "$199 - $600/month",
@@ -4656,21 +5044,25 @@ benefits: ["Increase open rates by 30%", "Improve click-through rates by 40%", "
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 },
 
 // AI-Powered SEO Optimization;
-{
-id: "ai-seo-optimization-platform",
+{id: "ai-seo-optimization-platform",
 name: "AI SEO Optimization Platform",
 description: "Advanced SEO optimization platform using AI to analyze content; suggest improvements; and track performance. Provides comprehensive SEO tools for better search engine rankings.",
-price: 249;,
+price: 249;
 category: "AI SEO",
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+<<<<<<< HEAD
 rating: 4.8;,
 review_count: 234;,
 ai_score: 91;,
+=======
+rating: 4.8;
+review_count: 234;
+ai_score: 91;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Content analysis", "Keyword research", "Performance tracking", "Competitor analysis", "Technical SEO", "Ranking insights"],
 addons: ["Premium Support", "Custom Integration", "API Access"],
 marketPrice: "$249 - $700/month",
@@ -4687,8 +5079,7 @@ benefits: ["Improve search rankings by 40%", "Increase organic traffic by 50%", 
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 }
 ];
 

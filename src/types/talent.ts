@@ -1,9 +1,9 @@
 import React from "react";
 
-export interface Talent {
-id: string; name: string; email: string;
+export interface Talent {id: string; name: string; email: string;
 avatar?: string;
 bio?: string;,
+<<<<<<< HEAD
 skills: string[], experience: number; hourlyRate: number; currency: string;,
 location: {,
 city: string; country: string; timezone: string};
@@ -29,10 +29,38 @@ credentialId?: string}
 
 export interface Language {
 name: string; proficiency: "basic" | "conversational" | "fluent" | "native"}
+=======
+skills: string[], experience: number; hourlyRate: number; currency: string;
+}
+location: {,}
+city: string; country: string; timezone: string};
+availability: "full-time" | "part-time" | "contract" | "freelance", rating: number; reviewCount: number; portfolio: PortfolioItem[];
+education: Education[], certifications: Certification[];
+languages: Language[], socialLinks: SocialLinks; createdAt: Date; updatedAt: Date;
+status: "active" | "inactive" | "suspended", verified: boolean; featured: boolean;
+}
 
-export interface SocialLinks {
-linkedin?: string;
+export interface PortfolioItem {id: string; title: string; description: string; image: string;
+}
+url?: string;,}
+technologies: string[], completedAt: Date}
+
+export interface Education {id: string; institution: string; degree: string; field: string; startDate: Date;
+}
+endDate?: Date;}
+gpa?: number}
+
+export interface Certification {id: string; name: string; issuer: string; issueDate: Date;
+}
+expiryDate?: Date;}
+credentialId?: string}
+
+export interface Language {name: string; proficiency: "basic" | "conversational" | "fluent" | "native"}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
+
+export interface SocialLinks {linkedin?: string;
 github?: string;
+<<<<<<< HEAD
 portfolio?: string;
 twitter?: string}
 
@@ -42,6 +70,17 @@ experienceRange?: {
 min: number; max: number};
 hourlyRateRange?: {
 min: number; max: number};
+=======
+}
+portfolio?: string;}
+twitter?: string}
+
+export interface TalentFilter {skills?: string[];
+}
+experienceRange?: {}
+min: number; max: number};
+hourlyRateRange?: {min: number; max: number};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 location?: string;
 availability?: string;
 rating?: number;
@@ -51,6 +90,7 @@ sortBy?: "rating" | "experience" | "hourlyRate" | "createdAt";
 sortOrder?: "asc" | "desc";
 }
 
+<<<<<<< HEAD
 export interface TalentSearchResult {
 talents: Talent[], total: number; page: number; limit: number; hasMore: boolean}
 
@@ -61,3 +101,15 @@ city: string; country: string; timezone: string};
 availability: string; portfolio: PortfolioItem[], education: Education[];,
 certifications: Certification[], languages: Language[];,
 socialLinks: SocialLinks;}
+=======
+export interface TalentSearchResult {talents: Talent[], total: number; page: number; limit: number; hasMore: boolean}
+
+export interface TalentFormData {name: string; email: string; bio: string; skills: string[], experience: number; hourlyRate: number; currency: string;
+}
+location: {,}
+city: string; country: string; timezone: string};
+availability: string; portfolio: PortfolioItem[], education: Education[];
+certifications: Certification[], languages: Language[];
+socialLinks: SocialLinks;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react;";
 import { Link } from "react-router-dom, ";
@@ -28,7 +30,11 @@ category.services[0];
 return (
 <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate relative overflow-hidden">
 {/* Animated Background Elements */}
+<<<<<<< HEAD
 <div className="absolute inset-0">
+=======
+<div className="absolute inset-0">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-zion-purple/10 rounded-full filter blur-3xl animate-pulse"></div>
 <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-zion-cyan/10 rounded-full filter blur-3xl animate-pulse animation-delay-2000"></div>
 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-zion-blue/5 rounded-full filter blur-3xl animate-pulse animation-delay-4000"></div>
@@ -41,14 +47,25 @@ return (
 <Sparkles className="w-8 h-8 text-zion-cyan" />
 <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
 Revolutionary AI & Micro SAAS Services;
+<<<<<<< HEAD
 </h2>
 <Sparkles className="w-8 h-8 text-zion-cyan" />
 </div>
 <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
+=======
+</h2>;
+<Sparkles className="w-8 h-8 text-zion-cyan" />;
+</div>
+<p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Transform your business with cutting-edge AI solutions; professional IT services; and affordable micro SAAS tools.;
 <span className="text-zion-cyan font-semibold"> Save up to 55% </span>
 on enterprise-grade technology solutions.;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Featured Services Grid */}
@@ -65,10 +82,17 @@ style={{ animationDelay: `${index * 200}ms` }}
 <div className="flex items-center justify-between mb-4">
 <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
 {service.category}
+<<<<<<< HEAD
 </Badge>
 <div className="flex items-center gap-1 text-yellow-500">
 <Star className="w-4 h-4 fill-current" />
 <span className="text-sm font-medium">{service.rating}</span>
+=======
+</Badge>;
+<div className="flex items-center gap-1 text-yellow-500">;
+<Star className="w-4 h-4 fill-current" />;
+<span className="text-sm font-medium">{service.rating}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -89,6 +113,7 @@ style={{ animationDelay: `${index * 200}ms` }}
 ${service.zionPrice}
 <span className="text-sm text-zion-slate-light ml-1">
 {service.pricingModel === "monthly" ? "/month" : service.pricingModel === "yearly" ? "/year" : ""}
+<<<<<<< HEAD
 </span>
 </div>
 <div className="text-sm text-zion-slate-light">
@@ -99,6 +124,18 @@ Market: ${service.averageMarketPrice}
 <Badge className="bg-green-600 text-white">
 Save {service.savings}%;
 </Badge>
+=======
+</span>;
+</div>
+<div className="text-sm text-zion-slate-light">;
+Market: ${service.averageMarketPrice}
+</div>
+</div>
+<div className="text-right">;
+<Badge className="bg-green-600 text-white">;
+Save {service.savings}%;
+</Badge>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -107,15 +144,22 @@ Save {service.savings}%;
 <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features</h4>
 <div className="space-y-1">
 {service.features.slice(0; 3).map((feature; idx) => (
+<<<<<<< HEAD
 <div key={idx} className="flex items-center gap-2 text-xs text-zion-slate-light">
 <CheckCircle className="w-3 h-3 text-zion-cyan" />
 <span className="truncate">{feature}</span>
+=======
+<div key={idx} className="flex items-center gap-2 text-xs text-zion-slate-light">;
+<CheckCircle className="w-3 h-3 text-zion-cyan" />;
+<span className="truncate">{feature}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
 </div>
 
 {/* AI Score */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between text-sm">
 <div className="flex items-center gap-2">
 <Zap className="w-4 h-4 text-zion-cyan" />
@@ -125,6 +169,17 @@ Save {service.savings}%;
 <div className="flex items-center gap-2">
 <TrendingUp className="w-4 h-4 text-zion-cyan" />
 <span className="text-zion-slate-light">{service.reviewCount} reviews</span>
+=======
+<div className="flex items-center justify-between text-sm">;
+<div className="flex items-center gap-2">;
+<Zap className="w-4 h-4 text-zion-cyan" />;
+<span className="text-zion-slate-light">AI Score:</span>;
+<span className="text-zion-cyan font-semibold">{service.aiScore}</span>;
+</div>
+<div className="flex items-center gap-2">;
+<TrendingUp className="w-4 h-4 text-zion-cyan" />;
+<span className="text-zion-slate-light">{service.reviewCount} reviews</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -152,9 +207,15 @@ className="text-center p-6 rounded-lg bg-zion-blue-dark/30 border border-zion-bl
 style={{ animationDelay: `${index * 300}ms` }}
 >;
 <div className="text-4xl mb-4">{category.icon}</div>
+<<<<<<< HEAD
 <h3 className="text-xl font-bold text-white mb-3">{category.name}</h3>
 <p className="text-zion-slate-light mb-4">{category.description}</p>
 <div className="text-2xl font-bold text-zion-cyan mb-2">
+=======
+<h3 className="text-xl font-bold text-white mb-3">{category.name}</h3>;
+<p className="text-zion-slate-light mb-4">{category.description}</p>;
+<div className="text-2xl font-bold text-zion-cyan mb-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {category.services.length}+ Services;
 </div>
 <Button;
@@ -164,9 +225,15 @@ asChild;
 >;
 <Link to="/micro-saas-services">
 Explore {category.name}
+<<<<<<< HEAD
 <ArrowRight className="w-4 h-4 ml-2" />
 </Link>
 </Button>
+=======
+<ArrowRight className="w-4 h-4 ml-2" />;
+</Link>;
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -202,6 +269,7 @@ asChild;
 <Link to="/contact">
 <MessageCircle className="w-5 h-5 mr-2" />
 Get Free Consultation;
+<<<<<<< HEAD
 </Link>
 </Button>
 </div>
@@ -218,11 +286,33 @@ Get Free Consultation;
 <div className="flex items-center gap-2">
 <CheckCircle className="w-4 h-4 text-zion-cyan" />
 <span>AI-Powered Solutions</span>
+=======
+</Link>;
+</Button>;
+</div>
+
+<div className="mt-8 flex flex-wrap justify-center gap-8 text-sm text-zion-slate-light">;
+<div className="flex items-center gap-2">;
+<CheckCircle className="w-4 h-4 text-zion-cyan" />;
+<span>24/7 Expert Support</span>;
+</div>
+<div className="flex items-center gap-2">;
+<CheckCircle className="w-4 h-4 text-zion-cyan" />;
+<span>Enterprise Security</span>;
+</div>
+<div className="flex items-center gap-2">;
+<CheckCircle className="w-4 h-4 text-zion-cyan" />;
+<span>AI-Powered Solutions</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </section>
+=======
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }<//section><///section>

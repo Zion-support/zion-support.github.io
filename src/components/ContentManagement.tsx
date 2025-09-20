@@ -5,12 +5,23 @@ interface ContentItem {
 id: string;
 title: string;
 type: 'blog' | 'page' | 'product' | 'service';
+<<<<<<< HEAD
 status: 'published' | 'draft' | 'scheduled';,
 publishDate: string;,
 views: number;,
 author: string;};
 export const ContentManagement: React.FC = () => {
 const [content, setContent] = useState<ContentItem[]>([
+=======
+status: 'published' | 'draft' | 'scheduled';
+publishDate: string;
+views: number;
+author: string;
+}
+}
+};
+export const ContentManagement: React.FC = () => {const [content, setContent] = useState<ContentItem[]>([
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {
 id: '1',
 title: 'AI Revolution in Enterprise',
@@ -19,16 +30,24 @@ status: 'published',
 publishDate: '2024-01-15',
 views: 1234,
 author: 'John Doe'},
+<<<<<<< HEAD
 {
 id: '2',
+=======
+{id: '2',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: 'Quantum Computing Solutions',
 type: 'service',
 status: 'published',
 publishDate: '2024-01-14',
 views: 987,
 author: 'Jane Smith'},
+<<<<<<< HEAD
 {
 id: '3',
+=======
+{id: '3',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: 'Digital Transformation Guide',
 type: 'blog',
 status: 'draft',
@@ -60,7 +79,12 @@ switch (status) {;
 case 'published': return 'text-green-400 bg-green-900';
 case 'draft': return 'text-yellow-400 bg-yellow-900';
 case 'scheduled': return 'text-blue-400 bg-blue-900';,
+<<<<<<< HEAD
 default: return 'text-gray-400 bg-gray-900';}
+=======
+default: return 'text-gray-400 bg-gray-900';
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getTypeIcon: any = (type: string) => {
@@ -69,7 +93,12 @@ case 'blog': return '📝';
 case 'page': return '📄';
 case 'product': return '🛍️';
 case 'service': return '⚙️';,
+<<<<<<< HEAD
 default: return '📄';}
+=======
+default: return '📄';
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 return (
@@ -83,7 +112,11 @@ className="max-w-7xl mx-auto"
 <h1 className="text-3xl font-bold text-white">Content Management</h1>
 <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
 + Create New Content;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Filters */}
@@ -105,6 +138,7 @@ value={selectedStatus}
 onChange={(e) => setSelectedStatus(e.target.value)}
 className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-lg"
 >;
+<<<<<<< HEAD
 <option value="all">All Status</option>
 <option value="published">Published</option>
 <option value="draft">Draft</option>
@@ -116,6 +150,19 @@ className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-lg"
 <div className="bg-gray-800 rounded-lg border border-gray-700">
 <div className="p-6 border-b border-gray-700">
 <div className="grid grid-cols-12 gap-4 text-gray-400 text-sm font-medium">
+=======
+<option value="all">All Status</option>;
+<option value="published">Published</option>;
+<option value="draft">Draft</option>;
+<option value="scheduled">Scheduled</option>;
+</select>;
+</div>
+
+{/* Content List */}
+<div className="bg-gray-800 rounded-lg border border-gray-700">;
+<div className="p-6 border-b border-gray-700">;
+<div className="grid grid-cols-12 gap-4 text-gray-400 text-sm font-medium">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="col-span-5">Title</div>
 <div className="col-span-2">Type</div>
 <div className="col-span-2">Status</div>
@@ -133,6 +180,7 @@ animate={{ opacity: 1, y: 0 }}
 transition={{ delay: index * 0.05 }}
 className="p-6 hover:bg-gray-750 transition-colors"
 >;
+<<<<<<< HEAD
 <div className="grid grid-cols-12 gap-4 items-center">
 <div className="col-span-5">
 <div className="flex items-center space-x-3">
@@ -140,22 +188,44 @@ className="p-6 hover:bg-gray-750 transition-colors"
 <div>
 <h3 className="text-white font-medium">{item.title}</h3>
 <p className="text-gray-400 text-sm">By {item.author}</p>
+=======
+<div className="grid grid-cols-12 gap-4 items-center">;
+<div className="col-span-5">;
+<div className="flex items-center space-x-3">;
+<span className="text-2xl">{getTypeIcon(item.type)}</span>;
+<div>;
+<h3 className="text-white font-medium">{item.title}</h3>;
+<p className="text-gray-400 text-sm">By {item.author}</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 
+<<<<<<< HEAD
 <div className="col-span-2">
 <span className="text-gray-400 capitalize">{item.type}</span>
+=======
+<div className="col-span-2">;
+<span className="text-gray-400 capitalize">{item.type}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="col-span-2">
 <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(item.status)}`}>
 {item.status}
+<<<<<<< HEAD
 </span>
 </div>
 
 <div className="col-span-1">
 <span className="text-gray-400">{item.views.toLocaleString()}</span>
+=======
+</span>;
+</div>
+
+<div className="col-span-1">;
+<span className="text-gray-400">{item.views.toLocaleString()}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="col-span-2">
@@ -165,11 +235,19 @@ Edit;
 </button>
 <button className="px-3 py-1 bg-gray-600 text-white text-xs rounded hover:bg-gray-700">
 View;
+<<<<<<< HEAD
 </button>
 </div>
 </div>
 </div>
 </motion.div>
+=======
+</button>;
+</div>
+</div>
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 </div>
@@ -192,10 +270,17 @@ className="bg-gray-800 p-6 rounded-lg border border-gray-700 text-center"
 <div className="text-3xl mb-2">{stat.icon}</div>
 <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
 <div className="text-gray-400 text-sm">{stat.label}</div>
+<<<<<<< HEAD
 </motion.div>
 ))}
 </div>
 </motion.div>
+=======
+</motion.div>;
+))}
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 };

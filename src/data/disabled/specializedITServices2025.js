@@ -1,6 +1,5 @@
 export const SPECIALIZED_IT_SERVICES_2025 = [
-    {
-        id: "5g-enterprise-network-solutions";
+    {id: "5g-enterprise-network-solutions";
         title: "5G Enterprise Network Infrastructure & Management Platform";
         description: "Comprehensive 5G enterprise networking solution that provides ultra-fast, low-latency connectivity with advanced network slicing, security, and management capabilities.",
         category: "Network Infrastructure";
@@ -49,8 +48,7 @@ export const SPECIALIZED_IT_SERVICES_2025 = [
         technologyStack: ["5G Core", "Network Slicing", "SDN", "NFV", "OpenStack", "Kubernetes"],
         roiMetrics: ["90% reduction in network latency", "40% infrastructure cost savings", "99.9% network reliability"]
     },
-    {
-        id: "edge-ai-computing-platform";
+    {id: "edge-ai-computing-platform";
         title: "Edge AI Computing & Inference Platform";
         description: "Distributed edge computing platform that brings AI processing closer to data sources, enabling real-time AI applications with minimal latency and bandwidth requirements.",
         category: "Edge Computing";

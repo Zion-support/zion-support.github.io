@@ -6,7 +6,8 @@ interface LoadingStateProps {
 type?: 'spinner' | 'skeleton' | 'pulse' | 'dots';
 size?: 'sm' | 'md' | 'lg';
 color?: string;
-text?: string;
+}
+text?: string;}
 };
 export const LoadingState: React.FC<LoadingStateProps> = ({
 type = 'spinner',
@@ -14,10 +15,18 @@ size = 'md',
 color = 'blue',
 text;
 }) => {
+<<<<<<< HEAD
 const sizeClasses = {;
 sm: 'w-4 h-4';
 md: 'w-8 h-8';
 lg: 'w-12 h-12';};
+=======
+const sizeClasses = {
+sm: 'w-4 h-4';
+md: 'w-8 h-8',;
+lg: 'w-12 h-12';
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 const colorClasses = {
 blue: 'border-blue-500',
@@ -39,7 +48,11 @@ transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
 
 case 'skeleton':
 return (
+<<<<<<< HEAD
 <div className="animate-pulse">
+=======
+<div className="animate-pulse">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>
 <div className="h-4 bg-gray-300 rounded w-1/2"></div>
 </div>
@@ -66,12 +79,21 @@ transition={{
 duration: 0.6,
 repeat: Infinity,
 delay: i * 0.2}}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 );
 
+<<<<<<< HEAD
 default: return null;}
+=======
+default: return null;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 return (

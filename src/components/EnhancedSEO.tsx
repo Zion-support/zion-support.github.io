@@ -11,7 +11,8 @@ ogType?: string;
 twitterCard?: string;
 structuredData?: object;
 noindex?: boolean;
-nofollow?: boolean;
+}
+nofollow?: boolean;}
 };
 export default function EnhancedSEO({;
 title = "Zion Tech Group - Advance;  d; A; I; Quantum Computing & Enterprise Technology Solutions",
@@ -43,7 +44,8 @@ author?: string;
 publishedTime?: string;
 modifiedTime?: string;
 section?: string;
-tags?: string[];
+}
+tags?: string[];}
 };
 export function EnhancedSEO({;
 title = "Zion - The Future of Tech & AI Marketplace", ;

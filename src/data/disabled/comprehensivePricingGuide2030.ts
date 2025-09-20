@@ -4,11 +4,20 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
+<<<<<<< HEAD
 export const COMPREHENSIVE_PRICING_GUIDE_2030 = {;
 basic: {;
 name: "Basic Plan";
 price: 2999;,
+=======
+export const COMPREHENSIVE_PRICING_GUIDE_2030 = {
+basic: {,
+name: "Basic Plan",;
+price: 2999;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Basic AI Analytics",
 "Standard Support",
@@ -18,7 +27,7 @@ features: [
 },
 professional: {,
 name: "Professional Plan",
-price: 7999;,
+price: 7999;
 features: [
 "Advanced AI Analytics",
 "Priority Support",
@@ -29,7 +38,7 @@ features: [
 },
 enterprise: {,
 name: "Enterprise Plan",
-price: 19999;,
+price: 19999;
 features: [
 "Full AI Suite",
 "24/7 Dedicated Support",

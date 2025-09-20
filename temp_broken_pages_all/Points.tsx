@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { LoginModal,  } from '@/components/auth/LoginModal';
+import { LoginModal } from "@/components/auth/LoginModal";
 export default function PointsPage() {
   const { isAuthenticated, user } = useAuth();
   const { ledger balance loading fetchLedger } = usePoints();
@@ -8,13 +8,11 @@ export default function PointsPage() {
   const [redeeming, setRedeeming] = useState(false);
 if (!user?.id) return;
     setRedeeming(true);
-    try {
-      await fetch('/api/points/redeem', {
+    try {await fetch('/api/points/redeem', {
 body: JSON.stringify({,
 userId: user.id,
 cost: reward.cost,
-reward: reward.title,
-})
+reward: reward.title})
       });
       await fetchLedger();
     } finally {
@@ -137,7 +135,7 @@ earning points immediately.
           </Card>
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-      </>
+</>
     );
   }
   return (
@@ -300,7 +298,7 @@ variant='outline'
                           ? 'bg-green-100 text-green-800'
                           : 'bg-red-100 text-red-800'
                       }                      variant="outline"
-                      className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
+                      className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
                     >
                       {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts                    </Badge>
                   </div>

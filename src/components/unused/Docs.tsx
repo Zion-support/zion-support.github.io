@@ -41,9 +41,10 @@ articles: [
 ];
 const popularDocs = [;
 {;
-title: "Building Your First AI Model", category: "AI & Machine Learning";,
+title: "Building Your First AI Model", category: "AI & Machine Learning";
 readTime: "15 min", views: "2.1k",
 lastUpdated: "2 days ago"};
+<<<<<<< HEAD
 {
 title: "API Integration Best Practices", category: "API Reference";,
 readTime: "12 min", views: "1.8k",
@@ -54,6 +55,15 @@ readTime: "18 min", views: "1.5k",
 lastUpdated: "3 days ago"};
 {
 title: "Performance Optimization Tips", category: "AI & Machine Learning";,
+=======
+{title: "API Integration Best Practices", category: "API Reference";
+readTime: "12 min", views: "1.8k",
+lastUpdated: "1 week ago"};
+{title: "Security Configuration Guide", category: "Security & Compliance";
+readTime: "18 min", views: "1.5k",
+lastUpdated: "3 days ago"};
+{title: "Performance Optimization Tips", category: "AI & Machine Learning";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 readTime: "22 min",
 views: "1.3k",
 lastUpdated: "5 days ago"}
@@ -72,7 +82,11 @@ Documentation;
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Comprehensive documentation; guides; and references to help you;
 build; deploy; and manage AI solutions with Zion Tech Group;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Search Bar */}
@@ -85,7 +99,11 @@ className="w-full pl-6 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-whit
 />
 <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300">
 Search;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -109,11 +127,19 @@ article.difficulty === "Intermediate" ? "bg-yellow-500/20 text-yellow-300 border
 "bg-red-500/20 text-red-300 border border-red-500/30";
 }`}>
 {article.difficulty}
+<<<<<<< HEAD
 </span>
 </div>
 <p className="text-gray-400 text-sm mb-2">{article.description}</p>
 <div className="flex items-center justify-between text-xs text-gray-500">
 <span>{article.readTime} read</span>
+=======
+</span>;
+</div>
+<p className="text-gray-400 text-sm mb-2">{article.description}</p>;
+<div className="flex items-center justify-between text-xs text-gray-500">;
+<span>{article.readTime} read</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 ))}
@@ -132,18 +158,32 @@ article.difficulty === "Intermediate" ? "bg-yellow-500/20 text-yellow-300 border
 <div className="flex items-start justify-between mb-3">
 <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
 {doc.category}
+<<<<<<< HEAD
 </span>
 <span className="text-xs text-gray-500">{doc.lastUpdated}</span>
+=======
+</span>;
+<span className="text-xs text-gray-500">{doc.lastUpdated}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <h3 className="text-lg font-semibold text-white mb-3">{doc.title}</h3>
 
+<<<<<<< HEAD
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-4 text-sm text-gray-400">
 <span>{doc.readTime}</span>
 <span>{doc.views} views</span>
 </div>
 <span className="text-blue-400 text-sm">Read Guide →</span>
+=======
+<div className="flex items-center justify-between">;
+<div className="flex items-center gap-4 text-sm text-gray-400">;
+<span>{doc.readTime}</span>;
+<span>{doc.views} views</span>;
+</div>
+<span className="text-blue-400 text-sm">Read Guide →</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 ))}
@@ -158,34 +198,61 @@ article.difficulty === "Intermediate" ? "bg-yellow-500/20 text-yellow-300 border
 to="/tutorials";
 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center"
 >;
+<<<<<<< HEAD
 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
 <span className="text-2xl">📚</span>
 </div>
 <h3 className="text-xl font-semibold text-white mb-2">Video Tutorials</h3>
 <p className="text-gray-300 text-sm">Step-by-step video guides for visual learners</p>
 </Link>
+=======
+<div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">;
+<span className="text-2xl">📚</span>;
+</div>
+<h3 className="text-xl font-semibold text-white mb-2">Video Tutorials</h3>;
+<p className="text-gray-300 text-sm">Step-by-step video guides for visual learners</p>;
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 <Link;
 to="/help-center";
 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center"
 >;
+<<<<<<< HEAD
 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
 <span className="text-2xl">❓</span>
 </div>
 <h3 className="text-xl font-semibold text-white mb-2">Help Center</h3>
 <p className="text-gray-300 text-sm">Find answers to common questions and issues</p>
 </Link>
+=======
+<div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">;
+<span className="text-2xl">❓</span>;
+</div>
+<h3 className="text-xl font-semibold text-white mb-2">Help Center</h3>;
+<p className="text-gray-300 text-sm">Find answers to common questions and issues</p>;
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 <Link;
 to="/support";
 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center"
 >;
+<<<<<<< HEAD
 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
 <span className="text-2xl">🆘</span>
 </div>
 <h3 className="text-xl font-semibold text-white mb-2">Technical Support</h3>
 <p className="text-gray-300 text-sm">Get help from our expert support team</p>
 </Link>
+=======
+<div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">;
+<span className="text-2xl">🆘</span>;
+</div>
+<h3 className="text-xl font-semibold text-white mb-2">Technical Support</h3>;
+<p className="text-gray-300 text-sm">Get help from our expert support team</p>;
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -209,12 +276,20 @@ to="/support";
 className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
 >;
 Contact Support;
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </section>
+=======
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 };

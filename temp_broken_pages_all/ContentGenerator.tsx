@@ -1,19 +1,19 @@
-import React { useState useEffect } from 'react',
-import { Header,  } from "@/components/Header",
-import { Button,  } from "@/components/ui/button",
-import { Select,, SelectContent,, SelectItem,, SelectTrigger,, SelectValue,  } from "@/components/ui/select",
-import { Textarea,  } from "@/components/ui/textarea",
-import { Input,  } from "@/components/ui/input",
-import { Switch,  } from "@/components/ui/switch",
-import { Label,  } from "@/components/ui/label",
-import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from "@/components/ui/tabs",
-import { Card,, CardContent,, CardDescription,, CardFooter,, CardHeader,, CardTitle,  } from "@/components/ui/card",
-import { toast,  } from "sonner",
-import { Loader2,  } from 'lucide-react'
-import { supabase,  } from "@/integrations/supabase/client",
-import { useAuth,  } from "@/hooks/useAuth",
-import { ScrollArea,  } from "@/components/ui/scroll-area";
-import { useRouter,, ,  } from 'next/router';
+import React, { useState, useEffect } from 'react';
+import { Header } from "@/components/Header";
+import { Button } from "@/components/ui/button";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { toast } from "sonner";
+import { Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { useRouter } from "next/router";
 import { logErrorToProduction } from '@/utils/productionLogger';
 export default function ContentGenerator() {
 
@@ -27,7 +27,7 @@ if (isLoading) {
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="animate-pulse text-white">Loading...</div>
         </div>
-      </>
+</>
     )
   }
 
@@ -67,12 +67,10 @@ if (isLoading) {
                     <Label htmlFor="topic" className="text-white">Main Topic / User Prompt</Label>
                     <Input
 id="topic"
-                      placeholder={
-                        contentType === 'blog' ? "e.g., Benefits of AI in Marketing" :
+                      placeholder={contentType === 'blog' ? "e.g., Benefits of AI in Marketing" :
                         contentType === 'serviceDescription' ? "e.g., AI-Powered Chatbot Solutions" :
                         contentType === 'faq' ? "e.g., How does AI improve customer service?" :
-                        "e.g., May Platform Updates" // Newsletter or default,
-}
+                        "e.g., May Platform Updates" // Newsletter or default}
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       value={topic}
                       onChange={(e) => setTopic(e.target.value)}
@@ -120,7 +118,7 @@ id="includeImage"
                           onCheckedChange={setIncludeImage}
                         />
                       </div>
-                    </>
+</>
                   )}
                   
                   {contentType === 'newsletter' && (
@@ -147,7 +145,7 @@ onClick={generateContent}
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                         Generating...
-                      </>
+</>
                     ) : (
                       <>Generate Content</> // Simplified button text
                     )}
@@ -181,8 +179,12 @@ onClick={generateContent}
                       {contentType === 'newsletter' && previewContent.subject && ( // Assuming generatedContent might be the body for newsletter
                         <div className="mt-4 flex justify-end">
                           <Button
+<<<<<<< HEAD:temp_broken_pages_all/ContentGenerator.tsx
 onClick={sendTestNewsletter} // sendTestNewsletter would need to be adapted if previewContent structure changed significantly,
 disabled={!testEmail}
+=======
+onClick={sendTestNewsletter} // sendTestNewsletter would need to be adapted if previewContent structure changed significantly disabled={!testEmail}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ContentGenerator.tsx
                             className="bg-zion-blue-light hover:bg-zion-blue text-white"
                           >
                             Send Test to {testEmail || "your email"}
@@ -223,7 +225,7 @@ xmlns="http://www.w3.org/2000/svg"
           </div>
         </div>
       </div>
-    </>
+</>
   )
 }
 }

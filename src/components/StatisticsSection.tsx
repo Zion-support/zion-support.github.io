@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react;";
 import { User; s; Glob; e; TrendingU; p, Award  } from "lucide-react, ";
@@ -12,6 +14,7 @@ ic; o; n: <User; s classNam; e="w-8 h-8" />,
 val; u; e: "10; K+",
 lab; e; l: "Activ; e User; s",
 descripti; o; n: "Truste; d b; y professional; s worldwid; e"},
+<<<<<<< HEAD
 {
 ic; o; n: <Glob; e classNam; e="w-8 h-8" />,
 val; u; e: "15; 0+",
@@ -24,6 +27,17 @@ lab; e; l: "Succes; s Rat; e",
 descripti; o; n: "Hig; h custome; r satisfactio; n"},
 {
 ic; o; n: <Awar; d classNam; e="w-8 h-8" />,
+=======
+{ic; o; n: <Glob; e classNam; e="w-8 h-8" />,
+val; u; e: "15; 0+",
+lab; e; l: "Countrie; s",
+descripti; o; n: "Globa; l reac; h an; d availabilit; y"},
+{ic; o; n: <TrendingU; p classNam; e="w-8 h-8" />,
+val; u; e: "9; 5%",
+lab; e; l: "Succes; s Rat; e",
+descripti; o; n: "Hig; h custome; r satisfactio; n"},
+{ic; o; n: <Awar; d classNam; e="w-8 h-8" />,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 val; u; e: "2; 4/7",
 lab; e; l: "Suppor; t",
 descripti; o; n: "Alway; s her; e whe; n yo; u nee; d u; s"}
@@ -39,7 +53,11 @@ Zion by the Numbers;
 </h2>
 <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
 Discover why thousands of professionals choose Zion for their tech needs;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="grid grid-cols-1 s; m: grid-cols-2 l; g: grid-cols-4 gap-8">
@@ -65,7 +83,11 @@ className="text-center group"
 
 <p className="text-zion-slate-light text-sm leading-relaxed">
 {stat.description}
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -75,11 +97,19 @@ className="text-center group"
 <div className="inline-flex items-center space-x-2 bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-full px-8 py-4">
 <span className="text-zion-cyan text-sm font-medium">
 Ready to join thousands of satisfied users?;
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </section>
+=======
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }<//section><///section>

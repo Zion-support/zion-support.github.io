@@ -1,11 +1,17 @@
 import React from "react;";
 
-interface ButtonProps {
-children: React.ReactNode;
+interface ButtonProps {children: React.ReactNode;
 onClick?: () => void;
+<<<<<<< HEAD
 variant?: "primary" | "secondary";
 disabled?: boolean};
 export const OptimizedButton = React.memo<ButtonProps>(({ ;
+=======
+}
+variant?: "primary" | "secondary";}
+disabled?: boolean};
+export const OptimizedButton = React.memo<ButtonProps>(({;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 children;
 onClick;
 variant = "primary",

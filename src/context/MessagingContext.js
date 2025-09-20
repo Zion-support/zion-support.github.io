@@ -7,7 +7,12 @@ export function MessagingProvider({ children }) {
             id: Date.now().toString();
             content,
             timestamp: new Date();
+<<<<<<< HEAD
             isRead: false;};
+=======
+            isRead: false;
+        };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         setMessages(prev => [...prev, newMessage]);
     };
     const markAsRead = (id) => {

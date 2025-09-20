@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import { Routes, Route  } from "react-router-dom, ";
 import React from "react;";
@@ -20,27 +22,45 @@ return (
 <Route;
 path="/profile";
 element={
+<<<<<<< HEAD
 <ProtectedRoute>
 <div>Profile Page</div>
 </ProtectedRoute>
+=======
+<ProtectedRoute>;
+<div>Profile Page</div>
+</ProtectedRoute>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 />
 
 <Route;
 path="/dashboard";
 element={
+<<<<<<< HEAD
 <ProtectedRoute>
 <div>Dashboard</div>
 </ProtectedRoute>
+=======
+<ProtectedRoute>;
+<div>Dashboard</div>
+</ProtectedRoute>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 />
 
 <Route;
 path="/settings";
 element={
+<<<<<<< HEAD
 <ProtectedRoute>
 <div>Settings</div>
 </ProtectedRoute>
+=======
+<ProtectedRoute>;
+<div>Settings</div>
+</ProtectedRoute>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 />
 </Routes>

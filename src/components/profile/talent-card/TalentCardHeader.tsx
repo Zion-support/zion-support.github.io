@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { BadgeCheck,  } from 'lucide-react'
 import { TalentCardAvatar,  } from "./TalentCardAvatar";
@@ -20,6 +21,29 @@ return (
 {/* AI score could be used for verification badge */}
 {yearsExperience > 5 && (
 <BadgeCheck,
+=======
+import React from 'react';
+import { BadgeCheck } from "lucide-react";
+import { TalentCardAvatar } from "./TalentCardAvatar";
+import { TalentCardAvailability } from "./TalentCardAvailability";
+interface TalentCardHeaderProps {fullName: string;
+professionalTitle: string;
+  profilePicture?: string;
+  availabilityType: string;
+}
+yearsExperience: number,}
+yearsExperience}: TalentCardHeaderProps) {
+  return (
+    <div className='flex items-start gap-4 mb-4'>
+      <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />
+      <div className='flex-1'>
+        <div className='flex items-center justify-between'>
+          <h3 className='text-lg font-semibold text-white flex items-center gap-1'>
+            {fullName}
+            {/* AI score could be used for verification badge */}
+            {yearsExperience > 5 && (
+              <BadgeCheck
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 className='h-4 w-4 text-zion-cyan'
 aria-label='Verified Expert';
 />

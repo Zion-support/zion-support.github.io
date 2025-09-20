@@ -1,5 +1,6 @@
 import React from "react";
 
+<<<<<<< HEAD
 export interface AdvancedInnovativeService {
 id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
 benefits: string[], useCases: string[];,
@@ -9,6 +10,18 @@ contactInfo: {,
 phone: string; email: string; website: string};
 technology: string[], integrations: string[];,
 compliance: string[], roi: string; competitors: string[], marketTrend: string; innovationLevel: string; uniqueValue: string;}
+=======
+export interface AdvancedInnovativeService {id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
+benefits: string[], useCases: string[];
+targetAudience: string[], tags: string[];
+estimatedDelivery: string; supportLevel: string; marketPrice: string;
+}
+contactInfo: {,}
+phone: string; email: string; website: string};
+technology: string[], integrations: string[];
+compliance: string[], roi: string; competitors: string[], marketTrend: string; innovationLevel: string; uniqueValue: string;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
 // AI-Powered Predictive Maintenance Platform;
@@ -18,7 +31,7 @@ title: "AI Predictive Maintenance Platform",
 description: "Intelligent IoT-based predictive maintenance solution that uses machine learning to predict equipment failures; optimize maintenance schedules; and reduce downtime costs.",
 category: "AI & IoT",
 subcategory: "Predictive Maintenance",
-price: 599;,
+price: 599;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -73,8 +86,7 @@ innovationLevel: "Cutting-edge AI/ML with real-time IoT integration",
 uniqueValue: "Combines edge computing with cloud-based ML for real-time predictions"},
 
 // Quantum Machine Learning Platform;
-{
-id: "quantum-machine-learning-platform",
+{id: "quantum-machine-learning-platform",
 title: "Quantum Machine Learning Platform",
 description: "Revolutionary platform that combines quantum computing principles with machine learning to solve complex optimization problems and accelerate AI model training.",
 category: "Quantum Computing",
@@ -133,8 +145,7 @@ innovationLevel: "Pioneering quantum-classical hybrid approaches",
 uniqueValue: "First commercial platform combining quantum computing with practical ML applications"},
 
 // Autonomous Drone Fleet Management;
-{
-id: "autonomous-drone-fleet-management",
+{id: "autonomous-drone-fleet-management",
 title: "Autonomous Drone Fleet Management Platform",
 description: "AI-powered platform for managing autonomous drone fleets for delivery; inspection; surveillance; and data collection with real-time monitoring and optimization.",
 category: "Autonomous Systems",
@@ -194,8 +205,7 @@ marketTrends: ["Growing biotech investment", "AI drug discovery boom", "Increasi
 },
 
 // AI-Powered Climate Intelligence Platform;
-{
-id: "ai-climate-intelligence-platform",
+{id: "ai-climate-intelligence-platform",
 title: "AI Climate Intelligence Platform - Intelligent Environmental Monitoring",
 description: "Advanced AI platform that monitors; predicts; and analyzes climate patterns to help organizations make informed decisions about sustainability and climate risk.",
 category: "AI & Climate Technology",
@@ -254,8 +264,7 @@ marketTrends: ["Growing climate awareness", "Increasing regulations", "Rising su
 },
 
 // AI-Powered Cybersecurity Intelligence Platform;
-{
-id: "ai-cybersecurity-intelligence-platform",
+{id: "ai-cybersecurity-intelligence-platform",
 title: "AI Cybersecurity Intelligence Platform - Intelligent Threat Defense",
 description: "Next-generation cybersecurity platform that uses AI to detect; analyze; and respond to cyber threats in real-time with unprecedented accuracy and speed.",
 category: "AI & Cybersecurity",
@@ -314,8 +323,7 @@ marketTrends: ["Rising cyber threats", "Increasing regulations", "Growing AI ado
 },
 
 // AI-Powered Financial Trading Platform;
-{
-id: "ai-financial-trading-platform",
+{id: "ai-financial-trading-platform",
 title: "AI Financial Trading Platform - Intelligent Trading Intelligence",
 description: "Advanced AI-powered trading platform that uses machine learning to analyze markets; predict trends; and execute trades with optimal timing and risk management.",
 category: "AI & Financial Technology",
@@ -374,8 +382,7 @@ marketTrends: ["Growing algorithmic trading", "Increasing AI adoption", "Rising 
 },
 
 // AI-Powered Manufacturing Intelligence Platform;
-{
-id: "ai-manufacturing-intelligence-platform",
+{id: "ai-manufacturing-intelligence-platform",
 title: "AI Manufacturing Intelligence Platform - Intelligent Industry 4.0",
 description: "Advanced AI platform that transforms manufacturing operations through predictive maintenance; quality control; and process optimization using Industry 4.0 technologies.",
 category: "AI & Manufacturing",
@@ -434,8 +441,7 @@ marketTrends: ["Industry 4.0 adoption", "Smart manufacturing growth", "IoT integ
 },
 
 // AI-Powered Energy Grid Intelligence Platform;
-{
-id: "ai-energy-grid-intelligence-platform",
+{id: "ai-energy-grid-intelligence-platform",
 title: "AI Energy Grid Intelligence Platform - Intelligent Power Management",
 description: "Advanced AI platform that optimizes energy grid operations; predicts demand; and manages renewable energy integration for efficient and sustainable power distribution.",
 category: "AI & Energy Technology",
@@ -497,8 +503,7 @@ innovationLevel: "Leading-edge autonomous fleet management with AI optimization"
 uniqueValue: "First comprehensive platform for multi-drone autonomous operations"},
 
 // Blockchain-Based Digital Identity Platform;
-{
-id: "blockchain-digital-identity-platform",
+{id: "blockchain-digital-identity-platform",
 title: "Blockchain Digital Identity Platform",
 description: "Decentralized digital identity solution using blockchain technology for secure; verifiable; and privacy-preserving identity management across organizations.",
 category: "Blockchain & Identity",
@@ -557,8 +562,7 @@ innovationLevel: "Cutting-edge blockchain identity with zero-knowledge proofs",
 uniqueValue: "First enterprise-grade SSI platform with comprehensive compliance features"},
 
 // AI-Powered Legal Document Analysis;
-{
-id: "ai-legal-document-analysis",
+{id: "ai-legal-document-analysis",
 title: "AI Legal Document Analysis Platform",
 description: "Intelligent platform that uses natural language processing and machine learning to analyze legal documents; extract key information; and provide legal insights.",
 category: "AI & Legal Tech",
@@ -617,8 +621,7 @@ innovationLevel: "Advanced AI with legal domain expertise",
 uniqueValue: "First comprehensive legal document analysis platform with risk scoring"},
 
 // Sustainable Energy Management Platform;
-{
-id: "sustainable-energy-management",
+{id: "sustainable-energy-management",
 title: "Sustainable Energy Management Platform",
 description: "AI-powered platform for optimizing renewable energy systems; monitoring carbon footprints; and implementing sustainable business practices with real-time analytics.",
 category: "Sustainability & Green Tech",
@@ -677,8 +680,7 @@ innovationLevel: "Advanced AI-powered sustainability optimization",
 uniqueValue: "First comprehensive platform combining energy management with ESG compliance"},
 
 // Advanced Cybersecurity Threat Intelligence;
-{
-id: "advanced-cybersecurity-threat-intelligence",
+{id: "advanced-cybersecurity-threat-intelligence",
 title: "Advanced Cybersecurity Threat Intelligence Platform",
 description: "Next-generation threat intelligence platform that uses AI and machine learning to detect; analyze; and respond to cybersecurity threats in real-time.",
 category: "Cybersecurity",
@@ -737,8 +739,7 @@ innovationLevel: "Advanced AI with real-time threat intelligence",
 uniqueValue: "First AI-powered platform combining threat detection with automated response"},
 
 // Smart City IoT Management Platform;
-{
-id: "smart-city-iot-management",
+{id: "smart-city-iot-management",
 title: "Smart City IoT Management Platform",
 description: "Comprehensive IoT platform for managing smart city infrastructure; including traffic management; environmental monitoring; and public services optimization.",
 category: "Smart Cities & IoT",
@@ -797,8 +798,7 @@ innovationLevel: "Comprehensive IoT platform for urban infrastructure management
 uniqueValue: "First integrated platform managing all aspects of smart city operations"},
 
 // AI-Powered Healthcare Diagnostics;
-{
-id: "ai-healthcare-diagnostics",
+{id: "ai-healthcare-diagnostics",
 title: "AI-Powered Healthcare Diagnostics Platform",
 description: "Advanced AI platform for medical image analysis; diagnostic assistance; and patient care optimization using deep learning and computer vision.",
 category: "AI & Healthcare",
@@ -857,8 +857,7 @@ innovationLevel: "Advanced AI with medical domain expertise",
 uniqueValue: "First comprehensive AI platform for medical diagnostics and clinical support"},
 
 // Quantum-Safe Communication Platform;
-{
-id: "quantum-safe-communication",
+{id: "quantum-safe-communication",
 title: "Quantum-Safe Communication Platform",
 description: "Future-proof communication platform that implements post-quantum cryptography to secure communications against quantum computing threats.",
 category: "Quantum Computing",

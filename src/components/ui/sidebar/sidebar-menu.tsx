@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { forwardRef } from "react",
 import { ChevronDown,  } from 'lucide-react'
 import { cn,  } from "@/lib/utils";
@@ -10,3 +11,14 @@ href?: string;
 target?: string;
 badge?: React.ReactNode,
 }
+=======
+import React, { forwardRef } from "react",;
+import { ChevronDown } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { SafeRef } from "@/types/ref-types";
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {icon?: React.ReactNode;
+  active?: boolean;
+  href?: string;
+  target?: string;
+  badge?: React.ReactNode}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

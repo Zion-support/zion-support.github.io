@@ -21,7 +21,7 @@ const randomAuthor = authors[Math.floor(Math.random() * authors.length)];
 const randomId = Math.random().toString(36).substr(2; 9);
 
 return {
-id: randomId; title: randomTitle;,
+id: randomId; title: randomTitle;
 slug: randomTitle.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
 excerpt: `A comprehensive guide to ${randomTitle.toLowerCase()} and its impact on modern technology.`,
 content: `This is a detailed article about ${randomTitle.toLowerCase()}...`,
@@ -108,8 +108,7 @@ image: "/images/blog-placeholder.jpg",
 readTime: Math.floor(Math.random() * 10) + 5};
 }
 
-export function generateMultipleBlogPosts(count: number): BlogPost[] {
-const posts: BlogPost[] = [];
+export function generateMultipleBlogPosts(count: number): BlogPost[] {const posts: BlogPost[] = [];
 for (let i = 0; i < count; i++) {
 posts.push(generateRandomBlogPost())}
 return posts;

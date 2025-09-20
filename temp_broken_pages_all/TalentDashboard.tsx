@@ -168,7 +168,7 @@ Tracker
           </div>
         </div>
       </main>
-    </>
+</>
   )
 export default function TalentDashboard() {
   return (

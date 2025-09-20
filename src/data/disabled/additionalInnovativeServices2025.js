@@ -1,7 +1,6 @@
 export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
     // AI-Powered Financial Services;
-    {
-        id: "ai-financial-advisory-platform";
+    {id: "ai-financial-advisory-platform";
         title: "AI-Powered Financial Advisory Platform";
         description: "Intelligent financial advisory platform that provides personalized investment recommendations, portfolio optimization, and risk management using advanced AI algorithms.",
         category: "AI & Financial Services";
@@ -60,8 +59,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
     },
     // AI-Powered Healthcare Solutions;
-    {
-        id: "ai-healthcare-diagnostic-platform";
+    {id: "ai-healthcare-diagnostic-platform";
         title: "AI Healthcare Diagnostic Platform";
         description: "Advanced AI-powered healthcare diagnostic platform that analyzes medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
         category: "AI & Healthcare";
@@ -120,8 +118,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         securityFeatures: ["HIPAA compliance", "End-to-end encryption", "Multi-factor authentication", "Audit logging"]
     },
     // AI-Powered Legal Services;
-    {
-        id: "ai-legal-research-assistant";
+    {id: "ai-legal-research-assistant";
         title: "AI Legal Research Assistant";
         description: "Intelligent legal research platform that uses AI to analyze case law, statutes, and legal documents to provide comprehensive legal research and document analysis.",
         category: "AI & Legal Services";
@@ -180,8 +177,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
     },
     // AI-Powered Education Platform;
-    {
-        id: "ai-personalized-learning-platform";
+    {id: "ai-personalized-learning-platform";
         title: "AI Personalized Learning Platform";
         description: "Adaptive learning platform that uses AI to create personalized educational experiences, track student progress, and optimize learning outcomes for each individual.",
         category: "AI & Education";
@@ -240,8 +236,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         securityFeatures: ["FERPA compliance", "End-to-end encryption", "Multi-factor authentication", "Audit logging"]
     },
     // AI-Powered Supply Chain Management;
-    {
-        id: "ai-supply-chain-optimization";
+    {id: "ai-supply-chain-optimization";
         title: "AI Supply Chain Optimization Platform";
         description: "Intelligent supply chain management platform that uses AI to optimize inventory, predict demand, and streamline logistics operations for maximum efficiency.",
         category: "AI & Supply Chain";
@@ -300,8 +295,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
     },
     // AI-Powered Real Estate Platform;
-    {
-        id: "ai-real-estate-analytics-platform";
+    {id: "ai-real-estate-analytics-platform";
         title: "AI Real Estate Analytics Platform";
         description: "Advanced real estate analytics platform that uses AI to analyze market trends, property values, and investment opportunities with predictive insights.",
         category: "AI & Real Estate";
@@ -360,8 +354,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
     },
     // AI-Powered Human Resources Platform;
-    {
-        id: "ai-hr-talent-management-platform";
+    {id: "ai-hr-talent-management-platform";
         title: "AI HR Talent Management Platform";
         description: "Intelligent human resources platform that uses AI to streamline recruitment, employee management, performance evaluation, and workforce planning.",
         category: "AI & Human Resources";
@@ -420,8 +413,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
     },
     // AI-Powered Marketing Automation;
-    {
-        id: "ai-marketing-automation-suite";
+    {id: "ai-marketing-automation-suite";
         title: "AI Marketing Automation Suite";
         description: "Comprehensive marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI across all marketing channels.",
         category: "AI & Marketing";
@@ -480,8 +472,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
     },
     // AI-Powered Customer Experience Platform;
-    {
-        id: "ai-customer-experience-platform";
+    {id: "ai-customer-experience-platform";
         title: "AI Customer Experience Platform";
         description: "Intelligent customer experience platform that uses AI to analyze customer behavior, predict needs, and deliver personalized experiences across all touchpoints.",
         category: "AI & Customer Experience";
@@ -540,8 +531,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
     },
     // AI-Powered Product Development Platform;
-    {
-        id: "ai-product-development-platform";
+    {id: "ai-product-development-platform";
         title: "AI Product Development Platform";
         description: "Intelligent product development platform that uses AI to optimize product design, predict market demand, and streamline the development process from concept to launch.",
         category: "AI & Product Development";

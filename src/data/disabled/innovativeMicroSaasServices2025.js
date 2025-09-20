@@ -1,6 +1,5 @@
 export const innovativeMicroSaasServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Quantum AI Fusion Platform";
         category: "Quantum Computing";
         subcategory: "AI Integration";
@@ -58,9 +57,15 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA", "FedRAMP"],
         scalability: "Unlimited quantum qubits";
+<<<<<<< HEAD
         support: "24/7 quantum expert support"};
     {
         id: 2;
+=======
+        support: "24/7 quantum expert support",
+    };
+    {id: 2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Neuromorphic Computing Platform";
         category: "AI Architecture";
         subcategory: "Brain-Inspired Computing";
@@ -118,9 +123,15 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "FDA", "CE"],
         scalability: "Up to 1M neurons";
+<<<<<<< HEAD
         support: "Expert neuromorphic support"};
     {
         id: 3;
+=======
+        support: "Expert neuromorphic support",
+    };
+    {id: 3;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Federated Learning Platform";
         category: "Privacy AI";
         subcategory: "Distributed Learning";
@@ -178,9 +189,15 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["GDPR", "HIPAA", "CCPA", "SOC 2", "ISO 27001"],
         scalability: "Unlimited participants";
+<<<<<<< HEAD
         support: "Privacy expert support"};
     {
         id: 4;
+=======
+        support: "Privacy expert support",
+    };
+    {id: 4;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Edge AI Orchestration Platform";
         category: "Edge Computing";
         subcategory: "AI Orchestration";
@@ -238,9 +255,15 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "NIST", "IEC 62443"],
         scalability: "Unlimited edge nodes";
+<<<<<<< HEAD
         support: "24/7 edge computing support"};
     {
         id: 5;
+=======
+        support: "24/7 edge computing support",
+    };
+    {id: 5;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI Ethics & Governance Platform";
         category: "AI Governance";
         subcategory: "Ethics & Compliance";
@@ -298,9 +321,15 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["GDPR", "CCPA", "AI Act", "NIST AI Risk Management", "ISO 42001"],
         scalability: "Unlimited AI models";
+<<<<<<< HEAD
         support: "AI ethics expert support"};
     {
         id: 6;
+=======
+        support: "AI ethics expert support",
+    };
+    {id: 6;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Blockchain AI Integration Platform";
         category: "Blockchain";
         subcategory: "AI Integration";
@@ -358,9 +387,15 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["GDPR", "SOC 2", "ISO 27001", "Blockchain regulations"],
         scalability: "Multi-chain support";
+<<<<<<< HEAD
         support: "Blockchain AI expert support"};
     {
         id: 7;
+=======
+        support: "Blockchain AI expert support",
+    };
+    {id: 7;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Quantum-Safe Cryptography Platform";
         category: "Cybersecurity";
         subcategory: "Post-Quantum Security";
@@ -418,9 +453,15 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["NIST PQC", "FIPS 140-3", "SOC 2", "ISO 27001", "FedRAMP"],
         scalability: "Unlimited encryption keys";
+<<<<<<< HEAD
         support: "Cryptography expert support"};
     {
         id: 8;
+=======
+        support: "Cryptography expert support",
+    };
+    {id: 8;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI-Powered DevOps Platform";
         category: "DevOps";
         subcategory: "AI Automation";
@@ -478,9 +519,15 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
         scalability: "Unlimited repositories";
+<<<<<<< HEAD
         support: "DevOps expert support"};
     {
         id: 9;
+=======
+        support: "DevOps expert support",
+    };
+    {id: 9;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Synthetic Data Generation Platform";
         category: "Data Science";
         subcategory: "Synthetic Data";
@@ -538,9 +585,15 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["GDPR", "CCPA", "HIPAA", "SOC 2", "ISO 27001"],
         scalability: "Unlimited data generation";
+<<<<<<< HEAD
         support: "Data science expert support"};
     {
         id: 10;
+=======
+        support: "Data science expert support",
+    };
+    {id: 10;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI-Powered Customer Experience Platform";
         category: "Customer Experience";
         subcategory: "AI Personalization";

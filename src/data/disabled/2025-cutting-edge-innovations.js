@@ -1,7 +1,6 @@
 export const cuttingEdgeInnovations2025 = [
     // AI-Powered Micro SAAS Services;
-    {
-        id: 1;
+    {id: 1;
         name: "QuantumAI Studio";
         category: "AI Development";
         subcategory: "Quantum Computing";
@@ -46,8 +45,7 @@ export const cuttingEdgeInnovations2025 = [
         compliance: ["ISO 27001", "SOC 2", "GDPR"],
         useCases: ["Drug discovery", "Financial modeling", "Logistics optimization", "Climate modeling"]
     },
-    {
-        id: 2;
+    {id: 2;
         name: "NeuroSync Platform";
         category: "AI Services";
         subcategory: "Neural Networks";
@@ -92,8 +90,7 @@ export const cuttingEdgeInnovations2025 = [
         compliance: ["SOC 2", "ISO 27001"],
         useCases: ["Computer vision", "Natural language processing", "Recommendation systems", "Predictive analytics"]
     },
-    {
-        id: 3;
+    {id: 3;
         name: "EdgeAI Orchestrator";
         category: "AI Services";
         subcategory: "Edge Computing";
@@ -139,8 +136,7 @@ export const cuttingEdgeInnovations2025 = [
         useCases: ["Predictive maintenance", "Quality control", "Traffic management", "Health monitoring"]
     },
     // Advanced IT Infrastructure Services;
-    {
-        id: 4;
+    {id: 4;
         name: "ZeroTrust Network Fabric";
         category: "IT Infrastructure";
         subcategory: "Cybersecurity";
@@ -185,8 +181,7 @@ export const cuttingEdgeInnovations2025 = [
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
         useCases: ["Enterprise security", "Financial compliance", "Healthcare data protection", "Government networks"]
     },
-    {
-        id: 5;
+    {id: 5;
         name: "QuantumCloud Platform";
         category: "IT Infrastructure";
         subcategory: "Cloud Computing";
@@ -232,8 +227,7 @@ export const cuttingEdgeInnovations2025 = [
         useCases: ["Financial modeling", "Drug discovery", "Logistics optimization", "Climate research"]
     },
     // Emerging Technology Services;
-    {
-        id: 6;
+    {id: 6;
         name: "Metaverse Development Studio";
         category: "Emerging Tech";
         subcategory: "Metaverse";
@@ -278,8 +272,7 @@ export const cuttingEdgeInnovations2025 = [
         compliance: ["GDPR", "COPPA", "Accessibility"],
         useCases: ["Virtual retail", "Virtual events", "Training simulations", "Virtual tourism"]
     },
-    {
-        id: 7;
+    {id: 7;
         name: "Blockchain Enterprise Suite";
         category: "Emerging Tech";
         subcategory: "Blockchain";
@@ -325,8 +318,7 @@ export const cuttingEdgeInnovations2025 = [
         useCases: ["Supply chain tracking", "Digital identity", "Cross-border payments", "Asset tokenization"]
     },
     // Advanced AI Automation Services;
-    {
-        id: 8;
+    {id: 8;
         name: "HyperAutomation Hub";
         category: "AI Services";
         subcategory: "Automation";
@@ -371,8 +363,7 @@ export const cuttingEdgeInnovations2025 = [
         compliance: ["SOC 2", "ISO 27001", "GDPR"],
         useCases: ["Invoice processing", "Customer service", "HR automation", "Supply chain management"]
     },
-    {
-        id: 9;
+    {id: 9;
         name: "AI Ethics & Governance Platform";
         category: "AI Services";
         subcategory: "Ethics & Compliance";
@@ -418,8 +409,7 @@ export const cuttingEdgeInnovations2025 = [
         useCases: ["Credit scoring", "Hiring decisions", "Medical diagnosis", "Criminal justice"]
     },
     // Specialized Industry Solutions;
-    {
-        id: 10;
+    {id: 10;
         name: "SmartCity IoT Platform";
         category: "Industry Solutions";
         subcategory: "Smart Cities";

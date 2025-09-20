@@ -2,9 +2,20 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
+<<<<<<< HEAD
 import { import { motion; AnimatePresence   } from "framer-motion", export default function Page("props": "any) {;
 setExpandedSections(newExpanded)"}, const navigationSections = [{,
+=======
+import { import { motion; AnimatePresence   } from "framer-motion";
+,
+export default function Page("props": "any) {,
+setExpandedSections(newExpanded)"},
+,
+const navigationSections = [{,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 "title": "Main Navigation",
 "icon": "Hom e",
 items[,",
@@ -53,8 +64,7 @@ transition = {,
 <item.icon className="w-4 h-4" />,
 <span>{item.name}</span>,
 {isActive(item.href) && (",
-<div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto"></div>,
-)}
+<div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto"></div>)}
 </Link>,
 ))}
 </motion.div>,
@@ -95,5 +105,10 @@ transition = {,
 </div>,
 </aside>,) },
 '"`,
+<<<<<<< HEAD
 </motion, >,
 </motion>]]<//motion><///motion>
+=======
+</motion>,
+</motion>]]<//motion><///motion>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

@@ -15,7 +15,14 @@ ratin; g: number;
 user; s: number;
 completionDat; e: string;
 feature; d: boolean;
+<<<<<<< HEAD
 tag; s: string[];};
+=======
+tag; s: string[];
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const portfolioProject; s: PortfolioProject[] = [
 {
 i; d: "1";
@@ -173,7 +180,11 @@ Our Portfolio;
 </h2>
 <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
 Explore our innovative projects that demonstrate cutting-edge technology solutions and creative problem-solving;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Category Filter */}
@@ -221,7 +232,11 @@ transfor; m: hoveredProject === project.id;
 <div className="absolute top-4 left-4 z-10">
 <span className="px-3 py-1 bg-gradient-to-r from-zion-gold to-zion-orange text-white text-xs font-medium rounded-full">
 Featured;
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 
@@ -256,10 +271,17 @@ className="w-full h-full object-cover transition-transform duration-500 group-ho
 <div className="flex items-center gap-2 mb-3">
 <span className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full">
 {project.category}
+<<<<<<< HEAD
 </span>
 <div className="flex items-center gap-1 text-zion-gold">
 <Star className="w-3 h-3 fill-current" />
 <span className="text-xs">{project.rating}</span>
+=======
+</span>;
+<div className="flex items-center gap-1 text-zion-gold">;
+<Star className="w-3 h-3 fill-current" />;
+<span className="text-xs">{project.rating}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -288,6 +310,7 @@ className="px-2 py-1 bg-zion-slate-light/10 text-zion-slate text-xs rounded"
 </div>
 
 {/* Project Stats */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between text-xs text-zion-slate-light">
 <div className="flex items-center gap-1">
 <Users className="w-3 h-3" />
@@ -296,12 +319,26 @@ className="px-2 py-1 bg-zion-slate-light/10 text-zion-slate text-xs rounded"
 <div className="flex items-center gap-1">
 <Calendar className="w-3 h-3" />
 <span>{new Date(project.completionDate).toLocaleDateString()}</span>
+=======
+<div className="flex items-center justify-between text-xs text-zion-slate-light">;
+<div className="flex items-center gap-1">;
+<Users className="w-3 h-3" />;
+<span>{project.users.toLocaleString()}</span>;
+</div>
+<div className="flex items-center gap-1">;
+<Calendar className="w-3 h-3" />;
+<span>{new Date(project.completionDate).toLocaleDateString()}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 
 {/* Hover Effect Overlay */}
+<<<<<<< HEAD
 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-2xl opacity-0 transition-opacity duration-300 group-hove;  r:opacity-100" />
+=======
+<div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-2xl opacity-0 transition-opacity duration-300 group-hove;  r:opacity-100" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 ))}
@@ -318,7 +355,11 @@ Let's collaborate to bring your vision to life with cutting-edge technology and 
 </p>
 <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hove; r:from-zion-cyan-light hove; r:to-zion-purple-light text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 hove; r:shadow-lg hove; r:shadow-zion-cyan/30 hove; r:-translate-y-1">
 Start Your Project;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -341,8 +382,13 @@ onClick={(e) => e.stopPropagation()}
 onClick={closeModal}
 className="text-zion-slate-light hove;  r:text-zion-slate transition-colors"
 >;
+<<<<<<< HEAD
 <X className="w-6 h-6" />
 </button>
+=======
+<X className="w-6 h-6" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Modal Content */}
@@ -367,8 +413,13 @@ className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 ba
 onClick={nextImage}
 className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hove; r:bg-white/30 transition-colors"
 >;
+<<<<<<< HEAD
 <ChevronRight className="w-5 h-5" />
 </button>
+=======
+<ChevronRight className="w-5 h-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Project Details */}
@@ -403,6 +454,7 @@ className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate rounded-full text-sm
 </div>
 
 {/* Project Stats */}
+<<<<<<< HEAD
 <div className="space-y-6">
 <div className="bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 p-6 rounded-xl border border-zion-cyan/20">
 <h4 className="text-lg font-semibold text-zion-slate mb-4">Project Stats</h4>
@@ -423,6 +475,28 @@ className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate rounded-full text-sm
 <span className="font-semibold">
 {new Date(selectedProject.completionDate).toLocaleDateString()}
 </span>
+=======
+<div className="space-y-6">;
+<div className="bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 p-6 rounded-xl border border-zion-cyan/20">;
+<h4 className="text-lg font-semibold text-zion-slate mb-4">Project Stats</h4>;
+<div className="space-y-4">;
+<div className="flex items-center justify-between">;
+<span className="text-zion-slate-light">Rating</span>;
+<div className="flex items-center gap-1">;
+<Star className="w-4 h-4 text-zion-gold fill-current" />;
+<span className="font-semibold">{selectedProject.rating}</span>;
+</div>
+</div>
+<div className="flex items-center justify-between">;
+<span className="text-zion-slate-light">Users</span>;
+<span className="font-semibold">{selectedProject.users.toLocaleString()}</span>;
+</div>
+<div className="flex items-center justify-between">;
+<span className="text-zion-slate-light">Completed</span>;
+<span className="font-semibold">;
+{new Date(selectedProject.completionDate).toLocaleDateString()}
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>

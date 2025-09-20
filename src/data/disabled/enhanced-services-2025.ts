@@ -7,10 +7,20 @@ tagline: string;
 description: string;
 category: "micro-saas" | "it-services" | "ai-services" | "emerging-tech";
 pricing: {
+<<<<<<< HEAD
 monthly: string;,
 yearly: string;,
 enterprise: string;,
 setup: string;};
+=======
+monthly: string;
+yearly: string;
+enterprise: string;
+setup: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: string[];
 benefits: string[];
 technology: string[];
@@ -26,6 +36,7 @@ icon: string;
 color: string;
 link: string;
 contactInfo: {
+<<<<<<< HEAD
 mobile: string;,
 email: string;,
 address: string;,
@@ -49,6 +60,31 @@ pricing: {,
 monthly: "$199/month";,
 yearly: "$1;999/year",
 enterprise: "Custom pricing";,
+=======
+mobile: string;
+email: string;
+address: string;
+website: string;
+};
+}
+
+const contactInfo = {;
+mobile: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709";
+website: "https://ziontechgroup.com"};
+export const enhancedServices2025: EnhancedService[] = [
+// MICRO SAAS SERVICES;
+{id: "ai-powered-code-review-assistant";
+name: "AI-Powered Code Review Assistant";
+tagline: "Automated code quality analysis; security scanning; and best practice recommendations",
+description: "Intelligent code review system that analyzes pull requests; identifies security vulnerabilities; suggests improvements; and maintains code quality standards across your development team.",
+category: "micro-saas";
+pricing: {
+monthly: "$199/month";
+yearly: "$1;999/year",
+enterprise: "Custom pricing";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setup: "$299 one-time"};
 features: [
 "Automated security vulnerability detection";
@@ -77,13 +113,20 @@ marketPosition: "Competes with SonarQube; CodeClimate; adds AI-powered insights 
 competitors: ["SonarQube", "CodeClimate", "Snyk", "DeepCode"],
 roi: "Reduce code review time by 40-60% and improve code quality by 25%";
 trialDays: 14;
+<<<<<<< HEAD
 setupTime: "2 hours";,
 icon: "🔍";,
 color: "from-blue-600 to-indigo-700";,
+=======
+setupTime: "2 hours";
+icon: "🔍";
+color: "from-blue-600 to-indigo-700";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 link: "/services/ai-code-review-assistant";
 contactInfo;
 },
 
+<<<<<<< HEAD
 {
 id: "intelligent-incident-response-platform";,
 name: "Intelligent Incident Response Platform";,
@@ -94,6 +137,17 @@ pricing: {,
 monthly: "$299/month";,
 yearly: "$2;999/year",
 enterprise: "Custom pricing";,
+=======
+{id: "intelligent-incident-response-platform";
+name: "Intelligent Incident Response Platform";
+tagline: "AI-driven incident detection; automated response; and post-mortem analysis",
+description: "Comprehensive incident management platform that uses AI to detect; respond to; and analyze security incidents in real-time; reducing response time and improving resolution quality.",
+category: "micro-saas";
+pricing: {
+monthly: "$299/month";
+yearly: "$2;999/year",
+enterprise: "Custom pricing";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setup: "$499 one-time"};
 features: [
 "AI-powered threat detection";
@@ -122,23 +176,40 @@ marketPosition: "Competes with PagerDuty; ServiceNow; adds AI-powered automation
 competitors: ["PagerDuty", "ServiceNow", "VictorOps", "OpsGenie"],
 roi: "Reduce incident response time by 70% and improve resolution quality by 45%";
 trialDays: 14;
+<<<<<<< HEAD
 setupTime: "4 hours";,
 icon: "🚨";,
 color: "from-red-600 to-pink-700";,
+=======
+setupTime: "4 hours";
+icon: "🚨";
+color: "from-red-600 to-pink-700";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 link: "/services/incident-response-platform";
 contactInfo;
 },
 
+<<<<<<< HEAD
 {
 id: "smart-invoice-management-system";,
 name: "Smart Invoice Management System";,
+=======
+{id: "smart-invoice-management-system";
+name: "Smart Invoice Management System";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 tagline: "AI-powered invoice processing; approval workflows; and payment tracking",
 description: "Intelligent invoice management platform that automates the entire invoice lifecycle from receipt to payment; reducing processing time and improving accuracy.",
 category: "micro-saas";
 pricing: {
+<<<<<<< HEAD
 monthly: "$79/month";,
 yearly: "$799/year";,
 enterprise: "Custom pricing";,
+=======
+monthly: "$79/month";
+yearly: "$799/year";
+enterprise: "Custom pricing";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setup: "$199 one-time"};
 features: [
 "OCR invoice processing";
@@ -167,13 +238,20 @@ marketPosition: "Competes with Bill.com; AvidXchange; adds AI-powered automation
 competitors: ["Bill.com", "AvidXchange", "Coupa", "SAP Ariba"],
 roi: "Reduce invoice processing costs by 60% and improve accuracy by 95%";
 trialDays: 30;
+<<<<<<< HEAD
 setupTime: "1 hour";,
 icon: "📄";,
 color: "from-green-600 to-emerald-700";,
+=======
+setupTime: "1 hour";
+icon: "📄";
+color: "from-green-600 to-emerald-700";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 link: "/services/invoice-management";
 contactInfo;
 },
 
+<<<<<<< HEAD
 {
 id: "ai-customer-success-automation";,
 name: "AI Customer Success Automation";,
@@ -184,6 +262,17 @@ pricing: {,
 monthly: "$149/month";,
 yearly: "$1;499/year",
 enterprise: "Custom pricing";,
+=======
+{id: "ai-customer-success-automation";
+name: "AI Customer Success Automation";
+tagline: "Intelligent customer onboarding; support; and retention automation",
+description: "AI-driven platform that automates customer success processes; predicts churn; and optimizes customer experience to improve retention and satisfaction.",
+category: "micro-saas";
+pricing: {
+monthly: "$149/month";
+yearly: "$1;499/year",
+enterprise: "Custom pricing";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setup: "$299 one-time"};
 features: [
 "Automated onboarding workflows";
@@ -212,13 +301,20 @@ marketPosition: "Competes with Gainsight; Totango; adds AI-powered automation an
 competitors: ["Gainsight", "Totango", "ChurnZero", "CustomerSuccessBox"],
 roi: "Increase customer retention by 25% and reduce churn by 30%";
 trialDays: 14;
+<<<<<<< HEAD
 setupTime: "3 hours";,
 icon: "🎯";,
 color: "from-purple-600 to-violet-700";,
+=======
+setupTime: "3 hours";
+icon: "🎯";
+color: "from-purple-600 to-violet-700";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 link: "/services/customer-success-automation";
 contactInfo;
 },
 
+<<<<<<< HEAD
 {
 id: "intelligent-data-analytics-dashboard";,
 name: "Intelligent Data Analytics Dashboard";,
@@ -229,6 +325,17 @@ pricing: {,
 monthly: "$199/month";,
 yearly: "$1;999/year",
 enterprise: "Custom pricing";,
+=======
+{id: "intelligent-data-analytics-dashboard";
+name: "Intelligent Data Analytics Dashboard";
+tagline: "Real-time business intelligence and KPI monitoring platform";
+description: "Advanced analytics platform that provides real-time insights; custom dashboards; and predictive analytics to drive data-driven decision making.",
+category: "micro-saas";
+pricing: {
+monthly: "$199/month";
+yearly: "$1;999/year",
+enterprise: "Custom pricing";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setup: "$399 one-time"};
 features: [
 "Real-time data visualization";
@@ -257,24 +364,40 @@ marketPosition: "Competes with Tableau; Power BI; adds AI-powered insights and r
 competitors: ["Tableau", "Power BI", "Looker", "Metabase"],
 roi: "Improve decision making by 40% and reduce reporting time by 80%";
 trialDays: 14;
+<<<<<<< HEAD
 setupTime: "2 hours";,
 icon: "📊";,
 color: "from-cyan-600 to-blue-700";,
+=======
+setupTime: "2 hours";
+icon: "📊";
+color: "from-cyan-600 to-blue-700";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 link: "/services/analytics-dashboard";
 contactInfo;
 },
 
 // IT SERVICES;
+<<<<<<< HEAD
 {
 id: "network-security-monitoring";,
 name: "Network Security Monitoring";,
 tagline: "24/7 network security monitoring and threat detection";,
+=======
+{id: "network-security-monitoring";
+name: "Network Security Monitoring";
+tagline: "24/7 network security monitoring and threat detection";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 description: "Comprehensive network security monitoring service that provides real-time threat detection; incident response; and compliance reporting for enterprise networks.",
 category: "it-services";,
 pricing: {,
 monthly: "$1;500/month",
 yearly: "$15;000/year",
+<<<<<<< HEAD
 enterprise: "Custom pricing";,
+=======
+enterprise: "Custom pricing";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setup: "$2;000 one-time"},
 features: [
 "24/7 network monitoring";
@@ -304,13 +427,20 @@ adds AI-powered threat detection",
 competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "Managed MSSPs"],
 roi: "Reduce security incidents by 60% and improve compliance by 90%";
 trialDays: 0;
+<<<<<<< HEAD
 setupTime: "1-2 weeks";,
 icon: "🛡️";,
 color: "from-red-600 to-orange-700";,
+=======
+setupTime: "1-2 weeks";
+icon: "🛡️";
+color: "from-red-600 to-orange-700";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 link: "/services/network-security-monitoring";
 contactInfo;
 },
 
+<<<<<<< HEAD
 {
 id: "data-backup-recovery-solutions";,
 name: "Data Backup & Recovery Solutions";,
@@ -321,6 +451,17 @@ pricing: {,
 monthly: "$800/month";,
 yearly: "$8;000/year",
 enterprise: "Custom pricing";,
+=======
+{id: "data-backup-recovery-solutions";
+name: "Data Backup & Recovery Solutions";
+tagline: "Automated backup solutions with disaster recovery planning";
+description: "Comprehensive data protection service that includes automated backups; cloud storage; disaster recovery planning; and business continuity solutions.",
+category: "it-services";
+pricing: {
+monthly: "$800/month";
+yearly: "$8;000/year",
+enterprise: "Custom pricing";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setup: "$1;500 one-time"},
 features: [
 "Automated backup scheduling";
@@ -349,13 +490,20 @@ marketPosition: "Competes with Veeam; Commvault; adds cloud-native and AI-powere
 competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity"],
 roi: "Ensure 99.99% data recovery and reduce downtime by 80%";
 trialDays: 0;
+<<<<<<< HEAD
 setupTime: "1-2 weeks";,
 icon: "💾";,
 color: "from-blue-600 to-indigo-700";,
+=======
+setupTime: "1-2 weeks";
+icon: "💾";
+color: "from-blue-600 to-indigo-700";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 link: "/services/backup-recovery";
 contactInfo;
 },
 
+<<<<<<< HEAD
 {
 id: "it-asset-management-platform";,
 name: "IT Asset Management Platform";,
@@ -366,6 +514,17 @@ pricing: {,
 monthly: "$500/month";,
 yearly: "$5;000/year",
 enterprise: "Custom pricing";,
+=======
+{id: "it-asset-management-platform";
+name: "IT Asset Management Platform";
+tagline: "Comprehensive IT asset tracking and lifecycle management";
+description: "Complete IT asset management solution that tracks hardware; software; licenses; and provides lifecycle management; cost optimization; and compliance reporting.",
+category: "it-services";
+pricing: {
+monthly: "$500/month";
+yearly: "$5;000/year",
+enterprise: "Custom pricing";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setup: "$1;000 one-time"},
 features: [
 "Asset discovery and tracking";
@@ -394,24 +553,40 @@ marketPosition: "Competes with ServiceNow; BMC; adds AI-powered optimization and
 competitors: ["ServiceNow", "BMC", "Ivanti", "ManageEngine"],
 roi: "Optimize IT costs by 30% and improve compliance by 95%";
 trialDays: 14;
+<<<<<<< HEAD
 setupTime: "1 week";,
 icon: "🏷️";,
 color: "from-green-600 to-emerald-700";,
+=======
+setupTime: "1 week";
+icon: "🏷️";
+color: "from-green-600 to-emerald-700";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 link: "/services/asset-management";
 contactInfo;
 },
 
 // AI SERVICES;
+<<<<<<< HEAD
 {
 id: "ai-chatbot-development";,
 name: "AI Chatbot Development";,
 tagline: "Custom AI chatbots for customer service and support";,
+=======
+{id: "ai-chatbot-development";
+name: "AI Chatbot Development";
+tagline: "Custom AI chatbots for customer service and support";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 description: "Intelligent chatbot solutions that provide 24/7 customer support; handle complex queries; and integrate seamlessly with your existing systems.",
 category: "ai-services";,
 pricing: {,
 monthly: "$2;000/month",
 yearly: "$20;000/year",
+<<<<<<< HEAD
 enterprise: "Custom pricing";,
+=======
+enterprise: "Custom pricing";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setup: "$5;000 one-time"},
 features: [
 "Natural language processing";
@@ -440,23 +615,39 @@ marketPosition: "Competes with Intercom; Drift; adds advanced AI capabilities an
 competitors: ["Intercom", "Drift", "Zendesk", "Freshchat"],
 roi: "Reduce support costs by 40% and improve customer satisfaction by 35%";
 trialDays: 7;
+<<<<<<< HEAD
 setupTime: "2-4 weeks";,
 icon: "🤖";,
 color: "from-purple-600 to-violet-700";,
+=======
+setupTime: "2-4 weeks";
+icon: "🤖";
+color: "from-purple-600 to-violet-700";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 link: "/services/ai-chatbot";
 contactInfo;
 },
 
+<<<<<<< HEAD
 {
 id: "predictive-analytics-platform";,
 name: "Predictive Analytics Platform";,
 tagline: "AI-powered predictive analytics for business forecasting";,
+=======
+{id: "predictive-analytics-platform";
+name: "Predictive Analytics Platform";
+tagline: "AI-powered predictive analytics for business forecasting";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 description: "Advanced predictive analytics platform that uses machine learning to forecast trends; identify opportunities; and optimize business decisions.",
 category: "ai-services";,
 pricing: {,
 monthly: "$3;500/month",
 yearly: "$35;000/year",
+<<<<<<< HEAD
 enterprise: "Custom pricing";,
+=======
+enterprise: "Custom pricing";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setup: "$8;000 one-time"},
 features: [
 "Data modeling and analysis";
@@ -485,23 +676,39 @@ marketPosition: "Competes with SAS; IBM SPSS; adds cloud-native and AI-powered a
 competitors: ["SAS", "IBM SPSS", "RapidMiner", "Alteryx"],
 roi: "Improve decision making by 50% and increase revenue by 20%";
 trialDays: 14;
+<<<<<<< HEAD
 setupTime: "3-4 weeks";,
 icon: "🔮";,
 color: "from-indigo-600 to-purple-700";,
+=======
+setupTime: "3-4 weeks";
+icon: "🔮";
+color: "from-indigo-600 to-purple-700";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 link: "/services/predictive-analytics";
 contactInfo;
 },
 
+<<<<<<< HEAD
 {
 id: "computer-vision-solutions";,
 name: "Computer Vision Solutions";,
 tagline: "AI-powered image and video analysis for various industries";,
+=======
+{id: "computer-vision-solutions";
+name: "Computer Vision Solutions";
+tagline: "AI-powered image and video analysis for various industries";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 description: "Advanced computer vision solutions that analyze images and videos for quality control; process automation; and business intelligence across multiple industries.",
 category: "ai-services";,
 pricing: {,
 monthly: "$4;000/month",
 yearly: "$40;000/year",
+<<<<<<< HEAD
 enterprise: "Custom pricing";,
+=======
+enterprise: "Custom pricing";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setup: "$10;000 one-time"},
 features: [
 "Object detection and recognition";
@@ -530,24 +737,40 @@ marketPosition: "Competes with Cognex; Keyence; adds AI-powered analysis and clo
 competitors: ["Cognex", "Keyence", "Basler", "Teledyne"],
 roi: "Automate quality control by 80% and reduce defects by 60%";
 trialDays: 7;
+<<<<<<< HEAD
 setupTime: "4-6 weeks";,
 icon: "👁️";,
 color: "from-cyan-600 to-blue-700";,
+=======
+setupTime: "4-6 weeks";
+icon: "👁️";
+color: "from-cyan-600 to-blue-700";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 link: "/services/computer-vision";
 contactInfo;
 },
 
 // EMERGING TECH SERVICES;
+<<<<<<< HEAD
 {
 id: "quantum-computing-solutions";,
 name: "Quantum Computing Solutions";,
 tagline: "Next-generation quantum computing services for complex problem solving";,
+=======
+{id: "quantum-computing-solutions";
+name: "Quantum Computing Solutions";
+tagline: "Next-generation quantum computing services for complex problem solving";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 description: "Cutting-edge quantum computing solutions that solve complex optimization problems; cryptography challenges; and scientific simulations.",
 category: "emerging-tech";,
 pricing: {,
 monthly: "$10;000/month",
 yearly: "$100;000/year",
+<<<<<<< HEAD
 enterprise: "Custom pricing";,
+=======
+enterprise: "Custom pricing";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setup: "$25;000 one-time"},
 features: [
 "Quantum algorithm development";
@@ -572,27 +795,43 @@ technology: ["Quantum Computing", "Quantum Algorithms", "Quantum Software", "Clo
 integrations: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"],
 useCases: ["Optimization problems", "Cryptography", "Scientific research", "Financial modeling"],
 targetAudience: "Research institutions; Financial services; Pharmaceutical companies; Government agencies",
-marketPosition: "Leading edge quantum computing services with expertise in multiple quantum platforms";,
+marketPosition: "Leading edge quantum computing services with expertise in multiple quantum platforms";
 competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],
 roi: "Solve complex problems 1000x faster than classical computing";
 trialDays: 0;
+<<<<<<< HEAD
 setupTime: "2-3 months";,
 icon: "⚛️";,
 color: "from-violet-600 to-purple-700";,
+=======
+setupTime: "2-3 months";
+icon: "⚛️";
+color: "from-violet-600 to-purple-700";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 link: "/services/quantum-computing";
 contactInfo;
 },
 
+<<<<<<< HEAD
 {
 id: "blockchain-web3-solutions";,
 name: "Blockchain & Web3 Solutions";,
 tagline: "Decentralized applications and blockchain infrastructure development";,
+=======
+{id: "blockchain-web3-solutions";
+name: "Blockchain & Web3 Solutions";
+tagline: "Decentralized applications and blockchain infrastructure development";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 description: "Comprehensive blockchain and Web3 solutions including smart contract development; DeFi applications; NFT platforms; and decentralized infrastructure.",
 category: "emerging-tech";,
 pricing: {,
 monthly: "$5;000/month",
 yearly: "$50;000/year",
+<<<<<<< HEAD
 enterprise: "Custom pricing";,
+=======
+enterprise: "Custom pricing";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setup: "$15;000 one-time"},
 features: [
 "Smart contract development";
@@ -617,13 +856,19 @@ technology: ["Blockchain", "Smart Contracts", "Web3", "DeFi", "NFTs"],
 integrations: ["Ethereum", "Polygon", "Solana", "Binance Smart Chain", "MetaMask", "WalletConnect"],
 useCases: ["DeFi applications", "NFT marketplaces", "Supply chain tracking", "Digital identity"],
 targetAudience: "Startups; Financial services; Gaming companies; Supply chain businesses",
-marketPosition: "Leading blockchain development services with expertise in multiple protocols";,
+marketPosition: "Leading blockchain development services with expertise in multiple protocols";
 competitors: ["ConsenSys", "Chainlink Labs", "Alchemy", "Infura"],
 roi: "Reduce transaction costs by 90% and increase transparency by 100%";
 trialDays: 0;
+<<<<<<< HEAD
 setupTime: "2-4 months";,
 icon: "🔗";,
 color: "from-orange-600 to-red-700";,
+=======
+setupTime: "2-4 months";
+icon: "🔗";
+color: "from-orange-600 to-red-700";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 link: "/services/blockchain-web3";
 contactInfo;
 }

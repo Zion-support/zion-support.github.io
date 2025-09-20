@@ -1,17 +1,25 @@
 import React from "react";
 
-interface SitemapUrl {
-url: string;
+interface SitemapUrl {url: string;
 lastmod?: string;
+<<<<<<< HEAD
 changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
 priority?: number}
 
 interface SitemapConfig {
 baseUrl: string; urls: SitemapUrl[];
+=======
+}
+changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";}
+priority?: number}
+
+interface SitemapConfig {baseUrl: string; urls: SitemapUrl[];
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 outputPath?: string}
 
-export class SitemapGenerator {
-private config: SitemapConfig;
+export class SitemapGenerator {private config: SitemapConfig;
 constructor(config: SitemapConfig) {
 this.config = config}
 
@@ -52,8 +60,7 @@ Sitemap: ${baseUrl}/sitemap.xml; Sitemap: ${baseUrl}/sitemap-index.xml`;
 /**;
 * Save sitemap to file;
 */;
-async saveSitemap(): Promise<void> {
-const xml = this.generateXML();
+async saveSitemap(): Promise<void> {const xml = this.generateXML();
 const outputPath = this.config.outputPath || "./public/sitemap.xml";
 
 // In a real implementation; you would write to file system;
@@ -94,6 +101,7 @@ urls: [
 };
 
 // Utility function to generate sitemap;
+<<<<<<< HEAD
 export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {
 const generator = new SitemapGenerator(config);
 return generator.generateXML()}
@@ -101,4 +109,11 @@ return generator.generateXML()}
 // Utility function to generate robots.txt;
 export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
 const generator = new SitemapGenerator(config);
+=======
+export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {const generator = new SitemapGenerator(config);
+return generator.generateXML()}
+
+// Utility function to generate robots.txt;
+export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {const generator = new SitemapGenerator(config);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 return generator.generateRobotsTxt()}

@@ -14,14 +14,23 @@ autho; r: string;
 avatar?: string;
 tim; e: string;
 titl; e: string;
+<<<<<<< HEAD
 bod; y: string;};
 const initialPost; s: DiscussionPost[] = [
 {
 i; d: 1;
+=======
+bod; y: string;
+}
+}
+};
+const initialPost; s: DiscussionPost[] = [{i; d: 1;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 auth; o; r: "Ann; a Zho; u",
 ti; m; e: "2; h ag; o",
 tit; l; e: "Wha; t A; I trend; s ar; e yo; u mos; t excite; d fo; r i; n 202; 5?",
 bo; d; y: "Le; t"s spar; k som; e idea; s! I"m excite; d t; o se; e mult; i-moda; l model; s an; d ope; n-sourc; e A; I tool; s gro; w. Wha; t ar; e yo; u watchin; g?"},
+<<<<<<< HEAD
 {
 i; d: 2;
 auth; o; r: "Davi; d Ki; m",
@@ -29,25 +38,29 @@ ti; m; e: "50; m ag; o",
 tit; l; e: "Quic; k t; i; p: Ho; w t; o ran; k you; r Zio; n listin; g highe; r",
 bo; d; y: "Fil; l ou; t ever; y profi; l; e; deta; i; l; ad; d stro; n; g; ta; g; s; an; d pos; t weekl; y! Se; e result; s i; n a mont; h."},
 ];
+=======
+{i; d: 2;
+auth; o; r: "Davi; d Ki; m",
+ti; m; e: "50; m ag; o",
+tit; l; e: "Quic; k t; i; p: Ho; w t; o ran; k you; r Zio; n listin; g highe; r",
+bo; d; y: "Fil; l ou; t ever; y profi; l; e; deta; i; l; ad; d stro; n; g; ta; g; s; an; d pos; t weekl; y! Se; e result; s i; n a mont; h."}];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
-export const CommunityDiscussio; n: React.FC = () => {
-const [pos;  t; s; setPos; t; s] = useState(initialPosts);
+export const CommunityDiscussio; n: React.FC = () => {const [pos;  t; s; setPos; t; s] = useState(initialPosts);
 const [showN; e; w; setShowN; e; w] = useState(false);
 const [newTit;  l; e; setNewTit; l; e] = useState("");
 const [newBo; d; y; setNewBo; d; y] = useState("");
 
 const handleAddPost: any = () => {;
 if (!newTitle.trim() || !newBody.trim()) return;
-setPosts([
-{
+setPosts([{
 i;  d: Dat; e.no; w(),
 auth; o; r: "Yo; u",
 ti; m; e: "No; w",
 tit; l; e: newTit; l; e;
 bo; d; y: newBo; d; y;};
 },
-...pos; t; s,
-]);
+...pos; t; s]);
 setNewTitle("");
 setNewBody("");
 setShowNew(false);
@@ -62,17 +75,28 @@ Community Discussion;
 </span>
 <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5">
 {posts.length} posts;
+<<<<<<< HEAD
 </span>
 </div>
 <Separator className="mb-6" />
 <div className="mb-4 flex justify-end">
+=======
+</span>;
+</div>
+<Separator className="mb-6" />;
+<div className="mb-4 flex justify-end">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <Button;
 className="bg-zion-purple text-white hove;  r:bg-zion-purple-light transition hover-scale"
 size="sm";
 onClick={() => setShowNew((v) => !v)}
 >;
 {showNew ? "Cancel" : "New Post"}
+<<<<<<< HEAD
 </Button>
+=======
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 {showNew && (
 <Card className="mb-6 animate-scale-in">
@@ -108,10 +132,17 @@ onClick={handleAddPost}
 disabled={!newTitle.trim() || !newBody.trim()}
 >;
 Post;
+<<<<<<< HEAD
 </Button>
 </div>
 </CardContent>
 </Card>
+=======
+</Button>;
+</div>
+</CardContent>;
+</Card>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 <div className="flex flex-col gap-6">
 {posts.map((post) => (
@@ -125,6 +156,7 @@ Post;
 .join("")
 .toUpperCase()
 .slice(0;  2)}
+<<<<<<< HEAD
 </AvatarFallback>
 </Avatar>
 <div>
@@ -140,10 +172,28 @@ Post;
 ))}
 </div>
 <div className="mt-8 text-xs text-zion-slate-dark text-center">
+=======
+</AvatarFallback>;
+</Avatar>;
+<div>;
+<div className="flex gap-2 items-center">;
+<span className="font-semibold text-white">{post.author}</span>;
+<span className="text-xs text-zion-slate-light">{post.time}</span>;
+</div>
+<h3 className="text-lg font-bold text-zion-cyan mt-1">{post.title}</h3>;
+<p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>;
+</div>
+</CardContent>;
+</Card>;
+))}
+</div>
+<div className="mt-8 text-xs text-zion-slate-dark text-center">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
 </div>
 </div>
 );
+<<<<<<< HEAD
 };<//div><///div>
 import React, { useState } from 'react'
 import { MessageCircle } from 'lucide-react'
@@ -152,9 +202,21 @@ import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { AvatarAvatarFallback } from "@/components/ui/avatar";
 import { CardCardContent } from "@/components/ui/card";
+=======
+};<//div><///div>;
+import React, { useState } from 'react';
+import { MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";,
+import { Input } from "@/components/ui/input";,
+import { Textarea } from "@/components/ui/textarea";,
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";,
+import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 import { Separator } from "@/components/ui/separator";
 interface DiscussionPost {
 body: string;
+}
+}
 }
 const initialPosts: DiscussionPost[] = [
 {

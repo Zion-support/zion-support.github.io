@@ -7,9 +7,17 @@ interface ServiceContact {
 mobil; e: string;
 emai; l: string;
 addres; s: string;
+<<<<<<< HEAD
 websit; e: string;};
 const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
 const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
+=======
+websit; e: string;
+}
+}
+};
+const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const [searchTe; r; m; setSearchTe; r; m] = useState("");
 const [selectedServi;  c; e; setSelectedServi; c; e] = useState<any>(null);
 
@@ -17,9 +25,15 @@ const allServices = [;
 ...advancedInnovativeServicesExpansionV; 3.ma; p(servic;  e => ({
 ...servi; c; e;
 ty; p; e: "Advance; d A; I & Innovatio; n"};
+<<<<<<< HEAD
 displayPri; c; e: servic; e.pric; e;})),
 ...specializedEnterpriseSolutions202; 5.ma; p(servic;  e => ({
 ...servi; c; e;
+=======
+displayPri; c; e: servic; e.pric; e;,
+})),
+...specializedEnterpriseSolutions202; 5.ma; p(servic;  e => ({...servi; c; e;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ty; p; e: "Specialize; d Enterpris; e",
 displayPri; c; e: servic; e.pric; e;}))
 ];
@@ -65,6 +79,7 @@ Discover our cutting-edge portfolio of micro SAA; S; solution; s; I; T; service;
 </p>
 
 {/* Key Statistics */}
+<<<<<<< HEAD
 <div className="grid grid-cols-1 m; d:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
 <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
 <div className="text-3xl font-bold text-blue-400 mb-2">{allServices.length}+</div>
@@ -79,6 +94,22 @@ Discover our cutting-edge portfolio of micro SAA; S; solution; s; I; T; service;
 <div className="text-sm text-gray-300">Client Satisfaction</div>
 </div>
 <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
+=======
+<div className="grid grid-cols-1 m; d:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">;
+<div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">;
+<div className="text-3xl font-bold text-blue-400 mb-2">{allServices.length}+</div>
+<div className="text-sm text-gray-300">Innovative Services</div>
+</div>
+<div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">;
+<div className="text-3xl font-bold text-cyan-400 mb-2">15+</div>
+<div className="text-sm text-gray-300">Technology Categories</div>
+</div>
+<div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">;
+<div className="text-3xl font-bold text-green-400 mb-2">99%</div>
+<div className="text-sm text-gray-300">Client Satisfaction</div>
+</div>
+<div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
 <div className="text-sm text-gray-300">Support Available</div>
 </div>
@@ -93,10 +124,17 @@ placeholder="Searc; h; service; s; feature; s; or technologies...";
 value={searchTerm}
 onChange={(e) => setSearchTerm(e.target.value)}
 className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focu;  s:outline-none focu; s:border-blue-400"
+<<<<<<< HEAD
 />
 <svg className="absolute right-3 top-3 h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
 </svg>
+=======
+/>;
+<svg className="absolute right-3 top-3 h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />;
+</svg>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -115,7 +153,11 @@ activeCategory === category.id;
 ))}
 </div>
 </div>
+<<<<<<< HEAD
 </section>
+=======
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Services Grid */}
 <section className="py-20 px-4 s; m:px-6 l; g:px-8">
@@ -127,16 +169,28 @@ onClick={() => handleServiceClick(service)}
 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hove;  r:border-white/40 transition-all duration-300 hove; r:transform hove; r:scale-105 cursor-pointer"
 >;
 <div className="text-4xl mb-4">{service.icon}</div>
+<<<<<<< HEAD
 <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
 <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
+=======
+<h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>;
+<p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 <div className="mb-4">
 <span className="inline-block px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-600/30">
 {service.category}
+<<<<<<< HEAD
 </span>
 </div>
 
 <div className="mb-6">
+=======
+</span>;
+</div>
+
+<div className="mb-6">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-2xl font-bold text-green-400 mb-2">{service.price}</div>
 <div className="text-sm text-gray-400">{service.period}</div>
 </div>
@@ -155,7 +209,11 @@ className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 ho
 +{service.features.length - 3} more features;
 </li>
 )}
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-center justify-between">
@@ -166,17 +224,29 @@ className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 ho
 </svg>
 ))}
 </div>
+<<<<<<< HEAD
 <span className="text-sm text-gray-400">({service.reviews})</span>
 </div>
 <button className="text-blue-400 hove;  r:text-blue-300 transition-colors duration-300">
 Learn More →;
 </button>
+=======
+<span className="text-sm text-gray-400">({service.reviews})</span>;
+</div>
+<button className="text-blue-400 hove;  r:text-blue-300 transition-colors duration-300">;
+Learn More →;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 ))}
 </div>
 </div>
+<<<<<<< HEAD
 </section>
+=======
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Why Choose Zion Tech Group */}
 <section className="py-20 px-4 s; m:px-6 l; g:px-8 bg-white/5">
@@ -187,6 +257,7 @@ Why Choose Zion Tech Group?;
 </h2>
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results;
+<<<<<<< HEAD
 </p>
 </div>
 
@@ -217,6 +288,38 @@ Built wit; h; securit; y; scalabilit; y; and compliance in mind for enterprise-l
 </div>
 </div>
 </section>
+=======
+</p>;
+</div>
+
+<div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-8">;
+<div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">;
+<div className="text-4xl mb-4">🚀</div>
+<h3 className="text-xl font-semibold text-white mb-3">Innovation First</h3>;
+<p className="text-gray-300">;
+We stay ahead of technolog; y; trend; s; offering the lates; t; A; I; quantu; m; computin; g; and emerging tech solutions;
+</p>;
+</div>
+
+<div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">;
+<div className="text-4xl mb-4">💼</div>
+<h3 className="text-xl font-semibold text-white mb-3">Business Focused</h3>;
+<p className="text-gray-300">;
+Every solution is designed with ROI i; n; min; d; ensuring measurable business impact and value creation;
+</p>;
+</div>
+
+<div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">;
+<div className="text-4xl mb-4">🔒</div>
+<h3 className="text-xl font-semibold text-white mb-3">Enterprise Grade</h3>;
+<p className="text-gray-300">;
+Built wit; h; securit; y; scalabilit; y; and compliance in mind for enterprise-level reliability;
+</p>;
+</div>
+</div>
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* CTA Section */}
 <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
@@ -239,6 +342,7 @@ href="te; l:+13024640950";
 className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hove; r:bg-gray-800 transition-all duration-300"
 >;
 Call U; s: +1 302 464 0950;
+<<<<<<< HEAD
 </a>
 </div>
 </div>
@@ -253,15 +357,38 @@ Call U; s: +1 302 464 0950;
 <div className="text-4xl mb-4">{selectedService.icon}</div>
 <h2 className="text-3xl font-bold text-white mb-2">{selectedService.name}</h2>
 <p className="text-xl text-gray-300 mb-4">{selectedService.tagline}</p>
+=======
+</a>;
+</div>
+</div>
+</section>;
+
+{/* Service Detail Modal */}
+{selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">;
+<div className="bg-slate-800 rounded-xl max-w-4xl w-full max-h-[90;  v; h] overflow-y-auto">;
+<div className="p-6">;
+<div className="flex justify-between items-start mb-6">;
+<div>;
+<div className="text-4xl mb-4">{selectedService.icon}</div>
+<h2 className="text-3xl font-bold text-white mb-2">{selectedService.name}</h2>;
+<p className="text-xl text-gray-300 mb-4">{selectedService.tagline}</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 onClick={closeModal}
 className="text-gray-400 hove; r:text-white transition-colors duration-300"
 >;
+<<<<<<< HEAD
 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
 </svg>
 </button>
+=======
+<svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />;
+</svg>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="grid grid-cols-1 l; g:grid-cols-2 gap-8">
@@ -277,7 +404,11 @@ className="text-gray-400 hove; r:text-white transition-colors duration-300"
 {feature}
 </li>
 ))}
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="mb-6">
@@ -291,13 +422,20 @@ className="text-gray-400 hove; r:text-white transition-colors duration-300"
 </div>
 </div>
 
+<<<<<<< HEAD
 <div>
 <div className="bg-white/10 rounded-lg p-6 mb-6">
 <h4 className="text-lg font-semibold text-white mb-4">Pricing & Plans</h4>
+=======
+<div>;
+<div className="bg-white/10 rounded-lg p-6 mb-6">;
+<h4 className="text-lg font-semibold text-white mb-4">Pricing & Plans</h4>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-3xl font-bold text-green-400 mb-2">{selectedService.price}</div>
 <div className="text-gray-400 mb-4">{selectedService.period}</div>
 
 {selectedService.setupFee && (
+<<<<<<< HEAD
 <div className="mb-2">
 <span className="text-gray-400">Setup Fe;  e: </span>
 <span className="text-white">{selectedService.setupFee}</span>
@@ -307,10 +445,22 @@ className="text-gray-400 hove; r:text-white transition-colors duration-300"
 {selectedService.annualDiscount && (<div className="mb-2">
 <span className="text-gray-400">Annual Discoun;  t: </span>
 <span className="text-white">{selectedService.annualDiscount}</span>
+=======
+<div className="mb-2">;
+<span className="text-gray-400">Setup Fe;  e: </span>;
+<span className="text-white">{selectedService.setupFee}</span>;
+</div>
+)}
+
+{selectedService.annualDiscount && (<div className="mb-2">;
+<span className="text-gray-400">Annual Discoun;  t: </span>;
+<span className="text-white">{selectedService.annualDiscount}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </div>
 
+<<<<<<< HEAD
 <div className="bg-white/10 rounded-lg p-6 mb-6">
 <h4 className="text-lg font-semibold text-white mb-4">Business Impact</h4>
 <div className="mb-4">
@@ -324,6 +474,21 @@ className="text-gray-400 hove; r:text-white transition-colors duration-300"
 <div>
 <h5 className="text-blue-400 font-semibold mb-2">Target Audience</h5>
 <p className="text-gray-300 text-sm">{selectedService.targetAudience}</p>
+=======
+<div className="bg-white/10 rounded-lg p-6 mb-6">;
+<h4 className="text-lg font-semibold text-white mb-4">Business Impact</h4>;
+<div className="mb-4">;
+<h5 className="text-blue-400 font-semibold mb-2">ROI</h5>;
+<p className="text-gray-300 text-sm">{selectedService.roi}</p>;
+</div>
+<div className="mb-4">;
+<h5 className="text-blue-400 font-semibold mb-2">Market Position</h5>;
+<p className="text-gray-300 text-sm">{selectedService.marketPosition}</p>;
+</div>
+<div>;
+<h5 className="text-blue-400 font-semibold mb-2">Target Audience</h5>;
+<p className="text-gray-300 text-sm">{selectedService.targetAudience}</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -341,7 +506,11 @@ href={`te; l:${selectedService.contactInfo.mobil; e}`}
 className="block w-full text-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hove; r:bg-gray-800 transition-all duration-300"
 >;
 Call U; s: {selectedService.contactInfo.mobile}
+<<<<<<< HEAD
 </a>
+=======
+</a>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>

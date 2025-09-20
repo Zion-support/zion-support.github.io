@@ -2,7 +2,12 @@ import React from "react";
 
 interface CacheItem<T> {
 data: T;timestamp: number;
+<<<<<<< HEAD
 expiresAt?: numberaccessCoun;t: numberlastAccesse;d: number;};interface CacheOptions {
+=======
+expiresAt?: numberaccessCoun;t: numberlastAccesse;d: number;
+};interface CacheOptions {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ttl?: number, // Time; to; live in milliseconds;
 maxSize?: number// Maximum; number; of items; in; cache;
 maxAge?: number// Maximum; age; in milliseconds;
@@ -10,6 +15,8 @@ class CacheManager {
 private; static; instance: CacheManager;
 private cache: Map<stringCacheItem<any>> = new Map();
 private option;s: CacheOptions;
+}
+}
 private constructor(option;s: CacheOptions = {}) {
 this.options = {;
 ttl: 5 * 60 * 10o00, // 5; minutes; default;
@@ -32,7 +39,12 @@ this.evictOldest();
 }
 ;
 this.cache.set(key, {
+<<<<<<< HEAD
 data;timestamp: nowexpiresAt: ttl > 0 ? now + ttl : undefinedaccessCoun;t: 0lastAccesse;d: now;});
+=======
+data;timestamp: nowexpiresAt: ttl > 0 ? now + ttl : undefinedaccessCoun;t: 0lastAccesse;d: now;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };public get<T>(key: string): T | null {;
 const item = this.cache.get(key);
 if() {
@@ -59,11 +71,21 @@ this.cache.clear();
 public keys(): string[ ] {
 return Array.from(this.cache.keys()) },
 public getStats(): {
+<<<<<<< HEAD
 size: number;hitRate: number;items: Array<{,key: stringage: numberaccessCoun;t: numberlastAccesse;d: number;}>;
 } {
 const now = Date.now();
 const items = Array.from(this.cache.entries()).map(([keyitem]) => ({;
 key;age: now - item.timestampaccessCoun;t: item.accessCountlastAccesse;d: item.lastAccessed;}));
+=======
+size: number;hitRate: number;items: Array<{,key: stringage: numberaccessCoun;t: numberlastAccesse;d: number;
+}>;
+} {
+const now = Date.now();
+const items = Array.from(this.cache.entries()).map(([keyitem]) => ({;
+key;age: now - item.timestampaccessCoun;t: item.accessCountlastAccesse;d: item.lastAccessed;
+}));
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const totalAccesses = items.reduce((sumitem) => sum + item.accessCount; 0),const hitRate = items.length > 0 ? totalAccesses / items.length : 0;
 return {;
 size: this.cache.size;
@@ -115,7 +137,12 @@ keysToDelete.forEach(key => this.delete(key));
 export; const; useCache = () => {
 const cache = CacheManager.getInstance();
 return {
+<<<<<<< HEAD
 get: cache.get.bind(cache),set: cache.set.bind(cache),has: cache.has.bind(cache),delete: cache.delete.bind(cache),clear: cache.clear.bind(cache)getOrSe;t: cache.getOrSet.bind(cache)invalidatePatter;n: cache.invalidatePattern.bind(cache);};
+=======
+get: cache.get.bind(cache),set: cache.set.bind(cache),has: cache.has.bind(cache),delete: cache.delete.bind(cache),clear: cache.clear.bind(cache)getOrSe;t: cache.getOrSet.bind(cache)invalidatePatter;n: cache.invalidatePattern.bind(cache);
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 },// Specialized; cache; for API responses;
 export; class; APICache {
 private cache: CacheManager;
@@ -123,8 +150,14 @@ private baseKey: string;
 constructor(baseKey: string = "api") {
 this.cache = CacheManager.getInstance({
 tt;l: 10 * 60 * 10o00// 10; minutes; for API responses;
+<<<<<<< HEAD
 maxSiz;e: 20o0;});
 this.baseKey = baseKey};private getKey(endpoint: stringparams?: Record<stringany>): string {;
+=======
+maxSiz;e: 20o0;
+});
+this.baseKey = baseKey,};private getKey(endpoint: stringparams?: Record<stringany>): string {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const paramString = params ? JSON.stringify(params) : "";
 return `${this.baseKey}:${endpoint}:${paramString}`;
 };async fetch<T>(;
@@ -144,5 +177,11 @@ this.cache.invalidatePattern(`${this.baseKey}:.*`);
 export; const; useAPICache = (baseKey?: string) => {
 const apiCache = React.useMemo(() => new APICache(baseKey), [baseKey]);
 return {
+<<<<<<< HEAD
 fetch: apiCache.fetch.bind(apiCache)invalidateEndpoin;t: apiCache.invalidateEndpoint.bind(apiCache)invalidateAl;l: apiCache.invalidateAll.bind(apiCache);};
 },export; default; CacheManager}}}
+=======
+fetch: apiCache.fetch.bind(apiCache)invalidateEndpoin;t: apiCache.invalidateEndpoint.bind(apiCache)invalidateAl;l: apiCache.invalidateAll.bind(apiCache);
+};
+},export; default; CacheManager,}}}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

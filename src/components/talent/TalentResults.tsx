@@ -25,7 +25,14 @@ priceRange: [number; number];
 setPriceRange: (range: [number; number]) => void;,
 experienceRange: [number; number];,
 setExperienceRange: (range: [number; number]) => void;,
+<<<<<<< HEAD
 clearFilters: () => void;};
+=======
+clearFilters: () => void;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 export function TalentResults({;
@@ -58,7 +65,11 @@ handleBook={handleBook}
 handleMessage={handleMessage}
 isAuthenticated={isAuthenticated}
 clearFilters={activeFiltersProps.clearFilters}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 }

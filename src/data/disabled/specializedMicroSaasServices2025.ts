@@ -17,23 +17,41 @@ tags: string[];
 estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
+<<<<<<< HEAD
 contactInfo: {,
 phone: string;,
 email: string;,
 website: string;};
+=======
+contactInfo: {
+phone: string;
+email: string;
+website: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
 technologyStack: string[];
 complianceStandards: string[];,
 integrationCapabilities: string[];
+<<<<<<< HEAD
 freeTier?: {,
 features: string[];,
 limitations: string[];};
+=======
+freeTier?: {
+features: string[];
+limitations: string[];
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService2025[] = [
 // AI-Powered Content Generation Suite;
+<<<<<<< HEAD
 {,
 id: "ai-content-generation-suite-2025";,
 title: "AI Content Generation Suite 2025";,
@@ -43,6 +61,16 @@ subcategory: "AI Generation";
 price: 299;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-content-generation-suite-2025";
+title: "AI Content Generation Suite 2025";
+description: "Comprehensive AI-powered content creation platform that generates high-quality; SEO-optimized content for blogs; social media; and marketing campaigns.",
+category: "Content Marketing";
+subcategory: "AI Generation";
+price: 299;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered blog post generation";
 "Social media content creation",
@@ -78,11 +106,19 @@ tags: ["AI", "Content Generation", "Marketing", "SEO", "Automation"],
 estimatedDelivery: "1-2 weeks";
 supportLevel: "standard";
 marketPrice: "$299 - $999/month";
+<<<<<<< HEAD
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-content-generation-suite-2025";,
+=======
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-content-generation-suite-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["GPT-5", "Claude 3.5", "NLP", "Machine Learning", "React"],
 complianceStandards: ["GDPR", "Data Privacy"],
 integrationCapabilities: ["WordPress", "Shopify", "Mailchimp", "Social Media APIs", "CMS Platforms"],
@@ -93,6 +129,7 @@ limitations: ["Limited AI models", "Basic analytics", "No custom branding"];
 },
 
 // Smart Invoice Management System;
+<<<<<<< HEAD
 {
 id: "smart-invoice-management-system";,
 title: "Smart Invoice Management System";,
@@ -102,6 +139,16 @@ subcategory: "Invoice Processing";
 price: 199;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "smart-invoice-management-system";
+title: "Smart Invoice Management System";
+description: "Intelligent invoice processing and management platform that automates billing; payment tracking; and financial reporting using AI and OCR technology.",
+category: "Financial Management";
+subcategory: "Invoice Processing";
+price: 199;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered invoice scanning and processing";
 "Automated payment reminders",
@@ -137,11 +184,19 @@ tags: ["Invoicing", "Financial Management", "Automation", "OCR", "AI"],
 estimatedDelivery: "1-2 weeks";
 supportLevel: "standard";
 marketPrice: "$199 - $599/month";
+<<<<<<< HEAD
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/smart-invoice-management-system";,
+=======
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/smart-invoice-management-system";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["OCR Technology", "AI/ML", "React", "Node.js", "Cloud Computing"],
 complianceStandards: ["GDPR", "Financial Regulations", "Data Security"],
 integrationCapabilities: ["QuickBooks", "Xero", "Stripe", "PayPal", "Bank APIs"],
@@ -152,6 +207,7 @@ limitations: ["No API access", "Limited integrations", "Basic templates"];
 },
 
 // AI-Powered Customer Support Platform;
+<<<<<<< HEAD
 {
 id: "ai-customer-support-platform";,
 title: "AI Customer Support Platform";,
@@ -161,6 +217,16 @@ subcategory: "AI Support";
 price: 399;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-customer-support-platform";
+title: "AI Customer Support Platform";
+description: "Intelligent customer support system that uses AI to provide instant responses; route tickets; and automate support workflows for improved customer satisfaction.",
+category: "Customer Service";
+subcategory: "AI Support";
+price: 399;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered chatbot support";
 "Intelligent ticket routing",
@@ -193,6 +259,7 @@ targetAudience: [
 "Digital businesses";
 ],
 tags: ["Customer Support", "AI", "Chatbot", "Automation", "Customer Service"],
+<<<<<<< HEAD
 estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$399 - $1;299/month",
@@ -201,6 +268,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-customer-support-platform";,
+=======
+estimatedDelivery: "2-3 weeks";
+supportLevel: "premium";
+marketPrice: "$399 - $1;299/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-customer-support-platform";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["NLP", "Machine Learning", "React", "Node.js", "WebSocket"],
 complianceStandards: ["GDPR", "Data Privacy", "Security Standards"],
 integrationCapabilities: ["Slack", "Discord", "Website Chat", "Mobile Apps", "CRM Systems"],
@@ -211,6 +288,7 @@ limitations: ["Limited AI models", "Basic analytics", "No custom branding"];
 },
 
 // Smart Project Management Tool;
+<<<<<<< HEAD
 {
 id: "smart-project-management-tool";,
 title: "Smart Project Management Tool";,
@@ -220,6 +298,16 @@ subcategory: "AI Enhancement";
 price: 249;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "smart-project-management-tool";
+title: "Smart Project Management Tool";
+description: "AI-enhanced project management platform that automates task allocation; tracks progress; and provides intelligent insights for better project outcomes.",
+category: "Project Management";
+subcategory: "AI Enhancement";
+price: 249;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered task prioritization";
 "Automated resource allocation",
@@ -255,11 +343,19 @@ tags: ["Project Management", "AI", "Productivity", "Collaboration", "Automation"
 estimatedDelivery: "2-3 weeks";
 supportLevel: "standard";
 marketPrice: "$249 - $799/month";
+<<<<<<< HEAD
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/smart-project-management-tool";,
+=======
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/smart-project-management-tool";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["AI/ML", "React", "Node.js", "Real-time Analytics", "Cloud Computing"],
 complianceStandards: ["GDPR", "Data Security"],
 integrationCapabilities: ["Slack", "Microsoft Teams", "GitHub", "Jira", "Trello"],
@@ -270,6 +366,7 @@ limitations: ["Limited AI features", "No advanced reporting", "Basic integration
 },
 
 // AI-Powered Email Marketing Platform;
+<<<<<<< HEAD
 {
 id: "ai-email-marketing-platform";,
 title: "AI Email Marketing Platform";,
@@ -279,6 +376,16 @@ subcategory: "AI Optimization";
 price: 179;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-email-marketing-platform";
+title: "AI Email Marketing Platform";
+description: "Intelligent email marketing platform that uses AI to optimize send times; personalize content; and improve campaign performance for maximum engagement.",
+category: "Email Marketing";
+subcategory: "AI Optimization";
+price: 179;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered send time optimization";
 "Personalized content generation",
@@ -314,11 +421,19 @@ tags: ["Email Marketing", "AI", "Automation", "Personalization", "Analytics"],
 estimatedDelivery: "1-2 weeks";
 supportLevel: "standard";
 marketPrice: "$179 - $599/month";
+<<<<<<< HEAD
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-email-marketing-platform";,
+=======
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-email-marketing-platform";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Machine Learning", "NLP", "React", "Node.js", "Email APIs"],
 complianceStandards: ["GDPR", "CAN-SPAM", "Data Privacy"],
 integrationCapabilities: ["Shopify", "WooCommerce", "CRM Systems", "Analytics Tools", "Social Media"],
@@ -329,6 +444,7 @@ limitations: ["Limited AI models", "Basic analytics", "No custom branding"];
 },
 
 // Smart Inventory Management System;
+<<<<<<< HEAD
 {
 id: "smart-inventory-management-system";,
 title: "Smart Inventory Management System";,
@@ -338,6 +454,16 @@ subcategory: "AI Prediction";
 price: 349;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "smart-inventory-management-system";
+title: "Smart Inventory Management System";
+description: "AI-powered inventory management platform that predicts demand; optimizes stock levels; and automates reordering for efficient inventory control.",
+category: "Inventory Management";
+subcategory: "AI Prediction";
+price: 349;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered demand forecasting";
 "Automated reorder points",
@@ -370,6 +496,7 @@ targetAudience: [
 "Warehouse operators";
 ],
 tags: ["Inventory Management", "AI", "Supply Chain", "Automation", "Analytics"],
+<<<<<<< HEAD
 estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$349 - $1;199/month",
@@ -378,6 +505,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/smart-inventory-management-system";,
+=======
+estimatedDelivery: "2-3 weeks";
+supportLevel: "premium";
+marketPrice: "$349 - $1;199/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/smart-inventory-management-system";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Machine Learning", "Predictive Analytics", "React", "Node.js", "IoT Integration"],
 complianceStandards: ["GDPR", "Data Security", "Industry Standards"],
 integrationCapabilities: ["POS Systems", "E-commerce Platforms", "ERP Systems", "Supplier APIs", "Shipping Carriers"],
@@ -388,6 +525,7 @@ limitations: ["Limited AI features", "Basic reporting", "No API access"];
 },
 
 // AI-Powered Social Media Manager;
+<<<<<<< HEAD
 {
 id: "ai-social-media-manager";,
 title: "AI Social Media Manager";,
@@ -397,6 +535,16 @@ subcategory: "AI Management";
 price: 199;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-social-media-manager";
+title: "AI Social Media Manager";
+description: "Intelligent social media management platform that automates posting; generates content; and optimizes engagement across multiple social media channels.",
+category: "Social Media";
+subcategory: "AI Management";
+price: 199;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered content generation";
 "Automated posting scheduling",
@@ -432,11 +580,19 @@ tags: ["Social Media", "AI", "Automation", "Content Generation", "Marketing"],
 estimatedDelivery: "1-2 weeks";
 supportLevel: "standard";
 marketPrice: "$199 - $699/month";
+<<<<<<< HEAD
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-social-media-manager";,
+=======
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-social-media-manager";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["NLP", "Machine Learning", "React", "Node.js", "Social Media APIs"],
 complianceStandards: ["GDPR", "Data Privacy", "Platform Policies"],
 integrationCapabilities: ["Facebook", "Instagram", "Twitter", "LinkedIn", "TikTok", "YouTube"],
@@ -447,6 +603,7 @@ limitations: ["Limited AI models", "Basic analytics", "No custom branding"];
 },
 
 // Smart Time Tracking Solution;
+<<<<<<< HEAD
 {
 id: "smart-time-tracking-solution";,
 title: "Smart Time Tracking Solution";,
@@ -456,6 +613,16 @@ subcategory: "Time Management";
 price: 129;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "smart-time-tracking-solution";
+title: "Smart Time Tracking Solution";
+description: "AI-enhanced time tracking platform that automatically categorizes activities; generates insights; and optimizes productivity for individuals and teams.",
+category: "Productivity";
+subcategory: "Time Management";
+price: 129;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered activity categorization";
 "Automatic time tracking",
@@ -491,11 +658,19 @@ tags: ["Time Tracking", "Productivity", "AI", "Automation", "Analytics"],
 estimatedDelivery: "1-2 weeks";
 supportLevel: "standard";
 marketPrice: "$129 - $399/month";
+<<<<<<< HEAD
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/smart-time-tracking-solution";,
+=======
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/smart-time-tracking-solution";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Machine Learning", "Computer Vision", "React", "Node.js", "Mobile Apps"],
 complianceStandards: ["GDPR", "Data Privacy"],
 integrationCapabilities: ["Project Management Tools", "CRM Systems", "Accounting Software", "Calendar Apps"],
@@ -506,6 +681,7 @@ limitations: ["No AI features", "Basic reporting", "Limited integrations"];
 },
 
 // AI-Powered Lead Generation Platform;
+<<<<<<< HEAD
 {
 id: "ai-lead-generation-platform";,
 title: "AI Lead Generation Platform";,
@@ -515,6 +691,16 @@ subcategory: "Lead Generation";
 price: 449;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-lead-generation-platform";
+title: "AI Lead Generation Platform";
+description: "Intelligent lead generation platform that uses AI to identify; qualify; and nurture prospects for improved sales conversion and business growth.",
+category: "Sales & Marketing";
+subcategory: "Lead Generation";
+price: 449;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered prospect identification";
 "Lead scoring and qualification",
@@ -547,6 +733,7 @@ targetAudience: [
 "Consultants";
 ],
 tags: ["Lead Generation", "AI", "Sales", "Marketing", "Automation"],
+<<<<<<< HEAD
 estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$449 - $1;499/month",
@@ -555,6 +742,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-lead-generation-platform";,
+=======
+estimatedDelivery: "2-3 weeks";
+supportLevel: "premium";
+marketPrice: "$449 - $1;499/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-lead-generation-platform";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Machine Learning", "NLP", "React", "Node.js", "Data Analytics"],
 complianceStandards: ["GDPR", "CAN-SPAM", "Data Privacy"],
 integrationCapabilities: ["CRM Systems", "Email Platforms", "Social Media", "Website Forms", "Analytics Tools"],
@@ -565,6 +762,7 @@ limitations: ["Limited AI models", "Basic analytics", "No custom branding"];
 },
 
 // Smart Document Management System;
+<<<<<<< HEAD
 {
 id: "smart-document-management-system";,
 title: "Smart Document Management System";,
@@ -574,6 +772,16 @@ subcategory: "AI Organization";
 price: 279;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "smart-document-management-system";
+title: "Smart Document Management System";
+description: "AI-powered document management platform that automatically categorizes; searches; and organizes documents for improved workflow efficiency and collaboration.",
+category: "Document Management";
+subcategory: "AI Organization";
+price: 279;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered document categorization";
 "Advanced search and retrieval",
@@ -609,11 +817,19 @@ tags: ["Document Management", "AI", "Workflow", "Collaboration", "Security"],
 estimatedDelivery: "2-3 weeks";
 supportLevel: "premium";
 marketPrice: "$279 - $899/month";
+<<<<<<< HEAD
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/smart-document-management-system";,
+=======
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/smart-document-management-system";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["OCR", "Machine Learning", "React", "Node.js", "Cloud Storage"],
 complianceStandards: ["GDPR", "SOC2", "Data Security", "Industry Standards"],
 integrationCapabilities: ["Microsoft Office", "Google Workspace", "CRM Systems", "ERP Systems", "Cloud Storage"],

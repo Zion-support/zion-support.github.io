@@ -8,4 +8,9 @@ className?: string;
 showText?: boolean;
 text?: string,
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+<<<<<<< HEAD
 }})
+=======
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

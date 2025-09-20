@@ -17,6 +17,7 @@ tags: string[];
 estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
+<<<<<<< HEAD
 contactInfo: {,
 phone: string;,
 email: string;,
@@ -33,6 +34,26 @@ subcategory: "Business Intelligence";
 price: 3500;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+contactInfo: {
+phone: string;
+email: string;
+website: string;
+}
+}
+};
+}
+
+export const INNOVATIVE_NEW_SERVICES_2025: InnovativeService2025[] = [
+{id: "ai-predictive-business-intelligence";
+title: "AI-Powered Predictive Business Intelligence Platform";
+description: "Advanced business intelligence platform that uses machine learning to predict market trends; customer behavior; and business outcomes with 95% accuracy.",
+category: "AI & Analytics";
+subcategory: "Business Intelligence";
+price: 3500;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Real-time predictive analytics";
 "AI-powered forecasting models",
@@ -61,6 +82,7 @@ targetAudience: [
 "C-level executives";
 ],
 tags: ["AI", "Business Intelligence", "Predictive Analytics", "Machine Learning", "Data Science"],
+<<<<<<< HEAD
 estimatedDelivery: "3-4 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;500 - $12;000/month",
@@ -78,6 +100,24 @@ subcategory: "Autonomous Systems";
 price: 5000;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+estimatedDelivery: "3-4 weeks";
+supportLevel: "enterprise";
+marketPrice: "$3;500 - $12;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"}
+};
+{id: "autonomous-ai-development-platform";
+title: "Autonomous AI Development & Deployment Platform";
+description: "Self-evolving AI platform that automatically designs; trains; and deploys machine learning models without human intervention; continuously improving performance.",
+category: "AI & Development";
+subcategory: "Autonomous Systems";
+price: 5000;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AutoML model generation";
 "Continuous learning and optimization",
@@ -106,12 +146,21 @@ targetAudience: [
 "Technology consultants";
 ],
 tags: ["AI", "AutoML", "Machine Learning", "DevOps", "Automation"],
+<<<<<<< HEAD
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$5;000 - $15;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "4-6 weeks";
+supportLevel: "premium";
+marketPrice: "$5;000 - $15;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"}
 }
 ];

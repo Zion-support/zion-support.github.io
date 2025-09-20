@@ -18,7 +18,8 @@ statusCode?: number;
 responseTime?: number;
 lastChecke; d: Date;
 parentPage?: string;
-linkText?: string;
+}
+linkText?: string;}
 };
 interface LinkHealthReport {
 totalLink; s: number;
@@ -26,9 +27,17 @@ healthyLink; s: number;
 brokenLink; s: number;
 externalLink; s: number;
 averageResponseTim; e: number;
+<<<<<<< HEAD
 lastUpdate; d: Date;};
 const LinkHealthMonito; r: React.FC = () => {
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
+=======
+lastUpdate; d: Date;
+}
+}
+};
+const LinkHealthMonito; r: React.FC = () => {const [isOp;  e; n; setIsOp; e; n] = useState(false);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const [isMonitori; n; g; setIsMonitori; n; g] = useState(false);
 const [linkStatus;  e; s; setLinkStatus; e; s] = useState<LinkStatus[]>([]);
 const [repo; r; t; setRepo; r; t] = useState<LinkHealthReport | null>(null);
@@ -43,25 +52,39 @@ statusCo; d; e: 4; 0; 4;
 responseTi; m; e: 12; 0; 0;
 lastCheck; e; d: ne; w Dat; e(),
 parentPa; g; e: "Homepag; e"};
+<<<<<<< HEAD
 linkTe; x; t: "LinkedI; n"},
 {
 u; r; l: "htt; p; s://twitte; r.co; m/ziontechgrou; p",
+=======
+linkTe; x; t: "LinkedI; n",
+},
+{u; r; l: "htt; p; s://twitte; r.co; m/ziontechgrou; p",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 stat; u; s: "externa; l",
 statusCo; d; e: 2; 0; 0;
 responseTi; m; e: 8; 0; 0;
 lastCheck; e; d: ne; w Dat; e(),
 parentPa; g; e: "Homepag; e",
 linkTe; x; t: "Twitte; r"},
+<<<<<<< HEAD
 {
 u; r; l: "t; e; l:+1 30; 2 46; 4 095; 0",
+=======
+{u; r; l: "t; e; l:+1 30; 2 46; 4 095; 0",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 stat; u; s: "health; y",
 statusCo; d; e: 2; 0; 0;
 responseTi; m; e: 5; 0;
 lastCheck; e; d: ne; w Dat; e(),
 parentPa; g; e: "Contac; t",
 linkTe; x; t: "Phon; e Numbe; r"},
+<<<<<<< HEAD
 {
 u; r; l: "mail; t; o:klebe; r@ziontechgrou; p.co; m",
+=======
+{u; r; l: "mail; t; o:klebe; r@ziontechgrou; p.co; m",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 stat; u; s: "health; y",
 statusCo; d; e: 2; 0; 0;
 responseTi; m; e: 5; 0;
@@ -75,8 +98,7 @@ setLinkStatuses(sampleLinks);
 generateReport(sampleLinks);
 },  []);
 
-const generateReport: any = (link;  s: LinkStatus[]) => {
-const totalLinks = links.length;
+const generateReport: any = (link;  s: LinkStatus[]) => {const totalLinks = links.length;
 const healthyLinks = links.filter(l => l.status === "healthy").length;
 const brokenLinks = links.filter(l => l.status === "broken").length;
 const externalLinks = links.filter(l => l.status === "external").length;
@@ -105,8 +127,14 @@ return <CheckCircle className="w-4 h-4 text-green-400" />
 case "broken":
 return <AlertTriangle className="w-4 h-4 text-red-400" />
 case "external":
+<<<<<<< HEAD
 return <ExternalLink className="w-4 h-4 text-blue-400" />
 defaul;  t: return <RefreshCw className="w-4 h-4 text-yellow-400" />}
+=======
+return <ExternalLink className="w-4 h-4 text-blue-400" />;
+defaul;  t: return <RefreshCw className="w-4 h-4 text-yellow-400" />;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -117,7 +145,12 @@ case "broken":
 return "text-red-400";
 case "external":
 return "text-blue-400";
+<<<<<<< HEAD
 defaul;  t: return "text-yellow-400";}
+=======
+defaul;  t: return "text-yellow-400";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const filteredLinks = linkStatuses.filter(link => {;
@@ -156,28 +189,45 @@ className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90; v; h] 
 onClick={(e) => e.stopPropagation()}
 >;
 {/* Header */}
+<<<<<<< HEAD
 <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 text-white">
 <div className="flex items-center justify-between">
 <div className="flex items-center space-x-3">
 <Link className="w-8 h-8" />
 <h2 className="text-2xl font-bold">Link Health Monitor</h2>
+=======
+<div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 text-white">;
+<div className="flex items-center justify-between">;
+<div className="flex items-center space-x-3">;
+<Link className="w-8 h-8" />;
+<h2 className="text-2xl font-bold">Link Health Monitor</h2>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 onClick={() => setIsOpen(false)}
 className="text-white/80 hove;  r:text-white transition-colors"
 >;
 ✕;
+<<<<<<< HEAD
 </button>
 </div>
 <p className="text-cyan-100 mt-2">
 Monitor and maintain the health of all website links;
 </p>
+=======
+</button>;
+</div>
+<p className="text-cyan-100 mt-2">;
+Monitor and maintain the health of all website links;
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Content */}
 <div className="p-6 space-y-6">
 {/* Summary Cards */}
 {report && (
+<<<<<<< HEAD
 <div className="grid grid-cols-1 m; d:grid-cols-4 gap-4">
 <div className="bg-gray-800 rounded-lg p-4 text-center">
 <div className="text-2xl font-bold text-white">{report.totalLinks}</div>
@@ -192,6 +242,22 @@ Monitor and maintain the health of all website links;
 <div className="text-red-400 text-sm">Broken</div>
 </div>
 <div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center">
+=======
+<div className="grid grid-cols-1 m; d:grid-cols-4 gap-4">;
+<div className="bg-gray-800 rounded-lg p-4 text-center">;
+<div className="text-2xl font-bold text-white">{report.totalLinks}</div>
+<div className="text-gray-400 text-sm">Total Links</div>
+</div>
+<div className="bg-green-900/20 border border-green-500/20 rounded-lg p-4 text-center">;
+<div className="text-2xl font-bold text-green-400">{report.healthyLinks}</div>
+<div className="text-green-400 text-sm">Healthy</div>
+</div>
+<div className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 text-center">;
+<div className="text-2xl font-bold text-red-400">{report.brokenLinks}</div>
+<div className="text-red-400 text-sm">Broken</div>
+</div>
+<div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-2xl font-bold text-blue-400">{report.externalLinks}</div>
 <div className="text-blue-400 text-sm">External</div>
 </div>
@@ -236,7 +302,11 @@ selectedFilter === "healthy";
 : "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0"}`}
 >;
 Healthy;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <button;
@@ -248,8 +318,13 @@ className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 round
 <RefreshCw className="w-4 h-4 animate-spin" />
 ) : (<Zap className="w-4 h-4" />
 )}
+<<<<<<< HEAD
 <span>{isMonitoring ? "Checking..." : "Check All Links"}</span>
 </button>
+=======
+<span>{isMonitoring ? "Checking..." : "Check All Links"}</span>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Links Table */}
@@ -282,11 +357,19 @@ Last Checked;
 {getStatusIcon(link.status)}
 <span className={`text-sm font-medium ${getStatusColor(link.statu; s)}`}>
 {link.status.charAt(0).toUpperCase() + link.status.slice(1)}
+<<<<<<< HEAD
 </span>
 </div>
 </td>
 <td className="px-6 py-4 whitespace-nowrap">
 <div className="max-w-xs truncate">
+=======
+</span>;
+</div>
+</td>;
+<td className="px-6 py-4 whitespace-nowrap">;
+<div className="max-w-xs truncate">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <a;
 href={link.url}
 target="_blank";
@@ -302,8 +385,13 @@ Tex; t: {link.linkText}
 </div>
 )}
 </div>
+<<<<<<< HEAD
 </td>
 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+=======
+</td>;
+<td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {link.parentPage || "Unknown"}
 </td>
 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
@@ -314,8 +402,13 @@ Tex; t: {link.linkText}
 </td>
 </tr>
 ))}
+<<<<<<< HEAD
 </tbody>
 </table>
+=======
+</tbody>;
+</table>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -324,6 +417,7 @@ Tex; t: {link.linkText}
 <h3 className="text-lg font-semibold text-yellow-400 mb-2 flex items-center">
 <AlertTriangle className="w-5 h-5 mr-2" />
 Recommendations;
+<<<<<<< HEAD
 </h3>
 <ul className="text-yellow-200 text-sm space-y-1">
 <li>• Fix broken LinkedIn and social media links</li>
@@ -335,6 +429,19 @@ Recommendations;
 </div>
 </motion.div>
 </motion.div>
+=======
+</h3>;
+<ul className="text-yellow-200 text-sm space-y-1">;
+<li>• Fix broken LinkedIn and social media links</li>;
+<li>• Implement proper redirects for moved pages</li>;
+<li>• Set up automated link monitoring</li>;
+<li>• Review external link validity regularly</li>;
+</ul>;
+</div>
+</div>
+</motion.div>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </>
 );

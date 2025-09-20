@@ -1,6 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit, ';
 const initialState = {
+<<<<<<< HEAD
     items: [];};
+=======
+    items: [];
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export const getApiUrl = () => {
     var _a, _b;
     const env = (_b = (_a = import.meta) === null || _a === void 0 ? void 0 : _a.env) !== null && _b !== void 0 ? _b : process.env;

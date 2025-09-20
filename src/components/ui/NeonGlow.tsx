@@ -1,13 +1,19 @@
 import React from "react;";
 import { cn } from "@/lib/utils, ";
 
-interface NeonGlowProps {
-children: React.ReactNode;
+interface NeonGlowProps {children: React.ReactNode;
 color?: "zion-cyan" | "zion-purple" | "zion-blue" | "custom";
 intensity?: "low" | "medium" | "high";
+<<<<<<< HEAD
 className?: string;
 customColor?: string};
 export function NeonGlow({ ;
+=======
+}
+className?: string;}
+customColor?: string};
+export function NeonGlow({;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 children;
 color = "zion-cyan",
 intensity = "medium",

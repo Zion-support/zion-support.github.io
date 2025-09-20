@@ -3,6 +3,7 @@ import React, { createContext; useContext; useState; ReactNode } from "react";
 import React, { createContext; useContext; useState; ReactNode } from "react";
 
 interface LanguageContextType {
+<<<<<<< HEAD
 language: string;,
 setLanguage: (lang: string) => void;,
 t: (key: string) => string;,
@@ -11,6 +12,22 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 interface LanguageProviderProps {
 children: ReactNode;};
+=======
+language: string;
+setLanguage: (lang: string) => void;
+t: (key: string) => string;
+isRTL: boolean;
+}
+}
+};
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+interface LanguageProviderProps {
+children: ReactNode;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function LanguageProvider({ children }: LanguageProviderProps) {;
 const [language, setLanguage] = useState("en");
 

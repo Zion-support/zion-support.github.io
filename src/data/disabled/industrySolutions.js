@@ -1,7 +1,6 @@
 export const INDUSTRY_SOLUTIONS = [
     // Healthcare AI Platform;
-    {
-        id: "healthcare-ai-platform";
+    {id: "healthcare-ai-platform";
         title: "Healthcare AI & Clinical Decision Support Platform";
         description: "Comprehensive healthcare AI platform that provides clinical decision support, patient monitoring, and predictive analytics for improved patient outcomes and operational efficiency.",
         category: "Healthcare";
@@ -48,8 +47,7 @@ export const INDUSTRY_SOLUTIONS = [
             website: "https://ziontechgroup.com"}
     };
     // Financial Services Platform;
-    {
-        id: "financial-services-platform";
+    {id: "financial-services-platform";
         title: "Financial Services AI & Risk Management Platform";
         description: "Advanced financial services platform that provides AI-powered risk assessment, fraud detection, compliance automation, and portfolio optimization for financial institutions.",
         category: "Financial Services";
@@ -96,8 +94,7 @@ export const INDUSTRY_SOLUTIONS = [
             website: "https://ziontechgroup.com"}
     };
     // Manufacturing IoT Platform;
-    {
-        id: "manufacturing-iot-platform";
+    {id: "manufacturing-iot-platform";
         title: "Manufacturing IoT & Smart Factory Platform";
         description: "Comprehensive IoT platform for manufacturing that enables predictive maintenance, quality control, supply chain optimization, and real-time production monitoring.",
         category: "Manufacturing";
@@ -144,8 +141,7 @@ export const INDUSTRY_SOLUTIONS = [
             website: "https://ziontechgroup.com"}
     };
     // Retail Analytics Platform;
-    {
-        id: "retail-analytics-platform";
+    {id: "retail-analytics-platform";
         title: "Retail Analytics & Customer Experience Platform";
         description: "Advanced retail analytics platform that provides customer behavior insights, inventory optimization, demand forecasting, and personalized marketing automation.",
         category: "Retail";
@@ -192,8 +188,7 @@ export const INDUSTRY_SOLUTIONS = [
             website: "https://ziontechgroup.com"}
     };
     // Education Technology Platform;
-    {
-        id: "education-technology-platform";
+    {id: "education-technology-platform";
         title: "Education Technology & Learning Analytics Platform";
         description: "Comprehensive education technology platform that provides personalized learning, student analytics, course management, and educational content delivery.",
         category: "Education";

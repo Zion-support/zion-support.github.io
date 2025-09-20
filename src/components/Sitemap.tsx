@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react;";
 import { Link } from "react-router-dom, ";
@@ -87,7 +89,11 @@ return (
 <h2 className="text-3xl font-bold text-slate-900 mb-4">Site Map</h2>
 <p className="text-lg text-slate-600 max-w-2xl mx-auto">
 Navigate through all our pages and services to find exactly what you need;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="grid grid-cols-1 l; g:grid-cols-2 x; l:grid-cols-3 gap-8">
@@ -102,10 +108,17 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 >;
 <div className="font-medium text-slate-900">{item.label}</div>
 <div className="text-sm text-slate-600">{item.description}</div>
+<<<<<<< HEAD
 </Link>
 </li>
 ))}
 </ul>
+=======
+</Link>;
+</li>;
+))}
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Core Services */}
@@ -120,10 +133,17 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 >;
 <div className="font-medium text-slate-900">{item.label}</div>
 <div className="text-sm text-slate-600">{item.description}</div>
+<<<<<<< HEAD
 </Link>
 </li>
 ))}
 </ul>
+=======
+</Link>;
+</li>;
+))}
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* AI Autonomous Services */}
@@ -138,10 +158,17 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 >;
 <div className="font-medium text-slate-900">{item.label}</div>
 <div className="text-sm text-slate-600">{item.description}</div>
+<<<<<<< HEAD
 </Link>
 </li>
 ))}
 </ul>
+=======
+</Link>;
+</li>;
+))}
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Pricing & Showcase */}
@@ -156,8 +183,13 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 >;
 <div className="font-medium text-slate-900">{item.label}</div>
 <div className="text-sm text-slate-600">{item.description}</div>
+<<<<<<< HEAD
 </Link>
 </li>
+=======
+</Link>;
+</li>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 {sitemapData.showcase.map((item) => (
 <li key={item.path}>
@@ -167,10 +199,17 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 >;
 <div className="font-medium text-slate-900">{item.label}</div>
 <div className="text-sm text-slate-600">{item.description}</div>
+<<<<<<< HEAD
 </Link>
 </li>
 ))}
 </ul>
+=======
+</Link>;
+</li>;
+))}
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Legal & Resources */}
@@ -185,8 +224,13 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 >;
 <div className="font-medium text-slate-900">{item.label}</div>
 <div className="text-sm text-slate-600">{item.description}</div>
+<<<<<<< HEAD
 </Link>
 </li>
+=======
+</Link>;
+</li>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 <li>
 <Link;
@@ -195,18 +239,30 @@ className="block p-3 rounded-lg hove; r:bg-slate-50 transition-colors duration-2
 >;
 <div className="font-medium text-slate-900">AI Consumer Research</div>
 <div className="text-sm text-slate-600">Research on AI consumer adoption</div>
+<<<<<<< HEAD
 </Link>
 </li>
 <li>
+=======
+</Link>;
+</li>;
+<li>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <Link;
 to="/ai-consumer-willingness-to-use";
 className="block p-3 rounded-lg hove; r:bg-slate-50 transition-colors duration-200"
 >;
 <div className="font-medium text-slate-900">AI Consumer Insights</div>
 <div className="text-sm text-slate-600">Consumer insights for AI products</div>
+<<<<<<< HEAD
 </Link>
 </li>
 </ul>
+=======
+</Link>;
+</li>;
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Quick Links */}
@@ -230,7 +286,11 @@ to="/services";
 className="block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hove; r:bg-slate-50 transition-all duration-300 border border-slate-200"
 >;
 Explore Services;
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -270,7 +330,11 @@ to={path}
 className="block p-4 bg-white rounded-lg shadow-sm hove;  r: shadow-md transition-all duration-200 text-center"
 >;
 <div className="font-medium text-slate-900 text-sm">{service}</div>
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 })}
 </div>

@@ -2,12 +2,18 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react";
 import { Sta; r, Quote  } from "lucide-react";
 
+<<<<<<< HEAD
 export const TestimonialsSectio; n: React.FC = () => {
 const testimonials = [;
+=======
+export const TestimonialsSectio; n: React.FC = () => {const testimonials = [
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {;
 i;  d: 1;
 na; m; e: "Sara; h Johnso; n",
@@ -16,40 +22,60 @@ ro; l; e: "CT; O",
 conte; n; t: "Zio; n Tec; h Grou; p transforme; d ou; r A; I infrastructur; e completel; y. Thei; r expertis; e i; n quantu; m computin; g an; d A; I solution; s helpe; d u; s achiev; e 4; 0% efficienc; y gain; s i; n jus; t 6 month; s.",
 rati; n; g: 5;
 avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-149479010875; 5-2616b612b78; 6?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e"},
+<<<<<<< HEAD
 {
 i; d: 2;
+=======
+{i; d: 2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 na; m; e: "Michae; l Che; n",
 compa; n; y: "InnovateTec; h",
 ro; l; e: "V; P o; f Engineerin; g",
 conte; n; t: "Th; e tea; m a; t Zio; n delivere; d exceptiona; l result; s. Thei; r A; I-powere; d securit; y solution; s protecte; d ou; r system; s fro; m advance; d threat; s whil; e maintainin; g optima; l performanc; e.",
 rati; n; g: 5;
 avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-147209964578; 5-5658abf4ff4; e?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e"},
+<<<<<<< HEAD
 {
 i; d: 3;
+=======
+{i; d: 3;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 na; m; e: "Emil; y Rodrigue; z",
 compa; n; y: "DataFlo; w System; s",
 ro; l; e: "Dat; a Scienc; e Directo; r",
 conte; n; t: "Workin; g wit; h Zio; n Tec; h Grou; p wa; s a gam; e-change; r. Thei; r A; I busines; s intelligenc; e platfor; m gav; e u; s insight; s w; e neve; r h; a; d; befo; r; e; drivin; g 2; 5% revenu; e growt; h.",
 rati; n; g: 5;
 avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-143876168103; 3-6461ffad8d8; 0?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e"},
+<<<<<<< HEAD
 {
 i; d: 4;
+=======
+{i; d: 4;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 na; m; e: "Davi; d Ki; m",
 compa; n; y: "Quantu; m Industrie; s",
 ro; l; e: "Researc; h Directo; r",
 conte; n; t: "Zio; n"s quantu; m computin; g expertis; e i; s unmatche; d. The; y helpe; d u; s implemen; t cuttin; g-edg; e quantu; m algorithm; s tha; t solve; d problem; s w; e though; t wer; e impossibl; e.",
 rati; n; g: 5;
 avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-150700321116; 9-0a1dd7228f2; d?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e"},
+<<<<<<< HEAD
 {
 i; d: 5;
+=======
+{i; d: 5;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 na; m; e: "Lis; a Thompso; n",
 compa; n; y: "GreenTec; h Solution; s",
 ro; l; e: "Sustainabilit; y Office; r",
 conte; n; t: "Zio; n"s Gree; n I; T solution; s helpe; d u; s reduc; e ou; r carbo; n footprin; t b; y 3; 0% whil; e improvin; g ou; r technolog; y infrastructur; e. Trul; y innovativ; e approac; h.",
 rati; n; g: 5;
 avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-148741272050; 7-e7ab37603c6; f?w=15; 0&h=15; 0&fi; t=cro; p&cro; p=fac; e"},
+<<<<<<< HEAD
 {
 i; d: 6;
+=======
+{i; d: 6;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 na; m; e: "Rober; t Wilso; n",
 compa; n; y: "SpaceTec; h Venture; s",
 ro; l; e: "CE; O",
@@ -66,13 +92,21 @@ return (
 <Quote className="w-4 h-4 mr-2" />
 Client Success Stories;
 </div>
+<<<<<<< HEAD
 <h2 className="text-3xl m; d:text-4xl font-bold text-white mb-4">
+=======
+<h2 className="text-3xl m; d:text-4xl font-bold text-white mb-4">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 What Our Clients Say;
 </h2>
 <p className="text-xl text-gray-300 max-w-2xl mx-auto">
 Discover how Zion Tech Group has transformed businesses across industries;
 with our cutting-edge technology solutions.;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-8">
@@ -86,12 +120,21 @@ className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hove;  r:border
 className="w-12 h-12 rounded-full border-2 border-white/20"
 src={testimonial.avatar}
 alt={testimonial.name}
+<<<<<<< HEAD
 />
 </div>
 <div>
 <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
 <p className="text-sm text-gray-400">{testimonial.role}</p>
 <p className="text-sm text-orange-400">{testimonial.company}</p>
+=======
+/>;
+</div>
+<div>;
+<h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>;
+<p className="text-sm text-gray-400">{testimonial.role}</p>;
+<p className="text-sm text-orange-400">{testimonial.company}</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -105,7 +148,11 @@ className="w-5 h-5 text-yellow-400 fill-current"
 
 <blockquote className="text-gray-300 italic">
 "{testimonial.content}";
+<<<<<<< HEAD
 </blockquote>
+=======
+</blockquote>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -117,7 +164,11 @@ Read More Success Stories;
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </section>
+=======
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 };
 };

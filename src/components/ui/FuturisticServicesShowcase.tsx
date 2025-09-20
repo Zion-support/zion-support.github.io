@@ -7,17 +7,25 @@ interface Service {
 id: string;
 name: string;
 description: string;
+<<<<<<< HEAD
 icon: React.ReactNode;,
 color: string;,
 price: string;,
+=======
+icon: React.ReactNode;
+color: string;
+price: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: string[];
-popular?: boolean;
+}
+popular?: boolean;}
 };
 const services: Service[] = [
 {
 id: "ai-automation";
 name: "AI & Automation";
 description: "Revolutionary AI platforms with consciousness and emotional intelligence";
+<<<<<<< HEAD
 icon: <Brain className="w-8 h-8" />,
 color: "from-purple-500 to-pink-500";,
 price: "$199/month";,
@@ -30,42 +38,81 @@ description: "Scalable; focused software solutions for specific business needs",
 icon: <Zap className="w-8 h-8" />,
 color: "from-cyan-500 to-blue-500";,
 price: "$99/month";,
+=======
+icon: <Brain className="w-8 h-8" />;
+color: "from-purple-500 to-pink-500";
+price: "$199/month";
+features: ["AI Code Review", "Testing Automation", "DevOps Intelligence", "Security Automation"],
+popular: true;
+};
+{
+id: "micro-saas";
+name: "Micro SaaS Solutions";
+description: "Scalable; focused software solutions for specific business needs",
+icon: <Zap className="w-8 h-8" />;
+color: "from-cyan-500 to-blue-500";
+price: "$99/month";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Custom Development", "API Integration", "Cloud Deployment", "24/7 Support"];
 },
 {
 id: "cloud-infrastructure";
 name: "Cloud & Infrastructure";
 description: "Robust cloud solutions for scalability and reliability";
+<<<<<<< HEAD
 icon: <Globe className="w-8 h-8" />,
 color: "from-green-500 to-emerald-500";,
 price: "$299/month";,
+=======
+icon: <Globe className="w-8 h-8" />;
+color: "from-green-500 to-emerald-500";
+price: "$299/month";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["AWS/Azure/GCP", "Container Orchestration", "Serverless Architecture", "Disaster Recovery"];
 },
 {
 id: "cybersecurity";
 name: "Cybersecurity";
 description: "Advanced security solutions to protect your digital assets";
+<<<<<<< HEAD
 icon: <Shield className="w-8 h-8" />,
 color: "from-red-500 to-pink-500";,
 price: "$399/month";,
+=======
+icon: <Shield className="w-8 h-8" />;
+color: "from-red-500 to-pink-500";
+price: "$399/month";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Threat Detection", "Penetration Testing", "Compliance Auditing", "Incident Response"];
 },
 {
 id: "quantum-computing";
 name: "Quantum Computing";
 description: "Next-generation quantum solutions for complex problems";
+<<<<<<< HEAD
 icon: <Rocket className="w-8 h-8" />,
 color: "from-indigo-500 to-purple-500";,
 price: "$599/month";,
+=======
+icon: <Rocket className="w-8 h-8" />;
+color: "from-indigo-500 to-purple-500";
+price: "$599/month";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Quantum Algorithms", "Optimization Problems", "Cryptography", "Research Support"];
 },
 {
 id: "blockchain-web3";
 name: "Blockchain & Web3";
 description: "Decentralized solutions for the future of the internet";
+<<<<<<< HEAD
 icon: <Star className="w-8 h-8" />,
 color: "from-yellow-500 to-orange-500";,
 price: "$249/month";,
+=======
+icon: <Star className="w-8 h-8" />;
+color: "from-yellow-500 to-orange-500";
+price: "$249/month";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Smart Contracts", "DeFi Platforms", "NFT Marketplaces", "DAO Governance"];
 }
 ];
@@ -90,10 +137,17 @@ const filteredServices = selectedCategory === "all" ;
 return (
 <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
 {/* Background Effects */}
+<<<<<<< HEAD
 <div className="absolute inset-0">
 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
 <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px;rgba(6;182;212;0.1)_1px;transparent_0)] bg-[size:50px_50px]" />
+=======
+<div className="absolute inset-0">;
+<div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />;
+<div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />;
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px;rgba(6;182;212;0.1)_1px;transparent_0)] bg-[size:50px_50px]" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -204,7 +258,11 @@ Most Popular;
 </button>
 
 {/* Hover Effects */}
+<<<<<<< HEAD
 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+=======
+<div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Floating Elements */}
@@ -226,7 +284,11 @@ className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-p
 </AnimatePresence>
 </motion.div>
 ))}
+<<<<<<< HEAD
 </AnimatePresence>
+=======
+</AnimatePresence>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Bottom CTA */}
@@ -250,11 +312,20 @@ View All Services;
 </button>
 <button className="border-2 border-cyan-500/50 hover:border-cyan-400 text-cyan-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-cyan-500/10">
 Schedule Demo;
+<<<<<<< HEAD
 </button>
 </div>
 </div>
 </motion.div>
 </div>
 </section>
+=======
+</button>;
+</div>
+</div>
+</motion.div>;
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }<//section><///section>

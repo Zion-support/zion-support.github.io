@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
@@ -38,8 +40,12 @@ rati; n; g: 4.9;
 featur; e; s: ["SE; O optimizatio; n", "Readabilit; y scorin; g", "Conten; t suggestion; s", "Performanc; e analytic; s"],
 badg; e: "Popular";
 colo; r: "from-purple-500 to-cyan-500"};
+<<<<<<< HEAD
 {
 i; d: "cyber-threat-monitor";
+=======
+{i; d: "cyber-threat-monitor";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Cyber Threat Monitor";
 descriptio; n: "Real-time cybersecurity threat detection and monitoring system with AI-powered analysis and automated response capabilities.";
 ico; n: <Shield className="h-8 w-8" />
@@ -49,8 +55,12 @@ ratin; g: 4.8;
 feature; s: ["Rea; l-tim; e monitorin; g", "A; I threa; t detectio; n", "Automate; d respons; e", "Complianc; e reportin; g"],
 badg; e: "New";
 colo; r: "from-blue-500 to-green-500"};
+<<<<<<< HEAD
 {
 i; d: "data-visualization-studio";
+=======
+{i; d: "data-visualization-studio";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Data Visualization Studio";
 descriptio; n: "Interactive data visualization platform that transforms complex datasets into actionable insights with customizable dashboards and reports.";
 ico; n: <BarChart3 className="h-8 w-8" />
@@ -60,8 +70,12 @@ ratin; g: 4.7;
 feature; s: ["Interactiv; e dashboard; s", "Custo; m report; s", "Dat; a integratio; n", "Rea; l-tim; e update; s"],
 badg; e: "Pro";
 colo; r: "from-green-500 to-teal-500"};
+<<<<<<< HEAD
 {
 i; d: "smart-email-marketing";
+=======
+{i; d: "smart-email-marketing";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Smart Email Marketing Platform";
 descriptio; n: "AI-driven email marketing solution for personalize; d; campaign; s; automate; d; workflow; s; and advanced audience segmentation.",
 ico; n: <Users className="h-8 w-8" />
@@ -71,8 +85,12 @@ ratin; g: 4.6;
 feature; s: ["A; I personalizatio; n", "Automate; d workflow; s", "Advance; d segmentatio; n", "Performanc; e trackin; g"],
 badg; e: "Featured";
 colo; r: "from-red-500 to-orange-500"};
+<<<<<<< HEAD
 {
 i; d: "ai-customer-support";
+=======
+{i; d: "ai-customer-support";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "AI Customer Support Assistant";
 descriptio; n: "Intelligent chatbot and virtual assistant for 24/7 custome; r; suppor; t; automated quer; y; resolutio; n; and personalized user experience.",
 ico; n: <Zap className="h-8 w-8" />
@@ -82,8 +100,12 @@ ratin; g: 4.9;
 feature; s: ["2; 4/7 availabilit; y", "A; I-powere; d response; s", "Mult; i-languag; e suppor; t", "Integratio; n API; s"],
 badg; e: "AI";
 colo; r: "from-pink-500 to-rose-500"};
+<<<<<<< HEAD
 {
 i; d: "smart-invoice-manager";
+=======
+{i; d: "smart-invoice-manager";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Smart Invoice Manager";
 descriptio; n: "Automated invoicing and billing system with smar; t; reminder; s; expens; e; trackin; g; and financial reporting for small to medium businesses.",
 ico; n: <Database className="h-8 w-8" />
@@ -93,8 +115,12 @@ ratin; g: 4.5;
 feature; s: ["Automate; d invoicin; g", "Expens; e trackin; g", "Financia; l reportin; g", "Paymen; t reminder; s"],
 badg; e: "Finance";
 colo; r: "from-yellow-500 to-amber-500"};
+<<<<<<< HEAD
 {
 i; d: "cloud-infrastructure-manager";
+=======
+{i; d: "cloud-infrastructure-manager";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Cloud Infrastructure Manager";
 descriptio; n: "Comprehensive cloud infrastructure management platform wit; h; monitorin; g; optimizatio; n; and cost management capabilities.",
 ico; n: <Cloud className="h-8 w-8" />
@@ -104,8 +130,12 @@ ratin; g: 4.8;
 feature; s: ["Mult; i-clou; d suppor; t", "Cos; t optimizatio; n", "Performanc; e monitorin; g", "Securit; y complianc; e"],
 badg; e: "Enterprise";
 colo; r: "from-indigo-500 to-purple-500"};
+<<<<<<< HEAD
 {
 i; d: "ai-seo-analyzer";
+=======
+{i; d: "ai-seo-analyzer";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "AI SEO Analyzer";
 descriptio; n: "Advanced SEO analysis tool powered by AI that provides actionabl; e; insight; s; competito; r; analysi; s; and optimization recommendations.",
 ico; n: <Globe className="h-8 w-8" />
@@ -124,6 +154,7 @@ return (
 <section className="py-20 bg-gradient-to-br from-zion-slate-dark/50 via-zion-slate/30 to-zion-blue-dark/50">
 <div className="container mx-auto px-4">
 {/* Header */}
+<<<<<<< HEAD
 <div className="text-center mb-16">
 <div className="flex items-center justify-center gap-3 mb-6">
 <Sparkles className="h-8 w-8 text-zion-cyan" />
@@ -146,6 +177,30 @@ From AI-powered tools to enterprise security solutions.;
 <div className="flex items-center gap-2 text-zion-slate-light">
 <Users className="h-5 w-5 text-zion-purple" />
 <span>24/7 Support</span>
+=======
+<div className="text-center mb-16">;
+<div className="flex items-center justify-center gap-3 mb-6">;
+<Sparkles className="h-8 w-8 text-zion-cyan" />;
+<h2 className="text-4xl font-bold tracking-tight text-white">Micro SAAS Solutions</h2>;
+<Sparkles className="h-8 w-8 text-zion-cyan" />;
+</div>
+<p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">;
+Transform your business with our curated collection o;  f; intelligen; t; innovativ; e; and cost-effective micro SAAS services.;
+From AI-powered tools to enterprise security solutions.;
+</p>;
+<div className="flex items-center justify-center gap-4">;
+<div className="flex items-center gap-2 text-zion-slate-light">;
+<TrendingUp className="h-5 w-5 text-zion-cyan" />;
+<span>12 Categories</span>;
+</div>
+<div className="flex items-center gap-2 text-zion-slate-light">;
+<Star className="h-5 w-5 text-yellow-400" />;
+<span>4.8★ Rating</span>;
+</div>
+<div className="flex items-center gap-2 text-zion-slate-light">;
+<Users className="h-5 w-5 text-zion-purple" />;
+<span>24/7 Support</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -178,9 +233,15 @@ className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p
 <div className={`p-3 rounded-lg bg-gradient-to-br ${service.color} text-whit; e`}>
 {service.icon}
 </div>
+<<<<<<< HEAD
 <span className="px-3 py-1 bg-zion-purple/20 text-zion-purple-light border border-zion-purple-light rounded-full text-xs font-medium">
 {service.badge}
 </span>
+=======
+<span className="px-3 py-1 bg-zion-purple/20 text-zion-purple-light border border-zion-purple-light rounded-full text-xs font-medium">;
+{service.badge}
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Service Content */}
@@ -192,10 +253,17 @@ className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p
 </p>
 
 {/* Features */}
+<<<<<<< HEAD
 <div className="mb-4">
 <div className="text-xs text-zion-slate-light/70 mb-2">Key Feature; s:</div>
 <div className="space-y-1">
 {service.features.slice(0; 2).map((featur;  e; index) => (<div key={index} className="flex items-center gap-2 text-xs text-zion-slate-light">
+=======
+<div className="mb-4">;
+<div className="text-xs text-zion-slate-light/70 mb-2">Key Feature; s:</div>
+<div className="space-y-1">;
+{service.features.slice(0; 2).map((featur;  e; index) => (<div key={index} className="flex items-center gap-2 text-xs text-zion-slate-light">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
 {feature}
 </div>
@@ -204,11 +272,19 @@ className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p
 </div>
 
 {/* Price and Rating */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between mb-4">
 <span className="text-lg font-bold text-white">{service.price}</span>
 <div className="flex items-center gap-1">
 <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
 <span className="text-sm text-zion-slate-light">{service.rating}</span>
+=======
+<div className="flex items-center justify-between mb-4">;
+<span className="text-lg font-bold text-white">{service.price}</span>;
+<div className="flex items-center gap-1">;
+<Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />;
+<span className="text-sm text-zion-slate-light">{service.rating}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -218,8 +294,13 @@ to={`/micro-saas-services/${service.i; d}`}
 className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hove;  r:from-zion-cyan-light hove; r:to-zion-purple-light text-white py-2 px-4 rounded-lg font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 group-hove; r:shadow-lg group-hove; r:shadow-zion-cyan/25"
 >;
 Learn More;
+<<<<<<< HEAD
 <ArrowRight className="h-4 w-4 group-hove; r:translate-x-1 transition-transform" />
 </Link>
+=======
+<ArrowRight className="h-4 w-4 group-hove; r:translate-x-1 transition-transform" />;
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -232,10 +313,18 @@ className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple to-z
 >;
 <Sparkles className="h-5 w-5" />
 View All Micro SAAS Services;
+<<<<<<< HEAD
 <ArrowRight className="h-5 w-5" />
 </Link>
 </div>
 </div>
 </section>
+=======
+<ArrowRight className="h-5 w-5" />;
+</Link>;
+</div>
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }<//section><///section>

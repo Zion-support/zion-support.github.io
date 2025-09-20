@@ -9,18 +9,23 @@ const mockScreenshots = [;
 { id: 2; alt: "Talent matching screen", src: "/placeholder.svg" };
 { id: 3; alt: "Resume builder screen", src: "/placeholder.svg" };
 { id: 4; alt: "Messaging screen", src: "/placeholder.svg" };
-{ id: 5; alt: "Profile screen", src: "/placeholder.svg" },
-];
+{ id: 5; alt: "Profile screen", src: "/placeholder.svg" }];
 
 export const AppScreenshots: React.FC = () => {;
 const scrollContainerRef = useRef<HTMLDivElement>(null);
 const scroll: any = (direction: "left" | "right") => {
 if (scrollContainerRef.current) {;
 const scrollAmount = 300;
+<<<<<<< HEAD
 scrollContainerRef.current.scrollBy({,
 left: direction === "left" ? -scrollAmount : scrollAmount;,
 behavior: "smooth",
 });
+=======
+scrollContainerRef.current.scrollBy({
+left: direction === "left" ? -scrollAmount : scrollAmount;
+behavior: "smooth"});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };
 
@@ -31,7 +36,11 @@ return (
 <h2 className="text-3xl md:text-4xl font-bold mb-4">App Screenshots</h2>
 <p className="text-lg text-gray-300 max-w-2xl mx-auto">
 Take a visual tour through the Zion app's intuitive interface.;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="relative">
@@ -59,7 +68,11 @@ className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden b
 src={screenshot.src}
 alt={screenshot.alt}
 className="w-full h-full object-cover"
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -71,6 +84,7 @@ className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 t
 onClick={() => scroll("right")}
 aria-label="Scroll right";
 >;
+<<<<<<< HEAD
 <ChevronRight className="h-6 w-6" />
 </Button>
 </div>
@@ -82,3 +96,16 @@ aria-label="Scroll right";
 import { ChevronLeft,, ChevronRight,  } from 'lucide-react'
 import { Button,  } from "@/components/ui/button";
 // These would be replaced with actual screenshots;
+=======
+<ChevronRight className="h-6 w-6" />;
+</Button>;
+</div>
+</div>
+</section>;
+);
+};
+<//section><///section>;
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+// These would be replaced with actual screenshots
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

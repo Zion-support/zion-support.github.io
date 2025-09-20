@@ -10,12 +10,23 @@ export function LanguageProvider({ children }) {;
       welcome: 'Welcome';
       get_started: 'Get Started';
       learn_more: 'Learn More';
+<<<<<<< HEAD
       contact_us: 'Contact Us';},
+=======
+      contact_us: 'Contact Us';
+    },
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     es: {
       welcome: 'Bienvenido';
       get_started: 'Comenzar';
       learn_more: 'Saber Más';
+<<<<<<< HEAD
       contact_us: 'Contáctanos';}};
+=======
+      contact_us: 'Contáctanos';
+    },
+  };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
   const t = (key) => translations[language]?.[key] || key;
   const isRTL = language === 'ar' || language === 'he';

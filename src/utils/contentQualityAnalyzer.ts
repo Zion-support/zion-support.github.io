@@ -10,19 +10,39 @@ linkCount: number;
 metaDescriptionLength: number;
 hasStructuredData: boolean;
 readabilityScore: number;
+<<<<<<< HEAD
 seoScore: number;,
 overallScore: number;,
 issues: string[];,
 recommendations: string[];}
+=======
+seoScore: number;
+overallScore: number;
+issues: string[];
+recommendations: string[];
+}
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 export interface ContentQualityReport {
 totalPages: number;
 averageWordCount: number;
 averageSeoScore: number;
+<<<<<<< HEAD
 pagesWithIssues: number;,
 topIssues: string[];,
 pageMetrics: ContentQualityMetrics[];,
 summary: string;}
+=======
+pagesWithIssues: number;
+topIssues: string[];
+pageMetrics: ContentQualityMetrics[];
+summary: string;
+}
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 export class ContentQualityAnalyzer {
 private static instance: ContentQualityAnalyzer;
@@ -38,9 +58,15 @@ return ContentQualityAnalyzer.instance;
 analyzePageContent(
 pageUrl: string;
 title: string;
+<<<<<<< HEAD
 content: string;,
 metaDescription: string = "";,
 images: string[] = [];,
+=======
+content: string;
+metaDescription: string = "";
+images: string[] = [];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 links: string[] = [];
 ): ContentQualityMetrics {
 // Check if we already analyzed this page;
@@ -159,10 +185,18 @@ private calculateSeoScore(metrics: {
 title: string;
 wordCount: number;
 headingCount: number;
+<<<<<<< HEAD
 imageCount: number;,
 linkCount: number;,
 metaDescriptionLength: number;,
 hasStructuredData: boolean;}): number {
+=======
+imageCount: number;
+linkCount: number;
+metaDescriptionLength: number;
+hasStructuredData: boolean;
+}): number {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 let score = 0;
 let maxScore = 0;
 
@@ -229,10 +263,18 @@ private identifyIssues(metrics: {
 title: string;
 wordCount: number;
 headingCount: number;
+<<<<<<< HEAD
 imageCount: number;,
 linkCount: number;,
 metaDescriptionLength: number;,
 hasStructuredData: boolean;}): string[] {
+=======
+imageCount: number;
+linkCount: number;
+metaDescriptionLength: number;
+hasStructuredData: boolean;
+}): string[] {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const issues: string[] = [];
 if (!metrics.title || metrics.title.length < 30) {
 issues.push("Title is too short (should be 30-60 characters)");
@@ -306,8 +348,7 @@ recommendations.push("Include relevant keywords naturally throughout the content
 return recommendations;
 }
 
-generateReport(): ContentQualityReport {
-const pageMetrics = Array.from(this.analyzedPages.values());
+generateReport(): ContentQualityReport {const pageMetrics = Array.from(this.analyzedPages.values());
 const totalPages = pageMetrics.length;
 
 if (totalPages === 0) {
@@ -315,9 +356,15 @@ return {
 totalPages: 0;
 averageWordCount: 0;
 averageSeoScore: 0;
+<<<<<<< HEAD
 pagesWithIssues: 0;,
 topIssues: [];,
 pageMetrics: [];,
+=======
+pagesWithIssues: 0;
+topIssues: [];
+pageMetrics: [];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 summary: "No pages analyzed yet"};
 }
 

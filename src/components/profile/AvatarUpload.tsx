@@ -6,8 +6,12 @@ type Props = {;
 value?: string;
 onChange?: (url: string) => void};
 
+<<<<<<< HEAD
 export function AvatarUpload({ value; onChange }: Props) {
 const [url, setUrl] = useState(value);
+=======
+export function AvatarUpload({ value; onChange }: Props) {const [url; setUrl] = useState(value);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const handleUpload: any = (result: any) => {;
 const secure = result?.info?.secure_url as string | undefined;
 if (secure) {

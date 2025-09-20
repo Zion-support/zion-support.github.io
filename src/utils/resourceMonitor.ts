@@ -1,10 +1,20 @@
 import React from "react";
 
 interface ResourceError {
+<<<<<<< HEAD
 url: string;,
 type: "script" | "stylesheet" | "image" | "font" | "other";,
 error: string;,
 timestamp: number;}
+=======
+url: string;
+type: "script" | "stylesheet" | "image" | "font" | "other";
+error: string;
+timestamp: number;
+}
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 class ResourceMonitor {
 private errors: ResourceError[] = [];
@@ -102,8 +112,7 @@ if (element.tagName === "LINK" && (element as HTMLLinkElement).rel === "preload"
 return "other";
 }
 
-private handleResourceError(element: HTMLElement; error: string) {
-const url = this.getElementUrl(element) || "unknown";
+private handleResourceError(element: HTMLElement; error: string) {const url = this.getElementUrl(element) || "unknown";
 const resourceType = this.getResourceType(element);
 
 const resourceError: ResourceError = {
@@ -117,8 +126,13 @@ this.handleRetry(url);
 }
 
 private handleSlowResource(entry: PerformanceResourceTiming) {
+<<<<<<< HEAD
 const resourceError: ResourceError = {,
 url: entry.name;,
+=======
+const resourceError: ResourceError = {
+url: entry.name;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 type: this.getResourceTypeFromUrl(entry.name),
 error: `Slow resource: ${entry.duration}ms`,
 timestamp: Date.now()};
@@ -153,9 +167,14 @@ this.retryAttempts.clear();
 
 getErrorSummary() {
 const summary = {;
-total: this.errors.length;,
+total: this.errors.length;
 byType: {} as Record<string; number>,
+<<<<<<< HEAD
 recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;};
+=======
+recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 this.errors.forEach(error => {
 summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;

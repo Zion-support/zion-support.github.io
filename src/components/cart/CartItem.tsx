@@ -2,9 +2,13 @@ import React from "react";
 import { CartItem as CartItemType } from "@/types/cart, ";
 import { Button } from "@/components/ui/button, ";
 
-interface CartItemProps {
-item: CartItemType;
+interface CartItemProps {item: CartItemType;
 onRemove?: (id: string) => void;
+<<<<<<< HEAD
+=======
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 onUpdateQuantity?: (id: string; qty: number) => void};
 export function CartItem({ item; onRemove; onUpdateQuantity }: CartItemProps) {
 return (
@@ -13,10 +17,17 @@ return (
 src={item.image || "/placeholder.svg"}
 alt={item.name}
 className="w-16 h-16 object-cover rounded"
+<<<<<<< HEAD
 />
 <div className="flex-1">
 <p className="font-medium">{item.name}</p>
 <p className="text-sm text-muted-foreground">${item.price.toFixed(2)}</p>
+=======
+/>;
+<div className="flex-1">;
+<p className="font-medium">{item.name}</p>;
+<p className="text-sm text-muted-foreground">${item.price.toFixed(2)}</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <input;
 type="number"

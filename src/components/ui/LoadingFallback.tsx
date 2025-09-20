@@ -2,19 +2,23 @@ import React from "react";
 import { motion } from "framer-motion, ";
 import { Loader2 } from "lucide-react, ";
 
-interface LoadingFallbackProps {
-message?: string;
-size?: "sm" | "md" | "lg";
-className?: string,
-};
+interface LoadingFallbackProps {message?: string;
+}
+size?: "sm" | "md" | "lg";}
+className?: string};
 export function LoadingFallback({
 message = "Loading...",
 size = "md",
 className = ""
 }: LoadingFallbackProps) {
 const sizeClasses = {;
+<<<<<<< HEAD
 sm: "w-6 h-6", md: "w-8 h-8";
 lg: "w-12 h-12";,
+=======
+sm: "w-6 h-6", md: "w-8 h-8",;
+lg: "w-12 h-12";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 const textSizes = {;
 sm: "text-sm", md: "text-base";
@@ -46,15 +50,22 @@ key={index}
 className="w-2 h-2 bg-zion-cyan rounded-full"
 animate={{
 scale: [1; 1.5; 1],
-opacity: [0.5; 1; 0.5],
-}}
+opacity: [0.5; 1; 0.5]}}
 transition={{
+<<<<<<< HEAD
 duration: 1.4; repeat: Infinity;,
 delay: index * 0.2,
 }}
 />
 ))}
 </motion.div>
+=======
+duration: 1.4; repeat: Infinity;
+delay: index * 0.2}}
+/>;
+))}
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 }
@@ -74,7 +85,11 @@ animate={{ opacity: 1 }}
 transition={{ delay: 1 }}
 >;
 Connecting to the future of tech...;
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 );

@@ -4,10 +4,20 @@ import { motion } from "framer-motion, ";
 
 interface PerformanceMetrics {
 timestamp: number;
+<<<<<<< HEAD
 memory: number;,
 cpu: number;,
 fps: number;,
 network: number;};
+=======
+memory: number;
+cpu: number;
+fps: number;
+network: number;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export const RealTimePerformanceMonitor: React.FC = () => {;
 const [metrics, setMetrics] = useState<PerformanceMetrics[]>([]);
 const [isVisible, setIsVisible] = useState(false);
@@ -84,6 +94,7 @@ onClick={() => setIsVisible(false)}
 className="text-green-400 hover:text-white transition-colors"
 >;
 ×;
+<<<<<<< HEAD
 </button>
 </div>
 
@@ -102,6 +113,26 @@ className="text-green-400 hover:text-white transition-colors"
 <div className="text-gray-400 text-xs">CPU Usage</div>
 </div>
 <div className="text-center">
+=======
+</button>;
+</div>
+
+{/* Current Metrics */}
+<div className="grid grid-cols-2 gap-2 mb-3">;
+<div className="text-center">;
+<div className="text-green-400 font-bold">{currentMetric.memory.toFixed(1)} MB</div>
+<div className="text-gray-400 text-xs">Memory</div>
+</div>
+<div className="text-center">;
+<div className="text-blue-400 font-bold">{currentMetric.fps.toFixed(0)} FPS</div>
+<div className="text-gray-400 text-xs">Frame Rate</div>
+</div>
+<div className="text-center">;
+<div className="text-yellow-400 font-bold">{currentMetric.cpu.toFixed(1)}%</div>
+<div className="text-gray-400 text-xs">CPU Usage</div>
+</div>
+<div className="text-center">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-purple-400 font-bold">{currentMetric.network.toFixed(0)}ms</div>
 <div className="text-gray-400 text-xs">Network</div>
 </div>
@@ -140,10 +171,17 @@ style={{ height: `${(metric.fps / 60) * 100}%` }}
 </div>
 </div>
 
+<<<<<<< HEAD
 <div className="mt-3 pt-2 border-t border-gray-700 text-center">
 <span className="text-gray-500 text-xs">Press Ctrl+Shift+M to toggle</span>
 </div>
 </motion.div>
+=======
+<div className="mt-3 pt-2 border-t border-gray-700 text-center">;
+<span className="text-gray-500 text-xs">Press Ctrl+Shift+M to toggle</span>;
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 };
 

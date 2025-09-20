@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Sun, Moon } from "lucide-react";
 
@@ -30,3 +31,22 @@ const ThemeToggle: React.FC = () => {
 };
 
 export default ThemeToggle;
+=======
+interface Service {
+id: string;
+name: string;
+}
+}
+}
+
+import React from "react";
+const ThemeToggle: React.FC = () => {
+,
+return (,
+<div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+<h3 className = "text-xl font-bold mb-4">ThemeToggle</h3>;
+<p className="text-gray-300">Revolutionary technology component</p>;
+},
+</div>)},
+export default ThemeToggle,;<//div><///div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

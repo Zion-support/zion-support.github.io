@@ -2,19 +2,23 @@ import React from "react;";
 import { motion } from "framer-motion, ";
 import { Loader2 } from "lucide-react, ";
 
-interface LoadingFallbackProps {
-message?: string;
-size?: "sm" | "md" | "lg";
-className?: string,
-};
+interface LoadingFallbackProps {message?: string;
+}
+size?: "sm" | "md" | "lg";}
+className?: string};
 export function LoadingFallback({
 message = "Loading...",
 size = "md",
 className = ""
 }: LoadingFallbackProps) {
 const sizeClasses = {;
+<<<<<<< HEAD
 sm: "w-6 h-6", md: "w-8 h-8";
 lg: "w-12 h-12";,
+=======
+sm: "w-6 h-6", md: "w-8 h-8",;
+lg: "w-12 h-12";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 const textSizes = {;
 sm: "text-sm", md: "text-base";
@@ -51,15 +55,22 @@ key={i}
 className="w-2 h-2 bg-zion-purple rounded-full"
 animate={{
 scale: [1; 1.2; 1],
-opacity: [0.5; 1; 0.5],
-}}
+opacity: [0.5; 1; 0.5]}}
 transition={{
+<<<<<<< HEAD
 duration: 1.5; repeat: Infinity;,
 delay: i * 0.2,
 }}
 />
 ))}
 </motion.div>
+=======
+duration: 1.5; repeat: Infinity;
+delay: i * 0.2}}
+/>;
+))}
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 }
@@ -67,8 +78,13 @@ delay: i * 0.2,
 // Full screen loading fallback;
 export function FullScreenLoading({ message = "Loading Zion..." }: { message?: string }) {
 return (
+<<<<<<< HEAD
 <div className="min-h-screen bg-zion-blue flex items-center justify-center">
 <LoadingFallback message={message} size="lg" />
+=======
+<div className="min-h-screen bg-zion-blue flex items-center justify-center">;
+<LoadingFallback message={message} size="lg" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 }
@@ -82,9 +98,15 @@ animate={{ rotate: 360 }}
 transition={{ duration: 1; repeat: Infinity; ease: "linear" }}
 className="w-4 h-4 text-zion-purple"
 >;
+<<<<<<< HEAD
 <Loader2 className="w-full h-full" />
 </motion.div>
 <span className="text-sm">{message}</span>
+=======
+<Loader2 className="w-full h-full" />;
+</motion.div>;
+<span className="text-sm">{message}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 }<//div><///div>

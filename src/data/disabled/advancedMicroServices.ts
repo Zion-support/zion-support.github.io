@@ -17,10 +17,20 @@ tags: string[];
 estimatedDelivery: string;
 supportLevel: "basic" | "standard" | "premium" | "enterprise";
 marketPrice: string;
+<<<<<<< HEAD
 contactInfo: {,
 phone: string;,
 email: string;,
 website: string;};
+=======
+contactInfo: {
+phone: string;
+email: string;
+website: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 aiScore?: number;
 rating?: number;
 reviewCount?: number;
@@ -38,6 +48,7 @@ securityFeatures?: string[];
 
 export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
 // AI-Powered Business Intelligence;
+<<<<<<< HEAD
 {,
 id: "ai-business-intelligence-suite";,
 title: "AI Business Intelligence Suite";,
@@ -47,6 +58,16 @@ subcategory: "Business Intelligence";
 price: 899;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-business-intelligence-suite";
+title: "AI Business Intelligence Suite";
+description: "Advanced AI-powered business intelligence platform that transforms raw data into actionable insights; predictive analytics; and automated reporting for enterprise decision-making.",
+category: "AI & Analytics";
+subcategory: "Business Intelligence";
+price: 899;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Real-time data processing and analysis";
 "Predictive analytics with machine learning",
@@ -84,6 +105,7 @@ targetAudience: [
 "Marketing directors";
 ],
 tags: ["AI", "Business Intelligence", "Analytics", "Machine Learning", "Data Visualization"],
+<<<<<<< HEAD
 estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$899 - $2;999/month",
@@ -95,6 +117,19 @@ aiScore: 98;
 rating: 4.9;,
 reviewCount: 156;,
 featured: true;,
+=======
+estimatedDelivery: "2-3 weeks";
+supportLevel: "premium";
+marketPrice: "$899 - $2;999/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+aiScore: 98;
+rating: 4.9;
+reviewCount: 156;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 apiEndpoints: ["/api/v1/analytics", "/api/v1/forecasting", "/api/v1/reports"],
 integrations: ["Salesforce", "HubSpot", "QuickBooks", "Shopify", "Zapier"],
@@ -103,6 +138,7 @@ securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role
 },
 
 // Quantum-Safe Cybersecurity Platform;
+<<<<<<< HEAD
 {
 id: "quantum-safe-cybersecurity";,
 title: "Quantum-Safe Cybersecurity Platform";,
@@ -112,6 +148,16 @@ subcategory: "Advanced Protection";
 price: 1299;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "quantum-safe-cybersecurity";
+title: "Quantum-Safe Cybersecurity Platform";
+description: "Next-generation cybersecurity platform that implements quantum-resistant encryption algorithms; advanced threat detection; and zero-trust security architecture for future-proof protection.",
+category: "Cybersecurity";
+subcategory: "Advanced Protection";
+price: 1299;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Quantum-resistant encryption algorithms";
 "AI-powered threat detection and response",
@@ -149,6 +195,7 @@ targetAudience: [
 "Security analysts";
 ],
 tags: ["Cybersecurity", "Quantum Computing", "AI", "Zero Trust", "Compliance"],
+<<<<<<< HEAD
 estimatedDelivery: "3-4 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;299 - $4;999/month",
@@ -160,6 +207,19 @@ aiScore: 97;
 rating: 4.8;,
 reviewCount: 89;,
 featured: true;,
+=======
+estimatedDelivery: "3-4 weeks";
+supportLevel: "enterprise";
+marketPrice: "$1;299 - $4;999/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+aiScore: 97;
+rating: 4.8;
+reviewCount: 89;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Rust", "Go", "Python", "Kubernetes", "Elasticsearch", "Prometheus"],
 apiEndpoints: ["/api/v1/threats", "/api/v1/incidents", "/api/v1/compliance"],
 integrations: ["SIEM systems", "EDR platforms", "Identity providers", "Cloud platforms"],
@@ -168,6 +228,7 @@ securityFeatures: ["Post-quantum cryptography", "Behavioral analytics", "Threat 
 },
 
 // Edge Computing Orchestration Platform;
+<<<<<<< HEAD
 {
 id: "edge-computing-orchestration";,
 title: "Edge Computing Orchestration Platform";,
@@ -177,6 +238,16 @@ subcategory: "Orchestration";
 price: 699;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "edge-computing-orchestration";
+title: "Edge Computing Orchestration Platform";
+description: "Intelligent edge computing platform that optimizes application deployment; manages distributed resources; and provides real-time processing capabilities for IoT and edge devices.",
+category: "Edge Computing";
+subcategory: "Orchestration";
+price: 699;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Distributed application deployment";
 "Intelligent resource allocation",
@@ -214,6 +285,7 @@ targetAudience: [
 "Application developers";
 ],
 tags: ["Edge Computing", "IoT", "Cloud Native", "DevOps", "Real-time Processing"],
+<<<<<<< HEAD
 estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$699 - $2;499/month",
@@ -225,6 +297,19 @@ aiScore: 95;
 rating: 4.7;,
 reviewCount: 134;,
 featured: true;,
+=======
+estimatedDelivery: "2-3 weeks";
+supportLevel: "premium";
+marketPrice: "$699 - $2;499/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+aiScore: 95;
+rating: 4.7;
+reviewCount: 134;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Kubernetes", "Docker", "Go", "Rust", "WebAssembly", "MQTT"],
 apiEndpoints: ["/api/v1/deployments", "/api/v1/devices", "/api/v1/analytics"],
 integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Kubernetes", "Docker"],
@@ -233,6 +318,7 @@ securityFeatures: ["Device authentication", "Data encryption", "Access control",
 },
 
 // Blockchain Supply Chain Transparency;
+<<<<<<< HEAD
 {
 id: "blockchain-supply-chain";,
 title: "Blockchain Supply Chain Transparency Platform";,
@@ -242,6 +328,16 @@ subcategory: "Supply Chain";
 price: 599;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "blockchain-supply-chain";
+title: "Blockchain Supply Chain Transparency Platform";
+description: "End-to-end supply chain visibility platform using blockchain technology to ensure transparency; traceability; and compliance across global supply networks.",
+category: "Blockchain";
+subcategory: "Supply Chain";
+price: 599;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "End-to-end product traceability";
 "Smart contract automation",
@@ -279,6 +375,7 @@ targetAudience: [
 "Sustainability managers";
 ],
 tags: ["Blockchain", "Supply Chain", "Traceability", "Compliance", "Sustainability"],
+<<<<<<< HEAD
 estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$599 - $1;999/month",
@@ -290,6 +387,19 @@ aiScore: 93;
 rating: 4.6;,
 reviewCount: 78;,
 featured: true;,
+=======
+estimatedDelivery: "4-5 weeks";
+supportLevel: "premium";
+marketPrice: "$599 - $1;999/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+aiScore: 93;
+rating: 4.6;
+reviewCount: 78;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Hyperledger Fabric", "Ethereum", "IPFS", "Node.js", "React", "MongoDB"],
 apiEndpoints: ["/api/v1/traceability", "/api/v1/compliance", "/api/v1/analytics"],
 integrations: ["SAP", "Oracle", "Salesforce", "Shopify", "QuickBooks"],
@@ -298,6 +408,7 @@ securityFeatures: ["Immutable records", "Cryptographic verification", "Access co
 },
 
 // AI-Powered DevOps Automation;
+<<<<<<< HEAD
 {
 id: "ai-devops-automation";,
 title: "AI-Powered DevOps Automation Platform";,
@@ -307,6 +418,16 @@ subcategory: "Automation";
 price: 799;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-devops-automation";
+title: "AI-Powered DevOps Automation Platform";
+description: "Intelligent DevOps platform that automates software development; testing; deployment; and monitoring using AI and machine learning for continuous improvement.",
+category: "DevOps";
+subcategory: "Automation";
+price: 799;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Intelligent CI/CD pipelines";
 "Automated testing and quality assurance",
@@ -344,6 +465,7 @@ targetAudience: [
 "Platform engineers";
 ],
 tags: ["DevOps", "Automation", "CI/CD", "AI", "Cloud Native"],
+<<<<<<< HEAD
 estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$799 - $2;799/month",
@@ -355,6 +477,19 @@ aiScore: 96;
 rating: 4.8;,
 reviewCount: 167;,
 featured: true;,
+=======
+estimatedDelivery: "2-3 weeks";
+supportLevel: "premium";
+marketPrice: "$799 - $2;799/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+aiScore: 96;
+rating: 4.8;
+reviewCount: 167;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Jenkins", "GitLab CI", "Kubernetes", "Docker", "Terraform", "Ansible"],
 apiEndpoints: ["/api/v1/pipelines", "/api/v1/deployments", "/api/v1/monitoring"],
 integrations: ["GitHub", "GitLab", "Bitbucket", "AWS", "Azure", "Google Cloud"],
@@ -363,6 +498,7 @@ securityFeatures: ["Secure code scanning", "Access control", "Audit logging", "E
 },
 
 // Quantum Machine Learning Platform;
+<<<<<<< HEAD
 {
 id: "quantum-ml-platform";,
 title: "Quantum Machine Learning Platform";,
@@ -372,6 +508,16 @@ subcategory: "Machine Learning";
 price: 2499;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "quantum-ml-platform";
+title: "Quantum Machine Learning Platform";
+description: "Revolutionary platform that combines quantum computing with machine learning to solve complex optimization problems; accelerate AI training; and unlock new computational capabilities.",
+category: "Quantum Computing";
+subcategory: "Machine Learning";
+price: 2499;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Quantum algorithm optimization";
 "Hybrid quantum-classical ML",
@@ -409,6 +555,7 @@ targetAudience: [
 "Government agencies";
 ],
 tags: ["Quantum Computing", "Machine Learning", "Optimization", "Research", "Innovation"],
+<<<<<<< HEAD
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;499 - $9;999/month",
@@ -420,6 +567,19 @@ aiScore: 99;
 rating: 4.9;,
 reviewCount: 45;,
 featured: true;,
+=======
+estimatedDelivery: "6-8 weeks";
+supportLevel: "enterprise";
+marketPrice: "$2;499 - $9;999/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+aiScore: 99;
+rating: 4.9;
+reviewCount: 45;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Qiskit", "Cirq", "PennyLane", "Python", "Jupyter", "TensorFlow"],
 apiEndpoints: ["/api/v1/quantum", "/api/v1/optimization", "/api/v1/simulation"],
 integrations: ["IBM Quantum", "Google Quantum", "Amazon Braket", "Microsoft Azure Quantum"],
@@ -428,6 +588,7 @@ securityFeatures: ["Quantum-safe encryption", "Secure quantum communication", "A
 },
 
 // Autonomous Data Governance Platform;
+<<<<<<< HEAD
 {
 id: "autonomous-data-governance";,
 title: "Autonomous Data Governance Platform";,
@@ -437,6 +598,16 @@ subcategory: "Governance";
 price: 899;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "autonomous-data-governance";
+title: "Autonomous Data Governance Platform";
+description: "AI-powered data governance platform that automatically discovers; classifies; and manages data assets while ensuring compliance; privacy; and security across the organization.",
+category: "Data Management";
+subcategory: "Governance";
+price: 899;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Automated data discovery and classification";
 "Intelligent data lineage tracking",
@@ -474,6 +645,7 @@ targetAudience: [
 "Legal teams";
 ],
 tags: ["Data Governance", "Compliance", "Privacy", "AI", "Data Management"],
+<<<<<<< HEAD
 estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$899 - $3;499/month",
@@ -485,6 +657,19 @@ aiScore: 94;
 rating: 4.7;,
 reviewCount: 112;,
 featured: true;,
+=======
+estimatedDelivery: "3-4 weeks";
+supportLevel: "premium";
+marketPrice: "$899 - $3;499/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+aiScore: 94;
+rating: 4.7;
+reviewCount: 112;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Python", "Apache Atlas", "Apache Ranger", "Elasticsearch", "Kafka", "Spark"],
 apiEndpoints: ["/api/v1/governance", "/api/v1/compliance", "/api/v1/quality"],
 integrations: ["Snowflake", "Databricks", "AWS Glue", "Azure Purview", "Google Cloud Data Catalog"],
@@ -493,6 +678,7 @@ securityFeatures: ["Data encryption", "Access control", "Audit logging", "Privac
 },
 
 // Intelligent API Management Platform;
+<<<<<<< HEAD
 {
 id: "intelligent-api-management";,
 title: "Intelligent API Management Platform";,
@@ -502,6 +688,16 @@ subcategory: "Intelligent Platform";
 price: 649;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "intelligent-api-management";
+title: "Intelligent API Management Platform";
+description: "Advanced API management platform with AI-powered analytics; automated documentation; security monitoring; and intelligent rate limiting for modern API ecosystems.",
+category: "API Management";
+subcategory: "Intelligent Platform";
+price: 649;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered API analytics and insights";
 "Automated API documentation generation",
@@ -539,6 +735,7 @@ targetAudience: [
 "Platform engineers";
 ],
 tags: ["API Management", "Microservices", "Developer Experience", "Security", "Analytics"],
+<<<<<<< HEAD
 estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$649 - $2;199/month",
@@ -550,6 +747,19 @@ aiScore: 95;
 rating: 4.8;,
 reviewCount: 203;,
 featured: true;,
+=======
+estimatedDelivery: "2-3 weeks";
+supportLevel: "premium";
+marketPrice: "$649 - $2;199/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+aiScore: 95;
+rating: 4.8;
+reviewCount: 203;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Kong", "Apigee", "AWS API Gateway", "Azure API Management", "Node.js", "Python"],
 apiEndpoints: ["/api/v1/management", "/api/v1/analytics", "/api/v1/security"],
 integrations: ["Kubernetes", "Docker", "AWS", "Azure", "Google Cloud", "CI/CD tools"],
@@ -558,6 +768,7 @@ securityFeatures: ["OAuth 2.0", "JWT tokens", "Rate limiting", "Threat detection
 },
 
 // Hyperautomation Workflow Platform;
+<<<<<<< HEAD
 {
 id: "hyperautomation-workflow";,
 title: "Hyperautomation Workflow Platform";,
@@ -567,6 +778,16 @@ subcategory: "Hyperautomation";
 price: 1099;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "hyperautomation-workflow";
+title: "Hyperautomation Workflow Platform";
+description: "Comprehensive hyperautomation platform that combines RPA; AI; and process mining to automate complex business processes and workflows across the organization.",
+category: "Automation";
+subcategory: "Hyperautomation";
+price: 1099;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Intelligent process discovery and mining";
 "AI-powered workflow automation",
@@ -604,6 +825,7 @@ targetAudience: [
 "Business process owners";
 ],
 tags: ["Hyperautomation", "RPA", "AI", "Process Mining", "Workflow Automation"],
+<<<<<<< HEAD
 estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;099 - $3;999/month",
@@ -615,6 +837,19 @@ aiScore: 96;
 rating: 4.8;,
 reviewCount: 178;,
 featured: true;,
+=======
+estimatedDelivery: "4-5 weeks";
+supportLevel: "premium";
+marketPrice: "$1;099 - $3;999/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+aiScore: 96;
+rating: 4.8;
+reviewCount: 178;
+featured: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["UiPath", "Automation Anywhere", "Blue Prism", "Python", "Node.js", "Kubernetes"],
 apiEndpoints: ["/api/v1/automation", "/api/v1/workflows", "/api/v1/analytics"],
 integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Office", "Slack", "Teams"],

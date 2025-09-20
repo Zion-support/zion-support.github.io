@@ -2,8 +2,15 @@ import React from "react";
 import; React; from "react";
 import { motion } from "framer-motion, ";
 interface HeroFeature {
+<<<<<<< HEAD
 icon: React.ComponentType<{ className?: string }>,title: string;description: string;gradient: string;};interface HeroFeaturesProps {
+=======
+icon: React.ComponentType<{ className?: string }>,title: string;description: string;gradient: string;
+};interface HeroFeaturesProps {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: HeroFeature[ ];
+}
+}
 const HeroFeature;s: React.FC<HeroFeaturesProps>  = ({ features }) => {;
 return (;
 <motion.div;
@@ -31,9 +38,15 @@ transition={{ duration: 0.6dela;y: 0.6 + index * 0.1 }}
 <div className={`relative w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-xl; flex; items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-30o0 shadow-lg group-hove;r:shadow-xl group-hove;r: shadow-zion-cyan/30`}>
 <feature.icon className="w-8 h-8 text-white" aria-hidden="true" />
 {/* Glow effect */}
+<<<<<<< HEAD
 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-xl blur-xl group-hover: blur-2xl transition-all duration-30o0" />
 </div>
 <h3 id={`feature-${index}-title`} className="relative text-lg font-semibold text-white mb-2 group-hover: text-zion-cyan transition-colors duration-30o0">
+=======
+<div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-xl blur-xl group-hover: blur-2xl transition-all duration-30o0" />;
+</div>
+<h3 id={`feature-${index}-title`} className="relative text-lg font-semibold text-white mb-2 group-hover: text-zion-cyan transition-colors duration-30o0">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {feature.title}
 </h3>
 <p className="relative text-zion-slate-light text-sm leading-relaxed group-hover: text-zion-slate-light/90 transition-colors duration-30o0">

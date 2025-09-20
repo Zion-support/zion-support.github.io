@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react;";
 import { motion } from "framer-motion, ";
@@ -9,14 +11,19 @@ import { CheckCircleIcon;
 ClockIcon;
 UserGroupIcon;
 ShieldCheckIcon;
+<<<<<<< HEAD
 RocketLaunchIcon, CogIcon  } from "@heroicons/react/24/outline, ";
+=======
+RocketLaunchIcon;
+CogIcon } from "@heroicons/react/24/outline, ";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
-export function FeaturesSection() {
-const features = [;
+export function FeaturesSection() {const features = [;
 {;
-icon: CheckCircleIcon; title: "Proven Track Record";,
+icon: CheckCircleIcon; title: "Proven Track Record";
 description: "500+ successful projects delivered across various industries with measurable results",
 color: "text-zion-cyan"};
+<<<<<<< HEAD
 {
 icon: ClockIcon; title: "Rapid Delivery";,
 description: "Fast turnaround times with agile methodologies and efficient development processes",
@@ -35,6 +42,21 @@ description: "Architected for growth with cloud-native and microservices approac
 color: "text-zion-cyan"};
 {
 icon: CogIcon; title: "24/7 Support",
+=======
+{icon: ClockIcon; title: "Rapid Delivery";
+description: "Fast turnaround times with agile methodologies and efficient development processes",
+color: "text-zion-purple"};
+{icon: UserGroupIcon; title: "Expert Team";
+description: "Certified professionals with deep expertise in cutting-edge technologies",
+color: "text-zion-cyan"};
+{icon: ShieldCheckIcon; title: "Enterprise Security";
+description: "SOC 2 compliant with industry-leading security practices and protocols",
+color: "text-zion-purple"};
+{icon: RocketLaunchIcon; title: "Scalable Solutions";
+description: "Architected for growth with cloud-native and microservices approaches",
+color: "text-zion-cyan"};
+{icon: CogIcon; title: "24/7 Support",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 description: "Round-the-clock technical support and maintenance services",
 color: "text-zion-purple"}
 ];
@@ -46,8 +68,12 @@ staggerChildren: 0.1}
 }
 };
 const itemVariants = {;
+<<<<<<< HEAD
 hidden: { y: 20; opacity: 0 }, visible: {,
 y: 0; opacity: 1; transition: {,
+=======
+hidden: { y: 20; opacity: 0 }, visible: {y: 0; opacity: 1; transition: {,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 duration: 0.5}
 }
 };
@@ -92,8 +118,13 @@ className="group"
 >;
 <div className="bg-white rounded-2xl p-8 border border-zion-slate-light/20 hover:border-zion-cyan/30 transition-all duration-300 hover:shadow-xl hover:shadow-zion-cyan/10 hover:-translate-y-1">
 {/* Icon */}
+<<<<<<< HEAD
 <div className={`w-16 h-16 bg-zion-slate-light/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-zion-cyan/10 transition-colors duration-300`}>
 <feature.icon className={`w-8 h-8 ${feature.color}`} />
+=======
+<div className={`w-16 h-16 bg-zion-slate-light/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-zion-cyan/10 transition-colors duration-300`}>;
+<feature.icon className={`w-8 h-8 ${feature.color}`} />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Content */}
@@ -102,9 +133,15 @@ className="group"
 </h3>
 <p className="text-zion-slate leading-relaxed">
 {feature.description}
+<<<<<<< HEAD
 </p>
 </div>
 </motion.div>
+=======
+</p>;
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </motion.div>
 
@@ -130,11 +167,20 @@ Get Started Today;
 </button>
 <button className="px-6 py-3 border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105">
 Learn More;
+<<<<<<< HEAD
 </button>
 </div>
 </div>
 </motion.div>
 </div>
 </section>
+=======
+</button>;
+</div>
+</div>
+</motion.div>;
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }<//section><///section>

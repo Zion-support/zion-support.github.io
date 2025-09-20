@@ -1,6 +1,10 @@
 
 import React from "react";
+<<<<<<< HEAD
 import { Shield, Lock, AwardCheckCircle } from 'lucide-react';
+=======
+import { Shield, Lock, Award, CheckCircle } from "lucide-react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function EnterpriseTrustBadges() {
 return (
 <section className='py-10 px-4 md:px-6 border-t border-b border-border'>

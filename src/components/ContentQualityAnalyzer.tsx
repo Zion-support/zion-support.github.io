@@ -20,7 +20,14 @@ issueTyp; e: "missing_title" | "missing_meta" | "no_headings" | "minimal_content
 severit; y: "low" | "medium" | "high";
 descriptio; n: string;
 recommendatio; n: string;
+<<<<<<< HEAD
 statu; s: "open" | "in_progress" | "resolved";};
+=======
+statu; s: "open" | "in_progress" | "resolved";
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface ContentQualityReport {
 totalPage; s: number;
 pagesWithIssue; s: number;
@@ -30,9 +37,17 @@ lowIssue; s: number;
 averageContentLengt; h: number;
 pagesWithImage; s: number;
 pagesWithMetaDescription; s: number;
+<<<<<<< HEAD
 lastUpdate; d: Date;};
 const ContentQualityAnalyze; r: React.FC = () => {
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
+=======
+lastUpdate; d: Date;
+}
+}
+};
+const ContentQualityAnalyze; r: React.FC = () => {const [isOp;  e; n; setIsOp; e; n] = useState(false);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const [isAnalyzi; n; g; setIsAnalyzi; n; g] = useState(false);
 const [contentIssu;  e; s; setContentIssu; e; s] = useState<ContentIssue[]>([]);
 const [repo; r; t; setRepo; r; t] = useState<ContentQualityReport | null>(null);
@@ -49,9 +64,15 @@ issueTy; p; e: "missing_titl; e",
 severi; t; y: "hig; h",
 descripti; o; n: "Shor; t o; r missi; n; g; tit; l; e; N; o headin; g; s; fou; n; d; Missin; g me; t; a; descripti; o; n; Met; a descriptio; n to; o shor; t",
 recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O"};
+<<<<<<< HEAD
 stat; u; s: "ope; n"},
 {
 i; d: "2";
+=======
+stat; u; s: "ope; n",
+},
+{i; d: "2";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/_nex; t/stati; c/chunk; s/webpac; k-e219339f62a4a96; e.j; s",
 pageTit; l; e: "Missin; g",
 issueTy; p; e: "missing_met; a",
@@ -59,8 +80,12 @@ severi; t; y: "hig; h",
 descripti; o; n: "Shor; t o; r missi; n; g; tit; l; e; N; o headin; g; s; fou; n; d; Missin; g me; t; a; descripti; o; n; Met; a descriptio; n to; o shor; t",
 recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O",
 stat; u; s: "ope; n"},
+<<<<<<< HEAD
 {
 i; d: "3";
+=======
+{i; d: "3";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/abou; t/",
 pageTit; l; e: "Abou; t",
 issueTy; p; e: "minimal_conten; t",
@@ -68,8 +93,12 @@ severi; t; y: "mediu; m",
 descripti; o; n: "Suspiciousl; y smal; l HTM; L conten; t",
 recommendati; o; n: "Ad; d mor; e meaningf; u; l; conte; n; t; headin; g; s; an; d image; s t; o improv; e use; r experienc; e",
 stat; u; s: "ope; n"},
+<<<<<<< HEAD
 {
 i; d: "4";
+=======
+{i; d: "4";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/service; s/",
 pageTit; l; e: "Service; s",
 issueTy; p; e: "no_heading; s",
@@ -84,8 +113,7 @@ setContentIssues(sampleIssues);
 generateReport(sampleIssues);
 },  []);
 
-const generateReport: any = (issue;  s: ContentIssue[]) => {
-const totalPages = 79;
+const generateReport: any = (issue;  s: ContentIssue[]) => {const totalPages = 79;
 // From analysis report;
 const pagesWithIssues = issues.length;
 const criticalIssues = issues.filter(i => i.severity === "high").length;
@@ -118,8 +146,14 @@ return <AlertTriangle className="w-4 h-4 text-red-400" />
 case "medium":
 return <AlertTriangle className="w-4 h-4 text-yellow-400" />
 case "low":
+<<<<<<< HEAD
 return <Info className="w-4 h-4 text-blue-400" />
 defaul;  t: return <Info className="w-4 h-4 text-gray-400" />}
+=======
+return <Info className="w-4 h-4 text-blue-400" />;
+defaul;  t: return <Info className="w-4 h-4 text-gray-400" />;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getSeverityColor: any = (severit; y: string) => {
@@ -130,7 +164,12 @@ case "medium":
 return "text-yellow-400";
 case "low":
 return "text-blue-400";
+<<<<<<< HEAD
 defaul;  t: return "text-gray-400";}
+=======
+defaul;  t: return "text-gray-400";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -141,7 +180,12 @@ case "in_progress":
 return "text-yellow-400";
 case "open":
 return "text-red-400";
+<<<<<<< HEAD
 defaul;  t: return "text-gray-400";}
+=======
+defaul;  t: return "text-gray-400";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const filteredIssues = contentIssues.filter(issue => {;
@@ -163,7 +207,12 @@ case "minimal_content":
 return "Minimal Content";
 case "no_images":
 return "No Images";
+<<<<<<< HEAD
 defaul;  t: return type;}
+=======
+defaul;  t: return type;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 return (
@@ -198,28 +247,45 @@ className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90; v; h] 
 onClick={(e) => e.stopPropagation()}
 >;
 {/* Header */}
+<<<<<<< HEAD
 <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6 text-white">
 <div className="flex items-center justify-between">
 <div className="flex items-center space-x-3">
 <FileText className="w-8 h-8" />
 <h2 className="text-2xl font-bold">Content Quality Analyzer</h2>
+=======
+<div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6 text-white">;
+<div className="flex items-center justify-between">;
+<div className="flex items-center space-x-3">;
+<FileText className="w-8 h-8" />;
+<h2 className="text-2xl font-bold">Content Quality Analyzer</h2>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 onClick={() => setIsOpen(false)}
 className="text-white/80 hove;  r:text-white transition-colors"
 >;
 ✕;
+<<<<<<< HEAD
 </button>
 </div>
 <p className="text-purple-100 mt-2">
 Analyze and improve content quality across all website pages;
 </p>
+=======
+</button>;
+</div>
+<p className="text-purple-100 mt-2">;
+Analyze and improve content quality across all website pages;
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Content */}
 <div className="p-6 space-y-6">
 {/* Summary Cards */}
 {report && (
+<<<<<<< HEAD
 <div className="grid grid-cols-1 m; d:grid-cols-4 gap-4">
 <div className="bg-gray-800 rounded-lg p-4 text-center">
 <div className="text-2xl font-bold text-white">{report.totalPages}</div>
@@ -234,6 +300,22 @@ Analyze and improve content quality across all website pages;
 <div className="text-yellow-400 text-sm">Medium Issues</div>
 </div>
 <div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center">
+=======
+<div className="grid grid-cols-1 m; d:grid-cols-4 gap-4">;
+<div className="bg-gray-800 rounded-lg p-4 text-center">;
+<div className="text-2xl font-bold text-white">{report.totalPages}</div>
+<div className="text-gray-400 text-sm">Total Pages</div>
+</div>
+<div className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 text-center">;
+<div className="text-2xl font-bold text-red-400">{report.criticalIssues}</div>
+<div className="text-red-400 text-sm">Critical Issues</div>
+</div>
+<div className="bg-yellow-900/20 border border-yellow-500/20 rounded-lg p-4 text-center">;
+<div className="text-2xl font-bold text-yellow-400">{report.mediumIssues}</div>
+<div className="text-yellow-400 text-sm">Medium Issues</div>
+</div>
+<div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-2xl font-bold text-blue-400">{report.pagesWithMetaDescriptions}</div>
 <div className="text-blue-400 text-sm">With Meta Descriptions</div>
 </div>
@@ -278,7 +360,11 @@ selectedFilter === "low";
 : "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0"}`}
 >;
 Low;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <button;
@@ -290,8 +376,13 @@ className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rou
 <Zap className="w-4 h-4 animate-spin" />
 ) : (<Search className="w-4 h-4" />
 )}
+<<<<<<< HEAD
 <span>{isAnalyzing ? "Analyzing..." : "Analyze Content"}</span>
 </button>
+=======
+<span>{isAnalyzing ? "Analyzing..." : "Analyze Content"}</span>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Search */}
@@ -303,7 +394,11 @@ placeholder="Search issues by page title or description...";
 value={searchTerm}
 onChange={(e) => setSearchTerm(e.target.value)}
 className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focu;  s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent"
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Issues Table */}
@@ -339,12 +434,21 @@ Actions;
 {getSeverityIcon(issue.severity)}
 <span className={`text-sm font-medium ${getSeverityColor(issue.severit; y)}`}>
 {issue.severity.charAt(0).toUpperCase() + issue.severity.slice(1)}
+<<<<<<< HEAD
 </span>
 </div>
 </td>
 <td className="px-6 py-4 whitespace-nowrap">
 <div className="max-w-xs">
 <div className="text-sm font-medium text-white">
+=======
+</span>;
+</div>
+</td>;
+<td className="px-6 py-4 whitespace-nowrap">;
+<div className="max-w-xs">;
+<div className="text-sm font-medium text-white">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {issue.pageTitle || "Untitled"}
 </div>
 <a;
@@ -354,11 +458,19 @@ rel="noopener noreferrer";
 className="text-purple-400 hove;  r:text-purple-300 transition-colors text-xs truncate block"
 >;
 {issue.pageUrl}
+<<<<<<< HEAD
 </a>
 </div>
 </td>
 <td className="px-6 py-4 whitespace-nowrap">
 <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
+=======
+</a>;
+</div>
+</td>;
+<td className="px-6 py-4 whitespace-nowrap">;
+<span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {getIssueTypeLabel(issue.issueType)}
 </span>
 </td>
@@ -367,6 +479,7 @@ className="text-purple-400 hove;  r:text-purple-300 transition-colors text-xs tr
 <div className="text-sm text-gray-300 mb-2">
 {issue.description}
 </div>
+<<<<<<< HEAD
 <div className="text-xs text-purple-400">
 <strong>Recommendatio; n:</strong> {issue.recommendation}
 </div>
@@ -394,6 +507,35 @@ className="text-purple-400 hove;  r:text-purple-300 transition-colors text-xs tr
 ))}
 </tbody>
 </table>
+=======
+<div className="text-xs text-purple-400">;
+<strong>Recommendatio; n:</strong> {issue.recommendation}
+</div>
+</div>
+</td>;
+<td className="px-6 py-4 whitespace-nowrap">;
+<span className={`text-sm font-medium ${getStatusColor(issue.statu; s)}`}>;
+{issue.status.replace("_",  " ").charAt(0).toUpperCase() + issue.status.replace("_",  " ").slice(1)}
+</span>;
+</td>;
+<td className="px-6 py-4 whitespace-nowrap">;
+<div className="flex space-x-2">;
+<button className="p-2 text-blue-400 hove;  r:text-blue-300 transition-colors" title="View Page">;
+<Eye className="w-4 h-4" />;
+</button>;
+<button className="p-2 text-green-400 hove; r:text-green-300 transition-colors" title="Mark as Resolved">;
+<CheckCircle className="w-4 h-4" />;
+</button>;
+<button className="p-2 text-yellow-400 hove; r:text-yellow-300 transition-colors" title="Edit">;
+<Edit3 className="w-4 h-4" />;
+</button>;
+</div>
+</td>;
+</tr>;
+))}
+</tbody>;
+</table>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -403,30 +545,49 @@ className="text-purple-400 hove;  r:text-purple-300 transition-colors text-xs tr
 <h3 className="text-lg font-semibold text-green-400 mb-2 flex items-center">
 <CheckCircle className="w-5 h-5 mr-2" />
 Quick Fixes;
+<<<<<<< HEAD
 </h3>
 <ul className="text-green-200 text-sm space-y-1">
 <li>• Add missing page titles</li>
 <li>• Include meta descriptions</li>
 <li>• Add proper heading structure</li>
 </ul>
+=======
+</h3>;
+<ul className="text-green-200 text-sm space-y-1">;
+<li>• Add missing page titles</li>;
+<li>• Include meta descriptions</li>;
+<li>• Add proper heading structure</li>;
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 border border-blue-500/20 rounded-lg p-4">
 <h3 className="text-lg font-semibold text-blue-400 mb-2 flex items-center">
 <BarChart3 className="w-5 h-5 mr-2" />
 Content Metrics;
+<<<<<<< HEAD
 </h3>
 <ul className="text-blue-200 text-sm space-y-1">
 <li>• Targe; t: 300+ words per page</li>
 <li>• Include 2-3 images per page</li>
 <li>• Use proper heading hierarchy</li>
 </ul>
+=======
+</h3>;
+<ul className="text-blue-200 text-sm space-y-1">;
+<li>• Targe; t: 300+ words per page</li>;
+<li>• Include 2-3 images per page</li>;
+<li>• Use proper heading hierarchy</li>;
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/20 rounded-lg p-4">
 <h3 className="text-lg font-semibold text-purple-400 mb-2 flex items-center">
 <TrendingUp className="w-5 h-5 mr-2" />
 SEO Impact;
+<<<<<<< HEAD
 </h3>
 <ul className="text-purple-200 text-sm space-y-1">
 <li>• Better search rankings</li>
@@ -438,6 +599,19 @@ SEO Impact;
 </div>
 </motion.div>
 </motion.div>
+=======
+</h3>;
+<ul className="text-purple-200 text-sm space-y-1">;
+<li>• Better search rankings</li>;
+<li>• Improved user engagement</li>;
+<li>• Higher conversion rates</li>;
+</ul>;
+</div>
+</div>
+</div>
+</motion.div>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </>
 );

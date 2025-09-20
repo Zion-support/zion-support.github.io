@@ -1,7 +1,6 @@
 // IoT & Edge Computing Services for 2025;
 export const iotEdgeComputingServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Smart City IoT Platform";
         category: "Smart Cities";
         description: "Comprehensive IoT platform for smart city management with real-time monitoring, predictive analytics, and automated response systems",
@@ -53,9 +52,15 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
+<<<<<<< HEAD
         predictiveAnalytics: true};
     {
         id: 2;
+=======
+        predictiveAnalytics: true,
+    };
+    {id: 2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Industrial IoT Edge AI";
         category: "Industrial IoT";
         description: "Advanced edge AI platform for industrial IoT with real-time processing, predictive maintenance, and autonomous decision-making",
@@ -107,9 +112,15 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
+<<<<<<< HEAD
         predictiveAnalytics: true};
     {
         id: 3;
+=======
+        predictiveAnalytics: true,
+    };
+    {id: 3;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Healthcare IoT Monitor";
         category: "Healthcare IoT";
         description: "Comprehensive healthcare IoT monitoring platform with patient tracking, medical device management, and health analytics",
@@ -161,9 +172,15 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
+<<<<<<< HEAD
         predictiveAnalytics: true};
     {
         id: 4;
+=======
+        predictiveAnalytics: true,
+    };
+    {id: 4;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Retail IoT Analytics";
         category: "Retail IoT";
         description: "Advanced retail IoT platform with customer behavior analysis, inventory management, and personalized shopping experiences",
@@ -215,9 +232,15 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
+<<<<<<< HEAD
         predictiveAnalytics: true};
     {
         id: 5;
+=======
+        predictiveAnalytics: true,
+    };
+    {id: 5;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Agricultural IoT Suite";
         category: "Agricultural IoT";
         description: "Comprehensive agricultural IoT platform with precision farming, crop monitoring, and automated irrigation systems",
@@ -269,9 +292,15 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
+<<<<<<< HEAD
         predictiveAnalytics: true};
     {
         id: 6;
+=======
+        predictiveAnalytics: true,
+    };
+    {id: 6;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Energy IoT Grid";
         category: "Energy IoT";
         description: "Advanced energy IoT platform with smart grid management, renewable energy integration, and demand response optimization",

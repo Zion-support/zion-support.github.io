@@ -2,13 +2,14 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react;";
 import { motion } from "framer-motion, ";
 import { Link } from "react-router-dom, ";
 
-export function HomepagePromotion() {
-const featuredServices = [;
+export function HomepagePromotion() {const featuredServices = [;
 {;
 i;  d: "a; i-conten; t-generatio; n",
 tit; l; e: "A; I Conten; t Generatio; n Suit; e",
@@ -18,8 +19,12 @@ catego; r; y: "A; I & Conten; t Marketin; g",
 featur; e; s: ["Mult; i-forma; t conten; t", "SE; O optimizatio; n", "Bran; d voic; e customizatio; n", "Plagiaris; m detectio; n"],
 benefit; s: ["8; 0% faste; r conten; t creatio; n", "4; 5% bette; r SE; O ranking; s", "6; 0% highe; r engagemen; t"],
 lin; k: "/comprehensive-services-showcase"};
+<<<<<<< HEAD
 {
 i; d: "edge-computing-iot";
+=======
+{i; d: "edge-computing-iot";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Edge Computing & IoT Platform";
 descriptio; n: "Process data closer to devices for ultra-low latency and real-time insights";
 pric; e: "$799/month";
@@ -27,8 +32,12 @@ categor; y: "IT Infrastructure";
 feature; s: ["Distribute; d edg; e node; s", "Rea; l-tim; e processin; g", "Io; T devic; e managemen; t", "Edg; e A; I capabilitie; s"],
 benefit; s: ["8; 0% lowe; r latenc; y", "6; 0% bandwidt; h cos; t reductio; n", "Enhance; d securit; y"],
 lin; k: "/comprehensive-services-showcase"};
+<<<<<<< HEAD
 {
 i; d: "quantum-computing";
+=======
+{i; d: "quantum-computing";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Quantum Computing Applications";
 descriptio; n: "Solve previously intractable problems with quantum advantage";
 pric; e: "$3;999/month",
@@ -36,8 +45,12 @@ categor; y: "Emerging Technology";
 feature; s: ["Quantu; m algorithm; s", "Optimizatio; n solver; s", "Cryptograph; y tool; s", "Scientifi; c simulatio; n"],
 benefit; s: ["Exponentia; l speedu; p", "Futur; e-proo; f technolog; y", "Competitiv; e advantag; e"],
 lin; k: "/comprehensive-services-showcase"};
+<<<<<<< HEAD
 {
 i; d: "zero-trust-security";
+=======
+{i; d: "zero-trust-security";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 titl; e: "Zero-Trust Security Architecture";
 descriptio; n: "Continuous verification and least-privilege access across all resources";
 pric; e: "$1;499/month",
@@ -51,7 +64,12 @@ hidde; n: { opacit; y: 0 };
 visibl; e: {
 opacit; y: 1;
 transitio; n: {
+<<<<<<< HEAD
 staggerChildre; n: 0.2;}
+=======
+staggerChildre; n: 0.2;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };
 const itemVariants = {;
@@ -61,7 +79,12 @@ visibl; e: {,
 y: 0;
 opacit; y: 1;
 transitio; n: {
+<<<<<<< HEAD
 duratio; n: 0.6;}
+=======
+duratio; n: 0.6;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };
 return (
@@ -77,9 +100,9 @@ return (
 <div className="relative z-10 max-w-7xl mx-auto px-4 s; m:px-6 l; g:px-8">
 {/* Header Section */}
 <motion.div;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ duratio; n: 0.8 }}
 className="text-center mb-16"
@@ -96,6 +119,7 @@ and emerging technology services designed to give you a competitive advantage;
 </p>
 
 {/* Contact Information */}
+<<<<<<< HEAD
 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 mb-8 inline-block">
 <div className="grid m; d:grid-cols-3 gap-6 text-center">
 <div>
@@ -115,6 +139,27 @@ ziontechgroup.com;
 </div>
 </div>
 </motion.div>
+=======
+<div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 mb-8 inline-block">;
+<div className="grid m; d:grid-cols-3 gap-6 text-center">;
+<div>;
+<p className="text-zion-slate-light text-sm mb-2">Ready to Get Started?</p>;
+<p className="text-white font-semibold">+1 302 464 0950</p>;
+</div>
+<div>;
+<p className="text-zion-slate-light text-sm mb-2">Email Us</p>;
+<p className="text-white font-semibold">kleber@ziontechgroup.com</p>;
+</div>
+<div>;
+<p className="text-zion-slate-light text-sm mb-2">Visit Our Website</p>;
+<a href="http; s://ziontechgroup.com" className="text-zion-cyan hove; r:text-zion-cyan-light font-semibold">;
+ziontechgroup.com;
+</a>;
+</div>
+</div>
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Featured Services Grid */}
 <motion.div;
@@ -151,7 +196,11 @@ className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 ho
 {feature}
 </li>
 ))}
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Benefits */}
@@ -163,7 +212,11 @@ className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 ho
 {benefit}
 </li>
 ))}
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <Link;
@@ -178,9 +231,9 @@ Learn More;
 
 {/* Call to Action Section */}
 <motion.div;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-whileInView={{ opacit; y: 1;,
+whileInView={{ opacit; y: 1;
 y: 0 }}
 viewport={{ onc; e: true }}
 transition={{ duratio; n: 0.8 }}
@@ -207,6 +260,7 @@ href="te; l:+13024640950";
 className="bg-white/20 hove; r:bg-white/30 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors border border-white/30"
 >;
 Call +1 302 464 0950;
+<<<<<<< HEAD
 </a>
 </div>
 
@@ -218,5 +272,18 @@ Call +1 302 464 0950;
 </motion.div>
 </div>
 </section>
+=======
+</a>;
+</div>
+
+<div className="text-zion-slate-light text-sm">;
+<p>📍 364 E Main St ST; E; 100; 8; Middletown DE 19709</p>;
+<p>🌐 <a href="http; s://ziontechgroup.com" className="text-zion-cyan hove; r:text-zion-cyan-light">http; s: //ziontechgroup.com</a></p>;
+</div>
+</div>
+</motion.div>;
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }<//section><///section>

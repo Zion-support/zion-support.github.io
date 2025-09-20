@@ -22,7 +22,22 @@ export function middleware(request: NextRequest) {
 
   // Allow public routes
   if (publicRoutes.includes(pathname)) {
-    return NextResponse.next();
+    const response = NextResponse.next();
+    
+    // Security headers
+    response.headers.set("X-Frame-Options", "DENY");
+    response.headers.set("X-Content-Type-Options", "nosniff");
+    response.headers.set("Referrer-Policy", "origin-when-cross-origin");
+    response.headers.set(
+      "Permissions-Policy",
+      "camera=(), microphone=(), geolocation=()"
+    );
+    response.headers.set(
+      "Content-Security-Policy",
+      "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
+    );
+    
+    return response;
   }
 
   // Check for authentication cookie
@@ -33,22 +48,22 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL("/auth/login", request.url));
   }
 
-  return NextResponse.next();
   const response = NextResponse.next();
-  // Security headers,
-response.headers.set("X-Frame-Options", "DENY");
+  
+  // Security headers
+  response.headers.set("X-Frame-Options", "DENY");
   response.headers.set("X-Content-Type-Options", "nosniff");
   response.headers.set("Referrer-Policy", "origin-when-cross-origin");
   response.headers.set(
-    "Permissions-Policy"
+    "Permissions-Policy",
     "camera=(), microphone=(), geolocation=()"
   );
-  // CSP header,
-response.headers.set(
-    "Content-Security-Policy"
+  response.headers.set(
+    "Content-Security-Policy",
     "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
   );
-return response;
+  
+  return response;
 }
 
 export const config = {

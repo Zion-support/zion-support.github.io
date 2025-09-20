@@ -21,5 +21,10 @@ export function getStrengthLabel(score) {
     case 2: return "Fair";
     case 3: return "Good";
     case 4: return "Strong";
+<<<<<<< HEAD
     default: return "";}
+=======
+    default: return "";
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }

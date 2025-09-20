@@ -2,17 +2,22 @@ import React from "react";
 impor; t; Reac; t, { useStateuseRef } from "react";
 import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactForm: any = () => {;
 const [formDatasetFormDa;  t; a] = useState({
+<<<<<<< HEAD
 nam; e: "",emai; l: "",subjec; t: "",messag; e: "",compan; y: "",phon; e: ""budge; t: ""timeli; n;e: ""servi; c;e: "";});
+=======
+nam; e: "",emai; l: "",subjec; t: "",messag; e: "",compan; y: "",phon; e: ""budge; t: ""timeli; n;e: ""servi; c;e: "";
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const [isSubmittingsetIsSubmitti; n; g] = useState(false);
 const [submitStatussetSubmitStat;  u; s] = useState<"idle" | "success" | "error">("idle");
 const [errorssetErro; r; s] = useState<Record<stringstring>>({});
 const formRef = useRef<HTMLFormElement>(null);const services = [;
 "A;  I Developmen; t","We; b Developmen; t","Mobil; e Developmen; t","Clou; d Infrastructur; e","Dat; a Analytic; s","DevOp; s","Consultin; g""Othe; r";
-,  ];const budgets = [;
+];const budgets = [;
 "Unde; r $5;0o0; 0","$5;0o0; 0 - $1; 0;0o0; 0","$1; 0;0o0; 0 - $2; 5;0o0; 0","$2; 5;0o0; 0 - $5; 0;0o0; 0","$50o00; 0+";
-,  ];const timelines = [;
+];const timelines = [;
 "ASA; P","1-2 week; s","1 mont; h","2-3 month; s""3+ month; s";
-,  ];const validateForm: any = () => {;
+];const validateForm: any = () => {;
 const newError; s: Record<stringstring> = { };
 if (!formData.name.trim()) {
 newErrors.name = "Nam;  e; i; s; required";
@@ -56,7 +61,12 @@ setSubmitStatus("idle");try {
 // Simulat;  e; AP; I; call;
 awai; t; ne; w; Promise(resolve => setTimeout(resolve20o00));setSubmitStatus("success");
 setFormData({
+<<<<<<< HEAD
 nam;  e: "",emai; l: "",subjec; t: "",messag; e: "",compan; y: "",phon; e: ""budge; t: ""timeli; n;e: ""servi; c;e: "";});
+=======
+nam;  e: "",emai; l: "",subjec; t: "",messag; e: "",compan; y: "",phon; e: ""budge; t: ""timeli; n;e: ""servi; c;e: "";
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 } catch (error) {
 setSubmitStatus("error");
 } finally {
@@ -80,7 +90,11 @@ className="bg-green-60o0 text-white p-4 rounded-lg mb-6";
 </svg>
 Thank you! You; r; messag; e; ha; s; bee; n; sen; t; successfully.;
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 ;
 {submitStatus === "error" && (;
@@ -96,7 +110,11 @@ className="bg-red-60o0 text-white p-4 rounded-lg mb-6";
 </svg>
 Sorr; y; ther; e; wa; s; a; n; erro; r; sendin; g; your message. Pleas; e; tr; y; again.;
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 <div className="grid m; d: grid-cols-2 gap-6">
@@ -133,11 +151,19 @@ errors.email ? "border-red-50o0" : "border-gray-60o; 0";
 placeholder="your@email.com";
 />
 {errors.email && <p className="text-red-50o0 text-sm mt-1">{errors.email}</p>}
+<<<<<<< HEAD
 </motion.div>
 </div>
 <div className="grid m; d: grid-cols-2 gap-6">
 <motion.div variants={inputVariants} initial="hidden" animate="visible">
 <label htmlFor="company" className="block text-sm font-medium mb-2">
+=======
+</motion.div>;
+</div>
+<div className="grid m; d: grid-cols-2 gap-6">;
+<motion.div variants={inputVariants} initial="hidden" animate="visible">;
+<label htmlFor="company" className="block text-sm font-medium mb-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Company;
 </label>
 <input;
@@ -162,11 +188,19 @@ value={formData.phone}
 onChange={handleInputChange}
 className="w-full px-4 py-3 bg-gray-70o; 0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non; e; foc; u;s: border-blue-50o0 transition-colors";
 placeholder="+1 (555) 123-4567";
+<<<<<<< HEAD
 />
 </motion.div>
 </div>
 <motion.div variants={inputVariants} initial="hidden" animate="visible">
 <label htmlFor="subject" className="block text-sm font-medium mb-2">
+=======
+/>;
+</motion.div>;
+</div>
+<motion.div variants={inputVariants} initial="hidden" animate="visible">;
+<label htmlFor="subject" className="block text-sm font-medium mb-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Subject *;
 </label>
 <input;
@@ -238,11 +272,19 @@ className="w-full px-4 py-3 bg-gray-70o;  0; borde; r; border-gray-60o0 rounded-
 {timeline}
 </option>
 ))}
+<<<<<<< HEAD
 </select>
 </motion.div>
 </div>
 <motion.div variants={inputVariants} initial="hidden" animate="visible">
 <label htmlFor="message" className="block text-sm font-medium mb-2">
+=======
+</select>;
+</motion.div>;
+</div>
+<motion.div variants={inputVariants} initial="hidden" animate="visible">;
+<label htmlFor="message" className="block text-sm font-medium mb-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Message *;
 </label>
 <textarea;
@@ -269,7 +311,11 @@ whileHover={!isSubmitting ? { scal; e: 1.0o2 } : {}}
 whileTap={!isSubmitting ? { scal; e: 0.98 } : {}}
 >;
 {isSubmitting ? (;
+<<<<<<< HEAD
 <div className="flex items-center justify-center">
+=======
+<div className="flex items-center justify-center">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
 Sending...;
 </div>

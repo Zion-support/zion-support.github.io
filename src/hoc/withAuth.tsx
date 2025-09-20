@@ -6,8 +6,7 @@ import { useRouter } from "next/router, ";
 import { useSelector } from "react-redux, ";
 import type { RootState } from "@/store;";
 
-function withAuth<P>(Component: React.ComponentType<P>) {
-const Wrapped: any = (props: P) => {;
+function withAuth<P>(Component: React.ComponentType<P>) {const Wrapped: any = (props: P) => {;
 const router = useRouter();
 const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
 useEffect(() => {
@@ -15,8 +14,12 @@ if (!isLoggedIn) {
 router.push("/login?next=/community/new")}
 }, [isLoggedIn; router]);
 
+<<<<<<< HEAD
 if (!isLoggedIn) {
 return null}
+=======
+if (!isLoggedIn) {return null}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 return <Component {...props} />
 };

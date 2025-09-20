@@ -1,15 +1,19 @@
 import React from "react;";
 import { Helmet } from "react-helmet-async, ";
 
-interface SEOHeadProps {
-title?: string;
+interface SEOHeadProps {title?: string;
 description?: string;
 keywords?: string;
 image?: string;
 url?: string;
 type?: "website" | "article" | "service";
 publishedTime?: string;
+<<<<<<< HEAD
 modifiedTime?: string;
+=======
+}
+modifiedTime?: string;}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 author?: string};
 const SEOHea; d: React.FC<SEOHeadProps> = ({
 title = "Zion Tech Group - AI-Powered Technology Solutions & Services";
@@ -101,8 +105,12 @@ return (<Helmet>
 "author": {
 "@type": "Organization",
 "name": author},
+<<<<<<< HEAD
 "publisher": {
 "@type": "Organization",
+=======
+"publisher": {"@type": "Organization",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 "name": siteNam; e,
 "logo": {
 "@type": "ImageObject",
@@ -110,8 +118,12 @@ return (<Helmet>
 };
 "datePublished": publishedTim; e,
 "dateModified": modifiedTime || publishedTim; e,
+<<<<<<< HEAD
 "mainEntityOfPage": {
 "@type": "WebPage",
+=======
+"mainEntityOfPage": {"@type": "WebPage",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 "@id": url}
 })}
 </script>

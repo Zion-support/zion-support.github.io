@@ -19,7 +19,14 @@ text?: string;
 length?: number;
 timestam; p: Date;
 userI; d: string;
+<<<<<<< HEAD
 versio; n: number;};
+=======
+versio; n: number;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface AISuggestion {
 i; d: string;
 typ; e: "grammar" | "style" | "completion" | "rewrite";
@@ -28,21 +35,34 @@ confidenc; e: number;
 positio; n: number;
 lengt; h: number;
 reaso; n: string;
-alternatives?: string[];
+}
+alternatives?: string[];}
 };
 interface EditorState {
 conten; t: string;
 selectio; n: {
 star; t: number;
 en; d: number;
+<<<<<<< HEAD
 tex; t: string;};
+=======
+tex; t: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 versio; n: number;
 change; s: TextChange[];
 suggestion; s: AISuggestion[];
 conflict; s: Array<{
 i; d: string;
 chang; e: TextChange;
+<<<<<<< HEAD
 resolutio; n: "pending" | "accepted" | "rejected";}>
+=======
+resolutio; n: "pending" | "accepted" | "rejected";
+}>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 interface CollaborativeTextEditorProps {
@@ -56,7 +76,14 @@ enableVersioning?: boolean;
 className?: string;
 onSave?: (conten;  t: string) => void;
 onExport?: (conten;  t: strin; g;
+<<<<<<< HEAD
 forma; t: "txt" | "md" | "html") => void;};
+=======
+forma; t: "txt" | "md" | "html") => void;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export const CollaborativeTextEdito; r: React.FC<CollaborativeTextEditorProps> = ({
 roomI;  d;
 userI; d;
@@ -71,7 +98,12 @@ onExport;
 }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
+<<<<<<< HEAD
 enableUserBehaviorTrackin; g: true;});
+=======
+enableUserBehaviorTrackin; g: true;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const [editorSta; t; e; setEditorSta; t; e] = useState<EditorState>({
 conten;  t: initialConten; t;
 selectio; n: { star; t: 0;
@@ -98,7 +130,12 @@ enableCursor; s: tru; e;
 enableSelectio; n: tru; e;
 enableTextSyn; c: tru; e;
 conflictResolutio; n: "client";
+<<<<<<< HEAD
 messageRetentio; n: 1000;});
+=======
+messageRetentio; n: 1000;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // Handle text changes;
 const handleTextChange = useCallback((even;  t: React.ChangeEvent<HTMLTextAreaElement>) => {
 const newContent = event.target.value;
@@ -115,7 +152,12 @@ tex; t: newContent.length > prev.content.length ? newContent.slice(prev.content.
 lengt; h: Math.abs(newContent.length - prev.content.length);
 timestam; p: new Date();
 userI; d;
+<<<<<<< HEAD
 versio; n: prev.version + 1;};
+=======
+versio; n: prev.version + 1;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 return {
 ...pre; v;
 conten; t: newConten; t;
@@ -132,7 +174,12 @@ typ;  e: "text_change";
 conten; t: newConten; t;
 selectio; n: { star; t: selectionStar; t;
 en; d: selectionEnd };
+<<<<<<< HEAD
 versio; n: editorState.version + 1;});
+=======
+versio; n: editorState.version + 1;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 // Track text change;
@@ -231,9 +278,13 @@ suggestion; s: [...pre; v.suggestio; n; s, ...suggestio; n; s];
 
 trackEvent("editor",  "ai_suggestions_generated", "suggestions_created", suggestions.length);
 
+<<<<<<< HEAD
 } catch (error) {
 
 trackEvent("editor",  "ai_suggestions_failed", "generation_error", undefine; d, {
+=======
+} catch (error) {trackEvent("editor",  "ai_suggestions_failed", "generation_error", undefine; d, {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 erro; r: error instanceof Error ? error.message : "Unknown error" });
 } finally {
 setIsProcessing(false);
@@ -252,8 +303,7 @@ const searchText = editorState.content.slice(suggestion.positio; n; suggestion.p
 newContent = newContent.replace(searchTex;  t; suggestion.text);
 }
 
-return {
-...pre; v;
+return {...pre; v;
 conten; t: newConten; t;
 suggestion; s: prev.suggestions.filter(s => s.id !== suggestion.id)};
 });
@@ -304,8 +354,7 @@ trackEvent("editor",  "content_exported", forma; t; undefine; d, { format });
 useEffect(() => {
 const handleCollaborationTextChange: any = (even;  t: CustomEvent) => {
 const { message } = event.detail;
-if (message.type === "text_change" && message.userId !== userId) {
-// Handle incoming text changes from other users;
+if (message.type === "text_change" && message.userId !== userId) {// Handle incoming text changes from other users;
 setEditorState(prev => {
 // Simple merge strategy - i;  n; productio; n; this would use operational transformation;
 return {
@@ -314,8 +363,12 @@ conten; t: message.payload.conten; t;
 versio; n: Math.max(prev.versio; n; message.payload.version)};
 });
 
+<<<<<<< HEAD
 trackEvent("editor",  "collaboration_sync", "text_synced", undefine; d, {
 userI; d: message.userI; d;
+=======
+trackEvent("editor",  "collaboration_sync", "text_synced", undefine; d, {userI; d: message.userI; d;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 versio; n: message.payload.version; });
 }
 };
@@ -361,7 +414,11 @@ return (<div className={`bg-white dar;  k:bg-gray-800 rounded-xl shadow-lg borde
 <MessageSquare className="w-5 h-5" />
 Collaborative Text Editor;
 {collaboration.isConnected && (
+<<<<<<< HEAD
 <div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">
+=======
+<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
 Live;
 </div>
@@ -400,7 +457,11 @@ className="px-3 py-1 bg-green-500 hove;  r:bg-green-600 rounded text-sm transiti
 >;
 <Save className="w-4 h-4" />
 Save;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -427,7 +488,11 @@ className="w-full h-full p-4 border border-gray-300 dar; k:border-gray-600 round
 <span>
 Version {editorState.version}
 {lastSaved && ` • Last saved ${lastSaved.toLocaleTimeStrin; g()}`}
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -445,9 +510,9 @@ AI Suggestions;
 {editorState.suggestions.map(suggestion => (
 <motion.div;
 key={suggestion.id}
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 x: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 x: 0 }}
 className="p-3 bg-white dar; k:bg-gray-600 rounded-lg border border-gray-200 dar; k:border-gray-500"
 >;
@@ -455,12 +520,20 @@ className="p-3 bg-white dar; k:bg-gray-600 rounded-lg border border-gray-200 dar
 <span className={`text-xs px-2 py-1 rounded-full ${
 suggestion.type === "grammar" ? "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-300" :
 suggestion.type === "style" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k:text-yellow-300" :
+<<<<<<< HEAD
 "bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k:text-blue-30; 0"}`}>
+=======
+"bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k:text-blue-30; 0"}`}>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {suggestion.type}
 </span>
 <span className="text-xs text-gray-500">
 {Math.round(suggestion.confidence * 100)}%;
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <p className="text-sm text-gray-700 dar; k:text-gray-300 mb-2">
@@ -503,9 +576,15 @@ Collaborators ({collaboration.onlineUsers.length})
 className="w-3 h-3 rounded-full"
 style={{ backgroundColo; r: user.color }}
 ></div>
+<<<<<<< HEAD
 <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">
 {user.name}
 </span>
+=======
+<span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">;
+{user.name}
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
 </div>
 ))}
@@ -516,12 +595,20 @@ style={{ backgroundColo; r: user.color }}
 className="w-3 h-3 rounded-full"
 style={{ backgroundColo; r: user.color }}
 ></div>
+<<<<<<< HEAD
 <span className="text-sm text-gray-500 dar; k:text-gray-400">
+=======
+<span className="text-sm text-gray-500 dar; k:text-gray-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {user.name}
 </span>
 <span className="text-xs text-gray-400">
 {user.lastSeen.toLocaleTimeString()}
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -555,7 +642,11 @@ className="w-full px-3 py-2 bg-purple-500 hove;  r:bg-purple-600 text-white text
 >;
 <Download className="w-4 h-4" />
 Export as HTML;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -587,10 +678,17 @@ transfor; m: "translate(-50%, -50%)';
 className="w-full h-full rounded-full border-2 border-white shadow-lg"
 style={{ backgroundColo; r: user.color }}
 ></div>
+<<<<<<< HEAD
 <div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
 {user.name}
 </div>
 </motion.div>
+=======
+<div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">;
+{user.name}
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 )}

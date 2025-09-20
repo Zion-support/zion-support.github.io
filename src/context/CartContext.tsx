@@ -4,7 +4,14 @@ import { safeStorage } from "@/utils/safeStorage, ";
 import { useAuth } from "@/hooks/useAuth, ";
 import { getCartKey, mergeCartItems  } from "@/utils/cartUtils, ";
 
+<<<<<<< HEAD
 interface CartState { items: CartItem[];};
+=======
+interface CartState { items: CartItem[];
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const initialState: CartState = { items: [] };
 function cartReducer(state: CartState; action: CartAction): CartState {
 switch (action.type) {
@@ -26,7 +33,12 @@ case "REMOVE_ITEM":
 return { items: state.items.filter(i => i.id !== action.payload) };
 case "CLEAR_CART":
 return { items: [] };
+<<<<<<< HEAD
 default: return state;}
+=======
+default: return state;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);

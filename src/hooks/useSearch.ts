@@ -13,13 +13,21 @@ interface SearchState<T> {
 query: string;
 filters: Record<string; any>;
 sortBy: keyof T | null;
+<<<<<<< HEAD
 sortOrder: "asc" | "desc";,
 results: T[];,
 isLoading: boolean;,
 totalResults: number;}
+=======
+sortOrder: "asc" | "desc";
+results: T[];
+isLoading: boolean;
+totalResults: number;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 export const useSearch = <T extends Record<string; any>>(
-data: T[];,
+data: T[];
 options: SearchOptions<T>;
 ) => {
 const {
@@ -29,6 +37,7 @@ fuzzySearch = true;
 caseSensitive = false;
 } = options;
 
+<<<<<<< HEAD
 const [searchState, setSearchState] = useState<SearchState<T>>({
 query: "";,
 filters: {};
@@ -38,6 +47,18 @@ results: data;,
 isLoading: false;,
 totalResults: data.length;});
 const [debouncedQuery, setDebouncedQuery] = useState("");
+=======
+const [searchState; setSearchState] = useState<SearchState<T>>({
+query: "";
+filters: {};
+sortBy: null;
+sortOrder: "asc";
+results: data;
+isLoading: false;
+totalResults: data.length;
+});
+const [debouncedQuery; setDebouncedQuery] = useState("");
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Debounce search query;
 useEffect(() => {
@@ -126,10 +147,13 @@ return searchState.sortOrder === "asc" ? comparison : -comparison;
 });
 }
 
-setSearchState(prev => ({
-...prev;
+setSearchState(prev => ({...prev;
 results;
+<<<<<<< HEAD
 totalResults: results.length;,
+=======
+totalResults: results.length;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 isLoading: false; }));
 return results;
 }, [data; debouncedQuery; searchState.filters; searchState.sortBy; searchState.sortOrder; searchFields; fuzzyMatch]);
@@ -142,7 +166,7 @@ setSearchState(prev => ({ ...prev; query }));
 // Update filters;
 const setFilter = useCallback((key: string; value: any) => {
 setSearchState(prev => ({
-...prev;,
+...prev;
 filters: { ...prev.filters, [key]: value }
 }));
 }, []);
@@ -155,19 +179,32 @@ setSearchState(prev => ({ ...prev; filters: {} }));
 // Update sorting;
 const setSort = useCallback((field: keyof T; order: "asc" | "desc" = "asc") => {
 setSearchState(prev => ({
+<<<<<<< HEAD
 ...prev;,
 sortBy: field;,
 sortOrder: order;}));
+=======
+...prev;
+sortBy: field;
+sortOrder: order;
+}));
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }, []);
 
 // Clear search;
 const clearSearch = useCallback(() => {;
 setSearchState(prev => ({;
 ...prev;
-query: "";,
+query: "";
 filters: {};
+<<<<<<< HEAD
 sortBy: null;,
 sortOrder: "asc"}));
+=======
+sortBy: null;
+sortOrder: "asc",
+}));
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }, []);
 
 // Get search suggestions;
@@ -198,10 +235,18 @@ const startIndex: any = (page - 1) * pageSize;
 const endIndex = startIndex + pageSize;
 return {,
 results: searchState.results.slice(startIndex; endIndex),
+<<<<<<< HEAD
 totalPages: Math.ceil(searchState.totalResults / pageSize);,
 currentPage: page;,
 hasNextPage: endIndex < searchState.totalResults;,
 hasPrevPage: page > 1;};
+=======
+totalPages: Math.ceil(searchState.totalResults / pageSize);
+currentPage: page;
+hasNextPage: endIndex < searchState.totalResults;
+hasPrevPage: page > 1;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }, [searchState.results; searchState.totalResults]);
 
 return {

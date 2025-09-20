@@ -3,7 +3,12 @@ import { toast } from '@/hooks/use-toast, ';
 import { supabase } from '@/integrations/supabase/client, ';
 const apiClient = axios.create({
     baseURL: '/api';
+<<<<<<< HEAD
     withCredentials: true;});
+=======
+    withCredentials: true;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function setAuthToken(token) {
     apiClient.defaults.headers.common.Authorization = `Bearer ${token}`;
 }

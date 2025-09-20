@@ -1,15 +1,15 @@
-import { useState,, useEffect,  } from "react",
-import { useRouter,  } from "next/router",
-import { supabase,  } from "@/integrations/supabase/client",
-import { toast,  } from "@/hooks/use-toast",
-import { SEO,  } from "@/components/SEO",
-import { Header,  } from "@/components/Header",
-import { Avatar,, AvatarFallback,, AvatarImage,  } from "@/components/ui/avatar",
-import { Button,  } from "@/components/ui/button",
-import { Card,, CardContent,, CardDescription,, CardHeader,, CardTitle,  } from "@/components/ui/card",
-import { Badge,  } from "@/components/ui/badge";
-import { MapPin,, Clock,, Link,, as,, LinkIcon,, Github,, Twitter,, Linkedin,, CheckCircle2,, Mail,, Phone,, Globe,  } from 'lucide-react'
-import { HireNowCTA,  } from "@/components/profile/HireNowCTA";
+import { useState, useEffect } from "react";,
+import { useRouter } from "next/router";,
+import { supabase } from "@/integrations/supabase/client";,
+import { toast } from "@/hooks/use-toast";,
+import { SEO } from "@/components/SEO";,
+import { Header } from "@/components/Header";,
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";,
+import { Button } from "@/components/ui/button";,
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";,
+import { Badge } from "@/components/ui/badge";
+import { MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from "lucide-react";
+import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions so avoid passing a type argument to prevent TS2347.
@@ -47,7 +47,11 @@ export default function ProfileDetail() {
               <div className="flex flex-col space-y-3">
                 {profileData.github_url && (
                   <a
+<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
 href = {profileData.github_url,}
+=======
+href = {profileData.github_url}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ProfileDetail.tsx
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -60,7 +64,11 @@ href = {profileData.github_url,}
                 )}
                 {profileData.twitter_url && (
                   <a
+<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
 href = {profileData.twitter_url,}
+=======
+href = {profileData.twitter_url}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ProfileDetail.tsx
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -73,7 +81,11 @@ href = {profileData.twitter_url,}
                 )}
                 {profileData.linkedin_url && (
                   <a
+<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
 href = {profileData.linkedin_url,}
+=======
+href = {profileData.linkedin_url}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ProfileDetail.tsx
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -89,7 +101,7 @@ href = {profileData.linkedin_url,}
           </div>
         </div>
       </div>
-    </>
+</>
 );
 }
 }, [profileId]);

@@ -27,6 +27,10 @@ var __awaiter: any
 // CRITICAL: Self polyfill - must be first;
 // Auto-verify in development,
 if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
 setTimeout((,) => verifyPolyfills(), 100)
+=======
+  setTimeout(() => verifyPolyfills(), 100)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 export default {}, // Ensure this can be imported as a module}

@@ -9,7 +9,14 @@ interface ContactPublisherModalProps {
 isOpe; n: boolean;
 onClos; e: () => void;
 productI;  d: string;
+<<<<<<< HEAD
 sellerI; d: string;};
+=======
+sellerI; d: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function ContactPublisherModal({ isOpe; n; onClos; e; productI; d; sellerId }: ContactPublisherModalProps) {
 const [subje; c; t; setSubje; c; t] = useState("");
 const [messa;  g; e; setMessa; g; e] = useState("");
@@ -92,10 +99,17 @@ value={subject}
 onChange={(e) => setSubject(e.target.value)}
 ref={firstInputRef}
 className="w-full p-2 border border-gray-300 rounded"
+<<<<<<< HEAD
 />
 </div>
 <div>
 <label htmlFor="message" className="block mb-1 font-medium">
+=======
+/>;
+</div>
+<div>;
+<label htmlFor="message" className="block mb-1 font-medium">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Messag;  e:
 </label>
 <textarea;
@@ -104,7 +118,11 @@ value={message}
 onChange={(e) => setMessage(e.target.value)}
 rows={4}
 className="w-full p-2 mb-4 border border-gray-300 rounded"
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 type="submit"
@@ -120,8 +138,13 @@ className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hove; r:bg-gray-600 dis
 disabled={isLoading}
 >;
 Cancel;
+<<<<<<< HEAD
 </button>
 </form>
+=======
+</button>;
+</form>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 );

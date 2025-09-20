@@ -1,7 +1,6 @@
 // Enhanced AI Services for 2025;
 export const enhancedAIServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "AI Vision Pro";
         category: "Computer Vision";
         pricing: "Usage-based";
@@ -53,9 +52,15 @@ export const enhancedAIServices2025 = [
         scalability: "Millions of requests/day";
         realTimeProcessing: true;
         multilingualSupport: true;
+<<<<<<< HEAD
         industrySpecific: true};
     {
         id: 2;
+=======
+        industrySpecific: true,
+    };
+    {id: 2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "NLP Genius";
         category: "Natural Language Processing";
         pricing: "Tiered";
@@ -107,9 +112,15 @@ export const enhancedAIServices2025 = [
         scalability: "Unlimited requests";
         realTimeProcessing: true;
         multilingualSupport: true;
+<<<<<<< HEAD
         industrySpecific: true};
     {
         id: 3;
+=======
+        industrySpecific: true,
+    };
+    {id: 3;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Predictive Analytics Pro";
         category: "Predictive Analytics";
         pricing: "Enterprise";
@@ -161,9 +172,15 @@ export const enhancedAIServices2025 = [
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
+<<<<<<< HEAD
         industrySpecific: true};
     {
         id: 4;
+=======
+        industrySpecific: true,
+    };
+    {id: 4;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI Chatbot Studio";
         category: "Conversational AI";
         pricing: "Freemium";
@@ -215,9 +232,15 @@ export const enhancedAIServices2025 = [
         scalability: "Unlimited conversations";
         realTimeProcessing: true;
         multilingualSupport: true;
+<<<<<<< HEAD
         industrySpecific: true};
     {
         id: 5;
+=======
+        industrySpecific: true,
+    };
+    {id: 5;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI Content Creator";
         category: "Content Generation";
         pricing: "Usage-based";
@@ -269,9 +292,15 @@ export const enhancedAIServices2025 = [
         scalability: "Unlimited words";
         realTimeProcessing: true;
         multilingualSupport: true;
+<<<<<<< HEAD
         industrySpecific: true};
     {
         id: 6;
+=======
+        industrySpecific: true,
+    };
+    {id: 6;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI Data Scientist";
         category: "Data Science";
         pricing: "Enterprise";
@@ -323,9 +352,15 @@ export const enhancedAIServices2025 = [
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
+<<<<<<< HEAD
         industrySpecific: true};
     {
         id: 7;
+=======
+        industrySpecific: true,
+    };
+    {id: 7;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI Voice Assistant";
         category: "Voice AI";
         pricing: "Tiered";
@@ -377,9 +412,15 @@ export const enhancedAIServices2025 = [
         scalability: "Unlimited requests";
         realTimeProcessing: true;
         multilingualSupport: true;
+<<<<<<< HEAD
         industrySpecific: true};
     {
         id: 8;
+=======
+        industrySpecific: true,
+    };
+    {id: 8;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI Recommendation Engine";
         category: "Recommendation Systems";
         pricing: "Usage-based";
@@ -431,9 +472,15 @@ export const enhancedAIServices2025 = [
         scalability: "Millions of recommendations";
         realTimeProcessing: true;
         multilingualSupport: false;
+<<<<<<< HEAD
         industrySpecific: true};
     {
         id: 9;
+=======
+        industrySpecific: true,
+    };
+    {id: 9;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI Fraud Detection";
         category: "Security AI";
         pricing: "Enterprise";
@@ -485,9 +532,15 @@ export const enhancedAIServices2025 = [
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
+<<<<<<< HEAD
         industrySpecific: true};
     {
         id: 10;
+=======
+        industrySpecific: true,
+    };
+    {id: 10;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI Process Automation";
         category: "Process Automation";
         pricing: "Tiered";

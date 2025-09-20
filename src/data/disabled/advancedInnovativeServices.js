@@ -1,7 +1,6 @@
 export const ADVANCED_INNOVATIVE_SERVICES = [
     // AI-Powered Predictive Maintenance Platform;
-    {
-        id: "ai-predictive-maintenance-platform";
+    {id: "ai-predictive-maintenance-platform";
         title: "AI Predictive Maintenance Platform";
         description: "Intelligent IoT-based predictive maintenance solution that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime costs.",
         category: "AI & IoT";
@@ -60,8 +59,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         innovationLevel: "Cutting-edge AI/ML with real-time IoT integration";
         uniqueValue: "Combines edge computing with cloud-based ML for real-time predictions"};
     // Quantum Machine Learning Platform;
-    {
-        id: "quantum-machine-learning-platform";
+    {id: "quantum-machine-learning-platform";
         title: "Quantum Machine Learning Platform";
         description: "Revolutionary platform that combines quantum computing principles with machine learning to solve complex optimization problems and accelerate AI model training.";
         category: "Quantum Computing";
@@ -120,8 +118,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         innovationLevel: "Pioneering quantum-classical hybrid approaches";
         uniqueValue: "First commercial platform combining quantum computing with practical ML applications"};
     // Autonomous Drone Fleet Management;
-    {
-        id: "autonomous-drone-fleet-management";
+    {id: "autonomous-drone-fleet-management";
         title: "Autonomous Drone Fleet Management Platform";
         description: "AI-powered platform for managing autonomous drone fleets for delivery, inspection, surveillance, and data collection with real-time monitoring and optimization.",
         category: "Autonomous Systems";
@@ -180,8 +177,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         innovationLevel: "Leading-edge autonomous fleet management with AI optimization";
         uniqueValue: "First comprehensive platform for multi-drone autonomous operations"};
     // Blockchain-Based Digital Identity Platform;
-    {
-        id: "blockchain-digital-identity-platform";
+    {id: "blockchain-digital-identity-platform";
         title: "Blockchain Digital Identity Platform";
         description: "Decentralized digital identity solution using blockchain technology for secure, verifiable, and privacy-preserving identity management across organizations.",
         category: "Blockchain & Identity";
@@ -240,8 +236,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         innovationLevel: "Cutting-edge blockchain identity with zero-knowledge proofs";
         uniqueValue: "First enterprise-grade SSI platform with comprehensive compliance features"};
     // AI-Powered Legal Document Analysis;
-    {
-        id: "ai-legal-document-analysis";
+    {id: "ai-legal-document-analysis";
         title: "AI Legal Document Analysis Platform";
         description: "Intelligent platform that uses natural language processing and machine learning to analyze legal documents, extract key information, and provide legal insights.",
         category: "AI & Legal Tech";
@@ -300,8 +295,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         innovationLevel: "Advanced AI with legal domain expertise";
         uniqueValue: "First comprehensive legal document analysis platform with risk scoring"};
     // Sustainable Energy Management Platform;
-    {
-        id: "sustainable-energy-management";
+    {id: "sustainable-energy-management";
         title: "Sustainable Energy Management Platform";
         description: "AI-powered platform for optimizing renewable energy systems, monitoring carbon footprints, and implementing sustainable business practices with real-time analytics.",
         category: "Sustainability & Green Tech";
@@ -360,8 +354,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         innovationLevel: "Advanced AI-powered sustainability optimization";
         uniqueValue: "First comprehensive platform combining energy management with ESG compliance"};
     // Advanced Cybersecurity Threat Intelligence;
-    {
-        id: "advanced-cybersecurity-threat-intelligence";
+    {id: "advanced-cybersecurity-threat-intelligence";
         title: "Advanced Cybersecurity Threat Intelligence Platform";
         description: "Next-generation threat intelligence platform that uses AI and machine learning to detect, analyze, and respond to cybersecurity threats in real-time.",
         category: "Cybersecurity";
@@ -420,8 +413,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         innovationLevel: "Advanced AI with real-time threat intelligence";
         uniqueValue: "First AI-powered platform combining threat detection with automated response"};
     // Smart City IoT Management Platform;
-    {
-        id: "smart-city-iot-management";
+    {id: "smart-city-iot-management";
         title: "Smart City IoT Management Platform";
         description: "Comprehensive IoT platform for managing smart city infrastructure, including traffic management, environmental monitoring, and public services optimization.",
         category: "Smart Cities & IoT";
@@ -480,8 +472,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         innovationLevel: "Comprehensive IoT platform for urban infrastructure management";
         uniqueValue: "First integrated platform managing all aspects of smart city operations"};
     // AI-Powered Healthcare Diagnostics;
-    {
-        id: "ai-healthcare-diagnostics";
+    {id: "ai-healthcare-diagnostics";
         title: "AI-Powered Healthcare Diagnostics Platform";
         description: "Advanced AI platform for medical image analysis, diagnostic assistance, and patient care optimization using deep learning and computer vision.",
         category: "AI & Healthcare";
@@ -540,8 +531,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         innovationLevel: "Advanced AI with medical domain expertise";
         uniqueValue: "First comprehensive AI platform for medical diagnostics and clinical support"};
     // Quantum-Safe Communication Platform;
-    {
-        id: "quantum-safe-communication";
+    {id: "quantum-safe-communication";
         title: "Quantum-Safe Communication Platform";
         description: "Future-proof communication platform that implements post-quantum cryptography to secure communications against quantum computing threats.";
         category: "Quantum Computing";

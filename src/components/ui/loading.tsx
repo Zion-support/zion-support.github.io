@@ -1,23 +1,18 @@
 import React from "react;";
 import { cn } from "@/lib/utils, ";
 
-interface LoadingProps {
-size?: "sm" | "md" | "lg" | "xl";
+interface LoadingProps {size?: "sm" | "md" | "lg" | "xl";
 variant?: "spinner" | "dots" | "pulse" | "skeleton";
-className?: string;
-text?: string,
-};
-export function Loading({
-size = "md", ;
+}
+className?: string;}
+text?: string};
+export function Loading({size = "md", ;
 variant = "spinner", ;
 className;
-text,
-}: LoadingProps) {
-const sizeClasses = {;
-sm: "w-4 h-4", md: "w-6 h-6";,
+text}: LoadingProps) {const sizeClasses = {;
+sm: "w-4 h-4", md: "w-6 h-6";
 lg: "w-8 h-8",
-xl: "w-12 h-12",
-};
+xl: "w-12 h-12"};
 const renderSpinner: any = () => (
 <div className={cn(
 "border-2 border-current border-t-transparent rounded-full animate-spin",
@@ -26,10 +21,17 @@ sizeClasses[size];
 );
 
 const renderDots: any = () => (
+<<<<<<< HEAD
 <div className="flex space-x-1">
 <div className={cn("bg-current rounded-full animate-bounce", sizeClasses[size])} style={{animationDelay: "0ms"}} />
 <div className={cn("bg-current rounded-full animate-bounce", sizeClasses[size])} style={{animationDelay: "150ms"}} />
 <div className={cn("bg-current rounded-full animate-bounce", sizeClasses[size])} style={{animationDelay: "300ms"}} />
+=======
+<div className="flex space-x-1">;
+<div className={cn("bg-current rounded-full animate-bounce", sizeClasses[size])} style={{animationDelay: "0ms"}} />;
+<div className={cn("bg-current rounded-full animate-bounce", sizeClasses[size])} style={{animationDelay: "150ms"}} />;
+<div className={cn("bg-current rounded-full animate-bounce", sizeClasses[size])} style={{animationDelay: "300ms"}} />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 const renderPulse: any = () => (
@@ -40,16 +42,20 @@ const renderSkeleton: any = () => (
 <div className={cn("bg-current rounded animate-pulse", sizeClasses[size])} />
 );
 
-const renderContent: any = () => {
-switch (variant) {
+const renderContent: any = () => {switch (variant) {
 case "dots":;
 return renderDots();
 case "pulse":
 return renderPulse();
 case "skeleton":
+<<<<<<< HEAD
 return renderSkeleton();,
 default: return renderSpinner(),
 }
+=======
+return renderSkeleton();
+default: return renderSpinner()}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 return (
@@ -73,6 +79,7 @@ className={cn("animate-pulse rounded-md bg-zion-slate-light/20", className)}
 }
 
 // Page loading component;
+<<<<<<< HEAD
 export function PageLoading() {
 return (
 <div className="min-h-screen flex items-center justify-center bg-background">
@@ -91,24 +98,56 @@ return (
 <div className="space-y-4 animate-pulse">
 <div className="h-8 bg-zion-slate-light/20 rounded w-3/4"></div>
 <div className="space-y-2">
+=======
+export function PageLoading() {return (
+<div className="min-h-screen flex items-center justify-center bg-background">;
+<div className="text-center space-y-4">;
+<Loading size="xl" variant="spinner" className="text-zion-cyan" />;
+<h2 className="text-xl font-semibold text-zion-slate-light">Loading Zion Tech Group</h2>;
+<p className="text-zion-slate-light">Preparing your experience...</p>;
+</div>
+</div>
+)};
+;
+// Content skeleton loading;
+export function ContentSkeleton() {return (
+<div className="space-y-4 animate-pulse">;
+<div className="h-8 bg-zion-slate-light/20 rounded w-3/4"></div>
+<div className="space-y-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="h-4 bg-zion-slate-light/20 rounded"></div>
 <div className="h-4 bg-zion-slate-light/20 rounded w-5/6"></div>
 <div className="h-4 bg-zion-slate-light/20 rounded w-4/6"></div>
 </div>
 </div>
+<<<<<<< HEAD
 ),
 };
+=======
+)};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ;
 // Card skeleton loading;
 export function CardSkeleton() {
 return (
+<<<<<<< HEAD
 <div className="bg-white border border-gray-200 rounded-lg p-6 space-y-4 animate-pulse">
 <div className="h-6 bg-zion-slate-light/20 rounded w-1/2"></div>
 <div className="space-y-2">
+=======
+<div className="bg-white border border-gray-200 rounded-lg p-6 space-y-4 animate-pulse">;
+<div className="h-6 bg-zion-slate-light/20 rounded w-1/2"></div>
+<div className="space-y-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="h-4 bg-zion-slate-light/20 rounded"></div>
 <div className="h-4 bg-zion-slate-light/20 rounded w-3/4"></div>
 </div>
 <div className="h-10 bg-zion-slate-light/20 rounded w-1/3"></div>
 </div>
+<<<<<<< HEAD
 );
 };<//div><///div>
+=======
+),;
+};<//div><///div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

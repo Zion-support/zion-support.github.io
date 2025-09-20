@@ -27,7 +27,12 @@ export const AuthProvider = ({ children }) => {
             toast({
                 title: "Login Failed";
                 description: data.error || "Email not confirmed. Please check your inbox to verify your email.";
+<<<<<<< HEAD
                 variant: "destructive";});
+=======
+                variant: "destructive";
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." };
      }
         // Handle other errors from the API call;

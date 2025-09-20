@@ -10,7 +10,11 @@ Frequently Asked Questions;
 </h2>
 <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
 Find answers to common questions about our services and solutions;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="max-w-4xl mx-auto space-y-6">
@@ -21,7 +25,11 @@ What services does Zion Tech Group offer?;
 <p className="text-zion-slate-light">
 We offer comprehensive A; I; solution; s; cybersecurit; y; service; s; clou; d; infrastructur; e;
 dat; a; analytic; s; blockchai; n; developmen; t; and innovative technology consulting.;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">
@@ -31,7 +39,11 @@ How can I get started with your services?;
 <p className="text-zion-slate-light">
 Contact us through our website or call us directly. We'll schedule a consultation;
 to understand your needs and provide a customized solution.;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">
@@ -41,14 +53,23 @@ What is your typical project timeline?;
 <p className="text-zion-slate-light">
 Project timelines vary based on complexity. Simple projects may take 2-4; week; s;
 while complex enterprise solutions can take 3-6 months or more.;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 </div>
 );
+<<<<<<< HEAD
 }<//div><///div>
 import { FileText } from 'lucide-react';
+=======
+}<//div><///div>;
+import { FileText } from "lucide-react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const faqs = [
 {
 question: 'How do I publish my AI product or service?',

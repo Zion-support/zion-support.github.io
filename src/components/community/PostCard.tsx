@@ -1,8 +1,12 @@
 import React from "react";
 import { ForumPost } from "@/types/community";
 
+<<<<<<< HEAD
 interface PostCardProps {
 post: ForumPost};
+=======
+interface PostCardProps {post: ForumPost};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export default function PostCard({ post }: PostCardProps) {
 return (
 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4">
@@ -11,6 +15,7 @@ return (
 src={post.author.avatar}
 alt={post.author.name}
 className="w-10 h-10 rounded-full"
+<<<<<<< HEAD
 />
 <div className="flex-1">
 <h3 className="text-lg font-semibold text-zion-cyan mb-2">{post.title}</h3>
@@ -27,11 +32,29 @@ className="w-10 h-10 rounded-full"
 
 interface PostCardProps {
 post: {,
+=======
+/>;
+<div className="flex-1">;
+<h3 className="text-lg font-semibold text-zion-cyan mb-2">{post.title}</h3>;
+<p className="text-zion-slate-light mb-3 line-clamp-3">{post.content}</p>;
+<div className="flex items-center justify-between text-sm text-zion-slate-light">;
+<span>By {post.author.name}</span>;
+<span>{new Date(post.createdAt).toLocaleDateString()}</span>;
+</div>
+<div className="flex items-center space-x-4 mt-2 text-sm text-zion-slate-light">;
+<span>{post.replies.length} replies</span>;
+<span>{post.likes} likes</span>;
+<span>{post.views} views</span>;
+</div>
+
+interface PostCardProps {post: {,}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 id: string; title: string; content: string; authorName: string; createdAt: string; likes: number; replies: number};
 }
 
 const PostCard: React.FC<PostCardProps> = ({ post }) => {
 return (
+<<<<<<< HEAD
 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4">
 <h3 className="text-xl font-semibold text-white mb-2">{post.title}</h3>
 <p className="text-zion-slate-light mb-4 line-clamp-3">{post.content}</p>
@@ -41,6 +64,17 @@ return (
 <div className="flex items-center space-x-4">
 <span>{post.likes} likes</span>
 <span>{post.replies} replies</span>
+=======
+<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4">;
+<h3 className="text-xl font-semibold text-white mb-2">{post.title}</h3>;
+<p className="text-zion-slate-light mb-4 line-clamp-3">{post.content}</p>;
+<div className="flex justify-between items-center text-sm text-zion-slate-light">;
+<span>By {post.authorName}</span>;
+<span>{new Date(post.createdAt).toLocaleDateString()}</span>;
+<div className="flex items-center space-x-4">;
+<span>{post.likes} likes</span>;
+<span>{post.replies} replies</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -52,6 +86,12 @@ export default PostCard;
 }
 <//div><///div>)
 import React from 'react'
+<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns"
 import Link from "next/link";
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, LockCheckCircle } from 'lucide-react';
+=======
+import { formatDistanceToNow } from "date-fns";
+import Link from "next/link";
+import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

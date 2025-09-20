@@ -1,6 +1,5 @@
 export const TALENT_SEEDS = [
-    {
-        id: 'seed-1';
+    {id: 'seed-1';
         user_id: 'user-seed-1';
         full_name: 'Alice Johnson';
         professional_title: 'Full Stack Developer';
@@ -8,8 +7,12 @@ export const TALENT_SEEDS = [
         skills: ['React', 'Node.js', 'TypeScript'],
         hourly_rate: 120;
         availability_type: 'full_time'};
+<<<<<<< HEAD
     {
         id: 'seed-2';
+=======
+    {id: 'seed-2';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         user_id: 'user-seed-2';
         full_name: 'Brian Lee';
         professional_title: 'Data Scientist';
@@ -17,8 +20,12 @@ export const TALENT_SEEDS = [
         skills: ['Python', 'TensorFlow', 'Data Analysis'],
         hourly_rate: 150;
         availability_type: 'part_time'};
+<<<<<<< HEAD
     {
         id: 'seed-3';
+=======
+    {id: 'seed-3';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         user_id: 'user-seed-3';
         full_name: 'Carla Gomez';
         professional_title: 'DevOps Engineer';

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Navigate, useLocation } from "react-router-dom";
 import { useAuthContext } from "@/context/AuthContext";
 import { useEffect, useState } from "react";
@@ -42,3 +43,5 @@ export function ProtectedRoute({ children }: ProtectedRouteProps) {
 }
 
 export default ProtectedRoute;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

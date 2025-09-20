@@ -4,18 +4,34 @@ import { Settings; FileText; Eye; Zap; Volume2; VolumeX } from "lucide-react, ";
 import { Button } from "./button, ";
 
 interface AccessibilitySettings {
+<<<<<<< HEAD
 fontSize: "small" | "medium" | "large";,
 highContrast: boolean;,
 reducedMotion: boolean;,
 soundEnabled: boolean;,
+=======
+fontSize: "small" | "medium" | "large";
+highContrast: boolean;
+reducedMotion: boolean;
+soundEnabled: boolean;
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 export function AccessibilityMenu() {;
 const [isOpen; setIsOpen] = useState(false);
 const [settings; setSettings] = useState<AccessibilitySettings>({
+<<<<<<< HEAD
 fontSize: "medium";,
 highContrast: false;,
 reducedMotion: false;,
 soundEnabled: true;,
+=======
+fontSize: "medium";
+highContrast: false;
+reducedMotion: false;
+soundEnabled: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 });
 useEffect(() => {
 // Load settings from localStorage;
@@ -68,10 +84,17 @@ setSettings(prev => ({ ...prev; fontSize: size }));
 
 const resetSettings: any = () => {
 const defaultSettings: AccessibilitySettings = {;
+<<<<<<< HEAD
 fontSize: "medium";,
 highContrast: false;,
 reducedMotion: false;,
 soundEnabled: true;,
+=======
+fontSize: "medium";
+highContrast: false;
+reducedMotion: false;
+soundEnabled: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 setSettings(defaultSettings);
 };
@@ -110,7 +133,11 @@ onClick={resetSettings}
 className="text-zion-cyan hover:text-zion-cyan-light text-sm"
 >;
 Reset;
+<<<<<<< HEAD
 </Button>
+=======
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Font Size */}
@@ -129,8 +156,7 @@ onClick={() => updateFontSize(size)}
 className={`text-xs capitalize ${
 settings.fontSize === size;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "text-zion-slate-light hover: text-white",
-}`}
+: "text-zion-slate-light hover: text-white"}`}
 >;
 {size}
 </Button>
@@ -151,11 +177,14 @@ onClick={() => toggleSetting("highContrast")}
 className={`w-full ${
 settings.highContrast;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "text-zion-slate-light hover: text-white",
-}`}
+: "text-zion-slate-light hover: text-white"}`}
 >;
 {settings.highContrast ? "Enabled" : "Disabled"}
+<<<<<<< HEAD
 </Button>
+=======
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Reduced Motion */}
@@ -171,11 +200,14 @@ onClick={() => toggleSetting("reducedMotion")}
 className={`w-full ${
 settings.reducedMotion;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "text-zion-slate-light hover: text-white",
-}`}
+: "text-zion-slate-light hover: text-white"}`}
 >;
 {settings.reducedMotion ? "Enabled" : "Disabled"}
+<<<<<<< HEAD
 </Button>
+=======
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Sound Toggle */}
@@ -195,11 +227,14 @@ onClick={() => toggleSetting("soundEnabled")}
 className={`w-full ${
 settings.soundEnabled;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "text-zion-slate-light hover: text-white",
-}`}
+: "text-zion-slate-light hover: text-white"}`}
 >;
 {settings.soundEnabled ? "Enabled" : "Disabled"}
+<<<<<<< HEAD
 </Button>
+=======
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Info */}
@@ -207,7 +242,11 @@ settings.soundEnabled;
 Settings are automatically saved and applied across your session;
 </div>
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 

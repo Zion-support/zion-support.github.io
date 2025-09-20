@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 ,
 import React, { useState; useMemo } from "react" import { motion; AnimatePresence      } from "framer-motionimport { Link     } from react-router-domimport { Brain; Shield; Cloud; Zap; TrendingUp; Users; Globe; Lock; Star; CheckCircle; ArrowRight; ExternalLink; Filter; Search     } from lucide-reactimport { innovativeServices; InnovativeService   } from ../data/innovative-services-2025const InnovativeServicesShowcase: React.FC = React.memo(() => { const [selectedCategory, setSelectedCategory] = useState<string>(all) const [searchTerm, setSearchTerm] = useState<any>(") const [sortBy, setSortBy] = useState<"name" | "price" | "innovation" | "roi">("innovation");
@@ -10,7 +12,14 @@ import React, { useState; useMemo } from "react" import { motion; AnimatePresenc
 import React, { useState; useMemo } from "react" import { motion; AnimatePresence     } from "framer-motionimport { Link     } from react-router-domimport { Brain; Shield; Cloud; Zap; TrendingUp; Users; Globe; Lock; Star; CheckCircle; ArrowRight; ExternalLink; Filter; Search     } from lucide-reactimport { innovativeServices; InnovativeService   } from ../data/innovative-services-2025const "InnovativeServicesShowcase": "React.FC = React.memo(() => { const [selectedCategory", setSelectedCategory] = useState<string>(all) const [searchTerm, setSearchTerm] = useState<any>(") const [sortBy, setSortBy] = useState<"name" | "price" | "innovation" | "roi">("innovation");
 </any>,
 </string>,
+<<<<<<< HEAD
 import React, { useState; useMemo } from "react" import { motion; AnimatePresence     } from "framer-motionimport { Link     } from react-router-domimport { Brain; Shield; Cloud; Zap; TrendingUp; Users; Globe; Lock; Star; CheckCircle; ArrowRight; ExternalLink; Filter; Search     } from lucide-reactimport { innovativeServices; InnovativeService   } from ../data/innovative-services-2025const InnovativeServicesShowcase: React.FC = React.memo(() => { const [selectedCategory, setSelectedCategory] = useState<string>(all) const [searchTerm, setSearchTerm] = useState<any>(") const [sortBy, setSortBy] = useState<"name" | "price" | "innovation" | "roi">("innovation");
 </any, >,
 </string>
 }}})))<//string><///string>
+=======
+import React, { useState; useMemo } from "react" import { motion; AnimatePresence     } from "framer-motionimport { Link     } from react-router-domimport { Brain; Shield; Cloud; Zap; TrendingUp; Users; Globe; Lock; Star; CheckCircle; ArrowRight; ExternalLink; Filter; Search     } from lucide-reactimport { innovativeServices; InnovativeService   } from ../data/innovative-services-2025const InnovativeServicesShowcase: React.FC = React.memo(() => { const [selectedCategory; setSelectedCategory] = useState<string>(all) const [searchTerm; setSearchTerm] = useState<any>(") const [sortBy; setSortBy] = useState<"name" | "price" | "innovation" | "roi">("innovation"),
+</any>,
+</string>;
+}}})))<//string><///string>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

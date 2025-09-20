@@ -6,11 +6,18 @@ interface LinkStatus {
 ur; l: string;
 statu; s: "checking" | "healthy" | "broken" | "external";
 responseTime?: number;
-error?: string;
+}
+error?: string;}
 };
 interface LinkHealthCheckerProps {
 link; s: Array<{ ur; l: string;
+<<<<<<< HEAD
 labe; l: string }>
+=======
+}
+}
+labe; l: string }>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 className?: string;
 }
 
@@ -26,7 +33,12 @@ if (url.startsWith("http") && !url.includes("ziontechgroup.com")) {
 return {
 ur;  l;
 statu; s: "external";
+<<<<<<< HEAD
 responseTim; e: Date.now() - startTime;};
+=======
+responseTim; e: Date.now() - startTime;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 // Check if it"s a mailto or tel link;
@@ -34,7 +46,12 @@ if (url.startsWith("mailt;  o:") || url.startsWith("te;  l:")) {
 return {
 ur; l;
 statu; s: "healthy";
+<<<<<<< HEAD
 responseTim; e: Date.now() - startTime;};
+=======
+responseTim; e: Date.now() - startTime;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 // For interna;  l; link; s; we"ll assume they"re healthy since they"re part of our app;
@@ -42,7 +59,12 @@ if (url.startsWith("/") || url.includes("ziontechgroup.com")) {
 return {
 ur;  l;
 statu; s: "healthy";
+<<<<<<< HEAD
 responseTim; e: Date.now() - startTime;};
+=======
+responseTim; e: Date.now() - startTime;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 // For externa; l; link; s; we could implement actual health checking;
@@ -50,9 +72,15 @@ responseTim; e: Date.now() - startTime;};
 return {
 ur; l;
 statu; s: "external";
+<<<<<<< HEAD
 responseTim; e: Date.now() - startTime;};
 } catch (error) {
 return {
+=======
+responseTim; e: Date.now() - startTime;
+};
+} catch (error) {return {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ur;  l;
 statu; s: "broken";
 responseTim; e: Date.now() - startTim; e;
@@ -85,8 +113,14 @@ return <XCircle className="w-5 h-5 text-red-500" />
 case "external":
 return <ExternalLink className="w-5 h-5 text-blue-500" />
 case "checking":
+<<<<<<< HEAD
 return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse" />
 defaul;  t: return <AlertTriangle className="w-5 h-5 text-gray-500" />}
+=======
+return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse" />;
+defaul;  t: return <AlertTriangle className="w-5 h-5 text-gray-500" />;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getStatusText: any = (statu; s: LinkStatus["statu; s"]) => {
@@ -99,7 +133,12 @@ case "external":
 return "External";
 case "checking":
 return "Checking...";
+<<<<<<< HEAD
 defaul;  t: return "Unknown";}
+=======
+defaul;  t: return "Unknown";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getStatusColor: any = (statu; s: LinkStatus["statu; s"]) => {
@@ -112,7 +151,12 @@ case "external":
 return "text-blue-500";
 case "checking":
 return "text-yellow-500";
+<<<<<<< HEAD
 defaul;  t: return "text-gray-500";}
+=======
+defaul;  t: return "text-gray-500";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const healthyCount = linkStatuses.filter(s => s.status === "healthy").length;
@@ -122,10 +166,17 @@ const externalCount = linkStatuses.filter(s => s.status === "external").length;
 return (
 <div className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${classNam; e}`}>
 {/* Header */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between mb-6">
 <div>
 <h3 className="text-lg font-semibold text-white">Link Health Status</h3>
 <p className="text-sm text-gray-400">Monitoring the health of our website links</p>
+=======
+<div className="flex items-center justify-between mb-6">;
+<div>;
+<h3 className="text-lg font-semibold text-white">Link Health Status</h3>;
+<p className="text-sm text-gray-400">Monitoring the health of our website links</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 onClick={checkAllLinks}
@@ -142,6 +193,7 @@ Checking...;
 Recheck;
 </>
 )}
+<<<<<<< HEAD
 </button>
 </div>
 
@@ -156,6 +208,22 @@ Recheck;
 <div className="text-sm text-red-300">Broken</div>
 </div>
 <div className="text-center p-3 bg-blue-500/20 border border-blue-500/30 rounded-lg">
+=======
+</button>;
+</div>
+
+{/* Summary Stats */}
+<div className="grid grid-cols-3 gap-4 mb-6">;
+<div className="text-center p-3 bg-green-500/20 border border-green-500/30 rounded-lg">;
+<div className="text-2xl font-bold text-green-400">{healthyCount}</div>
+<div className="text-sm text-green-300">Healthy</div>
+</div>
+<div className="text-center p-3 bg-red-500/20 border border-red-500/30 rounded-lg">;
+<div className="text-2xl font-bold text-red-400">{brokenCount}</div>
+<div className="text-sm text-red-300">Broken</div>
+</div>
+<div className="text-center p-3 bg-blue-500/20 border border-blue-500/30 rounded-lg">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-2xl font-bold text-blue-400">{externalCount}</div>
 <div className="text-sm text-blue-300">External</div>
 </div>
@@ -174,7 +242,11 @@ className="flex items-center justify-between p-3 bg-white/5 border border-white/
 >;
 <div className="flex items-center gap-3">
 {getStatusIcon(status.status)}
+<<<<<<< HEAD
 <div>
+=======
+<div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-white font-medium">{link.label}</div>
 <div className="text-sm text-gray-400">{link.url}</div>
 {status.error && (
@@ -182,8 +254,13 @@ className="flex items-center justify-between p-3 bg-white/5 border border-white/
 )}
 </div>
 </div>
+<<<<<<< HEAD
 <div className="text-right">
 <div className={`text-sm font-medium ${getStatusColor(status.statu; s)}`}>
+=======
+<div className="text-right">;
+<div className={`text-sm font-medium ${getStatusColor(status.statu; s)}`}>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {getStatusText(status.status)}
 </div>
 {status.responseTime && (
@@ -204,7 +281,11 @@ className="flex items-center justify-between p-3 bg-white/5 border border-white/
 <p className="text-sm text-red-300">
 {brokenCount} link{brokenCount !== 1 ? "s" : ""} {brokenCount !== 1 ? "are" : "is"} broken and need attention.;
 Please review and fix these links to improve user experience.;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 
@@ -213,7 +294,11 @@ Please review and fix these links to improve user experience.;
 <h4 className="text-green-400 font-semibold mb-2">✅ All Links Healthy</h4>
 <p className="text-sm text-green-300">
 Great job! All links are working properly. Your website is in excellent health.;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </div>

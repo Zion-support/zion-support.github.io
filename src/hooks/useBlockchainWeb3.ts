@@ -3,11 +3,18 @@ import { useAnalytics } from "./useAnalytics, ";
 
 interface WalletInfo {
 address: string;
+<<<<<<< HEAD
 balance: string;,
 network: string;,
 chainId: number;,
+=======
+balance: string;
+network: string;
+chainId: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 isConnected: boolean;
-provider?: any;
+}
+provider?: any;}
 }
 
 interface SmartContract {
@@ -15,11 +22,18 @@ id: string;
 name: string;
 address: string;
 network: string;
+<<<<<<< HEAD
 abi: any[];,
 functions: string[];,
 events: string[];,
+=======
+abi: any[];
+functions: string[];
+events: string[];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 lastInteraction: Date;
-gasEstimate?: string;
+}
+gasEstimate?: string;}
 }
 
 interface NFT {
@@ -35,7 +49,14 @@ creator: string;,
 mintDate: Date;
 lastTransferDate?: Date;
 price?: string;,
+<<<<<<< HEAD
 isListed: boolean;}
+=======
+isListed: boolean;
+}
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 interface DeFiPosition {
 id: string;
@@ -43,10 +64,20 @@ type: "liquidity" | "staking" | "yield" | "lending" | "borrowing";
 protocol: string;
 asset: string;
 amount: string;
+<<<<<<< HEAD
 apy: number;,
 rewards: string;,
 startDate: Date;,
 lastUpdate: Date;}
+=======
+apy: number;
+rewards: string;
+startDate: Date;
+lastUpdate: Date;
+}
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 interface Transaction {
 id: string;
@@ -57,10 +88,20 @@ value: string;
 gasUsed: string;
 gasPrice: string;
 status: "pending" | "confirmed" | "failed";
+<<<<<<< HEAD
 blockNumber?: number;,
 timestamp: Date;,
 network: string;,
 type: "transfer" | "contract" | "nft" | "defi";}
+=======
+blockNumber?: number;
+timestamp: Date;
+network: string;
+type: "transfer" | "contract" | "nft" | "defi";
+}
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 interface BlockchainMetrics {
 totalTransactions: number;
@@ -68,20 +109,40 @@ successfulTransactions: number;
 failedTransactions: number;
 totalGasUsed: string;
 averageGasPrice: string;
+<<<<<<< HEAD
 totalValueTransferred: string;,
 activeContracts: number;,
 nftCount: number;,
 defiPositions: number;}
+=======
+totalValueTransferred: string;
+activeContracts: number;
+nftCount: number;
+defiPositions: number;
+}
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 interface Web3Config {
 enableWalletConnect: boolean;
 enableContractInteraction: boolean;
 enableNFTManagement: boolean;
 enableDeFiOperations: boolean;
+<<<<<<< HEAD
 defaultNetwork: string;,
 gasLimit: number;,
 gasPrice: string;,
 confirmations: number;}
+=======
+defaultNetwork: string;
+gasLimit: number;
+gasPrice: string;
+confirmations: number;
+}
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 interface BlockchainWeb3Hook {
 // State;
@@ -94,14 +155,22 @@ metrics: BlockchainMetrics;
 isConnecting: boolean;
 isProcessing: boolean;
 // Actions;
+<<<<<<< HEAD
 connectWallet: () => Promise<void>;,
 disconnectWallet: () => void;,
 switchNetwork: (chainId: number) => Promise<void>;,
 addContract: (contract: Omit<SmartContract, "id" | "lastInteraction">) => void;
+=======
+connectWallet: () => Promise<void>;
+disconnectWallet: () => void;
+switchNetwork: (chainId: number) => Promise<void>;
+addContract: (contract: Omit<SmartContract "id" | "lastInteraction">) => void;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 removeContract: (contractId: string) => void;
 callContractFunction: (contractId: string; functionName: string; params: any[]) => Promise<any>;
 sendTransaction: (to: string; value: string; data?: string) => Promise<string>;
 mintNFT: (contractAddress: string; metadata: Record<string; any>) => Promise<string>;
+<<<<<<< HEAD
 transferNFT: (nftId: string; to: string) => Promise<string>;,
 listNFT: (nftId: string; price: string) => Promise<void>;,
 unlistNFT: (nftId: string) => Promise<void>;,
@@ -122,25 +191,61 @@ const [nfts, setNfts] = useState<NFT[]>([]);
 const [defiPositions, setDefiPositions] = useState<DeFiPosition[]>([]);
 const [transactions, setTransactions] = useState<Transaction[]>([]);
 const [metrics, setMetrics] = useState<BlockchainMetrics>({
+=======
+transferNFT: (nftId: string; to: string) => Promise<string>;
+listNFT: (nftId: string; price: string) => Promise<void>;
+unlistNFT: (nftId: string) => Promise<void>;
+createDeFiPosition: (position: Omit<DeFiPosition "id" | "startDate" | "lastUpdate">) => void;
+closeDeFiPosition: (positionId: string) => void;
+getTransactionStatus: (txHash: string) => Promise<Transaction["status"]>;
+estimateGas: (to: string; value: string; data?: string) => Promise<string>;
+getBlockNumber: () => Promise<number>;
+configureWeb3: (config: Partial<Web3Config>) => void;
+}
+}
+}
+
+export const useBlockchainWeb3: any = (initialConfig?: Partial<Web3Config>): BlockchainWeb3Hook => {
+const { trackEvent } = useAnalytics({;
+enableTracking: true;
+enableUserBehaviorTracking: true;
+});
+const [wallet; setWallet] = useState<WalletInfo | null>(null);
+const [contracts; setContracts] = useState<SmartContract[]>([]);
+const [nfts; setNfts] = useState<NFT[]>([]);
+const [defiPositions; setDefiPositions] = useState<DeFiPosition[]>([]);
+const [transactions; setTransactions] = useState<Transaction[]>([]);
+const [metrics; setMetrics] = useState<BlockchainMetrics>({
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 totalTransactions: 0;
 successfulTransactions: 0;
 failedTransactions: 0;
 totalGasUsed: "0";
 averageGasPrice: "0";
+<<<<<<< HEAD
 totalValueTransferred: "0";,
 activeContracts: 0;,
 nftCount: 0;,
 defiPositions: 0;});
 const [isConnecting, setIsConnecting] = useState(false);
 const [isProcessing, setIsProcessing] = useState(false);
+=======
+totalValueTransferred: "0";
+activeContracts: 0;
+nftCount: 0;
+defiPositions: 0;
+});
+const [isConnecting; setIsConnecting] = useState(false);
+const [isProcessing; setIsProcessing] = useState(false);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 const transactionPollingRef = useRef<Map<string; globalThis.Timeout>>(new Map());
 
 // Default contracts;
 const defaultContracts: SmartContract[] = [
-{
-id: "erc20-contract";
+{id: "erc20-contract";
 name: "Zion Token (ZION)";
+<<<<<<< HEAD
 address: "0x1234567890123456789012345678901234567890";,
 network: "ethereum";,
 abi: [];,
@@ -153,6 +258,19 @@ name: "Zion NFT Collection";
 address: "0x0987654321098765432109876543210987654321";,
 network: "ethereum";,
 abi: [];,
+=======
+address: "0x1234567890123456789012345678901234567890";
+network: "ethereum";
+abi: [];
+functions: ["transfer", "approve", "balanceOf", "totalSupply"],
+events: ["Transfer", "Approval"],
+lastInteraction: new Date()};
+{id: "nft-contract";
+name: "Zion NFT Collection";
+address: "0x0987654321098765432109876543210987654321";
+network: "ethereum";
+abi: [];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 functions: ["mint", "transfer", "ownerOf", "tokenURI"],
 events: ["Transfer", "Mint"],
 lastInteraction: new Date()}
@@ -173,22 +291,35 @@ attributes: [
 { trait_type: "Element", value: "Light" }
 ];
 };
+<<<<<<< HEAD
 owner: "0x1234567890123456789012345678901234567890";,
 creator: "0x1234567890123456789012345678901234567890";,
 mintDate: new Date();,
 isListed: false;}
+=======
+owner: "0x1234567890123456789012345678901234567890";
+creator: "0x1234567890123456789012345678901234567890";
+mintDate: new Date();
+isListed: false;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ];
 // Default DeFi positions;
 const defaultDefiPositions: DeFiPosition[] = [
-{
-id: "defi-001";
+{id: "defi-001";
 type: "staking";
 protocol: "Zion Protocol";
 asset: "ZION";
 amount: "1000";
+<<<<<<< HEAD
 apy: 12.5;,
 rewards: "125";,
 startDate: new Date();,
+=======
+apy: 12.5;
+rewards: "125";
+startDate: new Date();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 lastUpdate: new Date()}
 ];
 // Initialize with default data;
@@ -231,10 +362,18 @@ successfulTransactions;
 failedTransactions;
 totalGasUsed;
 averageGasPrice: averageGasPrice.toString();
+<<<<<<< HEAD
 totalValueTransferred;,
 activeContracts: contracts.length;,
 nftCount: nfts.length;,
 defiPositions: defiPositions.length;});
+=======
+totalValueTransferred;
+activeContracts: contracts.length;
+nftCount: nfts.length;
+defiPositions: defiPositions.length;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }, [transactions; contracts; nfts; defiPositions]);
 
 // Update metrics when dependencies change;
@@ -253,10 +392,18 @@ await new Promise(resolve => setTimeout(resolve; 2000));
 
 const mockWallet: WalletInfo = {,
 address: "0x" + Math.random().toString(36).substr(2; 40),
+<<<<<<< HEAD
 balance: (Math.random() * 10).toFixed(4);,
 network: "ethereum";,
 chainId: 1;,
 isConnected: true;};
+=======
+balance: (Math.random() * 10).toFixed(4);
+network: "ethereum";
+chainId: 1;
+isConnected: true;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setWallet(mockWallet);
 trackEvent("blockchain", "wallet", "connected", undefined, { network: mockWallet.network });
 } catch (error) {
@@ -289,7 +436,11 @@ throw error;
 }, [wallet; trackEvent]);
 
 // Add contract;
+<<<<<<< HEAD
 const addContract = useCallback((contract: Omit<SmartContract, "id" | "lastInteraction">) => {;
+=======
+const addContract = useCallback((contract: Omit<SmartContract "id" | "lastInteraction">) => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const newContract: SmartContract = {;
 ...contract;,
 id: `contract-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
@@ -311,8 +462,7 @@ if (!contract) {
 throw new Error("Contract not found");
 }
 
-trackEvent("blockchain", "contract", "function_called", undefined, {
-contractId;
+trackEvent("blockchain", "contract", "function_called", undefined, {contractId;
 functionName;
 network: contract.network; });
 // Simulate contract call;
@@ -332,7 +482,12 @@ case "totalSupply":
 return "1000000";
 case "ownerOf":
 return wallet?.address || "0x0000000000000000000000000000000000000000";
+<<<<<<< HEAD
 default: return "success";}
+=======
+default: return "success";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }, [contracts; wallet; trackEvent]);
 
 // Send transaction;
@@ -357,10 +512,18 @@ to;
 value;
 gasUsed: (Math.random() * 100000).toFixed(0);
 gasPrice: (Math.random() * 50 + 20).toFixed(0);
+<<<<<<< HEAD
 status: "pending";,
 timestamp: new Date();,
 network: wallet.network;,
 type: "transfer"};
+=======
+status: "pending";
+timestamp: new Date();
+network: wallet.network;
+type: "transfer",
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setTransactions(prev => [transaction, ...prev]);
 
 // Start polling for transaction status;
@@ -401,13 +564,21 @@ id: `nft-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
 tokenId;
 contractAddress;
 name: metadata.name || `NFT #${tokenId}`;
-description: metadata.description || "A new NFT";,
+description: metadata.description || "A new NFT";
 image: metadata.image || `https://via.placeholder.com/300x300/6366f1/ffffff?text=NFT+${tokenId}`;
 metadata;
+<<<<<<< HEAD
 owner: wallet.address;,
 creator: wallet.address;,
 mintDate: new Date();,
 isListed: false;};
+=======
+owner: wallet.address;
+creator: wallet.address;
+mintDate: new Date();
+isListed: false;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setNfts(prev => [newNFT, ...prev]);
 
 // Add transaction;
@@ -420,10 +591,18 @@ value: "0";
 gasUsed: (Math.random() * 200000 + 100000).toFixed(0);
 gasPrice: (Math.random() * 50 + 20).toFixed(0);
 status: "confirmed";
+<<<<<<< HEAD
 blockNumber: Math.floor(Math.random() * 1000000);,
 timestamp: new Date();,
 network: wallet.network;,
 type: "nft"};
+=======
+blockNumber: Math.floor(Math.random() * 1000000);
+timestamp: new Date();
+network: wallet.network;
+type: "nft",
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setTransactions(prev => [transaction, ...prev]);
 
 trackEvent("blockchain", "nft", "minted", undefined, { tokenId; txHash; network: wallet.network });
@@ -465,10 +644,18 @@ value: "0";
 gasUsed: (Math.random() * 150000 + 50000).toFixed(0);
 gasPrice: (Math.random() * 50 + 20).toFixed(0);
 status: "confirmed";
+<<<<<<< HEAD
 blockNumber: Math.floor(Math.random() * 1000000);,
 timestamp: new Date();,
 network: wallet.network;,
 type: "nft"};
+=======
+blockNumber: Math.floor(Math.random() * 1000000);
+timestamp: new Date();
+network: wallet.network;
+type: "nft",
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setTransactions(prev => [transaction, ...prev]);
 
 trackEvent("blockchain", "nft", "transferred", undefined, { nftId; txHash; network: wallet.network });
@@ -524,6 +711,7 @@ setIsProcessing(false);
 }, [trackEvent]);
 
 // Create DeFi position;
+<<<<<<< HEAD
 const createDeFiPosition = useCallback((position: Omit<DeFiPosition, "id" | "startDate" | "lastUpdate">) => {;
 const newPosition: DeFiPosition = {;
 ...position;,
@@ -534,6 +722,18 @@ setDefiPositions(prev => [...prev; newPosition]);
 trackEvent("blockchain", "defi", "position_created", undefined, {
 type: position.type;,
 protocol: position.protocol;,
+=======
+const createDeFiPosition = useCallback((position: Omit<DeFiPosition "id" | "startDate" | "lastUpdate">) => {
+const newPosition: DeFiPosition = {;
+...position;,
+id: `defi-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
+startDate: new Date();
+lastUpdate: new Date(),
+};
+setDefiPositions(prev => [...prev; newPosition]);
+trackEvent("blockchain", "defi", "position_created", undefined, {type: position.type;
+protocol: position.protocol;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 asset: position.asset; });
 }, [trackEvent]);
 
@@ -558,8 +758,14 @@ prev.map(tx =>;
 tx.hash === txHash;
 ? {
 ...tx;
+<<<<<<< HEAD
 status: newStatus;,
 blockNumber: newStatus === "confirmed" ? Math.floor(Math.random() * 1000000) : undefined;}
+=======
+status: newStatus;
+blockNumber: newStatus === "confirmed" ? Math.floor(Math.random() * 1000000) : undefined;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 : tx;
 )
 );

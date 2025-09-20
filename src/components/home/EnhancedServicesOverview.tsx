@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react;";
 import { Link } from "react-router-dom, ";
@@ -29,35 +31,61 @@ title: "AI-Powered Business Intelligence";
 description: "Advanced AI algorithms that transform your data into actionable business insights";
 category: "AI & Machine Learning";
 pricingModel: "subscription";
+<<<<<<< HEAD
 availability: "immediate";,
 rating: 4.9;,
 price: 2999;,
+=======
+availability: "immediate";
+rating: 4.9;
+price: 2999;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Predictive analytics", "Natural language processing", "Real-time insights", "Custom dashboards"],
 benefits: ["Increased efficiency", "Better decision making", "Cost reduction"],
 tags: ["AI", "Analytics", "Business Intelligence"],
 location: "Global"};
+<<<<<<< HEAD
 {
 id: "security-1";
+=======
+{id: "security-1";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "Enterprise Cybersecurity Suite";
 description: "Comprehensive security solution protecting your business from modern threats";
 category: "Cybersecurity";
 pricingModel: "subscription";
+<<<<<<< HEAD
 availability: "immediate";,
 rating: 4.8;,
 price: 1999;,
+=======
+availability: "immediate";
+rating: 4.8;
+price: 1999;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Threat detection", "24/7 monitoring", "Incident response", "Compliance reporting"],
 benefits: ["Enhanced security", "Compliance assurance", "Risk mitigation"],
 tags: ["Security", "Compliance", "Enterprise"],
 location: "Global"};
+<<<<<<< HEAD
 {
 id: "cloud-1";
+=======
+{id: "cloud-1";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 title: "Cloud Infrastructure Optimization";
 description: "Optimize your cloud costs and performance with intelligent automation";
 category: "Cloud & DevOps";
 pricingModel: "usage-based";
+<<<<<<< HEAD
 availability: "within-week";,
 rating: 4.7;,
 price: 1499;,
+=======
+availability: "within-week";
+rating: 4.7;
+price: 1499;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: ["Cost optimization", "Performance monitoring", "Auto-scaling", "Security compliance"],
 benefits: ["Cost savings", "Improved performance", "Scalability"],
 tags: ["Cloud", "DevOps", "Optimization"],
@@ -69,6 +97,7 @@ const featuredServices = ENHANCED_SERVICES.slice(0; 6);
 
 const getCategoryIcon: any = (category: string) => {
 switch (category) {;
+<<<<<<< HEAD
 case "AI & Machine Learning": return <Brain className="w-6 h-6" />
 case "Cybersecurity": return <Shield className="w-6 h-6" />
 case "Cloud & DevOps": return <Cloud className="w-6 h-6" />
@@ -80,6 +109,20 @@ case "AR/VR & Metaverse": return <Eye className="w-6 h-6" />
 case "Green Tech & Sustainability": return <Leaf className="w-6 h-6" />
 case "FinTech & Digital Banking": return <DollarSign className="w-6 h-6" />,
 default: return <Zap className="w-6 h-6" />}
+=======
+case "AI & Machine Learning": return <Brain className="w-6 h-6" />;
+case "Cybersecurity": return <Shield className="w-6 h-6" />;
+case "Cloud & DevOps": return <Cloud className="w-6 h-6" />;
+case "Data & Analytics": return <Database className="w-6 h-6" />;
+case "Blockchain & Web3": return <Zap className="w-6 h-6" />;
+case "IoT & Edge Computing": return <Eye className="w-6 h-6" />;
+case "Quantum Computing": return <Brain className="w-6 h-6" />;
+case "AR/VR & Metaverse": return <Eye className="w-6 h-6" />;
+case "Green Tech & Sustainability": return <Leaf className="w-6 h-6" />;
+case "FinTech & Digital Banking": return <DollarSign className="w-6 h-6" />;,
+default: return <Zap className="w-6 h-6" />;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getAvailabilityColor: any = (availability: string) => {
@@ -87,7 +130,12 @@ switch (availability) {;
 case "immediate": return "text-green-400";
 case "within-week": return "text-yellow-400";
 case "within-month": return "text-orange-400";,
+<<<<<<< HEAD
 default: return "text-gray-400";}
+=======
+default: return "text-gray-400";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 return (
@@ -115,7 +163,11 @@ Explore All Services;
 </Link>
 <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
 Schedule Consultation;
+<<<<<<< HEAD
 </Button>
+=======
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -127,11 +179,19 @@ Schedule Consultation;
 <div className="flex items-start justify-between mb-3">
 <div className="flex items-center gap-2 text-zion-cyan">
 {getCategoryIcon(service.category)}
+<<<<<<< HEAD
 <span className="text-sm font-medium">{service.category}</span>
 </div>
 <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
 {service.pricingModel}
 </Badge>
+=======
+<span className="text-sm font-medium">{service.category}</span>;
+</div>
+<Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">;
+{service.pricingModel}
+</Badge>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <CardTitle className="text-lg text-white mb-2 line-clamp-2">
@@ -150,18 +210,30 @@ Schedule Consultation;
 ${service.price.toLocaleString()}
 <span className="text-sm text-zion-slate-light font-normal">
 /{service.pricingModel === "subscription" ? "month" : "project"}
+<<<<<<< HEAD
 </span>
 </div>
 <div className="flex items-center gap-1">
 <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
 <span className="text-white font-medium">{service.rating}</span>
+=======
+</span>;
+</div>
+<div className="flex items-center gap-1">;
+<Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />;
+<span className="text-white font-medium">{service.rating}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
 {/* Key Benefits */}
 <div className="space-y-2">
 {service.benefits.slice(0; 2).map((benefit; index) => (
+<<<<<<< HEAD
 <div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">
+=======
+<div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
 {benefit}
 </div>
@@ -185,10 +257,17 @@ ${service.price.toLocaleString()}
 {service.availability === "immediate" ? "Available Now" :
 service.availability === "within-week" ? "Within 1 Week" :
 service.availability === "within-month" ? "Within 1 Month" : "Contact Us"}
+<<<<<<< HEAD
 </span>
 </div>
 <div className="flex items-center gap-1 text-zion-slate-light">
 <Globe className="w-4 h-4" />
+=======
+</span>;
+</div>
+<div className="flex items-center gap-1 text-zion-slate-light">;
+<Globe className="w-4 h-4" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {service.location}
 </div>
 </div>
@@ -208,15 +287,25 @@ Get Started;
 <h3 className="text-2xl font-bold text-white mb-4">Service Categories</h3>
 <p className="text-zion-slate-light">
 Comprehensive coverage across all major technology domains;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
 {ENHANCED_SERVICES.reduce((acc; service) => {
 if (!acc.find(cat => cat.category === service.category)) {
+<<<<<<< HEAD
 acc.push({,
 category: service.category;,
 count: ENHANCED_SERVICES.filter(s => s.category === service.category).length;,
+=======
+acc.push({
+category: service.category;
+count: ENHANCED_SERVICES.filter(s => s.category === service.category).length;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 icon: getCategoryIcon(service.category)});
 }
 return acc;
@@ -248,6 +337,7 @@ Schedule Free Consultation;
 </Button>
 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
 Download Service Catalog;
+<<<<<<< HEAD
 </Button>
 </div>
 <div className="mt-6 text-zion-slate-light text-sm">
@@ -263,13 +353,34 @@ Download Service Catalog;
 <div className="flex items-center gap-2">
 <Globe className="w-4 h-4 text-zion-cyan" />
 <span>https://ziontechgroup.com</span>
+=======
+</Button>;
+</div>
+<div className="mt-6 text-zion-slate-light text-sm">;
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
+<div className="flex items-center gap-2">;
+<Globe className="w-4 h-4 text-zion-cyan" />;
+<span>+1 302 464 0950</span>;
+</div>
+<div className="flex items-center gap-2">;
+<Globe className="w-4 h-4 text-zion-cyan" />;
+<span>kleber@ziontechgroup.com</span>;
+</div>
+<div className="flex items-center gap-2">;
+<Globe className="w-4 h-4 text-zion-cyan" />;
+<span>https://ziontechgroup.com</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </section>
+=======
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 };
 

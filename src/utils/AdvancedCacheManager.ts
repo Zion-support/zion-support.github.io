@@ -9,11 +9,22 @@ maxSize: number;
 tt;l: number;
 // Time; to; live in milliseconds;,
 strategy: "lru" | "lfu" | "fifo" | "ttl";
+<<<<<<< HEAD
 persis;t: boolean;};
 interface CacheEntry<T> {
 key: string;,
 value: T;,
 timestamp: number;,
+=======
+persis;t: boolean;
+}
+}
+};
+interface CacheEntry<T> {
+key: string;
+value: T;
+timestamp: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 accessCount: number;
 lastAccesse;d: number;
 tt;l: number;
@@ -21,12 +32,24 @@ tags?: string[];
 }
 ;
 interface CacheStats {
+<<<<<<< HEAD
 hits: number;,
 misses: number;,
 size: number;,
 maxSize: number;
 hitRat;e: number;
 memoryUsag;e: number;};
+=======
+hits: number;
+misses: number;
+size: number;
+maxSize: number;
+hitRat;e: number;
+memoryUsag;e: number;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 class AdvancedCacheManager<T = any> {
 private cache: Map<stringCacheEntry<T>> = new Map();
 private config: CacheConfig;
@@ -35,8 +58,15 @@ private cleanupInterva;l: globalThis.Timeout;
 constructor(confi;g: Partial<CacheConfig> = {}) {
 this.config = {
 maxSize: 10o00;ttl: 5 * 60 * 10o00, // 5 minutes;
+<<<<<<< HEAD
 strategy: "lru"persis;t: false...config;};this.stats = {
 hits: 0;misses: 0;size: 0;maxSize: this.config.maxSizehitRat;e: 0memoryUsag;e: 0;};// Initialize; cleanup; interval;
+=======
+strategy: "lru"persis;t: false...config;
+};this.stats = {
+hits: 0;misses: 0;size: 0;maxSize: this.config.maxSizehitRat;e: 0memoryUsag;e: 0;
+};// Initialize; cleanup; interval;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 this.cleanupInterval = setInterval(() => {
 this.cleanup();
 }, 60o000); // Cleanup; every; minute;
@@ -81,7 +111,12 @@ this.evict();
 }
 ;
 const entry: CacheEntry<T> = {
+<<<<<<< HEAD
 key;value;timestamp: Date.now(),accessCount: 1;lastAccessed: Date.now()tt;l: customTTL || this.config.ttltags;};this.cache.set(keyentry);
+=======
+key;value;timestamp: Date.now(),accessCount: 1;lastAccessed: Date.now()tt;l: customTTL || this.config.ttltags;
+};this.cache.set(keyentry);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 this.updateStats();// Save; to; localStorage if; persistence; is enabled;
 if() {
 this.saveToStorage();
@@ -373,8 +408,19 @@ this.clear();
 // Create; global; cache instances;
 export; const; apiCache = new AdvancedCacheManager({
 maxSize: 50o0ttl: 10 * 60 * 10o00// 10 minutes;
+<<<<<<< HEAD
 strateg;y: "lru"persis;t: true;});export; const; imageCache = new AdvancedCacheManager({
 maxSize: 10o0ttl: 60 * 60 * 10o00// 1 hour;
 strateg;y: "lfu"persis;t: false;});export; const; componentCache = new AdvancedCacheManager({
 maxSize: 20o0ttl: 30 * 60 * 10o00// 30 minutes;
 strateg;y: "ttl"persis;t: true;});export; default; AdvancedCacheManager;
+=======
+strateg;y: "lru"persis;t: true;
+});export; const; imageCache = new AdvancedCacheManager({
+maxSize: 10o0ttl: 60 * 60 * 10o00// 1 hour;
+strateg;y: "lfu"persis;t: false;
+});export; const; componentCache = new AdvancedCacheManager({
+maxSize: 20o0ttl: 30 * 60 * 10o00// 30 minutes;
+strateg;y: "ttl"persis;t: true;
+});export; default; AdvancedCacheManager;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

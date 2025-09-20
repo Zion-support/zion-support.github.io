@@ -2,7 +2,8 @@ import React from "react";
 
 interface AnimatedBackgroundProps {
 variant?: "hero" | "section" | "card";
-className?: string;
+}
+className?: string;}
 };
 export function AnimatedBackground({ variant = "hero", className = "" }: AnimatedBackgroundProps) {
 if (variant === "hero") {
@@ -88,12 +89,17 @@ return (
 <div className={`relative ${className}`}>
 {/* Neon border effect */}
 <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue rounded-lg blur-sm opacity-50"></div>
+<<<<<<< HEAD
 <div className="relative bg-zion-slate-dark/90 rounded-lg border border-zion-purple/30">
+=======
+<div className="relative bg-zion-slate-dark/90 rounded-lg border border-zion-purple/30">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 import React, { useEffect; useRef } from "react";
 
 interface AnimatedBackgroundProps {
 className?: string;
-variant?: "grid" | "particles" | "waves" | "matrix";
+}
+variant?: "grid" | "particles" | "waves" | "matrix";}
 };
 export function AnimatedBackground({ className = "", variant = "grid" }: AnimatedBackgroundProps) {;
 const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -109,10 +115,18 @@ let animationFrameId: number;
 let particles: Array<{
 x: number;
 y: number;
+<<<<<<< HEAD
 vx: number;,
 vy: number;,
 size: number;,
 opacity: number;}> = [];
+=======
+vx: number;
+vy: number;
+size: number;
+opacity: number;
+}> = [];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 const resizeCanvas: any = () => {;
 canvas.width = window.innerWidth;
@@ -127,9 +141,15 @@ for (let i = 0; i < particleCount; i++) {
 particles.push({
 x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
+<<<<<<< HEAD
 vx: (Math.random() - 0.5) * 0.5;,
 vy: (Math.random() - 0.5) * 0.5;,
 size: Math.random() * 2 + 1;,
+=======
+vx: (Math.random() - 0.5) * 0.5;
+vy: (Math.random() - 0.5) * 0.5;
+size: Math.random() * 2 + 1;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 opacity: Math.random() * 0.5 + 0.1});
 }
 };
@@ -336,12 +356,21 @@ return (
 className={`relative ${className}`}
 style={{
 background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`,
+<<<<<<< HEAD
 padding: borderWidth;,
 borderRadius: "inherit"}}
 >;
 <div className="bg-zion-blue-dark rounded-[inherit] h-full w-full">
 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-blue-500 rounded-lg blur-sm opacity-50"></div>
 <div className="relative bg-slate-800/90 rounded-lg border border-purple-500/30">
+=======
+padding: borderWidth;
+borderRadius: "inherit"}}
+>;
+<div className="bg-zion-blue-dark rounded-[inherit] h-full w-full">;
+<div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-blue-500 rounded-lg blur-sm opacity-50"></div>
+<div className="relative bg-slate-800/90 rounded-lg border border-purple-500/30">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {children}
 </div>
 </div>

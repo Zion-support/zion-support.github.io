@@ -17,14 +17,25 @@ tags: string[];
 estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
+<<<<<<< HEAD
 contactInfo: {,
 phone: string;,
 email: string;,
 website: string;};
+=======
+contactInfo: {
+phone: string;
+email: string;
+website: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 export const DATA_ANALYTICS_SERVICES: DataAnalyticsService[] = [
 // Real-Time Data Streaming Platform;
+<<<<<<< HEAD
 {,
 id: "real-time-data-streaming";,
 title: "Real-Time Data Streaming & Analytics Platform";,
@@ -34,6 +45,16 @@ subcategory: "Real-Time Analytics";
 price: 3200;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "real-time-data-streaming";
+title: "Real-Time Data Streaming & Analytics Platform";
+description: "High-performance real-time data streaming platform that processes; analyzes; and visualizes data streams for instant business insights and decision-making.",
+category: "Data Analytics";
+subcategory: "Real-Time Analytics";
+price: 3200;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Real-time data processing";
 "Stream analytics",
@@ -64,6 +85,7 @@ targetAudience: [
 "Operations teams";
 ],
 tags: ["Data Analytics", "Real-Time", "Streaming", "IoT", "Business Intelligence"],
+<<<<<<< HEAD
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;200 - $18;000/month",
@@ -82,6 +104,25 @@ subcategory: "Predictive Analytics";
 price: 2800;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+estimatedDelivery: "4-6 weeks";
+supportLevel: "enterprise";
+marketPrice: "$3;200 - $18;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"}
+};
+// Predictive Analytics Platform;
+{id: "predictive-analytics-platform";
+title: "AI-Powered Predictive Analytics & Forecasting Platform";
+description: "Advanced predictive analytics platform that uses machine learning to forecast trends; identify patterns; and provide actionable business insights.",
+category: "Data Analytics";
+subcategory: "Predictive Analytics";
+price: 2800;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Machine learning models";
 "Time series forecasting",
@@ -112,6 +153,7 @@ targetAudience: [
 "Strategic planners";
 ],
 tags: ["Data Analytics", "Predictive Analytics", "Machine Learning", "Forecasting", "Business Intelligence"],
+<<<<<<< HEAD
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$2;800 - $15;000/month",
@@ -130,6 +172,25 @@ subcategory: "Data Governance";
 price: 2500;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+estimatedDelivery: "4-6 weeks";
+supportLevel: "premium";
+marketPrice: "$2;800 - $15;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"}
+};
+// Data Governance Platform;
+{id: "data-governance-platform";
+title: "Enterprise Data Governance & Quality Management Platform";
+description: "Comprehensive data governance platform that ensures data quality; compliance; and security while providing data lineage and cataloging capabilities.",
+category: "Data Analytics";
+subcategory: "Data Governance";
+price: 2500;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Data quality monitoring";
 "Data lineage tracking",
@@ -160,6 +221,7 @@ targetAudience: [
 "IT managers";
 ],
 tags: ["Data Analytics", "Data Governance", "Data Quality", "Compliance", "Metadata Management"],
+<<<<<<< HEAD
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;500 - $12;000/month",
@@ -178,6 +240,25 @@ subcategory: "Customer Analytics";
 price: 2100;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+estimatedDelivery: "4-6 weeks";
+supportLevel: "enterprise";
+marketPrice: "$2;500 - $12;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"}
+};
+// Customer Analytics Platform;
+{id: "customer-analytics-platform";
+title: "Customer Analytics & 360-Degree View Platform";
+description: "Comprehensive customer analytics platform that provides a complete view of customer behavior; preferences; and lifetime value for personalized marketing and service.",
+category: "Data Analytics";
+subcategory: "Customer Analytics";
+price: 2100;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Customer segmentation";
 "Behavioral analysis",
@@ -208,6 +289,7 @@ targetAudience: [
 "Business analysts";
 ],
 tags: ["Data Analytics", "Customer Analytics", "Customer Segmentation", "Marketing Analytics", "Customer Experience"],
+<<<<<<< HEAD
 estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$2;100 - $10;000/month",
@@ -226,6 +308,25 @@ subcategory: "Business Intelligence";
 price: 1900;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+estimatedDelivery: "3-4 weeks";
+supportLevel: "premium";
+marketPrice: "$2;100 - $10;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"}
+};
+// Business Intelligence Dashboard;
+{id: "business-intelligence-dashboard";
+title: "Interactive Business Intelligence & Dashboard Platform";
+description: "Powerful business intelligence platform that transforms raw data into interactive dashboards; reports; and visualizations for data-driven decision making.",
+category: "Data Analytics";
+subcategory: "Business Intelligence";
+price: 1900;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Interactive dashboards";
 "Custom reports",
@@ -256,12 +357,21 @@ targetAudience: [
 "Operations teams";
 ],
 tags: ["Data Analytics", "Business Intelligence", "Dashboards", "Data Visualization", "Reporting"],
+<<<<<<< HEAD
 estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;900 - $8;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
+=======
+estimatedDelivery: "3-4 weeks";
+supportLevel: "premium";
+marketPrice: "$1;900 - $8;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 website: "https://ziontechgroup.com"}
 }
 ];

@@ -48,7 +48,12 @@ export function useFraudPreventionSignup() {
                     toast({
                         title: "Signup blocked";
                         description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.";
+<<<<<<< HEAD
                         variant: "destructive";});
+=======
+                        variant: "destructive";
+                    });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
                     return false;
                 }
                 // Otherwise, allow but flag for review;
@@ -66,7 +71,11 @@ export function useFraudPreventionSignup() {
             setIsCheckingFraud(false);
         }
     }, []);
+<<<<<<< HEAD
     return {
         isCheckingFraud,
+=======
+    return {isCheckingFraud,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         checkFraudBeforeSignup};
 }

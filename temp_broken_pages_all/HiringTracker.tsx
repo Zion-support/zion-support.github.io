@@ -1,12 +1,12 @@
 
-import { useState,  } from "react",
-import { useRouter,  } from "next/router",
-import { KanbanBoard,  } from "@/components/hiring-tracker/KanbanBoard",
-import { HiringAnalytics,  } from "@/components/hiring-tracker/HiringAnalytics",
-import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from "@/components/ui/tabs",
-import { SEO,  } from "@/components/SEO";
-import { ProtectedRoute,  } from "@/components/ProtectedRoute";
-import { Briefcase,  } from 'lucide-react'
+import { useState } from "react";,
+import { useRouter } from "next/router";,
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";,
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";,
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";,
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Briefcase } from "lucide-react";
 function HiringTrackerContent() {
 return (
     <>
@@ -50,7 +50,7 @@ defaultValue='kanban'
           </TabsContent>
         </Tabs>
       </main>
-    </>
+</>
   )
 }
 export default function HiringTracker() {

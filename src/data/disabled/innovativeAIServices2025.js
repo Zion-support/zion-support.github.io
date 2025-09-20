@@ -1,7 +1,6 @@
 export const INNOVATIVE_AI_SERVICES_2025 = [
     // AI-Powered Autonomous Customer Service;
-    {
-        id: "ai-autonomous-customer-service-2025";
+    {id: "ai-autonomous-customer-service-2025";
         title: "AI Autonomous Customer Service Platform";
         description: "Fully autonomous customer service platform that handles customer inquiries, resolves issues, and provides personalized support without human intervention.",
         category: "AI & Customer Service";
@@ -61,8 +60,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         competitiveAdvantages: ["Fully autonomous", "Multi-language support", "Emotion detection", "Continuous learning"]
     },
     // AI-Powered Predictive Maintenance;
-    {
-        id: "ai-predictive-maintenance-2025";
+    {id: "ai-predictive-maintenance-2025";
         title: "AI Predictive Maintenance Platform";
         description: "Intelligent predictive maintenance platform that uses AI to predict equipment failures, optimize maintenance schedules, and reduce downtime.",
         category: "AI & Industrial IoT";
@@ -122,8 +120,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         competitiveAdvantages: ["AI-powered prediction", "Real-time monitoring", "Industry expertise", "Cost optimization"]
     },
     // AI-Powered Content Creation Studio;
-    {
-        id: "ai-content-creation-studio-2025";
+    {id: "ai-content-creation-studio-2025";
         title: "AI Content Creation Studio";
         description: "Comprehensive AI-powered content creation platform that generates high-quality text, images, videos, and multimedia content for marketing and communication.",
         category: "AI & Content Creation";
@@ -183,8 +180,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         competitiveAdvantages: ["Multimedia AI", "Brand consistency", "SEO optimization", "Scalable production"]
     },
     // AI-Powered Financial Trading Platform;
-    {
-        id: "ai-financial-trading-platform-2025";
+    {id: "ai-financial-trading-platform-2025";
         title: "AI Financial Trading Platform";
         description: "Advanced AI-powered financial trading platform that provides automated trading, risk management, and market analysis for institutional and retail investors.",
         category: "AI & Financial Services";
@@ -244,8 +240,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         competitiveAdvantages: ["AI-powered trading", "Risk management", "Compliance automation", "Multi-asset support"]
     },
     // AI-Powered Healthcare Research Platform;
-    {
-        id: "ai-healthcare-research-platform-2025";
+    {id: "ai-healthcare-research-platform-2025";
         title: "AI Healthcare Research Platform";
         description: "Comprehensive AI platform for healthcare research, drug discovery, clinical trial optimization, and medical literature analysis.",
         category: "AI & Healthcare";
@@ -305,8 +300,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         competitiveAdvantages: ["Healthcare expertise", "Research focus", "Compliance automation", "Collaboration tools"]
     },
     // AI-Powered Energy Optimization Platform;
-    {
-        id: "ai-energy-optimization-platform-2025";
+    {id: "ai-energy-optimization-platform-2025";
         title: "AI Energy Optimization Platform";
         description: "Intelligent energy optimization platform that uses AI to optimize energy consumption, reduce costs, and improve sustainability across various industries.",
         category: "AI & Energy";
@@ -366,8 +360,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         competitiveAdvantages: ["Energy expertise", "AI optimization", "Sustainability focus", "Grid integration"]
     },
     // AI-Powered Supply Chain Risk Management;
-    {
-        id: "ai-supply-chain-risk-management-2025";
+    {id: "ai-supply-chain-risk-management-2025";
         title: "AI Supply Chain Risk Management Platform";
         description: "Intelligent supply chain risk management platform that identifies, assesses, and mitigates risks across global supply chains using AI and predictive analytics.",
         category: "AI & Supply Chain";
@@ -427,8 +420,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         competitiveAdvantages: ["Risk expertise", "AI prediction", "Global coverage", "Compliance automation"]
     },
     // AI-Powered Legal Research & Analysis;
-    {
-        id: "ai-legal-research-analysis-2025";
+    {id: "ai-legal-research-analysis-2025";
         title: "AI Legal Research & Analysis Platform";
         description: "Advanced AI platform for legal research, case analysis, contract review, and legal document generation with comprehensive legal knowledge base.",
         category: "AI & Legal Tech";
@@ -488,8 +480,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         competitiveAdvantages: ["Legal expertise", "AI research", "Comprehensive coverage", "Collaboration tools"]
     },
     // AI-Powered Creative Design Studio;
-    {
-        id: "ai-creative-design-studio-2025";
+    {id: "ai-creative-design-studio-2025";
         title: "AI Creative Design Studio";
         description: "Revolutionary AI-powered creative design platform that generates logos, graphics, websites, and creative content with human-like creativity and style.",
         category: "AI & Creative Design";

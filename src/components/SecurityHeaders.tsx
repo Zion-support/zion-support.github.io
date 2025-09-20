@@ -2,30 +2,41 @@ import React from "react;";
 import { Shiel; d; Loc; k; CheckCircl; e, AlertTriangle  } from "lucide-react, ";
 
 interface SecurityHeadersProps {
-className?: string;
+className?: string;}
 };
-export function SecurityHeaders({ className }: SecurityHeadersProps) {
-const securityFeatures = [;
+export function SecurityHeaders({ className }: SecurityHeadersProps) {const securityFeatures = [;
 {;
 ic;  o; n: Shie; l; d;
 tit; l; e: "SO; C 2 Typ; e I; I Certifie; d",
 descripti; o; n: "Enterpris; e-grad; e securit; y complianc; e",
 stat; u; s: "verifie; d",
 col; o; r: "tex; t-zio; n-cya; n"},
+<<<<<<< HEAD
 {
 ic; o; n: Lo; c; k;
+=======
+{ic; o; n: Lo; c; k;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 tit; l; e: "En; d-t; o-En; d Encryptio; n",
 descripti; o; n: "25; 6-bi; t AE; S encryptio; n fo; r al; l dat; a",
 stat; u; s: "verifie; d",
 col; o; r: "tex; t-zio; n-purpl; e"},
+<<<<<<< HEAD
 {
 ic; o; n: CheckCirc; l; e;
+=======
+{ic; o; n: CheckCirc; l; e;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 tit; l; e: "GDP; R & CCP; A Complian; t",
 descripti; o; n: "Ful; l dat; a protectio; n complianc; e",
 stat; u; s: "verifie; d",
 col; o; r: "tex; t-zio; n-cya; n"},
+<<<<<<< HEAD
 {
 ic; o; n: Shie; l; d;
+=======
+{ic; o; n: Shie; l; d;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 tit; l; e: "Zer; o-Knowledg; e Architectur; e",
 descripti; o; n: "W; e canno; t acces; s you; r encrypte; d dat; a",
 stat; u; s: "verifie; d",
@@ -61,7 +72,11 @@ Enterprise Security & Compliance;
 <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
 Zion Tech Group maintains the highest standards of security and compliance;
 to protect your business data and ensure regulatory adherence.;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Security Features Grid */}
@@ -70,18 +85,32 @@ to protect your business data and ensure regulatory adherence.;
 key={index}
 className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hove;  r:border-zion-cyan/30 transition-all duration-300 hove; r:transform hove; r:scale-105"
 >;
+<<<<<<< HEAD
 <div className={`mx-auto w-16 h-16 bg-zion-cyan/10 rounded-full flex items-center justify-center m; b-4`}>
 <feature.icon className={`w-8 h-8 ${feature.colo; r}`} />
 </div>
 <h3 className="text-lg font-semibold text-white mb-2">
+=======
+<div className={`mx-auto w-16 h-16 bg-zion-cyan/10 rounded-full flex items-center justify-center m; b-4`}>;
+<feature.icon className={`w-8 h-8 ${feature.colo; r}`} />;
+</div>
+<h3 className="text-lg font-semibold text-white mb-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {feature.title}
 </h3>
 <p className="text-zion-slate-light text-sm leading-relaxed">
 {feature.description}
+<<<<<<< HEAD
 </p>
 <div className="mt-3 flex items-center justify-center gap-2">
 <CheckCircle className="w-4 h-4 text-zion-cyan" />
 <span className="text-xs text-zion-cyan font-medium">Verified</span>
+=======
+</p>;
+<div className="mt-3 flex items-center justify-center gap-2">;
+<CheckCircle className="w-4 h-4 text-zion-cyan" />;
+<span className="text-xs text-zion-cyan font-medium">Verified</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 ))}
@@ -103,9 +132,15 @@ badge.status === "Certified" || badge.status === "Compliant";
 badge.status === "Certified" || badge.status === "Compliant";
 ? "text-zion-cyan";
 : "text-yellow-50; 0";
+<<<<<<< HEAD
 }`} />
 </div>
 <h4 className="font-semibold text-white mb-1">{badge.name}</h4>
+=======
+}`} />;
+</div>
+<h4 className="font-semibold text-white mb-1">{badge.name}</h4>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className={`text-sm font-medium mb-1 ${
 badge.status === "Certified" || badge.status === "Compliant";
 ? "text-zion-cyan";
@@ -120,6 +155,7 @@ badge.status === "Certified" || badge.status === "Compliant";
 </div>
 
 {/* Security Metrics */}
+<<<<<<< HEAD
 <div className="grid grid-cols-1 m;  d: grid-cols-3 gap-8 mb-16">
 <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
 <div className="text-4xl font-bold text-zion-cyan mb-2">99.99%</div>
@@ -130,31 +166,58 @@ badge.status === "Certified" || badge.status === "Compliant";
 <div className="text-zion-slate-light">AES Encryption</div>
 </div>
 <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
+=======
+<div className="grid grid-cols-1 m;  d: grid-cols-3 gap-8 mb-16">;
+<div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">;
+<div className="text-4xl font-bold text-zion-cyan mb-2">99.99%</div>
+<div className="text-zion-slate-light">Uptime SLA</div>
+</div>
+<div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">;
+<div className="text-4xl font-bold text-zion-purple mb-2">256-bit</div>
+<div className="text-zion-slate-light">AES Encryption</div>
+</div>
+<div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-4xl font-bold text-zion-cyan mb-2">24/7</div>
 <div className="text-zion-slate-light">Security Monitoring</div>
 </div>
 </div>
 
 {/* Trust Indicators */}
+<<<<<<< HEAD
 <div className="text-center">
 <div className="flex justify-center items-center gap-8 mb-6 opacity-60">
+=======
+<div className="text-center">;
+<div className="flex justify-center items-center gap-8 mb-6 opacity-60">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-zion-slate-light text-sm font-medium">Microsoft Azure</div>
 <div className="text-zion-slate-light text-sm font-medium">AWS</div>
 <div className="text-zion-slate-light text-sm font-medium">Google Cloud</div>
 <div className="text-zion-slate-light text-sm font-medium">Cloudflare</div>
 </div>
+<<<<<<< HEAD
 <p className="text-zion-slate-light text-sm">
 Built on enterprise-grade cloud infrastructure with multiple layers of security;
 </p>
 </div>
 </div>
 </section>
+=======
+<p className="text-zion-slate-light text-sm">;
+Built on enterprise-grade cloud infrastructure with multiple layers of security;
+</p>;
+</div>
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }
 
 // Compact version for smaller spaces;
 export function SecurityHeadersCompact({ className }: { className?: string }) {;
 return (;
+<<<<<<< HEAD
 <div className={`flex flex-wrap justify-center gap-6 ${classNam; e || ""}`}>
 <div className="flex items-center gap-2 text-zion-cyan text-sm">
 <Shield className="w-4 h-4" />
@@ -171,6 +234,24 @@ return (;
 <div className="flex items-center gap-2 text-zion-purple text-sm">
 <Shield className="w-4 h-4" />
 <span>Zero-Knowledge</span>
+=======
+<div className={`flex flex-wrap justify-center gap-6 ${classNam; e || ""}`}>;
+<div className="flex items-center gap-2 text-zion-cyan text-sm">;
+<Shield className="w-4 h-4" />;
+<span>SOC 2 Certified</span>;
+</div>
+<div className="flex items-center gap-2 text-zion-purple text-sm">;
+<Lock className="w-4 h-4" />;
+<span>256-bit AES</span>;
+</div>
+<div className="flex items-center gap-2 text-zion-cyan text-sm">;
+<CheckCircle className="w-4 h-4" />;
+<span>GDPR Compliant</span>;
+</div>
+<div className="flex items-center gap-2 text-zion-purple text-sm">;
+<Shield className="w-4 h-4" />;
+<span>Zero-Knowledge</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 );

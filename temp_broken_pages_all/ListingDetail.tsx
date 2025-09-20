@@ -1,4 +1,4 @@
-import { useCurrency,  } from '@/hooks/useCurrency';
+import { useCurrency } from "@/hooks/useCurrency";
 export default function ListingDetail() {
   // useParams may be untyped in this environment so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -58,10 +58,17 @@ target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.a
         </div>
       </div>
       <ChatWidget
+<<<<<<< HEAD:temp_broken_pages_all/ListingDetail.tsx
 roomId = {listing.id,}
         recipientId = {listing.author.id,}
         isOpen = {isChatOpen,}
         onClose = {() => setIsChatOpen(false),}
+=======
+roomId = {listing.id}
+        recipientId = {listing.author.id}
+        isOpen = {isChatOpen}
+        onClose = {() => setIsChatOpen(false)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ListingDetail.tsx
       />
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
@@ -72,20 +79,28 @@ roomId = {listing.id,}
             </DialogTitle>
           </DialogHeader>
           <ProfileContact
+<<<<<<< HEAD:temp_broken_pages_all/ListingDetail.tsx
 email={listing.author.email} // TypeScript now knows this might be undefined,
 profileName={listing.author.name}
+=======
+email={listing.author.email} // TypeScript now knows this might be undefined profileName={listing.author.name}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ListingDetail.tsx
             profileType='service'          />            profileType="service"
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
           <ProfileContact
+<<<<<<< HEAD:temp_broken_pages_all/ListingDetail.tsx
 email={listing.author.email} // TypeScript now knows this might be undefined,
 profileName={listing.author.name}
+=======
+email={listing.author.email} // TypeScript now knows this might be undefined profileName={listing.author.name}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ListingDetail.tsx
             profileType="service"
           />
         </DialogContent>
       </Dialog>
-    </>
+</>
 );
 }/>) : (<Button </Button>) ";
 }<Button > <MessageSquare className=" h-4 w-4 mr-2"/> Contact Publisher </Button> </div> ;

@@ -1,7 +1,6 @@
 export const SPECIALIZED_AI_SERVICES = [
     // Large Language Model (LLM) Services;
-    {
-        id: "enterprise-llm-platform";
+    {id: "enterprise-llm-platform";
         title: "Enterprise Large Language Model Platform";
         description: "Custom enterprise LLM platform that enables organizations to build, train, and deploy domain-specific language models with full data privacy and control.",
         category: "AI & Machine Learning";
@@ -59,8 +58,7 @@ export const SPECIALIZED_AI_SERVICES = [
         trainingData: "Enterprise data, industry-specific datasets, custom training data"
     },
     // Computer Vision AI Platform;
-    {
-        id: "advanced-computer-vision-platform";
+    {id: "advanced-computer-vision-platform";
         title: "Advanced Computer Vision AI Platform";
         description: "Comprehensive computer vision platform that provides real-time object detection, facial recognition, and image analysis for various industries.",
         category: "AI & Machine Learning";
@@ -118,8 +116,7 @@ export const SPECIALIZED_AI_SERVICES = [
         trainingData: "Image datasets, industry-specific images, custom training data"
     },
     // AI-Powered Cybersecurity;
-    {
-        id: "ai-cybersecurity-threat-detection";
+    {id: "ai-cybersecurity-threat-detection";
         title: "AI-Powered Cybersecurity Threat Detection";
         description: "Advanced AI-driven cybersecurity platform that uses machine learning to detect, analyze, and respond to cyber threats in real-time.",
         category: "AI & Cybersecurity";
@@ -177,8 +174,7 @@ export const SPECIALIZED_AI_SERVICES = [
         trainingData: "Threat data, network logs, security incidents, malware samples"
     },
     // AI-Powered Predictive Analytics;
-    {
-        id: "ai-predictive-analytics-platform";
+    {id: "ai-predictive-analytics-platform";
         title: "AI-Powered Predictive Analytics Platform";
         description: "Advanced predictive analytics platform that uses machine learning to forecast trends, identify patterns, and provide actionable insights.",
         category: "AI & Analytics";
@@ -236,8 +232,7 @@ export const SPECIALIZED_AI_SERVICES = [
         trainingData: "Historical data, time series data, business metrics, external datasets"
     },
     // AI-Powered Process Automation;
-    {
-        id: "ai-process-automation-platform";
+    {id: "ai-process-automation-platform";
         title: "AI-Powered Process Automation Platform";
         description: "Intelligent process automation platform that combines RPA with AI to automate complex business processes and workflows.";
         category: "AI & Automation";
@@ -295,8 +290,7 @@ export const SPECIALIZED_AI_SERVICES = [
         trainingData: "Process data, workflow logs, business rules, historical processes"
     },
     // AI-Powered Customer Intelligence;
-    {
-        id: "ai-customer-intelligence-platform";
+    {id: "ai-customer-intelligence-platform";
         title: "AI-Powered Customer Intelligence Platform";
         description: "Comprehensive customer intelligence platform that uses AI to analyze customer behavior, predict needs, and personalize experiences.",
         category: "AI & Customer Intelligence";
@@ -354,8 +348,7 @@ export const SPECIALIZED_AI_SERVICES = [
         trainingData: "Customer data, transaction history, behavioral data, demographic information"
     },
     // AI-Powered Supply Chain Optimization;
-    {
-        id: "ai-supply-chain-optimization";
+    {id: "ai-supply-chain-optimization";
         title: "AI-Powered Supply Chain Optimization Platform";
         description: "Intelligent supply chain platform that uses AI to optimize inventory, predict demand, and streamline logistics operations.",
         category: "AI & Supply Chain";
@@ -413,8 +406,7 @@ export const SPECIALIZED_AI_SERVICES = [
         trainingData: "Historical demand, inventory levels, supplier data, logistics information"
     },
     // AI-Powered Quality Assurance;
-    {
-        id: "ai-quality-assurance-platform";
+    {id: "ai-quality-assurance-platform";
         title: "AI-Powered Quality Assurance Platform";
         description: "Intelligent QA platform that uses AI to automate testing, detect defects, and ensure software quality across development cycles.",
         category: "AI & Quality Assurance";

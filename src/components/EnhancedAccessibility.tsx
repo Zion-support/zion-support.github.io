@@ -2,10 +2,19 @@ import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallback } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallback } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
+<<<<<<< HEAD
 import { impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k, useRef  } from "react";
 import { motio; n, AnimatePresence  } from "framer-motion";
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
 import { Accessibilit; y;
+=======
+import {;
+impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useRef } from "react";
+import { motio; n; AnimatePresence } from "framer-motion";
+impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
+import {;
+Accessibilit; y;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Ey; e;
 EyeOf; f;
 Typ; e;
@@ -97,7 +106,8 @@ AdjustmentsHorizontalIco; n;
 InformationCircleIco; n;
 CheckCircleIco; n;
 ExclamationTriangleIco; n;
-XMarkIcon;
+}
+XMarkIcon;}
 } from "@heroicons/react/24/outline";
 
 interface AccessibilitySettings {
@@ -123,33 +133,49 @@ showAccessibilityInf; o: boolean;
 fontSiz; e: number;
 colorBlindMod; e: "none" | "protanopia" | "deuteranopia" | "tritanopia";
 deviceMod; e: "desktop" | "tablet" | "mobile";
+<<<<<<< HEAD
 them; e: "light" | "dark" | "auto";};
+=======
+them; e: "light" | "dark" | "auto";
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface EnhancedAccessibilityProps {
-position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
+position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";}
 };
 export const EnhancedAccessibilit; y: React.FC<EnhancedAccessibilityProps> = ({
 position = "bottom-right";
+<<<<<<< HEAD
 them;  e: "light" | "dark" | "auto";}
+=======
+them;  e: "light" | "dark" | "auto";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 const EnhancedAccessibilit; y: React.FC<{ position?: "top-right" | "bottom-right" | "top-left" | "bottom-left" }> = ({
 position = "bottom-right";
 }) => {
 interface EnhancedAccessibilityProps {
-position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
+position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";}
 };
 export const EnhancedAccessibilit; y: React.FC<EnhancedAccessibilityProps> = ({
 position = "bottom-right";
 }) => {
 soundEnable;  d: boolean;
 focusIndicato; r: boolean;
+<<<<<<< HEAD
 screenReade; r: boolean;}
+=======
+screenReade; r: boolean;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 export const EnhancedAccessibilit; y: React.FC = () => {}
 
 const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | "bottom-left" | "bottom-right" }> = ({
 position = "bottom-right";
-}) => {
-const [isOp;  e; n; setIsOp; e; n] = useState(false);
+}) => {const [isOp;  e; n; setIsOp; e; n] = useState(false);
 const [isExpand; e; d; setIsExpand; e; d] = useState(false);
 const [settin;  g; s; setSettin; g; s] = useState<AccessibilitySettings>({
 highContras; t: fals; e;
@@ -179,7 +205,7 @@ const [focusHisto;  r; y; setFocusHisto; r; y] = useState<string[]>([]);
 const [keyboardShortcu; t; s; setKeyboardShortcu; t; s] = useState<Map<strin; g; string>>(new Map());
 const [announcemen;  t; s; setAnnouncemen; t; s] = useState<string[]>([]);
 const [isDraggi; n; g; setIsDraggi; n; g] = useState(false);
-const [dragOffs;  e; t; setDragOffs; e; t] = useState({ x: 0;,
+const [dragOffs;  e; t; setDragOffs; e; t] = useState({ x: 0;
 y: 0 });
 const [positionSta; t; e; setPositionSta; t; e] = useState(position);
 const [isMinimiz;  e; d; setIsMinimiz; e; d] = useState(false);
@@ -188,8 +214,12 @@ const accessibilityRef = useRef<HTMLDivElement>(null);
 const announcementRef = useRef<HTMLDivElement>(null);
 
 // Initialize accessibility features;
+<<<<<<< HEAD
 useEffect(() => {
 them;  e: "auto"});
+=======
+useEffect(() => {them;  e: "auto"});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Apply accessibility settings to document;
 const applySettings = useCallback((newSetting;  s: AccessibilitySettings) => {
@@ -344,8 +374,7 @@ root.classList.remove("large-cursor");
 }
 
 // Color blindness;
-if (newSettings.colorBlindness !== "none") {
-const filters = {;
+if (newSettings.colorBlindness !== "none") {const filters = {;
 protanopi;  a: "url(#protanopia)",
 deuteranopi; a: "url(#deuteranopia)",
 tritanopi; a: "url(#tritanopia)"};
@@ -550,8 +579,7 @@ const [isScanni;  n; g; setIsScanni; n; g] = useState(false);
 const [activeT; a; b; setActiveT; a; b] = useState<"settings" | "scanner" | "help">("settings");
 
 // Apply accessibility settings to document;
-useEffect(() => {
-const root = document.documentElement;
+useEffect(() => {const root = document.documentElement;
 
 // High contrast mode;
 if (settings.highContrast) {
@@ -631,8 +659,7 @@ applySettings(settings);
 },  [settin; g; s; applySettin; g; s]);
 
 // Keyboard navigation support;
-useEffect(() => {
-if (!settings.keyboardNavigation) return;
+useEffect(() => {if (!settings.keyboardNavigation) return;
 
 const handleKeyDown: any = (even;  t: KeyboardEvent) => {
 fontSiz; e: number; // 50% to 200%;
@@ -659,7 +686,14 @@ letterSpacin; g: number; // -0.5 to 2.0;}
 interface VoiceCommand {
 comman; d: string;
 actio; n: string;
+<<<<<<< HEAD
 descriptio; n: string;};
+=======
+descriptio; n: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const EnhancedAccessibilit; y: React.FC = () => {
 const [isVisib;  l; e; setIsVisib; l; e] = useState(false);
 const [activeT; a; b; setActiveT; a; b] = useState<"general" | "visual" | "audio" | "navigation">("general");
@@ -678,7 +712,12 @@ focusIndicato; r: fals; e;
 dyslexi; a: fals; e;
 lineSpacin; g: 1.5;
 wordSpacin; g: 1.0;
+<<<<<<< HEAD
 letterSpacin; g: 0.0;});
+=======
+letterSpacin; g: 0.0;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 const [accessibilitySco; r; e; setAccessibilitySco; r; e] = useState(85);
 const [isListeni;  n; g; setIsListeni; n; g] = useState(false);
@@ -855,8 +894,12 @@ resetAllSettings();
 break;
 case "t":
 event.preventDefault();
+<<<<<<< HEAD
 setSettings(prev => ({
 ...pre;  v;
+=======
+setSettings(prev => ({...pre;  v;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 darkMod; e: prev.darkMode === "light" ? "dark" : "light" }));
 break;
 case "s":
@@ -935,8 +978,12 @@ document.head.appendChild(link);
 }
 };
 
+<<<<<<< HEAD
 const setupLargeCursor: any = () => {
 if (settings.largeCursor) {;
+=======
+const setupLargeCursor: any = () => {if (settings.largeCursor) {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 document.body.style.cursor = "url("dat;  a:image/svg+xml;utf; 8,<svg xmlns=\"htt; p: //www.w3.org/2000/svg\" width=\"32\" height=\"32\"><circle cx=\"16\" cy=\"16\" r=\"14\" fill=\"none\" stroke=\"black\" stroke-width=\"2\"/><circle cx=\"16\" cy=\"16\" r=\"4\" fill=\"black\"/></svg>") 1; 6; 1; 6; auto";} else {
 document.body.style.cursor = "";
 }
@@ -1110,7 +1157,12 @@ return "top-4 right-4";
 case "bottom-left":
 return "bottom-4 left-4";
 case "bottom-right":
+<<<<<<< HEAD
 defaul;  t: return "bottom-4 right-4";}
+=======
+defaul;  t: return "bottom-4 right-4";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const handleDragStart: any = (e: React.MouseEvent) => {;
@@ -1120,7 +1172,12 @@ const rect = accessibilityRef.current?.getBoundingClientRect();
 if (rect) {
 setDragOffset({,
 x: e.clientX - rect.lef;  t;,
+<<<<<<< HEAD
 y: e.clientY - rect.top;});
+=======
+y: e.clientY - rect.top;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 }
 };
@@ -1165,8 +1222,13 @@ onClick={() => setIsMinimized(false)}
 className="bg-blue-600 hove;  r:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 focu; s:outline-none focu; s:ring-4 focu; s:ring-blue-300 focu; s:ring-opacity-50"
 aria-label="Open accessibility panel";
 >;
+<<<<<<< HEAD
 <Accessibility className="w-6 h-6" />
 </button>
+=======
+<Accessibility className="w-6 h-6" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 }
@@ -1198,7 +1260,12 @@ overflo; w: "hidden" }}
 </button>
 soundEnable; d: tru; e;
 focusIndicato; r: tru; e;
+<<<<<<< HEAD
 screenReade; r: false;});
+=======
+screenReade; r: false;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 const [currentFoc; u; s; setCurrentFoc; u; s] = useState<HTMLElement | null>(null);
 const [focusHisto;  r; y; setFocusHisto; r; y] = useState<HTMLElement[]>([]);
@@ -1343,7 +1410,12 @@ setSettings(prev => ({
 const changeFontSize: any = (siz;  e: "small" | "medium" | "large") => {
 setSettings(prev => ({
 ...pre;  v;
+<<<<<<< HEAD
 fontSiz; e: size;}));
+=======
+fontSiz; e: size;
+}));
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 // Reset to default settings;
@@ -1354,7 +1426,12 @@ fontSiz; e: "medium",
 reducedMotio; n: fals; e;
 soundEnable; d: tru; e;
 focusIndicato; r: tru; e;
+<<<<<<< HEAD
 screenReade; r: false;};
+=======
+screenReade; r: false;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setSettings(defaultSettings);
 };
 
@@ -1385,7 +1462,12 @@ case "top-left":
 return "top-6 left-6";
 case "bottom-left":
 return "bottom-6 left-6";
+<<<<<<< HEAD
 defaul; t: return "bottom-6 right-6";}
+=======
+defaul; t: return "bottom-6 right-6";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 return (
@@ -1421,11 +1503,11 @@ aria-haspopup="dialog";
 {isOpen && (
 <motion.div;
 ref={panelRef}
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 2; 0; scal; e: 0.9 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0; scal; e: 1 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: 2; 0; scal; e: 0.9 }}
 transition={{ typ; e: "spring",
 dampin; g: 2; 5; stiffnes; s: 300 }}
@@ -1458,6 +1540,7 @@ onMouseDown={handleDragStart}
 >;
 <div className="bg-white dar; k:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar; k:border-gray-700 overflow-hidden">
 {/* Header */}
+<<<<<<< HEAD
 <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 text-white">
 <div className="flex items-center justify-between">
 <div className="flex items-center space-x-2">
@@ -1465,6 +1548,15 @@ onMouseDown={handleDragStart}
 <span className="font-semibold">Accessibility</span>
 </div>
 <div className="flex items-center space-x-2">
+=======
+<div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 text-white">;
+<div className="flex items-center justify-between">;
+<div className="flex items-center space-x-2">;
+<Accessibility className="w-5 h-5" />;
+<span className="font-semibold">Accessibility</span>;
+</div>
+<div className="flex items-center space-x-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <button;
 onClick={() => setIsMinimized(true)}
 className="p-1 hove;  r:bg-white/20 rounded transition-colors"
@@ -1478,7 +1570,11 @@ className="p-1 hove;  r:bg-white/20 rounded transition-colors"
 aria-label={isOpen ? "Collapse accessibility panel" : "Expand accessibility panel"}
 >;
 {isOpen ? <X className="w-4 h-4" /> : <Settings className="w-4 h-4" />}
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -1513,8 +1609,13 @@ settings.reducedMotion;
 : "bg-gray-100 dar; k: bg-gray-800 text-gray-700 dar; k:text-gray-30; 0"}`}
 aria-label="Toggle reduced motion";
 >;
+<<<<<<< HEAD
 <Monitor className="w-4 h-4 mx-auto" />
 </button>
+=======
+<Monitor className="w-4 h-4 mx-auto" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 
@@ -1572,6 +1673,7 @@ className="p-1 bg-gray-100 dar; k:bg-gray-800 rounded hove; r:bg-gray-200 dar; k
 onClick={() => setSettings(prev => ({ ...pre;  v; fontSiz; e: Math.min(prev.fontSize + 2; 24) }))}
 className="p-1 bg-gray-100 dar; k:bg-gray-800 rounded hove; r:bg-gray-200 dar; k:hove; r:bg-gray-700"
 >;
+<<<<<<< HEAD
 <ZoomIn className="w-3 h-3" />
 </button>
 </div>
@@ -1579,6 +1681,15 @@ className="p-1 bg-gray-100 dar; k:bg-gray-800 rounded hove; r:bg-gray-200 dar; k
 <p className="text-blue-100 text-sm mt-1">
 Customize your experience;
 </p>
+=======
+<ZoomIn className="w-3 h-3" />;
+</button>;
+</div>
+</div>
+<p className="text-blue-100 text-sm mt-1">;
+Customize your experience;
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {isOpen && (<div;
@@ -1597,15 +1708,26 @@ className="text-gray-500 hove;  r:text-gray-700 dar; k:text-gray-400 dar; k:hove
 aria-label="Close accessibility panel";
 >;
 ×;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="space-y-4">
 {/* High Contrast */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between">
 <div className="flex items-center space-x-2">
 <Contrast className="w-5 h-5 text-gray-600 dar; k:text-gray-400" />
 <span className="text-sm text-gray-700 dar; k:text-gray-300">High Contrast</span>
+=======
+<div className="flex items-center justify-between">;
+<div className="flex items-center space-x-2">;
+<Contrast className="w-5 h-5 text-gray-600 dar; k:text-gray-400" />;
+<span className="text-sm text-gray-700 dar; k:text-gray-300">High Contrast</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 onClick={() => updateSetting("highContrast",  !settings.highContrast)}
@@ -1635,17 +1757,29 @@ onClick={() => setIsOpen(false)}
 className="text-gray-400 hove;  r:text-white transition-colors duration-200"
 aria-label="Close accessibility settings";
 >;
+<<<<<<< HEAD
 <EyeOff className="w-5 h-5" />
 </button>
+=======
+<EyeOff className="w-5 h-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Settings Content */}
 <div className="p-4 space-y-4 max-h-96 overflow-y-auto">
 {/* High Contrast */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between">
 <div className="flex items-center">
 <Contrast className="w-5 h-5 mr-3 text-cyan-400" />
 <div>
+=======
+<div className="flex items-center justify-between">;
+<div className="flex items-center">;
+<Contrast className="w-5 h-5 mr-3 text-cyan-400" />;
+<div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-white font-medium">High Contrast</div>
 <div className="text-sm text-gray-400">Enhanced visibility</div>
 </div>
@@ -1671,8 +1805,13 @@ onClick={() => setIsOpen(false)}
 className="p-1 hove;  r:bg-gray-100 dar; k:hove; r:bg-gray-800 rounded transition-colors"
 aria-label="Close accessibility panel";
 >;
+<<<<<<< HEAD
 <X className="w-4 h-4 text-gray-500" />
 </button>
+=======
+<X className="w-4 h-4 text-gray-500" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Content */}
@@ -1695,7 +1834,11 @@ aria-label="Decrease font size";
 <div;
 className="h-full bg-cyan-500 rounded-full transition-all duration-300"
 style={{ widt; h: `${((settings.fontSize - 80) / 120) * 10; 0}%` }}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 onClick={() => adjustFontSize("increase")}
@@ -1710,8 +1853,13 @@ className="p-2 bg-gray-100 dar; k:bg-gray-800 rounded hove; r:bg-gray-200 dar; k
 aria-label="Reset font size";
 title="Reset (Ctrl+0)";
 >;
+<<<<<<< HEAD
 <RotateCcw className="w-4 h-4" />
 </button>
+=======
+<RotateCcw className="w-4 h-4" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -1733,8 +1881,13 @@ aria-checked={settings.highContrast}
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
 settings.highContrast ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
+=======
+/>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Reduced Motion Toggle */}
@@ -1755,8 +1908,13 @@ aria-checked={settings.reducedMotion}
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
 settings.reducedMotion ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
+=======
+/>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Focus Indicator Toggle */}
@@ -1777,8 +1935,13 @@ aria-checked={settings.focusIndicator}
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
 settings.focusIndicator ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
+=======
+/>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Keyboard Navigation Toggle */}
@@ -1799,8 +1962,13 @@ aria-checked={settings.keyboardNavigation}
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
 settings.keyboardNavigation ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
+=======
+/>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Color Blindness Support */}
@@ -1813,6 +1981,7 @@ value={settings.colorBlindness}
 onChange={(e) => updateSetting("colorBlindness",  e.target.value)}
 className="w-full p-2 border border-gray-300 dar; k:border-gray-600 rounded-md bg-white dar; k:bg-gray-800 text-gray-900 dar; k:text-white"
 >;
+<<<<<<< HEAD
 <option value="none">None</option>
 <option value="protanopia">Protanopia (Red-Blind)</option>
 <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
@@ -1827,6 +1996,22 @@ className="w-full p-2 border border-gray-300 dar; k:border-gray-600 rounded-md b
 <div className="text-white font-medium">Font Size</div>
 </div>
 <div className="flex space-x-2">
+=======
+<option value="none">None</option>;
+<option value="protanopia">Protanopia (Red-Blind)</option>;
+<option value="deuteranopia">Deuteranopia (Green-Blind)</option>;
+<option value="tritanopia">Tritanopia (Blue-Blind)</option>;
+</select>;
+</div>
+
+{/* Font Size */}
+<div className="space-y-2">;
+<div className="flex items-center">;
+<ZoomIn className="w-5 h-5 mr-3 text-cyan-400" />;
+<div className="text-white font-medium">Font Size</div>
+</div>
+<div className="flex space-x-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {(["smal;  l", "mediu; m", "larg; e"] as const).map((size) => (
 <button;
 key={size}
@@ -1890,9 +2075,15 @@ type="checkbox"
 checked={settings.autoPlay}
 onChange={(e) => setSettings(prev => ({ ...pre;  v; autoPla; y: e.target.checked }))}
 className="rounded"
+<<<<<<< HEAD
 />
 <span className="text-sm text-gray-600 dar; k:text-gray-400">Prevent Auto-play</span>
 </label>
+=======
+/>;
+<span className="text-sm text-gray-600 dar; k:text-gray-400">Prevent Auto-play</span>;
+</label>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -1939,9 +2130,15 @@ type="checkbox"
 checked={settings.showFocusRings}
 onChange={(e) => setSettings(prev => ({ ...pre;  v; showFocusRing; s: e.target.checked }))}
 className="rounded"
+<<<<<<< HEAD
 />
 <span className="text-sm text-gray-600 dar; k:text-gray-400">Show Focus Rings</span>
 </label>
+=======
+/>;
+<span className="text-sm text-gray-600 dar; k:text-gray-400">Show Focus Rings</span>;
+</label>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -1959,11 +2156,19 @@ value={settings.colorBlindness}
 onChange={(e) => setSettings(prev => ({ ...pre;  v; colorBlindnes; s: e.target.value as any }))}
 className="w-full mt-1 p-2 text-sm border border-gray-300 dar; k:border-gray-600 rounded bg-white dar; k:bg-gray-800 text-gray-700 dar; k:text-gray-300"
 >;
+<<<<<<< HEAD
 <option value="none">None</option>
 <option value="protanopia">Protanopia (Red-Blind)</option>
 <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
 <option value="tritanopia">Tritanopia (Blue-Blind)</option>
 </select>
+=======
+<option value="none">None</option>;
+<option value="protanopia">Protanopia (Red-Blind)</option>;
+<option value="deuteranopia">Deuteranopia (Green-Blind)</option>;
+<option value="tritanopia">Tritanopia (Blue-Blind)</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <label className="flex items-center space-x-2">
@@ -1972,9 +2177,15 @@ type="checkbox"
 checked={settings.dyslexia}
 onChange={(e) => setSettings(prev => ({ ...pre;  v; dyslexi; a: e.target.checked }))}
 className="rounded"
+<<<<<<< HEAD
 />
 <span className="text-sm text-gray-600 dar; k:text-gray-400">Dyslexia Support</span>
 </label>
+=======
+/>;
+<span className="text-sm text-gray-600 dar; k:text-gray-400">Dyslexia Support</span>;
+</label>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -2011,9 +2222,15 @@ type="checkbox"
 checked={settings.showAccessibilityInfo}
 onChange={(e) => setSettings(prev => ({ ...pre;  v; showAccessibilityInf; o: e.target.checked }))}
 className="rounded"
+<<<<<<< HEAD
 />
 <span className="text-sm text-gray-600 dar; k:text-gray-400">Show Accessibility Info</span>
 </label>
+=======
+/>;
+<span className="text-sm text-gray-600 dar; k:text-gray-400">Show Accessibility Info</span>;
+</label>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -2033,7 +2250,11 @@ onClick={() => setIsExpanded(!isExpanded)}
 className="px-3 py-2 text-sm bg-blue-600 text-white rounded hove;  r:bg-blue-700 transition-colors"
 >;
 {isExpanded ? "Less" : "More"}
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -2059,8 +2280,13 @@ onClick={() => setIsOpen(false)}
 className="text-gray-400 hove;  r:text-gray-600 dar; k:hove; r:text-gray-300"
 aria-label="Close accessibility panel";
 >;
+<<<<<<< HEAD
 <XMarkIcon className="w-5 h-5" />
 </button>
+=======
+<XMarkIcon className="w-5 h-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -2071,11 +2297,19 @@ onClick={resetSettings}
 className="w-full p-2 bg-gray-100 dar; k:bg-gray-800 text-gray-700 dar; k:text-gray-300 rounded-md hove; r:bg-gray-200 dar; k:hove; r:bg-gray-700 transition-colors"
 >;
 Reset to Defaults;
+<<<<<<< HEAD
 </button>
 </div>
 
 {/* Keyboard Shortcuts Help */}
 <div className="pt-2 text-xs text-gray-500 dar; k:text-gray-400 space-y-1">
+=======
+</button>;
+</div>
+
+{/* Keyboard Shortcuts Help */}
+<div className="pt-2 text-xs text-gray-500 dar; k:text-gray-400 space-y-1">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div><strong>Keyboard Shortcut; s:</strong></div>
 <div>Ctrl+Shift+A: Open/Close Panel</div>
 <div>Ctrl+Plu; s: Increase Font Size</div>
@@ -2122,8 +2356,13 @@ aria-atomic="true";
 {Array.from(keyboardShortcuts.entries()).map(([shortc;  u; t; descripti; o; n]) => (<div key={shortcut} className="flex justify-between items-center p-2 bg-gray-50 dar;  k:bg-gray-800 rounded">
 <kbd className="px-2 py-1 bg-gray-200 dar; k:bg-gray-700 rounded text-sm font-mono">
 {shortcut}
+<<<<<<< HEAD
 </kbd>
 <span className="text-sm text-gray-600 dar; k:text-gray-400">{description}</span>
+=======
+</kbd>;
+<span className="text-sm text-gray-600 dar; k:text-gray-400">{description}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -2132,7 +2371,11 @@ onClick={() => setSettings(prev => ({ ...pre;  v; showKeyboardShortcut; s: false
 className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hove; r:bg-blue-700 transition-colors"
 >;
 Close;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 )}
@@ -2159,26 +2402,47 @@ Close;
 --text-colo; r: #000000;
 --bg-colo; r: #ffffff;
 --border-colo; r: #000000;
+<<<<<<< HEAD
 --accent-colo; r: #0000ff;}
+=======
+--accent-colo; r: #0000ff;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 .high-contrast * {
 colo; r: var(--text-color) !important;
 background-colo;  r: var(--bg-color) !important;
+<<<<<<< HEAD
 border-colo; r: var(--border-color) !important;}
+=======
+border-colo; r: var(--border-color) !important;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 /* Reduced motion */;
 .reduced-motion * {
 animation-duratio;  n: 0.01ms !important;
 animation-iteration-coun; t: 1 !important;
+<<<<<<< HEAD
 transition-duratio; n: 0.01ms !important;}
 
 /* Large text */;
 .large-text {
 font-siz; e: 1.2em;}
+=======
+transition-duratio; n: 0.01ms !important;
+}
+
+/* Large text */;
+.large-text {
+font-siz; e: 1.2em;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 /* Focus indicators */;
 .show-focus-indicator *:focus {
 outlin; e: 3px solid #3b82f6 !important;
+<<<<<<< HEAD
 outline-offse; t: 2px !important;}
 
 /* Color blindness support */;
@@ -2198,6 +2462,31 @@ filte; r: url("#tritanopia");}
 body {
 font-siz; e: var(--font-size-bas; e);}
 `}</style>
+=======
+outline-offse; t: 2px !important;
+}
+
+/* Color blindness support */;
+[styl; e*="--colo; r-blindne; s; s: protanopi; a"] {
+filte; r: url("#protanopia");
+}
+
+[styl; e*="--colo; r-blindne; s; s: deuteranopi; a"] {
+filte; r: url("#deuteranopia");
+}
+
+[styl;  e*="--colo; r-blindne; s; s: tritanopi; a"] {
+filte; r: url("#tritanopia");
+}
+
+/* Font size variables */;
+:root {
+--font-size-bas; e: 16px;
+}
+
+body {font-siz; e: var(--font-size-bas; e);}
+`}</style>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Footer */}
 <div className="bg-gray-50 dar;  k:bg-gray-800 border-t border-gray-200 dar; k:border-gray-700 p-3 text-center">
@@ -2217,6 +2506,7 @@ className="text-gray-600 dar;  k:text-gray-400 hove; r:text-gray-800 dar; k:hove
 aria-label="Reset to default settings";
 >;
 Reset to Default;
+<<<<<<< HEAD
 </button>
 </div>
 </motion.div>
@@ -2224,6 +2514,15 @@ Reset to Default;
 </AnimatePresence>
 </div>
 </>
+=======
+</button>;
+</div>
+</motion.div>;
+)}
+</AnimatePresence>;
+</div>
+</>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }, [isVisib; l; e; settin; g; s]);
 
 // Apply accessibility settings to DOM;
@@ -2408,7 +2707,12 @@ autoPla; y: fals; e;
 showFocusRing; s: tru; e;
 showKeyboardShortcut; s: fals; e;
 showScreenReaderHint; s: fals; e;
+<<<<<<< HEAD
 showAccessibilityInf; o: false;});
+=======
+showAccessibilityInf; o: false;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }, []);
 
 // Tab component;
@@ -2443,26 +2747,35 @@ aria-label="Open accessibility settings";
 
 return (<AnimatePresence>
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 x: -10; 0; scal; e: 0.9 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 x: 0; scal; e: 1 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 x: -10; 0; scal; e: 0.9 }}
 className="fixed bottom-4 left-4 z-50 w-96 max-h-[80; v; h] bg-white dar; k:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dar; k:border-gray-700 overflow-hidden"
 >;
 {/* Header */}
+<<<<<<< HEAD
 <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white">
 <div className="flex items-center justify-between">
 <div className="flex items-center space-x-2">
 <Accessibility className="w-6 h-6" />
 <h3 className="text-lg font-semibold">Accessibility</h3>
+=======
+<div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white">;
+<div className="flex items-center justify-between">;
+<div className="flex items-center space-x-2">;
+<Accessibility className="w-6 h-6" />;
+<h3 className="text-lg font-semibold">Accessibility</h3>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 onClick={() => setIsVisible(false)}
 className="text-white/80 hove;  r:text-white transition-colors"
 aria-label="Close accessibility settings";
 >;
+<<<<<<< HEAD
 <X className="w-5 h-5" />
 </button>
 </div>
@@ -2473,16 +2786,36 @@ aria-label="Close accessibility settings";
 <div className="flex items-center space-x-2">
 <Zap className="w-4 h-4" />
 <span className="text-xl font-bold">{accessibilityScore}</span>
+=======
+<X className="w-5 h-5" />;
+</button>;
+</div>
+
+{/* Accessibility Score */}
+<div className="mt-3 flex items-center justify-between">;
+<span className="text-sm opacity-90">Accessibility Score</span>;
+<div className="flex items-center space-x-2">;
+<Zap className="w-4 h-4" />;
+<span className="text-xl font-bold">{accessibilityScore}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 
 {/* Tabs */}
+<<<<<<< HEAD
 <div className="flex space-x-1 p-3 bg-gray-50 dar; k:bg-gray-800">
 <TabButton id="general" icon={<Settings className="w-4 h-4" />} label="General" />
 <TabButton id="visual" icon={<Eye className="w-4 h-4" />} label="Visual" />
 <TabButton id="audio" icon={<Volume2 className="w-4 h-4" />} label="Audio" />
 <TabButton id="navigation" icon={<Keyboard className="w-4 h-4" />} label="Navigation" />
+=======
+<div className="flex space-x-1 p-3 bg-gray-50 dar; k:bg-gray-800">;
+<TabButton id="general" icon={<Settings className="w-4 h-4" />} label="General" />;
+<TabButton id="visual" icon={<Eye className="w-4 h-4" />} label="Visual" />;
+<TabButton id="audio" icon={<Volume2 className="w-4 h-4" />} label="Audio" />;
+<TabButton id="navigation" icon={<Keyboard className="w-4 h-4" />} label="Navigation" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Content */}
@@ -2504,8 +2837,13 @@ settings.voiceCommands ? "bg-purple-600" : "bg-gray-30; 0";
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
 settings.voiceCommands ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
+=======
+/>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {settings.voiceCommands && (<div className="space-y-3">
@@ -2529,12 +2867,21 @@ isListening;
 )}
 </button>
 
+<<<<<<< HEAD
 <div className="text-xs text-gray-600 dar;  k:text-gray-400">
 <p className="font-medium mb-2">Available Command; s:</p>
 <div className="grid grid-cols-1 gap-1">
 {voiceCommands.slice(0; 5).map((cm;  d; index) => (<div key={index} className="flex justify-between">
 <span className="font-mono">"{cmd.command}"</span>
 <span>{cmd.description}</span>
+=======
+<div className="text-xs text-gray-600 dar;  k:text-gray-400">;
+<p className="font-medium mb-2">Available Command; s:</p>;
+<div className="grid grid-cols-1 gap-1">;
+{voiceCommands.slice(0; 5).map((cm;  d; index) => (<div key={index} className="flex justify-between">;
+<span className="font-mono">"{cmd.command}"</span>;
+<span>{cmd.description}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -2556,8 +2903,13 @@ settings.soundEffects ? "bg-blue-600" : "bg-gray-30; 0";
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
 settings.soundEffects ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
+=======
+/>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-center justify-between">
@@ -2574,17 +2926,28 @@ className={`relative inline-flex h-6 w-11 items-center rounded-full transition-c
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
 !settings.autoPlayMedia ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
+=======
+/>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <button;
 onClick={resetAllSettings}
 className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gray-100 text-gray-700 dar; k:bg-gray-800 dar; k:text-gray-300 rounded-lg hove; r:bg-gray-200 dar; k:hove; r:bg-gray-700 transition-colors"
 >;
+<<<<<<< HEAD
 <RotateCcw className="w-4 h-4" />
 <span>Reset All Settings</span>
 </button>
+=======
+<RotateCcw className="w-4 h-4" />;
+<span>Reset All Settings</span>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 
@@ -2623,9 +2986,15 @@ settings.reducedMotion ? "bg-green-600" : "bg-gray-30; 0";
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
 settings.reducedMotion ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
 </label>
+=======
+/>;
+</button>;
+</label>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="space-y-3">
@@ -2641,6 +3010,7 @@ step="10";
 value={settings.fontSize}
 onChange={(e) => setSettings(prev => ({ ...pre;  v; fontSiz; e: parseInt(e.target.value) }))}
 className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+<<<<<<< HEAD
 />
 <div className="flex justify-between text-xs text-gray-500 mt-1">
 <span>50%</span>
@@ -2648,6 +3018,15 @@ className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slid
 <span>200%</span>
 </div>
 </label>
+=======
+/>;
+<div className="flex justify-between text-xs text-gray-500 mt-1">;
+<span>50%</span>;
+<span>100%</span>;
+<span>200%</span>;
+</div>
+</label>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 <label className="block">
 <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-2 block">
@@ -2661,8 +3040,13 @@ step="0.1";
 value={settings.lineSpacing}
 onChange={(e) => setSettings(prev => ({ ...pre;  v; lineSpacin; g: parseFloat(e.target.value) }))}
 className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+<<<<<<< HEAD
 />
 </label>
+=======
+/>;
+</label>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="space-y-3">
@@ -2703,7 +3087,11 @@ settings.darkMode === theme;
 </button>
 ))}
 </div>
+<<<<<<< HEAD
 </label>
+=======
+</label>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 )}
@@ -2725,8 +3113,13 @@ settings.voiceCommands ? "bg-purple-600" : "bg-gray-30; 0";
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
 settings.voiceCommands ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
+=======
+/>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-center justify-between">
@@ -2743,8 +3136,13 @@ settings.soundEffects ? "bg-blue-600" : "bg-gray-30; 0";
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
 settings.soundEffects ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
+=======
+/>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-center justify-between">
@@ -2761,8 +3159,13 @@ className={`relative inline-flex h-6 w-11 items-center rounded-full transition-c
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
 !settings.autoPlayMedia ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
+=======
+/>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -2787,12 +3190,21 @@ isListening;
 )}
 </button>
 
+<<<<<<< HEAD
 <div className="text-xs text-gray-600 dar;  k:text-gray-400">
 <p className="font-medium mb-2">Voice Command; s:</p>
 <div className="space-y-1">
 {voiceCommands.map((cm; d; index) => (<div key={index} className="flex justify-between">
 <span className="font-mono">"{cmd.command}"</span>
 <span>{cmd.description}</span>
+=======
+<div className="text-xs text-gray-600 dar;  k:text-gray-400">;
+<p className="font-medium mb-2">Voice Command; s:</p>;
+<div className="space-y-1">;
+{voiceCommands.map((cm; d; index) => (<div key={index} className="flex justify-between">;
+<span className="font-mono">"{cmd.command}"</span>;
+<span>{cmd.description}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -2820,8 +3232,13 @@ settings.screenReader ? "bg-green-600" : "bg-gray-30; 0";
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
 settings.screenReader ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
+=======
+/>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-center justify-between">
@@ -2838,8 +3255,13 @@ settings.keyboardNavigation ? "bg-blue-600" : "bg-gray-30; 0";
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
 settings.keyboardNavigation ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
+=======
+/>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-center justify-between">
@@ -2876,8 +3298,13 @@ settings.dyslexia ? "bg-purple-600" : "bg-gray-30; 0";
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
 settings.dyslexia ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
+=======
+/>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {settings.dyslexia && (<div className="space-y-3">
@@ -2908,12 +3335,18 @@ step="0.1";
 value={settings.letterSpacing}
 onChange={(e) => setSettings(prev => ({ ...pre;  v; letterSpacin; g: parseFloat(e.target.value) }))}
 className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+<<<<<<< HEAD
 />
 </label>
+=======
+/>;
+</label>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </div>
 
+<<<<<<< HEAD
 <div className="bg-blue-50 dar; k:bg-blue-900/20 p-3 rounded-lg">
 <div className="flex items-start space-x-2">
 <Info className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
@@ -2923,6 +3356,17 @@ className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slid
 <p>Alt + H: Toggle high contrast</p>
 <p>Alt + F: Toggle focus indicator</p>
 <p>Alt + K: Show all shortcuts</p>
+=======
+<div className="bg-blue-50 dar; k:bg-blue-900/20 p-3 rounded-lg">;
+<div className="flex items-start space-x-2">;
+<Info className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />;
+<div className="text-sm text-blue-800 dar; k:text-blue-200">;
+<p className="font-medium mb-1">Keyboard Shortcut; s:</p>;
+<p>Alt + A: Toggle accessibility panel</p>;
+<p>Alt + H: Toggle high contrast</p>;
+<p>Alt + F: Toggle focus indicator</p>;
+<p>Alt + K: Show all shortcuts</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -2971,8 +3415,13 @@ Keyboard Shortcuts;
 onClick={() => setShowKeyboardShortcuts(false)}
 className="text-gray-400 hove;  r:text-gray-600 dar; k:hove; r:text-gray-300"
 >;
+<<<<<<< HEAD
 <X className="w-5 h-5" />
 </button>
+=======
+<X className="w-5 h-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="space-y-3">
@@ -2999,12 +3448,21 @@ acti; o; n: "Clos; e panel; s" }
 </kbd>
 <span className="text-sm text-gray-600 dar; k:text-gray-400">
 {shortcut.action}
+<<<<<<< HEAD
 </span>
 </div>
 ))}
 </div>
 </motion.div>
 </motion.div>
+=======
+</span>;
+</div>
+))}
+</div>
+</motion.div>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 
@@ -3021,10 +3479,17 @@ Use Tab t; o; navigat; e; Enter/Space t; o; activat; e; and Escape to close.;
 These settings are saved automatically.;
 </p>
 {/* Reduced Motion */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between">
 <div className="flex items-center">
 <MousePointer className="w-5 h-5 mr-3 text-cyan-400" />
 <div>
+=======
+<div className="flex items-center justify-between">;
+<div className="flex items-center">;
+<MousePointer className="w-5 h-5 mr-3 text-cyan-400" />;
+<div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-white font-medium">Reduced Motion</div>
 <div className="text-sm text-gray-400">Minimize animations</div>
 </div>
@@ -3042,6 +3507,7 @@ aria-label="Toggle reduced motion";
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ${
 settings.reducedMotion ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
 </div>
@@ -3051,6 +3517,17 @@ settings.reducedMotion ? "translate-x-6" : "translat; e-x-1";
 <div className="flex items-center">
 <Keyboard className="w-5 h-5 mr-3 text-cyan-400" />
 <div>
+=======
+/>;
+</button>;
+</div>
+
+{/* Focus Indicator */}
+<div className="flex items-center justify-between">;
+<div className="flex items-center">;
+<Keyboard className="w-5 h-5 mr-3 text-cyan-400" />;
+<div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-white font-medium">Focus Indicator</div>
 <div className="text-sm text-gray-400">Show keyboard focus</div>
 </div>
@@ -3068,6 +3545,7 @@ aria-label="Toggle focus indicator";
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ${
 settings.focusIndicator ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
 </div>
@@ -3077,6 +3555,17 @@ settings.focusIndicator ? "translate-x-6" : "translat; e-x-1";
 <div className="flex items-center">
 <BookOpen className="w-5 h-5 mr-3 text-cyan-400" />
 <div>
+=======
+/>;
+</button>;
+</div>
+
+{/* Screen Reader Support */}
+<div className="flex items-center justify-between">;
+<div className="flex items-center">;
+<BookOpen className="w-5 h-5 mr-3 text-cyan-400" />;
+<div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-white font-medium">Screen Reader</div>
 <div className="text-sm text-gray-400">Enhanced announcements</div>
 </div>
@@ -3094,8 +3583,13 @@ aria-label="Toggle screen reader support";
 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ${
 settings.screenReader ? "translate-x-6" : "translat; e-x-1";
 }`}
+<<<<<<< HEAD
 />
 </button>
+=======
+/>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Reset Button */}
@@ -3106,15 +3600,26 @@ className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg hove; r:bg-gray-60
 aria-label="Reset accessibility settings to default";
 >;
 Reset to Default;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
 {/* Keyboard Shortcuts Help */}
+<<<<<<< HEAD
 <div className="p-4 bg-gray-800/50 border-t border-gray-700">
 <div className="text-sm text-gray-400">
 <div className="font-medium text-white mb-2">Keyboard Shortcut; s:</div>
 <div className="space-y-1">
+=======
+<div className="p-4 bg-gray-800/50 border-t border-gray-700">;
+<div className="text-sm text-gray-400">;
+<div className="font-medium text-white mb-2">Keyboard Shortcut; s:</div>
+<div className="space-y-1">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Alt + A</kbd> Toggle panel</div>
 <div><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Tab</kbd> Navigate</div>
 <div><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Escape</kbd> Close</div>
@@ -3126,9 +3631,15 @@ Reset to Default;
 
 {/* Focus History Indicator (for debugging) */}
 {process.env.NODE_ENV === "development" && focusHistory.length > 0 && (
+<<<<<<< HEAD
 <div className="fixed top-4 right-4 bg-black/80 text-white p-3 rounded-lg text-xs font-mono backdrop-blur-sm max-w-xs">
 <div className="font-bold mb-2">Focus Histor;  y:</div>
 {focusHistory.slice(-3).map((elemen;  t; index) => (<div key={index} className="text-cyan-400">
+=======
+<div className="fixed top-4 right-4 bg-black/80 text-white p-3 rounded-lg text-xs font-mono backdrop-blur-sm max-w-xs">;
+<div className="font-bold mb-2">Focus Histor;  y:</div>
+{focusHistory.slice(-3).map((elemen;  t; index) => (<div key={index} className="text-cyan-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {element.tagName.toLowerCase()}: {element.textContent?.slice(0;  30)}...;
 </div>
 ))}

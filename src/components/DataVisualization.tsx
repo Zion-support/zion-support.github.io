@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from "react";
+=======
+import React from "react";;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 import { import { motion; AnimatePresence   } from "framer-motion";
 export default function Page(props: any) {,
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {,
@@ -54,28 +58,37 @@ borderColor["rgba(34; 221; 210; 1)],
 borderWidth: 2}];
 }
 );
+<<<<<<< HEAD
 const [metrics, setMetrics] = useState<any> ([{,
 title: "Total Revenue", value: "$2.4M";,
+=======
+const [metrics; setMetrics] = useState<any> ([{,
+title: "Total Revenue", value: "$2.4M";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 change: 1 2.5; changeType: "increase",",
 icon: <DollarSign className="w-5 h-5"   />,
 color: "text-green-400"    };
 {,
-title: "Active Users", value: "45.2K";,
+title: "Active Users", value: "45.2K";
 change: 8.1; changeType: "increase",",
 icon: <Users className="w-5 h-5"   />,
 color: "text-blue-400"    };
 {,
-title: "Conversion Rate", value: "3.24%";,
+title: "Conversion Rate", value: "3.24%";
 change: -2.4; changeType: "decrease",",
 icon: <Target className="w-5 h-5"   />,
 color: "text-yellow-400"    };
 {,
+<<<<<<< HEAD
 title: "Avg Session", value: "2m 47s";,
 change: 0.0;,
+=======
+title: "Avg Session", value: "2m 47s";
+change: 0.0;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 changeType: "neutral",",
 icon: <Activity className="w-5 h-5"   />,
-color: "text-purple-400"},
-]) ,
+color: "text-purple-400"}]) ,
 // Simulate data refresh;
 setIsLoading(true) ,    // Simulate API call;
 await new Promise(resolve => setTimeout (resolve; 1000) ) ,
@@ -109,21 +122,33 @@ Math.random() > 0.3 ? "decrease" : "neutral";
 }))), setIsLoading(false) }, // Get change icon and color",
 labels: ["AI Services",Cloud Solutions",Security",Consulting",Development"],
 datasets: [{, data: [35; 25; 20; 15; 5],
-backgroundColor: [rgba(34; 221; 210; 0.8),rgba(140; 21; 233; 0.8),rgba(239; 68; 68; 0.8),rgba(16; 185; 129; 0.8),rgba(245; 158; 11; 0.8),
-],
+backgroundColor: [rgba(34; 221; 210; 0.8),rgba(140; 21; 233; 0.8),rgba(239; 68; 68; 0.8),rgba(16; 185; 129; 0.8),rgba(245; 158; 11; 0.8)],
 borderColor[,
-"rgba(34; 221; 210; 1),rgba(140; 21; 233; 1),rgba(239; 68; 68; 1),rgba(16; 185; 129; 1),rgba(245; 158; 11; 1),
-],
+"rgba(34; 221; 210; 1),rgba(140; 21; 233; 1),rgba(239; 68; 68; 1),rgba(16; 185; 129; 1),rgba(245; 158; 11; 1)],
 borderColor[,
 "rgba(34; 221; 210; 1),rgba(140; 21; 233; 1),rgba(239; 68; 68; 1),rgba(16; 185; 129; 1),rgba(245; 158; 11; 1)
+<<<<<<< HEAD
 ], "borderWidth": "2}]},
+=======
+],
+,
+,
+"borderWidth": "2}]},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // Generate line chart data;
 const lineChartData = {,
 '",
 </any>,
 </any>,
 </any>,
+<<<<<<< HEAD
 </any>
 </any, >
 </DataVisualizationProps>
 })]]<//DataVisualizationProps><///DataVisualizationProps>
+=======
+</any>,
+</any>,
+</DataVisualizationProps>;
+})]]<//DataVisualizationProps><///DataVisualizationProps>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

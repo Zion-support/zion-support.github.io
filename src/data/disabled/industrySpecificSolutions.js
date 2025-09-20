@@ -1,6 +1,5 @@
 export const INDUSTRY_SPECIFIC_SOLUTIONS = [
-    {
-        id: "healthcare-ai-diagnostics";
+    {id: "healthcare-ai-diagnostics";
         title: "Healthcare AI Diagnostics & Patient Care Platform";
         description: "Comprehensive AI-powered healthcare platform for medical diagnostics, patient monitoring, treatment planning, and healthcare workflow optimization.",
         industry: "Healthcare";
@@ -69,8 +68,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         industryPartners: ["Mayo Clinic", "Johns Hopkins", "Stanford Medicine", "Cleveland Clinic", "Medical associations"],
         certifications: ["FDA 510(k)", "CE Mark", "ISO 13485", "HIPAA Business Associate", "SOC 2 Type II"]
     },
-    {
-        id: "manufacturing-industry-4-0";
+    {id: "manufacturing-industry-4-0";
         title: "Manufacturing Industry 4.0 & Smart Factory Platform";
         description: "Comprehensive Industry 4.0 platform for smart manufacturing including IoT integration, predictive maintenance, quality control, and supply chain optimization.",
         industry: "Manufacturing";
@@ -139,8 +137,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         industryPartners: ["Manufacturing associations", "Industry 4.0 consortia", "Technology partners", "Research institutions"],
         certifications: ["ISO 9001", "ISO 14001", "OHSAS 18001", "Industry 4.0", "Safety certifications"]
     },
-    {
-        id: "financial-services-ai";
+    {id: "financial-services-ai";
         title: "Financial Services AI & Risk Management Platform";
         description: "Advanced AI platform for financial services including fraud detection, risk assessment, portfolio optimization, and regulatory compliance automation.",
         industry: "Financial Services";
@@ -209,8 +206,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         industryPartners: ["Financial institutions", "Regulatory bodies", "Industry associations", "Technology partners"],
         certifications: ["SOC 2 Type II", "ISO 27001", "PCI DSS", "Financial industry certifications", "Regulatory compliance"]
     },
-    {
-        id: "retail-ecommerce-ai";
+    {id: "retail-ecommerce-ai";
         title: "Retail & E-commerce AI Optimization Platform";
         description: "Comprehensive AI platform for retail and e-commerce including customer personalization, inventory optimization, demand forecasting, and marketing automation.",
         industry: "Retail & E-commerce";
@@ -279,8 +275,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         industryPartners: ["E-commerce platforms", "Retail associations", "Technology partners", "Marketing platforms"],
         certifications: ["SOC 2 Type II", "ISO 27001", "PCI DSS", "Retail industry certifications"]
     },
-    {
-        id: "energy-utility-optimization";
+    {id: "energy-utility-optimization";
         title: "Energy & Utility AI Optimization Platform";
         description: "Advanced AI platform for energy and utility companies including grid optimization, demand forecasting, renewable energy integration, and predictive maintenance.",
         industry: "Energy & Utilities";
@@ -349,8 +344,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         industryPartners: ["Utility associations", "Grid operators", "Technology partners", "Research institutions"],
         certifications: ["NERC CIP", "ISO 27001", "Grid security certifications", "Energy industry standards"]
     },
-    {
-        id: "transportation-logistics-ai";
+    {id: "transportation-logistics-ai";
         title: "Transportation & Logistics AI Platform";
         description: "Comprehensive AI platform for transportation and logistics including route optimization, fleet management, supply chain optimization, and predictive analytics.",
         industry: "Transportation & Logistics";

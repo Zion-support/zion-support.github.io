@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { X } from 'lucide-react';
+=======
+import { X } from "lucide-react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
 onRemove?: () => void;
 variant?: "default" | "secondary" | "destructive" | "outline"

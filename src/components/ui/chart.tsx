@@ -3,9 +3,15 @@ import * as React from "react"
 import * as RechartsPrimitive from "recharts";
 import type { LegendProps as RechartsLegendProps } from "recharts/types/component/Legend";
 
+<<<<<<< HEAD
 import { cn  } from "@/lib/utils";
 
 // Format: { THEME_NAME: CSS_SELECTOR }
+=======
+import { cn  } from "@/lib/utils"
+;
+// Format: { THEME_NAME: CSS_SELECTOR };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const THEMES = { light: ";
 ", dark: ".dark" } as const;
 
@@ -21,7 +27,12 @@ theme?: never }
 }
 
 type ChartContextProps = {;
+<<<<<<< HEAD
 config: ChartConfig;}
+=======
+config: ChartConfig;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 const ChartContext = React.createContext<ChartContextProps | null>(null)
 
@@ -38,7 +49,7 @@ return context;
 const ChartContainer = React.forwardRef<;
 HTMLDivElement;
 React.ComponentProps<"div"> & {
-config: ChartConfig;,
+config: ChartConfig;
 children: React.ComponentProps<;
 typeof RechartsPrimitive.ResponsiveContainer;
 >["children"];
@@ -61,14 +72,20 @@ className;
 <ChartStyle id={chartId} config={config} />
 <RechartsPrimitive.ResponsiveContainer>
 {children}
+<<<<<<< HEAD
 </RechartsPrimitive.ResponsiveContainer>
 </div>
 </ChartContext.Provider>
+=======
+</RechartsPrimitive.ResponsiveContainer>;
+</div>
+</ChartContext.Provider>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )
 })
 ChartContainer.displayName = "Chart";
 
-const ChartStyle: any = ({ id; config }: { id: string;,
+const ChartStyle: any = ({ id; config }: { id: string;
 config: ChartConfig }) => {
 const colorConfig = Object.entries(config).filter(;
 ([_; config]) => config.theme || config.color;
@@ -115,8 +132,7 @@ labelKey?: string;
 }
 >(
 (
-{
-active;
+{active;
 payload;
 className;
 indicator = "dot",
@@ -159,15 +175,18 @@ return null;
 }
 
 return <div className={cn("font-medium", labelClassName)}>{value}</div>
+<<<<<<< HEAD
 }, [
 label;
+=======
+}, [label;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 labelFormatter;
 payload;
 hideLabel;
 labelClassName;
 config;
-labelKey,
-])
+labelKey])
 
 if (!active || !payload?.length) {
 return null;
@@ -216,8 +235,7 @@ className={cn(
 indicator === "dashed",
 "my-0.5": nestLabel && indicator === "dashed"}
 )}
-style={
-{
+style={{
 "--color-bg": indicatorColor,
 "--color-border": indicatorColor} as React.CSSProperties;
 }
@@ -234,7 +252,11 @@ nestLabel ? "items-end" : "items-center";
 {nestLabel ? tooltipLabel : null}
 <span className="text-muted-foreground">
 {itemConfig?.label || item.name}
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 {item.value && (
 <span className="font-mono font-medium tabular-nums text-foreground">
@@ -242,7 +264,11 @@ nestLabel ? "items-end" : "items-center";
 </span>
 )}
 </div>
+<<<<<<< HEAD
 </>
+=======
+</>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </div>
 )
@@ -259,7 +285,7 @@ const ChartLegend = RechartsPrimitive.Legend;
 const ChartLegendContent = React.forwardRef<;
 HTMLDivElement;
 React.ComponentProps<"div"> &;
-Pick<RechartsLegendProps, "payload" | "verticalAlign"> & {
+Pick<RechartsLegendProps "payload" | "verticalAlign"> & {
 hideIcon?: boolean;
 nameKey?: string;
 }
@@ -300,8 +326,14 @@ className={cn(
 <div;
 className="h-2 w-2 shrink-0 rounded-[2px]"
 style={{
+<<<<<<< HEAD
 backgroundColor: item.color;}}
 />
+=======
+backgroundColor: item.color;
+}}
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 {itemConfig?.label}
 </div>
@@ -315,8 +347,13 @@ ChartLegendContent.displayName = "ChartLegend";
 
 // Helper to extract item config from a payload.;
 function getPayloadConfigFromPayload(
+<<<<<<< HEAD
 config: ChartConfig;,
 payload: unknown;,
+=======
+config: ChartConfig;
+payload: unknown;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 key: string;
 ) {
 if (typeof payload !== "object" || payload === null) {
@@ -359,4 +396,8 @@ ChartTooltipContent;
 ChartLegend;
 ChartLegendContent;
 ChartStyle}
+<<<<<<< HEAD
 <//div><///div>
+=======
+<//div><///div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

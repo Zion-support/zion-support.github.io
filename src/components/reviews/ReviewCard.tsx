@@ -1,7 +1,8 @@
-import { useState,  } from 'react'
-import { formatDistanceToNow,  } from 'date-fns'
-import { Star,, Flag,, User,  } from 'lucide-react'
+import { useState } from "react";
+import { formatDistanceToNow } from "date-fns";
+import { Star, Flag, User } from "lucide-react";
 return (
+<<<<<<< HEAD
 <div className="border rounded-lg p-4 bg-card">
 <div className="flex justify-between items-start mb-3">
 <div className="flex items-center gap-3">
@@ -15,6 +16,21 @@ return (
 <Avatar>
 {review.reviewer_profile?.avatar_url ? (
 <AvatarImage,
+=======
+    <div className="border rounded-lg p-4 bg-card">
+      <div className="flex justify-between items-start mb-3">
+        <div className="flex items-center gap-3">
+          {review.is_anonymous ? (
+            <Avatar>
+              <AvatarFallback className="bg-muted">
+                <User className="h-4 w-4" />
+              </AvatarFallback>
+            </Avatar>
+          ) : (
+            <Avatar>
+              {review.reviewer_profile?.avatar_url ? (
+                <AvatarImage
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 src={review.reviewer_profile.avatar_url}
 alt={review.reviewer_profile.display_name}
 />
@@ -44,6 +60,7 @@ getInitials(review.reviewer_profile.display_name) : "??"}
 {formatDistanceToNow(new Date(review.created_at), {
 addSuffix: true;
 })}
+<<<<<<< HEAD
 </div>
 </div>
 </div>
@@ -175,6 +192,139 @@ onClick={() => setIsReportDialogOpen(false)}
 Cancel;
 </Button>
 <Button,
+=======
+            </div>
+          </div>
+        </div>
+        <div className='flex'>{renderStars(review.rating)}</div>
+      </div>
+      <div className='mb-4'>
+        <p className='text-sm whitespace-pre-wrap'>{review.review_text}</p>
+      </div>
+      {(review.communication_rating |
+        review.quality_rating |
+        review.timeliness_rating |
+        review.would_work_again !== undefined) && (
+        <div className='border-t pt-3 mt-3'>
+          <div className='flex flex-wrap gap-2'>
+            {review.communication_rating && (
+              <Badge variant='outline' className='flex gap-1 items-center'>
+                Communication
+                <span className='ml-1 text-yellow-500'>
+                  {review.communication_rating}/5
+                </span>
+              </Badge>
+            )}
+            {review.quality_rating && (
+              <Badge variant='outline' className='flex gap-1 items-center'>
+                Quality
+                <span className='ml-1 text-yellow-500'>
+                  {review.quality_rating}/5
+                </span>
+              </Badge>
+            )}
+            {review.timeliness_rating && (
+              <Badge variant='outline' className='flex gap-1 items-center'>
+                Timeliness
+                <span className='ml-1 text-yellow-500'>
+                  {review.timeliness_rating}/5
+                </span>
+              </Badge>
+            )}
+            {review.would_work_again !== undefined && (
+              <Badge
+variant={review.would_work_again ? 'default' : 'secondary'}
+                className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}              >
+                {review.would_work_again
+                  ? 'Would work again'
+                  : 'Would not work again'}              </Badge>
+                {review.would_work_again ? "Would work again" : "Would not work again"}
+          <div>
+            <div className="font-medium">
+              {review.is_anonymous ? "Anonymous" : review.reviewer_profile?.display_name |"User"}
+            </div>
+            <div className="text-sm text-muted-foreground">
+              {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
+            </div>
+          </div>
+        </div>
+        <div className="flex">
+          {renderStars(review.rating)}
+        </div>
+      </div>
+      <div className="mb-4">
+        <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
+      </div>
+      {(review.communication_rating |review.quality_rating |review.timeliness_rating |review.would_work_again !== undefined) && (
+        <div className="border-t pt-3 mt-3">
+          <div className="flex flex-wrap gap-2">
+            {review.communication_rating && (
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Communication
+                <span className="ml-1 text-yellow-500">{review.communication_rating}/5</span>
+              </Badge>
+            )}
+            {review.quality_rating && (
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Quality
+                <span className="ml-1 text-yellow-500">{review.quality_rating}/5</span>
+              </Badge>
+            )}
+            {review.timeliness_rating && (
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Timeliness
+                <span className="ml-1 text-yellow-500">{review.timeliness_rating}/5</span>
+              </Badge>
+            )}
+            {review.would_work_again !== undefined && (
+              <Badge
+variant={review.would_work_again ? "default" : "secondary"}
+                className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
+              >
+                {review.would_work_again ? "Would work again" : "Would not work again"}
+              </Badge>
+            )}
+          </div>
+        </div>
+      )}
+      <div className='mt-3 flex justify-end'>
+        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
+          <DialogTrigger asChild>
+            <Button variant='ghost' size='sm' className='text-muted-foreground'>
+              <Flag className='h-3 w-3 mr-1' />              Report
+      <div className="mt-3 flex justify-end">
+        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
+          <DialogTrigger asChild>
+            <Button variant="ghost" size="sm" className="text-muted-foreground">
+              <Flag className="h-3 w-3 mr-1" />
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Report Review</DialogTitle>
+              <DialogDescription>
+                If you believe this review violates our community guidelines,
+please provide details below.
+              </DialogDescription>
+            </DialogHeader>
+            <Textarea
+placeholder='Why are you reporting this review?'              value={reportReason}
+              onChange={e => setReportReason(e.target.value)}
+              className='min-h-[100px]'
+              placeholder="Why are you reporting this review?"
+              value = {reportReason}
+              onChange = {(e) => setReportReason(e.target.value)}
+              className="min-h-[100px]"
+            />
+            <DialogFooter>
+              <Button
+variant='outline'
+                onClick={() => setIsReportDialogOpen(false)}
+              >
+                Cancel
+              </Button>
+              <Button
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 onClick={handleReport}
 disabled={!reportReason.trim() |isReporting}              >
 {isReporting ? 'Submitting...' : 'Submit Report'}              </Button>                {isReporting ? "Submitting..." : "Submit Report"}
@@ -186,6 +336,7 @@ disabled={!reportReason.trim() |isReporting}              >
 </div>
 )
 }</div>)
+<<<<<<< HEAD
 };";
 return (<div className="border rounded-lg p-4 bg-card"> <div className="flex justify-between items-start mb-3"> <div className="flex items-center gap-3"> {";
 review.is anonymous ? (<Avatar> <AvatarFallback className="bg-muted"> <User className="h-4 w-4" /> </AvatarFallback> </Avatar>) : (<Avatar> {
@@ -195,6 +346,14 @@ review.reviewer profile.avatar url,
 review.reviewer profile.display name,
 }/>) : (<AvatarFallback> {";
 review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : "??";
+=======
+};"
+return (<div className="border rounded-lg p-4 bg-card"> <div className="flex justify-between items-start mb-3"> <div className="flex items-center gap-3"> {"
+  review.is anonymous ? (<Avatar> <AvatarFallback className="bg-muted"> <User className="h-4 w-4" /> </AvatarFallback> </Avatar>) : (<Avatar> {
+  review.reviewer profile?.avatar url ? (<AvatarImage src= {
+  review.reviewer profile.avatar url}alt= {review.reviewer profile.display name}/>) : (<AvatarFallback> {"
+  review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : "??"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }</AvatarFallback>)
 }</Avatar>) ";
 }<div> </div> <div className="text-sm text-muted-foreground"> {
@@ -202,6 +361,7 @@ formatDistanceToNow (new Date (review.created at), {
 addSuffix: true;
 }) ";
 }</div> </div> </div> <div className="flex"> {
+<<<<<<< HEAD
 renderStars (review.rating) ";
 }</div> </div> <div className="mb-4"> <p className="text-sm whitespace-pre-wrap"> {
 review.review text,
@@ -224,4 +384,17 @@ handleReport,
 }disabled= {
 !reportReason.trim () |isReporting,
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>)
+=======
+  renderStars (review.rating) "
+}</div> </div> <div className="mb-4"> <p className="text-sm whitespace-pre-wrap"> {review.review text}</p> </div> {"
+  (review.communication rating |review.quality rating |review.timeliness rating |review.would work again !== undefined) && (<div className="border-t pt-3 mt-3"> <div className="flex flex-wrap gap-2" > {"
+  review.communication rating && (<Badge variant="outline" className="flex gap-1 items-center"> Communication <span className="ml-1 text-yellow-500" > {
+  review.communication rating}/5</span> </Badge>) "
+}Quality <span className="ml-1 text-yellow-500" > {review.quality rating}/5</span> </Badge>) "
+}Timeliness <span className="ml-1 text-yellow-500" > {review.timeliness rating}/5</span> </Badge>)
+}{
+  review.would work again !== undefined && (<Badge </Badge>)
+}</div> </div>) "
+}<DialogTrigger asChild> <Button variant="ghost" size="sm" className="text-muted-foreground"> <Flag className="h-3 w-3 mr-1" /> Report </Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle>Report Review</DialogTitle> <DialogDescription> If you believe this review violates our community guidelines please provide details below. </DialogDescription> </DialogHeader> <Textarea Cancel </Button> <Button onClick={handleReport}disabled= {!reportReason.trim () |isReporting}> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }"}

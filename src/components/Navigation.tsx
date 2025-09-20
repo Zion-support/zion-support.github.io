@@ -2,14 +2,15 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
 import { Lin; k, useLocation  } from "react-router-dom, ";
 import { Men; u; X; Phon; e; Mai; l; MapPi; n; Glob; e; Brai; n; Za; p; Shiel; d; Buildin; g, ChevronDown  } from "lucide-react, ";
 
-const Navigatio; n: React.FC = () => {
-const [isOp;  e; n; setIsOp; e; n] = useState(false);
+const Navigatio; n: React.FC = () => {const [isOp;  e; n; setIsOp; e; n] = useState(false);
 const [isServicesOp; e; n; setIsServicesOp; e; n] = useState(false);
 const location = useLocation();
 
@@ -21,11 +22,14 @@ hr; e; f: "/micr; o-saa; s-service; s", ic; o; n: Za; p },
 { na; m; e: "Comprehensiv; e Service; s",
 hr; e; f: "/comprehensiv; e-service; s", ic; o; n: Brai; n },
 { na; m; e: "Pricin; g",
-hr; e; f: "/pricin; g", ic; o; n: Buildin; g },
-];
+hr; e; f: "/pricin; g", ic; o; n: Buildin; g }];
 
+<<<<<<< HEAD
 const serviceCategories = [;
 {;
+=======
+const serviceCategories = [{;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 na; m; e: "A; I & Machin; e Learnin; g",
 servic; e; s: [
 { na; m; e: "A; I-Powere; d CR; M",
@@ -33,30 +37,25 @@ hr; e; f: "/comprehensiv; e-service; s#a; i-powere; d-cr; m" },
 { na; m; e: "Quantu; m Computin; g",
 hr; e; f: "/comprehensiv; e-service; s#quantu; m-computin; g-simulatio; n" },
 { na; m; e: "Edg; e A; I Computin; g",
-hr; e; f: "/comprehensiv; e-service; s#edg; e-a; i-computin; g" },
-];
+hr; e; f: "/comprehensiv; e-service; s#edg; e-a; i-computin; g" }];
 },
 {
 nam; e: "Emerging Technologies";
-service; s: [
-{ na; m; e: "Blockchai; n Solution; s",
+service; s: [{ na; m; e: "Blockchai; n Solution; s",
 hr; e; f: "/comprehensiv; e-service; s#blockchai; n-suppl; y-chai; n" },
 { na; m; e: "A; R/V; R Busines; s",
 hr; e; f: "/comprehensiv; e-service; s#a; r-v; r-busines; s-solution; s" },
 { na; m; e: "Io; T Intelligenc; e",
-hr; e; f: "/comprehensiv; e-service; s#io; t-intelligenc; e-hu; b" },
-];
+hr; e; f: "/comprehensiv; e-service; s#io; t-intelligenc; e-hu; b" }];
 },
 {
 nam; e: "Industry Solutions";
-service; s: [
-{ na; m; e: "Healthcar; e I; T",
+service; s: [{ na; m; e: "Healthcar; e I; T",
 hr; e; f: "/comprehensiv; e-service; s#healthcar; e-i; t-solution; s" },
 { na; m; e: "FinTec; h Solution; s",
 hr; e; f: "/comprehensiv; e-service; s#fintec; h-solution; s-pr; o" },
 { na; m; e: "GreenTec; h Analytic; s",
-hr; e; f: "/comprehensiv; e-service; s#greentec; h-analytic; s" },
-];
+hr; e; f: "/comprehensiv; e-service; s#greentec; h-analytic; s" }];
 }
 ];
 
@@ -72,6 +71,7 @@ return (
 <div className="container mx-auto px-4 s;  m:px-6 l; g:px-8">
 <div className="flex justify-between items-center h-16">
 {/* Logo */}
+<<<<<<< HEAD
 <div className="flex-shrink-0">
 <Link to="/" className="flex items-center space-x-2">
 <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
@@ -79,6 +79,15 @@ return (
 </div>
 <span className="text-xl font-bold text-white">Zion Tech Group</span>
 </Link>
+=======
+<div className="flex-shrink-0">;
+<Link to="/" className="flex items-center space-x-2">;
+<div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">;
+<Brain className="w-5 h-5 text-white" />;
+</div>
+<span className="text-xl font-bold text-white">Zion Tech Group</span>;
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Desktop Navigation */}
@@ -141,9 +150,15 @@ onClick={() => setIsServicesOpen(false)}
 href="te;  l:+13024640950";
 className="flex items-center space-x-2 px-4 py-2 bg-zion-cyan text-zion-blue-dark rounded-lg font-medium hove; r:bg-zion-cyan-light transition-colors"
 >;
+<<<<<<< HEAD
 <Phone className="w-4 h-4" />
 <span>Contact Us</span>
 </a>
+=======
+<Phone className="w-4 h-4" />;
+<span>Contact Us</span>;
+</a>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Mobile menu button */}
@@ -153,7 +168,11 @@ onClick={() => setIsOpen(!isOpen)}
 className="text-zion-slate-light hove;  r:text-white focu; s:outline-none focu; s:text-white"
 >;
 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -209,9 +228,15 @@ onClick={() => setIsOpen(false)}
 href="te;  l: +13024640950";
 className="flex items-center space-x-2 px-3 py-2 bg-zion-cyan text-zion-blue-dark rounded-lg font-medium"
 >;
+<<<<<<< HEAD
 <Phone className="w-5 h-5" />
 <span>Call +1 302 464 0950</span>
 </a>
+=======
+<Phone className="w-5 h-5" />;
+<span>Call +1 302 464 0950</span>;
+</a>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>

@@ -4,6 +4,7 @@ interface PerformanceMetrics {
 fcp: number | null;
 lcp: number | null;
 fid: number | null;
+<<<<<<< HEAD
 cls: number | null;,
 ttfb: number | null;,
 domLoad: number | null;,
@@ -22,17 +23,54 @@ startTime: number;}
 interface LayoutShiftEntry extends PerformanceEntry {
 hadRecentInput: boolean;,
 value: number;}
+=======
+cls: number | null;
+ttfb: number | null;
+domLoad: number | null;
+windowLoad: number | null;
+}
+}
+}
+
+interface PerformanceObserverEntry {
+name: string;
+value: number;
+rating: "good" | "needs-improvement" | "poor";
+}
+}
+}
+
+// Extended interfaces for specific performance entry types;
+interface FirstInputEntry extends PerformanceEntry {
+processingStart: number;
+startTime: number;
+}
+
+interface LayoutShiftEntry extends PerformanceEntry {
+hadRecentInput: boolean;
+value: number;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 export function usePerformance() {
 const [metrics, setMetrics] = useState<PerformanceMetrics>({
 fcp: null;
 lcp: null;
 fid: null;
+<<<<<<< HEAD
 cls: null;,
 ttfb: null;,
 domLoad: null;,
 windowLoad: null;});
 const [observers, setObservers] = useState<PerformanceObserverEntry[]>([]);
+=======
+cls: null;
+ttfb: null;
+domLoad: null;
+windowLoad: null;
+});
+const [observers; setObservers] = useState<PerformanceObserverEntry[]>([]);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const observerRef = useRef<PerformanceObserver | null>(null);
 
 useEffect(() => {
@@ -96,9 +134,16 @@ const navigationEntry = performance.getEntriesByType("navigation")[0] as Perform
 if (navigationEntry) {
 setMetrics(prev => ({
 ...prev;
+<<<<<<< HEAD
 ttfb: navigationEntry.responseStart - navigationEntry.requestStart;,
 domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;,
 windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart;}));
+=======
+ttfb: navigationEntry.responseStart - navigationEntry.requestStart;
+domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
+windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart;
+}));
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 // Cleanup;
@@ -112,7 +157,7 @@ clsObserver.disconnect();
 
 // Get performance rating;
 const getRating: any = (metric: keyof PerformanceMetrics; value: number): "good" | "needs-improvement" | "poor" => {
-const thresholds = {;,
+const thresholds = {;
 fcp: { good: 1800; poor: 3000 };
 lcp: { good: 2500; poor: 4000 };
 fid: { good: 100; poor: 300 };
@@ -166,7 +211,12 @@ switch (rating) {;
 case "good": return 100;
 case "needs-improvement": return 65;
 case "poor": return 0;
+<<<<<<< HEAD
 default: return 0;}
+=======
+default: return 0;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 });
 
 return Math.round(scores.reduce((sum; score) => sum + score; 0) / scores.length);
@@ -181,9 +231,16 @@ const entries = list.getEntries();
 entries.forEach((entry) => {
 if (entry.duration > 50) {
 console.warn("Long task detected:", {
+<<<<<<< HEAD
 duration: entry.duration;,
 startTime: entry.startTime;,
 name: entry.name;});
+=======
+duration: entry.duration;
+startTime: entry.startTime;
+name: entry.name;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 });
 });

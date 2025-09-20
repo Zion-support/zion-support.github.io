@@ -11,6 +11,7 @@ pricingModel: "one-time" | "monthly" | "yearly" | "per-user" | "per-project";
 features: string[];
 benefits: string[];
 marketPrice: string;
+<<<<<<< HEAD
 contactInfo: {,
 phone: string;,
 email: string;,
@@ -30,6 +31,28 @@ category: "AI & Automation";
 price: 2500;,
 currency: "USD";,
 pricingModel: "monthly";,
+=======
+contactInfo: {
+phone: string;
+email: string;
+website: string;
+}
+}
+};
+technology: string[];
+estimatedDelivery: string;
+supportLevel: "basic" | "standard" | "premium" | "enterprise";
+}
+
+export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
+{id: "ai-autonomous-business-manager";
+title: "AI Autonomous Business Manager";
+description: "Fully autonomous AI system that manages business operations; makes strategic decisions; and optimizes processes in real-time.",
+category: "AI & Automation";
+price: 2500;
+currency: "USD";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "24/7 autonomous business monitoring";
 "Real-time decision making",
@@ -46,23 +69,35 @@ benefits: [
 "Scalable operations";
 ],
 marketPrice: "$2;500 - $5;000/month",
+<<<<<<< HEAD
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
+=======
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technology: ["GPT-4", "Machine Learning", "RPA", "Business Intelligence"],
-estimatedDelivery: "2-4 weeks";,
+estimatedDelivery: "2-4 weeks";
 supportLevel: "premium",
 };
-{
-id: "quantum-neural-network-platform";
+{id: "quantum-neural-network-platform";
 title: "Quantum Neural Network Platform";
 description: "Next-generation quantum computing platform with neural network capabilities for complex problem solving and optimization.";
 category: "Quantum Computing";
+<<<<<<< HEAD
 price: 15000;,
 currency: "USD";,
 pricingModel: "monthly";,
+=======
+price: 15000;
+currency: "USD";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Quantum neural processing";
 "Complex optimization algorithms",
@@ -79,15 +114,23 @@ benefits: [
 "Future-proof technology";
 ],
 marketPrice: "$15;000 - $25;000/month",
+<<<<<<< HEAD
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
+=======
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technology: ["Quantum Computing", "Neural Networks", "Quantum Algorithms", "AI"],
-estimatedDelivery: "6-8 weeks";,
+estimatedDelivery: "6-8 weeks";
 supportLevel: "enterprise",
 };
+<<<<<<< HEAD
 {
 id: "blockchain-defi-solutions";,
 title: "Blockchain DeFi Solutions";,
@@ -96,6 +139,15 @@ category: "Blockchain & DeFi";
 price: 8000;,
 currency: "USD";,
 pricingModel: "monthly";,
+=======
+{id: "blockchain-defi-solutions";
+title: "Blockchain DeFi Solutions";
+description: "Comprehensive blockchain and DeFi platform for financial services; smart contracts; and decentralized applications.",
+category: "Blockchain & DeFi";
+price: 8000;
+currency: "USD";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Smart contract development";
 "DeFi protocol integration",
@@ -112,15 +164,23 @@ benefits: [
 "Innovative financial products";
 ],
 marketPrice: "$8;000 - $15;000/month",
+<<<<<<< HEAD
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
+=======
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technology: ["Ethereum", "Solana", "Smart Contracts", "DeFi Protocols"],
-estimatedDelivery: "4-6 weeks";,
+estimatedDelivery: "4-6 weeks";
 supportLevel: "premium",
 };
+<<<<<<< HEAD
 {
 id: "iot-data-analytics-platform";,
 title: "IoT Data Analytics Platform";,
@@ -129,6 +189,15 @@ category: "IoT & Analytics";
 price: 5000;,
 currency: "USD";,
 pricingModel: "monthly";,
+=======
+{id: "iot-data-analytics-platform";
+title: "IoT Data Analytics Platform";
+description: "Advanced IoT platform with real-time data analytics; predictive maintenance; and intelligent automation.",
+category: "IoT & Analytics";
+price: 5000;
+currency: "USD";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Real-time IoT monitoring";
 "Predictive analytics",
@@ -145,15 +214,23 @@ benefits: [
 "Scalable infrastructure";
 ],
 marketPrice: "$5;000 - $10;000/month",
+<<<<<<< HEAD
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
+=======
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technology: ["IoT", "Machine Learning", "Big Data", "Cloud Computing"],
-estimatedDelivery: "3-5 weeks";,
+estimatedDelivery: "3-5 weeks";
 supportLevel: "standard",
 };
+<<<<<<< HEAD
 {
 id: "ai-cybersecurity-automation";,
 title: "AI Cybersecurity Automation";,
@@ -162,6 +239,15 @@ category: "Cybersecurity";
 price: 12000;,
 currency: "USD";,
 pricingModel: "monthly";,
+=======
+{id: "ai-cybersecurity-automation";
+title: "AI Cybersecurity Automation";
+description: "Intelligent cybersecurity platform that automatically detects; prevents; and responds to threats using AI.",
+category: "Cybersecurity";
+price: 12000;
+currency: "USD";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI threat detection";
 "Automated incident response",
@@ -178,13 +264,20 @@ benefits: [
 "Cost-effective security";
 ],
 marketPrice: "$12;000 - $20;000/month",
+<<<<<<< HEAD
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com",
 };
+=======
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technology: ["AI", "Machine Learning", "Cybersecurity", "Automation"],
-estimatedDelivery: "4-6 weeks";,
+estimatedDelivery: "4-6 weeks";
 supportLevel: "premium",
 }
 ];

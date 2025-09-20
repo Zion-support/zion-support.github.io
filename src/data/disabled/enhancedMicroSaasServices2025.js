@@ -1,7 +1,6 @@
 // Enhanced Micro SAAS Services for 2025;
 export const enhancedMicroSaasServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "TaskFlow Pro";
         category: "Productivity";
         pricing: "Freemium";
@@ -53,8 +52,7 @@ export const enhancedMicroSaasServices2025 = [
         uptime: "99.9%";
         securityFeatures: ["End-to-end encryption", "Two-factor authentication", "SSO integration", "Audit logs"]
     },
-    {
-        id: 2;
+    {id: 2;
         name: "InvoiceGenius AI";
         category: "Finance";
         pricing: "Freemium";
@@ -106,8 +104,7 @@ export const enhancedMicroSaasServices2025 = [
         uptime: "99.95%";
         securityFeatures: ["Bank-level encryption", "Multi-factor authentication", "Fraud detection", "Secure API"]
     },
-    {
-        id: 3;
+    {id: 3;
         name: "SocialSync Pro";
         category: "Marketing";
         pricing: "Freemium";
@@ -159,8 +156,7 @@ export const enhancedMicroSaasServices2025 = [
         uptime: "99.8%";
         securityFeatures: ["OAuth 2.0", "Data encryption", "Access controls", "Audit trails"]
     },
-    {
-        id: 4;
+    {id: 4;
         name: "CodeGuard Pro";
         category: "Development";
         pricing: "Subscription";
@@ -212,8 +208,7 @@ export const enhancedMicroSaasServices2025 = [
         uptime: "99.9%";
         securityFeatures: ["Source code encryption", "Access controls", "Audit logging", "Compliance reporting"]
     },
-    {
-        id: 5;
+    {id: 5;
         name: "DataVault Enterprise";
         category: "Data & Analytics";
         pricing: "Enterprise";
@@ -265,8 +260,7 @@ export const enhancedMicroSaasServices2025 = [
         uptime: "99.99%";
         securityFeatures: ["End-to-end encryption", "Role-based access", "Data masking", "Audit trails"]
     },
-    {
-        id: 6;
+    {id: 6;
         name: "CyberShield Pro";
         category: "Cybersecurity";
         pricing: "Tiered";
@@ -318,8 +312,7 @@ export const enhancedMicroSaasServices2025 = [
         uptime: "99.99%";
         securityFeatures: ["Zero-trust architecture", "Encryption at rest", "Multi-factor auth", "SOC 2 compliance"]
     },
-    {
-        id: 7;
+    {id: 7;
         name: "CloudOps Hub";
         category: "Cloud & DevOps";
         pricing: "Usage-based";
@@ -371,8 +364,7 @@ export const enhancedMicroSaasServices2025 = [
         uptime: "99.9%";
         securityFeatures: ["IAM integration", "Encryption", "Access controls", "Audit logging"]
     },
-    {
-        id: 8;
+    {id: 8;
         name: "HRTech Suite";
         category: "Human Resources";
         pricing: "Per employee";
@@ -424,8 +416,7 @@ export const enhancedMicroSaasServices2025 = [
         uptime: "99.9%";
         securityFeatures: ["Data encryption", "Access controls", "Audit trails", "Compliance reporting"]
     },
-    {
-        id: 9;
+    {id: 9;
         name: "EduTech Pro";
         category: "Education";
         pricing: "Freemium";
@@ -477,8 +468,7 @@ export const enhancedMicroSaasServices2025 = [
         uptime: "99.8%";
         securityFeatures: ["Data encryption", "Access controls", "Privacy protection", "Compliance tools"]
     },
-    {
-        id: 10;
+    {id: 10;
         name: "HealthTech Connect";
         category: "Healthcare";
         pricing: "Enterprise";
@@ -533,8 +523,7 @@ export const enhancedMicroSaasServices2025 = [
 ];
 // Additional Innovative Micro SAAS Services for 2025;
 export const additionalInnovativeMicroSaasServices2025 = [
-    {
-        id: 101;
+    {id: 101;
         name: "QuantumEdge AI Platform";
         category: "Quantum AI";
         pricing: "Enterprise";
@@ -586,8 +575,7 @@ export const additionalInnovativeMicroSaasServices2025 = [
         uptime: "99.99%";
         securityFeatures: ["Quantum-safe encryption", "Zero-trust architecture", "Advanced threat detection", "Compliance monitoring"]
     },
-    {
-        id: 102;
+    {id: 102;
         name: "NeuromorphicAI Studio";
         category: "Neuromorphic Computing";
         pricing: "Professional";
@@ -639,8 +627,7 @@ export const additionalInnovativeMicroSaasServices2025 = [
         uptime: "99.9%";
         securityFeatures: ["Edge security", "Data encryption", "Access control", "Secure communication"]
     },
-    {
-        id: 103;
+    {id: 103;
         name: "FederatedLearning Hub";
         category: "Privacy AI";
         pricing: "Enterprise";
@@ -692,8 +679,7 @@ export const additionalInnovativeMicroSaasServices2025 = [
         uptime: "99.99%";
         securityFeatures: ["Zero-knowledge proofs", "Homomorphic encryption", "Secure multi-party computation", "Privacy-preserving ML"]
     },
-    {
-        id: 104;
+    {id: 104;
         name: "EdgeAI Orchestrator";
         category: "Edge Computing";
         pricing: "Professional";
@@ -745,8 +731,7 @@ export const additionalInnovativeMicroSaasServices2025 = [
         uptime: "99.9%";
         securityFeatures: ["Edge security", "Device authentication", "Data encryption", "Access control"]
     },
-    {
-        id: 105;
+    {id: 105;
         name: "AI Ethics Governance Suite";
         category: "AI Governance";
         pricing: "Enterprise";
@@ -798,8 +783,7 @@ export const additionalInnovativeMicroSaasServices2025 = [
         uptime: "99.9%";
         securityFeatures: ["Audit logging", "Access control", "Data encryption", "Compliance monitoring"]
     },
-    {
-        id: 106;
+    {id: 106;
         name: "Quantum Cybersecurity Platform";
         category: "Quantum Security";
         pricing: "Enterprise";
@@ -851,8 +835,7 @@ export const additionalInnovativeMicroSaasServices2025 = [
         uptime: "99.99%";
         securityFeatures: ["Quantum-resistant encryption", "Zero-trust architecture", "Advanced threat detection", "Quantum key distribution"]
     },
-    {
-        id: 107;
+    {id: 107;
         name: "SpaceTech AI Platform";
         category: "Space Technology";
         pricing: "Enterprise";
@@ -904,8 +887,7 @@ export const additionalInnovativeMicroSaasServices2025 = [
         uptime: "99.99%";
         securityFeatures: ["Classified data handling", "Secure communications", "Access control", "Audit logging"]
     },
-    {
-        id: 108;
+    {id: 108;
         name: "GreenTech AI Solutions";
         category: "Green Technology";
         pricing: "Professional";
@@ -957,8 +939,7 @@ export const additionalInnovativeMicroSaasServices2025 = [
         uptime: "99.9%";
         securityFeatures: ["Data encryption", "Access control", "Audit logging", "Compliance monitoring"]
     },
-    {
-        id: 109;
+    {id: 109;
         name: "FinTech AI Platform";
         category: "Financial Technology";
         pricing: "Enterprise";
@@ -1010,8 +991,7 @@ export const additionalInnovativeMicroSaasServices2025 = [
         uptime: "99.99%";
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Audit logging", "Compliance monitoring"]
     },
-    {
-        id: 110;
+    {id: 110;
         name: "HealthTech AI Suite";
         category: "Healthcare Technology";
         pricing: "Enterprise";

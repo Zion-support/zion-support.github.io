@@ -1,6 +1,5 @@
 export const NEXT_GEN_INNOVATIVE_SERVICES = [
-    {
-        id: "ai-credit-risk-assessment";
+    {id: "ai-credit-risk-assessment";
         title: "AI-Powered Credit Risk Assessment Platform";
         description: "Advanced credit scoring system using machine learning to analyze alternative data sources and provide real-time credit risk assessments for underserved markets.";
         category: "AI & Financial Services";
@@ -53,9 +52,15 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$12.5B global credit scoring market";
         competitiveAdvantage: "Alternative data integration and real-time processing";
         roi: "300% ROI within 6 months";
+<<<<<<< HEAD
         implementationTime: "3-4 weeks"};
     {
         id: "ai-medical-imaging";
+=======
+        implementationTime: "3-4 weeks",
+    };
+    {id: "ai-medical-imaging";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "AI Medical Imaging Diagnosis Assistant";
         description: "Advanced medical imaging analysis platform using deep learning to assist radiologists in detecting and diagnosing diseases from X-rays, CT scans, and MRIs.",
         category: "AI & Healthcare";
@@ -108,9 +113,15 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$2.5B AI medical imaging market";
         competitiveAdvantage: "Multi-modality support and regulatory compliance";
         roi: "400% ROI within 12 months";
+<<<<<<< HEAD
         implementationTime: "6-8 weeks"};
     {
         id: "ai-supply-chain-optimization";
+=======
+        implementationTime: "6-8 weeks",
+    };
+    {id: "ai-supply-chain-optimization";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "AI Supply Chain Optimization Platform";
         description: "Intelligent supply chain management system that uses AI to optimize inventory, predict demand, and streamline logistics operations across global networks.",
         category: "AI & Supply Chain";
@@ -163,9 +174,15 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$8.9B supply chain analytics market";
         competitiveAdvantage: "Real-time optimization and multi-echelon inventory management";
         roi: "250% ROI within 8 months";
+<<<<<<< HEAD
         implementationTime: "4-6 weeks"};
     {
         id: "ai-energy-optimization";
+=======
+        implementationTime: "4-6 weeks",
+    };
+    {id: "ai-energy-optimization";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "AI Energy Optimization Platform";
         description: "Smart energy management system that uses AI to optimize power consumption, integrate renewable energy sources, and reduce operational costs for commercial buildings.",
         category: "AI & Energy Management";
@@ -218,9 +235,15 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$6.8B energy management systems market";
         competitiveAdvantage: "AI-powered predictive optimization and renewable integration";
         roi: "280% ROI within 10 months";
+<<<<<<< HEAD
         implementationTime: "5-7 weeks"};
     {
         id: "ai-legal-document-analysis";
+=======
+        implementationTime: "5-7 weeks",
+    };
+    {id: "ai-legal-document-analysis";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "AI Legal Document Analysis Platform";
         description: "Intelligent legal document review system that uses natural language processing to analyze contracts, identify risks, and ensure compliance with legal requirements.",
         category: "AI & Legal Tech";
@@ -273,9 +296,15 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$1.2B legal AI market";
         competitiveAdvantage: "Advanced NLP and comprehensive risk assessment";
         roi: "320% ROI within 9 months";
+<<<<<<< HEAD
         implementationTime: "4-5 weeks"};
     {
         id: "ai-real-estate-analytics";
+=======
+        implementationTime: "4-5 weeks",
+    };
+    {id: "ai-real-estate-analytics";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "AI Real Estate Analytics Platform";
         description: "Comprehensive real estate intelligence platform that uses AI to analyze market trends, property valuations, and investment opportunities across multiple markets.",
         category: "AI & Real Estate";
@@ -328,9 +357,15 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$4.2B real estate analytics market";
         competitiveAdvantage: "Multi-market analysis and predictive modeling";
         roi: "260% ROI within 7 months";
+<<<<<<< HEAD
         implementationTime: "3-4 weeks"};
     {
         id: "ai-personalized-learning";
+=======
+        implementationTime: "3-4 weeks",
+    };
+    {id: "ai-personalized-learning";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "AI Personalized Learning Platform";
         description: "Adaptive learning system that personalizes educational content and learning paths based on individual student performance, preferences, and learning styles.",
         category: "AI & Education";
@@ -383,9 +418,15 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$3.2B adaptive learning market";
         competitiveAdvantage: "Advanced personalization algorithms and comprehensive analytics";
         roi: "240% ROI within 8 months";
+<<<<<<< HEAD
         implementationTime: "4-6 weeks"};
     {
         id: "ai-predictive-maintenance";
+=======
+        implementationTime: "4-6 weeks",
+    };
+    {id: "ai-predictive-maintenance";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "AI Predictive Maintenance Platform";
         description: "Industrial IoT platform that uses AI to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.",
         category: "AI & Industrial IoT";
@@ -438,9 +479,15 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$7.9B predictive maintenance market";
         competitiveAdvantage: "Advanced ML algorithms and comprehensive IoT integration";
         roi: "350% ROI within 12 months";
+<<<<<<< HEAD
         implementationTime: "6-8 weeks"};
     {
         id: "ai-retail-optimization";
+=======
+        implementationTime: "6-8 weeks",
+    };
+    {id: "ai-retail-optimization";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "AI Retail Optimization Platform";
         description: "Intelligent retail management system that optimizes pricing, inventory, and customer experience using AI-powered analytics and machine learning.",
         category: "AI & Retail";
@@ -493,9 +540,15 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$5.8B retail AI market";
         competitiveAdvantage: "Real-time optimization and comprehensive retail analytics";
         roi: "270% ROI within 9 months";
+<<<<<<< HEAD
         implementationTime: "4-5 weeks"};
     {
         id: "ai-logistics-optimization";
+=======
+        implementationTime: "4-5 weeks",
+    };
+    {id: "ai-logistics-optimization";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "AI Logistics Optimization Platform";
         description: "Advanced logistics management system that uses AI to optimize routes, reduce fuel costs, and improve delivery efficiency for transportation and logistics companies.",
         category: "AI & Transportation";
@@ -548,9 +601,15 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$4.8B logistics AI market";
         competitiveAdvantage: "Advanced route optimization and real-time fleet management";
         roi: "290% ROI within 10 months";
+<<<<<<< HEAD
         implementationTime: "5-6 weeks"};
     {
         id: "ai-hr-talent-management";
+=======
+        implementationTime: "5-6 weeks",
+    };
+    {id: "ai-hr-talent-management";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "AI HR Talent Management Platform";
         description: "Intelligent human resources platform that uses AI to streamline recruitment, improve employee engagement, and optimize workforce planning and development.",
         category: "AI & Human Resources";
@@ -603,9 +662,15 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$3.6B HR AI market";
         competitiveAdvantage: "Comprehensive talent lifecycle management and advanced analytics";
         roi: "250% ROI within 8 months";
+<<<<<<< HEAD
         implementationTime: "4-6 weeks"};
     {
         id: "ai-marketing-automation";
+=======
+        implementationTime: "4-6 weeks",
+    };
+    {id: "ai-marketing-automation";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "AI Marketing Automation Pro";
         description: "Advanced marketing automation platform that uses AI to personalize campaigns, optimize customer journeys, and maximize marketing ROI across all channels.",
         category: "AI & Marketing";

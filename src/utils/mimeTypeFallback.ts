@@ -5,8 +5,7 @@ import React from "react";
 * Handles fallback for unsupported MIME types and resource loading;
 */;
 
-class MimeTypeFallback {
-private supportedTypes: Set<string> = new Set([
+class MimeTypeFallback {private supportedTypes: Set<string> = new Set([
 "text/html",
 "text/css",
 "text/javascript",
@@ -63,14 +62,17 @@ throw error;
 /**;
 * Create resource element with proper type handling;
 */;
-createResourceElement(url: string; type: "script" | "stylesheet"): HTMLElement {
-if (type === "script") {
+createResourceElement(url: string; type: "script" | "stylesheet"): HTMLElement {if (type === "script") {
 const script = document.createElement("script");
 script.src = url;
 script.async = true;
 script.type = "text/javascript";
+<<<<<<< HEAD
 return script} else {
 const link = document.createElement("link");
+=======
+return script} else {const link = document.createElement("link");
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 link.rel = "stylesheet";
 link.href = url;
 link.type = "text/css";

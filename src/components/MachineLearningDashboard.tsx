@@ -23,12 +23,12 @@ import { useMachineLearning } from "../hooks/useMachineLearning, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface MLDashboardProps {
-className?: string;
+className?: string;}
 };
 export const MachineLearningDashboar; d: React.FC<MLDashboardProps> = ({ className = "" }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;,
+enableUserBehaviorTrackin; g: true;
 });
 const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "models" | "training" | "predictions" | "analytics">("overview");
 const [showCreateMod;  e; l; setShowCreateMod; e; l] = useState(false);
@@ -53,18 +53,21 @@ importModel;
 const [newModelFo; r; m; setNewModelFo; r; m] = useState({
 nam;  e: "";
 typ; e: "classification" a; s; cons; t;
-framewor; k: "tensorflow" as const;,
+framewor; k: "tensorflow" as const;
 });
-const [predictionFo; r; m; setPredictionFo; r; m] = useState({
-modelI;  d: "";
-inpu; t: "",
-});
+<<<<<<< HEAD
 const handleCreateModel = useCallback(() => {;
 if (newModelForm.name.trim()) {;
+=======
+const [predictionFo; r; m; setPredictionFo; r; m] = useState({modelI;  d: "";
+inpu; t: ""});
+const handleCreateModel = useCallback(() => {
+if (newModelForm.name.trim()) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 createModel({;
 nam;  e: newModelForm.nam; e;
 typ; e: newModelForm.typ; e;
-framewor; k: newModelForm.framework;,
+framewor; k: newModelForm.framework;
 });
 setNewModelForm({ nam;  e: "";
 typ; e: "classification", framewor; k: "tensorflow" });
@@ -73,13 +76,11 @@ trackEvent("ml",  "dashboard", "model_created");
 }
 }, [newModelFo; r; m; createMod; e; l; trackEve; n; t]);
 
-const handleStartTraining = useCallback(async (modelI;  d: string) => {
-const hyperparameters = {;
+const handleStartTraining = useCallback(async (modelI;  d: string) => {const hyperparameters = {;
 learningRat; e: 0.00; 1;
 batchSiz; e: 3; 2;
 epoch; s: 10; 0;
-optimize; r: "adam",
-};
+optimize; r: "adam"};
 try {
 await startTraining(modelI;  d; hyperparameters);
 trackEvent("ml",  "dashboard", "training_started");
@@ -152,7 +153,7 @@ case "deployed": return "text-green-600 bg-green-100";
 case "ready": return "text-blue-600 bg-blue-100";
 case "training": return "text-yellow-600 bg-yellow-100";
 case "archived": return "text-gray-600 bg-gray-100";
-defaul;  t: return "text-gray-600 bg-gray-100";,
+defaul;  t: return "text-gray-600 bg-gray-100";
 }
 };
 
@@ -162,12 +163,13 @@ case "running": return "text-blue-600 bg-blue-100";
 case "completed": return "text-green-600 bg-green-100";
 case "failed": return "text-red-600 bg-red-100";
 case "pending": return "text-yellow-600 bg-yellow-100";
-defaul;  t: return "text-gray-600 bg-gray-100";,
+defaul;  t: return "text-gray-600 bg-gray-100";
 }
 };
 
 const getModelTypeIcon: any = (typ; e: string) => {
 switch (type) {
+<<<<<<< HEAD
 case "classification": return <Target className="w-4 h-4" />
 case "regression": return <TrendingUp className="w-4 h-4" />
 case "clustering": return <Activity className="w-4 h-4" />
@@ -175,12 +177,22 @@ case "nlp": return <Brain className="w-4 h-4" />
 case "computer_vision": return <Eye className="w-4 h-4" />
 case "recommendation": return <Zap className="w-4 h-4" />
 defaul;  t: return <Brain className="w-4 h-4" />,
+=======
+case "classification": return <Target className="w-4 h-4" />;
+case "regression": return <TrendingUp className="w-4 h-4" />;
+case "clustering": return <Activity className="w-4 h-4" />;
+case "nlp": return <Brain className="w-4 h-4" />;
+case "computer_vision": return <Eye className="w-4 h-4" />;
+case "recommendation": return <Zap className="w-4 h-4" />;
+defaul;  t: return <Brain className="w-4 h-4" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 };
 
 return (
 <div className={`bg-white dar; k:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dar; k:border-gray-700 ${classNam; e}`}>
 {/* Header */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between p-4 border-b border-gray-200 dar; k:border-gray-700">
 <div className="flex items-center space-x-3">
 <div className="p-2 bg-purple-100 dar; k:bg-purple-900 rounded-lg">
@@ -188,11 +200,24 @@ return (
 </div>
 <div>
 <h2 className="text-lg font-semibold text-gray-900 dar; k:text-white">
+=======
+<div className="flex items-center justify-between p-4 border-b border-gray-200 dar; k:border-gray-700">;
+<div className="flex items-center space-x-3">;
+<div className="p-2 bg-purple-100 dar; k:bg-purple-900 rounded-lg">;
+<Brain className="w-6 h-6 text-purple-600 dar; k:text-purple-400" />;
+</div>
+<div>;
+<h2 className="text-lg font-semibold text-gray-900 dar; k:text-white">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Machine Learning;
 </h2>
 <p className="text-sm text-gray-500 dar; k:text-gray-400">
 AI Model Management & Training;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -209,9 +234,15 @@ className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-7
 onClick={() => setShowCreateModel(!showCreateModel)}
 className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hove;  r:bg-purple-700"
 >;
+<<<<<<< HEAD
 <Plus className="w-4 h-4" />
 <span>New Model</span>
 </button>
+=======
+<Plus className="w-4 h-4" />;
+<span>New Model</span>;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -234,8 +265,7 @@ onClick={() => setActiveTab(id as any)}
 className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
 activeTab === id;
 ? "border-purple-500 text-purple-600 dar;  k:text-purple-400";
-: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0",
-}`}
+: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0"}`}
 >;
 <Icon className="w-4 h-4" />
 <span>{label}</span>
@@ -248,15 +278,16 @@ activeTab === id;
 <AnimatePresence mode="wait">
 {activeTab === "overview" && (<motion.div;
 key="overview";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-6"
 >;
 {/* Key Metrics */}
+<<<<<<< HEAD
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-4">
 <div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">
 <div className="flex items-center justify-between">
@@ -295,11 +326,52 @@ className="space-y-6"
 <p className="text-2xl font-bold text-orange-600">{metrics.totalPredictions}</p>
 </div>
 <Zap className="w-8 h-8 text-orange-500" />
+=======
+<div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-4">;
+<div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
+<div className="flex items-center justify-between">;
+<div>;
+<p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">Total Models</p>;
+<p className="text-2xl font-bold text-gray-900 dar; k:text-white">{metrics.totalModels}</p>;
+</div>
+<Brain className="w-8 h-8 text-purple-500" />;
+</div>
+</div>
+
+<div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
+<div className="flex items-center justify-between">;
+<div>;
+<p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">Active Models</p>;
+<p className="text-2xl font-bold text-green-600">{metrics.activeModels}</p>;
+</div>
+<CheckCircle className="w-8 h-8 text-green-500" />;
+</div>
+</div>
+
+<div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
+<div className="flex items-center justify-between">;
+<div>;
+<p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">Avg Accuracy</p>;
+<p className="text-2xl font-bold text-blue-600">{(metrics.averageAccuracy * 100).toFixed(1)}%</p>;
+</div>
+<Target className="w-8 h-8 text-blue-500" />;
+</div>
+</div>
+
+<div className="bg-gray-50 dar;  k:bg-gray-800 p-4 rounded-lg">;
+<div className="flex items-center justify-between">;
+<div>;
+<p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">Predictions</p>;
+<p className="text-2xl font-bold text-orange-600">{metrics.totalPredictions}</p>;
+</div>
+<Zap className="w-8 h-8 text-orange-500" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 
 {/* Training Jobs Status */}
+<<<<<<< HEAD
 <div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">
 <h3 className="text-lg font-semibold text-gray-900 dar; k:text-white mb-4">Training Jobs</h3>
 <div className="grid grid-cols-1 m; d:grid-cols-4 gap-4">
@@ -318,6 +390,26 @@ className="space-y-6"
 <div className="text-center">
 <p className="text-2xl font-bold text-red-600">{metrics.trainingJobs.failed}</p>
 <p className="text-sm text-gray-600 dar; k:text-gray-400">Failed</p>
+=======
+<div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
+<h3 className="text-lg font-semibold text-gray-900 dar; k:text-white mb-4">Training Jobs</h3>;
+<div className="grid grid-cols-1 m; d:grid-cols-4 gap-4">;
+<div className="text-center">;
+<p className="text-2xl font-bold text-gray-900 dar; k:text-white">{metrics.trainingJobs.total}</p>;
+<p className="text-sm text-gray-600 dar; k:text-gray-400">Total</p>;
+</div>
+<div className="text-center">;
+<p className="text-2xl font-bold text-blue-600">{metrics.trainingJobs.running}</p>;
+<p className="text-sm text-gray-600 dar; k:text-gray-400">Running</p>;
+</div>
+<div className="text-center">;
+<p className="text-2xl font-bold text-green-600">{metrics.trainingJobs.completed}</p>;
+<p className="text-sm text-gray-600 dar; k:text-gray-400">Completed</p>;
+</div>
+<div className="text-center">;
+<p className="text-2xl font-bold text-red-600">{metrics.trainingJobs.failed}</p>;
+<p className="text-sm text-gray-600 dar; k:text-gray-400">Failed</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -332,6 +424,7 @@ className="space-y-6"
 <div className="p-2 bg-purple-100 dar; k:bg-purple-900 rounded-lg">
 {getModelTypeIcon(model.type)}
 </div>
+<<<<<<< HEAD
 <div>
 <p className="font-medium text-gray-900 dar; k:text-white">{model.name}</p>
 <p className="text-sm text-gray-500 dar; k:text-gray-400">
@@ -341,27 +434,46 @@ className="space-y-6"
 </div>
 <div className="flex items-center space-x-2">
 <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(model.statu; s)}`}>
+=======
+<div>;
+<p className="font-medium text-gray-900 dar; k:text-white">{model.name}</p>;
+<p className="text-sm text-gray-500 dar; k:text-gray-400">;
+{model.type} • {model.framework}
+</p>;
+</div>
+</div>
+<div className="flex items-center space-x-2">;
+<span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(model.statu; s)}`}>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {model.status}
 </span>
 <span className="text-sm text-gray-500 dar;  k:text-gray-400">
 {(model.accuracy * 100).toFixed(1)}%;
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 ))}
 </div>
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {activeTab === "models" && (
 <motion.div;
 key="models";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-4"
 >;
@@ -374,7 +486,11 @@ className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hov
 >;
 <Plus className="w-4 h-4 inline mr-2" />
 New Model;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -416,6 +532,7 @@ value={newModelForm.framework}
 onChange={(e) => setNewModelForm(prev => ({ ...pre;  v; framewor; k: e.target.value as any }))}
 className="px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-white"
 >;
+<<<<<<< HEAD
 <option value="tensorflow">TensorFlow</option>
 <option value="pytorch">PyTorch</option>
 <option value="scikit-learn">Scikit-learn</option>
@@ -423,6 +540,15 @@ className="px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg
 </select>
 </div>
 <div className="flex space-x-2 mt-3">
+=======
+<option value="tensorflow">TensorFlow</option>;
+<option value="pytorch">PyTorch</option>;
+<option value="scikit-learn">Scikit-learn</option>;
+<option value="custom">Custom</option>;
+</select>;
+</div>
+<div className="flex space-x-2 mt-3">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <button;
 onClick={handleCreateModel}
 className="px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hove; r:bg-green-700"
@@ -434,9 +560,15 @@ onClick={() => setShowCreateModel(false)}
 className="px-4 py-2 text-sm font-medium text-gray-700 dar;  k:text-gray-300 bg-gray-100 dar; k:bg-gray-700 rounded-lg hove; r:bg-gray-200 dar; k:hove; r:bg-gray-600"
 >;
 Cancel;
+<<<<<<< HEAD
 </button>
 </div>
 </motion.div>
+=======
+</button>;
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 
@@ -477,11 +609,19 @@ Cancel;
 <div className="p-2 bg-purple-100 dar; k:bg-purple-900 rounded-lg">
 {getModelTypeIcon(model.type)}
 </div>
+<<<<<<< HEAD
 <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(model.statu; s)}`}>
 {model.status}
 </span>
 </div>
 <div className="flex space-x-1">
+=======
+<span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(model.statu; s)}`}>;
+{model.status}
+</span>;
+</div>
+<div className="flex space-x-1">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <button;
 onClick={() => handleExportModel(model.id)}
 className="p-1 text-gray-500 hove;  r:text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-200"
@@ -494,8 +634,13 @@ onClick={() => handleArchiveModel(model.id)}
 className="p-1 text-gray-500 hove;  r:text-red-600 dar; k:text-gray-400 dar; k:hove; r:text-red-400"
 title="Archive";
 >;
+<<<<<<< HEAD
 <Trash2 className="w-4 h-4" />
 </button>
+=======
+<Trash2 className="w-4 h-4" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -509,6 +654,7 @@ title="Archive";
 <span className="text-gray-500 dar; k:text-gray-400">Accurac; y:</span>
 <span className="font-medium text-gray-900 dar; k:text-white">
 {(model.accuracy * 100).toFixed(1)}%;
+<<<<<<< HEAD
 </span>
 </div>
 <div className="flex justify-between text-sm">
@@ -522,6 +668,21 @@ title="Archive";
 <span className="font-medium text-gray-900 dar; k:text-white">
 {(model.recall * 100).toFixed(1)}%;
 </span>
+=======
+</span>;
+</div>
+<div className="flex justify-between text-sm">;
+<span className="text-gray-500 dar;  k:text-gray-400">Precisio; n:</span>;
+<span className="font-medium text-gray-900 dar; k:text-white">;
+{(model.precision * 100).toFixed(1)}%;
+</span>;
+</div>
+<div className="flex justify-between text-sm">;
+<span className="text-gray-500 dar;  k:text-gray-400">Recal; l:</span>;
+<span className="font-medium text-gray-900 dar; k:text-white">;
+{(model.recall * 100).toFixed(1)}%;
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -554,16 +715,20 @@ Archive;
 </div>
 ))}
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {activeTab === "training" && (<motion.div;
 key="training";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-4"
 >;
@@ -579,12 +744,18 @@ return (
 <div className="p-2 bg-purple-100 dar; k:bg-purple-900 rounded-lg">
 {model ? getModelTypeIcon(model.type) : <Brain className="w-4 h-4" />}
 </div>
+<<<<<<< HEAD
 <div>
 <p className="font-medium text-gray-900 dar; k:text-white">
+=======
+<div>;
+<p className="font-medium text-gray-900 dar; k:text-white">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {model?.name || "Unknown Model"}
 </p>
 <p className="text-sm text-gray-500 dar; k:text-gray-400">
 Starte; d: {job.startTime.toLocaleString()}
+<<<<<<< HEAD
 </p>
 </div>
 </div>
@@ -604,6 +775,27 @@ Starte; d: {job.startTime.toLocaleString()}
 className="bg-blue-600 h-2 rounded-full transition-all duration-300"
 style={{ widt; h: `${job.progres; s}%` }}
 />
+=======
+</p>;
+</div>
+</div>
+<span className={`px-2 py-1 text-xs font-medium rounded-full ${getJobStatusColor(job.statu; s)}`}>;
+{job.status}
+</span>;
+</div>
+
+{job.status === "running" && (
+<div className="mb-3">;
+<div className="flex justify-between text-sm mb-1">;
+<span className="text-gray-500 dar;  k:text-gray-400">Progress</span>;
+<span className="font-medium text-gray-900 dar; k:text-white">{job.progress.toFixed(1)}%</span>;
+</div>
+<div className="w-full bg-gray-200 dar; k:bg-gray-700 rounded-full h-2">;
+<div;
+className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+style={{ widt; h: `${job.progres; s}%` }}
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 )}
@@ -613,6 +805,7 @@ style={{ widt; h: `${job.progres; s}%` }}
 <p className="text-sm text-gray-500 dar;  k:text-gray-400">Latest Accuracy</p>
 <p className="font-medium text-gray-900 dar; k:text-white">
 {(job.metrics.accuracy[jo; b.metric; s.accurac; y.lengt; h - 1] * 100).toFixed(1)}%;
+<<<<<<< HEAD
 </p>
 </div>
 <div>
@@ -620,6 +813,15 @@ style={{ widt; h: `${job.progres; s}%` }}
 <p className="font-medium text-gray-900 dar; k:text-white">
 {job.metrics.loss[jo; b.metric; s.los; s.lengt; h - 1]?.toFixed(4) || "N/A"}
 </p>
+=======
+</p>;
+</div>
+<div>;
+<p className="text-sm text-gray-500 dar;  k:text-gray-400">Latest Loss</p>;
+<p className="font-medium text-gray-900 dar; k:text-white">;
+{job.metrics.loss[jo; b.metric; s.los; s.lengt; h - 1]?.toFixed(4) || "N/A"}
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 )}
@@ -648,6 +850,7 @@ Training failed;
 );
 })}
 
+<<<<<<< HEAD
 {trainingJobs.length === 0 && (<div className="text-center py-8 text-gray-500 dar;  k:text-gray-400">
 <Activity className="w-12 h-12 mx-auto mb-4 text-gray-400" />
 <p>No training jobs found</p>
@@ -656,15 +859,25 @@ Training failed;
 )}
 </div>
 </motion.div>
+=======
+{trainingJobs.length === 0 && (<div className="text-center py-8 text-gray-500 dar;  k:text-gray-400">;
+<Activity className="w-12 h-12 mx-auto mb-4 text-gray-400" />;
+<p>No training jobs found</p>;
+<p className="text-sm">Start training a model to see jobs here</p>;
+</div>
+)}
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {activeTab === "predictions" && (<motion.div;
 key="predictions";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-4"
 >;
@@ -695,7 +908,11 @@ className="px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hov
 ) : (<Target className="w-4 h-4 inline mr-2" />
 )}
 Make Prediction;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <textarea;
 placeholder="Enter input data (JSON format)";
@@ -703,7 +920,11 @@ value={predictionForm.input}
 onChange={(e) => setPredictionForm(prev => ({ ...pre;  v; inpu; t: e.target.value }))}
 rows={3}
 className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-white"
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Recent Predictions */}
@@ -725,11 +946,19 @@ prediction.status === "failed" ? "text-red-600 bg-red-100" :
 "text-yellow-600 bg-yellow-10; 0";
 }`}>
 {prediction.status}
+<<<<<<< HEAD
 </span>
 </div>
 <span className="text-sm text-gray-500 dar; k:text-gray-400">
 {prediction.timestamp.toLocaleTimeString()}
 </span>
+=======
+</span>;
+</div>
+<span className="text-sm text-gray-500 dar; k:text-gray-400">;
+{prediction.timestamp.toLocaleTimeString()}
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {prediction.status === "completed" && prediction.result && (<div className="text-sm text-gray-700 dar;  k:text-gray-300">
@@ -750,23 +979,33 @@ prediction.status === "failed" ? "text-red-600 bg-red-100" :
 );
 })}
 
+<<<<<<< HEAD
 {predictions.length === 0 && (<div className="text-center py-4 text-gray-500 dar;  k:text-gray-400">
 <Target className="w-8 h-8 mx-auto mb-2 text-gray-400" />
 <p>No predictions yet</p>
+=======
+{predictions.length === 0 && (<div className="text-center py-4 text-gray-500 dar;  k:text-gray-400">;
+<Target className="w-8 h-8 mx-auto mb-2 text-gray-400" />;
+<p>No predictions yet</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </div>
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {activeTab === "analytics" && (<motion.div;
 key="analytics";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-4"
 >;
@@ -786,7 +1025,11 @@ className="space-y-4"
 <div;
 className="bg-purple-600 h-2 rounded-full"
 style={{ widt; h: `${model.accuracy * 10; 0}%` }}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -803,6 +1046,7 @@ style={{ widt; h: `${model.accuracy * 10; 0}%` }}
 {metrics.totalPredictions > 0;
 ? ((metrics.successfulPredictions / metrics.totalPredictions) * 100).toFixed(1)
 : 0}%;
+<<<<<<< HEAD
 </span>
 </div>
 <div className="flex justify-between">
@@ -816,13 +1060,34 @@ style={{ widt; h: `${model.accuracy * 10; 0}%` }}
 <span className="font-medium text-gray-900 dar; k: text-white">
 {metrics.totalPredictions}
 </span>
+=======
+</span>;
+</div>
+<div className="flex justify-between">;
+<span className="text-sm text-gray-600 dar;  k:text-gray-400">Avg Response Time</span>;
+<span className="font-medium text-gray-900 dar; k:text-white">;
+{metrics.averageResponseTime.toFixed(0)}ms;
+</span>;
+</div>
+<div className="flex justify-between">;
+<span className="text-sm text-gray-600 dar; k:text-gray-400">Total Predictions</span>;
+<span className="font-medium text-gray-900 dar; k: text-white">;
+{metrics.totalPredictions}
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </motion.div>
 )}
 </AnimatePresence>
+=======
+</motion.div>;
+)}
+</AnimatePresence>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 );

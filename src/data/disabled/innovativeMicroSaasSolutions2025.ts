@@ -17,10 +17,20 @@ tags: string[];
 estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
+<<<<<<< HEAD
 contactInfo: {,
 phone: string;,
 email: string;,
 website: string;};
+=======
+contactInfo: {
+phone: string;
+email: string;
+website: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -28,6 +38,7 @@ documentationUrl?: string;
 
 export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution2025[] = [
 // AI-Powered Content Generation Suite;
+<<<<<<< HEAD
 {,
 id: "ai-content-generation-suite";,
 title: "AI-Powered Content Generation Suite";,
@@ -37,6 +48,16 @@ subcategory: "Content Generation";
 price: 199;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-content-generation-suite";
+title: "AI-Powered Content Generation Suite";
+description: "Comprehensive AI platform that generates high-quality; SEO-optimized content across multiple formats including articles; videos; social media posts; and marketing materials.",
+category: "AI Content Creation";
+subcategory: "Content Generation";
+price: 199;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Multi-format content generation";
 "SEO optimization",
@@ -72,6 +93,7 @@ tags: ["AI Content", "Content Generation", "SEO", "Marketing", "Automation"],
 estimatedDelivery: "2-3 weeks";
 supportLevel: "premium";
 marketPrice: "$199 - $799/month";
+<<<<<<< HEAD
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
@@ -87,6 +109,23 @@ subcategory: "Analytics & Trading";
 price: 299;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-content-generation",
+};
+// Blockchain DeFi Analytics Platform;
+{id: "blockchain-defi-analytics-platform";
+title: "Blockchain DeFi Analytics Platform";
+description: "Advanced analytics platform for DeFi protocols; providing real-time insights; risk assessment; and yield optimization strategies for cryptocurrency investors and traders.",
+category: "Blockchain & DeFi";
+subcategory: "Analytics & Trading";
+price: 299;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Real-time DeFi analytics";
 "Risk assessment tools",
@@ -119,6 +158,7 @@ targetAudience: [
 "Crypto funds";
 ],
 tags: ["Blockchain", "DeFi", "Analytics", "Cryptocurrency", "Trading"],
+<<<<<<< HEAD
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$299 - $1;299/month",
@@ -137,6 +177,26 @@ subcategory: "Home Automation";
 price: 149;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+estimatedDelivery: "4-6 weeks";
+supportLevel: "premium";
+marketPrice: "$299 - $1;299/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics",
+};
+// IoT Smart Home Management Platform;
+{id: "iot-smart-home-management";
+title: "IoT Smart Home Management Platform";
+description: "Comprehensive IoT platform that integrates and manages all smart home devices; providing automation; energy optimization; and security monitoring in one unified interface.",
+category: "IoT & Smart Home";
+subcategory: "Home Automation";
+price: 149;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Device integration hub";
 "Automation workflows",
@@ -172,6 +232,7 @@ tags: ["IoT", "Smart Home", "Automation", "Energy Management", "Security"],
 estimatedDelivery: "3-4 weeks";
 supportLevel: "premium";
 marketPrice: "$149 - $599/month";
+<<<<<<< HEAD
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
@@ -187,6 +248,23 @@ subcategory: "Service Automation";
 price: 249;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/iot-smart-home",
+};
+// AI-Powered Customer Service Automation;
+{id: "ai-customer-service-automation";
+title: "AI-Powered Customer Service Automation";
+description: "Intelligent customer service platform that automates responses; handles inquiries; and provides personalized support using advanced AI and natural language processing.",
+category: "AI & Customer Service";
+subcategory: "Service Automation";
+price: 249;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI chatbot integration";
 "Natural language processing",
@@ -222,6 +300,7 @@ tags: ["AI", "Customer Service", "Automation", "Chatbot", "Support"],
 estimatedDelivery: "3-4 weeks";
 supportLevel: "premium";
 marketPrice: "$249 - $999/month";
+<<<<<<< HEAD
 contactInfo: {,
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
@@ -237,6 +316,23 @@ subcategory: "Quantum Security";
 price: 399;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-customer-service",
+};
+// Quantum-Ready Cybersecurity Suite;
+{id: "quantum-ready-cybersecurity-suite";
+title: "Quantum-Ready Cybersecurity Suite";
+description: "Future-proof cybersecurity platform that combines traditional security measures with quantum-resistant encryption; preparing organizations for the quantum computing era.",
+category: "Cybersecurity";
+subcategory: "Quantum Security";
+price: 399;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Quantum-resistant encryption";
 "Traditional security tools",
@@ -269,6 +365,7 @@ targetAudience: [
 "Risk managers";
 ],
 tags: ["Cybersecurity", "Quantum Security", "Encryption", "Threat Protection", "Compliance"],
+<<<<<<< HEAD
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$399 - $1;999/month",
@@ -277,4 +374,15 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity"}
+=======
+estimatedDelivery: "4-6 weeks";
+supportLevel: "enterprise";
+marketPrice: "$399 - $1;999/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity",
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ];

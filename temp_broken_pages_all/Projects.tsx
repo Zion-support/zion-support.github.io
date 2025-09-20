@@ -1,4 +1,4 @@
-import { Clock,, Briefcase,  } from 'lucide-react'
+import { Clock, Briefcase } from "lucide-react";
 function ProjectsContent() { const { projects, isLoading } = useProjects()
 function ProjectsContent() {
 return (
@@ -64,7 +64,7 @@ title='My Projects | Zion AI Marketplace'
           </div>
         )}
       </main>
-    </>
+</>
   )
 export default function Projects() {
   return <ProjectsContent /> }

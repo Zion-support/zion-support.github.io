@@ -15,6 +15,7 @@ import { Button } from "./button, ";
 interface AccessibilitySettings {
 highContrast: boolean;
 largeText: boolean;
+<<<<<<< HEAD
 reducedMotion: boolean;,
 screenReader: boolean;,
 fontSize: number;,
@@ -23,10 +24,27 @@ interface AccessibilityProps {
 enabled?: boolean;
 className?: string;
 onSettingsChange?: (settings: AccessibilitySettings) => void;};
+=======
+reducedMotion: boolean;
+screenReader: boolean;
+fontSize: number;
+colorBlindMode: "normal" | "protanopia" | "deuteranopia" | "tritanopia";
+}
+}
+};
+interface AccessibilityProps {
+enabled?: boolean;
+className?: string;
+onSettingsChange?: (settings: AccessibilitySettings) => void;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function AccessibilityPanel({ ;
 enabled = true;
 className = "",
 onSettingsChange;
+<<<<<<< HEAD
 }: AccessibilityProps) {
 const [isOpen, setIsOpen] = useState(false);
 const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -35,6 +53,15 @@ largeText: false;
 reducedMotion: false;,
 screenReader: false;,
 fontSize: 16;,
+=======
+}: AccessibilityProps) {const [isOpen; setIsOpen] = useState(false);
+const [settings; setSettings] = useState<AccessibilitySettings>({
+highContrast: false;
+largeText: false;
+reducedMotion: false;
+screenReader: false;
+fontSize: 16;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 colorBlindMode: "normal"});
 // Apply accessibility settings to document;
 useEffect(() => {
@@ -102,6 +129,7 @@ saveSettings(newSettings);
 }, [settings; saveSettings]);
 
 // Reset to defaults;
+<<<<<<< HEAD
 const resetSettings = useCallback(() => {;
 const defaults: AccessibilitySettings = {;
 highContrast: false;
@@ -109,6 +137,14 @@ largeText: false;
 reducedMotion: false;,
 screenReader: false;,
 fontSize: 16;,
+=======
+const resetSettings = useCallback(() => {const defaults: AccessibilitySettings = {;
+highContrast: false;
+largeText: false;
+reducedMotion: false;
+screenReader: false;
+fontSize: 16;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 colorBlindMode: "normal"};
 saveSettings(defaults);
 }, [saveSettings]);
@@ -185,8 +221,13 @@ onClick={() => setIsOpen(false)}
 className="p-2 rounded-lg hover:bg-zion-blue-light/20 transition-colors duration-200"
 aria-label="Close accessibility panel";
 >;
+<<<<<<< HEAD
 <X className="w-5 h-5 text-zinc-400" />
 </button>
+=======
+<X className="w-5 h-5 text-zinc-400" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Visual Settings */}
@@ -194,10 +235,17 @@ aria-label="Close accessibility panel";
 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Visual</h3>
 
 {/* High Contrast */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-3">
 <Contrast className="w-5 h-5 text-zion-cyan" />
 <span className="text-zinc-300">High Contrast</span>
+=======
+<div className="flex items-center justify-between">;
+<div className="flex items-center gap-3">;
+<Contrast className="w-5 h-5 text-zion-cyan" />;
+<span className="text-zinc-300">High Contrast</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <Button;
 size="sm";
@@ -206,6 +254,7 @@ onClick={() => toggleSetting("highContrast")}
 className={settings.highContrast ? "bg-zion-cyan text-zion-blue-dark" : ""}
 >;
 {settings.highContrast ? "On" : "Off"}
+<<<<<<< HEAD
 </Button>
 </div>
 
@@ -214,6 +263,16 @@ className={settings.highContrast ? "bg-zion-cyan text-zion-blue-dark" : ""}
 <div className="flex items-center gap-3">
 <Type className="w-5 h-5 text-zion-cyan" />
 <span className="text-zinc-300">Large Text</span>
+=======
+</Button>;
+</div>
+
+{/* Large Text */}
+<div className="flex items-center justify-between">;
+<div className="flex items-center gap-3">;
+<Type className="w-5 h-5 text-zion-cyan" />;
+<span className="text-zinc-300">Large Text</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <Button;
 size="sm";
@@ -222,6 +281,7 @@ onClick={() => toggleSetting("largeText")}
 className={settings.largeText ? "bg-zion-cyan text-zion-blue-dark" : ""}
 >;
 {settings.largeText ? "On" : "Off"}
+<<<<<<< HEAD
 </Button>
 </div>
 
@@ -232,6 +292,18 @@ className={settings.largeText ? "bg-zion-cyan text-zion-blue-dark" : ""}
 <span className="text-zinc-300">Font Size: {settings.fontSize}px</span>
 </div>
 <div className="flex items-center gap-2 ml-8">
+=======
+</Button>;
+</div>
+
+{/* Font Size Control */}
+<div className="space-y-2">;
+<div className="flex items-center gap-3">;
+<Type className="w-5 h-5 text-zion-cyan" />;
+<span className="text-zinc-300">Font Size: {settings.fontSize}px</span>;
+</div>
+<div className="flex items-center gap-2 ml-8">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <Button;
 size="sm";
 variant="outline"
@@ -248,27 +320,47 @@ onClick={increaseFontSize}
 disabled={settings.fontSize >= 24}
 className="p-1"
 >;
+<<<<<<< HEAD
 <ZoomIn className="w-4 h-4" />
 </Button>
+=======
+<ZoomIn className="w-4 h-4" />;
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
 {/* Color Blind Mode */}
+<<<<<<< HEAD
 <div className="space-y-2">
 <div className="flex items-center gap-3">
 <Eye className="w-5 h-5 text-zion-cyan" />
 <span className="text-zinc-300">Color Blind Mode</span>
+=======
+<div className="space-y-2">;
+<div className="flex items-center gap-3">;
+<Eye className="w-5 h-5 text-zion-cyan" />;
+<span className="text-zinc-300">Color Blind Mode</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <select;
 value={settings.colorBlindMode}
 onChange={(e) => toggleSetting("colorBlindMode", e.target.value as AccessibilitySettings["colorBlindMode"])}
 className="ml-8 px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none"
 >;
+<<<<<<< HEAD
 <option value="normal">Normal</option>
 <option value="protanopia">Protanopia (Red-Blind)</option>
 <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
 <option value="tritanopia">Tritanopia (Blue-Blind)</option>
 </select>
+=======
+<option value="normal">Normal</option>;
+<option value="protanopia">Protanopia (Red-Blind)</option>;
+<option value="deuteranopia">Deuteranopia (Green-Blind)</option>;
+<option value="tritanopia">Tritanopia (Blue-Blind)</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -276,10 +368,17 @@ className="ml-8 px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 round
 <div className="space-y-4 mt-6">
 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Motion</h3>
 
+<<<<<<< HEAD
 <div className="flex items-center justify-between">
 <div className="flex items-center gap-3">
 <Settings className="w-5 h-5 text-zion-cyan" />
 <span className="text-zinc-300">Reduced Motion</span>
+=======
+<div className="flex items-center justify-between">;
+<div className="flex items-center gap-3">;
+<Settings className="w-5 h-5 text-zion-cyan" />;
+<span className="text-zinc-300">Reduced Motion</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <Button;
 size="sm";
@@ -288,7 +387,11 @@ onClick={() => toggleSetting("reducedMotion")}
 className={settings.reducedMotion ? "bg-zion-cyan text-zion-blue-dark" : ""}
 >;
 {settings.reducedMotion ? "On" : "Off"}
+<<<<<<< HEAD
 </Button>
+=======
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -303,7 +406,11 @@ className={settings.reducedMotion ? "bg-zion-cyan text-zion-blue-dark" : ""}
 ) : (
 <VolumeX className="w-5 h-5 text-zinc-400" />
 )}
+<<<<<<< HEAD
 <span className="text-zinc-300">Screen Reader</span>
+=======
+<span className="text-zinc-300">Screen Reader</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <Button;
 size="sm";
@@ -312,7 +419,11 @@ onClick={() => toggleSetting("screenReader")}
 className={settings.screenReader ? "bg-zion-cyan text-zion-blue-dark" : ""}
 >;
 {settings.screenReader ? "On" : "Off"}
+<<<<<<< HEAD
 </Button>
+=======
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -326,7 +437,11 @@ onClick={() => announceToScreenReader("This is a test announcement for screen re
 className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark"
 >;
 Test Announcement;
+<<<<<<< HEAD
 </Button>
+=======
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 
@@ -338,6 +453,7 @@ variant="outline"
 className="w-full border-zinc-500 text-zinc-300 hover:bg-zinc-500/20"
 >;
 Reset to Defaults;
+<<<<<<< HEAD
 </Button>
 </div>
 
@@ -348,6 +464,18 @@ Reset to Defaults;
 </div>
 </motion.div>
 </motion.div>
+=======
+</Button>;
+</div>
+
+{/* Help Text */}
+<div className="mt-4 text-xs text-zinc-400 text-center">;
+<p>These settings are saved locally and will persist across sessions.</p>;
+<p className="mt-1">For more accessibility options; check your browser settings.</p>;
+</div>
+</motion.div>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 
@@ -362,8 +490,14 @@ padding: 0;
 margin: -1px;,
 overflow: hidden;,
 clip: rect(0; 0; 0; 0);
+<<<<<<< HEAD
 white-space: nowrap;,
 border: 0;}
+=======
+white-space: nowrap;
+border: 0;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 .high-contrast {
 --zion-cyan: #00ffff;
@@ -373,6 +507,7 @@ border: 0;}
 --zion-blue-light: #3399ff;
 --zion-cyan-light: #33ffff;
 --zion-purple-dark: #6600cc;
+<<<<<<< HEAD
 --zion-purple-light: #cc33ff;}
 
 [data-color-blind="protanopia"] {
@@ -390,18 +525,53 @@ filter: url("#tritanopia-filter");}
 
 * {
 font-size: var(--font-size);}
+=======
+--zion-purple-light: #cc33ff;
+}
+
+[data-color-blind="protanopia"] {
+filter: url("#protanopia-filter");
+}
+
+[data-color-blind="deuteranopia"] {
+filter: url("#deuteranopia-filter");
+}
+
+[data-color-blind="tritanopia"] {
+filter: url("#tritanopia-filter");
+}
+
+:root {
+--font-size: 16px;
+--reduced-motion: no-preference;
+}
+
+* {
+font-size: var(--font-size);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 @media (prefers-reduced-motion: reduce) {
 * {
 animation-duration: 0.01ms !important;
 animation-iteration-count: 1 !important;
+<<<<<<< HEAD
 transition-duration: 0.01ms !important;}
+=======
+transition-duration: 0.01ms !important;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 [style*="--reduced-motion: reduce"] * {
 animation-duration: 0.01ms !important;
 animation-iteration-count: 1 !important;
+<<<<<<< HEAD
 transition-duration: 0.01ms !important;}
+=======
+transition-duration: 0.01ms !important;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 `;
 }} />
 

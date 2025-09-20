@@ -1,16 +1,26 @@
 
 import React from 'react';
-import { useRouter,, ,  } from 'next/router';
-import { Button,  } from '@/components/ui/button';
-import { ArrowLeft,  } from 'lucide-react'
+import { useRouter } from "next/router";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 interface ProjectHeaderProps {
+<<<<<<< HEAD
 title: string,
+=======
+  title: string,}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function ProjectHeader({ title }: ProjectHeaderProps) {
 const router = useRouter(); // Changed from useNavigate to useRouter,
 return (
+<<<<<<< HEAD
 <div className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b'>
 <div className='flex items-center'>
 <Button,
+=======
+    <div className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b'>
+      <div className='flex items-center'>
+        <Button
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 variant='ghost'
 size='sm';
 className='mr-2'

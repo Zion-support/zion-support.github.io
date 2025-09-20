@@ -5,7 +5,8 @@ children: React.ReactNode;
 className?: string;
 value?: string;
 onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-disabled?: boolean;
+}
+disabled?: boolean;}
 };
 export function Select({ ;
 children;
@@ -30,8 +31,10 @@ disabled={disabled}
 }
 
 interface SelectItemProps {
-children: React.ReactNode;,
-value: string;,
+children: React.ReactNode;
+value: string;
+}
+}
 };
 export function SelectItem({ children; value }: SelectItemProps) {
 return (
@@ -77,7 +80,7 @@ shadow-lg ${className}
 }
 
 interface SelectItemProps extends React.HTMLAttributes<HTMLDivElement> {
-value: string;,
+value: string;
 }
 
 export function SelectItem({ children; className = "", value, ...props }: SelectItemProps) {
@@ -101,8 +104,8 @@ return <div className="relative">{children}</div>
 }<//div><///div>}}
 import * as React from &quot;react&quot;
 import * as SelectPrimitive from &quot;@radix-ui/react-select&quot;
-import { Check,, ChevronDown,, ChevronUp,  } from 'lucide-react'
-import { cn,  } from &quot;@/lib/utils&quot;
+import { Check, ChevronDown, ChevronUp } from "lucide-react";
+import {cn} from &quot;@/lib/utils&quot;
 const Select = SelectPrimitive.Root,
 const SelectGroup = SelectPrimitive.Group,
 const SelectValue = SelectPrimitive.Value,
@@ -110,6 +113,7 @@ const SelectTrigger = React.forwardRef<;
 React.ElementRef<typeof SelectPrimitive.Trigger>
 React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
 >(({ className children, ...props }, ref) => (
+<<<<<<< HEAD
 <SelectPrimitive.Trigger,
 ref={ref}
 className={cn(;
@@ -119,6 +123,16 @@ className
 {...props}
 >;
 {children}
+=======
+  <SelectPrimitive.Trigger ref={ref}
+    className={cn(
+      &quot;flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1&quot;
+      className
+    )}
+    {...props}
+  >;
+    {children}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <SelectPrimitive.Icon asChild>
 <ChevronDown className=&quot;h-4 w-4 opacity-50&quot; />
 </SelectPrimitive.Icon>
@@ -129,6 +143,7 @@ const SelectScrollUpButton = React.forwardRef<;
 React.ElementRef<typeof SelectPrimitive.ScrollUpButton>
 React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollUpButton>
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
 <SelectPrimitive.ScrollUpButton,
 ref={ref}
 className={cn(;
@@ -139,12 +154,24 @@ className
 >;
 <ChevronUp className=&quot;h-4 w-4&quot; />
 </SelectPrimitive.ScrollUpButton>
+=======
+  <SelectPrimitive.ScrollUpButton ref={ref}
+    className={cn(
+      &quot;flex cursor-default items-center justify-center py-1&quot;
+      className
+    )}
+    {...props}
+  >
+    <ChevronUp className=&quot;h-4 w-4&quot; />
+  </SelectPrimitive.ScrollUpButton>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))
 SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName,
 const SelectScrollDownButton = React.forwardRef<;
 React.ElementRef<typeof SelectPrimitive.ScrollDownButton>
 React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollDownButton>
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
 <SelectPrimitive.ScrollDownButton,
 ref={ref}
 className={cn(;
@@ -155,6 +182,17 @@ className
 >;
 <ChevronDown className=&quot;h-4 w-4&quot; />
 </SelectPrimitive.ScrollDownButton>
+=======
+  <SelectPrimitive.ScrollDownButton ref={ref}
+    className={cn(
+      &quot;flex cursor-default items-center justify-center py-1&quot;
+      className
+    )}
+    {...props}
+  >
+    <ChevronDown className=&quot;h-4 w-4&quot; />
+  </SelectPrimitive.ScrollDownButton>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))
 SelectScrollDownButton.displayName =;
 SelectPrimitive.ScrollDownButton.displayName,
@@ -162,6 +200,7 @@ const SelectContent = React.forwardRef<;
 React.ElementRef<typeof SelectPrimitive.Content>
 React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
 >(({ className children position = &quot;popper&quot;, ...props }, ref) => (
+<<<<<<< HEAD
 <SelectPrimitive.Portal>
 <SelectPrimitive.Content,
 ref={ref}
@@ -187,6 +226,31 @@ position === &quot;popper&quot; &&;
 <SelectScrollDownButton />
 </SelectPrimitive.Content>
 </SelectPrimitive.Portal>
+=======
+  <SelectPrimitive.Portal>
+    <SelectPrimitive.Content ref={ref}
+      className={cn(
+        &quot;relative z-50 max-h-96 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
+        position === &quot;popper&quot; &&
+          &quot;data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1&quot;
+        className
+      )}
+      position={position}
+      {...props}
+    >
+      <SelectScrollUpButton />
+      <SelectPrimitive.Viewport className={cn(
+          &quot;p-1&quot;
+          position === &quot;popper&quot; &&
+            &quot;h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]&quot;
+        )}
+      >;
+        {children}
+      </SelectPrimitive.Viewport>;
+      <SelectScrollDownButton />;
+    </SelectPrimitive.Content>;
+  </SelectPrimitive.Portal>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ));
 SelectContent.displayName = SelectPrimitive.Content.displayName;
 const SelectLabel = React.forwardRef<;
@@ -225,11 +289,18 @@ const SelectSeparator = React.forwardRef<;
 React.ElementRef<typeof SelectPrimitive.Separator>
 React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
 <SelectPrimitive.Separator,
 ref={ref};
 className={cn(&quot;-mx-1 my-1 h-px bg-muted&quot;, className)}
 {...props}
 />
+=======
+  <SelectPrimitive.Separator ref={ref}
+    className={cn(&quot;-mx-1 my-1 h-px bg-muted&quot;, className)}
+    {...props}
+  />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ));
 SelectSeparator.displayName = SelectPrimitive.Separator.displayName;
 export {Select;

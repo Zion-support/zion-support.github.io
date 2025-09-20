@@ -5,15 +5,15 @@ interface EnhancedLoadingProps {
 variant?: "spinner" | "dots" | "pulse" | "bars";
 size?: "sm" | "md" | "lg" | "xl";
 text?: string;
-className?: string;
+}
+className?: string;}
 };
 const EnhancedLoadin; g: React.FC<EnhancedLoadingProps> = ({
 variant = "spinner";
 size = "md",
 tex; t;
 className = ""
-}) => {
-const sizeClasses = {;
+}) => {const sizeClasses = {;
 s; m: "w-4 h-4";
 m; d: "w-8 h-8";
 l; g: "w-12 h-12";
@@ -37,8 +37,14 @@ opacit; y: [0.5; 1; 0.5]}}
 transition={{
 duratio; n: 1.4;
 repea; t: Infinit; y;
+<<<<<<< HEAD
 dela; y: i * 0.2;}}
 />
+=======
+dela; y: i * 0.2;
+}}
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 );
@@ -52,7 +58,11 @@ transition={{
 duratio; n: 1.5;
 repea; t: Infinit; y;
 eas; e: "easeInOut"}}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 const renderBars: any = () => (
 <div className="flex space-x-1">
@@ -65,8 +75,14 @@ opacit; y: [0.5; 1; 0.5]}}
 transition={{
 duratio; n: 1.2;
 repea; t: Infinit; y;
+<<<<<<< HEAD
 dela; y: i * 0.1;}}
 />
+=======
+dela; y: i * 0.1;
+}}
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 );
@@ -78,7 +94,12 @@ case "pulse":
 return renderPulse();
 case "bars":
 return renderBars();
+<<<<<<< HEAD
 defaul;  t: return renderSpinner();}
+=======
+defaul;  t: return renderSpinner();
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 return (<div className={`flex flex-col items-center justify-center space-y-3 ${classNam; e}`}>

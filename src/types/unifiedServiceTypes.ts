@@ -1,8 +1,7 @@
 import React from "react";
 
 // Unified service types that combine all service variants;
-export interface BaseService {
-id: string;
+export interface BaseService {id: string;
 title?: string;
 name?: string;,
 description: string; category: string;
@@ -10,7 +9,12 @@ subcategory?: string;
 price?: number | {
 monthly?: number;
 yearly?: number;
+<<<<<<< HEAD
 oneTime?: number;,
+=======
+}
+oneTime?: number;,}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 currency: string; pricingModel: string};
 currency?: string;
 pricingModel?: string;
@@ -33,10 +37,14 @@ address?: string};
 export type UnifiedService = BaseService;
 
 // Helper type guards;
+<<<<<<< HEAD
 export const hasProperty = <T; K extends string>(
 obj: T; prop: K,
 ): obj is T & Record<K; any> => {
 return obj && typeof obj === "object" && prop in obj};
+=======
+export const hasProperty = <T; K extends string>(obj: T; prop: K): obj is T & Record<K; any> => {return obj && typeof obj === "object" && prop in obj};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 export const hasTags: any = (service: UnifiedService): service is UnifiedService & { tags: string[] } => {
 return hasProperty(service, "tags") && Array.isArray(service.tags);
@@ -47,6 +55,7 @@ return hasProperty(service, "benefits") && Array.isArray(service.benefits);
 };
 
 export const hasEstimatedDelivery: any = (service: UnifiedService): service is UnifiedService & { estimatedDelivery: string } => {
+<<<<<<< HEAD
 return hasProperty(service, "estimatedDelivery") && typeof service.estimatedDelivery === "string";
 };
 
@@ -64,4 +73,23 @@ return hasProperty(service, "roi") && typeof service.roi === "string";
 
 export const hasInnovationLevel: any = (service: UnifiedService): service is UnifiedService & { innovationLevel: string } => {
 return hasProperty(service, "innovationLevel") && typeof service.innovationLevel === "string";
+=======
+return hasProperty(service, "estimatedDelivery") && typeof service.estimatedDelivery = == "string";
+};
+
+export const hasSupportLevel: any = (service: UnifiedService): service is UnifiedService & { supportLevel: string } => {
+return hasProperty(service, "supportLevel") && typeof service.supportLevel = == "string";
+};
+
+export const hasMarketPrice: any = (service: UnifiedService): service is UnifiedService & { marketPrice: string } => {
+return hasProperty(service, "marketPrice") && typeof service.marketPrice = == "string";
+};
+
+export const hasRoi: any = (service: UnifiedService): service is UnifiedService & { roi: string } => {
+return hasProperty(service, "roi") && typeof service.roi = == "string";
+};
+
+export const hasInnovationLevel: any = (service: UnifiedService): service is UnifiedService & { innovationLevel: string } => {
+return hasProperty(service, "innovationLevel") && typeof service.innovationLevel = == "string";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };

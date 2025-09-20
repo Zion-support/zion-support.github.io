@@ -8,6 +8,8 @@ category: stringico;n: React.ComponentType<{ className?: string }>,color: string
 description?: string;
 };interface ServicesOverviewProps {
 services: Service[ ];
+}
+}
 const ServicesOvervie;w: React.FC<ServicesOverviewProps>  = ({ services }) => {
 return (;
 <section className="py-20 bg-gradient-to-b from-zion-slate-dark/30 via-zion-slate-dark/20 to-zion-slate-dark/30" role="region" aria-labelledby="services-heading">
@@ -19,6 +21,7 @@ whileInView={{ opacity: 1;y: 0 }}
 transition={{ duration: 0.8 }}
 viewport={{ once: true }}
 >;
+<<<<<<< HEAD
 <div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10; border; border-zion-cyan/20 rounded-full">
 <Sparkles className="w-4 h-4 text-zion-cyan mr-2" />
 <span className="text-zion-cyan text-sm font-medium">Innovation First</span>
@@ -27,6 +30,16 @@ viewport={{ once: true }}
 Our <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">Services</span>
 </h2>
 <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
+=======
+<div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10; border; border-zion-cyan/20 rounded-full">;
+<Sparkles className="w-4 h-4 text-zion-cyan mr-2" />;
+<span className="text-zion-cyan text-sm font-medium">Innovation First</span>;
+</div>
+<h2 id="services-heading" className="text-4xl md: text-5xl l; g: text-6xl font-bold text-white mb-6">;
+Our <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">Services</span>;
+</h2>;
+<p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Comprehensive; technology; solutions designed; to; drive innovation; and; growth across; all; industries;
 </p>
 </motion.div>
@@ -49,16 +62,21 @@ y: -5transitio; n: { duratio;n: 0.3 }
 <div className={`relative w-20 h-20 bg-gradient-to-br ${service.color} rounded-2xl; flex; items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0 shadow-lg group-hove; r: shadow-xl group-hove;r: shadow-zion-cyan/30`}>,
 {React.createElement(service.icon{ className: "w-10 h-10 text-white""aria-hidden": "true" })}
 {/* Glow effect */}
+<<<<<<< HEAD
 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-30o0" />
 </div>
 <h3 className="relative text-2xl font-bold text-white mb-4 group-hove;r: text-zion-cyan transition-colors duration-30o0">
+=======
+<div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-30o0" />;
+</div>
+<h3 className="relative text-2xl font-bold text-white mb-4 group-hove;r: text-zion-cyan transition-colors duration-30o0">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {service.category}
 </h3>
 {service.description && (;
 <p className="relative text-zion-slate-light mb-6 leading-relaxed group-hover: text-zion-slate-light/90 transition-colors duration-30o0">,
 {service.description}
-</p>,
-)}
+</p>)}
 ;
 <ul className="relative space-y-3 mb-6">
 {service.items.map((itemitemIndex) => (;
@@ -70,11 +88,18 @@ whileInView={{ opacity: 1;x: 0 }}
 transition={{ duration: 0.5dela;y: itemIndex * 0.1 }}
 viewport={{ once: true }}
 >;
+<<<<<<< HEAD
 <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0 group-hover: scale-110 transition-transform duration-30o0" aria-hidden="true" />
 <span className="text-sm">{item}</span>
 </motion.li>,
 ))}
 </ul>
+=======
+<CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0 group-hover: scale-110 transition-transform duration-30o0" aria-hidden="true" />;
+<span className="text-sm">{item}</span>;
+</motion.li>))}
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <Link;
 to={`/services/${service.category.toLowerCase().replace(/\s+/g"-")}`}
 className="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover: from-zion-blue hove; r: to-zion-purple transition-all duration-30o0; transform; hover: scale-10o5 hover:shadow-lg hover:shadow-zion-cyan/30 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focu; s: ring-offset-2 focu;s: ring-offset-zion-slate-dark";
@@ -89,6 +114,10 @@ Explore {service.category}
 ))}
 </div>
 </div>
+<<<<<<< HEAD
 </section>
+=======
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 },export; default; ServicesOverview,<//section><///section>}

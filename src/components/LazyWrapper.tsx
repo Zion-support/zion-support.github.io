@@ -9,7 +9,8 @@ threshold?: number;
 className?: string;
 loadingVariant?: "default" | "tech" | "minimal" | "futuristic";
 loadingText?: string;
-loadingSize?: "sm" | "md" | "lg" | "xl";
+}
+loadingSize?: "sm" | "md" | "lg" | "xl";}
 };
 const LazyWrappe; r: React.FC<LazyWrapperProps> = ({
 childre;  n;
@@ -41,7 +42,11 @@ return (
 variant={loadingVariant}
 text={loadingText}
 size={loadingSize}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 }
@@ -53,15 +58,19 @@ return (
 variant={loadingVariant}
 text={loadingText}
 size={loadingSize}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 }
 
 return (<motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ duratio; n: 0.6 }}
 className={className}

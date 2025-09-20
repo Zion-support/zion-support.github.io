@@ -1,7 +1,6 @@
 export const SPECIALIZED_BUSINESS_SOLUTIONS = [
     // AI-Powered Sales & Revenue Optimization;
-    {
-        id: "ai-sales-revenue-optimization";
+    {id: "ai-sales-revenue-optimization";
         title: "AI Sales & Revenue Optimization Platform";
         description: "Intelligent platform that uses AI to optimize sales processes, predict customer behavior, and maximize revenue through data-driven insights and automation.",
         category: "Business Solutions";
@@ -48,10 +47,14 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
+<<<<<<< HEAD
         websiteUrl: "https://ziontechgroup.com/ai-sales-optimization"};
+=======
+        websiteUrl: "https://ziontechgroup.com/ai-sales-optimization",
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     // Digital Transformation Consulting;
-    {
-        id: "digital-transformation-consulting";
+    {id: "digital-transformation-consulting";
         title: "Digital Transformation Consulting Services";
         description: "Comprehensive digital transformation consulting that helps organizations modernize their operations, adopt new technologies, and achieve digital excellence.",
         category: "Business Solutions";
@@ -98,10 +101,14 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
+<<<<<<< HEAD
         websiteUrl: "https://ziontechgroup.com/digital-transformation"};
+=======
+        websiteUrl: "https://ziontechgroup.com/digital-transformation",
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     // Data Analytics & Business Intelligence;
-    {
-        id: "data-analytics-business-intelligence";
+    {id: "data-analytics-business-intelligence";
         title: "Data Analytics & Business Intelligence Platform";
         description: "Advanced analytics platform that transforms raw data into actionable business insights, enabling data-driven decision making across all organizational levels.",
         category: "Business Solutions";
@@ -148,10 +155,14 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
+<<<<<<< HEAD
         websiteUrl: "https://ziontechgroup.com/data-analytics"};
+=======
+        websiteUrl: "https://ziontechgroup.com/data-analytics",
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     // Process Automation & Workflow Optimization;
-    {
-        id: "process-automation-workflow-optimization";
+    {id: "process-automation-workflow-optimization";
         title: "Process Automation & Workflow Optimization Platform";
         description: "Intelligent automation platform that streamlines business processes, eliminates manual tasks, and optimizes workflows for maximum efficiency and productivity.",
         category: "Business Solutions";
@@ -198,10 +209,14 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
+<<<<<<< HEAD
         websiteUrl: "https://ziontechgroup.com/process-automation"};
+=======
+        websiteUrl: "https://ziontechgroup.com/process-automation",
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     // Customer Experience & Engagement Platform;
-    {
-        id: "customer-experience-engagement-platform";
+    {id: "customer-experience-engagement-platform";
         title: "Customer Experience & Engagement Platform";
         description: "Comprehensive platform for managing customer interactions, personalizing experiences, and building lasting customer relationships through data-driven insights.",
         category: "Business Solutions";
@@ -248,5 +263,10 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
+<<<<<<< HEAD
         websiteUrl: "https://ziontechgroup.com/customer-experience"}
+=======
+        websiteUrl: "https://ziontechgroup.com/customer-experience",
+    }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ];

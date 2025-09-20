@@ -5,8 +5,7 @@ import { Button } from '@/components/ui/Button';
 export const LanguageSelector = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [currentLanguage, setCurrentLanguage] = useState('EN');
-    const languages = [
-        { code: 'EN', name: 'English', flag: '🇺🇸' },
+    const languages = [{ code: 'EN', name: 'English', flag: '🇺🇸' },
         { code: 'ES', name: 'Español', flag: '🇪🇸' },
         { code: 'FR', name: 'Français', flag: '🇫🇷' },
         { code: 'DE', name: 'Deutsch', flag: '🇩🇪' },
@@ -15,8 +14,7 @@ export const LanguageSelector = () => {
         { code: 'RU', name: 'Русский', flag: '🇷🇺' },
         { code: 'ZH', name: '中文', flag: '🇨🇳' },
         { code: 'JA', name: '日本語', flag: '🇯🇵' },
-        { code: 'KO', name: '한국어', flag: '🇰🇷' },
-    ];
+        { code: 'KO', name: '한국어', flag: '🇰🇷' }];
     const handleLanguageChange = (languageCode) => {
         setCurrentLanguage(languageCode);
         setIsOpen(false);

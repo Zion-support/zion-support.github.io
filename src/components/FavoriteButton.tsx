@@ -2,8 +2,9 @@
 )}),
 ),"})";
 import React from 'react';
-import { Heart,  } from 'lucide-react'
+import { Heart } from "lucide-react";
 interface FavoriteButtonProps {
+<<<<<<< HEAD
 itemId: string;
 className?: string,
 export function FavoriteButton({ itemId className }: FavoriteButtonProps) {
@@ -24,6 +25,29 @@ onClick = {handleToggleFavorite}`;
 className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited'
 ? 'bg-red-500 hover:bg-red-600 text-white'';
 : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'`;
+=======
+  itemId: string;
+}
+  className?: string,}
+export function FavoriteButton({ itemId className }: FavoriteButtonProps) {
+            </button>
+          </TooltipTrigger>
+          {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
+        </Tooltip>
+      </TooltipProvider>
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+</>
+  )
+}
+      // Add to favorites`
+      // console.log(`Added ${itemType} ${itemId} to favorites`)}  }
+  return ()
+    <button
+onClick = {handleToggleFavorite}`
+      className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited'
+          ? 'bg-red-500 hover:bg-red-600 text-white''
+          : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'`
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 } ${className}`}
 aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
 >;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Routes, Route  } from "react-router-dom";
 export interface NextGenInnovativeService2025 {
 id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
@@ -8,6 +9,19 @@ contactInfo: {,
 phone: string; email: string; website: string};
 technology: string[], integrations: string[];,
 compliance: string[], roi: string; competitors: string[], launchDate: string; betaAccess: boolean;}
+=======
+import { Routes; Route } from "react-router-dom";
+export interface NextGenInnovativeService2025 {id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
+benefits: string[], useCases: string[];
+targetAudience: string[], tags: string[];
+estimatedDelivery: string; supportLevel: string; marketPrice: string;
+}
+contactInfo: {,}
+phone: string; email: string; website: string};
+technology: string[], integrations: string[];
+compliance: string[], roi: string; competitors: string[], launchDate: string; betaAccess: boolean;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] = [
 // Quantum AI Orchestration Platform;
@@ -17,7 +31,7 @@ title: "Quantum AI Orchestration Platform",
 description: "Revolutionary platform that combines quantum computing with AI to solve complex optimization problems in real-time; enabling unprecedented computational power for enterprise applications.",
 category: "Quantum AI & Computing",
 subcategory: "Quantum Orchestration",
-price: 2500;,
+price: 2500;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -65,11 +79,15 @@ compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA"],
 roi: "500% within 12 months",
 competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
 launchDate: "Q1 2025",
+<<<<<<< HEAD
 betaAccess: true;},
+=======
+betaAccess: true;
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Autonomous AI Business Operations Suite;
-{
-id: "autonomous-ai-business-operations-suite",
+{id: "autonomous-ai-business-operations-suite",
 title: "Autonomous AI Business Operations Suite",
 description: "Complete AI-powered business automation platform that runs entire business operations autonomously; from decision-making to execution; with human oversight capabilities.",
 category: "AI & Business Automation",
@@ -121,11 +139,15 @@ compliance: ["SOC 2", "GDPR", "ISO 27001"],
 roi: "400% within 8 months",
 competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
 launchDate: "Q2 2025",
+<<<<<<< HEAD
 betaAccess: true;},
+=======
+betaAccess: true;
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Neural Interface Development Platform;
-{
-id: "neural-interface-development-platform",
+{id: "neural-interface-development-platform",
 title: "Neural Interface Development Platform",
 description: "Cutting-edge platform for developing brain-computer interfaces and neural network applications; enabling direct communication between human brain and digital systems.",
 category: "Neural Technology",
@@ -177,11 +199,15 @@ compliance: ["FDA", "HIPAA", "ISO 13485", "CE Mark"],
 roi: "300% within 18 months",
 competitors: ["Neuralink", "Kernel", "CTRL-labs"],
 launchDate: "Q3 2025",
+<<<<<<< HEAD
 betaAccess: false;},
+=======
+betaAccess: false;
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Holographic Collaboration Workspace;
-{
-id: "holographic-collaboration-workspace",
+{id: "holographic-collaboration-workspace",
 title: "Holographic Collaboration Workspace",
 description: "Next-generation 3D holographic workspace that enables teams to collaborate in immersive virtual environments; revolutionizing remote work and creative collaboration.",
 category: "Immersive Technology",
@@ -233,11 +259,15 @@ compliance: ["GDPR", "SOC 2", "ISO 27001"],
 roi: "250% within 6 months",
 competitors: ["Microsoft Mesh", "Meta Horizon", "Spatial"],
 launchDate: "Q2 2025",
+<<<<<<< HEAD
 betaAccess: true;},
+=======
+betaAccess: true;
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // AI-Powered Cybersecurity Mesh;
-{
-id: "ai-powered-cybersecurity-mesh",
+{id: "ai-powered-cybersecurity-mesh",
 title: "AI-Powered Cybersecurity Mesh",
 description: "Advanced cybersecurity platform that creates a distributed security mesh using AI to protect digital assets across all environments; from edge to cloud.",
 category: "Cybersecurity",
@@ -289,11 +319,15 @@ compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
 roi: "350% within 12 months",
 competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks"],
 launchDate: "Q1 2025",
+<<<<<<< HEAD
 betaAccess: true;},
+=======
+betaAccess: true;
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 // Sustainable Tech Innovation Hub;
-{
-id: "sustainable-tech-innovation-hub",
+{id: "sustainable-tech-innovation-hub",
 title: "Sustainable Tech Innovation Hub",
 description: "Comprehensive platform for developing and deploying sustainable technology solutions; including green computing; renewable energy optimization; and environmental impact tracking.",
 category: "Sustainable Technology",
@@ -346,6 +380,7 @@ roi: "200% within 12 months",
 competitors: ["WattTime", "Carbon Trust", "Sustain.Life"],
 launchDate: "Q2 2025",
 betaAccess: true;
+<<<<<<< HEAD
 export interface ServiceContact {,
 phone: string; email: string; website: string; address: string}
 
@@ -354,18 +389,33 @@ id: number; name: string; category: string; subcategory: string; description: st
 benefits: string[], targetAudience: string[];,
 tags: string[], contactInfo: ServiceContact; marketPrice: string; technologyStack: string[];,
 compliance: string[], scalability: string[];,
+=======
+export interface ServiceContact {,}
+phone: string; email: string; website: string; address: string}
+
+export interface NextGenService {id: number; name: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[];
+benefits: string[], targetAudience: string[];
+tags: string[], contactInfo: ServiceContact; marketPrice: string; technologyStack: string[];
+compliance: string[], scalability: string[];
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 estimatedDelivery: string; supportLevel: string; innovationScore: number}
 
 // Next-Generation Innovative Services for 2025;
 export const nextGenInnovativeServices2025: NextGenService[] = [
+<<<<<<< HEAD
 {,
 id: 1;,
+=======
+{id: 1;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "Quantum AI Hybrid Computing Platform",
 category: "Quantum Computing",
 subcategory: "AI Integration",
 description: "Revolutionary platform combining quantum computing capabilities with advanced AI algorithms to solve complex problems impossible for classical computers",
 pricing: "Enterprise",
-price: 25000;,
+price: 25000;
 pricingModel: "monthly",
 features: [
 "Quantum-classical hybrid algorithms",
@@ -398,14 +448,20 @@ compliance: ["ISO 27001", "NIST", "Quantum Security Standards"],
 scalability: ["Quantum Cloud Access", "Distributed Computing", "Scalable Algorithms"],
 estimatedDelivery: "8-12 weeks",
 supportLevel: "enterprise",
+<<<<<<< HEAD
 innovationScore: 9.5;},
 {
 id: 2; name: "Metaverse Business Platform & Virtual Commerce",
+=======
+innovationScore: 9.5;
+},
+{id: 2; name: "Metaverse Business Platform & Virtual Commerce",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 category: "Metaverse & VR",
 subcategory: "Business Solutions",
 description: "Comprehensive metaverse platform enabling businesses to create; manage; and monetize virtual experiences and digital assets",
 pricing: "Premium",
-price: 12000;,
+price: 12000;
 pricingModel: "monthly",
 features: [
 "3D virtual environment creation",
@@ -438,14 +494,20 @@ compliance: ["GDPR", "COPPA", "Virtual Asset Regulations"],
 scalability: ["Cloud-based Rendering", "CDN Integration", "Multi-platform Support"],
 estimatedDelivery: "6-8 weeks",
 supportLevel: "premium",
+<<<<<<< HEAD
 innovationScore: 8.8;},
 {
 id: 3; name: "Autonomous Vehicle AI Platform & Fleet Management",
+=======
+innovationScore: 8.8;
+},
+{id: 3; name: "Autonomous Vehicle AI Platform & Fleet Management",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 category: "Autonomous Systems",
 subcategory: "Transportation",
 description: "Advanced AI-powered platform for autonomous vehicle operations; fleet management; and intelligent transportation systems",
 pricing: "Enterprise",
-price: 18000;,
+price: 18000;
 pricingModel: "monthly",
 features: [
 "AI-powered route optimization",
@@ -478,14 +540,20 @@ compliance: ["DOT Regulations", "Safety Standards", "Insurance Requirements"],
 scalability: ["Multi-fleet Support", "Geographic Expansion", "Vehicle Type Support"],
 estimatedDelivery: "10-14 weeks",
 supportLevel: "enterprise",
+<<<<<<< HEAD
 innovationScore: 9.2;},
 {
 id: 4; name: "AI-Powered Healthcare Diagnostic Platform",
+=======
+innovationScore: 9.2;
+},
+{id: 4; name: "AI-Powered Healthcare Diagnostic Platform",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 category: "Healthcare Technology",
 subcategory: "Medical AI",
 description: "Advanced AI platform for medical diagnostics; patient monitoring; and healthcare analytics with high accuracy",
 pricing: "Enterprise",
-price: 15000;,
+price: 15000;
 pricingModel: "monthly",
 features: [
 "Medical image analysis",
@@ -518,14 +586,20 @@ compliance: ["HIPAA", "FDA", "ISO 13485", "SOC2"],
 scalability: ["Multi-site Support", "Patient Volume Scaling", "Geographic Expansion"],
 estimatedDelivery: "8-12 weeks",
 supportLevel: "enterprise",
+<<<<<<< HEAD
 innovationScore: 9.0;},
 {
 id: 5; name: "AI-Powered Financial Trading & Risk Management",
+=======
+innovationScore: 9.0;
+},
+{id: 5; name: "AI-Powered Financial Trading & Risk Management",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 category: "Financial Technology",
 subcategory: "Trading AI",
 description: "Intelligent trading platform using advanced AI algorithms for market analysis; automated trading; and risk assessment",
 pricing: "Enterprise",
-price: 22000;,
+price: 22000;
 pricingModel: "monthly",
 features: [
 "AI-powered market analysis",
@@ -558,14 +632,20 @@ compliance: ["SEC", "FINRA", "Basel III", "SOX"],
 scalability: ["Multi-strategy Support", "Global Market Access", "High-frequency Trading"],
 estimatedDelivery: "10-14 weeks",
 supportLevel: "enterprise",
+<<<<<<< HEAD
 innovationScore: 9.3;},
 {
 id: 6; name: "Intelligent Document Processing & Automation",
+=======
+innovationScore: 9.3;
+},
+{id: 6; name: "Intelligent Document Processing & Automation",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 category: "Document AI",
 subcategory: "Process Automation",
 description: "Advanced AI platform that automatically processes; analyzes; and extracts information from any type of document",
 pricing: "Premium",
-price: 6500;,
+price: 6500;
 pricingModel: "monthly",
 features: [
 "Multi-format document support",
@@ -598,14 +678,20 @@ compliance: ["GDPR", "SOX", "Industry-specific Regulations"],
 scalability: ["Multi-tenant Architecture", "Document Volume Scaling", "Geographic Distribution"],
 estimatedDelivery: "4-6 weeks",
 supportLevel: "premium",
+<<<<<<< HEAD
 innovationScore: 8.5;},
 {
 id: 7; name: "AI-Powered Supply Chain Optimization Platform",
+=======
+innovationScore: 8.5;
+},
+{id: 7; name: "AI-Powered Supply Chain Optimization Platform",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 category: "Supply Chain AI",
 subcategory: "Logistics Optimization",
 description: "Intelligent supply chain platform that uses AI to predict demand; optimize inventory; and improve efficiency",
 pricing: "Premium",
-price: 9500;,
+price: 9500;
 pricingModel: "monthly",
 features: [
 "Demand forecasting AI",
@@ -638,14 +724,20 @@ compliance: ["ISO 28000", "C-TPAT", "Industry Standards"],
 scalability: ["Multi-location Support", "Supplier Network Scaling", "Geographic Expansion"],
 estimatedDelivery: "6-8 weeks",
 supportLevel: "premium",
+<<<<<<< HEAD
 innovationScore: 9.1;},
 {
 id: 8; name: "AI-Powered Cybersecurity Threat Detection & Response",
+=======
+innovationScore: 9.1;
+},
+{id: 8; name: "AI-Powered Cybersecurity Threat Detection & Response",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 category: "Cybersecurity AI",
 subcategory: "Threat Intelligence",
 description: "Advanced cybersecurity platform that uses AI to detect; analyze; and respond to security threats in real-time",
 pricing: "Enterprise",
-price: 12000;,
+price: 12000;
 pricingModel: "monthly",
 features: [
 "AI-powered threat detection",
@@ -678,14 +770,20 @@ compliance: ["SOC2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
 scalability: ["Multi-environment Support", "Threat Intelligence Sharing", "Global Threat Detection"],
 estimatedDelivery: "6-8 weeks",
 supportLevel: "enterprise",
+<<<<<<< HEAD
 innovationScore: 9.4;},
 {
 id: 9; name: "Brain-Computer Interface Development Platform",
+=======
+innovationScore: 9.4;
+},
+{id: 9; name: "Brain-Computer Interface Development Platform",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 category: "Neurotechnology",
 subcategory: "BCI Solutions",
 description: "Revolutionary brain-computer interface platform for medical applications; research; and human-computer interaction",
 pricing: "Enterprise",
-price: 35000;,
+price: 35000;
 pricingModel: "monthly",
 features: [
 "Neural signal processing",
@@ -718,14 +816,20 @@ compliance: ["FDA", "CE Mark", "ISO 13485", "Medical Device Regulations"],
 scalability: ["Multi-device Support", "Research Collaboration", "Global Research Network"],
 estimatedDelivery: "12-16 weeks",
 supportLevel: "enterprise",
+<<<<<<< HEAD
 innovationScore: 9.6;},
 {
 id: 10; name: "Space Technology & Satellite AI Platform",
+=======
+innovationScore: 9.6;
+},
+{id: 10; name: "Space Technology & Satellite AI Platform",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 category: "Space Technology",
 subcategory: "Satellite AI",
 description: "Advanced AI platform for satellite operations; space data analysis; and orbital management systems",
 pricing: "Enterprise",
-price: 28000;,
+price: 28000;
 pricingModel: "monthly",
 features: [
 "Satellite orbit optimization",
@@ -758,14 +862,20 @@ compliance: ["ITAR", "Space Regulations", "International Space Law", "Safety Sta
 scalability: ["Multi-satellite Support", "Global Coverage", "Constellation Management"],
 estimatedDelivery: "14-18 weeks",
 supportLevel: "enterprise",
+<<<<<<< HEAD
 innovationScore: 9.1;},
 {
 id: 11; name: "Quantum Internet & Secure Communications",
+=======
+innovationScore: 9.1;
+},
+{id: 11; name: "Quantum Internet & Secure Communications",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 category: "Quantum Technology",
 subcategory: "Quantum Communications",
 description: "Next-generation quantum internet infrastructure for ultra-secure; unhackable communications and data transfer",
 pricing: "Enterprise",
-price: 45000;,
+price: 45000;
 pricingModel: "monthly",
 features: [
 "Quantum key distribution",
@@ -798,14 +908,20 @@ compliance: ["NIST", "Quantum Security Standards", "Government Security", "Inter
 scalability: ["Global Network", "Multi-node Support", "Quantum Internet Expansion"],
 estimatedDelivery: "16-20 weeks",
 supportLevel: "enterprise",
+<<<<<<< HEAD
 innovationScore: 9.5;},
 {
 id: 12; name: "Synthetic Biology & Bioengineering Platform",
+=======
+innovationScore: 9.5;
+},
+{id: 12; name: "Synthetic Biology & Bioengineering Platform",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 category: "Biotechnology",
 subcategory: "Synthetic Biology",
 description: "Revolutionary platform for synthetic biology; genetic engineering; and bio-manufacturing applications",
 pricing: "Enterprise",
-price: 32000;,
+price: 32000;
 pricingModel: "monthly",
 features: [
 "DNA synthesis and editing",
@@ -838,7 +954,12 @@ compliance: ["FDA", "EPA", "Biosafety Regulations", "International Standards"],
 scalability: ["Multi-lab Support", "Research Collaboration", "Global Bio-network"],
 estimatedDelivery: "18-24 weeks",
 supportLevel: "enterprise",
+<<<<<<< HEAD
 innovationScore: 9.2;}
+=======
+innovationScore: 9.2;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ];
 
 export default nextGenInnovativeServices2025;}

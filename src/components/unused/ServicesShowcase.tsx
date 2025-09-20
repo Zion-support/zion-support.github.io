@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react;";
 import { motion } from "framer-motion, ";
@@ -10,15 +12,20 @@ import { CpuChipIcon;
 CloudIcon;
 ShieldCheckIcon;
 LightBulbIcon;
+<<<<<<< HEAD
 RocketLaunchIcon, ChartBarIcon  } from "@heroicons/react/24/outline, ";
+=======
+RocketLaunchIcon;
+ChartBarIcon } from "@heroicons/react/24/outline, ";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
-export function ServicesShowcase() {
-const services = [;
+export function ServicesShowcase() {const services = [;
 {;
-icon: CpuChipIcon; title: "AI & Machine Learning";,
+icon: CpuChipIcon; title: "AI & Machine Learning";
 description: "Advanced AI solutions for automation; decision-making; and predictive analytics",
 color: "from-zion-cyan to-zion-blue",
 href: "/ai-solutions"};
+<<<<<<< HEAD
 {
 icon: CloudIcon; title: "Cloud & DevOps";,
 description: "Scalable cloud infrastructure and automated deployment pipelines", color: "from-zion-purple to-zion-cyan",
@@ -37,6 +44,21 @@ description: "Custom SaaS platforms for specific business needs", color: "from-z
 href: "/micro-saas"};
 {
 icon: ChartBarIcon; title: "Business Intelligence";,
+=======
+{icon: CloudIcon; title: "Cloud & DevOps";
+description: "Scalable cloud infrastructure and automated deployment pipelines", color: "from-zion-purple to-zion-cyan",
+href: "/cloud-devops"};
+{icon: ShieldCheckIcon; title: "Cybersecurity";
+description: "Comprehensive security solutions for threat detection and prevention", color: "from-zion-purple to-zion-blue",
+href: "/cybersecurity"};
+{icon: LightBulbIcon; title: "Digital Transformation";
+description: "End-to-end digital strategy and implementation services", color: "from-zion-cyan to-zion-purple",
+href: "/digital-transformation"};
+{icon: RocketLaunchIcon; title: "Micro SaaS Solutions";
+description: "Custom SaaS platforms for specific business needs", color: "from-zion-blue to-zion-cyan",
+href: "/micro-saas"};
+{icon: ChartBarIcon; title: "Business Intelligence";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 description: "Data analytics and insights for informed decision-making",
 color: "from-zion-purple to-zion-blue",
 href: "/business-intelligence"}
@@ -49,8 +71,12 @@ staggerChildren: 0.1}
 }
 };
 const itemVariants = {;
+<<<<<<< HEAD
 hidden: { y: 20; opacity: 0 }, visible: {,
 y: 0; opacity: 1; transition: {,
+=======
+hidden: { y: 20; opacity: 0 }, visible: {y: 0; opacity: 1; transition: {,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 duration: 0.5}
 }
 };
@@ -96,8 +122,13 @@ className="group"
 <Link to={service.href} className="block">
 <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20">
 {/* Icon */}
+<<<<<<< HEAD
 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
 <service.icon className="w-8 h-8 text-white" />
+=======
+<div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
+<service.icon className="w-8 h-8 text-white" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Content */}
@@ -109,6 +140,7 @@ className="group"
 </p>
 
 {/* Arrow */}
+<<<<<<< HEAD
 <div className="mt-6 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">
 <span className="text-sm font-medium">Learn More</span>
 <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -118,6 +150,17 @@ className="group"
 </div>
 </Link>
 </motion.div>
+=======
+<div className="mt-6 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">;
+<span className="text-sm font-medium">Learn More</span>;
+<svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />;
+</svg>;
+</div>
+</div>
+</Link>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </motion.div>
 
@@ -134,6 +177,7 @@ to="/services";
 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30"
 >;
 View All Services;
+<<<<<<< HEAD
 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
 </svg>
@@ -141,5 +185,14 @@ View All Services;
 </motion.div>
 </div>
 </section>
+=======
+<svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />;
+</svg>;
+</Link>;
+</motion.div>;
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }<//section><///section>

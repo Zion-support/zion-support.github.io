@@ -29,10 +29,20 @@ reviews: number;
 location?: string;
 price?: string;
 type: "service" | "talent" | "company" | "article";
+<<<<<<< HEAD
 metadata: {,
 lastUpdated: string;,
 verified: boolean;,
 featured: boolean;};
+=======
+metadata: {
+lastUpdated: string;
+verified: boolean;
+featured: boolean;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 interface AISearchProps {
@@ -40,15 +50,26 @@ enabled?: boolean;
 placeholder?: string;
 onSearch?: (query: string; filters: SearchFilters) => void;
 onResultClick?: (result: SearchResult) => void;
-className?: string;
+}
+className?: string;}
 };
 interface SearchFilters {
 category: string[];
 priceRange: [number; number];
+<<<<<<< HEAD
 rating: number;,
 location: string[];,
 verified: boolean;,
 featured: boolean;};
+=======
+rating: number;
+location: string[];
+verified: boolean;
+featured: boolean;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function AISearch({;
 enabled = true;
 placeholder = "Search for AI services; talent; or companies...",
@@ -56,6 +77,7 @@ onSearch;
 onResultClick;
 className = ""
 }: AISearchProps) {
+<<<<<<< HEAD
 const [isOpen, setIsOpen] = useState(false);
 const [query, setQuery] = useState("");
 const [isSearching, setIsSearching] = useState(false);
@@ -73,6 +95,26 @@ featured: false;});
 const [results, setResults] = useState<SearchResult[]>([]);
 const [suggestions, setSuggestions] = useState<string[]>([]);
 const [_selectedResult, setSelectedResult] = useState<SearchResult | null>(null);
+=======
+const [isOpen; setIsOpen] = useState(false);
+const [query; setQuery] = useState("");
+const [isSearching; setIsSearching] = useState(false);
+const [showFilters; setShowFilters] = useState(false);
+const [isVoiceActive; setIsVoiceActive] = useState(false);
+const [searchHistory; setSearchHistory] = useState<string[]>([]);
+const [savedSearches; setSavedSearches] = useState<string[]>([]);
+const [filters; setFilters] = useState<SearchFilters>({
+category: [];
+priceRange: [0; 10000],
+rating: 0;
+location: [];
+verified: false;
+featured: false;
+});
+const [results; setResults] = useState<SearchResult[]>([]);
+const [suggestions; setSuggestions] = useState<string[]>([]);
+const [_selectedResult; setSelectedResult] = useState<SearchResult | null>(null);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 const searchRef = useRef<HTMLDivElement>(null);
 const inputRef = useRef<HTMLInputElement>(null);
@@ -120,6 +162,7 @@ setIsSearching(true);
 const mockResults: SearchResult[] = [
 {
 id: "1";
+<<<<<<< HEAD
 title: "AI-Powered Business Intelligence Platform";,
 description: "Advanced analytics and insights powered by machine learning algorithms";,
 category: "AI & Analytics";,
@@ -139,12 +182,35 @@ id: "2";
 title: "Senior AI Engineer - Remote";,
 description: "Experienced AI engineer specializing in deep learning and NLP";,
 category: "Talent";,
+=======
+title: "AI-Powered Business Intelligence Platform";
+description: "Advanced analytics and insights powered by machine learning algorithms";
+category: "AI & Analytics";
+tags: ["Business Intelligence", "Machine Learning", "Analytics", "Dashboard"],
+relevance: 0.95;
+rating: 4.8;
+reviews: 1247;
+price: "$2;500/month",
+type: "service";
+metadata: {
+lastUpdated: "2024-01-15";
+verified: true;
+featured: true;
+}
+};
+{
+id: "2";
+title: "Senior AI Engineer - Remote";
+description: "Experienced AI engineer specializing in deep learning and NLP";
+category: "Talent";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 tags: ["AI Engineer", "Deep Learning", "NLP", "Remote"],
 relevance: 0.92;
 rating: 4.9;
 reviews: 89;
 price: "$150/hour";
 type: "talent";
+<<<<<<< HEAD
 metadata: {,
 lastUpdated: "2024-01-20";,
 verified: true;,
@@ -165,6 +231,30 @@ metadata: {,
 lastUpdated: "2024-01-18";,
 verified: true;,
 featured: true;}
+=======
+metadata: {
+lastUpdated: "2024-01-20";
+verified: true;
+featured: false;
+}
+};
+{
+id: "3";
+title: "Quantum Computing Solutions Inc.";
+description: "Leading provider of quantum computing services and consulting";
+category: "Quantum Technology";
+tags: ["Quantum Computing", "Consulting", "Research", "Enterprise"],
+relevance: 0.88;
+rating: 4.7;
+reviews: 456;
+location: "San Francisco; CA",
+type: "company";
+metadata: {
+lastUpdated: "2024-01-18";
+verified: true;
+featured: true;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 ];
 // Simulate API call;
@@ -233,9 +323,14 @@ setSavedSearches(prev => [...prev; searchQuery]);
 const shareResults = useCallback(() => {;
 if (navigator.share) {;
 navigator.share({;
-title: "Search Results from Zion Tech Group";,
+title: "Search Results from Zion Tech Group";
 text: `Check out these results for "${query}"`;
+<<<<<<< HEAD
 url: window.location.href;});
+=======
+url: window.location.href;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 } else {
 // Fallback to copying to clipboard;
 navigator.clipboard.writeText(
@@ -325,7 +420,11 @@ size="sm";
 ) : (
 <Search className="w-4 h-4" />
 )}
+<<<<<<< HEAD
 </Button>
+=======
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Clear Button */}
@@ -358,6 +457,7 @@ exit={{ opacity: 0; y: -10; scale: 0.95 }}
 transition={{ duration: 0.2; ease: "easeOut" }}
 >;
 {/* Header */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">
 <div className="flex items-center gap-3">
 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
@@ -366,6 +466,16 @@ transition={{ duration: 0.2; ease: "easeOut" }}
 <div>
 <h3 className="text-white font-semibold">AI-Powered Search</h3>
 <p className="text-zinc-400 text-xs">Intelligent results and suggestions</p>
+=======
+<div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">;
+<div className="flex items-center gap-3">;
+<div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
+<Sparkles className="w-5 h-5 text-white" />;
+</div>
+<div>;
+<h3 className="text-white font-semibold">AI-Powered Search</h3>;
+<p className="text-zinc-400 text-xs">Intelligent results and suggestions</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -384,8 +494,13 @@ variant="ghost"
 onClick={shareResults}
 className="text-zinc-400 hover:text-white p-2"
 >;
+<<<<<<< HEAD
 <Share2 className="w-4 h-4" />
 </Button>
+=======
+<Share2 className="w-4 h-4" />;
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -411,12 +526,21 @@ setFilters(prev => ({ ...prev; category: selected }));
 }}
 className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none"
 >;
+<<<<<<< HEAD
 <option value="AI & Analytics">AI & Analytics</option>
 <option value="Cybersecurity">Cybersecurity</option>
 <option value="Cloud Solutions">Cloud Solutions</option>
 <option value="Quantum Technology">Quantum Technology</option>
 <option value="Talent">Talent</option>
 </select>
+=======
+<option value="AI & Analytics">AI & Analytics</option>;
+<option value="Cybersecurity">Cybersecurity</option>;
+<option value="Cloud Solutions">Cloud Solutions</option>;
+<option value="Quantum Technology">Quantum Technology</option>;
+<option value="Talent">Talent</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -426,11 +550,19 @@ value={filters.rating}
 onChange={(e) => setFilters(prev => ({ ...prev; rating: Number(e.target.value) }))}
 className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none"
 >;
+<<<<<<< HEAD
 <option value={0}>Any Rating</option>
 <option value={3}>3+ Stars</option>
 <option value={4}>4+ Stars</option>
 <option value={4.5}>4.5+ Stars</option>
 </select>
+=======
+<option value={0}>Any Rating</option>;
+<option value={3}>3+ Stars</option>;
+<option value={4}>4+ Stars</option>;
+<option value={4.5}>4.5+ Stars</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -441,7 +573,11 @@ type="checkbox"
 checked={filters.verified}
 onChange={(e) => setFilters(prev => ({ ...prev; verified: e.target.checked }))}
 className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -453,11 +589,19 @@ type="checkbox"
 checked={filters.featured}
 onChange={(e) => setFilters(prev => ({ ...prev; featured: e.target.checked }))}
 className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"
+<<<<<<< HEAD
 />
 </div>
 </div>
 </div>
 </motion.div>
+=======
+/>;
+</div>
+</div>
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 
@@ -534,9 +678,15 @@ onClick={() => handleResultClick(result)}
 </h5>
 <p className="text-zinc-400 text-sm line-clamp-2">
 {result.description}
+<<<<<<< HEAD
 </p>
 </div>
 <div className="flex items-center gap-2 ml-3">
+=======
+</p>;
+</div>
+<div className="flex items-center gap-2 ml-3">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {result.metadata.verified && (
 <Badge variant="outline" className="text-xs border-green-500/30 text-green-400">
 Verified;
@@ -555,17 +705,28 @@ Featured;
 <span className="flex items-center gap-1">
 <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
 {result.rating}
+<<<<<<< HEAD
 </span>
 <span>({result.reviews} reviews)</span>
 <span className="text-zinc-400">•</span>
 <span>{result.category}</span>
+=======
+</span>;
+<span>({result.reviews} reviews)</span>;
+<span className="text-zinc-400">•</span>;
+<span>{result.category}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {result.price && (
 <span className="text-zinc-300 font-medium">{result.price}</span>
 )}
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 </div>
@@ -578,7 +739,11 @@ Featured;
 <h4 className="text-zinc-300 font-medium mb-2">No results found</h4>
 <p className="text-zinc-500 text-sm">
 Try adjusting your search terms or filters;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </div>
@@ -604,12 +769,21 @@ className="border-zion-blue-light/30 text-zinc-300 hover:text-white"
 >;
 <Settings className="w-4 h-4 mr-2" />
 Advanced Filters;
+<<<<<<< HEAD
 </Button>
 </div>
 </div>
 </motion.div>
 )}
 </AnimatePresence>
+=======
+</Button>;
+</div>
+</div>
+</motion.div>;
+)}
+</AnimatePresence>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 }<//div><///div>

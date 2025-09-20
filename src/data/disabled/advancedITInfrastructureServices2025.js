@@ -1,7 +1,6 @@
 export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
     // Edge Computing & 5G Integration;
-    {
-        id: "intelligent-edge-computing-platform";
+    {id: "intelligent-edge-computing-platform";
         title: "Intelligent Edge Computing Platform";
         description: "Next-generation edge computing infrastructure that processes data at the source with AI acceleration, 5G integration, and real-time decision-making capabilities.",
         category: "Edge Computing";
@@ -54,8 +53,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
     };
-    {
-        id: "quantum-secure-cloud-infrastructure";
+    {id: "quantum-secure-cloud-infrastructure";
         title: "Quantum-Secure Cloud Infrastructure";
         description: "Revolutionary cloud infrastructure protected by quantum-resistant encryption and quantum key distribution for ultimate security against future quantum attacks.";
         category: "Cloud Security";
@@ -108,8 +106,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
     };
-    {
-        id: "autonomous-infrastructure-management";
+    {id: "autonomous-infrastructure-management";
         title: "Autonomous Infrastructure Management System";
         description: "Self-managing IT infrastructure powered by AI that automatically optimizes performance, predicts failures, and resolves issues without human intervention.",
         category: "Infrastructure Automation";
@@ -162,8 +159,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
     };
-    {
-        id: "immersive-collaboration-infrastructure";
+    {id: "immersive-collaboration-infrastructure";
         title: "Immersive Collaboration Infrastructure";
         description: "Advanced infrastructure supporting virtual and augmented reality collaboration with spatial computing, haptic feedback, and real-time 3D rendering capabilities.",
         category: "Collaboration Technology";
@@ -216,8 +212,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
     };
-    {
-        id: "green-computing-optimization-platform";
+    {id: "green-computing-optimization-platform";
         title: "Green Computing Optimization Platform";
         description: "Sustainable IT infrastructure solution that optimizes energy consumption, reduces carbon footprint, and maximizes renewable energy usage through AI-driven efficiency.",
         category: "Sustainable Computing";
@@ -270,8 +265,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
     };
-    {
-        id: "blockchain-infrastructure-as-a-service";
+    {id: "blockchain-infrastructure-as-a-service";
         title: "Enterprise Blockchain Infrastructure as a Service";
         description: "Complete blockchain infrastructure platform supporting multiple protocols, smart contracts, DeFi applications, and enterprise-grade security for Web3 transformation.",
         category: "Blockchain Infrastructure";
@@ -324,8 +318,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
     };
-    {
-        id: "hyper-converged-ai-infrastructure";
+    {id: "hyper-converged-ai-infrastructure";
         title: "Hyper-Converged AI Infrastructure Platform";
         description: "Integrated infrastructure combining compute, storage, networking, and AI acceleration in a single platform optimized for machine learning workloads and AI applications.",
         category: "AI Infrastructure";

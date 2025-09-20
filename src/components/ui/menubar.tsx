@@ -1,7 +1,7 @@
 import * as React from &quot;react&quot;
 import * as MenubarPrimitive from &quot;@radix-ui/react-menubar&quot;
-import { Check,, ChevronRight,, Circle,  } from 'lucide-react'
-import { cn,  } from &quot;@/lib/utils&quot;
+import { Check, ChevronRight, Circle } from "lucide-react";
+import {cn} from &quot;@/lib/utils&quot;
 const MenubarMenu = MenubarPrimitive.Menu,
 const MenubarGroup = MenubarPrimitive.Group,
 const MenubarPortal = MenubarPrimitive.Portal,
@@ -11,6 +11,7 @@ const Menubar = React.forwardRef<;
 React.ElementRef<typeof MenubarPrimitive.Root>
 React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Root>
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
 <MenubarPrimitive.Root,
 ref={ref}
 className={cn(;
@@ -19,6 +20,15 @@ className
 )}
 {...props}
 />
+=======
+  <MenubarPrimitive.Root ref={ref}
+    className={cn(
+      &quot;flex h-10 items-center space-x-1 rounded-md border bg-background p-1&quot;
+      className
+    )}
+    {...props}
+  />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ));
 Menubar.displayName = MenubarPrimitive.Root.displayName;
 const MenubarTrigger = React.forwardRef<;
@@ -58,6 +68,7 @@ const MenubarSubContent = React.forwardRef<;
 React.ElementRef<typeof MenubarPrimitive.SubContent>
 React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubContent>
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
 <MenubarPrimitive.SubContent,
 ref={ref}
 className={cn(;
@@ -66,12 +77,22 @@ className
 )}
 {...props}
 />
+=======
+  <MenubarPrimitive.SubContent ref={ref}
+    className={cn(
+      &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
+      className
+    )}
+    {...props}
+  />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))
 MenubarSubContent.displayName = MenubarPrimitive.SubContent.displayName,
 const MenubarContent = React.forwardRef<;
 React.ElementRef<typeof MenubarPrimitive.Content>
 React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Content>
 >(
+<<<<<<< HEAD
 (;
 { className align = &quot;start&quot;, alignOffset = -4 sideOffset = 8, ...props }
 ref;
@@ -82,6 +103,17 @@ ref={ref}
 align={align}
 alignOffset={alignOffset}
 sideOffset={sideOffset}
+=======
+  (
+    { className align = &quot;start&quot;, alignOffset = -4 sideOffset = 8, ...props }
+    ref
+  ) => (
+    <MenubarPrimitive.Portal>
+      <MenubarPrimitive.Content ref={ref}
+        align={align}
+        alignOffset={alignOffset}
+        sideOffset={sideOffset}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 className={cn(
 &quot;z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
 className
@@ -178,6 +210,7 @@ className={cn(&quot;-mx-1 my-1 h-px bg-muted&quot;, className)}
 />
 ))
 MenubarSeparator.displayName = MenubarPrimitive.Separator.displayName,
+<<<<<<< HEAD
 const MenubarShortcut: any = ({
 className
 ...props,
@@ -191,6 +224,19 @@ className
 {...props}
 />
 );
+=======
+const MenubarShortcut = ({className
+  ...props}: React.HTMLAttributes<HTMLSpanElement>) => {
+  return (
+    <span
+className={cn(
+        &quot;ml-auto text-xs tracking-widest text-muted-foreground&quot;
+        className
+      )}
+      {...props}
+    />;
+  );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 MenubarShortcut.displayname = &quot;MenubarShortcut&quot;
 export {

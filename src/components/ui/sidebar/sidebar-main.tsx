@@ -1,5 +1,6 @@
 import React from "react";
 
+<<<<<<< HEAD
 import * as React from "react"
 import type { CSSProperties } from "react";
 import { Sheet; SheetContent  } from "@/components/ui/sheet"
@@ -8,6 +9,16 @@ import { useSidebar } from "./sidebar-context";
 import type { SafeRef } from "../sidebar.types";
 
 export interface SidebarProps extends React.ComponentProps<"div"> {
+=======
+import * as React from "react";
+import type { CSSProperties } from "react";
+import { Sheet; SheetContent  } from "@/components/ui/sheet"
+import { cn } from "@/lib/utils"
+import { useSidebar } from "./sidebar-context"
+import type { SafeRef } from "../sidebar.types"
+;
+export interface SidebarProps extends React.ComponentProps<"div"> {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 side?: "left" | "right";
 variant?: "sidebar" | "floating" | "inset"
 collapsible?: "offcanvas" | "icon" | "none";
@@ -17,12 +28,10 @@ export const Sidebar = React.forwardRef<HTMLDivElement; SidebarProps>((props; re
 const { isMobile; state; openMobile; setOpenMobile } = useSidebar()
 
 if (props.collapsible === "none") {
-return (
-<div;
+return (<div;
 className={cn(
 "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
-props.className,
-)}
+props.className)}
 ref={ref}
 {...props}
 >;
@@ -38,6 +47,7 @@ return (
 data-sidebar="sidebar";
 data-mobile="true";
 className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden"
+<<<<<<< HEAD
 style={
 {
 "--sidebar-width": "18rem"} as CSSProperties}
@@ -46,6 +56,16 @@ side={props.side}
 <div className="flex h-full w-full flex-col">{props.children}</div>
 </SheetContent>
 </Sheet>
+=======
+style={{
+"--sidebar-width": "18rem"} as CSSProperties,
+}
+side={props.side}
+>;
+<div className="flex h-full w-full flex-col">{props.children}</div>
+</SheetContent>;
+</Sheet>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )
 }
 
@@ -101,8 +121,7 @@ React.ComponentProps<"button">
 >((props; ref) => {
 const { toggleSidebar } = useSidebar()
 
-return (
-<button;
+return (<button;
 ref={ref}
 data-sidebar="rail";
 aria-label="Toggle Sidebar";
@@ -115,8 +134,7 @@ className={cn(
 "group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after: left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar",
 "[[data-side=left][data-collapsible=offcanvas]_&]:-right-2",
 "[[data-side=right][data-collapsible=offcanvas]_&]:-left-2",
-props.className,
-)}
+props.className)}
 {...props}
 />
 )

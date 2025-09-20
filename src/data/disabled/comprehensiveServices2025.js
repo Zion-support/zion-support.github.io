@@ -1,7 +1,6 @@
 // Enhanced Micro SAAS Services for 2025;
 export const enhancedMicroSaasServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "TaskFlow Pro";
         category: "Productivity";
         pricing: "Freemium";
@@ -40,9 +39,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "15 minutes";
         integrations: ["Slack", "Microsoft Teams", "Google Workspace", "Zapier"],
         freeTier: true;
+<<<<<<< HEAD
         trialPeriod: "14 days"};
     {
         id: 2;
+=======
+        trialPeriod: "14 days",
+    };
+    {id: 2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "InvoiceGenius AI";
         category: "Finance";
         pricing: "Freemium";
@@ -81,9 +86,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "30 minutes";
         integrations: ["Stripe", "PayPal", "Bank APIs", "Accounting software"],
         freeTier: true;
+<<<<<<< HEAD
         trialPeriod: "30 days"};
     {
         id: 3;
+=======
+        trialPeriod: "30 days",
+    };
+    {id: 3;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "SocialSync Pro";
         category: "Marketing";
         pricing: "Freemium";
@@ -122,9 +133,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "45 minutes";
         integrations: ["Facebook", "Instagram", "Twitter", "LinkedIn", "TikTok"],
         freeTier: true;
+<<<<<<< HEAD
         trialPeriod: "7 days"};
     {
         id: 4;
+=======
+        trialPeriod: "7 days",
+    };
+    {id: 4;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "CustomerFlow CRM";
         category: "CRM";
         pricing: "Freemium";
@@ -163,9 +180,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "1 hour";
         integrations: ["Gmail", "Outlook", "Slack", "Zapier", "Stripe"],
         freeTier: true;
+<<<<<<< HEAD
         trialPeriod: "14 days"};
     {
         id: 5;
+=======
+        trialPeriod: "14 days",
+    };
+    {id: 5;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "DataViz Studio";
         category: "Analytics";
         pricing: "Freemium";
@@ -204,9 +227,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "2 hours";
         integrations: ["Google Analytics", "Salesforce", "HubSpot", "MySQL", "PostgreSQL"],
         freeTier: true;
+<<<<<<< HEAD
         trialPeriod: "21 days"};
     {
         id: 6;
+=======
+        trialPeriod: "21 days",
+    };
+    {id: 6;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "ScheduleMaster AI";
         category: "Scheduling";
         pricing: "Freemium";
@@ -247,8 +276,7 @@ export const enhancedMicroSaasServices2025 = [
         freeTier: true;
         trialPeriod: "14 days"};
     // NEW INNOVATIVE MICRO SAAS SERVICES;
-    {
-        id: 7;
+    {id: 7;
         name: "Quantum AI Fusion Platform";
         category: "Quantum Computing";
         pricing: "Enterprise";
@@ -287,9 +315,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "16-32 weeks";
         integrations: ["Quantum hardware", "Classical computing", "Cloud platforms", "Research tools"],
         freeTier: false;
+<<<<<<< HEAD
         trialPeriod: "30 days"};
     {
         id: 8;
+=======
+        trialPeriod: "30 days",
+    };
+    {id: 8;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Neuromorphic Computing Platform";
         category: "AI Architecture";
         pricing: "Enterprise";
@@ -328,9 +362,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "20-40 weeks";
         integrations: ["Neuromorphic chips", "AI frameworks", "IoT devices", "Robotics platforms"],
         freeTier: false;
+<<<<<<< HEAD
         trialPeriod: "60 days"};
     {
         id: 9;
+=======
+        trialPeriod: "60 days",
+    };
+    {id: 9;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Edge AI Orchestration Platform";
         category: "Edge Computing";
         pricing: "Professional";
@@ -369,9 +409,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "12-24 weeks";
         integrations: ["Edge devices", "Cloud platforms", "AI models", "IoT protocols"],
         freeTier: false;
+<<<<<<< HEAD
         trialPeriod: "45 days"};
     {
         id: 10;
+=======
+        trialPeriod: "45 days",
+    };
+    {id: 10;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Federated Learning Platform";
         category: "Privacy AI";
         pricing: "Professional";
@@ -410,9 +456,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "16-28 weeks";
         integrations: ["AI frameworks", "Data sources", "Cloud platforms", "Security tools"],
         freeTier: false;
+<<<<<<< HEAD
         trialPeriod: "60 days"};
     {
         id: 11;
+=======
+        trialPeriod: "60 days",
+    };
+    {id: 11;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI Ethics & Governance Platform";
         category: "AI Governance";
         pricing: "Professional";
@@ -451,9 +503,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "12-20 weeks";
         integrations: ["AI platforms", "Compliance tools", "Risk management", "Training systems"],
         freeTier: false;
+<<<<<<< HEAD
         trialPeriod: "45 days"};
     {
         id: 12;
+=======
+        trialPeriod: "45 days",
+    };
+    {id: 12;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI Marketplace Platform";
         category: "AI Ecosystem";
         pricing: "Professional";
@@ -492,9 +550,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "10-18 weeks";
         integrations: ["AI frameworks", "Cloud platforms", "Payment systems", "Collaboration tools"],
         freeTier: false;
+<<<<<<< HEAD
         trialPeriod: "30 days"};
     {
         id: 13;
+=======
+        trialPeriod: "30 days",
+    };
+    {id: 13;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "SmartInvoice AI";
         category: "Finance";
         pricing: "Professional";
@@ -533,9 +597,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "2-3 days";
         integrations: ["QuickBooks", "Xero", "Sage", "Stripe", "PayPal"],
         freeTier: false;
+<<<<<<< HEAD
         trialPeriod: "14 days"};
     {
         id: 14;
+=======
+        trialPeriod: "14 days",
+    };
+    {id: 14;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "ContentGenius Pro";
         category: "Marketing";
         pricing: "Professional";
@@ -574,9 +644,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "1 day";
         integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Buffer"],
         freeTier: false;
+<<<<<<< HEAD
         trialPeriod: "7 days"};
     {
         id: 15;
+=======
+        trialPeriod: "7 days",
+    };
+    {id: 15;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "LeadFlow CRM";
         category: "CRM";
         pricing: "Professional";
@@ -615,9 +691,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "3-5 days";
         integrations: ["Gmail", "Outlook", "Slack", "Zoom", "Stripe"],
         freeTier: true;
+<<<<<<< HEAD
         trialPeriod: "30 days"};
     {
         id: 16;
+=======
+        trialPeriod: "30 days",
+    };
+    {id: 16;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "DataViz Studio";
         category: "Analytics";
         pricing: "Professional";
@@ -656,9 +738,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "1 week";
         integrations: ["Salesforce", "HubSpot", "Google Analytics", "MySQL", "PostgreSQL"],
         freeTier: false;
+<<<<<<< HEAD
         trialPeriod: "14 days"};
     {
         id: 17;
+=======
+        trialPeriod: "14 days",
+    };
+    {id: 17;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "SmartScheduler AI";
         category: "Scheduling";
         pricing: "Freemium";
@@ -697,9 +785,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "2-3 days";
         integrations: ["Google Calendar", "Outlook", "Slack", "Zoom", "Teams"],
         freeTier: true;
+<<<<<<< HEAD
         trialPeriod: "30 days"};
     {
         id: 18;
+=======
+        trialPeriod: "30 days",
+    };
+    {id: 18;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "QuantumCode Studio";
         category: "Quantum Computing";
         pricing: "Enterprise";
@@ -738,9 +832,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "2-3 weeks";
         integrations: ["Python", "Jupyter", "Git", "Cloud platforms", "Research tools"],
         freeTier: false;
+<<<<<<< HEAD
         trialPeriod: "7 days"};
     {
         id: 19;
+=======
+        trialPeriod: "7 days",
+    };
+    {id: 19;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "EdgeCompute Pro";
         category: "Edge Computing";
         pricing: "Enterprise";
@@ -779,9 +879,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "2-4 weeks";
         integrations: ["AWS", "Azure", "GCP", "MQTT", "REST APIs"],
         freeTier: false;
+<<<<<<< HEAD
         trialPeriod: "14 days"};
     {
         id: 20;
+=======
+        trialPeriod: "14 days",
+    };
+    {id: 20;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "PrivacyGuard AI";
         category: "Privacy AI";
         pricing: "Professional";
@@ -820,9 +926,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "1-2 weeks";
         integrations: ["Salesforce", "HubSpot", "AWS", "Azure", "Database systems"],
         freeTier: false;
+<<<<<<< HEAD
         trialPeriod: "21 days"};
     {
         id: 21;
+=======
+        trialPeriod: "21 days",
+    };
+    {id: 21;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI Governance Suite";
         category: "AI Governance";
         pricing: "Enterprise";
@@ -861,9 +973,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "3-4 weeks";
         integrations: ["ML platforms", "Cloud services", "Monitoring tools", "Compliance systems"],
         freeTier: false;
+<<<<<<< HEAD
         trialPeriod: "30 days"};
     {
         id: 22;
+=======
+        trialPeriod: "30 days",
+    };
+    {id: 22;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "EcoSystem AI";
         category: "AI Ecosystem";
         pricing: "Professional";
@@ -902,9 +1020,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "2-3 weeks";
         integrations: ["All major AI platforms", "Cloud services", "Data sources", "Business tools"],
         freeTier: false;
+<<<<<<< HEAD
         trialPeriod: "21 days"};
     {
         id: 23;
+=======
+        trialPeriod: "21 days",
+    };
+    {id: 23;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Blockchain Analytics Pro";
         category: "Finance";
         pricing: "Enterprise";
@@ -943,9 +1067,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "3-4 weeks";
         integrations: ["Major blockchains", "Financial systems", "Regulatory databases", "Analytics tools"],
         freeTier: false;
+<<<<<<< HEAD
         trialPeriod: "14 days"};
     {
         id: 24;
+=======
+        trialPeriod: "14 days",
+    };
+    {id: 24;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "SmartContract AI";
         category: "AI Architecture";
         pricing: "Professional";
@@ -984,9 +1114,15 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "1-2 weeks";
         integrations: ["Ethereum", "Solana", "Polygon", "Development tools", "Testing frameworks"],
         freeTier: false;
+<<<<<<< HEAD
         trialPeriod: "21 days"};
     {
         id: 25;
+=======
+        trialPeriod: "21 days",
+    };
+    {id: 25;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Quantum Security Vault";
         category: "Quantum Computing";
         pricing: "Enterprise";
@@ -1029,8 +1165,7 @@ export const enhancedMicroSaasServices2025 = [
 ];
     // Enhanced IT Services for 2025;
 export const enhancedITServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Enterprise Network Infrastructure";
         category: "Infrastructure";
         description: "Complete network design, implementation, and management for large organizations with AI-powered optimization",
@@ -1068,9 +1203,15 @@ export const enhancedITServices2025 = [
         sla: "99.9% uptime";
         certifications: ["Cisco CCIE", "Juniper JNCIE", "AWS Advanced Networking"],
         deliveryTime: "8-12 weeks";
+<<<<<<< HEAD
         support: "24/7 enterprise support"};
     {
         id: 2;
+=======
+        support: "24/7 enterprise support",
+    };
+    {id: 2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Cloud Migration & Optimization";
         category: "Cloud Services";
         description: "End-to-end cloud migration services with AI-powered cost optimization and performance tuning";
@@ -1108,9 +1249,15 @@ export const enhancedITServices2025 = [
         sla: "99.95% availability";
         certifications: ["AWS Solutions Architect", "Azure Solutions Architect", "Google Cloud Professional"],
         deliveryTime: "12-16 weeks";
+<<<<<<< HEAD
         support: "24/7 cloud support"};
     {
         id: 3;
+=======
+        support: "24/7 cloud support",
+    };
+    {id: 3;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI-Powered Cybersecurity";
         category: "Security";
         description: "Next-generation cybersecurity with AI threat detection, automated response, and predictive security",
@@ -1148,9 +1295,15 @@ export const enhancedITServices2025 = [
         sla: "99.99% security";
         certifications: ["CISSP", "CEH", "OSCP", "GIAC"],
         deliveryTime: "6-10 weeks";
+<<<<<<< HEAD
         support: "24/7 security support"};
     {
         id: 4;
+=======
+        support: "24/7 security support",
+    };
+    {id: 4;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Data Center Modernization";
         category: "Infrastructure";
         description: "Complete data center modernization with AI-powered management and energy optimization";
@@ -1188,9 +1341,15 @@ export const enhancedITServices2025 = [
         sla: "99.99% uptime";
         certifications: ["Data Center Design", "Energy Management", "Infrastructure Architecture"],
         deliveryTime: "16-24 weeks";
+<<<<<<< HEAD
         support: "24/7 data center support"};
     {
         id: 5;
+=======
+        support: "24/7 data center support",
+    };
+    {id: 5;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "DevOps & AI Automation";
         category: "DevOps";
         description: "Complete DevOps transformation with AI-powered automation, CI/CD pipelines, and intelligent monitoring",
@@ -1228,9 +1387,15 @@ export const enhancedITServices2025 = [
         sla: "99.9% deployment success";
         certifications: ["AWS DevOps", "Azure DevOps", "Kubernetes", "Docker"],
         deliveryTime: "10-14 weeks";
+<<<<<<< HEAD
         support: "24/7 DevOps support"};
     {
         id: 6;
+=======
+        support: "24/7 DevOps support",
+    };
+    {id: 6;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "AI Business Intelligence Platform";
         category: "Analytics";
         description: "Comprehensive BI platform with AI-powered analytics, predictive modeling, and real-time insights",
@@ -1268,9 +1433,15 @@ export const enhancedITServices2025 = [
         sla: "99.9% data accuracy";
         certifications: ["Data Science", "Machine Learning", "Business Intelligence", "Analytics"],
         deliveryTime: "14-20 weeks";
+<<<<<<< HEAD
         support: "24/7 analytics support"};
     {
         id: 7;
+=======
+        support: "24/7 analytics support",
+    };
+    {id: 7;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "DevOps Automation Platform";
         category: "DevOps";
         description: "Comprehensive DevOps automation with CI/CD pipelines, infrastructure as code, and AI-powered optimization",
@@ -1306,9 +1477,15 @@ export const enhancedITServices2025 = [
         sla: "99.9% availability";
         certifications: ["AWS DevOps", "Azure DevOps", "Kubernetes CKA"],
         deliveryTime: "8-12 weeks";
+<<<<<<< HEAD
         support: "24/7 DevOps support"};
     {
         id: 8;
+=======
+        support: "24/7 DevOps support",
+    };
+    {id: 8;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Data Center Modernization";
         category: "Infrastructure";
         description: "Complete data center transformation with AI-powered optimization, energy efficiency, and hybrid cloud integration",
@@ -1344,9 +1521,15 @@ export const enhancedITServices2025 = [
         sla: "99.99% uptime";
         certifications: ["Data Center Design", "Energy Management", "Cloud Architecture"],
         deliveryTime: "16-24 weeks";
+<<<<<<< HEAD
         support: "24/7 infrastructure support"};
     {
         id: 9;
+=======
+        support: "24/7 infrastructure support",
+    };
+    {id: 9;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "IoT Infrastructure & Management";
         category: "IoT";
         description: "End-to-end IoT infrastructure design, implementation, and management with AI-powered analytics and security",
@@ -1382,9 +1565,15 @@ export const enhancedITServices2025 = [
         sla: "99.8% availability";
         certifications: ["IoT Architecture", "Edge Computing", "Security"],
         deliveryTime: "12-18 weeks";
+<<<<<<< HEAD
         support: "24/7 IoT support"};
     {
         id: 10;
+=======
+        support: "24/7 IoT support",
+    };
+    {id: 10;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Digital Transformation Consulting";
         category: "Consulting";
         description: "Strategic digital transformation consulting with technology roadmap, change management, and implementation support",
@@ -1420,9 +1609,15 @@ export const enhancedITServices2025 = [
         sla: "99.5% satisfaction";
         certifications: ["Digital Transformation", "Change Management", "Project Management"],
         deliveryTime: "20-32 weeks";
+<<<<<<< HEAD
         support: "Business hours consulting support"};
     {
         id: 11;
+=======
+        support: "Business hours consulting support",
+    };
+    {id: 11;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Legacy System Modernization";
         category: "Modernization";
         description: "Legacy system modernization with cloud migration, API development, and microservices architecture",
@@ -1458,9 +1653,15 @@ export const enhancedITServices2025 = [
         sla: "99.7% availability";
         certifications: ["Cloud Architecture", "API Development", "Microservices"],
         deliveryTime: "16-24 weeks";
+<<<<<<< HEAD
         support: "24/7 modernization support"};
     {
         id: 12;
+=======
+        support: "24/7 modernization support",
+    };
+    {id: 12;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         name: "Enterprise Software Development";
         category: "Software Development";
         description: "Custom enterprise software development with modern technologies, AI integration, and scalable architecture",
@@ -1500,8 +1701,7 @@ export const enhancedITServices2025 = [
 ];
     // Enhanced AI Services for 2025;
 export const enhancedAIServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "AI-Powered Business Intelligence";
         category: "Business Intelligence";
         description: "Advanced analytics and business intelligence powered by machine learning algorithms with real-time insights";
@@ -1541,8 +1741,7 @@ export const enhancedAIServices2025 = [
         aiScore: 95;
         useCases: ["Financial analysis", "Sales forecasting", "Customer behavior analysis", "Performance tracking"]
     },
-    {
-        id: 2;
+    {id: 2;
         name: "Natural Language Processing Solutions";
         category: "Language AI";
         description: "Advanced NLP solutions for text analysis, sentiment analysis, and language understanding with multilingual support",
@@ -1582,8 +1781,7 @@ export const enhancedAIServices2025 = [
         aiScore: 92;
         useCases: ["Customer support", "Content moderation", "Market research", "Document analysis"]
     },
-    {
-        id: 3;
+    {id: 3;
         name: "Computer Vision & Image Recognition";
         category: "Visual AI";
         description: "Advanced computer vision solutions for image and video analysis, object detection, and pattern recognition",
@@ -1623,8 +1821,7 @@ export const enhancedAIServices2025 = [
         aiScore: 94;
         useCases: ["Manufacturing QC", "Security systems", "Retail analytics", "Medical imaging"]
     },
-    {
-        id: 4;
+    {id: 4;
         name: "Predictive Analytics & Forecasting";
         category: "Predictive AI";
         description: "AI-powered predictive analytics for forecasting trends, risks, and opportunities with high accuracy",
@@ -1664,8 +1861,7 @@ export const enhancedAIServices2025 = [
         aiScore: 91;
         useCases: ["Supply chain optimization", "Financial risk management", "Sales forecasting", "Maintenance prediction"]
     },
-    {
-        id: 5;
+    {id: 5;
         name: "AI-Powered Process Automation";
         category: "Process Automation";
         description: "Intelligent automation solutions that learn and adapt to optimize business processes with RPA integration";
@@ -1705,8 +1901,7 @@ export const enhancedAIServices2025 = [
         aiScore: 89;
         useCases: ["Customer service", "Data entry", "Document processing", "Quality control"]
     },
-    {
-        id: 6;
+    {id: 6;
         name: "AI Chatbot & Virtual Assistants";
         category: "Conversational AI";
         description: "Intelligent chatbots and virtual assistants for customer service and business automation with natural conversations";
@@ -1746,8 +1941,7 @@ export const enhancedAIServices2025 = [
         aiScore: 88;
         useCases: ["Customer support", "Sales assistance", "Appointment booking", "Information retrieval"]
     },
-    {
-        id: 7;
+    {id: 7;
         name: "AI-Powered Predictive Maintenance";
         category: "Predictive Analytics";
         description: "Advanced predictive maintenance solutions using AI and IoT sensors to prevent equipment failures and optimize operations";
@@ -1787,8 +1981,7 @@ export const enhancedAIServices2025 = [
         aiScore: 94;
         useCases: ["Manufacturing equipment", "HVAC systems", "Medical devices", "Transportation vehicles"]
     },
-    {
-        id: 8;
+    {id: 8;
         name: "AI-Powered Supply Chain Optimization";
         category: "Supply Chain";
         description: "Intelligent supply chain optimization with demand forecasting, inventory management, and logistics optimization",
@@ -1828,8 +2021,7 @@ export const enhancedAIServices2025 = [
         aiScore: 92;
         useCases: ["Demand forecasting", "Inventory optimization", "Route planning", "Supplier selection"]
     },
-    {
-        id: 9;
+    {id: 9;
         name: "AI-Powered Customer Experience";
         category: "Customer Experience";
         description: "Comprehensive customer experience platform with AI-powered personalization, sentiment analysis, and journey optimization",
@@ -1869,8 +2061,7 @@ export const enhancedAIServices2025 = [
         aiScore: 91;
         useCases: ["Product recommendations", "Content personalization", "Customer support", "Marketing campaigns"]
     },
-    {
-        id: 10;
+    {id: 10;
         name: "AI-Powered Financial Risk Management";
         category: "Financial AI";
         description: "Advanced financial risk management platform with AI-powered risk assessment, fraud detection, and compliance monitoring",
@@ -1910,8 +2101,7 @@ export const enhancedAIServices2025 = [
         aiScore: 96;
         useCases: ["Credit risk assessment", "Fraud detection", "Portfolio optimization", "Regulatory compliance"]
     },
-    {
-        id: 11;
+    {id: 11;
         name: "AI-Powered Healthcare Analytics";
         category: "Healthcare AI";
         description: "Comprehensive healthcare analytics platform with AI-powered diagnosis support, patient monitoring, and predictive health",
@@ -1951,8 +2141,7 @@ export const enhancedAIServices2025 = [
         aiScore: 93;
         useCases: ["Medical imaging", "Diagnosis support", "Patient monitoring", "Drug discovery"]
     },
-    {
-        id: 12;
+    {id: 12;
         name: "AI-Powered Marketing Automation";
         category: "Marketing AI";
         description: "Intelligent marketing automation platform with AI-powered campaign optimization, audience targeting, and performance analytics",
@@ -1993,7 +2182,6 @@ export const enhancedAIServices2025 = [
         useCases: ["Campaign optimization", "Audience targeting", "Content personalization", "ROI optimization"]
     }
 ];
-export const allServices = {
-    microSaas: enhancedMicroSaasServices2025;
+export const allServices = {microSaas: enhancedMicroSaasServices2025;
     itServices: enhancedITServices2025;
     aiServices: enhancedAIServices2025};

@@ -2,12 +2,14 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react;";
 
-export function TestimonialsSection() {
-const testimonials = [;
+export function TestimonialsSection() {const testimonials = [;
 {;
+<<<<<<< HEAD
 name: "Sarah Johnson", role: "CTO";,
 company: "TechCorp Inc.", content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.";,
 rating: 5;,
@@ -21,6 +23,19 @@ avatar: "👨‍💻"};
 name: "Emily Rodriguez", role: "Operations Director";,
 company: "Global Solutions", content: "Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.",
 rating: 5;,
+=======
+name: "Sarah Johnson", role: "CTO";
+company: "TechCorp Inc.", content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.";
+rating: 5;
+avatar: "👩‍💼"};
+{name: "Michael Chen", role: "VP of Engineering";
+company: "InnovateLabs", content: "The cybersecurity implementation was seamless and comprehensive. We feel much more secure knowing our systems are protected by Zion Tech Group.";
+rating: 5;
+avatar: "👨‍💻"};
+{name: "Emily Rodriguez", role: "Operations Director";
+company: "Global Solutions", content: "Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.",
+rating: 5;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 avatar: "👩‍🔬"}
 ];
 const renderStars: any = (rating: number) => {;
@@ -40,7 +55,11 @@ What Our Clients Say;
 </h2>
 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
 Don"t just take our word for it - hear from the businesses we"ve helped transform;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -50,9 +69,15 @@ Don"t just take our word for it - hear from the businesses we"ve helped transfor
 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-2xl mr-4">
 {testimonial.avatar}
 </div>
+<<<<<<< HEAD
 <div>
 <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
 <p className="text-sm text-gray-600">{testimonial.role} at {testimonial.company}</p>
+=======
+<div>;
+<h4 className="font-semibold text-gray-900">{testimonial.name}</h4>;
+<p className="text-sm text-gray-600">{testimonial.role} at {testimonial.company}</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -62,11 +87,19 @@ Don"t just take our word for it - hear from the businesses we"ve helped transfor
 
 <p className="text-gray-700 leading-relaxed italic">
 "{testimonial.content}";
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
 </div>
+<<<<<<< HEAD
 </section>
+=======
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }<//section><///section>

@@ -2,16 +2,24 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import apiClient, { setAuthToken } from "./apiClient;";
 
 const API_URL = import.meta.env.VITE_API_URL || "";
 
+<<<<<<< HEAD
 export async function loginUser(email: string; password: string) {
 const res = await apiClient("/api/auth/login", {
 method: "POST", headers: {;
 "Content-Type": "application/json";
 };
+=======
+export async function loginUser(email: string; password: string) {const res = await apiClient("/api/auth/login", {
+method: "POST", headers: {
+"Content-Type": "application/json"},;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 credentials: "include", body: JSON.stringify({ email; password }),
 });
 const data = await res.json().catch(() => ({}));
@@ -26,10 +34,15 @@ return { res; data };
 }
 
 export async function registerUser(name: string; email: string; password: string) {
+<<<<<<< HEAD
 const res = await fetch(`${API_URL}/auth/register`, {
 method: "POST", headers: {;
 "Content-Type": "application/json";
 };
+=======
+const res = await fetch(`${API_URL}/auth/register`, {method: "POST", headers: {
+"Content-Type": "application/json"},;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 credentials: "include", body: JSON.stringify({ name; email; password }),
 });
 const data = await res.json().catch(() => ({}));

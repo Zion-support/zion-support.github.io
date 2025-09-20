@@ -1,7 +1,6 @@
 export const CUTTING_EDGE_SERVICES_2025 = [
     // 1. AI-Powered Quantum Financial Trading Platform;
-    {
-        id: "quantum-financial-ai-pro";
+    {id: "quantum-financial-ai-pro";
         title: "Quantum Financial AI Pro - Next-Gen Trading Intelligence";
         description: "Revolutionary AI-powered quantum computing platform for high-frequency trading, risk management, and portfolio optimization with real-time market analysis.",
         category: "AI & Quantum Computing";
@@ -62,8 +61,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         marketSize: "$12.5 billion by 2027";
         growthPotential: "High - 45% CAGR expected"};
     // 2. Neuromorphic Edge AI Platform;
-    {
-        id: "neuromorphic-edge-ai-elite";
+    {id: "neuromorphic-edge-ai-elite";
         title: "Neuromorphic Edge AI Elite - Brain-Inspired Computing";
         description: "Revolutionary neuromorphic computing platform that mimics human brain architecture for ultra-efficient AI processing at the edge with minimal power consumption.";
         category: "AI & Neuromorphic Computing";
@@ -124,8 +122,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         marketSize: "$8.9 billion by 2026";
         growthPotential: "Very High - 55% CAGR expected"};
     // 3. Federated Learning Privacy Platform;
-    {
-        id: "federated-learning-privacy-pro";
+    {id: "federated-learning-privacy-pro";
         title: "Federated Learning Privacy Pro - Collaborative AI Without Data Sharing";
         description: "Advanced federated learning platform that enables organizations to collaborate on AI model training without sharing sensitive data, ensuring privacy and compliance.",
         category: "AI & Privacy";
@@ -186,8 +183,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         marketSize: "$6.2 billion by 2026";
         growthPotential: "High - 40% CAGR expected"};
     // 4. AI Ethics & Governance Platform;
-    {
-        id: "ai-ethics-governance-elite";
+    {id: "ai-ethics-governance-elite";
         title: "AI Ethics & Governance Elite - Responsible AI Framework";
         description: "Comprehensive AI ethics and governance platform that ensures responsible AI development, deployment, and monitoring with automated compliance and bias detection.",
         category: "AI & Governance";
@@ -248,8 +244,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         marketSize: "$4.8 billion by 2026";
         growthPotential: "High - 35% CAGR expected"};
     // 5. Quantum-Safe Cybersecurity Suite;
-    {
-        id: "quantum-safe-cybersecurity-elite";
+    {id: "quantum-safe-cybersecurity-elite";
         title: "Quantum-Safe Cybersecurity Elite - Post-Quantum Security";
         description: "Future-proof cybersecurity solution that protects against quantum computing threats using post-quantum cryptography and AI-powered threat detection.";
         category: "Cybersecurity";
@@ -310,8 +305,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         marketSize: "$15.3 billion by 2027";
         growthPotential: "Very High - 50% CAGR expected"};
     // 6. Autonomous DevOps Platform;
-    {
-        id: "autonomous-devops-elite";
+    {id: "autonomous-devops-elite";
         title: "Autonomous DevOps Elite - Self-Healing Infrastructure";
         description: "Intelligent DevOps platform that autonomously manages, monitors, and heals infrastructure using AI and machine learning for continuous optimization.",
         category: "DevOps & Automation";
@@ -372,8 +366,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         marketSize: "$18.7 billion by 2026";
         growthPotential: "High - 42% CAGR expected"};
     // 7. Edge AI Orchestration Platform;
-    {
-        id: "edge-ai-orchestration-elite";
+    {id: "edge-ai-orchestration-elite";
         title: "Edge AI Orchestration Elite - Distributed Intelligence";
         description: "Intelligent platform for orchestrating AI workloads across distributed edge computing infrastructure with real-time optimization and resource management.";
         category: "Edge Computing";
@@ -434,8 +427,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         marketSize: "$11.2 billion by 2026";
         growthPotential: "Very High - 48% CAGR expected"};
     // 8. Blockchain AI Integration Platform;
-    {
-        id: "blockchain-ai-integration-elite";
+    {id: "blockchain-ai-integration-elite";
         title: "Blockchain AI Integration Elite - Decentralized Intelligence";
         description: "Revolutionary platform that combines blockchain technology with AI to create decentralized, transparent, and intelligent systems for various industries.",
         category: "Blockchain & AI";

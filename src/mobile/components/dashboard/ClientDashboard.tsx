@@ -1,9 +1,17 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { CardCardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronRight, Plus, UserCheck, FileTextBell } from 'lucide-react';
+=======
+import React from "react";;
+import { Card, CardContent } from "@/components/ui/card";,
+import { Button } from "@/components/ui/button";,
+import { Badge } from "@/components/ui/badge";
+import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function ClientDashboard() {
 return (
 <div className="space-y-6 px-4 pb-24">

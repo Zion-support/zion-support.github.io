@@ -17,14 +17,25 @@ tags: string[];
 estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
+<<<<<<< HEAD
 contactInfo: {,
 phone: string;,
 email: string;,
 website: string;};
+=======
+contactInfo: {
+phone: string;
+email: string;
+website: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
 technologyStack: string[];
+<<<<<<< HEAD
 complianceStandards: string[];,
 integrationCapabilities: string[];,
 roiMetrics: string[];,
@@ -41,6 +52,24 @@ subcategory: "Autonomous Support";
 price: 6800;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+complianceStandards: string[];
+integrationCapabilities: string[];
+roiMetrics: string[];
+competitiveAdvantages: string[];
+}
+
+export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
+// AI-Powered Autonomous Customer Service;
+{id: "ai-autonomous-customer-service-2025";
+title: "AI Autonomous Customer Service Platform";
+description: "Fully autonomous customer service platform that handles customer inquiries; resolves issues; and provides personalized support without human intervention.",
+category: "AI & Customer Service";
+subcategory: "Autonomous Support";
+price: 6800;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Natural language understanding";
 "Context-aware conversations",
@@ -78,6 +107,7 @@ targetAudience: [
 "Financial institutions";
 ],
 tags: ["AI", "Customer Service", "Chatbot", "Natural Language", "Automation"],
+<<<<<<< HEAD
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$6;800 - $20;000/month",
@@ -86,6 +116,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-autonomous-customer-service-2025";,
+=======
+estimatedDelivery: "6-8 weeks";
+supportLevel: "enterprise";
+marketPrice: "$6;800 - $20;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-autonomous-customer-service-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["GPT-5", "Claude 3.5", "Natural Language Processing", "Machine Learning", "API Integration"],
 complianceStandards: ["GDPR", "CCPA", "SOC2", "ISO 27001", "Data Privacy"],
 integrationCapabilities: ["CRM Systems", "Help Desk", "Knowledge Base", "Analytics Tools", "Communication Platforms"],
@@ -94,6 +134,7 @@ competitiveAdvantages: ["Fully autonomous", "Multi-language support", "Emotion d
 },
 
 // AI-Powered Predictive Maintenance;
+<<<<<<< HEAD
 {
 id: "ai-predictive-maintenance-2025";,
 title: "AI Predictive Maintenance Platform";,
@@ -103,6 +144,16 @@ subcategory: "Predictive Maintenance";
 price: 7200;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-predictive-maintenance-2025";
+title: "AI Predictive Maintenance Platform";
+description: "Intelligent predictive maintenance platform that uses AI to predict equipment failures; optimize maintenance schedules; and reduce downtime.",
+category: "AI & Industrial IoT";
+subcategory: "Predictive Maintenance";
+price: 7200;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Equipment failure prediction";
 "Maintenance optimization",
@@ -140,6 +191,7 @@ targetAudience: [
 "Maintenance teams";
 ],
 tags: ["AI", "Predictive Maintenance", "IoT", "Industrial", "Analytics"],
+<<<<<<< HEAD
 estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$7;200 - $22;000/month",
@@ -148,6 +200,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-predictive-maintenance-2025";,
+=======
+estimatedDelivery: "8-12 weeks";
+supportLevel: "enterprise";
+marketPrice: "$7;200 - $22;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-predictive-maintenance-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Machine Learning", "IoT Sensors", "Data Analytics", "Cloud Computing", "Edge Computing"],
 complianceStandards: ["ISO 27001", "SOC2", "Industry Standards", "Data Security"],
 integrationCapabilities: ["IoT Devices", "SCADA Systems", "ERP Systems", "CMMS", "Analytics Platforms"],
@@ -156,6 +218,7 @@ competitiveAdvantages: ["AI-powered prediction", "Real-time monitoring", "Indust
 },
 
 // AI-Powered Content Creation Studio;
+<<<<<<< HEAD
 {
 id: "ai-content-creation-studio-2025";,
 title: "AI Content Creation Studio";,
@@ -165,6 +228,16 @@ subcategory: "Multimedia Content";
 price: 4200;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-content-creation-studio-2025";
+title: "AI Content Creation Studio";
+description: "Comprehensive AI-powered content creation platform that generates high-quality text; images; videos; and multimedia content for marketing and communication.",
+category: "AI & Content Creation";
+subcategory: "Multimedia Content";
+price: 4200;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI text generation";
 "Image creation and editing",
@@ -202,6 +275,7 @@ targetAudience: [
 "Small businesses";
 ],
 tags: ["AI", "Content Creation", "Multimedia", "Marketing", "Automation"],
+<<<<<<< HEAD
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$4;200 - $15;000/month",
@@ -210,6 +284,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-content-creation-studio-2025";,
+=======
+estimatedDelivery: "4-6 weeks";
+supportLevel: "enterprise";
+marketPrice: "$4;200 - $15;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-content-creation-studio-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["GPT-5", "DALL-E 3", "Stable Diffusion", "Natural Language Processing", "Computer Vision"],
 complianceStandards: ["Copyright Compliance", "Content Guidelines", "Data Privacy", "Brand Safety"],
 integrationCapabilities: ["CMS Platforms", "Social Media", "Marketing Tools", "Analytics Platforms", "Design Tools"],
@@ -218,6 +302,7 @@ competitiveAdvantages: ["Multimedia AI", "Brand consistency", "SEO optimization"
 },
 
 // AI-Powered Financial Trading Platform;
+<<<<<<< HEAD
 {
 id: "ai-financial-trading-platform-2025";,
 title: "AI Financial Trading Platform";,
@@ -227,6 +312,16 @@ subcategory: "Trading & Investment";
 price: 15000;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-financial-trading-platform-2025";
+title: "AI Financial Trading Platform";
+description: "Advanced AI-powered financial trading platform that provides automated trading; risk management; and market analysis for institutional and retail investors.",
+category: "AI & Financial Services";
+subcategory: "Trading & Investment";
+price: 15000;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Algorithmic trading";
 "Risk management",
@@ -264,6 +359,7 @@ targetAudience: [
 "Financial advisors";
 ],
 tags: ["AI", "Financial Trading", "Algorithmic Trading", "Risk Management", "Investment"],
+<<<<<<< HEAD
 estimatedDelivery: "12-16 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$15;000 - $50;000/month",
@@ -272,6 +368,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-financial-trading-platform-2025";,
+=======
+estimatedDelivery: "12-16 weeks";
+supportLevel: "enterprise";
+marketPrice: "$15;000 - $50;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-financial-trading-platform-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Machine Learning", "Deep Learning", "Financial APIs", "Real-time Data", "Cloud Computing"],
 complianceStandards: ["SEC", "FINRA", "SOX", "GDPR", "Financial Regulations"],
 integrationCapabilities: ["Trading Platforms", "Market Data", "Risk Systems", "Portfolio Management", "Compliance Tools"],
@@ -280,6 +386,7 @@ competitiveAdvantages: ["AI-powered trading", "Risk management", "Compliance aut
 },
 
 // AI-Powered Healthcare Research Platform;
+<<<<<<< HEAD
 {
 id: "ai-healthcare-research-platform-2025";,
 title: "AI Healthcare Research Platform";,
@@ -289,6 +396,16 @@ subcategory: "Research & Development";
 price: 18000;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-healthcare-research-platform-2025";
+title: "AI Healthcare Research Platform";
+description: "Comprehensive AI platform for healthcare research; drug discovery; clinical trial optimization; and medical literature analysis.",
+category: "AI & Healthcare";
+subcategory: "Research & Development";
+price: 18000;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Drug discovery algorithms";
 "Clinical trial optimization",
@@ -326,6 +443,7 @@ targetAudience: [
 "Government agencies";
 ],
 tags: ["AI", "Healthcare", "Research", "Drug Discovery", "Clinical Trials"],
+<<<<<<< HEAD
 estimatedDelivery: "16-24 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$18;000 - $60;000/month",
@@ -334,6 +452,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-healthcare-research-platform-2025";,
+=======
+estimatedDelivery: "16-24 weeks";
+supportLevel: "enterprise";
+marketPrice: "$18;000 - $60;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-healthcare-research-platform-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Deep Learning", "Natural Language Processing", "Bioinformatics", "Cloud Computing", "Data Analytics"],
 complianceStandards: ["HIPAA", "FDA", "GCP", "ISO 27001", "Research Ethics"],
 integrationCapabilities: ["Research Databases", "Clinical Systems", "Laboratory Equipment", "Collaboration Tools", "Analytics Platforms"],
@@ -342,6 +470,7 @@ competitiveAdvantages: ["Healthcare expertise", "Research focus", "Compliance au
 },
 
 // AI-Powered Energy Optimization Platform;
+<<<<<<< HEAD
 {
 id: "ai-energy-optimization-platform-2025";,
 title: "AI Energy Optimization Platform";,
@@ -351,6 +480,16 @@ subcategory: "Energy Management";
 price: 8500;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-energy-optimization-platform-2025";
+title: "AI Energy Optimization Platform";
+description: "Intelligent energy optimization platform that uses AI to optimize energy consumption; reduce costs; and improve sustainability across various industries.",
+category: "AI & Energy";
+subcategory: "Energy Management";
+price: 8500;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Energy consumption optimization";
 "Demand forecasting",
@@ -388,6 +527,7 @@ targetAudience: [
 "Utility companies";
 ],
 tags: ["AI", "Energy", "Optimization", "Sustainability", "Smart Grid"],
+<<<<<<< HEAD
 estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$8;500 - $25;000/month",
@@ -396,6 +536,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-energy-optimization-platform-2025";,
+=======
+estimatedDelivery: "8-12 weeks";
+supportLevel: "enterprise";
+marketPrice: "$8;500 - $25;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-energy-optimization-platform-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Machine Learning", "IoT Sensors", "Energy Management", "Cloud Computing", "Data Analytics"],
 complianceStandards: ["Energy Regulations", "Environmental Standards", "ISO 50001", "Data Security"],
 integrationCapabilities: ["Energy Systems", "IoT Devices", "Building Management", "Grid Systems", "Analytics Platforms"],
@@ -404,6 +554,7 @@ competitiveAdvantages: ["Energy expertise", "AI optimization", "Sustainability f
 },
 
 // AI-Powered Supply Chain Risk Management;
+<<<<<<< HEAD
 {
 id: "ai-supply-chain-risk-management-2025";,
 title: "AI Supply Chain Risk Management Platform";,
@@ -413,6 +564,16 @@ subcategory: "Risk Management";
 price: 7800;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-supply-chain-risk-management-2025";
+title: "AI Supply Chain Risk Management Platform";
+description: "Intelligent supply chain risk management platform that identifies; assesses; and mitigates risks across global supply chains using AI and predictive analytics.",
+category: "AI & Supply Chain";
+subcategory: "Risk Management";
+price: 7800;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Risk identification and assessment";
 "Predictive risk modeling",
@@ -450,6 +611,7 @@ targetAudience: [
 "Logistics providers";
 ],
 tags: ["AI", "Supply Chain", "Risk Management", "Predictive Analytics", "Compliance"],
+<<<<<<< HEAD
 estimatedDelivery: "10-14 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$7;800 - $22;000/month",
@@ -458,6 +620,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-supply-chain-risk-management-2025";,
+=======
+estimatedDelivery: "10-14 weeks";
+supportLevel: "enterprise";
+marketPrice: "$7;800 - $22;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-supply-chain-risk-management-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Machine Learning", "Predictive Analytics", "Risk Modeling", "Data Analytics", "Cloud Computing"],
 complianceStandards: ["ISO 28000", "C-TPAT", "GDPR", "Industry Standards", "Risk Management"],
 integrationCapabilities: ["ERP Systems", "Supply Chain Platforms", "Risk Databases", "Analytics Tools", "Alert Systems"],
@@ -466,6 +638,7 @@ competitiveAdvantages: ["Risk expertise", "AI prediction", "Global coverage", "C
 },
 
 // AI-Powered Legal Research & Analysis;
+<<<<<<< HEAD
 {
 id: "ai-legal-research-analysis-2025";,
 title: "AI Legal Research & Analysis Platform";,
@@ -475,6 +648,16 @@ subcategory: "Research & Analysis";
 price: 5500;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-legal-research-analysis-2025";
+title: "AI Legal Research & Analysis Platform";
+description: "Advanced AI platform for legal research; case analysis; contract review; and legal document generation with comprehensive legal knowledge base.",
+category: "AI & Legal Tech";
+subcategory: "Research & Analysis";
+price: 5500;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Legal research automation";
 "Case law analysis",
@@ -512,6 +695,7 @@ targetAudience: [
 "Legal consultants";
 ],
 tags: ["AI", "Legal Tech", "Research", "Contract Review", "Compliance"],
+<<<<<<< HEAD
 estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$5;500 - $18;000/month",
@@ -520,6 +704,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-legal-research-analysis-2025";,
+=======
+estimatedDelivery: "8-12 weeks";
+supportLevel: "enterprise";
+marketPrice: "$5;500 - $18;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-legal-research-analysis-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Natural Language Processing", "Machine Learning", "Legal Databases", "Document AI", "Cloud Computing"],
 complianceStandards: ["Legal Standards", "Data Privacy", "Confidentiality", "Professional Ethics"],
 integrationCapabilities: ["Legal Databases", "Document Management", "Case Management", "Compliance Tools", "Analytics Platforms"],
@@ -528,6 +722,7 @@ competitiveAdvantages: ["Legal expertise", "AI research", "Comprehensive coverag
 },
 
 // AI-Powered Creative Design Studio;
+<<<<<<< HEAD
 {
 id: "ai-creative-design-studio-2025";,
 title: "AI Creative Design Studio";,
@@ -537,6 +732,16 @@ subcategory: "Design Automation";
 price: 3800;,
 currency: "$";,
 pricingModel: "monthly";,
+=======
+{id: "ai-creative-design-studio-2025";
+title: "AI Creative Design Studio";
+description: "Revolutionary AI-powered creative design platform that generates logos; graphics; websites; and creative content with human-like creativity and style.",
+category: "AI & Creative Design";
+subcategory: "Design Automation";
+price: 3800;
+currency: "$";
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Logo generation";
 "Graphic design creation",
@@ -574,6 +779,7 @@ targetAudience: [
 "Designers";
 ],
 tags: ["AI", "Creative Design", "Branding", "Automation", "Visual Content"],
+<<<<<<< HEAD
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;800 - $12;000/month",
@@ -582,6 +788,16 @@ phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-creative-design-studio-2025";,
+=======
+estimatedDelivery: "4-6 weeks";
+supportLevel: "enterprise";
+marketPrice: "$3;800 - $12;000/month",
+contactInfo: {
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-creative-design-studio-2025";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 technologyStack: ["Generative AI", "Computer Vision", "Design Algorithms", "Creative AI", "Cloud Computing"],
 complianceStandards: ["Copyright Compliance", "Design Standards", "Brand Guidelines", "Quality Assurance"],
 integrationCapabilities: ["Design Tools", "Brand Management", "Marketing Platforms", "E-commerce", "Social Media"],

@@ -20,12 +20,20 @@ lastChecked: Date;
 parentPage?: string;
 element?: HTMLElement;
 suggestedFix?: string;,
+<<<<<<< HEAD
 fixable: boolean;};
+=======
+fixable: boolean;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface BrokenLinkFixerProps {
 className?: string;
 autoCheck?: boolean;
 showDetails?: boolean;
-fixBrokenLinks?: boolean;
+}
+fixBrokenLinks?: boolean;}
 };
 export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({;
 className = "";
@@ -39,10 +47,18 @@ const [isChecking, setIsChecking] = useState(false);
 const [activeTab, setActiveTab] = useState<"overview" | "broken" | "healthy" | "actions">("overview");
 const [stats, setStats] = useState({
 total: 0;
+<<<<<<< HEAD
 healthy: 0;,
 broken: 0;,
 checking: 0;,
 unknown: 0;});
+=======
+healthy: 0;
+broken: 0;
+checking: 0;
+unknown: 0;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // Find all links on the page;
 const findAllLinks = useCallback(() => {;
 const linkElements = document.querySelectorAll("a[href]");
@@ -54,9 +70,15 @@ const link: LinkStatus = {
 url: href;
 status: "unknown";
 lastChecked: new Date();
+<<<<<<< HEAD
 parentPage: window.location.pathname;,
 element: element as HTMLElement;,
 fixable: false;,
+=======
+parentPage: window.location.pathname;
+element: element as HTMLElement;
+fixable: false;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 suggestedFix: ""};
 // Determine if link is fixable;
 if (href.startsWith("#")) {
@@ -136,11 +158,15 @@ return { ...link; status: "broken", error: "Connection timeout", lastChecked: ne
 return { ...link; status: "healthy", lastChecked: new Date() };
 }
 }
-} catch (error) {
-return {
+} catch (error) {return {
 ...link;
+<<<<<<< HEAD
 status: "broken";,
 error: error instanceof Error ? error.message : "Unknown error";,
+=======
+status: "broken";
+error: error instanceof Error ? error.message : "Unknown error";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 lastChecked: new Date() };
 }
 }, []);
@@ -154,10 +180,18 @@ setLinks(allLinks);
 // Update stats;
 setStats({
 total: allLinks.length;
+<<<<<<< HEAD
 healthy: 0;,
 broken: 0;,
 checking: 0;,
 unknown: allLinks.length;});
+=======
+healthy: 0;
+broken: 0;
+checking: 0;
+unknown: allLinks.length;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 // Check links in batches to avoid overwhelming the system;
 const batchSize = 5;
 for (let i = 0; i < allLinks.length; i += batchSize) {
@@ -220,7 +254,7 @@ placeholder.style.cssText = "padding: 2rem;
 margin: 1rem 0;,
 background: #f3f4f6;,
 border: 2px dashed #d1d5db;
-border-radius: 0.5rem;,
+border-radius: 0.5rem;
 color: #6b7280;
 ";
 
@@ -281,17 +315,31 @@ const getStatusColor: any = (status: string) => {
 switch (status) {;
 case "healthy": return "text-green-600 bg-green-100 dark:bg-green-900/30";
 case "broken": return "text-red-600 bg-red-100 dark: bg-red-900/30";
+<<<<<<< HEAD
 case "checking": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";,
 default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";}
+=======
+case "checking": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
+default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 // Get status icon;
 const getStatusIcon: any = (status: string) => {
 switch (status) {;
+<<<<<<< HEAD
 case "healthy": return <CheckCircleIcon className="w-4 h-4 text-green-600" />
 case "broken": return <ExclamationTriangleIcon className="w-4 h-4 text-red-600" />
 case "checking": return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin" />,
 default: return <InformationCircleIcon className="w-4 h-4 text-gray-600" />}
+=======
+case "healthy": return <CheckCircleIcon className="w-4 h-4 text-green-600" />;
+case "broken": return <ExclamationTriangleIcon className="w-4 h-4 text-red-600" />;
+case "checking": return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin" />;,
+default: return <InformationCircleIcon className="w-4 h-4 text-gray-600" />;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 return (
@@ -328,8 +376,13 @@ Link Health Checker;
 onClick={() => setIsOpen(false)}
 className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
 >;
+<<<<<<< HEAD
 <XMarkIcon className="w-5 h-5" />
 </button>
+=======
+<XMarkIcon className="w-5 h-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Tabs */}
@@ -359,7 +412,11 @@ activeTab === tab;
 <div className="text-2xl font-bold text-gray-900 dark:text-white">
 {stats.total}
 </div>
+<<<<<<< HEAD
 <div className="text-sm text-gray-600 dark:text-gray-400">
+=======
+<div className="text-sm text-gray-600 dark:text-gray-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Total Links;
 </div>
 </div>
@@ -368,7 +425,11 @@ Total Links;
 <div className="text-2xl font-bold text-green-600">
 {stats.healthy}
 </div>
+<<<<<<< HEAD
 <div className="text-sm text-green-600 dark:text-green-400">
+=======
+<div className="text-sm text-green-600 dark:text-green-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Healthy;
 </div>
 </div>
@@ -377,7 +438,11 @@ Healthy;
 <div className="text-2xl font-bold text-red-600">
 {stats.broken}
 </div>
+<<<<<<< HEAD
 <div className="text-sm text-red-600 dark:text-red-400">
+=======
+<div className="text-sm text-red-600 dark:text-red-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Broken;
 </div>
 </div>
@@ -386,7 +451,11 @@ Broken;
 <div className="text-2xl font-bold text-yellow-600">
 {stats.checking + stats.unknown}
 </div>
+<<<<<<< HEAD
 <div className="text-sm text-yellow-600 dark:text-yellow-400">
+=======
+<div className="text-sm text-yellow-600 dark:text-yellow-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Pending;
 </div>
 </div>
@@ -399,7 +468,11 @@ Pending;
 <div className="text-3xl font-bold text-blue-600">
 {Math.round((stats.healthy / stats.total) * 100)}%;
 </div>
+<<<<<<< HEAD
 <div className="text-sm text-blue-600 dark:text-blue-400">
+=======
+<div className="text-sm text-blue-600 dark:text-blue-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 Link Health Score;
 </div>
 </div>
@@ -413,7 +486,11 @@ disabled={isChecking}
 className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors"
 >;
 {isChecking ? "Checking..." : "Check All Links"}
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 
@@ -421,9 +498,15 @@ className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-wh
 {activeTab === "broken" && (
 <div className="space-y-4">
 {links.filter(link => link.status === "broken").length === 0 ? (
+<<<<<<< HEAD
 <div className="text-center text-gray-500 dark:text-gray-400">
 <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500" />
 <p>No broken links found!</p>
+=======
+<div className="text-center text-gray-500 dark:text-gray-400">;
+<CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500" />;
+<p>No broken links found!</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ) : (
 <div className="space-y-3">
@@ -475,9 +558,15 @@ Auto-fixable;
 {activeTab === "healthy" && (
 <div className="space-y-4">
 {links.filter(link => link.status === "healthy").length === 0 ? (
+<<<<<<< HEAD
 <div className="text-center text-gray-500 dark:text-gray-400">
 <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500" />
 <p>No healthy links found</p>
+=======
+<div className="text-center text-gray-500 dark:text-gray-400">;
+<InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500" />;
+<p>No healthy links found</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ) : (
 <div className="space-y-3">
@@ -501,7 +590,11 @@ Healthy;
 </span>
 <span className="text-xs text-gray-500 dark:text-gray-400">
 Last checked: {link.lastChecked.toLocaleTimeString()}
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -514,10 +607,17 @@ Last checked: {link.lastChecked.toLocaleTimeString()}
 
 {/* Actions Tab */}
 {activeTab === "actions" && (
+<<<<<<< HEAD
 <div className="space-y-4">
 <div className="text-center text-gray-500 dark:text-gray-400">
 <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-orange-500" />
 <p>Take action to fix broken links</p>
+=======
+<div className="space-y-4">;
+<div className="text-center text-gray-500 dark:text-gray-400">;
+<WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-orange-500" />;
+<p>Take action to fix broken links</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Auto-fix Button */}
@@ -549,10 +649,18 @@ timestamp: new Date().toISOString();
 stats;
 links: links.map(link => ({
 url: link.url;
+<<<<<<< HEAD
 status: link.status;,
 error: link.error;,
 lastChecked: link.lastChecked.toISOString();,
 fixable: link.fixable;}))
+=======
+status: link.status;
+error: link.error;
+lastChecked: link.lastChecked.toISOString();
+fixable: link.fixable;
+}))
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 const blob = new Blob([JSON.stringify(report; null; 2)], { type: "application/json" });
 const url = URL.createObjectURL(blob);
@@ -570,7 +678,11 @@ Export Report;
 </div>
 )}
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 
@@ -580,6 +692,7 @@ Export Report;
 outline: 3px solid #f97316 !important;
 outline-offset: 2px !important;
 background-color: rgba(249; 115; 22; 0.1) !important;,
+<<<<<<< HEAD
 transition: all 0.3s ease !important;}
 
 .link-target-placeholder {
@@ -591,6 +704,23 @@ animation: pulse 2s infinite;}
 }
 `}</style>
 </>
+=======
+transition: all 0.3s ease !important;
+}
+
+.link-target-placeholder {
+animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+0%, 100% { opacity: 1;
+}
+50% { opacity: 0.7;
+}
+}
+`}</style>;
+</>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 };
 

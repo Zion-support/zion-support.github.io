@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react";
 import React, { useState, useEffect } from "react";
@@ -121,9 +123,15 @@ isScrolled;
 <div className="container mx-auto px-4">
 <div className="flex items-center justify-between h-16 l;  g:h-20">
 {/* Logo */}
+<<<<<<< HEAD
 <Link to="/" className="flex items-center space-x-2 group">
 <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center group-hove; r:scale-110 transition-transform duration-300">
 <span className="text-white font-bold text-xl">Z</span>
+=======
+<Link to="/" className="flex items-center space-x-2 group">;
+<div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center group-hove; r:scale-110 transition-transform duration-300">;
+<span className="text-white font-bold text-xl">Z</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <span className={`text-xl l; g:text-2xl font-bold transition-colors duration-300 ${
 isScrolled ? "text-zion-slate-dark" : "text-whit; e";
@@ -172,17 +180,29 @@ onClick={() => setActiveDropdown(null)}
 <button className={`p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10";
+<<<<<<< HEAD
 : "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>
 <Search className="w-5 h-5" />
 </button>
+=======
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>;
+<Search className="w-5 h-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Notifications */}
 <button className={`p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10";
+<<<<<<< HEAD
 : "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>
 <Bell className="w-5 h-5" />
 </button>
+=======
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>;
+<Bell className="w-5 h-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Theme Toggle */}
 <ThemeToggle />
@@ -192,9 +212,15 @@ isScrolled;
 <button className={`flex items-center space-x-2 p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10";
+<<<<<<< HEAD
 : "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>
 <User className="w-5 h-5" />
 </button>
+=======
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>;
+<User className="w-5 h-5" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* User Dropdown */}
 <div className="absolute top-full right-0 mt-2 w-48 bg-white/95 backdrop-blur-md border border-gray-200/20 rounded-xl shadow-2xl py-2 opacity-0 translate-y-2 invisible group-hove; r:opacity-100 group-hove; r:translate-y-0 group-hove; r:visible transition-all duration-300">
@@ -206,7 +232,11 @@ Sign Up;
 </Link>
 <Link to="/dashboard" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
 Dashboard;
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -216,7 +246,11 @@ to="/contact";
 className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hove; r:shadow-lg hove; r:shadow-zion-cyan/25 transition-all duration-300 transform hove; r:scale-105"
 >;
 Get Started;
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Mobile Menu Button */}
@@ -228,7 +262,11 @@ isScrolled;
 : "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}
 >;
 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Mobile Navigation */}
@@ -247,9 +285,15 @@ isActive(item.href)
 <span>{item.name}</span>
 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
 activeDropdown === item.name ? "rotate-18; 0" : "";
+<<<<<<< HEAD
 }`} />
 </div>
 </button>
+=======
+}`} />;
+</div>
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {activeDropdown === item.name && (
 <div className="ml-4 mt-2 space-y-1">
@@ -278,12 +322,20 @@ className="block w-full text-center px-6 py-3 bg-gradient-to-r from-zion-cyan to
 onClick={() => setIsOpen(false)}
 >;
 Get Started;
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 )}
 </div>
+<<<<<<< HEAD
 </nav>
+=======
+</nav>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }<//nav><///nav>

@@ -16,6 +16,7 @@ interface AccessibilitySettings {
 highContrast: boolean;
 fontSize: number;
 reducedMotion: boolean;
+<<<<<<< HEAD
 screenReader: boolean;,
 keyboardNavigation: boolean;,
 focusIndicator: boolean;,
@@ -29,6 +30,23 @@ reducedMotion: false;
 screenReader: false;,
 keyboardNavigation: false;,
 focusIndicator: true;,
+=======
+screenReader: boolean;
+keyboardNavigation: boolean;
+focusIndicator: boolean;
+colorBlindness: "none" | "protanopia" | "deuteranopia" | "tritanopia";
+}
+}
+};
+const EnhancedAccessibility: React.FC = () => {const [isOpen; setIsOpen] = useState(false);
+const [settings; setSettings] = useState<AccessibilitySettings>({
+highContrast: false;
+fontSize: 16;
+reducedMotion: false;
+screenReader: false;
+keyboardNavigation: false;
+focusIndicator: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 colorBlindness: "none"});
 useEffect(() => {
 // Load saved settings from localStorage;
@@ -106,14 +124,19 @@ const newSize = Math.max(settings.fontSize - 2; 12);
 updateSetting("fontSize", newSize);
 };
 
-const resetSettings: any = () => {
-const defaultSettings: AccessibilitySettings = {;
+const resetSettings: any = () => {const defaultSettings: AccessibilitySettings = {;
 highContrast: false;
 fontSize: 16;
 reducedMotion: false;
+<<<<<<< HEAD
 screenReader: false;,
 keyboardNavigation: false;,
 focusIndicator: true;,
+=======
+screenReader: false;
+keyboardNavigation: false;
+focusIndicator: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 colorBlindness: "none"};
 setSettings(defaultSettings);
 applySettings(defaultSettings);
@@ -169,7 +192,11 @@ className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
 aria-label="Close accessibility panel";
 >;
 ×;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* High Contrast Toggle */}
@@ -195,7 +222,11 @@ settings.highContrast ? "translate-x-6" : "translate-x-1";
 </label>
 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
 Increases contrast for better visibility;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Font Size Control */}
@@ -215,15 +246,24 @@ aria-label="Decrease font size";
 <div;
 className="bg-purple-600 h-2 rounded-full transition-all duration-300"
 style={{ width: `${((settings.fontSize - 12) / 12) * 100}%` }}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 onClick={increaseFontSize}
 className="p-2 bg-gray-100 dark:bg-slate-700 rounded-md hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors"
 aria-label="Increase font size";
 >;
+<<<<<<< HEAD
 <ArrowUpIcon className="w-4 h-4" />
 </button>
+=======
+<ArrowUpIcon className="w-4 h-4" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -250,7 +290,11 @@ settings.reducedMotion ? "translate-x-6" : "translate-x-1";
 </label>
 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
 Reduces animations and motion effects;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Focus Indicator Toggle */}
@@ -276,7 +320,11 @@ settings.focusIndicator ? "translate-x-6" : "translate-x-1";
 </label>
 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
 Makes focus indicators more visible;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Color Blindness Support */}
@@ -289,11 +337,19 @@ value={settings.colorBlindness}
 onChange={(e) => updateSetting("colorBlindness", e.target.value)}
 className="w-full p-2 border border-gray-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-gray-900 dark:text-white text-sm"
 >;
+<<<<<<< HEAD
 <option value="none">None</option>
 <option value="protanopia">Protanopia (Red-Blind)</option>
 <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
 <option value="tritanopia">Tritanopia (Blue-Blind)</option>
 </select>
+=======
+<option value="none">None</option>;
+<option value="protanopia">Protanopia (Red-Blind)</option>;
+<option value="deuteranopia">Deuteranopia (Green-Blind)</option>;
+<option value="tritanopia">Tritanopia (Blue-Blind)</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Screen Reader Support */}
@@ -319,7 +375,11 @@ settings.screenReader ? "translate-x-6" : "translate-x-1";
 </label>
 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
 Announces page changes and important events;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Keyboard Navigation */}
@@ -345,7 +405,11 @@ settings.keyboardNavigation ? "translate-x-6" : "translate-x-1";
 </label>
 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
 Improves keyboard navigation experience;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Action Buttons */}
@@ -363,15 +427,24 @@ onClick={resetSettings}
 className="w-full px-4 py-2 text-sm bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
 >;
 Reset to Defaults;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Keyboard Shortcuts Help */}
 <div className="mt-4 pt-4 border-t border-gray-200 dark:border-slate-700">
 <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-2">
 Keyboard Shortcuts;
+<<<<<<< HEAD
 </h3>
 <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
+=======
+</h3>;
+<div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div>Tab: Navigate between elements</div>
 <div>Enter/Space: Activate buttons</div>
 <div>Arrow keys: Adjust sliders</div>
@@ -379,7 +452,11 @@ Keyboard Shortcuts;
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 

@@ -51,7 +51,12 @@ Allo,w: /,Allow: /services/;
     Allo,w: /contact/,Allow: /blog/;
     Allo,w: /careers/;
     # Crawl delay (optional);
+<<<<<<< HEAD
 Crawl-dela,y: 1`;}
+=======
+Crawl-dela,y: 1`;
+     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     /**;
      * Generate, JSON, sitemap for, JavaScript, applications;
      */;
@@ -59,7 +64,12 @@ Crawl-dela,y: 1`;}
         const { baseUrlurls } = this.config;
         const jsonSitemap = {
             baseUrlurls: urls.map(url => ({
+<<<<<<< HEAD
                 ...urlfullUr,l: `${baseUrl}${url.url}`lastmod: url.lastmod || new Date().toISOString();}));
+=======
+                ...urlfullUr,l: `${baseUrl}${url.url}`lastmod: url.lastmod || new Date().toISOString();
+     }));
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         };
         return JSON.stringify(jsonSitemap, null2);
     }
@@ -102,8 +112,8 @@ Crawl-dela,y: 1`;}
                         ${url.url === '/' ? 'Home' : url.url.split('/').pop()?.replace(/-/g' ').replace(/\b\w/gl => l.toUpperCase()) || url.url}
                     </a>;
                   `).join('')}
-            </div>;
-        </div>;
+            </div>
+        </div>
         <div class="sitemap-section">;
             <h2>Services</h2>;
             <div class="sitemap-links">;
@@ -114,8 +124,8 @@ Crawl-dela,y: 1`;}
                         ${url.url.split('/').pop()?.replace(/-/g' ').replace(/\b\w/gl => l.toUpperCase()) || url.url}
                     </a>;
                   `).join('')}
-            </div>;
-        </div>;
+            </div>
+        </div>
         <div class="sitemap-section">;
             <h2>Solutions</h2>;
             <div class="sitemap-links">;
@@ -126,8 +136,8 @@ Crawl-dela,y: 1`;}
                         ${url.url.split('/').pop()?.replace(/-/g' ').replace(/\b\w/gl => l.toUpperCase()) || url.url}
                     </a>;
                   `).join('')}
-            </div>;
-        </div>;
+            </div>
+        </div>
         <div class="sitemap-section">;
             <h2>Other Pages</h2>;
             <div class="sitemap-links">;
@@ -138,13 +148,13 @@ Crawl-dela,y: 1`;}
                         ${url.url.split('/').pop()?.replace(/-/g' ').replace(/\b\w/gl => l.toUpperCase()) || url.url}
                     </a>;
                   `).join('')}
-            </div>;
-        </div>;
+            </div>
+        </div>
         <div class="sitemap-section">;
             <p><strong>Total Pages: </strong> ${urls.length}</p>;
     <p><strong>Last Updated: </strong> ${new Date().toLocaleDateString()}</p>;
-    </div>;
-    </div>;
+    </div>
+    </div>
 </body>;
 </html>`;
         return html;
@@ -189,7 +199,7 @@ export, const, defaultSitemapConfig = {
     { url: '/partners'changefre,q: 'monthly'priorit,y: 0.6 };
     // Legal;
         { url: '/privacy'changefre,q: 'yearly'priorit,y: 0.3 }{ url: '/terms'changefre,q: 'yearly'priorit,y: 0.3 }
-  ,  ];
+  ];
 // Utility, function, to generate, all, sitemap files;
 export, const, generateAllSitemaps = async (config = defaultSitemapConfig) => {
     const generator = new SitemapGenerator(config);
@@ -203,7 +213,12 @@ export, const, generateAllSitemaps = async (config = defaultSitemapConfig) => {
         // Generate, JSON, sitemap;
         const jsonSitemap = generator.generateJSON();
         return {
+<<<<<<< HEAD
             xml: xmlSitemap,robots: robotsTxthtm,l: htmlSitemapjso,n: jsonSitemap;};
+=======
+            xml: xmlSitemap,robots: robotsTxthtm,l: htmlSitemapjso,n: jsonSitemap;
+     };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     }
     catch() {
         

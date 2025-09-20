@@ -5,7 +5,8 @@ import { LinkValidato; r; LinkValidationResul; t, LinkFix  } from "../utils/link
 interface LinkMonitorProps {
 onLinkIssue?: (issu;  e: LinkValidationResult) => void;
 autoFix?: boolean;
-showStatus?: boolean;
+}
+showStatus?: boolean;}
 };
 export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
 onLinkIssu;  e;
@@ -74,8 +75,7 @@ links.forEach(link => {
 });
 
 // Add to fixed links list;
-const fi; x: LinkFix = {
-originalUr; l;
+const fi; x: LinkFix = {originalUr; l;
 newUr; l;
 typ; e: "redirect";
 reaso; n: "Automatically fixed broken internal link"};
@@ -106,12 +106,16 @@ URL.revokeObjectURL(url);
 };
 
 // Export broken links report;
-const exportReport: any = () => {
-const report = {;
+const exportReport: any = () => {const report = {;
 scanTim;  e: lastScanTime?.toISOString();
 totalBrokenLink; s: brokenLinks.lengt; h;
 brokenLink; s: brokenLink; s;};
+<<<<<<< HEAD
 fixedLink; s: fixedLinks;};
+=======
+fixedLink; s: fixedLinks;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const blob = new Blob([JSO;  N.stringif; y(repo; r; t; nu; l; l; 2)], { typ; e: "application/json" });
 const url = URL.createObjectURL(blob);
 
@@ -160,9 +164,15 @@ Fix All ({brokenLinks.length})
 <span className="text-sm text-gray-600 dar;  k:text-gray-400">Scanning links...</span>
 <span className="text-sm font-medium text-gray-900 dar; k:text-white">
 {Math.round(scanProgress)}%;
+<<<<<<< HEAD
 </span>
 </div>
 <div className="w-full bg-gray-200 rounded-full h-2">
+=======
+</span>;
+</div>
+<div className="w-full bg-gray-200 rounded-full h-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div;
 className="bg-blue-600 h-2 rounded-full transition-all duration-300"
 style={{ widt; h: `${scanProgres; s}%` }}
@@ -179,14 +189,24 @@ style={{ widt; h: `${scanProgres; s}%` }}
 </div>
 <div className="text-sm text-red-600 dar; k:text-red-400">Broken Links</div>
 </div>
+<<<<<<< HEAD
 <div className="bg-green-50 dar; k:bg-green-900/20 p-4 rounded-lg">
 <div className="text-2xl font-bold text-green-600 dar; k:text-green-400">
+=======
+<div className="bg-green-50 dar; k:bg-green-900/20 p-4 rounded-lg">;
+<div className="text-2xl font-bold text-green-600 dar; k:text-green-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {fixedLinks.length}
 </div>
 <div className="text-sm text-green-600 dar; k:text-green-400">Fixed Links</div>
 </div>
+<<<<<<< HEAD
 <div className="bg-blue-50 dar; k:bg-blue-900/20 p-4 rounded-lg">
 <div className="text-2xl font-bold text-blue-600 dar; k:text-blue-400">
+=======
+<div className="bg-blue-50 dar; k:bg-blue-900/20 p-4 rounded-lg">;
+<div className="text-2xl font-bold text-blue-600 dar; k:text-blue-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {lastScanTime ? lastScanTime.toLocaleTimeString() : "Never"}
 </div>
 <div className="text-sm text-blue-600 dar; k:text-blue-400">Last Scan</div>
@@ -223,7 +243,11 @@ onClick={() => fixBrokenLink(link.ur;  l; link)}
 className="px-3 py-1 bg-green-600 text-white text-xs rounded hove; r:bg-green-700"
 >;
 Fix;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -244,7 +268,11 @@ className="flex items-center justify-between p-2 bg-green-50 dar;  k:bg-green-90
 <div className="text-sm text-green-800 dar; k:text-green-200">
 {fix.originalUrl} → {fix.newUrl}
 </div>
+<<<<<<< HEAD
 <div className="text-xs text-green-600 dar; k:text-green-400">
+=======
+<div className="text-xs text-green-600 dar; k:text-green-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {fix.reason}
 </div>
 </div>
@@ -267,13 +295,18 @@ onClick={exportReport}
 className="px-4 py-2 bg-gray-600 text-white rounded-lg hove; r:bg-gray-700"
 >;
 Export Report;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Recommendations */}
 {brokenLinks.length > 0 && (<div className="mt-6 p-4 bg-yellow-50 dar;  k:bg-yellow-900/20 rounded-lg">
 <h4 className="font-semibold text-yellow-800 dar; k:text-yellow-200 mb-2">
 Recommendations;
+<<<<<<< HEAD
 </h4>
 <ul className="text-sm text-yellow-700 dar; k: text-yellow-300 space-y-1">
 <li>• Fix broken internal links to improve user experience</li>
@@ -281,6 +314,15 @@ Recommendations;
 <li>• Regularly monitor external links for validity</li>
 <li>• Update sitemap to exclude broken URLs</li>
 </ul>
+=======
+</h4>;
+<ul className="text-sm text-yellow-700 dar; k: text-yellow-300 space-y-1">;
+<li>• Fix broken internal links to improve user experience</li>;
+<li>• Set up 301 redirects for moved pages</li>;
+<li>• Regularly monitor external links for validity</li>;
+<li>• Update sitemap to exclude broken URLs</li>;
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </div>

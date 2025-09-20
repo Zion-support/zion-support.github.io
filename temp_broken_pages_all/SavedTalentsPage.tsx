@@ -1,15 +1,15 @@
-import { useState,, useEffect,  } from "react",
-import { SEO,  } from "@/components/SEO",
-import { TalentCard,  } from "@/components/talent/TalentCard",
-import { useAuth,  } from "@/hooks/useAuth",
-import { supabase,  } from "@/integrations/supabase/client",
-import { TalentProfile,  } from "@/types/talent",
-import { toast,  } from "@/components/ui/use-toast";
-import { useRouter,, ,  } from 'next/router';
-import { logErrorToProduction,, ,  } from '@/utils/productionLogger';
-import { EmptyState,  } from "@/components/ui/empty-state";
-import { Heart,  } from 'lucide-react'
-import { logInfo,, logWarn,  } from '@/utils/productionLogger';
+import { useState, useEffect } from "react";,
+import { SEO } from "@/components/SEO";,
+import { TalentCard } from "@/components/talent/TalentCard";,
+import { useAuth } from "@/hooks/useAuth";,
+import { supabase } from "@/integrations/supabase/client";,
+import { TalentProfile } from "@/types/talent";,
+import { toast } from "@/components/ui/use-toast";
+import { useRouter } from "next/router";
+import { logErrorToProduction } from "@/utils/productionLogger";
+import { EmptyState } from "@/components/ui/empty-state";
+import { Heart } from "lucide-react";
+import { logInfo, logWarn } from "@/utils/productionLogger";
 export default function SavedTalentsPage() {
 return (
     <>
@@ -36,22 +36,28 @@ icon={<Heart className='h-8 w-8' />}
         ) : (
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
             {savedTalents.map(talent => (              <TalentCard
+<<<<<<< HEAD:temp_broken_pages_all/SavedTalentsPage.tsx
 key = {talent.id,}
                 talent = {talent,}
                 onViewProfile = {handleViewProfile,}
                 onRequestHire = {handleRequestHire,}
                 isAuthenticated = {!!user,}
+=======
+key = {talent.id}
+                talent = {talent}
+                onViewProfile = {handleViewProfile}
+                onRequestHire = {handleRequestHire}
+                isAuthenticated = {!!user}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/SavedTalentsPage.tsx
               />
             ))}
           </div>
         )}
       </div>
-    </>
+</>
   )
 }, [user router])
-}const {
-  data error,
-}= await supabase .from ("saved talents") user id,
+}const {data error}= await supabase .from ("saved talents") user id,
 full name,
 professional title,
 profile picture url,
@@ -79,9 +85,7 @@ is verified) `)
 }= await supabase .from ('saved talents') .insert ([ {
   user id: user.id talent id: talentId;
 }])
-if (error) {
-  throw error,
-}data: talentData error: talentError '
+if (error) {throw error}data: talentData error: talentError '
 }= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single ()
 return,
 }catch (error) {
@@ -90,17 +94,7 @@ return,
 })
 toast ({
 };'"
-return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace" /> <div className="container mx-auto px-4 py-8" > <h1 className="text-3xl font-bold mb-4" >Saved Talents</h1> <p className="text-muted-foreground" > Here are the talents you've saved for future reference. </p>) : savedTalents.length === 0 ? (<div className="py-8" > <EmptyState <TalentCard key= {
-  talent.id,
-}talent= {
-  talent,
-}onViewProfile= {
-  handleViewProfile,
-}onRequestHire= {
-  handleRequestHire,
-}isAuthenticated= {
-  !!user,
-}/>) )
+return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace" /> <div className="container mx-auto px-4 py-8" > <h1 className="text-3xl font-bold mb-4" >Saved Talents</h1> <p className="text-muted-foreground" > Here are the talents you've saved for future reference. </p>) : savedTalents.length === 0 ? (<div className="py-8" > <EmptyState <TalentCard key= {talent.id}talent= {talent}onViewProfile= {handleViewProfile}onRequestHire= {handleRequestHire}isAuthenticated= {!!user}/>) )
 }</div>)
 }</div> </>)
 }'"}

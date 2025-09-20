@@ -1,14 +1,17 @@
 import { useState, useEffect, useCallback } from 'react, ';
-export const useAccessibility = () => {
-    const [preferences, setPreferences] = useState({
+export const useAccessibility = () => {const [preferences, setPreferences] = useState({
         highContrast: false;
         largeText: false;
         reducedMotion: false;
         focusIndicator: true;
         screenReader: false;
         keyboardNavigation: true});
+<<<<<<< HEAD
     const [settings, setSettings] = useState({
         fontSize: 'medium';
+=======
+    const [settings, setSettings] = useState({fontSize: 'medium';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         colorScheme: 'default';
         motionPreference: 'no-preference';
         focusStyle: 'default'});

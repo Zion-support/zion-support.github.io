@@ -14,15 +14,24 @@ export function useAuthOperations(setUser, setIsLoading) {
         try {
             // Clean up any stale auth state before login;
             cleanupAuthState();
+<<<<<<< HEAD
             const { data, error } = await supabase.auth.signInWithPassword({
                 email,
+=======
+            const { data, error } = await supabase.auth.signInWithPassword({email,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
                 password});
             
             if (error) {
                 toast({
                     variant: "destructive";
                     title: "Oh no! Something went wrong.";
+<<<<<<< HEAD
                     description: error.message;});
+=======
+                    description: error.message;
+                });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
                 return { data: null, error: error.message };
      }
             toast({
@@ -34,7 +43,12 @@ export function useAuthOperations(setUser, setIsLoading) {
             toast({
                 variant: "destructive";
                 title: "Oh no! Something went wrong.";
+<<<<<<< HEAD
                 description: "Failed to sign in. Please check your credentials.";});
+=======
+                description: "Failed to sign in. Please check your credentials.";
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             return { data: null, error: "Failed to sign in." };
      }
         finally {
@@ -49,7 +63,14 @@ export function useAuthOperations(setUser, setIsLoading) {
                 password,
                 options: {
                     data: {
+<<<<<<< HEAD
                         display_name: display_name;}}});
+=======
+                        display_name: display_name;
+                    },
+                },
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             
             if (error) {
                 showApiError(error, "Error during signup");
@@ -81,13 +102,23 @@ export function useAuthOperations(setUser, setIsLoading) {
                 toast({
                     variant: "destructive";
                     title: "Oh no! Something went wrong.";
+<<<<<<< HEAD
                     description: error.message;});
+=======
+                    description: error.message;
+                });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             }
             else {
                 setUser(null); // Clear the user state upon successful logout;
                 toast({
                     title: "Logout successful!";
+<<<<<<< HEAD
                     description: "You have been successfully logged out.";});
+=======
+                    description: "You have been successfully logged out.";
+                });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             }
         }
         catch (error) {
@@ -95,7 +126,12 @@ export function useAuthOperations(setUser, setIsLoading) {
             toast({
                 variant: "destructive";
                 title: "Logout failed";
+<<<<<<< HEAD
                 description: "There was an issue logging you out. Please try again.";});
+=======
+                description: "There was an issue logging you out. Please try again.";
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         }
         finally {
             setIsLoading(false);
@@ -111,7 +147,12 @@ export function useAuthOperations(setUser, setIsLoading) {
                 toast({
                     variant: "destructive";
                     title: "Oh no! Something went wrong.";
+<<<<<<< HEAD
                     description: error.message;});
+=======
+                    description: error.message;
+                });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
                 return { data: null, error: error.message };
      }
             toast({
@@ -124,7 +165,12 @@ export function useAuthOperations(setUser, setIsLoading) {
             toast({
                 variant: "destructive";
                 title: "Oh no! Something went wrong.";
+<<<<<<< HEAD
                 description: "Failed to send reset password email. Please try again.";});
+=======
+                description: "Failed to send reset password email. Please try again.";
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             return { data: null, error: "Failed to send reset password email." };
      }
         finally {
@@ -145,13 +191,23 @@ export function useAuthOperations(setUser, setIsLoading) {
                 profile_complete: profileData.profileComplete;
                 bio: profileData.bio;
                 avatar_url: profileData.avatarUrl;
+<<<<<<< HEAD
                 headline: profileData.headline;})
+=======
+                headline: profileData.headline;
+            })
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
                 .eq("id", profileData.id);
             if (error) {
                 toast({
                     variant: "destructive";
                     title: "Failed to update profile";
+<<<<<<< HEAD
                     description: error.message;});
+=======
+                    description: error.message;
+                });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
                 return { error: error.message };
      }
             // Optimistically update the local user state;
@@ -163,7 +219,12 @@ export function useAuthOperations(setUser, setIsLoading) {
             });
             toast({
                 title: "Profile updated!";
+<<<<<<< HEAD
                 description: "Your profile has been successfully updated.";});
+=======
+                description: "Your profile has been successfully updated.";
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             return { error: null };
      }
         catch (error) {
@@ -171,7 +232,12 @@ export function useAuthOperations(setUser, setIsLoading) {
             toast({
                 variant: "destructive";
                 title: "Profile update failed";
+<<<<<<< HEAD
                 description: "There was an issue updating your profile. Please try again.";});
+=======
+                description: "There was an issue updating your profile. Please try again.";
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             return { error: "Failed to update profile." };
      }
         finally {
@@ -182,12 +248,22 @@ export function useAuthOperations(setUser, setIsLoading) {
         setIsLoading(true);
         try {
             const { data, error } = await supabase.auth.signInWithOAuth({
+<<<<<<< HEAD
                 provider: "google";});
+=======
+                provider: "google";
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             if (error) {
                 toast({
                     variant: "destructive";
                     title: "Oh no! Something went wrong.";
+<<<<<<< HEAD
                     description: error.message;});
+=======
+                    description: error.message;
+                });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             }
         }
         finally {
@@ -198,12 +274,22 @@ export function useAuthOperations(setUser, setIsLoading) {
         setIsLoading(true);
         try {
             const { data, error } = await supabase.auth.signInWithOAuth({
+<<<<<<< HEAD
                 provider: "facebook";});
+=======
+                provider: "facebook";
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             if (error) {
                 toast({
                     variant: "destructive";
                     title: "Oh no! Something went wrong.";
+<<<<<<< HEAD
                     description: error.message;});
+=======
+                    description: error.message;
+                });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             }
         }
         finally {
@@ -214,12 +300,22 @@ export function useAuthOperations(setUser, setIsLoading) {
         setIsLoading(true);
         try {
             const { data, error } = await supabase.auth.signInWithOAuth({
+<<<<<<< HEAD
                 provider: "twitter";});
+=======
+                provider: "twitter";
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             if (error) {
                 toast({
                     variant: "destructive";
                     title: "Oh no! Something went wrong.";
+<<<<<<< HEAD
                     description: error.message;});
+=======
+                    description: error.message;
+                });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             }
         }
         finally {
@@ -240,8 +336,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                 params: [address, address]
             });
             // Fix: Create a proper UserProfile object;
-            setUser({
-                id: address;
+            setUser({id: address;
                 displayName: address;
                 profileComplete: true;
                 email: '', // Add required fields;
@@ -250,8 +345,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                 updatedAt: new Date().toISOString()});
     toast({ title: 'Wallet connected', description: address });
      }
-        catch (error) {
-            toast({
+        catch (error) {toast({
                 variant: 'destructive';
                 title: 'Web3 login failed';
                 description: error?.message || 'Unable to connect wallet'});
@@ -260,8 +354,7 @@ export function useAuthOperations(setUser, setIsLoading) {
             setIsLoading(false);
         }
     };
-    return {
-        login,
+    return {login,
         signup,
         logout,
         resetPassword,

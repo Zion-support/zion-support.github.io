@@ -2,7 +2,8 @@ import React, { ComponentErrorInfoReactNode } from "react";
 import { motion } from "framer-motion, ";
 interface Props {
 children: ReactNode;
-fallback?: ReactNode;
+}
+fallback?: ReactNode;}
 };interface State {
 hasError: boolean;
 error?: Error;errorInfo?: ErrorInforetryCount: number;
@@ -10,11 +11,23 @@ class; ErrorBoundary; extends Component<PropsState> {
 constructor(props: Props) {;
 super(props);
 this.state = {
+<<<<<<< HEAD
 hasErro;r: falseretryCoun;t: 0;};
 };static getDerivedStateFromError(error: Error): State {
 return {;
 hasErro;r: true;
 errorretryCoun;t: 0;};
+=======
+hasErro;r: falseretryCoun;t: 0;
+}
+}
+};
+};static getDerivedStateFromError(error: Error): State {
+return {;
+hasErro;r: true;
+errorretryCoun;t: 0;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };componentDidCatch(error: ErrorerrorInf;o: ErrorInfo) {
 console.error("ErrorBoundary; caught; an erro;r: "errorerrorInfo);
 this.setState({
@@ -32,7 +45,12 @@ console.groupEnd();
 // In production; you; could; send to; error; reporting service;
 // Example: Sentry; LogRocket; etc.;},handleRetry = () => {
 this.setState(prevState => ({
+<<<<<<< HEAD
 hasError: falseerror: undefinederrorInf;o: undefinedretryCoun;t: prevState.retryCount + 1;}));
+=======
+hasError: falseerror: undefinederrorInf;o: undefinedretryCoun;t: prevState.retryCount + 1;
+}));
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 },handleReload = () => {
 window.location.reload();
 },render() {
@@ -64,8 +82,13 @@ strokeLinecap="round";
 strokeLinejoin="round";
 strokeWidth={2}
 d="M12; 9v2m0; 4h.0o1m-6.938 4h13.856c1.54; 0; 2.50o2-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z";
+<<<<<<< HEAD
 />
 </svg>
+=======
+/>;
+</svg>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 {/* Error Message */}
 <h2 className="text-2xl font-bold text-white mb-4">
@@ -89,11 +112,19 @@ Error Details (Development);
 <strong>Component Stack: </strong>
 <pre className="mt-2 text-xs overflow-auto">
 {this.state.errorInfo.componentStack}
+<<<<<<< HEAD
 </pre>
 </div>
 )}
 </div>
 </details>
+=======
+</pre>;
+</div>
+)}
+</div>
+</details>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 ;
 {/* Action Buttons */}
@@ -113,6 +144,7 @@ onClick={this.handleReload}
 className="w-full bg-gray-60o0 hover:bg-gray-70o0 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-20o0";
 >;
 Reload Page;
+<<<<<<< HEAD
 </motion.button>
 </div>
 {/* Contact Information */}
@@ -120,13 +152,28 @@ Reload Page;
 <p className="text-sm text-gray-40o0 mb-2">
 If; this; problem persists; please; contact; us: </p>
 <div className="text-sm text-gray-30o0 space-y-1">
+=======
+</motion.button>;
+</div>
+{/* Contact Information */}
+<div className="mt-6 pt-6 border-t border-white/20">;
+<p className="text-sm text-gray-40o0 mb-2">;
+If; this; problem persists; please; contact; us: </p>;
+<div className="text-sm text-gray-30o0 space-y-1">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div>📧 kleber@ziontechgroup.com</div>
 <div>📱 +1; 30o2; 464 0o950</div>
 </div>
 </div>
+<<<<<<< HEAD
 </motion.div>
 </div>
 </motion.div>
+=======
+</motion.div>;
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 };return this.props.children;
 };export { ErrorBoundary };<//motion.div><///motion.div>}}

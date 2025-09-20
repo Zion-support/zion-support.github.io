@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react;";
 
@@ -12,10 +14,17 @@ return (
 <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>
 <p className="text-zion-slate-light text-lg">
 Last updated: {new Date().toLocaleDateString()}
+<<<<<<< HEAD
 </p>
 </div>
 <div className="max-w-4xl mx-auto">
 <h1 className="text-3xl font-bold text-white mb-8">Terms of Service</h1>
+=======
+</p>;
+</div>
+<div className="max-w-4xl mx-auto">;
+<h1 className="text-3xl font-bold text-white mb-8">Terms of Service</h1>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 <div className="space-y-6 text-zion-slate-light">
 <section>
@@ -92,8 +101,13 @@ If you have any questions about these Terms of Service; please contact us at{" "
 legal@ziontechgroup.com;
 </a>
 The materials appearing on Zion Tech Group's website could include technical; typographical; or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate; complete or current.;
+<<<<<<< HEAD
 </p>
 </section>
+=======
+</p>;
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 );

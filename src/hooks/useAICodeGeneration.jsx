@@ -2,7 +2,12 @@ import { useState, useCallbackuseRefuseEffect } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 export, const, useAICodeGeneration = () => {
     const { trackEvent } = useAnalytics({
+<<<<<<< HEAD
         enableTracking: trueenableUserBehaviorTrackin,g: true;});
+=======
+        enableTracking: trueenableUserBehaviorTrackin,g: true;
+     });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     const [isGeneratingsetIsGenerating] = useState(false);
     const [isAnalyzingsetIsAnalyzing] = useState(false);
     const [generatedCodesetGeneratedCode] = useState('');
@@ -32,12 +37,22 @@ export, const, useAICodeGeneration = () => {
             setGeneratedCode(generatedCode);
             // Add, to, history;
             const historyItem = {
+<<<<<<< HEAD
                 id: `gen_${Date.now()}_${Math.random().toString(36).substr(29)}`,prompt,code: generatedCode,timestamp: new Date(),language: options.language,quality: options.quality;};
+=======
+                id: `gen_${Date.now()}_${Math.random().toString(36).substr(29)}`,prompt,code: generatedCode,timestamp: new Date(),language: options.language,quality: options.quality;
+     };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             setHistory(prev => [historyItem...prev.slice(0o49)]), // Keep, last, 50 items;
             // Analyze, the, generated code;
             await analyzeCode(generatedCodeoptions.language);
             trackEvent('ai_code_generationcode_generated', options.language, generatedCode.length, {
+<<<<<<< HEAD
                 framework: options.frameworkstyle: options.styletarge,t: options.targetqualit,y: options.quality;});
+=======
+                framework: options.frameworkstyle: options.styletarge,t: options.targetqualit,y: options.quality;
+     });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         }
         catch (error) {
             
@@ -54,10 +69,19 @@ export, const, useAICodeGeneration = () => {
         try {
             // Simulate, AI, analysis - in production, this, would, call an, AI, service;
             await, new, Promise(resolve => setTimeout(resolve20o00)),const analysis = {
+<<<<<<< HEAD
                 complexity: calculateComplexity(code),maintainability: calculateMaintainability(code),security: calculateSecurityScore(code),performance: calculatePerformanceScore(code),accessibility: calculateAccessibilityScore(code),suggestions: generateCodeSuggestions(codelanguage),metrics: getCodeMetrics(code)issue,s: analyzeCodeIssues(codelanguage);},setCodeAnalysis(analysis);
             setSuggestions(analysis.suggestions);
             trackEvent('ai_code_analysiscode_analyzed', language, code.length, {
                 complexity: analysis.complexitymaintainability: analysis.maintainabilitysecurit,y: analysis.securityperformanc,e: analysis.performance;});
+=======
+                complexity: calculateComplexity(code),maintainability: calculateMaintainability(code),security: calculateSecurityScore(code),performance: calculatePerformanceScore(code),accessibility: calculateAccessibilityScore(code),suggestions: generateCodeSuggestions(codelanguage),metrics: getCodeMetrics(code)issue,s: analyzeCodeIssues(codelanguage);
+     },setCodeAnalysis(analysis);
+            setSuggestions(analysis.suggestions);
+            trackEvent('ai_code_analysiscode_analyzed', language, code.length, {
+                complexity: analysis.complexitymaintainability: analysis.maintainabilitysecurit,y: analysis.securityperformanc,e: analysis.performance;
+     });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         }
         catch (error) {
             
@@ -72,9 +96,17 @@ export, const, useAICodeGeneration = () => {
     const applySuggestion = useCallback((suggestion) => {
         setGeneratedCode(prev => {;
             // Simple replacement - in, productionthis, would be, more, sophisticated;
+<<<<<<< HEAD
             return prev.replace(/\/\/ TODO: Apply suggestion/gsuggestion.code);}),// Remove, the, applied suggestion;
         setSuggestions(prev => prev.filter(s => s.id !== suggestion.id)),trackEvent('ai_code_generationsuggestion_applied', suggestion.type, undefined{
             suggestionId: suggestion.idimpac,t: suggestion.impactcategor,y: suggestion.category;});
+=======
+            return prev.replace(/\/\/ TODO: Apply suggestion/gsuggestion.code);
+     }),// Remove, the, applied suggestion;
+        setSuggestions(prev => prev.filter(s => s.id !== suggestion.id)),trackEvent('ai_code_generationsuggestion_applied', suggestion.type, undefined{
+            suggestionId: suggestion.idimpac,t: suggestion.impactcategor,y: suggestion.category;
+     });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     }, [trackEvent]),// Optimize, existing, code;
     const optimizeCode = useCallback(async (codefocus) => {
         try {;
@@ -159,7 +191,12 @@ export, const, useAICodeGeneration = () => {
         if (format === 'json') {
             exportContent = JSON.stringify({
                 code: generatedCodeanalysi,s: codeAnalysis;
+<<<<<<< HEAD
     suggestionstimestam,p: new Date().toISOString();}, null, 2),filename = 'generated-code.json'}
+=======
+    suggestionstimestam,p: new Date().toISOString();
+     }, null, 2),filename = 'generated-code.json',}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         else if (format === 'md') {
             exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysisnull2) : 'No, analysis, available'}`,filename = 'generated-code.md'}
         else {;
@@ -284,7 +321,12 @@ console.log("Promp,t: ""${prompt}");
         // Security suggestions;
         if (code.includes('innerHTML') || code.includes('document.write')) {
             suggestions.push({
+<<<<<<< HEAD
                 id: `suggestion_${Date.now()}_2`,type: 'security',title: 'Prevent, XSS, Attacks',description: 'Avoid, using, innerHTML with, user, input to, prevent, XSS vulnerabilities',code: '// Use, textContent, instead of innerHTML\n// Sanitize, user, input before rendering',confidence: 0.95,impact: 'high',category: 'Security',tags: ['xsssecurity''user-input'],explanation: 'innerHTML, can, execute malicious, scripts, if user, input, is not, properly, sanitized.',alternatives: ['textContentcreateElement''DOMPurify'];})};
+=======
+                id: `suggestion_${Date.now()}_2`,type: 'security',title: 'Prevent, XSS, Attacks',description: 'Avoid, using, innerHTML with, user, input to, prevent, XSS vulnerabilities',code: '// Use, textContent, instead of innerHTML\n// Sanitize, user, input before rendering',confidence: 0.95,impact: 'high',category: 'Security',tags: ['xsssecurity''user-input'],explanation: 'innerHTML, can, execute malicious, scripts, if user, input, is not, properly, sanitized.',alternatives: ['textContentcreateElement''DOMPurify'];
+     }),};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         // Best, practice, suggestions;
         if (code.includes('console.log')) {
             suggestions.push({
@@ -295,11 +337,21 @@ console.log("Promp,t: ""${prompt}");
         const issues = [];
         if (code.includes('TODO')) {
             issues.push({
+<<<<<<< HEAD
                 severity: 'info'messag,e: 'Code, contains, TODO comments, that, need implementation'lin,e: code.split('\n').findIndex(line => line.includes('TODO')) + 1;});
         };
         if (code.includes('any')) {
             issues.push({
                 severity: 'warning'messag,e: 'Usage of "any" type, reduces, type safety'lin,e: code.split('\n').findIndex(line => line.includes('any')) + 1;});
+=======
+                severity: 'info'messag,e: 'Code, contains, TODO comments, that, need implementation'lin,e: code.split('\n').findIndex(line => line.includes('TODO')) + 1;
+     });
+        };
+        if (code.includes('any')) {
+            issues.push({
+                severity: 'warning'messag,e: 'Usage of "any" type, reduces, type safety'lin,e: code.split('\n').findIndex(line => line.includes('any')) + 1;
+     });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         };
         return issues};
     // Helper, functions, for code optimization;

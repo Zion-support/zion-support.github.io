@@ -4,19 +4,20 @@ name: string;
 }
 
 import React { useState useEffect } from 'react';
-import { useForm,, ,  } from 'react-hook-form';
-import { zodResolver,, ,  } from '@hookform/resolvers/zod';
-import { z,, ,  } from 'zod';
-import { Button,, ,  } from '@/components/ui/button';
-import { Input,, ,  } from '@/components/ui/input';
-import { Label,, ,  } from '@/components/ui/label';
-import { useAuth,, ,  } from '@/hooks/useAuth';
-import { toast,, ,  } from '@/hooks/use-toast';
-import { CheckCircle,, AlertCircle,, Eye,, EyeOff,, Loader2,  } from 'lucide-react'
-import { cn,, ,  } from '@/lib/utils';
-import { fireEvent,, ,  } from '@/lib/analytics';
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { useAuth } from "@/hooks/useAuth";
+import { toast } from "@/hooks/use-toast";
+import { CheckCircle, AlertCircle, Eye, EyeOff, Loader2 } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { fireEvent } from "@/lib/analytics";
 import { logErrorToProduction } from '@/utils/productionLogger';
 const signupSchema = null;
+<<<<<<< HEAD
 passwordStrength.strength >= 4 ? 'text-green-600' :
 passwordStrength.strength >= 3 ? 'text-blue-600' :
 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600';
@@ -26,6 +27,17 @@ passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600';
 </div>
 <div className="w-full bg-gray-200 rounded-full h-2">
 <div,
+=======
+                passwordStrength.strength >= 4 ? 'text-green-600' :
+                passwordStrength.strength >= 3 ? 'text-blue-600' :
+                passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
+              )}>
+                {passwordStrength.label}
+              </span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <div
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 className={cn('h-2 rounded-full transition-all duration-300', passwordStrength.color)}
 style={{ width: `${passwordStrength.percentage}%` }}
 />

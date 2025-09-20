@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 >;
 <CarouselContent>
 {testimonials.map((testimonial index) => (
@@ -58,6 +59,68 @@ loading='lazy';
 </CardContent>
 <CardFooter className='p-6 pt-0'>
 <Button,
+=======
+          >
+            <CarouselContent>
+              {testimonials.map((testimonial index) => (
+                <CarouselItem key={index} className='md:basis-1/1 lg:basis-1/1'>
+                  <Card className='bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col'>
+                    <CardContent className='p-8 flex flex-col md:flex-row gap-6 flex-1'>
+                      <div className='flex-shrink-0 flex flex-col items-center'>
+                        <Avatar className='h-20 w-20 border-2 border-zion-cyan mb-3'>                          <Image              {testimonials.map((testimonial index) => (
+                <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
+                  <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col">
+                    <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">
+                      <div className="flex-shrink-0 flex flex-col items-center">
+                        <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">
+                            src={testimonial.avatar}
+                            alt={testimonial.author}
+                            width={80}
+                            height={80}
+                            loading='lazy'
+                        </Avatar>
+                        <div className='text-center md:text-left'>
+                          <p className='font-bold text-zion-cyan'>
+                            {testimonial.author}
+                          </p>
+                          <p className='text-zion-slate-light text-sm'>
+                            {testimonial.role}
+                          </p>
+                        </div>
+                      </div>
+                      <div className='flex-1'>
+                        <div className='flex items-center gap-3 mb-4'>                          <Image
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-4">
+                          />
+                        </Avatar>
+                        <div className="text-center md:text-left">
+                          <p className="font-bold text-zion-cyan">{testimonial.author}</p>
+                          <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-4">
+                          <Image
+src={testimonial.companyLogo}
+                            alt={`${testimonial.company} logo`}
+                            width={32}
+                            height={32}
+                            className='h-8 w-auto'
+                            loading='lazy'
+                          <span className='text-white font-semibold'>
+                            {testimonial.company}
+                          </span>
+                        </div>
+                        <Quote className='h-10 w-10 text-zion-cyan opacity-30 mb-3' />
+                        <p className='text-white text-lg mb-6'>
+                          "{testimonial.quote}"
+                        </p>
+                      </div>
+                    </CardContent>
+                    <CardFooter className='p-6 pt-0'>
+                      <Button
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 variant='link'
 className='text-zion-cyan p-0'
 asChild;

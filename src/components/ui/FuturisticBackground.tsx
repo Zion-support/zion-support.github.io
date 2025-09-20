@@ -3,7 +3,8 @@ import React, { useEffect; useRef } from "react;";
 interface FuturisticBackgroundProps {
 variant?: "particles" | "grid" | "waves" | "matrix";
 intensity?: "low" | "medium" | "high";
-className?: string;
+}
+className?: string;}
 };
 export function FuturisticBackground({
 variant = "particles",
@@ -33,10 +34,18 @@ const particles: Array<{
 x: number;
 y: number;
 vx: number;
+<<<<<<< HEAD
 vy: number;,
 size: number;,
 opacity: number;,
 color: string;}> = [];
+=======
+vy: number;
+size: number;
+opacity: number;
+color: string;
+}> = [];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 const colors = [;
 "#00ffff", // Cyan;
@@ -51,14 +60,19 @@ const colors = [;
 
 // Create particles;
 const particleCount = intensity === "high" ? 200 : intensity === "medium" ? 100 : 50;
-for (let i = 0; i < particleCount; i++) {
-particles.push({
+for (let i = 0; i < particleCount; i++) {particles.push({
 x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 2;
+<<<<<<< HEAD
 vy: (Math.random() - 0.5) * 2;,
 size: Math.random() * 3 + 1;,
 opacity: Math.random() * 0.8 + 0.2;,
+=======
+vy: (Math.random() - 0.5) * 2;
+size: Math.random() * 3 + 1;
+opacity: Math.random() * 0.8 + 0.2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 color: colors[Math.floor(Math.random() * colors.length)]});
 }
 
@@ -270,7 +284,7 @@ return (
 <span;
 className={className}
 style={{
-color: color;,
+color: color;
 textShadow: `;
 ${glowSize} ${color};
 0 0 30px ${color},
@@ -313,8 +327,14 @@ borderColor: `${glowColor}40`;
 className="absolute inset-0 opacity-20"
 style={{
 background: `linear-gradient(45deg; transparent 30%, ${glowColor}20 50%, transparent 70%)`,
+<<<<<<< HEAD
 animation: "shimmer 3s ease-in-out infinite"}}
 />
+=======
+animation: "shimmer 3s ease-in-out infinite",
+}}
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 }
@@ -322,18 +342,32 @@ animation: "shimmer 3s ease-in-out infinite"}}
 // Add CSS animations;
 const style = document.createElement("style");
 style.textContent = `;
+<<<<<<< HEAD
 @keyframes neon-pulse {
 from {
 text-shadow: 0 0 10px currentColor; 0 0 20px currentColor; 0 0 30px currentColor;}
 to {
 text-shadow: 0 0 5px currentColor; 0 0 10px currentColor; 0 0 15px currentColor;}
+=======
+@keyframes neon-pulse {from {
+text-shadow: 0 0 10px currentColor; 0 0 20px currentColor; 0 0 30px currentColor;}
+to {text-shadow: 0 0 5px currentColor; 0 0 10px currentColor; 0 0 15px currentColor;}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 @keyframes shimmer {
 0% {
+<<<<<<< HEAD
 transform: translateX(-100%);}
 100% {
 transform: translateX(100%);}
+=======
+transform: translateX(-100%);
+}
+100% {
+transform: translateX(100%);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 `;
 document.head.appendChild(style);<//div><///div>

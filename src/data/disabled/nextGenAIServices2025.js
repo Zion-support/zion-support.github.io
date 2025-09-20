@@ -1,7 +1,6 @@
 export const NEXT_GEN_AI_SERVICES_2025 = [
     // Revolutionary AI Services;
-    {
-        id: "ai-consciousness-simulator";
+    {id: "ai-consciousness-simulator";
         title: "AI Consciousness Simulation Platform";
         description: "Revolutionary AI platform that simulates human-like consciousness for advanced decision-making, emotional intelligence, and creative problem-solving in enterprise environments.",
         category: "Advanced AI";
@@ -54,8 +53,7 @@ export const NEXT_GEN_AI_SERVICES_2025 = [
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
     };
-    {
-        id: "quantum-ai-optimization";
+    {id: "quantum-ai-optimization";
         title: "Quantum-Enhanced AI Optimization Suite";
         description: "Cutting-edge quantum computing integration with AI for exponentially faster optimization, complex modeling, and breakthrough problem-solving capabilities.",
         category: "Quantum AI";
@@ -108,8 +106,7 @@ export const NEXT_GEN_AI_SERVICES_2025 = [
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
     };
-    {
-        id: "neural-architecture-search";
+    {id: "neural-architecture-search";
         title: "Autonomous Neural Architecture Search Platform";
         description: "Self-evolving AI system that automatically designs, tests, and optimizes neural network architectures for specific business problems without human intervention.",
         category: "AutoML";
@@ -162,8 +159,7 @@ export const NEXT_GEN_AI_SERVICES_2025 = [
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
     };
-    {
-        id: "multimodal-ai-platform";
+    {id: "multimodal-ai-platform";
         title: "Unified Multimodal AI Intelligence Platform";
         description: "Advanced AI platform that seamlessly processes text, images, audio, video, and sensor data simultaneously for comprehensive understanding and intelligent responses.",
         category: "Multimodal AI";
@@ -216,8 +212,7 @@ export const NEXT_GEN_AI_SERVICES_2025 = [
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
     };
-    {
-        id: "ai-digital-twin-creator";
+    {id: "ai-digital-twin-creator";
         title: "AI-Powered Digital Twin Creation Platform";
         description: "Revolutionary platform that creates intelligent digital twins of physical systems, processes, and organizations using AI for predictive maintenance, optimization, and simulation.",
         category: "Digital Twins";

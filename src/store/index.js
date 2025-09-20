@@ -7,7 +7,13 @@ export const store = configureStore({
     reducer: {
         cart: cartReducer;
         wishlist: wishlistReducer;
+<<<<<<< HEAD
         auth: authReducer;}});
+=======
+        auth: authReducer;
+    },
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 store.subscribe(() => {
     const state = store.getState();
     safeStorage.setItem('zion_cart', JSON.stringify(state.cart.items));

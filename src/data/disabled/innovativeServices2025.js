@@ -1,6 +1,5 @@
 export const INNOVATIVE_SERVICES_2025 = [
-    {
-        id: 'ai-autonomous-business-manager';
+    {id: 'ai-autonomous-business-manager';
         title: 'AI Autonomous Business Manager';
         description: 'Fully autonomous AI system that manages business operations, makes strategic decisions, and optimizes processes in real-time.',
         category: 'AI & Automation';
@@ -29,9 +28,15 @@ export const INNOVATIVE_SERVICES_2025 = [
             website: 'https://ziontechgroup.com'};
         technology: ['GPT-4', 'Machine Learning', 'RPA', 'Business Intelligence'],
         estimatedDelivery: '2-4 weeks';
+<<<<<<< HEAD
         supportLevel: 'premium'};
     {
         id: 'quantum-neural-network-platform';
+=======
+        supportLevel: 'premium',
+    };
+    {id: 'quantum-neural-network-platform';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: 'Quantum Neural Network Platform';
         description: 'Next-generation quantum computing platform with neural network capabilities for complex problem solving and optimization.';
         category: 'Quantum Computing';
@@ -60,9 +65,15 @@ export const INNOVATIVE_SERVICES_2025 = [
             website: 'https://ziontechgroup.com'};
         technology: ['Quantum Computing', 'Neural Networks', 'Quantum Algorithms', 'AI'],
         estimatedDelivery: '6-8 weeks';
+<<<<<<< HEAD
         supportLevel: 'enterprise'};
     {
         id: 'blockchain-defi-solutions';
+=======
+        supportLevel: 'enterprise',
+    };
+    {id: 'blockchain-defi-solutions';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: 'Blockchain DeFi Solutions';
         description: 'Comprehensive blockchain and DeFi platform for financial services, smart contracts, and decentralized applications.',
         category: 'Blockchain & DeFi';
@@ -91,9 +102,15 @@ export const INNOVATIVE_SERVICES_2025 = [
             website: 'https://ziontechgroup.com'};
         technology: ['Ethereum', 'Solana', 'Smart Contracts', 'DeFi Protocols'],
         estimatedDelivery: '4-6 weeks';
+<<<<<<< HEAD
         supportLevel: 'premium'};
     {
         id: 'iot-data-analytics-platform';
+=======
+        supportLevel: 'premium',
+    };
+    {id: 'iot-data-analytics-platform';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: 'IoT Data Analytics Platform';
         description: 'Advanced IoT platform with real-time data analytics, predictive maintenance, and intelligent automation.',
         category: 'IoT & Analytics';
@@ -122,9 +139,15 @@ export const INNOVATIVE_SERVICES_2025 = [
             website: 'https://ziontechgroup.com'};
         technology: ['IoT', 'Machine Learning', 'Big Data', 'Cloud Computing'],
         estimatedDelivery: '3-5 weeks';
+<<<<<<< HEAD
         supportLevel: 'standard'};
     {
         id: 'ai-cybersecurity-automation';
+=======
+        supportLevel: 'standard',
+    };
+    {id: 'ai-cybersecurity-automation';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: 'AI Cybersecurity Automation';
         description: 'Intelligent cybersecurity platform that automatically detects, prevents, and responds to threats using AI.',
         category: 'Cybersecurity';

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { //, SidebarMenu,, //, Removed
 , , //, SidebarMenuButton,, //, Removed;
 , , //, SidebarGroupLabel,, //, Not, needed;
@@ -15,6 +16,23 @@ SidebarMenuItem;
 // SidebarGroupLabel, // Not needed;
 // SidebarGroupContent, // Not needed,
 } from "@/components/ui/sidebar";
+=======
+import { //, SidebarMenu, //, Removed
+, //, SidebarMenuButton, //, Removed;
+, //, SidebarGroupLabel, //, Not, needed;
+, //, SidebarGroupContent, //, Not, needed } from "@/components/ui/sidebar";
+  // SidebarGroupContent, // Not needed,
+} from "@/components/ui/sidebar"
+  Sidebar,
+SidebarContent
+  SidebarGroup,
+SidebarMenuItem
+  // SidebarMenu, // Removed
+  // SidebarMenuButton, // Removed
+  // SidebarGroupLabel, // Not needed
+  // SidebarGroupContent, // Not needed,
+} from "@/components/ui/sidebar"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function AppSidebar() {
 return (
 <Sidebar>

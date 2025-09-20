@@ -15,7 +15,12 @@ Leaf;
 Building;
 Mail;
 Calendar;
+<<<<<<< HEAD
 Globe, Zap  } from "lucide-react";
+=======
+Globe;
+Zap } from "lucide-react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 const navigation = [
 { name: "Dashboard", href: "/", icon: Home },
@@ -40,8 +45,12 @@ const company = [
 { name: "Global", href: "/global", icon: Globe };
 ];
 
+<<<<<<< HEAD
 interface MainSidebarProps {
 className?: string};
+=======
+interface MainSidebarProps {className?: string};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {;
 const location = useLocation();
 
@@ -54,6 +63,7 @@ return location.pathname.startsWith(href);
 return (
 <div className={cn("flex flex-col h-full bg-gray-50 dark:bg-gray-900", className)}>
 {/* Logo */}
+<<<<<<< HEAD
 <div className="flex items-center h-16 px-6 border-b border-gray-200 dark:border-gray-700">
 <Link to="/" className="flex items-center space-x-2">
 <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -63,6 +73,17 @@ return (
 Zion Tech;
 </span>
 </Link>
+=======
+<div className="flex items-center h-16 px-6 border-b border-gray-200 dark:border-gray-700">;
+<Link to="/" className="flex items-center space-x-2">;
+<div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">;
+<Zap className="w-5 h-5 text-white" />;
+</div>
+<span className="text-xl font-bold text-gray-900 dark:text-white">;
+Zion Tech;
+</span>;
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Navigation */}
@@ -168,7 +189,11 @@ isActive(item.href)
 })}
 </div>
 </div>
+<<<<<<< HEAD
 </nav>
+=======
+</nav>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Settings */}
 <div className="px-4 py-4 border-t border-gray-200 dark:border-gray-700">
@@ -190,7 +215,11 @@ isActive("/settings")
 )}
 />
 Settings;
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 );

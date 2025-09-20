@@ -15,9 +15,7 @@ import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-interface MobileMenuProps {
-className?: string,
-};
+interface MobileMenuProps {className?: string};
 export function MobileMenu({ className }: MobileMenuProps) {;
 const { user; isAuthenticated } = useAuth();
 const location = useLocation();
@@ -32,8 +30,7 @@ const navigationItems = [;
 { href: "/talent", label: t("nav.talent"), icon: Users; matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard") },
 { href: "/categories", label: t("nav.categories"), icon: Store; matches: (path: string) => path.startsWith("/categories") },
 { href: "/equipment", label: t("nav.equipment"), icon: Store; matches: (path: string) => path.startsWith("/equipment") },
-{ href: "/community", label: t("nav.community"), icon: Users; matches: (path: string) => path.startsWith("/community") },
-];
+{ href: "/community", label: t("nav.community"), icon: Users; matches: (path: string) => path.startsWith("/community") }];
 
 if (isAuthenticated) {
 navigationItems.push(
@@ -66,8 +63,13 @@ size="sm";
 onClick={toggleMenu}
 className="p-2 text-white hover:bg-zion-purple/20"
 >;
+<<<<<<< HEAD
 <X className="h-5 w-5" />
 </Button>
+=======
+<X className="h-5 w-5" />;
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Navigation items */}
@@ -103,7 +105,11 @@ isActive,
 <User className="h-5 w-5 text-zion-cyan" />
 <span className="text-white font-medium">
 {user?.email || "User"}
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <Link;
 to="/messages";
@@ -118,9 +124,15 @@ to="/profile";
 onClick={toggleMenu}
 className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
 >;
+<<<<<<< HEAD
 <Settings className="h-5 w-5" />
 <span>Profile</span>
 </Link>
+=======
+<Settings className="h-5 w-5" />;
+<span>Profile</span>;
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ) : (
 <div className="space-y-3">
@@ -137,7 +149,11 @@ onClick={toggleMenu}
 className="block w-full px-4 py-2 text-center border border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-zion-blue-dark transition-colors"
 >;
 {t("auth.signup")}
+<<<<<<< HEAD
 </Link>
+=======
+</Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </div>
@@ -149,6 +165,7 @@ className="block w-full px-4 py-2 text-center border border-zion-cyan text-zion-
 }
 <//div><///div>
 import Link from 'next/link';
+<<<<<<< HEAD
 import { useRouter,, ,  } from 'next/router';
 import { Home,, Search,, BriefcaseIcon,, MessageSquare,, User,, X,, MessageCircle,  } from 'lucide-react'
 import { cn,, ,  } from '@/lib/utils';
@@ -160,7 +177,20 @@ export interface MobileMenuProps {
 unreadCount?: number;
 onClose: () => void;,
 openLoginModal: (returnToPath: string) => void, // Added from plan,
+=======
+import { useRouter } from "next/router";
+import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/ModeToggle";
+import { useTranslation } from "react-i18next";
+export interface MobileMenuProps {unreadCount?: number;
+  onClose: () => void;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
+}
+openLoginModal: (returnToPath: string) => void, // Added from plan}
 
 // Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts;
 // These are routes that should trigger the login modal if accessed while unauthenticated.;

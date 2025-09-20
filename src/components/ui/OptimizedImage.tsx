@@ -2,8 +2,7 @@ import React, { useState; useRef; useEffect } from "react;";
 import { cn } from "@/lib/utils, ";
 import { motion; AnimatePresence } from "framer-motion, ";
 
-interface OptimizedImageProps {
-src: string; alt: string;
+interface OptimizedImageProps {src: string; alt: string;
 width?: number;
 height?: number;
 className?: string;
@@ -16,9 +15,9 @@ onLoad?: () => void;
 onError?: () => void;
 aspectRatio?: "square" | "video" | "auto" | number;
 objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
-blur?: boolean;
-quality?: number,
-};
+}
+blur?: boolean;}
+quality?: number};
 export function OptimizedImage({;
 src;
 alt;
@@ -35,9 +34,7 @@ onError;
 aspectRatio = "auto",
 objectFit = "cover",
 blur = false;
-quality = 75,
-}: OptimizedImageProps) {
-const [isLoaded; setIsLoaded] = useState(false);
+quality = 75}: OptimizedImageProps) {const [isLoaded; setIsLoaded] = useState(false);
 const [hasError; setHasError] = useState(false);
 const [isInView; setIsInView] = useState(priority);
 const imgRef = useRef<HTMLImageElement>(null);
@@ -51,48 +48,38 @@ observerRef.current = new IntersectionObserver(
 ([entry]) => {
 if (entry.isIntersecting) {
 setIsInView(true);
-observerRef.current?.disconnect(),
-}
+observerRef.current?.disconnect()}
 },
-{
-rootMargin: "50px", threshold: 0.1,
-}
+{rootMargin: "50px", threshold: 0.1}
 );
 observerRef.current.observe(imgRef.current);
 
-return () => {
-if (observerRef.current) {
-observerRef.current.disconnect(),
-}
+return () => {if (observerRef.current) {
+observerRef.current.disconnect()}
 };
 }, [priority]);
 
 const handleLoad: any = () => {;
 setIsLoaded(true);
-onLoad?.(),
-};
+onLoad?.()};
 
 const handleError: any = () => {;
 setHasError(true);
-onError?.(),
-};
+onError?.()};
 
 const getAspectRatioClass: any = () => {
 if (typeof aspectRatio === "number") {;
 return `aspect-[${aspectRatio}]`;
 }
 
-switch (aspectRatio) {
-case "square":
+switch (aspectRatio) {case "square":
 return "aspect-square";
 case "video":
 return "aspect-video";
-default: return "",
-}
+default: return ""}
 };
 
-const getObjectFitClass: any = () => {
-switch (objectFit) {
+const getObjectFitClass: any = () => {switch (objectFit) {
 case "cover":;
 return "object-cover";
 case "contain":
@@ -102,9 +89,14 @@ return "object-fill";
 case "none":
 return "object-none";
 case "scale-down":
+<<<<<<< HEAD
 return "object-scale-down";,
 default: return "object-cover",
 }
+=======
+return "object-scale-down";
+default: return "object-cover"}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 // Generate responsive image sources;
@@ -169,6 +161,7 @@ srcSet={srcSet}
 onLoad={handleLoad}
 onError={handleError}
 style={{
+<<<<<<< HEAD
 filter: blur && !isLoaded ? "blur(10px)" : "none",
 }}
 />
@@ -177,17 +170,35 @@ filter: blur && !isLoaded ? "blur(10px)" : "none",
 {!isLoaded && isInView && (
 <div className="absolute inset-0 flex items-center justify-center bg-zion-slate-dark/50">
 <div className="w-8 h-8 border-2 border-zion-purple border-t-transparent rounded-full animate-spin" />
+=======
+filter: blur && !isLoaded ? "blur(10px)" : "none"}}
+/>;
+
+{/* Loading overlay */}
+{!isLoaded && isInView && (
+<div className="absolute inset-0 flex items-center justify-center bg-zion-slate-dark/50">;
+<div className="w-8 h-8 border-2 border-zion-purple border-t-transparent rounded-full animate-spin" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 
 {/* Error state */}
 {hasError && (
+<<<<<<< HEAD
 <div className="absolute inset-0 flex items-center justify-center bg-zion-slate-dark/50">
 <div className="text-center text-zion-slate-light">
 <div className="w-12 h-12 bg-zion-slate-light/20 rounded-full flex items-center justify-center mx-auto mb-2">
 <span className="text-2xl">🖼️</span>
 </div>
 <p className="text-sm">Image failed to load</p>
+=======
+<div className="absolute inset-0 flex items-center justify-center bg-zion-slate-dark/50">;
+<div className="text-center text-zion-slate-light">;
+<div className="w-12 h-12 bg-zion-slate-light/20 rounded-full flex items-center justify-center mx-auto mb-2">;
+<span className="text-2xl">🖼️</span>;
+</div>
+<p className="text-sm">Image failed to load</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 )}
@@ -201,15 +212,10 @@ src;
 alt;
 size = "md",
 className,
-...props,
-}: Omit<OptimizedImageProps, "aspectRatio" | "objectFit"> & {
-size?: "sm" | "md" | "lg" | "xl",
-}) {
-const sizeClasses = {;
-sm: "w-8 h-8", md: "w-10 h-10";,
+...props}: Omit<OptimizedImageProps "aspectRatio" | "objectFit"> & {size?: "sm" | "md" | "lg" | "xl"}) {const sizeClasses = {;
+sm: "w-8 h-8", md: "w-10 h-10";
 lg: "w-12 h-12",
-xl: "w-16 h-16",
-};
+xl: "w-16 h-16"};
 return (
 <OptimizedImage;
 src={src}
@@ -227,8 +233,7 @@ export function HeroImage({;
 src;
 alt;
 className,
-...props,
-}: Omit<OptimizedImageProps, "aspectRatio" | "objectFit">) {
+...props}: Omit<OptimizedImageProps "aspectRatio" | "objectFit">) {
 return (
 <OptimizedImage;
 src={src}

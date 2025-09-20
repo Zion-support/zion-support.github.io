@@ -1,8 +1,12 @@
 import React, { useState } from "react;";
 import { ChevronDown, Globe  } from "lucide-react, ";
 
+<<<<<<< HEAD
 interface Language {
 code: string; name: string; flag: string};
+=======
+interface Language {code: string; name: string; flag: string};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export const LanguageSelector: React.FC = () => {;
 const [isOpen, setIsOpen] = useState(false);
 const [currentLanguage, setCurrentLanguage] = useState("EN"),

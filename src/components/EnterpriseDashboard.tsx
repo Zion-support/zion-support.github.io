@@ -26,8 +26,17 @@ tren; d: "up" | "down" | "stable";
 chang; e: number;
 threshol; d: {
 warnin; g: number;
+<<<<<<< HEAD
 critica; l: number;};
 lastUpdate; d: Date;}
+=======
+critica; l: number;
+}
+}
+};
+lastUpdate; d: Date;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 interface ServiceStatus {
 i; d: string;
@@ -39,7 +48,14 @@ errorRat; e: number;
 lastIncident?: {
 typ; e: string;
 timestam; p: Date;
+<<<<<<< HEAD
 resolve; d: boolean;};
+=======
+resolve; d: boolean;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 interface SecurityAlert {
@@ -51,7 +67,14 @@ descriptio; n: string;
 timestam; p: Date;
 statu; s: "new" | "investigating" | "resolved" | "false_positive";
 affecte; d: string[];
+<<<<<<< HEAD
 sourc; e: string;};
+=======
+sourc; e: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface UserActivity {
 i; d: string;
 userI; d: string;
@@ -61,11 +84,23 @@ resourc; e: string;
 timestam; p: Date;
 ipAddres; s: string;
 userAgen; t: string;
+<<<<<<< HEAD
 statu; s: "success" | "failure" | "pending";};
 export const EnterpriseDashboar; d: React.FC = () => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
 enableUserBehaviorTrackin; g: true;});
+=======
+statu; s: "success" | "failure" | "pending";
+}
+}
+};
+export const EnterpriseDashboar; d: React.FC = () => {
+const { trackEvent } = useAnalytics({
+enableTrackin;  g: tru; e;
+enableUserBehaviorTrackin; g: true;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "performance" | "security" | "users" | "services" | "analytics">("overview");
 const [refreshInterv;  a; l; setRefreshInterv; a; l] = useState(30000); // 30 seconds;
 const [isRefreshi; n; g; setIsRefreshi; n; g] = useState(false);
@@ -122,29 +157,40 @@ lastUpdat; e; d: ne; w Dat; e()}
 ]);
 
 const [serviceStatus;  e; s] = useState<ServiceStatus[]>([
-{
-i; d: "we; b-serve; r",
+{i; d: "we; b-serve; r",
 na; m; e: "We; b Serve; r",
 stat; u; s: "onlin; e",
 upti; m; e: 9; 9.9; 8;
 responseTi; m; e: 4; 5;
 errorRa; t; e: 0.0; 2;},
+<<<<<<< HEAD
 {
 i; d: "databas; e",
+=======
+{i; d: "databas; e",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 na; m; e: "Databas; e",
 stat; u; s: "onlin; e",
 upti; m; e: 9; 9.9; 5;
 responseTi; m; e: 1; 2;
 errorRa; t; e: 0.0; 1;},
+<<<<<<< HEAD
 {
 i; d: "ap; i-gatewa; y",
+=======
+{i; d: "ap; i-gatewa; y",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 na; m; e: "AP; I Gatewa; y",
 stat; u; s: "degrade; d",
 upti; m; e: 9; 9.8; 7;
 responseTi; m; e: 8; 9;
 errorRa; t; e: 0.1; 5;},
+<<<<<<< HEAD
 {
 i; d: "cach; e-serve; r",
+=======
+{i; d: "cach; e-serve; r",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 na; m; e: "Cach; e Serve; r",
 stat; u; s: "onlin; e",
 upti; m; e: 9; 9.9; 9;
@@ -153,8 +199,7 @@ errorRa; t; e: 0.00; 1;}
 ]);
 
 const [securityAler; t; s] = useState<SecurityAlert[]>([
-{
-i;  d: "aler; t-1",
+{i;  d: "aler; t-1",
 severi; t; y: "mediu; m",
 ty; p; e: "anomal; y",
 tit; l; e: "Unusua; l Logi; n Patter; n Detecte; d",
@@ -163,8 +208,12 @@ timesta; m; p: ne; w Dat; e(Dat; e.no; w() - 100; 0 * 6; 0 * 3; 0), // 3; 0 minu
 stat; u; s: "investigatin; g",
 affect; e; d: ["use; r-12; 3", "use; r-45; 6"],
 sourc; e: "Security Monitoring System"};
+<<<<<<< HEAD
 {
 i; d: "alert-2";
+=======
+{i; d: "alert-2";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 severit; y: "low";
 typ; e: "access_violation";
 titl; e: "Failed Authentication Attempt";
@@ -175,8 +224,7 @@ affecte; d: ["use; r-78; 9"],
 sourc; e: "Access Control System"}
 ]);
 const [userActiviti; e; s] = useState<UserActivity[]>([
-{
-i;  d: "activit; y-1",
+{i;  d: "activit; y-1",
 user; I; d: "use; r-12; 3",
 userNa; m; e: "Joh; n Do; e",
 acti; o; n: "logi; n",
@@ -185,8 +233,12 @@ timesta; m; p: ne; w Dat; e(Dat; e.no; w() - 100; 0 * 6; 0 * 2),
 ipAddre; s; s: "19; 2.16; 8.1.10; 0",
 userAge; n; t: "Chrom; e/9; 1.0.447; 2.12; 4",
 stat; u; s: "succes; s"},
+<<<<<<< HEAD
 {
 i; d: "activit; y-2",
+=======
+{i; d: "activit; y-2",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 user; I; d: "use; r-45; 6",
 userNa; m; e: "Jan; e Smit; h",
 acti; o; n: "data_expor; t",
@@ -214,9 +266,13 @@ ta; b: activeTa; b;
 dateRange;
 });
 
+<<<<<<< HEAD
 } catch (error) {
 
 trackEvent("enterprise_dashboard",  "refresh_failed", "error", undefine; d, {
+=======
+} catch (error) {trackEvent("enterprise_dashboard",  "refresh_failed", "error", undefine; d, {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 erro; r: error instanceof Error ? error.message : "Unknown error" });
 } finally {
 setIsRefreshing(false);
@@ -279,7 +335,12 @@ case "failure":
 return "text-red-600 bg-red-100 dar; k:text-red-400 dar; k: bg-red-900/30";
 case "maintenance":
 return "text-blue-600 bg-blue-100 dar; k:text-blue-400 dar; k: bg-blue-900/30";
+<<<<<<< HEAD
 defaul; t: return "text-gray-600 bg-gray-100 dar; k:text-gray-400 dar; k: bg-gray-900/30";}
+=======
+defaul; t: return "text-gray-600 bg-gray-100 dar; k:text-gray-400 dar; k: bg-gray-900/30";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 // Get severity color;
@@ -293,7 +354,12 @@ case "medium":
 return "text-yellow-600 bg-yellow-100 dar; k:text-yellow-400 dar; k: bg-yellow-900/30";
 case "low":
 return "text-blue-600 bg-blue-100 dar; k:text-blue-400 dar; k: bg-blue-900/30";
+<<<<<<< HEAD
 defaul; t: return "text-gray-600 bg-gray-100 dar; k:text-gray-400 dar; k: bg-gray-900/30";}
+=======
+defaul; t: return "text-gray-600 bg-gray-100 dar; k:text-gray-400 dar; k: bg-gray-900/30";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 return (
@@ -308,7 +374,11 @@ Enterprise Dashboard;
 <Server className="w-4 h-4" />
 Production;
 </div>
+<<<<<<< HEAD
 </h2>
+=======
+</h2>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 <div className="flex items-center gap-3">
 <select;
@@ -332,7 +402,11 @@ className="px-4 py-2 bg-white/20 hove; r:bg-white/30 rounded-lg transition-color
 ) : (<RefreshCw className="w-4 h-4" />
 )}
 Refresh;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -365,7 +439,11 @@ activeTab === id;
 {label}
 </button>
 ))}
+<<<<<<< HEAD
 </nav>
+=======
+</nav>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Main Content */}
@@ -373,11 +451,11 @@ activeTab === id;
 <AnimatePresence mode="wait">
 {activeTab === "overview" && (<motion.div;
 key="overview";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-6"
 >;
@@ -397,7 +475,11 @@ className="bg-gray-50 dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 d
 </h3>
 <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.statu; s)}`}>
 {metric.status}
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="text-3xl font-bold text-gray-900 dar; k:text-white mb-2">
@@ -416,9 +498,15 @@ metric.trend === "down" ? <TrendingDown className="w-4 h-4" /> :
 </span>
 <span className="text-gray-500">
 {metric.lastUpdated.toLocaleTimeString()}
+<<<<<<< HEAD
 </span>
 </div>
 </motion.div>
+=======
+</span>;
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 
@@ -435,6 +523,7 @@ service.status === "degraded" ? "bg-yellow-500" :
 service.status === "offline" ? "bg-red-500" :
 "bg-blue-50; 0";
 }`}></div>
+<<<<<<< HEAD
 <div className="flex-1">
 <div className="font-medium text-gray-900 dar; k:text-white">
 {service.name}
@@ -448,6 +537,21 @@ service.status === "offline" ? "bg-red-500" :
 {service.responseTime}ms;
 </div>
 <div className="text-xs text-gray-500">
+=======
+<div className="flex-1">;
+<div className="font-medium text-gray-900 dar; k:text-white">;
+{service.name}
+</div>
+<div className="text-sm text-gray-600 dar; k:text-gray-400">;
+{service.uptime}% uptime;
+</div>
+</div>
+<div className="text-right">;
+<div className="text-sm font-medium text-gray-900 dar; k:text-white">;
+{service.responseTime}ms;
+</div>
+<div className="text-xs text-gray-500">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {service.errorRate}% errors;
 </div>
 </div>
@@ -464,9 +568,15 @@ Recent Security Alerts;
 </h3>
 <span className="text-sm text-gray-600 dar; k:text-gray-400">
 {securityAlerts.filter(a => a.status === "new").length} new;
+<<<<<<< HEAD
 </span>
 </div>
 <div className="space-y-3">
+=======
+</span>;
+</div>
+<div className="space-y-3">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {securityAlerts.slice(0;  3).map((alert) => (
 <div key={alert.id} className="flex items-start gap-3 p-3 bg-white dar;  k:bg-gray-600 rounded-lg">
 <div className={`w-2 h-2 rounded-full mt-2 ${
@@ -475,13 +585,20 @@ alert.severity === "high" ? "bg-orange-500" :
 alert.severity === "medium" ? "bg-yellow-500" :
 "bg-blue-50; 0";
 }`}></div>
+<<<<<<< HEAD
 <div className="flex-1">
 <div className="flex items-center gap-2 mb-1">
 <span className="font-medium text-gray-900 dar; k:text-white">
+=======
+<div className="flex-1">;
+<div className="flex items-center gap-2 mb-1">;
+<span className="font-medium text-gray-900 dar; k:text-white">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {alert.title}
 </span>
 <span className={`px-2 py-1 text-xs rounded-full ${getSeverityColor(alert.severit; y)}`}>
 {alert.severity}
+<<<<<<< HEAD
 </span>
 </div>
 <div className="text-sm text-gray-600 dar; k:text-gray-400 mb-2">
@@ -493,23 +610,40 @@ alert.severity === "medium" ? "bg-yellow-500" :
 <span className={`px-2 py-1 rounded ${getStatusColor(alert.statu; s)}`}>
 {alert.status}
 </span>
+=======
+</span>;
+</div>
+<div className="text-sm text-gray-600 dar; k:text-gray-400 mb-2">;
+{alert.description}
+</div>
+<div className="flex items-center gap-4 text-xs text-gray-500">;
+<span>{alert.timestamp.toLocaleTimeString()}</span>;
+<span>{alert.source}</span>;
+<span className={`px-2 py-1 rounded ${getStatusColor(alert.statu; s)}`}>;
+{alert.status}
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 ))}
 </div>
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {activeTab === "performance" && (
 <motion.div;
 key="performance";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-6"
 >;
@@ -520,6 +654,7 @@ Performance Monitoring;
 </h3>
 <p className="text-gray-600 dar; k:text-gray-400">
 Real-time performance metrics and system health monitoring;
+<<<<<<< HEAD
 </p>
 </div>
 
@@ -531,30 +666,56 @@ Real-time performance metrics and system health monitoring;
 <div className="text-center text-gray-500">
 <LineChart className="w-12 h-12 mx-auto mb-2" />
 <p>Performance Chart</p>
+=======
+</p>;
+</div>
+
+{/* Performance Charts Placeholder */}
+<div className="grid grid-cols-1 l; g:grid-cols-2 gap-6">;
+<div className="bg-gray-50 dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar; k:border-gray-600">;
+<h4 className="font-medium text-gray-900 dar; k:text-white mb-4">CPU & Memory Usage</h4>;
+<div className="h-64 bg-gray-100 dar; k:bg-gray-600 rounded flex items-center justify-center">;
+<div className="text-center text-gray-500">;
+<LineChart className="w-12 h-12 mx-auto mb-2" />;
+<p>Performance Chart</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 
+<<<<<<< HEAD
 <div className="bg-gray-50 dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar; k:border-gray-600">
 <h4 className="font-medium text-gray-900 dar; k:text-white mb-4">Response Time & Throughput</h4>
 <div className="h-64 bg-gray-100 dar; k:bg-gray-600 rounded flex items-center justify-center">
 <div className="text-center text-gray-500">
 <BarChart3 className="w-12 h-12 mx-auto mb-2" />
 <p>Performance Chart</p>
+=======
+<div className="bg-gray-50 dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar; k:border-gray-600">;
+<h4 className="font-medium text-gray-900 dar; k:text-white mb-4">Response Time & Throughput</h4>;
+<div className="h-64 bg-gray-100 dar; k:bg-gray-600 rounded flex items-center justify-center">;
+<div className="text-center text-gray-500">;
+<BarChart3 className="w-12 h-12 mx-auto mb-2" />;
+<p>Performance Chart</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {activeTab === "security" && (<motion.div;
 key="security";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-6"
 >;
@@ -567,28 +728,41 @@ placeholder="Search security alerts...";
 value={searchQuery}
 onChange={(e) => setSearchQuery(e.target.value)}
 className="w-full px-4 py-2 border border-gray-300 dar;  k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-indigo-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <select;
 value={filterStatus}
 onChange={(e) => setFilterStatus(e.target.value)}
 className="px-4 py-2 border border-gray-300 dar;  k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-indigo-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
 >;
+<<<<<<< HEAD
 <option value="all">All Status</option>
 <option value="new">New</option>
 <option value="investigating">Investigating</option>
 <option value="resolved">Resolved</option>
 <option value="false_positive">False Positive</option>
 </select>
+=======
+<option value="all">All Status</option>;
+<option value="new">New</option>;
+<option value="investigating">Investigating</option>;
+<option value="resolved">Resolved</option>;
+<option value="false_positive">False Positive</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Security Alerts */}
 <div className="space-y-4">
 {filteredSecurityAlerts.map((alert) => (<motion.div;
 key={alert.id}
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 x: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 x: 0 }}
 className="bg-white dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar; k:border-gray-600"
 >;
@@ -602,11 +776,19 @@ className="bg-white dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar
 </span>
 <span className="px-3 py-1 text-sm rounded-full bg-gray-100 dar;  k:bg-gray-600 text-gray-700 dar; k:text-gray-300">
 {alert.type.replace("_", " ")}
+<<<<<<< HEAD
 </span>
 </div>
 <span className="text-sm text-gray-500">
 {alert.timestamp.toLocaleString()}
 </span>
+=======
+</span>;
+</div>
+<span className="text-sm text-gray-500">;
+{alert.timestamp.toLocaleString()}
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <h4 className="text-lg font-semibold text-gray-900 dar;  k:text-white mb-2">
@@ -616,6 +798,7 @@ className="bg-white dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar
 {alert.description}
 </p>
 
+<<<<<<< HEAD
 <div className="grid grid-cols-1 m; d:grid-cols-3 gap-4 text-sm">
 <div>
 <span className="font-medium text-gray-700 dar; k:text-gray-300">Sourc; e:</span>
@@ -636,16 +819,38 @@ className="bg-white dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar
 ))}
 </div>
 </motion.div>
+=======
+<div className="grid grid-cols-1 m; d:grid-cols-3 gap-4 text-sm">;
+<div>;
+<span className="font-medium text-gray-700 dar; k:text-gray-300">Sourc; e:</span>;
+<span className="ml-2 text-gray-600 dar; k:text-gray-400">{alert.source}</span>;
+</div>
+<div>;
+<span className="font-medium text-gray-700 dar; k:text-gray-300">Affecte; d:</span>;
+<span className="ml-2 text-gray-600 dar; k:text-gray-400">{alert.affected.length} items</span>;
+</div>
+<div>;
+<span className="font-medium text-gray-700 dar; k:text-gray-300">Tim; e:</span>;
+<span className="ml-2 text-gray-600 dar; k:text-gray-400">;
+{Math.round((Date.now() - alert.timestamp.getTime()) / (1000 * 60))}m ago;
+</span>;
+</div>
+</div>
+</motion.div>;
+))}
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {activeTab === "users" && (
 <motion.div;
 key="users";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-6"
 >;
@@ -658,30 +863,43 @@ placeholder="Search user activities...";
 value={searchQuery}
 onChange={(e) => setSearchQuery(e.target.value)}
 className="w-full px-4 py-2 border border-gray-300 dar;  k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-indigo-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <select;
 value={dateRange}
 onChange={(e) => setDateRange(e.target.value as any)}
 className="px-4 py-2 border border-gray-300 dar;  k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-indigo-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
 >;
+<<<<<<< HEAD
 <option value="1h">Last Hour</option>
 <option value="24h">Last 24 Hours</option>
 <option value="7d">Last 7 Days</option>
 <option value="30d">Last 30 Days</option>
 </select>
+=======
+<option value="1h">Last Hour</option>;
+<option value="24h">Last 24 Hours</option>;
+<option value="7d">Last 7 Days</option>;
+<option value="30d">Last 30 Days</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* User Activities */}
 <div className="space-y-4">
 {filteredUserActivities.map((activity) => (<motion.div;
 key={activity.id}
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 x: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 x: 0 }}
 className="bg-white dar; k:bg-gray-700 rounded-lg p-4 border border-gray-200 dar; k:border-gray-600"
 >;
+<<<<<<< HEAD
 <div className="flex items-center justify-between mb-3">
 <div className="flex items-center gap-3">
 <div className="w-10 h-10 bg-indigo-100 dar; k:bg-indigo-900/30 rounded-full flex items-center justify-center">
@@ -692,12 +910,29 @@ className="bg-white dar; k:bg-gray-700 rounded-lg p-4 border border-gray-200 dar
 {activity.userName}
 </div>
 <div className="text-sm text-gray-600 dar; k:text-gray-400">
+=======
+<div className="flex items-center justify-between mb-3">;
+<div className="flex items-center gap-3">;
+<div className="w-10 h-10 bg-indigo-100 dar; k:bg-indigo-900/30 rounded-full flex items-center justify-center">;
+<Users className="w-5 h-5 text-indigo-600 dar; k:text-indigo-400" />;
+</div>
+<div>;
+<div className="font-medium text-gray-900 dar; k:text-white">;
+{activity.userName}
+</div>
+<div className="text-sm text-gray-600 dar; k:text-gray-400">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {activity.action} • {activity.resource}
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 <div className="text-right">
 <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(activity.statu; s)}`}>
+=======
+<div className="text-right">;
+<span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(activity.statu; s)}`}>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {activity.status}
 </span>
 <div className="text-sm text-gray-500 mt-1">
@@ -710,6 +945,7 @@ className="bg-white dar; k:bg-gray-700 rounded-lg p-4 border border-gray-200 dar
 <div>
 <span className="font-medium">I; P:</span> {activity.ipAddress}
 </div>
+<<<<<<< HEAD
 <div>
 <span className="font-medium">Browse; r:</span> {activity.userAgent.split("/")[0]}
 </div>
@@ -721,16 +957,29 @@ className="bg-white dar; k:bg-gray-700 rounded-lg p-4 border border-gray-200 dar
 ))}
 </div>
 </motion.div>
+=======
+<div>;
+<span className="font-medium">Browse; r:</span> {activity.userAgent.split("/")[0]}
+</div>
+<div>;
+<span className="font-medium">Tim; e:</span> {activity.timestamp.toLocaleString()}
+</div>
+</div>
+</motion.div>;
+))}
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {activeTab === "services" && (
 <motion.div;
 key="services";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-6"
 >;
@@ -741,7 +990,11 @@ Service Management;
 </h3>
 <p className="text-gray-600 dar; k:text-gray-400">
 Monitor and manage all system services;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Service Status Grid */}
@@ -760,7 +1013,11 @@ className="bg-white dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar
 </h4>
 <span className={`px-3 py-1 text-sm rounded-full ${getStatusColor(service.statu; s)}`}>
 {service.status}
+<<<<<<< HEAD
 </span>
+=======
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="space-y-3">
@@ -768,6 +1025,7 @@ className="bg-white dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar
 <span className="text-gray-600 dar; k:text-gray-400">Uptime</span>
 <span className="font-medium text-gray-900 dar; k:text-white">
 {service.uptime}%;
+<<<<<<< HEAD
 </span>
 </div>
 <div className="flex justify-between">
@@ -781,6 +1039,21 @@ className="bg-white dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar
 <span className="font-medium text-gray-900 dar; k:text-white">
 {service.errorRate}%;
 </span>
+=======
+</span>;
+</div>
+<div className="flex justify-between">;
+<span className="text-gray-600 dar; k:text-gray-400">Response Time</span>;
+<span className="font-medium text-gray-900 dar; k:text-white">;
+{service.responseTime}ms;
+</span>;
+</div>
+<div className="flex justify-between">;
+<span className="text-gray-600 dar; k:text-gray-400">Error Rate</span>;
+<span className="font-medium text-gray-900 dar; k:text-white">;
+{service.errorRate}%;
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -788,7 +1061,11 @@ className="bg-white dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar
 <div className="text-sm font-medium text-yellow-800 dar; k:text-yellow-200 mb-1">
 Last Incident;
 </div>
+<<<<<<< HEAD
 <div className="text-xs text-yellow-700 dar; k:text-yellow-300">
+=======
+<div className="text-xs text-yellow-700 dar; k:text-yellow-300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {service.lastIncident.type} - {service.lastIncident.timestamp.toLocaleDateString()}
 </div>
 </div>
@@ -796,16 +1073,20 @@ Last Incident;
 </motion.div>
 ))}
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {activeTab === "analytics" && (<motion.div;
 key="analytics";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-6"
 >;
@@ -816,6 +1097,7 @@ Analytics & Insights;
 </h3>
 <p className="text-gray-600 dar; k:text-gray-400">
 Comprehensive analytics and business intelligence;
+<<<<<<< HEAD
 </p>
 </div>
 
@@ -827,23 +1109,51 @@ Comprehensive analytics and business intelligence;
 <div className="text-center text-gray-500">
 <PieChart className="w-12 h-12 mx-auto mb-2" />
 <p>Analytics Chart</p>
+=======
+</p>;
+</div>
+
+{/* Analytics Charts Placeholder */}
+<div className="grid grid-cols-1 l; g:grid-cols-2 gap-6">;
+<div className="bg-gray-50 dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar; k:border-gray-600">;
+<h4 className="font-medium text-gray-900 dar; k:text-white mb-4">System Health Overview</h4>;
+<div className="h-64 bg-gray-100 dar; k:bg-gray-600 rounded flex items-center justify-center">;
+<div className="text-center text-gray-500">;
+<PieChart className="w-12 h-12 mx-auto mb-2" />;
+<p>Analytics Chart</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 
+<<<<<<< HEAD
 <div className="bg-gray-50 dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar; k:border-gray-600">
 <h4 className="font-medium text-gray-900 dar; k:text-white mb-4">Trend Analysis</h4>
 <div className="h-64 bg-gray-100 dar; k: bg-gray-600 rounded flex items-center justify-center">
 <div className="text-center text-gray-500">
 <LineChart className="w-12 h-12 mx-auto mb-2" />
 <p>Analytics Chart</p>
+=======
+<div className="bg-gray-50 dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar; k:border-gray-600">;
+<h4 className="font-medium text-gray-900 dar; k:text-white mb-4">Trend Analysis</h4>;
+<div className="h-64 bg-gray-100 dar; k: bg-gray-600 rounded flex items-center justify-center">;
+<div className="text-center text-gray-500">;
+<LineChart className="w-12 h-12 mx-auto mb-2" />;
+<p>Analytics Chart</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </motion.div>
 )}
 </AnimatePresence>
+=======
+</motion.div>;
+)}
+</AnimatePresence>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 );

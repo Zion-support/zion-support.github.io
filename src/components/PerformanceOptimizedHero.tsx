@@ -6,7 +6,14 @@ interface HeroStats {
 numbe; r: string;
 labe; l: string;
 ico; n: string;
+<<<<<<< HEAD
 colo; r: string;};
+=======
+colo; r: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const HeroStats = memo<{ stat; s: HeroStats[] }>(({ stats }) => (
 <div className="grid grid-cols-1 m;  d:grid-cols-4 gap-8 max-w-6xl mx-auto">
 {stats.map((sta; t; index) => (<div;
@@ -26,7 +33,11 @@ aria-label={stat.label}
 </div>
 <div className={`absolute inset-0 bg-gradient-to-r ${stat.color} rounded-full blur-xl opacity-0 group-hove; r:opacity-100 transition-opacity duration-30; 0`}></div>
 </div>
+<<<<<<< HEAD
 <div className={`text-4xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparen; t`}>
+=======
+<div className={`text-4xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparen; t`}>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {stat.number}
 </div>
 <div className="text-gray-400 font-medium">{stat.label}</div>
@@ -66,12 +77,21 @@ col; o; r: "fro; m-gree; n-40; 0 t; o-tea; l-40; 0" }
 
 if (!isVisible) {
 return (
+<<<<<<< HEAD
 <section className="relative py-20 px-4 overflow-hidden min-h-[600;  p; x] flex items-center justify-center">
 <div className="text-center">
 <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
 <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
 </div>
 </section>
+=======
+<section className="relative py-20 px-4 overflow-hidden min-h-[600;  p; x] flex items-center justify-center">;
+<div className="text-center">;
+<div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+<p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>;
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 }
 
@@ -146,22 +166,38 @@ className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semi
 aria-label="Get free consultation";
 >;
 Get Free Consultation;
+<<<<<<< HEAD
 </Link>
 </div>
 
 {/* Optimized Stats Component */}
 <HeroStats stats={stats} />
+=======
+</Link>;
+</div>
+
+{/* Optimized Stats Component */}
+<HeroStats stats={stats} />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
 {/* Optimized Floating Elements */}
 {isLoaded && (
+<<<<<<< HEAD
 <>
+=======
+<>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="absolute top-20 right-20 w-2 h-2 bg-cyan-400 rounded-full animate-ping" aria-hidden="true"></div>
 <div className="absolute bottom-32 left-32 w-3 h-3 bg-blue-400 rounded-full animate-pulse" aria-hidden="true"></div>
 <div className="absolute top-1/2 left-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" aria-hidden="true"></div>
 <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-1000" aria-hidden="true"></div>
+<<<<<<< HEAD
 </>
+=======
+</>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </section>
 );

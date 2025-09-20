@@ -1,5 +1,6 @@
 import * as React from &quot;react&quot;
 import * as RadioGroupPrimitive from &quot;@radix-ui/react-radio-group&quot;
+<<<<<<< HEAD
 import { Circle,  } from 'lucide-react'
 import { cn,  } from &quot;@/lib/utils&quot;
 const RadioGroup = React.forwardRef<;
@@ -13,6 +14,20 @@ className={cn(&quot;grid gap-2&quot;, className)}
 ref={ref}
 />
 );
+=======
+import { Circle } from "lucide-react";
+import {cn} from &quot;@/lib/utils&quot;
+const RadioGroup = React.forwardRef<
+  React.ElementRef<typeof RadioGroupPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
+>(({ className, ...props }, ref) => {
+  return (
+    <RadioGroupPrimitive.Root className={cn(&quot;grid gap-2&quot;, className)}
+      {...props}
+      ref={ref}
+    />;
+  );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 });
 RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
 const RadioGroupItem = React.forwardRef<;

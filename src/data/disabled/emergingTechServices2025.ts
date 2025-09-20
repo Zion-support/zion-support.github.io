@@ -14,10 +14,20 @@ benefits: string[];
 targetAudience: string[];
 tags: string[];
 contactInfo: {
+<<<<<<< HEAD
 phone: string;,
 email: string;,
 website: string;,
 address: string;};
+=======
+phone: string;
+email: string;
+website: string;
+address: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 marketPrice: string;
 competitors: string[];
 roi: string;
@@ -27,6 +37,7 @@ freeTier: boolean;
 trialPeriod: string;
 innovationScore: number;
 useCases: string[];
+<<<<<<< HEAD
 compliance: string[];,
 scalability: string;,
 support: string;,
@@ -42,6 +53,23 @@ description: "Comprehensive space technology platform for satellite communicatio
 pricing: "Enterprise";,
 price: 50000;,
 pricingModel: "monthly";,
+=======
+compliance: string[];
+scalability: string;
+support: string;
+futurePotential: string;
+}
+
+export const emergingTechServices2025: EmergingTechService[] = [
+{id: 1;
+name: "Space Technology Platform";
+category: "Space Tech";
+subcategory: "Satellite & Communication";
+description: "Comprehensive space technology platform for satellite communications; Earth observation; and space data analytics",
+pricing: "Enterprise";
+price: 50000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Satellite constellation management";
 "Earth observation data processing",
@@ -70,6 +98,7 @@ targetAudience: [
 ],
 tags: ["Space Tech", "Satellites", "Communication", "Earth Observation", "Space Data", "Global Coverage"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -82,6 +111,20 @@ integrations: ["AWS Ground Station", "Azure Orbital", "GCP Space", "Custom APIs"
 freeTier: false;,
 trialPeriod: "60 days";,
 innovationScore: 99;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$50;000/month (Industry average: $100;000/month)",
+competitors: ["SpaceX Starlink", "OneWeb", "Amazon Project Kuiper", "Telesat"],
+roi: "800% ROI within 18 months";
+setupTime: "6-8 weeks";
+integrations: ["AWS Ground Station", "Azure Orbital", "GCP Space", "Custom APIs"],
+freeTier: false;
+trialPeriod: "60 days";
+innovationScore: 99;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Global internet connectivity";
 "Earth observation and monitoring",
@@ -91,6 +134,7 @@ useCases: [
 "Navigation and positioning";
 ],
 compliance: ["ITAR", "FCC", "NOAA", "Space Force", "International Space Law"],
+<<<<<<< HEAD
 scalability: "Global satellite network";,
 support: "24/7 space operations support";,
 futurePotential: "Mars colonization support; deep space exploration"},
@@ -103,6 +147,20 @@ description: "Advanced biotechnology platform combining AI with genetic engineer
 pricing: "Enterprise";,
 price: 35000;,
 pricingModel: "monthly";,
+=======
+scalability: "Global satellite network";
+support: "24/7 space operations support";
+futurePotential: "Mars colonization support; deep space exploration",
+},
+{id: 2;
+name: "Biotechnology AI Platform";
+category: "Biotechnology";
+subcategory: "AI-Driven Research";
+description: "Advanced biotechnology platform combining AI with genetic engineering; drug discovery; and synthetic biology",
+pricing: "Enterprise";
+price: 35000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered drug discovery";
 "Genetic sequence analysis",
@@ -131,6 +189,7 @@ targetAudience: [
 ],
 tags: ["Biotechnology", "AI", "Drug Discovery", "Genetic Engineering", "Synthetic Biology", "Precision Medicine"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -143,6 +202,20 @@ integrations: ["Lab management systems", "DNA sequencers", "Protein analyzers", 
 freeTier: false;,
 trialPeriod: "45 days";,
 innovationScore: 97;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$35;000/month (Industry average: $70;000/month)",
+competitors: ["Insitro", "Atomwise", "BenevolentAI", "Recursion Pharmaceuticals"],
+roi: "600% ROI within 15 months";
+setupTime: "4-6 weeks";
+integrations: ["Lab management systems", "DNA sequencers", "Protein analyzers", "Cloud platforms"],
+freeTier: false;
+trialPeriod: "45 days";
+innovationScore: 97;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Drug discovery and development";
 "Genetic disease treatment",
@@ -152,6 +225,7 @@ useCases: [
 "Vaccine development";
 ],
 compliance: ["FDA", "EMA", "GMP", "ISO 13485", "HIPAA", "CLIA"],
+<<<<<<< HEAD
 scalability: "Unlimited biological data";,
 support: "Biotechnology expert support";,
 futurePotential: "Human augmentation; synthetic life forms; bio-computing"},
@@ -164,6 +238,20 @@ description: "Revolutionary nanotechnology platform for atomic-scale manufacturi
 pricing: "Enterprise";,
 price: 40000;,
 pricingModel: "monthly";,
+=======
+scalability: "Unlimited biological data";
+support: "Biotechnology expert support";
+futurePotential: "Human augmentation; synthetic life forms; bio-computing",
+},
+{id: 3;
+name: "Nanotechnology Manufacturing Platform";
+category: "Nanotechnology";
+subcategory: "Advanced Manufacturing";
+description: "Revolutionary nanotechnology platform for atomic-scale manufacturing; materials science; and quantum materials",
+pricing: "Enterprise";
+price: 40000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Atomic-scale manufacturing";
 "Quantum materials synthesis",
@@ -192,6 +280,7 @@ targetAudience: [
 ],
 tags: ["Nanotechnology", "Manufacturing", "Quantum Materials", "Atomic Precision", "Materials Science", "Innovation"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -204,6 +293,20 @@ integrations: ["CAD software", "3D printers", "Microscopes", "Analytical instrum
 freeTier: false;,
 trialPeriod: "60 days";,
 innovationScore: 98;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$40;000/month (Industry average: $80;000/month)",
+competitors: ["Nano Dimension", "Nanofabrica", "Carbon", "Desktop Metal"],
+roi: "700% ROI within 16 months";
+setupTime: "5-7 weeks";
+integrations: ["CAD software", "3D printers", "Microscopes", "Analytical instruments"],
+freeTier: false;
+trialPeriod: "60 days";
+innovationScore: 98;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Quantum computer components";
 "Advanced electronics",
@@ -213,18 +316,32 @@ useCases: [
 "Environmental sensors";
 ],
 compliance: ["ISO 9001", "AS9100", "FDA", "CE", "RoHS", "REACH"],
+<<<<<<< HEAD
 scalability: "Atomic-scale precision";,
 support: "Nanotechnology expert support";,
 futurePotential: "Molecular machines; quantum computers; space elevators"},
 {
 id: 4;
+=======
+scalability: "Atomic-scale precision";
+support: "Nanotechnology expert support";
+futurePotential: "Molecular machines; quantum computers; space elevators",
+},
+{id: 4;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "Quantum Internet Platform";
 category: "Quantum Computing";
 subcategory: "Quantum Communication";
 description: "Next-generation quantum internet platform enabling ultra-secure communication and quantum network infrastructure";
+<<<<<<< HEAD
 pricing: "Enterprise";,
 price: 30000;,
 pricingModel: "monthly";,
+=======
+pricing: "Enterprise";
+price: 30000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Quantum key distribution";
 "Quantum entanglement networks",
@@ -253,6 +370,7 @@ targetAudience: [
 ],
 tags: ["Quantum Internet", "Quantum Communication", "Quantum Security", "Quantum Networks", "Encryption", "Future Tech"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -265,6 +383,20 @@ integrations: ["Quantum computers", "Fiber optic networks", "Quantum sensors", "
 freeTier: false;,
 trialPeriod: "45 days";,
 innovationScore: 99;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$30;000/month (Industry average: $60;000/month)",
+competitors: ["Quantum Xchange", "ID Quantique", "Toshiba Quantum", "NTT Quantum"],
+roi: "500% ROI within 14 months";
+setupTime: "4-6 weeks";
+integrations: ["Quantum computers", "Fiber optic networks", "Quantum sensors", "Cloud platforms"],
+freeTier: false;
+trialPeriod: "45 days";
+innovationScore: 99;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Government communications";
 "Financial transactions",
@@ -274,18 +406,32 @@ useCases: [
 "Quantum computing networks";
 ],
 compliance: ["NIST", "FIPS", "FedRAMP", "SOC 2", "ISO 27001"],
+<<<<<<< HEAD
 scalability: "Global quantum network";,
 support: "Quantum internet expert support";,
 futurePotential: "Quantum teleportation; quantum AI networks; interplanetary quantum communication"},
 {
 id: 5;
+=======
+scalability: "Global quantum network";
+support: "Quantum internet expert support";
+futurePotential: "Quantum teleportation; quantum AI networks; interplanetary quantum communication",
+},
+{id: 5;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "Brain-Computer Interface Platform";
 category: "Neural Technology";
 subcategory: "Brain-Machine Interface";
 description: "Advanced brain-computer interface platform enabling direct neural control of devices and AI systems";
+<<<<<<< HEAD
 pricing: "Premium";,
 price: 25000;,
 pricingModel: "monthly";,
+=======
+pricing: "Premium";
+price: 25000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Neural signal processing";
 "Brain activity decoding",
@@ -314,6 +460,7 @@ targetAudience: [
 ],
 tags: ["Brain-Computer Interface", "Neural Technology", "Cognitive Enhancement", "Medical Technology", "Human-AI", "Accessibility"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -326,6 +473,20 @@ integrations: ["EEG devices", "fMRI machines", "AI systems", "Medical devices"],
 freeTier: true;,
 trialPeriod: "30 days";,
 innovationScore: 96;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$25;000/month (Industry average: $50;000/month)",
+competitors: ["Neuralink", "Kernel", "CTRL-labs", "Emotiv"],
+roi: "400% ROI within 12 months";
+setupTime: "3-5 weeks";
+integrations: ["EEG devices", "fMRI machines", "AI systems", "Medical devices"],
+freeTier: true;
+trialPeriod: "30 days";
+innovationScore: 96;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Medical rehabilitation";
 "Prosthetic control",
@@ -335,6 +496,7 @@ useCases: [
 "Cognitive enhancement";
 ],
 compliance: ["FDA", "CE", "ISO 13485", "HIPAA", "GDPR"],
+<<<<<<< HEAD
 scalability: "Unlimited neural interfaces";,
 support: "Neuroscience expert support";,
 futurePotential: "Human consciousness upload; collective intelligence; telepathic communication"},
@@ -347,6 +509,20 @@ description: "Revolutionary fusion energy platform for clean; unlimited energy p
 pricing: "Enterprise";,
 price: 100000;,
 pricingModel: "monthly";,
+=======
+scalability: "Unlimited neural interfaces";
+support: "Neuroscience expert support";
+futurePotential: "Human consciousness upload; collective intelligence; telepathic communication",
+},
+{id: 6;
+name: "Fusion Energy Platform";
+category: "Energy Technology";
+subcategory: "Nuclear Fusion";
+description: "Revolutionary fusion energy platform for clean; unlimited energy production using advanced plasma physics",
+pricing: "Enterprise";
+price: 100000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Plasma confinement systems";
 "Fusion reactor design",
@@ -375,6 +551,7 @@ targetAudience: [
 ],
 tags: ["Fusion Energy", "Clean Energy", "Nuclear Physics", "Plasma Physics", "Sustainability", "Climate Solution"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -387,6 +564,20 @@ integrations: ["Power grids", "Energy storage", "Industrial systems", "Research 
 freeTier: false;,
 trialPeriod: "90 days";,
 innovationScore: 100;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$100;000/month (Industry average: $200;000/month)",
+competitors: ["ITER", "Commonwealth Fusion", "General Fusion", "Helion Energy"],
+roi: "1000% ROI within 24 months";
+setupTime: "8-12 weeks";
+integrations: ["Power grids", "Energy storage", "Industrial systems", "Research facilities"],
+freeTier: false;
+trialPeriod: "90 days";
+innovationScore: 100;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Electricity generation";
 "Industrial power",
@@ -396,6 +587,7 @@ useCases: [
 "Energy security";
 ],
 compliance: ["Nuclear regulations", "Environmental standards", "Safety protocols", "International treaties"],
+<<<<<<< HEAD
 scalability: "Global energy grid";,
 support: "Fusion physics expert support";,
 futurePotential: "Interstellar travel; space colonization; unlimited energy civilization"},
@@ -408,6 +600,20 @@ description: "Comprehensive digital twin platform for creating virtual replicas 
 pricing: "Professional";,
 price: 15000;,
 pricingModel: "monthly";,
+=======
+scalability: "Global energy grid";
+support: "Fusion physics expert support";
+futurePotential: "Interstellar travel; space colonization; unlimited energy civilization",
+},
+{id: 7;
+name: "Digital Twin Platform";
+category: "Digital Technology";
+subcategory: "Virtual Replication";
+description: "Comprehensive digital twin platform for creating virtual replicas of physical systems; processes; and environments",
+pricing: "Professional";
+price: 15000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "3D digital modeling";
 "Real-time data integration",
@@ -436,6 +642,7 @@ targetAudience: [
 ],
 tags: ["Digital Twin", "IoT", "Simulation", "Predictive Analytics", "Virtual Reality", "Smart Cities"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -448,6 +655,20 @@ integrations: ["IoT platforms", "CAD software", "PLM systems", "Cloud platforms"
 freeTier: true;,
 trialPeriod: "30 days";,
 innovationScore: 94;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$15;000/month (Industry average: $30;000/month)",
+competitors: ["Siemens Digital Twin", "GE Digital Twin", "Microsoft Azure Digital Twins", "IBM Digital Twin"],
+roi: "350% ROI within 8 months";
+setupTime: "3-4 weeks";
+integrations: ["IoT platforms", "CAD software", "PLM systems", "Cloud platforms"],
+freeTier: true;
+trialPeriod: "30 days";
+innovationScore: 94;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Manufacturing optimization";
 "Infrastructure monitoring",
@@ -457,6 +678,7 @@ useCases: [
 "Predictive maintenance";
 ],
 compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry-specific standards"],
+<<<<<<< HEAD
 scalability: "Unlimited digital twins";,
 support: "Digital twin expert support";,
 futurePotential: "Metaverse integration; consciousness simulation; parallel universe modeling"},
@@ -469,6 +691,20 @@ description: "Advanced holographic display platform for immersive 3D visualizati
 pricing: "Professional";,
 price: 20000;,
 pricingModel: "monthly";,
+=======
+scalability: "Unlimited digital twins";
+support: "Digital twin expert support";
+futurePotential: "Metaverse integration; consciousness simulation; parallel universe modeling",
+},
+{id: 8;
+name: "Holographic Display Platform";
+category: "Display Technology";
+subcategory: "3D Holography";
+description: "Advanced holographic display platform for immersive 3D visualization; telepresence; and augmented reality",
+pricing: "Professional";
+price: 20000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "True 3D holographic projection";
 "Interactive holographic interfaces",
@@ -497,6 +733,7 @@ targetAudience: [
 ],
 tags: ["Holographic Display", "3D Technology", "Telepresence", "Augmented Reality", "Immersive Tech", "Visualization"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -509,6 +746,20 @@ integrations: ["3D modeling software", "VR platforms", "AR frameworks", "Display
 freeTier: true;,
 trialPeriod: "30 days";,
 innovationScore: 95;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$20;000/month (Industry average: $40;000/month)",
+competitors: ["Looking Glass", "Light Field Lab", "RealView Imaging", "Leia Inc"],
+roi: "450% ROI within 10 months";
+setupTime: "3-4 weeks";
+integrations: ["3D modeling software", "VR platforms", "AR frameworks", "Display systems"],
+freeTier: true;
+trialPeriod: "30 days";
+innovationScore: 95;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "3D visualization";
 "Remote collaboration",
@@ -518,18 +769,32 @@ useCases: [
 "Education and training";
 ],
 compliance: ["Display standards", "Safety regulations", "Accessibility guidelines"],
+<<<<<<< HEAD
 scalability: "Unlimited holographic displays";,
 support: "Holographic technology expert support";,
 futurePotential: "Star Wars-style communication; virtual reality replacement; 3D internet"},
 {
 id: 9;
+=======
+scalability: "Unlimited holographic displays";
+support: "Holographic technology expert support";
+futurePotential: "Star Wars-style communication; virtual reality replacement; 3D internet",
+},
+{id: 9;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "Quantum Sensing Platform";
 category: "Quantum Technology";
 subcategory: "Quantum Sensors";
 description: "Revolutionary quantum sensing platform for ultra-precise measurements and detection capabilities";
+<<<<<<< HEAD
 pricing: "Professional";,
 price: 18000;,
 pricingModel: "monthly";,
+=======
+pricing: "Professional";
+price: 18000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Quantum magnetometers";
 "Quantum gravimeters",
@@ -558,6 +823,7 @@ targetAudience: [
 ],
 tags: ["Quantum Sensing", "Quantum Technology", "Precision Measurement", "Detection", "Scientific Instruments", "Innovation"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -570,6 +836,20 @@ integrations: ["Laboratory equipment", "Research platforms", "Data analysis tool
 freeTier: true;,
 trialPeriod: "45 days";,
 innovationScore: 97;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$18;000/month (Industry average: $35;000/month)",
+competitors: ["Q-CTRL", "Quantum Machines", "Rigetti", "D-Wave"],
+roi: "500% ROI within 12 months";
+setupTime: "4-5 weeks";
+integrations: ["Laboratory equipment", "Research platforms", "Data analysis tools", "Cloud systems"],
+freeTier: true;
+trialPeriod: "45 days";
+innovationScore: 97;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Scientific research";
 "Medical imaging",
@@ -579,6 +859,7 @@ useCases: [
 "Material characterization";
 ],
 compliance: ["Research standards", "Safety protocols", "International standards"],
+<<<<<<< HEAD
 scalability: "Unlimited quantum sensors";,
 support: "Quantum physics expert support";,
 futurePotential: "Quantum internet; quantum computers; quantum communication networks"},
@@ -591,6 +872,20 @@ description: "Comprehensive autonomous systems platform for robotics; drones; ve
 pricing: "Enterprise";,
 price: 25000;,
 pricingModel: "monthly";,
+=======
+scalability: "Unlimited quantum sensors";
+support: "Quantum physics expert support";
+futurePotential: "Quantum internet; quantum computers; quantum communication networks",
+},
+{id: 10;
+name: "Autonomous Systems Platform";
+category: "Robotics";
+subcategory: "Autonomous Intelligence";
+description: "Comprehensive autonomous systems platform for robotics; drones; vehicles; and intelligent automation",
+pricing: "Enterprise";
+price: 25000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Autonomous navigation";
 "Computer vision systems",
@@ -619,6 +914,7 @@ targetAudience: [
 ],
 tags: ["Autonomous Systems", "Robotics", "AI", "Computer Vision", "Automation", "Innovation"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -631,6 +927,20 @@ integrations: ["ROS", "Industrial systems", "Cloud platforms", "IoT networks"],
 freeTier: true;,
 trialPeriod: "30 days";,
 innovationScore: 96;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$25;000/month (Industry average: $50;000/month)",
+competitors: ["Boston Dynamics", "ABB Robotics", "KUKA", "FANUC"],
+roi: "400% ROI within 10 months";
+setupTime: "4-6 weeks";
+integrations: ["ROS", "Industrial systems", "Cloud platforms", "IoT networks"],
+freeTier: true;
+trialPeriod: "30 days";
+innovationScore: 96;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Manufacturing automation";
 "Warehouse operations",
@@ -640,9 +950,16 @@ useCases: [
 "Service robotics";
 ],
 compliance: ["Safety standards", "Industry regulations", "Quality standards"],
+<<<<<<< HEAD
 scalability: "Unlimited autonomous systems";,
 support: "Robotics expert support";,
 futurePotential: "General purpose robots; humanoid robots; swarm intelligence"}
+=======
+scalability: "Unlimited autonomous systems";
+support: "Robotics expert support";
+futurePotential: "General purpose robots; humanoid robots; swarm intelligence",
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ];
 
 export default emergingTechServices2025;

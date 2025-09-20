@@ -28,8 +28,12 @@ setIsSuccess(false)}, 5000);
 } catch (error: any) {
 
 enqueueSnackbar(error?.response?.data?.message || error.message, { variant: "error" });
+<<<<<<< HEAD
 } finally {
 setIsSubmitting(false)}
+=======
+} finally {setIsSubmitting(false)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 return (
@@ -64,10 +68,17 @@ className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-blue-dark font-medium"
 
 <p className="text-sm text-gray-300 mt-4">
 We respect your privacy and will never share your information.;
+<<<<<<< HEAD
 </p>
 </div>
 </div>
 </section>
+=======
+</p>;
+</div>
+</div>
+</section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 );
 };
 <//section><///section>

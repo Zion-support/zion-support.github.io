@@ -20,8 +20,7 @@ export const useAnalytics = (config = {}) => {
         };
     }, [enableTracking]);
     // Initialize user session;
-    const initializeSession = useCallback(() => {
-        const sessionId = generateSessionId();
+    const initializeSession = useCallback(() => {const sessionId = generateSessionId();
         sessionRef.current = sessionId;
         const session = {
             id: sessionId;
@@ -85,8 +84,7 @@ export const useAnalytics = (config = {}) => {
         updateSessionActivity();
     }, [isTracking, currentSession]);
     // Track page view;
-    const trackPageView = useCallback(() => {
-        if (!isTracking || !currentSession)
+    const trackPageView = useCallback(() => {if (!isTracking || !currentSession)
             return;
         const event = {
             id: generateEventId();
@@ -106,8 +104,7 @@ export const useAnalytics = (config = {}) => {
     updateSessionActivity();
     }, [isTracking, currentSession]);
     // Track performance metrics;
-    const trackPerformanceMetrics = useCallback(async () => {
-        if (!enablePerformanceTracking)
+    const trackPerformanceMetrics = useCallback(async () => {if (!enablePerformanceTracking)
             return;
         try {
             // Wait for performance metrics to be available;
@@ -138,8 +135,7 @@ export const useAnalytics = (config = {}) => {
             const className = target.className;
             const id = target.id;
             const text = target.textContent?.slice(0, 50);
-            trackEvent('interaction', 'click', `${tagName}_clicked`, undefined, {
-                tagName,
+            trackEvent('interaction', 'click', `${tagName}_clicked`, undefined, {tagName,
                 className,
                 id,
                 text,
@@ -177,8 +173,7 @@ export const useAnalytics = (config = {}) => {
         };
     }, []);
     // Setup heatmap tracking;
-    const setupHeatmapTracking = useCallback(() => {
-        if (!enableHeatmapTracking)
+    const setupHeatmapTracking = useCallback(() => {if (!enableHeatmapTracking)
             return;
         // Track mouse movements for heatmap;
         let moveTimeout;
@@ -309,13 +304,16 @@ const getDeviceInfo = () => {
     if (/Mobile|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
         deviceType = /iPad|Android(?=.*\bMobile\b)|Tablet/i.test(userAgent) ? 'tablet' : 'mobile';
     }
-    return {
-        type: deviceType;
+    return {type: deviceType;
         screen: {
             width: window.screen.width;
             height: window.screen.height};
+<<<<<<< HEAD
         viewport: {
             width: window.innerWidth;
+=======
+        viewport: {width: window.innerWidth;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             height: window.innerHeight}
     };
 };

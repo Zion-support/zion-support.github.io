@@ -1,8 +1,7 @@
 // Enhanced real micro SAAS services and solutions;
 export const ENHANCED_SERVICES = [
     // AI & Machine Learning Services;
-    {
-        id: "ai-automation-suite";
+    {id: "ai-automation-suite";
         title: "AI Process Automation Suite";
         description: "Complete workflow automation solution using AI to streamline business processes, reduce manual tasks by 80%, and increase operational efficiency. Includes process mapping, RPA integration, and analytics dashboard.",
         category: "AI Automation";
@@ -21,9 +20,15 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "2-3 Weeks";
+<<<<<<< HEAD
         aiScore: 96};
     {
         id: "ai-customer-insights";
+=======
+        aiScore: 96,
+    };
+    {id: "ai-customer-insights";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "AI-Powered Customer Insights Platform";
         description: "Advanced customer behavior analysis using machine learning to predict churn, identify upsell opportunities, and personalize customer experiences. Integrates with CRM systems and provides actionable recommendations.",
         category: "Customer Analytics";
@@ -40,9 +45,15 @@ export const ENHANCED_SERVICES = [
         reviewCount: 89;
         location: "Global";
         availability: "1-2 Weeks";
+<<<<<<< HEAD
         aiScore: 93};
     {
         id: "ai-content-optimization";
+=======
+        aiScore: 93,
+    };
+    {id: "ai-content-optimization";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "AI Content Optimization Engine";
         description: "Intelligent content optimization tool that analyzes and improves SEO, readability, and engagement metrics. Uses NLP to suggest improvements, keyword optimization, and content structure recommendations.",
         category: "Content Marketing";
@@ -61,8 +72,7 @@ export const ENHANCED_SERVICES = [
         availability: "Immediate";
         aiScore: 91};
     // Cloud & Infrastructure Services;
-    {
-        id: "multi-cloud-orchestration";
+    {id: "multi-cloud-orchestration";
         title: "Multi-Cloud Orchestration Platform";
         description: "Unified management platform for AWS, Azure, and Google Cloud with automated cost optimization, security compliance monitoring, and disaster recovery orchestration. Reduces cloud costs by 25-40%.",
         category: "Cloud Management";
@@ -80,9 +90,15 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "3-4 Weeks";
+<<<<<<< HEAD
         aiScore: 94};
     {
         id: "edge-computing-solution";
+=======
+        aiScore: 94,
+    };
+    {id: "edge-computing-solution";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "Edge Computing Infrastructure Solution";
         description: "Distributed edge computing platform for IoT devices, reducing latency and bandwidth costs. Includes edge node management, data processing, and real-time analytics capabilities.",
         category: "Edge Computing";
@@ -101,8 +117,7 @@ export const ENHANCED_SERVICES = [
         availability: "4-6 Weeks";
         aiScore: 92};
     // Cybersecurity Services;
-    {
-        id: "ai-threat-detection";
+    {id: "ai-threat-detection";
         title: "AI-Powered Threat Detection System";
         description: "Next-generation cybersecurity platform using machine learning to detect and respond to threats in real-time. Includes behavioral analysis, anomaly detection, and automated incident response.",
         category: "Cybersecurity";
@@ -120,9 +135,15 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "3-4 Weeks";
+<<<<<<< HEAD
         aiScore: 95};
     {
         id: "zero-trust-security";
+=======
+        aiScore: 95,
+    };
+    {id: "zero-trust-security";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "Zero Trust Security Implementation";
         description: "Complete zero trust security framework implementation including identity verification, device trust scoring, and continuous monitoring. Reduces security breaches by 90% and simplifies compliance.",
         category: "Security Framework";
@@ -141,8 +162,7 @@ export const ENHANCED_SERVICES = [
         availability: "6-8 Weeks";
         aiScore: 93};
     // Data & Analytics Services;
-    {
-        id: "real-time-data-pipeline";
+    {id: "real-time-data-pipeline";
         title: "Real-Time Data Pipeline Platform";
         description: "Streaming data processing platform for real-time analytics, event processing, and data integration. Supports Apache Kafka, Apache Flink, and provides real-time dashboards and alerts.",
         category: "Data Engineering";
@@ -159,9 +179,15 @@ export const ENHANCED_SERVICES = [
         reviewCount: 89;
         location: "Global";
         availability: "2-3 Weeks";
+<<<<<<< HEAD
         aiScore: 90};
     {
         id: "predictive-maintenance-ai";
+=======
+        aiScore: 90,
+    };
+    {id: "predictive-maintenance-ai";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "AI-Powered Predictive Maintenance";
         description: "Machine learning solution for predicting equipment failures and optimizing maintenance schedules. Reduces downtime by 60% and maintenance costs by 40% through intelligent scheduling.";
         category: "Predictive Analytics";
@@ -180,8 +206,7 @@ export const ENHANCED_SERVICES = [
         availability: "4-5 Weeks";
         aiScore: 92};
     // Business Intelligence & Reporting;
-    {
-        id: "ai-business-intelligence";
+    {id: "ai-business-intelligence";
         title: "AI-Enhanced Business Intelligence Suite";
         description: "Advanced BI platform with natural language querying, automated insights generation, and predictive analytics. Includes customizable dashboards, automated reporting, and mobile access.",
         category: "Business Intelligence";
@@ -201,8 +226,7 @@ export const ENHANCED_SERVICES = [
         availability: "1-2 Weeks";
         aiScore: 94};
     // Development & DevOps Services;
-    {
-        id: "ai-code-review";
+    {id: "ai-code-review";
         title: "AI-Powered Code Review Assistant";
         description: "Intelligent code review tool that analyzes code quality, security vulnerabilities, and performance issues. Integrates with GitHub, GitLab, and provides detailed recommendations and automated fixes.",
         category: "Developer Tools";
@@ -219,9 +243,15 @@ export const ENHANCED_SERVICES = [
         reviewCount: 234;
         location: "Global";
         availability: "Immediate";
+<<<<<<< HEAD
         aiScore: 93};
     {
         id: "devops-automation";
+=======
+        aiScore: 93,
+    };
+    {id: "devops-automation";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "DevOps Automation Platform";
         description: "Complete CI/CD automation platform with infrastructure as code, automated testing, deployment orchestration, and monitoring. Reduces deployment time by 80% and improves reliability.",
         category: "DevOps";
@@ -240,8 +270,7 @@ export const ENHANCED_SERVICES = [
         availability: "2-3 Weeks";
         aiScore: 91};
     // Digital Transformation Services;
-    {
-        id: "digital-transformation-consulting";
+    {id: "digital-transformation-consulting";
         title: "Digital Transformation Strategy & Implementation";
         description: "End-to-end digital transformation consulting including strategy development, technology assessment, change management, and implementation support. Helps businesses modernize operations and improve customer experience.",
         category: "Digital Transformation";
@@ -261,8 +290,7 @@ export const ENHANCED_SERVICES = [
         availability: "8-12 Weeks";
         aiScore: 95};
     // Industry-Specific Solutions;
-    {
-        id: "healthcare-ai-platform";
+    {id: "healthcare-ai-platform";
         title: "Healthcare AI Analytics Platform";
         description: "HIPAA-compliant AI platform for healthcare analytics, patient outcome prediction, and operational optimization. Includes clinical decision support, resource allocation, and compliance monitoring.",
         category: "Healthcare Technology";
@@ -279,9 +307,15 @@ export const ENHANCED_SERVICES = [
         reviewCount: 34;
         location: "Global";
         availability: "6-8 Weeks";
+<<<<<<< HEAD
         aiScore: 94};
     {
         id: "fintech-compliance-ai";
+=======
+        aiScore: 94,
+    };
+    {id: "fintech-compliance-ai";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "FinTech Compliance & Fraud Detection AI";
         description: "AI-powered financial compliance monitoring and fraud detection system. Includes AML screening, KYC verification, transaction monitoring, and regulatory reporting automation.",
         category: "Financial Technology";
@@ -300,8 +334,7 @@ export const ENHANCED_SERVICES = [
         availability: "4-6 Weeks";
         aiScore: 93};
     // Emerging Technology Services;
-    {
-        id: "blockchain-enterprise";
+    {id: "blockchain-enterprise";
         title: "Enterprise Blockchain Solutions";
         description: "Custom blockchain development for supply chain transparency, smart contracts, and decentralized applications. Includes private blockchain networks, smart contract development, and integration services.",
         category: "Blockchain";
@@ -319,9 +352,15 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "8-12 Weeks";
+<<<<<<< HEAD
         aiScore: 95};
     {
         id: "quantum-computing-readiness";
+=======
+        aiScore: 95,
+    };
+    {id: "quantum-computing-readiness";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: "Quantum Computing Readiness Assessment";
         description: "Comprehensive assessment of business readiness for quantum computing adoption. Includes use case identification, technology evaluation, and implementation roadmap for quantum advantage.",
         category: "Quantum Computing";
@@ -361,8 +400,7 @@ export const SERVICE_PRICING_TIERS = {
     enterprise: { range: "$8,000 - $25,000+", description: "Custom enterprise solutions with dedicated support" }
 };
     // Contact information;
-export const CONTACT_INFO = {
-    mobile: "+1 302 464 0950";
+export const CONTACT_INFO = {mobile: "+1 302 464 0950";
     email: "kleber@ziontechgroup.com";
     address: "364 E Main St STE 1008 Middletown DE 19709";
     website: "https://ziontechgroup.com"};

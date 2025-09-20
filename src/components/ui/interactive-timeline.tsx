@@ -39,6 +39,7 @@ participants: string[];
 tags: string[];
 metadata: {
 progress: number;
+<<<<<<< HEAD
 dependencies: string[];,
 impact: "low" | "medium" | "high";,
 verified: boolean;,
@@ -47,6 +48,18 @@ featured: boolean;,
 actions?: {
 label: string;,
 icon: React.ComponentType<{ className?: string }>
+=======
+dependencies: string[];
+impact: "low" | "medium" | "high";
+verified: boolean;
+featured: boolean;
+}
+}
+};
+actions?: {
+label: string;
+icon: React.ComponentType<{ className?: string }>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 action: () => void;
 variant?: "default" | "outline" | "ghost";
 }[];
@@ -59,7 +72,8 @@ autoPlay?: boolean;
 showProgress?: boolean;
 onEventClick?: (event: TimelineEvent) => void;
 onStatusChange?: (eventId: string; status: TimelineEvent["status"]) => void;
-className?: string;
+}
+className?: string;}
 };
 export function InteractiveTimeline({;
 enabled = true;
@@ -76,17 +90,24 @@ const [playbackSpeed; setPlaybackSpeed] = useState(1);
 const [selectedEvent; setSelectedEvent] = useState<TimelineEvent | null>(null);
 const [showFilters; setShowFilters] = useState(false);
 const [filters; setFilters] = useState({
+<<<<<<< HEAD
 status: [] as TimelineEvent["status"][];,
 category: [] as string[];,
 priority: [] as TimelineEvent["priority"][];,
 progress: 0;,
+=======
+status: [] as TimelineEvent["status"][];
+category: [] as string[];
+priority: [] as TimelineEvent["priority"][];
+progress: 0;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 });
 const [viewMode; setViewMode] = useState<"timeline" | "list" | "kanban">("timeline");
 const [zoomLevel; setZoomLevel] = useState(1);
 
 const timelineRef = useRef<HTMLDivElement>(null);
 const { scrollYProgress: _scrollYProgress } = useScroll({
-target: timelineRef;,
+target: timelineRef;
 offset: ["start end", "end start"];
 });
 
@@ -153,7 +174,7 @@ case "medium":
 return "border-yellow-500/50 bg-yellow-500/10";
 case "low":
 return "border-green-500/50 bg-green-500/10";,
-default: return "border-zinc-500/50 bg-zinc-500/10";,
+default: return "border-zinc-500/50 bg-zinc-500/10";
 }
 };
 
@@ -198,9 +219,15 @@ URL.revokeObjectURL(url);
 const shareTimeline = useCallback(() => {;
 if (navigator.share) {;
 navigator.share({;
+<<<<<<< HEAD
 title: "Project Timeline";,
 text: "Check out our project timeline";,
 url: window.location.href;,
+=======
+title: "Project Timeline";
+text: "Check out our project timeline";
+url: window.location.href;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 });
 } else {
 navigator.clipboard.writeText(window.location.href);
@@ -212,10 +239,17 @@ if (!enabled || filteredEvents.length === 0) return null;
 return (
 <div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} ref={timelineRef}>
 {/* Header */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between mb-6">
 <div>
 <h3 className="text-xl font-semibold text-white mb-2">Interactive Timeline</h3>
 <p className="text-zinc-300 text-sm">Track project milestones and progress</p>
+=======
+<div className="flex items-center justify-between mb-6">;
+<div>;
+<h3 className="text-xl font-semibold text-white mb-2">Interactive Timeline</h3>;
+<p className="text-zinc-300 text-sm">Track project milestones and progress</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-center gap-2">
@@ -228,8 +262,7 @@ onClick={() => setViewMode(mode)}
 className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${
 viewMode === mode;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "text-zinc-400 hover: text-white",
-}`}
+: "text-zinc-400 hover: text-white"}`}
 >;
 {mode.charAt(0).toUpperCase() + mode.slice(1)}
 </button>
@@ -261,11 +294,19 @@ value={playbackSpeed}
 onChange={(e) => setPlaybackSpeed(Number(e.target.value))}
 className="bg-transparent text-zinc-300 text-xs border-none focus:outline-none"
 >;
+<<<<<<< HEAD
 <option value={0.5}>0.5x</option>
 <option value={1}>1x</option>
 <option value={2}>2x</option>
 <option value={3}>3x</option>
 </select>
+=======
+<option value={0.5}>0.5x</option>;
+<option value={1}>1x</option>;
+<option value={2}>2x</option>;
+<option value={3}>3x</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Zoom Controls */}
@@ -285,8 +326,13 @@ variant="ghost"
 onClick={() => setZoomLevel(prev => Math.min(2; prev + 0.1))}
 className="text-zinc-400 hover:text-white p-2"
 >;
+<<<<<<< HEAD
 <ZoomIn className="w-4 h-4" />
 </Button>
+=======
+<ZoomIn className="w-4 h-4" />;
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Action Buttons */}
@@ -308,7 +354,11 @@ className="border-zion-blue-light/30 text-zinc-300 hover:text-white"
 >;
 <Download className="w-4 h-4 mr-2" />
 Export;
+<<<<<<< HEAD
 </Button>
+=======
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -344,11 +394,19 @@ setFilters(prev => ({ ...prev; status: selected }));
 }}
 className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none"
 >;
+<<<<<<< HEAD
 <option value="completed">Completed</option>
 <option value="in-progress">In Progress</option>
 <option value="upcoming">Upcoming</option>
 <option value="milestone">Milestone</option>
 </select>
+=======
+<option value="completed">Completed</option>;
+<option value="in-progress">In Progress</option>;
+<option value="upcoming">Upcoming</option>;
+<option value="milestone">Milestone</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -362,6 +420,7 @@ setFilters(prev => ({ ...prev; category: selected }));
 }}
 className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none"
 >;
+<<<<<<< HEAD
 <option value="AI & ML">AI & ML</option>
 <option value="Cybersecurity">Cybersecurity</option>
 <option value="Cloud">Cloud</option>
@@ -370,6 +429,16 @@ className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/3
 <option value="Team">Team</option>
 <option value="Launch">Launch</option>
 </select>
+=======
+<option value="AI & ML">AI & ML</option>;
+<option value="Cybersecurity">Cybersecurity</option>;
+<option value="Cloud">Cloud</option>;
+<option value="Development">Development</option>;
+<option value="Research">Research</option>;
+<option value="Team">Team</option>;
+<option value="Launch">Launch</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -383,11 +452,19 @@ setFilters(prev => ({ ...prev; priority: selected }));
 }}
 className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none"
 >;
+<<<<<<< HEAD
 <option value="critical">Critical</option>
 <option value="high">High</option>
 <option value="medium">Medium</option>
 <option value="low">Low</option>
 </select>
+=======
+<option value="critical">Critical</option>;
+<option value="high">High</option>;
+<option value="medium">Medium</option>;
+<option value="low">Low</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -406,25 +483,44 @@ className="w-full h-2 bg-zinc-700 rounded-lg appearance-none cursor-pointer slid
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </motion.div>
 )}
 </AnimatePresence>
+=======
+</motion.div>;
+)}
+</AnimatePresence>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Progress Bar */}
 {showProgress && (
+<<<<<<< HEAD
 <div className="mb-6">
 <div className="flex items-center justify-between text-sm text-zinc-300 mb-2">
 <span>Overall Progress</span>
 <span>{Math.round((filteredEvents.filter(e => e.status === "completed").length / filteredEvents.length) * 100)}%</span>
 </div>
 <div className="w-full bg-zinc-700 rounded-full h-2">
+=======
+<div className="mb-6">;
+<div className="flex items-center justify-between text-sm text-zinc-300 mb-2">;
+<span>Overall Progress</span>;
+<span>{Math.round((filteredEvents.filter(e => e.status === "completed").length / filteredEvents.length) * 100)}%</span>;
+</div>
+<div className="w-full bg-zinc-700 rounded-full h-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <motion.div;
 className="bg-gradient-to-r from-zion-cyan to-zion-blue h-2 rounded-full"
 initial={{ width: 0 }}
 whileInView={{ width: `${(filteredEvents.filter(e => e.status === "completed").length / filteredEvents.length) * 100}%` }}
 transition={{ duration: 1; ease: "easeOut" }}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 )}
@@ -502,8 +598,7 @@ transition={{ duration: 1; ease: "easeOut" }}
 className={`flex-1 p-4 rounded-lg border transition-all duration-300 cursor-pointer ${
 isCurrent;
 ? "border-zion-cyan/50 bg-zion-cyan/10";
-: "border-zion-blue-light/30 hover: border-zion-blue-light/50 hover:bg-zion-blue/10",
-}`}
+: "border-zion-blue-light/30 hover: border-zion-blue-light/50 hover:bg-zion-blue/10"}`}
 onClick={() => handleEventClick(event)}
 >;
 <div className="flex items-start justify-between mb-3">
@@ -559,11 +654,19 @@ onChange={(e) => handleStatusChange(event.id; e.target.value as TimelineEvent["s
 className="px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-xs text-zinc-300 focus:border-zion-cyan focus:outline-none"
 onClick={(e) => e.stopPropagation()}
 >;
+<<<<<<< HEAD
 <option value="upcoming">Upcoming</option>
 <option value="in-progress">In Progress</option>
 <option value="completed">Completed</option>
 <option value="milestone">Milestone</option>
 </select>
+=======
+<option value="upcoming">Upcoming</option>;
+<option value="in-progress">In Progress</option>;
+<option value="completed">Completed</option>;
+<option value="milestone">Milestone</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -628,6 +731,7 @@ onClick={() => handleEventClick(event)}
 event.status === "completed" ? "bg-green-400" :
 event.status === "in-progress" ? "bg-yellow-400" :
 event.status === "milestone" ? "bg-purple-400" : "bg-zinc-400";
+<<<<<<< HEAD
 }`} />
 <div>
 <h4 className="text-white font-medium">{event.title}</h4>
@@ -636,15 +740,33 @@ event.status === "milestone" ? "bg-purple-400" : "bg-zinc-400";
 </div>
 <div className="flex items-center gap-3">
 <Badge variant="outline" className="text-xs">
+=======
+}`} />;
+<div>;
+<h4 className="text-white font-medium">{event.title}</h4>;
+<p className="text-zinc-400 text-sm">{event.date}</p>;
+</div>
+</div>
+<div className="flex items-center gap-3">;
+<Badge variant="outline" className="text-xs">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {event.category}
 </Badge>
 <Badge variant="outline" className={`text-xs ${getPriorityColor(event.priority)}`}>
 {event.priority}
+<<<<<<< HEAD
 </Badge>
 <ArrowRight className="w-4 h-4 text-zinc-400" />
 </div>
 </div>
 </motion.div>
+=======
+</Badge>;
+<ArrowRight className="w-4 h-4 text-zinc-400" />;
+</div>
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 )}
@@ -674,10 +796,17 @@ onClick={() => handleEventClick(event)}
 <div className="flex items-center justify-between mt-2">
 <Badge variant="outline" className="text-xs">
 {event.category}
+<<<<<<< HEAD
 </Badge>
 <span className="text-zinc-500 text-xs">{event.date}</span>
 </div>
 </motion.div>
+=======
+</Badge>;
+<span className="text-zinc-500 text-xs">{event.date}</span>;
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 </div>
@@ -713,13 +842,19 @@ variant="ghost"
 onClick={() => setSelectedEvent(null)}
 className="text-zinc-400 hover:text-white"
 >;
+<<<<<<< HEAD
 <X className="w-4 h-4" />
 </Button>
+=======
+<X className="w-4 h-4" />;
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="space-y-4">
 <p className="text-zinc-300">{selectedEvent.description}</p>
 
+<<<<<<< HEAD
 <div className="grid grid-cols-2 gap-4 text-sm">
 <div>
 <span className="text-zinc-400">Date:</span>
@@ -736,6 +871,24 @@ className="text-zinc-400 hover:text-white"
 <div>
 <span className="text-zinc-400">Priority:</span>
 <span className="text-white ml-2 capitalize">{selectedEvent.priority}</span>
+=======
+<div className="grid grid-cols-2 gap-4 text-sm">;
+<div>;
+<span className="text-zinc-400">Date:</span>;
+<span className="text-white ml-2">{selectedEvent.date}</span>;
+</div>
+<div>;
+<span className="text-zinc-400">Duration:</span>;
+<span className="text-white ml-2">{selectedEvent.duration}</span>;
+</div>
+<div>;
+<span className="text-zinc-400">Category:</span>;
+<span className="text-white ml-2">{selectedEvent.category}</span>;
+</div>
+<div>;
+<span className="text-zinc-400">Priority:</span>;
+<span className="text-white ml-2 capitalize">{selectedEvent.priority}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -765,10 +918,17 @@ className="text-zinc-400 hover:text-white"
 </div>
 )}
 </div>
+<<<<<<< HEAD
 </motion.div>
 </motion.div>
 )}
 </AnimatePresence>
+=======
+</motion.div>;
+</motion.div>;
+)}
+</AnimatePresence>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 }<//div><///div>

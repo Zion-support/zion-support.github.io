@@ -1,6 +1,5 @@
 export const enhancedITInfrastructureServices2025 = [
-    {
-        id: 201;
+    {id: 201;
         name: "Zero-Trust Network Architecture";
         category: "Network Security";
         subcategory: "Zero-Trust Security";
@@ -42,8 +41,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 dedicated support team";
         certifications: ["CISSP", "CISM", "CCSP", "NIST", "ISO 27001"]
     },
-    {
-        id: 202;
+    {id: 202;
         name: "Hyperconverged Infrastructure Pro";
         category: "Infrastructure";
         subcategory: "Hyperconvergence";
@@ -85,8 +83,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 technical support";
         certifications: ["VMware", "Microsoft", "Red Hat", "AWS", "Azure"]
     },
-    {
-        id: 203;
+    {id: 203;
         name: "5G Private Network Solutions";
         category: "Wireless Infrastructure";
         subcategory: "5G Networks";
@@ -128,8 +125,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 network operations center";
         certifications: ["3GPP", "5G Americas", "GSMA", "IEEE"]
     },
-    {
-        id: 204;
+    {id: 204;
         name: "Quantum-Ready Data Center";
         category: "Data Center";
         subcategory: "Quantum Computing";
@@ -171,8 +167,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 research support team";
         certifications: ["Quantum Computing", "Research", "Academic", "Government"]
     },
-    {
-        id: 205;
+    {id: 205;
         name: "Edge Computing Fabric";
         category: "Edge Computing";
         subcategory: "Distributed Infrastructure";
@@ -214,8 +209,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 edge operations support";
         certifications: ["Kubernetes", "Docker", "IoT", "Edge Computing"]
     },
-    {
-        id: 206;
+    {id: 206;
         name: "Sustainable Green Data Center";
         category: "Data Center";
         subcategory: "Sustainability";
@@ -257,8 +251,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 green operations support";
         certifications: ["LEED", "Energy Star", "ISO 14001", "Green Building Council"]
     },
-    {
-        id: 207;
+    {id: 207;
         name: "AI-Powered IT Operations";
         category: "IT Operations";
         subcategory: "AI Operations";
@@ -300,8 +293,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 AI operations support";
         certifications: ["ITIL", "ISO 20000", "AI Operations", "Machine Learning"]
     },
-    {
-        id: 208;
+    {id: 208;
         name: "Blockchain Infrastructure Platform";
         category: "Blockchain";
         subcategory: "Infrastructure";
@@ -343,8 +335,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 blockchain support";
         certifications: ["Blockchain", "Smart Contracts", "Cryptocurrency", "Web3"]
     },
-    {
-        id: 209;
+    {id: 209;
         name: "IoT Infrastructure Management";
         category: "IoT";
         subcategory: "Infrastructure";
@@ -386,8 +377,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 IoT support";
         certifications: ["IoT", "Edge Computing", "Device Management", "Data Analytics"]
     },
-    {
-        id: 210;
+    {id: 210;
         name: "Hybrid Cloud Orchestration";
         category: "Cloud Computing";
         subcategory: "Hybrid Cloud";

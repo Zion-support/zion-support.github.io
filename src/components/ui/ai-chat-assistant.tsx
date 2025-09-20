@@ -17,14 +17,21 @@ import { Button } from "./button, ";
 
 interface ChatMessage {
 id: string;
+<<<<<<< HEAD
 type: "user" | "assistant";,
 content: string;,
 timestamp: Date;,
+=======
+type: "user" | "assistant";
+content: string;
+timestamp: Date;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 status: "sending" | "sent" | "error";
 metadata?: {
 confidence?: number;
 suggestions?: string[];
-relatedTopics?: string[];
+}
+relatedTopics?: string[];}
 };
 }
 
@@ -32,7 +39,14 @@ interface AIChatAssistantProps {
 enabled?: boolean;
 className?: string;
 onMessageSend?: (message: string) => void;
+<<<<<<< HEAD
 onAssistantResponse?: (response: string) => void;};
+=======
+onAssistantResponse?: (response: string) => void;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 export function AIChatAssistant({ ;
 enabled = true;
 className = "",
@@ -45,6 +59,7 @@ const [isRecording, setIsRecording] = useState(false);
 const [showSettings, setShowSettings] = useState(false);
 const [messages, setMessages] = useState<ChatMessage[]>([
 {
+<<<<<<< HEAD
 id: "1";,
 type: "assistant";,
 content: "Hello! I\"m Zion AI Assistant. I can help you with technology solutions; business insights; and answer any questions about our services. How can I assist you today?",
@@ -52,6 +67,15 @@ timestamp: new Date();
 status: "sent";,
 metadata: {,
 confidence: 0.95;,
+=======
+id: "1";
+type: "assistant";
+content: "Hello! I\"m Zion AI Assistant. I can help you with technology solutions; business insights; and answer any questions about our services. How can I assist you today?",
+timestamp: new Date();
+status: "sent";
+metadata: {
+confidence: 0.95;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 suggestions: ["Tell me about your AI services", "What cloud solutions do you offer?", "How can I get started?"];
 }
 }
@@ -119,10 +143,18 @@ id: Date.now().toString();
 type: "assistant";
 content: randomResponse.content;
 timestamp: new Date();
+<<<<<<< HEAD
 status: "sent";,
 metadata: {,
 confidence: 0.85 + Math.random() * 0.1;,
 suggestions: randomResponse.suggestions;}
+=======
+status: "sent";
+metadata: {
+confidence: 0.85 + Math.random() * 0.1;
+suggestions: randomResponse.suggestions;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 setMessages(prev => [...prev; aiMessage]);
 setIsTyping(false);
@@ -138,9 +170,15 @@ if (!inputValue.trim() || isTyping) return;
 
 const userMessage: ChatMessage = {
 id: Date.now().toString();
+<<<<<<< HEAD
 type: "user";,
 content: inputValue.trim();,
 timestamp: new Date();,
+=======
+type: "user";
+content: inputValue.trim();
+timestamp: new Date();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 status: "sending"};
 setMessages(prev => [...prev; userMessage]);
 onMessageSend?.(userMessage.content);
@@ -216,6 +254,7 @@ exit={{ opacity: 0; y: 20; scale: 0.95 }}
 transition={{ duration: 0.3; ease: "easeOut" }}
 >;
 {/* Header */}
+<<<<<<< HEAD
 <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30 bg-zion-blue/20">
 <div className="flex items-center gap-3">
 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
@@ -228,6 +267,20 @@ transition={{ duration: 0.3; ease: "easeOut" }}
 <span className="text-zinc-400 text-xs">
 {isTyping ? "Typing..." : "Online"}
 </span>
+=======
+<div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30 bg-zion-blue/20">;
+<div className="flex items-center gap-3">;
+<div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
+<Bot className="w-5 h-5 text-white" />;
+</div>
+<div>;
+<h3 className="text-white font-semibold">Zion AI Assistant</h3>;
+<div className="flex items-center gap-2">;
+<div className={`w-2 h-2 rounded-full ${isTyping ? "bg-zion-cyan animate-pulse" : "bg-green-400"}`} />;
+<span className="text-zinc-400 text-xs">;
+{isTyping ? "Typing..." : "Online"}
+</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -255,8 +308,13 @@ variant="ghost"
 onClick={() => setIsOpen(false)}
 className="text-zinc-400 hover:text-white p-2"
 >;
+<<<<<<< HEAD
 <X className="w-4 h-4" />
 </Button>
+=======
+<X className="w-4 h-4" />;
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -280,10 +338,17 @@ onClick={toggleVoiceInput}
 className={`p-2 ${isRecording ? "text-zion-cyan" : "text-zinc-400"}`}
 >;
 {isRecording ? <Mic className="w-4 h-4" /> : <MicOff className="w-4 h-4" />}
+<<<<<<< HEAD
 </Button>
 </div>
 <div className="flex items-center justify-between">
 <span className="text-zinc-300 text-sm">Clear Chat</span>
+=======
+</Button>;
+</div>
+<div className="flex items-center justify-between">;
+<span className="text-zinc-300 text-sm">Clear Chat</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <Button;
 size="sm";
 variant="ghost"
@@ -291,10 +356,17 @@ onClick={clearChat}
 className="text-zinc-400 hover:text-red-400 p-2"
 >;
 Clear;
+<<<<<<< HEAD
 </Button>
 </div>
 </div>
 </motion.div>
+=======
+</Button>;
+</div>
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 
@@ -310,8 +382,13 @@ animate={{ opacity: 1; y: 0 }}
 transition={{ duration: 0.3 }}
 >;
 {message.type === "assistant" && (
+<<<<<<< HEAD
 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center flex-shrink-0">
 <Bot className="w-5 h-5 text-white" />
+=======
+<div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center flex-shrink-0">;
+<Bot className="w-5 h-5 text-white" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 
@@ -320,8 +397,13 @@ transition={{ duration: 0.3 }}
 message.type === "user";
 ? "bg-zion-purple text-white";
 : "bg-zion-blue/20 text-zinc-200";
+<<<<<<< HEAD
 }`}>
 <p className="text-sm leading-relaxed">{message.content}</p>
+=======
+}`}>;
+<p className="text-sm leading-relaxed">{message.content}</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Message metadata */}
@@ -329,9 +411,15 @@ message.type === "user";
 <div className="mt-2 space-y-2">
 {/* Confidence score */}
 {message.metadata.confidence && (
+<<<<<<< HEAD
 <div className="flex items-center gap-2 text-xs text-zinc-400">
 <Brain className="w-3 h-3" />
 <span>Confidence: {(message.metadata.confidence * 100).toFixed(0)}%</span>
+=======
+<div className="flex items-center gap-2 text-xs text-zinc-400">;
+<Brain className="w-3 h-3" />;
+<span>Confidence: {(message.metadata.confidence * 100).toFixed(0)}%</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 
@@ -359,8 +447,13 @@ className="px-2 py-1 bg-zion-blue/30 hover:bg-zion-blue/50 border border-zion-bl
 </div>
 
 {message.type === "user" && (
+<<<<<<< HEAD
 <div className="w-8 h-8 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center flex-shrink-0">
 <User className="w-5 h-5 text-white" />
+=======
+<div className="w-8 h-8 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center flex-shrink-0">;
+<User className="w-5 h-5 text-white" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </motion.div>
@@ -374,6 +467,7 @@ initial={{ opacity: 0; y: 10 }}
 animate={{ opacity: 1; y: 0 }}
 transition={{ duration: 0.3 }}
 >;
+<<<<<<< HEAD
 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
 <Bot className="w-5 h-5 text-white" />
 </div>
@@ -388,6 +482,22 @@ transition={{ duration: 0.3 }}
 )}
 
 <div ref={messagesEndRef} />
+=======
+<div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
+<Bot className="w-5 h-5 text-white" />;
+</div>
+<div className="p-3 rounded-lg bg-zion-blue/20">;
+<div className="flex items-center gap-1">;
+<div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" />;
+<div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: "0.1s" }} />;
+<div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: "0.2s" }} />;
+</div>
+</div>
+</motion.div>;
+)}
+
+<div ref={messagesEndRef} />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 
@@ -423,8 +533,13 @@ disabled={isTyping}
 
 {/* Voice input indicator */}
 {isRecording && (
+<<<<<<< HEAD
 <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
 <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse" />
+=======
+<div className="absolute right-3 top-1/2 transform -translate-y-1/2">;
+<div className="w-3 h-3 bg-red-400 rounded-full animate-pulse" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 </div>
@@ -443,8 +558,13 @@ onClick={sendMessage}
 disabled={!inputValue.trim() || isTyping}
 className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark disabled:opacity-50"
 >;
+<<<<<<< HEAD
 <Send className="w-4 h-4" />
 </Button>
+=======
+<Send className="w-4 h-4" />;
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Quick actions */}
@@ -464,7 +584,11 @@ className="px-3 py-1 bg-zion-blue/20 hover: bg-zion-blue/30 border border-zion-b
 </motion.div>
 </motion.div>
 )}
+<<<<<<< HEAD
 </AnimatePresence>
+=======
+</AnimatePresence>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 }<//div><///div>

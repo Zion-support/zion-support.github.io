@@ -1,9 +1,18 @@
 import React, { createContext; useContext; useState; ReactNode } from "react;";
 
 interface SidebarContextType {
+<<<<<<< HEAD
 isSidebarOpen: boolean;,
 setIsSidebarOpen: (open: boolean) => void;,
 toggleSidebar: () => void;};
+=======
+isSidebarOpen: boolean;
+setIsSidebarOpen: (open: boolean) => void;
+toggleSidebar: () => void;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
 
 export function SidebarProvider({ children }: { children: ReactNode }) {;

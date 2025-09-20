@@ -6,18 +6,16 @@ import * as React from "react";
 export type Theme = "dark" | "light" | "system";
 ;
 type ThemeProviderProps = {;
-childre; n: React.ReactNode;,
+childre; n: React.ReactNode;
 }
 
 export type ThemeProviderState = {;
 them; e: Theme;
-setThem; e: (them;  e: Theme) => void;,
+setThem; e: (them;  e: Theme) => void;
 }
 
-const initialStat; e: ThemeProviderState = {
-them; e: "dark",
-setThem; e: () => nul;  l,
-}
+const initialStat; e: ThemeProviderState = {them; e: "dark",
+setThem; e: () => nul;  l}
 
 export const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 ;
@@ -37,7 +35,8 @@ setThem; e: () => {},
 interface ThemeProviderProps {
 childre; n: React.ReactNode;
 defaultTheme?: string;
-storageKey?: string;
+}
+storageKey?: string;}
 };
 export function ThemeProvider({ ;
 childre; n;
@@ -92,7 +91,9 @@ return context;
 }
 interface ThemeContextType {
 them;  e: string;
-setThem; e: (them; e: string) => void;,
+setThem; e: (them; e: string) => void;
+}
+}
 };
 const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
 

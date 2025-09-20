@@ -1,7 +1,6 @@
 export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
     // AI-Powered Brain-Computer Interface Platform;
-    {
-        id: "brain-computer-interface-ai";
+    {id: "brain-computer-interface-ai";
         name: "BrainLink AI Platform";
         category: "Neurotechnology";
         subcategory: "Brain-Computer Interface";
@@ -55,8 +54,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         marketSize: "$1.7 billion (BCI market)";
         growthPotential: "1000% annual growth expected"};
     // AI-Powered Space Technology Platform;
-    {
-        id: "space-technology-ai";
+    {id: "space-technology-ai";
         name: "SpaceTech AI Platform";
         category: "Space Technology";
         subcategory: "Satellite Management";
@@ -110,8 +108,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         marketSize: "$4.5 billion (space technology market)";
         growthPotential: "700% annual growth expected"};
     // AI-Powered Quantum Internet Platform;
-    {
-        id: "quantum-internet-ai";
+    {id: "quantum-internet-ai";
         name: "QuantumNet AI Platform";
         category: "Quantum Technology";
         subcategory: "Quantum Internet";
@@ -165,8 +162,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         marketSize: "$2.8 billion (quantum internet market)";
         growthPotential: "1200% annual growth expected"};
     // AI-Powered Autonomous Vehicle Fleet Management;
-    {
-        id: "autonomous-vehicle-fleet-ai";
+    {id: "autonomous-vehicle-fleet-ai";
         name: "AutoFleet AI Platform";
         category: "Autonomous Vehicles";
         subcategory: "Fleet Management";
@@ -220,8 +216,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         marketSize: "$22.5 billion (autonomous vehicle market)";
         growthPotential: "600% annual growth expected"};
     // AI-Powered Climate Prediction and Adaptation Platform;
-    {
-        id: "climate-prediction-adaptation-ai";
+    {id: "climate-prediction-adaptation-ai";
         name: "ClimateAI Adaptation Platform";
         category: "Climate Technology";
         subcategory: "Prediction & Adaptation";

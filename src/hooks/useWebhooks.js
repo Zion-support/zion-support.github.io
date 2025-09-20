@@ -49,7 +49,12 @@ export function useWebhooks() {
             toast({
                 variant: "destructive";
                 title: "Error fetching webhooks";
+<<<<<<< HEAD
                 description: err instanceof Error ? err.message : 'An unknown error occurred';});
+=======
+                description: err instanceof Error ? err.message : 'An unknown error occurred';
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         }
         finally {
             setLoading(false);
@@ -88,7 +93,12 @@ export function useWebhooks() {
             setWebhooks(prev => [result.webhook, ...prev]);
             toast({
                 title: "Webhook Created";
+<<<<<<< HEAD
                 description: "Your webhook has been created successfully.";});
+=======
+                description: "Your webhook has been created successfully.";
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             return result.webhook;
         }
         catch (err) {
@@ -97,7 +107,12 @@ export function useWebhooks() {
             toast({
                 variant: "destructive";
                 title: "Error creating webhook";
+<<<<<<< HEAD
                 description: err instanceof Error ? err.message : 'An unknown error occurred';});
+=======
+                description: err instanceof Error ? err.message : 'An unknown error occurred';
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         }
         finally {
             setLoading(false);
@@ -141,7 +156,12 @@ export function useWebhooks() {
             toast({
                 variant: "destructive";
                 title: "Error updating webhook";
+<<<<<<< HEAD
                 description: err instanceof Error ? err.message : 'An unknown error occurred';});
+=======
+                description: err instanceof Error ? err.message : 'An unknown error occurred';
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         }
         finally {
             setLoading(false);
@@ -175,7 +195,12 @@ export function useWebhooks() {
             setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId));
             toast({
                 title: "Webhook Deleted";
+<<<<<<< HEAD
                 description: "The webhook has been deleted successfully.";});
+=======
+                description: "The webhook has been deleted successfully.";
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
             return result;
         }
         catch (err) {
@@ -184,7 +209,12 @@ export function useWebhooks() {
             toast({
                 variant: "destructive";
                 title: "Error deleting webhook";
+<<<<<<< HEAD
                 description: err instanceof Error ? err.message : 'An unknown error occurred';});
+=======
+                description: err instanceof Error ? err.message : 'An unknown error occurred';
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         }
         finally {
             setLoading(false);
@@ -216,8 +246,7 @@ export function useWebhooks() {
                 throw new Error(result.error || 'Failed to test webhook');
             }
             // Store test result;
-            setTestResult({
-                status: result.status;
+            setTestResult({status: result.status;
                 statusText: result.statusText;
                 responseBody: result.responseBody});
     // Update last triggered timestamp;
@@ -234,14 +263,18 @@ export function useWebhooks() {
             toast({
                 variant: "destructive";
                 title: "Error testing webhook";
+<<<<<<< HEAD
                 description: err instanceof Error ? err.message : 'An unknown error occurred';});
+=======
+                description: err instanceof Error ? err.message : 'An unknown error occurred';
+            });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         }
         finally {
             setLoading(false);
         }
     };
-    return {
-        webhooks,
+    return {webhooks,
         loading,
         error,
         testResult,

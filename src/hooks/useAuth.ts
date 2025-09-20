@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+<<<<<<< HEAD
 interface User {
   id: string;
   email: string;
@@ -8,8 +9,16 @@ interface User {
   userType?: string;
   displayName?: string;
   avatarUrl?: string;
+=======
+interface User {id: string; email: string; name: string;
+role: "user" | "admin" | "moderator";
+userType?: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
+displayName?: string;}
+avatarUrl?: string}
 
+<<<<<<< HEAD
 export function useAuth() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
@@ -71,4 +80,60 @@ export function useAuth() {
     isAuthenticated: !!user,
     isAdmin: user?.role === "admin"
   };
+=======
+export function useAuth() {const [user; setUser] = useState<User | null>(null);
+const [loading; setLoading] = useState(true);
+
+useEffect(() => {
+// Check if user is logged in (e.g., check localStorage; cookies; etc.)
+const checkAuth: any = () => {;
+const storedUser = localStorage.getItem("zion_user");
+if (storedUser) {
+try {
+setUser(JSON.parse(storedUser))} catch (error) {
+
+}
+}
+setLoading(false);
+};
+
+checkAuth();
+}, []);
+
+const login = async (email: string; password: string) => {// Implement actual login logic here;
+const mockUser: User = {
+id: "1";
+email;,
+name: "User",
+role: "user"};
+setUser(mockUser);
+localStorage.setItem("zion_user", JSON.stringify(mockUser));
+return mockUser;
+};
+
+const logout: any = () => {;
+setUser(null);
+localStorage.removeItem("zion_user")};
+
+const register = async (email: string; password: string; name: string) => {// Implement actual registration logic here;
+const mockUser: User = {
+id: "1";
+email;
+name;,
+role: "user"};
+setUser(mockUser);
+localStorage.setItem("zion_user", JSON.stringify(mockUser));
+return mockUser;
+};
+
+return {user;
+loading;
+login;
+logout;
+register;
+isAuthenticated: !!user;
+isAdmin: user?.role === "admin"};
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }

@@ -14,10 +14,20 @@ benefits: string[];
 targetAudience: string[];
 tags: string[];
 contactInfo: {
+<<<<<<< HEAD
 phone: string;,
 email: string;,
 website: string;,
 address: string;};
+=======
+phone: string;
+email: string;
+website: string;
+address: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 marketPrice: string;
 competitors: string[];
 roi: string;
@@ -26,21 +36,34 @@ integrations: string[];
 freeTier: boolean;
 trialPeriod: string;
 aiScore: number;
+<<<<<<< HEAD
 useCases: string[];,
 compliance: string[];,
 scalability: string;,
 support: string;}
+=======
+useCases: string[];
+compliance: string[];
+scalability: string;
+support: string;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
-{
-id: 1;
+{id: 1;
 name: "Quantum AI Fusion Platform";
 category: "Quantum Computing";
 subcategory: "AI Integration";
 description: "Revolutionary platform combining quantum computing with artificial intelligence for unprecedented computational power and AI capabilities";
+<<<<<<< HEAD
 pricing: "Enterprise";,
 price: 25000;,
 pricingModel: "monthly";,
+=======
+pricing: "Enterprise";
+price: 25000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Quantum algorithm optimization";
 "AI model quantum acceleration",
@@ -69,6 +92,7 @@ targetAudience: [
 ],
 tags: ["Quantum Computing", "AI", "Machine Learning", "Optimization", "Encryption", "Simulation"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -81,6 +105,20 @@ integrations: ["Python", "Qiskit", "Cirq", "TensorFlow", "PyTorch", "AWS", "Azur
 freeTier: false;,
 trialPeriod: "30 days";,
 aiScore: 98;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$25;000/month (Industry average: $50;000/month)",
+competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "Amazon Braket"],
+roi: "500% ROI within 12 months";
+setupTime: "4-6 weeks";
+integrations: ["Python", "Qiskit", "Cirq", "TensorFlow", "PyTorch", "AWS", "Azure", "GCP"],
+freeTier: false;
+trialPeriod: "30 days";
+aiScore: 98;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Drug discovery and molecular modeling";
 "Financial portfolio optimization",
@@ -90,17 +128,30 @@ useCases: [
 "Machine learning acceleration";
 ],
 compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA", "FedRAMP"],
+<<<<<<< HEAD
 scalability: "Unlimited quantum qubits";,
 support: "24/7 quantum expert support"};
 {
 id: 2;
+=======
+scalability: "Unlimited quantum qubits";
+support: "24/7 quantum expert support",
+};
+{id: 2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "Neuromorphic Computing Platform";
 category: "AI Architecture";
 subcategory: "Brain-Inspired Computing";
 description: "Brain-inspired computing architecture that mimics neural networks for ultra-efficient AI processing and learning";
+<<<<<<< HEAD
 pricing: "Premium";,
 price: 15000;,
 pricingModel: "monthly";,
+=======
+pricing: "Premium";
+price: 15000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Spiking neural networks";
 "Event-driven processing",
@@ -129,6 +180,7 @@ targetAudience: [
 ],
 tags: ["Neuromorphic", "AI", "Neural Networks", "Edge Computing", "IoT", "Robotics"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -141,6 +193,20 @@ integrations: ["TensorFlow", "PyTorch", "ROS", "Arduino", "Raspberry Pi", "AWS I
 freeTier: true;,
 trialPeriod: "60 days";,
 aiScore: 95;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$15;000/month (Industry average: $30;000/month)",
+competitors: ["Intel Loihi", "IBM TrueNorth", "BrainChip", "SynSense"],
+roi: "400% ROI within 8 months";
+setupTime: "3-4 weeks";
+integrations: ["TensorFlow", "PyTorch", "ROS", "Arduino", "Raspberry Pi", "AWS IoT", "Azure IoT"],
+freeTier: true;
+trialPeriod: "60 days";
+aiScore: 95;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Autonomous robotics";
 "Smart sensors",
@@ -150,17 +216,30 @@ useCases: [
 "Real-time monitoring";
 ],
 compliance: ["ISO 27001", "SOC 2", "GDPR", "FDA", "CE"],
+<<<<<<< HEAD
 scalability: "Up to 1M neurons";,
 support: "Expert neuromorphic support"};
 {
 id: 3;
+=======
+scalability: "Up to 1M neurons";
+support: "Expert neuromorphic support",
+};
+{id: 3;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "Federated Learning Platform";
 category: "Privacy AI";
 subcategory: "Distributed Learning";
 description: "Privacy-preserving AI training platform that enables collaborative learning across distributed data sources without sharing raw data";
+<<<<<<< HEAD
 pricing: "Professional";,
 price: 8000;,
 pricingModel: "monthly";,
+=======
+pricing: "Professional";
+price: 8000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Federated learning algorithms";
 "Differential privacy",
@@ -189,6 +268,7 @@ targetAudience: [
 ],
 tags: ["Federated Learning", "Privacy", "AI", "Security", "Compliance", "Collaboration"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -201,6 +281,20 @@ integrations: ["TensorFlow", "PyTorch", "Kubernetes", "Docker", "AWS", "Azure", 
 freeTier: true;,
 trialPeriod: "45 days";,
 aiScore: 92;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$8;000/month (Industry average: $15;000/month)",
+competitors: ["OpenMined", "TensorFlow Federated", "PySyft", "IBM Federated Learning"],
+roi: "300% ROI within 6 months";
+setupTime: "2-3 weeks";
+integrations: ["TensorFlow", "PyTorch", "Kubernetes", "Docker", "AWS", "Azure", "GCP"],
+freeTier: true;
+trialPeriod: "45 days";
+aiScore: 92;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Healthcare data collaboration";
 "Financial fraud detection",
@@ -210,17 +304,30 @@ useCases: [
 "Regulatory compliance";
 ],
 compliance: ["GDPR", "HIPAA", "CCPA", "SOC 2", "ISO 27001"],
+<<<<<<< HEAD
 scalability: "Unlimited participants";,
 support: "Privacy expert support"};
 {
 id: 4;
+=======
+scalability: "Unlimited participants";
+support: "Privacy expert support",
+};
+{id: 4;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "Edge AI Orchestration Platform";
 category: "Edge Computing";
 subcategory: "AI Orchestration";
 description: "Intelligent orchestration platform for AI workloads across distributed edge computing infrastructure with real-time optimization";
+<<<<<<< HEAD
 pricing: "Enterprise";,
 price: 12000;,
 pricingModel: "monthly";,
+=======
+pricing: "Enterprise";
+price: 12000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Intelligent workload distribution";
 "Real-time resource optimization",
@@ -249,6 +356,7 @@ targetAudience: [
 ],
 tags: ["Edge Computing", "AI", "Orchestration", "IoT", "5G", "Real-time"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -261,6 +369,20 @@ integrations: ["Kubernetes", "Docker", "TensorFlow Lite", "ONNX", "MQTT", "CoAP"
 freeTier: true;,
 trialPeriod: "30 days";,
 aiScore: 94;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$12;000/month (Industry average: $25;000/month)",
+competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "EdgeX Foundry"],
+roi: "350% ROI within 7 months";
+setupTime: "3-4 weeks";
+integrations: ["Kubernetes", "Docker", "TensorFlow Lite", "ONNX", "MQTT", "CoAP", "AWS", "Azure"],
+freeTier: true;
+trialPeriod: "30 days";
+aiScore: 94;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Smart city infrastructure";
 "Industrial IoT monitoring",
@@ -270,6 +392,7 @@ useCases: [
 "Predictive maintenance";
 ],
 compliance: ["ISO 27001", "SOC 2", "GDPR", "NIST", "IEC 62443"],
+<<<<<<< HEAD
 scalability: "Unlimited edge nodes";,
 support: "24/7 edge computing support"};
 {
@@ -281,6 +404,19 @@ description: "Comprehensive framework for ethical AI development; governance; an
 pricing: "Professional";,
 price: 6000;,
 pricingModel: "monthly";,
+=======
+scalability: "Unlimited edge nodes";
+support: "24/7 edge computing support",
+};
+{id: 5;
+name: "AI Ethics & Governance Platform";
+category: "AI Governance";
+subcategory: "Ethics & Compliance";
+description: "Comprehensive framework for ethical AI development; governance; and compliance with automated bias detection and audit trails",
+pricing: "Professional";
+price: 6000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Bias detection algorithms";
 "Fairness metrics",
@@ -309,6 +445,7 @@ targetAudience: [
 ],
 tags: ["AI Ethics", "Governance", "Compliance", "Bias Detection", "Transparency", "Risk Management"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -321,6 +458,20 @@ integrations: ["TensorFlow", "PyTorch", "Scikit-learn", "Hugging Face", "AWS", "
 freeTier: true;,
 trialPeriod: "30 days";,
 aiScore: 90;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$6;000/month (Industry average: $12;000/month)",
+competitors: ["IBM AI Fairness 360", "Google What-If Tool", "Microsoft Responsible AI", "Accenture AI Ethics"],
+roi: "250% ROI within 5 months";
+setupTime: "2-3 weeks";
+integrations: ["TensorFlow", "PyTorch", "Scikit-learn", "Hugging Face", "AWS", "Azure", "GCP"],
+freeTier: true;
+trialPeriod: "30 days";
+aiScore: 90;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "AI model validation";
 "Compliance reporting",
@@ -330,17 +481,30 @@ useCases: [
 "Audit preparation";
 ],
 compliance: ["GDPR", "CCPA", "AI Act", "NIST AI Risk Management", "ISO 42001"],
+<<<<<<< HEAD
 scalability: "Unlimited AI models";,
 support: "AI ethics expert support"};
 {
 id: 6;
+=======
+scalability: "Unlimited AI models";
+support: "AI ethics expert support",
+};
+{id: 6;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "Blockchain AI Integration Platform";
 category: "Blockchain";
 subcategory: "AI Integration";
 description: "Seamless integration platform combining blockchain technology with AI capabilities for decentralized intelligence and secure data processing";
+<<<<<<< HEAD
 pricing: "Enterprise";,
 price: 18000;,
 pricingModel: "monthly";,
+=======
+pricing: "Enterprise";
+price: 18000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Smart contract AI execution";
 "Decentralized AI training",
@@ -369,6 +533,7 @@ targetAudience: [
 ],
 tags: ["Blockchain", "AI", "DeFi", "NFTs", "Smart Contracts", "Web3"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -381,6 +546,20 @@ integrations: ["Ethereum", "Polygon", "Solana", "Polkadot", "TensorFlow", "PyTor
 freeTier: false;,
 trialPeriod: "45 days";,
 aiScore: 96;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$18;000/month (Industry average: $35;000/month)",
+competitors: ["Ocean Protocol", "SingularityNET", "Fetch.ai", "Numerai"],
+roi: "450% ROI within 10 months";
+setupTime: "4-5 weeks";
+integrations: ["Ethereum", "Polygon", "Solana", "Polkadot", "TensorFlow", "PyTorch", "Web3.js"],
+freeTier: false;
+trialPeriod: "45 days";
+aiScore: 96;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Decentralized AI marketplaces";
 "AI-powered DeFi protocols",
@@ -390,17 +569,30 @@ useCases: [
 "Tokenized AI services";
 ],
 compliance: ["GDPR", "SOC 2", "ISO 27001", "Blockchain regulations"],
+<<<<<<< HEAD
 scalability: "Multi-chain support";,
 support: "Blockchain AI expert support"};
 {
 id: 7;
+=======
+scalability: "Multi-chain support";
+support: "Blockchain AI expert support",
+};
+{id: 7;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "Quantum-Safe Cryptography Platform";
 category: "Cybersecurity";
 subcategory: "Post-Quantum Security";
 description: "Future-proof cryptography platform implementing post-quantum algorithms to protect against quantum computing threats";
+<<<<<<< HEAD
 pricing: "Professional";,
 price: 10000;,
 pricingModel: "monthly";,
+=======
+pricing: "Professional";
+price: 10000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Post-quantum algorithms";
 "Quantum-resistant encryption",
@@ -429,6 +621,7 @@ targetAudience: [
 ],
 tags: ["Post-Quantum", "Cryptography", "Security", "Quantum Computing", "Encryption", "Compliance"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -441,6 +634,20 @@ integrations: ["OpenSSL", "BouncyCastle", "Libsodium", "AWS KMS", "Azure Key Vau
 freeTier: true;,
 trialPeriod: "30 days";,
 aiScore: 93;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$10;000/month (Industry average: $20;000/month)",
+competitors: ["NIST PQC", "IBM Quantum Safe", "Microsoft Post-Quantum", "Google Post-Quantum"],
+roi: "300% ROI within 8 months";
+setupTime: "3-4 weeks";
+integrations: ["OpenSSL", "BouncyCastle", "Libsodium", "AWS KMS", "Azure Key Vault", "GCP KMS"],
+freeTier: true;
+trialPeriod: "30 days";
+aiScore: 93;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Long-term data encryption";
 "Financial transaction security",
@@ -450,6 +657,7 @@ useCases: [
 "Compliance requirements";
 ],
 compliance: ["NIST PQC", "FIPS 140-3", "SOC 2", "ISO 27001", "FedRAMP"],
+<<<<<<< HEAD
 scalability: "Unlimited encryption keys";,
 support: "Cryptography expert support"};
 {
@@ -461,6 +669,19 @@ description: "Intelligent DevOps platform that uses AI to automate deployment; m
 pricing: "Professional";,
 price: 7000;,
 pricingModel: "monthly";,
+=======
+scalability: "Unlimited encryption keys";
+support: "Cryptography expert support",
+};
+{id: 8;
+name: "AI-Powered DevOps Platform";
+category: "DevOps";
+subcategory: "AI Automation";
+description: "Intelligent DevOps platform that uses AI to automate deployment; monitoring; and incident response with predictive analytics",
+pricing: "Professional";
+price: 7000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered deployment automation";
 "Predictive incident detection",
@@ -489,6 +710,7 @@ targetAudience: [
 ],
 tags: ["DevOps", "AI", "Automation", "CI/CD", "Monitoring", "SRE"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -501,6 +723,20 @@ integrations: ["GitHub", "GitLab", "Docker", "Kubernetes", "AWS", "Azure", "GCP"
 freeTier: true;,
 trialPeriod: "30 days";,
 aiScore: 91;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$7;000/month (Industry average: $15;000/month)",
+competitors: ["GitLab", "GitHub Actions", "Jenkins", "CircleCI", "Travis CI"],
+roi: "350% ROI within 6 months";
+setupTime: "2-3 weeks";
+integrations: ["GitHub", "GitLab", "Docker", "Kubernetes", "AWS", "Azure", "GCP", "Slack"],
+freeTier: true;
+trialPeriod: "30 days";
+aiScore: 91;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Continuous deployment";
 "Automated testing",
@@ -510,17 +746,30 @@ useCases: [
 "Cost optimization";
 ],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
+<<<<<<< HEAD
 scalability: "Unlimited repositories";,
 support: "DevOps expert support"};
 {
 id: 9;
+=======
+scalability: "Unlimited repositories";
+support: "DevOps expert support",
+};
+{id: 9;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 name: "Synthetic Data Generation Platform";
 category: "Data Science";
 subcategory: "Synthetic Data";
 description: "Advanced platform for generating high-quality synthetic data that preserves statistical properties while ensuring privacy and compliance";
+<<<<<<< HEAD
 pricing: "Professional";,
 price: 5000;,
 pricingModel: "monthly";,
+=======
+pricing: "Professional";
+price: 5000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "GAN-based data generation";
 "Privacy-preserving synthesis",
@@ -549,6 +798,7 @@ targetAudience: [
 ],
 tags: ["Synthetic Data", "GANs", "Privacy", "Data Science", "AI Training", "Compliance"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -561,6 +811,20 @@ integrations: ["TensorFlow", "PyTorch", "Pandas", "NumPy", "AWS S3", "Azure Blob
 freeTier: true;,
 trialPeriod: "30 days";,
 aiScore: 89;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$5;000/month (Industry average: $10;000/month)",
+competitors: ["Synthetic Data Vault", "Mostly AI", "Datomize", "Hazy"],
+roi: "400% ROI within 4 months";
+setupTime: "1-2 weeks";
+integrations: ["TensorFlow", "PyTorch", "Pandas", "NumPy", "AWS S3", "Azure Blob", "GCP Storage"],
+freeTier: true;
+trialPeriod: "30 days";
+aiScore: 89;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "AI model training";
 "Testing and validation",
@@ -570,6 +834,7 @@ useCases: [
 "Pilot projects";
 ],
 compliance: ["GDPR", "CCPA", "HIPAA", "SOC 2", "ISO 27001"],
+<<<<<<< HEAD
 scalability: "Unlimited data generation";,
 support: "Data science expert support"};
 {
@@ -581,6 +846,19 @@ description: "Intelligent customer experience platform that uses AI to deliver p
 pricing: "Professional";,
 price: 9000;,
 pricingModel: "monthly";,
+=======
+scalability: "Unlimited data generation";
+support: "Data science expert support",
+};
+{id: 10;
+name: "AI-Powered Customer Experience Platform";
+category: "Customer Experience";
+subcategory: "AI Personalization";
+description: "Intelligent customer experience platform that uses AI to deliver personalized interactions; predictive analytics; and automated customer service",
+pricing: "Professional";
+price: 9000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered personalization";
 "Predictive customer behavior",
@@ -609,6 +887,7 @@ targetAudience: [
 ],
 tags: ["Customer Experience", "AI", "Personalization", "Chatbots", "Analytics", "Automation"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com";,
@@ -621,6 +900,20 @@ integrations: ["Shopify", "WooCommerce", "Salesforce", "HubSpot", "Zapier", "Sla
 freeTier: true;,
 trialPeriod: "30 days";,
 aiScore: 92;,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$9;000/month (Industry average: $18;000/month)",
+competitors: ["Intercom", "Zendesk", "HubSpot", "Salesforce", "Adobe Experience Cloud"],
+roi: "300% ROI within 6 months";
+setupTime: "2-3 weeks";
+integrations: ["Shopify", "WooCommerce", "Salesforce", "HubSpot", "Zapier", "Slack", "Teams"],
+freeTier: true;
+trialPeriod: "30 days";
+aiScore: 92;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 useCases: [
 "Customer support automation";
 "Personalized marketing",
@@ -630,7 +923,13 @@ useCases: [
 "Predictive analytics";
 ],
 compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
+<<<<<<< HEAD
 scalability: "Unlimited customers";,
 support: "Customer experience expert support"}
+=======
+scalability: "Unlimited customers";
+support: "Customer experience expert support",
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ];
 export default innovativeMicroSaasServices2025;

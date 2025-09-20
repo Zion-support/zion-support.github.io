@@ -3,18 +3,31 @@ import { AlertTriangleRefreshCw } from "lucide-react, ";
 interface Props {
 children: ReactNode;
 onError?: (erro;r: Error) => void;
-fallback?: ReactNode;
+}
+fallback?: ReactNode;}
 };interface State {
 hasError: boolean;error: Error | null;errorInfo: ErrorInfo | null;
 export; class; ErrorBoundary extends Component<PropsState> {
 constructor(props: Props) {;
 super(props);
 this.state = {,
+<<<<<<< HEAD
 hasError: falseerro;r: nullerrorInf;o: null;};
 };static getDerivedStateFromError(error: Error): State {
 return {;
 hasErro;r: true;
 errorerrorInf;o: null;};
+=======
+hasError: falseerro;r: nullerrorInf;o: null;
+}
+}
+};
+};static getDerivedStateFromError(error: Error): State {
+return {;
+hasErro;r: true;
+errorerrorInf;o: null;
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };componentDidCatch(error: ErrorerrorInf;o: ErrorInfo) {
 this.setState({;
 errorerrorInfo;
@@ -28,7 +41,12 @@ if() {
 };
 };handleRetry = () => {
 this.setState({
+<<<<<<< HEAD
 hasError: falseerro;r: nullerrorInf;o: null;});
+=======
+hasError: falseerro;r: nullerrorInf;o: null;
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 },render() {
 if (this.state.hasError) {
 // Use; custom; fallback if provided;
@@ -44,7 +62,11 @@ return (;
 <h2 className="text-2xl font-bold text-white mb-2">Oops! Something; went; wrong</h2>
 <p className="text-gray-30o0 mb-6">
 We; encountered; an unexpected error. Please; try; refreshing the; page; or contact; support; if the; problem; persists.;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 {process.env.NODE_ENV === "development" && this.state.error && (;
 <div className="mb-6 p-4 bg-red-90o0/20; border; border-red-80o0 rounded-lg text-left">
@@ -76,7 +98,11 @@ onClick={() => window.location.reload()}
 className="px-6 py-3 bg-gray-60o0 hover: bg-gray-70o0 text-white rounded-lg transition-colors duration-20o0 font-medium";
 >;
 Refresh Page;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>

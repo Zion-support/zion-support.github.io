@@ -1,6 +1,5 @@
 export const BLOG_POSTS = [
-    {
-        id: '1';
+    {id: '1';
         title: 'The Future of AI in Technology';
         slug: 'future-of-ai-in-technology';
         excerpt: 'Exploring how artificial intelligence is reshaping the technology landscape and what it means for businesses and developers.';
@@ -17,9 +16,15 @@ export const BLOG_POSTS = [
         category: 'Artificial Intelligence';
         readTime: 8;
         featuredImage: '/blog/ai-future.jpg';
+<<<<<<< HEAD
         isFeatured: true};
     {
         id: '2';
+=======
+        isFeatured: true,
+    };
+    {id: '2';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
         title: 'Building Scalable Web Applications';
         slug: 'building-scalable-web-applications';
         excerpt: 'Best practices and architectural patterns for creating web applications that can handle millions of users.';

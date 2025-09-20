@@ -1,7 +1,6 @@
 export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025 = [
     // AI-Powered Content Generation Suite;
-    {
-        id: "ai-content-generation-suite";
+    {id: "ai-content-generation-suite";
         title: "AI-Powered Content Generation Suite";
         description: "Comprehensive AI platform that generates high-quality, SEO-optimized content across multiple formats including articles, videos, social media posts, and marketing materials.",
         category: "AI Content Creation";
@@ -48,10 +47,14 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
+<<<<<<< HEAD
         websiteUrl: "https://ziontechgroup.com/ai-content-generation"};
+=======
+        websiteUrl: "https://ziontechgroup.com/ai-content-generation",
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     // Blockchain DeFi Analytics Platform;
-    {
-        id: "blockchain-defi-analytics-platform";
+    {id: "blockchain-defi-analytics-platform";
         title: "Blockchain DeFi Analytics Platform";
         description: "Advanced analytics platform for DeFi protocols, providing real-time insights, risk assessment, and yield optimization strategies for cryptocurrency investors and traders.",
         category: "Blockchain & DeFi";
@@ -98,10 +101,14 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
+<<<<<<< HEAD
         websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics"};
+=======
+        websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics",
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     // IoT Smart Home Management Platform;
-    {
-        id: "iot-smart-home-management";
+    {id: "iot-smart-home-management";
         title: "IoT Smart Home Management Platform";
         description: "Comprehensive IoT platform that integrates and manages all smart home devices, providing automation, energy optimization, and security monitoring in one unified interface.",
         category: "IoT & Smart Home";
@@ -148,10 +155,14 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
+<<<<<<< HEAD
         websiteUrl: "https://ziontechgroup.com/iot-smart-home"};
+=======
+        websiteUrl: "https://ziontechgroup.com/iot-smart-home",
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     // AI-Powered Customer Service Automation;
-    {
-        id: "ai-customer-service-automation";
+    {id: "ai-customer-service-automation";
         title: "AI-Powered Customer Service Automation";
         description: "Intelligent customer service platform that automates responses, handles inquiries, and provides personalized support using advanced AI and natural language processing.",
         category: "AI & Customer Service";
@@ -198,10 +209,14 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
+<<<<<<< HEAD
         websiteUrl: "https://ziontechgroup.com/ai-customer-service"};
+=======
+        websiteUrl: "https://ziontechgroup.com/ai-customer-service",
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     // Quantum-Ready Cybersecurity Suite;
-    {
-        id: "quantum-ready-cybersecurity-suite";
+    {id: "quantum-ready-cybersecurity-suite";
         title: "Quantum-Ready Cybersecurity Suite";
         description: "Future-proof cybersecurity platform that combines traditional security measures with quantum-resistant encryption, preparing organizations for the quantum computing era.",
         category: "Cybersecurity";
@@ -248,5 +263,10 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
+<<<<<<< HEAD
         websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity"}
+=======
+        websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity",
+    }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ];

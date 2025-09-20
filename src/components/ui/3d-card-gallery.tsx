@@ -36,6 +36,7 @@ features: string[];
 metadata: {
 lastUpdated: string;
 version: string;
+<<<<<<< HEAD
 downloads: number;,
 verified: boolean;,
 featured: boolean;,
@@ -43,6 +44,18 @@ complexity: "beginner" | "intermediate" | "advanced" | "expert";};
 actions?: {
 label: string;,
 icon: React.ComponentType<{ className?: string }>
+=======
+downloads: number;
+verified: boolean;
+featured: boolean;
+complexity: "beginner" | "intermediate" | "advanced" | "expert";
+}
+}
+};
+actions?: {
+label: string;
+icon: React.ComponentType<{ className?: string }>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 action: () => void;
 variant?: "default" | "outline" | "ghost";
 disabled?: boolean;
@@ -57,7 +70,8 @@ autoPlay?: boolean;
 showFilters?: boolean;
 onCardClick?: (item: CardItem) => void;
 onAction?: (itemId: string; action: string) => void;
-className?: string;
+}
+className?: string;}
 };
 export function Card3DGallery({;
 enabled = true;
@@ -73,6 +87,7 @@ const [selectedItem, setSelectedItem] = useState<CardItem | null>(null);
 const [viewMode, setViewMode] = useState<"grid" | "list" | "carousel">("grid");
 const [filters, setFilters] = useState({
 category: [] as string[];
+<<<<<<< HEAD
 status: [] as CardItem["status"][];,
 complexity: [] as CardItem["metadata"]["complexity"][];,
 verified: false;,
@@ -82,6 +97,18 @@ const [sortBy, setSortBy] = useState<"rating" | "downloads" | "lastUpdated" | "t
 const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
 const [isPlaying, setIsPlaying] = useState(autoPlay);
 const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0);
+=======
+status: [] as CardItem["status"][];
+complexity: [] as CardItem["metadata"]["complexity"][];
+verified: false;
+featured: false;
+});
+const [searchQuery; setSearchQuery] = useState("");
+const [sortBy; setSortBy] = useState<"rating" | "downloads" | "lastUpdated" | "title">("rating");
+const [sortOrder; setSortOrder] = useState<"asc" | "desc">("desc");
+const [isPlaying; setIsPlaying] = useState(autoPlay);
+const [currentCarouselIndex; setCurrentCarouselIndex] = useState(0);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 const galleryRef = useRef<HTMLDivElement>(null);
 
@@ -119,7 +146,12 @@ case "title":
 aValue = a.title.toLowerCase();
 bValue = b.title.toLowerCase();
 break;,
+<<<<<<< HEAD
 default: return 0;}
+=======
+default: return 0;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 if (sortOrder === "asc") {
 return aValue > bValue ? 1 : -1;
@@ -161,7 +193,12 @@ case "coming-soon":
 return "border-blue-500/50 bg-blue-500/10 text-blue-400";
 case "deprecated":
 return "border-red-500/50 bg-red-500/10 text-red-400";,
+<<<<<<< HEAD
 default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";}
+=======
+default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 // Get complexity color;
@@ -175,7 +212,12 @@ case "advanced":
 return "border-orange-500/50 bg-orange-500/10 text-orange-400";
 case "expert":
 return "border-red-500/50 bg-red-500/10 text-red-400";,
+<<<<<<< HEAD
 default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";}
+=======
+default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 // Get category icon;
@@ -202,7 +244,11 @@ return (
 <h3 className="text-xl font-semibold text-white mb-2">3D Card Gallery</h3>
 <p className="text-zinc-300 text-sm">
 {filteredAndSortedItems.length} items • Interactive 3D experience;
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-center gap-2">
@@ -242,8 +288,13 @@ variant="ghost"
 onClick={() => setCurrentCarouselIndex(0)}
 className="text-zinc-400 hover:text-white p-2"
 >;
+<<<<<<< HEAD
 <RotateCcw className="w-4 h-4" />
 </Button>
+=======
+<RotateCcw className="w-4 h-4" />;
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 )}
 
@@ -266,7 +317,11 @@ onClick={() => setSortOrder(sortOrder === "asc" ? "desc" : "asc")}
 className="border-zion-blue-light/30 text-zinc-300 hover:text-white"
 >;
 {sortOrder === "asc" ? "↑" : "↓"}
+<<<<<<< HEAD
 </Button>
+=======
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -282,7 +337,11 @@ value={searchQuery}
 onChange={(e) => setSearchQuery(e.target.value)}
 placeholder="Search cards...";
 className="w-full pl-10 pr-4 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Filter Chips */}
@@ -375,6 +434,7 @@ return <CategoryIcon className="w-8 h-8 text-white" />
 </Badge>
 <Badge variant="outline" className={`text-xs ${getComplexityColor(item.metadata.complexity)}`}>
 {item.metadata.complexity}
+<<<<<<< HEAD
 </Badge>
 </div>
 <p className="text-zinc-400 text-sm line-clamp-2">{item.description}</p>
@@ -386,6 +446,19 @@ return <CategoryIcon className="w-8 h-8 text-white" />
 <span>({item.reviews} reviews)</span>
 <span>•</span>
 <span>{item.metadata.downloads.toLocaleString()} downloads</span>
+=======
+</Badge>;
+</div>
+<p className="text-zinc-400 text-sm line-clamp-2">{item.description}</p>;
+<div className="flex items-center gap-4 mt-2 text-xs text-zinc-500">;
+<span className="flex items-center gap-1">;
+<Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />;
+{item.rating}
+</span>;
+<span>({item.reviews} reviews)</span>;
+<span>•</span>;
+<span>{item.metadata.downloads.toLocaleString()} downloads</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -408,7 +481,11 @@ className="text-xs"
 </Button>
 ))}
 </div>
+<<<<<<< HEAD
 </motion.div>
+=======
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 )}
@@ -433,10 +510,17 @@ getStatusColor={getStatusColor}
 getComplexityColor={getComplexityColor}
 getCategoryIcon={getCategoryIcon}
 isCarousel={true}
+<<<<<<< HEAD
 />
 </div>
 ))}
 </motion.div>
+=======
+/>;
+</div>
+))}
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Carousel Navigation */}
@@ -447,7 +531,11 @@ key={index}
 onClick={() => setCurrentCarouselIndex(index)}
 className={`w-2 h-2 rounded-full transition-all duration-200 ${
 index === currentCarouselIndex ? "bg-zion-cyan w-6" : "bg-zinc-600 hover: bg-zinc-500"}`}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </div>
 </div>
@@ -481,8 +569,13 @@ variant="ghost"
 onClick={() => setSelectedItem(null)}
 className="text-zinc-400 hover:text-white"
 >;
+<<<<<<< HEAD
 <X className="w-4 h-4" />
 </Button>
+=======
+<X className="w-4 h-4" />;
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -514,9 +607,15 @@ Verified;
 <span className="flex items-center gap-1">
 <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
 {selectedItem.rating} ({selectedItem.reviews} reviews)
+<<<<<<< HEAD
 </span>
 <span>•</span>
 <span>{selectedItem.metadata.downloads.toLocaleString()} downloads</span>
+=======
+</span>;
+<span>•</span>;
+<span>{selectedItem.metadata.downloads.toLocaleString()} downloads</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {selectedItem.price && (
@@ -573,10 +672,17 @@ disabled={action.disabled}
 )}
 </div>
 </div>
+<<<<<<< HEAD
 </motion.div>
 </motion.div>
 )}
 </AnimatePresence>
+=======
+</motion.div>;
+</motion.div>;
+)}
+</AnimatePresence>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 }
@@ -586,10 +692,19 @@ interface Card3DProps {
 item: CardItem;
 index: number;
 onClick: () => void;
+<<<<<<< HEAD
 onAction: (itemId: string; action: string) => void;,
 getStatusColor: (status: CardItem["status"]) => string;,
 getComplexityColor: (complexity: CardItem["metadata"]["complexity"]) => string;,
 getCategoryIcon: (category: string) => React.ComponentType<{ className?: string }>
+=======
+onAction: (itemId: string; action: string) => void;
+getStatusColor: (status: CardItem["status"]) => string;
+getComplexityColor: (complexity: CardItem["metadata"]["complexity"]) => string;
+}
+}
+getCategoryIcon: (category: string) => React.ComponentType<{ className?: string }>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 isCarousel?: boolean;
 }
 
@@ -661,9 +776,15 @@ transition={{ duration: 0.3 }}
 {/* Content */}
 <div className="relative z-10 p-6 h-full flex flex-col">
 {/* Header */}
+<<<<<<< HEAD
 <div className="flex items-start justify-between mb-4">
 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center">
 <CategoryIcon className="w-6 h-6 text-white" />
+=======
+<div className="flex items-start justify-between mb-4">;
+<div className="w-12 h-12 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center">;
+<CategoryIcon className="w-6 h-6 text-white" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-center gap-2">
@@ -672,7 +793,11 @@ transition={{ duration: 0.3 }}
 </Badge>
 <Badge variant="outline" className={`text-xs ${getComplexityColor(item.metadata.complexity)}`}>
 {item.metadata.complexity}
+<<<<<<< HEAD
 </Badge>
+=======
+</Badge>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -683,7 +808,11 @@ transition={{ duration: 0.3 }}
 </h4>
 <p className="text-zinc-300 text-sm line-clamp-3">
 {item.description}
+<<<<<<< HEAD
 </p>
+=======
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Footer */}
@@ -693,8 +822,13 @@ transition={{ duration: 0.3 }}
 <span className="flex items-center gap-1">
 <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
 {item.rating} ({item.reviews})
+<<<<<<< HEAD
 </span>
 <span>{item.metadata.downloads.toLocaleString()} downloads</span>
+=======
+</span>;
+<span>{item.metadata.downloads.toLocaleString()} downloads</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Tags */}
@@ -735,8 +869,13 @@ size="sm";
 variant="ghost"
 className="p-2 text-zinc-400 hover:text-white text-xs"
 >;
+<<<<<<< HEAD
 <Eye className="w-4 h-4" />
 </Button>
+=======
+<Eye className="w-4 h-4" />;
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>

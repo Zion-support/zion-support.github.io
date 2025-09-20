@@ -1,7 +1,6 @@
 export const ADVANCED_MICRO_SERVICES = [
     // AI-Powered Business Intelligence;
-    {
-        id: "ai-business-intelligence-suite";
+    {id: "ai-business-intelligence-suite";
         title: "AI Business Intelligence Suite";
         description: "Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting for enterprise decision-making.",
         category: "AI & Analytics";
@@ -64,8 +63,7 @@ export const ADVANCED_MICRO_SERVICES = [
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control"]
     },
     // Quantum-Safe Cybersecurity Platform;
-    {
-        id: "quantum-safe-cybersecurity";
+    {id: "quantum-safe-cybersecurity";
         title: "Quantum-Safe Cybersecurity Platform";
         description: "Next-generation cybersecurity platform that implements quantum-resistant encryption algorithms, advanced threat detection, and zero-trust security architecture for future-proof protection.",
         category: "Cybersecurity";
@@ -128,8 +126,7 @@ export const ADVANCED_MICRO_SERVICES = [
         securityFeatures: ["Post-quantum cryptography", "Behavioral analytics", "Threat intelligence sharing"]
     },
     // Edge Computing Orchestration Platform;
-    {
-        id: "edge-computing-orchestration";
+    {id: "edge-computing-orchestration";
         title: "Edge Computing Orchestration Platform";
         description: "Intelligent edge computing platform that optimizes application deployment, manages distributed resources, and provides real-time processing capabilities for IoT and edge devices.",
         category: "Edge Computing";
@@ -192,8 +189,7 @@ export const ADVANCED_MICRO_SERVICES = [
         securityFeatures: ["Device authentication", "Data encryption", "Access control", "Audit logging"]
     },
     // Blockchain Supply Chain Transparency;
-    {
-        id: "blockchain-supply-chain";
+    {id: "blockchain-supply-chain";
         title: "Blockchain Supply Chain Transparency Platform";
         description: "End-to-end supply chain visibility platform using blockchain technology to ensure transparency, traceability, and compliance across global supply networks.",
         category: "Blockchain";
@@ -256,8 +252,7 @@ export const ADVANCED_MICRO_SERVICES = [
         securityFeatures: ["Immutable records", "Cryptographic verification", "Access control", "Audit trails"]
     },
     // AI-Powered DevOps Automation;
-    {
-        id: "ai-devops-automation";
+    {id: "ai-devops-automation";
         title: "AI-Powered DevOps Automation Platform";
         description: "Intelligent DevOps platform that automates software development, testing, deployment, and monitoring using AI and machine learning for continuous improvement.",
         category: "DevOps";
@@ -320,8 +315,7 @@ export const ADVANCED_MICRO_SERVICES = [
         securityFeatures: ["Secure code scanning", "Access control", "Audit logging", "Encryption"]
     },
     // Quantum Machine Learning Platform;
-    {
-        id: "quantum-ml-platform";
+    {id: "quantum-ml-platform";
         title: "Quantum Machine Learning Platform";
         description: "Revolutionary platform that combines quantum computing with machine learning to solve complex optimization problems, accelerate AI training, and unlock new computational capabilities.",
         category: "Quantum Computing";
@@ -384,8 +378,7 @@ export const ADVANCED_MICRO_SERVICES = [
         securityFeatures: ["Quantum-safe encryption", "Secure quantum communication", "Access control"]
     },
     // Autonomous Data Governance Platform;
-    {
-        id: "autonomous-data-governance";
+    {id: "autonomous-data-governance";
         title: "Autonomous Data Governance Platform";
         description: "AI-powered data governance platform that automatically discovers, classifies, and manages data assets while ensuring compliance, privacy, and security across the organization.",
         category: "Data Management";
@@ -448,8 +441,7 @@ export const ADVANCED_MICRO_SERVICES = [
         securityFeatures: ["Data encryption", "Access control", "Audit logging", "Privacy protection"]
     },
     // Intelligent API Management Platform;
-    {
-        id: "intelligent-api-management";
+    {id: "intelligent-api-management";
         title: "Intelligent API Management Platform";
         description: "Advanced API management platform with AI-powered analytics, automated documentation, security monitoring, and intelligent rate limiting for modern API ecosystems.",
         category: "API Management";
@@ -512,8 +504,7 @@ export const ADVANCED_MICRO_SERVICES = [
         securityFeatures: ["OAuth 2.0", "JWT tokens", "Rate limiting", "Threat detection", "Encryption"]
     },
     // Hyperautomation Workflow Platform;
-    {
-        id: "hyperautomation-workflow";
+    {id: "hyperautomation-workflow";
         title: "Hyperautomation Workflow Platform";
         description: "Comprehensive hyperautomation platform that combines RPA, AI, and process mining to automate complex business processes and workflows across the organization.",
         category: "Automation";

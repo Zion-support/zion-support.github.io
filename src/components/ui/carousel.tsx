@@ -1,9 +1,10 @@
 import * as React from &quot;react&quot;
 import useEmblaCarousel from &quot;embla-carousel-react&quot;
-import { ArrowLeft,, ArrowRight,  } from 'lucide-react'
-import { cn,  } from &quot;@/lib/utils&quot;
-import { Button,  } from &quot;@/components/ui/button&quot;
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import {cn} from &quot;@/lib/utils&quot;
+import {Button} from &quot;@/components/ui/button&quot;
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
+<<<<<<< HEAD
 type CarouselOptions = {
 axis?: 'x' | 'y';
 [key: string]: any,
@@ -15,6 +16,15 @@ plugins?: CarouselPlugin,
 orientation?: &quot;horizontal&quot; | &quot;vertical&quot;
 setApi?: (api: CarouselApi) => void,
 }
+=======
+type CarouselOptions = {axis?: 'x' | 'y'
+  [key: string]: any}
+type CarouselPlugin = any,
+type CarouselProps = {opts?: CarouselOptions,
+plugins?: CarouselPlugin,
+orientation?: &quot;horizontal&quot; | &quot;vertical&quot;
+  setApi?: (api: CarouselApi) => void}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 type CarouselContextProps = {
 carouselRef: ReturnType<typeof useEmblaCarousel>[0],
 api: ReturnType<typeof useEmblaCarousel>[1],
@@ -29,6 +39,7 @@ const Carousel = React.forwardRef<
 HTMLDivElement;
 React.HTMLAttributes<HTMLDivElement> & CarouselProps;
 >(
+<<<<<<< HEAD
 (
 {;
 orientation = &quot;horizontal&quot;
@@ -93,6 +104,67 @@ return (
 <CarouselContext.Provider,
 value={{
 carouselRef,
+=======
+  (
+    {orientation = &quot;horizontal&quot;
+      opts,
+setApi
+      plugins,
+className
+      children
+      ...props}
+    ref
+  ) => {
+    const [carouselRef, api] = useEmblaCarousel(
+      {
+        ...(opts |{})
+        axis: orientation === &quot;horizontal&quot; ? &quot;x&quot; : &quot;y&quot;}
+      plugins
+    )
+    const [canScrollPrev, setCanScrollPrev] = React.useState(false)
+    const [canScrollNext, setCanScrollNext] = React.useState(false)
+    const onSelect = React.useCallback((api: CarouselApi) => {if (!api) {
+        return}
+      setCanScrollPrev(api.canScrollPrev())
+      setCanScrollNext(api.canScrollNext())
+    }, [])
+    const scrollPrev = React.useCallback(() => {
+      api?.scrollPrev()
+    }, [api])
+    const scrollNext = React.useCallback(() => {
+      api?.scrollNext()
+    }, [api])
+    const handleKeyDown = React.useCallback(
+      (event: React.KeyboardEvent<HTMLDivElement>) => {
+        if (event.key === &quot;ArrowLeft&quot;) {
+          event.preventDefault()
+          scrollPrev()
+        } else if (event.key === &quot;ArrowRight&quot;) {
+          event.preventDefault()
+          scrollNext()
+        }
+      }
+      [scrollPrev scrollNext];
+    );
+    React.useEffect(() => {if (!api |!setApi) {;
+        return;
+      }
+      setApi(api);
+    }, [api setApi]);
+    React.useEffect(() => {if (!api) {;
+        return;
+      }
+onSelect(api)
+      api.on(&quot;reInit&quot;, onSelect)
+      api.on(&quot;select&quot;, onSelect)
+      return () => {
+        api?.off(&quot;select&quot;, onSelect)
+      }
+    }, [api onSelect])
+    return (
+      <CarouselContext.Provider value={{
+          carouselRef,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 api: api,
 opts;
 orientation:
@@ -106,6 +178,7 @@ canScrollNext}}
 ref={ref}
 onKeyDownCapture={handleKeyDown}
 className={cn(&quot;relative&quot;, className)}
+<<<<<<< HEAD
 role=&quot;region&quot;
 aria-roledescription=&quot;carousel&quot;
 {...props}
@@ -115,16 +188,34 @@ aria-roledescription=&quot;carousel&quot;
 </CarouselContext.Provider>
 );
 }
+=======
+          role=&quot;region&quot;
+          aria-roledescription=&quot;carousel&quot;
+          {...props}
+        >;
+          {children}
+        </div>
+      </CarouselContext.Provider>;
+    );
+  }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )
 Carousel.displayName = &quot;Carousel&quot;
 const CarouselContent = React.forwardRef<
 HTMLDivElement;
 React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
+<<<<<<< HEAD
 const { carouselRef, orientation } = useCarousel()
 return (;
 <div ref={carouselRef} className=&quot;overflow-hidden&quot;>
 <div,
+=======
+  const { carouselRef, orientation } = useCarousel()
+  return (
+    <div ref={carouselRef} className=&quot;overflow-hidden&quot;>
+      <div
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ref={ref}
 className={cn(
 &quot;flex&quot;
@@ -143,6 +234,7 @@ const CarouselItem = React.forwardRef<
 HTMLDivElement;
 React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
+<<<<<<< HEAD
 const { orientation } = useCarousel()
 return (
 <div,
@@ -157,15 +249,37 @@ className
 {...props}
 />
 )
+=======
+  const { orientation } = useCarousel()
+  return (
+    <div
+ref={ref}
+      role=&quot;group&quot;
+      aria-roledescription=&quot;slide&quot;
+      className={cn(
+        &quot;min-w-0 shrink-0 grow-0 basis-full snap-start&quot;
+        orientation === &quot;horizontal&quot; ? &quot;pl-4&quot; : &quot;pt-4&quot;
+        className
+      )}
+      {...props}
+    />
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 })
 CarouselItem.displayName = &quot;CarouselItem&quot;
 const CarouselPrevious = React.forwardRef<
 HTMLButtonElement;
 React.ComponentProps<typeof Button>
 >(({ className variant = &quot;outline&quot;, size = &quot;icon&quot;, ...props }, ref) => {
+<<<<<<< HEAD
 const { orientation scrollPrev canScrollPrev } = useCarousel()
 return (
 <Button,
+=======
+  const { orientation scrollPrev canScrollPrev } = useCarousel()
+  return (
+    <Button
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ref={ref}
 variant={variant}
 size={size}
@@ -190,9 +304,15 @@ const CarouselNext = React.forwardRef<
 HTMLButtonElement;
 React.ComponentProps<typeof Button>
 >(({ className variant = &quot;outline&quot;, size = &quot;icon&quot;, ...props }, ref) => {
+<<<<<<< HEAD
 const { orientation scrollNext canScrollNext } = useCarousel()
 return (
 <Button,
+=======
+  const { orientation scrollNext canScrollNext } = useCarousel()
+  return (
+    <Button
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ref={ref}
 variant={variant}
 size={size}

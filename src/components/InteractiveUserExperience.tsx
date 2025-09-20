@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import { import { Badge  } from "./ui / badge",
 import { import { Badge } from &apos,./ui / badge&apos,&apos,';
 import { import { Badge } from "./ui / badge, ";"";
+=======
+import { import { Badge  } from "./ui / badge";;
+import { import { Badge } from &apos,./ui / badge&apos,&apos,&apos;
+import { import { Badge } from "./ui / badge, ";""
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }}}

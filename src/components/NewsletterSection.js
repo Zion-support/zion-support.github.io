@@ -64,22 +64,22 @@ import { motio, n, AnimatePresence } from 'framer-motion';
 import { Mai, l, Sen, d, CheckCircl, e, Bel, l, Za, p, Shiel, d, User, s, X, Gif, t, Sta, r, Award } from 'lucide-react';
 const benefits = [
     {
-        ic, o, n: <Bel, l classNam, e="w-6 h-6"/>,
+        ic, o, n: <Bel l classNam e="w-6 h-6"/>,
     tit, l, e: "Earl, y Acces, s",
         descripti, o, n: "B, e th, e firs, t t, o kno, w abou, t ne, w feature, s an, d service, s"
     },
     {
-        ic, o, n: <Za, p classNam, e="w-6 h-6"/>,
+        ic, o, n: <Za p classNam e="w-6 h-6"/>,
     tit, l, e: "Exclusiv, e Offer, s",
         descripti, o, n: "Specia, l discount, s an, d promotion, s fo, r subscriber, s onl, y"
     },
     {
-        ic, o, n: <Shiel, d classNam, e="w-6 h-6"/>,
+        ic, o, n: <Shiel d classNam e="w-6 h-6"/>,
     tit, l, e: "Tec, h Insight, s",
         descripti, o, n: "Lates, t industr, y trend, s an, d technolog, y update, s"
     },
     {
-        ic, o, n: <User, s classNam, e="w-6 h-6"/>,
+        ic, o, n: <User s classNam e="w-6 h-6"/>,
     tit, l, e: "Communit, y",
         descripti, o, n: "Joi, n ou, r networ, k o, f tec, h professional, s an, d innovator, s"
     }
@@ -204,10 +204,10 @@ export function NewsletterSection() {
                   {isLoading ? (<>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"/>
                       Subscribing...
-                    </>) : (<>
+</>) : (<>
                       Subscribe;
                       <Send className="w-5 h-5"/>
-                    </>)}
+</>)}
                 </button>
               </form>
 

@@ -6,7 +6,11 @@ export function useTalentDirectory() {
     // Fetch auth status and saved talents;
     const { isAuthenticated, userDetails, savedTalents, handleToggleSave } = useAuthStatus();
     // Fetch talent data;
+<<<<<<< HEAD
     const { talents, isLoading, error} = useTalentData();
+=======
+    const {talents, isLoading, error} = useTalentData();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
     // Apply filters and sorting;
     const { filteredTalents, searchTerm, setSearchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, setPriceRange, experienceRange, setExperienceRange, sortOption, setSortOption, toggleSkill, toggleAvailability, toggleRegion, clearFilters } = useFilterTalents(talents);
     // Manage UI state;

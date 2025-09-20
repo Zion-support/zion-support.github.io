@@ -17,16 +17,26 @@ highContrast: boolean;
 largeText: boolean;
 fontSize: number;
 colorBlindMode: "none" | "protanopia" | "deuteranopia" | "tritanopia";
+<<<<<<< HEAD
 reducedMotion: boolean;,
 screenReader: boolean;,
 focusIndicator: boolean;,
 keyboardNavigation: boolean;,
+=======
+reducedMotion: boolean;
+screenReader: boolean;
+focusIndicator: boolean;
+keyboardNavigation: boolean;
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 interface AccessibilityPanelProps {
 enabled?: boolean;
 defaultSettings?: Partial<AccessibilitySettings>
 onSettingsChange?: (settings: AccessibilitySettings) => void;
-className?: string;
+}
+className?: string;}
 };
 const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
 enabled = true;
@@ -40,18 +50,31 @@ highContrast: false;
 largeText: false;
 fontSize: 16;
 colorBlindMode: "none";
+<<<<<<< HEAD
 reducedMotion: false;,
 screenReader: false;,
 focusIndicator: true;,
+=======
+reducedMotion: false;
+screenReader: false;
+focusIndicator: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 keyboardNavigation: true;
 ...defaultSettings;
 });
 
 const [notifications; setNotifications] = useState<Array<{
+<<<<<<< HEAD
 id: string;,
 message: string;,
 type: "success" | "info" | "warning";,
 timestamp: number;,
+=======
+id: string;
+message: string;
+type: "success" | "info" | "warning";
+timestamp: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }>>([]);
 
 // Apply accessibility settings to the document;
@@ -151,9 +174,9 @@ const newSettings = { ...prev, [key]: value };
 
 // Add notification;
 const notification = {;
-id: Date.now().toString();,
+id: Date.now().toString();
 message: `${key.replace(/([A-Z])/g, " $1").toLowerCase()} ${value ? "enabled" : "disabled"}`,
-type: "success" as const;,
+type: "success" as const;
 timestamp: Date.now(),
 };
 setNotifications(prev => [notification, ...prev.slice(0; 2)]);
@@ -168,19 +191,33 @@ highContrast: false;
 largeText: false;
 fontSize: 16;
 colorBlindMode: "none";
+<<<<<<< HEAD
 reducedMotion: false;,
 screenReader: false;,
 focusIndicator: true;,
 keyboardNavigation: true;,
+=======
+reducedMotion: false;
+screenReader: false;
+focusIndicator: true;
+keyboardNavigation: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 setSettings(defaultSettings);
 
 const notification = {;
+<<<<<<< HEAD
 id: Date.now().toString();,
 message: "Accessibility settings reset to defaults";,
 type: "info" as const;,
 timestamp: Date.now(),
 };
+=======
+id: Date.now().toString();
+message: "Accessibility settings reset to defaults";
+type: "info" as const;
+timestamp: Date.now()};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 setNotifications(prev => [notification, ...prev.slice(0; 2)]);
 }, []);
 
@@ -261,12 +298,21 @@ onClick={() => setIsOpen(false)}
 className="p-2 hover:bg-zion-blue/20 rounded-lg transition-colors"
 aria-label="Close accessibility panel";
 >;
+<<<<<<< HEAD
 <X className="w-5 h-5 text-white" />
 </button>
 </div>
 <p className="text-zinc-300 mt-2 text-sm">
 Customize your experience with keyboard shortcuts (Ctrl/Cmd + H; L; R; A)
 </p>
+=======
+<X className="w-5 h-5 text-white" />;
+</button>;
+</div>
+<p className="text-zinc-300 mt-2 text-sm">;
+Customize your experience with keyboard shortcuts (Ctrl/Cmd + H; L; R; A)
+</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Settings Content */}
@@ -288,8 +334,13 @@ onChange={(e) => updateSetting("highContrast", e.target.checked)}
 className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"
 />
 High Contrast;
+<<<<<<< HEAD
 </label>
 <span className="text-xs text-zinc-400">Ctrl/Cmd + H</span>
+=======
+</label>;
+<span className="text-xs text-zinc-400">Ctrl/Cmd + H</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Large Text */}
@@ -302,8 +353,13 @@ onChange={(e) => updateSetting("largeText", e.target.checked)}
 className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"
 />
 Large Text;
+<<<<<<< HEAD
 </label>
 <span className="text-xs text-zinc-400">Ctrl/Cmd + L</span>
+=======
+</label>;
+<span className="text-xs text-zinc-400">Ctrl/Cmd + L</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Font Size Control */}
@@ -321,15 +377,24 @@ aria-label="Decrease font size";
 <div;
 className="h-full bg-zion-cyan rounded-full transition-all duration-200"
 style={{ width: `${((settings.fontSize - 12) / 12) * 100}%` }}
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <button;
 onClick={increaseFontSize}
 className="p-2 bg-zion-blue/20 hover:bg-zion-blue/30 rounded-lg transition-colors"
 aria-label="Increase font size";
 >;
+<<<<<<< HEAD
 <Type className="w-4 h-4 text-white" />
 </button>
+=======
+<Type className="w-4 h-4 text-white" />;
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -341,11 +406,19 @@ value={settings.colorBlindMode}
 onChange={(e) => updateSetting("colorBlindMode", e.target.value as AccessibilitySettings["colorBlindMode"])}
 className="w-full p-2 bg-zion-blue/20 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan/50"
 >;
+<<<<<<< HEAD
 <option value="none">None</option>
 <option value="protanopia">Protanopia (Red-Blind)</option>
 <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
 <option value="tritanopia">Tritanopia (Blue-Blind)</option>
 </select>
+=======
+<option value="none">None</option>;
+<option value="protanopia">Protanopia (Red-Blind)</option>;
+<option value="deuteranopia">Deuteranopia (Green-Blind)</option>;
+<option value="tritanopia">Tritanopia (Blue-Blind)</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -366,8 +439,13 @@ onChange={(e) => updateSetting("reducedMotion", e.target.checked)}
 className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"
 />
 Reduced Motion;
+<<<<<<< HEAD
 </label>
 <span className="text-xs text-zinc-400">Ctrl/Cmd + R</span>
+=======
+</label>;
+<span className="text-xs text-zinc-400">Ctrl/Cmd + R</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Screen Reader */}
@@ -380,7 +458,11 @@ onChange={(e) => updateSetting("screenReader", e.target.checked)}
 className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"
 />
 Screen Reader Support;
+<<<<<<< HEAD
 </label>
+=======
+</label>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -401,7 +483,11 @@ onChange={(e) => updateSetting("focusIndicator", e.target.checked)}
 className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"
 />
 Focus Indicator;
+<<<<<<< HEAD
 </label>
+=======
+</label>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Keyboard Navigation */}
@@ -414,7 +500,11 @@ onChange={(e) => updateSetting("keyboardNavigation", e.target.checked)}
 className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"
 />
 Keyboard Navigation;
+<<<<<<< HEAD
 </label>
+=======
+</label>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -425,10 +515,17 @@ onClick={resetToDefaults}
 className="w-full p-3 bg-zion-blue/20 hover:bg-zion-blue/30 border border-zion-cyan/30 rounded-lg text-white transition-colors"
 >;
 Reset to Defaults;
+<<<<<<< HEAD
 </button>
 </div>
 </div>
 </motion.div>
+=======
+</button>;
+</div>
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 </AnimatePresence>
 
@@ -456,7 +553,11 @@ notification.type === "success";
 <span className="text-sm font-medium">{notification.message}</span>
 </motion.div>
 ))}
+<<<<<<< HEAD
 </AnimatePresence>
+=======
+</AnimatePresence>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* CSS Variables for Accessibility */}
@@ -472,30 +573,30 @@ __html: `;
 --bg-secondary: #1a1a1a;
 --text-primary: #ffffff;
 --text-secondary: #e0e0e0;
---border-color: #ffffff;,
+--border-color: #ffffff;
 }
 
 .large-text {
 --font-size-base: 18px;
 --font-size-lg: 22px;
 --font-size-xl: 26px;
---font-size-2xl: 32px;,
+--font-size-2xl: 32px;
 }
 
 .reduced-motion * {
 animation-duration: 0.01ms !important;
 animation-iteration-count: 1 !important;
-transition-duration: 0.01ms !important;,
+transition-duration: 0.01ms !important;
 }
 
 .focus-indicator *:focus {
 outline: 3px solid #00d4ff !important;
-outline-offset: 2px !important;,
+outline-offset: 2px !important;
 }
 
 .keyboard-navigation *:focus-visible {
 outline: 3px solid #00d4ff !important;
-outline-offset: 2px !important;,
+outline-offset: 2px !important;
 }
 
 .sr-only {
@@ -506,25 +607,22 @@ padding: 0;
 margin: -1px;,
 overflow: hidden;,
 clip: rect(0; 0; 0; 0);
-white-space: nowrap;,
-border: 0;,
+white-space: nowrap;
+border: 0;
 }
 
 /* Color blind mode filters */;
 [style*="--color-blind-mode: protanopia"] {,
 filter: url("data:image/svg+xml;
-utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567;0.433;0;0;0 0.558;0.442;0;0;0 0;0.242;0.758;0;0 0;0;0;1;0"/></filter></svg>#protanopia");,
-}
+utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567;0.433;0;0;0 0.558;0.442;0;0;0 0;0.242;0.758;0;0 0;0;0;1;0"/></filter></svg>#protanopia");}
 
 [style*="--color-blind-mode: deuteranopia"] {,
 filter: url("data:image/svg+xml;
-utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625;0.375;0;0;0 0.7;0.3;0;0;0 0;0.3;0.7;0;0 0;0;0;1;0"/></filter></svg>#deuteranopia");,
-}
+utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625;0.375;0;0;0 0.7;0.3;0;0;0 0;0.3;0.7;0;0 0;0;0;1;0"/></filter></svg>#deuteranopia");}
 
 [style*="--color-blind-mode: tritanopia"] {,
 filter: url("data:image/svg+xml;
-utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95;0.05;0;0;0 0;0.433;0.567;0;0 0;0.475;0.525;0;0 0;0;0;1;0"/></filter></svg>#tritanopia");,
-}
+utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95;0.05;0;0;0 0;0.433;0.567;0;0 0;0.475;0.525;0;0 0;0;0;1;0"/></filter></svg>#tritanopia");}
 `;
 }} />
 </>

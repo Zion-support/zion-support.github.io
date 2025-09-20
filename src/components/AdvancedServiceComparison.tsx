@@ -39,18 +39,31 @@ complexit; y: "Basic" | "Intermediate" | "Advanced" | "Enterprise";
 popularit; y: "Low" | "Medium" | "High" | "Trending";
 contactInf; o: string;
 emai; l: string;
+<<<<<<< HEAD
 lin; k: string;};
+=======
+lin; k: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 interface ComparisonFilter {
 categor; y: string;
 complexit; y: string;
 priceRang; e: string;
+<<<<<<< HEAD
 technolog; y: string;};
+=======
+technolog; y: string;
+}
+}
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 const COMPLEXITY_LEVELS = ["Basi; c", "Intermediat; e", "Advance; d", "Enterpris; e"];
 const POPULARITY_LEVELS = ["Lo; w", "Mediu; m", "Hig; h", "Trendin; g"];
 const PRICE_RANGES = ["Unde; r $10; K", "$10; K-$50; K", "$50; K-$100; K", "$100; K+"];
 
-export const AdvancedServiceCompariso; n: React.FC = () => {
-const [selectedServic;  e; s; setSelectedServic; e; s] = useState<string[]>([]);
+export const AdvancedServiceCompariso; n: React.FC = () => {const [selectedServic;  e; s; setSelectedServic; e; s] = useState<string[]>([]);
 const [filte; r; s; setFilte; r; s] = useState<ComparisonFilter>({
 categor;  y: "all";
 complexit; y: "all";
@@ -61,8 +74,7 @@ const [viewMo;  d; e; setViewMo; d; e] = useState<"grid" | "table" | "detailed">
 
 // Mock data - in real app this would come from props or API;
 const mockService; s: ServiceTier[] = [
-{
-i; d: "a; i-cr; m-basi; c",
+{i; d: "a; i-cr; m-basi; c",
 na; m; e: "A; I CR; M Basi; c",
 catego; r; y: "a; i",
 pri; c; e: "$5;00; 0/mont; h",
@@ -77,8 +89,12 @@ popularit; y: "Medium";
 contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com";
 lin; k: "http; s: //ziontechgroup.com/services/ai-crm-basic"};
+<<<<<<< HEAD
 {
 i; d: "ai-crm-enterprise";
+=======
+{i; d: "ai-crm-enterprise";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 nam; e: "AI CRM Enterprise";
 categor; y: "ai";
 pric; e: "$2; 5;000/month",
@@ -93,8 +109,12 @@ popularit; y: "High";
 contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com";
 lin; k: "http; s: //ziontechgroup.com/services/ai-crm-enterprise"};
+<<<<<<< HEAD
 {
 i; d: "quantum-basic";
+=======
+{i; d: "quantum-basic";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 nam; e: "Quantum Computing Basic";
 categor; y: "quantum";
 pric; e: "$5; 0;000/month",
@@ -109,8 +129,12 @@ popularit; y: "Medium";
 contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com";
 lin; k: "http; s: //ziontechgroup.com/services/quantum-basic"};
+<<<<<<< HEAD
 {
 i; d: "quantum-enterprise";
+=======
+{i; d: "quantum-enterprise";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 nam; e: "Quantum Computing Enterprise";
 categor; y: "quantum";
 pric; e: "$20; 0;000/month",
@@ -151,25 +175,39 @@ case "Basic": return "bg-green-100 text-green-800";
 case "Intermediate": return "bg-blue-100 text-blue-800";
 case "Advanced": return "bg-orange-100 text-orange-800";
 case "Enterprise": return "bg-purple-100 text-purple-800";
+<<<<<<< HEAD
 defaul;  t: return "bg-gray-100 text-gray-800";}
+=======
+defaul;  t: return "bg-gray-100 text-gray-800";
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 const getPopularityIcon: any = (popularit; y: string) => {
 switch (popularity) {
+<<<<<<< HEAD
 case "Trending": return <TrendingUp className="w-4 h-4 text-red-500" />
 case "High": return <Star className="w-4 h-4 text-yellow-500" />
 case "Medium": return <Zap className="w-4 h-4 text-blue-500" />
 case "Low": return <Target className="w-4 h-4 text-gray-500" />
 defaul;  t: return <Users className="w-4 h-4 text-gray-500" />}
+=======
+case "Trending": return <TrendingUp className="w-4 h-4 text-red-500" />;
+case "High": return <Star className="w-4 h-4 text-yellow-500" />;
+case "Medium": return <Zap className="w-4 h-4 text-blue-500" />;
+case "Low": return <Target className="w-4 h-4 text-gray-500" />;
+defaul;  t: return <Users className="w-4 h-4 text-gray-500" />;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 
 return (
 <div className="max-w-7xl mx-auto p-6">
 {/* Header */}
 <motion.div;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 className="text-center mb-8"
 >;
@@ -183,9 +221,9 @@ Compare our cutting-edge services across differen; t; tier; s; complexit; y; lev
 
 {/* Filters and Controls */}
 <motion.div;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.1 }}
 className="bg-white rounded-lg shadow-lg p-6 mb-8"
@@ -198,12 +236,21 @@ value={filters.category}
 onChange={(e) => setFilters(prev => ({ ...pre;  v; categor; y: e.target.value }))}
 className="w-full p-2 border border-zion-slate-light rounded-md"
 >;
+<<<<<<< HEAD
 <option value="all">All Categories</option>
 <option value="ai">AI & Machine Learning</option>
 <option value="quantum">Quantum Computing</option>
 <option value="blockchain">Blockchain & Web3</option>
 <option value="cybersecurity">Cybersecurity</option>
 </select>
+=======
+<option value="all">All Categories</option>;
+<option value="ai">AI & Machine Learning</option>;
+<option value="quantum">Quantum Computing</option>;
+<option value="blockchain">Blockchain & Web3</option>;
+<option value="cybersecurity">Cybersecurity</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -217,7 +264,11 @@ className="w-full p-2 border border-zion-slate-light rounded-md"
 {COMPLEXITY_LEVELS.map(level => (
 <option key={level} value={level}>{level}</option>
 ))}
+<<<<<<< HEAD
 </select>
+=======
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -231,7 +282,11 @@ className="w-full p-2 border border-zion-slate-light rounded-md"
 {PRICE_RANGES.map(range => (
 <option key={range} value={range}>{range}</option>
 ))}
+<<<<<<< HEAD
 </select>
+=======
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -241,12 +296,21 @@ value={filters.technology}
 onChange={(e) => setFilters(prev => ({ ...pre;  v; technolog; y: e.target.value }))}
 className="w-full p-2 border border-zion-slate-light rounded-md"
 >;
+<<<<<<< HEAD
 <option value="all">All Technologies</option>
 <option value="AI/ML">AI/ML</option>
 <option value="Quantum Computing">Quantum Computing</option>
 <option value="Blockchain">Blockchain</option>
 <option value="Cybersecurity">Cybersecurity</option>
 </select>
+=======
+<option value="all">All Technologies</option>;
+<option value="AI/ML">AI/ML</option>;
+<option value="Quantum Computing">Quantum Computing</option>;
+<option value="Blockchain">Blockchain</option>;
+<option value="Cybersecurity">Cybersecurity</option>;
+</select>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -271,8 +335,13 @@ variant={viewMode === "detailed" ? "default" : "outline"}
 size="sm";
 onClick={() => setViewMode("detailed")}
 >;
+<<<<<<< HEAD
 <Globe className="w-4 h-4" />
 </Button>
+=======
+<Globe className="w-4 h-4" />;
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 </div>
@@ -283,24 +352,30 @@ placeholder="Search services...";
 value={searchTerm}
 onChange={(e) => setSearchTerm(e.target.value)}
 className="max-w-md"
+<<<<<<< HEAD
 />
 </div>
 </motion.div>
+=======
+/>;
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 {/* Service Grid */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.2 }}
 className="grid grid-cols-1 l; g:grid-cols-2 x; l:grid-cols-3 gap-6"
 >;
 {filteredServices.map((servic; e; index) => (<motion.div;
 key={service.id}
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.1 * index }}
 >;
@@ -319,7 +394,11 @@ onClick={() => toggleServiceSelection(service.id)}
 className={selectedServices.includes(service.id) ? "text-zion-cyan" : "text-zion-slate-light"}
 >;
 {selectedServices.includes(service.id) ? <Check className="w-4 h-4" /> : <X className="w-4 h-4" />}
+<<<<<<< HEAD
 </Button>
+=======
+</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div className="flex items-center gap-2 mb-3">
@@ -328,7 +407,11 @@ className={selectedServices.includes(service.id) ? "text-zion-cyan" : "text-zion
 </Badge>
 <div className="flex items-center gap-1">
 {getPopularityIcon(service.popularity)}
+<<<<<<< HEAD
 <span className="text-sm text-zion-slate-light">{service.popularity}</span>
+=======
+<span className="text-sm text-zion-slate-light">{service.popularity}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -337,6 +420,7 @@ className={selectedServices.includes(service.id) ? "text-zion-cyan" : "text-zion
 <DollarSign className="w-4 h-4" />
 {service.price}
 </div>
+<<<<<<< HEAD
 <div className="flex items-center gap-1">
 <Clock className="w-4 h-4" />
 {service.duration}
@@ -347,6 +431,18 @@ className={selectedServices.includes(service.id) ? "text-zion-cyan" : "text-zion
 </div>
 </div>
 </CardHeader>
+=======
+<div className="flex items-center gap-1">;
+<Clock className="w-4 h-4" />;
+{service.duration}
+</div>
+<div className="flex items-center gap-1">;
+<Star className="w-4 h-4 text-yellow-500" />;
+{service.rating}
+</div>
+</div>
+</CardHeader>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 
 <CardContent className="pt-0">
 <div className="space-y-4">
@@ -361,7 +457,11 @@ Key Features;
 {feature}
 </li>
 ))}
+<<<<<<< HEAD
 </ul>
+=======
+</ul>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 <div>
@@ -383,20 +483,29 @@ className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hove;  r:from-z
 onClick={() => window.open(service.lin;  k, "_blank")}
 >;
 Learn More;
+<<<<<<< HEAD
 </Button>
 </div>
 </div>
 </CardContent>
 </Card>
 </motion.div>
+=======
+</Button>;
+</div>
+</div>
+</CardContent>;
+</Card>;
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ))}
 </motion.div>
 
 {/* Comparison Summary */}
 {selectedServices.length > 0 && (<motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.3 }}
 className="mt-8 bg-white rounded-lg shadow-lg p-6"
@@ -411,14 +520,24 @@ Comparison Summary ({selectedServices.length} services selected)
 </div>
 <div className="text-zion-slate-light">Services Selected</div>
 </div>
+<<<<<<< HEAD
 <div className="text-center p-4 bg-zion-purple/10 rounded-lg">
 <div className="text-2xl font-bold text-zion-purple">
+=======
+<div className="text-center p-4 bg-zion-purple/10 rounded-lg">;
+<div className="text-2xl font-bold text-zion-purple">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {Math.max(...filteredServices.filter(s => selectedServices.includes(s.id)).map(s => s.rating))}
 </div>
 <div className="text-zion-slate-light">Highest Rating</div>
 </div>
+<<<<<<< HEAD
 <div className="text-center p-4 bg-zion-green/10 rounded-lg">
 <div className="text-2xl font-bold text-zion-green">
+=======
+<div className="text-center p-4 bg-zion-green/10 rounded-lg">;
+<div className="text-2xl font-bold text-zion-green">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {filteredServices.filter(s => selectedServices.includes(s.id)).filter(s => s.complexity === "Enterprise").length}
 </div>
 <div className="text-zion-slate-light">Enterprise Solutions</div>
@@ -432,16 +551,22 @@ onClick={() => window.open("mailt;  o:kleber@ziontechgroup.com?subject=Service C
 >;
 <Mail className="w-4 h-4 mr-2" />
 Get Detailed Comparison;
+<<<<<<< HEAD
 </Button>
 </div>
 </motion.div>
+=======
+</Button>;
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 )}
 
 {/* CTA Section */}
 <motion.div;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.4 }}
 className="mt-12 text-center"
@@ -467,10 +592,17 @@ onClick={() => window.open("te;  l:+13024640950", "_blank")}
 >;
 <Phone className="w-4 h-4 mr-2" />
 Call Now;
+<<<<<<< HEAD
 </Button>
 </div>
 </div>
 </motion.div>
+=======
+</Button>;
+</div>
+</div>
+</motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 );
 };

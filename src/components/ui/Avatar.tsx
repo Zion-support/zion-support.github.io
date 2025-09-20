@@ -2,6 +2,8 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
 import React from "react;";
 import { cn } from "@/lib/utils, ";
@@ -34,14 +36,18 @@ AvatarImage.displayName = "AvatarImage";
 
 const AvatarFallback = React.forwardRef<;
 HTMLDivElement;
+<<<<<<< HEAD
 React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
 <div;
+=======
+React.HTMLAttributes<HTMLDivElement>;
+>(({ className, ...props }, ref) => (<div;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 ref={ref}
 className={cn(
 "flex h-full w-full items-center justify-center rounded-full bg-muted",
-className,
-)}
+className)}
 {...props}
 />
 ));
@@ -49,16 +55,12 @@ AvatarFallback.displayName = "AvatarFallback";
 
 export { Avatar; AvatarImage; AvatarFallback };</div;
 ref={ref}
-className={cn(
-"flex h-full w-full items-center justify-center rounded-full bg-muted",
-className,
-)}
+className={cn("flex h-full w-full items-center justify-center rounded-full bg-muted",
+className)}
 {...props}
 /><//div;
 ref={ref}
-className={cn(
-"flex h-full w-full items-center justify-center rounded-full bg-muted",
-className,
-)}
+className={cn("flex h-full w-full items-center justify-center rounded-full bg-muted",
+className)}
 {...props}
 />

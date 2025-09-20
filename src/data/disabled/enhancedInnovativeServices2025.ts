@@ -1,10 +1,19 @@
 import React from "react";
 
 export interface ServiceContact {
+<<<<<<< HEAD
 phone: string;,
 email: string;,
 website: string;,
 address: string;,
+=======
+phone: string;
+email: string;
+website: string;
+address: string;
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 export interface MicroSaasService {
@@ -24,10 +33,19 @@ contactInfo: ServiceContact;
 marketPrice: string;
 competitors: string[];
 roi: string;
+<<<<<<< HEAD
 setupTime: string;,
 integrations: string[];,
 freeTier: boolean;,
 trialPeriod: string;,
+=======
+setupTime: string;
+integrations: string[];
+freeTier: boolean;
+trialPeriod: string;
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 export interface ITService {
@@ -44,10 +62,19 @@ tags: string[];
 contactInfo: ServiceContact;
 marketPrice: string;
 responseTime: string;
+<<<<<<< HEAD
 sla: string;,
 certifications: string[];,
 deliveryTime: string;,
 support: string;,
+=======
+sla: string;
+certifications: string[];
+deliveryTime: string;
+support: string;
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 export interface AIService {
@@ -66,23 +93,37 @@ contactInfo: ServiceContact;
 marketPrice: string;
 aiModels: string[];
 accuracy: string;
+<<<<<<< HEAD
 trainingData: string;,
 compliance: string[];,
 aiScore: number;,
 useCases: string[];,
+=======
+trainingData: string;
+compliance: string[];
+aiScore: number;
+useCases: string[];
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 }
 
 // Enhanced Innovative Micro SAAS Services for 2025;
 export const enhancedInnovativeMicroSaasServices2025: MicroSaasService[] = [
-{
-id: 1;
+{id: 1;
 name: "QuantumFlow Analytics";
 category: "Business Intelligence";
 pricing: "Tiered";
 description: "Quantum-inspired business intelligence platform with predictive analytics and real-time insights";
+<<<<<<< HEAD
 price: 199;,
 pricingModel: "monthly";,
 userLimit: "Up to 100 users";,
+=======
+price: 199;
+pricingModel: "monthly";
+userLimit: "Up to 100 users";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Quantum-inspired algorithms";
 "Real-time data processing",
@@ -104,6 +145,7 @@ benefits: [
 targetAudience: ["Enterprise", "Data analysts", "Business leaders", "Consultants"],
 tags: ["Analytics", "Business Intelligence", "Quantum", "AI", "Predictive"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/quantumflow-analytics";,
@@ -113,19 +155,34 @@ marketPrice: "$199-599/month";,
 competitors: ["Tableau", "Power BI", "Looker"],
 roi: "400% within 8 months";,
 setupTime: "2 hours";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/quantumflow-analytics";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$199-599/month";
+competitors: ["Tableau", "Power BI", "Looker"],
+roi: "400% within 8 months";
+setupTime: "2 hours";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 integrations: ["Salesforce", "HubSpot", "Google Analytics", "AWS", "Azure"],
-freeTier: false;,
+freeTier: false;
 trialPeriod: "30 days",
 };
-{
-id: 2;
+{id: 2;
 name: "CyberShield Pro";
 category: "Cybersecurity";
 pricing: "Subscription";
 description: "Advanced cybersecurity platform with AI-powered threat detection and automated response";
+<<<<<<< HEAD
 price: 299;,
 pricingModel: "monthly";,
 userLimit: "Unlimited users";,
+=======
+price: 299;
+pricingModel: "monthly";
+userLimit: "Unlimited users";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI threat detection";
 "Automated incident response",
@@ -147,6 +204,7 @@ benefits: [
 targetAudience: ["Enterprises", "Financial institutions", "Healthcare", "Government"],
 tags: ["Cybersecurity", "AI", "Threat Detection", "Compliance", "Automation"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/cybershield-pro";,
@@ -156,19 +214,34 @@ marketPrice: "$299-899/month";,
 competitors: ["CrowdStrike", "SentinelOne", "Carbon Black"],
 roi: "500% within 6 months";,
 setupTime: "4 hours";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/cybershield-pro";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$299-899/month";
+competitors: ["CrowdStrike", "SentinelOne", "Carbon Black"],
+roi: "500% within 6 months";
+setupTime: "4 hours";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 integrations: ["SIEM systems", "Firewalls", "EDR", "Cloud platforms"],
-freeTier: false;,
+freeTier: false;
 trialPeriod: "14 days",
 };
-{
-id: 3;
+{id: 3;
 name: "CloudMatrix Orchestrator";
 category: "Cloud Management";
 pricing: "Usage-based";
 description: "Intelligent cloud infrastructure management with automated optimization and cost control";
+<<<<<<< HEAD
 price: 149;,
 pricingModel: "monthly";,
 userLimit: "Up to 50 users";,
+=======
+price: 149;
+pricingModel: "monthly";
+userLimit: "Up to 50 users";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Multi-cloud management";
 "Cost optimization",
@@ -190,6 +263,7 @@ benefits: [
 targetAudience: ["DevOps teams", "Cloud architects", "IT managers", "Startups"],
 tags: ["Cloud", "DevOps", "Automation", "Cost Management", "Monitoring"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/cloudmatrix-orchestrator";,
@@ -199,19 +273,34 @@ marketPrice: "$149-449/month";,
 competitors: ["Terraform", "Ansible", "Chef"],
 roi: "350% within 5 months";,
 setupTime: "3 hours";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/cloudmatrix-orchestrator";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$149-449/month";
+competitors: ["Terraform", "Ansible", "Chef"],
+roi: "350% within 5 months";
+setupTime: "3 hours";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 integrations: ["AWS", "Azure", "GCP", "Kubernetes", "Docker"],
-freeTier: true;,
+freeTier: true;
 trialPeriod: "21 days",
 };
-{
-id: 4;
+{id: 4;
 name: "DataVault Enterprise";
 category: "Data Management";
 pricing: "Tiered";
 description: "Enterprise-grade data management platform with AI-powered insights and compliance automation";
+<<<<<<< HEAD
 price: 399;,
 pricingModel: "monthly";,
 userLimit: "Unlimited users";,
+=======
+price: 399;
+pricingModel: "monthly";
+userLimit: "Unlimited users";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Data governance";
 "AI-powered analytics",
@@ -233,6 +322,7 @@ benefits: [
 targetAudience: ["Data scientists", "Compliance officers", "IT leaders", "Analysts"],
 tags: ["Data Management", "Governance", "Compliance", "AI", "Analytics"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/datavault-enterprise";,
@@ -242,19 +332,34 @@ marketPrice: "$399-999/month";,
 competitors: ["Informatica", "Talend", "Alteryx"],
 roi: "450% within 7 months";,
 setupTime: "6 hours";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/datavault-enterprise";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$399-999/month";
+competitors: ["Informatica", "Talend", "Alteryx"],
+roi: "450% within 7 months";
+setupTime: "6 hours";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 integrations: ["Databases", "Cloud platforms", "BI tools", "ETL systems"],
-freeTier: false;,
+freeTier: false;
 trialPeriod: "30 days",
 };
-{
-id: 5;
+{id: 5;
 name: "AIStudio Creator";
 category: "AI Development";
 pricing: "Freemium";
 description: "No-code AI development platform for creating custom machine learning models and applications";
+<<<<<<< HEAD
 price: 79;,
 pricingModel: "monthly";,
 userLimit: "Up to 20 users";,
+=======
+price: 79;
+pricingModel: "monthly";
+userLimit: "Up to 20 users";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Drag-and-drop AI builder";
 "Pre-built models",
@@ -276,6 +381,7 @@ benefits: [
 targetAudience: ["Business users", "Data scientists", "Developers", "Consultants"],
 tags: ["AI", "No-code", "Machine Learning", "Development", "Automation"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/aistudio-creator";,
@@ -285,19 +391,34 @@ marketPrice: "$79-299/month";,
 competitors: ["DataRobot", "H2O.ai", "RapidMiner"],
 roi: "300% within 4 months";,
 setupTime: "1 hour";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/aistudio-creator";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$79-299/month";
+competitors: ["DataRobot", "H2O.ai", "RapidMiner"],
+roi: "300% within 4 months";
+setupTime: "1 hour";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 integrations: ["Cloud platforms", "Databases", "APIs", "Webhooks"],
-freeTier: true;,
+freeTier: true;
 trialPeriod: "14 days",
 };
-{
-id: 6;
+{id: 6;
 name: "GreenTech Carbon Tracker";
 category: "Sustainability";
 pricing: "Tiered";
 description: "AI-powered carbon footprint tracking and sustainability management platform for businesses and organizations";
+<<<<<<< HEAD
 price: 89;,
 pricingModel: "monthly";,
 userLimit: "Up to 200 users";,
+=======
+price: 89;
+pricingModel: "monthly";
+userLimit: "Up to 200 users";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Real-time carbon tracking";
 "AI-powered sustainability insights",
@@ -319,6 +440,7 @@ benefits: [
 targetAudience: ["Corporations", "Manufacturing", "Retail", "Government", "NGOs"],
 tags: ["Sustainability", "ESG", "Carbon Tracking", "AI", "Compliance"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/greentech-carbon-tracker";,
@@ -328,10 +450,21 @@ marketPrice: "$89-299/month";,
 competitors: ["Watershed", "Normative", "Persefoni"],
 roi: "300% within 6 months";,
 setupTime: "2 hours";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/greentech-carbon-tracker";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$89-299/month";
+competitors: ["Watershed", "Normative", "Persefoni"],
+roi: "300% within 6 months";
+setupTime: "2 hours";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 integrations: ["ERP systems", "IoT sensors", "Cloud platforms", "Sustainability databases"],
-freeTier: true;,
+freeTier: true;
 trialPeriod: "30 days",
 };
+<<<<<<< HEAD
 {
 id: 7;
 name: "EdgeAI IoT Platform";,
@@ -341,6 +474,16 @@ description: "Edge AI platform for real-time IoT data processing; analytics; and
 price: 129;,
 pricingModel: "monthly";,
 userLimit: "Up to 100 devices";,
+=======
+{id: 7;
+name: "EdgeAI IoT Platform";
+category: "IoT & Edge Computing";
+pricing: "Usage-based";
+description: "Edge AI platform for real-time IoT data processing; analytics; and intelligent automation",
+price: 129;
+pricingModel: "monthly";
+userLimit: "Up to 100 devices";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Edge AI processing";
 "Real-time analytics",
@@ -362,6 +505,7 @@ benefits: [
 targetAudience: ["Manufacturing", "Smart cities", "Energy companies", "Transportation", "Healthcare"],
 tags: ["IoT", "Edge Computing", "AI", "Real-time Analytics", "Predictive Maintenance"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/edgeai-iot-platform";,
@@ -371,19 +515,34 @@ marketPrice: "$129-399/month";,
 competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT"],
 roi: "400% within 8 months";,
 setupTime: "4 hours";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/edgeai-iot-platform";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$129-399/month";
+competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT"],
+roi: "400% within 8 months";
+setupTime: "4 hours";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 integrations: ["MQTT", "CoAP", "HTTP", "Cloud platforms", "Database systems"],
-freeTier: true;,
+freeTier: true;
 trialPeriod: "21 days",
 };
-{
-id: 8;
+{id: 8;
 name: "Blockchain Supply Chain Tracker";
 category: "Blockchain & Supply Chain";
 pricing: "Transaction-based";
 description: "Transparent supply chain tracking platform using blockchain technology for authenticity and traceability";
+<<<<<<< HEAD
 price: 0.01;,
 pricingModel: "per-transaction";,
 userLimit: "Unlimited transactions";,
+=======
+price: 0.01;
+pricingModel: "per-transaction";
+userLimit: "Unlimited transactions";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Blockchain verification";
 "Supply chain mapping",
@@ -405,6 +564,7 @@ benefits: [
 targetAudience: ["Manufacturing", "Retail", "Food & Beverage", "Pharmaceuticals", "Luxury goods"],
 tags: ["Blockchain", "Supply Chain", "Transparency", "Smart Contracts", "Traceability"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/blockchain-supply-chain";,
@@ -414,10 +574,21 @@ marketPrice: "$0.01-0.05 per transaction";,
 competitors: ["IBM Food Trust", "VeChain", "OriginTrail"],
 roi: "500% within 12 months";,
 setupTime: "8 hours";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/blockchain-supply-chain";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$0.01-0.05 per transaction";
+competitors: ["IBM Food Trust", "VeChain", "OriginTrail"],
+roi: "500% within 12 months";
+setupTime: "8 hours";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 integrations: ["ERP systems", "WMS", "Logistics platforms", "E-commerce", "Mobile apps"],
-freeTier: false;,
+freeTier: false;
 trialPeriod: "1000 transactions",
 };
+<<<<<<< HEAD
 {
 id: 9;
 name: "AR/VR Training Simulator";,
@@ -427,6 +598,16 @@ description: "Immersive AR/VR training platform for corporate training; educatio
 price: 199;,
 pricingModel: "monthly";,
 userLimit: "Up to 500 users";,
+=======
+{id: 9;
+name: "AR/VR Training Simulator";
+category: "Immersive Technology";
+pricing: "Subscription";
+description: "Immersive AR/VR training platform for corporate training; education; and skill development",
+price: 199;
+pricingModel: "monthly";
+userLimit: "Up to 500 users";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "3D training environments";
 "Interactive simulations",
@@ -448,6 +629,7 @@ benefits: [
 targetAudience: ["Corporate training", "Healthcare", "Manufacturing", "Education", "Military"],
 tags: ["AR/VR", "Training", "Simulation", "Immersive Learning", "3D"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/ar-vr-training-simulator";,
@@ -457,19 +639,34 @@ marketPrice: "$199-599/month";,
 competitors: ["Strivr", "Talespin", "Pixvana"],
 roi: "350% within 9 months";,
 setupTime: "6 hours";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/ar-vr-training-simulator";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$199-599/month";
+competitors: ["Strivr", "Talespin", "Pixvana"],
+roi: "350% within 9 months";
+setupTime: "6 hours";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 integrations: ["LMS platforms", "HR systems", "Analytics tools", "VR devices", "Mobile apps"],
-freeTier: true;,
+freeTier: true;
 trialPeriod: "14 days",
 };
-{
-id: 10;
+{id: 10;
 name: "Quantum Cryptography Platform";
 category: "Quantum Security";
 pricing: "Enterprise";
 description: "Next-generation quantum-resistant cryptography platform for ultra-secure communications";
+<<<<<<< HEAD
 price: 2999;,
 pricingModel: "monthly";,
 userLimit: "Unlimited users";,
+=======
+price: 2999;
+pricingModel: "monthly";
+userLimit: "Unlimited users";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Quantum-resistant algorithms";
 "Post-quantum cryptography",
@@ -491,6 +688,7 @@ benefits: [
 targetAudience: ["Financial services", "Government", "Healthcare", "Defense", "Critical infrastructure"],
 tags: ["Quantum Security", "Cryptography", "Post-Quantum", "Encryption", "Compliance"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/quantum-cryptography";,
@@ -500,20 +698,35 @@ marketPrice: "$2;999-8;999/month",
 competitors: ["ISARA", "PQShield", "Cryptosense"],
 roi: "600% within 18 months";,
 setupTime: "24 hours";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/quantum-cryptography";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$2;999-8;999/month",
+competitors: ["ISARA", "PQShield", "Cryptosense"],
+roi: "600% within 18 months";
+setupTime: "24 hours";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 integrations: ["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],
-freeTier: false;,
+freeTier: false;
 trialPeriod: "7 days",
 }
 ];
 // Enhanced IT Services for 2025;
 export const enhancedITServices2025: ITService[] = [
-{
-id: 1;
+{id: 1;
 name: "Digital Transformation Consulting";
 category: "Strategic Consulting";
+<<<<<<< HEAD
 description: "End-to-end digital transformation strategy and implementation for modern enterprises";,
 hourlyRate: 250;,
 projectRate: 50000;,
+=======
+description: "End-to-end digital transformation strategy and implementation for modern enterprises";
+hourlyRate: 250;
+projectRate: 50000;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Technology assessment";
 "Strategy development",
@@ -535,6 +748,7 @@ benefits: [
 targetAudience: ["Enterprises", "Government", "Healthcare", "Financial services"],
 tags: ["Digital Transformation", "Strategy", "Consulting", "Change Management"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/digital-transformation";,
@@ -543,17 +757,31 @@ address: "364 E Main St STE 1008 Middletown DE 19709",
 marketPrice: "$200-400/hour";,
 responseTime: "24 hours";,
 sla: "99.9% uptime";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/digital-transformation";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$200-400/hour";
+responseTime: "24 hours";
+sla: "99.9% uptime";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 certifications: ["PMP", "ITIL", "Agile", "Scrum"],
-deliveryTime: "3-6 months";,
+deliveryTime: "3-6 months";
 support: "24/7 dedicated support",
 };
-{
-id: 2;
+{id: 2;
 name: "Cloud Migration & Optimization";
 category: "Cloud Services";
+<<<<<<< HEAD
 description: "Comprehensive cloud migration strategy and implementation with cost optimization";,
 hourlyRate: 200;,
 projectRate: 35000;,
+=======
+description: "Comprehensive cloud migration strategy and implementation with cost optimization";
+hourlyRate: 200;
+projectRate: 35000;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Cloud readiness assessment";
 "Migration planning",
@@ -575,6 +803,7 @@ benefits: [
 targetAudience: ["Enterprises", "Startups", "SMBs", "Government"],
 tags: ["Cloud Migration", "AWS", "Azure", "GCP", "Optimization"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/cloud-migration";,
@@ -583,10 +812,20 @@ address: "364 E Main St STE 1008 Middletown DE 19709",
 marketPrice: "$150-300/hour";,
 responseTime: "4 hours";,
 sla: "99.5% uptime";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/cloud-migration";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$150-300/hour";
+responseTime: "4 hours";
+sla: "99.5% uptime";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 certifications: ["AWS", "Azure", "GCP", "Kubernetes"],
-deliveryTime: "2-4 months";,
+deliveryTime: "2-4 months";
 support: "Business hours + emergency support",
 };
+<<<<<<< HEAD
 {
 id: 3;,
 name: "Cybersecurity Assessment & Implementation";,
@@ -594,6 +833,14 @@ category: "Security Services";,
 description: "Comprehensive cybersecurity assessment; implementation; and ongoing monitoring",
 hourlyRate: 225;,
 projectRate: 45000;,
+=======
+{id: 3;
+name: "Cybersecurity Assessment & Implementation";
+category: "Security Services";
+description: "Comprehensive cybersecurity assessment; implementation; and ongoing monitoring",
+hourlyRate: 225;
+projectRate: 45000;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Security assessment";
 "Vulnerability scanning",
@@ -615,6 +862,7 @@ benefits: [
 targetAudience: ["Financial services", "Healthcare", "Government", "Enterprises"],
 tags: ["Cybersecurity", "Compliance", "Risk Management", "Security"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/cybersecurity";,
@@ -623,17 +871,31 @@ address: "364 E Main St STE 1008 Middletown DE 19709",
 marketPrice: "$200-350/hour";,
 responseTime: "2 hours";,
 sla: "99.9% security uptime";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/cybersecurity";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$200-350/hour";
+responseTime: "2 hours";
+sla: "99.9% security uptime";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 certifications: ["CISSP", "CISM", "CEH", "CompTIA Security+"],
-deliveryTime: "1-3 months";,
+deliveryTime: "1-3 months";
 support: "24/7 security monitoring",
 };
-{
-id: 4;
+{id: 4;
 name: "DevOps & CI/CD Implementation";
 category: "DevOps Services";
+<<<<<<< HEAD
 description: "End-to-end DevOps implementation with automated CI/CD pipelines and infrastructure as code";,
 hourlyRate: 180;,
 projectRate: 30000;,
+=======
+description: "End-to-end DevOps implementation with automated CI/CD pipelines and infrastructure as code";
+hourlyRate: 180;
+projectRate: 30000;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "CI/CD pipeline setup";
 "Infrastructure as code",
@@ -655,6 +917,7 @@ benefits: [
 targetAudience: ["Software companies", "Enterprises", "Startups", "DevOps teams"],
 tags: ["DevOps", "CI/CD", "Automation", "Infrastructure", "Docker", "Kubernetes"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/devops-implementation";,
@@ -663,10 +926,20 @@ address: "364 E Main St STE 1008 Middletown DE 19709",
 marketPrice: "$150-250/hour";,
 responseTime: "8 hours";,
 sla: "99.5% uptime";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/devops-implementation";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$150-250/hour";
+responseTime: "8 hours";
+sla: "99.5% uptime";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 certifications: ["AWS", "Azure", "Docker", "Kubernetes", "Jenkins"],
-deliveryTime: "2-3 months";,
+deliveryTime: "2-3 months";
 support: "Business hours + on-call support",
 };
+<<<<<<< HEAD
 {
 id: 5;,
 name: "Data Engineering & Analytics";,
@@ -674,6 +947,14 @@ category: "Data Services";,
 description: "Comprehensive data engineering solutions including ETL; data warehousing; and analytics implementation",
 hourlyRate: 200;,
 projectRate: 40000;,
+=======
+{id: 5;
+name: "Data Engineering & Analytics";
+category: "Data Services";
+description: "Comprehensive data engineering solutions including ETL; data warehousing; and analytics implementation",
+hourlyRate: 200;
+projectRate: 40000;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Data pipeline design";
 "ETL/ELT implementation",
@@ -695,6 +976,7 @@ benefits: [
 targetAudience: ["Enterprises", "Data teams", "Analytics departments", "Consulting firms"],
 tags: ["Data Engineering", "ETL", "Data Warehousing", "Analytics", "Big Data"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/data-engineering";,
@@ -703,10 +985,20 @@ address: "364 E Main St STE 1008 Middletown DE 19709",
 marketPrice: "$180-300/hour";,
 responseTime: "12 hours";,
 sla: "99.7% uptime";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/data-engineering";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$180-300/hour";
+responseTime: "12 hours";
+sla: "99.7% uptime";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 certifications: ["AWS", "Azure", "Snowflake", "Databricks", "Apache"],
-deliveryTime: "3-5 months";,
+deliveryTime: "3-5 months";
 support: "Business hours + emergency support",
 };
+<<<<<<< HEAD
 {
 id: 6;,
 name: "API Development & Integration";,
@@ -714,6 +1006,14 @@ category: "Integration Services";,
 description: "Custom API development; third-party integrations; and API management solutions",
 hourlyRate: 160;,
 projectRate: 25000;,
+=======
+{id: 6;
+name: "API Development & Integration";
+category: "Integration Services";
+description: "Custom API development; third-party integrations; and API management solutions",
+hourlyRate: 160;
+projectRate: 25000;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Custom API development";
 "Third-party integrations",
@@ -735,6 +1035,7 @@ benefits: [
 targetAudience: ["Software companies", "Enterprises", "E-commerce", "Fintech"],
 tags: ["API Development", "Integration", "Microservices", "REST", "GraphQL"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/api-development";,
@@ -743,17 +1044,31 @@ address: "364 E Main St STE 1008 Middletown DE 19709",
 marketPrice: "$140-220/hour";,
 responseTime: "16 hours";,
 sla: "99.5% uptime";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/api-development";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$140-220/hour";
+responseTime: "16 hours";
+sla: "99.5% uptime";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 certifications: ["AWS", "Azure", "MuleSoft", "Apigee", "Kong"],
-deliveryTime: "1-3 months";,
+deliveryTime: "1-3 months";
 support: "Business hours support",
 };
-{
-id: 7;
+{id: 7;
 name: "Legacy System Modernization";
 category: "System Modernization";
+<<<<<<< HEAD
 description: "Modernization of legacy systems with cloud-native architecture and microservices";,
 hourlyRate: 220;,
 projectRate: 60000;,
+=======
+description: "Modernization of legacy systems with cloud-native architecture and microservices";
+hourlyRate: 220;
+projectRate: 60000;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Legacy system assessment";
 "Modernization strategy",
@@ -775,6 +1090,7 @@ benefits: [
 targetAudience: ["Enterprises", "Government", "Financial services", "Healthcare"],
 tags: ["Legacy Modernization", "Cloud Migration", "Microservices", "API", "Architecture"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/legacy-modernization";,
@@ -783,10 +1099,20 @@ address: "364 E Main St STE 1008 Middletown DE 19709",
 marketPrice: "$200-350/hour";,
 responseTime: "24 hours";,
 sla: "99.8% uptime";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/legacy-modernization";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$200-350/hour";
+responseTime: "24 hours";
+sla: "99.8% uptime";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 certifications: ["AWS", "Azure", "GCP", "TOGAF", "Architecture"],
-deliveryTime: "6-12 months";,
+deliveryTime: "6-12 months";
 support: "24/7 dedicated support",
 };
+<<<<<<< HEAD
 {
 id: 8;,
 name: "IoT Solution Development";,
@@ -794,6 +1120,14 @@ category: "IoT Services";,
 description: "End-to-end IoT solution development including hardware integration; software; and analytics",
 hourlyRate: 190;,
 projectRate: 35000;,
+=======
+{id: 8;
+name: "IoT Solution Development";
+category: "IoT Services";
+description: "End-to-end IoT solution development including hardware integration; software; and analytics",
+hourlyRate: 190;
+projectRate: 35000;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "IoT architecture design";
 "Hardware integration",
@@ -815,6 +1149,7 @@ benefits: [
 targetAudience: ["Manufacturing", "Smart cities", "Energy companies", "Healthcare", "Transportation"],
 tags: ["IoT", "Hardware Integration", "Sensor Networks", "Real-time Analytics", "Cloud"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/iot-solutions";,
@@ -823,21 +1158,35 @@ address: "364 E Main St STE 1008 Middletown DE 19709",
 marketPrice: "$160-280/hour";,
 responseTime: "12 hours";,
 sla: "99.5% uptime";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/iot-solutions";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$160-280/hour";
+responseTime: "12 hours";
+sla: "99.5% uptime";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 certifications: ["AWS IoT", "Azure IoT", "IoT Security", "Embedded Systems"],
-deliveryTime: "3-6 months";,
+deliveryTime: "3-6 months";
 support: "Business hours + emergency support",
 }
 ];
 // Enhanced AI Services for 2025;
 export const enhancedAIServices2025: AIService[] = [
-{
-id: 1;
+{id: 1;
 name: "Custom AI Model Development";
 category: "AI Development";
 description: "Custom AI model development tailored to specific business needs and use cases";
+<<<<<<< HEAD
 pricing: "Project-based";,
 price: 25000;,
 pricingModel: "one-time";,
+=======
+pricing: "Project-based";
+price: 25000;
+pricingModel: "one-time";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Custom model development";
 "Data preprocessing",
@@ -859,6 +1208,7 @@ benefits: [
 targetAudience: ["Enterprises", "Startups", "Research institutions", "Consultants"],
 tags: ["AI Development", "Machine Learning", "Custom Models", "Deep Learning"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/custom-ai-development";,
@@ -868,18 +1218,33 @@ marketPrice: "$20;000-100;000",
 aiModels: ["GPT-4", "BERT", "ResNet", "Custom architectures"],
 accuracy: "95%+";,
 trainingData: "Custom datasets";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/custom-ai-development";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$20;000-100;000",
+aiModels: ["GPT-4", "BERT", "ResNet", "Custom architectures"],
+accuracy: "95%+";
+trainingData: "Custom datasets";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 compliance: ["GDPR", "HIPAA", "SOC2", "ISO27001"],
-aiScore: 9.2;,
+aiScore: 9.2;
 useCases: ["Predictive analytics", "Natural language processing", "Computer vision", "Recommendation systems"];
 },
-{
-id: 2;
+{id: 2;
 name: "AI-Powered Business Intelligence";
 category: "Business Intelligence";
 description: "Advanced business intelligence with AI-powered insights and predictive analytics";
+<<<<<<< HEAD
 pricing: "Subscription";,
 price: 1500;,
 pricingModel: "monthly";,
+=======
+pricing: "Subscription";
+price: 1500;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered analytics";
 "Predictive modeling",
@@ -901,6 +1266,7 @@ benefits: [
 targetAudience: ["Business leaders", "Data analysts", "Consultants", "Enterprises"],
 tags: ["Business Intelligence", "AI", "Analytics", "Predictive", "Insights"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/ai-business-intelligence";,
@@ -910,18 +1276,33 @@ marketPrice: "$1;000-3;000/month",
 aiModels: ["GPT-4", "BERT", "Custom ML models"],
 accuracy: "92%+";,
 trainingData: "Multi-source business data";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/ai-business-intelligence";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$1;000-3;000/month",
+aiModels: ["GPT-4", "BERT", "Custom ML models"],
+accuracy: "92%+";
+trainingData: "Multi-source business data";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 compliance: ["GDPR", "SOC2", "ISO27001"],
-aiScore: 8.9;,
+aiScore: 8.9;
 useCases: ["Sales forecasting", "Customer analytics", "Operational insights", "Risk assessment"];
 },
-{
-id: 3;
+{id: 3;
 name: "AI-Powered Process Automation";
 category: "Process Automation";
 description: "Intelligent process automation using AI to streamline business operations";
+<<<<<<< HEAD
 pricing: "Tiered";,
 price: 800;,
 pricingModel: "monthly";,
+=======
+pricing: "Tiered";
+price: 800;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "RPA with AI";
 "Process optimization",
@@ -943,6 +1324,7 @@ benefits: [
 targetAudience: ["Operations teams", "HR", "Finance", "Customer service"],
 tags: ["Process Automation", "RPA", "AI", "Workflow", "Efficiency"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/ai-process-automation";,
@@ -952,18 +1334,33 @@ marketPrice: "$500-2;000/month",
 aiModels: ["GPT-4", "Custom ML models", "NLP models"],
 accuracy: "90%+";,
 trainingData: "Process-specific data";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/ai-process-automation";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$500-2;000/month",
+aiModels: ["GPT-4", "Custom ML models", "NLP models"],
+accuracy: "90%+";
+trainingData: "Process-specific data";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 compliance: ["GDPR", "SOC2", "ISO27001"],
-aiScore: 8.7;,
+aiScore: 8.7;
 useCases: ["Document processing", "Customer service", "HR automation", "Financial operations"];
 },
-{
-id: 4;
+{id: 4;
 name: "AI-Powered Customer Experience Platform";
 category: "Customer Experience";
 description: "Intelligent customer experience platform using AI for personalization and engagement";
+<<<<<<< HEAD
 pricing: "Tiered";,
 price: 1200;,
 pricingModel: "monthly";,
+=======
+pricing: "Tiered";
+price: 1200;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI-powered personalization";
 "Customer journey mapping",
@@ -985,6 +1382,7 @@ benefits: [
 targetAudience: ["E-commerce", "Retail", "SaaS companies", "Financial services"],
 tags: ["Customer Experience", "AI", "Personalization", "Marketing", "Analytics"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/ai-customer-experience";,
@@ -994,18 +1392,33 @@ marketPrice: "$1;200-3;500/month",
 aiModels: ["GPT-4", "BERT", "Recommendation engines", "NLP models"],
 accuracy: "88%+";,
 trainingData: "Customer interaction data";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/ai-customer-experience";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$1;200-3;500/month",
+aiModels: ["GPT-4", "BERT", "Recommendation engines", "NLP models"],
+accuracy: "88%+";
+trainingData: "Customer interaction data";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 compliance: ["GDPR", "CCPA", "SOC2", "ISO27001"],
-aiScore: 8.8;,
+aiScore: 8.8;
 useCases: ["E-commerce recommendations", "Customer support", "Marketing automation", "User engagement"];
 },
-{
-id: 5;
+{id: 5;
 name: "AI-Powered Fraud Detection System";
 category: "Security AI";
 description: "Advanced fraud detection system using machine learning for real-time threat identification";
+<<<<<<< HEAD
 pricing: "Enterprise";,
 price: 3000;,
 pricingModel: "monthly";,
+=======
+pricing: "Enterprise";
+price: 3000;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Real-time fraud detection";
 "Machine learning algorithms",
@@ -1027,6 +1440,7 @@ benefits: [
 targetAudience: ["Financial institutions", "E-commerce", "Insurance", "Gaming", "Healthcare"],
 tags: ["Fraud Detection", "AI", "Machine Learning", "Security", "Risk Management"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/ai-fraud-detection";,
@@ -1036,10 +1450,21 @@ marketPrice: "$3;000-8;000/month",
 aiModels: ["Anomaly detection", "Deep learning", "Ensemble methods", "Custom ML models"],
 accuracy: "96%+";,
 trainingData: "Fraud patterns and transactions";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/ai-fraud-detection";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$3;000-8;000/month",
+aiModels: ["Anomaly detection", "Deep learning", "Ensemble methods", "Custom ML models"],
+accuracy: "96%+";
+trainingData: "Fraud patterns and transactions";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 compliance: ["PCI DSS", "SOC2", "ISO27001", "GDPR"],
-aiScore: 9.1;,
+aiScore: 9.1;
 useCases: ["Payment fraud", "Insurance fraud", "Account takeover", "Identity theft"];
 },
+<<<<<<< HEAD
 {
 id: 6;,
 name: "AI-Powered Content Generation Platform";,
@@ -1048,6 +1473,15 @@ description: "Intelligent content generation platform using AI for marketing; do
 pricing: "Usage-based";,
 price: 0.05;,
 pricingModel: "per-word";,
+=======
+{id: 6;
+name: "AI-Powered Content Generation Platform";
+category: "Content AI";
+description: "Intelligent content generation platform using AI for marketing; documentation; and creative content",
+pricing: "Usage-based";
+price: 0.05;
+pricingModel: "per-word";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "AI content generation";
 "Multi-language support",
@@ -1069,6 +1503,7 @@ benefits: [
 targetAudience: ["Marketing agencies", "Content creators", "E-commerce", "Publishers", "Enterprises"],
 tags: ["Content Generation", "AI", "Marketing", "SEO", "Creative Writing"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/ai-content-generation";,
@@ -1078,18 +1513,33 @@ marketPrice: "$0.05-0.15 per word";,
 aiModels: ["GPT-4", "Claude", "Custom language models", "NLP models"],
 accuracy: "85%+";,
 trainingData: "High-quality content datasets";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/ai-content-generation";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$0.05-0.15 per word";
+aiModels: ["GPT-4", "Claude", "Custom language models", "NLP models"],
+accuracy: "85%+";
+trainingData: "High-quality content datasets";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 compliance: ["Copyright compliance", "Content guidelines", "Brand safety"],
-aiScore: 8.5;,
+aiScore: 8.5;
 useCases: ["Blog posts", "Marketing copy", "Product descriptions", "Social media content"];
 },
-{
-id: 7;
+{id: 7;
 name: "AI-Powered Predictive Maintenance";
 category: "Industrial AI";
 description: "Intelligent predictive maintenance system using AI for equipment monitoring and failure prediction";
+<<<<<<< HEAD
 pricing: "Tiered";,
 price: 1800;,
 pricingModel: "monthly";,
+=======
+pricing: "Tiered";
+price: 1800;
+pricingModel: "monthly";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Equipment monitoring";
 "Failure prediction",
@@ -1111,6 +1561,7 @@ benefits: [
 targetAudience: ["Manufacturing", "Energy companies", "Transportation", "Healthcare", "Utilities"],
 tags: ["Predictive Maintenance", "AI", "IoT", "Industrial", "Analytics"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/ai-predictive-maintenance";,
@@ -1120,18 +1571,33 @@ marketPrice: "$1;800-5;000/month",
 aiModels: ["Time series analysis", "Anomaly detection", "Machine learning", "Deep learning"],
 accuracy: "92%+";,
 trainingData: "Equipment sensor data";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/ai-predictive-maintenance";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$1;800-5;000/month",
+aiModels: ["Time series analysis", "Anomaly detection", "Machine learning", "Deep learning"],
+accuracy: "92%+";
+trainingData: "Equipment sensor data";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 compliance: ["Industry standards", "Safety regulations", "Quality standards"],
-aiScore: 8.9;,
+aiScore: 8.9;
 useCases: ["Manufacturing equipment", "Power plants", "Fleet vehicles", "Medical devices"];
 },
-{
-id: 8;
+{id: 8;
 name: "AI-Powered Language Translation Platform";
 category: "Language AI";
 description: "Advanced language translation platform using AI for real-time multilingual communication";
+<<<<<<< HEAD
 pricing: "Usage-based";,
 price: 0.02;,
 pricingModel: "per-character";,
+=======
+pricing: "Usage-based";
+price: 0.02;
+pricingModel: "per-character";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 features: [
 "Real-time translation";
 "Multi-language support",
@@ -1153,6 +1619,7 @@ benefits: [
 targetAudience: ["Global businesses", "E-commerce", "Travel companies", "Educational institutions"],
 tags: ["Language Translation", "AI", "Multilingual", "Real-time", "NLP"],
 contactInfo: {
+<<<<<<< HEAD
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/ai-translation";,
@@ -1162,17 +1629,33 @@ marketPrice: "$0.02-0.08 per character";,
 aiModels: ["Transformer models", "Neural MT", "Custom language models", "NLP"],
 accuracy: "94%+";,
 trainingData: "Multilingual corpora";,
+=======
+phone: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com/ai-translation";
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$0.02-0.08 per character";
+aiModels: ["Transformer models", "Neural MT", "Custom language models", "NLP"],
+accuracy: "94%+";
+trainingData: "Multilingual corpora";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 compliance: ["Data privacy", "Content guidelines", "Cultural sensitivity"],
-aiScore: 8.7;,
+aiScore: 8.7;
 useCases: ["Website localization", "Customer support", "Document translation", "Real-time communication"];
 }
 ];
 
 // Export all services;
 export const allEnhancedServices2025 = {;
+<<<<<<< HEAD
 microSaas: enhancedInnovativeMicroSaasServices2025;,
 itServices: enhancedITServices2025;,
 aiServices: enhancedAIServices2025;,
+=======
+microSaas: enhancedInnovativeMicroSaasServices2025;
+itServices: enhancedITServices2025;
+aiServices: enhancedAIServices2025;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 };
 // Export the main services array for backward compatibility;
 export const ENHANCED_INNOVATIVE_SERVICES_2025 = enhancedInnovativeMicroSaasServices2025;

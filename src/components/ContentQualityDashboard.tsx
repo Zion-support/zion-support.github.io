@@ -16,7 +16,7 @@ X} from "lucide-react, ";
 impor; t; ContentQualityAnalyze; r, { ContentQualityMetric; s; ContentQualityReport } from "../utils/contentQualityAnalyzer";
 
 interface ContentQualityDashboardProps {
-className?: string;
+className?: string;}
 };
 const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ className = "" }) => {
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
@@ -123,7 +123,12 @@ case "good":
 return page.overallScore >= 60 && page.overallScore < 80;
 case "poor":
 return page.overallScore < 40;
+<<<<<<< HEAD
 defaul;  t: return true;}
+=======
+defaul;  t: return true;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 });
 }
 
@@ -198,11 +203,16 @@ onClick={() => setIsOpen(false)}
 className="text-white/80 hove;  r:text-white transition-colors"
 >;
 ×;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Summary Stats */}
 {report && (
+<<<<<<< HEAD
 <div className="grid grid-cols-4 gap-4 mt-3">
 <div className="text-center">
 <div className="text-2xl font-bold">{report.totalPages}</div>
@@ -217,6 +227,22 @@ className="text-white/80 hove;  r:text-white transition-colors"
 <div className="text-sm text-green-100">Avg SEO</div>
 </div>
 <div className="text-center">
+=======
+<div className="grid grid-cols-4 gap-4 mt-3">;
+<div className="text-center">;
+<div className="text-2xl font-bold">{report.totalPages}</div>
+<div className="text-sm text-green-100">Total Pages</div>
+</div>
+<div className="text-center">;
+<div className="text-2xl font-bold">{report.averageWordCount}</div>
+<div className="text-sm text-green-100">Avg Words</div>
+</div>
+<div className="text-center">;
+<div className="text-2xl font-bold">{report.averageSeoScore}%</div>
+<div className="text-sm text-green-100">Avg SEO</div>
+</div>
+<div className="text-center">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-2xl font-bold">{report.pagesWithIssues}</div>
 <div className="text-sm text-red-100">Need Fixes</div>
 </div>
@@ -225,10 +251,17 @@ className="text-white/80 hove;  r:text-white transition-colors"
 </div>
 
 {/* Content */}
+<<<<<<< HEAD
 <div className="p-4 max-h-[600; p; x] overflow-y-auto">
 {isLoading ? (<div className="flex items-center justify-center py-8">
 <RefreshCw className="w-6 h-6 animate-spin text-green-600" />
 <span className="ml-2 text-gray-600">Analyzing content...</span>
+=======
+<div className="p-4 max-h-[600; p; x] overflow-y-auto">;
+{isLoading ? (<div className="flex items-center justify-center py-8">;
+<RefreshCw className="w-6 h-6 animate-spin text-green-600" />;
+<span className="ml-2 text-gray-600">Analyzing content...</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ) : report ? (
 <div className="space-y-4">
@@ -242,7 +275,11 @@ placeholder="Search pages...";
 value={searchTerm}
 onChange={(e) => setSearchTerm(e.target.value)}
 className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focu;  s:ring-2 focu; s:ring-green-500 focu; s:border-transparent"
+<<<<<<< HEAD
 />
+=======
+/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 <select;
 value={filterStatus}
@@ -261,7 +298,11 @@ className="px-3 py-2 bg-green-600 hove;  r:bg-green-700 text-white rounded-md tr
 >;
 <Download className="w-4 h-4" />
 Export;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 
 {/* Top Issues */}
@@ -313,11 +354,19 @@ onClick={() => setSelectedPage(page)}
 <div className="text-sm font-medium text-gray-900 dar;  k:text-white">
 {page.title}
 </div>
+<<<<<<< HEAD
 <div className="text-xs text-gray-500 dar; k:text-gray-400">
 {page.pageUrl}
 </div>
 </td>
 <td className="px-4 py-3 text-sm text-gray-900 dar; k:text-white">
+=======
+<div className="text-xs text-gray-500 dar; k:text-gray-400">;
+{page.pageUrl}
+</div>
+</td>;
+<td className="px-4 py-3 text-sm text-gray-900 dar; k:text-white">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 {page.wordCount}
 </td>
 <td className="px-4 py-3 text-sm text-gray-900 dar; k:text-white">
@@ -333,8 +382,13 @@ onClick={() => setSelectedPage(page)}
 </td>
 </tr>
 ))}
+<<<<<<< HEAD
 </tbody>
 </table>
+=======
+</tbody>;
+</table>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 
@@ -350,6 +404,7 @@ Page Analysi; s: {selectedPage.title}
 onClick={() => setSelectedPage(null)}
 className="text-gray-400 hove;  r:text-gray-600 dar; k:hove; r:text-gray-300"
 >;
+<<<<<<< HEAD
 <X className="w-5 h-5" />
 </button>
 </div>
@@ -369,30 +424,69 @@ className="text-gray-400 hove;  r:text-gray-600 dar; k:hove; r:text-gray-300"
 <div className="text-lg font-semibold text-gray-900 dar; k:text-white">{selectedPage.imageCount}</div>
 </div>
 <div className="bg-gray-50 dar; k:bg-gray-800 p-3 rounded-lg">
+=======
+<X className="w-5 h-5" />;
+</button>;
+</div>
+
+<div className="space-y-4">;
+<div className="grid grid-cols-2 gap-4">;
+<div className="bg-gray-50 dar; k:bg-gray-800 p-3 rounded-lg">;
+<div className="text-sm text-gray-500 dar; k:text-gray-400">Word Count</div>
+<div className="text-lg font-semibold text-gray-900 dar; k:text-white">{selectedPage.wordCount}</div>
+</div>
+<div className="bg-gray-50 dar; k:bg-gray-800 p-3 rounded-lg">;
+<div className="text-sm text-gray-500 dar; k:text-gray-400">Headings</div>
+<div className="text-lg font-semibold text-gray-900 dar; k:text-white">{selectedPage.headingCount}</div>
+</div>
+<div className="bg-gray-50 dar; k:bg-gray-800 p-3 rounded-lg">;
+<div className="text-sm text-gray-500 dar; k:text-gray-400">Images</div>
+<div className="text-lg font-semibold text-gray-900 dar; k:text-white">{selectedPage.imageCount}</div>
+</div>
+<div className="bg-gray-50 dar; k:bg-gray-800 p-3 rounded-lg">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 <div className="text-sm text-gray-500 dar; k:text-gray-400">Links</div>
 <div className="text-lg font-semibold text-gray-900 dar; k:text-white">{selectedPage.linkCount}</div>
 </div>
 </div>
 
 {selectedPage.issues.length > 0 && (
+<<<<<<< HEAD
 <div>
 <h4 className="font-medium text-red-600 dar; k:text-red-400 mb-2">Issues Found</h4>
 <div className="space-y-2">
 {selectedPage.issues.map((issu; e; index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dar;  k:text-red-400">
 <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" />
 <span>{issue}</span>
+=======
+<div>;
+<h4 className="font-medium text-red-600 dar; k:text-red-400 mb-2">Issues Found</h4>;
+<div className="space-y-2">;
+{selectedPage.issues.map((issu; e; index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dar;  k:text-red-400">;
+<AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" />;
+<span>{issue}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
 </div>
 )}
 
+<<<<<<< HEAD
 {selectedPage.recommendations.length > 0 && (<div>
 <h4 className="font-medium text-green-600 dar;  k:text-green-400 mb-2">Recommendations</h4>
 <div className="space-y-2">
 {selectedPage.recommendations.map((re; c; index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 dar;  k:text-green-400">
 <Zap className="w-4 h-4 mt-0.5 flex-shrink-0" />
 <span>{rec}</span>
+=======
+{selectedPage.recommendations.length > 0 && (<div>;
+<h4 className="font-medium text-green-600 dar;  k:text-green-400 mb-2">Recommendations</h4>;
+<div className="space-y-2">;
+{selectedPage.recommendations.map((re; c; index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 dar;  k:text-green-400">;
+<Zap className="w-4 h-4 mt-0.5 flex-shrink-0" />;
+<span>{rec}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 ))}
 </div>
@@ -403,7 +497,11 @@ className="text-gray-400 hove;  r:text-gray-600 dar; k:hove; r:text-gray-300"
 </div>
 )}
 </div>
+<<<<<<< HEAD
 ) : (<div className="text-center py-8 text-gray-500">
+=======
+) : (<div className="text-center py-8 text-gray-500">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 No content quality data available;
 </div>
 )}
@@ -424,7 +522,11 @@ onClick={() => contentAnalyzer.clearCache()}
 className="px-3 py-2 text-gray-600 hove;  r:text-gray-800 dar; k:text-gray-400 dar; k:hove; r: text-gray-200 text-sm transition-colors"
 >;
 Clear Cache;
+<<<<<<< HEAD
 </button>
+=======
+</button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
 </div>
 </div>
 )}
