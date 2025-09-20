@@ -29,6 +29,13 @@ export const COMPREHENSIVE_SERVICES_2030: ProductListing[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/enterprise-ai-transformation",
       address: "364 E Main St STE 1008 Middletown DE 19709"
+=======
+    id: "enterprise-ai-transformation-suite",title: "Enterprise AI Transformation Suite",description: "Comprehensive enterprise AI transformation platform with change management, training, and implementation support. Transforms organizations into AI-first enterprises with measurable ROI.",
+    category: "AI & Business Intelligence",subcategory: "Enterprise Transformation",price: 25000,currency: "$",tags: ["Enterprise AI", "Digital Transformation", "Change Management", "AI Training", "Implementation"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/enterprise-ai-transformation.jpg"],createdAt: "2024-01-16T10:00:00.000Z",rating: 4.9,reviewCount: 45,featured: true,location: "Global",availability: "8-12 Weeks",aiScore: 99,contactInfo: {
+      phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com/enterprise-ai-transformation",address: "364 E Main St STE 1008 Middletown DE 19709"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-1f15
     },
     marketPrice: "$20,000-50,000",
     competitors: ["McKinsey", "BCG", "Deloitte"],
@@ -113,7 +120,7 @@ export const COMPREHENSIVE_SERVICES_2030: ProductListing[] = [
     competitors: ["Netflix", "Spotify", "YouTube"],
     roi: "450% within 10 months",setupTime: "2-3 weeks",integrations: ["Streaming Platforms", "Content Management Systems", "Analytics Tools", "User Databases", "CDN Services"]
   }
-],
+];
 
 // Export individual categories for easier access
 export const AI_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
