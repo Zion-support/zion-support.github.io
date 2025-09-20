@@ -1,22 +1,25 @@
-
-interface Service {
-id: string;,
-name: string;
-}
-}
-}
-
 import React from "react";
+import { useTheme } from "next-themes";
+import { Sun, Moon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
 const ThemeToggle: React.FC = () => {
-,
-return (
-<div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className = "text-xl font-bold mb-4">ThemeToggle</h3>;
-<p className="text-gray-300">Revolutionary technology component</p>;
-},
-</div>)},
-export default ThemeToggle,;<//div><///div>
+  const { theme, setTheme } = useTheme();
+
+  return (
+    <Button
+      variant="outline"
+      size="sm"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className="p-2 rounded-lg bg-zion-slate/10 hover:bg-zion-slate/20 transition-colors"
+    >
+      {theme === "dark" ? (
+        <Sun className="w-5 h-5 text-zion-slate-light" />
+      ) : (
+        <Moon className="w-5 h-5 text-zion-slate-light" />
+      )}
+    </Button>
+  );
 };
 
 export default ThemeToggle;
-
