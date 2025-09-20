@@ -1,14 +1,14 @@
 interface SitemapUrl {
   url: string;
-    lastmod?: string;
+  lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
 
 interface SitemapConfig {
   baseUrl: string;
-    urls: SitemapUrl[];
-    outputPath?: string;
+  urls: SitemapUrl[];
+  outputPath?: string;
 }
 
 export class SitemapGenerator {
@@ -67,33 +67,33 @@ Sitemap: ${baseUrl}/sitemap-index.xml`;
 
 // Default sitemap configuration
 export const defaultSitemapConfig: SitemapConfig = {
-  baseUrl: 'https://ziontechgroup.com';
+  baseUrl: 'https://ziontechgroup.com',
   urls: [
     // Main pages
-    { url: '/', priority: 1.0, changefreq: 'daily' };
-    { url: '/about', priority: 0.8, changefreq: 'monthly' };
-    { url: '/services', priority: 0.9, changefreq: 'weekly' };
-    { url: '/contact', priority: 0.7, changefreq: 'monthly' };
-    { url: '/pricing', priority: 0.8, changefreq: 'weekly' };
+    { url: '/', priority: 1.0, changefreq: 'daily' },
+    { url: '/about', priority: 0.8, changefreq: 'monthly' },
+    { url: '/services', priority: 0.9, changefreq: 'weekly' },
+    { url: '/contact', priority: 0.7, changefreq: 'monthly' },
+    { url: '/pricing', priority: 0.8, changefreq: 'weekly' },
     // Service pages
-    { url: '/services/ai-automation', priority: 0.8, changefreq: 'weekly' };
-    { url: '/services/cloud-solutions', priority: 0.8, changefreq: 'weekly' };
-    { url: '/services/cybersecurity', priority: 0.8, changefreq: 'weekly' };
-    { url: '/services/data-analytics', priority: 0.8, changefreq: 'weekly' };
-    { url: '/services/devops', priority: 0.8, changefreq: 'weekly' };
+    { url: '/services/ai-automation', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/cloud-solutions', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/cybersecurity', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/data-analytics', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/devops', priority: 0.8, changefreq: 'weekly' },
     // Solution pages
-    { url: '/solutions/enterprise', priority: 0.7, changefreq: 'monthly' };
-    { url: '/solutions/healthcare', priority: 0.7, changefreq: 'monthly' };
+    { url: '/solutions/enterprise', priority: 0.7, changefreq: 'monthly' },
+    { url: '/solutions/healthcare', priority: 0.7, changefreq: 'monthly' },
     // Additional pages
-    { url: '/blog', priority: 0.6, changefreq: 'weekly' };
-    { url: '/careers', priority: 0.6, changefreq: 'weekly' };
-    { url: '/partners', priority: 0.5, changefreq: 'monthly' };
-    { url: '/news', priority: 0.5, changefreq: 'weekly' };
-    { url: '/case-studies', priority: 0.6, changefreq: 'monthly' };
-    { url: '/help-center', priority: 0.5, changefreq: 'monthly' };
-    { url: '/faq', priority: 0.5, changefreq: 'monthly' };
-    { url: '/pricing', priority: 0.6, changefreq: 'monthly' };
-    { url: '/marketplace', priority: 0.7, changefreq: 'weekly' };
+    { url: '/blog', priority: 0.6, changefreq: 'weekly' },
+    { url: '/careers', priority: 0.6, changefreq: 'weekly' },
+    { url: '/partners', priority: 0.5, changefreq: 'monthly' },
+    { url: '/news', priority: 0.5, changefreq: 'weekly' },
+    { url: '/case-studies', priority: 0.6, changefreq: 'monthly' },
+    { url: '/help-center', priority: 0.5, changefreq: 'monthly' },
+    { url: '/faq', priority: 0.5, changefreq: 'monthly' },
+    { url: '/pricing', priority: 0.6, changefreq: 'monthly' },
+    { url: '/marketplace', priority: 0.7, changefreq: 'weekly' }
   ]
 };
 
