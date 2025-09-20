@@ -244,22 +244,23 @@ export const SEO: React.FC<SEOProps> = ({
         link.rel = 'preload';
         link.href = href;
         link.as = 'style';
-        document.head.appendChild(link)
-      }),
+        document.head.appendChild(link);
+      });
 
       // Preload critical images
       const criticalImages = [
-        '/images/zion-tech-group-logo.png/images/hero-background.jpg'
+        '/images/zion-tech-group-logo.png',
+        '/images/hero-background.jpg'
       ];
 
       criticalImages.forEach(src => {
         const link = document.createElement('link');
-        link.rel = 'preload',
-        link.href = src,
-        link.as = 'image',
+        link.rel = 'preload';
+        link.href = src;
+        link.as = 'image';
         document.head.appendChild(link);
-      }),
-    },
+      });
+    };
 
     // Add resource hints
     const addResourceHints = () => {
@@ -269,11 +270,11 @@ export const SEO: React.FC<SEOProps> = ({
       ];
       hints.forEach(hint => {
         const link = document.createElement('link');
-        link.rel = hint.rel,
-        link.href = hint.href,
+        link.rel = hint.rel;
+        link.href = hint.href;
         document.head.appendChild(link);
-      }),
-    },
+      });
+    };
 
     // Initialize optimizations
     preloadCriticalResources();
@@ -287,9 +288,9 @@ export const SEO: React.FC<SEOProps> = ({
         if (link.getAttribute('data-dynamic')) {
           link.remove();
         }
-      }),
-    },
-  }, []),
+      });
+    };
+  }, []);
 
   return (
     <Helmet>
@@ -373,7 +374,7 @@ export function HomePageSEO() {
         "description": "Comprehensive technology services including AI, quantum computing, and IT infrastructure"
       }}
     />
-  ),
+  );
 }
 
 export function ContactPageSEO() {
@@ -400,18 +401,23 @@ export function ContactPageSEO() {
         }
       }}
     />
-  ),
+  );
 }
 
 export function BlogPostSEO({ 
   title, 
   description, 
-  author;
-  publishedDate;
-  image;
+  author,
+  publishedDate,
+  image,
   slug 
 }: {
-  title: string,description: string,author: string,publishedDate: string,image: string,slug: string
+  title: string;
+  description: string;
+  author: string;
+  publishedDate: string;
+  image: string;
+  slug: string;
 }) {
   return (
     <SEO
@@ -421,7 +427,7 @@ export function BlogPostSEO({
       url={`https://ziontechgroup.com/blog/${slug}`}
       type="article"
       structuredData={{
-        "@context": "https://schema.org";
+          "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": title,
         "description": description,
@@ -435,9 +441,9 @@ export function BlogPostSEO({
           "name": "Zion Tech Group",
           "logo": {
             "@type": "ImageObject",
-            "url": "https: //ziontechgroup.com/images/zion-tech-group-logo.png"
-          }
-        };
+              "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
+            }
+          },
         "datePublished": publishedDate,
         "dateModified": publishedDate,
         "mainEntityOfPage": {
