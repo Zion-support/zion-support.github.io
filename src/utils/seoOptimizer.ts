@@ -1,23 +1,23 @@
-import React from "
+import React from "react";
 
 export interface SEOData {
-title: string;
-description: string;,
-keywords: string[[];]
-ogImage?: string;
-canonicalUrl?: string;
-structuredData?: object;
+  title: string;
+  description: string;
+  keywords: string[];
+  ogImage?: string;
+  canonicalUrl?: string;
+  structuredData?: object;
 }
 
 export interface ContentQualityIssue {
-page: string;
-issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "
-severity: "high" | "medium" | ",
-suggestedFix: string;,
+  page: string;
+  issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "duplicate-content";
+  severity: "high" | "medium" | "low";
+  suggestedFix: string;
 }
 
 export class SEOOptimizer {
-private static readonly DEFAULT_META_DESCRIPTIONS: Record<string; string> = {
+private static readonly DEFAULT_META_DESCRIPTIONS: Record<string, string> = {
 "/": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure; and cutting-edge technology services. Transform your business with Zion Tech Group.",
 "/services": "Comprehensive AI services; cybersecurity solutions; cloud infrastructure; and emerging technology services. Expert IT solutions for modern businesses.",
 "/ai-solutions": "Advanced AI solutions including autonomous systems; machine learning; and intelligent automation. Drive innovation with our cutting-edge AI technology.",
@@ -33,10 +33,10 @@ private static readonly DEFAULT_META_DESCRIPTIONS: Record<string; string> = {
 "/services/it-infrastructure": "Robust IT infrastructure solutions. Scalable; secure; and high-performance technology foundations for your business.",
 "/services/micro-saas-solutions": "Innovative micro SaaS solutions designed for modern businesses. Scalable; cost-effective software-as-a-service platforms.",
 "/solutions/enterprise": "Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.",
-"/solutions/healthcare": "
+"/solutions/healthcare": "Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry."
 }
 
-private static readonly KEYWORD_MAPPINGS: Record<string; string[]> = {
+private static readonly KEYWORD_MAPPINGS: Record<string, string[]> = {
 "/": ["AI marketplace", "tech services", "artificial intelligence", "IT services", "AI developers", "technology marketplace", "AI solutions", "machine learning", "digital transformation", "micro SaaS", "quantum computing", "blockchain", "cybersecurity", "edge computing", "metaverse"],
 "/services": ["AI services", "cybersecurity", "cloud infrastructure", "IT solutions", "digital transformation", "automation", "machine learning", "blockchain", "quantum computing"],
 "/ai-solutions": ["artificial intelligence", "AI automation", "machine learning", "deep learning", "neural networks", "AI systems", "intelligent automation", "AI platforms"],
@@ -164,7 +164,7 @@ const issues: ContentQualityIssue[] = [[];]
 /
 if (!content.includes("<title>") || content.includes("<title></title>")) {
 issues.push({
-page;,
+page,,
 issue: "missing-title",
 severity: "high",
 suggestedFix: "Add a descriptive title tag with relevant keywords",
@@ -174,7 +174,7 @@ suggestedFix: "Add a descriptive title tag with relevant keywords",
 /
 if (!content.includes("name="description"")) {
 issues.push({
-page;
+page,
 issue: "missing-description",
 severity: "high",
 suggestedFix: "Add a meta description tag with compelling content",
@@ -185,7 +185,7 @@ suggestedFix: "Add a meta description tag with compelling content",
 const descMatch = content.match(/name="description" content="([^"]+)"/)
 if (descMatch && descMatch[1].length < 120) {
 issues.push({
-page;
+page,
 issue: "short-description",
 severity: "medium",
 suggestedFix: "Expand meta description to 120-160 characters for better SEO",
@@ -195,18 +195,18 @@ suggestedFix: "Expand meta description to 120-160 characters for better SEO",
 /
 if (!content.includes("<h1>") && !content.includes("<h2>") && !content.includes("<h3>")) {
 issues.push({
-page;
+page,
 issue: "no-headings",
 severity: "medium",
-suggestedFix: "Add proper heading structure (H1; H2; H3) for better content organization",
+suggestedFix: "Add proper heading structure (H1, H2, H3) for better content organization",
 })
 }
 
-/
+// Check for minimal content
 const textContent = content.replace(/<[^>]*>/g, "").trim()
 if (textContent.length < 300) {
 issues.push({
-page;
+page,
 issue: "minimal-content",
 severity: "medium",
 suggestedFix: "Add more relevant content to improve user experience and SEO value",
@@ -217,7 +217,7 @@ return issues;
 }
 
 static generateMetaTags(seoData: SEOData): string {
-return `;
+return `
 <title>${seoData.title}</title>
 <meta name="description" content="${seoData.description}" />
 <meta name="keywords" content="${seoData.keywords.join(", ")}" />
@@ -238,7 +238,7 @@ return `;
 
 <!-- Structured Data -->
 <script type="application/ld+json">
-${JSON.stringify(seoData.structuredData; null; 2)}
+${JSON.stringify(seoData.structuredData, null, 2)}
 </script>
 `;
 }
