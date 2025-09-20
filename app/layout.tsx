@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as SonnerToaster } from "@/components/ui/sonner";
+import { PerformanceMonitor } from "@/components/PerformanceMonitor";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,8 +30,6 @@ export const metadata: Metadata = {
     title: "Zion Tech Group - Innovative Technology Solutions",
     description: "Leading provider of AI, cloud, cybersecurity, and digital transformation solutions.",
   },
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#0ea5e9",
 };
 
 export default function RootLayout({
@@ -42,6 +41,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider defaultTheme="system" storageKey="zion-theme">
+          <PerformanceMonitor />
           <div className="min-h-screen bg-background">
             <Header />
             <main className="flex-1">
