@@ -13,8 +13,7 @@ module.exports = {
     node: true
   },
   extends: [
-    "eslint:recommended",
-    "next/core-web-vitals"
+    "eslint:recommended"
   ],
   plugins: ["@typescript-eslint"],
   rules: {
