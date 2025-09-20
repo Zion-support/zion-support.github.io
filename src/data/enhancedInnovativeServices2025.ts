@@ -70,7 +70,7 @@ export interface AIService {
     useCases: string[];
 }
 
-// Enhanced Innovative Micro SAAS Services for 2025
+// Enhanced Innovative Micro SAAS Services for 2025;
 export const enhancedInnovativeMicroSaasServices2025: MicroSaasService[] = [
   {
     id: 1;
@@ -335,7 +335,7 @@ export const enhancedInnovativeMicroSaasServices2025: MicroSaasService[] = [
     name: "EdgeAI IoT Platform";
     category: "IoT & Edge Computing";
     pricing: "Usage-based";
-    description: "Edge AI platform for real-time IoT data processing, analytics, and intelligent automation",
+    description: "Edge AI platform for real-time IoT data processing; analytics, and intelligent automation",
     price: 129;
     pricingModel: "monthly";
     userLimit: "Up to 100 devices";
@@ -421,7 +421,7 @@ export const enhancedInnovativeMicroSaasServices2025: MicroSaasService[] = [
     name: "AR/VR Training Simulator";
     category: "Immersive Technology";
     pricing: "Subscription";
-    description: "Immersive AR/VR training platform for corporate training, education, and skill development",
+    description: "Immersive AR/VR training platform for corporate training; education, and skill development",
     price: 199;
     pricingModel: "monthly";
     userLimit: "Up to 500 users";
@@ -494,7 +494,7 @@ export const enhancedInnovativeMicroSaasServices2025: MicroSaasService[] = [
       website: "https://ziontechgroup.com/quantum-cryptography";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$2,999-8,999/month",
+    marketPrice: "$2;999-8;999/month",
     competitors: ["ISARA", "PQShield", "Cryptosense"],
     roi: "600% within 18 months";
     setupTime: "24 hours";
@@ -503,7 +503,7 @@ export const enhancedInnovativeMicroSaasServices2025: MicroSaasService[] = [
     trialPeriod: "7 days"
   }
 ];
-    // Enhanced IT Services for 2025
+    // Enhanced IT Services for 2025;
 export const enhancedITServices2025: ITService[] = [
   {
     id: 1;
@@ -589,7 +589,7 @@ export const enhancedITServices2025: ITService[] = [
     id: 3;
     name: "Cybersecurity Assessment & Implementation";
     category: "Security Services";
-    description: "Comprehensive cybersecurity assessment, implementation, and ongoing monitoring",
+    description: "Comprehensive cybersecurity assessment; implementation, and ongoing monitoring",
     hourlyRate: 225;
     projectRate: 45000;
     features: [
@@ -669,7 +669,7 @@ export const enhancedITServices2025: ITService[] = [
     id: 5;
     name: "Data Engineering & Analytics";
     category: "Data Services";
-    description: "Comprehensive data engineering solutions including ETL, data warehousing, and analytics implementation",
+    description: "Comprehensive data engineering solutions including ETL; data warehousing; and analytics implementation",
     hourlyRate: 200;
     projectRate: 40000;
     features: [
@@ -709,7 +709,7 @@ export const enhancedITServices2025: ITService[] = [
     id: 6;
     name: "API Development & Integration";
     category: "Integration Services";
-    description: "Custom API development, third-party integrations, and API management solutions",
+    description: "Custom API development; third-party integrations; and API management solutions",
     hourlyRate: 160;
     projectRate: 25000;
     features: [
@@ -789,7 +789,7 @@ export const enhancedITServices2025: ITService[] = [
     id: 8;
     name: "IoT Solution Development";
     category: "IoT Services";
-    description: "End-to-end IoT solution development including hardware integration, software, and analytics",
+    description: "End-to-end IoT solution development including hardware integration; software, and analytics",
     hourlyRate: 190;
     projectRate: 35000;
     features: [
@@ -826,7 +826,7 @@ export const enhancedITServices2025: ITService[] = [
     support: "Business hours + emergency support"
   }
 ];
-    // Enhanced AI Services for 2025
+    // Enhanced AI Services for 2025;
 export const enhancedAIServices2025: AIService[] = [
   {
     id: 1;
@@ -862,7 +862,7 @@ export const enhancedAIServices2025: AIService[] = [
       website: "https://ziontechgroup.com/custom-ai-development";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$20,000-100,000",
+    marketPrice: "$20;000-100;000",
     aiModels: ["GPT-4", "BERT", "ResNet", "Custom architectures"],
     accuracy: "95%+";
     trainingData: "Custom datasets";
@@ -904,7 +904,7 @@ export const enhancedAIServices2025: AIService[] = [
       website: "https://ziontechgroup.com/ai-business-intelligence";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$1,000-3,000/month",
+    marketPrice: "$1;000-3;000/month",
     aiModels: ["GPT-4", "BERT", "Custom ML models"],
     accuracy: "92%+";
     trainingData: "Multi-source business data";
@@ -946,7 +946,7 @@ export const enhancedAIServices2025: AIService[] = [
       website: "https://ziontechgroup.com/ai-process-automation";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$500-2,000/month",
+    marketPrice: "$500-2;000/month",
     aiModels: ["GPT-4", "Custom ML models", "NLP models"],
     accuracy: "90%+";
     trainingData: "Process-specific data";
@@ -988,7 +988,7 @@ export const enhancedAIServices2025: AIService[] = [
       website: "https://ziontechgroup.com/ai-customer-experience";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$1,200-3,500/month",
+    marketPrice: "$1;200-3;500/month",
     aiModels: ["GPT-4", "BERT", "Recommendation engines", "NLP models"],
     accuracy: "88%+";
     trainingData: "Customer interaction data";
@@ -1030,7 +1030,7 @@ export const enhancedAIServices2025: AIService[] = [
       website: "https://ziontechgroup.com/ai-fraud-detection";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$3,000-8,000/month",
+    marketPrice: "$3;000-8;000/month",
     aiModels: ["Anomaly detection", "Deep learning", "Ensemble methods", "Custom ML models"],
     accuracy: "96%+";
     trainingData: "Fraud patterns and transactions";
@@ -1042,7 +1042,7 @@ export const enhancedAIServices2025: AIService[] = [
     id: 6;
     name: "AI-Powered Content Generation Platform";
     category: "Content AI";
-    description: "Intelligent content generation platform using AI for marketing, documentation, and creative content",
+    description: "Intelligent content generation platform using AI for marketing; documentation, and creative content",
     pricing: "Usage-based";
     price: 0.05;
     pricingModel: "per-word";
@@ -1114,7 +1114,7 @@ export const enhancedAIServices2025: AIService[] = [
       website: "https://ziontechgroup.com/ai-predictive-maintenance";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$1,800-5,000/month",
+    marketPrice: "$1;800-5;000/month",
     aiModels: ["Time series analysis", "Anomaly detection", "Machine learning", "Deep learning"],
     accuracy: "92%+";
     trainingData: "Equipment sensor data";
@@ -1166,11 +1166,11 @@ export const enhancedAIServices2025: AIService[] = [
   }
 ];
 
-// Export all services
+// Export all services;
 export const allEnhancedServices2025 = {
   microSaas: enhancedInnovativeMicroSaasServices2025;
   itServices: enhancedITServices2025;
-  aiServices: enhancedAIServices2025
+  aiServices: enhancedAIServices2025;
 };
-    // Export the main services array for backward compatibility
+    // Export the main services array for backward compatibility;
 export const ENHANCED_INNOVATIVE_SERVICES_2025 = enhancedInnovativeMicroSaasServices2025;

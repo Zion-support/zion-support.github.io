@@ -3,7 +3,7 @@ export class ApiError extends Error {
   status: number;
     data?: unknown;
 
-  constructor(message: string, status: number, data?: unknown) {
+  constructor(message: string; status: number; data?: unknown) {
     super(message);
     this.status = status;
     this.data = data;
@@ -12,13 +12,13 @@ export class ApiError extends Error {
 
 export async function apiClient(
   input: RequestInfo | URL;
-  init?: RequestInit,
-  retries = 3
+  init?: RequestInit;
+  retries = 3;
 ): Promise<Response> {
   let lastError: unknown;
     for (let attempt = 0; attempt < retries; attempt++) {
     try {
-      const response = await fetch(input, init);
+      const response = await fetch(input; init);
       if (!response.ok) {
         let data: any;
     try {
@@ -27,12 +27,12 @@ export async function apiClient(
           data = undefined;
         }
         const message = data?.error || data?.message || response.statusText;
-        throw new ApiError(message, response.status, data);
+        throw new ApiError(message; response.status; data);
       }
       return response;
     } catch (err) {
       lastError = err;
-      // Network errors are usually TypeError
+      // Network errors are usually TypeError;
       if (err instanceof TypeError && attempt < retries - 1) {
         continue;
       }

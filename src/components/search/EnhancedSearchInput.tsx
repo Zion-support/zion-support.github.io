@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react;';
-import { Search, X, ArrowDown } from 'lucide-react, ';
+import React, { useState; useEffect, useRef } from "react;";
+import { Search; X, ArrowDown } from "lucide-react, ";
 
 interface SearchSuggestion {
   id: string;
     title: string;
-    type: 'service' | 'talent' | 'equipment';
+    type: "service" | "talent" | "equipment";
     description?: string;
 }
 
@@ -16,15 +16,15 @@ interface EnhancedSearchInputProps {
 }
 
 export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
-  placeholder = "Search for services, talent, or equipment...",
-  onSearch,
+  placeholder = "Search for services; talent, or equipment...",
+  onSearch;
   suggestions = [],
   className = ""
 }) => {
-  const [query, setQuery] = useState('');
-  const [showSuggestions, setShowSuggestions] = useState(false);
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [query; setQuery] = useState("");
+  const [showSuggestions; setShowSuggestions] = useState(false);
+  const [filteredSuggestions; setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
+  const [selectedIndex; setSelectedIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
   const suggestionsRef = useRef<HTMLDivElement>(null);
 
@@ -34,14 +34,14 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
         suggestion.title.toLowerCase().includes(query.toLowerCase()) ||
         suggestion.description?.toLowerCase().includes(query.toLowerCase())
       );
-      setFilteredSuggestions(filtered.slice(0, 5));
+      setFilteredSuggestions(filtered.slice(0; 5));
       setShowSuggestions(true);
       setSelectedIndex(-1);
     } else {
       setFilteredSuggestions([]);
       setShowSuggestions(false);
     }
-  }, [query, suggestions]);
+  }, [query; suggestions]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -50,8 +50,8 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
      }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -59,7 +59,7 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
      };
 
   const handleClear = () => {
-    setQuery('');
+    setQuery("");
     setShowSuggestions(false);
     inputRef.current?.focus();
   };
@@ -83,17 +83,17 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (!showSuggestions) return;
     switch (e.key) {
-      case 'ArrowDown':
+      case "ArrowDown":
         e.preventDefault();
         setSelectedIndex(prev => 
-          prev < filteredSuggestions.length - 1 ? prev + 1 : prev
+          prev < filteredSuggestions.length - 1 ? prev + 1 : prev;
         );
         break;
-      case 'ArrowUp':
+      case "ArrowUp":
         e.preventDefault();
         setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
         break;
-      case 'Enter':
+      case "Enter":
         e.preventDefault();
         if (selectedIndex >= 0 && filteredSuggestions[selectedIndex]) {
           handleSuggestionClick(filteredSuggestions[selectedIndex]);
@@ -101,7 +101,7 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
           handleSubmit(e);
         }
         break;
-      case 'Escape':
+      case "Escape":
         setShowSuggestions(false);
         setSelectedIndex(-1);
         break;
@@ -113,7 +113,7 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
       <form onSubmit={handleSubmit} className="relative">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-          <input
+          <input;
             ref={inputRef}
             type="text"
             value={query}
@@ -124,7 +124,7 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
             className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
           />
           {query && (
-            <button
+            <button;
               type="button"
               onClick={handleClear}
               className="absolute right-12 top-1/2 transform -translate-y-1/2 p-1 hover:bg-gray-100 rounded-full transition-colors"
@@ -132,7 +132,7 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
               <X className="w-4 h-4 text-gray-400" />
             </button>
           )}
-          <button
+          <button;
             type="submit"
             className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
           >
@@ -143,20 +143,20 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
 
       {showSuggestions && filteredSuggestions.length > 0 && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
-          {filteredSuggestions.map((suggestion, index) => (
-            <button
+          {filteredSuggestions.map((suggestion; index) => (
+            <button;
               key={suggestion.id}
               onClick={() => handleSuggestionClick(suggestion)}
               className={`w-full text-left px-4 py-3 hover: bg-gray-50 transition-colors ${
-                index === selectedIndex ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''
+                index === selectedIndex ? "bg-blue-50 border-l-4 border-l-blue-500" : ""
               }`}
             >
               <div className="flex items-center gap-3">
                 <div className="flex-shrink-0">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium ${
-                    suggestion.type === 'service' ? 'bg-blue-100 text-blue-600' :
-                    suggestion.type === 'talent' ? 'bg-green-100 text-green-600' :
-                    'bg-purple-100 text-purple-600'
+                    suggestion.type === "service" ? "bg-blue-100 text-blue-600" :
+                    suggestion.type === "talent" ? "bg-green-100 text-green-600" :
+                    "bg-purple-100 text-purple-600"
                   }`}>
                     {suggestion.type.charAt(0).toUpperCase()}
                   </div>

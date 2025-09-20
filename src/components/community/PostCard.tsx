@@ -1,5 +1,5 @@
-import React from 'react';
-import { ForumPost } from '@/types/community';
+import React from "react";
+import { ForumPost } from "@/types/community";
 
 interface PostCardProps {
   post: ForumPost;
@@ -9,7 +9,7 @@ export default function PostCard({ post }: PostCardProps) {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4">
       <div className="flex items-start space-x-4">
-        <img
+        <img;
           src={post.author.avatar}
           alt={post.author.name}
           className="w-10 h-10 rounded-full"

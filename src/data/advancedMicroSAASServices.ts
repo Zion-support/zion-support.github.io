@@ -51,11 +51,11 @@ export interface AdvancedMicroSAASService {
 }
 
 export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
-  // AI-Powered Customer Experience Platform
+  // AI-Powered Customer Experience Platform;
   {
     id: "ai-customer-experience-platform";
     title: "AI Customer Experience & Sentiment Analysis Platform";
-    description: "Intelligent platform that analyzes customer interactions across all channels, predicts customer behavior, and provides personalized experiences using advanced AI and machine learning.",
+    description: "Intelligent platform that analyzes customer interactions across all channels; predicts customer behavior; and provides personalized experiences using advanced AI and machine learning.",
     category: "AI & Customer Experience";
     subcategory: "Customer Analytics";
     price: 899;
@@ -99,7 +99,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     tags: ["AI", "Customer Experience", "Sentiment Analysis", "Machine Learning", "Automation", "Analytics"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$899 - $3,500/month",
+    marketPrice: "$899 - $3;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -134,11 +134,11 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     sla: "99.9% uptime guarantee";
     uptime: "99.95%"
   };
-  // Blockchain Supply Chain Transparency Platform
+  // Blockchain Supply Chain Transparency Platform;
   {
     id: "blockchain-supply-chain-transparency";
     title: "Blockchain Supply Chain Transparency & Traceability Platform";
-    description: "Revolutionary blockchain-based platform that provides end-to-end supply chain visibility, ensuring product authenticity, ethical sourcing, and regulatory compliance.",
+    description: "Revolutionary blockchain-based platform that provides end-to-end supply chain visibility; ensuring product authenticity; ethical sourcing; and regulatory compliance.",
     category: "Blockchain & Supply Chain";
     subcategory: "Supply Chain Transparency";
     price: 1500;
@@ -182,7 +182,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     tags: ["Blockchain", "Supply Chain", "Transparency", "Traceability", "Smart Contracts", "Compliance"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$1,500 - $6,000/month",
+    marketPrice: "$1;500 - $6;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -217,11 +217,11 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     sla: "99.99% blockchain uptime";
     uptime: "99.99%"
   };
-  // AI-Powered Predictive Maintenance Platform
+  // AI-Powered Predictive Maintenance Platform;
   {
     id: "ai-predictive-maintenance-platform";
     title: "AI Predictive Maintenance & IoT Asset Management Platform";
-    description: "Intelligent platform that uses IoT sensors, AI algorithms, and machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime.",
+    description: "Intelligent platform that uses IoT sensors; AI algorithms; and machine learning to predict equipment failures; optimize maintenance schedules; and reduce downtime.",
     category: "AI & IoT";
     subcategory: "Predictive Maintenance";
     price: 1200;
@@ -265,7 +265,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     tags: ["AI", "IoT", "Predictive Maintenance", "Machine Learning", "Asset Management", "Industry 4.0"],
     estimatedDelivery: "6-10 weeks";
     supportLevel: "premium";
-    marketPrice: "$1,200 - $5,000/month",
+    marketPrice: "$1;200 - $5;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -300,7 +300,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     sla: "99.5% uptime guarantee";
     uptime: "99.7%"
   };
-  // Quantum-Safe Communication Platform
+  // Quantum-Safe Communication Platform;
   {
     id: "quantum-safe-communication-platform";
     title: "Quantum-Safe Communication & Encryption Platform";
@@ -348,7 +348,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     tags: ["Quantum Security", "Post-Quantum Cryptography", "Encryption", "Communication", "Zero Trust", "Compliance"],
     estimatedDelivery: "12-16 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$3,000 - $15,000/month",
+    marketPrice: "$3;000 - $15;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -383,11 +383,11 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     sla: "99.99% security guarantee";
     uptime: "99.95%"
   };
-  // AI-Powered Market Research & Intelligence Platform
+  // AI-Powered Market Research & Intelligence Platform;
   {
     id: "ai-market-research-intelligence";
     title: "AI Market Research & Competitive Intelligence Platform";
-    description: "Intelligent platform that uses AI to analyze market trends, monitor competitors, identify opportunities, and provide actionable business intelligence for strategic decision-making.",
+    description: "Intelligent platform that uses AI to analyze market trends; monitor competitors; identify opportunities; and provide actionable business intelligence for strategic decision-making.",
     category: "AI & Business Intelligence";
     subcategory: "Market Research";
     price: 799;
@@ -431,7 +431,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     tags: ["AI", "Market Research", "Business Intelligence", "Competitive Analysis", "Data Analytics", "Strategy"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$799 - $3,200/month",
+    marketPrice: "$799 - $3;200/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -466,11 +466,11 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     sla: "99.5% uptime guarantee";
     uptime: "99.7%"
   };
-  // Autonomous AI Content Creation & Management Platform
+  // Autonomous AI Content Creation & Management Platform;
   {
     id: "autonomous-ai-content-creation";
     title: "Autonomous AI Content Creation & Management Platform";
-    description: "Revolutionary platform that autonomously creates, optimizes, and manages content across all digital channels using advanced AI, with minimal human intervention.",
+    description: "Revolutionary platform that autonomously creates; optimizes, and manages content across all digital channels using advanced AI; with minimal human intervention.",
     category: "AI & Content Creation";
     subcategory: "Autonomous Content";
     price: 1299;
@@ -514,7 +514,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     tags: ["AI", "Autonomous Systems", "Content Creation", "Digital Marketing", "SEO", "Automation"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "premium";
-    marketPrice: "$1,299 - $5,500/month",
+    marketPrice: "$1;299 - $5;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -549,11 +549,11 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     sla: "99.9% content creation uptime";
     uptime: "99.95%"
   };
-  // Smart Contract Development & Management Platform
+  // Smart Contract Development & Management Platform;
   {
     id: "smart-contract-development-platform";
     title: "Smart Contract Development & Management Platform";
-    description: "Comprehensive platform for developing, deploying, and managing smart contracts across multiple blockchain networks with advanced security, testing, and monitoring capabilities.",
+    description: "Comprehensive platform for developing; deploying, and managing smart contracts across multiple blockchain networks with advanced security; testing, and monitoring capabilities.",
     category: "Blockchain & Smart Contracts";
     subcategory: "Smart Contract Development";
     price: 1800;
@@ -597,7 +597,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     tags: ["Blockchain", "Smart Contracts", "DeFi", "NFT", "Security", "Development"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "premium";
-    marketPrice: "$1,800 - $7,500/month",
+    marketPrice: "$1;800 - $7;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -632,11 +632,11 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     sla: "99.9% platform uptime";
     uptime: "99.95%"
   };
-  // AI-Powered Human Resources & Talent Management Platform
+  // AI-Powered Human Resources & Talent Management Platform;
   {
     id: "ai-hr-talent-management";
     title: "AI-Powered HR & Talent Management Platform";
-    description: "Intelligent HR platform that uses AI to streamline recruitment, employee management, performance evaluation, and organizational development with predictive analytics.",
+    description: "Intelligent HR platform that uses AI to streamline recruitment; employee management; performance evaluation; and organizational development with predictive analytics.",
     category: "AI & Human Resources";
     subcategory: "Talent Management";
     price: 699;
@@ -680,7 +680,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     tags: ["AI", "Human Resources", "Talent Management", "Recruitment", "Analytics", "Automation"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "premium";
-    marketPrice: "$699 - $3,000/month",
+    marketPrice: "$699 - $3;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -715,11 +715,11 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     sla: "99.5% uptime guarantee";
     uptime: "99.7%"
   };
-  // Quantum Machine Learning & Optimization Platform
+  // Quantum Machine Learning & Optimization Platform;
   {
     id: "quantum-ml-optimization";
     title: "Quantum Machine Learning & Optimization Platform";
-    description: "Cutting-edge platform that combines quantum computing with machine learning to solve complex optimization problems, accelerate AI model training, and provide quantum advantage.",
+    description: "Cutting-edge platform that combines quantum computing with machine learning to solve complex optimization problems; accelerate AI model training; and provide quantum advantage.",
     category: "Quantum Computing & AI";
     subcategory: "Quantum Machine Learning";
     price: 5000;
@@ -763,7 +763,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
     tags: ["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research", "Advanced Computing"],
     estimatedDelivery: "16-20 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$5,000 - $25,000/month",
+    marketPrice: "$5;000 - $25;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";

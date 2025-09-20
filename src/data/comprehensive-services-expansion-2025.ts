@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 export interface ServiceContact {
   phone: string;
     email: string;
@@ -71,7 +71,7 @@ export interface AIService {
     useCases: string[];
 }
 
-// Advanced AI & Machine Learning Services
+// Advanced AI & Machine Learning Services;
 export const advancedAIServices2025: AIService[] = [
   {
     id: 1;
@@ -107,7 +107,7 @@ export const advancedAIServices2025: AIService[] = [
       website: "https://ziontechgroup.com/quantumai-vision";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$2,500-8,000/month",
+    marketPrice: "$2;500-8;000/month",
     aiModels: ["Quantum Neural Networks", "Vision Transformers", "Custom CNN", "YOLO v8"],
     accuracy: "99.7%";
     trainingData: "Multi-domain datasets";
@@ -161,7 +161,7 @@ export const advancedAIServices2025: AIService[] = [
     id: 3;
     name: "EmotionAI Analytics";
     category: "Emotional Intelligence";
-    description: "Advanced emotional intelligence platform that analyzes human emotions, sentiment, and behavioral patterns in real-time",
+    description: "Advanced emotional intelligence platform that analyzes human emotions; sentiment, and behavioral patterns in real-time",
     pricing: "Professional";
     price: 199;
     pricingModel: "monthly";
@@ -201,14 +201,14 @@ export const advancedAIServices2025: AIService[] = [
   }
 ];
 
-// Blockchain & Web3 Services
+// Blockchain & Web3 Services;
 export const blockchainWeb3Services2025: MicroSaasService[] = [
   {
     id: 1;
     name: "DeFi Portfolio Manager";
     category: "DeFi";
     pricing: "Freemium";
-    description: "Comprehensive DeFi portfolio management platform with yield optimization, risk assessment, and automated rebalancing",
+    description: "Comprehensive DeFi portfolio management platform with yield optimization; risk assessment; and automated rebalancing",
     price: 79;
     pricingModel: "monthly";
     userLimit: "Unlimited portfolios";
@@ -251,7 +251,7 @@ export const blockchainWeb3Services2025: MicroSaasService[] = [
     name: "NFT Marketplace Builder";
     category: "NFT";
     pricing: "Professional";
-    description: "White-label NFT marketplace creation platform with customizable features, royalty management, and multi-chain support",
+    description: "White-label NFT marketplace creation platform with customizable features; royalty management; and multi-chain support",
     price: 299;
     pricingModel: "monthly";
     userLimit: "Unlimited users";
@@ -290,13 +290,13 @@ export const blockchainWeb3Services2025: MicroSaasService[] = [
     trialPeriod: "14 days"
   }
 ];
-    // Cybersecurity & Compliance Services
+    // Cybersecurity & Compliance Services;
 export const cybersecurityServices2025: ITService[] = [
   {
     id: 1;
     name: "Zero Trust Security Suite";
     category: "Cybersecurity";
-    description: "Comprehensive zero trust security platform with advanced threat detection, identity management, and compliance monitoring",
+    description: "Comprehensive zero trust security platform with advanced threat detection; identity management; and compliance monitoring",
     hourlyRate: 150;
     projectRate: 15000;
     features: [
@@ -325,7 +325,7 @@ export const cybersecurityServices2025: ITService[] = [
       website: "https://ziontechgroup.com/zero-trust-security";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$15,000-50,000/project",
+    marketPrice: "$15;000-50;000/project",
     responseTime: "2 hours";
     sla: "99.9% uptime";
     certifications: ["CISSP", "CISM", "ISO 27001", "SOC 2"],
@@ -365,7 +365,7 @@ export const cybersecurityServices2025: ITService[] = [
       website: "https://ziontechgroup.com/ai-threat-hunting";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$25,000-75,000/project",
+    marketPrice: "$25;000-75;000/project",
     responseTime: "1 hour";
     sla: "99.99% uptime";
     certifications: ["GCIH", "GCFA", "CISSP", "CEH"],
@@ -373,13 +373,13 @@ export const cybersecurityServices2025: ITService[] = [
     support: "24/7"
   }
 ];
-    // Cloud & DevOps Services
+    // Cloud & DevOps Services;
 export const cloudDevOpsServices2025: ITService[] = [
   {
     id: 1;
     name: "Multi-Cloud Orchestration";
     category: "Cloud Management";
-    description: "Unified multi-cloud management platform with automated provisioning, cost optimization, and compliance monitoring",
+    description: "Unified multi-cloud management platform with automated provisioning; cost optimization; and compliance monitoring",
     hourlyRate: 125;
     projectRate: 12000;
     features: [
@@ -408,7 +408,7 @@ export const cloudDevOpsServices2025: ITService[] = [
       website: "https://ziontechgroup.com/multi-cloud-orchestration";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$12,000-40,000/project",
+    marketPrice: "$12;000-40;000/project",
     responseTime: "4 hours";
     sla: "99.5% uptime";
     certifications: ["AWS", "Azure", "GCP", "Kubernetes"],
@@ -416,13 +416,13 @@ export const cloudDevOpsServices2025: ITService[] = [
     support: "Business hours"
   }
 ];
-    // Healthcare & Biotech Services
+    // Healthcare & Biotech Services;
 export const healthcareBiotechServices2025: AIService[] = [
   {
     id: 1;
     name: "MedAI Diagnostics";
     category: "Healthcare AI";
-    description: "AI-powered medical diagnostics platform with advanced imaging analysis, disease prediction, and treatment recommendations",
+    description: "AI-powered medical diagnostics platform with advanced imaging analysis; disease prediction; and treatment recommendations",
     pricing: "Enterprise";
     price: 3500;
     pricingModel: "monthly";
@@ -452,7 +452,7 @@ export const healthcareBiotechServices2025: AIService[] = [
       website: "https://ziontechgroup.com/medai-diagnostics";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$3,500-12,000/month",
+    marketPrice: "$3;500-12;000/month",
     aiModels: ["Medical vision models", "NLP for records", "Predictive models", "Custom ML"],
     accuracy: "96.8%";
     trainingData: "Medical datasets";
@@ -462,14 +462,14 @@ export const healthcareBiotechServices2025: AIService[] = [
   }
 ];
 
-// IoT & Edge Computing Services
+// IoT & Edge Computing Services;
 export const iotEdgeServices2025: MicroSaasService[] = [
   {
     id: 1;
     name: "SmartCity IoT Platform";
     category: "IoT";
     pricing: "Enterprise";
-    description: "Comprehensive IoT platform for smart city management with real-time monitoring, predictive analytics, and automated control systems",
+    description: "Comprehensive IoT platform for smart city management with real-time monitoring; predictive analytics; and automated control systems",
     price: 1200;
     pricingModel: "monthly";
     userLimit: "Unlimited devices";
@@ -499,7 +499,7 @@ export const iotEdgeServices2025: MicroSaasService[] = [
       website: "https://ziontechgroup.com/smartcity-iot";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$1,200-5,000/month",
+    marketPrice: "$1;200-5;000/month",
     competitors: ["Siemens", "IBM", "Cisco"],
     roi: "300% within 18 months";
     setupTime: "2-4 weeks";
@@ -508,13 +508,13 @@ export const iotEdgeServices2025: MicroSaasService[] = [
     trialPeriod: "30 days"
   }
 ];
-    // Quantum Computing Services
+    // Quantum Computing Services;
 export const quantumComputingServices2025: AIService[] = [
   {
     id: 1;
     name: "Quantum Optimization Engine";
     category: "Quantum Computing";
-    description: "Quantum computing optimization platform for complex mathematical problems, logistics optimization, and financial modeling",
+    description: "Quantum computing optimization platform for complex mathematical problems; logistics optimization; and financial modeling",
     pricing: "Enterprise";
     price: 5000;
     pricingModel: "monthly";
@@ -544,7 +544,7 @@ export const quantumComputingServices2025: AIService[] = [
       website: "https://ziontechgroup.com/quantum-optimization";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$5,000-20,000/month",
+    marketPrice: "$5;000-20;000/month",
     aiModels: ["Quantum algorithms", "Hybrid quantum-classical", "Quantum ML", "Optimization models"],
     accuracy: "Quantum advantage";
     trainingData: "Quantum datasets";
@@ -554,14 +554,14 @@ export const quantumComputingServices2025: AIService[] = [
   }
 ];
 
-// Space & Aerospace Services
+// Space & Aerospace Services;
 export const spaceAerospaceServices2025: MicroSaasService[] = [
   {
     id: 1;
     name: "Satellite Data Analytics";
     category: "Space Tech";
     pricing: "Professional";
-    description: "Advanced satellite data analytics platform for Earth observation, climate monitoring, and agricultural insights",
+    description: "Advanced satellite data analytics platform for Earth observation; climate monitoring; and agricultural insights",
     price: 399;
     pricingModel: "monthly";
     userLimit: "Up to 50 users";
@@ -591,7 +591,7 @@ export const spaceAerospaceServices2025: MicroSaasService[] = [
       website: "https://ziontechgroup.com/satellite-analytics";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$399-1,299/month",
+    marketPrice: "$399-1;299/month",
     competitors: ["Planet Labs", "Maxar", "Airbus"],
     roi: "400% within 12 months";
     setupTime: "1-2 weeks";
@@ -600,7 +600,7 @@ export const spaceAerospaceServices2025: MicroSaasService[] = [
     trialPeriod: "14 days"
   }
 ];
-    // Sustainability & Green Tech Services
+    // Sustainability & Green Tech Services;
 export const sustainabilityServices2025: MicroSaasService[] = [
   {
     id: 1;
@@ -646,7 +646,7 @@ export const sustainabilityServices2025: MicroSaasService[] = [
     trialPeriod: "30 days"
   }
 ];
-    // Fintech & Digital Banking Services
+    // Fintech & Digital Banking Services;
 export const fintechServices2025: MicroSaasService[] = [
   {
     id: 1;
@@ -692,7 +692,7 @@ export const fintechServices2025: MicroSaasService[] = [
     trialPeriod: "14 days"
   }
 ];
-    // Education & EdTech Services
+    // Education & EdTech Services;
 export const educationEdTechServices2025: MicroSaasService[] = [
   {
     id: 1;
@@ -738,14 +738,14 @@ export const educationEdTechServices2025: MicroSaasService[] = [
     trialPeriod: "30 days"
   }
 ];
-    // Real Estate & PropTech Services
+    // Real Estate & PropTech Services;
 export const realEstatePropTechServices2025: MicroSaasService[] = [
   {
     id: 1;
     name: "Smart Property Management";
     category: "PropTech";
     pricing: "Professional";
-    description: "Comprehensive property management platform with IoT integration, predictive maintenance, and tenant experience optimization",
+    description: "Comprehensive property management platform with IoT integration; predictive maintenance; and tenant experience optimization",
     price: 149;
     pricingModel: "monthly";
     userLimit: "Up to 100 properties";
@@ -784,14 +784,14 @@ export const realEstatePropTechServices2025: MicroSaasService[] = [
     trialPeriod: "14 days"
   }
 ];
-    // Logistics & Supply Chain Services
+    // Logistics & Supply Chain Services;
 export const logisticsSupplyChainServices2025: MicroSaasService[] = [
   {
     id: 1;
     name: "Supply Chain Intelligence";
     category: "Logistics";
     pricing: "Enterprise";
-    description: "AI-powered supply chain optimization platform with real-time tracking, demand forecasting, and risk management",
+    description: "AI-powered supply chain optimization platform with real-time tracking; demand forecasting; and risk management",
     price: 899;
     pricingModel: "monthly";
     userLimit: "Unlimited users";
@@ -821,7 +821,7 @@ export const logisticsSupplyChainServices2025: MicroSaasService[] = [
       website: "https://ziontechgroup.com/supply-chain-intelligence";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$899-2,999/month",
+    marketPrice: "$899-2;999/month",
     competitors: ["SAP", "Oracle", "Manhattan Associates"],
     roi: "400% within 18 months";
     setupTime: "4-6 weeks";
@@ -830,14 +830,14 @@ export const logisticsSupplyChainServices2025: MicroSaasService[] = [
     trialPeriod: "30 days"
   }
 ];
-    // Entertainment & Media Services
+    // Entertainment & Media Services;
 export const entertainmentMediaServices2025: MicroSaasService[] = [
   {
     id: 1;
     name: "AI Content Creation Studio";
     category: "Media";
     pricing: "Professional";
-    description: "AI-powered content creation platform for video, audio, and text content with automated editing and optimization",
+    description: "AI-powered content creation platform for video; audio, and text content with automated editing and optimization",
     price: 199;
     pricingModel: "monthly";
     userLimit: "Up to 25 users";
@@ -876,7 +876,7 @@ export const entertainmentMediaServices2025: MicroSaasService[] = [
     trialPeriod: "14 days"
   }
 ];
-    // Export all services
+    // Export all services;
 export const allExpandedServices2025 = {
   advancedAI: advancedAIServices2025;
   blockchain: blockchainWeb3Services2025;
@@ -891,21 +891,21 @@ export const allExpandedServices2025 = {
   education: educationEdTechServices2025;
   realEstate: realEstatePropTechServices2025;
   logistics: logisticsSupplyChainServices2025;
-  entertainment: entertainmentMediaServices2025
+  entertainment: entertainmentMediaServices2025;
 };
-    // Helper functions
+    // Helper functions;
 export const getServicesByCategory = (category: string) => {
   const allServices = Object.values(allExpandedServices2025).flat();
     return allServices.filter(service => service.category === category);
 };
 
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+export const getServicesByPriceRange = (minPrice: number; maxPrice: number) => {
   const allServices = Object.values(allExpandedServices2025).flat();
     return allServices.filter(service => {
-    if ('price' in service) {
+    if ("price" in service) {
       return service.price >= minPrice && service.price <= maxPrice;
     }
-    if ('hourlyRate' in service) {
+    if ("hourlyRate" in service) {
       return service.hourlyRate >= minPrice && service.hourlyRate <= maxPrice;
     }
     return false;
@@ -914,7 +914,7 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
 
 export const getPopularServices = (limit: number = 10) => {
   const allServices = Object.values(allExpandedServices2025).flat();
-    return allServices.slice(0, limit);
+    return allServices.slice(0; limit);
 };
 
 export const searchServices = (query: string) => {

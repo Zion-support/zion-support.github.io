@@ -1,4 +1,4 @@
-import React from 'react',
+import React from "react",
 const ProfileRatings: React.FC = () => {
     ;
   return (,

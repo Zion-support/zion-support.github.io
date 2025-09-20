@@ -1,83 +1,83 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { cn } from '@/lib/utils';
+import React from "react";
+import { Link; useLocation } from "react-router-dom";
+import { cn } from "@/lib/utils";
 import { 
-  Home, 
+  Home; 
   Briefcase, 
-  Users, 
+  Users; 
   Settings, 
-  BarChart3, 
+  BarChart3; 
   FileText, 
-  MessageSquare, 
+  MessageSquare; 
   HelpCircle,
-  Code,
+  Code;
   Smartphone,
-  Globe,
+  Globe;
   Building,
-  Mail,
+  Mail;
   Phone,
-  MapPin
-} from 'lucide-react';
+  MapPin;
+} from "lucide-react";
 
 interface MainSidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
+export function MainSidebar({ isOpen; onClose }: MainSidebarProps) {
   const location = useLocation();
 
   const navigationItems = [
     {
-      title: 'Main',
+      title: "Main",
       items: [
-        { name: 'Home', href: '/', icon: Home },
-        { name: 'About', href: '/about', icon: Building },
-        { name: 'Contact', href: '/contact', icon: Mail },
-        { name: 'Blog', href: '/blog', icon: FileText },
+        { name: "Home", href: "/", icon: Home },
+        { name: "About", href: "/about", icon: Building },
+        { name: "Contact", href: "/contact", icon: Mail },
+        { name: "Blog", href: "/blog", icon: FileText },
       ]
     },
     {
-      title: 'Marketplace',
+      title: "Marketplace",
       items: [
-        { name: 'Products', href: '/marketplace', icon: Briefcase },
-        { name: 'Services', href: '/services', icon: Settings },
-        { name: 'Equipment', href: '/equipment', icon: BarChart3 },
-        { name: 'Categories', href: '/categories', icon: Globe },
-        { name: 'Green IT', href: '/green-it', icon: Globe },
+        { name: "Products", href: "/marketplace", icon: Briefcase },
+        { name: "Services", href: "/services", icon: Settings },
+        { name: "Equipment", href: "/equipment", icon: BarChart3 },
+        { name: "Categories", href: "/categories", icon: Globe },
+        { name: "Green IT", href: "/green-it", icon: Globe },
       ]
     },
     {
-      title: 'Talent & Community',
+      title: "Talent & Community",
       items: [
-        { name: 'Find Talent', href: '/talent', icon: Users },
-        { name: 'Community', href: '/community', icon: Users },
-        { name: 'AI Hiring', href: '/zion-hire-ai', icon: Smartphone },
-        { name: 'Partners', href: '/partners', icon: Building },
+        { name: "Find Talent", href: "/talent", icon: Users },
+        { name: "Community", href: "/community", icon: Users },
+        { name: "AI Hiring", href: "/zion-hire-ai", icon: Smartphone },
+        { name: "Partners", href: "/partners", icon: Building },
       ]
     },
     {
-      title: 'Resources',
+      title: "Resources",
       items: [
-        { name: 'Help Center', href: '/help', icon: HelpCircle },
-        { name: 'Developer Portal', href: '/developers', icon: Code },
-        { name: 'API Docs', href: '/api-docs', icon: Code },
-        { name: 'Mobile App', href: '/mobile', icon: Smartphone },
+        { name: "Help Center", href: "/help", icon: HelpCircle },
+        { name: "Developer Portal", href: "/developers", icon: Code },
+        { name: "API Docs", href: "/api-docs", icon: Code },
+        { name: "Mobile App", href: "/mobile", icon: Smartphone },
       ]
     }
   ];
 
   const contactInfo = [
-    { icon: Mail, text: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
-    { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: MapPin, text: 'San Francisco, CA', href: '#location' },
+    { icon: Mail; text: "info@ziontechgroup.com", href: "mailto:info@ziontechgroup.com" },
+    { icon: Phone; text: "+1 (555) 123-4567", href: "tel:+15551234567" },
+    { icon: MapPin; text: "San Francisco; CA", href: "#location" },
   ];
 
   return (
     <>
       {/* Overlay */}
       {isOpen && (
-        <div 
+        <div; 
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={onClose}
         />
@@ -93,10 +93,10 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
           <div className="flex items-center justify-between p-4 border-b border-zion-blue-light">
             <div className="flex items-center space-x-2">
               <span className="text-xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
-                ZION
+                ZION;
               </span>
             </div>
-            <button
+            <button;
               onClick={onClose}
               className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-md"
             >
@@ -120,12 +120,12 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                     
                     return (
                       <li key={item.name}>
-                        <Link
+                        <Link;
                           to={item.href}
                           onClick={onClose}
                           className={cn(
                             "flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",
-                            isActive
+                            isActive;
                               ? "bg-zion-purple/20 text-zion-cyan"
                               : "text-zion-slate-light hover:text-white hover:bg-zion-purple/10"
                           )}
@@ -144,13 +144,13 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
           {/* Contact Info */}
           <div className="p-4 border-t border-zion-blue-light">
             <h3 className="text-zion-slate-light text-xs font-semibold uppercase tracking-wider mb-3">
-              Contact Info
+              Contact Info;
             </h3>
             <div className="space-y-2">
               {contactInfo.map((contact) => {
                 const IconComponent = contact.icon;
                 return (
-                  <a
+                  <a;
                     key={contact.text}
                     href={contact.href}
                     className="flex items-center text-xs text-zion-slate-light hover:text-zion-cyan transition-colors"

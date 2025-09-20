@@ -1,173 +1,205 @@
-import React from 'react;';
-import { Lin, k, useLocation } from 'react-router-dom, ';
-import { cn } from '@/lib/utils, ';
-import { Hom, e, 
-  ShoppingCar, t, 
-  User, s, 
-  Setting, s, 
-  MessageSquar, e, 
-  FileTex, t, 
-  HelpCircl, e, 
-  Cod, e, 
-  BarChart, 3, 
-  Briefcas, e,
-  Lea, f,
-  Buildin, g,
-  Mai, l,
-  Calenda, r,
-  Glob, e,
-  Zap
-} from 'lucide-react, ';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { cn } from "@/lib/utils";
+import { 
+  Home, 
+  ShoppingCart, 
+  Users, 
+  Settings, 
+  MessageSquare, 
+  FileText, 
+  HelpCircle, 
+  Code, 
+  BarChart3, 
+  Briefcase,
+  Leaf,
+  Building,
+  Mail,
+  Calendar,
+  Globe,
+  Zap,
+} from "lucide-react";
 
-interface SidebarItem {
-  ke, y: string;
-    hre, f: string;
-    ico, n: React.ReactNode;
-    labe, l: string;
-    description?: string;
+const navigation = [
+  { name: "Dashboard", href: "/", icon: Home },
+  { name: "Services", href: "/services", icon: Code },
+  { name: "Marketplace", href: "/marketplace", icon: ShoppingCart },
+  { name: "Community", href: "/community", icon: Users },
+  { name: "Blog", href: "/blog", icon: FileText },
+  { name: "Contact", href: "/contact", icon: Mail },
+  { name: "About", href: "/about", icon: HelpCircle },
+];
+
+const tools = [
+  { name: "AI Tools", href: "/tools", icon: Zap },
+  { name: "Analytics", href: "/analytics", icon: BarChart3 },
+  { name: "Projects", href: "/projects", icon: Briefcase },
+  { name: "Calendar", href: "/calendar", icon: Calendar },
+];
+
+const company = [
+  { name: "Sustainability", href: "/sustainability", icon: Leaf },
+  { name: "Enterprise", href: "/enterprise", icon: Building },
+  { name: "Global", href: "/global", icon: Globe },
+];
+
+interface MainSidebarProps {
+  className?: string;
 }
 
-interface SidebarSection {
-  titl, e: string;
-    item, s: SidebarItem[];
-}
-
-export function MainSidebar() {
+export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
   const location = useLocation();
 
-  const sidebarSections: SidebarSection[] = [
-    {
-      title: 'Main',
-      items: [
-        { key: 'home',
-    href: '/', icon: <Home className="w-4 h-4" />,
-    label: 'Home' },
-        { key: 'marketplace',
-    href: '/marketplace', icon: <ShoppingCart className="w-4 h-4" />,
-    label: 'Marketplace' },
-        { key: 'services',
-    href: '/services', icon: <Settings className="w-4 h-4" />,
-    label: 'Services' },
-        { key: 'talent',
-    href: '/talent', icon: <Users className="w-4 h-4" />,
-    label: 'Talent' },
-        { key: 'equipment',
-    href: '/equipment', icon: <BarChart3 className="w-4 h-4" />,
-    label: 'Equipment' },
-      ]
-    },
-    {
-      title: 'Company',
-      items: [
-        { key: 'about',
-    href: '/about', icon: <Building className="w-4 h-4" />,
-    label: 'About Us' },
-        { key: 'careers',
-    href: '/careers', icon: <Briefcase className="w-4 h-4" />,
-    label: 'Careers' },
-        { key: 'partners',
-    href: '/partners', icon: <Users className="w-4 h-4" />,
-    label: 'Partners' },
-        { key: 'contact',
-    href: '/contact', icon: <Mail className="w-4 h-4" />,
-    label: 'Contact' },
-      ]
-    },
-    {
-      title: 'Resources',
-      items: [
-        { key: 'blog',
-    href: '/blog', icon: <FileText className="w-4 h-4" />,
-    label: 'Blog' },
-        { key: 'community',
-    href: '/community', icon: <Globe className="w-4 h-4" />,
-    label: 'Community' },
-        { key: 'green-it',
-    href: '/green-it', icon: <Leaf className="w-4 h-4" />,
-    label: 'Green IT' },
-        { key: 'zion-hire-ai',
-    href: '/zion-hire-ai', icon: <Zap className="w-4 h-4" />,
-    label: 'AI Hiring' },
-      ]
-    },
-    {
-      title: 'Support',
-      items: [
-        { key: 'help',
-    href: '/help', icon: <HelpCircle className="w-4 h-4" />,
-    label: 'Help Center' },
-        { key: 'developers',
-    href: '/developers', icon: <Code className="w-4 h-4" />,
-    label: 'Developer Portal' },
-        { key: 'api-docs',
-    href: '/api-docs', icon: <Code className="w-4 h-4" />,
-    label: 'API Docs' },
-        { key: 'sitemap',
-    href: '/sitemap', icon: <Calendar className="w-4 h-4" />,
-    label: 'Sitemap' },
-      ]
-    }
-  ];
-
   const isActive = (href: string) => {
-    if (href === '/') {
-      return location.pathname === '/';
-     }
+    if (href === "/") {
+      return location.pathname === "/";
+    }
     return location.pathname.startsWith(href);
   };
 
   return (
-    <aside className="w-64 bg-zion-blue-dark border-r border-zion-blue-light min-h-screen p-4">
-      <div className="mb-8">
+    <div className={cn("flex flex-col h-full bg-gray-50 dark:bg-gray-900", className)}>
+      {/* Logo */}
+      <div className="flex items-center h-16 px-6 border-b border-gray-200 dark:border-gray-700">
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
-            ZION
+          <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <Zap className="w-5 h-5 text-white" />
+          </div>
+          <span className="text-xl font-bold text-gray-900 dark:text-white">
+            Zion Tech
           </span>
         </Link>
-        <p className="text-zion-slate-light text-sm mt-2">
-          Tech & AI Marketplace
-        </p>
       </div>
 
-      <nav className="space-y-6">
-        {sidebarSections.map((section) => (
-          <div key={section.title}>
-            <h3 className="text-zion-slate-light text-xs font-semibold uppercase tracking-wider mb-3">
-              {section.title}
-            </h3>
-            <ul className="space-y-1">
-              {section.items.map((item) => (
-                <li key={item.key}>
-                  <Link
-                    to={item.href}
+      {/* Navigation */}
+      <nav className="flex-1 px-4 py-6 space-y-8">
+        {/* Main Navigation */}
+        <div>
+          <h3 className="px-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+            Navigation
+          </h3>
+          <div className="mt-3 space-y-1">
+            {navigation.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={cn(
+                    "group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                    isActive(item.href)
+                      ? "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200"
+                      : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+                  )}
+                >
+                  <Icon
                     className={cn(
-                      "flex items-center space-x-3 px-3 py-2 rounded-md text-sm font-medium transition-colors", 
+                      "mr-3 h-5 w-5 flex-shrink-0",
                       isActive(item.href)
-                        ? "bg-zion-purple/20 text-zion-cyan"
-                        : "text-zion-slate-light hove, r:bg-zion-purple/10 hove, r:text-zion-cyan"
+                        ? "text-blue-500 dark:text-blue-400"
+                        : "text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400"
                     )}
-                  >
-                    {item.icon}
-                    <span>{item.label}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                  />
+                  {item.name}
+                </Link>
+              );
+            })}
           </div>
-        ))}
+        </div>
+
+        {/* Tools */}
+        <div>
+          <h3 className="px-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+            Tools
+          </h3>
+          <div className="mt-3 space-y-1">
+            {tools.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={cn(
+                    "group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                    isActive(item.href)
+                      ? "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200"
+                      : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+                  )}
+                >
+                  <Icon
+                    className={cn(
+                      "mr-3 h-5 w-5 flex-shrink-0",
+                      isActive(item.href)
+                        ? "text-blue-500 dark:text-blue-400"
+                        : "text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400"
+                    )}
+                  />
+                  {item.name}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Company */}
+        <div>
+          <h3 className="px-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+            Company
+          </h3>
+          <div className="mt-3 space-y-1">
+            {company.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={cn(
+                    "group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                    isActive(item.href)
+                      ? "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200"
+                      : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+                  )}
+                >
+                  <Icon
+                    className={cn(
+                      "mr-3 h-5 w-5 flex-shrink-0",
+                      isActive(item.href)
+                        ? "text-blue-500 dark:text-blue-400"
+                        : "text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400"
+                    )}
+                  />
+                  {item.name}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
       </nav>
 
-      <div className="mt-8 pt-6 border-t border-zion-blue-light">
-        <div className="text-zion-slate-light text-xs">
-          <p className="mb-2">Need help?</p>
-          <Link 
-            to="/contact" 
-            className="text-zion-cyan hove, r: text-zion-purple transition-colors"
-          >
-            Contact Support
-          </Link>
-        </div>
+      {/* Settings */}
+      <div className="px-4 py-4 border-t border-gray-200 dark:border-gray-700">
+        <Link
+          to="/settings"
+          className={cn(
+            "group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",
+            isActive("/settings")
+              ? "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200"
+              : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+          )}
+        >
+          <Settings
+            className={cn(
+              "mr-3 h-5 w-5 flex-shrink-0",
+              isActive("/settings")
+                ? "text-blue-500 dark:text-blue-400"
+                : "text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400"
+            )}
+          />
+          Settings
+        </Link>
       </div>
-    </aside>
+    </div>
   );
-}
+};
+
+export default MainSidebar;

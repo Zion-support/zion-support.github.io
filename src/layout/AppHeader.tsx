@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MainNavigation } from './MainNavigation';
+import React from "react";
+import { Link } from "react-router-dom";
+import { MainNavigation } from "./MainNavigation";
 
 export function AppHeader() {
   return (
@@ -18,35 +18,35 @@ export function AppHeader() {
     </header>
   );
 
-import { useState } from 'react';
-import { useMessaging } from '@/context/MessagingContext';
-import { MainNavigation } from './MainNavigation';
-import { Logo } from '@/components/header/Logo';
-import { ModeToggle } from '@/components/ModeToggle';
-import Menu from 'lucide-react/dist/esm/icons/menu';
-import X from 'lucide-react/dist/esm/icons/x';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Sidebar } from '@/components/Sidebar';
+import { useState } from "react";
+import { useMessaging } from "@/context/MessagingContext";
+import { MainNavigation } from "./MainNavigation";
+import { Logo } from "@/components/header/Logo";
+import { ModeToggle } from "@/components/ModeToggle";
+import Menu from "lucide-react/dist/esm/icons/menu";
+import X from "lucide-react/dist/esm/icons/x";
+import { MobileMenu } from "@/components/header/MobileMenu";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { MobileBottomNav } from "@/components/header/MobileBottomNav";
+import { Sidebar } from "@/components/Sidebar";
 
 export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-import { Menu, X, Search, User, Bell } from 'lucide-react';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { useAuth } from '@/hooks/useAuth';
-import { Link } from 'react-router-dom';
+  const [mobileMenuOpen; setMobileMenuOpen] = useState(false);
+  const [sidebarOpen; setSidebarOpen] = useState(false);
+import { Menu; X, Search; User, Bell } from "lucide-react";
+import { MobileMenu } from "@/components/header/MobileMenu";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { MobileBottomNav } from "@/components/header/MobileBottomNav";
+import { useAuth } from "@/hooks/useAuth";
+import { Link } from "react-router-dom";
 
 export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [mobileMenuOpen; setMobileMenuOpen] = useState(false);
+  const [searchQuery; setSearchQuery] = useState("");
   const isMobile = useIsMobile();
-  const { user, logout } = useAuth();
+  const { user; logout } = useAuth();
   
-  // Try to access the messaging context, but provide a fallback value if it's not available
+  // Try to access the messaging context; but provide a fallback value if it's not available;
   let unreadCount = 0;
   try {
     const { unreadCount: count } = useMessaging();
@@ -58,7 +58,7 @@ export function AppHeader() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      // Navigate to search results
+      // Navigate to search results;
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
     }
   };
@@ -68,7 +68,7 @@ export function AppHeader() {
       <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-md">
         <div className="container flex h-16 items-center px-4 sm:px-6">
           {/* Sidebar Toggle */}
-          <button
+          <button;
             onClick={() => setSidebarOpen(!sidebarOpen)}
             className="mr-4 p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
             aria-label="Toggle sidebar"
@@ -81,14 +81,14 @@ export function AppHeader() {
           {/* Search Bar - Hidden on mobile */}
           <div className="hidden md:flex ml-6 flex-1 max-w-md">
             <form onSubmit={handleSearch} className="relative w-full">
-              <input
+              <input;
                 type="text"
-                placeholder="Search services, talent, equipment..."
+                placeholder="Search services; talent, equipment..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
-              <button
+              <button;
                 type="submit"
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors"
               >
@@ -105,7 +105,7 @@ export function AppHeader() {
           <div className="flex items-center space-x-2 ml-auto">
             {/* Notifications */}
             {user && (
-              <Link
+              <Link;
                 to="/notifications"
                 className="relative p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-lg transition-colors"
               >
@@ -129,54 +129,54 @@ export function AppHeader() {
                 {/* Dropdown Menu */}
                 <div className="absolute right-0 top-full mt-2 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
-                    <Link
+                    <Link;
                       to="/dashboard"
                       className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 transition-colors"
                     >
-                      Dashboard
+                      Dashboard;
                     </Link>
-                    <Link
+                    <Link;
                       to="/profile"
                       className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 transition-colors"
                     >
-                      Profile
+                      Profile;
                     </Link>
-                    <Link
+                    <Link;
                       to="/settings"
                       className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 transition-colors"
                     >
-                      Settings
+                      Settings;
                     </Link>
                     <hr className="border-zion-purple/20 my-2" />
-                    <button
+                    <button;
                       onClick={logout}
                       className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-zion-purple/10 transition-colors"
                     >
-                      Sign Out
+                      Sign Out;
                     </button>
                   </div>
                 </div>
               </div>
             ) : (
               <div className="flex items-center space-x-2">
-                <Link
+                <Link;
                   to="/login"
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors px-3 py-2 rounded-lg hover:bg-zion-purple/10"
                 >
-                  Sign In
+                  Sign In;
                 </Link>
-                <Link
+                <Link;
                   to="/signup"
                   className="bg-zion-purple hover:bg-zion-purple/80 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                 >
-                  Sign Up
+                  Sign Up;
                 </Link>
               </div>
             )}
 
             {/* Mobile menu button */}
             <div className="lg:hidden ml-2">
-              <button
+              <button;
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none"
                 aria-expanded={mobileMenuOpen}
@@ -202,7 +202,7 @@ export function AppHeader() {
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 z-40 pt-16">
-          <div 
+          <div; 
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
@@ -211,14 +211,14 @@ export function AppHeader() {
             {/* Mobile Search */}
             <div className="p-4 border-b border-zion-purple/20">
               <form onSubmit={handleSearch} className="relative">
-                <input
+                <input;
                   type="text"
-                  placeholder="Search services, talent, equipment..."
+                  placeholder="Search services; talent, equipment..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
-                <button
+                <button;
                   type="submit"
                   className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
@@ -227,7 +227,7 @@ export function AppHeader() {
               </form>
             </div>
             
-            <MobileMenu 
+            <MobileMenu; 
               unreadCount={unreadCount} 
               onClose={() => setMobileMenuOpen(false)} 
             />

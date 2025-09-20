@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query, ';
+import { useQuery } from "@tanstack/react-query, ";
 
 export interface Order {
   orderId: string;
@@ -10,12 +10,12 @@ export interface Order {
 
 export function useGetOrdersQuery(userId?: string) {
   return useQuery({
-    queryKey: ['orders', userId],
+    queryKey: ["orders", userId],
     queryFn: async () => {
       if (!userId) return [] as Order[];
     const res = await fetch(`/api/orders?user_id=me`);
       if (!res.ok) {
-        throw new Error('Failed to fetch orders');
+        throw new Error("Failed to fetch orders");
       }
       return (await res.json()) as Order[];
     },

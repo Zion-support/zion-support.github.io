@@ -63,7 +63,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       website: "https://ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$4,500/month (Industry average: $8,500/month)",
+    marketPrice: "$4;500/month (Industry average: $8;500/month)",
     competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
     roi: "400% ROI within 15 months";
     setupTime: "12-16 weeks";
@@ -77,7 +77,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
     name: "Hyperconverged Infrastructure Pro";
     category: "Infrastructure";
     subcategory: "Hyperconvergence";
-    description: "Next-generation hyperconverged infrastructure combining compute, storage, and networking with AI-powered management",
+    description: "Next-generation hyperconverged infrastructure combining compute; storage, and networking with AI-powered management",
     pricing: "Professional";
     price: 3200;
     pricingModel: "monthly";
@@ -107,7 +107,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       website: "https://ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$3,200/month (Industry average: $6,200/month)",
+    marketPrice: "$3;200/month (Industry average: $6;200/month)",
     competitors: ["Nutanix", "VMware vSAN", "HPE SimpliVity", "Dell EMC VxRail"],
     roi: "350% ROI within 12 months";
     setupTime: "8-10 weeks";
@@ -121,7 +121,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
     name: "5G Private Network Solutions";
     category: "Wireless Infrastructure";
     subcategory: "5G Networks";
-    description: "Enterprise-grade 5G private network solutions for industrial IoT, smart manufacturing, and autonomous operations",
+    description: "Enterprise-grade 5G private network solutions for industrial IoT; smart manufacturing; and autonomous operations",
     pricing: "Professional";
     price: 2800;
     pricingModel: "monthly";
@@ -151,7 +151,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       website: "https://ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$2,800/month (Industry average: $5,500/month)",
+    marketPrice: "$2;800/month (Industry average: $5;500/month)",
     competitors: ["Ericsson", "Nokia", "Huawei", "Cisco", "Samsung"],
     roi: "300% ROI within 18 months";
     setupTime: "16-20 weeks";
@@ -195,7 +195,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       website: "https://ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$5,500/month (Industry average: $10,000/month)",
+    marketPrice: "$5;500/month (Industry average: $10;000/month)",
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "Amazon Braket"],
     roi: "500% ROI within 24 months";
     setupTime: "20-24 weeks";
@@ -239,7 +239,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       website: "https://ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$2,400/month (Industry average: $4,800/month)",
+    marketPrice: "$2;400/month (Industry average: $4;800/month)",
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Cisco Edge"],
     roi: "350% ROI within 10 months";
     setupTime: "6-8 weeks";
@@ -253,7 +253,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
     name: "Sustainable Green Data Center";
     category: "Data Center";
     subcategory: "Sustainability";
-    description: "Environmentally conscious data center solutions with renewable energy, efficient cooling, and carbon footprint reduction",
+    description: "Environmentally conscious data center solutions with renewable energy; efficient cooling; and carbon footprint reduction",
     pricing: "Professional";
     price: 3800;
     pricingModel: "monthly";
@@ -283,7 +283,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       website: "https://ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$3,800/month (Industry average: $7,200/month)",
+    marketPrice: "$3;800/month (Industry average: $7;200/month)",
     competitors: ["Google Cloud", "Microsoft Azure", "AWS", "Equinix", "Digital Realty"],
     roi: "300% ROI within 15 months";
     setupTime: "12-16 weeks";
@@ -327,7 +327,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       website: "https://ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$2,600/month (Industry average: $5,200/month)",
+    marketPrice: "$2;600/month (Industry average: $5;200/month)",
     competitors: ["ServiceNow", "BMC", "BMC Helix", "IBM Watson AIOps", "Splunk"],
     roi: "400% ROI within 12 months";
     setupTime: "8-10 weeks";
@@ -371,7 +371,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       website: "https://ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$3,200/month (Industry average: $6,400/month)",
+    marketPrice: "$3;200/month (Industry average: $6;400/month)",
     competitors: ["IBM Blockchain", "Microsoft Azure Blockchain", "Amazon Managed Blockchain", "ConsenSys"],
     roi: "350% ROI within 15 months";
     setupTime: "10-12 weeks";
@@ -385,7 +385,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
     name: "IoT Infrastructure Management";
     category: "IoT";
     subcategory: "Infrastructure";
-    description: "Comprehensive IoT infrastructure management platform for device provisioning, monitoring, and data processing",
+    description: "Comprehensive IoT infrastructure management platform for device provisioning; monitoring, and data processing",
     pricing: "Professional";
     price: 1800;
     pricingModel: "monthly";
@@ -415,7 +415,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       website: "https://ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$1,800/month (Industry average: $3,600/month)",
+    marketPrice: "$1;800/month (Industry average: $3;600/month)",
     competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT", "Cisco IoT"],
     roi: "300% ROI within 8 months";
     setupTime: "4-6 weeks";
@@ -459,7 +459,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
       website: "https://ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$2,900/month (Industry average: $5,800/month)",
+    marketPrice: "$2;900/month (Industry average: $5;800/month)",
     competitors: ["VMware Cloud", "Red Hat OpenShift", "HashiCorp", "CloudBolt", "RightScale"],
     roi: "350% ROI within 12 months";
     setupTime: "8-10 weeks";

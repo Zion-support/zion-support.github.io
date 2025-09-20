@@ -34,7 +34,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
   {
     id: "quantum-computing-as-a-service";
     title: "Quantum Computing as a Service (QCaaS)";
-    description: "Enterprise-grade quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum software development tools through the cloud.",
+    description: "Enterprise-grade quantum computing platform that provides access to quantum processors; quantum algorithms; and quantum software development tools through the cloud.",
     category: "Quantum Technology";
     subcategory: "Cloud Computing";
     price: 5000;
@@ -75,7 +75,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     tags: ["Quantum Computing", "Cloud Services", "Research", "Innovation", "Advanced Computing"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$5,000 - $25,000/month",
+    marketPrice: "$5;000 - $25;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -89,11 +89,11 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     marketSize: "$1.9 billion";
     growthRate: "56.7% annually"
   };
-  // Edge Computing Infrastructure
+  // Edge Computing Infrastructure;
   {
     id: "edge-computing-infrastructure";
     title: "Edge Computing Infrastructure Platform";
-    description: "Distributed edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving real-time processing capabilities.",
+    description: "Distributed edge computing platform that brings computation and data storage closer to data sources; reducing latency and improving real-time processing capabilities.",
     category: "Edge Computing";
     subcategory: "Infrastructure";
     price: 1200;
@@ -134,7 +134,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     tags: ["Edge Computing", "IoT", "5G", "Real-time Processing", "Distributed Systems"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "premium";
-    marketPrice: "$1,200 - $4,500/month",
+    marketPrice: "$1;200 - $4;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -148,11 +148,11 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     marketSize: "$15.7 billion";
     growthRate: "37.4% annually"
   };
-  // Zero Trust Security Architecture
+  // Zero Trust Security Architecture;
   {
     id: "zero-trust-security-architecture";
     title: "Zero Trust Security Architecture Platform";
-    description: "Comprehensive zero trust security platform that implements continuous verification, least privilege access, and micro-segmentation to protect modern IT environments.",
+    description: "Comprehensive zero trust security platform that implements continuous verification; least privilege access; and micro-segmentation to protect modern IT environments.",
     category: "Cybersecurity";
     subcategory: "Zero Trust";
     price: 2500;
@@ -193,7 +193,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     tags: ["Zero Trust", "Cybersecurity", "Identity Management", "Network Security", "Compliance"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$2,500 - $8,000/month",
+    marketPrice: "$2;500 - $8;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -207,11 +207,11 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     marketSize: "$19.6 billion";
     growthRate: "17.4% annually"
   };
-  // Multi-Cloud Management Platform
+  // Multi-Cloud Management Platform;
   {
     id: "multi-cloud-management-platform";
     title: "Multi-Cloud Management Platform";
-    description: "Unified platform for managing multiple cloud providers, optimizing costs, ensuring compliance, and providing seamless workload portability across different cloud environments.",
+    description: "Unified platform for managing multiple cloud providers; optimizing costs; ensuring compliance; and providing seamless workload portability across different cloud environments.",
     category: "Cloud Management";
     subcategory: "Multi-Cloud";
     price: 800;
@@ -252,7 +252,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     tags: ["Multi-Cloud", "Cloud Management", "Cost Optimization", "DevOps", "Compliance"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$800 - $3,000/month",
+    marketPrice: "$800 - $3;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -266,11 +266,11 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     marketSize: "$6.3 billion";
     growthRate: "28.9% annually"
   };
-  // API Management and Governance
+  // API Management and Governance;
   {
     id: "api-management-governance";
     title: "API Management and Governance Platform";
-    description: "Comprehensive API management platform that provides design, development, security, monitoring, and governance capabilities for enterprise API ecosystems.",
+    description: "Comprehensive API management platform that provides design; development, security; monitoring, and governance capabilities for enterprise API ecosystems.",
     category: "API Management";
     subcategory: "Governance";
     price: 600;
@@ -311,7 +311,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     tags: ["API Management", "Microservices", "Developer Experience", "Integration", "Governance"],
     estimatedDelivery: "3-4 weeks";
     supportLevel: "premium";
-    marketPrice: "$600 - $2,500/month",
+    marketPrice: "$600 - $2;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -325,11 +325,11 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     marketSize: "$4.5 billion";
     growthRate: "32.7% annually"
   };
-  // DevOps Automation Platform
+  // DevOps Automation Platform;
   {
     id: "devops-automation-platform";
     title: "DevOps Automation Platform";
-    description: "Comprehensive DevOps automation platform that streamlines software development, testing, deployment, and operations through intelligent automation and orchestration.",
+    description: "Comprehensive DevOps automation platform that streamlines software development; testing, deployment; and operations through intelligent automation and orchestration.",
     category: "DevOps";
     subcategory: "Automation";
     price: 450;
@@ -370,7 +370,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     tags: ["DevOps", "Automation", "CI/CD", "Infrastructure as Code", "Monitoring"],
     estimatedDelivery: "3-4 weeks";
     supportLevel: "premium";
-    marketPrice: "$450 - $1,800/month",
+    marketPrice: "$450 - $1;800/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -384,11 +384,11 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     marketSize: "$8.9 billion";
     growthRate: "24.3% annually"
   };
-  // Data Mesh Architecture Platform
+  // Data Mesh Architecture Platform;
   {
     id: "data-mesh-architecture-platform";
     title: "Data Mesh Architecture Platform";
-    description: "Modern data architecture platform that implements data mesh principles, enabling decentralized data ownership, self-service data infrastructure, and domain-driven data products.",
+    description: "Modern data architecture platform that implements data mesh principles; enabling decentralized data ownership; self-service data infrastructure; and domain-driven data products.",
     category: "Data Architecture";
     subcategory: "Data Mesh";
     price: 1500;
@@ -429,7 +429,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     tags: ["Data Mesh", "Data Architecture", "Data Governance", "Microservices", "Data Products"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$1,500 - $6,000/month",
+    marketPrice: "$1;500 - $6;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -443,11 +443,11 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     marketSize: "$12.8 billion";
     growthRate: "21.4% annually"
   };
-  // Green IT Infrastructure
+  // Green IT Infrastructure;
   {
     id: "green-it-infrastructure";
     title: "Green IT Infrastructure Platform";
-    description: "Sustainable IT infrastructure platform that optimizes energy consumption, reduces carbon footprint, and implements green computing practices for environmentally conscious organizations.",
+    description: "Sustainable IT infrastructure platform that optimizes energy consumption; reduces carbon footprint; and implements green computing practices for environmentally conscious organizations.",
     category: "Green IT";
     subcategory: "Sustainability";
     price: 800;
@@ -488,7 +488,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     tags: ["Green IT", "Sustainability", "Energy Efficiency", "ESG", "Environmental Compliance"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$800 - $3,000/month",
+    marketPrice: "$800 - $3;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";

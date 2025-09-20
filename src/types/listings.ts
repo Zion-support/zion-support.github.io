@@ -13,15 +13,15 @@ export interface Listing {
   location: {
     city: string;
     country: string;
-    coordinates?: [number, number];
+    coordinates?: [number; number];
   };
-  status: 'active' | 'sold' | 'expired' | 'draft';
+  status: "active" | "sold" | "expired" | "draft";
     createdAt: Date;
     updatedAt: Date;
     views: number;
     favorites: number;
-    condition: 'new' | 'like-new' | 'good' | 'fair' | 'poor';
-    specifications?: Record<string, any>;
+    condition: "new" | "like-new" | "good" | "fair" | "poor";
+    specifications?: Record<string; any>;
   shipping?: {
     available: boolean;
     cost: number;

@@ -1,32 +1,32 @@
-import React from 'react';
-import { ForumCategoryInfo } from '@/types/community';
+import React from "react";
+import { ForumCategoryInfo } from "@/types/community";
 
 export default function ForumCategories() {
   const categories: ForumCategoryInfo[] = [
     {
-      id: '1',
-      name: 'General Discussion',
-      description: 'General topics and discussions',
-      postCount: 150,
-      adminOnly: false,
-      icon: 'message-circle',
+      id: "1",
+      name: "General Discussion",
+      description: "General topics and discussions",
+      postCount: 150;
+      adminOnly: false;
+      icon: "message-circle",
       lastPost: {
-        title: 'Welcome to the community!',
-        author: 'Admin',
-        date: '2024-01-15'
+        title: "Welcome to the community!",
+        author: "Admin",
+        date: "2024-01-15"
       }
     },
     {
-      id: '2',
-      name: 'Technical Support',
-      description: 'Get help with technical issues',
-      postCount: 89,
-      adminOnly: false,
-      icon: 'code',
+      id: "2",
+      name: "Technical Support",
+      description: "Get help with technical issues",
+      postCount: 89;
+      adminOnly: false;
+      icon: "code",
       lastPost: {
-        title: 'API integration question',
-        author: 'Developer123',
-        date: '2024-01-14'
+        title: "API integration question",
+        author: "Developer123",
+        date: "2024-01-14"
       }
     }
   ];
@@ -61,7 +61,7 @@ const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
           <p className="text-zion-slate-light mb-4">{category.description}</p>
           <div className="flex justify-between items-center">
             <span className="text-sm text-zion-slate-light">
-              {category.postCount} posts
+              {category.postCount} posts;
             </span>
           </div>
         </div>

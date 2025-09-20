@@ -28,14 +28,14 @@ export interface SpecializedService {
     innovationScore: number;
 }
 
-// Specialized Innovative Services for 2025
+// Specialized Innovative Services for 2025;
 export const specializedInnovativeServices2025: SpecializedService[] = [
   {
     id: 1;
     name: "Digital Twin & Simulation Platform";
     category: "Digital Twins";
     subcategory: "Simulation & Modeling";
-    description: "Advanced digital twin platform for creating virtual replicas of physical systems, processes, and environments",
+    description: "Advanced digital twin platform for creating virtual replicas of physical systems; processes, and environments",
     pricing: "Enterprise";
     price: 8500;
     pricingModel: "monthly";
@@ -65,13 +65,13 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
       website: "https://ziontechgroup.com/digital-twin-platform";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$8,500-20,000/month",
+    marketPrice: "$8;500-20;000/month",
     technologyStack: ["Unity", "Unreal Engine", "IoT Platforms", "Cloud Computing", "AI/ML"],
     compliance: ["Industry Standards", "Data Privacy", "Security Standards"],
     scalability: ["Multi-system Support", "Cloud-based Rendering", "Real-time Processing"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "premium";
-    innovationScore: 9.1
+    innovationScore: 9.1;
   };
   {
     id: 2;
@@ -108,13 +108,13 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
       website: "https://ziontechgroup.com/federated-learning";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$12,000-30,000/month",
+    marketPrice: "$12;000-30;000/month",
     technologyStack: ["Python", "TensorFlow Federated", "PySyft", "Homomorphic Encryption", "Cloud Computing"],
     compliance: ["GDPR", "HIPAA", "SOC2", "ISO27001", "Privacy Regulations"],
     scalability: ["Multi-organization Support", "Global Collaboration", "Scalable Training"],
     estimatedDelivery: "10-14 weeks";
     supportLevel: "enterprise";
-    innovationScore: 9.3
+    innovationScore: 9.3;
   };
   {
     id: 3;
@@ -151,20 +151,20 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
       website: "https://ziontechgroup.com/neuromorphic-computing";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$25,000-60,000/month",
+    marketPrice: "$25;000-60;000/month",
     technologyStack: ["Neuromorphic Hardware", "Spiking Neural Networks", "Event-Driven Computing", "Custom Algorithms"],
     compliance: ["Research Standards", "Hardware Safety", "AI Ethics", "Security Standards"],
     scalability: ["Multi-processor Support", "Distributed Computing", "Scalable Neural Networks"],
     estimatedDelivery: "16-20 weeks";
     supportLevel: "enterprise";
-    innovationScore: 9.5
+    innovationScore: 9.5;
   };
   {
     id: 4;
     name: "Holographic Display & 3D Visualization";
     category: "Holographic Technology";
     subcategory: "3D Visualization";
-    description: "Advanced holographic display platform for immersive 3D visualization, telepresence, and interactive experiences",
+    description: "Advanced holographic display platform for immersive 3D visualization; telepresence, and interactive experiences",
     pricing: "Premium";
     price: 15000;
     pricingModel: "monthly";
@@ -194,20 +194,20 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
       website: "https://ziontechgroup.com/holographic-display";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$15,000-35,000/month",
+    marketPrice: "$15;000-35;000/month",
     technologyStack: ["Holographic Hardware", "3D Rendering", "Computer Vision", "Spatial Computing", "AI"],
     compliance: ["Display Standards", "Safety Regulations", "Content Guidelines", "Accessibility"],
     scalability: ["Multi-display Support", "Network Distribution", "Content Scaling"],
     estimatedDelivery: "12-16 weeks";
     supportLevel: "premium";
-    innovationScore: 9.2
+    innovationScore: 9.2;
   };
   {
     id: 5;
     name: "Ambient Intelligence & Smart Environment";
     category: "Ambient Intelligence";
     subcategory: "Smart Environments";
-    description: "Intelligent ambient computing platform that creates responsive, adaptive environments using IoT, AI, and sensor networks",
+    description: "Intelligent ambient computing platform that creates responsive; adaptive environments using IoT; AI, and sensor networks",
     pricing: "Enterprise";
     price: 18000;
     pricingModel: "monthly";
@@ -237,20 +237,20 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
       website: "https://ziontechgroup.com/ambient-intelligence";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$18,000-40,000/month",
+    marketPrice: "$18;000-40;000/month",
     technologyStack: ["IoT Sensors", "AI/ML", "Edge Computing", "Cloud Platforms", "Context Recognition"],
     compliance: ["Privacy Regulations", "IoT Security", "Building Codes", "Health Standards"],
     scalability: ["Multi-location Support", "Sensor Network Scaling", "Geographic Expansion"],
     estimatedDelivery: "14-18 weeks";
     supportLevel: "enterprise";
-    innovationScore: 9.0
+    innovationScore: 9.0;
   };
   {
     id: 6;
     name: "Swarm Robotics & Autonomous Systems";
     category: "Swarm Robotics";
     subcategory: "Autonomous Systems";
-    description: "Advanced swarm robotics platform for coordinated multi-robot operations, autonomous navigation, and collective intelligence",
+    description: "Advanced swarm robotics platform for coordinated multi-robot operations; autonomous navigation; and collective intelligence",
     pricing: "Enterprise";
     price: 22000;
     pricingModel: "monthly";
@@ -280,20 +280,20 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
       website: "https://ziontechgroup.com/swarm-robotics";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$22,000-50,000/month",
+    marketPrice: "$22;000-50;000/month",
     technologyStack: ["ROS", "Python", "Computer Vision", "AI/ML", "Robotics Hardware", "Communication Protocols"],
     compliance: ["Safety Standards", "Robotics Regulations", "Industry Standards", "Quality Assurance"],
     scalability: ["Multi-robot Support", "Task Complexity Scaling", "Geographic Expansion"],
     estimatedDelivery: "16-20 weeks";
     supportLevel: "enterprise";
-    innovationScore: 9.4
+    innovationScore: 9.4;
   };
   {
     id: 7;
     name: "Bio-Inspired Computing & Evolutionary Algorithms";
     category: "Bio-Inspired Computing";
     subcategory: "Evolutionary AI";
-    description: "Revolutionary computing platform using biological principles like evolution, genetics, and natural selection for AI optimization",
+    description: "Revolutionary computing platform using biological principles like evolution; genetics, and natural selection for AI optimization",
     pricing: "Premium";
     price: 14000;
     pricingModel: "monthly";
@@ -323,13 +323,13 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
       website: "https://ziontechgroup.com/bio-inspired-computing";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$14,000-32,000/month",
+    marketPrice: "$14;000-32;000/month",
     technologyStack: ["Python", "Evolutionary Algorithms", "Genetic Programming", "AI/ML", "Optimization Libraries"],
     compliance: ["Research Standards", "AI Ethics", "Algorithm Transparency", "Performance Validation"],
     scalability: ["Multi-problem Support", "Algorithm Scaling", "Distributed Computing"],
     estimatedDelivery: "10-14 weeks";
     supportLevel: "premium";
-    innovationScore: 8.8
+    innovationScore: 8.8;
   };
   {
     id: 8;
@@ -366,13 +366,13 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
       website: "https://ziontechgroup.com/quantum-machine-learning";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$35,000-80,000/month",
+    marketPrice: "$35;000-80;000/month",
     technologyStack: ["Qiskit", "PennyLane", "Quantum Hardware", "Python", "Quantum Algorithms", "AI/ML"],
     compliance: ["Quantum Standards", "AI Ethics", "Research Standards", "Security Protocols"],
     scalability: ["Quantum Hardware Scaling", "Algorithm Complexity", "Multi-qubit Support"],
     estimatedDelivery: "18-24 weeks";
     supportLevel: "enterprise";
-    innovationScore: 9.6
+    innovationScore: 9.6;
   }
 ];
     export default specializedInnovativeServices2025;

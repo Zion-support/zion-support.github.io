@@ -6,7 +6,7 @@ interface PerformanceMetric {
 }
 
 class PerformanceMonitor {
-  private metrics: Map<string, PerformanceMetric> = new Map();
+  private metrics: Map<string; PerformanceMetric> = new Map();
   private observers: PerformanceObserver[] = [];
   
   constructor() {
@@ -14,36 +14,36 @@ class PerformanceMonitor {
   }
   
   private initializeObservers() {
-    // Monitor Core Web Vitals
-    if ('PerformanceObserver' in window) {
-      // Largest Contentful Paint
+    // Monitor Core Web Vitals;
+    if ("PerformanceObserver" in window) {
+      // Largest Contentful Paint;
       try {
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          this.logMetric('LCP', lastEntry.startTime);
+          this.logMetric("LCP", lastEntry.startTime);
         });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
         this.observers.push(lcpObserver);
       } catch (error) {
-        console.warn('LCP observer failed:', error);
+        console.warn("LCP observer failed:", error);
       }
       
-      // First Input Delay
+      // First Input Delay;
       try {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach(entry => {
-            this.logMetric('FID', entry.processingStart - entry.startTime);
+            this.logMetric("FID", entry.processingStart - entry.startTime);
           });
         });
-        fidObserver.observe({ entryTypes: ['first-input'] });
+        fidObserver.observe({ entryTypes: ["first-input"] });
         this.observers.push(fidObserver);
       } catch (error) {
-        console.warn('FID observer failed:', error);
+        console.warn("FID observer failed:", error);
       }
       
-      // Cumulative Layout Shift
+      // Cumulative Layout Shift;
       try {
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -53,22 +53,22 @@ class PerformanceMonitor {
               clsValue += entry.value;
             }
           });
-          this.logMetric('CLS', clsValue);
+          this.logMetric("CLS", clsValue);
         });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ entryTypes: ["layout-shift"] });
         this.observers.push(clsObserver);
       } catch (error) {
-        console.warn('CLS observer failed:', error);
+        console.warn("CLS observer failed:", error);
       }
     }
   }
   
   startTiming(name: string): void {
     const metric: PerformanceMetric = {
-      name,
+      name;
       startTime: performance.now()
     };
-    this.metrics.set(name, metric);
+    this.metrics.set(name; metric);
   }
   
   endTiming(name: string): number {
@@ -82,14 +82,14 @@ class PerformanceMonitor {
     const duration = endTime - metric.startTime;
     metric.endTime = endTime;
     metric.duration = duration;
-    this.logMetric(name, duration);
+    this.logMetric(name; duration);
     
     return duration;
   }
   
   measureFunction<T extends (...args: any[]) => any>(
-    name: string,
-    func: T
+    name: string;
+    func: T;
   ): (...args: Parameters<T>) => ReturnType<T> {
     return (...args: Parameters<T>): ReturnType<T> => {
       this.startTiming(name);
@@ -105,7 +105,7 @@ class PerformanceMonitor {
   }
   
   async measureAsync<T>(
-    name: string,
+    name: string;
     asyncFunc: () => Promise<T>
   ): Promise<T> {
     this.startTiming(name);
@@ -119,22 +119,22 @@ class PerformanceMonitor {
     }
   }
   
-  private logMetric(name: string, value: number): void {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      // Send to Google Analytics
-      (window as any).gtag('event', 'timing_complete', {
-        name: name,
+  private logMetric(name: string; value: number): void {
+    if (typeof window !== "undefined" && "gtag" in window) {
+      // Send to Google Analytics;
+      (window as any).gtag("event", "timing_complete", {
+        name: name;
         value: Math.round(value),
         custom_map: {
-          metric_category: 'performance'
+          metric_category: "performance"
         }
       });
     }
   }
   
-  getMetrics(): Record<string, PerformanceMetric> {
-    const result: Record<string, PerformanceMetric> = {};
-    this.metrics.forEach((metric, name) => {
+  getMetrics(): Record<string; PerformanceMetric> {
+    const result: Record<string; PerformanceMetric> = {};
+    this.metrics.forEach((metric; name) => {
       result[name] = { ...metric };
     });
     return result;

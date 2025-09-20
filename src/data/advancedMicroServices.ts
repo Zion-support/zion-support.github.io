@@ -6,14 +6,14 @@ export interface AdvancedMicroService {
     subcategory: string;
     price: number;
     currency: string;
-    pricingModel: 'one-time' | 'monthly' | 'yearly' | 'per-user' | 'per-project' | 'usage-based' | 'freemium';
+    pricingModel: "one-time" | "monthly" | "yearly" | "per-user" | "per-project" | "usage-based" | "freemium";
     features: string[];
     benefits: string[];
     useCases: string[];
     targetAudience: string[];
     tags: string[];
     estimatedDelivery: string;
-    supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
+    supportLevel: "basic" | "standard" | "premium" | "enterprise";
     marketPrice: string;
     contactInfo: {
     phone: string;
@@ -36,11 +36,11 @@ export interface AdvancedMicroService {
 }
 
 export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
-  // AI-Powered Business Intelligence
+  // AI-Powered Business Intelligence;
   {
     id: "ai-business-intelligence-suite";
     title: "AI Business Intelligence Suite";
-    description: "Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting for enterprise decision-making.",
+    description: "Advanced AI-powered business intelligence platform that transforms raw data into actionable insights; predictive analytics; and automated reporting for enterprise decision-making.",
     category: "AI & Analytics";
     subcategory: "Business Intelligence";
     price: 899;
@@ -85,7 +85,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     tags: ["AI", "Business Intelligence", "Analytics", "Machine Learning", "Data Visualization"],
     estimatedDelivery: "2-3 weeks";
     supportLevel: "premium";
-    marketPrice: "$899 - $2,999/month",
+    marketPrice: "$899 - $2;999/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -102,11 +102,11 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control"]
   },
 
-  // Quantum-Safe Cybersecurity Platform
+  // Quantum-Safe Cybersecurity Platform;
   {
     id: "quantum-safe-cybersecurity";
     title: "Quantum-Safe Cybersecurity Platform";
-    description: "Next-generation cybersecurity platform that implements quantum-resistant encryption algorithms, advanced threat detection, and zero-trust security architecture for future-proof protection.",
+    description: "Next-generation cybersecurity platform that implements quantum-resistant encryption algorithms; advanced threat detection; and zero-trust security architecture for future-proof protection.",
     category: "Cybersecurity";
     subcategory: "Advanced Protection";
     price: 1299;
@@ -151,7 +151,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     tags: ["Cybersecurity", "Quantum Computing", "AI", "Zero Trust", "Compliance"],
     estimatedDelivery: "3-4 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$1,299 - $4,999/month",
+    marketPrice: "$1;299 - $4;999/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -168,11 +168,11 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     securityFeatures: ["Post-quantum cryptography", "Behavioral analytics", "Threat intelligence sharing"]
   },
 
-  // Edge Computing Orchestration Platform
+  // Edge Computing Orchestration Platform;
   {
     id: "edge-computing-orchestration";
     title: "Edge Computing Orchestration Platform";
-    description: "Intelligent edge computing platform that optimizes application deployment, manages distributed resources, and provides real-time processing capabilities for IoT and edge devices.",
+    description: "Intelligent edge computing platform that optimizes application deployment; manages distributed resources; and provides real-time processing capabilities for IoT and edge devices.",
     category: "Edge Computing";
     subcategory: "Orchestration";
     price: 699;
@@ -217,7 +217,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     tags: ["Edge Computing", "IoT", "Cloud Native", "DevOps", "Real-time Processing"],
     estimatedDelivery: "2-3 weeks";
     supportLevel: "premium";
-    marketPrice: "$699 - $2,499/month",
+    marketPrice: "$699 - $2;499/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -234,11 +234,11 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     securityFeatures: ["Device authentication", "Data encryption", "Access control", "Audit logging"]
   },
 
-  // Blockchain Supply Chain Transparency
+  // Blockchain Supply Chain Transparency;
   {
     id: "blockchain-supply-chain";
     title: "Blockchain Supply Chain Transparency Platform";
-    description: "End-to-end supply chain visibility platform using blockchain technology to ensure transparency, traceability, and compliance across global supply networks.",
+    description: "End-to-end supply chain visibility platform using blockchain technology to ensure transparency; traceability, and compliance across global supply networks.",
     category: "Blockchain";
     subcategory: "Supply Chain";
     price: 599;
@@ -283,7 +283,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     tags: ["Blockchain", "Supply Chain", "Traceability", "Compliance", "Sustainability"],
     estimatedDelivery: "4-5 weeks";
     supportLevel: "premium";
-    marketPrice: "$599 - $1,999/month",
+    marketPrice: "$599 - $1;999/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -300,11 +300,11 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     securityFeatures: ["Immutable records", "Cryptographic verification", "Access control", "Audit trails"]
   },
 
-  // AI-Powered DevOps Automation
+  // AI-Powered DevOps Automation;
   {
     id: "ai-devops-automation";
     title: "AI-Powered DevOps Automation Platform";
-    description: "Intelligent DevOps platform that automates software development, testing, deployment, and monitoring using AI and machine learning for continuous improvement.",
+    description: "Intelligent DevOps platform that automates software development; testing, deployment; and monitoring using AI and machine learning for continuous improvement.",
     category: "DevOps";
     subcategory: "Automation";
     price: 799;
@@ -349,7 +349,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     tags: ["DevOps", "Automation", "CI/CD", "AI", "Cloud Native"],
     estimatedDelivery: "2-3 weeks";
     supportLevel: "premium";
-    marketPrice: "$799 - $2,799/month",
+    marketPrice: "$799 - $2;799/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -366,11 +366,11 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     securityFeatures: ["Secure code scanning", "Access control", "Audit logging", "Encryption"]
   },
 
-  // Quantum Machine Learning Platform
+  // Quantum Machine Learning Platform;
   {
     id: "quantum-ml-platform";
     title: "Quantum Machine Learning Platform";
-    description: "Revolutionary platform that combines quantum computing with machine learning to solve complex optimization problems, accelerate AI training, and unlock new computational capabilities.",
+    description: "Revolutionary platform that combines quantum computing with machine learning to solve complex optimization problems; accelerate AI training; and unlock new computational capabilities.",
     category: "Quantum Computing";
     subcategory: "Machine Learning";
     price: 2499;
@@ -415,7 +415,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     tags: ["Quantum Computing", "Machine Learning", "Optimization", "Research", "Innovation"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$2,499 - $9,999/month",
+    marketPrice: "$2;499 - $9;999/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -432,11 +432,11 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     securityFeatures: ["Quantum-safe encryption", "Secure quantum communication", "Access control"]
   },
 
-  // Autonomous Data Governance Platform
+  // Autonomous Data Governance Platform;
   {
     id: "autonomous-data-governance";
     title: "Autonomous Data Governance Platform";
-    description: "AI-powered data governance platform that automatically discovers, classifies, and manages data assets while ensuring compliance, privacy, and security across the organization.",
+    description: "AI-powered data governance platform that automatically discovers; classifies, and manages data assets while ensuring compliance; privacy, and security across the organization.",
     category: "Data Management";
     subcategory: "Governance";
     price: 899;
@@ -481,7 +481,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     tags: ["Data Governance", "Compliance", "Privacy", "AI", "Data Management"],
     estimatedDelivery: "3-4 weeks";
     supportLevel: "premium";
-    marketPrice: "$899 - $3,499/month",
+    marketPrice: "$899 - $3;499/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -498,11 +498,11 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     securityFeatures: ["Data encryption", "Access control", "Audit logging", "Privacy protection"]
   },
 
-  // Intelligent API Management Platform
+  // Intelligent API Management Platform;
   {
     id: "intelligent-api-management";
     title: "Intelligent API Management Platform";
-    description: "Advanced API management platform with AI-powered analytics, automated documentation, security monitoring, and intelligent rate limiting for modern API ecosystems.",
+    description: "Advanced API management platform with AI-powered analytics; automated documentation; security monitoring; and intelligent rate limiting for modern API ecosystems.",
     category: "API Management";
     subcategory: "Intelligent Platform";
     price: 649;
@@ -547,7 +547,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     tags: ["API Management", "Microservices", "Developer Experience", "Security", "Analytics"],
     estimatedDelivery: "2-3 weeks";
     supportLevel: "premium";
-    marketPrice: "$649 - $2,199/month",
+    marketPrice: "$649 - $2;199/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -564,11 +564,11 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     securityFeatures: ["OAuth 2.0", "JWT tokens", "Rate limiting", "Threat detection", "Encryption"]
   },
 
-  // Hyperautomation Workflow Platform
+  // Hyperautomation Workflow Platform;
   {
     id: "hyperautomation-workflow";
     title: "Hyperautomation Workflow Platform";
-    description: "Comprehensive hyperautomation platform that combines RPA, AI, and process mining to automate complex business processes and workflows across the organization.",
+    description: "Comprehensive hyperautomation platform that combines RPA; AI, and process mining to automate complex business processes and workflows across the organization.",
     category: "Automation";
     subcategory: "Hyperautomation";
     price: 1099;
@@ -613,7 +613,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     tags: ["Hyperautomation", "RPA", "AI", "Process Mining", "Workflow Automation"],
     estimatedDelivery: "4-5 weeks";
     supportLevel: "premium";
-    marketPrice: "$1,099 - $3,999/month",
+    marketPrice: "$1;099 - $3;999/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";

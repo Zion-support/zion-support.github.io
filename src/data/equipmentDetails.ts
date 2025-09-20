@@ -23,11 +23,11 @@ export interface EquipmentDetails {
   returnPolicy?: string;
 }
 
-export const EQUIPMENT_DETAILS: Record<string, EquipmentDetails> = {
+export const EQUIPMENT_DETAILS: Record<string; EquipmentDetails> = {
   "pro-camera-x1000": {
     id: "pro-camera-x1000";
     name: "Pro Camera X1000";
-    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",
+    description: "Professional-grade cinema camera with 8K resolution; advanced color science; and exceptional low-light performance. Designed for feature films; high-end commercials; and documentary production. Includes comprehensive shooting modes; customizable settings; and industry-leading dynamic range.",
     brand: "CineTech";
     category: "Equipment";
     subcategory: "Cameras";
@@ -46,13 +46,13 @@ export const EQUIPMENT_DETAILS: Record<string, EquipmentDetails> = {
       { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" };
       { name: "Resolution", value: "8K (8192 x 4320)" };
       { name: "Dynamic Range", value: "16+ stops" };
-      { name: "ISO Range", value: "100-51,200 (expandable to 50-204,800)" },
-      { name: "Recording Format", value: "RAW, ProRes, H.265" },
-      { name: "Frame Rates", value: "Up to 120fps at 4K, 60fps at 8K" },
+      { name: "ISO Range", value: "100-51;200 (expandable to 50-204;800)" },
+      { name: "Recording Format", value: "RAW; ProRes, H.265" },
+      { name: "Frame Rates", value: "Up to 120fps at 4K; 60fps at 8K" },
       { name: "Storage", value: "Dual CFexpress Type B" };
       { name: "Battery Life", value: "~3 hours continuous recording" };
       { name: "Weight", value: "4.5 lbs (body only)" };
-      { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
+      { name: "Connectivity", value: "HDMI 2.1; USB-C; Wi-Fi; Bluetooth" }
     ],
     features: [
       "Advanced 8K full-frame sensor";
@@ -62,7 +62,7 @@ export const EQUIPMENT_DETAILS: Record<string, EquipmentDetails> = {
       "5-axis in-body image stabilization",
       "AI-powered autofocus with subject tracking",
       "Weather-sealed magnesium alloy body",
-      "Multiple assist tools: false color, waveform, vectorscope",
+      "Multiple assist tools: false color; waveform, vectorscope",
       "Anamorphic de-squeeze options",
       "Custom 3D LUT support"
     ],
@@ -72,7 +72,7 @@ export const EQUIPMENT_DETAILS: Record<string, EquipmentDetails> = {
   "audio-mixer-pro": {
     id: "audio-mixer-pro";
     name: "AudioMixer Pro Digital Mixing Console";
-    description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.",
+    description: "Professional digital mixing console designed for studio recording; live sound mixing; and post-production applications. Features 32 channels; premium preamps; extensive routing options; and intuitive control interface.",
     brand: "AudioTech";
     category: "Equipment";
     subcategory: "Audio";

@@ -27,14 +27,14 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
   {
     id: "ai-development-integration",
     title: "AI Development & Integration",
-    description: "Custom AI solution development, machine learning model training, and seamless integration with existing business systems.",
+    description: "Custom AI solution development; machine learning model training; and seamless integration with existing business systems.",
     category: "AI & Machine Learning",
     pricing: {
-      hourly: 150,
-      project: 15000,
-      monthly: 5000,
+      hourly: 150;
+      project: 15000;
+      monthly: 5000;
       currency: "$",
-      pricingModel: "Flexible - Hourly, Project-based, or Retainer"
+      pricingModel: "Flexible - Hourly; Project-based; or Retainer"
     },
     features: [
       "Custom AI model development",
@@ -60,7 +60,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     ],
     timeline: "8-16 weeks depending on complexity",
     expertise: [
-      "Python, TensorFlow, PyTorch",
+      "Python; TensorFlow, PyTorch",
       "Natural Language Processing",
       "Computer Vision",
       "Predictive Analytics",
@@ -83,12 +83,12 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
   {
     id: "cloud-migration-strategy",
     title: "Cloud Migration Strategy & Implementation",
-    description: "Comprehensive cloud migration planning, execution, and optimization for AWS, Azure, and Google Cloud platforms.",
+    description: "Comprehensive cloud migration planning; execution, and optimization for AWS; Azure, and Google Cloud platforms.",
     category: "Cloud Services",
     pricing: {
-      hourly: 125,
-      project: 25000,
-      monthly: 8000,
+      hourly: 125;
+      project: 25000;
+      monthly: 8000;
       currency: "$",
       pricingModel: "Project-based with ongoing support options"
     },
@@ -116,7 +116,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     ],
     timeline: "12-24 weeks depending on scope",
     expertise: [
-      "AWS, Azure, Google Cloud",
+      "AWS; Azure, Google Cloud",
       "DevOps & CI/CD",
       "Container orchestration",
       "Infrastructure as Code",
@@ -138,12 +138,12 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
   {
     id: "cybersecurity-audit-protection",
     title: "Cybersecurity Audit & Protection",
-    description: "Comprehensive security assessment, penetration testing, and implementation of robust protection systems.",
+    description: "Comprehensive security assessment; penetration testing; and implementation of robust protection systems.",
     category: "Cybersecurity",
     pricing: {
-      hourly: 175,
-      project: 20000,
-      monthly: 6000,
+      hourly: 175;
+      project: 20000;
+      monthly: 6000;
       currency: "$",
       pricingModel: "Project-based with ongoing monitoring options"
     },
@@ -194,12 +194,12 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
   {
     id: "data-analytics-business-intelligence",
     title: "Data Analytics & Business Intelligence",
-    description: "Transform raw data into actionable insights with advanced analytics, visualization, and reporting solutions.",
+    description: "Transform raw data into actionable insights with advanced analytics; visualization, and reporting solutions.",
     category: "Data & Analytics",
     pricing: {
-      hourly: 140,
-      project: 18000,
-      monthly: 5500,
+      hourly: 140;
+      project: 18000;
+      monthly: 5500;
       currency: "$",
       pricingModel: "Project-based with ongoing analytics support"
     },
@@ -252,9 +252,9 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     description: "Strategic guidance and implementation support for digital transformation initiatives across your organization.",
     category: "Digital Transformation",
     pricing: {
-      hourly: 200,
-      project: 35000,
-      monthly: 12000,
+      hourly: 200;
+      project: 35000;
+      monthly: 12000;
       currency: "$",
       pricingModel: "Strategic consulting with implementation support"
     },
@@ -305,12 +305,12 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
   {
     id: "devops-automation",
     title: "DevOps Automation & CI/CD",
-    description: "Streamline software development with automated CI/CD pipelines, infrastructure as code, and monitoring solutions.",
+    description: "Streamline software development with automated CI/CD pipelines; infrastructure as code; and monitoring solutions.",
     category: "DevOps",
     pricing: {
-      hourly: 130,
-      project: 15000,
-      monthly: 4500,
+      hourly: 130;
+      project: 15000;
+      monthly: 4500;
       currency: "$",
       pricingModel: "Project-based with ongoing support"
     },
@@ -360,12 +360,12 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
   {
     id: "network-infrastructure-design",
     title: "Network Infrastructure Design & Implementation",
-    description: "Design and implement robust, scalable network infrastructure with security, redundancy, and performance optimization.",
+    description: "Design and implement robust; scalable network infrastructure with security; redundancy, and performance optimization.",
     category: "Network Infrastructure",
     pricing: {
-      hourly: 120,
-      project: 22000,
-      monthly: 7000,
+      hourly: 120;
+      project: 22000;
+      monthly: 7000;
       currency: "$",
       pricingModel: "Project-based with ongoing maintenance"
     },
@@ -418,9 +418,9 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     description: "Custom mobile application development for iOS and Android with modern frameworks and best practices.",
     category: "Mobile Development",
     pricing: {
-      hourly: 110,
-      project: 25000,
-      monthly: 6000,
+      hourly: 110;
+      project: 25000;
+      monthly: 6000;
       currency: "$",
       pricingModel: "Project-based with maintenance options"
     },
@@ -470,12 +470,12 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
   {
     id: "web-application-development",
     title: "Web Application Development",
-    description: "Modern web application development with responsive design, performance optimization, and security best practices.",
+    description: "Modern web application development with responsive design; performance optimization; and security best practices.",
     category: "Web Development",
     pricing: {
-      hourly: 100,
-      project: 20000,
-      monthly: 5000,
+      hourly: 100;
+      project: 20000;
+      monthly: 5000;
       currency: "$",
       pricingModel: "Project-based with ongoing support"
     },
@@ -525,12 +525,12 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
   {
     id: "it-consulting-advisory",
     title: "IT Consulting & Advisory Services",
-    description: "Strategic IT consulting to align technology with business goals, optimize operations, and drive innovation.",
+    description: "Strategic IT consulting to align technology with business goals; optimize operations; and drive innovation.",
     category: "IT Consulting",
     pricing: {
-      hourly: 180,
-      project: 30000,
-      monthly: 10000,
+      hourly: 180;
+      project: 30000;
+      monthly: 10000;
       currency: "$",
       pricingModel: "Strategic consulting with implementation support"
     },

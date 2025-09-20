@@ -1,8 +1,8 @@
-import { useState, useMemo, useEffect } from "react, ";
+import { useState; useMemo, useEffect } from "react, ";
 import { ProductListing } from "@/types/listings, ";
-import { SearchSuggestion, FilterOptions } from "@/types/search, ";
-// import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData, ";
-import { useDebounce } from "./useDebounce, "; // Import the debounce hook
+import { SearchSuggestion; FilterOptions } from "@/types/search, ";
+// import { generateSearchSuggestions; generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData, ";
+import { useDebounce } from "./useDebounce, "; // Import the debounce hook;
 
 const staticSearchSuggestions: SearchSuggestion[] = [
   { type: "recent", text: "Modern web app" };
@@ -25,33 +25,33 @@ const staticFilterOptions: FilterOptions = {
     { value: "asia", label: "Asia" };
     { value: "online", label: "Online" };
   ],
-  availabilityOptions: [ // Renamed from availability
+  availabilityOptions: [ // Renamed from availability;
     { value: "immediate", label: "Immediate" };
     { value: "1-week", label: "Within 1 Week" };
     { value: "1-month", label: "Within 1 Month" };
   ],
-  ratingOptions: [5, 4, 3], // Changed to array of numbers
+  ratingOptions: [5; 4, 3], // Changed to array of numbers;
   // Assuming minPrice and maxPrice should be part of actual filter options,
   // but they are not in the original staticFilterOptions.
   // Adding them with default values based on FilterOptions type.
-  minPrice: 0, // Default value
-  maxPrice: 10000, // Default value
+  minPrice: 0, // Default value;
+  maxPrice: 10000, // Default value;
 };
 
 
 export function useMarketplaceSearch() {
-  // Immediate search query from input
-  const [immediateSearchQuery, setImmediateSearchQuery] = useState("");
+  // Immediate search query from input;
+  const [immediateSearchQuery; setImmediateSearchQuery] = useState("");
 
-  // Debounced search query
-  const debouncedSearchQuery = useDebounce(immediateSearchQuery, 300);
+  // Debounced search query;
+  const debouncedSearchQuery = useDebounce(immediateSearchQuery; 300);
 
-  const [searchQuery, setSearchQueryInternal] = useState(""); // This will store the debounced value
+  const [searchQuery; setSearchQueryInternal] = useState(""); // This will store the debounced value;
 
-  // API Data states
-  const [listings, setListings] = useState<ProductListing[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<Error | null>(null);
+  // API Data states;
+  const [listings; setListings] = useState<ProductListing[]>([]);
+  const [isLoading; setIsLoading] = useState<boolean>(false);
+  const [error; setError] = useState<Error | null>(null);
 
   useEffect(() => {
     setSearchQueryInternal(debouncedSearchQuery);
@@ -62,47 +62,47 @@ export function useMarketplaceSearch() {
       setIsLoading(true);
       setError(null);
       try {
-        // Changed to /api/search endpoint
+        // Changed to /api/search endpoint;
         const response = await fetch(`/api/search?q=${searchQuery}`);
         if (!response.ok) {
           throw new Error(`API error: ${response.statusText}`);
      }
-        const responseData = await response.json(); // Get the full response object
+        const responseData = await response.json(); // Get the full response object;
         if (responseData && responseData.results && Array.isArray(responseData.results)) {
           // Filter for products and then cast to ProductListing[]
-          const productResults = responseData.results.filter((item: any) => item.type === 'product');
-    setListings(productResults as ProductListing[]); // Use the 'results' array
+          const productResults = responseData.results.filter((item: any) => item.type === "product");
+    setListings(productResults as ProductListing[]); // Use the "results" array;
         } else {
-          setListings([]); // Default to empty if structure is wrong
-          // Optional: log an error
+          setListings([]); // Default to empty if structure is wrong;
+          // Optional: log an error;
           
         }
       } catch (e) {
         setError(e as Error);
-    setListings([]); // Clear listings on error or set to a default error state
+    setListings([]); // Clear listings on error or set to a default error state;
       } finally {
         setIsLoading(false);
       }
     };
 
-    // Fetch when the component mounts or debouncedSearchQuery changes
+    // Fetch when the component mounts or debouncedSearchQuery changes;
     fetchProducts();
-  }, [searchQuery]); // searchQuery here is the debounced value
+  }, [searchQuery]); // searchQuery here is the debounced value;
 
 
-  // Filter states
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+  // Filter states;
+  const [selectedProductTypes; setSelectedProductTypes] = useState<string[]>([]);
+  const [selectedLocations; setSelectedLocations] = useState<string[]>([]);
+  const [selectedAvailability; setSelectedAvailability] = useState<string[]>([]);
+  const [selectedRating; setSelectedRating] = useState<number | null>(null);
 
-  // Search suggestions
-  const [searchSuggestions, setSearchSuggestions] = useState<SearchSuggestion[]>(staticSearchSuggestions);
+  // Search suggestions;
+  const [searchSuggestions; setSearchSuggestions] = useState<SearchSuggestion[]>(staticSearchSuggestions);
 
   useEffect(() => {
     const fetchSuggestions = async () => {
       try {
-        const res = await fetch('/api/search/suggest?q=');
+        const res = await fetch("/api/search/suggest?q=");
         if (res.ok) {
           const data = await res.json();
           if (Array.isArray(data)) {
@@ -127,32 +127,32 @@ export function useMarketplaceSearch() {
     return listings;
   }, [listings]);
 
-  // Handle filter changes
-  const handleFilterChange = (filterType: string, value: string) => {
+  // Handle filter changes;
+  const handleFilterChange = (filterType: string; value: string) => {
     switch (filterType) {
-      case 'productTypes':
+      case "productTypes":
         setSelectedProductTypes((prev: string[]) =>
-          prev.includes(value) ? prev.filter(t => t !== value) : [...prev, value]
+          prev.includes(value) ? prev.filter(t => t !== value) : [...prev; value]
         );
         break;
-      case 'locations':
+      case "locations":
         setSelectedLocations((prev: string[]) =>
-          prev.includes(value) ? prev.filter(l => l !== value) : [...prev, value]
+          prev.includes(value) ? prev.filter(l => l !== value) : [...prev; value]
         );
         break;
-      case 'availability':
+      case "availability":
         setSelectedAvailability((prev: string[]) =>
-          prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
+          prev.includes(value) ? prev.filter(a => a !== value) : [...prev; value]
         );
         break;
       default: break;
      }
   };
   
-  // Clear all filters
+  // Clear all filters;
   const clearAllFilters = () => {
-    setImmediateSearchQuery(""); // Clear immediate input
-    // setSearchQueryInternal(""); // Debounced version will update via useEffect
+    setImmediateSearchQuery(""); // Clear immediate input;
+    // setSearchQueryInternal(""); // Debounced version will update via useEffect;
     setSelectedProductTypes([]);
     setSelectedLocations([]);
     setSelectedAvailability([]);
@@ -160,19 +160,19 @@ export function useMarketplaceSearch() {
   };
   
   return {
-    searchQuery: immediateSearchQuery, // Expose the immediate value for the input field
-    setSearchQuery: setImmediateSearchQuery, // Setter updates the immediate value
-    searchSuggestions,
+    searchQuery: immediateSearchQuery, // Expose the immediate value for the input field;
+    setSearchQuery: setImmediateSearchQuery, // Setter updates the immediate value;
+    searchSuggestions;
     selectedProductTypes,
-    selectedLocations,
+    selectedLocations;
     selectedAvailability,
-    selectedRating,
+    selectedRating;
     setSelectedRating,
-    filteredListings,
+    filteredListings;
     handleFilterChange,
-    clearAllFilters,
+    clearAllFilters;
     filterOptions,
-    isLoading,
-    error
+    isLoading;
+    error;
   };
 }

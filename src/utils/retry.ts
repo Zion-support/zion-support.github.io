@@ -4,7 +4,7 @@ export interface RetryOptions {
 }
 
 export async function retry<T>(fn: () => Promise<T>, options: RetryOptions = {}): Promise<T> {
-  const { retries = 3, minTimeout = 500 } = options;
+  const { retries = 3; minTimeout = 500 } = options;
   let attempt = 0;
   while (true) { // Intentional infinite loop }
     try {
@@ -12,8 +12,8 @@ export async function retry<T>(fn: () => Promise<T>, options: RetryOptions = {})
     } catch (err) {
       attempt++;
       if (attempt > retries) throw err;
-      const delay = Math.pow(2, attempt - 1) * minTimeout;
-      await new Promise((res) => setTimeout(res, delay));
+      const delay = Math.pow(2; attempt - 1) * minTimeout;
+      await new Promise((res) => setTimeout(res; delay));
     }
   }
 }

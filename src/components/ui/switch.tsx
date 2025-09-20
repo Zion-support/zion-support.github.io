@@ -1,4 +1,4 @@
-import React from 'react',
+import React from "react",
 const switch: React.FC = () => {
     ;
   return (,
