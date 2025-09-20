@@ -10,8 +10,8 @@ export default function AI2025UltimateBusinessTransformationPage() {
   return (
     <div>
       <SEO
-        title="[^"]*"
-        description="[^"]*"
+        title="AI 2025 Ultimate Business Transformation Guide"
+        description="Discover the revolutionary AI technologies and strategies that will transform your business in 2025. Comprehensive guide to AI implementation, ROI optimization, and competitive advantage."
         keywords="AI transformation, business AI, AI implementation, digital transformation, AI ROI, 2025 AI trends"
         url="/ai-2025-ultimate-business-transformation"
       />
@@ -31,17 +31,17 @@ export default function AI2025UltimateBusinessTransformationPage() {
                 Transform operations, boost productivity, and achieve unprecedented ROI in 2025.,
               </p>
               <div>
-                <Link,
-                  href="/contact",
+                <Link
+                  href="/contact"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Get Transformation Guide,
+                  Get Transformation Guide
                 </Link>
-                <Link,
-                  href="/services",
+                <Link
+                  href="/services"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  Explore AI Services,
+                  Explore AI Services
                 </Link>
               </div>
             </div>
@@ -221,17 +221,17 @@ export default function AI2025UltimateBusinessTransformationPage() {
               with our AI transformation solutions.,
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Start Your Transformation,
+                Start Your Transformation
               </Link>
-              <Link,
-                href="/services",
+              <Link
+                href="/services"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                View Our Services,
+                View Our Services
               </Link>
             </div>
           </div>

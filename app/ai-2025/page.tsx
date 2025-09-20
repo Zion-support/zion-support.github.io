@@ -10,8 +10,8 @@ export default function AI2025Page() {
   return (
     <div>
       <SEO
-        title="[^"]*"
-        description="[^"]*"
+        title="AI 2025 - Revolutionary AI Solutions"
+        description="Discover the latest AI innovations and solutions for 2025. Advanced neural networks, automation, and cutting-edge technology."
         keywords="AI 2025, artificial intelligence, neural networks, automation, machine learning"
         url="/ai-2025"
       />
@@ -26,17 +26,17 @@ export default function AI2025Page() {
             AI solutions, tools, and technologies designed for 2025 and beyond.,
           </p>
           <div>
-            <Link,
-              href="/ai-2025/neural-networks",
+            <Link
+              href="/ai-2025/neural-networks"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Explore Neural Networks,
+              Explore Neural Networks
             </Link>
-            <Link,
-              href="/ai-2025/automation",
+            <Link
+              href="/ai-2025/automation"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
-              View Automation Solutions,
+              View Automation Solutions
             </Link>
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function AI2025Page() {
                 Next-generation neural network architectures with unprecedented accuracy and efficiency.,
               </p>
               <Link href="/ai-2025/neural-networks" className="text-purple-600 font-semibold hover:text-purple-800">
-                Learn More →,
+                Learn More →
               </Link>
             </div>
             <div>
@@ -62,8 +62,8 @@ export default function AI2025Page() {
               <p>
                 AI-powered automation solutions that learn, adapt, and optimize business processes.,
               </p>
-              <Link href="/ai-2025/automation" className="text-purple-600 font-semibold hover: text-purple-800">
-                Learn More →,
+              <Link href="/ai-2025/automation" className="text-purple-600 font-semibold hover:text-purple-800">
+                Learn More →
               </Link>
             </div>
             <div>
@@ -73,7 +73,7 @@ export default function AI2025Page() {
                 Real-time analytics and predictive intelligence for data-driven decision making.,
               </p>
               <Link href="/ai-2025/analytics" className="text-purple-600 font-semibold hover:text-purple-800">
-                Learn More →,
+                Learn More →
               </Link>
             </div>
           </div>
@@ -88,11 +88,11 @@ export default function AI2025Page() {
           <p>
             Join thousands of companies already using our AI solutions to drive innovation and growth.,
           </p>
-          <Link,
-            href="/contact",
+          <Link
+            href="/contact"
             className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
           >
-            Get Started Today,
+            Get Started Today
           </Link>
         </div>
       </section>
