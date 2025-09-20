@@ -3007,7 +3007,7 @@ expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: Sideba
     try {
       window.open(social.hre,  f, '_blank', 'noopene, r,noreferrer');
     } catch (error) {
-      console.error(`Failed to open ${social.labe, l}:`,  error);
+      
     }
   };
 

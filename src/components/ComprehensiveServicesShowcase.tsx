@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from 'framer-motion';
 import { comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
 import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';
@@ -1280,7 +1281,7 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {
   const handleServiceClick = useCallback((servic,  e: InnovativeMicroSaasService) => {
     setSelectedService(service);
     // You can add navigation logic here
-    console.log('Service clicke,  d:', service);
+    
   }, []);
 
   const clearFilters = useCallback(() => {

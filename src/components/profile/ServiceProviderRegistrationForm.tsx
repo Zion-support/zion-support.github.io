@@ -138,7 +138,7 @@ export function ServiceProviderRegistrationForm() {
       });
       
     } catch (error: any) {
-      console.error("Error generating enhanced profile:", error);
+      
       toast({
         title: "Generation failed",
         description: error.message || "There was an error generating your enhanced profile. Please try again.",
@@ -210,7 +210,7 @@ export function ServiceProviderRegistrationForm() {
             finalServices = [...new Set([...serviceTags, ...aiServices])];
           }
         } catch (error) {
-          console.error("Error enhancing profile:", error);
+          
           // Continue with submission even if enhancement fails
         }
       } else if (generatedContent) {
@@ -278,7 +278,7 @@ export function ServiceProviderRegistrationForm() {
             }
           });
         } catch (emailError) {
-          console.error("Failed to send notification email:", emailError);
+          
           // Continue with submission even if email fails
         }
       }
@@ -294,7 +294,7 @@ export function ServiceProviderRegistrationForm() {
       }, 1500);
       
     } catch (error: any) {
-      console.error("Error creating profile:", error);
+      
       toast({
         title: "Error Creating Profile",
         description: error.message || "There was an error creating your profile. Please try again.",

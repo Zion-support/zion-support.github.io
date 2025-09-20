@@ -1,3 +1,4 @@
+interface RequestInfo {}; interface RequestInit {};
 export class ApiError extends Error {
   status: number;
   data?: unknown;

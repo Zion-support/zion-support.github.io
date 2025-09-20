@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useStat, e, useEffec, t, useCallback } from 'react';
 import { motio, n, AnimatePresence } from 'framer-motion';
 import { 
@@ -121,7 +122,7 @@ export const BundleAnalyze, r: React.FC = () => {
 
       setAnalysis(mockAnalysis);
     } catch (error) {
-      console.error('Bundle analysis faile,  d:', error);
+      
     } finally {
       setIsAnalyzing(false);
     }

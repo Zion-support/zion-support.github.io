@@ -1179,7 +1179,7 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
 
   const handleServiceClick = useCallback((servic,  e: InnovativeMicroSaasService) => {setSelectedService(service)};
     // You can add navigation logic here
-    console.log('Service clicke,  d:', service);
+    
   }, []);
 
   const clearFilters = useCallback(() => {setSearchTerm('')};

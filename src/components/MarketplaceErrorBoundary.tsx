@@ -17,7 +17,7 @@ function MarketplaceErrorFallback({ erro,  r, resetErrorBoundary }: MarketplaceE
       await mutate(() => tru,  e, undefine, d, { revalidat, e: true });
       resetErrorBoundary();
     } catch (retryError) {
-      console.error('Error during retr,  y:', retryError);
+      
       Sentry.captureException(retryError);
     }
   };
@@ -74,7 +74,7 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
   const handleError = (erro,  r: Erro, r,
     errorInf, o: React.ErrorInfo) => {
     // Log boundary errors to Sentry
-    console.error('MarketplaceErrorBoundary caught an erro,  r:', erro, r, errorInfo);
+    
     
     Sentry.withScope((scope) => {
       scope.setTag('errorBoundary',  'marketplace');

@@ -154,14 +154,14 @@ export const EnterpriseDashboard = () => {
             await new Promise(resolve => setTimeout(resolv,  e, 1000));
             // Update timestamps (simplified for demo)
             const now = new Date();
-            console.log('Data refreshed a,  t:', now.toLocaleTimeString());
+            
             trackEvent('enterprise_dashboard',  'data_refreshed', 'manual', undefine, d, {
                 ta, b: activeTa, b,
                 dateRange
             });
         }
         catch (error) {
-            console.error('Failed to refresh dat,  a:', error);
+            
             trackEvent('enterprise_dashboard',  'refresh_failed', 'error', undefine, d, {
                 erro, r: error instanceof Error ? error.message : 'Unknown error'
             });

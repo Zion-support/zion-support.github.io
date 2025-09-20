@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useStat, e, useEffect } from 'react';
 
 export default function ExpensiveComponent() {

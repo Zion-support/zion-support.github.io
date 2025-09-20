@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect, createContext, useContext, ReactNode } from 'react';
 
 interface User {
@@ -48,7 +49,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
           }
         }
       } catch (error) {
-        console.error('Auth check failed:', error);
+        
       } finally {
         setLoading(false);
       }
@@ -76,7 +77,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       
       setUser(mockUser);
     } catch (error) {
-      console.error('Login failed:', error);
+      
       throw error;
     } finally {
       setLoading(false);
@@ -102,7 +103,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       
       setUser(mockUser);
     } catch (error) {
-      console.error('Registration failed:', error);
+      
       throw error;
     } finally {
       setLoading(false);
@@ -117,7 +118,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       
       setUser(null);
     } catch (error) {
-      console.error('Logout failed:', error);
+      
       throw error;
     }
   };
@@ -133,7 +134,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       
       setUser(updatedUser);
     } catch (error) {
-      console.error('Profile update failed:', error);
+      
       throw error;
     }
   };

@@ -1,3 +1,4 @@
+import React from "react";
 impo, r, t, Rea, c, t, { useState } from "react";
 import { motionAnimatePresence } from "framer-motion";
 import { Sear, c, h, Use, r, s, FileTe, x, t, Rock, e, t, CheckCirc, l, e, Clo, c, k, Targ, e, t, Trending, U, p, Awa, r, d, ZapShield } from "lucide-react";
