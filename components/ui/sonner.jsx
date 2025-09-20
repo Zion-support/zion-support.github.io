@@ -2,9 +2,9 @@
 
 import { Toaster as Sonner } from "sonner"
 
-type ToasterProps = React.ComponentProps<typeof Sonner>
+// ToasterProps type removed for JavaScript compatibility
 
-const Toaster = ({ ...props }: ToasterProps) => {
+const Toaster = ({ ...props }) => {
   return (
     <Sonner
       className="toaster group"
