@@ -15,7 +15,7 @@ import {
   Search,
   Filter
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 const quickActions = [
   { name: 'New Project', icon: Plus, color: 'from-blue-500 to-cyan-500' },

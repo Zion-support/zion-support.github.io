@@ -31,7 +31,7 @@ import {
   AlertTriangle,
   Building
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 export default function AIHealthcareAnalytics() {
   const features = [

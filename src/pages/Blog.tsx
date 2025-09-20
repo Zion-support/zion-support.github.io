@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { 
   Search, 
@@ -16,7 +16,7 @@ import {
   Cloud,
   Brain
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 interface BlogPost {
   id: string;

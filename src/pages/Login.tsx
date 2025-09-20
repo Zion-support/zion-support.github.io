@@ -36,7 +36,7 @@ import {
   Tablet,
   Laptop
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 export default function Login() {
   const [isLogin, setIsLogin] = useState(true);

@@ -31,7 +31,7 @@ import {
   Heart,
   Factory
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import SEO from '../../components/SEO';
 
 export default function AIBusinessIntelligence() {
   const features = [

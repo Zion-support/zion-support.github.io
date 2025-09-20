@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import { Brain, Zap, BarChart3, LineChart, Activity, Search, Bot, Wand2 } from 'lucide-react';
 

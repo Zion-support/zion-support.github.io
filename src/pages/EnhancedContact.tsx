@@ -22,7 +22,7 @@ import {
   Network,
   Rocket
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 const EnhancedContact: React.FC = () => {
   const [formData, setFormData] = useState({

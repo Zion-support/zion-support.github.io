@@ -18,7 +18,7 @@ import {
   Target,
   Rocket
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { NEW_INNOVATIVE_SERVICES_2025 } from '../data/newInnovativeServices2025';
 
 export default function NewInnovativeServicesShowcase() {

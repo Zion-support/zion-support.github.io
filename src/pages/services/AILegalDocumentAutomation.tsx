@@ -29,7 +29,7 @@ import {
   Home,
   Heart
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 export default function AILegalDocumentAutomation() {
   const features = [

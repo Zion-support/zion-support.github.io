@@ -52,7 +52,7 @@ import {
   ShieldCheck as ShieldCheckIcon
 } from 'lucide-react';
 import { ENHANCED_MICRO_SAAS_SERVICES_2025 } from '../data/enhancedMicroSaasServices2025';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 const EnhancedServices: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');

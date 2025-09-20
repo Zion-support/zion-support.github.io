@@ -22,7 +22,7 @@ import {
   Heart,
   Eye
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import SEO from '../../components/SEO';
 
 const AIMarketingAutomation = () => {
   const features = [

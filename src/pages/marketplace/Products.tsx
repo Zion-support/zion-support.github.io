@@ -55,7 +55,7 @@ import {
   Zap as ZapIcon,
   MessageCircle
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import SEO from '../../components/SEO';
 
 export default function MarketplaceProducts() {
   const [searchQuery, setSearchQuery] = useState('');

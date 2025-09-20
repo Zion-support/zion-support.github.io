@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { HelpCircle, Search, ChevronDown, ChevronUp, MessageCircle, Phone, Mail, Clock, Users, Shield, Zap, Globe, Cpu, Database, Server, Lock, ArrowRight, DollarSign, Settings, FileText, Target, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

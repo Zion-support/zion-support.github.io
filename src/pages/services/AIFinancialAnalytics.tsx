@@ -34,7 +34,7 @@ import {
   Percent,
   Clock
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import SEO from '../../components/SEO';
 
 const AIFinancialAnalytics = () => {
   const features = [

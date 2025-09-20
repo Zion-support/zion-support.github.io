@@ -33,7 +33,7 @@ import {
   BarChart,
   PieChart as PieChartIcon
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import SEO from '../../components/SEO';
 
 export default function AIFinancialTrading() {
   const features = [

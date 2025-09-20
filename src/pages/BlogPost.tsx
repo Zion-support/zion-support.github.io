@@ -23,7 +23,7 @@ import {
   Network,
   BookOpen
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 export default function BlogPost() {
   const { slug } = useParams();
