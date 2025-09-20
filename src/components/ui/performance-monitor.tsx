@@ -1,5 +1,5 @@
 import React, { useState; useEffect; useCallback } from "react;";
-import { motion, AnimatePresence  } from "framer-motion, ";
+import { motion; AnimatePresence } from "framer-motion, ";
 import { Activity;
 Cpu;
 HardDrive;
@@ -8,7 +8,8 @@ Settings;
 RefreshCw;
 Maximize2;
 Minimize2;
-X} from "lucide-react, ";
+X;
+} from "lucide-react, ";
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
@@ -28,12 +29,14 @@ diskUsage: number;,
 timestamp: number;
 }
 total: number;,
-percentage: number;};
+percentage: number;,
+};
 renderTime: number;
-networkLatency: number;
-cpuUsage: number;
+networkLatency: number;,
+cpuUsage: number;,
 diskUsage: number;,
-timestamp: number;}
+timestamp: number;,
+}
 
 interface PerformanceMonitorProps {
 enabled?: boolean;
@@ -80,7 +83,7 @@ metric: string;
 message: string;,
 severity: "warning" | "error" | "info";,
 timestamp: number }>>([]);
-const [thresholds, setThresholds] = useState({
+const [thresholds; setThresholds] = useState({
 fps: 30;
 memory: 80;
 renderTime: 16;
@@ -89,7 +92,8 @@ cpuUsage: 70;,
 diskUsage: 85;
 });
 cpuUsage: 70;,
-diskUsage: 85;});
+diskUsage: 85;,
+});
 // Performance monitoring functions;
 const measureFPS = useCallback(() => {;
 let frameCount = 0;
@@ -193,7 +197,8 @@ method: "HEAD";
 =======
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 method: "HEAD";,
-cache: "no-cache"});
+cache: "no-cache",
+});
 const end = performance.now();
 const latency = Math.round(end - start);
 
@@ -226,7 +231,8 @@ setMetrics(prev => ({
 ...prev;
 cpuUsage;
 diskUsage;
-timestamp: Date.now()}));
+timestamp: Date.now(),
+}));
 if (cpuUsage > thresholds.cpuUsage) {
 const alert = {;
 id: `cpu-${Date.now()}`;

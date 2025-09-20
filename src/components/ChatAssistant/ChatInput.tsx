@@ -9,20 +9,23 @@ disabled?: boolean};
 export function ChatInput({ onSend; disabled = false }: ChatInputProps) {const [message; setMessage] = useState("");
 interface ChatInputProps {
 onSend: (message: string) => void;
-disabled?: boolean};
+disabled?: boolean,
+};
 export function ChatInput({ onSend; disabled = false }: ChatInputProps) {
-const [message, setMessage] = useState("");
+const [message; setMessage] = useState("");
 const inputRef = useRef<HTMLTextAreaElement>(null);
 
 useEffect(() => {
 // Focus input when component mounts;
-inputRef.current?.focus()}, []);
+inputRef.current?.focus(),
+}, []);
 
 const handleSubmit: any = (e: React.FormEvent) => {;
 e.preventDefault();
 if (message.trim() && !disabled) {
 onSend(message);
-setMessage("")}
+setMessage(""),
+}
 };
 
 const handleKeyPress: any = (e: React.KeyboardEvent) => {
@@ -35,10 +38,12 @@ interface ChatInputProps {onSend: (message: string) => void,}
 disabled?: boolean}export function ChatInput ({onSend disabled = false}: ChatInputProps) {'
 import { Send } from 'lucide-react';
 interface ChatInputProps {
-  onSend: (message: string) => void,
-disabled?: boolean}export function ChatInput ({
-  onSend disabled = false}: ChatInputProps) {'
-  const [message, setMessage] = useState ('')
+onSend: (message: string) => void,
+disabled?: boolean,
+}export function ChatInput ({
+onSend disabled = false,
+}: ChatInputProps) {';
+const [message, setMessage] = useState ('')
 const inputRef = useRef<HTMLTextAreaElement> (null)
 //Focus input when component mounts,
 =======
@@ -104,4 +109,4 @@ disabled={!message.trim() || disabled}
 </Button>;
 </form>;
 );
-}<//form><///form>;
+}<//form><///form>;}}}

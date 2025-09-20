@@ -1,6 +1,6 @@
 
 import React, { useRef } from "react";
-import { ChevronLeft, ChevronRight  } from "lucide-react, ";
+import { ChevronLeft; ChevronRight } from "lucide-react, ";
 import { Button } from "@/components/ui/button, ";
 
 // These would be replaced with actual screenshots;
@@ -23,7 +23,8 @@ left: direction === "left" ? -scrollAmount : scrollAmount;
 scrollContainerRef.current.scrollBy({,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 left: direction === "left" ? -scrollAmount : scrollAmount;,
-behavior: "smooth"});
+behavior: "smooth",
+});
 }
 };
 

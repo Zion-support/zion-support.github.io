@@ -13,3 +13,4 @@ import { CreditCard } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescriptionCardFooter } from '@/components/ui/card';
 import React from 'react';
 interface PaymentSummaryProps {
+}

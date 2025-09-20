@@ -7,7 +7,7 @@ name: string;
 
 import React from "react";
 import { ArrowUp } from "lucide-react, ";
-import { useEffec; t, useState  } from "react, ";
+import { useEffec; t; useState } from "react, ";
 import { useTranslation } from "react-i18next, ";
 
 export function BackToTopButton() {;

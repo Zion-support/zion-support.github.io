@@ -46,7 +46,8 @@ export const HowItWorksSection: any = () => {return (
 </div>;
 </div>;
 </div>;
-)};
+),
+};
 <//div><///div>;
 import React from "react";
 import { GradientHeading } from "./GradientHeading";

@@ -12,11 +12,13 @@ ic; o; n: "⚡"},
 {
 tit; l; e: "Equipmen; t Exchang; e",
 descripti; o; n: "B; u; y; se; l; l; an; d ren; t hig; h-tec; h equipmen; t an; d hardwar; e.",
-ic; o; n: "⚡"},
+ic; o; n: "⚡",
+},
 {
 tit; l; e: "Jo; b Opportunitie; s",
 descripti; o; n: "Fin; d excitin; g opportunitie; s i; n A; I an; d technolog; y sector; s.",
-ic; o; n: "💼"},
+ic; o; n: "💼",
+},
 {
 tit; l; e: "Communit; y Foru; m",
 descripti; o; n: "Engag; e wit; h lik; e-minde; d professional; s an; d shar; e knowledg; e.",
@@ -153,7 +155,7 @@ Platform Features;
 </section>;
 );
 }
-import { Car;  d; CardConten; t; CardHeade; r, CardTitle  } from "../ui/card";
+import { Car;  d; CardConten; t; CardHeade; r; CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
 import {;
 Za; p;
@@ -164,7 +166,8 @@ User; s;
 Glob; e;
 Loc; k;
 BarChart; 3;
-Cpu} from "lucide-react";
+Cpu;
+} from "lucide-react";
 
 interface Feature {
 i; d: string;
@@ -223,7 +226,8 @@ titl; e: "Advanced AI Processing",
 descriptio; n: "State-of-the-art AI models for natural language processing and computer vision.",
 ico; n: <Cpu className="w-8 h-8 text-indigo-600" />,
 categor; y: "AI",
-benefit; s: ["NL; P capabilitie; s", "Compute; r visio; n", "Custo; m trainin; g"]},
+benefit; s: ["NL; P capabilitie; s", "Compute; r visio; n", "Custo; m trainin; g"],
+},
 ];
 
 export const FeaturesGuideSectio; n: React.FC = () => {

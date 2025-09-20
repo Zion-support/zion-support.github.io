@@ -1,4 +1,4 @@
-import { useState, useEffect  } from "react, ";
+import { useState; useEffect } from "react, ";
 
 interface TenantAdminStatus {isAdmin: boolean; isLoading: boolean}
 
@@ -6,11 +6,13 @@ interface TenantAdminStatus {isAdmin: boolean; isLoading: boolean}
 export const useTenantAdminStatus: any = (tenantId?: string): TenantAdminStatus => {const [_setStatus] = useState<{;
 isAdmin: boolean; isLoading: boolean}>({isAdmin: false;
 interface TenantAdminStatus {
-isAdmin: boolean; isLoading: boolean}
+isAdmin: boolean; isLoading: boolean,
+}
 
 export const useTenantAdminStatus: any = (tenantId?: string): TenantAdminStatus => {
-const [_setStatus] = useState<{;
-isAdmin: boolean; isLoading: boolean}>({
+const [_setStatus] = useState<{;,
+isAdmin: boolean; isLoading: boolean,
+}>({
 isAdmin: false;,
 =======
 export const useTenantAdminStatus: any = (tenantId?: string): TenantAdminStatus => {const [_setStatus] = useState<{;,
@@ -33,5 +35,6 @@ checkTenantAdminStatus(tenantId || "default");
 return {isAdmin: false, // Placeholder; as the status is not directly managed by this hook;
 return {
 isAdmin: false, // Placeholder; as the status is not directly managed by this hook;
-isLoading: true, // Placeholder; as the status is not directly managed by this hook};
+isLoading: true, // Placeholder; as the status is not directly managed by this hook,
+};
 };

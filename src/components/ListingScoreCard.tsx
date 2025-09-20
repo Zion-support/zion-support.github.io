@@ -31,7 +31,7 @@ import { StarIcon } from 'lucide-react';
 import Image from 'next/image'; // Import next/image,
 import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image,
 import React, { useState } from 'react'; // Import useState,
-import { Star } from 'lucide-react';
+import { Star,  } from 'lucide-react'
 interface ListingScoreCardProps {
 title: string;,
 description: string;

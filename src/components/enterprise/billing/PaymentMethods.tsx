@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { CreditCard, PlusTrash } from 'lucide-react'
 import React from "react"
-import { Card, CardContent, CardDescription, CardFooter, CardHeaderCardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescriptionCardFooter } from '@/components/ui/card';
+import { Card,, CardContent,, CardDescription,, CardFooter,, CardHeader,, CardTitle,  } from "@/components/ui/card"
+import { Button,  } from "@/components/ui/button"
+import { Card,, CardContent,, CardHeader,, CardTitle,, CardDescription,, CardFooter,  } from '@/components/ui/card'
 export function PaymentMethods() {
   // Mock payment methods,
 return (<Card>

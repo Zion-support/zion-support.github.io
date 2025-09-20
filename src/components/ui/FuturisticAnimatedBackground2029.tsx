@@ -291,8 +291,8 @@ rotation: time * 0.15;,
 type: "hexagon"},
 {
 x: Math.cos(time * 0.5) * 300 + canvas.width / 2;
-y: Math.sin(time * 0.6) * 150 + canvas.height / 2;
-size: 30;
+y: Math.sin(time * 0.6) * 150 + canvas.height / 2;,
+size: 30;,
 rotation: -time * 0.2;,
 type: "octagon"},
 {

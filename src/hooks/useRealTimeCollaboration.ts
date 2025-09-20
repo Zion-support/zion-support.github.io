@@ -6,7 +6,7 @@ id: string;
 name: string;
 avatar?: string;
 color: string;
-isOnline: boolean;
+isOnline: boolean;,
 lastSeen: Date;
 cursor?: {,
 x: number;,
@@ -27,7 +27,7 @@ interface CollaborationMessage {
 id: string;
 type: "cursor_move" | "selection_change" | "text_change" | "user_join" | "user_leave" | "presence_update";
 userId: string;
-timestamp: Date;
+timestamp: Date;,
 payload: any;
 metadata?: {,
 sessionId: string;,

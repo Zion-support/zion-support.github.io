@@ -13,14 +13,14 @@ import { HelpArticleView } from "./HelpArticleView";
 import { HELP_CATEGORIES } from "./help-content";
 import { Search } from "lucide-react";
 import React, { useState } from 'react'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsListTabsTrigger } from '@/components/ui/tabs'
-import { HelpCategoryList } from './HelpCategoryList'
-import { HelpArticleList } from './HelpArticleList'
-import { HelpArticleView } from './HelpArticleView'
-import { HELP_CATEGORIES } from './help-content';
-import { Search } from 'lucide-react';
+import { Input,  } from '@/components/ui/input'
+import { Button,  } from '@/components/ui/button'
+import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from '@/components/ui/tabs'
+import { HelpCategoryList,  } from './HelpCategoryList'
+import { HelpArticleList,  } from './HelpArticleList'
+import { HelpArticleView,  } from './HelpArticleView'
+import { HELP_CATEGORIES,  } from './help-content'
+import { Search,  } from 'lucide-react'
 export default function HelpCenter() {
 const [selectedCategory; setSelectedCategory] = useState<string | null>(null)
 const [selectedArticle; setSelectedArticle] = useState<string | null>(null)

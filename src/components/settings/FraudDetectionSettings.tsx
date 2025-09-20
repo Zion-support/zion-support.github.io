@@ -18,11 +18,13 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { ShieldAlertInfo } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
-import { Accordion;, AccordionContent;, AccordionItem;
-AccordionTrigger } from "@/components/ui/accordion",
-import { toast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
+import { Accordion;
+, , AccordionContent;
+, , AccordionItem;
+, , AccordionTrigger } from "@/components/ui/accordion",
+import { toast,, ,  } from '@/hooks/use-toast';
+import { supabase,, ,  } from '@/integrations/supabase/client';
+import { useAuth,  } from '@/hooks/useAuth';
 export function FraudDetectionSettings() {
 const { user } = useAuth();
 const [messageScanningEnabled; setMessageScanningEnabled] = useState(true);

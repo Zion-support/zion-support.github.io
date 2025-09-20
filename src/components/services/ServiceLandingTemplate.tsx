@@ -47,39 +47,121 @@ ctaLink: string;
 testimonials?: Testimonial[];
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
+export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
+title,
+subtitle,
+heroImage,
+description,
+benefits,
+testimonials,
+ctaText,
+ctaLink;
+}) => {
+return (
+<div className="min-h-screen bg-zion-blue">;
+{/* Hero Section */}
+<section className="relative py-20">;
+<div className="container mx-auto px-4">;
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
+<div>;
+<GradientHeading level="h1" className="text-4xl md:text-5xl font-bold mb-6">;
+{title}
+</GradientHeading>;
+<p className="text-xl text-zion-slate-light mb-8">;
+{subtitle}
+</p>;
+<p className="text-zion-slate-light mb-8">;
+{description}
+</p>;
+<Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white">;
+{ctaText}
+</Button>;
+</div>;
+{heroImage && (
+<div className="relative">;
+<Image;
+src={heroImage}
+alt={title}
+width={600}
+height={400}
+className="rounded-lg shadow-2xl"
+/>;
+</div>;
+)}
+</div>;
+</div>;
+</section>;
 
-export function ServiceLandingTemplate({
-  title,
-  subtitle,
-  description,
-  benefits = [],
-  features = [],
-  stats = [],
-  ctaText,
-  ctaLink
-}: ServiceLandingTemplateProps) {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16">
-        <GradientHeading
-          title={title}
-          subtitle={subtitle}
-          className="text-center mb-8"
-        />
-        
-        <div className="max-w-4xl mx-auto text-center mb-12">
-          <p className="text-lg text-gray-600 leading-relaxed">
-            {description}
-          </p>
-        </div>
+{/* Benefits Section */}
+<section className="py-20 bg-zion-blue-dark">;
+<div className="container mx-auto px-4">;
+<div className="text-center mb-16">;
+<GradientHeading level="h2" className="text-3xl md:text-4xl font-bold mb-4">;
+Why Choose Our Service;
+</GradientHeading>;
+</div>;
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+{benefits.map((benefit, index) => (
+<Card key={index} className="bg-zion-blue border-zion-slate">;
+<CardContent className="p-6">;
+{benefit.icon && (
+<div className="mb-4 text-zion-cyan">;
+{benefit.icon}
+</div>;
+)}
+<h3 className="text-xl font-semibold mb-3 text-white">;
+{benefit.title}
+</h3>;
+<p className="text-zion-slate-light">;
+{benefit.description}
+</p>;
+</CardContent>;
+</Card>;
+))}
+</div>;
+</div>;
+</section>;
 
-        {/* CTA Button */}
-        <div className="text-center mb-16">
-          <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
-            <a href={ctaLink}>{ctaText}</a>
-          </Button>
-        </div>
+{/* Testimonials Section */}
+{testimonials.length > 0 && (
+<section className="py-20">;
+<div className="container mx-auto px-4">;
+<div className="text-center mb-16">;
+<GradientHeading level="h2" className="text-3xl md:text-4xl font-bold mb-4">;
+What Our Clients Say;
+</GradientHeading>;
+</div>;
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+{testimonials.map((testimonial, index) => (
+<Card key={index} className="bg-zion-blue-dark border-zion-slate">;
+<CardContent className="p-6">;
+<p className="text-zion-slate-light mb-4 italic">;
+"{testimonial.text}";
+</p>;
+<div className="flex items-center">;
+{testimonial.avatar && (
+<Image;
+src={testimonial.avatar}
+alt={testimonial.name}
+width={48}
+height={48}
+className="rounded-full mr-4"
+/>;
+)}
+<div>;
+<h4 className="font-semibold text-white">{testimonial.name}</h4>;
+{testimonial.role && (
+<p className="text-zion-slate-light text-sm">{testimonial.role}</p>;
+)}
+</div>;
+</div>;
+</CardContent>;
+</Card>;
+))}
+</div>;
+</div>;
+</section>;
+)}
 
         {/* Benefits Section */}
         {benefits.length > 0 && (

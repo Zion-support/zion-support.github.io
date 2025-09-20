@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button",
 import { Loader2, MessageSquareExternalLink } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",;
 import Link from "next/link";
-import { ApplicationStatus } from "@/types/jobs";
+import { ApplicationStatus,  } from "@/types/jobs";
 export function MyApplications() {
 if (isLoading) {
 return (

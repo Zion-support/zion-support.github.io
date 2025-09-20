@@ -5,7 +5,7 @@ import { Draggable } from "@hello-pangea/dnd, ";
 import { formatDistanceToNow } from "date-fns, ";
 import { Link } from "react-router-dom, ";
 import { JobApplication } from "@/types/jobs, ";
-import { Card, CardContent  } from "@/components/ui/card, ";
+import { Card; CardContent } from "@/components/ui/card, ";
 import { Avatar } from "@/components/ui/avatar, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";
@@ -15,7 +15,8 @@ FileText;
 MoreVertical;
 Calendar;
 AlertTriangle;
-BriefcaseIcon} from "lucide-react, ";
+BriefcaseIcon;
+} from "lucide-react, ";
 import { DropdownMenu;
 DropdownMenuContent;
 DropdownMenuItem;
@@ -37,9 +38,9 @@ const [showHireModal; setShowHireModal] = useState(false);
 application: JobApplication;,
 index: number;};
 export function CandidateCard({ application; index }: CandidateCardProps) {
-const [showNotes, setShowNotes] = useState(false);
-const [notes, setNotes] = useState(application.notes || "");
-const [showHireModal, setShowHireModal] = useState(false);
+const [showNotes; setShowNotes] = useState(false);
+const [notes; setNotes] = useState(application.notes || "");
+const [showHireModal; setShowHireModal] = useState(false);
 
 // Check if application is stalled (no activity for 7 days)
 const isStalled = application.updated_at &&;
@@ -57,7 +58,8 @@ title: "Notes saved";
 toast({,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "Notes saved";,
-description: "Your notes have been saved"});
+description: "Your notes have been saved",
+});
 setShowNotes(false);
 };
 
@@ -70,7 +72,8 @@ title: "Hiring process initiated";
 toast({,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "Hiring process initiated";,
-description: "Offer has been sent to the talent."});
+description: "Offer has been sent to the talent.",
+});
 };
 
 return (
@@ -522,11 +525,14 @@ application}/> </div>) ";
 }application= {application}onConfirm= {handleHireConfirmed}/> </>)
 <<<<<<< HEAD
 }<HireConfirmationModal isOpen= {
-  showHireModal}onClose= {
-  () => setShowHireModal (false)
+showHireModal,
+}onClose= {
+() => setShowHireModal (false)
 }application= {
-  application}onConfirm= {
-  handleHireConfirmed}/> </>)
+application,
+}onConfirm= {
+handleHireConfirmed,
+}/> </>)
 }'"}
 =======
 }""}

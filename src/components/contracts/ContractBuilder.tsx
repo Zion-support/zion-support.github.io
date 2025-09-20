@@ -183,15 +183,23 @@ currentValues = {formValues}
 () => setTemplateManagerOpen (false)
 }onSelectTemplate= {handleLoadTemplate}currentValues= {formValues}/> </DialogContent> </Dialog>)
 }</TabsList> <div className="flex gap-2" > <Button > <Save className="h-4 w-4" /> Templates </Button> <Button > Smart Contract Builder </Button> </div> </div> <TabsContent value="form" className="pt-4" > <ContractForm talent= {
-  talent}clientName= {
-  clientName}initialValues= {
-  formValues}onFormValuesChange= {
-  setFormValues}onContractGenerated= {
-  handleContractGenerated}/> </TabsContent> />)
+talent,
+}clientName= {
+clientName,
+}initialValues= {
+formValues,
+}onFormValuesChange= {
+setFormValues,
+}onContractGenerated= {
+handleContractGenerated,
+}/> </TabsContent> />)
 }</TabsContent> </Tabs> <TemplateManager isOpen= {
-  templateManagerOpen}onClose= {
-  () => setTemplateManagerOpen (false)
+templateManagerOpen,
+}onClose= {
+() => setTemplateManagerOpen (false)
 }onSelectTemplate= {
-  handleLoadTemplate}currentValues= {
-  formValues}/> </DialogContent> </Dialog>)
+handleLoadTemplate,
+}currentValues= {
+formValues,
+}/> </DialogContent> </Dialog>)
 }"}

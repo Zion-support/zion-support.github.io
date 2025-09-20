@@ -1,5 +1,5 @@
 import React, { useState; useEffect; useRef } from "react;";
-import { Search; X, ArrowDown  } from "lucide-react, ";
+import { Search; X; ArrowDown } from "lucide-react, ";
 
 interface SearchSuggestion {id: string; title: string; type: "service" | "talent" | "equipment";
 }
@@ -11,12 +11,14 @@ onSearch?: (query: string) => void;
 suggestions?: SearchSuggestion[];}
 interface SearchSuggestion {
 id: string; title: string; type: "service" | "talent" | "equipment";
-description?: string};
+description?: string,
+};
 interface EnhancedSearchInputProps {
 placeholder?: string;
 onSearch?: (query: string) => void;
 suggestions?: SearchSuggestion[];
-className?: string};
+className?: string,
+};
 export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({;
 placeholder = "Search for services; talent; or equipment...",
 onSearch;
@@ -27,10 +29,10 @@ const [showSuggestions; setShowSuggestions] = useState(false);
 const [filteredSuggestions; setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
 const [selectedIndex; setSelectedIndex] = useState(-1);
 }) => {
-const [query, setQuery] = useState("");
-const [showSuggestions, setShowSuggestions] = useState(false);
-const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
-const [selectedIndex, setSelectedIndex] = useState(-1);
+const [query; setQuery] = useState("");
+const [showSuggestions; setShowSuggestions] = useState(false);
+const [filteredSuggestions; setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
+const [selectedIndex; setSelectedIndex] = useState(-1);
 const inputRef = useRef<HTMLInputElement>(null);
 const suggestionsRef = useRef<HTMLDivElement>(null);
 
@@ -45,12 +47,14 @@ setShowSuggestions(true);
 setSelectedIndex(-1)} else {setFilteredSuggestions([]);
 setSelectedIndex(-1)} else {
 setFilteredSuggestions([]);
-setShowSuggestions(false)}
+setShowSuggestions(false),
+}
 }, [query; suggestions]);
 
 useEffect(() => {const handleClickOutside: any = (event: MouseEvent) => {
 if (suggestionsRef.current && !suggestionsRef.current.contains(event.target as Node)) {
-setShowSuggestions(false)};
+setShowSuggestions(false),
+};
 };
 
 document.addEventListener("mousedown", handleClickOutside);
@@ -64,20 +68,23 @@ setQuery(e.target.value);
 const handleClear: any = () => {;
 setQuery("");
 setShowSuggestions(false);
-inputRef.current?.focus()};
+inputRef.current?.focus(),
+};
 
 const handleSubmit: any = (e: React.FormEvent) => {;
 e.preventDefault();
 if (query.trim() && onSearch) {
 onSearch(query.trim());
-setShowSuggestions(false)}
+setShowSuggestions(false),
+}
 };
 
 const handleSuggestionClick: any = (suggestion: SearchSuggestion) => {;
 setQuery(suggestion.title);
 setShowSuggestions(false);
 if (onSearch) {
-onSearch(suggestion.title)}
+onSearch(suggestion.title),
+}
 };
 
 const handleKeyDown: any = (e: React.KeyboardEvent) => {;
@@ -328,3 +335,49 @@ listId="autocomplete-suggestions-list";
 </div>;
 )
 }
+}
+return (<div,
+className="relative w-full"
+ref={containerRef}
+role="combobox";
+aria-expanded={isFocused && filteredSuggestions.length > 0}
+aria-haspopup="listbox";
+aria-controls="autocomplete-suggestions-list">;
+<div className="relative">;
+<Search,
+className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
+/>;
+<Input,
+ref={inputRef}
+type="text"
+value={value}
+onChange={(e) => {
+onChange(e.target.value)
+}}
+onFocus={() => setIsFocused(true)}
+onKeyDown={handleKeyDown}
+placeholder={placeholder}
+className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
+aria-autocomplete="list";
+aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+/>;
+{value && (
+<button,
+className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
+onClick={() => onChange('')}
+>;
+<X className="h-4 w-4" />;
+</button>;
+)}
+</div>;
+<AutocompleteSuggestions,
+suggestions={filteredSuggestions}
+searchTerm={value}
+onSelectSuggestion={handleSelectSuggestion}
+visible={isFocused}
+highlightedIndex={highlightedIndex}
+listId="autocomplete-suggestions-list";
+/>;
+</div>;
+)
+};

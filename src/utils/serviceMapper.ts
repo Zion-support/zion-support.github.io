@@ -10,7 +10,8 @@ email: string; website: string; phone: string};
 <<<<<<< HEAD
 technicalSpecs?: {technology: string[], integrations: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; contactInfo: {,
-email: string; website: string; phone: string};
+email: string; website: string; phone: string,
+};
 technicalSpecs?: {
 technology: string[], integrations: string[];,
 =======
@@ -45,8 +46,9 @@ uptime: service.uptime; security: ["SOC 2", "ISO 27001", "Data encryption"] // D
 <<<<<<< HEAD
 competitors: service.competitors; marketSize: service.marketSize;
 phone: service.contactInfo.mobile; email: service.contactInfo.email;,
-website: service.contactInfo.website},
-technicalSpecs: {
+website: service.contactInfo.website,
+},
+technicalSpecs: {,
 technology: service.technology; integrations: service.integrations;,
 apiEndpoints: 200, // Default value;
 uptime: service.uptime; security: ["SOC 2", "ISO 27001", "Data encryption"] // Default security},

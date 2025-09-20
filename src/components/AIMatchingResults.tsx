@@ -16,9 +16,10 @@ import { Avatar, AvatarFallbackAvatarImage } from '@/components/ui/avatar'
 import { Tabs, TabsContent, TabsListTabsTrigger } from '@/components/ui/tabs'
 import { BarChart3, BriefcaseIcon, MonitorUser } from 'lucide-react';
 import Skeleton from "@/components/ui/skeleton";
-import { cn } from "@/lib/utils";
+import { cn,  } from "@/lib/utils";
 interface AIMatchingResultsProps {
-serviceType?: string}
+serviceType?: string,
+}
 export function AIMatchingResults({
 {match.image ? (
 <AvatarImage;

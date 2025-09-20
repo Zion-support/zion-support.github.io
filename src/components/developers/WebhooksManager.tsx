@@ -182,10 +182,11 @@ format (new Date (webhook.last triggered at),  "MMM d yyyy HH:mm")
 }<Dialog open= {showTestDialog !== null}onOpenChange= {
 <<<<<<< HEAD
 }<Dialog open= {
-  showTestDialog !== null}onOpenChange= {
-  (open) => {
-  if (!open) {
-  setShowTestDialog (null);'
+showTestDialog !== null,
+}onOpenChange= {
+(open) => {
+if (!open) {
+setShowTestDialog (null);';
 setTestEventType ('new application')
 =======
 (open) => {
@@ -206,12 +207,15 @@ option.value}value= {option.value}> {option.label}</SelectItem>) ) ";
 }> Send Test </Button> </DialogFooter> </>) : (<> <div className="space-y-4 py-4"> <div className="space-y-2"> <div className="flex items-center justify-between"> <Label>Response Status</Label> <Badge > {testResult?.status}{
 <<<<<<< HEAD
 }> <SelectTrigger className="bg-zinc-800 border-zinc-700"> <SelectValue placeholder=" Select an event type"/> </SelectTrigger> <SelectContent className="bg-zinc-900 border-zinc-800"> {
-  eventOptions.map ( (option) => (<SelectItem key= {
-  option.value}value= {
-  option.value}> {
-  option.label}</SelectItem>) ) "
+eventOptions.map ( (option) => (<SelectItem key= {
+option.value,
+}value= {
+option.value,
+}> {
+option.label,
+}</SelectItem>) ) ";
 }</SelectContent> </Select> <p className="text-xs text-zinc-500"> The event type will determine the structure of the test payload. </p> </div> </div> <DialogFooter> Cancel </Button> <Button onClick={
-  () => showTestDialog && handleTestWebhook (showTestDialog) "
+() => showTestDialog && handleTestWebhook (showTestDialog) ";
 }> Send Test </Button> </DialogFooter> </>) : (<> <div className="space-y-4 py-4"> <div className="space-y-2"> <div className="flex items-center justify-between"> <Label>Response Status</Label> <Badge > {
   testResult?.status}{
   testResult?.statusText "

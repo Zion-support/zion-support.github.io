@@ -1,4 +1,4 @@
-import { useState; useEffect, useCallback  } from "react, ";
+import { useState; useEffect; useCallback } from "react, ";
 
 interface AccessibilityPreferences {
 highContrast: boolean;
@@ -11,7 +11,8 @@ keyboardNavigation: boolean;
 }
 }
 screenReader: boolean;,
-keyboardNavigation: boolean;}
+keyboardNavigation: boolean;,
+}
 
 interface AccessibilitySettings {
 fontSize: "small" | "medium" | "large" | "xlarge";
@@ -22,10 +23,11 @@ focusStyle: "default" | "high-visibility" | "minimal";
 }
 }
 motionPreference: "reduce" | "no-preference";,
-focusStyle: "default" | "high-visibility" | "minimal";}
+focusStyle: "default" | "high-visibility" | "minimal";,
+}
 
 export const useAccessibility: any = () => {;
-const [preferences, setPreferences] = useState<AccessibilityPreferences>({
+const [preferences; setPreferences] = useState<AccessibilityPreferences>({
 highContrast: false;
 largeText: false;
 reducedMotion: false;
@@ -46,7 +48,8 @@ colorScheme: "default";
 colorScheme: "default";,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 motionPreference: "no-preference";,
-focusStyle: "default"});
+focusStyle: "default",
+});
 // Load preferences from localStorage;
 useEffect(() => {
 const savedPreferences = localStorage.getItem("zion-accessibility-preferences");

@@ -290,7 +290,7 @@ className={cn("ml-auto text-xs tracking-widest opacity-60", className)}
 );
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
-DropdownMenuShortcut.displayName = "DropdownMenuShortcut"
+DropdownMenuShortcut.displayName = &quot;DropdownMenuShortcut&quot;
 export {
 DropdownMenu;
 DropdownMenuTrigger;

@@ -12,7 +12,7 @@ Professional ChatAssistant services to help your business grow.,
 </p>,
 </div>",;
 </div>,;
-), ',;
+),,',;
 "}, ";<//div><///div>;
 const isGuest = !auth?.isAuthenticated;
 const handleSendMessage = async (messageContent: string) => {if (!messageContent.trim()) return;

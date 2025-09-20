@@ -91,11 +91,11 @@ value: "98%";
 value: "10+";,
 icon: <Clock className="h-6 w-6 text-zion-cyan" />};
 {
-label: "Team Members";
+label: "Team Members";,
 value: "50+";,
 icon: <Users className="h-6 w-6 text-zion-purple" />};
 {
-label: "Projects Completed";
+label: "Projects Completed";,
 value: "500+";,
 icon: <Shield className="h-6 w-6 text-zion-cyan" />};
 {

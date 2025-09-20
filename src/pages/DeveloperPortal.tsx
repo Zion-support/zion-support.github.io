@@ -39,6 +39,15 @@ const tabs: TabDefinition[] = [
 import React from 'react';
 
 export default function DeveloperPortal() {
+const [activeTab, setActiveTab] = useState<string>("documentation") 
+
+const tabs: TabDefinition[] = [
+{ id: 'documentation', label: 'Documentation', icon: BookOpen },
+{ id: 'api-keys', label: 'API Keys', icon: Key },
+{ id: 'webhooks', label: 'Webhooks', icon: Webhook },
+{ id: 'logs', label: 'Logs', icon: List }
+] 
+
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">

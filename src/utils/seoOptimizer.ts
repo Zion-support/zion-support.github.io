@@ -19,7 +19,8 @@ suggestedFix: string;
 }
 }
 severity: "high" | "medium" | "low";,
-suggestedFix: string;}
+suggestedFix: string;,
+}
 
 export class SEOOptimizer {
 private static readonly DEFAULT_META_DESCRIPTIONS: Record<string; string> = {
@@ -169,7 +170,8 @@ issues.push({
 page;,
 issue: "missing-title",
 severity: "high",
-suggestedFix: "Add a descriptive title tag with relevant keywords"});
+suggestedFix: "Add a descriptive title tag with relevant keywords",
+});
 }
 
 // Check for missing meta description;
@@ -177,7 +179,8 @@ if (!content.includes("name="description"")) {issues.push({
 page;
 issue: "missing-description",
 severity: "high",
-suggestedFix: "Add a meta description tag with compelling content"});
+suggestedFix: "Add a meta description tag with compelling content",
+});
 }
 
 // Check for short meta description;
@@ -186,7 +189,8 @@ if (descMatch && descMatch[1].length < 120) {issues.push({
 page;
 issue: "short-description",
 severity: "medium",
-suggestedFix: "Expand meta description to 120-160 characters for better SEO"});
+suggestedFix: "Expand meta description to 120-160 characters for better SEO",
+});
 }
 
 // Check for missing headings;
@@ -194,7 +198,8 @@ if (!content.includes("<h1>") && !content.includes("<h2>") && !content.includes(
 page;
 issue: "no-headings",
 severity: "medium",
-suggestedFix: "Add proper heading structure (H1; H2; H3) for better content organization"});
+suggestedFix: "Add proper heading structure (H1; H2; H3) for better content organization",
+});
 }
 
 // Check for minimal content;
@@ -203,7 +208,8 @@ if (textContent.length < 300) {issues.push({
 page;
 issue: "minimal-content",
 severity: "medium",
-suggestedFix: "Add more relevant content to improve user experience and SEO value"});
+suggestedFix: "Add more relevant content to improve user experience and SEO value",
+});
 }
 
 return issues;

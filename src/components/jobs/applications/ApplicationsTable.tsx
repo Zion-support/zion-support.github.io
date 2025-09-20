@@ -208,14 +208,21 @@ application.match score ";
 () => setHireModalOpen (false)
 }application= {selectedApplication |undefined}onConfirm= {handleHireConfirmed}/> </>)
 }</TableCell> <TableCell className="text-right" > <div className="flex items-center justify-end gap-2" > <ClickableBadge > <Briefcase className="h-3 w-3 mr-1" /> Hire </ClickableBadge> <ApplicationActions application= {
-  application}processingId= {
-  processingId}onViewApplication= {
-  onViewApplication}onStatusChange= {
-  onStatusChange}/> </div> </TableCell> </TableRow>) )
+application,
+}processingId= {
+processingId,
+}onViewApplication= {
+onViewApplication,
+}onStatusChange= {
+onStatusChange,
+}/> </div> </TableCell> </TableRow>) )
 }</TableBody> </Table> </div> <HireConfirmationModal isOpen= {
-  hireModalOpen}onClose= {
-  () => setHireModalOpen (false)
+hireModalOpen,
+}onClose= {
+() => setHireModalOpen (false)
 }application= {
-  selectedApplication |undefined}onConfirm= {
-  handleHireConfirmed}/> </>)
+selectedApplication |undefined,
+}onConfirm= {
+handleHireConfirmed,
+}/> </>)
 }'"}

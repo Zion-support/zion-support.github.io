@@ -111,21 +111,28 @@ reportReview ";
 reviews.filter ( (r) => r.rating < 4)
 }isLoading= {isLoading}onReportReview= {reportReview}/> </TabsContent> </Tabs> </div> </div> </div>)
 //Fetch reviews when component mounts return (<div className="space-y-6" > <div className="flex flex-col md:flex-row gap-6" > <div className="md:w-1/3" > <ReviewStats averageRating= {
-  averageRating}totalReviews= {
-  ratingCount}ratingDistribution= {
-  ratingDistribution "
+averageRating,
+}totalReviews= {
+ratingCount,
+}ratingDistribution= {
+ratingDistribution ";
 }/> </div> </TabsList> <TabsContent value="all" > <ReviewsList reviews= {
-  reviews}isLoading= {
-  isLoading}onReportReview= {
-  reportReview "
+reviews,
+}isLoading= {
+isLoading,
+}onReportReview= {
+reportReview ";
 }/> </TabsContent> <TabsContent value="positive" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating >= 4)
+reviews.filter ( (r) => r.rating >= 4)
 }isLoading= {
-  isLoading}onReportReview= {
-  reportReview "
+isLoading,
+}onReportReview= {
+reportReview ";
 }/> </TabsContent> <TabsContent value="critical" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating < 4)
+reviews.filter ( (r) => r.rating < 4)
 }isLoading= {
-  isLoading}onReportReview= {
-  reportReview}/> </TabsContent> </Tabs> </div> </div> </div>)
+isLoading,
+}onReportReview= {
+reportReview,
+}/> </TabsContent> </Tabs> </div> </div> </div>)
 }"}

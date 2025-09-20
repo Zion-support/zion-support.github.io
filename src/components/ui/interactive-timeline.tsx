@@ -1,5 +1,5 @@
 import React, { useState; useRef; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence, useScroll  } from "framer-motion, ";
+import { motion; AnimatePresence; useScroll } from "framer-motion, ";
 import { Calendar;
 Clock;
 CheckCircle;
@@ -21,7 +21,8 @@ Shield;
 Globe;
 Rocket;
 Filter;
-X} from "lucide-react, ";
+X;
+} from "lucide-react, ";
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
@@ -46,7 +47,8 @@ featured: boolean;
 }
 };
 verified: boolean;,
-featured: boolean;};
+featured: boolean;,
+};
 actions?: {
 label: string;,
 icon: React.ComponentType<{ className?: string }>;
@@ -88,9 +90,10 @@ progress: 0;
 const [viewMode; setViewMode] = useState<"timeline" | "list" | "kanban">("timeline");
 const [zoomLevel; setZoomLevel] = useState(1);
 priority: [] as TimelineEvent["priority"][];,
-progress: 0;});
-const [viewMode, setViewMode] = useState<"timeline" | "list" | "kanban">("timeline");
-const [zoomLevel, setZoomLevel] = useState(1);
+progress: 0;,
+});
+const [viewMode; setViewMode] = useState<"timeline" | "list" | "kanban">("timeline");
+const [zoomLevel; setZoomLevel] = useState(1);
 
 const timelineRef = useRef<HTMLDivElement>(null);
 const { scrollYProgress: _scrollYProgress } = useScroll({
@@ -212,7 +215,8 @@ text: "Check out our project timeline";,
 url: window.location.href;
 });
 text: "Check out our project timeline";,
-url: window.location.href;});
+url: window.location.href;,
+});
 } else {
 navigator.clipboard.writeText(window.location.href);
 }
@@ -239,7 +243,8 @@ onClick={() => setViewMode(mode)}
 className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${
 viewMode === mode;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "text-zinc-400 hover: text-white"}`}
+: "text-zinc-400 hover: text-white",
+}`}
 >;
 {mode.charAt(0).toUpperCase() + mode.slice(1)}
 </button>;
@@ -512,7 +517,8 @@ transition={{ duration: 1; ease: "easeOut" }}
 className={`flex-1 p-4 rounded-lg border transition-all duration-300 cursor-pointer ${
 isCurrent;
 ? "border-zion-cyan/50 bg-zion-cyan/10";
-: "border-zion-blue-light/30 hover: border-zion-blue-light/50 hover:bg-zion-blue/10"}`}
+: "border-zion-blue-light/30 hover: border-zion-blue-light/50 hover:bg-zion-blue/10",
+}`}
 onClick={() => handleEventClick(event)}
 >;
 <div className="flex items-start justify-between mb-3">;

@@ -1,4 +1,4 @@
-import { useState, useEffect  } from "react, ";
+import { useState; useEffect } from "react, ";
 
 interface User {
 id: string;,
@@ -31,12 +31,13 @@ accessToken: string | null;,
 refreshToken: string | null;}
 
 export const useAuthState: any = () => {;
-const [user, setUser] = useState<User | null>(null);
-const [isLoading, setIsLoading] = useState(true);
-const [onboardingStep, setOnboardingStep] = useState(0);
-const [tokens, setTokens] = useState<AuthTokens>({
+const [user; setUser] = useState<User | null>(null);
+const [isLoading; setIsLoading] = useState(true);
+const [onboardingStep; setOnboardingStep] = useState(0);
+const [tokens; setTokens] = useState<AuthTokens>({,
 accessToken: null;,
-refreshToken: null;});
+refreshToken: null;,
+});
 
 useEffect(() => {
 // Check for existing auth state on mount;
@@ -74,5 +75,6 @@ setIsLoading;
 onboardingStep;
 setOnboardingStep;
 tokens;
-setTokens};
+setTokens,
+};
 };

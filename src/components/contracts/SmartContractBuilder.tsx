@@ -199,11 +199,14 @@ deployStatus === "deploying" ? "Deploying..." : "Deploy to Blockchain";
 }</Button> </div>)
 }</div>)
 }</TabsContent> </Tabs> <TemplateManager isOpen= {
-  templateManagerOpen}onClose= {
-  () => setTemplateManagerOpen (false)
+templateManagerOpen,
+}onClose= {
+() => setTemplateManagerOpen (false)
 }onSelectTemplate= {
-  handleLoadTemplate}currentValues= {
-  formValues}/> </DialogContent> </Dialog>)
+handleLoadTemplate,
+}currentValues= {
+formValues,
+}/> </DialogContent> </Dialog>)
 }'"            {!enableOnChainAgreement && <p className="text-muted-foreground p-4 text-center">Enable on-chain agreement to deploy this contract to a blockchain.</p>}
 {/* Fallback for old Solidity preview if needed or remove if fully replaced by on-chain flow */}
 {/* {generatedSolidityContract && !deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}

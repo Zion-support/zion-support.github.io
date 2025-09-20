@@ -1,6 +1,6 @@
 import React, { useState; useEffect } from "react;";
-import { motion, AnimatePresence  } from "framer-motion, ";
-import { Settings; FileText; Eye; Zap; Volume2, VolumeX  } from "lucide-react, ";
+import { motion; AnimatePresence } from "framer-motion, ";
+import { Settings; FileText; Eye; Zap; Volume2; VolumeX } from "lucide-react, ";
 import { Button } from "./button, ";
 
 interface AccessibilitySettings {
@@ -12,7 +12,8 @@ soundEnabled: boolean;
 }
 };
 reducedMotion: boolean;,
-soundEnabled: boolean;};
+soundEnabled: boolean;,
+};
 export function AccessibilityMenu() {;
 const [isOpen, setIsOpen] = useState(false);
 const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -22,7 +23,8 @@ reducedMotion: false;,
 soundEnabled: true;
 });
 reducedMotion: false;,
-soundEnabled: true;});
+soundEnabled: true;,
+});
 useEffect(() => {
 // Load settings from localStorage;
 const savedSettings = localStorage.getItem("accessibility-settings");
@@ -80,7 +82,8 @@ reducedMotion: false;,
 soundEnabled: true;
 };
 reducedMotion: false;,
-soundEnabled: true;};
+soundEnabled: true;,
+};
 setSettings(defaultSettings);
 };
 
@@ -137,7 +140,8 @@ onClick={() => updateFontSize(size)}
 className={`text-xs capitalize ${
 settings.fontSize === size;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "text-zion-slate-light hover: text-white"}`}
+: "text-zion-slate-light hover: text-white",
+}`}
 >;
 {size}
 </Button>;
@@ -158,7 +162,8 @@ onClick={() => toggleSetting("highContrast")}
 className={`w-full ${
 settings.highContrast;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "text-zion-slate-light hover: text-white"}`}
+: "text-zion-slate-light hover: text-white",
+}`}
 >;
 {settings.highContrast ? "Enabled" : "Disabled"}
 </Button>;
@@ -177,7 +182,8 @@ onClick={() => toggleSetting("reducedMotion")}
 className={`w-full ${
 settings.reducedMotion;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "text-zion-slate-light hover: text-white"}`}
+: "text-zion-slate-light hover: text-white",
+}`}
 >;
 {settings.reducedMotion ? "Enabled" : "Disabled"}
 </Button>;
@@ -200,7 +206,8 @@ onClick={() => toggleSetting("soundEnabled")}
 className={`w-full ${
 settings.soundEnabled;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "text-zion-slate-light hover: text-white"}`}
+: "text-zion-slate-light hover: text-white",
+}`}
 >;
 {settings.soundEnabled ? "Enabled" : "Disabled"}
 </Button>;

@@ -1,6 +1,6 @@
 import React from "react";
-import { useStat; e, useCallback  } from "react, ";
-import { motio; n, AnimatePresence  } from "framer-motion, ";
+import { useStat; e; useCallback } from "react, ";
+import { motio; n; AnimatePresence } from "framer-motion, ";
 import { Walle; t;
 Smartphon; e;
 Coin; s;
@@ -15,7 +15,8 @@ RefreshC; w;
 Loader; 2;
 CheckCircl; e;
 XCircl; e;
-AlertTriangle} from "lucide-react, ";
+AlertTriangle;
+} from "lucide-react, ";
 import { useBlockchainWeb3 } from "../hooks/useBlockchainWeb3, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
@@ -217,7 +218,8 @@ onClick={() => setActiveTab(id as any)}
 className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
 activeTab === id;
 ? "border-blue-500 text-blue-600 dar;  k:text-blue-400";
-: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0"}`}
+: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0",
+}`}
 >;
 <Icon className="w-4 h-4" />;
 <span>{label}</span>;
@@ -567,7 +569,8 @@ protoco; l: "Zion Protocol";
 asse; t: "ZION";
 amoun; t: "1000";
 ap; y: 12.5;
-reward; s: "125"})}
+reward; s: "125",
+})}
 className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hove; r:bg-green-700"
 >;
 <Plus className="w-4 h-4 inline mr-2" />;

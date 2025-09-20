@@ -116,12 +116,18 @@ listId = {listId}
 }</div> <AutocompleteSuggestions suggestions= {suggestions}searchTerm= {value}onSelectSuggestion= {handleSelect}visible= {focused}highlightedIndex= {highlightedIndex}listId= {listId}/> </div>)
 <<<<<<< HEAD
 }</div> <AutocompleteSuggestions suggestions= {
-  suggestions}searchTerm= {
-  value}onSelectSuggestion= {
-  handleSelect}visible= {
-  focused}highlightedIndex= {
-  highlightedIndex}listId= {
-  listId}/> </div>)
+suggestions,
+}searchTerm= {
+value,
+}onSelectSuggestion= {
+handleSelect,
+}visible= {
+focused,
+}highlightedIndex= {
+highlightedIndex,
+}listId= {
+listId,
+}/> </div>)
 }'"  )
 =======
 }""  )

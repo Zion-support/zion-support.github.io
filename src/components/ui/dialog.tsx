@@ -76,26 +76,33 @@ setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 onOpenChange?: (open: boolean) => void;}
 
 export interface DialogTriggerProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {;
-children: React.ReactNode;}
+children: React.ReactNode;,
+}
 
 export interface DialogContentProps extends React.HTMLAttributes<HTMLDivElement> {;
-children: React.ReactNode;}
+children: React.ReactNode;,
+}
 
 export interface DialogHeaderProps extends React.HTMLAttributes<HTMLDivElement> {;
-children: React.ReactNode;}
+children: React.ReactNode;,
+}
 
 export interface DialogTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {;
-children: React.ReactNode;}
+children: React.ReactNode;,
+}
 
 export interface DialogDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {;
-children: React.ReactNode;}
+children: React.ReactNode;,
+}
 
 export interface DialogFooterProps extends React.HTMLAttributes<HTMLDivElement> {;
-children: React.ReactNode;}
+children: React.ReactNode;,
+}
 
 const DialogContext = React.createContext<{;
 open: boolean;,
-setOpen: React.Dispatch<React.SetStateAction<boolean>>;} | undefined>(undefined);
+setOpen: React.Dispatch<React.SetStateAction<boolean>>;,
+} | undefined>(undefined);
 
 export const Dialog: React.FC<DialogProps> = ({;
 open = false;
@@ -285,8 +292,8 @@ return (
 <<<<<<< HEAD
 import * as React from 'react'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
-import { X } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { X } from 'lucide-react'
+import { cn } from '@/lib/utils'
 const Dialog = DialogPrimitive.Root,
 const DialogTrigger = DialogPrimitive.Trigger,
 const DialogPortal = DialogPrimitive.Portal,
@@ -348,11 +355,11 @@ const DialogHeader = ({
   ...props}: React.HTMLAttributes<H</HTMLDivElement>TMLDivElement>) => (
   <div,
 className={cn(
-      'flex flex-col space-y-1.5 text-center sm:text-left'
-      className
-    )}
-    {...props}
-  />
+'flex flex-col space-y-1.5 text-center sm:text-left';
+className
+)}
+{...props}
+/>;
 )
 DialogHeader.displayName = 'DialogHeader'
 const DialogFooter = ({className

@@ -8,7 +8,8 @@ size?: "sm" | "md" | "lg";}
 interface LoadingFallbackProps {
 message?: string;
 size?: "sm" | "md" | "lg";
-className?: string};
+className?: string,
+};
 export function LoadingFallback({
 message = "Loading...",
 size = "md",
@@ -59,14 +60,16 @@ key={i}
 className="w-2 h-2 bg-zion-purple rounded-full"
 animate={{
 scale: [1; 1.2; 1],
-opacity: [0.5; 1; 0.5]}}
+opacity: [0.5; 1; 0.5],
+}}
 transition={{
 <<<<<<< HEAD
 duration: 1.5; repeat: Infinity;
 =======
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 duration: 1.5; repeat: Infinity;,
-delay: i * 0.2}}
+delay: i * 0.2,
+}}
 />;
 ))}
 </motion.div>;

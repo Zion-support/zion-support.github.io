@@ -9,7 +9,8 @@ import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { Button } from "@/components/ui/button";
 import { X } from 'lucide-react';
 interface ActiveFiltersProps {
-clearFilters: () => void}
+clearFilters: () => void,
+}
 export function ActiveFilters({
 return (
 <div className="mb-6 flex flex-wrap gap-2 items-center">;

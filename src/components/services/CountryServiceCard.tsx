@@ -6,7 +6,8 @@ export function CountryServiceCard({country,
 import { Globe, Server, Clock, MapPinCheck } from 'lucide-react';
 import { CountryPricing } from "@/data/onsiteServicePricing";
 interface CountryServiceCardProps {
-isPopular?: boolean}
+isPopular?: boolean,
+}
 export function CountryServiceCard({
   country,
 onSelect

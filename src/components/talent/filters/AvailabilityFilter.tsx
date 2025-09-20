@@ -64,7 +64,8 @@ AVAILABILITY OPTIONS.map (option => (<div key= {
 option.id ";
 }className="flex items-center" > <Checkbox > {option.label}</label> </div>) )
 }className="flex items-center" > <Checkbox > {
-  option.label}</label> </div>) )
+option.label,
+}</label> </div>) )
 }</div>)
 }</div>)
 }"}

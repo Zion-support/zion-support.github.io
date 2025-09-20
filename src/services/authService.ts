@@ -32,9 +32,11 @@ const res = await fetch(`${API_URL}/auth/register`, {method: "POST", headers: {;
 credentials: "include", body: JSON.stringify({ name; email; password }),
 });
 const res = await fetch(`${API_URL}/auth/register`, {
-method: "POST", headers: {
-"Content-Type": "application/json"},;
-credentials: "include", body: JSON.stringify({ name; email; password })});
+method: "POST", headers: {;
+"Content-Type": "application/json",;
+},;
+credentials: "include", body: JSON.stringify({ name; email; password }),
+});
 const data = await res.json().catch(() => ({}));
 
 if (data?.token) {

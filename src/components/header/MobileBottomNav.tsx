@@ -45,8 +45,8 @@ icon: MessageCircle;
 icon: Home;,
 matches: (path: string) => path === "/"};
 {
-name: "Browse";
-href: "/talent";
+name: "Browse";,
+href: "/talent";,
 icon: Search;,
 matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")};
 {

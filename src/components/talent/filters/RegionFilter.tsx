@@ -64,7 +64,8 @@ REGION OPTIONS.map (region => (<div key= {
 region.id ";
 }className="flex items-center" > <Checkbox > {region.label}</label> </div>) )
 }className="flex items-center" > <Checkbox > {
-  region.label}</label> </div>) )
+region.label,
+}</label> </div>) )
 }</div>)
 }</div>)
 }"}

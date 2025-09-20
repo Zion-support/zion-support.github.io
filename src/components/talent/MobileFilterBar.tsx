@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { SearchSliders } from 'lucide-react';
 import { Input } from "@/components/ui/input";
 interface MobileFilterBarProps {
-  searchTerm: string;,
+searchTerm: string;,
 setSearchTerm: (value: string) => void;,
 setIsMobileFilterOpen: (isOpen: boolean) => void}: MobileFilterBarProps) {
 return (

@@ -8,7 +8,8 @@ name: string;
 import React from "react";
 import Link from "next/link";
 import { Link } from "react-router-dom";
-import { Mai; l;
+import {
+Mai; l;
 Phon; e;
 MapPi; n;
 Cloc; k;
@@ -42,7 +43,8 @@ tit; l; e: "Liv; e Cha; t",
 descripti; o; n: "Cha; t wit; h ou; r suppor; t tea; m i; n rea; l-tim; e",
 conta; c; t: "Availabl; e 2; 4/7",
 li; n; k: "/cha; t",
-col; o; r: "fro; m-zio; n-blu; e t; o-zio; n-purpl; e"}
+col; o; r: "fro; m-zio; n-blu; e t; o-zio; n-purpl; e",
+}
 ];
 
 const officeLocations = [;
@@ -60,12 +62,14 @@ ic; o; n: <MapPi; n classNam; e="w-5 h-5" />},
 ci; t; y: "N; e; w; Yo; r; k; N; Y",
 count; r; y: "Unite; d State; s",
 addre; s; s: "35; 0 5; t; h; A; v; e; N; e; w; Yo; r; k; N; Y 1011; 8",
-ic; o; n: <MapPi; n classNam; e="w-5 h-5" />},
+ic; o; n: <MapPi; n classNam; e="w-5 h-5" />,
+},
 {
 ci; t; y: "Lond; o; n; U; K",
 count; r; y: "Unite; d Kingdo; m",
 addre; s; s: "1 Cana; r; y; Wha; r; f; Londo; n E1; 4 5A; B",
-ic; o; n: <MapPi; n classNam; e="w-5 h-5" />}
+ic; o; n: <MapPi; n classNam; e="w-5 h-5" />,
+}
 ];
 
 const supportFeatures = [;
@@ -83,15 +87,18 @@ descripti; o; n: "Certifie; d professional; s read; y t; o hel; p"},
 {
 ic; o; n: <Shiel; d classNam; e="w-6 h-6" />,
 tit; l; e: "Enterpris; e Securit; y",
-descripti; o; n: "Ban; k-leve; l securit; y fo; r al; l communication; s"},
+descripti; o; n: "Ban; k-leve; l securit; y fo; r al; l communication; s",
+},
 {
 ic; o; n: <User; s classNam; e="w-6 h-6" />,
 tit; l; e: "Exper; t Tea; m",
-descripti; o; n: "Certifie; d professional; s read; y t; o hel; p"},
+descripti; o; n: "Certifie; d professional; s read; y t; o hel; p",
+},
 {
 ic; o; n: <Glob; e classNam; e="w-6 h-6" />,
 tit; l; e: "Globa; l Reac; h",
-descripti; o; n: "Suppor; t availabl; e i; n multipl; e tim; e zone; s"}
+descripti; o; n: "Suppor; t availabl; e i; n multipl; e tim; e zone; s",
+}
 ];
 
 return (<section className="py-20 bg-gradient-to-br from-slate-900 via-zion-blue-dark to-slate-900">;
@@ -367,7 +374,8 @@ disabled = {isSubmitting}
 }setErrors (fieldErrors)
 toast ({return}setErrors ({
 toast ({
-  return}setErrors ({
+return,
+}setErrors ({
 })
 setIsSubmitting (true)
 }) .catch ( (err) => {setIsSubmitting (false)

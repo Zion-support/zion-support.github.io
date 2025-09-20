@@ -48,14 +48,14 @@ title: "Welcome to the community!";,
 author: "Admin", date: "2024-01-15T10:00:00Z"}},
 {
 id: "tech-support", name: "Technical Support";,
-description: "Get help with technical issues", icon: "Code";
-postCount: 89; lastPost: {
+description: "Get help with technical issues", icon: "Code";,
+postCount: 89; lastPost: {,
 title: "API integration question";,
 author: "Developer123", date: "2024-01-14T15:30:00Z"}},
 {
 id: "business", name: "Business & Strategy";,
-description: "Business discussions and strategies", icon: "Briefcase";
-postCount: 67; lastPost: {
+description: "Business discussions and strategies", icon: "Briefcase";,
+postCount: 67; lastPost: {,
 title: "Market analysis for Q1";,
 author: "BusinessUser", date: "2024-01-13T09:15:00Z"}},
 {

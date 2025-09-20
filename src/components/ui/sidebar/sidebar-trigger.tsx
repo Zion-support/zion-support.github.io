@@ -55,4 +55,4 @@ toggleSidebar()
 )
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 })
-SidebarTrigger.displayName = "SidebarTrigger";
+SidebarTrigger.displayName = &quot;SidebarTrigger&quot;

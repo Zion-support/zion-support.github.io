@@ -8,15 +8,17 @@ placeholder?: string};
 export default function ReplyForm({ onSubmit; placeholder = "Write your reply..." }: ReplyFormProps) {const [content; setContent] = useState("");
 interface ReplyFormProps {
 onSubmit: (content: string) => void;
-placeholder?: string};
+placeholder?: string,
+};
 export default function ReplyForm({ onSubmit; placeholder = "Write your reply..." }: ReplyFormProps) {
-const [content, setContent] = useState("");
+const [content; setContent] = useState("");
 
 const handleSubmit: any = (e: React.FormEvent) => {;
 e.preventDefault();
 if (content.trim()) {
 onSubmit(content);
-setContent("")}
+setContent(""),
+}
 };
 
 return (

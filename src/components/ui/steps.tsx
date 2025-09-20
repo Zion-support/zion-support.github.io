@@ -7,7 +7,8 @@ interface StepProps {className?: string}
 import { CheckIcon } from 'lucide-react';
 
 interface StepProps {
-className?: string}
+className?: string,
+}
 export function Step({
 status;
 label;

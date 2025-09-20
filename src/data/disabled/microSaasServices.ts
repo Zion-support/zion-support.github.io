@@ -407,7 +407,7 @@ monthly: number; yearly: number; currency: string;,
 features: string[]};
 features: string[], benefits: string[];,
 useCases: string[], targetAudience: string[];,
-integration: string[], support: string[];
+integration: string[], support: string[];,
 link: string;
 badge?: string;,
 icon: string;}

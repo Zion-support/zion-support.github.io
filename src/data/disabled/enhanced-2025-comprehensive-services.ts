@@ -1,4 +1,4 @@
-import { Routes, Route  } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 export interface EnhancedService {
 id: string;
 name: string;
@@ -23,7 +23,8 @@ address: string;
 }
 };
 email: string;,
-address: string;};
+address: string;,
+};
 trialDays: number;
 setupTime: string;
 competitors: string[];
@@ -38,7 +39,8 @@ uptime: string;,
 securityFeatures: string[];
 }
 uptime: string;,
-securityFeatures: string[];}
+securityFeatures: string[];,
+}
 
 export const enhanced2025ComprehensiveServices: EnhancedService[] = [
 // AI-Powered Business Intelligence & Analytics;

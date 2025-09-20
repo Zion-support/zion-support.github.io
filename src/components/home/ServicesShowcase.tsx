@@ -150,15 +150,15 @@ link: "/quantum-computing-api"};
 {
 title: "Edge Computing Platform";
 description: "Distributed computing platform for low-latency applications and real-time processing.";
-icon: <Layers className="h-10 w-10 text-cyan-400" />;
-price: "$0.50/hour";
+icon: <Layers className="h-10 w-10 text-cyan-400" />;,
+price: "$0.50/hour";,
 category: "Edge Computing";,
 link: "/edge-computing"};
 {
 title: "Blockchain Integration";
 description: "Integrate blockchain technology into your applications for enhanced security and transparency.";
-icon: <Key className="h-10 w-10 text-emerald-400" />;
-price: "$199/month";
+icon: <Key className="h-10 w-10 text-emerald-400" />;,
+price: "$199/month";,
 category: "Blockchain";,
 link: "/blockchain-integration"};
 {

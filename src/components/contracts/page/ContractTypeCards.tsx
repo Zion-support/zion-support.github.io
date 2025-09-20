@@ -8,7 +8,7 @@ onSmartClick}: ContractTypeCardsProps) {return (
 <<<<<<< HEAD
 import { FileTextShieldCheck } from 'lucide-react';
 interface ContractTypeCardsProps {
-  onStandardClick: () => void,
+onStandardClick: () => void,
 onSmartClick: () => void,
 export function ContractTypeCards({
   onStandardClick,

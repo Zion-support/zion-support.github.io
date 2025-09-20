@@ -14,10 +14,10 @@ import { BadgeCheck } from 'lucide-react';
 import { TalentCardAvatar } from "./TalentCardAvatar";
 import { TalentCardAvailability } from "./TalentCardAvailability";
 interface TalentCardHeaderProps {
-  fullName: string;,
+fullName: string;,
 professionalTitle: string;
-  profilePicture?: string;
-  availabilityType: string;,
+profilePicture?: string;,
+availabilityType: string;,
 yearsExperience: number,
 yearsExperience}: TalentCardHeaderProps) {
 return (

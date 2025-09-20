@@ -43,10 +43,10 @@ ref={ref}
     {...props}
 />
 ))
-PaginationContent.displayName = "PaginationContent"
-const PaginationItem = React.forwardRef<
-  HTMLLIElement,
-React.ComponentProps<"li">
+PaginationContent.displayName = &quot;PaginationContent&quot;
+const PaginationItem = React.forwardRef<;
+HTMLLIElement,;
+React.ComponentProps<&quot;li&quot;>;
 >(({ className, ...props }, ref) => (
   <li ref={ref} className={cn("", className)} {...props} />
 =======
@@ -62,7 +62,7 @@ React.ComponentProps<&quot;li&quot;>;
 <li ref={ref} className={cn("&quot;, className)} {...props} />;
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 ))
-PaginationItem.displayName = "PaginationItem"
+PaginationItem.displayName = &quot;PaginationItem&quot;
 type PaginationLinkProps = {
 <<<<<<< HEAD
   isActive?: boolean,
@@ -86,25 +86,27 @@ size = &quot;icon&quot;
 aria-current={isActive ? &quot;page" : undefined}
 <<<<<<< HEAD
 extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  page: number,
-isActive?: boolean}
-const PaginationLink = ({
-  className,
-isActive
-  size = "icon"
-  ...props}: PaginationLinkProps) => (
-  <a,
-aria-current={isActive ? "page" : undefined}
-    className={cn(
-      buttonVariants({
-        variant: isActive ? "outline" : "ghost"
-        size})
-      className
-    )}
-    {...props}
-  />
+page: number,
+isActive?: boolean,
+}
+const PaginationLink: any = ({
+className,
+isActive;
+size = &quot;icon&quot;
+...props,
+}: PaginationLinkProps) => (
+<a,
+aria-current={isActive ? &quot;page" : undefined}
+className={cn(
+buttonVariants({
+variant: isActive ? "outline&quot; : &quot;ghost&quot;
+size})
+className
+)}
+{...props}
+/>;
 )
-PaginationLink.displayName = "PaginationLink"
+PaginationLink.displayName = &quot;PaginationLink&quot;
 const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
   ({ page isActive className, ...props }, ref) => (
     <button
@@ -224,11 +226,11 @@ const PaginationEllipsis = ({
   <span,
 aria-hidden,
 className={cn("flex h-9 w-9 items-center justify-center", className)}
-    {...props}
-  >
-    <MoreHorizontal className="h-4 w-4" />
-    <span className="sr-only">More pages</span>
-  </span>
+{...props}
+>;
+<MoreHorizontal className="h-4 w-4" />;
+<span className="sr-only&quot;>More pages</span>;
+</span>;
 )
 PaginationEllipsis.displayName = "PaginationEllipsis"
 =======

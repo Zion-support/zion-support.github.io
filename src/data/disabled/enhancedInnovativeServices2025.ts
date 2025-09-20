@@ -9,7 +9,8 @@ address: string;
 }
 }
 website: string;,
-address: string;}
+address: string;,
+}
 
 export interface MicroSaasService {
 id: number;
@@ -36,7 +37,8 @@ trialPeriod: string;
 }
 }
 freeTier: boolean;,
-trialPeriod: string;}
+trialPeriod: string;,
+}
 
 export interface ITService {
 id: number;
@@ -60,7 +62,8 @@ support: string;
 }
 }
 deliveryTime: string;,
-support: string;}
+support: string;,
+}
 
 export interface AIService {
 id: number;
@@ -86,7 +89,8 @@ useCases: string[];
 }
 }
 aiScore: number;,
-useCases: string[];}
+useCases: string[];,
+}
 
 // Enhanced Innovative Micro SAAS Services for 2025;
 export const enhancedInnovativeMicroSaasServices2025: MicroSaasService[] = [
@@ -586,7 +590,8 @@ website: "https://ziontechgroup.com/quantum-cryptography";
 email: "kleber@ziontechgroup.com";,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/quantum-cryptography";,
-address: "364 E Main St STE 1008 Middletown DE 19709"};
+address: "364 E Main St STE 1008 Middletown DE 19709",
+};
 marketPrice: "$2;999-8;999/month",
 competitors: ["ISARA", "PQShield", "Cryptosense"],
 roi: "600% within 18 months";,
@@ -1033,7 +1038,8 @@ website: "https://ziontechgroup.com/custom-ai-development";
 email: "kleber@ziontechgroup.com";,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/custom-ai-development";,
-address: "364 E Main St STE 1008 Middletown DE 19709"};
+address: "364 E Main St STE 1008 Middletown DE 19709",
+};
 marketPrice: "$20;000-100;000",
 aiModels: ["GPT-4", "BERT", "ResNet", "Custom architectures"],
 accuracy: "95%+";,
@@ -1078,7 +1084,8 @@ website: "https://ziontechgroup.com/ai-business-intelligence";
 email: "kleber@ziontechgroup.com";,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/ai-business-intelligence";,
-address: "364 E Main St STE 1008 Middletown DE 19709"};
+address: "364 E Main St STE 1008 Middletown DE 19709",
+};
 marketPrice: "$1;000-3;000/month",
 aiModels: ["GPT-4", "BERT", "Custom ML models"],
 accuracy: "92%+";,
@@ -1123,7 +1130,8 @@ website: "https://ziontechgroup.com/ai-process-automation";
 email: "kleber@ziontechgroup.com";,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/ai-process-automation";,
-address: "364 E Main St STE 1008 Middletown DE 19709"};
+address: "364 E Main St STE 1008 Middletown DE 19709",
+};
 marketPrice: "$500-2;000/month",
 aiModels: ["GPT-4", "Custom ML models", "NLP models"],
 accuracy: "90%+";,
@@ -1168,7 +1176,8 @@ website: "https://ziontechgroup.com/ai-customer-experience";
 email: "kleber@ziontechgroup.com";,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/ai-customer-experience";,
-address: "364 E Main St STE 1008 Middletown DE 19709"};
+address: "364 E Main St STE 1008 Middletown DE 19709",
+};
 marketPrice: "$1;200-3;500/month",
 aiModels: ["GPT-4", "BERT", "Recommendation engines", "NLP models"],
 accuracy: "88%+";,
@@ -1213,7 +1222,8 @@ website: "https://ziontechgroup.com/ai-fraud-detection";
 email: "kleber@ziontechgroup.com";,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/ai-fraud-detection";,
-address: "364 E Main St STE 1008 Middletown DE 19709"};
+address: "364 E Main St STE 1008 Middletown DE 19709",
+};
 marketPrice: "$3;000-8;000/month",
 aiModels: ["Anomaly detection", "Deep learning", "Ensemble methods", "Custom ML models"],
 accuracy: "96%+";,
@@ -1304,7 +1314,8 @@ website: "https://ziontechgroup.com/ai-predictive-maintenance";
 email: "kleber@ziontechgroup.com";,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/ai-predictive-maintenance";,
-address: "364 E Main St STE 1008 Middletown DE 19709"};
+address: "364 E Main St STE 1008 Middletown DE 19709",
+};
 marketPrice: "$1;800-5;000/month",
 aiModels: ["Time series analysis", "Anomaly detection", "Machine learning", "Deep learning"],
 accuracy: "92%+";,
@@ -1368,6 +1379,7 @@ itServices: enhancedITServices2025;,
 aiServices: enhancedAIServices2025;
 };
 itServices: enhancedITServices2025;,
-aiServices: enhancedAIServices2025;};
+aiServices: enhancedAIServices2025;,
+};
 // Export the main services array for backward compatibility;
 export const ENHANCED_INNOVATIVE_SERVICES_2025 = enhancedInnovativeMicroSaasServices2025;

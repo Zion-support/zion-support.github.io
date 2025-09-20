@@ -13,18 +13,21 @@ text}: LoadingProps) {const sizeClasses = {;
 <<<<<<< HEAD
 sm: "w-4 h-4", md: "w-6 h-6";
 className?: string;
-text?: string};
+text?: string,
+};
 export function Loading({
 size = "md", ;
 variant = "spinner", ;
 className;
-text}: LoadingProps) {
+text,
+}: LoadingProps) {
 const sizeClasses = {;
 =======
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 sm: "w-4 h-4", md: "w-6 h-6";,
 lg: "w-8 h-8",
-xl: "w-12 h-12"};
+xl: "w-12 h-12",
+};
 const renderSpinner: any = () => (
 <div className={cn(
 "border-2 border-current border-t-transparent rounded-full animate-spin",
@@ -91,7 +94,8 @@ export function PageLoading() {return (
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 </div>;
 </div>;
-)};
+),
+};
 ;
 // Content skeleton loading;
 export function ContentSkeleton() {return (
@@ -111,7 +115,8 @@ export function ContentSkeleton() {return (
 <div className="h-4 bg-zion-slate-light/20 rounded w-4/6"></div>;
 </div>;
 </div>;
-)};
+),
+};
 ;
 // Card skeleton loading;
 export function CardSkeleton() {

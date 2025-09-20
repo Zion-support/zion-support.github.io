@@ -6,11 +6,11 @@ name: string;
 }
 
 import * as React from "react";
-import { Routes, Route } from "react-router-dom";
-import { ThemeProvider } from "./components/ThemeProvider";
+import { Routes; Route } from "react-router-dom, ";
+import { ThemeProvider } from "./components/ThemeProvider, ";
 import ErrorBoundary from "./components/ErrorBoundary";
 
-// Simple components
+// Simple components;
 const Home: any = () => (
 <div className="min-h-screen bg-gray-900 text-white p-8">;
 <h1 className="text-4xl font-bold mb-4">Zion Tech Group</h1>;
@@ -69,16 +69,16 @@ const Contact: any = () => (
 
 const App: React.FC = () => {
 return (
-<ErrorBoundary>
-<ThemeProvider>
-<Routes>
-<Route path="/" element={<Home />} />
-<Route path="/services" element={<Services />} />
-<Route path="/about" element={<About />} />
-<Route path="/contact" element={<Contact />} />
-</Routes>
-</ThemeProvider>
-</ErrorBoundary>
+<ErrorBoundary>;
+<ThemeProvider>;
+<Routes>;
+<Route path="/" element={<Home />} />;
+<Route path="/services" element={<Services />} />;
+<Route path="/about" element={<About />} />;
+<Route path="/contact" element={<Contact />} />;
+</Routes>;
+</ThemeProvider>;
+</ErrorBoundary>;
 );
 };
 

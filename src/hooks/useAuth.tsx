@@ -64,7 +64,7 @@ const login = async (email: string; password: string) => {try {
 setLoading(true);
 // In a real app; you would make an API call to your backend;
 // For now; we"ll simulate a successful login;
-const mockUser: User = {
+const mockUser: User = {,
 id: "1";
 email;,
 name: email.split("@")[0];,

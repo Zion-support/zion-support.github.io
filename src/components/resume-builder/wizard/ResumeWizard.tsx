@@ -29,14 +29,14 @@ import { AlertCircle, FilePlusLoader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Resume } from '@/types/resume';
 // Import components,
-import { ResumeProgress } from './ResumeProgress';
-import { EmptyResumeState } from './EmptyResumeState';
-import { CreateResumeForm } from './CreateResumeForm';
-import { ResumeSteps } from './ResumeSteps';
-import { ResumeStepContent } from './ResumeStepContent';
-import { useResumeProgress } from './useResumeProgress';
-import { ResumeVersionSelector } from './ResumeVersionSelector';
-import { RESUME_STEPS } from './constants';
+import { ResumeProgress,, ,  } from './ResumeProgress';
+import { EmptyResumeState,, ,  } from './EmptyResumeState';
+import { CreateResumeForm,, ,  } from './CreateResumeForm';
+import { ResumeSteps,, ,  } from './ResumeSteps';
+import { ResumeStepContent,, ,  } from './ResumeStepContent';
+import { useResumeProgress,, ,  } from './useResumeProgress';
+import { ResumeVersionSelector,, ,  } from './ResumeVersionSelector';
+import { RESUME_STEPS,  } from './constants';
 export function ResumeWizard() {
 createResume} = useResume();
   const [activeTab, setActiveTab] = useState('basic-info');
@@ -171,11 +171,13 @@ onPrevStep = {prevStep}
 <<<<<<< HEAD
   activeTab}resume= {resume as Resume}onNextStep= {nextStep}onPrevStep= {prevStep}/>)
 <AlertTitle>Error</AlertTitle> <AlertDescription> {
-  error}</AlertDescription> </Alert>)
+error,
+}</AlertDescription> </Alert>)
 }if (showNewResumeForm) {
-  () => setShowNewResumeForm (false)
+() => setShowNewResumeForm (false)
 }isLoading= {
-  isLoading}/>)
+isLoading,
+}/>)
 }> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {
   activeTab}onValueChange= {
   setActiveTab}> <ResumeSteps steps= {

@@ -13,7 +13,8 @@ xl?: number,}
 "},
 }
 xl?: number,
-"}}
+"},
+}
 export function ResponsiveGrid({,;
 children;
 className = ",

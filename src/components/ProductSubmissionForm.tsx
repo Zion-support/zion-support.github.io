@@ -20,7 +20,7 @@ import { Input } from "@/components/ui/input, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";
 import { AspectRatio } from "@/components/ui/aspect-ratio, ";
-import { Tab; s; TabsLis; t; TabsTrigge; r, TabsContent  } from "@/components/ui/tabs, ";
+import { Tab; s; TabsLis; t; TabsTrigge; r; TabsContent } from "@/components/ui/tabs, ";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator, ";
 import { Sparkles } from "lucide-react, ";
 
@@ -168,7 +168,8 @@ const { erro;  r: updateError } = await supabase;
 .from("product_listings")
 .update({image;  s: [publicUrlDat; a.publicU; r; l]})
 .update({
-image;  s: [publicUrlDat; a.publicU; r; l]})
+image;  s: [publicUrlDat; a.publicU; r; l],
+})
 .eq("id",  productRecord.id);
 
 if (updateError) {
@@ -181,8 +182,8 @@ import { supabase } from "@/integrations/supabase/client";,
 import { useAuth } from "@/hooks/useAuth";,
 import { useToast } from "@/hooks/use-toast";,
 import React from "react",
-import { useFormControllerRenderProps } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm,, ControllerRenderProps,  } from "react-hook-form",
+import { zodResolver,  } from "@hookform/resolvers/zod",
 import z from "zod",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -478,7 +479,8 @@ className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove; r:from-zi
 onApplyGenerated={handleApplyGenerated}
 initialValues={{
 titl; e: form.getValues("title");
-categor; y: form.getValues("category")}}
+categor; y: form.getValues("category"),
+}}
 />;
 </TabsContent>;
 </Tabs>;
@@ -527,8 +529,9 @@ setIsSubmitting (false)
 }/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) "
 }/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Input placeholder="Enter tags separated by commas" {...field}/> "
 }/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Input type="number" min="0" step="0.01" placeholder="0.00" {
-  ...field}/> "
-}/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) "
+...field,
+}/> ";
+}/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ";
 }/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Input placeholder="Enter tags separated by commas" {
   ...field}/> "
 =======

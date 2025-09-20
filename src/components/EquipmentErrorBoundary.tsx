@@ -4,9 +4,11 @@ interface Props {children: React.ReactNode}
 interface State {error?: Error}
 import { AlertTriangleRefreshCw } from 'lucide-react';
 interface Props {
-  children: React.ReactNode}
+children: React.ReactNode,
+}
 interface State {
-error?: Error}
+error?: Error,
+}
 export class EquipmentErrorBoundary extends React.Component<Props State> {
 <<<<<<< HEAD
   constructor(props: Props) {

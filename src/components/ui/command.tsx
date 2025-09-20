@@ -5,11 +5,11 @@ import { Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Search } from 'lucide-react'
-import { cn } from '@/lib/utils';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-const Command = React.forwardRef<
-  React.ElementRef<typeof CommandPrimitive>
-  React.ComponentPropsWithoutRef<typeof CommandPrimitive>
+import { cn } from '@/lib/utils'
+import { Dialog, DialogContent, DialogHeader, DialogTitle, } from '@/components/ui/dialog'
+const Command = React.forwardRef<;
+React.ElementRef<typeof CommandPrimitive>;
+React.ComponentPropsWithoutRef<typeof CommandPrimitive>;
 ></typeof>(({ className, ...props }, ref) => (
   <CommandPrimitive
 =======

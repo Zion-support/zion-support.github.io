@@ -156,3 +156,4 @@ return () => window.removeEventListener("scroll", handleScroll);
 };
 
 export default Header;
+export { Header };

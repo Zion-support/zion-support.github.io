@@ -18,7 +18,7 @@ file: File;
 };
 platform: AppPlatform;};
 type Screenshot = {;
-id: string;
+id: string;,
 url: string;,
 file: File;};
 

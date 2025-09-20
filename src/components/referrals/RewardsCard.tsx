@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { BadgeDollarSignBadge } from 'lucide-react';
 interface RewardsCardProps {
-  rewards: ReferralReward[],
+rewards: ReferralReward[],
 isLoading: boolean,
 import { Card, CardContent, CardDescription, CardHeaderCardTitle } from "@/components/ui/card"
 import { ReferralReward } from "@/types/referrals"

@@ -87,7 +87,8 @@ email: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
+website: "https://ziontechgroup.com",
+};
 technology: ["Python", "React", "Node.js", "OpenAI API", "PostgreSQL"],
 integrations: ["WordPress", "Shopify", "Mailchimp", "HubSpot", "Google Analytics"],
 compliance: ["GDPR", "Data Privacy", "Content Guidelines"],
@@ -102,7 +103,8 @@ featured: true;
 {id: "cloud-infrastructure-pro";
 title: "Cloud Infrastructure Pro - Scalable Cloud Solutions";
 aiScore: 95;,
-featured: true;};
+featured: true;,
+};
 {
 id: "cloud-infrastructure-pro";
 =======
@@ -156,7 +158,8 @@ email: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
+website: "https://ziontechgroup.com",
+};
 technology: ["AWS", "Docker", "Kubernetes", "Terraform", "Ansible"],
 integrations: ["GitHub", "Jenkins", "Slack", "PagerDuty", "Datadog"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
@@ -171,7 +174,8 @@ featured: true;
 {id: "cybersecurity-shield";
 title: "Cybersecurity Shield - Advanced Security Solutions";
 aiScore: 88;,
-featured: true;};
+featured: true;,
+};
 {
 id: "cybersecurity-shield";
 =======
@@ -225,7 +229,8 @@ email: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
+website: "https://ziontechgroup.com",
+};
 technology: ["SIEM", "EDR", "Firewall", "IDS/IPS", "Penetration Testing"],
 integrations: ["Active Directory", "Office 365", "Slack", "Jira", "ServiceNow"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"],
@@ -237,7 +242,8 @@ aiScore: 92;,
 featured: true;
 }
 aiScore: 92;,
-featured: true;}
+featured: true;,
+}
 ];
 export const SERVICE_CATEGORIES = [;
 { label: "AI & Content Management", value: "ai-content" };
@@ -269,4 +275,5 @@ email: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
+website: "https://ziontechgroup.com",
+};

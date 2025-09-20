@@ -1,4 +1,4 @@
-import { Routes, Route  } from "react-router-dom";
+import { Routes; Route } from "react-router-dom";
 price: number;
 currency: string;
 pricingModel: "one-time" | "monthly" | "yearly" | "per-user" | "per-project" | "usage-based" | "freemium";
@@ -30,7 +30,8 @@ email: string;,
 website: string;
 };
 email: string;,
-website: string;};
+website: string;,
+};
 };
 };
 import { ProductListing } from "@/types/listings";
@@ -45,7 +46,8 @@ compliance: string[];,
 roi: string;
 };
 compliance: string[];,
-roi: string;};
+roi: string;,
+};
 aiScore?: number;
 rating?: number;
 reviewCount?: number;
@@ -85,7 +87,9 @@ billingCycle: "monthly" | "yearly";,
 billingCycle: "monthly" | "yearly";
 };
 billingCycle: "monthly" | "yearly";,
-billingCycle: "monthly" | "yearly";};
+billingCycle: "monthly" | "yearly";,
+billingCycle: "monthly" | "yearly";,
+};
 features: string[];
 benefits: string[];
 targetAudience: string[];
@@ -98,7 +102,8 @@ phone: string;,
 address: string;
 };
 phone: string;,
-address: string;};
+address: string;,
+};
 rating: number;
 reviewCount: number;
 launchDate: string;,
@@ -247,7 +252,8 @@ marketPrice: "$400 - $2;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["Qiskit", "Cirq", "Python", "C++", "CUDA"],
 integrations: ["AWS Braket", "IBM Quantum", "Google Quantum", "Azure Quantum"],
 compliance: ["ISO 27001", "SOC 2", "NIST"],
@@ -302,7 +308,8 @@ marketPrice: "$599 - $2;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["TensorFlow Lite", "ONNX", "Docker", "Kubernetes", "MQTT"],
 integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT brokers"],
 compliance: ["GDPR", "SOC 2", "ISO 27001"],
@@ -323,7 +330,8 @@ freeTrialDays: number;,
 demoUrl: string;
 }
 freeTrialDays: number;,
-demoUrl: string;}
+demoUrl: string;,
+}
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
 // Web3 & Blockchain Solutions;
@@ -391,7 +399,8 @@ marketPrice: "$600 - $3;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["Unity", "Unreal Engine", "WebGL", "Three.js", "React", "Node.js"],
 integrations: ["Meta Quest", "HTC Vive", "SteamVR", "Discord", "Zoom"],
 compliance: ["GDPR", "Accessibility standards", "Content moderation"],
@@ -509,7 +518,8 @@ compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA"],
 scalability: "Unlimited quantum resources",
 deployment: "Cloud-based with on-premise options",
 roi: "300-500% within 12 months",
-timeToValue: "2-4 weeks"},
+timeToValue: "2-4 weeks",
+},
 
 // AI-Powered Cybersecurity;
 {id: "ai-cybersecurity-sentinel",
@@ -560,7 +570,8 @@ marketPrice: "$1;299 - $4;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 aiScore: 97;
 rating: 4.8;
 reviewCount: 234;,
@@ -575,7 +586,8 @@ compliance: ["ISO 27001", "SOC 2", "PCI DSS", "HIPAA", "GDPR"],
 scalability: "Unlimited endpoints and users",
 deployment: "Cloud-native with hybrid options",
 roi: "400-600% within 18 months",
-timeToValue: "1-2 weeks"},
+timeToValue: "1-2 weeks",
+},
 
 // Autonomous DevOps Platform;
 {id: "autonomous-devops-platform",
@@ -620,7 +632,8 @@ marketPrice: "$499 - $2;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["Solidity", "React", "Node.js", "Ethereum", "Polygon", "Solana"],
 integrations: ["MetaMask", "WalletConnect", "OpenSea", "Uniswap", "Chainlink"],
 compliance: ["AML", "KYC", "GDPR", "Regulatory Reporting"],
@@ -631,7 +644,8 @@ freeTrialDays: 14;,
 demoUrl: "https://demo.ziontechgroup.com/web3-automation",
 },
 freeTrialDays: 14;,
-demoUrl: "https://demo.ziontechgroup.com/web3-automation"},
+demoUrl: "https://demo.ziontechgroup.com/web3-automation",
+},
 
 // Quantum Computing Services;
 {id: "quantum-business-solutions",
@@ -657,7 +671,8 @@ compliance: ["ISO 27001", "SOC 2", "GDPR"],
 scalability: "Unlimited applications and infrastructure",
 deployment: "Cloud-native with on-premise options",
 roi: "250-400% within 12 months",
-timeToValue: "2-3 weeks"},
+timeToValue: "2-3 weeks",
+},
 
 // Blockchain Supply Chain Platform;
 {id: "blockchain-supply-chain",
@@ -705,7 +720,8 @@ tags: ["Healthcare", "AI Diagnostics", "Patient Care", "Medical Technology", "HI
 estimatedDelivery: "8-10 weeks",
 supportLevel: "enterprise",
 marketPrice: "$3;499 - $10;000/month",
-websiteUrl: "https://ziontechgroup.com/quantum-optimization"},
+websiteUrl: "https://ziontechgroup.com/quantum-optimization",
+},
 
 // New Innovative Micro SAAS Services;
 {
@@ -725,7 +741,8 @@ scalability: string;,
 uptime: string;
 }
 scalability: string;,
-uptime: string;}
+uptime: string;,
+}
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
 // AI-Powered Content Generation & SEO;
@@ -779,7 +796,8 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709"},
+address: "364 E Main St STE 1008 Middletown DE 19709",
+},
 technology: ["GPT-4", "React", "Node.js", "PostgreSQL", "Redis"],
 integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Google Analytics"],
 compliance: ["GDPR", "CCPA", "SOC 2"],
@@ -792,7 +810,8 @@ freeTrialDays: 14;,
 aiCapabilities: ["Natural Language Generation", "SEO Analysis", "Content Optimization", "Competitor Research"],
 securityFeatures: ["End-to-end encryption", "Role-based access control", "Audit logging", "Data backup"],
 scalability: "Handles 10M+ content pieces monthly",
-uptime: "99.9% SLA"},
+uptime: "99.9% SLA",
+},
 
 // Blockchain-Based Supply Chain Transparency;
 {id: "blockchain-supply-chain-platform",
@@ -879,7 +898,8 @@ marketPrice: "$299 - $1;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}
+website: "https://ziontechgroup.com",
+}
 }
 }
 id: "zion-ai-business-intelligence",
@@ -895,7 +915,8 @@ enterprise: 1299;
 professional: 499;,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: 1299;,
-currency: "$"},
+currency: "$",
+},
 features: [
 "Real-time data visualization",
 "AI-powered predictive analytics",
@@ -948,7 +969,8 @@ reviewCount: 234;,
 launchDate: "2024-01-15",
 status: "Active",
 marketPrice: "$199 - $1;299/month",
-deliveryTime: "2-3 weeks"},
+deliveryTime: "2-3 weeks",
+},
 
 // Cybersecurity Compliance Platform;
 {id: "zion-cyber-compliance-suite",
@@ -965,7 +987,8 @@ enterprise: 1999;
 professional: 799;,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: 1999;,
-currency: "$"},
+currency: "$",
+},
 features: [
 "Multi-framework compliance (SOC2; ISO27001; GDPR; HIPAA)",
 "Automated security assessments",
@@ -1017,7 +1040,8 @@ reviewCount: 187;,
 launchDate: "2024-02-01",
 status: "Active",
 marketPrice: "$299 - $1;999/month",
-deliveryTime: "3-4 weeks"},
+deliveryTime: "3-4 weeks",
+},
 
 // Cloud Cost Optimization Platform;
 {
@@ -1043,12 +1067,14 @@ email: string;,
 website: string;
 };
 email: string;,
-website: string;};
+website: string;,
+};
 }
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [,
 currency: "$",
-billingCycle: "monthly"},
+billingCycle: "monthly",
+},
 features: [
 "Multi-language AI content generation",
 "SEO optimization with real-time analysis",
@@ -1094,7 +1120,8 @@ website: "https://ziontechgroup.com/services/ai-content-orchestrator",
 contactInfo: {,
 email: "kleber@ziontechgroup.com",
 phone: "+1 302 464 0950",
-address: "364 E Main St STE 1008; Middletown DE 19709"},
+address: "364 E Main St STE 1008; Middletown DE 19709",
+},
 "AI-powered failure prediction",
 "IoT sensor integration",
 "Real-time monitoring",
@@ -1135,7 +1162,8 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709"},
+address: "364 E Main St STE 1008 Middletown DE 19709",
+},
 technology: ["TensorFlow", "React", "Node.js", "PostgreSQL", "MQTT"],
 integrations: ["SAP", "Maximo", "CMMS systems", "Building automation", "SCADA"],
 compliance: ["ISO 55001", "OSHA", "Industry standards"],
@@ -1148,7 +1176,8 @@ freeTrialDays: 14;,
 aiCapabilities: ["Machine Learning", "Predictive Analytics", "Anomaly Detection", "Optimization"],
 securityFeatures: ["Encrypted data transmission", "Secure authentication", "Access control", "Audit logging"],
 scalability: "Thousands of IoT devices",
-uptime: "99.9% SLA"},
+uptime: "99.9% SLA",
+},
 
 // Virtual Reality Training Platform;
 {id: "vr-training-platform",
@@ -1200,7 +1229,8 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709"},
+address: "364 E Main St STE 1008 Middletown DE 19709",
+},
 technology: ["Unity", "Unreal Engine", "React", "Node.js", "MongoDB"],
 integrations: ["LMS systems", "HR platforms", "Analytics tools", "VR headsets"],
 compliance: ["OSHA", "Industry standards", "Accessibility"],
@@ -1213,7 +1243,8 @@ freeTrialDays: 7;,
 aiCapabilities: ["Adaptive Learning", "Performance Analysis", "Personalization", "Content Generation"],
 securityFeatures: ["User authentication", "Data encryption", "Access control", "Privacy protection"],
 scalability: "Unlimited users and simulations",
-uptime: "99.9% SLA"},
+uptime: "99.9% SLA",
+},
 
 // AI-Powered Financial Planning & Analysis;
 {id: "ai-financial-planning-platform",
@@ -1258,7 +1289,8 @@ marketPrice: "$899 - $5;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum Hardware APIs"],
 integrations: ["IBM Quantum", "Google Quantum", "Amazon Braket", "Azure Quantum"],
 compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry-specific regulations"],
@@ -1269,7 +1301,8 @@ freeTrialDays: 7;,
 demoUrl: "https://demo.ziontechgroup.com/quantum-solutions",
 },
 freeTrialDays: 7;,
-demoUrl: "https://demo.ziontechgroup.com/quantum-solutions"},
+demoUrl: "https://demo.ziontechgroup.com/quantum-solutions",
+},
 
 // Edge Computing & IoT Platform;
 {id: "edge-iot-intelligence",
@@ -1358,7 +1391,8 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709"},
+address: "364 E Main St STE 1008 Middletown DE 19709",
+},
 technology: ["IoT sensors", "React", "Node.js", "PostgreSQL", "MQTT"],
 integrations: ["Building automation", "Smart meters", "Solar panels", "Battery storage", "Utility APIs"],
 compliance: ["Energy Star", "LEED", "ISO 50001", "Industry standards"],
@@ -1371,7 +1405,8 @@ freeTrialDays: 21;,
 aiCapabilities: ["Predictive Analytics", "Optimization", "Anomaly Detection", "Load Forecasting"],
 securityFeatures: ["Encrypted communications", "Secure authentication", "Access control", "Data protection"],
 scalability: "Thousands of buildings and devices",
-uptime: "99.9% SLA"},
+uptime: "99.9% SLA",
+},
 
 // AI-Powered Legal Document Analysis;
 {
@@ -1434,7 +1469,8 @@ marketPrice: "$199 - $899/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["Python", "TensorFlow", "React", "Node.js", "Elasticsearch"],
 integrations: ["DocuSign", "Adobe Acrobat", "Microsoft Word", "Clio", "PracticePanther"],
 compliance: ["GDPR", "SOC 2", "HIPAA", "ISO 27001"],
@@ -1455,7 +1491,8 @@ compliance: ["GDPR", "CCPA", "SOC 2"],
 scalability: "Unlimited content generation",
 deployment: "Cloud-native with edge computing",
 marketTrend: "AI content market growing 25% annually",
-competitiveAdvantage: "Only platform with real-time SEO optimization"},
+competitiveAdvantage: "Only platform with real-time SEO optimization",
+},
 
 // Quantum-Safe Cybersecurity Platform;
 {id: "quantum-safe-cyber-shield",
@@ -1476,7 +1513,8 @@ marketPrice: "$699 - $2;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 aiScore: 94;
 rating: 4.7;
 reviewCount: 123;,
@@ -1491,7 +1529,8 @@ compliance: ["ISO 9001", "HACCP", "FDA", "EU regulations"],
 scalability: "Unlimited transactions and users",
 deployment: "Cloud-based with private blockchain options",
 roi: "200-350% within 18 months",
-timeToValue: "3-4 weeks"},
+timeToValue: "3-4 weeks",
+},
 
 // IoT Edge Computing Platform;
 {id: "iot-edge-computing",
@@ -1499,7 +1538,8 @@ title: "IoT Edge Computing Platform",
 description: "Advanced IoT platform with edge computing capabilities for real-time data processing; local AI inference; and seamless cloud integration for industrial and commercial applications.",
 category: "IoT & Edge Computing",
 subcategory: "Edge Intelligence",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["TensorFlow Lite", "Edge TPU", "Kubernetes", "MQTT", "WebRTC"],
 integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Siemens Mindsphere"],
 compliance: ["ISO 27001", "IEC 62443", "GDPR", "Industry 4.0"],
@@ -1510,7 +1550,8 @@ freeTrialDays: 21;,
 demoUrl: "https://demo.ziontechgroup.com/edge-iot",
 },
 freeTrialDays: 21;,
-demoUrl: "https://demo.ziontechgroup.com/edge-iot"},
+demoUrl: "https://demo.ziontechgroup.com/edge-iot",
+},
 
 // Metaverse Business Platform;
 {id: "metaverse-business-hub",
@@ -1564,7 +1605,8 @@ marketPrice: "$599 - $2;500/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["Unity", "Unreal Engine", "WebXR", "Three.js", "WebGL"],
 integrations: ["Meta Quest", "HTC Vive", "Microsoft HoloLens", "SteamVR"],
 compliance: ["GDPR", "COPPA", "Accessibility Standards", "Privacy Regulations"],
@@ -1575,7 +1617,8 @@ freeTrialDays: 14;,
 demoUrl: "https://demo.ziontechgroup.com/metaverse-hub",
 },
 freeTrialDays: 14;,
-demoUrl: "https://demo.ziontechgroup.com/metaverse-hub"},
+demoUrl: "https://demo.ziontechgroup.com/metaverse-hub",
+},
 
 // Green Tech & Sustainability Platform;
 {id: "green-tech-sustainability",
@@ -1624,7 +1667,8 @@ marketPrice: "$399 - $1;800/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["Python", "IoT Sensors", "Machine Learning", "Blockchain", "Cloud Computing"],
 integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "Energy APIs"],
 compliance: ["ISO 14001", "GRI Standards", "SASB", "TCFD", "ESG Frameworks"],
@@ -1635,7 +1679,8 @@ freeTrialDays: 30;,
 demoUrl: "https://demo.ziontechgroup.com/green-tech",
 },
 freeTrialDays: 30;,
-demoUrl: "https://demo.ziontechgroup.com/green-tech"},
+demoUrl: "https://demo.ziontechgroup.com/green-tech",
+},
 
 // Cybersecurity Mesh Platform;
 {id: "cybersecurity-mesh-platform",
@@ -1684,7 +1729,8 @@ marketPrice: "$699 - $3;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["AI/ML", "Blockchain", "Zero Trust Architecture", "Threat Intelligence APIs"],
 integrations: ["SIEM Systems", "EDR Solutions", "Identity Providers", "Cloud Platforms"],
 compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
@@ -1695,7 +1741,8 @@ freeTrialDays: 14;,
 demoUrl: "https://demo.ziontechgroup.com/cybersecurity-mesh",
 },
 freeTrialDays: 14;,
-demoUrl: "https://demo.ziontechgroup.com/cybersecurity-mesh"},
+demoUrl: "https://demo.ziontechgroup.com/cybersecurity-mesh",
+},
 
 // Digital Twin Platform;
 {id: "digital-twin-platform",
@@ -1791,7 +1838,8 @@ customization: string;,
 support: string;
 }
 customization: string;,
-support: string;}
+support: string;,
+}
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
 // AI-Powered Project Management;
@@ -1882,7 +1930,8 @@ roi: "500% within 4 months",
 competitors: ["Asana", "Monday.com", "ClickUp", "Notion"],
 deployment: "Cloud-based with on-premise option",
 customization: "White-label and custom branding",
-support: "24/7 email and chat support"},
+support: "24/7 email and chat support",
+},
 
 // Smart Inventory Management System;
 {id: "smart-inventory-management",
@@ -1931,7 +1980,8 @@ marketPrice: "$199 - $800/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["React", "Node.js", "PostgreSQL", "Python", "Redis"],
 integrations: ["Shopify", "WooCommerce", "QuickBooks", "Xero", "ShipStation"],
 compliance: ["GDPR", "SOC 2"],
@@ -1939,7 +1989,8 @@ roi: "400% within 6 months",
 competitors: ["TradeGecko", "Zoho Inventory", "Fishbowl", "Cin7"],
 deployment: "Cloud-based SaaS",
 customization: "Custom workflows and integrations",
-support: "Priority support with dedicated account manager"},
+support: "Priority support with dedicated account manager",
+},
 
 // AI Customer Feedback Analyzer;
 {id: "ai-customer-feedback-analyzer",
@@ -2012,7 +2063,8 @@ benefits: ["Improve investment decisions by 40%", "Reduce research time by 70%",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["Python", "React", "Node.js", "PostgreSQL", "BERT"],
 integrations: ["SurveyMonkey", "Typeform", "Google Forms", "Social media APIs"],
 compliance: ["GDPR", "CCPA"],
@@ -2020,7 +2072,8 @@ roi: "600% within 3 months",
 competitors: ["Qualtrics", "SurveyMonkey", "Hotjar", "UserVoice"],
 deployment: "Cloud-based platform",
 customization: "Custom sentiment models and dashboards",
-support: "Email and chat support during business hours"},
+support: "Email and chat support during business hours",
+},
 
 // Automated Social Media Manager;
 {id: "automated-social-media-manager",
@@ -2069,7 +2122,8 @@ marketPrice: "$79 - $300/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["React", "Node.js", "PostgreSQL", "OpenAI API", "Redis"],
 integrations: ["Facebook", "Instagram", "Twitter", "LinkedIn", "TikTok"],
 compliance: ["GDPR", "CCPA"],
@@ -2077,14 +2131,16 @@ roi: "700% within 2 months",
 competitors: ["Hootsuite", "Buffer", "Later", "Sprout Social"],
 deployment: "Cloud-based SaaS",
 customization: "Custom AI models and branding",
-support: "Email support with knowledge base"},
+support: "Email support with knowledge base",
+},
 
 // Smart Contract Management Platform;
 {id: "smart-contract-management",
 title: "Smart Contract Management Platform",
 description: "Intelligent contract management system that uses AI to analyze contracts; identify risks; and automate compliance monitoring for legal and business teams.",
 category: "Micro SAAS",
-subcategory: "Legal Tech"},
+subcategory: "Legal Tech",
+},
 technology: ["Unity", "Unreal Engine", "WebXR", "React", "Node.js"],
 integrations: ["LMS systems", "HR platforms", "Analytics tools", "VR headsets"],
 compliance: ["Accessibility standards", "Data privacy", "Industry regulations"],
@@ -2110,7 +2166,8 @@ freeTrialDays: 21;
 freeTrial: true;,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 freeTrialDays: 21;,
-demoUrl: "https://demo.ziontechgroup.com/digital-twin"},
+demoUrl: "https://demo.ziontechgroup.com/digital-twin",
+},
 
 // AI-Powered Content Creation Platform;
 {id: "ai-content-creation-platform",
@@ -2191,7 +2248,8 @@ marketPrice: "$299 - $1;200/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 "AI contract review",
 "Risk identification",
 "Legal compliance checking",
@@ -2232,7 +2290,8 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709"},
+address: "364 E Main St STE 1008 Middletown DE 19709",
+},
 technology: ["Natural Language Processing", "Machine Learning", "React", "Python", "PostgreSQL"],
 integrations: ["DocuSign", "Adobe Acrobat", "Legal databases", "CRM systems", "Email platforms"],
 compliance: ["GDPR", "SOC 2", "Legal industry standards", "Data privacy"],
@@ -2245,7 +2304,8 @@ freeTrialDays: 14;,
 aiCapabilities: ["Natural Language Processing", "Document Classification", "Risk Assessment", "Legal Research"],
 securityFeatures: ["End-to-end encryption", "Role-based access", "Audit logging", "Data residency"],
 scalability: "Millions of documents processed",
-uptime: "99.99% SLA"},
+uptime: "99.99% SLA",
+},
 
 // Autonomous Drone Fleet Management;
 {
@@ -2359,7 +2419,8 @@ marketPrice: "$599 - $3;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 aiScore: 99;
 rating: 4.9;
 reviewCount: 234;,
@@ -2374,7 +2435,8 @@ compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
 scalability: "Enterprise-grade with unlimited users",
 deployment: "Hybrid cloud with on-premise options",
 marketTrend: "Quantum security market expected to reach $5.4B by 2028",
-competitiveAdvantage: "First commercially available quantum-safe platform"},
+competitiveAdvantage: "First commercially available quantum-safe platform",
+},
 
 // Autonomous Business Operations Platform;
 {id: "autonomous-business-ops",
@@ -2425,7 +2487,8 @@ marketPrice: "$799 - $4;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 aiScore: 98;
 rating: 4.9;
 reviewCount: 167;,
@@ -2440,7 +2503,8 @@ compliance: ["ISO 9001", "Six Sigma", "Lean Manufacturing"],
 scalability: "Multi-enterprise with unlimited processes",
 deployment: "Edge-to-cloud hybrid architecture",
 marketTrend: "Autonomous operations market growing 35% annually",
-competitiveAdvantage: "Only truly autonomous platform with human-level decision making"},
+competitiveAdvantage: "Only truly autonomous platform with human-level decision making",
+},
 
 // Blockchain-Powered Supply Chain Transparency;
 {id: "blockchain-supply-chain",
@@ -2491,7 +2555,8 @@ marketPrice: "$449 - $2;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 aiScore: 96;
 rating: 4.8;
 reviewCount: 145;,
@@ -2506,7 +2571,8 @@ compliance: ["ISO 28000", "FSMA", "GDPR", "FDA", "EU Regulations"],
 scalability: "Global supply chain networks",
 deployment: "Multi-cloud with edge computing",
 marketTrend: "Blockchain supply chain market growing 45% annually",
-competitiveAdvantage: "Most comprehensive transparency platform with real-time compliance"},
+competitiveAdvantage: "Most comprehensive transparency platform with real-time compliance",
+},
 
 // AI-Powered Healthcare Diagnostics;
 {id: "ai-healthcare-diagnostics",
@@ -2564,7 +2630,8 @@ compliance: ["ISO 27001", "IEC 62443", "NIST"],
 scalability: "Unlimited devices and sensors",
 deployment: "Hybrid edge-cloud architecture",
 roi: "180-300% within 12 months",
-timeToValue: "2-3 weeks"},
+timeToValue: "2-3 weeks",
+},
 
 // AI-Powered Marketing Automation;
 {id: "ai-marketing-automation",
@@ -2615,7 +2682,8 @@ marketPrice: "$799 - $3;499/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 aiScore: 95;
 rating: 4.8;
 reviewCount: 198;,
@@ -2630,7 +2698,8 @@ compliance: ["GDPR", "CCPA", "CAN-SPAM"],
 scalability: "Unlimited contacts and campaigns",
 deployment: "Cloud-native with API access",
 roi: "350-500% within 12 months",
-timeToValue: "1-2 weeks"},
+timeToValue: "1-2 weeks",
+},
 
 // Virtual Reality Training Platform;
 {id: "vr-training-platform",
@@ -2681,7 +2750,8 @@ marketPrice: "$1;299 - $4;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 aiScore: 92;
 rating: 4.7;
 reviewCount: 76;,
@@ -2696,7 +2766,8 @@ compliance: ["SCORM", "xAPI", "AICC", "GDPR"],
 scalability: "Unlimited users and training modules",
 deployment: "Cloud-based with offline VR support",
 roi: "250-400% within 18 months",
-timeToValue: "4-6 weeks"},
+timeToValue: "4-6 weeks",
+},
 
 // Autonomous Data Center Management;
 {id: "autonomous-data-center",
@@ -2747,7 +2818,8 @@ marketPrice: "$1;999 - $7;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["React", "Node.js", "Python", "PostgreSQL", "InfluxDB"],
 integrations: ["Solar panels", "Smart meters", "Building management systems", "Weather APIs", "Utility APIs"],
 compliance: ["ISO 50001", "LEED", "BREEAM", "SOC 2"],
@@ -2802,7 +2874,8 @@ marketPrice: "$179 - $699/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["React", "Node.js", "Python", "TensorFlow", "PostgreSQL"],
 integrations: ["Plaid", "Yodlee", "Tax software", "Brokerage accounts", "Banking APIs"],
 compliance: ["SEC", "FINRA", "SOC 2", "GDPR"],
@@ -2862,7 +2935,8 @@ marketPrice: "$250 - $1;200/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["GPT-4", "BERT", "React", "Node.js", "MongoDB", "Redis"],
 integrations: ["WordPress", "Shopify", "Mailchimp", "Hootsuite", "Google Analytics"],
 compliance: ["GDPR", "Content guidelines", "Copyright protection"],
@@ -2917,7 +2991,8 @@ marketPrice: "$180 - $800/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 technology: ["Python", "Scikit-learn", "React", "Node.js", "PostgreSQL", "Redis"],
 integrations: ["QuickBooks", "Shopify", "Square", "Stripe", "Google Analytics"],
 compliance: ["GDPR", "Data privacy", "Industry standards"],
@@ -3005,7 +3080,8 @@ marketPrice: "$299 - $899/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}
+website: "https://ziontechgroup.com",
+}
 },
 {id: "quantum-secure-communication",
 title: "Quantum-Secure Communication Platform",
@@ -3049,7 +3125,8 @@ targetAudience: [
 tags: ["Quantum", "Security", "Encryption", "Compliance", "Communication"],
 estimatedDelivery: "6-8 weeks",
 supportLevel: "enterprise",
-marketPrice: "$1;999 - $4;999/month"}
+marketPrice: "$1;999 - $4;999/month",
+}
 },
 
 // AI-Powered HR Recruitment;
@@ -3078,7 +3155,8 @@ benefits: ["Reduce hiring time by 50%", "Improve candidate quality by 35%", "Cos
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}
+website: "https://ziontechgroup.com",
+}
 },
 "Blockchain-based tracking",
 "Real-time visibility",
@@ -3117,7 +3195,8 @@ marketPrice: "$799 - $2;499/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}
+website: "https://ziontechgroup.com",
+}
 },
 {id: "ai-powered-hr-automation",
 title: "AI-Powered HR Automation Suite",
@@ -3165,7 +3244,8 @@ marketPrice: "$399 - $1;199/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}
+website: "https://ziontechgroup.com",
+}
 },
 {id: "iot-smart-building-management",
 title: "IoT Smart Building Management System",
@@ -3238,7 +3318,8 @@ benefits: ["Reduce inventory costs by 30%", "Improve forecast accuracy by 40%", 
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}
+website: "https://ziontechgroup.com",
+}
 },
 "AI investment recommendations",
 "Portfolio optimization",
@@ -3289,7 +3370,8 @@ marketPrice: "$699 - $3;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 aiScore: 99;
 rating: 4.9;
 reviewCount: 312;,
@@ -3304,7 +3386,8 @@ compliance: ["HIPAA", "FDA", "CE Mark", "ISO 13485", "SOC 2"],
 scalability: "Multi-hospital networks",
 deployment: "On-premise and cloud options",
 marketTrend: "AI healthcare market expected to reach $45B by 2026",
-competitiveAdvantage: "Highest accuracy rates in medical image analysis"},
+competitiveAdvantage: "Highest accuracy rates in medical image analysis",
+},
 
 // Quantum Machine Learning Platform;
 {id: "quantum-ml-platform",
@@ -3316,7 +3399,8 @@ price: 1299;,
 currency: "$",
 pricingModel: "monthly",
 features: [
-"Quantum algorithm optimization"}
+"Quantum algorithm optimization",
+}
 },
 {id: "quantum-machine-learning-platform",
 title: "Quantum Machine Learning Platform",
@@ -3399,7 +3483,8 @@ marketPrice: "$1;299 - $9;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 aiScore: 100;
 rating: 5.0;
 reviewCount: 78;,
@@ -3414,7 +3499,8 @@ compliance: ["ISO 27001", "SOC 2", "GDPR"],
 scalability: "Unlimited quantum processing power",
 deployment: "Cloud-based with quantum hardware access",
 marketTrend: "Quantum computing market growing 50% annually",
-competitiveAdvantage: "Only platform offering hybrid quantum-classical ML models"},
+competitiveAdvantage: "Only platform offering hybrid quantum-classical ML models",
+},
 
 // Edge AI Computing Platform;
 {id: "edge-ai-computing",
@@ -3465,7 +3551,8 @@ marketPrice: "$399 - $2;499/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
+website: "https://ziontechgroup.com",
+},
 aiScore: 97;
 rating: 4.8;
 reviewCount: 134;,
@@ -3480,7 +3567,8 @@ compliance: ["ISO 27001", "SOC 2", "GDPR", "NIST"],
 scalability: "Unlimited edge devices",
 deployment: "Edge-to-cloud hybrid",
 marketTrend: "Edge AI market growing 40% annually",
-competitiveAdvantage: "Lowest latency edge AI platform with automatic optimization"},
+competitiveAdvantage: "Lowest latency edge AI platform with automatic optimization",
+},
 
 // Autonomous Financial Trading Platform;
 {id: "autonomous-financial-trading",
@@ -3561,7 +3649,8 @@ desktop: true;,
 cloud: true;
 }
 desktop: true;,
-cloud: true;}
+cloud: true;,
+}
 },
 {id: "quantum-crm-intelligence",
 title: "Quantum CRM Intelligence",
@@ -3573,7 +3662,8 @@ starter: 149;
 professional: 399;,
 enterprise: 999;,
 currency: "$",
-billingCycle: "monthly"},
+billingCycle: "monthly",
+},
 features: [
 "Quantum-inspired predictive analytics",
 "AI-powered lead scoring and qualification",
@@ -3633,7 +3723,8 @@ desktop: true;,
 cloud: true;
 }
 desktop: true;,
-cloud: true;}
+cloud: true;,
+}
 },
 {id: "cyber-shield-enterprise",
 title: "Cyber Shield Enterprise",
@@ -3645,7 +3736,8 @@ starter: 199;
 professional: 499;,
 enterprise: 1299;,
 currency: "$",
-billingCycle: "monthly"},
+billingCycle: "monthly",
+},
 features: [
 "Real-time threat detection and response",
 "AI-powered malware analysis",
@@ -3705,7 +3797,8 @@ desktop: true;,
 cloud: true;
 }
 desktop: true;,
-cloud: true;}
+cloud: true;,
+}
 },
 {id: "data-viz-pro",
 title: "Data Viz Pro",
@@ -3717,7 +3810,8 @@ starter: 79;
 professional: 199;,
 enterprise: 599;,
 currency: "$",
-billingCycle: "monthly"},
+billingCycle: "monthly",
+},
 features: [
 "Interactive data dashboards",
 "Real-time data streaming",
@@ -3777,7 +3871,8 @@ desktop: true;,
 cloud: true;
 }
 desktop: true;,
-cloud: true;}
+cloud: true;,
+}
 },
 {id: "workflow-automation-hub",
 title: "Workflow Automation Hub",
@@ -3789,7 +3884,8 @@ starter: 89;
 professional: 249;,
 enterprise: 699;,
 currency: "$",
-billingCycle: "monthly"},
+billingCycle: "monthly",
+},
 features: [
 "Visual workflow builder",
 "AI-powered process optimization",
@@ -3849,7 +3945,8 @@ desktop: true;,
 cloud: true;
 }
 desktop: true;,
-cloud: true;}
+cloud: true;,
+}
 },
 {id: "ai-marketing-suite",
 title: "AI Marketing Suite",
@@ -3861,7 +3958,8 @@ starter: 129;
 professional: 349;,
 enterprise: 899;,
 currency: "$",
-billingCycle: "monthly"},
+billingCycle: "monthly",
+},
 features: [
 "AI-powered campaign creation",
 "Multi-channel marketing automation",
@@ -3921,7 +4019,8 @@ desktop: true;,
 cloud: true;
 }
 desktop: true;,
-cloud: true;}
+cloud: true;,
+}
 },
 {id: "quantum-project-manager",
 title: "Quantum Project Manager",
@@ -3933,7 +4032,8 @@ starter: 69;
 professional: 179;,
 enterprise: 499;,
 currency: "$",
-billingCycle: "monthly"},
+billingCycle: "monthly",
+},
 features: [
 "Quantum-inspired resource optimization",
 "AI-powered risk assessment",
@@ -3993,7 +4093,8 @@ desktop: true;,
 cloud: true;
 }
 desktop: true;,
-cloud: true;}
+cloud: true;,
+}
 },
 {id: "smart-hr-automation",
 title: "Smart HR Automation",
@@ -4005,7 +4106,8 @@ starter: 119;
 professional: 299;,
 enterprise: 799;,
 currency: "$",
-billingCycle: "monthly"},
+billingCycle: "monthly",
+},
 features: [
 "AI-powered candidate screening",
 "Automated onboarding workflows",
@@ -4065,7 +4167,8 @@ desktop: true;,
 cloud: true;
 }
 desktop: true;,
-cloud: true;}
+cloud: true;,
+}
 },
 {id: "blockchain-supply-chain",
 title: "Blockchain Supply Chain Tracker",
@@ -4077,7 +4180,8 @@ starter: 199;
 professional: 499;,
 enterprise: 1299;,
 currency: "$",
-billingCycle: "monthly"},
+billingCycle: "monthly",
+},
 features: [
 "Blockchain-based tracking",
 "Real-time supply chain visibility",
@@ -4137,7 +4241,8 @@ desktop: true;,
 cloud: true;
 }
 desktop: true;,
-cloud: true;}
+cloud: true;,
+}
 },
 {id: "ai-code-assistant-pro",
 title: "AI Code Assistant Pro",
@@ -4149,7 +4254,8 @@ starter: 49;
 professional: 129;,
 enterprise: 399;,
 currency: "$",
-billingCycle: "monthly"},
+billingCycle: "monthly",
+},
 features: [
 "AI-powered code completion",
 "Automated code testing",
@@ -4209,7 +4315,8 @@ desktop: true;,
 cloud: true;
 }
 desktop: true;,
-cloud: true;}
+cloud: true;,
+}
 }
 ];
 
@@ -4298,7 +4405,8 @@ compliance: ["SEC", "FINRA", "MiFID II", "GDPR"],
 scalability: "Unlimited trading volume",
 deployment: "Multi-cloud with low-latency infrastructure",
 marketTrend: "Algorithmic trading market growing 30% annually",
-competitiveAdvantage: "Most accurate predictive models with autonomous execution"}
+competitiveAdvantage: "Most accurate predictive models with autonomous execution",
+}
 ];
 
 export default INNOVATIVE_MICRO_SAAS_SERVICES;
@@ -4316,7 +4424,8 @@ compliance: ["ISO 27001", "SOC 2", "PCI DSS", "HIPAA"],
 scalability: "Unlimited servers and infrastructure",
 deployment: "On-premise with cloud management",
 roi: "300-500% within 24 months",
-timeToValue: "6-8 weeks"}
+timeToValue: "6-8 weeks",
+}
 ];
 technology: ["GPT-4", "DALL-E", "Stable Diffusion", "Natural Language Processing", "Computer Vision"],
 integrations: ["WordPress", "Shopify", "Social Media APIs", "CMS Platforms"],
@@ -4328,7 +4437,8 @@ freeTrialDays: 14;,
 demoUrl: "https://demo.ziontechgroup.com/ai-content",
 }
 freeTrialDays: 14;,
-demoUrl: "https://demo.ziontechgroup.com/ai-content"}
+demoUrl: "https://demo.ziontechgroup.com/ai-content",
+}
 ];
 };
 };
@@ -4360,7 +4470,8 @@ benefits: ["Reduce energy costs by 25%", "Improve efficiency by 30%", "Sustainab
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}
+website: "https://ziontechgroup.com",
+}
 },
 
 // AI-Powered Agriculture Analytics;
@@ -4389,7 +4500,8 @@ benefits: ["Increase crop yields by 20%", "Reduce water usage by 30%", "Optimize
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}
+website: "https://ziontechgroup.com",
+}
 },
 
 // AI-Powered Manufacturing Quality Control;
@@ -4418,7 +4530,8 @@ benefits: ["Reduce defects by 40%", "Improve quality by 60%", "Cost savings of 3
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}
+website: "https://ziontechgroup.com",
+}
 },
 
 // AI-Powered Customer Churn Prediction;
@@ -4447,7 +4560,8 @@ benefits: ["Reduce churn by 30%", "Increase customer lifetime value by 25%", "Im
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}
+website: "https://ziontechgroup.com",
+}
 },
 
 // AI-Powered Fraud Detection;
@@ -4476,7 +4590,8 @@ benefits: ["Reduce fraud losses by 60%", "Improve detection accuracy by 40%", "R
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}
+website: "https://ziontechgroup.com",
+}
 },
 
 // AI-Powered Video Analytics;
@@ -4505,7 +4620,8 @@ benefits: ["Improve security by 50%", "Reduce manual review time by 70%", "Conte
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}
+website: "https://ziontechgroup.com",
+}
 },
 
 // AI-Powered Language Translation;
@@ -4534,7 +4650,8 @@ benefits: ["Reach global audience", "Improve customer experience", "Reduce trans
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}
+website: "https://ziontechgroup.com",
+}
 },
 
 // AI-Powered Email Marketing Optimization;
@@ -4563,7 +4680,8 @@ benefits: ["Increase open rates by 30%", "Improve click-through rates by 40%", "
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}
+website: "https://ziontechgroup.com",
+}
 },
 
 // AI-Powered SEO Optimization;
@@ -4592,7 +4710,8 @@ benefits: ["Improve search rankings by 40%", "Increase organic traffic by 50%", 
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}
+website: "https://ziontechgroup.com",
+}
 }
 ];
 

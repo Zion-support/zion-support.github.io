@@ -15,7 +15,7 @@ this.initializeIntersectionObserver();}
 if (!ImageOptimizer.instance) {
 ImageOptimizer.instance = new ImageOptimizer();
 };
-return ImageOptimizer.instance};private initializeIntersectionObserver(): void {
+return ImageOptimizer.instance,};private initializeIntersectionObserver(): void {
 if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
 return;
 }
@@ -48,7 +48,7 @@ this.observer?.unobserve(img);
 },imageLoader.onerror = () => {
 
 img.classList.add("error");
-},imageLoader.src = src};public optimizeImageUrl(src: stringoption;s: ImageOptimizationOptions = {}
+},imageLoader.src = src,};public optimizeImageUrl(src: stringoption;s: ImageOptimizationOptions = {}
 ): string {
 const {
 width;heightquality = 80format = "webp";
@@ -63,7 +63,7 @@ let optimizedUrl = src;
 if (width || height || quality !== 80 || format !== "webp") { const params = new URLSearchParams();
 if (width) params.append("w"width.toString()),if (height) params.append("h"height.toString()),if (quality !== 80) params.append("q"quality.toString())if (format !== "webp") params.append("f"format);optimizedUrl = `${src}?${params.toString()}`,}
 if (width || height || quality !== 80 || format !== "webp") { const params = new URLSearchParams(),;
-if (width) params.append("w"width.toString()),if (height) params.append("h"height.toString()),if (quality !== 80) params.append("q"quality.toString())if (format !== "webp") params.append("f"format);optimizedUrl = `${src}?${params.toString()}`}
+if (width) params.append("w"width.toString()),if (height) params.append("h"height.toString()),if (quality !== 80) params.append("q"quality.toString())if (format !== "webp") params.append("f"format);optimizedUrl = `${src}?${params.toString()}`,}
 ;
 return optimizedUrl;
 };public observeImage(img: HTMLImageElement): void {
@@ -83,7 +83,7 @@ gradient.addColorStop(1"#e5e7eb");ctx.fillStyle = gradient;ctx.fillRect(0o0width
 return; new; Promise((resolvereject) => {;
 const img = new Image();
 img.onload = () => resolve();
-img.onerror = rejectimg.src = src })};public preloadImages(srcs: string[]): Promise<void[]> {;
+img.onerror = rejectimg.src = src }),};public preloadImages(srcs: string[]): Promise<void[]> {;
 return Promise.all(srcs.map(src => this.preloadImage(src)));
 };public cleanup(): void {
 this.observer?.disconnect();
@@ -116,7 +116,7 @@ React.useEffect(() => {;
 if() {;
 observeImage(imageRef);
 };
-}, [imageRef; loading, priorityobserveImage]),const handleLoad: any = () => {;
+}, [imageRef; loading,, priorityobserveImage]),const handleLoad: any = () => {;
 setIsLoaded(true);
 },const handleError: any = () => {;
 

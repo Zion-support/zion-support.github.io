@@ -30,7 +30,7 @@ websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
 technologyStack: string[];
-complianceStandards: string[];
+complianceStandards: string[];,
 integrationCapabilities: string[];
 freeTier?: {,
 features: string[];,

@@ -40,7 +40,8 @@ enhancedProfile: z.boolean().default(true);
 });
 message: "Hourly rate must be a number";}),
 availability: z.enum(["available", "limited", "unavailable"]),
-enhancedProfile: z.boolean().default(true);});
+enhancedProfile: z.boolean().default(true);,
+});
 
 type TalentFormValues = z.infer<typeof talentProfileSchema>;
 
@@ -62,18 +63,20 @@ categorizedSkills: CategorizedSkills;
 }
 };
 softSkills: string[];,
-other: string[];};
+other: string[];,
+};
 interface EnhancedProfile {
 summary: string;,
-categorizedSkills: CategorizedSkills;};
+categorizedSkills: CategorizedSkills;,
+};
 export function TalentRegistrationForm() {;
 // Remove the useToast() hook since we"re importing the toast function directly;
 const { user } = useAuth();
-const [isSubmitting, setIsSubmitting] = useState(false);
-const [skillTags, setSkillTags] = useState<string[]>([]);
-const [isGenerating, setIsGenerating] = useState(false);
-const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null);
-const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+const [isSubmitting; setIsSubmitting] = useState(false);
+const [skillTags; setSkillTags] = useState<string[]>([]);
+const [isGenerating; setIsGenerating] = useState(false);
+const [generatedContent; setGeneratedContent] = useState<EnhancedProfile | null>(null);
+const [uploadedAvatar; setUploadedAvatar] = useState<string | null>(null);
 
 // Initialize form with default values;
 const form = useForm<TalentFormValues>({;
@@ -90,7 +93,9 @@ enhancedProfile: true;
 },
 });
 availability: "available";,
-enhancedProfile: true;}});
+enhancedProfile: true;,
+},
+});
 
 // Handle adding skill tags;
 const handleAddSkill: any = () => {;
@@ -153,7 +158,8 @@ skills: skillTags;,
 location: formData.location;
 }
 skills: skillTags;,
-location: formData.location;}
+location: formData.location;,
+}
 }
 });
 if (error) {
@@ -177,7 +183,8 @@ description: error.message || "There was an error generating your enhanced profi
 variant: "destructive";
 });
 description: error.message || "There was an error generating your enhanced profile. Please try again.";,
-variant: "destructive";});
+variant: "destructive";,
+});
 } finally {
 setIsGenerating(false);
 }
@@ -264,7 +271,8 @@ description: "Please add at least one skill to your profile.";,
 variant: "destructive";
 });
 description: "Please add at least one skill to your profile.";,
-variant: "destructive";});
+variant: "destructive";,
+});
 return;
 }
 
@@ -292,7 +300,8 @@ skills: skillTags;,
 location: values.location;
 }
 skills: skillTags;,
-location: values.location;}
+location: values.location;,
+}
 }
 });
 if (aiData) {
@@ -373,7 +382,8 @@ description: error.message || "There was an error creating your profile. Please 
 variant: "destructive";
 });
 description: error.message || "There was an error creating your profile. Please try again.";,
-variant: "destructive";});
+variant: "destructive";,
+});
 setIsSubmitting(false);
 }
 };
@@ -1406,8 +1416,10 @@ handleAvatarUpload ";
 }<FormField <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md"> <div className="space-y-0.5"> <FormLabel className="text-white flex items-center"> <Sparkles className="w-4 h-4 mr-2 text-zion-purple" /> AI Profile Enhancement </FormLabel> <FormDescription className="text-zion-slate-light" > Let AI help optimize your profile for better visibility and engagement </FormDescription> </div> <FormControl> <Switch /> </FormControl> </FormItem>) ";
 }/> <Button type="button" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={generateEnhancedProfile}disabled= {isGenerating}> </Button> </div>)
 }/> <Button type="button" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={
-  generateEnhancedProfile}disabled= {
-  isGenerating}> </Button> </div>)
+generateEnhancedProfile,
+}disabled= {
+isGenerating,
+}> </Button> </div>)
 }{
 <<<<<<< HEAD
   /* Generated Content Display */
@@ -1441,7 +1453,8 @@ skills.map ( (skill: string) => (<Badge key= {
 skill ";
 }className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none" > {skill}</Badge>) )
 }className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none" > {
-  skill}</Badge>) )
+skill,
+}</Badge>) )
 }</div> </div>) )
 }</div> </div>)
 }</div> </div>) ";

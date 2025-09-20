@@ -8,7 +8,7 @@ title: string; description: string; confidence: number;
 impact: "high" | "medium" | "low", category: string; timestamp: string};
 interface PredictionData {metric: string; currentValue: number; predictedValue: number; confidence: number; timeframe: string};
 interface AIInsight {
-id: string; type: "trend" | "anomaly" | "recommendation" | "prediction";
+id: string; type: "trend" | "anomaly" | "recommendation" | "prediction";,
 title: string; description: string; confidence: number;,
 impact: "high" | "medium" | "low", category: string; timestamp: string};
 interface PredictionData {

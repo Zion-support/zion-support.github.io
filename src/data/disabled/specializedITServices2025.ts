@@ -29,10 +29,12 @@ technologyStack: string[];,
 roiMetrics: string[];
 }
 email: string;,
-website: string;};
-websiteUrl: string;
+website: string;,
+};
+websiteUrl: string;,
 technologyStack: string[];,
-roiMetrics: string[];}
+roiMetrics: string[];,
+}
 
 export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService2025[] = [
 {id: "5g-enterprise-network-solutions";,

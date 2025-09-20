@@ -22,12 +22,14 @@ priceAccuracy: number;
 }
 }
 confidence: number;,
-timestamp: Date;}
+timestamp: Date;,
+}
 
 interface AnalyticsData {
-totalSuggestions: number;
+totalSuggestions: number;,
 averageConfidence: number;,
-priceAccuracy: number;}
+priceAccuracy: number;,
+}
 
 export function usePricingSuggestionAnalytics() {
 <<<<<<< HEAD
@@ -44,7 +46,8 @@ averageConfidence: 0;,
 priceAccuracy: 0;
 })
 averageConfidence: 0;,
-priceAccuracy: 0;})
+priceAccuracy: 0;,
+})
 
 const addSuggestion: any = (suggestion: Omit<PricingSuggestion "id" | "timestamp">) => {
 const newSuggestion: PricingSuggestion = {;
@@ -69,7 +72,8 @@ averageConfidence: 0;,
 priceAccuracy: 0;
 })
 averageConfidence: 0;,
-priceAccuracy: 0;})
+priceAccuracy: 0;,
+})
 return;
 }
 
@@ -96,7 +100,8 @@ averageConfidence: 0;,
 priceAccuracy: 0;
 })
 averageConfidence: 0;,
-priceAccuracy: 0;})
+priceAccuracy: 0;,
+})
 }
 
 return {

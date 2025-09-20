@@ -9,7 +9,8 @@ data: any;
 };
 <<<<<<< HEAD
 type: 'Organization' | 'WebSite' | 'Service' | 'Article' | 'LocalBusiness';,
-data: any;};
+data: any;,
+};
 export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
 =======
 export const StructuredData: React.FC<StructuredDataProps> = ({ type; data }) => {

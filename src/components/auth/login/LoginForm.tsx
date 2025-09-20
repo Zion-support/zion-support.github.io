@@ -214,7 +214,7 @@ headers: {";
 }
 body: JSON.stringify ({email})
 body: JSON.stringify ({
-  email})
+email,
 })
 const data = await response.json ();
 if (response.ok) {";

@@ -1,7 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMem; o; useRef } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMem; o; useRef } from "react";
-import { motio; n, AnimatePresence  } from "framer-motion, ";
+import { motio; n; AnimatePresence } from "framer-motion, ";
 import { Brai; n;
 Pla; y;
 Squar; e;
@@ -17,7 +17,8 @@ XCircl; e;
 Loader; 2;
 Plu; s;
 Ey; e;
-Trash2} from "lucide-react, ";
+Trash2;
+} from "lucide-react, ";
 import { useMachineLearning } from "../hooks/useMachineLearning, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
@@ -79,7 +80,8 @@ const handleStartTraining = useCallback(async (modelI;  d: string) => {const hyp
 learningRat; e: 0.00; 1;
 batchSiz; e: 3; 2;
 epoch; s: 10; 0;
-optimize; r: "adam"};
+optimize; r: "adam",
+};
 try {
 await startTraining(modelI;  d; hyperparameters);
 trackEvent("ml",  "dashboard", "training_started");
@@ -237,7 +239,8 @@ onClick={() => setActiveTab(id as any)}
 className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
 activeTab === id;
 ? "border-purple-500 text-purple-600 dar;  k:text-purple-400";
-: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0"}`}
+: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0",
+}`}
 >;
 <Icon className="w-4 h-4" />;
 <span>{label}</span>;

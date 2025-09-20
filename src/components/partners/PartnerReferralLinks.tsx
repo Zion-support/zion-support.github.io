@@ -159,17 +159,17 @@ efforts
               </p>
               <Button
 variant='outline'
-                onClick={() => setIsDialogOpen(true)}
-                className='flex items-center gap-2'              >
-                <Plus className='h-4 w-4' />
-                Create First Link
-              </Button>
-            </CardContent>
-          </Card>
-        )}
-      </div>
-    </div>
-  )
+onClick={() => setIsDialogOpen(true)}
+className='flex items-center gap-2'              >
+<Plus className='h-4 w-4' />;
+Create First Link;
+</Button>;
+</CardContent>;
+</Card>;
+)}
+</div>;
+</div>;
+)
 }//Add custom parameter if provided if (customParam) {
 }const newLink = {name: `$ {
   selectedCampaign}$ {customParam ? `-$ {

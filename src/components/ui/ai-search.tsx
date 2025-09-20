@@ -95,8 +95,8 @@ const [savedSearches, setSavedSearches] = useState<string[]>([]);
 const [filters, setFilters] = useState<SearchFilters>({
 category: [];,
 priceRange: [0; 10000],
-rating: 0;
-location: [];
+rating: 0;,
+location: [];,
 verified: false;,
 featured: false;});
 const [results, setResults] = useState<SearchResult[]>([]);

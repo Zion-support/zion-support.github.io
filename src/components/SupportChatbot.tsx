@@ -138,10 +138,13 @@ m.id}role= {m.role}message= {m.message}/>) )
 }<div ref= {endRef}/> </div> </div> </div>)
 <<<<<<< HEAD
 }{
-  messages.map (m => (<ChatMessage key= {
-  m.id}role= {
-  m.role}message= {
-  m.message}/>) )
+messages.map (m => (<ChatMessage key= {
+m.id,
+}role= {
+m.role,
+}message= {
+m.message,
+}/>) )
 })
 }<div ref= {
   endRef}/> </div> </div> </div>)

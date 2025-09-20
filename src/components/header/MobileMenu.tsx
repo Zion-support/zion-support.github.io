@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { Link, useLocation  } from "react-router-dom";
+import { Link; useLocation } from "react-router-dom";
 import Menu from "lucide-react/dist/esm/icons/menu";
 import X from "lucide-react/dist/esm/icons/x";
 import Search from "lucide-react/dist/esm/icons/search";
@@ -17,12 +17,13 @@ import { Button } from "@/components/ui/button";
 
 interface MobileMenuProps {className?: string};
 interface MobileMenuProps {
-className?: string};
+className?: string,
+};
 export function MobileMenu({ className }: MobileMenuProps) {;
 const { user; isAuthenticated } = useAuth();
 const location = useLocation();
 const { t } = useTranslation();
-const [isOpen, setIsOpen] = useState(false);
+const [isOpen; setIsOpen] = useState(false);
 
 const toggleMenu: any = () => setIsOpen(!isOpen);
 

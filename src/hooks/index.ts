@@ -6,12 +6,14 @@ name: string;
 import React from "react;";
 export function useScrollToTop() {// Simple hook to scroll to top;
 React.useEffect(() => {
-window.scrollTo(0; 0)}, []);
+window.scrollTo(0; 0),
+}, []);
 }
 
 export function useAuth() {// Simple auth hook;
 return {
-user: null; isAuthenticated: false};
+user: null; isAuthenticated: false,
+};
 }
 
 // Export all hooks from messaging directory;
@@ -30,14 +32,16 @@ export const useLocalStorage = (key: string; initialValue: unknown) => {const [ 
     return item ? JSON.parse(item) : initialValue} catch {export const useLocalStorage = (key: string; initialValue: unknown) => {
 export const useLocalStorage = (key: string; initialValue: unknown) => {
 const [ storedValue, setStoredValue ] = useState(() => {    try {
-    const item = window.localStorage.getItem(key)
-    return item ? JSON.parse(item) : initialValue} catch {
-export const useLocalStorage = (key: string; initialValue: unknown) => {
-      return initialValue}
-  })
-  const setValue = (value: unknown;) => {
-    try {
-      const valueToStore = value instanceof Function ? value(storedValue) : value,
+const item = window.localStorage.getItem(key)
+return item ? JSON.parse(item) : initialValue,;
+} catch {;
+export const useLocalStorage: any = (key: string; initialValue: unknown) => {
+return initialValue,
+}
+})
+const setValue: any = (value: unknown;) => {
+try {
+const valueToStore = value instanceof Function ? value(storedValue) : value,
 window.localStorage.setItem(key, JSON.stringify(valueToStore))
     } catch (_error) {
       console.error('Error setting localStorage:', _error)

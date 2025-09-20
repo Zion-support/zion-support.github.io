@@ -25,7 +25,8 @@ address: string;
 }
 };
 email: string;,
-address: string;};
+address: string;,
+};
 trialDays: number;
 setupTime: string;
 competitors: string[];
@@ -40,7 +41,8 @@ researchPartners: string[];,
 patents: string[];
 }
 researchPartners: string[];,
-patents: string[];}
+patents: string[];,
+}
 
 export const emergingTechServices2025: EmergingTechService[] = [
 // Quantum Computing Services;

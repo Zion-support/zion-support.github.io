@@ -147,7 +147,7 @@ onSelectionChang;e: (selecte;d: string[]) => void;
 };export; interface; ChartDataPoint {
 onLimitChang;e: (limi;t: number) => void;};
 sorting?: {
-field: keyof T;
+field: keyof T;,
 direction: "asc" | "desc";,
 onSort: (fiel;d: keyof Tdirectio;n: "asc" | "desc") => void;};
 selection?: {

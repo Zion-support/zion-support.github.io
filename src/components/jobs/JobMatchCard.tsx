@@ -8,13 +8,13 @@ import { formatDistanceToNow } from "date-fns";
 import { JobMatch } from "@/types/jobs";
 interface JobMatchProps {matchId: string;
 import React from 'react',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { CardCardContent } from "@/components/ui/card",
-import { Avatar, AvatarFallbackAvatarImage } from "@/components/ui/avatar",
-import { Building, MapPin, Clock, DollarSignStar } from 'lucide-react';
-import { formatDistanceToNow } from "date-fns";
-import { JobMatch } from "@/types/jobs";
+import { Badge,  } from "@/components/ui/badge",
+import { Button,  } from "@/components/ui/button",
+import { Card,, CardContent,  } from "@/components/ui/card",
+import { Avatar,, AvatarFallback,, AvatarImage,  } from "@/components/ui/avatar",
+import { Building,, MapPin,, Clock,, DollarSign,, Star,  } from 'lucide-react'
+import { formatDistanceToNow,  } from "date-fns";
+import { JobMatch,  } from "@/types/jobs";
 interface JobMatchProps {
   matchId: string;,
 talentId: string;

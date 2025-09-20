@@ -33,8 +33,8 @@ competitors: string[];
 email: string;,
 website: string;};
 technology: string[];
-integrations: string[];
-compliance: string[];
+integrations: string[];,
+compliance: string[];,
 roi: string;,
 competitors: string[];}
 

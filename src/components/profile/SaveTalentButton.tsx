@@ -6,7 +6,7 @@ import { Star } from "lucide-react";
 interface SaveTalentButtonProps {talentId: string,
 import { Star } from 'lucide-react';
 interface SaveTalentButtonProps {
-  talentId: string,
+talentId: string,
 onSave: (talentId: string) => void,
 isSaved: boolean,
 =======

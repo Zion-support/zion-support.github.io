@@ -9,7 +9,8 @@ address: string;
 }
 }
 website: string;,
-address: string;}
+address: string;,
+}
 
 export interface ITService {
 id: number;
@@ -33,7 +34,8 @@ support: string;
 }
 }
 deliveryTime: string;,
-support: string;}
+support: string;,
+}
 
 // Innovative IT Services for 2025;
 export const innovativeITServices2025: ITService[] = [

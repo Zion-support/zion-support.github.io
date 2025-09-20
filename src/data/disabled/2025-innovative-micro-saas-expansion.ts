@@ -1,4 +1,4 @@
-import { Routes, Route  } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 export interface InnovativeMicroSaasService {
 id: string;
 name: string;
@@ -23,7 +23,8 @@ address: string;
 }
 };
 email: string;,
-address: string;};
+address: string;,
+};
 trialDays: number;
 setupTime: string;
 competitors: string[];

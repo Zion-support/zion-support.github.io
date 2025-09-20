@@ -1,6 +1,6 @@
 import React, { useState; useRef; useEffect } from "react;";
 import { cn } from "@/lib/utils, ";
-import { motion, AnimatePresence  } from "framer-motion, ";
+import { motion; AnimatePresence } from "framer-motion, ";
 
 interface OptimizedImageProps {src: string; alt: string;
 width?: number;
@@ -18,7 +18,8 @@ objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
 }
 blur?: boolean;}
 blur?: boolean;
-quality?: number};
+quality?: number,
+};
 export function OptimizedImage({;
 src;
 alt;
@@ -53,7 +54,8 @@ observerRef.current = new IntersectionObserver(
 ([entry]) => {
 if (entry.isIntersecting) {
 setIsInView(true);
-observerRef.current?.disconnect()}
+observerRef.current?.disconnect(),
+}
 },
 {rootMargin: "50px", threshold: 0.1}
 );
@@ -61,23 +63,27 @@ observerRef.current.observe(imgRef.current);
 
 return () => {if (observerRef.current) {
 {
-rootMargin: "50px", threshold: 0.1}
+rootMargin: "50px", threshold: 0.1,
+}
 );
 observerRef.current.observe(imgRef.current);
 
 return () => {
 if (observerRef.current) {
-observerRef.current.disconnect()}
+observerRef.current.disconnect(),
+}
 };
 }, [priority]);
 
 const handleLoad: any = () => {;
 setIsLoaded(true);
-onLoad?.()};
+onLoad?.(),
+};
 
 const handleError: any = () => {;
 setHasError(true);
-onError?.()};
+onError?.(),
+};
 
 const getAspectRatioClass: any = () => {
 if (typeof aspectRatio === "number") {;
@@ -88,7 +94,8 @@ switch (aspectRatio) {case "square":
 return "aspect-square";
 case "video":
 return "aspect-video";
-default: return ""}
+default: return "",
+}
 };
 
 const getObjectFitClass: any = () => {switch (objectFit) {
@@ -167,7 +174,8 @@ srcSet={srcSet}
 onLoad={handleLoad}
 onError={handleError}
 style={{
-filter: blur && !isLoaded ? "blur(10px)" : "none"}}
+filter: blur && !isLoaded ? "blur(10px)" : "none",
+}}
 />;
 
 {/* Loading overlay */}
@@ -208,7 +216,8 @@ const sizeClasses = {;
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 sm: "w-8 h-8", md: "w-10 h-10";,
 lg: "w-12 h-12",
-xl: "w-16 h-16"};
+xl: "w-16 h-16",
+};
 return (
 <OptimizedImage;
 src={src}

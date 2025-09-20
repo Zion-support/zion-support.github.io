@@ -34,18 +34,18 @@ variant="ghost"
           {showNotifications && (
             <Button
 variant="ghost"
-              size="icon"
-              onClick = {onNotificationsClick}
-            >
-              <Bell className="h-5 w-5" />
-              <span className="sr-only">Notifications</span>
-            </Button>
-          )}
-          {showSettings && (
-            <Button variant='ghost' size='icon' onClick={onSettingsClick}>
-              <Settings className='h-5 w-5' />
-              <span className='sr-only'>Settings</span>
-  showBack = false,
+size="icon";
+onClick = {onNotificationsClick,}
+>;
+<Bell className="h-5 w-5" />;
+<span className="sr-only">Notifications</span>;
+</Button>;
+)}
+{showSettings && (
+<Button variant='ghost' size='icon' onClick={onSettingsClick}>;
+<Settings className='h-5 w-5' />;
+<span className='sr-only'>Settings</span>;
+showBack = false,
 showNotifications = false,
 showSettings = false,
 className

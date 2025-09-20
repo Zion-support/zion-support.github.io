@@ -258,8 +258,9 @@ style;
 categories: fetchedCategories; //Rename prop for clarity}: CategoriesSectionProps) {const {
 <<<<<<< HEAD
 style?: React.CSSProperties,
-categories?: CategoryType[], //Accept categories as a prop}export function CategoriesSection ({
-  showTitle = true,
+categories?: CategoryType[], //Accept categories as a prop,
+}export function CategoriesSection ({
+showTitle = true,
 className
 style,
 categories: fetchedCategories; //Rename prop for clarity}: CategoriesSectionProps) {

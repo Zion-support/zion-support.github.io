@@ -1,4 +1,4 @@
-import { Routes, Route  } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 export interface EnhancedInnovativeService {
 id: string;
 title: string;
@@ -24,7 +24,8 @@ website: string;
 }
 };
 email: string;,
-website: string;};
+website: string;,
+};
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;

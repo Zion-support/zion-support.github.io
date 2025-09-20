@@ -7,7 +7,7 @@ export function TalentCardAvailability({}
 <<<<<<< HEAD
 import { Clock } from 'lucide-react';
 interface TalentCardAvailabilityProps {
-  availabilityType: string,
+availabilityType: string,
 export function TalentCardAvailability({
   availabilityType}: TalentCardAvailabilityProps) {  // Format availability status,
 =======

@@ -570,14 +570,14 @@ impact: "High";,
 effort: "Medium"};
 {
 priority: "High";
-title: "Optimize Core Web Vitals";
-description: "Improve page load performance";
+title: "Optimize Core Web Vitals";,
+description: "Improve page load performance";,
 impact: "High";,
 effort: "High"};
 {
 priority: "Medium";
-title: "Enhance SEO Meta Tags";
-description: "Add missing meta descriptions and titles";
+title: "Enhance SEO Meta Tags";,
+description: "Add missing meta descriptions and titles";,
 impact: "Medium";,
 effort: "Low"};
 {

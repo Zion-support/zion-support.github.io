@@ -34,7 +34,7 @@ domLoad: number | null;,
 windowLoad: number | null;}
 
 interface PerformanceObserverEntry {
-name: string;
+name: string;,
 value: number;,
 rating: "good" | "needs-improvement" | "poor";}
 

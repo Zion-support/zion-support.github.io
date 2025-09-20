@@ -88,8 +88,8 @@ stack: error.stack;};
 errorInfo: {,
 componentStack: errorInfo.componentStack;};
 userAgent: navigator.userAgent;
-url: window.location.href;
-viewport: {
+url: window.location.href;,
+viewport: {,
 width: window.innerWidth;,
 height: window.innerHeight;}
 };

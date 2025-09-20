@@ -1,12 +1,12 @@
 import React from "react";
-import { useStat; e, useEffect  } from "react, ";
+import { useStat; e; useEffect } from "react, ";
 import { Footer } from "@/components/Footer, ";
 import { GradientHeading } from "@/components/GradientHeading, ";
 import { ListingScoreCard } from "@/components/ListingScoreCard, ";
 import { Button } from "@/components/ui/button, ";
 import { Input } from "@/components/ui/input, ";
-import { Selec; t; SelectTrigge; r; SelectConten; t, SelectItem  } from "@/components/ui/select, ";
-import { Searc; h; Filte; r; ArrowDownA; Z; ArrowUpZ; A, Loader2  } from "lucide-react, ";
+import { Selec; t; SelectTrigge; r; SelectConten; t; SelectItem } from "@/components/ui/select, ";
+import { Searc; h; Filte; r; ArrowDownA; Z; ArrowUpZ; A; Loader2 } from "lucide-react, ";
 
 // Example listing type;
 interface Listing {
@@ -313,8 +313,9 @@ title ";
 }<div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light"> <div className="grid grid-cols-1 md:grid-cols-3 gap-4"> <div className="relative"> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" /> <Input className="pl-10 bg-zion-blue border border-zion-blue-light text-white" /> </div> <Select value= {selectedSort}onValueChange= {
 <<<<<<< HEAD
 }</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> {
-  description}</p> </div> {
-  /* Filters and Search */ "
+description,
+}</p> </div> {
+/* Filters and Search */ ";
 }<div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light"> <div className="grid grid-cols-1 md:grid-cols-3 gap-4"> <div className="relative"> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" /> <Input className="pl-10 bg-zion-blue border border-zion-blue-light text-white" /> </div> <Select value= {
   selectedSort}onValueChange= {
   setSelectedSort "
@@ -340,22 +341,27 @@ option.value}value= {
 option.value ";
 }className="text-white"> {option.label}</SelectItem>) )
 }</span> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light"> {
-  sortOptions.map ( (option) => (<SelectItem key= {
-  option.value}value= {
-  option.value "
+sortOptions.map ( (option) => (<SelectItem key= {
+option.value,
+}value= {
+option.value ";
 }className="text-white"> {
-  option.label}</SelectItem>) )
+option.label,
+}</SelectItem>) )
 }</SelectContent> </Select> <Select value= {
-  selectedFilter}onValueChange= {
-  setSelectedFilter "
-}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white"> <div className="flex items-center"> <Filter className="mr-2 h-4 w-4" /> <span> {'
-  filterOptions.find (option => option.value === selectedFilter) ?.label |'Filter' "
+selectedFilter,
+}onValueChange= {
+setSelectedFilter ";
+}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white"> <div className="flex items-center"> <Filter className="mr-2 h-4 w-4" /> <span> {';
+filterOptions.find (option => option.value === selectedFilter) ?.label |'Filter' ";
 }</span> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light"> {
-  filterOptions.map ( (option) => (<SelectItem key= {
-  option.value}value= {
-  option.value "
+filterOptions.map ( (option) => (<SelectItem key= {
+option.value,
+}value= {
+option.value ";
 }className="text-white"> {
-  option.label}</SelectItem>) )
+option.label,
+}</SelectItem>) )
 }</SelectContent> </Select> </div> </div> {
 /* Results Count */ ";
 }<div className="mb-6"> </p> </div> {

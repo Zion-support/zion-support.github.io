@@ -42,7 +42,8 @@ website: z.string().url("Please enter a valid URL").or(z.string().length(0)).opt
 message: "Rate must be a number";}),
 availability: z.enum(["available", "limited", "unavailable"]),
 enhancedProfile: z.boolean().transform(val => !!val);,
-website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional();});
+website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional();,
+});
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
 
@@ -61,7 +62,7 @@ const [generatedContent, setGeneratedContent] = useState<{ summary: string;,
 const [generatedContent; setGeneratedContent] = useState<{ summary: string;,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 services: string[] } | null>(null);
-const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+const [uploadedAvatar; setUploadedAvatar] = useState<string | null>(null);
 
 // Initialize form with default values;
 const form = useForm<ServiceFormValues>({;
@@ -79,7 +80,9 @@ website: "";
 },
 });
 enhancedProfile: false;,
-website: "";}});
+website: "";,
+},
+});
 
 // Handle adding service tags;
 const handleAddService: any = () => {;
@@ -757,7 +760,8 @@ description: error.message || "There was an error generating your enhanced profi
 variant: "destructive";
 });
 description: error.message || "There was an error generating your enhanced profile. Please try again.";,
-variant: "destructive";});
+variant: "destructive";,
+});
 } finally {
 setIsGenerating(false);
 }
@@ -789,7 +793,8 @@ description: "Please add at least one service to your profile.";,
 variant: "destructive";
 });
 description: "Please add at least one service to your profile.";,
-variant: "destructive";});
+variant: "destructive";,
+});
 return;
 }
 
@@ -817,7 +822,8 @@ services: serviceTags;,
 location: values.location;
 }
 services: serviceTags;,
-location: values.location;}
+location: values.location;,
+}
 }
 });
 if (aiData) {
@@ -871,7 +877,8 @@ location: values.location;,
 website: values.website || null;
 });
 location: values.location;,
-website: values.website || null;});
+website: values.website || null;,
+});
 
 if (serviceError) throw serviceError;
 */;
@@ -930,7 +937,8 @@ description: error.message || "There was an error creating your profile. Please 
 variant: "destructive";
 });
 description: error.message || "There was an error creating your profile. Please try again.";,
-variant: "destructive";});
+variant: "destructive";,
+});
 } finally {
 setIsSubmitting(false);
 }
@@ -1446,7 +1454,8 @@ generatedContent.services && generatedContent.services.length > 0 && (<div> <Bad
 index ";
 }className=" bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"> {service}</Badge>) )
 }className=" bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"> {
-  service}</Badge>) )
+service,
+}</Badge>) )
 }</div> </div>)
 }</div> </div>) ";
 }</div> <Separator className=" bg-zion-blue-light/50"/> <FormItem> <FormLabel className=" text-zion-slate-light">Services</FormLabel> <div className=" flex gap-2"> <FormControl> <Input > Add </Button> </div> <FormDescription className=" text-zion-slate"> Press Enter or click Add to include a service </FormDescription> <FormMessage className=" text-red-400"/> </FormItem>)

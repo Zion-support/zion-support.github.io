@@ -402,7 +402,8 @@ renderStars (selectedReview.rating) ";
 selectedReview.review text ";
 }</p> </div> <div className="space-y-2"> <h4 className="text-sm font-medium">Additional Ratings</h4> Timeliness: {selectedReview.timeliness rating}/5 </Badge>)
 }</p> </div> <div className="space-y-2"> <h4 className="text-sm font-medium">Additional Ratings</h4> Timeliness: {
-  selectedReview.timeliness rating}/5 </Badge>)
+selectedReview.timeliness rating,
+}/5 </Badge>)
 }{
 selectedReview.would work again !== undefined && (<Badge variant= {";
 selectedReview.would work again ? " default": " secondary";
@@ -417,10 +418,12 @@ selectedReview.report count ";
 () => handleApprove (selectedReview.id)
 }disabled= {isPending}> Approve </Button> </>)
 }disabled= {
-  isPending}> Reject </Button> <Button onClick={
-  () => handleApprove (selectedReview.id)
+isPending,
+}> Reject </Button> <Button onClick={
+() => handleApprove (selectedReview.id)
 }disabled= {
-  isPending}> Approve </Button> </>)
+isPending,
+}> Approve </Button> </>)
 }> Mark as Rejected </Button>)
 }> Mark as Approved </Button>)
 }</DialogFooter> </DialogContent> </Dialog>)

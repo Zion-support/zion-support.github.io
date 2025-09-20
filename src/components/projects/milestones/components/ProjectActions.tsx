@@ -7,10 +7,10 @@ import { RaiseDisputeButton } from "@/components/disputes/RaiseDisputeButton";
 interface ProjectActionsProps {projectId: string;
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ShieldAlert } from 'lucide-react';
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+import { ShieldAlert,  } from 'lucide-react'
+import { RaiseDisputeButton,  } from '@/components/disputes/RaiseDisputeButton';
 interface ProjectActionsProps {
-  projectId: string;,
+projectId: string;,
 isUnderDispute: boolean;
 disputeId?: string;,
 isTalent: boolean;,

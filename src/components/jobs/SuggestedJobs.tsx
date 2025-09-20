@@ -2,7 +2,8 @@ import React from "react";
 
 interface SuggestedJobsProps {talentId?: string}
 interface SuggestedJobsProps {
-  talentId?: string}
+talentId?: string,
+}
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 if (isLoading) {
 <<<<<<< HEAD
@@ -175,12 +176,16 @@ match.id}match= {match}onApply= {handleApply}onDecline= {handleDecline}/>) )
   handleDecline}/>) )
 }</div> </div>) "
 }</div> <div className="grid gap-4 md:grid-cols-2" > {
-  viewedMatches.map (match => (<JobMatchesCard key= {
-  match.id}match= {
-  match}onApply= {
-  handleApply}onDecline= {
-  handleDecline}/>) )
-}</div> </div>) "
+viewedMatches.map (match => (<JobMatchesCard key= {
+match.id,
+}match= {
+match,
+}onApply= {
+handleApply,
+}onDecline= {
+handleDecline,
+}/>) )
+}</div> </div>) ";
 }</div> <div className="grid gap-4 md:grid-cols-2" > {
   appliedMatches.map (match => (<JobMatchesCard key= {
   match.id}match= {

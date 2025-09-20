@@ -27,7 +27,8 @@ header; s: {
 bod; y: JSON.stringify({
 message; s: [{ ro; l; e: "use; r",
 conte; n; t: messag; e }];
-})});
+}),
+});
 
 if (!response.ok) {
 throw new Error("Failed to get response from AI assistant");
@@ -60,7 +61,8 @@ recipient={{
 i;  d: "ai-assistant";
 nam; e: "AI Assistant";
 avatarUr; l: "http; s: //placehold.co/64x64?text=AI";
-rol; e: "Virtual Assistant"}}
+rol; e: "Virtual Assistant",
+}}
 onSendMessage={handleSendMessage}
 />;
 )}

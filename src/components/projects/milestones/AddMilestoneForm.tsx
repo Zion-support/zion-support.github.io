@@ -217,12 +217,18 @@ Saving...;
 )
 }//If there are multiple milestones submit them one by one <AIMilestoneGenerator scope= {projectScope}startDate= {projectStartDate}endDate= {projectEndDate}projectType= {projectType}onAddMilestones= {handleAddMilestones}onAddMilestone= {handleAddMilestone}/>)
 }//If there are multiple milestones submit them one by one <AIMilestoneGenerator scope= {
-  projectScope}startDate= {
-  projectStartDate}endDate= {
-  projectEndDate}projectType= {
-  projectType}onAddMilestones= {
-  handleAddMilestones}onAddMilestone= {
-  handleAddMilestone}/>)
+projectScope,
+}startDate= {
+projectStartDate,
+}endDate= {
+projectEndDate,
+}projectType= {
+projectType,
+}onAddMilestones= {
+handleAddMilestones,
+}onAddMilestone= {
+handleAddMilestone,
+}/>)
 }</FormControl> <FormMessage /> </FormItem>)
 }/> <FormField <FormItem> <FormLabel>Description (optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
 }/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Due Date (optional) </FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button variant="outline" className="w-full pl-3 text-left font-normal" >) : (<span className="text-muted-foreground" > Pick a date </span>) ";

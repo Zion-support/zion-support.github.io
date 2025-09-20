@@ -4,7 +4,7 @@ import { useAnalytics } from "./useAnalytics, ";
 interface SecurityEvent {
 id: string;
 type: "authentication" | "authorization" | "data_access" | "system_change" | "threat_detected" | "compliance_violation";
-severity: "low" | "medium" | "high" | "critical";
+severity: "low" | "medium" | "high" | "critical";,
 timestamp: Date;
 userId?: string;
 userAgent?: string;
@@ -48,7 +48,7 @@ interface SecurityMetrics {
 totalEvents: number;
 criticalEvents: number;
 highSeverityEvents: number;
-complianceScore: number;
+complianceScore: number;,
 threatLevel: "low" | "medium" | "high" | "critical";
 lastIncident?: Date;,
 averageResponseTime: number;,

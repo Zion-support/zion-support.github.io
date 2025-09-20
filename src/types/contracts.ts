@@ -58,7 +58,7 @@ authorName: "Admin", usageCount: 1250; rating: 4.8; tags: ["freelance", "agreeme
 id: "2", name: "Non-Disclosure Agreement";,
 description: "Confidentiality agreement template", category: "Legal";,
 content: "This Non-Disclosure Agreement...", variables: [
-{
+{,
 name: "companyName";,
 type: "string", description: "Name of the company";,
 required: true},

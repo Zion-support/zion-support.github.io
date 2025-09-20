@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState; useCallback; useEffect } from "react;";
-import { motion, AnimatePresence  } from "framer-motion, ";
+import { motion; AnimatePresence } from "framer-motion, ";
 import { Eye;
 Type;
 Volume2;
@@ -9,7 +9,8 @@ Settings;
 X;
 Check;
 AlertTriangle;
-Info} from "lucide-react, ";
+Info;
+} from "lucide-react, ";
 
 export interface AccessibilitySettings {;
 highContrast: boolean;
@@ -24,7 +25,8 @@ keyboardNavigation: boolean;
 }
 };
 focusIndicator: boolean;,
-keyboardNavigation: boolean;};
+keyboardNavigation: boolean;,
+};
 interface AccessibilityPanelProps {
 enabled?: boolean;
 defaultSettings?: Partial<AccessibilitySettings>;
@@ -38,8 +40,8 @@ defaultSettings = {},
 onSettingsChange;
 className = ""
 }) => {
-const [isOpen, setIsOpen] = useState(false);
-const [settings, setSettings] = useState<AccessibilitySettings>({
+const [isOpen; setIsOpen] = useState(false);
+const [settings; setSettings] = useState<AccessibilitySettings>({
 highContrast: false;
 largeText: false;
 fontSize: 16;
@@ -58,7 +60,8 @@ type: "success" | "info" | "warning";,
 timestamp: number;
 }>>([]);
 type: "success" | "info" | "warning";,
-timestamp: number;}>>([]);
+timestamp: number;,
+}>>([]);
 
 // Apply accessibility settings to the document;
 useEffect(() => {
@@ -182,7 +185,8 @@ focusIndicator: true;,
 keyboardNavigation: true;
 };
 focusIndicator: true;,
-keyboardNavigation: true;};
+keyboardNavigation: true;,
+};
 setSettings(defaultSettings);
 
 const notification = {;
@@ -194,7 +198,8 @@ type: "info" as const;
 message: "Accessibility settings reset to defaults";,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 type: "info" as const;,
-timestamp: Date.now()};
+timestamp: Date.now(),
+};
 setNotifications(prev => [notification, ...prev.slice(0; 2)]);
 }, []);
 
@@ -517,11 +522,13 @@ transition-duration: 0.01ms !important;}
 
 .focus-indicator *:focus {
 outline: 3px solid #00d4ff !important;
-outline-offset: 2px !important;}
+outline-offset: 2px !important;,
+}
 
 .keyboard-navigation *:focus-visible {
 outline: 3px solid #00d4ff !important;
-outline-offset: 2px !important;}
+outline-offset: 2px !important;,
+}
 
 .sr-only {
 position: absolute;
@@ -540,15 +547,18 @@ border: 0;}
 /* Color blind mode filters */;
 [style*="--color-blind-mode: protanopia"] {,
 filter: url("data:image/svg+xml;
-utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567;0.433;0;0;0 0.558;0.442;0;0;0 0;0.242;0.758;0;0 0;0;0;1;0"/></filter></svg>#protanopia");}
+utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567;0.433;0;0;0 0.558;0.442;0;0;0 0;0.242;0.758;0;0 0;0;0;1;0"/></filter></svg>#protanopia");,
+}
 
 [style*="--color-blind-mode: deuteranopia"] {,
 filter: url("data:image/svg+xml;
-utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625;0.375;0;0;0 0.7;0.3;0;0;0 0;0.3;0.7;0;0 0;0;0;1;0"/></filter></svg>#deuteranopia");}
+utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625;0.375;0;0;0 0.7;0.3;0;0;0 0;0.3;0.7;0;0 0;0;0;1;0"/></filter></svg>#deuteranopia");,
+}
 
 [style*="--color-blind-mode: tritanopia"] {,
 filter: url("data:image/svg+xml;
-utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95;0.05;0;0;0 0;0.433;0.567;0;0 0;0.475;0.525;0;0 0;0;0;1;0"/></filter></svg>#tritanopia");}
+utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95;0.05;0;0;0 0;0.433;0.567;0;0 0;0.475;0.525;0;0 0;0;0;1;0"/></filter></svg>#tritanopia");,
+}
 `;
 }} />;
 </>;

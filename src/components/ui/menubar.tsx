@@ -12,9 +12,9 @@ const MenubarGroup = MenubarPrimitive.Group,
 const MenubarPortal = MenubarPrimitive.Portal,
 const MenubarSub = MenubarPrimitive.Sub,
 const MenubarRadioGroup = MenubarPrimitive.RadioGroup,
-const Menubar = React.forwardRef<
-  React.ElementRef<typeof MenubarPrimitive.Root>
-  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Root>
+const Menubar = React.forwardRef<;
+React.ElementRef<typeof MenubarPrimitive.Root>;
+React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Root>;
 >(({ className, ...props }, ref) => (
   <MenubarPrimitive.Root ref={ref}
     className={cn(
@@ -332,7 +332,7 @@ className;
 );
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
-MenubarShortcut.displayname = "MenubarShortcut"
+MenubarShortcut.displayname = &quot;MenubarShortcut&quot;
 export {
 Menubar;
 MenubarMenu;

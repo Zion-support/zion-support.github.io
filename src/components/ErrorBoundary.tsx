@@ -1,8 +1,8 @@
 import React from "react";
-import React, { useState, useEffect } from "react";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { AlertTriangl; e; RefreshC; w; Hom; e, ArrowLeft  } from "lucide-react";
-import { Lin; k, useNavigate  } from "react-router-dom";
+import { AlertTriangl; e; RefreshC; w; Hom; e; ArrowLeft } from "lucide-react";
+import { Lin; k; useNavigate } from "react-router-dom";
 
 interface ErrorBoundaryProps {
 childre; n: React.ReactNode;
@@ -30,7 +30,8 @@ resetErro; r: () => void;
 errorInf; o: any) => void;};
 interface ErrorFallbackProps {
 error?: Error;
-resetErro; r: () => void;};
+resetErro; r: () => void;,
+};
 }
 
 }
@@ -108,12 +109,13 @@ interface State {hasError: boolean,
 }
 error?: Error,}
 interface Props {
-  children: ReactNode;
+children: ReactNode;
 }
 interface State {
-  hasError: boolean,
+hasError: boolean,
 error?: Error,
-errorInfo?: ErrorInfo}
+errorInfo?: ErrorInfo,
+}
 class ErrorBoundary extends Component<Props State> {
 constructor(props: Props) {
 super(props)

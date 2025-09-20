@@ -56,10 +56,12 @@ status === "current" ? "text-white" :
 }</div> <span)
 }> {step.label}</span> </div>)
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
-  steps.findIndex (s => s.id === step.id) + 1}</span>)
+steps.findIndex (s => s.id === step.id) + 1,
+}</span>)
 }</div> <span)
 }> {
-  step.label}</span> </div>)
+step.label,
+}</span> </div>)
 })
 }</div> </div>)
 }"          )

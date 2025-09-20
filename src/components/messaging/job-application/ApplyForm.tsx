@@ -121,7 +121,7 @@ if (proposalLink) {'
   selectedResume.title}`
 }//Create context data for the conversation const contextData = {title: job.title,
 }//Create context data for the conversation const contextData = {
-  title: job.title,
+title: job.title,
 description: job.description,
 =======
 onClick = {handleApply}
@@ -185,13 +185,17 @@ setProposalLink ";
 }/> </TabsContent> <TabsContent value=" resume"> <ResumeTab onResumeSelected= {handleResumeSelected}selectedResumeId= {
 <<<<<<< HEAD
 return (<> <Tabs value= {
-  activeTab}onValueChange= {
-  setActiveTab "
+activeTab,
+}onValueChange= {
+setActiveTab ";
 }className="w-full" > <TabsList className="w-full mb-4 bg-zion-blue-dark/30" > <TabsTrigger value="message" className="flex-1" > resume"className=" flex-1"> Resume </TabsTrigger> </TabsList> <TabsContent value=" message"> <MessageTab message= {
-  message}setMessage= {
-  setMessage}proposalLink= {
-  proposalLink}setProposalLink= {
-  setProposalLink "
+message,
+}setMessage= {
+setMessage,
+}proposalLink= {
+proposalLink,
+}setProposalLink= {
+setProposalLink ";
 }/> </TabsContent> <TabsContent value=" resume"> <ResumeTab onResumeSelected= {
   handleResumeSelected}selectedResumeId= {
   selectedResumeId "

@@ -1,9 +1,9 @@
 import React, { useState } from "react;";
 import { Button } from "../ui/Button, ";
-import { Card; CardContent; CardHeader, CardTitle  } from "../ui/Card, ";
+import { Card; CardContent; CardHeader; CardTitle } from "../ui/Card, ";
 import { Input } from "../ui/Input, ";
 import { Textarea } from "../ui/Textarea, ";
-import { Mail; Calendar; DollarSign, MessageSquare  } from "lucide-react, ";
+import { Mail; Calendar; DollarSign; MessageSquare } from "lucide-react, ";
 
 interface HireNowCTAProps {
 talentName: string;
@@ -28,10 +28,11 @@ budget: "";
 startDate: "";
 onHire?: (data: HireData) => void;};
 interface HireData {
-projectDescription: string;
-budget: string;
+projectDescription: string;,
+budget: string;,
 startDate: string;,
-message: string;};
+message: string;,
+};
 export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) {
 const [isFormOpen, setIsFormOpen] = useState(false);
 const [formData, setFormData] = useState<HireData>({
@@ -41,7 +42,8 @@ budget: "";
 budget: "";,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 startDate: "";,
-message: ""});
+message: "",
+});
 const handleSubmit: any = (e: React.FormEvent) => {;
 e.preventDefault();
 if (onHire) {
@@ -56,7 +58,8 @@ startDate: "";
 budget: "";,
 >>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 startDate: "";,
-message: ""});
+message: "",
+});
 setIsFormOpen(false);
 };
 
