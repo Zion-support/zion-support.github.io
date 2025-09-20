@@ -1,187 +1,187 @@
-import, React, from "react";
+impor, t, Reac, t, from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  Phon, e,;
-  Mai, l,;
-  MapPi, n,;
-  Glob, e,;
-  Linkedi, n,;
-  Twitte, r,;
-  Faceboo, k,;
-  Instagra, m,;
-  ArrowU, p,;
-  Hear, t,;
-  Shiel, d,;
-  Za, p,;
-  Brai, n,;
-  Clou, d,;
-  Serve, r,;
-  Rocke, t,;
-  User, s,;
-  Briefcas, e,;
-  FileTex, t,;
-  HelpCircl, e,;
-  MessageCircleZap, as, ZapIcon;
+  Pho, n, e,;
+  Ma, i, l,;
+  MapP, i, n,;
+  Glo, b, e,;
+  Linked, i, n,;
+  Twitt, e, r,;
+  Facebo, o, k,;
+  Instagr, a, m,;
+  Arrow, U, p,;
+  Hea, r, t,;
+  Shie, l, d,;
+  Z, a, p,;
+  Bra, i, n,;
+  Clo, u, d,;
+  Serv, e, r,;
+  Rock, e, t,;
+  Use, r, s,;
+  Briefca, s, e,;
+  FileTe, x, t,;
+  HelpCirc, l, e,;
+  MessageCircleZa, p, a, s, ZapIcon;
 } from "lucide-react";
-export, const, FuturisticFoote, r: React.FC = () => {
+expor, t, cons, t, FuturisticFoot, e, r: React.FC = () => {
   const scrollToTop = () => {
-    window.scrollTo({ to,;
-    p: 0behavio,;
+    window.scrollTo({ t,  o,;
+    p: 0behavi, o,;
   r: 'smooth' });
   },;
   const currentYear = new Date().getFullYear();
   const footerSections = [;
     {
-      tit,  l, e: "Service, s",;
+      t,  i, t,  l, e: "Servi, c, e, s",;
+    l, i, n, k, s: [;
+        { n, a, m, e: "A, I & Mach, i, n, e, Learn, i, n, g",;
+    h, r, e, f: "/a, i-service, s" };
+        { n, a, m, e: "Mi, c, r, o, S, A, A, S, Soluti, o, n, s",;
+    h, r, e, f: "/micr, o-saa, s" };
+        { n, a, m, e: "I, T, Infrastruct, u, r, e",;
+    h, r, e, f: "/i, t-service, s" };
+        { n, a, m, e: "Emerg, i, n, g, Technolog, i, e, s",;
+    h, r, e, f: "/emergin, g-tec, h" };
+        { n, a, m, e: "Cybersecur, i, t, y",;
+    h, r, e, f: "/i, t-service, s/cybersecurit, y" };
+        { n, a, m, e: "Cl, o, u, d, Soluti, o, n, s",;
+    h, r, e, f: "/i, t-service, s/clou, d" };
+        { n, a, m, e: "Dev, O, p, s & Automat, i, o, n",;
+    h, r, e, f: "/i, t-service, s/devop, s" },;
+        { n, a, m, e: "D, a, t, a, Managem, e, n, t",;
+    h, r, e, f: "/i, t-service, s/dat, a" }
+    ,  ];
+    };
+    {
+      tit, l, e: "Solutions",;
     lin, k, s: [;
-        { na, m, e: "A, I & Machin, e Learnin, g",;
-    hr, e, f: "/ai-services" };
-        { na, m, e: "Micr, o SAA, S Solution, s",;
-    hr, e, f: "/micro-saas" };
-        { na, m, e: "I, T Infrastructur, e",;
-    hr, e, f: "/it-services" };
-        { na, m, e: "Emergin, g Technologie, s",;
-    hr, e, f: "/emerging-tech" };
-        { na, m, e: "Cybersecurit, y",;
-    hr, e, f: "/i, t-services/cybersecurity" };
-        { na, m, e: "Clou, d Solution, s",;
-    hr, e, f: "/i, t-services/cloud" };
-        { na, m, e: "DevOp, s & Automatio, n",;
-    hr, e, f: "/i, t-services/devops" },;
-        { na, m, e: "Dat, a Managemen, t",;
-    hr, e, f: "/it-services/data" }
+        { n, a, m, e: "Quan, t, u, m, Comput, i, n, g",;
+    h, r, e, f: "/emerg, i, n, g-tec, h/quantu, m" };
+        { n, a, m, e: "Blockch, a, i, n & W, e, b, 3",;
+    h, r, e, f: "/emerg, i, n, g-tec, h/blockchai, n" };
+        { n, a, m, e: "E, d, g, e, Comput, i, n, g",;
+    h, r, e, f: "/emerg, i, n, g-tec, h/edg, e" };
+        { n, a, m, e: "I, o, T, Soluti, o, n, s",;
+    h, r, e, f: "/emerg, i, n, g-tec, h/io, t" };
+        { n, a, m, e: "Healthc, a, r, e, A, I",;
+    h, r, e, f: "/a, i-service, s/healthcar, e" };
+        { n, a, m, e: "Financ, i, a, l, A, I",;
+    h, r, e, f: "/a, i-service, s/financia, l" };
+        { n, a, m, e: "Gr, e, e, n, Technol, o, g, y",;
+    h, r, e, f: "/gree, n-i, t" },;
+        { n, a, m, e: "Sp, a, c, e, Technol, o, g, y",;
+    h, r, e, f: "/emergin, g-tec, h/spac, e" }
     ,  ];
     };
     {
-      titl, e: "Solutions",;
-    link, s: [;
-        { na, m, e: "Quantu, m Computin, g",;
-    hr, e, f: "/emergin, g-tech/quantum" };
-        { na, m, e: "Blockchai, n & Web, 3",;
-    hr, e, f: "/emergin, g-tech/blockchain" };
-        { na, m, e: "Edg, e Computin, g",;
-    hr, e, f: "/emergin, g-tech/edge" };
-        { na, m, e: "Io, T Solution, s",;
-    hr, e, f: "/emergin, g-tech/iot" };
-        { na, m, e: "Healthcar, e A, I",;
-    hr, e, f: "/a, i-services/healthcare" };
-        { na, m, e: "Financia, l A, I",;
-    hr, e, f: "/a, i-services/financial" };
-        { na, m, e: "Gree, n Technolog, y",;
-    hr, e, f: "/green-it" },;
-        { na, m, e: "Spac, e Technolog, y",;
-    hr, e, f: "/emerging-tech/space" }
+      tit, l, e: "Company",;
+    lin, k, s: [;
+        { n, a, m, e: "Ab, o, u, t, U, s",;
+    h, r, e, f: "/abou, t" };
+        { n, a, m, e: "O, u, r, T, e, a, m",;
+    h, r, e, f: "/abou, t#tea, m" };
+        { n, a, m, e: "Care, e, r, s",;
+    h, r, e, f: "/career, s" };
+        { n, a, m, e: "Partn, e, r, s",;
+    h, r, e, f: "/partner, s" };
+        { n, a, m, e: "N, e, w, s & B, l, o, g",;
+    h, r, e, f: "/blo, g" };
+        { n, a, m, e: "Pr, e, s, s, K, i, t",;
+    h, r, e, f: "/pres, s" };
+        { n, a, m, e: "Inves, t, o, r, Relati, o, n, s",;
+    h, r, e, f: "/investor, s" },;
+        { n, a, m, e: "Sustainabil, i, t, y",;
+    hr, e, f: "/sustainabilit, y" }
     ,  ];
     };
     {
-      titl, e: "Company",;
-    link, s: [;
-        { na, m, e: "Abou, t U, s",;
-    hr, ef: "/about" };
-        { na, m, e: "Ou, r Tea, m",;
-    hr, e, f: "/about#team" };
-        { na, m, e: "Career, s",;
-    hr, ef: "/careers" };
-        { na, m, e: "Partner, s",;
-    hr, ef: "/partners" };
-        { na, m, e: "New, s & Blo, g",;
-    hr, ef: "/blog" };
-        { na, m, e: "Pres, s Ki, t",;
-    hr, ef: "/press" };
-        { na, m, e: "Investo, r Relation, s",;
-    hr, ef: "/investors" },;
-        { na, m, e: "Sustainabilit, y",;
-    href: "/sustainability" }
-    ,  ];
-    };
-    {
-      titl, e: "Resources",;
-    link, s: [;
-        { na, m, e: "Documentatio, n",;
-    hr, ef: "/docs" };
-        { na, m, e: "AP, I Referenc, e",;
-    hr, ef: "/api" };
-        { na, m, e: "Develope, r Porta, l",;
-    hr, ef: "/developer" };
-        { na, m, e: "Suppor, t Cente, r",;
-    hr, ef: "/support" };
-        { na, m, e: "FA, Q",;
-    hr, ef: "/faq" };
-        { na, m, e: "Contac, t U, s",;
-    hr, ef: "/contact" };
-        { na, m, e: "Cas, e Studie, s",;
-    hr, e, f: "/case-studies" },;
-        { na, m, e: "Marketplac, e",;
-    href: "/marketplace" }
+      tit, l, e: "Resources",;
+    lin, k, s: [;
+        { n, a, m, e: "Documentat, i, o, n",;
+    h, r, e, f: "/doc, s" };
+        { n, a, m, e: "A, P, I, Refere, n, c, e",;
+    h, r, e, f: "/ap, i" };
+        { n, a, m, e: "Develo, p, e, r, Por, t, a, l",;
+    h, r, e, f: "/develope, r" };
+        { n, a, m, e: "Supp, o, r, t, Cen, t, e, r",;
+    h, r, e, f: "/suppor, t" };
+        { n, a, m, e: "F, A, Q",;
+    h, r, e, f: "/fa, q" };
+        { n, a, m, e: "Cont, a, c, t, U, s",;
+    h, r, e, f: "/contac, t" };
+        { n, a, m, e: "C, a, s, e, Stud, i, e, s",;
+    h, r, e, f: "/cas, e-studie, s" },;
+        { n, a, m, e: "Marketpl, a, c, e",;
+    hr, e, f: "/marketplac, e" }
     ,  ];
     };
   ];
   const socialLinks = [;
-    { na, m, e: "LinkedI, n",;
-    hr, e, f: "htt, p, s: //linkedi, n.co, m/compan, y/ziontechgrou, p",;
-    ic, on: Linkedin };
-    { na, m, e: "Twitte, r",;
-    hr, e, f: "htt, p, s: //twitte, r.co, m/ziontechgrou, p",;
-    ic, on: Twitter };
-    { na, m, e: "Faceboo, k",;
-    hr, e, f: "htt, p, s: //faceboo, k.co, m/ziontechgrou, p",;
-    ic, on: Facebook },;
-    { na, m, e: "Instagra, m",;
-    hr, e, f: "htt, p, s: //instagra, m.co, m/ziontechgrou, p",;
-    icon: Instagram };
+    { n, a, m, e: "Linke, d, I, n",;
+    h, r, e, f: "h, t, t, p, s: //linke, d, i, n.c, o, m/comp, a, n, y/ziontechgr, o, u, p",;
+    i, c, o, n: Linkedi, n };
+    { n, a, m, e: "Twit, t, e, r",;
+    h, r, e, f: "h, t, t, p, s: //twit, t, e, r.c, o, m/ziontechgr, o, u, p",;
+    i, c, o, n: Twitte, r };
+    { n, a, m, e: "Faceb, o, o, k",;
+    h, r, e, f: "h, t, t, p, s: //faceb, o, o, k.c, o, m/ziontechgr, o, u, p",;
+    i, c, o, n: Faceboo, k },;
+    { n, a, m, e: "Instag, r, a, m",;
+    h, r, e, f: "h, t, t, p, s: //instag, r, a, m.c, o, m/ziontechgr, o, u, p",;
+    ic, o, n: Instagra, m };
 ,  ];
   return(<footer className="relative bg-gradient-to-b from-zion-slate-dark to-zion-slate-darker border-t border-zion-cyan/20">;
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-cyan/5 to-transparent" />;
       <div className="relative z-10">;
-        {/* Main, Footer, Content */}
-        <div className="max-w-7xl mx-auto px-4 s, m: px-6 l,;
+        {/* Mai, n, Foote, r, Content */}
+        <div className="max-w-7xl mx-auto px-4, s, m: px-6, l,;
   g:px-8 py-16">;
-          <div className="grid grid-cols-1 m, d: grid-cols-2 l,;
+          <div className="grid grid-cols-1, m, d: grid-cols-2, l,;
   g:grid-cols-6 gap-8">;
             {/* Company Info */}
-            <div className="lg: col-span-2">;
+            <div className="l, g: col-span-2">;
               <motion.div;
-                initial={{ opacit,;
+                initial={{ opaci, t,;
     y: 0,;
   y: 20 }};
-                whileInView={{ opacity: 1,;
+                whileInView={{ opacit, y: 1,;
   y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                viewport={{ onc, e: true }}
+                transition={{ duratio, n: 0.6 }}
               >;
                 <div className="flex items-center space-x-3 mb-6">;
-                  <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-lg, flex, items-center justify-center">;
+                  <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-l, g, fle, x, items-center justify-center">;
                     <ZapIcon className="w-6 h-6 text-white" />;
                   </div>;
-                  <span className="text-2xl font-bold text-white">ZION, TECH, GROUP</span>;
+                  <span className="text-2xl font-bold text-white">ZIO, N, TEC, H, GROUP</span>;
                 </div>;
                 <p className="text-zion-slate-light mb-6 leading-relaxed">;
-                  Leading, the, future of, technology, with cutting-edge A, I, solution, s, innovative, micro, SAA, S, platform, sand next-generation, IT, infrastructure that, transforms, businesses and, drives, innovation.;
+                  Leadin, g, th, e, futur, e, o, f, technolog, y, with cutting-edg, e, A, I, solutio, n, s, innovativ, e, micr, o, SA, A, S, platfor, m, sand next-generatio, n, I, T, infrastructur, e, tha, t, transform, s, businesse, s, an, d, drive, s, innovation.;
                 </p>;
                 {/* Contact Information */}
                 <div className="space-y-3">;
-                  <div className="flex items-center space-x-3 text-zion-slate-light hover: text-zion-cyan transition-colors duration-30o0">;
+                  <div className="flex items-center space-x-3 text-zion-slate-light hove, r: text-zion-cyan transition-colors duration-30o0">;
                     <Phone className="w-4 h-4" />;
-                    <a href="te,;
-    l:+130o24640950" className="text-sm">+1, 30o2, 464 0o950</a>;
+                    <a href="t, e,;
+    l:+130o24640950" className="text-sm">+1, 30o, 2, 464 0o950</a>;
                   </div>;
-                  <div className="flex items-center space-x-3 text-zion-slate-light hover: text-zion-cyan transition-colors duration-30o0">;
+                  <div className="flex items-center space-x-3 text-zion-slate-light hove, r: text-zion-cyan transition-colors duration-30o0">;
                     <Mail className="w-4 h-4" />;
-                    <a href="mailt,;
+                    <a href="mail, t,;
     o:kleber@ziontechgroup.com" className="text-sm">kleber@ziontechgroup.com</a>;
                   </div>;
                   <div className="flex items-start space-x-3 text-zion-slate-light">;
                     <MapPin className="w-4 h-4 mt-0.5" />;
                     <address className="text-sm not-italic">;
-                      364, E, Main St, STE, 10o08<br />;
-                      Middletown, DE, 1970o9;
+                      36, 4, E, Mai, n, S, t, ST, E, 10o08<br />;
+                      Middletow, n, D, E, 1970o9;
                     </address>;
                   </div>;
-                  <div className="flex items-center space-x-3 text-zion-slate-light hover: text-zion-cyan transition-colors duration-30o0">;
+                  <div className="flex items-center space-x-3 text-zion-slate-light hove, r: text-zion-cyan transition-colors duration-30o0">;
                     <Globe className="w-4 h-4" />;
-                    <a href="http,;
+                    <a href="htt, p,;
   s://ziontechgroup.com" className="text-sm">ziontechgroup.com</a>;
                   </div>;
                 </div>;
@@ -190,15 +190,15 @@ export, const, FuturisticFoote, r: React.FC = () => {
             {/* Footer Links */}
             {footerSections.map((sectionindex) => (<div key={section.title}>;
                 <motion.div;
-                  initial={{ opacity: 0,;
+                  initial={{ opacit,  y: 0,;
   y: 20 }};
-                  whileInView={{ opacity: 1,;
+                  whileInView={{ opacit, y: 1,;
   y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6dela,;
+                  viewport={{ onc, e: true }}
+                  transition={{ duratio, n: 0.6del, a,;
   y: index * 0.1 }}
                 >;
-                  <h3 className="text-lg font-semibold text-white mb-4, flex, items-center">;
+                  <h3 className="text-lg font-semibold text-white mb-4, fle, x, items-center">;
                     {section.title === "Services" && <Brain className="w-5 h-5 mr-2 text-zion-cyan" />}
                     {section.title === "Solutions" && <Rocket className="w-5 h-5 mr-2 text-zion-purple" />}
                     {section.title === "Company" && <Users className="w-5 h-5 mr-2 text-zion-blue" />}
@@ -209,7 +209,7 @@ export, const, FuturisticFoote, r: React.FC = () => {
                     {section.links.map((link) => (<li key={link.name}>;
                         <Link;
                           to={link.href}
-                          className="text-zion-slate-light hove,  r: text-zion-cyan transition-colors duration-30o0 text-sm hove,;
+                          className="text-zion-slate-ligh,  t, hov, e,  r: text-zion-cyan transition-colors duration-30o0 text-s, m, hov, e,;
   r:translate-x-1 inline-block";
                         >;
                           {link.name}
@@ -221,21 +221,21 @@ export, const, FuturisticFoote, r: React.FC = () => {
               </div>;
             ))}
           </div>;
-          {/* Additional, Quick, Access Section */};
+          {/* Additiona, l, Quic, k, Access Section */};
           <motion.div;
-            initial={{ opacity: 0,;
+            initial={{ opacit, y: 0,;
   y: 20 }};
-            whileInView={{ opacity: 1,;
+            whileInView={{ opacit, y: 1,;
   y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6dela,;
+            viewport={{ onc, e: true }}
+            transition={{ duratio, n: 0.6del, a,;
   y: 0.4 }}
             className="border-t border-zion-slate/30 mt-12 pt-8";
           >;
-            <div className="grid grid-cols-1 m, d: grid-cols-2 l,;
+            <div className="grid grid-cols-1, m, d: grid-cols-2, l,;
   g:grid-cols-4 gap-8 mb-8">;
               <div>;
-                <h3 className="text-lg font-semibold text-white mb-4, flex, items-center">;
+                <h3 className="text-lg font-semibold text-white mb-4, fle, x, items-center">;
                   <Zap className="w-5 h-5 mr-2 text-zion-cyan" />;
                   Quick Actions;
                 </h3>;
@@ -243,7 +243,7 @@ export, const, FuturisticFoote, r: React.FC = () => {
                   <li>;
                     <Link;
                       to="/request-quote";
-                      className="text-zion-slate-light hove, r: text-zion-cyan transition-colors duration-30o0 text-sm hove,;
+                      className="text-zion-slate-ligh, t, hov, e, r: text-zion-cyan transition-colors duration-30o0 text-s, m, hov, e,;
   r:translate-x-1 inline-block";
                     >;
                       Request Quote;
@@ -252,7 +252,7 @@ export, const, FuturisticFoote, r: React.FC = () => {
                   <li>;
                     <Link;
                       to="/demo";
-                      className="text-zion-slate-light hove, r: text-zion-cyan transition-colors duration-30o0 text-sm hove,;
+                      className="text-zion-slate-ligh, t, hov, e, r: text-zion-cyan transition-colors duration-30o0 text-s, m, hov, e,;
   r:translate-x-1 inline-block";
                     >;
                       Book Demo;
@@ -261,7 +261,7 @@ export, const, FuturisticFoote, r: React.FC = () => {
                   <li>;
                     <Link;
                       to="/support";
-                      className="text-zion-slate-light hove, r: text-zion-cyan transition-colors duration-30o0 text-sm hove,;
+                      className="text-zion-slate-ligh, t, hov, e, r: text-zion-cyan transition-colors duration-30o0 text-s, m, hov, e,;
   r:translate-x-1 inline-block";
                     >;
                       Get Support;
@@ -270,7 +270,7 @@ export, const, FuturisticFoote, r: React.FC = () => {
                   <li>;
                     <Link;
                       to="/status";
-                      className="text-zion-slate-light hove, r: text-zion-cyan transition-colors duration-30o0 text-sm hove,;
+                      className="text-zion-slate-ligh, t, hov, e, r: text-zion-cyan transition-colors duration-30o0 text-s, m, hov, e,;
   r:translate-x-1 inline-block";
                     >;
                       System Status;
@@ -282,21 +282,21 @@ export, const, FuturisticFoote, r: React.FC = () => {
           </motion.div>;
           {/* Bottom Section */}
           <motion.div;
-            initial={{ opacity: 0,;
+            initial={{ opacit, y: 0,;
   y: 20 }};
-            whileInView={{ opacity: 1,;
+            whileInView={{ opacit, y: 1,;
   y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6dela,;
+            viewport={{ onc, e: true }}
+            transition={{ duratio, n: 0.6del, a,;
   y: 0.5 }}
             className="border-t border-zion-slate/30 mt-12 pt-8";
           >;
-            <div className="flex flex-col l, g: flex-row items-center justify-between space-y-4 l,;
+            <div className="flex flex-co, l, l, g: flex-row items-center justify-between space-y-4, l,;
   g:space-y-0">;
               {/* Copyright */}
               <div className="text-zion-slate-light text-sm">;
-                © {currentYear} ZION, TECH, GROUP. All, rights, reserved.;
-                <span className="ml-2, flex, items-center">;
+                © {currentYear} ZIO, N, TEC, H, GROUP. Al, l, right, s, reserved.;
+                <span className="ml-2, fle, x, items-center">;
                   Made with <Heart className="w-4 h-4 mx-1 text-red-40o0" /> for innovation;
                 </span>;
               </div>;
@@ -308,7 +308,8 @@ export, const, FuturisticFoote, r: React.FC = () => {
                     href={social.href}
                     target="_blank";
                     rel="noopener noreferrer";
-                    className="w-10 h-10 bg-zion-slate-dark/50, border, border-zion-slate/30 rounded-lg, flex, items-center justify-center text-zion-slate-light hove,  r: text-zion-cyan hove, r: border-zion-cyan/50 hove,;
+                    className="w-10 h-10 bg-zion-slate-dark/5,  0, borde, r, border-zion-slate/30 rounded-l, g, fle, x, items-center justify-center text-zion-slate-ligh, t, hov, e,  r: text-zion-cya, n, hov, e,
+    r: border-zion-cyan/5, 0, hov, e,;
   r:bg-zion-cyan/10 transition-all duration-30o0";
                   >;
                     <social.icon className="w-5 h-5" />;
@@ -317,14 +318,14 @@ export, const, FuturisticFoote, r: React.FC = () => {
               </div>;
               {/* Legal Links */}
               <div className="flex items-center space-x-6 text-sm">;
-                <Link to="/privacy" className="text-zion-slate-light hover: text-zion-cyan transition-colors duration-30o0">;
+                <Link to="/privacy" className="text-zion-slate-light hove, r: text-zion-cyan transition-colors duration-30o0">;
                   Privacy Policy;
                 </Link>;
-                <Link to="/terms" className="text-zion-slate-light hove,;
+                <Link to="/terms" className="text-zion-slate-ligh, t, hov, e,;
     r: text-zion-cyan transition-colors duration-30o0">;
-                  Terms, of, Service;
+                  Term, s, o, f, Service;
                 </Link>;
-                <Link to="/sitemap" className="text-zion-slate-light hove,;
+                <Link to="/sitemap" className="text-zion-slate-ligh, t, hov, e,;
   r: text-zion-cyan transition-colors duration-30o0">;
                   Sitemap;
                 </Link>;
@@ -332,18 +333,19 @@ export, const, FuturisticFoote, r: React.FC = () => {
             </div>;
           </motion.div>;
         </div>;
-        {/* Scroll, to, Top Button */}
+        {/* Scrol, l, t, o, Top Button */}
         <motion.button;
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-full shadow-lg shadow-zion-cyan/25 hove, r: shadow-xl hove, r: shadow-zion-cyan/40 transition-all duration-30o0 z-50, flex, items-center justify-center group";
-          whileHover={{ scal,;
+          className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-full shadow-lg shadow-zion-cyan/2, 5, hov, e, r: shadow-x, l, hov, e,
+    r: shadow-zion-cyan/40 transition-all duration-30o0 z-5, 0, fle, x, items-center justify-center group";
+          whileHover={{ sca, l,;
   e: 1.1 }};
-          whileTap={{ scale: 0.9 }}
+          whileTap={{ scal, e: 0.9 }}
         >;
-          <ArrowUp className="w-6 h-6 group-hover:-translate-y-0.5 transition-transform duration-30o0" />;
+          <ArrowUp className="w-6 h-6 group-hove, r:-translate-y-0.5 transition-transform duration-30o0" />;
         </motion.button>;
       </div>;
-      {/* Bottom, Border, Glow */}
+      {/* Botto, m, Borde, r, Glow */}
       <div className="h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-50" />;
     </footer>;
   );

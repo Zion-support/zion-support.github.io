@@ -1,21 +1,21 @@
-import React, { useState, useEffect, useRef } from 'react';
+impor, t, Reac, t, { useStat, e, useEffec, t, useRef } from 'react';
 import { focusManagement } from '@/utils/accessibility';
 import { sendMessage } from '../services/messages';
 import { toast } from '@/hooks/use-toast';
 
 
 interface ContactPublisherModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  productId: string;
-  sellerId: string;
+  isOpe, n: boolean;
+  onClos, e: () => void;
+  productI,  d: string;
+  sellerI, d: string;
 }
 
-export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }: ContactPublisherModalProps) {
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
-  const [isLoading, setIsLoading] = useState(false); // New loading state
+export function ContactPublisherModal({ isOpe, n, onClos, e, productI, d, sellerId }: ContactPublisherModalProps) {
+  const [subje, c, t, setSubje, c, t] = useState('');
+  const [messa,  g, e, setMessa, g, e] = useState('');
+  const [err, o, r, setErr, o, r] = useState('');
+  const [isLoadi,  n, g, setIsLoadi, n, g] = useState(false); // New loading state
   const firstInputRef = useRef<HTMLInputElement | null>(null);
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -30,12 +30,12 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }: 
     }
     const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : undefined;
     firstInputRef.current?.focus();
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keydown',  handleKeyDown);
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('keydown',  handleKeyDown);
       removeTrap && removeTrap();
     };
-  }, [isOpen, onClose]);
+  },  [isOp, e, n, onClo, s, e]);
 
   if (!isOpen) {
     return null;
@@ -51,15 +51,15 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }: 
     setIsLoading(true); // Set loading true
 
     try {
-      await sendMessage({ productId }, { sellerId }, { subject }, { message });
+      await sendMessage({ productId },  { sellerId }, { subject }, { message });
       toast.success('Message sent!');
       onClose(); // Close modal
       setSubject(''); // Clear subject
       setMessage(''); // Clear message
     } catch (err) {
-      console.error('Failed to send message:', err);
+      console.error('Failed to send messag,  e:', err);
       toast.error('Failed to send message. Please try again.');
-      // Optionally, set a specific error message state if needed
+      // Optionall,  y, set a specific error message state if needed
       // setError('Failed to send message. Please try again.');
     } finally {
       setIsLoading(false); // Set loading false
@@ -76,7 +76,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }: 
       onClick={onClose}
     >
       <div
-        className="bg-white dark:bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]"
+        className="bg-white dar,  k:bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300, p, x]"
         onClick={(e) => e.stopPropagation()}
       >
         <h2 id="contact-publisher-title">Contact Publisher</h2>
@@ -84,7 +84,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }: 
           {error && <p className="text-red-500">{error}</p>}
           <div className="mb-4">
             <label htmlFor="subject" className="block mb-1 font-medium">
-              Subject:
+              Subjec,  t:
             </label>
             <input
               id="subject"
@@ -97,7 +97,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }: 
           </div>
           <div>
             <label htmlFor="message" className="block mb-1 font-medium">
-              Message:
+              Messag,  e:
             </label>
             <textarea
               id="message"
@@ -109,7 +109,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }: 
           </div>
           <button
             type="submit"
-            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+            className="px-4 py-2 bg-blue-600 text-white rounded hove,  r:bg-blue-700 disable, d:opacity-50"
             disabled={isLoading}
           >
             {isLoading ? 'Sending...' : 'Send Message'}
@@ -117,7 +117,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }: 
           <button
             type="button"
             onClick={onClose}
-            className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 disabled:opacity-50"
+            className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hove, r:bg-gray-600 disable, d:opacity-50"
             disabled={isLoading}
           >
             Cancel

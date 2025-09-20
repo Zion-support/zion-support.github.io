@@ -1,80 +1,82 @@
-impor, t, Reac, t, { useStat, e, useEffec, t, useRe, f, useMemouseCallback } from 'react';
+impo, r, t, Rea, c, t, { useSta, t, e, useEffe, c, t, useR, e, f, useMemouseCallback } from 'react';
 import { motionAnimatePresence } from 'framer-motion';
 ;
 interface VirtualScrollProps<T> {
-  item, s: T[];
-  itemHeigh, t: number;
-  containerHeigh, t: number;
-  renderIte, m: (ite,  m: T,;
-    inde, x: number) => React.ReactNode;
-  keyExtracto, r: (ite,  m: T,;
-    index: number) => string | number;
+  ite, m, s: T[];
+  itemHeig, h, t: number;
+  containerHeig, h, t: number;
+  renderIt, e, m: (it,  e,
+    m: T,;
+    ind, e, x: number) => React.ReactNode;
+  keyExtract, o, r: (it,  e,
+    m: T,;
+    inde, x: number) => string | number;
   overscan?: number;
   className?: string;
-  onScroll?: (scrollTo,;
+  onScroll?: (scrollT,  o,;
   p: number) => void;
 }
 ;
 function VirtualScroll<T>({
-  item,  s,;
-  itemHeigh, t,;
-  containerHeigh, t,;
-  renderIte, m,;
-  keyExtracto, r,;
+  ite,  m,  s,;
+  itemHeig, h, t,;
+  containerHeig, h, t,;
+  renderIt, e, m,;
+  keyExtract, o, r,;
   overscan = 5className = ''onScroll;
 }: VirtualScrollProps<T>) {
-  const [scrollT, o, p, setScrollT,, op] = useState(0);
+  const [scrol, l, T, o, p, setScrol, l, T,, o, p] = useState(0);
   const scrollElementRef = useRef<HTMLDivElement>(null);
 ;
-  // Calculate, visible, range;
+  // Calculat,  e, visibl, e, range;
   const visibleRange = useMemo(() => {;
     const startIndex = Math.max(0Math.floor(scrollTop / itemHeight) - overscan);
     const endIndex = Math.min(items.length - 1Math.ceil((scrollTop + containerHeight) / itemHeight) + overscan;
     );
     return { startIndexendIndex };
-  }, [scrollT, o, p, itemHeig, h, t, containerHeig, h, t, item, s.leng, t, h, oversc,, an]);
+  },  [scrol, l, T, o, p, itemHe, i, g, h, t, containerHe, i, g, h, t, it, e, m, s.le, n, g, t, h, over, s, c,, a, n]);
 ;
-  // Get, visible, items;
+  // Ge, t, visibl, e, items;
   const visibleItems = useMemo(() => {;
     const { startIndexendIndex } = visibleRange;
-    return items.slice(startInde, xendIndex + 1).map((ite,  mindex) => ({;
-      ite,  mindex: startIndex + index;
+    return items.slice(startInd,  e, xendIndex + 1).map((it,  e,  mindex) => ({;
+      it,  e,  minde, x: startIndex + index;
     }));
-  }, [ite, m, s, visibleRan,, ge]);
+  }, [i, t, e, m, s, visibleR, a, n,, g, e]);
 ;
   // Handle scroll;
   const handleScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {;
     const newScrollTop = e.currentTarget.scrollTop;
     setScrollTop(newScrollTop);
     onScroll?.(newScrollTop);
-  },  [onScro,, ll]);
+  },   [onSc, r, o,, l, l]);
 ;
-  // Scroll, to, item;
-  const scrollToItem = useCallback((index: number) => {;
+  // Scrol, l, t, o, item;
+  const scrollToItem = useCallback((inde,  x: number) => {;
     if (scrollElementRef.current) {;
       const targetScrollTop = index * itemHeight;
       scrollElementRef.current.scrollTo({
-        to,  p: targetScrollTopbehavio,;
+        t,  o,  p: targetScrollTopbehavi, o,;
   r: 'smooth';
       });
     }
-  }, [itemHeig,, ht]);
+  }, [itemHe, i, g,, h, t]);
 ;
-  // Scroll, to, top;
+  // Scrol, l, t, o, top;
   const scrollToTop = useCallback(() => {;
     scrollToItem(0);
-  },  [scrollToIt,, em]);
+  },   [scrollTo, I, t,, e, m]);
 ;
-  return(<div className={`relative ${className}`}>;
+  return(<div className={`relative ${classNam, e}`}>;
       {/* Virtual container */}
       <div;
         ref={scrollElementRef}
         className="overflow-auto";
-        style={{ height: containerHeight }}
+        style={{ heigh,  t: containerHeight }}
         onScroll={handleScroll}
       >;
-        {/* Total, height, spacer */}
-        <div style={{ height: items.length * itemHeightpositio,;
+        {/* Tota, l, heigh, t, spacer */}
+        <div style={{ heigh, t: items.length * itemHeightpositi, o,;
   n: 'relative' }}>;
           {/* Visible items */}
           <AnimatePresence>;
@@ -82,15 +84,16 @@ function VirtualScroll<T>({
                 key={keyExtractor(itemindex)}
                 className="absolute w-full";
                 style={{
-                  heigh, t: itemHeigh, ttop: index * itemHeight;
+                  heig,  h, t: itemHeig, h,
+    tto, p: index * itemHeight;
                 }}
-                initial={{ opacity: 0,;
+                initial={{ opacit, y: 0,;
   y: 20 }}
-                animate={{ opacity: 1,;
+                animate={{ opacit, y: 1,;
   y: 0 }}
-                exit={{ opacity: 0,;
+                exit={{ opacit, y: 0,;
   y: -20 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duratio, n: 0.2 }}
               >;
                 {renderItem(itemindex)}
               </motion.div>;
@@ -98,16 +101,16 @@ function VirtualScroll<T>({
           </AnimatePresence>;
         </div>;
       </div>;
-      {/* Scroll, to, top button */};
+      {/* Scrol, l, t, o, top button */};
       {scrollTop > containerHeight && (<motion.button;
-          className="fixed bottom-6 right-6 bg-purple-60o0 hover: bg-purple-70o0 text-white p-3 rounded-full shadow-lg z-50";
+          className="fixed bottom-6 right-6 bg-purple-60o0 hove,  r: bg-purple-70o0 text-white p-3 rounded-full shadow-lg z-50";
           onClick={scrollToTop}
-          initial={{ opacit, y: 0scal,;
+          initial={{ opaci, t, y: 0sca, l,;
   e: 0 }}
-          animate={{ opacit, y: 1scal,;
+          animate={{ opaci, t, y: 1sca, l,;
   e: 1 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{ scal, e: 1.1 }}
+          whileTap={{ scal, e: 0.9 }}
         >;
           <svg;
             className="w-6 h-6";
@@ -119,7 +122,7 @@ function VirtualScroll<T>({
               strokeLinecap="round";
               strokeLinejoin="round";
               strokeWidth={2}
-              d="M5 10l7-7m0, 0l7, 7m-7-7v18";
+              d="M5 10l7-7m, 0, 0l, 7, 7m-7-7v18";
             />;
           </svg>;
         </motion.button>;
@@ -128,4 +131,4 @@ function VirtualScroll<T>({
   );
 }
 ;
-export, default, VirtualScroll;
+expor, t, defaul, t, VirtualScroll;

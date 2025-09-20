@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+impor, t, Reac, t, { useEffec, t, useRef } from 'react';
 
 interface FuturisticAnimatedBackgroundProps {
   className?: string;
@@ -6,8 +6,8 @@ interface FuturisticAnimatedBackgroundProps {
   colorScheme?: 'blue' | 'purple' | 'green' | 'multi';
 }
 
-export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> = ({
-  className = '',
+export const FuturisticAnimatedBackgroun, d: React.FC<FuturisticAnimatedBackgroundProps> = ({
+  className = '', 
   intensity = 'medium',
   colorScheme = 'multi'
 }) => {
@@ -28,44 +28,44 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
     };
 
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('resize',  resizeCanvas);
 
     // Particle system
-    const particles: Array<{
+    const particle, s: Array<{
       x: number;
       y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
-      life: number;
-      maxLife: number;
+      v, x: number;
+      v, y: number;
+      siz, e: number;
+      opacit, y: number;
+      colo, r: string;
+      lif, e: number;
+      maxLif, e: number;
     }> = [];
 
     // Color schemes
     const colorSchemes = {
-      blue: ['#00ffff', '#0080ff', '#0040ff', '#0000ff'],
-      purple: ['#ff00ff', '#8000ff', '#4000ff', '#0000ff'],
-      green: ['#00ff00', '#00ff80', '#00ff40', '#00ff00'],
-      multi: ['#00ffff', '#ff00ff', '#00ff00', '#ffff00', '#ff8000', '#8000ff']
+      blu, e: ['#00fff, f', '#0080f, f', '#0040f, f', '#0000f, f'],
+      purpl, e: ['#ff00f, f', '#8000f, f', '#4000f, f', '#0000f, f'],
+      gree, n: ['#00ff0, 0', '#00ff8, 0', '#00ff4, 0', '#00ff0, 0'],
+      mult, i: ['#00fff, f', '#ff00f, f', '#00ff0, 0', '#ffff0, 0', '#ff800, 0', '#8000f, f']
     };
 
-    const colors = colorSchemes[colorScheme];
+    const colors = colorSchemes[colorSche, m, e];
     const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
 
     // Initialize particles
     for (let i = 0; i < particleCount; i++) {
       particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 2,
-        vy: (Math.random() - 0.5) * 2,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.5 + 0.1,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        life: Math.random() * 100,
-        maxLife: 100
+        x: Math.random() * canvas.widt,  h,
+    y: Math.random() * canvas.heigh, t,
+        v, x: (Math.random() - 0.5) * 2, 
+    v, y: (Math.random() - 0.5) * 2,
+        siz, e: Math.random() * 3 + 1, 
+    opacit, y: Math.random() * 0.5 + 0.1,
+        colo, r: colors[Mat, h.floo, r(Mat,  h.rando, m() * color, s.lengt, h)],
+    lif, e: Math.random() * 10,  0,
+        maxLif, e: 100
       });
     }
 
@@ -76,31 +76,31 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
     // Animation loop
     const animate = () => {
       // Clear canvas with fade effect
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(0,  0, 0, 0.1)';
+      ctx.fillRect(0,  0, canvas.widt, h, canvas.height);
 
       // Draw grid
-      ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity})`;
+      ctx.strokeStyle = `rgba(0,  25, 5, 25, 5, ${gridOpacit, y})`;
       ctx.lineWidth = 1;
 
       // Vertical lines
       for (let x = 0; x < canvas.width; x += gridSize) {
         ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
+        ctx.moveTo(x,  0);
+        ctx.lineTo(x,  canvas.height);
         ctx.stroke();
       }
 
       // Horizontal lines
       for (let y = 0; y < canvas.height; y += gridSize) {
         ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
+        ctx.moveTo(0,  y);
+        ctx.lineTo(canvas.widt,  h, y);
         ctx.stroke();
       }
 
       // Update and draw particles
-      particles.forEach((particle, index) => {
+      particles.forEach((particl,  e, index) => {
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -123,26 +123,26 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
 
         // Draw particle
         const alpha = (particle.life / particle.maxLife) * particle.opacity;
-        ctx.fillStyle = `${particle.color}${Math.floor(alpha * 255).toString(16).padStart(2, '0')}`;
+        ctx.fillStyle = `${particle.color}${Math.floor(alpha * 255).toString(16).padStar, t(2,  '0')}`;
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.arc(particle.x,  particle.y, particle.siz, e, 0, Math.PI * 2);
         ctx.fill();
 
         // Draw glow effect
         const gradient = ctx.createRadialGradient(
-          particle.x, particle.y, 0,
+          particle.x,  particle.y, 0,
           particle.x, particle.y, particle.size * 3
         );
-        gradient.addColorStop(0, `${particle.color}${Math.floor(alpha * 100).toString(16).padStart(2, '0')}`);
-        gradient.addColorStop(1, 'transparent');
+        gradient.addColorStop(0,  `${particle.color}${Math.floor(alpha * 100).toString(16).padStar, t(2,  '0')}`);
+        gradient.addColorStop(1,  'transparent');
         ctx.fillStyle = gradient;
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
+        ctx.arc(particle.x,  particle.y, particle.size * 3, 0, Math.PI * 2);
         ctx.fill();
       });
 
       // Draw connecting lines between nearby particles
-      ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity * 0.5})`;
+      ctx.strokeStyle = `rgba(0,  25, 5, 25, 5, ${gridOpacit, y * 0.5})`;
       ctx.lineWidth = 0.5;
 
       for (let i = 0; i < particles.length; i++) {
@@ -153,10 +153,10 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
 
           if (distance < 100) {
             const alpha = (1 - distance / 100) * gridOpacity * 0.5;
-            ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
+            ctx.strokeStyle = `rgba(0,  25, 5, 25, 5, ${alph, a})`;
             ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.moveTo(particles[i].x,  particles[i].y);
+            ctx.lineTo(particles[j].x,  particles[j].y);
             ctx.stroke();
           }
         }
@@ -171,32 +171,32 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         const alpha = (Math.sin(time * 2 + i) + 1) * 0.1 + 0.05;
 
         // Orb glow
-        const gradient = ctx.createRadialGradient(x, y, 0, x, y, size * 2);
-        gradient.addColorStop(0, `rgba(0, 255, 255, ${alpha})`);
-        gradient.addColorStop(0.5, `rgba(0, 255, 255, ${alpha * 0.5})`);
-        gradient.addColorStop(1, 'transparent');
+        const gradient = ctx.createRadialGradient(x,  y, 0, x, y, size * 2);
+        gradient.addColorStop(0,  `rgba(0, 25, 5, 25, 5, ${alph, a})`);
+        gradient.addColorStop(0.5,  `rgba(0, 25, 5, 25, 5, ${alph, a * 0.5})`);
+        gradient.addColorStop(1,  'transparent');
 
         ctx.fillStyle = gradient;
         ctx.beginPath();
-        ctx.arc(x, y, size * 2, 0, Math.PI * 2);
+        ctx.arc(x,  y, size * 2, 0, Math.PI * 2);
         ctx.fill();
 
         // Orb core
-        ctx.fillStyle = `rgba(0, 255, 255, ${alpha * 2})`;
+        ctx.fillStyle = `rgba(0,  25, 5, 25, 5, ${alph, a * 2})`;
         ctx.beginPath();
-        ctx.arc(x, y, size * 0.3, 0, Math.PI * 2);
+        ctx.arc(x,  y, size * 0.3, 0, Math.PI * 2);
         ctx.fill();
       }
 
       // Draw scanning line effect
       const scanY = (time * 50) % (canvas.height + 100) - 50;
-      const scanGradient = ctx.createLinearGradient(0, scanY - 2, 0, scanY + 2);
-      scanGradient.addColorStop(0, 'transparent');
-      scanGradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.3)');
-      scanGradient.addColorStop(1, 'transparent');
+      const scanGradient = ctx.createLinearGradient(0,  scanY - 2, 0, scanY + 2);
+      scanGradient.addColorStop(0,  'transparent');
+      scanGradient.addColorStop(0.5,  'rgba(0, 25, 5, 25, 5, 0.3)');
+      scanGradient.addColorStop(1,  'transparent');
 
       ctx.fillStyle = scanGradient;
-      ctx.fillRect(0, scanY - 2, canvas.width, 4);
+      ctx.fillRect(0,  scanY - 2, canvas.widt, h, 4);
 
       animationRef.current = requestAnimationFrame(animate);
     };
@@ -207,15 +207,14 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize',  resizeCanvas);
     };
-  }, [intensity, colorScheme]);
+  }, [intensi, t, y, colorSche, m, e]);
 
-  return (
-    <canvas
+  return (<canvas
       ref={canvasRef}
-      className={`fixed inset-0 pointer-events-none ${className}`}
-      style={{ zIndex: -1 }}
+      className={`fixed inset-0 pointer-events-none ${classNam, e}`}
+      style={{ zInde,  x: -1 }}
     />
   );
 };

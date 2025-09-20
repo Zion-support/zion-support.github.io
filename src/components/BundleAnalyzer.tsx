@@ -1,393 +1,216 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BarChart3, 
-  TrendingDown, 
-  TrendingUp, 
-  AlertTriangle, 
-  CheckCircle, 
-  Info,
-  HardDrive,
-  Zap,
-  Clock,
-  Target,
-  X,
-  RefreshCw
-} from 'lucide-react';
 
-interface BundleChunk {
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+
+interface BundleModule {
   name: string;
   size: number;
   gzipSize: number;
-  type: 'vendor' | 'page' | 'common';
-  optimization: 'good' | 'warning' | 'critical';
-}
-
-interface BundleAnalysis {
-  totalSize: number;
-  totalGzipSize: number;
-  chunkCount: number;
-  chunks: BundleChunk[];
-  recommendations: string[];
-  score: number;
-  lastUpdated: Date;
+  percentage: number;
+  children?: BundleModule[];
 }
 
 export const BundleAnalyzer: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [analysis, setAnalysis] = useState<BundleAnalysis | null>(null);
+  const [modules, setModules] = useState<BundleModule[]>([]);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [activeTab, setActiveTab] = useState<'overview' | 'chunks' | 'recommendations'>('overview');
+  const [totalSize, setTotalSize] = useState(0);
 
-  // Analyze bundle size from build output
-  const analyzeBundle = useCallback(async () => {
+  const analyzeBundle = async () => {
     setIsAnalyzing(true);
     
     try {
-      // Simulate bundle analysis based on build output
-      // In a real implementation, this would fetch actual bundle stats
-      const mockAnalysis: BundleAnalysis = {
-        totalSize: 1200000, // ~1.2MB
-        totalGzipSize: 400000, // ~400KB gzipped
-        chunkCount: 45,
-        chunks: [
-          {
-            name: 'react-vendor',
-            size: 170000,
-            gzipSize: 55000,
-            type: 'vendor',
-            optimization: 'good'
-          },
-          {
-            name: 'animation-vendor',
-            size: 114000,
-            gzipSize: 36000,
-            type: 'vendor',
-            optimization: 'warning'
-          },
-          {
-            name: 'ui-vendor',
-            size: 72000,
-            gzipSize: 24000,
-            type: 'vendor',
-            optimization: 'good'
-          },
-          {
-            name: 'index',
-            size: 89000,
-            gzipSize: 24000,
-            type: 'page',
-            optimization: 'good'
-          },
-          {
-            name: 'ServicesOverview',
-            size: 42800,
-            gzipSize: 10700,
-            type: 'page',
-            optimization: 'good'
-          },
-          {
-            name: 'Pricing',
-            size: 51200,
-            gzipSize: 11900,
-            type: 'page',
-            optimization: 'warning'
-          },
-          {
-            name: 'stripe-vendor',
-            size: 0,
-            gzipSize: 0,
-            type: 'vendor',
-            optimization: 'critical'
-          },
-          {
-            name: 'pdf-vendor',
-            size: 0,
-            gzipSize: 0,
-            type: 'vendor',
-            optimization: 'critical'
-          }
-        ],
-        recommendations: [
-          'Consolidate empty vendor chunks (stripe-vendor, pdf-vendor)',
-          'Consider code splitting for ServicesOverview page',
-          'Optimize animation-vendor bundle size',
-          'Implement tree shaking for unused dependencies',
-          'Add bundle size monitoring to CI/CD pipeline'
-        ],
-        score: 78,
-        lastUpdated: new Date()
-      };
-
-      setAnalysis(mockAnalysis);
+      // Simulate bundle analysis
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      const mockModules: BundleModule[] = [
+        {
+          name: 'react-vendor',
+          size: 179090,
+          gzipSize: 57640,
+          percentage: 45.2,
+          children: [
+            { name: 'react', size: 45000, gzipSize: 12000, percentage: 11.3 },
+            { name: 'react-dom', size: 52000, gzipSize: 15000, percentage: 13.1 }
+          ]
+        },
+        {
+          name: 'vendor',
+          size: 120540,
+          gzipSize: 41640,
+          percentage: 30.4,
+          children: [
+            { name: 'lodash', size: 35000, gzipSize: 12000, percentage: 8.8 },
+            { name: 'moment', size: 28000, gzipSize: 8000, percentage: 7.1 }
+          ]
+        },
+        {
+          name: 'app',
+          size: 50150,
+          gzipSize: 13750,
+          percentage: 12.6,
+          children: [
+            { name: 'components', size: 25000, gzipSize: 7000, percentage: 6.3 },
+            { name: 'pages', size: 15000, gzipSize: 4000, percentage: 3.8 }
+          ]
+        },
+        {
+          name: 'styles',
+          size: 339140,
+          gzipSize: 43120,
+          percentage: 85.5,
+          children: [
+            { name: 'tailwind', size: 200000, gzipSize: 25000, percentage: 50.4 },
+            { name: 'custom', size: 139140, gzipSize: 18120, percentage: 35.1 }
+          ]
+        }
+      ];
+      
+      const total = mockModules.reduce((sum, module) => sum + module.size, 0);
+      setModules(mockModules);
+      setTotalSize(total);
     } catch (error) {
-      console.error('Bundle analysis failed:', error);
+      console.error('Error analyzing bundle:', error);
     } finally {
       setIsAnalyzing(false);
     }
-  }, []);
+  };
 
   useEffect(() => {
     analyzeBundle();
-  }, [analyzeBundle]);
+  }, []);
 
   const formatBytes = (bytes: number) => {
-    if (bytes === 0) return '0 B';
+    if (bytes === 0) return '0 Bytes';
     const k = 1024;
-    const sizes = ['B', 'KB', 'MB', 'GB'];
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
 
-  const getScoreColor = (score: number) => {
-    if (score >= 80) return 'text-green-500';
-    if (score >= 60) return 'text-yellow-500';
-    return 'text-red-500';
+  const getSizeColor = (percentage: number) => {
+    if (percentage > 50) return 'text-red-400';
+    if (percentage > 25) return 'text-yellow-400';
+    return 'text-green-400';
   };
 
-  const getScoreIcon = (score: number) => {
-    if (score >= 80) return <CheckCircle className="w-5 h-5" />;
-    if (score >= 60) return <AlertTriangle className="w-5 h-5" />;
-    return <AlertTriangle className="w-5 h-5" />;
+  const getSizeBg = (percentage: number) => {
+    if (percentage > 50) return 'bg-red-500/20 border-red-500/30';
+    if (percentage > 25) return 'bg-yellow-500/20 border-yellow-500/30';
+    return 'bg-green-500/20 border-green-500/30';
   };
-
-  const getOptimizationColor = (optimization: string) => {
-    switch (optimization) {
-      case 'good': return 'text-green-500 bg-green-100 dark:bg-green-900/20';
-      case 'warning': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20';
-      case 'critical': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
-      default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
-    }
-  };
-
-  const getOptimizationIcon = (optimization: string) => {
-    switch (optimization) {
-      case 'good': return <CheckCircle className="w-4 h-4" />;
-      case 'warning': return <AlertTriangle className="w-4 h-4" />;
-      case 'critical': return <AlertTriangle className="w-4 h-4" />;
-      default: return <Info className="w-4 h-4" />;
-    }
-  };
-
-  if (!analysis) return null;
 
   return (
-    <>
-      {/* Bundle Analyzer Button */}
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-4 right-4 z-50 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        aria-label="Bundle analyzer"
-        aria-expanded={isOpen}
+    <div className="p-6 bg-gray-900 min-h-screen">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="max-w-6xl mx-auto"
       >
-        <BarChart3 className="w-6 h-6" />
-      </motion.button>
-
-      {/* Bundle Analysis Panel */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="fixed top-4 right-20 z-50 w-96 bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden"
-            role="dialog"
-            aria-label="Bundle Analysis"
+        <div className="flex items-center justify-between mb-8">
+          <h1 className="text-3xl font-bold text-white">Bundle Analyzer</h1>
+          <button
+            onClick={analyzeBundle}
+            disabled={isAnalyzing}
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
           >
-            {/* Header */}
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold flex items-center gap-2">
-                  <BarChart3 className="w-5 h-5" />
-                  Bundle Analyzer
-                </h3>
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="text-white/80 hover:text-white transition-colors p-1 rounded-full hover:bg-white/20"
-                  aria-label="Close bundle analyzer"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-              <p className="text-purple-100 text-sm mt-1">
-                Performance optimization insights
-              </p>
-            </div>
+            {isAnalyzing ? 'Analyzing...' : 'Re-analyze'}
+          </button>
+        </div>
 
-            {/* Tab Navigation */}
-            <div className="flex border-b border-gray-200 dark:border-gray-700">
-              {[
-                { id: 'overview', label: 'Overview', icon: BarChart3 },
-                { id: 'chunks', label: 'Chunks', icon: HardDrive },
-                { id: 'recommendations', label: 'Tips', icon: Target }
-              ].map(({ id, label, icon: Icon }) => (
-                <button
-                  key={id}
-                  onClick={() => setActiveTab(id as any)}
-                  className={`flex-1 flex items-center justify-center gap-2 py-3 px-4 text-sm font-medium transition-colors ${
-                    activeTab === id
-                      ? 'text-purple-600 border-b-2 border-purple-600 bg-purple-50 dark:bg-purple-900/20'
-                      : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
+        {/* Total Size */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="bg-blue-500/20 border border-blue-500/30 p-6 rounded-lg mb-8"
+        >
+          <div className="text-center">
+            <div className="text-4xl font-bold text-white mb-2">{formatBytes(totalSize)}</div>
+            <div className="text-gray-300">Total Bundle Size</div>
+          </div>
+        </motion.div>
+
+        {/* Modules */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {modules.map((module, index) => (
+            <motion.div
+              key={module.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className={`p-6 rounded-lg border ${getSizeBg(module.percentage)}`}
+            >
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-xl font-semibold text-white capitalize">{module.name}</h3>
+                <span className={`text-lg font-bold ${getSizeColor(module.percentage)}`}>
+                  {module.percentage.toFixed(1)}%
+                </span>
+              </div>
+              
+              <div className="space-y-2 mb-4">
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-400">Raw Size:</span>
+                  <span className="text-white">{formatBytes(module.size)}</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-400">Gzipped:</span>
+                  <span className="text-white">{formatBytes(module.gzipSize)}</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-400">Compression Ratio:</span>
+                  <span className="text-white">
+                    {((1 - module.gzipSize / module.size) * 100).toFixed(1)}%
+                  </span>
+                </div>
+              </div>
+
+              {/* Progress Bar */}
+              <div className="w-full bg-gray-700 rounded-full h-2 mb-4">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: `${module.percentage}%` }}
+                  transition={{ duration: 1, delay: index * 0.1 }}
+                  className={`h-2 rounded-full ${
+                    module.percentage > 50 ? 'bg-red-500' :
+                    module.percentage > 25 ? 'bg-yellow-500' : 'bg-green-500'
                   }`}
-                  aria-selected={activeTab === id}
-                  role="tab"
-                >
-                  <Icon className="w-4 h-4" />
-                  {label}
-                </button>
-              ))}
-            </div>
-
-            {/* Tab Content */}
-            <div className="p-4 max-h-96 overflow-y-auto">
-              {/* Overview Tab */}
-              {activeTab === 'overview' && (
-                <div className="space-y-4">
-                  {/* Bundle Score */}
-                  <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
-                    <div className="flex items-center justify-center gap-2 mb-2">
-                      {getScoreIcon(analysis.score)}
-                      <span className="text-gray-700 dark:text-gray-300 font-medium">Bundle Score</span>
-                    </div>
-                    <div className={`text-4xl font-bold ${getScoreColor(analysis.score)}`}>
-                      {analysis.score}/100
-                    </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                      {analysis.score >= 80 ? 'Excellent' : 
-                       analysis.score >= 60 ? 'Good' : 'Needs Improvement'}
-                    </div>
-                  </div>
-
-                  {/* Bundle Stats */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3 border border-gray-200 dark:border-gray-700">
-                      <div className="flex items-center gap-2 mb-2">
-                        <HardDrive className="w-4 h-4 text-blue-500" />
-                        <span className="text-sm text-gray-600 dark:text-gray-400">Total Size</span>
-                      </div>
-                      <div className="text-lg font-semibold text-gray-900 dark:text-white">
-                        {formatBytes(analysis.totalSize)}
-                      </div>
-                      <div className="text-xs text-gray-500 dark:text-gray-500">
-                        {formatBytes(analysis.totalGzipSize)} gzipped
-                      </div>
-                    </div>
-
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3 border border-gray-200 dark:border-gray-700">
-                      <div className="flex items-center gap-2 mb-2">
-                        <Zap className="w-4 h-4 text-green-500" />
-                        <span className="text-sm text-gray-600 dark:text-gray-400">Chunks</span>
-                      </div>
-                      <div className="text-lg font-semibold text-gray-900 dark:text-white">
-                        {analysis.chunkCount}
-                      </div>
-                      <div className="text-xs text-gray-500 dark:text-gray-500">
-                        {analysis.chunks.filter(c => c.optimization === 'good').length} optimized
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Quick Actions */}
-                  <div className="space-y-2">
-                    <h4 className="font-medium text-gray-900 dark:text-white text-sm">Quick Actions</h4>
-                    <button
-                      onClick={analyzeBundle}
-                      disabled={isAnalyzing}
-                      className="w-full flex items-center justify-center gap-2 p-2 bg-purple-100 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 rounded-lg hover:bg-purple-200 dark:hover:bg-purple-900/40 transition-colors disabled:opacity-50"
-                    >
-                      <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`} />
-                      {isAnalyzing ? 'Analyzing...' : 'Refresh Analysis'}
-                    </button>
-                  </div>
-                </div>
-              )}
-
-              {/* Chunks Tab */}
-              {activeTab === 'chunks' && (
-                <div className="space-y-3">
-                  <h4 className="font-medium text-gray-900 dark:text-white text-sm mb-3">Bundle Chunks</h4>
-                  {analysis.chunks.map((chunk, index) => (
-                    <div
-                      key={index}
-                      className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700"
-                    >
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm font-medium text-gray-900 dark:text-white">
-                            {chunk.name}
-                          </span>
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getOptimizationColor(chunk.optimization)}`}>
-                            {chunk.optimization}
-                          </span>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-sm font-medium text-gray-900 dark:text-white">
-                            {formatBytes(chunk.size)}
-                          </div>
-                          <div className="text-xs text-gray-500 dark:text-gray-500">
-                            {formatBytes(chunk.gzipSize)} gzipped
-                          </div>
-                        </div>
-                      </div>
-                      
-                      {chunk.optimization !== 'good' && (
-                        <div className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
-                          {getOptimizationIcon(chunk.optimization)}
-                          <span>
-                            {chunk.optimization === 'critical' 
-                              ? 'Empty chunk - consider removing' 
-                              : 'Consider optimization'}
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {/* Recommendations Tab */}
-              {activeTab === 'recommendations' && (
-                <div className="space-y-3">
-                  <h4 className="font-medium text-gray-900 dark:text-white text-sm mb-3">Optimization Tips</h4>
-                  {analysis.recommendations.map((recommendation, index) => (
-                    <div
-                      key={index}
-                      className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg"
-                    >
-                      <div className="flex items-start gap-2">
-                        <Target className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-                        <p className="text-sm text-blue-800 dark:text-blue-200">
-                          {recommendation}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                  
-                  <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
-                    <div className="flex items-start gap-2">
-                      <Info className="w-4 h-4 text-yellow-600 dark:text-yellow-400 mt-0.5 flex-shrink-0" />
-                      <div className="text-sm text-yellow-800 dark:text-yellow-200">
-                        <p className="font-medium mb-1">Pro Tip</p>
-                        <p>Monitor bundle size in your CI/CD pipeline to catch size increases early.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Footer */}
-            <div className="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 p-3 text-center">
-              <div className="text-xs text-gray-500 dark:text-gray-400">
-                Last updated: {analysis.lastUpdated.toLocaleTimeString()}
+                />
               </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+
+              {/* Children */}
+              {module.children && (
+                <div className="space-y-2">
+                  <h4 className="text-sm font-medium text-gray-300">Sub-modules:</h4>
+                  {module.children.map((child, childIndex) => (
+                    <div key={child.name} className="flex justify-between text-xs">
+                      <span className="text-gray-400">{child.name}:</span>
+                      <span className="text-white">{formatBytes(child.size)} ({child.percentage.toFixed(1)}%)</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Optimization Tips */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="mt-8 bg-yellow-500/20 border border-yellow-500/30 p-6 rounded-lg"
+        >
+          <h3 className="text-xl font-semibold text-white mb-4">Optimization Recommendations</h3>
+          <ul className="space-y-2 text-gray-300">
+            <li>• Consider code splitting for large vendor bundles</li>
+            <li>• Implement tree shaking to remove unused code</li>
+            <li>• Use dynamic imports for route-based code splitting</li>
+            <li>• Optimize images and use modern formats (WebP, AVIF)</li>
+            <li>• Enable compression (gzip/brotli) on your server</li>
+          </ul>
+        </motion.div>
+      </motion.div>
+    </div>
   );
 };
+
+export default BundleAnalyzer;

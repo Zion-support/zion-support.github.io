@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
+impor, t, Reac, t, { useState } from 'react';
 import { Button } from './ui/Button';
 const ContactForm = () => {
-    const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
+    const [formDa,  t, a, setFormDa, t, a] = useState({
+        firstNam, e: '',
+    lastNam, e: '',
+        emai, l: '',
+    compan, y: '',
+        phon, e: '',
+    servic, e: '',
+        messag, e: ''
     });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState('idle');
+    const [isSubmitti, n, g, setIsSubmitti, n, g] = useState(false);
+    const [submitStat,  u, s, setSubmitStat, u, s] = useState('idle');
     const handleInputChange = (e) => {
-        const { name, value } = e.target;
+        const { nam,  e, value } = e.target;
         setFormData(prev => ({
-            ...prev,
-            [name]: value
+            ...pre, v,
+            [na, m, e]: value
         }));
     };
     const handleSubmit = async (e) => {
@@ -25,23 +25,23 @@ const ContactForm = () => {
         setSubmitStatus('idle');
         try {
             // Simulate API call
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            await new Promise(resolve => setTimeout(resolv,  e, 2000));
             // Reset form on success
             setFormData({
-                firstName: '',
-                lastName: '',
-                email: '',
-                company: '',
-                phone: '',
-                service: '',
-                message: ''
+                firstNam,  e: '',
+    lastNam, e: '',
+                emai, l: '',
+    compan, y: '',
+                phon, e: '',
+    servic, e: '',
+                messag, e: ''
             });
             setSubmitStatus('success');
-            setTimeout(() => setSubmitStatus('idle'), 5000);
+            setTimeout(() => setSubmitStatus('idle'),  5000);
         }
         catch (error) {
             setSubmitStatus('error');
-            setTimeout(() => setSubmitStatus('idle'), 5000);
+            setTimeout(() => setSubmitStatus('idle'),  5000);
         }
         finally {
             setIsSubmitting(false);
@@ -68,35 +68,35 @@ const ContactForm = () => {
         </div>)}
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 m,  d:grid-cols-2 gap-6">
           <div>
             <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
               First Name *
             </label>
-            <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleInputChange} required className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your first name"/>
+            <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleInputChange} required className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s:border-transparent transition-all duration-300" placeholder="Enter your first name"/>
           </div>
 
           <div>
             <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
               Last Name *
             </label>
-            <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleInputChange} required className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your last name"/>
+            <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleInputChange} required className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s:border-transparent transition-all duration-300" placeholder="Enter your last name"/>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 m, d:grid-cols-2 gap-6">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
               Email Address *
             </label>
-            <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your email address"/>
+            <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s:border-transparent transition-all duration-300" placeholder="Enter your email address"/>
           </div>
 
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
               Phone Number
             </label>
-            <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your phone number"/>
+            <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s:border-transparent transition-all duration-300" placeholder="Enter your phone number"/>
           </div>
         </div>
 
@@ -104,14 +104,14 @@ const ContactForm = () => {
           <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
             Company Name
           </label>
-          <input type="text" id="company" name="company" value={formData.company} onChange={handleInputChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your company name"/>
+          <input type="text" id="company" name="company" value={formData.company} onChange={handleInputChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s:border-transparent transition-all duration-300" placeholder="Enter your company name"/>
         </div>
 
         <div>
           <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
             Service of Interest
           </label>
-          <select id="service" name="service" value={formData.service} onChange={handleInputChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
+          <select id="service" name="service" value={formData.service} onChange={handleInputChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s:border-transparent transition-all duration-300">
             <option value="">Select a service</option>
             <option value="ai-solutions">AI & Machine Learning</option>
             <option value="cloud-devops">Cloud & DevOps</option>
@@ -128,7 +128,7 @@ const ContactForm = () => {
           <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
             Message *
           </label>
-          <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} required rows={5} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none" placeholder="Tell us about your project or how we can help..."/>
+          <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} required rows={5} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s:border-transparent transition-all duration-300 resize-none" placeholder="Tell us about your project or how we can help..."/>
         </div>
 
         <div className="pt-4">
@@ -138,12 +138,12 @@ const ContactForm = () => {
         </div>
 
         <p className="text-xs text-gray-400 text-center">
-          By submitting this form, you agree to our{' '}
-          <a href="/privacy" className="text-blue-400 hover:text-blue-300 underline">
+          By submitting thi, s, for, m, you agree to our{' '}
+          <a href="/privacy" className="text-blue-400 hove, r:text-blue-300 underline">
             Privacy Policy
           </a>{' '}
           and{' '}
-          <a href="/terms" className="text-blue-400 hover:text-blue-300 underline">
+          <a href="/terms" className="text-blue-400 hove, r:text-blue-300 underline">
             Terms of Service
           </a>
           .

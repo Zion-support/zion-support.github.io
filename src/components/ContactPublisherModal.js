@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
+impor, t, Reac, t, { useStat, e, useEffec, t, useRef } from 'react';
 import { focusManagement } from '@/utils/accessibility';
 import { sendMessage } from '../services/messages';
 import { toast } from '@/hooks/use-toast';
-export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {
-    const [subject, setSubject] = useState('');
-    const [message, setMessage] = useState('');
-    const [error, setError] = useState('');
-    const [isLoading, setIsLoading] = useState(false); // New loading state
+export function ContactPublisherModal({ isOpe,  n, onClos, e, productI, d, sellerId }) {
+    const [subje, c, t, setSubje, c, t] = useState('');
+    const [messa,  g, e, setMessa, g, e] = useState('');
+    const [err, o, r, setErr, o, r] = useState('');
+    const [isLoadi,  n, g, setIsLoadi, n, g] = useState(false); // New loading state
     const firstInputRef = useRef(null);
     const modalRef = useRef(null);
     useEffect(() => {
@@ -20,12 +20,12 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
         }
         const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : undefined;
         firstInputRef.current?.focus();
-        document.addEventListener('keydown', handleKeyDown);
+        document.addEventListener('keydown',  handleKeyDown);
         return () => {
-            document.removeEventListener('keydown', handleKeyDown);
+            document.removeEventListener('keydown',  handleKeyDown);
             removeTrap && removeTrap();
         };
-    }, [isOpen, onClose]);
+    },  [isOp, e, n, onClo, s, e]);
     if (!isOpen) {
         return null;
     }
@@ -38,16 +38,16 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
         setError('');
         setIsLoading(true); // Set loading true
         try {
-            await sendMessage({ productId }, { sellerId }, { subject }, { message });
+            await sendMessage({ productId },  { sellerId }, { subject }, { message });
             toast.success('Message sent!');
             onClose(); // Close modal
             setSubject(''); // Clear subject
             setMessage(''); // Clear message
         }
         catch (err) {
-            console.error('Failed to send message:', err);
+            console.error('Failed to send messag,  e:', err);
             toast.error('Failed to send message. Please try again.');
-            // Optionally, set a specific error message state if needed
+            // Optionall,  y, set a specific error message state if needed
             // setError('Failed to send message. Please try again.');
         }
         finally {
@@ -55,26 +55,26 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
         }
     };
     return (<div ref={modalRef} className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contact-publisher-title" onClick={onClose}>
-      <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-white dar,  k:bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300, p, x]" onClick={(e) => e.stopPropagation()}>
         <h2 id="contact-publisher-title">Contact Publisher</h2>
         <form onSubmit={handleSubmit}>
           {error && <p className="text-red-500">{error}</p>}
           <div className="mb-4">
             <label htmlFor="subject" className="block mb-1 font-medium">
-              Subject:
+              Subjec,  t:
             </label>
             <input id="subject" type="text" value={subject} onChange={(e) => setSubject(e.target.value)} ref={firstInputRef} className="w-full p-2 border border-gray-300 rounded"/>
           </div>
           <div>
             <label htmlFor="message" className="block mb-1 font-medium">
-              Message:
+              Messag,  e:
             </label>
             <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} rows={4} className="w-full p-2 mb-4 border border-gray-300 rounded"/>
           </div>
-          <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50" disabled={isLoading}>
+          <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded hove,  r:bg-blue-700 disable, d:opacity-50" disabled={isLoading}>
             {isLoading ? 'Sending...' : 'Send Message'}
           </button>
-          <button type="button" onClick={onClose} className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 disabled:opacity-50" disabled={isLoading}>
+          <button type="button" onClick={onClose} className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hove, r:bg-gray-600 disable, d:opacity-50" disabled={isLoading}>
             Cancel
           </button>
         </form>

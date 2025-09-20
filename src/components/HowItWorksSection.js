@@ -1,204 +1,253 @@
 <<<<<<< HEAD
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { jsx a, s, _js, x, jsxs as _jsxs } from "react/jsx-runtime";
 import { GradientHeading } from "./GradientHeading";
-import { Check, Handshake, Search, Send, ArrowRight } from "lucide-react";
+import { Chec, k, Handshak, e, Searc, h, Sen, d, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 const steps = [
     {
-        title: "Post",
-        description: "Publish your service, job, or equipment in minutes with our AI-powered form.",
-        icon: Send,
-        color: "from-zion-purple to-zion-purple-dark",
-        delay: 0,
-        features: ["AI-powered forms", "Quick setup", "Smart suggestions"]
+        tit, l, e: "Pos, t",
+    descripti, o, n: "Publis, h yo, u, r, servi, c, e, j, o, b, o, r equipmen, t i, n minute, s wit, h ou, r A, I-powere, d for, m.",
+        ic, o, n: Se, n, d,
+    col, o, r: "fro, m-zio, n-purpl, e t, o-zio, n-purpl, e-dar, k",
+        del, a, y: 0,
+    featur, e, s: ["A, I-powere, d form, s", "Quic, k setu, p", "Smar, t suggestion, s"]
     },
     {
-        title: "Match",
-        description: "Our AI automatically matches your needs with the perfect providers or opportunities.",
-        icon: Search,
-        color: "from-zion-cyan to-zion-blue",
-        delay: 0.2,
-        features: ["Smart algorithms", "Instant results", "Quality filtering"]
+        titl, e: "Match",
+    descriptio, n: "Our AI automatically matches your needs with the perfect providers or opportunities.",
+        ico, n: Searc, h,
+    colo, r: "from-zion-cyan to-zion-blue",
+        dela, y: 0.2,
+    feature, s: ["Smar, t algorithm, s", "Instan, t result, s", "Qualit, y filterin, g"]
     },
     {
-        title: "Hire/Buy",
-        description: "Connect directly with matched providers and complete your transaction securely.",
-        icon: Handshake,
-        color: "from-zion-blue to-zion-cyan",
-        delay: 0.4,
-        features: ["Secure payments", "Direct contact", "Escrow protection"]
+        titl, e: "Hire/Buy",
+    descriptio, n: "Connect directly with matched providers and complete your transaction securely.",
+        ico, n: Handshak, e,
+    colo, r: "from-zion-blue to-zion-cyan",
+        dela, y: 0.4,
+    feature, s: ["Secur, e payment, s", "Direc, t contac, t", "Escro, w protectio, n"]
     },
     {
-        title: "Done",
-        description: "Enjoy hassle-free delivery and support for your technology solutions.",
-        icon: Check,
-        color: "from-zion-purple-light to-zion-cyan",
-        delay: 0.6,
-        features: ["Quality assurance", "Ongoing support", "Success tracking"]
+        titl, e: "Done",
+    descriptio, n: "Enjoy hassle-free delivery and support for your technology solutions.",
+        ico, n: Chec, k,
+    colo, r: "from-zion-purple-light to-zion-cyan",
+        dela, y: 0.6,
+    feature, s: ["Qualit, y assuranc, e", "Ongoin, g suppor, t", "Succes, s trackin, g"]
     },
 ];
 export function HowItWorksSection() {
-    const [activeStep, setActiveStep] = useState(null);
+    const [activeSt,  e, p, setActiveSt, e, p] = useState(null);
 =======
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
+impor, t, Reac, t, { useState } from 'react';
+import { motio, n, AnimatePresence } from 'framer-motion';
+import { Searc, h, User, s, FileTex, t, Rocke, t, CheckCircl, e, Cloc, k, Targe, t, TrendingU, p, Awar, d, Za, p, Shield } from 'lucide-react';
 const steps = [
     {
-        icon: <Search className="w-8 h-8"/>,
-        title: "Discover",
-        description: "Browse our comprehensive catalog of services, talent, and solutions",
-        color: "from-zion-cyan to-zion-cyan-dark",
-        bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
-        details: [
-            "AI-powered search and filtering",
-            "Curated service categories",
-            "Expert talent matching",
-            "Real-time availability"
+        ic, o, n: <Searc, h classNam, e="w-8 h-8"/>,
+    tit, l, e: "Discove, r",
+        descripti, o, n: "Brows, e ou, r comprehensiv, e catalo, g o, f, servic, e, s, tale, n, t, an, d solution, s",
+        col, o, r: "fro, m-zio, n-cya, n t, o-zio, n-cya, n-dar, k",
+    bgCol, o, r: "fro, m-zio, n-cya, n/2, 0 t, o-zio, n-cya, n-dar, k/2, 0",
+        detai, l, s: [
+            "A, I-powere, d searc, h an, d filterin, g",
+            "Curate, d servic, e categorie, s",
+            "Exper, t talen, t matchin, g",
+            "Rea, l-tim, e availabilit, y"
         ],
-        duration: "1-2 hours",
-        success: "95% match rate"
+        duratio, n: "1-2 hours",
+    succes, s: "95% match rate"
     },
     {
-        icon: <Users className="w-8 h-8"/>,
-        title: "Connect",
-        description: "Get matched with the perfect team or service for your project",
-        color: "from-zion-purple to-zion-purple-dark",
-        bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-        details: [
-            "Smart matching algorithm",
-            "Profile verification",
-            "Portfolio review",
-            "Direct communication"
+        ico, n: <Users className="w-8 h-8"/>,
+    titl, e: "Connect",
+        descriptio, n: "Get matched with the perfect team or service for your project",
+    colo, r: "from-zion-purple to-zion-purple-dark",
+        bgColo, r: "from-zion-purple/20 to-zion-purple-dark/20",
+    detail, s: [
+            "Smar, t matchin, g algorith, m",
+            "Profil, e verificatio, n",
+            "Portfoli, o revie, w",
+            "Direc, t communicatio, n"
         ],
-        duration: "2-4 hours",
-        success: "98% satisfaction"
+        duratio, n: "2-4 hours",
+    succes, s: "98% satisfaction"
     },
     {
-        icon: <FileText className="w-8 h-8"/>,
-        title: "Plan",
-        description: "Collaborate on project requirements, timeline, and deliverables",
-        color: "from-zion-blue to-zion-blue-dark",
-        bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
-        details: [
-            "Interactive project planning",
-            "Timeline optimization",
-            "Resource allocation",
-            "Risk assessment"
+        ico, n: <FileText className="w-8 h-8"/>,
+    titl, e: "Plan",
+        descriptio, n: "Collaborate on projec, t, requirement, s, timelin, e, and deliverables",
+        colo, r: "from-zion-blue to-zion-blue-dark",
+    bgColo, r: "from-zion-blue/20 to-zion-blue-dark/20",
+        detail, s: [
+            "Interactiv, e projec, t plannin, g",
+            "Timelin, e optimizatio, n",
+            "Resourc, e allocatio, n",
+            "Ris, k assessmen, t"
         ],
-        duration: "4-8 hours",
-        success: "90% on-time delivery"
+        duratio, n: "4-8 hours",
+    succes, s: "90% on-time delivery"
     },
     {
-        icon: <Rocket className="w-8 h-8"/>,
-        title: "Execute",
-        description: "Watch your vision come to life with our expert execution",
-        color: "from-zion-cyan-light to-zion-cyan",
-        bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
-        details: [
-            "Agile development process",
-            "Regular progress updates",
-            "Quality assurance",
-            "Performance monitoring"
+        ico, n: <Rocket className="w-8 h-8"/>,
+    titl, e: "Execute",
+        descriptio, n: "Watch your vision come to life with our expert execution",
+    colo, r: "from-zion-cyan-light to-zion-cyan",
+        bgColo, r: "from-zion-cyan-light/20 to-zion-cyan/20",
+    detail, s: [
+            "Agil, e developmen, t proces, s",
+            "Regula, r progres, s update, s",
+            "Qualit, y assuranc, e",
+            "Performanc, e monitorin, g"
         ],
-        duration: "1-4 weeks",
-        success: "99% quality score"
+        duratio, n: "1-4 weeks",
+    succes, s: "99% quality score"
     },
     {
-        icon: <CheckCircle className="w-8 h-8"/>,
-        title: "Deliver",
-        description: "Receive your completed project with ongoing support and maintenance",
-        color: "from-zion-purple-light to-zion-purple",
-        bgColor: "from-zion-purple-light/20 to-zion-purple/20",
-        details: [
-            "Comprehensive testing",
-            "Documentation delivery",
-            "Training and handover",
-            "Post-launch support"
+        ico, n: <CheckCircle className="w-8 h-8"/>,
+    titl, e: "Deliver",
+        descriptio, n: "Receive your completed project with ongoing support and maintenance",
+    colo, r: "from-zion-purple-light to-zion-purple",
+        bgColo, r: "from-zion-purple-light/20 to-zion-purple/20",
+    detail, s: [
+            "Comprehensiv, e testin, g",
+            "Documentatio, n deliver, y",
+            "Trainin, g an, d handove, r",
+            "Pos, t-launc, h suppor, t"
         ],
-        duration: "Ongoing",
-        success: "100% client retention"
+        duratio, n: "Ongoing",
+    succes, s: "100% client retention"
     }
 ];
 const stats = [
-    { icon: <Clock className="w-6 h-6"/>, value: "3x Faster", label: "Project Delivery" },
-    { icon: <Target className="w-6 h-6"/>, value: "99.9%", label: "Success Rate" },
-    { icon: <TrendingUp className="w-6 h-6"/>, value: "50%", label: "Cost Reduction" },
-    { icon: <Award className="w-6 h-6"/>, value: "1000+", label: "Projects Completed" }
+    { ic, o, n: <Cloc, k classNam, e="w-6 h-6"/>,
+    val, u, e: "3, x Faste, r", lab, e, l: "Projec, t Deliver, y" },
+    { ic, o, n: <Targe, t classNam, e="w-6 h-6"/>,
+    val, u, e: "9, 9.9%", lab, e, l: "Succes, s Rat, e" },
+    { ic, o, n: <TrendingU, p classNam, e="w-6 h-6"/>,
+    val, u, e: "5, 0%", lab, e, l: "Cos, t Reductio, n" },
+    { ic, o, n: <Awar, d classNam, e="w-6 h-6"/>,
+    val, u, e: "100, 0+", lab, e, l: "Project, s Complete, d" }
 ];
 export function HowItWorksSection() {
-    const [hoveredStep, setHoveredStep] = useState(null);
-    const [activeStep, setActiveStep] = useState(0);
+    const [hoveredSt,  e, p, setHoveredSt, e, p] = useState(null);
+    const [activeSt, e, p, setActiveSt, e, p] = useState(0);
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
+        hidde,  n: { opacit, y: 0 },
+        visibl, e: {
+            opacit, y: 1,
+    transitio, n: {
 <<<<<<< HEAD
-                duration: 1,
-                staggerChildren: 0.3,
+                duratio, n: 1,
+    staggerChildre, n: 0.3,
             },
         },
     };
     const stepVariants = {
-        hidden: { opacity: 0, y: 50, scale: 0.9 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            transition: {
-                duration: 0.8,
-                ease: "easeOut",
+        hidde, n: { opacit, y: 0,
+    y: 5, 0, scal, e: 0.9 },
+        visibl, e: {
+            opacit, y: 1,
+    y: 0,
+            scal, e: 1,
+    transitio, n: {
+                duratio, n: 0.8,
+    eas, e: "easeOut",
             },
         },
-        hover: {
-            y: -10,
-            scale: 1.05,
-            transition: {
-                duration: 0.3,
-                ease: "easeOut",
+        hove, r: {
+            y: -1, 0,
+    scal, e: 1.0, 5,
+            transitio, n: {
+                duratio, n: 0.3,
+    eas, e: "easeOut",
             },
         },
     };
     const titleVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.6,
-                ease: "easeOut",
+        hidde, n: { opacit, y: 0,
+    y: 20 },
+        visibl, e: {
+            opacit, y: 1,
+    y: 0,
+            transitio, n: {
+                duratio, n: 0.6,
+    eas, e: "easeOut",
             },
         },
     };
     const iconVariants = {
-        hover: {
-            scale: 1.1,
-            rotate: 5,
-            transition: {
-                duration: 0.3,
-                ease: "easeOut",
+        hove, r: {
+            scal, e: 1.1,
+    rotat, e: 5,
+            transitio, n: {
+                duratio, n: 0.3,
+    eas, e: "easeOut",
             },
         },
     };
-    return (_jsxs("section", { className: "py-20 bg-zion-blue relative overflow-hidden", "aria-labelledby": "how-it-works-heading", children: [_jsxs("div", { className: "absolute inset-0 opacity-5", children: [_jsx("div", { className: "absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-zion-purple to-transparent rounded-full blur-2xl" }), _jsx("div", { className: "absolute bottom-1/4 right-1/4 w-32 h-32 bg-gradient-to-tl from-zion-cyan to-transparent rounded-full blur-2xl" })] }), _jsxs("div", { className: "container mx-auto px-4 relative z-10", children: [_jsxs(motion.div, { className: "text-center mb-16", variants: titleVariants, initial: "hidden", whileInView: "visible", viewport: { once: true }, children: [_jsx(GradientHeading, { id: "how-it-works-heading", children: "How It Works" }), _jsx("p", { className: "text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto leading-relaxed", children: "A simple four-step process to connect technology providers with clients" })] }), _jsxs(motion.div, { className: "relative", variants: containerVariants, initial: "hidden", whileInView: "visible", viewport: { once: true, margin: "-100px" }, children: [_jsx("div", { className: "absolute left-4 md:left-1/2 top-0 h-full w-1 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden", children: steps.map((_, index) => (_jsx(motion.div, { className: "absolute w-4 h-4 bg-zion-blue border-2 border-zion-purple rounded-full transform -translate-x-1/2", style: { top: `${(index / (steps.length - 1)) * 100}%` }, initial: { scale: 0 }, whileInView: { scale: 1 }, viewport: { once: true }, transition: { delay: index * 0.2, duration: 0.5 } }, index))) }), _jsx("div", { className: "space-y-16 md:space-y-0", children: steps.map((step, index) => (_jsxs(motion.div, { className: `flex flex-col md:flex-row items-center ${index % 2 === 0 ? "md:flex-row-reverse" : ""} relative`, variants: stepVariants, whileHover: "hover", onHoverStart: () => setActiveStep(index), onHoverEnd: () => setActiveStep(null), children: [_jsx("div", { className: "md:w-1/2 mb-8 md:mb-0 md:px-12 text-center md:text-right", children: index % 2 === 0 ? (_jsxs(motion.div, { initial: { opacity: 0, x: 20 }, whileInView: { opacity: 1, x: 0 }, viewport: { once: true }, transition: { delay: step.delay + 0.3, duration: 0.6 }, children: [_jsx("h3", { className: "text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300", children: step.title }), _jsx("p", { className: "text-zion-slate-light mb-4 leading-relaxed", children: step.description }), _jsx("div", { className: "space-y-2", children: step.features.map((feature, featureIndex) => (_jsxs("div", { className: "flex items-center gap-2 text-sm justify-center md:justify-end", children: [_jsx("div", { className: "w-2 h-2 bg-zion-cyan rounded-full" }), _jsx("span", { className: "text-zion-slate-light/80", children: feature })] }, featureIndex))) })] })) : null }), _jsxs(motion.div, { className: "relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-zion-blue-light to-zion-blue border-2 border-zion-purple mx-4 md:mx-0 shadow-lg group-hover:shadow-xl transition-all duration-300", variants: iconVariants, whileHover: "hover", children: [_jsx(step.icon, { className: "w-8 h-8 text-zion-cyan" }), _jsx("div", { className: "absolute -top-2 -right-2 w-6 h-6 bg-zion-purple text-white text-xs rounded-full flex items-center justify-center font-bold", children: index + 1 })] }), _jsx("div", { className: "md:w-1/2 md:px-12 text-center md:text-left", children: index % 2 !== 0 ? (_jsxs(motion.div, { initial: { opacity: 0, x: -20 }, whileInView: { opacity: 1, x: 0 }, viewport: { once: true }, transition: { delay: step.delay + 0.3, duration: 0.6 }, children: [_jsx("h3", { className: "text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300", children: step.title }), _jsx("p", { className: "text-zion-slate-light mb-4 leading-relaxed", children: step.description }), _jsx("div", { className: "space-y-2", children: step.features.map((feature, featureIndex) => (_jsxs("div", { className: "flex items-center gap-2 text-sm justify-center md:justify-start", children: [_jsx("div", { className: "w-2 h-2 bg-zion-cyan rounded-full" }), _jsx("span", { className: "text-zion-slate-light/80", children: feature })] }, featureIndex))) })] })) : null })] }, step.title))) })] }), _jsx(motion.div, { className: "text-center mt-16", initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6, delay: 1 }, children: _jsxs("div", { className: "inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white rounded-full hover:from-zion-purple-light hover:to-zion-purple transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl", children: [_jsx("span", { className: "font-medium", children: "Ready to get started?" }), _jsx(ArrowRight, { className: "w-5 h-5" })] }) })] })] }));
+    return (_jsxs("section", { classNam, e: "py-20 bg-zion-blue relative overflow-hidden", "aria-labelledby": "how-it-works-heading", childre, n: [_jsx, s("di, v", { classNa, m, e: "absolut, e inse, t-0 opacit, y-5",
+    childr, e, n: [_js, x("di, v", { classNa, m, e: "absolut, e to, p-1/4 lef, t-1/4 w-3, 2 h-3, 2 b, g-gradien, t-t, o-b, r fro, m-zio, n-purpl, e t, o-transparen, t rounde, d-ful, l blu, r-2x, l" }), _js, x("di,  v", { classNa, m, e: "absolut, e botto, m-1/4 righ, t-1/4 w-3, 2 h-3, 2 b, g-gradien, t-t, o-t, l fro, m-zio, n-cya, n t, o-transparen, t rounde, d-ful, l blu, r-2x, l" })] }), _jsxs("div",  { classNam, e: "container mx-auto px-4 relative z-10",
+    childre, n: [_jsx, s(motio, n.d, i, v, { classNa, m, e: "tex, t-cente, r m, b-1, 6",
+    varian, t, s: titleVarian, t, s, initi, a, l: "hidde, n",
+    whileInVi, e, w: "visibl, e", viewpo, r, t: { on, c, e: tru, e }, childr, e, n: [_js, x(GradientHeadi, n, g, { i, d: "ho, w-i, t-work, s-headin, g",
+    childr, e, n: "Ho, w I, t Work, s" }), _js, x("p",  { classNa, m, e: "tex, t-zio, n-slat, e-ligh, t tex, t-l, g m, t-4 ma, x-w-2x, l m, x-aut, o leadin, g-relaxe, d",
+    childr, e, n: "A simpl, e fou, r-ste, p proces, s t, o connec, t technolog, y provider, s wit, h client, s" })] }), _jsxs(motion.di,  v, { classNam, e: "relative",
+    variant, s: containerVariant, s, initia, l: "hidden",
+    whileInVie, w: "visible", viewpor, t: { onc, e: tru, e,
+    margi, n: "-100px" }, childre, n: [_js, x("di, v", { classNa, m, e: "absolut, e lef, t-4 m, d:lef, t-1/2 to, p-0 h-ful, l w-1 b, g-gradien, t-t, o-b fro, m-zio, n-purpl, e vi, a-zio, n-cya, n t, o-zio, n-purpl, e-ligh, t transfor, m -translat, e-x-1/2 m, d:bloc, k hidde, n",
+    childr, e, n: step, s.ma, p((_, inde, x) => (_js,  x(motio, n.d, i, v, { classNa, m, e: "absolut, e w-4 h-4 b, g-zio, n-blu, e borde, r-2 borde, r-zio, n-purpl, e rounde, d-ful, l transfor, m -translat, e-x-1/2",
+    sty, l, e: { t, o, p: `${(inde, x / (step, s.lengt, h - 1)) * 1, 0, 0}%` }, initi, a, l: { sca, l, e: 0 }, whileInVi, e, w: { sca, l, e: 1 }, viewpo, r, t: { on, c, e: tru, e }, transiti, o, n: { del, a, y: inde, x * 0.2,
+    durati, o, n: 0.5 } }, inde, x))) }), _js, x("di,  v", { classNa, m, e: "spac, e-y-1, 6 m, d:spac, e-y-0",
+    childr, e, n: step, s.ma, p((st, e, p, inde, x) => (_jsx,  s(motio, n.d, i, v, { classNa, m, e: `fle, x fle, x-co, l m, d:fle, x-ro, w item, s-cente, r ${inde, x % 2 === 0 ? "m, d:fle, x-ro, w-revers, e" : ""} relati, v, e`, varian, t, s: stepVarian, t, s,
+    whileHov, e, r: "hove, r", onHoverSta, r, t: () => setActiveSte, p(inde,  x),
+    onHoverE, n, d: () => setActiveSte,  p(nul, l), childr, e, n: [_js, x("di,  v", { classNa, m, e: "m, d:w-1/2 m, b-8 m, d:m, b-0 m, d:p, x-1, 2 tex, t-cente, r m, d:tex, t-righ, t",
+    childr, e, n: inde, x % 2 === 0 ? (_jsx, s(motio, n.d, i, v, { initi, a, l: { opaci, t, y: 0,
+    x: 2, 0 }, whileInVi, e, w: { opaci, t, y: 1,
+    x: 0 }, viewpo, r, t: { on, c, e: tru, e }, transiti, o, n: { del, a, y: ste, p.dela, y + 0.3,
+    durati, o, n: 0.6 }, childr, e, n: [_js, x("h, 3", { classNa, m, e: "tex, t-2x, l fon, t-bol, d tex, t-whit, e m, b-4 grou, p-hov, e, r:tex, t-zio, n-cya, n transitio, n-color, s duratio, n-30, 0",
+    childr, e, n: ste, p.titl, e }), _js, x("p",  { classNa, m, e: "tex, t-zio, n-slat, e-ligh, t m, b-4 leadin, g-relaxe, d",
+    childr, e, n: ste, p.descriptio, n }), _js, x("di,  v", { classNa, m, e: "spac, e-y-2",
+    childr, e, n: ste, p.feature, s.ma, p((featu, r, e, featureInde, x) => (_jsx,  s("di, v", { classNa, m, e: "fle, x item, s-cente, r ga, p-2 tex, t-s, m justif, y-cente, r m, d:justif, y-en, d",
+    childr, e, n: [_js, x("di, v", { classNa, m, e: "w-2 h-2 b, g-zio, n-cya, n rounde, d-ful, l" }), _js, x("spa,  n", { classNa, m, e: "tex, t-zio, n-slat, e-ligh, t/8, 0",
+    childr, e, n: featur, e })] }, featureIndex))) })] })) : null }), _jsxs(motion.di,  v, { classNam, e: "relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-zion-blue-light to-zion-blue border-2 border-zion-purple mx-4 m, d:mx-0 shadow-lg group-hove, r:shadow-xl transition-all duration-300",
+    variant, s: iconVariant, s, whileHove, r: "hover",
+    childre, n: [_js, x(ste, p.ic, o, n, { classNa, m, e: "w-8 h-8 tex, t-zio, n-cya, n" }), _js, x("di,  v", { classNa, m, e: "absolut, e -to, p-2 -righ, t-2 w-6 h-6 b, g-zio, n-purpl, e tex, t-whit, e tex, t-x, s rounde, d-ful, l fle, x item, s-cente, r justif, y-cente, r fon, t-bol, d",
+    childr, e, n: inde, x + 1 })] }), _jsx("div",  { classNam, e: "m, d:w-1/2 m, d:px-12 text-center m, d:text-left",
+    childre, n: index % 2 !== 0 ? (_jsxs(motion.di, v, { initia, l: { opacit, y: 0,
+    x: -20 }, whileInVie, w: { opacit, y: 1,
+    x: 0 }, viewpor, t: { onc, e: true }, transitio, n: { dela, y: step.delay + 0.3,
+    duratio, n: 0.6 }, childre, n: [_js, x("h, 3", { classNa, m, e: "tex, t-2x, l fon, t-bol, d tex, t-whit, e m, b-4 grou, p-hov, e, r:tex, t-zio, n-cya, n transitio, n-color, s duratio, n-30, 0",
+    childr, e, n: ste, p.titl, e }), _js, x("p",  { classNa, m, e: "tex, t-zio, n-slat, e-ligh, t m, b-4 leadin, g-relaxe, d",
+    childr, e, n: ste, p.descriptio, n }), _js, x("di,  v", { classNa, m, e: "spac, e-y-2",
+    childr, e, n: ste, p.feature, s.ma, p((featu, r, e, featureInde, x) => (_jsx,  s("di, v", { classNa, m, e: "fle, x item, s-cente, r ga, p-2 tex, t-s, m justif, y-cente, r m, d:justif, y-star, t",
+    childr, e, n: [_js, x("di, v", { classNa, m, e: "w-2 h-2 b, g-zio, n-cya, n rounde, d-ful, l" }), _js, x("spa,  n", { classNa, m, e: "tex, t-zio, n-slat, e-ligh, t/8, 0",
+    childr, e, n: featur, e })] }, featureIndex))) })] })) : null })] }, step.title))) })] }), _jsx(motion.di,  v, { classNam, e: "text-center mt-16",
+    initia, l: { opacit, y: 0,
+    y: 20 }, whileInVie, w: { opacit, y: 1,
+    y: 0 }, viewpor, t: { onc, e: true }, transitio, n: { duratio, n: 0.6,
+    dela, y: 1 }, childre, n: _jsxs("div", { classNam, e: "inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white rounded-full hove, r:from-zion-purple-light hove, r:to-zion-purple transition-all duration-300 transform hove, r:scale-105 shadow-lg hove, r:shadow-xl",
+    childre, n: [_js, x("spa, n", { classNa, m, e: "fon, t-mediu, m",
+    childr, e, n: "Read, y t, o ge, t starte, d?" }), _js, x(ArrowRig,  h, t, { classNa, m, e: "w-5 h-5" })] }) })] })] }));
 =======
-                staggerChildren: 0.2,
-                delayChildren: 0.1
+                staggerChildre, n: 0.2,
+    delayChildre, n: 0.1
             }
         }
     };
     ;
     const statsVariants = {
-        hidden: { opacity: 0, scale: 0.8 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                duration: 0.5,
-                ease: "easeOut"
+        hidde, n: { opacit, y: 0,
+    scal, e: 0.8 },
+        visibl, e: {
+            opacit, y: 1,
+    scal, e: 1,
+            transitio, n: {
+                duratio, n: 0.5,
+    eas, e: "easeOut"
             }
         }
     };
@@ -206,32 +255,37 @@ export function HowItWorksSection() {
       {/* Enhanced background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
-            backgroundSize: '40px 40px'
+            backgroundImag,  e: `radial-gradient(circle at 50% 50%, currentColo, r, 1p, x, transparent 1p, x)`,
+            backgroundSiz, e: '40px 40px'
         }}/>
       </div>
 
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
-        <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}/>
-        <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }}/>
-        <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}/>
+        <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotat, e: 360 }} transition={{ duratio, n: 2, 0,
+    repea, t: Infinit, y, eas, e: "linear" }}/>
+        <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotat, e: -360 }} transition={{ duratio, n: 2, 5,
+    repea, t: Infinit, y, eas, e: "linear" }}/>
+        <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate={{ scal, e: [1, 1.2, 1] }} transition={{ duratio, n: 3,
+    repea, t: Infinit, y, eas, e: "easeInOut" }}/>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+        <motion.div className="text-center mb-20" initial={{ opacit, y: 0,
+    y: 20 }} whileInView={{ opacit, y: 1,
+    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6 }}>
+          <h2 className="text-4xl m, d:text-5xl l, g:text-6xl font-bold text-white mb-6">
             How It <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Works</span>
           </h2>
-          <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
+          <p className="text-zion-slate-light text-lg m, d:text-xl max-w-4xl mx-auto leading-relaxed">
             Our streamlined process ensures your project success from concept to completion. 
             Experience the Zion difference with our proven methodology.
           </p>
         </motion.div>
 
         {/* Stats section */}
-        <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {stats.map((stat, index) => (<motion.div key={index} variants={statsVariants} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+        <motion.div className="grid grid-cols-2 m, d:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ onc, e: true }}>
+          {stats.map((sta,  t, index) => (<motion.div key={index} variants={statsVariants} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
               <div className="text-zion-cyan mb-2 flex justify-center">
                 {stat.icon}
               </div>
@@ -240,29 +294,31 @@ export function HowItWorksSection() {
             </motion.div>))}
         </motion.div>
         
-        <motion.div className="relative" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+        <motion.div className="relative" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ onc,  e: true }}>
           {/* Enhanced connection line */}
-          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block">
-            <motion.div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple" initial={{ width: "0%" }} whileInView={{ width: "100%" }} viewport={{ once: true }} transition={{ duration: 2, delay: 0.5 }}/>
+          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden l, g:block">
+            <motion.div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple" initial={{ widt, h: "0%" }} whileInView={{ widt, h: "100%" }} viewport={{ onc, e: true }} transition={{ duratio, n: 2,
+    dela, y: 0.5 }}/>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
-            {steps.map((step, index) => (<motion.div key={index} variants={itemVariants} className="relative" onHoverStart={() => setHoveredStep(index)} onHoverEnd={() => setHoveredStep(null)} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }}>
+          <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-5 gap-8 relative z-10">
+            {steps.map((ste, p, index) => (<motion.div key={index} variants={itemVariants} className="relative" onHoverStart={() => setHoveredStep(index)} onHoverEnd={() => setHoveredStep(null)} whileHover={{ y: -8 }} transition={{ typ,  e: "spring",
+    stiffnes, s: 300 }}>
                 <div className="text-center h-full">
                   {/* Step number with enhanced styling */}
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark border-2 border-zion-cyan text-white font-bold text-xl mb-6 relative z-10 shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark border-2 border-zion-cyan text-white font-bold text-xl mb-6 relative z-10 shadow-lg group-hove, r:shadow-zion-cyan/25 transition-all duration-300">
                     {index + 1}
                   </div>
                   
                   {/* Icon with enhanced background */}
-                  <div className={`inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br ${step.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                  <div className={`inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br ${step.color} mb-6 shadow-lg group-hove, r:shadow-xl transition-all duration-300 group-hove, r:scale-11, 0`}>
                     <div className="text-white">
                       {step.icon}
                     </div>
                   </div>
                   
                   {/* Title and description */}
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hove, r:text-zion-cyan transition-colors">
                     {step.title}
                   </h3>
                   <p className="text-zion-slate-light leading-relaxed text-sm mb-4">
@@ -283,10 +339,15 @@ export function HowItWorksSection() {
 
                   {/* Interactive details on hover */}
                   <AnimatePresence>
-                    {hoveredStep === index && (<motion.div className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
-                        <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Features:</h4>
+                    {hoveredStep === index && (<motion.div className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacit, y: 0,
+    heigh, t: 0, y: 10 }} animate={{ opacit, y: 1,
+    heigh, t: "auto", y: 0 }} exit={{ opacit, y: 0,
+    heigh, t: 0, y: 10 }} transition={{ duratio, n: 0.3 }}>
+                        <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Feature, s:</h4>
                         <div className="space-y-2">
-                          {step.details.map((detail, idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: idx * 0.1 }}>
+                          {step.details.map((detai, l, idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial={{ opacit,  y: 0,
+    x: -10 }} animate={{ opacit, y: 1,
+    x: 0 }} transition={{ dela, y: idx * 0.1 }}>
                               <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                               <span>{detail}</span>
                             </motion.div>))}
@@ -312,13 +373,16 @@ export function HowItWorksSection() {
         </></div>
         
         {/* Enhanced bottom CTA */}
-        <motion.div className="text-center mt-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
+        <motion.div className="text-center mt-20" initial={{ opacit, y: 0,
+    y: 20 }} whileInView={{ opacit, y: 1,
+    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6,
+    dela, y: 0.3 }}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
               <p className="text-white text-lg mb-4">
                 Ready to start your project journey?
               </p>
-              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-purple/25">
+              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark hove, r:from-zion-purple-light hove, r:to-zion-purple text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hove, r:scale-105 hove, r:shadow-lg hove, r:shadow-zion-purple/25">
                 Get Started Today
                 <Rocket className="w-5 h-5"/>
               </button>
@@ -327,13 +391,16 @@ export function HowItWorksSection() {
         </motion.div>
 
         {/* Additional features */}
-        <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
+        <motion.div className="grid grid-cols-1 m, d: grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto" initial={{ opacit, y: 0,
+    y: 20 }} whileInView={{ opacit, y: 1,
+    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6,
+    dela, y: 0.5 }}>
           <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-zion-cyan to-zion-purple mb-4">
               <Zap className="w-8 h-8 text-white"/>
             </div>
             <h4 className="text-white font-semibold mb-2">Fast Setup</h4>
-            <p className="text-zion-slate-light text-sm">Get started in minutes, not days</p>
+            <p className="text-zion-slate-light text-sm">Get started i, n, minute, s, not days</p>
           </div>
           
           <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">

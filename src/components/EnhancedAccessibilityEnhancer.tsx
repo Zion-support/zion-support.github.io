@@ -1,29 +1,31 @@
 import { useEffectuseState } from "react";
 interface AccessibilitySettings {
-  highContras, t: boolea, n,;
-    largeTex, t: boolea, n,reducedMotio, n: boolea, n,;
-    focusVisibl, e: boolea, n,screenReade, r: boolea, nkeyboardNavigation: boolean;
+  highContra, s, t: boole, a, n,;
+    largeTe, x, t: boole, a, n,reducedMoti, o, n: boole, a, n,;
+    focusVisib, l, e: boole, a, n,screenRead, e, r: boole, a,
+    nkeyboardNavigatio, n: boolean;
 };
-export, function, EnhancedAccessibilityEnhancer() {
-  const [settin,  g, s, setSettin,, gs] = useState<AccessibilitySettings>({
-    highContras, t: fals, e,;
-    largeTex, t: fals, e,reducedMotio, n: fals, e,;
-    focusVisibl, e: fals, e,screenReade, r: fals, ekeyboardNavigation: false;
+expor, t, functio, n, EnhancedAccessibilityEnhancer() {
+  const [sett,  i, n,  g, s, setSett, i, n,, g, s] = useState<AccessibilitySettings>({
+    highContra, s, t: fal, s, e,;
+    largeTe, x, t: fal, s, e,reducedMoti, o, n: fal, s, e,;
+    focusVisib, l, e: fal, s, e,screenRead, e, r: fal, s,
+    ekeyboardNavigatio, n: false;
   });
-  const [isVisib, l, e, setIsVisib,, le] = useState(false);
-  const [announcemen,  t, s, setAnnouncemen,, ts] = useState<string[]>([]);
+  const [isVis, i, b, l, e, setIsVis, i, b,, l, e] = useState(false);
+  const [announcem,  e, n,  t, s, setAnnouncem, e, n,, t, s] = useState<string[]>([]);
 ;
   useEffect(() => {
-    // Check, for, reduced motion preference;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const prefersHighContrast = window.matchMedia('(prefers-contras,;
+    // Chec,  k, fo, r, reduced motion preference;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motio, n: reduce)').matches;
+    const prefersHighContrast = window.matchMedia('(prefers-contra,  s,;
   t: high)').matches;
     setSettings(prev => ({
-      ...pre,  v,;
-      reducedMotio, n: prefersReducedMotionhighContras,;
+      ...pr,  e,  v,;
+      reducedMoti, o, n: prefersReducedMotionhighContra, s,;
   t: prefersHighContrast;
     }));
-    // Apply, accessibility, settings to document;
+    // Appl, y, accessibilit, y, settings to document;
     const root = document.documentElement;
 ;
     if (settings.highContrast) {
@@ -47,63 +49,63 @@ export, function, EnhancedAccessibilityEnhancer() {
       root.style.removeProperty('--animation-duration');
       root.style.removeProperty('--animation-iteration-count');
     };
-    // Show, accessibility, panel on Ctrl+Shift+A;
+    // Sho,  w, accessibilit, y, panel on Ctrl+Shift+A;
     const handleKeyPress = (e: KeyboardEvent) => {;
       if() {;
         setIsVisible(!isVisible);
-        announce('Accessibility, panel, toggled');
+        announce('Accessibilit,  y, pane, l, toggled');
       };
     },;
     window.addEventListener('keydown'handleKeyPress);
     return () => window.removeEventListener('keydown'handleKeyPress);
-  }, [settin, g, s, isVisib,, le]),;
-  const announce = (messag,  e: string) => {
-    setAnnouncements(prev => [...pre,  v.slice(-2), messa,, ge]),;
+  },  [sett, i, n, g, s, isVis, i, b,, l, e]),;
+  const announce = (messa,  g,  e: string) => {
+    setAnnouncements(prev => [...p,  r, e,  v.slic, e(-2), mes, s, a,, g, e]),;
     ;
-    // Create, live, region for, screen, readers;
+    // Creat, e, liv, e, regio, n, fo, r, scree, n, readers;
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-livepolite');
     announcement.setAttribute('aria-atomictrue');
-    announcement.className = 'sr-only',;
+    announcement.className = 'sr-only', ;
     announcement.textContent = messagedocument.body.appendChild(announcement);
 ;
     setTimeout(() => {
       document.body.removeChild(announcement);
-    },  10o00),;
+    },   10o00),;
   },;
-  const toggleSetting = (settin,  g: keyof AccessibilitySettings) => {;
-    const newValue = !settings[setti,, ng];
-    setSettings(prev => ({ ...pre,  v[setting]: newValue })),;
+  const toggleSetting = (setti,  n,  g: keyof AccessibilitySettings) => {;
+    const newValue = !settings[set, t, i,, n, g];
+    setSettings(prev => ({ ...pr,  e,  v[setti, n, g]: newValue })),;
     const settingNames = {
-      highContras, t: 'High, contrast, mode',;
-    largeTex, t: 'Large text',reducedMotio, n: 'Reduced motion',;
-    focusVisibl, e: 'Focus indicators',screenReade, r: 'Screen, reader, mode'keyboardNavigatio,;
+      highContra, s, t: 'Hig, h, contras, t, mode',;
+    largeTe, x, t: 'Large text',reducedMoti, o, n: 'Reduced motion',;
+    focusVisib, l, e: 'Focus indicators',screenRead, e, r: 'Scree, n, reade, r, mode'keyboardNavigati, o,;
   n: 'Keyboard navigation';
     };
-    announce(`${settingNames[setting]} ${newValue ? 'enabled' : 'disabled'}`);
+    announce(`${settingNames[setti,  n, g]} ${newValue ? 'enabled' : 'disable, d'}`);
   },;
   const resetSettings = () => {
     setSettings({
-      highContras,  t: fals, e,;
-    largeTex, t: fals, e,reducedMotio, n: fals, e,;
-    focusVisibl, e: fals, e,screenReade, r: falsekeyboardNavigatio,;
+      highContra,  s,  t: fal, s, e,;
+    largeTe, x, t: fal, s, e,reducedMoti, o, n: fal, s, e,;
+    focusVisib, l, e: fal, s, e,screenRead, e, r: falsekeyboardNavigati, o,;
   n: false;
     });
-    announce('Accessibility, settings, reset');
+    announce('Accessibilit,  y, setting, s, reset');
   },;
   if (!isVisible) return null;
   return (<>;
-      {/* Screen, reader, announcements */}
+      {/* Scree,  n, reade, r, announcements */}
       <div aria-live="polite" aria-atomic="true" className="sr-only">;
-        {announcements[announcements.length -, 1]}
+        {announcements[announcement, s.lengt, h -, 1]}
       </div>;
-      <div className="fixed top-4 left-4 bg-black/90 backdrop-blur-sm, border, border-zion-cyan/30 rounded-lg p-4 text-sm font-mono z-50 min-w-[320px]">;
+      <div className="fixed top-4 left-4 bg-black/90 backdrop-blur-s, m, borde, r, border-zion-cyan/30 rounded-lg p-4 text-sm font-mono z-50 min-w-[320, p, x]">;
         <div className="flex items-center justify-between mb-4">;
           <h3 className="text-zion-cyan font-bold text-lg">♿ Accessibility</h3>;
           <button;
             onClick={() => setIsVisible(false)}
-            className="text-zion-cyan hove,  r: text-white transition-colors p-1";
-            aria-label="Close, accessibility, panel";
+            className="text-zion-cya,  n, hov, e,  r: text-white transition-colors p-1";
+            aria-label="Clos, e, accessibilit, y, panel";
           >;
             ×;
           </button>;
@@ -117,13 +119,13 @@ export, function, EnhancedAccessibilityEnhancer() {
               id="high-contrast";
               onClick={() => toggleSetting('highContrast')}
               className={`w-12 h-6 rounded-full transition-colors ${
-                settings.highContrast ? 'bg-zion-cyan' : 'bg-gray-60o0';
+                settings.highContrast ? 'bg-zion-cyan' : 'bg-gray-60o, 0';
               }`}
               aria-pressed={settings.highContrast}
-              aria-label={`Toggle, high, contrast mode. Currently ${settings.highContrast ? 'on' : 'off'}`}
+              aria-label={`Toggl,  e, hig, h, contrast mode. Currently ${settings.highContrast ? 'on' : 'of, f'}`}
             >;
               <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                settings.highContrast ? 'translate-x-6' : 'translate-x-0.5';
+                settings.highContrast ? 'translate-x-6' : 'translat, e-x-0.5';
               }`} />;
             </button>;
           </div>;
@@ -135,13 +137,13 @@ export, function, EnhancedAccessibilityEnhancer() {
               id="large-text";
               onClick={() => toggleSetting('largeText')}
               className={`w-12 h-6 rounded-full transition-colors ${
-                settings.largeText ? 'bg-zion-cyan' : 'bg-gray-60o0';
+                settings.largeText ? 'bg-zion-cyan' : 'bg-gray-60o, 0';
               }`}
               aria-pressed={settings.largeText}
-              aria-label={`Toggle, large, text. Currently ${settings.largeText ? 'on' : 'off'}`}
+              aria-label={`Toggl,  e, larg, e, text. Currently ${settings.largeText ? 'on' : 'of, f'}`}
             >;
               <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                settings.largeText ? 'translate-x-6' : 'translate-x-0.5';
+                settings.largeText ? 'translate-x-6' : 'translat, e-x-0.5';
               }`} />;
             </button>;
           </div>;
@@ -153,13 +155,13 @@ export, function, EnhancedAccessibilityEnhancer() {
               id="reduced-motion";
               onClick={() => toggleSetting('reducedMotion')}
               className={`w-12 h-6 rounded-full transition-colors ${
-                settings.reducedMotion ? 'bg-zion-cyan' : 'bg-gray-60o0';
+                settings.reducedMotion ? 'bg-zion-cyan' : 'bg-gray-60o, 0';
               }`}
               aria-pressed={settings.reducedMotion}
-              aria-label={`Toggle, reduced, motion. Currently ${settings.reducedMotion ? 'on' : 'off'}`}
+              aria-label={`Toggl,  e, reduce, d, motion. Currently ${settings.reducedMotion ? 'on' : 'of, f'}`}
             >;
               <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                settings.reducedMotion ? 'translate-x-6' : 'translate-x-0.5';
+                settings.reducedMotion ? 'translate-x-6' : 'translat, e-x-0.5';
               }`} />;
             </button>;
           </div>;
@@ -171,13 +173,13 @@ export, function, EnhancedAccessibilityEnhancer() {
               id="focus-visible";
               onClick={() => toggleSetting('focusVisible')}
               className={`w-12 h-6 rounded-full transition-colors ${
-                settings.focusVisible ? 'bg-zion-cyan' : 'bg-gray-60o0';
+                settings.focusVisible ? 'bg-zion-cyan' : 'bg-gray-60o, 0';
               }`}
               aria-pressed={settings.focusVisible}
-              aria-label={`Toggle, focus, indicators. Currently ${settings.focusVisible ? 'on' : 'off'}`}
+              aria-label={`Toggl,  e, focu, s, indicators. Currently ${settings.focusVisible ? 'on' : 'of, f'}`}
             >;
               <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                settings.focusVisible ? 'translate-x-6' : 'translate-x-0.5';
+                settings.focusVisible ? 'translate-x-6' : 'translat, e-x-0.5';
               }`} />;
             </button>;
           </div>;
@@ -185,14 +187,14 @@ export, function, EnhancedAccessibilityEnhancer() {
         <div className="mt-4 pt-3 border-t border-gray-70o0">;
           <button;
             onClick={resetSettings}
-            className="w-full bg-zion-cyan/20 hover: bg-zion-cyan/30 text-zion-cyan py-2 px-4, rounded, transition-colors";
-            aria-label="Reset, all, accessibility settings";
+            className="w-full bg-zion-cyan/20 hove, r: bg-zion-cyan/30 text-zion-cyan py-2 px-4, rounde, d, transition-colors";
+            aria-label="Rese, t, al, l, accessibility settings";
           >;
             Reset Settings;
           </button>;
         </div>;
         <div className="mt-3 pt-2 border-t border-gray-70o0 text-center">;
-          <span className="text-gray-50o0 text-xs">Press Ctrl+Shift+A, to, toggle</span>;
+          <span className="text-gray-50o0 text-xs">Press Ctrl+Shift+A, t, o, toggle</span>;
         </div>;
       </div>;
     </>;

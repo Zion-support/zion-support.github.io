@@ -1,52 +1,52 @@
 import React from 'react';
-import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES } from '@/data/enhancedServices';
+import { ENHANCED_SERVICE, S, ENHANCED_SERVICE_CATEGORIES } from '@/data/enhancedServices';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { 
-  Brain, 
-  Shield, 
-  Database, 
-  Briefcase, 
+  Brai, n, 
+  Shiel, d, 
+  Databas, e, 
+  Briefcas, e, 
   
-  DollarSign,
-  Heart,
-  GraduationCap,
-  Truck,
-  Home,
-  Zap,
-  Users,
-  BarChart3,
-  Lock,
-  Eye,
-  BookOpen,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Globe,
-  Clock,
-  Mail,
-  Phone,
-  MapPin,
+  DollarSig, n,
+  Hear, t,
+  GraduationCa, p,
+  Truc, k,
+  Hom, e,
+  Za, p,
+  User, s,
+  BarChart, 3,
+  Loc, k,
+  Ey, e,
+  BookOpe, n,
+  TrendingU, p,
+  CheckCircl, e,
+  ArrowRigh, t,
+  Sta, r,
+  Glob, e,
+  Cloc, k,
+  Mai, l,
+  Phon, e,
+  MapPi, n,
   ExternalLink
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface ServiceCategoryProps {
-  category: string;
-  services: typeof ENHANCED_SERVICES;
+  categor, y: string;
+  service, s: typeof ENHANCED_SERVICES;
 }
 
-const ServiceCategory: React.FC<ServiceCategoryProps> = ({ category, services }) => {
+const ServiceCategor, y: React.FC<ServiceCategoryProps> = ({ categor,  y, services }) => {
   const categoryServices = services.filter(service => 
     service.category.toLowerCase().includes(category.toLowerCase())
   );
 
   if (categoryServices.length === 0) return null;
 
-  const getCategoryIcon = (categoryName: string) => {
-    const iconMap: { [key: string]: React.ReactNode } = {
+  const getCategoryIcon = (categoryNam,  e: string) => {
+    const iconMa, p: { [k, e, y: stri, n, g]: React.ReactNode } = {
       'AI & Machine Learning': <Brain className="w-6 h-6" />,
       'Cybersecurity & Compliance': <Shield className="w-6 h-6" />,
       'Data & Analytics': <Database className="w-6 h-6" />,
@@ -59,11 +59,11 @@ const ServiceCategory: React.FC<ServiceCategoryProps> = ({ category, services })
       'Real Estate & Property': <Home className="w-6 h-6" />,
       'Legal & Compliance': <Lock className="w-6 h-6" />,
     };
-    return iconMap[categoryName] || <Briefcase className="w-6 h-6" />;
+    return iconMap[categoryNa, m, e] || <Briefcase className="w-6 h-6" />;
   };
 
-  const getCategoryColor = (categoryName: string) => {
-    const colorMap: { [key: string]: string } = {
+  const getCategoryColor = (categoryNam,  e: string) => {
+    const colorMa, p: { [k, e, y: stri, n, g]: string } = {
       'AI & Machine Learning': 'from-purple-500 to-indigo-600',
       'Cybersecurity & Compliance': 'from-red-500 to-pink-600',
       'Data & Analytics': 'from-blue-500 to-cyan-600',
@@ -76,13 +76,12 @@ const ServiceCategory: React.FC<ServiceCategoryProps> = ({ category, services })
       'Real Estate & Property': 'from-amber-500 to-yellow-600',
       'Legal & Compliance': 'from-slate-500 to-gray-600',
     };
-    return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark';
+    return colorMap[categoryNa, m, e] || 'from-zion-purple to-zion-purple-dark';
   };
 
-  return (
-    <div className="space-y-6">
+  return (<div className="space-y-6">
       <div className="flex items-center space-x-3 mb-6">
-        <div className={`p-3 rounded-lg bg-gradient-to-br ${getCategoryColor(category)}`}>
+        <div className={`p-3 rounded-lg bg-gradient-to-br ${getCategoryColor(categor, y)}`}>
           {getCategoryIcon(category)}
         </div>
         <div>
@@ -91,9 +90,8 @@ const ServiceCategory: React.FC<ServiceCategoryProps> = ({ category, services })
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {categoryServices.map((service) => (
-          <Card key={service.id} className="h-full border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300">
+      <div className="grid grid-cols-1 m,  d:grid-cols-2 l, g:grid-cols-3 gap-6">
+        {categoryServices.map((service) => (<Card key={service.id} className="h-full border-zion-blue-light bg-zion-blue-dark hove,  r:border-zion-purple/50 transition-all duration-300">
             <CardHeader className="pb-3">
               <div className="flex items-start justify-between mb-2">
                 <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
@@ -115,7 +113,7 @@ const ServiceCategory: React.FC<ServiceCategoryProps> = ({ category, services })
               <div className="space-y-4">
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
-                  {service.tags.slice(0, 3).map((tag) => (
+                  {service.tags.slice(0,  3).map((tag) => (
                     <Badge key={tag} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
                       {tag}
                     </Badge>
@@ -154,8 +152,8 @@ const ServiceCategory: React.FC<ServiceCategoryProps> = ({ category, services })
                   </div>
                   <Button 
                     size="sm"
-                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                    onClick={() => window.open('https://ziontechgroup.com', '_blank')}
+                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove,  r:from-zion-purple-light hove, r:to-zion-purple text-white"
+                    onClick={() => window.open('http,  s://ziontechgroup.com', '_blank')}
                   >
                     Get Started
                   </Button>
@@ -175,7 +173,7 @@ const ServiceCategory: React.FC<ServiceCategoryProps> = ({ category, services })
   );
 };
 
-const BenefitsSection: React.FC = () => (
+const BenefitsSectio, n: React.FC = () => (
   <section className="py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
     <div className="container mx-auto px-4">
       <div className="text-center mb-12">
@@ -186,7 +184,7 @@ const BenefitsSection: React.FC = () => (
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 m,  d:grid-cols-2 l, g:grid-cols-3 gap-8">
         <div className="text-center">
           <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
             <Brain className="w-8 h-8 text-white" />
@@ -215,8 +213,8 @@ const BenefitsSection: React.FC = () => (
           </div>
           <h3 className="text-xl font-bold text-white mb-3">Rapid Implementation</h3>
           <p className="text-zion-slate-light">
-            Quick deployment and setup with minimal disruption to your existing operations, 
-            delivering value in weeks, not months.
+            Quick deployment and setup with minimal disruption to your existin, g, operation, s, 
+            delivering value i, n, week, s, not months.
           </p>
         </div>
 
@@ -237,7 +235,7 @@ const BenefitsSection: React.FC = () => (
           </div>
           <h3 className="text-xl font-bold text-white mb-3">Scalable Architecture</h3>
           <p className="text-zion-slate-light">
-            Cloud-native solutions that grow with your business, from startup to enterprise, 
+            Cloud-native solutions that grow with you, r, busines, s, from startup t, o, enterpris, e, 
             with flexible pricing options.
           </p>
         </div>
@@ -257,7 +255,7 @@ const BenefitsSection: React.FC = () => (
   </section>
 );
 
-const ContactSection: React.FC = () => (
+const ContactSectio, n: React.FC = () => (
   <section className="py-16 bg-gradient-to-br from-zion-blue to-zion-blue-dark border border-zion-blue-light rounded-lg">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
@@ -265,12 +263,12 @@ const ContactSection: React.FC = () => (
         Contact our team to discuss your specific needs and find the perfect solution for your business transformation journey.
       </p>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 m,  d:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
         <div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
           <Mail className="w-6 h-6 text-zion-cyan" />
           <div className="text-left">
             <p className="font-medium text-white">Email</p>
-            <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline text-sm">
+            <a href="mailt, o:kleber@ziontechgroup.com" className="text-zion-cyan hove, r:underline text-sm">
               kleber@ziontechgroup.com
             </a>
           </div>
@@ -280,7 +278,7 @@ const ContactSection: React.FC = () => (
           <Phone className="w-6 h-6 text-zion-cyan" />
           <div className="text-left">
             <p className="font-medium text-white">Phone</p>
-            <a href="tel:+13024640950" className="text-zion-cyan hover:underline text-sm">
+            <a href="te, l:+13024640950" className="text-zion-cyan hove, r:underline text-sm">
               +1 302 464 0950
             </a>
           </div>
@@ -301,16 +299,16 @@ const ContactSection: React.FC = () => (
       <div className="flex flex-wrap justify-center gap-4">
         <Button 
           size="lg"
-          className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-          onClick={() => window.open('mailto:kleber@ziontechgroup.com', '_blank')}
+          className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove, r:from-zion-purple-light hove, r:to-zion-purple text-white"
+          onClick={() => window.open('mailt,  o:kleber@ziontechgroup.com', '_blank')}
         >
           Contact Sales Team
         </Button>
         <Button 
           size="lg"
           variant="outline"
-          className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
-          onClick={() => window.open('https://ziontechgroup.com', '_blank')}
+          className="border-zion-purple text-zion-cyan hove, r:bg-zion-purple/10"
+          onClick={() => window.open('http,  s://ziontechgroup.com', '_blank')}
         >
           Visit Our Website
         </Button>
@@ -318,7 +316,7 @@ const ContactSection: React.FC = () => (
           <Button 
             size="lg"
             variant="outline"
-            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+            className="border-zion-cyan text-zion-cyan hove, r:bg-zion-cyan/10"
           >
             Compare Services
           </Button>
@@ -333,18 +331,18 @@ export default function EnhancedServicesOverview() {
     <div className="space-y-16">
       {/* Hero Section */}
       <div className="text-center">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <h1 className="text-4xl m,  d:text-6xl font-bold text-white mb-6">
           Comprehensive Micro SAAS Services
         </h1>
         <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-          Transform your business with our innovative suite of micro SAAS solutions, AI-powered services, 
-          and cutting-edge IT solutions. From startups to enterprises, we have the tools you need to succeed.
+          Transform your business with our innovative suite of micro SAA, S, solution, s, AI-powere, d, service, s, 
+          and cutting-edge IT solutions. From startups t, o, enterprise, s, we have the tools you need to succeed.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button 
             size="lg"
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-            onClick={() => window.open('https://ziontechgroup.com', '_blank')}
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove, r:from-zion-purple-light hove, r:to-zion-purple text-white"
+            onClick={() => window.open('http,  s://ziontechgroup.com', '_blank')}
           >
             Get Started Today
           </Button>
@@ -352,7 +350,7 @@ export default function EnhancedServicesOverview() {
             <Button 
               size="lg"
               variant="outline"
-              className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
+              className="border-zion-purple text-zion-cyan hove, r:bg-zion-purple/10"
             >
               Compare Services
             </Button>

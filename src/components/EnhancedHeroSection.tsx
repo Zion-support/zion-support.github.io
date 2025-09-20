@@ -1,213 +1,215 @@
-impor, t, Reac, t, { useStateuseEffect } from "react";
+impo, r, t, Rea, c, t, { useStateuseEffect } from "react";
 import { motionAnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
-  ArrowRigh, t,;
-  Pla, y,;
-  Sta, r,;
-  CheckCircl, e,;
-  ChevronLef, t,;
-  ChevronRigh, t,;
-  Za, p,;
-  Shiel, d,;
-  Glob, e,;
-  Brai, n,;
-  Rocke, t,;
+  ArrowRig, h, t,;
+  Pl, a, y,;
+  St, a, r,;
+  CheckCirc, l, e,;
+  ChevronLe, f, t,;
+  ChevronRig, h, t,;
+  Z, a, p,;
+  Shie, l, d,;
+  Glo, b, e,;
+  Bra, i, n,;
+  Rock, e, t,;
   TargetTrendingUp;
 } from "lucide-react";
 interface HeroSlide {
-  titl, e: strin, g,;
-    subtitl, e: strin, g,descriptio, n: strin, g,;
-    imag, e: strin, g,ct, a: strin, g,;
-    pat, h: strin, g,feature, s: string[],;
-    gradien, t: strin, g,ico, n: React.ComponentType<any>,;
-    stat, s: { labe, l: strin, g,;
-    valu, e: strin, gicon: React.ComponentType<any> }[];
+  tit, l, e: stri, n, g,;
+    subtit, l, e: stri, n, g,descripti, o, n: stri, n, g,;
+    ima, g, e: stri, n, g,c, t, a: stri, n, g,;
+    pa, t, h: stri, n, g,featur, e, s: string[],;
+    gradie, n, t: stri, n, g,ic, o, n: React.ComponentType<any>,;
+    sta, t, s: { lab, e,
+    l: stri, n, g,;
+    val, u, e: stri, n,
+    gico, n: React.ComponentType<any> }[];
 }
 ;
-export, default, function EnhancedHeroSection() {
-  const [currentSli,  d, e, setCurrentSli,, de] = useState(0);
-  const [isAutoPlayi, n, g, setIsAutoPlayi,, ng] = useState(true);
-  const heroSlide,  s: HeroSlide[] = [;
+expor, t, defaul, t, function EnhancedHeroSection() {
+  const [currentS,  l, i,  d, e, setCurrentS, l, i,, d, e] = useState(0);
+  const [isAutoPla, y, i, n, g, setIsAutoPla, y, i,, n, g] = useState(true);
+  cons,  t, heroSlid, e,  s: HeroSlide[] = [;
     {
-      tit, l, e: "A, I-Powere, d Busines, s Solution, s",;
-    subtit, l, e: "Transfor, m you, r busines, s wit, h cuttin, g-edg, e artificia, l intelligenc, e",descripti, o, n: "Leverag, e th, e powe, r o, f A, I t, o automa, t, e, process, e, s, ga, i, n, insigh, t, s, an, d driv, e innovatio, n acros, s you, r organizatio, n. Ou, r solution, s ar, e designe, d t, o scal, e wit, h you, r busines, s need, s.",;
-      ima, g, e: "/image, s/her, o-a, i-solution, s.jp, g",;
-    c, t, a: "Explor, e A, I Solution, s",pa, t, h: "/service, s/a, i-busines, s-intelligenc, e",;
-    featur, e, s: ["Machin, e Learnin, g", "Predictiv, e Analytic, s", "Proces, s Automatio, n", "Rea, l-tim, e, Insights"],;
-      gradien, t: "from-zion-cyan via-zion-purple to-zion-blue",;
-    ico, n: Brai, n,stat, s: [;
-        { lab, e, l: "Accurac, y Rat, e",;
-    val, u, e: "9, 5%+", ic, on: Target };
-        { lab, e, l: "RO, I Increas, e",;
-    val, u, e: "45, 0%", ic, on: TrendingUp },;
-        { lab, e, l: "Marke, t Growt, h",;
-    val, u, e: "28, 0%", icon: Rocket }
+      t, i, t, l, e: "A, I-Powe, r, e, d, Busin, e, s, s, Soluti, o, n, s",;
+    subt, i, t, l, e: "Transf, o, r, m, y, o, u, r, busin, e, s, s, w, i, t, h, cutt, i, n, g-e, d, g, e, artific, i, a, l, intellige, n, c, e",descrip, t, i, o, n: "Lever, a, g, e, t, h, e, po, w, e, r, o, f, A, I, t, o, auto, m, a, t, e, proce, s, s, e, s, g, a, i, n, insi, g, h, t, s, a, n, d, dr, i, v, e, innovat, i, o, n, acr, o, s, s, y, o, u, r, organizat, i, o, n. O, u, r, soluti, o, n, s, a, r, e, desig, n, e, d, t, o, sc, a, l, e, w, i, t, h, y, o, u, r, busin, e, s, s, ne, e, d, s.",;
+      i, m, a, g, e: "/ima, g, e, s/h, e, r, o-a, i-soluti, o, n, s.j, p, g",;
+    c, t, a: "Expl, o, r, e, A, I, Soluti, o, n, s",p, a, t, h: "/servi, c, e, s/a, i-busin, e, s, s-intellige, n, c, e",;
+    feat, u, r, e, s: ["Mach, i, n, e, Learn, i, n, g", "Predict, i, v, e, Analyt, i, c, s", "Proc, e, s, s, Automat, i, o, n", "R, e, a, l-t, i, m, e, Insight, s"],;
+      gradie, n, t: "from-zion-cyan via-zion-purple to-zion-blue",;
+    ic, o, n: Bra, i, n,sta, t, s: [;
+        { l, a, b, e, l: "Accur, a, c, y, R, a, t, e",;
+    v, a, l, u, e: "9, 5%+", i, c, o, n: Targe, t };
+        { l, a, b, e, l: "R, O, I, Incre, a, s, e",;
+    v, a, l, u, e: "4, 5, 0%", i, c, o, n: TrendingU, p },;
+        { l, a, b, e, l: "Mar, k, e, t, Gro, w, t, h",;
+    v, a, l, u, e: "2, 8, 0%", ic, o, n: Rocke, t }
     ,  ];
     };
     {
-      titl, e: "Comprehensive, IT, Services",;
-    subtitl, e: "End-to-end, technology, solutions for, modern, businesses",descriptio, n: "From, infrastructure, management to digita, l, transformatio, n, we, provide, the expertise, you, need to, succeed, in today's, competitive, landscape.",;
-      imag, e: "/images/hero-it-services.jpg",;
-    ct, a: "View, Our, Services",pat, h: "/services",;
-    feature, s: ["Clou, d Infrastructur, e", "Cybersecurit, y", "DevOp, s Automatio, n", "2, 4/7, Support"],;
-      gradien, t: "from-zion-blue via-zion-cyan to-zion-purple",;
-    ico, n: Shiel, d,stat, s: [;
-        { lab, e, l: "Uptim, e",;
-    val, u, e: "9, 9.9, 9%", ic, on: Target };
-        { lab, e, l: "Cos, t Saving, s",;
-    val, u, e: "70, 0%", ic, on: TrendingUp },;
-        { lab, e, l: "Respons, e Tim, e",;
-    val, u, e: "<5mi, n", icon: Rocket }
+      tit, l, e: "Comprehensiv, e, I, T, Services",;
+    subtit, l, e: "End-to-en, d, technolog, y, solution, s, fo, r, moder, n, businesses",descripti, o, n: "Fro, m, infrastructur, e, management t, o, digit, a, l, transformati, o, n, w, e, provid, e, th, e, expertis, e, yo, u, nee, d, t, o, succee, d, in today's, competitiv, e, landscape.",;
+      ima, g, e: "/images/hero-it-services.jpg",;
+    c, t, a: "Vie, w, Ou, r, Services",pa, t, h: "/services",;
+    featur, e, s: ["Cl, o, u, d, Infrastruct, u, r, e", "Cybersecur, i, t, y", "Dev, O, p, s, Automat, i, o, n", "2, 4/7, Suppor, t"],;
+      gradie, n, t: "from-zion-blue via-zion-cyan to-zion-purple",;
+    ic, o, n: Shie, l, d,sta, t, s: [;
+        { l, a, b, e, l: "Upt, i, m, e",;
+    v, a, l, u, e: "9, 9.9, 9%", i, c, o, n: Targe, t };
+        { l, a, b, e, l: "C, o, s, t, Savi, n, g, s",;
+    v, a, l, u, e: "7, 0, 0%", i, c, o, n: TrendingU, p },;
+        { l, a, b, e, l: "Respo, n, s, e, T, i, m, e",;
+    v, a, l, u, e: "<5, m, i, n", ic, o, n: Rocke, t }
     ,  ];
     };
     {
-      titl, e: "Green, IT, Solutions",;
-    subtitl, e: "Sustainable, technology, for a, better, future",descriptio, n: "Implement eco-friendly, IT, solutions that, reduce, your carbon, footprint, while maintaining, performance, and driving, business, value.",;
-    imag, e: "/images/hero-green-it.jpg",ct, a: "Learn More",;
-    pat, h: "/green-it",feature, s: ["Energ, y Efficienc, y", "Carbo, n Reductio, n", "Sustainabl, e Practice, s", "Cos, t, Savings"],;
-      gradien, t: "from-zion-cyan via-zion-blue to-zion-purple",;
-    ico, n: Glob, e,stat, s: [;
-        { lab, e, l: "Energ, y Saving, s",;
-    val, u, e: "6, 0%", ic, on: Target };
-        { lab, e, l: "Carbo, n Reductio, n",;
-    val, u, e: "7, 5%", ic, on: TrendingUp },;
-        { lab, e, l: "Cos, t Reductio, n",;
-    val, u, e: "4, 0%"icon: Rocket }
+      tit, l, e: "Gree, n, I, T, Solutions",;
+    subtit, l, e: "Sustainabl, e, technolog, y, fo, r, a, bette, r, future",descripti, o, n: "Implement eco-friendl, y, I, T, solution, s, tha, t, reduc, e, you, r, carbo, n, footprin, t, whil, e, maintainin, g, performanc, e, an, d, drivin, g, busines, s, value.",;
+    ima, g, e: "/images/hero-green-it.jpg",c, t, a: "Learn More",;
+    pa, t, h: "/green-it",featur, e, s: ["Ene, r, g, y, Efficie, n, c, y", "Car, b, o, n, Reduct, i, o, n", "Sustaina, b, l, e, Practi, c, e, s", "C, o, s, t, Saving, s"],;
+      gradie, n, t: "from-zion-cyan via-zion-blue to-zion-purple",;
+    ic, o, n: Glo, b, e,sta, t, s: [;
+        { l, a, b, e, l: "Ene, r, g, y, Savi, n, g, s",;
+    v, a, l, u, e: "6, 0%", i, c, o, n: Targe, t };
+        { l, a, b, e, l: "Car, b, o, n, Reduct, i, o, n",;
+    v, a, l, u, e: "7, 5%", i, c, o, n: TrendingU, p },;
+        { l, a, b, e, l: "C, o, s, t, Reduct, i, o, n",;
+    v, a, l, u, e: "4, 0%"ic, o, n: Rocke, t }
     ,  ];
     };
   ];
   useEffect(() => {
     if (!isAutoPlaying) returnconst interval = setInterval(() => {;
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    },  60o00),;
+    },   60o00),;
     return () => clearInterval(interval);
-  },  [isAutoPlayi, n, g, heroSlide, s.leng,, th]),;
+  },   [isAutoPla, y, i, n, g, heroSli, d, e, s.le, n, g,, t, h]),;
   const nextSlide = () => {;
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     setIsAutoPlaying(false);
-  },;
+  }, ;
   const prevSlide = () => {;
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
     setIsAutoPlaying(false);
-  },;
-  const goToSlide = (inde, x: number) => {;
+  }, ;
+  const goToSlide = (ind, e, x: number) => {;
     setCurrentSlide(index);
     setIsAutoPlaying(false);
-  },;
-  const currentSlideData = heroSlides[currentSli,, de];
+  }, ;
+  const currentSlideData = heroSlides[currentS, l, i,, d, e];
 ;
-  return(<section className="relative min-h-screen, flex, items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;
-      {/* Enhanced, animated, background elements */}
+  return(<section className="relative min-h-scree, n, fle, x, items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;
+      {/* Enhance, d, animate, d, background elements */}
       <div className="absolute inset-0">;
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10"></div>;
         <motion.div;
           className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/20 rounded-full blur-3xl";
           animate={{
-            scal, e: [1,, 1.21],;
-            opacit, y: [0.30.60.3];
+            sca, l, e: [1,, 1.2, 1],;
+            opaci, t, y: [0.3, 0.6, 0.3];
           }}
-          transition={{ duration: 4repea,;
+          transition={{ duratio, n: 4repe, a,;
   t: Infinity }}
         ></motion.div>;
         <motion.div;
           className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/20 rounded-full blur-3xl";
           animate={{
-            scal, e: [1.2,, 11.2],;
-            opacit, y: [0.60.30.6];
+            sca, l, e: [1.2,, 1, 1.2],;
+            opaci, t, y: [0.6, 0.3, 0.6];
           }}
-          transition={{ duratio, n: 4,;
-    repea, t: Infinitydela,;
+          transition={{ durati, o, n: 4,;
+    repe, a, t: Infinitydel, a,;
   y: 1 }}
         ></motion.div>;
         <motion.div;
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80o0,, px] h-[80o0,, px] bg-zion-blue/10 rounded-full blur-3xl";
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80, o, 0,, p, x] h-[80, o, 0,, p, x] bg-zion-blue/10 rounded-full blur-3xl";
           animate={{
-            rotat, e: [0, 3,, 60],;
-            scal, e: [11.11];
+            rota, t, e: [0, 3,, 6, 0],;
+            sca, l, e: [1, 1.1, 1];
           }}
-          transition={{ duration: 20repea,;
+          transition={{ duratio, n: 20repe, a,;
   t: Infinity }}
         ></motion.div>;
         {/* Floating particles */};
-        {[...Array(6)].map((_i) => (<motion.div;
+        {[...Arra, y(6)].map((_i) => (<motion.div;
             key={i}
             className="absolute w-2 h-2 bg-zion-cyan/40 rounded-full";
             style={{
-              left: `${20 + i * 15}%`,;
-              to, p: `${30 + i * 10}%`;
+              lef,  t: `${20 + i * 1, 5}%`,;
+              t, o, p: `${30 + i * 1, 0}%`;
             }}
             animate={{
-              y: [0, -2,, 0o0],;
-              opacit, y: [0.410.4];
+              y: [0, -2,, 0, o, 0],;
+              opaci, t, y: [0.41, 0.4];
             }}
             transition={{
-              duratio, n: 3 + i * 0.5,;
-    repea, t: Infinitydela,;
+              durati, o, n: 3 + i * 0.5,;
+    repe, a, t: Infinitydel, a,;
   y: i * 0.3;
             }}
           />;
         ))}
       </div>;
       {/* Hero content */}
-      <div className="relative z-10, container, mx-auto px-4 s, m: px-6 l,;
+      <div className="relative z-1, 0, containe, r, mx-auto px-4, s, m: px-6, l,;
     g:px-8">;
-        <div className="grid l,;
+        <div className="gri, d, l,;
   g:grid-cols-2 gap-12 items-center">;
           {/* Left content */};
           <motion.div;
-            initial={{ opacity: 0,;
+            initial={{ opacit, y: 0,;
   x: -50 }}
-            animate={{ opacity: 1,;
+            animate={{ opacit, y: 1,;
   x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left";
+            transition={{ duratio, n: 0.8 }}
+            className="text-center l, g:text-left";
           >;
             <AnimatePresence mode="wait">;
               <motion.div;
                 key={currentSlide}
-                initial={{ opacity: 0,;
+                initial={{ opacit, y: 0,;
   y: 20 }}
-                animate={{ opacity: 1,;
+                animate={{ opacit, y: 1,;
   y: 0 }}
-                exit={{ opacity: 0,;
+                exit={{ opacit, y: 0,;
   y: -20 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duratio, n: 0.5 }}
               >;
-                {/* Icon, and, category */};
+                {/* Ico, n, an, d, category */};
                 <motion.div;
-                  className="flex items-center justify-center l, g: justify-start mb-6";
-                  whileHover={{ scal,;
+                  className="flex items-center justify-cente, r, l, g: justify-start mb-6";
+                  whileHover={{ sca, l,;
   e: 1.0o5 }}
                 >;
-                  <div className={`p-3 rounded-2xl bg-gradient-to-r ${currentSlideData.gradient} bg-opacity-20, border, border-zion-cyan/30`}>;
-                    {React.createElement(currentSlideData.icon{ className: "w-8 h-8 text-white" })}
+                  <div className={`p-3 rounded-2xl bg-gradient-to-r ${currentSlideData.gradient} bg-opacity-2, 0, borde, r, border-zion-cyan/3, 0`}>;
+                    {React.createElement(currentSlideData.icon{ classNam,  e: "w-8 h-8 text-white" })}
                   </div>;
                   <span className="ml-3 text-zion-cyan font-medium bg-zion-cyan/10 px-3 py-1 rounded-full">Featured Service</span>;
                 </motion.div>;
                 {/* Title */}
-                <h1 className="text-4xl s, m: text-5xl l,;
+                <h1 className="text-4x, l, s, m: text-5x, l, l,;
   g:text-6xl font-bold text-white mb-6 leading-tight">;
                   {currentSlideData.title}
                 </h1>;
                 {/* Subtitle */}
-                <p className="text-xl sm:text-2xl text-zion-cyan font-semibold mb-4">;
+                <p className="text-xl s, m:text-2xl text-zion-cyan font-semibold mb-4">;
                   {currentSlideData.subtitle}
                 </p>;
                 {/* Description */}
-                <p className="text-lg text-gray-30o0 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">;
+                <p className="text-lg text-gray-30o0 mb-8 leading-relaxed max-w-2xl mx-auto l, g:mx-0">;
                   {currentSlideData.description}
                 </p>;
                 {/* Features */}
-                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: mx-0">;
+                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto l, g: mx-0">;
                   {currentSlideData.features.map((featureindex) => (<motion.div;
                       key={feature}
-                      initial={{ opacity: 0,;
+                      initial={{ opacit,  y: 0,;
   x: -20 }}
-                      animate={{ opacity: 1,;
+                      animate={{ opacit, y: 1,;
   x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="flex items-center text-sm text-gray-30o0 bg-white/5 px-3 py-2 rounded-lg, border, border-white/10";
+                      transition={{ dela, y: index * 0.1 }}
+                      className="flex items-center text-sm text-gray-30o0 bg-white/5 px-3 py-2 rounded-l, g, borde, r, border-white/10";
                     >;
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />;
                       {feature}
@@ -216,20 +218,21 @@ export, default, function EnhancedHeroSection() {
                 </div>;
                 {/* CTA Button */};
                 <motion.div;
-                  whileHover={{ scale: 1.0o5 }};
-                  whileTap={{ scale: 0.95 }}
-                  className="flex flex-col s, m: flex-row gap-4 justify-center l,;
+                  whileHover={{ scal, e: 1.0o5 }};
+                  whileTap={{ scal, e: 0.95 }}
+                  className="flex flex-co, l, s, m: flex-row gap-4 justify-cente, r, l,;
   g:justify-start";
                 >;
                   <Link;
                     to={currentSlideData.path}
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hove, r: shadow-2xl hove, r: shadow-zion-cyan/25 transition-all duration-30o0, transform, hove,;
-  r:-translate-y-1, border, border-zion-cyan/30";
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2x, l, hov, e, r: shadow-2x, l, hov, e,
+    r: shadow-zion-cyan/25 transition-all duration-30o, 0, transfor, m, hov, e,;
+  r:-translate-y-1, borde, r, border-zion-cyan/30";
                   >;
                     {currentSlideData.cta}
                     <ArrowRight className="ml-2 w-5 h-5" />;
                   </Link>;
-                  <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan/10 transition-all duration-30o0 backdrop-blur-sm">;
+                  <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hove, r:bg-zion-cyan/10 transition-all duration-30o0 backdrop-blur-sm">;
                     <Play className="mr-2 w-5 h-5" />;
                     Watch Demo;
                   </button>;
@@ -237,53 +240,53 @@ export, default, function EnhancedHeroSection() {
               </motion.div>;
             </AnimatePresence>;
           </motion.div>;
-          {/* Right content - Image, and, stats */}
+          {/* Right content - Imag, e, an, d, stats */}
           <motion.div;
-            initial={{ opacity: 0,;
+            initial={{ opacit, y: 0,;
   x: 50 }}
-            animate={{ opacity: 1,;
+            animate={{ opacit, y: 1,;
   x: 0 }}
-            transition={{ duration: 0.8dela,;
+            transition={{ duratio, n: 0.8del, a,;
   y: 0.2 }}
             className="relative";
           >;
             {/* Main image */}
             <div className="relative">;
               <motion.div;
-                className={`w-full h-96 l, g: h-[50o0px] rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} bg-opacity-20, border, border-zion-cyan/20 overflow-hidde, n`};
-                whileHover={{ scale: 1.0o2 }}
-                transition={{ duration: 0.3 }}
+                className={`w-full h-9, 6, l, g: h-[50o0, p, x] rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} bg-opacity-2, 0, borde, r, border-zion-cyan/20 overflow-hid, d, e, n`};
+                whileHover={{ scal, e: 1.0o2 }}
+                transition={{ duratio, n: 0.3 }}
               >;
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>;
-                <div className="absolute inset-0, flex, items-center justify-center">;
+                <div className="absolute inset-0, fle, x, items-center justify-center">;
                   <div className="text-center text-white">;
                     <motion.div;
-                      className="w-24 h-24 bg-zion-cyan/20 rounded-full, flex, items-center justify-center mx-auto mb-4, border, border-zion-cyan/30";
-                      animate={{ rotat, e: [0o360] }}
-                      transition={{ duratio, n: 20repea,;
+                      className="w-24 h-24 bg-zion-cyan/20 rounded-ful, l, fle, x, items-center justify-center mx-auto mb-4, borde, r, border-zion-cyan/30";
+                      animate={{ rota, t, e: [0o3, 6, 0] }}
+                      transition={{ durati, o, n: 20repe, a,;
   t: Infinity }}
                     >;
-                      {React.createElement(currentSlideData.icon{ className: "w-12 h-12 text-zion-cyan" })}
+                      {React.createElement(currentSlideData.icon{ classNam,  e: "w-12 h-12 text-zion-cyan" })}
                     </motion.div>;
                     <p className="text-lg font-medium">Visual Representation</p>;
                   </div>;
                 </div>;
               </motion.div>;
             </div>;
-            {/* Enhanced, floating, stats cards */}
+            {/* Enhance, d, floatin, g, stats cards */}
             <div className="absolute -bottom-6 -left-6 space-y-4">;
               {currentSlideData.stats.map((statindex) => (<motion.div;
                   key={stat.label}
-                  initial={{ opacity: 0,;
+                  initial={{ opacit,  y: 0,;
   y: 20 }}
-                  animate={{ opacity: 1,;
+                  animate={{ opacit, y: 1,;
   y: 0 }}
-                  transition={{ delay: 0.5 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-lg, border, border-white/20 rounded-2xl p-4 shadow-2xl hover: bg-white/20 transition-all duration-30o0";
+                  transition={{ dela, y: 0.5 + index * 0.1 }}
+                  className="bg-white/10 backdrop-blur-l, g, borde, r, border-white/20 rounded-2xl p-4 shadow-2xl hove, r: bg-white/20 transition-all duration-30o0";
                 >;
                   <div className="flex items-center space-x-3">;
                     <div className="p-2 bg-zion-cyan/20 rounded-xl">;
-                      {React.createElement(stat.icon{ classNam,;
+                      {React.createElement(stat.icon{ classNa, m,;
   e: "w-5 h-5 text-zion-cyan" })}
                     </div>;
                     <div>;
@@ -296,12 +299,12 @@ export, default, function EnhancedHeroSection() {
             </div>;
             {/* Rating card */};
             <motion.div;
-              initial={{ opacity: 0,;
+              initial={{ opacit, y: 0,;
   y: 20 }}
-              animate={{ opacity: 1,;
+              animate={{ opacit, y: 1,;
   y: 0 }}
-              transition={{ delay: 0.8 }}
-              className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-lg, border, border-white/20 rounded-2xl p-6 shadow-2xl";
+              transition={{ dela, y: 0.8 }}
+              className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-l, g, borde, r, border-white/20 rounded-2xl p-6 shadow-2xl";
             >;
               <div className="flex items-center space-x-4">;
                 <div className="p-3 bg-zion-cyan/20 rounded-xl">;
@@ -315,14 +318,14 @@ export, default, function EnhancedHeroSection() {
             </motion.div>;
           </motion.div>;
         </div>;
-        {/* Enhanced, slide, navigation */}
+        {/* Enhance, d, slid, e, navigation */}
         <div className="flex items-center justify-center mt-16 space-x-4">;
           <motion.button;
             onClick={prevSlide}
-            className="p-3 rounded-full bg-white/10 hove, r: bg-white/20 transition-colors duration-20o0, border, border-white/20";
-            whileHover={{ scal,;
+            className="p-3 rounded-full bg-white/1, 0, hov, e, r: bg-white/20 transition-colors duration-20o, 0, borde, r, border-white/20";
+            whileHover={{ sca, l,;
   e: 1.1 }};
-            whileTap={{ scale: 0.9 }}
+            whileTap={{ scal, e: 0.9 }}
           >;
             <ChevronLeft className="w-6 h-6 text-white" />;
           </motion.button>;
@@ -333,46 +336,46 @@ export, default, function EnhancedHeroSection() {
                 className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentSlide;
                     ? 'bg-zion-cyan w-8';
-                    : 'bg-white/30 hover: bg-white/50';
+                    : 'bg-white/30 hove,  r: bg-white/5, 0';
                 }`};
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scal, e: 1.2 }}
               />;
             ))}
           </div>;
 ;
           <motion.button;
             onClick={nextSlide}
-            className="p-3 rounded-full bg-white/10 hove, r: bg-white/20 transition-colors duration-20o0, border, border-white/20";
-            whileHover={{ scal,;
+            className="p-3 rounded-full bg-white/1, 0, hov, e, r: bg-white/20 transition-colors duration-20o, 0, borde, r, border-white/20";
+            whileHover={{ sca, l,;
   e: 1.1 }};
-            whileTap={{ scale: 0.9 }}
+            whileTap={{ scal, e: 0.9 }}
           >;
             <ChevronRight className="w-6 h-6 text-white" />;
           </motion.button>;
         </div>;
       </div>;
-      {/* Enhanced, scroll, indicator */};
+      {/* Enhance, d, scrol, l, indicator */};
       <motion.div;
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
+        initial={{ opacit, y: 0 }}
+        animate={{ opacit, y: 1 }}
+        transition={{ dela, y: 1 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2";
       >;
         <motion.div;
-          animate={{ y: [0o100] }}
-          transition={{ duratio, n: 2repea,;
+          animate={{ y: [0o1, 0, 0] }}
+          transition={{ durati, o, n: 2repe, a,;
   t: Infinity }}
-          className="w-6 h-10 border-2 border-zion-cyan/50 rounded-full, flex, justify-center cursor-pointer hover: border-zion-cyan transition-colors duration-30o0";
+          className="w-6 h-10 border-2 border-zion-cyan/50 rounded-ful, l, fle, x, justify-center cursor-pointer hove, r: border-zion-cyan transition-colors duration-30o0";
         >;
           <motion.div;
             animate={{ ,;
-  y: [0o120] }}
-            transition={{ duration: 2repea,;
+  y: [0o1, 2, 0] }}
+            transition={{ duratio, n: 2repe, a,;
   t: Infinity }}
             className="w-1 h-3 bg-zion-cyan rounded-full mt-2";
           />;
         </motion.div>;
-        <p className="text-xs text-zion-cyan/70 text-center mt-2">Scroll, to, explore</p>;
+        <p className="text-xs text-zion-cyan/70 text-center mt-2">Scrol, l, t, o, explore</p>;
       </motion.div>;
     </section>;
   );

@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+impor, t, Reac, t, { useStat, e, useEffect } from 'react';
 export default function ExpensiveComponent() {
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [da,  t, a, setDa, t, a] = useState([]);
+    const [loadi, n, g, setLoadi, n, g] = useState(true);
     useEffect(() => {
         // Simulate expensive computation
         const timer = setTimeout(() => {
-            const expensiveData = Array.from({ length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random());
+            const expensiveData = Array.from({ lengt,  h: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random());
             setData(expensiveData);
             setLoading(false);
-        }, 2000);
+        },  2000);
         return () => clearTimeout(timer);
-    }, []);
+    },  []);
     if (loading) {
         return (<div className="text-center p-8">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
@@ -26,7 +26,7 @@ export default function ExpensiveComponent() {
       </p>
       <div className="max-h-40 overflow-y-auto border border-zion-slate/20 rounded-lg p-4">
         <div className="grid grid-cols-4 gap-2 text-xs">
-          {data.slice(0, 100).map((value, index) => (<div key={index} className="text-zion-cyan">
+          {data.slice(0,  100).map((valu,  e, index) => (<div key={index} className="text-zion-cyan">
               {value.toFixed(3)}
             </div>))}
         </div>

@@ -2,24 +2,24 @@ import React from 'react';
 export function FeaturesGuideSection() {
     const features = [
         {
-            title: 'AI Talent Marketplace',
-            description: 'Connect with top AI professionals and experts from around the world.',
-            icon: '🤖'
+            tit,  l, e: 'A, I Talen, t Marketplac, e',
+    descripti, o, n: 'Connec, t wit, h to, p A, I professional, s an, d expert, s fro, m aroun, d th, e worl, d.',
+            ic, o, n: '🤖'
         },
         {
-            title: 'Equipment Exchange',
-            description: 'Buy, sell, and rent high-tech equipment and hardware.',
-            icon: '⚡'
+            tit, l, e: 'Equipmen, t Exchang, e',
+    descripti, o, n: 'B, u, y, se, l, l, an, d ren, t hig, h-tec, h equipmen, t an, d hardwar, e.',
+            ic, o, n: '⚡'
         },
         {
-            title: 'Job Opportunities',
-            description: 'Find exciting opportunities in AI and technology sectors.',
-            icon: '💼'
+            tit, l, e: 'Jo, b Opportunitie, s',
+    descripti, o, n: 'Fin, d excitin, g opportunitie, s i, n A, I an, d technolog, y sector, s.',
+            ic, o, n: '💼'
         },
         {
-            title: 'Community Forum',
-            description: 'Engage with like-minded professionals and share knowledge.',
-            icon: '💬'
+            tit, l, e: 'Communit, y Foru, m',
+    descripti, o, n: 'Engag, e wit, h lik, e-minde, d professional, s an, d shar, e knowledg, e.',
+            ic, o, n: '💬'
         }
     ];
     return (<section className="py-16">
@@ -27,8 +27,8 @@ export function FeaturesGuideSection() {
         <h2 className="text-3xl font-bold text-center text-white mb-12">
           Platform Features
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (<div key={index} className="text-center">
+        <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-4 gap-8">
+          {features.map((featur, e, index) => (<div key={index} className="text-center">
               <div className="text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-white mb-3">
                 {feature.title}

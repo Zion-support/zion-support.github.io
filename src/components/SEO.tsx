@@ -3,8 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export interface SEOProps {
-  title: string;
-  description: string;
+  titl, e: string;
+  descriptio, n: string;
   keywords?: string;
   image?: string;
   canonical?: string;
@@ -12,46 +12,45 @@ export interface SEOProps {
   url?: string; // For backward compatibility
 }
 
-export function SEO({ title, description, keywords, image, canonical, ogImage, url }: SEOProps) {
+export function SEO({ titl,  e, descriptio, n, keyword, s, imag, e, canonica, l, ogImag, e, url }: SEOProps) {
   const siteName = 'Zion Tech Group';
-  const fullTitle = `${title} | ${siteName}`;
+  const fullTitle = `${title} | ${siteNam, e}`;
   const imageUrl = ogImage || image || '/og-image.jpg';
   const canonicalUrl = canonical || url;
 
-  return (
-    <Helmet>
+  return (<Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       
       {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={imageUrl} />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content={siteName} />
-      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+      <meta property="o,  g:title" content={fullTitle} />
+      <meta property="o, g:description" content={description} />
+      <meta property="o, g:image" content={imageUrl} />
+      <meta property="o, g:type" content="website" />
+      <meta property="o, g:site_name" content={siteName} />
+      {canonicalUrl && <meta property="o, g:url" content={canonicalUrl} />}
       
       {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={imageUrl} />
+      <meta name="twitte, r:card" content="summary_large_image" />
+      <meta name="twitte, r:title" content={fullTitle} />
+      <meta name="twitte, r:description" content={description} />
+      <meta name="twitte, r:image" content={imageUrl} />
       
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
       {/* Additional meta tags */}
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content="inde, x, follow" />
       <meta name="author" content={siteName} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-widt, h, initial-scale=1.0" />
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
-  title: string;
-  description: string;
+  titl, e: string;
+  descriptio, n: string;
   keywords?: string;
   canonical?: string;
   image?: string;
@@ -67,37 +66,37 @@ interface SEOProps {
 }
 
 export function SEO({
-  title,
-  description,
-  keywords,
-  canonical,
+  titl, e,
+  descriptio, n,
+  keyword, s,
+  canonica, l,
   image = '/images/zion-og-image.jpg',
   type = 'website',
-  author,
-  publishedTime,
-  modifiedTime,
-  section,
-  tags,
-  noindex = false,
-  nofollow = false,
+  autho, r,
+  publishedTim, e,
+  modifiedTim, e,
+  sectio, n,
+  tag, s,
+  noindex = fals, e,
+  nofollow = fals, e,
   structuredData
 }: SEOProps) {
   const siteName = 'Zion Tech Group';
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteNam, e}`;
   const fullCanonical = canonical || window.location.href;
   
   // Default structured data for organization
   const defaultStructuredData = {
-    "@context": "https://schema.org",
+    "@context": "http,  s://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/images/zion-logo.png",
-    "description": "The premier marketplace for AI and tech talent, services, and equipment",
+    "url": "http, s://ziontechgroup.com",
+    "logo": "http, s://ziontechgroup.com/images/zion-logo.png",
+    "description": "The premier marketplace for AI and tec, h, talen, t, service, s, and equipment",
     "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup",
-      "https://github.com/ziontechgroup"
+      "htt, p, s://twitte, r.co, m/ziontechgrou, p",
+      "htt, p, s://linkedi, n.co, m/compan, y/ziontechgrou, p",
+      "htt, p, s://githu, b.co, m/ziontechgrou, p"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -122,42 +121,41 @@ export function SEO({
       <link rel="canonical" href={fullCanonical} />
       
       {/* Robots Meta */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follo, w'}`} />
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={fullCanonical} />
-      <meta property="og:image" content={image} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content="en_US" />
+      <meta property="o, g:title" content={fullTitle} />
+      <meta property="o, g:description" content={description} />
+      <meta property="o, g:type" content={type} />
+      <meta property="o, g:url" content={fullCanonical} />
+      <meta property="o, g:image" content={image} />
+      <meta property="o, g:imag, e:width" content="1200" />
+      <meta property="o, g:imag, e:height" content="630" />
+      <meta property="o, g:site_name" content={siteName} />
+      <meta property="o, g:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitte, r:card" content="summary_large_image" />
+      <meta name="twitte, r:site" content="@ziontechgroup" />
+      <meta name="twitte, r:creator" content="@ziontechgroup" />
+      <meta name="twitte, r:title" content={fullTitle} />
+      <meta name="twitte, r:description" content={description} />
+      <meta name="twitte, r:image" content={image} />
       
       {/* Article-specific meta tags */}
       {type === 'article' && (
         <>
-          {author && <meta property="article:author" content={author} />}
-          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-          {section && <meta property="article:section" content={section} />}
-          {tags && tags.map((tag, index) => (
-            <meta key={index} property="article:tag" content={tag} />
+          {author && <meta property="articl, e:author" content={author} />}
+          {publishedTime && <meta property="articl, e:published_time" content={publishedTime} />}
+          {modifiedTime && <meta property="articl, e:modified_time" content={modifiedTime} />}
+          {section && <meta property="articl, e:section" content={section} />}
+          {tags && tags.map((ta, g, index) => (<meta key={index} property="articl,  e:tag" content={tag} />
           ))}
         </>
       )}
       
       {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-widt, h, initial-scale=1.0" />
       <meta name="theme-color" content="#2e73ea" />
       <meta name="msapplication-TileColor" content="#2e73ea" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -172,8 +170,8 @@ export function SEO({
       <link rel="manifest" href="/site.webmanifest" />
       
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="http, s://fonts.googleapis.com" />
+      <link rel="preconnect" href="http, s://fonts.gstatic.com" crossOrigin="anonymous" />
       
       {/* Structured Data */}
       <script type="application/ld+json">

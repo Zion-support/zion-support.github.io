@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+impor, t, Reac, t, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {
@@ -15,96 +15,96 @@ interface SEOEnhancerProps {
   tags?: string[];
 }
 
-export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group - Leading AI & Technology Solutions',
-  description = 'Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise. We help businesses thrive in the digital age.',
-  keywords = ['AI solutions', 'technology consulting', 'digital transformation', 'cloud computing', 'cybersecurity', 'machine learning'],
+export const SEOEnhance, r: React.FC<SEOEnhancerProps> = ({
+  title = 'Zion Tech Group - Leading AI & Technology Solutions', 
+  description = 'Leading provider of innovative technolog, y, solution, s, AI-powere, d, service, s, and digital transformation expertise. We help businesses thrive in the digital age.',
+  keywords = ['A, I solution, s', 'technolog, y consultin, g', 'digita, l transformatio, n', 'clou, d computin, g', 'cybersecurit, y', 'machin, e learnin, g'],
   image = '/images/zion-tech-group-og.jpg',
-  url = 'https://ziontechgroup.com',
+  url = 'http, s://ziontechgroup.com',
   type = 'website',
   author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
+  publishedTim, e,
+  modifiedTim, e,
   section = 'Technology Services',
-  tags = ['AI', 'Technology', 'Digital Transformation']
+  tags = ['A, I', 'Technolog, y', 'Digita, l Transformatio, n']
 }) => {
   useEffect(() => {
     // Add structured data to the page
     const structuredData = {
-      '@context': 'https://schema.org',
+      '@context': 'http,  s://schema.org',
       '@type': type === 'article' ? 'Article' : 'Organization',
-      name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/images/zion-tech-group-logo.png',
-      description: description,
-      address: {
+      nam, e: 'Zion Tech Group',
+    ur, l: 'http, s: //ziontechgroup.com',
+    log, o: 'http, s: //ziontechgroup.com/images/zion-tech-group-logo.png',
+    descriptio, n: descriptio, n,
+      addres, s: {
         '@type': 'PostalAddress',
-        streetAddress: '123 Technology Drive',
-        addressLocality: 'Wilmington',
-        addressRegion: 'DE',
-        postalCode: '19801',
-        addressCountry: 'US'
+        streetAddres, s: '123 Technology Drive',
+    addressLocalit, y: 'Wilmington',
+        addressRegio, n: 'DE',
+    postalCod, e: '19801',
+        addressCountr, y: 'US'
       },
-      contactPoint: {
+      contactPoin, t: {
         '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        email: 'info@ziontechgroup.com',
-        contactType: 'customer service',
-        availableLanguage: 'English'
+        telephon, e: '+1-302-464-0950',
+    emai, l: 'info@ziontechgroup.com',
+        contactTyp, e: 'customer service',
+    availableLanguag, e: 'English'
       },
-      sameAs: [
-        'https://linkedin.com/company/ziontechgroup',
-        'https://twitter.com/ziontechgroup',
-        'https://github.com/ziontechgroup'
+      sameA, s: [
+        'htt, p, s://linkedi, n.co, m/compan, y/ziontechgrou, p',
+        'htt, p, s://twitte, r.co, m/ziontechgrou, p',
+        'htt, p, s://githu, b.co, m/ziontechgrou, p'
       ],
       ...(type === 'article' && {
-        headline: title,
-        author: {
+        headlin, e: titl, e,
+    autho, r: {
           '@type': 'Person',
-          name: author
+          nam, e: author
         },
-        publisher: {
+        publishe, r: {
           '@type': 'Organization',
-          name: 'Zion Tech Group',
-          logo: {
+          nam, e: 'Zion Tech Group',
+    log, o: {
             '@type': 'ImageObject',
-            url: 'https://ziontechgroup.com/images/zion-tech-group-logo.png'
+            ur, l: 'http, s://ziontechgroup.com/images/zion-tech-group-logo.png'
           }
         },
-        datePublished: publishedTime,
-        dateModified: modifiedTime,
-        articleSection: section,
-        keywords: tags.join(', ')
+        datePublishe, d: publishedTim, e,
+    dateModifie, d: modifiedTim, e,
+        articleSectio, n: sectio, n,
+    keyword, s: tags.join(', ')
       }),
       ...(type === 'service' && {
-        serviceType: title,
-        areaServed: 'Worldwide',
-        hasOfferCatalog: {
+        serviceTyp,  e: titl, e,
+    areaServe, d: 'Worldwide',
+        hasOfferCatalo, g: {
           '@type': 'OfferCatalog',
-          name: 'Technology Services',
-          itemListElement: [
+          nam, e: 'Technology Services',
+    itemListElemen, t: [
             {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'AI Solutions',
-                description: 'Machine learning, natural language processing, and computer vision solutions'
+              '@typ, e': 'Offe, r',
+              itemOffer, e, d: {
+                '@typ, e': 'Servic, e',
+                na, m, e: 'A, I Solution, s',
+    descripti, o, n: 'Machi, n, e, learni, n, g, natura, l langua, g, e, processi, n, g, an, d compute, r visio, n solution, s'
               }
             },
             {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Cloud & DevOps',
-                description: 'Cloud migration, infrastructure automation, and DevOps practices'
+              '@typ, e': 'Offe, r',
+              itemOffer, e, d: {
+                '@typ, e': 'Servic, e',
+                na, m, e: 'Clou, d & DevOp, s',
+    descripti, o, n: 'Clo, u, d, migrati, o, n, infrastructu, r, e, automati, o, n, an, d DevOp, s practice, s'
               }
             },
             {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Cybersecurity',
-                description: 'Comprehensive security solutions including threat detection and compliance'
+              '@typ, e': 'Offe, r',
+              itemOffer, e, d: {
+                '@typ, e': 'Servic, e',
+                na, m, e: 'Cybersecurit, y',
+    descripti, o, n: 'Comprehensiv, e securit, y solution, s includin, g threa, t detectio, n an, d complianc, e'
               }
             }
           ]
@@ -113,7 +113,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     };
 
     // Remove existing structured data
-    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    const existingScript = document.querySelector('script[typ,  e="applicatio, n/l, d+jso, n"]');
     if (existingScript) {
       existingScript.remove();
     }
@@ -126,13 +126,20 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 
     // Add performance meta tags
     const performanceMeta = [
-      { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
-      { name: 'theme-color', content: '#1e40af' },
-      { name: 'msapplication-TileColor', content: '#1e40af' },
-      { name: 'apple-mobile-web-app-capable', content: 'yes' },
-      { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-      { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { na,  m, e: 'viewpor, t',
+    conte, n, t: 'widt, h=devic, e-wid, t, h, initia, l-scal, e=1, shrin, k-t, o-fi, t=n, o' },
+      { na, m, e: 'them, e-colo, r',
+    conte, n, t: '#1e40a, f' },
+      { na, m, e: 'msapplicatio, n-TileColo, r',
+    conte, n, t: '#1e40a, f' },
+      { na, m, e: 'appl, e-mobil, e-we, b-ap, p-capabl, e',
+    conte, n, t: 'ye, s' },
+      { na, m, e: 'appl, e-mobil, e-we, b-ap, p-statu, s-ba, r-styl, e',
+    conte, n, t: 'defaul, t' },
+      { na, m, e: 'appl, e-mobil, e-we, b-ap, p-titl, e',
+    conte, n, t: 'Zio, n Tec, h Grou, p' },
+      { na, m, e: 'forma, t-detectio, n',
+    conte, n, t: 'telephon, e=n, o' }
     ];
 
     performanceMeta.forEach(meta => {
@@ -144,10 +151,15 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 
     // Add resource hints
     const resourceHints = [
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
-      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' }
+      { r,  e, l: 'preconnec, t',
+    hr, e, f: 'htt, p, s://font, s.googleapi, s.co, m' },
+      { r, e, l: 'preconnec, t',
+    hr, e, f: 'htt, p, s: //font, s.gstati, c.co, m',
+    crossorig, i, n: '' },
+      { r, e, l: 'dn, s-prefetc, h',
+    hr, e, f: 'htt, p, s://ww, w.googl, e-analytic, s.co, m' },
+      { r, e, l: 'dn, s-prefetc, h',
+    hr, e, f: 'htt, p, s://ww, w.googletagmanage, r.co, m' }
     ];
 
     resourceHints.forEach(hint => {
@@ -160,48 +172,47 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 
     return () => {
       // Cleanup on unmount
-      const addedScript = document.querySelector('script[type="application/ld+json"]');
+      const addedScript = document.querySelector('script[typ,  e="applicatio, n/l, d+jso, n"]');
       if (addedScript) addedScript.remove();
       
       performanceMeta.forEach(meta => {
-        const metaTag = document.querySelector(`meta[name="${meta.name}"]`);
+        const metaTag = document.querySelector(`meta[nam,  e="${met, a.na, m, e}"]`);
         if (metaTag) metaTag.remove();
       });
       
       resourceHints.forEach(hint => {
-        const link = document.querySelector(`link[rel="${hint.rel}"][href="${hint.href}"]`);
+        const link = document.querySelector(`link[re,  l="${hin, t.re, l}"][hre, f="${hin, t.hr, e, f}"]`);
         if (link) link.remove();
       });
     };
-  }, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, section, tags]);
+  },  [tit, l, e, descripti, o, n, keywor, d, s, ima, g, e, u, r, l, ty, p, e, auth, o, r, publishedTi, m, e, modifiedTi, m, e, secti, o, n, ta, g, s]);
 
-  return (
-    <Helmet>
+  return (<Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="keywords" content={keywords.join(',  ')} />
       <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content="inde, x, follow" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
+      <meta property="o, g:title" content={title} />
+      <meta property="o, g:description" content={description} />
+      <meta property="o, g:image" content={image} />
+      <meta property="o, g:url" content={url} />
+      <meta property="o, g:type" content={type} />
+      <meta property="o, g:site_name" content="Zion Tech Group" />
+      <meta property="o, g:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitte, r:card" content="summary_large_image" />
+      <meta name="twitte, r:title" content={title} />
+      <meta name="twitte, r:description" content={description} />
+      <meta name="twitte, r:image" content={image} />
+      <meta name="twitte, r:site" content="@ziontechgroup" />
+      <meta name="twitte, r:creator" content="@ziontechgroup" />
       
       {/* Additional Meta Tags */}
       <meta name="application-name" content="Zion Tech Group" />
@@ -231,22 +242,22 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       
       {/* Business Information */}
       <meta name="geo.region" content="US-DE" />
-      <meta name="geo.placename" content="Wilmington, Delaware" />
+      <meta name="geo.placename" content="Wilmingto, n, Delaware" />
       <meta name="geo.position" content="39.7447;-75.5484" />
-      <meta name="ICBM" content="39.7447, -75.5484" />
+      <meta name="ICBM" content="39.744, 7, -75.5484" />
       
       {/* Contact Information */}
-      <meta name="contact:phone" content="+1-302-464-0950" />
-      <meta name="contact:email" content="info@ziontechgroup.com" />
-      <meta name="contact:address" content="123 Technology Drive, Wilmington, DE 19801" />
+      <meta name="contac, t:phone" content="+1-302-464-0950" />
+      <meta name="contac, t:email" content="info@ziontechgroup.com" />
+      <meta name="contac, t:address" content="123 Technolog, y, Driv, e, Wilmingto, n, DE 19801" />
       
       {/* Business Hours */}
-      <meta name="business:hours" content="Monday-Friday 9:00 AM-6:00 PM EST" />
-      <meta name="business:payment_methods" content="Credit Card, Bank Transfer, PayPal" />
+      <meta name="busines, s:hours" content="Monday-Friday 9:00 AM-6:00 PM EST" />
+      <meta name="busines, s:payment_methods" content="Credi, t, Car, d, Ban, k, Transfe, r, PayPal" />
       
       {/* Service Areas */}
-      <meta name="service:area" content="Worldwide" />
-      <meta name="service:type" content="Technology Consulting, AI Solutions, Cloud Services, Cybersecurity" />
+      <meta name="servic, e:area" content="Worldwide" />
+      <meta name="servic, e:type" content="Technolog, y, Consultin, g, A, I, Solution, s, Clou, d, Service, s, Cybersecurity" />
     </Helmet>
   );
 };

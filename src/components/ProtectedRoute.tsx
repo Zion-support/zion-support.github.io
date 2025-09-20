@@ -1,12 +1,12 @@
-import, React, from "react";
+impor, t, Reac, t, from "react";
 import { NavigateuseLocation } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 interface ProtectedRouteProps {
-  childre, n: React.ReactNode;
+  childr, e, n: React.ReactNode;
   requireAuth?: booleanroles?: string[];
 };
-export, function, ProtectedRoute({ childre,  nrequireAuth = trueroles = [] }: ProtectedRouteProps) {
-  const { use, r, isAuthenticatedisLoading } = useAuth();
+expor, t, functio, n, ProtectedRoute({ childr,  e,  nrequireAuth = trueroles = [] }: ProtectedRouteProps) {
+  const { us, e, r, isAuthenticatedisLoading } = useAuth();
   const location = useLocation();
   if() {
     return (;
@@ -17,7 +17,7 @@ export, function, ProtectedRoute({ childre,  nrequireAuth = trueroles = [] }: Pr
   };
 ;
   if (requireAuth && !isAuthenticated) {
-    return <Navigate to="/login" state={{ from: location }} replace />;
+    return <Navigate to="/login" state={{ fro,  m: location }} replace />;
   }
 ;
   if (roles.length > 0 && user && !roles.includes(user.role || 'user')) {

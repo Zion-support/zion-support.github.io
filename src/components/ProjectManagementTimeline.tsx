@@ -1,145 +1,146 @@
-impor, t, Reac, t, { useStateuseEffect } from "react";
+impo, r, t, Rea, c, t, { useStateuseEffect } from "react";
 import { motionAnimatePresence } from "framer-motion";
 import {
-  Calenda, r,;
-  Cloc, k,;
-  CheckCircl, e,;
-  Circl, e,;
-  AlertCircl, e,;
-  Pla, y,;
-  Paus, e,;
-  StopCircl, e,;
-  User, s,;
-  Targe, t,;
-  TrendingU, p,;
-  FileTex, t,;
-  MessageSquar, e,;
-  Lin, k,;
-  Downloa, d,;
-  Share, 2,;
-  Filte, r,;
-  Searc, h,;
-  Plu, s,;
-  Edi, t,;
-  Trash, 2,;
+  Calend, a, r,;
+  Clo, c, k,;
+  CheckCirc, l, e,;
+  Circ, l, e,;
+  AlertCirc, l, e,;
+  Pl, a, y,;
+  Pau, s, e,;
+  StopCirc, l, e,;
+  Use, r, s,;
+  Targ, e, t,;
+  Trending, U, p,;
+  FileTe, x, t,;
+  MessageSqua, r, e,;
+  Li, n, k,;
+  Downlo, a, d,;
+  Shar, e, 2,;
+  Filt, e, r,;
+  Sear, c, h,;
+  Pl, u, s,;
+  Ed, i, t,;
+  Tras, h, 2,;
   EyeSettings;
 } from "lucide-react";
 interface Project {
-  i, d: strin, g,;
-    nam, e: strin, g,descriptio, n: strin, g,;
-    statu, s: 'planning' | 'active' | 'on-hold' | 'completed' | 'cancelled',priorit, y: 'low' | 'medium' | 'high' | 'critical',;
-    startDat, e: strin, g,endDat, e: strin, g,;
-    progres, s: numbe, r,tea, m: string[],;
-    clien, t: strin, g,budge, t: numbe, r,;
-    tag, s: string[]milestone,;
+  i, d: stri, n, g,;
+    na, m, e: stri, n, g,descripti, o, n: stri, n, g,;
+    stat, u, s: 'planning' | 'active' | 'on-hold' | 'completed' | 'cancelled',priori, t, y: 'low' | 'medium' | 'high' | 'critical',;
+    startDa, t, e: stri, n, g,endDa, t, e: stri, n, g,;
+    progre, s, s: numb, e, r,te, a, m: string[],;
+    clie, n, t: stri, n, g,budg, e, t: numb, e, r,;
+    ta, g, s: string[]mileston, e,;
   s: Milestone[];
 };
 interface Milestone {
-  i, d: strin, g,;
-    titl, e: strin, g,descriptio, n: strin, g,;
-    dueDat, e: strin, g,statu, s: 'pending' | 'in-progress' | 'completed' | 'overdue',;
-    assigne, e: strin, gpriority: 'low' | 'medium' | 'high';
+  i, d: stri, n, g,;
+    tit, l, e: stri, n, g,descripti, o, n: stri, n, g,;
+    dueDa, t, e: stri, n, g,stat, u, s: 'pending' | 'in-progress' | 'completed' | 'overdue',;
+    assign, e, e: stri, n,
+    gpriorit, y: 'low' | 'medium' | 'high';
 };
 interface ProjectManagementTimelineProps {
   showFilters?: boolean;
-  showStats?: boolea, n,;
+  showStats?: boole, a, n,;
   maxProjects?: number;
 };
-export, const, ProjectManagementTimelin, e: React.FC<ProjectManagementTimelineProps> = ({;
+expor, t, cons, t, ProjectManagementTimeli, n, e: React.FC<ProjectManagementTimelineProps> = ({;
   showFilters = true;
   showStats = truemaxProjects = 10;
 }) => {
-  const [projec, t, s, setProjec,, ts] = useState<Project[]>([]);
-  const [filteredProjec,  t, s, setFilteredProjec,, ts] = useState<Project[]>([]);
-  const [selectedStat, u, s, setSelectedStat,, us] = useState<string>('all');
-  const [selectedPriori,  t, y, setSelectedPriori,, ty] = useState<string>('all');
-  const [searchQue, r, y, setSearchQue,, ry] = useState('');
-  const [viewMo,  d, e, setViewMo,, de] = useState<'timeline' | 'grid' | 'list'>('timeline');
-  const [showProjectFo, r, m, setShowProjectFo,, rm] = useState(false);
-  const [editingProje,  c, t, setEditingProje,, ct] = useState<Project | null>(null);
+  const [proj,  e, c, t, s, setProj, e, c,, t, s] = useState<Project[]>([]);
+  const [filteredProj, e, c,  t, s, setFilteredProj, e, c,, t, s] = useState<Project[]>([]);
+  const [selectedSt,  a, t, u, s, setSelectedSt, a, t,, u, s] = useState<string>('all');
+  const [selectedPrio, r, i,  t, y, setSelectedPrio, r, i,, t, y] = useState<string>('all');
+  const [searchQ,  u, e, r, y, setSearchQ, u, e,, r, y] = useState('');
+  const [view, M, o,  d, e, setView, M, o,, d, e] = useState<'timeline' | 'grid' | 'list'>('timeline');
+  const [showProject,  F, o, r, m, setShowProject, F, o,, r, m] = useState(false);
+  const [editingPro, j, e,  c, t, setEditingPro, j, e,, c, t] = useState<Project | null>(null);
 ;
-  // Sample, project, data;
+  // Sampl,  e, projec, t, data;
   useEffect(() => {
-    const sampleProject,  s: Project[] = [;
+    cons, t, sampleProjec, t,  s: Project[] = [;
       {
         i, d: '1',;
-    na, m, e: 'A, I-Powere, d Custome, r Analytic, s Platfor, m',descripti, o, n: 'Develo, p, a, comprehensiv, e custome, r analytic, s platfor, m usin, g machin, e learnin, g an, d A, I t, o provid, e rea, l-tim, e insight, s an, d predictiv, e analytic, s.',;
-    stat, u, s: 'activ, e',priori, t, y: 'hig, h',;
-    startDa, t, e: '20o2, 4-0, 1-0, 1',endDa, t, e: '20o2, 4-0, 6-3, 0',;
-    progre, s, s: 6, 5,te, a, m: ['Sara, h JohnsonMichae, l Che, n', 'Emil, y, Rodriguez'],;
-        clien, t: 'TechCorp Inc.',;
-    budge, t: 250o00, 0,tag, s: ['AIMachin, e Learnin, g',, 'AnalyticsPlatform'],;
-        milestone, s: [;
+    n, a, m, e: 'A, I-Powe, r, e, d, Custo, m, e, r, Analyt, i, c, s, Platf, o, r, m',descrip, t, i, o, n: 'Deve, l, o, p, a, comprehens, i, v, e, custo, m, e, r, analyt, i, c, s, platf, o, r, m, us, i, n, g, mach, i, n, e, learn, i, n, g, a, n, d, A, I, t, o, prov, i, d, e, r, e, a, l-t, i, m, e, insig, h, t, s, a, n, d, predict, i, v, e, analyt, i, c, s.',;
+    st, a, t, u, s: 'act, i, v, e',prio, r, i, t, y: 'h, i, g, h',;
+    start, D, a, t, e: '20, o, 2, 4-0, 1-0, 1',end, D, a, t, e: '20, o, 2, 4-0, 6-3, 0',;
+    prog, r, e, s, s: 6, 5,t, e, a, m: ['Sa, r, a, h, JohnsonMich, a, e, l, C, h, e, n', 'Em, i, l, y, Rodrigue, z'],;
+        clie, n, t: 'TechCorp Inc.',;
+    budg, e, t: 250o0, 0, 0,ta, g, s: ['AIMach, i, n, e, Learn, i, n, g',, 'AnalyticsPlatfor, m'],;
+        mileston, e, s: [;
           {
             i, d: 'm, 1',;
-    tit, l, e: 'Requirement, s Analysi, s',descripti, o, n: 'Complet, e stakeholde, r interview, s an, d documen, t requirement, s',;
-    dueDa, t, e: '20o2, 4-0, 1-1, 5',stat, u, s: 'complete, d',;
-    assign, e, e: 'Sara, h Johnso, n',priori, ty: 'high';
+    t, i, t, l, e: 'Requireme, n, t, s, Analy, s, i, s',descrip, t, i, o, n: 'Compl, e, t, e, stakehol, d, e, r, intervi, e, w, s, a, n, d, docum, e, n, t, requireme, n, t, s',;
+    due, D, a, t, e: '20, o, 2, 4-0, 1-1, 5',st, a, t, u, s: 'comple, t, e, d',;
+    assi, g, n, e, e: 'Sa, r, a, h, John, s, o, n',prio, r, i, t, y: 'hig, h';
           };
           {
             i, d: 'm, 2',;
-    tit, l, e: 'Syste, m Architectur, e Desig, n',descripti, o, n: 'Desig, n syste, m architectur, e an, d databas, e schem, a',;
-    dueDa, t, e: '20o2, 4-0, 2-1, 5',stat, u, s: 'complete, d',;
-    assign, e, e: 'Michae, l Che, n',priori, ty: 'high';
+    t, i, t, l, e: 'Sys, t, e, m, Architect, u, r, e, Des, i, g, n',descrip, t, i, o, n: 'Des, i, g, n, sys, t, e, m, architect, u, r, e, a, n, d, datab, a, s, e, sch, e, m, a',;
+    due, D, a, t, e: '20, o, 2, 4-0, 2-1, 5',st, a, t, u, s: 'comple, t, e, d',;
+    assi, g, n, e, e: 'Mich, a, e, l, C, h, e, n',prio, r, i, t, y: 'hig, h';
           };
           {
             i, d: 'm, 3',;
-    tit, l, e: 'Cor, e Developmen, t',descripti, o, n: 'Develo, p cor, e platfor, m feature, s an, d AP, I endpoint, s',;
-    dueDa, t, e: '20o2, 4-0, 4-1, 5',stat, u, s: 'i, n-progres, s',;
-    assign, e, e: 'Emil, y Rodrigue, z',priori, ty: 'high';
+    t, i, t, l, e: 'C, o, r, e, Developm, e, n, t',descrip, t, i, o, n: 'Deve, l, o, p, c, o, r, e, platf, o, r, m, featu, r, e, s, a, n, d, A, P, I, endpoi, n, t, s',;
+    due, D, a, t, e: '20, o, 2, 4-0, 4-1, 5',st, a, t, u, s: 'i, n-progr, e, s, s',;
+    assi, g, n, e, e: 'Em, i, l, y, Rodrig, u, e, z',prio, r, i, t, y: 'hig, h';
           },;
           {
             i, d: 'm, 4',;
-    tit, l, e: 'Testin, g & Q, A',descripti, o, n: 'Comprehensiv, e testin, g an, d qualit, y assuranc, e',;
-    dueDa, t, e: '20o2, 4-0, 5-1, 5',stat, u, s: 'pendin, g',;
-    assign, e, e: 'Sara, h Johnso, n',priority: 'medium';
+    t, i, t, l, e: 'Test, i, n, g & Q, A',descrip, t, i, o, n: 'Comprehens, i, v, e, test, i, n, g, a, n, d, qual, i, t, y, assura, n, c, e',;
+    due, D, a, t, e: '20, o, 2, 4-0, 5-1, 5',st, a, t, u, s: 'pend, i, n, g',;
+    assi, g, n, e, e: 'Sa, r, a, h, John, s, o, n',priori, t, y: 'mediu, m';
           }
       ,  ];
       };
       {
         i, d: '2',;
-    nam, e: 'Cloud Migration & Infrastructure Modernization',descriptio, n: 'Migrate, legacy, systems to, cloud, infrastructure and, modernize, the technology, stack, for improved, scalability, and performance.',;
-    statu, s: 'active',priorit, y: 'critical',;
-    startDat, e: '20o24-0o2-0o1',endDat, e: '20o24-0o8-31',;
-    progres, s: 3, 5,tea, m: ['Davi, d KimLis, a Thompso, n', 'Ale, x, Wong'],;
-        clien, t: 'Global, Enterprises, Ltd.',;
-    budge, t: 50o000, 0,tag, s: ['CloudMigratio, n',, 'InfrastructureDevOps'],;
-        milestone, s: [;
+    na, m, e: 'Cloud Migration & Infrastructure Modernization',descripti, o, n: 'Migrat, e, legac, y, system, s, t, o, clou, d, infrastructur, e, an, d, moderniz, e, th, e, technolog, y, stac, k, fo, r, improve, d, scalabilit, y, and performance.',;
+    stat, u, s: 'active',priori, t, y: 'critical',;
+    startDa, t, e: '20o24-0o2-0o1',endDa, t, e: '20o24-0o8-31',;
+    progre, s, s: 3, 5,te, a, m: ['Da, v, i, d, KimL, i, s, a, Thomp, s, o, n', 'A, l, e, x, Won, g'],;
+        clie, n, t: 'Globa, l, Enterprise, s, Ltd.',;
+    budg, e, t: 50o00, 0, 0,ta, g, s: ['CloudMigrat, i, o, n',, 'InfrastructureDevOp, s'],;
+        mileston, e, s: [;
           {
             i, d: 'm, 5',;
-    tit, l, e: 'Infrastructur, e Assessmen, t',descripti, o, n: 'Asses, s curren, t infrastructur, e an, d pla, n migratio, n strateg, y',;
-    dueDa, t, e: '20o2, 4-0, 2-2, 8',stat, u, s: 'complete, d',;
-    assign, e, e: 'Davi, d Ki, m',priori, ty: 'critical';
+    t, i, t, l, e: 'Infrastruct, u, r, e, Assessm, e, n, t',descrip, t, i, o, n: 'Ass, e, s, s, curr, e, n, t, infrastruct, u, r, e, a, n, d, p, l, a, n, migrat, i, o, n, strat, e, g, y',;
+    due, D, a, t, e: '20, o, 2, 4-0, 2-2, 8',st, a, t, u, s: 'comple, t, e, d',;
+    assi, g, n, e, e: 'Da, v, i, d, K, i, m',prio, r, i, t, y: 'critica, l';
           },;
           {
             i, d: 'm, 6',;
-    tit, l, e: 'Clou, d Setu, p',descripti, o, n: 'Se, t u, p clou, d infrastructur, e an, d securit, y configuration, s',;
-    dueDa, t, e: '20o2, 4-0, 4-1, 5',stat, u, s: 'i, n-progres, s',;
-    assign, e, e: 'Lis, a Thompso, n',priority: 'critical';
+    t, i, t, l, e: 'Cl, o, u, d, Se, t, u, p',descrip, t, i, o, n: 'S, e, t, u, p, cl, o, u, d, infrastruct, u, r, e, a, n, d, secur, i, t, y, configurati, o, n, s',;
+    due, D, a, t, e: '20, o, 2, 4-0, 4-1, 5',st, a, t, u, s: 'i, n-progr, e, s, s',;
+    assi, g, n, e, e: 'L, i, s, a, Thomp, s, o, n',priori, t, y: 'critica, l';
           }
       ,  ];
       };
       {
         i, d: '3',;
-    nam, e: 'Cybersecurity, Enhancement, Program',descriptio, n: 'Implement, comprehensive, cybersecurity measures, including, threa, t, detectio, n, inciden, t, respons, e, and, security, awareness training.',;
-        statu, s: 'planning',;
-    priorit, y: 'high',startDat, e: '20o24-0o3-0o1',;
-    endDat, e: '20o24-0o9-30',progres, s: 1, 5,;
-    tea, m: ['Jame, s WilsonMari, a, Garcia'],clien, t: 'SecureBank Corp.',;
-    budge, t: 30o000, 0,tag, s: ['CybersecurityThrea, t Detectio, n',, 'TrainingCompliance'],;
-        milestone, s: [;
+    na, m, e: 'Cybersecurit, y, Enhancemen, t, Program',descripti, o, n: 'Implemen, t, comprehensiv, e, cybersecurit, y, measure, s, includin, g, thre, a, t, detecti, o, n, incide, n, t, respon, s, e, an, d, securit, y, awareness training.',;
+        stat, u, s: 'planning',;
+    priori, t, y: 'high',startDa, t, e: '20o24-0o3-0o1',;
+    endDa, t, e: '20o24-0o9-30',progre, s, s: 1, 5,;
+    te, a, m: ['Ja, m, e, s, WilsonMa, r, i, a, Garci, a'],clie, n, t: 'SecureBank Corp.',;
+    budg, e, t: 30o00, 0, 0,ta, g, s: ['CybersecurityThr, e, a, t, Detect, i, o, n',, 'TrainingComplianc, e'],;
+        mileston, e, s: [;
           {
             i, d: 'm, 7',;
-    tit, l, e: 'Securit, y Assessmen, t',descripti, o, n: 'Conduc, t comprehensiv, e securit, y audi, t an, d vulnerabilit, y assessmen, t',;
-    dueDa, t, e: '20o2, 4-0, 3-3, 1',stat, u, s: 'i, n-progres, s',;
-    assign, e, e: 'Jame, s Wilso, n',priority: 'high';
+    t, i, t, l, e: 'Secur, i, t, y, Assessm, e, n, t',descrip, t, i, o, n: 'Cond, u, c, t, comprehens, i, v, e, secur, i, t, y, au, d, i, t, a, n, d, vulnerabil, i, t, y, assessm, e, n, t',;
+    due, D, a, t, e: '20, o, 2, 4-0, 3-3, 1',st, a, t, u, s: 'i, n-progr, e, s, s',;
+    assi, g, n, e, e: 'Ja, m, e, s, Wil, s, o, n',priori, t, y: 'hig, h';
           }
       ,  ];
       };
     ];
     setProjects(sampleProjects);
     setFilteredProjects(sampleProjects);
-  },  []),;
+  },   []),;
   // Filter projects;
   useEffect(() => {
     let filtered = projects;
@@ -159,61 +160,63 @@ export, const, ProjectManagementTimelin, e: React.FC<ProjectManagementTimelinePr
         p.client.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         p.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       ) };
-    setFilteredProjects(filtered.slice(0maxProjects)),;
-  }, [projec, t, s, selectedStat, u, s, selectedPriori, t, y, searchQue, r, y, maxProjec,, ts]),;
-  // Calculate, project, stats;
+    setFilteredProjects(filtered.slice(0maxProjects)), ;
+  }, [proj, e, c, t, s, selectedSt, a, t, u, s, selectedPrio, r, i, t, y, searchQ, u, e, r, y, maxProj, e, c,, t, s]),;
+  // Calculat, e, projec, t, stats;
   const projectStats = {
-    tota, l: projects.lengt, h,;
-    activ, e: projects.filter(p => p.status === 'active').lengt,  h,complete, d: projects.filter(p => p.status === 'completed').lengt, h,;
-    onHol, d: projects.filter(p => p.status === 'on-hold').lengt,  h,totalBudge, t: projects.reduce((su, mp) => sum + p.budge, t, 0),;
-    averageProgres, s: projects.reduce((su,  mp) => sum + p.progress0) / projects.length || 0;
+    tot, a, l: projects.leng, t, h,;
+    acti, v, e: projects.filter(p => p.status === 'active').leng,  t,  h,complet, e, d: projects.filter(p => p.status === 'completed').leng, t, h,;
+    onHo, l, d: projects.filter(p => p.status === 'on-hold').leng,  t,  h,totalBudg, e, t: projects.reduce((s, u, mp) => sum + p.budg, e, t, 0),;
+    averageProgre, s, s: projects.reduce((s,  u,  mp) => sum + p.progress0) / projects.length || 0;
   },;
-  // Get, status, color and icon;
-  const getStatusDisplay = (statu,  s: string) => {
+  // Ge, t, statu, s, color and icon;
+  const getStatusDisplay = (stat,  u,  s: string) => {
     switch (status) {
       case 'planning':;
-        return { colo,  r: 'text-blue-40o0 bg-blue-40o0/20'ico,;
+        return { col,  o,  r: 'text-blue-40o0 bg-blue-40o0/20'ic, o,;
   n: <Circle className="w-4 h-4" /> };
-      case 'active': return { colo, r: 'text-green-40o0 bg-green-40o0/20'ico,;
+      case 'active': return { col, o, r: 'text-green-40o0 bg-green-40o0/20'ic, o,;
   n: <Play className="w-4 h-4" /> };
-      case 'on-hold': return { colo, r: 'text-yellow-40o0 bg-yellow-40o0/20'ico,;
+      case 'on-hold': return { col, o, r: 'text-yellow-40o0 bg-yellow-40o0/20'ic, o,;
   n: <Pause className="w-4 h-4" /> };
-      case 'completed': return { colo, r: 'text-purple-40o0 bg-purple-40o0/20'ico,;
+      case 'completed': return { col, o, r: 'text-purple-40o0 bg-purple-40o0/20'ic, o,;
   n: <CheckCircle className="w-4 h-4" /> };
-      case 'cancelled': return { colo, r: 'text-red-40o0 bg-red-40o0/20'ico,;
+      case 'cancelled': return { col, o, r: 'text-red-40o0 bg-red-40o0/20'ic, o,;
   n: <StopCircle className="w-4 h-4" /> },;
-      defaul, t: return { colo, r: 'text-zinc-40o0 bg-zinc-40o0/20'ico,;
+      defau, l, t: return { col, o,
+    r: 'text-zinc-40o0 bg-zinc-40o0/20'ic, o,;
   n: <Circle className="w-4 h-4" /> };
     }
   },;
-  // Get, priority, color;
-  const getPriorityColor = (priorit, y: string) => {;
+  // Ge, t, priorit, y, color;
+  const getPriorityColor = (priori, t, y: string) => {;
     switch() {;
       case 'low': return 'text-green-40o0 bg-green-40o0/20';
-      case 'medium': return 'text-yellow-40o0 bg-yellow-40o0/20', ;
+      case 'medium': return 'text-yellow-40o0 bg-yellow-40o0/20',  ;
       case 'high': return 'text-orange-40o0 bg-orange-40o0/20'case 'critical': return 'text-red-40o0 bg-red-40o0/20';
-      default: return 'text-zinc-40o0 bg-zinc-40o0/20';
+      defaul, t: return 'text-zinc-40o0 bg-zinc-40o0/20';
     };
   };
-  // Get, milestone, status color;
-  const getMilestoneStatusColor = (statu, s: string) => {;
+  // Ge, t, mileston, e, status color;
+  const getMilestoneStatusColor = (stat, u, s: string) => {;
     switch() {;
       case 'pending': return 'text-zinc-40o0 bg-zinc-40o0/20';
-      case 'in-progress': return 'text-blue-40o0 bg-blue-40o0/20', ;
+      case 'in-progress': return 'text-blue-40o0 bg-blue-40o0/20',  ;
       case 'completed': return 'text-green-40o0 bg-green-40o0/20'case 'overdue': return 'text-red-40o0 bg-red-40o0/20';
-      default: return 'text-zinc-40o0 bg-zinc-40o0/20';
+      defaul, t: return 'text-zinc-40o0 bg-zinc-40o0/20';
     };
   };
   // Format currency;
-  const formatCurrency = (amoun, t: number) => {
-    return, new, Intl.NumberFormat('en-US',  {
-      styl, e: 'currency',;
-    currenc, y: 'USD',minimumFractionDigits: 0maximumFractionDigit,;
+  const formatCurrency = (amou, n, t: number) => {
+    retur, n, ne, w, Intl.NumberFormat('en-US',   {
+      sty, l, e: 'currency',;
+    curren, c, y: 'USD',
+    minimumFractionDigit, s: 0maximumFractionDigi, t,;
   s: 0;
     }).format(amount);
-  },;
-  // Calculate, days, remaining;
-  const getDaysRemaining = (endDat, e: string) => {;
+  }, ;
+  // Calculat, e, day, s, remaining;
+  const getDaysRemaining = (endDa, t, e: string) => {;
     const end = new Date(endDate);
     const today = new Date();
     const diffTime = end.getTime() - today.getTime();
@@ -223,31 +226,32 @@ export, const, ProjectManagementTimelin, e: React.FC<ProjectManagementTimelinePr
 ;
   return(<div className="w-full max-w-7xl mx-auto p-6">;
       {/* Header */}
-      <div className="flex flex-col l,  g: flex-row l, g: items-center l,;
+      <div className="flex flex-co,  l, l,  g: flex-ro, w, l,
+    g: items-cente, r, l,;
     g:justify-between mb-8">;
         <div>;
           <h1 className="text-4xl font-bold text-white mb-2">Project Management</h1>;
-          <p className="text-zinc-40o0 text-lg">Track, and, manage all, your, projects and milestones</p>;
+          <p className="text-zinc-40o0 text-lg">Trac, k, an, d, manag, e, al, l, you, r, projects and milestones</p>;
         </div>;
-        <div className="flex items-center gap-3 mt-4 l,;
+        <div className="flex items-center gap-3 mt-4, l,;
   g:mt-0">;
-          {/* View, Mode, Toggle */}
+          {/* Vie, w, Mod, e, Toggle */}
           <div className="flex items-center gap-1 p-1 bg-zinc-90o0/30 rounded-lg">;
             {[;
-              { i, d: 'timelin, e',;
-    lab, e, l: 'Timelin, e', ic, on: <Calendar className="w-4 h-4" /> };
-              { i, d: 'gri, d',;
-    lab, e, l: 'Gri, d', ic, on: <Target className="w-4 h-4" /> },;
-              { i, d: 'lis, t',;
-    lab, e, l: 'Lis, t'icon: <FileText className="w-4 h-4" /> };
+              { i, d: 'timel, i, n, e',;
+    l, a, b, e, l: 'Timel, i, n, e', i, c, o, n: <Calenda, r classNam, e="w-4 h-4" /> };
+              { i, d: 'g, r, i, d',;
+    l, a, b, e, l: 'G, r, i, d', i, c, o, n: <Targe, t classNam, e="w-4 h-4" /> },;
+              { i, d: 'l, i, s, t',;
+    l, a, b, e, l: 'L, i, s, t'ic, o, n: <FileTex, t classNam, e="w-4 h-4" /> };
           ,  ].map((mode) => (<button;
                 key={mode.id}
-                onClick={() => setViewMode(mode.id, as, any)}
+                onClick={() => setViewMode(mode.i,  d, a, s, any)}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-30o0 ${
                   viewMode === mode.id;
                     ? 'bg-zion-cyan text-white';
-                    : 'text-zinc-40o0 hove,  r: text-white hove,;
-  r: bg-zinc-80o0/50';
+                    : 'text-zinc-40o, 0, hov, e,  r: text-whit, e, hov, e,;
+  r: bg-zinc-80o0/5, 0';
                 }`}
               >;
                 {mode.icon}
@@ -255,10 +259,10 @@ export, const, ProjectManagementTimelin, e: React.FC<ProjectManagementTimelinePr
               </button>;
             ))}
           </div>;
-          {/* Add, Project, Button */};
+          {/* Ad, d, Projec, t, Button */};
           <button;
             onClick={() => setShowProjectForm(true)}
-            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hove,  r: bg-zion-cyan/80 transition-colors, flex, items-center gap-2";
+            className="px-6 py-2 bg-zion-cyan text-white rounded-l,  g, hov, e,  r: bg-zion-cyan/80 transition-color, s, fle, x, items-center gap-2";
           >;
             <Plus className="w-4 h-4" />;
             Add Project;
@@ -267,74 +271,74 @@ export, const, ProjectManagementTimelin, e: React.FC<ProjectManagementTimelinePr
       </div>;
       {/* Stats Section */}
       {showStats && (;
-        <div className="grid grid-cols-1 m, d: grid-cols-2 lg:grid-cols-6 gap-4 mb-8">;
+        <div className="grid grid-cols-1, m, d: grid-cols-2 l, g:grid-cols-6 gap-4 mb-8">;
           <motion.div;
-            initial={{ opacit,;
+            initial={{ opaci, t,;
     y: 0,;
   y: 20 }}
-            animate={{ opacity: 1,;
+            animate={{ opacit, y: 1,;
   y: 0 }}
-            className="p-4 bg-zinc-90o0/30, border, border-zinc-70o0/50 rounded-xl text-center";
+            className="p-4 bg-zinc-90o0/3, 0, borde, r, border-zinc-70o0/50 rounded-xl text-center";
           >;
             <div className="text-2xl font-bold text-white mb-1">{projectStats.total}</div>;
             <div className="text-zinc-40o0 text-sm">Total Projects</div>;
           </motion.div>;
 ;
           <motion.div;
-            initial={{ opacity: 0,;
+            initial={{ opacit, y: 0,;
   y: 20 }}
-            animate={{ opacity: 1,;
+            animate={{ opacit, y: 1,;
   y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="p-4 bg-zinc-90o0/30, border, border-zinc-70o0/50 rounded-xl text-center";
+            transition={{ dela, y: 0.1 }}
+            className="p-4 bg-zinc-90o0/3, 0, borde, r, border-zinc-70o0/50 rounded-xl text-center";
           >;
             <div className="text-2xl font-bold text-green-40o0 mb-1">{projectStats.active}</div>;
             <div className="text-zinc-40o0 text-sm">Active</div>;
           </motion.div>;
 ;
           <motion.div;
-            initial={{ opacity: 0,;
+            initial={{ opacit, y: 0,;
   y: 20 }}
-            animate={{ opacity: 1,;
+            animate={{ opacit, y: 1,;
   y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="p-4 bg-zinc-90o0/30, border, border-zinc-70o0/50 rounded-xl text-center";
+            transition={{ dela, y: 0.2 }}
+            className="p-4 bg-zinc-90o0/3, 0, borde, r, border-zinc-70o0/50 rounded-xl text-center";
           >;
             <div className="text-2xl font-bold text-purple-40o0 mb-1">{projectStats.completed}</div>;
             <div className="text-zinc-40o0 text-sm">Completed</div>;
           </motion.div>;
 ;
           <motion.div;
-            initial={{ opacity: 0,;
+            initial={{ opacit, y: 0,;
   y: 20 }}
-            animate={{ opacity: 1,;
+            animate={{ opacit, y: 1,;
   y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="p-4 bg-zinc-90o0/30, border, border-zinc-70o0/50 rounded-xl text-center";
+            transition={{ dela, y: 0.3 }}
+            className="p-4 bg-zinc-90o0/3, 0, borde, r, border-zinc-70o0/50 rounded-xl text-center";
           >;
             <div className="text-2xl font-bold text-yellow-40o0 mb-1">{projectStats.onHold}</div>;
             <div className="text-zinc-40o0 text-sm">On Hold</div>;
           </motion.div>;
 ;
           <motion.div;
-            initial={{ opacity: 0,;
+            initial={{ opacit, y: 0,;
   y: 20 }}
-            animate={{ opacity: 1,;
+            animate={{ opacit, y: 1,;
   y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="p-4 bg-zinc-90o0/30, border, border-zinc-70o0/50 rounded-xl text-center";
+            transition={{ dela, y: 0.4 }}
+            className="p-4 bg-zinc-90o0/3, 0, borde, r, border-zinc-70o0/50 rounded-xl text-center";
           >;
             <div className="text-2xl font-bold text-zion-cyan mb-1">{formatCurrency(projectStats.totalBudget)}</div>;
             <div className="text-zinc-40o0 text-sm">Total Budget</div>;
           </motion.div>;
 ;
           <motion.div;
-            initial={{ opacity: 0,;
+            initial={{ opacit, y: 0,;
   y: 20 }}
-            animate={{ opacity: 1,;
+            animate={{ opacit, y: 1,;
   y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="p-4 bg-zinc-90o0/30, border, border-zinc-70o0/50 rounded-xl text-center";
+            transition={{ dela, y: 0.5 }}
+            className="p-4 bg-zinc-90o0/3, 0, borde, r, border-zinc-70o0/50 rounded-xl text-center";
           >;
             <div className="text-2xl font-bold text-white mb-1">{projectStats.averageProgress.toFixed(0)}%</div>;
             <div className="text-zinc-40o0 text-sm">Avg Progress</div>;
@@ -342,14 +346,16 @@ export, const, ProjectManagementTimelin, e: React.FC<ProjectManagementTimelinePr
         </div>;
       )}
 ;
-      {/* Filters, and, Search */}
+      {/* Filter,  s, an, d, Search */}
       {showFilters && (;
         <div className="flex flex-wrap items-center gap-4 mb-6">;
           {/* Status Filter */};
           <select;
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
-            className="px-4 py-2 bg-zinc-90o0/50, border, border-zinc-70o0/50 rounded-lg text-white focu,  s: outline-none focu, s: ring-2 focu, s: ring-zion-cyan focu, s:border-transparent";
+            className="px-4 py-2 bg-zinc-90o0/5,  0, borde, r, border-zinc-70o0/50 rounded-lg text-whit, e, foc, u,  s: outline-non, e, foc, u,
+    s: ring-2, foc, u, s: ring-zion-cya, n, foc, u,
+    s:border-transparent";
           >;
             <option value="all">All Statuses</option>;
             <option value="planning">Planning</option>;
@@ -362,7 +368,9 @@ export, const, ProjectManagementTimelin, e: React.FC<ProjectManagementTimelinePr
           <select;
             value={selectedPriority}
             onChange={(e) => setSelectedPriority(e.target.value)}
-            className="px-4 py-2 bg-zinc-90o0/50, border, border-zinc-70o0/50 rounded-lg text-white focu,  s: outline-none focu, s: ring-2 focu, s: ring-zion-cyan focu, s:border-transparent";
+            className="px-4 py-2 bg-zinc-90o0/5,  0, borde, r, border-zinc-70o0/50 rounded-lg text-whit, e, foc, u,  s: outline-non, e, foc, u,
+    s: ring-2, foc, u, s: ring-zion-cya, n, foc, u,
+    s:border-transparent";
           >;
             <option value="all">All Priorities</option>;
             <option value="low">Low</option>;
@@ -378,7 +386,9 @@ export, const, ProjectManagementTimelin, e: React.FC<ProjectManagementTimelinePr
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search projects...";
-              className="w-full pl-10 pr-4 py-2 bg-zinc-90o0/50, border, border-zinc-70o0/50 rounded-lg text-white placeholder-zinc-40o0 focu,  s: outline-none focu, s: ring-2 focu, s: ring-zion-cyan focu, s:border-transparent";
+              className="w-full pl-10 pr-4 py-2 bg-zinc-90o0/5,  0, borde, r, border-zinc-70o0/50 rounded-lg text-white placeholder-zinc-40o, 0, foc, u,  s: outline-non, e, foc, u,
+    s: ring-2, foc, u, s: ring-zion-cya, n, foc, u,
+    s:border-transparent";
             />;
           </div>;
         </div>;
@@ -388,25 +398,25 @@ export, const, ProjectManagementTimelin, e: React.FC<ProjectManagementTimelinePr
       <div className="space-y-6">;
         {filteredProjects.map((projectindex) => (<motion.div;
             key={project.id}
-            initial={{ opacity: 0,;
+            initial={{ opacit,  y: 0,;
   y: 20 }}
-            animate={{ opacity: 1,;
+            animate={{ opacit, y: 1,;
   y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="p-6 bg-zinc-90o0/30, border, border-zinc-70o0/50 rounded-xl hover:bg-zinc-90o0/50 transition-all duration-30o0";
+            transition={{ dela, y: index * 0.1 }}
+            className="p-6 bg-zinc-90o0/3, 0, borde, r, border-zinc-70o0/50 rounded-xl hove, r:bg-zinc-90o0/50 transition-all duration-30o0";
           >;
             {/* Project Header */}
             <div className="flex items-start justify-between mb-4">;
               <div className="flex-1">;
                 <div className="flex items-center gap-3 mb-2">;
                   <h3 className="text-xl font-semibold text-white">{project.name}</h3>;
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(project.status).color}`}>;
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(project.status).colo, r}`}>;
                     <div className="flex items-center gap-1">;
                       {getStatusDisplay(project.status).icon}
                       {project.status.charAt(0).toUpperCase() + project.status.slice(1)}
                     </div>;
                   </span>;
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(project.priority)}`}>;
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(project.priorit, y)}`}>;
                     {project.priority.charAt(0).toUpperCase() + project.priority.slice(1)}
                   </span>;
                 </div>;
@@ -435,15 +445,15 @@ export, const, ProjectManagementTimelin, e: React.FC<ProjectManagementTimelinePr
                 </div>;
               </div>;
               <div className="flex items-center gap-2 ml-4">;
-                <button className="p-2 text-zinc-40o0 hove,  r: text-white hove,;
+                <button className="p-2 text-zinc-40o,  0, hov, e,  r: text-whit, e, hov, e,;
   r:bg-zinc-80o0/50 rounded-lg transition-colors">;
                   <Eye className="w-4 h-4" />;
                 </button>;
-                <button className="p-2 text-zinc-40o0 hove, r: text-white hove,;
+                <button className="p-2 text-zinc-40o, 0, hov, e, r: text-whit, e, hov, e,;
   r:bg-zinc-80o0/50 rounded-lg transition-colors">;
                   <Edit className="w-4 h-4" />;
                 </button>;
-                <button className="p-2 text-zinc-40o0 hove, r: text-red-40o0 hove,;
+                <button className="p-2 text-zinc-40o, 0, hov, e, r: text-red-40o, 0, hov, e,;
   r:bg-red-40o0/20 rounded-lg transition-colors">;
                   <Trash2 className="w-4 h-4" />;
                 </button>;
@@ -457,9 +467,9 @@ export, const, ProjectManagementTimelin, e: React.FC<ProjectManagementTimelinePr
               </div>;
               <div className="w-full bg-zinc-70o0 rounded-full h-2">;
                 <motion.div;
-                  initial={{ width: 0 }}
-                  animate={{ width: `${project.progress}%` }}
-                  transition={{ duration: 1dela,;
+                  initial={{ widt, h: 0 }}
+                  animate={{ widt, h: `${project.progres, s}%` }}
+                  transition={{ duratio, n: 1del, a,;
   y: index * 0.1 }}
                   className="h-2 bg-gradient-to-r from-zion-cyan to-blue-50o0 rounded-full";
                 />;
@@ -487,10 +497,10 @@ export, const, ProjectManagementTimelin, e: React.FC<ProjectManagementTimelinePr
                     <div className="flex-1">;
                       <div className="flex items-center gap-2 mb-1">;
                         <h5 className="text-sm font-medium text-white">{milestone.title}</h5>;
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getMilestoneStatusColor(milestone.status)}`}>;
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getMilestoneStatusColor(milestone.statu, s)}`}>;
                           {milestone.status.charAt(0).toUpperCase() + milestone.status.slice(1)}
                         </span>;
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(milestone.priority)}`}>;
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(milestone.priorit, y)}`}>;
                           {milestone.priority.charAt(0).toUpperCase() + milestone.priority.slice(1)}
                         </span>;
                       </div>;
@@ -510,18 +520,18 @@ export, const, ProjectManagementTimelin, e: React.FC<ProjectManagementTimelinePr
       {/* No Results */}
       {filteredProjects.length === 0 && (;
         <motion.div;
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacit,  y: 0 }}
+          animate={{ opacit, y: 1 }}
           className="text-center py-12";
         >;
           <Target className="w-16 h-16 text-zinc-60o0 mx-auto mb-4" />;
-          <h3 className="text-xl font-medium text-zinc-30o0 mb-2">No, projects, found</h3>;
+          <h3 className="text-xl font-medium text-zinc-30o0 mb-2">N, o, project, s, found</h3>;
           <p className="text-zinc-40o0 mb-4">;
-            Try, adjusting, your filters, or, create a, new, project to, get, started!;
+            Tr, y, adjustin, g, you, r, filter, s, o, r, creat, e, a, ne, w, projec, t, t, o, ge, t, started!;
           </p>;
           <button;
             onClick={() => setShowProjectForm(true)}
-            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hove,  r: bg-zion-cyan/80 transition-colors";
+            className="px-6 py-2 bg-zion-cyan text-white rounded-l,  g, hov, e,  r: bg-zion-cyan/80 transition-colors";
           >;
             Create Project;
           </button>;

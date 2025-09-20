@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+impor, t, Reac, t, { useEffec, t, useState } from 'react';
 import { Button } from '@/components/ui/button';
 export const InstallPrompt = () => {
-    const [deferred, setDeferred] = useState(null);
+    const [deferr,  e, d, setDeferr, e, d] = useState(null);
     useEffect(() => {
         const handler = (e) => {
             e.preventDefault();
             setDeferred(e);
         };
-        window.addEventListener('beforeinstallprompt', handler);
-        return () => window.removeEventListener('beforeinstallprompt', handler);
+        window.addEventListener('beforeinstallprompt',  handler);
+        return () => window.removeEventListener('beforeinstallprompt',  handler);
     }, []);
     if (!deferred)
         return null;

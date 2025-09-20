@@ -1,78 +1,79 @@
-impor, t, Reac, t, { useStat, e, useEffectuseMemo } from "react";
+impo, r, t, Rea, c, t, { useSta, t, e, useEffectuseMemo } from "react";
 import { motionAnimatePresence } from "framer-motion";
 import {
-  Searc, h,;
-  Filte, r,;
+  Sear, c, h,;
+  Filt, e, r,;
   X,;
-  ChevronDow, n,;
-  Chec, k,;
-  Sta, r,;
-  Ta, g,;
-  MapPi, n,;
-  Calenda, r,;
-  User, s,;
-  Za, p,;
-  Brai, n,;
-  Clou, d,;
+  ChevronDo, w, n,;
+  Che, c, k,;
+  St, a, r,;
+  T, a, g,;
+  MapP, i, n,;
+  Calend, a, r,;
+  Use, r, s,;
+  Z, a, p,;
+  Bra, i, n,;
+  Clo, u, d,;
   ShieldGlobe;
 } from "lucide-react";
 interface SearchResult {
-  i, d: strin, g,;
-    titl, e: strin, g,descriptio, n: strin, g,;
-    categor, y: strin, g,tag, s: string[];
-  location?: strin, g,;
-  date?: strin, g,;
-  rating?: numbe, rtype: 'service' | 'article' | 'team' | 'technology';
+  i, d: stri, n, g,;
+    tit, l, e: stri, n, g,descripti, o, n: stri, n, g,;
+    catego, r, y: stri, n, g,ta, g, s: string[];
+  location?: stri, n, g,;
+  date?: stri, n, g,;
+  rating?: numb, e, rtyp, e: 'service' | 'article' | 'team' | 'technology';
 };
 interface FilterOption {
-  i, d: strin, g,;
-    labe, l: strin, g,valu, e: strin, gcount: number;
+  i, d: stri, n, g,;
+    lab, e, l: stri, n, g,val, u, e: stri, n,
+    gcoun, t: number;
 };
 interface SearchAndFilterSystemProps {
-  dat, a: SearchResult[];
-  onResultsChange?: (result,  s: SearchResult[]) => void;
+  da, t, a: SearchResult[];
+  onResultsChange?: (resul,  t,  s: SearchResult[]) => void;
   placeholder?: stringshowFilters?: boolean;
 };
-export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = ({
-  dat,  a,;
-  onResultsChang, e,;
-  placeholder = "Searc, h, service, s, article, steam members..."showFilters = true;
+expor, t, cons, t, SearchAndFilterSyst, e, m: React.FC<SearchAndFilterSystemProps> = ({
+  da,  t,  a,;
+  onResultsChan, g, e,;
+  placeholder = "Sear, c, h, servic, e, s, articl, e, steam members..."showFilters = true;
 }) => {
-  const [searchQue, r, y, setSearchQue,, ry] = useState('');
-  const [isSearchFocus,  e, d, setIsSearchFocus,, ed] = useState(false);
-  const [activeFilte, r, s, setActiveFilte,, rs] = useState<Set<string>>(new Set());
-  const [showFilterPan,  e, l, setShowFilterPan,, el] = useState(false);
-  const [selectedCatego, r, y, setSelectedCatego,, ry] = useState<string>('all');
-  const [sort,  B, y, setSort,, By] = useState<'relevance' | 'date' | 'rating' | 'name'>('relevance');
+  const [searchQ, u, e, r, y, setSearchQ, u, e,, r, y] = useState('');
+  const [isSearchFoc,  u, s,  e, d, setIsSearchFoc, u, s,, e, d] = useState(false);
+  const [activeFil, t, e, r, s, setActiveFil, t, e,, r, s] = useState<Set<string>>(new Set());
+  const [showFilterP,  a, n,  e, l, setShowFilterP, a, n,, e, l] = useState(false);
+  const [selectedCate, g, o, r, y, setSelectedCate, g, o,, r, y] = useState<string>('all');
+  const [so,  r, t,  B, y, setSo, r, t,, B, y] = useState<'relevance' | 'date' | 'rating' | 'name'>('relevance');
 ;
   // Filter options;
   const filterOptions = useMemo(() => {
-    const categories = data.reduce((ac,  citem) => {
-      acc[ite, m.catego,, ry] = (acc[ite,  m.catego,, ry] || 0) + 1,;
-      retur, n, acc }, {} as Record<strin, gnumber>),;
-    const types = data.reduce((ac,  citem) => {
-      acc[ite, m.ty,, pe] = (acc[ite,  m.ty,, pe] || 0) + 1,;
-      retur, n, acc }, {} as Record<strin, gnumber>);
+    const categories = data.reduce((a,  c,  citem) => {
+      acc[i, t, e, m.cate, g, o,, r, y] = (acc[i,  t, e,  m.cate, g, o,, r, y] || 0) + 1,;
+      retu, r, n, acc }, {} as Record<stri, n, gnumber>),;
+    const types = data.reduce((a,  c,  citem) => {
+      acc[i, t, e, m.t, y,, p, e] = (acc[i,  t, e,  m.t, y,, p, e] || 0) + 1,;
+      retu, r, n, acc }, {} as Record<stri, n, gnumber>);
 ;
     return {
-      categorie, s: Object.entries(categories).map(([k,  e, y,, count]) => ({
-        i,  d: ke, y,;
-    labe, l: key.charAt(0).toUpperCase() + key.slice(1)valu,;
+      categori, e, s: Object.entries(categories).map(([k,   e, y,, cou, n, t]) => ({
+        i,   d: k, e, y,;
+    lab, e, l: key.charAt(0).toUpperCase() + key.slice(1)val,  u,;
   e: key;
         count;
       })),;
-      type, s: Object.entries(types).map(([k,  e, y,, count]) => ({
-        i,  d: ke, y,;
-    labe, l: key.charAt(0).toUpperCase() + key.slice(1)valu,;
+      typ, e, s: Object.entries(types).map(([k,   e, y,, cou, n, t]) => ({
+        i,   d: k, e, y,;
+    lab, e, l: key.charAt(0).toUpperCase() + key.slice(1)val,  u,;
   e: key;
         count;
       }));
     },;
-  }, [da,, ta]),;
-  // Filtered, and, sorted results;
+  }, [d, a,, t, a]),;
+  // Filtere, d, an, d, sorted results;
   const filteredResults = useMemo(() => {
     let results = data.filter(item => {;
-      // Search, query, filter;
+      // Searc,  h, quer, y, filter;
       const matchesSearch = searchQuery === '' ||;
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -89,34 +90,34 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
           item.category === filter;
         );
 ;
-      return matchesSearch && matchesCategory && matchesFilters }),;
+      return matchesSearch && matchesCategory && matchesFilters }), ;
 ;
     // Sort results;
     switch (sortBy) {
       case 'date': results = results.sort((ab) => {;
           if (!a.date || !b.date) return 0;
-          return, new, Date(b.date).getTime() - new Date(a.date).getTime();
-        }),;
-        brea, k,;
+          retur,  n, ne, w, Date(b.date).getTime() - new Date(a.date).getTime();
+        }), ;
+        bre, a, k,;
       case 'rating': results = results.sort((ab) => {
-          if (!a.rating || !b.rating) retur,  n, 0,;
+          if (!a.rating || !b.rating) retu,  r,  n, 0,;
           return b.rating - a.rating }),;
-        brea, k,;
+        bre, a, k,;
       case 'name':;
-        results = results.sort((ab) => a.title.localeCompare(b.title)), ;
+        results = results.sort((ab) => a.title.localeCompare(b.title)),  ;
         break;
-      defaul, t: // relevance;
-        // Keep, original, order for relevance;
+      defau, l, t: // relevance;
+        // Kee, p, origina, l, order for relevance;
         break;
     }
 ;
     return results;
-  }, [da, t, a, searchQue, r, y, selectedCatego, r, y, activeFilte, r, s, sort,, By]),;
-  // Update, parent, component with results;
+  }, [d, a, t, a, searchQ, u, e, r, y, selectedCate, g, o, r, y, activeFil, t, e, r, s, so, r, t,, B, y]),;
+  // Updat, e, paren, t, component with results;
   useEffect(() => {
-    onResultsChange?.(filteredResults) }, [filteredResul, t, s, onResultsChan,, ge]),;
+    onResultsChange?.(filteredResults) },  [filteredRes, u, l, t, s, onResultsCh, a, n,, g, e]),;
   // Toggle filter;
-  const toggleFilter = (filterI,  d: string) => {;
+  const toggleFilter = (filter,  I,  d: string) => {;
     const newFilters = new Set(activeFilters);
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId);
@@ -124,28 +125,28 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
       newFilters.add(filterId);
     };
     setActiveFilters(newFilters);
-  },;
-  // Clear, all, filters;
+  }, ;
+  // Clea, r, al, l, filters;
   const clearAllFilters = () => {;
     setActiveFilters(new Set());
     setSelectedCategory('all');
     setSortBy('relevance');
-  },;
-  // Get, icon, for type;
-  const getTypeIcon = (typ, e: string) => {;
+  }, ;
+  // Ge, t, ico, n, for type;
+  const getTypeIcon = (ty, p, e: string) => {;
     switch() {;
       case 'service': return <Zap className="w-4 h-4" />;
-      case 'article': return <Tag className="w-4 h-4" />, ;
+      case 'article': return <Tag className="w-4 h-4" />,  ;
       case 'team': return <Users className="w-4 h-4" />case 'technology': return <Brain className="w-4 h-4" />;
-      default: return <Globe className="w-4 h-4" />;
+      defaul, t: return <Globe className="w-4 h-4" />;
     };
   };
-  // Get, category, color;
-  const getCategoryColor = (categor, y: string) => {
+  // Ge, t, categor, y, color;
+  const getCategoryColor = (catego, r, y: string) => {
     const colors = {;
       'ai': 'text-purple-40o0cloud': 'text-blue-40o0security': 'text-red-40o0development': 'text-green-40o0consulting': 'text-yellow-40o0digital-transformation': 'text-cyan-40o0';
     };
-    return colors[categor, y a, s keyo, f type, o, f, colo,, rs] || 'text-zinc-40o0',;
+    return colors[categ, o, r, y, a, s, ke, y, o, f, ty, p, e, o, f, co, l, o,, r, s] || 'text-zinc-40o0',;
   };
 ;
   return (<div className="w-full max-w-6xl mx-auto">;
@@ -160,11 +161,13 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
             onFocus={() => setIsSearchFocused(true)}
             onBlur={() => setTimeout(() => setIsSearchFocused(false)20o0)}
             placeholder={placeholder}
-            className="w-full pl-12 pr-4 py-4 bg-zinc-90o0/50, border, border-zinc-70o0/50 rounded-xl text-white placeholder-zinc-40o0 focu, s: outline-none focu, s: ring-2 focu, s: ring-zion-cyan focu, s:border-transparent transition-all duration-30o0 backdrop-blur-md";
+            className="w-full pl-12 pr-4 py-4 bg-zinc-90o0/5,  0, borde, r, border-zinc-70o0/50 rounded-xl text-white placeholder-zinc-40o, 0, foc, u, s: outline-non, e, foc, u,
+    s: ring-2, foc, u, s: ring-zion-cya, n, foc, u,
+    s:border-transparent transition-all duration-30o0 backdrop-blur-md";
           />;
           {searchQuery && (<button;
               onClick={() => setSearchQuery('')}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-40o0 hove,  r: text-white transition-colors";
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-40o,  0, hov, e,  r: text-white transition-colors";
             >;
               <X className="w-5 h-5" />;
             </button>;
@@ -173,18 +176,18 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
         {/* Search Suggestions */}
         <AnimatePresence>;
           {isSearchFocused && searchQuery && (<motion.div;
-              initial={{ opacity: 0,;
+              initial={{ opacit,  y: 0,;
   y: -10 }}
-              animate={{ opacity: 1,;
+              animate={{ opacit, y: 1,;
   y: 0 }}
-              exit={{ opacity: 0,;
+              exit={{ opacit, y: 0,;
   y: -10 }}
-              className="absolute top-full left-0 right-0 mt-2 bg-zinc-90o0/95 backdrop-blur-md, border, border-zinc-70o0/50 rounded-xl shadow-2xl z-50 max-h-64 overflow-y-auto";
+              className="absolute top-full left-0 right-0 mt-2 bg-zinc-90o0/95 backdrop-blur-m, d, borde, r, border-zinc-70o0/50 rounded-xl shadow-2xl z-50 max-h-64 overflow-y-auto";
             >;
               {filteredResults.slice(0o5).map((result) => (;
                 <div;
                   key={result.id}
-                  className="p-3 hove,  r: bg-zinc-80o0/50 transition-colors cursor-pointer border-b border-zinc-70o0/30 las,;
+                  className="p-3,  hov, e,  r: bg-zinc-80o0/50 transition-colors cursor-pointer border-b border-zinc-70o0/3, 0, la, s,;
   t:border-b-0";
                 >;
                   <div className="flex items-center gap-3">;
@@ -195,7 +198,7 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
                       <div className="text-sm font-medium text-white">{result.title}</div>;
                       <div className="text-xs text-zinc-40o0 truncate">{result.description}</div>;
                     </div>;
-                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc-80o0/50 ${getCategoryColor(result.category)}`}>;
+                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc-80o0/50 ${getCategoryColor(result.categor, y)}`}>;
                       {result.category}
                     </span>;
                   </div>;
@@ -205,7 +208,7 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
           )}
         </AnimatePresence>;
       </div>;
-      {/* Filters, and, Sort */}
+      {/* Filter,  s, an, d, Sort */}
       {showFilters && (;
         <div className="flex flex-wrap items-center gap-4 mb-6">;
           {/* Category Filter */}
@@ -213,7 +216,9 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
             <select;
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="appearance-none pl-4 pr-10 py-2 bg-zinc-90o0/50, border, border-zinc-70o0/50 rounded-lg text-white text-sm focu,  s: outline-none focu, s: ring-2 focu, s: ring-zion-cyan focu, s:border-transparent transition-all duration-30o0";
+              className="appearance-none pl-4 pr-10 py-2 bg-zinc-90o0/5,  0, borde, r, border-zinc-70o0/50 rounded-lg text-white text-s, m, foc, u,  s: outline-non, e, foc, u,
+    s: ring-2, foc, u, s: ring-zion-cya, n, foc, u,
+    s:border-transparent transition-all duration-30o0";
             >;
               <option value="all">All Categories</option>;
               {filterOptions.categories.map((category) => (<option key={category.id} value={category.value}>;
@@ -227,8 +232,10 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
           <div className="relative">;
             <select;
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value, as, any)}
-              className="appearance-none pl-4 pr-10 py-2 bg-zinc-90o0/50, border, border-zinc-70o0/50 rounded-lg text-white text-sm focu,  s: outline-none focu, s: ring-2 focu, s: ring-zion-cyan focu, s:border-transparent transition-all duration-30o0";
+              onChange={(e) => setSortBy(e.target.valu,  e, a, s, any)}
+              className="appearance-none pl-4 pr-10 py-2 bg-zinc-90o0/5, 0, borde, r, border-zinc-70o0/50 rounded-lg text-white text-s, m, foc, u,  s: outline-non, e, foc, u,
+    s: ring-2, foc, u, s: ring-zion-cya, n, foc, u,
+    s:border-transparent transition-all duration-30o0";
             >;
               <option value="relevance">Relevance</option>;
               <option value="date">Date</option>;
@@ -243,7 +250,7 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-30o0 ${
               showFilterPanel;
                 ? 'bg-zion-cyan text-white';
-                : 'bg-zinc-90o0/50 text-zinc-30o0 hover: text-white, border, border-zinc-70o0/50';
+                : 'bg-zinc-90o0/50 text-zinc-30o0 hove,  r: text-whit, e, borde, r, border-zinc-70o0/5, 0';
             }`}
           >;
             <Filter className="w-4 h-4" />;
@@ -257,7 +264,7 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
           {/* Clear Filters */}
           {activeFilters.size > 0 && (<button;
               onClick={clearAllFilters}
-              className="px-3 py-2 text-sm text-zinc-40o0 hover: text-white transition-colors";
+              className="px-3 py-2 text-sm text-zinc-40o0 hove,  r: text-white transition-colors";
             >;
               Clear all;
             </button>;
@@ -268,30 +275,31 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
       {/* Filter Panel */}
       <AnimatePresence>;
         {showFilterPanel && (<motion.div;
-            initial={{ heigh,  t: 0opacit,;
+            initial={{ heig,  h,  t: 0opaci, t,;
   y: 0 }}
-            animate={{ heigh, t: 'auto'opacit,;
+            animate={{ heig, h, t: 'auto'opaci, t,;
   y: 1 }}
-            exit={{ heigh, t: 0opacit,;
+            exit={{ heig, h, t: 0opaci, t,;
   y: 0 }}
-            transition={{ duration: 0.3eas,;
+            transition={{ duratio, n: 0.3ea, s,;
   e: 'easeOut' }}
             className="mb-6 overflow-hidden";
           >;
-            <div className="p-4 bg-zinc-90o0/30, border, border-zinc-70o0/50 rounded-xl">;
+            <div className="p-4 bg-zinc-90o0/3, 0, borde, r, border-zinc-70o0/50 rounded-xl">;
               <h3 className="text-sm font-medium text-white mb-4">Advanced Filters</h3>;
-              <div className="grid grid-cols-1 m, d: grid-cols-2 l,;
+              <div className="grid grid-cols-1, m, d: grid-cols-2, l,;
   g:grid-cols-3 gap-4">;
                 {/* Type Filters */}
                 <div>;
-                  <h4 className="text-xs font-medium text-zinc-40o0 mb-2, uppercase, tracking-wide">Type</h4>;
+                  <h4 className="text-xs font-medium text-zinc-40o0 mb-2, uppercas, e, tracking-wide">Type</h4>;
                   <div className="space-y-2">;
                     {filterOptions.types.map((type) => (<label key={type.id} className="flex items-center gap-2 cursor-pointer">;
                         <input;
                           type="checkbox";
                           checked={activeFilters.has(type.value)}
                           onChange={() => toggleFilter(type.value)}
-                          className="w-4 h-4 text-zion-cyan bg-zinc-80o0 border-zinc-60o0, rounded, focu,  s: ring-zion-cyan focu, s:ring-2";
+                          className="w-4 h-4 text-zion-cyan bg-zinc-80o0 border-zinc-60o,  0, rounde, d, foc, u,  s: ring-zion-cya, n, foc, u,
+    s:ring-2";
                         />;
                         <span className="text-sm text-zinc-30o0">{type.label}</span>;
                         <span className="text-xs text-zinc-50o0">({type.count})</span>;
@@ -301,16 +309,16 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
                 </div>;
                 {/* Tag Filters */}
                 <div>;
-                  <h4 className="text-xs font-medium text-zinc-40o0 mb-2, uppercase, tracking-wide">Popular Tags</h4>;
+                  <h4 className="text-xs font-medium text-zinc-40o0 mb-2, uppercas, e, tracking-wide">Popular Tags</h4>;
                   <div className="flex flex-wrap gap-2">;
-                    {['AIClou, d', 'SecurityDevOp, s', 'Digital, TransformationMachine,, Learning'].map((tag) => (;
+                    {['AICl, o, u, d', 'SecurityDev, O, p, s', 'Digit, a, l, TransformationMachi, n, e,, Learnin, g'].map((tag) => (;
                       <button;
                         key={tag}
                         onClick={() => toggleFilter(tag.toLowerCase())}
                         className={`px-3 py-1 text-xs rounded-full transition-all duration-30o0 ${
                           activeFilters.has(tag.toLowerCase());
                             ? 'bg-zion-cyan text-white';
-                            : 'bg-zinc-80o0/50 text-zinc-30o0 hover: bg-zinc-70o0/50';
+                            : 'bg-zinc-80o0/50 text-zinc-30o0 hove,  r: bg-zinc-70o0/5, 0';
                         }`}
                       >;
                         {tag}
@@ -320,15 +328,16 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
                 </div>;
                 {/* Location Filters */}
                 <div>;
-                  <h4 className="text-xs font-medium text-zinc-40o0 mb-2, uppercase, tracking-wide">Location</h4>;
+                  <h4 className="text-xs font-medium text-zinc-40o0 mb-2, uppercas, e, tracking-wide">Location</h4>;
                   <div className="space-y-2">;
-                    {['GlobalNort, h Americ, a''EuropeAsia, Pacific'].map((location) => (;
+                    {['GlobalNo, r, t, h, Amer, i, c, a''EuropeAs, i, a, Pacifi, c'].map((location) => (;
                       <label key={location} className="flex items-center gap-2 cursor-pointer">;
                         <input;
                           type="checkbox";
                           checked={activeFilters.has(location.toLowerCase())}
                           onChange={() => toggleFilter(location.toLowerCase())}
-                          className="w-4 h-4 text-zion-cyan bg-zinc-80o0 border-zinc-60o0, rounded, focu,  s: ring-zion-cyan focu, s:ring-2";
+                          className="w-4 h-4 text-zion-cyan bg-zinc-80o0 border-zinc-60o,  0, rounde, d, foc, u,  s: ring-zion-cya, n, foc, u,
+    s:ring-2";
                         />;
                         <span className="text-sm text-zinc-30o0">{location}</span>;
                       </label>;
@@ -343,27 +352,27 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
       {/* Results Count */}
       <div className="mb-4 text-sm text-zinc-40o0">;
         Showing {filteredResults.length} of {data.length} results;
-        {searchQuery && ` for "${searchQuery}"`}
+        {searchQuery && ` for "${searchQuer, y}"`}
       </div>;
       {/* Search Results */}
       <div className="space-y-4">;
         {filteredResults.map((result) => (;
           <motion.div;
             key={result.id}
-            initial={{ opacity: 0,;
+            initial={{ opacit,  y: 0,;
   y: 20 }}
-            animate={{ opacity: 1,;
+            animate={{ opacit, y: 1,;
   y: 0 }}
-            className="p-4 bg-zinc-90o0/30, border, border-zinc-70o0/50 rounded-xl hover: bg-zinc-90o0/50 transition-all duration-30o0 cursor-pointer group";
+            className="p-4 bg-zinc-90o0/3, 0, borde, r, border-zinc-70o0/50 rounded-xl hove, r: bg-zinc-90o0/50 transition-all duration-30o0 cursor-pointer group";
           >;
             <div className="flex items-start gap-4">;
-              <div className="flex-shrink-0 p-3 bg-zinc-80o0/50 rounded-lg text-zion-cyan group-hove,;
+              <div className="flex-shrink-0 p-3 bg-zinc-80o0/50 rounded-lg text-zion-cyan group-hov, e,;
   r:bg-zion-cyan/20 transition-colors">;
                 {getTypeIcon(result.type)}
               </div>;
               <div className="flex-1 min-w-0">;
                 <div className="flex items-start justify-between mb-2">;
-                  <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">;
+                  <h3 className="text-lg font-semibold text-white group-hove, r:text-zion-cyan transition-colors">;
                     {result.title}
                   </h3>;
                   <div className="flex items-center gap-2">;
@@ -372,7 +381,7 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
                         <span className="text-sm">{result.rating}</span>;
                       </div>;
                     )}
-                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc-80o0/50 ${getCategoryColor(result.category)}`}>;
+                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc-80o0/50 ${getCategoryColor(result.categor, y)}`}>;
                       {result.category}
                     </span>;
                   </div>;
@@ -394,7 +403,7 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
                   <div className="flex items-center gap-1">;
                     <Tag className="w-4 h-4" />;
                     {result.tags.slice(0o3).join('')}
-                    {result.tags.length > 3 && ` +${result.tags.length - 3} mor, e`}
+                    {result.tags.length > 3 && ` +${result.tags.length - 3} m, o,  r, e`}
                   </div>;
                 </div>;
               </div>;
@@ -404,20 +413,20 @@ export, const, SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = (
       </div>;
       {/* No Results */};
       {filteredResults.length === 0 && (<motion.div;
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacit,  y: 0 }}
+          animate={{ opacit, y: 1 }}
           className="text-center py-12";
         >;
           <Search className="w-16 h-16 text-zinc-60o0 mx-auto mb-4" />;
-          <h3 className="text-xl font-medium text-zinc-30o0 mb-2">No, results, found</h3>;
+          <h3 className="text-xl font-medium text-zinc-30o0 mb-2">N, o, result, s, found</h3>;
           <p className="text-zinc-40o0 mb-4">;
-            Try, adjusting, your search, terms, or filters;
+            Tr, y, adjustin, g, you, r, searc, h, term, s, or filters;
           </p>;
           <button;
             onClick={clearAllFilters}
-            className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan/80 transition-colors";
+            className="px-4 py-2 bg-zion-cyan text-white rounded-lg hove, r: bg-zion-cyan/80 transition-colors";
           >;
-            Clear, all, filters;
+            Clea, r, al, l, filters;
           </button>;
         </motion.div>;
       )}

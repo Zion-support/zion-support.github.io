@@ -4,1675 +4,2816 @@ import { motion } from 'framer-motion';
 =======
 import React from 'react';
 =======
-import React, { useState } from 'react';
+impor, t, Reac, t, { useState } from 'react';
 =======
 import React from 'react';
 =======
-import React, { useState } from 'react';
+impor, t, Reac, t, { useState } from 'react';
 =======
 import { useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, Youtube } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { motio, n, AnimatePresence } from 'framer-motion';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Cp, u, Rocke, t, Buildin, g, Targe, t, Za, p, Databas, e, Networ, k, Clou, d, Loc, k, BarChart, 3, Palett, e, Smartphon, e, Serve, r, Githu, b, Youtube } from 'lucide-react';
+import { Lin, k, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { 
-  Home, 
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+  Hom, e, 
+impor, t, Reac, t, { useState } from 'react';
+import { Lin, k, useLocation } from 'react-router-dom';
 import { 
-  Home, 
-  Briefcase, 
-  Users, 
-  Settings, 
-  FileText, 
-  HelpCircle, 
-  MessageSquare, 
-  BarChart3, 
-  ShoppingCart, 
-  Wrench, 
-  Globe, 
-  Building, 
-  Code, 
-  Shield, 
-  Zap, 
-  ChevronRight, 
-  ChevronDown,
-  Star,
-  Rocket,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Brain,
-  Leaf,
-  Smartphone,
-  DollarSign,
-  BookOpen,
-  Video,
-  FileSearch,
-  Lightbulb,
-  Target,
-  Users2,
-  Handshake,
-  Award,
-  TrendingUp,
-  Palette,
-  Monitor,
-  Server,
-  Cloud,
-  Key,
-  Eye,
-  ShieldCheck,
-  Bug,
-  Activity,
-  PieChart,
-  BarChart,
-  LineChart,
-  Map,
-  Calendar,
-  Clock,
-  Mail,
+  Hom, e, 
+  Briefcas, e, 
+  User, s, 
+  Setting, s, 
+  FileTex, t, 
+  HelpCircl, e, 
+  MessageSquar, e, 
+  BarChart, 3, 
+  ShoppingCar, t, 
+  Wrenc, h, 
+  Glob, e, 
+  Buildin, g, 
+  Cod, e, 
+  Shiel, d, 
+  Za, p, 
+  ChevronRigh, t, 
+  ChevronDow, n,
+  Sta, r,
+  Rocke, t,
+  Cp, u,
+  Databas, e,
+  Networ, k,
+  Loc, k,
+  Brai, n,
+  Lea, f,
+  Smartphon, e,
+  DollarSig, n,
+  BookOpe, n,
+  Vide, o,
+  FileSearc, h,
+  Lightbul, b,
+  Targe, t,
+  Users, 2,
+  Handshak, e,
+  Awar, d,
+  TrendingU, p,
+  Palett, e,
+  Monito, r,
+  Serve, r,
+  Clou, d,
+  Ke, y,
+  Ey, e,
+  ShieldChec, k,
+  Bu, g,
+  Activit, y,
+  PieChar, t,
+  BarChar, t,
+  LineChar, t,
+  Ma, p,
+  Calenda, r,
+  Cloc, k,
+  Mai, l,
   MapPin
 } from 'lucide-react';
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Database, Network, Zap, Target, Rocket, Cloud, Github } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Cp, u, Databas, e, Networ, k, Za, p, Targe, t, Rocke, t, Clou, d, Github } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Zap, ChevronRight, ChevronDown } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Cp, u, Rocke, t, Za, p, ChevronRigh, t, ChevronDown } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Cloud, Database, Code, BarChart3, Target, Heart, Building, Rocket, Lock, Network, Eye, Workflow, Palette, Server, Clock, Zap, Star, TrendingUp, ShoppingCart, Calendar, Video, FileText } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Cp, u, Clou, d, Databas, e, Cod, e, BarChart, 3, Targe, t, Hear, t, Buildin, g, Rocke, t, Loc, k, Networ, k, Ey, e, Workflo, w, Palett, e, Serve, r, Cloc, k, Za, p, Sta, r, TrendingU, p, ShoppingCar, t, Calenda, r, Vide, o, FileText } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Database, Cloud, Lock, BookOpen, FileText, Calendar, HelpCircle, Settings, Star, TrendingUp, Rocket, Cpu, Network, Server, Code, Palette, Target, Lightbulb, Github } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Za, p, Databas, e, Clou, d, Loc, k, BookOpe, n, FileTex, t, Calenda, r, HelpCircl, e, Setting, s, Sta, r, TrendingU, p, Rocke, t, Cp, u, Networ, k, Serve, r, Cod, e, Palett, e, Targe, t, Lightbul, b, Github } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, ShoppingCart, Code, DollarSign } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, ShoppingCar, t, Cod, e, DollarSign } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Database, Cpu, Lock, Rocket, BookOpen, FileText, Calendar, HelpCircle, Settings, BarChart3, Target, Building2, Heart, Car, Factory, ShoppingCart, GraduationCap, Microscope, Truck, Plane, Satellite, Atom, Cloud, Signal, Github, Link as LinkIcon } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Za, p, Databas, e, Cp, u, Loc, k, Rocke, t, BookOpe, n, FileTex, t, Calenda, r, HelpCircl, e, Setting, s, BarChart, 3, Targe, t, Building, 2, Hear, t, Ca, r, Factor, y, ShoppingCar, t, GraduationCa, p, Microscop, e, Truc, k, Plan, e, Satellit, e, Ato, m, Clou, d, Signa, l, Githu, b, Link as LinkIcon } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, Youtube } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Cp, u, Rocke, t, Buildin, g, Targe, t, Za, p, Databas, e, Networ, k, Clou, d, Loc, k, BarChart, 3, Palett, e, Smartphon, e, Serve, r, Githu, b, Youtube } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Zap, FileText, HelpCircle, Settings, Rocket, Brain, Database, Lock, Cloud, Code, BarChart3, Palette, Target, Lightbulb, BookOpen, Calendar, MessageSquare, Star, Award, TrendingUp, Cpu, Network, Server, ShieldCheck, Globe2, Smartphone, Wifi, Satellite, Atom, TestTube, Microscope, Car, Plane, Ship, Truck, Building2, Heart, Pill, Stethoscope, Gavel, Scale, Factory, Cog, Bot, Eye, Key, QrCode, Wallet, Coins, Leaf, Sun, Wind, Store, Cookie, Github } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Za, p, FileTex, t, HelpCircl, e, Setting, s, Rocke, t, Brai, n, Databas, e, Loc, k, Clou, d, Cod, e, BarChart, 3, Palett, e, Targe, t, Lightbul, b, BookOpe, n, Calenda, r, MessageSquar, e, Sta, r, Awar, d, TrendingU, p, Cp, u, Networ, k, Serve, r, ShieldChec, k, Globe, 2, Smartphon, e, Wif, i, Satellit, e, Ato, m, TestTub, e, Microscop, e, Ca, r, Plan, e, Shi, p, Truc, k, Building, 2, Hear, t, Pil, l, Stethoscop, e, Gave, l, Scal, e, Factor, y, Co, g, Bo, t, Ey, e, Ke, y, QrCod, e, Walle, t, Coin, s, Lea, f, Su, n, Win, d, Stor, e, Cooki, e, Github } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Cloud, Database, Network, Settings, BookOpen, MessageCircle, FileText, Star, Rocket, Target, Lightbulb, CheckCircle, Eye } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Za, p, Clou, d, Databas, e, Networ, k, Setting, s, BookOpe, n, MessageCircl, e, FileTex, t, Sta, r, Rocke, t, Targe, t, Lightbul, b, CheckCircl, e, Eye } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Github, Youtube, Shield, Handshake } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Githu, b, Youtub, e, Shiel, d, Handshake } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Eye } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Eye } from 'lucide-react';
 =======
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Cloud, Lock, Code, Rocket, Target, Lightbulb, Sparkles } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Cp, u, Clou, d, Loc, k, Cod, e, Rocke, t, Targe, t, Lightbul, b, Sparkles } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Target } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Cp, u, Rocke, t, Target } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Rocket, BookOpen, HelpCircle, Settings, Star, Cloud, Code } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Za, p, Rocke, t, BookOpe, n, HelpCircl, e, Setting, s, Sta, r, Clou, d, Code } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Rocket, BookOpen, FileText, TrendingUp, ArrowRight, Cloud, Calendar } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Za, p, Rocke, t, BookOpe, n, FileTex, t, TrendingU, p, ArrowRigh, t, Clou, d, Calendar } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Network, Brain, BarChart3, Zap, Database, Command } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Networ, k, Brai, n, BarChart, 3, Za, p, Databas, e, Command } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, FileText } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, FileText } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Shield, Handshake, Github } from 'lucide-react';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Shiel, d, Handshak, e, Github } from 'lucide-react';
 =======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Atom, Server, Database, Package, Building, Rocket } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shiel, d, Handshak, e, Brai, n, Ato, m, Serve, r, Databas, e, Packag, e, Buildin, g, Rocket } from 'lucide-react';
+import { Lin, k, useLocation } from 'react-router-dom';
 import { useSidebar } from '../context/SidebarContext';
 
 export default function Sidebar() {
-  const { isSidebarOpen, setIsSidebarOpen } = useSidebar();
+  const { isSidebarOpe,  n, setIsSidebarOpen } = useSidebar();
 =======
 import { useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { motio, n, AnimatePresence } from 'framer-motion';
+import { X, Hom, e, Briefcas, e, User, s, Phon, e, Mai, l, MapPi, n, Glob, e, Linkedi, n, Twitte, r, Faceboo, k, Instagra, m, Shield } from 'lucide-react';
+import { Lin, k, useLocation } from 'react-router-dom';
 =======
-import { Link, useLocation } from 'react-router-dom';
+import { Lin, k, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 =======
-  ShoppingCart, 
-  Users, 
-  Settings, 
-  HelpCircle, 
-  FileText, 
-  Briefcase, 
-  Shield, 
-  BookOpen,
-  MessageSquare,
-  BarChart3,
-  Zap,
-  Globe,
-  Building,
+  ShoppingCar, t, 
+  User, s, 
+  Setting, s, 
+  HelpCircl, e, 
+  FileTex, t, 
+  Briefcas, e, 
+  Shiel, d, 
+  BookOpe, n,
+  MessageSquar, e,
+  BarChart, 3,
+  Za, p,
+  Glob, e,
+  Buildin, g,
   Leaf
 } from 'lucide-react';
 
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-      title: 'Main Navigation',
-      items: [
-        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
+  isOpe, n: boolean;
+  onClos, e: () => void;
+      titl,  e: 'Main Navigation',
+    item, s: [
+        { na, m, e: 'A, I Solution, s',
+    pa, t, h: '/a, i-solution, s', ic, o, n: Brai, n },
+        { na, m, e: 'Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Targe, t },
 =======
-      title: 'Main Navigation',
-      items: [
-        { name: 'Home', path: '/', icon: Home },
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
-        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
+      tit, l, e: 'Mai, n Navigatio, n',
+    ite, m, s: [
+        { na, m, e: 'Hom, e',
+    pa, t, h: '/', ic, o, n: Hom, e },
+        { na, m, e: 'Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Briefcas, e },
+        { na, m, e: 'Cas, e Studie, s',
+    pa, t, h: '/cas, e-studie, s', ic, o, n: Briefcas, e },
 =======
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
-        { name: 'Pricing', path: '/pricing', icon: Briefcase },
+        { na, m, e: 'Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Targe, t },
+        { na, m, e: 'Pricin, g',
+    pa, t, h: '/pricin, g', ic, o, n: Briefcas, e },
 =======
 =======
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
-        { name: 'Pricing', path: '/pricing', icon: Star },
-        { name: 'About', path: '/about', icon: Users },
-        { name: 'Services', path: '/services', icon: Briefcase },
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
-        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
-        { name: 'About', path: '/about', icon: Users },
+        { na, m, e: 'Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Targe, t },
+        { na, m, e: 'Pricin, g',
+    pa, t, h: '/pricin, g', ic, o, n: Sta, r },
+        { na, m, e: 'Abou, t',
+    pa, t, h: '/abou, t', ic, o, n: User, s },
+        { na, m, e: 'Service, s',
+    pa, t, h: '/service, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Targe, t },
+        { na, m, e: 'Cas, e Studie, s',
+    pa, t, h: '/cas, e-studie, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Abou, t',
+    pa, t, h: '/abou, t', ic, o, n: User, s },
 =======
-      title: 'Main',
-      items: [
-        { name: 'Home', path: '/', icon: Home },
-        { name: 'Services', path: '/services', icon: Briefcase },
-        { name: 'AI Solutions', path: '/ai-solutions', icon: Briefcase },
+      tit, l, e: 'Mai, n',
+    ite, m, s: [
+        { na, m, e: 'Hom, e',
+    pa, t, h: '/', ic, o, n: Hom, e },
+        { na, m, e: 'Service, s',
+    pa, t, h: '/service, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'A, I Solution, s',
+    pa, t, h: '/a, i-solution, s', ic, o, n: Briefcas, e },
 =======
-        { name: 'AI Services', path: '/ai-services', icon: Briefcase },
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
-        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
-        { name: 'Pricing', path: '/pricing', icon: Briefcase },
+        { na, m, e: 'A, I Service, s',
+    pa, t, h: '/a, i-service, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Briefcas, e },
+        { na, m, e: 'Cas, e Studie, s',
+    pa, t, h: '/cas, e-studie, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Pricin, g',
+    pa, t, h: '/pricin, g', ic, o, n: Briefcas, e },
 =======
-        { name: 'Solutions', path: '/solutions', icon: Globe },
-        { name: 'Pricing', path: '/pricing', icon: Star },
+        { na, m, e: 'Solution, s',
+    pa, t, h: '/solution, s', ic, o, n: Glob, e },
+        { na, m, e: 'Pricin, g',
+    pa, t, h: '/pricin, g', ic, o, n: Sta, r },
 =======
-        { name: 'About', path: '/about', icon: Users },
-      title: 'Main Navigation',
-      items: [
-        { name: 'Home', path: '/', icon: Home },
-        { name: 'Services Overview', path: '/services', icon: Briefcase },
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Rocket },
-        { name: 'Case Studies', path: '/case-studies', icon: TrendingUp },
-        { name: 'Documentation', path: '/docs', icon: BookOpen },
-        { name: 'About Us', path: '/about', icon: Users },
-        { name: 'Contact', path: '/contact', icon: Phone }
+        { na, m, e: 'Abou, t',
+    pa, t, h: '/abou, t', ic, o, n: User, s },
+      tit, l, e: 'Mai, n Navigatio, n',
+    ite, m, s: [
+        { na, m, e: 'Hom, e',
+    pa, t, h: '/', ic, o, n: Hom, e },
+        { na, m, e: 'Service, s Overvie, w',
+    pa, t, h: '/service, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Rocke, t },
+        { na, m, e: 'Cas, e Studie, s',
+    pa, t, h: '/cas, e-studie, s', ic, o, n: TrendingU, p },
+        { na, m, e: 'Documentatio, n',
+    pa, t, h: '/doc, s', ic, o, n: BookOpe, n },
+        { na, m, e: 'Abou, t U, s',
+    pa, t, h: '/abou, t', ic, o, n: User, s },
+        { na, m, e: 'Contac, t',
+    pa, t, h: '/contac, t', ic, o, n: Phon, e }
 =======
-        { name: 'Contact', path: '/contact', icon: Phone },
-        { name: 'Sitemap', path: '/sitemap', icon: Globe }
+        { na, m, e: 'Contac, t',
+    pa, t, h: '/contac, t', ic, o, n: Phon, e },
+        { na, m, e: 'Sitema, p',
+    pa, t, h: '/sitema, p', ic, o, n: Glob, e }
       ]
     },
     {
 =======
-      title: 'AI & Autonomous Systems',
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
-        { name: 'AI Autonomous Research', path: '/ai-autonomous-research', icon: Briefcase },
-        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
-        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
-        { name: 'AI Autonomous Code Review', path: '/ai-autonomous-code-review', icon: Briefcase },
-        { name: 'AI Autonomous Creative Director', path: '/ai-autonomous-creative-director', icon: Briefcase },
-        { name: 'AI Autonomous Data', path: '/ai-autonomous-data', icon: Briefcase },
-        { name: 'AI Autonomous Decision Engine', path: '/ai-autonomous-decision-engine', icon: Briefcase },
-        { name: 'AI Autonomous DevOps', path: '/ai-autonomous-devops', icon: Briefcase },
-        { name: 'AI Autonomous Education', path: '/ai-autonomous-education-professor', icon: Briefcase },
-        { name: 'AI Autonomous Healthcare', path: '/ai-autonomous-healthcare-physician', icon: Briefcase },
-        { name: 'AI Autonomous Learning', path: '/ai-autonomous-learning-system', icon: Briefcase },
-        { name: 'AI Autonomous Legal', path: '/ai-autonomous-legal-counsel', icon: Briefcase },
-        { name: 'AI Autonomous Logistics', path: '/ai-autonomous-logistics', icon: Briefcase },
-        { name: 'AI Autonomous Manufacturing', path: '/ai-autonomous-manufacturing', icon: Briefcase },
-        { name: 'AI Autonomous Robotics', path: '/ai-autonomous-robotics', icon: Briefcase },
-        { name: 'AI Autonomous Security', path: '/ai-autonomous-security', icon: Briefcase },
-        { name: 'AI Autonomous Testing', path: '/ai-autonomous-testing', icon: Briefcase },
-        { name: 'AI Autonomous Vehicle Platform', path: '/ai-autonomous-vehicle-platform', icon: Briefcase },
-        { name: 'AI Autonomous Vehicle', path: '/ai-autonomous-vehicle', icon: Briefcase },
-        { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', icon: Briefcase },
-        { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Briefcase },
-        { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Briefcase }
+      titl, e: 'AI & Autonomous Systems',
+        { nam, e: 'AI & Autonomous Systems',
+    pat, h: '/services/ai-autonomous-systems', ico, n: Briefcase },
+        { nam, e: 'AI Research Assistant',
+    pat, h: '/ai-autonomous-research-assistant', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Research',
+    pat, h: '/ai-autonomous-research', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Business Manager',
+    pat, h: '/ai-autonomous-business-manager', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Business Platform',
+    pat, h: '/ai-autonomous-business-platform', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Code Review',
+    pat, h: '/ai-autonomous-code-review', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Creative Director',
+    pat, h: '/ai-autonomous-creative-director', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Data',
+    pat, h: '/ai-autonomous-data', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Decision Engine',
+    pat, h: '/ai-autonomous-decision-engine', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous DevOps',
+    pat, h: '/ai-autonomous-devops', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Education',
+    pat, h: '/ai-autonomous-education-professor', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Healthcare',
+    pat, h: '/ai-autonomous-healthcare-physician', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Learning',
+    pat, h: '/ai-autonomous-learning-system', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Legal',
+    pat, h: '/ai-autonomous-legal-counsel', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Logistics',
+    pat, h: '/ai-autonomous-logistics', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Manufacturing',
+    pat, h: '/ai-autonomous-manufacturing', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Robotics',
+    pat, h: '/ai-autonomous-robotics', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Security',
+    pat, h: '/ai-autonomous-security', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Testing',
+    pat, h: '/ai-autonomous-testing', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Vehicle Platform',
+    pat, h: '/ai-autonomous-vehicle-platform', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Vehicle',
+    pat, h: '/ai-autonomous-vehicle', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Vehicles Platform',
+    pat, h: '/ai-autonomous-vehicles-platform', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Vehicles',
+    pat, h: '/ai-autonomous-vehicles', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Venture Capitalist',
+    pat, h: '/ai-autonomous-venture-capitalist', ico, n: Briefcase }
 =======
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
+        { nam, e: 'AI & Autonomous Systems',
+    pat, h: '/services/ai-autonomous-systems', ico, n: Briefcase },
 =======
-        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Briefcase },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
-        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
-        { name: 'AI Research Platform', path: '/ai-autonomous-research', icon: Briefcase },
-        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Briefcase },
-        { name: 'AI Business Intelligence', path: '/ai-business-intelligence-suite', icon: Briefcase },
+        { nam, e: 'AI Autonomous Systems Platform',
+    pat, h: '/ai-autonomous-systems-platform', ico, n: Briefcase },
+        { nam, e: 'AI Research Assistant',
+    pat, h: '/ai-autonomous-research-assistant', ico, n: Briefcase },
+        { nam, e: 'AI Business Manager',
+    pat, h: '/ai-autonomous-business-manager', ico, n: Briefcase },
+        { nam, e: 'AI Research Platform',
+    pat, h: '/ai-autonomous-research', ico, n: Briefcase },
+        { nam, e: 'AI Code Review',
+    pat, h: '/ai-autonomous-code-review', ico, n: Briefcase },
+        { nam, e: 'AI Business Intelligence',
+    pat, h: '/ai-business-intelligence-suite', ico, n: Briefcase },
 =======
-        { name: 'AI Agent Orchestrator', path: '/ai-agent-orchestrator', icon: Briefcase },
-        { name: 'AI Analytics Copilot', path: '/ai-analytics-copilot', icon: Briefcase },
-        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
-        { name: 'AI Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
-        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Briefcase },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
-        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Globe },
-        { name: 'Digital Transformation', path: '/digital-transformation', icon: Globe },
-        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
+        { nam, e: 'AI Agent Orchestrator',
+    pat, h: '/ai-agent-orchestrator', ico, n: Briefcase },
+        { nam, e: 'AI Analytics Copilot',
+    pat, h: '/ai-analytics-copilot', ico, n: Briefcase },
+        { nam, e: 'AI Business Manager',
+    pat, h: '/ai-autonomous-business-manager', ico, n: Briefcase },
+        { nam, e: 'AI Business Platform',
+    pat, h: '/ai-autonomous-business-platform', ico, n: Briefcase },
+        { nam, e: 'AI Code Review',
+    pat, h: '/ai-autonomous-code-review', ico, n: Briefcase },
+        { nam, e: 'Quantum Neural Networks',
+    pat, h: '/quantum-neural-network-platform', ico, n: Briefcase },
+        { nam, e: 'Autonomous Business Platform',
+    pat, h: '/autonomous-business-operations-platform', ico, n: Briefcase },
+        { nam, e: 'AI Asset Management',
+    pat, h: '/ai-powered-it-asset-management', ico, n: Briefcase },
+        { nam, e: 'Cybersecurity',
+    pat, h: '/services/cybersecurity', ico, n: Shield },
+        { nam, e: 'Quantum Technology',
+    pat, h: '/services/quantum-technology', ico, n: Globe },
+        { nam, e: 'IT Infrastructure',
+    pat, h: '/services/it-infrastructure', ico, n: Globe },
+        { nam, e: 'Micro SAAS Solutions',
+    pat, h: '/services/micro-saas-solutions', ico, n: Globe },
+        { nam, e: 'Cloud & DevOps',
+    pat, h: '/cloud-devops', ico, n: Globe },
+        { nam, e: 'Digital Transformation',
+    pat, h: '/digital-transformation', ico, n: Globe },
+        { nam, e: 'Emerging Technology',
+    pat, h: '/emerging-tech', ico, n: Globe }
 =======
 =======
-        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
-        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
-        { name: 'AI & Machine Learning', path: '/services?category=AI%20%26%20Machine%20Learning', icon: Briefcase },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
-        { name: 'Advanced Research Automation', path: '/advanced-research-automation', icon: Briefcase },
+        { nam, e: 'AI Autonomous Business Manager',
+    pat, h: '/ai-autonomous-business-manager', ico, n: Briefcase },
+        { nam, e: 'AI Autonomous Business Platform',
+    pat, h: '/ai-autonomous-business-platform', ico, n: Briefcase },
+        { nam, e: 'AI & Machine Learning',
+    pat, h: '/services?category=AI%20%26%20Machine%20Learning', ico, n: Briefcase },
+        { nam, e: 'Quantum Neural Networks',
+    pat, h: '/quantum-neural-network-platform', ico, n: Briefcase },
+        { nam, e: 'Advanced Research Automation',
+    pat, h: '/advanced-research-automation', ico, n: Briefcase },
 =======
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
-        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Briefcase },
-        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Briefcase },
-        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', icon: Briefcase },
+        { nam, e: 'AI Business Intelligence',
+    pat, h: '/services/ai-business-intelligence', ico, n: Briefcase },
+        { nam, e: 'AI Marketing Automation',
+    pat, h: '/services/ai-marketing-automation', ico, n: Briefcase },
+        { nam, e: 'AI HR & Recruitment',
+    pat, h: '/services/ai-hr-recruitment', ico, n: Briefcase },
+        { nam, e: 'AI Legal Tech',
+    pat, h: '/services/ai-legal-tech', ico, n: Briefcase },
+        { nam, e: 'AI Healthcare Analytics',
+    pat, h: '/services/ai-healthcare-analytics', ico, n: Briefcase },
 =======
-        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
-        { name: 'AI Business Manager 2029', path: '/ai-autonomous-business-manager-2029', icon: Briefcase },
-        { name: 'Quantum Neural Network Platform', path: '/quantum-neural-network-platform', icon: Briefcase },
-        { name: 'Autonomous Business Operations Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
-        { name: 'Cybersecurity', path: '/services?category=Cybersecurity', icon: Shield },
-        { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', icon: Shield },
-        { name: 'Micro SAAS Solutions', path: '/services?category=Micro%20SAAS%20Solutions', icon: Globe },
-        { name: 'AI-Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
-        { name: 'Space Technology', path: '/services?category=Space%20Technology', icon: Globe },
-        { name: 'Healthcare AI', path: '/services?category=Healthcare%20AI', icon: Users },
-        { name: 'Manufacturing AI', path: '/services?category=Manufacturing%20AI', icon: Briefcase },
-        { name: 'Emerging Technology', path: '/services?category=Emerging%20Technology', icon: Globe },
-        { name: 'Autonomous Systems', path: '/services?category=AI%20%26%20Autonomous%20Systems', icon: Users },
-        { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Users }
+        { nam, e: 'AI Business Manager',
+    pat, h: '/ai-autonomous-business-manager', ico, n: Briefcase },
+        { nam, e: 'AI Business Manager 2029',
+    pat, h: '/ai-autonomous-business-manager-2029', ico, n: Briefcase },
+        { nam, e: 'Quantum Neural Network Platform',
+    pat, h: '/quantum-neural-network-platform', ico, n: Briefcase },
+        { nam, e: 'Autonomous Business Operations Platform',
+    pat, h: '/autonomous-business-operations-platform', ico, n: Briefcase },
+        { nam, e: 'Cybersecurity',
+    pat, h: '/services?category=Cybersecurity', ico, n: Shield },
+        { nam, e: 'Advanced Cybersecurity Suite',
+    pat, h: '/advanced-cybersecurity-suite', ico, n: Shield },
+        { nam, e: 'Micro SAAS Solutions',
+    pat, h: '/services?category=Micro%20SAAS%20Solutions', ico, n: Globe },
+        { nam, e: 'AI-Powered IT Asset Management',
+    pat, h: '/ai-powered-it-asset-management', ico, n: Briefcase },
+        { nam, e: 'Space Technology',
+    pat, h: '/services?category=Space%20Technology', ico, n: Globe },
+        { nam, e: 'Healthcare AI',
+    pat, h: '/services?category=Healthcare%20AI', ico, n: Users },
+        { nam, e: 'Manufacturing AI',
+    pat, h: '/services?category=Manufacturing%20AI', ico, n: Briefcase },
+        { nam, e: 'Emerging Technology',
+    pat, h: '/services?category=Emerging%20Technology', ico, n: Globe },
+        { nam, e: 'Autonomous Systems',
+    pat, h: '/services?category=AI%20%26%20Autonomous%20Systems', ico, n: Users },
+        { nam, e: 'Accessibility Auditor',
+    pat, h: '/accessibility-auditor', ico, n: Users }
 =======
-      title: 'AI & Technology',
-      items: [
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Globe },
-        { name: 'AI-Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
-        { name: 'Advanced Research Automation', path: '/advanced-research-automation', icon: Globe },
-        { name: 'Machine Learning', path: '/services#ai-ml', icon: Briefcase }
+      titl, e: 'AI & Technology',
+    item, s: [
+        { na, m, e: 'A, I Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Quantu, m Neura, l Network, s',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: Glob, e },
+        { na, m, e: 'A, I-Powere, d I, T Asse, t Managemen, t',
+    pa, t, h: '/a, i-powere, d-i, t-asse, t-managemen, t', ic, o, n: Briefcas, e },
+        { na, m, e: 'Advance, d Researc, h Automatio, n',
+    pa, t, h: '/advance, d-researc, h-automatio, n', ic, o, n: Glob, e },
+        { na, m, e: 'Machin, e Learnin, g',
+    pa, t, h: '/service, s#a, i-m, l', ic, o, n: Briefcas, e }
 =======
-      title: 'AI & Autonomous Systems',
-      items: [
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
-        { name: 'AI Services', path: '/ai-services', icon: Brain },
-        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
-        { name: 'AI Matcher', path: '/match', icon: Brain }
+      tit, l, e: 'A, I & Autonomou, s System, s',
+    ite, m, s: [
+        { na, m, e: 'A, I Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Service, s',
+    pa, t, h: '/a, i-service, s', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Solution, s',
+    pa, t, h: '/a, i-solution, s', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Matche, r',
+    pa, t, h: '/matc, h', ic, o, n: Brai, n }
 =======
-        { name: 'AI & Machine Learning', path: '/ai-services', icon: Briefcase },
-        { name: 'AI Research Assistant', path: '/ai-research-assistant', icon: Briefcase },
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Briefcase },
-        { name: 'Quantum Neural Network Platform', path: '/quantum-neural-network-platform', icon: Briefcase },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'SOC2 Compliance Automation', path: '/soc2-compliance-automation', icon: Shield },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
-        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase },
-        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Globe },
-        { name: 'Digital Transformation', path: '/digital-transformation', icon: Globe }
+        { na, m, e: 'A, I & Machin, e Learnin, g',
+    pa, t, h: '/a, i-service, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'A, I Researc, h Assistan, t',
+    pa, t, h: '/a, i-researc, h-assistan, t', ic, o, n: Briefcas, e },
+        { na, m, e: 'A, I Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Briefcas, e },
+        { na, m, e: 'Quantu, m Neura, l Networ, k Platfor, m',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: Briefcas, e },
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'SOC, 2 Complianc, e Automatio, n',
+    pa, t, h: '/soc, 2-complianc, e-automatio, n', ic, o, n: Shiel, d },
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Glob, e },
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Briefcas, e },
+        { na, m, e: 'Industr, y Solution, s',
+    pa, t, h: '/service, s/industr, y-solution, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Clou, d & DevOp, s',
+    pa, t, h: '/clou, d-devop, s', ic, o, n: Glob, e },
+        { na, m, e: 'Digita, l Transformatio, n',
+    pa, t, h: '/digita, l-transformatio, n', ic, o, n: Glob, e }
 =======
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Shield },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
-        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase }
+        { na, m, e: 'A, I & Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Shiel, d },
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Glob, e },
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Glob, e },
+        { na, m, e: 'Industr, y Solution, s',
+    pa, t, h: '/service, s/industr, y-solution, s', ic, o, n: Briefcas, e }
       ]
     },
     {
-      title: 'Quantum & Advanced Tech',
-      items: [
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Atom },
-        { name: 'Innovative New Services', path: '/services/innovative-new-services', icon: Rocket },
-        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
+      titl, e: 'Quantum & Advanced Tech',
+    item, s: [
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Ato, m },
+        { na, m, e: 'Innovativ, e Ne, w Service, s',
+    pa, t, h: '/service, s/innovativ, e-ne, w-service, s', ic, o, n: Rocke, t },
+        { na, m, e: 'Emergin, g Technolog, y',
+    pa, t, h: '/emergin, g-tec, h', ic, o, n: Glob, e }
       ]
     },
     {
-      title: 'Infrastructure & Security',
-      items: [
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
-        { name: 'Specialized IT Infrastructure', path: '/services/specialized-it-infrastructure', icon: Database },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Globe }
+      titl, e: 'Infrastructure & Security',
+    item, s: [
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Serve, r },
+        { na, m, e: 'Specialize, d I, T Infrastructur, e',
+    pa, t, h: '/service, s/specialize, d-i, t-infrastructur, e', ic, o, n: Databas, e },
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'Clou, d & DevOp, s',
+    pa, t, h: '/clou, d-devop, s', ic, o, n: Glob, e }
       ]
     },
     {
-      title: 'Solutions & Services',
-      items: [
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Package },
-        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Building },
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Briefcase },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Users }
+      titl, e: 'Solutions & Services',
+    item, s: [
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Packag, e },
+        { na, m, e: 'Industr, y Solution, s',
+    pa, t, h: '/service, s/industr, y-solution, s', ic, o, n: Buildin, g },
+        { na, m, e: 'Enterpris, e Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Briefcas, e },
+        { na, m, e: 'Healthcar, e Solution, s',
+    pa, t, h: '/solution, s/healthcar, e', ic, o, n: User, s }
       ]
     },
     {
-      title: 'Business Solutions',
-      items: [
-        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', icon: Briefcase },
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Briefcase },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Users },
-        { name: 'Financial Solutions', path: '/solutions/financial', icon: Briefcase },
-        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Briefcase },
-        { name: 'Retail Solutions', path: '/solutions/retail', icon: Briefcase },
-        { name: 'Government Solutions', path: '/solutions/government', icon: Briefcase }
+      titl, e: 'Business Solutions',
+    item, s: [
+        { na, m, e: 'Autonomou, s Busines, s Operation, s',
+    pa, t, h: '/autonomou, s-busines, s-operation, s-platfor, m', ic, o, n: Briefcas, e },
+        { na, m, e: 'Enterpris, e Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Briefcas, e },
+        { na, m, e: 'Healthcar, e Solution, s',
+    pa, t, h: '/solution, s/healthcar, e', ic, o, n: User, s },
+        { na, m, e: 'Financia, l Solution, s',
+    pa, t, h: '/solution, s/financia, l', ic, o, n: Briefcas, e },
+        { na, m, e: 'Manufacturin, g Solution, s',
+    pa, t, h: '/solution, s/manufacturin, g', ic, o, n: Briefcas, e },
+        { na, m, e: 'Retai, l Solution, s',
+    pa, t, h: '/solution, s/retai, l', ic, o, n: Briefcas, e },
+        { na, m, e: 'Governmen, t Solution, s',
+    pa, t, h: '/solution, s/governmen, t', ic, o, n: Briefcas, e }
       ]
     },
     {
-      title: 'Security & Infrastructure',
-      items: [
-        { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', icon: Shield },
-        { name: 'Cybersecurity Services', path: '/services/cybersecurity', icon: Shield },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Globe },
-        { name: 'Digital Transformation', path: '/digital-transformation', icon: Briefcase },
+      titl, e: 'Security & Infrastructure',
+    item, s: [
+        { na, m, e: 'Advance, d Cybersecurit, y Suit, e',
+    pa, t, h: '/advance, d-cybersecurit, y-suit, e', ic, o, n: Shiel, d },
+        { na, m, e: 'Cybersecurit, y Service, s',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Glob, e },
+        { na, m, e: 'Clou, d & DevOp, s',
+    pa, t, h: '/service, s/clou, d-devop, s', ic, o, n: Glob, e },
+        { na, m, e: 'Digita, l Transformatio, n',
+    pa, t, h: '/digita, l-transformatio, n', ic, o, n: Briefcas, e },
 =======
-      title: 'AI & Autonomous Systems',
-      items: [
-        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
-        { name: 'AI Agent Orchestrator', path: '/ai-agent-orchestrator', icon: Briefcase },
-        { name: 'AI Analytics Copilot', path: '/ai-analytics-copilot', icon: Briefcase },
-        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', icon: Briefcase },
-        { name: 'AI-Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase }
+      tit, l, e: 'A, I & Autonomou, s System, s',
+    ite, m, s: [
+        { na, m, e: 'A, I Autonomou, s Busines, s Manage, r',
+    pa, t, h: '/a, i-autonomou, s-busines, s-manage, r', ic, o, n: Briefcas, e },
+        { na, m, e: 'A, I Agen, t Orchestrato, r',
+    pa, t, h: '/a, i-agen, t-orchestrato, r', ic, o, n: Briefcas, e },
+        { na, m, e: 'A, I Analytic, s Copilo, t',
+    pa, t, h: '/a, i-analytic, s-copilo, t', ic, o, n: Briefcas, e },
+        { na, m, e: 'Autonomou, s Busines, s Operation, s',
+    pa, t, h: '/autonomou, s-busines, s-operation, s-platfor, m', ic, o, n: Briefcas, e },
+        { na, m, e: 'A, I-Powere, d I, T Asse, t Managemen, t',
+    pa, t, h: '/a, i-powere, d-i, t-asse, t-managemen, t', ic, o, n: Briefcas, e }
       ]
     },
     {
-      title: 'Quantum & Emerging Tech',
-      items: [
-        { name: 'Quantum Neural Network Platform', path: '/quantum-neural-network-platform', icon: Globe },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe }
+      titl, e: 'Quantum & Emerging Tech',
+    item, s: [
+        { na, m, e: 'Quantu, m Neura, l Networ, k Platfor, m',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: Glob, e },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Glob, e },
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Briefcas, e },
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Glob, e }
       ]
     },
     {
-        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
-        { name: 'AI Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
+        { nam, e: 'AI Business Manager',
+    pat, h: '/ai-autonomous-business-manager', ico, n: Briefcase },
+        { nam, e: 'AI Business Platform',
+    pat, h: '/ai-autonomous-business-platform', ico, n: Briefcase },
 =======
-        { name: 'Business Intelligence', path: '/services/business-intelligence', icon: Briefcase },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
-        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Briefcase },
-        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Briefcase },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
-      title: 'AI & Technology',
-      items: [
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Brain },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Brain },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Brain },
-        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Brain },
-        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Brain },
-        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', icon: Brain }
+        { nam, e: 'Business Intelligence',
+    pat, h: '/services/business-intelligence', ico, n: Briefcase },
+        { nam, e: 'AI Marketing Automation',
+    pat, h: '/services/ai-marketing-automation', ico, n: Briefcase },
+        { nam, e: 'AI HR & Recruitment',
+    pat, h: '/services/ai-hr-recruitment', ico, n: Briefcase },
+        { nam, e: 'AI Legal Tech',
+    pat, h: '/services/ai-legal-tech', ico, n: Briefcase },
+        { nam, e: 'Quantum Neural Networks',
+    pat, h: '/quantum-neural-network-platform', ico, n: Briefcase },
+        { nam, e: 'Autonomous Business Platform',
+    pat, h: '/autonomous-business-operations-platform', ico, n: Briefcase },
+        { nam, e: 'AI Asset Management',
+    pat, h: '/ai-powered-it-asset-management', ico, n: Briefcase },
+      titl, e: 'AI & Technology',
+    item, s: [
+        { na, m, e: 'A, I & Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Researc, h Assistan, t',
+    pa, t, h: '/a, i-autonomou, s-researc, h-assistan, t', ic, o, n: Brai, n },
+        { na, m, e: 'Quantu, m Neura, l Network, s',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'Autonomou, s Busines, s Platfor, m',
+    pa, t, h: '/autonomou, s-busines, s-operation, s-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Asse, t Managemen, t',
+    pa, t, h: '/a, i-powere, d-i, t-asse, t-managemen, t', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Busines, s Intelligenc, e',
+    pa, t, h: '/service, s/a, i-busines, s-intelligenc, e', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Marketin, g Automatio, n',
+    pa, t, h: '/service, s/a, i-marketin, g-automatio, n', ic, o, n: Brai, n },
+        { na, m, e: 'A, I H, R & Recruitmen, t',
+    pa, t, h: '/service, s/a, i-h, r-recruitmen, t', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Lega, l Tec, h',
+    pa, t, h: '/service, s/a, i-lega, l-tec, h', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Healthcar, e Analytic, s',
+    pa, t, h: '/service, s/a, i-healthcar, e-analytic, s', ic, o, n: Brai, n }
       ]
     },
     {
-      title: 'Infrastructure & Security',
-      items: [
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-      title: 'AI Services',
-      items: [
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Cpu },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Zap },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Zap },
-        { name: 'AI Content Generation', path: '/ai-content-generator', icon: Brain },
-        { name: 'AI Code Review', path: '/ai-code-review', icon: Cpu },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
-        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Brain },
-        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Brain },
-        { name: 'AI Autonomous Research', path: '/ai-autonomous-research', icon: Brain },
-        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Brain },
-        { name: 'AI Autonomous Code Review', path: '/ai-autonomous-code-review', icon: Cpu },
-        { name: 'AI Autonomous Creative Director', path: '/ai-autonomous-creative-director', icon: Brain },
-        { name: 'AI Autonomous Data', path: '/ai-autonomous-data', icon: Database },
-        { name: 'AI Autonomous Decision Engine', path: '/ai-autonomous-decision-engine', icon: Brain },
-        { name: 'AI Autonomous Decision Platform', path: '/ai-autonomous-decision-platform', icon: Brain },
-        { name: 'AI Autonomous DevOps', path: '/ai-autonomous-devops', icon: Cpu },
-        { name: 'AI Autonomous Education Professor', path: '/ai-autonomous-education-professor', icon: Users },
-        { name: 'AI Autonomous Healthcare Physician', path: '/ai-autonomous-healthcare-physician', icon: Users },
-        { name: 'AI Autonomous Learning System', path: '/ai-autonomous-learning-system', icon: Brain },
-        { name: 'AI Autonomous Legal Counsel', path: '/ai-autonomous-legal-counsel', icon: Users },
-        { name: 'AI Autonomous Logistics', path: '/ai-autonomous-logistics', icon: Globe },
-        { name: 'AI Autonomous Manufacturing', path: '/ai-autonomous-manufacturing', icon: Cpu },
-        { name: 'AI Autonomous Robotics', path: '/ai-autonomous-robotics', icon: Cpu },
-        { name: 'AI Autonomous Scientific Researcher', path: '/ai-autonomous-scientific-researcher', icon: Brain },
-        { name: 'AI Autonomous Security', path: '/ai-autonomous-security', icon: Shield },
-        { name: 'AI Autonomous Testing', path: '/ai-autonomous-testing', icon: Cpu },
-        { name: 'AI Autonomous Vehicle Platform', path: '/ai-autonomous-vehicle-platform', icon: Rocket },
-        { name: 'AI Autonomous Vehicle', path: '/ai-autonomous-vehicle', icon: Rocket },
-        { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', icon: Rocket },
-        { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Rocket },
-        { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Users }
+      titl, e: 'Infrastructure & Security',
+    item, s: [
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+      tit, l, e: 'A, I Service, s',
+    ite, m, s: [
+        { na, m, e: 'A, I Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Busines, s Intelligenc, e',
+    pa, t, h: '/service, s/a, i-busines, s-intelligenc, e', ic, o, n: Cp, u },
+        { na, m, e: 'A, I Marketin, g Automatio, n',
+    pa, t, h: '/service, s/a, i-marketin, g-automatio, n', ic, o, n: Za, p },
+        { na, m, e: 'A, I Workflo, w Automatio, n',
+    pa, t, h: '/a, i-workflo, w-automatio, n', ic, o, n: Za, p },
+        { na, m, e: 'A, I Conten, t Generatio, n',
+    pa, t, h: '/a, i-conten, t-generato, r', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Cod, e Revie, w',
+    pa, t, h: '/a, i-cod, e-revie, w', ic, o, n: Cp, u },
+        { na, m, e: 'A, I Researc, h Assistan, t',
+    pa, t, h: '/a, i-autonomou, s-researc, h-assistan, t', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Autonomou, s Busines, s Manage, r',
+    pa, t, h: '/a, i-autonomou, s-busines, s-manage, r', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Autonomou, s Busines, s Platfor, m',
+    pa, t, h: '/a, i-autonomou, s-busines, s-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Autonomou, s Researc, h',
+    pa, t, h: '/a, i-autonomou, s-researc, h', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Autonomou, s System, s Platfor, m',
+    pa, t, h: '/a, i-autonomou, s-system, s-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Autonomou, s Cod, e Revie, w',
+    pa, t, h: '/a, i-autonomou, s-cod, e-revie, w', ic, o, n: Cp, u },
+        { na, m, e: 'A, I Autonomou, s Creativ, e Directo, r',
+    pa, t, h: '/a, i-autonomou, s-creativ, e-directo, r', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Autonomou, s Dat, a',
+    pa, t, h: '/a, i-autonomou, s-dat, a', ic, o, n: Databas, e },
+        { na, m, e: 'A, I Autonomou, s Decisio, n Engin, e',
+    pa, t, h: '/a, i-autonomou, s-decisio, n-engin, e', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Autonomou, s Decisio, n Platfor, m',
+    pa, t, h: '/a, i-autonomou, s-decisio, n-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Autonomou, s DevOp, s',
+    pa, t, h: '/a, i-autonomou, s-devop, s', ic, o, n: Cp, u },
+        { na, m, e: 'A, I Autonomou, s Educatio, n Professo, r',
+    pa, t, h: '/a, i-autonomou, s-educatio, n-professo, r', ic, o, n: User, s },
+        { na, m, e: 'A, I Autonomou, s Healthcar, e Physicia, n',
+    pa, t, h: '/a, i-autonomou, s-healthcar, e-physicia, n', ic, o, n: User, s },
+        { na, m, e: 'A, I Autonomou, s Learnin, g Syste, m',
+    pa, t, h: '/a, i-autonomou, s-learnin, g-syste, m', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Autonomou, s Lega, l Counse, l',
+    pa, t, h: '/a, i-autonomou, s-lega, l-counse, l', ic, o, n: User, s },
+        { na, m, e: 'A, I Autonomou, s Logistic, s',
+    pa, t, h: '/a, i-autonomou, s-logistic, s', ic, o, n: Glob, e },
+        { na, m, e: 'A, I Autonomou, s Manufacturin, g',
+    pa, t, h: '/a, i-autonomou, s-manufacturin, g', ic, o, n: Cp, u },
+        { na, m, e: 'A, I Autonomou, s Robotic, s',
+    pa, t, h: '/a, i-autonomou, s-robotic, s', ic, o, n: Cp, u },
+        { na, m, e: 'A, I Autonomou, s Scientifi, c Researche, r',
+    pa, t, h: '/a, i-autonomou, s-scientifi, c-researche, r', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Autonomou, s Securit, y',
+    pa, t, h: '/a, i-autonomou, s-securit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'A, I Autonomou, s Testin, g',
+    pa, t, h: '/a, i-autonomou, s-testin, g', ic, o, n: Cp, u },
+        { na, m, e: 'A, I Autonomou, s Vehicl, e Platfor, m',
+    pa, t, h: '/a, i-autonomou, s-vehicl, e-platfor, m', ic, o, n: Rocke, t },
+        { na, m, e: 'A, I Autonomou, s Vehicl, e',
+    pa, t, h: '/a, i-autonomou, s-vehicl, e', ic, o, n: Rocke, t },
+        { na, m, e: 'A, I Autonomou, s Vehicle, s Platfor, m',
+    pa, t, h: '/a, i-autonomou, s-vehicle, s-platfor, m', ic, o, n: Rocke, t },
+        { na, m, e: 'A, I Autonomou, s Vehicle, s',
+    pa, t, h: '/a, i-autonomou, s-vehicle, s', ic, o, n: Rocke, t },
+        { na, m, e: 'A, I Autonomou, s Ventur, e Capitalis, t',
+    pa, t, h: '/a, i-autonomou, s-ventur, e-capitalis, t', ic, o, n: User, s }
 =======
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe }
+        { na, m, e: 'SOC, 2 Complianc, e',
+    pa, t, h: '/soc, 2-complianc, e-automatio, n', ic, o, n: Shiel, d },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Glob, e },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Glob, e }
 =======
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cpu },
-        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Cpu },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Cpu },
-        { name: 'Network Infrastructure', path: '/services/network-infrastructure', icon: Cpu },
-        { name: 'Managed IT Services', path: '/services/managed-it-services', icon: Cpu },
-        { name: 'DevOps Automation', path: '/services/devops-automation', icon: Cpu },
-        { name: 'Cloud Migration', path: '/services/cloud-migration', icon: Cpu }
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Cp, u },
+        { na, m, e: 'Clou, d DevOp, s',
+    pa, t, h: '/clou, d-devop, s', ic, o, n: Cp, u },
+        { na, m, e: '5, G Enterpris, e Solution, s',
+    pa, t, h: '/5, g-enterpris, e-solution, s', ic, o, n: Cp, u },
+        { na, m, e: 'Networ, k Infrastructur, e',
+    pa, t, h: '/service, s/networ, k-infrastructur, e', ic, o, n: Cp, u },
+        { na, m, e: 'Manage, d I, T Service, s',
+    pa, t, h: '/service, s/manage, d-i, t-service, s', ic, o, n: Cp, u },
+        { na, m, e: 'DevOp, s Automatio, n',
+    pa, t, h: '/service, s/devop, s-automatio, n', ic, o, n: Cp, u },
+        { na, m, e: 'Clou, d Migratio, n',
+    pa, t, h: '/service, s/clou, d-migratio, n', ic, o, n: Cp, u }
 =======
-      title: 'Core Services',
-      items: [
-        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
-        { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
-        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud },
-        { name: 'Quantum Technology', path: '/quantum-technology', icon: Zap },
-        { name: 'Enterprise Solutions', path: '/enterprise-solutions', icon: Briefcase },
-        { name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings }
+      tit, l, e: 'Cor, e Service, s',
+    ite, m, s: [
+        { na, m, e: 'A, I Solution, s',
+    pa, t, h: '/a, i-solution, s', ic, o, n: Brai, n },
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'Clou, d & DevOp, s',
+    pa, t, h: '/clou, d-devop, s', ic, o, n: Clou, d },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/quantu, m-technolog, y', ic, o, n: Za, p },
+        { na, m, e: 'Enterpris, e Solution, s',
+    pa, t, h: '/enterpris, e-solution, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/i, t-infrastructur, e', ic, o, n: Setting, s }
       ]
     },
     {
-      title: 'AI Autonomous Systems',
-      items: [
-        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Brain },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: BookOpen },
-        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Code },
-        { name: 'AI Creative Director', path: '/ai-autonomous-creative-director', icon: Star },
-        { name: 'AI Decision Engine', path: '/ai-autonomous-decision-engine', icon: Zap },
-        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Rocket }
+      titl, e: 'AI Autonomous Systems',
+    item, s: [
+        { na, m, e: 'A, I Busines, s Manage, r',
+    pa, t, h: '/a, i-autonomou, s-busines, s-manage, r', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Researc, h Assistan, t',
+    pa, t, h: '/a, i-autonomou, s-researc, h-assistan, t', ic, o, n: BookOpe, n },
+        { na, m, e: 'A, I Cod, e Revie, w',
+    pa, t, h: '/a, i-autonomou, s-cod, e-revie, w', ic, o, n: Cod, e },
+        { na, m, e: 'A, I Creativ, e Directo, r',
+    pa, t, h: '/a, i-autonomou, s-creativ, e-directo, r', ic, o, n: Sta, r },
+        { na, m, e: 'A, I Decisio, n Engin, e',
+    pa, t, h: '/a, i-autonomou, s-decisio, n-engin, e', ic, o, n: Za, p },
+        { na, m, e: 'A, I Autonomou, s System, s Platfor, m',
+    pa, t, h: '/a, i-autonomou, s-system, s-platfor, m', ic, o, n: Rocke, t }
       ]
     },
     {
-      title: 'Innovative Services',
-      items: [
-        { name: 'Innovative Services Showcase', path: '/innovative-services-showcase', icon: Rocket },
-        { name: 'Comprehensive Services', path: '/comprehensive-services-overview', icon: Briefcase },
-        { name: 'Micro SaaS Solutions', path: '/micro-saas-solutions', icon: Globe },
-        { name: 'Emerging Technology', path: '/emerging-tech', icon: Zap },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Settings }
+      titl, e: 'Innovative Services',
+    item, s: [
+        { na, m, e: 'Innovativ, e Service, s Showcas, e',
+    pa, t, h: '/innovativ, e-service, s-showcas, e', ic, o, n: Rocke, t },
+        { na, m, e: 'Comprehensiv, e Service, s',
+    pa, t, h: '/comprehensiv, e-service, s-overvie, w', ic, o, n: Briefcas, e },
+        { na, m, e: 'Micr, o Saa, S Solution, s',
+    pa, t, h: '/micr, o-saa, s-solution, s', ic, o, n: Glob, e },
+        { na, m, e: 'Emergin, g Technolog, y',
+    pa, t, h: '/emergin, g-tec, h', ic, o, n: Za, p },
+        { na, m, e: 'Quantu, m Neura, l Network, s',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'Autonomou, s Busines, s Platfor, m',
+    pa, t, h: '/autonomou, s-busines, s-operation, s-platfor, m', ic, o, n: Setting, s }
       ]
     },
     {
-      title: 'Industry Solutions',
-      items: [
-      items: [
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
-        { name: '5G Enterprise Network', path: '/5g-enterprise-network', icon: Briefcase },
-        { name: '5G Network Optimization', path: '/5g-network-optimization', icon: Briefcase },
-        { name: '5G Private Network Solutions', path: '/5g-private-network-solutions', icon: Briefcase },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
-        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Briefcase }
+      titl, e: 'Industry Solutions',
+    item, s: [
+      ite, m, s: [
+        { na, m, e: '5, G Enterpris, e Solution, s',
+    pa, t, h: '/5, g-enterpris, e-solution, s', ic, o, n: Briefcas, e },
+        { na, m, e: '5, G Enterpris, e Networ, k',
+    pa, t, h: '/5, g-enterpris, e-networ, k', ic, o, n: Briefcas, e },
+        { na, m, e: '5, G Networ, k Optimizatio, n',
+    pa, t, h: '/5, g-networ, k-optimizatio, n', ic, o, n: Briefcas, e },
+        { na, m, e: '5, G Privat, e Networ, k Solution, s',
+    pa, t, h: '/5, g-privat, e-networ, k-solution, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Briefcas, e },
+        { na, m, e: 'Clou, d DevOp, s',
+    pa, t, h: '/clou, d-devop, s', ic, o, n: Briefcas, e }
       ]
     },
     {
-      title: 'Cybersecurity & Compliance',
-      items: [
-        { name: 'Cybersecurity Services', path: '/services/cybersecurity', icon: Shield },
-        { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', icon: Shield },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
-        { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Eye }
+      titl, e: 'Cybersecurity & Compliance',
+    item, s: [
+        { na, m, e: 'Cybersecurit, y Service, s',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'Advance, d Cybersecurit, y Suit, e',
+    pa, t, h: '/advance, d-cybersecurit, y-suit, e', ic, o, n: Shiel, d },
+        { na, m, e: 'SOC, 2 Complianc, e',
+    pa, t, h: '/soc, 2-complianc, e-automatio, n', ic, o, n: Shiel, d },
+        { na, m, e: 'Accessibilit, y Audito, r',
+    pa, t, h: '/accessibilit, y-audito, r', ic, o, n: Ey, e }
       ]
     },
     {
-      title: 'Other Services',
-      items: [
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
-        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe },
-        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Globe }
+      titl, e: 'Other Services',
+    item, s: [
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Glob, e },
+        { na, m, e: 'Emergin, g Technolog, y',
+    pa, t, h: '/emergin, g-tec, h', ic, o, n: Glob, e },
+        { na, m, e: 'Industr, y Solution, s',
+    pa, t, h: '/service, s/industr, y-solution, s', ic, o, n: Glob, e }
       ]
     },
     {
-      title: 'Technology Services',
-      items: [
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cpu },
-        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud },
-        { name: 'Digital Transformation', path: '/digital-transformation', icon: Zap },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Briefcase },
-        { name: 'Emerging Technology', path: '/emerging-tech', icon: Rocket },
-        { name: 'Space Technology', path: '/space-tech', icon: Rocket },
-        { name: 'Research & Development', path: '/research-development', icon: Brain }
+      titl, e: 'Technology Services',
+    item, s: [
+        { na, m, e: 'Quantu, m Neura, l Network, s',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'Autonomou, s Busines, s Platfor, m',
+    pa, t, h: '/autonomou, s-busines, s-operation, s-platfor, m', ic, o, n: Briefcas, e },
+        { na, m, e: 'A, I Asse, t Managemen, t',
+    pa, t, h: '/a, i-powere, d-i, t-asse, t-managemen, t', ic, o, n: Databas, e },
+        { na, m, e: 'SOC, 2 Complianc, e',
+    pa, t, h: '/soc, 2-complianc, e-automatio, n', ic, o, n: Shiel, d },
+        { na, m, e: '5, G Enterpris, e Solution, s',
+    pa, t, h: '/5, g-enterpris, e-solution, s', ic, o, n: Networ, k },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Glob, e },
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Cp, u },
+        { na, m, e: 'Clou, d & DevOp, s',
+    pa, t, h: '/clou, d-devop, s', ic, o, n: Clou, d },
+        { na, m, e: 'Digita, l Transformatio, n',
+    pa, t, h: '/digita, l-transformatio, n', ic, o, n: Za, p },
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Emergin, g Technolog, y',
+    pa, t, h: '/emergin, g-tec, h', ic, o, n: Rocke, t },
+        { na, m, e: 'Spac, e Technolog, y',
+    pa, t, h: '/spac, e-tec, h', ic, o, n: Rocke, t },
+        { na, m, e: 'Researc, h & Developmen, t',
+    pa, t, h: '/researc, h-developmen, t', ic, o, n: Brai, n }
       ]
     },
     {
-      title: 'AI Specialized Solutions',
-      items: [
-        { name: 'AI Biomedical Research', path: '/ai-biomedical-research', icon: Heart },
-        { name: 'AI Biotech Drug Discovery', path: '/ai-biotech-drug-discovery', icon: TestTube },
-        { name: 'AI Blockchain Analytics', path: '/ai-blockchain-analytics', icon: Database },
-        { name: 'AI Blockchain Governance', path: '/ai-blockchain-governance', icon: Shield },
-        { name: 'AI Brain Computer Interface', path: '/ai-brain-computer-interface', icon: Brain },
-        { name: 'AI Brain Interface', path: '/ai-brain-interface', icon: Brain },
-        { name: 'AI Brand Personality Generator', path: '/ai-brand-personality-generator', icon: Palette },
-        { name: 'AI Business Intelligence Elite', path: '/ai-business-intelligence-elite', icon: BarChart3 },
-        { name: 'AI Business Intelligence Pro', path: '/ai-business-intelligence-pro', icon: BarChart3 },
-        { name: 'AI Business Intelligence Suite', path: '/ai-business-intelligence-suite', icon: BarChart3 },
-        { name: 'AI Business Intelligence', path: '/ai-business-intelligence', icon: BarChart3 },
-        { name: 'AI Climate Prediction Engine', path: '/ai-climate-prediction-engine', icon: Globe },
-        { name: 'AI Climate Prediction Platform', path: '/ai-climate-prediction-platform', icon: Globe },
-        { name: 'AI Climate Prediction', path: '/ai-climate-prediction', icon: Globe },
-        { name: 'AI Code Generation Enterprise', path: '/ai-code-generation-enterprise', icon: Code },
-        { name: 'AI Code Review Copilot', path: '/ai-code-review-copilot', icon: Code },
-        { name: 'AI Code Review', path: '/ai-code-review', icon: Code },
-        { name: 'AI Compliance Automation', path: '/ai-compliance-automation', icon: Shield },
-        { name: 'AI Computer Vision Platform', path: '/ai-computer-vision-platform', icon: Eye },
-        { name: 'AI Consciousness Evolution', path: '/ai-consciousness-evolution', icon: Brain },
-        { name: 'AI Consciousness Evolution Platform', path: '/ai-consciousness-evolution-platform', icon: Brain },
-        { name: 'AI Consciousness Simulation Platform', path: '/ai-consciousness-simulation-platform', icon: Brain },
-        { name: 'AI Consciousness Simulation', path: '/ai-consciousness-simulation', icon: Brain },
-        { name: 'AI Consciousness Simulator', path: '/ai-consciousness-simulator', icon: Brain },
-        { name: 'AI Content Creation Revolution', path: '/ai-content-creation-revolution', icon: PenTool },
-        { name: 'AI Content Creation', path: '/ai-content-creation', icon: PenTool },
-        { name: 'AI Content Factory', path: '/ai-content-factory', icon: Building2 },
-        { name: 'AI Content Generation Automation', path: '/ai-content-generation-automation', icon: PenTool },
-        { name: 'AI Content Generation Pro', path: '/ai-content-generation-pro', icon: PenTool },
-        { name: 'AI Content Generator', path: '/ai-content-generator', icon: PenTool },
-        { name: 'AI Content Marketing Automation', path: '/ai-content-marketing-automation', icon: TrendingUp },
-        { name: 'AI Content Personalization Engine', path: '/ai-content-personalization-engine', icon: Target },
-        { name: 'AI Creativity Studio', path: '/ai-creativity-studio', icon: Palette },
-        { name: 'AI Market Research', path: '/ai-market-research', icon: Search },
-        { name: 'AI Powered Enterprise Security', path: '/ai-powered-enterprise-security', icon: Shield },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Zap }
+      titl, e: 'AI Specialized Solutions',
+    item, s: [
+        { na, m, e: 'A, I Biomedica, l Researc, h',
+    pa, t, h: '/a, i-biomedica, l-researc, h', ic, o, n: Hear, t },
+        { na, m, e: 'A, I Biotec, h Dru, g Discover, y',
+    pa, t, h: '/a, i-biotec, h-dru, g-discover, y', ic, o, n: TestTub, e },
+        { na, m, e: 'A, I Blockchai, n Analytic, s',
+    pa, t, h: '/a, i-blockchai, n-analytic, s', ic, o, n: Databas, e },
+        { na, m, e: 'A, I Blockchai, n Governanc, e',
+    pa, t, h: '/a, i-blockchai, n-governanc, e', ic, o, n: Shiel, d },
+        { na, m, e: 'A, I Brai, n Compute, r Interfac, e',
+    pa, t, h: '/a, i-brai, n-compute, r-interfac, e', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Brai, n Interfac, e',
+    pa, t, h: '/a, i-brai, n-interfac, e', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Bran, d Personalit, y Generato, r',
+    pa, t, h: '/a, i-bran, d-personalit, y-generato, r', ic, o, n: Palett, e },
+        { na, m, e: 'A, I Busines, s Intelligenc, e Elit, e',
+    pa, t, h: '/a, i-busines, s-intelligenc, e-elit, e', ic, o, n: BarChart, 3 },
+        { na, m, e: 'A, I Busines, s Intelligenc, e Pr, o',
+    pa, t, h: '/a, i-busines, s-intelligenc, e-pr, o', ic, o, n: BarChart, 3 },
+        { na, m, e: 'A, I Busines, s Intelligenc, e Suit, e',
+    pa, t, h: '/a, i-busines, s-intelligenc, e-suit, e', ic, o, n: BarChart, 3 },
+        { na, m, e: 'A, I Busines, s Intelligenc, e',
+    pa, t, h: '/a, i-busines, s-intelligenc, e', ic, o, n: BarChart, 3 },
+        { na, m, e: 'A, I Climat, e Predictio, n Engin, e',
+    pa, t, h: '/a, i-climat, e-predictio, n-engin, e', ic, o, n: Glob, e },
+        { na, m, e: 'A, I Climat, e Predictio, n Platfor, m',
+    pa, t, h: '/a, i-climat, e-predictio, n-platfor, m', ic, o, n: Glob, e },
+        { na, m, e: 'A, I Climat, e Predictio, n',
+    pa, t, h: '/a, i-climat, e-predictio, n', ic, o, n: Glob, e },
+        { na, m, e: 'A, I Cod, e Generatio, n Enterpris, e',
+    pa, t, h: '/a, i-cod, e-generatio, n-enterpris, e', ic, o, n: Cod, e },
+        { na, m, e: 'A, I Cod, e Revie, w Copilo, t',
+    pa, t, h: '/a, i-cod, e-revie, w-copilo, t', ic, o, n: Cod, e },
+        { na, m, e: 'A, I Cod, e Revie, w',
+    pa, t, h: '/a, i-cod, e-revie, w', ic, o, n: Cod, e },
+        { na, m, e: 'A, I Complianc, e Automatio, n',
+    pa, t, h: '/a, i-complianc, e-automatio, n', ic, o, n: Shiel, d },
+        { na, m, e: 'A, I Compute, r Visio, n Platfor, m',
+    pa, t, h: '/a, i-compute, r-visio, n-platfor, m', ic, o, n: Ey, e },
+        { na, m, e: 'A, I Consciousnes, s Evolutio, n',
+    pa, t, h: '/a, i-consciousnes, s-evolutio, n', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Consciousnes, s Evolutio, n Platfor, m',
+    pa, t, h: '/a, i-consciousnes, s-evolutio, n-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Consciousnes, s Simulatio, n Platfor, m',
+    pa, t, h: '/a, i-consciousnes, s-simulatio, n-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Consciousnes, s Simulatio, n',
+    pa, t, h: '/a, i-consciousnes, s-simulatio, n', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Consciousnes, s Simulato, r',
+    pa, t, h: '/a, i-consciousnes, s-simulato, r', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Conten, t Creatio, n Revolutio, n',
+    pa, t, h: '/a, i-conten, t-creatio, n-revolutio, n', ic, o, n: PenToo, l },
+        { na, m, e: 'A, I Conten, t Creatio, n',
+    pa, t, h: '/a, i-conten, t-creatio, n', ic, o, n: PenToo, l },
+        { na, m, e: 'A, I Conten, t Factor, y',
+    pa, t, h: '/a, i-conten, t-factor, y', ic, o, n: Building, 2 },
+        { na, m, e: 'A, I Conten, t Generatio, n Automatio, n',
+    pa, t, h: '/a, i-conten, t-generatio, n-automatio, n', ic, o, n: PenToo, l },
+        { na, m, e: 'A, I Conten, t Generatio, n Pr, o',
+    pa, t, h: '/a, i-conten, t-generatio, n-pr, o', ic, o, n: PenToo, l },
+        { na, m, e: 'A, I Conten, t Generato, r',
+    pa, t, h: '/a, i-conten, t-generato, r', ic, o, n: PenToo, l },
+        { na, m, e: 'A, I Conten, t Marketin, g Automatio, n',
+    pa, t, h: '/a, i-conten, t-marketin, g-automatio, n', ic, o, n: TrendingU, p },
+        { na, m, e: 'A, I Conten, t Personalizatio, n Engin, e',
+    pa, t, h: '/a, i-conten, t-personalizatio, n-engin, e', ic, o, n: Targe, t },
+        { na, m, e: 'A, I Creativit, y Studi, o',
+    pa, t, h: '/a, i-creativit, y-studi, o', ic, o, n: Palett, e },
+        { na, m, e: 'A, I Marke, t Researc, h',
+    pa, t, h: '/a, i-marke, t-researc, h', ic, o, n: Searc, h },
+        { na, m, e: 'A, I Powere, d Enterpris, e Securit, y',
+    pa, t, h: '/a, i-powere, d-enterpris, e-securit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'A, I Workflo, w Automatio, n',
+    pa, t, h: '/a, i-workflo, w-automatio, n', ic, o, n: Za, p }
       ]
     },
     {
-      title: 'Core Services',
-      items: [
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', icon: Shield },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Atom },
-        { name: 'Quantum Neural Network Platform', path: '/quantum-neural-network-platform', icon: Brain },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
-        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Building },
-        { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Eye },
-        { name: 'Affiliate Attribution Hub', path: '/affiliate-attribution-hub', icon: BarChart3 },
-        { name: 'SOC2 Compliance Automation', path: '/soc2-compliance-automation', icon: Shield },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
-        { name: 'Autonomous Business Operations Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
-        { name: 'AI Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Database }
-      title: 'AI & Autonomous Systems',
-      items: [
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
-        { name: 'AI Business Manager', path: '/services/ai-autonomous-business-manager', icon: Brain },
-        { name: 'AI Business Platform', path: '/services/ai-autonomous-business-platform', icon: Brain },
-        { name: 'AI Code Review', path: '/services/ai-autonomous-code-review', icon: Code },
-        { name: 'AI Creative Director', path: '/services/ai-autonomous-creative-director', icon: Palette },
-        { name: 'AI Workflow Automation', path: '/services/ai-workflow-automation', icon: Workflow },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Target },
-        { name: 'AI Content Generation', path: '/services/ai-content-generation-automation', icon: Code },
-        { name: 'AI Consciousness Evolution', path: '/services/ai-consciousness-evolution', icon: Brain }
+      titl, e: 'Core Services',
+    item, s: [
+        { na, m, e: 'A, I & Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Brai, n },
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'Advance, d Cybersecurit, y Suit, e',
+    pa, t, h: '/advance, d-cybersecurit, y-suit, e', ic, o, n: Shiel, d },
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Serve, r },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Ato, m },
+        { na, m, e: 'Quantu, m Neura, l Networ, k Platfor, m',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Glob, e },
+        { na, m, e: 'Industr, y Solution, s',
+    pa, t, h: '/service, s/industr, y-solution, s', ic, o, n: Buildin, g },
+        { na, m, e: 'Accessibilit, y Audito, r',
+    pa, t, h: '/accessibilit, y-audito, r', ic, o, n: Ey, e },
+        { na, m, e: 'Affiliat, e Attributio, n Hu, b',
+    pa, t, h: '/affiliat, e-attributio, n-hu, b', ic, o, n: BarChart, 3 },
+        { na, m, e: 'SOC, 2 Complianc, e Automatio, n',
+    pa, t, h: '/soc, 2-complianc, e-automatio, n', ic, o, n: Shiel, d },
+        { na, m, e: '5, G Enterpris, e Solution, s',
+    pa, t, h: '/5, g-enterpris, e-solution, s', ic, o, n: Networ, k },
+        { na, m, e: 'Autonomou, s Busines, s Operation, s Platfor, m',
+    pa, t, h: '/autonomou, s-busines, s-operation, s-platfor, m', ic, o, n: Briefcas, e },
+        { na, m, e: 'A, I Powere, d I, T Asse, t Managemen, t',
+    pa, t, h: '/a, i-powere, d-i, t-asse, t-managemen, t', ic, o, n: Databas, e }
+      tit, l, e: 'A, I & Autonomou, s System, s',
+    ite, m, s: [
+        { na, m, e: 'A, I Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Researc, h Assistan, t',
+    pa, t, h: '/a, i-autonomou, s-researc, h-assistan, t', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Busines, s Manage, r',
+    pa, t, h: '/service, s/a, i-autonomou, s-busines, s-manage, r', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Busines, s Platfor, m',
+    pa, t, h: '/service, s/a, i-autonomou, s-busines, s-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Cod, e Revie, w',
+    pa, t, h: '/service, s/a, i-autonomou, s-cod, e-revie, w', ic, o, n: Cod, e },
+        { na, m, e: 'A, I Creativ, e Directo, r',
+    pa, t, h: '/service, s/a, i-autonomou, s-creativ, e-directo, r', ic, o, n: Palett, e },
+        { na, m, e: 'A, I Workflo, w Automatio, n',
+    pa, t, h: '/service, s/a, i-workflo, w-automatio, n', ic, o, n: Workflo, w },
+        { na, m, e: 'A, I Busines, s Intelligenc, e',
+    pa, t, h: '/service, s/a, i-busines, s-intelligenc, e', ic, o, n: BarChart, 3 },
+        { na, m, e: 'A, I Marketin, g Automatio, n',
+    pa, t, h: '/service, s/a, i-marketin, g-automatio, n', ic, o, n: Targe, t },
+        { na, m, e: 'A, I Conten, t Generatio, n',
+    pa, t, h: '/service, s/a, i-conten, t-generatio, n-automatio, n', ic, o, n: Cod, e },
+        { na, m, e: 'A, I Consciousnes, s Evolutio, n',
+    pa, t, h: '/service, s/a, i-consciousnes, s-evolutio, n', ic, o, n: Brai, n }
       ]
     },
     {
-      title: 'Technology & Infrastructure',
-      items: [
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Brain },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Lock },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
-        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Cloud },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
-        { name: 'Network Infrastructure', path: '/services/network-infrastructure', icon: Network },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe }
+      titl, e: 'Technology & Infrastructure',
+    item, s: [
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Brai, n },
+        { na, m, e: 'Quantu, m Neura, l Network, s',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'SOC, 2 Complianc, e',
+    pa, t, h: '/soc, 2-complianc, e-automatio, n', ic, o, n: Loc, k },
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Serve, r },
+        { na, m, e: 'Clou, d DevOp, s',
+    pa, t, h: '/clou, d-devop, s', ic, o, n: Clou, d },
+        { na, m, e: '5, G Enterpris, e Solution, s',
+    pa, t, h: '/5, g-enterpris, e-solution, s', ic, o, n: Networ, k },
+        { na, m, e: 'Networ, k Infrastructur, e',
+    pa, t, h: '/service, s/networ, k-infrastructur, e', ic, o, n: Networ, k },
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Glob, e }
       ]
     },
     {
-      title: 'Emerging Technologies',
-      items: [
-        { name: 'Blockchain Solutions', path: '/services/blockchain-enterprise-solutions', icon: Brain },
-        { name: 'IoT Data Analytics', path: '/services/iot-data-analytics', icon: Network },
-        { name: 'AR/VR Solutions', path: '/services/ar-vr-solutions', icon: Eye },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Building },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
-        { name: 'Emerging Technology', path: '/emerging-tech', icon: Rocket }
+      titl, e: 'Emerging Technologies',
+    item, s: [
+        { na, m, e: 'Blockchai, n Solution, s',
+    pa, t, h: '/service, s/blockchai, n-enterpris, e-solution, s', ic, o, n: Brai, n },
+        { na, m, e: 'Io, T Dat, a Analytic, s',
+    pa, t, h: '/service, s/io, t-dat, a-analytic, s', ic, o, n: Networ, k },
+        { na, m, e: 'A, R/V, R Solution, s',
+    pa, t, h: '/service, s/a, r-v, r-solution, s', ic, o, n: Ey, e },
+        { na, m, e: 'Autonomou, s Busines, s Platfor, m',
+    pa, t, h: '/autonomou, s-busines, s-operation, s-platfor, m', ic, o, n: Buildin, g },
+        { na, m, e: 'A, I Asse, t Managemen, t',
+    pa, t, h: '/a, i-powere, d-i, t-asse, t-managemen, t', ic, o, n: Databas, e },
+        { na, m, e: 'Emergin, g Technolog, y',
+    pa, t, h: '/emergin, g-tec, h', ic, o, n: Rocke, t }
       ]
     },
     {
-      title: 'Solutions & Industries',
-      items: [
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
-        { name: 'Financial Solutions', path: '/solutions/financial', icon: TrendingUp },
-        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Cpu },
-        { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart },
-        { name: 'Government Solutions', path: '/solutions/government', icon: Building },
-        { name: 'Digital Transformation', path: '/digital-transformation', icon: Rocket }
+      titl, e: 'Solutions & Industries',
+    item, s: [
+        { na, m, e: 'Enterpris, e Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Buildin, g },
+        { na, m, e: 'Healthcar, e Solution, s',
+    pa, t, h: '/solution, s/healthcar, e', ic, o, n: Hear, t },
+        { na, m, e: 'Financia, l Solution, s',
+    pa, t, h: '/solution, s/financia, l', ic, o, n: TrendingU, p },
+        { na, m, e: 'Manufacturin, g Solution, s',
+    pa, t, h: '/solution, s/manufacturin, g', ic, o, n: Cp, u },
+        { na, m, e: 'Retai, l Solution, s',
+    pa, t, h: '/solution, s/retai, l', ic, o, n: ShoppingCar, t },
+        { na, m, e: 'Governmen, t Solution, s',
+    pa, t, h: '/solution, s/governmen, t', ic, o, n: Buildin, g },
+        { na, m, e: 'Digita, l Transformatio, n',
+    pa, t, h: '/digita, l-transformatio, n', ic, o, n: Rocke, t }
 =======
-      title: 'AI & Technology Services',
-      items: [
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
-        { name: 'Agentic RAG Helpdesk', path: '/agentic-rag-helpdesk', icon: MessageCircle },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Zap },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Rocket },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Zap },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cloud },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
-        { name: 'Emerging Technology', path: '/emerging-tech', icon: Lightbulb }
+      tit, l, e: 'A, I & Technolog, y Service, s',
+    ite, m, s: [
+        { na, m, e: 'A, I & Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Researc, h Assistan, t',
+    pa, t, h: '/a, i-autonomou, s-researc, h-assistan, t', ic, o, n: Brai, n },
+        { na, m, e: 'Agenti, c RA, G Helpdes, k',
+    pa, t, h: '/agenti, c-ra, g-helpdes, k', ic, o, n: MessageCircl, e },
+        { na, m, e: 'Quantu, m Neura, l Network, s',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: Za, p },
+        { na, m, e: 'Autonomou, s Busines, s Platfor, m',
+    pa, t, h: '/autonomou, s-busines, s-operation, s-platfor, m', ic, o, n: Rocke, t },
+        { na, m, e: 'A, I Asse, t Managemen, t',
+    pa, t, h: '/a, i-powere, d-i, t-asse, t-managemen, t', ic, o, n: Databas, e },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Za, p },
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Clou, d },
+        { na, m, e: '5, G Enterpris, e Solution, s',
+    pa, t, h: '/5, g-enterpris, e-solution, s', ic, o, n: Networ, k },
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Glob, e },
+        { na, m, e: 'Emergin, g Technolog, y',
+    pa, t, h: '/emergin, g-tec, h', ic, o, n: Lightbul, b }
       ]
     },
     {
-      title: 'Security & Compliance',
-      items: [
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: CheckCircle },
-        { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Eye },
-        { name: 'Security Assessment', path: '/services#security-assessment', icon: Shield },
-        { name: 'Compliance & Audit', path: '/services#compliance', icon: FileText }
+      titl, e: 'Security & Compliance',
+    item, s: [
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'SOC, 2 Complianc, e',
+    pa, t, h: '/soc, 2-complianc, e-automatio, n', ic, o, n: CheckCircl, e },
+        { na, m, e: 'Accessibilit, y Audito, r',
+    pa, t, h: '/accessibilit, y-audito, r', ic, o, n: Ey, e },
+        { na, m, e: 'Securit, y Assessmen, t',
+    pa, t, h: '/service, s#securit, y-assessmen, t', ic, o, n: Shiel, d },
+        { na, m, e: 'Complianc, e & Audi, t',
+    pa, t, h: '/service, s#complianc, e', ic, o, n: FileTex, t }
       ]
     },
     {
-      title: 'Company & Resources',
+      titl, e: 'Company & Resources',
 =======
-      title: 'Company & Support',
-      items: [
-        { name: 'About Us', path: '/about', icon: Users },
-        { name: 'Our Mission', path: '/mission', icon: Target },
-        { name: 'Our Team', path: '/team', icon: Users },
-        { name: 'News', path: '/news', icon: Globe },
-        { name: 'Case Studies', path: '/case-studies', icon: Globe }
+      titl, e: 'Company & Support',
+    item, s: [
+        { na, m, e: 'Abou, t U, s',
+    pa, t, h: '/abou, t', ic, o, n: User, s },
+        { na, m, e: 'Ou, r Missio, n',
+    pa, t, h: '/missio, n', ic, o, n: Targe, t },
+        { na, m, e: 'Ou, r Tea, m',
+    pa, t, h: '/tea, m', ic, o, n: User, s },
+        { na, m, e: 'New, s',
+    pa, t, h: '/new, s', ic, o, n: Glob, e },
+        { na, m, e: 'Cas, e Studie, s',
+    pa, t, h: '/cas, e-studie, s', ic, o, n: Glob, e }
 =======
-        { name: 'Our Team', path: '/team', icon: Users },
-        { name: 'Mission', path: '/mission', icon: Target },
-        { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
-        { name: 'News', path: '/news', icon: Globe },
-        { name: 'Blog', path: '/blog', icon: Globe },
-        { name: 'Our Mission', path: '/mission', icon: Users },
-        { name: 'Partners', path: '/partners', icon: Handshake }
+        { na, m, e: 'Ou, r Tea, m',
+    pa, t, h: '/tea, m', ic, o, n: User, s },
+        { na, m, e: 'Missio, n',
+    pa, t, h: '/missio, n', ic, o, n: Targe, t },
+        { na, m, e: 'Partner, s',
+    pa, t, h: '/partner, s', ic, o, n: Handshak, e },
+        { na, m, e: 'Cas, e Studie, s',
+    pa, t, h: '/cas, e-studie, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'New, s',
+    pa, t, h: '/new, s', ic, o, n: Glob, e },
+        { na, m, e: 'Blo, g',
+    pa, t, h: '/blo, g', ic, o, n: Glob, e },
+        { na, m, e: 'Ou, r Missio, n',
+    pa, t, h: '/missio, n', ic, o, n: User, s },
+        { na, m, e: 'Partner, s',
+    pa, t, h: '/partner, s', ic, o, n: Handshak, e }
 =======
-        { name: 'Our Mission', path: '/mission', icon: Users },
-        { name: 'Our Team', path: '/team', icon: Users },
-        { name: 'Partners', path: '/partners', icon: Handshake }
+        { na, m, e: 'Ou, r Missio, n',
+    pa, t, h: '/missio, n', ic, o, n: User, s },
+        { na, m, e: 'Ou, r Tea, m',
+    pa, t, h: '/tea, m', ic, o, n: User, s },
+        { na, m, e: 'Partner, s',
+    pa, t, h: '/partner, s', ic, o, n: Handshak, e }
       ]
     },
     {
-      title: 'Support & Resources',
-        { name: 'Our Mission', path: '/mission', icon: Star },
-        { name: 'Team', path: '/team', icon: Users },
-        { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'Case Studies', path: '/case-studies', icon: Star },
-        { name: 'Blog', path: '/blog', icon: Globe },
-        { name: 'News', path: '/news', icon: Globe },
-        { name: 'Careers', path: '/careers', icon: Briefcase }
+      titl, e: 'Support & Resources',
+        { nam, e: 'Our Mission',
+    pat, h: '/mission', ico, n: Star },
+        { nam, e: 'Team',
+    pat, h: '/team', ico, n: Users },
+        { nam, e: 'Partners',
+    pat, h: '/partners', ico, n: Handshake },
+        { nam, e: 'Case Studies',
+    pat, h: '/case-studies', ico, n: Star },
+        { nam, e: 'Blog',
+    pat, h: '/blog', ico, n: Globe },
+        { nam, e: 'News',
+    pat, h: '/news', ico, n: Globe },
+        { nam, e: 'Careers',
+    pat, h: '/careers', ico, n: Briefcase }
       ]
     },
     {
-      title: 'Support & Help',
-      items: [
+      titl, e: 'Support & Help',
+    item, s: [
 =======
-        { name: 'Help Center', path: '/help', icon: Users },
-        { name: 'Documentation', path: '/docs', icon: Globe },
-      icon: Home,
-      items: [
-        { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
-        { name: 'Services', path: '/services', icon: Briefcase, description: 'Explore our AI services' },
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Rocket, description: 'Industry solutions' },
-        { name: 'Pricing', path: '/pricing', icon: Briefcase, description: 'Service plans and pricing' },
-        { name: 'About', path: '/about', icon: Users, description: 'Learn about our company' },
-        { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
+        { na, m, e: 'Hel, p Cente, r',
+    pa, t, h: '/hel, p', ic, o, n: User, s },
+        { na, m, e: 'Documentatio, n',
+    pa, t, h: '/doc, s', ic, o, n: Glob, e },
+      ic, o, n: Ho, m, e,
+    ite, m, s: [
+        { na, m, e: 'Hom, e',
+    pa, t, h: '/', ic, o, n: Ho, m, e,
+    descripti, o, n: 'Welcom, e t, o Zio, n Tec, h Grou, p' },
+        { na, m, e: 'Service, s',
+    pa, t, h: '/service, s', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Explor, e ou, r A, I service, s' },
+        { na, m, e: 'Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Rock, e, t,
+    descripti, o, n: 'Industr, y solution, s' },
+        { na, m, e: 'Pricin, g',
+    pa, t, h: '/pricin, g', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Servic, e plan, s an, d pricin, g' },
+        { na, m, e: 'Abou, t',
+    pa, t, h: '/abou, t', ic, o, n: Use, r, s,
+    descripti, o, n: 'Lear, n abou, t ou, r compan, y' },
+        { na, m, e: 'Contac, t',
+    pa, t, h: '/contac, t', ic, o, n: Pho, n, e,
+    descripti, o, n: 'Ge, t i, n touc, h wit, h u, s' }
       ]
     },
     {
-      title: 'AI & Micro SAAS Services',
-      icon: Brain,
-      items: [
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
-        { name: 'AI Workflow Automation', path: '/services/ai-workflow-automation', icon: Brain },
-        { name: 'AI Customer Intelligence', path: '/services/ai-customer-intelligence', icon: Users },
-        { name: 'AI Predictive Analytics', path: '/services/ai-predictive-analytics', icon: BarChart3 },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
-        { name: 'Advanced Research Automation', path: '/advanced-research-automation', icon: Brain },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Rocket },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Target },
-        { name: 'Affiliate Attribution Hub', path: '/affiliate-attribution-hub', icon: BarChart3 },
-        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Users },
-        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Shield },
-        { name: 'Quantum-Secure Cloud', path: '/services/quantum-secure-cloud', icon: Shield },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
-        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Briefcase },
-        { name: 'Digital Transformation', path: '/digital-transformation', icon: Briefcase },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
-        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
+      titl, e: 'AI & Micro SAAS Services',
+    ico, n: Brai, n,
+      item, s: [
+        { na, m, e: 'A, I & Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Workflo, w Automatio, n',
+    pa, t, h: '/service, s/a, i-workflo, w-automatio, n', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Custome, r Intelligenc, e',
+    pa, t, h: '/service, s/a, i-custome, r-intelligenc, e', ic, o, n: User, s },
+        { na, m, e: 'A, I Predictiv, e Analytic, s',
+    pa, t, h: '/service, s/a, i-predictiv, e-analytic, s', ic, o, n: BarChart, 3 },
+        { na, m, e: 'A, I Researc, h Assistan, t',
+    pa, t, h: '/a, i-autonomou, s-researc, h-assistan, t', ic, o, n: Brai, n },
+        { na, m, e: 'Advance, d Researc, h Automatio, n',
+    pa, t, h: '/advance, d-researc, h-automatio, n', ic, o, n: Brai, n },
+        { na, m, e: 'Quantu, m Neura, l Network, s',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'Autonomou, s Busines, s Platfor, m',
+    pa, t, h: '/autonomou, s-busines, s-operation, s-platfor, m', ic, o, n: Rocke, t },
+        { na, m, e: 'A, I Asse, t Managemen, t',
+    pa, t, h: '/a, i-powere, d-i, t-asse, t-managemen, t', ic, o, n: Databas, e },
+        { na, m, e: 'A, I Busines, s Intelligenc, e',
+    pa, t, h: '/service, s/a, i-busines, s-intelligenc, e', ic, o, n: BarChart, 3 },
+        { na, m, e: 'A, I Marketin, g Automatio, n',
+    pa, t, h: '/service, s/a, i-marketin, g-automatio, n', ic, o, n: Targe, t },
+        { na, m, e: 'Affiliat, e Attributio, n Hu, b',
+    pa, t, h: '/affiliat, e-attributio, n-hu, b', ic, o, n: BarChart, 3 },
+        { na, m, e: 'A, I H, R & Recruitmen, t',
+    pa, t, h: '/service, s/a, i-h, r-recruitmen, t', ic, o, n: User, s },
+        { na, m, e: 'A, I Lega, l Tec, h',
+    pa, t, h: '/service, s/a, i-lega, l-tec, h', ic, o, n: Shiel, d },
+        { na, m, e: 'Quantu, m-Secur, e Clou, d',
+    pa, t, h: '/service, s/quantu, m-secur, e-clou, d', ic, o, n: Shiel, d },
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'SOC, 2 Complianc, e',
+    pa, t, h: '/soc, 2-complianc, e-automatio, n', ic, o, n: Shiel, d },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Glob, e },
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Briefcas, e },
+        { na, m, e: '5, G Enterpris, e Solution, s',
+    pa, t, h: '/5, g-enterpris, e-solution, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Glob, e },
+        { na, m, e: 'Clou, d DevOp, s',
+    pa, t, h: '/clou, d-devop, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Digita, l Transformatio, n',
+    pa, t, h: '/digita, l-transformatio, n', ic, o, n: Briefcas, e },
+        { na, m, e: 'A, I Busines, s Intelligenc, e',
+    pa, t, h: '/service, s/a, i-busines, s-intelligenc, e', ic, o, n: Briefcas, e },
+        { na, m, e: 'Emergin, g Technolog, y',
+    pa, t, h: '/emergin, g-tec, h', ic, o, n: Glob, e }
 =======
-      title: 'AI & Autonomous Systems',
-      items: [
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Target },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Zap },
-        { name: 'AI Autonomous Research', path: '/ai-autonomous-research-assistant', icon: Microscope },
-        { name: 'AI Content Generation', path: '/ai-content-generator', icon: FileText },
-        { name: 'AI Code Review', path: '/ai-code-review', icon: Cpu },
-        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Building2 },
-        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Rocket },
-        { name: 'AI Autonomous Code Review', path: '/ai-autonomous-code-review', icon: Cpu },
-        { name: 'AI Autonomous Creative Director', path: '/ai-autonomous-creative-director', icon: Brain },
-        { name: 'AI Autonomous Data', path: '/ai-autonomous-data', icon: Database },
-        { name: 'AI Autonomous Decision Engine', path: '/ai-autonomous-decision-engine', icon: Target },
-        { name: 'AI Autonomous Decision Platform', path: '/ai-autonomous-decision-platform', icon: Target },
-        { name: 'AI Autonomous DevOps', path: '/ai-autonomous-devops', icon: Settings },
-        { name: 'AI Autonomous Education Professor', path: '/ai-autonomous-education-professor', icon: GraduationCap },
-        { name: 'AI Autonomous Healthcare Physician', path: '/ai-autonomous-healthcare-physician', icon: Heart },
-        { name: 'AI Autonomous Learning System', path: '/ai-autonomous-learning-system', icon: BookOpen },
-        { name: 'AI Autonomous Legal Counsel', path: '/ai-autonomous-legal-counsel', icon: Shield },
-        { name: 'AI Autonomous Logistics', path: '/ai-autonomous-logistics', icon: Truck },
-        { name: 'AI Autonomous Manufacturing', path: '/ai-autonomous-manufacturing', icon: Factory },
-        { name: 'AI Autonomous Research', path: '/ai-autonomous-research', icon: Microscope },
-        { name: 'AI Autonomous Robotics', path: '/ai-autonomous-robotics', icon: Cpu },
-        { name: 'AI Autonomous Scientific Researcher', path: '/ai-autonomous-scientific-researcher', icon: Microscope },
-        { name: 'AI Autonomous Security', path: '/ai-autonomous-security', icon: Lock },
-        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Rocket },
-        { name: 'AI Autonomous Testing', path: '/ai-autonomous-testing', icon: Cpu },
-        { name: 'AI Autonomous Vehicle Platform', path: '/ai-autonomous-vehicle-platform', icon: Car },
-        { name: 'AI Autonomous Vehicle', path: '/ai-autonomous-vehicle', icon: Car },
-        { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', icon: Car },
-        { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Car },
-        { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Target },
+      tit, l, e: 'A, I & Autonomou, s System, s',
+    ite, m, s: [
+        { na, m, e: 'A, I Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Busines, s Intelligenc, e',
+    pa, t, h: '/service, s/a, i-busines, s-intelligenc, e', ic, o, n: BarChart, 3 },
+        { na, m, e: 'A, I Marketin, g Automatio, n',
+    pa, t, h: '/service, s/a, i-marketin, g-automatio, n', ic, o, n: Targe, t },
+        { na, m, e: 'A, I Workflo, w Automatio, n',
+    pa, t, h: '/a, i-workflo, w-automatio, n', ic, o, n: Za, p },
+        { na, m, e: 'A, I Autonomou, s Researc, h',
+    pa, t, h: '/a, i-autonomou, s-researc, h-assistan, t', ic, o, n: Microscop, e },
+        { na, m, e: 'A, I Conten, t Generatio, n',
+    pa, t, h: '/a, i-conten, t-generato, r', ic, o, n: FileTex, t },
+        { na, m, e: 'A, I Cod, e Revie, w',
+    pa, t, h: '/a, i-cod, e-revie, w', ic, o, n: Cp, u },
+        { na, m, e: 'A, I Autonomou, s Busines, s Manage, r',
+    pa, t, h: '/a, i-autonomou, s-busines, s-manage, r', ic, o, n: Building, 2 },
+        { na, m, e: 'A, I Autonomou, s Busines, s Platfor, m',
+    pa, t, h: '/a, i-autonomou, s-busines, s-platfor, m', ic, o, n: Rocke, t },
+        { na, m, e: 'A, I Autonomou, s Cod, e Revie, w',
+    pa, t, h: '/a, i-autonomou, s-cod, e-revie, w', ic, o, n: Cp, u },
+        { na, m, e: 'A, I Autonomou, s Creativ, e Directo, r',
+    pa, t, h: '/a, i-autonomou, s-creativ, e-directo, r', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Autonomou, s Dat, a',
+    pa, t, h: '/a, i-autonomou, s-dat, a', ic, o, n: Databas, e },
+        { na, m, e: 'A, I Autonomou, s Decisio, n Engin, e',
+    pa, t, h: '/a, i-autonomou, s-decisio, n-engin, e', ic, o, n: Targe, t },
+        { na, m, e: 'A, I Autonomou, s Decisio, n Platfor, m',
+    pa, t, h: '/a, i-autonomou, s-decisio, n-platfor, m', ic, o, n: Targe, t },
+        { na, m, e: 'A, I Autonomou, s DevOp, s',
+    pa, t, h: '/a, i-autonomou, s-devop, s', ic, o, n: Setting, s },
+        { na, m, e: 'A, I Autonomou, s Educatio, n Professo, r',
+    pa, t, h: '/a, i-autonomou, s-educatio, n-professo, r', ic, o, n: GraduationCa, p },
+        { na, m, e: 'A, I Autonomou, s Healthcar, e Physicia, n',
+    pa, t, h: '/a, i-autonomou, s-healthcar, e-physicia, n', ic, o, n: Hear, t },
+        { na, m, e: 'A, I Autonomou, s Learnin, g Syste, m',
+    pa, t, h: '/a, i-autonomou, s-learnin, g-syste, m', ic, o, n: BookOpe, n },
+        { na, m, e: 'A, I Autonomou, s Lega, l Counse, l',
+    pa, t, h: '/a, i-autonomou, s-lega, l-counse, l', ic, o, n: Shiel, d },
+        { na, m, e: 'A, I Autonomou, s Logistic, s',
+    pa, t, h: '/a, i-autonomou, s-logistic, s', ic, o, n: Truc, k },
+        { na, m, e: 'A, I Autonomou, s Manufacturin, g',
+    pa, t, h: '/a, i-autonomou, s-manufacturin, g', ic, o, n: Factor, y },
+        { na, m, e: 'A, I Autonomou, s Researc, h',
+    pa, t, h: '/a, i-autonomou, s-researc, h', ic, o, n: Microscop, e },
+        { na, m, e: 'A, I Autonomou, s Robotic, s',
+    pa, t, h: '/a, i-autonomou, s-robotic, s', ic, o, n: Cp, u },
+        { na, m, e: 'A, I Autonomou, s Scientifi, c Researche, r',
+    pa, t, h: '/a, i-autonomou, s-scientifi, c-researche, r', ic, o, n: Microscop, e },
+        { na, m, e: 'A, I Autonomou, s Securit, y',
+    pa, t, h: '/a, i-autonomou, s-securit, y', ic, o, n: Loc, k },
+        { na, m, e: 'A, I Autonomou, s System, s Platfor, m',
+    pa, t, h: '/a, i-autonomou, s-system, s-platfor, m', ic, o, n: Rocke, t },
+        { na, m, e: 'A, I Autonomou, s Testin, g',
+    pa, t, h: '/a, i-autonomou, s-testin, g', ic, o, n: Cp, u },
+        { na, m, e: 'A, I Autonomou, s Vehicl, e Platfor, m',
+    pa, t, h: '/a, i-autonomou, s-vehicl, e-platfor, m', ic, o, n: Ca, r },
+        { na, m, e: 'A, I Autonomou, s Vehicl, e',
+    pa, t, h: '/a, i-autonomou, s-vehicl, e', ic, o, n: Ca, r },
+        { na, m, e: 'A, I Autonomou, s Vehicle, s Platfor, m',
+    pa, t, h: '/a, i-autonomou, s-vehicle, s-platfor, m', ic, o, n: Ca, r },
+        { na, m, e: 'A, I Autonomou, s Vehicle, s',
+    pa, t, h: '/a, i-autonomou, s-vehicle, s', ic, o, n: Ca, r },
+        { na, m, e: 'A, I Autonomou, s Ventur, e Capitalis, t',
+    pa, t, h: '/a, i-autonomou, s-ventur, e-capitalis, t', ic, o, n: Targe, t },
 =======
-        { name: 'Healthcare', path: '/solutions/healthcare', icon: Shield },
-        { name: 'Finance', path: '/solutions/finance', icon: Briefcase },
-        { name: 'Manufacturing', path: '/solutions/manufacturing', icon: Settings },
-        { name: 'Retail', path: '/solutions/retail', icon: Globe },
-        { name: 'Education', path: '/solutions/education', icon: BookOpen },
-        { name: 'Government', path: '/solutions/government', icon: Shield }
+        { na, m, e: 'Healthcar, e',
+    pa, t, h: '/solution, s/healthcar, e', ic, o, n: Shiel, d },
+        { na, m, e: 'Financ, e',
+    pa, t, h: '/solution, s/financ, e', ic, o, n: Briefcas, e },
+        { na, m, e: 'Manufacturin, g',
+    pa, t, h: '/solution, s/manufacturin, g', ic, o, n: Setting, s },
+        { na, m, e: 'Retai, l',
+    pa, t, h: '/solution, s/retai, l', ic, o, n: Glob, e },
+        { na, m, e: 'Educatio, n',
+    pa, t, h: '/solution, s/educatio, n', ic, o, n: BookOpe, n },
+        { na, m, e: 'Governmen, t',
+    pa, t, h: '/solution, s/governmen, t', ic, o, n: Shiel, d }
       ]
     },
     {
-      title: 'Quantum Technology',
+      titl, e: 'Quantum Technology',
 =======
-      title: 'AI & Technology',
-      items: [
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Rocket },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
-        { name: 'Machine Learning', path: '/services/ai-machine-learning', icon: Brain },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 }
+      titl, e: 'AI & Technology',
+    item, s: [
+        { na, m, e: 'A, I & Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Researc, h Assistan, t',
+    pa, t, h: '/a, i-autonomou, s-researc, h-assistan, t', ic, o, n: Brai, n },
+        { na, m, e: 'Quantu, m Neura, l Network, s',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'Autonomou, s Busines, s Platfor, m',
+    pa, t, h: '/autonomou, s-busines, s-operation, s-platfor, m', ic, o, n: Rocke, t },
+        { na, m, e: 'A, I Asse, t Managemen, t',
+    pa, t, h: '/a, i-powere, d-i, t-asse, t-managemen, t', ic, o, n: Databas, e },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Glob, e },
+        { na, m, e: 'Machin, e Learnin, g',
+    pa, t, h: '/service, s/a, i-machin, e-learnin, g', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Busines, s Intelligenc, e',
+    pa, t, h: '/service, s/a, i-busines, s-intelligenc, e', ic, o, n: BarChart, 3 }
       ]
     },
     {
-      title: 'Infrastructure & Security',
-      items: [
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Lock },
-        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Cloud },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
-        { name: 'Network Infrastructure', path: '/services/network-infrastructure', icon: Network },
-        { name: 'Managed IT Services', path: '/services/managed-it-services', icon: Server },
-        { name: 'Security Assessment', path: '/services/security-assessment', icon: Shield }
+      titl, e: 'Infrastructure & Security',
+    item, s: [
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Serve, r },
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'SOC, 2 Complianc, e',
+    pa, t, h: '/soc, 2-complianc, e-automatio, n', ic, o, n: Loc, k },
+        { na, m, e: 'Clou, d DevOp, s',
+    pa, t, h: '/clou, d-devop, s', ic, o, n: Clou, d },
+        { na, m, e: '5, G Enterpris, e Solution, s',
+    pa, t, h: '/5, g-enterpris, e-solution, s', ic, o, n: Networ, k },
+        { na, m, e: 'Networ, k Infrastructur, e',
+    pa, t, h: '/service, s/networ, k-infrastructur, e', ic, o, n: Networ, k },
+        { na, m, e: 'Manage, d I, T Service, s',
+    pa, t, h: '/service, s/manage, d-i, t-service, s', ic, o, n: Serve, r },
+        { na, m, e: 'Securit, y Assessmen, t',
+    pa, t, h: '/service, s/securit, y-assessmen, t', ic, o, n: Shiel, d }
       ]
     },
     {
-      title: 'Industry Solutions',
-      items: [
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Users },
-        { name: 'Financial Solutions', path: '/solutions/financial', icon: BarChart3 },
-        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Cpu },
-        { name: 'Retail Solutions', path: '/solutions/retail', icon: Smartphone },
-        { name: 'Government Solutions', path: '/solutions/government', icon: Building },
-        { name: 'Digital Transformation', path: '/digital-transformation', icon: Zap },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe }
+      titl, e: 'Industry Solutions',
+    item, s: [
+        { na, m, e: 'Enterpris, e Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Buildin, g },
+        { na, m, e: 'Healthcar, e Solution, s',
+    pa, t, h: '/solution, s/healthcar, e', ic, o, n: User, s },
+        { na, m, e: 'Financia, l Solution, s',
+    pa, t, h: '/solution, s/financia, l', ic, o, n: BarChart, 3 },
+        { na, m, e: 'Manufacturin, g Solution, s',
+    pa, t, h: '/solution, s/manufacturin, g', ic, o, n: Cp, u },
+        { na, m, e: 'Retai, l Solution, s',
+    pa, t, h: '/solution, s/retai, l', ic, o, n: Smartphon, e },
+        { na, m, e: 'Governmen, t Solution, s',
+    pa, t, h: '/solution, s/governmen, t', ic, o, n: Buildin, g },
+        { na, m, e: 'Digita, l Transformatio, n',
+    pa, t, h: '/digita, l-transformatio, n', ic, o, n: Za, p },
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Glob, e }
       ]
     },
     {
-      title: 'Company & Resources',
-      items: [
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Brain },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
-        { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', icon: Cloud },
-        { name: 'Quantum Financial Trading', path: '/quantum-financial-trading', icon: BarChart3 },
-        { name: 'Quantum Services', path: '/quantum-services', icon: Globe },
+      titl, e: 'Company & Resources',
+    item, s: [
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Brai, n },
+        { na, m, e: 'Quantu, m Neura, l Network, s',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'Quantu, m Clou, d Infrastructur, e',
+    pa, t, h: '/quantu, m-clou, d-infrastructur, e', ic, o, n: Clou, d },
+        { na, m, e: 'Quantu, m Financia, l Tradin, g',
+    pa, t, h: '/quantu, m-financia, l-tradin, g', ic, o, n: BarChart, 3 },
+        { na, m, e: 'Quantu, m Service, s',
+    pa, t, h: '/quantu, m-service, s', ic, o, n: Glob, e },
       ]
     },
     {
-      title: 'Cybersecurity & Compliance',
-      items: [
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Lock },
-        { name: 'AI-Powered Security', path: '/ai-powered-enterprise-security', icon: Shield },
-        { name: 'Autonomous Security', path: '/ai-autonomous-security', icon: Lock },
+      titl, e: 'Cybersecurity & Compliance',
+    item, s: [
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'SOC, 2 Complianc, e',
+    pa, t, h: '/soc, 2-complianc, e-automatio, n', ic, o, n: Loc, k },
+        { na, m, e: 'A, I-Powere, d Securit, y',
+    pa, t, h: '/a, i-powere, d-enterpris, e-securit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'Autonomou, s Securit, y',
+    pa, t, h: '/a, i-autonomou, s-securit, y', ic, o, n: Loc, k },
       ]
     },
     {
-      title: 'Infrastructure & Solutions',
-      items: [
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cpu },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Signal },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
-        { name: 'Blockchain Solutions', path: '/blockchain-enterprise-solutions', icon: LinkIcon },
-        { name: 'IoT Data Analytics', path: '/iot-data-analytics', icon: Database },
-        { name: 'Space Technology', path: '/space-tech', icon: Satellite },
-        { name: 'AI-Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
-        { name: 'Autonomous Business Operations Platform', path: '/autonomous-business-operations-platform', icon: Rocket },
+      titl, e: 'Infrastructure & Solutions',
+    item, s: [
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Cp, u },
+        { na, m, e: '5, G Enterpris, e Solution, s',
+    pa, t, h: '/5, g-enterpris, e-solution, s', ic, o, n: Signa, l },
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Glob, e },
+        { na, m, e: 'Blockchai, n Solution, s',
+    pa, t, h: '/blockchai, n-enterpris, e-solution, s', ic, o, n: LinkIco, n },
+        { na, m, e: 'Io, T Dat, a Analytic, s',
+    pa, t, h: '/io, t-dat, a-analytic, s', ic, o, n: Databas, e },
+        { na, m, e: 'Spac, e Technolog, y',
+    pa, t, h: '/spac, e-tec, h', ic, o, n: Satellit, e },
+        { na, m, e: 'A, I-Powere, d I, T Asse, t Managemen, t',
+    pa, t, h: '/a, i-powere, d-i, t-asse, t-managemen, t', ic, o, n: Databas, e },
+        { na, m, e: 'Autonomou, s Busines, s Operation, s Platfor, m',
+    pa, t, h: '/autonomou, s-busines, s-operation, s-platfor, m', ic, o, n: Rocke, t },
       ]
     },
     {
-      title: 'Industry Solutions',
-      items: [
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building2 },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
-        { name: 'Financial Solutions', path: '/solutions/financial', icon: BarChart3 },
-        { name: 'Government Solutions', path: '/solutions/government', icon: Shield },
-        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Factory },
-        { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart },
+      titl, e: 'Industry Solutions',
+    item, s: [
+        { na, m, e: 'Enterpris, e Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Building, 2 },
+        { na, m, e: 'Healthcar, e Solution, s',
+    pa, t, h: '/solution, s/healthcar, e', ic, o, n: Hear, t },
+        { na, m, e: 'Financia, l Solution, s',
+    pa, t, h: '/solution, s/financia, l', ic, o, n: BarChart, 3 },
+        { na, m, e: 'Governmen, t Solution, s',
+    pa, t, h: '/solution, s/governmen, t', ic, o, n: Shiel, d },
+        { na, m, e: 'Manufacturin, g Solution, s',
+    pa, t, h: '/solution, s/manufacturin, g', ic, o, n: Factor, y },
+        { na, m, e: 'Retai, l Solution, s',
+    pa, t, h: '/solution, s/retai, l', ic, o, n: ShoppingCar, t },
       ]
     },
     {
-      title: 'Cybersecurity & Quantum',
-      icon: Shield,
-      items: [
-        { name: 'Cybersecurity Services', path: '/services/cybersecurity', icon: Shield },
-        { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', icon: Shield },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Lock },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cpu },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
-        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Cloud },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Code },
-        { name: 'Network Infrastructure', path: '/services/network-infrastructure', icon: Network }
+      titl, e: 'Cybersecurity & Quantum',
+    ico, n: Shiel, d,
+      item, s: [
+        { na, m, e: 'Cybersecurit, y Service, s',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'Advance, d Cybersecurit, y Suit, e',
+    pa, t, h: '/advance, d-cybersecurit, y-suit, e', ic, o, n: Shiel, d },
+        { na, m, e: 'SOC, 2 Complianc, e',
+    pa, t, h: '/soc, 2-complianc, e-automatio, n', ic, o, n: Loc, k },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Glob, e },
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Cp, u },
+        { na, m, e: '5, G Enterpris, e Solution, s',
+    pa, t, h: '/5, g-enterpris, e-solution, s', ic, o, n: Networ, k },
+        { na, m, e: 'Clou, d DevOp, s',
+    pa, t, h: '/clou, d-devop, s', ic, o, n: Clou, d },
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Cod, e },
+        { na, m, e: 'Networ, k Infrastructur, e',
+    pa, t, h: '/service, s/networ, k-infrastructur, e', ic, o, n: Networ, k }
       ]
     },
     {
-      title: 'Industry Solutions',
-      icon: Globe,
-      items: [
-        { name: 'Healthcare AI', path: '/solutions/healthcare', icon: Shield, description: 'Medical technology solutions' },
-        { name: 'Financial Services', path: '/solutions/financial', icon: Briefcase, description: 'Fintech and banking solutions' },
-        { name: 'Manufacturing Intelligence', path: '/solutions/manufacturing', icon: Cpu, description: 'Industry 4.0 solutions' },
-        { name: 'Retail Technology', path: '/solutions/retail', icon: Rocket, description: 'E-commerce and retail tech' },
-        { name: 'Government Solutions', path: '/solutions/government', icon: Shield, description: 'Public sector technology' },
-        { name: 'Education Technology', path: '/solutions/education', icon: Brain, description: 'AI-powered learning platforms' },
-        { name: 'Real Estate Tech', path: '/solutions/real-estate', icon: Globe, description: 'Property management solutions' },
-        { name: 'Transportation & Logistics', path: '/solutions/transportation', icon: Rocket, description: 'Smart mobility solutions' }
+      titl, e: 'Industry Solutions',
+    ico, n: Glob, e,
+      item, s: [
+        { na, m, e: 'Healthcar, e A, I',
+    pa, t, h: '/solution, s/healthcar, e', ic, o, n: Shie, l, d,
+    descripti, o, n: 'Medica, l technolog, y solution, s' },
+        { na, m, e: 'Financia, l Service, s',
+    pa, t, h: '/solution, s/financia, l', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Fintec, h an, d bankin, g solution, s' },
+        { na, m, e: 'Manufacturin, g Intelligenc, e',
+    pa, t, h: '/solution, s/manufacturin, g', ic, o, n: C, p, u,
+    descripti, o, n: 'Industr, y 4.0 solution, s' },
+        { na, m, e: 'Retai, l Technolog, y',
+    pa, t, h: '/solution, s/retai, l', ic, o, n: Rock, e, t,
+    descripti, o, n: 'E-commerc, e an, d retai, l tec, h' },
+        { na, m, e: 'Governmen, t Solution, s',
+    pa, t, h: '/solution, s/governmen, t', ic, o, n: Shie, l, d,
+    descripti, o, n: 'Publi, c secto, r technolog, y' },
+        { na, m, e: 'Educatio, n Technolog, y',
+    pa, t, h: '/solution, s/educatio, n', ic, o, n: Bra, i, n,
+    descripti, o, n: 'A, I-powere, d learnin, g platform, s' },
+        { na, m, e: 'Rea, l Estat, e Tec, h',
+    pa, t, h: '/solution, s/rea, l-estat, e', ic, o, n: Glo, b, e,
+    descripti, o, n: 'Propert, y managemen, t solution, s' },
+        { na, m, e: 'Transportatio, n & Logistic, s',
+    pa, t, h: '/solution, s/transportatio, n', ic, o, n: Rock, e, t,
+    descripti, o, n: 'Smar, t mobilit, y solution, s' }
 =======
-        { name: 'Support Center', path: '/support', icon: Phone },
-        { name: 'FAQ', path: '/faq', icon: Globe },
-        { name: 'Events', path: '/events', icon: Calendar },
-        { name: 'Webinars', path: '/webinars', icon: Video },
-        { name: 'White Papers', path: '/white-papers', icon: FileText },
-        { name: 'Testimonials', path: '/testimonials', icon: Star }
+        { na, m, e: 'Suppor, t Cente, r',
+    pa, t, h: '/suppor, t', ic, o, n: Phon, e },
+        { na, m, e: 'FA, Q',
+    pa, t, h: '/fa, q', ic, o, n: Glob, e },
+        { na, m, e: 'Event, s',
+    pa, t, h: '/event, s', ic, o, n: Calenda, r },
+        { na, m, e: 'Webinar, s',
+    pa, t, h: '/webinar, s', ic, o, n: Vide, o },
+        { na, m, e: 'Whit, e Paper, s',
+    pa, t, h: '/whit, e-paper, s', ic, o, n: FileTex, t },
+        { na, m, e: 'Testimonial, s',
+    pa, t, h: '/testimonial, s', ic, o, n: Sta, r }
 =======
-        { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
-        { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' },
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Target, description: 'Industry solutions' },
-        { name: 'Pricing', path: '/pricing', icon: Star, description: 'Service pricing' },
-        { name: 'About', path: '/about', icon: Users, description: 'About our company' },
-        { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch' }
+        { na, m, e: 'Hom, e',
+    pa, t, h: '/', ic, o, n: Ho, m, e,
+    descripti, o, n: 'Welcom, e t, o Zio, n Tec, h Grou, p' },
+        { na, m, e: 'Service, s Overvie, w',
+    pa, t, h: '/service, s', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Al, l ou, r service, s' },
+        { na, m, e: 'Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Targ, e, t,
+    descripti, o, n: 'Industr, y solution, s' },
+        { na, m, e: 'Pricin, g',
+    pa, t, h: '/pricin, g', ic, o, n: St, a, r,
+    descripti, o, n: 'Servic, e pricin, g' },
+        { na, m, e: 'Abou, t',
+    pa, t, h: '/abou, t', ic, o, n: Use, r, s,
+    descripti, o, n: 'Abou, t ou, r compan, y' },
+        { na, m, e: 'Contac, t',
+    pa, t, h: '/contac, t', ic, o, n: Pho, n, e,
+    descripti, o, n: 'Ge, t i, n touc, h' }
       ]
     },
     {
-      title: 'AI & Autonomous Systems',
-      items: [
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain, description: 'Advanced AI solutions' },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain, description: 'AI-powered research' },
-        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Brain, description: 'Autonomous business management' },
-        { name: 'AI Business Platform', path: '/ai-autonomous-business-platform', icon: Brain, description: 'Complete business platform' },
-        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Code, description: 'Automated code review' },
-        { name: 'AI Creative Director', path: '/ai-autonomous-creative-director', icon: Palette, description: 'AI creative solutions' },
-        { name: 'AI Data Management', path: '/ai-autonomous-data', icon: Database, description: 'Intelligent data handling' },
-        { name: 'AI Decision Engine', path: '/ai-autonomous-decision-engine', icon: Brain, description: 'Smart decision making' },
-        { name: 'AI DevOps', path: '/ai-autonomous-devops', icon: Server, description: 'Automated DevOps' },
-        { name: 'AI Education', path: '/ai-autonomous-education-professor', icon: BookOpen, description: 'AI learning systems' },
-        { name: 'AI Healthcare', path: '/ai-autonomous-healthcare-physician', icon: Users, description: 'Medical AI solutions' },
-        { name: 'AI Learning System', path: '/ai-autonomous-learning-system', icon: Lightbulb, description: 'Adaptive learning' },
-        { name: 'AI Legal Counsel', path: '/ai-autonomous-legal-counsel', icon: Shield, description: 'Legal AI assistance' },
-        { name: 'AI Logistics', path: '/ai-autonomous-logistics', icon: Network, description: 'Smart logistics' },
-        { name: 'AI Manufacturing', path: '/ai-autonomous-manufacturing', icon: Settings, description: 'Smart manufacturing' },
-        { name: 'AI Research', path: '/ai-autonomous-research', icon: Brain, description: 'Research automation' },
-        { name: 'AI Robotics', path: '/ai-autonomous-robotics', icon: Cpu, description: 'Autonomous robotics' },
-        { name: 'AI Security', path: '/ai-autonomous-security', icon: Shield, description: 'Intelligent security' },
-        { name: 'AI Testing', path: '/ai-autonomous-testing', icon: Code, description: 'Automated testing' },
-        { name: 'AI Vehicles', path: '/ai-autonomous-vehicle', icon: Rocket, description: 'Autonomous vehicles' },
-        { name: 'AI Venture Capital', path: '/ai-autonomous-venture-capitalist', icon: TrendingUp, description: 'AI investment' }
+      titl, e: 'AI & Autonomous Systems',
+    item, s: [
+        { na, m, e: 'A, I Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Bra, i, n,
+    descripti, o, n: 'Advance, d A, I solution, s' },
+        { na, m, e: 'A, I Researc, h Assistan, t',
+    pa, t, h: '/a, i-autonomou, s-researc, h-assistan, t', ic, o, n: Bra, i, n,
+    descripti, o, n: 'A, I-powere, d researc, h' },
+        { na, m, e: 'A, I Busines, s Manage, r',
+    pa, t, h: '/a, i-autonomou, s-busines, s-manage, r', ic, o, n: Bra, i, n,
+    descripti, o, n: 'Autonomou, s busines, s managemen, t' },
+        { na, m, e: 'A, I Busines, s Platfor, m',
+    pa, t, h: '/a, i-autonomou, s-busines, s-platfor, m', ic, o, n: Bra, i, n,
+    descripti, o, n: 'Complet, e busines, s platfor, m' },
+        { na, m, e: 'A, I Cod, e Revie, w',
+    pa, t, h: '/a, i-autonomou, s-cod, e-revie, w', ic, o, n: Co, d, e,
+    descripti, o, n: 'Automate, d cod, e revie, w' },
+        { na, m, e: 'A, I Creativ, e Directo, r',
+    pa, t, h: '/a, i-autonomou, s-creativ, e-directo, r', ic, o, n: Palet, t, e,
+    descripti, o, n: 'A, I creativ, e solution, s' },
+        { na, m, e: 'A, I Dat, a Managemen, t',
+    pa, t, h: '/a, i-autonomou, s-dat, a', ic, o, n: Databa, s, e,
+    descripti, o, n: 'Intelligen, t dat, a handlin, g' },
+        { na, m, e: 'A, I Decisio, n Engin, e',
+    pa, t, h: '/a, i-autonomou, s-decisio, n-engin, e', ic, o, n: Bra, i, n,
+    descripti, o, n: 'Smar, t decisio, n makin, g' },
+        { na, m, e: 'A, I DevOp, s',
+    pa, t, h: '/a, i-autonomou, s-devop, s', ic, o, n: Serv, e, r,
+    descripti, o, n: 'Automate, d DevOp, s' },
+        { na, m, e: 'A, I Educatio, n',
+    pa, t, h: '/a, i-autonomou, s-educatio, n-professo, r', ic, o, n: BookOp, e, n,
+    descripti, o, n: 'A, I learnin, g system, s' },
+        { na, m, e: 'A, I Healthcar, e',
+    pa, t, h: '/a, i-autonomou, s-healthcar, e-physicia, n', ic, o, n: Use, r, s,
+    descripti, o, n: 'Medica, l A, I solution, s' },
+        { na, m, e: 'A, I Learnin, g Syste, m',
+    pa, t, h: '/a, i-autonomou, s-learnin, g-syste, m', ic, o, n: Lightbu, l, b,
+    descripti, o, n: 'Adaptiv, e learnin, g' },
+        { na, m, e: 'A, I Lega, l Counse, l',
+    pa, t, h: '/a, i-autonomou, s-lega, l-counse, l', ic, o, n: Shie, l, d,
+    descripti, o, n: 'Lega, l A, I assistanc, e' },
+        { na, m, e: 'A, I Logistic, s',
+    pa, t, h: '/a, i-autonomou, s-logistic, s', ic, o, n: Netwo, r, k,
+    descripti, o, n: 'Smar, t logistic, s' },
+        { na, m, e: 'A, I Manufacturin, g',
+    pa, t, h: '/a, i-autonomou, s-manufacturin, g', ic, o, n: Settin, g, s,
+    descripti, o, n: 'Smar, t manufacturin, g' },
+        { na, m, e: 'A, I Researc, h',
+    pa, t, h: '/a, i-autonomou, s-researc, h', ic, o, n: Bra, i, n,
+    descripti, o, n: 'Researc, h automatio, n' },
+        { na, m, e: 'A, I Robotic, s',
+    pa, t, h: '/a, i-autonomou, s-robotic, s', ic, o, n: C, p, u,
+    descripti, o, n: 'Autonomou, s robotic, s' },
+        { na, m, e: 'A, I Securit, y',
+    pa, t, h: '/a, i-autonomou, s-securit, y', ic, o, n: Shie, l, d,
+    descripti, o, n: 'Intelligen, t securit, y' },
+        { na, m, e: 'A, I Testin, g',
+    pa, t, h: '/a, i-autonomou, s-testin, g', ic, o, n: Co, d, e,
+    descripti, o, n: 'Automate, d testin, g' },
+        { na, m, e: 'A, I Vehicle, s',
+    pa, t, h: '/a, i-autonomou, s-vehicl, e', ic, o, n: Rock, e, t,
+    descripti, o, n: 'Autonomou, s vehicle, s' },
+        { na, m, e: 'A, I Ventur, e Capita, l',
+    pa, t, h: '/a, i-autonomou, s-ventur, e-capitalis, t', ic, o, n: Trending, U, p,
+    descripti, o, n: 'A, I investmen, t' }
       ]
     },
     {
-      title: 'Core Services',
-      items: [
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Zap, description: 'Quantum computing' },
-        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', icon: Rocket, description: 'Business automation' },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database, description: 'IT asset management' },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'Security solutions' },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield, description: 'Compliance automation' },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Zap, description: 'Quantum solutions' },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server, description: 'Infrastructure services' },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network, description: '5G technology' },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe, description: 'SAAS platforms' },
-        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud, description: 'Cloud solutions' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Zap, description: 'Workflow optimization' },
-        { name: 'Blockchain Solutions', path: '/blockchain-enterprise-solutions', icon: Lock, description: 'Blockchain technology' },
-        { name: 'IoT Data Analytics', path: '/iot-data-analytics', icon: Database, description: 'IoT solutions' },
-        { name: 'Digital Transformation', path: '/digital-transformation', icon: Globe, description: 'Digital strategy' },
-        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase, description: 'Industry-specific' }
+      titl, e: 'Core Services',
+    item, s: [
+        { na, m, e: 'Quantu, m Neura, l Network, s',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: Z, a, p,
+    descripti, o, n: 'Quantu, m computin, g' },
+        { na, m, e: 'Autonomou, s Busines, s Operation, s',
+    pa, t, h: '/autonomou, s-busines, s-operation, s-platfor, m', ic, o, n: Rock, e, t,
+    descripti, o, n: 'Busines, s automatio, n' },
+        { na, m, e: 'A, I Asse, t Managemen, t',
+    pa, t, h: '/a, i-powere, d-i, t-asse, t-managemen, t', ic, o, n: Databa, s, e,
+    descripti, o, n: 'I, T asse, t managemen, t' },
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shie, l, d,
+    descripti, o, n: 'Securit, y solution, s' },
+        { na, m, e: 'SOC, 2 Complianc, e',
+    pa, t, h: '/soc, 2-complianc, e-automatio, n', ic, o, n: Shie, l, d,
+    descripti, o, n: 'Complianc, e automatio, n' },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Z, a, p,
+    descripti, o, n: 'Quantu, m solution, s' },
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Serv, e, r,
+    descripti, o, n: 'Infrastructur, e service, s' },
+        { na, m, e: '5, G Enterpris, e Solution, s',
+    pa, t, h: '/5, g-enterpris, e-solution, s', ic, o, n: Netwo, r, k,
+    descripti, o, n: '5, G technolog, y' },
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Glo, b, e,
+    descripti, o, n: 'SAA, S platform, s' },
+        { na, m, e: 'Clou, d & DevOp, s',
+    pa, t, h: '/clou, d-devop, s', ic, o, n: Clo, u, d,
+    descripti, o, n: 'Clou, d solution, s' },
+        { na, m, e: 'A, I Workflo, w Automatio, n',
+    pa, t, h: '/a, i-workflo, w-automatio, n', ic, o, n: Z, a, p,
+    descripti, o, n: 'Workflo, w optimizatio, n' },
+        { na, m, e: 'Blockchai, n Solution, s',
+    pa, t, h: '/blockchai, n-enterpris, e-solution, s', ic, o, n: Lo, c, k,
+    descripti, o, n: 'Blockchai, n technolog, y' },
+        { na, m, e: 'Io, T Dat, a Analytic, s',
+    pa, t, h: '/io, t-dat, a-analytic, s', ic, o, n: Databa, s, e,
+    descripti, o, n: 'Io, T solution, s' },
+        { na, m, e: 'Digita, l Transformatio, n',
+    pa, t, h: '/digita, l-transformatio, n', ic, o, n: Glo, b, e,
+    descripti, o, n: 'Digita, l strateg, y' },
+        { na, m, e: 'Industr, y Solution, s',
+    pa, t, h: '/service, s/industr, y-solution, s', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Industr, y-specifi, c' }
       ]
     },
     {
-      title: 'Company & Resources',
-      items: [
-        { name: 'About Us', path: '/about', icon: Users, description: 'Our story' },
-        { name: 'Our Team', path: '/team', icon: Users, description: 'Meet the team' },
-        { name: 'Partners', path: '/partners', icon: Handshake, description: 'Partnerships' },
-        { name: 'Case Studies', path: '/case-studies', icon: FileText, description: 'Success stories' },
-        { name: 'News & Updates', path: '/news', icon: Globe, description: 'Latest news' },
-        { name: 'Blog', path: '/blog', icon: BookOpen, description: 'Insights & articles' },
-        { name: 'Events', path: '/events', icon: Calendar, description: 'Upcoming events' },
-        { name: 'Webinars', path: '/webinars', icon: Globe, description: 'Educational content' },
-        { name: 'White Papers', path: '/white-papers', icon: FileText, description: 'Research papers' },
-        { name: 'Testimonials', path: '/testimonials', icon: Star, description: 'Client feedback' }
+      titl, e: 'Company & Resources',
+    item, s: [
+        { na, m, e: 'Abou, t U, s',
+    pa, t, h: '/abou, t', ic, o, n: Use, r, s,
+    descripti, o, n: 'Ou, r stor, y' },
+        { na, m, e: 'Ou, r Tea, m',
+    pa, t, h: '/tea, m', ic, o, n: Use, r, s,
+    descripti, o, n: 'Mee, t th, e tea, m' },
+        { na, m, e: 'Partner, s',
+    pa, t, h: '/partner, s', ic, o, n: Handsha, k, e,
+    descripti, o, n: 'Partnership, s' },
+        { na, m, e: 'Cas, e Studie, s',
+    pa, t, h: '/cas, e-studie, s', ic, o, n: FileTe, x, t,
+    descripti, o, n: 'Succes, s storie, s' },
+        { na, m, e: 'New, s & Update, s',
+    pa, t, h: '/new, s', ic, o, n: Glo, b, e,
+    descripti, o, n: 'Lates, t new, s' },
+        { na, m, e: 'Blo, g',
+    pa, t, h: '/blo, g', ic, o, n: BookOp, e, n,
+    descripti, o, n: 'Insight, s & article, s' },
+        { na, m, e: 'Event, s',
+    pa, t, h: '/event, s', ic, o, n: Calend, a, r,
+    descripti, o, n: 'Upcomin, g event, s' },
+        { na, m, e: 'Webinar, s',
+    pa, t, h: '/webinar, s', ic, o, n: Glo, b, e,
+    descripti, o, n: 'Educationa, l conten, t' },
+        { na, m, e: 'Whit, e Paper, s',
+    pa, t, h: '/whit, e-paper, s', ic, o, n: FileTe, x, t,
+    descripti, o, n: 'Researc, h paper, s' },
+        { na, m, e: 'Testimonial, s',
+    pa, t, h: '/testimonial, s', ic, o, n: St, a, r,
+    descripti, o, n: 'Clien, t feedbac, k' }
       ]
     },
     {
-      title: 'Support & Help',
-      items: [
-        { name: 'Help Center', path: '/help', icon: HelpCircle, description: 'Get help' },
-        { name: 'Documentation', path: '/docs', icon: BookOpen, description: 'Technical docs' },
-        { name: 'Contact Support', path: '/support', icon: Phone, description: 'Support team' },
-        { name: 'FAQ', path: '/faq', icon: HelpCircle, description: 'Frequently asked' },
-        { name: 'Pricing', path: '/pricing', icon: Star, description: 'Service costs' },
-        { name: 'Status Page', path: '/status', icon: Settings, description: 'System status' }
+      titl, e: 'Support & Help',
+    item, s: [
+        { na, m, e: 'Hel, p Cente, r',
+    pa, t, h: '/hel, p', ic, o, n: HelpCirc, l, e,
+    descripti, o, n: 'Ge, t hel, p' },
+        { na, m, e: 'Documentatio, n',
+    pa, t, h: '/doc, s', ic, o, n: BookOp, e, n,
+    descripti, o, n: 'Technica, l doc, s' },
+        { na, m, e: 'Contac, t Suppor, t',
+    pa, t, h: '/suppor, t', ic, o, n: Pho, n, e,
+    descripti, o, n: 'Suppor, t tea, m' },
+        { na, m, e: 'FA, Q',
+    pa, t, h: '/fa, q', ic, o, n: HelpCirc, l, e,
+    descripti, o, n: 'Frequentl, y aske, d' },
+        { na, m, e: 'Pricin, g',
+    pa, t, h: '/pricin, g', ic, o, n: St, a, r,
+    descripti, o, n: 'Servic, e cost, s' },
+        { na, m, e: 'Statu, s Pag, e',
+    pa, t, h: '/statu, s', ic, o, n: Settin, g, s,
+    descripti, o, n: 'Syste, m statu, s' }
 =======
-        { name: 'About Us', path: '/about', icon: Users },
-        { name: 'Our Mission', path: '/mission', icon: Target },
-        { name: 'Our Team', path: '/team', icon: Users },
-        { name: 'Our Mission', path: '/mission', icon: Target },
-        { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'Careers', path: '/careers', icon: Users },
-        { name: 'Case Studies', path: '/case-studies', icon: FileText },
-        { name: 'News', path: '/news', icon: FileText },
-        { name: 'Blog', path: '/blog', icon: BookOpen },
-        { name: 'Testimonials', path: '/testimonials', icon: Users },
-        { name: 'Events', path: '/events', icon: Calendar },
-        { name: 'Webinars', path: '/webinars', icon: Calendar },
-        { name: 'White Papers', path: '/white-papers', icon: FileText },
+        { na, m, e: 'Abou, t U, s',
+    pa, t, h: '/abou, t', ic, o, n: User, s },
+        { na, m, e: 'Ou, r Missio, n',
+    pa, t, h: '/missio, n', ic, o, n: Targe, t },
+        { na, m, e: 'Ou, r Tea, m',
+    pa, t, h: '/tea, m', ic, o, n: User, s },
+        { na, m, e: 'Ou, r Missio, n',
+    pa, t, h: '/missio, n', ic, o, n: Targe, t },
+        { na, m, e: 'Partner, s',
+    pa, t, h: '/partner, s', ic, o, n: Handshak, e },
+        { na, m, e: 'Career, s',
+    pa, t, h: '/career, s', ic, o, n: User, s },
+        { na, m, e: 'Cas, e Studie, s',
+    pa, t, h: '/cas, e-studie, s', ic, o, n: FileTex, t },
+        { na, m, e: 'New, s',
+    pa, t, h: '/new, s', ic, o, n: FileTex, t },
+        { na, m, e: 'Blo, g',
+    pa, t, h: '/blo, g', ic, o, n: BookOpe, n },
+        { na, m, e: 'Testimonial, s',
+    pa, t, h: '/testimonial, s', ic, o, n: User, s },
+        { na, m, e: 'Event, s',
+    pa, t, h: '/event, s', ic, o, n: Calenda, r },
+        { na, m, e: 'Webinar, s',
+    pa, t, h: '/webinar, s', ic, o, n: Calenda, r },
+        { na, m, e: 'Whit, e Paper, s',
+    pa, t, h: '/whit, e-paper, s', ic, o, n: FileTex, t },
 =======
-        { name: 'Help Center', path: '/help', icon: Globe },
-        { name: 'News', path: '/news', icon: Globe },
-        { name: 'Blog', path: '/blog', icon: Globe }
+        { na, m, e: 'Hel, p Cente, r',
+    pa, t, h: '/hel, p', ic, o, n: Glob, e },
+        { na, m, e: 'New, s',
+    pa, t, h: '/new, s', ic, o, n: Glob, e },
+        { na, m, e: 'Blo, g',
+    pa, t, h: '/blo, g', ic, o, n: Glob, e }
       ]
     },
     {
-      title: 'Support & Resources',
-      items: [
-        { name: 'Help Center', path: '/help', icon: HelpCircle },
-        { name: 'Documentation', path: '/docs', icon: BookOpen },
-        { name: 'Contact Support', path: '/support', icon: Phone },
-        { name: 'FAQ', path: '/faq', icon: Globe },
-        { name: 'Status Page', path: '/status', icon: Globe }
+      titl, e: 'Support & Resources',
+    item, s: [
+        { na, m, e: 'Hel, p Cente, r',
+    pa, t, h: '/hel, p', ic, o, n: HelpCircl, e },
+        { na, m, e: 'Documentatio, n',
+    pa, t, h: '/doc, s', ic, o, n: BookOpe, n },
+        { na, m, e: 'Contac, t Suppor, t',
+    pa, t, h: '/suppor, t', ic, o, n: Phon, e },
+        { na, m, e: 'FA, Q',
+    pa, t, h: '/fa, q', ic, o, n: Glob, e },
+        { na, m, e: 'Statu, s Pag, e',
+    pa, t, h: '/statu, s', ic, o, n: Glob, e }
       ]
     },
     {
-      title: 'Additional Services',
-      items: [
-        { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
-        { name: 'Community', path: '/community', icon: Users },
-        { name: 'Developer Portal', path: '/developer-portal', icon: Code },
-        { name: 'Request Quote', path: '/request-quote', icon: DollarSign },
-        { name: 'Pricing', path: '/pricing', icon: DollarSign }
+      titl, e: 'Additional Services',
+    item, s: [
+        { na, m, e: 'Marketplac, e',
+    pa, t, h: '/marketplac, e', ic, o, n: ShoppingCar, t },
+        { na, m, e: 'Communit, y',
+    pa, t, h: '/communit, y', ic, o, n: User, s },
+        { na, m, e: 'Develope, r Porta, l',
+    pa, t, h: '/develope, r-porta, l', ic, o, n: Cod, e },
+        { na, m, e: 'Reques, t Quot, e',
+    pa, t, h: '/reques, t-quot, e', ic, o, n: DollarSig, n },
+        { na, m, e: 'Pricin, g',
+    pa, t, h: '/pricin, g', ic, o, n: DollarSig, n }
 =======
-        { name: 'FAQ', path: '/faq', icon: HelpCircle },
-        { name: 'Status Page', path: '/status', icon: Globe },
-        { name: 'Privacy Policy', path: '/privacy', icon: Shield },
-        { name: 'Terms of Service', path: '/terms', icon: FileText },
-        { name: 'Cookie Policy', path: '/cookies', icon: Shield },
-        { name: 'Sitemap', path: '/sitemap', icon: Globe },
+        { na, m, e: 'FA, Q',
+    pa, t, h: '/fa, q', ic, o, n: HelpCircl, e },
+        { na, m, e: 'Statu, s Pag, e',
+    pa, t, h: '/statu, s', ic, o, n: Glob, e },
+        { na, m, e: 'Privac, y Polic, y',
+    pa, t, h: '/privac, y', ic, o, n: Shiel, d },
+        { na, m, e: 'Term, s o, f Servic, e',
+    pa, t, h: '/term, s', ic, o, n: FileTex, t },
+        { na, m, e: 'Cooki, e Polic, y',
+    pa, t, h: '/cookie, s', ic, o, n: Shiel, d },
+        { na, m, e: 'Sitema, p',
+    pa, t, h: '/sitema, p', ic, o, n: Glob, e },
 =======
-        { name: 'Blog', path: '/blog', icon: Globe },
-        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
-        { name: 'Help Center', path: '/help', icon: Globe }
+        { na, m, e: 'Blo, g',
+    pa, t, h: '/blo, g', ic, o, n: Glob, e },
+        { na, m, e: 'Cas, e Studie, s',
+    pa, t, h: '/cas, e-studie, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Hel, p Cente, r',
+    pa, t, h: '/hel, p', ic, o, n: Glob, e }
       ]
     },
     {
-      title: 'Support & Legal',
+      titl, e: 'Support & Legal',
 =======
-        { name: 'News', path: '/news', icon: Globe },
-        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
-        { name: 'Events', path: '/events', icon: Globe },
-        { name: 'Webinars', path: '/webinars', icon: Globe }
+        { nam, e: 'News',
+    pat, h: '/news', ico, n: Globe },
+        { nam, e: 'Case Studies',
+    pat, h: '/case-studies', ico, n: Briefcase },
+        { nam, e: 'Events',
+    pat, h: '/events', ico, n: Globe },
+        { nam, e: 'Webinars',
+    pat, h: '/webinars', ico, n: Globe }
       ]
     },
     {
-      title: 'Support & Resources',
-      items: [
-        { name: 'Help Center', path: '/help-center', icon: Users },
-        { name: 'Documentation', path: '/docs', icon: Globe },
-        { name: 'Contact Support', path: '/contact', icon: Phone },
-        { name: 'Status Page', path: '/status', icon: Globe },
-        { name: 'Privacy Policy', path: '/privacy', icon: Lock },
-        { name: 'Terms of Service', path: '/terms', icon: Lock },
-        { name: 'Cookie Policy', path: '/cookies', icon: Lock }
+      titl, e: 'Support & Resources',
+    item, s: [
+        { na, m, e: 'Hel, p Cente, r',
+    pa, t, h: '/hel, p-cente, r', ic, o, n: User, s },
+        { na, m, e: 'Documentatio, n',
+    pa, t, h: '/doc, s', ic, o, n: Glob, e },
+        { na, m, e: 'Contac, t Suppor, t',
+    pa, t, h: '/contac, t', ic, o, n: Phon, e },
+        { na, m, e: 'Statu, s Pag, e',
+    pa, t, h: '/statu, s', ic, o, n: Glob, e },
+        { na, m, e: 'Privac, y Polic, y',
+    pa, t, h: '/privac, y', ic, o, n: Loc, k },
+        { na, m, e: 'Term, s o, f Servic, e',
+    pa, t, h: '/term, s', ic, o, n: Loc, k },
+        { na, m, e: 'Cooki, e Polic, y',
+    pa, t, h: '/cookie, s', ic, o, n: Loc, k }
 =======
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Zap },
+        { na, m, e: 'Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Za, p },
 =======
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
-        { name: 'Pricing', path: '/pricing', icon: Briefcase },
-        { name: 'About', path: '/about', icon: Users },
-        { name: 'Contact', path: '/contact', icon: Phone }
+        { na, m, e: 'Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Targe, t },
+        { na, m, e: 'Pricin, g',
+    pa, t, h: '/pricin, g', ic, o, n: Briefcas, e },
+        { na, m, e: 'Abou, t',
+    pa, t, h: '/abou, t', ic, o, n: User, s },
+        { na, m, e: 'Contac, t',
+    pa, t, h: '/contac, t', ic, o, n: Phon, e }
       ]
     },
     {
-      title: 'Main Navigation',
-      items: [
-        { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
-        { name: 'Services', path: '/services', icon: Briefcase, description: 'Explore our comprehensive services' },
-        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain, description: 'Advanced AI and machine learning' },
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Target, description: 'Industry-specific solutions' },
-        { name: 'Pricing', path: '/pricing', icon: Briefcase, description: 'Transparent pricing plans' },
-        { name: 'About', path: '/about', icon: Users, description: 'Learn about our company' },
-        { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
+      titl, e: 'Main Navigation',
+    item, s: [
+        { na, m, e: 'Hom, e',
+    pa, t, h: '/', ic, o, n: Ho, m, e,
+    descripti, o, n: 'Welcom, e t, o Zio, n Tec, h Grou, p' },
+        { na, m, e: 'Service, s',
+    pa, t, h: '/service, s', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Explor, e ou, r comprehensiv, e service, s' },
+        { na, m, e: 'A, I Solution, s',
+    pa, t, h: '/a, i-solution, s', ic, o, n: Bra, i, n,
+    descripti, o, n: 'Advance, d A, I an, d machin, e learnin, g' },
+        { na, m, e: 'Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Targ, e, t,
+    descripti, o, n: 'Industr, y-specifi, c solution, s' },
+        { na, m, e: 'Pricin, g',
+    pa, t, h: '/pricin, g', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Transparen, t pricin, g plan, s' },
+        { na, m, e: 'Abou, t',
+    pa, t, h: '/abou, t', ic, o, n: Use, r, s,
+    descripti, o, n: 'Lear, n abou, t ou, r compan, y' },
+        { na, m, e: 'Contac, t',
+    pa, t, h: '/contac, t', ic, o, n: Pho, n, e,
+    descripti, o, n: 'Ge, t i, n touc, h wit, h u, s' }
       ]
     },
     {
-      title: 'AI & Technology Services',
-      items: [
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain, description: 'Advanced AI systems' },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain, description: 'AI-powered research' },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Cpu, description: 'Quantum computing solutions' },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase, description: 'Self-operating systems' },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase, description: 'Intelligent IT management' },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Cpu, description: 'Quantum solutions' },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Globe, description: 'High-speed connectivity' },
-        { name: 'Emerging Technology', path: '/emerging-tech', icon: Rocket, description: 'Cutting-edge tech' }
+      titl, e: 'AI & Technology Services',
+    item, s: [
+        { na, m, e: 'A, I & Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Bra, i, n,
+    descripti, o, n: 'Advance, d A, I system, s' },
+        { na, m, e: 'A, I Researc, h Assistan, t',
+    pa, t, h: '/a, i-autonomou, s-researc, h-assistan, t', ic, o, n: Bra, i, n,
+    descripti, o, n: 'A, I-powere, d researc, h' },
+        { na, m, e: 'Quantu, m Neura, l Network, s',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: C, p, u,
+    descripti, o, n: 'Quantu, m computin, g solution, s' },
+        { na, m, e: 'Autonomou, s Busines, s Platfor, m',
+    pa, t, h: '/autonomou, s-busines, s-operation, s-platfor, m', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Sel, f-operatin, g system, s' },
+        { na, m, e: 'A, I Asse, t Managemen, t',
+    pa, t, h: '/a, i-powere, d-i, t-asse, t-managemen, t', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Intelligen, t I, T managemen, t' },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: C, p, u,
+    descripti, o, n: 'Quantu, m solution, s' },
+        { na, m, e: '5, G Enterpris, e Solution, s',
+    pa, t, h: '/5, g-enterpris, e-solution, s', ic, o, n: Glo, b, e,
+    descripti, o, n: 'Hig, h-spee, d connectivit, y' },
+        { na, m, e: 'Emergin, g Technolog, y',
+    pa, t, h: '/emergin, g-tec, h', ic, o, n: Rock, e, t,
+    descripti, o, n: 'Cuttin, g-edg, e tec, h' }
       ]
     },
     {
-      title: 'Infrastructure & Security',
-      items: [
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cloud, description: 'Complete IT solutions' },
-        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud, description: 'Cloud development' },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'Security solutions' },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Lock, description: 'Compliance automation' },
-        { name: 'Edge Computing', path: '/services#edge-computing', icon: Cpu, description: 'Edge infrastructure' },
-        { name: 'Network Infrastructure', path: '/services#network', icon: Globe, description: 'Network solutions' },
-        { name: 'Blockchain Platform', path: '/services#blockchain', icon: Code, description: 'Blockchain solutions' },
-        { name: 'IoT Solutions', path: '/services#iot', icon: Globe, description: 'Internet of Things' }
+      titl, e: 'Infrastructure & Security',
+    item, s: [
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Clo, u, d,
+    descripti, o, n: 'Complet, e I, T solution, s' },
+        { na, m, e: 'Clou, d & DevOp, s',
+    pa, t, h: '/clou, d-devop, s', ic, o, n: Clo, u, d,
+    descripti, o, n: 'Clou, d developmen, t' },
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shie, l, d,
+    descripti, o, n: 'Securit, y solution, s' },
+        { na, m, e: 'SOC, 2 Complianc, e',
+    pa, t, h: '/soc, 2-complianc, e-automatio, n', ic, o, n: Lo, c, k,
+    descripti, o, n: 'Complianc, e automatio, n' },
+        { na, m, e: 'Edg, e Computin, g',
+    pa, t, h: '/service, s#edg, e-computin, g', ic, o, n: C, p, u,
+    descripti, o, n: 'Edg, e infrastructur, e' },
+        { na, m, e: 'Networ, k Infrastructur, e',
+    pa, t, h: '/service, s#networ, k', ic, o, n: Glo, b, e,
+    descripti, o, n: 'Networ, k solution, s' },
+        { na, m, e: 'Blockchai, n Platfor, m',
+    pa, t, h: '/service, s#blockchai, n', ic, o, n: Co, d, e,
+    descripti, o, n: 'Blockchai, n solution, s' },
+        { na, m, e: 'Io, T Solution, s',
+    pa, t, h: '/service, s#io, t', ic, o, n: Glo, b, e,
+    descripti, o, n: 'Interne, t o, f Thing, s' }
       ]
     },
     {
-      title: 'Micro SAAS & Development',
-      items: [
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Code, description: 'Scalable software' },
-        { name: 'Innovative Micro Services', path: '/innovative-micro-saas-services', icon: Code, description: 'Custom solutions' },
-        { name: 'Custom Development', path: '/services#custom-development', icon: Code, description: 'Tailored software' },
-        { name: 'API Integration', path: '/services#api-integration', icon: Code, description: 'System integration' },
-        { name: 'AI Project Management', path: '/services#ai-project-management', icon: Brain, description: 'Smart project tools' },
-        { name: 'AI Customer Support', path: '/services#ai-support', icon: Brain, description: 'Automated support' },
-        { name: 'AI HR Automation', path: '/services#ai-hr', icon: Brain, description: 'HR automation' },
-        { name: 'AI Marketing Platform', path: '/services#ai-marketing', icon: Brain, description: 'Marketing automation' }
+      titl, e: 'Micro SAAS & Development',
+    item, s: [
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Co, d, e,
+    descripti, o, n: 'Scalabl, e softwar, e' },
+        { na, m, e: 'Innovativ, e Micr, o Service, s',
+    pa, t, h: '/innovativ, e-micr, o-saa, s-service, s', ic, o, n: Co, d, e,
+    descripti, o, n: 'Custo, m solution, s' },
+        { na, m, e: 'Custo, m Developmen, t',
+    pa, t, h: '/service, s#custo, m-developmen, t', ic, o, n: Co, d, e,
+    descripti, o, n: 'Tailore, d softwar, e' },
+        { na, m, e: 'AP, I Integratio, n',
+    pa, t, h: '/service, s#ap, i-integratio, n', ic, o, n: Co, d, e,
+    descripti, o, n: 'Syste, m integratio, n' },
+        { na, m, e: 'A, I Projec, t Managemen, t',
+    pa, t, h: '/service, s#a, i-projec, t-managemen, t', ic, o, n: Bra, i, n,
+    descripti, o, n: 'Smar, t projec, t tool, s' },
+        { na, m, e: 'A, I Custome, r Suppor, t',
+    pa, t, h: '/service, s#a, i-suppor, t', ic, o, n: Bra, i, n,
+    descripti, o, n: 'Automate, d suppor, t' },
+        { na, m, e: 'A, I H, R Automatio, n',
+    pa, t, h: '/service, s#a, i-h, r', ic, o, n: Bra, i, n,
+    descripti, o, n: 'H, R automatio, n' },
+        { na, m, e: 'A, I Marketin, g Platfor, m',
+    pa, t, h: '/service, s#a, i-marketin, g', ic, o, n: Bra, i, n,
+    descripti, o, n: 'Marketin, g automatio, n' }
 =======
-      title: 'AI & Technology Services',
-      items: [
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
-        { name: 'AI Business Intelligence', path: '/ai-business-intelligence', icon: TrendingUp },
-        { name: 'AI Content Generation', path: '/ai-content-generator', icon: FileText },
-        { name: 'AI Marketing Automation', path: '/ai-content-marketing-automation', icon: Zap },
-        { name: 'AI Code Review', path: '/ai-code-review', icon: Briefcase },
-        { name: 'AI Agents', path: '/ai-agents', icon: Brain },
-        { name: 'AI Analytics Copilot', path: '/ai-analytics-copilot', icon: TrendingUp },
-        { name: 'AI Assistant', path: '/ai-assistant', icon: Users }
+      tit, l, e: 'A, I & Technolog, y Service, s',
+    ite, m, s: [
+        { na, m, e: 'A, I Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Busines, s Intelligenc, e',
+    pa, t, h: '/a, i-busines, s-intelligenc, e', ic, o, n: TrendingU, p },
+        { na, m, e: 'A, I Conten, t Generatio, n',
+    pa, t, h: '/a, i-conten, t-generato, r', ic, o, n: FileTex, t },
+        { na, m, e: 'A, I Marketin, g Automatio, n',
+    pa, t, h: '/a, i-conten, t-marketin, g-automatio, n', ic, o, n: Za, p },
+        { na, m, e: 'A, I Cod, e Revie, w',
+    pa, t, h: '/a, i-cod, e-revie, w', ic, o, n: Briefcas, e },
+        { na, m, e: 'A, I Agent, s',
+    pa, t, h: '/a, i-agent, s', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Analytic, s Copilo, t',
+    pa, t, h: '/a, i-analytic, s-copilo, t', ic, o, n: TrendingU, p },
+        { na, m, e: 'A, I Assistan, t',
+    pa, t, h: '/a, i-assistan, t', ic, o, n: User, s }
       ]
     },
     {
-      title: 'Quantum & Advanced Tech',
-      items: [
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Zap },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
-        { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', icon: Globe },
-        { name: 'Quantum Financial Trading', path: '/quantum-financial-trading', icon: TrendingUp },
-        { name: 'AI Brain Interface', path: '/ai-brain-interface', icon: Brain },
-        { name: 'AI Consciousness Evolution', path: '/ai-consciousness-evolution', icon: Rocket },
-        { name: 'AI Autonomous Research', path: '/ai-autonomous-research', icon: BookOpen },
-        { name: 'AI Autonomous Robotics', path: '/ai-autonomous-robotics', icon: Zap }
+      titl, e: 'Quantum & Advanced Tech',
+    item, s: [
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Za, p },
+        { na, m, e: 'Quantu, m Neura, l Network, s',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'Quantu, m Clou, d Infrastructur, e',
+    pa, t, h: '/quantu, m-clou, d-infrastructur, e', ic, o, n: Glob, e },
+        { na, m, e: 'Quantu, m Financia, l Tradin, g',
+    pa, t, h: '/quantu, m-financia, l-tradin, g', ic, o, n: TrendingU, p },
+        { na, m, e: 'A, I Brai, n Interfac, e',
+    pa, t, h: '/a, i-brai, n-interfac, e', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Consciousnes, s Evolutio, n',
+    pa, t, h: '/a, i-consciousnes, s-evolutio, n', ic, o, n: Rocke, t },
+        { na, m, e: 'A, I Autonomou, s Researc, h',
+    pa, t, h: '/a, i-autonomou, s-researc, h', ic, o, n: BookOpe, n },
+        { na, m, e: 'A, I Autonomou, s Robotic, s',
+    pa, t, h: '/a, i-autonomou, s-robotic, s', ic, o, n: Za, p }
       ]
     },
     {
-      title: 'Infrastructure & Security',
-      items: [
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud },
-        { name: 'AI-Powered Security', path: '/ai-powered-enterprise-security', icon: Shield },
-        { name: 'Autonomous DevOps', path: '/autonomous-devops-platform', icon: Zap },
-        { name: 'Enterprise IT', path: '/enterprise-it', icon: Briefcase },
-        { name: 'AI Autonomous Security', path: '/ai-autonomous-security', icon: Shield },
-        { name: 'AI Compliance Automation', path: '/ai-compliance-automation', icon: Shield }
+      titl, e: 'Infrastructure & Security',
+    item, s: [
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Glob, e },
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'Clou, d & DevOp, s',
+    pa, t, h: '/clou, d-devop, s', ic, o, n: Clou, d },
+        { na, m, e: 'A, I-Powere, d Securit, y',
+    pa, t, h: '/a, i-powere, d-enterpris, e-securit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'Autonomou, s DevOp, s',
+    pa, t, h: '/autonomou, s-devop, s-platfor, m', ic, o, n: Za, p },
+        { na, m, e: 'Enterpris, e I, T',
+    pa, t, h: '/enterpris, e-i, t', ic, o, n: Briefcas, e },
+        { na, m, e: 'A, I Autonomou, s Securit, y',
+    pa, t, h: '/a, i-autonomou, s-securit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'A, I Complianc, e Automatio, n',
+    pa, t, h: '/a, i-complianc, e-automatio, n', ic, o, n: Shiel, d }
       ]
     },
     {
-      title: 'Industry Solutions',
-      items: [
-        { name: 'Blog', path: '/blog', icon: BookOpen },
-        { name: 'Case Studies', path: '/case-studies', icon: FileText },
-        { name: 'News', path: '/news', icon: Globe },
-        { name: 'Webinars', path: '/webinars', icon: MessageCircle },
-        { name: 'White Papers', path: '/white-papers', icon: FileText },
-        { name: 'Testimonials', path: '/testimonials', icon: Star },
-        { name: 'Affiliate Attribution Hub', path: '/affiliate-attribution-hub', icon: Target }
+      titl, e: 'Industry Solutions',
+    item, s: [
+        { na, m, e: 'Blo, g',
+    pa, t, h: '/blo, g', ic, o, n: BookOpe, n },
+        { na, m, e: 'Cas, e Studie, s',
+    pa, t, h: '/cas, e-studie, s', ic, o, n: FileTex, t },
+        { na, m, e: 'New, s',
+    pa, t, h: '/new, s', ic, o, n: Glob, e },
+        { na, m, e: 'Webinar, s',
+    pa, t, h: '/webinar, s', ic, o, n: MessageCircl, e },
+        { na, m, e: 'Whit, e Paper, s',
+    pa, t, h: '/whit, e-paper, s', ic, o, n: FileTex, t },
+        { na, m, e: 'Testimonial, s',
+    pa, t, h: '/testimonial, s', ic, o, n: Sta, r },
+        { na, m, e: 'Affiliat, e Attributio, n Hu, b',
+    pa, t, h: '/affiliat, e-attributio, n-hu, b', ic, o, n: Targe, t }
       ]
     },
     {
-      title: 'Support & Help',
-      items: [
-        { name: 'Help Center', path: '/help', icon: MessageCircle },
-        { name: 'Documentation', path: '/docs', icon: FileText },
-        { name: 'FAQ', path: '/faq', icon: MessageCircle },
-        { name: 'Contact Support', path: '/support', icon: Phone },
+      titl, e: 'Support & Help',
+    item, s: [
+        { na, m, e: 'Hel, p Cente, r',
+    pa, t, h: '/hel, p', ic, o, n: MessageCircl, e },
+        { na, m, e: 'Documentatio, n',
+    pa, t, h: '/doc, s', ic, o, n: FileTex, t },
+        { na, m, e: 'FA, Q',
+    pa, t, h: '/fa, q', ic, o, n: MessageCircl, e },
+        { na, m, e: 'Contac, t Suppor, t',
+    pa, t, h: '/suppor, t', ic, o, n: Phon, e },
       ]
     },
     {
-      title: 'Solutions & Industries',
-      items: [
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
-        { name: 'Financial Solutions', path: '/solutions/financial', icon: DollarSign },
-        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Building2 },
-        { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart },
-        { name: 'Government Solutions', path: '/solutions/government', icon: Building },
-        { name: 'Space Technology', path: '/space-tech', icon: Rocket },
-        { name: 'Research & Development', path: '/research-development', icon: Search },
-        { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', icon: Cloud },
-        { name: 'Quantum Financial Trading', path: '/quantum-financial-trading', icon: DollarSign },
-        { name: 'Quantum Services', path: '/quantum-services', icon: Atom }
+      titl, e: 'Solutions & Industries',
+    item, s: [
+        { na, m, e: 'Enterpris, e Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Buildin, g },
+        { na, m, e: 'Healthcar, e Solution, s',
+    pa, t, h: '/solution, s/healthcar, e', ic, o, n: Hear, t },
+        { na, m, e: 'Financia, l Solution, s',
+    pa, t, h: '/solution, s/financia, l', ic, o, n: DollarSig, n },
+        { na, m, e: 'Manufacturin, g Solution, s',
+    pa, t, h: '/solution, s/manufacturin, g', ic, o, n: Building, 2 },
+        { na, m, e: 'Retai, l Solution, s',
+    pa, t, h: '/solution, s/retai, l', ic, o, n: ShoppingCar, t },
+        { na, m, e: 'Governmen, t Solution, s',
+    pa, t, h: '/solution, s/governmen, t', ic, o, n: Buildin, g },
+        { na, m, e: 'Spac, e Technolog, y',
+    pa, t, h: '/spac, e-tec, h', ic, o, n: Rocke, t },
+        { na, m, e: 'Researc, h & Developmen, t',
+    pa, t, h: '/researc, h-developmen, t', ic, o, n: Searc, h },
+        { na, m, e: 'Quantu, m Clou, d Infrastructur, e',
+    pa, t, h: '/quantu, m-clou, d-infrastructur, e', ic, o, n: Clou, d },
+        { na, m, e: 'Quantu, m Financia, l Tradin, g',
+    pa, t, h: '/quantu, m-financia, l-tradin, g', ic, o, n: DollarSig, n },
+        { na, m, e: 'Quantu, m Service, s',
+    pa, t, h: '/quantu, m-service, s', ic, o, n: Ato, m }
 =======
-        { name: 'Healthcare AI', path: '/ai-autonomous-healthcare-physician', icon: Users },
-        { name: 'Manufacturing AI', path: '/ai-autonomous-manufacturing', icon: Briefcase },
-        { name: 'Financial Services', path: '/ai-autonomous-business-operations', icon: TrendingUp },
-        { name: 'Retail Solutions', path: '/ai-market-research', icon: Globe },
-        { name: 'Government Tech', path: '/ai-autonomous-ecosystem', icon: Shield },
-        { name: 'Education AI', path: '/ai-autonomous-education-professor', icon: BookOpen },
-        { name: 'Legal AI', path: '/ai-autonomous-legal-counsel', icon: Shield },
-        { name: 'Logistics AI', path: '/ai-autonomous-logistics', icon: Globe }
+        { na, m, e: 'Healthcar, e A, I',
+    pa, t, h: '/a, i-autonomou, s-healthcar, e-physicia, n', ic, o, n: User, s },
+        { na, m, e: 'Manufacturin, g A, I',
+    pa, t, h: '/a, i-autonomou, s-manufacturin, g', ic, o, n: Briefcas, e },
+        { na, m, e: 'Financia, l Service, s',
+    pa, t, h: '/a, i-autonomou, s-busines, s-operation, s', ic, o, n: TrendingU, p },
+        { na, m, e: 'Retai, l Solution, s',
+    pa, t, h: '/a, i-marke, t-researc, h', ic, o, n: Glob, e },
+        { na, m, e: 'Governmen, t Tec, h',
+    pa, t, h: '/a, i-autonomou, s-ecosyste, m', ic, o, n: Shiel, d },
+        { na, m, e: 'Educatio, n A, I',
+    pa, t, h: '/a, i-autonomou, s-educatio, n-professo, r', ic, o, n: BookOpe, n },
+        { na, m, e: 'Lega, l A, I',
+    pa, t, h: '/a, i-autonomou, s-lega, l-counse, l', ic, o, n: Shiel, d },
+        { na, m, e: 'Logistic, s A, I',
+    pa, t, h: '/a, i-autonomou, s-logistic, s', ic, o, n: Glob, e }
 =======
-      title: 'AI & Technology',
-      items: [
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Rocket },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
-        { name: 'Machine Learning', path: '/services/ai-machine-learning', icon: Brain },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 }
+      tit, l, e: 'A, I & Technolog, y',
+    ite, m, s: [
+        { na, m, e: 'A, I & Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Researc, h Assistan, t',
+    pa, t, h: '/a, i-autonomou, s-researc, h-assistan, t', ic, o, n: Brai, n },
+        { na, m, e: 'Quantu, m Neura, l Network, s',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: Brai, n },
+        { na, m, e: 'Autonomou, s Busines, s Platfor, m',
+    pa, t, h: '/autonomou, s-busines, s-operation, s-platfor, m', ic, o, n: Rocke, t },
+        { na, m, e: 'A, I Asse, t Managemen, t',
+    pa, t, h: '/a, i-powere, d-i, t-asse, t-managemen, t', ic, o, n: Databas, e },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Glob, e },
+        { na, m, e: 'Machin, e Learnin, g',
+    pa, t, h: '/service, s/a, i-machin, e-learnin, g', ic, o, n: Brai, n },
+        { na, m, e: 'A, I Busines, s Intelligenc, e',
+    pa, t, h: '/service, s/a, i-busines, s-intelligenc, e', ic, o, n: BarChart, 3 }
       ]
     },
     {
-      title: 'Infrastructure & Security',
-      items: [
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Lock },
-        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Cloud },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
-        { name: 'Network Infrastructure', path: '/services/network-infrastructure', icon: Network },
-        { name: 'Managed IT Services', path: '/services/managed-it-services', icon: Server },
-        { name: 'Security Assessment', path: '/services/security-assessment', icon: Shield }
+      titl, e: 'Infrastructure & Security',
+    item, s: [
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Serve, r },
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'SOC, 2 Complianc, e',
+    pa, t, h: '/soc, 2-complianc, e-automatio, n', ic, o, n: Loc, k },
+        { na, m, e: 'Clou, d DevOp, s',
+    pa, t, h: '/clou, d-devop, s', ic, o, n: Clou, d },
+        { na, m, e: '5, G Enterpris, e Solution, s',
+    pa, t, h: '/5, g-enterpris, e-solution, s', ic, o, n: Networ, k },
+        { na, m, e: 'Networ, k Infrastructur, e',
+    pa, t, h: '/service, s/networ, k-infrastructur, e', ic, o, n: Networ, k },
+        { na, m, e: 'Manage, d I, T Service, s',
+    pa, t, h: '/service, s/manage, d-i, t-service, s', ic, o, n: Serve, r },
+        { na, m, e: 'Securit, y Assessmen, t',
+    pa, t, h: '/service, s/securit, y-assessmen, t', ic, o, n: Shiel, d }
       ]
     },
     {
-      title: 'Industry Solutions',
-      items: [
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Users },
-        { name: 'Financial Solutions', path: '/solutions/financial', icon: BarChart3 },
-        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Cpu },
-        { name: 'Retail Solutions', path: '/solutions/retail', icon: Smartphone },
-        { name: 'Government Solutions', path: '/solutions/government', icon: Building },
-        { name: 'Digital Transformation', path: '/digital-transformation', icon: Zap },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe }
+      titl, e: 'Industry Solutions',
+    item, s: [
+        { na, m, e: 'Enterpris, e Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Buildin, g },
+        { na, m, e: 'Healthcar, e Solution, s',
+    pa, t, h: '/solution, s/healthcar, e', ic, o, n: User, s },
+        { na, m, e: 'Financia, l Solution, s',
+    pa, t, h: '/solution, s/financia, l', ic, o, n: BarChart, 3 },
+        { na, m, e: 'Manufacturin, g Solution, s',
+    pa, t, h: '/solution, s/manufacturin, g', ic, o, n: Cp, u },
+        { na, m, e: 'Retai, l Solution, s',
+    pa, t, h: '/solution, s/retai, l', ic, o, n: Smartphon, e },
+        { na, m, e: 'Governmen, t Solution, s',
+    pa, t, h: '/solution, s/governmen, t', ic, o, n: Buildin, g },
+        { na, m, e: 'Digita, l Transformatio, n',
+    pa, t, h: '/digita, l-transformatio, n', ic, o, n: Za, p },
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Glob, e }
       ]
     },
     {
-      title: 'Company & Resources',
-      items: [
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Briefcase, description: 'Large-scale solutions' },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Users, description: 'Medical technology' },
-        { name: 'Financial Solutions', path: '/solutions/financial', icon: Briefcase, description: 'Fintech solutions' },
-        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Briefcase, description: 'Smart manufacturing' },
-        { name: 'Retail Solutions', path: '/solutions/retail', icon: Briefcase, description: 'Digital retail' },
-        { name: 'Government Solutions', path: '/solutions/government', icon: Shield, description: 'Public sector tech' },
-        { name: 'Digital Transformation', path: '/digital-transformation', icon: Rocket, description: 'Business modernization' },
-        { name: 'Business Intelligence', path: '/services#business-intelligence', icon: Lightbulb, description: 'Data insights' }
+      titl, e: 'Company & Resources',
+    item, s: [
+        { na, m, e: 'Enterpris, e Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Larg, e-scal, e solution, s' },
+        { na, m, e: 'Healthcar, e Solution, s',
+    pa, t, h: '/solution, s/healthcar, e', ic, o, n: Use, r, s,
+    descripti, o, n: 'Medica, l technolog, y' },
+        { na, m, e: 'Financia, l Solution, s',
+    pa, t, h: '/solution, s/financia, l', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Fintec, h solution, s' },
+        { na, m, e: 'Manufacturin, g Solution, s',
+    pa, t, h: '/solution, s/manufacturin, g', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Smar, t manufacturin, g' },
+        { na, m, e: 'Retai, l Solution, s',
+    pa, t, h: '/solution, s/retai, l', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Digita, l retai, l' },
+        { na, m, e: 'Governmen, t Solution, s',
+    pa, t, h: '/solution, s/governmen, t', ic, o, n: Shie, l, d,
+    descripti, o, n: 'Publi, c secto, r tec, h' },
+        { na, m, e: 'Digita, l Transformatio, n',
+    pa, t, h: '/digita, l-transformatio, n', ic, o, n: Rock, e, t,
+    descripti, o, n: 'Busines, s modernizatio, n' },
+        { na, m, e: 'Busines, s Intelligenc, e',
+    pa, t, h: '/service, s#busines, s-intelligenc, e', ic, o, n: Lightbu, l, b,
+    descripti, o, n: 'Dat, a insight, s' }
       ]
     },
     {
-      title: 'Company & Support',
-      items: [
-        { name: 'About Us', path: '/about', icon: Users, description: 'Our story and mission' },
-        { name: 'Our Team', path: '/team', icon: Users, description: 'Meet our experts' },
-        { name: 'Careers', path: '/careers', icon: Briefcase, description: 'Join our team' },
-        { name: 'Partners', path: '/partners', icon: Handshake, description: 'Partnership opportunities' },
-        { name: 'Case Studies', path: '/case-studies', icon: Lightbulb, description: 'Success stories' },
-        { name: 'Help Center', path: '/help', icon: Globe, description: 'Support resources' },
-        { name: 'Documentation', path: '/docs', icon: Globe, description: 'Technical guides' },
-        { name: 'Status Page', path: '/status', icon: Globe, description: 'System status' }
+      titl, e: 'Company & Support',
+    item, s: [
+        { na, m, e: 'Abou, t U, s',
+    pa, t, h: '/abou, t', ic, o, n: Use, r, s,
+    descripti, o, n: 'Ou, r stor, y an, d missio, n' },
+        { na, m, e: 'Ou, r Tea, m',
+    pa, t, h: '/tea, m', ic, o, n: Use, r, s,
+    descripti, o, n: 'Mee, t ou, r expert, s' },
+        { na, m, e: 'Career, s',
+    pa, t, h: '/career, s', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Joi, n ou, r tea, m' },
+        { na, m, e: 'Partner, s',
+    pa, t, h: '/partner, s', ic, o, n: Handsha, k, e,
+    descripti, o, n: 'Partnershi, p opportunitie, s' },
+        { na, m, e: 'Cas, e Studie, s',
+    pa, t, h: '/cas, e-studie, s', ic, o, n: Lightbu, l, b,
+    descripti, o, n: 'Succes, s storie, s' },
+        { na, m, e: 'Hel, p Cente, r',
+    pa, t, h: '/hel, p', ic, o, n: Glo, b, e,
+    descripti, o, n: 'Suppor, t resource, s' },
+        { na, m, e: 'Documentatio, n',
+    pa, t, h: '/doc, s', ic, o, n: Glo, b, e,
+    descripti, o, n: 'Technica, l guide, s' },
+        { na, m, e: 'Statu, s Pag, e',
+    pa, t, h: '/statu, s', ic, o, n: Glo, b, e,
+    descripti, o, n: 'Syste, m statu, s' }
 =======
-        { name: 'Status Page', path: '/status', icon: Globe },
-        { name: 'FAQ', path: '/faq', icon: Users },
-        { name: 'Privacy Policy', path: '/privacy', icon: Shield },
-        { name: 'Terms of Service', path: '/terms', icon: Shield },
-        { name: 'Cookie Policy', path: '/cookies', icon: Shield },
-        { name: 'Accessibility', path: '/accessibility', icon: Users }
+        { na, m, e: 'Statu, s Pag, e',
+    pa, t, h: '/statu, s', ic, o, n: Glob, e },
+        { na, m, e: 'FA, Q',
+    pa, t, h: '/fa, q', ic, o, n: User, s },
+        { na, m, e: 'Privac, y Polic, y',
+    pa, t, h: '/privac, y', ic, o, n: Shiel, d },
+        { na, m, e: 'Term, s o, f Servic, e',
+    pa, t, h: '/term, s', ic, o, n: Shiel, d },
+        { na, m, e: 'Cooki, e Polic, y',
+    pa, t, h: '/cookie, s', ic, o, n: Shiel, d },
+        { na, m, e: 'Accessibilit, y',
+    pa, t, h: '/accessibilit, y', ic, o, n: User, s }
 =======
-      items: [
-        { name: 'Mission & Vision', path: '/mission', icon: Star },
-        { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'Case Studies', path: '/case-studies', icon: BookOpen },
-        { name: 'Careers', path: '/careers', icon: Users }
+      ite, m, s: [
+        { na, m, e: 'Missio, n & Visio, n',
+    pa, t, h: '/missio, n', ic, o, n: Sta, r },
+        { na, m, e: 'Partner, s',
+    pa, t, h: '/partner, s', ic, o, n: Handshak, e },
+        { na, m, e: 'Cas, e Studie, s',
+    pa, t, h: '/cas, e-studie, s', ic, o, n: BookOpe, n },
+        { na, m, e: 'Career, s',
+    pa, t, h: '/career, s', ic, o, n: User, s }
       ]
     },
     {
-      title: 'Resources & Support',
-      items: [
-        { name: 'Help Center', path: '/help', icon: HelpCircle },
-        { name: 'Documentation', path: '/docs', icon: BookOpen },
-        { name: 'Webinars', path: '/webinars', icon: Globe },
-        { name: 'White Papers', path: '/white-papers', icon: BookOpen },
-        { name: 'Blog & News', path: '/news', icon: BookOpen },
-        { name: 'FAQ', path: '/faq', icon: HelpCircle },
-        { name: 'Support', path: '/support', icon: HelpCircle }
+      titl, e: 'Resources & Support',
+    item, s: [
+        { na, m, e: 'Hel, p Cente, r',
+    pa, t, h: '/hel, p', ic, o, n: HelpCircl, e },
+        { na, m, e: 'Documentatio, n',
+    pa, t, h: '/doc, s', ic, o, n: BookOpe, n },
+        { na, m, e: 'Webinar, s',
+    pa, t, h: '/webinar, s', ic, o, n: Glob, e },
+        { na, m, e: 'Whit, e Paper, s',
+    pa, t, h: '/whit, e-paper, s', ic, o, n: BookOpe, n },
+        { na, m, e: 'Blo, g & New, s',
+    pa, t, h: '/new, s', ic, o, n: BookOpe, n },
+        { na, m, e: 'FA, Q',
+    pa, t, h: '/fa, q', ic, o, n: HelpCircl, e },
+        { na, m, e: 'Suppor, t',
+    pa, t, h: '/suppor, t', ic, o, n: HelpCircl, e }
 =======
-        { name: 'Our Mission', path: '/mission', icon: Rocket },
-        { name: 'Team', path: '/team', icon: Users },
-        { name: 'Blog', path: '/blog', icon: FileText },
-        { name: 'News', path: '/news', icon: TrendingUp },
-        { name: 'Webinars', path: '/webinars', icon: Globe },
-        { name: 'White Papers', path: '/white-papers', icon: BookOpen },
-        { name: 'Events', path: '/events', icon: Calendar },
-        { name: 'Partners', path: '/partners', icon: Handshake }
+        { na, m, e: 'Ou, r Missio, n',
+    pa, t, h: '/missio, n', ic, o, n: Rocke, t },
+        { na, m, e: 'Tea, m',
+    pa, t, h: '/tea, m', ic, o, n: User, s },
+        { na, m, e: 'Blo, g',
+    pa, t, h: '/blo, g', ic, o, n: FileTex, t },
+        { na, m, e: 'New, s',
+    pa, t, h: '/new, s', ic, o, n: TrendingU, p },
+        { na, m, e: 'Webinar, s',
+    pa, t, h: '/webinar, s', ic, o, n: Glob, e },
+        { na, m, e: 'Whit, e Paper, s',
+    pa, t, h: '/whit, e-paper, s', ic, o, n: BookOpe, n },
+        { na, m, e: 'Event, s',
+    pa, t, h: '/event, s', ic, o, n: Calenda, r },
+        { na, m, e: 'Partner, s',
+    pa, t, h: '/partner, s', ic, o, n: Handshak, e }
 =======
-        { name: 'Contact Us', path: '/contact', icon: Phone },
-        { name: 'FAQ', path: '/faq', icon: Users },
-        { name: 'News', path: '/news', icon: Globe }
+        { na, m, e: 'Contac, t U, s',
+    pa, t, h: '/contac, t', ic, o, n: Phon, e },
+        { na, m, e: 'FA, Q',
+    pa, t, h: '/fa, q', ic, o, n: User, s },
+        { na, m, e: 'New, s',
+    pa, t, h: '/new, s', ic, o, n: Glob, e }
 =======
-        { name: 'Contact Support', path: '/support', icon: Phone },
-        { name: 'Status Page', path: '/status', icon: Globe },
-        { name: 'FAQ', path: '/help#faq', icon: FileText }
+        { na, m, e: 'Contac, t Suppor, t',
+    pa, t, h: '/suppor, t', ic, o, n: Phon, e },
+        { na, m, e: 'Statu, s Pag, e',
+    pa, t, h: '/statu, s', ic, o, n: Glob, e },
+        { na, m, e: 'FA, Q',
+    pa, t, h: '/hel, p#fa, q', ic, o, n: FileTex, t }
 =======
-        { name: 'Help Center', path: '/help-center', icon: Users },
-        { name: 'Case Studies', path: '/case-studies', icon: Globe },
-        { name: 'News', path: '/news', icon: Globe },
-        { name: 'Webinars', path: '/webinars', icon: Globe },
-        { name: 'White Papers', path: '/white-papers', icon: Globe }
+        { na, m, e: 'Hel, p Cente, r',
+    pa, t, h: '/hel, p-cente, r', ic, o, n: User, s },
+        { na, m, e: 'Cas, e Studie, s',
+    pa, t, h: '/cas, e-studie, s', ic, o, n: Glob, e },
+        { na, m, e: 'New, s',
+    pa, t, h: '/new, s', ic, o, n: Glob, e },
+        { na, m, e: 'Webinar, s',
+    pa, t, h: '/webinar, s', ic, o, n: Glob, e },
+        { na, m, e: 'Whit, e Paper, s',
+    pa, t, h: '/whit, e-paper, s', ic, o, n: Glob, e }
 =======
-        { name: 'Contact Support', path: '/support', icon: Phone }
+        { na, m, e: 'Contac, t Suppor, t',
+    pa, t, h: '/suppor, t', ic, o, n: Phon, e }
 =======
-        { name: 'Status Page', path: '/status', icon: Globe },
-        { name: 'FAQ', path: '/faq', icon: Users },
-        { name: 'Sitemap', path: '/sitemap', icon: Globe }
+        { na, m, e: 'Statu, s Pag, e',
+    pa, t, h: '/statu, s', ic, o, n: Glob, e },
+        { na, m, e: 'FA, Q',
+    pa, t, h: '/fa, q', ic, o, n: User, s },
+        { na, m, e: 'Sitema, p',
+    pa, t, h: '/sitema, p', ic, o, n: Glob, e }
 =======
-        { name: 'Leadership', path: '/leadership', icon: Users },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
-        { name: 'Partners', path: '/partners', icon: Users },
-        { name: 'News', path: '/news', icon: Globe }
+        { na, m, e: 'Leadershi, p',
+    pa, t, h: '/leadershi, p', ic, o, n: User, s },
+        { na, m, e: 'Career, s',
+    pa, t, h: '/career, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Partner, s',
+    pa, t, h: '/partner, s', ic, o, n: User, s },
+        { na, m, e: 'New, s',
+    pa, t, h: '/new, s', ic, o, n: Glob, e }
 =======
-  className?: string;
+  classNam, e?: strin, g;
 }
 
-export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
-  const location = useLocation();
+expor, t functio, n Sideba, r({ isOp, e, n, onClo, s, e, classNam, e }: SidebarProp, s) {
+  cons, t locatio, n = useLocatio, n();
 =======
-  Users, 
-  MessageSquare, 
-  Settings, 
-  HelpCircle, 
-  BookOpen, 
-  Briefcase,
-  Building,
-  Globe,
-  Zap,
-  ChevronRight,
-  Menu,
+  Use,  r, s, 
+  MessageSqua, r, e, 
+  Settin, g, s, 
+  HelpCirc, l, e, 
+  BookOp, e, n, 
+  Briefca, s, e,
+  Buildi, n, g,
+  Glo, b, e,
+  Z, a, p,
+  ChevronRig, h, t,
+  Me, n, u,
   X
 =======
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
-import { 
-  X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, 
-  Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, 
-  Target, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Search, Building, Zap, Heart, 
-  Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, 
-  TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, 
-  LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Github, Youtube
-} from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
+impo, r, t, Rea, c, t, { useSta, t, e, useEffec, t } fro, m 'reac, t';
+impor, t { moti, o, n, AnimatePresenc, e } fro, m 'frame, r-motio, n';
+impor, t { Li, n, k, useLocatio, n } fro, m 'reac, t-route, r-do, m';
+impor, t { 
+  X, Ho, m, e, Briefca, s, e, Use, r, s, Pho, n, e, Ma, i, l, MapP, i, n, Glo, b, e, Linked, i, n, Twitt, e, r, Facebo, o, k, Instagr, a, m, 
+  Shie, l, d, Handsha, k, e, ChevronDo, w, n, ChevronRig, h, t, Bra, i, n, C, p, u, Databa, s, e, Netwo, r, k, Co, d, e, Palet, t, e, 
+  Targ, e, t, Rock, e, t, E, y, e, DollarSi, g, n, ShoppingCa, r, t, Clo, c, k, Clo, u, d, Sear, c, h, Buildi, n, g, Z, a, p, Hea, r, t, 
+  Lightbu, l, b, Trending, U, p, BarChar, t, 3, Lo, c, k, AlertTriang, l, e, Serv, e, r, CheckCirc, l, e, Tru, c, k, C, a, r, 
+  TestTu, b, e, PenTo, o, l, Buildin, g, 2, At, o, m, FileTe, x, t, Quo, t, e, Newspap, e, r, Calend, a, r, Vid, e, o, HelpCirc, l, e, 
+  LifeBu, o, y, Sto, r, e, PieCha, r, t, Shar, e, 2, Monit, o, r, Smartpho, n, e, Gith, u, b, Youtub, e
+} fro, m 'lucid, e-reac, t';
+impor, t { useAut, h } fro, m '@/hook, s/useAut, h';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onToggle: () => void;
-  className?: string;
+interfac, e SidebarProp, s {
+  isOp, e, n: boolea, n;
+  onTogg, l, e: () => voi, d;
+  classNam, e?: strin, g;
 }
 
-export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
-  const location = useLocation();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
+expor, t functio, n Sideba, r({ isOp,  e, n, onTogg, l, e, classNam, e }: SidebarProp, s) {
+  cons, t locatio, n = useLocatio, n();
+  cons,  t { use, r } = useAut, h();
+  cons, t isAuthenticate, d = !!use, r;
+
+  cons, t navigationItem, s = [
+    {
+      tit, l, e: 'Mai, n',
+    ite, m, s: [
+    onClos, e();
+  },  [locatio, n.pathna, m, e, onClo, s, e]);
 
   const navigationItems = [
     {
-      title: 'Main',
-      items: [
-    onClose();
-  }, [location.pathname, onClose]);
-
-  const navigationItems = [
-    {
-      title: 'AI Services',
-      icon: Brain,
-      items: [
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
-        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Users },
-        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Shield },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
-        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase }
+      tit, l, e: 'A, I Service, s',
+    ic, o, n: Bra, i, n,
+      ite, m, s: [
+        { na, m, e: 'A, I Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'A, I Busines, s Intelligenc, e',
+    pa, t, h: '/service, s/a, i-busines, s-intelligenc, e', ic, o, n: Briefcas, e },
+        { na, m, e: 'A, I Marketin, g Automatio, n',
+    pa, t, h: '/service, s/a, i-marketin, g-automatio, n', ic, o, n: Briefcas, e },
+        { na, m, e: 'A, I H, R & Recruitmen, t',
+    pa, t, h: '/service, s/a, i-h, r-recruitmen, t', ic, o, n: User, s },
+        { na, m, e: 'A, I Lega, l Tec, h',
+    pa, t, h: '/service, s/a, i-lega, l-tec, h', ic, o, n: Shiel, d },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: Glob, e },
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shiel, d },
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Glob, e },
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Glob, e },
+        { na, m, e: 'Industr, y Solution, s',
+    pa, t, h: '/service, s/industr, y-solution, s', ic, o, n: Briefcas, e }
 =======
-        { name: 'AI Content Generation', href: '/ai-services-showcase', icon: Bot, badge: 'Popular' },
-        { name: 'AI Business Intelligence', href: '/ai-services-showcase', icon: BarChart3, badge: 'New' },
-        { name: 'AI Customer Support', href: '/ai-services-showcase', icon: MessageSquare, badge: 'Featured' },
-        { name: 'AI Recruitment Platform', href: '/ai-services-showcase', icon: Users, badge: 'Popular' },
-        { name: 'Quantum AI Platform', href: '/ai-services-showcase', icon: CpuIcon, badge: 'Premium' },
-        { name: 'AI Ethics & Governance', href: '/ai-services-showcase', icon: ShieldCheck, badge: 'Enterprise' }
+        { na, m, e: 'A, I Conten, t Generatio, n',
+    hr, e, f: '/a, i-service, s-showcas, e', ic, o, n: B, o, t,
+    bad, g, e: 'Popula, r' },
+        { na, m, e: 'A, I Busines, s Intelligenc, e',
+    hr, e, f: '/a, i-service, s-showcas, e', ic, o, n: BarChar, t, 3,
+    bad, g, e: 'Ne, w' },
+        { na, m, e: 'A, I Custome, r Suppor, t',
+    hr, e, f: '/a, i-service, s-showcas, e', ic, o, n: MessageSqua, r, e,
+    bad, g, e: 'Feature, d' },
+        { na, m, e: 'A, I Recruitmen, t Platfor, m',
+    hr, e, f: '/a, i-service, s-showcas, e', ic, o, n: Use, r, s,
+    bad, g, e: 'Popula, r' },
+        { na, m, e: 'Quantu, m A, I Platfor, m',
+    hr, e, f: '/a, i-service, s-showcas, e', ic, o, n: CpuIc, o, n,
+    bad, g, e: 'Premiu, m' },
+        { na, m, e: 'A, I Ethic, s & Governanc, e',
+    hr, e, f: '/a, i-service, s-showcas, e', ic, o, n: ShieldChe, c, k,
+    bad, g, e: 'Enterpris, e' }
       ]
     },
     {
-      title: 'IT Solutions',
-      icon: Server,
-      items: [
-        { name: 'Edge Computing Platform', href: '/services', icon: Globe2, badge: 'New' },
-        { name: 'DevOps Automation', href: '/services', icon: ZapIcon, badge: 'Popular' },
-        { name: 'API Gateway Management', href: '/services', icon: Network, badge: 'Enterprise' },
-        { name: 'Cloud-Native Development', href: '/services', icon: Cloud, badge: 'Premium' },
-        { name: 'Low-Code Platform', href: '/services', icon: Layers, badge: 'Featured' },
-        { name: 'PWA Builder', href: '/services', icon: Smartphone, badge: 'New' }
+      titl, e: 'IT Solutions',
+    ico, n: Serve, r,
+      item, s: [
+        { na, m, e: 'Edg, e Computin, g Platfor, m',
+    hr, e, f: '/service, s', ic, o, n: Glob, e, 2,
+    bad, g, e: 'Ne, w' },
+        { na, m, e: 'DevOp, s Automatio, n',
+    hr, e, f: '/service, s', ic, o, n: ZapIc, o, n,
+    bad, g, e: 'Popula, r' },
+        { na, m, e: 'AP, I Gatewa, y Managemen, t',
+    hr, e, f: '/service, s', ic, o, n: Netwo, r, k,
+    bad, g, e: 'Enterpris, e' },
+        { na, m, e: 'Clou, d-Nativ, e Developmen, t',
+    hr, e, f: '/service, s', ic, o, n: Clo, u, d,
+    bad, g, e: 'Premiu, m' },
+        { na, m, e: 'Lo, w-Cod, e Platfor, m',
+    hr, e, f: '/service, s', ic, o, n: Laye, r, s,
+    bad, g, e: 'Feature, d' },
+        { na, m, e: 'PW, A Builde, r',
+    hr, e, f: '/service, s', ic, o, n: Smartpho, n, e,
+    bad, g, e: 'Ne, w' }
       ]
     },
     {
-      title: 'Development',
-      icon: Code,
-      items: [
-        { name: 'Web Development', href: '/services', icon: Globe, badge: 'Popular' },
-        { name: 'Mobile Development', href: '/services', icon: Smartphone, badge: 'Featured' },
-        { name: 'Metaverse Development', href: '/services', icon: Eye, badge: 'New' },
-        { name: 'Blockchain Development', href: '/services', icon: Lock, badge: 'Premium' },
-        { name: 'IoT Development', href: '/services', icon: Wifi, badge: 'Enterprise' }
+      titl, e: 'Development',
+    ico, n: Cod, e,
+      item, s: [
+        { na, m, e: 'We, b Developmen, t',
+    hr, e, f: '/service, s', ic, o, n: Glo, b, e,
+    bad, g, e: 'Popula, r' },
+        { na, m, e: 'Mobil, e Developmen, t',
+    hr, e, f: '/service, s', ic, o, n: Smartpho, n, e,
+    bad, g, e: 'Feature, d' },
+        { na, m, e: 'Metavers, e Developmen, t',
+    hr, e, f: '/service, s', ic, o, n: E, y, e,
+    bad, g, e: 'Ne, w' },
+        { na, m, e: 'Blockchai, n Developmen, t',
+    hr, e, f: '/service, s', ic, o, n: Lo, c, k,
+    bad, g, e: 'Premiu, m' },
+        { na, m, e: 'Io, T Developmen, t',
+    hr, e, f: '/service, s', ic, o, n: Wi, f, i,
+    bad, g, e: 'Enterpris, e' }
       ]
     },
     {
-      title: 'Security',
-      icon: Shield,
-      items: [
-        { name: 'Cyber Threat Detection', href: '/services', icon: ShieldCheck, badge: 'Premium' },
-        { name: 'Blockchain Identity', href: '/services', icon: Lock, badge: 'New' },
-        { name: 'Managed SOC', href: '/services', icon: Eye, badge: 'Enterprise' },
-        { name: 'Compliance & Audit', href: '/services', icon: Award, badge: 'Featured' }
+      titl, e: 'Security',
+    ico, n: Shiel, d,
+      item, s: [
+        { na, m, e: 'Cybe, r Threa, t Detectio, n',
+    hr, e, f: '/service, s', ic, o, n: ShieldChe, c, k,
+    bad, g, e: 'Premiu, m' },
+        { na, m, e: 'Blockchai, n Identit, y',
+    hr, e, f: '/service, s', ic, o, n: Lo, c, k,
+    bad, g, e: 'Ne, w' },
+        { na, m, e: 'Manage, d SO, C',
+    hr, e, f: '/service, s', ic, o, n: E, y, e,
+    bad, g, e: 'Enterpris, e' },
+        { na, m, e: 'Complianc, e & Audi, t',
+    hr, e, f: '/service, s', ic, o, n: Awa, r, d,
+    bad, g, e: 'Feature, d' }
       ]
     },
     {
-      title: 'Enterprise',
-      icon: Building,
-      items: [
-        { name: 'Digital Transformation', href: '/enterprise-solutions', icon: TrendingUp, badge: 'Enterprise' },
-        { name: 'Legacy System Migration', href: '/enterprise-solutions', icon: Server, badge: 'Premium' },
-        { name: 'Cloud Migration', href: '/enterprise-solutions', icon: Cloud, badge: 'Popular' },
-        { name: 'Data Center Solutions', href: '/enterprise-solutions', icon: Database, badge: 'Featured' }
+      titl, e: 'Enterprise',
+    ico, n: Buildin, g,
+      item, s: [
+        { na, m, e: 'Digita, l Transformatio, n',
+    hr, e, f: '/enterpris, e-solution, s', ic, o, n: Trending, U, p,
+    bad, g, e: 'Enterpris, e' },
+        { na, m, e: 'Legac, y Syste, m Migratio, n',
+    hr, e, f: '/enterpris, e-solution, s', ic, o, n: Serv, e, r,
+    bad, g, e: 'Premiu, m' },
+        { na, m, e: 'Clou, d Migratio, n',
+    hr, e, f: '/enterpris, e-solution, s', ic, o, n: Clo, u, d,
+    bad, g, e: 'Popula, r' },
+        { na, m, e: 'Dat, a Cente, r Solution, s',
+    hr, e, f: '/enterpris, e-solution, s', ic, o, n: Databa, s, e,
+    bad, g, e: 'Feature, d' }
       ]
     },
     {
-      title: 'Company',
-      icon: Users,
-      items: [
-        { name: 'About Us', href: '/about', icon: Info },
-        { name: 'Our Team', href: '/about', icon: Users },
-        { name: 'Careers', href: '/careers', icon: Briefcase },
-        { name: 'Blog', href: '/blog', icon: FileText },
-        { name: 'News', href: '/news', icon: MessageSquare },
-        { name: 'Press Kit', href: '/press', icon: FileText }
+      titl, e: 'Company',
+    ico, n: User, s,
+      item, s: [
+        { na, m, e: 'Abou, t U, s',
+    hr, e, f: '/abou, t', ic, o, n: Inf, o },
+        { na, m, e: 'Ou, r Tea, m',
+    hr, e, f: '/abou, t', ic, o, n: User, s },
+        { na, m, e: 'Career, s',
+    hr, e, f: '/career, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Blo, g',
+    hr, e, f: '/blo, g', ic, o, n: FileTex, t },
+        { na, m, e: 'New, s',
+    hr, e, f: '/new, s', ic, o, n: MessageSquar, e },
+        { na, m, e: 'Pres, s Ki, t',
+    hr, e, f: '/pres, s', ic, o, n: FileTex, t }
       ]
     },
     {
-      title: 'Support',
-      icon: HelpCircle,
-      items: [
-        { name: 'Help Center', href: '/help', icon: HelpCircle },
-        { name: 'Request Quote', href: '/request-quote', icon: FileText },
-        { name: 'Community', href: '/community', icon: Users },
-        { name: 'Documentation', href: '/docs', icon: BookOpen },
-        { name: 'API Reference', href: '/api', icon: Code },
-        { name: 'Status Page', href: '/status', icon: CheckCircle }
+      titl, e: 'Support',
+    ico, n: HelpCircl, e,
+      item, s: [
+        { na, m, e: 'Hel, p Cente, r',
+    hr, e, f: '/hel, p', ic, o, n: HelpCircl, e },
+        { na, m, e: 'Reques, t Quot, e',
+    hr, e, f: '/reques, t-quot, e', ic, o, n: FileTex, t },
+        { na, m, e: 'Communit, y',
+    hr, e, f: '/communit, y', ic, o, n: User, s },
+        { na, m, e: 'Documentatio, n',
+    hr, e, f: '/doc, s', ic, o, n: BookOpe, n },
+        { na, m, e: 'AP, I Referenc, e',
+    hr, e, f: '/ap, i', ic, o, n: Cod, e },
+        { na, m, e: 'Statu, s Pag, e',
+    hr, e, f: '/statu, s', ic, o, n: CheckCircl, e }
 =======
-        { name: 'Blog', href: '/blog', icon: BookOpen },
-        { name: 'Help Center', href: '/help-center', icon: HelpCircle },
-        { name: 'Green IT', href: '/green-it', icon: Leaf },
-        { name: 'Sitemap', href: '/sitemap', icon: FileText },
+        { na, m, e: 'Blo, g',
+    hr, e, f: '/blo, g', ic, o, n: BookOpe, n },
+        { na, m, e: 'Hel, p Cente, r',
+    hr, e, f: '/hel, p-cente, r', ic, o, n: HelpCircl, e },
+        { na, m, e: 'Gree, n I, T',
+    hr, e, f: '/gree, n-i, t', ic, o, n: Lea, f },
+        { na, m, e: 'Sitema, p',
+    hr, e, f: '/sitema, p', ic, o, n: FileTex, t },
       ]
     },
     {
-      title: 'Legal',
-      items: [
-        { name: 'Privacy Policy', href: '/privacy', icon: Shield },
-        { name: 'Terms of Service', href: '/terms', icon: FileText },
+      titl, e: 'Legal',
+    item, s: [
+        { na, m, e: 'Privac, y Polic, y',
+    hr, e, f: '/privac, y', ic, o, n: Shiel, d },
+        { na, m, e: 'Term, s o, f Servic, e',
+    hr, e, f: '/term, s', ic, o, n: FileTex, t },
 =======
-        { label: 'Home', href: '/', icon: Home },
-        { label: 'Marketplace', href: '/marketplace', icon: Briefcase },
-        { label: 'Talent', href: '/talent', icon: Users },
-        { label: 'Community', href: '/community', icon: Globe },
-        { label: 'Blog', href: '/blog', icon: BookOpen },
-        { label: 'About', href: '/about', icon: Building },
+        { lab, e, l: 'Hom, e',
+    hr, e, f: '/', ic, o, n: Hom, e },
+        { lab, e, l: 'Marketplac, e',
+    hr, e, f: '/marketplac, e', ic, o, n: Briefcas, e },
+        { lab, e, l: 'Talen, t',
+    hr, e, f: '/talen, t', ic, o, n: User, s },
+        { lab, e, l: 'Communit, y',
+    hr, e, f: '/communit, y', ic, o, n: Glob, e },
+        { lab, e, l: 'Blo, g',
+    hr, e, f: '/blo, g', ic, o, n: BookOpe, n },
+        { lab, e, l: 'Abou, t',
+    hr, e, f: '/abou, t', ic, o, n: Buildin, g },
       ]
     },
     {
-      title: 'Services',
-      items: [
-        { label: 'AI Matcher', href: '/ai-matcher', icon: Zap },
-        { label: 'Services', href: '/services', icon: Briefcase },
-        { label: 'Equipment', href: '/equipment', icon: Briefcase },
-        { label: 'Green IT', href: '/green-it', icon: Globe },
-        { label: 'Request Quote', href: '/request-quote', icon: MessageSquare },
+      titl, e: 'Services',
+    item, s: [
+        { lab, e, l: 'A, I Matche, r',
+    hr, e, f: '/a, i-matche, r', ic, o, n: Za, p },
+        { lab, e, l: 'Service, s',
+    hr, e, f: '/service, s', ic, o, n: Briefcas, e },
+        { lab, e, l: 'Equipmen, t',
+    hr, e, f: '/equipmen, t', ic, o, n: Briefcas, e },
+        { lab, e, l: 'Gree, n I, T',
+    hr, e, f: '/gree, n-i, t', ic, o, n: Glob, e },
+        { lab, e, l: 'Reques, t Quot, e',
+    hr, e, f: '/reques, t-quot, e', ic, o, n: MessageSquar, e },
       ]
     },
     ...(isAuthenticated ? [{
-      title: 'Account',
-      items: [
-        { label: 'Dashboard', href: '/dashboard', icon: Settings },
-        { label: 'Messages', href: '/messages', icon: MessageSquare },
-        { label: 'Post Job', href: '/post-job', icon: Briefcase },
-        { label: 'Publish Product', href: '/publish', icon: Briefcase },
+      tit,  l, e: 'Accoun, t',
+    ite, m, s: [
+        { lab, e, l: 'Dashboar, d',
+    hr, e, f: '/dashboar, d', ic, o, n: Setting, s },
+        { lab, e, l: 'Message, s',
+    hr, e, f: '/message, s', ic, o, n: MessageSquar, e },
+        { lab, e, l: 'Pos, t Jo, b',
+    hr, e, f: '/pos, t-jo, b', ic, o, n: Briefcas, e },
+        { lab, e, l: 'Publis, h Produc, t',
+    hr, e, f: '/publis, h', ic, o, n: Briefcas, e },
       ]
     }] : []),
     {
-      title: 'Support',
-      items: [
-        { label: 'Help Center', href: '/help', icon: HelpCircle },
-        { label: 'Contact', href: '/contact', icon: MessageSquare },
-        { label: 'Sitemap', href: '/sitemap', icon: Globe },
+      titl, e: 'Support',
+    item, s: [
+        { lab, e, l: 'Hel, p Cente, r',
+    hr, e, f: '/hel, p', ic, o, n: HelpCircl, e },
+        { lab, e, l: 'Contac, t',
+    hr, e, f: '/contac, t', ic, o, n: MessageSquar, e },
+        { lab, e, l: 'Sitema, p',
+    hr, e, f: '/sitema, p', ic, o, n: Glob, e },
 =======
-        { name: 'About Us', path: '/about', icon: Users },
-        { name: 'Our Mission', path: '/mission', icon: Target },
-        { name: 'Our Team', path: '/team', icon: Users },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
-        { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'Blog', path: '/blog', icon: Globe },
-        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
-        { name: 'Help Center', path: '/help', icon: Globe }
+        { na, m, e: 'Abou, t U, s',
+    pa, t, h: '/abou, t', ic, o, n: User, s },
+        { na, m, e: 'Ou, r Missio, n',
+    pa, t, h: '/missio, n', ic, o, n: Targe, t },
+        { na, m, e: 'Ou, r Tea, m',
+    pa, t, h: '/tea, m', ic, o, n: User, s },
+        { na, m, e: 'Career, s',
+    pa, t, h: '/career, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Partner, s',
+    pa, t, h: '/partner, s', ic, o, n: Handshak, e },
+        { na, m, e: 'Blo, g',
+    pa, t, h: '/blo, g', ic, o, n: Glob, e },
+        { na, m, e: 'Cas, e Studie, s',
+    pa, t, h: '/cas, e-studie, s', ic, o, n: Briefcas, e },
+        { na, m, e: 'Hel, p Cente, r',
+    pa, t, h: '/hel, p', ic, o, n: Glob, e }
       ]
     },
     {
-      title: 'Support & Legal',
-      items: [
-        { name: 'Help Center', path: '/help', icon: Users },
-        { name: 'Documentation', path: '/docs', icon: Globe },
-        { name: 'Contact Support', path: '/contact', icon: Phone },
-        { name: 'Status Page', path: '/status', icon: Globe },
-        { name: 'Privacy Policy', path: '/privacy', icon: Lock },
-        { name: 'Terms of Service', path: '/terms', icon: Lock },
-        { name: 'Cookie Policy', path: '/cookies', icon: Lock }
+      titl, e: 'Support & Legal',
+    item, s: [
+        { na, m, e: 'Hel, p Cente, r',
+    pa, t, h: '/hel, p', ic, o, n: User, s },
+        { na, m, e: 'Documentatio, n',
+    pa, t, h: '/doc, s', ic, o, n: Glob, e },
+        { na, m, e: 'Contac, t Suppor, t',
+    pa, t, h: '/contac, t', ic, o, n: Phon, e },
+        { na, m, e: 'Statu, s Pag, e',
+    pa, t, h: '/statu, s', ic, o, n: Glob, e },
+        { na, m, e: 'Privac, y Polic, y',
+    pa, t, h: '/privac, y', ic, o, n: Loc, k },
+        { na, m, e: 'Term, s o, f Servic, e',
+    pa, t, h: '/term, s', ic, o, n: Loc, k },
+        { na, m, e: 'Cooki, e Polic, y',
+    pa, t, h: '/cookie, s', ic, o, n: Loc, k }
       ]
     }
   ];
 
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
-    { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' },
-    { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
-    { icon: Youtube, href: 'https://youtube.com/@ziontechgroup', label: 'YouTube' }
+    { ico, n: Linkedi, n,
+    hre, f: 'http, s: //www.linkedin.com/company/ziontechgroup',
+    labe, l: 'LinkedIn' },
+    { ico, n: Twitte, r,
+    hre, f: 'http, s: //twitter.com/ziontechgroup',
+    labe, l: 'Twitter' },
+    { ico, n: Faceboo, k,
+    hre, f: 'http, s: //facebook.com/ziontechgroup',
+    labe, l: 'Facebook' },
+    { ico, n: Instagra, m,
+    hre, f: 'http, s: //instagram.com/ziontechgroup',
+    labe, l: 'Instagram' },
+    { ico, n: Githu, b,
+    hre, f: 'http, s: //github.com/ziontechgroup',
+    labe, l: 'GitHub' },
+    { ico, n: Youtub, e,
+    hre, f: 'http, s: //youtube.com/@ziontechgroup',
+    labe, l: 'YouTube' }
   ];
 
   const sidebarVariants = {
-    closed: {
+    close, d: {
       x: '-100%',
-      transition: {
-        type: 'spring' as const,
-        stiffness: 300,
-        damping: 30
+    transitio, n: {
+        typ, e: 'spring' a, s, cons, t,
+    stiffnes, s: 30, 0,
+        dampin, g: 30
       }
     },
-    open: {
+    ope, n: {
       x: 0,
-      transition: {
-        type: 'spring' as const,
-        stiffness: 300,
-        damping: 30
+    transitio, n: {
+        typ, e: 'spring' a, s, cons, t,
+    stiffnes, s: 30, 0,
+        dampin, g: 30
       }
     }
   };
 
   const overlayVariants = {
-    closed: { opacity: 0 },
-    open: { opacity: 1 }
+    close, d: { opacit, y: 0 },
+    ope, n: { opacit, y: 1 }
   };
 
   // Fixed contact information
   const contactInfo = [
-    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+    { ic, o, n: Linked, i, n,
+    hr, e, f: 'htt, p, s: //linkedi, n.co, m/compan, y/ziontechgrou, p',
+    lab, e, l: 'LinkedI, n' },
 =======
-    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+    { ic, o, n: Linked, i, n,
+    hr, e, f: 'htt, p, s: //linkedi, n.co, m/compan, y/ziontechgrou, p',
+    lab, e, l: 'LinkedI, n' },
 =======
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
+    { ic, o, n: Linked, i, n,
+    hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/zio, n-tec, h-grou, p',
+    lab, e, l: 'LinkedI, n' },
 =======
-    { icon: Phone, text: '+1 (302) 464-0950', href: 'tel:+13024640950' },
-    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
-    { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
+    { ic, o, n: Pho, n, e,
+    te, x, t: '+1 (30,  2) 46, 4-095, 0', hr, e, f: 't, e, l:+1302464095, 0' },
+    { ic, o, n: Ma, i, l,
+    te, x, t: 'klebe, r@ziontechgrou, p.co, m', hr, e, f: 'mail, t, o:klebe, r@ziontechgrou, p.co, m' },
+    { ic, o, n: MapP, i, n,
+    te, x, t: '36, 4 E Mai, n S, t S, T, E, 10, 0, 8, Middletow, n D, E 1970, 9', hr, e, f: '#' }
   ];
 
   // Fixed social media links with proper URLs
   const socialLinks = [
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
+    { ic, o, n: Linked, i, n,
+    hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/ziontechgrou, p',
+    lab, e, l: 'LinkedI, n' },
+    { ic, o, n: Twitt, e, r,
+    hr, e, f: 'htt, p, s: //twitte, r.co, m/ziontechgrou, p',
+    lab, e, l: 'Twitte, r' },
 =======
-    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
-    { icon: Youtube, href: 'https://www.youtube.com/@ziontechgroup', label: 'YouTube' }
+    { ic, o, n: Gith, u, b,
+    hr, e, f: 'htt, p, s: //githu, b.co, m/Zio, n-Holding, s',
+    lab, e, l: 'GitHu, b' },
+    { ic, o, n: Youtu, b, e,
+    hr, e, f: 'htt, p, s: //ww, w.youtub, e.co, m/@ziontechgrou, p',
+    lab, e, l: 'YouTub, e' }
 =======
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
+    { ic, o, n: Linked, i, n,
+    hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/zio, n-tec, h-grou, p',
+    lab, e, l: 'LinkedI, n' },
 =======
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
-    { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
+    { ic, o, n: Linked, i, n,
+    hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/ziontechgrou, p',
+    lab, e, l: 'LinkedI, n' },
+    { ic, o, n: Twitt, e, r,
+    hr, e, f: 'htt, p, s: //twitte, r.co, m/ziontechgrou, p',
+    lab, e, l: 'Twitte, r' },
+    { ic, o, n: Facebo, o, k,
+    hr, e, f: 'htt, p, s: //faceboo, k.co, m/ziontechgrou, p',
+    lab, e, l: 'Faceboo, k' },
+    { ic, o, n: Linked, i, n,
+    hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/ziontechgrou, p',
+    lab, e, l: 'LinkedI, n' },
+    { ic, o, n: Twitt, e, r,
+    hr, e, f: 'htt, p, s: //twitte, r.co, m/ziontechgrou, p',
+    lab, e, l: 'Twitte, r' },
+    { ic, o, n: Facebo, o, k,
+    hr, e, f: 'htt, p, s: //ww, w.faceboo, k.co, m/ziontechgrou, p',
+    lab, e, l: 'Faceboo, k' },
+    { ic, o, n: Instagr, a, m,
+    hr, e, f: 'htt, p, s: //ww, w.instagra, m.co, m/ziontechgrou, p',
+    lab, e, l: 'Instagra, m' }
 =======
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
-    { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' },
-    { icon: Globe, href: 'https://www.youtube.com/@ziontechgroup', label: 'YouTube' },
-    { icon: Briefcase, href: 'https://github.com/ziontechgroup', label: 'GitHub' }
+    { ic, o, n: Linked, i, n,
+    hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/zio, n-tec, h-grou, p',
+    lab, e, l: 'LinkedI, n' },
+    { ic, o, n: Twitt, e, r,
+    hr, e, f: 'htt, p, s: //twitte, r.co, m/ziontechgrou, p',
+    lab, e, l: 'Twitte, r' },
+    { ic, o, n: Facebo, o, k,
+    hr, e, f: 'htt, p, s: //ww, w.faceboo, k.co, m/ziontechgrou, p',
+    lab, e, l: 'Faceboo, k' },
+    { ic, o, n: Instagr, a, m,
+    hr, e, f: 'htt, p, s: //ww, w.instagra, m.co, m/ziontechgrou, p',
+    lab, e, l: 'Instagra, m' },
+    { ic, o, n: Glo, b, e,
+    hr, e, f: 'htt, p, s: //ww, w.youtub, e.co, m/@ziontechgrou, p',
+    lab, e, l: 'YouTub, e' },
+    { ic, o, n: Briefca, s, e,
+    hr, e, f: 'htt, p, s: //githu, b.co, m/ziontechgrou, p',
+    lab, e, l: 'GitHu, b' }
 =======
-    { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' },
-    { icon: Users, href: 'https://discord.gg/ziontechgroup', label: 'Discord' }
+    { ic, o, n: Instagr, a, m,
+    hr, e, f: 'htt, p, s: //instagra, m.co, m/ziontechgrou, p',
+    lab, e, l: 'Instagra, m' },
+    { ic, o, n: Use, r, s,
+    hr, e, f: 'htt, p, s: //discor, d.g, g/ziontechgrou, p',
+    lab, e, l: 'Discor, d' }
 =======
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
-    { icon: Globe, href: 'https://www.youtube.com/@ziontechgroup', label: 'YouTube' }
+    { ic, o, n: Linked, i, n,
+    hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/ziontechgrou, p',
+    lab, e, l: 'LinkedI, n' },
+    { ic, o, n: Twitt, e, r,
+    hr, e, f: 'htt, p, s: //twitte, r.co, m/ziontechgrou, p',
+    lab, e, l: 'Twitte, r' },
+    { ic, o, n: Gith, u, b,
+    hr, e, f: 'htt, p, s: //githu, b.co, m/ziontechgrou, p',
+    lab, e, l: 'GitHu, b' },
+    { ic, o, n: Glo, b, e,
+    hr, e, f: 'htt, p, s: //ww, w.youtub, e.co, m/@ziontechgrou, p',
+    lab, e, l: 'YouTub, e' }
 =======
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
-    { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
+    { ic, o, n: Linked, i, n,
+    hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/zio, n-tec, h-grou, p',
+    lab, e, l: 'LinkedI, n' },
+    { ic, o, n: Twitt, e, r,
+    hr, e, f: 'htt, p, s: //twitte, r.co, m/ziontechgrou, p',
+    lab, e, l: 'Twitte, r' },
+    { ic, o, n: Facebo, o, k,
+    hr, e, f: 'htt, p, s: //ww, w.faceboo, k.co, m/ziontechgrou, p',
+    lab, e, l: 'Faceboo, k' },
+    { ic, o, n: Instagr, a, m,
+    hr, e, f: 'htt, p, s: //ww, w.instagra, m.co, m/ziontechgrou, p',
+    lab, e, l: 'Instagra, m' }
 =======
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
-    { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
+    { ic, o, n: Linked, i, n,
+    hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/ziontechgrou, p',
+    lab, e, l: 'LinkedI, n' },
+    { ic, o, n: Twitt, e, r,
+    hr, e, f: 'htt, p, s: //twitte, r.co, m/ziontechgrou, p',
+    lab, e, l: 'Twitte, r' },
+    { ic, o, n: Facebo, o, k,
+    hr, e, f: 'htt, p, s: //ww, w.faceboo, k.co, m/ziontechgrou, p',
+    lab, e, l: 'Faceboo, k' },
+    { ic, o, n: Instagr, a, m,
+    hr, e, f: 'htt, p, s: //ww, w.instagra, m.co, m/ziontechgrou, p',
+    lab, e, l: 'Instagra, m' }
 =======
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
-    { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
+    { ic, o, n: Linked, i, n,
+    hr, e, f: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/ziontechgrou, p',
+    lab, e, l: 'LinkedI, n' },
+    { ic, o, n: Twitt, e, r,
+    hr, e, f: 'htt, p, s: //twitte, r.co, m/ziontechgrou, p',
+    lab, e, l: 'Twitte, r' },
+    { ic, o, n: Facebo, o, k,
+    hr, e, f: 'htt, p, s: //ww, w.faceboo, k.co, m/ziontechgrou, p',
+    lab, e, l: 'Faceboo, k' },
+    { ic, o, n: Instagr, a, m,
+    hr, e, f: 'htt, p, s: //ww, w.instagra, m.co, m/ziontechgrou, p',
+    lab, e, l: 'Instagra, m' }
   ];
 
   const sidebarVariants = {
-    closed: {
+    close, d: {
       x: '-100%',
-      transition: {
-        type: 'spring' as const,
-        stiffness: 300,
-        damping: 30
+    transitio, n: {
+        typ, e: 'spring' a, s, cons, t,
+    stiffnes, s: 30, 0,
+        dampin, g: 30
       }
     },
-    open: {
+    ope, n: {
       x: 0,
-      transition: {
-        type: 'spring' as const,
-        stiffness: 300,
-        damping: 30
+    transitio, n: {
+        typ, e: 'spring' a, s, cons, t,
+    stiffnes, s: 30, 0,
+        dampin, g: 30
       }
     }
   };
 
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
-    { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }
+    { ico, n: Linkedi, n,
+    hre, f: 'http, s: //www.linkedin.com/company/ziontechgroup',
+    labe, l: 'LinkedIn' },
+    { ico, n: Twitte, r,
+    hre, f: 'http, s: //twitter.com/ziontechgroup',
+    labe, l: 'Twitter' },
+    { ico, n: Faceboo, k,
+    hre, f: 'http, s: //facebook.com/ziontechgroup',
+    labe, l: 'Facebook' },
+    { ico, n: Instagra, m,
+    hre, f: 'http, s: //instagram.com/ziontechgroup',
+    labe, l: 'Instagram' }
   ];
 =======
   const overlayVariants = {
-    closed: {
-      opacity: 0,
-      transition: {
-        duration: 0.2
+    close, d: {
+      opacit, y: 0,
+    transitio, n: {
+        duratio, n: 0.2
       }
     },
-    open: {
-      opacity: 1,
-      transition: {
-        duration: 0.2
+    ope, n: {
+      opacit, y: 1,
+    transitio, n: {
+        duratio, n: 0.2
       }
     }
   };
 
 =======
-  return (
-  return (
+  return (return (
 =======
   return (
 =======
@@ -1698,18 +2839,18 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
         {isSidebarOpen && (
 =======
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+            initial={{ opacit,  y: 0 }}
+            animate={{ opacit, y: 1 }}
+            exit={{ opacit, y: 0 }}
+            className="fixed inset-0 bg-black/50 z-40 l, g:hidden"
             onClick={onClose}
           />
 =======
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+            initial={{ opacit, y: 0 }}
+            animate={{ opacit, y: 1 }}
+            exit={{ opacit, y: 0 }}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 l, g:hidden"
             onClick={onClose}
           />
 
@@ -1717,10 +2858,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
           <motion.aside
 =======
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+            initial={{ opacit, y: 0 }}
+            animate={{ opacit, y: 1 }}
+            exit={{ opacit, y: 0 }}
+            className="fixed inset-0 bg-black/50 z-40 l, g:hidden"
             onClick={onClose}
           />
 
@@ -1732,7 +2873,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
         <>
           {/* Overlay */}
           <motion.div
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 l, g:hidden"
 =======
     <>
       {/* Overlay */}
@@ -1743,7 +2884,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 l, g:hidden"
             onClick={onClose}
           />
 
@@ -1760,8 +2901,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
 
       {/* Sidebar */}
       <AnimatePresence>
-        {isOpen && (
-          <motion.div
+        {isOpen && (<motion.div
 =======
 
           {/* Sidebar */}
@@ -1816,9 +2956,9 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 </div>
                 <button
                   onClick={() => setIsSidebarOpen(false)}
-                  className="p-2 futuristic-card hover:bg-white/20 rounded-lg transition-colors group"
+                  className="p-2 futuristic-card hove,  r:bg-white/20 rounded-lg transition-colors group"
 =======
-            className="fixed left-0 top-0 h-full w-80 max-w-[90vw] bg-background border-r border-border z-50 overflow-y-auto"
+            className="fixed left-0 top-0 h-full w-80 max-w-[90, v, w] bg-background border-r border-border z-50 overflow-y-auto"
           >
             <div className="p-6">
               {/* Header */}
@@ -1831,17 +2971,17 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 </Link>
                 <button
                   onClick={onClose}
-                  className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-all duration-300"
+                  className="p-2 rounded-lg text-gray-400 hove, r:text-white hove, r:bg-gray-800/50 transition-all duration-300"
                 >
                   <X className="w-5 h-5" />
 =======
-                  className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-all duration-300"
+                  className="p-2 rounded-lg text-gray-400 hove, r:text-white hove, r:bg-gray-800/50 transition-all duration-300"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 =======
-            className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 lg:hidden overflow-y-auto"
+            className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 l, g:hidden overflow-y-auto"
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-800">
@@ -1853,33 +2993,32 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               </div>
               <button
                 onClick={onClose}
-                className="text-gray-400 hover:text-white p-2 rounded-md transition-colors duration-200"
+                className="text-gray-400 hove, r:text-white p-2 rounded-md transition-colors duration-200"
               >
                 <X className="w-6 h-6" />
               </button>
             </div>
 
   const overlayVariants = {
-    closed: { opacity: 0 },
-    open: { opacity: 1 }
+    close, d: { opacit, y: 0 },
+    ope, n: { opacit, y: 1 }
 =======
-  const handleSocialLinkClick = (social: typeof socialLinks[0]) => {
+  const handleSocialLinkClick = (socia, l: typeof socialLinks[0]) => {
     try {
-      window.open(social.href, '_blank', 'noopener,noreferrer');
+      window.open(social.hre,  f, '_blank', 'noopene, r,noreferrer');
     } catch (error) {
-      console.error(`Failed to open ${social.label}:`, error);
+      console.error(`Failed to open ${social.labe, l}:`,  error);
     }
   };
 
-  return (
-    <AnimatePresence>
+  return (<AnimatePresence>
       {isOpen && (
         <>
           {/* Backdrop */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacit,  y: 0 }}
+            animate={{ opacit, y: 1 }}
+            exit={{ opacit, y: 0 }}
             className="fixed inset-0 bg-black/50 z-40"
             onClick={onClose}
           />
@@ -1902,7 +3041,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               </div>
               <button
                 onClick={onClose}
-                className="text-gray-400 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                className="text-gray-400 hove, r:text-white p-2 rounded-lg hove, r:bg-white/10 transition-colors duration-200"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -1910,11 +3049,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
 
                     <button
                       onClick={() => toggleSection(section.title)}
-                      className="flex items-center justify-between w-full text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text hover:bg-white/10 rounded-lg p-2 transition-colors"
+                      className="flex items-center justify-between w-full text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text hove,  r:bg-white/10 rounded-lg p-2 transition-colors"
                     >
                       <span>{section.title}</span>
-                      {expandedSections.includes(section.title) ? (
-                        <ChevronDown className="w-4 h-4" />
+                      {expandedSections.includes(section.title) ? (<ChevronDown className="w-4 h-4" />
                       ) : (
                         <ChevronRight className="w-4 h-4" />
                       )}
@@ -1933,11 +3071,11 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                               className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
                                 isActive
                                   ? 'quantum-button shadow-lg shadow-zion-cyan/30'
-                                  : 'futuristic-card text-zion-slate-light hover:bg-white/20 hover:neon-text'
+                                  : 'futuristic-card text-zion-slate-light hove,  r:bg-white/20 hove, r:neon-tex, t'
                               }`}
                             >
                               <Icon className={`w-4 h-4 ${
-                                isActive ? 'text-white' : 'text-zion-cyan group-hover:neon-text'
+                                isActive ? 'text-white' : 'text-zion-cyan group-hove, r:neon-tex, t'
                               }`} />
                               <span className="flex-1 text-sm">{item.name}</span>
                               {isActive && (
@@ -1965,7 +3103,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                             className={`flex items-center space-x-3 px-3 py-2 rounded-md text-sm transition-colors ${
                               location.pathname === item.path
                                 ? 'text-zion-cyan bg-zion-cyan/10'
-                                : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                                : 'text-muted-foreground hove,  r:text-foreground hove, r:bg-mute, d'
                             }`}
                             onClick={onClose}
                           >
@@ -1988,43 +3126,41 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <div className="space-y-3">
                     <Link
                       to="/contact"
-                      className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hover:scale-105 transition-transform text-center"
+                      className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hove, r:scale-105 transition-transform text-center"
                     >
                       Get Free Quote
                     </Link>
-                    <button className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hover:bg-zion-cyan/10 transition-colors">
+                    <button className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove, r:bg-zion-cyan/10 transition-colors">
                       Schedule Demo
                     </button>
             {/* Navigation */}
             <div className="p-6 space-y-8">
-              {navigationItems.map((section, index) => (
-                <div key={index}>
+              {navigationItems.map((sectio,  n, index) => (<div key={index}>
                   <h3 className="text-zion-cyan font-semibold mb-4 text-sm uppercase tracking-wider">
                     {section.title}
                   </h3>
                   <div className="space-y-2">
-                    {section.items.map((item, itemIndex) => {
+                    {section.items.map((ite,  m, itemIndex) => {
                       const Icon = item.icon;
                       const isActive = location.pathname === item.path;
-                      return (
-                        <Link
+                      return (<Link
                           key={itemIndex}
                           to={item.path}
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
                             isActive
                               ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
-                              : 'text-zion-slate-light hover:text-white hover:bg-zion-blue-light/10'
+                              : 'text-zion-slate-light hove,  r:text-white hove, r:bg-zion-blue-light/1, 0'
                           }`}
                           onClick={onClose}
                         >
-                          <Icon className={`w-5 h-5 ${isActive ? 'text-zion-cyan' : 'text-zion-slate-light group-hover:text-white'}`} />
+                          <Icon className={`w-5 h-5 ${isActive ? 'text-zion-cyan' : 'text-zion-slate-light group-hove, r:text-whit, e'}`} />
                           <span className="text-sm font-medium">{item.name}</span>
                         </Link>
                       );
                     })}
 =======
             variants={sidebarVariants}
-            className="fixed left-0 top-0 h-full w-80 max-w-[90vw] bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 overflow-y-auto"
+            className="fixed left-0 top-0 h-full w-80 max-w-[90, v, w] bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 overflow-y-auto"
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-800">
@@ -2034,13 +3170,13 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
 =======
                     <Link 
                       to="/contact"
-                      className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hover:scale-105 transition-transform text-center block"
+                      className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hove, r:scale-105 transition-transform text-center block"
                     >
                       Get Free Quote
                     </Link>
                     <Link 
                       to="/pricing"
-                      className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hover:bg-zion-cyan/10 transition-colors text-center block"
+                      className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove, r:bg-zion-cyan/10 transition-colors text-center block"
                     >
                       View Pricing
                     </Link>
@@ -2049,20 +3185,18 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
 
             {/* Navigation Items */}
             <div className="p-4 space-y-6">
-              {navigationItems.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="space-y-3">
+              {navigationItems.map((sectio,  n, sectionIndex) => (<div key={sectionIndex} className="space-y-3">
                   <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide px-3">
                     {section.title}
                   </h3>
                   <div className="space-y-1">
-                    {section.items.map((item, itemIndex) => (
-                      <Link
+                    {section.items.map((ite,  m, itemIndex) => (<Link
                         key={itemIndex}
                         to={item.path}
                         className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-300 group ${
                           location.pathname === item.path
                             ? 'text-cyan-400 bg-cyan-500/20 border border-cyan-400/50'
-                            : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                            : 'text-gray-300 hove,  r:text-white hove, r:bg-gray-800/5, 0'
                         }`}
                       >
                         <item.icon className="w-4 h-4 flex-shrink-0" />
@@ -2074,10 +3208,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     ))}
                   </div>
                 </div>
-                    <Link to="/contact" className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hover:scale-105 transition-transform text-center block">
+                    <Link to="/contact" className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hove, r:scale-105 transition-transform text-center block">
                       Get Free Quote
                     </Link>
-                    <Link to="/contact" className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hover:bg-zion-cyan/10 transition-colors text-center block">
+                    <Link to="/contact" className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove, r:bg-zion-cyan/10 transition-colors text-center block">
                       Schedule Demo
                     </Link>
 =======
@@ -2087,31 +3221,29 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <input
                   type="text"
                   placeholder="Search services..."
-                  className="w-full px-4 py-2 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 text-sm focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
+                  className="w-full px-4 py-2 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 text-sm focu, s:outline-none focu, s:border-cyan-400 focu, s:ring-2 focu, s:ring-cyan-400/20 transition-all duration-200"
                 />
               </div>
             </div>
 
             {/* Navigation Content */}
             <div className="p-6 space-y-8">
-              {navigationItems.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="space-y-4">
+              {navigationItems.map((sectio,  n, sectionIndex) => (<div key={sectionIndex} className="space-y-4">
                   <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider neon-text-cyan">
                     {section.title}
                   </h3>
                   <div className="space-y-2">
-                    {section.items.map((item, itemIndex) => (
-                      <Link
+                    {section.items.map((ite,  m, itemIndex) => (<Link
                         key={itemIndex}
                         to={item.path}
                         onClick={onClose}
-                        className="flex items-start space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 group"
+                        className="flex items-start space-x-3 p-3 rounded-lg hove,  r:bg-cyan-500/10 transition-all duration-200 group"
                       >
-                        <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg group-hover:border-cyan-400/50 transition-colors duration-200">
+                        <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg group-hove, r:border-cyan-400/50 transition-colors duration-200">
                           <item.icon className="w-4 h-4 text-cyan-400" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors duration-200">
+                          <div className="text-sm font-medium text-white group-hove, r:text-cyan-400 transition-colors duration-200">
                             {item.name}
                           </div>
                           <div className="text-xs text-gray-400 mt-1 leading-relaxed">
@@ -2137,7 +3269,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                         className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 ${
                           location.pathname === item.path
                             ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
-                            : 'text-gray-300 hover:text-white hover:bg-white/10'
+                            : 'text-gray-300 hove,  r:text-white hove, r:bg-white/1, 0'
                         }`}
                       >
                         <item.icon className="w-5 h-5" />
@@ -2146,10 +3278,9 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     ))}
                   </div>
 =======
-                  {contactInfo.map((contact, index) => (
-                    <div key={index} className="flex items-center space-x-3 text-sm text-muted-foreground">
+                  {contactInfo.map((contac,  t, index) => (<div key={index} className="flex items-center space-x-3 text-sm text-muted-foreground">
                       <contact.icon className="h-4 w-4 text-zion-cyan" />
-                      <a href={contact.href} className="hover:text-zion-cyan transition-colors">
+                      <a href={contact.href} className="hove,  r:text-zion-cyan transition-colors">
                         {contact.text}
                       </a>
                     </div>
@@ -2158,20 +3289,18 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               {/* Navigation */}
               <div className="flex-1 overflow-y-auto py-6">
                 <nav className="space-y-8">
-                  {navigationItems.map((section, index) => (
-                    <div key={index} className="px-6">
+                  {navigationItems.map((sectio,  n, index) => (<div key={index} className="px-6">
                       <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-3">
                         {section.title}
                       </h3>
                       <ul className="space-y-2">
-                        {section.items.map((item, itemIndex) => (
-                          <li key={itemIndex}>
+                        {section.items.map((ite,  m, itemIndex) => (<li key={itemIndex}>
                             <Link
                               to={item.path}
                               className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-300 ${
                                 location.pathname === item.path
                                   ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
-                                  : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                                  : 'text-gray-300 hove,  r:text-white hove, r:bg-gray-800/5, 0'
                               }`}
                             >
                               <item.icon className="w-4 h-4" />
@@ -2181,7 +3310,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                         ))}
                       </ul>
 =======
-            className="fixed left-0 top-0 h-full w-80 max-w-[90vw] z-50 overflow-hidden"
+            className="fixed left-0 top-0 h-full w-80 max-w-[90, v, w] z-50 overflow-hidden"
           >
             {/* Futuristic Background */}
             <div className="absolute inset-0 futuristic-bg opacity-80"></div>
@@ -2189,18 +3318,30 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             
             {/* Neural Network Lines */}
             <div className="absolute inset-0 pointer-events-none">
-              <div className="neural-line" style={{ top: '20%', width: '60%', left: '20%', animationDelay: '0s' }}></div>
-              <div className="neural-line" style={{ top: '40%', width: '40%', left: '10%', animationDelay: '1s' }}></div>
-              <div className="neural-line" style={{ top: '60%', width: '70%', left: '15%', animationDelay: '2s' }}></div>
-              <div className="neural-line" style={{ top: '80%', width: '50%', left: '25%', animationDelay: '3s' }}></div>
+              <div className="neural-line" style={{ to, p: '20%',
+    widt, h: '60%', lef, t: '20%',
+    animationDela, y: '0s' }}></div>
+              <div className="neural-line" style={{ to, p: '40%',
+    widt, h: '40%', lef, t: '10%',
+    animationDela, y: '1s' }}></div>
+              <div className="neural-line" style={{ to, p: '60%',
+    widt, h: '70%', lef, t: '15%',
+    animationDela, y: '2s' }}></div>
+              <div className="neural-line" style={{ to, p: '80%',
+    widt, h: '50%', lef, t: '25%',
+    animationDela, y: '3s' }}></div>
             </div>
 
             {/* Floating Quantum Elements */}
             <div className="absolute inset-0 pointer-events-none">
-              <div className="quantum-particle" style={{ top: '15%', left: '80%', animationDelay: '0s' }}></div>
-              <div className="quantum-particle" style={{ top: '35%', left: '85%', animationDelay: '1s' }}></div>
-              <div className="quantum-particle" style={{ top: '55%', left: '90%', animationDelay: '2s' }}></div>
-              <div className="quantum-particle" style={{ top: '75%', left: '88%', animationDelay: '3s' }}></div>
+              <div className="quantum-particle" style={{ to, p: '15%',
+    lef, t: '80%', animationDela, y: '0s' }}></div>
+              <div className="quantum-particle" style={{ to, p: '35%',
+    lef, t: '85%', animationDela, y: '1s' }}></div>
+              <div className="quantum-particle" style={{ to, p: '55%',
+    lef, t: '90%', animationDela, y: '2s' }}></div>
+              <div className="quantum-particle" style={{ to, p: '75%',
+    lef, t: '88%', animationDela, y: '3s' }}></div>
             </div>
 
             <div className="relative h-full flex flex-col">
@@ -2220,9 +3361,9 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 </div>
                 <button
                   onClick={onClose}
-                  className="p-2 futuristic-card hover:bg-white/20 rounded-lg transition-colors group"
+                  className="p-2 futuristic-card hove, r:bg-white/20 rounded-lg transition-colors group"
                 >
-                  <X className="w-5 h-5 text-zion-slate-light group-hover:neon-text transition-colors" />
+                  <X className="w-5 h-5 text-zion-slate-light group-hove, r:neon-text transition-colors" />
                 </button>
               </div>
 
@@ -2247,18 +3388,17 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                             className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 group relative ${
                               isActive
                                 ? 'quantum-button shadow-lg shadow-zion-cyan/30'
-                                : 'futuristic-card text-zion-slate-light hover:bg-white/20 hover:neon-text'
-                            } ${isFeatured ? 'border-l-2 border-zion-cyan/50' : ''}`}
+                                : 'futuristic-card text-zion-slate-light hove,  r:bg-white/20 hove, r:neon-text'
+                            } ${isFeatured ? 'border-l-2 border-zion-cyan/5, 0' : ''}`}
                           >
                             {isFeatured && (
                               <div className="absolute -left-1 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
                             )}
                             <Icon className={`w-4 h-4 ${
-                              isActive ? 'text-white' : 'text-zion-cyan group-hover:neon-text'
+                              isActive ? 'text-white' : 'text-zion-cyan group-hove, r:neon-tex, t'
                             }`} />
                             <span className="flex-1">{item.name}</span>
-                            {isActive && (
-                              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                            {isActive && (<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                             )}
                             {isFeatured && (
                               <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
@@ -2273,20 +3413,19 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
 
               {/* Social Links */}
               <div className="flex space-x-3">
-                {socialLinks.map((social, index) => (
-                  <a 
+                {socialLinks.map((socia,  l, index) => (<a 
                     key={index}
                     href={social.href} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-zion-blue-light/20 hover:bg-zion-cyan/20 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+                    className="w-10 h-10 bg-zion-blue-light/20 hove,  r:bg-zion-cyan/20 rounded-lg flex items-center justify-center transition-all duration-300 hove, r:scale-110"
                     aria-label={social.label}
                   >
-                    <social.icon className="w-5 h-5 text-zion-slate-light hover:text-zion-cyan transition-colors" />
+                    <social.icon className="w-5 h-5 text-zion-slate-light hove, r:text-zion-cyan transition-colors" />
                   </a>
                 ))}
 =======
-                className="p-2 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+                className="p-2 text-gray-400 hove, r:text-white hove, r:bg-gray-800/50 rounded-lg transition-colors duration-200"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -2302,43 +3441,45 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   <div key={section.title} className="space-y-3">
                     <button
                       onClick={() => toggleSection(section.title)}
-                      className="flex items-center justify-between w-full p-3 text-left hover:bg-gray-800/50 rounded-lg transition-colors duration-200 group"
+                      className="flex items-center justify-between w-full p-3 text-left hove,  r:bg-gray-800/50 rounded-lg transition-colors duration-200 group"
                     >
                       <div className="flex items-center space-x-3">
                         <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
                           <Icon className="w-3 h-3 text-white" />
                         </div>
-                        <span className="font-medium text-white group-hover:text-cyan-400 transition-colors duration-200">
+                        <span className="font-medium text-white group-hove, r:text-cyan-400 transition-colors duration-200">
                           {section.title}
                         </span>
                       </div>
                       <ChevronDown 
                         className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-                          isExpanded ? 'rotate-180' : ''
+                          isExpanded ? 'rotate-18, 0' : ''
                         }`} 
                       />
                     </button>
                     
                     {isExpanded && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2 }}
+                        initial={{ opacit, y: 0,
+    heigh, t: 0 }}
+                        animate={{ opacit, y: 1,
+    heigh, t: 'auto' }}
+                        exit={{ opacit, y: 0,
+    heigh, t: 0 }}
+                        transition={{ duratio, n: 0.2 }}
                         className="ml-6 space-y-2"
                       >
                         {section.items.map((item) => {
                           const ItemIcon = item.icon;
                           const isActive = location.pathname === item.path;
                           
-                          return (
-                            <Link
+                          return (<Link
                               key={item.path}
                               to={item.path}
                               className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 group ${
                                 isActive 
                                   ? 'bg-cyan-500/20 border border-cyan-500/30 text-cyan-400' 
-                                  : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                                  : 'text-gray-300 hove,  r:text-white hove, r:bg-gray-800/5, 0'
                               }`}
                               onClick={onClose}
                             >
@@ -2351,7 +3492,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                                   </div>
                                 )}
                               </div>
-                              <ChevronRight className="w-3 h-3 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
+                              <ChevronRight className="w-3 h-3 text-gray-500 group-hove, r:text-cyan-400 transition-colors duration-200" />
                             </Link>
                           );
                         })}
@@ -2368,13 +3509,12 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               <div className="space-y-3">
                 <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Contact</h4>
                 <div className="space-y-2">
-                  {contactInfo.map((contact, index) => {
+                  {contactInfo.map((contac,  t, index) => {
                     const Icon = contact.icon;
-                    return (
-                      <a
+                    return (<a
                         key={index}
                         href={contact.href}
-                        className="flex items-center space-x-3 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                        className="flex items-center space-x-3 text-sm text-gray-400 hove,  r:text-cyan-400 transition-colors duration-200"
                       >
                         <Icon className="w-4 h-4" />
                         <span>{contact.label}</span>
@@ -2389,11 +3529,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   Contact Info
                 </h3>
                 <div className="space-y-3">
-                  {contactInfo.map((contact, idx) => (
-                    <a
+                  {contactInfo.map((contac,  t, idx) => (<a
                       key={idx}
                       href={contact.href}
-                      className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+                      className="flex items-center space-x-3 text-gray-300 hove,  r:text-cyan-400 transition-colors duration-200"
                     >
                       <contact.icon className="w-4 h-4" />
                       <span className="text-sm">{contact.text}</span>
@@ -2412,7 +3551,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       <Link
                         key={item.name}
                         to={item.path}
-                        className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-all duration-200"
+                        className="flex items-center space-x-3 px-3 py-2 text-gray-300 hove,  r:text-white hove, r:bg-gray-800/50 rounded-md transition-all duration-200"
                       >
                         <item.icon className="w-5 h-5 text-cyan-500" />
                         <span className="text-sm">{item.name}</span>
@@ -2427,13 +3566,12 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   Follow Us
                 </h3>
                 <div className="flex space-x-4">
-                  {socialLinks.map((social, idx) => (
-                    <a
+                  {socialLinks.map((socia,  l, idx) => (<a
                       key={idx}
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-400/10 rounded-lg transition-all duration-200"
+                      className="p-2 text-gray-400 hove,  r:text-cyan-400 hove, r:bg-cyan-400/10 rounded-lg transition-all duration-200"
                       title={social.label}
 =======
               {/* Social Links */}
@@ -2442,13 +3580,12 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   Follow Us
                 </h3>
                 <div className="flex space-x-3">
-                  {socialLinks.map((social, index) => (
-                    <a
+                  {socialLinks.map((socia, l, index) => (<a
                       key={index}
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 bg-black/30 border border-cyan-500/20 rounded-lg text-gray-400 hover:text-cyan-400 hover:border-cyan-400/40 hover:bg-cyan-500/10 transition-all duration-200 hover:scale-110"
+                      className="p-3 bg-black/30 border border-cyan-500/20 rounded-lg text-gray-400 hove,  r:text-cyan-400 hove, r:border-cyan-400/40 hove, r:bg-cyan-500/10 transition-all duration-200 hove, r:scale-110"
                       aria-label={social.label}
                     >
                       <social.icon className="w-5 h-5" />
@@ -2475,7 +3612,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               </div>
               <button
                 onClick={onClose}
-                className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                className="p-2 rounded-md text-muted-foreground hove, r:text-foreground hove, r:bg-muted transition-colors"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -2501,10 +3638,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     Quick Actions
                   </h3>
                   <div className="space-y-2">
-                    <button className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hover:scale-105 transition-transform">
+                    <button className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hove,  r:scale-105 transition-transform">
                       Get Free Quote
                     </button>
-                    <button className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hover:bg-zion-cyan/10 transition-colors">
+                    <button className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove, r:bg-zion-cyan/10 transition-colors">
                       Schedule Demo
                     </button>
                   </div>
@@ -2517,15 +3654,14 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-zion-cyan neon-text">Contact Info</h4>
                   <div className="space-y-2">
-                    {contactInfo.map((contact, index) => {
+                    {contactInfo.map((contac, t, index) => {
                       const Icon = contact.icon;
-                      return (
-                        <a
+                      return (<a
                           key={index}
                           href={contact.href}
-                          className="flex items-center gap-3 text-sm text-zion-slate-light hover:neon-text transition-colors group"
+                          className="flex items-center gap-3 text-sm text-zion-slate-light hove,  r:neon-text transition-colors group"
                         >
-                          <Icon className="w-4 h-4 text-zion-cyan group-hover:neon-text" />
+                          <Icon className="w-4 h-4 text-zion-cyan group-hove, r:neon-text" />
                           <span className="flex-1">{contact.text}</span>
                         </a>
                           <IconComponent className="w-4 h-4 flex-shrink-0" />
@@ -2535,11 +3671,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       );
                     })}
 =======
-                    {contactInfo.map((contact, index) => (
-                      <a
+                    {contactInfo.map((contac,  t, index) => (<a
                         key={index}
                         href={contact.href}
-                        className="flex items-center space-x-2 text-xs text-gray-300 hover:text-cyan-400 transition-colors"
+                        className="flex items-center space-x-2 text-xs text-gray-300 hove,  r:text-cyan-400 transition-colors"
                       >
                         <contact.icon className="w-3 h-3" />
                         <span>{contact.text}</span>
@@ -2548,7 +3683,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   </div>
 =======
 =======
-                          <Icon className="w-4 h-4 text-zion-cyan group-hover:neon-text" />
+                          <Icon className="w-4 h-4 text-zion-cyan group-hove, r:neon-text" />
                           <span className="flex-1">{contact.text}</span>
                         </a>
                       );
@@ -2560,18 +3695,17 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-zion-cyan neon-text">Follow Us</h4>
                   <div className="flex gap-3">
-                    {socialLinks.map((social, index) => {
+                    {socialLinks.map((socia,  l, index) => {
                       const Icon = social.icon;
-                      return (
-                        <a
+                      return (<a
                           key={index}
                           href={social.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 futuristic-card hover:bg-white/20 rounded-lg transition-colors group"
+                          className="p-2 futuristic-card hove,  r:bg-white/20 rounded-lg transition-colors group"
                           aria-label={social.label}
                         >
-                          <Icon className="w-4 h-4 text-zion-slate-light group-hover:neon-text transition-colors" />
+                          <Icon className="w-4 h-4 text-zion-slate-light group-hove, r:neon-text transition-colors" />
                         </a>
                       );
                     })}
@@ -2601,7 +3735,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-zion-cyan transition-colors"
+                      className="text-muted-foreground hove,  r:text-zion-cyan transition-colors"
                       aria-label={social.label}
                     >
                       <social.icon className="h-5 w-5" />
@@ -2627,7 +3761,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               </div>
               <button
                 onClick={onClose}
-                className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                className="p-2 text-gray-400 hove, r:text-white hove, r:bg-gray-800 rounded-lg transition-colors duration-200 focu, s:outline-none focu, s:ring-2 focu, s:ring-cyan-500"
                 aria-label="Close sidebar"
               >
                 <X className="w-5 h-5" />
@@ -2636,25 +3770,23 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
 
             {/* Navigation */}
             <nav className="p-6 space-y-8">
-              {navigationItems.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="space-y-3">
+              {navigationItems.map((sectio,  n, sectionIndex) => (<div key={sectionIndex} className="space-y-3">
                   <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
                     {section.title}
                   </h3>
                   <ul className="space-y-1">
-                    {section.items.map((item, itemIndex) => (
-                      <li key={itemIndex}>
+                    {section.items.map((ite,  m, itemIndex) => (<li key={itemIndex}>
                         <Link
                           to={item.path}
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
                             location.pathname === item.path
                               ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
-                              : 'text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50'
+                              : 'text-gray-300 hove,  r:text-cyan-400 hove, r:bg-gray-800/5, 0'
                           }`}
                           onClick={onClose}
                         >
                           <item.icon className={`w-4 h-4 flex-shrink-0 ${
-                            location.pathname === item.path ? 'text-cyan-400' : 'text-gray-400 group-hover:text-cyan-400'
+                            location.pathname === item.path ? 'text-cyan-400' : 'text-gray-400 group-hove, r:text-cyan-40, 0'
                           }`} />
                           <span className="font-medium">{item.name}</span>
                         </Link>
@@ -2671,14 +3803,13 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 Contact Information
               </h3>
               <div className="space-y-3">
-                {contactInfo.map((contact, index) => (
-                  <div key={index} className="flex items-center space-x-3">
+                {contactInfo.map((contac,  t, index) => (<div key={index} className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center flex-shrink-0">
                       <contact.icon className="w-4 h-4 text-cyan-400" />
                     </div>
                     <a
                       href={contact.href}
-                      className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                      className="text-gray-300 hove,  r:text-cyan-400 transition-colors duration-200 text-sm"
                     >
                       {contact.text}
                     </a>
@@ -2693,8 +3824,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 Follow Us
               </h3>
               <div className="flex space-x-3">
-                {socialLinks.map((social, index) => (
-                  <a
+                {socialLinks.map((socia,  l, index) => (<a
                     key={index}
                     href={social.href}
                     target="_blank"
@@ -2711,7 +3841,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       <Link
                         key={item.name}
                         to={item.path}
-                        className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-all duration-200"
+                        className="flex items-center space-x-3 px-3 py-2 text-gray-300 hove,  r:text-white hove, r:bg-gray-800/50 rounded-md transition-all duration-200"
                       >
                         <item.icon className="w-5 h-5 text-cyan-500" />
                         <span className="text-sm">{item.name}</span>
@@ -2733,12 +3863,12 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   <a
                     key={contact.text}
                     href={contact.href}
-                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+                    className="flex items-center space-x-3 text-gray-300 hove,  r:text-cyan-400 transition-colors duration-200"
                   >
                     <contact.icon className="w-4 h-4 text-cyan-500" />
                     <span className="text-sm">{contact.text}</span>
 =======
-                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-200"
+                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hove, r:text-white hove, r:bg-gray-700 transition-all duration-200"
                     aria-label={social.label}
                   >
                     <social.icon className="w-5 h-5" />
@@ -2752,7 +3882,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             <div className="p-6 border-t border-gray-800">
               <Link
                 to="/contact"
-                className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+                className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 px-4 rounded-lg font-medium hove, r:from-cyan-600 hove, r:to-purple-700 transition-all duration-200 transform hove, r:scale-105"
               >
                 Get Started
               </Link>
@@ -2767,14 +3897,14 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               <div className="space-y-2">
                 <Link
                   to="/contact"
-                  className="block w-full text-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                  className="block w-full text-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hove, r:from-cyan-600 hove, r:to-blue-700 transition-all duration-300"
                   onClick={onClose}
                 >
                   Get Started
                 </Link>
                 <Link
                   to="/demo"
-                  className="block w-full text-center px-4 py-2 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+                  className="block w-full text-center px-4 py-2 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hove, r:bg-cyan-500/10 transition-all duration-300"
                   onClick={onClose}
                 >
                   Request Demo
@@ -2818,11 +3948,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 Contact Information
               </h3>
               <div className="space-y-2">
-                {contactInfo.map((contact, index) => (
-                  <a
+                {contactInfo.map((contac,  t, index) => (<a
                     key={index}
                     href={contact.href}
-                    className="flex items-center space-x-3 px-3 py-2 rounded-lg text-sm text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-300 group"
+                    className="flex items-center space-x-3 px-3 py-2 rounded-lg text-sm text-gray-300 hove,  r:text-white hove, r:bg-gray-800/50 transition-all duration-300 group"
                   >
                     <contact.icon className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                     <span className="text-xs">{contact.text}</span>
@@ -2837,14 +3966,13 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 Follow Us
               </h3>
               <div className="flex flex-wrap gap-2 px-3">
-                {socialLinks.map((social, index) => (
-                  <a
+                {socialLinks.map((socia,  l, index) => (<a
                     key={index}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-400 hover:from-cyan-400/30 hover:to-blue-400/30 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110"
-                    aria-label={`Follow us on ${social.label}`}
+                    className="w-8 h-8 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-400 hove,  r:from-cyan-400/30 hove, r:to-blue-400/30 hove, r:border-cyan-400/50 transition-all duration-300 hove, r:scale-110"
+                    aria-label={`Follow us on ${social.labe, l}`}
                   >
                     <social.icon className="w-4 h-4" />
                   </a>
@@ -2857,13 +3985,13 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               <div className="space-y-2">
                 <Link
                   to="/contact"
-                  className="block w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 text-sm font-medium text-center"
+                  className="block w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hove, r:from-cyan-400 hove, r:to-blue-400 transition-all duration-300 text-sm font-medium text-center"
                 >
                   Get Started
                 </Link>
                 <Link
                   to="/contact"
-                  className="block w-full px-4 py-2 border border-cyan-400/50 text-cyan-400 rounded-lg hover:bg-cyan-400/20 transition-all duration-300 text-sm font-medium text-center"
+                  className="block w-full px-4 py-2 border border-cyan-400/50 text-cyan-400 rounded-lg hove, r:bg-cyan-400/20 transition-all duration-300 text-sm font-medium text-center"
                 >
                   Request Quote
                 </Link>
@@ -2883,7 +4011,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <Link
                   to="/contact"
                   onClick={onClose}
-                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg text-center transition-all duration-200 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg text-center transition-all duration-200 transform hove, r:scale-105 hove, r:shadow-lg hove, r:shadow-cyan-500/25"
                 >
                   Get Started Today
                 </Link>
@@ -2902,10 +4030,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   <button
                     key={social.label}
                     onClick={() => handleSocialLinkClick(social)}
-                    className="w-10 h-10 bg-gray-800 hover:bg-cyan-600 rounded-lg flex items-center justify-center transition-all duration-200 group"
+                    className="w-10 h-10 bg-gray-800 hove,  r:bg-cyan-600 rounded-lg flex items-center justify-center transition-all duration-200 group"
                     title={social.label}
                   >
-                    <social.icon className="w-5 h-5 text-gray-300 group-hover:text-white" />
+                    <social.icon className="w-5 h-5 text-gray-300 group-hove, r:text-white" />
                   </button>
                 ))}
               </div>
@@ -2918,9 +4046,9 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm"
+                  className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focu, s:outline-none focu, s:ring-2 focu, s:ring-cyan-500 focu, s:border-transparent text-sm"
                 />
-                <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 font-medium text-sm">
+                <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hove, r:from-cyan-600 hove, r:to-purple-700 transition-all duration-200 font-medium text-sm">
                   Subscribe
                 </button>
               </div>
@@ -2936,30 +4064,38 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     </>
 =======
   const quickActions = [
-    { name: 'Get Started', href: '/contact', icon: Rocket, color: 'from-zion-cyan to-zion-blue' },
-    { name: 'Request Demo', href: '/request-quote', icon: Video, color: 'from-zion-purple to-zion-cyan' },
-    { name: 'Support Chat', href: '/support', icon: MessageSquare, color: 'from-green-400 to-emerald-400' }
+    { na, m, e: 'Ge, t Starte, d',
+    hr, e, f: '/contac, t', ic, o, n: Rock, e, t,
+    col, o, r: 'fro, m-zio, n-cya, n t, o-zio, n-blu, e' },
+    { na, m, e: 'Reques, t Dem, o',
+    hr, e, f: '/reques, t-quot, e', ic, o, n: Vid, e, o,
+    col, o, r: 'fro, m-zio, n-purpl, e t, o-zio, n-cya, n' },
+    { na, m, e: 'Suppor, t Cha, t',
+    hr, e, f: '/suppor, t', ic, o, n: MessageSqua, r, e,
+    col, o, r: 'fro, m-gree, n-40, 0 t, o-emeral, d-40, 0' }
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        staggerChildren: 0.1
+    hidde, n: { opacit, y: 0,
+    x: -20 },
+    visibl, e: {
+      opacit, y: 1,
+    x: 0,
+      transitio, n: {
+        staggerChildre, n: 0.1
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -10 },
-    visible: { opacity: 1, x: 0 }
+    hidde, n: { opacit, y: 0,
+    x: -10 },
+    visibl, e: { opacit, y: 1,
+    x: 0 }
   };
 
-  return (
-    <motion.aside 
-      className={cn("w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 min-h-screen overflow-y-auto", className)}
+  return (<motion.aside 
+      className={cn("w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 min-h-screen overflow-y-auto",  className)}
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -2987,12 +4123,12 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             <Link
               key={action.name}
               to={action.href}
-              className="flex items-center space-x-3 p-3 rounded-lg bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group"
+              className="flex items-center space-x-3 p-3 rounded-lg bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 hove,  r:border-zion-cyan/40 transition-all duration-300 group"
             >
-              <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${action.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${action.color} flex items-center justify-center group-hove, r:scale-110 transition-transform duration-30, 0`}>
                 <action.icon className="w-4 h-4 text-white" />
               </div>
-              <span className="text-sm font-medium text-white group-hover:text-zion-cyan transition-colors duration-300">
+              <span className="text-sm font-medium text-white group-hove, r:text-zion-cyan transition-colors duration-300">
                 {action.name}
               </span>
             </Link>
@@ -3018,178 +4154,339 @@ const CheckCircle = ({ className }: { className?: string }) => (
   </svg>
 );
 =======
-  MessageSquare, 
-  BarChart3,
-  ShoppingCart,
-  Wrench,
-  Globe,
-  Building,
-  Code,
-  Shield,
-  Zap,
-  ChevronRight,
+  MessageSquar,  e, 
+  BarChart, 3,
+  ShoppingCar, t,
+  Wrenc, h,
+  Glob, e,
+  Buildin, g,
+  Cod, e,
+  Shiel, d,
+  Za, p,
+  ChevronRigh, t,
   ChevronDown
 } from 'lucide-react';
 
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpe, n: boolean;
+  onClos, e: () => void;
 }
 
-export default function Sidebar({ isOpen, onClose }: SidebarProps) {
+export default function Sidebar({ isOpe,  n, onClose }: SidebarProps) {
   const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  const [expandedSectio,  n, s, setExpandedSectio, n, s] = useState<string[]>([]);
 
   // Close sidebar when route changes
   useEffect(() => {
     onClose();
-  }, [location.pathname, onClose]);
+  },  [locatio, n.pathna, m, e, onClo, s, e]);
 
-  const toggleSection = (sectionTitle: string) => {
+  const toggleSection = (sectionTitl,  e: string) => {
     setExpandedSections(prev => 
       prev.includes(sectionTitle) 
         ? prev.filter(title => title !== sectionTitle)
-        : [...prev, sectionTitle]
+        : [...pr,  e, v, sectionTit, l, e]
     );
   };
 
   const navigationItems = [
     {
-      title: 'Main Navigation',
-      items: [
-        { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
-        { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' },
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Rocket, description: 'Industry solutions' },
-        { name: 'Pricing', path: '/pricing', icon: DollarSign, description: 'Service plans and pricing' },
-        { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our company' },
-        { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
+      tit, l, e: 'Mai, n Navigatio, n',
+    ite, m, s: [
+        { na, m, e: 'Hom, e',
+    pa, t, h: '/', ic, o, n: Ho, m, e,
+    descripti, o, n: 'Welcom, e t, o Zio, n Tec, h Grou, p' },
+        { na, m, e: 'Service, s Overvie, w',
+    pa, t, h: '/service, s', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Al, l ou, r service, s' },
+        { na, m, e: 'Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Rock, e, t,
+    descripti, o, n: 'Industr, y solution, s' },
+        { na, m, e: 'Pricin, g',
+    pa, t, h: '/pricin, g', ic, o, n: DollarSi, g, n,
+    descripti, o, n: 'Servic, e plan, s an, d pricin, g' },
+        { na, m, e: 'Abou, t U, s',
+    pa, t, h: '/abou, t', ic, o, n: Use, r, s,
+    descripti, o, n: 'Lear, n abou, t ou, r compan, y' },
+        { na, m, e: 'Contac, t',
+    pa, t, h: '/contac, t', ic, o, n: Pho, n, e,
+    descripti, o, n: 'Ge, t i, n touc, h wit, h u, s' }
       ]
     },
     {
-      title: 'AI & Autonomous Systems',
-      items: [
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain, description: 'Advanced AI solutions' },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain, description: 'AI-powered research' },
-        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Brain, description: 'Autonomous business management' },
-        { name: 'AI Business Platform', path: '/ai-autonomous-business-platform', icon: Brain, description: 'Complete business platform' },
-        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Code, description: 'Automated code review' },
-        { name: 'AI Creative Director', path: '/ai-autonomous-creative-director', icon: Palette, description: 'AI creative solutions' },
-        { name: 'AI Data Management', path: '/ai-autonomous-data', icon: Database, description: 'Intelligent data handling' },
-        { name: 'AI Decision Engine', path: '/ai-autonomous-decision-engine', icon: Brain, description: 'Smart decision making' },
-        { name: 'AI DevOps', path: '/ai-autonomous-devops', icon: Server, description: 'Automated DevOps' },
-        { name: 'AI Education', path: '/ai-autonomous-education-professor', icon: Users, description: 'AI learning systems' },
-        { name: 'AI Healthcare', path: '/ai-autonomous-healthcare-physician', icon: Heart, description: 'Medical AI solutions' },
-        { name: 'AI Learning System', path: '/ai-autonomous-learning-system', icon: Lightbulb, description: 'Adaptive learning' },
-        { name: 'AI Legal Counsel', path: '/ai-autonomous-legal-counsel', icon: Shield, description: 'Legal AI assistance' },
-        { name: 'AI Logistics', path: '/ai-autonomous-logistics', icon: Truck, description: 'Smart logistics' },
-        { name: 'AI Manufacturing', path: '/ai-autonomous-manufacturing', icon: Building2, description: 'Smart manufacturing' },
-        { name: 'AI Research', path: '/ai-autonomous-research', icon: Brain, description: 'Research automation' },
-        { name: 'AI Robotics', path: '/ai-autonomous-robotics', icon: Cpu, description: 'Autonomous robotics' },
-        { name: 'AI Security', path: '/ai-autonomous-security', icon: Shield, description: 'Intelligent security' },
-        { name: 'AI Testing', path: '/ai-autonomous-testing', icon: Code, description: 'Automated testing' },
-        { name: 'AI Vehicles', path: '/ai-autonomous-vehicle', icon: Car, description: 'Autonomous vehicles' },
-        { name: 'AI Venture Capital', path: '/ai-autonomous-venture-capitalist', icon: TrendingUp, description: 'AI investment' }
+      titl, e: 'AI & Autonomous Systems',
+    item, s: [
+        { na, m, e: 'A, I & Autonomou, s System, s',
+    pa, t, h: '/service, s/a, i-autonomou, s-system, s', ic, o, n: Bra, i, n,
+    descripti, o, n: 'Advance, d A, I solution, s' },
+        { na, m, e: 'A, I Researc, h Assistan, t',
+    pa, t, h: '/a, i-autonomou, s-researc, h-assistan, t', ic, o, n: Bra, i, n,
+    descripti, o, n: 'A, I-powere, d researc, h' },
+        { na, m, e: 'A, I Busines, s Manage, r',
+    pa, t, h: '/a, i-autonomou, s-busines, s-manage, r', ic, o, n: Bra, i, n,
+    descripti, o, n: 'Autonomou, s busines, s managemen, t' },
+        { na, m, e: 'A, I Busines, s Platfor, m',
+    pa, t, h: '/a, i-autonomou, s-busines, s-platfor, m', ic, o, n: Bra, i, n,
+    descripti, o, n: 'Complet, e busines, s platfor, m' },
+        { na, m, e: 'A, I Cod, e Revie, w',
+    pa, t, h: '/a, i-autonomou, s-cod, e-revie, w', ic, o, n: Co, d, e,
+    descripti, o, n: 'Automate, d cod, e revie, w' },
+        { na, m, e: 'A, I Creativ, e Directo, r',
+    pa, t, h: '/a, i-autonomou, s-creativ, e-directo, r', ic, o, n: Palet, t, e,
+    descripti, o, n: 'A, I creativ, e solution, s' },
+        { na, m, e: 'A, I Dat, a Managemen, t',
+    pa, t, h: '/a, i-autonomou, s-dat, a', ic, o, n: Databa, s, e,
+    descripti, o, n: 'Intelligen, t dat, a handlin, g' },
+        { na, m, e: 'A, I Decisio, n Engin, e',
+    pa, t, h: '/a, i-autonomou, s-decisio, n-engin, e', ic, o, n: Bra, i, n,
+    descripti, o, n: 'Smar, t decisio, n makin, g' },
+        { na, m, e: 'A, I DevOp, s',
+    pa, t, h: '/a, i-autonomou, s-devop, s', ic, o, n: Serv, e, r,
+    descripti, o, n: 'Automate, d DevOp, s' },
+        { na, m, e: 'A, I Educatio, n',
+    pa, t, h: '/a, i-autonomou, s-educatio, n-professo, r', ic, o, n: Use, r, s,
+    descripti, o, n: 'A, I learnin, g system, s' },
+        { na, m, e: 'A, I Healthcar, e',
+    pa, t, h: '/a, i-autonomou, s-healthcar, e-physicia, n', ic, o, n: Hea, r, t,
+    descripti, o, n: 'Medica, l A, I solution, s' },
+        { na, m, e: 'A, I Learnin, g Syste, m',
+    pa, t, h: '/a, i-autonomou, s-learnin, g-syste, m', ic, o, n: Lightbu, l, b,
+    descripti, o, n: 'Adaptiv, e learnin, g' },
+        { na, m, e: 'A, I Lega, l Counse, l',
+    pa, t, h: '/a, i-autonomou, s-lega, l-counse, l', ic, o, n: Shie, l, d,
+    descripti, o, n: 'Lega, l A, I assistanc, e' },
+        { na, m, e: 'A, I Logistic, s',
+    pa, t, h: '/a, i-autonomou, s-logistic, s', ic, o, n: Tru, c, k,
+    descripti, o, n: 'Smar, t logistic, s' },
+        { na, m, e: 'A, I Manufacturin, g',
+    pa, t, h: '/a, i-autonomou, s-manufacturin, g', ic, o, n: Buildin, g, 2,
+    descripti, o, n: 'Smar, t manufacturin, g' },
+        { na, m, e: 'A, I Researc, h',
+    pa, t, h: '/a, i-autonomou, s-researc, h', ic, o, n: Bra, i, n,
+    descripti, o, n: 'Researc, h automatio, n' },
+        { na, m, e: 'A, I Robotic, s',
+    pa, t, h: '/a, i-autonomou, s-robotic, s', ic, o, n: C, p, u,
+    descripti, o, n: 'Autonomou, s robotic, s' },
+        { na, m, e: 'A, I Securit, y',
+    pa, t, h: '/a, i-autonomou, s-securit, y', ic, o, n: Shie, l, d,
+    descripti, o, n: 'Intelligen, t securit, y' },
+        { na, m, e: 'A, I Testin, g',
+    pa, t, h: '/a, i-autonomou, s-testin, g', ic, o, n: Co, d, e,
+    descripti, o, n: 'Automate, d testin, g' },
+        { na, m, e: 'A, I Vehicle, s',
+    pa, t, h: '/a, i-autonomou, s-vehicl, e', ic, o, n: C, a, r,
+    descripti, o, n: 'Autonomou, s vehicle, s' },
+        { na, m, e: 'A, I Ventur, e Capita, l',
+    pa, t, h: '/a, i-autonomou, s-ventur, e-capitalis, t', ic, o, n: Trending, U, p,
+    descripti, o, n: 'A, I investmen, t' }
       ]
     },
     {
-      title: 'Core Services',
-      items: [
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Atom, description: 'Quantum computing' },
-        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', icon: Rocket, description: 'Business automation' },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database, description: 'IT asset management' },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'Security solutions' },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield, description: 'Compliance automation' },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Atom, description: 'Quantum solutions' },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server, description: 'Infrastructure services' },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network, description: '5G technology' },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe, description: 'SAAS platforms' },
-        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud, description: 'Cloud solutions' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Zap, description: 'Workflow optimization' },
-        { name: 'Blockchain Solutions', path: '/blockchain-enterprise-solutions', icon: Lock, description: 'Blockchain technology' },
-        { name: 'IoT Data Analytics', path: '/iot-data-analytics', icon: Database, description: 'IoT solutions' },
-        { name: 'Digital Transformation', path: '/digital-transformation', icon: Globe, description: 'Digital strategy' },
-        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase, description: 'Industry-specific' }
+      titl, e: 'Core Services',
+    item, s: [
+        { na, m, e: 'Quantu, m Neura, l Network, s',
+    pa, t, h: '/quantu, m-neura, l-networ, k-platfor, m', ic, o, n: At, o, m,
+    descripti, o, n: 'Quantu, m computin, g' },
+        { na, m, e: 'Autonomou, s Busines, s Operation, s',
+    pa, t, h: '/autonomou, s-busines, s-operation, s-platfor, m', ic, o, n: Rock, e, t,
+    descripti, o, n: 'Busines, s automatio, n' },
+        { na, m, e: 'A, I Asse, t Managemen, t',
+    pa, t, h: '/a, i-powere, d-i, t-asse, t-managemen, t', ic, o, n: Databa, s, e,
+    descripti, o, n: 'I, T asse, t managemen, t' },
+        { na, m, e: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y', ic, o, n: Shie, l, d,
+    descripti, o, n: 'Securit, y solution, s' },
+        { na, m, e: 'SOC, 2 Complianc, e',
+    pa, t, h: '/soc, 2-complianc, e-automatio, n', ic, o, n: Shie, l, d,
+    descripti, o, n: 'Complianc, e automatio, n' },
+        { na, m, e: 'Quantu, m Technolog, y',
+    pa, t, h: '/service, s/quantu, m-technolog, y', ic, o, n: At, o, m,
+    descripti, o, n: 'Quantu, m solution, s' },
+        { na, m, e: 'I, T Infrastructur, e',
+    pa, t, h: '/service, s/i, t-infrastructur, e', ic, o, n: Serv, e, r,
+    descripti, o, n: 'Infrastructur, e service, s' },
+        { na, m, e: '5, G Enterpris, e Solution, s',
+    pa, t, h: '/5, g-enterpris, e-solution, s', ic, o, n: Netwo, r, k,
+    descripti, o, n: '5, G technolog, y' },
+        { na, m, e: 'Micr, o SAA, S Solution, s',
+    pa, t, h: '/service, s/micr, o-saa, s-solution, s', ic, o, n: Glo, b, e,
+    descripti, o, n: 'SAA, S platform, s' },
+        { na, m, e: 'Clou, d & DevOp, s',
+    pa, t, h: '/clou, d-devop, s', ic, o, n: Clo, u, d,
+    descripti, o, n: 'Clou, d solution, s' },
+        { na, m, e: 'A, I Workflo, w Automatio, n',
+    pa, t, h: '/a, i-workflo, w-automatio, n', ic, o, n: Z, a, p,
+    descripti, o, n: 'Workflo, w optimizatio, n' },
+        { na, m, e: 'Blockchai, n Solution, s',
+    pa, t, h: '/blockchai, n-enterpris, e-solution, s', ic, o, n: Lo, c, k,
+    descripti, o, n: 'Blockchai, n technolog, y' },
+        { na, m, e: 'Io, T Dat, a Analytic, s',
+    pa, t, h: '/io, t-dat, a-analytic, s', ic, o, n: Databa, s, e,
+    descripti, o, n: 'Io, T solution, s' },
+        { na, m, e: 'Digita, l Transformatio, n',
+    pa, t, h: '/digita, l-transformatio, n', ic, o, n: Glo, b, e,
+    descripti, o, n: 'Digita, l strateg, y' },
+        { na, m, e: 'Industr, y Solution, s',
+    pa, t, h: '/service, s/industr, y-solution, s', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Industr, y-specifi, c' }
       ]
     },
     {
-      title: 'Industry Solutions',
-      items: [
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building, description: 'Enterprise technology' },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart, description: 'Medical technology' },
-        { name: 'Financial Solutions', path: '/solutions/financial', icon: DollarSign, description: 'Fintech solutions' },
-        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Building2, description: 'Industry 4.0' },
-        { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart, description: 'Retail technology' },
-        { name: 'Government Solutions', path: '/solutions/government', icon: Shield, description: 'Public sector tech' },
-        { name: 'Education Solutions', path: '/solutions/education', icon: Users, description: 'Educational technology' },
-        { name: 'Energy Solutions', path: '/solutions/energy', icon: Zap, description: 'Energy technology' },
-        { name: 'Transportation Solutions', path: '/solutions/transportation', icon: Truck, description: 'Mobility solutions' }
+      titl, e: 'Industry Solutions',
+    item, s: [
+        { na, m, e: 'Enterpris, e Solution, s',
+    pa, t, h: '/solution, s/enterpris, e', ic, o, n: Buildi, n, g,
+    descripti, o, n: 'Enterpris, e technolog, y' },
+        { na, m, e: 'Healthcar, e Solution, s',
+    pa, t, h: '/solution, s/healthcar, e', ic, o, n: Hea, r, t,
+    descripti, o, n: 'Medica, l technolog, y' },
+        { na, m, e: 'Financia, l Solution, s',
+    pa, t, h: '/solution, s/financia, l', ic, o, n: DollarSi, g, n,
+    descripti, o, n: 'Fintec, h solution, s' },
+        { na, m, e: 'Manufacturin, g Solution, s',
+    pa, t, h: '/solution, s/manufacturin, g', ic, o, n: Buildin, g, 2,
+    descripti, o, n: 'Industr, y 4.0' },
+        { na, m, e: 'Retai, l Solution, s',
+    pa, t, h: '/solution, s/retai, l', ic, o, n: ShoppingCa, r, t,
+    descripti, o, n: 'Retai, l technolog, y' },
+        { na, m, e: 'Governmen, t Solution, s',
+    pa, t, h: '/solution, s/governmen, t', ic, o, n: Shie, l, d,
+    descripti, o, n: 'Publi, c secto, r tec, h' },
+        { na, m, e: 'Educatio, n Solution, s',
+    pa, t, h: '/solution, s/educatio, n', ic, o, n: Use, r, s,
+    descripti, o, n: 'Educationa, l technolog, y' },
+        { na, m, e: 'Energ, y Solution, s',
+    pa, t, h: '/solution, s/energ, y', ic, o, n: Z, a, p,
+    descripti, o, n: 'Energ, y technolog, y' },
+        { na, m, e: 'Transportatio, n Solution, s',
+    pa, t, h: '/solution, s/transportatio, n', ic, o, n: Tru, c, k,
+    descripti, o, n: 'Mobilit, y solution, s' }
       ]
     },
     {
-      title: 'Company & Resources',
-      items: [
-        { name: 'About Us', path: '/about', icon: Users, description: 'Our story' },
-        { name: 'Our Team', path: '/team', icon: Users, description: 'Meet the team' },
-        { name: 'Partners', path: '/partners', icon: Handshake, description: 'Partnerships' },
-        { name: 'Case Studies', path: '/case-studies', icon: FileText, description: 'Success stories' },
-        { name: 'News & Updates', path: '/news', icon: Newspaper, description: 'Latest news' },
-        { name: 'Blog', path: '/blog', icon: FileText, description: 'Insights & articles' },
-        { name: 'Events', path: '/events', icon: Calendar, description: 'Upcoming events' },
-        { name: 'Webinars', path: '/webinars', icon: Video, description: 'Educational content' },
-        { name: 'White Papers', path: '/white-papers', icon: FileText, description: 'Research papers' },
-        { name: 'Testimonials', path: '/testimonials', icon: Quote, description: 'Client feedback' },
-        { name: 'Careers', path: '/careers', icon: Briefcase, description: 'Join our team' }
+      titl, e: 'Company & Resources',
+    item, s: [
+        { na, m, e: 'Abou, t U, s',
+    pa, t, h: '/abou, t', ic, o, n: Use, r, s,
+    descripti, o, n: 'Ou, r stor, y' },
+        { na, m, e: 'Ou, r Tea, m',
+    pa, t, h: '/tea, m', ic, o, n: Use, r, s,
+    descripti, o, n: 'Mee, t th, e tea, m' },
+        { na, m, e: 'Partner, s',
+    pa, t, h: '/partner, s', ic, o, n: Handsha, k, e,
+    descripti, o, n: 'Partnership, s' },
+        { na, m, e: 'Cas, e Studie, s',
+    pa, t, h: '/cas, e-studie, s', ic, o, n: FileTe, x, t,
+    descripti, o, n: 'Succes, s storie, s' },
+        { na, m, e: 'New, s & Update, s',
+    pa, t, h: '/new, s', ic, o, n: Newspap, e, r,
+    descripti, o, n: 'Lates, t new, s' },
+        { na, m, e: 'Blo, g',
+    pa, t, h: '/blo, g', ic, o, n: FileTe, x, t,
+    descripti, o, n: 'Insight, s & article, s' },
+        { na, m, e: 'Event, s',
+    pa, t, h: '/event, s', ic, o, n: Calend, a, r,
+    descripti, o, n: 'Upcomin, g event, s' },
+        { na, m, e: 'Webinar, s',
+    pa, t, h: '/webinar, s', ic, o, n: Vid, e, o,
+    descripti, o, n: 'Educationa, l conten, t' },
+        { na, m, e: 'Whit, e Paper, s',
+    pa, t, h: '/whit, e-paper, s', ic, o, n: FileTe, x, t,
+    descripti, o, n: 'Researc, h paper, s' },
+        { na, m, e: 'Testimonial, s',
+    pa, t, h: '/testimonial, s', ic, o, n: Quo, t, e,
+    descripti, o, n: 'Clien, t feedbac, k' },
+        { na, m, e: 'Career, s',
+    pa, t, h: '/career, s', ic, o, n: Briefca, s, e,
+    descripti, o, n: 'Joi, n ou, r tea, m' }
       ]
     },
     {
-      title: 'Support & Help',
-      items: [
-        { name: 'Help Center', path: '/help', icon: HelpCircle, description: 'Get help' },
-        { name: 'Documentation', path: '/docs', icon: FileText, description: 'Technical docs' },
-        { name: 'Contact Support', path: '/support', icon: Phone, description: 'Support team' },
-        { name: 'FAQ', path: '/faq', icon: HelpCircle, description: 'Frequently asked' },
-        { name: 'Status Page', path: '/status', icon: Monitor, description: 'System status' },
-        { name: 'Training', path: '/training', icon: Users, description: 'Training programs' },
-        { name: 'Tutorials', path: '/tutorials', icon: FileText, description: 'Learning guides' }
+      titl, e: 'Support & Help',
+    item, s: [
+        { na, m, e: 'Hel, p Cente, r',
+    pa, t, h: '/hel, p', ic, o, n: HelpCirc, l, e,
+    descripti, o, n: 'Ge, t hel, p' },
+        { na, m, e: 'Documentatio, n',
+    pa, t, h: '/doc, s', ic, o, n: FileTe, x, t,
+    descripti, o, n: 'Technica, l doc, s' },
+        { na, m, e: 'Contac, t Suppor, t',
+    pa, t, h: '/suppor, t', ic, o, n: Pho, n, e,
+    descripti, o, n: 'Suppor, t tea, m' },
+        { na, m, e: 'FA, Q',
+    pa, t, h: '/fa, q', ic, o, n: HelpCirc, l, e,
+    descripti, o, n: 'Frequentl, y aske, d' },
+        { na, m, e: 'Statu, s Pag, e',
+    pa, t, h: '/statu, s', ic, o, n: Monit, o, r,
+    descripti, o, n: 'Syste, m statu, s' },
+        { na, m, e: 'Trainin, g',
+    pa, t, h: '/trainin, g', ic, o, n: Use, r, s,
+    descripti, o, n: 'Trainin, g program, s' },
+        { na, m, e: 'Tutorial, s',
+    pa, t, h: '/tutorial, s', ic, o, n: FileTe, x, t,
+    descripti, o, n: 'Learnin, g guide, s' }
       ]
     },
     {
-      title: 'Legal & Compliance',
-      items: [
-        { name: 'Privacy Policy', path: '/privacy', icon: Shield, description: 'Privacy information' },
-        { name: 'Terms of Service', path: '/terms', icon: FileText, description: 'Terms and conditions' },
-        { name: 'Cookie Policy', path: '/cookies', icon: Shield, description: 'Cookie usage' },
-        { name: 'Data Protection', path: '/data-protection', icon: Lock, description: 'Data security' },
-        { name: 'Security', path: '/security', icon: Shield, description: 'Security measures' },
-        { name: 'Compliance', path: '/compliance', icon: CheckCircle, description: 'Regulatory compliance' }
+      titl, e: 'Legal & Compliance',
+    item, s: [
+        { na, m, e: 'Privac, y Polic, y',
+    pa, t, h: '/privac, y', ic, o, n: Shie, l, d,
+    descripti, o, n: 'Privac, y informatio, n' },
+        { na, m, e: 'Term, s o, f Servic, e',
+    pa, t, h: '/term, s', ic, o, n: FileTe, x, t,
+    descripti, o, n: 'Term, s an, d condition, s' },
+        { na, m, e: 'Cooki, e Polic, y',
+    pa, t, h: '/cookie, s', ic, o, n: Shie, l, d,
+    descripti, o, n: 'Cooki, e usag, e' },
+        { na, m, e: 'Dat, a Protectio, n',
+    pa, t, h: '/dat, a-protectio, n', ic, o, n: Lo, c, k,
+    descripti, o, n: 'Dat, a securit, y' },
+        { na, m, e: 'Securit, y',
+    pa, t, h: '/securit, y', ic, o, n: Shie, l, d,
+    descripti, o, n: 'Securit, y measure, s' },
+        { na, m, e: 'Complianc, e',
+    pa, t, h: '/complianc, e', ic, o, n: CheckCirc, l, e,
+    descripti, o, n: 'Regulator, y complianc, e' }
       ]
     }
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
-    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', url: 'https://github.com/Zion-Holdings', icon: Github },
-    { name: 'YouTube', url: 'https://www.youtube.com/@ziontechgroup', icon: Youtube },
-    { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram }
+    { na, m, e: 'LinkedI, n',
+    u, r, l: 'htt, p, s: //ww, w.linkedi, n.co, m/compan, y/zio, n-tec, h-grou, p',
+    ic, o, n: Linkedi, n },
+    { na, m, e: 'Twitte, r',
+    u, r, l: 'htt, p, s: //twitte, r.co, m/ziontechgrou, p',
+    ic, o, n: Twitte, r },
+    { na, m, e: 'GitHu, b',
+    u, r, l: 'htt, p, s: //githu, b.co, m/Zio, n-Holding, s',
+    ic, o, n: Githu, b },
+    { na, m, e: 'YouTub, e',
+    u, r, l: 'htt, p, s: //ww, w.youtub, e.co, m/@ziontechgrou, p',
+    ic, o, n: Youtub, e },
+    { na, m, e: 'Faceboo, k',
+    u, r, l: 'htt, p, s: //faceboo, k.co, m/ziontechgrou, p',
+    ic, o, n: Faceboo, k },
+    { na, m, e: 'Instagra, m',
+    u, r, l: 'htt, p, s: //instagra, m.co, m/ziontechgrou, p',
+    ic, o, n: Instagra, m }
   ];
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    phon, e: '+1 302 464 0950',
+    emai, l: 'kleber@ziontechgroup.com',
+    addres, s: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
-  return (
-    <AnimatePresence>
+  return (<AnimatePresence>
       {isOpen && (
         <>
           {/* Backdrop */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacit,  y: 0 }}
+            animate={{ opacit, y: 1 }}
+            exit={{ opacit, y: 0 }}
             className="fixed inset-0 bg-black/50 z-40"
             onClick={onClose}
           />
@@ -3199,7 +4496,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            transition={{ typ, e: 'spring',
+    dampin, g: 2, 5, stiffnes, s: 200 }}
             className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark border-r border-zion-blue-light/30 z-50 overflow-y-auto"
           >
             {/* Header */}
@@ -3214,7 +4512,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               </div>
               <button
                 onClick={onClose}
-                className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors"
+                className="p-2 text-zion-slate-light hove, r:text-zion-cyan transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -3222,16 +4520,15 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
             {/* Navigation */}
             <div className="p-4 space-y-2">
-              {navigationItems.map((section) => (
-                <div key={section.title} className="space-y-1">
+              {navigationItems.map((section) => (<div key={section.title} className="space-y-1">
                   <button
                     onClick={() => toggleSection(section.title)}
-                    className="flex items-center justify-between w-full p-3 text-left text-white hover:text-zion-cyan hover:bg-zion-slate-light/10 rounded-lg transition-all duration-200"
+                    className="flex items-center justify-between w-full p-3 text-left text-white hove,  r:text-zion-cyan hove, r:bg-zion-slate-light/10 rounded-lg transition-all duration-200"
                   >
                     <span className="font-medium">{section.title}</span>
                     <ChevronDown 
                       className={`w-4 h-4 transition-transform duration-200 ${
-                        expandedSections.includes(section.title) ? 'rotate-180' : ''
+                        expandedSections.includes(section.title) ? 'rotate-18, 0' : ''
                       }`} 
                     />
                   </button>
@@ -3239,17 +4536,19 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <AnimatePresence>
                     {expandedSections.includes(section.title) && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2 }}
+                        initial={{ opacit,  y: 0,
+    heigh, t: 0 }}
+                        animate={{ opacit, y: 1,
+    heigh, t: 'auto' }}
+                        exit={{ opacit, y: 0,
+    heigh, t: 0 }}
+                        transition={{ duratio, n: 0.2 }}
                         className="ml-4 space-y-1"
                       >
-                        {section.items.map((item) => (
-                          <Link
+                        {section.items.map((item) => (<Link
                             key={item.path}
                             to={item.path}
-                            className="flex items-center space-x-3 p-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-slate-light/5 rounded-lg transition-all duration-200"
+                            className="flex items-center space-x-3 p-3 text-zion-slate-light hove,  r:text-zion-cyan hove, r:bg-zion-slate-light/5 rounded-lg transition-all duration-200"
                             onClick={onClose}
                           >
                             <item.icon className="w-4 h-4 flex-shrink-0" />
@@ -3276,13 +4575,13 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               <div className="space-y-2 text-sm text-zion-slate-light">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4 text-zion-cyan" />
-                  <a href={`tel:${contactInfo.phone}`} className="hover:text-zion-cyan transition-colors">
+                  <a href={`te, l:${contactInfo.phon, e}`} className="hove, r:text-zion-cyan transition-colors">
                     {contactInfo.phone}
                   </a>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4 text-zion-cyan" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-zion-cyan transition-colors">
+                  <a href={`mailt, o:${contactInfo.emai, l}`} className="hove, r:text-zion-cyan transition-colors">
                     {contactInfo.email}
                   </a>
                 </div>
@@ -3303,7 +4602,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 bg-zion-slate-light/20 rounded-lg flex items-center justify-center text-zion-slate-light hover:text-zion-cyan hover:bg-zion-slate-light/30 transition-all duration-300"
+                    className="w-8 h-8 bg-zion-slate-light/20 rounded-lg flex items-center justify-center text-zion-slate-light hove,  r:text-zion-cyan hove, r:bg-zion-slate-light/30 transition-all duration-300"
                     title={social.name}
                   >
                     <social.icon className="w-4 h-4" />

@@ -1,197 +1,204 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Lightbulb, TestTube, Brain, Atom, Target, Award, ArrowRight, TrendingUp, Users, Star, Globe, Shield, Cpu, Network } from 'lucide-react';
+impor, t, Reac, t, { useState } from 'react';
+import { motio, n, AnimatePresence } from 'framer-motion';
+import { Lightbul, b, TestTub, e, Brai, n, Ato, m, Targe, t, Awar, d, ArrowRigh, t, TrendingU, p, User, s, Sta, r, Glob, e, Shiel, d, Cp, u, Network } from 'lucide-react';
 const researchAreas = [
     {
-        id: 1,
-        title: "Artificial Intelligence & Machine Learning",
-        icon: <Brain className="w-8 h-8"/>,
-        color: "from-zion-purple to-zion-purple-dark",
-        description: "Advanced AI research in computer vision, natural language processing, and autonomous systems",
-        projects: 25,
-        researchers: 18,
-        publications: 12,
-        patents: 8,
-        funding: "$2.5M",
-        status: "Active",
-        highlights: [
-            "Computer Vision Breakthroughs",
-            "NLP Model Optimization",
-            "Autonomous Systems Research",
-            "AI Ethics & Governance"
+        i, d: 1,
+    tit, l, e: "Artificia, l Intelligenc, e & Machin, e Learnin, g",
+        ic, o, n: <Brai, n classNam, e="w-8 h-8"/>,
+    col, o, r: "fro, m-zio, n-purpl, e t, o-zio, n-purpl, e-dar, k",
+        descripti, o, n: "Advance, d A, I researc, h i, n comput, e, r, visi, o, n, natura, l langua, g, e, processi, n, g, an, d autonomou, s system, s",
+        projec, t, s: 2, 5,
+    researche, r, s: 1, 8,
+        publicatio, n, s: 1, 2,
+    paten, t, s: 8,
+        fundi, n, g: "$2.5, M",
+    stat, u, s: "Activ, e",
+        highligh, t, s: [
+            "Compute, r Visio, n Breakthrough, s",
+            "NL, P Mode, l Optimizatio, n",
+            "Autonomou, s System, s Researc, h",
+            "A, I Ethic, s & Governanc, e"
         ],
-        technologies: ["TensorFlow", "PyTorch", "OpenAI", "Custom Frameworks"],
-        partners: ["MIT", "Stanford", "Google Research", "Microsoft Research"]
+        technologie, s: ["TensorFlo, w", "PyTorc, h", "OpenA, I", "Custo, m Framework, s"],
+        partner, s: ["MI, T", "Stanfor, d", "Googl, e Researc, h", "Microsof, t Researc, h"]
     },
     {
-        id: 2,
-        title: "Quantum Computing & Cryptography",
-        icon: <Atom className="w-8 h-8"/>,
-        color: "from-zion-cyan to-zion-blue",
-        description: "Pioneering research in quantum algorithms, quantum-safe cryptography, and quantum machine learning",
-        projects: 18,
-        researchers: 12,
-        publications: 8,
-        patents: 5,
-        funding: "$1.8M",
-        status: "Active",
-        highlights: [
-            "Quantum Algorithm Development",
-            "Post-Quantum Cryptography",
-            "Quantum Machine Learning",
-            "Quantum Error Correction"
+        i, d: 2,
+    titl, e: "Quantum Computing & Cryptography",
+        ico, n: <Atom className="w-8 h-8"/>,
+    colo, r: "from-zion-cyan to-zion-blue",
+        descriptio, n: "Pioneering research in quantu, m, algorithm, s, quantum-saf, e, cryptograph, y, and quantum machine learning",
+        project, s: 1, 8,
+    researcher, s: 1, 2,
+        publication, s: 8,
+    patent, s: 5,
+        fundin, g: "$1.8M",
+    statu, s: "Active",
+        highlight, s: [
+            "Quantu, m Algorith, m Developmen, t",
+            "Pos, t-Quantu, m Cryptograph, y",
+            "Quantu, m Machin, e Learnin, g",
+            "Quantu, m Erro, r Correctio, n"
         ],
-        technologies: ["Qiskit", "Cirq", "Custom Quantum Simulators", "Cryptographic Libraries"],
-        partners: ["IBM Quantum", "Google Quantum", "MIT Lincoln Lab", "NIST"]
+        technologie, s: ["Qiski, t", "Cir, q", "Custo, m Quantu, m Simulator, s", "Cryptographi, c Librarie, s"],
+        partner, s: ["IB, M Quantu, m", "Googl, e Quantu, m", "MI, T Lincol, n La, b", "NIS, T"]
     },
     {
-        id: 3,
-        title: "Blockchain & Distributed Systems",
-        icon: <Network className="w-8 h-8"/>,
-        color: "from-zion-cyan-light to-zion-cyan",
-        description: "Research in blockchain scalability, consensus mechanisms, and decentralized applications",
-        projects: 22,
-        researchers: 15,
-        publications: 10,
-        patents: 6,
-        funding: "$2.1M",
-        status: "Active",
-        highlights: [
-            "Scalability Solutions",
-            "Consensus Mechanisms",
-            "DeFi Protocols",
-            "Cross-Chain Interoperability"
+        i, d: 3,
+    titl, e: "Blockchain & Distributed Systems",
+        ico, n: <Network className="w-8 h-8"/>,
+    colo, r: "from-zion-cyan-light to-zion-cyan",
+        descriptio, n: "Research in blockchai, n, scalabilit, y, consensu, s, mechanism, s, and decentralized applications",
+        project, s: 2, 2,
+    researcher, s: 1, 5,
+        publication, s: 1, 0,
+    patent, s: 6,
+        fundin, g: "$2.1M",
+    statu, s: "Active",
+        highlight, s: [
+            "Scalabilit, y Solution, s",
+            "Consensu, s Mechanism, s",
+            "DeF, i Protocol, s",
+            "Cros, s-Chai, n Interoperabilit, y"
         ],
-        technologies: ["Ethereum", "Polkadot", "Solana", "Custom Blockchains"],
-        partners: ["Ethereum Foundation", "Polkadot Network", "Cardano", "Chainlink"]
+        technologie, s: ["Ethereu, m", "Polkado, t", "Solan, a", "Custo, m Blockchain, s"],
+        partner, s: ["Ethereu, m Foundatio, n", "Polkado, t Networ, k", "Cardan, o", "Chainlin, k"]
     },
     {
-        id: 4,
-        title: "Cybersecurity & Privacy",
-        icon: <Shield className="w-8 h-8"/>,
-        color: "from-zion-purple-light to-zion-purple",
-        description: "Advanced research in threat detection, privacy-preserving technologies, and secure systems",
-        projects: 20,
-        researchers: 14,
-        publications: 9,
-        patents: 7,
-        funding: "$1.9M",
-        status: "Active",
-        highlights: [
-            "Threat Intelligence",
-            "Zero-Knowledge Proofs",
-            "Secure Multi-Party Computation",
-            "Privacy-Preserving ML"
+        i, d: 4,
+    titl, e: "Cybersecurity & Privacy",
+        ico, n: <Shield className="w-8 h-8"/>,
+    colo, r: "from-zion-purple-light to-zion-purple",
+        descriptio, n: "Advanced research in threa, t, detectio, n, privacy-preservin, g, technologie, s, and secure systems",
+        project, s: 2, 0,
+    researcher, s: 1, 4,
+        publication, s: 9,
+    patent, s: 7,
+        fundin, g: "$1.9M",
+    statu, s: "Active",
+        highlight, s: [
+            "Threa, t Intelligenc, e",
+            "Zer, o-Knowledg, e Proof, s",
+            "Secur, e Mult, i-Part, y Computatio, n",
+            "Privac, y-Preservin, g M, L"
         ],
-        technologies: ["Custom Security Tools", "Privacy Frameworks", "Threat Detection", "Encryption"],
-        partners: ["DARPA", "NSA", "CISA", "Academic Institutions"]
+        technologie, s: ["Custo, m Securit, y Tool, s", "Privac, y Framework, s", "Threa, t Detectio, n", "Encryptio, n"],
+        partner, s: ["DARP, A", "NS, A", "CIS, A", "Academi, c Institution, s"]
     },
     {
-        id: 5,
-        title: "Edge Computing & IoT",
-        icon: <Cpu className="w-8 h-8"/>,
-        color: "from-zion-cyan to-zion-purple",
-        description: "Research in edge computing architectures, IoT security, and distributed intelligence",
-        projects: 16,
-        researchers: 11,
-        publications: 7,
-        patents: 4,
-        funding: "$1.5M",
-        status: "Active",
-        highlights: [
-            "Edge AI Deployment",
-            "IoT Security Protocols",
-            "Distributed Computing",
-            "Real-time Processing"
+        i, d: 5,
+    titl, e: "Edge Computing & IoT",
+        ico, n: <Cpu className="w-8 h-8"/>,
+    colo, r: "from-zion-cyan to-zion-purple",
+        descriptio, n: "Research in edge computin, g, architecture, s, Io, T, securit, y, and distributed intelligence",
+        project, s: 1, 6,
+    researcher, s: 1, 1,
+        publication, s: 7,
+    patent, s: 4,
+        fundin, g: "$1.5M",
+    statu, s: "Active",
+        highlight, s: [
+            "Edg, e A, I Deploymen, t",
+            "Io, T Securit, y Protocol, s",
+            "Distribute, d Computin, g",
+            "Rea, l-tim, e Processin, g"
         ],
-        technologies: ["Kubernetes", "Docker", "Custom Edge Runtime", "IoT Frameworks"],
-        partners: ["Intel", "ARM", "Qualcomm", "Industrial Partners"]
+        technologie, s: ["Kubernete, s", "Docke, r", "Custo, m Edg, e Runtim, e", "Io, T Framework, s"],
+        partner, s: ["Inte, l", "AR, M", "Qualcom, m", "Industria, l Partner, s"]
     },
     {
-        id: 6,
-        title: "Sustainable Technology",
-        icon: <Globe className="w-8 h-8"/>,
-        color: "from-zion-purple to-zion-cyan",
-        description: "Research in green computing, renewable energy systems, and sustainable AI",
-        projects: 14,
-        researchers: 9,
-        publications: 6,
-        patents: 3,
-        funding: "$1.2M",
-        status: "Active",
-        highlights: [
-            "Green AI Algorithms",
-            "Energy-Efficient Computing",
-            "Renewable Energy Integration",
-            "Carbon Footprint Reduction"
+        i, d: 6,
+    titl, e: "Sustainable Technology",
+        ico, n: <Globe className="w-8 h-8"/>,
+    colo, r: "from-zion-purple to-zion-cyan",
+        descriptio, n: "Research in gree, n, computin, g, renewable energ, y, system, s, and sustainable AI",
+        project, s: 1, 4,
+    researcher, s: 9,
+        publication, s: 6,
+    patent, s: 3,
+        fundin, g: "$1.2M",
+    statu, s: "Active",
+        highlight, s: [
+            "Gree, n A, I Algorithm, s",
+            "Energ, y-Efficien, t Computin, g",
+            "Renewabl, e Energ, y Integratio, n",
+            "Carbo, n Footprin, t Reductio, n"
         ],
-        technologies: ["Energy Monitoring", "Green Computing", "Renewable Systems", "Sustainability Tools"],
-        partners: ["DOE", "EPA", "Academic Institutions", "Green Tech Companies"]
+        technologie, s: ["Energ, y Monitorin, g", "Gree, n Computin, g", "Renewabl, e System, s", "Sustainabilit, y Tool, s"],
+        partner, s: ["DO, E", "EP, A", "Academi, c Institution, s", "Gree, n Tec, h Companie, s"]
     }
 ];
 const innovationStats = [
-    { icon: <Lightbulb className="w-6 h-6"/>, value: "120+", label: "Research Projects" },
-    { icon: <Users className="w-6 h-6"/>, value: "80+", label: "Researchers" },
-    { icon: <Award className="w-6 h-6"/>, value: "50+", label: "Publications" },
-    { icon: <Target className="w-6 h-6"/>, value: "30+", label: "Patents Filed" },
-    { icon: <TrendingUp className="w-6 h-6"/>, value: "$10M+", label: "Research Funding" },
-    { icon: <Star className="w-6 h-6"/>, value: "15+", label: "Industry Partners" }
+    { ic, o, n: <Lightbul, b classNam, e="w-6 h-6"/>,
+    val, u, e: "12, 0+", lab, e, l: "Researc, h Project, s" },
+    { ic, o, n: <User, s classNam, e="w-6 h-6"/>,
+    val, u, e: "8, 0+", lab, e, l: "Researcher, s" },
+    { ic, o, n: <Awar, d classNam, e="w-6 h-6"/>,
+    val, u, e: "5, 0+", lab, e, l: "Publication, s" },
+    { ic, o, n: <Targe, t classNam, e="w-6 h-6"/>,
+    val, u, e: "3, 0+", lab, e, l: "Patent, s File, d" },
+    { ic, o, n: <TrendingU, p classNam, e="w-6 h-6"/>,
+    val, u, e: "$10, M+", lab, e, l: "Researc, h Fundin, g" },
+    { ic, o, n: <Sta, r classNam, e="w-6 h-6"/>,
+    val, u, e: "1, 5+", lab, e, l: "Industr, y Partner, s" }
 ];
 const researchLabs = [
     {
-        name: "AI Research Lab",
-        location: "San Francisco",
-        focus: "Machine Learning & Computer Vision",
-        equipment: "High-performance GPUs, Custom AI Infrastructure",
-        projects: 12,
-        researchers: 8
+        na, m, e: "A, I Researc, h La, b",
+    locati, o, n: "Sa, n Francisc, o",
+        foc, u, s: "Machin, e Learnin, g & Compute, r Visio, n",
+    equipme, n, t: "Hig, h-performan, c, e, GP, U, s, Custo, m A, I Infrastructur, e",
+        projec, t, s: 1, 2,
+    researche, r, s: 8
     },
     {
-        name: "Quantum Computing Lab",
-        location: "Boston",
-        focus: "Quantum Algorithms & Cryptography",
-        equipment: "Quantum Simulators, Cryptographic Testing",
-        projects: 8,
-        researchers: 6
+        na, m, e: "Quantu, m Computin, g La, b",
+    locati, o, n: "Bosto, n",
+        foc, u, s: "Quantu, m Algorithm, s & Cryptograph, y",
+    equipme, n, t: "Quant, u, m, Simulato, r, s, Cryptographi, c Testin, g",
+        projec, t, s: 8,
+    researche, r, s: 6
     },
     {
-        name: "Blockchain Innovation Lab",
-        location: "London",
-        focus: "Distributed Systems & DeFi",
-        equipment: "Blockchain Testnets, Smart Contract Testing",
-        projects: 10,
-        researchers: 7
+        na, m, e: "Blockchai, n Innovatio, n La, b",
+    locati, o, n: "Londo, n",
+        foc, u, s: "Distribute, d System, s & DeF, i",
+    equipme, n, t: "Blockcha, i, n, Testne, t, s, Smar, t Contrac, t Testin, g",
+        projec, t, s: 1, 0,
+    researche, r, s: 7
     },
     {
-        name: "Cybersecurity Lab",
-        location: "Washington DC",
-        focus: "Threat Detection & Privacy",
-        equipment: "Security Testing Environment, Privacy Tools",
-        projects: 9,
-        researchers: 5
+        na, m, e: "Cybersecurit, y La, b",
+    locati, o, n: "Washingto, n D, C",
+        foc, u, s: "Threa, t Detectio, n & Privac, y",
+    equipme, n, t: "Securit, y Testi, n, g, Environme, n, t, Privac, y Tool, s",
+        projec, t, s: 9,
+    researche, r, s: 5
     }
 ];
 export function InnovationResearchSection() {
-    const [selectedResearch, setSelectedResearch] = useState(null);
-    const [hoveredLab, setHoveredLab] = useState(null);
+    const [selectedResear,  c, h, setSelectedResear, c, h] = useState(null);
+    const [hoveredL, a, b, setHoveredL, a, b] = useState(null);
     const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.15,
-                delayChildren: 0.1
+        hidde,  n: { opacit, y: 0 },
+        visibl, e: {
+            opacit, y: 1,
+    transitio, n: {
+                staggerChildre, n: 0.1, 5,
+    delayChildre, n: 0.1
             }
         }
     };
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
-        visible: {
+        hidde, n: { y: 3, 0,
+    opacit, y: 0 },
+        visibl, e: {
             y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.6,
-                ease: "easeOut"
+    opacit, y: 1,
+            transitio, n: {
+                duratio, n: 0.6,
+    eas, e: "easeOut"
             }
         }
     };
@@ -205,18 +212,23 @@ export function InnovationResearchSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+        <motion.div className="text-center mb-20" initial={{ opacit, y: 0,
+    y: 20 }} whileInView={{ opacit, y: 1,
+    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6 }}>
+          <h2 className="text-4xl m, d:text-5xl l, g:text-6xl font-bold text-white mb-6">
             Innovation & <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Research</span>
           </h2>
-          <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
-            At Zion Tech Group, we push the boundaries of technology through cutting-edge research, 
-            innovative solutions, and collaborative partnerships with leading institutions worldwide.
+          <p className="text-zion-slate-light text-lg m, d:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
+            At Zion Tec, h, Grou, p, we push the boundaries of technology through cutting-edg, e, researc, h, 
+            innovativ, e, solution, s, and collaborative partnerships with leading institutions worldwide.
           </p>
 
           {/* Innovation stats */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
-            {innovationStats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+          <div className="grid grid-cols-2 m, d:grid-cols-3 l, g:grid-cols-6 gap-4 max-w-5xl mx-auto">
+            {innovationStats.map((sta, t, index) => (<motion.div key={index} initial={{ opacit,  y: 0,
+    scal, e: 0.8 }} whileInView={{ opacit, y: 1,
+    scal, e: 1 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.4,
+    dela, y: index * 0.1 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
                 <div className="text-zion-cyan mb-2 flex justify-center">
                   {stat.icon}
                 </div>
@@ -227,23 +239,29 @@ export function InnovationResearchSection() {
         </motion.div>
 
         {/* Research Areas */}
-        <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
+        <motion.div className="mb-20" initial={{ opacit, y: 0,
+    y: 20 }} whileInView={{ opacit, y: 1,
+    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6,
+    dela, y: 0.2 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Research <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Areas</span>
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {researchAreas.map((area, index) => (<motion.div key={area.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
-                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedResearch(selectedResearch === area.id ? null : area.id)}>
+          <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-3 gap-8">
+            {researchAreas.map((are,  a, index) => (<motion.div key={area.id} initial={{ opacit,  y: 0,
+    y: 20 }} whileInView={{ opacit, y: 1,
+    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.4,
+    dela, y: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
+                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hove, r:border-zion-cyan/50 transition-all duration-300 hove, r:shadow-lg hove, r:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedResearch(selectedResearch === area.id ? null : area.id)}>
                   {/* Header */}
                   <div className="text-center mb-6">
-                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${area.color} mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300`}>
+                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${area.color} mb-4 shadow-lg group-hove,  r:shadow-xl transition-all duration-30, 0`}>
                       <div className="text-white">
                         {area.icon}
                       </div>
                     </div>
                     
-                    <h4 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                    <h4 className="text-xl font-bold text-white mb-3 group-hove, r:text-zion-cyan transition-colors">
                       {area.title}
                     </h4>
                     <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
@@ -265,9 +283,9 @@ export function InnovationResearchSection() {
 
                   {/* Highlights preview */}
                   <div className="mb-4">
-                    <div className="text-zion-cyan font-semibold text-sm mb-2">Key Focus Areas:</div>
+                    <div className="text-zion-cyan font-semibold text-sm mb-2">Key Focus Area, s:</div>
                     <div className="space-y-1">
-                      {area.highlights.slice(0, 2).map((highlight, idx) => (<div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs">
+                      {area.highlights.slice(0, 2).map((highligh,  t, idx) => (<div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs">
                           <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                           <span>{highlight}</span>
                         </div>))}
@@ -279,15 +297,18 @@ export function InnovationResearchSection() {
 
                   {/* CTA */}
                   <div className="flex items-center justify-between">
-                    <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
+                    <span className="text-zion-purple-light font-medium text-sm group-hove,  r:text-zion-purple transition-colors">
                       View Research Details
                     </span>
-                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hove, r:text-zion-purple group-hove, r:translate-x-1 transition-all duration-300"/>
                   </div>
 
                   {/* Expanded details */}
                   <AnimatePresence>
-                    {selectedResearch === area.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
+                    {selectedResearch === area.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacit, y: 0,
+    heigh, t: 0, y: 10 }} animate={{ opacit, y: 1,
+    heigh, t: "auto", y: 0 }} exit={{ opacit, y: 0,
+    heigh, t: 0, y: 10 }} transition={{ duratio, n: 0.3 }}>
                         <div className="grid grid-cols-2 gap-4 mb-4">
                           <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
                             <div className="text-zion-cyan font-bold text-sm">{area.publications}</div>
@@ -300,16 +321,16 @@ export function InnovationResearchSection() {
                         </div>
 
                         <div className="mb-4">
-                          <h5 className="text-zion-cyan font-semibold text-sm mb-2">Technologies:</h5>
+                          <h5 className="text-zion-cyan font-semibold text-sm mb-2">Technologie, s:</h5>
                           <div className="flex flex-wrap gap-1">
-                            {area.technologies.map((tech, idx) => (<span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
+                            {area.technologies.map((tec, h, idx) => (<span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                                 {tech}
                               </span>))}
                           </div>
                         </div>
 
                         <div className="mb-4">
-                          <h5 className="text-zion-cyan font-semibold text-sm mb-2">Partners:</h5>
+                          <h5 className="text-zion-cyan font-semibold text-sm mb-2">Partner,  s:</h5>
                           <div className="text-zion-slate-light/80 text-xs">
                             {area.partners.join(", ")}
                           </div>
@@ -327,13 +348,19 @@ export function InnovationResearchSection() {
         </motion.div>
 
         {/* Research Labs */}
-        <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
+        <motion.div className="mb-20" initial={{ opacit, y: 0,
+    y: 20 }} whileInView={{ opacit, y: 1,
+    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6,
+    dela, y: 0.3 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Research <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Labs</span>
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {researchLabs.map((lab, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} onHoverStart={() => setHoveredLab(index)} onHoverEnd={() => setHoveredLab(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
+          <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-4 gap-6">
+            {researchLabs.map((la,  b, index) => (<motion.div key={index} initial={{ opacit,  y: 0,
+    y: 20 }} whileInView={{ opacit, y: 1,
+    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.4,
+    dela, y: index * 0.1 }} onHoverStart={() => setHoveredLab(index)} onHoverEnd={() => setHoveredLab(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hove,  r:border-zion-cyan/50 transition-all duration-300 hove, r:shadow-lg hove, r:shadow-zion-cyan/20">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple mb-4 shadow-lg">
                   <TestTube className="w-6 h-6 text-white"/>
                 </div>
@@ -354,28 +381,31 @@ export function InnovationResearchSection() {
                 </div>
 
                 <div className="text-zion-slate-light/80 text-xs">
-                  <strong>Equipment:</strong> {lab.equipment}
+                  <strong>Equipmen, t:</strong> {lab.equipment}
                 </div>
               </motion.div>))}
           </div>
         </motion.div>
 
         {/* Call to action */}
-        <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
+        <motion.div className="text-center" initial={{ opacit, y: 0,
+    y: 20 }} whileInView={{ opacit, y: 1,
+    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6,
+    dela, y: 0.5 }}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Join Our Research Community
               </h3>
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                Collaborate with leading researchers, access cutting-edge facilities, and contribute to 
+                Collaborate with leadin, g, researcher, s, access cutting-edg, e, facilitie, s, and contribute to 
                 breakthrough technologies that will shape the future.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+              <div className="flex flex-col s, m:flex-row gap-4 justify-center">
+                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hove, r:from-zion-cyan-dark hove, r:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hove, r:scale-105 hove, r:shadow-lg hove, r:shadow-zion-cyan/25">
                   Research Opportunities
                 </button>
-                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">
+                <button className="px-8 py-3 bg-zion-blue-light/20 hove, r:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hove, r:border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">
                   View Publications
                 </button>
               </div>

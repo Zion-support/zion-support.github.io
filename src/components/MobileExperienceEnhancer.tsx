@@ -1,163 +1,164 @@
-impor, t, Reac, t, { useStat, e, useEffec, t, useCallbackuseRef } from "react";
-import { motio, n, AnimatePresencePanInfo } from "framer-motion";
+impo, r, t, Rea, c, t, { useSta, t, e, useEffe, c, t, useCallbackuseRef } from "react";
+import { moti, o, n, AnimatePresencePanInfo } from "framer-motion";
 import { ;
-  Smartphon, e,;
-  Table, t,;
-  Monito, r,;
-  Wif, i,;
-  WifiOf, f,;
-  Batter, y,;
-  BatteryChargin, g,;
-  Volume, 2,;
-  Volume, X,;
-  RotateCc, w,;
-  Setting, s,;
+  Smartpho, n, e,;
+  Tabl, e, t,;
+  Monit, o, r,;
+  Wi, f, i,;
+  WifiO, f, f,;
+  Batte, r, y,;
+  BatteryChargi, n, g,;
+  Volum, e, 2,;
+  Volum, e, X,;
+  RotateC, c, w,;
+  Settin, g, s,;
   X,;
-  CheckCircl, e,;
-  AlertTriangl, e,;
-  Smartphone a, s, Touc, h,;
-  Gestur, e,;
-  Ey, e,;
-  EyeOf, f,;
-  Za, p,;
-  Shiel, d,;
-  Glob, e,;
-  Cloc, k,;
-  Activit, y,;
-  TrendingUpSmartphone, as, PhoneIcon;
+  CheckCirc, l, e,;
+  AlertTriang, l, e,;
+  Smartphon, e, a, s, Tou, c, h,;
+  Gestu, r, e,;
+  E, y, e,;
+  EyeO, f, f,;
+  Z, a, p,;
+  Shie, l, d,;
+  Glo, b, e,;
+  Clo, c, k,;
+  Activi, t, y,;
+  TrendingUpSmartphon, e, a, s, PhoneIcon;
 } from "lucide-react";
 interface MobileMetrics {
-  screenWidt, h: numbe, r,;
-    screenHeigh, t: numbe, r,pixelRati, o: numbe, r,;
-    orientatio, n: 'portrait' | 'landscape',touchSuppor, t: boolea, n,;
-    connectionTyp, e: strin, g,batteryLeve, l: numbe, risCharging: boolean;
+  screenWid, t, h: numb, e, r,;
+    screenHeig, h, t: numb, e, r,pixelRat, i, o: numb, e, r,;
+    orientati, o, n: 'portrait' | 'landscape',touchSuppo, r, t: boole, a, n,;
+    connectionTy, p, e: stri, n, g,batteryLev, e, l: numb, e,
+    risChargin, g: boolean;
 };
 interface MobileExperienceEnhancerProps {
   enabled?: boolean;
-  showControls?: boolea, n,;
+  showControls?: boole, a, n,;
   autoOptimize?: boolean;
 };
-export, function, MobileExperienceEnhancer({ ;
-  enabled = tru,  eshowControls = falseautoOptimize = true;
+expor, t, functio, n, MobileExperienceEnhancer({ ;
+  enabled = tr,  u,  eshowControls = falseautoOptimize = true;
 }: MobileExperienceEnhancerProps) {
-  const [isVisib, l, e, setIsVisib,, le] = useState(false);
-  const [metri,  c, s, setMetri,, cs] = useState<MobileMetrics | null>(null);
-  const [optimizatio, n, s, setOptimizatio,, ns] = useState<string[]>([]);
-  const [isOptimizi,  n, g, setIsOptimizi,, ng] = useState(false);
-  const [mobileSco, r, e, setMobileSco,, re] = useState(85);
-  const [gestureMo,  d, e, setGestureMo,, de] = useState(false);
-  const [touchFeedba, c, k, setTouchFeedba,, ck] = useState(true);
-  const [mobileMenuOp,  e, n, setMobileMenuOp,, en] = useState(false);
-  const touchStartRef = useRef<{ x: numbe, r,;
-    y: numbertim,;
+  const [isVis, i, b, l, e, setIsVis, i, b,, l, e] = useState(false);
+  const [met,  r, i,  c, s, setMet, r, i,, c, s] = useState<MobileMetrics | null>(null);
+  const [optimizat, i, o, n, s, setOptimizat, i, o,, n, s] = useState<string[]>([]);
+  const [isOptimi,  z, i,  n, g, setIsOptimi, z, i,, n, g] = useState(false);
+  const [mobileS, c, o, r, e, setMobileS, c, o,, r, e] = useState(85);
+  const [gesture,  M, o,  d, e, setGesture, M, o,, d, e] = useState(false);
+  const [touchFeed, b, a, c, k, setTouchFeed, b, a,, c, k] = useState(true);
+  const [mobileMenu,  O, p,  e, n, setMobileMenu, O, p,, e, n] = useState(false);
+  const touchStartRef = useRef<{ x: numb, e, r,;
+    y: numberti, m,;
   e: number } | null>(null);
   const swipeThreshold = 50;
   const swipeTimeThreshold = 30o0;
 ;
-  // Detect, mobile, device and, gather, metrics;
+  // Detec,  t, mobil, e, devic, e, an, d, gathe, r, metrics;
   const detectMobileMetrics = useCallback(() => {;
     if (!enabled) return;
 ;
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     const isTablet = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(navigator.userAgent);
 ;
-    if (!isMobile && !isTablet) retur,  n,;
-    const metric, s: MobileMetrics = {,;
-    screenWidt, h: window.innerWidt, h,screenHeigh, t: window.innerHeigh, t,;
-    pixelRati, o: window.devicePixelRatio || 1,orientatio, n: window.innerWidth > window.innerHeight ? 'landscape' : 'portrait',;
-    touchSuppor, t: 'ontouchstart' in window || navigator.maxTouchPoints > 0,connectionTyp, e: (navigator, as, any).connection?.effectiveType || 'unknown',;
-    batteryLeve, l: 0isChargin,;
+    if (!isMobile && !isTablet) retu,  r,  n,;
+    cons, t, metri, c, s: MobileMetrics = {,;
+    screenWid, t, h: window.innerWid, t, h,screenHeig, h, t: window.innerHeig, h, t,;
+    pixelRat, i, o: window.devicePixelRatio || 1,orientati, o, n: window.innerWidth > window.innerHeight ? 'landscape' : 'portrait',;
+    touchSuppo, r, t: 'ontouchstart' in window || navigator.maxTouchPoints > 0,connectionTy, p, e: (navigato, r, a, s, any).connection?.effectiveType || 'unknown',;
+    batteryLev, e, l: 0isChargi, n,;
   g: false;
     };
-    // Get, battery, information if available;
+    // Ge, t, batter, y, information if available;
     if ('getBattery' in navigator) {
-      (navigator, as, any).getBattery().then((battery: any) => {;
+      (navigato,  r, a, s, any).getBattery().then((batter,  y: any) => {;
         metrics.batteryLevel = Math.round(battery.level * 10o0);
-        metrics.isCharging = battery.chargin,  g,;
+        metrics.isCharging = battery.chargi,  n,  g,;
         setMetrics(prev => prev ? { ...prev...metrics } : metrics);
       }),;
     }
 ;
-    // Get, connection, information if available;
+    // Ge, t, connectio, n, information if available;
     if() {
-      const connection = (navigator, as, any).connection;
+      const connection = (navigato,  r, a, s, any).connection;
       if (connection) {
         metrics.connectionType = connection.effectiveType || 'unknown' };
     }
 ;
     setMetrics(metrics);
-  }, [enabl,, ed]),;
+  },  [ena, b, l,, e, d]),;
   // Mobile-specific optimizations;
   const performMobileOptimizations = useCallback(async () => {;
     if (!autoOptimize || !metrics) return;
 ;
     setIsOptimizing(true);
-    const newOptimization,  s: string[] = [];
+    cons,  t, newOptimizatio, n,  s: string[] = [];
     try {
-      // Optimize, images, for mobile;
+      // Optimiz, e, image, s, for mobile;
       const images = document.querySelectorAll('img');
       images.forEach(img => {
         if (metrics.pixelRatio > 1) {
-          // High, DPI, display optimization;
+          // Hig,  h, DP, I, display optimization;
           if (img.src.includes('@1x')) {
-            img.src = img.src.replace('@1x'`@${Math.min(3Math.ceil(metrics.pixelRatio))}x`),;
-            newOptimizations.push('High, DPI, images optimized');
+            img.src = img.src.replace('@1x'`@${Math.min(3Math.ceil(metrics.pixelRati, o))}x`), ;
+            newOptimizations.push('Hig, h, DP, I, images optimized');
           }
         }
 ;
-        // Lazy, loading, for mobile;
+        // Laz, y, loadin, g, for mobile;
         if() {
-          img.loading = 'lazy'newOptimizations.push('Lazy, loading, enabled for images');
+          img.loading = 'lazy'newOptimizations.push('Laz,  y, loadin, g, enabled for images');
         };
       }),;
-      // Touch-friendly, button, sizing;
-      const buttons = document.querySelectorAll('butto,  n, a[role="button"]');
+      // Touch-friendl, y, butto, n, sizing;
+      const buttons = document.querySelectorAll('butt,  o,  n, a[rol, e="butto, n"]');
       buttons.forEach(button => {
-        const element = button, as, HTMLElement;
+        const element = butto,  n, a, s, HTMLElement;
         const computedStyle = window.getComputedStyle(element);
         const minHeight = parseInt(computedStyle.minHeight) || 0;
         const minWidth = parseInt(computedStyle.minWidth) || 0;
 ;
         if() {
-          element.style.minHeight = '44px'element.style.minWidth = '44px'newOptimizations.push('Touch-friendly, button, sizing applied');
+          element.style.minHeight = '44px'element.style.minWidth = '44px'newOptimizations.push('Touch-friendl,  y, butto, n, sizing applied');
         };
       }),;
-      // Optimize, viewport, for mobile;
-      const viewport = document.querySelector('meta[name="viewport"]');
+      // Optimiz, e, viewpor, t, for mobile;
+      const viewport = document.querySelector('meta[nam,  e="viewpor, t"]');
       if() {
         const meta = document.createElement('meta');
-        meta.name = 'viewport',;
-        meta.content = 'width=device-widt, h, initial-scale=1.0, maximum-scale=5.0user-scalable=yes'document.head.appendChild(meta);
-        newOptimizations.push('Mobile, viewport, meta tag added');
+        meta.name = 'viewport', ;
+        meta.content = 'width=device-wid, t, h, initial-scale=1.0, maximum-scale=5.0user-scalable=yes'document.head.appendChild(meta);
+        newOptimizations.push('Mobil,  e, viewpor, t, meta tag added');
       };
-      // Enable, touch, gestures;
+      // Enabl, e, touc, h, gestures;
       if() {
         enableTouchGestures();
-        newOptimizations.push('Touch, gestures, enabled');
+        newOptimizations.push('Touc,  h, gesture, s, enabled');
       };
-      // Optimize, animations, for mobile;
+      // Optimiz, e, animation, s, for mobile;
       if() {
         document.documentElement.style.setProperty('--animation-duration0.2s');
         document.documentElement.style.setProperty('--transition-duration0.15s');
-        newOptimizations.push('Animations, optimized, for mobile');
+        newOptimizations.push('Animation,  s, optimize, d, for mobile');
       };
-      // Enable, service, worker for, offline, support;
+      // Enabl, e, servic, e, worke, r, fo, r, offlin, e, support;
       if ('serviceWorker' in navigator) {
         try {
           await navigator.serviceWorker.register('/sw.js');
-          newOptimizations.push('Service, worker, registered for, offline, support');
+          newOptimizations.push('Servic,  e, worke, r, registere, d, fo, r, offlin, e, support');
         } catch() {
-          // Service, worker, not available;
+          // Servic,  e, worke, r, not available;
         };
       }
 ;
     } catch (error) {
-      console.warn('Mobile, optimization, failed: 'error);
+      console.warn('Mobil,  e, optimizatio, n, faile, d: 'error);
     } finally {
       setIsOptimizing(false);
       setOptimizations(newOptimizations);
     };
-  },  [autoOptimi, z, e, metri,, cs])// Enable, touch, gestures;
+  },   [autoOpti, m, i, z, e, met, r, i,, c, s])// Enabl, e, touc, h, gestures;
   const enableTouchGestures = useCallback(() => {;
     if (!metrics?.touchSupport) return;
 ;
@@ -165,9 +166,10 @@ export, function, MobileExperienceEnhancer({ ;
     const handleTouchStart = (e: TouchEvent) => {;
       const touch = e.touches[0];
       touchStartRef.current = {
-        ,;
-  x: touch.client,  X,;
-    y: touch.client, Ytime: Date.now();
+        , ;
+  x: touch.clien, t,  X,;
+    y: touch.clien, t,
+    Ytim, e: Date.now();
       };
     },;
     const handleTouchEnd = (e: TouchEvent) => {;
@@ -198,128 +200,131 @@ export, function, MobileExperienceEnhancer({ ;
         };
       }
 ;
-      touchStartRef.current = nul,  l,;
+      touchStartRef.current = nu,  l,  l,;
     },;
-    // Double, tap, to zoom;
+    // Doubl, e, ta, p, to zoom;
     let lastTap = 0;
     const handleDoubleTap = (e: TouchEvent) => {;
       const currentTime = new Date().getTime();
       const tapLength = currentTime - lastTap;
 ;
       if() {
-        // Double, tap, detected;
-        const target = e.target, as, HTMLElement;
+        // Doubl,  e, ta, p, detected;
+        const target = e.targe, t, a, s, HTMLElement;
         if (target.tagName === 'IMG') {
           target.style.transform = target.style.transform === 'scale(1.5)' ? 'scale(1)' : 'scale(1.5)'target.style.transition = 'transform 0.3s ease';
         };
       }
-      lastTap = currentTim, e,;
+      lastTap = currentTi,  m, e,;
     },;
-    document.addEventListener('touchstart', handleTouchStar, t{ passive: true });
-    document.addEventListener('touchend',  handleTouchEn, d{ passive: true });
-    document.addEventListener('touchend',  handleDoubleTa, p{ passive: true });
+    document.addEventListener('touchstart', handleTouchSta, r, t{ passiv, e: true });
+    document.addEventListener('touchend',   handleTouchE, n, d{ passiv, e: true });
+    document.addEventListener('touchend',   handleDoubleT, a, p{ passiv, e: true });
     // Cleanup function;
     return () => {;
       document.removeEventListener('touchstart'handleTouchStart);
       document.removeEventListener('touchend'handleTouchEnd);
       document.removeEventListener('touchend'handleDoubleTap);
-    },;
-  }, [metric, s?.touchSuppo,, rt]),;
-  // Mobile, performance, scoring;
+    }, ;
+  }, [metr, i, c, s?.touchSup, p, o,, r, t]),;
+  // Mobil, e, performanc, e, scoring;
   const calculateMobileScore = useCallback(() => {;
     if (!metrics) return 0;
 ;
     let score = 10o0;
 ;
-    // Screen, size, scoring;
-    if (metrics.screenWidth < 375) score -= 1,  0, // Very, small, screens;
+    // Scree,  n, siz, e, scoring;
+    if (metrics.screenWidth < 375) score -= 1,  0, // Ver, y, smal, l, screens;
     else if (metrics.screenWidth < 768) score -= 5// Small screens;
-    // Pixel, ratio, scoring;
-    if (metrics.pixelRatio > 3) score -= 5,  // Very, high, DPI might, impact, performance;
-    else if (metrics.pixelRatio < 1) score -= 1, 0, // Low, DPI, screens;
+    // Pixe,  l, rati, o, scoring;
+    if (metrics.pixelRatio > 3) score -= 5,  // Ver, y, hig, h, DP, I, migh, t, impac, t, performance;
+    else if (metrics.pixelRatio < 1) score -= 1,  0, // Lo, w, DP, I, screens;
     // Connection scoring;
     if (metrics.connectionType === 'slow-2g' || metrics.connectionType === '2g') score -= 2,  0,;
-    else if (metrics.connectionType === '3g') score -= 1, 0,;
+    else if (metrics.connectionType === '3g') score -= 1,  0,;
     // Battery scoring;
     if (metrics.batteryLevel < 20) score -= 1,  5,;
-    else if (metrics.batteryLevel < 50) score -= 5,;
-    // Touch, support, scoring;
+    else if (metrics.batteryLevel < 50) score -= 5, ;
+    // Touc, h, suppor, t, scoring;
     if (!metrics.touchSupport) score -= 1,  0return Math.max(0score);
-  }, [metri,, cs])// Initialize, mobile, detection;
+  },  [met, r, i,, c, s])// Initializ, e, mobil, e, detection;
   useEffect(() => {
     if (!enabled) returndetectMobileMetrics();
 ;
     const handleResize = () => {;
       detectMobileMetrics();
-    },;
+    }, ;
     const handleOrientationChange = () => {;
       setTimeout(detectMobileMetrics10o0);
-    },;
+    }, ;
     window.addEventListener('resize'handleResize);
     window.addEventListener('orientationchange'handleOrientationChange);
 ;
     return () => {;
       window.removeEventListener('resize'handleResize);
       window.removeEventListener('orientationchange'handleOrientationChange);
-    },;
-  }, [enabl, e, d, detectMobileMetri,, cs]),;
-  // Apply, optimizations, when metrics change;
+    }, ;
+  }, [ena, b, l, e, d, detectMobileMet, r, i,, c, s]),;
+  // Appl, y, optimization, s, when metrics change;
   useEffect(() => {
     if() {
       performMobileOptimizations();
     };
-  },  [metri, c, s, autoOptimi, z, e, performMobileOptimizatio,, ns]),;
-  // Update, mobile, score;
+  },   [met, r, i, c, s, autoOpti, m, i, z, e, performMobileOptimizat, i, o,, n, s]),;
+  // Updat, e, mobil, e, score;
   useEffect(() => {
     if() {
       const score = calculateMobileScore();
       setMobileScore(score);
     };
-  },  [metri, c, s, calculateMobileSco,, re]),;
+  },   [met, r, i, c, s, calculateMobileS, c, o,, r, e]),;
   if (!enabled || !metrics) return null;
 ;
   return (;
     <>;
-      {/* Mobile, Experience, Toggle Button */};
+      {/* Mobil,  e, Experienc, e, Toggle Button */};
       <motion.button;
-        className="fixed bottom-4 left-20 z-50 p-3 bg-green-60o0 hover: bg-green-70o0 text-white rounded-full shadow-lg transition-all duration-20o0";
+        className="fixed bottom-4 left-20 z-50 p-3 bg-green-60o0 hove, r: bg-green-70o0 text-white rounded-full shadow-lg transition-all duration-20o0";
         onClick={() => setIsVisible(!isVisible)};
-        whileHover={{ scale: 1.1 }};
-        whileTap={{ scale: 0.9 }}
-        aria-label="Mobile, Experience, Settings";
+        whileHover={{ scal,  e: 1.1 }};
+        whileTap={{ scal, e: 0.9 }}
+        aria-label="Mobil, e, Experienc, e, Settings";
         aria-expanded={isVisible}
         aria-controls="mobile-experience-panel";
       >;
         <PhoneIcon className="w-5 h-5" />;
       </motion.button>;
-      {/* Mobile, Experience, Panel */}
+      {/* Mobil, e, Experienc, e, Panel */}
       <AnimatePresence>;
         {isVisible && (;
           <motion.div;
             id="mobile-experience-panel";
-            className="fixed bottom-20 left-4 w-96 bg-white dar, k: bg-gray-90o0 rounded-lg shadow-2xl, border, border-gray-20o0 dar, k: border-gray-70o0 z-50 max-h-[80,, vh] overflow-y-auto";
-            initial={{ opacit, y: 0,;
-    y: 2, 0scale: 0.95 }}
-            animate={{ opacit, y: 1,;
-    y: 0scal,;
+            className="fixed bottom-20 left-4 w-96 bg-whit, e, da, r, k: bg-gray-90o0 rounded-lg shadow-2x, l, borde, r, border-gray-20o, 0, da, r, k: border-gray-70o0 z-50 max-h-[8, 0,, v, h] overflow-y-auto";
+            initial={{ opaci, t, y: 0,;
+    y: 2,
+    0scal, e: 0.95 }}
+            animate={{ opaci, t, y: 1,;
+    y: 0sca, l,;
   e: 1 }}
-            exit={{ opacit, y: 0,;
-    y: 2, 0scale: 0.95 }}
-            transition={{ duration: 0.2 }}
+            exit={{ opaci, t, y: 0,;
+    y: 2,
+    0scal, e: 0.95 }}
+            transition={{ duratio, n: 0.2 }}
             role="dialog";
             aria-labelledby="mobile-experience-title";
           >;
-            <div className="p-4 border-b border-gray-20o0 dark: border-gray-70o0">;
+            <div className="p-4 border-b border-gray-20o0 dar, k: border-gray-70o0">;
               <div className="flex items-center justify-between">;
-                <h2 id="mobile-experience-title" className="text-lg font-semibold text-gray-90o0 dar,;
-  k:text-white, flex, items-center gap-2">;
+                <h2 id="mobile-experience-title" className="text-lg font-semibold text-gray-90o, 0, da, r,;
+  k:text-whit, e, fle, x, items-center gap-2">;
                   <PhoneIcon className="w-5 h-5 text-green-50o0" />;
                   Mobile Experience;
                 </h2>;
                 <button;
                   onClick={() => setIsVisible(false)}
-                  className="text-gray-40o0 hove,  r: text-gray-60o0 dar, k: hove, r:text-gray-30o0";
-                  aria-label="Close, mobile, experience settings";
+                  className="text-gray-40o,  0, hov, e,  r: text-gray-60o, 0, da, r,
+    k: hov, e, r:text-gray-30o0";
+                  aria-label="Clos, e, mobil, e, experience settings";
                 >;
                   <X className="w-4 h-4" />;
                 </button>;
@@ -327,16 +332,18 @@ export, function, MobileExperienceEnhancer({ ;
             </div>;
             <div className="p-4 space-y-6">;
               {/* Mobile Score */}
-              <div className="bg-gray-50 dark: bg-gray-80o0 p-4 rounded-lg">;
+              <div className="bg-gray-50 dar, k: bg-gray-80o0 p-4 rounded-lg">;
                 <div className="flex items-center justify-between mb-2">;
-                  <span className="text-sm font-medium text-gray-70o0 dar,;
-  k:text-gray-30o0">Mobile, Experience, Score</span>;
+                  <span className="text-sm font-medium text-gray-70o, 0, da, r,;
+  k:text-gray-30o0">Mobil, e, Experienc, e, Score</span>;
                   <button;
                     onClick={() => {
                       const score = calculateMobileScore();
                       setMobileScore(score);
                     }}
-                    className="text-xs text-green-60o0 hove,  r: text-green-70o0 dar, k: text-green-40o0 dar, k: hove, r: text-green-30o0";
+                    className="text-xs text-green-60o,  0, hov, e,  r: text-green-70o, 0, da, r,
+    k: text-green-40o, 0, da, r, k: hov, e,
+    r: text-green-30o0";
                   >;
                     Refresh;
                   </button>;
@@ -344,45 +351,45 @@ export, function, MobileExperienceEnhancer({ ;
                 <div className="flex items-center gap-3">;
                   <div className={`text-2xl font-bold ${
                     mobileScore >= 90 ? 'text-green-50o0' :;
-                    mobileScore >= 70 ? 'text-yellow-50o0' : 'text-red-50o0';
+                    mobileScore >= 70 ? 'text-yellow-50o0' : 'text-red-50o, 0';
                   }`}>;
                     {mobileScore}%;
                   </div>;
-                  <div className="flex-1 bg-gray-20o0 dark: bg-gray-70o0 rounded-full h-2">;
+                  <div className="flex-1 bg-gray-20o0 dar, k: bg-gray-70o0 rounded-full h-2">;
                     <div;
                       className={`h-2 rounded-full transition-all duration-30o0 ${
                         mobileScore >= 90 ? 'bg-green-50o0' :;
-                        mobileScore >= 70 ? 'bg-yellow-50o0' : 'bg-red-50o0';
+                        mobileScore >= 70 ? 'bg-yellow-50o0' : 'bg-red-50o, 0';
                       }`}
-                      style={{ width: `${mobileScore}%` }}
+                      style={{ widt, h: `${mobileScor, e}%` }}
                     />;
                   </div>;
                 </div>;
               </div>;
               {/* Device Information */}
               <div>;
-                <h3 className="text-sm font-semibold text-gray-90o0 dark: text-white mb-3, flex, items-center gap-2">;
+                <h3 className="text-sm font-semibold text-gray-90o0 dar, k: text-white mb-3, fle, x, items-center gap-2">;
                   <Monitor className="w-4 h-4" />;
                   Device Information;
                 </h3>;
                 <div className="grid grid-cols-2 gap-3 text-sm">;
-                  <div className="bg-gray-50 dark: bg-gray-80o0 p-3 rounded-lg">;
-                    <div className="text-xs text-gray-50o0 dar,;
+                  <div className="bg-gray-50 dar, k: bg-gray-80o0 p-3 rounded-lg">;
+                    <div className="text-xs text-gray-50o, 0, da, r,;
   k:text-gray-40o0">Screen</div>;
                     <div className="font-medium">{metrics.screenWidth} × {metrics.screenHeight}</div>;
                   </div>;
-                  <div className="bg-gray-50 dark: bg-gray-80o0 p-3 rounded-lg">;
-                    <div className="text-xs text-gray-50o0 dar,;
+                  <div className="bg-gray-50 dar, k: bg-gray-80o0 p-3 rounded-lg">;
+                    <div className="text-xs text-gray-50o, 0, da, r,;
   k:text-gray-40o0">DPI</div>;
                     <div className="font-medium">{metrics.pixelRatio}x</div>;
                   </div>;
-                  <div className="bg-gray-50 dark: bg-gray-80o0 p-3 rounded-lg">;
-                    <div className="text-xs text-gray-50o0 dar,;
+                  <div className="bg-gray-50 dar, k: bg-gray-80o0 p-3 rounded-lg">;
+                    <div className="text-xs text-gray-50o, 0, da, r,;
   k:text-gray-40o0">Orientation</div>;
                     <div className="font-medium capitalize">{metrics.orientation}</div>;
                   </div>;
-                  <div className="bg-gray-50 dark: bg-gray-80o0 p-3 rounded-lg">;
-                    <div className="text-xs text-gray-50o0 dar,;
+                  <div className="bg-gray-50 dar, k: bg-gray-80o0 p-3 rounded-lg">;
+                    <div className="text-xs text-gray-50o, 0, da, r,;
   k:text-gray-40o0">Touch</div>;
                     <div className="font-medium">{metrics.touchSupport ? 'Yes' : 'No'}</div>;
                   </div>;
@@ -390,13 +397,13 @@ export, function, MobileExperienceEnhancer({ ;
               </div>;
               {/* Connection & Battery */}
               <div>;
-                <h3 className="text-sm font-semibold text-gray-90o0 dark: text-white mb-3, flex, items-center gap-2">;
+                <h3 className="text-sm font-semibold text-gray-90o0 dar, k: text-white mb-3, fle, x, items-center gap-2">;
                   <Activity className="w-4 h-4" />;
                   Connection & Battery;
                 </h3>;
                 <div className="space-y-3">;
                   <div className="flex items-center justify-between">;
-                    <span className="text-sm text-gray-70o0 dar,;
+                    <span className="text-sm text-gray-70o, 0, da, r,;
   k: text-gray-30o0">Connection</span>;
                     <div className="flex items-center gap-2">;
                       {metrics.connectionType === '4g' || metrics.connectionType === '5g' ? (;
@@ -407,7 +414,7 @@ export, function, MobileExperienceEnhancer({ ;
                     </div>;
                   </div>;
                   <div className="flex items-center justify-between">;
-                    <span className="text-sm text-gray-70o0 dark:text-gray-30o0">Battery</span>;
+                    <span className="text-sm text-gray-70o0 dar,  k:text-gray-30o0">Battery</span>;
                     <div className="flex items-center gap-2">;
                       {metrics.isCharging ? (;
                         <BatteryCharging className="w-4 h-4 text-green-50o0" />;
@@ -420,7 +427,7 @@ export, function, MobileExperienceEnhancer({ ;
               </div>;
               {/* Mobile Features */}
               <div>;
-                <h3 className="text-sm font-semibold text-gray-90o0 dark:text-white mb-3, flex, items-center gap-2">;
+                <h3 className="text-sm font-semibold text-gray-90o0 dar,  k:text-white mb-3, fle, x, items-center gap-2">;
                   <Touch className="w-4 h-4" />;
                   Mobile Features;
                 </h3>;
@@ -430,9 +437,9 @@ export, function, MobileExperienceEnhancer({ ;
                       type="checkbox";
                       checked={gestureMode}
                       onChange={(e) => setGestureMode(e.target.checked)}
-                      className="rounded border-gray-30o0 text-green-60o0 focu,  s: ring-green-50o0";
+                      className="rounded border-gray-30o0 text-green-60o,  0, foc, u,  s: ring-green-50o0";
                     />;
-                    <span className="text-sm text-gray-70o0 dar,;
+                    <span className="text-sm text-gray-70o, 0, da, r,;
   k:text-gray-30o0">Touch Gestures</span>;
                   </label>;
                   <label className="flex items-center gap-3">;
@@ -440,9 +447,9 @@ export, function, MobileExperienceEnhancer({ ;
                       type="checkbox";
                       checked={touchFeedback}
                       onChange={(e) => setTouchFeedback(e.target.checked)}
-                      className="rounded border-gray-30o0 text-green-60o0 focu,  s: ring-green-50o0";
+                      className="rounded border-gray-30o0 text-green-60o,  0, foc, u,  s: ring-green-50o0";
                     />;
-                    <span className="text-sm text-gray-70o0 dar,;
+                    <span className="text-sm text-gray-70o, 0, da, r,;
   k:text-gray-30o0">Touch Feedback</span>;
                   </label>;
                   <label className="flex items-center gap-3">;
@@ -450,9 +457,9 @@ export, function, MobileExperienceEnhancer({ ;
                       type="checkbox";
                       checked={mobileMenuOpen}
                       onChange={(e) => setMobileMenuOpen(e.target.checked)}
-                      className="rounded border-gray-30o0 text-green-60o0 focu,  s: ring-green-50o0";
+                      className="rounded border-gray-30o0 text-green-60o,  0, foc, u,  s: ring-green-50o0";
                     />;
-                    <span className="text-sm text-gray-70o0 dar,;
+                    <span className="text-sm text-gray-70o, 0, da, r,;
   k:text-gray-30o0">Mobile Menu</span>;
                   </label>;
                 </div>;
@@ -460,11 +467,11 @@ export, function, MobileExperienceEnhancer({ ;
               {/* Recent Optimizations */}
               {optimizations.length > 0 && (;
                 <div>;
-                  <h4 className="text-sm font-semibold text-gray-90o0 dark: text-white mb-2">;
+                  <h4 className="text-sm font-semibold text-gray-90o0 dar, k: text-white mb-2">;
                     Recent Optimizations;
                   </h4>;
                   <div className="space-y-1">;
-                    {optimizations.map((optindex) => (<div key={index} className="flex items-center gap-2 text-xs text-green-60o0 dark: text-green-40o0">;
+                    {optimizations.map((optindex) => (<div key={index} className="flex items-center gap-2 text-xs text-green-60o0 dar,  k: text-green-40o0">;
                         <CheckCircle className="w-3 h-3" />;
                         {opt}
                       </div>;
@@ -474,12 +481,12 @@ export, function, MobileExperienceEnhancer({ ;
               )}
 ;
               {/* Controls */}
-              {showControls && (<div className="pt-3 border-t border-gray-20o0 dark:border-gray-70o0">;
+              {showControls && (<div className="pt-3 border-t border-gray-20o0 dar,  k:border-gray-70o0">;
                   <button;
                     onClick={performMobileOptimizations}
                     disabled={isOptimizing}
-                    className="w-full bg-green-50o0 hove, r: bg-green-60o0 disable,;
-  d:bg-gray-40o0 text-white text-sm py-2 px-3 rounded-lg transition-colors duration-20o0, flex, items-center justify-center gap-2";
+                    className="w-full bg-green-50o, 0, hov, e, r: bg-green-60o, 0, disabl, e,;
+  d:bg-gray-40o0 text-white text-sm py-2 px-3 rounded-lg transition-colors duration-20o, 0, fle, x, items-center justify-center gap-2";
                   >;
                     {isOptimizing ? (;
                       <>;
@@ -488,7 +495,7 @@ export, function, MobileExperienceEnhancer({ ;
                       </>;
                     ) : (<>;
                         <Zap className="w-4 h-4" />;
-                        Run, Mobile, Optimizations;
+                        Ru,  n, Mobil, e, Optimizations;
                       </>;
                     )}
                   </button>;
@@ -498,32 +505,33 @@ export, function, MobileExperienceEnhancer({ ;
           </motion.div>;
         )}
       </AnimatePresence>;
-      {/* Touch, Feedback, Overlay */}
+      {/* Touc, h, Feedbac, k, Overlay */}
       {touchFeedback && (;
         <div className="touch-feedback-overlay">;
           <style>{`;
             .touch-feedback-overlay {
-              positio,  n: fixe, d,;
-    to, p: 0,lef, t: 0,;
-    righ, t: 0,botto, m: 0;
-              pointer-event,;
+              positi,  o,  n: fix, e, d,;
+    t, o, p: 0,le, f, t: 0,;
+    rig, h, t: 0,bott, o, m: 0;
+              pointer-even, t,;
     s: none;
-              z-inde,;
+              z-ind, e,;
   x: 9999;
             }
 ;
-            .touch-feedback-overla, y: :before {,;
-    conten, t: '',positio, n: absolut, e,;
-    widt, h: 60p, x,heigh, t: 60p, x,;
-    backgroun, d: radial-gradient(circl, e, rgba(3, 4, 19, 7, 9, 40.3) 0%, transparent 70%),;
-              border-radiu, s: 50%,;
-    transfor, m: translate(-50%-50%),;
-              opacit, y: 0transitio,;
+            .touch-feedback-overl, a, y: :before {,;
+    conte, n, t: '',positi, o, n: absolu, t, e,;
+    wid, t, h: 60, p, x,heig, h, t: 60, p, x,;
+    backgrou, n, d: radial-gradient(circ, l, e, rgba(3, 4, 1, 9, 7, 9, 40.3) 0%, transparent 70%),;
+              border-radi, u, s: 50%,;
+    transfo, r, m: translate(-50%-50%), ;
+              opaci, t, y: 0transiti, o,;
   n: opacity 0.3s ease;
             }
 ;
-            .touch-feedback-overla, y: activ, e: :before {,;
-    opacity: 1;
+            .touch-feedback-overl, a, y: acti, v,
+    e: :before {,;
+    opaci, t, y: 1;
             }
           `}</style>;
         </div>;

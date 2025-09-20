@@ -1,120 +1,120 @@
-impor, t, Reac, t, { useState } from "react";
+impo, r, t, Rea, c, t, { useState } from "react";
 import { motionAnimatePresence } from "framer-motion";
 import {
-  MessageCircl, e,;
+  MessageCirc, l, e,;
   X,;
-  ArrowRigh, t,;
-  Phon, e,;
-  Mai, l,;
-  Calenda, r,;
-  Cloc, k,;
-  User, s,;
-  Sta, r,;
-  Shiel, d,;
-  Brai, n,;
-  Clou, d,;
-  Za, p,;
-  Glob, e,;
-  Cp, u,;
-  Databas, e,;
-  Networ, k,;
-  Loc, k,;
-  Cod, e,;
-  BarChart, 3,;
-  FileImag, e,;
-  TrendingU, p,;
-  Vide, o,;
-  FileTex, t,;
-  Hear, t,;
-  ShoppingCar, t,;
-  Setting, s,;
-  HelpCircl, e,;
-  BookOpe, n,;
-  Briefcas, e,;
-  Awar, d,;
-  Targe, t,;
-  Lightbul, b,;
-  ShieldChec, k,;
-  Serve, r,;
-  Smartphon, e,;
-  Monito, r,;
-  Wif, i,;
-  Bluetoot, h,;
-  Satellit, e,;
-  Ato, m,;
-  Dn, a,;
-  Microscop, e,;
-  Flas, k,;
-  TestTub, e,;
-  Syring, e,;
-  Stethoscop, e,;
-  HeartPuls, e,;
-  BrainCircui, t,;
-  Ey, e,;
-  Ea, r,;
-  Han, d,;
-  Foo, t,;
-  Bon, e,;
-  Toot, h,;
-  Pil, l,;
-  Bandag, e,;
-  Thermomete, r,;
-  Scal, e,;
-  Calculato, r,;
-  ChartBa, r,;
-  PieChar, t,;
-  LineChar, t,;
-  Activit, y,;
-  TrendingDow, n,;
-  Minu, s,;
-  Plu, s,;
-  Equa, l,;
-  Divid, e,;
-  Percen, t,;
-  DollarSig, n,;
-  Eur, o,;
-  Poun, d,;
-  Ye, n,;
-  Bitcoi, n,;
-  Ethereu, m,;
-  CreditCar, d,;
-  Walle, t,;
-  Banknot, e,;
-  Coin, s,;
-  PiggyBan, k,;
-  Saf, e,;
-  Vaul, t,;
-  LockKeyhol, e,;
-  Ke, y,;
-  Fingerprin, t,;
-  QrCod, e,;
-  Barcod, e,;
-  Sca, n,;
-  Camer, a,;
-  VideoOf, f,;
-  Mi, c,;
-  MicOf, f,;
+  ArrowRig, h, t,;
+  Pho, n, e,;
+  Ma, i, l,;
+  Calend, a, r,;
+  Clo, c, k,;
+  Use, r, s,;
+  St, a, r,;
+  Shie, l, d,;
+  Bra, i, n,;
+  Clo, u, d,;
+  Z, a, p,;
+  Glo, b, e,;
+  C, p, u,;
+  Databa, s, e,;
+  Netwo, r, k,;
+  Lo, c, k,;
+  Co, d, e,;
+  BarChar, t, 3,;
+  FileIma, g, e,;
+  Trending, U, p,;
+  Vid, e, o,;
+  FileTe, x, t,;
+  Hea, r, t,;
+  ShoppingCa, r, t,;
+  Settin, g, s,;
+  HelpCirc, l, e,;
+  BookOp, e, n,;
+  Briefca, s, e,;
+  Awa, r, d,;
+  Targ, e, t,;
+  Lightbu, l, b,;
+  ShieldChe, c, k,;
+  Serv, e, r,;
+  Smartpho, n, e,;
+  Monit, o, r,;
+  Wi, f, i,;
+  Bluetoo, t, h,;
+  Satelli, t, e,;
+  At, o, m,;
+  D, n, a,;
+  Microsco, p, e,;
+  Fla, s, k,;
+  TestTu, b, e,;
+  Syrin, g, e,;
+  Stethosco, p, e,;
+  HeartPul, s, e,;
+  BrainCircu, i, t,;
+  E, y, e,;
+  E, a, r,;
+  Ha, n, d,;
+  Fo, o, t,;
+  Bo, n, e,;
+  Too, t, h,;
+  Pi, l, l,;
+  Banda, g, e,;
+  Thermomet, e, r,;
+  Sca, l, e,;
+  Calculat, o, r,;
+  ChartB, a, r,;
+  PieCha, r, t,;
+  LineCha, r, t,;
+  Activi, t, y,;
+  TrendingDo, w, n,;
+  Min, u, s,;
+  Pl, u, s,;
+  Equ, a, l,;
+  Divi, d, e,;
+  Perce, n, t,;
+  DollarSi, g, n,;
+  Eu, r, o,;
+  Pou, n, d,;
+  Y, e, n,;
+  Bitco, i, n,;
+  Ethere, u, m,;
+  CreditCa, r, d,;
+  Wall, e, t,;
+  Bankno, t, e,;
+  Coi, n, s,;
+  PiggyBa, n, k,;
+  Sa, f, e,;
+  Vau, l, t,;
+  LockKeyho, l, e,;
+  K, e, y,;
+  Fingerpri, n, t,;
+  QrCo, d, e,;
+  Barco, d, e,;
+  Sc, a, n,;
+  Came, r, a,;
+  VideoO, f, f,;
+  M, i, c,;
+  MicO, f, f,;
   Volume2VolumeX;
 } from "lucide-react";
-export, function, FloatingCTA() {
-  const [isExpand,  e,, dsetIsExpanded] = useState(false);
+expor, t, functio, n, FloatingCTA() {
+  const [isExpa,  n, d,  e,, dsetIsExpand, e, d] = useState(false);
   return (<>;
-      {/* Floating, Action, Button */};
+      {/* Floatin,  g, Actio, n, Button */};
       <motion.div;
         className="fixed bottom-6 right-6 z-50";
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.3dela,;
+        initial={{ scal, e: 0 }}
+        animate={{ scal, e: 1 }}
+        transition={{ duratio, n: 0.3del, a,;
   y: 2 }}
       >;
         <div className="relative">;
           {/* Main Button */};
           <motion.button;
             onClick={() => setIsExpanded(!isExpanded)}
-            className="w-16 h-16 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-full shadow-lg hove,  r: shadow-xl transition-all duration-30o0, flex, items-center justify-center text-white text-2xl";
-            whileHover={{ scal,;
+            className="w-16 h-16 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-full shadow-l,  g, hov, e,  r: shadow-xl transition-all duration-30o, 0, fle, x, items-center justify-center text-white text-2xl";
+            whileHover={{ sca, l,;
   e: 1.1 }};
-            whileTap={{ scale: 0.9 }}
+            whileTap={{ scal, e: 0.9 }}
           >;
             {isExpanded ? '✕' : '💬'}
           </motion.button>;
@@ -122,34 +122,34 @@ export, function, FloatingCTA() {
           <AnimatePresence>;
             {isExpanded && (;
               <motion.div;
-                className="absolute bottom-20 right-0 bg-slate-80o0, border, border-slate-70o0 rounded-lg shadow-xl p-4 min-w-[20o0,, px]";
-                initial={{ opacit, y: 0,;
-    scale: 0.8,;
+                className="absolute bottom-20 right-0 bg-slate-80o, 0, borde, r, border-slate-70o0 rounded-lg shadow-xl p-4 min-w-[20, o, 0,, p, x]";
+                initial={{ opaci, t, y: 0,;
+    scal, e: 0.8,;
   y: 10 }}
-                animate={{ opacit, y: 1,;
-    scale: 1,;
+                animate={{ opaci, t, y: 1,;
+    scal, e: 1,;
   y: 0 }}
-                exit={{ opacit, y: 0,;
-    scale: 0.8,;
+                exit={{ opaci, t, y: 0,;
+    scal, e: 0.8,;
   y: 10 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duratio, n: 0.2 }}
               >;
                 <div className="space-y-3">;
                   <Link;
                     to="/contact";
-                    className="flex items-center gap-3 p-3 rounded-lg hover: bg-slate-70o0 transition-colors duration-20o0 text-white";
+                    className="flex items-center gap-3 p-3 rounded-lg hove, r: bg-slate-70o0 transition-colors duration-20o0 text-white";
                     onClick={() => setIsExpanded(false)}
                   >;
                     <span className="text-xl">📞</span>;
                     <div>;
                       <div className="font-semibold">Contact Us</div>;
-                      <div className="text-sm text-gray-40o0">Get, in, touch</div>;
+                      <div className="text-sm text-gray-40o0">Ge,  t, i, n, touch</div>;
                     </div>;
                   </Link>;
                   ;
                   <Link;
                     to="/services";
-                    className="flex items-center gap-3 p-3 rounded-lg hover: bg-slate-70o0 transition-colors duration-20o0 text-white";
+                    className="flex items-center gap-3 p-3 rounded-lg hove, r: bg-slate-70o0 transition-colors duration-20o0 text-white";
                     onClick={() => setIsExpanded(false)}
                   >;
                     <span className="text-xl">🚀</span>;
@@ -161,7 +161,7 @@ export, function, FloatingCTA() {
                   ;
                   <Link;
                     to="/quote";
-                    className="flex items-center gap-3 p-3 rounded-lg hover: bg-slate-70o0 transition-colors duration-20o0 text-white";
+                    className="flex items-center gap-3 p-3 rounded-lg hove,  r: bg-slate-70o0 transition-colors duration-20o0 text-white";
                     onClick={() => setIsExpanded(false)}
                   >;
                     <span className="text-xl">💰</span>;
@@ -190,9 +190,9 @@ export, function, FloatingCTA() {
         {isExpanded && (;
           <motion.div;
             className="fixed inset-0 bg-black/20 z-40";
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacit,  y: 0 }}
+            animate={{ opacit, y: 1 }}
+            exit={{ opacit, y: 0 }}
             onClick={() => setIsExpanded(false)}
           />;
         )}

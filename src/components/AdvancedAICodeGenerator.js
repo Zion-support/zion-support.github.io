@@ -1,41 +1,41 @@
-import React, { useState, useRef } from 'react';
-import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge } from 'lucide-react';
+impor, t, Reac, t, { useStat, e, useRef } from 'react';
+import { Cod, e, Brai, n, Za, p, Downloa, d, RefreshC, w, X, Maximize, 2, Minimize, 2, Ey, e, EyeOf, f, Searc, h, FileTex, t, CheckCircl, e, AlertCircl, e, Cop, y, Shiel, d, Activit, y, BarChart, 3, Gauge } from 'lucide-react';
 const mockCodeSnippets = [
     {
-        id: '1',
-        title: 'React Hook for API Calls',
-        description: 'Custom hook for managing API calls with loading states and error handling',
-        language: 'typescript',
-        code: `import { useState, useEffect } from 'react';
+        i, d: '1',
+    tit, l, e: 'Reac, t Hoo, k fo, r AP, I Call, s',
+        descripti, o, n: 'Custo, m hoo, k fo, r managin, g AP, I call, s wit, h loadin, g state, s an, d erro, r handlin, g',
+    langua, g, e: 'typescrip, t',
+        co, d, e: `impor, t { useSta, t, e, useEffec, t } fro, m 'reac, t';
 
-interface UseApiOptions<T> {
-  url: string;
-  method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
-  body?: any;
-  headers?: Record<string, string>;
+interfac, e UseApiOption, s<T> {
+  u, r, l: strin, g;
+  metho, d?: 'GE, T' | 'POS, T' | 'PU, T' | 'DELET, E';
+  bod, y?: an, y;
+  header, s?: Recor, d<stri, n, g, strin, g>;
 }
 
-export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<T>) {
-  const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+expor, t functio, n useAp, i<T>({ u,  r, l, metho, d = 'GE, T', bo, d, y, header, s }: UseApiOption, s<T>) {
+  cons, t [da, t, a, setDa, t, a] = useState<T | null>(null);
+  const [loadi,  n, g, setLoadi, n, g] = useState(false);
+  const [err, o, r, setErr, o, r] = useState<string | null>(null);
 
   const execute = async () => {
     try {
       setLoading(true);
       setError(null);
       
-      const response = await fetch(url, {
-        method,
-        headers: {
+      const response = await fetch(ur,  l, {
+        metho, d,
+        header, s: {
           'Content-Type': 'application/json',
-          ...headers,
+          ...header, s,
         },
-        body: body ? JSON.stringify(body) : undefined,
+        bod, y: body ? JSON.stringify(body) : undefine, d,
       });
 
       if (!response.ok) {
-        throw new Error(\`HTTP error! status: \${response.status}\`);
+        throw new Erro, r(\`HTTP error! statu,  s: \${response.status}\`);
       }
 
       const result = await response.json();
@@ -51,74 +51,73 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     if (method === 'GET') {
       execute();
     }
-  }, [url]);
+  },  [u, r, l]);
 
-  return { data, loading, error, execute };
+  return { dat, a, loadin, g, erro, r, execut, e };
 }`,
-        tags: ['react', 'hooks', 'api', 'typescript'],
-        complexity: 'medium',
-        rating: 4.8,
-        usageCount: 1250,
-        createdAt: '2024-01-15'
+        tag, s: ['reac, t', 'hook, s', 'ap, i', 'typescrip, t'],
+        complexit, y: 'medium',
+    ratin, g: 4.8,
+        usageCoun, t: 125, 0,
+    createdA, t: '2024-01-15'
     },
     {
-        id: '2',
-        title: 'Tailwind CSS Animation Utilities',
-        description: 'Custom Tailwind utilities for advanced animations and transitions',
-        language: 'css',
-        code: `@layer utilities {
+        i, d: '2',
+    titl, e: 'Tailwind CSS Animation Utilities',
+        descriptio, n: 'Custom Tailwind utilities for advanced animations and transitions',
+    languag, e: 'css',
+        cod, e: `@layer utilities {
   .animate-float {
-    animation: float 3s ease-in-out infinite;
+    animatio, n: float 3s ease-in-out infinite;
   }
   
   .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate;
+    animatio, n: glow 2s ease-in-out infinite alternate;
   }
   
   .animate-shimmer {
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.4),
+    backgroun, d: linear-gradient(90de,  g,
+      transparen, t,
+      rgba(25, 5, 25, 5, 25, 5, 0.4),
       transparent
     );
-    background-size: 200% 100%;
-    animation: shimmer 1.5s infinite;
+    background-siz, e: 200% 100%;
+    animatio, n: shimmer 1.5s infinite;
   }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%, 100% { transfor, m: translateY(0px); }
+  50% { transfor,  m: translateY(-10px); }
 }
 
 @keyframes glow {
-  from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
-  to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); }
+  from { box-shado, w: 0 0 20px rgba(5,  9, 13, 0, 24, 6, 0.5); }
+  to { box-shado, w: 0 0 30px rgba(5,  9, 13, 0, 24, 6, 0.8); }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% { background-positio, n: -200% 0; }
+  100% { background-positio, n: 20, 0% 0; }
 }`,
-        tags: ['css', 'tailwind', 'animations', 'utilities'],
-        complexity: 'low',
-        rating: 4.6,
-        usageCount: 890,
-        createdAt: '2024-01-10'
+        tag, s: ['cs, s', 'tailwin, d', 'animation, s', 'utilitie, s'],
+        complexit, y: 'low',
+    ratin, g: 4.6,
+        usageCoun, t: 89, 0,
+    createdA, t: '2024-01-10'
     },
     {
-        id: '3',
-        title: 'Advanced Form Validation',
-        description: 'Comprehensive form validation with custom rules and error handling',
-        language: 'javascript',
-        code: `class FormValidator {
-  constructor(form, options = {}) {
+        i, d: '3',
+    titl, e: 'Advanced Form Validation',
+        descriptio, n: 'Comprehensive form validation with custom rules and error handling',
+    languag, e: 'javascript',
+        cod, e: `class FormValidator {
+  constructor(for,  m, options = {}) {
     this.form = form;
     this.options = {
-      validateOnBlur: true,
-      validateOnSubmit: true,
-      showErrors: true,
+      validateOnBlu, r: tru, e,
+    validateOnSubmi, t: tru, e,
+      showError, s: tru, e,
       ...options
     };
     
@@ -127,26 +126,26 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     this.init();
   }
 
-  addRule(field, rule) {
+  addRule(fiel,  d, rule) {
     if (!this.rules.has(field)) {
-      this.rules.set(field, []);
+      this.rules.set(fiel,  d, []);
     }
     this.rules.get(field).push(rule);
   }
 
   validateField(field) {
-    const value = this.form[field]?.value;
+    const value = this.form[fie,  l, d]?.value;
     const fieldRules = this.rules.get(field) || [];
     const fieldErrors = [];
 
     for (const rule of fieldRules) {
-      const result = rule(value, this.form);
+      const result = rule(valu,  e, this.form);
       if (result !== true) {
         fieldErrors.push(result);
       }
     }
 
-    this.errors.set(field, fieldErrors);
+    this.errors.set(fiel,  d, fieldErrors);
     this.updateFieldUI(field);
     return fieldErrors.length === 0;
   }
@@ -162,19 +161,19 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   }
 
   updateFieldUI(field) {
-    const fieldElement = this.form[field];
+    const fieldElement = this.form[fie,  l, d];
     const errors = this.errors.get(field) || [];
     
     if (errors.length > 0) {
       fieldElement.classList.add('error');
-      this.showFieldErrors(field, errors);
+      this.showFieldErrors(fiel,  d, errors);
     } else {
       fieldElement.classList.remove('error');
       this.hideFieldErrors(field);
     }
   }
 
-  showFieldErrors(field, errors) {
+  showFieldErrors(fiel,  d, errors) {
     // Implementation for showing field-specific errors
   }
 
@@ -184,125 +183,126 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
   init() {
     if (this.options.validateOnBlur) {
-      this.form.addEventListener('blur', (e) => {
+      this.form.addEventListener('blur',  (e) => {
         if (e.target.name) {
           this.validateField(e.target.name);
         }
-      }, true);
+      },  true);
     }
 
     if (this.options.validateOnSubmit) {
-      this.form.addEventListener('submit', (e) => {
+      this.form.addEventListener('submit',  (e) => {
         if (!this.validateForm()) {
-          e.preventDefault();
+          e.preventDefaul, t();
         }
       });
     }
   }
-}`,
-        tags: ['javascript', 'forms', 'validation', 'class'],
-        complexity: 'high',
-        rating: 4.9,
-        usageCount: 2100,
-        createdAt: '2024-01-08'
+}`, 
+        tag, s: ['javascrip, t', 'form, s', 'validatio, n', 'clas, s'],
+        complexit, y: 'high',
+    ratin, g: 4.9,
+        usageCoun, t: 210, 0,
+    createdA, t: '2024-01-08'
     }
 ];
 const mockCodeAnalysis = [
     {
-        id: '1',
-        snippetId: '1',
-        quality: 92,
-        performance: 88,
-        security: 95,
-        maintainability: 90,
-        suggestions: [
-            'Consider adding request timeout handling',
-            'Add retry logic for failed requests',
-            'Implement request cancellation with AbortController'
+        i, d: '1',
+    snippet, I, d: '1',
+        quali, t, y: 9, 2,
+    performan, c, e: 8, 8,
+        securi, t, y: 9, 5,
+    maintainabili, t, y: 9, 0,
+        suggestio, n, s: [
+            'Conside, r addin, g reques, t timeou, t handlin, g',
+            'Ad, d retr, y logi, c fo, r faile, d request, s',
+            'Implemen, t reques, t cancellatio, n wit, h AbortControlle, r'
         ],
-        warnings: [
-            'No input validation for URL parameter',
-            'Consider rate limiting for API calls'
+        warning, s: [
+            'N, o inpu, t validatio, n fo, r UR, L paramete, r',
+            'Conside, r rat, e limitin, g fo, r AP, I call, s'
         ],
-        timestamp: '2024-01-15T10:30:00Z'
+        timestam, p: '2024-01-15T1, 0:3, 0:00Z'
     },
     {
-        id: '2',
-        snippetId: '2',
-        quality: 85,
-        performance: 95,
-        security: 100,
-        maintainability: 88,
-        suggestions: [
-            'Add vendor prefixes for better browser support',
-            'Consider using CSS custom properties for colors',
-            'Add animation performance optimizations'
+        i, d: '2',
+    snippetI, d: '2',
+        qualit, y: 8, 5,
+    performanc, e: 9, 5,
+        securit, y: 10, 0,
+    maintainabilit, y: 8, 8,
+        suggestion, s: [
+            'Ad, d vendo, r prefixe, s fo, r bette, r browse, r suppor, t',
+            'Conside, r usin, g CS, S custo, m propertie, s fo, r color, s',
+            'Ad, d animatio, n performanc, e optimization, s'
         ],
-        warnings: [],
-        timestamp: '2024-01-10T14:20:00Z'
+        warning, s: [],
+    timestam, p: '2024-01-10T1, 4:2, 0:00Z'
     }
 ];
 const mockAIGenerations = [
     {
-        id: '1',
-        prompt: 'Create a React hook for managing local storage with TypeScript',
-        generatedCode: `import { useState, useEffect } from 'react';
+        i, d: '1',
+    prom, p, t: 'Creat, e a Reac, t hoo, k fo, r managin, g loca, l storag, e wit, h TypeScrip, t',
+        generatedCo, d, e: `impor, t { useSta, t, e, useEffec, t } fro, m 'reac, t';
 
-export function useLocalStorage<T>(key: string, initialValue: T) {
-  const [storedValue, setStoredValue] = useState<T>(() => {
+expor, t functio, n useLocalStorag, e<T>(k, e, y: stri, n, g,
+    initialVal, u, e: T) {
+  cons, t [storedVal, u, e, setStoredVal, u, e] = useState<T>(() => {
     try {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
-      console.error(\`Error reading localStorage key "\${key}":\`, error);
+      console.erro, r(\`Error reading localStorage key "\${key}":\`,  error);
       return initialValue;
     }
   });
 
-  const setValue = (value: T | ((val: T) => T)) => {
+  const setValue = (valu,  e: T | ((va, l: T) => T)) => {
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
-      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+      window.localStorage.setItem(ke,  y, JSON.stringify(valueToStore));
     } catch (error) {
-      console.error(\`Error setting localStorage key "\${key}":\`, error);
+      console.erro, r(\`Error setting localStorage key "\${key}":\`,  error);
     }
   };
 
-  return [storedValue, setValue] as const;
+  return [storedVal, u, e, setVal, u, e] as cons, t;
 }`,
-        language: 'typescript',
-        confidence: 0.94,
-        alternatives: [
-            'Alternative 1: With error boundaries',
-            'Alternative 2: With event listeners',
-            'Alternative 3: With custom serializer'
+        languag, e: 'typescript',
+    confidenc, e: 0.9, 4,
+        alternative, s: [
+            'Alternativ, e 1: Wit, h erro, r boundarie, s',
+            'Alternativ, e 2: Wit, h even, t listener, s',
+            'Alternativ, e 3: Wit, h custo, m serialize, r'
         ],
-        timestamp: '2024-01-15T11:45:00Z'
+        timestam, p: '2024-01-15T1, 1:4, 5:00Z'
     }
 ];
 export function AdvancedAICodeGenerator() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);
-    const [isFullscreen, setIsFullscreen] = useState(false);
-    const [activeTab, setActiveTab] = useState('generator');
-    const [selectedLanguage, setSelectedLanguage] = useState('all');
-    const [selectedComplexity, setSelectedComplexity] = useState('all');
-    const [searchQuery, setSearchQuery] = useState('');
-    const [aiPrompt, setAiPrompt] = useState('');
-    const [generatedCode, setGeneratedCode] = useState('');
-    const [isGenerating, setIsGenerating] = useState(false);
-    const [codeSnippets, setCodeSnippets] = useState(mockCodeSnippets);
-    const [codeAnalysis, setCodeAnalysis] = useState(mockCodeAnalysis);
-    const [aiGenerations, setAiGenerations] = useState(mockAIGenerations);
-    const [showSuggestions, setShowSuggestions] = useState(true);
+    const [isOp,  e, n, setIsOp, e, n] = useState(false);
+    const [isMinimiz, e, d, setIsMinimiz, e, d] = useState(false);
+    const [isFullscre,  e, n, setIsFullscre, e, n] = useState(false);
+    const [activeT, a, b, setActiveT, a, b] = useState('generator');
+    const [selectedLangua,  g, e, setSelectedLangua, g, e] = useState('all');
+    const [selectedComplexi, t, y, setSelectedComplexi, t, y] = useState('all');
+    const [searchQue,  r, y, setSearchQue, r, y] = useState('');
+    const [aiProm, p, t, setAiProm, p, t] = useState('');
+    const [generatedCo,  d, e, setGeneratedCo, d, e] = useState('');
+    const [isGenerati, n, g, setIsGenerati, n, g] = useState(false);
+    const [codeSnippe,  t, s, setCodeSnippe, t, s] = useState(mockCodeSnippets);
+    const [codeAnalys, i, s, setCodeAnalys, i, s] = useState(mockCodeAnalysis);
+    const [aiGeneratio,  n, s, setAiGeneratio, n, s] = useState(mockAIGenerations);
+    const [showSuggestio, n, s, setShowSuggestio, n, s] = useState(true);
     const containerRef = useRef(null);
     const getComplexityColor = (complexity) => {
         switch (complexity) {
             case 'low': return 'text-green-500';
             case 'medium': return 'text-yellow-500';
             case 'high': return 'text-red-500';
-            default: return 'text-gray-500';
+            defaul,  t: return 'text-gray-500';
         }
     };
     const getQualityColor = (score) => {
@@ -319,67 +319,67 @@ export function AdvancedAICodeGenerator() {
         // Simulate AI code generation
         setTimeout(() => {
             const newGeneration = {
-                id: Date.now().toString(),
-                prompt: aiPrompt,
-                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  console.log("Hello from AI!");\n  return "Generated code";\n}`,
-                language: 'javascript',
-                confidence: 0.87,
-                alternatives: [
-                    'Alternative 1: Functional approach',
-                    'Alternative 2: Class-based approach',
-                    'Alternative 3: Async/await pattern'
+                i,  d: Date.now().toString(), 
+    promp, t: aiPromp, t,
+                generatedCod, e: `// Generated code fo, r: ${aiPrompt}\n\nfunction example() {\n  console.log("Hello from AI!");\n  return "Generated cod, e";\n}`, 
+                languag, e: 'javascript',
+    confidenc, e: 0.8, 7,
+                alternative, s: [
+                    'Alternativ, e 1: Functiona, l approac, h',
+                    'Alternativ, e 2: Clas, s-base, d approac, h',
+                    'Alternativ, e 3: Asyn, c/awai, t patter, n'
                 ],
-                timestamp: new Date().toISOString()
+                timestam, p: new Date().toISOString()
             };
-            setAiGenerations(prev => [newGeneration, ...prev]);
+            setAiGenerations(prev => [newGenerati,  o, n, ...pr, e, v]);
             setGeneratedCode(newGeneration.generatedCode);
             setIsGenerating(false);
-        }, 2000);
+        },  2000);
     };
     const copyToClipboard = (text) => {
         navigator.clipboard.writeText(text);
     };
     if (!isOpen) {
-        return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-110 z-50">
+        return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl hove,  r:shadow-blue-500/50 transition-all duration-300 hove, r:scale-110 z-50">
         <Code className="w-6 h-6"/>
       </button>);
     }
     if (isMinimized) {
-        return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">
+        return (<div className="fixed bottom-4 right-4 bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">
         <div className="flex items-center justify-between p-3 border-b border-zion-slate-light">
           <div className="flex items-center space-x-2">
             <Code className="w-5 h-5 text-blue-600"/>
             <span className="text-sm font-medium">AI Code Generator</span>
           </div>
           <div className="flex items-center space-x-1">
-            <button onClick={() => setIsMinimized(false)} className="p-1 hover:bg-zion-slate-light rounded">
+            <button onClick={() => setIsMinimized(false)} className="p-1 hove,  r:bg-zion-slate-light rounded">
               <Maximize2 className="w-4 h-4"/>
             </button>
-            <button onClick={() => setIsOpen(false)} className="p-1 hover:bg-zion-slate-light rounded">
+            <button onClick={() => setIsOpen(false)} className="p-1 hove,  r:bg-zion-slate-light rounded">
               <X className="w-4 h-4"/>
             </button>
           </div>
         </div>
       </div>);
     }
-    return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
+    return (<div className={`fixed bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400, p, x] h-[90, 0, p, x]'}`} ref={containerRef}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="flex items-center space-x-3">
           <Code className="w-6 h-6"/>
           <div>
             <h2 className="text-lg font-bold">Advanced AI-Powered Code Generator</h2>
-            <p className="text-sm text-blue-100">Intelligent code generation, analysis & development assistance</p>
+            <p className="text-sm text-blue-100">Intelligent cod, e, generatio, n, analysis & development assistance</p>
           </div>
         </div>
         <div className="flex items-center space-x-2">
-          <button onClick={() => setIsMinimized(true)} className="p-2 hover:bg-blue-700 rounded-lg transition-colors">
+          <button onClick={() => setIsMinimized(true)} className="p-2 hove,  r:bg-blue-700 rounded-lg transition-colors">
             <Minimize2 className="w-4 h-4"/>
           </button>
-          <button onClick={() => setIsFullscreen(!isFullscreen)} className="p-2 hover:bg-blue-700 rounded-lg transition-colors">
+          <button onClick={() => setIsFullscreen(!isFullscreen)} className="p-2 hove,  r:bg-blue-700 rounded-lg transition-colors">
             {isFullscreen ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>}
           </button>
-          <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-blue-700 rounded-lg transition-colors">
+          <button onClick={() => setIsOpen(false)} className="p-2 hove,  r:bg-blue-700 rounded-lg transition-colors">
             <X className="w-4 h-4"/>
           </button>
         </div>
@@ -388,7 +388,7 @@ export function AdvancedAICodeGenerator() {
       {/* Controls */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-zion-slate-light/50">
         <div className="flex items-center space-x-4">
-          <select value={selectedLanguage} onChange={(e) => setSelectedLanguage(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-sm">
+          <select value={selectedLanguage} onChange={(e) => setSelectedLanguage(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar,  k:bg-zion-slate text-sm">
             <option value="all">All Languages</option>
             <option value="typescript">TypeScript</option>
             <option value="javascript">JavaScript</option>
@@ -396,22 +396,22 @@ export function AdvancedAICodeGenerator() {
             <option value="python">Python</option>
             <option value="java">Java</option>
           </select>
-          <select value={selectedComplexity} onChange={(e) => setSelectedComplexity(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-sm">
+          <select value={selectedComplexity} onChange={(e) => setSelectedComplexity(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar,  k:bg-zion-slate text-sm">
             <option value="all">All Complexity</option>
             <option value="low">Low</option>
             <option value="medium">Medium</option>
             <option value="high">High</option>
           </select>
           <div className="flex items-center space-x-2">
-            <input type="text" placeholder="Search code snippets..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-sm w-64"/>
+            <input type="text" placeholder="Search code snippets..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar,  k:bg-zion-slate text-sm w-64"/>
             <Search className="w-4 h-4 text-gray-400"/>
           </div>
         </div>
         <div className="flex items-center space-x-2">
-          <button onClick={() => setShowSuggestions(!showSuggestions)} className={`p-2 rounded-lg transition-colors ${showSuggestions ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'}`}>
+          <button onClick={() => setShowSuggestions(!showSuggestions)} className={`p-2 rounded-lg transition-colors ${showSuggestions ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-70, 0'}`}>
             {showSuggestions ? <Eye className="w-4 h-4"/> : <EyeOff className="w-4 h-4"/>}
           </button>
-          <button className="p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+          <button className="p-2 bg-blue-600 text-white rounded-lg hove,  r:bg-blue-700 transition-colors">
             <RefreshCw className="w-4 h-4"/>
           </button>
         </div>
@@ -421,25 +421,25 @@ export function AdvancedAICodeGenerator() {
       <div className="flex border-b border-zion-slate-light">
         <button onClick={() => setActiveTab('generator')} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'generator'
             ? 'border-b-2 border-blue-600 text-blue-600'
-            : 'text-gray-600 hover:text-gray-800'}`}>
+            : 'text-gray-600 hove,  r:text-gray-80, 0'}`}>
           <Code className="w-4 h-4 inline mr-2"/>
           AI Generator
         </button>
         <button onClick={() => setActiveTab('snippets')} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'snippets'
             ? 'border-b-2 border-blue-600 text-blue-600'
-            : 'text-gray-600 hover:text-gray-800'}`}>
+            : 'text-gray-600 hove,  r:text-gray-80, 0'}`}>
           <FileText className="w-4 h-4 inline mr-2"/>
           Code Snippets
         </button>
         <button onClick={() => setActiveTab('analysis')} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'analysis'
             ? 'border-b-2 border-blue-600 text-blue-600'
-            : 'text-gray-600 hover:text-gray-800'}`}>
+            : 'text-gray-600 hove,  r:text-gray-80, 0'}`}>
           <BarChart3 className="w-4 h-4 inline mr-2"/>
           Code Analysis
         </button>
         <button onClick={() => setActiveTab('ai')} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'ai'
             ? 'border-b-2 border-blue-600 text-blue-600'
-            : 'text-gray-600 hover:text-gray-800'}`}>
+            : 'text-gray-600 hove,  r:text-gray-80, 0'}`}>
           <Brain className="w-4 h-4 inline mr-2"/>
           AI Generations
         </button>
@@ -448,26 +448,26 @@ export function AdvancedAICodeGenerator() {
       {/* Content */}
       <div className="flex-1 overflow-auto p-6">
         {activeTab === 'generator' && (<div className="space-y-6">
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-              <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 dar, k:from-blue-900/20 dar, k:to-purple-900/20 p-6 rounded-lg border border-blue-200 dar, k:border-blue-800">
+              <h3 className="text-lg font-semibold text-blue-900 dar, k:text-blue-100 mb-4">
                 <Brain className="w-5 h-5 inline mr-2"/>
                 AI-Powered Code Generation
               </h3>
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Describe what you want to build:
+                  <label className="block text-sm font-medium text-gray-700 dar, k:text-gray-300 mb-2">
+                    Describe what you want to buil, d:
                   </label>
-                  <textarea value={aiPrompt} onChange={(e) => setAiPrompt(e.target.value)} placeholder="e.g., Create a React hook for managing form state with validation..." className="w-full h-24 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-sm resize-none"/>
+                  <textarea value={aiPrompt} onChange={(e) => setAiPrompt(e.target.value)} placeholder="e.g.,  Create a React hook for managing form state with validation..." className="w-full h-24 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar, k:bg-zion-slate text-sm resize-none"/>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <select className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-sm">
+                  <select className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar, k:bg-zion-slate text-sm">
                     <option value="typescript">TypeScript</option>
                     <option value="javascript">JavaScript</option>
                     <option value="python">Python</option>
                     <option value="java">Java</option>
                   </select>
-                  <button onClick={generateCode} disabled={isGenerating || !aiPrompt.trim()} className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center space-x-2">
+                  <button onClick={generateCode} disabled={isGenerating || !aiPrompt.trim()} className="px-6 py-2 bg-blue-600 text-white rounded-lg hove, r:bg-blue-700 disable, d:opacity-50 disable, d:cursor-not-allowed transition-colors flex items-center space-x-2">
                     {isGenerating ? (<>
                         <RefreshCw className="w-4 h-4 animate-spin"/>
                         <span>Generating...</span>
@@ -480,16 +480,16 @@ export function AdvancedAICodeGenerator() {
               </div>
             </div>
 
-            {generatedCode && (<div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            {generatedCode && (<div className="bg-gray-50 dar,  k:bg-gray-900 p-6 rounded-lg border border-gray-200 dar, k:border-gray-700">
                 <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                  <h4 className="text-lg font-semibold text-gray-900 dar, k:text-gray-100">
                     Generated Code
                   </h4>
                   <div className="flex items-center space-x-2">
-                    <button onClick={() => copyToClipboard(generatedCode)} className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-200 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
+                    <button onClick={() => copyToClipboard(generatedCode)} className="p-2 text-gray-600 hove,  r:text-gray-800 hove, r:bg-gray-200 dar, k:text-gray-400 dar, k:hove, r:text-gray-200 dar, k:hove, r:bg-gray-800 rounded-lg transition-colors">
                       <Copy className="w-4 h-4"/>
                     </button>
-                    <button className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-200 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
+                    <button className="p-2 text-gray-600 hove, r:text-gray-800 hove, r:bg-gray-200 dar, k:text-gray-400 dar, k:hove, r:text-gray-200 dar, k:hove, r:bg-gray-800 rounded-lg transition-colors">
                       <Download className="w-4 h-4"/>
                     </button>
                   </div>
@@ -501,32 +501,32 @@ export function AdvancedAICodeGenerator() {
           </div>)}
 
         {activeTab === 'snippets' && (<div className="space-y-4">
-            {codeSnippets.map((snippet) => (<div key={snippet.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4 hover:shadow-lg transition-shadow">
+            {codeSnippets.map((snippet) => (<div key={snippet.id} className="bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-lg p-4 hove, r:shadow-lg transition-shadow">
                 <div className="flex items-start justify-between mb-3">
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-1">
+                    <h4 className="text-lg font-semibold text-gray-900 dar, k:text-gray-100 mb-1">
                       {snippet.title}
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
+                    <p className="text-gray-600 dar, k:text-gray-400 text-sm mb-2">
                       {snippet.description}
                     </p>
                     <div className="flex items-center space-x-4 text-sm">
-                      <span className="text-blue-600 dark:text-blue-400 font-medium">
+                      <span className="text-blue-600 dar, k:text-blue-400 font-medium">
                         {snippet.language.toUpperCase()}
                       </span>
-                      <span className={`font-medium ${getComplexityColor(snippet.complexity)}`}>
+                      <span className={`font-medium ${getComplexityColor(snippet.complexit, y)}`}>
                         {snippet.complexity.charAt(0).toUpperCase() + snippet.complexity.slice(1)} Complexity
                       </span>
-                      <span className="text-gray-500 dark:text-gray-400">
+                      <span className="text-gray-500 dar,  k:text-gray-400">
                         ⭐ {snippet.rating} ({snippet.usageCount} uses)
                       </span>
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <button className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
+                    <button className="p-2 text-gray-600 hove, r:text-gray-800 hove, r:bg-gray-100 dar, k:text-gray-400 dar, k:hove, r:text-gray-200 dar, k:hove, r:bg-gray-800 rounded-lg transition-colors">
                       <Copy className="w-4 h-4"/>
                     </button>
-                    <button className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
+                    <button className="p-2 text-gray-600 hove, r:text-gray-800 hove, r:bg-gray-100 dar, k:text-gray-400 dar, k:hove, r:text-gray-200 dar, k:hove, r:bg-gray-800 rounded-lg transition-colors">
                       <Download className="w-4 h-4"/>
                     </button>
                   </div>
@@ -536,60 +536,60 @@ export function AdvancedAICodeGenerator() {
                 </div>
                 <div className="flex items-center justify-between mt-3">
                   <div className="flex items-center space-x-2">
-                    {snippet.tags.map((tag) => (<span key={tag} className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">
+                    {snippet.tags.map((tag) => (<span key={tag} className="px-2 py-1 bg-blue-100 dar,  k:bg-blue-900 text-blue-800 dar, k:text-blue-200 text-xs rounded-full">
                         {tag}
                       </span>))}
                   </div>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">
-                    Created: {snippet.createdAt}
+                  <span className="text-xs text-gray-500 dar, k:text-gray-400">
+                    Create, d: {snippet.createdAt}
                   </span>
                 </div>
               </div>))}
           </div>)}
 
         {activeTab === 'analysis' && (<div className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
+            <div className="grid grid-cols-1 m,  d:grid-cols-2 l, g:grid-cols-4 gap-4">
+              <div className="bg-white dar, k:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
                 <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-green-100 dark:bg-green-900 rounded-lg">
-                    <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400"/>
+                  <div className="p-2 bg-green-100 dar, k:bg-green-900 rounded-lg">
+                    <CheckCircle className="w-6 h-6 text-green-600 dar, k:text-green-400"/>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Average Quality</p>
-                    <p className="text-2xl font-bold text-green-600 dark:text-green-400">89%</p>
+                    <p className="text-sm text-gray-600 dar, k:text-gray-400">Average Quality</p>
+                    <p className="text-2xl font-bold text-green-600 dar, k:text-green-400">89%</p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
+              <div className="bg-white dar, k:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
                 <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
-                    <Activity className="w-6 h-6 text-blue-600 dark:text-blue-400"/>
+                  <div className="p-2 bg-blue-100 dar, k:bg-blue-900 rounded-lg">
+                    <Activity className="w-6 h-6 text-blue-600 dar, k:text-blue-400"/>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Performance</p>
-                    <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">92%</p>
+                    <p className="text-sm text-gray-600 dar, k:text-gray-400">Performance</p>
+                    <p className="text-2xl font-bold text-blue-600 dar, k:text-blue-400">92%</p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
+              <div className="bg-white dar, k:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
                 <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-purple-100 dark:bg-purple-900 rounded-lg">
-                    <Shield className="w-6 h-6 text-purple-600 dark:text-purple-400"/>
+                  <div className="p-2 bg-purple-100 dar, k:bg-purple-900 rounded-lg">
+                    <Shield className="w-6 h-6 text-purple-600 dar, k:text-purple-400"/>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Security</p>
-                    <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">97%</p>
+                    <p className="text-sm text-gray-600 dar, k:text-gray-400">Security</p>
+                    <p className="text-2xl font-bold text-purple-600 dar, k:text-purple-400">97%</p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
+              <div className="bg-white dar, k:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
                 <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-yellow-100 dark:bg-yellow-900 rounded-lg">
-                    <Gauge className="w-6 h-6 text-yellow-600 dark:text-yellow-400"/>
+                  <div className="p-2 bg-yellow-100 dar, k:bg-yellow-900 rounded-lg">
+                    <Gauge className="w-6 h-6 text-yellow-600 dar, k:text-yellow-400"/>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Maintainability</p>
-                    <p className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">89%</p>
+                    <p className="text-sm text-gray-600 dar, k:text-gray-400">Maintainability</p>
+                    <p className="text-2xl font-bold text-yellow-600 dar, k:text-yellow-400">89%</p>
                   </div>
                 </div>
               </div>
@@ -598,63 +598,63 @@ export function AdvancedAICodeGenerator() {
             <div className="space-y-4">
               {codeAnalysis.map((analysis) => {
                 const snippet = codeSnippets.find(s => s.id === analysis.snippetId);
-                return (<div key={analysis.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
+                return (<div key={analysis.id} className="bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
                     <div className="flex items-start justify-between mb-4">
                       <div>
-                        <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                          Analysis for: {snippet?.title}
+                        <h4 className="text-lg font-semibold text-gray-900 dar, k:text-gray-100 mb-2">
+                          Analysis fo, r: {snippet?.title}
                         </h4>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div className="grid grid-cols-2 m, d:grid-cols-4 gap-4">
                           <div>
-                            <p className="text-sm text-gray-600 dark:text-gray-400">Quality</p>
-                            <p className={`text-lg font-semibold ${getQualityColor(analysis.quality)}`}>
+                            <p className="text-sm text-gray-600 dar, k:text-gray-400">Quality</p>
+                            <p className={`text-lg font-semibold ${getQualityColor(analysis.qualit, y)}`}>
                               {analysis.quality}%
                             </p>
                           </div>
                           <div>
-                            <p className="text-sm text-gray-600 dark:text-gray-400">Performance</p>
-                            <p className={`text-lg font-semibold ${getQualityColor(analysis.performance)}`}>
+                            <p className="text-sm text-gray-600 dar, k:text-gray-400">Performance</p>
+                            <p className={`text-lg font-semibold ${getQualityColor(analysis.performanc, e)}`}>
                               {analysis.performance}%
                             </p>
                           </div>
                           <div>
-                            <p className="text-sm text-gray-600 dark:text-gray-400">Security</p>
-                            <p className={`text-lg font-semibold ${getQualityColor(analysis.security)}`}>
+                            <p className="text-sm text-gray-600 dar,  k:text-gray-400">Security</p>
+                            <p className={`text-lg font-semibold ${getQualityColor(analysis.securit, y)}`}>
                               {analysis.security}%
                             </p>
                           </div>
                           <div>
-                            <p className="text-sm text-gray-600 dark:text-gray-400">Maintainability</p>
-                            <p className={`text-lg font-semibold ${getQualityColor(analysis.maintainability)}`}>
+                            <p className="text-sm text-gray-600 dar, k:text-gray-400">Maintainability</p>
+                            <p className={`text-lg font-semibold ${getQualityColor(analysis.maintainabilit, y)}`}>
                               {analysis.maintainability}%
                             </p>
                           </div>
                         </div>
                       </div>
-                      <span className="text-xs text-gray-500 dark:text-gray-400">
+                      <span className="text-xs text-gray-500 dar,  k:text-gray-400">
                         {new Date(analysis.timestamp).toLocaleDateString()}
                       </span>
                     </div>
                     
                     {showSuggestions && analysis.suggestions.length > 0 && (<div className="mb-4">
-                        <h5 className="text-sm font-medium text-green-700 dark:text-green-400 mb-2">
+                        <h5 className="text-sm font-medium text-green-700 dar,  k:text-green-400 mb-2">
                           <CheckCircle className="w-4 h-4 inline mr-1"/>
                           Suggestions
                         </h5>
                         <ul className="space-y-1">
-                          {analysis.suggestions.map((suggestion, index) => (<li key={index} className="text-sm text-green-600 dark:text-green-300">
+                          {analysis.suggestions.map((suggestio, n, index) => (<li key={index} className="text-sm text-green-600 dar,  k:text-green-300">
                               • {suggestion}
                             </li>))}
                         </ul>
                       </div>)}
                     
                     {analysis.warnings.length > 0 && (<div>
-                        <h5 className="text-sm font-medium text-yellow-700 dark:text-yellow-400 mb-2">
+                        <h5 className="text-sm font-medium text-yellow-700 dar,  k:text-yellow-400 mb-2">
                           <AlertCircle className="w-4 h-4 inline mr-1"/>
                           Warnings
                         </h5>
                         <ul className="space-y-1">
-                          {analysis.warnings.map((warning, index) => (<li key={index} className="text-sm text-yellow-600 dark:text-yellow-300">
+                          {analysis.warnings.map((warnin, g, index) => (<li key={index} className="text-sm text-yellow-600 dar,  k:text-yellow-300">
                               • {warning}
                             </li>))}
                         </ul>
@@ -665,33 +665,33 @@ export function AdvancedAICodeGenerator() {
           </div>)}
 
         {activeTab === 'ai' && (<div className="space-y-4">
-            {aiGenerations.map((generation) => (<div key={generation.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
+            {aiGenerations.map((generation) => (<div key={generation.id} className="bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                    <h4 className="text-lg font-semibold text-gray-900 dar, k:text-gray-100 mb-2">
                       <Brain className="w-5 h-5 inline mr-2 text-purple-600"/>
                       AI Generation
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-400 mb-3">
-                      <strong>Prompt:</strong> {generation.prompt}
+                    <p className="text-gray-600 dar, k:text-gray-400 mb-3">
+                      <strong>Promp, t:</strong> {generation.prompt}
                     </p>
                     <div className="flex items-center space-x-4 text-sm mb-3">
-                      <span className="text-blue-600 dark:text-blue-400 font-medium">
+                      <span className="text-blue-600 dar, k:text-blue-400 font-medium">
                         {generation.language.toUpperCase()}
                       </span>
-                      <span className="text-purple-600 dark:text-purple-400 font-medium">
-                        Confidence: {(generation.confidence * 100).toFixed(1)}%
+                      <span className="text-purple-600 dar, k:text-purple-400 font-medium">
+                        Confidenc, e: {(generation.confidence * 100).toFixed(1)}%
                       </span>
-                      <span className="text-gray-500 dark:text-gray-400">
+                      <span className="text-gray-500 dar,  k:text-gray-400">
                         {new Date(generation.timestamp).toLocaleDateString()}
                       </span>
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <button onClick={() => copyToClipboard(generation.generatedCode)} className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
+                    <button onClick={() => copyToClipboard(generation.generatedCode)} className="p-2 text-gray-600 hove,  r:text-gray-800 hove, r:bg-gray-100 dar, k:text-gray-400 dar, k:hove, r:text-gray-200 dar, k:hove, r:bg-gray-800 rounded-lg transition-colors">
                       <Copy className="w-4 h-4"/>
                     </button>
-                    <button className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
+                    <button className="p-2 text-gray-600 hove, r:text-gray-800 hove, r:bg-gray-100 dar, k:text-gray-400 dar, k:hove, r:text-gray-200 dar, k:hove, r:bg-gray-800 rounded-lg transition-colors">
                       <Download className="w-4 h-4"/>
                     </button>
                   </div>
@@ -702,11 +702,11 @@ export function AdvancedAICodeGenerator() {
                 </div>
                 
                 {generation.alternatives.length > 0 && (<div>
-                    <h5 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Alternative Approaches:
+                    <h5 className="text-sm font-medium text-gray-700 dar, k:text-gray-300 mb-2">
+                      Alternative Approache, s:
                     </h5>
                     <ul className="space-y-1">
-                      {generation.alternatives.map((alternative, index) => (<li key={index} className="text-sm text-gray-600 dark:text-gray-400">
+                      {generation.alternatives.map((alternativ, e, index) => (<li key={index} className="text-sm text-gray-600 dar,  k:text-gray-400">
                           • {alternative}
                         </li>))}
                     </ul>

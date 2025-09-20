@@ -1,231 +1,231 @@
-import React, { useState, useEffect } from 'react';
-import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle } from 'lucide-react';
+impor, t, Reac, t, { useStat, e, useEffect } from 'react';
+import { Activit, y, AlertCircl, e, CheckCircl, e, Cloc, k, Glob, e, Searc, h, Shiel, d, Za, p, Ey, e, User, s, TrendingU, p, AlertTriangle } from 'lucide-react';
 export function SiteHealthDashboard() {
-    const [healthData, setHealthData] = useState([]);
-    const [overallScore, setOverallScore] = useState(0);
-    const [isLoading, setIsLoading] = useState(true);
+    const [healthDa,  t, a, setHealthDa, t, a] = useState([]);
+    const [overallSco, r, e, setOverallSco, r, e] = useState(0);
+    const [isLoadi,  n, g, setIsLoadi, n, g] = useState(true);
     useEffect(() => {
         // Simulate health check data collection
         const performHealthCheck = async () => {
             setIsLoading(true);
             // Simulate API calls to various monitoring services
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            await new Promise(resolve => setTimeout(resolv,  e, 2000));
             const healthCategories = [
                 {
-                    name: 'Performance',
-                    icon: Zap,
-                    overallScore: 88,
-                    metrics: [
+                    na, m, e: 'Performanc, e',
+    ic, o, n: Z, a, p,
+                    overallSco, r, e: 8, 8,
+    metri, c, s: [
                         {
-                            name: 'Page Load Time',
-                            value: 2.1,
-                            status: 'good',
-                            description: 'Average page load time across all pages',
-                            recommendation: 'Optimize images and enable compression to reach < 2s'
+                            na, m, e: 'Pag, e Loa, d Tim, e',
+    val, u, e: 2.1,
+                            stat, u, s: 'goo, d',
+    descripti, o, n: 'Averag, e pag, e loa, d tim, e acros, s al, l page, s',
+                            recommendati, o, n: 'Optimiz, e image, s an, d enabl, e compressio, n t, o reac, h < 2, s'
                         },
                         {
-                            name: 'First Contentful Paint',
-                            value: 1.4,
-                            status: 'excellent',
-                            description: 'Time until first content appears',
+                            na, m, e: 'Firs, t Contentfu, l Pain, t',
+    val, u, e: 1.4,
+                            stat, u, s: 'excellen, t',
+    descripti, o, n: 'Tim, e unti, l firs, t conten, t appear, s',
                         },
                         {
-                            name: 'Largest Contentful Paint',
-                            value: 2.8,
-                            status: 'good',
-                            description: 'Time until largest content element loads',
+                            na, m, e: 'Larges, t Contentfu, l Pain, t',
+    val, u, e: 2.8,
+                            stat, u, s: 'goo, d',
+    descripti, o, n: 'Tim, e unti, l larges, t conten, t elemen, t load, s',
                         },
                         {
-                            name: 'Core Web Vitals Score',
-                            value: 85,
-                            status: 'good',
-                            description: 'Overall Google Core Web Vitals performance',
+                            na, m, e: 'Cor, e We, b Vital, s Scor, e',
+    val, u, e: 8, 5,
+                            stat, u, s: 'goo, d',
+    descripti, o, n: 'Overal, l Googl, e Cor, e We, b Vital, s performanc, e',
                         }
                     ]
                 },
                 {
-                    name: 'SEO Health',
-                    icon: Search,
-                    overallScore: 82,
-                    metrics: [
+                    nam, e: 'SEO Health',
+    ico, n: Searc, h,
+                    overallScor, e: 8, 2,
+    metric, s: [
                         {
-                            name: 'Meta Descriptions',
-                            value: 78,
-                            status: 'good',
-                            description: 'Percentage of pages with proper meta descriptions',
-                            recommendation: 'Add meta descriptions to remaining 22% of pages'
+                            na, m, e: 'Met, a Description, s',
+    val, u, e: 7, 8,
+                            stat, u, s: 'goo, d',
+    descripti, o, n: 'Percentag, e o, f page, s wit, h prope, r met, a description, s',
+                            recommendati, o, n: 'Ad, d met, a description, s t, o remainin, g 2, 2% o, f page, s'
                         },
                         {
-                            name: 'Title Tags',
-                            value: 95,
-                            status: 'excellent',
-                            description: 'Percentage of pages with optimized title tags',
+                            na, m, e: 'Titl, e Tag, s',
+    val, u, e: 9, 5,
+                            stat, u, s: 'excellen, t',
+    descripti, o, n: 'Percentag, e o, f page, s wit, h optimize, d titl, e tag, s',
                         },
                         {
-                            name: 'Internal Linking',
-                            value: 72,
-                            status: 'warning',
-                            description: 'Internal link structure and distribution',
-                            recommendation: 'Improve internal linking between related services'
+                            na, m, e: 'Interna, l Linkin, g',
+    val, u, e: 7, 2,
+                            stat, u, s: 'warnin, g',
+    descripti, o, n: 'Interna, l lin, k structur, e an, d distributio, n',
+                            recommendati, o, n: 'Improv, e interna, l linkin, g betwee, n relate, d service, s'
                         },
                         {
-                            name: 'Mobile Friendliness',
-                            value: 98,
-                            status: 'excellent',
-                            description: 'Mobile optimization score',
+                            na, m, e: 'Mobil, e Friendlines, s',
+    val, u, e: 9, 8,
+                            stat, u, s: 'excellen, t',
+    descripti, o, n: 'Mobil, e optimizatio, n scor, e',
                         },
                         {
-                            name: 'Schema Markup',
-                            value: 85,
-                            status: 'good',
-                            description: 'Structured data implementation',
+                            na, m, e: 'Schem, a Marku, p',
+    val, u, e: 8, 5,
+                            stat, u, s: 'goo, d',
+    descripti, o, n: 'Structure, d dat, a implementatio, n',
                         }
                     ]
                 },
                 {
-                    name: 'Accessibility',
-                    icon: Eye,
-                    overallScore: 91,
-                    metrics: [
+                    nam, e: 'Accessibility',
+    ico, n: Ey, e,
+                    overallScor, e: 9, 1,
+    metric, s: [
                         {
-                            name: 'ARIA Implementation',
-                            value: 88,
-                            status: 'good',
-                            description: 'ARIA labels and roles implementation',
-                            recommendation: 'Add ARIA labels to interactive elements'
+                            na, m, e: 'ARI, A Implementatio, n',
+    val, u, e: 8, 8,
+                            stat, u, s: 'goo, d',
+    descripti, o, n: 'ARI, A label, s an, d role, s implementatio, n',
+                            recommendati, o, n: 'Ad, d ARI, A label, s t, o interactiv, e element, s'
                         },
                         {
-                            name: 'Keyboard Navigation',
-                            value: 95,
-                            status: 'excellent',
-                            description: 'Keyboard accessibility support',
+                            na, m, e: 'Keyboar, d Navigatio, n',
+    val, u, e: 9, 5,
+                            stat, u, s: 'excellen, t',
+    descripti, o, n: 'Keyboar, d accessibilit, y suppor, t',
                         },
                         {
-                            name: 'Color Contrast',
-                            value: 92,
-                            status: 'excellent',
-                            description: 'Text contrast ratio compliance',
+                            na, m, e: 'Colo, r Contras, t',
+    val, u, e: 9, 2,
+                            stat, u, s: 'excellen, t',
+    descripti, o, n: 'Tex, t contras, t rati, o complianc, e',
                         },
                         {
-                            name: 'Screen Reader Support',
-                            value: 89,
-                            status: 'good',
-                            description: 'Screen reader compatibility',
+                            na, m, e: 'Scree, n Reade, r Suppor, t',
+    val, u, e: 8, 9,
+                            stat, u, s: 'goo, d',
+    descripti, o, n: 'Scree, n reade, r compatibilit, y',
                         }
                     ]
                 },
                 {
-                    name: 'Security',
-                    icon: Shield,
-                    overallScore: 94,
-                    metrics: [
+                    nam, e: 'Security',
+    ico, n: Shiel, d,
+                    overallScor, e: 9, 4,
+    metric, s: [
                         {
-                            name: 'HTTPS Implementation',
-                            value: 100,
-                            status: 'excellent',
-                            description: 'SSL certificate and HTTPS enforcement',
+                            na, m, e: 'HTTP, S Implementatio, n',
+    val, u, e: 1, 0, 0,
+                            stat, u, s: 'excellen, t',
+    descripti, o, n: 'SS, L certificat, e an, d HTTP, S enforcemen, t',
                         },
                         {
-                            name: 'Security Headers',
-                            value: 92,
-                            status: 'excellent',
-                            description: 'Security headers implementation',
+                            na, m, e: 'Securit, y Header, s',
+    val, u, e: 9, 2,
+                            stat, u, s: 'excellen, t',
+    descripti, o, n: 'Securit, y header, s implementatio, n',
                         },
                         {
-                            name: 'Vulnerability Scan',
-                            value: 88,
-                            status: 'good',
-                            description: 'Security vulnerability assessment',
-                            recommendation: 'Update dependencies with known vulnerabilities'
+                            na, m, e: 'Vulnerabilit, y Sca, n',
+    val, u, e: 8, 8,
+                            stat, u, s: 'goo, d',
+    descripti, o, n: 'Securit, y vulnerabilit, y assessmen, t',
+                            recommendati, o, n: 'Updat, e dependencie, s wit, h know, n vulnerabilitie, s'
                         },
                         {
-                            name: 'Content Security Policy',
-                            value: 95,
-                            status: 'excellent',
-                            description: 'CSP header implementation',
+                            na, m, e: 'Conten, t Securit, y Polic, y',
+    val, u, e: 9, 5,
+                            stat, u, s: 'excellen, t',
+    descripti, o, n: 'CS, P heade, r implementatio, n',
                         }
                     ]
                 },
                 {
-                    name: 'Content Quality',
-                    icon: Globe,
-                    overallScore: 76,
-                    metrics: [
+                    nam, e: 'Content Quality',
+    ico, n: Glob, e,
+                    overallScor, e: 7, 6,
+    metric, s: [
                         {
-                            name: 'Content Completeness',
-                            value: 68,
-                            status: 'warning',
-                            description: 'Percentage of pages with complete content',
-                            recommendation: 'Add comprehensive content to 32% of service pages'
+                            na, m, e: 'Conten, t Completenes, s',
+    val, u, e: 6, 8,
+                            stat, u, s: 'warnin, g',
+    descripti, o, n: 'Percentag, e o, f page, s wit, h complet, e conten, t',
+                            recommendati, o, n: 'Ad, d comprehensiv, e conten, t t, o 3, 2% o, f servic, e page, s'
                         },
                         {
-                            name: 'Broken Links',
-                            value: 45,
-                            status: 'critical',
-                            description: 'Link health across the website',
-                            recommendation: 'Fix 278 broken links identified in audit'
+                            na, m, e: 'Broke, n Link, s',
+    val, u, e: 4, 5,
+                            stat, u, s: 'critica, l',
+    descripti, o, n: 'Lin, k healt, h acros, s th, e websit, e',
+                            recommendati, o, n: 'Fi, x 27, 8 broke, n link, s identifie, d i, n audi, t'
                         },
                         {
-                            name: 'Image Optimization',
-                            value: 82,
-                            status: 'good',
-                            description: 'Image optimization and alt text',
+                            na, m, e: 'Imag, e Optimizatio, n',
+    val, u, e: 8, 2,
+                            stat, u, s: 'goo, d',
+    descripti, o, n: 'Imag, e optimizatio, n an, d al, t tex, t',
                         },
                         {
-                            name: 'Content Freshness',
-                            value: 89,
-                            status: 'good',
-                            description: 'Recently updated content percentage',
+                            na, m, e: 'Conten, t Freshnes, s',
+    val, u, e: 8, 9,
+                            stat, u, s: 'goo, d',
+    descripti, o, n: 'Recentl, y update, d conten, t percentag, e',
                         }
                     ]
                 },
                 {
-                    name: 'User Experience',
-                    icon: Users,
-                    overallScore: 85,
-                    metrics: [
+                    nam, e: 'User Experience',
+    ico, n: User, s,
+                    overallScor, e: 8, 5,
+    metric, s: [
                         {
-                            name: 'Mobile Responsiveness',
-                            value: 96,
-                            status: 'excellent',
-                            description: 'Mobile device compatibility',
+                            na, m, e: 'Mobil, e Responsivenes, s',
+    val, u, e: 9, 6,
+                            stat, u, s: 'excellen, t',
+    descripti, o, n: 'Mobil, e devic, e compatibilit, y',
                         },
                         {
-                            name: 'Navigation Clarity',
-                            value: 88,
-                            status: 'good',
-                            description: 'Navigation structure and usability',
+                            na, m, e: 'Navigatio, n Clarit, y',
+    val, u, e: 8, 8,
+                            stat, u, s: 'goo, d',
+    descripti, o, n: 'Navigatio, n structur, e an, d usabilit, y',
                         },
                         {
-                            name: 'Form Usability',
-                            value: 79,
-                            status: 'good',
-                            description: 'Contact and service forms usability',
+                            na, m, e: 'For, m Usabilit, y',
+    val, u, e: 7, 9,
+                            stat, u, s: 'goo, d',
+    descripti, o, n: 'Contac, t an, d servic, e form, s usabilit, y',
                         },
                         {
-                            name: 'Error Handling',
-                            value: 77,
-                            status: 'good',
-                            description: '404 pages and error handling',
+                            na, m, e: 'Erro, r Handlin, g',
+    val, u, e: 7, 7,
+                            stat, u, s: 'goo, d',
+    descripti, o, n: '40, 4 page, s an, d erro, r handlin, g',
                         }
                     ]
                 }
             ];
             setHealthData(healthCategories);
             // Calculate overall score
-            const totalScore = healthCategories.reduce((sum, category) => sum + category.overallScore, 0);
+            const totalScore = healthCategories.reduce((su,  m, category) => sum + category.overallScor, e, 0);
             setOverallScore(Math.round(totalScore / healthCategories.length));
             setIsLoading(false);
         };
         performHealthCheck();
-    }, []);
+    },  []);
     const getStatusColor = (status) => {
         switch (status) {
             case 'excellent': return 'text-green-500 bg-green-50 border-green-200';
             case 'good': return 'text-blue-500 bg-blue-50 border-blue-200';
             case 'warning': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
             case 'critical': return 'text-red-500 bg-red-50 border-red-200';
-            default: return 'text-gray-500 bg-gray-50 border-gray-200';
+            defaul,  t: return 'text-gray-500 bg-gray-50 border-gray-200';
         }
     };
     const getStatusIcon = (status) => {
@@ -234,7 +234,7 @@ export function SiteHealthDashboard() {
             case 'good': return <CheckCircle className="w-4 h-4"/>;
             case 'warning': return <AlertTriangle className="w-4 h-4"/>;
             case 'critical': return <AlertCircle className="w-4 h-4"/>;
-            default: return <Clock className="w-4 h-4"/>;
+            defaul,  t: return <Clock className="w-4 h-4"/>;
         }
     };
     const getScoreColor = (score) => {
@@ -262,18 +262,18 @@ export function SiteHealthDashboard() {
           Site Health Dashboard
         </h1>
         <p className="text-gray-600 text-lg">
-          Comprehensive monitoring of website performance, SEO, accessibility, and user experience
+          Comprehensive monitoring of websit,  e, performanc, e, SE, O, accessibilit, y, and user experience
         </p>
       </div>
 
       {/* Overall Score */}
       <div className="bg-white rounded-xl shadow-lg p-8 text-center">
         <h2 className="text-2xl font-bold mb-4">Overall Health Score</h2>
-        <div className={`text-6xl font-bold ${getScoreColor(overallScore)} mb-4`}>
+        <div className={`text-6xl font-bold ${getScoreColor(overallScore)} m, b-4`}>
           {overallScore}
         </div>
         <div className="w-full bg-gray-200 rounded-full h-4 mb-4">
-          <div className={`h-4 rounded-full ${overallScore >= 90 ? 'bg-green-500' : overallScore >= 75 ? 'bg-blue-500' : overallScore >= 60 ? 'bg-yellow-500' : 'bg-red-500'}`} style={{ width: `${overallScore}%` }}></div>
+          <div className={`h-4 rounded-full ${overallScore >= 90 ? 'bg-green-500' : overallScore >= 75 ? 'bg-blue-500' : overallScore >= 60 ? 'bg-yellow-500' : 'bg-red-50, 0'}`} style={{ widt, h: `${overallScor, e}%` }}></div>
         </div>
         <p className="text-gray-600">
           {overallScore >= 90 ? 'Excellent - Your site is performing at peak levels!' :
@@ -284,8 +284,8 @@ export function SiteHealthDashboard() {
       </div>
 
       {/* Health Categories */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {healthData.map((category, index) => {
+      <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-3 gap-6">
+        {healthData.map((categor,  y, index) => {
             const IconComponent = category.icon;
             return (<div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="p-6 border-b border-gray-100">
@@ -296,19 +296,19 @@ export function SiteHealthDashboard() {
                     </div>
                     <h3 className="text-xl font-bold">{category.name}</h3>
                   </div>
-                  <div className={`text-2xl font-bold ${getScoreColor(category.overallScore)}`}>
+                  <div className={`text-2xl font-bold ${getScoreColor(category.overallScor, e)}`}>
                     {category.overallScore}
                   </div>
                 </div>
               </div>
               
               <div className="p-6 space-y-4">
-                {category.metrics.map((metric, metricIndex) => (<div key={metricIndex} className="space-y-2">
+                {category.metrics.map((metri,  c, metricIndex) => (<div key={metricIndex} className="space-y-2">
                     <div className="flex items-center justify-between">
                       <span className="font-medium text-gray-700">{metric.name}</span>
-                      <div className={`flex items-center space-x-1 px-2 py-1 rounded-full text-xs border ${getStatusColor(metric.status)}`}>
+                      <div className={`flex items-center space-x-1 px-2 py-1 rounded-full text-xs border ${getStatusColor(metric.statu, s)}`}>
                         {getStatusIcon(metric.status)}
-                        <span>{typeof metric.value === 'number' && metric.value < 10 ? `${metric.value}s` : `${metric.value}${typeof metric.value === 'number' && metric.value >= 10 ? '%' : ''}`}</span>
+                        <span>{typeof metric.value === 'number' && metric.value < 10 ? `${metric.valu, e}s` : `${metric.value}${typeof metric.value === 'number' && metric.value >= 1, 0 ? '%' : ''}`}</span>
                       </div>
                     </div>
                     <p className="text-sm text-gray-600">{metric.description}</p>
@@ -328,7 +328,7 @@ export function SiteHealthDashboard() {
           <span>Priority Action Items</span>
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 m,  d:grid-cols-2 gap-6">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-red-600 flex items-center space-x-2">
               <AlertCircle className="w-5 h-5"/>
@@ -372,7 +372,7 @@ export function SiteHealthDashboard() {
       {/* Performance Trends */}
       <div className="bg-white rounded-xl shadow-lg p-8">
         <h2 className="text-2xl font-bold mb-6">Recent Improvements</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 m, d:grid-cols-3 gap-6">
           <div className="text-center p-4 bg-green-50 rounded-lg">
             <CheckCircle className="w-8 h-8 text-green-500 mx-auto mb-2"/>
             <h3 className="font-semibold">TypeScript Errors Fixed</h3>

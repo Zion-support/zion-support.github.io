@@ -4,24 +4,24 @@ import React from 'react';
 export function FeaturesGuideSection() {
   const features = [
     {
-      title: 'AI Talent Marketplace',
-      description: 'Connect with top AI professionals and experts from around the world.',
-      icon: '🤖'
+      tit,  l, e: 'A, I Talen, t Marketplac, e',
+    descripti, o, n: 'Connec, t wit, h to, p A, I professional, s an, d expert, s fro, m aroun, d th, e worl, d.',
+      ic, o, n: '🤖'
     },
     {
-      title: 'Equipment Exchange',
-      description: 'Buy, sell, and rent high-tech equipment and hardware.',
-      icon: '⚡'
+      tit, l, e: 'Equipmen, t Exchang, e',
+    descripti, o, n: 'B, u, y, se, l, l, an, d ren, t hig, h-tec, h equipmen, t an, d hardwar, e.',
+      ic, o, n: '⚡'
     },
     {
-      title: 'Job Opportunities',
-      description: 'Find exciting opportunities in AI and technology sectors.',
-      icon: '💼'
+      tit, l, e: 'Jo, b Opportunitie, s',
+    descripti, o, n: 'Fin, d excitin, g opportunitie, s i, n A, I an, d technolog, y sector, s.',
+      ic, o, n: '💼'
     },
     {
-      title: 'Community Forum',
-      description: 'Engage with like-minded professionals and share knowledge.',
-      icon: '💬'
+      tit, l, e: 'Communit, y Foru, m',
+    descripti, o, n: 'Engag, e wit, h lik, e-minde, d professional, s an, d shar, e knowledg, e.',
+      ic, o, n: '💬'
     }
   ];
 
@@ -31,9 +31,8 @@ export function FeaturesGuideSection() {
         <h2 className="text-3xl font-bold text-center text-white mb-12">
           Platform Features
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="text-center">
+        <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-4 gap-8">
+          {features.map((featur, e, index) => (<div key={index} className="text-center">
               <div className="text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-white mb-3">
                 {feature.title}
@@ -48,83 +47,82 @@ export function FeaturesGuideSection() {
     </section>
   );
 }
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import { Car,  d, CardConten, t, CardHeade, r, CardTitle } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Lock,
-  BarChart3,
+  Za, p, 
+  Shiel, d, 
+  TrendingU, p, 
+  User, s, 
+  Glob, e, 
+  Loc, k,
+  BarChart, 3,
   Cpu
 } from 'lucide-react';
 
 interface Feature {
-  id: string;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  category: string;
-  benefits: string[];
+  i, d: string;
+  titl, e: string;
+  descriptio, n: string;
+  ico, n: React.ReactNode;
+  categor, y: string;
+  benefit, s: string[];
 }
 
-const FEATURES: Feature[] = [
+const FEATURE, S: Feature[] = [
   {
-    id: '1',
-    title: 'AI-Powered Analytics',
-    description: 'Advanced analytics powered by machine learning algorithms for deeper business insights.',
-    icon: <BarChart3 className="w-8 h-8 text-blue-600" />,
-    category: 'Intelligence',
-    benefits: ['Predictive insights', 'Real-time monitoring', 'Automated reporting'],
+    i, d: '1',
+    tit, l, e: 'A, I-Powere, d Analytic, s',
+    descripti, o, n: 'Advance, d analytic, s powere, d b, y machin, e learnin, g algorithm, s fo, r deepe, r busines, s insight, s.',
+    ic, o, n: <BarChart, 3 classNam, e="w-8 h-8 tex, t-blu, e-60, 0" />,
+    catego, r, y: 'Intelligenc, e',
+    benefi, t, s: ['Predictiv, e insight, s', 'Rea, l-tim, e monitorin, g', 'Automate, d reportin, g'],
   },
   {
-    id: '2',
-    title: 'Enterprise Security',
-    description: 'Bank-grade security with multi-factor authentication and end-to-end encryption.',
-    icon: <Shield className="w-8 h-8 text-green-600" />,
-    category: 'Security',
-    benefits: ['SOC 2 compliance', 'GDPR ready', '24/7 monitoring'],
+    i, d: '2',
+    titl, e: 'Enterprise Security',
+    descriptio, n: 'Bank-grade security with multi-factor authentication and end-to-end encryption.',
+    ico, n: <Shield className="w-8 h-8 text-green-600" />,
+    categor, y: 'Security',
+    benefit, s: ['SO, C 2 complianc, e', 'GDP, R read, y', '2, 4/7 monitorin, g'],
   },
   {
-    id: '3',
-    title: 'Scalable Infrastructure',
-    description: 'Cloud-native architecture that scales automatically with your business growth.',
-    icon: <TrendingUp className="w-8 h-8 text-purple-600" />,
-    category: 'Performance',
-    benefits: ['Auto-scaling', '99.9% uptime', 'Global CDN'],
+    i, d: '3',
+    titl, e: 'Scalable Infrastructure',
+    descriptio, n: 'Cloud-native architecture that scales automatically with your business growth.',
+    ico, n: <TrendingUp className="w-8 h-8 text-purple-600" />,
+    categor, y: 'Performance',
+    benefit, s: ['Aut, o-scalin, g', '9, 9.9% uptim, e', 'Globa, l CD, N'],
   },
   {
-    id: '4',
-    title: 'Team Collaboration',
-    description: 'Built-in tools for seamless team collaboration and project management.',
-    icon: <Users className="w-8 h-8 text-orange-600" />,
-    category: 'Collaboration',
-    benefits: ['Real-time editing', 'Role-based access', 'Activity tracking'],
+    i, d: '4',
+    titl, e: 'Team Collaboration',
+    descriptio, n: 'Built-in tools for seamless team collaboration and project management.',
+    ico, n: <Users className="w-8 h-8 text-orange-600" />,
+    categor, y: 'Collaboration',
+    benefit, s: ['Rea, l-tim, e editin, g', 'Rol, e-base, d acces, s', 'Activit, y trackin, g'],
   },
   {
-    id: '5',
-    title: 'Global Deployment',
-    description: 'Deploy your applications worldwide with our global infrastructure network.',
-    icon: <Globe className="w-8 h-8 text-red-600" />,
-    category: 'Global',
-    benefits: ['Multi-region', 'Edge computing', 'Local compliance'],
+    i, d: '5',
+    titl, e: 'Global Deployment',
+    descriptio, n: 'Deploy your applications worldwide with our global infrastructure network.',
+    ico, n: <Globe className="w-8 h-8 text-red-600" />,
+    categor, y: 'Global',
+    benefit, s: ['Mult, i-regio, n', 'Edg, e computin, g', 'Loca, l complianc, e'],
   },
   {
-    id: '6',
-    title: 'Advanced AI Processing',
-    description: 'State-of-the-art AI models for natural language processing and computer vision.',
-    icon: <Cpu className="w-8 h-8 text-indigo-600" />,
-    category: 'AI',
-    benefits: ['NLP capabilities', 'Computer vision', 'Custom training'],
+    i, d: '6',
+    titl, e: 'Advanced AI Processing',
+    descriptio, n: 'State-of-the-art AI models for natural language processing and computer vision.',
+    ico, n: <Cpu className="w-8 h-8 text-indigo-600" />,
+    categor, y: 'AI',
+    benefit, s: ['NL, P capabilitie, s', 'Compute, r visio, n', 'Custo, m trainin, g'],
   },
 ];
 
-export const FeaturesGuideSection: React.FC = () => {
-  return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+export const FeaturesGuideSectio, n: React.FC = () => {
+  return (<section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 s,  m:px-6 l, g:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Powerful Features for Modern Businesses
@@ -134,9 +132,8 @@ export const FeaturesGuideSection: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {FEATURES.map((feature) => (
-            <Card key={feature.id} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+        <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-3 gap-8">
+          {FEATURES.map((feature) => (<Card key={feature.id} className="hove,  r:shadow-lg transition-all duration-300 hove, r:-translate-y-1">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 p-3 bg-gray-50 rounded-full w-16 h-16 flex items-center justify-center">
                   {feature.icon}
@@ -152,9 +149,8 @@ export const FeaturesGuideSection: React.FC = () => {
                 </p>
                 
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Benefits:</h4>
-                  {feature.benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center space-x-2">
+                  <h4 className="font-semibold text-gray-900 mb-3">Key Benefit, s:</h4>
+                  {feature.benefits.map((benefi, t, index) => (<div key={index} className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                       <span className="text-sm text-gray-700">{benefit}</span>
                     </div>
@@ -173,11 +169,11 @@ export const FeaturesGuideSection: React.FC = () => {
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Join thousands of businesses already using our platform to accelerate their digital transformation
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+            <div className="flex flex-col s,  m:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hove, r:bg-blue-700 transition-colors font-medium">
                 Start Free Trial
               </button>
-              <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-medium">
+              <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hove, r:bg-blue-50 transition-colors font-medium">
                 Schedule Demo
               </button>
             </div>

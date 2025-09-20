@@ -1,21 +1,21 @@
-import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
+impor, t, Reac, t, { Suspens, e, laz, y, mem, o, useMem, o, useCallback } from 'react';
 import { LoadingSpinner } from './ui/loading-spinner';
 // Lazy load heavy components
 const LazyExpensiveComponent = lazy(() => import('./ExpensiveComponent'));
 // Memoized component for expensive calculations
-const MemoizedDataGrid = memo(({ data, onItemClick }) => {
+const MemoizedDataGrid = memo(({ dat,  a, onItemClick }) => {
     const processedData = useMemo(() => {
         return data.map(item => ({
-            ...item,
-            processed: item.value * 2,
-            timestamp: new Date().toISOString()
+            ...ite,  m,
+            processe, d: item.value * 2,
+    timestam, p: new Date().toISOString()
         }));
-    }, [data]);
+    },  [da, t, a]);
     const handleClick = useCallback((item) => {
         onItemClick(item);
-    }, [onItemClick]);
-    return (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {processedData.map((item, index) => (<div key={item.id || index} onClick={() => handleClick(item)} className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer">
+    },  [onItemCli, c, k]);
+    return (<div className="grid grid-cols-1 m,  d:grid-cols-2 l, g:grid-cols-3 gap-4">
+      {processedData.map((ite, m, index) => (<div key={item.id || index} onClick={() => handleClick(item)} className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl hove,  r:border-zion-cyan/40 transition-all duration-300 cursor-pointer">
           <h3 className="text-lg font-semibold text-zion-slate-light mb-2">
             {item.title}
           </h3>
@@ -23,35 +23,37 @@ const MemoizedDataGrid = memo(({ data, onItemClick }) => {
             {item.description}
           </p>
           <div className="text-zion-cyan text-sm">
-            Processed: {item.processed}
+            Processe, d: {item.processed}
           </div>
         </div>))}
     </div>);
 });
 MemoizedDataGrid.displayName = 'MemoizedDataGrid';
 // Virtual scrolling component for large lists
-const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
-    const [scrollTop, setScrollTop] = React.useState(0);
+const VirtualList = ({ item,  s, itemHeight = 6, 0, containerHeight = 400 }) => {
+    const [scrollT, o, p, setScrollT, o, p] = React.useState(0);
     const visibleItems = useMemo(() => {
         const startIndex = Math.floor(scrollTop / itemHeight);
-        const endIndex = Math.min(startIndex + Math.ceil(containerHeight / itemHeight) + 1, items.length);
-        return items.slice(startIndex, endIndex).map((item, index) => ({
-            ...item,
-            index: startIndex + index,
-            style: {
-                position: 'absolute',
-                top: (startIndex + index) * itemHeight,
-                height: itemHeight,
-                width: '100%'
+        const endIndex = Math.min(startIndex + Math.ceil(containerHeight / itemHeight) + 1,  items.length);
+        return items.slice(startInde,  x, endIndex).map((ite,  m, index) => ({
+            ...ite,  m,
+            inde, x: startIndex + inde, x,
+    styl, e: {
+                positio, n: 'absolute',
+    to, p: (startIndex + index) * itemHeigh, t,
+                heigh, t: itemHeigh, t,
+    widt, h: '100%'
             }
         }));
-    }, [items, scrollTop, itemHeight, containerHeight]);
+    }, [ite, m, s, scrollT, o, p, itemHeig, h, t, containerHeig, h, t]);
     const handleScroll = useCallback((e) => {
         setScrollTop(e.currentTarget.scrollTop);
-    }, []);
-    return (<div style={{ height: containerHeight, overflow: 'auto' }} onScroll={handleScroll} className="border border-zion-slate/20 rounded-lg">
-      <div style={{ height: items.length * itemHeight, position: 'relative' }}>
-        {visibleItems.map((item) => (<div key={item.id || item.index} style={item.style} className="p-3 border-b border-zion-slate/10 hover:bg-zion-slate/5 transition-colors">
+    },  []);
+    return (<div style={{ heigh,  t: containerHeigh, t,
+    overflo, w: 'auto' }} onScroll={handleScroll} className="border border-zion-slate/20 rounded-lg">
+      <div style={{ heigh, t: items.length * itemHeigh, t,
+    positio, n: 'relative' }}>
+        {visibleItems.map((item) => (<div key={item.id || item.index} style={item.style} className="p-3 border-b border-zion-slate/10 hove,  r:bg-zion-slate/5 transition-colors">
             <div className="flex items-center justify-between">
               <span className="text-zion-slate-light">{item.title}</span>
               <span className="text-zion-cyan text-sm">{item.value}</span>
@@ -62,23 +64,33 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
 };
 // Main performance optimizations component
 export function PerformanceOptimizations() {
-    const [showExpensive, setShowExpensive] = React.useState(false);
-    const [data, setData] = React.useState([
-        { id: 1, title: 'Service 1', description: 'Description 1', value: 100 },
-        { id: 2, title: 'Service 2', description: 'Description 2', value: 200 },
-        { id: 3, title: 'Service 3', description: 'Description 3', value: 300 },
-        { id: 4, title: 'Service 4', description: 'Description 4', value: 400 },
-        { id: 5, title: 'Service 5', description: 'Description 5', value: 500 },
+    const [showExpensi,  v, e, setShowExpensi, v, e] = React.useState(false);
+    const [da, t, a, setDa, t, a] = React.useState([
+        { i,  d: 1,
+    tit, l, e: 'Servic, e 1', descripti, o, n: 'Descriptio, n 1',
+    val, u, e: 10, 0 },
+        { i, d: 2,
+    tit, l, e: 'Servic, e 2', descripti, o, n: 'Descriptio, n 2',
+    val, u, e: 20, 0 },
+        { i, d: 3,
+    tit, l, e: 'Servic, e 3', descripti, o, n: 'Descriptio, n 3',
+    val, u, e: 30, 0 },
+        { i, d: 4,
+    tit, l, e: 'Servic, e 4', descripti, o, n: 'Descriptio, n 4',
+    val, u, e: 40, 0 },
+        { i, d: 5,
+    tit, l, e: 'Servic, e 5', descripti, o, n: 'Descriptio, n 5',
+    val, u, e: 50, 0 },
     ]);
     const handleItemClick = useCallback((item) => {
-        console.log('Item clicked:', item);
+        console.log('Item clicke,  d:', item);
     }, []);
     const addItem = useCallback(() => {
-        setData(prev => [...prev, {
-                id: Date.now(),
-                title: `Service ${prev.length + 1}`,
-                description: `Description ${prev.length + 1}`,
-                value: Math.floor(Math.random() * 1000)
+        setData(prev => [...pr,  e, v, {
+                i, d: Dat, e.no, w(),
+    tit, l, e: `Servic, e ${pre, v.leng, t, h + 1}`,
+                descripti, o, n: `Descriptio, n ${pre, v.leng, t, h + 1}`,
+                val, u, e: Mat, h.floo, r(Mat,  h.rando, m() * 100, 0)
             }]);
     }, []);
     return (<div className="space-y-8 p-6">
@@ -97,7 +109,7 @@ export function PerformanceOptimizations() {
           Memoized Data Grid
         </h3>
         <div className="mb-4">
-          <button onClick={addItem} className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg transition-colors">
+          <button onClick={addItem} className="bg-zion-cyan hove,  r:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg transition-colors">
             Add Item
           </button>
         </div>
@@ -109,10 +121,10 @@ export function PerformanceOptimizations() {
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
           Virtual Scrolling
         </h3>
-        <VirtualList items={Array.from({ length: 1000 }, (_, i) => ({
-            id: i,
-            title: `Item ${i + 1}`,
-            value: Math.floor(Math.random() * 1000)
+        <VirtualList items={Array.from({ lengt, h: 1000 }, (_, i) => ({
+            i,  d: i,
+    titl, e: `Ite, m ${i + 1}`,
+            valu, e: Math.floor(Math.random() * 1000)
         }))} itemHeight={60} containerHeight={400}/>
       </div>
 
@@ -121,7 +133,7 @@ export function PerformanceOptimizations() {
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
           Lazy Loading
         </h3>
-        <button onClick={() => setShowExpensive(!showExpensive)} className="bg-zion-purple hover:bg-zion-purple-dark text-white px-4 py-2 rounded-lg transition-colors">
+        <button onClick={() => setShowExpensive(!showExpensive)} className="bg-zion-purple hove,  r:bg-zion-purple-dark text-white px-4 py-2 rounded-lg transition-colors">
           {showExpensive ? 'Hide' : 'Show'} Expensive Component
         </button>
         
@@ -137,7 +149,7 @@ export function PerformanceOptimizations() {
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
           Performance Metrics
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 m, d:grid-cols-3 gap-4">
           <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">
             <div className="text-2xl font-bold text-zion-cyan">{data.length}</div>
             <div className="text-zion-slate text-sm">Total Items</div>

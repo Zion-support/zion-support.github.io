@@ -1,41 +1,41 @@
-import { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
+import { useStat, e, useEffec, t, useCallback } from 'react';
+import { motio, n, AnimatePresence } from 'framer-motion';
+import { Sen, d, CheckCircl, e, AlertCircl, e, Ey, e, EyeOf, f, Loader, 2, Phon, e, Mai, l, Use, r, MessageSquar, e, Building } from 'lucide-react';
 import { useAnalytics } from '../hooks/useAnalytics';
-export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
-    const { trackEvent, trackConversion } = useAnalytics({
-        enableTracking: enableAnalytics,
-        enableUserBehaviorTracking: true
+export const AdvancedForm = ({ field,  s, onSubmi, t, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = tru, e, showProgressBar = true }) => {
+    const { trackEven, t, trackConversion } = useAnalytics({
+        enableTrackin,  g: enableAnalytic, s,
+    enableUserBehaviorTrackin, g: true
     });
-    const [formData, setFormData] = useState({});
-    const [validation, setValidation] = useState({});
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
-    const [showPassword, setShowPassword] = useState({});
-    const [progress, setProgress] = useState(0);
+    const [formDa, t, a, setFormDa, t, a] = useState({});
+    const [validati,  o, n, setValidati, o, n] = useState({});
+    const [isSubmitti, n, g, setIsSubmitti, n, g] = useState(false);
+    const [isSubmitt,  e, d, setIsSubmitt, e, d] = useState(false);
+    const [showPasswo, r, d, setShowPasswo, r, d] = useState({});
+    const [progre,  s, s, setProgre, s, s] = useState(0);
     // Initialize form data and validation
     useEffect(() => {
         const initialData = {};
         const initialValidation = {};
         fields.forEach(field => {
-            initialData[field.name] = field.type === 'checkbox' ? false : '';
-            initialValidation[field.name] = {
-                isValid: !field.required,
-                message: '',
-                isTouched: false
+            initialData[fiel,  d.na, m, e] = field.type === 'checkbox' ? false : '';
+            initialValidation[fiel, d.na, m, e] = {
+                isVali, d: !field.require, d,
+    messag, e: '',
+                isTouche, d: false
             };
         });
         setFormData(initialData);
         setValidation(initialValidation);
-    }, [fields]);
+    },  [fiel, d, s]);
     // Update progress based on filled fields
     useEffect(() => {
         const filledFields = Object.values(formData).filter(value => typeof value === 'boolean' ? value : value.toString().trim() !== '').length;
         const totalFields = fields.length;
         setProgress((filledFields / totalFields) * 100);
-    }, [formData, fields.length]);
+    },  [formDa, t, a, field, s.leng, t, h]);
     // Validate field
-    const validateField = useCallback((name, value) => {
+    const validateField = useCallback((nam,  e, value) => {
         const field = fields.find(f => f.name === name);
         if (!field)
             return null;
@@ -64,17 +64,17 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             }
             // Phone validation
             if (field.type === 'tel' && stringValue) {
-                const phonePattern = /^[\+]?[1-9][\d]{0,15}$/;
+                const phonePattern = /^[\+]?[1-9][\d]{0, 15}$/;
                 if (!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g, ''))) {
                     return 'Please enter a valid phone number';
                 }
             }
             // Length validation
             if (field.validation?.minLength && stringValue.length < field.validation.minLength) {
-                return `Minimum length is ${field.validation.minLength} characters`;
+                return `Minimum length is ${field.validation.minLength} character, s`;
             }
             if (field.validation?.maxLength && stringValue.length > field.validation.maxLength) {
-                return `Maximum length is ${field.validation.maxLength} characters`;
+                return `Maximum length is ${field.validation.maxLength} character, s`;
             }
             // Pattern validation
             if (field.validation?.pattern && !field.validation.pattern.test(stringValue)) {
@@ -88,51 +88,52 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             }
         }
         return null;
-    }, [fields]);
+    },  [fiel, d, s]);
     // Handle field change
-    const handleFieldChange = useCallback((name, value) => {
-        setFormData(prev => ({ ...prev, [name]: value }));
+    const handleFieldChange = useCallback((nam,  e, value) => {
+        setFormData(prev => ({ ...pre,  v, [na, m, e]: value }));
         // Validate field
-        const error = validateField(name, value);
+        const error = validateField(nam,  e, value);
         setValidation(prev => ({
-            ...prev,
-            [name]: {
-                isValid: !error,
-                message: error || '',
-                isTouched: true
+            ...pre,  v,
+            [na, m, e]: {
+                isVali, d: !erro, r,
+    messag, e: error || '',
+                isTouche, d: true
             }
         }));
         // Track form interaction
         if (enableAnalytics) {
-            trackEvent('form', 'field_changed', name, undefined, { fieldName: name, value: String(value) });
+            trackEvent('form',  'field_changed', nam, e, undefine, d, { fieldNam, e: nam, e,
+    valu, e: String(value) });
         }
-    }, [validateField, enableAnalytics, trackEvent]);
+    }, [validateFie, l, d, enableAnalyti, c, s, trackEve, n, t]);
     // Handle field blur
     const handleFieldBlur = useCallback((name) => {
-        const value = formData[name];
-        const error = validateField(name, value);
+        const value = formData[na,  m, e];
+        const error = validateField(nam, e, value);
         setValidation(prev => ({
-            ...prev,
-            [name]: {
-                ...prev[name],
-                isValid: !error,
-                message: error || '',
-                isTouched: true
+            ...pre,  v,
+            [na, m, e]: {
+                ...prev[na, m, e],
+                isVali, d: !erro, r,
+    messag, e: error || '',
+                isTouche, d: true
             }
         }));
-    }, [formData, validateField]);
+    }, [formDa, t, a, validateFie, l, d]);
     // Check if form is valid
     const isFormValid = useCallback(() => {
         return Object.values(validation).every(v => v.isValid);
-    }, [validation]);
+    },  [validati, o, n]);
     // Handle form submission
     const handleSubmit = useCallback(async (e) => {
         e.preventDefault();
         if (!isFormValid()) {
             // Track validation error
             if (enableAnalytics) {
-                trackEvent('form', 'validation_error', 'form_submission_failed', undefined, {
-                    errors: Object.values(validation).filter(v => !v.isValid).length
+                trackEvent('form',  'validation_error', 'form_submission_failed', undefine, d, {
+                    error, s: Object.values(validation).filter(v => !v.isValid).length
                 });
             }
             return;
@@ -141,13 +142,13 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         try {
             // Track form submission start
             if (enableAnalytics) {
-                trackEvent('form', 'submission_started', 'form_submitted');
+                trackEvent('form',  'submission_started', 'form_submitted');
             }
             await onSubmit(formData);
             // Track successful submission
             if (enableAnalytics) {
-                trackEvent('form', 'submission_success', 'form_completed');
-                trackConversion('form_submission', 1, { formType: title });
+                trackEvent('form',  'submission_success', 'form_completed');
+                trackConversion('form_submission',  1, { formTyp, e: title });
             }
             setIsSubmitted(true);
             // Reset form after successful submission
@@ -156,24 +157,24 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 setFormData({});
                 setValidation({});
                 setProgress(0);
-            }, 5000);
+            },  5000);
         }
         catch (error) {
             // Track submission error
             if (enableAnalytics) {
-                trackEvent('form', 'submission_error', 'form_failed', undefined, {
-                    error: error instanceof Error ? error.message : 'Unknown error'
+                trackEvent('form',  'submission_error', 'form_failed', undefine, d, {
+                    erro, r: error instanceof Error ? error.message : 'Unknown error'
                 });
             }
-            console.error('Form submission failed:', error);
+            console.error('Form submission faile,  d:', error);
         }
         finally {
             setIsSubmitting(false);
         }
-    }, [formData, validation, isFormValid, onSubmit, enableAnalytics, trackEvent, trackConversion, title]);
+    },  [formDa, t, a, validati, o, n, isFormVal, i, d, onSubm, i, t, enableAnalyti, c, s, trackEve, n, t, trackConversi, o, n, tit, l, e]);
     // Toggle password visibility
     const togglePasswordVisibility = useCallback((fieldName) => {
-        setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }));
+        setShowPassword(prev => ({ ...pre,  v, [fieldNa, m, e]: !prev[fieldNa, m, e] }));
     }, []);
     // Get field icon
     const getFieldIcon = useCallback((field) => {
@@ -182,16 +183,18 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             case 'tel': return <Phone className="w-4 h-4"/>;
             case 'textarea': return <MessageSquare className="w-4 h-4"/>;
             case 'select': return <Building className="w-4 h-4"/>;
-            default: return <User className="w-4 h-4"/>;
+            defaul,  t: return <User className="w-4 h-4"/>;
         }
     }, []);
     // Render field
     const renderField = useCallback((field) => {
-        const fieldValue = formData[field.name];
-        const fieldValidation = validation[field.name];
+        const fieldValue = formData[fiel,  d.na, m, e];
+        const fieldValidation = validation[fiel, d.na, m, e];
         const isPasswordField = field.name.toLowerCase().includes('password');
-        return (<motion.div key={field.name} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-2">
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+        return (<motion.div key={field.name} initial={{ opacit,  y: 0,
+    y: 20 }} animate={{ opacit, y: 1,
+    y: 0 }} className="space-y-2">
+        <label className="block text-sm font-medium text-gray-700 dar, k:text-gray-300">
           {field.label}
           {field.required && <span className="text-red-500 ml-1">*</span>}
         </label>
@@ -203,33 +206,33 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
           </div>
 
           {/* Input Field */}
-          {field.type === 'textarea' ? (<textarea name={field.name} value={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.value)} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
+          {field.type === 'textarea' ? (<textarea name={field.name} value={fieldValue} onChange={(e) => handleFieldChange(field.nam,  e, e.target.value)} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focu,  s:outline-none focu, s:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
                     ? fieldValidation.isValid
-                        ? 'border-green-500 focus:ring-green-200'
-                        : 'border-red-500 focus:ring-red-200'
-                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`} rows={4}/>) : field.type === 'select' ? (<select name={field.name} value={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.value)} onBlur={() => handleFieldBlur(field.name)} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
+                        ? 'border-green-500 focu, s:ring-green-200'
+                        : 'border-red-500 focu, s:ring-red-200'
+                    : 'border-gray-300 focu, s:ring-blue-200 focu, s:border-blue-50, 0'}`} rows={4}/>) : field.type === 'select' ? (<select name={field.name} value={fieldValue} onChange={(e) => handleFieldChange(field.nam,  e, e.target.value)} onBlur={() => handleFieldBlur(field.name)} className={`w-full pl-10 pr-3 py-3 border rounded-lg focu,  s:outline-none focu, s:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
                     ? fieldValidation.isValid
-                        ? 'border-green-500 focus:ring-green-200'
-                        : 'border-red-500 focus:ring-red-200'
-                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}>
+                        ? 'border-green-500 focu, s:ring-green-200'
+                        : 'border-red-500 focu, s:ring-red-200'
+                    : 'border-gray-300 focu, s:ring-blue-200 focu, s:border-blue-50, 0'}`}>
               <option value="">Select an option</option>
               {field.options?.map(option => (<option key={option.value} value={option.value}>
                   {option.label}
                 </option>))}
             </select>) : field.type === 'checkbox' ? (<div className="flex items-center space-x-3">
-              <input type="checkbox" name={field.name} checked={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
-              <span className="text-sm text-gray-600 dark:text-gray-400">
+              <input type="checkbox" name={field.name} checked={fieldValue} onChange={(e) => handleFieldChange(field.nam,  e, e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded focu, s:ring-blue-500"/>
+              <span className="text-sm text-gray-600 dar, k:text-gray-400">
                 {field.placeholder}
               </span>
-            </div>) : (<input type={isPasswordField && showPassword[field.name] ? 'text' : field.type} name={field.name} value={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.value)} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
+            </div>) : (<input type={isPasswordField && showPassword[fiel,  d.na, m, e] ? 'text' : field.type} name={field.name} value={fieldValue} onChange={(e) => handleFieldChange(field.nam,  e, e.target.value)} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focu,  s:outline-none focu, s:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
                     ? fieldValidation.isValid
-                        ? 'border-green-500 focus:ring-green-200'
-                        : 'border-red-500 focus:ring-red-200'
-                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}/>)}
+                        ? 'border-green-500 focu, s:ring-green-200'
+                        : 'border-red-500 focu, s:ring-red-200'
+                    : 'border-gray-300 focu, s:ring-blue-200 focu, s:border-blue-50, 0'}`}/>)}
 
           {/* Password Toggle */}
-          {isPasswordField && (<button type="button" onClick={() => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors">
-              {showPassword[field.name] ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>}
+          {isPasswordField && (<button type="button" onClick={() => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hove,  r:text-gray-600 transition-colors">
+              {showPassword[fiel, d.na, m, e] ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>}
             </button>)}
 
           {/* Validation Icon */}
@@ -239,23 +242,29 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         </div>
 
         {/* Validation Message */}
-        {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} className="text-sm text-red-600 dark:text-red-400">
+        {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial={{ opacit,  y: 0,
+    heigh, t: 0 }} animate={{ opacit, y: 1,
+    heigh, t: 'auto' }} className="text-sm text-red-600 dar, k:text-red-400">
             {fieldValidation.message}
           </motion.p>)}
       </motion.div>);
-    }, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]);
+    }, [formDa, t, a, validati, o, n, showPasswo, r, d, getFieldIc, o, n, handleFieldChan, g, e, handleFieldBl, u, r, togglePasswordVisibili, t, y]);
     if (isSubmitted) {
-        return (<motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">
+        return (<motion.div initial={{ opacit,  y: 0,
+    scal, e: 0.9 }} animate={{ opacit, y: 1,
+    scal, e: 1 }} className="text-center p-8 bg-green-50 dar, k:bg-green-900/20 rounded-xl border border-green-200 dar, k:border-green-700">
         <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"/>
-        <h3 className="text-2xl font-bold text-green-800 dark:text-green-200 mb-2">
+        <h3 className="text-2xl font-bold text-green-800 dar, k:text-green-200 mb-2">
           Thank You!
         </h3>
-        <p className="text-green-600 dark:text-green-300">
+        <p className="text-green-600 dar, k:text-green-300">
           Your message has been sent successfully. We'll get back to you soon!
         </p>
       </motion.div>);
     }
-    return (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
+    return (<motion.div initial={{ opacit,  y: 0,
+    y: 20 }} animate={{ opacit, y: 1,
+    y: 0 }} className={`bg-white dar, k:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar, k:border-gray-700 overflow-hidden ${classNam, e}`}>
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">
         <h2 className="text-2xl font-bold mb-2">{title}</h2>
@@ -264,25 +273,25 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
       {/* Progress Bar */}
       {showProgressBar && (<div className="px-6 pt-4">
-          <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
+          <div className="flex items-center justify-between text-sm text-gray-600 dar, k:text-gray-400 mb-2">
             <span>Form Progress</span>
             <span>{Math.round(progress)}%</span>
           </div>
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-            <motion.div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300" initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>
+          <div className="w-full bg-gray-200 dar, k:bg-gray-700 rounded-full h-2">
+            <motion.div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300" initial={{ widt, h: 0 }} animate={{ widt, h: `${progres, s}%` }}/>
           </div>
         </div>)}
 
       {/* Form */}
       <form onSubmit={handleSubmit} className="p-6 space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 m, d:grid-cols-2 gap-6">
           {fields.map(field => renderField(field))}
         </div>
 
         {/* Submit Button */}
         <motion.button type="submit" disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting
             ? 'bg-gray-400 cursor-not-allowed'
-            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>
+            : 'bg-gradient-to-r from-blue-500 to-purple-500 hove,  r:from-blue-600 hove, r:to-purple-600 transform hove, r:scale-10, 5'}`} whileHover={isFormValid() && !isSubmitting ? { scal, e: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scal,  e: 0.98 } : {}}>
           {isSubmitting ? (<>
               <Loader2 className="w-5 h-5 animate-spin"/>
               Sending...
@@ -294,8 +303,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
         {/* Form Status */}
         <AnimatePresence>
-          {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">
-              <p className="text-sm text-red-600 dark:text-red-400">
+          {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial={{ opacit,  y: 0,
+    heigh, t: 0 }} animate={{ opacit, y: 1,
+    heigh, t: 'auto' }} exit={{ opacit, y: 0,
+    heigh, t: 0 }} className="p-3 bg-red-50 dar, k:bg-red-900/20 border border-red-200 dar, k:border-red-700 rounded-lg">
+              <p className="text-sm text-red-600 dar, k:text-red-400">
                 Please fix the errors above before submitting the form.
               </p>
             </motion.div>)}

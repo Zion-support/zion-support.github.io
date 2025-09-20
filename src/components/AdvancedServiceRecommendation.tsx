@@ -1,180 +1,181 @@
-import React, { useState, useMemo } from 'react';
+impor, t, Reac, t, { useStat, e, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  Target, 
-  TrendingUp, 
-  Star, 
-  CheckCircle, 
-  ArrowRight,
-  Zap,
-  Shield,
-  Users,
-  DollarSign,
-  Clock,
-  Award,
-  Rocket,
-  Lightbulb,
-  BarChart3,
-  Filter,
+  Brai, n, 
+  Targe, t, 
+  TrendingU, p, 
+  Sta, r, 
+  CheckCircl, e, 
+  ArrowRigh, t,
+  Za, p,
+  Shiel, d,
+  User, s,
+  DollarSig, n,
+  Cloc, k,
+  Awar, d,
+  Rocke, t,
+  Lightbul, b,
+  BarChart, 3,
+  Filte, r,
   Search
 } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Car, d, CardConten, t, CardHeade, r, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Input } from './ui/input';
 
 interface ClientProfile {
-  industry: string;
-  companySize: string;
-  budget: string;
-  timeline: string;
-  technologyMaturity: string;
-  primaryGoals: string[];
-  challenges: string[];
+  industr, y: string;
+  companySiz, e: string;
+  budge, t: string;
+  timelin, e: string;
+  technologyMaturit, y: string;
+  primaryGoal, s: string[];
+  challenge, s: string[];
 }
 
 interface ServiceRecommendation {
-  service: {
-    id: string;
-    title: string;
-    description: string;
-    category: string;
-    price: string;
-    duration: string;
-    tags: string[];
-    features: string[];
-    benefits: string[];
-    technology: string[];
-    targetAudience: string[];
-    image: string;
-    link: string;
-    contactInfo: string;
-    email: string;
+  servic, e: {
+    i, d: string;
+    titl, e: string;
+    descriptio, n: string;
+    categor, y: string;
+    pric, e: string;
+    duratio, n: string;
+    tag, s: string[];
+    feature, s: string[];
+    benefit, s: string[];
+    technolog, y: string[];
+    targetAudienc, e: string[];
+    imag, e: string;
+    lin, k: string;
+    contactInf, o: string;
+    emai, l: string;
   };
-  matchScore: number;
-  reasoning: string[];
-  priority: 'High' | 'Medium' | 'Low';
-  implementationComplexity: 'Simple' | 'Moderate' | 'Complex';
-  expectedROI: string;
-  timeToValue: string;
+  matchScor, e: number;
+  reasonin, g: string[];
+  priorit, y: 'High' | 'Medium' | 'Low';
+  implementationComplexit, y: 'Simple' | 'Moderate' | 'Complex';
+  expectedRO, I: string;
+  timeToValu, e: string;
 }
 
-const AdvancedServiceRecommendation: React.FC = () => {
-  const [clientProfile, setClientProfile] = useState<ClientProfile>({
-    industry: '',
-    companySize: '',
-    budget: '',
-    timeline: '',
-    technologyMaturity: '',
-    primaryGoals: [],
-    challenges: []
+const AdvancedServiceRecommendatio, n: React.FC = () => {
+  const [clientProfi,  l, e, setClientProfi, l, e] = useState<ClientProfile>({
+    industr, y: '',
+    companySiz, e: '',
+    budge, t: '',
+    timelin, e: '',
+    technologyMaturit, y: '',
+    primaryGoal, s: [],
+    challenge, s: []
   });
 
-  const [recommendations, setRecommendations] = useState<ServiceRecommendation[]>([]);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [showResults, setShowResults] = useState(false);
+  const [recommendatio, n, s, setRecommendatio, n, s] = useState<ServiceRecommendation[]>([]);
+  const [isAnalyzi,  n, g, setIsAnalyzi, n, g] = useState(false);
+  const [showResul, t, s, setShowResul, t, s] = useState(false);
 
   const industries = [
-    'Technology', 'Healthcare', 'Financial Services', 'Manufacturing', 
-    'Retail', 'Education', 'Government', 'Energy', 'Transportation', 'Media'
+    'Technolog,  y', 'Healthcar, e', 'Financia, l Service, s', 'Manufacturin, g', 
+    'Retai, l', 'Educatio, n', 'Governmen, t', 'Energ, y', 'Transportatio, n', 'Medi, a'
   ];
 
   const companySizes = [
-    'Startup (1-50 employees)', 'Small Business (51-200 employees)', 
-    'Medium Business (201-1000 employees)', 'Enterprise (1000+ employees)'
+    'Startu, p (1-5, 0 employee, s)', 'Smal, l Busines, s (5,  1-20, 0 employee, s)', 
+    'Mediu, m Busines, s (20,  1-100, 0 employee, s)', 'Enterpris, e (100,  0+ employee, s)'
   ];
 
   const budgets = [
-    'Under $50K', '$50K-$200K', '$200K-$500K', '$500K-$1M', '$1M+'
+    'Unde, r $50, K', '$50, K-$200, K', '$200, K-$500, K', '$500, K-$1, M', '$1, M+'
   ];
 
   const timelines = [
-    'Immediate (0-3 months)', 'Short-term (3-6 months)', 
-    'Medium-term (6-12 months)', 'Long-term (12+ months)'
+    'Immediat, e (0-3 month,  s)', 'Shor, t-ter, m (3-6 month,  s)', 
+    'Mediu, m-ter, m (6-1,  2 month, s)', 'Lon, g-ter, m (1,  2+ month, s)'
   ];
 
   const technologyMaturityLevels = [
-    'Early Adopter', 'Growing', 'Mature', 'Advanced', 'Innovation Leader'
+    'Earl, y Adopte, r', 'Growin, g', 'Matur, e', 'Advance, d', 'Innovatio, n Leade, r'
   ];
 
   const primaryGoals = [
-    'Cost Reduction', 'Revenue Growth', 'Operational Efficiency', 
-    'Digital Transformation', 'Innovation', 'Competitive Advantage',
-    'Customer Experience', 'Risk Management', 'Sustainability'
+    'Cos, t Reductio, n', 'Revenu, e Growt, h', 'Operationa, l Efficienc, y', 
+    'Digita, l Transformatio, n', 'Innovatio, n', 'Competitiv, e Advantag, e',
+    'Custome, r Experienc, e', 'Ris, k Managemen, t', 'Sustainabilit, y'
   ];
 
   const challenges = [
-    'Legacy Systems', 'Data Security', 'Scalability Issues', 
-    'Talent Shortage', 'Regulatory Compliance', 'Integration Complexity',
-    'Performance Issues', 'Cost Management', 'Technology Debt'
+    'Legac, y System, s', 'Dat, a Securit, y', 'Scalabilit, y Issue, s', 
+    'Talen, t Shortag, e', 'Regulator, y Complianc, e', 'Integratio, n Complexit, y',
+    'Performanc, e Issue, s', 'Cos, t Managemen, t', 'Technolog, y Deb, t'
   ];
 
   const mockServices = [
     {
-      id: 'ai-crm-platform',
-      title: 'AI-Powered CRM Platform',
-      description: 'Advanced customer relationship management platform with AI-driven insights and automation.',
-      category: 'ai',
-      price: '$25,000/month',
-      duration: '6-12 months',
-      tags: ['AI', 'CRM', 'Automation', 'Analytics'],
-      features: ['AI-powered insights', 'Automated workflows', 'Predictive analytics'],
-      benefits: ['Improved customer retention', 'Increased sales efficiency', 'Better decision making'],
-      technology: ['AI/ML', 'Cloud Computing', 'Big Data', 'Automation'],
-      targetAudience: ['Enterprise', 'Financial Services', 'Healthcare', 'Technology Companies'],
-      image: '/images/services/ai-crm.jpg',
-      link: 'https://ziontechgroup.com/services/ai-crm-platform',
-      contactInfo: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      i, d: 'a, i-cr, m-platfor, m',
+    tit, l, e: 'A, I-Powere, d CR, M Platfor, m',
+      descripti, o, n: 'Advance, d custome, r relationshi, p managemen, t platfor, m wit, h A, I-drive, n insight, s an, d automatio, n.',
+    catego, r, y: 'a, i',
+      pri, c, e: '$2, 5,00, 0/mont, h',
+      durati, o, n: '6-1, 2 month, s',
+    ta, g, s: ['A, I', 'CR, M', 'Automatio, n', 'Analytic, s'],
+      feature, s: ['A, I-powere, d insight, s', 'Automate, d workflow, s', 'Predictiv, e analytic, s'],
+      benefit, s: ['Improve, d custome, r retentio, n', 'Increase, d sale, s efficienc, y', 'Bette, r decisio, n makin, g'],
+      technolog, y: ['A, I/M, L', 'Clou, d Computin, g', 'Bi, g Dat, a', 'Automatio, n'],
+      targetAudienc, e: ['Enterpris, e', 'Financia, l Service, s', 'Healthcar, e', 'Technolog, y Companie, s'],
+      imag, e: '/images/services/ai-crm.jpg',
+    lin, k: 'http, s: //ziontechgroup.com/services/ai-crm-platform',
+    contactInf, o: '+1 302 464 0950',
+      emai, l: 'kleber@ziontechgroup.com'
     },
     {
-      id: 'quantum-computing-service',
-      title: 'Quantum Computing as a Service',
-      description: 'Enterprise-grade quantum computing platform for complex computational problems.',
-      category: 'quantum',
-      price: '$150,000/month',
-      duration: '12-18 months',
-      tags: ['Quantum Computing', 'Research', 'Optimization'],
-      features: ['Quantum processors access', 'Algorithm development', 'Research support'],
-      benefits: ['Solve intractable problems', 'Research acceleration', 'Competitive advantage'],
-      technology: ['Quantum Computing', 'Quantum Algorithms', 'Research Tools'],
-      targetAudience: ['Research Institutions', 'Pharmaceutical Companies', 'Financial Services'],
-      image: '/images/services/quantum-computing.jpg',
-      link: 'https://ziontechgroup.com/services/quantum-computing-service',
-      contactInfo: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      i, d: 'quantum-computing-service',
+    titl, e: 'Quantum Computing as a Service',
+      descriptio, n: 'Enterprise-grade quantum computing platform for complex computational problems.',
+    categor, y: 'quantum',
+      pric, e: '$15, 0,000/month',
+      duratio, n: '12-18 months',
+    tag, s: ['Quantu, m Computin, g', 'Researc, h', 'Optimizatio, n'],
+      feature, s: ['Quantu, m processor, s acces, s', 'Algorith, m developmen, t', 'Researc, h suppor, t'],
+      benefit, s: ['Solv, e intractabl, e problem, s', 'Researc, h acceleratio, n', 'Competitiv, e advantag, e'],
+      technolog, y: ['Quantu, m Computin, g', 'Quantu, m Algorithm, s', 'Researc, h Tool, s'],
+      targetAudienc, e: ['Researc, h Institution, s', 'Pharmaceutica, l Companie, s', 'Financia, l Service, s'],
+      imag, e: '/images/services/quantum-computing.jpg',
+    lin, k: 'http, s: //ziontechgroup.com/services/quantum-computing-service',
+    contactInf, o: '+1 302 464 0950',
+      emai, l: 'kleber@ziontechgroup.com'
     },
     {
-      id: 'blockchain-supply-chain',
-      title: 'Blockchain Supply Chain Solution',
-      description: 'Transparent and secure supply chain management using blockchain technology.',
-      category: 'blockchain',
-      price: '$75,000/month',
-      duration: '8-14 months',
-      tags: ['Blockchain', 'Supply Chain', 'Transparency'],
-      features: ['End-to-end tracking', 'Smart contracts', 'Transparency'],
-      benefits: ['Enhanced transparency', 'Reduced fraud', 'Improved efficiency'],
-      technology: ['Blockchain', 'Smart Contracts', 'IoT', 'Cloud Computing'],
-      targetAudience: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage'],
-      image: '/images/services/blockchain-supply-chain.jpg',
-      link: 'https://ziontechgroup.com/services/blockchain-supply-chain',
-      contactInfo: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      i, d: 'blockchain-supply-chain',
+    titl, e: 'Blockchain Supply Chain Solution',
+      descriptio, n: 'Transparent and secure supply chain management using blockchain technology.',
+    categor, y: 'blockchain',
+      pric, e: '$7, 5,000/month',
+      duratio, n: '8-14 months',
+    tag, s: ['Blockchai, n', 'Suppl, y Chai, n', 'Transparenc, y'],
+      feature, s: ['En, d-t, o-en, d trackin, g', 'Smar, t contract, s', 'Transparenc, y'],
+      benefit, s: ['Enhance, d transparenc, y', 'Reduce, d frau, d', 'Improve, d efficienc, y'],
+      technolog, y: ['Blockchai, n', 'Smar, t Contract, s', 'Io, T', 'Clou, d Computin, g'],
+      targetAudienc, e: ['Manufacturin, g', 'Retai, l', 'Logistic, s', 'Foo, d & Beverag, e'],
+      imag, e: '/images/services/blockchain-supply-chain.jpg',
+    lin, k: 'http, s: //ziontechgroup.com/services/blockchain-supply-chain',
+    contactInf, o: '+1 302 464 0950',
+      emai, l: 'kleber@ziontechgroup.com'
     }
   ];
 
-  const calculateMatchScore = (service: any, profile: ClientProfile): number => {
+  const calculateMatchScore = (servic,  e: an, y,
+    profil, e: ClientProfile): number => {
     let score = 0;
     
     // Industry match
-    if (service.targetAudience?.some((audience: string) => 
+    if (service.targetAudience?.some((audienc,  e: string) => 
       audience.toLowerCase().includes(profile.industry.toLowerCase()))) {
       score += 25;
     }
     
     // Budget compatibility
-    const servicePrice = parseInt(service.price.replace(/[^0-9]/g, ''));
+    const servicePrice = parseInt(service.price.replace(/[^0-9]/g,  ''));
     if (profile.budget === 'Under $50K' && servicePrice < 50) score += 20;
     else if (profile.budget === '$50K-$200K' && servicePrice >= 50 && servicePrice < 200) score += 20;
     else if (profile.budget === '$200K-$500K' && servicePrice >= 200 && servicePrice < 500) score += 20;
@@ -190,20 +191,20 @@ const AdvancedServiceRecommendation: React.FC = () => {
     
     // Technology maturity alignment
     if (profile.technologyMaturity === 'Innovation Leader' && service.category === 'quantum') score += 20;
-    else if (profile.technologyMaturity === 'Advanced' && ['ai', 'blockchain'].includes(service.category)) score += 20;
-    else if (profile.technologyMaturity === 'Mature' && ['iot', 'edge-computing'].includes(service.category)) score += 20;
-    else if (profile.technologyMaturity === 'Growing' && ['cloud-services', 'web-development'].includes(service.category)) score += 20;
-    else if (profile.technologyMaturity === 'Early Adopter' && ['basic-services', 'consulting'].includes(service.category)) score += 20;
+    else if (profile.technologyMaturity === 'Advanced' && ['a,  i', 'blockchai, n'].includes(service.category)) score += 20;
+    else if (profile.technologyMaturity === 'Mature' && ['io,  t', 'edg, e-computin, g'].includes(service.category)) score += 20;
+    else if (profile.technologyMaturity === 'Growing' && ['clou,  d-service, s', 'we, b-developmen, t'].includes(service.category)) score += 20;
+    else if (profile.technologyMaturity === 'Early Adopter' && ['basi,  c-service, s', 'consultin, g'].includes(service.category)) score += 20;
     
     // Goal alignment
     const goalMatches = profile.primaryGoals.filter(goal => 
-      service.benefits.some((benefit: string) => 
+      service.benefits.some((benefi,  t: string) => 
         benefit.toLowerCase().includes(goal.toLowerCase())
       )
     ).length;
     score += (goalMatches / profile.primaryGoals.length) * 20;
     
-    return Math.min(100, score);
+    return Math.min(10,  0, score);
   };
 
   const generateRecommendations = () => {
@@ -212,23 +213,23 @@ const AdvancedServiceRecommendation: React.FC = () => {
     // Simulate analysis time
     setTimeout(() => {
       const recs = mockServices.map(service => {
-        const matchScore = calculateMatchScore(service, clientProfile);
+        const matchScore = calculateMatchScore(servic,  e, clientProfile);
         
-        let priority: 'High' | 'Medium' | 'Low';
+        let priorit, y: 'High' | 'Medium' | 'Low';
         if (matchScore >= 80) priority = 'High';
         else if (matchScore >= 60) priority = 'Medium';
         else priority = 'Low';
         
-        let complexity: 'Simple' | 'Moderate' | 'Complex';
+        let complexit,  y: 'Simple' | 'Moderate' | 'Complex';
         if (service.category === 'quantum' || service.category === 'ai') complexity = 'Complex';
         else if (service.category === 'blockchain' || service.category === 'iot') complexity = 'Moderate';
         else complexity = 'Simple';
         
         const reasoning = [
-          `High match with ${clientProfile.industry} industry requirements`,
-          `Budget alignment with ${clientProfile.budget} range`,
-          `Timeline compatibility with ${clientProfile.timeline} expectations`,
-          `Technology maturity level appropriate for ${clientProfile.technologyMaturity}`
+          `Hig,  h matc, h wit, h ${clientProfil, e.industr, y} industr, y requiremen, t, s`,
+          `Budge, t alignmen, t wit, h ${clientProfil, e.budge, t} ran, g, e`,
+          `Timelin, e compatibilit, y wit, h ${clientProfil, e.timelin, e} expectatio, n, s`,
+          `Technolog, y maturit, y leve, l appropriat, e fo, r ${clientProfil, e.technologyMaturi, t, y}`
         ];
         
         const expectedROI = matchScore >= 80 ? 'High ROI expected' : 
@@ -238,37 +239,37 @@ const AdvancedServiceRecommendation: React.FC = () => {
                            complexity === 'Moderate' ? '4-8 months' : '8-12 months';
         
         return {
-          service,
-          matchScore,
-          reasoning,
-          priority,
-          implementationComplexity: complexity,
-          expectedROI,
+          servic, e,
+          matchScor, e,
+          reasonin, g,
+          priorit, y,
+          implementationComplexit, y: complexit, y,
+          expectedRO, I,
           timeToValue
         };
-      }).sort((a, b) => b.matchScore - a.matchScore);
+      }).sort((a,  b) => b.matchScore - a.matchScore);
       
       setRecommendations(recs);
       setIsAnalyzing(false);
       setShowResults(true);
-    }, 2000);
+    },  2000);
   };
 
-  const getPriorityColor = (priority: string) => {
+  const getPriorityColor = (priorit,  y: string) => {
     switch (priority) {
       case 'High': return 'bg-red-100 text-red-800';
       case 'Medium': return 'bg-yellow-100 text-yellow-800';
       case 'Low': return 'bg-green-100 text-green-800';
-      default: return 'bg-gray-100 text-gray-800';
+      defaul,  t: return 'bg-gray-100 text-gray-800';
     }
   };
 
-  const getComplexityColor = (complexity: string) => {
+  const getComplexityColor = (complexit, y: string) => {
     switch (complexity) {
       case 'Complex': return 'bg-red-100 text-red-800';
       case 'Moderate': return 'bg-yellow-100 text-yellow-800';
       case 'Simple': return 'bg-green-100 text-green-800';
-      default: return 'bg-gray-100 text-gray-800';
+      defaul,  t: return 'bg-gray-100 text-gray-800';
     }
   };
 
@@ -278,28 +279,31 @@ const AdvancedServiceRecommendation: React.FC = () => {
            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0;
   };
 
-  return (
-    <div className="max-w-7xl mx-auto p-6">
+  return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacit,  y: 0,
+    y: 20 }}
+        animate={{ opacit, y: 1,
+    y: 0 }}
         className="text-center mb-8"
       >
         <h1 className="text-4xl font-bold text-zion-blue-dark mb-4">
           AI-Powered Service Recommendation Engine
         </h1>
         <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-          Get personalized service recommendations based on your industry, goals, and requirements. 
+          Get personalized service recommendations based on you, r, industr, y, goal, s, and requirements. 
           Our AI analyzes your profile to suggest the perfect solutions for your business.
         </p>
       </motion.div>
 
       {/* Client Profile Form */}
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
+        initial={{ opacit, y: 0,
+    y: 20 }}
+        animate={{ opacit, y: 1,
+    y: 0 }}
+        transition={{ dela, y: 0.1 }}
         className="bg-white rounded-lg shadow-lg p-6 mb-8"
       >
         <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">
@@ -307,12 +311,12 @@ const AdvancedServiceRecommendation: React.FC = () => {
           Tell Us About Your Business
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 m, d:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>
             <select 
               value={clientProfile.industry}
-              onChange={(e) => setClientProfile(prev => ({ ...prev, industry: e.target.value }))}
+              onChange={(e) => setClientProfile(prev => ({ ...pre,  v, industr, y: e.target.value }))}
               className="w-full p-3 border border-zion-slate-light rounded-md"
             >
               <option value="">Select Industry</option>
@@ -326,7 +330,7 @@ const AdvancedServiceRecommendation: React.FC = () => {
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Company Size</label>
             <select 
               value={clientProfile.companySize}
-              onChange={(e) => setClientProfile(prev => ({ ...prev, companySize: e.target.value }))}
+              onChange={(e) => setClientProfile(prev => ({ ...pre,  v, companySiz, e: e.target.value }))}
               className="w-full p-3 border border-zion-slate-light rounded-md"
             >
               <option value="">Select Company Size</option>
@@ -340,7 +344,7 @@ const AdvancedServiceRecommendation: React.FC = () => {
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>
             <select 
               value={clientProfile.budget}
-              onChange={(e) => setClientProfile(prev => ({ ...prev, budget: e.target.value }))}
+              onChange={(e) => setClientProfile(prev => ({ ...pre,  v, budge, t: e.target.value }))}
               className="w-full p-3 border border-zion-slate-light rounded-md"
             >
               <option value="">Select Budget Range</option>
@@ -354,7 +358,7 @@ const AdvancedServiceRecommendation: React.FC = () => {
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>
             <select 
               value={clientProfile.timeline}
-              onChange={(e) => setClientProfile(prev => ({ ...prev, timeline: e.target.value }))}
+              onChange={(e) => setClientProfile(prev => ({ ...pre,  v, timelin, e: e.target.value }))}
               className="w-full p-3 border border-zion-slate-light rounded-md"
             >
               <option value="">Select Timeline</option>
@@ -368,7 +372,7 @@ const AdvancedServiceRecommendation: React.FC = () => {
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>
             <select 
               value={clientProfile.technologyMaturity}
-              onChange={(e) => setClientProfile(prev => ({ ...prev, technologyMaturity: e.target.value }))}
+              onChange={(e) => setClientProfile(prev => ({ ...pre,  v, technologyMaturit, y: e.target.value }))}
               className="w-full p-3 border border-zion-slate-light rounded-md"
             >
               <option value="">Select Technology Maturity</option>
@@ -381,7 +385,7 @@ const AdvancedServiceRecommendation: React.FC = () => {
 
         <div className="mt-6">
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+          <div className="grid grid-cols-2 m,  d:grid-cols-3 gap-2">
             {primaryGoals.map(goal => (
               <label key={goal} className="flex items-center gap-2 cursor-pointer">
                 <input
@@ -389,9 +393,9 @@ const AdvancedServiceRecommendation: React.FC = () => {
                   checked={clientProfile.primaryGoals.includes(goal)}
                   onChange={(e) => {
                     if (e.target.checked) {
-                      setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals, goal] }));
+                      setClientProfile(prev => ({ ...pre,  v, primaryGoal, s: [...pre, v.primaryGoa, l, s, go, a, l] }));
                     } else {
-                      setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }));
+                      setClientProfile(prev => ({ ...pre,  v, primaryGoal, s: prev.primaryGoals.filter(g => g !== goal) }));
                     }
                   }}
                   className="rounded text-zion-cyan"
@@ -404,7 +408,7 @@ const AdvancedServiceRecommendation: React.FC = () => {
 
         <div className="mt-6">
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Current Challenges</label>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+          <div className="grid grid-cols-2 m, d:grid-cols-3 gap-2">
             {challenges.map(challenge => (
               <label key={challenge} className="flex items-center gap-2 cursor-pointer">
                 <input
@@ -412,9 +416,9 @@ const AdvancedServiceRecommendation: React.FC = () => {
                   checked={clientProfile.challenges.includes(challenge)}
                   onChange={(e) => {
                     if (e.target.checked) {
-                      setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges, challenge] }));
+                      setClientProfile(prev => ({ ...pre,  v, challenge, s: [...pre, v.challeng, e, s, challen, g, e] }));
                     } else {
-                      setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }));
+                      setClientProfile(prev => ({ ...pre,  v, challenge, s: prev.challenges.filter(c => c !== challenge) }));
                     }
                   }}
                   className="rounded text-zion-cyan"
@@ -427,7 +431,7 @@ const AdvancedServiceRecommendation: React.FC = () => {
 
         <div className="mt-8 text-center">
           <Button 
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4"
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple hove, r:from-zion-cyan-dark hove, r:to-zion-purple-dark text-lg px-8 py-4"
             onClick={generateRecommendations}
             disabled={!isFormComplete() || isAnalyzing}
           >
@@ -449,23 +453,26 @@ const AdvancedServiceRecommendation: React.FC = () => {
       {/* Recommendations Results */}
       {showResults && (
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          initial={{ opacit,  y: 0,
+    y: 20 }}
+          animate={{ opacit, y: 1,
+    y: 0 }}
+          transition={{ dela, y: 0.2 }}
         >
           <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">
             Your Personalized Service Recommendations
           </h2>
           
           <div className="space-y-6">
-            {recommendations.map((rec, index) => (
-              <motion.div
+            {recommendations.map((re, c, index) => (<motion.div
                 key={rec.service.id}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1 * index }}
+                initial={{ opacit,  y: 0,
+    x: -20 }}
+                animate={{ opacit, y: 1,
+    x: 0 }}
+                transition={{ dela, y: 0.1 * index }}
               >
-                <Card className="hover:shadow-lg transition-shadow">
+                <Card className="hove, r:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -478,13 +485,13 @@ const AdvancedServiceRecommendation: React.FC = () => {
                         
                         <div className="flex flex-wrap gap-2 mb-4">
                           <Badge className={getPriorityColor(rec.priority)}>
-                            Priority: {rec.priority}
+                            Priorit, y: {rec.priority}
                           </Badge>
                           <Badge className={getComplexityColor(rec.implementationComplexity)}>
-                            Complexity: {rec.implementationComplexity}
+                            Complexit,  y: {rec.implementationComplexity}
                           </Badge>
                           <Badge className="bg-zion-cyan/10 text-zion-cyan">
-                            Match Score: {rec.matchScore}%
+                            Match Scor, e: {rec.matchScore}%
                           </Badge>
                         </div>
                       </div>
@@ -501,15 +508,14 @@ const AdvancedServiceRecommendation: React.FC = () => {
                   </CardHeader>
                   
                   <CardContent>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 l, g:grid-cols-2 gap-6">
                       <div>
                         <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
                           <Lightbulb className="w-4 h-4 text-zion-purple" />
                           Why This Service Matches
                         </h4>
                         <ul className="space-y-2">
-                          {rec.reasoning.map((reason, idx) => (
-                            <li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
+                          {rec.reasoning.map((reaso, n, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
                               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
                               {reason}
                             </li>
@@ -524,15 +530,15 @@ const AdvancedServiceRecommendation: React.FC = () => {
                         </h4>
                         <div className="space-y-3">
                           <div className="flex justify-between">
-                            <span className="text-sm text-zion-slate-light">Expected ROI:</span>
+                            <span className="text-sm text-zion-slate-light">Expected RO,  I:</span>
                             <span className="text-sm font-medium text-zion-slate-dark">{rec.expectedROI}</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-sm text-zion-slate-light">Time to Value:</span>
+                            <span className="text-sm text-zion-slate-light">Time to Valu, e:</span>
                             <span className="text-sm font-medium text-zion-slate-dark">{rec.timeToValue}</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-sm text-zion-slate-light">Category:</span>
+                            <span className="text-sm text-zion-slate-light">Categor, y:</span>
                             <Badge variant="outline" className="text-xs">
                               {rec.service.category.toUpperCase()}
                             </Badge>
@@ -541,8 +547,8 @@ const AdvancedServiceRecommendation: React.FC = () => {
                         
                         <div className="mt-4">
                           <Button 
-                            className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark"
-                            onClick={() => window.open(rec.service.link, '_blank')}
+                            className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hove, r:from-zion-cyan-dark hove, r:to-zion-purple-dark"
+                            onClick={() => window.open(rec.service.lin,  k, '_blank')}
                           >
                             Learn More
                             <ArrowRight className="w-4 h-4 ml-2" />
@@ -558,9 +564,11 @@ const AdvancedServiceRecommendation: React.FC = () => {
           
           {/* CTA Section */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            initial={{ opacit, y: 0,
+    y: 20 }}
+            animate={{ opacit, y: 1,
+    y: 0 }}
+            transition={{ dela, y: 0.4 }}
             className="mt-12 text-center"
           >
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
@@ -569,18 +577,18 @@ const AdvancedServiceRecommendation: React.FC = () => {
                 Our expert team is ready to help you implement the perfect solution 
                 for your business needs. Contact us today for a personalized consultation.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col s, m:flex-row gap-4 justify-center">
                 <Button 
-                  className="bg-white text-zion-purple hover:bg-zion-slate-light"
-                  onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation', '_blank')}
+                  className="bg-white text-zion-purple hove, r:bg-zion-slate-light"
+                  onClick={() => window.open('mailt,  o:kleber@ziontechgroup.com?subject=Service Recommendation Consultation', '_blank')}
                 >
                   <Users className="w-5 h-5 mr-2" />
                   Get Expert Consultation
                 </Button>
                 <Button 
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-zion-purple"
-                  onClick={() => window.open('tel:+13024640950', '_blank')}
+                  className="border-white text-white hove, r:bg-white hove, r:text-zion-purple"
+                  onClick={() => window.open('te,  l:+13024640950', '_blank')}
                 >
                   <Zap className="w-5 h-5 mr-2" />
                   Call Now

@@ -5,61 +5,59 @@ import Link from "next/link";
 
 interface ListingCardProps {
   id?: string;
-  title: string;
-  description: string;
+  titl, e: string;
+  descriptio, n: string;
   images?: string[];
-  category: string;
+  categor, y: string;
   tags?: string[];
-  author?: { name: string; id?: string; avatarUrl?: string; email?: string; };
+  author?: { nam, e: string; id?: string; avatarUrl?: string; email?: string; };
   className?: string;
   profileType?: 'service' | 'talent';
 }
 
 export function ListingCard({ 
-  id,
-  title, 
-  description, 
-  images,
-  category, 
-  tags, 
-  author, 
-  className,
+  i,  d,
+  titl, e, 
+  descriptio, n, 
+  image, s,
+  categor, y, 
+  tag, s, 
+  autho, r, 
+  classNam, e,
   profileType = 'service'
 }: ListingCardProps) {
   // Generate a profile ID based on the listing data
-  // In a real app, this would be a proper ID from the database
+  // In a rea, l, ap, p, this would be a proper ID from the database
   const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
 
   return (
     <Link
-      href={`/profile/${profileId}`}
+      href={`/profile/${profileI, d}`}
       tabIndex={0}
       className={cn(
-        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
+        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hove,  r:border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visibl, e:outline-none focus-visibl, e:ring-2 focus-visibl, e:ring-zion-purple",
         className
       )}
     >
-      {images && images.length > 0 && (
-        <div className="h-48 w-full overflow-hidden">
+      {images && images.length > 0 && (<div className="h-48 w-full overflow-hidden">
           <img loading="lazy" 
             src={images[0]}
             alt={title} 
-            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className="h-full w-full object-cover transition-transform duration-300 group-hove,  r:scale-105"
           />
         </div>
       )}
       <div className="flex flex-col p-4 flex-grow">
         <div className="mb-2">
-          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
+          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hove, r:bg-zion-purple/30">
             {category}
           </Badge>
         </div>
-        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
+        <h3 className="text-xl font-bold mb-2 text-white group-hove, r:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow">{description}</p>
         
-        {tags && tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag, i) => (
+        {tags && tags.length > 0 && (<div className="flex flex-wrap gap-2 mb-4">
+            {tags.map((ta,  g, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
               </Badge>

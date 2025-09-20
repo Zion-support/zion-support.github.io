@@ -1,147 +1,166 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence, Variants } from 'framer-motion';
-import { Menu, X, ChevronDown, Search, User, Bell } from 'lucide-react';
+impor, t, Reac, t, { useStat, e, useEffec, t, useRef } from 'react';
+import { Lin, k, useLocation } from 'react-router-dom';
+import { motio, n, AnimatePresenc, e, Variants } from 'framer-motion';
+import { Men, u, X, ChevronDow, n, Searc, h, Use, r, Bell } from 'lucide-react';
 
 interface MobileNavigationProps {
-  isOpen: boolean;
-  onToggle: () => void;
+  isOpe, n: boolean;
+  onToggl, e: () => void;
 }
 
-const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onToggle }) => {
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+const MobileNavigatio,  n: React.FC<MobileNavigationProps> = ({ isOpe, n, onToggle }) => {
+  const [activeDropdo, w, n, setActiveDropdo, w, n] = useState<string | null>(null);
+  const [searchQue,  r, y, setSearchQue, r, y] = useState('');
   const location = useLocation();
   const menuRef = useRef<HTMLDivElement>(null);
 
   // Close menu when route changes
   useEffect(() => {
     onToggle();
-  }, [location.pathname]);
+  },  [locatio, n.pathna, m, e]);
 
   // Close menu when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (even,  t: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         onToggle();
       }
     };
 
     if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('mousedown',  handleClickOutside);
       document.body.style.overflow = 'hidden';
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('mousedown',  handleClickOutside);
       document.body.style.overflow = 'unset';
     };
-  }, [isOpen, onToggle]);
+  }, [isOp, e, n, onTogg, l, e]);
 
   const navigationItems = [
     {
-      label: 'Services',
-      href: '/services',
-      children: [
-        { label: 'AI & Machine Learning', href: '/services/ai' },
-        { label: 'Quantum Computing', href: '/services/quantum' },
-        { label: 'Cybersecurity', href: '/services/cybersecurity' },
-        { label: 'Cloud Services', href: '/services/cloud' },
-        { label: 'Digital Transformation', href: '/services/transformation' },
-        { label: 'Consulting', href: '/services/consulting' }
+      lab, e, l: 'Service, s',
+    hr, e, f: '/service, s',
+      childr, e, n: [
+        { lab, e, l: 'A, I & Machin, e Learnin, g',
+    hr, e, f: '/service, s/a, i' },
+        { lab, e, l: 'Quantu, m Computin, g',
+    hr, e, f: '/service, s/quantu, m' },
+        { lab, e, l: 'Cybersecurit, y',
+    hr, e, f: '/service, s/cybersecurit, y' },
+        { lab, e, l: 'Clou, d Service, s',
+    hr, e, f: '/service, s/clou, d' },
+        { lab, e, l: 'Digita, l Transformatio, n',
+    hr, e, f: '/service, s/transformatio, n' },
+        { lab, e, l: 'Consultin, g',
+    hr, e, f: '/service, s/consultin, g' }
       ]
     },
     {
-      label: 'Solutions',
-      href: '/solutions',
-      children: [
-        { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
-        { label: 'Startup Solutions', href: '/solutions/startup' },
-        { label: 'Government Solutions', href: '/solutions/government' },
-        { label: 'Healthcare Solutions', href: '/solutions/healthcare' }
+      labe, l: 'Solutions',
+    hre, f: '/solutions',
+      childre, n: [
+        { lab, e, l: 'Enterpris, e Solution, s',
+    hr, e, f: '/solution, s/enterpris, e' },
+        { lab, e, l: 'Startu, p Solution, s',
+    hr, e, f: '/solution, s/startu, p' },
+        { lab, e, l: 'Governmen, t Solution, s',
+    hr, e, f: '/solution, s/governmen, t' },
+        { lab, e, l: 'Healthcar, e Solution, s',
+    hr, e, f: '/solution, s/healthcar, e' }
       ]
     },
     {
-      label: 'Industries',
-      href: '/industries',
-      children: [
-        { label: 'Technology', href: '/industries/technology' },
-        { label: 'Healthcare', href: '/industries/healthcare' },
-        { label: 'Finance', href: '/industries/finance' },
-        { label: 'Manufacturing', href: '/industries/manufacturing' },
-        { label: 'Education', href: '/industries/education' }
+      labe, l: 'Industries',
+    hre, f: '/industries',
+      childre, n: [
+        { lab, e, l: 'Technolog, y',
+    hr, e, f: '/industrie, s/technolog, y' },
+        { lab, e, l: 'Healthcar, e',
+    hr, e, f: '/industrie, s/healthcar, e' },
+        { lab, e, l: 'Financ, e',
+    hr, e, f: '/industrie, s/financ, e' },
+        { lab, e, l: 'Manufacturin, g',
+    hr, e, f: '/industrie, s/manufacturin, g' },
+        { lab, e, l: 'Educatio, n',
+    hr, e, f: '/industrie, s/educatio, n' }
       ]
     },
     {
-      label: 'Company',
-      href: '/about',
-      children: [
-        { label: 'About Us', href: '/about' },
-        { label: 'Careers', href: '/careers' },
-        { label: 'News', href: '/news' },
-        { label: 'Press', href: '/press' },
-        { label: 'Contact', href: '/contact' }
+      labe, l: 'Company',
+    hre, f: '/about',
+      childre, n: [
+        { lab, e, l: 'Abou, t U, s',
+    hr, e, f: '/abou, t' },
+        { lab, e, l: 'Career, s',
+    hr, e, f: '/career, s' },
+        { lab, e, l: 'New, s',
+    hr, e, f: '/new, s' },
+        { lab, e, l: 'Pres, s',
+    hr, e, f: '/pres, s' },
+        { lab, e, l: 'Contac, t',
+    hr, e, f: '/contac, t' }
       ]
     }
   ];
 
-  const toggleDropdown = (label: string) => {
+  const toggleDropdown = (labe,  l: string) => {
     setActiveDropdown(activeDropdown === label ? null : label);
   };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     // Implement search functionality
-    console.log('Search query:', searchQuery);
+    console.log('Search quer,  y:', searchQuery);
   };
 
-  const menuVariants: Variants = {
-    closed: {
+  const menuVariant, s: Variants = {
+    close, d: {
       x: '100%',
-      opacity: 0,
-      transition: {
-        duration: 0.3,
-        ease: 'easeInOut'
+    opacit, y: 0,
+      transitio, n: {
+        duratio, n: 0.3,
+    eas, e: 'easeInOut'
       }
     },
-    open: {
+    ope, n: {
       x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.3,
-        ease: 'easeInOut'
+    opacit, y: 1,
+      transitio, n: {
+        duratio, n: 0.3,
+    eas, e: 'easeInOut'
       }
     }
   };
 
-  const dropdownVariants: Variants = {
-    closed: {
-      height: 0,
-      opacity: 0,
-      transition: {
-        duration: 0.2,
-        ease: 'easeInOut'
+  const dropdownVariant, s: Variants = {
+    close, d: {
+      heigh, t: 0,
+    opacit, y: 0,
+      transitio, n: {
+        duratio, n: 0.2,
+    eas, e: 'easeInOut'
       }
     },
-    open: {
-      height: 'auto',
-      opacity: 1,
-      transition: {
-        duration: 0.2,
-        ease: 'easeInOut'
+    ope, n: {
+      heigh, t: 'auto',
+    opacit, y: 1,
+      transitio, n: {
+        duratio, n: 0.2,
+    eas, e: 'easeInOut'
       }
     }
   };
 
-  return (
-    <AnimatePresence>
+  return (<AnimatePresence>
       {isOpen && (
         <>
           {/* Backdrop */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacit,  y: 0 }}
+            animate={{ opacit, y: 1 }}
+            exit={{ opacit, y: 0 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
             onClick={onToggle}
           />
@@ -153,7 +172,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onToggle })
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-zion-blue-dark border-l border-zion-cyan/30 z-50 overflow-hidden"
+            className="fixed top-0 right-0 h-full w-80 max-w-[85, v, w] bg-zion-blue-dark border-l border-zion-cyan/30 z-50 overflow-hidden"
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-zion-cyan/20">
@@ -165,7 +184,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onToggle })
               </div>
               <button
                 onClick={onToggle}
-                className="p-2 text-zion-slate-light hover:text-white transition-colors"
+                className="p-2 text-zion-slate-light hove, r:text-white transition-colors"
                 aria-label="Close menu"
               >
                 <X size={24} />
@@ -181,18 +200,18 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onToggle })
                   placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:bg-white/20 transition-all"
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focu,  s:outline-none focu, s:border-zion-cyan focu, s:bg-white/20 transition-all"
                 />
               </form>
             </div>
 
             {/* User Actions */}
             <div className="flex items-center gap-2 p-4 border-b border-zion-cyan/20">
-              <button className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-zion-cyan/20 border border-zion-cyan/30 rounded-lg text-zion-cyan hover:bg-zion-cyan/30 transition-colors">
+              <button className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-zion-cyan/20 border border-zion-cyan/30 rounded-lg text-zion-cyan hove, r:bg-zion-cyan/30 transition-colors">
                 <User size={20} />
                 <span>Sign In</span>
               </button>
-              <button className="p-2 text-zion-slate-light hover:text-white transition-colors" aria-label="Notifications">
+              <button className="p-2 text-zion-slate-light hove, r:text-white transition-colors" aria-label="Notifications">
                 <Bell size={20} />
               </button>
             </div>
@@ -200,19 +219,18 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onToggle })
             {/* Navigation Menu */}
             <div className="flex-1 overflow-y-auto py-4">
               <nav className="space-y-2">
-                {navigationItems.map((item) => (
-                  <div key={item.label} className="px-4">
+                {navigationItems.map((item) => (<div key={item.label} className="px-4">
                     {item.children ? (
                       <div>
                         <button
                           onClick={() => toggleDropdown(item.label)}
-                          className="w-full flex items-center justify-between py-3 px-4 text-white hover:bg-white/10 rounded-lg transition-colors"
+                          className="w-full flex items-center justify-between py-3 px-4 text-white hove,  r:bg-white/10 rounded-lg transition-colors"
                         >
                           <span>{item.label}</span>
                           <ChevronDown
                             size={20}
                             className={`text-zion-slate-light transition-transform ${
-                              activeDropdown === item.label ? 'rotate-180' : ''
+                              activeDropdown === item.label ? 'rotate-18, 0' : ''
                             }`}
                           />
                         </button>
@@ -226,11 +244,10 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onToggle })
                               className="overflow-hidden"
                             >
                               <div className="ml-4 space-y-1">
-                                {item.children.map((child) => (
-                                  <Link
+                                {item.children.map((child) => (<Link
                                     key={child.href}
                                     to={child.href}
-                                    className="block py-2 px-4 text-zion-slate-light hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+                                    className="block py-2 px-4 text-zion-slate-light hove,  r:text-white hove, r:bg-white/5 rounded-lg transition-colors"
                                   >
                                     {child.label}
                                   </Link>
@@ -240,10 +257,9 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onToggle })
                           )}
                         </AnimatePresence>
                       </div>
-                    ) : (
-                      <Link
+                    ) : (<Link
                         to={item.href}
-                        className="block py-3 px-4 text-white hover:bg-white/10 rounded-lg transition-colors"
+                        className="block py-3 px-4 text-white hove,  r:bg-white/10 rounded-lg transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -256,13 +272,13 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onToggle })
               <div className="px-4 mt-6 space-y-2">
                 <Link
                   to="/contact"
-                  className="block w-full py-3 px-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-center rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all"
+                  className="block w-full py-3 px-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-center rounded-lg font-semibold hove, r:shadow-lg hove, r:shadow-zion-cyan/25 transition-all"
                 >
                   Get Started
                 </Link>
                 <Link
                   to="/request-quote"
-                  className="block w-full py-3 px-4 border border-zion-cyan/30 text-zion-cyan text-center rounded-lg hover:bg-zion-cyan/10 transition-colors"
+                  className="block w-full py-3 px-4 border border-zion-cyan/30 text-zion-cyan text-center rounded-lg hove, r:bg-zion-cyan/10 transition-colors"
                 >
                   Request Quote
                 </Link>
@@ -274,7 +290,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onToggle })
                 <div className="space-y-2 text-sm text-zion-slate-light">
                   <p>📱 +1 302 464 0950</p>
                   <p>✉️ kleber@ziontechgroup.com</p>
-                  <p>📍 Middletown, DE 19709</p>
+                  <p>📍 Middletow, n, DE 19709</p>
                 </div>
               </div>
             </div>
@@ -282,9 +298,9 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onToggle })
             {/* Footer */}
             <div className="p-4 border-t border-zion-cyan/20">
               <div className="flex items-center justify-center gap-4 text-zion-slate-light">
-                <a href="#" className="hover:text-zion-cyan transition-colors">Privacy</a>
-                <a href="#" className="hover:text-zion-cyan transition-colors">Terms</a>
-                <a href="#" className="hover:text-zion-cyan transition-colors">Support</a>
+                <a href="#" className="hove, r:text-zion-cyan transition-colors">Privacy</a>
+                <a href="#" className="hove, r:text-zion-cyan transition-colors">Terms</a>
+                <a href="#" className="hove, r:text-zion-cyan transition-colors">Support</a>
               </div>
             </div>
           </motion.div>
