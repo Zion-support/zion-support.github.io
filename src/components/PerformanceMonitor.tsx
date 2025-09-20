@@ -1,95 +1,104 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, memo } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
+interface PerformanceMonitorProps {
+  children: React.ReactNode;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-  });
-
+export const PerformanceMonitor = memo(({ children }: PerformanceMonitorProps) => {
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
-
-    const measurePerformance = () => {
-      // First Contentful Paint
-      const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
-      if (fcpEntry) {
-        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-      }
-
-      // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+    // Track Core Web Vitals
+    const sendToAnalytics = (metric: any) => {
+      // You can send this to your analytics service
+      console.log('Web Vital:', metric);
+      
+      // Example: Send to Google Analytics
+      if (typeof gtag !== 'undefined') {
+        gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          event_label: metric.id,
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          non_interaction: true,
         });
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-          }
-        });
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      // Time to First Byte
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
       }
-
-      // Cleanup observers after 10 seconds
-      setTimeout(() => {
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      }, 10000);
+      
+      // Example: Send to custom analytics
+      if (typeof window !== 'undefined' && (window as any).analytics) {
+        (window as any).analytics.track('Web Vital', {
+          metric: metric.name,
+          value: metric.value,
+          delta: metric.delta,
+          id: metric.id,
+        });
+      }
     };
 
-    // Wait for page load
+    // Measure Core Web Vitals
+    onCLS(sendToAnalytics);
+    onINP(sendToAnalytics); // INP replaced FID in web-vitals v5
+    onFCP(sendToAnalytics);
+    onLCP(sendToAnalytics);
+    onTTFB(sendToAnalytics);
+
+    // Track page load performance
+    const trackPageLoad = () => {
+      if ('performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        
+        const metrics = {
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+          totalPageLoad: navigation.loadEventEnd - navigation.fetchStart,
+          firstByte: navigation.responseStart - navigation.fetchStart,
+          dnsLookup: navigation.domainLookupEnd - navigation.domainLookupStart,
+          tcpConnection: navigation.connectEnd - navigation.connectStart,
+        };
+
+        console.log('Page Load Metrics:', metrics);
+        
+        // Send to analytics
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'page_load_time', {
+            event_category: 'Performance',
+            event_label: 'page_load',
+            value: Math.round(metrics.totalPageLoad),
+          });
+        }
+      }
+    };
+
+    // Track after page load
     if (document.readyState === 'complete') {
-      measurePerformance();
+      trackPageLoad();
     } else {
-      window.addEventListener('load', measurePerformance);
+      window.addEventListener('load', trackPageLoad);
     }
 
+    // Track memory usage (if available)
+    const trackMemoryUsage = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        const memoryMetrics = {
+          usedJSHeapSize: memory.usedJSHeapSize,
+          totalJSHeapSize: memory.totalJSHeapSize,
+          jsHeapSizeLimit: memory.jsHeapSizeLimit,
+        };
+
+        console.log('Memory Usage:', memoryMetrics);
+      }
+    };
+
+    // Track memory usage periodically
+    const memoryInterval = setInterval(trackMemoryUsage, 30000); // Every 30 seconds
+
+    // Cleanup
     return () => {
-      window.removeEventListener('load', measurePerformance);
+      window.removeEventListener('load', trackPageLoad);
+      clearInterval(memoryInterval);
     };
   }, []);
 
-  // Send metrics to analytics (placeholder)
-  useEffect(() => {
-    if (metrics.fcp && metrics.lcp && metrics.fid && metrics.cls && metrics.ttfb) {
-      // In a real app, you would send this to your analytics service
-      console.log('Performance Metrics:', metrics);
-    }
-  }, [metrics]);
+  return <>{children}</>;
+});
 
-  return null; // This component doesn't render anything
+PerformanceMonitor.displayName = 'PerformanceMonitor';
