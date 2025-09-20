@@ -10,6 +10,7 @@ import PerformanceOptimizer from "./components/PerformanceOptimizer";
 import EnhancedAccessibility from "./components/EnhancedAccessibility";
 import EnhancedSEO from "./components/EnhancedSEO";
 import ErrorBoundary from "./components/ErrorBoundary";
+import SecurityMonitor from "./components/SecurityMonitor";
 // Lazy load components for better performance
 const LazyHome = React.lazy(() => import('./components/Home'));
 const LazyServices = React.lazy(() => import('./components/Services'));
@@ -22,6 +23,7 @@ const App: React.FC = () => {
     <ErrorBoundary>
       <ThemeProvider>
         <EnhancedSEO />
+        <SecurityMonitor />
         <AccessibilityEnhancer>
           <PerformanceMonitor />
           <EnhancedPerformanceMonitor />
