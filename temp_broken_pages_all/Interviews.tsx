@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_pages_all/Interviews.tsx
 
 <<<<<<<< HEAD:temp_broken_pages_all/Interviews.tsx
 <<<<<<< HEAD:temp_broken_pages_all/Interviews.tsx
@@ -145,3 +146,26 @@ export default function Interviews() {
   );
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Interviews.tsx
 }
+=======
+import { SEO } from "@/components/SEO";
+
+export default function Interviews() {
+  return (
+    <>
+      <SEO 
+        title="Interviews - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">Interviews</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Interviews.tsx

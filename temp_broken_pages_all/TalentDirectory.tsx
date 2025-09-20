@@ -1,4 +1,5 @@
 <<<<<<< HEAD:temp_broken_pages_all/TalentDirectory.tsx
+<<<<<<< HEAD:temp_broken_pages_all/TalentDirectory.tsx
 import React { useState useEffect } from 'react';
 import { useRouter } from "next/router";, // Changed from useNavigate,
 import Link from 'next/link';
@@ -52,46 +53,25 @@ export default function TalentDirectory() {
               )}
             </ErrorBoundary>
           </div>
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/TalentDirectory.tsx
 
-          {/* Mobile filter sidebar */}
-          {isMobileFilterOpen && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
-              <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="font-bold text-white">Filter & Sort</h3>
-                  <Button
-variant="ghost"
-                    size="sm"
-                    onClick={() => setIsMobileFilterOpen(false)}
-                    className="text-zion-slate-light h-8 w-8 p-0"
-                  >
-                    <X className="h-4 w-4" />
-                    <span className="sr-only">Close</span>
-                  </Button>
-                </div>
-                <FilterSidebar
-searchTerm={searchTerm}
-                  setSearchTerm={setSearchTerm}
-                  selectedSkills={selectedSkills}
-                  toggleSkill={toggleSkill}
-                  selectedAvailability={selectedAvailability}
-                  toggleAvailability={toggleAvailability}
-                  selectedRegions={selectedRegions}
-                  toggleRegion={toggleRegion}
-                  priceRange={priceRange}
-                  setPriceRange={setPriceRange}
-                  experienceRange={experienceRange}
-                  setExperienceRange={setExperienceRange}
-                  expandedSections={expandedSections}
-                  toggleSection={toggleSection}
-                  sortOption={sortOption}
-                  setSortOption={setSortOption}
-                  clearFilters={clearFilters}
-                  isMobileFilterOpen={isMobileFilterOpen}
-                />
-              </div>
-            </div>
-          )}
+export default function TalentDirectory() {
+  return (
+    <>
+      <SEO 
+        title="TalentDirectory - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">TalentDirectory</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
         </div>
 import React from 'react';
 
@@ -103,6 +83,12 @@ export default function TalentDirectory() {
         <p className="text-lg text-gray-600">Coming soon...</p>
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/TalentDirectory.tsx
       </div>
+<<<<<<< HEAD:temp_broken_pages_all/TalentDirectory.tsx
     </div>
   );
 }
+=======
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/TalentDirectory.tsx

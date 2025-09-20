@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD:temp-broken-files/payment-canceled.tsx
 <<<<<<< HEAD:temp_broken_pages_all/payment-canceled.tsx
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/router"; // Changed from useNavigate,
@@ -55,6 +56,24 @@ variant='outline'
             onClick={() => router.push('/dashboard')} // Changed to router.push className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'          >
             Return to Dashboard
           </Button>
+=======
+import { SEO } from "@/components/SEO";
+
+export default function PaymentCanceled() {
+  return (
+    <>
+      <SEO 
+        title="payment-canceled - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">payment-canceled</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/payment-canceled.tsx
         </div>
 
 export default function PaymentCanceled() {
@@ -65,6 +84,12 @@ export default function PaymentCanceled() {
         <p className="text-lg text-gray-600">Your payment was canceled...</p>
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/payment-canceled.tsx
       </div>
+<<<<<<< HEAD:temp-broken-files/payment-canceled.tsx
     </div>
   );
 }
+=======
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/payment-canceled.tsx

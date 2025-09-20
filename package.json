@@ -48,10 +48,19 @@
     "git:report": "node automation/enhanced-git-sync-orchestrator.cjs report",
     "build:analyze": "npm run build && npx @next/bundle-analyzer",
     "build:check": "npm run type-check && npm run lint && npm run build",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
     "build:optimized": "npm run build:monitor",
     "build:optimize": "node scripts/build-optimizer.js",
     "build:validate": "node scripts/build-validator.js",
     "build:full": "npm run build:optimize && npm run build:validate",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
+>>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
     "dev:clean": "rm -rf .next out && npm run dev",
     "clean": "rm -rf .next out node_modules/.cache",
     "test:coverage": "npm run test -- --coverage",

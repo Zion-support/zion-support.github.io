@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_pages_all/PublicTalentProfilePage.tsx
 
 <<<<<<<< HEAD:temp_broken_pages_all/PublicTalentProfilePage.tsx
 <<<<<<< HEAD:temp_broken_pages_all/PublicTalentProfilePage.tsx
@@ -39,12 +40,30 @@ export default function ProfilePage() {
               }}
             />
             {/* Placeholder for other sidebar elements */}
+=======
+import { SEO } from "@/components/SEO";
+
+export default function PublicTalentProfilePage() {
+  return (
+    <>
+      <SEO 
+        title="PublicTalentProfilePage - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">PublicTalentProfilePage</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/PublicTalentProfilePage.tsx
           </div>
         </div>
       </div>
-</>
-  )
+    </>
+  );
 }
+<<<<<<< HEAD:temp_broken_pages_all/PublicTalentProfilePage.tsx
 if (profileId) {
   fetchProfile ()
 }, [profileId])
@@ -88,3 +107,5 @@ export default function PublicTalentProfilePage() {
   );
 }
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/PublicTalentProfilePage.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/PublicTalentProfilePage.tsx

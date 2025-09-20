@@ -1,0 +1,25 @@
+import React from 'react';
+<<<<<<< HEAD
+=======
+import { SEO } from "@/components/SEO";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb
+
+export default function About() {
+  return (
+    <>
+      <SEO 
+        title="About - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">About</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

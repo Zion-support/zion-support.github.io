@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD:temp-broken-files/Unauthorized.tsx
 
 <<<<<<< HEAD:temp_broken_pages_all/Unauthorized.tsx
 import Link from "next/link";
@@ -11,45 +12,27 @@ export default function Unauthorized() {
   return (
   return (
   const { t } = useTranslation();
+=======
+import { SEO } from "@/components/SEO";
+
+export default function Unauthorized() {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Unauthorized.tsx
   return (
     <>
-      <Header />
-      <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12'>
-        <div className='bg-zion-blue-dark rounded-xl p-8 max-w-md w-full text-center shadow-lg border border-zion-blue-light'>
-          <div className='flex justify-center mb-6'>
-            <div className='bg-zion-purple/20 p-4 rounded-full'>
-              <ShieldAlert className='h-12 w-12 text-zion-purple' />
-            </div>
-          </div>
-          <h1 className='text-3xl font-bold text-white mb-3'>
-            {t('errors.access_denied')}
-          </h1>
-          <p className='text-zion-slate-light mb-6'>
-            {t('errors.no_permission')}
-          </p>
-          <div className='flex flex-col gap-3'>
-            <Link
-href='/'
-              className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center'            >
-              {t('errors.return_home')}
-            </Link>
-            <Link
-href='/auth/login'
-              className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'            >              href="/"
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
-            >
-              {t('errors.return_home')}
-            </Link>
-            <Link
-href='/auth/login'
-              className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'              href="/auth/login"
-              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
-            >
-              {t('errors.login_different_account')}
-            </Link>
+      <SEO 
+        title="Unauthorized - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">Unauthorized</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
         </div>
       </div>
+<<<<<<< HEAD:temp-broken-files/Unauthorized.tsx
 </>
   )
 export default function Unauthorized() {
@@ -63,3 +46,8 @@ export default function Unauthorized() {
   );
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Unauthorized.tsx
 }
+=======
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Unauthorized.tsx

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp-broken-files/TalentDashboard.tsx
 <<<<<<< HEAD:temp_broken_pages_all/TalentDashboard.tsx
 function TalentDashboardContent() {
   const { user } = useAuth();
@@ -192,3 +193,27 @@ export default function TalentDashboard() {
   );
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/TalentDashboard.tsx
 }
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function TalentDashboard() {
+  return (
+    <>
+      <SEO 
+        title="TalentDashboard - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">TalentDashboard</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/TalentDashboard.tsx

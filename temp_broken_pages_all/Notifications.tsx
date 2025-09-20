@@ -1,4 +1,5 @@
 <<<<<<< HEAD:temp_broken_pages_all/Notifications.tsx
+<<<<<<< HEAD:temp_broken_pages_all/Notifications.tsx
 import React { useState useEffect } from 'react';
 <<<<<<<< HEAD:temp_broken_pages_all/Notifications.tsx
 import { Bell, Check, X, AlertCircle, Info, CheckCircle } from "lucide-react";
@@ -211,5 +212,27 @@ export default function Notifications() {
       </div>
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Notifications.tsx
     </div>
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function Notifications() {
+  return (
+    <>
+      <SEO 
+        title="Notifications - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">Notifications</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Notifications.tsx
   );
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD:temp_broken_pages_all/ProjectDetails.tsx
+<<<<<<< HEAD:temp_broken_pages_all/ProjectDetails.tsx
 import React { useState useEffect } from "react";
 import Link from 'next/link';
 <<<<<<<< HEAD:temp_broken_pages_all/ProjectDetails.tsx
@@ -24,11 +25,20 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 import {
   
 return (
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function ProjectDetails() {
+  return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/ProjectDetails.tsx
     <>
-      <SEO
-title={`Project: ${project.job?.title |'Project Details'} | Zion AI Marketplace`}
-        description='View and manage your project details and collaboration.'
+      <SEO 
+        title="ProjectDetails - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
       />
+<<<<<<< HEAD:temp_broken_pages_all/ProjectDetails.tsx
       <main className='container mx-auto px-4 py-8'>
         <div className='mb-6'>
           <div className='flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2'>
@@ -627,3 +637,16 @@ export default function ProjectDetails() {
   );
 }
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ProjectDetails.tsx
+=======
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">ProjectDetails</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/ProjectDetails.tsx

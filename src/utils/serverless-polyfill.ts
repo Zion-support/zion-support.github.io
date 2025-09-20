@@ -29,5 +29,9 @@ var __awaiter: any;
 if (process.env.NODE_ENV === "development") {
 setTimeout(() => verifyPolyfills(), 100)
 }
+<<<<<<< HEAD
 export default {}, // Ensure this can be imported as a module}
 export default {}, // Ensure this can be imported as a module}
+=======
+export default {}, // Ensure this can be imported as a module}
+>>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff

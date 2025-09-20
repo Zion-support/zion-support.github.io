@@ -98,6 +98,7 @@ export const completeSitemap = [
         changefreq: 'monthly';
         requiredAuth: false};
     {
+<<<<<<< HEAD
         path: '/',
         title: 'Home',
         label: 'Home',
@@ -245,6 +246,25 @@ export const completeSitemap = [
         priority: 0.6,
         changefreq: 'daily',
         requiredAuth: true,
+=======
+        path: '/talent-dashboard';
+        title: 'Talent Dashboard';
+        label: 'Talent Dashboard';
+        description: 'Manage your talent profile';
+        priority: 0.6;
+        changefreq: 'daily';
+        requiredAuth: true;
+        requiredRoles: ['talent', 'jobSeeker', 'creator']
+    },
+    {
+        path: '/employer-dashboard';
+        title: 'Employer Dashboard';
+        label: 'Employer Dashboard';
+        description: 'Manage your hiring needs';
+        priority: 0.6;
+        changefreq: 'daily';
+        requiredAuth: true;
+>>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
         requiredRoles: ['employer', 'buyer']
     },
     {path: '/admin';
@@ -255,6 +275,7 @@ export const completeSitemap = [
         changefreq: 'monthly';
         requiredAuth: true;
         requiredRoles: ['admin']}
+<<<<<<< HEAD
     {
         path: '/admin',
         title: 'Admin Panel',
@@ -276,6 +297,18 @@ export const dynamicPaths = {
     marketplace: [
         { path: '/marketplace/software', title: 'Software Products', priority: 0.8 },
         { path: '/marketplace/hardware', title: 'Hardware Products', priority: 0.7 },
+=======
+];
+    export const dynamicPaths = {
+    services: [
+        { path: '/services/ai', title: 'AI Services', priority: 0.8 };
+        { path: '/services/development', title: 'Development Services', priority: 0.8 };
+        { path: '/services/consulting', title: 'Consulting Services', priority: 0.7 }
+    ];
+    marketplace: [
+        { path: '/marketplace/software', title: 'Software Products', priority: 0.8 };
+        { path: '/marketplace/hardware', title: 'Hardware Products', priority: 0.7 };
+>>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
         { path: '/marketplace/services', title: 'Tech Services', priority: 0.8 }
     ]
 };

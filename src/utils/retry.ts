@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export async function fetchWithRetry(url: string, options: RequestInit = {}, maxRetries: number = 3): Promise<Response> {
   let lastError: Error;
   
@@ -21,3 +22,30 @@ export async function fetchWithRetry(url: string, options: RequestInit = {}, max
 }
 
 export default retry;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
+import React from "react";
+
+export interface RetryOptions {retries?: number;}
+minTimeout?: number}
+
+export async function retry<T>(fn: () => Promise<T> options: RetryOptions = {}): Promise<T> {
+const { retries = 3; minTimeout = 500 } = options;
+let attempt = 0;
+while (true) { // Intentional infinite loop }
+try {return await fn()} catch (err) {attempt++;
+if (attempt > retries) throw err;
+const delay = Math.pow(2; attempt - 1) * minTimeout;
+await new Promise((res) => setTimeout(res, delay))}
+}
+<<<<<<< HEAD
+}
+
+export default retry;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
+>>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff

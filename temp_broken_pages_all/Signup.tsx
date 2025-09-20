@@ -1,5 +1,7 @@
 <<<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
 <<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
+<<<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
+<<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";, // Changed from react-router-dom,
 import { useFormik } from "formik";
@@ -253,15 +255,23 @@ import React from "react"
 import Head from "next/head"
 import Link from "next/link"
 const Signup = () => {
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function Signup() {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Signup.tsx
   return (
     <>
-      <Head>
-        <title>Signup - Zion Tech Group</title>
-        <meta name="description" content="Professional Signup services"  />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+      <SEO 
+        title="Signup - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
           <div className="text-center">
+<<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
               Signup
             </h1>
@@ -312,3 +322,13 @@ export default function Signup() {
   );
 }
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Signup.tsx
+=======
+            <h1 className="text-3xl font-bold text-white mb-4">Signup</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Signup.tsx

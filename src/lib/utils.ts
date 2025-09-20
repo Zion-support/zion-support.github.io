@@ -1,5 +1,27 @@
+<<<<<<< HEAD
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+=======
+<<<<<<< HEAD
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+}
+
+export function formatPhoneNumber(phoneNumber: string): string {
+const cleaned = phoneNumber.replace(/\D/g, "");
+const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+if (match) {
+return `(${match[1]}) ${match[2]}-${match[3]}`;
+}
+return phoneNumber;
+}
+
+=======
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+>>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -31,7 +53,11 @@ export function formatPhoneNumber(phoneNumber: string): string {
 }
 
 export function debounce<T extends (...args: any[]) => any>(
+<<<<<<< HEAD
   func: T,
+=======
+  func: T, 
+>>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
   wait: number
 ): (...args: Parameters<T>) => void {
   let timeout: globalThis.Timeout;
@@ -42,7 +68,11 @@ export function debounce<T extends (...args: any[]) => any>(
 }
 
 export function throttle<T extends (...args: any[]) => any>(
+<<<<<<< HEAD
   func: T,
+=======
+  func: T, 
+>>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
   limit: number
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
@@ -50,7 +80,15 @@ export function throttle<T extends (...args: any[]) => any>(
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
+<<<<<<< HEAD
       setTimeout(() => (inThrottle = false), limit);
     }
   };
 }
+=======
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
+>>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff

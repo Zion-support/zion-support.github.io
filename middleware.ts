@@ -22,9 +22,29 @@ export function middleware(request: NextRequest) {
     const response = NextResponse.next();
     
     // Security headers
+<<<<<<< HEAD
     response.headers.set('X-Frame-Options', 'DENY');
     response.headers.set('X-Content-Type-Options', 'nosniff');
     response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
+=======
+<<<<<<< HEAD
+    response.headers.set('X-Frame-Options', 'DENY');
+    response.headers.set('X-Content-Type-Options', 'nosniff');
+    response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
+=======
+    response.headers.set("X-Frame-Options", "DENY");
+    response.headers.set("X-Content-Type-Options", "nosniff");
+    response.headers.set("Referrer-Policy", "origin-when-cross-origin");
+    response.headers.set(
+      "Permissions-Policy",
+      "camera=(), microphone=(), geolocation=()"
+    );
+    response.headers.set(
+      "Content-Security-Policy",
+      "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
+    );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0787
+>>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
     
 <<<<<<< HEAD
   
@@ -34,13 +54,60 @@ export function middleware(request: NextRequest) {
     return response;
   }
 
+<<<<<<< HEAD
   // For protected routes, you can add authentication logic here
   return NextResponse.next();
+=======
+<<<<<<< HEAD
+  // For protected routes, you can add authentication logic here
+  return NextResponse.next();
+=======
+  // Check for authentication cookie
+  const authCookie = request.cookies.get("auth-token");
+
+  if (!authCookie) {
+    // Redirect to login if not authenticated
+    return NextResponse.redirect(new URL("/auth/login", request.url));
+  }
+
+  const response = NextResponse.next();
+  
+  // Security headers
+  response.headers.set("X-Frame-Options", "DENY");
+  response.headers.set("X-Content-Type-Options", "nosniff");
+  response.headers.set("Referrer-Policy", "origin-when-cross-origin");
+  response.headers.set(
+    "Permissions-Policy",
+    "camera=(), microphone=(), geolocation=()"
+  );
+  response.headers.set(
+    "Content-Security-Policy",
+    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
+  );
+  
+  return response;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0787
+>>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
 }
 
 export const config = {
   matcher: [
+<<<<<<< HEAD
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
+=======
+<<<<<<< HEAD
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+=======
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+    "/((?!api|_next/static|_next/image|favicon.ico).*)",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0787
+>>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
   ],
 };
 >>>>>>> 5bd6cc73261883241567b90debab97e4859d2a8a

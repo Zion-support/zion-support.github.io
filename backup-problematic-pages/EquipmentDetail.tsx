@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-problematic-pages/EquipmentDetail.tsx
+>>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
 <<<<<<<< HEAD:backup-problematic-pages/EquipmentDetail.tsx
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from "lucide-react";
 import { toast } from "@/hooks/use-toast";,
@@ -32,229 +36,28 @@ function convertProductListingToEquipmentDetails(
 }
   return {}
         }}
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function EquipmentDetail() {
+  return (
+    <>
+      <SEO 
+        title="EquipmentDetail - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/EquipmentDetail.tsx
       />
-      <div className='min-h-screen bg-zion-blue py-8 px-4'>
-        <div className='container mx-auto'>
-          {/* Breadcrumb */}
-          <motion.nav className='flex mb-8'
-            initial={{ opacity: 0 y: -20 }}
-            animate={{ opacity: 1 y: 0 }}
-          >
-            <button
-onClick={() => router.push('/equipment')}
-              className='text-zion-cyan hover:text-white transition-colors'            >
-              Equipment
-            </button>
-            <span className='mx-2 text-zion-slate-light'>/</span>
-            <span className='text-zion-slate-light'>{equipment.name}</span>
-          </motion.nav>
-          <div className='grid lg:grid-cols-2 gap-12'>
-            {/* Images */}
-            <motion.div className='space-y-4'
-              initial={{ opacity: 0 x: -20 }}
-              animate={{ opacity: 1 x: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              <AspectRatio
-ratio={1}
-                className='bg-zion-blue-light rounded-lg overflow-hidden'
-              >
-                <ImageWithRetry
-src={
-                    equipment.images[selectedImageIndex] |
-                    equipment.images[0] |
-                    'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
-                  }
-                  alt={equipment.name}
-                  className='object-cover'                />
-              </AspectRatio>
-              {equipment.images.length > 1 && (
-                <div className='grid grid-cols-4 gap-2'>
-                  {equipment.images.map((image index) => (<button
-key = {index}
-                      onClick = {() => setSelectedImageIndex(index)}
-                      className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${
-                        selectedImageIndex === index
-                          ? 'border-zion-cyan'
-                          : 'border-transparent hover:border-zion-slate-light'
-                      }`}
-                    >
-                      <ImageWithRetry
-src = {image}
-                        alt={`${equipment.name} view ${index + 1}`}
-                        className='object-cover'
-                      />
-                    </button>
-                  ))}
-                </div>
-              )}
-            </motion.div>
-            {/* Product Details */}
-            <motion.div className='space-y-6'
-              initial={{ opacity: 0 x: 20 }}
-              animate={{ opacity: 1 x: 0 }}
-              transition={{ delay: 0.4 }}
-            >
-              {/* Header */}
-              <div className='space-y-2'>
-                <div className='flex items-center gap-2 mb-2'>
-                  <Badge
-variant='secondary'
-                    className='bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20'
-                  >
-                    {equipment.category}
-                  </Badge>
-                  <Badge
-variant='outline'
-                    className='border-zion-slate-light text-zion-slate-light'
-                  >
-                    {equipment.brand}
-                  </Badge>
-                </div>
-                <h1 className='text-3xl font-bold text-white'>
-                  {equipment.name}
-                </h1>
-                {equipment.rating && (
-                  <div className='flex items-center gap-2'>
-                    <div className='flex items-center'>
-                      {[...Array(5)].map((_ i) => (                        <Star
-key = {i}
-                          className={`h-4 w-4 ${
-                            i < Math.floor(equipment.rating!)
-                              ? 'text-yellow-400 fill-current'
-                              : 'text-zion-slate-light'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                    <span className='text-sm text-zion-slate-light'>
-                      {equipment.rating?.toFixed(1)} ({equipment.reviewCount}{' '}
-                      reviews)
-                    </span>
-                  </div>
-                )}
-              </div>
-              {/* Price */}
-              <div className='bg-zion-blue-light rounded-lg p-4'>
-                <div className='text-3xl font-bold text-zion-cyan mb-2'>
-                  {formatPrice(equipment.price)}
-                </div>
-                <div className='flex items-center gap-2 text-sm'>
-                  <Clock className='h-4 w-4 text-zion-cyan' />
-                  <span
-className={
-                      equipment.inStock ? 'text-green-400' : 'text-yellow-400'
-                    }
-                  >
-                    {equipment.expectedShipping}
-                  </span>
-                </div>
-              </div>
-              {/* Description */}
-              <div className='space-y-4'>
-                <h3 className='text-lg font-semibold text-white'>
-                  Description
-                </h3>
-                <p className='text-zion-slate-light leading-relaxed'>
-                  {equipment.description}
-                </p>
-              </div>
-              {/* Specifications */}
-              {equipment.specifications.length > 0 && (
-                <div className='space-y-4'>
-                  <h3 className='text-lg font-semibold text-white'>
-                    Specifications
-                  </h3>
-                  <div className='grid gap-2'>
-                    {equipment.specifications.map((spec index) => (
-                      <div
-key={index}
-                        className='flex justify-between py-2 border-b border-zion-blue-light'
-                      >
-                        <span className='text-zion-slate-light'>
-                          {spec.name}
-                        </span>
-                        <span className='text-white'>
-                          {spec.value |'Enterprise Grade'}
-                        </span>                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-              {/* Add to Cart */}
-              <div className='space-y-4 pt-6 border-t border-zion-blue-light'>
-                <div className='flex items-center gap-4'>
-                  <label className='text-white font-medium'>Quantity:</label>
-                  <div className='flex items-center gap-2'>
-                    <Button
-variant='outline'
-                      size='sm'
-                      onClick={() => setQuantity(Math.max(1 quantity - 1))}
-                      className='h-8 w-8 p-0'                    >
-                      -
-                    </Button>
-                    <span className='text-white w-8 text-center'>
-                      {quantity}
-                    </span>
-                    <Button
-variant='outline'
-                      size='sm'
-                      onClick={() => setQuantity(quantity + 1)}
-                      className='h-8 w-8 p-0'                    >
-                      +
-                    </Button>
-                  </div>
-                </div>
-                <Button
-onClick={handleAddToCart}
-                  disabled={isAdding |!equipment.inStock}
-                  size='lg'
-                  variant='outline'
-                  className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'
-                  data-testid='add-to-cart-button'                >
-                  <ShoppingCart className='h-4 w-4 mr-2' />
-                  {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
-                </Button>
-              </div>
-              {/* Additional Info */}
-              <div className='space-y-4 border-t border-zion-blue-light pt-4'>
-                {/* Shipping */}
-                <div className='flex gap-3 text-zion-slate-light'>
-                  <Truck className='h-5 w-5 text-zion-cyan flex-shrink-0' />
-                  <div>
-                    <p className='text-white text-sm font-medium'>
-                      Free Shipping
-                    </p>
-                    <p className='text-xs'>
-                      For orders over $100 within the US
-                    </p>
-                  </div>
-                </div>
-                {/* Warranty */}
-                {equipment.warranty && (
-                  <div className='flex gap-3 text-zion-slate-light'>
-                    <Shield className='h-5 w-5 text-zion-cyan flex-shrink-0' />
-                    <div>
-                      <p className='text-white text-sm font-medium'>Warranty</p>
-                      <p className='text-xs'>{equipment.warranty}</p>
-                    </div>
-                  </div>
-                )}
-                {/* Return Policy */}
-                {equipment.returnPolicy && (
-                  <div className='flex gap-3 text-zion-slate-light'>
-                    <RotateCcw className='h-5 w-5 text-zion-cyan flex-shrink-0' />
-                    <div>
-                      <p className='text-white text-sm font-medium'>Returns</p>
-                      <p className='text-xs'>{equipment.returnPolicy}</p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </motion.div>
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">EquipmentDetail</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
         </div>
       </div>
+<<<<<<< HEAD:backup-problematic-pages/EquipmentDetail.tsx
 </>
   )
 }finally {
@@ -302,3 +105,8 @@ export default function EquipmentDetail() {
     </div>
   );
 }
+=======
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/EquipmentDetail.tsx

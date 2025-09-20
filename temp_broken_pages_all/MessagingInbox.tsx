@@ -1,4 +1,5 @@
 <<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
+<<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
 import React { useEffect useState } from 'react';
 <<<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
 import { MessageSquare, Video } from "lucide-react";
@@ -84,14 +85,31 @@ conversations = {conversations}
               {/* Conversation Detail */}
               <ConversationDetailView />
             </div>
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function MessagingInbox() {
+  return (
+    <>
+      <SEO 
+        title="MessagingInbox - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">MessagingInbox</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/MessagingInbox.tsx
           </div>
         </div>
-        {/* Add extra bottom padding on mobile to account for the bottom nav */}
-        {isMobile && <div className="h-16"></div>}
       </div>
-    </ProtectedRoute>
-);
+    </>
+  );
 }
+<<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
 loadData () ;
 }, [fetchConversations]);
 }const roomId = `msg-$ {activeConversation.id ;
@@ -126,3 +144,5 @@ export default function MessagingInbox() {
   );
 }
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/MessagingInbox.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/MessagingInbox.tsx
