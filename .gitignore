@@ -26,6 +26,10 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+# Core dumps and large files
+core
+*.core
+
 # Runtime data
 pids/
 *.pid
