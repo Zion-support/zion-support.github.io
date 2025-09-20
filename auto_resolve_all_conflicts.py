@@ -18,7 +18,8 @@ def resolve_conflicts_in_file(file_path):
             content = f.read()
         
         # Check if file has conflict markers
-        if '            return False
+        if '<<<<<<< ' in content or '>>>>>>> ' in content:
+            return False
             
         print(f"Resolving conflicts in: {file_path}")
         
@@ -45,7 +46,8 @@ def resolve_conflicts_by_strategy(content, file_path):
     """Resolve conflicts using different strategies based on file type"""
     
     if file_path.endswith(('.json', 'package-lock.json')):
-        # For JSON files, prefer the incoming version (after         return resolve_conflicts_prefer_incoming(content)
+        # For JSON files, prefer the incoming version (after <<<<<<< markers)
+        return resolve_conflicts_prefer_incoming(content)
     
     elif file_path.endswith(('.tsx', '.ts', '.jsx', '.js')):
         # For code files, prefer the incoming version but be smart about it
@@ -68,7 +70,8 @@ def resolve_conflicts_by_strategy(content, file_path):
         return resolve_conflicts_prefer_incoming(content)
 
 def resolve_conflicts_prefer_incoming(content):
-    """Resolve conflicts by preferring the incoming version (after     lines = content.split('\n')
+    """Resolve conflicts by preferring the incoming version (after <<<<<<< markers)"""
+    lines = content.split('\n')
     resolved_lines = []
     skip_until = None
     
@@ -78,8 +81,11 @@ def resolve_conflicts_prefer_incoming(content):
                 skip_until = None
             continue
         
-        if line.strip().startswith('            skip_until = '            continue
-        elif line.strip().startswith('            skip_until = '>>>>>>>'
+        if line.strip().startswith('<<<<<<< '):
+            skip_until = '======='
+            continue
+        elif line.strip().startswith('======='):
+            skip_until = '>>>>>>>'
             continue
         elif line.strip().startswith('>>>>>>>'):
             skip_until = None
@@ -103,9 +109,10 @@ def resolve_conflicts_smart_merge(content):
                 in_head_section = False
             continue
         
-        if line.strip().startswith('            skip_until = '            in_head_section = True
+        if line.strip().startswith('<<<<<<< '):
+            in_head_section = True
             continue
-        elif line.strip().startswith('            skip_until = '>>>>>>>'
+        elif line.strip().startswith('======='):
             in_head_section = False
             continue
         elif line.strip().startswith('>>>>>>>'):
@@ -132,7 +139,8 @@ def resolve_conflicts_merge_both(content):
             if line.strip().startswith(skip_until):
                 skip_until = None
                 in_conflict = False
-            elif in_conflict and line.strip().startswith('                # Switch to incoming section
+            elif in_conflict and line.strip().startswith('======='):
+                # Switch to incoming section
                 continue
             else:
                 if in_conflict:
@@ -149,7 +157,8 @@ def resolve_conflicts_merge_both(content):
                     resolved_lines.append(line)
             continue
         
-        if line.strip().startswith('            skip_until = '            in_conflict = True
+        if line.strip().startswith('<<<<<<< '):
+            in_conflict = True
             continue
         else:
             resolved_lines.append(line)
@@ -178,7 +187,8 @@ def find_conflict_files():
                 try:
                     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
                         content = f.read()
-                        if '                            conflict_files.append(file_path)
+                        if '<<<<<<< ' in content or '>>>>>>> ' in content:
+                            conflict_files.append(file_path)
                 except:
                     pass
     
