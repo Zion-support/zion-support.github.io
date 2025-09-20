@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const AI2025UltimateContentShowcase: React.FC = () => {
+const UltimateContent2025Showcase: React.FC = () => {
   return (
     <section className="py-20 bg-gray-800">
       <div className="container mx-auto px-4">
@@ -40,4 +40,4 @@ const AI2025UltimateContentShowcase: React.FC = () => {
   );
 };
 
-export default AI2025UltimateContentShowcase;
+export default UltimateContent2025Showcase;
