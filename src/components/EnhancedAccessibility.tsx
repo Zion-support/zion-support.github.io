@@ -10,11 +10,11 @@ interface AccessibilitySettings {
 
 const EnhancedAccessibility: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    focusVisible: true,
-    screenReader: false,
+    highContrast: false;
+    largeText: false;
+    reducedMotion: false;
+    focusVisible: true;
+    screenReader: false;
     keyboardNavigation: true
   });
   const [announcements, setAnnouncements] = useState<string[]>([]);
@@ -62,60 +62,60 @@ const EnhancedAccessibility: React.FC = () => {
 
     // Reduced motion
     if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion'),
+      root.classList.add('reduced-motion');
     } else {
-      root.classList.remove('reduced-motion'),
+      root.classList.remove('reduced-motion');
     }
 
     // Focus visible
     if (newSettings.focusVisible) {
-      root.classList.add('focus-visible'),
+      root.classList.add('focus-visible');
     } else {
-      root.classList.remove('focus-visible'),
+      root.classList.remove('focus-visible');
     }
 
     // Keyboard navigation
     if (newSettings.keyboardNavigation) {
-      root.classList.add('keyboard-navigation'),
+      root.classList.add('keyboard-navigation');
     } else {
-      root.classList.remove('keyboard-navigation'),
+      root.classList.remove('keyboard-navigation');
     }
-  },
+  };
 
   const updateSetting = (setting: keyof AccessibilitySettings, value: boolean) => {
-    const newSettings = { ...settings, [setting]: value },
-    setSettings(newSettings),
-    applySettings(newSettings),
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings)),
+    const newSettings = { ...settings, [setting]: value };
+    setSettings(newSettings);
+    applySettings(newSettings);
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
     
     // Announce changes
     const settingNames = {
       highContrast: 'High contrast',largeText: 'Large text',reducedMotion: 'Reduced motion',focusVisible: 'Focus visible',screenReader: 'Screen reader',keyboardNavigation: 'Keyboard navigation'
     };
-    announce(`${settingNames[setting]} ${value ? 'enabled' : 'disabled'}`),
-  },
+    announce(`${settingNames[setting]} ${value ? 'enabled' : 'disabled'}`);
+  };
 
   const announce = (message: string) => {
-    setAnnouncements(prev => [...prev.slice(-2), message]),
+    setAnnouncements(prev => [...prev.slice(-2), message]);
     
     // Use screen reader announcement
     if (settings.screenReader) {
-      const announcement = document.createElement('div'),
-      announcement.setAttribute('aria-livepolite'),
-      announcement.setAttribute('aria-atomictrue'),
-      announcement.className = 'sr-only',
-      announcement.textContent = message,
-      document.body.appendChild(announcement),
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-livepolite');
+      announcement.setAttribute('aria-atomictrue');
+      announcement.className = 'sr-only';
+      announcement.textContent = message;
+      document.body.appendChild(announcement);
       
       setTimeout(() => {
-        document.body.removeChild(announcement),
-      }, 1000),
+        document.body.removeChild(announcement);
+      }, 1000);
     }
-  },
+  };
 
   const toggleSetting = (setting: keyof AccessibilitySettings) => {
-    updateSetting(setting, !settings[setting]),
-  },
+    updateSetting(setting, !settings[setting]);
+  };
 
   return (
     <>
