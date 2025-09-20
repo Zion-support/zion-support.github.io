@@ -2,7 +2,7 @@ import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook
 import type { BlogPost as BlogPostType } from "@/types/blog";
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
-import { logErrorToProduction } from "@/utils/productionLogger";
+import { logErrorToProduction, logInfo } from "@/utils/productionLogger";
 // Importing the sample blog posts - in a real app you would fetch this from an API,
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from "@/hooks/useSkeletonTimeout";

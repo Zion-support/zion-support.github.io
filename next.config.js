@@ -25,6 +25,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   
+  
   // Bundle analyzer
   webpack: (config, { dev, isServer }) => {
     if (dev) {
