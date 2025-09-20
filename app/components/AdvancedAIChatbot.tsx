@@ -74,7 +74,7 @@ const AdvancedAIChatbot: React.FC<ChatbotProps> = ({ isOpen, onToggle }) => {
     if (!inputText.trim()) return;
 
     const userMessage: Message = {
-      id: Date.now().toString()
+      id: Date.now().toString(),
       text: inputText,
       isUser: true,
       timestamp: new Date()
@@ -87,8 +87,8 @@ const AdvancedAIChatbot: React.FC<ChatbotProps> = ({ isOpen, onToggle }) => {
     // Simulate AI thinking time
     setTimeout(() => {
       const aiResponse: Message = {
-        id: (Date.now() + 1).toString()
-        text: generateAIResponse(inputText)
+        id: (Date.now() + 1).toString(),
+        text: generateAIResponse(inputText),
         isUser: false,
         timestamp: new Date()
       };
@@ -155,7 +155,7 @@ const AdvancedAIChatbot: React.FC<ChatbotProps> = ({ isOpen, onToggle }) => {
 
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {messages.map((message) => (
+        {messages?.map((message) => (
           <div
             key={message.id}
             className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}
@@ -195,7 +195,7 @@ const AdvancedAIChatbot: React.FC<ChatbotProps> = ({ isOpen, onToggle }) => {
         <div className="p-4 border-t border-gray-200 dark:border-gray-600">
           <p className="text-xs text-gray-500 mb-2">Quick actions:</p>
           <div className="flex flex-wrap gap-2">
-            {quickActions.map((action, index) => (
+            {quickActions?.map((action, index) => (
               <button
                 key={index}
                 onClick={() => handleQuickAction(action)}
