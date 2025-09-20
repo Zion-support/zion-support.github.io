@@ -2,6 +2,8 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import './App.css';
 import './styles/accessibility.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import { EnhancedPerformanceMonitor } from './components/EnhancedPerformanceMonitor';
+import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
 import LazyImage from './components/LazyImage';
 import VirtualList from './components/VirtualList';
 import MemoizedComponent from './components/MemoizedComponent';
@@ -203,6 +205,8 @@ function App() {
       <AccessibilityEnhancer>
         <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
         <PerformanceMonitor />
+        <EnhancedPerformanceMonitor />
+        <EnhancedAccessibilityEnhancer />
       
       <main id="main-content">
       <header className="App-header">
