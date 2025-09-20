@@ -124,60 +124,20 @@ const UltimateTechRevolution2032: React.FC = () => {
                 <div className="space-y-2">
                   {innovation.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-2 text-purple-300">
-                      <Zap className="w-4 h-4" />
                       <span className="text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="text-4xl">🚀</div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">Space-Time Computing</h3>
-                  <p className="text-gray-300">
-                    Computing systems that manipulate space-time itself to achieve instantaneous data processing
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="text-4xl">🔮</div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">Predictive Reality</h3>
-                  <p className="text-gray-300">
-                    AI systems that can predict and simulate future events with 99.9% accuracy
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="text-4xl">🌟</div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">Consciousness Transfer</h3>
-                  <p className="text-gray-300">
-                    Technology that allows human consciousness to be transferred to digital or synthetic bodies
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="text-4xl">🌊</div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">Quantum Teleportation</h3>
-                  <p className="text-gray-300">
-                    Instantaneous transportation of matter and information across any distance
-                  </p>
-                </div>
-              </div>
-            </div>
+              </motion.div>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Success Stories */}
-        <div className="text-center mb-16">
+      {/* Success Stories */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">🏆 Success Stories</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-12">
             See how our revolutionary technologies have transformed businesses and societies worldwide
@@ -229,7 +189,8 @@ const UltimateTechRevolution2032: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+        </div>
+      </section>
     </div>
   );
 };

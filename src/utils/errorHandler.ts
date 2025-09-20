@@ -1,6 +1,8 @@
 // Enhanced Error Handling and Monitoring System
 // Comprehensive error tracking and recovery mechanisms
 
+import React from 'react';
+
 interface ErrorContext {
   userId?: string;
   sessionId?: string;
@@ -412,7 +414,7 @@ export class ErrorBoundary extends React.Component<
   render() {
     if (this.state.hasError) {
       const FallbackComponent = this.props.fallback || DefaultErrorFallback;
-      return <FallbackComponent error={this.state.error!} />;
+      return React.createElement(FallbackComponent, { error: this.state.error! });
     }
 
     return this.props.children;
@@ -421,22 +423,18 @@ export class ErrorBoundary extends React.Component<
 
 // Default error fallback component
 function DefaultErrorFallback({ error }: { error: Error }) {
-  return (
-    <div style={{ padding: '20px', textAlign: 'center' }}>
-      <h2>Something went wrong</h2>
-      <p>We're sorry, but something unexpected happened.</p>
-      {process.env.NODE_ENV === 'development' && (
-        <details style={{ marginTop: '20px' }}>
-          <summary>Error details</summary>
-          <pre style={{ textAlign: 'left', marginTop: '10px' }}>
-            {error.message}
-            {error.stack}
-          </pre>
-        </details>
-      )}
-      <button onClick={() => window.location.reload()}>
-        Reload Page
-      </button>
-    </div>
+  return React.createElement('div', { style: { padding: '20px', textAlign: 'center' } },
+    React.createElement('h2', null, 'Something went wrong'),
+    React.createElement('p', null, 'We\'re sorry, but something unexpected happened.'),
+    process.env.NODE_ENV === 'development' && React.createElement('details', { style: { marginTop: '20px' } },
+      React.createElement('summary', null, 'Error details'),
+      React.createElement('pre', { style: { textAlign: 'left', marginTop: '10px' } },
+        error.message,
+        error.stack
+      )
+    ),
+    React.createElement('button', { onClick: () => window.location.reload() },
+      'Reload Page'
+    )
   );
 }
