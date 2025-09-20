@@ -4,36 +4,36 @@ import { FuturisticNavigation } from "./FuturisticNavigation";
 import { FuturisticFooter } from "./FuturisticFooter";
 import { EnhancedSidebar } from "./EnhancedSidebar";
 import { FuturisticAnimatedBackground } from "./FuturisticAnimatedBackground";
-interface EnhancedLayoutProps {
+interface EnhancedLayoutProps {;
   children: ReactNode;
-  showSidebar?: boolean
+  showSidebar?: boolean;
 }
 
-export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
+export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({;
   children;
-  showSidebar = true
-}) => {
+  showSidebar = true;
+}) => {;
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative">
-      {/* Futuristic Animated Background */}
+      {{/* Futuristic Animated Background */}}
       <FuturisticAnimatedBackground />
 
-      {/* Navigation */}
+      {{/* Navigation */}}
       <FuturisticNavigation />
 
-      {/* Main Content with Sidebar */}
+      {{/* Main Content with Sidebar */}}
       <div className="flex relative z-10">
-        {/* Sidebar */}
-        {showSidebar && <EnhancedSidebar />}
+        {{/* Sidebar */}}
+        {{showSidebar && <EnhancedSidebar />}}
 
-        {/* Main Content */}
+        {{/* Main Content */}}
         <main className={`flex-1 ${showSidebar ? 'lg: ml-80' : ''}`}>
-          {children}
+          {{children}}
         </main>
       </div>
 
-      {/* Footer */}
+      {{/* Footer */}}
       <FuturisticFooter />
     </div>
-  );
-};
+  )
+}

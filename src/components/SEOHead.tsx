@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
 interface SEOHeadProps {
-  title?: string,
-  description?: string,
-  keywords?: string,
-  image?: string,
-  url?: string,
-  type?: string,
-  author?: string,
-  publishedTime?: string,
-  modifiedTime?: string,
-  section?: string,
-  tags?: string[],
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -81,7 +81,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       section,
       tags
     });
-
   }, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, section, tags]);
 
   const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
@@ -109,7 +108,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       canonical.setAttribute('href', url);
     } else {
       canonical = document.createElement('link');
+<<<<<<< HEAD
+      canonical.setAttribute('relcanonical');
+=======
       canonical.setAttribute('rel', 'canonical');
+>>>>>>> 01968bce8d529a59f04f31cac6cee86ca38ed214
       canonical.setAttribute('href', url);
       document.head.appendChild(canonical);
     }
@@ -145,7 +148,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       ...(data.publishedTime && { "datePublished": data.publishedTime }),
       ...(data.modifiedTime && { "dateModified": data.modifiedTime }),
       ...(data.section && { "articleSection": data.section }),
+<<<<<<< HEAD
       ...(data.tags && data.tags.length > 0 && { "keywords": data.tags.join() })
+=======
+      ...(data.tags && data.tags.length > 0 && { "keywords": data.tags.join(', ') })
+>>>>>>> 01968bce8d529a59f04f31cac6cee86ca38ed214
     };
 
     const script = document.createElement('script');

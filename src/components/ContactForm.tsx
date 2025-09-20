@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 interface FormData {
-  name: string,email: string,company: string,service: string,message: string,budget: string
+  name: string;
+  email: string;
+  company: string;
+  service: string;
+  message: string;
+  budget: string;
 }
 
 const ContactForm: React.FC = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-export default function EnterpriseSolutions() {
+export default function EnterpriseSolutions() {;
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-8">
       <div className="max-w-2xl text-center">
@@ -7,5 +7,5 @@ export default function EnterpriseSolutions() {
         <p className="text-slate-300">Enterprise-focused offerings to scale securely and efficiently.</p>
       </div>
     </div>
-  );
+  )
 }
