@@ -2,6 +2,8 @@ import React, { useState, useEffect, useCallback, useMemo, Suspense, lazy } from
 import './App.css';
 import './styles/accessibility.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import { EnhancedPerformanceMonitor } from './components/EnhancedPerformanceMonitor';
+import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
 import LazyImage from './components/LazyImage';
 import ErrorBoundary from './components/ErrorBoundary';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -272,6 +274,8 @@ function App() {
         />
         <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
         <PerformanceMonitor />
+        <EnhancedPerformanceMonitor />
+        <EnhancedAccessibilityEnhancer />
         
         {/* Loading Screen */}
         {isLoading && (
