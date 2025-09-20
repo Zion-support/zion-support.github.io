@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 interface User {
   id: string;
@@ -38,7 +38,7 @@ export function useAuth() {
             isLoading: false,
           });
         } catch (error) {
-          console.error('Error parsing stored user:', error);
+          // console.error('Error parsing stored user:', error);
           setAuthState({
             user: null,
             isAuthenticated: false,

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { 
   Handshake, 
   Users, 

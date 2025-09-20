@@ -23,7 +23,7 @@ import {
   Lightbulb,
   BarChart3
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 export default function AIContentCreation() {
   const features = [

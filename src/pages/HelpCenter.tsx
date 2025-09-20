@@ -13,7 +13,7 @@ import {
   ChevronDown,
   ExternalLink
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 const helpCategories = [
   { id: 'getting-started', title: 'Getting Started' },

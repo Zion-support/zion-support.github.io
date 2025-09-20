@@ -14,7 +14,7 @@ import {
   Users,
   Rocket
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 const featuredServices = [
   {

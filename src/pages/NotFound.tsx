@@ -15,7 +15,7 @@ import {
   Users,
   BarChart3
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 const popularCategories = [
   {

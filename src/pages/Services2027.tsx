@@ -56,7 +56,7 @@ import {
   Server,
   Chip
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 // Mock data for 2027 services
 const SERVICES_2027 = [

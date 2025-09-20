@@ -26,7 +26,7 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import SEO from '../../components/SEO';
 
 const AIBusinessIntelligenceDashboard = () => {
   const features = [

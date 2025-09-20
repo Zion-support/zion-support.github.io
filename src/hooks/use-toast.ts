@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 
 interface Toast {
   id: string;
@@ -43,7 +43,7 @@ export function useToast() {
 }
 
 // Export a default toast function for backward compatibility
-export const toast = ({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {
+export const toast = ({ title: _title, description: _description, variant: _variant = 'default', duration: _duration = 5000 }: Omit<Toast, 'id'>) => {
   // In a real implementation, this would dispatch to a global toast system
-  console.log('Toast:', { title, description, variant, duration });
+  // console.log('Toast:', { title: _title, description: _description, variant: _variant, duration: _duration });
 };

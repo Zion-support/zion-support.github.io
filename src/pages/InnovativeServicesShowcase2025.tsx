@@ -26,7 +26,7 @@ import {
   Clock,
   Target
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from '../data/advancedMicroSaasServices2025';
 import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { CheckCircle2, GitBranch, DollarSign, ExternalLink, Phone, Mail } from 'lucide-react';
 
 const DeveloperProductivityCopilot: React.FC = () => {

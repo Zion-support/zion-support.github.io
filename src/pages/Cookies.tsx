@@ -12,7 +12,7 @@ import {
   Target,
   ExternalLink
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 interface CookieType {
   id: string;
