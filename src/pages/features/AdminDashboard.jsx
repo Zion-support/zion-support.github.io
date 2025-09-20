@@ -6,23 +6,26 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 export default function AdminDashboard() {
-    const schema = {
+  const const schema = {
+  = {
         "@context": "https: //schema.org";
-        "@type": "WebPage",
-        "name": "Admin Dashboard",
-        "description": "Monitor marketplace activity, manage listings and view analytics in one place.",
+        "@type": "WebPage";
+        "name": "Admin Dashboard";
+        "description": "Monitor marketplace activity, manage listings and view analytics in one place.";
         "url": "https: //app.ziontechgroup.com/features/admin-dashboard"
-    };
+};
     return (<>
       <SEO title="Admin Dashboard" description="Gain insight into your marketplace with powerful administration tools." keywords="admin dashboard, analytics, manage listings" canonical="https://app.ziontechgroup.com/features/admin-dashboard"/>
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
+      {{/* Use a normal script tag so JSON-LD is correctly parsed */},
+  };
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) },
+  }></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
           <GradientHeading className="mb-4 text-center">Admin Dashboard</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Visualize user activity, manage orders and keep your marketplace running smoothly.
+            Visualize user activity, manage orders and keep your marketplace running smoothly.;
           </p>
           <img loading="lazy" src="https: //placehold.co/800x400" alt="Screenshot of admin dashboard" className="rounded-lg shadow-xl mx-auto mb-12"/>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
@@ -50,5 +53,4 @@ export default function AdminDashboard() {
         </div>
       </main>
       <Footer />
-    </>);
-}
+    </>)

@@ -3,18 +3,19 @@ const RevolutionaryTechBlog2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */};
+        {{/* Hero Section */},
+  };
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            📰 REVOLUTIONARY INSIGHTS • JANUARY 2025
+            📰 REVOLUTIONARY INSIGHTS • JANUARY 2025;
           </div>
           <h1 className="text-6xl font-bold mb-6">Revolutionary Tech Blog 2025</h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Stay ahead of the curve with the latest insights, breakthroughs, and innovations in cutting-edge technology
+            Stay ahead of the curve with the latest insights, breakthroughs, and innovations in cutting-edge technology;
           </p>
         </div>
 
-        {/* Featured Articles */},
+        {/* Featured Articles */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold mb-8 text-center">Featured Articles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -59,7 +60,8 @@ const RevolutionaryTechBlog2025: React.FC = () => {
           </div>
         </div>
 
-        {/* Latest Articles */};
+        {{/* Latest Articles */},
+  };
         <div className="mb-16">
           <h2 className="text-4xl font-bold mb-8 text-center">Latest Articles</h2>
           <div className="space-y-8">
@@ -131,7 +133,8 @@ const RevolutionaryTechBlog2025: React.FC = () => {
           </div>
         </div>
 
-        {/* Technology Categories */};
+        {{/* Technology Categories */},
+  };
         <div className="mb-16">
           <h2 className="text-4xl font-bold mb-8 text-center">Technology Categories</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -141,21 +144,21 @@ const RevolutionaryTechBlog2025: React.FC = () => {
               <p className="text-sm text-gray-300 mb-4">Latest AI breakthroughs and applications</p>
               <button className="text-purple-400 hover:text-purple-300 font-semibold">Explore AI →</button>
             </div>
-            
+            ;
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-lg p-6 text-center hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-bold mb-2">Quantum Computing</h3>
               <p className="text-sm text-gray-300 mb-4">Quantum technology and applications</p>
               <button className="text-cyan-400 hover:text-cyan-300 font-semibold">Explore Quantum →</button>
             </div>
-            
+            ;
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-lg p-6 text-center hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-4">🧬</div>
               <h3 className="text-xl font-bold mb-2">Neural Interfaces</h3>
               <p className="text-sm text-gray-300 mb-4">Brain-computer interface technology</p>
               <button className="text-emerald-400 hover:text-emerald-300 font-semibold">Explore Neural →</button>
             </div>
-            
+            ;
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-lg p-6 text-center hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-bold mb-2">Future Tech</h3>
@@ -165,47 +168,50 @@ const RevolutionaryTechBlog2025: React.FC = () => {
           </div>
         </div>
 
-        {/* Newsletter Signup */}
+        {{/* Newsletter Signup */},
+  };
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Stay Updated with Latest Tech Insights</h2>
             <p className="text-xl mb-8 opacity-90">Get the latest articles, breakthroughs, and technology insights delivered to your inbox</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              <input ;
+                type="email" ;
+                placeholder="Enter your email" ;
+                className="className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500";"
               />
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-bold hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
-                Subscribe
+                Subscribe;
               </button>
             </div>
           </div>
         </div>
 
-        {/* Popular Tags */};
+        {{/* Popular Tags */},
+  };
         <div className="mb-16">
           <h2 className="text-4xl font-bold mb-8 text-center">Popular Tags</h2>
           <div className="flex flex-wrap gap-4 justify-center">
             {['AIQuantum Computing', 'Neural InterfacesMachine Learning', 'BlockchainIoT', 'Edge Computing5G', 'AR/VRRobotics', 'CybersecurityCloud Computing'].map((tag) => (
-              <span key={tag} className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold hover: bg-white/20 transition-all duration-300 cursor-pointer">
-                #{tag};
+  <span key={tag} className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold hover: bg-white/20 transition-all duration-300 cursor-pointer">
+                #{{tag},
+  };
               </span>
             ))}
           </div>
         </div>
 
-        {/* Call to Action */},
+        {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold mb-4">Ready to Explore the Future?</h2>
             <p className="text-xl mb-8 opacity-90">Join our community of tech enthusiasts and stay ahead of the innovation curve</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold hover:bg-purple-50 transition-colors">
-                Browse All Articles
+                Browse All Articles;
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-colors">
-                Follow Us
+                Follow Us;
               </button>
             </div>
           </div>

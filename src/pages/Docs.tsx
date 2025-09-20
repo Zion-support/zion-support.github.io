@@ -9,6 +9,6 @@ export default function Docs() {
         <p className="text-lg text-gray-300">Developer guides and API documentation coming soon.</p>
       </div>
     </div>
-  );
-}
+  )
+};
 

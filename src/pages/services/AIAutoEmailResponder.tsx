@@ -3,18 +3,18 @@ import SEO from "@/components/SEO";
 export default function AIAutoEmailResponder() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
-      <SEO
-        title="AI Auto Email Responder | Zion Tech Group"
-        description="Automate customer email replies with secure AI, sentiment detection, intent routing, and CRM logging."
+      <SEO;
+        title="AI Auto Email Responder | Zion Tech Group";
+        description="Automate customer email replies with secure AI, sentiment detection, intent routing, and CRM logging.";
       />
       <section className="container-responsive py-16">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-          AI Auto Email Responder
+          AI Auto Email Responder;
         </h1>
         <p className="text-zion-slate-light max-w-3xl">
           Reduce response times and improve CSAT with an AI responder that drafts context-aware replies;
-          classifies priority, detects sentiment, and logs to your CRM. Privacy-first deployment options
-          (VPC, data redaction, PII filtering) and human-in-the-loop approvals included.
+          classifies priority, detects sentiment, and logs to your CRM. Privacy-first deployment options;
+          (VPC, data redaction, PII filtering) and human-in-the-loop approvals included.;
         </p>
 
         <div className="grid gap-8 md:grid-cols-2 mt-10">
@@ -37,8 +37,8 @@ export default function AIAutoEmailResponder() {
               <li>• Enterprise: Custom SSO, VPC, SLAs</li>
             </ul>
             <p className="mt-4 text-xs text-zion-slate-light">
-              References: <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://openai.com/pricing" target="_blank" rel="noreferrer">OpenAI pricing</a>;
-              <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://workspace.google.com/pricing" target="_blank" rel="noreferrer">Google Workspace</a>;
+              References: <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://openai.com/pricing" target="_blank" rel="noreferrer">OpenAI pricing</a>
+              <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://workspace.google.com/pricing" target="_blank" rel="noreferrer">Google Workspace</a>
               <a className="text-cyan-400 hover: text-cyan-300 ml-2" href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noreferrer">AWS Bedrock</a>
             </p>
           </div>
@@ -61,5 +61,5 @@ export default function AIAutoEmailResponder() {
       </section>
     </div>
   )
-}
+};
 

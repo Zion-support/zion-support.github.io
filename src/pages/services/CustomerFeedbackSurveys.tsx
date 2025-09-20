@@ -3,17 +3,17 @@ import SEO from "@/components/SEO";
 export default function CustomerFeedbackSurveys() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
-      <SEO
-        title="Mobile-First Customer Feedback Surveys | Zion Tech Group"
-        description="Create branded, mobile-friendly surveys with AI insights, NPS, CSAT, churn predictors, and real-time dashboards."
+      <SEO;
+        title="Mobile-First Customer Feedback Surveys | Zion Tech Group";
+        description="Create branded, mobile-friendly surveys with AI insights, NPS, CSAT, churn predictors, and real-time dashboards.";
       />
       <section className="container-responsive py-16">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-          Mobile-First Feedback Surveys
+          Mobile-First Feedback Surveys;
         </h1>
         <p className="text-zion-slate-light max-w-3xl">
-          Launch engaging surveys across web, SMS, and email with real-time dashboards.
-          AI highlights themes, predicts churn risk, and recommends actions.
+          Launch engaging surveys across web, SMS, and email with real-time dashboards.;
+          AI highlights themes, predicts churn risk, and recommends actions.;
         </p>
 
         <div className="grid gap-8 md:grid-cols-2 mt-10">
@@ -35,8 +35,8 @@ export default function CustomerFeedbackSurveys() {
               <li>• Enterprise: SSO, DPA, custom SLAs</li>
             </ul>
             <p className="mt-4 text-xs text-zion-slate-light">
-              References:
-              <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://www.typeform.com/pricing/" target="_blank" rel="noreferrer">Typeform pricing</a>;
+              References:;
+              <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://www.typeform.com/pricing/" target="_blank" rel="noreferrer">Typeform pricing</a>
               <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://www.surveymonkey.com/pricing/" target="_blank" rel="noreferrer">SurveyMonkey pricing</a>
             </p>
           </div>
@@ -50,5 +50,5 @@ export default function CustomerFeedbackSurveys() {
       </section>
     </div>
   )
-}
+};
 

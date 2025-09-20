@@ -3,17 +3,17 @@ import SEO from "@/components/SEO";
 export default function LLMContentStudio() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
-      <SEO
-        title="LLM Content Studio | Zion Tech Group"
-        description="Plan, generate, and distribute on-brand content with AI. Multichannel support, approvals, and analytics."
+      <SEO;
+        title="LLM Content Studio | Zion Tech Group";
+        description="Plan, generate, and distribute on-brand content with AI. Multichannel support, approvals, and analytics.";
       />
       <section className="container-responsive py-16">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-          LLM Content Studio
+          LLM Content Studio;
         </h1>
         <p className="text-zion-slate-light max-w-3xl">
-          A collaborative content workspace with AI-assisted briefs, long-form drafting, SEO optimization, and
-          brand style guardrails. Publish to blog, email, LinkedIn, and X with one click.
+          A collaborative content workspace with AI-assisted briefs, long-form drafting, SEO optimization, and;
+          brand style guardrails. Publish to blog, email, LinkedIn, and X with one click.;
         </p>
 
         <div className="grid gap-8 md:grid-cols-2 mt-10">
@@ -41,5 +41,5 @@ export default function LLMContentStudio() {
       </section>
     </div>
   )
-}
+};
 

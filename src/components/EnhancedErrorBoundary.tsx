@@ -1,9 +1,10 @@
 import React, { Component, ErrorInfo, ReactNode } from "react";
+
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
+};
 
 interface State {
   hasError: boolean,
@@ -15,13 +16,13 @@ interface State {
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-      this.state = { 
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        errorId: null
-      };
-  }
+    this.state = { 
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null
+    };
+  };
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return { 
@@ -29,7 +30,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
-  }
+  };
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
@@ -50,9 +51,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // In production, you might want to send this to an error reporting service
     if (process.env.NODE_ENV === 'production') {
       // Example: Send to error reporting service
-      // errorReportingService.captureException(error, { extra: errorInfo });
+      // errorReportingService.captureException(error, { extra: errorInfo })
     }
-  }
+  };
 
   handleRetry = () => {
     this.setState({

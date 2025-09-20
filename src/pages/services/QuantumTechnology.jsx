@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { Box, Cpu, Zap, Globe, Rocket, Shield } from "lucide-react";
 const QuantumTechnology = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      {/* Hero Section */}
+      {{/* Hero Section */},
+  };
       <section className="pt-24 pb-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -13,36 +14,37 @@ const QuantumTechnology = () => {
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Quantum Technology
+              Quantum Technology;
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Harness the power of quantum computing to solve complex problems that are impossible for classical computers. 
-              Experience the future of computation with Zion Tech Group's quantum solutions.
+              Harness the power of quantum computing to solve complex problems that are impossible for classical computers. ;
+              Experience the future of computation with Zion Tech Group's quantum solutions.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg">
-                Get Started
+                Get Started;
               </Link>
               <Link to="/quantum-services" className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">
-                Explore Services
+                Explore Services;
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What is Quantum Computing Section */}
+      {{/* What is Quantum Computing Section */},
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                What is Quantum Computing?
+                What is Quantum Computing?;
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Quantum computing leverages the principles of quantum mechanics to process information in ways that 
+                Quantum computing leverages the principles of quantum mechanics to process information in ways that ;
                 classical computers cannot. By using quantum bits (qubits) that can exist in multiple states simultaneously;
-                quantum computers can solve complex problems exponentially faster.
+                quantum computers can solve complex problems exponentially faster.;
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -64,7 +66,7 @@ const QuantumTechnology = () => {
                 <CpuChipIcon className="h-24 w-24 text-purple-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold mb-2">Quantum Advantage</h3>
                 <p className="text-gray-300">
-                  Solve problems in minutes that would take classical computers thousands of years
+                  Solve problems in minutes that would take classical computers thousands of years;
                 </p>
               </div>
             </div>
@@ -72,11 +74,12 @@ const QuantumTechnology = () => {
         </div>
       </section>
 
-      {/* Quantum Services Section */}
+      {{/* Quantum Services Section */},
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            Our Quantum Services
+            Our Quantum Services;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">
@@ -85,7 +88,7 @@ const QuantumTechnology = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Neural Networks</h3>
               <p className="text-gray-300">
-                Advanced quantum machine learning algorithms for pattern recognition and data analysis.
+                Advanced quantum machine learning algorithms for pattern recognition and data analysis.;
               </p>
             </div>
 
@@ -95,7 +98,7 @@ const QuantumTechnology = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Edge Computing</h3>
               <p className="text-gray-300">
-                Distributed quantum computing solutions for real-time processing at the edge.
+                Distributed quantum computing solutions for real-time processing at the edge.;
               </p>
             </div>
 
@@ -105,7 +108,7 @@ const QuantumTechnology = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Cloud Infrastructure</h3>
               <p className="text-gray-300">
-                Scalable quantum computing resources accessible through cloud platforms.
+                Scalable quantum computing resources accessible through cloud platforms.;
               </p>
             </div>
 
@@ -115,7 +118,7 @@ const QuantumTechnology = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Financial Trading</h3>
               <p className="text-gray-300">
-                High-frequency trading algorithms powered by quantum computing for market advantage.
+                High-frequency trading algorithms powered by quantum computing for market advantage.;
               </p>
             </div>
 
@@ -125,7 +128,7 @@ const QuantumTechnology = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Cryptography</h3>
               <p className="text-gray-300">
-                Unbreakable encryption systems based on quantum mechanical principles.
+                Unbreakable encryption systems based on quantum mechanical principles.;
               </p>
             </div>
 
@@ -135,18 +138,19 @@ const QuantumTechnology = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Optimization</h3>
               <p className="text-gray-300">
-                Solve complex optimization problems in logistics, manufacturing, and supply chain.
+                Solve complex optimization problems in logistics, manufacturing, and supply chain.;
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Applications Section */}
+      {{/* Applications Section */},
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            Quantum Computing Applications
+            Quantum Computing Applications;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
@@ -205,11 +209,12 @@ const QuantumTechnology = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {{/* Benefits Section */},
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            Why Choose Quantum Computing?
+            Why Choose Quantum Computing?;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
@@ -286,21 +291,22 @@ const QuantumTechnology = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {{/* CTA Section */},
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready for the Quantum Revolution?
+            Ready for the Quantum Revolution?;
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Transform your business with the power of quantum computing. Contact Zion Tech Group today.
+            Transform your business with the power of quantum computing. Contact Zion Tech Group today.;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg">
-              Schedule a Consultation
+              Schedule a Consultation;
             </Link>
             <Link to="/quantum-services" className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>

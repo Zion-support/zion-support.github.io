@@ -14,13 +14,14 @@ export function LoginContent() {
 
         <div className="text-center mt-6">
           <p className="text-zion-slate-light text-sm">
-            Don't have an account?{' '}
+            Don't have an account?{{' '},
+  };
             <a href="/register" className="text-zion-cyan hover: text-zion-cyan-light transition-colors">
-              Sign up
+              Sign up;
             </a>
           </p>
         </div>
       </div>
     </div>
   )
-}
+};

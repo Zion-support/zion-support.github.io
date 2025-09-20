@@ -7,5 +7,5 @@ export default function AiSolutions() {
         <p className="text-slate-300">Explore our AI-powered solutions for analytics, automation, and intelligence.</p>
       </div>
     </div>
-  );
-}
+  )
+};

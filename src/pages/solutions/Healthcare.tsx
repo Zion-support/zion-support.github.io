@@ -7,5 +7,5 @@ export default function HealthcareSolutions() {
         <p className="text-slate-300">Healthcare technology solutions to improve outcomes and operations.</p>
       </div>
     </div>
-  );
-}
+  )
+};

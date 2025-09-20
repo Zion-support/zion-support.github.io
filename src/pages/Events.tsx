@@ -9,6 +9,6 @@ export default function Events() {
         <p className="text-lg text-gray-300">Stay tuned for our upcoming webinars, workshops, and conferences.</p>
       </div>
     </div>
-  );
-}
+  )
+};
 
