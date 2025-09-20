@@ -11,8 +11,8 @@ export default function QuantumComputingBusinessApplicationsPage() {
   return (
     <div>
       <SEO
-        title="[^"]*"
-        description="[^"]*"
+        title="Quantum Computing Business Applications 2025: The Ultimate Breakthrough Guide"
+        description="Discover how quantum computing is revolutionizing business operations in 2025. Real-world applications, case studies, and implementation strategies for enterprise success."
         keywords="quantum computing, business applications, AI, innovation, technology, 2025"
         url="/blog/quantum-computing-business-applications-2025-breakthrough"
       />

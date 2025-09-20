@@ -1,12 +1,12 @@
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeftIcon; CalendarIcon, ClockIcon, UserIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline',
+import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline'
 export const metadata: Metadata = {
   title: 'AI 2025 Ultimate Transformation: 50,000% ROI Success Story',
   description: 'Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.',
   keywords: ['AI TransformationManufacturingFortune 10050K ROI', 'Autonomous Operations'],
-  openGraph: {,
+  openGraph: {
     title: 'AI 2025 Ultimate Transformation: 50,000% ROI Success Story',
     description: 'Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.',
     type: 'article',
