@@ -136,9 +136,7 @@ export default function AI2025UltimateBusinessTransformationPage() {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-=======
+        </section>
         </section>
         {/* ROI Statistics */}
         <section className="py-16">
@@ -241,7 +239,6 @@ export default function AI2025UltimateBusinessTransformationPage() {
             </div>
           </div>
         </section>
->>>>>>> f91626f645ba58b80fd0e8b85c20ebd8ff0e9307
       </div>
     </div>
   )

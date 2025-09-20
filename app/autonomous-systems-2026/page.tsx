@@ -7,25 +7,16 @@ export const metadata: Metadata = {
   title: 'Autonomous Systems 2026 - Revolutionary Self-Managing Business Operations',
   description: 'Discover the future of autonomous business systems. Self-managing operations, zero-touch processes, and intelligent automation that will revolutionize enterprise operations in 2026.',
   keywords: ['autonomous systems', 'business automation', 'self-managing operations', 'zero-touch processes', 'intelligent automation', 'enterprise operations']
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> f91626f645ba58b80fd0e8b85c20ebd8ff0e9307
 
 export default function AutonomousSystems2026Page() {
   return (
     <div>
       <SEO
-<<<<<<< HEAD
         title="Autonomous Systems 2026 - Revolutionary Self-Managing Business Operations"
         description="Discover the future of autonomous business systems. Self-managing operations, zero-touch processes, and intelligent automation that will revolutionize enterprise operations in 2026."
         keywords="autonomous systems, business automation, self-managing operations, zero-touch processes, intelligent automation, enterprise operations"
         url="/autonomous-systems-2026"
-=======
-        title="Autonomous Systems 2026 - Zion Holdings"
-        description="Next-generation autonomous systems for 2026"
->>>>>>> f91626f645ba58b80fd0e8b85c20ebd8ff0e9307
       />
       <div className="min-h-screen bg-gray-900 text-white">
         <div className="container mx-auto px-4 py-20">
