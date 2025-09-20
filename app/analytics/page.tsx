@@ -1,99 +1,99 @@
-import React from 'react',
-import Link from 'next/link',
-import SEO from '../../components/SEO',
-export const metadata = {,
+import React from 'react'
+import Link from 'next/link'
+import SEO from '../../components/SEO';
+export const metadata = {
   title: 'Analytics Revolution 2025 - Advanced Data Analytics | Zion Tech Group',
   description: 'Transform your data into actionable insights with our advanced analytics solutions. Real-time processing, predictive intelligence, and AI-powered analytics.',
   keywords: ['analyticsdata analyticsbusiness intelligencepredictive analytics', 'real-time analytics']
-},
-export default function AnalyticsPage() {,
-  return (,
-    <div className="min-h-screen bg-white">,
-      <SEO,
-        title="Analytics Revolution 2025 - Advanced Data Analytics",
-        description="Transform your data into actionable insights with our advanced analytics solutions. Real-time processing, predictive intelligence, and AI-powered analytics.",
-        keywords="analytics, data analytics, business intelligence, predictive analytics, real-time analytics",
-        url="/analytics",
-      />,
+}
+export default function AnalyticsPage() {
+  return (
+    <div>
+      <SEO
+        title="[^"]*"
+        description="[^"]*"
+        keywords="analytics, data analytics, business intelligence, predictive analytics, real-time analytics"
+        url="/analytics"
+      />
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-20">,
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">,
+      <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-20">
+        <div>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Analytics Revolution 2025,
-          </h1>,
-          <p className="text-xl md:text-2xl opacity-90 mb-8">,
+          </h1>
+          <p>
             Transform your data into powerful insights with AI-powered analytics, real-time processing,
             and predictive intelligence that drives business success.,
-          </p>,
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">,
+          </p>
+          <div>
             <Link,
               href="/analytics/demo",
-              className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
-            >,
+              className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
               Try Analytics Demo,
-            </Link>,
+            </Link>
             <Link,
               href="/analytics/consultation",
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors",
-            >,
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+            >
               Get Free Consultation,
-            </Link>,
-          </div>,
-        </div>,
-      </section>,
+            </Link>
+          </div>
+        </div>
+      </section>
       {/* Features Grid */}
-      <section className="py-16">,
-        <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Analytics Solutions</h2>,
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
-            <div className="bg-white p-8 rounded-xl shadow-lg">,
-              <div className="text-4xl mb-4">📊</div>,
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Real-Time Analytics</h3>,
-              <p className="text-gray-600 mb-4">,
+      <section className="py-16">
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Analytics Solutions</h2>
+          <div>
+            <div>
+              <div className="text-4xl mb-4">📊</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Real-Time Analytics</h3>
+              <p>
                 Process and analyze data streams in real-time with sub-millisecond latency for instant insights.,
-              </p>,
-              <Link href="/analytics/real-time" className="text-indigo-600 font-semibold hover:text-indigo-800">,
+              </p>
+              <Link href="/analytics/real-time" className="text-indigo-600 font-semibold hover:text-indigo-800">
                 Learn More →,
-              </Link>,
-            </div>,
-            <div className="bg-white p-8 rounded-xl shadow-lg">,
-              <div className="text-4xl mb-4">🔮</div>,
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Predictive Intelligence</h3>,
-              <p className="text-gray-600 mb-4">,
+              </Link>
+            </div>
+            <div>
+              <div className="text-4xl mb-4">🔮</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Predictive Intelligence</h3>
+              <p>
                 Advanced machine learning models that predict trends and outcomes with 95%+ accuracy.,
-              </p>,
-              <Link href="/analytics/predictive" className="text-indigo-600 font-semibold hover:text-indigo-800">,
+              </p>
+              <Link href="/analytics/predictive" className="text-indigo-600 font-semibold hover:text-indigo-800">
                 Learn More →,
-              </Link>,
-            </div>,
-            <div className="bg-white p-8 rounded-xl shadow-lg">,
-              <div className="text-4xl mb-4">⚡</div>,
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Automated Insights</h3>,
-              <p className="text-gray-600 mb-4">,
+              </Link>
+            </div>
+            <div>
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Automated Insights</h3>
+              <p>
                 AI automatically generates actionable insights and recommendations from your data.,
-              </p>,
-              <Link href="/analytics/automated" className="text-indigo-600 font-semibold hover:text-indigo-800">,
+              </p>
+              <Link href="/analytics/automated" className="text-indigo-600 font-semibold hover:text-indigo-800">
                 Learn More →,
-              </Link>,
-            </div>,
-          </div>,
-        </div>,
-      </section>,
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* CTA Section */}
-      <section className="bg-gray-50 py-16">,
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">,
+      <section className="bg-gray-50 py-16">
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Ready to Revolutionize Your Analytics?,
-          </h2>,
-          <p className="text-xl text-gray-600 mb-8">,
+          </h2>
+          <p>
             Join 500+ companies that have transformed their data strategy with our analytics solutions.,
-          </p>,
+          </p>
           <Link,
             href="/contact",
-            className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors",
-          >,
+            className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+          >
             Start Your Analytics Journey,
-          </Link>,
-        </div>,
-      </section>,
+          </Link>
+        </div>
+      </section>
     </div>)}

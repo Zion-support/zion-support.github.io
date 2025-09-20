@@ -1,4 +1,4 @@
-import React from 'react',
-    </div>,
-  ),
-},
+import React from 'react'
+    </div>
+  )
+}

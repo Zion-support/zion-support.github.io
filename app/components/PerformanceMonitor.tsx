@@ -1,69 +1,66 @@
 'use client',
-import { useEffect, useState } from 'react',
+import { useEffect; useState } from 'react',
 interface PerformanceMetrics {,
   fcp: number | null,
   lcp: number | null,
   fid: number | null,
   cls: number | null,
   ttfb: number | null}
-,
-export default function PerformanceMonitor() {,
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({,
+export default function PerformanceMonitor() {
+  const [metrics; setMetrics] = useState<PerformanceMetrics>({,
     fcp: null,
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null}),
+    ttfb: null})
   useEffect(() => {,
     if (typeof window === 'undefined') return,
     // Only run in development,
     if (process.env.NODE_ENV !== 'development') return,
-    const observer = new PerformanceObserver((list) => {,
-      for (const entry of list.getEntries()) {,
-        const metric = entry as PerformanceEntry & { value?: number },
+    const observer = new PerformanceObserver((list) => {;
+      for (const entry of list.getEntries()) {;
+        const metric = entry as PerformanceEntry & { value?: number };
         switch (entry.name) {,
           case 'first-contentful-paint':,
-            setMetrics(prev => ({ ...prev, fcp: metric.value || null })),
+            setMetrics(prev => ({ ...prev, fcp: metric.value || null }))
             break,
           case 'largest-contentful-paint':,
-            setMetrics(prev => ({ ...prev, lcp: metric.value || null })),
+            setMetrics(prev => ({ ...prev, lcp: metric.value || null }))
             break,
           case 'first-input-delay':,
-            setMetrics(prev => ({ ...prev, fid: metric.value || null })),
+            setMetrics(prev => ({ ...prev, fid: metric.value || null }))
             break,
           case 'cumulative-layout-shift':,
-            setMetrics(prev => ({ ...prev, cls: metric.value || null })),
+            setMetrics(prev => ({ ...prev, cls: metric.value || null }))
             break,
         }
       }
-    }),
+    })
     // Observe Core Web Vitals,
     try {,
-      observer.observe({ entryTypes: ['paintlargest-contentful-paintfirst-inputlayout-shift'] }),
+      observer.observe({ entryTypes: ['paintlargest-contentful-paintfirst-inputlayout-shift'] })
     } catch (e) {,
-      console.warn('Performance Observer not supported'),
+      console.warn('Performance Observer not supported')
     }
-,
     // Measure TTFB,
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {,
       setMetrics(prev => ({,
         ...prev,
-        ttfb: navigationEntry.responseStart - navigationEntry.requestStart})),
+        ttfb: navigationEntry.responseStart - navigationEntry.requestStart}))
     }
-,
-    return () => observer.disconnect(),
-  }, []),
+    return () => observer.disconnect();
+  }, [])
   // Only show in development,
-  if (process.env.NODE_ENV !== 'development') return null,
-  return (,
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-3 rounded-lg text-xs font-mono z-50">,
-      <div className="font-bold mb-2">Performance Metrics</div>,
-      <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>,
-      <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>,
-      <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>,
-      <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>,
-      <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>,
-    </div>,
-  ),
+  if (process.env.NODE_ENV !== 'development') return null;
+  return (
+    <div>
+      <div className="font-bold mb-2">Performance Metrics</div>
+      <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
+      <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
+      <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
+      <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
+      <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
+    </div>
+  )
 }

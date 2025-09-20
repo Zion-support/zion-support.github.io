@@ -1,11 +1,11 @@
-import React from "react",
-import { Metadata } from 'next',
+import React from "react";
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'AI Social Media Scheduler | Zion Tech Group',
   description: 'Intelligent social media management with optimal posting times and content suggestions. Maximize engagement across all platforms.',
   keywords: 'social media scheduler, AI social media, content scheduling, social media automation, engagement optimization'
-},
+}
 
 export default function ServicePage() {
   return (

@@ -1,6 +1,6 @@
 'use client',
-import { useState, useRef, useEffect } from 'react',
-import Image from 'next/image',
+import { useState; useRef, useEffect } from 'react',
+import Image from 'next/image';
 interface LazyImageProps {,
   src: string,
   alt: string,
@@ -11,39 +11,37 @@ interface LazyImageProps {,
   placeholder?: 'blur' | 'empty',
   blurDataURL?: string
 }
-,
-export default function LazyImage({,
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
-  placeholder = 'empty',
+export default function LazyImage({;
+  src
+  alt
+  width
+  height
+  className = ''
+  priority = false
+  placeholder = 'empty'
   blurDataURL
-}: LazyImageProps) {,
-  const [isLoaded, setIsLoaded] = useState(false),
-  const [isInView, setIsInView] = useState(priority),
-  const imgRef = useRef<HTMLDivElement>(null),
+}: LazyImageProps) {
+  const [isLoaded; setIsLoaded] = useState(false)
+  const [isInView; setIsInView] = useState(priority)
+  const imgRef = useRef<HTMLDivElement>(null);
   useEffect(() => {,
     if (priority) return,
-    const observer = new IntersectionObserver(,
+    const observer = new IntersectionObserver(;
       ([entry]) => {,
         if (entry.isIntersecting) {,
-          setIsInView(true),
-          observer.disconnect(),
+          setIsInView(true)
+          observer.disconnect()
         }
-      },
+      }
       { threshold: 0.1 }
-    ),
+    )
     if (imgRef.current) {,
-      observer.observe(imgRef.current),
+      observer.observe(imgRef.current)
     }
-,
-    return () => observer.disconnect(),
-  }, [priority]),
-  return (,
-    <div ref={imgRef} className={`relative ${className}`}>,
+    return () => observer.disconnect();
+  }, [priority])
+  return (
+    <div>
       {isInView ? (,
         <Image,
           src={src}
@@ -59,10 +57,10 @@ export default function LazyImage({,
           }`}
         />,
       ) : (,
-        <div,
-          className="bg-gray-200 animate-pulse",
+        <div
+          className="bg-gray-200 animate-pulse"
           style={{ width, height }}
         />)}
-    </div>,
-  ),
+    </div>
+  )
 }

@@ -1,40 +1,39 @@
-import Link from 'next/link',
-import React from 'react',
-export const metadata = {,
+import Link from 'next/link'
+import React from 'react'
+export const metadata = {
   title: 'AI 2026: Responsible AI Operations Blueprint',
   description: 'A pragmatic blueprint to operationalize responsible AI with policy-as-code, evals, incident response, and governance that scales.'
-},
-export default function ResponsibleAIOpsBlueprintPage() {,
-  return (,
-    <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
-      <p className="text-sm font-semibold text-purple-700 mb-3">Blueprint • September 2025</p>,
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Responsible AI Operations Blueprint</h1>,
-      <p className="text-gray-700 mb-8">,
+}
+export default function ResponsibleAIOpsBlueprintPage() {
+  return (
+    <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
+      <p className="text-sm font-semibold text-purple-700 mb-3">Blueprint • September 2025</p>
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Responsible AI Operations Blueprint</h1>
+      <p>
         Ship AI with confidence using an evaluation-first operating model, embedded guardrails, and,
         continuous monitoring. This blueprint shows how to implement policy-as-code, risk tiers, red-team,
         workflows, incident response, and governance that scales across distributed teams.,
-      </p>,
-      <section className="prose prose-lg max-w-none">,
-        <h2>What you will learn</h2>,
-        <ul>,
-          <li>Designing risk tiers and review paths for different AI use cases</li>,
-          <li>Defining policy-as-code controls enforced in CI, staging, and prod</li>,
-          <li>Building robust eval harnesses and regression suites</li>,
-          <li>Setting up real-time telemetry, SLOs, and incident playbooks</li>,
-        </ul>,
-        <h2>Key outcomes</h2>,
-        <ul>,
-          <li>99.9% reliability across critical flows</li>,
-          <li>Up to 67% faster release cycles with guardrails baked in</li>,
-          <li>Measurable risk reduction with transparent governance</li>,
-        </ul>,
-        <h2>Next steps</h2>,
-        <p>,
+      </p>
+      <section className="prose prose-lg max-w-none">
+        <h2>What you will learn</h2>
+        <ul>
+          <li>Designing risk tiers and review paths for different AI use cases</li>
+          <li>Defining policy-as-code controls enforced in CI, staging, and prod</li>
+          <li>Building robust eval harnesses and regression suites</li>
+          <li>Setting up real-time telemetry, SLOs, and incident playbooks</li>
+        </ul>
+        <h2>Key outcomes</h2>
+        <ul>
+          <li>99.9% reliability across critical flows</li>
+          <li>Up to 67% faster release cycles with guardrails baked in</li>
+          <li>Measurable risk reduction with transparent governance</li>
+        </ul>
+        <h2>Next steps</h2>
+        <p>
           Looking to operationalize this framework in your environment? Explore our,
-          {' '}<Link href="/services/ai-automation" className="text-purple-600 font-semibold">AI Automation services</Link>,
+          {' '}<Link href="/services/ai-automation" className="text-purple-600 font-semibold">AI Automation services</Link>
           {' '}or <Link href="/contact" className="text-purple-600 font-semibold">contact us</Link> for a tailored assessment.,
-        </p>,
-      </section>,
-    </main>),
+        </p>
+      </section>
+    </main>)
 }
-,

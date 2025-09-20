@@ -1,11 +1,11 @@
-import Link from 'next/link',
-import React from 'react',
+import Link from 'next/link'
+import React from 'react'
 
 export const metadata = {
   title: 'Executive AI Security Playbook (2026)',
   description:
     'Board‑ready controls: policy‑as‑code, eval gates, runtime guardrails, and audit evidence to ship safely at scale.'
-},
+}
 
 export default function ExecutiveAISecurityPlaybookPage() {
   return (
@@ -76,14 +76,14 @@ gates:
   )
 }
 
-import Link from 'next/link',
-import React from 'react',
+import Link from 'next/link'
+import React from 'react'
 
 export const metadata = {
 	title: 'AI 2026: Executive AI Security Playbook',
 	description:
 		'Practical, board-ready playbook for securing AI systems: policy-as-code, eval-gated releases, and evidence-driven assurance.'
-},
+}
 
 export default function Page() {
 	return (
