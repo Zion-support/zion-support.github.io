@@ -14,6 +14,12 @@ import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { Header } from "./components/Header";
+import { Sidebar } from "./components/Sidebar";
+import { Footer } from "./components/Footer";
+>>>>>>> origin/zion-enhancements-v4
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { ScrollToTop } from "./components/ui/ScrollToTop";
@@ -24,6 +30,7 @@ import { Sonner } from "./components/Sonner";
 import { Sidebar } from "./components/Sidebar";
 >>>>>>> origin/zion-enhancements-v5
 
+<<<<<<< HEAD
 const Home = React.lazy(() => import('./pages/Home'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
@@ -55,6 +62,13 @@ const PrivacyPage = React.lazy(() => import('./pages/Privacy'));
 const TermsPage = React.lazy(() => import('./pages/Terms'));
 const PricingPage = React.lazy(() => import('./pages/Pricing'));
 >>>>>>> origin/zion-enhancements-v6
+=======
+// Lazy load pages
+const Home = React.lazy(() => import('./pages/Home').then(module => ({ default: module.Home })));
+const Services = React.lazy(() => import('./pages/Services').then(module => ({ default: module.Services })));
+const About = React.lazy(() => import('./pages/About'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+>>>>>>> origin/zion-enhancements-v4
 
 // Lazy load heavy components for better performance
 const VirtualList = lazy(() => import('./components/VirtualList'));
@@ -659,6 +673,7 @@ function App() {
 
   return (
     <ThemeProvider>
+<<<<<<< HEAD
       <div className="App">
         <Suspense fallback={<PageLoader />}>
           <Routes>
@@ -677,6 +692,28 @@ function App() {
         <SonnerToaster />
 <<<<<<< HEAD
       </div>
+=======
+      <WhitelabelProvider>
+        <div className="App">
+          <Header />
+          <Sidebar />
+          <main className="ml-64">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </Suspense>
+          </main>
+          <Footer />
+          <ScrollToTop />
+          <Toaster />
+          <SonnerToaster />
+        </div>
+      </WhitelabelProvider>
+>>>>>>> origin/zion-enhancements-v4
     </ThemeProvider>
 >>>>>>> origin/ziontechgroup-improvements
 =======
