@@ -10,8 +10,8 @@ export default function AgentFleetManagementHandbook2026() {
   return (
     <main className="min-h-screen bg-white">
       <SEO
-        title="[^"]*"
-        description="[^"]*"
+        title="AI 2026: Agent Fleet Management Handbook | Zion Tech Group"
+        description="Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls. Playbooks, SLOs, and governance."
         keywords="agent fleet management, AI ops, guardrails, SLOs, cost controls"
         url="/content/ai-2026-agent-fleet-management-handbook"
       />

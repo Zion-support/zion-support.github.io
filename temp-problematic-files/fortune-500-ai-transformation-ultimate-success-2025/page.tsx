@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Fortune 500 AI Transformation: $2.8B Annual Savings in 18 Months',
   description: 'Real-world case study showing how a Fortune 500 manufacturing company achieved 567% ROI through comprehensive AI implementation.',
   keywords: ['Fortune 500AI transformationcase studyROI', 'manufacturingautomation'],
-  openGraph: {,
+  openGraph: {
     title: 'Fortune 500 AI Transformation: $2.8B Annual Savings in 18 Months',
     description: 'Real-world case study showing how a Fortune 500 manufacturing company achieved 567% ROI through comprehensive AI implementation.',
     type: 'article',

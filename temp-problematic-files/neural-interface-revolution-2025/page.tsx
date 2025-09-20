@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Neural Interface Revolution: Brain-Computer Interfaces in Business | Zion Tech Group',
   description: 'Explore groundbreaking case studies of neural interface implementations in business, from enhanced productivity to accessibility solutions, and discover the future of human-computer interaction.',
   keywords: ['neural interfacesBCIbrain-computer interfaceinnovation', 'future technologyproductivityaccessibility'],
-  openGraph: {,
+  openGraph: {
     title: 'Neural Interface Revolution: Brain-Computer Interfaces in Business',
     description: 'Brain-computer interfaces transforming business operations and productivity',
     type: 'article',
