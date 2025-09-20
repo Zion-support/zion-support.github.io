@@ -81,24 +81,37 @@ class PerformanceMonitor {
 
     const endTime = performance.now();
     const duration = endTime - metric.startTime;
-    
-    this.metrics.set(name, {
-      ...metric,
-      endTime,
-      duration
-    });
+    metric.endTime = endTime;
+    metric.duration = duration;
+    this.logMetric(name, duration);
 
     return duration;
   }
 
   measureFunction<T extends (...args: any[]) => any>(
     name: string,
-    func: T,
-    ...args: Parameters<T>
-  ): ReturnType<T> {
+    func: T
+  ): (...args: Parameters<T>) => ReturnType<T> {
+    return (...args: Parameters<T>): ReturnType<T> => {
+      this.startTiming(name);
+      try {
+        const result = func(...args);
+        this.endTiming(name);
+        return result;
+      } catch (error) {
+        this.endTiming(name);
+        throw error;
+      }
+    };
+  }
+
+  async measureAsync<T>(
+    name: string,
+    asyncFunc: () => Promise<T>
+  ): Promise<T> {
     this.startTiming(name);
     try {
-      const result = func(...args);
+      const result = await asyncFunc();
       this.endTiming(name);
       return result;
     } catch (error) {
@@ -109,10 +122,13 @@ class PerformanceMonitor {
 
   private logMetric(name: string, value: number): void {
     if (typeof window !== "undefined" && "gtag" in window) {
-      (window as any).gtag("event", "performance_metric", {
-        metric_name: name,
-        metric_value: value,
-        event_category: "Performance"
+      // Send to Google Analytics
+      (window as any).gtag("event", "timing_complete", {
+        name: name,
+        value: Math.round(value),
+        custom_map: {
+          metric_category: "performance"
+        }
       });
     }
     
@@ -152,86 +168,59 @@ interface PerformanceMetrics {
 }
 
 class PerformanceAnalyzer {
+  private metrics: PerformanceMetrics = {};
   private thresholds: PerformanceThresholds = {
-    LCP: 2500, // Good: < 2.5s, Needs Improvement: 2.5-4s, Poor: > 4s
-    FID: 100,  // Good: < 100ms, Needs Improvement: 100-300ms, Poor: > 300ms
-    CLS: 0.1,  // Good: < 0.1, Needs Improvement: 0.1-0.25, Poor: > 0.25
-    FCP: 1800, // Good: < 1.8s, Needs Improvement: 1.8-3s, Poor: > 3s
-    TTFB: 800  // Good: < 800ms, Needs Improvement: 800-1800ms, Poor: > 1800ms
+    LCP: 2500, // Good: < 2.5s
+    FID: 100,  // Good: < 100ms
+    CLS: 0.1,  // Good: < 0.1
+    FCP: 1800, // Good: < 1.8s
+    TTFB: 600  // Good: < 600ms
   };
 
-  public getMetrics(): PerformanceMetrics | null {
-    if (typeof window === "undefined" || !window.performance) {
-      return null;
-    }
+  constructor() {
+    this.initializeMetrics();
+  }
 
-    return {
-      LCP: this.getLCP(),
-      FID: this.getFID(),
-      CLS: this.getCLS(),
-      FCP: this.getFCP(),
-      TTFB: this.getTTFB()
-    };
+  private initializeMetrics(): void {
+    if (typeof window !== "undefined" && window.performance) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        this.metrics.TTFB = navigation.responseStart - navigation.requestStart;
+        this.metrics.FCP = navigation.domContentLoadedEventStart - navigation.navigationStart;
+      }
+    }
+  }
+
+  public getMetrics(): PerformanceMetrics | null {
+    return { ...this.metrics };
   }
 
   public checkThresholds(): { [K in keyof PerformanceThresholds]: boolean } {
-    const metrics = this.getMetrics();
-    if (!metrics) {
-      return {} as { [K in keyof PerformanceThresholds]: boolean };
-    }
+    const results = {} as { [K in keyof PerformanceThresholds]: boolean };
+    
+    Object.keys(this.thresholds).forEach(key => {
+      const metricKey = key as keyof PerformanceThresholds;
+      const metricValue = this.metrics[metricKey];
+      if (metricValue !== undefined) {
+        results[metricKey] = metricValue <= this.thresholds[metricKey];
+      }
+    });
 
-    return {
-      LCP: (metrics.LCP ?? Infinity) <= this.thresholds.LCP,
-      FID: (metrics.FID ?? Infinity) <= this.thresholds.FID,
-      CLS: (metrics.CLS ?? Infinity) <= this.thresholds.CLS,
-      FCP: (metrics.FCP ?? Infinity) <= this.thresholds.FCP,
-      TTFB: (metrics.TTFB ?? Infinity) <= this.thresholds.TTFB
-    };
+    return results;
   }
 
   public getPerformanceScore(): number {
     const thresholds = this.checkThresholds();
-    const totalChecks = Object.keys(thresholds).length;
-    const passedChecks = Object.values(thresholds).filter(Boolean).length;
+    const passed = Object.values(thresholds).filter(Boolean).length;
+    const total = Object.keys(thresholds).length;
     
-    return Math.round((passedChecks / totalChecks) * 100);
+    return total > 0 ? Math.round((passed / total) * 100) : 0;
   }
 
   public setThresholds(thresholds: Partial<PerformanceThresholds>): void {
     this.thresholds = { ...this.thresholds, ...thresholds };
   }
-
-  private getLCP(): number | undefined {
-    const entries = performance.getEntriesByType("largest-contentful-paint");
-    return entries.length > 0 ? entries[entries.length - 1].startTime : undefined;
-  }
-
-  private getFID(): number | undefined {
-    const entries = performance.getEntriesByType("first-input");
-    return entries.length > 0 ? entries[0].processingStart - entries[0].startTime : undefined;
-  }
-
-  private getCLS(): number | undefined {
-    // CLS calculation would require more complex logic
-    // This is a simplified version
-    return undefined;
-  }
-
-  private getFCP(): number | undefined {
-    const entries = performance.getEntriesByType("paint");
-    const fcpEntry = entries.find(entry => entry.name === "first-contentful-paint");
-    return fcpEntry ? fcpEntry.startTime : undefined;
-  }
-
-  private getTTFB(): number | undefined {
-    const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
-    return navigation ? navigation.responseStart - navigation.requestStart : undefined;
-  }
 }
-
-// Export instances
-export const performanceMonitor = new PerformanceMonitor();
-export const performanceAnalyzer = new PerformanceAnalyzer();
 
 export { PerformanceMonitor, PerformanceAnalyzer };
 export type { PerformanceMetric, PerformanceThresholds, PerformanceMetrics };

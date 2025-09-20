@@ -27,17 +27,19 @@ class PerformanceOptimizer {
 
   private initializeObservers(): void {
     // Observe navigation timing
-    if ("PerformanceObserver" in window) {
-      try {
-        const navObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach(entry => {
-            if (entry.entryType === "navigation") {
-              const navEntry = entry as PerformanceNavigationTiming;
-              this.metrics.loadTime = navEntry.loadEventEnd - navEntry.fetchStart;
-            }
-          });
+    if (typeof window !== "undefined" && "PerformanceObserver" in window) {
+      const navObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === "navigation") {
+            const navEntry = entry as PerformanceNavigationTiming;
+            this.metrics.loadTime = navEntry.loadEventEnd - navEntry.loadEventStart;
+            this.updateMemoryUsage();
+          }
         });
+      });
+
+      try {
         navObserver.observe({ entryTypes: ["navigation"] });
         this.observers.push(navObserver);
       } catch (error) {
@@ -46,30 +48,47 @@ class PerformanceOptimizer {
     }
   }
 
-  public getMetrics(): PerformanceMetrics {
-    return { ...this.metrics };
+  debounce<T extends (...args: any[]) => any>(
+    func: T,
+    wait: number
+  ): (...args: Parameters<T>) => void {
+    let timeout: NodeJS.Timeout;
+    return (...args: Parameters<T>) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), wait);
+    };
   }
 
-  public calculatePerformanceScore(): number {
-    const { loadTime, renderTime, memoryUsage } = this.metrics;
-    
-    // Simple scoring algorithm (0-100)
-    let score = 100;
-    
-    if (loadTime > 3000) score -= 20;
-    else if (loadTime > 2000) score -= 10;
-    
-    if (renderTime > 1000) score -= 20;
-    else if (renderTime > 500) score -= 10;
-    
-    if (memoryUsage > 50) score -= 15;
-    else if (memoryUsage > 30) score -= 8;
-    
-    return Math.max(0, score);
+  throttle<T extends (...args: any[]) => any>(
+    func: T,
+    limit: number
+  ): (...args: Parameters<T>) => void {
+    let inThrottle: boolean;
+    return (...args: Parameters<T>) => {
+      if (!inThrottle) {
+        func(...args);
+        inThrottle = true;
+        setTimeout(() => (inThrottle = false), limit);
+      }
+    };
   }
 
-  public preloadResources(urls: string[]): void {
-    urls.forEach(url => {
+  optimizeImages(): void {
+    const images = document.querySelectorAll("img");
+    images.forEach((img) => {
+      if (!img.loading) {
+        img.loading = "lazy";
+      }
+      if (!img.decoding) {
+        img.decoding = "async";
+      }
+    });
+  }
+
+  preloadCriticalResources(urls: string[]): void {
+    if (typeof document === "undefined") return;
+
+    urls.forEach((url) => {
       const link = document.createElement("link");
       link.rel = "preload";
       link.href = url;
@@ -81,45 +100,95 @@ class PerformanceOptimizer {
   private getResourceType(url: string): string {
     const extension = url.split('.').pop()?.toLowerCase();
     switch (extension) {
-      case 'js': return 'script';
-      case 'css': return 'style';
+      case 'css':
+        return 'style';
+      case 'js':
+        return 'script';
+      case 'woff':
+      case 'woff2':
+      case 'ttf':
+      case 'otf':
+        return 'font';
       case 'png':
       case 'jpg':
       case 'jpeg':
-      case 'gif':
-      case 'webp': return 'image';
-      case 'woff':
-      case 'woff2': return 'font';
-      default: return 'fetch';
+      case 'webp':
+      case 'svg':
+        return 'image';
+      default:
+        return 'fetch';
     }
   }
 
-  public cleanup(): void {
+  private updateMemoryUsage(): void {
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      this.metrics.memoryUsage = memory.usedJSHeapSize;
+    }
+  }
+
+  getMetrics(): PerformanceMetrics {
+    return { ...this.metrics };
+  }
+
+  cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
   }
 }
 
-// Initialize the optimizer
-const performanceOptimizer = new PerformanceOptimizer();
-
 // React hook for performance monitoring
-export const usePerformanceMetrics = () => {
+export const usePerformanceMonitor = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0
+  });
   const [score, setScore] = useState<number>(0);
 
   useEffect(() => {
+    const optimizer = new PerformanceOptimizer();
+    
     const updateMetrics = () => {
-      // Update metrics logic here
-      setScore(performanceOptimizer.calculatePerformanceScore());
+      const currentMetrics = optimizer.getMetrics();
+      setMetrics(currentMetrics);
+      
+      // Calculate performance score
+      const score = calculatePerformanceScore(currentMetrics);
+      setScore(score);
     };
 
-    updateMetrics();
+    // Update metrics on load
+    if (document.readyState === "complete") {
+      updateMetrics();
+    } else {
+      window.addEventListener("load", updateMetrics);
+    }
+
+    // Update metrics periodically
     const interval = setInterval(updateMetrics, 5000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("load", updateMetrics);
+      optimizer.cleanup();
+    };
   }, []);
 
-  return { score, metrics: performanceOptimizer.getMetrics() };
+  return { metrics, score };
 };
 
-export default performanceOptimizer;
+const calculatePerformanceScore = (metrics: PerformanceMetrics): number => {
+  let score = 100;
+  
+  // Deduct points for poor performance
+  if (metrics.loadTime > 3000) score -= 20;
+  if (metrics.renderTime > 100) score -= 15;
+  if (metrics.memoryUsage > 50 * 1024 * 1024) score -= 25; // 50MB
+  if (metrics.bundleSize > 1000 * 1024) score -= 10; // 1MB
+  
+  return Math.max(0, score);
+};
+
+export default PerformanceOptimizer;
