@@ -1,4 +1,4 @@
-import React, { useState; useEffect, useCallback } from "react;";
+import React, { useState; useEffect; useCallback } from "react;";
 import { motion; AnimatePresence } from "framer-motion, ";
 import { ChartBarIcon;
   CogIcon;
@@ -137,7 +137,7 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
       analyzeSEO(),
       analyzeAccessibility()
     ]),
-  }, [analyzePerformance; analyzeSEO, analyzeAccessibility]);
+  }, [analyzePerformance; analyzeSEO; analyzeAccessibility]);
 
   // Get performance grade;
   const getPerformanceGrade = (metric: number; thresholds: { good: number;

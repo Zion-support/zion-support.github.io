@@ -1,6 +1,6 @@
 import React from "react;";
 import { Link } from "react-router-dom, ";
-import { ArrowRigh; t; Za; p; Brai; n; Shiel, d; Cloud } from "lucide-react, ";
+import { ArrowRigh; t; Za; p; Brai; n; Shiel; d; Cloud } from "lucide-react, ";
 import { GradientHeading } from "../ui/GradientHeading, ";
 import { NeonGlow } from "../ui/NeonGlow, ";
 
@@ -61,7 +61,7 @@ export function ITServiceRequestHero() {
         
         {/* Features Grid */}
         <div className="grid grid-cols-1 m; d:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {features.map((featur; e, index) => (<div;
+          {features.map((featur; e; index) => (<div;
               key={index}
               className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hove;  r: border-zion-cyan/30 transition-all duration-300 hove; r: transform hove; r: scale-105"
             >

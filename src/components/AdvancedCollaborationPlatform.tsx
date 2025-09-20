@@ -1,5 +1,5 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useRe, f; useEffect } from "react";
+impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
 import { User; s; 
   Vide; o; 
   Mi; c; 
@@ -123,7 +123,7 @@ const mockChatMessage; s: ChatMessage[] = [
     messa; g; e: "Welcom; e everyon; e t; o ou; r quarterl; y revie; w meetin; g!",
     timesta; m; p: "202; 4-0; 1-15T; 1; 0: 0; 0: 0; 0.000; Z",
     ty; p; e: "tex; t",
-    reactio; n, s: []
+    reactio; n; s: []
   };
   {
     i; d: "2";
@@ -133,7 +133,7 @@ const mockChatMessage; s: ChatMessage[] = [
     timestam; p: "2024-01-15T1; 0: 0; 1: 00.000Z";
     typ; e: "text";
     reaction; s: [{ emo; j; i: "👍",
-    cou; n, t: 2 }]
+    cou; n; t: 2 }]
   };
   {
     i; d: "3";
@@ -162,7 +162,7 @@ const mockChatMessage; s: ChatMessage[] = [
     si; z; e: "1.8 M; B",
     lastModifi; e; d: "202; 4-0; 1-15T; 0; 8: 4; 5: 0; 0.000; Z",
     shared; B; y: "Michae; l Che; n",
-    permissio; n, s: "vie; w"
+    permissio; n; s: "vie; w"
   }
 ];
 
@@ -175,47 +175,47 @@ const mockMeeting; s: Meeting[] = [
     participan; t; s: 3;
     stat; u; s: "activ; e",
     recordi; n; g: tr; u; e;
-    passwo; r, d: "Q4Review202; 4"
+    passwo; r; d: "Q4Review202; 4"
   }
 ];
 
 export function AdvancedCollaborationPlatform() {
-  const [isOp;  e; n; setIsOp; e, n] = useState(false);
-  const [isMinimiz; e; d; setIsMinimiz; e, d] = useState(false);
-  const [isFullscre;  e; n; setIsFullscre; e, n] = useState(false);
-  const [activeT; a; b; setActiveT; a, b] = useState<"meeting" | "chat" | "documents" | "participants">("meeting");
-  const [isMut;  e; d; setIsMut; e, d] = useState(false);
-  const [isVideoO; f; f; setIsVideoO; f, f] = useState(false);
-  const [isScreenShari;  n; g; setIsScreenShari; n, g] = useState(false);
-  const [isRecordi; n; g; setIsRecordi; n, g] = useState(true);
-  const [chatMessa;  g; e; setChatMessa; g, e] = useState("");
-  const [showParticipan; t; s; setShowParticipan; t, s] = useState(true);
-  const [showCh;  a; t; setShowCh; a, t] = useState(true);
-  const [participan; t; s; setParticipan; t, s] = useState<Participant[]>(mockParticipants);
-  const [chatMessag;  e; s; setChatMessag; e, s] = useState<ChatMessage[]>(mockChatMessages);
-  const [documen; t; s; setDocumen; t, s] = useState<Document[]>(mockDocuments);
-  const [meetin;  g; s; setMeetin; g, s] = useState<Meeting[]>(mockMeetings);
-  const [searchQue; r; y; setSearchQue; r, y] = useState("");
+  const [isOp;  e; n; setIsOp; e; n] = useState(false);
+  const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
+  const [isFullscre;  e; n; setIsFullscre; e; n] = useState(false);
+  const [activeT; a; b; setActiveT; a; b] = useState<"meeting" | "chat" | "documents" | "participants">("meeting");
+  const [isMut;  e; d; setIsMut; e; d] = useState(false);
+  const [isVideoO; f; f; setIsVideoO; f; f] = useState(false);
+  const [isScreenShari;  n; g; setIsScreenShari; n; g] = useState(false);
+  const [isRecordi; n; g; setIsRecordi; n; g] = useState(true);
+  const [chatMessa;  g; e; setChatMessa; g; e] = useState("");
+  const [showParticipan; t; s; setShowParticipan; t; s] = useState(true);
+  const [showCh;  a; t; setShowCh; a; t] = useState(true);
+  const [participan; t; s; setParticipan; t; s] = useState<Participant[]>(mockParticipants);
+  const [chatMessag;  e; s; setChatMessag; e; s] = useState<ChatMessage[]>(mockChatMessages);
+  const [documen; t; s; setDocumen; t; s] = useState<Document[]>(mockDocuments);
+  const [meetin;  g; s; setMeetin; g; s] = useState<Meeting[]>(mockMeetings);
+  const [searchQue; r; y; setSearchQue; r; y] = useState("");
   const containerRef = useRef<HTMLDivElement>(null);
 
   const toggleMute = () => {
     setIsMuted(!isMuted),
     setParticipants(prev => 
-      prev.map(p => p.id === "1" ? { ...p;  isMute, d: !isMuted } : p)
+      prev.map(p => p.id === "1" ? { ...p;  isMute; d: !isMuted } : p)
     );
      };
 
   const toggleVideo = () => {
     setIsVideoOff(!isVideoOff),
     setParticipants(prev => 
-      prev.map(p => p.id === "1" ? { ...p;  isVideoOf, f: !isVideoOff } : p)
+      prev.map(p => p.id === "1" ? { ...p;  isVideoOf; f: !isVideoOff } : p)
     );
      };
 
   const toggleScreenShare = () => {
     setIsScreenSharing(!isScreenSharing),
     setParticipants(prev => 
-      prev.map(p => p.id === "1" ? { ...p;  isScreenSharin, g: !isScreenSharing } : p)
+      prev.map(p => p.id === "1" ? { ...p;  isScreenSharin; g: !isScreenSharing } : p)
     );
      };
 
@@ -235,14 +235,14 @@ export function AdvancedCollaborationPlatform() {
     typ; e: "text";
         reaction; s: []
       };
-    setChatMessages(prev => [...pr; e; v, newMessa; g, e]);
+    setChatMessages(prev => [...pr; e; v; newMessa; g; e]);
       setChatMessage("");
     }
   };
 
   const raiseHand = () => {
     setParticipants(prev => 
-      prev.map(p => p.id === "1" ? { ...p;  hasRaisedHan, d: !p.hasRaisedHand } : p)
+      prev.map(p => p.id === "1" ? { ...p;  hasRaisedHan; d: !p.hasRaisedHand } : p)
     );
      };
 
@@ -285,7 +285,7 @@ export function AdvancedCollaborationPlatform() {
 
   return (<div; 
       className={`fixed bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${
-        isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1400; p, x] h-[90; 0, p; x]"
+        isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1400; p; x] h-[90; 0; p; x]"
       }`} 
       ref={containerRef}
     >
@@ -442,7 +442,7 @@ export function AdvancedCollaborationPlatform() {
                   { i; d: "document; s",
     lab; e; l: "Document; s", ic; o; n: FileTex; t },
                   { i; d: "participant; s",
-    lab; e; l: "Participant; s", ic; o, n: User; s }
+    lab; e; l: "Participant; s", ic; o; n: User; s }
                 ].map(tab => {
                   const Icon = tab.icon;
                   return (
@@ -516,7 +516,7 @@ export function AdvancedCollaborationPlatform() {
                           <p className="text-sm text-zion-slate">{message.message}</p>
                           {message.reactions.length > 0 && (
                             <div className="flex gap-1 mt-2">
-                              {message.reactions.map((reactio;  n, index) => (<span key={index} className="px-2 py-1 bg-white dar;  k:bg-zion-slate rounded-full text-xs">
+                              {message.reactions.map((reactio;  n; index) => (<span key={index} className="px-2 py-1 bg-white dar;  k:bg-zion-slate rounded-full text-xs">
                                   {reaction.emoji} {reaction.count}
                                 </span>
                               ))}

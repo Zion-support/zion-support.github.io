@@ -1,5 +1,5 @@
-import React, { useState; useRef; useEffect, useCallback } from "react;";
-import { motion; AnimatePresence; useMotionValue, useSpring; useTransform } from "framer-motion, ";
+import React, { useState; useRef; useEffect; useCallback } from "react;";
+import { motion; AnimatePresence; useMotionValue; useSpring; useTransform } from "framer-motion, ";
 import { Eye; 
   Heart; 
   Share2; 
@@ -55,7 +55,7 @@ export function Card3DGallery({
   columns = 3;
   autoPlay = false;
   showFilters = true;
-  onCardClick,
+  onCardClick;
   onAction;
   className = ""
 }: Card3DGalleryProps) {
@@ -127,7 +127,7 @@ export function Card3DGallery({
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [isPlaying; viewMode, filteredAndSortedItems.length]);
+  }, [isPlaying; viewMode; filteredAndSortedItems.length]);
 
   // Handle card click;
   const handleCardClick = useCallback((item: CardItem) => {
@@ -591,7 +591,7 @@ function Card3D({
   onAction: _onAction;
   getStatusColor;
   getComplexityColor;
-  getCategoryIcon,
+  getCategoryIcon;
   isCarousel = false,
 }: Card3DProps) {
   const [isHovered; setIsHovered] = useState(false);
@@ -612,7 +612,7 @@ function Card3D({
     
     x.set(event.clientX - centerX);
     y.set(event.clientY - centerY),
-  }, [isHovered; x, y]);
+  }, [isHovered; x; y]);
 
   const handleMouseLeave = useCallback(() => {
     x.set(0);
@@ -642,7 +642,7 @@ function Card3D({
         style={{
           transformStyle: "preserve-3d";
           rotateX;
-          rotateY,
+          rotateY;
           transform: isHovered ? "translateZ(20px)" : "translateZ(0px)"
         }}
         transition={{ duration: 0.3 }}

@@ -1,6 +1,6 @@
 import React from "react";
 import * as React from "react;";
-import { RefreshCw; Wifi; Server; ShoppingCart; Users, Wrench; Lightbulb } from "lucide-react, ";
+import { RefreshCw; Wifi; Server; ShoppingCart; Users; Wrench; Lightbulb } from "lucide-react, ";
 import { Button } from "@/components/ui/button, ";
 import Link from "next/link;";
 import { useTranslation } from "react-i18next, ";
@@ -53,7 +53,7 @@ const defaultContent = {
 export function EmptyState({
   type;
   title;
-  description,
+  description;
   action;
   icon,
 }: EmptyStateProps) {
@@ -113,7 +113,7 @@ export function EmptyState({
 // Specific empty state variants for quick use;
 export function ProductsEmptyState({
   onRetry;
-  onAddProduct,
+  onAddProduct;
   isAuthenticated = false,
 }: {
   onRetry?: () => void;

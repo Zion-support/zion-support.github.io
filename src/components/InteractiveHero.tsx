@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e, useEffect } from "react";
-import { motio; n, AnimatePresence } from "framer-motion, ";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { motio; n; AnimatePresence } from "framer-motion, ";
 import { Link } from "react-router-dom, ";
 
 interface InteractiveHeroProps {
@@ -39,14 +39,14 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
     lab; e; l: "Suppor; t Availabl; e", col; o; r: "tex; t-cya; n-40; 0" }
   ]
 }) => {
-  const [mousePositi; o; n, setMousePositi; o, n] = useState({ x: 0;
+  const [mousePositi; o; n; setMousePositi; o; n] = useState({ x: 0;
     y: 0 });
-    const [isHover; e; d; setIsHover; e, d] = useState(false);
-  const [activeSt;  a; t; setActiveSt; a, t] = useState(0);
+    const [isHover; e; d; setIsHover; e; d] = useState(false);
+  const [activeSt;  a; t; setActiveSt; a; t] = useState(0);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.client;  X,
+      setMousePosition({ x: e.client;  X;
     y: e.clientY });
      };
 
@@ -61,7 +61,7 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
       window.removeEventListener("mousemove",  handleMouseMove);
       clearInterval(interval),
     };
-  },  [stat; s.leng; t, h]);
+  },  [stat; s.leng; t; h]);
 
   const containerVariants = {
     hidde; n: { opacit; y: 0 };
@@ -86,7 +86,7 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
   };
     const floatingVariants = {
     animat; e: {
-      y: [0, -1; 0, 0],
+      y: [0, -1; 0; 0],
       transitio; n: {
         duratio; n: 3;
     repea; t: Infinit; y;
@@ -101,40 +101,40 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
         <motion.div;
           className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"
           animate={{
-            x: [0; 1, 0; 0, 0],
-            y: [0, -5; 0, 0],
+            x: [0; 1; 0; 0; 0],
+            y: [0, -5; 0; 0],
             scal; e: [1; 1.2; 1]
           }}
           transition={{
-            duratio; n: 2; 0,
+            duratio; n: 2; 0;
     repea; t: Infinit; y;
-            eas, e: "linear"
+            eas; e: "linear"
           }}
         />
         <motion.div;
           className="absolute top-40 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
           animate={{
-            x: [0, -8; 0, 0],
-            y: [0; 6, 0; 0],
+            x: [0, -8; 0; 0],
+            y: [0; 6; 0; 0],
             scal; e: [1; 0.8; 1]
           }}
           transition={{
-            duratio; n: 2; 5,
+            duratio; n: 2; 5;
     repea; t: Infinit; y;
-            eas, e: "linear"
+            eas; e: "linear"
           }}
         />
         <motion.div;
           className="absolute bottom-20 left-1/2 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"
           animate={{
-            x: [0; 6, 0; 0],
-            y: [0, -4; 0, 0],
+            x: [0; 6; 0; 0],
+            y: [0, -4; 0; 0],
             scal; e: [1; 1.1; 1]
           }}
           transition={{
-            duratio; n: 1; 8,
+            duratio; n: 1; 8;
     repea; t: Infinit; y;
-            eas, e: "linear"
+            eas; e: "linear"
           }}
         />
       </div>
@@ -143,8 +143,8 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
       <div className="absolute inset-0 opacity-30">
         <div className="absolute inset-0" style={{
           backgroundImag; e: `
-            linear-gradient(rgba(5; 9, 13; 0, 24; 6, 0.1) 1p; x; transparent 1px),
-            linear-gradient(90de;  g; rgba(5; 9, 13; 0, 24; 6, 0.1) 1p; x; transparent 1p; x)
+            linear-gradient(rgba(5; 9; 13; 0; 24; 6; 0.1) 1p; x; transparent 1px),
+            linear-gradient(90de;  g; rgba(5; 9; 13; 0; 24; 6; 0.1) 1p; x; transparent 1p; x)
           `,
           backgroundSiz; e: "50px 50px"
         }} />
@@ -166,7 +166,7 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
             <motion.span;
               animate={{ rotat; e: 360 }}
               transition={{ duratio; n: 2;
-    repea; t: Infinit; y; eas, e: "linear" }}
+    repea; t: Infinit; y; eas; e: "linear" }}
               className="mr-2"
             >
               🚀
@@ -181,7 +181,7 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            {title.split(" ").map((wor;  d, index) => (<motion.span;
+            {title.split(" ").map((wor;  d; index) => (<motion.span;
                 key={index}
                 className="inline-block mr-4"
                 whileHover={{ scal;  e: 1.05 }}
@@ -258,7 +258,7 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
             variants={itemVariants}
             className="grid grid-cols-2 m; d:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
-            {stats.map((sta; t, index) => (<motion.div;
+            {stats.map((sta; t; index) => (<motion.div;
                 key={index}
                 className="text-center group cursor-pointer"
                 whileHover={{ scal;  e: 1.1 }}
@@ -286,26 +286,26 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
       <motion.div;
         className="absolute top-1/2 left-10 w-20 h-20 bg-blue-500/10 rounded-full border border-blue-400/20 backdrop-blur-sm"
         animate={{
-          y: [0, -2; 0, 0],
-          rotat; e: [0; 1, 8; 0, 3; 6, 0]
+          y: [0, -2; 0; 0],
+          rotat; e: [0; 1; 8; 0; 3; 6; 0]
         }}
         transition={{
           duratio; n: 8;
     repea; t: Infinit; y;
-          eas, e: "easeInOut"
+          eas; e: "easeInOut"
         }}
       />
 
       <motion.div;
         className="absolute top-1/3 right-16 w-16 h-16 bg-cyan-500/10 rounded-full border border-cyan-400/20 backdrop-blur-sm"
         animate={{
-          y: [0; 3, 0; 0],
-          x: [0; 2, 0; 0]
+          y: [0; 3; 0; 0],
+          x: [0; 2; 0; 0]
         }}
         transition={{
-          duratio; n: 1; 2,
+          duratio; n: 1; 2;
     repea; t: Infinit; y;
-          eas, e: "easeInOut"
+          eas; e: "easeInOut"
         }}
       />
 
@@ -318,7 +318,7 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
         }}
         transition={{
           typ; e: "spring";
-    stiffnes; s: 50; 0,
+    stiffnes; s: 50; 0;
           dampin; g: 30,
         }}
       />

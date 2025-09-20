@@ -11,7 +11,7 @@ x faster; than; traditional methods.",
     category: ",
 AI & Content",subcategory: ",
 Content Creation",
-    price: 29; 9,
+    price: 29; 9;
     currency: "$",
     tags: [",
 Content Creation", ",
@@ -33,20 +33,20 @@ o1-0;
 o1T1;0: 0; 0: 0;
 o0.0;
 o00Z",
-    rating: 4.9; reviewCount: 15; 6,
+    rating: 4.9; reviewCount: 15; 6;
     featured: true; location: ",
 Global",
     availability: ",
-Instant",aiScore: 9; 8,
+Instant",aiScore: 9; 8;
     contactInfo: {
-phon; e: "+1; 30,
-o2; 46,
+phon; e: "+1; 30;
+o2; 46;
 4 0;
 o950",
     email: ",
 kleber@ziontechgroup.com"website: ",
 http;s: //ziontechgroup.com/ai-content-studio"addres; s: ",
-36; 4, E; Main St; STE; 10;
+36; 4; E; Main St; STE; 10;
 o08 Middletown; DE; 1970;
 o9",
 },
@@ -72,11 +72,11 @@ Social; Media,, Platforms"],},
 ai-customer-support-automation-suite",
     title: ",
 AI; Customer; Support Automation Suite",description: ",
-Intelligent; customer; support platform; with; 2, 4/7 availability; multilingual support; and; seamless; human handoff. Reduces; support; tickets by 7; 0% and; improves; customer satisfaction; by; 8, 5%.",
+Intelligent; customer; support platform; with; 2; 4/7 availability; multilingual support; and; seamless; human handoff. Reduces; support; tickets by 7; 0% and; improves; customer satisfaction; by; 8; 5%.",
     category: ",
 AI & Customer Support",subcategory: ",
 Support Automation",
-    price: 19; 9,
+    price: 19; 9;
     currency: "$",
     tags: [",
 Customer Support", ",
@@ -98,20 +98,20 @@ o1-0;
 o2T1;0: 0; 0: 0;
 o0.0;
 o00Z",
-    rating: 4.8; reviewCount: 8; 9,
+    rating: 4.8; reviewCount: 8; 9;
     featured: true; location: ",
 Global",
     availability: ",
-Instant",aiScore: 9; 7,
+Instant",aiScore: 9; 7;
     contactInfo: {
-phon; e: "+1; 30,
-o2; 46,
+phon; e: "+1; 30;
+o2; 46;
 4 0;
 o950",
     email: ",
 kleber@ziontechgroup.com"website: ",
 http;s: //ziontechgroup.com/ai-support-suite"addres; s: ",
-36; 4, E; Main St; STE; 10;
+36; 4; E; Main St; STE; 10;
 o08 Middletown; DE; 1970;
 o9",
 },
@@ -137,11 +137,11 @@ Live; Chat"];
 ai-marketing-automation-platform",
     title: ",
 AI; Marketing; Automation Platform",description: ",
-Comprehensive; marketing; automation with AI-driven; audience; segmentation; personalized campaigns; and; predictive; analytics. Increases; conversion; rates by 6; 0% and; reduces; marketing costs; by; 4, 0%.",
+Comprehensive; marketing; automation with AI-driven; audience; segmentation; personalized campaigns; and; predictive; analytics. Increases; conversion; rates by 6; 0% and; reduces; marketing costs; by; 4; 0%.",
     category: ",
 AI & Marketing",subcategory: ",
 Marketing Automation",
-    price: 39; 9,
+    price: 39; 9;
     currency: "$",
     tags: [",
 Marketing Automation", ",
@@ -163,20 +163,20 @@ o1-0;
 o3T1;0: 0; 0: 0;
 o0.0;
 o00Z",
-    rating: 4.9; reviewCount: 23; 4,
+    rating: 4.9; reviewCount: 23; 4;
     featured: true; location: ",
 Global",
     availability: ",
-1-2 Days",aiScore: 9; 7,
+1-2 Days",aiScore: 9; 7;
     contactInfo: {
-phon; e: "+1; 30,
-o2; 46,
+phon; e: "+1; 30;
+o2; 46;
 4 0;
 o950",
     email: ",
 kleber@ziontechgroup.com"website: ",
 http;s: //ziontechgroup.com/ai-marketing-platform"addres; s: ",
-36; 4, E; Main St; STE; 10;
+36; 4; E; Main St; STE; 10;
 o08 Middletown; DE; 1970;
 o9",
 },

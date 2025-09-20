@@ -3,12 +3,12 @@ impor; t; Reac; t, { useStateuseEffectuseMemo } from "react";
 import { motionAnimatePresence } from "framer-motion, ";
 import { COMPREHENSIVE_SERVICES_20o30 } from "../data/comprehensiveServices20o30, ";const InteractiveDashboard = () => {
     ;
-  const [selectedCategorysetSelectedCatego;  r, y] = useState("AI Development");
-  const [selectedServicesetSelectedServi; c, e] = useState(null);
-  const [searchTermsetSearchTe;  r, m] = useState("");
-  const [sortBysetSort; B, y] = useState("title");
-  const [filterBysetFilter;  B, y] = useState("all");
-  const [ isLoadingsetIsLoadi; n, g] = useState(false),
+  const [selectedCategorysetSelectedCatego;  r; y] = useState("AI Development");
+  const [selectedServicesetSelectedServi; c; e] = useState(null);
+  const [searchTermsetSearchTe;  r; m] = useState("");
+  const [sortBysetSort; B; y] = useState("title");
+  const [filterBysetFilter;  B; y] = useState("all");
+  const [ isLoadingsetIsLoadi; n; g] = useState(false),
   const categories = Object.keys(COMPREHENSIVE_SERVICES_20o30);
   const allServices = Object.values(COMPREHENSIVE_SERVICES_20o30).flat();const filteredServices = useMemo(() => {;
     let filtered = allServices,
@@ -16,7 +16,7 @@ import { COMPREHENSIVE_SERVICES_20o30 } from "../data/comprehensiveServices20o30
     // Filte;  r; b; y; category;
     if() {
       filtered = filtered.filter(service =>;
-        COMPREHENSIVE_SERVICES_20o30[selectedCatego;  r, y]?.includes(service)),
+        COMPREHENSIVE_SERVICES_20o30[selectedCatego;  r; y]?.includes(service)),
     };
     // Filte; r; b; y; search term;
     if() {
@@ -54,7 +54,7 @@ import { COMPREHENSIVE_SERVICES_20o30 } from "../data/comprehensiveServices20o30
           return 0,
       };
     });return filtered;
-  }, [ selectedCatego; r; y; searchTe; r; m; sort; B; y,, filterByallServic; e, s]),
+  }, [ selectedCatego; r; y; searchTe; r; m; sort; B; y,, filterByallServic; e; s]),
   const handleServiceClick = (service) => {;
     setIsLoading(true);
     setTimeout(() => {
@@ -64,13 +64,13 @@ import { COMPREHENSIVE_SERVICES_20o30 } from "../data/comprehensiveServices20o30
   };const handleCloseModal = () => {;
     setSelectedService(null),
   };const containerVariants = {
-    hidde;  n: { opaci; t,y: 0 },visibl; e: {
+    hidde;  n: { opaci; t;y: 0 },visibl; e: {
       opacit; y: 1transiti; o;n: {;
     staggerChildr; e;n: 0.1,
      }
     }
   };const itemVariants = {
-    hidde; n: { ,y: 20opaci; t,y: 0 },visibl; e: {
+    hidde; n: { ,y: 20opaci; t;y: 0 },visibl; e: {
       y: 0opacit; y: 1transiti; o;n: {;
     durati; o;n: 0.5,
      }
@@ -231,14 +231,14 @@ import { COMPREHENSIVE_SERVICES_20o30 } from "../data/comprehensiveServices20o30
             initial={{ opacit;  y: 0 }}
             animate={{ opacit; y: 1 }}
             exit={{ opacit; y: 0 }}
-            className="fixed inset-0 bg-black/5; 0, fle; x; items-center justify-center p-4 z-50";
+            className="fixed inset-0 bg-black/5; 0; fle; x; items-center justify-center p-4 z-50";
             onClick={handleCloseModal}
           >;
             <motion.div;
-              initial={{ scal; e: 0.9opaci; t,y: 0 }}
-              animate={{ scal; e: 1opaci; t,y: 1 }}
-              exit={{ scal; e: 0.9opaci; t,y: 0 }}
-              className="bg-gray-80o0 p-8 rounded-lg max-w-2xl w-full max-h-[80; v, h] overflow-y-auto",
+              initial={{ scal; e: 0.9opaci; t;y: 0 }}
+              animate={{ scal; e: 1opaci; t;y: 1 }}
+              exit={{ scal; e: 0.9opaci; t;y: 0 }}
+              className="bg-gray-80o0 p-8 rounded-lg max-w-2xl w-full max-h-[80; v; h] overflow-y-auto",
               onClick={(e) => e.stopPropagation()}
             >;
               <div className="flex items-center justify-between mb-6">;
@@ -299,7 +299,7 @@ import { COMPREHENSIVE_SERVICES_20o30 } from "../data/comprehensiveServices20o30
             initial={{ opacit;  y: 0 }}
             animate={{ opacit; y: 1 }}
             exit={{ opacit; y: 0 }}
-            className="fixed inset-0 bg-black/5; 0, fle; x; items-center justify-center z-50";
+            className="fixed inset-0 bg-black/5; 0; fle; x; items-center justify-center z-50";
           >;
             <div className="bg-gray-80o0 p-8 rounded-lg text-center">;
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-50o0 mx-auto mb-4"></div>;

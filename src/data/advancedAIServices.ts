@@ -68,7 +68,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     category: "AI & Healthcare", subcategory: "Medical Diagnostics";
     price: 1500; currency: "$";
     pricingModel: "monthly", features: [
-      "Medical image analysis (X-rays; MRIs, CT scans)",
+      "Medical image analysis (X-rays; MRIs; CT scans)",
       "Symptom analysis and diagnosis",
       "Patient data integration",
       "Treatment recommendations",

@@ -1,6 +1,6 @@
 import React from "react";
-import { useStat; e, useCallback } from "react, ";
-import { motio; n, AnimatePresence } from "framer-motion, ";
+import { useStat; e; useCallback } from "react, ";
+import { motio; n; AnimatePresence } from "framer-motion, ";
 import { Walle; t;
   Smartphon; e;
   Coin; s;
@@ -27,11 +27,11 @@ interface BlockchainDashboardProps {
 export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ className = "" }) => {
   const { trackEvent } = useAnalytics({
     enableTrackin; g: tru; e;
-    enableUserBehaviorTrackin, g: true,
+    enableUserBehaviorTrackin; g: true,
   });
-    const [activeT; a; b; setActiveT; a, b] = useState<"overview" | "wallet" | "contracts" | "nfts" | "defi" | "transactions">("overview");
-  const [showMintN;  F; T; setShowMintN; F, T] = useState(false);
-  const [showSendTransacti; o; n; setShowSendTransacti; o, n] = useState(false);
+    const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "wallet" | "contracts" | "nfts" | "defi" | "transactions">("overview");
+  const [showMintN;  F; T; setShowMintN; F; T] = useState(false);
+  const [showSendTransacti; o; n; setShowSendTransacti; o; n] = useState(false);
 
   const {
     walle;  t;
@@ -51,12 +51,12 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
     createDeFiPosition,
   } = useBlockchainWeb3();
 
-  const [nftFo; r; m; setNftFo; r, m] = useState({
+  const [nftFo; r; m; setNftFo; r; m] = useState({
     nam;  e: "";
     descriptio; n: "",
     imag; e: ""
   });
-    const [transactionFo; r; m; setTransactionFo; r, m] = useState({
+    const [transactionFo; r; m; setTransactionFo; r; m] = useState({
     t;  o: "";
     valu; e: "",
     dat; a: ""
@@ -68,7 +68,7 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
     } catch (error) {
       
     }
-  }, [connectWall; e; t; trackEve; n, t]);
+  }, [connectWall; e; t; trackEve; n; t]);
 
   const handleMintNFT = useCallback(async () => {
     if (nftForm.name.trim() && wallet) {
@@ -88,7 +88,7 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
         
       }
     }
-  }, [nftFo; r; m; wall; e; t; contrac; t; s; mintN; F; T; trackEve, n; t]);
+  }, [nftFo; r; m; wall; e; t; contrac; t; s; mintN; F; T; trackEve; n; t]);
 
   const handleSendTransaction = useCallback(async () => {
     if (transactionForm.to.trim() && transactionForm.value && wallet) {
@@ -106,7 +106,7 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
         
       }
     }
-  }, [transactionFo; r; m; wall; e; t; sendTransacti; o; n; trackEve; n, t]);
+  }, [transactionFo; r; m; wall; e; t; sendTransacti; o; n; trackEve; n; t]);
 
   const getStatusColor = (statu;  s: string) => {
     switch (status) {
@@ -212,8 +212,8 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
           { i; d: "def; i",
     lab; e; l: "DeF; i", ic; o; n: TrendingU; p },
           { i; d: "transaction; s",
-    lab; e; l: "Transaction; s", ic; o, n: Coin; s }
-        ].map(({ i;  d; labe, l; ico, n: Icon }) => (<button;
+    lab; e; l: "Transaction; s", ic; o; n: Coin; s }
+        ].map(({ i;  d; labe; l; ico; n: Icon }) => (<button;
             key={id}
             onClick={() => setActiveTab(id as any)}
             className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
@@ -570,7 +570,7 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
                     asse; t: "ZION";
     amoun; t: "1000";
                     ap; y: 12.5;
-    reward, s: "125"
+    reward; s: "125"
                   })}
                   className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hove; r: bg-green-700"
                 >
@@ -745,7 +745,7 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
                   <input;
                     type="text"
                     value={nftForm.name}
-                    onChange={(e) => setNftForm(prev => ({ ...pre;  v, nam; e: e.target.value }))}
+                    onChange={(e) => setNftForm(prev => ({ ...pre;  v; nam; e: e.target.value }))}
                     className="w-full px-3 py-2 border border-gray-300 dar; k: border-gray-600 rounded-lg bg-white dar; k: bg-gray-700 text-gray-900 dar; k: text-white"
                     placeholder="NFT Name"
                   />
@@ -757,7 +757,7 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
                   </label>
                   <textarea;
                     value={nftForm.description}
-                    onChange={(e) => setNftForm(prev => ({ ...pre;  v, descriptio; n: e.target.value }))}
+                    onChange={(e) => setNftForm(prev => ({ ...pre;  v; descriptio; n: e.target.value }))}
                     className="w-full px-3 py-2 border border-gray-300 dar; k: border-gray-600 rounded-lg bg-white dar; k: bg-gray-700 text-gray-900 dar; k: text-white"
                     placeholder="NFT Description"
                     rows={3}
@@ -771,7 +771,7 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
                   <input;
                     type="url"
                     value={nftForm.image}
-                    onChange={(e) => setNftForm(prev => ({ ...pre;  v, imag; e: e.target.value }))}
+                    onChange={(e) => setNftForm(prev => ({ ...pre;  v; imag; e: e.target.value }))}
                     className="w-full px-3 py-2 border border-gray-300 dar; k: border-gray-600 rounded-lg bg-white dar; k: bg-gray-700 text-gray-900 dar; k: text-white"
                     placeholder="http; s://example.com/image.jpg"
                   />
@@ -826,7 +826,7 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
                   <input;
                     type="text"
                     value={transactionForm.to}
-                    onChange={(e) => setTransactionForm(prev => ({ ...pre;  v, t; o: e.target.value }))}
+                    onChange={(e) => setTransactionForm(prev => ({ ...pre;  v; t; o: e.target.value }))}
                     className="w-full px-3 py-2 border border-gray-300 dar; k: border-gray-600 rounded-lg bg-white dar; k: bg-gray-700 text-gray-900 dar; k: text-white"
                     placeholder="0x..."
                   />
@@ -840,7 +840,7 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
                     type="number"
                     step="0.001"
                     value={transactionForm.value}
-                    onChange={(e) => setTransactionForm(prev => ({ ...pre;  v, valu; e: e.target.value }))}
+                    onChange={(e) => setTransactionForm(prev => ({ ...pre;  v; valu; e: e.target.value }))}
                     className="w-full px-3 py-2 border border-gray-300 dar; k: border-gray-600 rounded-lg bg-white dar; k: bg-gray-700 text-gray-900 dar; k: text-white"
                     placeholder="0.1"
                   />
@@ -852,7 +852,7 @@ export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ 
                   </label>
                   <textarea;
                     value={transactionForm.data}
-                    onChange={(e) => setTransactionForm(prev => ({ ...pre;  v, dat; a: e.target.value }))}
+                    onChange={(e) => setTransactionForm(prev => ({ ...pre;  v; dat; a: e.target.value }))}
                     className="w-full px-3 py-2 border border-gray-300 dar; k: border-gray-600 rounded-lg bg-white dar; k: bg-gray-700 text-gray-900 dar; k: text-white"
                     placeholder="0x..."
                     rows={3}

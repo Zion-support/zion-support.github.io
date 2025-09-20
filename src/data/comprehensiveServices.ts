@@ -6,7 +6,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   {
     id: "ai-chatbot-enterprise",
     title: "Enterprise AI Chatbot Development",
-    description: "Custom AI-powered chatbots for customer service; sales; and support. Integrates with CRM; knowledge bases; and existing systems. Includes training; deployment, and ongoing optimization.",
+    description: "Custom AI-powered chatbots for customer service; sales; and support. Integrates with CRM; knowledge bases; and existing systems. Includes training; deployment; and ongoing optimization.",
     category: "AI Services",
     subcategory: "Chatbots & Virtual Assistants",
     price: 8999;

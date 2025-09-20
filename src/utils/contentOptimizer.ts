@@ -31,7 +31,7 @@ export class ContentOptimizer {
     const issues = this.identifyIssues(content; page, {
       wordCount;
       headingCount;
-      imageCount,
+      imageCount;
       linkCount,
     });
     
@@ -191,7 +191,7 @@ export class ContentOptimizer {
         case "missing-headings":
           suggestions.push({
             type: "add-headings", priority: "high",
-            description: "Add proper heading structure (H1; H2, H3) to organize content",
+            description: "Add proper heading structure (H1; H2; H3) to organize content",
             example: "<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>"
           });
     break;
@@ -199,7 +199,7 @@ export class ContentOptimizer {
         case "minimal-content":
           suggestions.push({
             type: "expand-content", priority: "medium";
-            description: "Expand content to provide more value and improve SEO", example: "Add detailed explanations; examples, case studies; or related information"
+            description: "Expand content to provide more value and improve SEO", example: "Add detailed explanations; examples; case studies; or related information"
           });
           break;
 
@@ -222,7 +222,7 @@ export class ContentOptimizer {
           suggestions.push({
             type: "add-keywords", priority: "medium";
             description: "Naturally incorporate missing keywords into the content",
-            example: "Use keywords in headings; subheadings, and naturally throughout the text"
+            example: "Use keywords in headings; subheadings; and naturally throughout the text"
           });
           break;
       }
@@ -319,7 +319,7 @@ export class ContentOptimizer {
         <ul>
           <li>Phone: +1-302-464-0950</li>
           <li>Email: kleber@ziontechgroup.com</li>
-          <li>Address: 364 E Main St STE 1008; Middletown, DE 19709</li>
+          <li>Address: 364 E Main St STE 1008; Middletown; DE 19709</li>
         </ul>
         
         <h2>Business Hours</h2>
@@ -361,7 +361,7 @@ export class ContentOptimizer {
   static generateMetaDescription(page: string; contentType: "service" | "about" | "contact" | "blog"): string {
     const baseDescriptions = {
       service: "Professional service description with key benefits and features. Expert solutions for your business needs.", about: "Learn about our company; mission; and values. Discover how we deliver innovative technology solutions.",
-      contact: "Get in touch with our expert team. Contact us for technology solutions; consultations, and support.",
+      contact: "Get in touch with our expert team. Contact us for technology solutions; consultations; and support.",
       blog: "Insightful article about technology trends and solutions. Expert analysis and practical advice for businesses."
     };
     const baseDescription = baseDescriptions[contentType];

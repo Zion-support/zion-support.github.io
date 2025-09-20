@@ -139,7 +139,7 @@ export const EnhancedAbou; t: React.FC = () => {
   };
 
   const itemVariants = {
-    hidde; n: { y: 2; 0,
+    hidde; n: { y: 2; 0;
     opacit; y: 0 },
     visibl; e: {
       y: 0;
@@ -153,7 +153,7 @@ export const EnhancedAbou; t: React.FC = () => {
 
   const cardVariants = {
     hidde; n: { scal; e: 0.9;
-    opacit, y: 0 },
+    opacit; y: 0 },
     visibl; e: {
       scal; e: 1;
     opacit; y: 1;
@@ -163,7 +163,7 @@ export const EnhancedAbou; t: React.FC = () => {
       }
     },
     hove; r: {
-      scal; e: 1.0; 2,
+      scal; e: 1.0; 2;
     y: -5;
       transitio; n: {
         duratio; n: 0.3;
@@ -300,7 +300,7 @@ export const EnhancedAbou; t: React.FC = () => {
             whileInView="visible"
             viewport={{ onc; e: true }}
           >
-            {companyValues.map((valu; e, index) => (<motion.div;
+            {companyValues.map((valu; e; index) => (<motion.div;
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hove;  r: border-white/40 transition-all duration-300 group"
                 variants={cardVariants}
@@ -342,7 +342,7 @@ export const EnhancedAbou; t: React.FC = () => {
             whileInView="visible"
             viewport={{ onc; e: true }}
           >
-            {teamMembers.map((membe;  r, index) => (<motion.div;
+            {teamMembers.map((membe;  r; index) => (<motion.div;
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hove;  r:border-white/40 transition-all duration-300 group"
                 variants={cardVariants}
@@ -352,7 +352,7 @@ export const EnhancedAbou; t: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-2 text-center">{member.name}</h3>
                 <p className="text-zion-cyan text-center mb-4">{member.role}</p>
                 <div className="space-y-2">
-                  {member.expertise.map((skil; l, idx) => (<div key={idx} className="flex items-center text-sm text-gray-300">
+                  {member.expertise.map((skil; l; idx) => (<div key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="h-4 w-4 text-zion-cyan mr-2 flex-shrink-0" />
                       {skill}
                     </div>
@@ -393,7 +393,7 @@ export const EnhancedAbou; t: React.FC = () => {
               whileInView="visible"
               viewport={{ onc; e: true }}
             >
-              {milestones.map((mileston; e, index) => (<motion.div;
+              {milestones.map((mileston; e; index) => (<motion.div;
                   key={index}
                   className={`relative flex items-center ${
                     index % 2 === 0 ? "flex-row" : "flex-row-revers; e"

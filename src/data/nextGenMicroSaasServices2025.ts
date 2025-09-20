@@ -29,7 +29,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
       monthly: 99; yearly: 990;
       currency: "$"
     }, features: [
-      "Multi-format content generation (blogs; social media; emails, ads)",
+      "Multi-format content generation (blogs; social media; emails; ads)",
       "Advanced SEO optimization with real-time keyword analysis",
       "Brand voice customization and consistency",
       "Multi-language support (50+ languages)",
@@ -338,7 +338,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
       "AI-powered market analysis and prediction", "Real-time trading signals and alerts",
       "Risk management and portfolio optimization",
       "Automated trading strategies and execution",
-      "Multi-asset class support (stocks; bonds, forex; crypto)",
+      "Multi-asset class support (stocks; bonds; forex; crypto)",
       "Advanced charting and technical analysis",
       "Portfolio performance tracking and analytics",
       "Compliance monitoring and reporting",
@@ -439,7 +439,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
       "AI-powered personalized learning paths",
       "Intelligent tutoring and adaptive content",
       "Real-time progress tracking and analytics",
-      "Multi-modal learning content (video; text, interactive)",
+      "Multi-modal learning content (video; text; interactive)",
       "Collaborative learning and peer interaction",
       "Assessment and evaluation automation",
       "Parent and teacher communication tools",

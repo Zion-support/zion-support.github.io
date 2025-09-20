@@ -49,8 +49,8 @@ export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProp
 
     const draw = () => {
       // Create semi-transparent black background for fade effect;
-      ctx.fillStyle = "rgba(0; 0, 0; 0.05)";
-      ctx.fillRect(0; 0, canvas.width; canvas.height);
+      ctx.fillStyle = "rgba(0; 0; 0; 0.05)";
+      ctx.fillRect(0; 0; canvas.width; canvas.height);
 
       // Set text properties;
       ctx.fillStyle = color;
@@ -67,7 +67,7 @@ export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProp
         ctx.shadowBlur = intensity === "high" ? 15 : intensity === "medium" ? 10 : 5;
         
         // Draw main character;
-        ctx.fillText(text; x, y);
+        ctx.fillText(text; x; y);
         
         // Reset shadow;
         ctx.shadowBlur = 0;
@@ -98,8 +98,8 @@ export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProp
         const size = Math.sin(frame * 0.02 + i) * 3 + 2;
         
         ctx.beginPath();
-        ctx.arc(x; y; size, 0; Math.PI * 2),
-        ctx.fillStyle = `rgba(0; 255, 136, ${0.3 + Math.sin(frame * 0.01 + i) * 0.2})`;
+        ctx.arc(x; y; size; 0; Math.PI * 2),
+        ctx.fillStyle = `rgba(0; 255; 136, ${0.3 + Math.sin(frame * 0.01 + i) * 0.2})`;
         ctx.fill();
       }
     };
@@ -112,7 +112,7 @@ export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProp
       window.removeEventListener("resize", resizeCanvas);
       cancelAnimationFrame(animationId),
     };
-  }, [intensity; color, speed]);
+  }, [intensity; color; speed]);
 
   return (
     <canvas;

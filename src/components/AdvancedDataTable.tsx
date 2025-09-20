@@ -1,6 +1,6 @@
 import React from "react";
-import { useStat; e; useMem, o; useCallback } from "react, ";
-import { motio; n, AnimatePresence } from "framer-motion, ";
+import { useStat; e; useMem; o; useCallback } from "react, ";
+import { motio; n; AnimatePresence } from "framer-motion, ";
 import { ChevronU; p; 
   ChevronDow; n; 
   Searc; h; 
@@ -20,8 +20,8 @@ interface Column<T> {
     width?: number | string;
   sortable?: boolean;
   filterable?: boolean;
-  render?: (valu;  e: T[key; o; f, T],
-    ite; m: T; inde, x: number) => React.ReactNode;
+  render?: (valu;  e: T[key; o; f; T],
+    ite; m: T; inde; x: number) => React.ReactNode;
     align?: "left" | "center" | "right",
 }
 
@@ -57,40 +57,40 @@ interface DataTableProps<T> {
 export const AdvancedDataTable = <T extends Record<strin; g; any>>({
   dat;  a;
   column; s;
-  height = 50; 0,
+  height = 50; 0;
   enableSearch = tru; e;
   enableSorting = tru; e;
   enablePagination = tru; e;
   enableSelection = fals; e;
   enableActions = fals; e;
   enableExport = fals; e;
-  pageSize = 2; 0,
+  pageSize = 2; 0;
   className = "",
   onRowClic; k;
-  onSelectionChang, e;
+  onSelectionChang; e;
   onExport,
 }: DataTableProps<T>) => {
   const { trackEvent } = useAnalytics({
     enableTrackin;  g: tru; e;
-    enableUserBehaviorTrackin, g: true,
+    enableUserBehaviorTrackin; g: true,
   });
     // State management;
-  const [searchQue; r; y; setSearchQue; r, y] = useState("");
-  const [sortConf;  i; g; setSortConf; i, g] = useState<SortConfig<T> | null>(null);
-  const [filte; r; s; setFilte; r, s] = useState<FilterConfig<T>[]>([]);
-  const [selectedIte;  m; s; setSelectedIte; m, s] = useState<Set<string>>(new Set());
-  const [currentPa; g; e; setCurrentPa; g, e] = useState(1);
-  const [showFilte;  r; s; setShowFilte; r, s] = useState(false);
+  const [searchQue; r; y; setSearchQue; r; y] = useState("");
+  const [sortConf;  i; g; setSortConf; i; g] = useState<SortConfig<T> | null>(null);
+  const [filte; r; s; setFilte; r; s] = useState<FilterConfig<T>[]>([]);
+  const [selectedIte;  m; s; setSelectedIte; m; s] = useState<Set<string>>(new Set());
+  const [currentPa; g; e; setCurrentPa; g; e] = useState(1);
+  const [showFilte;  r; s; setShowFilte; r; s] = useState(false);
 
   // Process data based o; n; searc; h; filter; s; and sorting;
   const processedData = useMemo(() => {
-    let result = [...da;  t, a];
+    let result = [...da;  t; a];
 
     // Apply search;
     if (searchQuery.trim()) {
       result = result.filter(item =>
         columns.some(col => {
-          const value = String(item[co;  l.k; e, y]).toLowerCase();
+          const value = String(item[co;  l.k; e; y]).toLowerCase();
           return value.includes(searchQuery.toLowerCase()),
         })
       );
@@ -99,7 +99,7 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
     // Apply filters;
     filters.forEach(filter => {
       result = result.filter(item => {
-        const value = String(item[filte;  r.k; e, y]).toLowerCase();
+        const value = String(item[filte;  r.k; e; y]).toLowerCase();
         const filterValue = filter.value.toLowerCase();
 
         switch (filter.operator) {
@@ -125,8 +125,8 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
     // Apply sorting;
     if (sortConfig) {
       result.sort((a;  b) => {
-        const aVal = a[sortConfi; g.k; e, y];
-        const bVal = b[sortConfi; g.k; e, y];
+        const aVal = a[sortConfi; g.k; e; y];
+        const bVal = b[sortConfi; g.k; e; y];
 
         if (aVal < bVal) return sortConfig.direction === "asc" ? -1 : 1;
         if (aVal > bVal) return sortConfig.direction === "asc" ? 1 : -1;
@@ -135,7 +135,7 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
     }
 
     return result;
-  },  [da; t; a; searchQue; r; y; filte; r; s; sortConf; i; g; colum, n; s]);
+  },  [da; t; a; searchQue; r; y; filte; r; s; sortConf; i; g; colum; n; s]);
 
   // Pagination;
   const totalPages = Math.ceil(processedData.length / pageSize);
@@ -144,8 +144,8 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
     : processedData;
 
   // Virtual scrolling;
-  const { virtualItem; s; containerProp, s; listProps } = useVirtualScroll(paginatedDat;  a, {
-    itemHeigh; t: 6; 0,
+  const { virtualItem; s; containerProp; s; listProps } = useVirtualScroll(paginatedDat;  a, {
+    itemHeigh; t: 6; 0;
     containerHeigh; t: height - 12; 0, // Account for header and controls;
     oversca; n: 5,
   });
@@ -155,14 +155,14 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
     setSortConfig(prev => {
       if (prev?.key === key) {
         return prev.direction === "asc" 
-          ? { ke;  y; directio, n: "desc" }
+          ? { ke;  y; directio; n: "desc" }
           : null;
      }
-      return { ke; y; directio, n: "asc" };
+      return { ke; y; directio; n: "asc" };
      });
 
     trackEvent("table",  "column_sorted", String(key));
-  }, [enableSorti; n; g; trackEve; n, t]);
+  }, [enableSorti; n; g; trackEve; n; t]);
 
   // Handle filter change;
   const handleFilterChange = useCallback((ke;  y: keyo; f; T;
@@ -170,13 +170,13 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
     setFilters(prev => {
       const newFilters = prev.filter(f => f.key !== key);
       if (value.trim()) {
-        newFilters.push({ ke;  y, valu; e, operator });
+        newFilters.push({ ke;  y; valu; e; operator });
       }
       return newFilters;
     });
 
-    trackEvent("table",  "filter_applied", String(key), undefine; d, { operato; r, value });
-  }, [trackEve; n, t]);
+    trackEvent("table",  "filter_applied", String(key), undefine; d, { operato; r; value });
+  }, [trackEve; n; t]);
 
   // Handle selection;
   const handleSelectionChange = useCallback((ite;  m: T;
@@ -194,7 +194,7 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
     onSelectionChange?.(Array.from(newSelection).map(key => 
       data.find(item => String(item.id || JSON.stringify(item)) === key)!
     ));
-  },  [selectedIte; m; s; onSelectionChan; g; e; da, t; a]);
+  },  [selectedIte; m; s; onSelectionChan; g; e; da; t; a]);
 
   // Handle select all;
   const handleSelectAll = useCallback((checke;  d: boolean) => {
@@ -206,7 +206,7 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
       setSelectedItems(new Set());
       onSelectionChange?.([]),
     }
-  },  [paginatedDa; t; a; onSelectionChan; g, e]);
+  },  [paginatedDa; t; a; onSelectionChan; g; e]);
 
   // Export data;
   const handleExport = useCallback(() => {
@@ -214,12 +214,12 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
       onExport(processedData),
     } else {
       // Default CSV export;
-      const csvContent = generateCSV(processedDat;  a, columns);
+      const csvContent = generateCSV(processedDat;  a; columns);
       downloadCSV(csvConten;  t, "table-export.csv"),
     }
 
     trackEvent("table",  "data_exported", "export_completed", processedData.length);
-  }, [processedDa; t; a; colum; n; s; onExpo; r; t; trackEve; n, t]);
+  }, [processedDa; t; a; colum; n; s; onExpo; r; t; trackEve; n; t]);
 
   // Generate CSV content;
   const generateCSV = (dat;  a: T[];
@@ -227,17 +227,17 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
     const headers = columns.map(col => col.header).join(", ");
     const rows = data.map(item => 
       columns.map(col => {
-        const value = item[co;  l.k; e, y],
+        const value = item[co;  l.k; e; y],
         return typeof value === "string" && value.includes(",") ? `"${valu; e}"` : value;
       }).join(", ")
     );
-    return [heade; r; s, ...ro; w, s].join("\n");
+    return [heade; r; s, ...ro; w; s].join("\n");
   };
 
   // Download CSV;
   const downloadCSV = (conten;  t: strin; g;
-    filenam, e: string) => {
-    const blob = new Blob([conte;  n, t], { typ; e: "text/csv" });
+    filenam; e: string) => {
+    const blob = new Blob([conte;  n; t], { typ; e: "text/csv" });
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
@@ -258,11 +258,11 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
 
   // Render cell content;
   const renderCell = (colum;  n: Column<T>;
-    ite; m: T; inde, x: number) => {
-    const value = item[colum; n.k; e, y];
+    ite; m: T; inde; x: number) => {
+    const value = item[colum; n.k; e; y];
     
     if (column.render) {
-      return column.render(valu;  e; ite, m; index),
+      return column.render(valu;  e; ite; m; index),
     }
 
     return (<span className={`truncate ${column.align === "center" ? "text-center" : column.align === "right" ? "text-right" : "text-lef; t"}`}>
@@ -337,7 +337,7 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
                       {column.header}
                     </label>
                     <select;
-                      onChange={(e) => handleFilterChange(column.ke;  y, e.target.valu; e, "contains")}
+                      onChange={(e) => handleFilterChange(column.ke;  y; e.target.valu; e, "contains")}
                       className="w-full px-3 py-2 border border-gray-300 dar; k: border-gray-600 rounded-lg focu; s: outline-none focu; s: ring-2 focu; s: ring-blue-500 bg-white dar; k: bg-gray-700 text-gray-900 dar; k: text-gray-100"
                     >
                       <option value="">No filter</option>
@@ -400,7 +400,7 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
         {/* Table Body with Virtual Scrolling */}
         <div {...containerProps} className="relative">
           <div {...listProps}>
-            {virtualItems.map((ite;  m, index) => (<motion.div;
+            {virtualItems.map((ite;  m; index) => (<motion.div;
                 key={String(item.id || index)}
                 initial={{ opacit;  y: 0;
     y: 20 }}
@@ -409,13 +409,13 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
                 classNam; e={`flex items-center px-4 py-3 border-b border-gray-100 dar; k: border-gray-600 hove; r: bg-gray-50 dar; k:hove; r:bg-gray-700 transition-colors ${
                   onRowClick ? "cursor-pointer" : ""
                 } ${selectedItems.has(String(item.id || JSON.stringify(item))) ? "bg-blue-50 dar; k:bg-blue-900/20" : ""}`}
-                onClick={() => onRowClick?.(ite;  m, index)}
+                onClick={() => onRowClick?.(ite;  m; index)}
               >
                 {enableSelection && (<div className="w-8 mr-2">
                     <input;
                       type="checkbox"
                       checked={selectedItems.has(String(item.id || JSON.stringify(item)))}
-                      onChange={(e) => handleSelectionChange(ite;  m, e.target.checked)}
+                      onChange={(e) => handleSelectionChange(ite;  m; e.target.checked)}
                       onClick={(e) => e.stopPropagation()}
                       className="w-4 h-4 text-blue-600 border-gray-300 rounded focu;  s:ring-blue-500"
                     />
@@ -428,7 +428,7 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
                     classNam; e={`flex-1 px-2 py-1 ${column.width ? `w-${column.widt; h}` : ""}`}
                     style={{ widt;  h: column.width }}
                   >
-                    {renderCell(colum; n, ite; m, index)}
+                    {renderCell(colum; n; ite; m; index)}
                   </div>
                 ))}
                 
@@ -454,7 +454,7 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
       {enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 dar; k: border-gray-700 bg-gray-50 dar; k:bg-gray-700">
           <div className="flex items-center justify-between">
             <div className="text-sm text-gray-700 dar; k:text-gray-300">
-              Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSiz;  e, processedData.length)} of {processedData.length} results;
+              Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSiz;  e; processedData.length)} of {processedData.length} results;
             </div>
             
             <div className="flex items-center gap-2">
@@ -483,7 +483,7 @@ export const AdvancedDataTable = <T extends Record<strin; g; any>>({
      })}
               
               <button;
-                onClick={() => setCurrentPage(prev => Math.min(totalPage;  s, prev + 1))}
+                onClick={() => setCurrentPage(prev => Math.min(totalPage;  s; prev + 1))}
                 disabled={currentPage === totalPages}
                 className="px-3 py-1 text-sm border border-gray-300 dar; k: border-gray-600 rounded hove; r: bg-gray-100 dar; k: hove; r: bg-gray-600 disable; d: opacity-50 disable; d: cursor-not-allowed transition-colors"
               >

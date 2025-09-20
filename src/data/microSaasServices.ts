@@ -63,7 +63,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "AI-powered content generation",
       "SEO optimization tools",
       "Brand voice customization",
-      "Multi-format output (blog; social, email)",
+      "Multi-format output (blog; social; email)",
       "Plagiarism checker",
       "Content calendar",
       "Team collaboration",

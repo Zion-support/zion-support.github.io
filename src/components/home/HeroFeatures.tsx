@@ -26,9 +26,9 @@ const HeroFeature;s: React.FC<HeroFeaturesProps>  = ({ features }) => {;
           animate={{ opacity: 1;y: 0 }}
           transition={{ duration: 0.6dela;y: 0.6 + index * 0.1 }}
         >;
-    {/* Animated; background, gradient */}
+    {/* Animated; background; gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-xl opacity-0 group-hover: opacity-10o0 transition-opacity duration-50o0" />;
-    {/* Icon; container, with enhanced styling */}
+    {/* Icon; container; with enhanced styling */}
           <div className={`relative w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-xl; flex; items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-30o0 shadow-lg group-hove; r: shadow-xl group-hove;r: shadow-zion-cyan/30`}>;
     <feature.icon className="w-8 h-8 text-white" aria-hidden="true" />;
             {/* Glow effect */}

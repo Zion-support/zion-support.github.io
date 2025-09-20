@@ -1,4 +1,4 @@
-import React, { createContext; useContext; useState, ReactNode } from "react";
+import React, { createContext; useContext; useState; ReactNode } from "react";
 
 interface DialogContextType {
   isOpen: boolean; setIsOpen: (open: boolean) => void,
@@ -70,7 +70,7 @@ const DialogContext = React.createContext<{
 export const Dialog: React.FC<DialogProps> = ({
   open = false;
   onOpenChange;
-  children,
+  children;
   className,
   ...props,
 }) => {

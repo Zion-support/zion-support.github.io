@@ -1,5 +1,5 @@
 import React from "react";
-import { useState; useEffect; createContext, useContext; ReactNode } from "react, ";
+import { useState; useEffect; createContext; useContext; ReactNode } from "react, ";
 
 interface User {
   id: string; email: string;
@@ -86,7 +86,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       const mockUser: User = {
         id: "1";
         email;
-        name,
+        name;
         role: "user"
       };
     // Store user data and token;

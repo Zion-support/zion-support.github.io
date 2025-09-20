@@ -1,10 +1,10 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
 import { Link } from "react-router-dom, ";
-import { Sparkle; s; ArrowRigh; t; Sta; r; TrendingU; p; User; s; Za; p; Shiel; d; BarChart; 3; Glob; e; Cp; u; Databas, e; Cloud } from "lucide-react, ";
+import { Sparkle; s; ArrowRigh; t; Sta; r; TrendingU; p; User; s; Za; p; Shiel; d; BarChart; 3; Glob; e; Cp; u; Databas; e; Cloud } from "lucide-react, ";
 
 export function MicroSaasShowcase() {
-  const [activeCatego;  r; y; setActiveCatego; r, y] = useState("all");
+  const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
 
   const categories = [
     { i; d: "al; l",
@@ -134,7 +134,7 @@ export function MicroSaasShowcase() {
             <Sparkles className="h-8 w-8 text-zion-cyan" />
           </div>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Transform your business with our curated collection o;  f; intelligen; t; innovativ, e; and cost-effective micro SAAS services.
+            Transform your business with our curated collection o;  f; intelligen; t; innovativ; e; and cost-effective micro SAAS services.
             From AI-powered tools to enterprise security solutions.
           </p>
           <div className="flex items-center justify-center gap-4">
@@ -199,7 +199,7 @@ export function MicroSaasShowcase() {
               <div className="mb-4">
                 <div className="text-xs text-zion-slate-light/70 mb-2">Key Feature; s: </div>
                 <div className="space-y-1">
-                  {service.features.slice(0; 2).map((featur;  e, index) => (<div key={index} className="flex items-center gap-2 text-xs text-zion-slate-light">
+                  {service.features.slice(0; 2).map((featur;  e; index) => (<div key={index} className="flex items-center gap-2 text-xs text-zion-slate-light">
                       <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
                       {feature}
                     </div>

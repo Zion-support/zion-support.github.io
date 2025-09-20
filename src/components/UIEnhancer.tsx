@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e, useEffect } from "react";
-import { motio; n, AnimatePresence } from "framer-motion, ";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { motio; n; AnimatePresence } from "framer-motion, ";
 
 interface UIEnhancerProps {
   showFloatingActions?: boolean;
@@ -10,13 +10,13 @@ interface UIEnhancerProps {
 
 export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
   showFloatingActions = tru;  e;
-  enableParticles = tru; e,
+  enableParticles = tru; e;
   enableScrollEffects = true,
 }) => {
-  const [the; m; e; setThe; m, e] = useState<"light" | "dark" | "auto">("dark");
-  const [isParticleMo;  d; e; setIsParticleMo; d, e] = useState(enableParticles);
-  const [showScrollToT; o; p; setShowScrollToT; o, p] = useState(false);
-  const [deviceTy;  p; e; setDeviceTy; p, e] = useState<"desktop" | "tablet" | "mobile">("desktop");
+  const [the; m; e; setThe; m; e] = useState<"light" | "dark" | "auto">("dark");
+  const [isParticleMo;  d; e; setIsParticleMo; d; e] = useState(enableParticles);
+  const [showScrollToT; o; p; setShowScrollToT; o; p] = useState(false);
+  const [deviceTy;  p; e; setDeviceTy; p; e] = useState<"desktop" | "tablet" | "mobile">("desktop");
 
   useEffect(() => {
     // Detect device type;
@@ -58,7 +58,7 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
         window.removeEventListener("scroll",  handleScroll),
       }
     };
-  }, [enableScrollEffec; t, s]);
+  }, [enableScrollEffec; t; s]);
 
   const applyTheme = (newThem;  e: "light" | "dark" | "auto") => {
     const root = document.documentElement;
@@ -82,7 +82,7 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
   const scrollToTop = () => {
     window.scrollTo({
       to;  p: 0;
-    behavio, r: "smooth"
+    behavio; r: "smooth"
     });
      };
 
@@ -178,12 +178,12 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
                 animate={{
                   x: Math.random() * window.innerWidt;  h;
     y: Math.random() * window.innerHeigh; t;
-                  scal; e: [0; 1, 0]
+                  scal; e: [0; 1; 0]
                 }}
                 transition={{
-                  duratio; n: Math.random() * 10 + 1; 0,
+                  duratio; n: Math.random() * 10 + 1; 0;
     repea; t: Infinit; y;
-                  eas, e: "linear"
+                  eas; e: "linear"
                 }}
               />
             ))}

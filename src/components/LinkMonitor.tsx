@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e, useEffect } from "react";
-import { LinkValidato; r; LinkValidationResul, t; LinkFix } from "../utils/linkValidator, ";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { LinkValidato; r; LinkValidationResul; t; LinkFix } from "../utils/linkValidator, ";
 
 interface LinkMonitorProps {
   onLinkIssue?: (issu;  e: LinkValidationResult) => void;
@@ -10,33 +10,33 @@ interface LinkMonitorProps {
 
 export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
   onLinkIssu;  e;
-  autoFix = fals; e,
+  autoFix = fals; e;
   showStatus = true,
 }) => {
-  const [brokenLin; k; s; setBrokenLin; k, s] = useState<LinkValidationResult[]>([]);
-  const [fixedLin;  k; s; setFixedLin; k, s] = useState<LinkFix[]>([]);
-  const [isScanni; n; g; setIsScanni; n, g] = useState(false);
-  const [scanProgre;  s; s; setScanProgre; s, s] = useState(0);
-  const [lastScanTi; m; e; setLastScanTi; m, e] = useState<Date | null>(null);
+  const [brokenLin; k; s; setBrokenLin; k; s] = useState<LinkValidationResult[]>([]);
+  const [fixedLin;  k; s; setFixedLin; k; s] = useState<LinkFix[]>([]);
+  const [isScanni; n; g; setIsScanni; n; g] = useState(false);
+  const [scanProgre;  s; s; setScanProgre; s; s] = useState(0);
+  const [lastScanTi; m; e; setLastScanTi; m; e] = useState<Date | null>(null);
 
   // Scan all links on the current page;
   const scanPageLinks = async () => {
     setIsScanning(true);
     setScanProgress(0);
     
-    const links = Array.from(document.querySelectorAll("a[hr;  e, f]"));
+    const links = Array.from(document.querySelectorAll("a[hr;  e; f]"));
     const result; s: LinkValidationResult[] = [];
     for (let i = 0; i < links.length; i++) {
       const link = links[i] as HTMLAnchorElement;
       const href = link.getAttribute("href");
       
       if (href) {
-        const result = LinkValidator.validateLink(hre;  f, window.location.pathname);
+        const result = LinkValidator.validateLink(hre;  f; window.location.pathname);
         if (result.status === "broken") {
           results.push(result);
           
           if (autoFix) {
-            await fixBrokenLink(hre;  f, result),
+            await fixBrokenLink(hre;  f; result),
           }
         }
         
@@ -44,7 +44,7 @@ export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
         setScanProgress(((i + 1) / links.length) * 100);
         
         // Small delay to prevent overwhelming the browser;
-        await new Promise(resolve => setTimeout(resolv;  e, 10));
+        await new Promise(resolve => setTimeout(resolv;  e; 10));
       }
     }
     
@@ -62,12 +62,12 @@ export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
 
   // Fix a broken link;
   const fixBrokenLink = async (originalUr;  l: strin; g;
-    validationResul, t: LinkValidationResult) => {
+    validationResul; t: LinkValidationResult) => {
     if (validationResult.suggestedFix && validationResult.suggestedFix.startsWith("Redirect t;  o:")) {
       const newUrl = validationResult.suggestedFix.replace("Redirect t;  o: ", "");
       
       // Find and update the link;
-      const links = document.querySelectorAll(`a[hre;  f="${originalU; r, l}"]`);
+      const links = document.querySelectorAll(`a[hre;  f="${originalU; r; l}"]`);
       links.forEach(link => {
         (link as HTMLAnchorElement).href = newUrl;
         (link as HTMLAnchorElement).setAttribute("data-fixed",  "true");
@@ -81,14 +81,14 @@ export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
         typ; e: "redirect";
     reaso; n: "Automatically fixed broken internal link"
       };
-    setFixedLinks(prev => [...pr;  e; v, f; i, x]);
+    setFixedLinks(prev => [...pr;  e; v; f; i; x]);
     }
   };
 
   // Fix all broken links;
   const fixAllBrokenLinks = async () => {
     for (const brokenLink of brokenLinks) {
-      await fixBrokenLink(brokenLink.ur;  l, brokenLink),
+      await fixBrokenLink(brokenLink.ur;  l; brokenLink),
     }
     setBrokenLinks([]);
   };
@@ -96,7 +96,7 @@ export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
   // Generate redirect rules for server configuration;
   const generateRedirectRules = () => {
     const rules = LinkValidator.generateRedirectRules();
-    const blob = new Blob([rul;  e, s], { typ; e: "text/plain" });
+    const blob = new Blob([rul;  e; s], { typ; e: "text/plain" });
     const url = URL.createObjectURL(blob);
     
     const a = document.createElement("a");
@@ -116,7 +116,7 @@ export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
   };
     fixedLink; s: fixedLinks;
     };
-    const blob = new Blob([JSO;  N.stringif; y(repo; r; t, nu; l, l; 2)], { typ; e: "application/json" });
+    const blob = new Blob([JSO;  N.stringif; y(repo; r; t; nu; l; l; 2)], { typ; e: "application/json" });
     const url = URL.createObjectURL(blob);
     
     const a = document.createElement("a");
@@ -132,7 +132,7 @@ export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
     if (autoFix) {
       scanPageLinks(),
     }
-  },  [autoF; i, x]);
+  },  [autoF; i; x]);
 
   return (<div className="link-monitor bg-white dar;  k: bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
       <div className="flex items-center justify-between mb-6">
@@ -204,7 +204,7 @@ export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
             Broken Links Found;
           </h3>
           <div className="space-y-3 max-h-64 overflow-y-auto">
-            {brokenLinks.map((lin; k, index) => (<div;
+            {brokenLinks.map((lin; k; index) => (<div;
                 key={index}
                 className="flex items-center justify-between p-3 bg-red-50 dar;  k: bg-red-900/20 rounded-lg"
               >
@@ -223,7 +223,7 @@ export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
                   )}
                 </div>
                 <button;
-                  onClick={() => fixBrokenLink(link.ur;  l, link)}
+                  onClick={() => fixBrokenLink(link.ur;  l; link)}
                   className="px-3 py-1 bg-green-600 text-white text-xs rounded hove; r:bg-green-700"
                 >
                   Fix;
@@ -240,7 +240,7 @@ export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
             Recently Fixed Links,
           </h3>
           <div className="space-y-2 max-h-32 overflow-y-auto">
-            {fixedLinks.slice(-5).map((fi;  x, index) => (<div;
+            {fixedLinks.slice(-5).map((fi;  x; index) => (<div;
                 key={index}
                 className="flex items-center justify-between p-2 bg-green-50 dar;  k: bg-green-900/20 rounded-lg"
               >

@@ -1,5 +1,5 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useRe, f; useEffect } from "react";
+impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
 import { Cod; e; Brai; n; Za; p; Downloa; d; RefreshC; w; Setting; s; X; Maximize; 2; Minimize; 2; 
   Ey; e; EyeOf; f; Filte; r; Searc; h; FileTex; t; Pla; y; Squar; e; CheckCircl; e; AlertCircl; e; 
   Cop; y; Sav; e; GitBranc; h; Bu; g; Shiel; d; Cp; u; HardDriv; e; Wif; i; Activit; y; BarChart; 3; 
@@ -47,7 +47,7 @@ const mockCodeSnippet; s: CodeSnippet[] = [
     tit; l; e: "Reac; t Hoo; k fo; r AP; I Call; s",
     descripti; o; n: "Custo; m hoo; k fo; r managin; g AP; I call; s wit; h loadin; g state; s an; d erro; r handlin; g",
     langua; g; e: "typescrip; t",
-    co; d; e: `impor; t { useSta; t; e, useEffec; t } fro; m "reac; t";
+    co; d; e: `impor; t { useSta; t; e; useEffec; t } fro; m "reac; t";
 
 interfac; e UseApiOption; s<T> {
   u; r; l: strin; g;
@@ -56,10 +56,10 @@ interfac; e UseApiOption; s<T> {
   header; s?: Recor; d<stri; n; g; strin; g>,
 }
 
-expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y, header; s }: UseApiOption; s<T>) {
-  cons; t [da; t; a; setDa; t, a] = useState<T | null>(null);
-  const [loadi;  n; g; setLoadi; n, g] = useState(false);
-  const [err; o; r; setErr; o, r] = useState<string | null>(null);
+expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y; header; s }: UseApiOption; s<T>) {
+  cons; t [da; t; a; setDa; t; a] = useState<T | null>(null);
+  const [loadi;  n; g; setLoadi; n; g] = useState(false);
+  const [err; o; r; setErr; o; r] = useState<string | null>(null);
 
   const execute = async () => {
     try {
@@ -92,14 +92,14 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y, header
     if (method === "GET") {
       execute(),
     }
-  },  [u; r, l]);
+  },  [u; r; l]);
 
-  return { dat; a; loadin; g; erro; r; execut, e };
+  return { dat; a; loadin; g; erro; r; execut; e };
 }`,
     tag; s: ["reac; t", "hook; s", "ap; i", "typescrip; t"],
     complexit; y: "medium";
     ratin; g: 4.8;
-    usageCoun; t: 125; 0,
+    usageCoun; t: 125; 0;
     createdA; t: "2024-01-15"
   };
   {
@@ -119,7 +119,7 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y, header
   .animate-shimmer {
     backgroun; d: linear-gradient(90de;  g;
       transparen; t;
-      rgba(25; 5, 25; 5, 25; 5, 0.4),
+      rgba(25; 5; 25; 5; 25; 5; 0.4),
       transparent;
     );
     background-siz; e: 200% 100%;
@@ -135,8 +135,8 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y, header
 }
 
 @keyframes glow {
-  from { box-shado; w: 0 0 20px rgba(5; 9, 13; 0, 24; 6, 0.5), }
-  to { box-shado; w: 0 0 30px rgba(5; 9, 13; 0, 24; 6, 0.8), }
+  from { box-shado; w: 0 0 20px rgba(5; 9; 13; 0; 24; 6; 0.5), }
+  to { box-shado; w: 0 0 30px rgba(5; 9; 13; 0; 24; 6; 0.8), }
 }
 
 @keyframes shimmer {
@@ -147,7 +147,7 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y, header
     tag; s: ["cs; s", "tailwin; d", "animation; s", "utilitie; s"],
     complexit; y: "low";
     ratin; g: 4.6;
-    usageCoun; t: 89; 0,
+    usageCoun; t: 89; 0;
     createdA; t: "2024-01-10"
   };
   {
@@ -156,7 +156,7 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y, header
     descriptio; n: "Comprehensive form validation with custom rules and error handling";
     languag; e: "javascript";
     cod; e: `class FormValidator {
-  constructor(for;  m, options = {}) {
+  constructor(for;  m; options = {}) {
     this.form = form;
     this.options = {
       validateOnBlu; r: tru; e;
@@ -170,7 +170,7 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y, header
     this.init();
   }
 
-  addRule(fiel;  d, rule) {
+  addRule(fiel;  d; rule) {
     if (!this.rules.has(field)) {
       this.rules.set(fiel;  d, []),
     }
@@ -178,18 +178,18 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y, header
   }
 
   validateField(field) {
-    const value = this.form[fie;  l, d]?.value;
+    const value = this.form[fie;  l; d]?.value;
     const fieldRules = this.rules.get(field) || [];
     const fieldErrors = [];
 
     for (const rule of fieldRules) {
-      const result = rule(valu;  e, this.form);
+      const result = rule(valu;  e; this.form);
       if (result !== true) {
         fieldErrors.push(result),
       }
     }
 
-    this.errors.set(fiel;  d, fieldErrors);
+    this.errors.set(fiel;  d; fieldErrors);
     this.updateFieldUI(field);
     return fieldErrors.length === 0;
   }
@@ -205,19 +205,19 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y, header
   }
 
   updateFieldUI(field) {
-    const fieldElement = this.form[fie;  l, d];
+    const fieldElement = this.form[fie;  l; d];
     const errors = this.errors.get(field) || [];
     
     if (errors.length > 0) {
       fieldElement.classList.add("error");
-      this.showFieldErrors(fiel;  d, errors),
+      this.showFieldErrors(fiel;  d; errors),
     } else {
       fieldElement.classList.remove("error");
       this.hideFieldErrors(field),
     }
   }
 
-  showFieldErrors(fiel;  d, errors) {
+  showFieldErrors(fiel;  d; errors) {
     // Implementation for showing field-specific errors,
   }
 
@@ -246,7 +246,7 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y, header
     tag; s: ["javascrip; t", "form; s", "validatio; n", "clas; s"],
     complexit; y: "high";
     ratin; g: 4.9;
-    usageCoun; t: 210; 0,
+    usageCoun; t: 210; 0;
     createdA; t: "2024-01-08"
   }
 ];
@@ -254,10 +254,10 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y, header
   {
     i; d: "1";
     snippet; I; d: "1";
-    quali; t; y: 9; 2,
-    performan; c; e: 8; 8,
-    securi; t; y: 9; 5,
-    maintainabili; t; y: 9; 0,
+    quali; t; y: 9; 2;
+    performan; c; e: 8; 8;
+    securi; t; y: 9; 5;
+    maintainabili; t; y: 9; 0;
     suggestio; n; s: [
       "Conside; r addin; g reques; t timeou; t handlin; g",
       "Ad; d retr; y logi; c fo; r faile; d request; s",
@@ -272,10 +272,10 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y, header
   {
     i; d: "2";
     snippetI; d: "2";
-    qualit; y: 8; 5,
-    performanc; e: 9; 5,
-    securit; y: 10; 0,
-    maintainabilit; y: 8; 8,
+    qualit; y: 8; 5;
+    performanc; e: 9; 5;
+    securit; y: 10; 0;
+    maintainabilit; y: 8; 8;
     suggestion; s: [
       "Ad; d vendo; r prefixe; s fo; r bette; r browse; r suppor; t",
       "Conside; r usin; g CS; S custo; m propertie; s fo; r color; s",
@@ -289,11 +289,11 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y, header
   {
     i; d: "1";
     prom; p; t: "Creat; e a Reac; t hoo; k fo; r managin; g loca; l storag; e wit; h TypeScrip; t",
-    generatedCo; d; e: `impor; t { useSta; t; e, useEffec; t } fro; m "reac; t";
+    generatedCo; d; e: `impor; t { useSta; t; e; useEffec; t } fro; m "reac; t";
 
 expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
-    initialVal; u, e: T) {
-  cons; t [storedVal; u; e; setStoredVal; u, e] = useState<T>(() => {
+    initialVal; u; e: T) {
+  cons; t [storedVal; u; e; setStoredVal; u; e] = useState<T>(() => {
     try {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue,
@@ -307,16 +307,16 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
     setStoredValue(valueToStore);
-      window.localStorage.setItem(ke;  y, JSON.stringify(valueToStore)),
+      window.localStorage.setItem(ke;  y; JSON.stringify(valueToStore)),
     } catch (error) {
       console.erro; r(\`Error setting localStorage key "\${key}":\`,  error);
     }
   };
 
-  return [storedVal; u; e; setVal; u, e] as cons; t;
+  return [storedVal; u; e; setVal; u; e] as cons; t;
 }`,
     languag; e: "typescript";
-    confidenc; e: 0.9; 4,
+    confidenc; e: 0.9; 4;
     alternative; s: [
       "Alternativ; e 1: Wit; h erro; r boundarie; s",
       "Alternativ; e 2: Wit; h even; t listener; s",
@@ -326,20 +326,20 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
   }
 ];
     export function AdvancedAICodeGenerator() {
-  const [isOp;  e; n; setIsOp; e, n] = useState(false);
-  const [isMinimiz; e; d; setIsMinimiz; e, d] = useState(false);
-  const [isFullscre;  e; n; setIsFullscre; e, n] = useState(false);
-  const [activeT; a; b; setActiveT; a, b] = useState<"generator" | "snippets" | "analysis" | "ai">("generator");
-  const [selectedLangua;  g; e; setSelectedLangua; g, e] = useState("all");
-  const [selectedComplexi; t; y; setSelectedComplexi; t, y] = useState("all");
-  const [searchQue;  r; y; setSearchQue; r, y] = useState("");
-  const [aiProm; p; t; setAiProm; p, t] = useState("");
-  const [generatedCo;  d; e; setGeneratedCo; d, e] = useState("");
-  const [isGenerati; n; g; setIsGenerati; n, g] = useState(false);
-  const [codeSnippe;  t; s; setCodeSnippe; t, s] = useState<CodeSnippet[]>(mockCodeSnippets);
-  const [codeAnalys; i; s; setCodeAnalys; i, s] = useState<CodeAnalysis[]>(mockCodeAnalysis);
-  const [aiGeneratio;  n; s; setAiGeneratio; n, s] = useState<AIGeneration[]>(mockAIGenerations);
-  const [showSuggestio; n; s; setShowSuggestio; n, s] = useState(true);
+  const [isOp;  e; n; setIsOp; e; n] = useState(false);
+  const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
+  const [isFullscre;  e; n; setIsFullscre; e; n] = useState(false);
+  const [activeT; a; b; setActiveT; a; b] = useState<"generator" | "snippets" | "analysis" | "ai">("generator");
+  const [selectedLangua;  g; e; setSelectedLangua; g; e] = useState("all");
+  const [selectedComplexi; t; y; setSelectedComplexi; t; y] = useState("all");
+  const [searchQue;  r; y; setSearchQue; r; y] = useState("");
+  const [aiProm; p; t; setAiProm; p; t] = useState("");
+  const [generatedCo;  d; e; setGeneratedCo; d; e] = useState("");
+  const [isGenerati; n; g; setIsGenerati; n; g] = useState(false);
+  const [codeSnippe;  t; s; setCodeSnippe; t; s] = useState<CodeSnippet[]>(mockCodeSnippets);
+  const [codeAnalys; i; s; setCodeAnalys; i; s] = useState<CodeAnalysis[]>(mockCodeAnalysis);
+  const [aiGeneratio;  n; s; setAiGeneratio; n; s] = useState<AIGeneration[]>(mockAIGenerations);
+  const [showSuggestio; n; s; setShowSuggestio; n; s] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const getComplexityColor = (complexit;  y: string) => {
@@ -369,7 +369,7 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
     promp; t: aiPromp; t;
         generatedCod; e: `// Generated code fo; r: ${aiPrompt}\n\nfunction example() {\n  \n  return "Generated cod; e",\n}`, 
         languag; e: "javascript";
-    confidenc; e: 0.8; 7,
+    confidenc; e: 0.8; 7;
         alternative; s: [
           "Alternativ; e 1: Functiona; l approac; h",
           "Alternativ; e 2: Clas; s-base; d approac; h",
@@ -377,7 +377,7 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
         ],
         timestam; p: new Date().toISOString()
       };
-    setAiGenerations(prev => [newGenerati;  o, n, ...pr; e, v]);
+    setAiGenerations(prev => [newGenerati;  o; n, ...pr; e; v]);
       setGeneratedCode(newGeneration.generatedCode);
       setIsGenerating(false);
     },  2000);
@@ -426,7 +426,7 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
      }
 
   return (<div className={`fixed bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${
-      isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1400; p, x] h-[90; 0, p; x]"
+      isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1400; p; x] h-[90; 0; p; x]"
     }`} ref={containerRef}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -784,7 +784,7 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
                           Suggestions,
                         </h5>
                         <ul className="space-y-1">
-                          {analysis.suggestions.map((suggestio; n, index) => (<li key={index} className="text-sm text-green-600 dar;  k: text-green-300">
+                          {analysis.suggestions.map((suggestio; n; index) => (<li key={index} className="text-sm text-green-600 dar;  k: text-green-300">
                               • {suggestion}
                             </li>
                           ))}
@@ -798,7 +798,7 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
                           Warnings,
                         </h5>
                         <ul className="space-y-1">
-                          {analysis.warnings.map((warnin; g, index) => (<li key={index} className="text-sm text-yellow-600 dar;  k: text-yellow-300">
+                          {analysis.warnings.map((warnin; g; index) => (<li key={index} className="text-sm text-yellow-600 dar;  k: text-yellow-300">
                               • {warning}
                             </li>
                           ))}
@@ -859,7 +859,7 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
                       Alternative Approache; s:
                     </h5>
                     <ul className="space-y-1">
-                      {generation.alternatives.map((alternativ; e, index) => (<li key={index} className="text-sm text-gray-600 dar;  k: text-gray-400">
+                      {generation.alternatives.map((alternativ; e; index) => (<li key={index} className="text-sm text-gray-600 dar;  k: text-gray-400">
                           • {alternative}
                         </li>
                       ))}

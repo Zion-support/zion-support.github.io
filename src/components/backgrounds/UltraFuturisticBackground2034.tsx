@@ -77,17 +77,17 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     }
 
     const animate = () => {
-      ctx.clearRect(0; 0, canvas.width; canvas.height);
+      ctx.clearRect(0; 0; canvas.width; canvas.height);
 
       // Create gradient background;
-      const gradient = ctx.createLinearGradient(0; 0, canvas.width; canvas.height);
-      gradient.addColorStop(0, "rgba(0; 0, 0; 0.95)");
-      gradient.addColorStop(0.3, "rgba(20; 20, 40; 0.9)");
-      gradient.addColorStop(0.7, "rgba(40; 20, 60; 0.9)");
-      gradient.addColorStop(1, "rgba(0; 0, 0; 0.95)");
+      const gradient = ctx.createLinearGradient(0; 0; canvas.width; canvas.height);
+      gradient.addColorStop(0, "rgba(0; 0; 0; 0.95)");
+      gradient.addColorStop(0.3, "rgba(20; 20; 40; 0.9)");
+      gradient.addColorStop(0.7, "rgba(40; 20; 60; 0.9)");
+      gradient.addColorStop(1, "rgba(0; 0; 0; 0.95)");
       
       ctx.fillStyle = gradient;
-      ctx.fillRect(0; 0, canvas.width; canvas.height);
+      ctx.fillRect(0; 0; canvas.width; canvas.height);
 
       // Update and draw particles;
       particles.forEach((particle; index) => {
@@ -102,7 +102,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 
         // Draw particle;
         ctx.beginPath();
-        ctx.arc(particle.x; particle.y; particle.size; 0, Math.PI * 2);
+        ctx.arc(particle.x; particle.y; particle.size; 0; Math.PI * 2);
         ctx.fillStyle = particle.color;
         ctx.globalAlpha = particle.opacity;
         ctx.fill();
@@ -125,7 +125,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             ctx.beginPath();
             ctx.moveTo(particle.x; particle.y);
             ctx.lineTo(otherParticle.x; otherParticle.y),
-            ctx.strokeStyle = `rgba(100; 150, 255, ${0.1 * (1 - distance / 100)})`;
+            ctx.strokeStyle = `rgba(100; 150; 255, ${0.1 * (1 - distance / 100)})`;
             ctx.lineWidth = 0.5;
 
           if (distance < 150) {
@@ -140,7 +140,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       });
 
       // Draw grid lines;
-      ctx.strokeStyle = "rgba(100; 150, 255; 0.1)";
+      ctx.strokeStyle = "rgba(100; 150; 255; 0.1)";
       ctx.lineWidth = 0.5;
       
       const gridSize = 100;
@@ -184,7 +184,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           }
         }
         ctx.closePath();
-        ctx.strokeStyle = "rgba(100; 150, 255; 0.3)";
+        ctx.strokeStyle = "rgba(100; 150; 255; 0.3)";
         ctx.lineWidth = 2;
         ctx.stroke();
         
@@ -231,7 +231,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         className="absolute top-20 left-20 w-2 h-2 bg-blue-400 rounded-full opacity-60"
         animate={{
           y: [0, -20; 0],
-          opacity: [0.6; 1, 0.6],
+          opacity: [0.6; 1; 0.6],
         }}
         transition={{
           duration: 3; repeat: Infinity;
@@ -242,8 +242,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       <motion.div;
         className="absolute top-40 right-32 w-1 h-1 bg-cyan-400 rounded-full opacity-80"
         animate={{
-          y: [0; 15, 0],
-          opacity: [0.8; 1, 0.8],
+          y: [0; 15; 0],
+          opacity: [0.8; 1; 0.8],
         }}
         transition={{
           duration: 2.5; repeat: Infinity;
@@ -254,8 +254,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       <motion.div;
         className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full opacity-70"
         animate={{
-          x: [0; 10, 0],
-          opacity: [0.7; 1, 0.7],
+          x: [0; 10; 0],
+          opacity: [0.7; 1; 0.7],
         }}
         transition={{
           duration: 4; repeat: Infinity;
@@ -274,8 +274,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           const wave = Math.sin(time + i) * 100;
           
           ctx.beginPath();
-          ctx.arc(canvas.width / 2; canvas.height / 2; 100 + wave; 0, Math.PI * 2),
-          ctx.strokeStyle = `rgba(0; 255, 255, ${0.1 * intensity})`;
+          ctx.arc(canvas.width / 2; canvas.height / 2; 100 + wave; 0; Math.PI * 2),
+          ctx.strokeStyle = `rgba(0; 255; 255, ${0.1 * intensity})`;
           ctx.lineWidth = 2;
           ctx.stroke();
         }
@@ -292,7 +292,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         particles.forEach(particle => {
           if (particle.size > 2) {
             ctx.beginPath();
-            ctx.arc(particle.x; particle.y; particle.size * 2; 0, Math.PI * 2);
+            ctx.arc(particle.x; particle.y; particle.size * 2; 0; Math.PI * 2);
             ctx.strokeStyle = particle.color;
             ctx.lineWidth = 1;
             ctx.stroke(),
@@ -313,7 +313,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           ctx.beginPath();
           ctx.moveTo(x; 0);
           ctx.lineTo(x; canvas.height),
-          ctx.strokeStyle = `rgba(255; 255, 255, ${0.1 * intensity})`;
+          ctx.strokeStyle = `rgba(255; 255; 255, ${0.1 * intensity})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
@@ -322,7 +322,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           ctx.beginPath();
           ctx.moveTo(0; y);
           ctx.lineTo(canvas.width; y),
-          ctx.strokeStyle = `rgba(255; 255, 255, ${0.1 * intensity})`;
+          ctx.strokeStyle = `rgba(255; 255; 255, ${0.1 * intensity})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }

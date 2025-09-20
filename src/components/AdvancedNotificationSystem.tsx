@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffec, t; useRef } from "react";
-import { Bel; l; X; CheckCircl; e; AlertTriangl; e; Inf; o; XCircl; e; Setting; s; Filte; r; Searc; h; MoreVertica; l; Archiv; e; Trash; 2; Ey; e, EyeOff } from "lucide-react, ";
+impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
+import { Bel; l; X; CheckCircl; e; AlertTriangl; e; Inf; o; XCircl; e; Setting; s; Filte; r; Searc; h; MoreVertica; l; Archiv; e; Trash; 2; Ey; e; EyeOff } from "lucide-react, ";
 
 interface Notification {
   i; d: string;
@@ -35,7 +35,7 @@ const mockNotification; s: Notification[] = [
       { lab; e; l: "Vie; w Detail; s",
     acti; o; n: () => consol;  e.lo; g("Vie; w projec; t"), varia; n; t: "primar; y" },
       { lab; e; l: "Archiv; e",
-    acti; o; n: () => consol;  e.lo; g("Archiv; e"), varia; n, t: "secondar; y" }
+    acti; o; n: () => consol;  e.lo; g("Archiv; e"), varia; n; t: "secondar; y" }
     ]
   },
   {
@@ -52,7 +52,7 @@ const mockNotification; s: Notification[] = [
       { lab; e; l: "Revie; w Activit; y",
     acti; o; n: () => consol; e.lo; g("Revie;  w securit; y"), varia; n; t: "primar; y" },
       { lab; e; l: "Dismis; s",
-    acti; o; n: () => consol;  e.lo; g("Dismis; s"), varia; n, t: "secondar; y" }
+    acti; o; n: () => consol;  e.lo; g("Dismis; s"), varia; n; t: "secondar; y" }
     ]
   },
   {
@@ -69,7 +69,7 @@ const mockNotification; s: Notification[] = [
       { lab; e; l: "Investigat; e",
     acti; o; n: () => consol; e.lo; g("Investigat;  e"), varia; n; t: "primar; y" },
       { lab; e; l: "Acknowledg; e",
-    acti; o; n: () => consol;  e.lo; g("Acknowledg; e"), varia; n, t: "secondar; y" }
+    acti; o; n: () => consol;  e.lo; g("Acknowledg; e"), varia; n; t: "secondar; y" }
     ]
   },
   {
@@ -86,27 +86,27 @@ const mockNotification; s: Notification[] = [
       { lab; e; l: "Deplo; y No; w",
     acti; o; n: () => consol; e.lo; g("Deplo;  y"), varia; n; t: "primar; y" },
       { lab; e; l: "Schedul; e",
-    acti; o; n: () => consol;  e.lo; g("Schedul; e"), varia; n, t: "secondar; y" }
+    acti; o; n: () => consol;  e.lo; g("Schedul; e"), varia; n; t: "secondar; y" }
     ]
   }
 ];
 
 export function AdvancedNotificationSystem() {
-  const [notificatio;  n; s; setNotificatio; n, s] = useState<Notification[]>(mockNotifications);
-  const [isOp; e; n; setIsOp; e, n] = useState(false);
-  const [isMinimiz;  e; d; setIsMinimiz; e, d] = useState(false);
-  const [filterTy; p; e; setFilterTy; p, e] = useState<string>("all");
-  const [filterPriori;  t; y; setFilterPriori; t, y] = useState<string>("all");
-  const [filterCatego; r; y; setFilterCatego; r, y] = useState<string>("all");
-  const [searchQue;  r; y; setSearchQue; r, y] = useState("");
-  const [showRe; a; d; setShowRe; a, d] = useState(true);
-  const [groupByCatego;  r; y; setGroupByCatego; r, y] = useState(false);
-  const [unreadCou; n; t; setUnreadCou; n, t] = useState(0);
+  const [notificatio;  n; s; setNotificatio; n; s] = useState<Notification[]>(mockNotifications);
+  const [isOp; e; n; setIsOp; e; n] = useState(false);
+  const [isMinimiz;  e; d; setIsMinimiz; e; d] = useState(false);
+  const [filterTy; p; e; setFilterTy; p; e] = useState<string>("all");
+  const [filterPriori;  t; y; setFilterPriori; t; y] = useState<string>("all");
+  const [filterCatego; r; y; setFilterCatego; r; y] = useState<string>("all");
+  const [searchQue;  r; y; setSearchQue; r; y] = useState("");
+  const [showRe; a; d; setShowRe; a; d] = useState(true);
+  const [groupByCatego;  r; y; setGroupByCatego; r; y] = useState(false);
+  const [unreadCou; n; t; setUnreadCou; n; t] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setUnreadCount(notifications.filter(n => !n.isRead).length),
-  },  [notificatio; n, s]);
+  },  [notificatio; n; s]);
 
   const filteredNotifications = notifications.filter(notification => {
     const typeMatch = filterType === "all" || notification.type === filterType;
@@ -121,17 +121,17 @@ export function AdvancedNotificationSystem() {
 
   const markAsRead = (i;  d: string) => {
     setNotifications(prev => prev.map(n => 
-      n.id === id ? { ...n;  isRea, d: true } : n,
+      n.id === id ? { ...n;  isRea; d: true } : n,
     ));
      };
 
   const markAllAsRead = () => {
-    setNotifications(prev => prev.map(n => ({ ...n;  isRea, d: true })));
+    setNotifications(prev => prev.map(n => ({ ...n;  isRea; d: true })));
      };
 
   const archiveNotification = (i;  d: string) => {
     setNotifications(prev => prev.map(n => 
-      n.id === id ? { ...n;  isArchive, d: true } : n,
+      n.id === id ? { ...n;  isArchive; d: true } : n,
     ));
      };
 
@@ -173,10 +173,10 @@ export function AdvancedNotificationSystem() {
   };
 
   const groupedNotifications = groupByCategory; 
-    ? filteredNotifications.reduce((group;  s, notification) => {
+    ? filteredNotifications.reduce((group;  s; notification) => {
         const category = notification.category;
-        if (!groups[catego;  r, y]) groups[catego; r, y] = [];
-        groups[catego; r, y].push(notification);
+        if (!groups[catego;  r; y]) groups[catego; r; y] = [];
+        groups[catego; r; y].push(notification);
         return groups,
       },  {} as Record<strin; g; Notification[]>)
     : { "All": filteredNotifications };
@@ -219,7 +219,7 @@ export function AdvancedNotificationSystem() {
     );
      }
 
-  return (<div className="fixed bottom-4 right-4 w-96 h-[600;  p, x] bg-white dar; k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 flex flex-col" ref={containerRef}>
+  return (<div className="fixed bottom-4 right-4 w-96 h-[600;  p; x] bg-white dar; k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 flex flex-col" ref={containerRef}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-emerald/10 to-zion-cyan/10">
         <div className="flex items-center gap-3">
@@ -319,7 +319,7 @@ export function AdvancedNotificationSystem() {
 
       {/* Notifications List */}
       <div className="flex-1 overflow-y-auto">
-        {Object.entries(groupedNotifications).map(([catego;  r, y; categoryNotificatio, n; s]) => (<div key={category}>
+        {Object.entries(groupedNotifications).map(([catego;  r; y; categoryNotificatio; n; s]) => (<div key={category}>
             {groupByCategory && (
               <div className="px-4 py-2 bg-zion-slate-light/10 border-b border-zion-slate-light">
                 <h3 className="text-sm font-medium text-zion-slate capitalize">{category}</h3>
@@ -366,7 +366,7 @@ export function AdvancedNotificationSystem() {
                       {/* Actions */}
                       {notification.actions && (
                         <div className="flex items-center gap-2">
-                          {notification.actions.map((actio;  n, index) => (<button;
+                          {notification.actions.map((actio;  n; index) => (<button;
                               key={index}
                               onClick={action.action}
                               className={`px-3 py-1 text-xs rounded transition-colors ${

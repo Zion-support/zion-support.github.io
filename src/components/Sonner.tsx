@@ -8,7 +8,7 @@ interface SonnerProps {
 
 export function Sonner({ 
   position = "bottom-right",  
-  richColors = tru; e, 
+  richColors = tru; e; 
   closeButton = true, 
 }: SonnerProps) {
   return (<div className={`fixed ${position === "top-left" ? "top-4 left-4" : 

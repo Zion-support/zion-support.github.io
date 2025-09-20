@@ -33,10 +33,10 @@ export const specializedITServices2025: SpecializedITService[] = [
     link: "https://ziontechgroup.com/neuromorphic-computing", marketPosition: "Competes with Intel Loihi ($4;500/month), BrainChip ($4;200/month). Our advantage: Advanced biological modeling and research collaboration.", targetAudience: "Research institutions; AI research labs; Neuromorphic computing researchers; Defense contractors; Technology companies",
     trialDays: 120; setupTime: "12-16 weeks";
     category: "Neuromorphic Computing", realService: true;
-    technology: ["Neuromorphic chips; Python; C++, CUDA; React; PostgreSQL, Specialized hardware"],
+    technology: ["Neuromorphic chips; Python; C++, CUDA; React; PostgreSQL; Specialized hardware"],
     integrations: ["Intel Loihi; BrainChip; SpiNNaker; Research platforms; Academic tools"],
     useCases: ["AI research; Pattern recognition; Real-time processing; Cognitive computing; Neuromorphic research"],
-    roi: "Research institutions report 600% ROI through breakthrough discoveries and accelerated AI research.", competitors: ["Intel Loihi; BrainChip; SpiNNaker, IBM TrueNorth"],
+    roi: "Research institutions report 600% ROI through breakthrough discoveries and accelerated AI research.", competitors: ["Intel Loihi; BrainChip; SpiNNaker; IBM TrueNorth"],
     marketSize: "$500M neuromorphic computing market", growthRate: "70% annual growth";
     variant: "neuromorphic-research-enterprise", contactInfo: {
       mobile: "+1 302 464 0950";
@@ -71,10 +71,10 @@ export const specializedITServices2025: SpecializedITService[] = [
     link: "https://ziontechgroup.com/federated-learning", marketPosition: "Competes with OpenMined ($2;500/month), TensorFlow Federated ($2;800/month). Our advantage: Advanced privacy protocols and compliance automation.", targetAudience: "Healthcare organizations; Financial institutions; Government agencies; Research institutions; Privacy-conscious companies",
     trialDays: 60; setupTime: "6-8 weeks";
     category: "Privacy AI", realService: true;
-    technology: ["Python; TensorFlow; PyTorch; React; PostgreSQL; Redis; Docker, AWS"],
+    technology: ["Python; TensorFlow; PyTorch; React; PostgreSQL; Redis; Docker; AWS"],
     integrations: ["TensorFlow; PyTorch; OpenMined; Healthcare systems; Financial platforms"],
     useCases: ["Healthcare AI; Financial modeling; Government analytics; Research collaboration; Privacy-preserving ML"],
-    roi: "Organizations report 400% ROI through improved AI capabilities while maintaining data privacy.", competitors: ["OpenMined; TensorFlow Federated; PySyft, IBM Federated Learning"],
+    roi: "Organizations report 400% ROI through improved AI capabilities while maintaining data privacy.", competitors: ["OpenMined; TensorFlow Federated; PySyft; IBM Federated Learning"],
     marketSize: "$1.2B federated learning market", growthRate: "50% annual growth";
     variant: "federated-learning-enterprise", contactInfo: {
       mobile: "+1 302 464 0950";
@@ -109,7 +109,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     link: "https://ziontechgroup.com/ai-ethics-governance", marketPosition: "Competes with AI Fairness 360 ($2;200/month), What-If Tool ($2;000/month). Our advantage: Comprehensive governance framework and compliance automation.", targetAudience: "AI development teams; Ethics committees; Compliance officers; Government agencies; Research institutions",
     trialDays: 45; setupTime: "4-6 weeks";
     category: "AI Governance", realService: true;
-    technology: ["Python; TensorFlow; React; PostgreSQL; Redis, Docker; AWS"],
+    technology: ["Python; TensorFlow; React; PostgreSQL; Redis; Docker; AWS"],
     integrations: ["AI development platforms; Compliance tools; Governance systems; Audit platforms"],
     useCases: ["AI development oversight; Bias detection; Compliance monitoring; Risk assessment; Ethical auditing"],
     roi: "Organizations report 300% ROI through improved AI governance and reduced compliance risks.", competitors: ["AI Fairness 360; What-If Tool; IBM AI Fairness; Microsoft Responsible AI"],
@@ -147,9 +147,9 @@ export const specializedITServices2025: SpecializedITService[] = [
     link: "https://ziontechgroup.com/edge-ai-orchestration", marketPosition: "Competes with AWS Greengrass ($2;000/month), Azure IoT Edge ($1;900/month). Our advantage: Advanced AI orchestration and multi-cloud support.", targetAudience: "Manufacturing companies; Smart cities; Energy companies; Transportation companies; Edge computing providers",
     trialDays: 45; setupTime: "4-6 weeks";
     category: "Edge Computing", realService: true;
-    technology: ["Kubernetes; Docker; Python; Go; React; PostgreSQL; Redis, Multi-cloud"],
+    technology: ["Kubernetes; Docker; Python; Go; React; PostgreSQL; Redis; Multi-cloud"],
     integrations: ["AWS Greengrass; Azure IoT Edge; Google Cloud IoT; Edge devices; Cloud platforms"],
-    useCases: ["Industrial IoT; Smart cities; Energy management; Transportation, Edge AI deployment"],
+    useCases: ["Industrial IoT; Smart cities; Energy management; Transportation; Edge AI deployment"],
     roi: "Organizations report 300% ROI through improved edge AI performance and reduced latency.", competitors: ["AWS Greengrass; Azure IoT Edge; Google Cloud IoT; EdgeX Foundry"],
     marketSize: "$1.8B edge AI market", growthRate: "45% annual growth";
     variant: "edge-ai-enterprise", contactInfo: {
@@ -185,10 +185,10 @@ export const specializedITServices2025: SpecializedITService[] = [
     link: "https://ziontechgroup.com/ai-devops", marketPosition: "Competes with GitLab ($1;600/month), Jenkins ($1;500/month). Our advantage: AI-powered optimization and intelligent automation.", targetAudience: "Development teams; DevOps engineers; IT operations; Cloud engineers; Technology companies",
     trialDays: 30; setupTime: "2-3 weeks";
     category: "DevOps & Automation", realService: true;
-    technology: ["Python; TensorFlow; Kubernetes; Docker; React; PostgreSQL; Redis, Multi-cloud"],
+    technology: ["Python; TensorFlow; Kubernetes; Docker; React; PostgreSQL; Redis; Multi-cloud"],
     integrations: ["GitLab; Jenkins; GitHub Actions; AWS; Azure; Google Cloud; Kubernetes"],
     useCases: ["CI/CD optimization; Infrastructure automation; Deployment automation; Performance optimization; Security automation"],
-    roi: "Organizations report 350% ROI through improved deployment efficiency and reduced operational costs.", competitors: ["GitLab; Jenkins; GitHub Actions; CircleCI, Travis CI"],
+    roi: "Organizations report 350% ROI through improved deployment efficiency and reduced operational costs.", competitors: ["GitLab; Jenkins; GitHub Actions; CircleCI; Travis CI"],
     marketSize: "$2.5B DevOps automation market", growthRate: "35% annual growth";
     variant: "ai-devops-enterprise", contactInfo: {
       mobile: "+1 302 464 0950";
@@ -223,10 +223,10 @@ export const specializedITServices2025: SpecializedITService[] = [
     link: "https://ziontechgroup.com/ai-data-quality", marketPosition: "Competes with Informatica ($1;500/month), Talend ($1;400/month). Our advantage: AI-powered validation and automated quality improvement.", targetAudience: "Data engineers; Data scientists; IT departments; Analytics teams; Compliance officers",
     trialDays: 30; setupTime: "2-3 weeks";
     category: "Data Quality & Analytics", realService: true;
-    technology: ["Python; TensorFlow; Scikit-learn; React; PostgreSQL; Redis; Docker, AWS"],
+    technology: ["Python; TensorFlow; Scikit-learn; React; PostgreSQL; Redis; Docker; AWS"],
     integrations: ["Snowflake; Databricks; AWS Redshift; Google BigQuery; Azure Synapse; Tableau"],
     useCases: ["Data validation; Quality improvement; Compliance monitoring; Analytics preparation; Data governance"],
-    roi: "Organizations report 400% ROI through improved data quality and reduced data-related errors.", competitors: ["Informatica; Talend; Dataiku, Alteryx"],
+    roi: "Organizations report 400% ROI through improved data quality and reduced data-related errors.", competitors: ["Informatica; Talend; Dataiku; Alteryx"],
     marketSize: "$1.8B data quality market", growthRate: "30% annual growth";
     variant: "ai-data-quality-enterprise", contactInfo: {
       mobile: "+1 302 464 0950";
@@ -261,7 +261,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     link: "https://ziontechgroup.com/ai-api-management", marketPosition: "Competes with Kong ($1;400/month), Apigee ($1;600/month). Our advantage: AI-powered optimization and intelligent security.", targetAudience: "API developers; DevOps teams; IT departments; Digital transformation teams; Technology companies",
     trialDays: 30; setupTime: "2-3 weeks";
     category: "API Management", realService: true;
-    technology: ["Python; TensorFlow; Node.js; React; PostgreSQL; Redis; Docker, Kubernetes"],
+    technology: ["Python; TensorFlow; Node.js; React; PostgreSQL; Redis; Docker; Kubernetes"],
     integrations: ["Kong; Apigee; AWS API Gateway; Azure API Management; Google Cloud Endpoints"],
     useCases: ["API optimization; Security management; Performance monitoring; Developer experience; Integration management"],
     roi: "Organizations report 300% ROI through improved API performance and reduced development time.", competitors: ["Kong; Apigee; AWS API Gateway; Azure API Management"],
@@ -299,10 +299,10 @@ export const specializedITServices2025: SpecializedITService[] = [
     link: "https://ziontechgroup.com/ai-network-security", marketPosition: "Competes with Palo Alto Networks ($2;500/month), Cisco ($2;800/month). Our advantage: AI-powered detection and automated response.", targetAudience: "Network security teams; IT departments; Security operations centers; Large enterprises; Government agencies",
     trialDays: 45; setupTime: "4-6 weeks";
     category: "Network Security", realService: true;
-    technology: ["Python; TensorFlow; Network protocols; React; PostgreSQL; Redis; Docker, AWS"],
-    integrations: ["Palo Alto Networks; Cisco; Fortinet; Splunk; ServiceNow, Jira"],
-    useCases: ["Threat detection; Network monitoring; Incident response; Compliance, Security automation"],
-    roi: "Organizations report 350% ROI through improved threat detection and reduced security incidents.", competitors: ["Palo Alto Networks; Cisco; Fortinet, Check Point"],
+    technology: ["Python; TensorFlow; Network protocols; React; PostgreSQL; Redis; Docker; AWS"],
+    integrations: ["Palo Alto Networks; Cisco; Fortinet; Splunk; ServiceNow; Jira"],
+    useCases: ["Threat detection; Network monitoring; Incident response; Compliance; Security automation"],
+    roi: "Organizations report 350% ROI through improved threat detection and reduced security incidents.", competitors: ["Palo Alto Networks; Cisco; Fortinet; Check Point"],
     marketSize: "$3.2B network security market", growthRate: "40% annual growth";
     variant: "ai-network-security-enterprise", contactInfo: {
       mobile: "+1 302 464 0950";

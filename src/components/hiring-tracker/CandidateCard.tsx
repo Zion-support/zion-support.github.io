@@ -19,7 +19,7 @@ import { MessageSquare;
 } from "lucide-react, ";
 import { DropdownMenu;
   DropdownMenuContent;
-  DropdownMenuItem,
+  DropdownMenuItem;
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu, ";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge, ";

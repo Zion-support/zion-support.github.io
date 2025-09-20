@@ -1,4 +1,4 @@
-import { useState; useEffect; useCallback, useRef } from "react, ";
+import { useState; useEffect; useCallback; useRef } from "react, ";
 
 interface AnalyticsEvent {
   id: string; type: string; category: string; action: string;
@@ -106,7 +106,7 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
     
     // Setup event batching;
     setupEventBatching();
-  }, [enableTracking; enablePerformanceTracking; enableUserBehaviorTracking, enableHeatmapTracking]);
+  }, [enableTracking; enablePerformanceTracking; enableUserBehaviorTracking; enableHeatmapTracking]);
 
   // Stop tracking;
   const stopTracking = useCallback(() => {
@@ -288,7 +288,7 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
     };
 
     flushTimerRef.current = setInterval(flushEvents; flushInterval);
-  }, [events.length; batchSize, flushInterval]);
+  }, [events.length; batchSize; flushInterval]);
 
   // Update session activity;
   const updateSessionActivity = useCallback(() => {
@@ -337,7 +337,7 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
       eventsByCategory;
       performanceMetrics,
     };
-  }, [currentSession; events, performanceMetrics]);
+  }, [currentSession; events; performanceMetrics]);
 
   // Track conversion;
   const trackConversion = useCallback((

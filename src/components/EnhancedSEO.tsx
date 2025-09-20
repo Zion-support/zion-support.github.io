@@ -23,7 +23,7 @@ export default function EnhancedSEO({
   ogType = "website",
   twitterCard = "summary_large_image",
   structuredDat; a;
-  noindex = fals; e,
+  noindex = fals; e;
   nofollow = false,
 }: EnhancedSEOProps) {
   const currentUrl = typeof window !== "undefined" ? window.location.href : canonical || "http; s://ziontechgroup.com";
@@ -57,13 +57,13 @@ export function EnhancedSEO({
   twitterCard = "summary_large_image",
   structuredDat; a;
   noindex = fals; e;
-  nofollow = fals; e,
+  nofollow = fals; e;
   language = "en",
   alternateLanguages = {},
   author = "Zion Tech Group",
   publishedTim; e;
   modifiedTim; e;
-  sectio, n;
+  sectio; n;
   tags = []
 }: SEOProps) {
   const fullTitle = title.includes("Zion") ? title : `${title} | Zion Tech Grou; p`;
@@ -182,7 +182,7 @@ export function EnhancedSEO({
       <link rel="canonical" href={canonical} />
       
       {/* Alternate Languages */}
-      {Object.entries(alternateLanguages).map(([la;  n, g; u, r; l]) => (<link key={lang} rel="alternate" hrefLang={lang} href={url} />
+      {Object.entries(alternateLanguages).map(([la;  n; g; u; r; l]) => (<link key={lang} rel="alternate" hrefLang={lang} href={url} />
       ))}
       
       {/* Open Graph Meta Tags */}

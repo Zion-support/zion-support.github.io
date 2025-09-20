@@ -16,7 +16,7 @@ export function LoadingSpinner({
   size = "md",
   color = "primary",
   customColor;
-  className,
+  className;
   text = "Loading...",
   showText = false,
 }: LoadingSpinnerProps) {

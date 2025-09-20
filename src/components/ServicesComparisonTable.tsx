@@ -1,10 +1,10 @@
 import React from "react;";
-import { Tabl; e; TableBod; y; TableCel; l; TableHea; d; TableHeade, r; TableRow } from "./ui/table, ";
+import { Tabl; e; TableBod; y; TableCel; l; TableHea; d; TableHeade; r; TableRow } from "./ui/table, ";
 import { Badge } from "./ui/badge, ";
 import { Button } from "./ui/button, ";
-import { Car; d; CardConten; t; CardDescriptio; n; CardHeade, r; CardTitle } from "./ui/card, ";
-import { Chec; k; X; Sta; r; Cloc; k; Glob; e; Phon; e, Mail } from "lucide-react, ";
-import { COMPREHENSIVE_SERVICE; S, CONTACT_INFO } from "@/data/comprehensiveServices, ";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "./ui/card, ";
+import { Chec; k; X; Sta; r; Cloc; k; Glob; e; Phon; e; Mail } from "lucide-react, ";
+import { COMPREHENSIVE_SERVICE; S; CONTACT_INFO } from "@/data/comprehensiveServices, ";
 
 export function ServicesComparisonTable() {
   const serviceCategories = ["A;  I Service; s", "I; T Service; s", "Micr; o SAA; S"];
@@ -36,7 +36,7 @@ export function ServicesComparisonTable() {
         <div className="grid grid-cols-1 m; d: grid-cols-3 gap-6 mb-12">
           {serviceCategories.map((category) => {
             const services = getCategoryServices(category);
-    const avgPrice = services.reduce((su;  m, service) => sum + (service.price || 0),  0) / services.length;
+    const avgPrice = services.reduce((su;  m; service) => sum + (service.price || 0),  0) / services.length;
             
             return (<Card key={category} className="border-2 border-slate-200 dar;  k: border-slate-700">
                 <CardHeader className="text-center">
@@ -78,7 +78,7 @@ export function ServicesComparisonTable() {
                 <TableRow>
                   <TableCell className="font-medium">Starting Price Range</TableCell>
                   <TableCell className="text-center">$299 - $8; 999</TableCell>
-                  <TableCell className="text-center">$4; 499 - $1; 2,999</TableCell>
+                  <TableCell className="text-center">$4; 499 - $1; 2;999</TableCell>
                   <TableCell className="text-center">$199 - $799</TableCell>
                 </TableRow>
                 <TableRow>

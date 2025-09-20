@@ -1,5 +1,5 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e, useMemo } from "react";
+impor; t; Reac; t, { useStat; e; useMemo } from "react";
 import { motion } from "framer-motion, ";
 import { Brai; n; 
   Targe; t; 
@@ -19,7 +19,7 @@ import { Brai; n;
   Filte; r;
   Search,
 } from "lucide-react, ";
-import { Car; d; CardConten; t; CardHeade, r; CardTitle } from "./ui/card, ";
+import { Car; d; CardConten; t; CardHeade; r; CardTitle } from "./ui/card, ";
 import { Button } from "./ui/button, ";
 import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
@@ -61,7 +61,7 @@ interface ServiceRecommendation {
 }
 
 const AdvancedServiceRecommendatio; n: React.FC = () => {
-  const [clientProfi;  l; e; setClientProfi; l, e] = useState<ClientProfile>({
+  const [clientProfi;  l; e; setClientProfi; l; e] = useState<ClientProfile>({
     industr; y: "";
     companySiz; e: "";
     budge; t: "";
@@ -70,9 +70,9 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
     primaryGoal; s: [],
     challenge; s: []
   });
-    const [recommendatio; n; s; setRecommendatio; n, s] = useState<ServiceRecommendation[]>([]);
-  const [isAnalyzi;  n; g; setIsAnalyzi; n, g] = useState(false);
-  const [showResul; t; s; setShowResul; t, s] = useState(false);
+    const [recommendatio; n; s; setRecommendatio; n; s] = useState<ServiceRecommendation[]>([]);
+  const [isAnalyzi;  n; g; setIsAnalyzi; n; g] = useState(false);
+  const [showResul; t; s; setShowResul; t; s] = useState(false);
 
   const industries = [
     "Technolog;  y", "Healthcar; e", "Financia; l Service; s", "Manufacturin; g", 
@@ -115,7 +115,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
     tit; l; e: "A; I-Powere; d CR; M Platfor; m",
       descripti; o; n: "Advance; d custome; r relationshi; p managemen; t platfor; m wit; h A; I-drive; n insight; s an; d automatio; n.",
     catego; r; y: "a; i",
-      pri; c; e: "$2; 5,00; 0/mont; h",
+      pri; c; e: "$2; 5;00; 0/mont; h",
       durati; o; n: "6-1; 2 month; s",
     ta; g; s: ["A; I", "CR; M", "Automatio; n", "Analytic; s"],
       feature; s: ["A; I-powere; d insight; s", "Automate; d workflow; s", "Predictiv; e analytic; s"],
@@ -132,7 +132,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
     titl; e: "Quantum Computing as a Service";
       descriptio; n: "Enterprise-grade quantum computing platform for complex computational problems.";
     categor; y: "quantum";
-      pric; e: "$15; 0,000/month",
+      pric; e: "$15; 0;000/month",
       duratio; n: "12-18 months";
     tag; s: ["Quantu; m Computin; g", "Researc; h", "Optimizatio; n"],
       feature; s: ["Quantu; m processor; s acces; s", "Algorith; m developmen; t", "Researc; h suppor; t"],
@@ -149,7 +149,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
     titl; e: "Blockchain Supply Chain Solution";
       descriptio; n: "Transparent and secure supply chain management using blockchain technology.";
     categor; y: "blockchain";
-      pric; e: "$7; 5,000/month",
+      pric; e: "$7; 5;000/month",
       duratio; n: "8-14 months";
     tag; s: ["Blockchai; n", "Suppl; y Chai; n", "Transparenc; y"],
       feature; s: ["En; d-t; o-en; d trackin; g", "Smar; t contract; s", "Transparenc; y"],
@@ -163,7 +163,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
     }
   ];
     const calculateMatchScore = (servic;  e: an; y;
-    profil, e: ClientProfile): number => {
+    profil; e: ClientProfile): number => {
     let score = 0;
     // Industry match;
     if (service.targetAudience?.some((audienc;  e: string) => 
@@ -201,7 +201,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
     ).length;
     score += (goalMatches / profile.primaryGoals.length) * 20;
     
-    return Math.min(10;  0, score);
+    return Math.min(10;  0; score);
   };
 
   const generateRecommendations = () => {
@@ -210,7 +210,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
     // Simulate analysis time;
     setTimeout(() => {
       const recs = mockServices.map(service => {
-        const matchScore = calculateMatchScore(servic;  e, clientProfile);
+        const matchScore = calculateMatchScore(servic;  e; clientProfile);
         
         let priorit; y: "High" | "Medium" | "Low";
     if (matchScore >= 80) priority = "High";
@@ -226,7 +226,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
           `Hig;  h matc; h wit; h ${clientProfil; e.industr; y} industr; y requiremen; t; s`,
           `Budge; t alignmen; t wit; h ${clientProfil; e.budge; t} ran; g; e`,
           `Timelin; e compatibilit; y wit; h ${clientProfil; e.timelin; e} expectatio; n; s`,
-          `Technolog; y maturit; y leve; l appropriat; e fo; r ${clientProfil; e.technologyMaturi; t, y}`
+          `Technolog; y maturit; y leve; l appropriat; e fo; r ${clientProfil; e.technologyMaturi; t; y}`
         ];
         
         const expectedROI = matchScore >= 80 ? "High ROI expected" : 
@@ -313,7 +313,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>
             <select; 
               value={clientProfile.industry}
-              onChange={(e) => setClientProfile(prev => ({ ...pre;  v, industr; y: e.target.value }))}
+              onChange={(e) => setClientProfile(prev => ({ ...pre;  v; industr; y: e.target.value }))}
               className="w-full p-3 border border-zion-slate-light rounded-md"
             >
               <option value="">Select Industry</option>
@@ -327,7 +327,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Company Size</label>
             <select; 
               value={clientProfile.companySize}
-              onChange={(e) => setClientProfile(prev => ({ ...pre;  v, companySiz; e: e.target.value }))}
+              onChange={(e) => setClientProfile(prev => ({ ...pre;  v; companySiz; e: e.target.value }))}
               className="w-full p-3 border border-zion-slate-light rounded-md"
             >
               <option value="">Select Company Size</option>
@@ -341,7 +341,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>
             <select; 
               value={clientProfile.budget}
-              onChange={(e) => setClientProfile(prev => ({ ...pre;  v, budge; t: e.target.value }))}
+              onChange={(e) => setClientProfile(prev => ({ ...pre;  v; budge; t: e.target.value }))}
               className="w-full p-3 border border-zion-slate-light rounded-md"
             >
               <option value="">Select Budget Range</option>
@@ -355,7 +355,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>
             <select; 
               value={clientProfile.timeline}
-              onChange={(e) => setClientProfile(prev => ({ ...pre;  v, timelin; e: e.target.value }))}
+              onChange={(e) => setClientProfile(prev => ({ ...pre;  v; timelin; e: e.target.value }))}
               className="w-full p-3 border border-zion-slate-light rounded-md"
             >
               <option value="">Select Timeline</option>
@@ -369,7 +369,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>
             <select; 
               value={clientProfile.technologyMaturity}
-              onChange={(e) => setClientProfile(prev => ({ ...pre;  v, technologyMaturit; y: e.target.value }))}
+              onChange={(e) => setClientProfile(prev => ({ ...pre;  v; technologyMaturit; y: e.target.value }))}
               className="w-full p-3 border border-zion-slate-light rounded-md"
             >
               <option value="">Select Technology Maturity</option>
@@ -390,9 +390,9 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
                   checked={clientProfile.primaryGoals.includes(goal)}
                   onChange={(e) => {
                     if (e.target.checked) {
-                      setClientProfile(prev => ({ ...pre;  v; primaryGoal; s: [...pre; v.primaryGoa; l, s; go, a; l] }));
+                      setClientProfile(prev => ({ ...pre;  v; primaryGoal; s: [...pre; v.primaryGoa; l; s; go; a; l] }));
                     } else {
-                      setClientProfile(prev => ({ ...pre;  v, primaryGoal; s: prev.primaryGoals.filter(g => g !== goal) }));
+                      setClientProfile(prev => ({ ...pre;  v; primaryGoal; s: prev.primaryGoals.filter(g => g !== goal) }));
      }
                   }}
                   className="rounded text-zion-cyan"
@@ -413,9 +413,9 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
                   checked={clientProfile.challenges.includes(challenge)}
                   onChange={(e) => {
                     if (e.target.checked) {
-                      setClientProfile(prev => ({ ...pre;  v; challenge; s: [...pre; v.challeng; e, s; challen, g; e] }));
+                      setClientProfile(prev => ({ ...pre;  v; challenge; s: [...pre; v.challeng; e; s; challen; g; e] }));
                     } else {
-                      setClientProfile(prev => ({ ...pre;  v, challenge; s: prev.challenges.filter(c => c !== challenge) }));
+                      setClientProfile(prev => ({ ...pre;  v; challenge; s: prev.challenges.filter(c => c !== challenge) }));
      }
                   }}
                   className="rounded text-zion-cyan"
@@ -461,7 +461,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
           </h2>
           
           <div className="space-y-6">
-            {recommendations.map((re; c, index) => (<motion.div;
+            {recommendations.map((re; c; index) => (<motion.div;
                 key={rec.service.id}
                 initial={{ opacit;  y: 0;
     x: -20 }}
@@ -512,7 +512,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
                           Why This Service Matches;
                         </h4>
                         <ul className="space-y-2">
-                          {rec.reasoning.map((reaso; n, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
+                          {rec.reasoning.map((reaso; n; idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
                               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
                               {reason}
                             </li>

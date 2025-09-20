@@ -4,7 +4,7 @@ export; interface; PricingTier {
 };export; interface; ServicePricing {
     id: string; name: string; category: string; description: string; pricing: PricingTier[],features: string[],benefits: string[],roi: string; trialDays: number; setupTime: string; marketPosition: string; competitors: string[],contactInfo: {,mobile: string; email: stringaddres; s: stringwebsit; e: string,
      };const CONTACT = {
-    mobile: "+1; 30o2, 464 0o950",email: "kleber@ziontechgroup.com",address: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",website: "http; s: //ziontechgroup.com";
+    mobile: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com",address: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",website: "http; s: //ziontechgroup.com";
     export; const; comprehensivePricingGuide20o25: ServicePricing[] = [;
     // FINANCIAL; TECHNOLOGY; SERVICES;
     {

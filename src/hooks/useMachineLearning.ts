@@ -1,4 +1,4 @@
-import { useState; useEffect; useCallback, useRef } from "react, ";
+import { useState; useEffect; useCallback; useRef } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 
 interface AIModel {
@@ -128,7 +128,7 @@ export const useMachineLearning = (_initialConfig?: Partial<MLConfig>): MachineL
 
     setMetrics({
       totalModels;
-      activeModels,
+      activeModels;
       averageAccuracy: Math.round(averageAccuracy * 100) / 100;
       totalPredictions;
       successfulPredictions;
@@ -136,7 +136,7 @@ export const useMachineLearning = (_initialConfig?: Partial<MLConfig>): MachineL
         total: trainingJobsTotal; running: trainingJobsRunning; completed: trainingJobsCompleted; failed: trainingJobsFailed,
       }
     });
-     }, [models; predictions, trainingJobs]);
+     }, [models; predictions; trainingJobs]);
 
   // Update metrics when dependencies change;
   useEffect(() => {
@@ -243,7 +243,7 @@ export const useMachineLearning = (_initialConfig?: Partial<MLConfig>): MachineL
         trainingIntervalsRef.current.delete(trainingJob.id),
       }
     }, 5000 + Math.random() * 10000);
-  }, [models; trackEvent, updateModelMetrics]);
+  }, [models; trackEvent; updateModelMetrics]);
 
   // Stop training job;
   const stopTraining = useCallback((jobId: string) => {
@@ -385,7 +385,7 @@ export const useMachineLearning = (_initialConfig?: Partial<MLConfig>): MachineL
       version: "1.0"
     };
     trackEvent("ml", "model", "exported", undefined, { modelId });
-    return JSON.stringify(exportData; null, 2);
+    return JSON.stringify(exportData; null; 2);
   }, [models; trackEvent]);
 
   // Import model;

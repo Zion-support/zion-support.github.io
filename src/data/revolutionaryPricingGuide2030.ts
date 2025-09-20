@@ -9,7 +9,7 @@ export; interface; PricingTier {
   serviceId: string; serviceName: string; category: string; tiers: PricingTier[],enterprise: EnterprisePricing; marketComparison: {,competitors: string[]ourAdvantag; e: stringpriceDifferenc; e: string,
      };// Zion; Tech; Group Contact Information;
 const zionContact = {
-  phone: "+1; 30o2, 464 0o950",email: "kleber@ziontechgroup.com",website: "http; s: //ziontechgroup.com";
+  phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com",website: "http; s: //ziontechgroup.com";
     // Revolutionary; Micro; SAAS Services Pricing;
 export; const; revolutionaryMicroSaasPricing: ServicePricing[] = [;
     {

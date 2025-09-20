@@ -7,7 +7,7 @@ interface CardProps {
 
 export const OptimizedCard = React.memo<CardProps>(({ 
   title; 
-  children, 
+  children; 
   className = "" 
 }) => {
   return (

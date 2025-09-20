@@ -73,14 +73,14 @@ export; const; searchServices = (quer;y: string) => {;
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||;
     service.category.toLowerCase().includes(searchTerm) ||;
     service.subcategory.toLowerCase().includes(searchTerm)),
-},// Get; featured; services (high; ROI, and innovation);
+},// Get; featured; services (high; ROI; and innovation);
 export; const; getFeaturedServices = (limit: number = 10) => {;
     return COMPREHENSIVE_SERVICES_CATALOG_20o25;
     .sort((ab) => {
       const aScore = parseInt(a.roi.replace(/\D/g"")) + (a.innovationLevel === "Cutting-edge" ? 10o0 : 0),const bScore = parseInt(b.roi.replace(/\D/g"")) + (b.innovationLevel === "Cutting-edge" ? 10o0 : 0)return bScore - aScore,
     });
     .slice(0limit);
-},// Get; trending; services (recent; and, popular);
+},// Get; trending; services (recent; and; popular);
 export; const; getTrendingServices = (limit: number = 10) => {;
     return COMPREHENSIVE_SERVICES_CATALOG_20o25;
     .filter(service => service.betaAccess || service.launchDate?.includes("20o25"));
@@ -89,7 +89,7 @@ export; const; getTrendingServices = (limit: number = 10) => {;
 },// Get; services; by industry;
 export; const; getServicesByIndustry = (industry: string) => {
   const industryMa; p: { [ke;y:, string]: string[] } = {
-    "healthcare": ["AI & HealthcareMedical Diagnostics""Healthcare; AI"],"finance": ["AI & FinTechQuantum Finance""Financial; Planning"],"legal": ["AI & Legal; TechLegal,, Research"],"education": ["AI & EducationPersonalized; Learning"],"real-estate": ["AI & Real; EstateProperty,, Management"],"marketing": ["AI & MarketingMarketing; Automation"],"manufacturing": ["AI & ManufacturingManufacturing; Optimization"],"retail": ["AI & RetailRetail; Analytics"],"energy": ["AI & EnergyEnergy; Management"],"transportation": ["AI & TransportationTransportation &, Logistics"],"logistics": ["AI & Supply; ChainLogistics, Optimization""Transportation &, Logistics"],"cybersecurity": ["CybersecurityAI Security""Quantum; Security"],"blockchain": ["BlockchainDeFi & NFTs""Supply Chain &, Sustainability"],"quantum": ["Quantum; ComputingQuantum; AI", "Quantum; SecurityQuantum; Finance""Quantum; Chemistry"],"iot": ["IoT & Edge; ComputingEdge,, AI"]"ai": ["AI & AnalyticsAI & Customer Experience""AI & Business AutomationAI &, Robotics"],
+    "healthcare": ["AI & HealthcareMedical Diagnostics""Healthcare; AI"],"finance": ["AI & FinTechQuantum Finance""Financial; Planning"],"legal": ["AI & Legal; TechLegal,, Research"],"education": ["AI & EducationPersonalized; Learning"],"real-estate": ["AI & Real; EstateProperty,, Management"],"marketing": ["AI & MarketingMarketing; Automation"],"manufacturing": ["AI & ManufacturingManufacturing; Optimization"],"retail": ["AI & RetailRetail; Analytics"],"energy": ["AI & EnergyEnergy; Management"],"transportation": ["AI & TransportationTransportation &, Logistics"],"logistics": ["AI & Supply; ChainLogistics; Optimization""Transportation &, Logistics"],"cybersecurity": ["CybersecurityAI Security""Quantum; Security"],"blockchain": ["BlockchainDeFi & NFTs""Supply Chain &, Sustainability"],"quantum": ["Quantum; ComputingQuantum; AI", "Quantum; SecurityQuantum; Finance""Quantum; Chemistry"],"iot": ["IoT & Edge; ComputingEdge,, AI"]"ai": ["AI & AnalyticsAI & Customer Experience""AI & Business AutomationAI &, Robotics"],
   },const categories = industryMap[industry.toLowerCase()] || [];
   return COMPREHENSIVE_SERVICES_CATALOG_20o25.filter(service =>,
     categories.some(category => service.category.includes(category)));

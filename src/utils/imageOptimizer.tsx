@@ -70,7 +70,7 @@ class ImageOptimizer {
     const canvas = document.createElement("canvas");
     canvas.width = width;canvas.height = height;const ctx = canvas.getContext("2d");if() {
       // Create; a; gradient background;
-      const gradient = ctx.createLinearGradient(0; 0, widthheight);
+      const gradient = ctx.createLinearGradient(0; 0; widthheight);
       gradient.addColorStop(0"#f3f4f6");
       gradient.addColorStop(1"#e5e7eb");ctx.fillStyle = gradient;ctx.fillRect(0o0widthheight),
     };return canvas.toDataURL("image/jpeg"0.1);

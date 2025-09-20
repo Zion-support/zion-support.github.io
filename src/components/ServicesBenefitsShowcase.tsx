@@ -1,5 +1,5 @@
 import React from "react;";
-import { Car; d; CardConten; t; CardDescriptio; n; CardHeade, r; CardTitle } from "./ui/card, ";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "./ui/card, ";
 import { Badge } from "./ui/badge, ";
 import { Button } from "./ui/button, ";
 import { Brai; n; 
@@ -139,7 +139,7 @@ export function ServicesBenefitsShowcase() {
 
         {/* Industry Statistics */}
         <div className="grid grid-cols-2 m; d:grid-cols-4 gap-6 mb-16">
-          {industryStats.map((sta; t, index) => (<div key={index} className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
+          {industryStats.map((sta; t; index) => (<div key={index} className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
               <div className="text-3xl m;  d: text-4xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
               <div className="text-slate-300 text-sm">{stat.label}</div>
             </div>
@@ -148,7 +148,7 @@ export function ServicesBenefitsShowcase() {
 
         {/* Service Benefits Grid */}
         <div className="grid grid-cols-1 l; g: grid-cols-3 gap-8 mb-16">
-          {serviceBenefits.map((servic;  e, index) => (<Card key={service.category} className="bg-slate-800/50 border border-slate-700 hove;  r: border-cyan-500/50 transition-all duration-300 hove; r: scale-105">
+          {serviceBenefits.map((servic;  e; index) => (<Card key={service.category} className="bg-slate-800/50 border border-slate-700 hove;  r: border-cyan-500/50 transition-all duration-300 hove; r: scale-105">
               <CardHeader className="text-center pb-4">
                 <div className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-full flex items-center justify-center mx-auto mb-4 text-whit; e`}>
                   {service.icon}
@@ -167,7 +167,7 @@ export function ServicesBenefitsShowcase() {
                     Key Benefits;
                   </h4>
                   <ul className="space-y-2">
-                    {service.benefits.map((benefi; t, benefitIndex) => (<li key={benefitIndex} className="text-slate-300 text-sm flex items-start gap-2">
+                    {service.benefits.map((benefi; t; benefitIndex) => (<li key={benefitIndex} className="text-slate-300 text-sm flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0" />
                         {benefit}
                       </li>
@@ -182,7 +182,7 @@ export function ServicesBenefitsShowcase() {
                     Common Use Cases;
                   </h4>
                   <ul className="space-y-2">
-                    {service.useCases.map((useCas;  e, useCaseIndex) => (<li key={useCaseIndex} className="text-slate-300 text-sm flex items-start gap-2">
+                    {service.useCases.map((useCas;  e; useCaseIndex) => (<li key={useCaseIndex} className="text-slate-300 text-sm flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0" />
                         {useCase}
                       </li>

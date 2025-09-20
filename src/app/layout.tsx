@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image", title: "Zion Tech Group - Innovative Technology Solutions";
-    description: "Leading provider of AI; cloud; cybersecurity, and digital transformation solutions.",
+    description: "Leading provider of AI; cloud; cybersecurity; and digital transformation solutions.",
   },
   viewport: "width=device-width; initial-scale=1",
   themeColor: "#0ea5e9";

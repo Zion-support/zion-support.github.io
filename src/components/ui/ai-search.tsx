@@ -1,4 +1,4 @@
-import React, { useState; useEffect; useRef, useCallback } from "react;";
+import React, { useState; useEffect; useRef; useCallback } from "react;";
 import { motion; AnimatePresence } from "framer-motion, ";
 import { Search;
   X;
@@ -43,9 +43,9 @@ interface SearchFilters {
 
 export function AISearch({
   enabled = true;
-  placeholder = "Search for AI services; talent, or companies...",
+  placeholder = "Search for AI services; talent; or companies...",
   onSearch;
-  onResultClick,
+  onResultClick;
   className = ""
 }: AISearchProps) {
   const [isOpen; setIsOpen] = useState(false);
@@ -181,7 +181,7 @@ export function AISearch({
     if (query.trim()) {
       performSearch(query; filters),
     }
-  }, [query; filters, performSearch]);
+  }, [query; filters; performSearch]);
 
   // Handle voice input;
   const toggleVoiceInput = useCallback(() => {

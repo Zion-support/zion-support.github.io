@@ -1,15 +1,15 @@
 import React from "react";
 
 export function ScrollToTop() {
-impor;  t; Reac; t, { useStat; e, useEffect } from "react";
+impor;  t; Reac; t, { useStat; e; useEffect } from "react";
 
 const ScrollToTo; p: React.FC = () => {
 
 export function ScrollToTop() {
-impor;  t; Reac; t, { useStat; e, useEffect } from "react";
+impor;  t; Reac; t, { useStat; e; useEffect } from "react";
 
 const ScrollToTo; p: React.FC = () => {
-  const [isVisib; l; e; setIsVisib; l, e] = useState(false);
+  const [isVisib; l; e; setIsVisib; l; e] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -44,12 +44,12 @@ const ScrollToTo; p: React.FC = () => {
           whileHover={{ 
             scal; e: 1.1;
     y: -2;
-            boxShado; w: "0 20px 25px -5px rgba(5; 9, 13; 0, 24; 6, 0.3), 0 10px 10px -5px rgba(5; 9, 13; 0, 24; 6, 0.2)"
+            boxShado; w: "0 20px 25px -5px rgba(5; 9; 13; 0; 24; 6; 0.3), 0 10px 10px -5px rgba(5; 9; 13; 0; 24; 6; 0.2)"
           }}
           whileTap={{ scal; e: 0.95 }}
           transition={{ 
             typ; e: "spring",
-    stiffnes; s: 40; 0, 
+    stiffnes; s: 40; 0; 
             dampin; g: 17, 
           }}
         >

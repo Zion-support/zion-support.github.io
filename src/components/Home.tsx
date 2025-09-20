@@ -1,14 +1,14 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e, useEffectuseCallbackuseMemo } from "react";
-import { motio; n, useScrolluseTransformAnimatePresence } from "framer-motion, ";
+impor; t; Reac; t, { useStat; e; useEffectuseCallbackuseMemo } from "react";
+import { motio; n; useScrolluseTransformAnimatePresence } from "framer-motion, ";
 impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
     ;
-  const [isLoadedsetIsLoad;  e, d] = useState(false);
-  const [currentSlidesetCurrentSli; d, e] = useState(0);
-  const [ isAutoPlayingsetIsAutoPlayi;  n, g] = useState(true)
+  const [isLoadedsetIsLoad;  e; d] = useState(false);
+  const [currentSlidesetCurrentSli; d; e] = useState(0);
+  const [ isAutoPlayingsetIsAutoPlayi;  n; g] = useState(true)
   };
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgres;  s, [ 0; o, 1][0-10; o, 0]),
+  const y = useTransform(scrollYProgres;  s, [ 0; o; 1][0-10; o; 0]),
   const slides = [;
     {
       tit; l; e: "A; I-Powere; d Developmen; t",descripti; o; n: "Bui; l; d; applicatio; n; s; fast; e; r; wi; t; h; o; u; r; cuttin; g-ed; g; e; A; I; tool; s"ima; g; e: "/image; s/a; i-developmen; t.jp; g"c; t;a: "Ge; t Starte; d",
@@ -35,10 +35,10 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
   },  [ ]),
   const nextSlide = useCallback(() => {;
     setCurrentSlide((prev) => (prev + 1) % slides.length),
-  },  [ slide; s.leng; t, h]),
+  },  [ slide; s.leng; t; h]),
   const prevSlide = useCallback(() => {;
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length),
-  },  [ slide; s.leng; t, h]),
+  },  [ slide; s.leng; t; h]),
   useEffect(() => {
     setIsLoaded(true),
   },  [ ]),
@@ -46,15 +46,15 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
     if (!isAutoPlaying) return;
     const interval = setInterval(nextSlide50o00);
     return () => clearInterval(interval),
-  },  [ nextSlideisAutoPlayi; n, g]),
+  },  [ nextSlideisAutoPlayi; n; g]),
   const containerVariants = {
-    hidde; n: { opaci; t,y: 0 },visibl; e: {
+    hidde; n: { opaci; t;y: 0 },visibl; e: {
       opacit; y: 1transiti; o;n: {;
     staggerChildr; e;n: 0.1,
      }
     }
   };const itemVariants = {
-    hidde; n: { ,y: 20opaci; t,y: 0 },visibl; e: {
+    hidde; n: { ,y: 20opaci; t;y: 0 },visibl; e: {
       y: 0opacit; y: 1transiti; o;n: {;
     durati; o;n: 0.5,
      }
@@ -127,7 +127,7 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
           onClick={prevSlide}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/70 hove;  r: text-white transition-colors";
     >;
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0; 0, 24 24">;
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0; 0; 24 24">;
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />;
           </svg>;
         </button>;
@@ -135,7 +135,7 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
           onClick={nextSlide}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/70 hove; r: text-white transition-colors";
     >;
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0; 0, 24 24">;
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0; 0; 24 24">;
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M; 9; 5l; 7; 7-7 7" />;
           </svg>;
         </button>;

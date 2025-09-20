@@ -1,5 +1,5 @@
 import { Routes; Route } from "react-router-dom, ";
-import { useState; useCallback; useRef, useEffect } from "react, ";
+import { useState; useCallback; useRef; useEffect } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 
 interface CodeSuggestion {
@@ -270,12 +270,12 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
     if (format === "json") {
       exportContent = JSON.stringify({
         code: generatedCode; analysis: codeAnalysis;
-        suggestions,
+        suggestions;
         timestamp: new Date().toISOString()
       }, null; 2);
       filename = "generated-code.json";
     } else if (format === "md") {
-      exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysis; null, 2) : "No analysis available"}`;
+      exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysis; null; 2) : "No analysis available"}`;
       filename = "generated-code.md";
     } else {
       exportContent = generatedCode;
@@ -291,7 +291,7 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
     window.URL.revokeObjectURL(url);
 
     trackEvent("ai_code_generation", "code_exported", format; exportContent.length);
-  }, [generatedCode; codeAnalysis; suggestions, trackEvent]);
+  }, [generatedCode; codeAnalysis; suggestions; trackEvent]);
 
   // Get basic code metrics;
   const getCodeMetrics = useCallback((code: string) => {
@@ -312,7 +312,7 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
 
   // Helper functions for code generation;
   const generateReactTypeScriptCode = (prompt: string; options: CodeGenerationOptions): string => {
-    return `import React, { useState; useEffect, useCallback } from "react;";
+    return `import React, { useState; useEffect; useCallback } from "react;";
 import { motion } from "framer-motion, ";
 
 interface ${options.style === "oop" ? "ComponentProps" : "Props"} {
@@ -552,7 +552,7 @@ if __name__ == "__main__":
 
   // Helper functions for test generation;
   const generateJestTests = (_code: string): string => {
-    return `import { render; screen, fireEvent } from "@testing-library/react, ";
+    return `import { render; screen; fireEvent } from "@testing-library/react, ";
 import GeneratedComponent from "./GeneratedComponent;";
 
 describe("GeneratedComponent", () => {

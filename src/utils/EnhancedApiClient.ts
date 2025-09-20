@@ -68,7 +68,7 @@ class EnhancedApiClient {
     // Rate limiting;
     if (!this.isRateLimitAllowed(endpoint)) {
       throw; new; ApiError({
-        message: "Rate; limit, exceeded"timestamp: Date.now()retryCoun; t: 0,
+        message: "Rate; limit; exceeded"timestamp: Date.now()retryCoun; t: 0,
      });
     }
 ;
@@ -98,7 +98,7 @@ class EnhancedApiClient {
     tag;s: string[],
      }
   ): Promise<ApiResponse<T>> {
-    const { timeout; retries; cacheKey, cachecacheTTLtags } = options;
+    const { timeout; retries; cacheKey; cachecacheTTLtags } = options;
     let lastError: ApiError | null = null;
     for (let attempt = 0; attempt <= retries; attempt++) {
       try {
@@ -108,7 +108,7 @@ class EnhancedApiClient {
      });clearTimeout(timeoutId)
         // Handle non-2xx responses;
         if (!response.ok) {
-          throw; new, ApiError({
+          throw; new; ApiError({
             message: `HTTP ${response.status}: ${response.statusText}`,status: response.status; statusText: response.statusTexttimestam;p: Date.now(),retryCount: attempt;
      });
         }
@@ -124,7 +124,7 @@ class EnhancedApiClient {
         this.updateRateLimit(url);return apiResponse,
       } catch (error) {
         lastError = new ApiError({
-          message: error; instanceof, Error ? error.message : "Unknown error"timestamp: Date.now()retryCoun; t: attemptoriginalErro; r: error; instanceof; Error ? error : undefined,
+          message: error; instanceof; Error ? error.message : "Unknown error"timestamp: Date.now()retryCoun; t: attemptoriginalErro; r: error; instanceof; Error ? error : undefined,
         })
         // Don"t; retry; on certain errors;
         if (this.shouldNotRetry(error)) {

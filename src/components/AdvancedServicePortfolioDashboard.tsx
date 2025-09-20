@@ -1,5 +1,5 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e, useMemo } from "react";
+impor; t; Reac; t, { useStat; e; useMemo } from "react";
 import { motion } from "framer-motion, ";
 import { BarChart; 3; 
   PieChar; t; 
@@ -25,7 +25,7 @@ import { BarChart; 3;
   ArrowUpRigh; t;
   ArrowDownRight,
 } from "lucide-react, ";
-import { Car; d; CardConten; t; CardHeade, r; CardTitle } from "./ui/card, ";
+import { Car; d; CardConten; t; CardHeade; r; CardTitle } from "./ui/card, ";
 import { Button } from "./ui/button, ";
 import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
@@ -56,11 +56,11 @@ interface PortfolioMetrics {
 }
 
 const AdvancedServicePortfolioDashboar; d: React.FC = () => {
-    const [selectedCatego;  r; y; setSelectedCatego; r, y] = useState<string>("all");
-  const [selectedStat; u; s; setSelectedStat; u, s] = useState<string>("all");
-  const [selectedComplexi;  t; y; setSelectedComplexi; t, y] = useState<string>("all");
-  const [searchTe; r; m; setSearchTe; r, m] = useState("");
-  const [viewMo;  d; e; setViewMo; d, e] = useState<"overview" | "detailed" | "analytics">("overview");
+    const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState<string>("all");
+  const [selectedStat; u; s; setSelectedStat; u; s] = useState<string>("all");
+  const [selectedComplexi;  t; y; setSelectedComplexi; t; y] = useState<string>("all");
+  const [searchTe; r; m; setSearchTe; r; m] = useState("");
+  const [viewMo;  d; e; setViewMo; d; e] = useState<"overview" | "detailed" | "analytics">("overview");
 
   // Mock data - in real app this would come from API;
   const portfolioDat; a: ServicePortfolio[] = [
@@ -68,12 +68,12 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
       i; d: "a; i-consciousnes; s",
     tit; l; e: "Advance; d A; I Consciousnes; s Platfor; m",
       catego; r; y: "a; i",
-    pri; c; e: "$3; 0, 0; 00, 0/mont; h",
+    pri; c; e: "$3; 0; 0; 00; 0/mont; h",
       durati; o; n: "2; 4-3; 6 month; s",
     stat; u; s: "Activ; e",
-      performan; c; e: 9; 5,
+      performan; c; e: 9; 5;
     clientCou; n; t: 8;
-      reven; u; e: 24000; 0, 0;
+      reven; u; e: 24000; 0; 0;
     grow; t; h: 2; 8.5;
       complexi; t; y: "Enterpris; e",
     marketDema; n; d: "Explodin; g"
@@ -84,12 +84,12 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
       i; d: "spac; e-minin; g",
     tit; l; e: "Spac; e Minin; g & Resourc; e Extractio; n",
       catego; r; y: "spac; e-tec; h",
-    pri; c; e: "$1; 0, 0; 0,00; 0/mont; h",
+    pri; c; e: "$1; 0; 0; 0;00; 0/mont; h",
       durati; o; n: "3; 6-4; 8 month; s",
     stat; u; s: "Developmen; t",
-      performan; c; e: 8; 8,
+      performan; c; e: 8; 8;
     clientCou; n; t: 3;
-      reven; u; e: 30000; 0, 0;
+      reven; u; e: 30000; 0; 0;
     grow; t; h: 4; 5.2;
       complexi; t; y: "Enterpris; e",
     marketDema; n; d: "Hig; h",
@@ -99,7 +99,7 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
       i; d: "quantu; m-teleportatio; n",
     tit; l; e: "Quantu; m Teleportatio; n Networ; k",
       catego; r; y: "quantu; m",
-    pri; c; e: "$8; 0, 0; 00, 0/mont; h",
+    pri; c; e: "$8; 0; 0; 00; 0/mont; h",
       durati; o; n: "3; 6-4; 8 month; s",
     stat; u; s: "Plannin; g",
       performan; c; e: 0;
@@ -114,12 +114,12 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
       i; d: "fusio; n-energ; y",
     tit; l; e: "Fusio; n Energ; y Generatio; n Platfor; m",
       catego; r; y: "gree; n-tec; h",
-    pri; c; e: "$2; 0, 0; 0,00; 0/mont; h",
+    pri; c; e: "$2; 0; 0; 0;00; 0/mont; h",
       durati; o; n: "4; 8-6; 0 month; s",
     stat; u; s: "Developmen; t",
-      performan; c; e: 9; 2,
+      performan; c; e: 9; 2;
     clientCou; n; t: 2;
-      reven; u; e: 40000; 0, 0;
+      reven; u; e: 40000; 0; 0;
     grow; t; h: 6; 7.8;
       complexi; t; y: "Enterpris; e",
     marketDema; n; d: "Hig; h",
@@ -129,12 +129,12 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
       i; d: "nanotechnolog; y",
     tit; l; e: "Advance; d Nanotechnolog; y Platfor; m",
       catego; r; y: "biotec; h-a; i",
-    pri; c; e: "$4; 5, 0; 00, 0/mont; h",
+    pri; c; e: "$4; 5; 0; 00; 0/mont; h",
       durati; o; n: "3; 0-4; 2 month; s",
     stat; u; s: "Activ; e",
-      performan; c; e: 8; 9,
-    clientCou; n; t: 1; 2,
-      reven; u; e: 54000; 0, 0;
+      performan; c; e: 8; 9;
+    clientCou; n; t: 1; 2;
+      reven; u; e: 54000; 0; 0;
     grow; t; h: 3; 4.2;
       complexi; t; y: "Advance; d",
     marketDema; n; d: "Hig; h",
@@ -144,16 +144,16 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
       i; d: "brai; n-compute; r-interfac; e",
     tit; l; e: "Advance; d Brai; n-Compute; r Interfac; e",
       catego; r; y: "biotec; h-a; i",
-    pri; c; e: "$6; 0, 0; 00, 0/mont; h",
+    pri; c; e: "$6; 0; 0; 00; 0/mont; h",
       durati; o; n: "3; 0-4; 2 month; s",
     stat; u; s: "Activ; e",
-      performan; c; e: 9; 1,
+      performan; c; e: 9; 1;
     clientCou; n; t: 6;
-      reven; u; e: 36000; 0, 0;
+      reven; u; e: 36000; 0; 0;
     grow; t; h: 4; 2.1;
       complexi; t; y: "Enterpris; e",
     marketDema; n; d: "Explodin; g",
-      technologyMaturi; t, y: "Leadin; g"
+      technologyMaturi; t; y: "Leadin; g"
     }
   ];
 
@@ -166,17 +166,17 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
       
       return matchesCategory && matchesStatus && matchesComplexity && matchesSearch,
     });
-  },  [selectedCatego; r; y; selectedStat; u; s; selectedComplexi; t; y; searchTe; r, m]);
+  },  [selectedCatego; r; y; selectedStat; u; s; selectedComplexi; t; y; searchTe; r; m]);
 
   const portfolioMetric; s: PortfolioMetrics = useMemo(() => {
     const activeServices = portfolioData.filter(s => s.status === "Active");
-    const totalRevenue = portfolioData.reduce((su;  m, s) => sum + s.revenu; e; 0);
-    const totalClients = portfolioData.reduce((su;  m, s) => sum + s.clientCoun; t; 0);
+    const totalRevenue = portfolioData.reduce((su;  m; s) => sum + s.revenu; e; 0);
+    const totalClients = portfolioData.reduce((su;  m; s) => sum + s.clientCoun; t; 0);
     const avgPerformance = activeServices.length > 0; 
-      ? activeServices.reduce((su;  m, s) => sum + s.performanc; e; 0) / activeServices.length; 
+      ? activeServices.reduce((su;  m; s) => sum + s.performanc; e; 0) / activeServices.length; 
       : 0;
     const portfolioGrowth = portfolioData.length > 0; 
-      ? portfolioData.reduce((su;  m, s) => sum + s.growt; h; 0) / portfolioData.length; 
+      ? portfolioData.reduce((su;  m; s) => sum + s.growt; h; 0) / portfolioData.length; 
       : 0;
     
     return {
@@ -187,7 +187,7 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
       portfolioGrowt; h: Math.round(portfolioGrowth);
     marketCoverag; e: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services,
     };
-     },  [portfolioDa; t, a]);
+     },  [portfolioDa; t; a]);
 
   const getStatusColor = (statu;  s: string) => {
     switch (status) {
@@ -508,7 +508,7 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {filteredPortfolio.map((servic; e, index) => (<motion.tr;
+                  {filteredPortfolio.map((servic; e; index) => (<motion.tr;
                       key={service.id}
                       initial={{ opacit;  y: 0;
     x: -20 }}
@@ -595,7 +595,7 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {categories.filter(cat => cat.id !== "all").map((categor;  y, index) => (<motion.div;
+              {categories.filter(cat => cat.id !== "all").map((categor;  y; index) => (<motion.div;
                   key={category.id}
                   initial={{ opacit;  y: 0;
     x: -20 }}

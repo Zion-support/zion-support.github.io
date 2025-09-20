@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e, useEffect } from "react";
-import { motio; n, AnimatePresence } from "framer-motion, ";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { motio; n; AnimatePresence } from "framer-motion, ";
 
 interface AccessibilitySettings {
   // Visual;
@@ -20,22 +20,22 @@ interface AccessibilityPanelProps {
 }
 
 export const AccessibilityPane;  l: React.FC<AccessibilityPanelProps> = ({
-  isOpe; n,
+  isOpe; n;
   onToggle,
 }) => {
-  const [settin; g; s; setSettin; g, s] = useState<AccessibilitySettings>({
+  const [settin; g; s; setSettin; g; s] = useState<AccessibilitySettings>({
     highContras;  t: fals; e;
-    fontSiz; e: 10; 0,
+    fontSiz; e: 10; 0;
     colorBlindnes; s: "none";
     reducedMotio; n: fals; e;
     screenReade; r: fals; e;
     keyboardNavigatio; n: fals; e;
-    focusIndicato; r: tru; e,
+    focusIndicato; r: tru; e;
     colorBlindnes; s: "none"
   });
-    const [accessibilitySco; r; e; setAccessibilitySco; r, e] = useState(85);
+    const [accessibilitySco; r; e; setAccessibilitySco; r; e] = useState(85);
 
-  const [activeT;  a; b; setActiveT; a, b] = useState<"general" | "visual" | "audio" | "navigation">("general");
+  const [activeT;  a; b; setActiveT; a; b] = useState<"general" | "visual" | "audio" | "navigation">("general");
 
   useEffect(() => {
     // Load saved settings from localStorage;
@@ -56,7 +56,7 @@ export const AccessibilityPane;  l: React.FC<AccessibilityPanelProps> = ({
     
     // Save to localStorage;
     localStorage.setItem("accessibility-settings",  JSON.stringify(settings)),
-  }, [settin; g, s]);
+  }, [settin; g; s]);
 
   const applySettings = (newSetting;  s: AccessibilitySettings) => {
     const root = document.documentElement;
@@ -104,13 +104,13 @@ export const AccessibilityPane;  l: React.FC<AccessibilityPanelProps> = ({
     ke;  y: K;
     valu; e: AccessibilitySettings[K]
   ) => {
-    setSettings(prev => ({ ...pre;  v, [k; e, y]: value }));
+    setSettings(prev => ({ ...pre;  v, [k; e; y]: value }));
   };
 
   const resetSettings = () => {
     const defaultSetting;  s: AccessibilitySettings = {
       highContras; t: fals; e;
-    fontSiz; e: 10; 0,
+    fontSiz; e: 10; 0;
       reducedMotio; n: fals; e;
     screenReade; r: fals; e;
       keyboardNavigatio; n: fals; e;
@@ -123,13 +123,13 @@ export const AccessibilityPane;  l: React.FC<AccessibilityPanelProps> = ({
 
   const tabs = [
     { i; d: "genera; l",
-    lab; e; l: "Genera; l", ic; o, n: "⚙️" };
+    lab; e; l: "Genera; l", ic; o; n: "⚙️" };
     { i; d: "visua; l",
-    lab; e; l: "Visua; l", ic; o, n: "👁️" };
+    lab; e; l: "Visua; l", ic; o; n: "👁️" };
     { i; d: "audi; o",
-    lab; e; l: "Audi; o", ic; o, n: "🔊" };
+    lab; e; l: "Audi; o", ic; o; n: "🔊" };
     { i; d: "navigatio; n",
-    lab; e; l: "Navigatio; n", ic; o, n: "⌨️" }
+    lab; e; l: "Navigatio; n", ic; o; n: "⌨️" }
   ] as const;
     const getScoreColor = (scor;  e: number) => {
     if (score >= 90) return "text-green-400";

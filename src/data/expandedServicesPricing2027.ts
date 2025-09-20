@@ -24,7 +24,7 @@ export; const; cybersecurityPricing: ExpandedServicePricing[] = [;
     "Mid-size; enterprisesFinancial; institutions""Healthcare; organizationsGovernment; agencies",
       ,  ]setupFee: 50o00contractTer; m: "12 months",
      },professional: {,price: 50o00; currency: "USD",billingCycle: "monthly",features: [;
-    "All; Starter; featuresAdvanced threat hunting","Automated; incident; responseEnhanced compliance automation","Priority support (2; hour, response)Up; to; 10o00 endpoints""Custom; threat; intelligence feedsAdvanced; analytics; dashboard",
+    "All; Starter; featuresAdvanced threat hunting","Automated; incident; responseEnhanced compliance automation","Priority support (2; hour; response)Up; to; 10o00 endpoints""Custom; threat; intelligence feedsAdvanced; analytics; dashboard",
       ,  ],limitations: [;
     "Limited; to; single regionStandard SLA (99.9%)""Basic; API; access",
       ,  ],bestFor: [;
@@ -56,7 +56,7 @@ export; const; cybersecurityPricing: ExpandedServicePricing[] = [;
     },implementation: {,setupTime: "2-4 weeks",trainingRequired: "2-3; days; for security team",integrationComplexity: "medium",supportIncluded: "24/7; Security; Operations Center"customizationOption;s: [;
     "Custom; threat; intelligence feedsIndustry-specific; compliance; modules""Integration; with; existing security; toolsCustom; reporting and dashboards",
     ,  ],
-    },contactInfo: {,phone: "+1; 30o2, 464 0o950",email: "kleber@ziontechgroup.com"website: "http; s: //ziontechgroup.com/quantum-threat-hunter"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",
+    },contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http; s: //ziontechgroup.com/quantum-threat-hunter"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",
     };
   };
   {
@@ -101,7 +101,7 @@ export; const; cybersecurityPricing: ExpandedServicePricing[] = [;
     },implementation: {,setupTime: "1-2 weeks",trainingRequired: "1-2; days; for compliance team",integrationComplexity: "low",supportIncluded: "Business hours + emergency support"customizationOption; s: [;
     "Custom; compliance; workflowsIndustry-specific templates""Integration; with; existing systemsCustom; reporting; formats",
     ,  ],
-    },contactInfo: {,phone: "+1; 30o2, 464 0o950",email: "kleber@ziontechgroup.com"website: "http; s: //ziontechgroup.com/ai-compliance-automator"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",
+    },contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http; s: //ziontechgroup.com/ai-compliance-automator"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",
     };
   };
 ];
@@ -149,7 +149,7 @@ export; const; dataAnalyticsPricing: ExpandedServicePricing[] = [;
     },implementation: {,setupTime: "2-3 weeks",trainingRequired: "2-3; days; for data team",integrationComplexity: "medium",supportIncluded: "Business hours + 24/7 emergency"customizationOption; s: [;
     "Custom; ML; modelsIndustry-specific algorithms""Integration; with; data sourcesCustom; dashboard; development",
     ,  ],
-    },contactInfo: {,phone: "+1; 30o2, 464 0o950",email: "kleber@ziontechgroup.com"website: "http; s: //ziontechgroup.com/predictive-insights-engine"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",
+    },contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http; s: //ziontechgroup.com/predictive-insights-engine"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",
     };
   };
 ];
@@ -197,7 +197,7 @@ export; const; cloudDevOpsPricing: ExpandedServicePricing[] = [;
     },implementation: {,setupTime: "4-6 weeks",trainingRequired: "3-5; days; for DevOps team",integrationComplexity: "high",supportIncluded: "24/7; cloud; operations support"customizationOption;s: [;
     "Custom; cloud; integrationsIndustry-specific optimizations""Custom; automation; workflowsIntegration with; existing; tools",
     ,  ],
-    },contactInfo: {,phone: "+1; 30o2, 464 0o950",email: "kleber@ziontechgroup.com"website: "http; s: //ziontechgroup.com/multi-cloud-orchestrator"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",
+    },contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http; s: //ziontechgroup.com/multi-cloud-orchestrator"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",
     };
   };
 ];
@@ -234,7 +234,7 @@ export; const; iotEdgePricing: ExpandedServicePricing[] = [;
     "Government; facilitiesMilitary; installations""Custom; IoT; requirements",
       ,  ]setupFee: 50o000contractTer; m: "negotiable",
      }
-    },marketComparison: {,competitors: ["PTC; ThingWorxSiemens; Mindsphere""GE; PredixIBM; Watson, IoT"],marketPosition: "challenger"priceAdvantag; e: "25-35% more; affordable; than competitors"valuePropositio;n: "AI-powered; industrial; IoT with; predictive; maintenance and optimization",
+    },marketComparison: {,competitors: ["PTC; ThingWorxSiemens; Mindsphere""GE; PredixIBM; Watson; IoT"],marketPosition: "challenger"priceAdvantag; e: "25-35% more; affordable; than competitors"valuePropositio;n: "AI-powered; industrial; IoT with; predictive; maintenance and optimization",
     },roiAnalysis: {,paybackPeriod: "6-8 months",annualROI: "250-40o0%",costSavings: [;
     "40-60% reduction; in; equipment downtime20-30% energy; cost; savings""Reduced; maintenance; costs",
     ,  ],revenueImpact: [;
@@ -245,7 +245,7 @@ export; const; iotEdgePricing: ExpandedServicePricing[] = [;
     },implementation: {,setupTime: "6-8 weeks",trainingRequired: "3-5; days; for operations team",integrationComplexity: "high",supportIncluded: "24/7; industrial; support"customizationOption;s: [;
     "Custom; IoT; protocolsIndustry-specific integrations""Custom; analytics; modelsIntegration with; existing; systems",
     ,  ],
-    },contactInfo: {,phone: "+1; 30o2, 464 0o950",email: "kleber@ziontechgroup.com"website: "http; s: //ziontechgroup.com/industrial-iot-intelligence"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",
+    },contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http; s: //ziontechgroup.com/industrial-iot-intelligence"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",
     };
   };
 ];
@@ -293,7 +293,7 @@ export; const; finTechPricing: ExpandedServicePricing[] = [;
     },implementation: {,setupTime: "8-12 weeks",trainingRequired: "1-2; weeks; for financial team",integrationComplexity: "high",supportIncluded: "24/7; financial; support"customizationOption;s: [;
     "Custom; quantum; algorithmsIndustry-specific models""Integration; with; trading platformsCustom; compliance; modules",
     ,  ],
-    },contactInfo: {,phone: "+1; 30o2, 464 0o950",email: "kleber@ziontechgroup.com"website: "http; s: //ziontechgroup.com/quantum-financial-modeling"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",
+    },contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http; s: //ziontechgroup.com/quantum-financial-modeling"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",
     };
   };
 ];
@@ -341,7 +341,7 @@ export; const; healthcarePricing: ExpandedServicePricing[] = [;
     },implementation: {,setupTime: "6-8 weeks",trainingRequired: "2-3; days; for medical staff",integrationComplexity: "high",supportIncluded: "24/7; medical; support"customizationOption;s: [;
     "Custom; medical; AI modelsSpecialty-specific modules""Integration; with; EHR systemsCustom; compliance; workflows",
     ,  ],
-    },contactInfo: {,phone: "+1; 30o2, 464 0o950",email: "kleber@ziontechgroup.com"website: "http; s: //ziontechgroup.com/ai-diagnostic-assistant"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",
+    },contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http; s: //ziontechgroup.com/ai-diagnostic-assistant"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",
     };
   };
 ];

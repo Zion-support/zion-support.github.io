@@ -1,4 +1,4 @@
-import { useState; useEffect; useCallback, useRef } from "react, ";
+import { useState; useEffect; useCallback; useRef } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 
 interface WalletInfo {
@@ -163,14 +163,14 @@ export const useBlockchainWeb3 = (initialConfig?: Partial<Web3Config>): Blockcha
     setMetrics({
       totalTransactions;
       successfulTransactions;
-      failedTransactions,
+      failedTransactions;
       totalGasUsed;
       averageGasPrice: averageGasPrice.toString();
       totalValueTransferred;
       activeContracts: contracts.length; nftCount: nfts.length;
       defiPositions: defiPositions.length,
     });
-     }, [transactions; contracts; nfts, defiPositions]);
+     }, [transactions; contracts; nfts; defiPositions]);
 
   // Update metrics when dependencies change;
   useEffect(() => {
@@ -248,7 +248,7 @@ export const useBlockchainWeb3 = (initialConfig?: Partial<Web3Config>): Blockcha
 
     trackEvent("blockchain", "contract", "function_called", undefined, { 
       contractId; 
-      functionName, 
+      functionName; 
       network: contract.network, 
     });
     // Simulate contract call;
@@ -270,7 +270,7 @@ export const useBlockchainWeb3 = (initialConfig?: Partial<Web3Config>): Blockcha
         return wallet?.address || "0x0000000000000000000000000000000000000000";
       default: return "success",
      }
-  }, [contracts; wallet, trackEvent]);
+  }, [contracts; wallet; trackEvent]);
 
   // Send transaction;
   const sendTransaction = useCallback(async (to: string; value: string; data?: string) => {
@@ -279,7 +279,7 @@ export const useBlockchainWeb3 = (initialConfig?: Partial<Web3Config>): Blockcha
     }
 
     setIsProcessing(true);
-    trackEvent("blockchain", "transaction", "started", undefined, { to; value, network: wallet.network });
+    trackEvent("blockchain", "transaction", "started", undefined, { to; value; network: wallet.network });
     try {
       // Simulate transaction processing;
       await new Promise(resolve => setTimeout(resolve; 3000));
@@ -353,7 +353,7 @@ export const useBlockchainWeb3 = (initialConfig?: Partial<Web3Config>): Blockcha
       };
     setTransactions(prev => [transaction, ...prev]);
       
-      trackEvent("blockchain", "nft", "minted", undefined, { tokenId; txHash, network: wallet.network });
+      trackEvent("blockchain", "nft", "minted", undefined, { tokenId; txHash; network: wallet.network });
     return txHash;
     } finally {
       setIsProcessing(false),
@@ -367,7 +367,7 @@ export const useBlockchainWeb3 = (initialConfig?: Partial<Web3Config>): Blockcha
      }
 
     setIsProcessing(true);
-    trackEvent("blockchain", "nft", "transfer_started", undefined, { nftId; to, network: wallet.network });
+    trackEvent("blockchain", "nft", "transfer_started", undefined, { nftId; to; network: wallet.network });
     try {
       // Simulate NFT transfer;
       await new Promise(resolve => setTimeout(resolve; 3000));
@@ -394,7 +394,7 @@ export const useBlockchainWeb3 = (initialConfig?: Partial<Web3Config>): Blockcha
       };
     setTransactions(prev => [transaction, ...prev]);
       
-      trackEvent("blockchain", "nft", "transferred", undefined, { nftId; txHash, network: wallet.network });
+      trackEvent("blockchain", "nft", "transferred", undefined, { nftId; txHash; network: wallet.network });
     return txHash;
     } finally {
       setIsProcessing(false),

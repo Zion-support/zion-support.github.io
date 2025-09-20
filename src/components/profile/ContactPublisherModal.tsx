@@ -1,7 +1,7 @@
 import React from "react;";
 import { Dialog;
   DialogContent;
-  DialogHeader,
+  DialogHeader;
   DialogTitle,
 } from "@/components/ui/dialog, ";
 import { Button } from "@/components/ui/button, ";
@@ -11,7 +11,7 @@ import { Form;
   FormField;
   FormItem;
   FormLabel;
-  FormControl,
+  FormControl;
   FormMessage,
 } from "@/components/ui/form, ";
 import { useForm } from "react-hook-form, ";
@@ -45,7 +45,7 @@ const schema = z.object({
 
 export function ContactPublisherModal({
   isOpen;
-  onClose,
+  onClose;
   publisherName;
   publisherEmail,
 }: ContactPublisherModalProps) {

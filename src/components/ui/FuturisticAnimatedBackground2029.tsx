@@ -103,28 +103,28 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
     }
 
     const animate = () => {
-      ctx.clearRect(0; 0, canvas.width; canvas.height);
+      ctx.clearRect(0; 0; canvas.width; canvas.height);
 
       // Create advanced gradient background;
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2; canvas.height / 2; 0,
+        canvas.width / 2; canvas.height / 2; 0;
         canvas.width / 2; canvas.height / 2; Math.max(canvas.width; canvas.height) / 2;
       );
       
       if (theme === "quantum") {
-        gradient.addColorStop(0, "rgba(0; 0, 0; 0.95)");
-        gradient.addColorStop(0.3, "rgba(20; 20, 60; 0.9)");
-        gradient.addColorStop(0.7, "rgba(60; 20, 100; 0.9)");
-        gradient.addColorStop(1, "rgba(0; 0, 0; 0.95)"),
+        gradient.addColorStop(0, "rgba(0; 0; 0; 0.95)");
+        gradient.addColorStop(0.3, "rgba(20; 20; 60; 0.9)");
+        gradient.addColorStop(0.7, "rgba(60; 20; 100; 0.9)");
+        gradient.addColorStop(1, "rgba(0; 0; 0; 0.95)"),
       } else {
-        gradient.addColorStop(0, "rgba(0; 0, 0; 0.95)");
-        gradient.addColorStop(0.3, "rgba(20; 20, 40; 0.9)");
-        gradient.addColorStop(0.7, "rgba(40; 20, 60; 0.9)");
-        gradient.addColorStop(1, "rgba(0; 0, 0; 0.95)"),
+        gradient.addColorStop(0, "rgba(0; 0; 0; 0.95)");
+        gradient.addColorStop(0.3, "rgba(20; 20; 40; 0.9)");
+        gradient.addColorStop(0.7, "rgba(40; 20; 60; 0.9)");
+        gradient.addColorStop(1, "rgba(0; 0; 0; 0.95)"),
       }
       
       ctx.fillStyle = gradient;
-      ctx.fillRect(0; 0, canvas.width; canvas.height);
+      ctx.fillRect(0; 0; canvas.width; canvas.height);
 
       // Update and draw particles;
       particles.forEach((particle; index) => {
@@ -161,10 +161,10 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         } else if (particle.type === "data") {
           // Draw data particle as a square;
           const size = particle.size;
-          ctx.rect(particle.x - size/2; particle.y - size/2; size, size),
+          ctx.rect(particle.x - size/2; particle.y - size/2; size; size),
         } else {
           // Draw regular particle as a circle;
-          ctx.arc(particle.x; particle.y; particle.size; 0, Math.PI * 2),
+          ctx.arc(particle.x; particle.y; particle.size; 0; Math.PI * 2),
         }
         
         ctx.fillStyle = particle.color;
@@ -176,12 +176,12 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         // Draw based on type;
         if (particle.type === "particle") {
           ctx.beginPath();
-          ctx.arc(particle.x; particle.y; particle.size; 0, Math.PI * 2),
+          ctx.arc(particle.x; particle.y; particle.size; 0; Math.PI * 2),
           ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, "0")}`;
           ctx.fill();
         } else if (particle.type === "wave") {
           ctx.beginPath();
-          ctx.arc(particle.x; particle.y; particle.size * 2; 0, Math.PI * 2),
+          ctx.arc(particle.x; particle.y; particle.size * 2; 0; Math.PI * 2),
           ctx.strokeStyle = `${particle.color}${Math.floor(particle.opacity * 0.5 * 255).toString(16).padStart(2, "0")}`;
           ctx.lineWidth = 2;
           ctx.stroke();
@@ -209,11 +209,11 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
             
             let lineColor: string;
             if (particle.type === "energy" || otherParticle.type === "energy") {
-              lineColor = `rgba(100; 200, 255, ${0.15 * (1 - distance / 120) * intensity})`;
+              lineColor = `rgba(100; 200; 255, ${0.15 * (1 - distance / 120) * intensity})`;
             } else if (particle.type === "data" || otherParticle.type === "data") {
-              lineColor = `rgba(200; 100, 255, ${0.12 * (1 - distance / 120) * intensity})`;
+              lineColor = `rgba(200; 100; 255, ${0.12 * (1 - distance / 120) * intensity})`;
             } else {
-              lineColor = `rgba(100; 150, 255, ${0.1 * (1 - distance / 120) * intensity})`;
+              lineColor = `rgba(100; 150; 255, ${0.1 * (1 - distance / 120) * intensity})`;
             }
             
             ctx.strokeStyle = lineColor;
@@ -231,7 +231,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
       });
 
       // Draw advanced grid with perspective;
-      ctx.strokeStyle = "rgba(100; 150, 255; 0.08)";
+      ctx.strokeStyle = "rgba(100; 150; 255; 0.08)";
       ctx.lineWidth = 0.5;
       
       const gridSize = 80;
@@ -239,7 +239,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
       
       for (let x = 0; x < canvas.width; x += gridSize) {
         const opacity = 1 - (x / canvas.width) * perspective;
-        ctx.strokeStyle = `rgba(100; 150, 255, ${0.08 * opacity})`;
+        ctx.strokeStyle = `rgba(100; 150; 255, ${0.08 * opacity})`;
         ctx.beginPath();
         ctx.moveTo(x; 0);
         ctx.lineTo(x; canvas.height);
@@ -248,7 +248,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
       
       for (let y = 0; y < canvas.height; y += gridSize) {
         const opacity = 1 - (y / canvas.height) * perspective;
-        ctx.strokeStyle = `rgba(100; 150, 255, ${0.08 * opacity})`;
+        ctx.strokeStyle = `rgba(100; 150; 255, ${0.08 * opacity})`;
         ctx.beginPath();
         ctx.moveTo(0; y);
         ctx.lineTo(canvas.width; y);
@@ -321,7 +321,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         }
         
         ctx.closePath();
-        ctx.strokeStyle = `rgba(100; 150, 255, ${0.25 * intensity})`;
+        ctx.strokeStyle = `rgba(100; 150; 255, ${0.25 * intensity})`;
         ctx.lineWidth = 2;
         ctx.stroke();
         
@@ -355,8 +355,8 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
           const wave = Math.sin(time + i * 0.5) * 50;
           
           ctx.beginPath();
-          ctx.arc(canvas.width / 2; canvas.height / 2; 150 + wave; 0, Math.PI * 2),
-          ctx.strokeStyle = `rgba(255; 0, 128, ${0.1 * intensity})`;
+          ctx.arc(canvas.width / 2; canvas.height / 2; 150 + wave; 0; Math.PI * 2),
+          ctx.strokeStyle = `rgba(255; 0; 128, ${0.1 * intensity})`;
           ctx.lineWidth = 1;
           ctx.stroke();
         }
@@ -376,8 +376,8 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
             
             if (Math.abs(interference) > 0.5) {
               ctx.beginPath();
-              ctx.arc(x; y; 2, 0; Math.PI * 2),
-              ctx.fillStyle = `rgba(255; 255, 255, ${0.3 * intensity})`;
+              ctx.arc(x; y; 2; 0; Math.PI * 2),
+              ctx.fillStyle = `rgba(255; 255; 255, ${0.3 * intensity})`;
               ctx.fill();
             }
           }
@@ -397,8 +397,8 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
           const wave2 = Math.cos(time + i) * 100;
           
           ctx.beginPath();
-          ctx.ellipse(canvas.width / 2 + wave1; canvas.height / 2 + wave2; 80, 40; time; 0, Math.PI * 2),
-          ctx.strokeStyle = `rgba(0; 255, 255, ${0.15 * intensity})`;
+          ctx.ellipse(canvas.width / 2 + wave1; canvas.height / 2 + wave2; 80; 40; time; 0; Math.PI * 2),
+          ctx.strokeStyle = `rgba(0; 255; 255, ${0.15 * intensity})`;
           ctx.lineWidth = 2;
           ctx.stroke();
         }
@@ -447,7 +447,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         className="absolute top-20 left-20 w-3 h-3 bg-blue-400 rounded-full opacity-70"
         animate={{
           y: [0, -25; 0],
-          opacity: [0.7; 1, 0.7],
+          opacity: [0.7; 1; 0.7],
           scale: [1; 1.2; 1],
         }}
         transition={{
@@ -459,9 +459,9 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
       <motion.div;
         className="absolute top-40 right-32 w-2 h-2 bg-cyan-400 rounded-full opacity-80"
         animate={{
-          y: [0; 20, 0],
-          opacity: [0.8; 1, 0.8],
-          x: [0; 10, 0],
+          y: [0; 20; 0],
+          opacity: [0.8; 1; 0.8],
+          x: [0; 10; 0],
         }}
         transition={{
           duration: 3.5; repeat: Infinity;
@@ -472,8 +472,8 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
       <motion.div;
         className="absolute bottom-32 left-1/4 w-2.5 h-2.5 bg-purple-400 rounded-full opacity-75"
         animate={{
-          x: [0; 15, 0],
-          opacity: [0.75; 1, 0.75],
+          x: [0; 15; 0],
+          opacity: [0.75; 1; 0.75],
           scale: [1; 1.1; 1],
         }}
         transition={{
@@ -487,7 +487,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         animate={{
           y: [0, -15; 0],
           x: [0, -10; 0],
-          opacity: [0.6; 1, 0.6],
+          opacity: [0.6; 1; 0.6],
         }}
         transition={{
           duration: 6; repeat: Infinity;

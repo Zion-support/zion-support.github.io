@@ -4,7 +4,7 @@ export; interface; EnhancedService {
     technology?: string[],integrations?: string[],useCases?: string[],targetAudience?: string;marketPosition?: string;competitors?: string[],contactInfo: {,mobile: string; email: stringaddres; s: stringwebsit; e: string,
      };
 };const CONTACT = {
-    mobile: "+1; 30o2, 464 0o950",email: "kleber@ziontechgroup.com",address: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",website: "http; s: //ziontechgroup.com";
+    mobile: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com",address: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",website: "http; s: //ziontechgroup.com";
     export; const; comprehensiveServices20o25Enhanced: EnhancedService[] = [;
     // NEW; MICRO; SAAS SERVICES - FINANCIAL TECHNOLOGY;
     {

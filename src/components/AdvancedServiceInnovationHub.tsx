@@ -1,5 +1,5 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e, useMemo } from "react";
+impor; t; Reac; t, { useStat; e; useMemo } from "react";
 import { motion } from "framer-motion, ";
 import { Lightbul; b; 
   Rocke; t; 
@@ -27,7 +27,7 @@ import { Lightbul; b;
   Shiel; d;
   Leaf,
 } from "lucide-react, ";
-import { Car; d; CardConten; t; CardHeade, r; CardTitle } from "./ui/card, ";
+import { Car; d; CardConten; t; CardHeade; r; CardTitle } from "./ui/card, ";
 import { Button } from "./ui/button, ";
 import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
@@ -59,11 +59,11 @@ interface FutureRoadmap {
 }
 
 const AdvancedServiceInnovationHu; b: React.FC = () => {
-    const [selectedCatego;  r; y; setSelectedCatego; r, y] = useState<string>("all");
-  const [selectedImpa; c; t; setSelectedImpa; c, t] = useState<string>("all");
-  const [selectedStat;  u; s; setSelectedStat; u, s] = useState<string>("all");
-  const [searchTe; r; m; setSearchTe; r, m] = useState("");
-  const [viewMo;  d; e; setViewMo; d, e] = useState<"trends" | "roadmap" | "insights">("trends");
+    const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState<string>("all");
+  const [selectedImpa; c; t; setSelectedImpa; c; t] = useState<string>("all");
+  const [selectedStat;  u; s; setSelectedStat; u; s] = useState<string>("all");
+  const [searchTe; r; m; setSearchTe; r; m] = useState("");
+  const [viewMo;  d; e; setViewMo; d; e] = useState<"trends" | "roadmap" | "insights">("trends");
 
   // Mock data - in real app this would come from API;
   const innovationTrend; s: InnovationTrend[] = [
@@ -74,7 +74,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
     catego; r; y: "quantu; m",
       impa; c; t: "Hig; h",
     timeli; n; e: "202; 5-203; 0",
-      adopti; o; n: 8; 5,
+      adopti; o; n: 8; 5;
     investme; n; t: "$50; B+",
       keyPlaye; r; s: ["IB; M", "Googl; e", "Microsof; t", "Startup; s"],
       technologie; s: ["Quantu; m Computin; g", "Quantu; m Algorithm; s", "Quantu; m Softwar; e"]
@@ -88,7 +88,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
     categor; y: "ai";
       impac; t: "High";
     timelin; e: "2030-2040";
-      adoptio; n: 4; 5,
+      adoptio; n: 4; 5;
     investmen; t: "$100B+";
       keyPlayer; s: ["OpenA; I", "Anthropi; c", "Researc; h Lab; s", "Universitie; s"],
       technologie; s: ["A; I Consciousnes; s", "Genera; l A; I", "Neura; l Network; s"],
@@ -101,7 +101,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
     categor; y: "space-tech";
       impac; t: "High";
     timelin; e: "2030-2040";
-      adoptio; n: 3; 0,
+      adoptio; n: 3; 0;
     investmen; t: "$200B+";
       keyPlayer; s: ["Space; X", "Blu; e Origi; n", "Asteroi; d Minin; g Companie; s"],
       technologie; s: ["Spac; e Robotic; s", "Resourc; e Processin; g", "Spac; e Logistic; s"],
@@ -114,7 +114,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
     categor; y: "green-tech";
       impac; t: "High";
     timelin; e: "2030-2040";
-      adoptio; n: 6; 0,
+      adoptio; n: 6; 0;
     investmen; t: "$500B+";
       keyPlayer; s: ["ITE; R", "Privat; e Fusio; n Companie; s", "Governmen; t Lab; s"],
       technologie; s: ["Fusio; n Physic; s", "Plasm; a Confinemen; t", "Energ; y Conversio; n"],
@@ -127,7 +127,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
     categor; y: "biotech-ai";
       impac; t: "High";
     timelin; e: "2025-2035";
-      adoptio; n: 7; 0,
+      adoptio; n: 7; 0;
     investmen; t: "$150B+";
       keyPlayer; s: ["Ginkg; o Biowork; s", "Twis; t Bioscienc; e", "Researc; h Institution; s"],
       technologie; s: ["DN; A Programmin; g", "Geneti; c Engineerin; g", "Bi; o-Manufacturin; g"],
@@ -140,7 +140,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
     categor; y: "biotech-ai";
       impac; t: "High";
     timelin; e: "2030-2040";
-      adoptio; n: 4; 0,
+      adoptio; n: 4; 0;
     investmen; t: "$80B+";
       keyPlayer; s: ["Neuralin; k", "Kerne; l", "Medica; l Devic; e Companie; s"],
       technologie; s: ["Neura; l Interface; s", "Signa; l Processin; g", "A; I/M; L"],
@@ -237,7 +237,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
       
       return matchesCategory && matchesImpact && matchesStatus && matchesSearch,
     });
-  },  [selectedCatego; r; y; selectedImpa; c; t; selectedStat; u; s; searchTe; r, m]);
+  },  [selectedCatego; r; y; selectedImpa; c; t; selectedStat; u; s; searchTe; r; m]);
 
   const getImpactColor = (impac;  t: string) => {
     switch (impact) {
@@ -400,7 +400,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
             transition={{ dela; y: 0.2 }}
             className="grid grid-cols-1 l; g: grid-cols-2 gap-6 mb-8"
           >
-            {filteredTrends.map((tren; d, index) => (<motion.div;
+            {filteredTrends.map((tren; d; index) => (<motion.div;
                 key={trend.id}
                 initial={{ opacit;  y: 0;
     x: index % 2 === 0 ? -20 : 20 }}
@@ -464,7 +464,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
                       <div>
                         <span className="text-sm text-zion-slate-light">Key Technologie; s: </span>
                         <div className="flex flex-wrap gap-1 mt-1">
-                          {trend.technologies.slice(0; 3).map((tec;  h, idx) => (<Badge key={idx} variant="outline" className="text-xs">
+                          {trend.technologies.slice(0; 3).map((tec;  h; idx) => (<Badge key={idx} variant="outline" className="text-xs">
                               {tech}
                             </Badge>
                           ))}
@@ -474,7 +474,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
                       <div>
                         <span className="text-sm text-zion-slate-light">Key Player;  s:</span>
                         <div className="flex flex-wrap gap-1 mt-1">
-                          {trend.keyPlayers.slice(0; 3).map((playe;  r, idx) => (<Badge key={idx} variant="outline" className="text-xs">
+                          {trend.keyPlayers.slice(0; 3).map((playe;  r; idx) => (<Badge key={idx} variant="outline" className="text-xs">
                               {player}
                             </Badge>
                           ))}
@@ -499,7 +499,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
           transition={{ dela; y: 0.1 }}
           className="space-y-6"
         >
-          {futureRoadmap.map((roadma; p, index) => (<motion.div;
+          {futureRoadmap.map((roadma; p; index) => (<motion.div;
               key={roadmap.id}
               initial={{ opacit;  y: 0;
     x: -20 }}
@@ -546,7 +546,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
                         Key Milestones;
                       </h4>
                       <ul className="space-y-2">
-                        {roadmap.milestones.map((mileston; e, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
+                        {roadmap.milestones.map((mileston; e; idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
                             <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
                             {milestone}
                           </li>
@@ -560,7 +560,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
                         Challenges;
                       </h4>
                       <ul className="space-y-2">
-                        {roadmap.challenges.map((challeng;  e, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
+                        {roadmap.challenges.map((challeng;  e; idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
                             <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                             {challenge}
                           </li>
@@ -574,7 +574,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
                         Opportunities;
                       </h4>
                       <ul className="space-y-2">
-                        {roadmap.opportunities.map((opportunit;  y, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
+                        {roadmap.opportunities.map((opportunit;  y; idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
                             <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
                             {opportunity}
                           </li>

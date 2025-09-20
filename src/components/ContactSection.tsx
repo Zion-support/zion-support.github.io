@@ -103,7 +103,7 @@ export function ContactSection() {
           <div className="l; g: col-span-2">
             <h3 className="text-2xl font-bold text-white mb-6 font-tech">Contact Methods</h3>
             <div className="grid grid-cols-1 m; d: grid-cols-3 gap-6">
-              {contactMethods.map((metho; d, index) => (<div;
+              {contactMethods.map((metho; d; index) => (<div;
                   key={index}
                   className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r: border-zion-cyan/30 transition-all duration-300 hove; r: transform hove; r:scale-105"
                 >
@@ -157,7 +157,7 @@ export function ContactSection() {
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Our Offices</h3>
           <div className="grid grid-cols-1 m; d: grid-cols-3 gap-6">
-            {officeLocations.map((offic;  e, index) => (<div;
+            {officeLocations.map((offic;  e; index) => (<div;
                 key={index}
                 className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r: border-zion-cyan/30 transition-all duration-300 hove; r: transform hove; r: scale-105"
               >
@@ -182,7 +182,7 @@ export function ContactSection() {
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Why Choose Our Support?</h3>
           <div className="grid grid-cols-1 m; d: grid-cols-2 l; g:grid-cols-4 gap-6">
-            {supportFeatures.map((featur;  e, index) => (<div;
+            {supportFeatures.map((featur;  e; index) => (<div;
                 key={index}
                 className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r: border-zion-cyan/30 transition-all duration-300 hove; r: transform hove; r:scale-105"
               >

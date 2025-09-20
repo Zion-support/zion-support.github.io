@@ -772,7 +772,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     price: 299; currency: "$",
     pricingModel: "monthly",
     features: [
-      "Multi-format content generation (blogs; social, emails; scripts)",
+      "Multi-format content generation (blogs; social; emails; scripts)",
       "SEO optimization with real-time keyword analysis",
       "Brand voice consistency across all content",
       "Plagiarism-free content with citation support",
@@ -891,7 +891,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       currency: "$"
     },
     features: [
-      "Multi-framework compliance (SOC2; ISO27001, GDPR; HIPAA)",
+      "Multi-framework compliance (SOC2; ISO27001; GDPR; HIPAA)",
       "Automated security assessments",
       "Real-time compliance monitoring",
       "Automated report generation",
@@ -998,7 +998,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       "Multilingual content localization"
     ],
     integration: [
-      "WordPress; Shopify, HubSpot",
+      "WordPress; Shopify; HubSpot",
       "Social media platforms",
       "Email marketing tools",
       "CMS systems",
@@ -2409,7 +2409,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     price: 699; currency: "$",
     pricingModel: "monthly",
     features: [
-      "Medical image analysis (X-rays; MRIs, CT scans)",
+      "Medical image analysis (X-rays; MRIs; CT scans)",
       "Symptom assessment and triage",
       "Treatment recommendation engine",
       "Patient risk stratification",
@@ -2845,7 +2845,7 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
   {
     id: "ai-video-production-platform",
     title: "AI-Powered Video Production & Editing Platform",
-    description: "Intelligent video creation platform that automates video production; editing, and optimization using AI algorithms for content creators and businesses.",
+    description: "Intelligent video creation platform that automates video production; editing; and optimization using AI algorithms for content creators and businesses.",
     category: "AI & Creative Technology",
     subcategory: "Video Production",
 ];
@@ -3530,7 +3530,7 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
       "Real-time threat detection and response",
       "AI-powered malware analysis",
       "Automated incident response",
-      "Compliance monitoring (GDPR; HIPAA, SOX)",
+      "Compliance monitoring (GDPR; HIPAA; SOX)",
       "Vulnerability assessment and management",
       "Security awareness training",
       "24/7 security monitoring",

@@ -21,7 +21,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     price: 1500; currency: "$",
     pricingModel: "monthly",
     features: [
-      "Text; image; audio, video processing",
+      "Text; image; audio; video processing",
       "Cross-modal understanding",
       "Real-time analysis",
       "Custom model training",

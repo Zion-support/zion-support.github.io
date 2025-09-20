@@ -1,7 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
-import { motio; n, AnimatePresence } from "framer-motion";
-import { Mai; l; Sen; d; CheckCircl; e; Bel; l; Za; p; Shiel; d; User; s; TrendingU; p; X; Gif; t; Sta; r, Award } from "lucide-react";
+import { motio; n; AnimatePresence } from "framer-motion";
+import { Mai; l; Sen; d; CheckCircl; e; Bel; l; Za; p; Shiel; d; User; s; TrendingU; p; X; Gif; t; Sta; r; Award } from "lucide-react";
 
 const benefits = [
   {
@@ -34,16 +34,16 @@ const stats = [
   { val; u; e: "2; 4/7",
     lab; e; l: "Suppor; t" },
   { val; u; e: "10; 0%",
-    lab; e, l: "Fre; e" }
+    lab; e; l: "Fre; e" }
 ];
 
 export function NewsletterSection() {
-  const [ema;  i; l; setEma; i, l] = useState("");
-  const [isSubscrib; e; d; setIsSubscrib; e, d] = useState(false);
-  const [isLoadi;  n; g; setIsLoadi; n, g] = useState(false);
-  const [showBenefi; t; s; setShowBenefi; t, s] = useState(false);
-  const [isLoadi;  n; g; setIsLoadi; n, g] = useState(false);
-  const [showBenefi; t; s; setShowBenefi; t, s] = useState(false);
+  const [ema;  i; l; setEma; i; l] = useState("");
+  const [isSubscrib; e; d; setIsSubscrib; e; d] = useState(false);
+  const [isLoadi;  n; g; setIsLoadi; n; g] = useState(false);
+  const [showBenefi; t; s; setShowBenefi; t; s] = useState(false);
+  const [isLoadi;  n; g; setIsLoadi; n; g] = useState(false);
+  const [showBenefi; t; s; setShowBenefi; t; s] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -73,20 +73,20 @@ export function NewsletterSection() {
         <motion.div; 
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
           animate={{ rotat; e: 360 }}
-          transition={{ duratio; n: 2; 0,
-    repea; t: Infinit; y; eas, e: "linear" }}
+          transition={{ duratio; n: 2; 0;
+    repea; t: Infinit; y; eas; e: "linear" }}
         />
         <motion.div; 
           className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
           animate={{ rotat; e: -360 }}
-          transition={{ duratio; n: 2; 5,
-    repea; t: Infinit; y; eas, e: "linear" }}
+          transition={{ duratio; n: 2; 5;
+    repea; t: Infinit; y; eas; e: "linear" }}
         />
         <motion.div; 
           className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20"
           animate={{ scal; e: [1; 1.2; 1] }}
           transition={{ duratio; n: 3;
-    repea; t: Infinit; y; eas, e: "easeInOut" }}
+    repea; t: Infinit; y; eas; e: "easeInOut" }}
         />
       </div>
       
@@ -122,17 +122,17 @@ export function NewsletterSection() {
     y: 0 }}
             viewport={{ onc; e: true }}
             transition={{ duratio; n: 0.6;
-    dela, y: 0.2 }}
+    dela; y: 0.2 }}
           >
-            {stats.map((sta;  t, index) => (<motion.div;
+            {stats.map((sta;  t; index) => (<motion.div;
                 key={index}
                 initial={{ opacit;  y: 0;
-    scal, e: 0.8 }}
+    scal; e: 0.8 }}
                 whileInView={{ opacit; y: 1;
-    scal, e: 1 }}
+    scal; e: 1 }}
                 viewport={{ onc; e: true }}
                 transition={{ duratio; n: 0.4;
-    dela, y: index * 0.1 }}
+    dela; y: index * 0.1 }}
                 className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
               >
                 <div className="text-2xl font-bold text-zion-cyan mb-1">{stat.value}</div>
@@ -150,7 +150,7 @@ export function NewsletterSection() {
     y: 0 }}
             viewport={{ onc; e: true }}
             transition={{ duratio; n: 0.6;
-    dela, y: 0.3 }}
+    dela; y: 0.3 }}
           >
             <button;
               onClick={() => setShowBenefits(!showBenefits)}
@@ -174,14 +174,14 @@ export function NewsletterSection() {
               <motion.div; 
                 className="grid grid-cols-1 m; d: grid-cols-2 l; g: grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto"
                 initial={{ opacit; y: 0;
-    heigh, t: 0 }}
+    heigh; t: 0 }}
                 animate={{ opacit; y: 1;
-    heigh, t: "auto" }}
+    heigh; t: "auto" }}
                 exit={{ opacit; y: 0;
-    heigh, t: 0 }}
+    heigh; t: 0 }}
                 transition={{ duratio; n: 0.4 }}
               >
-                {benefits.map((benefi; t, index) => (<motion.div;
+                {benefits.map((benefi; t; index) => (<motion.div;
                     key={index}
                     initial={{ opacit;  y: 0;
     y: 20 }}
@@ -211,7 +211,7 @@ export function NewsletterSection() {
     y: 0 }}
               viewport={{ onc; e: true }}
               transition={{ duratio; n: 0.6;
-    dela, y: 0.4 }}
+    dela; y: 0.4 }}
             >
               <form; 
                 onSubmit={handleSubmit}
@@ -247,12 +247,12 @@ export function NewsletterSection() {
               <motion.div; 
                 className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 text-zion-cyan px-6 py-3 rounded-xl mb-6"
                 initial={{ opacit;  y: 0;
-    scal, e: 0.9 }}
+    scal; e: 0.9 }}
                 whileInView={{ opacit; y: 1;
-    scal, e: 1 }}
+    scal; e: 1 }}
                 viewport={{ onc; e: true }}
                 transition={{ duratio; n: 0.5;
-    dela, y: 0.6 }}
+    dela; y: 0.6 }}
               >
                 <Gift className="w-5 h-5" />
                 <span className="font-medium">New subscribers get 20% off their first service!</span>
@@ -261,9 +261,9 @@ export function NewsletterSection() {
           ) : (<motion.div; 
               className="inline-flex items-center gap-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 text-green-400 px-8 py-4 rounded-xl mb-6"
               initial={{ opacit;  y: 0;
-    scal, e: 0.9 }}
+    scal; e: 0.9 }}
               animate={{ opacit; y: 1;
-    scal, e: 1 }}
+    scal; e: 1 }}
               transition={{ duratio; n: 0.5 }}
             >
               <CheckCircle className="w-6 h-6" />
@@ -289,7 +289,7 @@ export function NewsletterSection() {
     y: 0 }}
             viewport={{ onc; e: true }}
             transition={{ duratio; n: 0.6;
-    dela, y: 0.7 }}
+    dela; y: 0.7 }}
           >
             <p className="text-zion-slate-light/70 text-sm mb-4">
               N; o; spa; m; unsubscribe at any time. We respect your privacy.

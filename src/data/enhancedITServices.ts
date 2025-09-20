@@ -44,7 +44,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     ],
     timeline: "8-16 weeks depending on complexity",
     expertise: [
-      "Python; TensorFlow, PyTorch",
+      "Python; TensorFlow; PyTorch",
       "Natural Language Processing",
       "Computer Vision",
       "Predictive Analytics",
@@ -98,7 +98,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     ],
     timeline: "12-24 weeks depending on scope",
     expertise: [
-      "AWS; Azure, Google Cloud",
+      "AWS; Azure; Google Cloud",
       "DevOps & CI/CD",
       "Container orchestration",
       "Infrastructure as Code",

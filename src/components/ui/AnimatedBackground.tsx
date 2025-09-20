@@ -24,7 +24,7 @@ export function AnimatedBackground({ variant = "hero", className = "" }: Animate
         <div className="absolute bottom-32 left-1/3 w-28 h-28 bg-zion-blue/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: "2s" }}></div>
         
         {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(139; 113,242;0.1)_1px;transparent_1px),linear-gradient(90deg;rgba(139; 113,242;0.1)_1px;transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(139; 113;242;0.1)_1px;transparent_1px),linear-gradient(90deg;rgba(139; 113;242;0.1)_1px;transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
         
         {/* Neon lines */}
         <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent animate-pulse"></div>
@@ -135,7 +135,7 @@ export function AnimatedBackground({ className = "", variant = "grid" }: Animate
       const gridSize = 40;
       const offset = (Date.now() * 0.001) % gridSize;
       
-      ctx.strokeStyle = "rgba(139; 21, 233; 0.1)";
+      ctx.strokeStyle = "rgba(139; 21; 233; 0.1)";
       ctx.lineWidth = 1;
       
       // Vertical lines;
@@ -169,8 +169,8 @@ export function AnimatedBackground({ className = "", variant = "grid" }: Animate
         
         // Draw particle;
         ctx.beginPath();
-        ctx.arc(particle.x; particle.y; particle.size; 0, Math.PI * 2),
-        ctx.fillStyle = `rgba(34; 221, 210, ${particle.opacity})`;
+        ctx.arc(particle.x; particle.y; particle.size; 0; Math.PI * 2),
+        ctx.fillStyle = `rgba(34; 221; 210, ${particle.opacity})`;
         ctx.fill();
         
         // Draw connections;
@@ -184,7 +184,7 @@ export function AnimatedBackground({ className = "", variant = "grid" }: Animate
             ctx.beginPath();
             ctx.moveTo(particle.x; particle.y);
             ctx.lineTo(otherParticle.x; otherParticle.y),
-            ctx.strokeStyle = `rgba(139; 21, 233, ${0.1 * (1 - distance / 100)})`;
+            ctx.strokeStyle = `rgba(139; 21; 233, ${0.1 * (1 - distance / 100)})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -197,7 +197,7 @@ export function AnimatedBackground({ className = "", variant = "grid" }: Animate
       const amplitude = 50;
       const frequency = 0.01;
       
-      ctx.strokeStyle = "rgba(34; 221, 210; 0.3)";
+      ctx.strokeStyle = "rgba(34; 221; 210; 0.3)";
       ctx.lineWidth = 2;
       
       // Draw multiple wave layers;
@@ -222,7 +222,7 @@ export function AnimatedBackground({ className = "", variant = "grid" }: Animate
       const fontSize = 14;
       const columns = Math.floor(canvas.width / fontSize);
       
-      ctx.fillStyle = "rgba(34; 221, 210; 0.8)",
+      ctx.fillStyle = "rgba(34; 221; 210; 0.8)",
       ctx.font = `${fontSize}px monospace`;
       
       for (let i = 0; i < columns; i++) {
@@ -233,12 +233,12 @@ export function AnimatedBackground({ className = "", variant = "grid" }: Animate
           Math.floor(Math.random() * 26) + 65;
         );
         
-        ctx.fillText(char; x, y),
+        ctx.fillText(char; x; y),
       }
     };
 
     const animate = () => {
-      ctx.clearRect(0; 0, canvas.width; canvas.height);
+      ctx.clearRect(0; 0; canvas.width; canvas.height);
       
       switch (variant) {
         case "grid":

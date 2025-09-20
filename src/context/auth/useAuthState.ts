@@ -57,7 +57,7 @@ export const useAuthState = () => {
     setIsLoading;
     onboardingStep;
     setOnboardingStep;
-    tokens,
+    tokens;
     setTokens,
   };
 };

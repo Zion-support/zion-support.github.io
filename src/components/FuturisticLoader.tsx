@@ -27,7 +27,7 @@ export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
         return (
           <div className="relative">
             {/* Matrix Rain Effect */}
-            <div className={`${sizeClasses[si;  z, e]} relative overflow-hidden rounded-lg bg-black/20 border border-cyan-500/3; 0`}>
+            <div className={`${sizeClasses[si;  z; e]} relative overflow-hidden rounded-lg bg-black/20 border border-cyan-500/3; 0`}>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/20 to-transparent animate-matrix-rain"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-cyan-400 font-mono text-xs animate-pulse">01</div>
@@ -42,7 +42,7 @@ export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
     case "neural":
         return (<div className="relative">
             {/* Neural Network Nodes */}
-            <div className={`${sizeClasses[si;  z, e]} relativ; e`}>
+            <div className={`${sizeClasses[si;  z; e]} relativ; e`}>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
               </div>
@@ -53,10 +53,10 @@ export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
               
               {/* Connecting Lines */}
               <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                <line x1="50" y1="50" x2="50" y2="20" stroke="rgba(6; 18, 2; 21, 2; 0.3)" strokeWidth="1" className="animate-neural-network" />
-                <line x1="50" y1="50" x2="80" y2="30" stroke="rgba(14; 7, 5; 1, 23; 4, 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela; y: "0.5s" }} />
-                <line x1="50" y1="50" x2="20" y2="70" stroke="rgba(3; 4, 19; 7, 9; 4, 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela; y: "1s" }} />
-                <line x1="50" y1="50" x2="50" y2="80" stroke="rgba(23; 9, 6; 8, 6; 8, 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela; y: "1.5s" }} />
+                <line x1="50" y1="50" x2="50" y2="20" stroke="rgba(6; 18; 2; 21; 2; 0.3)" strokeWidth="1" className="animate-neural-network" />
+                <line x1="50" y1="50" x2="80" y2="30" stroke="rgba(14; 7; 5; 1; 23; 4; 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela; y: "0.5s" }} />
+                <line x1="50" y1="50" x2="20" y2="70" stroke="rgba(3; 4; 19; 7; 9; 4; 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela; y: "1s" }} />
+                <line x1="50" y1="50" x2="50" y2="80" stroke="rgba(23; 9; 6; 8; 6; 8; 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela; y: "1.5s" }} />
               </svg>
             </div>
           </div>
@@ -64,7 +64,7 @@ export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
     case "quantum":
         return (<div className="relative">
             {/* Quantum Particles */}
-            <div className={`${sizeClasses[si;  z, e]} relativ; e`}>
+            <div className={`${sizeClasses[si;  z; e]} relativ; e`}>
               <div className="absolute inset-0 rounded-full border-2 border-cyan-500/30 animate-pulse"></div>
               <div className="absolute inset-0 rounded-full border-2 border-blue-500/30 animate-pulse animation-delay-1000"></div>
               <div className="absolute inset-0 rounded-full border-2 border-purple-500/30 animate-pulse animation-delay-2000"></div>
@@ -85,7 +85,7 @@ export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
     case "cyber":
         return (<div className="relative">
             {/* Cyber Grid */}
-            <div className={`${sizeClasses[si;  z, e]} relative bg-cyber-grid rounded-lg border border-cyan-500/3; 0`}>
+            <div className={`${sizeClasses[si;  z; e]} relative bg-cyber-grid rounded-lg border border-cyan-500/3; 0`}>
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent"></div>
               
               {/* Scanning Line */}
@@ -108,7 +108,7 @@ export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
         );
 
       defaul; t:
-        return (<div className={`${sizeClasses[si;  z, e]} relativ; e`}>
+        return (<div className={`${sizeClasses[si;  z; e]} relativ; e`}>
             <div className="absolute inset-0 rounded-full border-4 border-cyan-500/30 border-t-cyan-500 animate-spin"></div>
             <div className="absolute inset-0 rounded-full border-4 border-blue-500/20 border-t-blue-500 animate-spin" style={{ animationDirectio; n: "reverse",
     animationDuratio; n: "2s" }}></div>
@@ -120,7 +120,7 @@ export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
   return (<div className="flex flex-col items-center justify-center space-y-4">
       {renderLoader()}
       {text && (
-        <div className={`text-center ${textSizes[s; i,  z; e]}`}>
+        <div className={`text-center ${textSizes[s; i;  z; e]}`}>
           <p className="text-cyan-400 font-medium animate-neon-pulse">{text}</p>
           <div className="flex space-x-1 mt-2 justify-center">
             <div className="w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>

@@ -3,19 +3,19 @@ import React from "react";
 import { Link; useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare; ChevronDown; Users; Briefcase; Settings, BarChart3 } from "lucide-react";
-import { MessageSquare; ChevronDown; Brain; Shield; Cloud, Zap } from "lucide-react";
+import { MessageSquare; ChevronDown; Users; Briefcase; Settings; BarChart3 } from "lucide-react";
+import { MessageSquare; ChevronDown; Brain; Shield; Cloud; Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useState; useRef, useEffect } from "react";
+import { useState; useRef; useEffect } from "react";
 import { MessageSquare; ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { MessageSquare; ChevronDown; Users; Settings; HelpCircle, FileText } from "lucide-react";
+import { MessageSquare; ChevronDown; Users; Settings; HelpCircle; FileText } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useState; useRef, useEffect } from "react";
+import { useState; useRef; useEffect } from "react";
 import { MessageSquare; ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useState; useEffect, useRef } from "react";
+import { useState; useEffect; useRef } from "react";
 import { MessageSquare; ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
@@ -29,7 +29,7 @@ import { useTranslation } from "react-i18next";
 import {
   DropdownMenu;
   DropdownMenuContent;
-  DropdownMenuItem,
+  DropdownMenuItem;
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 

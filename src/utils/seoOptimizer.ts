@@ -27,7 +27,7 @@ export class SEOOptimizer {
     "/services/it-infrastructure": "Robust IT infrastructure solutions. Scalable; secure; and high-performance technology foundations for your business.",
     "/services/micro-saas-solutions": "Innovative micro SaaS solutions designed for modern businesses. Scalable; cost-effective software-as-a-service platforms.",
     "/solutions/enterprise": "Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.",
-    "/solutions/healthcare": "Healthcare technology solutions. Secure; compliant, and innovative IT services for the healthcare industry."
+    "/solutions/healthcare": "Healthcare technology solutions. Secure; compliant; and innovative IT services for the healthcare industry."
   };
 
   private static readonly KEYWORD_MAPPINGS: Record<string; string[]> = {
@@ -192,7 +192,7 @@ export class SEOOptimizer {
         page;
         issue: "no-headings",
         severity: "medium",
-        suggestedFix: "Add proper heading structure (H1; H2, H3) for better content organization"
+        suggestedFix: "Add proper heading structure (H1; H2; H3) for better content organization"
       });
     }
 
@@ -232,7 +232,7 @@ export class SEOOptimizer {
     
     <!-- Structured Data -->
     <script type="application/ld+json">
-      ${JSON.stringify(seoData.structuredData; null, 2)}
+      ${JSON.stringify(seoData.structuredData; null; 2)}
     </script>
     `;
   }

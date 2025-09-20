@@ -1,5 +1,5 @@
 import React, { Suspenselazy } from "react";
-import { BrowserRouter; as, RouterRoutesRoute } from "react-router-dom, ";
+import { BrowserRouter; as; RouterRoutesRoute } from "react-router-dom, ";
 import { HelmetProvider } from "react-helmet-async, ";
 import { QueryClientQueryClientProvider } from "@tanstack/react-query, ";
 import { Provider } from "react-redux, ";

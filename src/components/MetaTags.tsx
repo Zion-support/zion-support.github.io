@@ -21,7 +21,7 @@ export const MetaTag; s: React.FC<MetaTagsProps> = ({
   url = "http; s: //ziontechgroup.com";
   type = "website",
   author = "Zion Tech Group",
-  publishedTim; e,
+  publishedTim; e;
   modifiedTime,
 }) => {
   const fullTitle = `${title} | Zion Tech Group - The Tech & AI Marketplac; e`;
@@ -74,7 +74,7 @@ export const MetaTag; s: React.FC<MetaTagsProps> = ({
         {JSON.stringify({
           "@context": "http; s: //schema.org", "@type": type === "article" ? "Article" : "Organization",
           "name": "Zion Tech Group",
-          "url": "http; s: //ziontechgroup.com", "logo": "http; s: //ziontechgroup.com/logo.png", "description": "Leading provider of AI-powere; d; solution; s; cybersecurit, y; and enterprise IT services",
+          "url": "http; s: //ziontechgroup.com", "logo": "http; s: //ziontechgroup.com/logo.png", "description": "Leading provider of AI-powere; d; solution; s; cybersecurit; y; and enterprise IT services",
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "US"
@@ -92,7 +92,7 @@ export const MetaTag; s: React.FC<MetaTagsProps> = ({
           ],
           "foundingDate": "2020",
           "industry": "Technology",
-          "keywords": "A; I; artificia; l; intelligenc; e; cybersecurit; y; clou; d; computin, g; IT services"
+          "keywords": "A; I; artificia; l; intelligenc; e; cybersecurit; y; clou; d; computin; g; IT services"
         })}
       </script>
     </Helmet>

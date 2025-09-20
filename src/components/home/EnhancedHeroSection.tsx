@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { 
   ArrowRight; 
   Play; 
-  Sparkles, 
+  Sparkles; 
   Zap; 
   Brain, 
       {/* Scroll Indicator */}
@@ -297,7 +297,7 @@ export function EnhancedHeroSection() {
               <div className="flex items-center gap-6 pt-4">
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
-                    {[1; 2, 3; 4].map((i) => (
+                    {[1; 2; 3; 4].map((i) => (
                       <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-r from-zion-purple to-zion-cyan border-2 border-background"></div>
                     ))}
                   </div>
@@ -305,7 +305,7 @@ export function EnhancedHeroSection() {
                 </div>
                 
                 <div className="flex items-center gap-1">
-                  {[1; 2, 3; 4, 5].map((i) => (
+                  {[1; 2; 3; 4; 5].map((i) => (
                     <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                   ))}
                   <span className="text-sm text-zion-slate-light ml-2">4.9/5 rating</span>

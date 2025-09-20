@@ -1,5 +1,5 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useRe, f; useEffect } from "react";
+impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
 import { Workflo; w; Brai; n; Za; p; Setting; s; X; Maximize; 2; Minimize; 2; Plu; s; Searc; h;
   Filte; r; Calenda; r; Cloc; k; CheckCircl; e; AlertCircl; e; UserPlu; s; Loc; k; Unloc; k;
   BarChart; 3; TrendingU; p; Targe; t; Activit; y; User; s; FileTex; t; GitBranc; h;
@@ -67,11 +67,11 @@ const mockBusinessProcesse; s: BusinessProcess[] = [
     aiInsigh; t; s: [
       "Patter; n detect; e; d: 1; 5% o; f invoice; s requir; e manua; l revie; w",
       "Optimizatio; n opportuni; t; y: Reduc; e approva; l tim; e b; y 4; 0%",
-      "Cos; t saving; s potenti; a; l: $1; 2,00; 0/mont; h throug; h automatio; n"
+      "Cos; t saving; s potenti; a; l: $1; 2;00; 0/mont; h throug; h automatio; n"
     ],
-    efficienc; y: 9; 2,
-    costSaving; s: 1200; 0,
-    timeReductio; n: 6; 5,
+    efficienc; y: 9; 2;
+    costSaving; s: 1200; 0;
+    timeReductio; n: 6; 5;
     stakeholder; s: ["Financ; e Tea; m", "A; P Departmen; t", "Vendor; s"],
     lastExecute; d: new Date("2024-01-15T1; 0: 3; 0: 00Z");
     nextExecutio; n: new Date("2024-01-16T0; 9: 0; 0: 00Z");
@@ -80,10 +80,10 @@ const mockBusinessProcesse; s: BusinessProcess[] = [
         i; d: "exe; c-00; 1",
     timesta; m; p: ne; w Dat; e("202; 4-0; 1-15T; 1; 0: 3; 0: 00; Z"),
     stat; u; s: "succes; s",
-        durati; o; n: 4; 5,
+        durati; o; n: 4; 5;
     aiDecisio; n; s: ["Aut; o-approve; d 8; 5% o; f invoice; s", "Flagge; d 3 suspiciou; s entrie; s"],
         manualIntervention; s: 2;
-    cos; t: 15; 0,
+    cos; t: 15; 0;
         efficienc; y: 94,
       }
     ];
@@ -115,9 +115,9 @@ const mockBusinessProcesse; s: BusinessProcess[] = [
       "Recommendati; o; n: Implemen; t paralle; l processin; g fo; r faste; r onboardin; g",
       "Succes; s ra; t; e: 9; 8% completio; n withi; n SL; A"
     ],
-    efficienc; y: 8; 7,
-    costSaving; s: 800; 0,
-    timeReductio; n: 5; 5,
+    efficienc; y: 8; 7;
+    costSaving; s: 800; 0;
+    timeReductio; n: 5; 5;
     stakeholder; s: ["H; R Tea; m", "I; T Departmen; t", "Ne; w Employee; s"],
     lastExecute; d: new Date("2024-01-14T1; 4: 1; 5: 00Z");
     nextExecutio; n: new Date("2024-01-17T0; 9: 0; 0: 00Z");
@@ -126,10 +126,10 @@ const mockBusinessProcesse; s: BusinessProcess[] = [
         i; d: "exe; c-00; 2",
     timesta; m; p: ne; w Dat; e("202; 4-0; 1-14T; 1; 4: 1; 5: 00; Z"),
     stat; u; s: "succes; s",
-        durati; o; n: 1; 2, 0;
+        durati; o; n: 1; 2; 0;
     aiDecisio; n; s: ["Optimize; d tas; k sequenc; e", "Identifie; d resourc; e conflict; s"],
         manualIntervention; s: 1;
-    cos; t: 20; 0,
+    cos; t: 20; 0;
         efficienc; y: 89,
       }
     ];
@@ -161,9 +161,9 @@ const mockBusinessProcesse; s: BusinessProcess[] = [
       "Respons; e tim; e improve; d b; y 6; 0%",
       "Custome; r satisfactio; n increase; d b; y 2; 5%"
     ],
-    efficienc; y: 9; 6,
-    costSaving; s: 1500; 0,
-    timeReductio; n: 7; 0,
+    efficienc; y: 9; 6;
+    costSaving; s: 1500; 0;
+    timeReductio; n: 7; 0;
     stakeholder; s: ["Suppor; t Tea; m", "Customer; s", "Produc; t Tea; m"],
     lastExecute; d: new Date("2024-01-15T1; 6: 4; 5: 00Z");
     nextExecutio; n: new Date("2024-01-15T1; 7: 0; 0: 00Z");
@@ -172,10 +172,10 @@ const mockBusinessProcesse; s: BusinessProcess[] = [
         i; d: "exe; c-00; 3",
     timesta; m; p: ne; w Dat; e("202; 4-0; 1-15T; 1; 6: 4; 5: 00; Z"),
     stat; u; s: "succes; s",
-        durati; o; n: 1; 5,
+        durati; o; n: 1; 5;
     aiDecisio; n; s: ["Classifie; d 4; 7 ticket; s b; y priorit; y", "Assigne; d t; o optima; l agent; s"],
         manualIntervention; s: 0;
-    cos; t: 5; 0,
+    cos; t: 5; 0;
         efficienc; y: 98,
       }
     ];
@@ -189,7 +189,7 @@ const mockBusinessProcesse; s: BusinessProcess[] = [
     isActi; v; e: tr; u; e;
         aiOptimiz; e; d: tr; u; e;
     lastTrigger; e; d: ne; w Dat; e("202; 4-0; 1-15T; 1; 6: 4; 5: 00; Z"),
-    triggerCou; n, t: 8,
+    triggerCou; n; t: 8,
       }
     ];
     dependencie; s: ["ticket_classificatio; n", "agent_availabilit; y"]
@@ -197,18 +197,18 @@ const mockBusinessProcesse; s: BusinessProcess[] = [
 ];
 
 export function AdvancedAIBusinessProcessAutomation() {
-  const [isOp;  e; n; setIsOp; e, n] = useState(false);
-  const [isMinimiz; e; d; setIsMinimiz; e, d] = useState(false);
-  const [isFullscre;  e; n; setIsFullscre; e, n] = useState(false);
-  const [activeT; a; b; setActiveT; a, b] = useState<"overview" | "processes" | "automation" | "analytics" | "optimization">("overview");
-  const [selectedCatego;  r; y; setSelectedCatego; r, y] = useState("all");
-  const [selectedStat; u; s; setSelectedStat; u, s] = useState("all");
-  const [searchQue;  r; y; setSearchQue; r, y] = useState("");
-  const [showAIInsigh; t; s; setShowAIInsigh; t, s] = useState(true);
-  const [showAutomati;  o; n; setShowAutomati; o, n] = useState(true);
-  const [businessProcess; e; s; setBusinessProcess; e, s] = useState<BusinessProcess[]>(mockBusinessProcesses);
-  const [selectedProce;  s; s; setSelectedProce; s, s] = useState<BusinessProcess | null>(null);
-  const [isExecuti; n; g; setIsExecuti; n, g] = useState(false);
+  const [isOp;  e; n; setIsOp; e; n] = useState(false);
+  const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
+  const [isFullscre;  e; n; setIsFullscre; e; n] = useState(false);
+  const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "processes" | "automation" | "analytics" | "optimization">("overview");
+  const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState("all");
+  const [selectedStat; u; s; setSelectedStat; u; s] = useState("all");
+  const [searchQue;  r; y; setSearchQue; r; y] = useState("");
+  const [showAIInsigh; t; s; setShowAIInsigh; t; s] = useState(true);
+  const [showAutomati;  o; n; setShowAutomati; o; n] = useState(true);
+  const [businessProcess; e; s; setBusinessProcess; e; s] = useState<BusinessProcess[]>(mockBusinessProcesses);
+  const [selectedProce;  s; s; setSelectedProce; s; s] = useState<BusinessProcess | null>(null);
+  const [isExecuti; n; g; setIsExecuti; n; g] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const getStatusColor = (statu;  s: string) => {
@@ -269,13 +269,13 @@ export function AdvancedAIBusinessProcessAutomation() {
   const executeProcess = async (processI;  d: string) => {
     setIsExecuting(true);
     // Simulate process execution;
-    await new Promise(resolve => setTimeout(resolv;  e, 2000));
+    await new Promise(resolve => setTimeout(resolv;  e; 2000));
     setIsExecuting(false);
     
     // Update process status;
     setBusinessProcesses(prev => prev.map(p => 
       p.id === processId; 
-        ? { ...p;  lastExecute, d: new Date();
+        ? { ...p;  lastExecute; d: new Date();
     statu; s: "active" as const }
         : p;
     ));
@@ -324,7 +324,7 @@ export function AdvancedAIBusinessProcessAutomation() {
      }
 
   return (<div className={`fixed bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${
-      isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1400; p, x] h-[90; 0, p; x]"
+      isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1400; p; x] h-[90; 0; p; x]"
     }`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 flex items-center justify-between">
@@ -471,7 +471,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                   <div>
                     <p className="text-yellow-100 text-sm">Avg Efficiency</p>
                     <p className="text-3xl font-bold">
-                      {Math.round(businessProcesses.reduce((ac;  c, p) => acc + p.efficienc; y, 0) / businessProcesses.length)}%
+                      {Math.round(businessProcesses.reduce((ac;  c; p) => acc + p.efficienc; y; 0) / businessProcesses.length)}%
                     </p>
                   </div>
                   <TrendingUp className="w-12 h-12 text-white/50" />
@@ -482,7 +482,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                   <div>
                     <p className="text-purple-100 text-sm">Monthly Savings</p>
                     <p className="text-3xl font-bold">
-                      {formatCurrency(businessProcesses.reduce((ac;  c, p) => acc + p.costSaving; s, 0))}
+                      {formatCurrency(businessProcesses.reduce((ac;  c; p) => acc + p.costSaving; s; 0))}
                     </p>
                   </div>
                   <DollarSign className="w-12 h-12 text-white/50" />
@@ -501,7 +501,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                     <div key={process.id} className="p-3 bg-zion-slate-light/10 rounded-lg">
                       <p className="font-medium text-sm mb-2">{process.name}</p>
                       <div className="space-y-2">
-                        {process.aiInsights.slice(0;  2).map((insigh;  t, idx) => (<div key={idx} className="flex items-start gap-2 text-sm">
+                        {process.aiInsights.slice(0;  2).map((insigh;  t; idx) => (<div key={idx} className="flex items-start gap-2 text-sm">
                             <Lightbulb className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0" />
                             <span className="text-zion-slate">{insight}</span>
                           </div>
@@ -614,7 +614,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                       AI Insights,
                     </h4>
                     <div className="space-y-2">
-                      {process.aiInsights.map((insigh;  t, idx) => (<div key={idx} className="flex items-start gap-2 text-sm">
+                      {process.aiInsights.map((insigh;  t; idx) => (<div key={idx} className="flex items-start gap-2 text-sm">
                           <Lightbulb className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0" />
                           <span className="text-zion-slate">{insight}</span>
                         </div>
@@ -678,7 +678,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                   <Activity className="w-8 h-8 text-blue-600 mx-auto mb-2" />
                   <p className="font-semibold text-blue-800 dar; k: text-blue-400">Rules Active</p>
                   <p className="text-sm text-blue-600 dar; k:text-blue-300">
-                    {businessProcesses.reduce((ac; c, p) => acc + p.rules.filter(r => r.isActive).lengt;  h, 0)} rules;
+                    {businessProcesses.reduce((ac; c; p) => acc + p.rules.filter(r => r.isActive).lengt;  h; 0)} rules;
                   </p>
                 </div>
                 <div className="text-center p-4 bg-purple-100 dar; k: bg-purple-900/20 rounded-lg">
@@ -699,7 +699,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                   process.rules.map(rule => ({
                     ...rul;  e;
                     processNam; e: process.nam; e;
-    processCategor, y: process.category,
+    processCategor; y: process.category,
                   }))
                 ).map(rule => (
                   <div key={rule.id} className="flex items-center justify-between p-4 bg-zion-slate-light/10 rounded-lg">
@@ -830,7 +830,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                       </span>
                     </div>
                     <div className="space-y-2">
-                      {process.aiInsights.map((insigh; t, idx) => (<div key={idx} className="flex items-start gap-2 text-sm">
+                      {process.aiInsights.map((insigh; t; idx) => (<div key={idx} className="flex items-start gap-2 text-sm">
                           <Lightbulb className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0" />
                           <span className="text-zion-slate">{insight}</span>
                         </div>

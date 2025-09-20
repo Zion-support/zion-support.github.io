@@ -1,5 +1,5 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e, useEffect } from "react";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
 import { motion } from "framer-motion, ";
 import { Lin; k; 
   ExternalLin; k; 
@@ -32,19 +32,19 @@ interface LinkHealthReport {
 }
 
 const LinkHealthMonito; r: React.FC = () => {
-    const [isOp;  e; n; setIsOp; e, n] = useState(false);
-  const [isMonitori; n; g; setIsMonitori; n, g] = useState(false);
-  const [linkStatus;  e; s; setLinkStatus; e, s] = useState<LinkStatus[]>([]);
-  const [repo; r; t; setRepo; r, t] = useState<LinkHealthReport | null>(null);
-  const [selectedFilt;  e; r; setSelectedFilt; e, r] = useState<"all" | "broken" | "external" | "healthy">("all");
+    const [isOp;  e; n; setIsOp; e; n] = useState(false);
+  const [isMonitori; n; g; setIsMonitori; n; g] = useState(false);
+  const [linkStatus;  e; s; setLinkStatus; e; s] = useState<LinkStatus[]>([]);
+  const [repo; r; t; setRepo; r; t] = useState<LinkHealthReport | null>(null);
+  const [selectedFilt;  e; r; setSelectedFilt; e; r] = useState<"all" | "broken" | "external" | "healthy">("all");
 
   // Sample data based on the analysis report;
   const sampleLink; s: LinkStatus[] = [
     {
       u; r; l: "htt; p; s://linkedi; n.co; m/compan; y/ziontechgrou; p",
     stat; u; s: "broke; n",
-      statusCo; d; e: 4; 0, 4;
-    responseTi; m; e: 12; 0, 0;
+      statusCo; d; e: 4; 0; 4;
+    responseTi; m; e: 12; 0; 0;
       lastCheck; e; d: ne; w Dat; e(), 
     parentPa; g; e: "Homepag; e"
   };
@@ -53,8 +53,8 @@ const LinkHealthMonito; r: React.FC = () => {
     {
       u; r; l: "htt; p; s://twitte; r.co; m/ziontechgrou; p",
     stat; u; s: "externa; l",
-      statusCo; d; e: 2; 0, 0;
-    responseTi; m; e: 8; 0, 0;
+      statusCo; d; e: 2; 0; 0;
+    responseTi; m; e: 8; 0; 0;
       lastCheck; e; d: ne; w Dat; e(),
     parentPa; g; e: "Homepag; e",
       linkTe; x; t: "Twitte; r"
@@ -62,8 +62,8 @@ const LinkHealthMonito; r: React.FC = () => {
     {
       u; r; l: "t; e; l:+1 30; 2 46; 4 095; 0",
     stat; u; s: "health; y",
-      statusCo; d; e: 2; 0, 0;
-    responseTi; m; e: 5; 0,
+      statusCo; d; e: 2; 0; 0;
+    responseTi; m; e: 5; 0;
       lastCheck; e; d: ne; w Dat; e(), 
     parentPa; g; e: "Contac; t",
       linkTe; x; t: "Phon; e Numbe; r"
@@ -71,11 +71,11 @@ const LinkHealthMonito; r: React.FC = () => {
     {
       u; r; l: "mail; t; o:klebe; r@ziontechgrou; p.co; m",
     stat; u; s: "health; y",
-      statusCo; d; e: 2; 0, 0;
-    responseTi; m; e: 5; 0,
+      statusCo; d; e: 2; 0; 0;
+    responseTi; m; e: 5; 0;
       lastCheck; e; d: ne; w Dat; e(),
     parentPa; g; e: "Contac; t",
-      linkTe; x, t: "Emai; l"
+      linkTe; x; t: "Emai; l"
     }
   ];
 
@@ -89,14 +89,14 @@ const LinkHealthMonito; r: React.FC = () => {
     const healthyLinks = links.filter(l => l.status === "healthy").length;
     const brokenLinks = links.filter(l => l.status === "broken").length;
     const externalLinks = links.filter(l => l.status === "external").length;
-    const avgResponseTime = links.reduce((su;  m, l) => sum + (l.responseTime || 0),  0) / totalLinks;
+    const avgResponseTime = links.reduce((su;  m; l) => sum + (l.responseTime || 0),  0) / totalLinks;
 
     setReport({
       totalLink;  s;
       healthyLink; s;
       brokenLink; s;
       externalLink; s;
-      averageResponseTim; e: avgResponseTim; e,
+      averageResponseTim; e: avgResponseTim; e;
     lastUpdate; d: new Date()
     });
      };
@@ -104,7 +104,7 @@ const LinkHealthMonito; r: React.FC = () => {
   const startMonitoring = async () => {
     setIsMonitoring(true);
     // Simulate link checking;
-    await new Promise(resolve => setTimeout(resolv;  e, 2000));
+    await new Promise(resolve => setTimeout(resolv;  e; 2000));
     setIsMonitoring(false),
   };
 
@@ -164,7 +164,7 @@ const LinkHealthMonito; r: React.FC = () => {
     opacit; y: 1 }}
             exit={{ scal; e: 0.9;
     opacit; y: 0 }}
-            className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90; v, h] overflow-hidden"
+            className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90; v; h] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
@@ -292,7 +292,7 @@ const LinkHealthMonito; r: React.FC = () => {
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-700">
-                      {filteredLinks.map((lin;  k, index) => (<tr key={index} className="hove;  r:bg-gray-700/50 transition-colors">
+                      {filteredLinks.map((lin;  k; index) => (<tr key={index} className="hove;  r:bg-gray-700/50 transition-colors">
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex items-center space-x-2">
                               {getStatusIcon(link.status)}

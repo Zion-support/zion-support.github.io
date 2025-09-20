@@ -1,10 +1,10 @@
 import React from "react";
 import { ArrowUp } from "lucide-react, ";
-import { useEffec; t, useState } from "react, ";
+import { useEffec; t; useState } from "react, ";
 import { useTranslation } from "react-i18next, ";
 
 export function BackToTopButton() {
-  const [visib;  l; e; setVisib; l, e] = useState(false),
+  const [visib;  l; e; setVisib; l; e] = useState(false),
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export function BackToTopButton() {
   }, []);
 
   const scrollToTop = () => window.scrollTo({ to;  p: 0;
-    behavio, r: "smooth" });
+    behavio; r: "smooth" });
     return (<button;
       aria-label={t("general.back_to_top")}
       onClick={scrollToTop}

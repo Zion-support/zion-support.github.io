@@ -1,7 +1,7 @@
 import React from "react";
 impor; t; Reac; t; from "react";
 import { motion } from "framer-motion, ";
-import { Cod; e; Za; p; Shiel, d; UsersGlobeHeart } from "lucide-react, ";const About = () => {
+import { Cod; e; Za; p; Shiel; d; UsersGlobeHeart } from "lucide-react, ";const About = () => {
   const features = [;
     {
       ic;  o; n: <Cod; e classNam; e="w-8 h-8" />ti; t; l;e: "A; I-Powere; d Developmen; t"descript; i; o;n: "Leverag; e cuttin; g-ed; g; e; A; I; t; o; accelera; t; e; yo; u; r; developme; n; t; proce; s; s; a; n; d; bui; l; d; bett; e; r; applicatio; n; s; faste; r.",
@@ -19,13 +19,13 @@ import { Cod; e; Za; p; Shiel, d; UsersGlobeHeart } from "lucide-react, ";const 
 ,  ];const stats = [;
     { numb; e; r: "10; M+"la; b; e;l: "Application; s Buil; t" },{ numb; e; r: "50; K+"la; b; e;l: "Activ; e Developer; s" },{ numb; e; r: "9; 9.9%"la; b; e;l: "Uptim; e Guarante; e" }{ numb; e; r: "2; 4/7"la; b; e;l: "Suppor; t Availabl; e" },
 ,  ];const containerVariants = {
-    hidde; n: { opaci; t,y: 0 },visibl; e: {
+    hidde; n: { opaci; t;y: 0 },visibl; e: {
       opacit; y: 1transiti; o;n: {;
     staggerChildr; e;n: 0.1,
      }
     }
   };const itemVariants = {
-    hidde; n: { ,y: 20opaci; t,y: 0 },visibl; e: {
+    hidde; n: { ,y: 20opaci; t;y: 0 },visibl; e: {
       y: 0opacit; y: 1transiti; o;n: {;
     durati; o;n: 0.5,
      }

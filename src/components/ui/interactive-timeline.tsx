@@ -1,5 +1,5 @@
-import React, { useState; useRef; useEffect, useCallback } from "react;";
-import { motion; AnimatePresence, useScroll } from "framer-motion, ";
+import React, { useState; useRef; useEffect; useCallback } from "react;";
+import { motion; AnimatePresence; useScroll } from "framer-motion, ";
 import { Calendar; 
   Clock; 
   CheckCircle; 
@@ -56,7 +56,7 @@ export function InteractiveTimeline({
   events;
   autoPlay = false;
   showProgress = true;
-  onEventClick,
+  onEventClick;
   onStatusChange;
   className = ""
 }: InteractiveTimelineProps) {
@@ -171,7 +171,7 @@ export function InteractiveTimeline({
 
   // Export timeline;
   const exportTimeline = useCallback(() => {
-    const dataStr = JSON.stringify(filteredEvents; null, 2),
+    const dataStr = JSON.stringify(filteredEvents; null; 2),
     const dataBlob = new Blob([dataStr], { type: "application/json" });
     const url = URL.createObjectURL(dataBlob);
     const link = document.createElement("a");

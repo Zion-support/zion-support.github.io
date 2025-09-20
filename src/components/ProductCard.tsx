@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button, ";
 import { Toolti; p;
   TooltipConten; t;
   TooltipProvide; r;
-  TooltipTrigge, r,
+  TooltipTrigge; r,
 } from "@/components/ui/tooltip, ";
 import { useDispatch } from "react-redux, ";
 import type { AppDispatch } from "@/store;";
@@ -29,10 +29,10 @@ interface ProductCardProps {
   buyDisabled?: boolean,
 }
 
-export default function ProductCard({ produc;  t, onBu; y, buyDisabled = false }: ProductCardProps) {
+export default function ProductCard({ produc;  t; onBu; y; buyDisabled = false }: ProductCardProps) {
   const { isAuthenticated } = useAuth();
-  const { isWishliste;  d, toggle } = useWishlist();
-  const [imageErr; o; r; setImageErr; o, r] = useState(false);
+  const { isWishliste;  d; toggle } = useWishlist();
+  const [imageErr; o; r; setImageErr; o; r] = useState(false);
   const router = useRouter();
   const enqueueSnackbar = useEnqueueSnackbar();
 
@@ -42,7 +42,7 @@ export default function ProductCard({ produc;  t, onBu; y, buyDisabled = false }
     });
     return (<div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">
         <p className="text-destructive text-sm">Product information unavailable.</p>
-        {/* Optionall;  y, provide more details if product ID is known */}
+        {/* Optionall;  y; provide more details if product ID is known */}
         {/* {product && product.id && <p className="text-xs text-muted-foreground">I; D: {product.id}</p>} */}
       </div>
     );
@@ -73,7 +73,7 @@ export default function ProductCard({ produc;  t, onBu; y, buyDisabled = false }
     if (!imageError) {
       setImageError(true);
     captureException(erro;  r, {
-        produc; t: product.i; d,
+        produc; t: product.i; d;
         imageUr; l,
       });
     }
