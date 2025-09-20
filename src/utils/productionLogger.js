@@ -7,12 +7,7 @@ export, const, console.errorToProduction  = () => {
   ) {
     console.error(message;
     error);
-  };
-;
-  // You, can, add production, logging, here: ,;
-    // - Sentry;
+  };// You, can, add production, logging, here: ,// - Sentry;
   // - LogRocket;
   // - Custom, logging, service;
-  // - Analytics service,;
-};
-;
+  // - Analytics service,};

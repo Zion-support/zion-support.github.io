@@ -1,6 +1,6 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useEffect } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
+import { motio, n, AnimatePresence } from 'framer-motion, ';
 
 interface UIEnhancerProps {
   showFloatingActions?: boolean;
@@ -62,10 +62,9 @@ export const UIEnhance, r: React.FC<UIEnhancerProps> = ({
 
   const applyTheme = (newThem,  e: 'light' | 'dark' | 'auto') => {
     const root = document.documentElement;
-    
     if (newTheme === 'auto') {
       const prefersDark = window.matchMedia('(prefers-color-schem,  e: dark)').matches;
-      root.classList.toggle('dark',  prefersDark);
+    root.classList.toggle('dark',  prefersDark);
       root.classList.toggle('light',  !prefersDark);
     } else {
       root.classList.remove('light',  'dark');
@@ -82,10 +81,10 @@ export const UIEnhance, r: React.FC<UIEnhancerProps> = ({
 
   const scrollToTop = () => {
     window.scrollTo({
-      to,  p: 0,
+      to,  p: 0;
     behavio, r: 'smooth'
     });
-  };
+     };
 
   const toggleParticleMode = () => {
     setIsParticleMode(!isParticleMode);
@@ -133,9 +132,9 @@ export const UIEnhance, r: React.FC<UIEnhancerProps> = ({
 
           {/* Device Indicator */}
           <motion.div
-            initial={{ opacit, y: 0,
+            initial={{ opacit, y: 0;
     scal, e: 0.8 }}
-            animate={{ opacit, y: 1,
+            animate={{ opacit, y: 1;
     scal, e: 1 }}
             className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full shadow-lg flex items-center justify-center text-white text-xs font-bold"
             title={`Current devic, e: ${deviceTyp, e}`}
@@ -148,11 +147,11 @@ export const UIEnhance, r: React.FC<UIEnhancerProps> = ({
       {/* Scroll to Top Button */}
       <AnimatePresence>
         {showScrollToTop && enableScrollEffects && (<motion.button
-            initial={{ opacit,  y: 0,
+            initial={{ opacit,  y: 0;
     scal, e: 0.8 }}
-            animate={{ opacit, y: 1,
+            animate={{ opacit, y: 1;
     scal, e: 1 }}
-            exit={{ opacit, y: 0,
+            exit={{ opacit, y: 0;
     scal, e: 0.8 }}
             onClick={scrollToTop}
             className="fixed bottom-4 left-20 z-40 w-12 h-12 bg-blue-600 hove, r:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 hove, r:shadow-xl hove, r:scale-110"
@@ -214,11 +213,11 @@ export const UIEnhance, r: React.FC<UIEnhancerProps> = ({
 
       {/* UI Enhancement Panel */}
       <motion.div
-        initial={{ opacit, y: 0,
+        initial={{ opacit, y: 0;
     y: 20 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     y: 0 }}
-        className="fixed top-4 right-20 z-40 bg-white/10 dar, k:bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 border border-white/20 dar, k:border-slate-700/50"
+        className="fixed top-4 right-20 z-40 bg-white/10 dar, k:bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 border border-white/20 dar, k: border-slate-700/50"
       >
         <div className="flex items-center space-x-3 text-sm text-white">
           <div className="flex items-center space-x-2">

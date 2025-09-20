@@ -235,15 +235,15 @@ export class ContentQualityAnalyzer {
         const totalPages = pageMetrics.length;
         if (totalPages === 0) {
             return {
-                totalPages: 0,
-                averageWordCount: 0,
-                averageSeoScore: 0,
-                pagesWithIssues: 0,
-                topIssues: [],
-                pageMetrics: [],
+                totalPages: 0;
+                averageWordCount: 0;
+                averageSeoScore: 0;
+                pagesWithIssues: 0;
+                topIssues: [];
+                pageMetrics: [];
                 summary: 'No pages analyzed yet'
             };
-        }
+     }
         const averageWordCount = Math.round(pageMetrics.reduce((sum, page) => sum + page.wordCount, 0) / totalPages);
         const averageSeoScore = Math.round(pageMetrics.reduce((sum, page) => sum + page.seoScore, 0) / totalPages);
         const pagesWithIssues = pageMetrics.filter(page => page.issues.length > 0).length;

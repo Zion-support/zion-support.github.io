@@ -1,3 +1,3 @@
-const EnhancedHeader: React.FC = () => {,
+const EnhancedHeader: React.FC = () => {;
   return (
 })

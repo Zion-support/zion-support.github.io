@@ -1,51 +1,49 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  ExclamationTriangleIcon, 
+import React, { Component, ErrorInfo, ReactNode } from 'react;';
+import { motion } from 'framer-motion, ';
+import { ExclamationTriangleIcon, 
   ArrowPathIcon, 
   HomeIcon,
   DocumentTextIcon,
   BugAntIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline, ';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
+    fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
+    showDetails?: boolean;
 }
 
 interface State {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
-  showStackTrace: boolean;
+    error: Error | null;
+    errorInfo: ErrorInfo | null;
+    errorId: string | null;
+    showStackTrace: boolean;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null,
+      hasError: false;
+      error: null;
+      errorInfo: null;
+      errorId: null;
       showStackTrace: false
     };
-  }
+     }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
-      hasError: true,
+      hasError: true;
       error,
       errorId: this.generateErrorId()
     };
-  }
+     }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({ errorInfo });
-    
     // Log error to console
     
     
@@ -67,24 +65,23 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // For example: Sentry, LogRocket, Bugsnag, etc.
     
     const errorReport = {
-      id: this.state.errorId,
-      timestamp: new Date().toISOString(),
+      id: this.state.errorId;
+      timestamp: new Date().toISOString();
       error: {
-        name: error.name,
-        message: error.message,
+        name: error.name;
+        message: error.message;
         stack: error.stack
-      },
+      };
       errorInfo: {
         componentStack: errorInfo.componentStack
-      },
-      userAgent: navigator.userAgent,
-      url: window.location.href,
+      };
+      userAgent: navigator.userAgent;
+      url: window.location.href;
       viewport: {
-        width: window.innerWidth,
+        width: window.innerWidth;
         height: window.innerHeight
       }
     };
-
     // Log to console for development
     if (process.env.NODE_ENV === 'development') {
       console.group('Error Report');
@@ -95,17 +92,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // In production, you would send this to your error reporting service
     // Example: Sentry.captureException(error, { extra: errorReport });
-  }
+     }
 
   private handleRetry = () => {
     this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null,
+      hasError: false;
+      error: null;
+      errorInfo: null;
+      errorId: null;
       showStackTrace: false
     });
-  };
+     };
 
   private handleGoHome = () => {
     window.location.href = '/';
@@ -119,7 +116,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       const issueBody = `
 ## Error Report
 
-**Error ID:** ${this.state.errorId}
+**Error ID: ** ${this.state.errorId}
 
 **Error Message:** ${error.message}
 
@@ -151,16 +148,14 @@ ${errorInfo.componentStack}
 ## Additional Context
 
       `.trim();
-
-      const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
-      
-      window.open(issueUrl, '_blank');
+    const issueUrl = `https: //github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
+    window.open(issueUrl, '_blank');
     }
   };
 
   private toggleStackTrace = () => {
     this.setState(prev => ({ showStackTrace: !prev.showStackTrace }));
-  };
+     };
 
   render() {
     if (this.state.hasError) {
@@ -292,7 +287,7 @@ ${errorInfo.componentStack}
           </motion.div>
         </div>
       );
-    }
+     }
 
     return this.props.children;
   }

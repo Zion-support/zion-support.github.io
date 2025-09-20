@@ -1,17 +1,18 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useEffect } from 'react';
-import { CheckCircl, e, XCircl, e, AlertTriangl, e, ExternalLink } from 'lucide-react';
+import { CheckCircl, e, XCircl, e, AlertTriangl, e, ExternalLink } from 'lucide-react, ';
 
 interface LinkStatus {
   ur, l: string;
-  statu, s: 'checking' | 'healthy' | 'broken' | 'external';
-  responseTime?: number;
+    statu, s: 'checking' | 'healthy' | 'broken' | 'external';
+    responseTime?: number;
   error?: string;
 }
 
 interface LinkHealthCheckerProps {
-  link, s: Array<{ ur, l: string; labe, l: string }>;
-  className?: string;
+  link, s: Array<{ ur, l: string;
+    labe, l: string }>;
+    className?: string;
 }
 
 const LinkHealthChecke, r: React.FC<LinkHealthCheckerProps> = ({ link,  s, className = '' }) => {
@@ -20,57 +21,55 @@ const LinkHealthChecke, r: React.FC<LinkHealthCheckerProps> = ({ link,  s, class
 
   const checkLinkHealth = async (ur,  l: string): Promise<LinkStatus> => {
     const startTime = Date.now();
-    
     try {
       // Check if it's an external link
       if (url.startsWith('http') && !url.includes('ziontechgroup.com')) {
         return {
           ur,  l,
-          statu, s: 'external',
+          statu, s: 'external';
     responseTim, e: Date.now() - startTime
         };
-      }
+     }
 
       // Check if it's a mailto or tel link
       if (url.startsWith('mailt,  o:') || url.startsWith('te,  l:')) {
         return {
           ur, l,
-          statu, s: 'healthy',
+          statu, s: 'healthy';
     responseTim, e: Date.now() - startTime
         };
-      }
+     }
 
       // For interna,  l, link, s, we'll assume they're healthy since they're part of our app
       if (url.startsWith('/') || url.includes('ziontechgroup.com')) {
         return {
           ur,  l,
-          statu, s: 'healthy',
+          statu, s: 'healthy';
     responseTim, e: Date.now() - startTime
         };
-      }
+     }
 
       // For externa, l, link, s, we could implement actual health checking
       // Fo, r, no, w, we'll mark them as external
       return {
         ur, l,
-        statu, s: 'external',
+        statu, s: 'external';
     responseTim, e: Date.now() - startTime
       };
-    } catch (error) {
+     } catch (error) {
       return {
         ur,  l,
-        statu, s: 'broken',
+        statu, s: 'broken';
     responseTim, e: Date.now() - startTim, e,
         erro, r: error instanceof Error ? error.message : 'Unknown error'
       };
-    }
+     }
   };
 
   const checkAllLinks = async () => {
     setIsChecking(true);
     setLinkStatuses(links.map(link => ({ ur,  l: link.ur, l,
     statu, s: 'checking' as const })));
-
     const statuses = await Promise.all(links.map(link => checkLinkHealth(link.url))
     );
 
@@ -93,9 +92,8 @@ const LinkHealthChecke, r: React.FC<LinkHealthCheckerProps> = ({ link,  s, class
         return <ExternalLink className="w-5 h-5 text-blue-500" />;
       case 'checking':
         return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse" />;
-      defaul,  t:
-        return <AlertTriangle className="w-5 h-5 text-gray-500" />;
-    }
+      defaul,  t: return <AlertTriangle className="w-5 h-5 text-gray-500" />;
+     }
   };
 
   const getStatusText = (statu, s: LinkStatus['statu, s']) => {
@@ -108,9 +106,8 @@ const LinkHealthChecke, r: React.FC<LinkHealthCheckerProps> = ({ link,  s, class
         return 'External';
       case 'checking':
         return 'Checking...';
-      defaul,  t:
-        return 'Unknown';
-    }
+      defaul,  t: return 'Unknown';
+     }
   };
 
   const getStatusColor = (statu, s: LinkStatus['statu, s']) => {
@@ -123,9 +120,8 @@ const LinkHealthChecke, r: React.FC<LinkHealthCheckerProps> = ({ link,  s, class
         return 'text-blue-500';
       case 'checking':
         return 'text-yellow-500';
-      defaul,  t:
-        return 'text-gray-500';
-    }
+      defaul,  t: return 'text-gray-500';
+     }
   };
 
   const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;

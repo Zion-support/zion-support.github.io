@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react;';
 
 interface FuturisticMatrixBackgroundProps {
   intensity?: 'low' | 'medium' | 'high';
@@ -8,7 +8,7 @@ interface FuturisticMatrixBackgroundProps {
 }
 
 export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProps> = ({
-  intensity = 'medium',
+  intensity = 'medium';
   color = '#00ff88',
   speed = 2,
   className = ''
@@ -38,7 +38,6 @@ export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProp
     const fontSize = intensity === 'high' ? 14 : intensity === 'medium' ? 12 : 10;
     const columns = canvas.width / fontSize;
     const drops: number[] = [];
-
     // Initialize drops
     for (let i = 0; i < columns; i++) {
       drops[i] = 1;
@@ -93,8 +92,7 @@ export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProp
 
     const drawFloatingParticles = (ctx: CanvasRenderingContext2D, frame: number) => {
       const particleCount = 20;
-      
-      for (let i = 0; i < particleCount; i++) {
+    for (let i = 0; i < particleCount; i++) {
         const x = (Math.sin(frame * 0.01 + i) * canvas.width * 0.5) + canvas.width * 0.5;
         const y = (Math.cos(frame * 0.01 + i * 0.5) * canvas.height * 0.5) + canvas.height * 0.5;
         const size = Math.sin(frame * 0.02 + i) * 3 + 2;

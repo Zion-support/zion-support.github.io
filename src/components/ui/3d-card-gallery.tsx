@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { 
-  Eye, 
+import React, { useState, useRef, useEffect, useCallback } from 'react;';
+import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion, ';
+import { Eye, 
   Heart, 
   Share2, 
   Play, 
@@ -19,30 +18,30 @@ import {
   Settings,
   TrendingUp,
   X
-} from 'lucide-react';
-import { Button } from './button';
-import { Badge } from './badge';
+} from 'lucide-react, ';
+import { Button } from './button, ';
+import { Badge } from './badge, ';
 
 interface CardItem {
   id: string;
-  title: string;
-  description: string;
-  image: string;
-  category: string;
-  tags: string[];
-  rating: number;
-  reviews: number;
-  price?: string;
+    title: string;
+    description: string;
+    image: string;
+    category: string;
+    tags: string[];
+    rating: number;
+    reviews: number;
+    price?: string;
   status: 'active' | 'beta' | 'coming-soon' | 'deprecated';
-  features: string[];
-  metadata: {
+    features: string[];
+    metadata: {
     lastUpdated: string;
     version: string;
     downloads: number;
     verified: boolean;
     featured: boolean;
     complexity: 'beginner' | 'intermediate' | 'advanced' | 'expert';
-  };
+     };
   actions?: {
     label: string;
     icon: React.ComponentType<{ className?: string }>;
@@ -55,12 +54,12 @@ interface CardItem {
 interface Card3DGalleryProps {
   enabled?: boolean;
   items: CardItem[];
-  columns?: number;
+    columns?: number;
   autoPlay?: boolean;
   showFilters?: boolean;
   onCardClick?: (item: CardItem) => void;
-  onAction?: (itemId: string, action: string) => void;
-  className?: string;
+    onAction?: (itemId: string, action: string) => void;
+    className?: string;
 }
 
 export function Card3DGallery({
@@ -76,13 +75,13 @@ export function Card3DGallery({
   const [selectedItem, setSelectedItem] = useState<CardItem | null>(null);
   const [viewMode, setViewMode] = useState<'grid' | 'list' | 'carousel'>('grid');
   const [filters, setFilters] = useState({
-    category: [] as string[],
-    status: [] as CardItem['status'][],
-    complexity: [] as CardItem['metadata']['complexity'][],
-    verified: false,
+    category: [] as string[];
+    status: [] as CardItem['status'][];
+    complexity: [] as CardItem['metadata']['complexity'][];
+    verified: false;
     featured: false
   });
-  const [searchQuery, setSearchQuery] = useState('');
+    const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'rating' | 'downloads' | 'lastUpdated' | 'title'>('rating');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   const [isPlaying, setIsPlaying] = useState(autoPlay);
@@ -107,8 +106,7 @@ export function Card3DGallery({
     })
     .sort((a, b) => {
       let aValue: string | number | Date, bValue: string | number | Date;
-      
-      switch (sortBy) {
+    switch (sortBy) {
         case 'rating':
           aValue = a.rating;
           bValue = b.rating;
@@ -125,9 +123,8 @@ export function Card3DGallery({
           aValue = a.title.toLowerCase();
           bValue = b.title.toLowerCase();
           break;
-        default:
-          return 0;
-      }
+        default: return 0;
+     }
       
       if (sortOrder === 'asc') {
         return aValue > bValue ? 1 : -1;
@@ -163,15 +160,14 @@ export function Card3DGallery({
     switch (status) {
       case 'active':
         return 'border-green-500/50 bg-green-500/10 text-green-400';
-      case 'beta':
+    case 'beta':
         return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
       case 'coming-soon':
         return 'border-blue-500/50 bg-blue-500/10 text-blue-400';
       case 'deprecated':
         return 'border-red-500/50 bg-red-500/10 text-red-400';
-      default:
-        return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
-    }
+      default: return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
+     }
   };
 
   // Get complexity color
@@ -179,15 +175,14 @@ export function Card3DGallery({
     switch (complexity) {
       case 'beginner':
         return 'border-green-500/50 bg-green-500/10 text-green-400';
-      case 'intermediate':
+    case 'intermediate':
         return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
       case 'advanced':
         return 'border-orange-500/50 bg-orange-500/10 text-orange-400';
       case 'expert':
         return 'border-red-500/50 bg-red-500/10 text-red-400';
-      default:
-        return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
-    }
+      default: return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
+     }
   };
 
   // Get category icon
@@ -375,7 +370,7 @@ export function Card3DGallery({
               <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center">
                 {(() => {
                   const CategoryIcon = getCategoryIcon(item.category);
-                  return <CategoryIcon className="w-8 h-8 text-white" />;
+    return <CategoryIcon className="w-8 h-8 text-white" />;
                 })()}
               </div>
               
@@ -505,7 +500,7 @@ export function Card3DGallery({
                   <div className="w-full h-48 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center mb-4">
                     {(() => {
                       const CategoryIcon = getCategoryIcon(selectedItem.category);
-                      return <CategoryIcon className="w-24 h-24 text-white" />;
+    return <CategoryIcon className="w-24 h-24 text-white" />;
                     })()}
                   </div>
                   
@@ -598,20 +593,20 @@ export function Card3DGallery({
 // 3D Card Component
 interface Card3DProps {
   item: CardItem;
-  index: number;
-  onClick: () => void;
-  onAction: (itemId: string, action: string) => void;
-  getStatusColor: (status: CardItem['status']) => string;
-  getComplexityColor: (complexity: CardItem['metadata']['complexity']) => string;
-  getCategoryIcon: (category: string) => React.ComponentType<{ className?: string }>;
-  isCarousel?: boolean;
+    index: number;
+    onClick: () => void;
+    onAction: (itemId: string, action: string) => void;
+    getStatusColor: (status: CardItem['status']) => string;
+    getComplexityColor: (complexity: CardItem['metadata']['complexity']) => string;
+    getCategoryIcon: (category: string) => React.ComponentType<{ className?: string }>;
+    isCarousel?: boolean;
 }
 
 function Card3D({
   item,
   index,
   onClick,
-  onAction: _onAction,
+  onAction: _onAction;
   getStatusColor,
   getComplexityColor,
   getCategoryIcon,
@@ -624,13 +619,11 @@ function Card3D({
   const y = useMotionValue(0);
   
   const rotateX = useSpring(useTransform(y, [-100, 100], [15, -15]), { stiffness: 300, damping: 30 });
-  const rotateY = useSpring(useTransform(x, [-100, 100], [-15, 15]), { stiffness: 300, damping: 30 });
-  
-  const CategoryIcon = getCategoryIcon(item.category);
+    const rotateY = useSpring(useTransform(x, [-100, 100], [-15, 15]), { stiffness: 300, damping: 30 });
+    const CategoryIcon = getCategoryIcon(item.category);
 
   const handleMouseMove = useCallback((event: React.MouseEvent<HTMLDivElement>) => {
     if (!isHovered) return;
-    
     const rect = event.currentTarget.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
@@ -665,7 +658,7 @@ function Card3D({
       <motion.div
         className="relative w-full h-80 rounded-xl border border-zion-blue-light/30 overflow-hidden bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue/40 backdrop-blur-sm"
         style={{
-          transformStyle: 'preserve-3d',
+          transformStyle: 'preserve-3d';
           rotateX,
           rotateY,
           transform: isHovered ? 'translateZ(20px)' : 'translateZ(0px)'
@@ -720,7 +713,7 @@ function Card3D({
                 <Badge
                   key={tagIndex}
                   variant="outline"
-                  className="text-xs border-zion-blue-light/30 text-zinc-400 hover:text-white"
+                  className="text-xs border-zion-blue-light/30 text-zinc-400 hover: text-white"
                 >
                   {tag}
                 </Badge>

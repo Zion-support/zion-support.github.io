@@ -1,11 +1,11 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useEffec, t, useRef } from 'react';
-import { motio, n, useInView } from 'framer-motion';
-import { EnhancedLoading } from './EnhancedLoading';
+import { motio, n, useInView } from 'framer-motion, ';
+import { EnhancedLoading } from './EnhancedLoading, ';
 
 interface LazyWrapperProps {
   childre, n: React.ReactNode;
-  threshold?: number;
+    threshold?: number;
   className?: string;
   loadingVariant?: 'default' | 'tech' | 'minimal' | 'futuristic';
   loadingText?: string;
@@ -24,8 +24,7 @@ const LazyWrappe, r: React.FC<LazyWrapperProps> = ({
   const [isInVi,  e, w, setIsInVi, e, w] = useState(false);
   const ref = useRef(null);
   const inView = useInView(re,  f, { amoun, t: threshold });
-
-  useEffect(() => {
+    useEffect(() => {
     if (inView && !isInView) {
       setIsInView(true);
       // Simulate loading delay for better UX
@@ -61,9 +60,9 @@ const LazyWrappe, r: React.FC<LazyWrapperProps> = ({
   }
 
   return (<motion.div
-      initial={{ opacit,  y: 0,
+      initial={{ opacit,  y: 0;
     y: 20 }}
-      animate={{ opacit, y: 1,
+      animate={{ opacit, y: 1;
     y: 0 }}
       transition={{ duratio, n: 0.6 }}
       className={className}

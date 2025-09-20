@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion, Variants } from 'framer-motion';
-import { Sparkles, Zap, Shield, Rocket } from 'lucide-react';
+import React from 'react;';
+import { motion, Variants } from 'framer-motion, ';
+import { Sparkles, Zap, Shield, Rocket } from 'lucide-react, ';
 
 interface EnhancedLoadingProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -11,20 +11,18 @@ interface EnhancedLoadingProps {
 }
 
 const sizeClasses = {
-  sm: 'w-8 h-8',
-  md: 'w-12 h-12',
-  lg: 'w-16 h-16',
+  sm: 'w-8 h-8';
+  md: 'w-12 h-12';
+  lg: 'w-16 h-16';
   xl: 'w-24 h-24'
 };
-
-const iconSizes = {
-  sm: 'w-4 h-4',
-  md: 'w-6 h-6',
-  lg: 'w-8 h-8',
+    const iconSizes = {
+  sm: 'w-4 h-4';
+  md: 'w-6 h-6';
+  lg: 'w-8 h-8';
   xl: 'w-12 h-12'
 };
-
-export function EnhancedLoading({ 
+    export function EnhancedLoading({ 
   size = 'md', 
   variant = 'default', 
   text = 'Loading...',
@@ -32,71 +30,66 @@ export function EnhancedLoading({
   className = ''
 }: EnhancedLoadingProps) {
   const containerVariants: Variants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
+      opacity: 1;
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.1;
         delayChildren: 0.2
       }
     }
   };
-
-  const iconVariants: Variants = {
-    hidden: { scale: 0, opacity: 0 },
+    const iconVariants: Variants = {
+    hidden: { scale: 0, opacity: 0 };
     visible: {
-      scale: 1,
-      opacity: 1,
+      scale: 1;
+      opacity: 1;
       transition: {
-        duration: 0.5,
+        duration: 0.5;
         ease: "easeOut"
       }
-    },
+    };
     hover: {
-      scale: 1.1,
-      rotate: 360,
+      scale: 1.1;
+      rotate: 360;
       transition: {
-        duration: 0.3,
+        duration: 0.3;
         ease: "easeInOut"
       }
     }
   };
-
-  const pulseVariants: Variants = {
+    const pulseVariants: Variants = {
     pulse: {
       scale: [1, 1.1, 1],
       opacity: [1, 0.7, 1],
       transition: {
-        duration: 2,
-        repeat: Infinity,
+        duration: 2;
+        repeat: Infinity;
         ease: "easeInOut"
       }
     }
   };
-
-  const bounceVariants: Variants = {
+    const bounceVariants: Variants = {
     bounce: {
       y: [0, -20, 0],
       transition: {
-        duration: 1.5,
-        repeat: Infinity,
+        duration: 1.5;
+        repeat: Infinity;
         ease: "easeInOut"
       }
     }
   };
-
-  const waveVariants: Variants = {
+    const waveVariants: Variants = {
     wave: {
       y: [0, -15, 0],
       transition: {
-        duration: 1,
-        repeat: Infinity,
+        duration: 1;
+        repeat: Infinity;
         ease: "easeInOut"
       }
     }
   };
-
-  const icons = [Sparkles, Zap, Shield, Rocket];
+    const icons = [Sparkles, Zap, Shield, Rocket];
 
   if (variant === 'pulse') {
     return (
@@ -181,7 +174,7 @@ export function EnhancedLoading({
         )}
       </motion.div>
     );
-  }
+     }
 
   // Default variant with rotating icons
   return (
@@ -208,10 +201,10 @@ export function EnhancedLoading({
                 key={index}
                 className="absolute"
                 style={{
-                  top: '50%',
-                  left: '50%',
+                  top: '50%';
+                  left: '50%';
                   transform: 'translate(-50%, -50%)',
-                  width: sizeClasses[size],
+                  width: sizeClasses[size];
                   height: sizeClasses[size]
                 }}
                 animate={{
@@ -219,9 +212,9 @@ export function EnhancedLoading({
                   scale: [0.8, 1.2, 0.8]
                 }}
                 transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
+                  duration: 4;
+                  repeat: Infinity;
+                  ease: "easeInOut";
                   delay: index * 0.5
                 }}
               >
@@ -258,8 +251,8 @@ export function EnhancedLoading({
                 className="w-2 h-2 bg-zion-cyan rounded-full"
                 animate={{ scale: [1, 1.5, 1] }}
                 transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
+                  duration: 1.5;
+                  repeat: Infinity;
                   delay: i * 0.2
                 }}
               />

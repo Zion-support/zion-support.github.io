@@ -1,34 +1,33 @@
 import React from "react";
 
 
-import { Star } from "lucide-react";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Star } from "lucide-react, ";
+import { Card, CardContent, CardFooter } from "@/components/ui/card, ";
 
 const testimonials = [
   {
-    name: "Alex Johnson",
-    role: "AI Developer",
-    text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",
-    rating: 5,
+    name: "Alex Johnson";
+    role: "AI Developer";
+    text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!";
+    rating: 5;
     avatar: "/placeholder.svg"
-  },
+  };
   {
-    name: "Sarah Williams",
-    role: "Tech Recruiter",
+    name: "Sarah Williams";
+    role: "Tech Recruiter";
     text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
-    rating: 5,
+    rating: 5;
     avatar: "/placeholder.svg"
-  },
+  };
   {
-    name: "Michael Chen",
-    role: "Full Stack Developer",
-    text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
-    rating: 4,
+    name: "Michael Chen";
+    role: "Full Stack Developer";
+    text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.";
+    rating: 4;
     avatar: "/placeholder.svg"
   }
 ];
-
-export const AppTestimonials: React.FC = () => {
+    export const AppTestimonials: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">

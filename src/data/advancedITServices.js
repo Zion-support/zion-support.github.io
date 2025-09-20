@@ -1,15 +1,15 @@
 export const ADVANCED_IT_SERVICES = [
     {
-        id: "cloud-migration-enterprise",
-        title: "Enterprise Cloud Migration & Optimization",
-        description: "Comprehensive cloud migration service that helps enterprises move from on-premises infrastructure to cloud platforms with minimal downtime and maximum efficiency.",
-        category: "Cloud Services",
-        subcategory: "Migration & Optimization",
-        price: 15000,
-        currency: "$",
-        pricingModel: "per-project",
+        id: "cloud-migration-enterprise";
+        title: "Enterprise Cloud Migration & Optimization";
+        description: "Comprehensive cloud migration service that helps enterprises move from on-premises infrastructure to cloud platforms with minimal downtime and maximum efficiency.";
+        category: "Cloud Services";
+        subcategory: "Migration & Optimization";
+        price: 15000;
+        currency: "$";
+        pricingModel: "per-project";
         features: [
-            "Comprehensive infrastructure assessment",
+            "Comprehensive infrastructure assessment";
             "Cloud platform selection and architecture design",
             "Data migration strategy and execution",
             "Application refactoring and optimization",
@@ -21,7 +21,7 @@ export const ADVANCED_IT_SERVICES = [
             "Training and knowledge transfer"
         ],
         benefits: [
-            "Reduce infrastructure costs by 30-50%",
+            "Reduce infrastructure costs by 30-50%";
             "Improve scalability and flexibility",
             "Enhance security and compliance",
             "Reduce maintenance overhead",
@@ -29,7 +29,7 @@ export const ADVANCED_IT_SERVICES = [
             "Improve disaster recovery"
         ],
         useCases: [
-            "Legacy system modernization",
+            "Legacy system modernization";
             "Data center consolidation",
             "Application modernization",
             "Disaster recovery implementation",
@@ -37,7 +37,7 @@ export const ADVANCED_IT_SERVICES = [
             "Cost reduction initiatives"
         ],
         targetAudience: [
-            "Large enterprises",
+            "Large enterprises";
             "Financial institutions",
             "Healthcare organizations",
             "Manufacturing companies",
@@ -45,40 +45,40 @@ export const ADVANCED_IT_SERVICES = [
             "Educational institutions"
         ],
         tags: ["Cloud Migration", "AWS", "Azure", "GCP", "DevOps", "Infrastructure"],
-        estimatedDelivery: "8-16 weeks",
-        supportLevel: "enterprise",
+        estimatedDelivery: "8-16 weeks";
+        supportLevel: "enterprise";
         marketPrice: "$15,000 - $100,000+",
         contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
+            phone: "+1 302 464 0950";
+            email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"
-        },
-        rating: 4.9,
-        reviewCount: 89,
-        featured: true,
-        location: "Global",
-        availability: "24/7",
-        demoUrl: "https://ziontechgroup.com/demo/cloud-migration",
-        documentationUrl: "https://ziontechgroup.com/docs/cloud-migration",
+        };
+        rating: 4.9;
+        reviewCount: 89;
+        featured: true;
+        location: "Global";
+        availability: "24/7";
+        demoUrl: "https://ziontechgroup.com/demo/cloud-migration";
+        documentationUrl: "https://ziontechgroup.com/docs/cloud-migration";
         technology: ["AWS", "Azure", "GCP", "Terraform", "Kubernetes", "Docker", "Ansible"],
         integrations: ["VMware", "Hyper-V", "Oracle", "SAP", "Microsoft", "Linux systems"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "SOX", "PCI DSS"],
-        roi: "200% within 18 months",
+        roi: "200% within 18 months";
         competitors: ["Accenture", "Deloitte", "IBM", "AWS Professional Services", "Microsoft Consulting"],
-        onsiteSupport: true,
+        onsiteSupport: true;
         globalCoverage: true
-    },
+    };
     {
-        id: "cybersecurity-managed-services",
-        title: "Managed Cybersecurity Services",
+        id: "cybersecurity-managed-services";
+        title: "Managed Cybersecurity Services";
         description: "Comprehensive managed cybersecurity services providing 24/7 threat monitoring, incident response, vulnerability management, and security operations center (SOC) services.",
-        category: "Cybersecurity",
-        subcategory: "Managed Services",
-        price: 2500,
-        currency: "$",
-        pricingModel: "monthly",
+        category: "Cybersecurity";
+        subcategory: "Managed Services";
+        price: 2500;
+        currency: "$";
+        pricingModel: "monthly";
         features: [
-            "24/7 security monitoring and alerting",
+            "24/7 security monitoring and alerting";
             "Threat detection and response",
             "Vulnerability assessment and management",
             "Security incident response",
@@ -90,7 +90,7 @@ export const ADVANCED_IT_SERVICES = [
             "Monthly security reports and recommendations"
         ],
         benefits: [
-            "Reduce security incidents by 80%",
+            "Reduce security incidents by 80%";
             "Improve threat detection by 90%",
             "Ensure 24/7 security coverage",
             "Reduce security team workload",
@@ -98,7 +98,7 @@ export const ADVANCED_IT_SERVICES = [
             "Proactive threat prevention"
         ],
         useCases: [
-            "Enterprise security operations",
+            "Enterprise security operations";
             "Compliance requirements",
             "Threat monitoring and response",
             "Security team augmentation",
@@ -106,7 +106,7 @@ export const ADVANCED_IT_SERVICES = [
             "Security program development"
         ],
         targetAudience: [
-            "CISOs and security teams",
+            "CISOs and security teams";
             "IT managers",
             "Compliance officers",
             "Risk managers",
@@ -114,40 +114,40 @@ export const ADVANCED_IT_SERVICES = [
             "Healthcare organizations"
         ],
         tags: ["Cybersecurity", "Managed Services", "SOC", "Threat Detection", "Incident Response"],
-        estimatedDelivery: "2-4 weeks",
-        supportLevel: "premium",
+        estimatedDelivery: "2-4 weeks";
+        supportLevel: "premium";
         marketPrice: "$2,500 - $8,000/month",
         contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
+            phone: "+1 302 464 0950";
+            email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"
-        },
-        rating: 4.8,
-        reviewCount: 156,
-        featured: true,
-        location: "Global",
-        availability: "24/7",
-        demoUrl: "https://ziontechgroup.com/demo/cybersecurity-services",
-        documentationUrl: "https://ziontechgroup.com/docs/cybersecurity-services",
+        };
+        rating: 4.8;
+        reviewCount: 156;
+        featured: true;
+        location: "Global";
+        availability: "24/7";
+        demoUrl: "https://ziontechgroup.com/demo/cybersecurity-services";
+        documentationUrl: "https://ziontechgroup.com/docs/cybersecurity-services";
         technology: ["SIEM", "EDR", "Firewall", "IDS/IPS", "Vulnerability scanners", "Threat intelligence"],
         integrations: ["Active Directory", "Office 365", "AWS", "Azure", "Firewall systems", "Identity providers"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
-        roi: "300% within 12 months",
+        roi: "300% within 12 months";
         competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "FireEye", "Secureworks"],
-        onsiteSupport: true,
+        onsiteSupport: true;
         globalCoverage: true
-    },
+    };
     {
-        id: "devops-automation-platform",
-        title: "DevOps Automation & CI/CD Platform",
+        id: "devops-automation-platform";
+        title: "DevOps Automation & CI/CD Platform";
         description: "Enterprise-grade DevOps automation platform that streamlines software development, testing, and deployment processes with advanced CI/CD pipelines and infrastructure automation.",
-        category: "DevOps",
-        subcategory: "Automation & CI/CD",
-        price: 1800,
-        currency: "$",
-        pricingModel: "monthly",
+        category: "DevOps";
+        subcategory: "Automation & CI/CD";
+        price: 1800;
+        currency: "$";
+        pricingModel: "monthly";
         features: [
-            "Automated CI/CD pipelines",
+            "Automated CI/CD pipelines";
             "Infrastructure as Code (IaC)",
             "Container orchestration and management",
             "Automated testing and quality gates",
@@ -159,7 +159,7 @@ export const ADVANCED_IT_SERVICES = [
             "Performance optimization and scaling"
         ],
         benefits: [
-            "Reduce deployment time by 80%",
+            "Reduce deployment time by 80%";
             "Improve code quality and reliability",
             "Reduce manual errors by 90%",
             "Enable faster time to market",
@@ -167,7 +167,7 @@ export const ADVANCED_IT_SERVICES = [
             "Reduce infrastructure costs"
         ],
         useCases: [
-            "Software development automation",
+            "Software development automation";
             "Microservices deployment",
             "Cloud-native applications",
             "Legacy application modernization",
@@ -175,7 +175,7 @@ export const ADVANCED_IT_SERVICES = [
             "Continuous deployment"
         ],
         targetAudience: [
-            "Development teams",
+            "Development teams";
             "DevOps engineers",
             "Platform engineers",
             "IT operations teams",
@@ -183,40 +183,40 @@ export const ADVANCED_IT_SERVICES = [
             "Enterprise IT departments"
         ],
         tags: ["DevOps", "CI/CD", "Automation", "Kubernetes", "Docker", "Infrastructure as Code"],
-        estimatedDelivery: "4-8 weeks",
-        supportLevel: "premium",
+        estimatedDelivery: "4-8 weeks";
+        supportLevel: "premium";
         marketPrice: "$1,800 - $5,000/month",
         contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
+            phone: "+1 302 464 0950";
+            email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"
-        },
-        rating: 4.7,
-        reviewCount: 234,
-        featured: false,
-        location: "Global",
-        availability: "24/7",
-        demoUrl: "https://ziontechgroup.com/demo/devops-automation",
-        documentationUrl: "https://ziontechgroup.com/docs/devops-automation",
+        };
+        rating: 4.7;
+        reviewCount: 234;
+        featured: false;
+        location: "Global";
+        availability: "24/7";
+        demoUrl: "https://ziontechgroup.com/demo/devops-automation";
+        documentationUrl: "https://ziontechgroup.com/docs/devops-automation";
         technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Kubernetes", "Docker", "Terraform", "Ansible"],
         integrations: ["GitHub", "GitLab", "Bitbucket", "Jira", "Slack", "Teams", "AWS", "Azure", "GCP"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "SOX"],
-        roi: "250% within 10 months",
+        roi: "250% within 10 months";
         competitors: ["GitLab", "GitHub", "Jenkins", "CircleCI", "Travis CI", "Azure DevOps"],
-        onsiteSupport: true,
+        onsiteSupport: true;
         globalCoverage: true
-    },
+    };
     {
-        id: "data-center-optimization",
-        title: "Data Center Optimization & Modernization",
+        id: "data-center-optimization";
+        title: "Data Center Optimization & Modernization";
         description: "Comprehensive data center optimization services including infrastructure assessment, modernization planning, energy efficiency improvements, and capacity planning.",
-        category: "Infrastructure",
-        subcategory: "Data Center",
-        price: 8000,
-        currency: "$",
-        pricingModel: "per-project",
+        category: "Infrastructure";
+        subcategory: "Data Center";
+        price: 8000;
+        currency: "$";
+        pricingModel: "per-project";
         features: [
-            "Data center infrastructure assessment",
+            "Data center infrastructure assessment";
             "Capacity planning and optimization",
             "Energy efficiency improvements",
             "Cooling system optimization",
@@ -228,7 +228,7 @@ export const ADVANCED_IT_SERVICES = [
             "Performance monitoring and optimization"
         ],
         benefits: [
-            "Reduce energy costs by 20-40%",
+            "Reduce energy costs by 20-40%";
             "Improve capacity utilization by 30%",
             "Enhance reliability and uptime",
             "Reduce maintenance costs",
@@ -236,7 +236,7 @@ export const ADVANCED_IT_SERVICES = [
             "Extend equipment lifespan"
         ],
         useCases: [
-            "Data center consolidation",
+            "Data center consolidation";
             "Energy efficiency improvements",
             "Capacity expansion planning",
             "Infrastructure modernization",
@@ -244,7 +244,7 @@ export const ADVANCED_IT_SERVICES = [
             "Cost reduction initiatives"
         ],
         targetAudience: [
-            "Data center operators",
+            "Data center operators";
             "IT infrastructure managers",
             "Facility managers",
             "Enterprise IT departments",
@@ -252,40 +252,40 @@ export const ADVANCED_IT_SERVICES = [
             "Cloud service providers"
         ],
         tags: ["Data Center", "Infrastructure", "Optimization", "Energy Efficiency", "Capacity Planning"],
-        estimatedDelivery: "6-12 weeks",
-        supportLevel: "enterprise",
+        estimatedDelivery: "6-12 weeks";
+        supportLevel: "enterprise";
         marketPrice: "$8,000 - $50,000+",
         contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
+            phone: "+1 302 464 0950";
+            email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"
-        },
-        rating: 4.8,
-        reviewCount: 67,
-        featured: false,
-        location: "Global",
-        availability: "24/7",
-        demoUrl: "https://ziontechgroup.com/demo/data-center-optimization",
-        documentationUrl: "https://ziontechgroup.com/docs/data-center-optimization",
+        };
+        rating: 4.8;
+        reviewCount: 67;
+        featured: false;
+        location: "Global";
+        availability: "24/7";
+        demoUrl: "https://ziontechgroup.com/demo/data-center-optimization";
+        documentationUrl: "https://ziontechgroup.com/docs/data-center-optimization";
         technology: ["VMware", "Hyper-V", "Storage systems", "Network equipment", "Power systems", "Cooling systems"],
         integrations: ["Enterprise systems", "Monitoring tools", "Management platforms", "Automation tools"],
         compliance: ["Uptime Institute", "TIA-942", "ISO 27001", "SOC 2"],
-        roi: "180% within 24 months",
+        roi: "180% within 24 months";
         competitors: ["Schneider Electric", "Eaton", "Vertiv", "HPE", "Dell EMC"],
-        onsiteSupport: true,
+        onsiteSupport: true;
         globalCoverage: true
-    },
+    };
     {
-        id: "network-security-architecture",
-        title: "Network Security Architecture & Design",
+        id: "network-security-architecture";
+        title: "Network Security Architecture & Design";
         description: "Comprehensive network security architecture design and implementation services including zero-trust network design, segmentation, and advanced threat protection.",
-        category: "Network Security",
-        subcategory: "Architecture & Design",
-        price: 12000,
-        currency: "$",
-        pricingModel: "per-project",
+        category: "Network Security";
+        subcategory: "Architecture & Design";
+        price: 12000;
+        currency: "$";
+        pricingModel: "per-project";
         features: [
-            "Network security assessment and audit",
+            "Network security assessment and audit";
             "Zero-trust network architecture design",
             "Network segmentation and micro-segmentation",
             "Advanced threat protection implementation",
@@ -297,7 +297,7 @@ export const ADVANCED_IT_SERVICES = [
             "Training and documentation"
         ],
         benefits: [
-            "Improve network security posture",
+            "Improve network security posture";
             "Reduce attack surface",
             "Enable secure remote work",
             "Improve compliance",
@@ -305,7 +305,7 @@ export const ADVANCED_IT_SERVICES = [
             "Enable better threat detection"
         ],
         useCases: [
-            "Network security redesign",
+            "Network security redesign";
             "Zero-trust implementation",
             "Compliance requirements",
             "Remote work enablement",
@@ -313,7 +313,7 @@ export const ADVANCED_IT_SERVICES = [
             "Security architecture review"
         ],
         targetAudience: [
-            "Network administrators",
+            "Network administrators";
             "Security architects",
             "IT managers",
             "CISOs",
@@ -321,40 +321,40 @@ export const ADVANCED_IT_SERVICES = [
             "Enterprise IT departments"
         ],
         tags: ["Network Security", "Zero Trust", "Architecture", "Threat Protection", "Segmentation"],
-        estimatedDelivery: "8-16 weeks",
-        supportLevel: "premium",
+        estimatedDelivery: "8-16 weeks";
+        supportLevel: "premium";
         marketPrice: "$12,000 - $75,000+",
         contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
+            phone: "+1 302 464 0950";
+            email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"
-        },
-        rating: 4.9,
-        reviewCount: 89,
-        featured: true,
-        location: "Global",
-        availability: "24/7",
-        demoUrl: "https://ziontechgroup.com/demo/network-security",
-        documentationUrl: "https://ziontechgroup.com/docs/network-security",
+        };
+        rating: 4.9;
+        reviewCount: 89;
+        featured: true;
+        location: "Global";
+        availability: "24/7";
+        demoUrl: "https://ziontechgroup.com/demo/network-security";
+        documentationUrl: "https://ziontechgroup.com/docs/network-security";
         technology: ["Cisco", "Palo Alto", "Fortinet", "Check Point", "Juniper", "F5"],
         integrations: ["Active Directory", "SIEM", "Identity providers", "Monitoring tools", "Automation platforms"],
         compliance: ["NIST", "ISO 27001", "SOC 2", "PCI DSS", "HIPAA"],
-        roi: "220% within 15 months",
+        roi: "220% within 15 months";
         competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point", "Juniper"],
-        onsiteSupport: true,
+        onsiteSupport: true;
         globalCoverage: true
-    },
+    };
     {
-        id: "disaster-recovery-solutions",
-        title: "Disaster Recovery & Business Continuity",
+        id: "disaster-recovery-solutions";
+        title: "Disaster Recovery & Business Continuity";
         description: "Comprehensive disaster recovery and business continuity solutions including backup systems, recovery planning, testing, and managed recovery services.",
-        category: "Business Continuity",
-        subcategory: "Disaster Recovery",
-        price: 3000,
-        currency: "$",
-        pricingModel: "monthly",
+        category: "Business Continuity";
+        subcategory: "Disaster Recovery";
+        price: 3000;
+        currency: "$";
+        pricingModel: "monthly";
         features: [
-            "Disaster recovery planning and assessment",
+            "Disaster recovery planning and assessment";
             "Backup system design and implementation",
             "Recovery time objective (RTO) optimization",
             "Recovery point objective (RPO) management",
@@ -366,7 +366,7 @@ export const ADVANCED_IT_SERVICES = [
             "Regular recovery testing and drills"
         ],
         benefits: [
-            "Minimize downtime and data loss",
+            "Minimize downtime and data loss";
             "Ensure business continuity",
             "Reduce recovery time",
             "Improve compliance",
@@ -374,7 +374,7 @@ export const ADVANCED_IT_SERVICES = [
             "Reduce business risk"
         ],
         useCases: [
-            "Data protection and backup",
+            "Data protection and backup";
             "Business continuity planning",
             "Compliance requirements",
             "Ransomware protection",
@@ -382,7 +382,7 @@ export const ADVANCED_IT_SERVICES = [
             "Regulatory compliance"
         ],
         targetAudience: [
-            "IT managers",
+            "IT managers";
             "Business continuity managers",
             "Risk managers",
             "Compliance officers",
@@ -390,27 +390,27 @@ export const ADVANCED_IT_SERVICES = [
             "Enterprise organizations"
         ],
         tags: ["Disaster Recovery", "Business Continuity", "Backup", "Recovery", "High Availability"],
-        estimatedDelivery: "4-8 weeks",
-        supportLevel: "premium",
+        estimatedDelivery: "4-8 weeks";
+        supportLevel: "premium";
         marketPrice: "$3,000 - $10,000/month",
         contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
+            phone: "+1 302 464 0950";
+            email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"
-        },
-        rating: 4.8,
-        reviewCount: 123,
-        featured: false,
-        location: "Global",
-        availability: "24/7",
-        demoUrl: "https://ziontechgroup.com/demo/disaster-recovery",
-        documentationUrl: "https://ziontechgroup.com/docs/disaster-recovery",
+        };
+        rating: 4.8;
+        reviewCount: 123;
+        featured: false;
+        location: "Global";
+        availability: "24/7";
+        demoUrl: "https://ziontechgroup.com/demo/disaster-recovery";
+        documentationUrl: "https://ziontechgroup.com/docs/disaster-recovery";
         technology: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Zerto", "VMware SRM"],
         integrations: ["VMware", "Hyper-V", "Cloud platforms", "Storage systems", "Monitoring tools"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "SOX"],
-        roi: "400% within 12 months",
+        roi: "400% within 12 months";
         competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Zerto"],
-        onsiteSupport: true,
+        onsiteSupport: true;
         globalCoverage: true
     }
 ];

@@ -1,48 +1,47 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useEffect } from 'react';
-import { CheckCircl, e, XCircl, e, Inf, o, X, AlertTriangle } from 'lucide-react';
+import { CheckCircl, e, XCircl, e, Inf, o, X, AlertTriangle } from 'lucide-react, ';
 
 export interface NotificationProps {
   i, d: string;
-  typ, e: 'success' | 'error' | 'info' | 'warning';
-  titl, e: string;
-  messag, e: string;
-  duration?: number;
+    typ, e: 'success' | 'error' | 'info' | 'warning';
+    titl, e: string;
+    messag, e: string;
+    duration?: number;
   onClos, e: (i,  d: string) => void;
 }
 
 const notificationStyles = {
   succes, s: {
     ico, n: CheckCircl, e,
-    bgColo, r: 'bg-zion-emerald/10',
-    borderColo, r: 'border-zion-emerald/20',
-    textColo, r: 'text-zion-emerald',
+    bgColo, r: 'bg-zion-emerald/10';
+    borderColo, r: 'border-zion-emerald/20';
+    textColo, r: 'text-zion-emerald';
     iconColo, r: 'text-zion-emerald'
-  },
+  };
   erro, r: {
     ico, n: XCircl, e,
-    bgColo, r: 'bg-red-500/10',
-    borderColo, r: 'border-red-500/20',
-    textColo, r: 'text-red-500',
+    bgColo, r: 'bg-red-500/10';
+    borderColo, r: 'border-red-500/20';
+    textColo, r: 'text-red-500';
     iconColo, r: 'text-red-500'
-  },
+  };
   inf, o: {
     ico, n: Inf, o,
-    bgColo, r: 'bg-zion-blue/10',
-    borderColo, r: 'border-zion-blue/20',
-    textColo, r: 'text-zion-blue',
+    bgColo, r: 'bg-zion-blue/10';
+    borderColo, r: 'border-zion-blue/20';
+    textColo, r: 'text-zion-blue';
     iconColo, r: 'text-zion-blue'
-  },
+  };
   warnin, g: {
     ico, n: AlertTriangl, e,
-    bgColo, r: 'bg-zion-gold/10',
-    borderColo, r: 'border-zion-gold/20',
-    textColo, r: 'text-zion-gold',
+    bgColo, r: 'bg-zion-gold/10';
+    borderColo, r: 'border-zion-gold/20';
+    textColo, r: 'text-zion-gold';
     iconColo, r: 'text-zion-gold'
   }
 };
-
-export function Notification({ i,  d, typ, e, titl, e, messag, e, duration = 500, 0, onClose }: NotificationProps) {
+    export function Notification({ i,  d, typ, e, titl, e, messag, e, duration = 500, 0, onClose }: NotificationProps) {
   const [isVisib, l, e, setIsVisib, l, e] = useState(true);
   const styles = notificationStyles[ty,  p, e];
   const Icon = styles.icon;
@@ -78,7 +77,7 @@ export function Notification({ i,  d, typ, e, titl, e, messag, e, duration = 500
         </div>
         <button
           onClick={handleClose}
-          className="text-muted-foreground hove,  r:text-foreground transition-colors"
+          className="text-muted-foreground hove,  r: text-foreground transition-colors"
           aria-label="Close notification"
         >
           <X className="w-4 h-4" />
@@ -89,7 +88,7 @@ export function Notification({ i,  d, typ, e, titl, e, messag, e, duration = 500
 }
 
 export function NotificationContainer({ notification,  s, onClose }: { 
-  notification, s: NotificationProps[],
+  notification, s: NotificationProps[];
     onClos, e: (i, d: string) => void 
 }) {
   return (

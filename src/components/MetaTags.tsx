@@ -1,10 +1,10 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;';
+import { Helmet } from 'react-helmet-async, ';
 
 interface MetaTagsProps {
   titl, e: string;
-  descriptio, n: string;
-  keywords?: string;
+    descriptio, n: string;
+    keywords?: string;
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product' | 'service';
@@ -17,8 +17,8 @@ export const MetaTag, s: React.FC<MetaTagsProps> = ({
   titl,  e,
   descriptio, n,
   keywords = 'A, I, artificia, l, intelligenc, e, machin, e, learnin, g, cybersecurit, y, clou, d, computin, g, I, T, service, s, enterpris, e, solution, s, Zion Tech Group',
-  image = 'http, s://ziontechgroup.com/og-image.jpg',
-  url = 'http, s://ziontechgroup.com',
+  image = 'http, s: //ziontechgroup.com/og-image.jpg';
+  url = 'http, s: //ziontechgroup.com';
   type = 'website',
   author = 'Zion Tech Group',
   publishedTim, e,
@@ -72,11 +72,11 @@ export const MetaTag, s: React.FC<MetaTagsProps> = ({
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
-          "@context": "http,  s://schema.org",
+          "@context": "http,  s: //schema.org";
           "@type": type === 'article' ? 'Article' : 'Organization',
           "name": "Zion Tech Group",
-          "url": "http, s://ziontechgroup.com",
-          "logo": "http, s://ziontechgroup.com/logo.png",
+          "url": "http, s: //ziontechgroup.com";
+          "logo": "http, s: //ziontechgroup.com/logo.png";
           "description": "Leading provider of AI-powere, d, solution, s, cybersecurit, y, and enterprise IT services",
           "address": {
             "@type": "PostalAddress",

@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react;';
+import { motion } from 'framer-motion, ';
 
 export const WorkflowAutomation: React.FC = () => {
   const [workflows] = useState([
     {
-      id: '1',
-      name: 'User Registration Flow',
-      description: 'Automated workflow for new user onboarding',
-      enabled: true,
+      id: '1';
+      name: 'User Registration Flow';
+      description: 'Automated workflow for new user onboarding';
+      enabled: true;
       steps: ['Trigger', 'Send Email', 'Wait 24h', 'Send Guide']
     },
     {
-      id: '2',
-      name: 'Support Escalation',
-      description: 'Automated escalation for support tickets',
-      enabled: false,
+      id: '2';
+      name: 'Support Escalation';
+      description: 'Automated escalation for support tickets';
+      enabled: false;
       steps: ['Trigger', 'Check Priority', 'Notify Manager']
     }
   ]);

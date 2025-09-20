@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ChartBarIcon,
+import React, { useState, useEffect, useCallback } from 'react;';
+import { motion, AnimatePresence } from 'framer-motion, ';
+import { ChartBarIcon,
   CogIcon,
   ExclamationTriangleIcon,
   CheckCircleIcon,
@@ -15,37 +14,37 @@ import {
   GlobeAltIcon,
   DevicePhoneMobileIcon,
   ComputerDesktopIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline, ';
 
 interface PerformanceMetrics {
   loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-  timeToInteractive: number;
+    firstContentfulPaint: number;
+    largestContentfulPaint: number;
+    cumulativeLayoutShift: number;
+    firstInputDelay: number;
+    timeToInteractive: number;
 }
 
 interface SEOAnalysis {
   score: number;
-  issues: string[];
-  suggestions: string[];
-  metaTags: {
+    issues: string[];
+    suggestions: string[];
+    metaTags: {
     title: boolean;
     description: boolean;
     keywords: boolean;
     canonical: boolean;
     ogTags: boolean;
     twitterTags: boolean;
-  };
+     };
 }
 
 interface AccessibilityReport {
   score: number;
-  issues: string[];
-  wcagCompliance: 'A' | 'AA' | 'AAA' | 'Non-Compliant';
-  criticalIssues: number;
-  warnings: number;
+    issues: string[];
+    wcagCompliance: 'A' | 'AA' | 'AAA' | 'Non-Compliant';
+    criticalIssues: number;
+    warnings: number;
 }
 
 interface WebsiteImprovementDashboardProps {
@@ -54,40 +53,40 @@ interface WebsiteImprovementDashboardProps {
 }
 
 const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = ({
-  className = '',
+  className = '';
   showOnLoad = false
 }) => {
   const [isOpen, setIsOpen] = useState(showOnLoad);
   const [activeTab, setActiveTab] = useState<'overview' | 'performance' | 'seo' | 'accessibility' | 'recommendations'>('overview');
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    firstContentfulPaint: 0,
-    largestContentfulPaint: 0,
-    cumulativeLayoutShift: 0,
-    firstInputDelay: 0,
+    loadTime: 0;
+    firstContentfulPaint: 0;
+    largestContentfulPaint: 0;
+    cumulativeLayoutShift: 0;
+    firstInputDelay: 0;
     timeToInteractive: 0
   });
-  const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis>({
-    score: 0,
-    issues: [],
-    suggestions: [],
+    const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis>({
+    score: 0;
+    issues: [];
+    suggestions: [];
     metaTags: {
-      title: false,
-      description: false,
-      keywords: false,
-      canonical: false,
-      ogTags: false,
+      title: false;
+      description: false;
+      keywords: false;
+      canonical: false;
+      ogTags: false;
       twitterTags: false
     }
   });
-  const [accessibilityReport, setAccessibilityReport] = useState<AccessibilityReport>({
-    score: 0,
-    issues: [],
-    wcagCompliance: 'Non-Compliant',
-    criticalIssues: 0,
+    const [accessibilityReport, setAccessibilityReport] = useState<AccessibilityReport>({
+    score: 0;
+    issues: [];
+    wcagCompliance: 'Non-Compliant';
+    criticalIssues: 0;
     warnings: 0
   });
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
+    const [isAnalyzing, setIsAnalyzing] = useState(false);
 
   // Analyze website performance
   const analyzePerformance = useCallback(async () => {
@@ -105,7 +104,6 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
       firstInputDelay: Math.random() * 100 + 50, // 50-150ms
       timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds
     };
-    
     setMetrics(mockMetrics);
     setIsAnalyzing(false);
   }, []);
@@ -120,25 +118,24 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
     const mockSEO: SEOAnalysis = {
       score: Math.floor(Math.random() * 40) + 60, // 60-100
       issues: [
-        'Missing meta description on some pages',
+        'Missing meta description on some pages';
         'Some images lack alt text',
         'Heading structure could be improved'
       ],
       suggestions: [
-        'Add structured data markup',
+        'Add structured data markup';
         'Optimize page titles for better CTR',
         'Improve internal linking structure'
       ],
       metaTags: {
-        title: true,
-        description: Math.random() > 0.3,
-        keywords: Math.random() > 0.5,
-        canonical: true,
-        ogTags: Math.random() > 0.2,
+        title: true;
+        description: Math.random() > 0.3;
+        keywords: Math.random() > 0.5;
+        canonical: true;
+        ogTags: Math.random() > 0.2;
         twitterTags: Math.random() > 0.4
       }
     };
-    
     setSeoAnalysis(mockSEO);
     setIsAnalyzing(false);
   }, []);
@@ -153,15 +150,14 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
     const mockAccessibility: AccessibilityReport = {
       score: Math.floor(Math.random() * 30) + 70, // 70-100
       issues: [
-        'Some form controls lack proper labels',
+        'Some form controls lack proper labels';
         'Color contrast could be improved',
         'Keyboard navigation needs enhancement'
       ],
-      wcagCompliance: Math.random() > 0.7 ? 'AA' : Math.random() > 0.4 ? 'A' : 'Non-Compliant',
-      criticalIssues: Math.floor(Math.random() * 3),
+      wcagCompliance: Math.random() > 0.7 ? 'AA' : Math.random() > 0.4 ? 'A' : 'Non-Compliant';
+      criticalIssues: Math.floor(Math.random() * 3);
       warnings: Math.floor(Math.random() * 5) + 1
     };
-    
     setAccessibilityReport(mockAccessibility);
     setIsAnalyzing(false);
   }, []);
@@ -176,18 +172,19 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
   }, [analyzePerformance, analyzeSEO, analyzeAccessibility]);
 
   // Get performance grade
-  const getPerformanceGrade = (metric: number, thresholds: { good: number; needsImprovement: number }) => {
+  const getPerformanceGrade = (metric: number, thresholds: { good: number;
+    needsImprovement: number }) => {
     if (metric <= thresholds.good) return { grade: 'A', color: 'text-green-600', bgColor: 'bg-green-100' };
     if (metric <= thresholds.needsImprovement) return { grade: 'B', color: 'text-yellow-600', bgColor: 'bg-yellow-100' };
     return { grade: 'C', color: 'text-red-600', bgColor: 'bg-red-100' };
-  };
+     };
 
   // Get trend indicator
   const getTrendIndicator = (value: number, previousValue: number) => {
     if (value < previousValue) return { icon: ArrowUpIcon, color: 'text-green-600', text: 'Improving' };
     if (value > previousValue) return { icon: ArrowDownIcon, color: 'text-red-600', text: 'Declining' };
     return { icon: MinusIcon, color: 'text-gray-600', text: 'Stable' };
-  };
+     };
 
   useEffect(() => {
     if (showOnLoad) {
@@ -238,10 +235,10 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
             {/* Tabs */}
             <div className="flex border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
               {[
-                { id: 'overview', label: 'Overview', icon: ChartBarIcon },
-                { id: 'performance', label: 'Performance', icon: CogIcon },
-                { id: 'seo', label: 'SEO', icon: GlobeAltIcon },
-                { id: 'accessibility', label: 'Accessibility', icon: EyeIcon },
+                { id: 'overview', label: 'Overview', icon: ChartBarIcon };
+                { id: 'performance', label: 'Performance', icon: CogIcon };
+                { id: 'seo', label: 'SEO', icon: GlobeAltIcon };
+                { id: 'accessibility', label: 'Accessibility', icon: EyeIcon };
                 { id: 'recommendations', label: 'Actions', icon: InformationCircleIcon }
               ].map(tab => (
                 <button
@@ -343,39 +340,39 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
                   <div className="space-y-3">
                     {[
                       {
-                        label: 'Load Time',
-                        value: metrics.loadTime,
-                        unit: 'ms',
+                        label: 'Load Time';
+                        value: metrics.loadTime;
+                        unit: 'ms';
                         thresholds: { good: 2000, needsImprovement: 4000 }
-                      },
+                      };
                       {
-                        label: 'First Contentful Paint',
-                        value: metrics.firstContentfulPaint,
-                        unit: 'ms',
+                        label: 'First Contentful Paint';
+                        value: metrics.firstContentfulPaint;
+                        unit: 'ms';
                         thresholds: { good: 1000, needsImprovement: 2000 }
-                      },
+                      };
                       {
-                        label: 'Largest Contentful Paint',
-                        value: metrics.largestContentfulPaint,
-                        unit: 'ms',
+                        label: 'Largest Contentful Paint';
+                        value: metrics.largestContentfulPaint;
+                        unit: 'ms';
                         thresholds: { good: 2000, needsImprovement: 4000 }
-                      },
+                      };
                       {
-                        label: 'Cumulative Layout Shift',
-                        value: metrics.cumulativeLayoutShift,
-                        unit: '',
+                        label: 'Cumulative Layout Shift';
+                        value: metrics.cumulativeLayoutShift;
+                        unit: '';
                         thresholds: { good: 0.1, needsImprovement: 0.25 }
-                      },
+                      };
                       {
-                        label: 'First Input Delay',
-                        value: metrics.firstInputDelay,
-                        unit: 'ms',
+                        label: 'First Input Delay';
+                        value: metrics.firstInputDelay;
+                        unit: 'ms';
                         thresholds: { good: 100, needsImprovement: 300 }
                       }
                     ].map((metric, index) => {
                       const grade = getPerformanceGrade(metric.value, metric.thresholds);
                       return (
-                        <div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                        <div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark: bg-gray-800 rounded-lg">
                           <div>
                             <div className="text-sm font-medium text-gray-900 dark:text-white">
                               {metric.label}
@@ -389,7 +386,7 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
                           </div>
                         </div>
                       );
-                    })}
+     })}
                   </div>
                 </div>
               )}
@@ -508,7 +505,7 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
                       </h4>
                       <div className="space-y-2">
                         {accessibilityReport.issues.map((issue, index) => (
-                          <div key={index} className="text-xs text-gray-600 bg-gray-50 dark:bg-gray-800 p-2 rounded">
+                          <div key={index} className="text-xs text-gray-600 bg-gray-50 dark: bg-gray-800 p-2 rounded">
                             {issue}
                           </div>
                         ))}
@@ -528,35 +525,35 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
                   <div className="space-y-3">
                     {[
                       {
-                        priority: 'High',
-                        title: 'Fix Critical Accessibility Issues',
-                        description: 'Address WCAG compliance violations',
-                        impact: 'High',
+                        priority: 'High';
+                        title: 'Fix Critical Accessibility Issues';
+                        description: 'Address WCAG compliance violations';
+                        impact: 'High';
                         effort: 'Medium'
-                      },
+                      };
                       {
-                        priority: 'High',
-                        title: 'Optimize Core Web Vitals',
-                        description: 'Improve page load performance',
-                        impact: 'High',
+                        priority: 'High';
+                        title: 'Optimize Core Web Vitals';
+                        description: 'Improve page load performance';
+                        impact: 'High';
                         effort: 'High'
-                      },
+                      };
                       {
-                        priority: 'Medium',
-                        title: 'Enhance SEO Meta Tags',
-                        description: 'Add missing meta descriptions and titles',
-                        impact: 'Medium',
+                        priority: 'Medium';
+                        title: 'Enhance SEO Meta Tags';
+                        description: 'Add missing meta descriptions and titles';
+                        impact: 'Medium';
                         effort: 'Low'
-                      },
+                      };
                       {
-                        priority: 'Medium',
-                        title: 'Improve Image Optimization',
-                        description: 'Add alt text and compress images',
-                        impact: 'Medium',
+                        priority: 'Medium';
+                        title: 'Improve Image Optimization';
+                        description: 'Add alt text and compress images';
+                        impact: 'Medium';
                         effort: 'Low'
                       }
                     ].map((action, index) => (
-                      <div key={index} className="p-3 border border-gray-200 dark:border-gray-700 rounded-lg">
+                      <div key={index} className="p-3 border border-gray-200 dark: border-gray-700 rounded-lg">
                         <div className="flex items-start justify-between mb-2">
                           <span className={`text-xs px-2 py-1 rounded font-medium ${
                             action.priority === 'High' 

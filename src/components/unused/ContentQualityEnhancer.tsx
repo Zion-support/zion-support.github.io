@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  DocumentTextIcon,
+import React, { useState, useEffect, useCallback } from 'react;';
+import { motion, AnimatePresence } from 'framer-motion, ';
+import { DocumentTextIcon,
   MagnifyingGlassIcon,
   CheckCircleIcon,
   ExclamationTriangleIcon,
@@ -12,38 +11,38 @@ import {
   PencilIcon,
   XMarkIcon,
   ArrowPathIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline, ';
 
 interface ContentAnalysis {
   wordCount: number;
-  readabilityScore: number;
-  seoScore: number;
-  engagementScore: number;
-  issues: ContentIssue[];
-  suggestions: ContentSuggestion[];
-  overallScore: number;
+    readabilityScore: number;
+    seoScore: number;
+    engagementScore: number;
+    issues: ContentIssue[];
+    suggestions: ContentSuggestion[];
+    overallScore: number;
 }
 
 interface ContentIssue {
   id: string;
-  type: 'error' | 'warning' | 'info';
-  title: string;
-  description: string;
-  severity: 'low' | 'medium' | 'high';
-  element?: HTMLElement;
+    type: 'error' | 'warning' | 'info';
+    title: string;
+    description: string;
+    severity: 'low' | 'medium' | 'high';
+    element?: HTMLElement;
   fixable: boolean;
-  suggestion: string;
-  impact: 'seo' | 'readability' | 'engagement' | 'accessibility';
+    suggestion: string;
+    impact: 'seo' | 'readability' | 'engagement' | 'accessibility';
 }
 
 interface ContentSuggestion {
   id: string;
-  type: 'improvement' | 'optimization' | 'enhancement';
-  title: string;
-  description: string;
-  priority: 'low' | 'medium' | 'high';
-  implementation: string;
-  expectedImpact: number;
+    type: 'improvement' | 'optimization' | 'enhancement';
+    title: string;
+    description: string;
+    priority: 'low' | 'medium' | 'high';
+    implementation: string;
+    expectedImpact: number;
 }
 
 interface ContentQualityEnhancerProps {
@@ -54,7 +53,7 @@ interface ContentQualityEnhancerProps {
 }
 
 export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
-  className = '',
+  className = '';
   showAnalysis = true,
   autoAnalyze = true,
   targetElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div[class*="content"]', 'article', 'section']
@@ -86,51 +85,51 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
       // Check for empty content
       if (words.length === 0) {
         issues.push({
-          id: `empty-content-${index}`,
-          type: 'error',
-          title: 'Empty Content',
-          description: 'Element contains no meaningful content',
-          severity: 'high',
-          element: element as HTMLElement,
-          fixable: true,
-          suggestion: 'Add relevant content or remove empty element',
+          id: `empty-content-${index}`;
+          type: 'error';
+          title: 'Empty Content';
+          description: 'Element contains no meaningful content';
+          severity: 'high';
+          element: element as HTMLElement;
+          fixable: true;
+          suggestion: 'Add relevant content or remove empty element';
           impact: 'seo'
         });
-        seoScore -= 10;
+    seoScore -= 10;
         engagementScore -= 10;
       }
 
       // Check for very short content
       if (words.length > 0 && words.length < 10) {
         issues.push({
-          id: `short-content-${index}`,
-          type: 'warning',
-          title: 'Very Short Content',
-          description: `Element contains only ${words.length} words`,
-          severity: 'medium',
-          element: element as HTMLElement,
-          fixable: true,
-          suggestion: 'Expand content to provide more value to users',
+          id: `short-content-${index}`;
+          type: 'warning';
+          title: 'Very Short Content';
+          description: `Element contains only ${words.length} words`;
+          severity: 'medium';
+          element: element as HTMLElement;
+          fixable: true;
+          suggestion: 'Expand content to provide more value to users';
           impact: 'engagement'
         });
-        engagementScore -= 5;
+    engagementScore -= 5;
         seoScore -= 3;
       }
 
       // Check for very long paragraphs (hard to read)
       if (words.length > 100) {
         issues.push({
-          id: `long-paragraph-${index}`,
-          type: 'warning',
-          title: 'Very Long Paragraph',
-          description: `Paragraph contains ${words.length} words`,
-          severity: 'medium',
-          element: element as HTMLElement,
-          fixable: true,
-          suggestion: 'Break into smaller paragraphs for better readability',
+          id: `long-paragraph-${index}`;
+          type: 'warning';
+          title: 'Very Long Paragraph';
+          description: `Paragraph contains ${words.length} words`;
+          severity: 'medium';
+          element: element as HTMLElement;
+          fixable: true;
+          suggestion: 'Break into smaller paragraphs for better readability';
           impact: 'readability'
         });
-        readabilityScore -= 5;
+    readabilityScore -= 5;
         engagementScore -= 3;
       }
 
@@ -145,17 +144,17 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
           const lastLevel = parseInt(previousHeadings[previousHeadings.length - 1].tagName.charAt(1));
           if (level - lastLevel > 1) {
             issues.push({
-              id: `heading-skip-${index}`,
-              type: 'warning',
-              title: 'Heading Level Skipped',
-              description: `Heading level jumps from h${lastLevel} to h${level}`,
-              severity: 'medium',
-              element: element as HTMLElement,
-              fixable: true,
-              suggestion: 'Ensure heading levels follow logical sequence',
+              id: `heading-skip-${index}`;
+              type: 'warning';
+              title: 'Heading Level Skipped';
+              description: `Heading level jumps from h${lastLevel} to h${level}`;
+              severity: 'medium';
+              element: element as HTMLElement;
+              fixable: true;
+              suggestion: 'Ensure heading levels follow logical sequence';
               impact: 'accessibility'
             });
-            seoScore -= 3;
+    seoScore -= 3;
           }
         }
       }
@@ -172,17 +171,17 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
           const density = (count / commonWords.length) * 100;
           if (density > 3) {
             issues.push({
-              id: `keyword-stuffing-${index}-${word}`,
-              type: 'warning',
-              title: 'Potential Keyword Stuffing',
-              description: `Word "${word}" appears ${count} times (${density.toFixed(1)}% density)`,
-              severity: 'medium',
-              element: element as HTMLElement,
-              fixable: true,
-              suggestion: 'Reduce keyword density for more natural content',
+              id: `keyword-stuffing-${index}-${word}`;
+              type: 'warning';
+              title: 'Potential Keyword Stuffing';
+              description: `Word "${word}" appears ${count} times (${density.toFixed(1)}% density)`;
+              severity: 'medium';
+              element: element as HTMLElement;
+              fixable: true;
+              suggestion: 'Reduce keyword density for more natural content';
               impact: 'seo'
             });
-            seoScore -= 5;
+    seoScore -= 5;
           }
         }
       });
@@ -192,49 +191,49 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
         const content = element.getAttribute('content') || '';
         if (content.length < 50) {
           issues.push({
-            id: `short-meta-${index}`,
-            type: 'warning',
-            title: 'Short Meta Description',
-            description: `Meta description is only ${content.length} characters`,
-            severity: 'medium',
-            element: element as HTMLElement,
-            fixable: true,
-            suggestion: 'Meta descriptions should be 150-160 characters for optimal display',
+            id: `short-meta-${index}`;
+            type: 'warning';
+            title: 'Short Meta Description';
+            description: `Meta description is only ${content.length} characters`;
+            severity: 'medium';
+            element: element as HTMLElement;
+            fixable: true;
+            suggestion: 'Meta descriptions should be 150-160 characters for optimal display';
             impact: 'seo'
           });
-          seoScore -= 5;
+    seoScore -= 5;
         } else if (content.length > 160) {
           issues.push({
-            id: `long-meta-${index}`,
-            type: 'warning',
-            title: 'Long Meta Description',
-            description: `Meta description is ${content.length} characters`,
-            severity: 'low',
-            element: element as HTMLElement,
-            fixable: true,
-            suggestion: 'Meta descriptions should be 150-160 characters for optimal display',
+            id: `long-meta-${index}`;
+            type: 'warning';
+            title: 'Long Meta Description';
+            description: `Meta description is ${content.length} characters`;
+            severity: 'low';
+            element: element as HTMLElement;
+            fixable: true;
+            suggestion: 'Meta descriptions should be 150-160 characters for optimal display';
             impact: 'seo'
           });
-          seoScore -= 2;
+    seoScore -= 2;
         }
       }
 
       // Check for broken links
       if (element.tagName === 'A') {
         const href = element.getAttribute('href');
-        if (href && (href.startsWith('#') || href.startsWith('javascript:'))) {
+        if (href && (href.startsWith('#') || href.startsWith('javascript: '))) {
           issues.push({
-            id: `broken-link-${index}`,
-            type: 'warning',
-            title: 'Potential Broken Link',
-            description: `Link "${href}" may not work properly`,
-            severity: 'medium',
-            element: element as HTMLElement,
-            fixable: true,
-            suggestion: 'Ensure link points to valid URL or page section',
+            id: `broken-link-${index}`;
+            type: 'warning';
+            title: 'Potential Broken Link';
+            description: `Link "${href}" may not work properly`;
+            severity: 'medium';
+            element: element as HTMLElement;
+            fixable: true;
+            suggestion: 'Ensure link points to valid URL or page section';
             impact: 'engagement'
           });
-          engagementScore -= 3;
+    engagementScore -= 3;
         }
       }
 
@@ -243,17 +242,17 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
         const alt = element.getAttribute('alt');
         if (!alt || alt.trim() === '') {
           issues.push({
-            id: `missing-alt-${index}`,
-            type: 'error',
-            title: 'Missing Alt Text',
-            description: 'Image has no alternative text for accessibility',
-            severity: 'high',
-            element: element as HTMLElement,
-            fixable: true,
-            suggestion: 'Add descriptive alt text for better accessibility and SEO',
+            id: `missing-alt-${index}`;
+            type: 'error';
+            title: 'Missing Alt Text';
+            description: 'Image has no alternative text for accessibility';
+            severity: 'high';
+            element: element as HTMLElement;
+            fixable: true;
+            suggestion: 'Add descriptive alt text for better accessibility and SEO';
             impact: 'accessibility'
           });
-          seoScore -= 8;
+    seoScore -= 8;
           engagementScore -= 5;
         }
       }
@@ -262,57 +261,57 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
     // Generate suggestions based on analysis
     if (wordCount < 300) {
       suggestions.push({
-        id: 'increase-content',
-        type: 'improvement',
-        title: 'Increase Content Length',
-        description: 'Consider adding more content to improve SEO and user engagement',
-        priority: 'high',
+        id: 'increase-content';
+        type: 'improvement';
+        title: 'Increase Content Length';
+        description: 'Consider adding more content to improve SEO and user engagement';
+        priority: 'high';
         implementation: 'Add relevant sections, expand existing content, include more examples',
         expectedImpact: 15
       });
-    }
+     }
 
     if (readabilityScore < 80) {
       suggestions.push({
-        id: 'improve-readability',
-        type: 'optimization',
-        title: 'Improve Readability',
-        description: 'Content could be more readable for better user experience',
-        priority: 'medium',
+        id: 'improve-readability';
+        type: 'optimization';
+        title: 'Improve Readability';
+        description: 'Content could be more readable for better user experience';
+        priority: 'medium';
         implementation: 'Use shorter sentences, break up long paragraphs, simplify complex language',
         expectedImpact: 12
       });
-    }
+     }
 
     if (seoScore < 80) {
       suggestions.push({
-        id: 'seo-optimization',
-        type: 'enhancement',
-        title: 'SEO Optimization',
-        description: 'Several SEO improvements could boost search visibility',
-        priority: 'high',
+        id: 'seo-optimization';
+        type: 'enhancement';
+        title: 'SEO Optimization';
+        description: 'Several SEO improvements could boost search visibility';
+        priority: 'high';
         implementation: 'Fix meta descriptions, add alt text, improve heading structure',
         expectedImpact: 20
       });
-    }
+     }
 
     if (engagementScore < 80) {
       suggestions.push({
-        id: 'engagement-improvement',
-        type: 'improvement',
-        title: 'Improve User Engagement',
-        description: 'Content could be more engaging for visitors',
-        priority: 'medium',
+        id: 'engagement-improvement';
+        type: 'improvement';
+        title: 'Improve User Engagement';
+        description: 'Content could be more engaging for visitors';
+        priority: 'medium';
         implementation: 'Add interactive elements, improve content structure, include calls-to-action',
         expectedImpact: 10
       });
-    }
+     }
 
     // Calculate overall score
     const overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3);
 
     const analysisResult: ContentAnalysis = {
-      wordCount,
+      wordCount;
       readabilityScore: Math.max(0, Math.min(100, readabilityScore)),
       seoScore: Math.max(0, Math.min(100, seoScore)),
       engagementScore: Math.max(0, Math.min(100, engagementScore)),
@@ -377,7 +376,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
     // Remove previous highlights
     document.querySelectorAll('.content-highlight').forEach(el => {
       el.classList.remove('content-highlight');
-    });
+     });
 
     // Add highlight to selected element
     element.classList.add('content-highlight');
@@ -385,7 +384,6 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
 
     // Scroll to element
     element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
     // Remove highlight after 3 seconds
     setTimeout(() => {
       element.classList.remove('content-highlight');
@@ -411,28 +409,28 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
   // Get score background color
   const getScoreBgColor = (score: number) => {
     if (score >= 80) return 'bg-green-100 dark:bg-green-900/20';
-    if (score >= 60) return 'bg-yellow-100 dark:bg-yellow-900/20';
-    return 'bg-red-100 dark:bg-red-900/20';
-  };
+    if (score >= 60) return 'bg-yellow-100 dark: bg-yellow-900/20';
+    return 'bg-red-100 dark: bg-red-900/20';
+     };
 
   // Get severity color
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
-      case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
-      case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
-      default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
-    }
+    case 'medium': return 'text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30';
+    case 'low': return 'text-blue-600 bg-blue-100 dark: bg-blue-900/30';
+    default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
+     }
   };
 
   // Get priority color
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
-      case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
-      case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
-      default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
-    }
+    case 'medium': return 'text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30';
+    case 'low': return 'text-blue-600 bg-blue-100 dark: bg-blue-900/30';
+    default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
+     }
   };
 
   return (
@@ -732,14 +730,14 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
                       onClick={() => {
                         const report = JSON.stringify(analysis, null, 2);
                         const blob = new Blob([report], { type: 'application/json' });
-                        const url = URL.createObjectURL(blob);
+    const url = URL.createObjectURL(blob);
                         const a = document.createElement('a');
                         a.href = url;
                         a.download = 'content-quality-report.json';
                         a.click();
                         URL.revokeObjectURL(url);
                       }}
-                      className="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors"
+                      className="w-full bg-purple-600 hover: bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors"
                     >
                       Export Report
                     </button>
@@ -755,10 +753,10 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
       <style>{`
         .content-highlight {
           outline: 3px solid #8b5cf6 !important;
-          outline-offset: 2px !important;
-          background-color: rgba(139, 92, 246, 0.1) !important;
+    outline-offset: 2px !important;
+    background-color: rgba(139, 92, 246, 0.1) !important;
           transition: all 0.3s ease !important;
-        }
+     }
       `}</style>
     </>
   );

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import React, { useState } from 'react;';
+import { Button } from '@/components/ui/button, ';
 
 interface ReplyFormProps {
   onSubmit: (content: string) => void;
-  placeholder?: string;
+    placeholder?: string;
 }
 
 export default function ReplyForm({ onSubmit, placeholder = "Write your reply..." }: ReplyFormProps) {
@@ -23,7 +23,7 @@ export default function ReplyForm({ onSubmit, placeholder = "Write your reply...
         value={content}
         onChange={(e) => setContent(e.target.value)}
         placeholder={placeholder}
-        className="w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none"
+        className="w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan resize-none"
         rows={3}
       />
       <div className="mt-2 flex justify-end">

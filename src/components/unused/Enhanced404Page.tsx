@@ -1,13 +1,12 @@
-import { Routes, Route } from "react-router-dom";
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  HomeIcon, 
+import { Routes, Route } from "react-router-dom, ";
+import React from 'react;';
+import { Link } from 'react-router-dom, ';
+import { motion } from 'framer-motion, ';
+import { HomeIcon, 
   MagnifyingGlassIcon, 
   ArrowLeftIcon,
   ExclamationTriangleIcon 
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline, ';
 
 interface Enhanced404PageProps {
   requestedPath?: string;
@@ -15,7 +14,7 @@ interface Enhanced404PageProps {
 }
 
 export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({ 
-  requestedPath, 
+  requestedPath;
   suggestedRoutes = [] 
 }) => {
   const defaultSuggestions = [

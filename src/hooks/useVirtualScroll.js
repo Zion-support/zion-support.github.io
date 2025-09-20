@@ -1,16 +1,16 @@
-import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react, ';
 export const useVirtualScroll = (items, options) => {
     const { itemHeight, overscan = 5, containerHeight = 400, enableSmoothScrolling = true, enableInfiniteScroll = false, threshold = 100 } = options;
     const containerRef = useRef(null);
     const scrollTimeoutRef = useRef(null);
     const rafRef = useRef(null);
     const [state, setState] = useState({
-        startIndex: 0,
-        endIndex: 0,
-        visibleItems: [],
-        scrollTop: 0,
+        startIndex: 0;
+        endIndex: 0;
+        visibleItems: [];
+        scrollTop: 0;
         containerHeight,
-        totalHeight: items.length * itemHeight,
+        totalHeight: items.length * itemHeight;
         isScrolling: false
     });
     // Calculate virtual scroll parameters
@@ -24,7 +24,7 @@ export const useVirtualScroll = (items, options) => {
             visibleCount,
             offsetY: startIndex * itemHeight
         };
-    }, [state.scrollTop, containerHeight, itemHeight, overscan, items.length]);
+     }, [state.scrollTop, containerHeight, itemHeight, overscan, items.length]);
     // Update virtual items when parameters change
     useEffect(() => {
         const { startIndex, endIndex } = virtualScrollParams;
@@ -35,7 +35,7 @@ export const useVirtualScroll = (items, options) => {
             visibleItems: items.slice(startIndex, endIndex + 1),
             totalHeight: items.length * itemHeight
         }));
-    }, [virtualScrollParams, items, itemHeight]);
+     }, [virtualScrollParams, items, itemHeight]);
     // Handle scroll events
     const handleScroll = useCallback((event) => {
         const target = event.target;
@@ -51,13 +51,13 @@ export const useVirtualScroll = (items, options) => {
                 scrollTop,
                 isScrolling: true
             }));
-            // Clear scrolling state after delay
+    // Clear scrolling state after delay
             if (scrollTimeoutRef.current) {
                 clearTimeout(scrollTimeoutRef.current);
             }
             scrollTimeoutRef.current = setTimeout(() => {
                 setState(prev => ({ ...prev, isScrolling: false }));
-            }, 150);
+     }, 150);
         });
     }, []);
     // Scroll to specific index
@@ -75,16 +75,15 @@ export const useVirtualScroll = (items, options) => {
             case 'end':
                 scrollTop = (index * itemHeight) - containerHeight + itemHeight;
                 break;
-            default:
-                scrollTop = index * itemHeight;
-        }
+            default: scrollTop = index * itemHeight;
+     }
         scrollTop = Math.max(0, Math.min(scrollTop, state.totalHeight - containerHeight));
         if (enableSmoothScrolling) {
             containerRef.current.scrollTo({
-                top: scrollTop,
+                top: scrollTop;
                 behavior: 'smooth'
             });
-        }
+     }
         else {
             containerRef.current.scrollTop = scrollTop;
         }
@@ -105,10 +104,10 @@ export const useVirtualScroll = (items, options) => {
     // Get visible range
     const getVisibleRange = useCallback(() => {
         return {
-            start: state.startIndex,
+            start: state.startIndex;
             end: state.endIndex
         };
-    }, [state.startIndex, state.endIndex]);
+     }, [state.startIndex, state.endIndex]);
     // Check if item is visible
     const isItemVisible = useCallback((index) => {
         return index >= state.startIndex && index <= state.endIndex;
@@ -146,25 +145,25 @@ export const useVirtualScroll = (items, options) => {
     }, []);
     // Container props
     const containerProps = {
-        ref: containerRef,
+        ref: containerRef;
         style: {
-            height: containerHeight,
-            overflow: 'auto',
-            position: 'relative',
+            height: containerHeight;
+            overflow: 'auto';
+            position: 'relative';
             willChange: state.isScrolling ? 'scroll-position' : 'auto'
-        },
+        };
         onScroll: handleScroll
     };
     // List props
     const listProps = {
         style: {
-            height: state.totalHeight,
-            position: 'relative',
+            height: state.totalHeight;
+            position: 'relative';
             transform: `translateY(${virtualScrollParams.offsetY}px)`
         }
     };
     return {
-        virtualItems: state.visibleItems,
+        virtualItems: state.visibleItems;
         containerProps,
         listProps,
         scrollToIndex,
@@ -185,7 +184,7 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
         if (!searchQuery.trim()) {
             setFilteredItems(items);
             setSearchResults({ indices: [], highlights: new Map() });
-            return;
+    return;
         }
         const query = searchQuery.toLowerCase();
         const results = [];
@@ -264,12 +263,12 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
     }, [items.length, itemHeights]);
     // Enhanced virtual scroll state
     const [state, setState] = useState({
-        startIndex: 0,
-        endIndex: 0,
-        visibleItems: [],
-        scrollTop: 0,
-        containerHeight: options.containerHeight || 400,
-        totalHeight: 0,
+        startIndex: 0;
+        endIndex: 0;
+        visibleItems: [];
+        scrollTop: 0;
+        containerHeight: options.containerHeight || 400;
+        totalHeight: 0;
         isScrolling: false
     });
     // Update virtual items based on scroll position
@@ -285,7 +284,7 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
         }));
     }, [state.scrollTop, state.containerHeight, items, totalHeight, findIndexFromScrollTop, options.overscan]);
     return {
-        virtualItems: state.visibleItems,
+        virtualItems: state.visibleItems;
         itemHeights,
         totalHeight,
         getCumulativeHeight,

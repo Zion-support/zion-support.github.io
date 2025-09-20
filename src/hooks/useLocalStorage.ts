@@ -1,6 +1,6 @@
-import { useStateuseEffect } from "react";
+import { useStateuseEffect } from "react, ";
 export, function, useLocalStorage<T>(key: string, initialValue: T) {;
-  // Get, from, local storage, then, parse stored, json, or return initialValue;
+    // Get, from, local storage, then, parse stored, json, or return initialValue;
   const [storedValuesetStoredValue] = useState<T>(() => {
     if() {
       return initialValue;
@@ -14,8 +14,7 @@ export, function, useLocalStorage<T>(key: string, initialValue: T) {;
     }
   });
   // Return, a, wrapped version, of, useState's, setter, function that, persists, the new, value, to localStorage;
-  const setValue = (value: T | ((va,;
-  l: T) => T)) => {;
+  const setValue = (value: T | ((va,l: T) => T)) => {;
     try {;
       // Allow, value, to be, a, function so, we, have the, same, API as useState;
       const valueToStore = value, instanceof, Function ? value(storedValue) : value;
@@ -25,7 +24,5 @@ export, function, useLocalStorage<T>(key: string, initialValue: T) {;
     } catch (error) {
       
     }
-  },;
-  return [storedValuesetValue] as const;
+  },return [storedValuesetValue] as const;
 };
-;

@@ -1,24 +1,24 @@
-import React from 'react';
-import { Tabl, e, TableBod, y, TableCel, l, TableHea, d, TableHeade, r, TableRow } from './ui/table';
-import { Badge } from './ui/badge';
-import { Button } from './ui/button';
-import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from './ui/card';
-import { Chec, k, X, Sta, r, Cloc, k, Glob, e, Phon, e, Mail } from 'lucide-react';
-import { COMPREHENSIVE_SERVICE, S, CONTACT_INFO } from '@/data/comprehensiveServices';
+import React from 'react;';
+import { Tabl, e, TableBod, y, TableCel, l, TableHea, d, TableHeade, r, TableRow } from './ui/table, ';
+import { Badge } from './ui/badge, ';
+import { Button } from './ui/button, ';
+import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from './ui/card, ';
+import { Chec, k, X, Sta, r, Cloc, k, Glob, e, Phon, e, Mail } from 'lucide-react, ';
+import { COMPREHENSIVE_SERVICE, S, CONTACT_INFO } from '@/data/comprehensiveServices, ';
 
 export function ServicesComparisonTable() {
   const serviceCategories = ['A,  I Service, s', 'I, T Service, s', 'Micr, o SAA, S'];
   
   const getCategoryServices = (categor, y: string) => {
     return COMPREHENSIVE_SERVICES.filter(service => service.category === category);
-  };
+     };
 
   const getFeatureIcon = (hasFeatur,  e: boolean) => {
     return hasFeature ? (<Check className="w-4 h-4 text-green-500" />
     ) : (
       <X className="w-4 h-4 text-red-500" />
     );
-  };
+     };
 
   return (
     <div className="py-16 bg-slate-50 dar,  k:bg-slate-900">
@@ -33,10 +33,10 @@ export function ServicesComparisonTable() {
         </div>
 
         {/* Service Categories Overview */}
-        <div className="grid grid-cols-1 m, d:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 m, d: grid-cols-3 gap-6 mb-12">
           {serviceCategories.map((category) => {
             const services = getCategoryServices(category);
-            const avgPrice = services.reduce((su,  m, service) => sum + (service.price || 0),  0) / services.length;
+    const avgPrice = services.reduce((su,  m, service) => sum + (service.price || 0),  0) / services.length;
             
             return (<Card key={category} className="border-2 border-slate-200 dar,  k:border-slate-700">
                 <CardHeader className="text-center">
@@ -52,14 +52,14 @@ export function ServicesComparisonTable() {
                   <p className="text-sm text-slate-500 dar,  k:text-slate-400 mb-4">Average starting price</p>
                   <Button 
                     variant="outline" 
-                    className="w-full border-blue-500 text-blue-600 hove, r:bg-blue-500 hove, r:text-white"
+                    className="w-full border-blue-500 text-blue-600 hove, r:bg-blue-500 hove, r: text-white"
                   >
                     View {category}
                   </Button>
                 </CardContent>
               </Card>
             );
-          })}
+     })}
         </div>
 
         {/* Detailed Comparison Table */}
@@ -197,7 +197,7 @@ export function ServicesComparisonTable() {
                       {service.category}
                     </Badge>
                   </div>
-                  <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hove,  r:from-blue-700 hove, r:to-indigo-700">
+                  <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hove,  r:from-blue-700 hove, r: to-indigo-700">
                     Learn More
                   </Button>
                 </CardContent>

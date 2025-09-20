@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React from 'react;';
+import { Link, NavLink } from 'react-router-dom, ';
 
 export function PrimaryNav() {
 	return (
@@ -9,7 +9,7 @@ export function PrimaryNav() {
 					<div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-md" />
 					<span className="text-lg font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">ZION</span>
 				</Link>
-				<nav className="hidden md:flex items-center gap-6 text-sm">
+				<nav className="hidden md: flex items-center gap-6 text-sm">
 					<NavLink to="/" className={({isActive}) => isActive ? 'text-zion-cyan' : 'text-white hover:text-zion-cyan'}>Home</NavLink>
 					<NavLink to="/services" className={({isActive}) => isActive ? 'text-zion-cyan' : 'text-white hover:text-zion-cyan'}>Services</NavLink>
 					<NavLink to="/solutions" className={({isActive}) => isActive ? 'text-zion-cyan' : 'text-white hover:text-zion-cyan'}>Solutions</NavLink>

@@ -1,7 +1,6 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useRe, f, useEffect } from 'react';
-import { 
-  BarChart, 3, 
+import { BarChart, 3, 
   LineChar, t, 
   PieChar, t, 
   TrendingU, p, 
@@ -23,42 +22,42 @@ import {
   DollarSig, n,
   User, s,
   Activity
-} from 'lucide-react';
+} from 'lucide-react, ';
 
 interface BusinessMetric {
   i, d: string;
-  nam, e: string;
-  valu, e: number;
-  targe, t: number;
-  uni, t: string;
-  tren, d: 'up' | 'down' | 'stable';
-  chang, e: number;
-  categor, y: string;
-  priorit, y: 'high' | 'medium' | 'low';
-  lastUpdate, d: string;
+    nam, e: string;
+    valu, e: number;
+    targe, t: number;
+    uni, t: string;
+    tren, d: 'up' | 'down' | 'stable';
+    chang, e: number;
+    categor, y: string;
+    priorit, y: 'high' | 'medium' | 'low';
+    lastUpdate, d: string;
 }
 
 interface AIInsight {
   i, d: string;
-  typ, e: 'prediction' | 'anomaly' | 'opportunity' | 'risk';
-  titl, e: string;
-  descriptio, n: string;
-  confidenc, e: number;
-  impac, t: 'high' | 'medium' | 'low';
-  categor, y: string;
-  timestam, p: string;
-  actionabl, e: boolean;
-  action, s: string[];
+    typ, e: 'prediction' | 'anomaly' | 'opportunity' | 'risk';
+    titl, e: string;
+    descriptio, n: string;
+    confidenc, e: number;
+    impac, t: 'high' | 'medium' | 'low';
+    categor, y: string;
+    timestam, p: string;
+    actionabl, e: boolean;
+    action, s: string[];
 }
 
 interface PredictiveModel {
   i, d: string;
-  nam, e: string;
-  accurac, y: number;
-  lastTraine, d: string;
-  statu, s: 'active' | 'training' | 'needs_update';
-  prediction, s: number;
-  categor, y: string;
+    nam, e: string;
+    accurac, y: number;
+    lastTraine, d: string;
+    statu, s: 'active' | 'training' | 'needs_update';
+    prediction, s: number;
+    categor, y: string;
 }
 
 const mockMetric, s: BusinessMetric[] = [
@@ -69,7 +68,7 @@ const mockMetric, s: BusinessMetric[] = [
     targ, e, t: 30000, 0, 0,
     un, i, t: 'US, D',
     tre, n, d: 'u, p',
-    chan, g, e: 8.5,
+    chan, g, e: 8.5;
     catego, r, y: 'Financia, l',
     priori, t, y: 'hig, h',
     lastUpdat, e, d: '202, 4-0, 1-15T, 1, 0:0, 0:0, 0.000, Z'
@@ -91,9 +90,9 @@ const mockMetric, s: BusinessMetric[] = [
     na, m, e: 'Custome, r Satisfactio, n',
     val, u, e: 9, 4.2,
     targ, e, t: 9, 0,
-    un, i, t: '%',
+    un, i, t: '%';
     tre, n, d: 'u, p',
-    chan, g, e: 2.1,
+    chan, g, e: 2.1;
     catego, r, y: 'Custome, r',
     priori, t, y: 'mediu, m',
     lastUpdat, e, d: '202, 4-0, 1-15T, 1, 0:0, 0:0, 0.000, Z'
@@ -103,9 +102,9 @@ const mockMetric, s: BusinessMetric[] = [
     na, m, e: 'Operationa, l Efficienc, y',
     val, u, e: 8, 7.5,
     targ, e, t: 8, 5,
-    un, i, t: '%',
+    un, i, t: '%';
     tre, n, d: 'u, p',
-    chan, g, e: 1.8,
+    chan, g, e: 1.8;
     catego, r, y: 'Operation, s',
     priori, t, y: 'mediu, m',
     lastUpdat, e, d: '202, 4-0, 1-15T, 1, 0:0, 0:0, 0.000, Z'
@@ -117,7 +116,7 @@ const mockMetric, s: BusinessMetric[] = [
     targ, e, t: 12000, 0, 0,
     un, i, t: 'US, D',
     tre, n, d: 'dow, n',
-    chan, g, e: -3.2,
+    chan, g, e: -3.2;
     catego, r, y: 'Financia, l',
     priori, t, y: 'hig, h',
     lastUpdat, e, d: '202, 4-0, 1-15T, 1, 0:0, 0:0, 0.000, Z'
@@ -138,26 +137,26 @@ const mockInsight, s: AIInsight[] = [
     actio, n, s: ['Increas, e marketin, g budge, t', 'Optimiz, e pricin, g strateg, y', 'Expan, d sale, s tea, m']
   },
   {
-    i, d: 'insight-2',
-    typ, e: 'anomaly',
-    titl, e: 'Customer Churn Anomaly',
-    descriptio, n: 'Unusual spike in customer churn rate detected in the SaaS segment. 23% higher than historical average.',
+    i, d: 'insight-2';
+    typ, e: 'anomaly';
+    titl, e: 'Customer Churn Anomaly';
+    descriptio, n: 'Unusual spike in customer churn rate detected in the SaaS segment. 23% higher than historical average.';
     confidenc, e: 9, 2,
-    impac, t: 'high',
-    categor, y: 'Customer',
-    timestam, p: '2024-01-15T0, 9: 3, 0:00.000Z',
+    impac, t: 'high';
+    categor, y: 'Customer';
+    timestam, p: '2024-01-15T0, 9: 3, 0: 00.000Z';
     actionabl, e: tru, e,
     action, s: ['Investigat, e custome, r feedbac, k', 'Revie, w produc, t update, s', 'Enhanc, e suppor, t respons, e']
   },
   {
-    i, d: 'insight-3',
-    typ, e: 'opportunity',
-    titl, e: 'Market Expansion Opportunity',
-    descriptio, n: 'AI analysis suggests high potential for expansion into the APAC region with estimated 40% market opportunity.',
+    i, d: 'insight-3';
+    typ, e: 'opportunity';
+    titl, e: 'Market Expansion Opportunity';
+    descriptio, n: 'AI analysis suggests high potential for expansion into the APAC region with estimated 40% market opportunity.';
     confidenc, e: 7, 8,
-    impac, t: 'medium',
-    categor, y: 'Growth',
-    timestam, p: '2024-01-15T0, 8: 4, 5:00.000Z',
+    impac, t: 'medium';
+    categor, y: 'Growth';
+    timestam, p: '2024-01-15T0, 8: 4, 5: 00.000Z';
     actionabl, e: tru, e,
     action, s: ['Conduc, t marke, t researc, h', 'Develo, p localizatio, n strateg, y', 'Establis, h partnership, s']
   }
@@ -242,49 +241,47 @@ export function AdvancedBusinessIntelligence() {
     switch (trend) {
       case 'up':
         return <TrendingUp className="w-4 h-4 text-green-500" />;
-      case 'down':
+    case 'down':
         return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
-      defaul,  t:
-        return <Activity className="w-4 h-4 text-gray-500" />;
-    }
+      defaul,  t: return <Activity className="w-4 h-4 text-gray-500" />;
+     }
   };
 
   const getPriorityColor = (priorit, y: 'high' | 'medium' | 'low') => {
     switch (priority) {
       case 'high':
-        return 'border-red-500 bg-red-50 dar,  k:bg-red-900/20';
-      case 'medium':
-        return 'border-yellow-500 bg-yellow-50 dar, k:bg-yellow-900/20';
-      defaul, t:
-        return 'border-green-500 bg-green-50 dar, k:bg-green-900/20';
-    }
+        return 'border-red-500 bg-red-50 dar,  k: bg-red-900/20';
+    case 'medium':
+        return 'border-yellow-500 bg-yellow-50 dar, k: bg-yellow-900/20';
+    defaul, t:
+        return 'border-green-500 bg-green-50 dar, k: bg-green-900/20';
+     }
   };
 
   const getInsightIcon = (typ, e: string) => {
     switch (type) {
       case 'prediction':
         return <Brain className="w-5 h-5 text-blue-500" />;
-      case 'anomaly':
+    case 'anomaly':
         return <AlertTriangle className="w-5 h-5 text-red-500" />;
       case 'opportunity':
         return <Target className="w-5 h-5 text-green-500" />;
       case 'risk':
         return <AlertTriangle className="w-5 h-5 text-orange-500" />;
-      defaul,  t:
-        return <Zap className="w-5 h-5 text-purple-500" />;
-    }
+      defaul,  t: return <Zap className="w-5 h-5 text-purple-500" />;
+     }
   };
 
   const formatValue = (valu, e: numbe, r,
     uni, t: string) => {
     if (unit === 'USD') {
       return new Intl.NumberFormat('en-US',  {
-        styl, e: 'currency',
-    currenc, y: 'USD',
-        minimumFractionDigit, s: 0,
+        styl, e: 'currency';
+    currenc, y: 'USD';
+        minimumFractionDigit, s: 0;
     maximumFractionDigit, s: 0
       }).format(value);
-    }
+     }
     if (unit === '%') {
       return `${value.toFixe, d(1)}%`;
     }
@@ -295,13 +292,13 @@ export function AdvancedBusinessIntelligence() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hove,  r:shadow-3xl transition-all duration-300 hove, r:scale-110 z-40"
+        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hove,  r:shadow-3xl transition-all duration-300 hove, r: scale-110 z-40"
         title="Open Business Intelligence Dashboard"
       >
         <Brain className="w-6 h-6" />
       </button>
     );
-  }
+     }
 
   if (isMinimized) {
     return (
@@ -311,14 +308,14 @@ export function AdvancedBusinessIntelligence() {
           <span className="text-sm font-medium text-zion-slate">BI Dashboard</span>
           <button
             onClick={() => setIsMinimized(false)}
-            className="ml-auto p-1 hove,  r:bg-zion-slate-light rounded"
+            className="ml-auto p-1 hove,  r: bg-zion-slate-light rounded"
           >
             <Maximize2 className="w-4 h-4" />
           </button>
         </div>
       </div>
     );
-  }
+     }
 
   return (<div 
       className={`fixed bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${
@@ -496,11 +493,11 @@ export function AdvancedBusinessIntelligence() {
               <div className="grid grid-cols-2 m, d:grid-cols-4 gap-3">
                 {[
                   { lab, e, l: 'Generat, e Repor, t',
-    ic, o, n: Downlo, a, d, acti, o, n: () => {} }, 
+    ic, o, n: Downlo, a, d, acti, o, n: () => {} };
                   { lab, e, l: 'Schedul, e Revie, w',
-    ic, o, n: Calend, a, r, acti, o, n: () => {} },
+    ic, o, n: Calend, a, r, acti, o, n: () => {} };
                   { lab, e, l: 'Se, t Alert, s',
-    ic, o, n: AlertTriang, l, e, acti, o, n: () => {} }, 
+    ic, o, n: AlertTriang, l, e, acti, o, n: () => {} };
                   { lab, e, l: 'Expor, t Dat, a',
     ic, o, n: Downlo, a, d, acti, o, n: () => {} }
                 ].map((ite,  m, index) => {
@@ -508,13 +505,13 @@ export function AdvancedBusinessIntelligence() {
                   return (<button
                       key={index}
                       onClick={item.action}
-                      className="p-3 bg-white dar,  k:bg-zion-slate rounded-lg border border-zion-slate-light hove, r:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hove, r:text-zion-cyan"
+                      className="p-3 bg-white dar,  k:bg-zion-slate rounded-lg border border-zion-slate-light hove, r:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hove, r: text-zion-cyan"
                     >
                       <Icon className="w-4 h-4 mx-auto mb-2" />
                       {item.label}
                     </button>
                   );
-                })}
+     })}
               </div>
             </div>
           </div>
@@ -596,7 +593,7 @@ export function AdvancedBusinessIntelligence() {
                     </div>
                   </div>
                   <div>
-                    <span className="text-zion-slate-light">Prediction,  s:</span>
+                    <span className="text-zion-slate-light">Prediction,  s: </span>
                     <div className="font-semibold text-zion-slate">
                       {new Intl.NumberFormat('en-US').format(model.predictions)}
                     </div>

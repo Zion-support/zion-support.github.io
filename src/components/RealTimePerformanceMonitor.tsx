@@ -1,17 +1,17 @@
 
-import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react;';
+import { motion } from 'framer-motion, ';
 
 interface PerformanceMetrics {
   timestamp: number;
-  memory: number;
-  cpu: number;
-  fps: number;
-  network: number;
+    memory: number;
+    cpu: number;
+    fps: number;
+    network: number;
 }
 
 export const RealTimePerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics[]>([]);
+    const [metrics, setMetrics] = useState<PerformanceMetrics[]>([]);
   const [isVisible, setIsVisible] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout>();
 
@@ -30,10 +30,11 @@ export const RealTimePerformanceMonitor: React.FC = () => {
       const network = Math.random() * 200;
       
       const newMetric: PerformanceMetrics = {
-        timestamp: Date.now(),
+        timestamp: Date.now();
         memory,
         cpu,
-        fps,
+        fps
+  };
         network
       };
       
@@ -60,7 +61,7 @@ export const RealTimePerformanceMonitor: React.FC = () => {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'M') {
         setIsVisible(!isVisible);
-      }
+     }
     };
 
     window.addEventListener('keydown', handleKeyPress);

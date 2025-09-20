@@ -1,32 +1,33 @@
 // Master Comprehensive Services 2025
 // This file combines all existing services with the new comprehensive expansion
-import { enhancedMicroSaasServices2025, enhancedITServices2025, enhancedAIServices2025 } from './comprehensiveServices2025';
-import { allExpandedServices2025, getServicesByCategory, getServicesByPriceRange, getPopularServices, searchServices } from './comprehensive-services-expansion-2025';
-import { allAdditionalServices2025, getAdditionalServicesByCategory, getAdditionalServicesByPriceRange, getAdditionalPopularServices, searchAdditionalServices } from './comprehensive-services-expansion-2025-part2';
-import { allCuttingEdgeServices2025, getCuttingEdgeServicesByCategory, getCuttingEdgeServicesByPriceRange, getCuttingEdgePopularServices, searchCuttingEdgeServices } from './comprehensive-services-expansion-2025-part3';
+import { enhancedMicroSaasServices2025, enhancedITServices2025, enhancedAIServices2025 } from './comprehensiveServices2025, ';
+import { allExpandedServices2025, getServicesByCategory, getServicesByPriceRange, getPopularServices, searchServices } from './comprehensive-services-expansion-2025, ';
+import { allAdditionalServices2025, getAdditionalServicesByCategory, getAdditionalServicesByPriceRange, getAdditionalPopularServices, searchAdditionalServices } from './comprehensive-services-expansion-2025-part2, ';
+import { allCuttingEdgeServices2025, getCuttingEdgeServicesByCategory, getCuttingEdgeServicesByPriceRange, getCuttingEdgePopularServices, searchCuttingEdgeServices } from './comprehensive-services-expansion-2025-part3, ';
 // Master services object combining all services
 export const masterComprehensiveServices2025 = {
     // Original services
     original: {
-        microSaas: enhancedMicroSaasServices2025,
-        itServices: enhancedITServices2025,
+        microSaas: enhancedMicroSaasServices2025;
+        itServices: enhancedITServices2025;
         aiServices: enhancedAIServices2025
-    },
+    };
     // Expanded services
-    expanded: allExpandedServices2025,
+    expanded: allExpandedServices2025;
     // Additional services
-    additional: allAdditionalServices2025,
+    additional: allAdditionalServices2025;
     // Cutting-edge services
     cuttingEdge: allCuttingEdgeServices2025
 };
-// Get all services as a flat array
+    // Get all services as a flat array
 export const getAllServices = () => {
     const allServices = [
         ...enhancedMicroSaasServices2025,
         ...enhancedITServices2025,
         ...enhancedAIServices2025,
         ...Object.values(allExpandedServices2025).flat(),
-        ...Object.values(allAdditionalServices2025).flat(),
+        ...Object.values(allAdditionalServices2025).flat()
+  };
         ...Object.values(allCuttingEdgeServices2025).flat()
     ];
     return allServices;
@@ -94,37 +95,37 @@ export const getMasterServicesByPricing = (pricing) => {
 export const getMasterServicesStats = () => {
     const allServices = getAllServices();
     const stats = {
-        totalServices: allServices.length,
+        totalServices: allServices.length;
         byType: {
-            microSaas: allServices.filter(s => 'pricing' in s && 'userLimit' in s).length,
-            itServices: allServices.filter(s => 'hourlyRate' in s && 'projectRate' in s).length,
+            microSaas: allServices.filter(s => 'pricing' in s && 'userLimit' in s).length;
+            itServices: allServices.filter(s => 'hourlyRate' in s && 'projectRate' in s).length;
             aiServices: allServices.filter(s => 'aiModels' in s && 'aiScore' in s).length
-        },
+        };
         byPricing: {
-            freemium: allServices.filter(s => 'pricing' in s && s.pricing === 'Freemium').length,
-            professional: allServices.filter(s => 'pricing' in s && s.pricing === 'Professional').length,
+            freemium: allServices.filter(s => 'pricing' in s && s.pricing === 'Freemium').length;
+            professional: allServices.filter(s => 'pricing' in s && s.pricing === 'Professional').length;
             enterprise: allServices.filter(s => 'pricing' in s && s.pricing === 'Enterprise').length
-        },
-        categories: [...new Set(allServices.map(s => s.category))].length,
+        };
+        categories: [...new Set(allServices.map(s => s.category))].length;
         priceRanges: {
             low: allServices.filter(s => {
                 if ('price' in s && typeof s.price === 'number')
                     return s.price < 100;
-                if ('hourlyRate' in s && typeof s.hourlyRate === 'number')
+    if ('hourlyRate' in s && typeof s.hourlyRate === 'number')
                     return s.hourlyRate < 100;
                 return false;
             }).length,
             medium: allServices.filter(s => {
                 if ('price' in s && typeof s.price === 'number')
                     return s.price >= 100 && s.price < 1000;
-                if ('hourlyRate' in s && typeof s.hourlyRate === 'number')
+    if ('hourlyRate' in s && typeof s.hourlyRate === 'number')
                     return s.hourlyRate >= 100 && s.hourlyRate < 200;
                 return false;
             }).length,
             high: allServices.filter(s => {
                 if ('price' in s && typeof s.price === 'number')
                     return s.price >= 1000;
-                if ('hourlyRate' in s && typeof s.hourlyRate === 'number')
+    if ('hourlyRate' in s && typeof s.hourlyRate === 'number')
                     return s.hourlyRate >= 200;
                 return false;
             }).length

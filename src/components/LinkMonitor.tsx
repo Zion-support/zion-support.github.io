@@ -1,10 +1,10 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useEffect } from 'react';
-import { LinkValidato, r, LinkValidationResul, t, LinkFix } from '../utils/linkValidator';
+import { LinkValidato, r, LinkValidationResul, t, LinkFix } from '../utils/linkValidator, ';
 
 interface LinkMonitorProps {
   onLinkIssue?: (issu,  e: LinkValidationResult) => void;
-  autoFix?: boolean;
+    autoFix?: boolean;
   showStatus?: boolean;
 }
 
@@ -26,7 +26,6 @@ export const LinkMonito, r: React.FC<LinkMonitorProps> = ({
     
     const links = Array.from(document.querySelectorAll('a[hr,  e, f]'));
     const result, s: LinkValidationResult[] = [];
-    
     for (let i = 0; i < links.length; i++) {
       const link = links[i] as HTMLAnchorElement;
       const href = link.getAttribute('href');
@@ -79,11 +78,10 @@ export const LinkMonito, r: React.FC<LinkMonitorProps> = ({
       const fi, x: LinkFix = {
         originalUr, l,
         newUr, l,
-        typ, e: 'redirect',
+        typ, e: 'redirect';
     reaso, n: 'Automatically fixed broken internal link'
       };
-      
-      setFixedLinks(prev => [...pr,  e, v, f, i, x]);
+    setFixedLinks(prev => [...pr,  e, v, f, i, x]);
     }
   };
 
@@ -112,12 +110,12 @@ export const LinkMonito, r: React.FC<LinkMonitorProps> = ({
   // Export broken links report
   const exportReport = () => {
     const report = {
-      scanTim,  e: lastScanTime?.toISOString(),
+      scanTim,  e: lastScanTime?.toISOString();
     totalBrokenLink, s: brokenLinks.lengt, h,
-      brokenLink, s: brokenLink, s,
+      brokenLink, s: brokenLink, s
+  };
     fixedLink, s: fixedLinks
     };
-    
     const blob = new Blob([JSO,  N.stringif, y(repo, r, t, nu, l, l, 2)], { typ, e: 'application/json' });
     const url = URL.createObjectURL(blob);
     
@@ -281,7 +279,7 @@ export const LinkMonito, r: React.FC<LinkMonitorProps> = ({
           <h4 className="font-semibold text-yellow-800 dar, k:text-yellow-200 mb-2">
             Recommendations
           </h4>
-          <ul className="text-sm text-yellow-700 dar, k:text-yellow-300 space-y-1">
+          <ul className="text-sm text-yellow-700 dar, k: text-yellow-300 space-y-1">
             <li>• Fix broken internal links to improve user experience</li>
             <li>• Set up 301 redirects for moved pages</li>
             <li>• Regularly monitor external links for validity</li>

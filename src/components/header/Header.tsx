@@ -1,24 +1,24 @@
 
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Logo } from './Logo';
-import { UserMenu } from './UserMenu';
-import { LanguageSelector } from './LanguageSelector';
-import { MainNavigation } from '@/layout/MainNavigation';
-import { MobileMenu } from './MobileMenu';
-import { useAuth } from '@/hooks/useAuth';
-import { useWhitelabel } from '@/context/WhitelabelContext';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
+import React, { useState, useEffect } from 'react;';
+import { Link } from 'react-router-dom, ';
+import { Logo } from './Logo, ';
+import { UserMenu } from './UserMenu, ';
+import { LanguageSelector } from './LanguageSelector, ';
+import { MainNavigation } from '@/layout/MainNavigation, ';
+import { MobileMenu } from './MobileMenu, ';
+import { useAuth } from '@/hooks/useAuth, ';
+import { useWhitelabel } from '@/context/WhitelabelContext, ';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput, ";
+import { generateSearchSuggestions } from "@/data/marketplaceData, ";
+import { useNavigate } from "react-router-dom, ";
+import { Button } from "@/components/ui/button, ";
+import { Menu, X, Sparkles } from "lucide-react, ";
 =======
-import { Menu, X, Search as SearchIcon, Sparkles } from "lucide-react";
+import { Menu, X, Search as SearchIcon, Sparkles } from "lucide-react, ";
 =======
-import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
-import { Menu, X, Search as SearchIcon, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button, ";
+import { Menu, X, Sparkles } from "lucide-react, ";
+import { Menu, X, Search as SearchIcon, Sparkles } from "lucide-react, ";
 
 export interface HeaderProps {
   hideLogin?: boolean;
@@ -27,7 +27,7 @@ export interface HeaderProps {
     primaryColor: string;
     backgroundColor: string;
     textColor: string;
-  };
+     };
 }
 
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
@@ -50,12 +50,11 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   } : undefined);
   
   const headerStyle = effectiveTheme ? {
-    backgroundColor: effectiveTheme.backgroundColor,
-    color: effectiveTheme.textColor,
+    backgroundColor: effectiveTheme.backgroundColor;
+    color: effectiveTheme.textColor;
     borderColor: `${effectiveTheme.primaryColor}20`
   } : {};
-
-  // Handle scroll effect
+    // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -91,12 +90,13 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
       style={headerStyle}
     >
       {/* Animated background pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
+      <div className="absolute inset-0 bg-[url('data: image/svg+xml;
+    base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
       
       {/* Glowing border effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50" />
       
-      <div className="container flex h-16 items-center px-4 sm:px-6 relative z-10">
+      <div className="container flex h-16 items-center px-4 sm: px-6 relative z-10">
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
 
         {/* Desktop Navigation */}
@@ -120,7 +120,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
             onChange={setQuery}
             onSelectSuggestion={(text) => {
               navigate(`/search?q=${encodeURIComponent(text)}`);
-              setQuery("");
+    setQuery("");
             }}
             searchSuggestions={searchSuggestions}
           />
@@ -135,7 +135,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 =======
 =======
         {/* Desktop Actions */}
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden lg: flex items-center gap-3">
           <Button 
             asChild 
             variant="outline" 
@@ -189,7 +189,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                 onChange={setQuery}
                 onSelectSuggestion={(text) => {
                   navigate(`/search?q=${encodeURIComponent(text)}`);
-                  setQuery("");
+    setQuery("");
                 }}
                 searchSuggestions={searchSuggestions}
               />
@@ -202,7 +202,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
           {/* Right Side Actions */}
           <div className="flex items-center gap-3">
             {/* AI Assistant Button */}
-            <button className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-lg bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 text-zion-cyan hover:from-zion-purple/30 hover:to-zion-cyan/30 transition-all duration-300 group">
+            <button className="hidden sm: flex items-center gap-2 px-3 py-2 rounded-lg bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 text-zion-cyan hover:from-zion-purple/30 hover:to-zion-cyan/30 transition-all duration-300 group">
               <Sparkles className="h-4 w-4 group-hover:animate-pulse" />
               <span className="text-sm font-medium">AI Assistant</span>
             </button>
@@ -230,7 +230,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                 onChange={setQuery}
                 onSelectSuggestion={(text) => {
                   navigate(`/search?q=${encodeURIComponent(text)}`);
-                  setQuery("");
+    setQuery("");
 =======
                 }}
                 searchSuggestions={searchSuggestions}
@@ -246,7 +246,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-40 bg-zion-blue-dark/95 backdrop-blur-xl">
+        <div className="lg: hidden fixed inset-0 z-40 bg-zion-blue-dark/95 backdrop-blur-xl">
           <div className="flex flex-col h-full">
             <div className="flex justify-between items-center p-4 border-b border-zion-purple/30">
               <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />

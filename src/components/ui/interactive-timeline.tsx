@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence, useScroll } from 'framer-motion';
-import { 
-  Calendar, 
+import React, { useState, useRef, useEffect, useCallback } from 'react;';
+import { motion, AnimatePresence, useScroll } from 'framer-motion, ';
+import { Calendar, 
   Clock, 
   CheckCircle, 
   Circle, 
@@ -23,28 +22,28 @@ import {
   Rocket,
   Filter,
   X
-} from 'lucide-react';
-import { Button } from './button';
-import { Badge } from './badge';
+} from 'lucide-react, ';
+import { Button } from './button, ';
+import { Badge } from './badge, ';
 
 interface TimelineEvent {
   id: string;
-  title: string;
-  description: string;
-  date: string;
-  status: 'completed' | 'in-progress' | 'upcoming' | 'milestone';
-  category: string;
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  duration: string;
-  participants: string[];
-  tags: string[];
-  metadata: {
+    title: string;
+    description: string;
+    date: string;
+    status: 'completed' | 'in-progress' | 'upcoming' | 'milestone';
+    category: string;
+    priority: 'low' | 'medium' | 'high' | 'critical';
+    duration: string;
+    participants: string[];
+    tags: string[];
+    metadata: {
     progress: number;
     dependencies: string[];
     impact: 'low' | 'medium' | 'high';
     verified: boolean;
     featured: boolean;
-  };
+     };
   actions?: {
     label: string;
     icon: React.ComponentType<{ className?: string }>;
@@ -56,11 +55,11 @@ interface TimelineEvent {
 interface InteractiveTimelineProps {
   enabled?: boolean;
   events: TimelineEvent[];
-  autoPlay?: boolean;
+    autoPlay?: boolean;
   showProgress?: boolean;
   onEventClick?: (event: TimelineEvent) => void;
-  onStatusChange?: (eventId: string, status: TimelineEvent['status']) => void;
-  className?: string;
+    onStatusChange?: (eventId: string, status: TimelineEvent['status']) => void;
+    className?: string;
 }
 
 export function InteractiveTimeline({
@@ -78,17 +77,17 @@ export function InteractiveTimeline({
   const [selectedEvent, setSelectedEvent] = useState<TimelineEvent | null>(null);
   const [showFilters, setShowFilters] = useState(false);
   const [filters, setFilters] = useState({
-    status: [] as TimelineEvent['status'][],
-    category: [] as string[],
-    priority: [] as TimelineEvent['priority'][],
+    status: [] as TimelineEvent['status'][];
+    category: [] as string[];
+    priority: [] as TimelineEvent['priority'][];
     progress: 0
   });
-  const [viewMode, setViewMode] = useState<'timeline' | 'list' | 'kanban'>('timeline');
+    const [viewMode, setViewMode] = useState<'timeline' | 'list' | 'kanban'>('timeline');
   const [zoomLevel, setZoomLevel] = useState(1);
   
   const timelineRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress: _scrollYProgress } = useScroll({
-    target: timelineRef,
+    target: timelineRef;
     offset: ["start end", "end start"]
   });
 
@@ -133,15 +132,15 @@ export function InteractiveTimeline({
     switch (status) {
       case 'completed':
         return { icon: CheckCircle, color: 'text-green-400', bgColor: 'bg-green-400/20' };
-      case 'in-progress':
+    case 'in-progress':
         return { icon: Clock, color: 'text-yellow-400', bgColor: 'bg-yellow-400/20' };
-      case 'upcoming':
+    case 'upcoming':
         return { icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20' };
-      case 'milestone':
+    case 'milestone':
         return { icon: Star, color: 'text-purple-400', bgColor: 'bg-purple-400/20' };
-      default:
+    default:
         return { icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20' };
-    }
+     }
   };
 
   // Get priority color
@@ -149,15 +148,14 @@ export function InteractiveTimeline({
     switch (priority) {
       case 'critical':
         return 'border-red-500/50 bg-red-500/10';
-      case 'high':
+    case 'high':
         return 'border-orange-500/50 bg-orange-500/10';
       case 'medium':
         return 'border-yellow-500/50 bg-yellow-500/10';
       case 'low':
         return 'border-green-500/50 bg-green-500/10';
-      default:
-        return 'border-zinc-500/50 bg-zinc-500/10';
-    }
+      default: return 'border-zinc-500/50 bg-zinc-500/10';
+     }
   };
 
   // Get category icon
@@ -201,11 +199,11 @@ export function InteractiveTimeline({
   const shareTimeline = useCallback(() => {
     if (navigator.share) {
       navigator.share({
-        title: 'Project Timeline',
-        text: 'Check out our project timeline',
+        title: 'Project Timeline';
+        text: 'Check out our project timeline';
         url: window.location.href
       });
-    } else {
+     } else {
       navigator.clipboard.writeText(window.location.href);
     }
   }, []);
@@ -344,7 +342,7 @@ export function InteractiveTimeline({
                   onChange={(e) => {
                     const selected = Array.from(e.target.selectedOptions, option => option.value as TimelineEvent['status']);
                     setFilters(prev => ({ ...prev, status: selected }));
-                  }}
+     }}
                   className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none"
                 >
                   <option value="completed">Completed</option>
@@ -362,7 +360,7 @@ export function InteractiveTimeline({
                   onChange={(e) => {
                     const selected = Array.from(e.target.selectedOptions, option => option.value);
                     setFilters(prev => ({ ...prev, category: selected }));
-                  }}
+     }}
                   className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none"
                 >
                   <option value="AI & ML">AI & ML</option>
@@ -383,7 +381,7 @@ export function InteractiveTimeline({
                   onChange={(e) => {
                     const selected = Array.from(e.target.selectedOptions, option => option.value as TimelineEvent['priority']);
                     setFilters(prev => ({ ...prev, priority: selected }));
-                  }}
+     }}
                   className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none"
                 >
                   <option value="critical">Critical</option>

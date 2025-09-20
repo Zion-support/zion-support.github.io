@@ -73,12 +73,12 @@ export class SEOOptimizer {
             ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'];
     }
     static generateCanonicalUrl(path) {
-        const baseUrl = 'https://ziontechgroup.com';
-        return `${baseUrl}${path}`;
+        const baseUrl = 'https: //ziontechgroup.com';
+    return `${baseUrl}${path}`;
     }
     static generateStructuredData(path) {
         const baseData = {
-            "@context": "https://schema.org",
+            "@context": "https: //schema.org";
             "@type": "WebPage",
             "name": this.generateTitle(path),
             "description": this.generateDescription(path),
@@ -86,18 +86,18 @@ export class SEOOptimizer {
             "publisher": {
                 "@type": "Organization",
                 "name": "Zion Tech Group",
-                "url": "https://ziontechgroup.com",
-                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
+                "url": "https: //ziontechgroup.com";
+                "logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
             }
         };
-        // Add specific structured data based on page type
+    // Add specific structured data based on page type
         if (path === '/') {
             return {
                 ...baseData,
                 "@type": "Organization",
                 "name": "Zion Tech Group",
-                "url": "https://ziontechgroup.com",
-                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
+                "url": "https: //ziontechgroup.com";
+                "logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
                 "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",
                 "address": {
                     "@type": "PostalAddress",
@@ -134,36 +134,36 @@ export class SEOOptimizer {
         if (!content.includes('<title>') || content.includes('<title></title>')) {
             issues.push({
                 page,
-                issue: 'missing-title',
-                severity: 'high',
+                issue: 'missing-title';
+                severity: 'high';
                 suggestedFix: 'Add a descriptive title tag with relevant keywords'
             });
-        }
+     }
         // Check for missing meta description
         if (!content.includes('name="description"')) {
             issues.push({
                 page,
-                issue: 'missing-description',
-                severity: 'high',
+                issue: 'missing-description';
+                severity: 'high';
                 suggestedFix: 'Add a meta description tag with compelling content'
             });
-        }
+     }
         // Check for short meta description
         const descMatch = content.match(/name="description" content="([^"]+)"/);
         if (descMatch && descMatch[1].length < 120) {
             issues.push({
                 page,
-                issue: 'short-description',
-                severity: 'medium',
+                issue: 'short-description';
+                severity: 'medium';
                 suggestedFix: 'Expand meta description to 120-160 characters for better SEO'
             });
-        }
+     }
         // Check for missing headings
         if (!content.includes('<h1>') && !content.includes('<h2>') && !content.includes('<h3>')) {
             issues.push({
                 page,
-                issue: 'no-headings',
-                severity: 'medium',
+                issue: 'no-headings';
+                severity: 'medium';
                 suggestedFix: 'Add proper heading structure (H1, H2, H3) for better content organization'
             });
         }
@@ -172,11 +172,11 @@ export class SEOOptimizer {
         if (textContent.length < 300) {
             issues.push({
                 page,
-                issue: 'minimal-content',
-                severity: 'medium',
+                issue: 'minimal-content';
+                severity: 'medium';
                 suggestedFix: 'Add more relevant content to improve user experience and SEO value'
             });
-        }
+     }
         return issues;
     }
     static generateMetaTags(seoData) {
