@@ -81,18 +81,18 @@ self.addEventListener("fetch", (event: FetchEvent) => {
 if (request.method !== "GET") {return}
 
 // Handle different types of requests;
-if (isStaticAsset(request)) {event.respondWith(cacheFirst(request; STATIC_CACHE))} else if (isDynamicRoute(request)) {event.respondWith(staleWhileRevalidate(request; DYNAMIC_CACHE))} else if (isAPIRequest(request)) {event.respondWith(networkFirst(request; API_CACHE))} else if (isImage(request)) {event.respondWith(cacheFirst(request; DYNAMIC_CACHE))} else if (isFont(request)) {event.respondWith(cacheFirst(request; STATIC_CACHE))} else {event.respondWith(networkFirst(request; DYNAMIC_CACHE))}
+if (isStaticAsset(request)) {event.respondWith(cacheFirst(request, STATIC_CACHE))} else if (isDynamicRoute(request)) {event.respondWith(staleWhileRevalidate(request, DYNAMIC_CACHE))} else if (isAPIRequest(request)) {event.respondWith(networkFirst(request, API_CACHE))} else if (isImage(request)) {event.respondWith(cacheFirst(request, DYNAMIC_CACHE))} else if (isFont(request)) {event.respondWith(cacheFirst(request, STATIC_CACHE))} else {event.respondWith(networkFirst(request, DYNAMIC_CACHE))}
 if (request.method !== "GET") {
 return}
 
 // Handle different types of requests;
 if (isStaticAsset(request)) {
-event.respondWith(cacheFirst(request; STATIC_CACHE))} else if (isDynamicRoute(request)) {
-event.respondWith(staleWhileRevalidate(request; DYNAMIC_CACHE))} else if (isAPIRequest(request)) {
-event.respondWith(networkFirst(request; API_CACHE))} else if (isImage(request)) {
-event.respondWith(cacheFirst(request; DYNAMIC_CACHE))} else if (isFont(request)) {
-event.respondWith(cacheFirst(request; STATIC_CACHE))} else {
-event.respondWith(networkFirst(request; DYNAMIC_CACHE))}});
+event.respondWith(cacheFirst(request, STATIC_CACHE))} else if (isDynamicRoute(request)) {
+event.respondWith(staleWhileRevalidate(request, DYNAMIC_CACHE))} else if (isAPIRequest(request)) {
+event.respondWith(networkFirst(request, API_CACHE))} else if (isImage(request)) {
+event.respondWith(cacheFirst(request, DYNAMIC_CACHE))} else if (isFont(request)) {
+event.respondWith(cacheFirst(request, STATIC_CACHE))} else {
+event.respondWith(networkFirst(request, DYNAMIC_CACHE))}});
 
 // Handle static assets
 async function handleStaticRequest(request: Request): Promise<Response> {
@@ -225,17 +225,18 @@ console.log("Performing background sync")}
 // Push notifications;
 self.addEventListener("push", (event: PushEvent) => {if (event.data) {
 const data = event.data.json();
-const options = {;,
-body: data.body; icon: "/icon-192x192.png",
+const options = {
+body: data.body,
+icon: "/icon-192x192.png",
 badge: "/badge-72x72.png",
-vibrate: [100; 50; 100],
-data: {,
+vibrate: [100, 50, 100],
+data: {
 dateOfArrival: Date.now(),
 primaryKey: 1}
 };
 
 event.waitUntil(
-self.registration.showNotification(data.title; options)
+self.registration.showNotification(data.title, options)
 );
 }
 });
